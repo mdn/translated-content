@@ -1,12 +1,6 @@
 ---
 title: border-top-left-radius
 slug: Web/CSS/border-top-left-radius
-tags:
-  - CSS
-  - CSS 属性
-  - CSS 边框
-  - CSS 边框圆角
-translation_of: Web/CSS/border-top-left-radius
 ---
 ## 概要
 

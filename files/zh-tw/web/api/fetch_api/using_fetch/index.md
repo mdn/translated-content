@@ -1,13 +1,6 @@
 ---
 title: Using Fetch
 slug: Web/API/Fetch_API/Using_Fetch
-tags:
-  - Fetch
-  - HTTP
-  - Promise
-  - Response
-  - request
-translation_of: Web/API/Fetch_API/Using_Fetch
 ---
 {{DefaultAPISidebar("Fetch API")}}
 

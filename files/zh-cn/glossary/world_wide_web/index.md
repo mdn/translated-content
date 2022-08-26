@@ -1,12 +1,6 @@
 ---
 title: World Wide Web
 slug: Glossary/World_Wide_Web
-tags:
-  - Glossary
-  - Infrastructure
-  - WWW
-  - World Wide Web
-translation_of: Glossary/World_Wide_Web
 ---
 *万维网（World Wide Web）*一般称其为**WWW**，**W3**，或 **Web** 是通过 {{Glossary("Internet")}} 访问公共网页的互连系统。网络与互联网不一样：Web 是建立在互联网之上的许多应用程序之一。
 

@@ -1,7 +1,6 @@
 ---
 title: line-break
 slug: Web/CSS/line-break
-translation_of: Web/CSS/line-break
 ---
 {{CSSRef}}
 

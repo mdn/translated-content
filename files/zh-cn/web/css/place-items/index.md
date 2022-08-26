@@ -1,7 +1,6 @@
 ---
 title: place-items
 slug: Web/CSS/place-items
-translation_of: Web/CSS/place-items
 ---
 {{CSSRef}}
 

@@ -1,14 +1,6 @@
 ---
 title: '@supports'
 slug: Web/CSS/@supports
-tags:
-  - '@规则'
-  - At-rule
-  - CSS
-  - Web
-  - 参考
-  - 支持
-translation_of: Web/CSS/@supports
 ---
 {{CSSRef}}
 

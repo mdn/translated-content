@@ -1,12 +1,6 @@
 ---
 title: 回调函数
 slug: Glossary/Callback_function
-tags:
-  - Callback
-  - 回调函数
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/Callback_function
 ---
 被作为实参传入另一函数，并在该外部函数内被调用，用以来完成某些任务的函数，称为回调函数。
 

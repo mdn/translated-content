@@ -1,14 +1,6 @@
 ---
 title: var()
 slug: Web/CSS/var
-tags:
-  - CSS
-  - CSS 变量
-  - CSS 方法
-  - var()
-  - 参考
-  - 实验性的
-translation_of: Web/CSS/var()
 original_slug: Web/CSS/var()
 ---
 {{CSSRef}}

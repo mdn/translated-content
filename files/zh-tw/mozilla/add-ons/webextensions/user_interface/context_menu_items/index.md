@@ -1,9 +1,6 @@
 ---
 title: 快捷選單項
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
-tags:
-  - 擴充套件
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 ---
 {{AddonSidebar}}
 

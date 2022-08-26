@@ -1,7 +1,6 @@
 ---
 title: 繼承與原型鏈
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
-translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 ---
 {{jsSidebar("Advanced")}}
 

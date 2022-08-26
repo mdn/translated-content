@@ -1,13 +1,6 @@
 ---
 title: <p>
 slug: Web/HTML/Element/p
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Web
-  - 参考
-translation_of: Web/HTML/Element/p
 ---
 {{HTMLRef}}
 
@@ -36,7 +29,7 @@ translation_of: Web/HTML/Element/p
 
 输出如下：
 
-{{ EmbedLiveSample('示例', '', '', '', 'Web/HTML/Element/p') }}
+{{ EmbedLiveSample('示例') }}
 
 ## 注意
 

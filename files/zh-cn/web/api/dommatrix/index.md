@@ -66,10 +66,9 @@ _此接口从{{domxref("DOMMatrixReadOnly")}}继承方法。_
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMMatrix")}}
-{{Compat("api.WebKitCSSMatrix")}}
+{{Compat}}
 
-## 相关链接
+## 参见
 
 - 它的不可修改部分， {{domxref("DOMMatrixReadOnly")}}
 - {{domxref("SVGMatrix")}}，SVG 矩阵计划被{{domxref("DOMMatrix")}}替代

@@ -1,9 +1,6 @@
 ---
 title: border
 slug: Web/CSS/border
-tags:
-  - CSS_参考
-translation_of: Web/CSS/border
 ---
 {{ CSSRef() }}
 

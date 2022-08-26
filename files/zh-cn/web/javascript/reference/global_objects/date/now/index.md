@@ -1,15 +1,6 @@
 ---
 title: Date.now()
 slug: Web/JavaScript/Reference/Global_Objects/Date/now
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - polyfill
-  - 参考
-  - 方法
-  - 时间
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/now
 ---
 {{JSRef}}
 

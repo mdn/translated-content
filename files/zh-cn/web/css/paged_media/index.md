@@ -1,11 +1,6 @@
 ---
 title: Paged media
 slug: Web/CSS/Paged_Media
-tags:
-  - CSS
-  - 参考
-  - 打印
-translation_of: Web/CSS/Paged_Media
 ---
 {{cssref}}
 

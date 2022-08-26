@@ -1,7 +1,6 @@
 ---
 title: flex-direction
 slug: Web/CSS/flex-direction
-translation_of: Web/CSS/flex-direction
 ---
 {{ CSSRef("CSS Flexible Boxes") }}
 
@@ -51,7 +50,7 @@ flex-direction: unset;
 
 {{csssyntax("flex-direction")}}
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -106,7 +105,7 @@ flex-direction: unset;
 
 ### 结果
 
-{{ EmbedLiveSample('例子', '', '300', '', 'Web/CSS/flex-direction') }}
+{{ EmbedLiveSample('示例', '', '300') }}
 
 ## 规范
 

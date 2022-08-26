@@ -1,14 +1,6 @@
 ---
 title: text-decoration-color
 slug: Web/CSS/text-decoration-color
-tags:
-  - CSS
-  - CSS 属性
-  - CSS 文本
-  - 参考
-  - 文本样式
-  - 颜色
-translation_of: Web/CSS/text-decoration-color
 ---
 {{ CSSRef }}
 

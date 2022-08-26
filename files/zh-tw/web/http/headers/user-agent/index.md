@@ -1,7 +1,6 @@
 ---
 title: User-Agent
 slug: Web/HTTP/Headers/User-Agent
-translation_of: Web/HTTP/Headers/User-Agent
 ---
 {{HTTPSidebar}}
 

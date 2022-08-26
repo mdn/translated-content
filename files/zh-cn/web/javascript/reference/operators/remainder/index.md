@@ -1,12 +1,6 @@
 ---
 title: 取余 (%)
 slug: Web/JavaScript/Reference/Operators/Remainder
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Remainder
 original_slug: Web/JavaScript/Reference/Operators/取余
 ---
 {{jsSidebar("Operators")}}

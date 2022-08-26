@@ -1,12 +1,6 @@
 ---
 title: flex-basis
 slug: Web/CSS/flex-basis
-tags:
-  - CSS
-  - CSS 属性
-  - CSS 弹性盒子
-  - 参考
-translation_of: Web/CSS/flex-basis
 ---
 {{CSSRef}}
 
@@ -39,16 +33,13 @@ flex-basis: initial;
 flex-basis: unset;
 ```
 
-这个 `flex-basis` 属性 被指定为关键词 [`content`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis$edit#content) 或者 [`<'width'>`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis$edit#%3C'width'%3E).
+这个 `flex-basis` 属性 被指定为关键词 [`content`](/zh-CN/docs/Web/CSS/flex-basis#content) 或者 [`<'width'>`](/zh-CN/docs/Web/CSS/flex-basis#%3C'width'%3E).
 
 ### 取值
 
-- ## `<'width'>`
-
-      : width 值可以是 {{cssxref("&lt;length&gt;")}}; 该值也可以是一个相对于其父弹性盒容器主轴尺寸的{{cssxref("&lt;percentage&gt;", "百分数")}} 。负值是不被允许的。默认为 `auto`。
-
+- `<'width'>`
+  - : width 值可以是 {{cssxref("&lt;length&gt;")}}; 该值也可以是一个相对于其父弹性盒容器主轴尺寸的{{cssxref("&lt;percentage&gt;", "百分数")}} 。负值是不被允许的。默认为 `auto`。
 - `content`
-
   - : 基于 flex 的元素的内容自动调整大小。
 
     > **备注：**由于最初规范中没有包括这个值，在一些早期的浏览器实现的 flex 布局中，content 值无效，可以利用设置 ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) 或 [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) 为 auto 达到同样的效果。
@@ -63,7 +54,7 @@ flex-basis: unset;
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -166,7 +157,7 @@ flex-basis: unset;
 
 ### 结果
 
-{{EmbedLiveSample('例子', '860', '360', '', 'Web/CSS/flex-basis')}}
+{{EmbedLiveSample('示例', '860', '360')}}
 
 ## 规范
 

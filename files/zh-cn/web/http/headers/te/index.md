@@ -1,11 +1,6 @@
 ---
 title: TE
 slug: Web/HTTP/Headers/TE
-tags:
-  - HTTP
-  - 参考
-  - 头部
-translation_of: Web/HTTP/Headers/TE
 ---
 {{HTTPSidebar}}
 

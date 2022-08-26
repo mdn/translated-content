@@ -1,7 +1,6 @@
 ---
 title: Firefox 3 技術文件
 slug: Mozilla/Firefox/Releases/3
-translation_of: Mozilla/Firefox/Releases/3
 ---
 {{FirefoxSidebar}}
 

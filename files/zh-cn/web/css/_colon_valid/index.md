@@ -1,13 +1,6 @@
 ---
 title: ':valid'
 slug: Web/CSS/:valid
-tags:
-  - CSS
-  - Layout
-  - Pesudo-class
-  - Reference
-  - Web
-translation_of: Web/CSS/:valid
 ---
 {{ CSSRef() }}
 

@@ -1,15 +1,6 @@
 ---
 title: WebSockets
 slug: Glossary/WebSockets
-tags:
-  - Web
-  - WebSocket
-  - 协议
-  - 基础设施
-  - 术语
-  - 网络
-  - 连接
-translation_of: Glossary/WebSockets
 ---
 WebSocket 是一种在客户端与{{Glossary("Server", "服务器")}}之间保持{{Glossary("TCP")}}长连接的{{Glossary("protocol","网络协议")}}，这样它们就可以随时进行信息交换。
 

@@ -1,11 +1,6 @@
 ---
 title: Content-Range
 slug: Web/HTTP/Headers/Content-Range
-tags:
-  - 响应首部
-  - 超文本传输协议
-  - 首部
-translation_of: Web/HTTP/Headers/Content-Range
 ---
 {{HTTPSidebar}}
 

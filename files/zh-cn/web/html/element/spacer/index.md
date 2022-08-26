@@ -1,7 +1,6 @@
 ---
 title: <spacer>
 slug: Web/HTML/Element/spacer
-translation_of: Web/HTML/Element/spacer
 ---
 {{non-standard_header}}{{deprecated_header}}
 

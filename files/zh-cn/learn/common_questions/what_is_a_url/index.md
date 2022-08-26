@@ -1,7 +1,6 @@
 ---
 title: 什么是 URL？
 slug: Learn/Common_questions/What_is_a_URL
-translation_of: Learn/Common_questions/What_is_a_URL
 ---
 本文讨论了统一资源定位符 (URL)，并解释了他们是什么，以及如何被构建的。
 

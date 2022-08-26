@@ -1,7 +1,6 @@
 ---
 title: Immutable
 slug: Glossary/Immutable
-translation_of: Glossary/Immutable
 ---
 我們在說一個不可變的{{glossary("物件")}}，意思就是這樣的物件內容部會被改變。
 

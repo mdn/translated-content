@@ -1,7 +1,6 @@
 ---
 title: CSS Positioning
 slug: Web/CSS/CSS_Positioning
-translation_of: Web/CSS/CSS_Positioning
 ---
 {{CSSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: Coordinates.accuracy
 slug: Web/API/GeolocationCoordinates/accuracy
-translation_of: Web/API/GeolocationCoordinates/accuracy
 ---
 {{APIRef("Geolocation API")}}
 

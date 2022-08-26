@@ -1,11 +1,6 @@
 ---
 title: <msup>
 slug: Web/MathML/Element/msup
-tags:
-  - MathML
-  - MathML 元素
-  - MathML 参考
-translation_of: Web/MathML/Element/msup
 ---
 {{MathMLRef}}
 

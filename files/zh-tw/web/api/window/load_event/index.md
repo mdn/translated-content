@@ -1,7 +1,6 @@
 ---
 title: load
 slug: Web/API/Window/load_event
-translation_of: Web/API/Window/load_event
 original_slug: Web/Events/load
 ---
 `load` 事件發生在加載完目標資源、該資源依賴的其他資源時。

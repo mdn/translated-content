@@ -1,12 +1,6 @@
 ---
 title: <strong>
 slug: Web/HTML/Element/strong
-tags:
-  - HTML
-  - Web
-  - 元素
-  - 文本级语义
-translation_of: Web/HTML/Element/strong
 ---
 ## 总结
 

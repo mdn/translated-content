@@ -8,7 +8,6 @@ tags:
   - プロパティ
   - 読み取り専用
   - リファレンス
-browser-compat: api.Element.classList
 translation_of: Web/API/Element/classList
 ---
 {{APIRef("DOM")}}

@@ -1,14 +1,6 @@
 ---
 title: feConvolveMatrix
 slug: Web/SVG/Element/feConvolveMatrix
-tags:
-  - SVG
-  - SVG 滤镜
-  - 元素
-  - 滤镜
-  - 需要兼容性表
-  - 需要示例
-translation_of: Web/SVG/Element/feConvolveMatrix
 ---
 {{SVGRef}}
 

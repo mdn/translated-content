@@ -1,11 +1,6 @@
 ---
 title: HEAD
 slug: Web/HTTP/Methods/HEAD
-tags:
-  - HTTP
-  - 参考
-  - 请求方法
-translation_of: Web/HTTP/Methods/HEAD
 ---
 {{HTTPSidebar}}
 

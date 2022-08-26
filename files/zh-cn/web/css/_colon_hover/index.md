@@ -1,10 +1,6 @@
 ---
 title: ':hover'
 slug: Web/CSS/:hover
-tags:
-  - CSS
-  - CSS 伪类
-translation_of: Web/CSS/:hover
 ---
 {{ CSSRef() }}
 

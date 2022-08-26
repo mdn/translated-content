@@ -1,7 +1,6 @@
 ---
 title: 署名和版权许可协议
 slug: MDN/Writing_guidelines/Attrib_copyright_license
-translation_of: MDN/Writing_guidelines/Attrib_copyright_license
 ---
 {{MDNSidebar}}
 

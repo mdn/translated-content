@@ -1,14 +1,6 @@
 ---
 title: Event.stopPropagation()
 slug: Web/API/Event/stopPropagation
-tags:
-  - API
-  - DOM
-  - Event
-  - Method
-  - NeedsRewrite
-  - Reference
-translation_of: Web/API/Event/stopPropagation
 ---
 {{APIRef("DOM")}}
 

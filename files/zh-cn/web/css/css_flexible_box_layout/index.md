@@ -1,17 +1,6 @@
 ---
 title: CSS 弹性盒子布局
 slug: Web/CSS/CSS_Flexible_Box_Layout
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Reference
-  - CSS3 布模式
-  - Overview
-  - TopicStub
-  - 弹性盒子
-  - 弹性盒子模型
-  - 盒子模型
-translation_of: Web/CSS/CSS_Flexible_Box_Layout
 ---
 {{CSSRef}}
 
@@ -27,16 +16,14 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout
 
 ### CSS 属性
 
-- - {{cssxref("flex")}}
-  - {{cssxref("flex-basis")}}
-  - {{cssxref("flex-direction")}}
-  - {{cssxref("flex-flow")}}
-  - {{cssxref("flex-grow")}}
-  - {{cssxref("flex-shrink")}}
-  - {{cssxref("flex-wrap")}}
-  - {{cssxref("order")}}
-  -
-  -
+- {{cssxref("flex")}}
+- {{cssxref("flex-basis")}}
+- {{cssxref("flex-direction")}}
+- {{cssxref("flex-flow")}}
+- {{cssxref("flex-grow")}}
+- {{cssxref("flex-shrink")}}
+- {{cssxref("flex-wrap")}}
+- {{cssxref("order")}}
 
 ### 对齐属性
 
@@ -50,7 +37,6 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout
 - {{cssxref("row-gap")}}
 - {{cssxref("column-gap")}}
 - {{cssxref("gap")}}
--
 
 ### 术语表
 

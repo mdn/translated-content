@@ -1,20 +1,6 @@
 ---
 title: <color>
 slug: Web/CSS/color_value
-tags:
-  - CSS
-  - CSS 数据类型
-  - hsl
-  - hsla
-  - rgb
-  - rgba
-  - 单元
-  - 参考
-  - 布局
-  - 数据类型
-  - 网络
-  - 颜色
-translation_of: Web/CSS/color_value
 ---
 {{CSSRef}}
 
@@ -140,202 +126,110 @@ The keywords in the following list are defined by the CSS Color Module Level 4 s
 
 > **备注：** Note that these keywords are _case insensitive_, but are listed here with mixed case for readability.
 
-- ## ActiveText
-
-      : Text of active links
-
-- ## ButtonFace
-
-      : Background of push buttons
-
-- ## ButtonText
-
-      : Text of push buttons
-
-- ## Canvas
-
-      : Background of application content or documents
-
-- ## CanvasText
-
-      : Text in application content or documents
-
-- ## Field
-
-      : Background of input fields
-
-- ## FieldText
-
-      : Text in input fields
-
-- ## GrayText
-
-      : Text that is disabled
-
-- ## Highlight
-
-      : Background of items that are selected in a control
-
-- ## HighlightText
-
-      : Text of items that are selected in a control
-
-- ## LinkText
-
-      : Text of non-active, non-visited links
-
-- ## VisitedText
-
-      : Text of visited links
+- ActiveText
+  - : Text of active links
+- ButtonFace
+  - : Background of push buttons
+- ButtonText
+  - : Text of push buttons
+- Canvas
+  - : Background of application content or documents
+- CanvasText
+  - : Text in application content or documents
+- Field
+  - : Background of input fields
+- FieldText
+  - : Text in input fields
+- GrayText
+  - : Text that is disabled
+- Highlight
+  - : Background of items that are selected in a control
+- HighlightText
+  - : Text of items that are selected in a control
+- LinkText
+  - : Text of non-active, non-visited links
+- VisitedText
+  - : Text of visited links
 
 #### Deprecated system color keywords
 
 The following keywords were defined in earlier versions of the CSS Color Module. They are now deprecated. {{deprecated_inline}} for use on public web pages.
 
-- ## ActiveBorder
-
-      : Active window border.
-
-- ## ActiveCaption
-
-      : Active window caption. Should be used with `CaptionText` as foreground color.
-
-- ## AppWorkspace
-
-      : Background color of multiple document interface.
-
-- ## Background
-
-      : Desktop background.
-
-- ## ButtonHighlight
-
-      : The color of the border facing the light source for 3-D elements that appear 3-D due to that layer of surrounding border.
-
-- ## ButtonShadow
-
-      : The color of the border away from the light source for 3-D elements that appear 3-D due to that layer of surrounding border.
-
-- ## CaptionText
-
-      : Text in caption, size box, and scrollbar arrow box. Should be used with the `ActiveCaption` background color.
-
-- ## InactiveBorder
-
-      : Inactive window border.
-
-- ## InactiveCaption
-
-      : Inactive window caption. Should be used with the `InactiveCaptionText` foreground color.
-
-- ## InactiveCaptionText
-
-      : Color of text in an inactive caption. Should be used with the `InactiveCaption` background color.
-
-- ## InfoBackground
-
-      : Background color for tooltip controls. Should be used with the `InfoText` foreground color.
-
-- ## InfoText
-
-      : Text color for tooltip controls. Should be used with the `InfoBackground` background color.
-
-- ## Menu
-
-      : Menu background. Should be used with the `MenuText` or `-moz-MenuBarText` foreground color.
-
-- ## MenuText
-
-      : Text in menus. Should be used with the `Menu` background color.
-
-- ## Scrollbar
-
-      : Background color of scroll bars.
-
-- ## ThreeDDarkShadow
-
-      : The color of the darker (generally outer) of the two borders away from the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
-
-- ## ThreeDFace
-
-      : The face background color for 3-D elements that appear 3-D due to two concentric layers of surrounding border. Should be used with the `ButtonText` foreground color.
-
-- ## ThreeDHighlight
-
-      : The color of the lighter (generally outer) of the two borders facing the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
-
-- ## ThreeDLightShadow
-
-      : The color of the darker (generally inner) of the two borders facing the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
-
-- ## ThreeDShadow
-
-      : The color of the lighter (generally inner) of the two borders away from the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
-
-- ## Window
-
-      : Window background. Should be used with the `WindowText` foreground color.
-
-- ## WindowFrame
-
-      : Window frame.
-
-- ## WindowText
-
-      : Text in windows. Should be used with the `Window` background color.
+- ActiveBorder
+  - : Active window border.
+- ActiveCaption
+  - : Active window caption. Should be used with `CaptionText` as foreground color.
+- AppWorkspace
+  - : Background color of multiple document interface.
+- Background
+  - : Desktop background.
+- ButtonHighlight
+  - : The color of the border facing the light source for 3-D elements that appear 3-D due to that layer of surrounding border.
+- ButtonShadow
+  - : The color of the border away from the light source for 3-D elements that appear 3-D due to that layer of surrounding border.
+- CaptionText
+  - : Text in caption, size box, and scrollbar arrow box. Should be used with the `ActiveCaption` background color.
+- InactiveBorder
+  - : Inactive window border.
+- InactiveCaption
+  - : Inactive window caption. Should be used with the `InactiveCaptionText` foreground color.
+- InactiveCaptionText
+  - : Color of text in an inactive caption. Should be used with the `InactiveCaption` background color.
+- InfoBackground
+  - : Background color for tooltip controls. Should be used with the `InfoText` foreground color.
+- InfoText
+  - : Text color for tooltip controls. Should be used with the `InfoBackground` background color.
+- Menu
+  - : Menu background. Should be used with the `MenuText` or `-moz-MenuBarText` foreground color.
+- MenuText
+  - : Text in menus. Should be used with the `Menu` background color.
+- Scrollbar
+  - : Background color of scroll bars.
+- ThreeDDarkShadow
+  - : The color of the darker (generally outer) of the two borders away from the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
+- ThreeDFace
+  - : The face background color for 3-D elements that appear 3-D due to two concentric layers of surrounding border. Should be used with the `ButtonText` foreground color.
+- ThreeDHighlight
+  - : The color of the lighter (generally outer) of the two borders facing the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
+- ThreeDLightShadow
+  - : The color of the darker (generally inner) of the two borders facing the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
+- ThreeDShadow
+  - : The color of the lighter (generally inner) of the two borders away from the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
+- Window
+  - : Window background. Should be used with the `WindowText` foreground color.
+- WindowFrame
+  - : Window frame.
+- WindowText
+  - : Text in windows. Should be used with the `Window` background color.
 
 ### Mozilla System Color Extensions
 
-- ## \-moz-ButtonDefault
-
-      : The border color that goes around buttons that represent the default action for a dialog box.
-
-- ## \-moz-ButtonHoverFace
-
-      : The background color of a button that the mouse pointer is over (which would be `ThreeDFace` or `ButtonFace` when the mouse pointer is not over it). Should be used with the `-moz-ButtonHoverText` foreground color.
-
-- ## \-moz-ButtonHoverText
-
-      : The text color of a button that the mouse pointer is over (which would be ButtonText when the mouse pointer is not over it). Should be used with the `-moz-ButtonHoverFace background` color.
-
-- ## \-moz-CellHighlight
-
-      : Background color for selected item in a tree widget. Should be used with the `-moz-CellHighlightText` foreground color. See also `-moz-html-CellHighlight`.
-
-- ## \-moz-CellHighlightText
-
-      : Text color for a selected item in a tree. Should be used with the `-moz-CellHighlight background` color. See also `-moz-html-CellHighlightText`.
-
-- ## \-moz-Combobox
-
-      : Background color for combo-boxes. Should be used with the `-moz-ComboboxText` foreground color. In versions prior to 1.9.2, use `-moz-Field` instead.
-
-- ## \-moz-ComboboxText
-
-      : Text color for combo-boxes. Should be used with the `-moz-Combobox` background color. In versions prior to 1.9.2, use `-moz-FieldText` instead.
-
-- ## \-moz-Dialog
-
-      : Background color for dialog boxes. Should be used with the `-moz-DialogText` foreground color.
-
-- ## \-moz-DialogText
-
-      : Text color for dialog boxes. Should be used with the `-moz-Dialog` background color.
-
+- \-moz-ButtonDefault
+  - : The border color that goes around buttons that represent the default action for a dialog box.
+- \-moz-ButtonHoverFace
+  - : The background color of a button that the mouse pointer is over (which would be `ThreeDFace` or `ButtonFace` when the mouse pointer is not over it). Should be used with the `-moz-ButtonHoverText` foreground color.
+- \-moz-ButtonHoverText
+  - : The text color of a button that the mouse pointer is over (which would be ButtonText when the mouse pointer is not over it). Should be used with the `-moz-ButtonHoverFace background` color.
+- \-moz-CellHighlight
+  - : Background color for selected item in a tree widget. Should be used with the `-moz-CellHighlightText` foreground color. See also `-moz-html-CellHighlight`.
+- \-moz-CellHighlightText
+  - : Text color for a selected item in a tree. Should be used with the `-moz-CellHighlight background` color. See also `-moz-html-CellHighlightText`.
+- \-moz-Combobox
+  - : Background color for combo-boxes. Should be used with the `-moz-ComboboxText` foreground color. In versions prior to 1.9.2, use `-moz-Field` instead.
+- \-moz-ComboboxText
+  - : Text color for combo-boxes. Should be used with the `-moz-Combobox` background color. In versions prior to 1.9.2, use `-moz-FieldText` instead.
+- \-moz-Dialog
+  - : Background color for dialog boxes. Should be used with the `-moz-DialogText` foreground color.
+- \-moz-DialogText
+  - : Text color for dialog boxes. Should be used with the `-moz-Dialog` background color.
 - \-moz-dragtargetzone
   - : TBD
-- ## \-moz-EvenTreeRow
-
-      : Background color for even-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-OddTreeRow`.
-
-- ## \-moz-html-CellHighlight
-
-      : Background color for highlighted item in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlightText` foreground color. Prior to Gecko 1.9, use `-moz-CellHighlight`.
-
-- ## \-moz-html-CellHighlightText
-
-      : Text color for highlighted items in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlight` background color. Prior to Gecko 1.9, use `-moz-CellHighlightText`.
-
+- \-moz-EvenTreeRow
+  - : Background color for even-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-OddTreeRow`.
+- \-moz-html-CellHighlight
+  - : Background color for highlighted item in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlightText` foreground color. Prior to Gecko 1.9, use `-moz-CellHighlight`.
+- \-moz-html-CellHighlightText
+  - : Text color for highlighted items in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlight` background color. Prior to Gecko 1.9, use `-moz-CellHighlightText`.
 - \-moz-mac-accentdarkestshadow
   - : TBD
 - \-moz-mac-accentdarkshadow
@@ -362,67 +256,39 @@ The following keywords were defined in earlier versions of the CSS Color Module.
   - : TBD
 - \-moz-mac-menutextselect
   - : TBD
-- ## \-moz-MenuHover
-
-      : Background color for hovered menu items. Often similar to `Highlight`. Should be used with the `-moz-MenuHoverText` or `-moz-MenuBarHoverText` foreground color.
-
-- ## \-moz-MenuHoverText
-
-      : Text color for hovered menu items. Often similar to `HighlightText`. Should be used with the `-moz-MenuHover` background color.
-
-- ## \-moz-MenuBarText
-
-      : Text color in menu bars. Often similar to `MenuText`. Should be used on top of `Menu` background.
-
-- ## \-moz-MenuBarHoverText
-
-      : Color for hovered text in menu bars. Often similar to `-moz-MenuHoverText`. Should be used on top of `-moz-MenuHover` background.
-
-- ## \-moz-nativehyperlinktext
-
-      : Default platform hyperlink color.
-
-- ## \-moz-OddTreeRow
-
-      : Background color for odd-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-EvenTreeRow`.
-
-- ## \-moz-win-communicationstext
-
-      : Should be used for text in objects with `{{cssxref("-moz-appearance")}}: -moz-win-communications-toolbox;`.
-
-- ## \-moz-win-mediatext
-
-      : Should be used for text in objects with `{{cssxref("-moz-appearance")}}: -moz-win-media-toolbox`.
-
-- ## \-moz-win-accentcolor
-
-      : Used to access the Windows 10 custom accent color that you can set on the start menu, taskbar, title bars, etc.
-
-- ## \-moz-win-accentcolortext
-
-      : Used to access the color of text placed over the Windows 10 custom accent color in the start menu, taskbar, title bars, etc.
+- \-moz-MenuHover
+  - : Background color for hovered menu items. Often similar to `Highlight`. Should be used with the `-moz-MenuHoverText` or `-moz-MenuBarHoverText` foreground color.
+- \-moz-MenuHoverText
+  - : Text color for hovered menu items. Often similar to `HighlightText`. Should be used with the `-moz-MenuHover` background color.
+- \-moz-MenuBarText
+  - : Text color in menu bars. Often similar to `MenuText`. Should be used on top of `Menu` background.
+- \-moz-MenuBarHoverText
+  - : Color for hovered text in menu bars. Often similar to `-moz-MenuHoverText`. Should be used on top of `-moz-MenuHover` background.
+- \-moz-nativehyperlinktext
+  - : Default platform hyperlink color.
+- \-moz-OddTreeRow
+  - : Background color for odd-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-EvenTreeRow`.
+- \-moz-win-communicationstext
+  - : Should be used for text in objects with `{{cssxref("-moz-appearance")}}: -moz-win-communications-toolbox;`.
+- \-moz-win-mediatext
+  - : Should be used for text in objects with `{{cssxref("-moz-appearance")}}: -moz-win-media-toolbox`.
+- \-moz-win-accentcolor
+  - : Used to access the Windows 10 custom accent color that you can set on the start menu, taskbar, title bars, etc.
+- \-moz-win-accentcolortext
+  - : Used to access the color of text placed over the Windows 10 custom accent color in the start menu, taskbar, title bars, etc.
 
 ### Mozilla Color Preference Extensions
 
-- ## \-moz-activehyperlinktext
-
-      : User's preference for text color of active links. Should be used with the default document background color.
-
-- ## \-moz-default-background-color
-
-      : User's preference for the document background color.
-
-- ## \-moz-default-color
-
-      : User's preference for the text color.
-
-- ## \-moz-hyperlinktext
-
-      : User's preference for the text color of unvisited links. Should be used with the default document background color.
-
-- ## \-moz-visitedhyperlinktext
-
-      : User's preference for the text color of visited links. Should be used with the default document background color.
+- \-moz-activehyperlinktext
+  - : User's preference for text color of active links. Should be used with the default document background color.
+- \-moz-default-background-color
+  - : User's preference for the document background color.
+- \-moz-default-color
+  - : User's preference for the text color.
+- \-moz-hyperlinktext
+  - : User's preference for the text color of unvisited links. Should be used with the default document background color.
+- \-moz-visitedhyperlinktext
+  - : User's preference for the text color of visited links. Should be used with the default document background color.
 
 ## 插值
 
@@ -493,7 +359,7 @@ inputElem.addEventListener('change', () => {
 
 这个例子显示了一个颜色可以以多种 RGB 颜色语法表示。
 
-```
+```css
 /* 这些语法都表示同一个颜色：a fully opaque hot pink */
 
 /* 十六进制语法 */
@@ -532,7 +398,7 @@ rgb(1e2, .5e1, .5e0, +.25e2%)
 
 ### RGB 的多种透明度
 
-```
+```css
 /* 十六进制语法 */
 #3a30                    /*   完全透明的绿色 */
 #3A3F                    /* 完全不透明的绿色 */
@@ -556,7 +422,7 @@ rgba(1e2, .5e1, .5e0, +.25e2%)
 
 ### HSL 的多种语法
 
-```
+```css
 /* 以下示例都表示同一颜色：a lavender */
 hsl(270,60%,70%)
 hsl(270, 60%, 70%)
@@ -574,47 +440,174 @@ hsl(270 60% 50% / 15%)
 
 ### 完全饱和颜色
 
-| 符号                  | 描述             | 展示 |
-| --------------------- | ---------------- | ---- |
-| `hsl(0, 100%, 50%)`   | 红色             |      |
-| `hsl(30, 100%, 50%)`  | 橙色             |      |
-| `hsl(60, 100%, 50%)`  | 黄色             |      |
-| `hsl(90, 100%, 50%)`  | 黄绿色           |      |
-| `hsl(120, 100%, 50%)` | 绿色             |      |
-| `hsl(150, 100%, 50%)` | 蓝绿色（青绿色） |      |
-| `hsl(180, 100%, 50%)` | 青色             |      |
-| `hsl(210, 100%, 50%)` | 天蓝色           |      |
-| `hsl(240, 100%, 50%)` | 蓝色             |      |
-| `hsl(270, 100%, 50%)` | 紫色             |      |
-| `hsl(300, 100%, 50%)` | 品红色（洋红色） |      |
-| `hsl(330, 100%, 50%)` | 粉红色           |      |
-| `hsl(360, 100%, 50%)` | 红色             |      |
+<table>
+  <thead>
+    <tr>
+      <th scope="col">符号</th>
+      <th scope="col">描述</th>
+      <th scope="col">展示</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>hsl(0, 100%, 50%)</code></td>
+      <td>红色</td>
+      <td style="background: hsl(0, 100%, 50%)"></td>
+    </tr>
+    <tr>
+      <td><code>hsl(30, 100%, 50%)</code></td>
+      <td>橙色</td>
+      <td style="background: hsl(30, 100%, 50%)"></td>
+    </tr>
+    <tr>
+      <td><code>hsl(60, 100%, 50%)</code></td>
+      <td>黄色</td>
+      <td style="background: hsl(60, 100%, 50%)"></td>
+    </tr>
+    <tr>
+      <td><code>hsl(90, 100%, 50%)</code></td>
+      <td>黄绿色</td>
+      <td style="background: hsl(90, 100%, 50%)"></td>
+    </tr>
+    <tr>
+      <td><code>hsl(120, 100%, 50%)</code></td>
+      <td>绿色</td>
+      <td style="background: hsl(120, 100%, 50%)"></td>
+    </tr>
+    <tr>
+      <td><code>hsl(150, 100%, 50%)</code></td>
+      <td>蓝绿色（青绿色）</td>
+      <td style="background: hsl(150, 100%, 50%)"></td>
+    </tr>
+    <tr>
+      <td><code>hsl(180, 100%, 50%)</code></td>
+      <td>青色</td>
+      <td style="background: hsl(180, 100%, 50%)"></td>
+    </tr>
+    <tr>
+      <td><code>hsl(210, 100%, 50%)</code></td>
+      <td>天蓝色</td>
+      <td style="background: hsl(210, 100%, 50%)"></td>
+    </tr>
+    <tr>
+      <td><code>hsl(240, 100%, 50%)</code></td>
+      <td>蓝色</td>
+      <td style="background: hsl(240, 100%, 50%)"></td>
+    </tr>
+    <tr>
+      <td><code>hsl(270, 100%, 50%)</code></td>
+      <td>紫色</td>
+      <td style="background: hsl(270, 100%, 50%)"></td>
+    </tr>
+    <tr>
+      <td><code>hsl(300, 100%, 50%)</code></td>
+      <td>品红色（洋红色）</td>
+      <td style="background: hsl(300, 100%, 50%)"></td>
+    </tr>
+    <tr>
+      <td><code>hsl(330, 100%, 50%)</code></td>
+      <td>粉红色</td>
+      <td style="background: hsl(330, 100%, 50%)"></td>
+    </tr>
+    <tr>
+      <td><code>hsl(360, 100%, 50%)</code></td>
+      <td>红色</td>
+      <td style="background: hsl(360, 100%, 50%)"></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 不同明暗度的绿色
 
-| 符号                   | 描述 | 展示 |
-| ---------------------- | ---- | ---- |
-| `hsl(120, 100%, 0%)`   | 黑色 |      |
-| `hsl(120, 100%, 20%)`  |      |      |
-| `hsl(120, 100%, 40%)`  |      |      |
-| `hsl(120, 100%, 60%)`  |      |      |
-| `hsl(120, 100%, 80%)`  |      |      |
-| `hsl(120, 100%, 100%)` | 白色 |      |
+<table>
+  <thead>
+    <tr>
+      <th scope="col">符号</th>
+      <th scope="col">描述</th>
+      <th scope="col">展示</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>hsl(120, 100%, 0%)</code></td>
+      <td>黑色</td>
+      <td style="background: hsl(120, 100%, 0%)"></td>
+    </tr>
+    <tr>
+      <td><code>hsl(120, 100%, 20%)</code></td>
+      <td></td>
+      <td style="background: hsl(120, 100%, 20%)"></td>
+    </tr>
+    <tr>
+      <td><code>hsl(120, 100%, 40%)</code></td>
+      <td></td>
+      <td style="background: hsl(120, 100%, 40%)"></td>
+    </tr>
+    <tr>
+      <td><code>hsl(120, 100%, 60%)</code></td>
+      <td></td>
+      <td style="background: hsl(120, 100%, 60%)"></td>
+    </tr>
+    <tr>
+      <td><code>hsl(120, 100%, 80%)</code></td>
+      <td></td>
+      <td style="background: hsl(120, 100%, 80%)"></td>
+    </tr>
+    <tr>
+      <td><code>hsl(120, 100%, 100%)</code></td>
+      <td>白色</td>
+      <td style="background: hsl(120, 100%, 100%)"></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 饱和的和不饱和的绿色
 
-| 符号                  | 描述 | 展示 |
-| --------------------- | ---- | ---- |
-| `hsl(120, 100%, 50%)` | 绿色 |      |
-| `hsl(120, 80%, 50%)`  |      |      |
-| `hsl(120, 60%, 50%)`  |      |      |
-| `hsl(120, 40%, 50%)`  |      |      |
-| `hsl(120, 20%, 50%)`  |      |      |
-| `hsl(120, 0%, 50%)`   | 灰色 |      |
+<table>
+  <thead>
+    <tr>
+      <th scope="col">符号</th>
+      <th scope="col">描述</th>
+      <th scope="col">展示</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>hsl(120, 100%, 50%)</code></td>
+      <td>绿色</td>
+      <td style="background: hsl(120, 100%, 50%)"></td>
+    </tr>
+    <tr>
+      <td><code>hsl(120, 80%, 50%)</code></td>
+      <td></td>
+      <td style="background: hsl(120, 80%, 50%)"></td>
+    </tr>
+    <tr>
+      <td><code>hsl(120, 60%, 50%)</code></td>
+      <td></td>
+      <td style="background: hsl(120, 60%, 50%)"></td>
+    </tr>
+    <tr>
+      <td><code>hsl(120, 40%, 50%)</code></td>
+      <td></td>
+      <td style="background: hsl(120, 40%, 50%)"></td>
+    </tr>
+    <tr>
+      <td><code>hsl(120, 20%, 50%)</code></td>
+      <td></td>
+      <td style="background: hsl(120, 20%, 50%)"></td>
+    </tr>
+    <tr>
+      <td><code>hsl(120, 0%, 50%)</code></td>
+      <td>灰色</td>
+      <td style="background: hsl(120, 0%, 50%)"></td>
+    </tr>
+  </tbody>
+</table>
 
 ### HSL 不同的透明度
 
-```
+```css
 hsla(240, 100%, 50%, .05)     /*   5% opaque blue */
 hsla(240, 100%, 50%, .4)      /*  40% opaque blue */
 hsla(240, 100%, 50%, .7)      /*  70% opaque blue */
@@ -639,4 +632,4 @@ hsla(240 100% 50% / 5%)       /*   5% opaque blue */
 
 - The {{ Cssxref("opacity") }} property, allowing to define the transparency of color at the element level.
 - The {{ Cssxref("color") }}, {{ Cssxref("background-color") }}, {{ Cssxref("border-color") }}, {{ Cssxref("outline-color") }}, {{ Cssxref("text-shadow") }}, {{ Cssxref("box-shadow") }} properties.
-- [CSS Reference](/en/CSS/CSS_Reference) index
+- [CSS Reference](/zh-CN/docs/Web/CSS/Reference) index

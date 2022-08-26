@@ -1,7 +1,6 @@
 ---
 title: <angle-percentage>
 slug: Web/CSS/angle-percentage
-translation_of: Web/CSS/angle-percentage
 ---
 {{CSSRef}}
 

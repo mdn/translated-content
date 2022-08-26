@@ -1,7 +1,6 @@
 ---
 title: 电脑编程
 slug: Glossary/Computer_Programming
-translation_of: Glossary/Computer_Programming
 ---
 电脑编程是将一系列指令整合起来的过程。这些指令以电脑能够理解的语言告诉电脑或者软件该做些什么。这些指令可由不同的语言呈现，例如 C++、Java、JavaScript、HTML、Python、Ruby 和 Rust。
 

@@ -1,7 +1,6 @@
 ---
 title: 創建種類表單
 slug: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
-translation_of: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
 ---
 本章節演示如何定義我們的頁面，創建`Genre` 物件（這是一個很好的起點，因為類型`Genre`只有一個欄位，就是它的名稱 `name`，沒有依賴項）。像任何其他頁面一樣，我們需要設置路由，控制器和視圖。
 

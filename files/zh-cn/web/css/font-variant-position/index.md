@@ -1,7 +1,6 @@
 ---
 title: font-variant-position
 slug: Web/CSS/font-variant-position
-translation_of: Web/CSS/font-variant-position
 ---
 {{CSSRef}}
 

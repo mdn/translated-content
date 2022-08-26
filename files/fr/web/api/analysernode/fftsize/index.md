@@ -80,13 +80,11 @@ function draw() {
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AnalyserNode-fftSize', 'fftSize')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AnalyserNode.fftSize")}}
+{{Compat}}
 
 ## Voir aussi
 

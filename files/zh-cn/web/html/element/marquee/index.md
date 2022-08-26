@@ -1,9 +1,6 @@
 ---
 title: <marquee>
 slug: Web/HTML/Element/marquee
-tags:
-  - marquee
-translation_of: Web/HTML/Element/marquee
 ---
 {{HTMLRef}}{{deprecated_header}}
 

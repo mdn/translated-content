@@ -1,11 +1,6 @@
 ---
 title: 网格模板列
 slug: Web/CSS/grid-template-columns
-tags:
-  - CSS
-  - CSS網格
-  - 列子
-translation_of: Web/CSS/grid-template-columns
 ---
 ## Summary
 

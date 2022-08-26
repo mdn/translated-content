@@ -1,9 +1,6 @@
 ---
 title: Stacking context example 1
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
-tags:
-  - 理解_CSS_z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
 original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_context_example_1
 ---
 « [CSS](/en/CSS) « [Understanding CSS z-index](/en/CSS/Understanding_z-index)
@@ -35,7 +32,7 @@ original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_context_example_1
 
 > **备注：** DIV #1 和 DIV #3 不是透明的。记住所有设置了 opacity 小于 1 的定位元素都会隐式地生成一个层叠上下文（和给元素增加一个 z-index 值的效果相同）。上述的例子是为了说明，当父元素没有生成一个层叠上下文环境的时候，各元素是怎么层叠的。
 
-## Example
+## 示例
 
 ### HTML
 
@@ -109,7 +106,7 @@ original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_context_example_1
 
 ### Result
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1') }}
+{{ EmbedLiveSample('示例') }}
 
 ### See also
 

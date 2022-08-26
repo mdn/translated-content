@@ -1,7 +1,6 @@
 ---
 title: Window.navigator
 slug: Web/API/Window/navigator
-translation_of: Web/API/Window/navigator
 ---
 {{APIRef}}
 

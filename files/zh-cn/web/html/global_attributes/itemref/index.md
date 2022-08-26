@@ -1,7 +1,6 @@
 ---
 title: itemref
 slug: Web/HTML/Global_attributes/itemref
-translation_of: Web/HTML/Global_attributes/itemref
 ---
 {{HTMLSidebar("Global_attributes")}}
 
@@ -81,7 +80,7 @@ translation_of: Web/HTML/Global_attributes/itemref
 
 ### 结果
 
-{{EmbedLiveSample('Example', '', '', '', 'Web/HTML/Global_attributes/itemref')}}
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 

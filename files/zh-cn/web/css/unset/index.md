@@ -1,12 +1,6 @@
 ---
 title: unset
 slug: Web/CSS/unset
-tags:
-  - CSS
-  - 布局
-  - 未设置
-  - 样式
-translation_of: Web/CSS/unset
 ---
 {{CSSRef}}
 

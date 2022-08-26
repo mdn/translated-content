@@ -1,11 +1,6 @@
 ---
 title: String.prototype.fixed()
 slug: Web/JavaScript/Reference/Global_Objects/String/fixed
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fixed
 ---
 {{JSRef}} {{deprecated_header}}
 

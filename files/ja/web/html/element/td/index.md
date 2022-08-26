@@ -106,7 +106,7 @@ translation_of: Web/HTML/Element/td
     > **Note:**
     >
     > - `left`, `center`, `right`, `justify` の値と同様の効果を得るには、 CSS の {{cssxref("text-align")}} プロパティを使用してください。
-    > - 同様の効果を得るには、 {{cssxref("text-align")}} プロパティの値 {{htmlattrxref("char", "td")}} を使用できます。 CSS3 では {{unimplemented_inline}} です。。
+    > - 同様の効果を得るには、 {{cssxref("text-align")}} プロパティの値 {{htmlattrxref("char", "td")}} を使用できます。 CSS3 では {{unimplemented_inline}} です。
 
 - {{htmlattrdef("axis")}} {{deprecated_inline}}
   - : この属性は、空白文字で区切られた文字列のリストを持ちます。各文字列は、このヘッダーを適用するセルグループの `id` です。

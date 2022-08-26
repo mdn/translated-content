@@ -1,15 +1,6 @@
 ---
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - function*
-  - 函数
-  - 声明
-  - 迭代器
-translation_of: Web/JavaScript/Reference/Statements/function*
 ---
 {{jsSidebar("Statements")}}
 

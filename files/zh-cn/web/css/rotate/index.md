@@ -1,7 +1,6 @@
 ---
 title: rotate
 slug: Web/CSS/rotate
-translation_of: Web/CSS/rotate
 ---
 {{CSSRef}}{{seecompattable}}
 

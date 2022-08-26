@@ -7,7 +7,6 @@ tags:
   - メソッド
   - Reference
   - Scroll
-browser-compat: api.Element.scroll
 translation_of: Web/API/Element/scroll
 ---
 {{APIRef}}

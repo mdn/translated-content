@@ -1,12 +1,6 @@
 ---
 title: Cache-Control
 slug: Web/HTTP/Headers/Cache-Control
-tags:
-  - Cache-Control
-  - General Header
-  - HTTP
-  - HTTP Header
-  - Reference
 ---
 {{HTTPSidebar}}
 

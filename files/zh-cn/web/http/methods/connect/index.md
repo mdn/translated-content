@@ -1,10 +1,6 @@
 ---
 title: CONNECT
 slug: Web/HTTP/Methods/CONNECT
-tags:
-  - 请求方法
-  - 隧道
-translation_of: Web/HTTP/Methods/CONNECT
 ---
 {{HTTPSidebar}}
 

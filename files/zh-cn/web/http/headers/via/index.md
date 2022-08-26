@@ -1,11 +1,6 @@
 ---
 title: Via
 slug: Web/HTTP/Headers/Via
-tags:
-  - 代理
-  - 循环请求
-  - 首部
-translation_of: Web/HTTP/Headers/Via
 ---
 {{HTTPSidebar}}
 

@@ -12,7 +12,6 @@ tags:
   - スタイルシート
   - lastStyleSheetSet
   - 非推奨
-browser-compat: api.Document.lastStyleSheetSet
 translation_of: Web/API/Document/lastStyleSheetSet
 ---
 {{APIRef("DOM")}}{{deprecated_header}}

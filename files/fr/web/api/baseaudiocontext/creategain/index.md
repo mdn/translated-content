@@ -87,15 +87,13 @@ function couperSon () {
 }
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                        | Status                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioContext-createGain-GainNode', 'createGain()')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.BaseAudioContext.createGain")}}
+{{Compat}}
 
 ## Voir aussi
 

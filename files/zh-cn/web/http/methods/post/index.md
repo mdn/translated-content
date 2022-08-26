@@ -1,11 +1,6 @@
 ---
 title: POST
 slug: Web/HTTP/Methods/POST
-tags:
-  - HTTP
-  - 参考
-  - 请求方法
-translation_of: Web/HTTP/Methods/POST
 ---
 {{HTTPSidebar}}
 

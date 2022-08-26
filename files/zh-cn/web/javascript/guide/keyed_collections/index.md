@@ -1,13 +1,6 @@
 ---
 title: 带键的集合
 slug: Web/JavaScript/Guide/Keyed_collections
-tags:
-  - Guide
-  - JavaScript
-  - Map
-  - set
-  - 集合
-translation_of: Web/JavaScript/Guide/Keyed_collections
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
 

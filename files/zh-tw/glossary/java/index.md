@@ -1,10 +1,6 @@
 ---
 title: Java
 slug: Glossary/Java
-tags:
-  - Java
-  - 術語表
-translation_of: Glossary/Java
 ---
 Java 是一個{{glossary("Compile", "編譯式")}}、{{glossary("OOP", "物件導向")}}、可攜性高的{{Glossary("computer programming", "程式設計")}}語言。
 

@@ -6,7 +6,6 @@ tags:
   - DOM
   - Element
   - プロパティ
-browser-compat: api.Element.lastElementChild
 translation_of: Web/API/Element/lastElementChild
 ---
 {{ APIRef("DOM") }}

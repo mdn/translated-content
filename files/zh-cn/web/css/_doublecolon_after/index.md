@@ -1,14 +1,6 @@
 ---
 title: '::after (:after)'
 slug: Web/CSS/::after
-tags:
-  - CSS 伪元素
-  - getComputedStyle
-  - getPropertyValue
-  - setProperty
-  - 布局
-  - 需要移动端浏览器兼容性
-translation_of: Web/CSS/::after
 ---
 {{ CSSRef() }}
 

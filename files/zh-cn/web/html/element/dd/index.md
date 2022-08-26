@@ -1,13 +1,6 @@
 ---
 title: <dd>
 slug: Web/HTML/Element/dd
-tags:
-  - HTML
-  - HTML 分组内容
-  - Web
-  - 元素
-  - 引用
-translation_of: Web/HTML/Element/dd
 ---
 {{HTMLRef}}
 

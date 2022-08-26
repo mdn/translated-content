@@ -1,12 +1,6 @@
 ---
 title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
-tags:
-  - Content-Type
-  - Entity header
-  - HTTP
-  - Reference
-  - header
 ---
 {{HTTPSidebar}}
 

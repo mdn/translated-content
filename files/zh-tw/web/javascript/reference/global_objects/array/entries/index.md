@@ -1,16 +1,6 @@
 ---
 title: Array.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
-tags:
-  - Array
-  - ECMAScript6
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - 迭代器
-  - 陣列
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/entries
 ---
 {{JSRef}}
 

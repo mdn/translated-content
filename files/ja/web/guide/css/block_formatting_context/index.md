@@ -112,6 +112,7 @@ section {
 ```
 
 #### 結果
+
 {{EmbedLiveSample("Contain_internal_floats", 200, 480)}}
 
 ### 外部の浮動要素を除外する
@@ -159,6 +160,7 @@ section {
 ```
 
 #### 結果
+
 {{EmbedLiveSample("Exclude_external_floats", 200, 330)}}
 
 inline-block で width:\<percentage> を使用するよりも、この場合は右側の div の幅を指定する必要がありません。
@@ -197,6 +199,7 @@ inline-block で width:\<percentage> を使用するよりも、この場合は�
 ```
 
 #### 結果
+
 {{EmbedLiveSample("Margin_collapsing", 120, 170)}}
 
 ## 仕様書

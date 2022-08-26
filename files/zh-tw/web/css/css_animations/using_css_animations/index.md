@@ -1,14 +1,6 @@
 ---
 title: CSS 動畫
 slug: Web/CSS/CSS_Animations/Using_CSS_animations
-tags:
-  - Advanced
-  - CSS animation
-  - CSS 動畫
-  - Example
-  - Experimental
-  - Guide
-translation_of: Web/CSS/CSS_Animations/Using_CSS_animations
 ---
 {{SeeCompatTable}}{{CSSRef}}
 
@@ -16,9 +8,9 @@ CSS animations 使 CSS style configuration 的轉變變得可行。在這種動�
 
 相較於傳統 script-driven 的動畫技術，CSS animations 有三種好處：
 
-1.  對於不複雜的動畫來說，CSS animation 是好選擇。你甚至不必懂得 JavaScript。
-2.  在資源消耗上，CSS animation 有優勢，即使在系統負載超過 50% 仍可有效運作。在 JavaScript 上要達到一樣的目的有賴於你寫出品質非常好的 code。事實上，CSS animation 在運作上可以適時的減少 frame 量或以其它技術減少資源消耗。
-3.  CSS animation 讓瀏覽器來負責動畫的產生過程，如此可以擁有較好的優化。
+1. 對於不複雜的動畫來說，CSS animation 是好選擇。你甚至不必懂得 JavaScript。
+2. 在資源消耗上，CSS animation 有優勢，即使在系統負載超過 50% 仍可有效運作。在 JavaScript 上要達到一樣的目的有賴於你寫出品質非常好的 code。事實上，CSS animation 在運作上可以適時的減少 frame 量或以其它技術減少資源消耗。
+3. CSS animation 讓瀏覽器來負責動畫的產生過程，如此可以擁有較好的優化。
 
 ## CSS animation 設定
 

@@ -1,7 +1,6 @@
 ---
 title: 漸層
 slug: Web/SVG/Tutorial/Gradients
-translation_of: Web/SVG/Tutorial/Gradients
 ---
 {{ PreviousNext("SVG/Tutorial/Fills_and_Strokes", "SVG/Tutorial/Patterns") }}
 

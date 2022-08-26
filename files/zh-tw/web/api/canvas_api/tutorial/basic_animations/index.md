@@ -1,7 +1,6 @@
 ---
 title: 基礎動畫
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
-translation_of: Web/API/Canvas_API/Tutorial/Basic_animations
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
 

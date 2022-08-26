@@ -1,11 +1,6 @@
 ---
 title: metadata
 slug: Web/SVG/Element/metadata
-tags:
-  - SVG
-  - SVG 描述
-  - 元素
-translation_of: Web/SVG/Element/metadata
 ---
 {{SVGRef}}
 

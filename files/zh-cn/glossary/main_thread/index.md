@@ -1,7 +1,6 @@
 ---
 title: 主线程
 slug: Glossary/Main_thread
-translation_of: Glossary/Main_thread
 ---
 **主线程**用于浏览器处理用户事件和页面绘制等。默认情况下，浏览器在一个线程中运行一个页面中的所有 JavaScript 脚本，以及呈现布局，回流，和垃圾回收。这意味着一个长时间运行的 JavaScript 会阻塞线程，导致页面无法响应，造成不佳的用户体验。
 

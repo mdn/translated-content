@@ -1,13 +1,6 @@
 ---
 title: 语法
 slug: Web/CSS/Syntax
-tags:
-  - CSS
-  - Web
-  - 初学者
-  - 教程
-  - 语法
-translation_of: Web/CSS/Syntax
 ---
 {{cssref}}
 

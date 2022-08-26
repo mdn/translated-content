@@ -1,7 +1,6 @@
 ---
 title: Interact with the clipboard
 slug: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
-translation_of: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
 ---
 {{AddonSidebar}}
 

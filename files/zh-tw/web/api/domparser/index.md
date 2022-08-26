@@ -1,9 +1,6 @@
 ---
 title: DOMParser
 slug: Web/API/DOMParser
-tags:
-  - DOMParser SVG XML
-translation_of: Web/API/DOMParser
 ---
 {{APIRef("DOM")}}{{SeeCompatTable}}
 

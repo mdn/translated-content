@@ -1,7 +1,6 @@
 ---
 title: Componentizingapp
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 

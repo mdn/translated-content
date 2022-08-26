@@ -1,7 +1,6 @@
 ---
 title: preserveAlpha
 slug: Web/SVG/Attribute/preserveAlpha
-translation_of: Web/SVG/Attribute/preserveAlpha
 ---
 « [SVG 属性参考](/en/SVG/Attribute)
 

@@ -1,7 +1,6 @@
 ---
 title: 控制畫面方向
 slug: Web/API/CSS_Object_Model/Managing_screen_orientation
-translation_of: Web/API/CSS_Object_Model/Managing_screen_orientation
 ---
 {{SeeCompatTable}}{{APIRef}}
 

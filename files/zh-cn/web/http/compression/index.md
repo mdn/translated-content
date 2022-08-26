@@ -1,11 +1,6 @@
 ---
 title: HTTP 协议中的数据压缩
 slug: Web/HTTP/Compression
-tags:
-  - HTTP
-  - 指南
-  - 数据压缩
-translation_of: Web/HTTP/Compression
 ---
 {{HTTPSidebar}}
 

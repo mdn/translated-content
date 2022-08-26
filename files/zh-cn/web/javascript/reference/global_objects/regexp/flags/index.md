@@ -1,7 +1,6 @@
 ---
 title: RegExp.prototype.flags
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/flags
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 ---
 {{JSRef}}
 

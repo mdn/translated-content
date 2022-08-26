@@ -22,7 +22,6 @@ tags:
   - getClientRects
   - offsetHeight
   - scrollHeight
-browser-compat: api.Element.getBoundingClientRect
 translation_of: Web/API/Element/getBoundingClientRect
 ---
 {{APIRef("DOM")}}

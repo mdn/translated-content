@@ -1,17 +1,6 @@
 ---
 title: 客户端 Web API
 slug: Learn/JavaScript/Client-side_web_APIs
-tags:
-  - API(应用程序编程接口)
-  - DOM(文档对象模型)
-  - JavaScript
-  - WebAPI(网页接口)
-  - 初学者
-  - 图形学
-  - 数据
-  - 文章
-  - 脚本编程
-translation_of: Learn/JavaScript/Client-side_web_APIs
 ---
 {{LearnSidebar}}
 

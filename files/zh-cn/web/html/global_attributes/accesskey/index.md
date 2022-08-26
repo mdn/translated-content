@@ -1,11 +1,6 @@
 ---
 title: accesskey
 slug: Web/HTML/Global_attributes/accesskey
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/accesskey
 ---
 {{HTMLSidebar("Global_attributes")}}
 
@@ -90,7 +85,7 @@ translation_of: Web/HTML/Global_attributes/accesskey
 
 要注意 Firefox 可以通过用户偏好，自定义所需的修饰键。
 
-## 可访问性
+## 无障碍
 
 除了糟糕的浏览器支持之外， `accesskey`属性还有很多问题：
 

@@ -1,7 +1,6 @@
 ---
 title: Position.timestamp
 slug: Web/API/GeolocationPosition/timestamp
-translation_of: Web/API/GeolocationPosition/timestamp
 ---
 {{APIRef("Geolocation API")}}
 

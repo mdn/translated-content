@@ -1,14 +1,6 @@
 ---
 title: <em>
 slug: Web/HTML/Element/em
-tags:
-  - VS
-  - em
-  - i
-  - web 语义化
-  - webgeeker
-  - xgqfrms
-translation_of: Web/HTML/Element/em
 ---
 ## 简介
 

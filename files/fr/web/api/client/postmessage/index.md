@@ -56,10 +56,8 @@ function sendMessage(message) {
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                               | Commentaire         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#client-postmessage-method', 'postMessage()')}} | {{Spec2('Service Workers')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Client.postMessage")}}
+{{Compat}}

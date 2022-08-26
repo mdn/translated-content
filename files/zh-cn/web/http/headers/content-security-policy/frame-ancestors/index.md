@@ -1,7 +1,6 @@
 ---
 title: 'CSP: frame-ancestors'
 slug: Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
-translation_of: Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
 ---
 {{HTTPSidebar}}
 

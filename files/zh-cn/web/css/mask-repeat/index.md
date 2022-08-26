@@ -1,7 +1,6 @@
 ---
 title: mask-repeat
 slug: Web/CSS/mask-repeat
-translation_of: Web/CSS/mask-repeat
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

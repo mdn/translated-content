@@ -1,15 +1,6 @@
 ---
 title: Document
 slug: Web/API/Document
-tags:
-  - API
-  - DOM
-  - Gecko
-  - MakeBrowserAgnostic
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/API/Document
 ---
 {{APIRef}}
 

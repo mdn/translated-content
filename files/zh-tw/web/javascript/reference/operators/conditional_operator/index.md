@@ -1,7 +1,6 @@
 ---
 title: 條件運算子
 slug: Web/JavaScript/Reference/Operators/Conditional_Operator
-translation_of: Web/JavaScript/Reference/Operators/Conditional_Operator
 ---
 {{jsSidebar("Operators")}}
 

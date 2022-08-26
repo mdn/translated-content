@@ -1,11 +1,6 @@
 ---
 title: ':visited'
 slug: Web/CSS/:visited
-tags:
-  - CSS
-  - 伪类
-  - 布局
-translation_of: Web/CSS/:visited
 ---
 {{CSSRef}}
 
@@ -62,7 +57,7 @@ a:visited {
 
 ### 结果
 
-{{ EmbedLiveSample('示例', '', '', '', 'Web/CSS/:visited') }}
+{{ EmbedLiveSample('示例') }}
 
 ## 规范
 

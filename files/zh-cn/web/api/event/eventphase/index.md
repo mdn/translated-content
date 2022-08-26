@@ -29,7 +29,7 @@ var phase = event.eventPhase;
 
 更多细节，请看[section 3.1, Event dispatch and DOM event flow](http://www.w3.org/TR/DOM-Level-3-Events/#event-flow), DOM 级别 3 的事件说明。
 
-## 例子
+## 示例
 
 ### HTML 内容
 
@@ -128,7 +128,7 @@ function Clear() {
 }
 ```
 
-{{ EmbedLiveSample('Example', '', '700', '', 'Web/API/Event/eventPhase') }}
+{{ EmbedLiveSample('示例', '', '700') }}
 
 ## 规范
 

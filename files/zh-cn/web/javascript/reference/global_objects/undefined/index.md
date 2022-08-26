@@ -1,7 +1,6 @@
 ---
 title: undefined
 slug: Web/JavaScript/Reference/Global_Objects/undefined
-translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 ---
 {{jsSidebar("Objects")}}全局属性**`undefined`**表示原始值`{{Glossary("Undefined", "undefined")}}。`它是一个 JavaScript 的 {{Glossary("Primitive", "原始数据类型")}} 。{{js_property_attributes(0,0,0)}}{{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}
 

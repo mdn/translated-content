@@ -1,11 +1,6 @@
 ---
 title: <figcaption>
 slug: Web/HTML/Element/figcaption
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-translation_of: Web/HTML/Element/figcaption
 ---
 {{HTMLRef}}
 

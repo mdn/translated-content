@@ -1,11 +1,6 @@
 ---
 title: <time>
 slug: Web/CSS/time
-tags:
-  - CSS
-  - CSS 数据类型
-  - Web
-translation_of: Web/CSS/time
 ---
 {{CSSRef}}
 

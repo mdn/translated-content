@@ -1,16 +1,6 @@
 ---
 title: String.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/String/at
-tags:
-  - String
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-  - at
-  - Experimental
-browser-compat: javascript.builtins.String.at
 ---
 {{JSRef}}
 

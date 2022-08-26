@@ -1,9 +1,6 @@
 ---
 title: 关于该参考
 slug: Web/JavaScript/Reference/About
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Reference/About
 ---
 {{JsSidebar}}
 

@@ -1,14 +1,6 @@
 ---
 title: Generator.prototype.throw()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
-tags:
-  - ECMAScript6
-  - JavaScript
-  - 参考
-  - 属性
-  - 方法
-  - 生成器
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/throw
 ---
 {{JSRef}}
 

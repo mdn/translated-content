@@ -1,10 +1,6 @@
 ---
 title: Access-Control-Expose-Headers
 slug: Web/HTTP/Headers/Access-Control-Expose-Headers
-tags:
-  - 跨域资源共享
-  - 首部
-translation_of: Web/HTTP/Headers/Access-Control-Expose-Headers
 ---
 {{HTTPSidebar}}
 

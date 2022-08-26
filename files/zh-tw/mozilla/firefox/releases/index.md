@@ -1,11 +1,6 @@
 ---
 title: Firefox 各版本技術文件
 slug: Mozilla/Firefox/Releases
-tags:
-  - Firefox
-  - NeedsTranslation
-  - TopicStub
-translation_of: Mozilla/Firefox/Releases
 ---
 {{FirefoxSidebar}}
 

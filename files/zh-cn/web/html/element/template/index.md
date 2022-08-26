@@ -1,13 +1,6 @@
 ---
 title: <template>：内容模板元素
 slug: Web/HTML/Element/template
-tags:
-  - HTML
-  - Web
-  - Web Components
-  - Web 组件
-  - 元素
-translation_of: Web/HTML/Element/template
 ---
 {{HTMLRef}}
 

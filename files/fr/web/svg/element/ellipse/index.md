@@ -69,7 +69,7 @@ L'élément `ellipse` est une forme basique SVG,utilisé pour créer des ellipse
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGEllipseElement`](/fr/DOM/SVGEllipseElement "en/DOM/SVGEllipseElement").
+Cet élément implémente l'interface [`SVGEllipseElement`](/fr/DOM/SVGEllipseElement).
 
 ## Spécifications
 

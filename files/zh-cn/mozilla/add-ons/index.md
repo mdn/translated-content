@@ -1,15 +1,6 @@
 ---
 title: 附加组件
 slug: Mozilla/Add-ons
-tags:
-  - Add-ons
-  - Extension
-  - Extensions
-  - Landing
-  - Mozilla
-  - 扩展
-  - 附加组件
-translation_of: Mozilla/Add-ons
 ---
 {{AddonSidebar}}
 

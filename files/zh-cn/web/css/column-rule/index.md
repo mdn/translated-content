@@ -1,11 +1,6 @@
 ---
 title: column-rule
 slug: Web/CSS/column-rule
-tags:
-  - CSS
-  - CSS 多列布局
-  - CSS 属性
-translation_of: Web/CSS/column-rule
 ---
 {{CSSRef("CSS Multi-columns")}}{{EmbedInteractiveExample("pages/css/column-rule.html")}}
 

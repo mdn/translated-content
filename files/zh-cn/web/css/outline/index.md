@@ -1,14 +1,6 @@
 ---
 title: outline
 slug: Web/CSS/outline
-tags:
-  - CSS
-  - CSS 属性
-  - CSS 轮廓
-  - 参考
-  - 布局
-  - 轮廓
-translation_of: Web/CSS/outline
 ---
 {{CSSRef}}
 
@@ -91,7 +83,7 @@ a:focus {
 
 ### 结果
 
-## 可访问性考虑
+## 无障碍考虑
 
 将 `outline` 设置为 `0` 或 `none` 会移除浏览器的默认聚焦样式。如果一个元素可交互，这个元素必须有一个可见的聚焦提示。若移除了默认聚焦样式，记得提供一个显眼的聚焦样式。
 

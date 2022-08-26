@@ -1,12 +1,6 @@
 ---
 title: Server
 slug: Web/HTTP/Headers/Server
-tags:
-  - 安全
-  - 服务器
-  - 软件
-  - 首部
-translation_of: Web/HTTP/Headers/Server
 ---
 {{HTTPSidebar}}
 

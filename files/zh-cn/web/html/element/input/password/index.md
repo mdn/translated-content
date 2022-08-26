@@ -1,7 +1,6 @@
 ---
 title: <input type="password">
 slug: Web/HTML/Element/Input/password
-translation_of: Web/HTML/Element/input/password
 ---
 {{HTMLRef}}
 

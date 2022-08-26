@@ -1,12 +1,6 @@
 ---
 title: <xmp>
 slug: Web/HTML/Element/xmp
-tags:
-  - HTML
-  - Web
-  - 元素
-  - 已废弃
-translation_of: Web/HTML/Element/xmp
 ---
 {{HTMLRef}} {{deprecated_header}}
 

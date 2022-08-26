@@ -14,7 +14,6 @@ tags:
   - 入力型
   - Number
   - リファレンス
-browser-compat: html.elements.input.type_image
 translation_of: Web/HTML/Element/input/image
 ---
 

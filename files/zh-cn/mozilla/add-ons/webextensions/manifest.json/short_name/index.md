@@ -1,10 +1,6 @@
 ---
 title: 短名称 - short_name
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/short_name
-tags:
-  - 短名称
-  - 附加组件
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/short_name
 ---
 {{AddonSidebar}}
 

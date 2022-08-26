@@ -1,11 +1,6 @@
 ---
 title: 安全（HTTP 方法）
 slug: Glossary/Safe/HTTP
-tags:
-  - Glossary
-  - HTTP
-  - 术语
-translation_of: Glossary/safe
 ---
 如果说一个 HTTP 方法是`安全`的，是指这是个不会修改服务器的数据的方法。也就是说，这是一个对服务器只读操作的方法。这些方法是安全的：{{HTTPMethod("GET")}}，{{HTTPMethod("HEAD")}} 和 {{HTTPMethod("OPTIONS")}}。所有安全的方法都是{{glossary("idempotent", "幂等")}}的，但并非所有幂等方法都是安全的，例如，{{HTTPMethod("PUT")}} 和 {{HTTPMethod("DELETE")}} 都是幂等的，但不是安全的。
 

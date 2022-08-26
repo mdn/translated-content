@@ -1,7 +1,6 @@
 ---
 title: 控制流
 slug: Glossary/Control_flow
-translation_of: Glossary/Control_flow
 ---
 _控制流_ 是计算机执行一个程序中语句的顺序。
 

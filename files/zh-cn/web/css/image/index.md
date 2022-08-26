@@ -1,11 +1,6 @@
 ---
 title: <image>
 slug: Web/CSS/image
-tags:
-  - CSS 图像
-  - CSS 图像数据类型
-  - CSS 数据类型
-translation_of: Web/CSS/image
 ---
 {{ CSSRef() }}
 

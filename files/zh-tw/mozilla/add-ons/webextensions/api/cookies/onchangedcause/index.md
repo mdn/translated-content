@@ -1,7 +1,6 @@
 ---
 title: cookies.OnChangedCause
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/OnChangedCause
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/OnChangedCause
 ---
 {{AddonSidebar()}}
 

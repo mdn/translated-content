@@ -1,11 +1,6 @@
 ---
 title: 按位非 (~)
 slug: Web/JavaScript/Reference/Operators/Bitwise_NOT
-tags:
-  - JavaScript
-  - 位操作符
-  - 操作符
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_NOT
 ---
 {{jsSidebar("Operators")}}
 

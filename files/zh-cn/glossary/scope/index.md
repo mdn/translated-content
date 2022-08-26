@@ -1,11 +1,6 @@
 ---
 title: Scope（作用域）
 slug: Glossary/Scope
-tags:
-  - CodingScripting
-  - Glossary
-  - scope
-translation_of: Glossary/Scope
 ---
 当前的执行上下文。{{glossary("value","值")}}和**表达式**在其中 "可见" 或可被访问到的上下文。如果一个**{{glossary("variable","变量")}}**或者其他表达式不 "在当前的作用域中"，那么它就是不可用的。作用域也可以根据代码层次分层，以便子作用域可以访问父作用域，通常是指沿着链式的作用域链查找，而不能从父作用域引用子作用域中的变量和引用。
 

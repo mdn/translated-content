@@ -1,7 +1,6 @@
 ---
 title: writing-mode
 slug: Web/CSS/writing-mode
-translation_of: Web/CSS/writing-mode
 ---
 {{CSSRef}}
 

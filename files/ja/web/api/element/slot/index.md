@@ -8,7 +8,6 @@ tags:
   - リファレンス
   - シャドウ DOM
   - slot
-browser-compat: api.Element.slot
 translation_of: Web/API/Element/slot
 ---
 {{APIRef("Shadow DOM")}}

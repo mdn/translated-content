@@ -1,13 +1,6 @@
 ---
 title: <optgroup>
 slug: Web/HTML/Element/optgroup
-tags:
-  - HTML
-  - HTML 表单
-  - 元素
-  - 参考
-  - 表单
-translation_of: Web/HTML/Element/optgroup
 ---
 {{HTMLRef}}
 

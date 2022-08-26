@@ -43,13 +43,13 @@ Este tema contiene los siguientes módulos en el orden recomendado de aprendizaj
 - [Diseño CSS](/es/docs/Learn/CSS/CSS_layout)
   - : Llegados a este punto ya conocemos lo básico de CSS, como darle estilo al texto, y cómo dar estilo y manipular el contenido de las cajas. Es momento de ver cómo ubicar las cajas correctamente con respecto a la ventana de visualización y a otra. Hemos cubierto los requisitos necesarios para poder meternos de lleno en el diseño CSS, ver diferentes ajustes de visualización, metodos tradicionales de diseño con pivotes y posicionamiento, y nuevas herramientas de diseño como flexbox.
 - Diseño Adaptable (RBD Responsive Web Design)
-  - : Con la gran variedad de dispositivos capaces de navegar por la Web actualmente, el [diseño web adaptable ](/es/docs/web/progressive_web_apps/responsive/responsive_design_building_blocks)(RWD) es una habilidad imprescindible para el diseño web. En este módulo veremos principios básicos y herramientas de RWD, como aplicar diferentes CSS a un documento dependiendo de las características del dispositivo como el ancho de la pantalla, la orientación y la resolución; veremos las tecnologías disponibles para mostrar videos e imágenes dependiendo de estas características.
+  - : (RWD) es una habilidad imprescindible para el diseño web. En este módulo veremos principios básicos y herramientas de RWD, como aplicar diferentes CSS a un documento dependiendo de las características del dispositivo como el ancho de la pantalla, la orientación y la resolución; veremos las tecnologías disponibles para mostrar videos e imágenes dependiendo de estas características.
 
 ## Resolución de problemas con CSS
 
-[Uso de CSS para resolver problemas comunes](/es/docs/Learn/CSS/S%C3%A1bercomo) proporciona vínculos a secciones que explican cómo usar CSS para resolver problemas comunes cuando se está creando una página web.
+[Uso de CSS para resolver problemas comunes](https://developer.mozilla.org/es/docs/Learn/CSS/S%C3%A1bercomo) proporciona vínculos a secciones que explican cómo usar CSS para resolver problemas comunes cuando se está creando una página web.
 
 ## Ver También
 
-- [CSS en MDN](/es/docs/Web/CSS)
+- [CSS en MDN](/es/docs/Web/CSS) 
   - : Principal entrada para la documentación de CSS en MDN, donde encontrarás documentación detallada de todas las funcionalidades del lenguaje CSS. ¿Quieres saber todos los valores posibles de una propiedad? Este es tu sitio.

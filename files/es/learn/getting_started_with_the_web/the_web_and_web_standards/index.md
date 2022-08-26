@@ -34,7 +34,7 @@ Un último dato importante para compartir es que en 1994, TimBL fundó el {{inte
 
 ## Estándares web
 
-**Los estándares web** son las tecnologías que utilizamos para crear sitios web. Estos estándares existen como extensos documentos técnicos llamados _especificaciones_, que detallan exactamente cómo debería funcionar la tecnología. Estos documentos no son muy útiles para aprender a usar las tecnologías que describen (es por eso que tenemos sitios como _MDN Web Docs_), sino que están pensados ​​para que los utilicen los ingenieros de software para implementar esas tecnologías (generalmente en los navegadores web).
+**Los estándares web** son las tecnologías que utilizamos para crear sitios web. Estos estándares existen como extensos documentos técnicos llamados _especificaciones_, que detallan exactamente cómo debería funcionar la tecnología. Estos documentos no son muy útiles para aprender a usar las tecnologías que describen (es por eso que tenemos sitios como _MDN Web Docs_), sino que están pensados para que los utilicen los ingenieros de software para implementar esas tecnologías (generalmente en los navegadores web).
 
 Por ejemplo, el [lleno de vida Estándar HTML](https://html.spec.whatwg.org/multipage/) describe exactamente cómo se debe implementar HTML (todos los elementos HTML y sus APIs asociadas y otras tecnologías circundantes).
 
@@ -104,9 +104,11 @@ La sintaxis real de los mensajes HTTP (llamados peticiones y respuestas) no es t
 
 - Hojas de estilo en cascada (**CSS** por "_Cascading Style Sheets_") es un lenguaje basado en reglas que se utiliza para aplicar estilos a tu HTML, por ejemplo, establecer colores del texto y del fondo, agregar bordes, animar cosas o diseñar una página de cierta manera. Como un sencillo ejemplo, el siguiente código convertirá nuestro párrafo HTML en rojo:
 
-      p  {
-        color: red;
-      }
+  ```css
+  p  {
+    color: red;
+  }
+  ```
 
   En la analogía de la casa, CSS es como la pintura, el papel tapiz, las alfombras y los cuadros que usarías para hacer que la casa se vea bien.
 

@@ -1,13 +1,6 @@
 ---
 title: 可選串連
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
-tags:
-  - JavaScript
-  - 串連
-  - 可選串連
-  - 語言功能
-  - 運算子
-translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 ---
 {{JSSidebar("Operators")}}
 

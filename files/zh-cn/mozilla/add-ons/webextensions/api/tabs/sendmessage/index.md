@@ -1,7 +1,6 @@
 ---
 title: tabs.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
 ---
 {{AddonSidebar()}}
 

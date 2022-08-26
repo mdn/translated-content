@@ -1,7 +1,6 @@
 ---
 title: HTTP Public Key Pinning (HPKP)
 slug: Web/Security/Certificate_Transparency
-translation_of: Web/HTTP/Public_Key_Pinning
 original_slug: Web/HTTP/Public_Key_Pinning
 ---
 HTTP 公钥锁定（HPKP）是一种安全功能，它告诉 Web 客户端将特定加密公钥与某个 Web 服务器相关联，以降低使用伪造证书进行 MITM 攻击的风险。
@@ -29,7 +28,7 @@ Public-Key-Pins: pin-sha256="base64=="; max-age=expireTime [; includeSubDomains]
 - `report-uri` {{optional_inline}}
   - : 如果指定了此可选参数，则会将引脚验证失败报告给给定的 URL。
 
-> **备注：** 当前规范要求包含第二个用于备份密钥的引脚，该引脚尚未在生产中使用。 这允许更改服务器的公钥，而不会破坏已经记下引脚的客户端的可访问性。 例如，当前一个密钥被泄露时，这很重要。
+> **备注：** 当前规范要求包含第二个用于备份密钥的引脚，该引脚尚未在生产中使用。 这允许更改服务器的公钥，而不会破坏已经记下引脚的客户端的无障碍。 例如，当前一个密钥被泄露时，这很重要。
 
 ### 提取 Base64 编码的公钥信息
 

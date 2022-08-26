@@ -1,11 +1,6 @@
 ---
 title: vertical-align
 slug: Web/CSS/vertical-align
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/vertical-align
 ---
 {{CSSRef}}
 

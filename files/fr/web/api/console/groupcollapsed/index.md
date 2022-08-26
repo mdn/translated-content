@@ -35,13 +35,11 @@ console.groupCollapsed([label]);
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#groupcollapsed", "console.groupCollapsed()")}} | {{Spec2("Console API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.groupCollapsed")}}
+{{Compat}}
 
 ## Voir aussi
 

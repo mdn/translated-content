@@ -1,7 +1,6 @@
 ---
 title: <plaintext>
 slug: Web/HTML/Element/plaintext
-translation_of: Web/HTML/Element/plaintext
 ---
 {{deprecated_header}}
 

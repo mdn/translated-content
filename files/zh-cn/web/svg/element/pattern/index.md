@@ -1,12 +1,6 @@
 ---
 title: pattern
 slug: Web/SVG/Element/pattern
-tags:
-  - SVG
-  - SVG 容器
-  - 元素
-  - 需要兼容性表
-translation_of: Web/SVG/Element/pattern
 ---
 {{SVGRef}}
 

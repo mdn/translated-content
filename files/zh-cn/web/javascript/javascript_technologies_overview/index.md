@@ -1,12 +1,6 @@
 ---
 title: JavaScript 技术概览
 slug: Web/JavaScript/JavaScript_technologies_overview
-tags:
-  - DOM
-  - JavaScript
-  - 入门
-  - 新手
-translation_of: Web/JavaScript/JavaScript_technologies_overview
 ---
 {{JsSidebar("Introductory")}}
 

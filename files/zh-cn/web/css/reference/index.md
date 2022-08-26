@@ -1,13 +1,6 @@
 ---
 title: CSS 参考
 slug: Web/CSS/Reference
-tags:
-  - CSS
-  - Reference
-  - l10n:priority
-  - 参考
-  - 总览
-translation_of: Web/CSS/Reference
 ---
 {{CSSRef}}
 

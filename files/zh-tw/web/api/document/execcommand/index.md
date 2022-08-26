@@ -1,7 +1,6 @@
 ---
 title: Document.execCommand()
 slug: Web/API/Document/execCommand
-translation_of: Web/API/Document/execCommand
 ---
 {{ApiRef("DOM")}}{{deprecated_header}}
 

@@ -1,11 +1,6 @@
 ---
 title: 陳述式與宣告
 slug: Web/JavaScript/Reference/Statements
-tags:
-  - JavaScript
-  - Reference
-  - statements
-translation_of: Web/JavaScript/Reference/Statements
 ---
 {{jsSidebar("Statements")}}
 

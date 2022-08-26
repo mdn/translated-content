@@ -9,7 +9,6 @@ tags:
   - Reference
   - keypress
   - Deprecated
-browser-compat: api.Element.keypress_event
 translation_of: Web/API/Element/keypress_event
 ---
 {{APIRef}} {{deprecated_header}}

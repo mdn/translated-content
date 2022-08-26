@@ -1,7 +1,6 @@
 ---
 title: <easing-function>
 slug: Web/CSS/easing-function
-translation_of: Web/CSS/easing-function
 ---
 {{CSSRef}}
 

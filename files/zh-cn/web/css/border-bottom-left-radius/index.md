@@ -1,7 +1,6 @@
 ---
 title: 左下边框圆角
 slug: Web/CSS/border-bottom-left-radius
-translation_of: Web/CSS/border-bottom-left-radius
 ---
 {{CSSRef}}
 

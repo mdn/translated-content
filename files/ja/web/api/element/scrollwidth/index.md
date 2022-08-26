@@ -8,7 +8,6 @@ tags:
   - NeedsSpecTable
   - プロパティ
   - リファレンス
-browser-compat: api.Element.scrollWidth
 translation_of: Web/API/Element/scrollWidth
 ---
 {{APIRef("DOM")}}

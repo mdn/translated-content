@@ -1,11 +1,6 @@
 ---
 title: orientation
 slug: Web/CSS/@media/orientation
-tags:
-  - '@media'
-  - CSS
-  - 参考
-translation_of: Web/CSS/@media/orientation
 ---
 {{cssref}}
 

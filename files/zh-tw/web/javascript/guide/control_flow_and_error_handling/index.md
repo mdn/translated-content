@@ -1,13 +1,6 @@
 ---
 title: 流程控制與例外處理
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-tags:
-  - Beginner
-  - Guide
-  - JavaScript
-  - 初學者
-  - 指南
-translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
@@ -416,8 +409,6 @@ catch (e) {
 - _fulfilled_：已實現，表示操作成功完成。
 - _rejected_：已拒絕，表示操作失敗。
 - _settled_：已完成，表示 Promise 狀態為已實現或已拒絕，但不是等待中。
-
-![promises](https://mdn.mozillademos.org/files/8633/promises.png)
 
 ### 使用 XHR 載入圖檔
 

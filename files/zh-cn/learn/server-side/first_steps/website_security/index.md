@@ -1,10 +1,6 @@
 ---
 title: 站点安全
 slug: Learn/Server-side/First_steps/Website_security
-tags:
-  - 安全
-  - 站点安全
-translation_of: Learn/Server-side/First_steps/Website_security
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 

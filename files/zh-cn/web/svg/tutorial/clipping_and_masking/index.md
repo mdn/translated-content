@@ -1,10 +1,6 @@
 ---
 title: 剪切和遮罩
 slug: Web/SVG/Tutorial/Clipping_and_masking
-tags:
-  - SVG
-  - SVG:Tutorial
-translation_of: Web/SVG/Tutorial/Clipping_and_masking
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Transformations", "Web/SVG/Tutorial/Other_content_in_SVG") }}
 

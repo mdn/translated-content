@@ -13,7 +13,6 @@ tags:
   - マウス
   - mouseenter
   - ポインター
-browser-compat: api.Element.mouseenter_event
 translation_of: Web/API/Element/mouseenter_event
 ---
 {{APIRef}}

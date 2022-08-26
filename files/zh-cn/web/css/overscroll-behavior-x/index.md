@@ -1,14 +1,6 @@
 ---
 title: overscroll-behavior-x
 slug: Web/CSS/overscroll-behavior-x
-tags:
-  - overscroll-behavior-x
-  - 层叠式样式表
-  - 层叠式样式表属性
-  - 层叠式样式表盒子模型
-  - 引用
-  - 非标准
-translation_of: Web/CSS/overscroll-behavior-x
 ---
 {{CSSRef}}
 

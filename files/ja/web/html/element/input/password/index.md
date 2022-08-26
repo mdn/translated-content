@@ -14,7 +14,6 @@ tags:
   - リファレンス
   - ウェブ
   - password
-browser-compat: html.elements.input.input-password
 translation_of: Web/HTML/Element/input/password
 ---
 

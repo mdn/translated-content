@@ -1,7 +1,6 @@
 ---
 title: ':host-context()'
 slug: Web/CSS/:host-context
-translation_of: Web/CSS/:host-context
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

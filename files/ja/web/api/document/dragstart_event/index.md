@@ -7,7 +7,6 @@ tags:
   - Event
   - Reference
   - drag and drop
-browser-compat: api.Document.dragstart_event
 translation_of: Web/API/Document/dragstart_event
 ---
 {{APIRef}}

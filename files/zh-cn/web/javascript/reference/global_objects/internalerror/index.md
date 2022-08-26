@@ -1,10 +1,6 @@
 ---
 title: InternalError
 slug: Web/JavaScript/Reference/Global_Objects/InternalError
-tags:
-  - InternalError
-  - 内部错误
-translation_of: Web/JavaScript/Reference/Global_Objects/InternalError
 ---
 {{JSRef}} {{non-standard_header}}
 

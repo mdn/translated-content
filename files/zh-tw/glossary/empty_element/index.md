@@ -1,10 +1,6 @@
 ---
 title: Empty element
 slug: Glossary/Empty_element
-tags:
-  - 置空元素
-  - 術語表
-translation_of: Glossary/Empty_element
 ---
 **置空元素(empty element)**是一種來自 HTML、SVG 或 MathML **不能**有任何子節點 (如，嵌套元素或 文本節點)的元素({{Glossary("element")}})。
 

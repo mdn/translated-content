@@ -1,11 +1,6 @@
 ---
 title: WebGL tutorial
 slug: Web/API/WebGL_API/Tutorial
-tags:
-  - TopicStub
-  - Tutorial
-  - WebGL
-translation_of: Web/API/WebGL_API/Tutorial
 ---
 {{WebGLSidebar}}
 

@@ -1,12 +1,6 @@
 ---
 title: 常用的宏
 slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
-tags:
-  - CSS
-  - 参考
-  - 宏
-  - 结构
-translation_of: MDN/Structures/Macros/Commonly-used_macros
 original_slug: MDN/Structures/Macros/Commonly-used_macros
 ---
 {{MDNSidebar}}

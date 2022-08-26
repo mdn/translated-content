@@ -11,7 +11,6 @@ tags:
   - Reference
   - keyboard
   - keydown
-browser-compat: api.Element.keydown_event
 translation_of: Web/API/Element/keydown_event
 ---
 {{APIRef}}

@@ -1,7 +1,6 @@
 ---
 title: 用户代理
 slug: Glossary/User_agent
-translation_of: Glossary/User_agent
 ---
 用户代理是代表一个人的计算机程序，例如，一个在 {{Glossary("World Wide Web", "Web")}} 上的 {{Glossary("Browser","浏览器")}}。
 

@@ -1,7 +1,6 @@
 ---
 title: Firefox 35 技術文件
 slug: Mozilla/Firefox/Releases/35
-translation_of: Mozilla/Firefox/Releases/35
 ---
 {{FirefoxSidebar}}{{ ReleaseChannelInfo("35", "35", "January 2015", "Aurora") }}
 

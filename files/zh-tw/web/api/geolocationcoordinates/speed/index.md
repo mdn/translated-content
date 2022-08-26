@@ -1,7 +1,6 @@
 ---
 title: Coordinates.speed
 slug: Web/API/GeolocationCoordinates/speed
-translation_of: Web/API/GeolocationCoordinates/speed
 ---
 {{APIRef("Geolocation API")}}
 

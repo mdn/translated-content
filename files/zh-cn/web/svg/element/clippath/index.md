@@ -1,12 +1,6 @@
 ---
 title: clipPath
 slug: Web/SVG/Element/clipPath
-tags:
-  - Clip
-  - SVG
-  - 元素
-  - 参考
-translation_of: Web/SVG/Element/clipPath
 ---
 {{SVGRef}}
 

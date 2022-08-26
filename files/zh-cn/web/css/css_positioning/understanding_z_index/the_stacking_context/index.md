@@ -1,13 +1,6 @@
 ---
 title: 层叠上下文
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
-tags:
-  - Advanced
-  - CSS
-  - CSS 层叠上下文
-  - z-index
-  - 教程
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 original_slug: Web/Guide/CSS/Understanding_z_index/The_stacking_context
 ---
 {{cssref}}
@@ -215,5 +208,5 @@ h1 {
 ## 原始文档信息
 
 - 作者：Paolo Lombardi
-- 此文是我用意大利语写给 [YappY](http://www.yappy.it) 的英文版本。我授权以 [Creative Commons: Attribution-Sharealike license ](http://creativecommons.org/licenses/by-sa/2.0/)将所有内容分享。
+- 此文是我用意大利语写给 [YappY](http://www.yappy.it) 的英文版本。我授权以 [Creative Commons: Attribution-Sharealike license](http://creativecommons.org/licenses/by-sa/2.0/) 将所有内容分享。
 - 上次更新时间：July 9th, 2005

@@ -11,7 +11,6 @@ tags:
   - プロパティ
   - 読み取り専用
   - 非推奨
-browser-compat: api.Document.origin
 translation_of: Web/API/Document/origin
 ---
 {{APIRef("DOM")}}{{deprecated_header}}

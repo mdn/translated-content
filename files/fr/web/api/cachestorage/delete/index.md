@@ -56,13 +56,11 @@ this.addEventListener('activate', function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#cache-storage-delete', 'CacheStorage: delete')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.CacheStorage.delete")}}
+{{Compat}}
 
 ## Voir aussi
 

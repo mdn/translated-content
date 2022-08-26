@@ -1,16 +1,6 @@
 ---
 title: 词法文法
 slug: Web/JavaScript/Reference/Lexical_grammar
-tags:
-  - JavaScript
-  - Keyword
-  - Literal
-  - 关键字
-  - 字面量
-  - 直接量
-  - 词法
-  - 语法
-translation_of: Web/JavaScript/Reference/Lexical_grammar
 ---
 {{JsSidebar("More")}}
 

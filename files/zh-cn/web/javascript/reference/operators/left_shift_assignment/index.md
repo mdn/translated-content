@@ -1,13 +1,6 @@
 ---
 title: 左移赋值 (<<=)
 slug: Web/JavaScript/Reference/Operators/Left_shift_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.left_shift_assignment
 ---
 {{jsSidebar("Operators")}}
 

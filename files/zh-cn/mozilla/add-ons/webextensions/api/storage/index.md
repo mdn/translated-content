@@ -1,11 +1,6 @@
 ---
 title: storage
 slug: Mozilla/Add-ons/WebExtensions/API/storage
-tags:
-  - Add-ons
-  - Extensions
-  - Strorage
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage
 ---
 {{AddonSidebar}}使浏览器扩展能够储存及获取数据，以及监听储存的数据的变化。
 

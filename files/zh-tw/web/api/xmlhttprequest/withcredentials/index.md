@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequest.withCredentials
 slug: Web/API/XMLHttpRequest/withCredentials
-translation_of: Web/API/XMLHttpRequest/withCredentials
 ---
 {{APIRef('XMLHttpRequest')}}
 

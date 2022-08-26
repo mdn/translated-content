@@ -1,12 +1,6 @@
 ---
 title: 举个例子
 slug: Web/MathML/Examples
-tags:
-  - MathML
-  - 例子
-  - 初学者
-  - 指南
-translation_of: Web/MathML/Examples
 ---
 {{MathMLRef}}
 

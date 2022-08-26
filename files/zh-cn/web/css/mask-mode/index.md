@@ -1,7 +1,6 @@
 ---
 title: mask-mode
 slug: Web/CSS/mask-mode
-translation_of: Web/CSS/mask-mode
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
@@ -34,21 +33,11 @@ mask-mode: unset;
   - : 此关键字指示应使用掩码层图像的透明度（阿尔法通道）值作为掩码值。
 - `luminance`
   - : 此关键字指示掩膜层图像的亮度值应用作掩码值。
-- ## `match-source`
+- `match-source`
 
-      : If the {{cssxref("mask-image")}} property is of type `<mask-source>`, the luminance values of the mask layer image should be used as the mask values.
+  - : 如果{{cssxref("mask-image")}}属性是`<mask-source>`类型，掩模层图像的亮度值会被作为掩模值。
 
-
-
-      If it is of type {{cssxref("&lt;image&gt;")}}, the alpha values of the mask layer image should be used as the mask values.
-
-
-
-      如果{{cssxref("mask-image")}}属性是`<mask-source>`类型，掩模层图像的亮度值会被作为掩模值。
-
-
-
-      如果它是类型{{cssxref("&lt;image&gt;")}}，掩码层图像的 alpha 值应用作掩码值。
+    如果它是类型{{cssxref("&lt;image&gt;")}}，掩码层图像的 alpha 值应用作掩码值。
 
 ### 正式语法
 

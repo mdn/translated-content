@@ -10,7 +10,6 @@ tags:
   - Non-standard
   - Reference
   - Deprecated
-browser-compat: api.Element.setCapture
 translation_of: Web/API/Element/setCapture
 ---
 {{Deprecated_Header}}{{non-standard_header}}{{ APIRef("DOM") }}

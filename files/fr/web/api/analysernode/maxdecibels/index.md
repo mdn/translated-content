@@ -69,13 +69,11 @@ dessiner();
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AnalyserNode-maxDecibels', 'maxDecibels')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AnalyserNode.maxDecibels")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,7 +1,6 @@
 ---
 title: W3C
 slug: Glossary/W3C
-translation_of: Glossary/W3C
 ---
 _全球資訊網協會_（World Wide Web Consortium，W3C）是維護{{Glossary("World Wide Web", "網路相關")}}規則與架構的國際機構。
 

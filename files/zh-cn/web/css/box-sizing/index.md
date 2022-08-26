@@ -36,17 +36,17 @@ box-sizing 属性可以被用来调整这些表现：
 
     尺寸计算公式：
 
-      - `width` = 内容的宽度
-      - `height` = 内容的高度
- 
+    - `width` = 内容的宽度
+    - `height` = 内容的高度
+
     宽度和高度的计算值都不包含内容的边框（border）和内边距（padding）。
 - `border-box`
   - : {{Cssxref("width")}} 和 {{Cssxref("height")}} 属性包括内容，内边距和边框，但不包括外边距。这是当文档处于 Quirks 模式 时 Internet Explorer 使用的[盒模型](/zh-CN/docs/CSS/Box_model)。注意，填充和边框将在盒子内 , 例如， `.box {width: 350px; border: 10px solid black;}` 导致在浏览器中呈现的宽度为 350px 的盒子。内容框不能为负，并且被分配到 0，使得不可能使用 border-box 使元素消失。
 
     尺寸计算公式：
 
-      - `width` = border + padding + 内容的宽度
-      - `height` = border + padding + 内容的高度
+    - `width` = border + padding + 内容的宽度
+    - `height` = border + padding + 内容的高度
 
 ### 形式化语法
 

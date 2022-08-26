@@ -1,9 +1,6 @@
 ---
 title: unescape()
 slug: Web/JavaScript/Reference/Global_Objects/unescape
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/unescape
 ---
 {{jsSidebar("Objects")}}
 

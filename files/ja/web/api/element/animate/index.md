@@ -8,7 +8,6 @@ tags:
   - メソッド
   - リファレンス
   - ウェブアニメーション
-browser-compat: api.Element.animate
 translation_of: Web/API/Element/animate
 ---
 {{APIRef('Web Animations')}}

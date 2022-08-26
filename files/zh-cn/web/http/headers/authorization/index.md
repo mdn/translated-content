@@ -1,7 +1,6 @@
 ---
 title: Authorization
 slug: Web/HTTP/Headers/Authorization
-translation_of: Web/HTTP/Headers/Authorization
 ---
 {{HTTPSidebar}}
 
@@ -38,7 +37,7 @@ Authorization: <type> <credentials>
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-请参考[ HTTP authentication](/zh-CN/docs/Web/HTTP/Authentication) 来获取在 Apache 或 nginx 中使用 HTTP 基本验证方案加密保护站点的配置示例。
+请参考 [HTTP authentication](/zh-CN/docs/Web/HTTP/Authentication) 来获取在 Apache 或 nginx 中使用 HTTP 基本验证方案加密保护站点的配置示例。
 
 ## 规范
 
