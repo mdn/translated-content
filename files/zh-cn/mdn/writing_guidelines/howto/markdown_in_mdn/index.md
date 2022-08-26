@@ -1,5 +1,5 @@
 ---
-title: 如何使用 markdown 来编写文档
+title: 如何使用 markdown 来撰写文档
 slug: MDN/Writing_guidelines/Howto/Markdown_in_MDN
 ---
 {{MDNSidebar}}
