@@ -41,7 +41,7 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 {{WebExtExamples}}
 
-> **Note:** **謝辞**この API は Chromium の [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) API に基づいています。Microsoft Edge の互換性データは Microsoft Corporation によって提供され、Creative Commons Attribution 3.0 United States License に含まれています。
+> **Note:** この API は Chromium の [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) API に基づいています。Microsoft Edge の互換性データは Microsoft Corporation によって提供され、Creative Commons Attribution 3.0 United States License に含まれています。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

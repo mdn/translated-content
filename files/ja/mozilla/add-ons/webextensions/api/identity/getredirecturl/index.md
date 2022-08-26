@@ -34,7 +34,7 @@ var redirectURL = browser.identity.getRedirectURL()
 
 リダイレクト URL を含む文字列
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.identity.getRedirectURL")}}
 
@@ -48,4 +48,4 @@ var redirectURL = browser.identity.getRedirectURL();
 
 {{WebExtExamples}}
 
-> **Note:** **Acknowledgements**この API は Chromium の [`chrome.identity`](https://developer.chrome.com/extensions/identity) API に基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います
+> **Note:** この API は Chromium の [`chrome.identity`](https://developer.chrome.com/extensions/identity) API に基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います

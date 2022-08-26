@@ -18,13 +18,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason
 - "user"
   - : ユーザがミュート状態に設定しました。
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.tabs.MutedInfoReason")}}
 
 {{WebExtExamples}}
 
-> **Note:** **謝辞**この API は Chromium の[`chrome.tabs`](https://developer.chrome.com/extensions/tabs#type-MutedInfoReason) API に基づいています。このドキュメントは Chromium コードの[`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)から派生したものです。Microsoft Edge の互換性データは Microsoft Corporation から提供されており、Creative Commons Attribution 3.0 United States License のもとにここに含まれています。
+> **Note:** この API は Chromium の[`chrome.tabs`](https://developer.chrome.com/extensions/tabs#type-MutedInfoReason) API に基づいています。このドキュメントは Chromium コードの[`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)から派生したものです。Microsoft Edge の互換性データは Microsoft Corporation から提供されており、Creative Commons Attribution 3.0 United States License のもとにここに含まれています。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

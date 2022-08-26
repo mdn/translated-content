@@ -45,7 +45,7 @@ sidebarAction API は Opera の [sidebarAction API](https://dev.opera.com/extens
 - {{WebExtAPIRef("sidebarAction.isOpen()")}}
   - : サイドバーが開いているか否かをチェックします。
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.sidebarAction")}}
 
@@ -53,7 +53,7 @@ sidebarAction API は Opera の [sidebarAction API](https://dev.opera.com/extens
 
 - [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page)
 
-> **Note:** **Acknowledgements**This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

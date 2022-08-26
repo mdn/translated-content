@@ -146,4 +146,4 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 {{WebExtExamples("h2")}}
 
-> **Note:** **Acknowledgements**Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

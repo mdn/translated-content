@@ -325,6 +325,6 @@ A browser action with an icon, a title, and a popup. The popup will be shown whe
 
 For a simple, but complete, extension that uses a browser action, see the [walkthrough tutorial](/ja/Add-ons/WebExtensions/Your_second_WebExtension).
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.manifest.browser_action", 10)}}

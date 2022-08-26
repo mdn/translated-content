@@ -120,7 +120,7 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 ターゲットウィンドウで実行されているコンテンツスクリプトと devtools ドキュメントの間でメッセージを交換する必要がある場合は、{{WebExtAPIRef("runtime.connect()")}} および {{WebExtAPIRef("runtime.onConnect")}} を使用してバックグラウンドページと devtools ドキュメント間の接続を設定することをお勧めします。バックグラウンドページはタブ ID と {{WebExtAPIRef("runtime.Port")}} オブジェクト間のマッピングを維持し、これを使用して 2 つのスコープ間でメッセージをルーティングできます。
 
-![](https://mdn.mozillademos.org/files/14923/devtools-content-scripts.png)
+![](devtools-content-scripts.png)
 
 ## devtools APIs の制限
 

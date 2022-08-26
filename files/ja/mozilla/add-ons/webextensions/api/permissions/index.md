@@ -61,4 +61,4 @@ To use the permissions API, decide which permissions your extension can request 
 
 {{WebExtExamples("h2")}}
 
-> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/extensions/permissions) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/extensions/permissions) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

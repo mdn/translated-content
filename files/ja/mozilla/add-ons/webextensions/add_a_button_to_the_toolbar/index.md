@@ -51,8 +51,8 @@ These icons are from the [bitsies!](https://www.iconfinder.com/iconsets/bitsies)
 
 次に、"buttons"ディレクトリー内に "icons" ディレクトリーを作成し、下記に表示されている 2 つのアイコンを保存します:
 
-- "page-16.png" (![](https://mdn.mozillademos.org/files/13476/page-16.png))
-- "page-32.png" (![](https://mdn.mozillademos.org/files/13478/page-32.png)).
+- "page-16.png" (![](page-16.png))
+- "page-32.png" (![](page-32.png)).
 
 高解像度ディスプレイで大きいのを使うように 2 つのアイコンがあります。ブラウザーは現在のディスプレイに最適なアイコンを選ぶよう配慮します。
 

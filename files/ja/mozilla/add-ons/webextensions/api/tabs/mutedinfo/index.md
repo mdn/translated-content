@@ -18,13 +18,13 @@ This object contains a boolean indicating whether the tab is muted, and the reas
 - `reason`{{optional_inline}}
   - : {{WebExtAPIRef('tabs.MutedInfoReason')}}. ミュートもしくはアンピューとに設定された理由。Not set if the tab's muted state has never been changed.
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.tabs.MutedInfo")}}
 
 {{WebExtExamples}}
 
-> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#type-MutedInfo) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#type-MutedInfo) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

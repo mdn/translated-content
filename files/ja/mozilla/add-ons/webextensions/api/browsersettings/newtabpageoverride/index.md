@@ -9,7 +9,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOver
 
 なお、これは読み取り専用の設定です。
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.browserSettings.newTabPageOverride", 10)}}
 

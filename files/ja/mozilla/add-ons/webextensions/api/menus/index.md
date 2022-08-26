@@ -40,23 +40,23 @@ You can create four different types of menu item, based on the value of the `typ
 
 If you have created more than one context menu item or more than one tools menu item, then the items will be placed in a submenu. The submenu's parent will be labeled with the name of the extension. For example, here's an extension called "Menu demo" that's added two context menu items:
 
-![](https://mdn.mozillademos.org/files/15431/menus-1.png)
+![](menus-1.png)
 
 ## アイコン
 
 If you've specified icons for your extension using the ["icons" manifest key](/ja/Add-ons/WebExtensions/manifest.json/icons), your menu item will display the specified icon next to its label. The browser will try to choose a 16x16 pixel icon for a normal display or a 32x32 pixel icon for a high-density display:
 
-![](https://mdn.mozillademos.org/files/15433/menus-2.png)
+![](menus-2.png)
 
 Only for items in a submenu, you can specify custom icons by passing the `icons` option to {{WebExtAPIRef("menus.create()")}}:
 
-![](https://mdn.mozillademos.org/files/15435/menus-3.png)
+![](menus-3.png)
 
 ## 例
 
 Here's a context menu containing 4 items: a normal item, two radio items with separators on each side, and a checkbox. The radio items are given custom icons.
 
-![](https://mdn.mozillademos.org/files/15437/menus-4.png)You could create a submenu like this using code like:
+![](menus-4.png)You could create a submenu like this using code like:
 
 ```js
 browser.menus.create({
@@ -152,7 +152,7 @@ browser.menus.create({
 
 {{WebExtExamples("h2")}}
 
-> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

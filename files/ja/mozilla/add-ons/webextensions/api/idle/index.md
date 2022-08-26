@@ -35,13 +35,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/idle
 - {{WebExtAPIRef("idle.onStateChanged")}}
   - : システム状態が変化したら発火します。
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.idle")}}
 
 {{WebExtExamples("h2")}}
 
-> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.idle`](https://developer.chrome.com/extensions/idle) API. This documentation is derived from [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.idle`](https://developer.chrome.com/extensions/idle) API. This documentation is derived from [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

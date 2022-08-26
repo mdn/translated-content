@@ -16,13 +16,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/WindowType
 - `"panel"`
 - `"devtools"`
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.windows.WindowType")}}
 
 {{WebExtExamples}}
 
-> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows#type-WindowType) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows#type-WindowType) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

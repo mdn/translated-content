@@ -37,13 +37,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender
 - `tlsChannelId`{{optional_inline}}
   - : `string` 型。接続を開いたページまたはフレームの TLS チャンネルの ID です。拡張機能によって要求され、可能である場合にのみ設定されます。
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.runtime.MessageSender")}}
 
 {{WebExtExamples}}
 
-> **Note:** **謝辞**この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#type-MessageSender) API に基づいています。このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> **Note:** この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#type-MessageSender) API に基づいています。このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

@@ -21,13 +21,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeUnmo
 
 この値は {{jsxref("string")}} 型であり、現在取りうる値は `"managed"` のみです。すなわち、システム管理者（ペアレンタルコントロールが有効な場合は保護者）がこのブックマークノードを設定したことを意味します。
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.bookmarks.BookmarkTreeNodeUnmodifiable")}}
 
 {{WebExtExamples}}
 
-> **Note:** **謝辞**この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> **Note:** この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

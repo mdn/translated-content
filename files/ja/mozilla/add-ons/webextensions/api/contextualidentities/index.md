@@ -13,7 +13,7 @@ contextual identities の操作: contextual identities を一覧、作成、削�
 
 contextual identities 機能により、各コンテキスト ID は名前、色、及びアイコンを持ちます。新規タブが ID にアサインされ、名前、アイコン、色がアドレスバーに出現します。内部的には、各 ID が他のタブには共有されない自分の cookie ストアを持ちます。
 
-![](https://mdn.mozillademos.org/files/14719/containers.png)Contextual identities は Firefox の実験的機能であり、Firefox Nightly だけでデフォルト有効になっています。その他のバージョンの Firefox で有効にするには、 `privacy.userContext.enabled` の設定を `true` にします。contextual identities は Android 版 Firefox でも利用できますが、このバージョンでは動作する UI がないのにご注意ください。
+![](containers.png)Contextual identities は Firefox の実験的機能であり、Firefox Nightly だけでデフォルト有効になっています。その他のバージョンの Firefox で有効にするには、 `privacy.userContext.enabled` の設定を `true` にします。contextual identities は Android 版 Firefox でも利用できますが、このバージョンでは動作する UI がないのにご注意ください。
 
 Firefox 57 より前では、`contextualIdentities` API は contextual identities 機能自体が有効になっている場合にだけ利用できます。機能が無効なまま拡張機能が `contextualIdentities` API を使おうとした場合、メソッド呼び出しは promises を `false` に解決します。
 

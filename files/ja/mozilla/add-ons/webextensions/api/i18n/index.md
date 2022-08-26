@@ -39,13 +39,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/i18n
 
 <!---->
 
-## ブラウザーの実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.i18n")}}
 
 {{WebExtExamples("h2")}}
 
-> **Note:** **謝辞**この API は、Chromium の [`chrome.i18n`](https://developer.chrome.com/extensions/i18n) API を基にしています。このドキュメンテーションは、Chromium コード内の [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) に由来しています。Microsoft Edge 互換性データは、Microsoft Corporation より供給され、Creative Commons Attribution 3.0 United States License の下で含まれています。
+> **Note:** この API は、Chromium の [`chrome.i18n`](https://developer.chrome.com/extensions/i18n) API を基にしています。このドキュメンテーションは、Chromium コード内の [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) に由来しています。Microsoft Edge 互換性データは、Microsoft Corporation より供給され、Creative Commons Attribution 3.0 United States License の下で含まれています。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

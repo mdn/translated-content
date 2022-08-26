@@ -54,13 +54,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage
 - {{WebExtAPIRef("storage.onChanged")}}
   - : ストレージ領域内のアイテムを 1 つ以上変更した場合に発火します。
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.storage")}}
 
 {{WebExtExamples("h2")}}
 
-> **Note:** **Acknowledgements**この API は Chromium の [`chrome.storage`](https://developer.chrome.com/extensions/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> **Note:** この API は Chromium の [`chrome.storage`](https://developer.chrome.com/extensions/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

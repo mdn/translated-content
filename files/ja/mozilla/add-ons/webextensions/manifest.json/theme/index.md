@@ -192,7 +192,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15871/theme-accentcolor.png"
+              src="theme-accentcolor.png"
               style="height: 302px; width: 738px"
             />
           </p>
@@ -217,7 +217,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15872/theme-button_background_active.png"
+              src="theme-button_background_active.png"
               style="height: 302px; width: 738px"
             />
           </p>
@@ -242,7 +242,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15873/theme-button_background_hover.png"
+              src="theme-button_background_hover.png"
               style="height: 302px; width: 738px"
             />
           </p>
@@ -267,7 +267,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15874/theme-icons.png"
+              src="theme-icons.png"
               style="height: 302px; width: 738px"
             />
           </p>
@@ -295,7 +295,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15875/theme-icons_attention.png"
+              src="theme-icons_attention.png"
               style="height: 324px; width: 738px"
             />
           </p>
@@ -323,7 +323,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15876/theme-popup.png"
+              src="theme-popup.png"
               style="height: 324px; width: 738px"
             />
           </p>
@@ -350,7 +350,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15877/theme-popup_border.png"
+              src="theme-popup_border.png"
               style="height: 324px; width: 738px"
             />
           </p>
@@ -378,7 +378,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15878/theme-popup_highlight.png"
+              src="theme-popup_highlight.png"
               style="height: 490px; width: 738px"
             />
           </p>
@@ -406,7 +406,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15879/theme-popup_highlight_text.png"
+              src="theme-popup_highlight_text.png"
               style="height: 490px; width: 738px"
             />
           </p>
@@ -432,7 +432,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15880/popup_text.png"
+              src="popup_text.png"
               style="height: 490px; width: 738px"
             />
           </p>
@@ -457,7 +457,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15881/theme-tab_line.png"
+              src="theme-tab_line.png"
               style="height: 302px; width: 738px"
             />
           </p>
@@ -481,7 +481,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           >
           <img
             alt=""
-            src="https://mdn.mozillademos.org/files/15882/theme-tab_loading.gif"
+            src="theme-tab_loading.gif"
             style="height: 186px; width: 618px"
           />
         </div>
@@ -508,7 +508,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15883/theme-tab_selected.png"
+              src="theme-tab_selected.png"
               style="height: 302px; width: 738px"
             />
           </p>
@@ -543,7 +543,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15884/theme-tab_text.png"
+              src="theme-tab_text.png"
               style="height: 302px; width: 738px"
             />
           </p>
@@ -568,7 +568,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15885/theme-textcolor.png"
+              src="theme-textcolor.png"
               style="height: 302px; width: 738px"
             />
           </p>
@@ -596,7 +596,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15886/theme-toolbar.png"
+              src="theme-toolbar.png"
               style="height: 302px; width: 738px"
             />
           </p>
@@ -624,7 +624,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15887/theme-toolbar_bottom_separator.png"
+              src="theme-toolbar_bottom_separator.png"
               style="height: 302px; width: 738px"
             />
           </p>
@@ -651,7 +651,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15888/theme-toolbar_field.png"
+              src="theme-toolbar_field.png"
               style="height: 302px; width: 738px"
             />
           </p>
@@ -679,7 +679,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15889/theme-toolbar_field_border.png"
+              src="theme-toolbar_field_border.png"
               style="height: 302px; width: 738px"
             />
           </p>
@@ -707,7 +707,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15890/theme-toolbar_field_border_focus.png"
+              src="theme-toolbar_field_border_focus.png"
               style="height: 302px; width: 738px"
             />
           </p>
@@ -738,7 +738,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15891/theme-toolbar_field_focus.png"
+              src="theme-toolbar_field_focus.png"
               style="height: 302px; width: 738px"
             />
           </p>
@@ -765,7 +765,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15892/theme-toolbar_field_text.png"
+              src="theme-toolbar_field_text.png"
               style="height: 302px; width: 738px"
             />
           </p>
@@ -796,7 +796,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15893/theme-toolbar_field_text_focus.png"
+              src="theme-toolbar_field_text_focus.png"
               style="height: 302px; width: 738px"
             />
           </p>
@@ -825,7 +825,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15895/theme-toolbar_field_separator.png"
+              src="theme-toolbar_field_separator.png"
               style="height: 302px; width: 738px"
             />
           </p>
@@ -856,7 +856,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15896/theme-toolbar_text.png"
+              src="theme-toolbar_text.png"
               style="height: 302px; width: 738px"
             />
           </p>
@@ -885,7 +885,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15897/theme-toolbar_top_separator.png"
+              src="theme-toolbar_top_separator.png"
               style="height: 302px; width: 738px"
             />
           </p>
@@ -915,7 +915,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           <p>
             <img
               alt=""
-              src="https://mdn.mozillademos.org/files/15898/theme-toolbar_vertical_separator.png"
+              src="theme-toolbar_vertical_separator.png"
               style="height: 302px; width: 738px"
             />
           </p>
@@ -1080,11 +1080,11 @@ The following example uses most of the different values for `theme.colors`:
 
 It will give you a browser that looks something like this:
 
-![](https://mdn.mozillademos.org/files/15789/theme.png)
+![](theme.png)
 
 In this screenshot, `"toolbar_vertical_separator"` is the white vertical line in the URL bar dividing the Reader Mode icon from the other icons.
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.manifest.theme", 10)}}
 

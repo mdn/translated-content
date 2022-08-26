@@ -70,7 +70,7 @@ gettingAll.then(logCookies);
 
 {{WebExtExamples}}
 
-> **Note:** **Acknowledgements**この API は Chromium の [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#type-Cookie) API に基づいています。 また、このドキュメントは [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> **Note:** この API は Chromium の [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#type-Cookie) API に基づいています。 また、このドキュメントは [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
