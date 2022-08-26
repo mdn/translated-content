@@ -1,9 +1,9 @@
 ---
-title: Example 3
+title: 示例 3
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_3
 original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_3
 ---
-这是解释 [如何构建自定义表单小部件](/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets) 的第三个示例。
+这是解释[如何构建自定义表单小部件](/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets)的第三个示例。
 
 ## Change states
 
@@ -167,7 +167,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_3
 // ------- //
 
 NodeList.prototype.forEach = function (callback) {
-  Array.prototype.forEach.call(this, callback);
+    Array.prototype.forEach.call(this, callback);
 }
 
 // -------------------- //
@@ -175,72 +175,78 @@ NodeList.prototype.forEach = function (callback) {
 // -------------------- //
 
 function deactivateSelect(select) {
-  if (!select.classList.contains('active')) return;
+    if (!select.classList.contains('active')) return;
 
-  var optList = select.querySelector('.optList');
+    const optList = select.querySelector('.optList');
 
-  optList.classList.add('hidden');
-  select.classList.remove('active');
+    optList.classList.add('hidden');
+    select.classList.remove('active');
 }
 
 function activeSelect(select, selectList) {
-  if (select.classList.contains('active')) return;
+    if (select.classList.contains('active')) return;
 
-  selectList.forEach(deactivateSelect);
-  select.classList.add('active');
+    selectList.forEach(deactivateSelect);
+    select.classList.add('active');
 };
 
 function toggleOptList(select, show) {
-  var optList = select.querySelector('.optList');
+    const optList = select.querySelector('.optList');
 
-  optList.classList.toggle('hidden');
+    optList.classList.toggle('hidden');
 }
 
 function highlightOption(select, option) {
-  var optionList = select.querySelectorAll('.option');
+    const optionList = select.querySelectorAll('.option');
 
-  optionList.forEach(function (other) {
-    other.classList.remove('highlight');
-  });
+    optionList.forEach((other) => {
+        other.classList.remove('highlight');
+    });
 
-  option.classList.add('highlight');
+    option.classList.add('highlight');
 };
 
 // ------------- //
 // Event binding //
 // ------------- //
 
-window.addEventListener("load", function () {
-  var form = document.querySelector('form');
+window.addEventListener("load", () => {
+    const form = document.querySelector('form');
 
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
+    form.classList.remove("no-widget");
+    form.classList.add("widget");
 });
 
-window.addEventListener('load', function () {
-  var selectList = document.querySelectorAll('.select');
+window.addEventListener('load', () => {
+    const selectList = document.querySelectorAll('.select');
 
-  selectList.forEach(function (select) {
-    var optionList = select.querySelectorAll('.option');
+    selectList.forEach((select) => {
+        const optionList = select.querySelectorAll('.option');
 
-    optionList.forEach(function (option) {
-      option.addEventListener('mouseover', function () {
-        highlightOption(select, option);
-      });
+        optionList.forEach((option) => {
+            option.addEventListener('mouseover', () => {
+                highlightOption(select, option);
+            });
+        });
+
+        select.addEventListener('click', (event) => {
+            toggleOptList(select);
+        },  false);
+
+        select.addEventListener('focus', (event) => {
+            activeSelect(select, selectList);
+        });
+
+        select.addEventListener('blur', (event) => {
+            deactivateSelect(select);
+        });
+
+        select.addEventListener('keyup', (event) => {
+            if (event.keyCode === 27) {
+                deactivateSelect(select);
+            }
+        });
     });
-
-    select.addEventListener('click', function (event) {
-      toggleOptList(select);
-    },  false);
-
-    select.addEventListener('focus', function (event) {
-      activeSelect(select, selectList);
-    });
-
-    select.addEventListener('blur', function (event) {
-      deactivateSelect(select);
-    });
-  });
 });
 ```
 

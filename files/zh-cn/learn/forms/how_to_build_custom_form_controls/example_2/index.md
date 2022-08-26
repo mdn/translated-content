@@ -1,9 +1,9 @@
 ---
-title: Example 2
+title: 示例 2
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_2
 original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_2
 ---
-这是解释 [如何构建自定义表单小部件](/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets)的第二个示例。
+这是解释[如何构建自定义表单小部件](/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets)的第二个示例。
 
 ## 使用 JS
 
@@ -162,8 +162,8 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_2
 ### JavaScript 内容
 
 ```js
-window.addEventListener("load", function () {
-  var form = document.querySelector('form');
+window.addEventListener("load", () => {
+  const form = document.querySelector('form');
 
   form.classList.remove("no-widget");
   form.classList.add("widget");
