@@ -5,7 +5,7 @@ translation_of: Web/SVG/Attribute/stroke-dashoffset
 ---
 {{SVGRef}}
 
-**`stroke-dashoffset`**属性は、関連する破線をレンダリングするうえで、オフセットを定義するプレゼンテーション属性です。
+**`stroke-dashoffset`** 属性は、関連する破線をレンダリングするうえで、オフセットを定義するプレゼンテーション属性です。
 
 > **Note:** プレゼンテーション属性として、**`stroke-dashoffset`**は CSS プロパティとして使用することができます。
 
