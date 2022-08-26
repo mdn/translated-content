@@ -26,13 +26,11 @@ Un nombre à virgule flottante double précision `double`. Les premières versio
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaire         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('CSSOM View', '#dom-mouseevent-offsetx', 'MouseEvent')}} | {{Spec2('CSSOM View')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.MouseEvent.offsetX")}}
+{{Compat}}
 
 ## Voir aussi
 
