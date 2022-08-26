@@ -106,13 +106,15 @@ renderPlanetInfoButton.addEventListener('click', event => {
 });
 ```
 
+#### 結果
+
 {{EmbedLiveSample('Dropdown_box_updates_useful_onscreen_information', '', 350)}}
 
 ユーザーが新しい惑星を選択したとき、ライブリージョンの情報が通知されます。ライブリージョンは `aria-live="polite"` を持っているため、更新の通知が行われる前にユーザーが一時停止するまでスクリーンリーダーは待ちます。例えばリストを下りながら他の惑星を選択してもライブリージョンの更新は通知されないでしょう。最終的に選ばれた惑星のみライブリージョンの更新は通知されます。
 
 ここにはライブリージョンへ (字幕を通して) 更新を通知している、Mac に内蔵している VoiceOver のスクリーンショットがあります:
 
-![A screenshot of VoiceOver on Mac announcing the update to a live region. Subtitles are shown in the picture.](https://mdn.mozillademos.org/files/15815/Web_Accessibility_ARIA_ARIA_Live_Regions.png)
+![A screenshot of VoiceOver on Mac announcing the update to a live region. Subtitles are shown in the picture.](Web_Accessibility_ARIA_ARIA_Live_Regions.png)
 
 ## 優先する専門のライブリージョンロール
 

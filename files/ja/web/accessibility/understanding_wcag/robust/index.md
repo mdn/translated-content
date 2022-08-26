@@ -29,7 +29,7 @@ translation_of: Web/Accessibility/Understanding_WCAG/Robust
 | 4.1.2 名前、役割、値 (A)                                                                                     | ユーザインターフェース・コンポーネント（例えば、フォーム入力、ボタン、リンクなど）の名前と役割（role、ロール）はプログラム的に決定可能であるべきです。意図された目的のために意味論の要素を正しく使用するとき、この基準に自動的に合格するはずです。 カスタムコンポーネントをスクリプト化するときは、例えば、晴眼でマウスのユーザーだけでなく、スクリーンリーダーのユーザー、キーボードのみのユーザーなども、コントロールが解釈されて意図したとおりに使用できるようにするために、WAI-ARIA のロールおよびその他の機能を使用する必要があります。 | [HTML: アクセシビリティの基礎](/ja/docs/Learn/Accessibility/HTML)と [WAI-ARIA の基本](/ja/docs/Learn/Accessibility/WAI-ARIA_basics)を参照してください。 |
 | 4.1.3 ステータスメッセージ (AA) [2.1 で追加](https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1)（英語） | 支援技術のユーザーは、ページに追加された新しいステータスメッセージを認識します。                                                                                                                                                                                                                                                                                                                                                                                                                                                             | [ステータスメッセージを理解する](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html)（英語）                                              |
 
-> **Note:** **注**: [ガイドライン 4.1: 互換性: 支援技術を含む現在および将来のユーザーエージェントとの互換性を最大化する](https://www.w3.org/TR/WCAG21/#compatible)（英語）に関する WCAG の説明も参照してください。
+> **Note:** [ガイドライン 4.1: 互換性: 支援技術を含む現在および将来のユーザーエージェントとの互換性を最大化する](https://www.w3.org/TR/WCAG21/#compatible)（英語）に関する WCAG の説明も参照してください。
 
 ## 関連情報
 
