@@ -66,7 +66,7 @@ for (const letter of iterator) {
 } // undefined
 ```
 
-**解释：** 当 `next().done=true` 或 `currentIndex>length` 时， `for..of` 循环结束。参见 [Iteration protocols](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
+**解释**：当 `next().done=true` 或 `currentIndex>length` 时， `for..of` 循环结束。参见[迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
 
 **值：** 数组迭代器中存储的是原数组的地址，而不是数组元素值。
 
