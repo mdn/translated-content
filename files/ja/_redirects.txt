@@ -128,7 +128,6 @@
 /ja/docs/Adapting_XUL_Applications_for_Firefox_1.5	/ja/docs/Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5
 /ja/docs/Adding_feed_readers_to_Firefox	/ja/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 /ja/docs/Adding_feed_readers_to_Firefox-redirect-1	/ja/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
-/ja/docs/Adding_search_engines_from_web_pages	/ja/docs/Web/OpenSearch
 /ja/docs/Addons	/ja/docs/Mozilla/Add-ons
 /ja/docs/Advanced_styling_for_HTML_forms	/ja/docs/Learn/Forms/Advanced_form_styling
 /ja/docs/Alternative_style_sheets	/ja/docs/Web/CSS/Alternative_style_sheets
@@ -1097,7 +1096,6 @@
 /ja/docs/Core_JavaScript_1.5_Reference:Statements:var	/ja/docs/Web/JavaScript/Reference/Statements/var
 /ja/docs/Core_JavaScript_1.5_Reference:Statements:while	/ja/docs/Web/JavaScript/Reference/Statements/while
 /ja/docs/Core_JavaScript_1.5_Reference:Statements:with	/ja/docs/Web/JavaScript/Reference/Statements/with
-/ja/docs/Creating_OpenSearch_plugins_for_Firefox	/ja/docs/Web/OpenSearch
 /ja/docs/Creating_toolbar_buttons	/ja/docs/orphaned/Creating_toolbar_buttons
 /ja/docs/DHTML	/ja/docs/Glossary/DHTML
 /ja/docs/DOM	/ja/docs/Web/API/Document_Object_Model
@@ -4169,7 +4167,6 @@
 /ja/docs/Web/Compatibility_FAQ/Tips_Default_Style_Difference.html	/ja/docs/orphaned/Web/Compatibility_FAQ/Tips_Default_Style_Difference.html
 /ja/docs/Web/Compatibility_FAQ/Tips_Vendor_Prefix.html	/ja/docs/orphaned/Web/Compatibility_FAQ/Tips_Vendor_Prefix.html
 /ja/docs/Web/Compatibility_FAQ/Underline_Color_Diffrence.html	/ja/docs/orphaned/Web/Compatibility_FAQ/Underline_Color_Diffrence.html
-/ja/docs/Web/Demos_of_open_web_technologies	/ja/docs/Web/Demos
 /ja/docs/Web/Events/Activate	/ja/docs/Web/API/Element/DOMActivate_event
 /ja/docs/Web/Events/DOMContentLoaded	/ja/docs/Web/API/Window/DOMContentLoaded_event
 /ja/docs/Web/Events/abort	/ja/docs/Web/API/HTMLMediaElement/abort_event

@@ -138,14 +138,11 @@ L'événement **dragstart** est déclenché lorsque l'utilisateur glisse un él�
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("HTML WHATWG", "interaction.html#dndevents", "dragstart")}} | {{Spec2("HTML WHATWG")}} |                     |
-| {{SpecName("HTML5.1", "editing.html#dndevents", "dragstart")}}         | {{Spec2("HTML5.1")}}     | Définition initiale |
+{{Specifications}}
 
-## Compatibilités navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.Document.dragstart_event")}}
+{{Compat}}
 
 ## Voir aussi
 

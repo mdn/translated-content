@@ -23,12 +23,10 @@ var document = new Document()
 
 None.
 
-Spécifications
+## Spécifications
 
-| Specification                                                                    | Status                           | Comment             |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG','#interface-document','Document')}} | {{Spec2('DOM WHATWG')}} | Initial definition. |
+{{Specifications}}
 
-## Compatibilité Navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.Document.Document")}}
+{{Compat}}
