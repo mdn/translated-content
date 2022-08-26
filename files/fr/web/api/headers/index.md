@@ -89,15 +89,13 @@ mesHeaders = new Headers([
 mesHeaders.get('Content-Type') // doit retourner 'text/xml'
 ```
 
-## Caractéristiques
+## Spécifications
 
-| Caractéristiques                                                 | Statut                   | Commentaires |
-| ---------------------------------------------------------------- | ------------------------ | ------------ |
-| {{SpecName('Fetch','#headers-class','Headers')}} | {{Spec2('Fetch')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Headers")}}
+{{Compat}}
 
 ## Voir aussi
 

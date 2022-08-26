@@ -28,13 +28,11 @@ myContentObject.select = "h1 .error";
 
 ## Spécifications
 
-| Specification                                                                    | Status                           | Comment |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('Shadow DOM', '#the-content-element', 'content')}} | {{Spec2('Shadow DOM')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLContentElement.getDistributedNodes")}}
+{{Compat}}
 
 ## Voir aussi
 
