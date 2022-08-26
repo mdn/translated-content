@@ -1,10 +1,6 @@
 ---
 title: 渐进式加载
 slug: Web/Progressive_web_apps/Loading
-tags:
-  - PWA
-  - 渐进式加载
-translation_of: Web/Progressive_web_apps/Loading
 original_slug: Web/Progressive_web_apps/加载
 ---
 {{PreviousMenu("Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}

@@ -14,8 +14,6 @@ slug: Web/API/Event/srcElement
 
 微软 **[在 MSDN 有一篇描述。](<https://msdn.microsoft.com/en-us/library/ff974945(v=vs.85).aspx>)**
 
-##
-
 ## 浏览器兼容性
 
 {{Compat("api.Event.srcElement")}}

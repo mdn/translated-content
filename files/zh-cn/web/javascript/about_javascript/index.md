@@ -1,10 +1,6 @@
 ---
 title: 关于 JavaScript
 slug: Web/JavaScript/About_JavaScript
-tags:
-  - JavaScript
-  - 入门介绍
-translation_of: Web/JavaScript/About_JavaScript
 ---
 {{JsSidebar()}}
 

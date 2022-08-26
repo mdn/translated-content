@@ -1,7 +1,6 @@
 ---
 title: 繼承
 slug: Web/CSS/inheritance
-translation_of: Web/CSS/inheritance
 ---
 ## 摘要
 

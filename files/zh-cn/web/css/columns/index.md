@@ -1,7 +1,6 @@
 ---
 title: columns
 slug: Web/CSS/columns
-translation_of: Web/CSS/columns
 ---
 {{CSSRef}}
 

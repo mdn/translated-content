@@ -1,10 +1,6 @@
 ---
 title: scaleY()
 slug: Web/CSS/transform-function/scaleY
-tags:
-  - 'transform: rotateX(180deg);'
-  - 'transform: scaleY(-1);'
-translation_of: Web/CSS/transform-function/scaleY()
 original_slug: Web/CSS/transform-function/scaleY()
 ---
 {{CSSRef}}

@@ -65,7 +65,7 @@ slug: Learn/Getting_started_with_the_web/How_the_Web_works
 
 ## 解析组成文件的顺序
 
-当浏览器向服务器发送请求获取 HTML 文件时，HTML 文件通常包含 {{htmlelement("link")}} 和 {{htmlelement("script")}} 元素，这些元素分别指向了外部的 [CSS](/zh-CN/docs/Learn/CSS) 样式表文件和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 脚本文件。了解这些文件被[浏览器解析]((/zh-CN/docs/Web/Performance/How_browsers_workhow_browsers_work#解析)的顺序是很重要的：
+当浏览器向服务器发送请求获取 HTML 文件时，HTML 文件通常包含 {{htmlelement("link")}} 和 {{htmlelement("script")}} 元素，这些元素分别指向了外部的 [CSS](/zh-CN/docs/Learn/CSS) 样式表文件和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 脚本文件。了解这些文件被[浏览器解析](/zh-CN/docs/Web/Performance/How_browsers_work#解析)的顺序是很重要的：
 
 - 浏览器首先解析 HTML 文件，并从中识别出所有的 `<link>` 和 `<script>` 元素，获取它们指向的外部文件的链接。
 - 继续解析 HTML 文件的同时，浏览器根据外部文件的链接向服务器发送请求，获取并解析 CSS 文件和 JavaScript 脚本文件。

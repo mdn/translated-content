@@ -1,7 +1,6 @@
 ---
 title: X-Frame-Options 回應標頭
 slug: Web/HTTP/Headers/X-Frame-Options
-translation_of: Web/HTTP/Headers/X-Frame-Options
 ---
 {{HTTPSidebar}}
 

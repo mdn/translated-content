@@ -1,7 +1,6 @@
 ---
 title: 溢出的内容
 slug: Learn/CSS/Building_blocks/Overflowing_content
-translation_of: Learn/CSS/Building_blocks/Overflowing_content
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
 
@@ -124,4 +123,4 @@ CSS 中有所谓**块级排版上下文**（Block Formatting Context，BFC）**�
 9. [图像、媒体和表单元素](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [调试 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)[](/en-US/docs/Learn/CSS/Building_blocks/Organizing)
+12. [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)

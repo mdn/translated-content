@@ -1,14 +1,6 @@
 ---
 title: ':host()'
 slug: Web/CSS/:host_function
-tags:
-  - ':host()'
-  - CSS
-  - Layout
-  - Pseudo-class
-  - RTeference
-  - Web
-translation_of: Web/CSS/:host()
 original_slug: Web/CSS/:host()
 ---
 {{seecompattable}}{{CSSRef}}[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)函数 **`:host()`** 选择包含使用这段 CSS 的 [Shadow DOM](/zh-CN/docs/Web/Web_Components/Using_shadow_DOM) 的影子宿主（这样就可以从 Shadow DOM 中选择包括它的自定义元素）——但前提是该函数的参数与选择的阴影宿主相匹配。

@@ -1,7 +1,6 @@
 ---
 title: CSS 属性值定义语法
 slug: Web/CSS/Value_definition_syntax
-translation_of: Web/CSS/Value_definition_syntax
 ---
 {{ CSSRef() }}
 
@@ -103,7 +102,7 @@ bold && <length>
 - `bold`因为长度值没有出现。
 - `bold 1em bold`因为各部分必须恰好出现一次。
 
-> **备注：** 并置的优先级高于“与”组合符。例如`bold thin && <length>`等价于` [ ``bold thin ] && <length> `。它们的合法取值是：`bold thin <length>`或` <length>`` bold thin `但不是` bold <length>`` thin `。
+> **备注：** 并置的优先级高于“与”组合符。例如 `bold thin && <length>` 等价于 `[ bold thin ] && <length>`。它们的合法取值是：`bold thin <length>` 或 `<length> bold thin` 但不是 `bold <length> thin`。
 
 ### “或”组合符：||
 

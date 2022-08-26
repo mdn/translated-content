@@ -1,10 +1,6 @@
 ---
 title: '@document'
 slug: Web/CSS/@document
-tags:
-  - CSS
-  - 参考
-translation_of: Web/CSS/@document
 ---
 {{CSSRef}} {{ SeeCompatTable}}
 

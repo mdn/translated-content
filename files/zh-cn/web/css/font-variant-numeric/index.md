@@ -1,7 +1,6 @@
 ---
 title: font-variant-numeric
 slug: Web/CSS/font-variant-numeric
-translation_of: Web/CSS/font-variant-numeric
 ---
 {{CSSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: RegExp.prototype[@@search]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
 ---
 {{JSRef}}
 

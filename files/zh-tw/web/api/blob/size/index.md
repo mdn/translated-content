@@ -1,15 +1,6 @@
 ---
 title: Blob.size
 slug: Web/API/Blob/size
-tags:
-  - API
-  - Files
-  - Property
-  - Reference
-  - WebAPI
-  - 參考
-  - 屬性
-translation_of: Web/API/Blob/size
 ---
 {{APIRef("File API")}}
 

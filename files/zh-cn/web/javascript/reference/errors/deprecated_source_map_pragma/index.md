@@ -3,11 +3,6 @@ title: >-
   SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //#
   instead
 slug: Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma
-tags:
-  - Errors
-  - JavaScript
-  - Source maps
-translation_of: Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma
 ---
 {{jsSidebar("Errors")}}
 

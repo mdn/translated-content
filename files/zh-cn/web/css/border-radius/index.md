@@ -1,14 +1,6 @@
 ---
 title: border-radius
 slug: Web/CSS/border-radius
-tags:
-  - CSS
-  - CSS 属性
-  - CSS 边框
-  - Web
-  - 参考
-  - 布局
-translation_of: Web/CSS/border-radius
 ---
 {{ CSSRef("CSS Borders") }}
 

@@ -1,12 +1,6 @@
 ---
 title: font-feature-settings
 slug: Web/CSS/font-feature-settings
-tags:
-  - CSS
-  - CSS 字体
-  - CSS 属性
-  - 参考
-translation_of: Web/CSS/font-feature-settings
 ---
 {{CSSRef}}
 

@@ -33,10 +33,8 @@ Une promesse ({{jsxref("Promise")}}) vide.
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | État                                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management','#dom-credentialscontainer-preventsilentaccess','preventSilentAccess()')}} | {{Spec2('Credential Management')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CredentialsContainer.preventSilentAccess")}}
+{{Compat}}

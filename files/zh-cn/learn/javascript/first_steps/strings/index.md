@@ -1,15 +1,6 @@
 ---
 title: 文本处理 — JavaScript 中的字符串
 slug: Learn/JavaScript/First_steps/Strings
-tags:
-  - JavaScript
-  - Join
-  - 初学者
-  - 字符串
-  - 指南
-  - 文章
-  - 脚本编写
-translation_of: Learn/JavaScript/First_steps/Strings
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 

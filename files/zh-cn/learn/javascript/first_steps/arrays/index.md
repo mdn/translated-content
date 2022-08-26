@@ -1,17 +1,6 @@
 ---
 title: 数组
 slug: Learn/JavaScript/First_steps/Arrays
-tags:
-  - JavaScript
-  - Join
-  - Pop
-  - Push
-  - shift
-  - split
-  - unshift
-  - 初学者
-  - 数组
-translation_of: Learn/JavaScript/First_steps/Arrays
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
 

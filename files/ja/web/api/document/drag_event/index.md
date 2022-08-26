@@ -12,7 +12,6 @@ tags:
   - Reference
   - Web
   - drag and drop
-browser-compat: api.Document.drag_event
 translation_of: Web/API/Document/drag_event
 ---
 {{APIRef}}

@@ -1,15 +1,6 @@
 ---
 title: Promise.all()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/all
-tags:
-  - AJAX
-  - Async-Await
-  - Fetch
-  - Promise
-  - Promise.all()
-  - Promise.race()
-  - promise.all
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
 ---
 {{JSRef}}
 

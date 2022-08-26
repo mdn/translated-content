@@ -1,12 +1,6 @@
 ---
 title: transition-delay
 slug: Web/CSS/transition-delay
-tags:
-  - CSS 属性
-  - CSS 过渡
-  - transition-delay
-  - 动画过渡
-translation_of: Web/CSS/transition-delay
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

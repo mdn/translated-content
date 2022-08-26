@@ -7,7 +7,6 @@ tags:
   - NeedsMarkupWork
   - リファレンス
   - プロパティ
-browser-compat: api.Element.clientWidth
 translation_of: Web/API/Element/clientWidth
 ---
 {{APIRef("DOM")}}

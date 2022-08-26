@@ -1,7 +1,6 @@
 ---
 title: 區塊級元素
 slug: Web/HTML/Block-level_elements
-translation_of: Web/HTML/Block-level_elements
 ---
 HTML (超文字標記語言, **Hypertext Markup Language**) 元素通常為 "區塊級" 元素或是 ["行內" 元素](/zh-TW/docs/HTML/Inline_elements)。 一個區塊級元素會藉由建立"區塊"的動作, 完全佔滿其父元素(容器)的空間。本文將為您說明其意涵.
 

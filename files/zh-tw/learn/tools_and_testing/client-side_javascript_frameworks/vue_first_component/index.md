@@ -1,16 +1,6 @@
 ---
 title: 建立第一個 Vue 元件
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component
-tags:
-  - Beginner
-  - Components
-  - Frameworks
-  - JavaScript
-  - Learn
-  - client-side
-  - props
-  - state
-  - vue
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 

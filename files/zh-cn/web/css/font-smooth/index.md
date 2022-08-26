@@ -1,12 +1,6 @@
 ---
 title: 字体平滑
 slug: Web/CSS/font-smooth
-tags:
-  - CSS
-  - CSS Reference
-  - Non-standard
-  - Reference
-translation_of: Web/CSS/font-smooth
 ---
 {{ CSSRef }} {{ Non-standard_header }}
 

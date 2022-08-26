@@ -18,9 +18,9 @@ Fetch 的核心在于对 HTTP 接口的抽象，包括 {{domxref("Request")}}，
 
 ## Guard
 
-Guard 是 {{domxref("Headers")}} 对象的特性，基于不同的情况，它可以有以下取值：` immutable、``request、``request-no-cors、``response 或 ``none。 `
+Guard 是 {{domxref("Headers")}} 对象的特性，基于不同的情况，它可以有以下取值：`immutable`、`request`、`request-no-cors`、`response` 或 `none`。
 
-当使用 {{domxref("Headers.Headers","Headers()")}} {{glossary("constructor")}} 创建一个新的 {{domxref("Headers")}} 对象的时候，它的 guard 被设置成 `none（默认值）。当创建 `{{domxref("Request")}} 或 {{domxref("Response")}} 对象的时候，它将拥有一个按照以下规则实现的与之关联的 {{domxref("Headers")}} 对象：
+当使用 {{domxref("Headers.Headers","Headers()")}} {{glossary("constructor")}} 创建一个新的 {{domxref("Headers")}} 对象的时候，它的 guard 被设置成 `none（默认值）。当创建`{{domxref("Request")}} 或 {{domxref("Response")}} 对象的时候，它将拥有一个按照以下规则实现的与之关联的 {{domxref("Headers")}} 对象：
 
 <table class="standard-table">
   <thead>
@@ -58,7 +58,7 @@ Guard 是 {{domxref("Headers")}} 对象的特性，基于不同的情况，它�
   </tbody>
 </table>
 
-头信息的 guard 会影响 {{domxref("Headers.set","set()")}}、{{domxref("Headers.delete","delete()")}} 和 {{domxref("Headers.append","append()")}} 方法。如果你试图修改 guard 是 `immutable 的 `{{domxref("Headers")}} 对象，那么会抛出一个 `TypeError。以下情况则不会抛出错误：`
+头信息的 guard 会影响 {{domxref("Headers.set","set()")}}、{{domxref("Headers.delete","delete()")}} 和 {{domxref("Headers.append","append()")}} 方法。如果你试图修改 `guard` 是 `immutable` 的{{domxref("Headers")}} 对象，那么会抛出一个 `TypeError`。以下情况则不会抛出错误：
 
 - guard 是 `request` 并且头信息中的 _name_ 不是 {{Glossary("forbidden header name")}}
 - guard 是 `request-no-cors` 并且头信息中的 _name_/_value_ 是 {{Glossary("simple header")}}

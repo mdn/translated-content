@@ -1,10 +1,6 @@
 ---
 title: scroll-snap-coordinate
 slug: Web/CSS/scroll-snap-coordinate
-tags:
-  - CSS
-  - css snap
-translation_of: Web/CSS/scroll-snap-coordinate
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

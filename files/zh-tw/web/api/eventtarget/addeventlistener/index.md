@@ -1,11 +1,6 @@
 ---
 title: EventListener
 slug: Web/API/EventTarget/addEventListener
-tags:
-  - DOM
-  - 事件
-  - 事件監聽
-translation_of: Web/API/EventListener
 original_slug: Web/API/EventListener
 ---
 {{APIRef("DOM Events")}}

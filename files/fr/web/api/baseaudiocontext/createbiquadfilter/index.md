@@ -58,13 +58,11 @@ biquadFilter.gain.setValueAtTime(25, audioCtx.currentTime);
 
 ## Spécifications
 
-| Specification                                                                                                                    | Status                               | Comment |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#dom-baseaudiocontext-createbiquadfilter', 'createBiquadFilter()')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.BaseAudioContext.createBiquadFilter")}}
+{{Compat}}
 
 ## Voir aussi
 

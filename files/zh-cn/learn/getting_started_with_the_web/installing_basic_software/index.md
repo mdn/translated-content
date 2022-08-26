@@ -1,15 +1,6 @@
 ---
 title: 安装基础软件
 slug: Learn/Getting_started_with_the_web/Installing_basic_software
-tags:
-  - 初学者
-  - 浏览器
-  - 学习
-  - 安装
-  - 工具
-  - WebMechanics
-  - 文本编辑器
-translation_of: Learn/Getting_started_with_the_web/Installing_basic_software
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
 

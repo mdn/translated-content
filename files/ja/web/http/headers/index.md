@@ -386,7 +386,7 @@ HTTP の{{Glossary("Client_hints", "クライアントヒント")}}とは、端�
 - {{HTTPHeader("X-Requested-With")}}
   - : TBD
 - {{HTTPHeader("X-Robots-Tag")}}{{non-standard_inline}}
-  - : [`X-Robots-Tag`](https://developers.google.com/search/reference/robots_meta_tag#xrobotstag) ヘッダーは、一般の検索エンジンの結果でウェブページをどのように索引付けをするかを示します。このヘッダーは `&lt;meta name="robots" content="..."&gt;` と等価です。
+  - : [`X-Robots-Tag`](https://developers.google.com/search/reference/robots_meta_tag#xrobotstag) ヘッダーは、一般の検索エンジンの結果でウェブページをどのように索引付けをするかを示します。このヘッダーは `<meta name="robots" content="...">` と等価です。
 - {{HTTPHeader("X-UA-Compatible")}} {{non-standard_inline}}
   - : 使用する文書モードを示すために Internet Explorer で使用されています。
 

@@ -1,10 +1,6 @@
 ---
 title: ':target'
 slug: Web/CSS/:target
-tags:
-  - CSS
-  - Layou
-translation_of: Web/CSS/:target
 ---
 {{CSSRef}}
 

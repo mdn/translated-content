@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Memory()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
 ---
 {{JSRef}}
 

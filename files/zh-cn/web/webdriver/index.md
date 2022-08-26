@@ -1,9 +1,6 @@
 ---
 title: WebDriver
 slug: Web/WebDriver
-tags:
-  - WebDriver
-translation_of: Web/WebDriver
 ---
 WebDriver 是远程控制接口，可以对用户代理进行控制. 它提供了一个平台和语言中性线协议，作为进程外程序远程指导 web 浏览器行为的方法
 

@@ -1,7 +1,6 @@
 ---
 title: Coordinates.altitude
 slug: Web/API/GeolocationCoordinates/altitude
-translation_of: Web/API/GeolocationCoordinates/altitude
 ---
 {{APIRef("Geolocation API")}}
 

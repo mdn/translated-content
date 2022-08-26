@@ -10,8 +10,8 @@ Canvas 2D API 的{{domxref("CanvasRenderingContext2D")}}接口的**`setLineDash(
 
 ## 语法
 
-```
-void ctx.setLineDash(segments);
+```js
+setLineDash(segments);
 ```
 
 ### 参数

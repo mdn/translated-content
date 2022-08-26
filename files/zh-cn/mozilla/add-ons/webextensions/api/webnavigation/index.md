@@ -1,18 +1,6 @@
 ---
 title: webNavigation
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - NeedsTranslation
-  - Non-standard
-  - Reference
-  - TopicStub
-  - WebExtensions
-  - webNavigation
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation
 ---
 {{AddonSidebar}}
 

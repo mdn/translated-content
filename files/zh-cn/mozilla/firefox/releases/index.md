@@ -1,11 +1,6 @@
 ---
 title: 与 Firefox 开发者相关的发行说明
 slug: Mozilla/Firefox/Releases
-tags:
-  - Firefox
-  - NeedsTranslation
-  - TopicStub
-translation_of: Mozilla/Firefox/Releases
 ---
 {{FirefoxSidebar}}
 

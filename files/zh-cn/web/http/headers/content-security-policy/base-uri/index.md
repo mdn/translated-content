@@ -1,13 +1,6 @@
 ---
 title: 'CSP: base-uri'
 slug: Web/HTTP/Headers/Content-Security-Policy/base-uri
-tags:
-  - CSP
-  - HTTP
-  - 安全
-  - 指令
-  - 文档指令
-translation_of: Web/HTTP/Headers/Content-Security-Policy/base-uri
 ---
 {{HTTPSidebar}}
 

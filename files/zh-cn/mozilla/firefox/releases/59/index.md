@@ -1,11 +1,6 @@
 ---
 title: Firefox 59 for developers
 slug: Mozilla/Firefox/Releases/59
-tags:
-  - '29'
-  - 发布说明
-  - 火狐
-translation_of: Mozilla/Firefox/Releases/59
 ---
 {{FirefoxSidebar}}
 

@@ -28,17 +28,11 @@ navigator.clipboard.readText().then(
 
 ## 规范
 
-{{Specifications("api.Clipboard")}}
+{{Specifications}}
 
 ## 浏览器兼容性
 
-### `Clipboard`
-
-{{Compat("api.Clipboard")}}
-
-### `ClipboardEvent`
-
-{{Compat("api.ClipboardEvent")}}
+{{Compat}}
 
 ## 参见
 

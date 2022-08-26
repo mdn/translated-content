@@ -1,10 +1,6 @@
 ---
 title: 获取处理器架构 - runtime.PlatformArch
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch
-tags:
-  - 获取处理器架构
-  - 附加组件
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch
 ---
 {{AddonSidebar()}}
 

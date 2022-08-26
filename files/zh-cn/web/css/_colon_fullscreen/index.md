@@ -1,13 +1,6 @@
 ---
 title: ':fullscreen'
 slug: Web/CSS/:fullscreen
-tags:
-  - CSS
-  - CSS Pseudo-class
-  - Experimental
-  - Full-screen
-  - Reference
-translation_of: Web/CSS/:fullscreen
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

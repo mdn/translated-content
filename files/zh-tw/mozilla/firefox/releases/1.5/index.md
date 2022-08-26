@@ -1,7 +1,6 @@
 ---
 title: Firefox 1.5 技術文件
 slug: Mozilla/Firefox/Releases/1.5
-translation_of: Mozilla/Firefox/Releases/1.5
 ---
 {{FirefoxSidebar}}
 

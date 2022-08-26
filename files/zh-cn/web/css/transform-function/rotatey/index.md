@@ -1,7 +1,6 @@
 ---
 title: rotateY()
 slug: Web/CSS/transform-function/rotateY
-translation_of: Web/CSS/transform-function/rotateY()
 original_slug: Web/CSS/transform-function/rotateY()
 ---
 {{CSSRef}}
@@ -18,7 +17,7 @@ original_slug: Web/CSS/transform-function/rotateY()
 
 ## 语法
 
-**`rotateY() `**引起的旋转量由{{cssxref("&lt;angle&gt;")}}指定。如果为正，则顺时针方向移动；如果为负，则逆时针方向移动。
+**`rotateY()`** 引起的旋转量由{{cssxref("&lt;angle&gt;")}}指定。如果为正，则顺时针方向移动；如果为负，则逆时针方向移动。
 
 ```
 rotateY(a)

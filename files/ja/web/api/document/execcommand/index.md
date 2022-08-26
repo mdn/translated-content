@@ -9,7 +9,6 @@ tags:
   - リファレンス
   - エディター
   - 非推奨
-browser-compat: api.Document.execCommand
 translation_of: Web/API/Document/execCommand
 ---
 {{ApiRef("DOM")}}{{deprecated_header}}

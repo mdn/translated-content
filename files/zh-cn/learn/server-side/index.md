@@ -1,7 +1,6 @@
 ---
 title: 服务器端网页编程
 slug: Learn/Server-side
-translation_of: Learn/Server-side
 ---
 {{LearnSidebar}}
 

@@ -54,4 +54,4 @@ var selectFormElement = document.forms[index].elements[index];
 
 ## 相关链接
 
-- [DOM:form](/zh-cn/DOM/HTMLFormElement)
+- [DOM:form](/zh-CN/DOM/HTMLFormElement)

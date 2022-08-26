@@ -47,8 +47,6 @@ Array [ 2, <span> ]
 
 {{Compat}}
 
-##
-
 ## 相关链接
 
 - {{domxref("Node")}}

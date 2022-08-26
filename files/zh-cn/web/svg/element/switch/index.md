@@ -1,12 +1,6 @@
 ---
 title: switch
 slug: Web/SVG/Element/switch
-tags:
-  - SVG
-  - SVG 容器
-  - 元素
-  - 需要示例
-translation_of: Web/SVG/Element/switch
 ---
 {{SVGRef}}
 

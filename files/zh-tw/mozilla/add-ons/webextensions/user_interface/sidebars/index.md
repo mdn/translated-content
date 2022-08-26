@@ -1,9 +1,6 @@
 ---
 title: 側邊欄
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
-tags:
-  - 擴充套件
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
 ---
 {{AddonSidebar}}
 

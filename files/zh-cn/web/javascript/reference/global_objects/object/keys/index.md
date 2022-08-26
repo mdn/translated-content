@@ -1,13 +1,6 @@
 ---
 title: Object.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
-tags:
-  - 'CCAC: Chrome Console Auto Copy'
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/keys
 ---
 {{JSRef}}
 

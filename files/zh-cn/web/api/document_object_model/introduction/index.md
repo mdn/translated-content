@@ -21,7 +21,7 @@ paragraphs = document.getElementsByTagName("P");
 alert(paragraphs[0].nodeName);
 ```
 
-所有操作和创建 web 页面的属性，方法和事件都会被组织成对象的形式（例如， `document `对象表示文档本身， `table` 对象实现了特定的 `HTMLTableElement` DOM 接口来访问 HTML 表格等）。本文会介绍基于 Gecko 浏览器的 DOM 面向对象引用。
+所有操作和创建 web 页面的属性，方法和事件都会被组织成对象的形式（例如， `document` 对象表示文档本身， `table` 对象实现了特定的 `HTMLTableElement` DOM 接口来访问 HTML 表格等）。本文会介绍基于 Gecko 浏览器的 DOM 面向对象引用。
 
 ## DOM 和 JavaScript
 
@@ -79,7 +79,7 @@ p_list = doc.getElementsByTagName("para");
 
 ## 重要的数据类型
 
-本参考文档会试图以尽可能简单的方式描述各种对象和类型。但在 API 中传入的不同的数据类型需要我们去注意。为简单起见，在 API 参考文档中的语法实例通常会使用 element(s) 指代节点，使用 nodeList（s）或` element(s)`来指代节点数组，使用` attribute(s)`来指代属性节点。
+本参考文档会试图以尽可能简单的方式描述各种对象和类型。但在 API 中传入的不同的数据类型需要我们去注意。为简单起见，在 API 参考文档中的语法实例通常会使用 element(s) 指代节点，使用 nodeList（s）或 `element(s)` 来指代节点数组，使用 `attribute(s)` 来指代属性节点。
 
 下面的表格简单则描述了这些数据类型。
 

@@ -1,12 +1,6 @@
 ---
 title: Connection
 slug: Web/HTTP/Headers/Connection
-tags:
-  - HTTP
-  - Web
-  - 参考
-  - 头部
-translation_of: Web/HTTP/Headers/Connection
 ---
 {{HTTPSidebar}}
 

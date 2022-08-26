@@ -1,10 +1,6 @@
 ---
 title: scroll-snap-type
 slug: Web/CSS/scroll-snap-type
-tags:
-  - CSS
-  - css snap
-translation_of: Web/CSS/scroll-snap-type
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

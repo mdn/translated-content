@@ -9,7 +9,6 @@ tags:
   - ウェブコンポーネント
   - assignedSlot
   - シャドウ DOM
-browser-compat: api.Element.assignedSlot
 translation_of: Web/API/Element/assignedSlot
 ---
 {{APIRef("Shadow DOM")}}

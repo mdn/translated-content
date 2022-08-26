@@ -1,10 +1,6 @@
 ---
 title: font-variation-settings
 slug: Web/CSS/font-variation-settings
-tags:
-  - font-variation-settings
-  - 可变字体
-translation_of: Web/CSS/font-variation-settings
 ---
 {{CSSRef}}
 

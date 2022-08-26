@@ -10,7 +10,6 @@ tags:
   - Event
   - Reference
   - Web
-browser-compat: api.Element.cut_event
 translation_of: Web/API/Element/cut_event
 ---
 {{APIRef}}

@@ -1,10 +1,6 @@
 ---
 title: line-height
 slug: Web/CSS/line-height
-tags:
-  - CSS
-  - 参考
-translation_of: Web/CSS/line-height
 ---
 {{CSSRef}}
 
@@ -36,9 +32,9 @@ line-height: unset;
 
 `line-height` 属性被指定为以下任何一个：
 
-- 一个 [`<数字>`](#<number>)
-- 一个 [`<长度>`](#<length>)
-- 一个 [`<百分比>`](#<percentage>)
+- 一个 [`<数字>`](#number)
+- 一个 [`<长度>`](#length)
+- 一个 [`<百分比>`](#percentage)
 - 关键词 [`normal`](#normal)。
 
 ### 取值

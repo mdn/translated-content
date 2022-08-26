@@ -530,7 +530,7 @@ select, option {
 
 下面的库不止应用于表单，他们在处理 HTML 表单时是非常有趣的：
 
-- [jQuery UI](http://jqueryui.com/)做了一些有趣的改进，可以定制象日期选择器（特别关注可访问性）这样的小部件。
+- [jQuery UI](http://jqueryui.com/)做了一些有趣的改进，可以定制象日期选择器（特别关注无障碍）这样的小部件。
 - [Twitter Bootstrap](http://twitter.github.com/bootstrap/base-css.html#forms)在规范表单时是非常有用的。
 - [WebShim](http://afarkas.github.com/webshim/demos/demos/webforms.html)是一个大型工具，可以用来处理浏览器对 HTML5 的支持。对 web 表单部分确实有用。
 

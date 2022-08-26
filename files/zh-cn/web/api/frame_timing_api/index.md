@@ -41,5 +41,5 @@ To observe "`frame`" performance entry types, the application first creates a {{
 
 ## 也可以看看
 
-- [帧速率（Firefox 性能工具）](/docs/Tools/Performance/Frame_rate)
+- [帧速率（Firefox 性能工具）](/zh-CN/docs/Tools/Performance/Frame_rate)
 - [使用帧计时 API](/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API)

@@ -1,11 +1,6 @@
 ---
 title: <base>：文档根 URL 元素
 slug: Web/HTML/Element/base
-tags:
-  - HTML
-  - 元素
-  - 文档
-translation_of: Web/HTML/Element/base
 ---
 {{HTMLRef}}
 
@@ -62,7 +57,7 @@ translation_of: Web/HTML/Element/base
 
 ### 多个 `<base>` 元素
 
-如果指定了多个 `<base>` 元素，只会使用第一个 `href `和 `target `值，其余都会被忽略。
+如果指定了多个 `<base>` 元素，只会使用第一个 `href` 和 `target` 值，其余都会被忽略。
 
 ### 页内锚
 

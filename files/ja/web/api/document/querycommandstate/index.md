@@ -7,7 +7,6 @@ tags:
   - DOM
   - リファレンス
   - 非推奨
-browser-compat: api.Document.queryCommandState
 translation_of: Web/API/Document/queryCommandState
 ---
 {{ApiRef("DOM")}}{{deprecated_header}}

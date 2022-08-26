@@ -75,7 +75,7 @@ mql.removeListener(handleOrientationChange);
 
 ## Voir aussi
 
-- [Les requêtes média (_media queries_)](/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries "CSS/Media queries")
+- [Les requêtes média (_media queries_)](/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries)
 - {{domxref("window.matchMedia()")}}
 - {{domxref("MediaQueryList")}}
 - {{domxref("MediaQueryListEvent")}}

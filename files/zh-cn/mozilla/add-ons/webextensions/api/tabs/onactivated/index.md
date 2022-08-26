@@ -1,7 +1,6 @@
 ---
 title: tabs.onActivated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onActivated
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onActivated
 ---
 {{AddonSidebar()}}当窗体的活动标签变化时触发。请注意事件触发时标签的 URL 可能尚未设置，但是你可以通过监听 {{WebExtAPIRef("tabs.onUpdated")}} 事件在 URL 被设置后得到通知。
 

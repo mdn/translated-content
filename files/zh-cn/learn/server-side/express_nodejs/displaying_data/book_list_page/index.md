@@ -1,7 +1,6 @@
 ---
 title: 书本列表页面
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page
 ---
 接下做我们将实作书本列表页面。这个页面需要呈现数据库中所有书本的列表，包含每本书的作者、标题，标题将成为一个超连结，连到书本详细内容页面。
 

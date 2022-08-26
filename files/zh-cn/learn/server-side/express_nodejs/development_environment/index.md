@@ -1,16 +1,6 @@
 ---
 title: 设置 Node 开发环境
 slug: learn/Server-side/Express_Nodejs/development_environment
-tags:
-  - Express
-  - Node
-  - node.js
-  - npm
-  - 初学者
-  - 学习
-  - 开发环境
-  - 服务器端
-translation_of: Learn/Server-side/Express_Nodejs/development_environment
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 

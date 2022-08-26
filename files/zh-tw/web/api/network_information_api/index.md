@@ -1,7 +1,6 @@
 ---
 title: Network Information API
 slug: Web/API/Network_Information_API
-translation_of: Web/API/Network_Information_API
 ---
 {{ SeeCompatTable() }}
 
@@ -28,17 +27,10 @@ updateConnectionStatus();
 ## 規範
 
 {{Specifications}}
-{{Specifications("api.Navigator.connection")}}
 
 ## 瀏覽器相容性
 
-### NetworkInformation
-
 {{Compat}}
-
-### Navigator.connection
-
-{{Compat("api.Navigator.connection")}}
 
 ## See also
 

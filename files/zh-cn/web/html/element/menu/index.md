@@ -1,15 +1,6 @@
 ---
 title: <menu>
 slug: Web/HTML/Element/menu
-tags:
-  - HTML
-  - HTML 交互元素
-  - UX
-  - Web
-  - 元素
-  - 参考
-  - 菜单
-translation_of: Web/HTML/Element/menu
 ---
 {{HTMLRef}}{{SeeCompatTable}}
 

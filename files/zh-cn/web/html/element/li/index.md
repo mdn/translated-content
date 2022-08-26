@@ -1,7 +1,6 @@
 ---
 title: <li>
 slug: Web/HTML/Element/li
-translation_of: Web/HTML/Element/li
 ---
 {{HTMLRef}}
 

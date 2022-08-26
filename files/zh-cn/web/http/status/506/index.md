@@ -1,11 +1,6 @@
 ---
 title: 506 Variant Also Negotiates
 slug: Web/HTTP/Status/506
-tags:
-  - HTTP
-  - 服务器错误
-  - 状态码
-translation_of: Web/HTTP/Status/506
 ---
 {{HTTPSidebar}}
 

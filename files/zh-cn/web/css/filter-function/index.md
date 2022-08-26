@@ -1,15 +1,6 @@
 ---
 title: <filter-function>
 slug: Web/CSS/filter-function
-tags:
-  - CSS
-  - CSS Data Type
-  - Filter Effects
-  - NeedsCompatTable
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/CSS/filter-function
 ---
 {{cssref}}
 

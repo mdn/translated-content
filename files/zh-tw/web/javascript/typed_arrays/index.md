@@ -1,10 +1,6 @@
 ---
 title: JavaScript 型別陣列
 slug: Web/JavaScript/Typed_arrays
-tags:
-  - Guide
-  - JavaScript
-translation_of: Web/JavaScript/Typed_arrays
 ---
 {{JsSidebar("Advanced")}}
 

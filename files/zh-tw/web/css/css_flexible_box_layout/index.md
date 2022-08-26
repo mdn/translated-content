@@ -1,14 +1,6 @@
 ---
 title: CSS 彈性盒子排版
 slug: Web/CSS/CSS_Flexible_Box_Layout
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Reference
-  - NeedsTranslation
-  - Overview
-  - TopicStub
-translation_of: Web/CSS/CSS_Flexible_Box_Layout
 ---
 {{CSSRef}}
 

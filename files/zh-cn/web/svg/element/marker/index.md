@@ -1,11 +1,6 @@
 ---
 title: marker
 slug: Web/SVG/Element/marker
-tags:
-  - SVG
-  - SVG 容器
-  - 元素
-translation_of: Web/SVG/Element/marker
 ---
 {{SVGRef}}
 

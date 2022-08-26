@@ -1,9 +1,6 @@
 ---
 title: CSS 属性参考
 slug: Web/CSS/CSS_Properties_Reference
-tags:
-  - CSS
-translation_of: Web/CSS/CSS_Properties_Reference
 ---
 ## 常见的 CSS 属性参考
 

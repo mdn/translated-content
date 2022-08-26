@@ -1,9 +1,6 @@
 ---
 title: '-moz-appearance (-webkit-appearance)'
 slug: Web/CSS/appearance
-tags:
-  - CSS
-translation_of: Web/CSS/appearance
 ---
 {{CSSRef}} {{SeeCompatTable}}
 

@@ -1,11 +1,6 @@
 ---
 title: 扩展剖析
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-tags:
-  - WebExtension
-  - 扩展
-  - 扩展开发
-translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
 {{AddonSidebar}}
 

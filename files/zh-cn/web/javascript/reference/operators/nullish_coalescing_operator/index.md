@@ -1,14 +1,6 @@
 ---
 title: 空值合并运算符
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
-tags:
-  - '??'
-  - JavaScript
-  - 参考
-  - 空值
-  - 空值合并操作符
-  - 运算符
-translation_of: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 ---
 {{JSSidebar("Operators")}}
 

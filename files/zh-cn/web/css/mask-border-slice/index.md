@@ -1,7 +1,6 @@
 ---
 title: mask-border-slice
 slug: Web/CSS/mask-border-slice
-translation_of: Web/CSS/mask-border-slice
 ---
 {{CSSRef}}
 

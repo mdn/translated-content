@@ -12,7 +12,6 @@ tags:
   - 入力要素
   - 入力型
   - リファレンス
-browser-compat: html.elements.input.input-date
 translation_of: Web/HTML/Element/input/date
 ---
 
@@ -220,7 +219,7 @@ input:valid+span::after {
 
 > **Warning:** クライアント側のフォーム検証は、サーバー上の検証の代用にはなりません。誰かが HTML を改変したり、 HTML を完全にバイパスしてサーバーに直接データを送信したりすることは簡単です。サーバーが受信したデータの検証に失敗した場合、不適切な形式のデータ、大きすぎるデータ、誤った種類のデータなどに遭遇すると、障害が発生するおそれがあります。
 
-## ブラウザーの対応の扱い
+## ブラウザーの互換性の扱い
 
 前述のように、現時点で日付入力を書く上で一番の問題は[ブラウザーの互換性](#ブラウザーの互換性)です。
 
@@ -385,7 +384,7 @@ if(test.type === 'text') {
 }
 
 function populateDays(month) {
-  // delete the current set of &lt;option&gt; elements out of the
+  // delete the current set of <option> elements out of the
   // day <select>, ready for the next set to be injected
   while(daySelect.firstChild){
     daySelect.removeChild(daySelect.firstChild);
@@ -406,8 +405,8 @@ function populateDays(month) {
   isLeap ? dayNum = 29 : dayNum = 28;
   }
 
-  // <select> に正しい数の新しい &lt;option&gt; 要素を挿入
-  for(i = 1; i &lt;= dayNum; i++) {
+  // <select> に正しい数の新しい <option> 要素を挿入
+  for(i = 1; i <= dayNum; i++) {
     var option = document.createElement('option');
     option.textContent = i;
     daySelect.appendChild(option);
@@ -443,7 +442,7 @@ function populateYears() {
   var year = date.getFullYear();
 
   // 今年から 100 年前までの年が <select> で選択できるようにする
-  for(var i = 0; i &lt;= 100; i++) {
+  for(var i = 0; i <= 100; i++) {
     var option = document.createElement('option');
     option.textContent = year-i;
     yearSelect.appendChild(option);

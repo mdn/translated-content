@@ -14,7 +14,6 @@ tags:
   - WebExtensions
   - openOrClosedShadowRoot
   - シャドウ DOM
-browser-compat: api.Element.openOrClosedShadowRoot
 translation_of: Web/API/Element/openOrClosedShadowRoot
 ---
 {{APIRef("Shadow DOM")}}{{non-standard_header}}

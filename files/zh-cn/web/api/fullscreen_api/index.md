@@ -84,7 +84,7 @@ Fullscreen API 定义了两个事件，可用于检测全屏模式的打开和�
 
 全屏模式可由功能策略（ [Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy)）控制。全屏模式功能由字符串“full screen”标识，默认的允许列表值为“self”，这意味着在顶级文档上下文 以及 从与顶级文档相同的源加载的嵌套上下文中允许使用全屏模式。
 
-请参阅使用功能策略（[ Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) ）以了解有关使用功能策略控制对 API 的访问的更多信息。
+请参阅使用功能策略（[Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)）以了解有关使用功能策略控制对 API 的访问的更多信息。
 
 ## 使用说明
 
@@ -136,13 +136,9 @@ function toggleFullScreen() {
 
 ## 浏览器兼容性
 
-所有的浏览器都实现了这个 API。然而一些带有前缀的实现在拼写上略微有些差别；例如，不同于 `requestFullscreen()`，存在一个 `MozRequestFullScreen()`。
+{{Compat}}
 
-{{Compat("api.Document.fullscreen")}}
-
-{{Compat("api.Document.fullscreenEnabled")}}
-
-## 另见
+## 参见
 
 - [Using fullscreen mode](/zh-CN/docs/Web/API/Fullscreen_API)
 - {{ domxref("Element.requestFullscreen()") }}

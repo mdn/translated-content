@@ -1,14 +1,6 @@
 ---
 title: 使用 CSS transitions
 slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
-tags:
-  - CSS
-  - CSS Transitions
-  - Using CSS transitions
-  - 教程
-  - 过渡
-  - 高级
-translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 ---
 {{CSSRef}} {{SeeCompattable}}
 

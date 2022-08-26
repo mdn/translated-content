@@ -1,7 +1,6 @@
 ---
 title: Error.prototype.fileName
 slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/fileName
 ---
 {{JSRef}} {{non-standard_header}}
 

@@ -9,7 +9,6 @@ tags:
   - インターフェイス
   - リファレンス
   - Web API
-browser-compat: api.Element
 translation_of: Web/API/Element
 ---
 {{APIRef("DOM")}}

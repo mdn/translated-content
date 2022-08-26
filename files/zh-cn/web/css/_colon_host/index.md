@@ -1,11 +1,6 @@
 ---
 title: ':host'
 slug: Web/CSS/:host
-tags:
-  - ':host'
-  - CSS
-  - DOM
-translation_of: Web/CSS/:host
 ---
 {{ CSSRef }}
 
@@ -26,7 +21,7 @@ translation_of: Web/CSS/:host
 
 ## 示例
 
-以下片段取自我们的 [host-selectors ](https://github.com/mdn/web-components-examples/tree/master/host-selectors)示例（[在线演示](https://mdn.github.io/web-components-examples/host-selectors/)）。
+以下片段取自我们的 [host-selectors](https://github.com/mdn/web-components-examples/tree/master/host-selectors) 示例（[在线演示](https://mdn.github.io/web-components-examples/host-selectors/)）。
 
 在这个例子中，我们有一个简单的自定义元素 — `<context-span>` — 你可以包裹文本：
 

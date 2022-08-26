@@ -1,10 +1,6 @@
 ---
 title: column-count
 slug: Web/CSS/column-count
-tags:
-  - CSS3 Multiple column layout
-  - CSS3 多列布局
-translation_of: Web/CSS/column-count
 ---
 {{CSSRef}}
 

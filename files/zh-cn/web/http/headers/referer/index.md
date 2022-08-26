@@ -1,11 +1,6 @@
 ---
 title: Referer
 slug: Web/HTTP/Headers/Referer
-tags:
-  - 引用
-  - 消息头
-  - 请求头
-translation_of: Web/HTTP/Headers/Referer
 ---
 {{HTTPSidebar}}
 

@@ -1,20 +1,15 @@
 ---
 title: Stacking context example 2
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2
-tags:
-  - CSS
-  - 理解 css 的 index 属性
-  - 高级
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2
 original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_context_example_2
 ---
-« [CSS](/en/CSS) «[ 理解 CSS z-index](/en/CSS/Understanding_z-index)
+« [CSS](/en/CSS) « [理解 CSS z-index](/en/CSS/Understanding_z-index)
 
 ### 层叠上下文示例 2
 
 这是一个非常简单的例子，但它是理解层叠上下文这个概念的关键。还是和之前的例子中一样的四个 DIV，不过现在 z-index 属性被分配在两个水平的层次结构中。
 
-{{ EmbedLiveSample('Example_source_code', '352', '270', '', 'Web/Guide/CSS/Understanding_z_index/Stacking_context_example_2') }}
+{{ EmbedLiveSample('示例源码', '352', '270') }}
 
 可以看到现在 DIV #2 (z-index: 2) 在 DIV #3 (z-index: 1) 的上面，因为他们都属于同一个层叠上下文（根元素创建的层叠上下文），所以 z-index 的值决定了元素如何叠放。
 

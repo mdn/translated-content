@@ -10,7 +10,6 @@ tags:
   - リファレンス
   - focusout
   - onfocusout
-browser-compat: api.Element.focusout_event
 translation_of: Web/API/Element/focusout_event
 ---
 {{APIRef}}

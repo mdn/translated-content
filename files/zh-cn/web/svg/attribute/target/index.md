@@ -1,7 +1,6 @@
 ---
 title: target
 slug: Web/SVG/Attribute/target
-translation_of: Web/SVG/Attribute/target
 ---
 {{SVGRef}}
 

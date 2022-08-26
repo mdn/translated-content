@@ -1,12 +1,6 @@
 ---
 title: ellipse
 slug: Web/SVG/Element/ellipse
-tags:
-  - SVG
-  - SVG 图形
-  - 元素
-  - 参考
-translation_of: Web/SVG/Element/ellipse
 ---
 {{SVGRef}}
 

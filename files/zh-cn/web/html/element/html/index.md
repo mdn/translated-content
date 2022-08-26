@@ -1,12 +1,6 @@
 ---
 title: <html>
 slug: Web/HTML/Element/html
-tags:
-  - HTML
-  - 元素
-  - 根元素
-  - 顶级元素
-translation_of: Web/HTML/Element/html
 ---
 {{HTMLRef}}
 
@@ -62,7 +56,7 @@ translation_of: Web/HTML/Element/html
 </html>
 ```
 
-## 可访问性
+## 无障碍
 
 在`html`元素上提供具有[有效 IETF 标识语言标记](https://www.ietf.org/rfc/bcp/bcp47.txt)的[`lang`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#attr-lang)属性，将有助于屏幕阅读技术确定要陈述的正确语言。标识语言标签应描述页面大部分内容使用的语言。没有它，屏幕阅读器通常会默认使用操作系统的设置语言，这可能会导致错误陈述。
 

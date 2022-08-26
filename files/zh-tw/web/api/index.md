@@ -1,12 +1,6 @@
 ---
 title: Web APIs
 slug: Web/API
-tags:
-  - API
-  - DOM
-  - JavaScript
-  - Reference
-translation_of: Web/API
 ---
 當你使用 JavaScript 為網站寫程式碼時，有很多很棒的 API 可以使用。
 

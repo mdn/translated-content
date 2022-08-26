@@ -9,7 +9,6 @@ tags:
   - Focus
   - FocusEvent
   - リファレンス
-browser-compat: api.Element.focus_event
 translation_of: Web/API/Element/focus_event
 ---
 {{APIRef}}

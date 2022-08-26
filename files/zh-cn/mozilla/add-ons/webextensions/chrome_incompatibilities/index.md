@@ -1,9 +1,6 @@
 ---
 title: Chrome 不兼容情况
 slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 ---
 {{AddonSidebar}}
 

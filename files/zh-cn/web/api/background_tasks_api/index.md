@@ -224,7 +224,7 @@ let statusRefreshScheduled = false;
 最后，我们为其他项目设置一对变量：
 
 - `logFragment` 当渲染下一帧，我们的记录方法都会生成一个 {{domxref("DocumentFragment")}} 来创建添加到记录的内容，并保存到`logFragment`中 {{domxref("DocumentFragment")}} 。
-- `statusRefreshScheduled `我们用它来追踪我们是否已经为即将到来的帧安排了状态显示框的更新，所以我们每一帧只执行一次。
+- `statusRefreshScheduled` 我们用它来追踪我们是否已经为即将到来的帧安排了状态显示框的更新，所以我们每一帧只执行一次。
 
 ```js hidden
 window.requestIdleCallback = window.requestIdleCallback || function(handler) {
@@ -305,10 +305,10 @@ function runTaskQueue(deadline) {
 
 对队列中每个我们有时间执行的任务，我们做以下操作：
 
-1.  我们 [把任务对象（object）从队列中移除](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)。
-2.  我们让`currentTaskNumber`增加来追踪我们已执行的任务数量。
-3.  我们调用任务处理方法，`task.handler`，并任务的数据对象（`task.data`）传入其中。
-4.  我们调用一个方法，`scheduleStatusRefresh()`，去处理调度一个屏幕更新来体现我们进度的变化。
+1. 我们 [把任务对象（object）从队列中移除](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)。
+2. 我们让`currentTaskNumber`增加来追踪我们已执行的任务数量。
+3. 我们调用任务处理方法，`task.handler`，并任务的数据对象（`task.data`）传入其中。
+4. 我们调用一个方法，`scheduleStatusRefresh()`，去处理调度一个屏幕更新来体现我们进度的变化。
 
 当时间耗尽，如果列表里还有任务，我们再次调用{{domxref("Window.requestIdleCallback", "requestIdleCallback()")}}使我们可以在下次有可用空闲时间时继续运行这些任务。如果队列是空的，我们将把`taskHandle`设置为 0 来表示我们没有回调日程了。这样，下一次`enqueueTask()`被调用时，我们就知道要请求一个回调了。
 
@@ -368,8 +368,8 @@ function updateDisplay() {
 
 接下来，如果有任务进入队列中，我们更新进度和状态信息。
 
-1.  如果进度条当前的最大值不同于队列中当前的任务总数（`totalTaskCount`），我们就要更新任务总数（`totalTaskCountElem`）的显示内容和进度条的最大值，以使它的比例正确。
-2.  我们对已运行的任务数做同样的操作；如果`progressBarElem.value`不同于当前正被处理的任务数（`currentTaskNumber`），我们就要更新当前运行的程序数量值和进度条当前值的显示。
+1. 如果进度条当前的最大值不同于队列中当前的任务总数（`totalTaskCount`），我们就要更新任务总数（`totalTaskCountElem`）的显示内容和进度条的最大值，以使它的比例正确。
+2. 我们对已运行的任务数做同样的操作；如果`progressBarElem.value`不同于当前正被处理的任务数（`currentTaskNumber`），我们就要更新当前运行的程序数量值和进度条当前值的显示。
 
 然后，如果有文本等待被添加到记录中（也就是说，`logFragment`不为`null`），我们使用{{domxref("Node.appendChild", "Element.appendChild()")}}将它添加到记录元素中，并将`logFragment`设置为以避免重复操作。
 

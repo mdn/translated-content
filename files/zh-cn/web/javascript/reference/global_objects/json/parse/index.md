@@ -1,13 +1,6 @@
 ---
 title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
-tags:
-  - ECMAScript 5
-  - JSON
-  - JavaScript
-  - 参考
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON/parse
 ---
 {{JSRef}}
 

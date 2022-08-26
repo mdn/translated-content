@@ -1,17 +1,6 @@
 ---
 title: The HTML 自动完成属性
 slug: Web/HTML/Attributes/autocomplete
-tags:
-  - HTML
-  - 参考
-  - 地址
-  - 密码
-  - 属性
-  - 用户名
-  - 电话号码
-  - 自动完成
-  - 邮件地址
-translation_of: Web/HTML/Attributes/autocomplete
 original_slug: Web/HTML/Attributes/自动完成属性
 ---
 {{HTMLSidebar("Global_attributes")}}
@@ -20,11 +9,15 @@ HTML `autocomplete` 属性可用于以文本或数字值作为输入的 {{HTMLEl
 
 建议值的来源通常取决于浏览器。 通常，值来自用户输入的过去值，但它们也可能来自预先配置的值。 例如，浏览器可能允许用户保存其姓名，地址，电话号码和电子邮件地址，以实现自动完成目的。 也许浏览器提供了保存加密的信用卡信息的功能，以便在身份验证过程后自动完成。
 
-如果 {{HTMLElement("input")}}, {{HTMLElement("select")}} 或{{HTMLElement("textarea")}} 元素 没有 `autocomplete` 属性，t 则该浏览器将使用该元素的表单的 `autocomplete` 属性所有者，它们可是元素的后代 {{HTMLElement("form")}} 元素 也可以是其 `id` 由元素{{htmlattrxref("form", "input")}} 属性指定的 `<form>`。
+如果 {{HTMLElement("input")}}, {{HTMLElement("select")}} 或{{HTMLElement("textarea")}} 元素 没有 `autocomplete` 属性，则该浏览器将使用该元素的表单的 `autocomplete` 属性所有者，它们可是元素的后代 {{HTMLElement("form")}} 元素 也可以是其 `id` 由元素{{htmlattrxref("form", "input")}} 属性指定的 `<form>`。
 
 有关更多信息，请参见 {{HTMLElement("form")}} 中的{{htmlattrxref("autocomplete", "form")}} 属性。
 
-> **备注：** 为了提供自动完成功能，用户代理可能需要`<input>`/`<select>`/`<textarea>` 元素才能：1. 具有 `name` 和/或 `id` 属性 2. 成为 `<form> `的后代 3. 具有 {{HTMLElement("input/submit", "submit")}} 按钮的表单
+> **备注：** 为了提供自动完成功能，用户代理可能需要 `<input>` / `<select>` / `<textarea>` 元素才能：
+>
+> 1. 具有 `name` 和/或 `id` 属性
+> 2. 成为 `<form>` 的后代
+> 3. 具有 {{HTMLElement("input/submit", "submit")}} 按钮的表单
 
 ## 价值
 
@@ -35,8 +28,9 @@ HTML `autocomplete` 属性可用于以文本或数字值作为输入的 {{HTMLEl
 - "`on`"
   - : 允许浏览器自动完成输入。 没有提供有关该字段中期望的数据类型的指导，因此浏览器可以使用自己的判断。
 - "`name`"
-  - : 该字段期望该值是一个人的全名。 通常首选使用“名称”而不是将名称分解为各个组成部分，因为这样可以避免处理各种各样的人类名称及其结构。 但是，如果需要将名称分解为各个组成部分，则可以使用以下自动完成值：_ "`honorific-prefix`"
-    _ : 前缀或标题，例如“ Mrs.”，“ Mr.”，“ Miss”，“ Ms.”，“ Dr.”或“ Mlle.”。
+  - : 该字段期望该值是一个人的全名。 通常首选使用“名称”而不是将名称分解为各个组成部分，因为这样可以避免处理各种各样的人类名称及其结构。 但是，如果需要将名称分解为各个组成部分，则可以使用以下自动完成值：
+    - "`honorific-prefix`"
+      - : 前缀或标题，例如“ Mrs.”，“ Mr.”，“ Miss”，“ Ms.”，“ Dr.”或“ Mlle.”。
     - "`given-name`"
       - : 给定的（或“名字”）名称。
     - "`additional-name`"
@@ -117,8 +111,9 @@ HTML `autocomplete` 属性可用于以文本或数字值作为输入的 {{HTMLEl
 - "`sex`"
   - : 性别身份（例如“女性”，“法法芬”，“男性”），不带换行符的自由格式文本。
 - "`tel`"
-  - : 完整的电话号码，包括国家/地区代码。 如果您需要将电话号码分为几个部分，则可以将以下值用于这些字段：_ "`tel-country-code`"
-    _ : 国家/地区代码，例如美国，加拿大和北美其他地区以及加勒比海部分地区的“ 1”。
+  - : 完整的电话号码，包括国家/地区代码。 如果您需要将电话号码分为几个部分，则可以将以下值用于这些字段：
+    - "`tel-country-code`"
+      - : 国家/地区代码，例如美国，加拿大和北美其他地区以及加勒比海部分地区的“ 1”。
     - "`tel-national`"
       - : 不含国家/地区代码部分的完整电话号码，包括国家/地区内部前缀。 对于电话号码“ 1-855-555-6502”，该字段的值为“ 855-555-6502”。
     - "`tel-area-code`"

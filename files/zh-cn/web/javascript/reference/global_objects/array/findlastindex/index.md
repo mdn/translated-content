@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 ---
 {{JSRef}}
 

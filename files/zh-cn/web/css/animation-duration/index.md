@@ -1,13 +1,6 @@
 ---
 title: animation-duration
 slug: Web/CSS/animation-duration
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Experimental
-  - Reference
-translation_of: Web/CSS/animation-duration
 ---
 {{ CSSRef() }}{{ SeeCompatTable() }}
 

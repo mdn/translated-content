@@ -47,7 +47,7 @@ Some processes are exempt from this throttling behavior. In these cases, you can
 
 ## 示例
 
-看一个 [在线的例子 ](http://daniemon.com/tech/webapps/page-visibility/)（带声音的视频）
+看一个 [在线的例子](http://daniemon.com/tech/webapps/page-visibility/)（带声音的视频）
 
 在此例中，当你切换到另一个标签时视频会暂停，当你返回到当前标签时视频会再次播放，代码如下：
 

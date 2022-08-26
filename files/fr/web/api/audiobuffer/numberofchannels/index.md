@@ -46,15 +46,13 @@ bouton.onclick = function() {
 }
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                        | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBuffer-numberOfChannels', 'numberOfChannels')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioBuffer.numberOfChannels")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -154,8 +154,6 @@ dx 和 dy 参数表示你希望在场景内左上角绘制的像素数据所得�
 ctx.putImageData(myImageData, 0, 0);
 ```
 
-###
-
 ### 图片灰度和反相颜色
 
 在这个例子里，我们遍历所有像素以改变他们的数值。然后我们将被修改的像素数组通过 putImageData() 放回到画布中去。invert 函数仅仅是去减掉颜色的最大色值 255.grayscale 函数仅仅是用红绿和蓝的平均值。你也可以用加权平均，例如 x = 0.299r + 0.587g + 0.114b 这个公式。更多资料请参考维基百科的[Grayscale](http://en.wikipedia.org/wiki/Grayscale)。

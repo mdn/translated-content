@@ -1,7 +1,6 @@
 ---
 title: '-moz-image-rect'
 slug: Web/CSS/-moz-image-rect
-translation_of: Web/CSS/-moz-image-rect
 ---
 {{CSSRef}}{{Non-standard_Header}}
 

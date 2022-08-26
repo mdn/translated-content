@@ -1,7 +1,6 @@
 ---
 title: CSS Basic User Interface
 slug: Web/CSS/CSS_Basic_User_Interface
-translation_of: Web/CSS/CSS_Basic_User_Interface
 ---
 {{CSSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: 將你的網站發佈上線
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
-translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
 

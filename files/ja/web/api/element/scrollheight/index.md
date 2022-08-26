@@ -7,7 +7,6 @@ tags:
   - NeedsDHTMLRemovalInExample
   - プロパティ
   - リファレンス
-browser-compat: api.Element.scrollHeight
 translation_of: Web/API/Element/scrollHeight
 ---
 {{APIRef("DOM")}}

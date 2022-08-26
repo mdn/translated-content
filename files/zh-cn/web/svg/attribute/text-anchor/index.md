@@ -1,10 +1,6 @@
 ---
 title: text-anchor
 slug: Web/SVG/Attribute/text-anchor
-tags:
-  - 可缩放矢量图形
-  - 可缩放矢量图形 属性
-translation_of: Web/SVG/Attribute/text-anchor
 original_slug: Web/SVG/Attribute/文本锚点
 ---
 « [SVG Attribute reference home](/en/SVG/Attribute)

@@ -23,11 +23,9 @@ slug: Web/API/Document/touchcancel_event
     <tr>
       <th scope="row">事件处理程序属性</th>
       <td>
-        <article>
-          <p>
-            {{ domxref("GlobalEventHandlers.ontouchcancel","ontouchcancel")}}
-          </p>
-        </article>
+        <p>
+          {{ domxref("GlobalEventHandlers.ontouchcancel","ontouchcancel")}}
+        </p>
       </td>
     </tr>
   </tbody>

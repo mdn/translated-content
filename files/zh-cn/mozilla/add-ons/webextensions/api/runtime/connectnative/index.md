@@ -1,9 +1,6 @@
 ---
 title: 连接本地应用程序方法 - runtime.connectNative()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/connectNative
-tags:
-  - 附加组件连接本地应用程序
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/connectNative
 ---
 {{AddonSidebar()}}该方法能够把附加组件和用户计算机上的一个本地应用程序相连接。同时我们需要本地应用程序的名称作为参数。当启动本地应用程序的时候会返回一个{{WebExtAPIRef("runtime.Port")}} 对象给调用者。之后可以通过该对象的 Port.onMessage() 和 Port.postMessage() 方法来和本地应用程序进行信息交互。本地应用程序会一直运行直到退出，除非调用了 `Port.disconnect()`方法，亦或创建该 Port 对象的页面被摧毁了。一旦 Port 对象断开连接，浏览器会给该进程几秒的时间以便安全优雅的退出和释放，之后如果发现该进程没退出的话就直接暴力干掉。
 

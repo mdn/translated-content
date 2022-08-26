@@ -1,11 +1,6 @@
 ---
 title: border-top-color
 slug: Web/CSS/border-top-color
-tags:
-  - CSS
-  - CSS Borders
-  - CSS 属性
-translation_of: Web/CSS/border-top-color
 ---
 {{CSSRef}}
 

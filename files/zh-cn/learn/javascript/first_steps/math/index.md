@@ -1,7 +1,6 @@
 ---
 title: JavaScript 中的基础数学 — 数字和操作符
 slug: Learn/JavaScript/First_steps/Math
-translation_of: Learn/JavaScript/First_steps/Math
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 

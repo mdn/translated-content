@@ -1,7 +1,6 @@
 ---
 title: <center>
 slug: Web/HTML/Element/center
-translation_of: Web/HTML/Element/center
 ---
 {{deprecated_header()}}
 

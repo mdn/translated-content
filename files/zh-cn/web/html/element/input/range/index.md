@@ -1,13 +1,6 @@
 ---
 title: <input type="range">
 slug: Web/HTML/Element/input/range
-tags:
-  - HTML
-  - 元素
-  - 参考
-  - 网页
-  - 范围
-translation_of: Web/HTML/Element/input/range
 original_slug: Web/HTML/Element/Input/范围
 ---
 {{HTMLRef}}
@@ -69,7 +62,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 | 属性            | 描述                                          |
 | --------------- | --------------------------------------------- |
-| [`list`](#list) | <datalist>元素的 ID，其中包含可选的预定义选项 |
+| [`list`](#list) | \<datalist>元素的 ID，其中包含可选的预定义选项 |
 | [`max`](#max)   | 最大允许值                                    |
 | [`min`](#min)   | 最小允许值                                    |
 | [`step`](#step) | 步进间隔，用于用户界面和验证目的              |

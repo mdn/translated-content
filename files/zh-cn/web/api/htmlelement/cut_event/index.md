@@ -54,5 +54,5 @@ _functionRef_ 是一个函数名或者函数表达式。
 
 ### 相关链接
 
-- [`oncopy`](/zh-cn/DOM/element.oncopy)
-- [`onpaste`](/zh-cn/DOM/element.onpaste)
+- [`oncopy`](/zh-CN/DOM/element.oncopy)
+- [`onpaste`](/zh-CN/DOM/element.onpaste)

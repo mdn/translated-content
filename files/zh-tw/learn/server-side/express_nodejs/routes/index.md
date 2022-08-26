@@ -1,7 +1,6 @@
 ---
 title: 'Express 教學 4: 路由與控制器'
 slug: Learn/Server-side/Express_Nodejs/routes
-translation_of: Learn/Server-side/Express_Nodejs/routes
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
 

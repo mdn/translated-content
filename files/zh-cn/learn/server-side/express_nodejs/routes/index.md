@@ -1,14 +1,6 @@
 ---
 title: Express 教程 4：路由和控制器
 slug: Learn/Server-side/Express_Nodejs/routes
-tags:
-  - Express
-  - Node
-  - nodejs
-  - 初学者
-  - 服务器端编程
-  - 路由
-translation_of: Learn/Server-side/Express_Nodejs/routes
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
 

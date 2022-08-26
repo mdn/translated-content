@@ -1,12 +1,6 @@
 ---
 title: 網路開放字型格式 (WOFF)
 slug: Web/Guide/WOFF
-tags:
-  - Fonts
-  - NeedsMobileBrowserCompatibility
-  - WOFF
-  - 字型
-translation_of: Web/Guide/WOFF
 ---
 **WOFF**（**網頁開放字型格式**）是由 Mozilla、Type Supply、LettError 和其它組織協力開發的全新網路字型格式。它使用了同為表格結構的 `sfnt` 壓縮版，廣泛用於 TrueType、OpenType 和開放字型格式，另外加入了中繼資料和私有資料結構，其中包含事先定義的欄位，讓有意願的廠商和製造商提供授權資訊。
 

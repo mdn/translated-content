@@ -60,7 +60,7 @@ jobs:
           # Now, this gets used by the `git diff ...` inside get-diff-action.
           git config --global core.quotePath false
 
-      - uses: technote-space/get-diff-action@v6.0.1
+      - uses: technote-space/get-diff-action@v6.1.0
         id: git_diff_content
         with:
           PATTERNS: files/**/*.+(html|md)
@@ -152,7 +152,7 @@ jobs:
           # to debug JS or CSS.
           find $BUILD_OUT_ROOT/static -type f -name "*.map" | xargs rm
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         if: ${{ env.GIT_DIFF_CONTENT }}
         env:
           # This must match what we set in the "Build changed content" step above
@@ -161,7 +161,7 @@ jobs:
           name: build
           path: ${{ env.BUILD_OUT_ROOT }}
 
-      - uses: technote-space/get-diff-action@v6.0.1
+      - uses: technote-space/get-diff-action@v6.1.0
         with:
           PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
           ABSOLUTE: true

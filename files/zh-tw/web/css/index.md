@@ -1,20 +1,6 @@
 ---
 title: CSS
 slug: Web/CSS
-tags:
-  - CSS
-  - Cascading Style Sheets
-  - Design
-  - Landing
-  - Layout
-  - Reference
-  - Style Sheets
-  - Styles
-  - Stylesheets
-  - 樣式表
-  - 版面配置
-  - 設計
-translation_of: Web/CSS
 ---
 **層疊樣式表（Cascading Style Sheets, CSS）**是用來描述 [HTML](/zh-TW/docs/HTML) 或 [XML](/zh-TW/docs/XML)（包含 [SVG](/zh-TW/docs/SVG) 或 [XHTML](/zh-TW/docs/XHTML) 等各種 XML 變形）文件外觀的[樣式表](/zh-TW/docs/DOM/stylesheet)語言。CSS 會描述文件裡的結構化元素，該如何呈現在螢幕、紙、語音報讀、或其他媒介上。
 

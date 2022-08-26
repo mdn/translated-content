@@ -1,7 +1,6 @@
 ---
 title: Cross-Origin-Embedder-Policy
 slug: Web/HTTP/Headers/Cross-Origin-Embedder-Policy
-translation_of: Web/HTTP/Headers/Cross-Origin-Embedder-Policy
 ---
 {{HTTPSidebar}}
 

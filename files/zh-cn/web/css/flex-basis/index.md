@@ -1,12 +1,6 @@
 ---
 title: flex-basis
 slug: Web/CSS/flex-basis
-tags:
-  - CSS
-  - CSS 属性
-  - CSS 弹性盒子
-  - 参考
-translation_of: Web/CSS/flex-basis
 ---
 {{CSSRef}}
 
@@ -39,7 +33,7 @@ flex-basis: initial;
 flex-basis: unset;
 ```
 
-这个 `flex-basis` 属性 被指定为关键词 [`content`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis$edit#content) 或者 [`<'width'>`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis$edit#%3C'width'%3E).
+这个 `flex-basis` 属性 被指定为关键词 [`content`](/zh-CN/docs/Web/CSS/flex-basis#content) 或者 [`<'width'>`](/zh-CN/docs/Web/CSS/flex-basis#%3C'width'%3E).
 
 ### 取值
 
@@ -60,7 +54,7 @@ flex-basis: unset;
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -163,7 +157,7 @@ flex-basis: unset;
 
 ### 结果
 
-{{EmbedLiveSample('例子', '860', '360', '', 'Web/CSS/flex-basis')}}
+{{EmbedLiveSample('示例', '860', '360')}}
 
 ## 规范
 

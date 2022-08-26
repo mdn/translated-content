@@ -1,10 +1,6 @@
 ---
 title: CSS animated properties
 slug: Web/CSS/CSS_animated_properties
-tags:
-  - CSS animated properties
-  - CSS 动画属性
-translation_of: Web/CSS/CSS_animated_properties
 ---
 {{CSSRef}}
 

@@ -1,14 +1,6 @@
 ---
 title: XML (可扩展标记语言)
 slug: Web/XML
-tags:
-  - Draft
-  - Landing
-  - NeedsTranslation
-  - TopicStub
-  - Web
-  - XML
-translation_of: Web/XML
 ---
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/XML")}}
 

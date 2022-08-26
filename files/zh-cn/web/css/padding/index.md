@@ -1,7 +1,6 @@
 ---
 title: padding
 slug: Web/CSS/padding
-translation_of: Web/CSS/padding
 ---
 {{CSSRef}}
 

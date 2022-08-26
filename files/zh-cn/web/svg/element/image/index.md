@@ -1,12 +1,6 @@
 ---
 title: image
 slug: Web/SVG/Element/image
-tags:
-  - SVG
-  - SVG 图形
-  - 元素
-  - 参考
-translation_of: Web/SVG/Element/image
 ---
 {{SVGRef}}
 

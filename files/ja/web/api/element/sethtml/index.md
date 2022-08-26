@@ -7,7 +7,6 @@ tags:
   - Element.setHTML
   - setHTML
   - 実験的
-browser-compat: api.Element.setHTML
 translation_of: Web/API/Element/setHTML
 ---
 {{SeeCompatTable}}{{DefaultAPISidebar("HTML Sanitizer API")}}

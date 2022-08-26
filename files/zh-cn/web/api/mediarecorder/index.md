@@ -18,7 +18,7 @@ slug: Web/API/MediaRecorder
 - {{domxref("MediaRecorder.state")}} {{readonlyInline}}
   - : 返回录制对象`MediaRecorder` 的当前状态 (闲置中，录制中或者暂停 ) (`inactive`, `recording`, or `paused`.)
 - {{domxref("MediaRecorder.stream")}} {{readonlyInline}}
-  - : 返回录制器对象 `MediaRecorder `创建时构造函数传入的 stream 对象
+  - : 返回录制器对象 `MediaRecorder` 创建时构造函数传入的 stream 对象
 - {{domxref("MediaRecorder.ignoreMutedMedia")}}
   - : 用以指定 `MediaRecorder`是否录制无声的输入源。如果这个属性是 false. 录制器对象`MediaRecorder` 会录制无声的音频或者黑屏的视频，默认值是 false
 - {{domxref("MediaRecorder.videoBitsPerSecond")}} {{readonlyInline}}

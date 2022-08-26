@@ -10,7 +10,6 @@ tags:
   - HTML 5
   - Reference
   - drag and drop
-browser-compat: api.Document.drop_event
 translation_of: Web/API/Document/drop_event
 ---
 {{APIRef}}

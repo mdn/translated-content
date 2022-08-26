@@ -7,7 +7,6 @@ tags:
   - プロパティ
   - リファレンス
   - part
-browser-compat: api.Element.part
 ---
 {{ ApiRef("DOM") }}
 

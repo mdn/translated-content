@@ -10,11 +10,11 @@ slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 
 音频节点可以通过各自的输入与输出相连，形成一个 从一个或多个声源开始，经过处理节点，终止于末节点 的链式结构（有时你不需要末节点，比如你只是想数字化处理某些音频数据的时候）。一个简单、典型的网页音频接口的操作流程可以是这样的：
 
-1.  创建一个音频环境
-2.  在音频环境中，创建声源——例如{{HTMLElement("audio")}} 标签，振动发声器 (oscillator)，音频流
-3.  创建特效节点——例如混响，双二阶滤波，声相控制，音频振幅压缩
-4.  选择音频的终点——例如系统的扬声器
-5.  连接声源和特效，以及特效和终点。
+1. 创建一个音频环境
+2. 在音频环境中，创建声源——例如{{HTMLElement("audio")}} 标签，振动发声器 (oscillator)，音频流
+3. 创建特效节点——例如混响，双二阶滤波，声相控制，音频振幅压缩
+4. 选择音频的终点——例如系统的扬声器
+5. 连接声源和特效，以及特效和终点。
 
 ![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](webaudioapi_en.svg)
 

@@ -513,12 +513,12 @@ w = (4 + 1) * scaleFactor
 ```js
 CubeDemo.prototype.computeSimpleProjectionMatrix = function(scaleFactor) {
 
-	this.transforms.projection = [
-		1, 0, 0, 0,
-		0, 1, 0, 0,
-		0, 0, 1, scaleFactor,
-		0, 0, 0, scaleFactor
-	];
+  this.transforms.projection = [
+    1, 0, 0, 0,
+    0, 1, 0, 0,
+    0, 0, 1, scaleFactor,
+    0, 0, 0, scaleFactor
+  ];
 
 };
 ```

@@ -1,12 +1,6 @@
 ---
 title: 填充和边框
 slug: Web/SVG/Tutorial/Fills_and_Strokes
-tags:
-  - Beginner
-  - NeedsLiveSample
-  - SVG
-  - Tutorial
-translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}
 

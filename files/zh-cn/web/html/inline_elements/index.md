@@ -1,12 +1,6 @@
 ---
 title: 行内元素
 slug: Web/HTML/Inline_elements
-tags:
-  - HTML
-  - HTML:元素参考
-  - HTML：元素参考
-  - 初学者
-translation_of: Web/HTML/Inline_elements
 ---
 ## 摘要
 

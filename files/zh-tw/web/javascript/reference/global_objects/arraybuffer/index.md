@@ -1,7 +1,6 @@
 ---
 title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 ---
 {{JSRef}}
 

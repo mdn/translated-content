@@ -1,7 +1,6 @@
 ---
 title: scrollbar-width
 slug: Web/CSS/scrollbar-width
-translation_of: Web/CSS/scrollbar-width
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

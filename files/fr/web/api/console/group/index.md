@@ -55,13 +55,11 @@ Pour plus de détail, se reporter à l'article [Using groups in the console](/fr
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire        |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#consolegroupobject-object-", "console.group()")}} | {{Spec2("Console API")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.group")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,7 +1,6 @@
 ---
 title: String.prototype.fontsize()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fontsize
 ---
 {{JSRef}} {{deprecated_header}}
 

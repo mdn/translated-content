@@ -1,7 +1,6 @@
 ---
 title: DataView.prototype.getFloat64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat64
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getFloat64
 ---
 {{JSRef}}
 
