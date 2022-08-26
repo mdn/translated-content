@@ -2,7 +2,7 @@
 title: Génération de HTML
 slug: Web/API/XSLTProcessor/Generating_HTML
 l10n:
-  sourceCommit: 96f68b50c1eac0af56f185d82c17c9ccaf212b67
+  sourceCommit: 33e42e40dbcdc4a81fde5597c602a180b30453fa
 ---
 Une application courante de XSLT dans les navigateurs consiste à transformer du code XML en HTML coté client. Le second exemple va transformer un document d'entrée (`example2.xml`), qui contient des informations à propos d'un article, en un document HTML.
 
@@ -32,19 +32,20 @@ La feuille de style XSL utilisée aura besoin de deux espaces de nommage - un po
 ```xml
 <?xml version="1.0"?>
 <xsl:stylesheet version="1.0"
-                          xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                          xmlns:myNS="http://devedge.netscape.com/2002/de">
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:myNS="http://devedge.netscape.com/2002/de">
 
   <xsl:output method="html"/>
-  ...
+  …
 </xsl:stylesheet>
 ```
+
 Un modèle s'appliquant au nœud racine du document XML est créé et utilisé pour créer la structure de base de la page HTML.
 
 ## Création du document HTML de base
 
 ```xml
-...
+…
 <xsl:template match="/">
 <html>
 
@@ -78,7 +79,7 @@ Un modèle s'appliquant au nœud racine du document XML est créé et utilisé p
 
 </html>
 </xsl:template>
-...
+…
 ```
 
 Nous avons besoin de trois `xsl:template` supplémentaires pour parachever l'exemple. Le premier `xsl:template` est utilisé pour les nœuds `Author`, alors que le deuxième traite le nœud `body`. Le troisième possède une règle de correspondance générale qui lui permet de s'appliquer à chaque nœud et chaque attribut. Cela est nécessaire afin de préserver les éléments HTML présents dans le document XML&nbsp;: il s'applique à tous, et les recopie dans le document HTML créé par la transformation.
@@ -86,7 +87,7 @@ Nous avons besoin de trois `xsl:template` supplémentaires pour parachever l'exe
 ## Modèles finaux
 
 ```xml
-...
+…
 <xsl:template match="myNS:Author">
     --   <xsl:value-of select="." />
 
@@ -108,7 +109,7 @@ Nous avons besoin de trois `xsl:template` supplémentaires pour parachever l'exe
     <xsl:apply-templates select="@*|node()"/>
   </xsl:copy>
 </xsl:template>
-...
+…
 ```
 
 ## Feuille de style XSLT finale
@@ -116,8 +117,8 @@ Nous avons besoin de trois `xsl:template` supplémentaires pour parachever l'exe
 ```xml
 <?xml version="1.0"?>
 <xsl:stylesheet version="1.0"
-                          xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                          xmlns:myNS="http://devedge.netscape.com/2002/de">
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:myNS="http://devedge.netscape.com/2002/de">
 
   <xsl:output method="html" />
 
