@@ -59,13 +59,11 @@ navigator.geolocation.getCurrentPosition(success, error, options);
 
 ## Spécifications
 
-| Spécification                        | État                             | Commentaires            |
-| ------------------------------------ | -------------------------------- | ----------------------- |
-| {{SpecName('Geolocation')}} | {{Spec2('Geolocation')}} | Spécification initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Geolocation.getCurrentPosition")}}
+{{Compat}}
 
 ## Voir aussi
 
