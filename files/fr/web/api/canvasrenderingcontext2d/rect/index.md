@@ -90,13 +90,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Specification                                                                                                                        | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-rect", "CanvasRenderingContext2D.rect")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.rect")}}
+{{Compat}}
 
 ## Voir aussi
 

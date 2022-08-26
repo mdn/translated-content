@@ -71,13 +71,11 @@ self.addEventListener('fetch', function(event) {
 
 ## Spécifications
 
-| Specification                                                                            | Statut                               | Commentaire          |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#dom-cache-match', 'Cache match')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.Cache.match")}}
+{{Compat}}
 
 ## Voir aussi
 
