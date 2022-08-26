@@ -34,13 +34,11 @@ node = nodeIterator.referenceNode;
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-nodeiterator-referencenode', 'NodeIterator.referenceNode')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeIterator.referenceNode")}}
+{{Compat}}
 
 ## Voir aussi
 
