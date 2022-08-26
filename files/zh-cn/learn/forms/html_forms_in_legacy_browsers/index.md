@@ -112,33 +112,6 @@ input[type="button"] {
 
 选择哪种解决方案由项目的限制条件决定。
 
-#### CSS 属性选择器
-
-[CSS 属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors) 在 [HTML 表单](/zh-CN/docs/Learn/Forms) 中十分有用，然而旧式浏览器不支持。在那种情形下，一般会习惯性使用等价的 class：
-
-```html
-<input type="number" class="number">
-```
-
-```css
-input[type=number] {
-  /* 这在一些浏览器中是不能执行的 */
-}
-
-input.number {
-  /* 可以在任何浏览器中执行 */
-}
-```
-
-注意下面的写法没有用（由于它是重复的），在某些浏览器中会失败：
-
-```css
-input[type=number],
-input.number {
-  /* 在某些浏览器中，这可能会失败，因为如果他们不理解其中任何一个选择器，则跳过整个规则 */
-}
-```
-
 ### 让我们过一遍 CSS
 
 HTML 表单的一个大问题是用 CSS 对表单小部件进行样式化。表单控件的外观是针对浏览器和操作系统的。例如，颜色类型的输入在 Safari、Chrome 和 Firefox 浏览器中看起来是不同的，但颜色选择器小部件在设备上的所有浏览器中都是一样的，因为它打开了操作系统的本地颜色选择器。
