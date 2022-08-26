@@ -298,7 +298,7 @@ window.onload = function () {
 }
 ```
 
-郵便番号の検証の[ライブサンプル](/@api/deki/files/4744/=constraint.html)もあります。
+郵便番号の検証の[ライブサンプル](constraint.html)もあります。
 
 ### アップロード前にファイルの大きさを制限
 
@@ -342,7 +342,7 @@ window.onload = function () {
 }
 ```
 
-ファイルサイズの制約検証の[ライブサンプル](/@api/deki/files/4745/=fileconstraint.html)を見ることができます。
+ファイルサイズの制約検証の[ライブサンプル](fileconstraint.html)を見ることができます。
 
 ## 制約検証の視覚的スタイル
 

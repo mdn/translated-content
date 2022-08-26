@@ -1,11 +1,6 @@
 ---
 title: 自增 (++)
 slug: Web/JavaScript/Reference/Operators/Increment
-tags:
-  - JavaScript
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Increment
 ---
 {{jsSidebar("Operators")}}
 

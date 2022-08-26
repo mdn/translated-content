@@ -1,14 +1,6 @@
 ---
 title: 处理常见的 HTML 和 CSS 问题
 slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
-tags:
-  - CSS
-  - HTML
-  - 兼容
-  - 学习
-  - 文章
-  - 测试
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 ---
 {{LearnSidebar}}
 

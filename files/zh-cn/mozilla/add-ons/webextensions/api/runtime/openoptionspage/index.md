@@ -1,11 +1,6 @@
 ---
 title: runtime.openOptionsPage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage
-tags:
-  - API
-  - OpenPractices
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage
 ---
 假如你的页面有[options page](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages)（设置页面）的定义，使用此方法打开它。这是一个异步方法，返回一个 `Promise对象`
 

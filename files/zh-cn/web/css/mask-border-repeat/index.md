@@ -1,7 +1,6 @@
 ---
 title: mask-border-repeat
 slug: Web/CSS/mask-border-repeat
-translation_of: Web/CSS/mask-border-repeat
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

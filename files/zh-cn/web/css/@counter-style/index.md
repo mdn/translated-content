@@ -1,7 +1,6 @@
 ---
 title: '@counter-style'
 slug: Web/CSS/@counter-style
-translation_of: Web/CSS/@counter-style
 ---
 {{ CSSRef() }}
 

@@ -1,7 +1,6 @@
 ---
 title: Block cipher mode of operation
 slug: Glossary/Block_cipher_mode_of_operation
-translation_of: Glossary/Block_cipher_mode_of_operation
 ---
 块密码操作模式通常在上下文中称为“模式”，它指定应如何使用块密码来加密或解密长于块大小的消息。
 

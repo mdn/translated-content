@@ -1,11 +1,6 @@
 ---
 title: 圆括号运算符
 slug: Web/JavaScript/Reference/Operators/Grouping
-tags:
-  - JavaScript
-  - Operator
-  - 操作符
-translation_of: Web/JavaScript/Reference/Operators/Grouping
 ---
 {{jsSidebar("Operators")}}
 

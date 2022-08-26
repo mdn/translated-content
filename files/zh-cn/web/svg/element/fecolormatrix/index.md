@@ -1,12 +1,6 @@
 ---
 title: feColorMatrix
 slug: Web/SVG/Element/feColorMatrix
-tags:
-  - SVG
-  - SVG 滤镜
-  - 元素
-  - 需要兼容性表
-translation_of: Web/SVG/Element/feColorMatrix
 ---
 {{SVGRef}}
 

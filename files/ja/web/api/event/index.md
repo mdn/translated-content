@@ -14,7 +14,7 @@ translation_of: Web/API/Event
 
 ユーザーの操作によって発生するイベント（マウスボタンのクリック、キーボードを叩くなど）もありますし、非同期タスクの進捗を表すための API によって生成されるイベントもあります。要素の [`HTMLElement.click()`](/ja/docs/Web/API/HTMLElement/click) の呼び出しや、イベントを定義し、 [`EventTarget.dispatchEvent()`](/ja/docs/Web/API/EventTarget/dispatchEvent) を使用して指定されたターゲットに送信するなどのようにプログラムから起動されるものもあります。
 
-イベントには様々な型があり、イベントによっては基本の `Event` インターフェイスを基にした他のインターフェイスを使用することもあります。。 `Event` 自体は、すべてのイベントで共通のプロパティやメソッドを持っています。
+イベントには様々な型があり、イベントによっては基本の `Event` インターフェイスを基にした他のインターフェイスを使用することもあります。 `Event` 自体は、すべてのイベントで共通のプロパティやメソッドを持っています。
 
 多くの DOM 要素は、これらのイベントを受け入れる（または「待ち受けする」）ように設定することができ、それに応じてコードを実行してイベントを処理する（または「取り扱う」）ことができます。イベントハンドラーはふつう、様々な [HTML 要素](/ja/docs/Web/HTML/Element)（`<button>`, `<div>`, `<span>`, など）に [`EventTarget.addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使用して結び付けられ（または「装着され」）、これが一般に古い HTML の[イベントハンドラー属性](/ja/docs/Web/HTML/Global_attributes)を使用する方法を置き換えています。さらに、このようなハンドラーは正しく追加されたら、必要に応じて [`removeEventListener()`](/ja/docs/Web/API/EventTarget/removeEventListener) を使用して切り離すことができます。
 

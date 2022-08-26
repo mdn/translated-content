@@ -1,13 +1,6 @@
 ---
 title: 'Express 教程 7: 部署到生产环境'
 slug: learn/Server-side/Express_Nodejs/deployment
-tags:
-  - Express
-  - Learn
-  - Node
-  - 初学者
-  - 部署
-translation_of: Learn/Server-side/Express_Nodejs/deployment
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 

@@ -1,7 +1,6 @@
 ---
 title: 通过通知推送让 PWA 可重用
 slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
-translation_of: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 ---
 {{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}
 

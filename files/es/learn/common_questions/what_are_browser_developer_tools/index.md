@@ -27,7 +27,7 @@ Las herramientas para desarrolladores (`devtools`) viven dentro de tu navegador 
 
 ¿Cómo la levantas? Existen tres distintas maneras:
 
-- _**Teclado:**_ _<kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>I</kbd>_, excepto en
+- _**Teclado:** <kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>I</kbd>_, excepto en
 
   - **Internet Explorer y Edge:**
 
@@ -37,7 +37,12 @@ Las herramientas para desarrolladores (`devtools`) viven dentro de tu navegador 
 
 - _**Barra de menú:**_
 
-  - **Firefox**: Menú ![Devtools](https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png)_➤ Desarrollador web_ *➤ Alternar herramientas, \_o *➤ Herramientas\_ _➤ Alternar herramientas del desarrollador web_
+  - **Firefox**: Menú ![Devtools](https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png)
+
+    _➤ Desarrollador web ➤ Alternar herramientas,_ o _➤ Herramientas_
+
+    _➤ Alternar herramientas del desarrollador web_
+
   - **Chrome:** _Más herramientas ➤ Herramientas del desarrollador_
   - **Safari:** _Desarrollador ➤ Mostrar el inspector web._ Si no puedes ver el menú _Desarrollar_, ve a _Safari ➤ Preferencias ➤ Avanzado_ y marca la casilla de verificación _Mostrar menú desarrollador en la barra de menú_.
   - **Opera**: _Desarrollador ➤ Herramientas para desarrolladores_
@@ -111,7 +116,7 @@ Notarás una serie de pestañas en las que se puede hacer clic en la parte super
 
 Obtén más información sobre el Inspector en diferentes navegadores:
 
-- [Inspector de páginas de Firefox.](/es/docs/Tools/Page_Inspector)
+- [Inspector de páginas de Firefox.](https://developer.mozilla.org/es/docs/Tools/Page_Inspector)
 - [Explorador del DOM de Edge.](https://docs.microsoft.com/es-es/microsoft-edge/)
 - [inspector del DOM de Chrome.](https://developers.google.com/web/tools/chrome-devtools/inspect-styles?utm_source=dcc&utm_medium=redirect&utm_campaign=2016q3) (el inspector de Opera funciona igual que este)
 - [Safari inspector y explorador de estilos.](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
@@ -179,7 +184,7 @@ La consola de JavaScript es una herramienta increíblemente útil para depurar J
 
 Si las herramientas para desarrolladores ya están abiertas, haz clic o presiona la pestaña Consola.
 
-De lo contrario, Firefox te permite abrir la consola directamente usando <kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>K</kbd> o usando el comando del menú: Menú ![](https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png) _➤ Desarrollador web_ _➤ Consola web,_ o _Herramientas ➤_ _Desarrollador web ➤ Consola web._ En otro navegador, abre las herramientas para desarrolladores y luego haz clic en la pestaña Consola.
+De lo contrario, Firefox te permite abrir la consola directamente usando <kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>K</kbd> o usando el comando del menú: Menú ![](https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png) _➤ Desarrollador web ➤ Consola web,_ o _Herramientas ➤ Desarrollador web ➤ Consola web._ En otro navegador, abre las herramientas para desarrolladores y luego haz clic en la pestaña Consola.
 
 Esto te dará una ventana como la siguiente:
 
@@ -187,13 +192,15 @@ Esto te dará una ventana como la siguiente:
 
 Para ver qué sucede, intenta ingresar los siguientes fragmentos de código en la consola uno por uno (y luego presiona Intro):
 
-1.  ```js
+1. ```js
     alert('hello!');
     ```
-2.  ```js
+    
+2. ```js
     document.querySelector('html').style.backgroundColor = 'purple';
     ```
-3.  ```js
+
+3. ```js
     const myWordmark = document.createElement('img');
     myWordmark.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
     document.querySelector('h1').appendChild(myWordmark);
@@ -201,13 +208,15 @@ Para ver qué sucede, intenta ingresar los siguientes fragmentos de código en l
 
 Ahora intenta ingresar las siguientes versiones incorrectas del código y ve lo que obtienes.
 
-1.  ```js
+1. ```js
     alert('hello!);
     ```
-2.  ```js
+
+2. ```js
     document.cheeseSelector('html').style.backgroundColor = 'purple';
     ```
-3.  ```js
+  
+3. ```js
     const myWordmark = document.createElement('img');
     myBanana.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
     document.querySelector('h1').appendChild(myWordmark);
@@ -219,7 +228,7 @@ Comenzarás a ver el tipo de errores que devuelve el navegador. A menudo, estos 
 
 Obtén más información sobre la consola de JavaScript en diferentes navegadores:
 
-- [Consola Web de Firefox.](/es/docs/Tools/Web_Console)
+- [Consola Web de Firefox.](https://developer.mozilla.org/en-US/docs/Tools/Web_Console)
 - [Consola de JavaScript Edge.](https://docs.microsoft.com/es-es/microsoft-edge/devtools-guide-chromium)
 - [Consola JavaScript de Chrome.](https://developer.chrome.com/devtools/docs/console) (el inspector de Opera funciona de la misma manera)
 - [Consola en Safari.](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)

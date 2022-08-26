@@ -1,7 +1,6 @@
 ---
 title: 填充与边框
 slug: Web/SVG/Tutorial/Fills_and_Strokes
-translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 ---
 {{ PreviousNext("SVG/Tutorial/Paths", "SVG/Tutorial/Gradients") }}
 

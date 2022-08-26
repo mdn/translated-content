@@ -1,12 +1,6 @@
 ---
 title: table-layout
 slug: Web/CSS/table-layout
-tags:
-  - CSS
-  - table-layout
-  - 单元格
-  - 表格
-translation_of: Web/CSS/table-layout
 ---
 {{CSSRef}}
 

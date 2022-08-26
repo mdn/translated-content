@@ -1,7 +1,6 @@
 ---
 title: Firefox 10 技術文件
 slug: Mozilla/Firefox/Releases/10
-translation_of: Mozilla/Firefox/Releases/10
 ---
 {{FirefoxSidebar}}
 

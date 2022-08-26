@@ -1,7 +1,6 @@
 ---
 title: Promise.resolve()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 ---
 {{JSRef}}
 

@@ -1,13 +1,6 @@
 ---
 title: Introduction to using XPath in JavaScript
 slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
-tags:
-  - DOM
-  - Extensions
-  - Transforming_XML_with_XSLT
-  - Web Development
-  - XPath
-translation_of: Web/XPath/Introduction_to_using_XPath_in_JavaScript
 original_slug: Web/JavaScript/Introduction_to_using_XPath_in_JavaScript
 ---
 该篇文档描述了如何在扩展和网站内部通过 JavaScript 调用 [XPath](/zh-CN/XPath) 接口。 Mozilla 实现了相当多的 [DOM 3 XPath](http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html)，意味着 Xpath 表达式已经可以在 HTML 和 XML 文档中使用。

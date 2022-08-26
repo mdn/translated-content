@@ -1,7 +1,6 @@
 ---
 title: Uint32Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint32Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint32Array
 ---
 {{JSRef("Global_Objects", "TypedArray", "Int8Array,Uint8Array,Uint8ClampedArray,Int16Array,Uint16Array,Int32Array,Uint32Array,Float32Array,Float64Array")}}
 

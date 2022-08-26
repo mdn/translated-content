@@ -8,7 +8,6 @@ tags:
   - リファレンス
   - attachShadow
   - シャドウ DOM
-browser-compat: api.Element.attachShadow
 translation_of: Web/API/Element/attachShadow
 ---
 {{APIRef('Shadow DOM')}}

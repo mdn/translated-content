@@ -12,7 +12,6 @@ tags:
   - Web
   - drag and drop
   - dragenter
-browser-compat: api.Document.dragenter_event
 translation_of: Web/API/Document/dragenter_event
 ---
 {{APIRef}}

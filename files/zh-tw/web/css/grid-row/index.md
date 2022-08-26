@@ -1,7 +1,6 @@
 ---
 title: grid-row
 slug: Web/CSS/grid-row
-translation_of: Web/CSS/grid-row
 ---
 ## Summary
 

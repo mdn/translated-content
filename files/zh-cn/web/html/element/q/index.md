@@ -1,12 +1,6 @@
 ---
 title: <q>
 slug: Web/HTML/Element/q
-tags:
-  - HTML
-  - Web
-  - 引用
-  - 标签
-translation_of: Web/HTML/Element/q
 ---
 {{HTMLRef}}
 

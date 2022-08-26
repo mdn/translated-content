@@ -7,7 +7,6 @@ tags:
   - メソッド
   - Node
   - リファレンス
-browser-compat: api.Element.after
 translation_of: Web/API/Element/after
 ---
 {{APIRef("DOM")}}

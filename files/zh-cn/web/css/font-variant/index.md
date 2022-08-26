@@ -1,12 +1,6 @@
 ---
 title: font-variant
 slug: Web/CSS/font-variant
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/font-variant
 ---
 {{CSSRef}}
 
@@ -67,9 +61,9 @@ p.small {
 }
 ```
 
-#### Result
+#### 结果
 
-{{ EmbedLiveSample('Setting_the_small-caps_font_variant', '', '', '', 'Web/CSS/font-variant') }}
+{{ EmbedLiveSample('Setting_the_small-caps_font_variant') }}
 
 ## 规范
 

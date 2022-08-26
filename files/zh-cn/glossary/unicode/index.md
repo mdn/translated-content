@@ -1,7 +1,6 @@
 ---
 title: Unicode
 slug: Glossary/Unicode
-translation_of: Glossary/Unicode
 ---
 Unicode 是一种{{Glossary("Character set","字符集")}}标准，用于对来自世界上不同语言、文字系统和符号进行编号和{{Glossary("Character","字符")}}定义。通过给每个字符分配一个编号，程序员可以创建{{Glossary("Character encoding","字符编码")}}，让计算机在同一个文件或程序中存储、处理和传输任何语言组合。
 

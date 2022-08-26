@@ -1,11 +1,6 @@
 ---
 title: style
 slug: Web/SVG/Element/style
-tags:
-  - SVG
-  - 元素
-  - 参考
-translation_of: Web/SVG/Element/style
 ---
 {{SVGRef}}
 

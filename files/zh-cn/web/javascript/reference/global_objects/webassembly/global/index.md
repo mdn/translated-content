@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Global
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 ---
 {{JSRef}}
 

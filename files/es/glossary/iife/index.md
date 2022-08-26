@@ -45,7 +45,7 @@ result; // "Barry"
 ### Aprende acerca de
 
 - [Ben Alman's blog post defining IIFEs](http://benalman.com/news/2010/11/immediately-invoked-function-expression/)
-- [Quick example](/es/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Functions) "Ejemplo Rápido"(al final de la sección "Functions" , justo despues de "Custom objects")
+- [Quick example](/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Functions) "Ejemplo Rápido"(al final de la sección "Functions" , justo despues de "Custom objects")
 
 ### General knowledge
 

@@ -1,7 +1,6 @@
 ---
 title: <content>
 slug: Web/HTML/Element/content
-translation_of: Web/HTML/Element/content
 ---
 {{Deprecated_header}}
 
@@ -39,7 +38,7 @@ translation_of: Web/HTML/Element/content
 这个元素包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `select`
-  - : 逗号分隔的选择器列表，它们和 CSS 选择器语法相同。它们选择要插入的内容，来替换为 `<content> `元素。
+  - : 逗号分隔的选择器列表，它们和 CSS 选择器语法相同。它们选择要插入的内容，来替换为 `<content>` 元素。
 
 ## 示例
 

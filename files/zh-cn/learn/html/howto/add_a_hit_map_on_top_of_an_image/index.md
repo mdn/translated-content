@@ -1,7 +1,6 @@
 ---
 title: Add a hit map on top of an image
 slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
-translation_of: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 ---
 现在我们将学习如何设置图像映射，先讨论他的缺点。
 
@@ -32,7 +31,7 @@ translation_of: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 
 当你在{{htmlelement('a')}}标签中嵌套图像， 整个图像是链接到一个网页的。但在图像映射中，包含多个活动区域（称为“热点”），可以链接到不同的资源地址。
 
-图像映射原本非常流行于导航策略，但是前提需要考虑它的性能和可访问性。
+图像映射原本非常流行于导航策略，但是前提需要考虑它的性能和无障碍。
 
 [Text links](/en-US/Learn/HTML/Howto/Create_a_hyperlink) (perhaps styled with CSS) 比图像映射更具优势：文本链接更轻量级、好维护、更易于 SEO，而且支持更多形式需求的访问（如，屏幕阅读器、纯文本浏览器、翻译服务等）。
 

@@ -50,7 +50,7 @@ input:invalid:focus {
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attribute.minlength")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -1,19 +1,6 @@
 ---
 title: <label>
 slug: Web/HTML/Element/label
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML 表单
-  - Reference
-  - Web
-  - label
-  - 参考
-  - 标签
-  - 表单
-translation_of: Web/HTML/Element/label
 ---
 {{HTMLRef}}
 
@@ -75,7 +62,7 @@ translation_of: Web/HTML/Element/label
 
 {{EmbedLiveSample('使用_for_属性', '200', '50', '')}}
 
-## 可访问性问题
+## 无障碍问题
 
 ### 交互内容
 

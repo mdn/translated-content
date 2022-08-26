@@ -22,4 +22,4 @@ contentType = document.contentType;
 
 ### 规范
 
-非标准属性，仅[Gecko](/zh-cn/Gecko)支持。
+非标准属性，仅[Gecko](/zh-CN/Gecko)支持。

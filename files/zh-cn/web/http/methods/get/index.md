@@ -1,15 +1,10 @@
 ---
 title: GET
 slug: Web/HTTP/Methods/GET
-tags:
-  - HTTP
-  - 参考
-  - 请求方法
-translation_of: Web/HTTP/Methods/GET
 ---
 {{HTTPSidebar}}
 
-**HTTP` GET` 方法**请求指定的资源。使用 `GET` 的请求应该只用于获取数据。
+**HTTP `GET` 方法**请求指定的资源。使用 `GET` 的请求应该只用于获取数据。
 
 | 请求是否有主体                   | 否  |
 | -------------------------------- | --- |

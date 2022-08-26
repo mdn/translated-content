@@ -1,7 +1,6 @@
 ---
 title: 新增消息來源閱讀工具
 slug: Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
-translation_of: Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 ---
 {{FirefoxSidebar}}
 

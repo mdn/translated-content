@@ -1,7 +1,6 @@
 ---
 title: ProgressEvent
 slug: Web/API/ProgressEvent
-translation_of: Web/API/ProgressEvent
 ---
 {{APIRef("DOM Events")}}
 

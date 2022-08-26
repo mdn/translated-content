@@ -1,13 +1,6 @@
 ---
 title: 赋值运算符 (=)
 slug: Web/JavaScript/Reference/Operators/Assignment
-tags:
-  - JavaScript
-  - 参考
-  - 操作者
-  - 语言特性
-  - 赋值运算符
-translation_of: Web/JavaScript/Reference/Operators/Assignment
 ---
 {{jsSidebar("Operators")}}
 

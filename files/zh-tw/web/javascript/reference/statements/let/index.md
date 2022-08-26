@@ -1,7 +1,6 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
-translation_of: Web/JavaScript/Reference/Statements/let
 ---
 {{jsSidebar("Statements")}}
 

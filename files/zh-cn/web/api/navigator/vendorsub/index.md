@@ -27,7 +27,7 @@ window.navigator.vendorSub
 
 ### 备注
 
-vendorSub 的属性值也是一个组成 navigator.userAgent 字符串的一部分。表示浏览器供应商给该当前浏览器的版本号 (可能和 navigator.productSub 属性值不同)。在 navigator.vendor 等于 "Netscape 6.1" 时，navigator.productSub 为 "5.0"，navigator.vendorSub 为 "6.1"。想要了解更多，请查看 [navigator.productSub](/zh-cn/DOM/window.navigator.productSub)、[navigator.userAgent](/zh-cn/DOM/window.navigator.userAgent)、[navigator.vendor](/zh-cn/DOM/window.navigator.vendor)。
+vendorSub 的属性值也是一个组成 navigator.userAgent 字符串的一部分。表示浏览器供应商给该当前浏览器的版本号 (可能和 navigator.productSub 属性值不同)。在 navigator.vendor 等于 "Netscape 6.1" 时，navigator.productSub 为 "5.0"，navigator.vendorSub 为 "6.1"。想要了解更多，请查看 [navigator.productSub](/zh-CN/DOM/window.navigator.productSub)、[navigator.userAgent](/zh-CN/DOM/window.navigator.userAgent)、[navigator.vendor](/zh-CN/DOM/window.navigator.vendor)。
 
 ## 规范
 

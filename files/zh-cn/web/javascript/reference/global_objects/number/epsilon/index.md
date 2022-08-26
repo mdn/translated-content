@@ -1,7 +1,6 @@
 ---
 title: Number.EPSILON
 slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 ---
 {{JSRef}}
 

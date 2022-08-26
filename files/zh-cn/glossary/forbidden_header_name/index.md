@@ -1,13 +1,6 @@
 ---
 title: 禁止修改的消息首部
 slug: Glossary/Forbidden_header_name
-tags:
-  - Fetch
-  - 术语表
-  - HTTP
-  - 消息首部
-  - 禁止
-translation_of: Glossary/Forbidden_header_name
 ---
 
 **禁止修改的消息首部**指的是不能在代码中通过编程的方式进行修改的 [HTTP 消息首部](/zh-CN/docs/Web/HTTP/Headers)，具体指 HTTP **请求**消息首部（和{{Glossary("Forbidden response header name", "禁止修改的响应消息首部")}}形成对比）。

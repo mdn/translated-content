@@ -1,16 +1,7 @@
 ---
 title: Map.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/Map/set
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/set
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/set
-browser-compat: javascript.builtins.Map.set
 ---
 {{JSRef}}
 
@@ -20,8 +11,8 @@ browser-compat: javascript.builtins.Map.set
 
 ## 语法
 
-```plain
-myMap.set(key, value);
+```js
+set(key, value)
 ```
 
 ### 参数
@@ -37,25 +28,25 @@ myMap.set(key, value);
 
 ## 示例
 
-### 使用 `set` 方法
+### 使用 set()
 
 ```js
-var myMap = new Map();
+const myMap = new Map();
 
 // 将一个新元素添加到 Map 对象
-myMap.set("bar", "foo");
-myMap.set(1, "foobar");
+myMap.set('bar', 'foo');
+myMap.set(1, 'foobar');
 
 // 在 Map 对象中更新某个元素的值
-myMap.set("bar", "baz");
+myMap.set('bar', 'baz');
 ```
 
-### 链式使用 `set` 方法
+### 链式使用 set()
 
-因为 Set() 方法返回 Map 对象本身，所以你可以像下面这样链式调用它：
+因为 `set()` 方法返回 `Map` 对象本身，所以你可以像下面这样链式调用它：
 
 ```js
-// Add new elements to the map with chaining.
+// 链式调用添加元素
 myMap.set('bar', 'foo')
      .set(1, 'foobar')
      .set(2, 'baz');

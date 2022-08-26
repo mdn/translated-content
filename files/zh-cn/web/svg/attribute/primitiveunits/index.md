@@ -1,7 +1,6 @@
 ---
 title: primitiveUnits
 slug: Web/SVG/Attribute/primitiveUnits
-translation_of: Web/SVG/Attribute/primitiveUnits
 ---
 « [SVG Attribute reference home](/en/SVG/Attribute)
 

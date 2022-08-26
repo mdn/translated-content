@@ -1,10 +1,6 @@
 ---
 title: 426 Upgrade Required
 slug: Web/HTTP/Status/426
-tags:
-  - 响应状态码
-  - 客户端错误
-translation_of: Web/HTTP/Status/426
 ---
 {{HTTPSidebar}}
 

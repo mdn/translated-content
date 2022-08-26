@@ -1,10 +1,6 @@
 ---
 title: 你的第一个拓展
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
-tags:
-  - WebExtentions
-  - 指南
-translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
 {{AddonSidebar}}
 

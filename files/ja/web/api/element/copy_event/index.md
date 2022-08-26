@@ -8,7 +8,6 @@ tags:
   - Event
   - Reference
   - Web
-browser-compat: api.Element.copy_event
 translation_of: Web/API/Element/copy_event
 ---
 {{APIRef}}

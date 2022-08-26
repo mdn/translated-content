@@ -1,7 +1,6 @@
 ---
 title: CSS and JavaScript animation performance
 slug: Web/Performance/CSS_JavaScript_animation_performance
-translation_of: Web/Performance/CSS_JavaScript_animation_performance
 ---
 对众多应用程序而言，动画对提供友好的用户体验有着关键的作用，我们有很多方式生成 web 动画，比如 CSS {{cssxref("transition","transitions")}}/{{cssxref("animation","animations")}} 或者 JavaScript 动画 (使用 {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}}).
 
@@ -34,10 +33,10 @@ CSS 中过渡和动画都可以用于编写动画，它们都有各自的使用�
 
 在进行示例之前，请启用 FPS 工具先查看当前帧速率：
 
-1.  在地址栏中，输入 about:config;点击" I’ll be careful, I promise!"按钮，以输入配置屏幕。
+1. 在地址栏中，输入 about:config;点击" I’ll be careful, I promise!"按钮，以输入配置屏幕。
     ![](pic1.png)
-2.  在搜索栏中搜索 layers.acceleration.draw-fps 首选项
-3.  双击该条目将值设置为 true。.现在您可以在 Firefox 窗口的左上角看到三个紫色的框。第一个框代表 FPS。
+2. 在搜索栏中搜索 layers.acceleration.draw-fps 首选项
+3. 双击该条目将值设置为 true。.现在您可以在 Firefox 窗口的左上角看到三个紫色的框。第一个框代表 FPS。
     ![](pic2.png)
 
 ### 运行性能测试

@@ -2,191 +2,64 @@
 title: Symbol
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
 tags:
-  - Class
   - ECMAScript 2015
-  - JavaScript
-  - Symbol
-  - Polyfill
-browser-compat: javascript.builtins.Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol
+  - NeedsMarkupWork
+  - 공유
+  - 용어집
+  - 자바스크립트
+translation_of: Glossary/Symbol
+original_slug: Glossary/Symbol
 ---
-{{JSRef}}
+이 용어집 페이지에서는 "**심볼(symbol)**"이라는 데이터 형식과 **심볼** 데이터 형식의 인스턴스를 생성하는 클래스와 유사한(class-like) "{{jsxref ("Symbol ")}}`()`"이라는 함수를 설명합니다.
 
-`Symbol()` 함수는 **심볼(symbol)** 형식의 값을 반환하는데, 이 심볼은 내장 객체(built-in objects)의 여러 멤버를 가리키는 정적 프로퍼티와 전역 심볼 레지스트리(global symbol registry)를 가리키는 정적 메서드를 가지며, "`new Symbol()`" 문법을 지원하지 않아 생성자 측면에서는 불완전한 내장 객체 클래스(built-in object class)와 유사합니다.
+"**심볼**" 데이터 형식은 값으로 익명의 객체 속성(object property)을 만들 수 있는 특성을 가진 원시 데이터 형식(primitive data type)입니다. 이 데이터 형식은 클래스나 객체 형식(object type)의 내부에서만 접근할 수 있도록 전용(private) 객체 속성의 키(key)로 사용됩니다. 예를 들어, **심볼** 형식으로 된 키는 자바스크립트의 다양한 내장(built-in) 객체 안에 존재합니다. 사용자 지정 클래스(custom classes) 역시 이러한 방식으로 전용 멤버를 만들 수 있습니다. **심볼** 데이터 형식은 고도로 특화된 용도로 쓰이며, 범용성은 현저히 떨어집니다; **심볼**의 인스턴스에 L값(L-value)을 할당할 수 있고 식별자로 이용할 수 있습니다. 그게 전부입니다; 적용할 수 있는 연산자도 없습니다. (이를 "Number" 형식의 인스턴스, 예를 들어 정수 "42"와 대조해보십시오. 숫자 형식의 인스턴스에는 같은 형식의 다른 값과 비교하거나 조합할 수 있는 다양한 연산자 집합이 제공됩니다.)
 
-`Symbol()`로부터 반환되는 모든 심볼 값은 고유합니다. 심볼 값은 객체 프로퍼티(object properties)에 대한 식별자로 사용될 수 있습니다; 이것이 심볼 데이터 형식의 유일한 목적입니다. 목적과 용례에 대한 더 자세한 설명은 [용어집의 심볼 항목(glossary entry for Symbol)](/ko/docs/Glossary/Symbol)에서 볼 수 있습니다.
-
-**심볼(symbol)** 데이터 형은 원시 데이터 형({{Glossary("Primitive", "primitive data type")}})의 일종입니다.
-
-## 설명(Description)
-
-새 원시(primitive) 심볼을 생성하려면, 심볼을 설명하는 선택적(optional) 문자열과 함께 `Symbol()`을 쓰면됩니다.
+"**심볼**" 데이터 형식의 값은 "심볼 값(symbol value)"라고도 합니다. 자바스크립트 런타임 환경 내에서 심볼 값은 `Symbol()` 함수를 호출하여 생성할 수 있는데, 이 함수는 동적으로 익명의 고유한 값을 만들어냅니다. 심볼은 객체 속성(object property)로 사용될 수 있습니다.
 
 ```js
-var sym1 = Symbol();
-var sym2 = Symbol("foo");
-var sym3 = Symbol("foo");
+var  myPrivateMethod  = Symbol();
+this[myPrivateMethod] = function() {...};
 ```
 
-위의 코드는 세 개의 새 심볼을 생성합니다. `Symbol("foo")`는 "foo"라는 문자열을 심볼로 강제로 변환시키지 않는다는 점에 유의하시기 바랍니다. 해당 코드는 매 번 새로운 심볼을 생성합니다:
+심볼 값은 (심볼처럼)익명인 속성에 할당(property assignment)할 때 식별자(identifier)로 사용되며, 비열거형입니다. 자신이 가리키는 속성이 비열거형이기 때문에 "`for( ... in ...)`"로 구성되는 반복문 내에서 멤버로 사용될 수 없으며, 그 속성이 익명이기 때문에 "`Object.getOwnPropertyNames()`"가 반환하는 배열에 들어갈 수도 없습니다. 해당 속성은 그 속성을 만든 원래 심볼 값을 이용하거나 "`Object.getOwnPropertySymbols()`"가 반환하는 배열을 반복(iterating)함으로써 접근할 수 있습니다. 앞의 예제 코드에서는 `myPrivateMethod` 변수에 저장된 값을 통해 해당 속성에 접근하였습니다.
+
+내장 함수인 "{{jsxref("Symbol")}}`()`"는 함수로써 호출되면 심볼 값을 반환하나, "`new Symbol()`"와 같은 문법으로 생성자로 사용하려 하면 에러를 발생시키는 불완전한 클래스(incomplete class)입니다. "{{jsxref("Symbol")}}`()`"는 자바스크립트의 전역 심볼 테이블(global symbol table)에 접근할 수 있는 정적 메서드와 공용으로(commonly) 사용되는 객체를 가리키는 특정 심볼의 주소를 값으로 가지는 정적 속성을 가집니다. `Symbol()` 함수에 의해 생성되는 심볼 값은 앞서 설명한 바와 같습니다. `Symbol()`를 생성자로 사용할 경우 발생하는 오류는 혼동을 유발할 수 있는 의도치 않은 객체의 생성을 막기 위한 예방책이라 할 수 있습니다. 전역 심볼 레지스트리(the global symbol registry)에 접근하기 위한 메서드는 "`Symbol.for()`"와 "`Symbol.keyFor()`"입니다; 이 메서드들은 전역 심볼 테이블(또는 "레지스트리")과 런타임 환경 사이를 중재합니다. 심볼 레지스트리는 대부분 자바스크립트의 컴파일러 인프라스트럭쳐에 의해 구축되며, 심볼 레지스트리의 컨텐츠는 이러한 리플렉티브 메서드를 통하지 않고서는 자바스크립트의 런타임 인프라스트럭쳐가 접근할 수 없습니다. *`Symbol.for("tokenString")`*는 레지스트리로부터 심볼 값을 반환하고 *`Symbol.keyFor(symbolValue)`*는 레지스트리로부터 토큰 문자열(token string)을 반환합니다; 서로에게 정반대이므로 다음 코드는 참입니다:
 
 ```js
-Symbol("foo") === Symbol("foo"); // false
+Symbol.keyFor(Symbol.for("tokenString")) == "tokenString"; // true
 ```
 
-아래 {{jsxref("Operators/new", "new")}} 연산자를 이용한 문법은 {{jsxref("TypeError")}}를 발생시킬 것입니다:
+**Symbol** 클래스는 익명에 이름을 부여하는 역설적인 효과를 가진 몇 가지 정적 속성을 가지고 있습니다. 흔히 "잘 알려진" 심볼이라 불리는 몇 가지 심볼이 존재합니다. 이 심볼들은 특정 내장 객체에 존재하는 몇 개의 선택된 메서드 속성을 가리키는 심볼입니다. 이들 심볼을 노출시킴으로써 이들 메서드에 직접 접근할 수 있게됩니다(이런 접근은 사용자 지정 클래스를 정의할 때 유용합니다). 잘 알려진 심볼의 예로는 배열과 유사한 객체에 대한 "`Symbol.iterator`"와 문자열 객체에 대한 "`Symbol.search`"가 있습니다.
+
+`Symbol()` 함수와 이 함수가 생성하는 심볼 값은 프로그래머가 사용자 지정 클래스(custom class)를 설계할 때 유용합니다. 심볼 값은 사용자 지정 클래스가 전용 멤버를 만들고 바로 그 클래스와 관련된 심볼 레지스트리를 유지 관리하는 방법을 제공합니다. 사용자 지정 클래스는 심볼 값을 이용하여 의도하지 않은 노출로부터 보호할 수 있는 "자신만의" 속성을 만들 수 있습니다. 클래스 정의 내에서 동적으로 생성된 심볼 값은 클래스 정의 내에서 전용으로만 사용할 수 있는 범위(scoped) 변수에 저장됩니다. 토큰 문자열은 없습니다. 범위 변수는 토큰과 동일한 역할을 합니다.
+
+어떤 프로그래밍 언어에서는 심볼 데이터 형식을 "atom(원자)"라고 합니다.
+
+자바스크립트({{Glossary("JavaScript")}})에서 심볼은 원시 데이터 값({{Glossary("Primitive", "primitive value")}})입니다.
+
+심볼은 선택적으로 설명으로 가질 수 있지만, 디버깅 용도로만 사용할 수 있습니다.
+
+심볼 형식은 ECMAScript 2015에 추가된 특성이며 ECMAScript 5에는 심볼과 동등한 형식이 존재하지 않습니다.
 
 ```js
-var sym = new Symbol(); // TypeError
+Symbol("foo") !== Symbol("foo")
+const foo = Symbol()
+const bar = Symbol()
+typeof foo === "symbol"
+typeof bar === "symbol"
+let obj = {}
+obj[foo] = "foo"
+obj[bar] = "bar"
+JSON.stringify(obj) // {}
+Object.keys(obj) // []
+Object.getOwnPropertyNames(obj) // []
+Object.getOwnPropertySymbols(obj) // [ Symbol(), Symbol() ]
 ```
 
-이는 작성자가 새로운 심볼 값 대신 명시적으로 심볼 래퍼 객체(`Symbol` wrapper object)를 생성할 수 없게 합니다. 일반적으로 원시 데이터 형에 대한 명시적인 래퍼 객체 생성(예를 들어, `new Boolean`, `new String` 또는 `new Number`와 같은)이 가능하다는 점에 비춰보면 의외일 수 있습니다.
+## Learn more
 
-꼭 심볼 래퍼 객체를 생성하고 싶다면, `Object()` 함수를 이용할 수 있습니다.
+### General knowledge
 
-```js
-var sym = Symbol("foo");
-typeof sym;     // "symbol"
-var symObj = Object(sym);
-typeof symObj;  // "object"
-```
-
-### 전역 심볼 레지스트리 내 공유 심볼
-
-`Symbol()` 함수를 사용한 위의 문법은 코드베이스(codebase) 전체에서 사용 가능한 전역 심볼을 생성하는 것은 아닙니다. 파일 간(across files), 또는 램(realms, 각각이 자체의 전역 범위(scope)를 가지는) 간에도 사용할 수 있는 심볼을 생성하기 위해서는, {{jsxref("Symbol.for()")}}와 {{jsxref("Symbol.keyFor()")}} 메서드를 이용해 전역 심볼 레지스트리에 심볼을 설정하거나 추출해야 합니다.
-
-### 객체에서 심볼 속성(symbol properties) 찾기
-
-{{jsxref("Object.getOwnPropertySymbols()")}} 메서드는 심볼의 배열을 반환하여 주어진 객체의 심볼 속성을 찾을 수 있게 해줍니다. 모든 객체는 스스로에 대한 심볼 속성이 없는 상태로 초기화되기 때문에 해당 객체에 심볼 속성을 설정하기 전까지는 빈 배열을 반환한다는 점에 유의하시기 바랍니다.
-
-## 생성자
-
-- [`Symbol()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol)
-  - : Creates a new `Symbol` object. It is incomplete as a constructor because it does not support the syntax "`new Symbol()`".
-
-## 정적 속성
-
-- {{jsxref("Symbol.asyncIterator")}} {{experimental_inline}}
-  - : 객체의 기본 비동기 반복자(default AsyncIterator)를 반환하는 메서드. [`for await of`](/ko/docs/Web/JavaScript/Reference/Statements/for-await-of)에서 사용됨.
-- {{jsxref("Symbol.hasInstance")}}
-  - : 생성자 객체(constructor object)가 어떤 객체를 자신의 인스턴스로 인식하는지를 확인하는데 사용하는 메소드. {{jsxref("Operators/instanceof", "instanceof")}}에서 사용됨.
-- {{jsxref("Symbol.isConcatSpreadable")}}
-  - : 객체가 자신의 배열 요소를 직렬로(be flattened) 나타낼 수 있는지 여부를 나타내는 부울 값. {{jsxref("Array.prototype.concat()")}}에서 사용됨.
-- {{jsxref("Symbol.iterator")}}
-  - : 객체의 기본 반복자(default iterator)를 반환하는 메서드.[`for...of`](/ko/docs/Web/JavaScript/Reference/Statements/for...of)에서 사용됨.
-- {{jsxref("Symbol.match")}}
-  - : 문자열과 일치하는(match) 메서드로 객체를 정규표현식으로 사용할 수 있는지 확인하는데도 사용. {{jsxref("String.prototype.match()")}}에서 사용됨.
-- {{jsxref("Symbol.matchAll")}}
-  - : A method that returns an iterator, that yields matches of the regular expression against a string. Used by {{jsxref("String.prototype.matchAll()")}}.
-- {{jsxref("Symbol.replace")}}
-  - : 문자열 중 일치하는 문자열 일부를 대체하는 메소드. {{jsxref("String.prototype.replace()")}}에서 사용됨.
-- {{jsxref("Symbol.search")}}
-  - : 문자열에서 정규표현식과 일치하는 인덱스(index)를 반환하는 메서드. {{jsxref("String.prototype.search()")}}에서 사용됨.
-- {{jsxref("Symbol.split")}}
-  - : 정규표현식과 일치하는 인덱스에서 문자열을 나누는 메서드. {{jsxref("String.prototype.split()")}}에서 사용됨.
-- {{jsxref("Symbol.species")}}
-  - : 파생(derived) 객체를 생성하는데 사용되는 생성자 함수.
-- {{jsxref("Symbol.toPrimitive")}}
-  - : 객체를 원시형(primitive) 값으로 변환하는 메서드.
-- {{jsxref("Symbol.toStringTag")}}
-  - : 객체에 대한 기본 설명(description)으로 사용되는 문자열 값. {{jsxref("Object.prototype.toString()")}}에서 사용됨.
-- {{jsxref("Symbol.unscopables")}}
-  - : 자신의 속성명 또는 상속된 속성명이 연관 객체(the associated objet)의 [`with`](/ko/docs/Web/JavaScript/Reference/Statements/with) 환경 바인딩(envorinment bindings)에서 제외된 객체의 값 (An object value of whose own and inherited property names are excluded from the [`with`](/ko/docs/Web/JavaScript/Reference/Statements/with) environment bindings of the associated object).
-
-## 정적 메서드
-
-- {{jsxref("Symbol.for()", "Symbol.for(key)")}}
-  - : 주어진 키(key)로 현재 존재하는 심볼을 검색하고 찾으면 반환합니다. 존재하지 않으면 주어진 키로 전역 심볼 레지스트리에 새로운 심볼을 생성하고 그 심볼을 반환합니다.
-- {{jsxref("Symbol.keyFor", "Symbol.keyFor(sym)")}}
-  - : 전역 심볼 레지스트리로부터 주어진 심볼에 대한 공유 심볼 키(shared symbol key)를 추출합니다.
-
-## 인스턴스 속성
-
-- {{jsxref("Symbol.prototype.description")}}
-  - : A read-only string containing the description of the Symbol.
-
-## 인스턴스 메서드
-
-- {{jsxref("Symbol.prototype.toString()")}}
-  - : Returns a string containing the description of the Symbol. Overrides the {{jsxref("Object.prototype.toString()")}} method.
-- {{jsxref("Symbol.prototype.valueOf()")}}
-  - : Returns the Symbol. Overrides the {{jsxref("Object.prototype.valueOf()")}} method.
-- {{jsxref("Symbol.prototype.@@toPrimitive()", "Symbol.prototype[@@toPrimitive]")}}
-  - : Returns the Symbol.
-
-## 예제
-
-### 심볼에 `typeof` 연산자 사용
-
-{{jsxref("Operators/typeof", "typeof")}} 연산자를 이용해 심볼인지 알 수 있습니다.
-
-```js
-typeof Symbol() === 'symbol'
-typeof Symbol('foo') === 'symbol'
-typeof Symbol.iterator === 'symbol'
-```
-
-### 심볼의 형 변환(type conversions)
-
-심볼의 형 변환(type conversion)할 때 유의해야 할 사항
-
-- 심볼을 숫자(number)로 변환하고자 할 때, {{jsxref("TypeError")}}가 발생합니다.
-  (e.g. `+sym` or `sym | 0`).
-- 느슨한 동등(loose equality) 연산자를 사용할 때, `Object(sym) == sym`는 `true`를 반환합니다.
-- `Symbol("foo") + "bar"`는 {{jsxref("TypeError")}} (심볼을 문자열로 변환할 수 없는)를 발생시킵니다. 이는 예를 들자면, 심볼에서 암묵적으로 새로운 문자열 속성명을 생성하지 못하게 합니다.
-- ["보다 안전한" String(sym) 변환("safer" `String(sym)` conversion)](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#String_conversion)은 심볼에 대해 {{jsxref("Symbol.prototype.toString()")}}을 호출하는 것과 같이 동작하지만, `new String(sym)`는 오류(error)를 발생시키는 것을 유의하시기 바랍니다.
-
-### 심볼과 `for...in` 반복문
-
-심볼은 [`for...in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in) 반복문 내에서 하나씩 열거할 수 없습니다. 더구나, {{jsxref("Object.getOwnPropertyNames()")}}는 심볼 객체 속성(symbol object properties)을 반환하지 않습니다. 하지만, {{jsxref("Object.getOwnPropertySymbols()")}}를 이용해 이것들을 가져올 수 있습니다.
-
-```js
-var obj = {};
-
-obj[Symbol("a")] = "a";
-obj[Symbol.for("b")] = "b";
-obj["c"] = "c";
-obj.d = "d";
-
-for (var i in obj) {
-   console.log(i); // logs "c" and "d"
-}
-```
-
-### 심볼과 `JSON.stringify()`
-
-심볼을 키로 사용한 속성(symbol-keyed properties)은 `JSON.stringify()`을 사용할 때 완전히 무시됩니다:
-
-```js
-JSON.stringify({[Symbol("foo")]: "foo"});
-// '{}'
-```
-
-더 자세한 것은 {{jsxref("JSON.stringify()")}}를 참조하시기 바랍니다.
-
-### 속성 키로서의 심볼 래퍼 객체(symbol wrapper object)
-
-심볼 래퍼 객체를 속성 키로 사용하면, 이 객체는 래핑된 심볼로 강제 변환됩니다(When a Symbol wrapper object is used as a property key, this object will be coerced to its wrapped symbol):
-
-```js
-var sym = Symbol("foo");
-var obj = {[sym]: 1};
-obj[sym];            // 1
-obj[Object(sym)];    // still 1
-```
-
-## 명세
-
-{{Specifications}}
-
-## 브라우저 호환성
-
-{{Compat}}
-
-## See also
-
-- [Polyfill of `Symbol` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
-- [Glossary: Symbol data type](/ko/docs/Glossary/Symbol)
-- {{jsxref("Operators/typeof", "typeof")}}
-- [Data types and data structures](/ko/docs/Web/JavaScript/Data_structures)
-- ["ES6 In Depth: Symbols" on hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/)
+- [Symbol (programming)](<https://en.wikipedia.org/wiki/Symbol_(programming)>) on Wikipedia
+- [JavaScript data types and data structures](/ko/docs/Web/JavaScript/Data_structures)
+- [Symbols in ECMAScript 6](http://2ality.com/2014/12/es6-symbols.html)

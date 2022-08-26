@@ -1,11 +1,6 @@
 ---
 title: 选择 www 或非 www URL 作为域名
 slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
-tags:
-  - Guide
-  - HTTP
-  - URL
-translation_of: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 ---
 {{HTTPSidebar}}
 
@@ -34,9 +29,9 @@ translation_of: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 
 例如：
 
-1.  服务器收到 http\://www\.example.org/whaddup 请求（当规范域名是 example.org 时）
-2.  服务器则以代码 {{HTTPStatus(301)}} 与头 {{HTTPHeader("Location")}} ：`http://example.org/whaddup`
-3.  该客户端发出的规范的域名请求：http\://example.org/whaddup
+1. 服务器收到 http\://www\.example.org/whaddup 请求（当规范域名是 example.org 时）
+2. 服务器则以代码 {{HTTPStatus(301)}} 与头 {{HTTPHeader("Location")}} ：`http://example.org/whaddup`
+3. 该客户端发出的规范的域名请求：http\://example.org/whaddup
 
 [HTML5 boilerplate project](https://github.com/h5bp/html5-boilerplate) 有一个示例 [how to configure an Apache server to redirect one domain to the other](https://github.com/h5bp/html5-boilerplate/blob/7a22a33d4041c479d0962499e853501073811887/.htaccess#L219-L258)。
 

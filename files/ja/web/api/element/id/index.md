@@ -7,7 +7,6 @@ tags:
   - Element
   - プロパティ
   - リファレンス
-browser-compat: api.Element.id
 translation_of: Web/API/Element/id
 ---
 {{ ApiRef("DOM") }}

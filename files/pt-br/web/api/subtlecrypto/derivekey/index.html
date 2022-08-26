@@ -60,9 +60,9 @@ translation_of: Web/API/SubtleCrypto/deriveKey
 <p>A promise é rejeitada quando uma das seguintes exceções é encontrada:</p>
 
 <ul>
- <li>{{exception("InvalidAccessError")}} quando a master key não é uma key para o algoritmo de derivação requisitado ou se o valor desta chave, {{domxref("CryptoKey.usages")}}, não contém <code>"deriveKey"</code>.</li>
- <li>{{exception("NotSupported")}} quando tentando usar um algoritmo que não é nem desconhecido e nem se encaixa para a derivação, ou se, o algoritmo requisitado da key derivada não define o comprimento da key.</li>
- <li>{{exception("SyntaxError")}} quando <em><code>keyUsages</code></em> está vazio mas a key desvinculada é do tipo <code>"secret"</code> ou <code>"private"</code>.</li>
+ <li><code>InvalidAccessError</code> quando a master key não é uma key para o algoritmo de derivação requisitado ou se o valor desta chave, {{domxref("CryptoKey.usages")}}, não contém <code>"deriveKey"</code>.</li>
+ <li><code>NotSupported</code> quando tentando usar um algoritmo que não é nem desconhecido e nem se encaixa para a derivação, ou se, o algoritmo requisitado da key derivada não define o comprimento da key.</li>
+ <li><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError"><code>SyntaxError</code></a> quando <em><code>keyUsages</code></em> está vazio mas a key desvinculada é do tipo <code>"secret"</code> ou <code>"private"</code>.</li>
 </ul>
 
 <h2 id="Exemplo" style="font-size: 2.14285714285714rem;">Exemplo</h2>

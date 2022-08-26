@@ -1,10 +1,6 @@
 ---
 title: 相等（==）
 slug: Web/JavaScript/Reference/Operators/Equality
-tags:
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Equality
 original_slug: Web/JavaScript/Reference/Operators/相等
 ---
 {{jsSidebar("Operators")}}

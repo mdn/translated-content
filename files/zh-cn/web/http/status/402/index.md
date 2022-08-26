@@ -1,12 +1,6 @@
 ---
 title: 402 Payment Required
 slug: Web/HTTP/Status/402
-tags:
-  - HTTP
-  - 支付成功才可使用
-  - 状态码
-  - 错误码
-translation_of: Web/HTTP/Status/402
 ---
 {{SeeCompatTable}}
 

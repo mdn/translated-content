@@ -4,7 +4,7 @@ slug: Web/API/TransitionEvent
 ---
 {{APIRef("CSSOM")}} {{SeeCompatTable}}
 
-TransitonEvent 接口指那些提供了与 [transition](/zh/docs/Web/Guide/CSS/Using_CSS_transitions) 有关信息的事件。
+TransitonEvent 接口指那些提供了与 [transition](/zh-CN/docs/Web/Guide/CSS/Using_CSS_transitions) 有关信息的事件。
 
 ## 属性
 

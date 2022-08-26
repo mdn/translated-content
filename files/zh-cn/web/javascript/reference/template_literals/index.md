@@ -1,12 +1,6 @@
 ---
 title: 模板字符串
 slug: Web/JavaScript/Reference/Template_literals
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Template string
-  - 模板字符串
-translation_of: Web/JavaScript/Reference/Template_literals
 original_slug: Web/JavaScript/Reference/template_strings
 ---
 {{JsSidebar("More")}}

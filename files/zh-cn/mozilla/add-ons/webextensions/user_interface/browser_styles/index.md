@@ -1,14 +1,6 @@
 ---
 title: Browser styles
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
-tags:
-  - Browser style
-  - WebExtensions
-  - 扩展程序
-  - 指南
-  - 浏览器扩展程序
-  - 浏览器插件
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 ---
 {{AddonSidebar}}
 

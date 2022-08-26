@@ -1,7 +1,6 @@
 ---
 title: Object.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 ---
 {{JSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: String.prototype.blink()
 slug: Web/JavaScript/Reference/Global_Objects/String/blink
-translation_of: Web/JavaScript/Reference/Global_Objects/String/blink
 ---
 {{JSRef}} {{deprecated_header}}
 

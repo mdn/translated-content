@@ -1,7 +1,6 @@
 ---
 title: Remainder assignment (%=)
 slug: Web/JavaScript/Reference/Operators/Remainder_assignment
-translation_of: Web/JavaScript/Reference/Operators/Remainder_assignment
 ---
 {{jsSidebar("Operators")}}
 

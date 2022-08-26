@@ -1,9 +1,6 @@
 ---
 title: Document.getElementsByClassName()
 slug: Web/API/Document/getElementsByClassName
-tags:
-  - 待翻譯
-translation_of: Web/API/Document/getElementsByClassName
 ---
 {{APIRef("DOM")}}
 

@@ -1,7 +1,6 @@
 ---
 title: CSS 基本
 slug: Learn/Getting_started_with_the_web/CSS_basics
-translation_of: Learn/Getting_started_with_the_web/CSS_basics
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
 

@@ -1,16 +1,6 @@
 ---
 title: Array.prototype.push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
-tags:
-  - Array
-  - Array.prototype.push()
-  - JavaScript
-  - Method
-  - Prototype
-  - 参考
-  - 数组
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/push
 ---
 {{JSRef}}
 

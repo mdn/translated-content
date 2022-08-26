@@ -1,7 +1,6 @@
 ---
 title: MediaSource.readyState
 slug: Web/API/MediaSource/readyState
-translation_of: Web/API/MediaSource/readyState
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 

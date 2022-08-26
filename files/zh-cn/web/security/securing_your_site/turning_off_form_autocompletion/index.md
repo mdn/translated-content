@@ -1,14 +1,6 @@
 ---
 title: 如何关闭表单自动填充
 slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
-tags:
-  - Autocompletion
-  - Forms
-  - 安全
-  - 指南
-  - 自动填充
-  - 表单
-translation_of: Web/Security/Securing_your_site/Turning_off_form_autocompletion
 ---
 本文介绍了网站如何禁用表单字段的自动完成功能。
 

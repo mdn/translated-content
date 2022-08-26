@@ -1,15 +1,6 @@
 ---
 title: 服务端编程介绍
 slug: Learn/Server-side/First_steps/Introduction
-tags:
-  - 介绍
-  - 初学者
-  - 向导
-  - 学习
-  - 服务
-  - 服务器端编程
-  - 服务端编程
-translation_of: Learn/Server-side/First_steps/Introduction
 ---
 {{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
 

@@ -1,7 +1,6 @@
 ---
 title: window.location
 slug: Web/API/Window/location
-translation_of: Web/API/Window/location
 ---
 {{ ApiRef() }}
 

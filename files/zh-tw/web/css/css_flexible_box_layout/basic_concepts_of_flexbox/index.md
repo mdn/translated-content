@@ -1,17 +1,6 @@
 ---
 title: CSS彈性盒子用法
 slug: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
-tags:
-  - '#RWD'
-  - CSS
-  - Web
-  - 例子
-  - 先进的
-  - 入门
-  - 灵活
-  - 盒
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
-translation_of_original: Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes
 ---
 {{CSSRef}}

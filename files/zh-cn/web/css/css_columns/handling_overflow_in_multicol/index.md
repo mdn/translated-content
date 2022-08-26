@@ -1,12 +1,6 @@
 ---
 title: 处理 Multicol 中的溢出
 slug: Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - multi-column
-translation_of: Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol
 ---
 {{CSSRef}}
 

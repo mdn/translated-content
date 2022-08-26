@@ -1,10 +1,6 @@
 ---
 title: Content-Length
 slug: Web/HTTP/Headers/Content-Length
-tags:
-  - 超文本传输协议
-  - 首部
-translation_of: Web/HTTP/Headers/Content-Length
 ---
 {{HTTPSidebar}}
 

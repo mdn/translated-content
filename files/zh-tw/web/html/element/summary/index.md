@@ -1,7 +1,6 @@
 ---
 title: <summary>
 slug: Web/HTML/Element/summary
-translation_of: Web/HTML/Element/summary
 ---
 {{HTMLRef}}
 

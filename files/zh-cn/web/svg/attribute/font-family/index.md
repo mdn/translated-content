@@ -1,9 +1,6 @@
 ---
 title: font-family
 slug: Web/SVG/Attribute/font-family
-tags:
-  - SVG 属性
-translation_of: Web/SVG/Attribute/font-family
 ---
 « [SVG Attribute reference home](/en/SVG/Attribute)
 

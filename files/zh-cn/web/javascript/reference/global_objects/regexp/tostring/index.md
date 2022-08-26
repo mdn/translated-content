@@ -1,12 +1,6 @@
 ---
 title: RegExp.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 ---
 {{JSRef("Global_Objects", "RegExp")}}
 

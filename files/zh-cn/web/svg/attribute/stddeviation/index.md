@@ -1,11 +1,6 @@
 ---
 title: stdDeviation
 slug: Web/SVG/Attribute/stdDeviation
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/stdDeviation
 ---
 « [SVG 属性参考主页](/en/SVG/Attribute)
 

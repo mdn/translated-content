@@ -1,7 +1,6 @@
 ---
 title: transform-function
 slug: Web/CSS/transform-function
-translation_of: Web/CSS/transform-function
 ---
 {{ CSSRef("CSS Transforms") }}The `<transform-function>` CSS data type denotes a function applied to an element's representation in order to modify it. Usually such transform may be expressed by matrices and the resulting images can be determined using matrix multiplication on each point.
 

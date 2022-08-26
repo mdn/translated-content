@@ -7,7 +7,6 @@ tags:
   - Document
   - メソッド
   - リファレンス
-browser-compat: api.Document.elementFromPoint
 translation_of: Web/API/DocumentOrShadowRoot/elementFromPoint
 translation_of_original: Web/API/Document/elementFromPoint
 original_slug: Web/API/DocumentOrShadowRoot/elementFromPoint

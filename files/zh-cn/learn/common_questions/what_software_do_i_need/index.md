@@ -1,7 +1,6 @@
 ---
 title: 我需要什么软件来构建一个网站
 slug: Learn/Common_questions/What_software_do_I_need
-translation_of: Learn/Common_questions/What_software_do_I_need
 ---
 在这篇文章我们会展示当你编辑，上传或者浏览一个网站时所需要的软件成分。
 

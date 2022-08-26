@@ -1,7 +1,6 @@
 ---
 title: max
 slug: Web/SVG/Attribute/max
-translation_of: Web/SVG/Attribute/max
 ---
 {{SVGRef}}
 

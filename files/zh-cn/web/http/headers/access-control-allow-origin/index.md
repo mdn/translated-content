@@ -1,7 +1,6 @@
 ---
 title: Access-Control-Allow-Origin
 slug: Web/HTTP/Headers/Access-Control-Allow-Origin
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Origin
 ---
 **`Access-Control-Allow-Origin`** 响应头指定了该响应的资源是否被允许与给定的{{glossary("origin")}}共享。
 

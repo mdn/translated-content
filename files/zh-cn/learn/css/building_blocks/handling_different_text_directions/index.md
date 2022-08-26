@@ -1,7 +1,6 @@
 ---
 title: 处理不同方向的文本
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
-translation_of: Learn/CSS/Building_blocks/Handling_different_text_directions
 original_slug: Learn/CSS/Building_blocks/处理_不同_方向的_文本
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
@@ -155,4 +154,4 @@ CSS 中的书写模式是指文本的排列方向是横向还是纵向的。{{cs
 9. [图像、媒体和表单元素](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [调试 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)[](/en-US/docs/Learn/CSS/Building_blocks/Organizing)
+12. [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)

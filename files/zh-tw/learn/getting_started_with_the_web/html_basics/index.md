@@ -1,13 +1,6 @@
 ---
 title: HTML 基礎
 slug: Learn/Getting_started_with_the_web/HTML_basics
-tags:
-  - HTML
-  - Web
-  - 學習
-  - 寫程式
-  - 新手
-translation_of: Learn/Getting_started_with_the_web/HTML_basics
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
 

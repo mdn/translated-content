@@ -1,11 +1,6 @@
 ---
 title: HTML 参考
 slug: Web/HTML/Reference
-tags:
-  - HTML
-  - Web
-  - 参考
-translation_of: Web/HTML/Reference
 ---
 {{HTMLSidebar}}
 

@@ -1,7 +1,6 @@
 ---
 title: Object() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Object/Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/Object
 ---
 {{JSRef}}
 

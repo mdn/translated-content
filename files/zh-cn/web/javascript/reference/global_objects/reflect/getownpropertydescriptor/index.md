@@ -1,7 +1,6 @@
 ---
 title: Reflect.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor
 ---
 {{JSRef}}
 

@@ -1,12 +1,6 @@
 ---
 title: Intl.ListFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
-tags:
-  - Intl
-  - JavaScript
-  - ListFormat
-  - 列表格式化
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 ---
 {{JSRef}}
 

@@ -10,7 +10,6 @@ tags:
   - PointerEvent
   - リファレンス
   - mouse lock
-browser-compat: api.Element.requestPointerLock
 translation_of: Web/API/Element/requestPointerLock
 ---
 {{ APIRef("DOM") }}{{ SeeCompatTable }}

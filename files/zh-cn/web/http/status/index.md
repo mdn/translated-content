@@ -1,14 +1,6 @@
 ---
 title: HTTP 响应状态码
 slug: Web/HTTP/Status
-tags:
-  - HTTP
-  - Landing
-  - Overview
-  - Reference
-  - 状态码
-  - Web
-translation_of: Web/HTTP/Status
 ---
 {{HTTPSidebar}}
 

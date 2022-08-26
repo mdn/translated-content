@@ -1,13 +1,6 @@
 ---
 title: any-hover
 slug: Web/CSS/@media/any-hover
-tags:
-  - '@media'
-  - CSS
-  - Reference
-  - 媒体查询
-  - 媒体特性
-translation_of: Web/CSS/@media/any-hover
 ---
 {{cssref}}
 

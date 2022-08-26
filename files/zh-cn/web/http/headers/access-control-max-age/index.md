@@ -1,11 +1,6 @@
 ---
 title: Access-Control-Max-Age
 slug: Web/HTTP/Headers/Access-Control-Max-Age
-tags:
-  - 超文本传输协议
-  - 跨域资源请求
-  - 首部
-translation_of: Web/HTTP/Headers/Access-Control-Max-Age
 ---
 {{HTTPSidebar}}
 

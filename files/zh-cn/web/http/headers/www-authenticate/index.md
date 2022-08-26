@@ -1,13 +1,6 @@
 ---
 title: WWW-Authenticate
 slug: Web/HTTP/Headers/WWW-Authenticate
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response Header
-  - header
-translation_of: Web/HTTP/Headers/WWW-Authenticate
 ---
 {{HTTPSidebar}}
 
@@ -44,7 +37,7 @@ WWW-Authenticate: Basic
 WWW-Authenticate: Basic realm="Access to the staging site"
 ```
 
-作为一个例子，可以查看[ HTTP authentication](/zh-CN/docs/Web/HTTP/Authentication) 页面，了解如何配置 Apache 和 nginx 服务器来使用 HTTP basic authentication 密码保护你的站点。
+作为一个例子，可以查看 [HTTP authentication](/zh-CN/docs/Web/HTTP/Authentication) 页面，了解如何配置 Apache 和 nginx 服务器来使用 HTTP basic authentication 密码保护你的站点。
 
 ## 规范
 

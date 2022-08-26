@@ -7,7 +7,6 @@ tags:
   - Element
   - メソッド
   - リファレンス
-browser-compat: api.Element.getAttribute
 translation_of: Web/API/Element/getAttribute
 ---
 {{APIRef("DOM")}}

@@ -1,13 +1,6 @@
 ---
 title: Functions
 slug: Web/JavaScript/Reference/Functions
-tags:
-  - Function
-  - Functions
-  - JavaScript
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Functions
 ---
 {{jsSidebar("Functions")}}
 

@@ -1,10 +1,6 @@
 ---
 title: HTTP 的重定向
 slug: Web/HTTP/Redirections
-tags:
-  - 指南
-  - 重定向
-translation_of: Web/HTTP/Redirections
 ---
 {{HTTPSidebar}}
 
@@ -26,9 +22,9 @@ URL 重定向，也称为 URL 转发，是一种当实际资源，如单个页�
 
 不同类型的重定向映射可以划分为三个类别：
 
-1.  [永久重定向](/zh-CN/docs/Web/HTTP/Redirections$edit#Permanent_redirections)
-2.  [临时重定向](/zh-CN/docs/Web/HTTP/Redirections$edit#Temporary_redirections)
-3.  [特殊重定向](/zh-CN/docs/Web/HTTP/Redirections$edit#Special_redirections)
+1. [永久重定向](/zh-CN/docs/Web/HTTP/Redirections#Permanent_redirections)
+2. [临时重定向](/zh-CN/docs/Web/HTTP/Redirections#Temporary_redirections)
+3. [特殊重定向](/zh-CN/docs/Web/HTTP/Redirections#Special_redirections)
 
 ### 永久重定向
 
@@ -68,8 +64,8 @@ URL 重定向，也称为 URL 转发，是一种当实际资源，如单个页�
 
 HTTP 协议中重定向机制并非唯一的重定向映射的方式。其他两种方法包括：
 
-1.  借助 HTML 的 meta 元素的 HTML 重定向机制
-2.  借助 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 的 JavaScript 重定向机制。
+1. 借助 HTML 的 meta 元素的 HTML 重定向机制
+2. 借助 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 的 JavaScript 重定向机制。
 
 ### HTML 重定向机制
 
@@ -81,7 +77,7 @@ HTTP 协议中重定向机制是应该优先采用的创建重定向映射的方
 </head>
 ```
 
-{{htmlattrxref("content")}} 属性的值开头是一个数字，指示浏览器在等待该数字表示的秒数之后再进行跳转。建议始终将其设置为 0 来获取更好的可访问性。
+{{htmlattrxref("content")}} 属性的值开头是一个数字，指示浏览器在等待该数字表示的秒数之后再进行跳转。建议始终将其设置为 0 来获取更好的无障碍。
 
 显然，该方法仅适用于 HTML 页面（或类似的页面），然而并不能应用于图片或者其他类型的内容。
 
@@ -101,9 +97,9 @@ window.location = "http://example.com/";
 
 由于存在上述三种 URL 重定向机制，那么在多种方法同时设定的情况下，哪种方法会首先起作用呢？优先级顺序如下：
 
-1.  HTTP 协议的重定向机制永远最先触发，即便是在没有传送任何页面——也就没有页面被（客户端）读取——的情况下。
-2.  HTML 的重定向机制 ({{HTMLElement("meta")}}) 会在 HTTP 协议重定向机制未设置的情况下触发。
-3.  JavaScript 的重定向机制总是作为最后诉诸的手段，并且只有在客户端开启了 JavaScript 的情况下才起作用。
+1. HTTP 协议的重定向机制永远最先触发，即便是在没有传送任何页面——也就没有页面被（客户端）读取——的情况下。
+2. HTML 的重定向机制 ({{HTMLElement("meta")}}) 会在 HTTP 协议重定向机制未设置的情况下触发。
+3. JavaScript 的重定向机制总是作为最后诉诸的手段，并且只有在客户端开启了 JavaScript 的情况下才起作用。
 
 任何情况下，只要有可能，就应该采用 HTTP 协议的重定向机制，而不要使用 {{HTMLElement("meta")}} 标签。假如开发人员修改了 HTTP 重定向映射而忘记修改 HTML 页面的重定向映射，那么二者就会不一致，最终结果或者出现无限循环，或者导致其他噩梦的发生。
 
@@ -118,7 +114,7 @@ window.location = "http://example.com/";
 在以下几种情况下可以使用域名别称：
 
 - 扩大站点的用户覆盖面。
-  - : 一个常见的场景是，假如站点位于 `www.example.com` 域名下，那么通过 `example.com `也应该可以访问到。这种情况下，可以建立从 `example.com` 的页面到 `www.example.com` 的重定向映射。此外还可以提供常见的同义词，或者该域名容易导致的拼写错误的域名别称。
+  - : 一个常见的场景是，假如站点位于 `www.example.com` 域名下，那么通过 `example.com` 也应该可以访问到。这种情况下，可以建立从 `example.com` 的页面到 `www.example.com` 的重定向映射。此外还可以提供常见的同义词，或者该域名容易导致的拼写错误的域名别称。
 - 迁移到另外一个域名。
   - : 例如，公司改名后，你希望用户在搜索旧名称的时候，依然可以访问到应用了新名称的站点。
 - 强制使用 HTTPS 协议。
@@ -154,8 +150,8 @@ window.location = "http://example.com/";
 
 ```plain
 <VirtualHost *:443>
-	ServerName example.com
-	Redirect / https://www.example.com
+  ServerName example.com
+  Redirect / https://www.example.com
 </VirtualHost>
 ```
 
@@ -185,9 +181,9 @@ Redirect 301 / https://www.example.com
 
 ```plain
 server {
-	listen 80;
-	server_name example.com;
-	return 301 $scheme://www.example.com$request_uri;
+  listen 80;
+  server_name example.com;
+  return 301 $scheme://www.example.com$request_uri;
 }
 ```
 

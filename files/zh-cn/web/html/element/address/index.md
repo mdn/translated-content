@@ -1,10 +1,6 @@
 ---
 title: <address>
 slug: Web/HTML/Element/address
-tags:
-  - HTML
-  - 元素
-translation_of: Web/HTML/Element/address
 ---
 {{HTMLRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: <blockquote>
 slug: Web/HTML/Element/blockquote
-translation_of: Web/HTML/Element/blockquote
 ---
 ## 摘要
 

@@ -1,16 +1,6 @@
 ---
 title: Express web framework (Node.js/JavaScript)
 slug: Learn/Server-side/Express_Nodejs
-tags:
-  - Express
-  - Express.js
-  - Node
-  - node.js
-  - 介紹
-  - 伺服器端程式
-  - 初學者
-  - 學習
-translation_of: Learn/Server-side/Express_Nodejs
 ---
 {{LearnSidebar}}
 

@@ -1,10 +1,6 @@
 ---
 title: From
 slug: Web/HTTP/Headers/From
-tags:
-  - 超文本传输协议
-  - 首部
-translation_of: Web/HTTP/Headers/From
 ---
 {{HTTPSidebar}}
 

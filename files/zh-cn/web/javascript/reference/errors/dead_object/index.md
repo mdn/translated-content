@@ -1,11 +1,6 @@
 ---
 title: 'TypeError: can''t access dead object'
 slug: Web/JavaScript/Reference/Errors/Dead_object
-tags:
-  - JavaScript
-  - 插件
-  - 错误提示
-translation_of: Web/JavaScript/Reference/Errors/Dead_object
 ---
 {{JSSidebar("Errors")}}
 

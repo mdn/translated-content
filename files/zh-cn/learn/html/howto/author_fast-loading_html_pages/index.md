@@ -1,11 +1,6 @@
 ---
 title: 小贴士：如何制作快速加载的 HTML 页面
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
-tags:
-  - HTML
-  - 全部分类
-  - 教程
-translation_of: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 ---
 以下技巧都是基于通用的知识和经验。

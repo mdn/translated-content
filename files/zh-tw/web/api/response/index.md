@@ -1,7 +1,6 @@
 ---
 title: Response
 slug: Web/API/Response
-translation_of: Web/API/Response
 ---
 {{APIRef("Fetch API")}}
 

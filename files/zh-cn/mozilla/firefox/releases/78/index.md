@@ -1,7 +1,6 @@
 ---
 title: 对于开发人员的 Firefox 78
 slug: Mozilla/Firefox/Releases/78
-translation_of: Mozilla/Firefox/Releases/78
 ---
 {{FirefoxSidebar}}
 

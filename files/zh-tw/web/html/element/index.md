@@ -1,13 +1,6 @@
 ---
 title: HTML 元素
 slug: Web/HTML/Element
-tags:
-  - Basic
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element
 ---
 {{HTMLSidebar("Elements")}}
 

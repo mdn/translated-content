@@ -1,11 +1,6 @@
 ---
 title: <input type="month">
 slug: Web/HTML/Element/input/month
-tags:
-  - HTML
-  - Input
-  - 表单
-translation_of: Web/HTML/Element/input/month
 original_slug: Web/HTML/Element/Input/月份
 ---
 {{HTMLRef}}

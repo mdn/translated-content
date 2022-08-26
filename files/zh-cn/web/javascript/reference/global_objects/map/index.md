@@ -1,15 +1,6 @@
 ---
 title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Reference
-  - Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Map
-browser-compat: javascript.builtins.Map
 ---
 {{JSRef}}
 

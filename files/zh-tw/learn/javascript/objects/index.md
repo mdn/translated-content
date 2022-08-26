@@ -1,7 +1,6 @@
 ---
 title: JavaScript 物件介紹
 slug: Learn/JavaScript/Objects
-translation_of: Learn/JavaScript/Objects
 ---
 {{LearnSidebar}}
 

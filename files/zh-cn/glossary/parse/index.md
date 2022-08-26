@@ -1,7 +1,6 @@
 ---
 title: Parse
 slug: Glossary/Parse
-translation_of: Glossary/Parse
 ---
 Parsing means analyzing and converting a program into an internal format that a runtime environment can actually run, for example the {{glossary("JavaScript")}} engine inside browsers.
 

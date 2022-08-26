@@ -1,12 +1,6 @@
 ---
 title: 自减 (--)
 slug: Web/JavaScript/Reference/Operators/Decrement
-tags:
-  - JavaScript
-  - 自减
-  - 语法特性
-  - 运算符
-translation_of: Web/JavaScript/Reference/Operators/Decrement
 original_slug: Web/JavaScript/Reference/Operators/自减
 ---
 {{jsSidebar("Operators")}}

@@ -1,7 +1,6 @@
 ---
 title: Coordinates.longitude
 slug: Web/API/GeolocationCoordinates/longitude
-translation_of: Web/API/GeolocationCoordinates/longitude
 ---
 {{APIRef("Geolocation API")}}
 

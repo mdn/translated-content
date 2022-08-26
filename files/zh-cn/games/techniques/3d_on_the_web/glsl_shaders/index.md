@@ -1,12 +1,6 @@
 ---
 title: GLSL 着色器
 slug: Games/Techniques/3D_on_the_web/GLSL_Shaders
-tags:
-  - GLSL
-  - 片段着色器
-  - 着色器
-  - 顶点着色器
-translation_of: Games/Techniques/3D_on_the_web/GLSL_Shaders
 ---
 {{GamesSidebar}}
 

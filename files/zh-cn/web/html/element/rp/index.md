@@ -1,7 +1,6 @@
 ---
 title: <rp>
 slug: Web/HTML/Element/rp
-translation_of: Web/HTML/Element/rp
 ---
 **HTML `<rp>` 元素**用于为那些不能使用 {{HTMLElement("ruby") }} 元素展示 ruby 注解的浏览器，提供随后的圆括号。
 

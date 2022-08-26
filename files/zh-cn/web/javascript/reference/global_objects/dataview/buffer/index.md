@@ -1,7 +1,6 @@
 ---
 title: DataView.prototype.buffer
 slug: Web/JavaScript/Reference/Global_Objects/DataView/buffer
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/buffer
 ---
 {{JSRef}}
 

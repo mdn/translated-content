@@ -1,11 +1,6 @@
 ---
 title: 浏览器扩展
 slug: Mozilla/Add-ons/WebExtensions
-tags:
-  - Add-ons
-  - Landing
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions
 ---
 {{AddonSidebar}}
 

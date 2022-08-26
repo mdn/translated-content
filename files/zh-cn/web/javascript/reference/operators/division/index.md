@@ -1,12 +1,6 @@
 ---
 title: 除法 (/)
 slug: Web/JavaScript/Reference/Operators/Division
-tags:
-  - JavaScript
-  - 参考
-  - 语言特征
-  - 运算符
-translation_of: Web/JavaScript/Reference/Operators/Division
 ---
 {{jsSidebar("Operators")}}
 

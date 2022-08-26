@@ -1,15 +1,6 @@
 ---
 title: 联系我们
 slug: Mozilla/Add-ons/Contact_us
-tags:
-  - Add-ons
-  - Extension
-  - Extensions
-  - Landing
-  - Mozilla
-  - 扩展
-  - 附加组件
-translation_of: Mozilla/Add-ons/Contact_us
 ---
 {{AddonSidebar}}
 

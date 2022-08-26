@@ -1,10 +1,6 @@
 ---
 title: 序列动画
 slug: Learn/JavaScript/Asynchronous/Sequencing_animations
-tags:
-  - JavaScript
-  - Learn
-translation_of: Learn/JavaScript/Asynchronous/Sequencing_animations
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
 

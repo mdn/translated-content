@@ -1,9 +1,6 @@
 ---
 title: Retry-After
 slug: Web/HTTP/Headers/Retry-After
-tags:
-  - 响应首部
-translation_of: Web/HTTP/Headers/Retry-After
 ---
 {{HTTPSidebar}}
 

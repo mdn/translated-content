@@ -1,16 +1,6 @@
 ---
 title: <input type="tel">
 slug: Web/HTML/Element/Input/tel
-tags:
-  - HTML
-  - HTML 标签
-  - 元素
-  - 电话号码
-  - 表单
-  - 表单输入元素
-  - 输入框
-  - 输入类型
-translation_of: Web/HTML/Element/input/tel
 ---
 {{HTMLRef}}
 

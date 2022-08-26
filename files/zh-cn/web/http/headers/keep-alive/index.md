@@ -1,10 +1,6 @@
 ---
 title: Keep-Alive
 slug: Web/HTTP/Headers/Keep-Alive
-tags:
-  - HTTP
-  - HTTP Headers
-translation_of: Web/HTTP/Headers/Keep-Alive
 ---
 {{HTTPSidebar}}
 

@@ -1,7 +1,6 @@
 ---
 title: Math.cos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cos
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/cos
 ---
 {{JSRef("Global_Objects", "Math")}}
 

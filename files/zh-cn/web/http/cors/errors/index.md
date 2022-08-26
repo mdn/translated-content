@@ -1,7 +1,6 @@
 ---
 title: CORS errors
 slug: Web/HTTP/CORS/Errors
-translation_of: Web/HTTP/CORS/Errors
 ---
 [Cross-Origin Resource Sharing](/zh-CN/docs/Web/HTTP/CORS) ({{Glossary("CORS")}}) 是一种允许服务器放宽同源策略的标准。 这用于明确允许一些跨源请求，同时拒绝其他请求。 例如，如果站点提供外界嵌入的服务，则可能需要放宽同源策略（[same-origin policy](/zh-CN/docs/Web/Security/Same-origin_policy)）。 设置这样的 CORS 配置并不一定容易，并且可能存在一些挑战。 在这些页面中，我们将研究一些常见的 CORS 错误消息以及如何解决它们。
 
@@ -11,8 +10,8 @@ translation_of: Web/HTTP/CORS/Errors
 
 要了解 CORS 配置的基本问题，您需要找出哪个请求有问题以及原因。步骤如下：
 
-1.  打开有问题的网站并打开开发者工具（[Developer Tools](/zh-CN/docs/Tools)）。
-2.  尝试重现失败的事务并检查控制台（ [console](/zh-CN/docs/Tools/Web_Console)）是否看到 CORS 违规错误消息。它可能看起来像这样：
+1. 打开有问题的网站并打开开发者工具（[Developer Tools](/zh-CN/docs/Tools)）。
+2. 尝试重现失败的事务并检查控制台（ [console](/zh-CN/docs/Tools/Web_Console)）是否看到 CORS 违规错误消息。它可能看起来像这样：
 
 ![Firefox console showing CORS error](cors-error2.png)
 

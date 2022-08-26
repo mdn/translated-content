@@ -1,11 +1,6 @@
 ---
 title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
 {{JSRef("Global_Objects", "Set")}}
 

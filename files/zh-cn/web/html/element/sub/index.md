@@ -1,7 +1,6 @@
 ---
 title: <sub>
 slug: Web/HTML/Element/sub
-translation_of: Web/HTML/Element/sub
 ---
 **HTML `<sub>` 元素**定义了一个文本区域，出于排版的原因，与主要的文本相比，应该展示得更低并且更小。
 

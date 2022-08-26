@@ -1,13 +1,6 @@
 ---
 title: getBigInt64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigInt64
-tags:
-  - DataView
-  - JavaScript
-  - Prototype
-  - getBigInt64()
-  - 大整型
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getBigInt64
 ---
 {{JSRef}}
 

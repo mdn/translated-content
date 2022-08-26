@@ -1,16 +1,6 @@
 ---
 title: JavaScript 对象入门
 slug: Learn/JavaScript/Objects
-tags:
-  - CodingScripting
-  - JavaScript
-  - 初学者
-  - 学习
-  - 对象
-  - 指南
-  - 教程
-  - 评估
-translation_of: Learn/JavaScript/Objects
 ---
 {{LearnSidebar}}
 

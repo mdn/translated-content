@@ -27,7 +27,7 @@ window.navigator.vendor
 
 ### 备注
 
-vendor 属性值也是组成 userAgent 字符串的一部分 .product 属性值和 vendor 属性值可以是不同的，比如在 Firefox 中，两者的值表示：Netscape 6.1 使用 Gecko 来渲染网页。想了解更多，请查看 [navigator.product](/zh-cn/DOM/window.navigator.product)，[navigator.userAgent](/zh-cn/DOM/window.navigator.userAgent)
+vendor 属性值也是组成 userAgent 字符串的一部分 .product 属性值和 vendor 属性值可以是不同的，比如在 Firefox 中，两者的值表示：Netscape 6.1 使用 Gecko 来渲染网页。想了解更多，请查看 [navigator.product](/zh-CN/DOM/window.navigator.product)，[navigator.userAgent](/zh-CN/DOM/window.navigator.userAgent)
 
 ## 规范
 

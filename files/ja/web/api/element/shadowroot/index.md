@@ -8,7 +8,6 @@ tags:
   - リファレンス
   - ShadowRoot
   - シャドウ DOM
-browser-compat: api.Element.shadowRoot
 translation_of: Web/API/Element/shadowRoot
 ---
 {{APIRef("Shadow DOM")}}

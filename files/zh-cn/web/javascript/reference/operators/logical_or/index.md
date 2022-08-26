@@ -1,7 +1,6 @@
 ---
 title: Logical OR (||)
 slug: Web/JavaScript/Reference/Operators/Logical_OR
-translation_of: Web/JavaScript/Reference/Operators/Logical_OR
 ---
 {{jsSidebar("Operators")}}
 

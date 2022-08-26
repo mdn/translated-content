@@ -9,7 +9,6 @@ tags:
  - Event
  - Reference
  - Non-standard
-browser-compat: api.Document.beforescriptexecute_event
 translation_of: Web/API/Document/beforescriptexecute_event
 original_slug: Web/API/Document/onbeforescriptexecute
 ---

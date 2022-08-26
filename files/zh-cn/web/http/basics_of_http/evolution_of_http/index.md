@@ -1,10 +1,6 @@
 ---
 title: HTTP 的发展
 slug: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
-tags:
-  - Guide
-  - HTTP
-translation_of: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
 ---
 {{HTTPSidebar}}
 

@@ -1,7 +1,6 @@
 ---
 title: Sec-Fetch-Mode
 slug: Web/HTTP/Headers/Sec-Fetch-Mode
-translation_of: Web/HTTP/Headers/Sec-Fetch-Mode
 ---
 {{HTTPSidebar}}
 
