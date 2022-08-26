@@ -5,7 +5,7 @@ translation_of: Web/SVG/Attribute/cx
 ---
 {{SVGRef}}
 
-**`cx`**属性は中心の x-座標を定義します。
+**`cx`** 属性は中心の x-座標を定義します。
 
 3 つの要素がこの属性を用います: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("radialGradient")}}
 
