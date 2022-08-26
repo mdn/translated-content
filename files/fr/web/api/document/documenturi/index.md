@@ -27,11 +27,8 @@ Les documents HTML ont une propriété {{domxref("document.URL")}} qui renvoie l
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG', '#dom-document-documenturi','documentURI')}} | {{Spec2('DOM WHATWG')}} |                     |
-| {{SpecName('DOM3 Core', '#Document3-documentURI', 'documentURI')}}     | {{Spec2('DOM3 Core')}}     | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.documentURI")}}
+{{Compat}}

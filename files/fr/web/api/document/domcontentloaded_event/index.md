@@ -149,14 +149,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 ## Spécifications
 
-| Spécification                                                                                                                | Status                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'parsing.html#the-end:event-domcontentloaded', 'DOMContentLoaded')}} | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5 W3C', 'syntax.html#the-end', 'DOMContentLoaded')}}                                 | {{Spec2('HTML5 W3C')}}     |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.DOMContentLoaded_event")}}
+{{Compat}}
 
 ## Voir aussi
 

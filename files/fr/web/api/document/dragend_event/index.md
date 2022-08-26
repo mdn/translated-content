@@ -130,14 +130,11 @@ L'événement **dragend** est déclenché lorsque une opération de glissement e
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("HTML WHATWG", "interaction.html#dndevents", "dragend")}} | {{Spec2("HTML WHATWG")}} |                     |
-| {{SpecName("HTML5.1", "editing.html#dndevents", "dragend")}}             | {{Spec2("HTML5.1")}}     | Définition initiale |
+{{Specifications}}
 
-## Compatibilités navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.Document.dragend_event")}}
+{{Compat}}
 
 ## Voir aussi
 

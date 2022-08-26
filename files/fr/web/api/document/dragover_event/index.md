@@ -132,14 +132,11 @@ L'événement **dragover** est déclenché lorsqu'un élément ou une sélection
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("HTML WHATWG", "interaction.html#dndevents", "dragover")}} | {{Spec2("HTML WHATWG")}} |                     |
-| {{SpecName("HTML5.1", "editing.html#dndevents", "dragover")}}             | {{Spec2("HTML5.1")}}     | Définition initiale |
+{{Specifications}}
 
-## Compatibilités navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.Document.dragover_event")}}
+{{Compat}}
 
 ## Voir aussi
 

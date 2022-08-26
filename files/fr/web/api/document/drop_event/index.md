@@ -132,14 +132,11 @@ L'événement **drop** est déclenché lorsqu'un élément ou une sélection de 
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("HTML WHATWG", "interaction.html#dndevents", "drop event")}} | {{Spec2("HTML WHATWG")}} |                     |
-| {{SpecName("HTML5.1", "editing.html#dndevents", "drop event")}}             | {{Spec2("HTML5.1")}}     | Première définition |
+{{Specifications}}
 
-## Compatibilités navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.Document.drop_event")}}
+{{Compat}}
 
 ## Voir aussi
 

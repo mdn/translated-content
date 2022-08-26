@@ -65,13 +65,11 @@ classes.forEach(
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG','#interface-domtokenlist','forEach() (as iterable&lt;Node&gt;)')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMTokenList.forEach")}}
+{{Compat}}
 
 ## Voir aussi
 

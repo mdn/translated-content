@@ -132,14 +132,11 @@ L'événement drag est déclenché lorsqu'un élément ou une section de texte e
 
 ## Spécifications
 
-| Specification                                                                                    | Status                           | Comment             |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("HTML WHATWG", "interaction.html#dndevents", "drag event")}} | {{Spec2("HTML WHATWG")}} |                     |
-| {{SpecName("HTML5.1", "editing.html#dndevents", "drag event")}}             | {{Spec2("HTML5.1")}}     | Définition initiale |
+{{Specifications}}
 
-## Compatibilités navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.Document.drag_event")}}
+{{Compat}}
 
 ## Voir aussi
 
