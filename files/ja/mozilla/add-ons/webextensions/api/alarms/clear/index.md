@@ -43,4 +43,4 @@ browser.alarms.clear(
 
 {{WebExtExamples}}
 
-> **Note:** **謝辞**この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API に基づいています。
+> **Note:** この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API に基づいています。

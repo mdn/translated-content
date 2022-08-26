@@ -24,7 +24,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType
 - `"folder"`: ノードがフォルダーであることを示します。
 - `"separator"`: ノードがセパレータであることを示します。
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.bookmarks.BookmarkTreeNodeType", 10)}}
 

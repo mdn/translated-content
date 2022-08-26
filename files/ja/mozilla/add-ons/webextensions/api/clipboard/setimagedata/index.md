@@ -35,7 +35,7 @@ browser.clipboard.setImageData(imageData, imageType)
 
 A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be resolved with no arguments if the operation succeeded, or rejected if there was an error (for example, because the data did not represent a valid image).
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.clipboard.setImageData", 10)}}
 
@@ -65,4 +65,4 @@ fetch(browser.runtime.getURL('image.png'))
 
 {{WebExtExamples}}
 
-> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API.
+> **Note:** This API is based on Chromium's [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API.

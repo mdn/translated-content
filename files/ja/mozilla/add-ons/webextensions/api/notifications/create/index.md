@@ -35,7 +35,7 @@ var creating = browser.notifications.create(
 
 A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled when the notification is created and the display process has been started, which is before the notification is actually displayed to the user. It is fulfilled with a string representing the notification's ID.
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.notifications.create")}}
 
@@ -129,4 +129,4 @@ browser.notifications.onButtonClicked.addListener((id, index) => {
 
 {{WebExtExamples}}
 
-> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications#method-create) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications#method-create) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

@@ -76,7 +76,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction
 
 {{WebExtExamples("h2")}}
 
-> **Note:** **謝辞**この API は Chromium の [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction) API に基づいています。この文書は Chromium コードの [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) から得ています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> **Note:** この API は Chromium の [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction) API に基づいています。この文書は Chromium コードの [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) から得ています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

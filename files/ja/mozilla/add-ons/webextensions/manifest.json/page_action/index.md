@@ -282,7 +282,7 @@ A page action with just an icon, specified in 2 different sizes. The extension's
 
 A page action with an icon, a title, and a popup. The popup will be shown when the user clicks the icon.
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.manifest.page_action")}}
 

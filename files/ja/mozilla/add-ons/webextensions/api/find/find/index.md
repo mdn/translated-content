@@ -93,9 +93,9 @@ A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that wil
 
         例えば Web ページ上で:
 
-        ![](https://mdn.mozillademos.org/files/15582/rects-1.png) "You may"を探すと 2 つの矩形エリアで表現されます。:
+        ![](rects-1.png) "You may"を探すと 2 つの矩形エリアで表現されます。:
 
-        ![](https://mdn.mozillademos.org/files/15583/rects-2.png) `RectData` はこのようにマッチし、 `rectsAndTexts.rectList` と `rectsAndTexts.textList`は次のようになります。
+        ![](rects-2.png) `RectData` はこのようにマッチし、 `rectsAndTexts.rectList` と `rectsAndTexts.textList`は次のようになります。
 
         - `textList[0]` = "You ", `rectList[0]` は HTML 上の境界を表す矩形エリアを含みます。
         - `textList[1]` = "may", `rectList[1]`も"may"について同様です。
@@ -221,7 +221,7 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 In this example the extension uses `rectData` to "redact" the matches, by adding black DIVs over the top of their bounding rectangles:
 
-![](https://mdn.mozillademos.org/files/15584/redacted.png)Note that in many ways this is a poor way to redact pages.
+![](redacted.png)Note that in many ways this is a poor way to redact pages.
 
 The background script:
 

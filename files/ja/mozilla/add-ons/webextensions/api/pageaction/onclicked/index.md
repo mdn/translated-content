@@ -37,7 +37,7 @@ browser.pageAction.onClicked.hasListener(listener)
     - `tab`
       - : ページアクションがクリックされたタブの{{WebExtAPIRef('tabs.Tab')}}オブジェクト。
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.pageAction.onClicked")}}
 
@@ -59,7 +59,7 @@ browser.pageAction.onClicked.addListener(function () {
 
 {{WebExtExamples}}
 
-> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction#event-onClicked) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction#event-onClicked) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

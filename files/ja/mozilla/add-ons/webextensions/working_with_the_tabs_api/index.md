@@ -61,7 +61,7 @@ Tabs API 機能の大半では権限は不要ですが、次の例外はあり�
 
 {{WebExtAPIRef("tabs.query")}} と {{WebExtAPIRef("tabs.Tab")}} の使われ方を見るために、[tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) の例で “switch to tabs” のリストをツールバーボタンのポップアップに追加するのを見てみましょう。
 
-![The tabs tabs tabs toolbar menu showing the switch to tap area](https://mdn.mozillademos.org/files/15723/Switch_to_tab.png)
+![The tabs tabs tabs toolbar menu showing the switch to tap area](Switch_to_tab.png)
 
 ### manifest.json
 
@@ -339,7 +339,7 @@ This code snippet is for the “Move active tab to the beginning of the window l
 
 It's worth noting the use of `console.log()`. This enables you to output information to the [debugger](/ja/docs/Mozilla/Add-ons/WebExtensions/Debugging) console, which can be useful when resolving issues found during development.
 
-![Example of the console.log output, from the move tabs feature, in the debugging console](https://mdn.mozillademos.org/files/15722/console.png)
+![Example of the console.log output, from the move tabs feature, in the debugging console](console.png)
 
 The move code first calls `callOnActiveTab()` which in turn calls `getCurrentWindowTabs()` to get a {{WebExtAPIRef("tabs.Tab")}} object containing the active window’s tabs. It then loops through the object to find and return the active tab object:
 

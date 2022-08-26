@@ -71,7 +71,7 @@ name には、次の文字が使用できます:
 - \_ (アンダースコア)
 - @
 
-> **Note:** **注記:** @@ で始まる name を定義してはいけません。この名前は [事前定義されたメッセージ](/ja/Add-ons/WebExtensions/Internationalization#Predefined_messages) で予約されています。
+> **Note:** @@ で始まる name を定義してはいけません。この名前は [事前定義されたメッセージ](/ja/Add-ons/WebExtensions/Internationalization#Predefined_messages) で予約されています。
 
 ### message
 

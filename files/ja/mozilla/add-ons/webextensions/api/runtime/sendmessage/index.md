@@ -74,7 +74,7 @@ Firefox 55 より前では、引数が二つの場合のルールが異なるこ
 
 [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) 型。受信側が応答を送信する場合、その応答を JSON オブジェクトとして使って fulfilled 状態にされます。それ以外の場合、値を持たない fulfilled 状態になります。拡張機能との接続中にエラーが発生した場合、Promise はエラーメッセージを持つ rejected 状態になります。
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.runtime.sendMessage")}}
 
@@ -119,7 +119,7 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 {{WebExtExamples}}
 
-> **Note:** **謝辞**この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-sendMessage) API に基づいています。このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> **Note:** この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-sendMessage) API に基づいています。このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

@@ -96,6 +96,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
 
 拡張機能に上記の両方への要求を有効にします。
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.manifest.optional_permissions")}}

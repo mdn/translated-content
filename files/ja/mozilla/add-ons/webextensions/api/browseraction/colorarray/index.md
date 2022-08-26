@@ -16,13 +16,13 @@ RGBA 色を定義する、4 つの 0 から 255 の整数の`配列`です。4 �
 
 たとえば、不透明な赤は`[255, 0, 0, 255]`です。
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.browserAction.ColorArray")}}
 
 {{WebExtExamples}}
 
-> **Note:** **謝辞**この API は Chromium の[`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#type-ColorArray) API に基づいています。このドキュメントは Chromium コードの [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)から派生したものです。Microsoft Edge の互換性データは Microsoft Corporation から提供されており、Creative Commons Attribution 3.0 United States License のもとにここに含まれています。
+> **Note:** この API は Chromium の[`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#type-ColorArray) API に基づいています。このドキュメントは Chromium コードの [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)から派生したものです。Microsoft Edge の互換性データは Microsoft Corporation から提供されており、Creative Commons Attribution 3.0 United States License のもとにここに含まれています。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

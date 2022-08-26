@@ -17,7 +17,7 @@ OS の通知メカニズムを使って、ユーザーへの通知を表示し�
 
 すべてのデスクトップ OS で通知は同じ見た目です。次のようなものです:
 
-![](https://mdn.mozillademos.org/files/16856/notification.png)
+![](notification.png)
 
 ## 型
 
@@ -48,10 +48,10 @@ OS の通知メカニズムを使って、ユーザーへの通知を表示し�
 - {{WebExtAPIRef("notifications.onShown")}}
   - : 通知が表示されるとすぐに発火します。
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.notifications")}}
 
 {{WebExtExamples("h2")}}
 
-> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications) API.
+> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications) API.

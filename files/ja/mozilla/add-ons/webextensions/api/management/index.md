@@ -62,13 +62,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/management
 - {{WebExtAPIRef("management.onDisabled")}}
   - : アドオンが無効化された時に発火します。
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.management")}}
 
 {{WebExtExamples("h2")}}
 
-> **Note:** **Acknowledgements**この API は Chromium の [`chrome.management`](https://developer.chrome.com/extensions/management) API に基づいています。この文書は Chromium code の [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) から派生しています。Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** この API は Chromium の [`chrome.management`](https://developer.chrome.com/extensions/management) API に基づいています。この文書は Chromium code の [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) から派生しています。Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <pre class="hidden">// Copyright 2012 The Chromium Authors. All rights reserved.
 //

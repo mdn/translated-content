@@ -164,7 +164,7 @@ JavaScript デバッガーを使用するには、まずはブラウザーツー
 
 コンテンツスクリプトは、ロードされるまでソースリストに表示されないことに注意してください。読み込み後すぐにアクセスする必要がある場合は、スクリプトの先頭に [`debugger;`](/ja/docs/Web/JavaScript/Reference/Statements/debugger) 文を追加してみてください。
 
-> **Note:** 補足: この Browser Content Toolbox は、マルチプロセス Firefox で開発している場合にのみ必要なものであり、またその場合のみ利用可能です。
+> **Note:** この Browser Content Toolbox は、マルチプロセス Firefox で開発している場合にのみ必要なものであり、またその場合のみ利用可能です。
 
 > **Warning:** ツールボックスのオプションでワーカーのデバッグを有効にすると、 Browser Content Toolbox でのデバッグができなくなります ([Bug 1236892](https://bugzilla.mozilla.org/show_bug.cgi?id=1236892))。
 

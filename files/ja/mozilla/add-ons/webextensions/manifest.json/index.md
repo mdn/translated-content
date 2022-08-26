@@ -114,7 +114,7 @@ browser.runtime.getManifest().version;
 }
 ```
 
-## ブラウザーの実装状況
+## ブラウザーの互換性
 
 マニフェストキーとサブキーのすべてを見るには、[完全な manifest.json ブラウザー互換テーブルを見てください。](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
 

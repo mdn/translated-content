@@ -26,13 +26,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails
 - `quality`{{optional_inline}}
   - : `integer` 型。フォーマットが `"jpeg"` の場合、出力される画像の品質はこの値により変化する。0 から 100 の間の数値であり、0 から 1 の間の数値に変換されて [`HTMLCanvasElement.toDataURL()`](/ja/docs/Web/API/HTMLCanvasElement/toDataURL) の引数 `encoderOptions` として使われる。省略された場合は、92 が使われる。品質を下げると、出力される画像の視覚的な変化が大きくなり、画像の格納に必要なバイト数も小さくなる。PNG 画像の場合、この値は無視される。
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.extensionTypes.ImageDetails")}}
 
 {{WebExtExamples}}
 
-> **Note:** **謝辞**この API は Chromium の [`chrome.extensionTypes`](https://developer.chrome.com/extensions/extensionTypes#type-ImageDetails) API に基づいています。このドキュメントは [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> **Note:** この API は Chromium の [`chrome.extensionTypes`](https://developer.chrome.com/extensions/extensionTypes#type-ImageDetails) API に基づいています。このドキュメントは [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

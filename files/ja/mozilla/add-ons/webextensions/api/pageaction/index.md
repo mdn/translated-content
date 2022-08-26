@@ -16,7 +16,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction
 
 [ページアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/Page_actions) は、ブラウザーのアドレスバーの中のクリックできるアイコンです。
 
-![](https://mdn.mozillademos.org/files/12960/page-action.png)
+![](page-action.png)
 
 You can listen for clicks on the icon, or specify a [popup](/ja/docs/Mozilla/Add-ons/WebExtensions/Popups) that will open when the icon is clicked.
 
@@ -61,7 +61,7 @@ Page actions are for actions that are only relevant to particular pages. If your
 
 {{WebExtExamples("h2")}}
 
-> **Note:** **Acknowledgements**This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

@@ -81,6 +81,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers
 ]
 ```
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.manifest.protocol_handlers")}}

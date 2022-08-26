@@ -62,7 +62,7 @@ var registering = browser.contentScripts.register(
 
 現在、登録したコンテントスクリプトは、これを登録した拡張機能ページをアンロードしたときに削除されます。したがって、コンテントスクリプトを登録する際は、少なくとも登録されたままであってほしいだけ存在する拡張機能ページから登録すべきです。
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.contentScripts.register", 10)}}
 

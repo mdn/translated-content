@@ -28,7 +28,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/Walkthrough
 
 この拡張機能は次のような全体構成になっています。
 
-![](https://mdn.mozillademos.org/files/13671/Untitled-1.png)
+![](Untitled-1.png)
 
 この拡張機能はシンプルですが、WebExtensions API の基本的なコンセプトを多く含んでいます。
 
@@ -405,7 +405,7 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 
 拡張機能のルートディレクトリー配下に "beasts" という名前のディレクトリーを新しく作成し、その中に 3 つの画像を適切な名前で保存します。画像は [GitHub リポジトリ ](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts)から、またはここからでも取得できます。
 
-![](https://mdn.mozillademos.org/files/11459/frog.jpg)![](https://mdn.mozillademos.org/files/11461/snake.jpg)![](https://mdn.mozillademos.org/files/11463/turtle.jpg)
+![](frog.jpg)![](snake.jpg)![](turtle.jpg)
 
 ## 動かしてみよう
 
