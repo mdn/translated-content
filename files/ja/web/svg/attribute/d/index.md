@@ -312,7 +312,7 @@ html,body,svg { height:100% }
 
 ### 2 次ベジエ曲線
 
-*2 次[ベジエ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A7%E6%9B%B2%E7%B7%9A)*は 3 点で定義される滑らかな曲線です:
+*2 次[ベジエ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A7%E6%9B%B2%E7%B7%9A)* は 3 点で定義される滑らかな曲線です:
 
 - _開始座標(現在位置)_
   - : Po = {xo, yo}
