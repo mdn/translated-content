@@ -35,15 +35,13 @@ var autreTableau = new Float32Array(length);
 tableauDonnees.copyFromChannel(autreTableau,1,0);
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                                                                                                                            | Statut                               | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBuffer-copyFromChannel-void-Float32Array-destination-long-channelNumber-unsigned-long-startInChannel', 'copyFromChannel')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioBuffer.copyFromChannel")}}
+{{Compat}}
 
 ## Voir aussi
 
