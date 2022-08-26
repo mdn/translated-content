@@ -40,7 +40,7 @@ async function* nom(param0, param1, /* … ,*/ paramN) {
   - : Le nom de la fonction. S'il est absent, la fonction est _anonyme_. Le nom est uniquement local au corps de la fonction.
 - `paramN` {{optional_inline}}
   - : Le nom d'un argument à passer à la fonction. Une fonction peut avoir jusqu'à 255 arguments.
-- `statements` {{optional_inline}}
+- `instructions` {{optional_inline}}
   - : Les instructions qui forment le corps de la fonction.
 
 ## Description
@@ -57,7 +57,7 @@ L'exemple qui suit définit une fonction génératrice asynchrone anonyme et l'a
 const x = async function* (y) {
   yield Promise.resolve(y * y);
 };
-x(6).next().then((res) => console.log(res.value)); // logs 36
+x(6).next().then((res) => console.log(res.value)); // affiche 36
 ```
 
 ## Spécifications
