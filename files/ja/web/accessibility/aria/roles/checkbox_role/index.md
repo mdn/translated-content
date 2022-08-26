@@ -111,6 +111,8 @@ function changeCheckbox(event) {
 }
 ```
 
+#### 結果
+
 {{EmbedLiveSample("Examples", 230, 250)}}
 
 ## アクセシビリティの懸念

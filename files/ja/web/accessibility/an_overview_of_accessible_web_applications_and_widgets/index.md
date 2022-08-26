@@ -39,7 +39,7 @@ _例 1: ARIA でラベルをつけずに作成したタブウィジェットの�
 ```
 
 _例 2: タブウィジェットはどのようにして視覚的にスタイルが設定されるのでしょうか。ユーザはそれを視覚的に認識するでしょう。しかし、支援技術向けに機械が読み取れる意味の情報はありません。_
-![Screenshot of the tabs widget](/@api/deki/files/4926/=Tabs_Widget.png)
+![Screenshot of the tabs widget](Tabs_Widget.png)
 
 ## ARIA
 
