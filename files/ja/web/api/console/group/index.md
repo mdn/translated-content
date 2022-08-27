@@ -1,15 +1,8 @@
 ---
 title: console.group()
 slug: Web/API/console/group
-tags:
-  - API
-  - DOM
-  - デバッグ
-  - メソッド
-  - ウェブ開発
-  - ウェブコンソール
-browser-compat: api.console.group
-translation_of: Web/API/console/group
+l10n:
+  sourceCommit: 4fd581de2e31ac303a4628354c80f476ba9fd0e2
 ---
 {{APIRef("Console API")}}
 
