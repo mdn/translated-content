@@ -1,7 +1,6 @@
 ---
 title: 旧式浏览器中的 HTML 表单
 slug: Learn/Forms/HTML_forms_in_legacy_browsers
-original_slug: Learn/HTML/Forms/HTML_forms_in_legacy_browsers
 ---
 {{LearnSidebar}}
 
@@ -11,13 +10,13 @@ original_slug: Learn/HTML/Forms/HTML_forms_in_legacy_browsers
 
 ## 了解这些问题
 
-实际上，最重要的事情是阅读那些浏览器的文档，并尝试理解通用的（解决）模式。如果你在 [MDN](/) 上阅读了本篇文档，这将是个良好的开始，只需要检查你想用的元素或 DOM 接口的支持情况即可。MDN 有一个关于包含 HTML 中可用的元素、属性或 API 的兼容表单可查。
+实际上，最重要的事情是阅读那些浏览器的文档，并尝试理解通用的（解决）模式。如果你在 [MDN](/) 上阅读了本篇文档，这将是个良好的开始，只需要检查你想用的元素或 DOM 接口的支持情况即可。对于大部分 HTML 中可用的元素、属性或 API，MDN 提供了兼容性表格以供查询。
 
-由于 [HTML 表单](/zh-CN/docs/Learn/Forms) 包含了复杂的交互，有一个非常重要的规则：保持简单化，也常称做“[KISS(keep it as simple as possible) 准则](https://en.wikipedia.org/wiki/KISS_principle)”。有很多情况下，我们希望表单 "更漂亮 "或 "具有高级功能"，但构建高效的 HTML 表单并不是一个设计或技术问题，而是一个简单直观且便利的用户互动问题。记得花时间读一下这篇文章 [forms usability on UX For The Masses](http://www.uxforthemasses.com/forms-usability/)。
+由于 [HTML 表单](/zh-CN/docs/Learn/Forms)包含了复杂的交互，有一个非常重要的规则：保持简单化，也常称做“[KISS 原则](ttps://zh.wikipedia.org/wiki/KISS原则)”。有很多情况下，我们希望表单“更漂亮”或“具有高级功能”，但构建高效的 HTML 表单并不是一个设计或技术问题，而是一个简单直观且便利的用户互动问题。记得花时间读一下这篇文章 [forms usability on UX For The Masses](http://www.uxforthemasses.com/forms-usability/)。
 
-### 优雅地降级 (Graceful degradation) 是 web 开发者最好的朋友
+### 优雅降级 (Graceful degradation) 是 web 开发者最好的朋友
 
-[Graceful degradation and progressive enhancement](https://www.sitepoint.com/progressive-enhancement-graceful-degradation-choice/) 是一个开发模式，它允许你通过同时支持多种浏览器来构建优秀内容。当你为现代浏览器构建内容时，你想确保它能在旧式浏览器中以某种方式工作，这就是优雅地降级（graceful degradation）。
+[优雅降级和渐进增强](https://www.sitepoint.com/progressive-enhancement-graceful-degradation-choice/)是一种开发模式，它允许你通过同时支持多种浏览器来构建优秀内容。当你为现代浏览器构建内容时，你想确保它能在旧式浏览器中以某种方式工作，这就是优雅降级（graceful degradation）。
 
 让我们看一些关于 HTML 表单的例子：
 
@@ -112,21 +111,21 @@ input[type="button"] {
 
 选择哪种解决方案由项目的限制条件决定。
 
-### 让我们过一遍 CSS
+### 摆脱 CSS
 
 HTML 表单的一个大问题是用 CSS 对表单小部件进行样式化。表单控件的外观是针对浏览器和操作系统的。例如，颜色类型的输入在 Safari、Chrome 和 Firefox 浏览器中看起来是不同的，但颜色选择器小部件在设备上的所有浏览器中都是一样的，因为它打开了操作系统的本地颜色选择器。
 
 不改变表单控件的默认外观往往是个好主意，因为改变某个 CSS 属性值可以改变一些 input 类型，却不能改变另一些类型。例如，如果你声明了 `input { font-size: 2rem; }`，它会影响到 `number`、`date` 和 `text`，却不会影响 `color` 和 `range`。如果你改变了一个属性，会在不可预知的情况下影响到组件的外观。例如，`[value] { background-color: #ccc; }` 可能会用于改变所有含有 `value` 属性的 {{HTMLElement("input")}} 元素，但改变 {{HTMLElement("meter")}} 的 border radius 值可能会在不同浏览器中引起无法预期的显示。你可以声明 {{cssxref('appearance', 'appearance: none;')}} 来移除浏览器默认样式，但这通常会违背目的：因为你失去了所有的样式，删除了你的访问者所习惯的默认外观和感受。
 
-总而言之，当涉及到表单控件小部件的样式时，用 CSS 为它们设计样式的副作用可能是不可预测的。所以不要这样做。正如从这篇[表单控件兼容性列表](/zh-CN/docs/Property_compatibility_table_for_form_widgets) 中所看到的复杂性那样，它非常的困难。即使仍然可以对文本元素（如大小、字体颜色等）进行一些调整，但那样做会有副作用。最好的办法还是不要美化 HTML 表单小组件。但你仍然可以将样式应用到表单周围的项目上。如果你是一个专业人士，并且你的客户需要那么做，在这种情况下，你可以研究一些硬技能，如[使用 JavaScript 重建组件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)。但在那种情况下，最好还是毫不犹豫的[让客户收回这些愚蠢的决定](http://www.smashingmagazine.com/2011/11/03/but-the-client-wants-ie-6-support/)。
+总而言之，当涉及到表单控件小部件的样式时，用 CSS 为它们设计样式的副作用可能是不可预测的。所以不要这样做。正如从这篇[表单控件的 CSS 属性兼容性表格](/zh-CN/docs/Property_compatibility_table_for_form_widgets)中所看到的复杂性那样，它非常的困难。即使仍然可以对文本元素（如大小、字体颜色等）进行一些调整，但那样做会有副作用。最好的办法还是不要美化 HTML 表单小组件。但你仍然可以将样式应用到表单周围的项目上。如果你是一个专业人士，并且你的客户需要那么做，在这种情况下，你可以研究一些硬技能，如[使用 JavaScript 重建组件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)。但在那种情况下，最好还是毫不犹豫的[让客户收回这些愚蠢的决定](http://www.smashingmagazine.com/2011/11/03/but-the-client-wants-ie-6-support/)。
 
-## 功能检测和模拟 (polyfills)
+## 特性检测和 polyfill
 
-CSS 和 JavaScript 是了不起的技术，但重要的是确保不会破坏传统的浏览器。在使用你的目标浏览器不完全支持的功能之前，你应该进行功能检测。
+CSS 和 JavaScript 是了不起的技术，但重要的是确保不会破坏传统的浏览器。在使用你的目标浏览器不完全支持的特性之前，你应该进行特性检测。
 
-### CSS 特征检测
+### CSS 特性检测
 
-在设计一个表单控件的样式之前，你可以使用 {{cssxref('@supports')}} 检查一下浏览器是否支持你打算使用的功能：
+在设计一个表单控件的样式之前，你可以使用 {{cssxref('@supports')}} 检查一下浏览器是否支持你打算使用的特性：
 
 ```css
 @supports (appearance: none) {
