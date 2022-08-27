@@ -31,7 +31,7 @@ Les fonctions suivantes sont **uniquement** disponibles pour les pour les <i lan
 - [`WorkerGlobalScope.importScripts()`](/fr/docs/Web/API/WorkerGlobalScope/importScripts) (pour tous les <i lang="en">workers</i>),
 - [`DedicatedWorkerGlobalScope.postMessage`](/fr/docs/Web/API/DedicatedWorkerGlobalScope/postMessage) (<i lang="en">workers</i> dédiés uniquement).
 
-## Les API Web disponibles pour les <i lang="en">workers</i>
+## Les API web disponibles pour les <i lang="en">workers</i>
 
 > **Note :** Si une API listée ici est prise en charge par une plateforme donnée pour une version donnée, on peut généralement partir du principe que l'API fonctionnera pour les <i lang="en">web workers</i>.
 
