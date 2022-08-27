@@ -75,13 +75,11 @@ document.onkeypress = logKey;
 
 ## Spécifications
 
-| Spécification                                                    | État                         |
-| ---------------------------------------------------------------- | ---------------------------- |
-| {{SpecName('UI Events', '#event-type-keypress')}} | {{Spec2('UI Events')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.keypress_event")}}
+{{Compat}}
 
 ## Voir aussi
 

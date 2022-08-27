@@ -78,15 +78,13 @@ if (!Element.prototype.matches) {
 }
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                            | Status                           |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-element-matches', 'Element.prototype.matches')}} | {{Spec2('DOM WHATWG')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.matches")}}
+{{Compat}}
 
 ## Voir aussi
 
