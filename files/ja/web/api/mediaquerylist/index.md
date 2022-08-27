@@ -54,8 +54,8 @@ _以下のイベントは `MediaQueryList` オブジェクトに配信されま�
 このシンプルな例では、 `MediaQueryList` を作成し、メディアクエリーの状態が変化したときにそれを検出するリスナーを設定し、それがページの表示を変更するときにカスタム関数を実行します。
 
 ```js
-var para = document.querySelector('p');
-var mql = window.matchMedia('(max-width: 600px)');
+const para = document.querySelector('p');
+const mql = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
   if (e.matches) {
@@ -63,13 +63,13 @@ function screenTest(e) {
     para.textContent = 'This is a narrow screen — less than 600px wide.';
     document.body.style.backgroundColor = 'red';
   } else {
-    /* the viewport is more than than 600 pixels wide */
+    /* the viewport is more than 600 pixels wide */
     para.textContent = 'This is a wide screen — more than 600px wide.';
     document.body.style.backgroundColor = 'blue';
   }
 }
 
-mql.addEventListener(screenTest);
+mql.addEventListener('change', screenTest);
 ```
 
 > **Note:** この例は GitHub にあります ([ソースコード](https://github.com/mdn/dom-examples/blob/master/mediaquerylist/index.html)を参照、および[ライブで実行](https://mdn.github.io/dom-examples/mediaquerylist/index.html))。
