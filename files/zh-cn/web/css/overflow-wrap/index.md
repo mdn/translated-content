@@ -99,7 +99,7 @@ p {
 
 #### 结果
 
-{{ EmbedLiveSample('Comparing_overflow-wrap_word-break_and_hyphens', '100%', 260) }}
+{{ EmbedLiveSample('比较 overflow-wrap、word-break 和 hyphens', '100%', 260) }}
 
 ## 规范
 
@@ -111,7 +111,7 @@ p {
 
 {{Compat}}
 
-## 另参见
+## 参见
 
 - {{cssxref("word-break")}}
 - {{cssxref("hyphens")}}
