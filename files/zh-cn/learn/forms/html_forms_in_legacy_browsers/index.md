@@ -12,7 +12,7 @@ slug: Learn/Forms/HTML_forms_in_legacy_browsers
 
 实际上，最重要的事情是阅读那些浏览器的文档，并尝试理解通用的（解决）模式。如果你在 [MDN](/) 上阅读了本篇文档，这将是个良好的开始，只需要检查你想用的元素或 DOM 接口的支持情况即可。对于大部分 HTML 中可用的元素、属性或 API，MDN 提供了兼容性表格以供查询。
 
-由于 [HTML 表单](/zh-CN/docs/Learn/Forms)包含了复杂的交互，有一个非常重要的规则：保持简单化，也常称做“[KISS 原则](ttps://zh.wikipedia.org/wiki/KISS原则)”。有很多情况下，我们希望表单“更漂亮”或“具有高级功能”，但构建高效的 HTML 表单并不是一个设计或技术问题，而是一个简单直观且便利的用户互动问题。记得花时间读一下这篇文章 [forms usability on UX For The Masses](http://www.uxforthemasses.com/forms-usability/)。
+由于 [HTML 表单](/zh-CN/docs/Learn/Forms)包含了复杂的交互，有一个非常重要的规则：保持简单化，也常称做“[KISS 原则](https://zh.wikipedia.org/wiki/KISS原则)”。有很多情况下，我们希望表单“更漂亮”或“具有高级功能”，但构建高效的 HTML 表单并不是一个设计或技术问题，而是一个简单直观且便利的用户互动问题。记得花时间读一下这篇文章 [forms usability on UX For The Masses](http://www.uxforthemasses.com/forms-usability/)。
 
 ### 优雅降级 (Graceful degradation) 是 web 开发者最好的朋友
 
