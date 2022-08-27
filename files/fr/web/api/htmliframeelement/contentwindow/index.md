@@ -24,10 +24,8 @@ x.document.getElementsByTagName("body")[0].style.backgroundColor = "blue";
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', '#dom-iframe-contentwindow', 'HTMLIFrameElement: contentWindow')}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLIFrameElement.contentWindow")}}
+{{Compat}}
