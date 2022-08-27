@@ -12,18 +12,18 @@ Pour cette définition plus précise, un site est déterminé selon la portion d
 
 En prenant cette définition, `support.mozilla.org` et `developer.mozilla.org` font partie du même site, car `mozilla.org` est un domaine enregistrable.
 
-Dans certains contextes, le schéma rentre également en considération pour distinguer les sites (dans ce cas, on a alors `http://vpl.ca` et `https://vpl.ca` qui sont deux sites différents). Ajouter le schéma à la définition permet d'éviter qu'un site non-sécurisé (en HTTP) soit traité de la même façon qu'un site sécurisé (en HTTPS). Cette définition plus stricte est appliquée par les règles de gestion des cookies [`SameSite`](/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite) cookies.
+Dans certains contextes, le schéma rentre également en considération pour distinguer les sites (dans ce cas, on a alors `http://vpl.ca` et `https://vpl.ca` qui sont deux sites différents). Ajouter le schéma à la définition permet d'éviter qu'un site non-sécurisé (en HTTP) soit traité de la même façon qu'un site sécurisé (en HTTPS). Cette définition plus stricte est appliquée par les règles de gestion des cookies [`SameSite`](/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite).
 
 ## Exemples
 
-Pour les deux URL qui suivent, on a le même site, car le domaine enregistrable est le même _mozilla.org_ (les noms d'hôte et chemins de fichier différents n'ont pas d'importance)&nbsp;:
+Pour les deux URL qui suivent, on a le même site, car le domaine enregistrable, `mozilla.org`, est le même (les noms d'hôte et chemins de fichier différents n'ont pas d'importance)&nbsp;:
 
 - `https://developer.mozilla.org/fr/docs/`
 - `https://support.mozilla.org/fr/`
 
 Là encore, ce sont les mêmes sites, car le schéma et le port ne sont pas pertinents&nbsp;:
 
-- `http://example.com:8080`
+- `https://example.com:8080`
 - `https://example.com`
 
 Ici, ce ne sont pas les mêmes sites, car les domaines enregistrables des deux URL sont différents&nbsp;:
