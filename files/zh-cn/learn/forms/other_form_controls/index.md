@@ -40,7 +40,7 @@ slug: Learn/Forms/Other_form_controls
 
 `<textarea>` 元素和普通的单行文本域的主要区别是，用户可以在要提交的数据中包含硬换行（如按下回车键产生）。
 
-`<textarea>` 也需要关闭标签，其中要包含的默认文字需要放在开闭标签之间。作为对比，{{HTMLElement("input")}} 是不包含关闭标签的空元素，它的默认值应该在 [`value`](/zh-CN/docs/Web/HTML/Attributes/value) 属性中指定。
+`<textarea>` 也需要关闭标签，其中要包含的默认文字需要放在开闭标签之间。作为对比，{{HTMLElement("input")}} 是不包含关闭标签的空元素，它的默认值应该在 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性中指定。
 
 注意，即使可以将任何东西放入到 `<textarea>` 元素中，甚至可以包含其他 HTML 元素、CSS 和 JavaScript，由于该元素的特性，这些内容都将以纯文本的形式渲染。在非表单组件上使用 [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable) 可以为捕捉 HTML 或富文本内容提供 API。
 
