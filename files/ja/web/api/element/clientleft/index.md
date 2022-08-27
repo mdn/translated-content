@@ -8,7 +8,6 @@ tags:
   - NeedsMarkupWork
   - プロパティ
   - リファレンス
-browser-compat: api.Element.clientLeft
 translation_of: Web/API/Element/clientLeft
 ---
 {{ APIRef("DOM") }}

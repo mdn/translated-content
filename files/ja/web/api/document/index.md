@@ -7,7 +7,6 @@ tags:
   - Document
   - インターフェイス
   - リファレンス
-browser-compat: api.Document
 translation_of: Web/API/Document
 ---
 {{APIRef("DOM")}}

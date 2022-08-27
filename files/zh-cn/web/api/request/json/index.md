@@ -1,15 +1,6 @@
 ---
 title: Request.json()
 slug: Web/API/Request/json
-page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch
-  - JSON
-  - Method
-  - Reference
-  - Request
-translation_of: Web/API/Request/json
 ---
 {{APIRef("Fetch API")}}
 

@@ -16,7 +16,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy-Report-Only
 
 L'en-tête de réponse HTTP **`Content-Security-Policy-Report-Only`** permet aux développeurs web d'expérimenter avec les règles CSP en contrôlant leur application sans bloquer de contenu. Ces rapports de violations sont constitués d'un document {{Glossary("JSON")}} envoyé via une requête HTTP `POST` à l'URI spécifiée.
 
-Pour plus d'informations, voir aussi cet article sur les [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP).
+Pour plus d'informations, voir aussi cet article sur les [Content Security Policy (CSP)](/fr/docs/Web/HTTP/CSP).
 
 <table class="properties">
   <tbody>
@@ -141,5 +141,5 @@ Comme vous le voyez, la rapport inclut le chemin complet de la ressource à l'or
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - CSP {{CSP("report-uri")}} directive
-- [Content Security in WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
-- [Display security and privacy policies In Firefox Developer Tools](/en-US/docs/Tools/GCLI/Display_security_and_privacy_policies)
+- [Content Security in WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
+- [Display security and privacy policies In Firefox Developer Tools](/fr/docs/Tools/GCLI/Display_security_and_privacy_policies)

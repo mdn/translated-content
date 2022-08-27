@@ -32,16 +32,14 @@ original_slug: OpenSearch_Plugin_für_Firefox_erstellen
  <dt>
   <strong>ShortName</strong></dt>
  <dd>
-  Ein kurzer Name für Ihre Suchmaschine.</dd>
- <dd>
+  Ein kurzer Name für Ihre Suchmaschine. <br/><br/>
   <strong>Einschränkungen:</strong> Der Wert muss 16 oder weniger Zeichen enthalten und darf kein HTML oder sonstiges Markup enthalten.</dd>
 </dl>
 <dl>
  <dt>
   <strong>Description</strong></dt>
  <dd>
-  Eine kurze Beschreibung der Suchmaschine.</dd>
- <dd>
+  Eine kurze Beschreibung der Suchmaschine. <br/><br/>
   <strong>Einschränkungen:</strong> Der Wert muss 1024 oder weniger Zeichen enthalten und darf kein HTML oder sonstiges Markup enthalten.</dd>
 </dl>
 <dl>
@@ -56,7 +54,7 @@ original_slug: OpenSearch_Plugin_für_Firefox_erstellen
  <dd>
   URI zu einem Icon, welches die Suchmaschine repräsentiert. Nach Möglichkeit sollten Suchmaschinen ein 16x16 großes Bild des Typs "image/x-icon" und ein 64x64 großes Bild des Typs "image/jpeg" oder "image/png" bereitstellten. Der Link kann auch das <a class="external" href="http://en.wikipedia.org/wiki/Data:_URI_scheme">data: URI scheme</a> verwenden. Ein hilfreiches Tool zum Erstellen der data URIs lässt sich hier finden: <a class="external" href="http://software.hixie.ch/utilities/cgi/data/data">The data: URI kitchen</a>.
   <pre class="eval">&lt;Image height="16" width="16" type="image/x-icon"&gt;<a class="external" href="http://example.com/favicon.ico" rel="freelink">http://example.com/favicon.ico</a>&lt;/Image&gt;
-  Oder
+  Oder
 &lt;Image height="16" width="16"&gt;data:image/x-icon;base64,AAABAAEAEBAAA ... DAAA=&lt;/Image&gt;
 </pre>
   Firefox speichert das Icon als eine base64 data: URI im Cache (Such-Plugins werden im "searchplugins" Ordner im Profil gespeichert). http: URIs werden auf data: URIs umgewandelt, wenn diese vorhanden sind.</dd>
@@ -65,8 +63,7 @@ original_slug: OpenSearch_Plugin_für_Firefox_erstellen
  <dt>
   <strong>Url</strong></dt>
  <dd>
-  Gibt die URL oder die URLs an, die zur Suche verwendet werden sollen. Das <code>method</code> Attribut gibt an, ob eine <code>GET</code> oder <code>POST</code> Anfrage verwendet wird. Das <code>template</code> Attribut gibt die Basis-URL für die Suchanfrage an.</dd>
- <dd>
+  Gibt die URL oder die URLs an, die zur Suche verwendet werden sollen. Das <code>method</code> Attribut gibt an, ob eine <code>GET</code> oder <code>POST</code> Anfrage verwendet wird. Das <code>template</code> Attribut gibt die Basis-URL für die Suchanfrage an. <br/><br/>
   <div class="note">
    <strong>Hinweis:</strong> Der Internet Explorer 7 unterstützt keine <code>POST</code> Anfragen.</div>
  </dd>
@@ -92,8 +89,7 @@ original_slug: OpenSearch_Plugin_für_Firefox_erstellen
  <dt>
   <strong>Param</strong></dt>
  <dd>
-  Die Parameter, die durch die Suchanfrage laufen müssen, als Schlüssel/Wert Paare. Wenn Werte festgelegt werden, können Sie <code>{searchTerms}</code> verwenden, um den Suchausdruck vom Benutzer in der Suchleiste einzufügen.</dd>
- <dd>
+  Die Parameter, die durch die Suchanfrage laufen müssen, als Schlüssel/Wert Paare. Wenn Werte festgelegt werden, können Sie <code>{searchTerms}</code> verwenden, um den Suchausdruck vom Benutzer in der Suchleiste einzufügen. <br/><br/>
   <div class="note">
    <strong>Hinweis:</strong> Der Internet Explorer 7 unterstützt dieses Element nicht.</div>
  </dd>
@@ -102,8 +98,7 @@ original_slug: OpenSearch_Plugin_für_Firefox_erstellen
  <dt>
   <strong>SearchForm</strong></dt>
  <dd>
-  Die URL zur der Suchseite auf der Seite, für die das Plugin erstellt wurde. Das bietet einen Weg für den Benutzer an, die Seite direkt zu besuchen, auf der er suchen möchte.</dd>
- <dd>
+  Die URL zur der Suchseite auf der Seite, für die das Plugin erstellt wurde. Das bietet einen Weg für den Benutzer an, die Seite direkt zu besuchen, auf der er suchen möchte. <br/><br/>
   <div class="note">
    <strong>Hinweis:</strong> Da dieses Element Firefox-spezifisch ist und nicht Teil der OpenSearch Spezifikation ist, verwenden wir das "<code>moz:</code>" XML Namespace Präfix im Beispiel oben, um sicher zu stellen, dass andere Browser dieses Element ignorieren.</div>
  </dd>
@@ -136,8 +131,8 @@ original_slug: OpenSearch_Plugin_für_Firefox_erstellen
 <p>Ab Firefox 3.5 können OpenSearch Plugins automatsch aktualisiert werden. Um dies zu unterstützen, muss ein zusätzliches <code>Url</code> Element des Typs "<code>application/opensearchdescription+xml</code>" eingefügt werden. Das <code>rel</code> Attribut muss "<code>self</code>" lauten und das template Attribut muss die URL des OpenSearch Dokuments sein, welches automatisch aktualisiert werden muss.</p>
 <p>Zum Beispiel:</p>
 <pre>&lt;Url type="application/opensearchdescription+xml"
-     rel="self"
-     template="http://www.foo.com/mysearchdescription.xml" /&gt;
+     rel="self"
+     template="http://www.foo.com/mysearchdescription.xml" /&gt;
 </pre>
 <h2 id="Tipps_zur_Problemlösung">Tipps zur Problemlösung</h2>
 <p>Falls sich ein Fehler in Ihr Such-Plugin XML eingeschlichen hat, können Fehler beim Hinzufügen von Such-Plugin auftreten. Die Fehlermeldungen sind meist nicht sehr hilfreich, die folgenden Tipps können Ihnen aber vielleicht helfen das Problem zu finden.</p>
@@ -152,10 +147,9 @@ original_slug: OpenSearch_Plugin_für_Firefox_erstellen
 <h2 id="Referenzmaterial">Referenzmaterial</h2>
 <ul>
  <li><a class="external" href="http://opensearch.org/">OpenSearch Documentation</a>, <a class="external" href="http://www.opensearch.org/Specifications/OpenSearch/Extensions/Parameter/1.0">OpenSearch Documentation about the Url and Param element</a></li>
- <li>Technorati.com hat eine  <a class="external" href="http://technorati.com/osd.xml">arbeitende osd.xml</a></li>
+ <li>Technorati.com hat eine  <a class="external" href="http://technorati.com/osd.xml">arbeitende osd.xml</a></li>
  <li>Schwierigkeiten bei der automatischen Erkennung: {{ Bug(340208) }}</li>
  <li><a class="external" href="http://en.wikipedia.org/wiki/Data:_URI_scheme"><code>data:</code> URI scheme</a></li>
  <li><a class="external" href="http://www.searchplugins.net">searchplugins.net</a> - OpenSearch Plugins für Firefox 2. <a class="external" href="http://www.searchplugins.net/pluginlist.aspx">Liste von genierten Such-Plugins</a></li>
  <li><a class="external" href="http://keijisaito.info/ready2search/e/">Ready2Search</a> - OpenSearch Plugins erstellen. <a class="external" href="http://keijisaito.info/arc/search/en_make_plugin.htm">Benutzerdefinierte Suche durch Ready2Search</a></li>
 </ul>
-<p>{{ languages( { "en": "en/Creating_OpenSearch_plugins_for_Firefox", "ca": "ca/Creaci\u00f3_de_connectors_OpenSearch_per_al_Firefox", "fr": "fr/Cr\u00e9ation_de_plugins_OpenSearch_pour_Firefox", "ja": "ja/Creating_OpenSearch_plugins_for_Firefox", "pl": "pl/Tworzenie_wtyczek_OpenSearch_dla_Firefoksa", "pt": "pt/Criando_plugins_OpenSearch_para_o_Firefox" } ) }}</p>

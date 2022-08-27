@@ -42,12 +42,10 @@ navigator.share({
 }); // partage l'URL de MDN
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                            | Status                               | Comment |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------- |
-| {{SpecName('Web Share API','#share-method','share()')}} | {{Spec2('Web Share API')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.Navigator.share")}}
+{{Compat}}

@@ -1,15 +1,6 @@
 ---
 title: Request.bodyUsed
 slug: Web/API/Request/bodyUsed
-page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - bodyUsed
-  - Request
-translation_of: Web/API/Request/bodyUsed
 ---
 {{APIRef("Fetch")}}
 

@@ -103,7 +103,7 @@ class A {
 }
 ```
 
-The [`super.property`](/en-US/docs/Web/JavaScript/Reference/Operators/super) can be used inside a `static` block to reference properties of a super class.
+The [`super.property`](/fr/docs/Web/JavaScript/Reference/Operators/super) can be used inside a `static` block to reference properties of a super class.
 This includes static properties, as shown below:
 
 ```js
@@ -157,6 +157,6 @@ In both cases the approach is less elegant, and does not grant access to private
 
 - [Class static initialization blocks](https://v8.dev/features/class-static-initializer-blocks) (v8.dev blog)
 - [ES2022 feature: class static initialization blocks](https://2ality.com/2021/09/class-static-block.html) (2ality.com blog)
-- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
+- [Classes](/fr/docs/Web/JavaScript/Reference/Classes)
 - {{jsxref("Operators/super", "super()")}}
-- [Object.prototype.constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
+- [Object.prototype.constructor](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)

@@ -35,13 +35,11 @@ La propriété `rotationRates` est un objet en lecture seule décrivant la vites
 
 ## Spécifications
 
-| Spécification                                | État                                     | Commentaires         |
-| -------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DeviceMotionEvent.rotationRate")}}
+{{Compat}}
 
 ## Voir aussi
 

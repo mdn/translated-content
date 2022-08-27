@@ -1,7 +1,6 @@
 ---
 title: Client-side tooling overview
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
-translation_of: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
@@ -68,7 +67,7 @@ translation_of: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 
 您还可以找到用于其他语言的 linting 工具，比如[csslint](http://csslint.net/)。
 
-同样值得一看的是 [webhint](https://webhint.io/), 一个可配置的，开放源码的网页链接，展示了最佳实践，包括可访问性，性能，跨浏览器兼容性 [MDN's browser compatibility data](https://github.com/mdn/browser-compat-data), 安全，PWAs 测试等等。它可以作为 [Node.js command-line tool](https://webhint.io/docs/user-guide/) 和 [VS Code extension](https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint).
+同样值得一看的是 [webhint](https://webhint.io/), 一个可配置的，开放源码的网页链接，展示了最佳实践，包括无障碍，性能，跨浏览器兼容性 [MDN's browser compatibility data](https://github.com/mdn/browser-compat-data), 安全，PWAs 测试等等。它可以作为 [Node.js command-line tool](https://webhint.io/docs/user-guide/) 和 [VS Code extension](https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint).
 
 #### 源代码控制
 
@@ -98,12 +97,12 @@ web 应用程序生命周期的这个阶段通常允许您编写“未来代码�
 
 通常 web 开发被认为是三种语言：[HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn/CSS), and [JavaScript](/en-US/docs/Learn/JavaScript), 所有这些语言都有转换工具。转换提供了两个主要好处 (还有其他好处)
 
-1.  能够使用最新的语言特性编写代码，并将其转换为可在日常设备上使用的代码。例如，您可能希望使用尖端的新语言特性来编 JavaScript，但是您的最终产品代码仍然可以在不支持这些特性的旧浏览器上工作。例如：
+1. 能够使用最新的语言特性编写代码，并将其转换为可在日常设备上使用的代码。例如，您可能希望使用尖端的新语言特性来编 JavaScript，但是您的最终产品代码仍然可以在不支持这些特性的旧浏览器上工作。例如：
 
     - [Babel](https://babeljs.io/):一个 JavaScript 编译器，允许开发人员使用最前沿的 JavaScript 编写代码，然后 Babel 将其转换为老式的 JavaScript，让更多的浏览器能够理解。开发人员也可以编写和发布[plugins for Babel](https://babeljs.io/docs/en/plugins).
     - [PostCSS](https://postcss.org/):和 Babel 做同样的事情，但是有先进的 CSS 特性。如果没有相同的方法使用旧的 CSS 特性来做一些事情，PostCSS 将安装一个 JavaScript 填充来模拟您想要的 CSS 效果。
 
-2.  选择用一种完全不同的语言编写代码，并将其转换为与 web 兼容的语言。例如：
+2. 选择用一种完全不同的语言编写代码，并将其转换为与 web 兼容的语言。例如：
 
     - [Sass/SCSS](https://sass-lang.com/):这个 CSS 扩展允许您使用变量、嵌套规则、混合、函数和许多其他特性，其中一些特性在本地 CSS 中是可用的 (比如变量)，而另一些则不是。
     - [TypeScript](https://www.typescriptlang.org/):TypeScript 是 JavaScript 的一个超集，它提供了一堆额外的特性。TypeScript 编译器在生成产品时将 TypeScript 代码转换为 JavaScript。

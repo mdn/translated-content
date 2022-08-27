@@ -5,9 +5,9 @@ translation_of: Web/API/CanvasRenderingContext2D/textAlign
 ---
 <div>{{APIRef}}</div>
 
-<p>Die <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.textAlign</code></strong> Eigenschaft der Canvas 2D API spezifiert die aktuelle Textausrichtung welche beim zeichnen von Text verwendet wird.</p>
+<p>Die <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.textAlign</code></strong> Eigenschaft der Canvas 2D API spezifiert die aktuelle Textausrichtung welche beim zeichnen von Text verwendet wird.</p>
 
-<p>Nehmen Sie in Acht, dass die Ausrichtung auf dem x Wert der {{domxref("CanvasRenderingContext2D.fillText", "fillText()")}} Methode basiert. Wenn <code>textAlign</code>  <code>"center"</code> ist,  dann würde der Text an der Stelle <code>x - (width / 2)</code> gezeichnet werden.</p>
+<p>Nehmen Sie in Acht, dass die Ausrichtung auf dem x Wert der {{domxref("CanvasRenderingContext2D.fillText", "fillText()")}} Methode basiert. Wenn <code>textAlign</code>  <code>"center"</code> ist,  dann würde der Text an der Stelle <code>x - (width / 2)</code> gezeichnet werden.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -28,16 +28,16 @@ translation_of: Web/API/CanvasRenderingContext2D/textAlign
  <dt><code>start</code></dt>
  <dd>Der Text wird am normalen Start der Zeile ausgerichtet. (Links -oder rechtsbündig, je nach Sprache).</dd>
  <dt><code>end</code></dt>
- <dd>Der Text wird am normalen Ende der Zeile ausgerichtet (Links -oder rechtsbündig, je nach Sprache).</dd>
+ <dd>Der Text wird am normalen Ende der Zeile ausgerichtet (Links -oder rechtsbündig, je nach Sprache).</dd>
 </dl>
 
-<p>Der Standardwert ist <code>start</code>.</p>
+<p>Der Standardwert ist <code>start</code>.</p>
 
 <h2 id="Beispiele">Beispiele</h2>
 
-<h3 id="Using_the_textAlign_property" name="Using_the_textAlign_property">Benutzung der <code>textAlign</code> Eigenschaft</h3>
+<h3 id="Using_the_textAlign_property" name="Using_the_textAlign_property">Benutzung der <code>textAlign</code> Eigenschaft</h3>
 
-<p>Ein einfaches Beispiel welches die <code>textAlign</code> Eigenschaft benutzt um die Textausrichtung zu ändern.</p>
+<p>Ein einfaches Beispiel welches die <code>textAlign</code> Eigenschaft benutzt um die Textausrichtung zu ändern.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -61,8 +61,8 @@ ctx.strokeText('Hello world', 0, 100);
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.font = '48px serif';
@@ -110,7 +110,7 @@ window.addEventListener('load', drawCanvas);
   <tr>
    <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-textalign", "CanvasRenderingContext2D.textAlign")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -124,5 +124,5 @@ window.addEventListener('load', drawCanvas);
 <h2 id="Siehe_auch">Siehe auch</h2>
 
 <ul>
- <li>Das Interface welches es definiert, {{domxref("CanvasRenderingContext2D")}}.</li>
+ <li>Das Interface welches es definiert, {{domxref("CanvasRenderingContext2D")}}.</li>
 </ul>

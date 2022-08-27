@@ -60,7 +60,7 @@ _Cette interface n'hérite d'aucune propriété mais implémente celles définie
 - [`NavigatorOnLine.onLine`](/fr/docs/Web/API/NavigatorOnLine.onLine) {{readonlyInline}}
   - : Renvoie un booléen indiquant si le navigateur est en ligne.
 - [`Navigator.permissions`](/fr/docs/Web/API/Navigator/permissions) {{readonlyinline}} {{experimental_inline}}
-  - : Renvoie un objet [`Permissions`](/fr/docs/Web/API/Permissions) pouvant être utilisé pour demander ou mettre à jour les informations de permissions pour les API couvertes par l'API [Permissions](/en-US/docs/Web/API/Permissions_API).
+  - : Renvoie un objet [`Permissions`](/fr/docs/Web/API/Permissions) pouvant être utilisé pour demander ou mettre à jour les informations de permissions pour les API couvertes par l'API [Permissions](/fr/docs/Web/API/Permissions_API).
 - [`NavigatorPlugins.plugins`](/fr/docs/Web/API/NavigatorPlugins.plugins) {{readonlyInline}}{{deprecated_inline}}
   - : Renvoie une liste [`PluginArray`](/fr/docs/Web/API/PluginArray) indiquant les plugins installés sur le navigateur.
 - [`Navigator.presentation`](/fr/docs/Web/API/Navigator/presentation) {{readonlyInline}} {{experimental_inline}}
@@ -78,7 +78,7 @@ _Cette interface n'hérite d'aucune propriété mais implémente celles définie
 - [`Navigator.webdriver`](/fr/docs/Web/API/Navigator/webdriver) {{readonlyInline}} {{experimental_inline}}
   - : Indique si l'agent utilisateur est contrôlé par un outil automatisé.
 - [`Navigator.xr`](/fr/docs/Web/API/Navigator/xr) {{readonlyInline}} {{experimental_inline}}
-  - : Renvoie un objet [`XRSystem`](/fr/docs/Web/API/XRSystem) qui représente le point d'entrée sur l'API [WebXR](/en-US/docs/Web/API/WebXR_Device_API).
+  - : Renvoie un objet [`XRSystem`](/fr/docs/Web/API/XRSystem) qui représente le point d'entrée sur l'API [WebXR](/fr/docs/Web/API/WebXR_Device_API).
 
 ### Propriétés non-standard
 
@@ -146,10 +146,8 @@ _Cette interface n'hérite d'aucune méthode mais implémente celles définies p
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaires |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', '#the-navigator-object', 'the Navigator object')}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Navigator")}}
+{{Compat}}

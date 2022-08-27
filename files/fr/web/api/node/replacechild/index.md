@@ -60,13 +60,11 @@ parentDiv.replaceChild(sp1, sp2);
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName("DOM WHATWG", "#dom-node-replacechild", "Node: replaceChild")}} | {{Spec2("DOM WHATWG")}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.replaceChild")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -56,7 +56,7 @@ translation_of: Web/HTML/Attributes/capture
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attribute.capture")}}
+{{Compat}}
 
 ## 関連情報
 

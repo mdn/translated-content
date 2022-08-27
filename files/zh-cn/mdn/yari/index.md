@@ -1,10 +1,6 @@
 ---
 title: 'Yari：MDN 的渲染平台'
 slug: MDN/Yari
-tags:
-  - Yari
-  - Landing
-  - MDN Meta
 ---
 {{MDNSidebar}}
 

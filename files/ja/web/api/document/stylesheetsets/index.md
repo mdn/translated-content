@@ -10,7 +10,6 @@ tags:
   - リファレンス
   - スタイルシート
   - 非推奨
-browser-compat: api.Document.styleSheetSets
 translation_of: Web/API/Document/styleSheetSets
 ---
 {{APIRef("DOM")}}{{deprecated_header}}

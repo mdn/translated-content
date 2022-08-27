@@ -99,7 +99,7 @@ processor.doLoad()
 
 ### Vidéo e WebGL
 
-[WebGL](/en-US/docs/Web/WebGL) est une API puissante qui utilise canvas pour (typiquement) afficher des scènes en trois dimensions. On peut combiner WebGL et l'élément {{htmlelement("video")}} pour créer des textures vidéo, ce qui veut dire que vous pouvez placer une vidéo dans des scènes 3D.
+[WebGL](/fr/docs/Web/WebGL) est une API puissante qui utilise canvas pour (typiquement) afficher des scènes en trois dimensions. On peut combiner WebGL et l'élément {{htmlelement("video")}} pour créer des textures vidéo, ce qui veut dire que vous pouvez placer une vidéo dans des scènes 3D.
 
 Exemple:
 
@@ -171,7 +171,7 @@ window.addEventListener('load', setPlaybackRate);
 
 ## Manipulation Audio
 
-Laissons `playbackRate` de côté. Pour manipuler l'audio, on utilise typiquement l'[API Web Audio](/en-US/docs/Web/API/Web_Audio_API).
+Laissons `playbackRate` de côté. Pour manipuler l'audio, on utilise typiquement l'[API Web Audio](/fr/docs/Web/API/Web_Audio_API).
 
 ### Sélectionner une source audio
 
@@ -255,7 +255,7 @@ window.addEventListener('load', setFilter);
 
 {{ EmbedLiveSample('Code_jouable_2', 700, 425) }}
 
-> **Note :** À moins que [CORS](/en-US/docs/Web/HTTP/Access_control_CORS) ne soit activé, vous devrez pour éviter les problèmes de sécurité placer la vidéo sur le même domaine que votre code.
+> **Note :** À moins que [CORS](/fr/docs/Web/HTTP/Access_control_CORS) ne soit activé, vous devrez pour éviter les problèmes de sécurité placer la vidéo sur le même domaine que votre code.
 
 Les filtres pouvant être appliqués sont:
 

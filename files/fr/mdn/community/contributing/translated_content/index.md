@@ -27,7 +27,7 @@ Nous avons actuellement dégelé les langues suivantes :
 ### Français (fr)
 
 - Discussions : [Matrix (#l10n-fr channel)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
-- Contributeurs actuels : [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb), [Jb Audras](https://github.com/audrasjb)
+- Contributeurs actuels : [cw118](https://github.com/cw118), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
 
 ### Japonais (ja)
 

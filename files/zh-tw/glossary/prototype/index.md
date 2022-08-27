@@ -1,7 +1,6 @@
 ---
 title: 原型
 slug: Glossary/Prototype
-translation_of: Glossary/Prototype
 ---
 原型（prototype）是在開發早期表現應用程式外觀或行為的模型。
 

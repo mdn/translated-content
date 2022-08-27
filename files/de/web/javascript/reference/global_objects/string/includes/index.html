@@ -60,18 +60,18 @@ console.log(str.includes('SEIN'));        // false
 <p>Diese Methode wurde den ECMAScript 6 Spezifikationen hinzugefügt und könnte nicht in allen JavaScript-Umgebunden vorhanden sein. Jedoch kann man diesen Polyfill nutzen:</p>
 
 <pre class="brush: js">if (!String.prototype.includes) {
-  String.prototype.includes = function(search, start) {
-    'use strict';
-    if (typeof start !== 'number') {
-      start = 0;
-    }
+  String.prototype.includes = function(search, start) {
+    'use strict';
+    if (typeof start !== 'number') {
+      start = 0;
+    }
 
-    if (start + search.length &gt; this.length) {
-      return false;
-    } else {
-      return this.indexOf(search, start) !== -1;
-    }
-  };
+    if (start + search.length &gt; this.length) {
+      return false;
+    } else {
+      return this.indexOf(search, start) !== -1;
+    }
+  };
 }
 
 </pre>

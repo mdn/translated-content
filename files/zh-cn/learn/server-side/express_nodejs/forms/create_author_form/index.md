@@ -1,9 +1,8 @@
 ---
 title: 创建作者表单
 slug: Learn/Server-side/Express_Nodejs/forms/Create_author_form
-translation_of: Learn/Server-side/Express_Nodejs/forms/Create_author_form
 ---
-[Ed](/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_author_form)本章节演示，如何为创建作者对象`Author`定义一个页面。
+本章节演示，如何为创建作者对象`Author`定义一个页面。
 
 ## 导入验证和清理方法
 
@@ -100,8 +99,6 @@ exports.author_create_post = [
   ```js
   body('date_of_birth', 'Invalid date of birth').optional({ checkFalsy: true }).isISO8601(),
   ```
-
-<!---->
 
 - 参数从请求中作为字符串接收。我们可以使用`toDate()`（或`toBoolean()`等）将这些转换为正确的 JavaScript 类型。
 

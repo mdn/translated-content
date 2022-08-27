@@ -13068,13 +13068,6 @@
       "loella16"
     ]
   },
-  "Web/API/Document/popupNode": {
-    "modified": "2019-04-19T19:08:29.481Z",
-    "contributors": [
-      "wbamberg",
-      "loella16"
-    ]
-  },
   "Web/API/Document/preferredStyleSheetSet": {
     "modified": "2019-03-18T21:17:09.649Z",
     "contributors": [
@@ -13208,12 +13201,6 @@
     "contributors": [
       "Hell_Carlito",
       "Akio08"
-    ]
-  },
-  "Web/API/Document/tooltipNode": {
-    "modified": "2019-03-18T21:39:13.843Z",
-    "contributors": [
-      "loella16"
     ]
   },
   "Web/API/Document/touchend_event": {
@@ -20904,13 +20891,6 @@
     "contributors": [
       "hmore",
       "Fredchat"
-    ]
-  },
-  "Web/Accessibility/ARIA/widgets": {
-    "modified": "2019-01-16T21:44:15.383Z",
-    "contributors": [
-      "Waxaal",
-      "julianosilvaa"
     ]
   },
   "Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets": {
@@ -40652,39 +40632,6 @@
       "nvana",
       "si0ls",
       "dattaz"
-    ]
-  },
-  "conflicting/MDN/Writing_guidelines": {
-    "modified": "2020-09-30T15:29:18.429Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Porkepix",
-      "thbil"
-    ]
-  },
-  "conflicting/MDN/Writing_guidelines/Page_structures": {
-    "modified": "2020-09-30T09:06:59.551Z",
-    "contributors": [
-      "chrisdavidmills",
-      "tristantheb",
-      "wbamberg",
-      "Johann-S"
-    ]
-  },
-  "conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7": {
-    "modified": "2020-09-30T09:06:59.189Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "jmh"
-    ]
-  },
-  "conflicting/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide": {
-    "modified": "2020-09-30T15:29:18.597Z",
-    "contributors": [
-      "chrisdavidmills",
-      "tristantheb"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {

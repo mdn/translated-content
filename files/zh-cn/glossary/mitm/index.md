@@ -1,7 +1,6 @@
 ---
 title: 中间人攻击（MitM）
 slug: Glossary/MitM
-translation_of: Glossary/MitM
 ---
 中间人攻击（**Man-in-the-middle attack，**MitM）会在消息发出方和接收方之间拦截双方通讯。举例来说，路由器就可以被破解用来进行中间人攻击。
 

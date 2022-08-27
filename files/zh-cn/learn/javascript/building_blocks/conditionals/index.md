@@ -1,7 +1,6 @@
 ---
-title: 在代码中做决定 - 条件语句
+title: 在代码中做决定——条件语句
 slug: Learn/JavaScript/Building_blocks/conditionals
-translation_of: Learn/JavaScript/Building_blocks/conditionals
 ---
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
 
@@ -13,7 +12,7 @@ translation_of: Learn/JavaScript/Building_blocks/conditionals
       <th scope="row">预备知识：</th>
       <td>
         基本的计算机知识，对 HTML 和 CSS 有基本的了解，<a
-          href="/en-US/docs/Learn/JavaScript/First_steps"
+          href="/zh-CN/docs/Learn/JavaScript/First_steps"
           >JavaScript 的第一步</a
         >。
       </td>
@@ -51,11 +50,11 @@ if (condition) {
 
 在这里我们有：
 
-1.  关键字 if，并且后面跟随括号。
-2.  要测试的条件，放到括号里（通常是“这个值大于另一个值吗”或者“这个值存在吗”）。这个条件会利用[比较运算符](/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators)（我们会在最后的模块中讨论）进行比较，并且返回 true 或者 false。
-3.  一组花括号，在里面我们有一些代码——可以是任何我们喜欢的代码，并且只会在条件语句返回 true 的时候运行。
-4.  关键字 else。
-5.  另一组花括号，在里面我们有一些代码——可以是任何我们喜欢的代码，并且当条件语句返回值不是 true 的话，它才会运行。
+1. 关键字 if，并且后面跟随括号。
+2. 要测试的条件，放到括号里（通常是“这个值大于另一个值吗”或者“这个值存在吗”）。这个条件会利用[比较运算符](/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators)（我们会在最后的模块中讨论）进行比较，并且返回 true 或者 false。
+3. 一组花括号，在里面我们有一些代码——可以是任何我们喜欢的代码，并且只会在条件语句返回 true 的时候运行。
+4. 关键字 else。
+5. 另一组花括号，在里面我们有一些代码——可以是任何我们喜欢的代码，并且当条件语句返回值不是 true 的话，它才会运行。
 
 这段代码真的非常易懂——它说“**如果（if）条件（condition）**返回 true，运行代码 A，**否则（else）**运行代码 B”
 
@@ -94,7 +93,7 @@ if (shoppingDone === true) {
 }
 ```
 
-这段代码显示的结果是变量 `shoppingDone `总是返回 `false`， 意味着对我们的穷孩子来说很失望。如果孩子去购物的话，就需要依靠我们提供机制来使父母把变量 `shoppingDone` 变成 `true`。
+这段代码显示的结果是变量 `shoppingDone` 总是返回 `false`， 意味着对我们的穷孩子来说很失望。如果孩子去购物的话，就需要依靠我们提供机制来使父母把变量 `shoppingDone` 变成 `true`。
 
 > **备注：** 你可以看到在[Github 上这个例子的完整版本](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html)（也可以[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html)）
 
@@ -102,7 +101,7 @@ if (shoppingDone === true) {
 
 最后一个例子提供给我们两个选择或结果，但是如果我们想要两个以上呢？
 
-有一种方法来让你的 `if…else `连接你的额外的选择和结果——使用`else if `。每一个额外的选择要求放到 `if() { ... }` 和 `else { ... }` 里——看看下面更多涉及到的例子，它们属于一个普通的天气预报的应用的一部分。
+有一种方法来让你的 `if…else` 连接你的额外的选择和结果——使用 `else if`。每一个额外的选择要求放到 `if() { ... }` 和 `else { ... }` 里——看看下面更多涉及到的例子，它们属于一个普通的天气预报的应用的一部分。
 
 ```html
 <label for="weather">Select the weather type today: </label>
@@ -142,10 +141,10 @@ function setWeather() {
 
 {{ EmbedLiveSample('else_if', '100%', 100) }}
 
-1.  这里我们有 HTML {{htmlelement("select")}} 元素让我们选择不同的天气，以及一个简单的段落。
-2.  在 JavaScript 中，我们同时存储了对 {{htmlelement("select")}} 和 {{htmlelement("p")}} 的引用，并对 `<select>` 添加了一个事件监听器，因此，当它的值改变时，`setWeather()`函数被执行。
-3.  当函数运行时，我们首先新建了一个 `choice` 变量去存储当前被选的 `<select>` 中的值。接着我们用条件判断语句根据 `choice` 的值选择性的展示段落中的文本。注意 `else if() {...}`段中的条件是怎么被判断的，除了第一个，它是在 `if() {...}中被判断的。`
-4.  最后一个 `else {...}` 中的选择通常被叫做“最后招数” — 在所有的条件都不为 true 时其中的代码会被执行。在这个例子中，如果用户没有选择任何一个选项，它会将段落中的文本清空，例如当用户决定重新选择最开始出现的"--Make a choice--"选项时，就会有这样的效果。
+1. 这里我们有 HTML {{htmlelement("select")}} 元素让我们选择不同的天气，以及一个简单的段落。
+2. 在 JavaScript 中，我们同时存储了对 {{htmlelement("select")}} 和 {{htmlelement("p")}} 的引用，并对 `<select>` 添加了一个事件监听器，因此，当它的值改变时，`setWeather()`函数被执行。
+3. 当函数运行时，我们首先新建了一个 `choice` 变量去存储当前被选的 `<select>` 中的值。接着我们用条件判断语句根据 `choice` 的值选择性的展示段落中的文本。注意 `else if() {...}`段中的条件是怎么被判断的，除了第一个，它是在 `if() {...}中被判断的。`
+4. 最后一个 `else {...}` 中的选择通常被叫做“最后招数” — 在所有的条件都不为 true 时其中的代码会被执行。在这个例子中，如果用户没有选择任何一个选项，它会将段落中的文本清空，例如当用户决定重新选择最开始出现的"--Make a choice--"选项时，就会有这样的效果。
 
 > **备注：** 你可以 [在 GitHub 上找到这个例子](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) （也可以[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html)。）
 
@@ -269,7 +268,7 @@ if (x === 5 || x === 7 || x === 10 ||x === 20) {
 
 `if...else` 语句能够很好地实现条件代码，但是它们不是没有缺点。它们主要适用于您只有几个选择的情况，每个都需要相当数量的代码来运行，和/或 的条件很复杂的情况（例如多个逻辑运算符）。对于只想将变量设置一系列为特定值的选项或根据条件打印特定语句的情况，语法可能会很麻烦，特别是如果您有大量选择。
 
-[`switch` ](/en-US/docs/Web/JavaScript/Reference/Statements/switch)语句在这里是您的朋友 - 他们以单个表达式/值作为输入，然后查看多个选项，直到找到与该值相匹配的选项，执行与之相关的代码。这里有一些伪代码，可以给你一点灵感：
+[`switch`](/en-US/docs/Web/JavaScript/Reference/Statements/switch) 语句在这里是您的朋友 - 他们以单个表达式/值作为输入，然后查看多个选项，直到找到与该值相匹配的选项，执行与之相关的代码。这里有一些伪代码，可以给你一点灵感：
 
 ```plain
 switch (expression) {
@@ -290,13 +289,13 @@ switch (expression) {
 
 这里我们得到：
 
-1.  关键字 `switch`, 后跟一组括号。
-2.  括号内的表达式或值。
-3.  关键字 `case`, 后跟一个选项的表达式/值，后面跟一个冒号.
-4.  如果选择与表达式匹配，则运行一些代码。
-5.  一个 `break` 语句，分号结尾。如果先前的选择与表达式/值匹配，则浏览器在此停止执行代码块，并执行 switch 语句之后的代码.
-6.  你可以添加任意的 case 选项（选项 3-5）.
-7.  关键字 `default`, 后面跟随和 `case` 完全相同的代码模式 (选项 3–5), except that `default` 之后不需要再有选项， 并且您不需要 `break` 语句， 因为之后没有任何运行代码. 如果之前没有选项匹配，则运行`default`选项。
+1. 关键字 `switch`, 后跟一组括号。
+2. 括号内的表达式或值。
+3. 关键字 `case`, 后跟一个选项的表达式/值，后面跟一个冒号.
+4. 如果选择与表达式匹配，则运行一些代码。
+5. 一个 `break` 语句，分号结尾。如果先前的选择与表达式/值匹配，则浏览器在此停止执行代码块，并执行 switch 语句之后的代码.
+6. 你可以添加任意的 case 选项（选项 3-5）.
+7. 关键字 `default`, 后面跟随和 `case` 完全相同的代码模式 (选项 3–5), except that `default` 之后不需要再有选项， 并且您不需要 `break` 语句， 因为之后没有任何运行代码. 如果之前没有选项匹配，则运行`default`选项。
 
 > **备注：** `default` 部分不是必须的 - 如果表达式不可能存在未知值，则可以安全地省略它。如果有机会，您需要包括它来处理未知的情况。
 
@@ -413,8 +412,8 @@ select.onchange = function() {
 
 我们需要你在`onchange`处理函数中写一个条件语句，就在`// ADD CONDITIONAL HERE`任务的下面 。这应该：
 
-1.  查看所选月份（存储在`choice`变量中，这将是`<select>`值更改后的元素值，例如“1 月”）。
-2.  设置一个被调用`days`为等于所选月份天数的变量。为此，您必须查看一年中每个月的天数。为了这个例子的目的，你可以忽略闰年。
+1. 查看所选月份（存储在`choice`变量中，这将是`<select>`值更改后的元素值，例如“1 月”）。
+2. 设置一个被调用`days`为等于所选月份天数的变量。为此，您必须查看一年中每个月的天数。为了这个例子的目的，你可以忽略闰年。
 
 提示：
 
@@ -531,7 +530,7 @@ window.addEventListener('load', updateCode);
 
 ## 主动学习：更多颜色选择！
 
-在这个例子中，您将要采取我们前面看到的三元运算符示例，并将三元运算符转换为一个 switch 语句，这将允许我们对简单的网站应用更多的选择。看看[元素表示一个控件，提供一个选项菜单：">`<select>`](/en-US/docs/Web/HTML/Element/select)- 这次你会看到它不是两个主题选项，而是五个。您需要在`// ADD SWITCH STATEMENT`注释下面添加一个 switch 语句：
+在这个例子中，您将要采取我们前面看到的三元运算符示例，并将三元运算符转换为一个 switch 语句，这将允许我们对简单的网站应用更多的选择。看看 {{htmlelement("select")}}——这次你会看到它不是两个主题选项，而是五个。你需要在 `// ADD SWITCH STATEMENT` 注释下面添加一个 switch 语句：
 
 - 它应该接受`choice`变量作为其输入表达式。
 - 对于每种情况，选择应该等于可以选择的可能值之一，即白色，黑色，紫色，黄色或迷幻色。
@@ -604,15 +603,29 @@ window.addEventListener('load', updateCode);
 
 {{ EmbedLiveSample('主动学习：更多颜色选择！', '100%', 850) }}
 
+## 测试你的技能！
+
+你已经阅读到了本篇文章的末尾，但还能记清楚最重要的部分吗？你可以做一些深入的测试，来验证你是否在进行下一步学习之前，记住了这些知识，请参阅[测试你的技能：条件语句](/zh-CN/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals)
+
 ## 结论
 
 这就是现在您真正需要了解的 JavaScript 中的条件结构！我相信你会理解这些概念，并轻松地通过这些例子; 如果有什么不明白的，请随时阅读文章，或者[联系我们](/en-US/Learn#Contact_us)寻求帮助。
 
 ## 参见
 
-- [比较运算符](/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators)
-- [条件声明详细](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Conditional_statements)
-- [如果...其他参考](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
-- [条件（三元）运算符引用](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+- [比较运算符](/zh-CN/Learn/JavaScript/First_steps/Math#Comparison_operators)
+- [条件声明详细](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Conditional_statements)
+- [if...else 参考](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else)
+- [条件（三元）运算符引用](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
 {{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
+
+## 本章目录
+
+- **在代码中做决定——条件语句**
+- [代码循环](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)
+- [函数——可复用代码块](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions)
+- [创建你自己的函数](/zh-CN/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
+- [函数返回值](/zh-CN/docs/Learn/JavaScript/Building_blocks/Return_values)
+- [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
+- [图片库](/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery)

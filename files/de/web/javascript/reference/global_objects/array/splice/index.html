@@ -24,27 +24,24 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
 
 <dl>
  <dt><code>start</code></dt>
- <dd>Index ab welchem das Array geändert werden soll. Falls <code>start</code> größer als die Länge des Arrays ist, wird <code>start</code> auf die Länge des Arrays gesetzt.</dd>
- <dd>Falls <code>start</code> negativ ist, beginnt die Änderung entsprechend viele Stellen rückwärts vom Ende des Arrays (d.h. hat <code>start</code> den Wert -n ist dies gleichbedeutend mit <code>array.length - n</code>) und wird auf 0 gesetzt wenn der absolute Wert von <code>start</code> größer als die Länge des Arrays ist.</dd>
+ <dd>Index ab welchem das Array geändert werden soll. Falls <code>start</code> größer als die Länge des Arrays ist, wird <code>start</code> auf die Länge des Arrays gesetzt. <br/><br/>Falls <code>start</code> negativ ist, beginnt die Änderung entsprechend viele Stellen rückwärts vom Ende des Arrays (d.h. hat <code>start</code> den Wert -n ist dies gleichbedeutend mit <code>array.length - n</code>) und wird auf 0 gesetzt wenn der absolute Wert von <code>start</code> größer als die Länge des Arrays ist.</dd>
  <dt><code>deleteCount</code> {{optional_inline}}</dt>
- <dd>Gibt die Anzahl der zu entfernenden alten Array Elemente an.</dd>
- <dd>Wenn <code>deleteCount</code> weggelassen wird oder wenn der Wert größer oder gleich <code>array.length - start</code> ist (d. h. wenn der Wert größer oder gleich der Anzahl der von <code>start</code> aus verbleibenden Elemente ist), wird das ganze Array ab dem Index <code>start</code> gelöscht.</dd>
- <dd>Wenn <code>deleteCount</code> 0 oder negativ ist, werden keine Elemente entfernt. In diesem Fall sollte man mindestens ein neues Element als weiteren Parameter übergeben, da das Array sonst nicht geändert wird.</dd>
+ <dd>Gibt die Anzahl der zu entfernenden alten Array Elemente an. <br/><br/>Wenn <code>deleteCount</code> weggelassen wird oder wenn der Wert größer oder gleich <code>array.length - start</code> ist (d. h. wenn der Wert größer oder gleich der Anzahl der von <code>start</code> aus verbleibenden Elemente ist), wird das ganze Array ab dem Index <code>start</code> gelöscht. <br/><br/>Wenn <code>deleteCount</code> 0 oder negativ ist, werden keine Elemente entfernt. In diesem Fall sollte man mindestens ein neues Element als weiteren Parameter übergeben, da das Array sonst nicht geändert wird.</dd>
  <dt><code>item1, item2, ...</code> {{optional_inline}}</dt>
  <dd>Die Elemente, die dem Array ab dem Index <code>start</code> hinzugefügt werden sollen. Falls keine Elemente angegeben werden, entfernt <code>splice</code> lediglich Elemente des Arrays.</dd>
 </dl>
 
 <h3 id="Returns" name="Returns">Rückgabewert</h3>
 
-<p>Ein Array, welches die entfernten Elemente enthält. Wenn nur ein Element entfernt wurde, wird ein Array mit nur einem Element zurückgegeben. Wenn kein Element entfernt wurde, wird ein leeres Array zurückgegeben.</p>
+<p>Ein Array, welches die entfernten Elemente enthält. Wenn nur ein Element entfernt wurde, wird ein Array mit nur einem Element zurückgegeben. Wenn kein Element entfernt wurde, wird ein leeres Array zurückgegeben.</p>
 
 <h2 id="Description" name="Description">Beschreibung</h2>
 
-<p>Wenn die Anzahl der neu hinzugefügten Elemente ungleich der Anzahl der entfernten Elemente ist, wird die Länge des Arrays geändert. Bei gleicher Anzahl werden vorhandene Elemente sozusagen ersetzt.</p>
+<p>Wenn die Anzahl der neu hinzugefügten Elemente ungleich der Anzahl der entfernten Elemente ist, wird die Länge des Arrays geändert. Bei gleicher Anzahl werden vorhandene Elemente sozusagen ersetzt.</p>
 
 <h2 id="Beispiele">Beispiele</h2>
 
-<h3 id="Example_Using_splice" name="Example:_Using_splice">Entfernen von 0 (null) Elementen bei Index 2 und Einfügen von "drum"</h3>
+<h3 id="Example_Using_splice" name="Example:_Using_splice">Entfernen von 0 (null) Elementen bei Index 2 und Einfügen von "drum"</h3>
 
 <pre class="brush: js">var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(2, 0, 'drum');
@@ -156,7 +153,7 @@ var removed = myFish.splice(2);
 <h2 id="See_also" name="See_also">Siehe auch</h2>
 
 <ul>
- <li>{{jsxref("Array.prototype.push()", "push()")}} / {{jsxref("Array.prototype.pop()", "pop()")}} — hinzufügen/entfernen von Elementen vom Ende des Arrays</li>
- <li>{{jsxref("Array.prototype.unshift()", "unshift()")}} / {{jsxref("Array.prototype.shift()", "shift()")}} — hinzufügen/entfernen von Elementen vom Beginn eines Arrays</li>
- <li>{{jsxref("Array.prototype.concat()", "concat()")}} — gibt ein neues Array bestehend aus dem aktuellen Array kombiniert mit anderen Arrays und oder Werten</li>
+ <li>{{jsxref("Array.prototype.push()", "push()")}} / {{jsxref("Array.prototype.pop()", "pop()")}} — hinzufügen/entfernen von Elementen vom Ende des Arrays</li>
+ <li>{{jsxref("Array.prototype.unshift()", "unshift()")}} / {{jsxref("Array.prototype.shift()", "shift()")}} — hinzufügen/entfernen von Elementen vom Beginn eines Arrays</li>
+ <li>{{jsxref("Array.prototype.concat()", "concat()")}} — gibt ein neues Array bestehend aus dem aktuellen Array kombiniert mit anderen Arrays und oder Werten</li>
 </ul>

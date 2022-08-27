@@ -191,17 +191,7 @@ translation_of: Web/HTML/Attributes/rel
 
 ## ブラウザーの互換性
 
-### `link` 要素の `rel` 属性
-
-{{Compat("html.elements.link.rel")}}
-
-### `a` 要素の `rel` 属性
-
-{{Compat("html.elements.a.rel")}}
-
-### `area` 要素の `rel` 属性
-
-{{Compat("html.elements.area.rel")}}
+{{Compat}}
 
 ## 関連情報
 

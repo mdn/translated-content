@@ -1,15 +1,6 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Statement
-  - Variable declaration
-  - Variables
-  - let
-translation_of: Web/JavaScript/Reference/Statements/let
 ---
 {{jsSidebar("Statements")}}
 

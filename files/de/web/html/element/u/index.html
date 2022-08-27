@@ -1,5 +1,5 @@
 ---
-title: <u>
+title: 
 slug: Web/HTML/Element/u
 tags:
   - Element
@@ -10,7 +10,7 @@ translation_of: Web/HTML/Element/u
 
 <p>Das <em>HTML Underline Element</em> (<code>&lt;u&gt;</code>) versieht Text mit einem Unterstrich, also einer Linie unter der Basislinie des Textinhalts.</p>
 
-<p>In HTML5, repräsentiert dieses Element ein Textfeld mit einem unausgesprochenen, also nur gerenderten, nicht-textuellen Vermerk, so wie die Beschreibung eines Textes, als sei es eine Eigenschaft eines chinesisches Textes (eine chinesische Textmarkierung), oder als ob der Text falsch buchstabiert sei.</p>
+<p>In HTML5, repräsentiert dieses Element ein Textfeld mit einem unausgesprochenen, also nur gerenderten, nicht-textuellen Vermerk, so wie die Beschreibung eines Textes, als sei es eine Eigenschaft eines chinesisches Textes (eine chinesische Textmarkierung), oder als ob der Text falsch buchstabiert sei.</p>
 
 <div class="note"><strong>Gebrauchsnotiz: </strong>So wie alle stylisierenden Elemente, wird {{ HTMLElement("u") }} in HTML 4 und XHTML 1 nicht mehr unterstützt. Das Attribut wurde aber wieder in HTML5 zusammen mit anderen Wortbedeutungen aufgenommen. Wenn ein Text unterstrichen werden soll in einer nicht-begriffsbestimmenden Art und Weise, sollte ein {{ HTMLElement("span") }} Element eingesetzt werden, oder andere angepasste Elemente, und es mit <a href="/en/CSS" title="en/CSS">CSS</a> formatieren {{ cssxref("text-decoration") }}, also mit der <span style="font-family: Courier New;">underline</span> Eigenschaft.</div>
 
@@ -38,14 +38,14 @@ translation_of: Web/HTML/Element/u
 &lt;span style="text-decoration:underline;"&gt;Today's Special&lt;/span&gt;: Salmon
 </pre>
 
-<p><u>Today's Special</u>: Salmon</p>
+<p>Today's Special: Salmon</p>
 
 <p><span style="text-decoration: underline;">Today's Special</span>: Salmon</p>
 
 <pre class="brush: html">&lt;p&gt;&lt;u&gt;All&lt;/u&gt; of that is explained in &lt;u&gt;Dive into Python&lt;/u&gt;.
 </pre>
 
-<p><u>All</u> of that is explained in <u>Dive into Python</u>.</p>
+<p>All of that is explained in Dive into Python.</p>
 
 <p>Sollte ersetzt werden durch</p>
 
@@ -60,9 +60,7 @@ translation_of: Web/HTML/Element/u
 
 <ul>
  <li>Die {{ HTMLElement("span") }}, {{ HTMLElement("i") }}, {{ HTMLElement("em") }}, and {{ HTMLElement("cite") }} Elemente sollten, vom Fall abhängend, anstatt benutzt werden.</li>
- <li>Die CSS {{ cssxref("text-decoration") }} Eigenschaft sollte benutzt werden für dasselbe Aussehen als das {{ HTMLElement("u") }} Element.</li>
+ <li>Die CSS {{ cssxref("text-decoration") }} Eigenschaft sollte benutzt werden für dasselbe Aussehen als das {{ HTMLElement("u") }} Element.</li>
 </ul>
-
-<p>{{ languages({"ja":"ja/HTML/Element/u","en":"en/HTML/Element/u"}) }}</p>
 
 <div>{{ HTMLRef }}</div>

@@ -144,15 +144,11 @@ let maRequete = new Request('fleurs.jpg', monInit);
 
 ## Spécifications
 
-| Specification                                                        | Statut                                       | Commentaire                                                                                                                                                                         |
-| -------------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Fetch','#fetch-method','fetch()')}}     | {{Spec2('Fetch')}}                     | Définie dans un `WindowOrWorkerGlobalScope` dans la nouvelle spécification.                                                                                                         |
-| {{SpecName('Fetch','#dom-global-fetch','fetch()')}} | {{Spec2('Fetch')}}                     | Définition initiale                                                                                                                                                                 |
-| {{SpecName('Credential Management')}}                     | {{Spec2('Credential Management')}} | Ajoute la possiblité d'utiliser une instance de {{domxref("FederatedCredential")}} ou de {{domxref("PasswordCredential")}} comme valeur de `init.credentials`. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowOrWorkerGlobalScope.fetch")}}
+{{Compat}}
 
 ## Voir aussi
 

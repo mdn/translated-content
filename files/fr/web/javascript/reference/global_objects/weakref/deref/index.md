@@ -20,13 +20,13 @@ L'objet cible associé à l'objet `WeakRef`, ou `undefined` dans le cas où l'ob
 
 ## Notes
 
-Voir [les notes sur la page `WeakRef`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#notes_sur_weakref) pour des notes importantes.
+Voir [les notes sur la page `WeakRef`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#notes_sur_weakref) pour des notes importantes.
 
 ## Exemples
 
 ### Utiliser deref()
 
-Voir la section [Exemples](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#exemples) de la page  [`WeakRef`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) pour un exemple complet.
+Voir la section [Exemples](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#exemples) de la page  [`WeakRef`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) pour un exemple complet.
 
 ```js
 const tick = () => {

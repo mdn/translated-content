@@ -13,7 +13,6 @@ tags:
   - Selecting Elements
   - セレクター
   - querySelector
-browser-compat: api.Element.querySelectorAll
 translation_of: Web/API/Element/querySelectorAll
 original_slug: Web/API/ParentNode/querySelectorAll
 ---

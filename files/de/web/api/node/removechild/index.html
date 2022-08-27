@@ -15,7 +15,7 @@ translation_of: Web/API/Node/removeChild
 <div>{{APIRef("DOM")}}</div>
 </div>
 
-<p>Die Methode <code><strong>Node.removeChild()</strong></code> entfernt einen Kindknoten aus dem DOM. Gibt den entfernten Knoten zurück.</p>
+<p>Die Methode <code><strong>Node.removeChild()</strong></code> entfernt einen Kindknoten aus dem DOM. Gibt den entfernten Knoten zurück.</p>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 
@@ -26,15 +26,15 @@ translation_of: Web/API/Node/removeChild
 
 <ul>
  <li><code>child</code> ist der Kindknoten, der aus dem DOM entfernt werden soll.</li>
- <li><code>element</code> is der Elternknoten von <code>child</code>.</li>
- <li><code>oldChild</code> hält eine Referenz auf den entfernten Kindknoten. <code>oldChild</code> === <code>child</code>.</li>
+ <li><code>element</code> is der Elternknoten von <code>child</code>.</li>
+ <li><code>oldChild</code> hält eine Referenz auf den entfernten Kindknoten. <code>oldChild</code> === <code>child</code>.</li>
 </ul>
 
-<p>Der entfernte Kindknoten bleibt im Speicher erhalten, ist aber nicht länger Teil des DOM. Mit der ersten Syntax-Form ist es möglich, den entfernten Knoten später im Code wieder zu verwenden, über die <code>oldChild</code> Objektreferenz. In der zweiten Form wird jedoch keine <code style="font-style: normal;">oldChild</code>-Refernenz behalten, also wird (vorausgesetzt dass nirgendwo anders im Code eine Referenz gehalten wird) der Knoten unbenutzbar und nicht erreichbar, und wird nach kurzer Zeit <a href="/en-US/docs/Web/JavaScript/Memory_Management">automatisch aus dem Speicher entfernt</a>. </p>
+<p>Der entfernte Kindknoten bleibt im Speicher erhalten, ist aber nicht länger Teil des DOM. Mit der ersten Syntax-Form ist es möglich, den entfernten Knoten später im Code wieder zu verwenden, über die <code>oldChild</code> Objektreferenz. In der zweiten Form wird jedoch keine <code style="font-style: normal;">oldChild</code>-Refernenz behalten, also wird (vorausgesetzt dass nirgendwo anders im Code eine Referenz gehalten wird) der Knoten unbenutzbar und nicht erreichbar, und wird nach kurzer Zeit <a href="/en-US/docs/Web/JavaScript/Memory_Management">automatisch aus dem Speicher entfernt</a>. </p>
 
-<p>Wenn <code>child</code> kein Kind des Knotens <code>element</code> ist, wirft die Methode eine Exception. Dies passiert auch wenn <code>child</code> zwar zum Aufruf der Methode ein Kind von <code>element</code> war, aber durch einen beim Entfernen des Knotens aufgerufenen Event Handler bereits aus dem DOM entfernt wurde (z.B. blur).</p>
+<p>Wenn <code>child</code> kein Kind des Knotens <code>element</code> ist, wirft die Methode eine Exception. Dies passiert auch wenn <code>child</code> zwar zum Aufruf der Methode ein Kind von <code>element</code> war, aber durch einen beim Entfernen des Knotens aufgerufenen Event Handler bereits aus dem DOM entfernt wurde (z.B. blur).</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Example" name="Example">Beispiele</h2>
 

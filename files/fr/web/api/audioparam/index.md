@@ -84,13 +84,11 @@ biquadFilter.gain.value = 25;
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                               | Commentaire |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#AudioParam-section', 'AudioParam')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioParam")}}
+{{Compat}}
 
 ## Voir aussi
 

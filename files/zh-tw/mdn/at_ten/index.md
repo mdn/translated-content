@@ -1,7 +1,6 @@
 ---
 title: MDN 10 週年
 slug: MDN/At_ten
-translation_of: MDN_at_ten
 original_slug: MDN_at_ten
 ---
 慶祝文件化網頁 10 年.
@@ -22,6 +21,6 @@ original_slug: MDN_at_ten
 
 ## Subnav
 
-1.  [MDN 10 週年](/en-US/docs/MDN_at_ten/)
-2.  [MDN 的歷史](/en-US/docs/MDN_at_ten/History_of_MDN)
-3.  [協助 MDN](/en-US/docs/MDN_at_ten/Contributing_to_MDN)
+1. [MDN 10 週年](/en-US/docs/MDN_at_ten/)
+2. [MDN 的歷史](/en-US/docs/MDN_at_ten/History_of_MDN)
+3. [協助 MDN](/en-US/docs/MDN_at_ten/Contributing_to_MDN)

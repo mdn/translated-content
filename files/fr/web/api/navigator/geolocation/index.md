@@ -23,13 +23,11 @@ geo = navigator.geolocation
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire        |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('Geolocation', '#navi-geo', 'Navigator.geolocation')}} | {{Spec2('Geolocation')}} | Initial definition |
+{{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.Navigator.geolocation")}}
+{{Compat}}
 
 ## Voir aussi
 

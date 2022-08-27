@@ -165,7 +165,7 @@ Tout élément ciblé avec `display: contents` sera retiré de l'arbre d'accessi
 
 ### Les tableaux
 
-Modifier la valeur de `display` pour un élément de [tableau](/en-US/docs/Web/HTML/Element/table) afin d'utiliser la valeur `block`, `grid` ou `flex` modifiera sa représentation au sein de l'[arbre d'accessibilité](/fr/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs). Aussi, le tableau ne sera plus correctement annoncé par les technologies d'assistance.
+Modifier la valeur de `display` pour un élément de [tableau](/fr/docs/Web/HTML/Element/table) afin d'utiliser la valeur `block`, `grid` ou `flex` modifiera sa représentation au sein de l'[arbre d'accessibilité](/fr/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs). Aussi, le tableau ne sera plus correctement annoncé par les technologies d'assistance.
 
 - [Une rapide note sur l'impact de la propriété CSS `display` sur la sémantique des tableaux — The Paciello Group (en anglais)](https://developer.paciellogroup.com/blog/2018/03/short-note-on-what-css-display-properties-do-to-table-semantics/)
 - [Du contenu masqué avec une meilleure accessibilité - Go Make Things (en anglais)](https://gomakethings.com/hidden-content-for-better-a11y/)

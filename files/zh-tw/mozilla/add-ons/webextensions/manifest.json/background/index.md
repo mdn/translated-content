@@ -1,9 +1,6 @@
 ---
 title: background
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/background
-tags:
-  - 擴充套件
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
 ---
 {{AddonSidebar}}
 

@@ -1,7 +1,6 @@
 ---
 title: SQL
 slug: Glossary/SQL
-translation_of: Glossary/SQL
 ---
 **SQL**（Structured Query Language，結構化查詢語言）是專為表格形式資料庫的更新、檢索、計算，所設計的描述性電腦語言。
 

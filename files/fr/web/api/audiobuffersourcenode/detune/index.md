@@ -53,13 +53,11 @@ source.start();
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-detune', 'detune')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioBufferSourceNode.detune")}}
+{{Compat}}
 
 ## Voir aussi
 

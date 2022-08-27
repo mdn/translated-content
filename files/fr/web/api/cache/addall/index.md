@@ -90,13 +90,11 @@ this.addEventListener('install', function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                               | Commentaire          |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#dom-cache-addall', 'Cache: addAll')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Cache.addAll")}}
+{{Compat}}
 
 ## Voir aussi
 

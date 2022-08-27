@@ -40,4 +40,4 @@ Ne fait partie d'aucune spécification ou recommandation technique du W3C.
 ## Voir également
 
 - {{domxref("window.mozInnerScreenX")}}
-- [`nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/en-US/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils)
+- [`nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/fr/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils)

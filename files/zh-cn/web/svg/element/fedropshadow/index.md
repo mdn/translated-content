@@ -1,12 +1,6 @@
 ---
 title: <feDropShadow>
 slug: Web/SVG/Element/feDropShadow
-tags:
-  - 元素
-  - 滤镜
-  - 参考
-  - SVG
-translation-of: Web/SVG/Element/feDropShadow
 ---
 {{SVGRef}}
 

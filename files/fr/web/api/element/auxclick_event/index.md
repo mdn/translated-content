@@ -25,7 +25,7 @@ target.onauxclick = functionRef;
 
 ### Valeur
 
-`functionRef` est un nom de fonction ou une [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). La fonction reçoit un objet {{domxref("MouseEvent")}} comme seul argument. Dans la fonction, [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) sera l'élément sur lequel l'événement a été déclenché.
+`functionRef` est un nom de fonction ou une [function expression](/fr/docs/Web/JavaScript/Reference/Operators/function). La fonction reçoit un objet {{domxref("MouseEvent")}} comme seul argument. Dans la fonction, [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) sera l'élément sur lequel l'événement a été déclenché.
 
 Un seul gestionnaire `onauxclick` peut être affecté à un objet à la fois. Vous pouvez préférer utiliser la méthode {{domxref("EventTarget.addEventListener()")}} à la place, car elle est plus flexible.
 
@@ -56,15 +56,13 @@ button.onauxclick = function() {
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                       | Commentaire |
-| -------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('UI Events','#event-type-auxclick','onauxclick')}} | {{Spec2('UI Events')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.GlobalEventHandlers.onauxclick")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - {{event("auxclick")}} event
 - Related event handlers

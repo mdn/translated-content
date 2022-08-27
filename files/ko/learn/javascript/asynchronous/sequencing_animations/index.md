@@ -40,7 +40,7 @@ tags:
 
 ![Screenshot of sequencing-animations assessment page](./sequencing-animations.png)
 
-이미지는 [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API) 가이드에서 가져온 것입니다.
+이미지는 [Using the Web Animations API](/ko/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API) 가이드에서 가져온 것입니다.
 
 ## 프로젝트 설명
 
@@ -54,7 +54,7 @@ tags:
 
 ### 첫 번째 이미지 애니메이션
 
-우리는 [Web Animations API](/ko/docs/Web/API/Web_Animations_API)의 {{domxref("Element/animate", "element.animate()")}} 메서드를 사용하여 애니메이션을 적용할 것입니다. 
+우리는 [Web Animations API](/ko/docs/Web/API/Web_Animations_API)의 {{domxref("Element/animate", "element.animate()")}} 메서드를 사용하여 애니메이션을 적용할 것입니다.
 
 "main.js"를 업데이트하여 다음과 같이 `alice1.animate()` 호출을 추가해줍니다.
 

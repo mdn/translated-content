@@ -53,13 +53,11 @@ caches.open('v1').then(function(cache) {
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                               | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#dom-cache-delete', 'Cache: delete')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.Cache.delete")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,13 +1,6 @@
 ---
 title: 代码分割
 slug: Glossary/Code_splitting
-tags:
-  - Glossary
-  - Reference
-  - Web Performance
-  - code splitting
-  - latency
-translation_of: Glossary/Code_splitting
 ---
 **代码分割（Code splitting）**是将代码划分为可以按需/同时加载的多个 bundles 或组件。
 

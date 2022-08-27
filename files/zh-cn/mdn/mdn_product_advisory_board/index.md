@@ -1,11 +1,6 @@
 ---
 title: MDN 产品咨询委员会
 slug: MDN/MDN_Product_Advisory_Board
-tags:
-  - MDN
-  - PAB
-  - 产品咨询委员会
-translation_of: MDN/MDN_Product_Advisory_Board
 ---
 {{MDNSidebar}}
 

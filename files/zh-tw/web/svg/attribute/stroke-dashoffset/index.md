@@ -1,10 +1,6 @@
 ---
 title: stroke-dashoffset
 slug: Web/SVG/Attribute/stroke-dashoffset
-tags:
-  - 可縮放矢量圖形
-  - 可縮放矢量圖形 屬性
-translation_of: Web/SVG/Attribute/stroke-dashoffset
 ---
 « [SVG 屬性引用首頁](/en/SVG/Attribute)
 

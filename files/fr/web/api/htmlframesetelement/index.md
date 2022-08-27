@@ -62,16 +62,11 @@ _Aucun gestionnaire d'événements spécifique; hérite des gestionnairs d'évé
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire                                                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "#htmlframesetelement", "HTMLFrameSetElement")}}             | {{Spec2('HTML WHATWG')}} | À partir de l'instantané {{SpecName('HTML5 W3C')}}, l'interface {{domxref("WindowEventHandlers")}} a maintenant une propriété `onlanguagechange`. |
-| {{SpecName('HTML5 W3C', "obsolete.html#htmlframesetelement", "HTMLFrameSetElement")}} | {{Spec2('HTML5 W3C')}}     | Instantané d'un précédent {{SpecName('HTML WHATWG')}} Les cadres sont désormais obsolètes. Implémente {{domxref("WindowEventHandlers")}}.       |
-| {{SpecName('DOM2 HTML', 'html.html#ID-ID-43829095', 'HTMLBodyElement')}}                 | {{Spec2('DOM2 HTML')}}     | Aucun changement par rapport à {{SpecName("DOM1")}}.                                                                                                       |
-| {{SpecName('DOM1', 'level-one-html.html#ID-43829095', 'HTMLBodyElement')}}             | {{Spec2('DOM1')}}         | Définition initiale.                                                                                                                                               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLFrameSetElement")}}
+{{Compat}}
 
 ## Voir aussi
 

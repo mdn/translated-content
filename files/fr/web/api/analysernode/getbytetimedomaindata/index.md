@@ -82,14 +82,12 @@ draw();
 
 ## Spécifications
 
-| Spécification                                                                                                                                                        | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AnalyserNode-getByteTimeDomainData-void-Uint8Array-array', 'getByteTimeDomainData()')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AnalyserNode.getByteTimeDomainData")}}
+{{Compat}}
 
-## See also
+## Voir aussi
 
 - [Utiliser la Web Audio API](/fr/docs/Web_Audio_API/Using_Web_Audio_API)

@@ -306,7 +306,7 @@ Firefox diffèrera le déclenchement des minuteurs lorsque l'onglet actuel est e
 
 ### Pages d'arrière-plan des WebExtensions et minuteurs
 
-Pour les [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions), `setTimeout()` ne fonctionne pas de façon sûre. Il faut privilégier l'API [`alarms`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms) pour le développement d'extensions.
+Pour les [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions), `setTimeout()` ne fonctionne pas de façon sûre. Il faut privilégier l'API [`alarms`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/alarms) pour le développement d'extensions.
 
 ### Valeur maximale pour le délai
 

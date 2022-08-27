@@ -1,13 +1,6 @@
 ---
 title: Origin
 slug: Web/HTTP/Headers/Origin
-tags:
-  - HTTP
-  - Reference
-  - Request header
-  - header
-  - origin
-translation_of: Web/HTTP/Headers/Origin
 ---
 {{HTTPSidebar}}
 

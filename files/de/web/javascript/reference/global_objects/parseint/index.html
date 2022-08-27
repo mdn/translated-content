@@ -51,7 +51,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 
 <p>Wenn das erste Zeichen nicht zu einer Zahl konvertiert werden kann, gibt <code>parseInt</code> <code>NaN</code> zurück.</p>
 
-<p>Für arithmetische Zwecke ist <code>NaN</code> in keinem Zahlensystem eine Zahl. Man kann die Funktion {{jsxref("isNaN", "isNaN()")}} aufrufen, um zu prüfen, ob das Ergebnis von <code>parseInt</code> <code>NaN</code> ist. Wenn <code>NaN</code> in einer arithmetischen Operation eingesetzt wird, ist das Ergebnis auch immer <code>NaN</code>.</p>
+<p>Für arithmetische Zwecke ist <code>NaN</code> in keinem Zahlensystem eine Zahl. Man kann die Funktion {{jsxref("isNaN", "isNaN()")}} aufrufen, um zu prüfen, ob das Ergebnis von <code>parseInt</code> <code>NaN</code> ist. Wenn <code>NaN</code> in einer arithmetischen Operation eingesetzt wird, ist das Ergebnis auch immer <code>NaN</code>.</p>
 
 <p>Um Zahlen in String-Repräsentationen in verschiedenen Zahlensystemen zu konvertieren nutze folgendes:<br>
  <code>intValue.toString(radix)</code>.</p>
@@ -109,7 +109,7 @@ parseInt(0.00000000000434, 10); // Sehr kleine Zahl wird zu 4</pre>
 
 <h2 id="Oktal-Interpretationen_ohne_radix">Oktal-Interpretationen ohne radix</h2>
 
-<p>Obwohl ECMAScript 3 es nicht empfahl und ECMAScript 5 es verbietet, interpretieren viele Implementierungen einen mit <code>"0"</code> beginnende String als Oktalzahl. Das folgende Beispiel hat ein Ergebnis im Oktal- oder Dezimalsystem. <strong>Das Zahlensystem sollte immer angegeben werden, um solche Verwirrungen zu vermeiden.</strong></p>
+<p>Obwohl ECMAScript 3 es nicht empfahl und ECMAScript 5 es verbietet, interpretieren viele Implementierungen einen mit <code>"0"</code> beginnende String als Oktalzahl. Das folgende Beispiel hat ein Ergebnis im Oktal- oder Dezimalsystem. <strong>Das Zahlensystem sollte immer angegeben werden, um solche Verwirrungen zu vermeiden.</strong></p>
 
 <pre class="brush: js">parseInt("0e0"); // 0
 parseInt("08"); // 0, '8' ist keine oktale Ziffer.
@@ -121,7 +121,7 @@ parseInt("08"); // 0, '8' ist keine oktale Ziffer.
 
 <p>Die <code>parseInt</code> Funktion produziert eine ganze Zahl, indem der Inhalt vom string Argument interpretiert wird, abhängig vom in radix angegebenen Zahlensystem. Führende Whitespaces werden ignoriert. Wenn radix <code>undefined</code> oder <code>0</code> ist, wird von <code>10</code> ausgegangen, außer die Zahl beginnt mit den Zeichen <code>0x</code> oder <code>0X</code>, dann wird <code>16</code> für radix angenommen.</p>
 
-<p>Das unterscheidet sich von der ECMAScript 3 Spezifikation, welche Oktalinterpretationen nicht empfiehlt, sie aber erlaubt.</p>
+<p>Das unterscheidet sich von der ECMAScript 3 Spezifikation, welche Oktalinterpretationen nicht empfiehlt, sie aber erlaubt.</p>
 
 <p>Weil viele Implementierungen dieses Verhalten seit 2013 nicht geändert haben und auch ältere Browser unterstützt werden müssen, <strong>sollte immer das radix-Argument gesetzt werden.</strong></p>
 
@@ -162,17 +162,17 @@ console.log(filterInt('1.61803398875'));     // NaN
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.1.2.2', 'parseInt')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-parseint-string-radix', 'parseInt')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-parseint-string-radix', 'parseInt')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

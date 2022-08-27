@@ -11,19 +11,19 @@ translation_of: Web/API/ReadableStream
 ---
 <p>{{APIRef("Streams")}}{{SeeCompatTable}}</p>
 
-<p><span class="seoSummary">Das <code>ReadableStream</code> Interface der <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> repräsentiert einen lesbaren Datenstrom von Bytes.</span></p>
+<p><span class="seoSummary">Das <code>ReadableStream</code> Interface der <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> repräsentiert einen lesbaren Datenstrom von Bytes.</span></p>
 
 <h2 id="Konstruktor">Konstruktor</h2>
 
 <dl>
  <dt>{{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}</dt>
- <dd>Erstellt eine Instanz des <code>ReadableStream</code> Interfaces.</dd>
+ <dd>Erstellt eine Instanz des <code>ReadableStream</code> Interfaces.</dd>
 </dl>
 
 <h2 id="Eigenschaften">Eigenschaften</h2>
 
 <dl>
- <dt>{{domxref("ReadableStream.locked")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("ReadableStream.locked")}} {{readonlyInline}}</dt>
  <dd>Gibt zurück, ob der Stream bereits für einen Reader gesperrt ist.</dd>
 </dl>
 
@@ -31,15 +31,15 @@ translation_of: Web/API/ReadableStream
 
 <dl>
  <dt>{{domxref("ReadableStream.cancel()")}}</dt>
- <dd>Bricht den Stream ab und signalisiert dadurch, dass der Konsument sein Interesse am Stream verloren hat. Das angegebene <code>reason</code> Argument wird an die darunterliegende Quelle weitergegeben, welche dieses benutzen kann. </dd>
+ <dd>Bricht den Stream ab und signalisiert dadurch, dass der Konsument sein Interesse am Stream verloren hat. Das angegebene <code>reason</code> Argument wird an die darunterliegende Quelle weitergegeben, welche dieses benutzen kann. </dd>
  <dt>{{domxref("ReadableStream.getReader()")}}</dt>
- <dd>Erstellt einen Reader, dessen Typ durch die <code>mode</code> Option angegeben wird, und sperrt den Stream für den neuen Reader. Während der Stream gesperrt ist kann kein anderer Reader angelegt werden bis dieser freigegeben wurde.</dd>
+ <dd>Erstellt einen Reader, dessen Typ durch die <code>mode</code> Option angegeben wird, und sperrt den Stream für den neuen Reader. Während der Stream gesperrt ist kann kein anderer Reader angelegt werden bis dieser freigegeben wurde.</dd>
  <dt>{{domxref("ReadableStream.getIterator()")}}</dt>
- <dd>Erstellt einen asyncronen ReadableStream-Iterator und sperrt den Stream für ihn, sodass der Iterator der einzige Leser ist. Während der Stream gesperrt ist kann kein anderer Reader angelegt werden bis dieser freigegeben wurde.</dd>
+ <dd>Erstellt einen asyncronen ReadableStream-Iterator und sperrt den Stream für ihn, sodass der Iterator der einzige Leser ist. Während der Stream gesperrt ist kann kein anderer Reader angelegt werden bis dieser freigegeben wurde.</dd>
  <dt>{{domxref("ReadableStream.pipeThrough()")}}</dt>
- <dd>Bietet die Möglichkeit den Stream mit transformierenden Streams zu verketten.</dd>
+ <dd>Bietet die Möglichkeit den Stream mit transformierenden Streams zu verketten.</dd>
  <dt>{{domxref("ReadableStream.pipeTo()")}}</dt>
- <dd>Pipet den aktuellen <code>ReadableStream</code> zu einem gegebenen {{domxref("WritableStream")}} und gibt ein {{domxref("Promise")}} zurück welches erfüllt ist, wenn der Piping-Prozess erfolgreich beendet wurde oder verwirft es, wenn irgendein anderer Fehler auftritt.</dd>
+ <dd>Pipet den aktuellen <code>ReadableStream</code> zu einem gegebenen {{domxref("WritableStream")}} und gibt ein {{domxref("Promise")}} zurück welches erfüllt ist, wenn der Piping-Prozess erfolgreich beendet wurde oder verwirft es, wenn irgendein anderer Fehler auftritt.</dd>
  <dt>{{domxref("ReadableStream.tee()")}}</dt>
  <dd>Verzweigt den <code>ReadableStream</code> in zwei neue Stream-Instanzen, auf denen parallel gelesen werden kann.</dd>
  <dt>{{domxref("ReadableStream[@@asyncIterator]()")}}</dt>
@@ -48,9 +48,9 @@ translation_of: Web/API/ReadableStream
 
 <h2 id="Benutzung">Benutzung</h2>
 
-<p>Im folgenden Beispiel wird eine {{domxref("Response")}} erzeugt, die HTML-Fragmente einer anderen Ressource fetched und an den Browser streamt.</p>
+<p>Im folgenden Beispiel wird eine {{domxref("Response")}} erzeugt, die HTML-Fragmente einer anderen Ressource fetched und an den Browser streamt.</p>
 
-<p>Dadurch wird die Benutzung von {{domxref("ReadableStream")}} in Kombination mit {{domxref("Uint8Array")}} gezeigt.</p>
+<p>Dadurch wird die Benutzung von {{domxref("ReadableStream")}} in Kombination mit {{domxref("Uint8Array")}} gezeigt.</p>
 
 <pre class="brush: js notranslate">fetch("https://www.example.org/").then((response) =&gt; {
   const reader = response.body.getReader();

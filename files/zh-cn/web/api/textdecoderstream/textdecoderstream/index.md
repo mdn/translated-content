@@ -1,13 +1,6 @@
 ---
 title: TextDecoderStream()
 slug: Web/API/TextDecoderStream/TextDecoderStream
-page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - TextDecoderStream
-translation_of: Web/api/TextDecoderStream/TextDecoderStream
 ---
 {{APIRef("Encoding API")}}
 

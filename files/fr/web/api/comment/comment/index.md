@@ -26,13 +26,11 @@ var comment = new Comment("Test");
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                           | Commentaire          |
-| -------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG', '#comment', 'Comment.Comment()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Comment.Comment")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,13 +1,6 @@
 ---
 title: Array() 构造器
 slug: Web/JavaScript/Reference/Global_Objects/Array/Array
-tags:
-  - 数组
-  - 构造器
-  - JavaScript
-  - 参考手册
-browser-compat: javascript.builtins.Array.Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/Array
 ---
 {{JSRef}}
 

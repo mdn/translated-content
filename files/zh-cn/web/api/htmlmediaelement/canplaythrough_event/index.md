@@ -1,9 +1,6 @@
 ---
 title: 'HTMLMediaElement: canplaythrough'
 slug: Web/API/HTMLMediaElement/canplaythrough_event
-tags:
-  - canplaythrough
-translation_of: Web/API/HTMLMediaElement/canplaythrough_event
 ---
 {{APIRef("HTMLMediaElement")}}
 

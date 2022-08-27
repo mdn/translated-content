@@ -80,13 +80,11 @@ var cachedResponse = caches.match(event.request).catch(function() {
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#dom-cache-put', 'Cache: put')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Cache.put")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -103,7 +103,7 @@ translation_of: Learn/JavaScript/First_steps/Silly_story_generator
   document.querySelector('html').style.backgroundColor = 'red';
   ```
 
-- [Math.round()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round) 는 가장 가까운 정수로 단순하게 반올림한 결과를 반환하는 JavaScript 내장함수 입니다.
+- [Math.round()](/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/round) 는 가장 가까운 정수로 단순하게 반올림한 결과를 반환하는 JavaScript 내장함수 입니다.
 - 변환이 필요한 세 개의 문장이 문제 있습니다. 아마도 `replace()` 함수를 반복적으로 실행 하거나 정규 표현식을 사용할 수 있습니다. 예를 들어 `var text = 'I am the biggest lover, I love my love'; text.replace(/love/g,'like');` 를 실행하면 인스턴스의 'love' 는 'like' 로 모두 바뀌게 될겁니다. 기억하세요, 문자열은 변하지 않습니다!(문자열은 새 변경할 수 없으며, 새 문자열이 생성되고 그 생성된 결과를 인스턴스가 갖게됨을 표현한 것으로 추정)
 
 ## 평가 또는 추가 도움

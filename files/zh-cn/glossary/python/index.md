@@ -1,7 +1,6 @@
 ---
 title: Python
 slug: Glossary/Python
-translation_of: Glossary/Python
 ---
 **Python** 是一个高级通用编程语言。它使用多范式方法。这意味着它支持程序化、面向对象和一些功能性编程结构。
 

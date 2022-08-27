@@ -37,7 +37,7 @@ arguments[2]
 
 <pre class="brush: js notranslate">arguments[1] = 'new value';</pre>
 
-<p>Das <code>arguments</code>-Objekt ist kein {{jsxref("Array")}}. Es ist ähnlich wie ein <code>Array</code>, hat aber keine Eigenschaften eines <code>Array</code>s mit <span class="dpf_sent" id="dpfsent_1">Ausnahme </span>von {{jsxref("Functions/arguments/length", "length")}}. Zum Beispiel ist die {{jsxref("Global_Objects/Array/pop", "pop")}}-Methode nicht vorhanden. Jedoch kann <code>arguments</code> zu einem echten <code>Array</code> konvertiert werden:</p>
+<p>Das <code>arguments</code>-Objekt ist kein {{jsxref("Array")}}. Es ist ähnlich wie ein <code>Array</code>, hat aber keine Eigenschaften eines <code>Array</code>s mit <span>Ausnahme </span>von {{jsxref("Functions/arguments/length", "length")}}. Zum Beispiel ist die {{jsxref("Global_Objects/Array/pop", "pop")}}-Methode nicht vorhanden. Jedoch kann <code>arguments</code> zu einem echten <code>Array</code> konvertiert werden:</p>
 
 <pre class="brush: js notranslate">var args = Array.prototype.slice.call(arguments);
 var args = [].slice.call(arguments);
@@ -46,12 +46,12 @@ var args = [].slice.call(arguments);
 const args = Array.from(arguments);</pre>
 
 <div class="warning">
-<p>Der Einsatz von slice auf arguments kann Optimierungen bei einigen JavaScript-Engines (z. B. bei V8 — <a href="https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments">mehr Informationen</a>) verhindern. Wenn man sich darum kümmert, sollte ein neues Array erstellt werden, indem über das arguments-Objekt iteriert wird. Eine Alternative ist der Einsatz von <code>Array.apply</code> wie folgt:</p>
+<p>Der Einsatz von slice auf arguments kann Optimierungen bei einigen JavaScript-Engines (z. B. bei V8 — <a href="https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments">mehr Informationen</a>) verhindern. Wenn man sich darum kümmert, sollte ein neues Array erstellt werden, indem über das arguments-Objekt iteriert wird. Eine Alternative ist der Einsatz von <code>Array.apply</code> wie folgt:</p>
 
 <pre class="brush: js notranslate">var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));)</pre>
 </div>
 
-<p>Man kann das <code>arguments</code>-Objekt nutzen, um eine Funktion mit mehr übergebenen Parametern, als die der formalen Definition, zu verarbeiten. Diese Technik ist hilfreich für Funktionen mit variabler Parameteranzahl. Man kann {{jsxref("Functions/arguments/length", "arguments.length")}} nutzen, um die Anzahl der übergebenen Parameter festzustellen und dann jeden Parameter über das <code>arguments</code>-Objekt zu verarbeiten. (Um die Anzahl der deklarierten Parameter festzustellen, kann die {{jsxref("Functions/length", "Funktion.length")}} Eigenschaft genutzt werden.)</p>
+<p>Man kann das <code>arguments</code>-Objekt nutzen, um eine Funktion mit mehr übergebenen Parametern, als die der formalen Definition, zu verarbeiten. Diese Technik ist hilfreich für Funktionen mit variabler Parameteranzahl. Man kann {{jsxref("Functions/arguments/length", "arguments.length")}} nutzen, um die Anzahl der übergebenen Parameter festzustellen und dann jeden Parameter über das <code>arguments</code>-Objekt zu verarbeiten. (Um die Anzahl der deklarierten Parameter festzustellen, kann die {{jsxref("Functions/length", "Funktion.length")}} Eigenschaft genutzt werden.)</p>
 
 <h3 id="Einsatz_von_typeof_bei_arguments">Einsatz von <code>typeof</code> bei arguments</h3>
 
@@ -85,16 +85,16 @@ var args = [...arguments];</pre>
 
 <h2 id="Examples" name="Examples">Beispiele</h2>
 
-<h3 id="Example_Defining_function_that_concatenates_several_strings" name="Example:_Defining_function_that_concatenates_several_strings">Definition einer Funktion, die mehrere Strings <span class="dpf_sent" id="dpfsent_1">konkateniert</span></h3>
+<h3 id="Example_Defining_function_that_concatenates_several_strings" name="Example:_Defining_function_that_concatenates_several_strings">Definition einer Funktion, die mehrere Strings <span>konkateniert</span></h3>
 
-<p>Dieses Beispiel definiert eine Funktion, die mehrere Strings <span class="dpf_sent" id="dpfsent_1">konkateniert</span>. Der einzige formale Parameter der Funktion ist ein String, der die Zeichen enthält, die die einzelnen Elemente trennt. Die Funktion ist wie folgt definiert:</p>
+<p>Dieses Beispiel definiert eine Funktion, die mehrere Strings <span>konkateniert</span>. Der einzige formale Parameter der Funktion ist ein String, der die Zeichen enthält, die die einzelnen Elemente trennt. Die Funktion ist wie folgt definiert:</p>
 
 <pre class="brush:js notranslate">function myConcat(separator) {
   var args = Array.prototype.slice.call(arguments, 1);
   return args.join(separator);
 }</pre>
 
-<p>Man kann eine beliebige Anzahl von Parametern der Funktion <span class="dpf_sent" id="dpfsent_0">übergeben</span> und es wird jedes Argument für den String eingesetzt.</p>
+<p>Man kann eine beliebige Anzahl von Parametern der Funktion <span>übergeben</span> und es wird jedes Argument für den String eingesetzt.</p>
 
 <pre class="brush:js notranslate">// returns "red, orange, blue"
 myConcat(", ", "red", "orange", "blue");
@@ -137,9 +137,9 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");</pre>
 }
 foo(1, 2, 3); // [1,2,3]</pre>
 
-<p>Wenn der Einsatz von <a href="/de/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest</a>, <a href="/de/docs/Web/JavaScript/Reference/Functions/Default_parameters">default</a>, und <a href="/de/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destrukturierenden</a> Parametern nicht die <a href="/de/docs/Web/JavaScript/Reference/Strict_mode#Making_eval_and_arguments_simpler">die Eigenschaften des <code>arguments</code> Objekts verändert, gibt es eine Unterschied zwischen dem strict mode</a> und dem nicht strict mode.</p>
+<p>Wenn der Einsatz von <a href="/de/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest</a>, <a href="/de/docs/Web/JavaScript/Reference/Functions/Default_parameters">default</a>, und <a href="/de/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destrukturierenden</a> Parametern nicht die <a href="/de/docs/Web/JavaScript/Reference/Strict_mode#Making_eval_and_arguments_simpler">die Eigenschaften des <code>arguments</code> Objekts verändert, gibt es eine Unterschied zwischen dem strict mode</a> und dem nicht strict mode.</p>
 
-<p>Wenn eine nicht-strikte (non-strict) Funktion nicht  <a href="/de/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest</a>, <a href="/de/docs/Web/JavaScript/Reference/Functions/Default_parameters">default</a>, oder <a href="/de/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destrukturierende</a> Parameter enthält, referenzieren die Werte des <code>arguments</code> Objektes direkt auf die deklarierten Parameter und umgekehrt. Siehe dazu folgenden Quelltext:</p>
+<p>Wenn eine nicht-strikte (non-strict) Funktion nicht  <a href="/de/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest</a>, <a href="/de/docs/Web/JavaScript/Reference/Functions/Default_parameters">default</a>, oder <a href="/de/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destrukturierende</a> Parameter enthält, referenzieren die Werte des <code>arguments</code> Objektes direkt auf die deklarierten Parameter und umgekehrt. Siehe dazu folgenden Quelltext:</p>
 
 <pre class="brush: js notranslate">function func (a) {
   arguments[0] = 99; // Aktualisert auch arguments[0] und a

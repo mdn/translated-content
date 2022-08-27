@@ -72,15 +72,13 @@ self.addEventListener('fetch', function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                               | Commentaire          |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#fetch-event-section', 'FetchEvent')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FetchEvent")}}
+{{Compat}}
 
 ## Voir aussi
 
 - {{jsxref("Promise")}}
-- [Fetch API](/en-US/docs/Web/API/Fetch_API)
+- [Fetch API](/fr/docs/Web/API/Fetch_API)

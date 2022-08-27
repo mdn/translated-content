@@ -35,7 +35,7 @@ translation_of: Learn/JavaScript/First_steps/Variables
 
 ## 필요한 툴
 
-이번 수업에서 컨텐츠에 대한 이해도를 테스트하고자, 코드를 입력하라는 요청을 받게 될 것이다. 만약 데스크탑 브라우저를 사용한다면, 코드를 실행하기 가장 좋은 프로그램은 브라우저의 자바스크립트 콘솔창일 것이다.(도구의 사용법에 대해 알고자 한다면 [What are browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) 를 참고하자)
+이번 수업에서 컨텐츠에 대한 이해도를 테스트하고자, 코드를 입력하라는 요청을 받게 될 것이다. 만약 데스크탑 브라우저를 사용한다면, 코드를 실행하기 가장 좋은 프로그램은 브라우저의 자바스크립트 콘솔창일 것이다.(도구의 사용법에 대해 알고자 한다면 [What are browser developer tools](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools) 를 참고하자)
 
 ## 변수란?
 
@@ -267,7 +267,7 @@ myAge = 40;
 - 변수는 대소문자를 구분 합니다. - `myage` 와 `myAge`  는 다른 변수 입니다.
 - 마지막으로 JavaScript 예약어를 변수 이름으로 사용하면 안됩니다. (예약어란 JavaScript의 실제 구문을 구성하는 단어를 의미 합니다.) 따라서 변수 이름으로  `var`, `function`, `let`, `for` 와 같은 단어를 사용 할 수 없습니다. 브라우저는 이러한 단어를 다른 코드 아이템(예약어)로 인식하므로 오류가 발생 합니다.
 
-> **참고:** 다음 [Lexical grammar — keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords) 링크에서 예약어의 목록을 확인 할 수 있습니다.
+> **참고:** 다음 [Lexical grammar — keywords](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords) 링크에서 예약어의 목록을 확인 할 수 있습니다.
 
 바람직한 변수 이름의 예:
 

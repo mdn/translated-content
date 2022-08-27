@@ -7,7 +7,6 @@ tags:
   - Element
   - メソッド
   - リファレンス
-browser-compat: api.Element.getElementsByTagName
 translation_of: Web/API/Element/getElementsByTagName
 ---
 {{ APIRef("DOM") }}

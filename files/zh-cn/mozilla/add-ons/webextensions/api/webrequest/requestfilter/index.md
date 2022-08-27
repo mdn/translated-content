@@ -1,9 +1,6 @@
 ---
 title: webRequest.RequestFilter
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter
-tags:
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter
 ---
 {{AddonSidebar()}}
 

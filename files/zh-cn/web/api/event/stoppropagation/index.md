@@ -1,15 +1,6 @@
 ---
 title: event.stopPropagation
 slug: Web/API/Event/stopPropagation
-tags:
-  - API
-  - DOM
-  - Event
-  - stopPropagation
-  - 事件
-  - 方法
-  - 阻止冒泡事件
-translation_of: Web/API/Event/stopPropagation
 ---
 {{APIRef("DOM")}}
 

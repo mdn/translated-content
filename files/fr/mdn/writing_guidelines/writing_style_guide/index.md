@@ -18,7 +18,7 @@ original_slug: MDN/Guidelines/Writing_style_guide
 
 Afin de présenter la documentation de façon organisée, cohérente et facile à lire, le guide stylistique de MDN décrit la façon dont le texte doit être organisé, orthographié, mis en forme, etc. Il s'agit ici de règles générales plutôt que de consignes strictes. Le contenu importe plus que la forme et il n'y a pas d'obligation à apprendre ce guide avant de contribuer. Toutefois, ne soyez pas surpris⋅e si une contributrice ou un contributeur édite une de vos éditions pour respecter ce guide.
 
-La suite de ce guide vise avant tout la documentation francophone. Elle reprend des parties du [guide stylistique anglophone](/en-US/docs/MDN/Guidelines/Writing_style_guide) lorsque c'est pertinent. Vous pouvez également consulter [le guide stylistique de la communauté francophone](https://github.com/mozfr/besogne/wiki/Guide-stylistique-pour-la-traduction). Si vous souhaitez contribuer au contenu en anglais, rapportez vous au [guide stylistique anglophone](/en-US/docs/MDN/Guidelines/Writing_style_guide).
+La suite de ce guide vise avant tout la documentation francophone. Elle reprend des parties du [guide stylistique anglophone](/fr/docs/MDN/Guidelines/Writing_style_guide) lorsque c'est pertinent. Vous pouvez également consulter [le guide stylistique de la communauté francophone](https://github.com/mozfr/besogne/wiki/Guide-stylistique-pour-la-traduction). Si vous souhaitez contribuer au contenu en anglais, rapportez vous au [guide stylistique anglophone](/fr/docs/MDN/Guidelines/Writing_style_guide).
 
 ## Règles de base
 

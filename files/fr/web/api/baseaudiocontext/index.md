@@ -106,16 +106,14 @@ var finish = audioCtx.destination;
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#BaseAudioContext', 'BaseAudioContext')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.BaseAudioContext")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Utilisation de l'API Web Audio](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Utilisation de l'API Web Audio](/fr/docs/Web_Audio_API/Using_Web_Audio_API)
 - {{domxref("AudioContext")}}
 - {{domxref("OfflineAudioContext")}}

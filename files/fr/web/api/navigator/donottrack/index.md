@@ -29,13 +29,11 @@ dump(window.navigator.doNotTrack);
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                       | Commentaire         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName("Tracking", "#widl-Navigator-doNotTrack", "Navigator.doNotTrack")}} | {{Spec2("Tracking")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Navigator.doNotTrack")}}
+{{Compat}}
 
 ## Voir aussi
 

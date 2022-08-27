@@ -1,12 +1,6 @@
 ---
 title: Forms
 slug: Web/Accessibility/ARIA/forms
-tags:
-  - ARIA
-  - Accessibility
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/Accessibility/ARIA/forms
 ---
 下列連結提供多種技術的資訊來處進網頁表格的存取:
 

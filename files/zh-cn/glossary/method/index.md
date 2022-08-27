@@ -1,7 +1,6 @@
 ---
 title: Method
 slug: Glossary/Method
-translation_of: Glossary/Method
 ---
 一个方法就是一个函数，是对象的属性之一。有两种类型的方法：*实例方法*是由对象实例执行的内置任务，另一种是*静态方法*，在对象构造函数内直接调用的任务*。*
 

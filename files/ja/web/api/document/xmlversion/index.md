@@ -9,7 +9,6 @@ tags:
   - プロパティ
   - リファレンス
   - 非推奨
-browser-compat: api.Document.xmlVersion
 translation_of: Web/API/Document/xmlVersion
 ---
 {{APIRef("DOM")}}{{deprecated_header}}

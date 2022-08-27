@@ -48,14 +48,10 @@ if (foo.hasAttribute("bar")) {
 
 {{DOMAttributeMethods}}
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                | Statut                           | Commentaire                                                                                               |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-element-hasattribute', 'Element.hasAttribute()')}} | {{Spec2('DOM WHATWG')}} | Dans {{SpecName('DOM3 Core')}}, déplacé de {{domxref("Node")}} à {{domxref("Element")}} |
-| {{SpecName('DOM3 Core', 'core.html#ID-ElHasAttr', 'Element.hasAttribute()')}}     | {{Spec2('DOM3 Core')}}     | Pas de changement par rapport à {{SpecName('DOM2 Core')}}                                          |
-| {{SpecName('DOM2 Core', 'core.html#ID-ElHasAttr', 'Element.hasAttribute()')}}     | {{Spec2('DOM2 Core')}}     | Définition initiale.                                                                                      |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.Element.hasAttribute")}}
+{{Compat}}

@@ -8,7 +8,6 @@ tags:
   - メソッド
   - リファレンス
   - getElementsByClassName
-browser-compat: api.Element.getElementsByClassName
 translation_of: Web/API/Element/getElementsByClassName
 ---
 {{APIRef("DOM")}}

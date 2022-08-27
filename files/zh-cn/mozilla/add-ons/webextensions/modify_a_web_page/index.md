@@ -1,7 +1,6 @@
 ---
 title: 修改 web 页面
 slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
-translation_of: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 ---
 {{AddonSidebar}}
 

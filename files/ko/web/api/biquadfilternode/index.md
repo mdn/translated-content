@@ -48,13 +48,13 @@ The `BiquadFilterNode` interface represents a simple low-order filter, and is cr
 _Inherits properties from its parent,_ _{{domxref("AudioNode")}}_.
 
 - {{domxref("BiquadFilterNode.frequency")}}
-  - : Is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing a frequency in the current filtering algorithm measured in hertz (Hz).
+  - : Is an [a-rate](/ko/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing a frequency in the current filtering algorithm measured in hertz (Hz).
 - {{domxref("BiquadFilterNode.detune")}}
-  - : Is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing detuning of the frequency in [cents](http://en.wikipedia.org/wiki/Cent_%28music%29).
+  - : Is an [a-rate](/ko/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing detuning of the frequency in [cents](http://en.wikipedia.org/wiki/Cent_%28music%29).
 - {{domxref("BiquadFilterNode.Q")}}
-  - : Is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing a [Q factor](http://en.wikipedia.org/wiki/Q_factor), or _quality factor_.
+  - : Is an [a-rate](/ko/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing a [Q factor](http://en.wikipedia.org/wiki/Q_factor), or _quality factor_.
 - {{domxref("BiquadFilterNode.gain")}} {{readonlyInline}}
-  - : Is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing the [gain](http://en.wikipedia.org/wiki/Gain) used in the current filtering algorithm.
+  - : Is an [a-rate](/ko/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing the [gain](http://en.wikipedia.org/wiki/Gain) used in the current filtering algorithm.
 - {{domxref("BiquadFilterNode.type")}}
 
   - : Is a string value defining the kind of filtering algorithm the node is implementing.
@@ -195,7 +195,7 @@ _{{domxref("AudioNode")}} 로부터 메서드를 상속받습니다_.
 
 ## Example
 
-See [`AudioContext.createBiquadFilter`](/en-US/docs/Web/API/BaseAudioContext/createBiquadFilter#example) for example code that shows how to use an `AudioContext` to create a Biquad filter node.
+See [`AudioContext.createBiquadFilter`](/ko/docs/Web/API/BaseAudioContext/createBiquadFilter#example) for example code that shows how to use an `AudioContext` to create a Biquad filter node.
 
 ## Specifications
 
@@ -207,4 +207,4 @@ See [`AudioContext.createBiquadFilter`](/en-US/docs/Web/API/BaseAudioContext/cre
 
 ## See also
 
-- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/ko/docs/Web_Audio_API/Using_Web_Audio_API)

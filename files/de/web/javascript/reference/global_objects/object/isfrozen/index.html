@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p>Ein Objekt gilt dann und nur dann als eingefroren, wenn es nicht {{jsxref("Object.isExtensible()", "erweiterbar", "", 1)}} ist, all seine Eigenschaften nicht konfigurierbar sind und all seine Daten-Eigenschaften (d.h. Eigenschaften die nicht durch Getter oder Setter definiert sind) nicht schreibbar sind.</p>
+<p>Ein Objekt gilt dann und nur dann als eingefroren, wenn es nicht {{jsxref("Object.isExtensible()", "erweiterbar", "", 1)}} ist, all seine Eigenschaften nicht konfigurierbar sind und all seine Daten-Eigenschaften (d.h. Eigenschaften die nicht durch Getter oder Setter definiert sind) nicht schreibbar sind.</p>
 
 <h2 id="Beispiele">Beispiele</h2>
 
@@ -60,14 +60,14 @@ Object.isFrozen(eineEigenschaft); // === true
 var nichtSchreibbar = { e: 'plep' };
 Object.preventExtensions(nichtSchreibbar);
 Object.defineProperty(nichtSchreibbar, 'e', {
-  writable: false
+  writable: false
 }); // `e` wird nicht schreibbar
 Object.isFrozen(nichtSchreibbar); // === false
 
 // Wird diese Eigenschaft nicht konfigurierbar,
 // so friert das Objekt ein.
 Object.defineProperty(nichtSchreibbar, 'e', {
-  configurable: false
+  configurable: false
 }); // `e` wird nicht konfigurierbar
 Object.isFrozen(nichtSchreibbar); // === true
 
@@ -76,14 +76,14 @@ Object.isFrozen(nichtSchreibbar); // === true
 var nichtKonfigurierbar = { release: 'the kraken!' };
 Object.preventExtensions(nichtKonfigurierbar);
 Object.defineProperty(nichtKonfigurierbar, 'release', {
-  configurable: false
+  configurable: false
 });
 Object.isFrozen(nichtKonfigurierbar); // === false
 
 // Wird diese Eigenschaft nicht schreibbar,
 // so friert das Objekt ein.
 Object.defineProperty(nichtKonfigurierbar, 'release', {
-  writable: false
+  writable: false
 });
 Object.isFrozen(nichtKonfigurierbar); // === true
 
@@ -96,7 +96,7 @@ Object.isFrozen(dynamisch); // === false
 // ABER, wird diese Eigenschaft nicht konfigurierbar,
 // friert das Objekt ein.
 Object.defineProperty(dynamisch, 'food', {
-  configurable: false
+  configurable: false
 });
 Object.isFrozen(dynamisch); // === true
 

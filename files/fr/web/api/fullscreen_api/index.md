@@ -133,9 +133,7 @@ Pour le moment, tous les navigateurs n'ont pas implémenté la version sans pré
 
 ## Spécifications
 
-| Specification                        | Statut                           | Commentaire          |
-| ------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName("Fullscreen")}} | {{Spec2("Fullscreen")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

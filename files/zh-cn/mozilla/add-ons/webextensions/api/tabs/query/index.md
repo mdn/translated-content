@@ -1,7 +1,6 @@
 ---
 title: tabs.query()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/query
 original_slug: Mozilla/Add-ons/WebExtensions/API/tabs/查询
 ---
 \[阿登侧边栏（）]

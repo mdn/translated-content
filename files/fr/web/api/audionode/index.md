@@ -13,7 +13,7 @@ L'interface **`AudioNode`** est une interface générique pour représenter un m
 
 Un `AudioNode` a des entrées et sorties, chacune avec un certain nombre de _canaux_. Un `AudioNode` avec zero entrée et une ou plusieurs sorties est appelée un *noeud source*. Le traitement exact varie d'un `AudioNode` à l'autre; en général un noeud lit l'entrée, réalise un traitement, et génère de nouvelles valeurs pour la sortie, ou laisse simplement l'entrée traverser (par exemple dans le cas de l'{{domxref("AnalyserNode")}}, où le résultat du traitment du traitement est accessible à part).
 
-Plusieurs noeuds peuvent être reliés dans un _graphe de traitement_. Un tel graphe est contenu dans un {{domxref("AudioContext")}}. Chaque `AudioNode` fait partie d'exactement un contexte. Les noeuds de traitement héritent des propriétés et méthodse d'`AudioNode`, mais définissent aussi leurs propres fonctionnalités par dessus. Pour plus de détails, voir les pages individuelles liées sur la page d'accueil [Web Audio API](/en-US/docs/Web/API/Web_Audio_API).
+Plusieurs noeuds peuvent être reliés dans un _graphe de traitement_. Un tel graphe est contenu dans un {{domxref("AudioContext")}}. Chaque `AudioNode` fait partie d'exactement un contexte. Les noeuds de traitement héritent des propriétés et méthodse d'`AudioNode`, mais définissent aussi leurs propres fonctionnalités par dessus. Pour plus de détails, voir les pages individuelles liées sur la page d'accueil [Web Audio API](/fr/docs/Web/API/Web_Audio_API).
 
 > **Note :** Un `AudioNode` peut être la cible d'évènements, et implémente donc l'interface {{domxref("EventTarget")}}.
 
@@ -55,7 +55,7 @@ _Implémente aussi les méthodes de l'interface_ {{domxref("EventTarget")}}.
 
 ## Exemple
 
-Ce simple extrait de code illustre la creation de quelques noeuds audio, et la façon dont les propriétés et méthodes `AudioNode` peuvent être utilisées. Vous pouvez trouver d'autres exemples sur n'importe lequel des exemples liés sur la page [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) (par exemple [Violent Theremin](https://github.com/mdn/violent-theremin).)
+Ce simple extrait de code illustre la creation de quelques noeuds audio, et la façon dont les propriétés et méthodes `AudioNode` peuvent être utilisées. Vous pouvez trouver d'autres exemples sur n'importe lequel des exemples liés sur la page [Web Audio API](/fr/docs/Web/API/Web_Audio_API) (par exemple [Violent Theremin](https://github.com/mdn/violent-theremin).)
 
 ```js
 var AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -74,16 +74,14 @@ oscillator.numberOfOutputs;
 oscillator.channelCount;
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#the-audionode-interface', 'AudioNode')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioNode")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Utiliser la Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

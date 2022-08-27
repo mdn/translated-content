@@ -59,4 +59,4 @@ myDiv.dispatchEvent(evt);
 
 - {{domxref("Event")}}
 - {{domxref("EventTarget.dispatchEvent()")}}
-- [이벤트 생성 및 발동](/en-US/docs/Web/Events/Creating_and_triggering_events)
+- [이벤트 생성 및 발동](/ko/docs/Web/Events/Creating_and_triggering_events)

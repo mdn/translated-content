@@ -108,15 +108,13 @@ function displayDataByIndex() {
 };
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-getKey-IDBRequest-any-key', 'getKey()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.getKey")}}
+{{Compat}}
 
 ## Voir aussi
 

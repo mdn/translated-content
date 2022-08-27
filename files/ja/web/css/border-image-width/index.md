@@ -24,13 +24,13 @@ translation_of: Web/CSS/border-image-width
 /* キーワード値 */
 border-image-width: auto;
 
-/* &lt;length&gt; 値 */
+/* <length> 値 */
 border-image-width: 1rem;
 
-/* &lt;percentage&gt; 値 */
+/* <percentage> 値 */
 border-image-width: 25%;
 
-/* &lt;number&gt; 値 */
+/* <number> 値 */
 border-image-width: 3;
 
 /* 上下 | 左右 */

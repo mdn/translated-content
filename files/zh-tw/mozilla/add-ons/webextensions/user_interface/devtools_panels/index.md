@@ -1,12 +1,6 @@
 ---
 title: 開發工具面板
 slug: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
-tags:
-  - 初學者
-  - 擴充套件
-  - 教學
-  - 用戶介面
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 ---
 {{AddonSidebar}}
 

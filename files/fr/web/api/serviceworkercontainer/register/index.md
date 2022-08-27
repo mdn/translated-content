@@ -30,7 +30,7 @@ serviceWorkerContainer.register(scriptURL, options)
 ### Paramètres
 
 - `scriptURL`
-  - : L' URL du script contenant le `ServiceWorker`. Le fichier qui a enregistré le `ServiceWorker` doit avoir un [JavaScript MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types) valide.
+  - : L' URL du script contenant le `ServiceWorker`. Le fichier qui a enregistré le `ServiceWorker` doit avoir un [JavaScript MIME type](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types) valide.
 - `options` {{optional_inline}}
 
   - : Un objet contenant les options d'enregistrement. Les options sont:

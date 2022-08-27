@@ -1,7 +1,6 @@
 ---
 title: Author list page and Genre list page challenge
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 ---
 作者列表頁面，需要呈現數據庫中所有作者的列表，有每位作者的名字，並連結到作者詳細內容頁面。出生與死亡日期應該在名字後面，並且在同一列。
 
@@ -9,7 +8,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_pag
 
 作者列表控制器函數，需要獲取所有作者實例的列表，然後將這些實例傳遞給模板進行渲染。
 
-打開 **/controllers/authorController.js**。在文件頂部附近，找到導出的 `author_list() `控制器方法，並將其替換為以下代碼（更改後的代碼以**粗體**顯示）。
+打開 **/controllers/authorController.js**。在文件頂部附近，找到導出的 `author_list()` 控制器方法，並將其替換為以下代碼（更改後的代碼以**粗體**顯示）。
 
 ```js
 // Display list of all Authors.
@@ -68,14 +67,14 @@ In this section you should implement your own genre list page. The page should d
 
 The genre list controller function needs to get a list of all `Genre` instances, and then pass these to the template for rendering.
 
-1.  You will need to edit `genre_list()` in **/controllers/genreController.js**.
-2.  The implementation is almost exactly the same as the `author_list()` controller.
+1. You will need to edit `genre_list()` in **/controllers/genreController.js**.
+2. The implementation is almost exactly the same as the `author_list()` controller.
 
     - Sort the results by name, in ascending order.
 
-3.  The template to be rendered should be named **genre_list.pug**.
-4.  The template to be rendered should be passed the variables `title` ('Genre List') and `genre_list` (the list of genres returned from your `Genre.find()` callback.
-5.  The view should match the screenshot/requirements above (this should have a very similar structure/format to the Author list view, except for the fact that genres do not have dates).
+3. The template to be rendered should be named **genre_list.pug**.
+4. The template to be rendered should be passed the variables `title` ('Genre List') and `genre_list` (the list of genres returned from your `Genre.find()` callback.
+5. The view should match the screenshot/requirements above (this should have a very similar structure/format to the Author list view, except for the fact that genres do not have dates).
 
 ## Next steps
 

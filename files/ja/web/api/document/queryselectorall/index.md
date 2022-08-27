@@ -14,7 +14,6 @@ tags:
   - Selecting Elements
   - セレクター
   - querySelectorAll
-browser-compat: api.Document.querySelectorAll
 translation_of: Web/API/Document/querySelectorAll
 ---
 {{APIRef("DOM")}}

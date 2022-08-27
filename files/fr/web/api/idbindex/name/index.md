@@ -80,13 +80,11 @@ function displayDataByIndex() {
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-name', 'name')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.name")}}
+{{Compat}}
 
 ## Voir aussi
 

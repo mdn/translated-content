@@ -13,7 +13,7 @@ HTTP/3의 요점은 {{glossary("TCP")}} 대신 QUIC이라는 새로운 {{glossar
 ## 같이 보기
 
 - [HTTP on MDN](/ko/docs/Web/HTTP)
-- {{interwiki("wikipedia", "HTTP/3", "HTTP/3")}} on Wikipedia
+- [HTTP/3](https://ko.wikipedia.org/wiki/HTTP/3) on Wikipedia
 - [용어 사전](/ko/docs/Glossary)
 
   - {{glossary("HTTP")}}
