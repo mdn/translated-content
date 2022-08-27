@@ -42,7 +42,7 @@ Web 扩展若期望使用 `Geolocation` 对象，则必须将 `"geolocation"` �
 
 ## 示例
 
-参见[使用地理位置 API](/zh-CN/docs/Web/API/Geolocation_API/Using_the_Geolocation_API) 以获取示例代码。
+参见[使用地理位置 API](/zh-CN/docs/Web/API/Geolocation_API/Using_the_Geolocation_API#示例) 以获取示例代码。
 
 ## 规范
 
