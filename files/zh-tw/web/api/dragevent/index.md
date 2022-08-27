@@ -68,8 +68,12 @@ An Example of each property, constructor, event type and global event handlers i
 
 ## 瀏覽器相容性
 
-{{Compat("api.DragEvent")}}
+{{Compat}}
 
 ## 參見
 
-{{page("/zh-TW/docs/Web/API/DataTransfer", "參見")}}
+- [HTML 拖放 API](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API)
+- [拖曳操作](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [推薦拖曳類型](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [拖拽和放置多個項目](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
