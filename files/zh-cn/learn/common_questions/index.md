@@ -4,7 +4,7 @@ slug: Learn/Common_questions
 ---
 {{LearnSidebar}}
 
-学习区域的这一部分旨在为可能出现的常见问题提供答案，这些问题不一定是结构化的核心学习途径的一部分（例如：[HTML](/zh-CN/docs/Learn/HTML) 或 [CSS](/zh-CN/docs/Learn/CSS) 的学习文章），这些文章旨在自己工作。
+学习区域的这一部分旨在为可能出现的常见问题提供答案，这些问题不一定是结构化的核心学习途径的一部分（例如：[HTML](/zh-CN/docs/Learn/HTML) 或 [CSS](/zh-CN/docs/Learn/CSS) 的学习文章），这些文章专注于它们自己的内容。
 
 ## Web 怎样工作
 
@@ -20,7 +20,7 @@ slug: Learn/Common_questions
   - : 利用 {{Glossary("Hypertext")}} 和 {{Glossary("HTTP")}}，URL 网络上的关键概念之一。它现在是{{Glossary("Browser","浏览器")}}用来在网络上检索任何已经发布的资源的主要机制。
 - [什么是域名？](/zh-CN/docs/Learn/Common_questions/What_is_a_domain_name)
   - : 域名是互联网基础架构的关键部分。它们为互联网上任何可用的网络服务器提供了人类可读的地址。
-- [什么是网络服务器？](/zh-CN/docs/Learn/Common_questions/What_is_a_web_server)
+- [什么是 web 服务器？](/zh-CN/docs/Learn/Common_questions/What_is_a_web_server)
   - : 术语“Web 服务器”可以指在 Web 上向客户端提供网站的硬件或软件，或者两者一起工作。在本文中，我们将讨论 Web 服务器如何工作，以及为什么它们是重要的。
 
 ## 工具和安装
@@ -30,17 +30,17 @@ slug: Learn/Common_questions
 - [你需要什么软件用来造一个网站？](/zh-CN/docs/Learn/Common_questions/What_software_do_I_need)
   - : 在本文中，我们将解释在编辑，上传或查看网站时需要使用哪些软件组件。
 - [在网上做点什么需要花多少钱？](/zh-CN/docs/Learn/Common_questions/How_much_does_it_cost)
-  - : 当您推出网站时，您可能没有花费，或者您的费用可能会爆表。在这篇文章中，我们讨论了多少一切成本和你得到什么你支付（或不支付）
+  - : 当你推出网站时，你可能没有花费，或者你的费用可能会爆表。在这篇文章中，我们讨论了每一件事的成本和你付出成本（或不付出）后能得到的东西。
 - [什么文本编辑器比较好用？](/zh-CN/docs/Learn/Common_questions/Available_text_editors)
   - : 在本文中，我们重点介绍在选择和安装用于 Web 开发的文本编辑器时需要考虑的一些事项。
 - [什么是浏览器开发者工具？](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)
-  - : 每个浏览器都有一组用于调试 HTML、CSS 和其他 Web 代码的 devtool。本文解释如何使用浏览器的 devtools 的基本功能。
+  - : 每个浏览器都有一组用于调试 HTML、CSS 和其它 Web 代码的开发者工具。本文解释如何使用浏览器的开发者工具的基本功能。
 - [你怎么来确保你的网站顺利的运行？](/zh-CN/docs/Learn/Common_questions/Checking_that_your_web_site_is_working_properly)
   - : 所以你已经在网上发布了你的网站 - 非常好！但你确定它工作正常吗？本文提供一些基本的故障排除步骤。
 - [怎么搭建一个基础的开发环境？](/zh-CN/docs/Learn/Common_questions/set_up_a_local_testing_server)
   - : 在本文中，我们将解释如何在本地搭建一个测试服务器，以及基本的使用方法。
 - [怎么将文件上传到服务器？](/zh-CN/docs/Learn/Common_questions/Upload_files_to_a_web_server)
-  - : 本文介绍如何使用 {{Glossary("FTP")}} 工具在线发布您的网站——这是一种常见的网站发布方法，以便其他人可以通过计算机访问网站。
+  - : 本文介绍如何使用 {{Glossary("FTP")}} 工具在线发布你的网站——这是一种常见的网站发布方法，以便其他人可以通过计算机访问网站。
 - [怎么使用 GitHub Pages?](/zh-CN/docs/Learn/Common_questions/Using_Github_pages)
   - : 本文提供了使用 GitHub 的 gh-pages 功能发布内容的基本指南。
 - [如何在 Google App Engine 上托管你的网站？](/zh-CN/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine)
