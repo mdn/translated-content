@@ -1,10 +1,10 @@
 ---
-title: 其他表单部件
+title: 其他表单控件
 slug: Learn/Forms/Other_form_controls
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
 
-现在我们来具体看看非 `<input>` 表单部件的功能，从下拉列表菜单（drop-down list）、多行文本域（multi-line text field）到其他有用的表单功能，如我们在前一篇文章看到的 {{htmlelement('output')}} 元素和进度条（progress bar）元素。
+现在我们来具体看看非 `<input>` 表单控件的功能，从下拉列表菜单（drop-down list）、多行文本域（multi-line text field）到其他有用的表单功能，如我们在前一篇文章看到的 {{htmlelement('output')}} 元素和进度条（progress bar）元素。
 
 <table>
   <tbody>
@@ -14,7 +14,7 @@ slug: Learn/Forms/Other_form_controls
         计算机基础知识和对于
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 的基本理解</a
-        >.
+        >。
       </td>
     </tr>
     <tr>
@@ -169,7 +169,7 @@ slug: Learn/Forms/Other_form_controls
 
 数据列表会使用 {{htmlattrxref("list","input")}} 属性绑定至一个 {{htmlelement("input")}} 元素（如 `text` 或 `email` 输入类型），该属性的取值就是要绑定的数据列表的 `id` 值。
 
-一旦数据列表与表单部件相关联，它的选项就会被用来自动完成用户输入的文本；通常，它以下拉框的形式呈现给用户，列出他们输入内容的可能匹配。
+一旦数据列表与表单控件相关联，它的选项就会被用来自动完成用户输入的文本；通常，它以下拉框的形式呈现给用户，列出他们输入内容的可能匹配。
 
 #### 基础示例
 
@@ -309,7 +309,7 @@ slug: Learn/Forms/Other_form_controls
 
 - [你的第一个表单](/zh-CN/docs/Learn/Forms/Your_first_form)
 - [如何构造 HTML 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
-- [原生表单部件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
+- [原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
 - [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
 - [其它表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
 - [样式化 HTML 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
@@ -318,8 +318,8 @@ slug: Learn/Forms/Other_form_controls
 - [客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
 - [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
-### 高级技巧
+### 进阶内容
 
 - [如何构建表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
 - [使用 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [表单部件兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [表单控件兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
