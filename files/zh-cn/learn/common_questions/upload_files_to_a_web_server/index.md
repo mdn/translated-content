@@ -32,7 +32,7 @@ slug: Learn/Common_questions/Upload_files_to_a_web_server
 
 ## 概要
 
-如果你已经建立了一个简单的页面（参见 [HTML 基础](/en-US/Learn/HTML/Write_a_simple_page_in_HTML)以获取示例），你会想将它放到某些 web 服务器上。在本文中，我们将讨论如何使用各类可用的方法（如 SFTP 客户端、Rsync 和 GitHub）来做到这一点。
+如果你已经建立了一个简单的页面（参见 [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)以获取示例），你会想将它放到某些 web 服务器上。在本文中，我们将讨论如何使用各类可用的方法（如 SFTP 客户端、Rsync 和 GitHub）来做到这一点。
 
 ## SFTP
 
