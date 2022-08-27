@@ -4,13 +4,13 @@ slug: Learn/Common_questions
 ---
 {{LearnSidebar}}
 
-学习区域的这一部分旨在为可能出现的常见问题提供答案，这些问题不一定是结构化的核心学习途径的一部分（例如：[HTML](/zh-CN/docs/learn/HTML) 或 [CSS](/zh-CN/docs/Learn/CSS) 的学习文章），这些文章旨在自己工作。
+学习区域的这一部分旨在为可能出现的常见问题提供答案，这些问题不一定是结构化的核心学习途径的一部分（例如：[HTML](/zh-CN/docs/Learn/HTML) 或 [CSS](/zh-CN/docs/Learn/CSS) 的学习文章），这些文章旨在自己工作。
 
 ## Web 怎样工作
 
 本部分涵盖与 Web 生态系统的一般知识及其工作原理相关的问题。
 
-- [互联网是怎么工作的？](/zh-CN/docs/learn/How_the_Internet_works)
+- [互联网是怎么工作的？](/zh-CN/docs/Learn/Common_questions/How_does_the_Internet_work)
   - : **互联网**是 Web 的基石，是让 Web 变得可能的基础设施。本质上来说，互联网是一个大型的相互交流的计算机网络。本文讨论了它在底层是如何工作的。
 - [网页、网站、网络服务器和搜索引擎的区别是什么？](/zh-CN/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)
   - : 本文中我们讲述了各种和 Web 相关的概念：网页，网站，网络服务器，以及搜索引擎。这些概念常常被网络新手混淆，或者被误用。让我们看看它们到底代指的是什么吧！
@@ -33,7 +33,7 @@ slug: Learn/Common_questions
   - : 当您推出网站时，您可能没有花费，或者您的费用可能会爆表。在这篇文章中，我们讨论了多少一切成本和你得到什么你支付（或不支付）
 - [什么文本编辑器比较好用？](/zh-CN/docs/Learn/Common_questions/Available_text_editors)
   - : 在本文中，我们重点介绍在选择和安装用于 Web 开发的文本编辑器时需要考虑的一些事项。
-- [什么是浏览器开发者工具？](/zh-CN/docs/Learn/Discover_browser_developer_tools)
+- [什么是浏览器开发者工具？](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)
   - : 每个浏览器都有一组用于调试 HTML、CSS 和其他 Web 代码的 devtool。本文解释如何使用浏览器的 devtools 的基本功能。
 - [你怎么来确保你的网站顺利的运行？](/zh-CN/docs/Learn/Common_questions/Checking_that_your_web_site_is_working_properly)
   - : 所以你已经在网上发布了你的网站 - 非常好！但你确定它工作正常吗？本文提供一些基本的故障排除步骤。
