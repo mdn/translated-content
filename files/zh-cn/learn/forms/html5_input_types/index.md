@@ -28,7 +28,7 @@ slug: Learn/Forms/HTML5_input_types
 
 > **备注：** 本篇文章中讨论的大多数特性都受到了广泛支持，如果有任何例外将会在文章中说明，如果你需要更多浏览器支持的细节，你应该查看我们的 [HTML 表单元素参考](/zh-CN/docs/Web/HTML/Element#forms)，特别是深入的 [\<input> 类型](/zh-CN/docs/Web/HTML/Element/Input) 参考。
 
-由于 HTML 表单控件的外观可能与设计者的规格有很大的不同，web 开发者有时会建立自己的自定义表单控件。我们在一个高级教程中介绍了这一点：[如何搭建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)。
+由于 HTML 表单控件的外观可能与设计者的规格有很大的不同，web 开发者有时会建立自己的自定义表单控件。我们在一个高级教程中介绍了这一点：[如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)。
 
 ## E-mail 地址字段
 
@@ -38,7 +38,7 @@ slug: Learn/Forms/HTML5_input_types
 <input type="email" id="email" name="email">
 ```
 
-当使用了这种 {{htmlattrxref("type","input")}} 类型时，用户需要输入一个合法的电子邮件地址，任何其他输入都会使得在表单提交时浏览器显示错误信息。你可以在下述截图上看到这个行为：
+当使用了这种 {{htmlattrxref("type","input")}} 类型时，用户需要输入一个合法的电子邮件地址，任何其他输入都会使得浏览器在表单提交时显示错误信息。你可以在下面的截图中看到这个行为：
 
 ![An invalid email input showing the message "Please enter an email address."](email_address_invalid.png)
 
@@ -54,15 +54,15 @@ slug: Learn/Forms/HTML5_input_types
 
 > **备注：** 你可以在[基本 input 例子](https://mdn.github.io/learning-area/html/forms/basic-input-examples/)中找到基本文本 input 类型的例子（也请看看[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/basic-input-examples/index.html)）。
 
-这是使用这些较新的 input 类型的另一个很好的理由——可以为这些设备的用户改善了用户体验。
+这是使用这些较新的 input 类型的另一个很好的理由——可以为这些设备的用户改善用户体验。
 
 ### 客户端验证
 
-正如你在上面看到的，`email` 与其他较新的 `input` 类型一样，提供了内置的*客户端*错误验证，在数据被发送到服务器之前由浏览器执行。它*是*引导用户准确填写表格的一个有用的辅助工具，可以节省时间：立即知道你的数据不正确是很有用的，而不是要等待服务器的往返。
+正如你在上面看到的，`email` 与其他较新的 `input` 类型一样，提供了内置的*客户端*错误验证，在数据被发送到服务器之前由浏览器执行。它*是*引导用户准确填写表格的一个有用的辅助工具，可以节省时间：可以立即知道你的数据是否正确，而不需要等待服务器返回结果。
 
-但它*不应该*被认为是一种详尽的安全措施！你的应用程序始终应该在*服务器端*和客户端对任何表单提交的数据进行安全检查，因为客户端验证太容易被关闭了，所以恶意用户仍然可以很容易地将坏数据发送到你的服务器。请参阅[网站安全](/zh-CN/docs/Learn/Server-side/First_steps/Website_security)来了解*可能*会发生什么。实现服务端认证超出了本模块的范围，但你应该抱熟于心。
+但它*不应该*被认为是一种详尽的安全措施！你的应用程序始终应该在*服务器端*和客户端对任何表单提交的数据进行安全检查，因为客户端验证太容易被关闭了，所以恶意用户仍然可以很容易地将坏数据发送到你的服务器。请参阅[网站安全](/zh-CN/docs/Learn/Server-side/First_steps/Website_security)来了解*可能*会发生什么。实现服务端认证超出了本章的范围，但你应该熟稔于心。
 
-注意，在默认限制条件下，`a@b` 也是一个合法的电子邮件地址，因为 `email` input 类型默认也允许内部网的电子邮件地址（intranet email addresses）。为了实现不同的认证行为，你可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Attributes/pattern) 属性，而且可以自定义错误信息；我们将在[客户端表单认证](/zh-CN/docs/Learn/Forms/Form_validation)文章中进一步说明如何使用这些功能。
+注意，在默认限制条件下，`a@b` 也是一个合法的电子邮件地址，因为 `email` input 类型默认也允许内部网络的电子邮件地址。为了实现不同的验证行为，你可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Attributes/pattern) 属性，而且可以自定义错误信息；我们将在[客户端表单认证](/zh-CN/docs/Learn/Forms/Form_validation)文章中进一步说明如何使用这些功能。
 
 > **备注：** 如果输入的数据不是一个电子邮件地址，会匹配 {{cssxref(':invalid')}} 伪类，且 {{domxref('validityState.typeMismatch')}} 属性总会返回 `true`。
 
@@ -74,13 +74,13 @@ slug: Learn/Forms/HTML5_input_types
 <input type="search" id="search" name="search">
 ```
 
-`text` 域和 `search` 域的主要区别是浏览器赋予它们的外观显示。通常情况下，`search` 域拥有圆角边框，有时会显示“Ⓧ”标志，当点击它时会清除输入框。另外，在动态键盘设备上，键盘的回车键会显示“**search**”，或显示为放大镜图标。
+`text` 字段和 `search` 字段的主要区别是浏览器赋予它们的外观显示。通常情况下，`search` 字段拥有圆角边框，有时会显示“Ⓧ”标志，当点击它时会清除输入框。另外，在动态键盘设备上，键盘的回车键会显示“**search**”，或显示为放大镜图标。
 
-下面的截图显示了 macOS 上的 Firefox 71、Safari 13 和 Chrome 79 和 Windows 10 上的 Edge 18 和 Chrome 79 的非空查询域，请注意，清除图标仅当在输入框中存在值得时候才会显示，且与 Safari 不同的是，仅当聚焦状态时才会显示此图标。
+下面的截图显示了 macOS 上的 Firefox 71、Safari 13 和 Chrome 79，以及 Windows 10 上的 Edge 18 和 Chrome 79 的非空查询字段，请注意，清除图标仅当在输入框中存在值得时候才会显示，且与 Safari 不同的是，仅当聚焦状态时才会显示此图标。
 
 ![Screenshots of search fields on several platforms.](search_focus.png)
 
-另外一个值得提示的特性是，`search` 域的值可以自动地保存下来，在同一网站的自动完成框中复用输入，这样的特性倾向于在大多数现代浏览器中自动进行。
+另外一个值得提示的特性是，`search` 字段的值可以自动地保存下来，在同一网站的自动完成框中复用输入，这样的特性倾向于在大多数现代浏览器中自动进行。
 
 ## 电话号码字段
 
@@ -102,7 +102,7 @@ slug: Learn/Forms/HTML5_input_types
 
 ## URL 字段
 
-在 {{htmlattrxref("type","input")}} 属性值中使用 `url`，即可创建一个用于输入网址的文本域：
+在 {{htmlattrxref("type","input")}} 属性值中使用 `url`，即可创建一个用于输入网址的文本字段：
 
 ```html
 <input type="url" id="url" name="url">
@@ -187,7 +187,7 @@ price.addEventListener('input', () => {
 
 收集日期和时间值历来是 web 开发者的噩梦。为了获得良好的用户体验，提供一个日历选择用户界面是很重要的，使用户能够选择日期，而不需要切换到本地日历应用程序的上下文，或者可能以难以解析的不同格式输入。上个千年（1000~1999年）的最后一分钟可以用以下不同的方式表示，例如：1999/12/31，23:59 或 12/31/99T11:59PM。
 
-HTML 日期控件可用于处理这种特定的数据，提供日历部件并使数据统一。
+HTML 日期控件可用于处理这种特定的数据，提供日历控件并使数据统一。
 
 日期和时间控件可由 {{HTMLElement("input")}} 元素和一个合适的 {{htmlattrxref("type","input")}} 属性值来创建，该值取决于要收集的类型（日期、时间、还是以上全部）。这里有一个示例，在浏览器不支持的情况下会自动回退为 {{htmlelement("select")}} 元素：
 
@@ -197,7 +197,7 @@ HTML 日期控件可用于处理这种特定的数据，提供日历部件并使
 
 ### `datetime-local`
 
-[`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/Input/datetime-local) 创建了显示和选择一个没有特定时区信息的日期和时间的组件。
+[`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/Input/datetime-local) 创建了显示和选择一个没有特定时区信息的日期和时间的控件。
 
 ```html
 <input type="datetime-local" name="datetime" id="datetime">
@@ -205,7 +205,7 @@ HTML 日期控件可用于处理这种特定的数据，提供日历部件并使
 
 ### `month`
 
-[`<input type="month">`](/zh-CN/docs/Web/HTML/Element/Input/month) 创建了显示和选择带有年份信息的某个月的组件。
+[`<input type="month">`](/zh-CN/docs/Web/HTML/Element/Input/month) 创建了显示和选择带有年份信息的某个月的控件。
 
 ```html
 <input type="month" name="month" id="month">
@@ -213,7 +213,7 @@ HTML 日期控件可用于处理这种特定的数据，提供日历部件并使
 
 ### `time`
 
-[`<input type="time">`](/zh-CN/docs/Web/HTML/Element/Input/time) 创建了显示和选择时间的组件。时间可能会以 *12 小时制*显示，但一定会以 *24 小时制*形式返回。
+[`<input type="time">`](/zh-CN/docs/Web/HTML/Element/Input/time) 创建了显示和选择时间的控件。时间可能会以 *12 小时制*显示，但一定会以 *24 小时制*形式返回。
 
 ```html
 <input type="time" name="time" id="time">
@@ -221,7 +221,7 @@ HTML 日期控件可用于处理这种特定的数据，提供日历部件并使
 
 ### `week`
 
-[`<input type="week">`](/zh-CN/docs/Web/HTML/Element/Input/week) 创建了显示和选择一年中特定编号周的组件。
+[`<input type="week">`](/zh-CN/docs/Web/HTML/Element/Input/week) 创建了显示和选择一年中特定编号周的控件。
 
 一周以周一开始，一直运行到周日结束。另外，每年的第一周总会包含那一年首个星期四，其中可能不包括当年的第一天，也可能包括前一年的最后几天。
 
@@ -231,7 +231,7 @@ HTML 日期控件可用于处理这种特定的数据，提供日历部件并使
 
 ### 限制日期/时间值
 
-所有的日期和时间组件总可以由 [`min`](/zh-CN/docs/Web/HTML/Attributes/min) 和 [`max`](/zh-CN/docs/Web/HTML/Attributes/max) 属性控制，可由 [`step`](/zh-CN/docs/Web/HTML/Attributes/step) 属性进一步做控制，具体值随着 input 类型的不同而产生变化。
+所有的日期和时间控件总可以由 [`min`](/zh-CN/docs/Web/HTML/Attributes/min) 和 [`max`](/zh-CN/docs/Web/HTML/Attributes/max) 属性控制，可由 [`step`](/zh-CN/docs/Web/HTML/Attributes/step) 属性进一步做控制，具体值随着 input 类型的不同而产生变化。
 
 ```html
 <label for="myDate">When are you available this summer?</label>
@@ -248,11 +248,11 @@ HTML 日期控件可用于处理这种特定的数据，提供日历部件并使
 <input type="color" name="color" id="color">
 ```
 
-在支持的情况下，点击一个颜色控件将倾向于显示操作系统的默认颜色选择功能，以便你真正做出选择。以下是在 macOS 的 Firefox 浏览器上拍摄的屏幕截图，提供了一个例子：
+在支持的情况下，点击一个颜色控件将倾向于显示操作系统的默认颜色选择功能，以便你真正做出选择。以下是在 macOS 上 Firefox 浏览器的屏幕截图，提供了一个例子：
 
 ![Firefox for Android email keyboard, with ampersand displayed by default.](fx-macos-color.jpg)
 
-这里有一个现场例子供你尝试：
+这里有一个在线示例供你尝试：
 
 {{EmbedGHLiveSample("learning-area/html/forms/color-example/index.html", '100%', 200)}}
 
@@ -281,8 +281,8 @@ HTML 日期控件可用于处理这种特定的数据，提供日历部件并使
 - [客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
 - [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
-### 高级技巧
+### 进阶内容
 
 - [如何构建表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
 - [使用 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [表单部件兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [表单控件兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
