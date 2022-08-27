@@ -57,9 +57,9 @@ slug: Learn/Forms/Other_form_controls
 {{htmlelement("textarea")}} 接受三种属性来控制其多行渲染行为：
 
 - {{htmlattrxref("cols","textarea")}}
-  - : 指定文本部件的可见宽度（列），单位为字符的宽度。这实际上是起始宽度，因为它可以通过调整 `<textarea>` 的大小来改变，也可以用CSS重写。如果没有指定，默认值是20。
+  - : 指定文本控件的可见宽度（列），单位为字符的宽度。这实际上是起始宽度，因为它可以通过调整 `<textarea>` 的大小来改变，也可以用 CSS 重写。如果没有指定，默认值是 20。
 - {{htmlattrxref("rows","textarea")}}
-  - : 指定文本部件的可见行数。这实际上是起始高度，因为它可以通过调整 `<textarea>` 的大小来改变，也可以用CSS重写。如果没有指定，默认值是2。
+  - : 指定文本控件的可见行数。这实际上是起始高度，因为它可以通过调整 `<textarea>` 的大小来改变，也可以用 CSS 重写。如果没有指定，默认值是 2。
 - {{htmlattrxref("wrap","textarea")}}
   - : 指定如何控制文本换行。取值可能为 `soft`（默认值），意味着提交的文字没有换行，而浏览器中渲染的文字有换行；`hard`（使用此属性必须指定 `cols` 的值），意味着提交的文字和浏览器中渲染的文字都有换行；和 `off`，停止任何换行行为。
 
@@ -75,9 +75,9 @@ slug: Learn/Forms/Other_form_controls
 
 多多调试 {{cssxref("resize")}} 参考页面顶部的例子，来看看它们是如何运行的。
 
-## 下拉部件
+## 下拉控件
 
-下拉菜单是一种简单地让用户从许多不同选项中进行选择的部件，不占用用户界面太多空间。HTML 有两种下拉内容：一种是**选择框**、另外一种是**自动补全框**。这两种情况下的交互是相同的——一旦被激活，浏览器就会显示可供用户选择的值的列表。
+下拉菜单是一种简单地让用户从许多不同选项中进行选择的控件，不占用用户界面太多空间。HTML 有两种下拉内容：一种是**选择框**、另外一种是**自动补全框**。这两种情况下的交互是相同的——一旦被激活，浏览器就会显示可供用户选择的值的列表。
 
 > **备注：** 你可以在 GitHub 的 [drop-down-content.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/drop-down-content.html) 上找到所有下拉框类型的例子（[也可以看看在线演示](https://mdn.github.io/learning-area/html/forms/native-form-widgets/drop-down-content.html)）。
 
@@ -159,17 +159,17 @@ slug: Learn/Forms/Other_form_controls
 
 {{EmbedLiveSample("多选选择框", 120, 120)}}
 
-> **备注：** 在多选选择框的情况下，你会注意到选择框不再以下拉内容的形式显示数值——相反，所有的值都会一次性显示在一个列表中，可选的 [`size`](/zh-CN/docs/Web/HTML/Attributes/size) 属性决定了部件的高度。
+> **备注：** 在多选选择框的情况下，你会注意到选择框不再以下拉内容的形式显示数值——相反，所有的值都会一次性显示在一个列表中，可选的 [`size`](/zh-CN/docs/Web/HTML/Attributes/size) 属性决定了控件的高度。
 
 > **备注：** 任何支持 {{HTMLElement("select")}} 元素的浏览器也支持 {{htmlattrxref("multiple","select")}} 属性。
 
-### 自动补充框
+### 自动补全框
 
-你可以通过 {{HTMLElement("datalist")}} 元素中的一些显示的 {{HTMLElement("option")}} 子元素为表单项提供推荐的自动完成值。`<datalist>` 元素需要指定一个 `id`。
+你可以通过 {{HTMLElement("datalist")}} 元素中的一些显示的 {{HTMLElement("option")}} 子元素为表单项提供推荐的自动补全值。`<datalist>` 元素需要指定一个 `id`。
 
 数据列表会使用 {{htmlattrxref("list","input")}} 属性绑定至一个 {{htmlelement("input")}} 元素（如 `text` 或 `email` 输入类型），该属性的取值就是要绑定的数据列表的 `id` 值。
 
-一旦数据列表与表单控件相关联，它的选项就会被用来自动完成用户输入的文本；通常，它以下拉框的形式呈现给用户，列出他们输入内容的可能匹配。
+一旦数据列表与表单控件相关联，它的选项就会被用来自动补全用户输入的文本；通常，它以下拉框的形式呈现给用户，列出他们输入内容的可能匹配。
 
 #### 基础示例
 
@@ -247,7 +247,7 @@ slug: Learn/Forms/Other_form_controls
 
 #### 进度条
 
-一个进度条表示一个随时间变化的竖直，最高可以达到 {{htmlattrxref("max","progress")}} 属性所指定的最大值。这样的条是使用 {{ HTMLElement("progress")}} 元素创建出来的。
+进度条表示一个随时间变化的数值，最高可以达到 {{htmlattrxref("max","progress")}} 属性所指定的最大值。这样的条是使用 {{ HTMLElement("progress")}} 元素创建出来的。
 
 ```html
 <progress max="100" value="75">75/100</progress>
@@ -277,9 +277,9 @@ slug: Learn/Forms/Other_form_controls
 
 所有实现了 {{HTMLElement("meter")}} 元素的浏览器使用这些值来改变计量器的颜色：
 
-- 如果当前值位于首选范围，则计量器为绿色。
-- 如果当前值位于平均范围，则计量器为黄色。
-- 如果当前值位于最差范围，则计量器为红色。
+- 如果当前值位于首选范围，则计量器显示为绿色。
+- 如果当前值位于平均范围，则计量器显示为黄色。
+- 如果当前值位于最差范围，则计量器显示为红色。
 
 像下面这种条形是使用 {{HTMLElement("meter")}} 元素创建出来的。这是为了实现任何类型的仪表，例如，显示磁盘上使用的总空间的条形图，当它开始变满时就变成红色。
 
