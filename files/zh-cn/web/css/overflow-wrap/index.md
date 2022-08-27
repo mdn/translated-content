@@ -7,7 +7,7 @@ original_slug: Web/CSS/word-wrap
 
 {{EmbedInteractiveExample("pages/css/overflow-wrap.html")}}
 
-[CSS](/en-US/docs/Web/CSS) 属性 **`overflow-wrap`** 是用来说明当一个不能被分开的字符串太长而不能填充其包裹盒时，为防止其溢出，浏览器是否允许这样的单词中断换行。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`overflow-wrap`** 是用来说明当一个不能被分开的字符串太长而不能填充其包裹盒时，为防止其溢出，浏览器是否允许这样的单词中断换行。
 
 > **备注：** 与{{cssxref("word-break")}}相比，`overflow-wrap`仅在无法将整个单词放在自己的行而不会溢出的情况下才会产生中断。
 
