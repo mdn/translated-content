@@ -40,13 +40,7 @@ L'API synchrone est utile avec les [WebWorkers](/En/Using_web_workers). Contrair
 
 ## Compatibilité des navigateurs
 
-### `FileSystem`
-
-{{Compat("api.FileSystem", 0)}}
-
-### Propriété `FileSystemSync`
-
-{{Compat("api.FileSystemSync", 0)}}
+{{Compat}}
 
 ## Voir aussi
 
