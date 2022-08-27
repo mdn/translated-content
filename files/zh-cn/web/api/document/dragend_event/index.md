@@ -1,80 +1,121 @@
 ---
-title: dragend
+title: Document：dragend 事件
 slug: Web/API/Document/dragend_event
 ---
-拖放事件在拖放操作结束时触发 (通过释放鼠标按钮或单击 escape 键)。
+{{APIRef}}
 
-## 基本信息
+`dragend` 事件在拖放操作结束时触发（通过释放鼠标按钮或单击 escape 键）。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td>Bubbles</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td>Cancelable</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <td>Target objects</td>
-      <td>{{domxref("Document")}}, {{domxref("Element")}}</td>
-    </tr>
-    <tr>
-      <td>Interface</td>
-      <td>{{domxref("DragEvent")}}</td>
-    </tr>
-    <tr>
-      <td>Default Action</td>
-      <td>Varies.</td>
-    </tr>
-  </tbody>
-</table>
+该事件无法取消。
 
-## 属性
+## 语法
 
-| Property                                 | Type                                             | Description                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ---------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}        | [`EventTarget`](/zh-CN/docs/Web/API/EventTarget) | The element that was underneath the element being dragged.                                                                                                                                                                                                                                                                                                                                                              |
-| `type` {{readonlyInline}}          | [`DOMString`](/zh-CN/docs/Web/API/DOMString)     | 事件类型。                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `bubbles` {{readonlyInline}}       | [`Boolean`](/zh-CN/docs/Web/API/Boolean)         | 是否允许冒泡                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `cancelable` {{readonlyInline}}    | [`Boolean`](/zh-CN/docs/Web/API/Boolean)         | 默认行为是否可以取消                                                                                                                                                                                                                                                                                                                                                                                                    |
-| `view` {{readonlyInline}}          | [`WindowProxy`](/zh-CN/docs/Web/API/WindowProxy) | [`document.defaultView`](/zh-CN/docs/Web/API/Document/defaultView) (`window` of the document)                                                                                                                                                                                                                                                                                                                           |
-| `detail` {{readonlyInline}}        | `long` (`float`)                                 | 0.                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `dataTransfer`                           | DataTransfer                                     | The data that underlies a drag-and-drop operation, known as the [drag data store](/zh-CN/docs/Web/API/DataTransfer). Protected mode.                                                                                                                                                                                                                                                                                    |
-| `currentTarget` {{readonlyInline}} | EventTarget                                      | 绑定事件监听的 DOM 结点                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `relatedTarget` {{readonlyInline}} | EventTarget                                      | For `mouseover`, `mouseout`, `mouseenter` and `mouseleave` events: the target of the complementary event (the `mouseleave` target in the case of a `mouseenter` event). `null` otherwise.                                                                                                                                                                                                                               |
-| `screenX` {{readonlyInline}}       | long                                             | The X coordinate of the mouse pointer in global (screen) coordinates.                                                                                                                                                                                                                                                                                                                                                   |
-| `screenY` {{readonlyInline}}       | long                                             | The Y coordinate of the mouse pointer in global (screen) coordinates.                                                                                                                                                                                                                                                                                                                                                   |
-| `clientX` {{readonlyInline}}       | long                                             | The X coordinate of the mouse pointer in local (DOM content) coordinates.                                                                                                                                                                                                                                                                                                                                               |
-| `clientY` {{readonlyInline}}       | long                                             | The Y coordinate of the mouse pointer in local (DOM content) coordinates.                                                                                                                                                                                                                                                                                                                                               |
-| `button` {{readonlyInline}}        | unsigned short                                   | The button number that was pressed when the mouse event was fired: Left button=0, middle button=1 (if present), right button=2. For mice configured for left handed use in which the button actions are reversed the values are instead read from right to left.                                                                                                                                                        |
-| `buttons` {{readonlyInline}}       | unsigned short                                   | The buttons being pressed when the mouse event was fired: Left button=1, Right button=2, Middle (wheel) button=4, 4th button (typically, "Browser Back" button)=8, 5th button (typically, "Browser Forward" button)=16. If two or more buttons are pressed, returns the logical sum of the values. E.g., if Left button and Right button are pressed, returns 3 (=1 \| 2). [More info](/zh-CN/docs/Web/API/MouseEvent). |
-| `mozPressure` {{readonlyInline}}   | float                                            | The amount of pressure applied to a touch or tabdevice when generating the event; this value ranges between 0.0 (minimum pressure) and 1.0 (maximum pressure).                                                                                                                                                                                                                                                          |
-| `ctrlKey` {{readonlyInline}}       | boolean                                          | 当事件触发的时候，如果**Ctrl**键是按下的，这个值就是**true**,否则就是**false**                                                                                                                                                                                                                                                                                                                                          |
-| `shiftKey` {{readonlyInline}}      | boolean                                          | 当事件触发的时候，如果**Shift**键是按下的，这个值就是**true**,否则就是**false**                                                                                                                                                                                                                                                                                                                                         |
-| `altKey` {{readonlyInline}}        | boolean                                          | 当事件触发的时候，如果**Alt**键是按下的，这个值就是**true**,否则就是**false**                                                                                                                                                                                                                                                                                                                                           |
-| `metaKey` {{readonlyInline}}       | boolean                                          | 当事件触发的时候，如果 **Meta** 键是按下的，这个值就是 **true**，否则就是 **false**                                                                                                                                                                                                                                                                                                                                  |
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
-## 示例：dropzone
+```js
+addEventListener('dragend', (event) => {});
 
-{{page('/zh-CN/docs/Web/Events/dragstart', '示例：dropzone')}}
+ondragend = (event) => { };
+```
+
+## 事件类型
+
+{{domxref("DragEvent")}}，继承自 {{domxref("Event")}}。
+
+{{InheritanceDiagram("DragEvent")}}
+
+## 事件属性
+
+除了以下列出的额外属性，还可以使用从父接口 {{domxref("Event")}} 继承的属性。
+
+- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
+  - : 在执行拖放操作时传输的数据。
+
+## 示例
+
+### 在拖放结束时重置不透明度
+
+在本示例中，我们在容器中有一个可拖动的元素。尝试抓住元素，拖动它，然后释放它。
+
+我们在拖动元素时，使元素变得半透明，并监听 `dragend` 事件以在释放元素时重置其不透明度。
+
+参见 [`drag`](/zh-CN/docs/Web/API/Document/drag_event) 事件，以获取完整的拖放示例。
+
+#### HTML
+
+```html
+<div id="container">
+  <div id="draggable" draggable="true">
+    这个 div 是可拖动的
+  </div>
+</div>
+<div class="dropzone"></div>
+```
+
+#### CSS
+
+```css
+body {
+  /* Prevent the user selecting text in the example */
+  user-select: none;
+}
+
+#draggable {
+  text-align: center;
+  background: white;
+}
+
+#container {
+  width: 200px;
+  height: 20px;
+  background: blueviolet;
+  padding: 10px;
+}
+
+.dragging {
+  opacity: .5;
+}
+```
+
+#### JavaScript
+
+```js
+document.addEventListener("dragstart", (event) => {
+  // make it half transparent
+  event.target.classList.add("dragging");
+});
+
+document.addEventListener("dragend", (event) => {
+  // reset the transparency
+  event.target.classList.remove("dragging");
+});
+```
+
+#### 结果
+
+{{EmbedLiveSample('在拖放结束时重置不透明度')}}
 
 ## 规范
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
-{{Compat("api.Document.dragend_event")}}
+{{Compat}}
 
-## 相关
+## 参见
 
-- {{event("drag")}}
-- {{event("dragstart")}}
-- {{event("dragend")}}
-- {{event("dragover")}}
-- {{event("dragenter")}}
-- {{event("dragleave")}}
-- {{event("dragexit")}}
-- {{event("drop")}}
+- 其它拖放事件：
+
+  - {{domxref("Document/drag_event", "drag")}}
+  - {{domxref("Document/dragstart_event", "dragstart")}}
+  - {{domxref("Document/dragover_event", "dragover")}}
+  - {{domxref("Document/dragenter_event", "dragenter")}}
+  - {{domxref("Document/dragleave_event", "dragleave")}}
+  - {{domxref("Document/drop_event", "drop")}}
+
+- 其它目标上的 `dragend` 事件：
+
+  - {{domxref("Window")}}：{{domxref("Window/dragend_event", "dragend")}} 事件
+  - {{domxref("HTMLElement")}}：{{domxref("HTMLElement/dragend_event", "dragend")}} 事件
+  - {{domxref("SVGElement")}}：{{domxref("SVGElement/dragend_event", "dragend")}} 事件
