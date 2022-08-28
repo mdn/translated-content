@@ -1,9 +1,6 @@
 ---
 title: Input method editor (インプットメソッドエディター)
 slug: Glossary/Input_method_editor
-tags:
-  - Glossary
-translation_of: Glossary/Input_method_editor
 ---
 インプットメソッドエディター (IME) は、テキスト入力のための特殊なユーザーインターフェイスを提供するプログラムです。インプットメソッドエディターは多くの場面で使用されています。
 

@@ -1,10 +1,6 @@
 ---
 title: Hotlink (直リンク)
 slug: Glossary/Hotlink
-tags:
-  - Glossary
-  - WebMechanics
-translation_of: Glossary/Hotlink
 ---
 **直リンク** (**ホットリンク**、**インラインリンク**とも呼ばれる) は、別のサイトから直接リンクされたオブジェクト (通常は画像) です。たとえば、 site1.com でホストされている画像が site2.com に直接表示されるものです。
 

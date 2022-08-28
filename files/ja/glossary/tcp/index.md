@@ -1,15 +1,6 @@
 ---
 title: TCP
 slug: Glossary/TCP
-tags:
-  - Glossary
-  - Infrastructure
-  - Networking
-  - TCP
-  - Transmission Control Protocol
-  - data
-  - 用語集
-translation_of: Glossary/TCP
 ---
 **TCP (Transmission Control Protocol、伝送制御プロトコル)** は、2 台のホストを接続し、データを送受信するための重要なネットワーク{{Glossary("protocol", "プロトコル")}}です。 TCP はデータとパケットが送信した順番通りに届くことを保証します。1970 年代に、当時の DARPA 研究者である Vint Cerf と Bob Kahn によって設計されました。
 

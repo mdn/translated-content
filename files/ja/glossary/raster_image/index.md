@@ -1,16 +1,6 @@
 ---
 title: ラスターイメージ (Raster Image)
 slug: Glossary/Raster_image
-tags:
-  - CUR
-  - Documents
-  - Glossary
-  - ICO
-  - JPEG
-  - PNG
-  - gif
-  - raster image
-translation_of: Glossary/Raster_image
 ---
 **_ラスター画像_** (raster Image) とは、ピクセルのグリッドとして定義されている画像です。ビットマップ (bitmaps) としても参照されます。[JPEG](/ja/docs/Glossary/jpeg)、[PNG](/ja/docs/Glossary/PNG)、[GIF](/ja/docs/Glossary/gif)、[ICO](<https://ja.wikipedia.org/wiki/ICO_(ファイルフォーマット)>) は、ウェブでよく使われるラスター画像の形式です。
 

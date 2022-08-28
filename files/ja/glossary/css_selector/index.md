@@ -1,14 +1,6 @@
 ---
 title: Selector (セレクター (CSS) )
 slug: Glossary/CSS_Selector
-tags:
-  - CSS
-  - CSS Selector
-  - CodingScripting
-  - Glossary
-  - HTML
-  - Selector
-translation_of: Glossary/CSS_Selector
 ---
 **CSS セレクター**は CSS の規則の一部で、文書中のどの要素がルールと一致するかを記述します。一致した要素には規則で指定されたスタイルが適用されます。
 

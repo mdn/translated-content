@@ -1,13 +1,6 @@
 ---
 title: URI
 slug: Glossary/URI
-tags:
-  - 用語集
-  - HTTP
-  - 検索
-  - URI
-  - URL
-translation_of: Glossary/URI
 ---
 **URI** _(Uniform Resource Identifier)_ は、リソースを示す文字列です。
 

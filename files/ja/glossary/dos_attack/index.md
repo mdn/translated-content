@@ -1,10 +1,6 @@
 ---
 title: DoS攻撃
 slug: Glossary/DOS_attack
-tags:
-  - Glossary
-  - Security
-translation_of: Glossary/DOS_attack
 ---
 DoS (Denial of Service) は、大量のリクエスト送信により{{glossary("server", "サーバー")}}の適正なリソース使用を妨げるネットワーク攻撃手法です。
 

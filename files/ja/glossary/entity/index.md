@@ -1,12 +1,6 @@
 ---
 title: Entity (エンティティ)
 slug: Glossary/Entity
-tags:
-  - CodingScripting
-  - Composing
-  - Glossary
-  - HTML
-translation_of: Glossary/Entity
 ---
 {{glossary("HTML")}} **エンティティ**とは、アンパサンド (`&`) で始まりセミコロン (`;`)で終わるテキスト (文字列) のひと固まりです。エンティティは（通常は HTML コードとして解釈される）予約済み文字や、(ノーブレークスペースのように) 見えない文字を表示するためによく使用されます。標準キーボードでは入力が難しい文字の代わりに使用することもできます。
 

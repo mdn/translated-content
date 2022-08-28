@@ -1,14 +1,6 @@
 ---
 title: Cipher (サイファー)
 slug: Glossary/Cipher
-tags:
-  - Cryptography
-  - Glossary
-  - Privacy
-  - Security
-  - 暗号
-  - 用語集
-translation_of: Glossary/Cipher
 ---
 {{glossary("cryptography","暗号学")}}では、**サイファー**は{{glossary("plaintext","平文")}}を{{glossary("encryption", "暗号化")}}して読めなくし、それを{{glossary("decryption", "復号")}}するアルゴリズムです。
 

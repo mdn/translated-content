@@ -1,18 +1,6 @@
 ---
 title: Lossless compression (可逆圧縮)
 slug: Glossary/Lossless_compression
-tags:
-  - Beginner
-  - Composing
-  - Glossary
-  - Images
-  - Web Performance
-  - compression
-  - lossless
-  - 可逆圧縮
-  - 圧縮
-  - 用語集
-translation_of: Glossary/Lossless_compression
 ---
 **可逆圧縮** (Lossless compression) はデータ圧縮アルゴリズムの一種で、圧縮データから元のデータを完全に再構築することができるものです。可逆圧縮方法は可逆です。可逆圧縮の例としては、 {{glossary("GZIP")}}, {{glossary("Brotli")}}, WebP, {{glossary("PNG")}} などがあります。
 

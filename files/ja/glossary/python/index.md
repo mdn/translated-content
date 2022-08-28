@@ -1,14 +1,6 @@
 ---
 title: Python
 slug: Glossary/Python
-tags:
-  - CodingScripting
-  - Glossary
-  - Python
-  - プログラミング
-  - 用語集
-  - 言語
-translation_of: Glossary/Python
 ---
 **Python**は、一般目的の高水準プログラミング言語です。複数のパラダイムを採用しており、手続型、オブジェクト指向、いくらか関数型プログラミングの構造に対応しています。
 
