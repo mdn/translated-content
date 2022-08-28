@@ -52,7 +52,7 @@ fetch('./tortoise.png')
 
 调用这个方法创建一个 reader 并且用它锁定这个流——直到释放这个 reader（即通过调用 {{domxref("ReadableStreamDefaultReader.releaseLock()")}}），没有其他 reader 能读这个流。
 
-另请注意，先前的示例可以减少一步，由于 `response.body` 是同步的并且不需要 promise：
+另请注意，先前的示例可以减少一步，由于 `response.body` 是同步的，所以不需要 promise：
 
 ```js
 // Fetch the original image
