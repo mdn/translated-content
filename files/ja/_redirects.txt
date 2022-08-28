@@ -4711,6 +4711,7 @@
 /ja/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/ja/docs/Web/Security/Same-origin_policy
 /ja/docs/Web/JavaScript/Strict_mode	/ja/docs/Web/JavaScript/Reference/Strict_mode
 /ja/docs/Web/JavaScript/Strict_mode/Transitioning_to_strict_mode	/ja/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
+/ja/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 /ja/docs/Web/JavaScript/Tutorials	/ja/docs/Web/JavaScript
 /ja/docs/Web/JavaScript/Typed_arrays/ArrayBuffer	/ja/docs/Web/JavaScript/Reference/Global_objects/ArrayBuffer
 /ja/docs/Web/JavaScript/Typed_arrays/ArrayBufferView	/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
