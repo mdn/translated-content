@@ -19,9 +19,26 @@ The **`AudioParamDescriptor`** dictionary of the [Web Audio API](/en-US/docs/Web
 - `defaultValue` {{optional_inline}}
   - : A `float` which represents initial value of the `AudioParam`. Defaults to `0`.
 
-## 例子
+## 示例
 
-{{page("/en-US/docs/Web/API/AudioWorkletNode/parameters", "Examples")}}
+下面的代码片段展示了自定义的 `AudioWorkletProcessor` 中的静态方法 {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} 返回该类型的描述符（这是 [AudioWorkletNode.parameters](/zh-CN/docs/Web/API/AudioWorkletNode/parameters#examples) 中完整示例的一部分）。
+
+```js
+// white-noise-processor.js
+class WhiteNoiseProcessor extends AudioWorkletProcessor {
+  static get parameterDescriptors () {
+    return [{
+      name: 'customGain',
+      defaultValue: 1,
+      minValue: 0,
+      maxValue: 1,
+      automationRate: 'a-rate'
+    }]
+  }
+
+// …
+}
+```
 
 ## 规范
 
@@ -29,4 +46,4 @@ The **`AudioParamDescriptor`** dictionary of the [Web Audio API](/en-US/docs/Web
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioParamDescriptor")}}
+{{Compat}}

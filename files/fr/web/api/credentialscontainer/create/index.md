@@ -54,11 +54,8 @@ Une promesse ({{jsxref("Promise")}}) dont la valeur de résolution est une insta
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management','#dom-credentialscontainer-get','get()')}} | {{Spec2('Credential Management')}} | Définition initiale. |
-| {{SpecName('WebAuthn')}}                                                                         | {{Spec2('WebAuthn')}}                 | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CredentialsContainer.create")}}
+{{Compat}}

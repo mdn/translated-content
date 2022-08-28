@@ -16,7 +16,6 @@ tags:
   - Selecting Elements
   - セレクター
   - querySelector
-browser-compat: api.Element.querySelector
 translation_of: Web/API/Element/querySelector
 ---
 {{APIRef("DOM")}}

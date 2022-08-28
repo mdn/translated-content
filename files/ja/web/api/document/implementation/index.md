@@ -46,7 +46,7 @@ W3C's DOM Level 1 勧告では `hasFeature` メソッドのみが定義されて
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.implementation")}}
+{{Compat}}
 
 ### Gecko に特有のメモ
 

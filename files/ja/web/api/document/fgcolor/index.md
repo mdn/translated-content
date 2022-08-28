@@ -44,4 +44,4 @@ Mozilla Firefox ではこのプロパティの既定値は黒 (16 進数で `#00
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.fgColor")}}
+{{Compat}}

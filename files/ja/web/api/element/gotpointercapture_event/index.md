@@ -78,7 +78,7 @@ para.addEventListener('pointerdown', (event) => {
 
 ## ブラウザーの対応
 
-{{Compat("api.Document.gotpointercapture_event")}}
+{{Compat}}
 
 ## 関連情報
 

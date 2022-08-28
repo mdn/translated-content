@@ -325,7 +325,7 @@ draw();
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.input.input-button")}}
+{{Compat}}
 
 ## 関連情報
 

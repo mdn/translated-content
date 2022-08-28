@@ -92,4 +92,4 @@ window.onload = function (){
 
 ## ブラウザーの互換性
 
-{{Compat("api.DocumentOrShadowRoot.caretPositionFromPoint")}}
+{{Compat}}

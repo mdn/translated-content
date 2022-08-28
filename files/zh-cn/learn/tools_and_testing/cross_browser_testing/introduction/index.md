@@ -172,7 +172,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 - [测试策略](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
 - [处理常见的 HTML 和 CSS 问题](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
 - [处理常见的 JavaScript 问题](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [处理常见的可访问性问题](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
+- [处理常见的无障碍问题](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
 - [实现特征检查](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
 - [自动测试简介](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
 - [建立你自己的自动化测试环境](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

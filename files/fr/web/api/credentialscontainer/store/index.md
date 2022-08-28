@@ -38,10 +38,8 @@ Une promesse ({{domxref("Promise")}}) qui sera résolue avec l'instance de {{dom
 
 ## Spécifications
 
-| Spécification                                    | État                                         | Commentaires         |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CredentialsContainer.store")}}
+{{Compat}}

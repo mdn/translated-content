@@ -49,7 +49,7 @@ function init() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.GlobalEventHandlers.onlostpointercapture")}}
+{{Compat}}
 
 ## 関連情報
 

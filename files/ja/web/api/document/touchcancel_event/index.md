@@ -43,7 +43,7 @@ translation_of: Web/API/Document/touchcancel_event
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.touchcancel_event")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -36,7 +36,7 @@ var element = document.pointerLockElement;
 
 ## ブラウザーの互換性
 
-{{Compat("api.DocumentOrShadowRoot.pointerLockElement")}}
+{{Compat}}
 
 ## 関連情報
 

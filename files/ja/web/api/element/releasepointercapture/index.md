@@ -96,7 +96,7 @@ slider.onpointerup = stopSliding;
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.releasePointerCapture")}}
+{{Compat}}
 
 ## 関連情報
 

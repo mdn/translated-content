@@ -83,7 +83,7 @@ window.addEventListener('scroll', function(e) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.scroll_event")}}
+{{Compat}}
 
 ## 関連情報
 

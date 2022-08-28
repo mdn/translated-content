@@ -50,7 +50,7 @@ alert(document.body.id); // "newBodyElement"
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.body")}}
+{{Compat}}
 
 ## 関連情報
 

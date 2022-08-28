@@ -158,14 +158,11 @@ _Cette interface n'hérite d'aucune méthode._
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                                       | Commentaire                                                                                                                                                                                                                                                                   |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#nodeiterator', 'NodeIterator')}}                                     | {{Spec2('DOM WHATWG')}}             | Ajout des propriétés `referenceNode` et `pointerBeforeReferenceNode`. Suppression de la propriété `expandEntityReferences`. La méthode `detach()` a été modifiée pour être une non opération. Les méthodes `previousNode()` et `nextNode()` ne déclenchent plus d'exceptions. |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Iterator-overview', 'NodeIterator')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                                                                                                                                                                                                                                          |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeIterator")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -16,7 +16,6 @@ tags:
   - getAnimations
   - waapi
   - web animations api
-browser-compat: api.Element.getAnimations
 translation_of: Web/API/Element/getAnimations
 ---
 {{ SeeCompatTable() }}{{APIRef("Web Animations")}}

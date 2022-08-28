@@ -224,7 +224,7 @@ We've included simple examples above. There isn't really anything more to say ab
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.input.input-submit")}}
+{{Compat}}
 
 ## 関連情報
 

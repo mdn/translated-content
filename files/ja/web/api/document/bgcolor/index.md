@@ -41,4 +41,4 @@ Firefox ではこのプロパティの初期値は白 (16 進表記で `#FFFFFF`
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.bgColor")}}
+{{Compat}}

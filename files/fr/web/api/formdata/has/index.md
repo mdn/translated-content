@@ -50,13 +50,11 @@ formData.has('username'); // Retourne true
 
 ## Spécifications
 
-| Spécification                                                                | Statut                               | Commentaire |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata-has','has()')}} | {{Spec2('XMLHttpRequest')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FormData.has")}}
+{{Compat}}
 
 ## Voir aussi
 

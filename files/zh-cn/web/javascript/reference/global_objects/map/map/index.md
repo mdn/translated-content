@@ -21,11 +21,11 @@ new Map([iterable])
 ## 示例
 
 ```js
-let myMap = new Map([
+const myMap = new Map([
   [1, 'one'],
   [2, 'two'],
   [3, 'three'],
-])
+]);
 ```
 
 ## Specifications

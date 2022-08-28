@@ -72,7 +72,7 @@ document.ontransitionend = () => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.transitionend_event")}}
+{{Compat}}
 
 ## 関連情報
 

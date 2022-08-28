@@ -69,13 +69,11 @@ IDBKeyRange.prototype.includes = IDBKeyRange.prototype.includes || function(key)
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                       | Commentaire |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB 2', '#dom-idbkeyrange-includes', 'includes()')}} | {{Spec2('IndexedDB')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBKeyRange.includes")}}
+{{Compat}}
 
 ## Voir aussi
 

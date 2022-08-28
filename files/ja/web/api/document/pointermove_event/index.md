@@ -67,7 +67,7 @@ document.onpointermove = (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.pointermove_event")}}
+{{Compat}}
 
 ## 関連情報
 

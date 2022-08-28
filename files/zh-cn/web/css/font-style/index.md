@@ -169,7 +169,7 @@ update();
 
 ![](https://mdn.mozillademos.org/files/12049/Screen%20Shot%202015-12-05%20at%2008.41.03.png)
 
-## 可访问性问题
+## 无障碍问题
 
 Large sections of text set with a `font-style` value of `italic` may be difficult for people with cognitive concerns such as Dyslexia to read.
 

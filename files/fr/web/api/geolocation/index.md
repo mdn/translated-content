@@ -34,13 +34,11 @@ _L'interface de géolocalisation n'hérite d'aucune méthode._
 
 ## Spécifications
 
-| Spécification                        | Statut                           | Commentaire             |
-| ------------------------------------ | -------------------------------- | ----------------------- |
-| {{SpecName('Geolocation')}} | {{Spec2('Geolocation')}} | Spécification initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Geolocation")}}
+{{Compat}}
 
 ## Voir aussi
 

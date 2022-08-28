@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.readystatechange_event")}}
+{{Compat}}
 
 ## 関連情報
 

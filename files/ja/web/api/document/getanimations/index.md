@@ -57,7 +57,7 @@ document.getAnimations().forEach(
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.getAnimations")}}
+{{Compat}}
 
 ## 関連情報
 

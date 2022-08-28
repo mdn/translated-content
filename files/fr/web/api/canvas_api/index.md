@@ -132,9 +132,7 @@ Les interfaces liées au `WebGLRenderingContext` sont référencées sous [WebGL
 
 ## Spécifications
 
-| Specification                                                                                                | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#the-canvas-element', '&lt;canvas&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Voir aussi
 

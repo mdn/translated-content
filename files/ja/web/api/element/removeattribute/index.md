@@ -53,4 +53,4 @@ document.getElementById("div1").removeAttribute("align");
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.removeAttribute")}}
+{{Compat}}

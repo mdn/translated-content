@@ -29,7 +29,7 @@ document.exitPointerLock();
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.exitPointerLock")}}
+{{Compat}}
 
 ## 関連情報
 

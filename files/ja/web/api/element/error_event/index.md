@@ -130,7 +130,7 @@ imgError.addEventListener('click', () => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.HTMLMediaElement.error_event")}}
+{{Compat}}
 
 ## 関連情報
 

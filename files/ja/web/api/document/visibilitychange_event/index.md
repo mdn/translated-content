@@ -64,7 +64,7 @@ document.addEventListener("visibilitychange", function() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.visibilitychange")}}
+{{Compat}}
 
 ## 関連情報
 

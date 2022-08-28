@@ -67,7 +67,7 @@ document.onpointerup = (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.pointerup_event")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -63,7 +63,7 @@ var elements = document.getElementsByName(name);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.getElementsByName")}}
+{{Compat}}
 
 ## 関連情報
 

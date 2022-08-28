@@ -334,7 +334,7 @@ Notice that when clicking on a radio button, there's a nice, smooth fade out/in 
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.input.input-radio")}}
+{{Compat}}
 
 ## 関連情報
 

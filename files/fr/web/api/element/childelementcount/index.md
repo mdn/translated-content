@@ -60,16 +60,13 @@ Cette propriété n'est pas supportée par les versions antérieures à IE9 ni p
 })(window.Node || window.Element);
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                                            | Statut                                   | Commentaire                                                                                                                                                                                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-parentnode-childElementCount', 'ParentNode.childElementCount')}}         | {{Spec2('DOM WHATWG')}}         | Divise l'interface `ElementTraversal` en {{domxref("ChildNode")}} et `ParentNode`. La propriété est maintenant définie sur cette dernière. Les {{domxref("Document")}} et {{domxref("DocumentFragment")}} implémentent la nouvelle interface. |
-| {{SpecName('Element Traversal', '#attribute-childElementCount', 'ElementTraversal.childElementCount')}} | {{Spec2('Element Traversal')}} | Ajout de sa définition initiale à la pure interface `ElementTraversal` et de son utilisation sur {{domxref("Element")}}.                                                                                                                                          |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ParentNode.childElementCount")}}
+{{Compat}}
 
 ## Voir aussi
 

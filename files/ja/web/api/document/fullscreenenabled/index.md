@@ -52,7 +52,7 @@ function requestFullScreen() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.fullscreenEnabled")}}
+{{Compat}}
 
 ## 関連情報
 

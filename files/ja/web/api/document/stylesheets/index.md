@@ -45,4 +45,4 @@ function getStyleSheet(unique_title) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.DocumentOrShadowRoot.styleSheets")}}
+{{Compat}}

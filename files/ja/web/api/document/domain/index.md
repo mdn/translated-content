@@ -69,7 +69,7 @@ if (document.domain === badDomain) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.domain")}}
+{{Compat}}
 
 ## 関連情報
 

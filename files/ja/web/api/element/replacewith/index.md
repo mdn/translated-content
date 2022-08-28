@@ -9,7 +9,6 @@ tags:
   - Reference
 translation_of: Web/API/Element/replaceWith
 original_slug: Web/API/ChildNode/replaceWith
-browser-compat: api.Element.replaceWith
 ---
 {{APIRef("DOM")}}
 

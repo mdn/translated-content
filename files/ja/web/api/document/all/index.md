@@ -37,4 +37,4 @@ var htmlAllCollection = document.all;
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.all")}}
+{{Compat}}

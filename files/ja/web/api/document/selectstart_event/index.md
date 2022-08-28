@@ -54,7 +54,7 @@ document.onselectstart = () => {
 
 ## ブラウザ互換性
 
-{{Compat("api.Document.selectstart_event")}}
+{{Compat}}
 
 ## 参照
 

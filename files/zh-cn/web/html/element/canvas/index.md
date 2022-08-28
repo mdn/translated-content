@@ -68,9 +68,9 @@ ctx.fillRect(10, 10, 100, 100);
 
 {{EmbedLiveSample('示例')}}
 
-## 可访问性
+## 无障碍
 
-`<canvas>` 元素本身只是一个位图，不提供任何绘制对象的信息。画布内容不像 HTML 那样具有语义并能暴露给可访问性工具。以下指南可以帮助您更方便地访问它。
+`<canvas>` 元素本身只是一个位图，不提供任何绘制对象的信息。画布内容不像 HTML 那样具有语义并能暴露给无障碍工具。以下指南可以帮助您更方便地访问它。
 
 - [MDN Hit regions and accessability](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility)
 - [Canvas accessibility use cases](https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases)

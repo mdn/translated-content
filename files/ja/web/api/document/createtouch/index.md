@@ -85,7 +85,7 @@ var touch2 = Document.createTouch(window, target, 2, 25, 30, 45, 50);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.createTouch")}}
+{{Compat}}
 
 ## 関連情報
 

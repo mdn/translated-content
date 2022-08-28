@@ -37,4 +37,4 @@ document.vlinkColor = color
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.vlinkColor")}}
+{{Compat}}

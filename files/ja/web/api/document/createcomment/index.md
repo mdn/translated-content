@@ -43,4 +43,4 @@ alert(new XMLSerializer().serializeToString(docu));
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.createComment")}}
+{{Compat}}

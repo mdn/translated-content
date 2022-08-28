@@ -52,7 +52,7 @@ translation_of: Web/API/Element/touchend_event
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.touchend_event")}}
+{{Compat}}
 
 ## 関連情報
 

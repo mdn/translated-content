@@ -13,7 +13,6 @@ tags:
   - mouseover
   - move
   - ポインター
-browser-compat: api.Element.mouseover_event
 translation_of: Web/API/Element/mouseover_event
 ---
 {{APIRef}}

@@ -149,7 +149,7 @@ div {
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attribute.accept")}}
+{{Compat}}
 
 ## 関連情報
 

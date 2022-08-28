@@ -9,7 +9,6 @@ tags:
   - Method
   - NeedsSpecTable
   - Reference
-browser-compat: api.Element.removeAttributeNS
 translation_of: Web/API/Element/removeAttributeNS
 l10n:
   sourceCommit: 196cc4ff3068a59b962a3fe1cbb960eb72ef542b

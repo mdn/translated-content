@@ -41,7 +41,7 @@ document.addEventListener('afterscriptexecute', finished, true);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.onafterscriptexecute")}}
+{{Compat}}
 
 ## 関連情報
 

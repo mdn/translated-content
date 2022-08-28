@@ -32,4 +32,4 @@ slug: Web/HTML/Global_attributes/tabindex
 
 - 所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 - 反映这个属性的 {{domxref("HTMLElement.tabIndex")}}
-- tabindex 的可访问性问题：请见 [不要使用大于 0 的 Tabindex | Adrian Roselli](http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html)。
+- tabindex 的无障碍问题：请见 [不要使用大于 0 的 Tabindex | Adrian Roselli](http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html)。

@@ -9,7 +9,6 @@ tags:
   - プロパティ
   - 読み取り専用
   - リファレンス
-browser-compat: api.Element.scrollTopMax
 translation_of: Web/API/Element/scrollTopMax
 ---
 {{APIRef("DOM")}}{{Non-standard_header}}

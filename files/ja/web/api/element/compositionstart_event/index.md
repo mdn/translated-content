@@ -10,7 +10,6 @@ tags:
   - イベント
   - 入力メソッド
 translation_of: Web/API/Element/compositionstart_event
-browser-compat: api.Element.compositionstart_event
 ---
 {{APIRef}}
 

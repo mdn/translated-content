@@ -27,4 +27,4 @@ new Document();
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.Document")}}
+{{Compat}}

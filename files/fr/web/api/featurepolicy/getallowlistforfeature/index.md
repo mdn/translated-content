@@ -47,12 +47,10 @@ for (const origine of listePermissions)
   console.log(origine)
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                | Statut                               | Commentaire          |
-| ---------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("Feature Policy","","getAllowlistForFeature")}} | {{Spec2("Feature Policy")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FeaturePolicy.getAllowlistForFeature")}}
+{{Compat}}

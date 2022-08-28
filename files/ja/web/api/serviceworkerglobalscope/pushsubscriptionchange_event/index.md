@@ -19,7 +19,7 @@ translation_of: Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event
 ---
 {{APIRef("Push API")}}
 
-**`pushsubscriptionchange`** イベントは[グローバルスコープ](/ja/docs/Web/API/ServiceWorkerGlobalScope)としての {{domxref("ServiceWorker")}} へ送信され、、アプリケーションの制御の外から起動されたプッシュ通知への加入状況が変化したことを示します。これはブラウザーが加入を更新した場合に発生しますが、加入が取り消されたり失われたりしたときにも発生する可能性があります。
+**`pushsubscriptionchange`** イベントは[グローバルスコープ](/ja/docs/Web/API/ServiceWorkerGlobalScope)としての {{domxref("ServiceWorker")}} へ送信され、アプリケーションの制御の外から起動されたプッシュ通知への加入状況が変化したことを示します。これはブラウザーが加入を更新した場合に発生しますが、加入が取り消されたり失われたりしたときにも発生する可能性があります。
 
 <table class="properties">
   <tbody>

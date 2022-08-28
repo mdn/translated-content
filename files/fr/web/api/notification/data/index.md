@@ -29,14 +29,12 @@ Un clone structuré.
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaire          |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Web Notifications','#dom-notification-data','data')}} | {{Spec2('Web Notifications')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification.data")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

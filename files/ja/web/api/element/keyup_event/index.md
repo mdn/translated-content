@@ -8,7 +8,6 @@ tags:
   - Event
   - Reference
   - keyup
-browser-compat: api.Element.keyup_event
 translation_of: Web/API/Element/keyup_event
 ---
 {{APIRef}}

@@ -71,7 +71,7 @@ document.ontransitionrun = () => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.transitionrun_event")}}
+{{Compat}}
 
 ## 関連情報
 

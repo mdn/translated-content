@@ -9,7 +9,6 @@ tags:
   - 標準外
   - リファレンス
   - シャドウ DOM
-browser-compat: api.Element.createShadowRoot
 translation_of: Web/API/Element/createShadowRoot
 ---
 {{APIRef('Shadow DOM')}}{{non-standard_header}}{{deprecated_header}}

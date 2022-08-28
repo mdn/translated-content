@@ -29,4 +29,4 @@ XUL で定められたメソッドであり、標準仕様には含まれてい�
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.tooltipNode")}}
+{{Compat}}

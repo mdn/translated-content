@@ -459,7 +459,7 @@ function returnFileSize(number) {
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.input.input-file")}}
+{{Compat}}
 
 ## 関連情報
 

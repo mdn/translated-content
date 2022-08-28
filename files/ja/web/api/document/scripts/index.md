@@ -45,4 +45,4 @@ if (scripts.length) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.scripts")}}
+{{Compat}}

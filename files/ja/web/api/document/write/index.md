@@ -84,7 +84,7 @@ document.write(markup);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.write")}}
+{{Compat}}
 
 ## 関連情報
 

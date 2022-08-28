@@ -59,7 +59,7 @@ xhr.responseType = 'document';
 xhr.overrideMimeType('text/xml');
 
 xhr.onload = function () {
-  if (xhr.readyState === xhr.DONE &amp;&amp; xhr.status === 200) {
+  if (xhr.readyState === xhr.DONE && xhr.status === 200) {
     console.log(xhr.response, xhr.responseXML);
   }
 };

@@ -167,13 +167,11 @@ Les résultats des types `NODE_SNAPSHOT` sont des instantanés, qui sont essenti
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName("DOM3 XPath", "xpath.html#XPathEvaluator-evaluate", "Document.evaluate")}} | {{Spec2("DOM3 XPath")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.evaluate")}}
+{{Compat}}
 
 ## Voir aussi
 

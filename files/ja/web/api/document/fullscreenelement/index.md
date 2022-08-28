@@ -57,7 +57,7 @@ function isVideoInFullscreen() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.DocumentOrShadowRoot.fullscreenElement")}}
+{{Compat}}
 
 ## 関連情報
 

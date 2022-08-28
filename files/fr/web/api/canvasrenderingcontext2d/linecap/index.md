@@ -138,17 +138,11 @@ for (var i = 0; i < lineCap.length; i++) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-linecap", "CanvasRenderingContext2D.lineCap")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.lineCap")}}
-
-## Notes spécifiques à WebKit/Blink
-
-- Dans les navigateurs basés sur WebKit et Blink, une méthode non-standard et désapprouvée `ctx.setLineCap()` est implémentée en plus de cette propriété.
+{{Compat}}
 
 ## Voir aussi
 

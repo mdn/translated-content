@@ -15,7 +15,7 @@ JavaScript 框架是现代前端 web 开发的重要部分，为开发人员提�
 - 框架有什么特性？它们一般是如何工作的？框架对这些特性的实现有何不同？
 - 它们与“普通的”JavaScript 或 HTML 有什么关系？
 
-在此之后，我们将提供一些教程，介绍一些主要框架的基本内容，为您提供足够的上下文和熟悉感，以便您自己开始更深入地学习。我们希望你以一种实用的方式来学习框架，不要忘记 web 平台的基本最佳实践，比如可访问性。
+在此之后，我们将提供一些教程，介绍一些主要框架的基本内容，为您提供足够的上下文和熟悉感，以便您自己开始更深入地学习。我们希望你以一种实用的方式来学习框架，不要忘记 web 平台的基本最佳实践，比如无障碍。
 
 **[通过“客户端框架介绍”即刻开始](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)**
 
@@ -48,8 +48,8 @@ JavaScript 框架是现代前端 web 开发的重要部分，为开发人员提�
   - : 我们的组件化计划已经完成，现在是时候开始将我们的应用从一个完全静态的界面更新成允许交互和变更的界面。在这个章节我们将继续研究事件和状态，借此实现上述功能。
 - [5. React 交互：编辑，过滤，条件渲染](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
   - : 我们已经接近 React 旅程的终点（至少目前是这样），我们将对我们的 Todo 列表应用的主要功能区域做最后的更改。这包括允许编辑现有的任务，在所有列表，已完成列表和未完成列表中过滤任务。在这个过程中我们将研究条件渲染。
-- [6. React 的可访问性支持](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - : 在我们最后的教程章节，我们将重点介绍可访问性，包括 React 的焦点管理，这可以提高可用性，降低纯键盘用户和屏幕阅读器用户的困扰。
+- [6. React 的无障碍支持](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - : 在我们最后的教程章节，我们将重点介绍无障碍，包括 React 的焦点管理，这可以提高可用性，降低纯键盘用户和屏幕阅读器用户的困扰。
 - [7. React 资源](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
   - : 我们的最后章节提供了一个 React 资源列表，供你用于进一步的学习。
 

@@ -243,7 +243,7 @@ document.addEventListener("touchstart", goFaster);
 
 ## 获取动画信息
 
-想象其他方式我们可以使用 playbackRate，例如通过让他们减慢整个网站的动画来改善具有前庭障碍的用户的可访问性。 这不可能在 CSS 中重新计算每个 CSS 规则的持续时间，但是通过 Web 动画 API，我们可以使用即将到来的（在浏览器中不支持！）{{domxref("document.getAnimations()")}}方法 循环遍历页面上的每个动画，并将它们的播放速度减半：
+想象其他方式我们可以使用 playbackRate，例如通过让他们减慢整个网站的动画来改善具有前庭障碍的用户的无障碍。 这不可能在 CSS 中重新计算每个 CSS 规则的持续时间，但是通过 Web 动画 API，我们可以使用即将到来的（在浏览器中不支持！）{{domxref("document.getAnimations()")}}方法 循环遍历页面上的每个动画，并将它们的播放速度减半：
 
 ```js
 document.getAnimations().forEach(

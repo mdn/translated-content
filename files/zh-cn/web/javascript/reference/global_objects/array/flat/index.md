@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/flat
 
 ## 语法
 
-```plain
+```js
 var newArray = arr.flat([depth])
 ```
 
@@ -27,7 +27,7 @@ var newArray = arr.flat([depth])
 
 ### 扁平化嵌套数组
 
-```plain
+```js
 var arr1 = [1, 2, [3, 4]];
 arr1.flat();
 // [1, 2, 3, 4]
@@ -60,7 +60,7 @@ arr4.flat();
 
 ### 使用 `reduce` 与 `concat`
 
-```plain
+```js
 var arr = [1, 2, [3, 4]];
 
 // 展开一层数组
@@ -77,7 +77,7 @@ const flattened = arr => [].concat(...arr);
 
 ```js
 // 使用 reduce、concat 和递归展开无限多层嵌套的数组
-  var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
+var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
 function flatDeep(arr, d = 1) {
    return d > 0 ? arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), [])
                 : arr.slice();
@@ -129,7 +129,7 @@ const forFlat = (arr = [], depth = 1) => {
 
 ### 使用堆栈 stack
 
-```plain
+```js
 // 无递归数组扁平化，使用堆栈
 // 注意：深度的控制比较低效，因为需要检查每一个值的深度
 // 也可能在 shift / unshift 上进行 w/o 反转，但是末端的数组 OPs 更快
@@ -153,7 +153,7 @@ function flatten(input) {
 flatten(arr1);// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
 ```
 
-```plain
+```js
 // 递归版本的反嵌套
 function flatten(array) {
   var flattend = [];
@@ -169,7 +169,7 @@ function flatten(array) {
 
 ### Use `Generator` function
 
-```plain
+```js
 function* flatten(array) {
     for (const item of array) {
         if (Array.isArray(item)) {

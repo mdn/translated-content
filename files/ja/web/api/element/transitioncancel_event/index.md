@@ -73,7 +73,7 @@ document.ontransitioncancel = () => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.transitioncancel_event")}}
+{{Compat}}
 
 ## 関連情報
 

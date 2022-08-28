@@ -45,10 +45,8 @@ var deviceMotionEvent = new DeviceMotionEvent(type[, options])
 
 ## Spécifications
 
-| Spécification                                | Statut                                   | Commentaire          |
-| -------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DeviceMotionEvent.DeviceMotionEvent")}}
+{{Compat}}

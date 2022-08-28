@@ -26,17 +26,13 @@ elt.id = idStr; // Définir l'identifiant
 
 - `idStr` est l'identifiant de l'élément.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                    | Statut                           | Commentaire                                                       |
-| -------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-element-id', 'id')}}             | {{Spec2('DOM WHATWG')}} | Pas de changement par rapport à {{SpecName('DOM2 HTML')}}. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-63534901', 'id')}}     | {{Spec2('DOM2 HTML')}}     | Pas de changement par rapport à {{SpecName('DOM1')}}.     |
-| {{SpecName('DOM1', 'level-one-html.html#ID-63534901', 'id')}} | {{Spec2('DOM1')}}         | Définition initiale.                                              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.id")}}
+{{Compat}}
 
 ## Voir aussi
 

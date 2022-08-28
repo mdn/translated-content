@@ -149,7 +149,7 @@ translation_of: Web/HTML/Element/input/reset
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.input.input-reset")}}
+{{Compat}}
 
 ## 関連情報
 

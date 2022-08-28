@@ -121,7 +121,7 @@ HTML 表单部件的定位通常不是问题; 但是，您应该特别注意两�
 
 {{HTMLElement("legend")}}元素易于应用 CSS，除了定位。在所有浏览器中， {{HTMLElement("legend")}} 元素定位是其 {{HTMLElement("fieldset")}} 父元素的上边框的最顶端。在 HTML 流中无法改变它的绝对位置，无法让其远离顶部边框。然而，你可以使用 {{cssxref("position")}} 属性将其位置设置为绝对或相对。除此之外，它近几年是 fieldset 边框的一部分。
 
-由于{{HTMLElement("legend")}}元素对可访问性非常重要，因为它能被无障碍技术作为每个 fieldset 中的表单元素的标签读出来，它通常与标题配对，并且在无障碍中被隐藏 。例如：
+由于{{HTMLElement("legend")}}元素对无障碍非常重要，因为它能被无障碍技术作为每个 fieldset 中的表单元素的标签读出来，它通常与标题配对，并且在无障碍中被隐藏 。例如：
 
 ##### HTML
 

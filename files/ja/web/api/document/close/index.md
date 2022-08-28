@@ -42,4 +42,4 @@ document.close();
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.close")}}
+{{Compat}}

@@ -130,13 +130,11 @@ function afficheDonnee() {
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#idl-def-IDBCursor', 'cursor')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBCursor")}}
+{{Compat}}
 
 ## Voir aussi
 

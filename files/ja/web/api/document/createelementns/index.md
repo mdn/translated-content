@@ -96,7 +96,7 @@ The new {{DOMxRef("Element")}}.
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.createElementNS")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -76,7 +76,7 @@ document.onanimationiteration = () => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.animationiteration_event")}}
+{{Compat}}
 
 ## 関連情報
 

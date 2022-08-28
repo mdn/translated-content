@@ -19,7 +19,7 @@ translation_of: Web/API/CanvasRenderingContext2D/strokeText
 ---
 {{APIRef}}
 
-{{domxref("CanvasRenderingContext2D")}} の **`strokeText()`** メソッドはキャンバス 2D API の一部であり、テキスト文字列の文字の輪郭を指定した座標に描画します。オプションの引数で、描画されるテキストの最大幅を指定することができます。{{Glossary("user agent", "ユーザーエージェント")}}はこの幅を実現するために、、テキストを圧縮したり、フォントサイズを縮小したりします。
+{{domxref("CanvasRenderingContext2D")}} の **`strokeText()`** メソッドはキャンバス 2D API の一部であり、テキスト文字列の文字の輪郭を指定した座標に描画します。オプションの引数で、描画されるテキストの最大幅を指定することができます。{{Glossary("user agent", "ユーザーエージェント")}}はこの幅を実現するために、テキストを圧縮したり、フォントサイズを縮小したりします。
 
 このメソッドは現在のパスを変更することなく、直接キャンバスに描画を行います。その後の {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} や {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} には影響を与えません。
 

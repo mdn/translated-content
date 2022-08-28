@@ -311,7 +311,7 @@ otherCheckbox.addEventListener('change', () => {
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.input.input-checkbox")}}
+{{Compat}}
 
 ## 関連情報
 

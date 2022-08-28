@@ -71,7 +71,7 @@ document.onanimationcancel = () => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.animationcancel_event")}}
+{{Compat}}
 
 ## 関連情報
 

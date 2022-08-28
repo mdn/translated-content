@@ -83,13 +83,11 @@ self.addEventListener('fetch', function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#dom-cachestorage-match', 'CacheStorage: match')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.CacheStorage.match")}}
+{{Compat}}
 
 ## Voir aussi
 

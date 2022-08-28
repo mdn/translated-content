@@ -61,7 +61,7 @@ function init() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.GlobalEventHandlers.onpointerenter")}}
+{{Compat}}
 
 ## 関連情報
 

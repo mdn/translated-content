@@ -56,15 +56,13 @@ button.onauxclick = function() {
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                       | Commentaire |
-| -------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('UI Events','#event-type-auxclick','onauxclick')}} | {{Spec2('UI Events')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.GlobalEventHandlers.onauxclick")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - {{event("auxclick")}} event
 - Related event handlers

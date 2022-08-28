@@ -139,7 +139,7 @@ CSS は単にターゲットの外観を設定するだけで、その機能に�
 
 ## ブラウザーの互換性
 
-{{Compat("api.GlobalEventHandlers.onpointerdown")}}
+{{Compat}}
 
 ## 関連情報
 

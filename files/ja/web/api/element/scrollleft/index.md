@@ -6,7 +6,6 @@ tags:
   - CSSOM View
   - プロパティ
   - リファレンス
-browser-compat: api.Element.scrollLeft
 translation_of: Web/API/Element/scrollLeft
 ---
 {{APIRef("DOM")}}

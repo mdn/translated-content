@@ -50,13 +50,11 @@ self.onmessage = function(e) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#extendablemessage-event-origin-attribute', 'ExtendableMessageEvent.origin')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.ExtendableMessageEvent.origin")}}
+{{Compat}}
 
 ## Voir aussi
 

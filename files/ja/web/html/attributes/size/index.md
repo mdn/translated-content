@@ -51,7 +51,7 @@ translation_of: Web/HTML/Attributes/size
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attribute.size")}}
+{{Compat}}
 
 ## 関連情報
 

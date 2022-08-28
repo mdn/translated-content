@@ -34,7 +34,7 @@ xpathExpr = document.createExpression(xpathText, namespaceURLMapper);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.createExpression")}}
+{{Compat}}
 
 ## 関連情報
 

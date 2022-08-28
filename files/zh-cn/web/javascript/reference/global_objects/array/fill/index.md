@@ -11,7 +11,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/fill
 ## 语法
 
 ```js
-arr.fill(value[, start[, end]])
+fill(value)
+fill(value, start)
+fill(value, start, end)
 ```
 
 ### 参数
@@ -21,7 +23,7 @@ arr.fill(value[, start[, end]])
 - `start` {{optional_inline}}
   - : 起始索引，默认值为 0。
 - `end` {{optional_inline}}
-  - : 终止索引，默认值为 `this.length`。
+  - : 终止索引，默认值为 `arr.length`。
 
 ### 返回值
 
@@ -54,7 +56,7 @@ Array(3).fill(4);                // [4, 4, 4]
 [].fill.call({ length: 3 }, 4);  // {0: 4, 1: 4, 2: 4, length: 3}
 
 // Objects by reference.
-var arr = Array(3).fill({}) // [{}, {}, {}];
+const arr = Array(3).fill({}) // [{}, {}, {}];
 // 需要注意如果 fill 的参数为引用类型，会导致都执行同一个引用类型
 // 如 arr[0] === arr[1] 为 true
 arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]

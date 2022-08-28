@@ -32,4 +32,4 @@ scrollElm.scrollTop = 0;
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.scrollingElement")}}
+{{Compat}}

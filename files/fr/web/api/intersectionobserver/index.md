@@ -58,13 +58,11 @@ intersectionObserver.observe(document.querySelector('.scrollerFooter'));
 
 ## Spécifications
 
-| Spécification                                    | Statut                                       | Commentaire |
-| ------------------------------------------------ | -------------------------------------------- | ----------- |
-| {{SpecName('IntersectionObserver')}} | {{Spec2('IntersectionObserver')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserver")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -8,7 +8,6 @@ tags:
   - NeedsMobileBrowserCompatibility
   - プロパティ
   - リファレンス
-browser-compat: api.Element.namespaceURI
 translation_of: Web/API/Element/namespaceURI
 original_slug: Web/API/Node/namespaceURI
 ---

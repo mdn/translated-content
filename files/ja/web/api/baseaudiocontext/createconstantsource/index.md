@@ -31,7 +31,7 @@ createConstantSource()
 
 ### 返値
 
-{{domxref('ConstantSourceNode')}} のインスタンスです。。
+{{domxref('ConstantSourceNode')}} のインスタンスです。
 
 ## 仕様書
 

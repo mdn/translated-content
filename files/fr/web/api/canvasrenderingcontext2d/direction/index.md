@@ -95,13 +95,11 @@ window.addEventListener('load', drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                           | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-direction", "CanvasRenderingContext2D.direction")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.direction")}}
+{{Compat}}
 
 ## Voir aussi
 

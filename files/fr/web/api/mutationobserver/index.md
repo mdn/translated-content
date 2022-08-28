@@ -195,10 +195,8 @@ observer.disconnect();
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', '#mutationobserver', 'MutationObserver')}} | {{ Spec2('DOM WHATWG') }} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.MutationObserver")}}
+{{Compat}}
