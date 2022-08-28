@@ -1,12 +1,6 @@
 ---
 title: HTMLUnknownElement
 slug: Web/API/HTMLUnknownElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-translation_of: Web/API/HTMLUnknownElement
 ---
 {{ APIRef("HTML DOM") }}
 

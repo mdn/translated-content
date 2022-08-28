@@ -1,15 +1,6 @@
 ---
 title: HTMLKeygenElement
 slug: Web/API/HTMLKeygenElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsBrowserAgnosticism
-  - NeedsCompatTable
-  - NeedsNewLayout
-  - Reference
-translation_of: Web/API/HTMLKeygenElement
 ---
 {{ APIRef("HTML DOM") }}
 

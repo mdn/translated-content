@@ -1,13 +1,6 @@
 ---
 title: HTMLSourceElement
 slug: Web/API/HTMLSourceElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLSourceElement
-  - Interface
-  - Reference
-translation_of: Web/API/HTMLSourceElement
 ---
 {{ApiRef}}
 

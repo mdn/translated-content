@@ -1,15 +1,6 @@
 ---
 title: HTMLInputElement.setSelectionRange()
 slug: Web/API/HTMLInputElement/setSelectionRange
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - メソッド
-  - リファレンス
-  - テキスト欄選択 API
-browser-compat: api.HTMLInputElement.setSelectionRange
-translation_of: Web/API/HTMLInputElement/setSelectionRange
 ---
 {{APIRef("HTML DOM")}}
 

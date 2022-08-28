@@ -1,16 +1,6 @@
 ---
 title: HTML ドラッグ＆ドロップ API
 slug: Web/API/HTML_Drag_and_Drop_API
-tags:
-  - Advanced
-  - Guide
-  - HTML5
-  - Overview
-  - XUL
-  - drag and drop
-  - events
-  - ドラッグ＆ドロップ
-translation_of: Web/API/HTML_Drag_and_Drop_API
 ---
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 

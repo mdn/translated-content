@@ -1,15 +1,6 @@
 ---
 title: HTMLTableElement.createTFoot()
 slug: Web/API/HTMLTableElement/createTFoot
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - メソッド
-  - NeedsSpecTable
-  - リファレンス
-browser-compat: api.HTMLTableElement.createTFoot
-translation_of: Web/API/HTMLTableElement/createTFoot
 ---
 {{APIRef("HTML DOM")}}
 

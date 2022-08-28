@@ -1,16 +1,6 @@
 ---
 title: HTMLObjectElement.data
 slug: Web/API/HTMLObjectElement/data
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - NeedsExample
-  - Property
-  - Reference
-  - data
-browser-compat: api.HTMLObjectElement.data
 ---
 {{APIRef("HTML DOM")}}
 
