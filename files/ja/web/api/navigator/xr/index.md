@@ -1,20 +1,6 @@
 ---
 title: Navigator.xr
 slug: Web/API/Navigator/xr
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Getter
-  - Graphics
-  - Navigator
-  - Property
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - XR
-translation_of: Web/API/Navigator/xr
 ---
 {{APIRef("WebXR Device API")}}
 

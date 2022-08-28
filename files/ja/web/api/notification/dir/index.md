@@ -1,17 +1,6 @@
 ---
 title: Notification.dir
 slug: Web/API/Notification/dir
-page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - dir
-browser-compat: api.Notification.dir
-translation_of: Web/API/Notification/dir
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 

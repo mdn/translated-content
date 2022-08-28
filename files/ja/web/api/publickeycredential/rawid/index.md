@@ -1,15 +1,6 @@
 ---
 title: PublicKeyCredential.rawId
 slug: Web/API/PublicKeyCredential/rawId
-tags:
-  - API
-  - Property
-  - PublicKeyCredential
-  - Reference
-  - Web Authentication API
-  - WebAuthn
-  - プロパティ
-translation_of: Web/API/PublicKeyCredential/rawId
 ---
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 

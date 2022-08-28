@@ -1,12 +1,6 @@
 ---
 title: NDEFReader
 slug: Web/API/NDEFReader
-tags:
-  - NDEF
-  - リファレンス
-  - ウェブ NFC
-browser-compat: api.NDEFReader
-translation_of: Web/API/NDEFReader
 ---
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
