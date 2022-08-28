@@ -1,16 +1,6 @@
 ---
 title: ServiceWorkerGlobalScope.onpushsubscriptionchange
 slug: Web/API/ServiceWorkerGlobalScope/onpushsubscriptionchange
-tags:
-  - API
-  - NeedsExample
-  - Property
-  - Push
-  - Reference
-  - Service Worker
-  - ServiceWorkerGlobalScope
-  - onpushsubscriptionchange
-translation_of: Web/API/ServiceWorkerGlobalScope/onpushsubscriptionchange
 ---
 {{APIRef("Service Workers API")}}
 

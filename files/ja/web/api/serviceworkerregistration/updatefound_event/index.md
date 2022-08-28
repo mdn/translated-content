@@ -1,14 +1,6 @@
 ---
 title: 'ServiceWorkerRegistration: updatefound イベント'
 slug: Web/API/ServiceWorkerRegistration/updatefound_event
-tags:
-  - API
-  - イベント
-  - リファレンス
-  - サービスワーカー
-  - ServiceWorkerRegistration
-browser-compat: api.ServiceWorkerRegistration.updatefound_event
-translation_of: Web/API/ServiceWorkerRegistration/updatefound_event
 original_slug: Web/API/ServiceWorkerRegistration/onupdatefound
 ---
 {{APIRef("Service Workers API")}}

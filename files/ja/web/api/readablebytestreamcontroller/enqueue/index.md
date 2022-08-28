@@ -1,15 +1,6 @@
 ---
 title: ReadableByteStreamController.enqueue()
 slug: Web/API/ReadableByteStreamController/enqueue
-tags:
-  - API
-  - Experimental
-  - Method
-  - ReadableByteStreamController
-  - Reference
-  - Streams
-  - enqueue
-translation_of: Web/API/ReadableByteStreamController/enqueue
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 

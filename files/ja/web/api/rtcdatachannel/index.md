@@ -1,18 +1,6 @@
 ---
 title: RTCDataChannel
 slug: Web/API/RTCDataChannel
-tags:
-  - API
-  - Communication
-  - Data Transfer
-  - Interface
-  - Media
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
-translation_of: Web/API/RTCDataChannel
 ---
 {{APIRef("WebRTC")}}
 

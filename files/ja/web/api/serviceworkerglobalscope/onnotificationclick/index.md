@@ -1,15 +1,6 @@
 ---
 title: ServiceWorkerGlobalScope.onnotificationclick
 slug: Web/API/ServiceWorkerGlobalScope/onnotificationclick
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Property
-  - Reference
-  - ServiceWorkerGlobalScope
-  - onnotificationclick
-translation_of: Web/API/ServiceWorkerGlobalScope/onnotificationclick
 ---
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 

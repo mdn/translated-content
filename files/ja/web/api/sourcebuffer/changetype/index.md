@@ -1,18 +1,6 @@
 ---
 title: SourceBuffer.changeType()
 slug: Web/API/SourceBuffer/changeType
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media
-  - Media Source
-  - Media Source Extensions
-  - Method
-  - SourceBuffer
-  - Video
-  - changeType
-translation_of: Web/API/SourceBuffer/changeType
 ---
 {{APIRef("Media Source Extensions")}}
 

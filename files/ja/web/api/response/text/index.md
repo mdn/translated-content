@@ -1,16 +1,7 @@
 ---
 title: Response.text()
 slug: Web/API/Response/text
-tags:
-  - API
-  - Fetch
-  - Method
-  - Reference
-  - Text
-  - Response
-translation_of: Web/API/Response/text
 original_slug: Web/API/Body/text
-browser-compat: api.Response.text
 ---
 {{APIRef("Fetch")}}
 
