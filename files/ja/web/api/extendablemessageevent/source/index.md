@@ -1,14 +1,6 @@
 ---
 title: ExtendableMessageEvent.source
 slug: Web/API/ExtendableMessageEvent/source
-tags:
-  - API
-  - ExtendableMessageEvent
-  - Property
-  - Reference
-  - Service Workers
-  - source
-translation_of: Web/API/ExtendableMessageEvent/source
 ---
 {{APIRef("Service Workers API")}}
 

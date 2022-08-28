@@ -1,13 +1,6 @@
 ---
 title: Event.target
 slug: Web/API/Event/target
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Event.target
-translation_of: Web/API/Event/target
 ---
 {{ApiRef("DOM")}}
 

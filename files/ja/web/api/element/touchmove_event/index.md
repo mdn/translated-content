@@ -1,16 +1,6 @@
 ---
 title: 'Element: touchmove イベント'
 slug: Web/API/Element/touchmove_event
-tags:
-  - Event
-  - Touch Events
-  - TouchEvent
-  - UI
-  - UI Events
-  - UX
-  - touch
-  - touchmove
-translation_of: Web/API/Element/touchmove_event
 ---
 {{APIRef}}
 

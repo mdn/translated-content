@@ -1,17 +1,6 @@
 ---
 title: Fullscreen API
 slug: Web/API/Fullscreen_API
-tags:
-  - API
-  - DOM
-  - Fullscreen API
-  - Intermediate
-  - Reference
-  - Tutorial
-  - 全画面
-  - 全画面モード
-  - 概要
-translation_of: Web/API/Fullscreen_API
 ---
 {{DefaultAPISidebar("Fullscreen API")}}
 

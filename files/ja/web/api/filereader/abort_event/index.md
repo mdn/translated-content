@@ -1,16 +1,6 @@
 ---
 title: 'FileReader: abort イベント'
 slug: Web/API/FileReader/abort_event
-tags:
-  - API
-  - Event
-  - FileReader
-  - ProgressEvent
-  - Reference
-  - Web
-  - abort
-  - イベント
-translation_of: Web/API/FileReader/abort_event
 ---
 {{APIRef}}
 

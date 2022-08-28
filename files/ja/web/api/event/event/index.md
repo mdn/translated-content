@@ -1,12 +1,6 @@
 ---
 title: Event()
 slug: Web/API/Event/Event
-page-type: web-api-constructor
-tags:
-  - コンストラクター
-  - リファレンス
-browser-compat: api.Event.Event
-translation_of: Web/API/Event/Event
 ---
 {{APIRef("DOM")}}
 

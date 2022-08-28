@@ -1,15 +1,6 @@
 ---
 title: FormDataEvent()
 slug: Web/API/FormDataEvent/FormDataEvent
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - FormDataEvent
-  - Forms
-  - Reference
-translation_of: Web/API/FormDataEvent/FormDataEvent
-browser-compat: api.FormDataEvent.FormDataEvent
 ---
 {{APIRef("DOM")}}
 

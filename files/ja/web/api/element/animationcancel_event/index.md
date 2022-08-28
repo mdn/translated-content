@@ -1,17 +1,6 @@
 ---
 title: 'Document: animationcancel イベント'
 slug: Web/API/Element/animationcancel_event
-tags:
-  - CSS Animations
-  - CSS アニメーション
-  - Document
-  - Event
-  - Reference
-  - Web
-  - animationcancel
-  - イベント
-  - ウェブ
-translation_of: Web/API/Document/animationcancel_event
 original_slug: Web/API/Document/animationcancel_event
 ---
 {{APIRef}}{{SeeCompatTable}}

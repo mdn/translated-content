@@ -1,13 +1,6 @@
 ---
 title: Frame Timing API
 slug: Web/API/Frame_Timing_API
-tags:
-  - Guide
-  - NeedsTranslation
-  - Overview
-  - TopicStub
-  - Web Performance
-translation_of: Web/API/Frame_Timing_API
 ---
 {{DefaultAPISidebar("Frame Timing API")}}{{SeeCompatTable}}
 

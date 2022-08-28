@@ -1,10 +1,6 @@
 ---
 title: フレームタイミング API の使用
 slug: Web/API/Frame_Timing_API/Using_the_Frame_Timing_API
-tags:
-  - Web パフォーマンス
-  - ガイド
-translation_of: Web/API/Frame_Timing_API/Using_the_Frame_Timing_API
 ---
 {{DefaultAPISidebar("Frame Timing API")}}{{SeeCompatTable}}
 

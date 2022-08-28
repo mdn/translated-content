@@ -1,13 +1,6 @@
 ---
 title: Element.scrollHeight
 slug: Web/API/Element/scrollHeight
-tags:
-  - API
-  - CSSOM View
-  - NeedsDHTMLRemovalInExample
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/Element/scrollHeight
 ---
 {{APIRef("DOM")}}
 
