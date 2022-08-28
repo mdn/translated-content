@@ -1,13 +1,6 @@
 ---
 title: location.password
 slug: Web/API/Location/password
-tags:
-  - API
-  - Location
-  - プロパティ
-  - リファレンス
-browser-compat: api.Location.password
-translation_of: Web/API/Location/password
 ---
 {{deprecated_header}}
 

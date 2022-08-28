@@ -1,17 +1,6 @@
 ---
 title: MediaStream Recording API
 slug: Web/API/MediaStream_Recording_API
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams
-  - MediaStream Recording
-  - MediaStream Recording API
-  - Overview
-  - Reference
-  - Video
-translation_of: Web/API/MediaStream_Recording_API
 ---
 {{DefaultAPISidebar("MediaStream Recording")}}
 

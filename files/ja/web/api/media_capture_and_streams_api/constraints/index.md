@@ -1,20 +1,6 @@
 ---
 title: 能力、制約、そして設定
 slug: Web/API/Media_Capture_and_Streams_API/Constraints
-tags:
-  - Advanced
-  - Audio
-  - Constraints
-  - Example
-  - Guide
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - Settings
-  - Video
-  - WebRTC
-  - capabilities
-translation_of: Web/API/Media_Streams_API/Constraints
 original_slug: Web/API/Media_Streams_API/Constraints
 ---
 {{DefaultAPISidebar("Media Capture and Streams")}}

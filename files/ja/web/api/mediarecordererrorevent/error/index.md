@@ -1,16 +1,6 @@
 ---
 title: MediaRecorderErrorEvent.error
 slug: Web/API/MediaRecorderErrorEvent/error
-tags:
-  - API
-  - Error
-  - Error Handling
-  - MediaRecordingErrorEvent
-  - MediaStream Recording
-  - MediaStream Recording API
-  - Property
-  - Reference
-translation_of: Web/API/MediaRecorderErrorEvent/error
 ---
 {{APIRef("MediaStream Recording")}}
 

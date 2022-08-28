@@ -1,15 +1,6 @@
 ---
 title: MediaRecorder.resume()
 slug: Web/API/MediaRecorder/resume
-tags:
-  - API
-  - Media Capture
-  - Media Recorder API
-  - MediaRecorder
-  - Method
-  - Reference
-  - resume
-translation_of: Web/API/MediaRecorder/resume
 ---
 {{APIRef("MediaStream Recording")}}
 

@@ -1,16 +1,6 @@
 ---
 title: MessageEvent.ports
 slug: Web/API/MessageEvent/ports
-tags:
-  - API
-  - DOM
-  - MessagingEvent
-  - プロパティ
-  - リファレンス
-  - messaging
-  - ports
-browser-compat: api.MessageEvent.ports
-translation_of: Web/API/MessageEvent/ports
 ---
 {{APIRef("HTML DOM")}}
 

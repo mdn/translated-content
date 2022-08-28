@@ -1,19 +1,6 @@
 ---
 title: MediaRecorder.requestData()
 slug: Web/API/MediaRecorder/requestData
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture
-  - Media Recorder API
-  - MediaRecorder
-  - MediaStream Recording
-  - Method
-  - Reference
-  - Video
-  - requestData
-translation_of: Web/API/MediaRecorder/requestData
 ---
 {{APIRef("MediaStream Recording")}}
 
