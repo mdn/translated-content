@@ -14,7 +14,7 @@ l10n:
 
 ### テキストエディターのインストール
 
-コンピュータには、おそらくすでにテキストエディターが入っています。 Windows には[メモ帳](https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%A2%E5%B8%B3)が、 macOS には[テキストエディット](https://ja.wikipedia.org/wiki/%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%82%A8%E3%83%87%E3%82%A3%E3%83%83%E3%83%88)が、 Linux にはディストリビューションによっていろいろですが、 Ubuntu には [gedit](https://ja.wikipedia.org/wiki/Gedit) が初めからインストールされているはずです。
+コンピューターには、おそらくすでにテキストエディターが入っています。 Windows には[メモ帳](https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%A2%E5%B8%B3)が、 macOS には[テキストエディット](https://ja.wikipedia.org/wiki/%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%82%A8%E3%83%87%E3%82%A3%E3%83%83%E3%83%88)が、 Linux にはディストリビューションによっていろいろですが、 Ubuntu には [gedit](https://ja.wikipedia.org/wiki/Gedit) が初めからインストールされているはずです。
 
 ウェブ開発においては、おそらくメモ帳やテキストエディットより良いものがあります。おすすめは [Visual Studio Code](https://code.visualstudio.com/) で、これは無料のエディターであり、ライブプレビューやコードヒントを提供しています。
 
