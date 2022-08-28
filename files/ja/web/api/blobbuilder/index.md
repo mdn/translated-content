@@ -1,16 +1,6 @@
 ---
 title: BlobBuilder
 slug: Web/API/BlobBuilder
-page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM リファレンス
-  - File API
-  - 非推奨
-  - リファレンス
-browser-compat: api.BlobBuilder
-translation_of: Web/API/BlobBuilder
 ---
 {{APIRef("File API")}}{{ deprecated_header}}
 

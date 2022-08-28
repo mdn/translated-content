@@ -1,12 +1,6 @@
 ---
 title: Attr
 slug: Web/API/Attr
-page-type: web-api-interface
-tags:
-  - インターフェイス
-  - リファレンス
-browser-compat: api.Attr
-translation_of: Web/API/Attr
 ---
 {{APIRef("DOM")}}
 

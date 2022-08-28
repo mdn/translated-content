@@ -1,12 +1,6 @@
 ---
 title: CSSSupportsRule
 slug: Web/API/CSSSupportsRule
-tags:
-  - API
-  - CSSOM
-  - Interface
-  - Reference
-translation_of: Web/API/CSSSupportsRule
 ---
 {{APIRef("CSSOM")}}
 

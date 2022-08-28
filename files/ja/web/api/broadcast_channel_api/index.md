@@ -1,13 +1,6 @@
 ---
 title: Broadcast Channel API
 slug: Web/API/Broadcast_Channel_API
-tags:
-  - API
-  - Broadcast Channel API
-  - HTML API
-  - Overview
-  - Reference
-translation_of: Web/API/Broadcast_Channel_API
 ---
 {{DefaultAPISidebar("Broadcast Channel API")}}
 

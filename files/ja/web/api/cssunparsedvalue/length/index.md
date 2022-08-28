@@ -1,17 +1,6 @@
 ---
 title: CSSUnparsedValue.length
 slug: Web/API/CSSUnparsedValue/length
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnparsedValue
-  - Constructor
-  - Experimental
-  - NeedsExample
-  - Property
-  - Reference
-  - length
-translation_of: Web/API/CSSUnparsedValue/length
 ---
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 

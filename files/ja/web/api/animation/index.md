@@ -1,16 +1,6 @@
 ---
 title: Animation
 slug: Web/API/Animation
-tags:
-  - API
-  - アニメーション
-  - インターフェイス
-  - リファレンス
-  - ウェブアニメーション
-  - waapi
-  - ウェブアニメーション API
-browser-compat: api.Animation
-translation_of: Web/API/Animation
 ---
 {{ APIRef("Web Animations") }}
 

@@ -1,12 +1,6 @@
 ---
 title: Attr.value
 slug: Web/API/Attr/value
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - リファレンス
-browser-compat: api.Attr.value
-translation_of: Web/API/Attr/value
 ---
 {{APIRef("DOM")}}
 

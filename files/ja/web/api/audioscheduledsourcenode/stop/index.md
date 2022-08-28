@@ -1,8 +1,6 @@
 ---
 title: AudioBufferSourceNode.stop()
 slug: Web/API/AudioScheduledSourceNode/stop
-translation_of: Web/API/AudioScheduledSourceNode/stop
-translation_of_original: Web/API/AudioBufferSourceNode/stop
 original_slug: Web/API/AudioBufferSourceNode/stop
 ---
 {{ APIRef("Web Audio API") }}

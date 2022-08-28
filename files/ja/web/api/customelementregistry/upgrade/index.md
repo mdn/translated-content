@@ -1,16 +1,6 @@
 ---
 title: CustomElementRegistry.upgrade()
 slug: Web/API/CustomElementRegistry/upgrade
-tags:
-  - API
-  - CustomElementRegistry
-  - メソッド
-  - リファレンス
-  - Upgrade
-  - ウェブコンポーネント
-  - カスタム要素
-browser-compat: api.CustomElementRegistry.upgrade
-translation_of: Web/API/CustomElementRegistry/upgrade
 ---
 {{APIRef("CustomElementRegistry")}}
 

@@ -1,19 +1,6 @@
 ---
 title: AudioTrackList
 slug: Web/API/AudioTrackList
-tags:
-  - API
-  - Audio
-  - AudioTrackList
-  - HTML DOM
-  - Interface
-  - Media
-  - Reference
-  - Track List
-  - Tracks
-  - list
-  - インターフェイス
-translation_of: Web/API/AudioTrackList
 ---
 {{APIRef("HTML DOM")}}
 
