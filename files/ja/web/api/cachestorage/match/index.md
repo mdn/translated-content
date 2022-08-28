@@ -1,16 +1,6 @@
 ---
 title: CacheStorage.match()
 slug: Web/API/CacheStorage/match
-tags:
-  - API
-  - CacheStorage
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - match
-translation_of: Web/API/CacheStorage/match
 ---
 {{APIRef("Service Workers API")}}
 

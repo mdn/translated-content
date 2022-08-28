@@ -1,14 +1,6 @@
 ---
 title: CSS Painting API
 slug: Web/API/CSS_Painting_API
-tags:
-  - API
-  - CSS
-  - CSS Paint API
-  - Houdini
-  - Painting
-  - Reference
-translation_of: Web/API/CSS_Painting_API
 ---
 {{DefaultAPISidebar("CSS Painting API")}}
 

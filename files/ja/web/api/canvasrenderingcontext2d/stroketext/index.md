@@ -1,21 +1,6 @@
 ---
 title: CanvasRenderingContext2D.strokeText()
 slug: Web/API/CanvasRenderingContext2D/strokeText
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Draw String
-  - Draw Text
-  - 文字列の描画
-  - テキストの描画
-  - メソッド
-  - リファレンス
-  - Stroke String
-  - テキストの輪郭
-  - strokeText
-browser-compat: api.CanvasRenderingContext2D.strokeText
-translation_of: Web/API/CanvasRenderingContext2D/strokeText
 ---
 {{APIRef}}
 

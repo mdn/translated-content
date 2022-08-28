@@ -1,16 +1,6 @@
 ---
 title: BaseAudioContext.destination
 slug: Web/API/BaseAudioContext/destination
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - プロパティ
-  - リファレンス
-  - ウェブ音声 API
-  - destination
-browser-compat: api.BaseAudioContext.destination
-translation_of: Web/API/BaseAudioContext/destination
 original_slug: Web/API/AudioContext/destination
 ---
 {{ APIRef("Web Audio API") }}

@@ -1,11 +1,6 @@
 ---
 title: CharacterData.replaceData()
 slug: Web/API/CharacterData/replaceData
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.CharacterData.replaceData
-translation_of: Web/API/CharacterData/replaceData
 ---
 {{APIRef("DOM")}}
 

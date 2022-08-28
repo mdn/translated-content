@@ -1,13 +1,6 @@
 ---
 title: CloseEvent.reason
 slug: Web/API/CloseEvent/reason
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - closeEvent
-browser-compat: api.CloseEvent.reason
-translation_of: Web/API/CloseEvent/reason
 ---
 {{APIRef("Websockets API")}}
 
