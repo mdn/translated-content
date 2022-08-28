@@ -113,7 +113,7 @@ Object.setPrototypeOf(SuperHero, Human);
 const superMan = new SuperHero();
 ```
 
-[ES-6 subclassing](https://hacks.mozilla.org/2015/08/es6-in-depth-subclassing/) 中提到了不使用 `extends` 的子类派生方法。
+[ES-6 子类派生](https://hacks.mozilla.org/2015/08/es6-in-depth-subclassing/)中提到了不使用 `extends` 的子类派生方法。
 
 ## 规范
 
@@ -131,4 +131,4 @@ const superMan = new SuperHero();
 - {{jsxref("Object.getPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - [继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#使用不同的方法来创建对象和生成原型链)
-- [ES-6 subclassing](https://hacks.mozilla.org/2015/08/es6-in-depth-subclassing/)
+- [ES-6 子类派生](https://hacks.mozilla.org/2015/08/es6-in-depth-subclassing/)
