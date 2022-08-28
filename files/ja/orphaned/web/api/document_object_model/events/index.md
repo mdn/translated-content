@@ -1,11 +1,6 @@
 ---
 title: イベントと DOM
 slug: orphaned/Web/API/Document_Object_Model/Events
-tags:
-  - DOM
-  - Guide
-  - ガイド
-translation_of: Web/API/Document_Object_Model/Events
 original_slug: Web/API/Document_Object_Model/Events
 ---
 {{DefaultAPISidebar("DOM")}}

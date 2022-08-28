@@ -1,8 +1,6 @@
 ---
 title: Microsummary XML grammar reference
 slug: orphaned/Microsummary_XML_grammar_reference
-tags:
-  - Microsummaries
 original_slug: Microsummary_XML_grammar_reference
 ---
 ## はじめに

@@ -1,7 +1,6 @@
 ---
 title: RTCIdentityEvent
 slug: orphaned/Web/API/RTCIdentityEvent
-translation_of: Web/API/RTCIdentityEvent
 original_slug: Web/API/RTCIdentityEvent
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}

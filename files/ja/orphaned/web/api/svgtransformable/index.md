@@ -1,14 +1,6 @@
 ---
 title: SVGTransformable
 slug: orphaned/Web/API/SVGTransformable
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - Référence(2)
-  - SVG
-  - SVG DOM
-translation_of: Web/API/SVGTransformable
 original_slug: Web/API/SVGTransformable
 ---
 {{APIRef("SVG")}}
