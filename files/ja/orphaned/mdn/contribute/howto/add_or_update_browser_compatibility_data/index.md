@@ -1,11 +1,6 @@
 ---
 title: ブラウザーの互換性データを追加したり更新したりするには
 slug: orphaned/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
-tags:
-  - ガイド
-  - Howto
-  - MDN Meta
-translation_of: MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
 original_slug: MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
 ---
 {{MDNSidebar}}

@@ -1,11 +1,6 @@
 ---
 title: 私たちが書くものは何か
 slug: MDN/Writing_guidelines/What_we_write
-page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
-translation_of: MDN/Writing_guidelines/What_we_write
 ---
 {{MDNSidebar}}  
 

@@ -1,10 +1,6 @@
 ---
 title: Markdown で書くには
 slug: MDN/Writing_guidelines/Howto/Markdown_in_MDN
-tags:
-  - meta
-  - writing-guide
-translation_of: MDN/Writing_guidelines/Howto/Markdown_in_MDN
 original_slug: MDN/Contribute/Markdown_in_MDN
 l10n:
   sourceCommit: 9ce57d5046baf5d25c8eb066e60227f0fbd017cf

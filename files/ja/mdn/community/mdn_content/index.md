@@ -1,10 +1,6 @@
 ---
 title: MDN コンテンツのバグ修正
 slug: MDN/Community/MDN_content
-tags:
-  - Bugs
-  - Contribute
-  - MDN
 original_slug: MDN/Contribute/Fixing_MDN_content_bugs
 ---
 {{MDNSidebar}}
