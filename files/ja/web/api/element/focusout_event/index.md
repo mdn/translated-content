@@ -1,16 +1,6 @@
 ---
 title: 'Element: focusout イベント'
 slug: Web/API/Element/focusout_event
-tags:
-  - API
-  - DOM
-  - Element
-  - イベント
-  - FocusEvent
-  - リファレンス
-  - focusout
-  - onfocusout
-translation_of: Web/API/Element/focusout_event
 ---
 {{APIRef}}
 

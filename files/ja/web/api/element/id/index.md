@@ -1,13 +1,6 @@
 ---
 title: Element.id
 slug: Web/API/Element/id
-tags:
-  - API
-  - DOM
-  - Element
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/Element/id
 ---
 {{ ApiRef("DOM") }}
 

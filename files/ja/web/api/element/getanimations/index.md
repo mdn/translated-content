@@ -1,22 +1,6 @@
 ---
 title: Element.getAnimations()
 slug: Web/API/Element/getAnimations
-tags:
-  - API
-  - Animatable
-  - CSS
-  - CSS アニメーション
-  - CSS トランジション
-  - Element
-  - 実験的
-  - メソッド
-  - リファレンス
-  - トランジション
-  - ウェブアニメーション
-  - getAnimations
-  - waapi
-  - web animations api
-translation_of: Web/API/Element/getAnimations
 ---
 {{ SeeCompatTable() }}{{APIRef("Web Animations")}}
 

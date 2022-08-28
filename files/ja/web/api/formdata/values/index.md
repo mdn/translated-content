@@ -1,14 +1,6 @@
 ---
 title: FormData.values()
 slug: Web/API/FormData/values
-tags:
-  - API
-  - FormData
-  - Iterator
-  - Method
-  - Reference
-  - XMLHttpRequest API
-translation_of: Web/API/FormData/values
 ---
 {{APIRef("XMLHttpRequest")}}
 

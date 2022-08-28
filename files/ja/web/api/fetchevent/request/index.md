@@ -1,16 +1,6 @@
 ---
 title: FetchEvent.request
 slug: Web/API/FetchEvent/request
-tags:
-  - API
-  - FetchEvent
-  - Offline
-  - Property
-  - Reference
-  - Service Workers
-  - Workers
-  - request
-translation_of: Web/API/FetchEvent/request
 ---
 {{APIRef("Service Workers API")}}
 

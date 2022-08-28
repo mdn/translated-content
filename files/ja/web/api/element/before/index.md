@@ -1,13 +1,6 @@
 ---
 title: Element.before()
 slug: Web/API/Element/before
-tags:
-  - API
-  - DOM
-  - メソッド
-  - Node
-  - リファレンス
-translation_of: Web/API/Element/before
 original_slug: Web/API/ChildNode/before
 ---
 {{APIRef("DOM")}}

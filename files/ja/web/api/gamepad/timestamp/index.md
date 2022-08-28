@@ -1,16 +1,6 @@
 ---
 title: Gamepad.timestamp
 slug: Web/API/Gamepad/timestamp
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Référence(2)
-translation_of: Web/API/Gamepad/timestamp
 ---
 {{APIRef("Gamepad API")}}
 

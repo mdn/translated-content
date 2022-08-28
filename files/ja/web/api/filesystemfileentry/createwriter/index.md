@@ -1,19 +1,6 @@
 ---
 title: FileSystemFileEntry.createWriter()
 slug: Web/API/FileSystemFileEntry/createWriter
-page-type: web-api-instance-method
-tags:
-  - API
-  - ファイルとディレクトリー項目 API
-  - FileSystemFileEntry
-  - Files
-  - メソッド
-  - 標準外
-  - リファレンス
-  - createWriter
-  - 非推奨
-browser-compat: api.FileSystemFileEntry.createWriter
-translation_of: Web/API/FileSystemFileEntry/createWriter
 ---
 {{APIRef("File and Directories Entries API")}}{{deprecated_header}}{{Non-standard_header}}
 

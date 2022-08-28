@@ -1,11 +1,6 @@
 ---
 title: element.removeAttributeNode
 slug: Web/API/Element/removeAttributeNode
-tags:
-  - DOM
-  - Gecko
-  - 翻訳中
-translation_of: Web/API/Element/removeAttributeNode
 ---
 {{ ApiRef("DOM") }}
 

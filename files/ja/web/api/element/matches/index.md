@@ -1,15 +1,6 @@
 ---
 title: Element.matches()
 slug: Web/API/Element/matches
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
-  - msMatchesSelector
-  - webkitMatchesSelector
-translation_of: Web/API/Element/matches
 ---
 {{APIRef("DOM")}}
 
