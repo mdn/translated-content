@@ -1,11 +1,6 @@
 ---
 title: MDN Web Docs の掲載基準
 slug: MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion
-page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
-translation_of: MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion
 ---
 
 {{MDNSidebar}}

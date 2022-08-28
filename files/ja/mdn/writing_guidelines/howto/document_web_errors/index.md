@@ -1,11 +1,6 @@
 ---
 title: ウェブのエラーの記事を作成するには
 slug: MDN/Writing_guidelines/Howto/Document_web_errors
-tags:
-  - Howto
-  - MDN
-  - Meta
-translation_of: MDN/Contribute/Howto/Document_web_errors
 original_slug: MDN/Contribute/Howto/Document_web_errors
 ---
 {{MDNSidebar}}
