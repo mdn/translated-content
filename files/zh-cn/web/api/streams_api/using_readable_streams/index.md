@@ -231,7 +231,7 @@ readableStream
 
 但是一个自定义流仍然是 `ReadableStream` 实例，意味着你可以给它附着一个 reader。例如，看看我们的[简单随机流示例](https://github.com/mdn/dom-examples/blob/master/streams/simple-random-stream/index.html)（[也可以参见在线演示](https://mdn.github.io/dom-examples/streams/simple-random-stream/)），其创建了一个自定义的流，排入了一些随机的字符串，然后在按下*停止字符串生成*的按钮后，再次从流中读取数据。
 
-> **备注：** 为了使用 {{domxref("FetchEvent.respondWith()")}} 消费流，排入的流内容的类型必须是 {{jsxref("Uint8Array")}}；例如使用 {{domxref("TextEncoder")}} 编码。
+> **备注：** 为了使用 {{domxref("FetchEvent.respondWith()")}} 消费流，排入的流内容的类型必须是 {{jsxref("Uint8Array")}}；例如使用 {{domxref("TextEncoder")}} 进行编码。
 
 自定义流的构造函数有一个 `start()` 方法，该方法使用 {{domxref("setInterval()")}} 去指定每秒生成一个随机的字符串。然后使用 {{domxref("ReadableStreamDefaultController.enqueue()")}} 将它排入流。当按下按钮，取消 interval，并调用名为 `readStream()` 函数再次将数据从流中读取回来。由于我们一直停止排入分块，所以我们也要关闭流。
 
