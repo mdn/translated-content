@@ -218,7 +218,7 @@ fetch('./tortoise.png')
 
 ### 读取自定义流
 
-在我们的简单流 pump 示例中，我们将其传递到 {{domxref("Response.Response", "Response")}} 构造函数中来消费自定义的可读流，然后我们将它作为 `blob()` 去消费。
+在我们的简单流式读取示例中，我们将其传递到 {{domxref("Response.Response", "Response")}} 构造函数中来消费自定义的可读流，然后我们将它作为 `blob()` 来使用。
 
 ```js
 readableStream
