@@ -1,17 +1,6 @@
 ---
 title: 'Window: pagehide イベント'
 slug: Web/API/Window/pagehide_event
-tags:
-  - API
-  - Event
-  - History
-  - Navigation
-  - Reference
-  - Window
-  - pagehide
-  - イベント
-  - 履歴
-translation_of: Web/API/Window/pagehide_event
 ---
 {{APIRef("HTML DOM")}}
 

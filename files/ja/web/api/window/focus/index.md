@@ -1,14 +1,6 @@
 ---
 title: Window.focus()
 slug: Web/API/Window/focus
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - メソッド
-  - Window
-browser-compat: api.Window.focus
-translation_of: Web/API/Window/focus
 ---
 {{APIRef}}
 

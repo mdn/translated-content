@@ -1,15 +1,6 @@
 ---
 title: WritableStreamDefaultController
 slug: Web/API/WritableStreamDefaultController
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Interface
-  - Reference
-  - Streams
-  - WritableStreamDefaultController
-translation_of: Web/API/WritableStreamDefaultController
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 

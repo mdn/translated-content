@@ -1,18 +1,6 @@
 ---
 title: Basic concepts behind Web Audio API
 slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
-tags:
-  - Audio
-  - Beginner
-  - Guide
-  - Introduction
-  - Media
-  - Web Audio
-  - Web Audio API
-  - concepts
-  - sound
-  - 初心者
-translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 ---
 この記事では、アプリを経由した音声伝達方法の設計をする際に、十分な情報に基づいた決断をする助けとなるよう、 Web Audio API の特徴がいかに働いているか、その背後にある音声理論について説明します。この記事はあなたを熟練のサウンドエンジニアにさせることはできないものの、Web Audio API が動く理由を理解するための十分な背景を提供します。
 

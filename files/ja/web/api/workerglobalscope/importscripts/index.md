@@ -1,17 +1,6 @@
 ---
 title: WorkerGlobalScope.importScripts()
 slug: Web/API/WorkerGlobalScope/importScripts
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Workers
-  - WorkderGlobalScope
-  - importScripts
-  - ウェブワーカー
-  - メソッド
-  - ワーカーグローバルスコープ
-translation_of: Web/API/WorkerGlobalScope/importScripts
 ---
 {{APIRef("Web Workers API")}}
 

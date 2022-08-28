@@ -1,16 +1,6 @@
 ---
 title: Worker.prototype.postMessage()
 slug: Web/API/Worker/postMessage
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Reference
-  - Web Workers
-  - Worker
-  - postMessage
-translation_of: Web/API/Worker/postMessage
-browser-compat: api.Worker.postMessage
 ---
 {{APIRef("Web Workers API")}}
 
