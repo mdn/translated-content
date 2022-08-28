@@ -66,7 +66,7 @@ fetch('./tortoise.png')
 
 ### 读取流
 
-现在你已经附着了你的 reader，你可以使用 {{domxref("ReadableStreamDefaultReader.read()")}} 方法从流中读取数据分块。你从流中读出分块后，可以做你喜欢的事。例如我们的简单流 pump 示例继续在新的、自定义 `ReadableStream` 中对每个分块进行入队（我们将在下一节发现更多对信息），然后从中创建一个新的响应，将它作为 {{domxref("Blob")}} 消费，使用 {{domxref("URL.createObjectURL()")}} 从该 blob 创建一个对象 URL，然后将其显示在屏幕上的 {{htmlelement("img")}} 元素中，有效地创建了我们最初获取图像的副本。
+现在你已经附着了你的 reader，你可以使用 {{domxref("ReadableStreamDefaultReader.read()")}} 方法从流中读取数据分块。你从流中读出分块后，可以做你喜欢的事。例如，我们的简单流式读取示例将分块送入新的自定义 `ReadableStream` 中（我们将在下一节发现更多信息），然后从中创建一个新的响应，将它作为 {{domxref("Blob")}} 使用，然后通过 {{domxref("URL.createObjectURL()")}} 从该 blob 创建一个对象 URL，并将其显示在屏幕上的 {{htmlelement("img")}} 元素中，有效地创建了我们最初获取的图像的副本。
 
 ```js
 // Fetch the original image
