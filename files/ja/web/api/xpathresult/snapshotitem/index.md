@@ -1,15 +1,6 @@
 ---
 title: XPathResult.snapshotItem()
 slug: Web/API/XPathResult/snapshotItem
-tags:
-  - API
-  - DOM XPath API
-  - Method
-  - Reference
-  - XPath
-  - XPathResult
-  - メソッド
-translation_of: Web/API/XPathResult/snapshotItem
 ---
 {{APIRef("DOM XPath")}}
 

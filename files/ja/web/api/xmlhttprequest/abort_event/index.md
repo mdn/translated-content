@@ -1,15 +1,6 @@
 ---
 title: 'XMLHttpRequest: abort イベント'
 slug: Web/API/XMLHttpRequest/abort_event
-tags:
-  - API
-  - イベント
-  - ProgressEvent
-  - ウェブ
-  - XMLHttpRequest
-  - abort
-browser-compat: api.XMLHttpRequest.abort_event
-translation_of: Web/API/XMLHttpRequest/abort_event
 ---
 {{APIRef}}
 

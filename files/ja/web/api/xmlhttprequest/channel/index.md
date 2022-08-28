@@ -1,16 +1,6 @@
 ---
 title: XMLHttpRequest.channel
 slug: Web/API/XMLHttpRequest/channel
-tags:
-  - API
-  - 標準外
-  - プロパティ
-  - リファレンス
-  - XHR
-  - XMLHttpRequest
-  - channel
-  - nsIChannel
-translation_of: Web/API/XMLHttpRequest/channel
 ---
 {{APIRef('XMLHttpRequest')}}
 
