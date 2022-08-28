@@ -1,16 +1,6 @@
 ---
 title: Window.ongamepaddisconnected
 slug: conflicting/Web/API/Window/gamepaddisconnected_event
-tags:
-  - API
-  - Event Handler
-  - Experimental
-  - Gamepad API
-  - Property
-  - Reference
-  - Window
-  - ongamepaddisconnected
-translation_of: Web/API/Window/ongamepaddisconnected
 original_slug: Web/API/Window/ongamepaddisconnected
 ---
 {{DefaultAPISidebar("Gamepad API")}}{{SeeCompatTable}}

@@ -1,16 +1,6 @@
 ---
 title: WindowEventHandlers.onafterprint
 slug: conflicting/Web/API/Window/afterprint_event
-tags:
-  - API
-  - DOM
-  - Event Handler
-  - HTML DOM
-  - Property
-  - Reference
-  - WindowEventHandlers
-  - printing
-translation_of: Web/API/WindowEventHandlers/onafterprint
 original_slug: Web/API/WindowEventHandlers/onafterprint
 ---
 {{ApiRef}}

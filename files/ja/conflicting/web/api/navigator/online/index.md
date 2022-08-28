@@ -1,15 +1,6 @@
 ---
 title: オンライン・オフラインイベント
 slug: conflicting/Web/API/Navigator/onLine
-tags:
-  - AJAX
-  - DOM
-  - HTML5
-  - Intermediate
-  - NeedsUpdate
-  - Offline web applications
-  - Web Development
-translation_of: Web/API/Navigator/Online_and_offline_events
 original_slug: Web/API/Navigator/Online_and_offline_events
 ---
 一部のブラウザーは、 [Online/Offline イベント](https://www.whatwg.org/specs/web-apps/current-work/#offline)を [WHATWG Web Applications 1.0 仕様書](https://www.whatwg.org/specs/web-apps/current-work/)に従って実装しています。

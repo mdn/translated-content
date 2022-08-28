@@ -1,13 +1,6 @@
 ---
 title: FileHandle API
 slug: conflicting/Web/API/File_and_Directory_Entries_API
-tags:
-  - API
-  - Files
-  - Non Standard
-  - Reference
-  - WebAPI
-translation_of: Web/API/File_Handle_API
 original_slug: Web/API/File_Handle_API
 ---
 {{non-standard_header}}

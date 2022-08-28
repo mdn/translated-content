@@ -1,21 +1,6 @@
 ---
 title: AudioTrackList.onaddtrack
 slug: conflicting/Web/API/AudioTrackList/addtrack_event
-tags:
-  - API
-  - Adding Audio Tracks
-  - Adding Tracks
-  - Audio
-  - AudioTrackList
-  - Event Handler
-  - HTML DOM
-  - Media
-  - Property
-  - Reference
-  - addTrack
-  - onaddtrack
-  - track
-translation_of: Web/API/AudioTrackList/onaddtrack
 original_slug: Web/API/AudioTrackList/onaddtrack
 ---
 {{APIRef("HTML DOM")}}

@@ -1,7 +1,6 @@
 ---
 title: MediaStreamTrack.onunmute
 slug: conflicting/Web/API/MediaStreamTrack/unmute_event
-translation_of: Web/API/MediaStreamTrack/onunmute
 original_slug: Web/API/MediaStreamTrack/onunmute
 ---
 {{ APIRef("Media Capture and Streams") }}

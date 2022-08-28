@@ -1,16 +1,6 @@
 ---
 title: IDBRequest.onsuccess
 slug: conflicting/Web/API/IDBRequest/success_event
-tags:
-  - API
-  - Database
-  - IDBRequest
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - onsuccess
-translation_of: Web/API/IDBRequest/onsuccess
 original_slug: Web/API/IDBRequest/onsuccess
 ---
 {{ APIRef("IndexedDB") }}
