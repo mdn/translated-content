@@ -208,7 +208,7 @@ fetch('./tortoise.png')
   });
 ```
 
-### ReadableStream controllers
+### ReadableStream controller
 
 你将注意到传递给 `ReadableStream` 构造函数的 `start()` 和 `pull()` 方法指定了 `controller` 参数——这些是 {{domxref("ReadableStreamDefaultController")}} 类的实例，它可以用于控制你的流。
 
