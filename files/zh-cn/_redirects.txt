@@ -2479,7 +2479,8 @@
 /zh-CN/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/zh-CN/docs/Web/Security/Same-origin_policy
 /zh-CN/docs/Web/JavaScript/Strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
 /zh-CN/docs/Web/JavaScript/Strict_mode/Transitioning_to_strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
-/zh-CN/docs/Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation	/zh-CN/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation
+/zh-CN/docs/Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
+/zh-CN/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 /zh-CN/docs/Web/JavaScript/重新认识js	/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 /zh-CN/docs/Web/Media/Formats/视频编解码器	/zh-CN/docs/Web/Media/Formats/Video_codecs
 /zh-CN/docs/Web/Performance/浏览器渲染页面的工作原理	/zh-CN/docs/Web/Performance/How_browsers_work
