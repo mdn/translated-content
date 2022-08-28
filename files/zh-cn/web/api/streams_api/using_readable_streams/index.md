@@ -102,7 +102,7 @@ fetch('./tortoise.png')
   .catch((err) => console.error(err));
 ```
 
-让我们详细看看如何使用 `read`。在 `pump()` 函数中，我们首先调用 `read()`，其返回一个包含对象的 promise——这里有我们要读去的结果，其形式为 `{ done, value }`：
+让我们详细看看如何使用 `read()`。在 `pump()` 函数中，我们首先调用 `read()`，其返回一个包含对象的 promise——这里有我们要读去的结果，其形式为 `{ done, value }`：
 
 ```js
 reader.read().then(({ done, value }) => { /* … */ });
