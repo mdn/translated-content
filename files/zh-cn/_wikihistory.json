@@ -45793,13 +45793,6 @@
       "iwo"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf": {
-    "modified": "2020-03-12T19:49:00.824Z",
-    "contributors": [
-      "Rominez",
-      "suhan"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Promise": {
     "modified": "2019-06-27T05:04:40.773Z",
     "contributors": [
