@@ -1,14 +1,6 @@
 ---
 title: TransitionEvent
 slug: Web/API/TransitionEvent
-tags:
-  - API
-  - CSS
-  - CSS3 Transitions
-  - CSSOM
-  - Experimental
-  - Reference
-translation_of: Web/API/TransitionEvent
 ---
 {{APIRef("CSSOM")}} {{SeeCompatTable}}
 

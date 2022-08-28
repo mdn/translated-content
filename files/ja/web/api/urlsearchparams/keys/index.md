@@ -1,13 +1,6 @@
 ---
 title: URLSearchParams.keys()
 slug: Web/API/URLSearchParams/keys
-tags:
-  - API
-  - Method
-  - Reference
-  - URL API
-  - URLSearchParams
-translation_of: Web/API/URLSearchParams/keys
 ---
 {{APIRef("URL API")}}
 

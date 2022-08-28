@@ -1,7 +1,6 @@
 ---
 title: VRDisplayCapabilities.canPresent
 slug: Web/API/VRDisplayCapabilities/canPresent
-translation_of: Web/API/VRDisplayCapabilities/canPresent
 ---
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 

@@ -1,11 +1,6 @@
 ---
 title: Text()
 slug: Web/API/Text/Text
-tags:
-  - コンストラクター
-  - リファレンス
-browser-compat: api.Text.Text
-translation_of: Web/API/Text/Text
 ---
 {{ APIRef("DOM")}}
 
