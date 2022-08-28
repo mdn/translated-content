@@ -37,7 +37,7 @@ Now let's move on to adding functionality to allow users to filter their to-do i
   </tbody>
 </table>
 
-## フィルタリング コード
+## フィルタリングコード
 
 フィルタリングは、以前に `app.component.ts` に追加した `filter` プロパティに基づいて構成されています。
 
