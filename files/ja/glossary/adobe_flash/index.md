@@ -1,13 +1,6 @@
 ---
 title: Adobe Flash
 slug: Glossary/Adobe_Flash
-tags:
-  - CodingScripting
-  - Flash
-  - Glossary
-  - Infrastructure
-  - 用語集
-translation_of: Glossary/Adobe_Flash
 ---
 Flash は Adobe によって開発された廃れつつある技術で、表現力のあるウェブアプリ、マルチメディアコンテンツ、ストリーミングメディアを表示します。 Adobe Flash は対応している{{Glossary("Browser","ウェブブラウザー")}}でプラグインを用いて実行することができます。
 

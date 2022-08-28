@@ -1,12 +1,6 @@
 ---
 title: First interactive
 slug: Glossary/First_interactive
-tags:
-  - Glossary
-  - Lighthouse
-  - Web Performance
-  - Webパフォーマンス
-translation_of: Glossary/First_interactive
 ---
 **First Interactive** は [first CPU idle](/ja/docs/Glossary/First_CPU_idle) とも呼ばれ、ユーザのウィンドウがユーザ入力を処理するのに十分に静かであるか、または最小限のインタラクティブを測定する非標準の Web パフォーマンスメトリックです。
 

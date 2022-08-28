@@ -1,10 +1,6 @@
 ---
 title: Presto
 slug: Glossary/Presto
-tags:
-  - Glossary
-  - Infrastructure
-translation_of: Glossary/Presto
 ---
 Presto は、バージョン 15 までの {{Glossary("Opera browser")}} を強化する為に使用された独自のブラウザーレイアウトエンジンでした。それ以降の Opera browser は、 {{Glossary('Blink')}} レイアウトエンジンを使用する Chromium をベースにしています。
 

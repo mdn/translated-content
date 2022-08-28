@@ -1,12 +1,6 @@
 ---
 title: Endianness (エンディアン)
 slug: Glossary/Endianness
-tags:
-  - Coding
-  - CodingScripting
-  - Glossary
-  - 用語集
-translation_of: Glossary/Endianness
 ---
 **エンディアン** (もしくは**バイト順**) は、コンピューターが数字を表現するために各バイトを構成する方法を説明するものです。
 

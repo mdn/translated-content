@@ -1,13 +1,6 @@
 ---
 title: SPA (単一ページアプリケーション)
 slug: Glossary/SPA
-tags:
-  - Glossary
-  - SPA
-  - single-page app
-  - 単一ページアプリ
-  - 用語集
-translation_of: Glossary/SPA
 ---
 SPA (Single-page application) はウェブアプリの実装の一種で、単一のウェブ文書のみを読み込み、別な内容を表する際には {{domxref("XMLHttpRequest")}} や [Fetch](/ja/docs/Web/API/Fetch_API) などの JavaScript API を通じて単一文書の本文の内容を更新するものです。
 

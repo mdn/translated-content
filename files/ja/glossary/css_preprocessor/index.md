@@ -1,11 +1,6 @@
 ---
 title: CSS preprocessor (CSS プリプロセッサー)
 slug: Glossary/CSS_preprocessor
-tags:
-  - CSS
-  - Glossary
-  - 用語集
-translation_of: Glossary/CSS_preprocessor
 ---
 **CSS プリプロセッサー** は、プリプロセッサー独自の {{Glossary("syntax","構文")}} で {{Glossary("CSS")}} を生成するプログラムです。 CSS プリプロセッサーには多くの種類がありますが、ほとんどの CSS プリプロセッサーは、純粋な CSS には無い、ミックスイン、セレクターの入れ子、セレクターの継承などの機能を追加しています。これらの機能によって、 CSS の可読性や保守性が向上します。
 

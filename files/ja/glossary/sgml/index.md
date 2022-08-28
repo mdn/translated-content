@@ -1,13 +1,6 @@
 ---
 title: SGML
 slug: Glossary/SGML
-tags:
-  - CodingScripting
-  - Composing
-  - Glossary
-  - SGML
-  - 用語集
-translation_of: Glossary/SGML
 ---
 _Standard Generalized Markup Language_ (**SGML**) は、宣言型のマークアップ言語を定義するための {{Glossary("ISO")}} 規格です。
 

@@ -1,12 +1,6 @@
 ---
 title: Global object (グローバルオブジェクト)
 slug: Glossary/Global_object
-tags:
-  - CodingScripting
-  - Glossary
-  - NeedsContent
-  - 用語集
-translation_of: Glossary/Global_object
 ---
 グローバルオブジェクトは、{{glossary("global scope", "グローバルスコープ")}}上に常時存在する{{glossary("object", "オブジェクト")}}です。
 

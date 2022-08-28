@@ -1,13 +1,6 @@
 ---
 title: SQL Injection (SQLインジェクション)
 slug: Glossary/SQL_Injection
-tags:
-  - Glossary
-  - Security
-  - Sql
-  - Sql Injection
-  - Webapp
-translation_of: Glossary/SQL_Injection
 ---
 SQL インジェクションはユーザーからの入力の検証が十分でない・行っていないウェブアプリケーションに対して利用されます。悪意のあるクラッカーは、SQL コマンドをウェブアプリケーションに渡し、バックエンドのデータベースにそれを実行させて攻撃します。
 

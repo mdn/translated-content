@@ -1,18 +1,6 @@
 ---
 title: Static method (静的メソッド)
 slug: Glossary/Static_method
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
-  - Method
-  - Static
-  - Static Method
-  - メソッド
-  - 用語集
-  - 静的
-  - 静的メソッド
-translation_of: Glossary/Static_method
 ---
 静的メソッド (または _静的関数_) とは、{{Glossary("method","メソッド")}}のうち{{Glossary("object","オブジェクト")}}のメンバーとして定義されているものの、コンストラクターで生成されたオブジェクトインスタンスからではなく、API のオブジェクトコンストラクターから直接アクセスできるものです。
 

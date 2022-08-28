@@ -1,9 +1,6 @@
 ---
 title: ECMA
 slug: Glossary/ECMA
-tags:
-  - Glossary
-translation_of: Glossary/ECMA
 ---
 **Ecma International**（正式名：欧州電子計算機工業会; European Computer Manufacturers Association）は、コンピュータ・ハードウェアや通信、プログラム言語の標準規格を策定する非営利組織です。
 

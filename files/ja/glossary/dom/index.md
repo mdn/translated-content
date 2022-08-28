@@ -1,12 +1,6 @@
 ---
 title: DOM
 slug: Glossary/DOM
-tags:
-  - CodingScripting
-  - DOM
-  - Glossary
-  - 用語集
-translation_of: Glossary/DOM
 ---
 DOM (Document Object Model) とは、すべての {{glossary("HTML")}} または {{glossary("XML")}} 文書を表現・操作する {{glossary("API")}} です。 DOM はブラウザーで文書構造をノードのツリーとして読み込み、それぞれのノードを文書の一部 (例えば{{Glossary("element", "要素")}}、テキスト文字列、コメント) として表します。
 

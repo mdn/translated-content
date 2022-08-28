@@ -1,12 +1,6 @@
 ---
 title: Wrapper (ラッパー)
 slug: Glossary/Wrapper
-tags:
-  - CodingScripting
-  - Glossary
-  - Wrapper
-  - 用語集
-translation_of: Glossary/Wrapper
 ---
 JavaScript のようなプログラミング言語において、ラッパー (wrapper) は 1 つ以上の他の関数を呼び出すための関数であり、時には純粋に利便性のために、時にはプロセス中でまったく異なるタスクに合わせるために使用されます。
 

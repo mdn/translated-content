@@ -1,14 +1,6 @@
 ---
 title: Favicon (ファビコン)
 slug: Glossary/Favicon
-tags:
-  - Glossary
-  - Intro
-  - favicon
-  - user agent
-  - ユーザーエージェント
-  - 用語集
-translation_of: Glossary/Favicon
 ---
 ファビコン (お気に入りアイコン) はウェブサイトに含まれる小さなアイコンです。ブラウザのアドレスバー、ページタブ、ブックマークメニューなどに表示されます。ただし最新のブラウザのほとんどは、アドレスバーのファビコンをウェブサイトが {{Glossary("https","HTTPS")}} を使用しているかどうかを示す画像に置換しています。
 

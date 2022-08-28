@@ -1,12 +1,6 @@
 ---
 title: Graceful degradation (グレースフルデグラデーション)
 slug: Glossary/Graceful_degradation
-tags:
-  - graceful degradation
-  - グレースフルデグラデーション
-  - 用語集
-  - 設計
-translation_of: Glossary/Graceful_degradation
 ---
 **グレースフルデグラデーション** (上品な劣化) とは設計哲学の一つで、最新のブラウザーで動作するように新しいウェブサイトやアプリケーションを構築するものの、古いブラウザーでも、良いものでなくても基本的なコンテンツや機能を引き続き提供する使用方法で代替できるようにしようとすることを目指したものです。
 
