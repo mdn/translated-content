@@ -322,7 +322,7 @@ function teeStream() {
 
 ## 链式管道传输
 
-流的另一特征是通过管道的方式从一个流输出到另一个（称为 [pipe chain](/zh-CN/docs/Web/API/Streams_API/Concepts#链式管道传输)）。这会调用两个方法——{{domxref("ReadableStream.pipeThrough()")}}，它将可读流管道输出至拥有一对 writable/readable 的流中，并将一种数据转换成另一种；{{domxref("ReadableStream.pipeTo()")}} 将可读流管道传输至作为 pipe chain 的终点的 writer。
+流的另一特征是通过管道的方式从一个流输出到另一个（称为[链式管道传输](/zh-CN/docs/Web/API/Streams_API/Concepts#链式管道传输)）。这会调用两个方法——{{domxref("ReadableStream.pipeThrough()")}}，它将可读流管道输出至拥有一对 writer/reader 的流中，并将一种数据转换成另一种；{{domxref("ReadableStream.pipeTo()")}} 将可读流管道传输至作为链式管道传输终点的 writer。
 
 我们有一个简单的示例，叫做[解压 PNG 分块](https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream)（[也可以参见在线演示](https://mdn.github.io/dom-examples/streams/png-transform-stream/)）。此示例将图像作为流来获取，然后将它传输到自定义的 PNG 转换流，该流将从二进制数据流中检索 PNG 分块。
 
