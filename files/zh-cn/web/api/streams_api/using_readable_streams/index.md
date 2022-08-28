@@ -24,7 +24,7 @@ slug: Web/API/Streams_API/Using_readable_streams
 
 {{domxref("Request.body")}} 和 {{domxref("Response.body")}} 属性也是这样，它们将主体内容暴露作为一个可读流的获取器（getReader）。
 
-正如我们的[简单随机流 pump](https://github.com/mdn/dom-examples/tree/master/streams/simple-pump)  示例展示（[也可以参见在线演示](https://mdn.github.io/dom-examples/streams/simple-pump/)），暴露它仅是需要访问响应的 `body` 属性：
+正如我们的[简单流式读取](https://github.com/mdn/dom-examples/tree/master/streams/simple-pump)示例所展示的（[也可以参见在线演示](https://mdn.github.io/dom-examples/streams/simple-pump/)），暴露它仅是需要访问响应的 `body` 属性：
 
 ```js
 // Fetch the original image
