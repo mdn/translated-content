@@ -1,16 +1,6 @@
 ---
 title: WebAssembly JavaScript API の使用
 slug: WebAssembly/Using_the_JavaScript_API
-tags:
-  - API
-  - 開発ツール
-  - JavaScript
-  - WebAssembly
-  - コンパイル
-  - インスタンス化
-  - メモリー
-  - テーブル
-translation_of: WebAssembly/Using_the_JavaScript_API
 ---
 {{WebAssemblySidebar}}
 
