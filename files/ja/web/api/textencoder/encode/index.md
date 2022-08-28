@@ -1,15 +1,6 @@
 ---
 title: TextEncode.encode()
 slug: Web/API/TextEncoder/encode
-tags:
-  - API
-  - エンコーディング
-  - メソッド
-  - リファレンス
-  - TextEncoder
-  - encode
-browser-compat: api.TextEncoder.encode
-translation_of: Web/API/TextEncoder/encode
 ---
 {{APIRef("Encoding API")}}
 

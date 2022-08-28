@@ -1,15 +1,6 @@
 ---
 title: TimeRanges.length
 slug: Web/API/TimeRanges/length
-tags:
-  - API
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - TimeRanges
-translation_of: Web/API/TimeRanges/length
 ---
 {{APIRef("DOM")}}
 

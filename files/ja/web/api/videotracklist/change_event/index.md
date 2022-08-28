@@ -1,12 +1,6 @@
 ---
 title: 'VideoTrackList: change イベント'
 slug: Web/API/VideoTrackList/change_event
-tags:
-  - API
-  - Change
-  - Reference
-  - events
-translation_of: Web/API/VideoTrackList/change_event
 ---
 {{APIRef}}
 

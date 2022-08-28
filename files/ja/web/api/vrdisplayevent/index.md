@@ -1,16 +1,6 @@
 ---
 title: VRDisplayEvent
 slug: Web/API/VRDisplayEvent
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - VR
-  - VRDisplayEvent
-  - Virtual Reality
-  - WebVR
-translation_of: Web/API/VRDisplayEvent
 ---
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
