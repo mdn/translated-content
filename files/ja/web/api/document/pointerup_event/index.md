@@ -1,18 +1,6 @@
 ---
 title: 'Document: pointerup event'
 slug: Web/API/Document/pointerup_event
-tags:
-  - API
-  - Document
-  - Event
-  - PointerEvent
-  - Reference
-  - Web
-  - onpointerup
-  - pointerup
-  - イベント
-  - ポインター
-translation_of: Web/API/Document/pointerup_event
 ---
 {{APIRef}}
 

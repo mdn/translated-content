@@ -1,17 +1,6 @@
 ---
 title: Document.width
 slug: Web/API/Document/width
-page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - NeedsBrowserAgnosticism
-  - NeedsSpecTable
-  - プロパティ
-  - リファレンス
-  - 非推奨
-translation_of: Web/API/Document/width
 ---
 {{APIRef("DOM")}} {{deprecated_header}}
 

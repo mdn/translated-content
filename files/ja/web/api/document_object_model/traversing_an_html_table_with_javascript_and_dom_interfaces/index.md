@@ -1,15 +1,6 @@
 ---
 title: JavaScript と DOM インターフェイスによる HTML の表の操作
-slug: >-
-  Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
-tags:
-  - API
-  - DOM
-  - ガイド
-  - HTML
-  - JavaScript
-translation_of: >-
-  Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 ---
 {{DefaultAPISidebar("DOM")}}
 

@@ -1,17 +1,6 @@
 ---
 title: Document.tooltipNode
 slug: Web/API/Document/tooltipNode
-tags:
-  - API
-  - API:Mozilla Extensions
-  - DOM
-  - Draft
-  - Gecko
-  - Mozilla
-  - Non-standard
-  - Property
-  - Reference
-translation_of: Web/API/Document/tooltipNode
 ---
 {{APIRef("DOM")}}{{Non-standard_Header}}
 

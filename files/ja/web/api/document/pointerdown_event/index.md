@@ -1,16 +1,6 @@
 ---
 title: 'Document: pointerdown イベント'
 slug: Web/API/Document/pointerdown_event
-tags:
-  - API
-  - Document
-  - Event
-  - PointerEvent
-  - Reference
-  - onpointerdown
-  - pointerdown
-  - イベント
-translation_of: Web/API/Document/pointerdown_event
 ---
 {{APIRef}}
 

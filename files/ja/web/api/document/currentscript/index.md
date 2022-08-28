@@ -1,14 +1,6 @@
 ---
 title: Document.currentScript
 slug: Web/API/Document/currentScript
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Reference
-  - プロパティ
-translation_of: Web/API/Document/currentScript
 ---
 {{APIRef("DOM")}}
 

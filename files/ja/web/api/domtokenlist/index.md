@@ -1,11 +1,6 @@
 ---
 title: DOMTokenList
 slug: Web/API/DOMTokenList
-tags:
-  - インターフェイス
-  - リファレンス
-browser-compat: api.DOMTokenList
-translation_of: Web/API/DOMTokenList
 ---
 {{APIRef("DOM")}}
 

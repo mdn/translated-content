@@ -1,15 +1,6 @@
 ---
 title: Document.referrer
 slug: Web/API/Document/referrer
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-  - referrer
-  - プロパティ
-translation_of: Web/API/Document/referrer
 ---
 {{APIRef("DOM")}}
 
