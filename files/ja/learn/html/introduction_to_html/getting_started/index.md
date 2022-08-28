@@ -1,17 +1,6 @@
 ---
 title: HTML を始めよう
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
-tags:
-  - Attribute
-  - Beginner
-  - CodingScripting
-  - Comment
-  - Element
-  - Guide
-  - HTML
-  - entity reference
-  - whitespace
-translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 ---
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 

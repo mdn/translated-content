@@ -1,7 +1,6 @@
 ---
 title: 著者詳細ページ
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page
 ---
 著者詳細ページには、指定された `Author` に関する情報を、その (自動的に生成された) `_id` フィールド値を使用して識別し、その `Author` に関連するすべての `Book` オブジェクトのリストを表示する必要があります。
 

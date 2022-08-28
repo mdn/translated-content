@@ -1,16 +1,6 @@
 ---
 title: 'Express チュートリアル Part 5: ライブラリデータの表示'
 slug: Learn/Server-side/Express_Nodejs/Displaying_data
-tags:
-  - Express
-  - nodejs
-  - pug
-  - コントローラ
-  - テンプレート
-  - ビュー
-  - 初心者
-  - 学習
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 

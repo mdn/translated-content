@@ -1,7 +1,6 @@
 ---
 title: フロントエンドウェブ開発者
 slug: Learn/Front-end_web_developer
-translation_of: Learn/Front-end_web_developer
 ---
 {{learnsidebar}}
 

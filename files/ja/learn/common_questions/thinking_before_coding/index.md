@@ -1,12 +1,6 @@
 ---
 title: ウェブサイトのデザインは何から始めればよい？
 slug: Learn/Common_questions/Thinking_before_coding
-tags:
-  - Beginner
-  - Composing
-  - NeedsActiveLearning
-  - needsSchema
-translation_of: Learn/Common_questions/Thinking_before_coding
 ---
 この記事では、すべてのプロジェクトにおいて重要な最初のステップである、「そのプロジェクトで何を達成したいのか」を定義することについて述べます。
 

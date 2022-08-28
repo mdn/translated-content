@@ -1,12 +1,6 @@
 ---
 title: CSS はどう働くか？
 slug: Learn/CSS/First_steps/How_CSS_works
-tags:
-  - Beginner
-  - CSS
-  - DOM
-  - Learn
-translation_of: Learn/CSS/First_steps/How_CSS_works
 ---
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}

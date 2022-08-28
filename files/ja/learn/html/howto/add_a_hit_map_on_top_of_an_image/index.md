@@ -1,13 +1,6 @@
 ---
 title: 画像にヒットマップを追加する
 slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
-tags:
-  - Graphics
-  - Guide
-  - HTML
-  - Intermediate
-  - Navigation
-translation_of: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 ---
 ここでは、イメージマップを設定する方法と、最初に検討すべきいくつかの欠点を説明します。
 

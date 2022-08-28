@@ -1,16 +1,6 @@
 ---
 title: React アプリのコンポーネント化
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components
-tags:
-  - 初心者
-  - フレームワーク
-  - JavaScript
-  - 学習
-  - React
-  - クライアント側
-  - events
-  - interactivity
-  - state
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

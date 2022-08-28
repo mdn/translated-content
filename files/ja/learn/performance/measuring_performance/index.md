@@ -1,13 +1,6 @@
 ---
 title: パフォーマンスの測定
 slug: Learn/Performance/Measuring_performance
-tags:
-  - API
-  - Beginner
-  - Guide
-  - Tools
-  - Web
-translation_of: Learn/Performance/Measuring_performance
 ---
 {{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}パフォーマンスの測定は、あなたがあなたのアプリケーション、サイト、ウェブサービスを評価することを助ける重要な指標を提供します。たとえば、パフォーマンスの指標を使うことで、競合と比較してアプリケーションをどのように動作させるか決めたり、リリースごとのパフォーマンスを比較したりできます。測定対象として選択する指標はユーザー、サイト、そしてビジネスのゴールに関連するものであるべきです。それらは一貫した手法で収集、測定され、非技術系の関係者にも理解でき、利用可能なフォーマットで分析される必要があります。この記事ではサイトのパフォーマンス測定と最適化に利用できるウェブパフォーマンスの指標を紹介します。
 

@@ -1,20 +1,6 @@
 ---
 title: 基本的なテキストとフォントの装飾
 slug: Learn/CSS/Styling_text/Fundamentals
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - Guide
-  - Style
-  - Text
-  - alignment
-  - family
-  - font
-  - shorthand
-  - spacing
-  - weight
-translation_of: Learn/CSS/Styling_text/Fundamentals
 ---
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
 

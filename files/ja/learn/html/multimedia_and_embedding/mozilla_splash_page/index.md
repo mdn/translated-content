@@ -1,26 +1,6 @@
 ---
 title: Mozilla のスプラッシュページ
 slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
-tags:
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - Embedding
-  - HTML
-  - Multimedia
-  - Video
-  - iframe
-  - picture
-  - responsive
-  - sizes
-  - srcset
-  - マルチメディア
-  - レスポンシブ
-  - 初心者
-  - 動画
-  - 埋め込み
-  - 評価試験
-translation_of: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 

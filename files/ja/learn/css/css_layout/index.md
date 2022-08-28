@@ -1,23 +1,6 @@
 ---
 title: CSS レイアウト
 slug: Learn/CSS/CSS_layout
-tags:
-  - Beginner
-  - CSS
-  - Floating
-  - Grids
-  - Guide
-  - Landing
-  - Layout
-  - Learn
-  - Module
-  - Multiple column
-  - Positioning
-  - alignment
-  - flexbox
-  - float
-  - table
-translation_of: Learn/CSS/CSS_layout
 ---
 {{LearnSidebar}}
 

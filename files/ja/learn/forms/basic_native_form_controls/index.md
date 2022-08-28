@@ -1,17 +1,6 @@
 ---
 title: 基本的なネイティブフォームコントロール
 slug: Learn/Forms/Basic_native_form_controls
-tags:
-  - Beginner
-  - Controls
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Input
-  - Web
-  - Widgets
-translation_of: Learn/Forms/Basic_native_form_controls
 original_slug: Learn/Forms/The_native_form_widgets
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}

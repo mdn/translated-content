@@ -1,19 +1,6 @@
 ---
 title: フレックスボックス
 slug: Learn/CSS/CSS_layout/Flexbox
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - CSS layouts
-  - CodingScripting
-  - Flexible Boxes
-  - Guide
-  - Layout
-  - Layouts
-  - Learn
-  - flexbox
-translation_of: Learn/CSS/CSS_layout/Flexbox
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 

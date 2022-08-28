@@ -1,16 +1,6 @@
 ---
 title: CSS セレクター
 slug: Learn/CSS/Building_blocks/Selectors
-tags:
-  - Attribute
-  - Beginner
-  - CSS
-  - Class
-  - Learn
-  - Pseudo
-  - Selectors
-  - id
-translation_of: Learn/CSS/Building_blocks/Selectors
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
 
