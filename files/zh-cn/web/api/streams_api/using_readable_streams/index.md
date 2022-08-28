@@ -22,7 +22,7 @@ slug: Web/API/Streams_API/Using_readable_streams
 
 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 允许你跨网络获取资源，它提供了现代化的 API 去替代 [XHR](/zh-CN/docs/Web/API/XMLHttpRequest)。它有一系列的优点，真正好的是，浏览器最近增加了将 fetch 响应作为可读流使用的能力。
 
-{{domxref("Request.body")}} 和 {{domxref("Response.body")}} 属性也是这样，它们将主体内容暴露作为一个可读流的获取器（getReader）。
+{{domxref("Request.body")}} 和 {{domxref("Response.body")}} 属性也是这样，它们将主体内容暴露作为一个可读流的 getter。
 
 正如我们的[简单流式读取](https://github.com/mdn/dom-examples/tree/master/streams/simple-pump)示例所展示的（[也可以参见在线演示](https://mdn.github.io/dom-examples/streams/simple-pump/)），暴露它仅是需要访问响应的 `body` 属性：
 
