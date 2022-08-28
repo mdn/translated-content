@@ -1,13 +1,6 @@
 ---
 title: 全くの初心者のための GitHub
 slug: conflicting/MDN/Community/Contributing/Getting_started
-tags:
-  - Best practices
-  - Community
-  - GitHub
-  - MDN
-  - Beginners
-translation_of: MDN/Contribute/GitHub_beginners
 original_slug: MDN/Contribute/GitHub_beginners
 ---
 {{MDNSidebar}}

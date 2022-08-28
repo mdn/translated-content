@@ -1,22 +1,6 @@
 ---
 title: AudioTrackList.onremovetrack
 slug: conflicting/Web/API/AudioTrackList/removetrack_event
-tags:
-  - API
-  - Audio
-  - AudioTrackList
-  - Event Handler
-  - HTML DOM
-  - Media
-  - Property
-  - Reference
-  - Removing Audio Tracks
-  - Removing Tracks
-  - onremovetrack
-  - remove
-  - removeTrack
-  - track
-translation_of: Web/API/AudioTrackList/onremovetrack
 original_slug: Web/API/AudioTrackList/onremovetrack
 ---
 {{APIRef("HTML DOM")}}

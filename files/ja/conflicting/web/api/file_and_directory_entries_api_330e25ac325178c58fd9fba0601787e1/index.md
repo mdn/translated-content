@@ -1,8 +1,6 @@
 ---
 title: LocalFileSystem
-slug: >-
-  conflicting/Web/API/File_and_Directory_Entries_API_330e25ac325178c58fd9fba0601787e1
-translation_of: Web/API/LocalFileSystem
+slug: conflicting/Web/API/File_and_Directory_Entries_API_330e25ac325178c58fd9fba0601787e1
 original_slug: Web/API/LocalFileSystem
 ---
 {{APIRef("File System API")}}{{non-standard_header()}}

@@ -1,13 +1,6 @@
 ---
 title: FileReader.onload
 slug: conflicting/Web/API/FileReader/load_event
-tags:
-  - Event Handler
-  - File
-  - FileReader
-  - Property
-  - Reference
-translation_of: Web/API/FileReader/onload
 original_slug: Web/API/FileReader/onload
 ---
 {{APIRef}}

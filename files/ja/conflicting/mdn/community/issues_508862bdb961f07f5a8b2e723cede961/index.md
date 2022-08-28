@@ -1,11 +1,6 @@
 ---
 title: MDN の問題を報告する
 slug: conflicting/MDN/Community/Issues_508862bdb961f07f5a8b2e723cede961
-tags:
-  - ガイド
-  - Howto
-  - MDN Meta
-translation_of: MDN/Contribute/Howto/Report_a_problem
 original_slug: MDN/Contribute/Howto/Report_a_problem
 ---
 {{MDNSidebar}}
