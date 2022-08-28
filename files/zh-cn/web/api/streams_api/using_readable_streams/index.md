@@ -1,5 +1,5 @@
 ---
-title: Using readable streams
+title: 使用可读流
 slug: Web/API/Streams_API/Using_readable_streams
 ---
 {{apiref("Streams")}}
