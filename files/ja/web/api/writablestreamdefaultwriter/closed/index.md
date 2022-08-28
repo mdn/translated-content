@@ -1,15 +1,6 @@
 ---
 title: WritableStreamDefaultWriter.closed
 slug: Web/API/WritableStreamDefaultWriter/closed
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - Streams
-  - WritableStreamDefaultWriter
-  - closed
-translation_of: Web/API/WritableStreamDefaultWriter/closed
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 

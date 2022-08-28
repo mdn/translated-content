@@ -1,14 +1,6 @@
 ---
 title: Window.speechSynthesis
 slug: Web/API/Window/speechSynthesis
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechSynthesis
-  - Window
-translation_of: Web/API/Window/speechSynthesis
 ---
 {{APIRef()}}{{SeeCompatTable}}
 

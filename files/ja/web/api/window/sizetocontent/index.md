@@ -1,14 +1,6 @@
 ---
 title: Window.sizeToContent()
 slug: Web/API/Window/sizeToContent
-tags:
-  - API
-  - HTML DOM
-  - メソッド
-  - リファレンス
-  - Window
-browser-compat: api.Window.sizeToContent
-translation_of: Web/API/Window/sizeToContent
 ---
 {{APIRef}}{{Non-standard_header}}
 

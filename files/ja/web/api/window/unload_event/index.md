@@ -1,7 +1,6 @@
 ---
 title: unload
 slug: Web/API/Window/unload_event
-translation_of: Web/API/Window/unload_event
 ---
 {{APIRef}}
 
