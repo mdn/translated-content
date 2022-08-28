@@ -1,10 +1,6 @@
 ---
 title: Firefox 3 for developers
 slug: Mozilla/Firefox/Releases/3
-tags:
-  - Firefox
-  - Firefox 3
-translation_of: Mozilla/Firefox/Releases/3
 ---
 もしあなたが開発者で、Firefox 3 におけるすべての新機能について情報を得ようとしているなら、ここは理解を深めるのに最も適した場所です。この記事は、Firefox 3 に追加された機能をカバーする新しい記事の一覧を提供します。小さな変更が必ずしもすべてカバーされているわけではありませんが、主要な改善を学ぶ助けにはなるでしょう。
 

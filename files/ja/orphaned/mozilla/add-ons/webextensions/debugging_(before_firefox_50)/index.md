@@ -1,14 +1,6 @@
 ---
 title: デバッグ (Firefox 50 より前)
 slug: orphaned/Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)
-tags:
-  - Debugging
-  - Firefox
-  - Guide
-  - Mozilla
-  - Deprecated
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)
 original_slug: Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)
 ---
 {{AddonSidebar}}

@@ -1,9 +1,6 @@
 ---
 title: HTTPリクエストの優先順位の変更
 slug: Mozilla/Firefox/Releases/1.5/Changing_the_priority_of_HTTP_requests
-tags:
-  - HTTP
-translation_of: Mozilla/Firefox/Releases/1.5/Changing_the_priority_of_HTTP_requests
 ---
 {{FirefoxSidebar}}
 

@@ -1,7 +1,6 @@
 ---
 title: bookmarks.move()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
 ---
 {{AddonSidebar()}}
 

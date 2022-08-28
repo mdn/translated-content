@@ -1,12 +1,6 @@
 ---
 title: HTTP リクエストへの介入
 slug: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
-tags:
-  - Add-ons
-  - Extensions
-  - How-to
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
 ---
 {{AddonSidebar}}
 

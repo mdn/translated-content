@@ -1,14 +1,6 @@
 ---
 title: developer tools の拡張
 slug: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
-tags:
-  - Add-ons
-  - DevTools
-  - Needs Privileges
-  - WebExtensions
-  - ガイド
-  - 拡張機能
-translation_of: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 ---
 {{AddonSidebar}}
 

@@ -1,11 +1,6 @@
 ---
 title: 次にどうするのか？
 slug: Mozilla/Add-ons/WebExtensions/What_next_
-tags:
-  - Beginner
-  - Extensions
-  - WebExtension
-translation_of: Mozilla/Add-ons/WebExtensions/What_next_
 ---
 {{AddonSidebar}}
 

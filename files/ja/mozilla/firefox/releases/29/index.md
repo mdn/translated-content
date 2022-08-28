@@ -1,11 +1,6 @@
 ---
 title: Firefox 29 for developers
 slug: Mozilla/Firefox/Releases/29
-tags:
-  - Firefox
-  - firefox developers
-  - firefox29
-translation_of: Mozilla/Firefox/Releases/29
 ---
 Gecko 29 を搭載した Firefox 29 は、米国時間 2014 年 4 月 29 日にリリースされました。このページでは、開発者に影響する Firefox 29 の変更点をまとめています。
 
