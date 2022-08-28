@@ -1,15 +1,6 @@
 ---
 title: WebAssembly の概要
 slug: WebAssembly/Concepts
-tags:
-  - C
-  - C++
-  - Emscripten
-  - JavaScript
-  - Web プラットフォーム
-  - WebAssembly
-  - rust
-translation_of: WebAssembly/Concepts
 ---
 {{WebAssemblySidebar}}
 

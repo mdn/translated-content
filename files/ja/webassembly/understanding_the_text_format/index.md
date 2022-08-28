@@ -1,19 +1,6 @@
 ---
 title: WebAssembly テキスト形式の理解
 slug: WebAssembly/Understanding_the_text_format
-tags:
-  - 関数
-  - JavaScript
-  - S 式
-  - WebAssembly
-  - 呼び出し
-  - メモリー
-  - 共有アドレス
-  - テーブル
-  - テキスト形式
-  - was
-  - wasm
-translation_of: WebAssembly/Understanding_the_text_format
 ---
 {{WebAssemblySidebar}}
 
