@@ -49,7 +49,7 @@ filter のデフォルト値は `all` ですが、 `active` または `done` に
 
 ## フィルター コントロールの追加
 
-`app.component.html` で、次の HTML を **Add** ボタンの前、 items をリストするセクションの上に追加します。
+`app.component.html` で、次の HTML を **Add** ボタンの前、アイテムをリストするセクションの上に追加します。
 次のスニペットでは、HTML の既存のセクションがコメントになっているため、ボタンを配置する場所を正確に確認できます。
 
 ```html
@@ -86,9 +86,9 @@ filter のデフォルト値は `all` ですが、 `active` または `done` に
 
 ボタンをクリックすると `filter` 値が変更され、Angular がアクティブなボタンにスタイルを適用し、表示する `items` を決定します。
 
-- ユーザーが **All** ボタンをクリックすると、すべての items が表示されます。
-- ユーザーが **To do** ボタンをクリックすると、 `done` の値が `false` の items が表示されます。
-- ユーザーが **Done** ボタンをクリックすると、 `done`  値が `true` の items が表示されます。
+- ユーザーが **All** ボタンをクリックすると、すべてのアイテムが表示されます。
+- ユーザーが **To do** ボタンをクリックすると、 `done` の値が `false` のアイテムが表示されます。
+- ユーザーが **Done** ボタンをクリックすると、 `done`  値が `true` のアイテムが表示されます。
 
 角括弧 `[]` を使用したクラス属性バインディングは、ボタンのテキストの色を制御します。
 クラスバインディング `[class.active]` は、 `filter` の値が式と一致する場合に `active` クラスを適用します。
@@ -98,7 +98,7 @@ filter のデフォルト値は `all` ですが、 `active` または `done` に
 
 ## まとめ
 
-簡単でしたね！ `app.component.ts` には既に `filter` コードがあるので、 items のフィルタリングをコントロールする為にテンプレートを編集するだけで済みました。 次の - そして最後の - 記事では、Angular アプリを本番環境で構築する方法を検討し、学習の旅を続けるための追加のリソースを提供します。
+簡単でしたね！ `app.component.ts` には既に `filter` コードがあるので、アイテムのフィルタリングをコントロールする為にテンプレートを編集するだけで済みました。 次の - そして最後の - 記事では、Angular アプリを本番環境で構築する方法を検討し、学習の旅を続けるための追加のリソースを提供します。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
