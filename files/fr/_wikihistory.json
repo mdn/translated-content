@@ -38249,14 +38249,6 @@
       "julienw"
     ]
   },
-  "Web/JavaScript/The_performance_hazards_of_prototype_mutation": {
-    "modified": "2019-04-08T13:06:24.098Z",
-    "contributors": [
-      "SphinxKnight",
-      "MaloJaffre",
-      "bbouvier"
-    ]
-  },
   "Web/JavaScript/Typed_arrays": {
     "modified": "2020-10-15T21:27:32.382Z",
     "contributors": [
@@ -40632,6 +40624,14 @@
       "nvana",
       "si0ls",
       "dattaz"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf": {
+    "modified": "2019-04-08T13:06:24.098Z",
+    "contributors": [
+      "SphinxKnight",
+      "MaloJaffre",
+      "bbouvier"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {

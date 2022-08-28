@@ -1,10 +1,11 @@
 ---
 title: '[[Prototype]] の変更の性能上の危険性'
-slug: Web/JavaScript/The_performance_hazards_of_prototype_mutation
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 tags:
   - Guide
   - JavaScript
   - Performance
+original_slug: Web/JavaScript/The_performance_hazards_of_prototype_mutation
 ---
 {{jsSidebar("Advanced")}}
 
