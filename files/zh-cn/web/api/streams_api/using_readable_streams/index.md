@@ -20,7 +20,7 @@ slug: Web/API/Streams_API/Using_readable_streams
 
 ## 使用流的方式处理 Fetch
 
-[Fetch API](/zh-CN/docs/Web/API/Fetch_API) 允许你跨网络获取资源，它提供了现代化的 API 去替代 [XHR](/zh-CN/docs/Web/API/XMLHttpRequest)。它有一系列的优点，真正好的是，浏览器最近增加了将 fetch 响应作为可读流的消费功能。
+[Fetch API](/zh-CN/docs/Web/API/Fetch_API) 允许你跨网络获取资源，它提供了现代化的 API 去替代 [XHR](/zh-CN/docs/Web/API/XMLHttpRequest)。它有一系列的优点，真正好的是，浏览器最近增加了将 fetch 响应作为可读流使用的能力。
 
 {{domxref("Request.body")}} 和 {{domxref("Response.body")}} 属性也是这样，它们将主体内容暴露作为一个可读流的获取器（getReader）。
 
