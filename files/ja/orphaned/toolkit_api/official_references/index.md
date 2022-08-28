@@ -1,8 +1,6 @@
 ---
 title: Official References
 slug: orphaned/Toolkit_API/Official_References
-tags:
-  - Toolkit API
 original_slug: Toolkit_API/Official_References
 ---
 Official References. Do not add to this list without contacting Benjamin Smedberg. Note that this page is included from the pages listed below. So: Don't Add Breadcrumbs!
