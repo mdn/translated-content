@@ -1,14 +1,6 @@
 ---
 title: 要素のはみ出し（オーバーフロー）
 slug: Learn/CSS/Building_blocks/Overflowing_content
-tags:
-  - Beginner
-  - Block Formatting Context
-  - CSS
-  - Data Loss
-  - Learn
-  - overflow
-translation_of: Learn/CSS/Building_blocks/Overflowing_content
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
 

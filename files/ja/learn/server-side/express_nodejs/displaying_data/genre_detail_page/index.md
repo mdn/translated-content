@@ -1,7 +1,6 @@
 ---
 title: ジャンル詳細ページ
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
 ---
 The genre _detail_ page needs to display the information for the particular genre instance using its automatically generated `_id` field value as the identifier. The page should display the genre name, and a list of all books in the genre with links to each book's details page.
 

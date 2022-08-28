@@ -1,19 +1,6 @@
 ---
 title: 何が間違っている? JavaScript のトラブルシューティング
 slug: Learn/JavaScript/First_steps/What_went_wrong
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Debugging
-  - Developer Tools
-  - Error
-  - JavaScript
-  - Learn
-  - Tutorial
-  - console.log
-  - l10n:priority
-translation_of: Learn/JavaScript/First_steps/What_went_wrong
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
 

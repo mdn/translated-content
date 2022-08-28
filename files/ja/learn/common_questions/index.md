@@ -1,13 +1,6 @@
 ---
 title: よくある質問
 slug: Learn/Common_questions
-tags:
-  - CodingScripting
-  - Infrastructure
-  - Learn
-  - Web
-  - WebMechanics
-translation_of: Learn/Common_questions
 ---
 {{LearnSidebar}}
 

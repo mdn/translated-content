@@ -1,7 +1,6 @@
 ---
 title: 'Django チュートリアル Part 3: モデルの使用'
 slug: Learn/Server-side/Django/Models
-translation_of: Learn/Server-side/Django/Models
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
 

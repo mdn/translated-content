@@ -1,10 +1,6 @@
 ---
 title: 例 3
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_3
-tags:
-  - Forms
-  - HTML
-translation_of: Learn/Forms/How_to_build_custom_form_controls/Example_3
 original_slug: Learn/Forms/How_to_build_custom_form_widgets/Example_3
 ---
 これは、[カスタムフォームウィジェットの作成方法](/ja/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)を説明する 3 番目の例です。

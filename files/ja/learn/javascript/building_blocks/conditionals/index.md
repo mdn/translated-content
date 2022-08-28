@@ -1,20 +1,6 @@
 ---
 title: コードでの意思決定 — 条件文
 slug: Learn/JavaScript/Building_blocks/conditionals
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Conditionals
-  - JavaScript
-  - Learn
-  - Switch
-  - conditions
-  - else
-  - if
-  - l10n:priority
-  - ternary
-translation_of: Learn/JavaScript/Building_blocks/conditionals
 ---
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
 

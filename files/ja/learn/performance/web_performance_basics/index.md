@@ -1,10 +1,6 @@
 ---
 title: ウェブパフォーマンスの基礎
 slug: Learn/Performance/Web_Performance_Basics
-tags:
-  - Best practices
-  - Website performance
-translation_of: Learn/Performance/Web_Performance_Basics
 ---
 あなたのウェブサイトが可能な限りのパフォーマンスを発揮すべき[理由](https://web.dev/why-speed-matters/)はたくさんあります。
 以下に、各トピックの詳細情報を提供するためのリンク付きのベストプラクティス、ツール、API の簡単なレビューを示します。

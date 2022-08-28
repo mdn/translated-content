@@ -1,13 +1,6 @@
 ---
 title: テキスト方向の操作
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - logical properties
-  - writing modes
-translation_of: Learn/CSS/Building_blocks/Handling_different_text_directions
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
 

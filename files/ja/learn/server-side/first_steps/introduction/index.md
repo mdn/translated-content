@@ -1,7 +1,6 @@
 ---
 title: サーバサイドの概要
 slug: Learn/Server-side/First_steps/Introduction
-translation_of: Learn/Server-side/First_steps/Introduction
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
 

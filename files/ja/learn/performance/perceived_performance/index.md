@@ -1,10 +1,6 @@
 ---
 title: 知覚されるパフォーマンス
 slug: Learn/Performance/perceived_performance
-tags:
-  - Perceived Performance
-  - Web Performance
-translation_of: Learn/Performance/perceived_performance
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}
 
