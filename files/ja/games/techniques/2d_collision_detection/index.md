@@ -1,12 +1,6 @@
 ---
 title: 二次元の衝突検出
 slug: Games/Techniques/2D_collision_detection
-tags:
-  - 2D
-  - Games
-  - JavaScript
-  - collision detection
-translation_of: Games/Techniques/2D_collision_detection
 ---
 {{GamesSidebar}}
 
