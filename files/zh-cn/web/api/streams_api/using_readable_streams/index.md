@@ -298,7 +298,7 @@ function readStream() {
 }
 ```
 
-### 关闭并且取消流
+### 关闭并取消流
 
 我们已经展示了使用 {{domxref("ReadableStreamDefaultController.close()")}} 去关闭 reader 的示例。正如我们之前说的那样，任意排入队的分块将仍然被读取，但是因为它被关闭了，不会再有更多的分块入队。
 
