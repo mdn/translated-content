@@ -229,7 +229,7 @@ readableStream
   .catch((err) => console.error(err));
 ```
 
-但是一个自定义流仍然是 `ReadableStream` 实例，意味着你可以给它附着一个 reader。例如，看看我们的[简单随机流示例](https://github.com/mdn/dom-examples/blob/master/streams/simple-random-stream/index.html)（[也可以参见在线演示](https://mdn.github.io/dom-examples/streams/simple-random-stream/)），其创建了一个自定义的流，排入了一些随机的字符串，然后在按下*停止字符串生成*的按钮后，再次从流中读取数据。
+但是一个自定义流仍然是 `ReadableStream` 实例，意味着你可以给它附着一个 reader。例如，看看我们的[简单随机流示例](https://github.com/mdn/dom-examples/blob/master/streams/simple-random-stream/index.html)（[也可以参见在线演示](https://mdn.github.io/dom-examples/streams/simple-random-stream/)），其创建了一个自定义的流，排入了一些随机的字符串，然后在按下 _Stop string generation_ 的按钮后，再次从流中读取数据。
 
 > **备注：** 为了使用 {{domxref("FetchEvent.respondWith()")}} 消费流，排入的流内容的类型必须是 {{jsxref("Uint8Array")}}；例如使用 {{domxref("TextEncoder")}} 进行编码。
 
