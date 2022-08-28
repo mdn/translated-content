@@ -9,9 +9,9 @@ IndexedDB는 사용자의 브라우저에 데이터를 영구적으로 저장할
 
 ## 이 문서에 대하여
 
-여러분은 이 튜토리얼에서 IndexedDB의 비동기 방식(asynchronous) API에 대해 훑어볼 수 있습니다. 만약 IndexedDB가 생소하다면, [Basic Concepts About IndexedDB](/ko/IndexedDB/Basic_Concepts_Behind_IndexedDB "en/IndexedDB/Basic Concepts Behind IndexedDB") 를 먼저 읽어보는 것이 좋습니다.
+여러분은 이 튜토리얼에서 IndexedDB의 비동기 방식(asynchronous) API에 대해 훑어볼 수 있습니다. 만약 IndexedDB가 생소하다면, [IndexedDB key characteristics and basic terminology](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology) 를 먼저 읽어보는 것이 좋습니다.
 
-IndexedDB API에 대한 참조(reference) 문서를 원한다면, [IndexedDB](/en/IndexedDB "https://developer.mozilla.org/en/IndexedDB") 항목과 하위 페이지를 보십시오. 이 문서에서는 IndexedDB에서 사용되는 객체의 종류와, 동기식(synchrounous), 비동기식(asynchronous) API에 대해서 기술하고 있습니다.
+IndexedDB API에 대한 참조(reference) 문서를 원한다면, [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) 항목과 하위 페이지를 보십시오. 이 문서에서는 IndexedDB에서 사용되는 객체의 종류와, 동기식(synchrounous), 비동기식(asynchronous) API에 대해서 기술하고 있습니다.
 
 ## 기본 패턴
 
@@ -134,11 +134,9 @@ request.onupgradeneeded = function(event) {
 
 `onupgradeneeded` 이벤트가 성공적으로 끝나면, 데이터베이스 열기 요청의 `onsuccess` 핸들러가 트리거 됩니다.
 
-Chrome 23+ 및 Opera 17+ 의 Blink/Webkit은 현재 버전의 스펙을 지원합니다. IE10+ 마찬가지입니다. 다른 구현체 또는 구형 구현체는 아직 스펙의 현재 버전을 구현하지 않으므로 `indexedDB.open(name, version).onupgradeneeded` 서명을 지원하지 않습니다. 이전 Webkit/Blink에서 데이터베이스 버전을 업그레이드하는 방법에 대한 자세한 내용은 [IDBDatabase reference article](</ko/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated> "https://developer.mozilla.org/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated") 를 참조하십시오.
-
 ### 데이터베이스 구성
 
-이제 데이터베이스를 구축합니다. IndexedDB는 테이블이 아닌 객체 저장소를 사용하며 하나의 데이터베이스는 여러 개의 객체 저장소를 포함할 수 있습니다. 값을 객체 저장소에 저장할 때마다 값은 키와 연관됩니다. 객체 저장소가 [키 경로](/ko/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keypath "https://developer.mozilla.org/en/IndexedDB#gloss_key_path") 또는 [키 생성기](https://developer.mozilla.org/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keygenerator "en/IndexedDB#gloss key generator") 옵션의 사용 여부에 따라 키를 제공할 수 있는 여러 가지 방법이 있습니다.
+이제 데이터베이스를 구축합니다. IndexedDB는 테이블이 아닌 객체 저장소를 사용하며 하나의 데이터베이스는 여러 개의 객체 저장소를 포함할 수 있습니다. 값을 객체 저장소에 저장할 때마다 값은 키와 연관됩니다. 객체 저장소가 [키 경로](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path "https://developer.mozilla.org/en/IndexedDB#gloss_key_path") 또는 [키 생성기](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator "en/IndexedDB#gloss key generator") 옵션의 사용 여부에 따라 키를 제공할 수 있는 여러 가지 방법이 있습니다.
 
 다음 표는 키가 제공되는 다양한 방법을 보여줍니다:
 
@@ -246,7 +244,7 @@ request.onupgradeneeded = function (event) {
 
 새 데이터베이스에서 작업을 하기전에, 트랜잭션을 시작할 필요가 있습니다. 트랜잭션은 데이터베이스 객체 단위로 작동하므로 트랜잭션을 사용할 객체 저장소를 지정해줘야합니다. 트랜잭션에 들어오고 나면, 자료가 있는 객체 저장소에 접근할 수 있고 요청을 만들 수 있습니다. 다음으로, 데이터베이스에 변경점을 만들지, 혹은 읽기만 할지 결정해야합니다. 트랜잭션은 다음의 3가지 모드가 있습니다: `readonly`, `readwrite`, 그리고 `versionchange`.
 
-객체 저장소나 인덱스를 만들거나 삭제하는 작업을 포함하여 데이터베이스의 "schema"나 구조를 변경하기 위해서 트랜잭션은 반드시 `versionchange` 여야 합니다. 이 트랜잭션은 {{domxref("IDBFactory.open")}} 메소드를 `version` 과 함께 호출할 경우 시작됩니다. (최신 사양이 구현되지 않은 WebKit 브라우저에서는 {{domxref("IDBFactory.open")}} 메소드는 데이터베이스의 이름(`name`) 하나만 인자로 받습니다. 따라서 `versionchange` 트랜잭션을 수립하기 위해서 {{domxref("IDBVersionChangeRequest.setVersion")}} 를 호출해야 합니다.)
+객체 저장소나 인덱스를 만들거나 삭제하는 작업을 포함하여 데이터베이스의 "schema"나 구조를 변경하기 위해서 트랜잭션은 반드시 `versionchange` 여야 합니다. 이 트랜잭션은 {{domxref("IDBFactory.open")}} 메소드를 `version` 과 함께 호출할 경우 시작됩니다.
 
 이미 존재하는 객체 저장소의 레코드를 읽기 위해서 트랜잭션은 `readonly` 혹은 `readwrite` 모드이면 됩니다. 이미 존재하는 객체 저장소에 변경점을 기록하기 위해서는 트랜잭션이 반드시 `readwrite` 모드여야합니다. 특정 트랜잭션은 {{domxref("IDBDatabase.transaction")}} 으로 열 수 있습니다. 이 메소드는 접근하고 싶은 객체 저장소들의 배열로 정의된 범위인 `storeNames`와 트랜잭션의 모드`mode` (`readonly` 혹은 `readwrite`), 2개의 인자를 받습니다. 이 메소드는 객체 저장소에 접근할 수 있는 {{domxref("IDBIndex.objectStore")}} 메소드를 포함한 트랜잭션 객체를 반환합니다. 모드가 지정되지 않는다면 기본적으로 트랜잭션은 `readonly` 모드로 열립니다.
 
@@ -339,7 +337,7 @@ db.transaction("customers").objectStore("customers").get("444-44-4444").onsucces
 
 범위 제한과 모드 설정에 따라 데이터 접근 속도를 빠르게 할 수 있다는 점을 주목하십시오. 여기 몇개의 팁이 있습니다:
 
-- 범위([scope](/ko/docs/IndexedDB/Using_IndexedDB$edit#scope))를 정의할 때, 당신이 필요로 하는 오브젝트 스토어만 지정하십시오. 이렇게 하면, 범위가 중복되지 않는 한 여러 개의 트랜잭션을 동시에 실행할 수 있습니다.
+- 범위([scope](#scope))를 정의할 때, 당신이 필요로 하는 오브젝트 스토어만 지정하십시오. 이렇게 하면, 범위가 중복되지 않는 한 여러 개의 트랜잭션을 동시에 실행할 수 있습니다.
 - `readwrite` 모드는 반드시 필요할 때만 사용하십시오. `readonly` 모드는 범위가 중복되더라도 동시에 실행 가능하지만, `readwrite` 모드는 한 오브젝트 스토어에 대해 동시에 하나밖에 실행할 수 없습니다. 더욱 자세한 정보는, 기본 개념서의 트랜잭션의 정의 항목([transactions in the Basic Concepts article](/ko/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction))을 참조하십시오.
 
 ### 데이터베이스의 내용을 업데이트하기
@@ -1301,8 +1299,6 @@ Further reading for you to find out more information if desired.
 
 - [IndexedDB API Reference](https://developer.mozilla.org/en/IndexedDB)
 - [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
-- [Using IndexedDB in chrome](/ko/docs/IndexedDB/Using_IndexedDB_in_chrome "/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome")
-- [Using JavaScript generators in Firefox](/ko/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox)
 - IndexedDB [interface files](https://mxr.mozilla.org/mozilla-central/find?text=&string=dom%2FindexedDB%2F.*%5C.idl&regexp=1 "https://mxr.mozilla.org/mozilla-central/find?text=&string=dom/indexedDB/.*\\.idl®exp=1") in the Firefox source code
 
 ### Tutorials and guides
