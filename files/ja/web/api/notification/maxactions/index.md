@@ -1,17 +1,6 @@
 ---
 title: Notification.maxActions
 slug: Web/API/Notification/maxActions
-page-type: web-api-static-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - actions
-browser-compat: api.Notification.maxActions
-translation_of: Web/API/Notification/maxActions
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 

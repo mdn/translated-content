@@ -1,15 +1,6 @@
 ---
 title: Request.redirect
 slug: Web/API/Request/redirect
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Property
-  - Redirect
-  - Reference
-  - request
-translation_of: Web/API/Request/redirect
 ---
 {{APIRef("Fetch")}}
 

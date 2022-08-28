@@ -1,12 +1,6 @@
 ---
 title: PerformanceResourceTiming.initiatorType
 slug: Web/API/PerformanceResourceTiming/initiatorType
-tags:
-  - API
-  - Web パフォーマンス
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/PerformanceResourceTiming/initiatorType
 ---
 {{APIRef("Resource Timing API")}}
 

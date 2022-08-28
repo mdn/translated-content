@@ -1,19 +1,6 @@
 ---
 title: VideoTrackList.length
 slug: Web/API/VideoTrackList/length
-tags:
-  - API
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - VideoTrackList
-  - length
-  - list
-  - track
-translation_of: Web/API/VideoTrackList/length
 ---
 {{APIRef("HTML DOM")}}
 

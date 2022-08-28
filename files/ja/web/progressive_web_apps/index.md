@@ -1,17 +1,6 @@
 ---
 title: プログレッシブウェブアプリ (PWA)
 slug: Web/Progressive_web_apps
-tags:
-  - App
-  - Application
-  - Apps
-  - PWA
-  - Progressive web apps
-  - Web app
-  - Web applications
-  - アプリ
-  - プログレッシブウェブアプリ
-translation_of: Web/Progressive_web_apps
 ---
 ![PWA community logo](pwa.png)**プログレッシブウェブアプリ (Progressive web apps, PWA)** は、新しいウェブ API と伝統的なプログレッシブな拡張戦略を使用して、クロスプラットフォームのウェブアプリケーションにネイティブアプリと同様の使い勝手をもたらすウェブアプリのことです。プログレッシブウェブアプリは正式な標準ではありませんが、有用なデザインパターンです。 PWA は、特定のウェブ技術や技法の使用を含む、一連のアプリケーション属性を包含しているという点で AJAX や他の同様のパターンに似ていると考えることができます。この一連の文書では、これについて知るために必要なすべてをお伝えします。
 

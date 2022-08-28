@@ -1,13 +1,6 @@
 ---
-title: <hatchpath>
+title: "<hatchpath>"
 slug: Web/SVG/Element/hatchpath
-tags:
-  - Element
-  - Experimental
-  - Filters
-  - Reference
-  - SVG
-translation_of: Web/SVG/Element/hatchpath
 ---
 {{SVGRef}}{{SeeCompatTable}}
 

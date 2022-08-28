@@ -1,14 +1,6 @@
 ---
 title: 関数の戻り値
 slug: Learn/JavaScript/Building_blocks/Return_values
-tags:
-  - リターン
-  - リターン値
-  - 戻り値
-  - 返り値
-  - 返却値
-  - 関数
-translation_of: Learn/JavaScript/Building_blocks/Return_values
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 

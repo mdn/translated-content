@@ -1,14 +1,6 @@
 ---
 title: element.insertAdjacentHTML
 slug: Web/API/Element/insertAdjacentHTML
-tags:
-  - API
-  - DOM
-  - DOM Element Methods
-  - Gecko
-  - Method
-  - Reference
-translation_of: Web/API/Element/insertAdjacentHTML
 ---
 {{ApiRef("DOM")}}
 

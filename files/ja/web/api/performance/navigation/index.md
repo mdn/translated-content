@@ -1,18 +1,6 @@
 ---
 title: Performance.navigation
 slug: Web/API/Performance/navigation
-tags:
-  - API
-  - 後方互換性
-  - 非推奨
-  - HTTP
-  - ナビゲーションタイミング
-  - パフォーマンス
-  - プロパティ
-  - 読み取り専用
-  - legacy
-browser-compat: api.Performance.navigation
-translation_of: Web/API/Performance/navigation
 ---
 {{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 

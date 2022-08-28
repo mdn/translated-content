@@ -1,13 +1,6 @@
 ---
-title: '@keyframes'
+title: "@keyframes"
 slug: Web/CSS/@keyframes
-tags:
-  - アニメーション
-  - アットルール
-  - CSS
-  - リファレンス
-browser-compat: css.at-rules.keyframes
-translation_of: Web/CSS/@keyframes
 ---
 {{CSSRef}}
 

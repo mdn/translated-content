@@ -1,14 +1,6 @@
 ---
 title: function* 宣言
 slug: Web/JavaScript/Reference/Statements/function*
-tags:
-  - ECMAScript 2015
-  - Function
-  - Iterator
-  - JavaScript
-  - Language feature
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/function*
 ---
 {{jsSidebar("Statements")}}
 

@@ -1,17 +1,6 @@
 ---
 title: Notification.actions
 slug: Web/API/Notification/actions
-page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - actions
-browser-compat: api.Notification.actions
-translation_of: Web/API/Notification/actions
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 

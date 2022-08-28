@@ -1,18 +1,6 @@
 ---
 title: フレックスボックスの後方互換性
 slug: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
-tags:
-  - '@supports'
-  - CSS
-  - CSS 表
-  - フレックスボックス
-  - 浮動
-  - ガイド
-  - 代替
-  - 機能クエリー
-  - フレックスボックス
-  - inline-block
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 ---
 {{CSSRef}}
 

@@ -1,17 +1,6 @@
 ---
 title: console.countReset()
 slug: Web/API/console/countReset
-tags:
-  - API
-  - DOM
-  - デバッグ
-  - メソッド
-  - リファレンス
-  - ウェブ開発
-  - console
-  - ウェブコンソール
-browser-compat: api.console.countReset
-translation_of: Web/API/console/countReset
 ---
 {{APIRef("Console API")}}
 

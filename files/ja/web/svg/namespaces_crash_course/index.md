@@ -1,10 +1,6 @@
 ---
 title: 名前空間の速修講座
 slug: Web/SVG/Namespaces_Crash_Course
-tags:
-  - SVG
-  - XML
-translation_of: Web/SVG/Namespaces_Crash_Course
 ---
 ### 導入
 

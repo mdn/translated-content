@@ -1,15 +1,6 @@
 ---
 title: BarcodeDetector.getSupportedFormats()
 slug: Web/API/BarcodeDetector/getSupportedFormats
-tags:
-  - バーコード検出 API
-  - BarcodeDetector
-  - メソッド
-  - バーコード
-  - 形状認識
-  - 実験的
-browser-compat: api.BarcodeDetector.getSupportedFormats
-translation_of: Web/API/BarcodeDetector/getSupportedFormats
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
 

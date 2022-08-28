@@ -1,15 +1,6 @@
 ---
-title: '-webkit-device-pixel-ratio'
+title: "-webkit-device-pixel-ratio"
 slug: Web/CSS/@media/-webkit-device-pixel-ratio
-tags:
-  - '@media'
-  - CSS
-  - NeedsBrowserCompatibility
-  - 標準外
-  - WebKit
-  - メディア特性
-browser-compat: css.at-rules.media.-webkit-device-pixel-ratio
-translation_of: Web/CSS/@media/-webkit-device-pixel-ratio
 ---
 {{ CSSRef }} {{ Non-standard_header }}
 

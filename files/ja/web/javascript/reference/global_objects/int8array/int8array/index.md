@@ -1,12 +1,6 @@
 ---
 title: Int8Array() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Int8Array/Int8Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/Int8Array/Int8Array
 ---
 {{JSRef}}
 

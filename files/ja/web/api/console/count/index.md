@@ -1,16 +1,6 @@
 ---
 title: console.count()
 slug: Web/API/console/count
-tags:
-  - API
-  - DOM
-  - デバッグ
-  - メソッド
-  - リファレンス
-  - ウェブ開発
-  - ウェブコンソール
-browser-compat: api.console.count
-translation_of: Web/API/console/count
 ---
 {{APIRef("Console API")}}
 

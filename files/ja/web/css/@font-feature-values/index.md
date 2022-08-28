@@ -1,13 +1,6 @@
 ---
-title: '@font-feature-values'
+title: "@font-feature-values"
 slug: Web/CSS/@font-feature-values
-tags:
-  - アットルール
-  - CSS
-  - CSS フォント
-  - リファレンス
-browser-compat: css.at-rules.font-feature-values
-translation_of: Web/CSS/@font-feature-values
 ---
 {{CSSRef}}
 

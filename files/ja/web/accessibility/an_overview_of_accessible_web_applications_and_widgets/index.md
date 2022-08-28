@@ -1,13 +1,6 @@
 ---
 title: アクセシブルな Web アプリケーションやウィジェットの概要
 slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
-tags:
-  - ARIA
-  - Accessibility
-  - Guide
-  - Web apps
-  - Widget
-translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 ---
 Web は変化しています。静的でページに基づくサイトは、次第に動的でデスクトップスタイルの、JavaScript や AJAX を多用する Web アプリケーションに置き換えられています。デザイナーは JavaScript、HTML、CSS を組み合わせて、驚くような新しいウィジェットやコントロールのすべてを作り上げています。この変化は Web の応答性やユーザビリティを劇的に向上させる可能性を秘めていますが、多くのユーザはアクセシビリティのギャップにより閉め出されてしまう恐れがあります。JavaScript は伝統的に、スクリーンリーダーなどの支援技術のユーザに対してアクセシブルではないと言われてきましたが、現在はさまざまなユーザに対してアクセシブルな動的 Web ユーザインターフェイスを作成するための手段があります。
 

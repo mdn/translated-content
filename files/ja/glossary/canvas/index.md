@@ -1,13 +1,6 @@
 ---
 title: Canvas
 slug: Glossary/Canvas
-tags:
-  - CodingScripting
-  - Glossary
-  - Graphics
-  - HTML
-  - JavaScript
-translation_of: Glossary/Canvas
 ---
 **canvas 要素**は {{Glossary("HTML5")}} の一部であり、 2D および 3D の形状や[ビットマップ](https://en.wikipedia.org/wiki/Bitmap "Bitmap")画像を[スクリプト](https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E8%A8%80%E8%AA%9E)で動的に[レンダリング](<https://ja.wikipedia.org/wiki/%E3%83%AC%E3%83%B3%E3%83%80%E3%83%AA%E3%83%B3%E3%82%B0_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)>)することができます。これは、[bitmap](https://en.wikipedia.org/wiki/Bitmap "Bitmap")を更新する低レベルの手続き型モデルであり、組み込みの[シーングラフ](https://en.wikipedia.org/wiki/Scene_graph "Scene graph")を持っていません。これは、特定の {{Glossary("JavaScript")}} {{Glossary("API")}} が描画できる空のグラフィックゾーンを提供します (Canvas 2D や {{Glossary("WebGL")}}) など)。
 

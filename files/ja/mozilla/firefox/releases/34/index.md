@@ -1,10 +1,6 @@
 ---
 title: Firefox 34 for developers
 slug: Mozilla/Firefox/Releases/34
-tags:
-  - Firefox
-  - Releases
-translation_of: Mozilla/Firefox/Releases/34
 ---
 Gecko 34 を搭載した Firefox 34 は、米国時間 2014 年 12 月 1 日にリリースされました。このページでは、開発者に影響する Firefox 34 の変更点をまとめています。
 

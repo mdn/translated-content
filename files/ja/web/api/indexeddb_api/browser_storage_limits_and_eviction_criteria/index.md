@@ -1,15 +1,6 @@
 ---
 title: ブラウザーのストレージ制限と削除基準
 slug: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
-tags:
-  - Database
-  - IndexedDB
-  - LRU
-  - Storage
-  - client-side
-  - eviction
-  - limit
-translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
 ---
 {{DefaultAPISidebar("IndexedDB")}}
 

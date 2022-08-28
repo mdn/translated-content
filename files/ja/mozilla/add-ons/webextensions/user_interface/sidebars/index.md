@@ -1,9 +1,6 @@
 ---
 title: サイドバー
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
 ---
 {{AddonSidebar}}
 

@@ -1,14 +1,6 @@
 ---
 title: border-right
 slug: Web/CSS/border-right
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border-right
-translation_of: Web/CSS/border-right
 ---
 {{CSSRef}}
 

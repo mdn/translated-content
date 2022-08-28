@@ -1,18 +1,6 @@
 ---
 title: DocumentOrShadowRoot.elementsFromPoint()
 slug: Web/API/Document/elementsFromPoint
-tags:
-  - API
-  - Document
-  - DocumentOrShadowRoot
-  - Method
-  - Reference
-  - ShadowRoot
-  - elementsFromPoint
-  - elementsFromPoint()
-  - shadow dom
-  - メソッド
-translation_of: Web/API/DocumentOrShadowRoot/elementsFromPoint
 original_slug: Web/API/DocumentOrShadowRoot/elementsFromPoint
 ---
 {{APIRef("DOM")}}{{SeeCompatTable}}

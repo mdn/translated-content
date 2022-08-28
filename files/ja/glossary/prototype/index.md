@@ -1,11 +1,6 @@
 ---
 title: Prototype
 slug: Glossary/Prototype
-tags:
-  - Apps
-  - Composing
-  - Glossary
-translation_of: Glossary/Prototype
 ---
 プロトタイプは、開発ライフサイクルの早い段階でアプリケーションや製品の外観と動作を表現する型です。
 

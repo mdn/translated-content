@@ -1,11 +1,6 @@
 ---
 title: Argument (引数)
 slug: Glossary/Argument
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
-translation_of: Glossary/Argument
 ---
 **引数**は{{Glossary("function", "関数")}}の入力として渡される{{Glossary("value", "値")}}({{Glossary("primitive", "プリミティブ")}}または{{Glossary("object", "オブジェクト")}})です。
 

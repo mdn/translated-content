@@ -1,7 +1,6 @@
 ---
-title: <mtr>
+title: "<mtr>"
 slug: Web/MathML/Element/mtr
-translation_of: Web/MathML/Element/mtr
 ---
 {{MathMLRef()}}
 

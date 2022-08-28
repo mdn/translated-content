@@ -1,14 +1,6 @@
 ---
 title: Storage Access API の使用
 slug: Web/API/Storage_Access_API/Using
-tags:
-  - API
-  - DOM
-  - Guide
-  - Reference
-  - Storage
-  - Storage Access API
-translation_of: Web/API/Storage_Access_API/Using
 ---
 {{seecompattable}}{{DefaultAPISidebar("Storage Access API")}}
 

@@ -1,20 +1,6 @@
 ---
 title: 'Element: mouseup イベント'
 slug: Web/API/Element/mouseup_event
-tags:
-  - API
-  - DOM
-  - イベント
-  - インターフェイス
-  - MouseEvent
-  - リファレンス
-  - Release
-  - UI
-  - Up
-  - ボタン
-  - マウス
-  - mouseup
-translation_of: Web/API/Element/mouseup_event
 ---
 {{APIRef}}
 

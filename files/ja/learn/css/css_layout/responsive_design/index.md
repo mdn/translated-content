@@ -1,17 +1,6 @@
 ---
 title: レスポンシブデザイン
 slug: Learn/CSS/CSS_layout/Responsive_Design
-tags:
-  - Images
-  - Media Queries
-  - RWD
-  - Responsive web design
-  - flexbox
-  - fluid grids
-  - grid
-  - multicol
-  - typography
-translation_of: Learn/CSS/CSS_layout/Responsive_Design
 ---
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
 

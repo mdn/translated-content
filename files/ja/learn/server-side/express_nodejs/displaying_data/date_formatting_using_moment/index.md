@@ -1,7 +1,6 @@
 ---
 title: moment を使用した日付のフォーマット
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
 ---
 The default rendering of dates from our models is very ugly: _Tue Dec 06 2016 15:49:58 GMT+1100 (AUS Eastern Daylight Time)_. In this section we'll show how you can update the _BookInstance List_ page from the previous section to present the `due_date` field in a more friendly format: December 6th, 2016.
 

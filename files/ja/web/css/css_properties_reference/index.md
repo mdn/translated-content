@@ -1,11 +1,6 @@
 ---
 title: CSS プロパティリファレンス
 slug: Web/CSS/CSS_Properties_Reference
-tags:
-  - CSS
-  - ガイド
-  - スタイル
-translation_of: Web/CSS/CSS_Properties_Reference
 ---
 ## 一般的な CSS プロパティリファレンス
 

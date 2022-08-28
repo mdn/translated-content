@@ -1,12 +1,6 @@
 ---
 title: frame rate (フレームレート, FPS)
 slug: Glossary/FPS
-tags:
-  - Animation
-  - Glossary
-  - ウェブの性能
-  - 用語集
-translation_of: Glossary/FPS
 ---
 **フレームレート**は、ブラウザーが表示するコンテンツの再計算、レイアウト、描画をすることができる速度です。**フレーム毎秒** (frame per second) または **fps** は、1 秒間に何枚のフレームを再描画できるかを表します。ウェブサイトのコンピューターグラフィックスでのフレームレートの目標値は 60fps です。
 

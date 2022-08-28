@@ -1,12 +1,6 @@
 ---
 title: window.dialogArguments
 slug: Web/API/Window/dialogArguments
-tags:
-  - DOM
-  - Dialogs
-  - Reference
-  - Window
-translation_of: Web/API/Window/dialogArguments
 ---
 {{APIRef}}
 

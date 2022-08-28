@@ -1,17 +1,6 @@
 ---
 title: モバイルのアクセシビリティ
 slug: Learn/Accessibility/Mobile
-tags:
-  - Accessibility
-  - コードスクリプト
-  - スクリーンリーダー
-  - タッチ
-  - モバイル
-  - レスポンシブ
-  - 初心者
-  - 学習
-  - 記事
-translation_of: Learn/Accessibility/Mobile
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
 

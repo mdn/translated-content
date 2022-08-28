@@ -1,15 +1,6 @@
 ---
 title: ShadowRoot
 slug: Web/API/ShadowRoot
-tags:
-  - API
-  - Interface
-  - リファレンス
-  - ShadowRoot
-  - ウェブコンポーネント
-  - シャドウ DOM
-browser-compat: api.ShadowRoot
-translation_of: Web/API/ShadowRoot
 ---
 {{APIRef('Shadow DOM')}}
 

@@ -1,20 +1,6 @@
 ---
 title: SourceBuffer.appendBufferAsync()
 slug: Web/API/SourceBuffer/appendBufferAsync
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media
-  - Media Source Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - SourceBuffer
-  - Video
-  - appendBufferAsync
-translation_of: Web/API/SourceBuffer/appendBufferAsync
 ---
 {{APIRef("Media Source Extensions")}}{{non-standard_header}}{{SeeCompatTable}}
 

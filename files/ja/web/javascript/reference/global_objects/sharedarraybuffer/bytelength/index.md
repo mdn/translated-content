@@ -1,14 +1,6 @@
 ---
 title: SharedArrayBuffer.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength
-tags:
-  - JavaScript
-  - プロパティ
-  - 共有メモリー
-  - SharedArrayBuffer
-  - 型付き配列
-browser-compat: javascript.builtins.SharedArrayBuffer.byteLength
-translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength
 ---
 {{JSRef}}
 

@@ -1,14 +1,6 @@
 ---
 title: DeviceMotionEvent
 slug: Web/API/DeviceMotionEvent
-tags:
-  - API
-  - Device Orientation
-  - Experimental
-  - Mobile
-  - Motion
-  - Orientation
-translation_of: Web/API/DeviceMotionEvent
 ---
 {{apiref("Device Orientation Events")}}{{SeeCompatTable}}
 

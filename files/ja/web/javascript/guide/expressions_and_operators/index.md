@@ -1,14 +1,6 @@
 ---
 title: 式と演算子
 slug: Web/JavaScript/Guide/Expressions_and_Operators
-tags:
-  - 初心者
-  - 式
-  - ガイド
-  - JavaScript
-  - 演算子
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
 

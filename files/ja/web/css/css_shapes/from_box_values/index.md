@@ -1,22 +1,6 @@
 ---
 title: ボックス値からのシェイプ
 slug: Web/CSS/CSS_Shapes/From_box_values
-tags:
-  - 境界
-  - ボックス
-  - CSS
-  - CSS シェイプ
-  - 概要
-  - マージン
-  - border-box
-  - border-radius
-  - ボックス値
-  - content-box
-  - float
-  - margin-box
-  - padding-box
-  - シェイプ
-translation_of: Web/CSS/CSS_Shapes/From_box_values
 ---
 {{CSSRef}}
 

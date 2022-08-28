@@ -1,13 +1,6 @@
 ---
-title: '-ms-high-contrast'
+title: "-ms-high-contrast"
 slug: Web/CSS/@media/-ms-high-contrast
-tags:
-  - '@media'
-  - CSS
-  - 標準外
-  - リファレンス
-  - メディア特性
-translation_of: Web/CSS/@media/-ms-high-contrast
 original_slug: Web/CSS/-ms-high-contrast
 ---
 {{CSSRef}}{{Non-standard_header}}

@@ -1,13 +1,6 @@
 ---
 title: DataView.prototype.setUint16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint16
-tags:
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setUint16
 ---
 {{JSRef}}
 

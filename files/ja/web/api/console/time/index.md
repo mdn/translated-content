@@ -1,15 +1,6 @@
 ---
 title: console.time()
 slug: Web/API/console/time
-tags:
-  - API
-  - DOM
-  - デバッグ
-  - メソッド
-  - ウェブ開発
-  - ウェブコンソール
-browser-compat: api.console.time
-translation_of: Web/API/console/time
 ---
 {{APIRef("Console API")}}
 

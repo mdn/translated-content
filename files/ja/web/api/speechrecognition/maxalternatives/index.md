@@ -1,17 +1,6 @@
 ---
 title: SpeechRecognition.maxAlternatives
 slug: Web/API/SpeechRecognition/maxAlternatives
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - maxAlternatives
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognition/maxAlternatives
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 

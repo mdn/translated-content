@@ -1,11 +1,6 @@
 ---
 title: MDN のための GitHub のベストプラクティス
 slug: MDN/Community/Issues
-tags:
-  - Best practices
-  - Community
-  - GitHub
-  - MDN
 original_slug: MDN/Contribute/GitHub_best_practices
 ---
 {{MDNSidebar}}

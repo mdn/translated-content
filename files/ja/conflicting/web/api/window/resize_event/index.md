@@ -1,12 +1,6 @@
 ---
 title: window.onresize
 slug: conflicting/Web/API/Window/resize_event
-tags:
-  - DOM
-  - Gecko
-  - Property
-  - Window
-translation_of: Web/API/GlobalEventHandlers/onresize
 original_slug: Web/API/GlobalEventHandlers/onresize
 ---
 {{ ApiRef() }}

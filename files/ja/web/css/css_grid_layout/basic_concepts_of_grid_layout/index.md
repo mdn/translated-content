@@ -1,12 +1,6 @@
 ---
 title: グリッドレイアウトの基本概念
 slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
-tags:
-  - CSS
-  - CSS グリッド
-  - ガイド
-  - レイアウト
-translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 ---
 {{CSSRef}}
 

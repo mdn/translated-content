@@ -1,14 +1,6 @@
 ---
 title: Element.attributes
 slug: Web/API/Element/attributes
-tags:
-  - API
-  - Attributes
-  - DOM
-  - Element
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/Element/attributes
 ---
 {{ APIRef("DOM") }}
 

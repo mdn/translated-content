@@ -1,11 +1,6 @@
 ---
 title: ユーザーインターフェイス
 slug: Mozilla/Add-ons/WebExtensions/user_interface
-tags:
-  - Landing
-  - ユーザーインターフェイス
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface
 ---
 {{AddonSidebar}}
 

@@ -1,14 +1,6 @@
 ---
 title: ExtendableMessageEvent.ports
 slug: Web/API/ExtendableMessageEvent/ports
-tags:
-  - API
-  - ExtendableMessageEvent
-  - Property
-  - Reference
-  - Service Workers
-  - ports
-translation_of: Web/API/ExtendableMessageEvent/ports
 ---
 {{APIRef("Service Workers API")}}
 

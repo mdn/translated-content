@@ -1,14 +1,6 @@
 ---
 title: WindowOrWorkerGlobalScope.indexedDB
 slug: Web/API/indexedDB
-tags:
-  - API
-  - Database
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-translation_of: Web/API/WindowOrWorkerGlobalScope/indexedDB
 original_slug: Web/API/WindowOrWorkerGlobalScope/indexedDB
 ---
 {{ APIRef() }}

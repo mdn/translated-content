@@ -1,11 +1,6 @@
 ---
 title: Firefox 10 for developers
 slug: Mozilla/Firefox/Releases/10
-tags:
-  - Firefox
-  - Firefox 10
-  - Gecko 10
-translation_of: Mozilla/Firefox/Releases/10
 ---
 Gecko 10.0 を搭載した Firefox 10 は米国時間 2012 年 1 月 31 日にリリースされました。このページでは、開発者に影響する Firefox 10 の変更点をまとめています。
 

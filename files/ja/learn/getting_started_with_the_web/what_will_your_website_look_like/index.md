@@ -1,18 +1,6 @@
 ---
 title: Web サイトをどんな外見にするか
 slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
-tags:
-  - Assets
-  - Composing
-  - Deprecated
-  - Plan
-  - l10n:priority
-  - コンテンツ
-  - デザイン
-  - フォント
-  - 初心者
-  - 学習
-translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 

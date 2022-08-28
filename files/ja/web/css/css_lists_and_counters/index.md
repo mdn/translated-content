@@ -1,13 +1,6 @@
 ---
 title: CSS リスト
 slug: Web/CSS/CSS_Lists_and_Counters
-tags:
-  - CSS
-  - CSS リスト
-  - ガイド
-  - 概要
-  - Reference
-translation_of: Web/CSS/CSS_Lists_and_Counters
 ---
 {{CSSRef}}
 

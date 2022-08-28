@@ -1,23 +1,6 @@
 ---
 title: alert ロールの使用
 slug: conflicting/Web/Accessibility/ARIA/Roles/alert_role
-tags:
-  - ARIA
-  - Accessibility
-  - Advanced
-  - CSS
-  - Example
-  - HTML
-  - NeedsContent
-  - alert
-  - alert role
-  - alertrole
-  - alerts
-  - assitive technology
-  - role configuration
-  - wcag1.2.1
-  - wcag3.3.1
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 ---
 ### 説明

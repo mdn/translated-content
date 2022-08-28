@@ -1,7 +1,6 @@
 ---
 title: VREyeParameters
 slug: Web/API/VREyeParameters
-translation_of: Web/API/VREyeParameters
 ---
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 

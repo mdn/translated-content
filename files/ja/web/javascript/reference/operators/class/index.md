@@ -1,16 +1,6 @@
 ---
 title: クラス式
 slug: Web/JavaScript/Reference/Operators/class
-tags:
-  - クラス
-  - ECMAScript 2015
-  - 式
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - リファレンス
-browser-compat: javascript.operators.class
-translation_of: Web/JavaScript/Reference/Operators/class
 ---
 {{jsSidebar("Operators")}}
 

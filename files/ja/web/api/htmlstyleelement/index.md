@@ -1,11 +1,6 @@
 ---
 title: HTMLStyleElement
 slug: Web/API/HTMLStyleElement
-tags:
-  - DOM
-  - DOM Reference
-  - 要更新
-translation_of: Web/API/HTMLStyleElement
 ---
 {{ApiRef}}
 

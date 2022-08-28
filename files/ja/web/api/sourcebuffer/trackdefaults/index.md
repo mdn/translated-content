@@ -1,18 +1,6 @@
 ---
 title: SourceBuffer.trackDefaults
 slug: Web/API/SourceBuffer/trackDefaults
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBuffer
-  - Video
-  - trackDefaults
-translation_of: Web/API/SourceBuffer/trackDefaults
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 

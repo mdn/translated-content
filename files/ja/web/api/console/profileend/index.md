@@ -1,18 +1,6 @@
 ---
 title: console.profileEnd()
 slug: Web/API/console/profileEnd
-tags:
-  - API
-  - DOM
-  - デバッグ
-  - メソッド
-  - 標準外
-  - リファレンス
-  - ウェブ開発
-  - profileEnd
-  - ウェブコンソール
-browser-compat: api.console.profileEnd
-translation_of: Web/API/Console/profileEnd
 ---
 {{APIRef("Console API")}}{{Non-standard_header}}
 

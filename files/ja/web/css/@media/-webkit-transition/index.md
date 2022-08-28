@@ -1,17 +1,6 @@
 ---
-title: '-webkit-transition'
+title: "-webkit-transition"
 slug: Web/CSS/@media/-webkit-transition
-tags:
-  - '@media'
-  - Blink
-  - CSS
-  - 非推奨
-  - 標準外
-  - リファレンス
-  - WebKit
-  - メディア特性
-browser-compat: css.at-rules.media.-webkit-transition
-translation_of: Web/CSS/@media/-webkit-transition
 ---
 {{ CSSRef }} {{deprecated_header}} {{ Non-standard_header }}
 

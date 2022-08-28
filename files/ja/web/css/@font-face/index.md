@@ -1,17 +1,6 @@
 ---
-title: '@font-face'
+title: "@font-face"
 slug: Web/CSS/@font-face
-tags:
-  - '@font-face'
-  - アットルール
-  - CSS
-  - CSS フォント
-  - フォント
-  - ニックネーム
-  - リファレンス
-  - 字体
-browser-compat: css.at-rules.font-face
-translation_of: Web/CSS/@font-face
 ---
 {{CSSRef}}
 

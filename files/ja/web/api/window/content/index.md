@@ -1,7 +1,6 @@
 ---
 title: Window.content
 slug: Web/API/Window/content
-translation_of: Web/API/Window/content
 ---
 {{APIRef}}{{non-standard_header}}
 

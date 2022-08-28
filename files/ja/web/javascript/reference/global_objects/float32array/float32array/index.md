@@ -1,14 +1,6 @@
 ---
 title: Float32Array() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArrays
-  - コンストラクター
-  - 型付き配列
-translation_of: Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array
 ---
 {{JSRef}}
 

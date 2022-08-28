@@ -1,17 +1,6 @@
 ---
 title: console.dir()
 slug: Web/API/console/dir
-tags:
-  - API
-  - DOM
-  - デバッグ
-  - メソッド
-  - リファレンス
-  - ウェブ開発
-  - console
-  - ウェブコンソール
-browser-compat: api.console.dir
-translation_of: Web/API/Console/dir
 ---
 {{APIRef("Console API")}}
 

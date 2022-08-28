@@ -1,14 +1,6 @@
 ---
 title: Document.documentURI
 slug: Web/API/Document/documentURI
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Read-only
-  - Reference - Web - プロパティ
-translation_of: Web/API/Document/documentURI
 ---
 {{ApiRef("DOM")}}
 

@@ -1,12 +1,6 @@
 ---
-title: <li>
+title: "<li>"
 slug: Web/HTML/Element/li
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-translation_of: Web/HTML/Element/li
 ---
 {{HTMLRef}}
 

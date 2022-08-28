@@ -1,14 +1,6 @@
 ---
 title: Document.documentURIObject
 slug: Web/API/Document/documentURIObject
-tags:
-  - API
-  - DOM
-  - Non-standard
-  - Reference
-  - プロパティ
-  - 標準外
-translation_of: Web/API/Document/documentURIObject
 ---
 {{ApiRef("DOM")}}{{Non-standard_header}}
 

@@ -1,14 +1,6 @@
 ---
 title: font-variant-caps
 slug: Web/CSS/font-variant-caps
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.font-variant-caps
-translation_of: Web/CSS/font-variant-caps
 ---
 {{CSSRef}}
 

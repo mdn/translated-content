@@ -1,15 +1,6 @@
 ---
 title: RegExp.prototype.exec()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/exec
-browser-compat: javascript.builtins.RegExp.exec
 ---
 {{JSRef}}
 

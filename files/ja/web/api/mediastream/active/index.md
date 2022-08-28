@@ -1,16 +1,6 @@
 ---
 title: MediaStream.active
 slug: Web/API/MediaStream/active
-tags:
-  - API
-  - メディアキャプチャとストリーム
-  - メディアストリーム API
-  - MediaStream
-  - プロパティ
-  - リファレンス
-  - active
-browser-compat: api.MediaStream.active
-translation_of: Web/API/MediaStream/active
 ---
 {{APIRef("Media Capture and Streams")}}
 

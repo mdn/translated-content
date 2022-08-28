@@ -1,12 +1,6 @@
 ---
 title: Uint8ClampedArray() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray/Uint8ClampedArray
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray/Uint8ClampedArray
 ---
 {{JSRef}}
 

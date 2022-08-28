@@ -1,11 +1,6 @@
 ---
 title: manifest.json のブラウザー互換性
 slug: Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json
-tags:
-  - Add-ons
-  - WebExtensions
-  - manifest.json
-translation_of: Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json
 ---
 {{AddonSidebar}}
 

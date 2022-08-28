@@ -1,15 +1,6 @@
 ---
 title: PushEvent.data
 slug: Web/API/PushEvent/data
-tags:
-  - API
-  - Experimental
-  - Property
-  - Push
-  - PushEvent
-  - Reference
-  - data
-translation_of: Web/API/PushEvent/data
 ---
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 

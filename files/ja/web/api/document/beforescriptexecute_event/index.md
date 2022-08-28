@@ -1,15 +1,6 @@
 ---
 title: 'Document: beforescriptexecute イベント'
 slug: Web/API/Document/beforescriptexecute_event
-page-type: web-api-event
-tags:
- - Document
- - beforescriptexecute
- - API
- - Event
- - Reference
- - Non-standard
-translation_of: Web/API/Document/beforescriptexecute_event
 original_slug: Web/API/Document/onbeforescriptexecute
 ---
 {{APIRef}}{{non-standard_header}}

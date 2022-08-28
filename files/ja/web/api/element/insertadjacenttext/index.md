@@ -1,7 +1,6 @@
 ---
 title: Element.insertAdjacentText()
 slug: Web/API/Element/insertAdjacentText
-translation_of: Web/API/Element/insertAdjacentText
 ---
 {{APIRef("DOM")}}
 

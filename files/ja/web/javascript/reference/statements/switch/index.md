@@ -1,15 +1,6 @@
 ---
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-  - Web
-  - 文
-  - 言語機能
-translation_of: Web/JavaScript/Reference/Statements/switch
 ---
 {{jsSidebar("Statements")}}
 

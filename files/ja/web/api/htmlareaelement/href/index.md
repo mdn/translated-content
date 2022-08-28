@@ -1,15 +1,6 @@
 ---
 title: HTMLAreaElement.href
 slug: Web/API/HTMLAreaElement/href
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - Location
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAreaElement.href
-translation_of: Web/API/HTMLAreaElement/href
 original_slug: Web/API/HTMLHyperlinkElementUtils/href
 ---
 {{ApiRef("HTML DOM")}}

@@ -1,21 +1,6 @@
 ---
 title: HTMLMediaElement.onerror
 slug: Web/API/HTMLMediaElement/onerror
-page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Errors
-  - Event Handler
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Property
-  - Reference
-  - Video
-  - onerror
-browser-compat: api.HTMLMediaElement.onerror
-translation_of: Web/API/HTMLMediaElement/onerror
 ---
 {{APIRef("HTML DOM")}}
 

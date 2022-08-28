@@ -1,16 +1,6 @@
 ---
 title: console.timeStamp()
 slug: Web/API/console/timeStamp
-tags:
-  - API
-  - DOM
-  - デバッグ
-  - メソッド
-  - 標準外
-  - ウェブ開発
-  - ウェブコンソール
-browser-compat: api.console.timeStamp
-translation_of: Web/API/Console/timeStamp
 ---
 {{APIRef("Console API")}}{{Non-standard_header}}
 

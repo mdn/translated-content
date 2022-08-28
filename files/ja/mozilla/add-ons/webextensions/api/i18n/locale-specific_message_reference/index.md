@@ -1,17 +1,6 @@
 ---
 title: ロケール固有のメッセージ参照
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference
-tags:
-  - Internationalization
-  - Localization
-  - Reference
-  - String
-  - WebExtensions
-  - i18n
-  - message
-  - message.json
-  - placeholders
-translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference
 ---
 国際化対応 (i18n) した拡張機能は、ロケール固有のメッセージを提供する少なくとも 1 個の `messages.json` というファイルを持っています。このページでは、`messages.json` の書式を説明します。
 

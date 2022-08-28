@@ -1,13 +1,6 @@
 ---
 title: CSSValue.cssText
 slug: Web/API/CSSValue/cssText
-tags:
-  - API
-  - CSSValue
-  - Property
-  - Reference
-  - cssText
-translation_of: Web/API/CSSValue/cssText
 ---
 {{APIRef("DOM")}}
 

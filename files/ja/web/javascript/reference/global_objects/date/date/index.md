@@ -1,12 +1,6 @@
 ---
 title: Date() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
-tags:
-  - Constructor
-  - Date
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/Date
 ---
 {{JSRef}}
 

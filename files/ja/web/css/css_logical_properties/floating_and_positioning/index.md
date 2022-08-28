@@ -1,13 +1,6 @@
 ---
 title: 浮動と位置指定の論理的プロパティ
 slug: Web/CSS/CSS_Logical_Properties/Floating_and_positioning
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - 浮動
-  - ガイド
-  - 位置指定
-translation_of: Web/CSS/CSS_Logical_Properties/Floating_and_positioning
 ---
 {{CSSRef}}
 

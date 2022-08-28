@@ -1,19 +1,6 @@
 ---
 title: 'Document: pointerover イベント'
 slug: Web/API/Document/pointerover_event
-tags:
-  - API
-  - Document
-  - Event
-  - PointerEvent
-  - Reference
-  - Web
-  - onpointerover
-  - pointer
-  - pointerover
-  - イベント
-  - ポインター
-translation_of: Web/API/Document/pointerover_event
 ---
 {{APIRef}}
 

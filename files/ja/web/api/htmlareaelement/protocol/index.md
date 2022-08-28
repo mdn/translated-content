@@ -1,13 +1,6 @@
 ---
 title: HTMLAreaElement.protocol
 slug: Web/API/HTMLAreaElement/protocol
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - プロパティ
-browser-compat: api.HTMLAreaElement.protocol
-translation_of: Web/API/HTMLAreaElement/protocol
 original_slug: Web/API/HTMLHyperlinkElementUtils/protocol
 ---
 {{ApiRef("HTML DOM")}}

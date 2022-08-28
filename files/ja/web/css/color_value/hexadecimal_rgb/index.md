@@ -1,11 +1,6 @@
 ---
 title: 16 進カラー構文
 slug: Web/CSS/color_value/hexadecimal_rgb
-tags:
-  - Reference
-  - color
-browser-compat: css.types.color.rgb_hexadecimal_notation
-translation_of: Web/CSS/color_value/hexadecimal_rgb
 ---
 {{CSSRef}}
 

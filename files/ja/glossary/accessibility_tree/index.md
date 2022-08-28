@@ -1,15 +1,6 @@
 ---
 title: Accessibility tree (アクセシビリティツリー)
 slug: Glossary/Accessibility_tree
-tags:
-  - AOM
-  - Accessibility
-  - DOM
-  - Glossary
-  - Reference
-  - アクセシビリティ
-  - 用語集
-translation_of: Glossary/Accessibility_tree
 ---
 **アクセシビリティツリー**、または**アクセシビリティオブジェクトモデル** (**AOM**) は、多くの HTML 要素におけるアクセシビリティに関する情報を含んでいます。
 

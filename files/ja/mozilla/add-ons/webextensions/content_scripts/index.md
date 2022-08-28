@@ -1,9 +1,6 @@
 ---
 title: コンテンツスクリプト
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 ---
 {{AddonSidebar}}
 

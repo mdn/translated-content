@@ -1,14 +1,6 @@
 ---
 title: PointerEvent.tiltX
 slug: Web/API/PointerEvent/tiltX
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
-translation_of: Web/API/PointerEvent/tiltX
 ---
 {{ APIRef("Pointer Events") }}
 

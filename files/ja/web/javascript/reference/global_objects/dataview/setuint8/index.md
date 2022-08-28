@@ -1,13 +1,6 @@
 ---
 title: DataView.prototype.setUint8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint8
-tags:
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setUint8
 ---
 {{JSRef}}
 

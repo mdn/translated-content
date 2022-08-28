@@ -1,15 +1,6 @@
 ---
 title: GitHub Pages を使うには？
 slug: Learn/Common_questions/Using_Github_pages
-tags:
-  - Beginner
-  - GitHub
-  - Guide
-  - Web
-  - gh-pages
-  - git
-  - publish
-translation_of: Learn/Common_questions/Using_Github_pages
 ---
 [GitHub](https://github.com/) は「ソーシャルコーディング」のサイトです。 [Git](https://git-scm.com/) **バージョン管理システム**のストレージに対して、ソースコードリポジトリーのアップロードを許可します。その後、コードプロジェクトで共同作業を行うことができます。また、システムはオープンソースに自動設定されています。つまり、世界中の誰もが GitHub コードを検索・使用また、そこから学習しコードを改善することができます。他の人のコードでもそれが可能です！この記事は GitHub の gh-pages 機能を使って、公開コンテンツに関する基本的なガイドを提供します。
 

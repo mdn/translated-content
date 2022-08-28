@@ -1,13 +1,6 @@
 ---
 title: 'ARIA を使用する: ロール、ステート、プロパティ'
 slug: Web/Accessibility/ARIA/ARIA_Techniques
-tags:
-  - ARIA
-  - Accessibility
-  - Overview
-  - Reference
-  - TopicStub
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques
 ---
 ## ロール
 

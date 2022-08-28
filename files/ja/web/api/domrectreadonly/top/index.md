@@ -1,15 +1,6 @@
 ---
 title: DOMRectReadOnly.top
 slug: Web/API/DOMRectReadOnly/top
-tags:
-  - API
-  - DOM
-  - DOMRectReadOnly
-  - 位置
-  - プロパティ
-  - リファレンス
-browser-compat: api.DOMRectReadOnly.top
-translation_of: Web/API/DOMRectReadOnly/top
 ---
 {{APIRef("Geometry Interfaces")}}
 

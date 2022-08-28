@@ -1,17 +1,6 @@
 ---
 title: Document.height
 slug: Web/API/Document/height
-page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - プロパティ
-  - リファレンス
-  - 非推奨
-translation_of: Web/API/Document/height
 ---
 {{APIRef("DOM")}} {{deprecated_header}}
 

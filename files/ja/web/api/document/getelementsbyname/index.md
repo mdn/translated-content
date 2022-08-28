@@ -1,16 +1,6 @@
 ---
 title: Document.getElementsByName()
 slug: Web/API/Document/getElementsByName
-tags:
-  - API
-  - DOM
-  - Document
-  - HTML
-  - Method
-  - Reference
-  - getElementByName
-  - メソッド
-translation_of: Web/API/Document/getElementsByName
 ---
 {{APIRef("DOM")}}
 

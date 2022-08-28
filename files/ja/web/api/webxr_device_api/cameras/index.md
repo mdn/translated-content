@@ -1,31 +1,6 @@
 ---
 title: '視点とビューアー: WebXR でのカメラのシミュレーション'
 slug: Web/API/WebXR_Device_API/Cameras
-tags:
-  - 3D
-  - API
-  - AR
-  - Advanced
-  - Cameras
-  - Coordinates
-  - Guide
-  - Location
-  - Motion
-  - Position
-  - VR
-  - Viewers
-  - Viewpoints
-  - WebGL
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRPose
-  - XRView
-  - XRViewerPose
-  - rotation
-  - transform
-translation_of: Web/API/WebXR_Device_API/Cameras
 ---
 {{DefaultAPISidebar("WebXR Device API")}}
 

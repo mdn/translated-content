@@ -1,14 +1,6 @@
 ---
 title: 'HTML 属性: accept'
 slug: Web/HTML/Attributes/accept
-tags:
-  - Accept
-  - Attribute
-  - File
-  - HTML
-  - Input
-  - Reference
-translation_of: Web/HTML/Attributes/accept
 ---
 {{HTMLSidebar}}
 

@@ -1,13 +1,6 @@
 ---
 title: 'Element: paste イベント'
 slug: Web/API/Element/paste_event
-page-type: web-api-event
-tags:
-  - Clipboard API
-  - Event
-  - NeedsUpdate
-  - Reference
-translation_of: Web/API/Element/paste_event
 ---
 {{APIRef}}
 

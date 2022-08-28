@@ -1,7 +1,6 @@
 ---
-title: <msub>
+title: "<msub>"
 slug: Web/MathML/Element/msub
-translation_of: Web/MathML/Element/msub
 ---
 {{MathMLRef()}}
 

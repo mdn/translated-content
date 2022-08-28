@@ -1,11 +1,6 @@
 ---
 title: DOMTokenList.supports()
 slug: Web/API/DOMTokenList/supports
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.DOMTokenList.supports
-translation_of: Web/API/DOMTokenList/supports
 ---
 {{APIRef("DOM")}}
 

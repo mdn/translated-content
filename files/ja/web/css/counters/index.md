@@ -1,15 +1,7 @@
 ---
 title: counters()
 slug: Web/CSS/counters
-tags:
-  - CSS
-  - CSS カウンター
-  - CSS 関数
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/counters()
 original_slug: Web/CSS/counters()
-browser-compat: css.types.counters
 ---
 {{CSSRef}}
 

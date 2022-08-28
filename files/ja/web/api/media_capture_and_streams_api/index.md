@@ -1,18 +1,6 @@
 ---
 title: Media Capture and Streams API (Media Streams)
 slug: Web/API/Media_Capture_and_Streams_API
-tags:
-  - API
-  - Advanced
-  - Audio
-  - Guide
-  - Introduction
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - NeedsContent
-  - Video
-translation_of: Web/API/Media_Streams_API
 original_slug: Web/API/Media_Streams_API
 ---
 {{DefaultAPISidebar("Media Capture and Streams")}}

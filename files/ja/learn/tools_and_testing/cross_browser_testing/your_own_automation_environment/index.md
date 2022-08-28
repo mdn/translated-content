@@ -1,18 +1,6 @@
 ---
 title: テスト自動化環境をセットアップする
 slug: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment
-tags:
-  - Article
-  - Automation
-  - Beginner
-  - Browser
-  - CodingScripting
-  - Learn
-  - Testing
-  - Tools
-  - cross browser
-  - selenium
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
 

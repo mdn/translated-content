@@ -1,14 +1,6 @@
 ---
 title: MouseEvent.offsetX
 slug: Web/API/MouseEvent/offsetX
-tags:
-  - API
-  - MouseEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.MouseEvent.offsetX
-translation_of: Web/API/MouseEvent/offsetX
 ---
 {{APIRef("DOM Events")}}
 

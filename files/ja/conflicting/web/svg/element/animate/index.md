@@ -1,12 +1,6 @@
 ---
 title: animateColor
 slug: conflicting/Web/SVG/Element/animate
-tags:
-  - Deprecated
-  - Element
-  - SVG
-  - SVG Animation
-translation_of: Web/SVG/Element/animateColor
 original_slug: Web/SVG/Element/animateColor
 ---
 {{SVGRef}}{{deprecated_header}}

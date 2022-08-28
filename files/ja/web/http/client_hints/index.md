@@ -1,13 +1,6 @@
 ---
 title: Client Hints (クライアントヒント)
 slug: Web/HTTP/Client_hints
-tags:
-  - Client hints
-  - Glossary
-  - Performance
-  - Reference
-  - Web Performance
-translation_of: Glossary/Client_hints
 original_slug: Glossary/Client_hints
 ---
 **クライアントヒント** (Client Hints) は、プロアクティブコンテンツネゴシエーション用の [HTTP リクエストヘッダー](/ja/docs/Web/HTTP/Headers)フィールドのセットで、クライアントがデバイスとエージェントに固有の設定のリストを示すことができます。 [クライアントヒント](/ja/docs/Web/HTTP/Headers#Client_hints)により、画像の DPR 解像度の自動ネゴシエーションなどの最適化されたアセットの自動配信が可能になります。

@@ -1,19 +1,6 @@
 ---
 title: 堅牢
 slug: Web/Accessibility/Understanding_WCAG/Robust
-tags:
-  - Accessibility
-  - HTML
-  - Parsing
-  - Principle 4
-  - Robust
-  - Role(2)
-  - Validation
-  - WAI-ARIA
-  - WCAG
-  - Web Content Accessibility Guidelines
-  - value
-translation_of: Web/Accessibility/Understanding_WCAG/Robust
 ---
 この記事では、ウェブコンテンツ・アクセシビリティガイドライン（WCAG）2.0 および 2.1 の**堅牢**原則に概説されている達成基準に準拠するようにウェブコンテンツを作成する方法についての実用的なアドバイスを提供します。 堅牢とは、支援技術を含む多種多様なユーザーエージェントによって確実に解釈されることができるほど十分に堅牢でなければならないと述べています。 これは通常、ウェブ標準に準拠し、[厳密にテスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)することによって実現できます。
 

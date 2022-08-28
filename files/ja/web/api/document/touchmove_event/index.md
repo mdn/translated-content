@@ -1,21 +1,6 @@
 ---
 title: 'Document: touchmove イベント'
 slug: Web/API/Document/touchmove_event
-tags:
-  - API
-  - DOM
-  - Document
-  - Event
-  - Reference
-  - Touch Events
-  - TouchEvent
-  - UI
-  - UI Events
-  - UX
-  - touch
-  - touchmove
-  - イベント
-translation_of: Web/API/Document/touchmove_event
 ---
 {{APIRef}}
 

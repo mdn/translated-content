@@ -1,15 +1,6 @@
 ---
 title: console.clear()
 slug: Web/API/console/clear
-tags:
-  - API
-  - デバッグ
-  - メソッド
-  - リファレンス
-  - console
-  - ウェブコンソール
-browser-compat: api.console.clear
-translation_of: Web/API/Console/clear
 ---
 {{APIRef("Console API")}}
 

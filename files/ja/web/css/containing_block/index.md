@@ -1,18 +1,6 @@
 ---
 title: レイアウトと包含ブロック
 slug: Web/CSS/Containing_block
-tags:
-  - CSS
-  - CSS Position
-  - Containers
-  - Guide
-  - Layout
-  - Position
-  - Style
-  - blocks
-  - containing block
-  - size
-translation_of: Web/CSS/Containing_block
 ---
 {{CSSRef}}
 

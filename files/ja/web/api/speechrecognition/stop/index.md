@@ -1,17 +1,6 @@
 ---
 title: SpeechRecognition.stop()
 slug: Web/API/SpeechRecognition/stop
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - recognition
-  - speech
-  - stop
-translation_of: Web/API/SpeechRecognition/stop
 ---
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 

@@ -1,12 +1,6 @@
 ---
 title: StyleSheet.ownerNode
 slug: Web/API/StyleSheet/ownerNode
-tags:
-  - API
-  - CSSOM
-  - Property
-  - Reference
-translation_of: Web/API/StyleSheet/ownerNode
 ---
 {{APIRef("CSSOM")}}
 

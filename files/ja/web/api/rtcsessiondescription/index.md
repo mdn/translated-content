@@ -1,18 +1,6 @@
 ---
 title: RTCSessionDescription
 slug: Web/API/RTCSessionDescription
-tags:
-  - API
-  - Audio
-  - Experimental
-  - Interface
-  - Media
-  - RTCSessionDescription
-  - Reference
-  - Video
-  - Web
-  - WebRTC
-translation_of: Web/API/RTCSessionDescription
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 

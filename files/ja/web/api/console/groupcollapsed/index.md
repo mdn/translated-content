@@ -1,17 +1,6 @@
 ---
 title: console.groupCollapsed()
 slug: Web/API/console/groupCollapsed
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - デバッグ
-  - メソッド
-  - リファレンス
-  - ウェブ開発
-  - ウェブコンソール
-browser-compat: api.console.groupCollapsed
-translation_of: Web/API/console/groupCollapsed
 ---
 {{APIRef("Console API")}}
 

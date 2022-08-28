@@ -1,16 +1,6 @@
 ---
 title: ビューポートの概念
 slug: Web/CSS/Viewport_concepts
-tags:
-  - Best practices
-  - CSS
-  - Guide
-  - Mobile
-  - Resource
-  - layout viewport
-  - viewport
-  - virtual viewport
-translation_of: Web/CSS/Viewport_concepts
 ---
 {{CSSRef}}
 

@@ -1,11 +1,6 @@
 ---
 title: IndexedDB の主な特徴と基本用語
 slug: Web/API/IndexedDB_API/Basic_Terminology
-tags:
-  - Advanced
-  - IndexedDB
-  - terminology
-translation_of: Web/API/IndexedDB_API/Basic_Terminology
 ---
 {{DefaultAPISidebar("IndexedDB")}}
 

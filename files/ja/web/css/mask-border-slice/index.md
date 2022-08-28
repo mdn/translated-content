@@ -1,17 +1,6 @@
 ---
 title: mask-border-slice
 slug: Web/CSS/mask-border-slice
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - 実験的
-  - NeedsCompatTable
-  - NeedsExample
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.mask-border-slice
-translation_of: Web/CSS/mask-border-slice
 ---
 {{CSSRef}}
 

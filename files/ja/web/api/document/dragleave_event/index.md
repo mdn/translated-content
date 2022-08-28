@@ -1,18 +1,6 @@
 ---
 title: 'Document: dragleave イベント'
 slug: Web/API/Document/dragleave_event
-page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Document
-  - DragEvent
-  - Event
-  - Reference
-  - Web
-  - drag and drop
-  - dragleave
-translation_of: Web/API/Document/dragleave_event
 ---
 {{APIRef}}
 

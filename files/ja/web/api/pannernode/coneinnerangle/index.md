@@ -1,16 +1,6 @@
 ---
 title: PannerNode.coneInnerAngle
 slug: Web/API/PannerNode/coneInnerAngle
-page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - coneInnerAngle
-browser-compat: api.PannerNode.coneInnerAngle
-translation_of: Web/API/PannerNode/coneInnerAngle
 ---
 {{ APIRef("Web Audio API") }}
 

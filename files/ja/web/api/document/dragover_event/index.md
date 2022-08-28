@@ -1,17 +1,6 @@
 ---
 title: 'Document: dragover イベント'
 slug: Web/API/Document/dragover_event
-page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Document
-  - DragEvent
-  - Event
-  - Reference
-  - Web
-  - drag and drop
-translation_of: Web/API/Document/dragover_event
 ---
 {{APIRef}}
 

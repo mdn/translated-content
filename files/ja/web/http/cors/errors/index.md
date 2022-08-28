@@ -1,17 +1,6 @@
 ---
 title: CORS のエラー
 slug: Web/HTTP/CORS/Errors
-tags:
-  - CORS
-  - HTTP
-  - HTTPS
-  - エラー
-  - コンソール
-  - セキュリティ
-  - トラブル解決
-  - メッセージ
-  - 同一オリジン
-translation_of: Web/HTTP/CORS/Errors
 ---
 {{HTTPSidebar}}
 

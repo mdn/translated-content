@@ -1,18 +1,6 @@
 ---
-title: '@viewport'
+title: "@viewport"
 slug: Web/CSS/@viewport
-tags:
-  - '@viewport'
-  - アットルール
-  - CSS
-  - 実験的
-  - レイアウト
-  - モバイル
-  - リファレンス
-  - 画面レイアウト
-  - ビューポート
-browser-compat: css.at-rules.viewport
-translation_of: Web/CSS/@viewport
 ---
 {{CSSRef}}{{deprecated_header}}
 

@@ -1,10 +1,6 @@
 ---
 title: 'ARIA: dialog ロール'
 slug: Web/Accessibility/ARIA/Roles/dialog_role
-tags:
-  - ARIA
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/dialog_role
 ---
 ダイアログ ([`dialog`](https://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#dialog)) ロールは、ウェブアプリケーションやウェブページの残りの部分からコンテンツや UI を分離する HTML ベースのアプリケーションのダイアログやウィンドウをマークアップするために使用します。 ダイアログは通常、オーバーレイを使用して残りのページコンテンツの上に配置されます。 ダイアログはノンモーダル (ダイアログ外のコンテンツともやりとり可能) またはモーダル (ダイアログ内のコンテンツのみとやりとり可能) のいずれかになります。
 

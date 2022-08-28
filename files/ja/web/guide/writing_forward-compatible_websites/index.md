@@ -1,14 +1,6 @@
 ---
 title: 前方互換性のあるウェブサイトを書く
 slug: Web/Guide/Writing_forward-compatible_websites
-tags:
-  - CSS
-  - 互換性
-  - DOM
-  - HTML
-  - JavaScript
-  - ウェブ開発
-translation_of: Web/Guide/Writing_forward-compatible_websites
 original_slug: Web_Development/Writing_forward-compatible_websites
 ---
 このページでは、新しいバージョンのブラウザーーが公開されても壊れることのないウェブサイトを記述する方法を説明します。

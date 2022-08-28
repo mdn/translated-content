@@ -1,11 +1,6 @@
 ---
 title: 'TypeError: invalid assignment to const "x"'
 slug: Web/JavaScript/Reference/Errors/Invalid_const_assignment
-tags:
-  - Error
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Invalid_const_assignment
 ---
 {{jsSidebar("Errors")}}
 

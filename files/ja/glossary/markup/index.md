@@ -1,14 +1,6 @@
 ---
 title: markup (マークアップ)
 slug: Glossary/markup
-tags:
-  - Glossary
-  - Intro
-  - Markup
-  - NeedsContent
-  - マークアップ
-  - 用語集
-translation_of: Glossary/markup
 ---
 マークアップ言語は、テキストを定義し提示するために設計された言語です。 {{glossary("HTML")}} (HyperText Markup Language) は、マークアップ言語の一例です。
 

@@ -1,20 +1,6 @@
 ---
 title: MediaQueryList
 slug: Web/API/MediaQueryList
-tags:
-  - API
-  - Adaptive Design
-  - CSSOM View
-  - DOM
-  - Interface
-  - Media Queries
-  - MediaQueryList
-  - Reference
-  - query
-  - アダプティブデザイン
-  - インターフェイス
-  - メディアクエリー
-translation_of: Web/API/MediaQueryList
 ---
 {{APIRef("CSSOM")}}
 

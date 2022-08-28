@@ -1,14 +1,6 @@
 ---
 title: CanvasRenderingContext2D.textAlign
 slug: Web/API/CanvasRenderingContext2D/textAlign
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - プロパティ
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.textAlign
-translation_of: Web/API/CanvasRenderingContext2D/textAlign
 ---
 {{APIRef}}
 

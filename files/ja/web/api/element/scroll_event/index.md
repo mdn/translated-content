@@ -1,13 +1,6 @@
 ---
 title: 'Element: scroll イベント'
 slug: Web/API/Element/scroll_event
-tags:
-  - API
-  - Element
-  - Event
-  - Reference
-  - Scroll
-translation_of: Web/API/Element/scroll_event
 ---
 {{APIRef}}
 

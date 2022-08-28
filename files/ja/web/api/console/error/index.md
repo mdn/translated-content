@@ -1,15 +1,6 @@
 ---
 title: console.error()
 slug: Web/API/console/error
-tags:
-  - API
-  - DOM
-  - デバッグ
-  - メソッド
-  - ウェブ開発
-  - ウェブコンソール
-browser-compat: api.console.error
-translation_of: Web/API/console/error
 ---
 {{APIRef("Console API")}}
 

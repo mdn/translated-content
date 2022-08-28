@@ -1,12 +1,6 @@
 ---
 title: API リファレンスの書き方
 slug: MDN/Writing_guidelines/Howto/Write_an_API_reference
-tags:
-  - API
-  - Documentation
-  - Guide
-  - Howto
-  - MDN Meta
 original_slug: MDN/Writing_guidelines/Howto/Write_an_API_reference
 ---
 {{MDNSidebar}}

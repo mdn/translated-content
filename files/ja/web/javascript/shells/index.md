@@ -1,12 +1,6 @@
 ---
 title: JavaScript シェル
 slug: Web/JavaScript/Shells
-tags:
-  - Extensions
-  - Guide
-  - JavaScript
-  - Tools
-translation_of: Web/JavaScript/Shells
 ---
 {{JsSidebar}}
 

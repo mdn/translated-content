@@ -1,17 +1,6 @@
 ---
-title: ':host-context()'
+title: ":host-context()"
 slug: Web/CSS/:host-context()
-tags:
-  - ':host-context()'
-  - CSS
-  - 実験的
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.host-context
-translation_of: Web/CSS/:host-context()
 ---
 <div>{{CSSRef}}</div>
 

@@ -1,15 +1,6 @@
 ---
 title: console.table()
 slug: Web/API/console/table
-tags:
-  - API
-  - DOM
-  - デバッグ
-  - メソッド
-  - ウェブ開発
-  - ウェブコンソール
-browser-compat: api.console.table
-translation_of: Web/API/Console/table
 ---
 {{APIRef("Console API")}}
 

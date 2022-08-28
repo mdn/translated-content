@@ -1,9 +1,6 @@
 ---
 title: FileReaderSync.readAsDataURL()
 slug: Web/API/FileReaderSync/readAsDataURL
-page-type: web-api-instance-method
-browser-compat: api.FileReaderSync.readAsDataURL
-translation_of: Web/API/FileReaderSync/readAsDataURL
 ---
 {{APIRef("File API")}}
 

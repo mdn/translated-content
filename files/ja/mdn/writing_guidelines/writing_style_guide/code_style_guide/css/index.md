@@ -1,11 +1,6 @@
 ---
 title: CSS のコード例を整形するためのガイドライン
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
-page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
-translation_of: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
 original_slug: MDN/Guidelines/Code_guidelines/CSS
 ---
 {{MDNSidebar}}

@@ -1,16 +1,6 @@
 ---
 title: WebAssembly.Table.prototype.length
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/length
-tags:
-  - API
-  - JavaScript
-  - プロパティ
-  - Reference
-  - WebAssembly
-  - length
-  - table
-browser-compat: javascript.builtins.WebAssembly.Table.length
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/length
 ---
 {{JSRef}}
 

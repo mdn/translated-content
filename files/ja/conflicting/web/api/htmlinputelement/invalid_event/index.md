@@ -1,13 +1,6 @@
 ---
 title: GlobalEventHandlers.oninvalid
 slug: conflicting/Web/API/HTMLInputElement/invalid_event
-tags:
-  - API
-  - Event Handler
-  - GlobalEventHandlers
-  - Property
-  - Reference
-translation_of: Web/API/GlobalEventHandlers/oninvalid
 original_slug: Web/API/GlobalEventHandlers/oninvalid
 ---
 {{ ApiRef("HTML DOM") }}

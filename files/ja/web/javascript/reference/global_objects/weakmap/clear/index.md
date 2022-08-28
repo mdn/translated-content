@@ -1,14 +1,6 @@
 ---
 title: WeakMap.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/clear
-tags:
-  - JavaScript
-  - Method
-  - Deprecated
-  - Prototype
-  - WeakMap
-browser-compat: javascript.builtins.WeakMap.clear
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/clear
 ---
 {{JSRef}} {{deprecated_header}}
 

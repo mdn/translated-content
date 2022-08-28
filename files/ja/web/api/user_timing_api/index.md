@@ -1,7 +1,6 @@
 ---
 title: User Timing API
 slug: Web/API/User_Timing_API
-translation_of: Web/API/User_Timing_API
 ---
 {{DefaultAPISidebar("User Timing API")}}
 

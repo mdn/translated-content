@@ -1,13 +1,6 @@
 ---
 title: Window.menubar
 slug: Web/API/Window/menubar
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/Window/menubar
 ---
 {{ APIRef() }}
 

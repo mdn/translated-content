@@ -1,15 +1,6 @@
 ---
 title: console.dirxml()
 slug: Web/API/console/dirxml
-tags:
-  - API
-  - DOM
-  - デバッグ
-  - メソッド
-  - ウェブ開発
-  - ウェブコンソール
-browser-compat: api.console.dirxml
-translation_of: Web/API/console/dirxml
 ---
 {{APIRef("Console API")}}
 

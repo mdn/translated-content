@@ -1,15 +1,6 @@
 ---
 title: HTTPS
 slug: Glossary/https
-tags:
-  - Glossary
-  - HTTPS
-  - Infrastructure
-  - Security
-  - インフラ
-  - セキュリティ
-  - 用語集
-translation_of: Glossary/https
 ---
 **HTTPS** (**_HyperText Transfer Protocol Secure_**) は {{Glossary("HTTP")}} プロトコルを暗号化したバージョンです。 HTTPS は通常、 {{Glossary("SSL")}} または {{Glossary("TLS")}} を用いてクライアントとサーバー間のすべての通信を暗号化します。この安全な接続により、クライアントは機密データをサーバーと安全に交換できます (例えば、銀行取引やオンラインショッピングなどで)。
 

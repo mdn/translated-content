@@ -1,15 +1,6 @@
 ---
 title: JavaScript 「再」入門
 slug: Web/JavaScript/A_re-introduction_to_JavaScript
-tags:
-  - CodingScripting
-  - Guide
-  - Intermediate
-  - Intro
-  - JavaScript
-  - Learn
-  - Tutorial
-translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
 {{jsSidebar}}
 

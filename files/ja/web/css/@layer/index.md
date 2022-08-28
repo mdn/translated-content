@@ -1,15 +1,6 @@
 ---
-title: '@layer'
+title: "@layer"
 slug: Web/CSS/@layer
-tags:
-  - アットルール
-  - CSS
-  - リファレンス
-  - ウェブ
-  - layer
-  - cascade
-browser-compat: css.at-rules.layer
-translation_of: Web/CSS/@layer
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

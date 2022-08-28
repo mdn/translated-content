@@ -1,18 +1,6 @@
 ---
 title: console.profile()
 slug: Web/API/console/profile
-tags:
-  - API
-  - DOM
-  - デバッグ
-  - メソッド
-  - 標準外
-  - リファレンス
-  - ウェブ開発
-  - profile
-  - ウェブコンソール
-browser-compat: api.console.profile
-translation_of: Web/API/Console/profile
 ---
 {{APIRef("Console API")}}{{Non-standard_header}}
 

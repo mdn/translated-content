@@ -1,14 +1,6 @@
 ---
 title: mask-border
 slug: Web/CSS/mask-border
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.mask-border
-translation_of: Web/CSS/mask-border
 ---
 {{CSSRef}}
 

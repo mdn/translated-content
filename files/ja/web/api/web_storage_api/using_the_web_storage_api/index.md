@@ -1,14 +1,6 @@
 ---
 title: Web Storage API の使用
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
-tags:
-  - API
-  - Guide
-  - Storage
-  - Web Storage API
-  - localStorage
-  - sessionStorage
-translation_of: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
 {{DefaultAPISidebar("Web Storage API")}}
 

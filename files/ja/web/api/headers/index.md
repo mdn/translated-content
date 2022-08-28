@@ -1,15 +1,6 @@
 ---
 title: Headers
 slug: Web/API/Headers
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Fetch API
-  - Headers
-  - Interface
-  - Reference
-translation_of: Web/API/Headers
 ---
 {{ APIRef("Fetch") }}
 

@@ -1,14 +1,6 @@
 ---
 title: MessageChannel
 slug: Web/API/MessageChannel
-tags:
-  - API
-  - Channel Messaging API
-  - Interface
-  - MessageChannel
-  - Reference
-  - web messaging
-translation_of: Web/API/MessageChannel
 ---
 {{APIRef("HTML DOM")}}
 

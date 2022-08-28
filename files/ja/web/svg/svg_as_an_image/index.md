@@ -1,11 +1,6 @@
 ---
 title: 画像としての SVG
 slug: Web/SVG/SVG_as_an_Image
-tags:
-  - Images
-  - NeedsContent
-  - SVG
-translation_of: Web/SVG/SVG_as_an_Image
 ---
 SVG 画像は、様々な場面で画像形式の一つとして使用することができます。多くのブラウザーは SVG 画像を以下の場所で対応しています。
 

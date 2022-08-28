@@ -1,12 +1,6 @@
 ---
 title: Int32Array() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Int32Array/Int32Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/Int32Array/Int32Array
 ---
 {{JSRef}}
 

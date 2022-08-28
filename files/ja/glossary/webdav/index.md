@@ -1,10 +1,6 @@
 ---
 title: WebDAV
 slug: Glossary/WebDAV
-tags:
-  - Glossary
-  - Infrastructure
-translation_of: Glossary/WebDAV
 ---
 **WebDAV** (_Web Distributed Authoring and Versioning_) は Web 開発者がリモートでウェブクライントからコンテンツを更新できる {{Glossary("HTTP")}} 拡張機能です。
 

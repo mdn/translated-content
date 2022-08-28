@@ -1,12 +1,6 @@
 ---
 title: NodeIterator
 slug: Web/API/NodeIterator
-page-type: web-api-interface
-tags:
-  - API
-  - DOM
-browser-compat: api.NodeIterator
-translation_of: Web/API/NodeIterator
 ---
 {{APIRef("DOM")}}
 

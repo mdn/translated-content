@@ -1,14 +1,7 @@
 ---
 title: Performance.onresourcetimingbufferfull
 slug: conflicting/Web/API/Performance/resourcetimingbufferfull_event
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - ウェブパフォーマンス
-translation_of: Web/API/Performance/onresourcetimingbufferfull
 original_slug: Web/API/Performance/onresourcetimingbufferfull
-browser-compat: api.Performance.onresourcetimingbufferfull
 ---
 {{APIRef("Resource Timing API")}}
 

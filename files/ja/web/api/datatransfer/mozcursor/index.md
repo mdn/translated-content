@@ -1,14 +1,6 @@
 ---
 title: DataTransfer.mozCursor
 slug: Web/API/DataTransfer/mozCursor
-page-type: web-api-instance-property
-tags:
-  - API
-  - Non-standard
-  - Property
-  - Reference
-  - drag and drop
-browser-compat: api.DataTransfer.mozCursor
 ---
 {{APIRef("HTML Drag and Drop API")}}
 

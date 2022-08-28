@@ -1,7 +1,6 @@
 ---
-title: <mmultiscripts>
+title: "<mmultiscripts>"
 slug: Web/MathML/Element/mmultiscripts
-translation_of: Web/MathML/Element/mmultiscripts
 ---
 {{MathMLRef}}
 

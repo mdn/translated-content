@@ -1,12 +1,6 @@
 ---
 title: 414 URI Too Long
 slug: Web/HTTP/Status/414
-tags:
-  - HTTP
-  - Reference
-  - クライアントエラー
-  - ステータスコード
-translation_of: Web/HTTP/Status/414
 ---
 {{HTTPSidebar}}
 

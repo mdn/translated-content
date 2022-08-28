@@ -1,15 +1,6 @@
 ---
 title: DataTransfer.getData()
 slug: Web/API/DataTransfer/getData
-page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - drag and drop
-browser-compat: api.DataTransfer.getData
-translation_of: Web/API/DataTransfer/getData
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,14 +1,6 @@
 ---
 title: console.info()
 slug: Web/API/console/info
-tags:
-  - API
-  - デバッグ
-  - メソッド
-  - ウェブ開発
-  - ウェブコンソール
-browser-compat: api.console.info
-translation_of: Web/API/Console/info
 ---
 {{APIRef("Console API")}}
 

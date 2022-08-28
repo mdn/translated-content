@@ -1,18 +1,6 @@
 ---
-title: '-moz-context-properties'
+title: "-moz-context-properties"
 slug: Web/CSS/-moz-context-properties
-tags:
-  - '-moz-context-properties'
-  - CSS
-  - CSS プロパティ
-  - CSS:Mozilla 拡張
-  - Experimental
-  - Needs Privileges
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.-moz-context-properties
-translation_of: Web/CSS/-moz-context-properties
 ---
 {{CSSRef}}{{Non-standard_header}}
 

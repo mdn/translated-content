@@ -1,14 +1,6 @@
 ---
 title: Navigator.connection
 slug: Web/API/Navigator/connection
-tags:
-  - API
-  - Experimental
-  - Navigator
-  - Network Information API
-  - Property
-  - Reference
-translation_of: Web/API/Navigator/connection
 ---
 {{APIRef("Network Information API")}}{{SeeCompatTable}}
 

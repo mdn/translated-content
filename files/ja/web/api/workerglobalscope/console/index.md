@@ -1,14 +1,6 @@
 ---
 title: WorkerGlobalScope.console
 slug: Web/API/WorkerGlobalScope/console
-tags:
-  - API
-  - ウェブワーカー
-  - リファレンス
-  - リファレンス(2)
-  - ワーカーグローバルスコープ
-  - 読み込み専用
-translation_of: Web/API/WorkerGlobalScope/console
 ---
 {{APIRef("Web Workers API")}}{{Non-standard_header}}
 

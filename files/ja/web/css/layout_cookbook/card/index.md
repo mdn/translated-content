@@ -1,14 +1,6 @@
 ---
 title: カード
 slug: Web/CSS/Layout_cookbook/Card
-tags:
-  - CSS
-  - CSS 料理帳
-  - CSS グリッド
-  - ガイド
-  - カード
-  - css レイアウト
-translation_of: Web/CSS/Layout_cookbook/Card
 ---
 {{CSSRef}}
 

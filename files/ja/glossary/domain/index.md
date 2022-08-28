@@ -1,13 +1,6 @@
 ---
 title: Domain (ドメイン)
 slug: Glossary/Domain
-tags:
-  - Browser
-  - Domain
-  - Glossary
-  - Infrastructure
-  - Networking
-translation_of: Glossary/Domain
 ---
 ドメインとは、インターネット上の独自のリソースを識別し管理する機関のことです。 "ドメイン名"は、{{Glossary("URL")}}の階層の一部として使用します。たいていはブランド名のような最も記憶に残る部分です。
 

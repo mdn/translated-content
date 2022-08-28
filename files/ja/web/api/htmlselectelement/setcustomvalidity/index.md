@@ -1,15 +1,6 @@
 ---
 title: HTMLSelectElement.setCustomValidity()
 slug: Web/API/HTMLSelectElement/setCustomValidity
-tags:
-  - API
-  - Constrain Validation API
-  - HTML DOM
-  - HTMLSelectElement
-  - メソッド
-  - リファレンス
-browser-compat: api.HTMLSelectElement.setCustomValidity
-translation_of: Web/API/HTMLSelectElement/setCustomValidity
 ---
 {{ APIRef("HTML DOM") }}
 

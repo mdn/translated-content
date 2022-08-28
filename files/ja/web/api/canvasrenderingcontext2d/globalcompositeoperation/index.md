@@ -1,16 +1,6 @@
 ---
 title: CanvasRenderingContext2D.globalCompositeOperation
 slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
-tags:
-  - API
-  - 混色
-  - Canvas
-  - CanvasRenderingContext2D
-  - Compositing
-  - プロパティ
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.globalCompositeOperation
-translation_of: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 ---
 {{APIRef}}
 

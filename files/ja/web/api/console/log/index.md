@@ -1,19 +1,6 @@
 ---
 title: console.log()
 slug: Web/API/console/log
-tags:
-  - API
-  - DOM
-  - デバッグ
-  - HTML ツリー
-  - メソッド
-  - リファレンス
-  - ウェブ開発
-  - console.log()
-  - difference
-  - ウェブコンソール
-browser-compat: api.console.log
-translation_of: Web/API/console/log
 ---
 {{APIRef("Console API")}}
 

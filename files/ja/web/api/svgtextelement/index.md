@@ -1,7 +1,6 @@
 ---
 title: SVGTextElement
 slug: Web/API/SVGTextElement
-translation_of: Web/API/SVGTextElement
 ---
 ## SVGTextElement インタフェース
 

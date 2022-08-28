@@ -1,17 +1,6 @@
 ---
 title: ServiceWorkerContainer.oncontrollerchange
 slug: Web/API/ServiceWorkerContainer/controllerchange_event
-tags:
-  - API
-  - Interface
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - ServiceWorkerContainer
-  - onchange
-  - oncontrollerchange
-translation_of: Web/API/ServiceWorkerContainer/oncontrollerchange
 original_slug: Web/API/ServiceWorkerContainer/oncontrollerchange
 ---
 {{APIRef("Service Workers API")}}{{ SeeCompatTable() }}

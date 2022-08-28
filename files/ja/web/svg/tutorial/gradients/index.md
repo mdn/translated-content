@@ -1,11 +1,6 @@
 ---
 title: SVG におけるグラデーション
 slug: Web/SVG/Tutorial/Gradients
-tags:
-  - Intermediate
-  - SVG
-  - SVG:Tutorial
-translation_of: Web/SVG/Tutorial/Gradients
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Fills_and_Strokes", "Web/SVG/Tutorial/Patterns") }}
 

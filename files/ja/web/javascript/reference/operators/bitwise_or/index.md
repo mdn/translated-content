@@ -1,14 +1,6 @@
 ---
 title: ビット論理和 (|)
 slug: Web/JavaScript/Reference/Operators/Bitwise_OR
-tags:
-  - ビット演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.bitwise_or
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_OR
 ---
 {{jsSidebar("Operators")}}
 

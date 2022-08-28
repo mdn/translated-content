@@ -1,16 +1,6 @@
 ---
 title: Clear-Site-Data
 slug: Web/HTTP/Headers/Clear-Site-Data
-tags:
-  - HTTP
-  - HTTP Header
-  - HTTP ヘッダー
-  - Reference
-  - Response Header
-  - ヘッダー
-  - リファレンス
-  - レスポンスヘッダー
-translation_of: Web/HTTP/Headers/Clear-Site-Data
 ---
 {{HTTPSidebar}}
 

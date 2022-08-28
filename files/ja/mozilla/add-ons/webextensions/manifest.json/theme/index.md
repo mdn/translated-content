@@ -1,10 +1,6 @@
 ---
 title: theme
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme
-tags:
-  - Add-ons
-  - Themes
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/theme
 ---
 {{AddonSidebar}}
 

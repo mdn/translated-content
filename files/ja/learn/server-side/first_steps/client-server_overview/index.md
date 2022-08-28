@@ -1,15 +1,6 @@
 ---
 title: クライアント - サーバの概要
 slug: Learn/Server-side/First_steps/Client-Server_overview
-tags:
-  - Beginner
-  - CodingScripting
-  - イントロダクション
-  - ガイド
-  - サーバ
-  - サーバサイドプログラミング
-  - 学習
-translation_of: Learn/Server-side/First_steps/Client-Server_overview
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 

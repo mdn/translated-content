@@ -1,12 +1,6 @@
 ---
 title: NDEFReadingEvent
 slug: Web/API/NDEFReadingEvent
-tags:
-  - NDEF
-  - リファレンス
-  - Web NFC
-browser-compat: api.NDEFReadingEvent
-translation_of: Web/API/NDEFReadingEvent
 ---
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 

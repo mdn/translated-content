@@ -1,10 +1,6 @@
 ---
 title: その他のリソース
 slug: Web/SVG/Other_Resources
-tags:
-  - Reference
-  - SVG
-translation_of: Web/SVG/Other_Resources
 ---
 こちらは SVG の追加リソースの一覧です。
 

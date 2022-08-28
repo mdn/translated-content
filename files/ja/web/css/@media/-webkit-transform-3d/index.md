@@ -1,18 +1,6 @@
 ---
-title: '-webkit-transform-3d'
+title: "-webkit-transform-3d"
 slug: Web/CSS/@media/-webkit-transform-3d
-tags:
-  - '-webkit-transform-3d'
-  - 3D
-  - '@media'
-  - CSS
-  - 標準外
-  - リファレンス
-  - WebKit
-  - メディア特性
-  - transform
-browser-compat: css.at-rules.media.-webkit-transform-3d
-translation_of: Web/CSS/@media/-webkit-transform-3d
 ---
 {{ Non-standard_header }}
 

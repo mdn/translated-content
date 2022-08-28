@@ -1,23 +1,6 @@
 ---
 title: アクセシビリティとは？
 slug: Learn/Accessibility/What_is_accessibility
-tags:
-  - AT
-  - Accessibility
-  - Article
-  - Beginner
-  - CSS
-  - CodingScripting
-  - HTML
-  - JavaScript
-  - Learn
-  - Tools
-  - Users
-  - assistive technology
-  - keyboard
-  - screan reader
-  - screenreader
-translation_of: Learn/Accessibility/What_is_accessibility
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
 

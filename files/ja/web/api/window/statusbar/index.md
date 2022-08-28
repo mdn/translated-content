@@ -1,15 +1,6 @@
 ---
 title: Window.statusbar
 slug: Web/API/Window/statusbar
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/Window/statusbar
 ---
 {{APIRef}}
 

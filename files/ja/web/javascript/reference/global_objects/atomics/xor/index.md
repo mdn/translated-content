@@ -1,13 +1,6 @@
 ---
 title: Atomics.xor()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/xor
-tags:
-  - Atomics
-  - JavaScript
-  - メソッド
-  - 共有メモリー
-browser-compat: javascript.builtins.Atomics.xor
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/xor
 ---
 {{JSRef}}
 
