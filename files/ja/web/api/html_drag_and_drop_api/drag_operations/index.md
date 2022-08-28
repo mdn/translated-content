@@ -1,14 +1,6 @@
 ---
 title: ドラッグ操作
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
-tags:
-  - Advanced
-  - Guide
-  - HTML
-  - HTML5
-  - drag and drop
-  - ドラッグ＆ドロップ
-translation_of: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 original_slug: DragDrop/Drag_Operations
 ---
 {{DefaultAPISidebar("HTML Drag and Drop API")}}

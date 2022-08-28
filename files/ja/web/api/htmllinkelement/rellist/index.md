@@ -1,16 +1,6 @@
 ---
 title: HTMLLinkElement.relList
 slug: Web/API/HTMLLinkElement/relList
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLLinkElement
-  - プロパティ
-  - Read-only
-  - リファレンス
-browser-compat: api.HTMLLinkElement.relList
-translation_of: Web/API/HTMLLinkElement/relList
 ---
 {{ APIRef("HTML DOM") }}
 

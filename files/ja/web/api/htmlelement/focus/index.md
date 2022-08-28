@@ -1,18 +1,6 @@
 ---
 title: HTMLElement.focus()
 slug: Web/API/HTMLElement/focus
-tags:
-  - API
-  - Focus
-  - HTML DOM
-  - HTMLElement
-  - メソッド
-  - リファレンス
-  - スクロール
-  - ビュー
-  - activate
-browser-compat: api.HTMLElement.focus
-translation_of: Web/API/HTMLElement/focus
 original_slug: Web/API/HTMLElement/focus
 ---
 {{ APIRef("HTML DOM") }}

@@ -1,16 +1,6 @@
 ---
 title: HTMLInputElement.multiple
 slug: Web/API/HTMLInputElement/multiple
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLInputElement.multiple
-translation_of: Web/API/HTMLInputElement/multiple
 ---
 {{ APIRef("HTML DOM") }}
 

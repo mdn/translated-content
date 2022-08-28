@@ -1,14 +1,6 @@
 ---
 title: HTMLAnchorElement.port
 slug: Web/API/HTMLAnchorElement/port
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAnchorElement.port
-translation_of: Web/API/HTMLAnchorElement/port
 original_slug: Web/API/HTMLHyperlinkElementUtils/port
 ---
 {{ApiRef("HTML DOM")}}

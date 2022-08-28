@@ -1,15 +1,6 @@
 ---
 title: HTMLElement.lang
 slug: Web/API/HTMLElement/lang
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - NeedsUpdate
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLElement.lang
-translation_of: Web/API/HTMLElement/lang
 ---
 {{ APIRef("HTML DOM") }}
 

@@ -1,17 +1,6 @@
 ---
 title: HTMLElement.hidden
 slug: Web/API/HTMLElement/hidden
-tags:
-  - API
-  - 属性
-  - 要素
-  - HTML
-  - HTML 要素
-  - プロパティ
-  - リファレンス
-  - hidden
-browser-compat: api.HTMLElement.hidden
-translation_of: Web/API/HTMLElement/hidden
 ---
 {{ APIRef("HTML DOM") }}
 

@@ -1,10 +1,6 @@
 ---
 title: 推奨されるドラッグのデータ型
 slug: Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
-tags:
-  - Guide
-  - drag and drop
-translation_of: Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
 original_slug: DragDrop/Recommended_Drag_Types
 ---
 {{DefaultAPISidebar("HTML Drag and Drop API")}}

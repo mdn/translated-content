@@ -1,13 +1,6 @@
 ---
 title: HTMLAudioElement
 slug: Web/API/HTMLAudioElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLAudioElement
-  - Interface
-  - Reference
-translation_of: Web/API/HTMLAudioElement
 ---
 **`HTMLAudioElement`** インターフェイスは {{HTMLElement("audio")}} 要素のプロパティと、操作するメソッドを提供します。 {{domxref("HTMLMediaElement")}} インターフェイスから派生しています。
 

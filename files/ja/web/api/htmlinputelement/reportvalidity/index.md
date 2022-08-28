@@ -1,17 +1,6 @@
 ---
 title: HTMLInputElement.reportValidity()
 slug: Web/API/HTMLInputElement/reportValidity
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - メソッド
-  - NeedsExample
-  - リファレンス
-  - reportValidity
-  - reportValidity()
-browser-compat: api.HTMLInputElement.reportValidity
-translation_of: Web/API/HTMLInputElement/reportValidity
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,14 +1,6 @@
 ---
 title: 'HTMLFormElement: reset イベント'
 slug: Web/API/HTMLFormElement/reset_event
-tags:
-  - API
-  - Event
-  - Forms
-  - HTML DOM
-  - HTMLFormElement
-  - Reference
-translation_of: Web/API/HTMLFormElement/reset_event
 ---
 {{APIRef}}
 
