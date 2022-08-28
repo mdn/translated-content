@@ -12,7 +12,7 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-Now let's move on to adding functionality to allow users to filter their to-do items, so they can view active, completed, or all items.
+次に、ユーザーが To Do アイテムをフィルタリングできるようにする機能を追加して、アクティブなアイテム、完了したアイテム、またはすべてのアイテムを表示できるようにしましょう。
 
 <table>
   <tbody>
