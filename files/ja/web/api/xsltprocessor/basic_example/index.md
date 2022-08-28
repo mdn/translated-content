@@ -1,9 +1,6 @@
 ---
 title: XSLT の基本的な例
 slug: Web/API/XSLTProcessor/Basic_Example
-tags:
-  - XSLT
-translation_of: Web/API/XSLTProcessor/Basic_Example
 ---
 ## 基本的な例
 

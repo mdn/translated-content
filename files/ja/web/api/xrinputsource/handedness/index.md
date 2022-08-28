@@ -1,26 +1,6 @@
 ---
 title: XRInputSource.handedness
 slug: Web/API/XRInputSource/handedness
-tags:
-  - API
-  - AR
-  - Controller
-  - Handedness
-  - Input
-  - Property
-  - Read-only
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSource
-  - hand
-  - left
-  - right
-browser-compat: api.XRInputSource.handedness
-translation_of: Web/API/XRInputSource/handedness
 ---
 {{APIRef("WebXR Device API")}}
 
