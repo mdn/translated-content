@@ -1,9 +1,6 @@
 ---
 title: JavaScript API 群
 slug: Mozilla/Add-ons/WebExtensions/API
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API
 ---
 {{AddonSidebar}}
 

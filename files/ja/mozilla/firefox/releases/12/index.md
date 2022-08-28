@@ -1,12 +1,6 @@
 ---
 title: Firefox 12 for developers
 slug: Mozilla/Firefox/Releases/12
-tags:
-  - Firefox
-  - Firefox 12
-  - Gecko 12
-  - Web Development
-translation_of: Mozilla/Firefox/Releases/12
 ---
 Firefox 12 は 米国時間 2012 年 4 月 24 日にリリースされました。この記事は開発者に影響がある Firefox 12 での変更点をまとめています。
 

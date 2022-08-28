@@ -1,7 +1,6 @@
 ---
 title: browserAction.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked
 ---
 {{AddonSidebar()}}
 

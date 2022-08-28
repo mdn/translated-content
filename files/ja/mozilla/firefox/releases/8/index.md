@@ -1,11 +1,6 @@
 ---
 title: Firefox 8 for developers
 slug: Mozilla/Firefox/Releases/8
-tags:
-  - Firefox
-  - Firefox 8
-  - Gecko 8
-translation_of: Mozilla/Firefox/Releases/8
 ---
 Firefox 8 は 2011 年 11 月 8 日にリリースされました。このページでは、開発者に影響する Firefox 8 の変更点をまとめています。
 

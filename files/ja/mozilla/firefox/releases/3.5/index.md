@@ -1,17 +1,6 @@
 ---
 title: Firefox 3.5 開発者向け情報
 slug: Mozilla/Firefox/Releases/3.5
-tags:
-  - CSS
-  - Firefox
-  - Firefox 3.5
-  - Gecko
-  - Gecko 1.9.1
-  - HTML
-  - JavaScript
-  - Storage
-  - XUL
-translation_of: Mozilla/Firefox/Releases/3.5
 ---
 {{FirefoxSidebar}}
 

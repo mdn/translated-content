@@ -1,17 +1,6 @@
 ---
 title: tabs
 slug: Mozilla/Add-ons/WebExtensions/API/tabs
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - tabs
-  - タブ
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 ---
 {{AddonSidebar}}
 

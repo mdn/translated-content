@@ -1,9 +1,6 @@
 ---
 title: ウェブページを変更する
 slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 ---
 {{AddonSidebar}}
 

@@ -1,9 +1,6 @@
 ---
 title: マッチパターン
 slug: Mozilla/Add-ons/WebExtensions/Match_patterns
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
 ---
 {{AddonSidebar}}
 

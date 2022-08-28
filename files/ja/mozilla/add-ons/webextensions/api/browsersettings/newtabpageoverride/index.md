@@ -1,7 +1,6 @@
 ---
 title: browserSettings.newTabPageOverride
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride
 ---
 {{AddonSidebar()}}
 

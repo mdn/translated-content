@@ -1,10 +1,6 @@
 ---
 title: Chrome との非互換性
 slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
-tags:
-  - WebExtensions
-  - 初心者向け
-translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 ---
 {{AddonSidebar}}
 

@@ -1,10 +1,6 @@
 ---
 title: ネイティブマニフェスト
 slug: Mozilla/Add-ons/WebExtensions/Native_manifests
-tags:
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
 ---
 {{AddonSidebar}}
 

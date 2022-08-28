@@ -1,11 +1,6 @@
 ---
 title: Firefox 53 for developers
 slug: Mozilla/Firefox/Releases/53
-tags:
-  - Firefox
-  - Mozilla
-  - Release Notes
-translation_of: Mozilla/Firefox/Releases/53
 ---
 Firefox 53 は、米国時間 2017 年 4 月 19 日にリリースされました。このページでは、開発者に影響する Firefox 53 の変更点をまとめています。
 

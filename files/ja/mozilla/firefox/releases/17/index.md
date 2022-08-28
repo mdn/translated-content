@@ -1,9 +1,6 @@
 ---
 title: Firefox 17 for developers
 slug: Mozilla/Firefox/Releases/17
-tags:
-  - Firefox
-translation_of: Mozilla/Firefox/Releases/17
 ---
 Gecko 17 を搭載した Firefox 17 は米国時間 2012 年 11 月 20 日にリリースされました。このページでは、開発者に影響する Firefox 17 の変更点をまとめています。
 
