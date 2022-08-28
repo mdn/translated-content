@@ -1,16 +1,6 @@
 ---
 title: ServiceWorkerGlobalScope.onactivate
 slug: Web/API/ServiceWorkerGlobalScope/onactivate
-tags:
-  - API
-  - Property
-  - Reference
-  - Service
-  - ServiceWorker
-  - ServiceWorkerGlovalScope
-  - Worker
-  - onactivate
-translation_of: Web/API/ServiceWorkerGlobalScope/onactivate
 ---
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 

@@ -1,16 +1,6 @@
 ---
 title: Using the Resource Timing API
 slug: Web/API/Resource_Timing_API/Using_the_Resource_Timing_API
-tags:
-  - API
-  - Web
-  - Web パフォーマンス
-  - Web 開発
-  - タイミング
-  - パフォーマンス
-  - リソースタイミング
-  - リソースタイミング API
-translation_of: Web/API/Resource_Timing_API/Using_the_Resource_Timing_API
 ---
 {{DefaultAPISidebar("Resource Timing API")}}
 

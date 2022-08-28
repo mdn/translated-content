@@ -1,18 +1,6 @@
 ---
 title: SourceBuffer.remove()
 slug: Web/API/SourceBuffer/remove
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - Method
-  - Reference
-  - SourceBuffer
-  - Video
-  - remove
-translation_of: Web/API/SourceBuffer/remove
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 

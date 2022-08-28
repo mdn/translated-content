@@ -1,15 +1,6 @@
 ---
 title: ServiceWorkerGlobalScope.onfetch
 slug: Web/API/ServiceWorkerGlobalScope/onfetch
-tags:
-  - API
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - ServiceWorkerGlobalScope
-  - onfetch
-translation_of: Web/API/ServiceWorkerGlobalScope/onfetch
 ---
 {{APIRef("Service Workers API")}}
 

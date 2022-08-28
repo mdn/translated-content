@@ -1,14 +1,6 @@
 ---
 title: ReadableStream.tee()
 slug: Web/API/ReadableStream/tee
-tags:
-  - API
-  - Method
-  - ReadableStream
-  - Reference
-  - Streams
-  - tee
-translation_of: Web/API/ReadableStream/tee
 ---
 {{APIRef("Streams")}}
 

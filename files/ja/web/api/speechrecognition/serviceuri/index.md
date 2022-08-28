@@ -1,17 +1,6 @@
 ---
 title: SpeechRecognition.serviceURI
 slug: Web/API/SpeechRecognition/serviceURI
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - recognition
-  - serviceURI
-  - speech
-translation_of: Web/API/SpeechRecognition/serviceURI
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 

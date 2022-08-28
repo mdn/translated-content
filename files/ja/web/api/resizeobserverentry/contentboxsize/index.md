@@ -1,16 +1,6 @@
 ---
 title: ResizeObserverEntry.contentBoxSize
 slug: Web/API/ResizeObserverEntry/contentBoxSize
-page-type: web-api-instance-property
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - リサイズオブザーバー API
-  - ResizeObserverEntry
-  - contentBoxSize
-browser-compat: api.ResizeObserverEntry.contentBoxSize
-translation_of: Web/API/ResizeObserverEntry/contentBoxSize
 ---
 {{APIRef("Resize Observer API")}}
 
