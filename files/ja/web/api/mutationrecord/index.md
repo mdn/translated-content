@@ -1,14 +1,6 @@
 ---
 title: MutationRecord
 slug: Web/API/MutationRecord
-tags:
-  - API
-  - Advanced
-  - DOM
-  - DOM Reference
-  - NeedsContent
-  - Reference
-translation_of: Web/API/MutationRecord
 ---
 {{APIRef("DOM")}}
 

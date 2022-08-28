@@ -1,15 +1,6 @@
 ---
 title: MediaRecorder.stop()
 slug: Web/API/MediaRecorder/stop
-tags:
-  - API
-  - Media Capture
-  - Media Recorder API
-  - MediaRecorder
-  - Method
-  - Reference
-  - stop
-translation_of: Web/API/MediaRecorder/stop
 ---
 {{APIRef("MediaStream Recording")}}
 

@@ -1,16 +1,6 @@
 ---
 title: IndexedDB の使用
 slug: Web/API/IndexedDB_API/Using_IndexedDB
-tags:
-  - API
-  - Advanced
-  - Database
-  - Guide
-  - IndexedDB
-  - Storage
-  - Tutorial
-  - jsstore
-translation_of: Web/API/IndexedDB_API/Using_IndexedDB
 ---
 {{DefaultAPISidebar("IndexedDB")}}
 
