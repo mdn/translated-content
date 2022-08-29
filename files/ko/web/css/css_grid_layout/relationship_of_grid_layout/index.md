@@ -452,6 +452,8 @@ color: #d9480f;
 
 만약에 아이템에 `display:` `contents`를 지정하면 보통 해당 요소가 만드는 박스는 사라지고, 자식 요소의 박스가 한 단계 상승한 것처럼 그 자리를 차지하게 됩니다. 이 얘기는 그리드 아이템의 자식 요소가 그리드 아이템이 될 수도 있다는 뜻입니다. 이상하게 들리시죠? 다음에 간단한 예를 들어보겠습니다. 아래 마크업에는 그리드가 있고, 이 그리드에 있는 첫 번째 아이템이 세 개의 열 트랙 모두를 가로지르도록 설정하였습니다. 또한, 이 아이템은 세 개의 중첩된 아이템들을 포함하고 있습니다. 이 아이템들은 컨테이너 바로 밑에 있는 자식 요소가 아니므로, 그리드 레이아웃의 일원으로 참여하지 않으면서 보통의 일반 블록 레이아웃으로 표시됩니다.
 
+### Grid layout with nested child elements
+
 ```css hidden
 * {box-sizing: border-box;}
 
@@ -502,7 +504,9 @@ color: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('Display_Contents_Before', '400', '420') }}
+{{ EmbedLiveSample('Grid_layout_with_nested_child_elements', '400', '440') }}
+
+### Using `display: contents`
 
 이제 `.box1`에 `display:` `contents`규칙을 추가하면, 해당 아이템이 차지하고 있는 박스가 사라지면서 하위 아이템들이 그리드 아이템 자격을 얻게 되어 자동 배치 규칙에 따라 알아서 배치됩니다.
 
@@ -557,7 +561,7 @@ color: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('Display_Contents_After', '400', '330') }}
+{{ EmbedLiveSample('Using_display_contents', '400', '350') }}
 
 이것은 중첩된 아이템을 그리드의 일부분인 것처럼 작용하게 하는 방법으로 사용될 수 있으며, 또한 서브 그리드가 구현된다면 해결될 수 있는 문제를 피해 가는 방법이 될 수도 있습니다. 물론, 플랙스박스에서도 비슷하게 `display:` `contents`를 이용해서 중첩된 아이템이 플랙스 아이템처럼 작용하도록 만들 수도 있습니다.
 
