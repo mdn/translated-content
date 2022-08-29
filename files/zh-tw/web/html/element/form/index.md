@@ -1,7 +1,6 @@
 ---
 title: <form>
 slug: Web/HTML/Element/form
-translation_of: Web/HTML/Element/form
 ---
 {{HTMLRef}}
 

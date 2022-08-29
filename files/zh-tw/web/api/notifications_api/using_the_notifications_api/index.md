@@ -1,7 +1,6 @@
 ---
 title: 使用 Web Notifications
 slug: Web/API/Notifications_API/Using_the_Notifications_API
-translation_of: Web/API/Notifications_API/Using_the_Notifications_API
 ---
 {{SeeCompatTable}}
 
@@ -213,7 +212,7 @@ window.addEventListener('load', function () {
 
 ## 瀏覽器相容性
 
-{{page("/en-US/Web/API/Notification","Browser compatibility")}}
+{{Compat}}
 
 ## 另可參閱
 

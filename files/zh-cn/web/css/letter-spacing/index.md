@@ -68,7 +68,7 @@ letter-spacing: unset;
 
 最佳的易辨认的字母间距（letter-spacing）必须根据具体情况来确定，因为不同的字体系列具有不同的字符宽度。没有任何一个值可以确保所有字体系列自动保持它们的可读性。
 
-## 可访问性考量
+## 无障碍考量
 
 A large positive or negative `letter-spacing` value will make the word(s) the styling is applied to unreadable. For text styled with a very large positive value, the letters will be so far apart that the word(s) will appear like a series of individual, unconnected letters. For text styled with a very large negative value, the letters will overlap each other to the point where the word(s) may be unrecognizable.
 

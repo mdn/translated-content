@@ -1,13 +1,6 @@
 ---
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
-tags:
-  - Array
-  - JavaScript
-  - NeedsTranslation
-  - TopicStub
-  - 陣列
-translation_of: Web/JavaScript/Reference/Global_Objects/Array
 ---
 {{JSRef}}
 

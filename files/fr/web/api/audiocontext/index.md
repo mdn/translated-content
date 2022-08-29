@@ -139,13 +139,11 @@ var finish = contexteAudio.destination;
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                               | Commentaire |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#AudioContext-section', 'AudioNode')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.AudioContext")}}
+{{Compat}}
 
 ## Voir aussi
 

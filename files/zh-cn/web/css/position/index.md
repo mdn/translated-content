@@ -113,7 +113,7 @@ HTML 内容
 }
 ```
 
-{{ EmbedLiveSample('Absolute_positioning', '', '', '', 'Web/CSS/position') }}
+{{ EmbedLiveSample('绝对定位') }}
 
 ### 固定定位
 
@@ -170,7 +170,7 @@ HTML 内容
 
 当浏览页面顶部时，定位元素处于左上角。在滚动后，它相对于 viewport 视口仍处于同一位置。
 
-{{ EmbedLiveSample('Fixed_positioning', '', '', '', 'Web/CSS/position') }}
+{{ EmbedLiveSample('固定定位') }}
 
 ### 粘性定位
 
@@ -258,7 +258,7 @@ dd + dd {
 }
 ```
 
-{{ EmbedLiveSample('Sticky_positioning', '', '', '', 'Web/CSS/position') }}
+{{ EmbedLiveSample('粘性定位') }}
 
 ## 规范
 

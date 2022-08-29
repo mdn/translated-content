@@ -1,15 +1,6 @@
 ---
 title: Element.localName
 slug: Web/API/Element/localName
-tags:
-- API
-- DOM
-- NeedsBrowserCompatibility
-- NeedsMobileBrowserCompatibility
-- プロパティ
-- リファレンス
-browser-compat: api.Element.localName
-translation_of: Web/API/Element/localName
 ---
 {{APIRef("DOM")}}
 

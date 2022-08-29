@@ -67,13 +67,11 @@ vous pouvez trouver un exemple de travail complet sur GitHub — voir [abort-api
 
 ## Spécifications
 
-| Spécification                                                                            | Status                           | Comment             |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG', '#interface-AbortSignal', 'AbortSignal')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.AbortSignal")}}
+{{Compat}}
 
 ## Voir aussi
 

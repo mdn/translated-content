@@ -1,15 +1,6 @@
 ---
 title: GeolocationCoordinates.heading
 slug: Web/API/GeolocationCoordinates/heading
-tags:
-  - API
-  - 位置情報 API
-  - GeolocationCoordinates
-  - プロパティ
-  - 安全なコンテキスト
-  - heading
-browser-compat: api.GeolocationCoordinates.heading
-translation_of: Web/API/GeolocationCoordinates/heading
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 

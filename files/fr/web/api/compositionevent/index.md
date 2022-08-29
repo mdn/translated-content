@@ -34,14 +34,11 @@ _Cette interface hérite également des méthodes de son parent, {{domxref("UIEv
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('UI Events', '#interface-compositionevent', 'CompositionEvent')}} | {{Spec2('UI Events')}}     |             |
-| {{SpecName('DOM3 Events', '#idl-compositionevent', 'CompositionEvent')}}     | {{Spec2('DOM3 Events')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CompositionEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

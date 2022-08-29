@@ -112,9 +112,9 @@ customElements.define('my-paragraph',
 
 这就我们普通的例子，你想更深入了解你可以 [在 GitHub 上查看](https://github.com/mdn/web-components-examples/tree/master/simple-template) (也可以看 [在线运行](https://mdn.github.io/web-components-examples/simple-template/))。
 
-## 更深入的例子
+## 更深入的示例
 
-为了更好的结束这篇文章，我们来个看一些不寻常的例子。
+为了更好的结束这篇文章，我们来个看一些不寻常的示例。
 
 下面的一组代码段展示了我们如何联合使用 `<slot>` 和 `<template>` 以及一些 JavaScript 去完成：
 
@@ -239,11 +239,11 @@ body { margin-top: 47px }
 
 最后，让我们所有的代码片段结合在一起，看看渲染的结果是什么样的。
 
-{{ EmbedLiveSample('结果', '300','400','https://mdn.mozillademos.org/files/14553/element-details.png','') }}
+{{ EmbedLiveSample('更深入的示例', '300','400','element-details.png','') }}
 
 关于结果请注意以下几点：
 
-- 即使 **`<element-details>` **标签并没有直接使用`"details"`标签元素，但是在渲染的时候使用了`"details"`标签，是因为 shadow root 使得他们被填充。
+- 即使 **`<element-details>`** 标签并没有直接使用`"details"`标签元素，但是在渲染的时候使用了`"details"`标签，是因为 shadow root 使得他们被填充。
 - 在渲染出来的`"details"`标签，**`<element-details>`** 标签从根开始填充了相应的命名的槽。换言之，**`<element-details>`** 的 DOM 树和 shadow root 的内容结合在了一起。
 - 对于这两个 **`<element-details>`** 标签，属性标题会自动的从 shadow root 中添加到名为`"attribute"`的插槽的前面。
 - 因为第一个 **`<element-details>`** 标签的`"dl"`元素就明确的引用了名为`"attributes"`的插槽，所以该`"dl"`元素的内容将会替换该标签中名为`"attributes"`的插槽。

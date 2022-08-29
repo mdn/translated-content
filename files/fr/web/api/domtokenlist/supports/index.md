@@ -44,10 +44,8 @@ if (iframe.sandbox.supports('allow-scripts')) {
 
 ## Spécifications
 
-| Spécification                                    | Statut                                       | Commentaire          |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMTokenList.supports")}}
+{{Compat}}

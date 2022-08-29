@@ -7,7 +7,6 @@ tags:
   - DOM
   - Method
   - Reference
-browser-compat: api.Document.releaseCapture
 translation_of: Web/API/Document/releaseCapture
 ---
 {{ApiRef("DOM")}}
@@ -39,7 +38,7 @@ releaseCapture()
 
 Internet Explorer の実装に基づく。
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat}}
 

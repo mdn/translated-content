@@ -1,12 +1,6 @@
 ---
 title: ARIA
 slug: Web/Accessibility/ARIA
-tags:
-  - ARIA
-  - Accessibility
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/Accessibility/ARIA
 ---
 Accessible Rich Internet Applications **(ARIA)** defines ways to make Web content and Web applications (especially those developed with Ajax and JavaScript) more accessible to people with disabilities. For example, ARIA enables accessible navigation landmarks, JavaScript widgets, form hints and error messages, live content updates, and more.
 

@@ -9,9 +9,11 @@ translation_of: Web/API/Element/scrollIntoView
 
 ## 문법
 
-    element.scrollIntoView();
-    element.scrollIntoView(alignToTop); // Boolean parameter
-    element.scrollIntoView(scrollIntoViewOptions); // Object parameter
+```js
+element.scrollIntoView();
+element.scrollIntoView(alignToTop); // Boolean parameter
+element.scrollIntoView(scrollIntoViewOptions); // Object parameter
+```
 
 - `alignToTop` {{optional_inline}}
 
@@ -44,12 +46,14 @@ translation_of: Web/API/Element/scrollIntoView
 
 ## 예제
 
-    var element = document.getElementById("box");
+```js
+var element = document.getElementById("box");
 
-    element.scrollIntoView();
-    element.scrollIntoView(false);
-    element.scrollIntoView({block: "end"});
-    element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+element.scrollIntoView();
+element.scrollIntoView(false);
+element.scrollIntoView({block: "end"});
+element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+```
 
 ## Notes
 
@@ -65,4 +69,4 @@ translation_of: Web/API/Element/scrollIntoView
 
 ## 더보기
 
-- {{domxref("Element.scrollIntoViewIfNeeded()")}}[ ](/ko/docs/Web/API/Element/scrollIntoViewIfNeeded){{non-standard_inline}}[](http://dev.w3.org/csswg/cssom-view/#dom-element-scrollintoview)
+- {{domxref("Element.scrollIntoViewIfNeeded()")}} {{non-standard_inline}}

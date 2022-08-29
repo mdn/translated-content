@@ -6,7 +6,7 @@ slug: Web/CSS/image-rendering
 
 [CSS](/zh-CN/docs/CSS) 属性 **`image-rendering`** 用于设置图像缩放算法。它适用于元素本身，适用于元素其他属性中的图像，也应用于子元素。
 
-The {{Glossary("user agent")}} will scale an image when the page author specifies dimensions other than its natural size. Scaling may also occur due to user interaction (zooming). 举个例子，如果有一张尺寸为 `100×100px` 的图片，但作者有意将尺寸设置为 `200×200px`（或`50×50px`），然后，图片便会根据 `image-rendering` 指定的算法，缩小或放大到新尺寸。此属性对于未缩放的图像没有影响。
+当页面作者指定的尺寸不是图像的原始尺寸时，{{Glossary("user agent", "用户代理")}}将缩放图像。缩放也可能由于用户互动（双指缩放）而发生。举个例子，如果有一张尺寸为 `100×100px` 的图片，但作者有意将尺寸设置为 `200×200px`（或`50×50px`），然后，图片便会根据 `image-rendering` 指定的算法，缩小或放大到新尺寸。此属性对于未缩放的图像没有影响。
 
 > **备注：** The [Canvas API](/zh-CN/docs/Web/API/Canvas_API) can provide a [fallback solution for `crisp-edges`](http://phrogz.net/tmp/canvas_image_zoom.html) through manual image data manipulation.
 
@@ -31,13 +31,13 @@ image-rendering: unset;
 - `smooth` {{Experimental_Inline}}
   - : 应使用能最大化图像客观观感的算法来缩放图像。特别地，会“平滑”颜色的缩放算法是可以接受的，例如双线性插值。这适用于照片等类型的图像。
 - `high-quality` {{Experimental_Inline}}
-  - : Identical to `smooth`, but with a preference for higher-quality scaling. If system resources are constrained, images with `high-quality` should be prioritized over those with any other value, when considering which images to degrade the quality of and to what degree.
+  - : 与 `smooth` 相同，但更倾向于高质量的缩放。如果系统资源受到限制，在考虑降低哪些图像的质量以及降低到什么程度时，`high-quality` 的图像应该优先于任何其他值的图像。
 - `crisp-edges`
   - : 必须使用可有效保留对比度和图像中的边缘的算法来对图像进行缩放，并且，该算法既不会平滑颜色，又不会在处理过程中为图像引入模糊。合适的算法包括*最近邻居*（_nearest-neighbor_）算法和其他非平滑缩放算法，比如 _2×SaI_ 和 _hqx-\*_ 系列算法。此属性值适用于像素艺术作品，例如一些网页游戏中的图像。
 - `pixelated`
   - : 放大图像时，使用最近邻居算法，因此，图像看着像是由大块像素组成的。缩小图像时，算法与 `auto` 相同。
 
-> **备注：** The values `optimizeQuality` and `optimizeSpeed` present in an early draft (and coming from its SVG counterpart) are defined as synonyms for the `smooth` and `pixelated` values respectively.
+> **备注：** 早期草案中出现的 `optimizationQuality` 和 `optimizationSpeed` （来自SVG的对应值）分别被定义为 `smooth` 和 `pixelated`。
 
 ### 形式化语法
 

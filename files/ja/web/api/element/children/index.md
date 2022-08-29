@@ -1,15 +1,6 @@
 ---
 title: Element.children
 slug: Web/API/Element/children
-tags:
-  - API
-  - DOM
-  - Element
-  - HTMLCollection
-  - プロパティ
-  - children
-browser-compat: api.Element.children
-translation_of: Web/API/Element/children
 original_slug: Web/API/ParentNode/children
 ---
 {{ APIRef("DOM") }}

@@ -1,14 +1,6 @@
 ---
 title: HTTP caching
 slug: Web/HTTP/Caching
-tags:
-  - Caching
-  - 快取
-  - Guide
-  - 指引
-  - HTTP
-  - 超文本傳輸協定
-translation_of: Web/HTTP/Caching
 ---
 {{HTTPSidebar}}
 

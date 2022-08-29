@@ -1,7 +1,6 @@
 ---
 title: 閉包
 slug: Web/JavaScript/Closures
-translation_of: Web/JavaScript/Closures
 ---
 {{jsSidebar("Intermediate")}}
 

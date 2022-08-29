@@ -1,14 +1,6 @@
 ---
 title: 画面起動ロック API
 slug: Web/API/Screen_Wake_Lock_API
-tags:
-  - API
-  - 概要
-  - リファレンス
-  - 画面起動ロック API
-  - Wake Lock
-  - WakeLock
-  - screen
 ---
 {{DefaultAPISidebar("Screen Wake Lock API")}}
 

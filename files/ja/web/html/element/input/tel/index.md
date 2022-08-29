@@ -13,7 +13,6 @@ tags:
   - 入力型
   - Phone Numbers
   - リファレンス
-browser-compat: html.elements.input.input-tel
 translation_of: Web/HTML/Element/input/tel
 ---
 

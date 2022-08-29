@@ -91,7 +91,7 @@ flex-grow: unset;
 
 #### 结果
 
-{{EmbedLiveSample('Setting_flex_item_grow_factor', '700px', '300px', '', 'Web/CSS/flex-grow')}}
+{{EmbedLiveSample('设置 flex 项目增长因子', '700px', '300px')}}
 
 ## 规范
 

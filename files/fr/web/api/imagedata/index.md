@@ -29,13 +29,11 @@ L'interface **`ImageData`** représente les données des pixels au sein d'une ce
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "the-canvas-element.html#imagedata", "ImageData")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ImageData")}}
+{{Compat}}
 
 ## Voir aussi
 

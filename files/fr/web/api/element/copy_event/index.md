@@ -51,13 +51,11 @@ L'action par défaut de l'événement dépend de la source de celui-ci et du com
 
 ## Spécifications
 
-| Spécification                                                            | Statut                               |
-| ------------------------------------------------------------------------ | ------------------------------------ |
-| {{SpecName('Clipboard API', '#clipboard-event-copy')}} | {{Spec2('Clipboard API')}} |
+{{Specifications}}
 
-## Compatibilités navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.Element.copy_event")}}
+{{Compat}}
 
 ## Voir aussi
 

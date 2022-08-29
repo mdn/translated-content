@@ -51,13 +51,11 @@ valeur2
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                               | Commentaire          |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata','values() (as iterator&lt;&gt;)')}} | {{Spec2('XMLHttpRequest')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FormData.values")}}
+{{Compat}}
 
 ## Voir aussi
 

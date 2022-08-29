@@ -48,13 +48,11 @@ bouton.onclick = function() {
 
 ## Spécifications
 
-| Specification                                                                                        | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', "comms.html#dom-eventsource-close", "close()")}} | {{Spec2('HTML WHATWG')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.EventSource.close")}}
+{{Compat}}
 
 ## Voir aussi
 

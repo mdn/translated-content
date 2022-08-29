@@ -175,7 +175,7 @@
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/Object	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/RegExp	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/RegExp/lastIndex	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
-/zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/RegExp/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString
+/zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/RegExp/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Properties	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Properties/NaN	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Statements	/zh-CN/docs/Web/JavaScript/Reference/Statements
@@ -536,7 +536,7 @@
 /zh-CN/docs/Glossary/Header	/zh-CN/docs/Glossary/HTTP_header
 /zh-CN/docs/Glossary/IP地址	/zh-CN/docs/Glossary/IP_Address
 /zh-CN/docs/Glossary/Serialize	/zh-CN/docs/Glossary/Serialization
-/zh-CN/docs/Glossary/Symbol	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol
+/zh-CN/docs/Glossary/Symbol	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /zh-CN/docs/Glossary/主轴	/zh-CN/docs/Glossary/Main_Axis
 /zh-CN/docs/Glossary/交叉轴	/zh-CN/docs/Glossary/Cross_Axis
 /zh-CN/docs/Glossary/代理服务器	/zh-CN/docs/Glossary/Proxy_server
@@ -721,7 +721,7 @@
 /zh-CN/docs/JS-ref/Global_Objects/Object/proto	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto
 /zh-CN/docs/JS-ref/Global_Objects/Object/seal	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/seal
 /zh-CN/docs/JS-ref/Global_Objects/Object/setPrototypeOf	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
-/zh-CN/docs/JS-ref/Global_Objects/Object/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
+/zh-CN/docs/JS-ref/Global_Objects/Object/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
 /zh-CN/docs/JS-ref/Global_Objects/Object/toString	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
 /zh-CN/docs/JS-ref/Global_Objects/Object/valueOf	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf
 /zh-CN/docs/JS-ref/Global_Objects/Proxy	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy
@@ -743,7 +743,7 @@
 /zh-CN/docs/JS-ref/RegExp	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /zh-CN/docs/JS-ref/RegExp/exec	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec
 /zh-CN/docs/JS-ref/RegExp/lastIndex	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
-/zh-CN/docs/JS-ref/RegExp/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString
+/zh-CN/docs/JS-ref/RegExp/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /zh-CN/docs/JS-ref/Spread_operator	/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /zh-CN/docs/JS-ref/Statements	/zh-CN/docs/Web/JavaScript/Reference/Statements
 /zh-CN/docs/JS-ref/Statements/const	/zh-CN/docs/Web/JavaScript/Reference/Statements/const
@@ -946,14 +946,14 @@
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Object/proto	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Object/seal	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/seal
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Object/setPrototypeOf	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
-/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
+/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Object/toString	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Object/valueOf	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Proxy	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy
 /zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/exec	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec
 /zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/lastIndex	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
-/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString
+/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Set	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set
 /zh-CN/docs/JavaScript/Reference/Global_Objects/String	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
 /zh-CN/docs/JavaScript/Reference/Global_Objects/String/Trim	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
@@ -988,7 +988,7 @@
 /zh-CN/docs/JavaScript/Reference/RegExp	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /zh-CN/docs/JavaScript/Reference/RegExp/exec	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec
 /zh-CN/docs/JavaScript/Reference/RegExp/lastIndex	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
-/zh-CN/docs/JavaScript/Reference/RegExp/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString
+/zh-CN/docs/JavaScript/Reference/RegExp/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /zh-CN/docs/JavaScript/Reference/Spread_operator	/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /zh-CN/docs/JavaScript/Reference/Statements	/zh-CN/docs/Web/JavaScript/Reference/Statements
 /zh-CN/docs/JavaScript/Reference/Statements/const	/zh-CN/docs/Web/JavaScript/Reference/Statements/const
@@ -1487,7 +1487,7 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers/oncanplay	/zh-CN/docs/Web/API/HTMLMediaElement/canplay_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/oncanplaythrough	/zh-CN/docs/Web/API/HTMLMediaElement/canplaythrough_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onchange	/zh-CN/docs/Web/API/HTMLElement/change_event
-/zh-CN/docs/Web/API/GlobalEventHandlers/onclick	/zh-CN/docs/conflicting/Web/API/Element/click_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onclick	/zh-CN/docs/Web/API/Element/click_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onclose	/zh-CN/docs/Web/API/HTMLDialogElement/close_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/oncontextmenu	/zh-CN/docs/Web/API/Element/contextmenu_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/oncuechange	/zh-CN/docs/Web/API/TextTrack/cuechange_event
@@ -1586,7 +1586,7 @@
 /zh-CN/docs/Web/API/IDBDatabase/onversionchange	/zh-CN/docs/Web/API/IDBDatabase/versionchange_event
 /zh-CN/docs/Web/API/IDBFactory.open	/zh-CN/docs/Web/API/IDBFactory/open
 /zh-CN/docs/Web/API/IDBObjectStore.openCursor	/zh-CN/docs/Web/API/IDBObjectStore/openCursor
-/zh-CN/docs/Web/API/Index	/zh-CN/docs/conflicting/Web/API
+/zh-CN/docs/Web/API/Index	/zh-CN/docs/Web/API
 /zh-CN/docs/Web/API/IndexedDB_API/IDBObjectStore	/zh-CN/docs/Web/API/IDBObjectStore
 /zh-CN/docs/Web/API/Intersection_Observer_API/点观察者API的时序元素可见性	/zh-CN/docs/Web/API/Intersection_Observer_API/Timing_element_visibility
 /zh-CN/docs/Web/API/KeyboardEvent/key/Key_Values	/zh-CN/docs/Web/API/UI_Events/Keyboard_event_key_values
@@ -1938,7 +1938,7 @@
 /zh-CN/docs/Web/API/window.requestAnimationFrame	/zh-CN/docs/Web/API/Window/requestAnimationFrame
 /zh-CN/docs/Web/API/剪贴板_API	/zh-CN/docs/Web/API/Clipboard_API
 /zh-CN/docs/Web/API/开发式平台	/zh-CN/docs/Web/API/Push_API
-/zh-CN/docs/Web/API/指数	/zh-CN/docs/conflicting/Web/API
+/zh-CN/docs/Web/API/指数	/zh-CN/docs/Web/API
 /zh-CN/docs/Web/API/支付_请求_接口	/zh-CN/docs/Web/API/Payment_Request_API
 /zh-CN/docs/Web/API/支付_请求_接口/Concepts	/zh-CN/docs/Web/API/Payment_Request_API/Concepts
 /zh-CN/docs/Web/API/消息事件	/zh-CN/docs/Web/API/MessageEvent
@@ -2382,7 +2382,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ListFormat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Locale	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/反双曲余弦值	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/acosh
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Number/toString
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/format	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create/About_JavaScript	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/seal
@@ -2407,7 +2407,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/lookupGetter	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions/About_this_Reference	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions/Global_Objects	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/PluralRules	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
@@ -2423,16 +2423,16 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/setPrototypeOf	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect/比较_Reflect_和_Object_方法	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/prototype	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/contains	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/includes
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toString
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol/toString
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null	/zh-CN/docs/Web/JavaScript/Reference/Operators/null
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/uneval	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/uneval	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/生成器函数	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 /zh-CN/docs/Web/JavaScript/Reference/Methods_Index	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator	/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
@@ -2450,7 +2450,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/RegExp	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /zh-CN/docs/Web/JavaScript/Reference/RegExp/exec	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec
 /zh-CN/docs/Web/JavaScript/Reference/RegExp/lastIndex	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
-/zh-CN/docs/Web/JavaScript/Reference/RegExp/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString
+/zh-CN/docs/Web/JavaScript/Reference/RegExp/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /zh-CN/docs/Web/JavaScript/Reference/Spread_operator	/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /zh-CN/docs/Web/JavaScript/Reference/Statements/import.meta	/zh-CN/docs/Web/JavaScript/Reference/Operators/import.meta
 /zh-CN/docs/Web/JavaScript/Reference/String	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
@@ -2479,7 +2479,8 @@
 /zh-CN/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/zh-CN/docs/Web/Security/Same-origin_policy
 /zh-CN/docs/Web/JavaScript/Strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
 /zh-CN/docs/Web/JavaScript/Strict_mode/Transitioning_to_strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
-/zh-CN/docs/Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation	/zh-CN/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation
+/zh-CN/docs/Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
+/zh-CN/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 /zh-CN/docs/Web/JavaScript/重新认识js	/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 /zh-CN/docs/Web/Media/Formats/视频编解码器	/zh-CN/docs/Web/Media/Formats/Video_codecs
 /zh-CN/docs/Web/Performance/浏览器渲染页面的工作原理	/zh-CN/docs/Web/Performance/How_browsers_work

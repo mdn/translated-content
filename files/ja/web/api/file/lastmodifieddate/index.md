@@ -1,18 +1,6 @@
 ---
 title: File.lastModifiedDate
 slug: Web/API/File/lastModifiedDate
-tags:
-  - API
-  - 非推奨
-  - File
-  - File API
-  - ファイル
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - lastModifiedDate
-browser-compat: api.File.lastModifiedDate
-translation_of: Web/API/File/lastModifiedDate
 ---
 {{APIRef("File API") }} {{deprecated_header}}
 

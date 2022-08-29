@@ -40,13 +40,11 @@ L'interface **`DOMPointReadOnly`** spécifie les propriétés standard utilisée
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                                       | Commentaire                                        |
-| -------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------------- |
-| {{SpecName('Geometry Interfaces', '#DOMPoint', 'DOMPoint')}} | {{Spec2('Geometry Interfaces')}} | La dernière version de la spécification est un ED. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMPointReadOnly")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -34,10 +34,8 @@ Si aucune option `threshold` n'est fournie lors de l'instanciation avec `Interse
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('IntersectionObserver', '#dom-intersectionobserver-thresholds', 'IntersectionObserver.thresholds')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserver.thresholds")}}
+{{Compat}}

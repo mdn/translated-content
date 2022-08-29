@@ -1,7 +1,6 @@
 ---
 title: Authoring MathML
 slug: Web/MathML/Authoring
-translation_of: Web/MathML/Authoring
 ---
 這裡我們將會介紹該如何利用 MathML 來表達數學語言。如同 HTML， MathML 也是一種 SGML 語言，因此它是以 tag 和 attribute 描述的。HTML 在你使用了一些諸如 list 或 table 等結構時將會變得很複雜，索性我們有一些 WYSIWYG 編輯器和其他 Content Management Systems 來協助我們進行開發。
 

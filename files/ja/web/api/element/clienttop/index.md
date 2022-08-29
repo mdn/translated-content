@@ -1,15 +1,6 @@
 ---
 title: Element.clientTop
 slug: Web/API/Element/clientTop
-tags:
-  - API
-  - CSSOM View
-  - NeedsAgnostify
-  - NeedsMarkupWork
-  - プロパティ
-  - リファレンス
-browser-compat: api.Element.clientTop
-translation_of: Web/API/Element/clientTop
 ---
 {{ APIRef("DOM") }}
 

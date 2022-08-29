@@ -62,13 +62,11 @@ self.addEventListener('install', function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                               | Commentaire          |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#dom-cachestorage-open', 'CacheStorage: open')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.CacheStorage.open")}}
+{{Compat}}
 
 ## Voir aussi
 

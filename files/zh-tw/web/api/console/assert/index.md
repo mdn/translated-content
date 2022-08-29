@@ -1,15 +1,6 @@
 ---
 title: Console.assert()
 slug: Web/API/console/assert
-tags:
-  - API
-  - DOM
-  - Debugging
-  - 函式
-  - 控制台
-  - 網頁控制台
-  - 網頁開發
-translation_of: Web/API/console/assert
 ---
 {{APIRef("Console API")}}
 

@@ -1,10 +1,6 @@
 ---
 title: Number.prototype.toExponential()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
-tags:
-  - 數字
-  - 科學技數法
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 ---
 {{JSRef}}
 

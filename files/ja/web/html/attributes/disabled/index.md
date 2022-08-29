@@ -111,7 +111,7 @@ Firefox は他のブラウザーとは異なり、ページを再読み込みし
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attributes.disabled")}}
+{{Compat}}
 
 ## 関連情報
 

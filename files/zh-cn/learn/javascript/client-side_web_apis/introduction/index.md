@@ -2,7 +2,7 @@
 title: Web API 简介
 slug: Learn/JavaScript/Client-side_web_APIs/Introduction
 ---
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_Web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_Web_API")}}
+{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_Web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
 
 首先，我们将从一个高层次看看 API - 它们是什么；他们如何工作；如何在代码中使用它们，以及它们是如何组织的。我们也将看看不同主要类别的 API 以及它们的用途。
 
@@ -242,11 +242,7 @@ request.onload = function() {
 
 WebAPI 功能受到与 JavaScript 和其他 Web 技术（例如[同源政策](/en-US/docs/Web/Security/Same-origin_policy)）相同的安全考虑 但是他们有时会有额外的安全机制。例如，一些更现代的 WebAPI 将只能在通过 HTTPS 提供的页面上工作，因为它们正在传输潜在的敏感数据（例如 [服务工作者](/en-US/docs/Web/API/Service_Worker_API) 和 [推送](/en-US/docs/Web/API/Push_API)）。
 
-另外，一旦调用 WebAPI 请求，用户就可以在您的代码中启用一些 WebAPI 请求权限。作为一个例子，在加载我们之前的[Geolocation](/en-US/docs/Web/API/Geolocation) 示例时，您可能注意到了类似下面的对话框 ：
-
-![](https://mdn.mozillademos.org/files/14313/location-permission.png)
-
-该 [通知 API](/en-US/docs/Web/API/Notifications_API) 请求以类似的方式许可：
+另外，一旦调用 WebAPI 请求，用户就可以在您的代码中启用一些 WebAPI 请求权限。例如，[通知 API](/zh-CN/docs/Web/API/Notifications_API) 使用弹出对话框请求权限：
 
 ![](notification-permission.png)
 
@@ -256,4 +252,4 @@ WebAPI 功能受到与 JavaScript 和其他 Web 技术（例如[同源政策](/e
 
 在这一点上，您应该对 API 是什么，它们是如何工作的以及在 JavaScript 代码中可以对它们做什么有一个很好的了解。你可能很兴奋开始用特定的 API 来做一些有趣的事情，so let's go! 接下来，我们将看到使用文档对象模型（DOM）处理文档。
 
-{{NextMenu("Learn/JavaScript/Client-side_Web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_Web_API")}}
+{{NextMenu("Learn/JavaScript/Client-side_Web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}

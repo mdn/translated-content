@@ -162,21 +162,15 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
-### compressedTexImage2D
+{{Compat}}
 
-{{Compat("api.WebGLRenderingContext.compressedTexImage2D")}}
-
-### compressedTexImage3D
-
-{{Compat("api.WebGL2RenderingContext.compressedTexImage3D")}}
-
-## See also
+## 参见
 
 - [Using WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions)
 - {{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}

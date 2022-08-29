@@ -1,7 +1,6 @@
 ---
 title: Web App Manifest
 slug: Web/Manifest
-translation_of: Web/Manifest
 ---
 {{SeeCompatTable}}
 

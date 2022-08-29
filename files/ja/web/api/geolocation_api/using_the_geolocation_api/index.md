@@ -1,11 +1,6 @@
 ---
 title: 位置情報 API の使用
 slug: Web/API/Geolocation_API/Using_the_Geolocation_API
-tags:
-  - 位置情報 API
-  - ガイド
-  - チュートリアル
-translation_of: Web/API/Geolocation_API/Using_the_Geolocation_API
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 

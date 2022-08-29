@@ -1,237 +1,63 @@
 ---
-title: 使用地理位置定位
+title: 地理位置 API
 slug: Web/API/Geolocation_API
 ---
-**地理位置 API** 允许用户向 Web 应用程序提供他们的位置。出于隐私考虑，报告地理位置前会先请求用户许可。
+{{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
-## geolocation 对象
+**地理位置 API**（Geolocation API）允许用户向 web 应用程序提供他们的位置。出于隐私考虑，报告地理位置前会先请求用户许可。
 
-地理位置 API 通过 {{domxref("NavigatorGeolocation.geolocation","navigator.geolocation")}} 提供。
+Web 扩展若期望使用 `Geolocation` 对象，则必须将 `"geolocation"` 权限添加到其清单（manifest）中。在第一次请求地理位置访问时，用户的操作系统将提示用户提供相应的权限。
 
-如果该对象存在，那么地理位置服务可用。
+## 概念和用法
 
-```js
-if ("geolocation" in navigator) {
-  /* 地理位置服务可用 */
-} else {
-  /* 地理位置服务不可用 */
-}
-```
+通常，要在地图上标出用户的位置或显示与用户地理位置相关的个性化信息时，我们需要在 web 应用程序中检索用户的位置信息。
 
-> **备注：** 在 Firefox 24 和之前的浏览器中，即使 API 被禁止，代码 `"geolocation" in navigator` 也总是会得到 `true`。这在 [Firefox 25](/zh-CN/docs/Mozilla/Firefox/Releases/25/Site_Compatibility) 中已经被修复 ({{ bug(884921) }})。
+地理位置 API 是通过调用 {{domxref("Navigator.geolocation", "navigator.geolocation")}} 来访问的；这将使得用户的浏览器请求获得用户位置数据相关的权限。如果用户授予了权限，则浏览器将使用设备上可用的最佳方式来获取此信息（例如 GPS）。
 
-### 获取当前定位
+开发人员现在可用通过不同的方式访问位置信息：
 
-您可以调用 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} 函数获取用户当前定位位置。这会异步地请求获取用户位置，并查询定位硬件来获取最新信息。当定位被确定后，定义的回调函数就会被执行。您可以选择性地提供第二个回调函数，当有错误时会被执行。第三个参数也是可选的，您可以通过该对象参数设定最长可接受的定位返回时间、等待请求的时间和是否获取高精度定位。
+- {{domxref("Geolocation.getCurrentPosition()")}}：检索设备的当前位置。
+- {{domxref("Geolocation.watchPosition()")}}：注册一个处理函数，在设备位置发生改变时都会自动调用，并返回改变后的位置信息。
 
-> **备注：** 默认情况下，{{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} 会尽快返回一个低精度结果，这在您不关心准确度只关心快速获取结果的情况下很有用。有 GPS 的设备可能需要一分钟或更久来获取 GPS 定位，在这种情况下 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} 会返回低精度数据（基于 IP 的定位或 Wi-Fi 定位）。
+对于上述的几种方法，其回调函数最多有三个参数：
 
-```js
-navigator.geolocation.getCurrentPosition(function(position) {
-  do_something(position.coords.latitude, position.coords.longitude);
-});
-```
+- 一个必须的成功的回调函数：如果位置检索成功，则调用该回调函数，并以 {{domxref("GeolocationPosition")}} 对象（用于提供位置数据）作为其唯一的参数。
+- 一个可选的错误回调函数：如果位置检索失败，则调用该回调函数，并以 {{domxref("GeolocationPositionError")}} 对象（用于提供访问出错的信息）作为其唯一的参数。
+- 一个可选的对象：用于提供检索位置数据的选项。
 
-上述示例中，当获取位置后 `do_something()` 函数会被执行。
+有关地理位置使用的信息，请参阅[使用地理位置 API](/zh-CN/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)。
 
-### 监视定位
+## 接口
 
-您可以设定一个回调函数来响应定位数据发生的变更（设备发生了移动，或获取到了更高精度的地理位置信息）。您可以通过 {{domxref("Geolocation.watchPosition","watchPosition()")}} 函数实现该功能。它与 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} 接受相同的参数，但回调函数会被调用多次。错误回调函数与 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} 中一样是可选的，也会被多次调用。
+- {{domxref("Geolocation")}}
+  - : 该 API 的主类——包含检索用户当前的位置、监听位置变化以及清除先前设置的监听器的方法。
+- {{domxref("GeolocationPosition")}}
+  - : 表示用户的位置。`GeolocationPosition` 实例会在成功调用 {{domxref("Geolocation")}} 中的方法时返回。包含了一个时间戳和一个 {{domxref("GeolocationCoordinates")}} 对象实例。
+- {{domxref("GeolocationCoordinates")}}
+  - : 表示用户位置的坐标。`GeolocationCoordinates` 实例包含经纬度和其它相关的重要信息。
+- {{domxref("GeolocationPositionError")}}
+  - : `GeolocationPositionError` 实例会在未能成功调用 {{domxref("Geolocation")}} 中的方法时返回。包含了错误代码和错误消息。
+- {{domxref("Navigator.geolocation")}}
+  - : API 的入口点。返回一个 {{domxref("Geolocation")}} 对象实例，从中可以访问所有其它的功能。
 
-> **备注：** 您可以直接调用 {{domxref("Geolocation.watchPosition","watchPosition()")}} 函数，不需要先调用 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} 函数。
+## 示例
 
-```js
-var watchID = navigator.geolocation.watchPosition(function(position) {
-  do_something(position.coords.latitude, position.coords.longitude);
-});
-```
+参见[使用地理位置 API](/zh-CN/docs/Web/API/Geolocation_API/Using_the_Geolocation_API#示例) 以获取示例代码。
 
-{{domxref("Geolocation.watchPosition","watchPosition()")}} 函数会返回一个 ID，唯一地标记该位置监视器。您可以将这个 ID 传给 {{domxref("Geolocation.clearWatch()","clearWatch()")}} 函数来停止监视用户位置。
+## 规范
 
-```js
-navigator.geolocation.clearWatch(watchID);
-```
-
-### 调整返回结果
-
-{{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} 和 {{domxref("Geolocation.watchPosition","watchPosition()")}} 都接受一个成功回调、一个可选的失败回调和一个可选的 `PositionOptions` 对象。
-
-{{page("/zh-CN/docs/Web/API/Geolocation.getCurrentPosition","PositionOptions")}}
-
-对 {{domxref("Geolocation.watchPosition()","watchPosition")}} 的调用类似于这样：
-
-```js
-function geo_success(position) {
-  do_something(position.coords.latitude, position.coords.longitude);
-}
-
-function geo_error() {
-  alert("Sorry, no position available.");
-}
-
-var geo_options = {
-  enableHighAccuracy: true,
-  maximumAge        : 30000,
-  timeout           : 27000
-};
-
-var wpid = navigator.geolocation.watchPosition(geo_success, geo_error, geo_options);
-```
-
-watchPosition 实际使用示例：<http://www.thedotproduct.org/experiments/geo/>
-
-## 描述位置
-
-用户的位置由一个包含 `Coordinates` 对象的 `Position` 对象描述。
-
-{{page("/zh-CN/docs/Web/API/Geolocation.getCurrentPosition","Position")}}
-
-{{page("/zh-CN/docs/Web/API/Geolocation.getCurrentPosition","Coordinates")}}
-
-## 处理错误
-
-`getCurrentPosition()` 或 `watchPosition()` 的错误回调函数以 `PositionError` 为第一个参数。
-
-```js
-function errorCallback(error) {
-  alert('ERROR(' + error.code + '): ' + error.message);
-};
-```
-
-{{page("/zh-CN/docs/Web/API/Geolocation.getCurrentPosition","PositionError")}}
-
-## 地理位置示例
-
-```css hidden
-body {
-  padding: 20px;
-  background-color:#ffffc9
-}
-
-p { margin : 0; }
-```
-
-### HTML
-
-```html
-<p><button onclick="geoFindMe()">Show my location</button></p>
-<div id="out"></div>
-```
-
-### JavaScript
-
-```js
-function geoFindMe() {
-  var output = document.getElementById("out");
-
-  if (!navigator.geolocation){
-    output.innerHTML = "<p>您的浏览器不支持地理位置</p>";
-    return;
-  }
-
-  function success(position) {
-    var latitude  = position.coords.latitude;
-    var longitude = position.coords.longitude;
-
-    output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
-
-    var img = new Image();
-    img.src = "http://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
-
-    output.appendChild(img);
-  };
-
-  function error() {
-    output.innerHTML = "无法获取您的位置";
-  };
-
-  output.innerHTML = "<p>Locating…</p>";
-
-  navigator.geolocation.getCurrentPosition(success, error);
-}
-```
-
-### 在线示例
-
-{{ EmbedLiveSample('Geolocation_Live_Example',350,410) }}
-
-## 授权请求
-
-所有 addons.mozilla.org 上需要使用地理位置的插件必须在使用 API 前显式地请求权限。用户的响应将会存储在 `pref` 参数指定的偏好设置中。`callback` 参数指定的函数会被调用并包含一个代表用户响应的 boolean 参数。如果为 `true`，代表插件可以访问地理位置数据。
-
-```js
-function prompt(window, pref, message, callback) {
-    let branch = Components.classes["@mozilla.org/preferences-service;1"]
-                           .getService(Components.interfaces.nsIPrefBranch);
-
-    if (branch.getPrefType(pref) === branch.PREF_STRING) {
-        switch (branch.getCharPref(pref)) {
-        case "always":
-            return callback(true);
-        case "never":
-            return callback(false);
-        }
-    }
-
-    let done = false;
-
-    function remember(value, result) {
-        return function() {
-            done = true;
-            branch.setCharPref(pref, value);
-            callback(result);
-        }
-    }
-
-    let self = window.PopupNotifications.show(
-        window.gBrowser.selectedBrowser,
-        "geolocation",
-        message,
-        "geo-notification-icon",
-        {
-            label: "Share Location",
-            accessKey: "S",
-            callback: function(notification) {
-                done = true;
-                callback(true);
-            }
-        }, [
-            {
-                label: "Always Share",
-                accessKey: "A",
-                callback: remember("always", true)
-            },
-            {
-                label: "Never Share",
-                accessKey: "N",
-                callback: remember("never", false)
-            }
-        ], {
-            eventCallback: function(event) {
-                if (event === "dismissed") {
-                    if (!done) callback(false);
-                    done = true;
-                    window.PopupNotifications.remove(self);
-                }
-            },
-            persistWhileVisible: true
-        });
-}
-
-prompt(window,
-       "extensions.foo-addon.allowGeolocation",
-       "Foo Add-on wants to know your location.",
-       function callback(allowed) { alert(allowed); });
-```
+{{Specifications}}
 
 ## 浏览器兼容性
 
-{{Compat("api.Geolocation")}}
+{{Compat}}
 
-## 另请参阅
+### 可用性
 
-- {{domxref("NavigatorGeolocation.geolocation","navigator.geolocation")}}
-- [在地图上标记自己](/en-US/Apps/Build/gather_and_modify_data/Plotting_yourself_on_the_map)
-- [w3.org 上的地理位置 API](http://www.w3.org/TR/geolocation-API/)
-- [地理位置 API 的示例](/en-US/demos/tag/tech:geolocation)
+基于 Wi-Fi 的位置信息通常由 Google 提供，但该原生的地理位置 API 可能无法在中国使用。你可用使用如[百度](https://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation)、[高德](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation)或[腾讯](https://lbs.qq.com/tool/component-geolocation.html)等本地的第三方提供商。这些服务使用用户的 IP 地址或本地应用来提供增强的位置信息。
+
+## 参见
+
+- [使用地理位置 API](/zh-CN/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- [w3.org 上的地理位置 API](https://www.w3.org/TR/geolocation/)
 - [Who moved my geolocation?](https://hacks.mozilla.org/2013/10/who-moved-my-geolocation/) (Hacks blog)

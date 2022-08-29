@@ -17,7 +17,9 @@ translation_of: Web/API/Document/getElementsByTagNameNS
 
 ## 구문
 
-    elements = document.getElementsByTagNameNS(namespace, name)
+```js
+elements = document.getElementsByTagNameNS(namespace, name)
+```
 
 - _elements_ 는 트리에 나타난 순서로 발견된 살아있는 {{DOMxRef("NodeList")}} 입니다(하지만 아래를 확인하세요).
 - _namespace_ 는 탐색하기 위한 엘리먼트의 네임스페이스 URI 입니다({{domxref("Node.namespaceURI", "element.namespaceURI")}}) 를 확인하세요).

@@ -1,18 +1,6 @@
 ---
 title: 'Element: mouseout イベント'
 slug: Web/API/Element/mouseout_event
-tags:
-  - API
-  - DOM
-  - イベント
-  - インターフェイス
-  - MouseEvent
-  - リファレンス
-  - マウス
-  - mouseout
-  - move
-browser-compat: api.Element.mouseout_event
-translation_of: Web/API/Element/mouseout_event
 ---
 {{APIRef}}
 

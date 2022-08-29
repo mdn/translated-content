@@ -1,12 +1,6 @@
 ---
 title: Element.innerHTML
 slug: Web/API/Element/innerHTML
-tags:
-  - 元素組件
-  - 注譯
-  - 裏HTML
-  - 裏超文本
-translation_of: Web/API/Element/innerHTML
 ---
 {{APIRef("DOM")}}
 

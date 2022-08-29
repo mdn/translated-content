@@ -1,7 +1,6 @@
 ---
 title: animation-fill-mode
 slug: Web/CSS/animation-fill-mode
-translation_of: Web/CSS/animation-fill-mode
 ---
 **`animation-fill-mode`** [CSS](/en/CSS) 属性指定 CSS 动画应该如何在其执行前后的样式展示情况。
 

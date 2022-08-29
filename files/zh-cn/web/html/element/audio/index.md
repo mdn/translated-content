@@ -187,7 +187,7 @@ elem.audioTrackList.onremovetrack = function(event) {
 </audio>
 ```
 
-## 可访问性考虑
+## 无障碍考虑
 
 语音形式的音频必须同时提供标题，以及确切描述其内容的文本。标题（Captions）是由 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) 标准定义的，允许听力障碍的人群能够通过播放（文字）记录来理解音频内容。转录文字允许那些需要额外时间的人们，以适合他们的速度和格式回顾记录的内容。
 

@@ -1,7 +1,6 @@
 ---
 title: HTTP 狀態碼
 slug: Web/HTTP/Status
-translation_of: Web/HTTP/Status
 ---
 {{HTTPSidebar}}
 

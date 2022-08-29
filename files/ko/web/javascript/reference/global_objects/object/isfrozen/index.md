@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 
 ## 구문
 
-    Object.isFrozen(obj)
+```js
+Object.isFrozen(obj)
+```
 
 ### 매개변수
 

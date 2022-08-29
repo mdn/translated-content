@@ -1,15 +1,6 @@
 ---
 title: Element.classList
 slug: Web/API/Element/classList
-tags:
-  - API
-  - DOM
-  - Element
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.Element.classList
-translation_of: Web/API/Element/classList
 ---
 {{APIRef("DOM")}}
 

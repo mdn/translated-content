@@ -320,9 +320,9 @@ let outer  = document.getElementsByClassName('outer') [0];
 
 分别点击 outer, middle, inner 以查看选项的工作方式。
 
-{{ EmbedLiveSample('options 用法示例', 600, 310, '', 'Web/API/EventTarget/addEventListener') }}
+{{ EmbedLiveSample('options 用法示例', 600, 310) }}
 
-在使用`options`对象中具体的值前，最好确保用户的浏览器支持它，因为这些是历史上并非所有浏览器都支持的附加功能。你可以查看[option 支持的安全检测](#option支持的安全检测)以了解更多
+在使用`options` 对象中具体的值前，最好确保用户的浏览器支持它，因为这些是历史上并非所有浏览器都支持的附加功能。你可以查看 [option 支持的安全检测](#option支持的安全检测)以了解更多
 
 ## 备注
 

@@ -1,13 +1,6 @@
 ---
 title: transform
 slug: Web/CSS/transform
-tags:
-  - CSS
-  - CSS Property
-  - NeedsBrowserCompatibility
-  - Reference
-  - Transforms
-translation_of: Web/CSS/transform
 ---
 {{CSSRef}}
 

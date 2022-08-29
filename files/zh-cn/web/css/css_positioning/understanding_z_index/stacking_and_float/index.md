@@ -26,7 +26,7 @@ original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_and_float
 
 > **备注：** 在下面的例子中，除了非定位的那个块元素外，所有的块元素都是半透明的，以便来显示层叠顺序。如果减少非定位元素 (DIV #4) 的透明度，会发生很诡异的事情：该元素的背景和边框会出现在浮动块元素上方，但是仍然处于定位元素的下方。我不能确定这是规范的 bug 或是怪异的解析。(设置透明度会隐式的创建一个层叠上下文。)
 
-{{ EmbedLiveSample('该示例的源码', '563', '255', '', 'Web/Guide/CSS/Understanding_z_index/Stacking_and_float') }}
+{{ EmbedLiveSample('该示例的源码', '563', '255') }}
 
 ### 该示例的源码
 

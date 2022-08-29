@@ -1,16 +1,6 @@
 ---
 title: WebAssembly テキストフォーマットから wasm に変換する
 slug: WebAssembly/Text_format_to_wasm
-tags:
-  - WebAssembly
-  - assembly
-  - conversion
-  - text format
-  - wabt
-  - wasm
-  - wast2wasm
-  - wat2wasm
-translation_of: WebAssembly/Text_format_to_wasm
 ---
 {{WebAssemblySidebar}}
 
@@ -38,10 +28,10 @@ WebAssembly 関数 `exported_func` は私達の環境 (WebAssembly モジュー�
 
 上の `.wat` テキスト表現の例を `.wasm` アセンブリ形式に変換してみましょう。
 
-1.  はじめに、上のコードをテキストファイルにコピーして `simple.wat` という名前のファイルを作成します。
-2.  このテキスト表現をブラウザが実際に読み込んで利用可能なアセンブリ言語にアセンブルする必要があります。 このために wabt ツールを使用することができます。これは WebAssembly のテキスト表現から wasm 変換する、または逆に変換するコンパイラ(加えてもう少し別のツール)が含まれます。<https://github.com/webassembly/wabt> に行って、そのページの説明に従ってツールの設定をします。
-3.  ツールをビルドしたら、システム `PATH` に `/wabt/out` ディレクトリを追加します。
-4.  次に、wast2wasm プログラムを実行します。入力ファイルパス、続いて `-o` パラメータ、出力ファイルパスを指定します:
+1. はじめに、上のコードをテキストファイルにコピーして `simple.wat` という名前のファイルを作成します。
+2. このテキスト表現をブラウザが実際に読み込んで利用可能なアセンブリ言語にアセンブルする必要があります。 このために wabt ツールを使用することができます。これは WebAssembly のテキスト表現から wasm 変換する、または逆に変換するコンパイラ(加えてもう少し別のツール)が含まれます。<https://github.com/webassembly/wabt> に行って、そのページの説明に従ってツールの設定をします。
+3. ツールをビルドしたら、システム `PATH` に `/wabt/out` ディレクトリを追加します。
+4. 次に、wast2wasm プログラムを実行します。入力ファイルパス、続いて `-o` パラメータ、出力ファイルパスを指定します:
 
     ```bash
     wat2wasm simple.wat -o simple.wasm

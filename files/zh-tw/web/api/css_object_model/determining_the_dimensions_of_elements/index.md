@@ -1,7 +1,6 @@
 ---
 title: Determining the dimensions of elements
 slug: Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
-translation_of: Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 ---
 {{APIRef("CSSOM View")}}
 

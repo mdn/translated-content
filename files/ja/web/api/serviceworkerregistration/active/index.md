@@ -1,15 +1,6 @@
 ---
 title: ServiceWorkerRegistration.active
 slug: Web/API/ServiceWorkerRegistration/active
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - サービスワーカー
-  - ServiceWorkerRegistration
-  - active
-browser-compat: api.ServiceWorkerRegistration.active
-translation_of: Web/API/ServiceWorkerRegistration/active
 ---
 {{APIRef("Service Workers API")}}
 

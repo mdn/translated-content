@@ -128,7 +128,6 @@
 /ja/docs/Adapting_XUL_Applications_for_Firefox_1.5	/ja/docs/Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5
 /ja/docs/Adding_feed_readers_to_Firefox	/ja/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 /ja/docs/Adding_feed_readers_to_Firefox-redirect-1	/ja/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
-/ja/docs/Adding_search_engines_from_web_pages	/ja/docs/Web/OpenSearch
 /ja/docs/Addons	/ja/docs/Mozilla/Add-ons
 /ja/docs/Advanced_styling_for_HTML_forms	/ja/docs/Learn/Forms/Advanced_form_styling
 /ja/docs/Alternative_style_sheets	/ja/docs/Web/CSS/Alternative_style_sheets
@@ -1097,7 +1096,6 @@
 /ja/docs/Core_JavaScript_1.5_Reference:Statements:var	/ja/docs/Web/JavaScript/Reference/Statements/var
 /ja/docs/Core_JavaScript_1.5_Reference:Statements:while	/ja/docs/Web/JavaScript/Reference/Statements/while
 /ja/docs/Core_JavaScript_1.5_Reference:Statements:with	/ja/docs/Web/JavaScript/Reference/Statements/with
-/ja/docs/Creating_OpenSearch_plugins_for_Firefox	/ja/docs/Web/OpenSearch
 /ja/docs/Creating_toolbar_buttons	/ja/docs/orphaned/Creating_toolbar_buttons
 /ja/docs/DHTML	/ja/docs/Glossary/DHTML
 /ja/docs/DOM	/ja/docs/Web/API/Document_Object_Model
@@ -1461,10 +1459,8 @@
 /ja/docs/DOM/window.confirm	/ja/docs/Web/API/Window/confirm
 /ja/docs/DOM/window.confirm-redirect-1	/ja/docs/Web/API/Window/confirm
 /ja/docs/DOM/window.content	/ja/docs/Web/API/Window/content
-/ja/docs/DOM/window.controllers	/ja/docs/Web/API/Window/controllers
 /ja/docs/DOM/window.crypto	/ja/docs/Web/API/crypto_property
 /ja/docs/DOM/window.defaultStatus	/ja/docs/Web/API/Window/defaultStatus
-/ja/docs/DOM/window.directories	/ja/docs/Web/API/Window/directories
 /ja/docs/DOM/window.document	/ja/docs/Web/API/Window/document
 /ja/docs/DOM/window.dump	/ja/docs/Web/API/Window/dump
 /ja/docs/DOM/window.escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
@@ -1686,10 +1682,8 @@
 /ja/docs/DOM:window.closed	/ja/docs/Web/API/Window/closed
 /ja/docs/DOM:window.confirm	/ja/docs/Web/API/Window/confirm
 /ja/docs/DOM:window.content	/ja/docs/Web/API/Window/content
-/ja/docs/DOM:window.controllers	/ja/docs/Web/API/Window/controllers
 /ja/docs/DOM:window.crypto	/ja/docs/Web/API/crypto_property
 /ja/docs/DOM:window.defaultStatus	/ja/docs/Web/API/Window/defaultStatus
-/ja/docs/DOM:window.directories	/ja/docs/Web/API/Window/directories
 /ja/docs/DOM:window.document	/ja/docs/Web/API/Window/document
 /ja/docs/DOM:window.dump	/ja/docs/Web/API/Window/dump
 /ja/docs/DOM:window.escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
@@ -2698,7 +2692,7 @@
 /ja/docs/MDN/Community/Doc_sprints	/ja/docs/orphaned/MDN/Community/Doc_sprints
 /ja/docs/MDN/Community/Whats_happening	/ja/docs/orphaned/MDN/Community/Whats_happening
 /ja/docs/MDN/Community/Working_in_community	/ja/docs/orphaned/MDN/Community/Working_in_community
-/ja/docs/MDN/Contribute/Content	/ja/docs/conflicting/MDN/Writing_guidelines
+/ja/docs/MDN/Contribute/Content	/ja/docs/MDN/Writing_guidelines
 /ja/docs/MDN/Contribute/Content/Best_practices	/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /ja/docs/MDN/Contribute/Content/Does_this_belong_on_MDN	/ja/docs/MDN/Writing_guidelines/What_we_write
 /ja/docs/MDN/Contribute/Content/Writing_style_guide	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
@@ -2709,7 +2703,7 @@
 /ja/docs/MDN/Contribute/GitHub_beginners	/ja/docs/conflicting/MDN/Community/Contributing/Getting_started
 /ja/docs/MDN/Contribute/GitHub_best_practices	/ja/docs/MDN/Community/Issues
 /ja/docs/MDN/Contribute/GitHub_cheatsheet	/ja/docs/conflicting/MDN/Community/Issues
-/ja/docs/MDN/Contribute/Guidelines	/ja/docs/conflicting/MDN/Writing_guidelines
+/ja/docs/MDN/Contribute/Guidelines	/ja/docs/MDN/Writing_guidelines
 /ja/docs/MDN/Contribute/Guidelines/Best_practices	/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /ja/docs/MDN/Contribute/Guidelines/Code_guidelines	/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 /ja/docs/MDN/Contribute/Guidelines/Code_guidelines/CSS	/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
@@ -2722,7 +2716,7 @@
 /ja/docs/MDN/Contribute/Guidelines/Writing_style_guide	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
 /ja/docs/MDN/Contribute/Help_beginners	/ja/docs/MDN/Community/Learn_forum
 /ja/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples
-/ja/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web	/ja/docs/conflicting/MDN/Writing_guidelines/Page_structures/Live_samples
+/ja/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web	/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /ja/docs/MDN/Contribute/Howto/Create_and_edit_pages	/ja/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /ja/docs/MDN/Contribute/Howto/Document_a_CSS_property	/ja/docs/MDN/Writing_guidelines/Howto/Document_a_CSS_property
 /ja/docs/MDN/Contribute/Howto/Document_an_HTTP_header	/ja/docs/MDN/Writing_guidelines/Howto/Document_an_HTTP_header
@@ -2768,7 +2762,7 @@
 /ja/docs/MDN/Contribute/Where_is_everything	/ja/docs/MDN/Community/Contributing/Our_repositories
 /ja/docs/MDN/Feedback	/ja/docs/MDN/Community
 /ja/docs/MDN/Getting_started	/ja/docs/MDN/Community/Contributing/Getting_started
-/ja/docs/MDN/Guidelines	/ja/docs/conflicting/MDN/Writing_guidelines
+/ja/docs/MDN/Guidelines	/ja/docs/MDN/Writing_guidelines
 /ja/docs/MDN/Guidelines/Code_guidelines	/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 /ja/docs/MDN/Guidelines/Code_guidelines/CSS	/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
 /ja/docs/MDN/Guidelines/Code_guidelines/General	/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
@@ -2911,8 +2905,6 @@
 /ja/docs/SVG_In_HTML_Introduction	/ja/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction
 /ja/docs/SVG_Namespace_Tips_(external)	/ja/docs/Web/SVG/Namespaces_Crash_Course
 /ja/docs/SVG_improvements_in_Firefox_3	/ja/docs/Mozilla/Firefox/Releases/3/SVG_improvements
-/ja/docs/SVG_in_Firefox	/ja/docs/Web/SVG/SVG_1.1_Support_in_Firefox
-/ja/docs/SVG_in_Firefox_1.5	/ja/docs/Web/SVG/SVG_1.1_Support_in_Firefox
 /ja/docs/Same_origin_policy_for_JavaScript	/ja/docs/Web/Security/Same-origin_policy
 /ja/docs/Sections_and_Outlines_of_an_HTML5_document	/ja/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /ja/docs/Security/CSP	/ja/docs/Web/HTTP/CSP
@@ -3184,9 +3176,7 @@
 /ja/docs/Web/API/CSSStyleSheet.insertRule	/ja/docs/Web/API/CSSStyleSheet/insertRule
 /ja/docs/Web/API/CSS_Painting_API/ガイド	/ja/docs/Web/API/CSS_Painting_API/Guide
 /ja/docs/Web/API/CSS_Typed_Object_Model_API	/ja/docs/Web/API/CSS_Object_Model#CSS_Typed_Object_Model
-/ja/docs/Web/API/CanvasRenderingContext2D.clearHitRegions	/ja/docs/Web/API/CanvasRenderingContext2D/clearHitRegions
 /ja/docs/Web/API/CanvasRenderingContext2D.drawFocusIfNeeded	/ja/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
-/ja/docs/Web/API/CanvasRenderingContext2D.removeHitRegion	/ja/docs/Web/API/CanvasRenderingContext2D/removeHitRegion
 /ja/docs/Web/API/Canvas_API/Drawing_graphics_with_canvas	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Web/API/CloseEvent/initCloseEvent	/ja/docs/conflicting/Web/API/CloseEvent
 /ja/docs/Web/API/Console.error	/ja/docs/Web/API/Console/error
@@ -3318,7 +3308,7 @@
 /ja/docs/Web/API/GlobalEventHandlers/ontransitioncancel	/ja/docs/Web/API/Element/transitioncancel_event
 /ja/docs/Web/API/GlobalEventHandlers/ontransitionend	/ja/docs/Web/API/Element/transitionend_event
 /ja/docs/Web/API/GlobalEventHandlers/onwheel	/ja/docs/Web/API/Element/wheel_event
-/ja/docs/Web/API/GlobalFetch	/ja/docs/Web/API/WindowOrWorkerGlobalScope
+/ja/docs/Web/API/GlobalFetch	/ja/docs/Web/API/fetch
 /ja/docs/Web/API/GlobalFetch/fetch	/ja/docs/Web/API/fetch
 /ja/docs/Web/API/HTMLElement/animationcancel_event	/ja/docs/Web/API/Element/animationcancel_event
 /ja/docs/Web/API/HTMLElement/animationend_event	/ja/docs/Web/API/Element/animationend_event
@@ -3630,7 +3620,7 @@
 /ja/docs/Web/API/Window/transitionstart_event	/ja/docs/Web/API/Element/transitionstart_event
 /ja/docs/Web/API/Window/unescape	/ja/docs/Web/JavaScript/Reference/Global_Objects/unescape
 /ja/docs/Web/API/Window/vrdisplaydisconnected_event	/ja/docs/Web/API/Window/vrdisplaydisconnect_event
-/ja/docs/Web/API/WindowBase64	/ja/docs/Web/API/WindowOrWorkerGlobalScope
+/ja/docs/Web/API/WindowBase64	/ja/docs/Glossary/Base64
 /ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/ja/docs/Glossary/Base64
 /ja/docs/Web/API/WindowBase64/atob	/ja/docs/Web/API/atob
 /ja/docs/Web/API/WindowBase64/btoa	/ja/docs/Web/API/btoa
@@ -3658,7 +3648,7 @@
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/origin	/ja/docs/Web/API/origin
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/ja/docs/Web/API/setTimeout
-/ja/docs/Web/API/WindowTimers	/ja/docs/Web/API/WindowOrWorkerGlobalScope
+/ja/docs/Web/API/WindowTimers	/ja/docs/Web/API/setTimeout
 /ja/docs/Web/API/WindowTimers/clearInterval	/ja/docs/Web/API/clearInterval
 /ja/docs/Web/API/WindowTimers/clearTimeout	/ja/docs/Web/API/clearTimeout
 /ja/docs/Web/API/WindowTimers/setInterval	/ja/docs/Web/API/setInterval
@@ -3798,11 +3788,9 @@
 /ja/docs/Web/API/window.closed	/ja/docs/Web/API/Window/closed
 /ja/docs/Web/API/window.confirm	/ja/docs/Web/API/Window/confirm
 /ja/docs/Web/API/window.content	/ja/docs/Web/API/Window/content
-/ja/docs/Web/API/window.controllers	/ja/docs/Web/API/Window/controllers
 /ja/docs/Web/API/window.crypto	/ja/docs/Web/API/crypto_property
 /ja/docs/Web/API/window.defaultStatus	/ja/docs/Web/API/Window/defaultStatus
 /ja/docs/Web/API/window.dialogArguments	/ja/docs/Web/API/Window/dialogArguments
-/ja/docs/Web/API/window.directories	/ja/docs/Web/API/Window/directories
 /ja/docs/Web/API/window.document	/ja/docs/Web/API/Window/document
 /ja/docs/Web/API/window.dump	/ja/docs/Web/API/Window/dump
 /ja/docs/Web/API/window.escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
@@ -4179,7 +4167,6 @@
 /ja/docs/Web/Compatibility_FAQ/Tips_Default_Style_Difference.html	/ja/docs/orphaned/Web/Compatibility_FAQ/Tips_Default_Style_Difference.html
 /ja/docs/Web/Compatibility_FAQ/Tips_Vendor_Prefix.html	/ja/docs/orphaned/Web/Compatibility_FAQ/Tips_Vendor_Prefix.html
 /ja/docs/Web/Compatibility_FAQ/Underline_Color_Diffrence.html	/ja/docs/orphaned/Web/Compatibility_FAQ/Underline_Color_Diffrence.html
-/ja/docs/Web/Demos_of_open_web_technologies	/ja/docs/Web/Demos
 /ja/docs/Web/Events/Activate	/ja/docs/Web/API/Element/DOMActivate_event
 /ja/docs/Web/Events/DOMContentLoaded	/ja/docs/Web/API/Window/DOMContentLoaded_event
 /ja/docs/Web/Events/abort	/ja/docs/Web/API/HTMLMediaElement/abort_event
@@ -4717,6 +4704,7 @@
 /ja/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/ja/docs/Web/Security/Same-origin_policy
 /ja/docs/Web/JavaScript/Strict_mode	/ja/docs/Web/JavaScript/Reference/Strict_mode
 /ja/docs/Web/JavaScript/Strict_mode/Transitioning_to_strict_mode	/ja/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
+/ja/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 /ja/docs/Web/JavaScript/Tutorials	/ja/docs/Web/JavaScript
 /ja/docs/Web/JavaScript/Typed_arrays/ArrayBuffer	/ja/docs/Web/JavaScript/Reference/Global_objects/ArrayBuffer
 /ja/docs/Web/JavaScript/Typed_arrays/ArrayBufferView	/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
@@ -4902,8 +4890,6 @@
 /ja/docs/XMLHttpRequest/timeout	/ja/docs/Web/API/XMLHttpRequest/timeout
 /ja/docs/XMLSerializer	/ja/docs/Web/API/XMLSerializer
 /ja/docs/XML_Introduction	/ja/docs/Web/XML/XML_Introduction
-/ja/docs/XPInstall_API_Reference/InstallTrigger_Object	/ja/docs/Web/API/InstallTrigger
-/ja/docs/XPInstall_API_Reference:InstallTrigger_Object	/ja/docs/Web/API/InstallTrigger
 /ja/docs/XPath	/ja/docs/Web/XPath
 /ja/docs/XPath/Axes	/ja/docs/Web/XPath/Axes
 /ja/docs/XPath/Axes/ancestor	/ja/docs/Web/XPath/Axes/ancestor

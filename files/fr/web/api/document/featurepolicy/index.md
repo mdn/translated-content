@@ -23,12 +23,10 @@ var policy = iframeElement.featurePolicy
 
 Un objet {{domxref("FeaturePolicy")}} pouvant être utilisé pour consulter les paramètres de Feature Policy appliqués au document.
 
-## Spécification
+## Spécifications
 
-| Spécification                            | Statut                               | Commentaire          |
-| ---------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("Feature Policy")}} | {{Spec2("Feature Policy")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.featurePolicy")}}
+{{Compat}}

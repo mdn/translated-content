@@ -1,24 +1,26 @@
 ---
-title: Workflows for different game types
+title: チュートリアル
 slug: Games/Tutorials
 tags:
   - Canvas
   - Games
   - JavaScript
-  - NeedsTranslation
-  - TopicStub
   - Web
   - Workflows
 translation_of: Games/Tutorials
 original_slug: Games/Workflows
+l10n:
+  sourceCommit: 86e302046641b6c4885d21bc0dc0ddd2f57db2e5
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
+{{GamesSidebar}}
 
-This page contains articles that highlight different workflows for effectively creating different types of web games, whether you want to create a 2D or 3D game from scratch, or port a C++ or Flash game over to open web technologies.
+このページでは、さまざまなタイプのウェブゲームを効果的に作成するためのワークフローを紹介する、複数のチュートリアルシリーズを掲載しています。
 
-- [2D breakout game using pure JavaScript](/ja/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript)
-  - : In this step-by-step tutorial you'll implement a simple breakout clone using pure JavaScript. Along the way you will learn the basics of using the {{htmlelement("canvas")}} element to implement fundamental game mechanics like rendering and moving images, collision detection, control machanisms, and winning and losing states.
-- [2D breakout game using Phaser](/ja/docs/Games/Workflows/2D_breakout_game_Phaser)
-  - : In this step-by-step tutorial you'll implement the same breakout clone as the previous tutorial series, except that this time you'll do it using the[Phaser](http://phaser.io/) HTML5 game framework. This idea here is to teach some of the fundamentals (and advantages) of working with frameworks, along with fundamental game mechanics.
-- [2D maze game with device orientation](/ja/docs/Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation)
-  - : This tutorial shows how to create a 2D maze game using HTML5, incorporating fundamentals such as collision detection and sprite placement on a {{htmlelement("canvas")}}. This is a mobile game that uses the [Device Orientation](/ja/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) and [Vibration](/ja/docs/Web/Guide/API/Vibration) **APIs** to enhance the gameplay and is built using the [Phaser](http://phaser.io/) framework.
+- [純粋な JavaScript を使ったブロック崩しゲーム](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)
+  - : このステップバイステップのチュートリアルでは、純粋な JavaScript を使用してシンプルなブレイクアウトクローンを実装します。その過程で、 {{htmlelement("canvas")}} 要素を使用して、画像の描画や移動、衝突検出、制御機構、勝利と敗北状態などの基本的なゲームメカニズムを実装する基本を学びます。
+- [Phaser を使用した 2D ブロック崩しゲーム](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser)
+  - : このステップバイステップのチュートリアルでは、前回のチュートリアルシリーズと同じブレイクアウトクローンを実装しますが、今回は、 [Phaser](https://phaser.io/) HTML ゲームフレームワークを使って実装します。このチュートリアルでは、フレームワークを使用する際の基本的なこと（および利点）を、基本的なゲームの仕組みと一緒に教えることを目的としています。
+- [端末の方向を使用した 2D 迷路ゲーム](/ja/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation)
+  - : このチュートリアルでは、 HTML5 を使用して、 {{htmlelement("canvas")}} 上の衝突検出やスプライトの配置などの基礎を取り入れた2D迷路ゲームを作成する方法を紹介します。これは、ゲームプレイを向上させるために、[端末の方向](/ja/docs/Web/Apps/Fundamentals/gather_and_modify_data/responding_to_device_orientation_changes)と[バイブレーション](/ja/docs/Web/API/Vibration_API) **API**を使用したモバイルゲームであり、 [Phaser](https://phaser.io/) フレームワークを使用して構築されています。
+- [2D platform game with Phaser](https://mozdevs.github.io/html5-games-workshop/en/guides/platformer/start-here/)
+  - : このチュートリアルシリーズは、 [Phaser](https://phaser.io/) を使って、スプライト、衝突、物理、コレクションなどの基本的なプラットフォームゲームを作成する方法を紹介するものです。

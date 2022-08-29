@@ -55,13 +55,11 @@ objectStoreTitleRequest.onerror = function() {
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                       | Commentaire |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBRequest-onerror', 'onerror')}} | {{Spec2('IndexedDB')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBRequest.onerror")}}
+{{Compat}}
 
 ## Voir aussi
 

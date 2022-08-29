@@ -20,8 +20,8 @@ slug: Learn/Tools_and_testing/Cross_browser_testing
   - : 现在，我们着重考虑你在 HTML 和 CSS 代码中可能遇到的一些常见的跨浏览器问题，以及那些工具可以用来防止问题发生和解决问题。这包括代码检查，处理 CSS 前缀，使用浏览器开发工具找出问题，使用 polyfills 添加浏览器支持，解决响应式问题等。
 - [处理常见的 JavaScript 问题](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
   - : 现在我们来看看常见的跨浏览器 JavaScript 问题，以及怎么解决它们。这会包括使用浏览器开发工具跟踪和解决问题的信息，使用 polyfills 和库来解决问题，让现代的 JavaScript 特性在老浏览器中工作等等。
-- [处理常见的可访问性问题](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-  - : 然后，我们把注意力转向可访问性上，提供常见问题的信息，怎么做简单的测试，和怎么使用审计/自动化工具找到可访问性问题。
+- [处理常见的无障碍问题](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
+  - : 然后，我们把注意力转向无障碍上，提供常见问题的信息，怎么做简单的测试，和怎么使用审计/自动化工具找到无障碍问题。
 - [实现特征检查](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
   - : `特征检查包括确定浏览器是否支持确定的代码块，据此运行不同的代码，让浏览器能一直正常工作，而不是在一些浏览器上崩溃/报错。`本文详细介绍了愈合如何写简单的特征检查，怎么使用库来加速实现，和一些像`@supports`的本地特性来进行特征检查。
 - [自动测试简介](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)

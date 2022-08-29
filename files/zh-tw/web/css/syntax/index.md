@@ -1,7 +1,6 @@
 ---
 title: 語法
 slug: Web/CSS/Syntax
-translation_of: Web/CSS/Syntax
 ---
 {{cssref}}
 

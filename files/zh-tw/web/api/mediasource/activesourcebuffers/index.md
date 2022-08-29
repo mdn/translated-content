@@ -1,7 +1,6 @@
 ---
 title: MediaSource.activeSourceBuffers
 slug: Web/API/MediaSource/activeSourceBuffers
-translation_of: Web/API/MediaSource/activeSourceBuffers
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 

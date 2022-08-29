@@ -1,7 +1,6 @@
 ---
 title: FileReader.error
 slug: Web/API/FileReader/error
-translation_of: Web/API/FileReader/error
 ---
 {{APIRef("File API")}}
 

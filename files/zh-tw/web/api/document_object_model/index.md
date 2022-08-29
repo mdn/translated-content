@@ -1,12 +1,6 @@
 ---
 title: 文件物件模型 (DOM)
 slug: Web/API/Document_Object_Model
-tags:
-  - DOM
-  - DOM Reference
-  - DOM 參考
-  - Intermediate
-translation_of: Web/API/Document_Object_Model
 ---
 {{DefaultAPISidebar("DOM")}}
 

@@ -177,16 +177,11 @@ Vous pouvez consulter [ce paragraphe](/fr/docs/Web/API/XMLHttpRequest/Utiliser_X
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires                                                                                                                                                                                                                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "forms.html#the-form-element", "HTMLFormElement")}} | {{Spec2('HTML WHATWG')}} | Ajout de la méthode `requestAutocomplete()`.                                                                                                                                                                                                                                                                   |
-| {{SpecName('HTML5 W3C', "forms.html#the-form-element", "HTMLFormElement")}}     | {{Spec2('HTML5 W3C')}}     | Les propriétés de l'élément renvoient un élément {{domxref("HTMLFormControlsCollection")}} plutôt qu'un {{domxref("HTMLCollection")}} (changement principalement technique). Ajout de la méthode `checkValidity()`. Ajout des propriétés `autocomplete`, `noValidate` et `encoding`. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-40002357', 'HTMLFormElement')}}             | {{Spec2('DOM2 HTML')}}     | Aucune modification.                                                                                                                                                                                                                                                                                           |
-| {{SpecName('DOM1', 'level-one-html.html#ID-40002357', 'HTMLFormElement')}}     | {{Spec2('DOM1')}}         | Définition initiale.                                                                                                                                                                                                                                                                                           |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLFormElement")}}
+{{Compat}}
 
 ## Voir aussi
 

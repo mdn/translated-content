@@ -121,15 +121,11 @@ function updateValue(e) {
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("HTML WHATWG", "indices.html#event-change", "change")}}             | {{Spec2("HTML WHATWG")}} |                     |
-| {{SpecName("HTML5 W3C", "webappapis.html#handler-onchange", "change")}}     | {{Spec2("HTML5 W3C")}}     |                     |
-| {{SpecName("DOM2 Events", "#Events-eventgroupings-htmlevents", "change")}} | {{Spec2("DOM2 Events")}} | Définition initiale |
+{{Specifications}}
 
-## Compatibilités navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.GlobalEventHandlers.onchange")}}
+{{Compat}}
 
 ## Voir aussi
 

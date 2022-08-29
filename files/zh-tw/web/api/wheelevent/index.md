@@ -1,7 +1,6 @@
 ---
 title: WheelEvent
 slug: Web/API/WheelEvent
-translation_of: Web/API/WheelEvent
 ---
 {{APIRef("DOM Events")}}
 

@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Errors/Bad_octal
 
 ## 에러 형식
 
-{{jsxref("SyntaxError")}}`. `엄격 모드([strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode))에서만 경고 됨.
+{{jsxref("SyntaxError")}}`.` 엄격 모드([strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode))에서만 경고 됨.
 
 ## 무엇이 잘못되었을까?
 

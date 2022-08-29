@@ -206,7 +206,7 @@ background-position: 10px 20px,  top right;
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background.html", '100%', 800)}}
 
-### 背景的可访问性考虑
+### 背景的无障碍考虑
 
 当你把文字放在背景图片或颜色上面时，你应该注意你有足够的对比度让文字对你的访客来说是清晰易读的。如果指定了一个图像，并且文本将被放置在该图像的顶部，您还应该指定一个`background-color` ，以便在图像未加载时文本也足够清晰。
 

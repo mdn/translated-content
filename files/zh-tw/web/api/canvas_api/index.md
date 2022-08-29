@@ -1,7 +1,6 @@
 ---
 title: Canvas API
 slug: Web/API/Canvas_API
-translation_of: Web/API/Canvas_API
 ---
 {{CanvasSidebar}}
 

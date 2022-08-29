@@ -1,7 +1,6 @@
 ---
 title: Event.eventPhase
 slug: Web/API/Event/eventPhase
-translation_of: Web/API/Event/eventPhase
 ---
 {{ApiRef("DOM")}}
 
@@ -129,7 +128,7 @@ function Clear() {
 }
 ```
 
-{{ EmbedLiveSample('Example', '', '700', '', 'Web/API/Event/eventPhase') }}
+{{ EmbedLiveSample('範例', '', '700') }}
 
 ## 規範
 

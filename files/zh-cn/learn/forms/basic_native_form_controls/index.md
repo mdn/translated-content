@@ -98,7 +98,7 @@ HTML5 中添加了其它的文本输入类型，如：{{HTMLElement("input/searc
 
 > **备注：** 你可以在 Github 上看到 [checkable-items.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/checkable-items.html)（你也可以直接看[预览版](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)）。
 
-为了获得最大的可用性和可访问性（无障碍），建议您在 {{htmlelement("fieldset")}} 中包围每个相关项目的列表，并使用 {{htmlelement("legend")}} 提供对列表的全面描述。每个单独的 {{htmlelement("label")}}/{{htmlelement("input")}} 元素都应该包含在它自己的列表项中（或者类似的）。正如在下方示例中显示的。
+为了获得最大的可用性和无障碍（无障碍），建议您在 {{htmlelement("fieldset")}} 中包围每个相关项目的列表，并使用 {{htmlelement("legend")}} 提供对列表的全面描述。每个单独的 {{htmlelement("label")}}/{{htmlelement("input")}} 元素都应该包含在它自己的列表项中（或者类似的）。正如在下方示例中显示的。
 
 ### 复选框
 

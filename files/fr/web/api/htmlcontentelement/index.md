@@ -29,13 +29,11 @@ _Cette interface hérite des methodes de {{domxref("HTMLElement")}}._
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('Shadow DOM', '#the-content-element', 'content')}} | {{Spec2('Shadow DOM')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLContentElement")}}
+{{Compat}}
 
 ## Voir aussi
 

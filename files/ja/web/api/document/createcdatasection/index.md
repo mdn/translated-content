@@ -7,7 +7,6 @@ tags:
   - DOM
   - Method
   - Reference
-browser-compat: api.Document.createCDATASection
 translation_of: Web/API/Document/createCDATASection
 ---
 {{APIRef("DOM")}}

@@ -1,12 +1,6 @@
 ---
 title: 迭代協議
 slug: Web/JavaScript/Reference/Iteration_protocols
-tags:
-  - ECMAScript 2015
-  - Intermediate
-  - Iterator
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Iteration_protocols
 ---
 {{jsSidebar("More")}}
 

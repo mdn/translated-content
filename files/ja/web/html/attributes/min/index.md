@@ -143,7 +143,7 @@ input:invalid {
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attributes.min")}}
+{{Compat}}
 
 ## 関連情報
 

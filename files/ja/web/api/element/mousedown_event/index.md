@@ -1,22 +1,6 @@
 ---
 title: 'Element: mousedown イベント'
 slug: Web/API/Element/mousedown_event
-tags:
-  - API
-  - DOM
-  - Down
-  - Element
-  - イベント
-  - インターフェイス
-  - MouseEvent
-  - Press
-  - リファレンス
-  - UI
-  - ボタン
-  - マウス
-  - mousedown
-browser-compat: api.Element.mousedown_event
-translation_of: Web/API/Element/mousedown_event
 ---
 {{APIRef}}
 

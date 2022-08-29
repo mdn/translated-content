@@ -31,13 +31,11 @@ _Hértite des propriétés de son parent domxref("UIEvent")}} et indirectement d
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('DOM3 Events', '#interface-FocusEvent', 'FocusEvent')}} | {{Spec2('DOM3 Events')}} | Première définition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FocusEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,11 +1,6 @@
 ---
 title: 運算子優先序
 slug: Web/JavaScript/Reference/Operators/Operator_Precedence
-tags:
-  - JavaScript
-  - Operator
-  - precedence
-translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
 ---
 {{jsSidebar("Operators")}}
 

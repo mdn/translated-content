@@ -1,7 +1,6 @@
 ---
 title: 原因：缺少 CORS 標頭 'Access-Control-Allow-Origin'
 slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
-translation_of: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 ---
 {{HTTPSidebar}}
 

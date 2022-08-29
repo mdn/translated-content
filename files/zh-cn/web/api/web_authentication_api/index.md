@@ -165,44 +165,14 @@ navigator.credentials.create(createCredentialDefaultArgs)
 - [Google Demo](http://webauthndemo.appspot.com/) website and its [source code](https://github.com/google/webauthndemo).
 - [webauthn.org](https://webauthn.org) and its [client source code](https://github.com/apowers313/webauthn-simple-app) and [server source code](https://github.com/apowers313/fido2-lib)
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
-### Credential
+{{Compat}}
 
-{{Compat("api.Credential")}}
-
-### CredentialsContainer
-
-{{Compat("api.CredentialsContainer")}}
-
-### PublicKeyCredential
-
-{{Compat("api.PublicKeyCredential")}}
-
-### AuthenticatorResponse
-
-{{Compat("api.AuthenticatorResponse")}}
-
-### AuthenticatorAttestationResponse
-
-{{Compat("api.AuthenticatorAttestationResponse")}}
-
-### AuthenticatorAssertionResponse
-
-{{Compat("api.AuthenticatorAssertionResponse")}}
-
-### PublicKeyCredentialCreationOptions
-
-{{Compat("api.PublicKeyCredentialCreationOptions")}}
-
-### PublicKeyCredentialRequestOptions
-
-{{Compat("api.PublicKeyCredentialRequestOptions")}}
-
-## See also
+## 参见
 
 - [WebAuthentication and WebPayment demo](https://www.youtube.com/watch?v=UNI_Ad-9gX8) on an Android device

@@ -5,34 +5,34 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Map/has
 ---
 {{JSRef}}
 
-方法**`has()`** 返回一个 bool 值，用来表明 map 中是否存在指定元素。
+方法 **`has()`** 返回一个布尔值，用来表明 `Map` 中是否存在指定元素。
 
 ## 语法
 
-```plain
-myMap.has(key);
+```js
+has(key)
 ```
 
 ### 参数
 
-- key
+- `key`
   - : 必填。用来检测是否存在指定元素的键值。
 
 ### 返回值
 
 - Boolean
-  - : 如果指定元素存在于 Map 中，则返回 true。其他情况返回 false
+  - : 如果指定元素存在于 `Map` 中，则返回 `true`；其他情况返回 `false`。
 
 ## 案例
 
-### 使用 has 方法
+### 使用 has()
 
 ```js
-var myMap = new Map();
+const myMap = new Map();
 myMap.set("bar", "foo");
 
-myMap.has("bar");  // returns true
-myMap.has("baz");  // returns false
+console.log(myMap.has("bar"));  // 返回 true
+console.log(myMap.has("baz"));  // 返回 false
 ```
 
 ## 规范

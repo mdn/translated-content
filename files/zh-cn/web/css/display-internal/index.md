@@ -35,19 +35,9 @@ slug: Web/CSS/display-internal
 
 ## 浏览器兼容性
 
-### 支持表值
+{{Compat}}
 
-`table`, `table-cell`, `table-column`, `table-column-group`, `table-footer-group`, `table-header-group`, `table-row`, and `table-row-group`
-
-{{Compat("css.properties.display.table_values", 10)}}
-
-### 支持 ruby 值
-
-`ruby`, `ruby-base`, `ruby-base-container`, `ruby-text`, and `ruby-text-container`
-
-{{Compat("css.properties.display.ruby_values", 10)}}
-
-## 另请参见
+## 参见
 
 - {{CSSxRef("display")}}
 

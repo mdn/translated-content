@@ -1,9 +1,6 @@
 ---
 title: 'Window: orientationchange event'
 slug: Web/API/Window/orientationchange_event
-tags:
-  - Sensors
-translation_of: Web/API/Window/orientationchange_event
 ---
 {{APIRef}}
 

@@ -72,15 +72,13 @@ bouton.onclick = function() {
 - channel
   - : The channel property is an index representing the particular channel to get data for. An index value of 0 represents the first channel. If the `channel` index value is greater than of equal to {{domxref("AudioBuffer.numberOfChannels")}}, an `INDEX_SIZE_ERR` exception will be thrown.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                                                                | Statut                               | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBuffer-getChannelData-Float32Array-unsigned-long-channel', 'getChannelData')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioBuffer.getChannelData")}}
+{{Compat}}
 
 ## Voir aussi
 

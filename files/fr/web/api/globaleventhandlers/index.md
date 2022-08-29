@@ -197,17 +197,11 @@ _Cette interface ne définit aucune méthode._
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                               | Commentaire                                                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName("Selection API",'', 'Extension to GlobalEventHandlers')}}                                 | {{Spec2('Selection API')}} | Ajoute `onselectionchange.`                                                                                                                      |
-| {{SpecName('Pointer Lock', '#extensions-to-the-document-interface', 'Extension of Document')}} | {{Spec2('Pointer Lock')}}     | Ajoute`onpointerlockchange` et `onpointerlockerror` sur{{domxref("Document")}}. Est implémenté expérimentalement `GlobalEventHandlers`. |
-| {{SpecName('HTML WHATWG', '#globaleventhandlers', 'GlobalEventHandlers')}}                         | {{Spec2('HTML WHATWG')}}     | Pas de changement depuis le précédent {{SpecName("HTML5.1")}}.                                                                          |
-| {{SpecName('HTML5.1', '#globaleventhandlers', 'GlobalEventHandlers')}}                                 | {{Spec2('HTML5.1')}}         | Instantané de {{SpecName("HTML WHATWG")}}. `onsort` ajouté depuis {{SpecName("HTML5 W3C")}}.                                     |
-| {{SpecName("HTML5 W3C", "#globaleventhandlers", "GlobalEventHandlers")}}                             | {{Spec2('HTML5 W3C')}}         | Instantané de {{SpecName("HTML WHATWG")}}. Création de `GlobalEventHandlers`.                                                           |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.GlobalEventHandlers")}}
+{{Compat}}
 
 ## Voir aussi
 

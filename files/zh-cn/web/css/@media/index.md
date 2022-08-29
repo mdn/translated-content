@@ -77,7 +77,7 @@ slug: Web/CSS/@media
 
 更多示例，请查看[使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Syntax)。
 
-## 可访问性
+## 无障碍
 
 为了最好地调整网站文本大小，当您需要{{cssxref("&lt;length&gt;")}} 进行[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)时，请使用[`em`](/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#Numeric_values)。
 

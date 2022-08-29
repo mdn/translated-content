@@ -56,15 +56,9 @@ Mozilla's [ServiceWorker Cookbook](https://serviceworke.rs/) 包含很多关于 
 
 ## 浏览器兼容性
 
-### PushEvent
+{{Compat}}
 
-{{Compat("api.PushEvent")}}
-
-### PushMessageData
-
-{{Compat("api.PushMessageData")}}
-
-## 另见
+## 参见
 
 - [Sending VAPID identified WebPush Notifications via Mozilla’s Push Service](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/)
 - [Web Push Notifications: Timely, Relevant, and Precise](https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/), Joseph Medley

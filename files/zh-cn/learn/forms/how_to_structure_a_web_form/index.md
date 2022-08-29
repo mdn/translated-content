@@ -26,7 +26,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
   </tbody>
 </table>
 
-HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可以使用专用的表单元素和属性构建任何类型的基本表单。在构建 HTML 表单时使用正确的结构将有助于确保表单可用性和可访问性。
+HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可以使用专用的表单元素和属性构建任何类型的基本表单。在构建 HTML 表单时使用正确的结构将有助于确保表单可用性和无障碍。
 
 ## \<form> 元素
 

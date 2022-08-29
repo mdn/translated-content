@@ -1,7 +1,6 @@
 ---
 title: window.onpopstate
 slug: Web/API/Window/popstate_event
-translation_of: Web/API/WindowEventHandlers/onpopstate
 original_slug: Web/API/WindowEventHandlers/onpopstate
 ---
 {{ApiRef}}
@@ -41,7 +40,7 @@ history.back(); // 跳出 "location: http://example.com/example.html, state: nul
 history.go(2);  // 跳出 "location: http://example.com/example.html?page=3, state: {"page":3}
 ```
 
-請注意，雖然原始的歷史紀錄（`http://example.com/example.html`）沒有關聯的 `state` 物件，在我們第二次呼叫 ` hitsory.back()` 時仍然會觸發 `popstate` 事件。
+請注意，雖然原始的歷史紀錄（`http://example.com/example.html`）沒有關聯的 `state` 物件，在我們第二次呼叫 `history.back()` 時仍然會觸發 `popstate` 事件。
 
 ## 標準
 

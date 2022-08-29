@@ -74,13 +74,11 @@ Le nom local d'un noeud est la partie du nom qualifié du noeud qui arrive aprè
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-element-localname', 'Element.localName')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.localName")}}
+{{Compat}}
 
 ## Voir aussi
 

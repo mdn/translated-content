@@ -174,7 +174,7 @@ searchTerms = mySearch.value;
 
 ### 搜索表单标签和辅助功能
 
-搜索表单的一个问题是它们的可访问性。 常见的设计惯例是不为搜索字段提供标签（尽管可能会有放大镜图标或类似图标），因为由于放置位置的原因，搜索表单的目的通常对于视力正常的用户而言相当明显（[这个例子展示了一个典型的模式](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)）。
+搜索表单的一个问题是它们的无障碍。 常见的设计惯例是不为搜索字段提供标签（尽管可能会有放大镜图标或类似图标），因为由于放置位置的原因，搜索表单的目的通常对于视力正常的用户而言相当明显（[这个例子展示了一个典型的模式](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)）。
 
 但是，这可能会使屏幕阅读器用户感到困惑，因为他们不会对搜索输入内容有任何口头指示。 解决此问题而不会影响您的视觉设计的一种方法是使用 [WAI-ARIA](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics) 功能：
 

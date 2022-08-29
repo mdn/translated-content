@@ -1,15 +1,6 @@
 ---
 title: ServiceWorkerRegistration.update()
 slug: Web/API/ServiceWorkerRegistration/update
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - サービスワーカー
-  - ServiceWorkerRegistration
-  - Update
-browser-compat: api.ServiceWorkerRegistration.update
-translation_of: Web/API/ServiceWorkerRegistration/update
 ---
 {{APIRef("Service Workers API")}}
 

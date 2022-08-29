@@ -1,7 +1,6 @@
 ---
 title: Stacking context example 1
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
 ---
 « [CSS](/en/CSS) « [理解 CSS 的 z-index](/en/CSS/Understanding_z-index)
 

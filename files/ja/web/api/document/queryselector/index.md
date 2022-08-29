@@ -13,7 +13,6 @@ tags:
   - セレクター
   - querySelector
 translation_of: Web/API/Document/querySelector
-browser-compat: api.Document.querySelector
 ---
 {{ApiRef("DOM")}}
 

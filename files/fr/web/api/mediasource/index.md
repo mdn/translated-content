@@ -116,13 +116,11 @@ function fetchAB (url, cb) {
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                                           | Commentaire          |
-| -------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName('Media Source Extensions', '#mediasource', 'MediaSource')}} | {{Spec2('Media Source Extensions')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.MediaSource")}}
+{{Compat}}
 
 ## Voir aussi
 

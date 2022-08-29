@@ -1,11 +1,6 @@
 ---
 title: WebAssembly
 slug: WebAssembly
-tags:
-  - Landing
-  - WebAssembly
-  - wasm
-translation_of: WebAssembly
 ---
 {{WebAssemblySidebar}}
 
@@ -24,7 +19,7 @@ WebAssembly は JavaScript を補完、並行して動作するように設計�
 - [WebAssembly のコンセプト](/ja/docs/WebAssembly/Concepts)
   - : まずは WebAssembly の高レベルなコンセプト— WebAssembly とはなにか、有用性、ウェブプラットフォーム (またはそれ以上) にどのように適合するか、どのように使用するか — の理解から始めてください。
 - [C/C++ から WebAssembly にコンパイルする](/ja/docs/WebAssembly/C_to_wasm)
-  - : C/C++ で書いたコードを[ Emscripten](/ja/docs/Mozilla/Projects/Emscripten/) のようなツールを使って .wasm にコンパイルできます。どのように動作するか確認してみましょう。
+  - : C/C++ で書いたコードを[Emscripten](/ja/docs/Mozilla/Projects/Emscripten/) のようなツールを使って .wasm にコンパイルできます。どのように動作するか確認してみましょう。
 - [既存の C モジュール から WebAssembly へのコンパイル](/ja/docs/WebAssembly/existing_C_to_wasm)
   - : WebAssembly のコアユースケースは、既存の C ライブラリのエコシステムを利用し、開発者が Web 上でそれらを使用できるようにすることです。
 - [Rust から WebAssembly へのコンパイル](/ja/docs/WebAssembly/rust_to_wasm)

@@ -85,13 +85,11 @@ function addData() {
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#transaction', 'IDBTransaction')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBTransaction.error")}}
+{{Compat}}
 
 ## Voir aussi
 

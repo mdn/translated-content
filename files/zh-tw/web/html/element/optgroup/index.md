@@ -1,13 +1,6 @@
 ---
 title: <optgroup>
 slug: Web/HTML/Element/optgroup
-tags:
-  - Element
-  - Forms
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/optgroup
 ---
 ## 總覽
 

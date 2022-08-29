@@ -12,8 +12,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/every
 
 ## 语法
 
-```plain
-arr.every(callback(element[, index[, array]])[, thisArg])
+```js
+// 箭头函数
+every((element) => { /* … */ } )
+every((element, index) => { /* … */ } )
+every((element, index, array) => { /* … */ } )
+
+// 回调函数
+every(callbackFn)
+every(callbackFn, thisArg)
+
+// 内联回调函数
+every(function(element) { /* … */ })
+every(function(element, index) { /* … */ })
+every(function(element, index, array){ /* … */ })
+every(function(element, index, array) { /* … */ }, thisArg)
+
 ```
 
 ### 参数
@@ -24,12 +38,12 @@ arr.every(callback(element[, index[, array]])[, thisArg])
 
     - `element`
       - : 用于测试的当前值。
-    - `index`{{Optional_inline}}
+    - `index`
       - : 用于测试的当前值的索引。
-    - `array`{{Optional_inline}}
+    - `array`
       - : 调用 `every` 的当前数组。
 
-- `thisArg`
+- `thisArg`{{Optional_inline}}
   - : 执行 `callback` 时使用的 `this` 值。
 
 ### 返回值
@@ -40,7 +54,7 @@ arr.every(callback(element[, index[, array]])[, thisArg])
 
 `every` 方法为数组中的每个元素执行一次 `callback` 函数，直到它找到一个会使 `callback` 返回 {{Glossary("falsy")}} 的元素。如果发现了一个这样的元素，`every` 方法将会立即返回 `false`。否则，`callback` 为每一个元素返回 `true`，`every` 就会返回 `true`。`callback` 只会为那些已经被赋值的索引调用。不会为那些被删除或从未被赋值的索引调用。
 
-`callback` 在被调用时可传入三个参数：元素值，元素的索引，原数组。
+`callback` 被调用时可传入三个参数：元素值，元素的索引，原数组。
 
 如果为 `every` 提供一个 `thisArg` 参数，则该参数为调用 `callback` 时的 `this` 值。如果省略该参数，则 `callback` 被调用时的 `this` 值，在非严格模式下为全局对象，在严格模式下传入 `undefined`。详见 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 条目。
 

@@ -1,15 +1,6 @@
 ---
 title: Understanding CSS z-index
 slug: Web/CSS/CSS_Positioning/Understanding_z_index
-tags:
-  - Advanced
-  - CSS
-  - Guide
-  - NeedsTranslation
-  - TopicStub
-  - Understanding_CSS_z-index
-  - Web
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index
 ---
 Usually HTML pages can be considered two-dimensional, because text, images and other elements are arranged on the page without overlapping. There is a single rendering flow, and all elements are aware of the space taken by others. The {{cssxref("z-index")}} attribute lets you adjust the order of the layering of objects when rendering content.
 

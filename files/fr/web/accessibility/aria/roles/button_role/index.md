@@ -258,10 +258,7 @@ Si un lien effectue l'action d'un bouton, fournir `role="button"` à l'élément
 
 ## Spécifications
 
-| Spécification                                                                    | État                                             |
-| -------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#button","button")}}                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#button","button")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## Notes
 
