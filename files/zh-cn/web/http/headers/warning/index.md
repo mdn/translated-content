@@ -38,13 +38,13 @@ Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 
 | 码值 | 文字描述               | 详细说明                                                                                           |
 | ---- | ---------------------- | -------------------------------------------------------------------------------------------------- |
-| 110  | Response is Stale      | 由缓存服务器提供的响应已过期（设置的失效时间已过）。                                               |
+| 110  | Response is Stale      | 代理服务器返回已过期的资源                                               |
 | 111  | Revalidation Failed    | 由于无法访问服务器，响应验证失败。                                                                 |
-| 112  | Disconnected Operation | 缓存服务器断开连接。                                                                               |
+| 112  | Disconnected Operation | 代理服务器断开连接。                                                                               |
 | 113  | Heuristic Expiration   | 如果缓存服务器采用启发式方法，将缓存的有效时间设定为 24 小时，而在该响应的年龄超过 24 小时时发送。 |
 | 199  | Miscellaneous Warning  | 任意的、未明确指定的警告信息。                                                                     |
 | 214  | Transformation Applied | 由代理服务器添加，如果它对返回的展现内容进行了任何转换，比如改变了内容编码、媒体类型等。           |
-| 299  | Miscellaneous Warning  | 与 199 类似，只不过指代的是持久化警告。                                                            |
+| 299  | Miscellaneous persistent Warning  | 与 199 类似，只不过指代的是持久化警告。                                                            |
 
 ## 示例
 
