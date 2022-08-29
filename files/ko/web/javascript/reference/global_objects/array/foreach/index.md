@@ -25,13 +25,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
 ### 매개변수
 
 - `callback`
-  - : 각 요소에 대해 실행할 함수. 
+  - : 각 요소에 대해 실행할 함수.
     다음 세 가지 매개변수를 받습니다.
     - `currentValue`
       - : 처리할 현재 요소.
-    - `index` 
+    - `index`
       - : 처리할 현재 요소의 인덱스.<
-    - `array` 
+    - `array`
       - : `forEach()`를 호출한 배열.
 - `thisArg`
   - : `callback`을 실행할 때 `this`로 사용할 값.

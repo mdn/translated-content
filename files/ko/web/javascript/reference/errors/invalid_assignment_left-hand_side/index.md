@@ -33,7 +33,7 @@ var str = 'Hello, '
 // ReferenceError: invalid assignment left-hand side
 ```
 
-`if `구문에서, 비교 연산자 ("==")로 비교하려 할 때, 문자열의 연속적인 결합의 경우에는, 플러스("+") 연산자가 필요합니다.
+`if` 구문에서, 비교 연산자 ("==")로 비교하려 할 때, 문자열의 연속적인 결합의 경우에는, 플러스("+") 연산자가 필요합니다.
 
 ```js example-good
 if (Math.PI == 3 || Math.PI == 4) {
