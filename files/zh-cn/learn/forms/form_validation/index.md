@@ -1,9 +1,6 @@
 ---
 title: 表单数据校验
 slug: Learn/Forms/Form_validation
-tags:
-  - HTML
-translation_of: Learn/Forms/Form_validation
 original_slug: Learn/HTML/Forms/Data_form_validation
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms")}}
@@ -153,7 +150,7 @@ input:valid {
 - `[abc]` — 匹配一个字符，它可以是`a`,`b`或`c`.
 - `[^abc]` — 匹配一个字符，但它**不可以**是`a`,`b`或`c`.
 - `[a-z]` — 匹配字符范围 `a-z`且全部小写 (你可以使用 `[A-Za-z]` 涵盖大小写，或 `[A-Z]` 来限制必须大写).
-- `a.c` — 匹配字符 `a`,中间匹配任意一个字符，最后匹配字符` c`.
+- `a.c` — 匹配字符 `a`,中间匹配任意一个字符，最后匹配字符 `c`.
 - `a{5}` — 匹配字符 `a`五次。
 - `a{5,7}` — 匹配字符 `a`五到七次，不能多或者少。
 

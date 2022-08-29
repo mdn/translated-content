@@ -42,7 +42,7 @@ translation_of: Learn/JavaScript/First_steps/Strings
 
 ## 문자열 — 기초
 
-문자열은 숫자와 유사하게 다루어지지만, 더 깊게 파고들면 눈에 띄는 차이점을 발견하기 시작할 것입니다. 먼저 몇 가지 기본 라인을 콘솔에 입력하여 우리와 친숙하게 만드는 것으로 시작하겠습니다. [이 링크](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html)를 통해 다른 탭이나 창에서 열 수 있고, [브라우저 개발자 도구](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)를 사용할 수도 있습니다).
+문자열은 숫자와 유사하게 다루어지지만, 더 깊게 파고들면 눈에 띄는 차이점을 발견하기 시작할 것입니다. 먼저 몇 가지 기본 라인을 콘솔에 입력하여 우리와 친숙하게 만드는 것으로 시작하겠습니다. [이 링크](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html)를 통해 다른 탭이나 창에서 열 수 있고, [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 사용할 수도 있습니다).
 
 ### 문자열 만들기
 
@@ -117,7 +117,7 @@ var bigmouth = 'I\'ve got no right to take my place...';
 console.log(bigmouth);
 ```
 
-이것은 에러가 일어나지 않습니다. 당신은 `\"` 와 같게도 사용할 수 있습니다. 자세한 사항은 [이스케이프 표기법](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation)을 참고하십시오
+이것은 에러가 일어나지 않습니다. 당신은 `\"` 와 같게도 사용할 수 있습니다. 자세한 사항은 [이스케이프 표기법](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation)을 참고하십시오
 
 ## 문자열 연결하기
 
@@ -196,7 +196,7 @@ button.onclick = function() {
       typeof myNum;
       ```
 
-    - 반면, 모든 숫자는 [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) 이라는 함수를 가지고 있습니다. 이 함수는 숫자를 동등한 문자열로 변환합니다. 다음 코드를 실행해보세요:
+    - 반면, 모든 숫자는 [`toString()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) 이라는 함수를 가지고 있습니다. 이 함수는 숫자를 동등한 문자열로 변환합니다. 다음 코드를 실행해보세요:
 
       ```js
       var myNum = 123;
@@ -214,12 +214,12 @@ button.onclick = function() {
 
 ## In this module
 
-- [What is JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/en-US/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/en-US/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator)
+- [What is JavaScript?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [A first splash into JavaScript](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [What went wrong? Troubleshooting JavaScript](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [Storing the information you need — Variables](/ko/docs/Learn/JavaScript/First_steps/Variables)
+- [Basic math in JavaScript — numbers and operators](/ko/docs/Learn/JavaScript/First_steps/Math)
+- [Handling text — strings in JavaScript](/ko/docs/Learn/JavaScript/First_steps/Strings)
+- [Useful string methods](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [Arrays](/ko/docs/Learn/JavaScript/First_steps/Arrays)
+- [Assessment: Silly story generator](/ko/docs/Learn/JavaScript/First_steps/Silly_story_generator)

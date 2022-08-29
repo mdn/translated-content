@@ -1,17 +1,6 @@
 ---
 title: 'Document: scroll事件'
 slug: Web/API/Document/scroll_event
-tags:
-  - API
-  - DOM
-  - Document
-  - Event
-  - 事件
-  - Reference
-  - 參考文件
-  - Scroll
-  - UIEvent
-browser-compat: api.Document.scroll_event
 ---
 {{APIRef}}
 

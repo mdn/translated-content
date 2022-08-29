@@ -148,13 +148,11 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                                                                                | Statut                       | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-createIndex-IDBIndex-DOMString-name-DOMString-sequence-DOMString--keyPath-IDBIndexParameters-optionalParameters', 'createIndex()')}} | {{Spec2('IndexedDB')}} |             |
+{{Specifications}}
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.createIndex")}}
+{{Compat}}
 
 ## Voir aussi
 

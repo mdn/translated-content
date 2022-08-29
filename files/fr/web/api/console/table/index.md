@@ -133,12 +133,10 @@ console.table(data [, columns]);
 - `columns`
   - : Un tableau contenant les noms des colonnes à inclure dans la sortie.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#table", "console.table()")}} | {{Spec2("Console API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.table")}}
+{{Compat}}

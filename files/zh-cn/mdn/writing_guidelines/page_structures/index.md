@@ -1,7 +1,6 @@
 ---
 title: 文档结构
 slug: MDN/Writing_guidelines/Page_structures
-translation_of: MDN/Writing_guidelines/Page_structures
 ---
 {{MDNSidebar}}
 

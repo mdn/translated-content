@@ -1,7 +1,6 @@
 ---
 title: 书本列表页面
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page
 ---
 接下做我们将实作书本列表页面。这个页面需要呈现数据库中所有书本的列表，包含每本书的作者、标题，标题将成为一个超连结，连到书本详细内容页面。
 
@@ -52,7 +51,7 @@ block content
 
 這个视图扩展了 **layout.pug** 基本模板，并覆盖了名为 '**content**' 的區块 `block` 。它显示我们从控制器传入的标题`title`（通过`render()`方法），然后使用`each`-`in`-`else`语法，遍历`book_list`变量。为每本图书创建一个列表项，以显示书名，并作为书的详细信息页面的链接，后面跟着作者姓名。如果`book_list`中没有书，则执行`else`子句，并显示文字“没有书” 'There are no books.'。
 
-> **备注：** 我们使用 `book.url` ，为每本书提供详细记录链接（我们已经实现了此路由，但尚未实现此页面）。这是 `Book `模型的一个虚拟属性，它使用模型实例的 `_id `字段，生成唯一的 URL 路径。
+> **备注：** 我们使用 `book.url` ，为每本书提供详细记录链接（我们已经实现了此路由，但尚未实现此页面）。这是 `Book` 模型的一个虚拟属性，它使用模型实例的 `_id` 字段，生成唯一的 URL 路径。
 
 在这里，我們感兴趣的是，每本书被定义为两行，第二行使用管道（上面高亮显示）。这种方法是必要的，因为如果作者姓名位于上一行，那么它将成为超链接的一部分。
 

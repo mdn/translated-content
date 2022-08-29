@@ -1,12 +1,6 @@
 ---
 title: FileReaderSync
 slug: Web/API/FileReaderSync
-page-type: web-api-interface
-tags:
-  - API
-  - NeedsMarkupWork
-browser-compat: api.FileReaderSync
-translation_of: Web/API/FileReaderSync
 ---
 {{APIRef("File API")}}
 

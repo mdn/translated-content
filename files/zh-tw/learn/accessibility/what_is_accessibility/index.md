@@ -1,7 +1,6 @@
 ---
 title: 何謂無障礙網頁？
 slug: Learn/Accessibility/What_is_accessibility
-translation_of: Learn/Accessibility/What_is_accessibility
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
 

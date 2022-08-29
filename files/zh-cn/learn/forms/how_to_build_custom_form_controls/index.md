@@ -145,7 +145,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 ```css
 .select .optList.hidden {
   /* 这是一个以可访问形式隐藏列表的简单方法，
-     对可访问性我们将在最后进一步拓展 */
+     对无障碍我们将在最后进一步拓展 */
   max-height: 0;
   visibility: hidden;
 }
@@ -157,7 +157,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 
 ```css
 .select {
-  /* 出于可访问性方面的原因，所有尺寸都会由 em 值表示
+  /* 出于无障碍方面的原因，所有尺寸都会由 em 值表示
      (用来确保用户在文本模式下使用浏览器缩放时组件的可缩放性).
      在大多数浏览器下的默认换算是 1em == 16px.
      如果你对 em 和 px 的转换感到疑惑，请参考 http://riddle.pl/emcalc/ */
@@ -307,7 +307,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 
 > **警告：** 下面的代码仅仅是教学性质的，并且不应该照搬使用。在许多方面，正如我们所看到的，这种方案不具有前瞻性，而且可能在旧浏览器上会不工作。这里面还有冗余的部分，在生产环境下，代码需要优化。
 
-> **备注：** 创建可复用的组件可能是一件需要些技巧的事情。[W3C 网络组件草案](http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html) 是对这类特定问题的答案之一。[X-Tag 项目 ](http://x-tags.org/)是对这一规格的实验性实现；我们建议你看看它。
+> **备注：** 创建可复用的组件可能是一件需要些技巧的事情。[W3C 网络组件草案](http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html) 是对这类特定问题的答案之一。[X-Tag 项目](http://x-tags.org/) 是对这一规格的实验性实现；我们建议你看看它。
 
 ### 它为什么不生效？
 
@@ -414,10 +414,10 @@ window.addEventListener("load", function () {
 
 我们打算使用的特性如下所示（按照风险程度从高到低排列）：
 
-1.  {{domxref("element.classList","classList")}}
-2.  {{domxref("EventTarget.addEventListener","addEventListener")}}
-3.  [`forEach`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach) (这不是 DOM 而是现代 JavaScript )
-4.  {{domxref("element.querySelector","querySelector")}} 和 {{domxref("element.querySelectorAll","querySelectorAll")}}
+1. {{domxref("element.classList","classList")}}
+2. {{domxref("EventTarget.addEventListener","addEventListener")}}
+3. [`forEach`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach) (这不是 DOM 而是现代 JavaScript )
+4. {{domxref("element.querySelector","querySelector")}} 和 {{domxref("element.querySelectorAll","querySelectorAll")}}
 
 除了那些特定特性的的可用性以外，在开始之前，仍然存在一个问题。由函数{{domxref("element.querySelectorAll","querySelectorAll()")}} 返回的对象是一个{{domxref("NodeList")}} 而不是 [`Array`](/en-US/docs/JavaScript/Reference/Global_Objects/Array)。这一点非常重要，因为 `Array` 对象支持 [`forEach`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach) 函数，但是 {{domxref("NodeList")}} 不支持。由于 {{domxref("NodeList")}} 看起来实在是像一个 `Array` 并且因为 `forEach` 是这样的便于使用。我们可以轻易地添加对 {{domxref("NodeList")}}的支持，使我们的生活更轻松一些，像这样：
 
@@ -583,7 +583,7 @@ window.addEventListener('load', function () {
 
 实现这一点最简单的方法是使用后台原生组件。这样的一个组件会使用浏览器提供的所有内置控件跟踪值，并且在表单提交时，取值也会像往常一样发送。当有现成的功能时，我们再做重复工作就毫无意义了。
 
-像前面所看到的那样，出于可访问性的原因，我们已经使用了一个原生的选择组件作为后备显示内容；我们可轻松的将它的值与我们的自定义组件之间的值同步。
+像前面所看到的那样，出于无障碍的原因，我们已经使用了一个原生的选择组件作为后备显示内容；我们可轻松的将它的值与我们的自定义组件之间的值同步。
 
 ```js
 // 这个函数更新显示的值并将其通过原生组件同步
@@ -697,11 +697,11 @@ window.addEventListener('load', function () {
 
 但是等等，我们真的做完了嘛？
 
-## 使其具有可访问性
+## 使其具有无障碍
 
-我们构建了一个能够生效的东西，尽管这离一个特性齐全的选择框还差得远，但是它效果不错。但是我们已经完成的事情只不过是摆弄 DOM。这个组件并没有真正的语义，即使它看起来像一个选择框，但是从浏览器的角度来看并不是，所以辅助技术并不能明白这是一个选择框。简单来说，这个全新的选择框并不具备可访问性！
+我们构建了一个能够生效的东西，尽管这离一个特性齐全的选择框还差得远，但是它效果不错。但是我们已经完成的事情只不过是摆弄 DOM。这个组件并没有真正的语义，即使它看起来像一个选择框，但是从浏览器的角度来看并不是，所以辅助技术并不能明白这是一个选择框。简单来说，这个全新的选择框并不具备无障碍！
 
-幸运的是，有一种解决方案叫做 [ARIA](/en-US/docs/Accessibility/ARIA)。ARIA 代表"无障碍富互联网应用"。这是一个专为我们现在做的事情设计的[ W3C 规范](http://www.w3.org/TR/wai-aria/)：使网络应用和自定义组件易于访问，它本质上是一组用来拓展 HTML 的属性集，以便我们能够更好的描述角色，状态和属性，就像我们刚才设计的元素是是它试图传递的原生元素一样。使用这些属性非常简单，所以让我们来试试看。
+幸运的是，有一种解决方案叫做 [ARIA](/en-US/docs/Accessibility/ARIA)。ARIA 代表"无障碍富互联网应用"。这是一个专为我们现在做的事情设计的 [W3C 规范](http://www.w3.org/TR/wai-aria/)：使网络应用和自定义组件易于访问，它本质上是一组用来拓展 HTML 的属性集，以便我们能够更好的描述角色，状态和属性，就像我们刚才设计的元素是是它试图传递的原生元素一样。使用这些属性非常简单，所以让我们来试试看。
 
 ### `role` 属性
 

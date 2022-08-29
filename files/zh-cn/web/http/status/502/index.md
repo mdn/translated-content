@@ -1,11 +1,6 @@
 ---
 title: 502 Bad Gateway
 slug: Web/HTTP/Status/502
-tags:
-  - 响应状态码
-  - 服务器端错误
-  - 状态码
-translation_of: Web/HTTP/Status/502
 ---
 {{HTTPSidebar}}
 

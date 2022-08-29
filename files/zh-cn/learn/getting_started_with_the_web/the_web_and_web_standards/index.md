@@ -16,17 +16,17 @@ slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
 
 快进到 1989 年，TimBL 在 CERN 撰写了 [《Information Management: A Proposal》](https://www.w3.org/History/1989/proposal.html) 和《HyperText》 ； 这两个出版物共同为 Web 将如何工作做了铺垫。两个出版物获得了极大的关注，这足以说服 TimBL 的上司让他继续前进，并创建一个全球超文本系统。
 
-到 1990 年底，TimBL 已经创建了运行第一个版本的 Web 所需的所有东西—— [HTTP](/en-US/docs/Web/HTTP)，[ HTML ](/en-US/docs/Web/HTML)，名为 [WorldWideWeb](https://en.wikipedia.org/wiki/WorldWideWeb) 的第一个 Web 浏览器，一个 HTTP 服务器和一些用于查看的网页。
+到 1990 年底，TimBL 已经创建了运行第一个版本的 Web 所需的所有东西—— [HTTP](/en-US/docs/Web/HTTP)，[HTML](/en-US/docs/Web/HTML)，名为 [WorldWideWeb](https://en.wikipedia.org/wiki/WorldWideWeb) 的第一个 Web 浏览器，一个 HTTP 服务器和一些用于查看的网页。
 
 在随后的几年中，随着多个浏览器的发布，数以千计 Web 服务器的建立，上百万网页的生成，Web 爆发式发展。OK，这只是对事件非常粗略的描述，但我向您说过会简单叙述。
 
-最后一个值得分享的重要事件在 1994 年，TimBL 建立了[万维网联盟（World Wide Web Consortium，W3C）](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium)，该组织汇集了来自许多不同技术公司的代表，共同制定 Web 技术规范。随后其他的技术像[ CSS ](/en-US/docs/Web/CSS)和[ JavaScript ](/en-US/docs/Web/JavaScript)出现了，Web 开始看起来更像我们现在所了解的 Web。
+最后一个值得分享的重要事件在 1994 年，TimBL 建立了[万维网联盟（World Wide Web Consortium，W3C）](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium)，该组织汇集了来自许多不同技术公司的代表，共同制定 Web 技术规范。随后其他的技术像 [CSS](/en-US/docs/Web/CSS) 和 [JavaScript](/en-US/docs/Web/JavaScript) 出现了，Web 开始看起来更像我们现在所了解的 Web。
 
 ## Web 标准
 
 **Web 标准**是我们用来建立 Web 网站的技术。这些标准存在于名为规范的较长的技术文档中，该文档详细说明了技术应如何工作。这些文档对于学习如何使用它们所描述的技术并不是很有用（这就是我们建立像 MDN Web Docs 这样的网站的原因），而是旨在供软件工程师用来实现这些技术（通常在 Web 浏览器中）。
 
-例如，[ HTML Living Standard](https://html.spec.whatwg.org/multipage/) 描述了应如何实现 HTML（所有 HTML 元素及其关联的 API 和其他相关技术）。
+例如，[HTML Living Standard](https://html.spec.whatwg.org/multipage/) 描述了应如何实现 HTML（所有 HTML 元素及其关联的 API 和其他相关技术）。
 
 Web 标准是由标准机构创建的——这些机构邀请不同技术公司的人员聚集在一起，并就如何以最佳方式实现所有用例达成共识。W3C 是最著名的 Web 标准组织，但还有其他组织，例如[WHATWG](https://whatwg.org/)（负责 HTML 语言的现代化），[ECMA](https://www.ecma-international.org/)（发布基于 JavaScript 的 ECMAScript 标准），[Khronos](https://www.khronos.org/)（发布 3D 图形技术，例如 Web GL）等。
 
@@ -64,7 +64,7 @@ _唯一不变的就是变化。_
 
 ### HTTP
 
-超文本传输协议（Hypertext Transfer Protocol，[ HTTP](/en-US/docs/Web/HTTP/Basics_of_HTTP)），它允许 Web 浏览器与 Web 服务器（存储网站的位置）进行通信。典型的通信就像这样
+超文本传输协议（Hypertext Transfer Protocol，[HTTP](/en-US/docs/Web/HTTP/Basics_of_HTTP)），它允许 Web 浏览器与 Web 服务器（存储网站的位置）进行通信。典型的通信就像这样
 
 ```plain
 "你好 Web 服务器。你可以给我用于渲染 bbc.co.uk 的文件吗？"
@@ -78,7 +78,7 @@ HTTP 消息（称为请求和响应）的实际语法不是人类可读的，但
 
 ### HTML , CSS , 和 JavaScript
 
-[HTML ](/en-US/docs/Web/HTML)，[ CSS ](/en-US/docs/Web/CSS)，和 [JavaScript ](/en-US/docs/Web/JavaScript)是您用来建立网站的三种主要技术：
+[HTML](/en-US/docs/Web/HTML)，[CSS](/en-US/docs/Web/CSS)，和 [JavaScript](/en-US/docs/Web/JavaScript) 是您用来建立网站的三种主要技术：
 
 - 超文本标记语言（HTML）是一种标记语言，由可以包装（标记）内容以赋予其含义（语义）和结构的各种元素组成。简单的 HTML 看起来像这样：
 
@@ -147,7 +147,7 @@ HTML，CSS 和 JavaScript 是前端（或客户端）语言，这意味着它们
 - **跨浏览器兼容性（Cross-browser compatibility）**是一种确保您的网页能够在尽可能多的设备上运行的做法。这包括使用所有浏览器都支持的技术，为可以处理这些浏览器的浏览器提供更好的体验（逐步增强），和/或编写代码，从而使之退回到较旧的浏览器中更简单但仍可用的体验（平稳降级）。它还涉及大量测试，以查看某些浏览器是否有任何故障，然后进行更多工作来修复这些故障。
 - **响应式网页设计（Responsive Web design）**是一种使功能和布局变得灵活以便它们可以自动适应不同的浏览器的做法。一个明显的例子是在桌面上的宽屏浏览器中以一种方式进行布局，但在手机浏览器中以另一种更紧凑的单列布局的网站。现在请尝试调整浏览器窗口的宽度，然后看看会发生什么。
 - **性能（Performance）**意味着要尽快加载网站，而且还应使其直观易用，以使用户不会碰壁离开。
-- **可访问性（Accessibility）**意味着使您的网站可供尽可能多的不同类型的人使用（相关概念是多样性和包容性，以及包容性设计）。这包括视力障碍，听力障碍，认知障碍或肢体障碍的人。它也不仅仅局限于残疾人——也包含年轻人或老年人、来自不同文化的人、使用移动设备的人、或网络连接不可靠或缓慢的人。
+- **无障碍（Accessibility）**意味着使您的网站可供尽可能多的不同类型的人使用（相关概念是多样性和包容性，以及包容性设计）。这包括视力障碍，听力障碍，认知障碍或肢体障碍的人。它也不仅仅局限于残疾人——也包含年轻人或老年人、来自不同文化的人、使用移动设备的人、或网络连接不可靠或缓慢的人。
 - **国际化（Internationalization）**意味着使网站可以供来自不同文化背景的人使用，这些人会说和您不同的语言。这一点可以考虑一些技术手段（例如，更改布局以使其对于从右到左甚至垂直的语言仍然可以正常使用）和人为手段（例如，使用简单的非俚语，以便使以您的语言作为第二或第三语言的人更可能理解您的文字）。
 - **隐私与安全（Privacy & Security）** 这两个概念相关但不同。隐私是指允许人们私下从事其业务，而不是监视他们或收集您绝对不需要的更多数据。安全性是指以安全的方式构建您的网站，以使恶意用户无法从您或您的用户那里窃取信息。
 

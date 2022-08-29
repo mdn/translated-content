@@ -130,7 +130,7 @@ console.log(str == obj); // true
 
 ## Same-value equality
 
-등가(same-value) 같음은 최종 사용 사례(use case)를 다룹니다: 두 값이 모든 문맥에서 _기능상 같은지_ 여부를 결정하는. (이 사용 사례는 [리스코프 치환 원칙](https://ko.wikipedia.org/wiki/리스코프_치환_원칙 "Liskov substitution principle")의 실례를 보입니다.) 다음은 불변 속성(property)을 변화시키려 시도할 때 일어나는 한 사례입니다:
+등가(same-value) 같음은 최종 사용 사례(use case)를 다룹니다: 두 값이 모든 문맥에서 _기능상 같은지_ 여부를 결정하는. (이 사용 사례는 [리스코프 치환 원칙](https://ko.wikipedia.org/wiki/리스코프_치환_원칙)의 실례를 보입니다.) 다음은 불변 속성(property)을 변화시키려 시도할 때 일어나는 한 사례입니다:
 
 ```js
 // 불변(immutable) NEGATIVE_ZERO 속성을 Number 생성자에 추가.
@@ -210,7 +210,7 @@ In general, the only time {{jsxref("Object.is")}}'s special behavior towards zer
   - : In some cases,it's possible for a `-0` to be introduced into an expression as a return value of these methods even when no `-0` exists as one of the parameters. For example, using {{jsxref("Math.pow")}} to raise {{jsxref("Infinity", "-Infinity")}} to the power of any negative, odd exponent evaluates to `-0`. Refer to the documentation for the individual methods.
 - {{jsxref("Math.floor")}}, {{jsxref("Math.max")}}, {{jsxref("Math.min")}}, {{jsxref("Math.sin")}}, {{jsxref("Math.sqrt")}}, {{jsxref("Math.tan")}}
   - : It's possible to get a `-0` return value out of these methods in some cases where a `-0` exists as one of the parameters. E.g., `Math.min(-0, +0)` evaluates to `-0`. Refer to the documentation for the individual methods.
-- [`~`](/en-US/docs/Web/JavaScript/Reference/Operators), [`<<`](/en-US/docs/Web/JavaScript/Reference/Operators), [`>>`](/en-US/docs/Web/JavaScript/Reference/Operators)
+- [`~`](/ko/docs/Web/JavaScript/Reference/Operators), [`<<`](/ko/docs/Web/JavaScript/Reference/Operators), [`>>`](/ko/docs/Web/JavaScript/Reference/Operators)
   - : Each of these operators uses the ToInt32 algorithm internally. Since there is only one representation for 0 in the internal 32-bit integer type, `-0` will not survive a round trip after an inverse operation. E.g., both `Object.is(~~(-0), -0)` and `Object.is(-0 << 2 >> 2, -0)` evaluate to `false`.
 
 Relying on {{jsxref("Object.is")}} when the signedness of zeros is not taken into account can be hazardous. Of course, when the intent is to distinguish between `-0` and `+0`, it does exactly what's desired.

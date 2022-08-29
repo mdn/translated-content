@@ -41,13 +41,11 @@ self.name
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', '#dom-dedicatedworkerglobalscope-name', 'name')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DedicatedWorkerGlobalScope.name")}}
+{{Compat}}
 
 ## Voir aussi
 

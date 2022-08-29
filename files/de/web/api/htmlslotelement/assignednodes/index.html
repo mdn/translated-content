@@ -17,7 +17,7 @@ translation_of: Web/API/HTMLSlotElement/assignedNodes
  <dt>options {{optional_inline}}</dt>
  <dd>Ein Objekt, das Optionen für die zurückzugebenden Knoten festlegt. Die verfügbaren Optionen sind:
  <ul>
-  <li><code>flatten</code>: Ein {{jsxref('Boolean')}}, das angibt, ob die dem Slot zugewiesenen Elemente zurückgegeben werden sollen (wenn dieser Wert <code>false</code> ist) oder der Fallback-Inhalt des Slots (wenn dieser Wert <code>true</code> ist). Die Vorgabe ist <code>false</code>.</li>
+  <li><code>flatten</code>: Ein {{jsxref('Boolean')}}, das angibt, ob die dem Slot zugewiesenen Elemente zurückgegeben werden sollen (wenn dieser Wert <code>false</code> ist) oder der Fallback-Inhalt des Slots (wenn dieser Wert <code>true</code> ist). Die Vorgabe ist <code>false</code>.</li>
  </ul>
  </dd>
 </dl>
@@ -32,8 +32,8 @@ translation_of: Web/API/HTMLSlotElement/assignedNodes
 
 <pre class="brush: js">let slots = this.shadowRoot.querySelectorAll('slot');
 slots[1].addEventListener('slotchange', function(e) {
-  let nodes = slots[1].assignedNodes();
-  console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
+  let nodes = slots[1].assignedNodes();
+  console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
 });</pre>
 
 <p>Hier nehmen wir Verweise auf alle Slots und fügen dann einen Slotchange Event Listener zum zweiten Slot in der Vorlage hinzu - derjenige, dessen Inhalt im Beispiel geändert wird.</p>
@@ -52,7 +52,7 @@ slots[1].addEventListener('slotchange', function(e) {
   <tr>
    <td>{{SpecName('HTML WHATWG','scripting.html#dom-slot-assignednodes','assignedNodes')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

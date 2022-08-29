@@ -29,7 +29,7 @@ translation_of: Learn/JavaScript/First_steps
 >
 > 우리는 당신이 목적을 이루기 위해 필요한 핵심적인 개념을 모두 포함하는 강좌를 하나 만들었어요.
 >
-> [**시작하기**](/en-US/docs/Learn/Front-end_web_developer)
+> [**시작하기**](/ko/docs/Learn/Front-end_web_developer)
 
 ## 준비 과정
 

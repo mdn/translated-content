@@ -82,14 +82,11 @@ DBOpenRequest.onsuccess = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('IndexedDB', '#idbrequest', 'IDBRequest')}}     | {{Spec2('IndexedDB')}}     | Définition initiale. |
-| {{SpecName("IndexedDB 2", "#request-api", "IDBRequest")}} | {{Spec2("IndexedDB 2")}} |                      |
+{{Specifications}}
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.IDBRequest")}}
+{{Compat}}
 
 ## Voir aussi
 

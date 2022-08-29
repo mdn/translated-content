@@ -1,17 +1,6 @@
 ---
 title: conic-gradient()
 slug: Web/CSS/gradient/conic-gradient
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - Function
-  - Graphics
-  - Layout
-  - Reference
-  - Web
-  - gradient
-translation_of: Web/CSS/gradient/conic-gradient()
 ---
 {{CSSRef}}
 

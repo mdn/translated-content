@@ -19,14 +19,11 @@ _Pas de méthode spécifique&nbsp;; hérite des méthodes de son parent, {{DOMxR
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire                                                |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "elements.html#htmlunknownelement", "HTMLUnknownElement")}} | {{Spec2("HTML WHATWG")}} | Pas de changement depuis {{SpecName("HTML5 W3C")}}. |
-| {{SpecName("HTML5 W3C", "dom.html#htmlunknownelement", "HTMLUnknownElement")}}         | {{Spec2("HTML5 W3C")}}     | Définition initiale.                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLUnknownElement")}}
+{{Compat}}
 
 ## Voir aussi
 

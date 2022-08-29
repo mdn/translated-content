@@ -1,12 +1,6 @@
 ---
 title: JavaScript 第一步
 slug: Learn/JavaScript/First_steps
-tags:
-  - JavaScript
-  - 入门
-  - 指南
-  - 新手
-translation_of: Learn/JavaScript/First_steps
 ---
 {{LearnSidebar}}
 

@@ -114,12 +114,8 @@ Les méthodes suivantes ont été dépréciées:
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                           | Commentaire                                                                                                                                            |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName("DOM WHATWG", "#interface-attr", "Attr")}}         | {{Spec2("DOM WHATWG")}} | Ajoute la propriété `ownerElement` property                                                                                                            |
-| {{SpecName("DOM4", "#interface-attr", "Attr")}}                 | {{Spec2("DOM4")}}         | A déplacé les `namespaceURI`, `prefix` et `localName` de {{domxref("Node")}} vers cet API et supprimé `ownerElement`, `schemaTypeInfo` et `isId`. |
-| {{SpecName("DOM3 Core", "core.html#ID-637646024", "Attr")}} | {{Spec2("DOM3 Core")}}     | Définition initiale                                                                                                                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Attr")}}
+{{Compat}}

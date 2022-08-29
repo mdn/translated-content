@@ -43,10 +43,10 @@ html,body,svg { height:100% }
 
 ### Attributs globaux
 
-- [Attributs de traitement conditionnel](/fr/docs/SVG/Attribute#ConditionalProccessing "SVG/Attribute#ConditionalProccessing") »
-- [Attributs de base](/fr/docs/SVG/Attribute#Core "SVG/Attribute#Core") »
-- [Attributs d'évènements graphiques](/fr/docs/SVG/Attribute#GraphicalEvent "SVG/Attribute#GraphicalEvent") »
-- [Attributs de présentation](/fr/docs/SVG/Attribute#Presentation "SVG/Attribute#Presentation") »
+- [Attributs de traitement conditionnel](/fr/docs/SVG/Attribute#ConditionalProccessing) »
+- [Attributs de base](/fr/docs/SVG/Attribute#Core) »
+- [Attributs d'évènements graphiques](/fr/docs/SVG/Attribute#GraphicalEvent) »
+- [Attributs de présentation](/fr/docs/SVG/Attribute#Presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}

@@ -1,13 +1,6 @@
 ---
-title: 移动可访问性清单
+title: 移动无障碍清单
 slug: Web/Accessibility/Mobile_accessibility_checklist
-tags:
-  - Firefox OS
-  - 指南
-  - 无障碍
-  - 清单
-  - 移动端
-translation_of: Web/Accessibility/Mobile_accessibility_checklist
 ---
 该文档为移动应用开发者提供一个无障碍需求的简要清单。此文档将随着技术模式的发展而不断演进。
 
@@ -51,7 +44,7 @@ translation_of: Web/Accessibility/Mobile_accessibility_checklist
 
 ## 状态处理
 
-- 标准控件，如单选按钮和复选是通过操作系统处理的，而其它自定义控件的状态改变需要通过 [ARIA States](http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header) ，如` aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded`,和 `aria-pressed`.
+- 标准控件，如单选按钮和复选是通过操作系统处理的，而其它自定义控件的状态改变需要通过 [ARIA States](http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header) ，如 `aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded`,和 `aria-pressed`.
 
 ## General Guidelines 常规指南
 

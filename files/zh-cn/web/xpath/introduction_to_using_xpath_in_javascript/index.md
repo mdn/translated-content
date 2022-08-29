@@ -1,13 +1,6 @@
 ---
 title: Introduction to using XPath in JavaScript
 slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
-tags:
-  - DOM
-  - Extensions
-  - Transforming_XML_with_XSLT
-  - Web Development
-  - XPath
-translation_of: Web/XPath/Introduction_to_using_XPath_in_JavaScript
 original_slug: Web/JavaScript/Introduction_to_using_XPath_in_JavaScript
 ---
 该篇文档描述了如何在扩展和网站内部通过 JavaScript 调用 [XPath](/zh-CN/XPath) 接口。 Mozilla 实现了相当多的 [DOM 3 XPath](http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html)，意味着 Xpath 表达式已经可以在 HTML 和 XML 文档中使用。
@@ -51,7 +44,10 @@ var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? 
 
 或者，也可以使用 `XPathEvaluator` 对象的 `createNSResolver` 方法。
 
-     var xpEvaluator = new XPathEvaluator(); var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
+```js
+var xpEvaluator = new XPathEvaluator();
+var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
+```
 
 然后传递 `document.evaluate`，将 `nsResolver` 变量作为 `namespaceResolver` 参数。
 
@@ -263,7 +259,9 @@ Components.classes["@mozilla.org/dom/xpath-evaluator;1"].createInstance(Componen
 
 这只是一个例子。此函数将需要从 `xpathExpression` 获取命名空间前缀，并返回与该前缀对应的 URI。例如，表达式：
 
-    '//xhtml:td/mathml:math'
+```
+'//xhtml:td/mathml:math'
+```
 
 将选择作为 (X)HTML 表数据单元元素的子项的所有 [MathML](/en-US/docs/Web/API/MathML) 表达式。
 

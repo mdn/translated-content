@@ -1,9 +1,8 @@
 ---
 title: JavaScript 物件基礎概念
 slug: Learn/JavaScript/Objects/Basics
-translation_of: Learn/JavaScript/Objects/Basics
 ---
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
 第一篇談到 JavaScript 物件的文章中，我們了解到基本的 JavaScript 物件語法，複習了某些先前提過的 JavaScript 功能，也再次強調你現正使用中的許多功能其實就是物件。
 
@@ -233,7 +232,7 @@ greeting: function() {
 }
 ```
 
-你可能會想這個「this」是幹嘛用的。「this」是指目前寫入程式碼的物件；所以此範例的 `this `就等於 `person`。那又為何不寫 `person` 就好呢？如同你在〈[初學者的物件導向 JavaScript](/zh-TW/docs/Learn/JavaScript/Objects/Object-oriented_JS)〉一文中所看過的，當我們開始設定建構子等東西時，有用的「`this`」就可在成員內文改變時 (例如 2 個不同 `person` 物件實例可能具備不同的名稱，但打招呼時仍要使用自己的名稱)，確保仍使用了正確的值。
+你可能會想這個「this」是幹嘛用的。「this」是指目前寫入程式碼的物件；所以此範例的 `this` 就等於 `person`。那又為何不寫 `person` 就好呢？如同你在〈[初學者的物件導向 JavaScript](/zh-TW/docs/Learn/JavaScript/Objects/Object-oriented_JS)〉一文中所看過的，當我們開始設定建構子等東西時，有用的「`this`」就可在成員內文改變時 (例如 2 個不同 `person` 物件實例可能具備不同的名稱，但打招呼時仍要使用自己的名稱)，確保仍使用了正確的值。
 
 先用簡化的一對 person 物件說明：
 
@@ -294,4 +293,4 @@ var myNotification = new Notification('Hello!');
 
 下一篇文章將說明「物件導向程式設計 (OOP)」理論，並了解相關技術是如何用於 JavaScript 之中。
 
-{{NextMenu("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects")}}
+{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}

@@ -11,19 +11,19 @@ translation_of: Web/CSS/border-spacing
 ---
 <div>{{CSSRef}}</div>
 
-<p>Die <a href="/de/docs/Web/CSS">CSS</a> Eigenschaft <strong><code>border-spacing</code></strong> legt die Abstände zwischen Tabellenzellen fest.<br>
+<p>Die <a href="/de/docs/Web/CSS">CSS</a> Eigenschaft <strong><code>border-spacing</code></strong> legt die Abstände zwischen Tabellenzellen fest.<br>
  Die Eigenschaft hat nur dann Auswirkungen, wenn <a href="/de/CSS/border-collapse" title="de/CSS/border-collapse"><code>border-collapse: separate</code></a> definiert ist.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/border-spacing.html")}}</div>
 
 
 
-<p>Der Wert für <code>border-spacing </code>wird auch entlang der Außenkante der Tabelle verwendet, wobei der Abstand zwischen dem Rand der Tabelle und den Zellen in der ersten/letzten Spalte oder Zeile die Summe des relevanten Randabstands (horizontalen oder vertikalen) <code>border-spacing</code> und des relevanten (oben, rechts, unten oder links) {{cssxref("padding")}} in der Tabelle ist.</p>
+<p>Der Wert für <code>border-spacing </code>wird auch entlang der Außenkante der Tabelle verwendet, wobei der Abstand zwischen dem Rand der Tabelle und den Zellen in der ersten/letzten Spalte oder Zeile die Summe des relevanten Randabstands (horizontalen oder vertikalen) <code>border-spacing</code> und des relevanten (oben, rechts, unten oder links) {{cssxref("padding")}} in der Tabelle ist.</p>
 
 <p>value is also used along the outside edge of the table, where the distance between the table's border and the cells in the first/last column or row is the sum of the relevant (horizontal or vertical) <code>border-spacing</code> and the relevant (top, right, bottom, or left) {{cssxref("padding")}} on the table.</p>
 
 <div class="note">
-<p><strong>Hinweis:</strong> Die <code>border-spacing</code> Eigenschaft entspricht demveraltetem <code>&lt;table&gt;</code> Attribut  <code>cellspacing</code>, mit der Ausnahme, dass es einen optionalen zweiten Wert hat, mit dem unterschiedliche horizontale und vertikale Abstände eingestellt werden können.</p>
+<p><strong>Hinweis:</strong> Die <code>border-spacing</code> Eigenschaft entspricht demveraltetem <code>&lt;table&gt;</code> Attribut  <code>cellspacing</code>, mit der Ausnahme, dass es einen optionalen zweiten Wert hat, mit dem unterschiedliche horizontale und vertikale Abstände eingestellt werden können.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -69,7 +69,7 @@ border-spacing: initial;
 
 <h3 id="Spacing_and_padding_table_cells" name="Spacing_and_padding_table_cells">Abstände und Padding von Tabellenzellen</h3>
 
-<div class="translate-buttons">
+<div>
 <p>In diesem Beispiel wird ein Abstand von <code>.5em</code> vertikal und <code>1em</code> horizontal zwischen den Zellen einer Tabelle angewendet. Beachten Sie, wie die <code>padding</code> Werte der Tabelle entlang ihrer Außenkanten zu ihren Randabstandswerten <code>border-spacing</code> addiert werden.</p>
 
 <h4 id="HTML">HTML</h4>
@@ -139,5 +139,3 @@ td {
 <ul>
  <li><a href="/de/CSS/border-collapse" title="de/CSS/border-collapse"><code>border-collapse</code></a>, <a href="/de/CSS/caption-side" title="de/CSS/caption-side"><code>caption-side</code></a>, <a href="/de/CSS/empty-cells" title="de/CSS/empty-cells"><code>empty-cells</code></a>, <a href="/de/CSS/table-layout" title="de/CSS/table-layout"><code>table-layout</code></a></li>
 </ul>
-
-<p>{{ languages( { "en": "en/CSS/border-spacing", "fr": "fr/CSS/border-spacing", "pl": "pl/CSS/border-spacing", "es": "es/CSS/border-spacing" } ) }}</p>

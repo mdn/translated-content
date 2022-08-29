@@ -1,7 +1,6 @@
 ---
 title: 侧边栏
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
 original_slug: Mozilla/Add-ons/WebExtensions/user_interface/侧边栏
 ---
 {{AddonSidebar}}

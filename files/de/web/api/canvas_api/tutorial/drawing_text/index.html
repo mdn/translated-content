@@ -30,7 +30,7 @@ original_slug: Web/Guide/HTML/Canvas_Tutorial/Drawing_text
 
 <p>Der Text wird mit dem aktuellen <code>fillStyle</code> gefüllt.</p>
 
-<pre class="brush: js;highlight[4]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.font = '48px serif';
   ctx.fillText('Hello world', 10, 50);
@@ -48,7 +48,7 @@ original_slug: Web/Guide/HTML/Canvas_Tutorial/Drawing_text
 
 <p>Der Text wird mit dem aktuellen <code>strokeStyle</code> umrandet.</p>
 
-<pre class="brush: js;highlight[4]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.font = '48px serif';
   ctx.strokeText('Hello world', 10, 50);
@@ -79,7 +79,7 @@ original_slug: Web/Guide/HTML/Canvas_Tutorial/Drawing_text
 
 <p>These properties might be familiar to you, if you have worked with CSS before.</p>
 
-<p>The following diagram from the <a class="external" href="http://www.whatwg.org/">WHATWG</a> demonstrates the various baselines supported by the <code>textBaseline</code> property.<img alt="The top of the em square is
+<p>The following diagram from the <a class="external" href="http://www.whatwg.org/">WHATWG</a> demonstrates the various baselines supported by the <code>textBaseline</code> property.<img alt="The top of the em square is
 roughly at the top of the glyphs in a font, the hanging baseline is
 where some glyphs like आ are anchored, the middle is half-way
 between the top of the em square and the bottom of the em square,
@@ -94,7 +94,7 @@ baselines, due to glyphs extending far outside the em square." src="http://www.w
 
 <p>Edit the code below and see your changes update live in the canvas:</p>
 
-<pre class="brush: js;highlight[2]">ctx.font = '48px serif';
+<pre class="brush: js;">ctx.font = '48px serif';
 ctx.textBaseline = 'hanging';
 ctx.strokeText('Hello world', 0, 100);
 </pre>
@@ -104,8 +104,8 @@ ctx.strokeText('Hello world', 0, 100);
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.font = "48px serif";
@@ -152,7 +152,7 @@ window.addEventListener('load', drawCanvas);
 
 <p>The following code snippet shows how you can measure a text and get its width.</p>
 
-<pre class="brush: js;highlight[3]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   var text = ctx.measureText('foo'); // TextMetrics object
   text.width; // 16;

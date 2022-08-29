@@ -210,7 +210,7 @@ myTextNode = document.createTextNode("world");
 myP.appendChild(myTextNode);
 ```
 
-例を見て頂いたところで、単語 hello と world が一緒になっていることに注目して下さい: helloworld。ご覧のように外見的には、HTML ページを見ると 2 つのテキスト hello と world は単一ノードのように見えますが、ドキュメントモデルでは 2つのノードがあるのです。2 つ目のノードは `TEXT_NODE` 型の新しいノードで、2つ目の `&lt;p&gt;` タグの 2つ目の子供です。以下の図は文書ツリー中につい先程生成された Text Node オブジェクトを表しています。
+例を見て頂いたところで、単語 hello と world が一緒になっていることに注目して下さい: helloworld。ご覧のように外見的には、HTML ページを見ると 2 つのテキスト hello と world は単一ノードのように見えますが、ドキュメントモデルでは 2つのノードがあるのです。2 つ目のノードは `TEXT_NODE` 型の新しいノードで、2つ目の `<p>` タグの 2つ目の子供です。以下の図は文書ツリー中につい先程生成された Text Node オブジェクトを表しています。
 
 ![](sample2b2.jpg)
 
@@ -235,7 +235,7 @@ myBody.appendChild(myNewPTAGnode);
 myP.removeChild(myTextNode);
 ```
 
-テキストノード `myTextNode` ("world" という単語を含む) はまだ存在しています。以下のコードは、`myTextNode` を最近作成された `&lt;p&gt;` 要素である `myNewPTAGnode` に割り当てています。
+テキストノード `myTextNode` ("world" という単語を含む) はまだ存在しています。以下のコードは、`myTextNode` を最近作成された `<p>` 要素である `myNewPTAGnode` に割り当てています。
 
 ```js
 myNewPTAGnode.appendChild(myTextNode);

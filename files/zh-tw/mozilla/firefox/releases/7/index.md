@@ -1,7 +1,6 @@
 ---
 title: Firefox 7 技術文件
 slug: Mozilla/Firefox/Releases/7
-translation_of: Mozilla/Firefox/Releases/7
 ---
 {{FirefoxSidebar}}
 
@@ -28,7 +27,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 - `toDataURL()` method now accepts a second argument to control JPEG quality.
 - Support for the non-standard `globalCompositeOperation` operations `clear` and `over` has been removed.
 - [Shadows](/en/Canvas_tutorial/Applying_styles_and_colors#Shadows) are now only drawn for `source-over` compositing operations.
-- You can now configure the fill rule used by canvas by setting the `mozFillRule `[attribute](/en/DOM/CanvasRenderingContext2D#Attributes) on the context.
+- You can now configure the fill rule used by canvas by setting the `mozFillRule` [attribute](/en/DOM/CanvasRenderingContext2D#Attributes) on the context.
 - Support for the experimental `mozDash`, `mozDashOffset`, `mozCurrentTransform` and `mozCurrentTransformInverse` attributes has been added.
 - Support for the non-standard methods `mozDrawText()`, `mozMeasureText()`, `mozPathText()` and `mozTextAlongPath()` has been been removed.
 

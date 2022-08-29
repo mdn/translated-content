@@ -1,7 +1,6 @@
 ---
 title: 遊戲開發
 slug: Games
-translation_of: Games
 ---
 {{GamesSidebar}}
 

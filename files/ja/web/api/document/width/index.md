@@ -11,7 +11,6 @@ tags:
   - プロパティ
   - リファレンス
   - 非推奨
-browser-compat: api.Document.width
 translation_of: Web/API/Document/width
 ---
 {{APIRef("DOM")}} {{deprecated_header}}

@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number
 
 <dl>
  <dt><code>value</code></dt>
- <dd>Ein numerischer Wert, der als Objekt erstellt werden soll.</dd>
+ <dd>Ein numerischer Wert, der als Objekt erstellt werden soll.</dd>
 </dl>
 
 <h2 id="Description" name="Description">Beschreibung</h2>
@@ -27,8 +27,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number
 <p>Die hauptsächlichen Nutzungen des <code>Number</code> Objektes sind:</p>
 
 <ul>
- <li>Wenn der Parameter nicht zu einer Nummer konvertiert werden kann, wird {{jsxref("NaN")}} zurückgegeben.</li>
- <li>In einem nicht-Konstruktor Kontext (z. B. ohne den {{jsxref("Operators/new", "new")}} Operator) führt <code>Number</code> zu einer Typkonvertierung.</li>
+ <li>Wenn der Parameter nicht zu einer Nummer konvertiert werden kann, wird {{jsxref("NaN")}} zurückgegeben.</li>
+ <li>In einem nicht-Konstruktor Kontext (z. B. ohne den {{jsxref("Operators/new", "new")}} Operator) führt <code>Number</code> zu einer Typkonvertierung.</li>
 </ul>
 
 <h2 id="Properties" name="Properties">Eigenschaften</h2>
@@ -62,13 +62,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number
 
 <dl>
  <dt>{{jsxref("Number.isNaN()")}}</dt>
- <dd>Gibt an, ob der übergebene Wert {{jsxref("Number.NaN", "NaN")}} ist.</dd>
+ <dd>Gibt an, ob der übergebene Wert {{jsxref("Number.NaN", "NaN")}} ist.</dd>
  <dt>{{jsxref("Number.isFinite()")}}</dt>
- <dd>Gibt an, ob der übergebene Wert eine endliche Zahl ist.</dd>
+ <dd>Gibt an, ob der übergebene Wert eine endliche Zahl ist.</dd>
  <dt>{{jsxref("Number.isInteger()")}}</dt>
- <dd>Gibt an, ob der übergebene Wert eine ganze Zahl ist.</dd>
+ <dd>Gibt an, ob der übergebene Wert eine ganze Zahl ist.</dd>
  <dt>{{jsxref("Number.isSafeInteger()")}}</dt>
- <dd>Gibt an, ob der der übergebene Wert eine sichere ganze Zahl ist (eine ganze Zahl zwischen -(2<sup>53</sup> -1) und 2<sup>53</sup> -1).</dd>
+ <dd>Gibt an, ob der der übergebene Wert eine sichere ganze Zahl ist (eine ganze Zahl zwischen -(2<sup>53</sup> -1) und 2<sup>53</sup> -1).</dd>
  <dt><s class="obsoleteElement">{{jsxref("Number.toInteger()")}} {{obsolete_inline}}</s></dt>
  <dd><s class="obsoleteElement">Wurde eingesetzt um eine Zahl zu einer ganzen Zahl zu konvertieren. Die Funktion wurde entfernt.</s></dd>
  <dt>{{jsxref("Number.parseFloat()")}}</dt>
@@ -87,7 +87,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number
 
 <h2 id="Examples" name="Examples">Beispiele</h2>
 
-<h3 id="Example:_Using_the_Number_object_to_assign_values_to_numeric_variables" name="Example:_Using_the_Number_object_to_assign_values_to_numeric_variables">Einsatz des <code>Number</code> Objektes zur Zuweisung von numerischen Variablen</h3>
+<h3 id="Example:_Using_the_Number_object_to_assign_values_to_numeric_variables" name="Example:_Using_the_Number_object_to_assign_values_to_numeric_variables">Einsatz des <code>Number</code> Objektes zur Zuweisung von numerischen Variablen</h3>
 
 <p>Das folgende Beispiel benutzt Eigenschaften des <code>Number</code> Objektes um Werte zu numerischen Variablen zuzuweisen:</p>
 
@@ -106,9 +106,9 @@ var notANum = Number.NaN;
 var smallestInt = -9007199254740992;
 </pre>
 
-<p>Wenn Daten im JSON Format eingelesen werden und Ganzzahlen den oben gezeigten Bereich übersteigen, kann es passieren, dass Fehler beim Erstellen von <code>Number</code> Objekten auftreten. Mit dem Einsatz von {{jsxref("String")}} können solche Fehler umgangen werden. </p>
+<p>Wenn Daten im JSON Format eingelesen werden und Ganzzahlen den oben gezeigten Bereich übersteigen, kann es passieren, dass Fehler beim Erstellen von <code>Number</code> Objekten auftreten. Mit dem Einsatz von {{jsxref("String")}} können solche Fehler umgangen werden. </p>
 
-<h3 id="Example:_Using_Number_to_convert_a_Date_object" name="Example:_Using_Number_to_convert_a_Date_object">Einsatz von <code>Number</code> zum Konvertieren eines <code>Date</code> Objekts</h3>
+<h3 id="Example:_Using_Number_to_convert_a_Date_object" name="Example:_Using_Number_to_convert_a_Date_object">Einsatz von <code>Number</code> zum Konvertieren eines <code>Date</code> Objekts</h3>
 
 <p>Das folgende Beispiel konvertiert ein {{jsxref("Date")}} Objekt in einen numerischen Wert. Dazu wird <code>Number</code> als Funktion verwendet:</p>
 
@@ -148,7 +148,7 @@ Number('100a')    // NaN
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.7', 'Number')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-number-objects', 'Number')}}</td>
@@ -160,7 +160,7 @@ Number('100a')    // NaN
   <tr>
    <td>{{SpecName('ESDraft', '#sec-number-objects', 'Number')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -174,5 +174,5 @@ Number('100a')    // NaN
 <ul>
  <li>{{jsxref("NaN", "NaN")}}</li>
  <li>Das globale Objekt {{jsxref("Math", "Math")}}</li>
- <li><a href="https://medium.com/@maximus.koretskyi/javascripts-number-type-8d59199db1b6#.9whwe88tz">Number type in details</a></li>
+ <li><a href="https://medium.com/@maximus.koretskyi/javascripts-number-type-8d59199db1b6#.9whwe88tz">Number type in details</a></li>
 </ul>

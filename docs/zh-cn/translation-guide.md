@@ -4,7 +4,7 @@
 
 同样地，如果你对本文的指南有任何改进的建议，请提出问题（issue）或发起 PR。我们对此表示欢迎。下面进入简体中文翻译指南的正文部分。
 
-> MDN 中的文档正在逐渐向 Markdown 格式迁移（由 [yari 平台](https://developer.mozilla.org/zh-CN/docs/MDN/Yari)渲染为 HTML），以下的说明仅针对 Markdown 格式，对于现有的 HTML 格式文档，并非完全适用。若你对 MDN 上使用的 Markdown 格式不熟悉，请参阅 [MDN 的 Markdown](https://developer.mozilla.org/zh-CN/docs/MDN/Contribute/Markdown_in_MDN)。
+> 若你对 MDN 上使用的 Markdown 格式不熟悉，请参阅 [MDN 的 Markdown](https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN)。
 
 ## 元数据
 

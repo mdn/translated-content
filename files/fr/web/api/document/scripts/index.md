@@ -35,10 +35,8 @@ if (scripts.length) {
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                               | Commentaire |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('HTML WHATWG', '#dom-document-scripts', 'Document.scripts')}} | {{ Spec2('HTML WHATWG') }} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.scripts")}}
+{{Compat}}

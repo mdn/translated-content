@@ -1,7 +1,6 @@
 ---
 title: tabs.discard()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/discard
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/discard
 ---
 {{AddonSidebar()}}
 

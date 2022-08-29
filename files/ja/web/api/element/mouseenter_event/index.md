@@ -1,20 +1,6 @@
 ---
 title: 'Element: mouseenter イベント'
 slug: Web/API/Element/mouseenter_event
-tags:
-  - API
-  - Cursor
-  - DOM
-  - Element
-  - イベント
-  - インターフェイス
-  - MouseEvent
-  - リファレンス
-  - マウス
-  - mouseenter
-  - ポインター
-browser-compat: api.Element.mouseenter_event
-translation_of: Web/API/Element/mouseenter_event
 ---
 {{APIRef}}
 

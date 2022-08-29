@@ -10,7 +10,6 @@ tags:
   - リファレンス
   - エディター
   - 非推奨
-browser-compat: api.Document.queryCommandSupported
 translation_of: Web/API/Document/queryCommandSupported
 ---
 {{ApiRef("DOM")}}{{deprecated_header}}

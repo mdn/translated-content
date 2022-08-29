@@ -340,7 +340,7 @@ document.addEventListener('keyup', (event) => {
 
   <kbd>Enter</kbd>
 
-  키의 조합(상호 호환성을 위해 유지됨)을 제외한 [non-printable keys](</en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>)에 대해서는 `keypress` 이벤트가 발생하지 않습니다 ({{bug(968056)}}).
+  키의 조합(상호 호환성을 위해 유지됨)을 제외한 [non-printable keys](</ko/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>)에 대해서는 `keypress` 이벤트가 발생하지 않습니다 ({{bug(968056)}}).
 
 ## 같이 보기
 

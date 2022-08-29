@@ -4,7 +4,6 @@ slug: Web/API/Node/previousSibling
 translation_of: Web/API/Node/previousSibling
 ---
 <p>{{ ApiRef() }}</p>
-<p>{{ languages( { "fr": "fr/DOM/element.previousSibling", "ja": "ja/DOM/element.previousSibling", "pl": "pl/DOM/element.previousSibling", "zh-cn": "zh-cn/DOM/Node.previousSibling" } ) }}</p>
 <h3 id="Summary" name="Summary">Allgemein</h3>
 <p>Gibt den Datenknoten zurück, der entsprechend der childNodes-Liste des Elternelements dem gegebenen Datenknoten direkt vorangestellt ist. Falls der übergebene Knoten bereits der erste in dieser Liste ist, wird null zurückgegeben.</p>
 <h3 id="Syntax" name="Syntax">Syntax</h3>
@@ -25,7 +24,7 @@ translation_of: Web/API/Node/previousSibling
 &lt;/html&gt;
 </pre>
 <p>So kann der vorangestellte Datenknoten von <code>&lt;ul&gt;</code> ermittelt werden:</p>
-<pre class="brush:javascript">	// Diese Variable speichert eine Referenz auf das letzte Element, das &lt;body&gt; enthält, also &lt;ul&gt;
+<pre class="brush: js">	// Diese Variable speichert eine Referenz auf das letzte Element, das &lt;body&gt; enthält, also &lt;ul&gt;
 	var element = document.body.children[2];
 
 	// Nun ermitteln wir durch previousSibling den vorangestellten Knoten
@@ -37,7 +36,7 @@ translation_of: Web/API/Node/previousSibling
 <p><strong>Erläuterung:</strong></p>
 <p>Die Variable <code><var>element</var></code> enthält das letzte Kindelement des -Tags, also <code>&lt;ul&gt;</code>. <code><var>vorangestellterKnoten</var></code> speichert den direkt vorangestellten Geschwisterknoten von <code>&lt;ul&gt;</code>. In diesem Fall ist das ein Textknoten der einen Zeilenvorschub und vier Leerzeichen enthält, die sich in dem HTML-Dokument zwischen dem <code>&gt;</code> von <code>&lt;p&gt;</code> und dem <code>&lt;</code> des <code>&lt;ul&gt;</code> befinden. Das alert()-Fenster gibt somit <code>#text</code> aus.</p>
 <p>So können alle vorangestellten Datenknoten eines Elements ermittelt werden:</p>
-<pre class="brush:javascript">var element = document.body.children[2];
+<pre class="brush: js">var element = document.body.children[2];
 var liste = [];
 
 while(element.previousSibling) {
@@ -58,8 +57,8 @@ while(element.previousSibling) {
  Falls Textknoten nicht berücksichtigt werden sollen, verwenden Sie stattdessen {{ domxref("Element.previousElementSibling") }}</p>
 <h3 id="Specification" name="Specification">Spezifikationen</h3>
 <ul>
- <li><a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-previousSibling">DOM Level 1 Core: previousSibling</a> (en)</li>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-640FB3C8">DOM Level 2 Core: previousSibling</a> (en)</li>
+ <li><a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-previousSibling">DOM Level 1 Core: previousSibling</a> (en)</li>
+ <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-640FB3C8">DOM Level 2 Core: previousSibling</a> (en)</li>
 </ul>
 <h3 id="Siehe_auch">Siehe auch</h3>
 <ul>

@@ -144,7 +144,7 @@ setTimeout(myBoundMethod, 1.5*1000, "1"); // 1.5초 후 "one" 기록
 
 ### 문자열 리터럴 지정하기
 
-`setTimeout()`에 함수 대신 문자열을 지정하는 것은 [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)을 사용하는 것과 같은 문제를 가집니다.
+`setTimeout()`에 함수 대신 문자열을 지정하는 것은 [`eval()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/eval)을 사용하는 것과 같은 문제를 가집니다.
 
 ```js example-bad
 // 하지 마세요

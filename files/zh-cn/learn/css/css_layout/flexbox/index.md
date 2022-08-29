@@ -1,17 +1,6 @@
 ---
 title: 弹性盒子
 slug: Learn/CSS/CSS_layout/Flexbox
-tags:
-  - CSS
-  - CSS 布局
-  - Layouts
-  - Learn
-  - flexbox
-  - 初学者
-  - 弹性框
-  - 教程
-  - 文章
-translation_of: Learn/CSS/CSS_layout/Flexbox
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 
@@ -101,7 +90,7 @@ flex-direction: column;
 
 你会看到，这会将那些元素设置为列布局，就像我们添加这些 CSS 之前。在继续之前，请从示例中删除此规则。
 
-> **备注：** 你还可以使用 `row-reverse `和 `column-reverse `值反向排列 flex 项目。用这些值试试看吧！
+> **备注：** 你还可以使用 `row-reverse` 和 `column-reverse` 值反向排列 flex 项目。用这些值试试看吧！
 
 ## 换行
 

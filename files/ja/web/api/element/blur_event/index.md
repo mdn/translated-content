@@ -1,17 +1,6 @@
 ---
 title: 'Element: blur イベント'
 slug: Web/API/Element/blur_event
-tags:
-  - API
-  - DOM
-  - Element
-  - イベント
-  - FocusEvent
-  - リファレンス
-  - blur
-  - onblur
-browser-compat: api.Element.blur_event
-translation_of: Web/API/Element/blur_event
 ---
 {{APIRef}}
 

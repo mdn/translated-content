@@ -26,13 +26,11 @@ Un double.
 
 ## Spécifications
 
-| Specification                                                                                        | Status                                       | Comment                                            |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------------- |
-| {{SpecName('Geometry Interfaces', '#dom-domrectreadonly-width', 'width')}} | {{Spec2('Geometry Interfaces')}} | La dernière version de la spécification est un ED. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMRectReadOnly.width")}}
+{{Compat}}
 
 ## Voir aussi
 

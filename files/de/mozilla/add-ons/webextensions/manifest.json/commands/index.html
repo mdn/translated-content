@@ -37,7 +37,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 
 <p>Verwenden Sie den<code>commands-Schlüssel, um für Ihre Erweiterung eine oder mehrere Tastenkürzel zu definieren</code>.</p>
 
-<p>Jedes Tastenkürzel wird mit einem Namen, eine Kombination von Tasten und einer Beschreibung definiert. Sobald Sie einige Befehle in der manifest.json definiert haben, können Sie die zugewiesenen Tastenkombinationen mittels der JavaScript-API  {{WebExtAPIRef("commands")}} verwenden.</p>
+<p>Jedes Tastenkürzel wird mit einem Namen, eine Kombination von Tasten und einer Beschreibung definiert. Sobald Sie einige Befehle in der manifest.json definiert haben, können Sie die zugewiesenen Tastenkombinationen mittels der JavaScript-API  {{WebExtAPIRef("commands")}} verwenden.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -117,14 +117,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 <h3 id="Tastenkombinationen">Tastenkombinationen</h3>
 
 <div class="pull-aside">
-<div class="moreinfo">Auf Macs wird "Ctrl" als  "Command"-Taste interpretiert, geben Sie also "MacCrtl" an, wenn Sie eigentlich "Ctrl" brauchen.</div>
+<div class="moreinfo">Auf Macs wird "Ctrl" als  "Command"-Taste interpretiert, geben Sie also "MacCrtl" an, wenn Sie eigentlich "Ctrl" brauchen.</div>
 </div>
 
 <p>Tastenkombinationen müssen aus zwei oder mehr Tasten bestehen:</p>
 
 <ul>
  <li><strong>Modifikator </strong>(obligatorisch, mit Ausnahme der Funktionstasten). Dieser kann sein: "Ctrl", "Alt", "Command", "MacCtrl".</li>
- <li><strong>zweiter Modifikator</strong> (optional). Wenn angegeben, muss dieser entweder "Shift" oder (für Firefox ≥ 63)  "Ctrl", "Alt", "Command" und "MacCtrl" sein, wenn sie nicht als Hauptmodifikator verwendet werden.</li>
+ <li><strong>zweiter Modifikator</strong> (optional). Wenn angegeben, muss dieser entweder "Shift" oder (für Firefox ≥ 63)  "Ctrl", "Alt", "Command" und "MacCtrl" sein, wenn sie nicht als Hauptmodifikator verwendet werden.</li>
  <li><strong>Taste </strong>(obligatorisch). Die kann sein:
   <ul>
    <li>die Buchstaben A-Z</li>

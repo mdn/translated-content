@@ -1,17 +1,6 @@
 ---
 title: ResizeObserver.unobserve()
 slug: Web/API/ResizeObserver/unobserve
-page-type: web-api-instance-method
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - リサイズオブザーバー API
-  - ResizeObserver
-  - observers
-  - unobserve()
-browser-compat: api.ResizeObserver.unobserve
-translation_of: Web/API/ResizeObserver/unobserve
 ---
 {{APIRef("Resize Observer API")}}
 

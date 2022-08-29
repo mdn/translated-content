@@ -1,14 +1,6 @@
 ---
 title: 让我们开始 CSS 的学习之旅
 slug: Learn/CSS/First_steps/Getting_started
-tags:
-  - CSS
-  - 元素
-  - 初学者
-  - 学习
-  - 类
-  - 选择器
-translation_of: Learn/CSS/First_steps/Getting_started
 original_slug: Learn/CSS/First_steps/开始
 ---
 {{LearnSidebar}}
@@ -237,8 +229,8 @@ a:hover {
 > **备注：** 在本教程以及整个 MDN 站点中，你会经常看到“无障碍”这个词。“无障碍”一词的意思是，我们的网页应当让每一个访客都能够理解、使用。
 >
 > 你的访客可能在一台使用鼠标和键盘操作的计算机前，也可能正在使用带有触摸屏的手机，或者正在使用屏幕阅读软件读出文档内容，或者他们需要使用更大的字体，或者仅仅使用键盘浏览站点。
-> 
-> 一个朴素的 HTML 文档一般来说对任何人都是可以无障碍访问的，当你开始为它添加样式，记得不要破坏这种可访问性。
+>
+> 一个朴素的 HTML 文档一般来说对任何人都是可以无障碍访问的，当你开始为它添加样式，记得不要破坏这种无障碍。
 
 ## 同时使用选择器和选择符
 
@@ -278,8 +270,8 @@ body h1 + p .special {
 
 ## 在此模块
 
-1.  [什么是 CSS?](/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [开始学习 CSS](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)
-3.  [CSS 代码是如何组织的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [CSS 是如何工作的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [开始使用你的新知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)
+1. [什么是 CSS?](/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [开始学习 CSS](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)
+3. [CSS 代码是如何组织的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [CSS 是如何工作的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [开始使用你的新知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)

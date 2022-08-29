@@ -25,6 +25,14 @@ Hay cuatro elementos en un árbol de objeto de accesibilidad:
 
 Además, el árbol de accesibilidad usualmente contiene información sobre lo que se puede hacer con un elemento: _seguir_ un enlace, _completar_ un cuadro de texto, etc.
 
-- [Glossary](/es/docs/Glossary)
-  - {{Glossary("Accessibility")}}
-  - {{Glossary("ARIA")}}
+<section id="Quick_links">
+ <ol>
+  <li><a href="/es/docs/Glossary">Glossary</a>
+ 
+   <ol>
+    <li>{{Glossary("Accessibility")}}</li>
+    <li>{{Glossary("ARIA")}}</li>
+   </ol>
+  </li>
+ </ol>
+</section>

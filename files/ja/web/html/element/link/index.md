@@ -104,7 +104,7 @@ translation_of: Web/HTML/Element/link
           <td>fetch</td>
           <td>
             <p>fetch, XHR</p>
-            <div class="notecard note">
+            <div class=" note">
               <p>
                 <strong>Note:</strong> この値では <code>&#x3C;link></code> に crossorigin 属性が付いたものが必要です。
               </p>

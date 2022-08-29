@@ -1,12 +1,6 @@
 ---
 title: 位置情報 API
 slug: Web/API/Geolocation_API
-tags:
-  - 位置情報 API
-  - ガイド
-  - 中級者
-  - 概要
-translation_of: Web/API/Geolocation_API
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 

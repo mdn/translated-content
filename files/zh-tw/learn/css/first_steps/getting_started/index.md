@@ -1,26 +1,6 @@
 ---
 title: 開始使用 CSS
 slug: Learn/CSS/First_steps/Getting_started
-tags:
-  - CSS
-  - 元素
-  - 初學者
-  - 學習
-  - 狀態
-  - 範例
-  - 語法
-  - 課程
-  - 選擇器
-  - Beginner
-  - CSS
-  - Classes
-  - Elements
-  - Example
-  - Learn
-  - Selectors
-  - Syntax
-  - state
-translation_of: Learn/CSS/First_steps/Getting_started
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
 
@@ -301,8 +281,8 @@ body h1 + p .special {
 
 ## 在這個單元中
 
-1.  [CSS 是什麼？](/zh-TW/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [開始使用 CSS](/zh-TW/docs/Learn/CSS/First_steps/Getting_started)
-3.  [CSS 的結構](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [CSS 的運作方式](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [使用您的新知識](/zh-TW/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [CSS 是什麼？](/zh-TW/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [開始使用 CSS](/zh-TW/docs/Learn/CSS/First_steps/Getting_started)
+3. [CSS 的結構](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [CSS 的運作方式](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [使用您的新知識](/zh-TW/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

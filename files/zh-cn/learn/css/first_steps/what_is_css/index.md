@@ -1,7 +1,6 @@
 ---
 title: 什么是 CSS?
 slug: Learn/CSS/First_steps/What_is_CSS
-translation_of: Learn/CSS/First_steps/What_is_CSS
 ---
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
 
@@ -119,8 +118,8 @@ CSS 也不例外——它是由 W3C(万维网联盟) 中的一个名叫 [CSS Wor
 
 ## 本章目录
 
-1.  [什么是 CSS?](/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)
-3.  [如何构建 CSS](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [CSS 如何工作](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [用用你刚学到的知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)
+1. [什么是 CSS?](/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)
+3. [如何构建 CSS](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [CSS 如何工作](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [用用你刚学到的知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)

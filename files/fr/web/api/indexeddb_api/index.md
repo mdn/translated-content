@@ -108,10 +108,7 @@ Une précedente version des spécifications a défini ces interfaces, désormais
 
 ## Spécifications
 
-| Spécification                        | Statut                           | Commentaire         |
-| ------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('IndexedDB')}}     | {{Spec2('IndexedDB')}}     | Définition initiale |
-| {{SpecName("IndexedDB 2")}} | {{Spec2("IndexedDB 2")}} |                     |
+{{Specifications}}
 
 ## Voir aussi
 

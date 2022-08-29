@@ -50,10 +50,8 @@ if (Element.prototype.getAttributeNames == undefined) {
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName("DOM WHATWG", "#dom-element-getattributenames", "Element.getAttributeNames")}} | {{Spec2("DOM WHATWG")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.getAttributeNames")}}
+{{Compat}}

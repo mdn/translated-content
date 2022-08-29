@@ -1,17 +1,6 @@
 ---
 title: 使用 Fetch
 slug: Web/API/Fetch_API/Using_Fetch
-tags:
-  - API
-  - BODY
-  - Fetch
-  - HTTP
-  - Promise
-  - Response
-  - request
-  - fetch POST & string body
-  - 指南
-translation_of: Web/API/Fetch_API/Using_Fetch
 ---
 {{DefaultAPISidebar("Fetch API")}}
 

@@ -98,7 +98,7 @@ translation_of: Mozilla/Firefox/Releases/43
  <li>Экспериментальная поддержка {{domxref("Selection")}} событий {{event("selectionchange")}} и {{event("selectstart")}}, а также добавлены {{domxref("Document.onselectionchange")}} и {{domxref("GlobalEventHandlers.onselectstart")}} свойства для обработчиков событий ({{bug(571294)}}). Событие<code> selectionchange</code> теперь возникает на  {{domxref("Document")}} если связано с  объектом <code>Selection</code>, или в особом случае {{domxref("HTMLInputElement")}} или {{domxref("HTMLTextAreaElement")}} ({{bug(1196479)}}). Это свойство контролируется с помощью настройки <code>dom.select_events.enabled</code>, которое по умолчанию имеет значение <code>false</code>, за исключением Firefox Nightly.</li>
  <li>Поддержка {{domxref("MouseEvent.offsetX")}} и {{domxref("MouseEvent.offsetY")}} доступна по умолчанию в Android версии Firefox и Firefox OS ({{bug(1204841)}}).</li>
  <li>Удалён метод {{domxref("HTMLCanvasElement.mozFetchAsStream()")}} ({{bug(1206030)}}).</li>
- <li>Конструктор {{domxref("Request.Request", "Request()")}} а также {{domxref("Window.fetch", "fetch()")}} теперь выбросит исключение {{exception("TypeError")}} если будет использовано в URL которое содержит параметры с именами username и password ({{bug(1195820)}}).</li>
+ <li>Конструктор {{domxref("Request.Request", "Request()")}} а также {{domxref("Window.fetch", "fetch()")}} теперь выбросит исключение {{jsxref("TypeError")}} если будет использовано в URL которое содержит параметры с именами username и password ({{bug(1195820)}}).</li>
 </ul>
 
 <h3 id="MathML">MathML</h3>

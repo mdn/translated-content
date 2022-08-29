@@ -1,15 +1,6 @@
 ---
 title: Element.getElementsByClassName()
 slug: Web/API/Element/getElementsByClassName
-tags:
-  - API
-  - クラス
-  - Element
-  - メソッド
-  - リファレンス
-  - getElementsByClassName
-browser-compat: api.Element.getElementsByClassName
-translation_of: Web/API/Element/getElementsByClassName
 ---
 {{APIRef("DOM")}}
 

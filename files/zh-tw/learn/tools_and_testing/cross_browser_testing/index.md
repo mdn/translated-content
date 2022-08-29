@@ -1,7 +1,6 @@
 ---
 title: 跨瀏覽器測試
 slug: Learn/Tools_and_testing/Cross_browser_testing
-translation_of: Learn/Tools_and_testing/Cross_browser_testing
 ---
 {{LearnSidebar}}
 

@@ -1,13 +1,6 @@
 ---
 title: TransformStream()
 slug: Web/API/TransformStream/TransformStream
-page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - TransformStream
-translation_of: Web/api/TransformStream/TransformStream
 ---
 {{APIRef("Streams")}}
 
@@ -39,7 +32,7 @@ new TransformStream(transformer, writableStrategy, readableStrategy)
 
 - `writableStrategy`{{Optional_Inline}}
 
-  - : 一个定义了排队策略的可选对象。它需要两个参数：
+  - : 一个定义了队列策略的可选对象。它需要两个参数：
 
     - `highWaterMark`
       - : 一个非负整数。它定义了在应用背压之前内部队列包含的分块的总数。
@@ -48,7 +41,7 @@ new TransformStream(transformer, writableStrategy, readableStrategy)
 
 - `readableStrategy`{{Optional_Inline}}
 
-  - : 一个定义了排队策略的可选对象。它需要两个参数:
+  - : 一个定义了队列策略的可选对象。它需要两个参数:
 
     - `highWaterMark`
       - : 一个非负整数。它定义了在应用背压之前内部队列包含的分块的总数。

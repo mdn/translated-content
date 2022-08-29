@@ -1,14 +1,6 @@
 ---
 title: tabs.Tab
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
-tags:
-  - 扩展
-  - 标签
-  - 标签页
-  - 类型
-  - 非标准
-  - 页面扩展
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 ---
 {{AddonSidebar()}}
 
@@ -41,9 +33,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 - `index`
   - : `integer`. 窗口中的标签页从零开始的索引。
 - `isArticle`
-  - : `boolean`. 如果标签页可以在[ Reader 模式下呈现](/en-US/Add-ons/WebExtensions/API/tabs/toggleReaderMode)，则返回 true，否则返回 false。
+  - : `boolean`. 如果标签页可以在 [Reader 模式下呈现](/en-US/Add-ons/WebExtensions/API/tabs/toggleReaderMode)，则返回 true，否则返回 false。
 - `isInReaderMode`
-  - : `boolean`. 如果标签页正在[ Reader 模式下呈现](/en-US/Add-ons/WebExtensions/API/tabs/toggleReaderMode)，则返回 true，否则返回 false。
+  - : `boolean`. 如果标签页正在 [Reader 模式下呈现](/en-US/Add-ons/WebExtensions/API/tabs/toggleReaderMode)，则返回 true，否则返回 false。
 - `lastAccessed`
   - : `double`. 上次访问该标签页的时间 , 参考 [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
 - `mutedInfo` {{optional_inline}}

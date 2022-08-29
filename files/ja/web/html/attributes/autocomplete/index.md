@@ -17,7 +17,6 @@ tags:
   - form
   - パスワード
   - textarea
-browser-compat: html.global_attributes.autocomplete
 translation_of: Web/HTML/Attributes/autocomplete
 ---
 

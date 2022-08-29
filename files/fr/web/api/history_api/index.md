@@ -149,14 +149,11 @@ Pour un exemple comple de site web AJAX, vous pouvez voir : [Exemple de navigati
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                           | Commentaire                                            |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "browsers.html#history", "History")}} | {{Spec2('HTML WHATWG')}} | Pas de changement de {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "browsers.html#history", "History")}}     | {{Spec2('HTML5 W3C')}}     | Définition initiale.                                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.History")}}
+{{Compat}}
 
 ## Voir aussi
 

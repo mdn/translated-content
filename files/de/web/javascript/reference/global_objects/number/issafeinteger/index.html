@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
  <li>eine Zahl, deren IEEE-754 Repräsentation nicht das Ergebnis von Rundungen anderer ganzer Zahlen sein kann.</li>
 </ul>
 
-<p>Zum Beispiel ist <code>2<sup>53</sup> - 1</code> eine sichere ganze Zahle: sie kann exakt repräsentiert werden und keine andere ganze Zahl wird in jedem IEEE-754 Rundungsmodus zu ihr gerundet. Im gegensatz dazu ist <code>2<sup>53</sup></code> keine sichere ganze Zahl: Sie kann in IEEE-754 exakt repräsentiert werden, jedoch wird die ganze Zahl <code>2<sup>53</sup> + 1</code> kann nicht exakt repräsentiert werden und wird zu <code>2<sup>53</sup> </code>in den Modus <em>zum nächsten Runden</em> und <em>zu null runden </em>gerundet. Die sicheren ganzen Zahlen sind alle ganzen Zahlen im Bereich von <code>-(2<sup>53</sup> - 1)</code> inklusiv und <code>2<sup>53</sup> - 1</code> inklusiv.</p>
+<p>Zum Beispiel ist <code>2<sup>53</sup> - 1</code> eine sichere ganze Zahle: sie kann exakt repräsentiert werden und keine andere ganze Zahl wird in jedem IEEE-754 Rundungsmodus zu ihr gerundet. Im gegensatz dazu ist <code>2<sup>53</sup></code> keine sichere ganze Zahl: Sie kann in IEEE-754 exakt repräsentiert werden, jedoch wird die ganze Zahl <code>2<sup>53</sup> + 1</code> kann nicht exakt repräsentiert werden und wird zu <code>2<sup>53</sup> </code>in den Modus <em>zum nächsten Runden</em> und <em>zu null runden </em>gerundet. Die sicheren ganzen Zahlen sind alle ganzen Zahlen im Bereich von <code>-(2<sup>53</sup> - 1)</code> inklusiv und <code>2<sup>53</sup> - 1</code> inklusiv.</p>
 
 <p>Der Einsatz von Zahlen größer ~9 Biliarden oder kleiner ~-9 Biliarder mit voller Präzision benötigen eine <a href="https://de.wikipedia.org/wiki/Langzahlarithmetik">Langzahlarythmetik Bibliothek</a>. Mehr Informationen über die Repräsentation von Gleitkommazahlen gibt es in dem Artikel <a href="http://floating-point-gui.de/">What Every Programmer Needs to Know about Floating Point Arithmetic</a>.</p>
 
@@ -79,7 +79,7 @@ Number.isSafeInteger(3.0);                  // true
   <tr>
    <td>{{SpecName('ESDraft', '#sec-number.issafeinteger', 'Number.isSafeInteger')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

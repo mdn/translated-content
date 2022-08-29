@@ -12,7 +12,6 @@ tags:
   - リファレンス
   - ウェブ
   - スライダー
-browser-compat: html.elements.input.input-range
 translation_of: Web/HTML/Element/input/range
 ---
 

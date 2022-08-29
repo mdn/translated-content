@@ -1,16 +1,6 @@
 ---
 title: ':picture-in-picture'
 slug: Web/CSS/:picture-in-picture
-tags:
-  - CSS
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Video
-  - pip
-translation_of: Web/CSS/:picture-in-picture
 ---
 {{CSSRef}}
 

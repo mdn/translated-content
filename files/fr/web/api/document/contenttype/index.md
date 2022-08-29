@@ -28,4 +28,4 @@ La propriété n'est pas affectée par les balises META.
 
 ## Spécifications
 
-{{SpecName('DOM WHATWG','#dom-document-contenttype','Document.contenttype')}}
+{{Specifications}}

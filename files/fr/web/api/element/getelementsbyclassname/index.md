@@ -57,10 +57,8 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG', '#dom-element-getelementsbyclassname', 'Element.getElementsByClassName()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.getElementsByClassName")}}
+{{Compat}}

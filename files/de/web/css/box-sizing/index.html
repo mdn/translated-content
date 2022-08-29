@@ -11,13 +11,11 @@ translation_of: Web/CSS/box-sizing
 <div>
 <p>{{CSSRef}}</p>
 
-<p><span class="seoSummary">Die <a href="/en-US/docs/Web/CSS">CSS</a> Eigenschaft <strong><code>box-sizing</code></strong> </span>legt fest, wie die Gesamtbreite und -höhe eines Elements berechnet wird.</p>
+<p><span class="seoSummary">Die <a href="/en-US/docs/Web/CSS">CSS</a> Eigenschaft <strong><code>box-sizing</code></strong> </span>legt fest, wie die Gesamtbreite und -höhe eines Elements berechnet wird.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/box-sizing.html")}}</div>
 
-<div class="hidden">Die Quelle für dieses interaktive Beispiel ist in einem GitHub-Repository gespeichert. Wenn Sie zum Projekt der interaktiven Beispiele beitragen möchten, klonen Sie bitte <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> und senden Sie uns eine Pull-Anfrage.</div>
-
-<p>Im <a href="/de/docs/Web/CSS/CSS_Boxmodell/Einführung_in_das_CSS_Boxmodell">CSS box model</a> wird die Breite <code>width</code> und die Höhe <code>height</code>, die Sie einem Element zuweisen, standardmäßig nur auf die Inhaltsbox des Elements angewendet. Wenn das Element über einen Rahmen <code>border</code> oder Innenabstände <code>padding</code> verfügt, wird diese zu der Breite <code>width</code> und Höhe <code>height</code> hinzugefügt, um die Größe der Box zu erreichen, die auf dem Bildschirm angezeigt wird. Das bedeutet, dass Sie bei der Einstellung von Breite <code>width</code> und Höhe <code>height</code> den Wert anpassen müssen, um einen eventuell hinzugefügten Rahmen oder Auffüllen zu berücksichtigen. Wenn Sie z.B. vier Boxen mit einer Breite <code>width: 25%;</code> haben, wenn eine davon einen linken oder rechten Rand oder einen linken oder rechten Rand hat, passen sie standardmäßig nicht auf eine Zeile innerhalb der Beschränkungen des Elterncontainers.</p>
+<p>Im <a href="/de/docs/Web/CSS/CSS_Boxmodell/Einführung_in_das_CSS_Boxmodell">CSS box model</a> wird die Breite <code>width</code> und die Höhe <code>height</code>, die Sie einem Element zuweisen, standardmäßig nur auf die Inhaltsbox des Elements angewendet. Wenn das Element über einen Rahmen <code>border</code> oder Innenabstände <code>padding</code> verfügt, wird diese zu der Breite <code>width</code> und Höhe <code>height</code> hinzugefügt, um die Größe der Box zu erreichen, die auf dem Bildschirm angezeigt wird. Das bedeutet, dass Sie bei der Einstellung von Breite <code>width</code> und Höhe <code>height</code> den Wert anpassen müssen, um einen eventuell hinzugefügten Rahmen oder Auffüllen zu berücksichtigen. Wenn Sie z.B. vier Boxen mit einer Breite <code>width: 25%;</code> haben, wenn eine davon einen linken oder rechten Rand oder einen linken oder rechten Rand hat, passen sie standardmäßig nicht auf eine Zeile innerhalb der Beschränkungen des Elterncontainers.</p>
 
 <p>Die <code>box-sizing</code> Eigenschaft kann verwendet werden, um dieses Verhalten anzupassen:</p>
 
@@ -29,7 +27,7 @@ translation_of: Web/CSS/box-sizing
 </ul>
 
 <div class="blockIndicator note">
-<p><strong>Hinweis:</strong> Es ist oft nützlich, bei Layoutelementen die <code>box-sizing</code> auf <code>border-box</code> zu setzen. Dies erleichtert den Umgang mit der Größe von Elementen erheblich und eliminiert im Allgemeinen eine Reihe von Fallstricken, auf die Sie beim Layouten Ihres Inhalts stoßen können.  Bei der Verwendung von <code>position: relative</code> oder <code>position: absolute</code> und der Nutzung von <code>box-sizing: content-box</code> können die Positionswerte relativ zum Inhalt und unabhängig von Änderungen der Rahmen- und Füllungsgrößen eingestellt werden, was manchmal wünschenswert ist.</p>
+<p><strong>Hinweis:</strong> Es ist oft nützlich, bei Layoutelementen die <code>box-sizing</code> auf <code>border-box</code> zu setzen. Dies erleichtert den Umgang mit der Größe von Elementen erheblich und eliminiert im Allgemeinen eine Reihe von Fallstricken, auf die Sie beim Layouten Ihres Inhalts stoßen können.  Bei der Verwendung von <code>position: relative</code> oder <code>position: absolute</code> und der Nutzung von <code>box-sizing: content-box</code> können die Positionswerte relativ zum Inhalt und unabhängig von Änderungen der Rahmen- und Füllungsgrößen eingestellt werden, was manchmal wünschenswert ist.</p>
 </div>
 </div>
 

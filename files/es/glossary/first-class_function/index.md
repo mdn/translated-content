@@ -92,8 +92,15 @@ Usamos parétesis dobre `()()` para invocar también a la función retornada.
 
 ### Conocimiento general
 
-- {{Interwiki("wikipedia", "First-class_function", "First-class functions")}} on Wikipedia
-- [Glosario](/es/docs/Glossary)
-   - {{glossary("Callback function")}}
-   - {{glossary("Function")}}
-   - {{glossary("Variable")}}
+<section id="Quick_links">
+ <ol>
+  <li>{{Interwiki("wikipedia", "First-class_function", "First-class functions")}} on Wikipedia</li>
+  <li><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a>
+   <ul>
+    <li>{{glossary("Callback function")}}</li>
+    <li>{{glossary("Function")}}</li>
+    <li>{{glossary("Variable")}}</li>
+   </ul>
+  </li>
+ </ol>
+</section>

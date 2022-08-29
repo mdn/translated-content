@@ -1,10 +1,6 @@
 ---
 title: Chrome 浏览器
 slug: Glossary/Google_Chrome
-tags:
-  - Chrome
-  - 浏览器
-translation_of: Glossary/Google_Chrome
 ---
 Chrome 浏览器是 Google 开发的一个免费网络{{glossary("浏览器")}}. 它基于开源项目 [Chromium](https://www.chromium.org/)。在 [Chromium wiki](https://code.google.com/p/chromium/wiki/ChromiumBrowserVsGoogleChrome) 中描述了它们之间的差异。Chrome 维护使用自己的渲染引擎：开源引擎{{glossary("WebKit")}}中 WebCore 组件的一个分支 {{glossary("Blink")}} 。注意：IOS 版本的 Chrome 使用了 IOS 平台的渲染引擎，而非 {{glossary("Blink")}}。
 

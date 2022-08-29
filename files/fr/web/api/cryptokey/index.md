@@ -33,13 +33,11 @@ _Cette interface n'hérite et n'implémente aucune méthode._
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                                   | Commentaire          |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{ SpecName('Web Crypto API', '#dfn-CryptoKey', 'CryptoKey') }} | {{ Spec2('Web Crypto API') }} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CryptoKey")}}
+{{Compat}}
 
 ## Voir aussi
 

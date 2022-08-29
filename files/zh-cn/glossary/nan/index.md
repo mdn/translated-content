@@ -1,7 +1,6 @@
 ---
 title: NaN
 slug: Glossary/NaN
-translation_of: Glossary/NaN
 ---
 NaN(不是一个数字) 是一种数值表达形式 {{Glossary("Type", "data type")}}这意味一种未定义的值或者不能够被描述的值，尤其浮点型结算的结果。
 

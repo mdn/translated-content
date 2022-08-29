@@ -23,13 +23,11 @@ document.exitPointerLock();
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires                        |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------- |
-| {{SpecName('Pointer Lock','l#extensions-to-the-document-interface','Document')}} | {{Spec2('Pointer Lock')}} | Extension de l'interface `Document` |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.exitPointerLock")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -14,7 +14,7 @@ La propriété **`padding`** est [une propriété raccourcie](/fr/docs/Web/CSS/P
 
 {{EmbedInteractiveExample("pages/css/padding.html")}}
 
-La [zone de remplissage](/fr/docs/Learn/CSS/Building_blocks/The_box_model "http://developer.mozilla.org/en/CSS/Box_model#padding") correspond à l'espace entre le contenu de l'élément et sa bordure. Les valeurs négatives ne sont pas autorisées.
+La [zone de remplissage](/fr/docs/Learn/CSS/Building_blocks/The_box_model) correspond à l'espace entre le contenu de l'élément et sa bordure. Les valeurs négatives ne sont pas autorisées.
 
 > **Note :** Le _padding_ permet de créer un espace supplémentaire à l'intérieur d'un élément. La marge ({{cssxref("margin")}}) permet quant à elle de créer un espace supplémentaire à l'extérieur de l'élément.
 

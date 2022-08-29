@@ -17,6 +17,62 @@ La función `atob()` decodifica una cadena de datos que ha sido codificada usand
 
 Ambas funciones trabajan sobre cadenas de texto. Si desea trabajar con [ArrayBuffers](/es/docs/Web/JavaScript/Referencia/Objetos_globales/ArrayBuffer), lea [este párrafo](/es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando$edit#Solution_.232_.E2.80.93_rewriting_atob%28%29_and_btoa%28%29_using_TypedArrays_and_UTF-8).
 
+<table>
+  <tr>
+    <td>
+
+- [`data` URIs](https://developer.mozilla.org/en-US/docs/data_URIs)
+  - `Los URIs de` datos, definidos por [RFC 2397](https://tools.ietf.org/html/rfc2397), permiten a los creadores de contenido introducir pequeños ficheros en línea en documentos.
+  
+- [Base64](https://es.wikipedia.org/wiki/Base64)
+
+  - Artículo en Wikipedia sobre el sistema de codificación Base64.
+
+- [`atob()`](https://developer.mozilla.org/es/docs/Web/API/atob "atob()")
+
+  - Decodifica una cadena de datos que ha sido codificada utilizando base-64.
+
+- [`btoa()` (en-US)](https://developer.mozilla.org/en-US/docs/Web/API/btoa "Currently only available in English (US)")
+
+  - Crea una cadena ASCII codificada en base 64 a partir de una "cadena" de datos binarios.
+
+- [The "Unicode Problem"](https://developer.mozilla.org/es/docs/glossary/base64#the_.22unicode_problem.22)
+
+  - En la mayoría de navegadores, llamar a `btoa()` con una cadena Unicode causará una excepción `Character Out Of Range`. Este párrafo muestra algunas soluciones.
+
+- [URIScheme](https://developer.mozilla.org/en-US/docs/URIScheme "This is a link to an unwritten page")
+
+  - Lista de esquemas URI soportados por Mozilla.
+
+- [`StringView`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays/StringView "This is a link to an unwritten page")
+
+  - En este artículo está publicada una librería hecha por nosotros con los siguientes objetivos:
+
+    * crear una interfaz al estilo de [C](http://en.wikipedia.org/wiki/C_%28programming_language%29) para cadenas (es decir, arrays de códigos de caracteres — [`ArrayBufferView`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray "/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBufferView") en JavaScript) basada en la interfaz [`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer "/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBuffer") de JavaScript.
+    * crear una colección de métodos para los que los objetos parecidos a cadenas (de ahora en adelante, `stringView`s) funcionen estrictamente en arrays de números más que en cadenas JavaScript inmutables.
+    * trabajar con otras codificaciones Unicode diferentes de las [`DOMString`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String "/en-US/docs/Web/API/DOMString")s UTF-16 por defecto de JavaScript.
+    </td>
+    <td>
+
+**Herramientas**
+
+* [Reescribir atob() y btoa() usando TypedArrays y UTF-8](https://developer.mozilla.org/es/docs/glossary/base64#solution_.232_.e2.80.93_rewriting_atob%28%29_and_btoa%28%29_using_typedarrays_and_utf-8)
+* [`StringView`, una representación parecida a C de cadenas basadas en arrays tipados](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays/StringView "This is a link to an unwritten page")
+
+**Temas relacionados**
+
+* [`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+* [Vectores o arrays tipados](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays)
+* [ArrayBufferView](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)
+* [`Uint8Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
+* [`StringView`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays/StringView "/en-US/docs/Web/JavaScript/Typed_arrays/StringView")[, una representación parecida a C de cadenas basadas en arrays tipados](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays/StringView "This is a link to an unwritten page")
+* [`DOMString`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String "/en-US/docs/Web/API/DOMString")
+* [`URI`](https://developer.mozilla.org/en-US/docs/Glossary/URI "/en-US/docs/URI")
+* [`encodeURI()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI "/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI")
+    </td>
+  </tr>
+<table>
+
 ## El "Problema Unicode"
 
 Como las [`DOMString`](/en-US/docs/Web/API/DOMString "/en-US/docs/Web/API/DOMString")s son cadenas codificadas en 16 bits, en la mayoría de navegadores llamar a `window.btoa` sobre una cadena Unicode resultará en una excepción `Character Out Of Range `si un carácter excede el rango de los caracteres ASCII de 8 bits. Hay dos posibles métodos para resolver este problema:

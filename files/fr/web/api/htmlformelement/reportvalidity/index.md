@@ -32,13 +32,10 @@ document.forms['myform'].addEventListener('submit', function() {
 }, false);
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                                                                    | Status                           | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("HTML WHATWG", "forms.html#dom-cva-reportvalidity", "HTMLFormElement.reportValidity()")}}             | {{Spec2("HTML WHATWG")}} |                     |
-| {{SpecName("HTML5.1", "semantics.html#the-constraint-validation-api", "HTMLFormElement.reportValidity()")}} | {{Spec2("HTML5.1")}}     | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLFormElement.reportValidity")}}
+{{Compat}}
