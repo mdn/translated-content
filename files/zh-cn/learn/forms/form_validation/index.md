@@ -3,7 +3,7 @@ title: 表单数据校验
 slug: Learn/Forms/Form_validation
 original_slug: Learn/HTML/Forms/Data_form_validation
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
 
 表单校验帮助我们确保用户以正确格式填写表单数据，确保提交的数据能使我们的应用程序正常工作。本文将告诉您需要了解的有关表单校验的内容。
 
@@ -12,11 +12,11 @@ original_slug: Learn/HTML/Forms/Data_form_validation
     <tr>
       <th scope="row">预备知识：</th>
       <td>
-        计算机基础能力，对 <a href="/en-US/docs/Learn/HTML">HTML</a>、<a
-          href="/en-US/docs/Learn/CSS"
+        计算机基础能力，对 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
+          href="/zh-CN/docs/Learn/CSS"
           >CSS</a
         >
-        和 <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 有一定的理解。
+        和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 有一定的理解。
       </td>
     </tr>
     <tr>
@@ -45,7 +45,7 @@ original_slug: Learn/HTML/Forms/Data_form_validation
 
 - **我们希望以正确的格式获取到正确的数据** —— 如果我们的用户数据以不正确的格式存储，或者他们没有输入正确的信息/完全省略信息，我们的应用程序将无法正常运行。
 - **我们希望保护我们的用户** ——强制用户输入安全的密码，有利于保护他们的账户信息。
-- **我们希望保护我们自己** —— 恶意用户有很多通过滥用应用中缺乏保护的表单破坏应用的方法（具体请参见[网站安全](/zh-CN/docs/learn/Server-side/First_steps/Website_security)）。
+- **我们希望保护我们自己** —— 恶意用户有很多通过滥用应用中缺乏保护的表单破坏应用的方法（具体请参见[网站安全](/zh-CN/docs/Learn/Server-side/First_steps/Website_security)）。
 
 > **警告：** 永远不要相信从客户端传递到服务器的数据。即使您的表单正确验证并防止输入格式错误，恶意用户仍然可以更改网络请求。
 
@@ -58,13 +58,13 @@ original_slug: Learn/HTML/Forms/Data_form_validation
   - **JavaScript** 校验，这是可以完全自定义的实现方式；
   - HTML5 **内置校验**，这不需要 JavaScript，而且性能更好，但是不能像 JavaScript 那样可自定义。
 
-- **服务器端校验**则是发生在浏览器提交数据并被服务器端程序接收之后 —— 通常服务器端校验都是发生在将数据写入数据库之前，如果数据没通过校验，则会直接从服务器端返回错误消息，并且告诉浏览器端发生错误的具体位置和原因，服务器端校验不像客户端校验那样有好的用户体验，因为它直到整个表单都提交后才能返回错误信息。但是服务器端校验是你的应用对抗错误/恶意数据的最后防线，在这之后，数据将被持久化至数据库。当今[所有的服务端框架](/zh-CN/docs/learn/Server-side/First_steps/Web_frameworks)都提供了数据**校验**与**清洁**功能（让数据更安全）。
+- **服务器端校验**则是发生在浏览器提交数据并被服务器端程序接收之后 —— 通常服务器端校验都是发生在将数据写入数据库之前，如果数据没通过校验，则会直接从服务器端返回错误消息，并且告诉浏览器端发生错误的具体位置和原因，服务器端校验不像客户端校验那样有好的用户体验，因为它直到整个表单都提交后才能返回错误信息。但是服务器端校验是你的应用对抗错误/恶意数据的最后防线，在这之后，数据将被持久化至数据库。当今[所有的服务端框架](/zh-CN/docs/Learn/Server-side/First_steps/Web_frameworks)都提供了数据**校验**与**清洁**功能（让数据更安全）。
 
 在真实的项目开发过程中，开发者一般都倾向于使用客户端校验与服务器端校验的组合校验方式以更好的保证数据的正确性与安全性。
 
 ## 使用内置表单数据校验
 
-[HTML5](/en-US/docs/HTML/HTML5) 一个特别有用的新功能就是，可以在不写一行脚本代码的情况下，即对用户的输入进行数据校验，这都是通过表单元素的[校验属性](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation)实现的，这些属性可以让你定义一些规则，用于限定用户的输入，比如某个输入框是否必须输入，或者某个输入框的字符串的最小最大长度限制，或者某个输入框必须输入一个数字、邮箱地址等；还有数据必须匹配的模式。如果表单中输入的数据都符合这些限定规则，那么表示这个表单校验通过，否则则认为校验未通过。
+[HTML5](/zh-CN/docs/HTML/HTML5) 一个特别有用的新功能就是，可以在不写一行脚本代码的情况下，即对用户的输入进行数据校验，这都是通过表单元素的[校验属性](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation)实现的，这些属性可以让你定义一些规则，用于限定用户的输入，比如某个输入框是否必须输入，或者某个输入框的字符串的最小最大长度限制，或者某个输入框必须输入一个数字、邮箱地址等；还有数据必须匹配的模式。如果表单中输入的数据都符合这些限定规则，那么表示这个表单校验通过，否则则认为校验未通过。
 
 当一个元素校验通过时：
 
@@ -362,7 +362,7 @@ HTML5 提供 [constraint validation API](http://www.w3.org/TR/html5/forms.html#t
 </form>
 ```
 
-在 JavaScript 中，你调用 [`setCustomValidity()`](</en-US/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()>) 方法：
+在 JavaScript 中，你调用 [`setCustomValidity()`](</zh-CN/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()>) 方法：
 
 ```js
 var email = document.getElementById("mail");
@@ -386,12 +386,12 @@ email.addEventListener("input", function (event) {
 
 越来越多的浏览器支持限制校验 API，并且这逐渐变得可靠。这些 API 由成组的方法和属性构成，可在特定的表单元素接口上调用：
 
-- [HTMLButtonElement](/en-US/docs/Web/API/HTMLButtonElement)
-- [HTMLFieldSetElement](/en-US/docs/Web/API/HTMLFieldSetElement)
-- [HTMLInputElement](/en-US/docs/Web/API/HTMLInputElement)
-- [HTMLOutputElement](/en-US/docs/Web/API/HTMLOutputElement)
-- [HTMLSelectElement](/en-US/docs/Web/API/HTMLSelectElement)
-- [HTMLTextAreaElement](/en-US/docs/Web/API/HTMLTextAreaElement)
+- [HTMLButtonElement](/zh-CN/docs/Web/API/HTMLButtonElement)
+- [HTMLFieldSetElement](/zh-CN/docs/Web/API/HTMLFieldSetElement)
+- [HTMLInputElement](/zh-CN/docs/Web/API/HTMLInputElement)
+- [HTMLOutputElement](/zh-CN/docs/Web/API/HTMLOutputElement)
+- [HTMLSelectElement](/zh-CN/docs/Web/API/HTMLSelectElement)
+- [HTMLTextAreaElement](/zh-CN/docs/Web/API/HTMLTextAreaElement)
 
 #### 约束校验的 API 及属性
 
@@ -449,7 +449,7 @@ email.addEventListener("input", function (event) {
   </tbody>
 </table>
 
-对于旧版浏览器，可以使用 [polyfill（例如 Hyperform](https://hyperform.js.org/)），来弥补其对约束校验 API 支持的不足。既然你已经使用 JavaScript，在您的网站或 Web 应用程序的设计和实现中使用 polyfill 并不是累赘。
+对于旧版浏览器，可以使用 [polyfill（例如 Hyperform）](https://hyperform.js.org/)），来弥补其对约束校验 API 支持的不足。既然你已经使用 JavaScript，在您的网站或 Web 应用程序的设计和实现中使用 polyfill 并不是累赘。
 
 #### 使用约束校验 API 的例子
 
@@ -470,7 +470,7 @@ email.addEventListener("input", function (event) {
 
 这个简单的表单使用 {{htmlattrxref("novalidate","form")}} 属性关闭浏览器的自动校验；这允许我们使用脚本控制表单校验。但是，这并不禁止对约束校验 API 的支持或是以下 CSS 伪类：{{cssxref(":valid")}}、{{cssxref(":invalid")}}、{{cssxref(":in-range")}} 、{{cssxref(":out-of-range")}} 的应用。这意味着，即使浏览器在发送数据之前没有自动检查表单的有效性，您仍然可以自己做，并相应地设置表单的样式。
 
-[`aria-live`](/en-US/docs/Accessibility/ARIA/ARIA_Live_Regions) 属性确保我们的自定义错误信息将呈现给所有人，包括使用屏幕阅读器等辅助技术的人。
+[`aria-live`](/zh-CN/docs/Accessibility/ARIA/ARIA_Live_Regions) 属性确保我们的自定义错误信息将呈现给所有人，包括使用屏幕阅读器等辅助技术的人。
 
 ##### CSS
 
@@ -576,7 +576,7 @@ form.addEventListener("submit", function (event) {
 
 ### 不使用内建 API 时的表单校验
 
-有时，例如使用旧版浏览器或[自定义小部件](/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets)，您将无法（或不希望）使用约束校验 API。在这种情况下，您仍然可以使用 JavaScript 来校验您的表单。校验表单比起真实数据校验更像是一个用户界面问题。
+有时，例如使用旧版浏览器或[自定义小部件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)，您将无法（或不希望）使用约束校验 API。在这种情况下，您仍然可以使用 JavaScript 来校验您的表单。校验表单比起真实数据校验更像是一个用户界面问题。
 
 要校验表单，您必须问自己几个问题：
 
@@ -785,4 +785,23 @@ addEvent(form, "submit", function () {
 - 放宽输入格式限制。
 - 指出错误发生的位置（特别是在大型表单中）。
 
-{{PreviousMenuNext("Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms")}}
+{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
+
+## 本章目录
+
+- [你的第一个表单](/zh-CN/docs/Learn/Forms/Your_first_form)
+- [如何构造 HTML 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
+- [原生表单部件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
+- [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
+- [其它表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
+- [样式化 HTML 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
+- [高级表单样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
+- [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
+- [客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
+- [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
+
+### 进阶内容
+
+- [如何构建表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [使用 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [表单控件兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

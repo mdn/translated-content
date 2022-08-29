@@ -3,7 +3,7 @@ title: 发送表单数据
 slug: Learn/Forms/Sending_and_retrieving_form_data
 original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms")}}
+{{LearnSidebar}}{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
 
 本文将讨论当用户提交表单时发生了什么——数据去了哪，以及当它到达时该如何处理？我们还研究了与发送表单数据相关的一些安全问题。
 
@@ -14,10 +14,10 @@ original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
       <td>
         <p>
           基本计算机素养，对<a
-            href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+            href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
             >HTML 的理解</a
-          >，对<a href="/en-US/docs/Web/HTTP/Basics_of_HTTP">HTTP</a> 和<a
-            href="/en-US/docs/Learn/Server-side/First_steps"
+          >，对<a href="/zh-CN/docs/Web/HTTP/Basics_of_HTTP">HTTP</a> 和<a
+            href="/zh-CN/docs/Learn/Server-side/First_steps"
             >服务器端编程</a
           >的基础知识。
         </p>
@@ -338,18 +338,23 @@ SQL 注入是一种试图在目标 web 站点使用的数据库上执行操作�
 - [The Open Web Application Security Project (OWASP)](https://www.owasp.org/index.php/Main_Page)
 - [Chris Shiflett's blog about PHP Security](http://shiflett.org/)
 
-{{PreviousMenuNext("Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms")}}
+{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
 
-## 在本单元中
+## 本章目录
 
-- [Your first HTML form](/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [How to structure an HTML form](/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [The native form widgets](/en-US/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Sending form data](/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/en-US/docs/Learn/HTML/Forms/Form_validation)
-- [How to build custom form widgets](/en-US/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Sending forms through JavaScript](/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [HTML forms in legacy browsers](/en-US/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Advanced styling for HTML forms](/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Property compatibility table for form widgets](/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+- [你的第一个表单](/zh-CN/docs/Learn/Forms/Your_first_form)
+- [如何构造 HTML 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
+- [原生表单部件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
+- [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
+- [其它表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
+- [样式化 HTML 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
+- [高级表单样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
+- [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
+- [客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
+- [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
+
+### 进阶内容
+
+- [如何构建表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [使用 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [表单控件兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

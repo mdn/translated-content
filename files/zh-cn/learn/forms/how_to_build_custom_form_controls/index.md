@@ -1,11 +1,11 @@
 ---
-title: 如何构建表单小工具
+title: 如何构建自定义表单控件
 slug: Learn/Forms/How_to_build_custom_form_controls
 original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
+{{LearnSidebar}}
 
-在许多情况下，[可用的 HTML 表单小组件](/en-US/docs/HTML/Forms/The_native_form_widgets)_是不够的_。如果要在某些小部件（例如 {{HTMLElement("select")}}元素）上执行[高级样式](/en-US/docs/Advanced_styling_for_HTML_forms)，或者如果要提供自定义表现，则别无选择，只能构建自己的小部件。
+在许多情况下，[基本的 HTML 表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)_是不够的_。如果要在某些小部件（例如 {{HTMLElement("select")}}元素）上执行[高级样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)，或者如果要提供自定义表现，则别无选择，只能构建自己的小部件。
 
 在本文中，我们会看到如何构建这样的组件。为此，我们将使用这样一个例子：重建 {{HTMLElement("select")}}元素。
 
@@ -793,18 +793,21 @@ function updateValue(select, index) {
 
 如果你想更进一步，本例中的代码需要一些改进，才能变得更加通用和可重用。这是一个你可以尝试去做的练习。这里有两个提示可以帮到你：我们所有函数的第一个参数是相同的，这意味着这些函数需要相同的上下文。构建一个对象来共享那些上下文是更聪明的做法。还有，你需要让它的特性适用性更好；也就是说，它要能在一系列对 Web 标准的兼容性不同的浏览器上工作良好。祝愉快！
 
-{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
+## 本章目录
 
-## 在本单元中
+- [你的第一个表单](/zh-CN/docs/Learn/Forms/Your_first_form)
+- [如何构造 HTML 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
+- [原生表单部件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
+- [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
+- [其它表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
+- [样式化 HTML 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
+- [高级表单样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
+- [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
+- [客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
+- [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
-- [Your first HTML form](/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [How to structure an HTML form](/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [The native form widgets](/en-US/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Sending form data](/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/en-US/docs/Learn/HTML/Forms/Form_validation)
-- [How to build custom form widgets](/en-US/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Sending forms through JavaScript](/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [HTML forms in legacy browsers](/en-US/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Advanced styling for HTML forms](/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Property compatibility table for form widgets](/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+### 进阶内容
+
+- [如何构建表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [使用 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [表单控件兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -3,7 +3,7 @@ title: 如何构造 HTML 表单
 slug: Learn/Forms/How_to_structure_a_web_form
 original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Your_first_HTML_form", "Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
 
 有了基础知识，我们现在更详细地了解了用于为表单的不同部分提供结构和意义的元素。
 
@@ -13,7 +13,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
       <th scope="row">前提条件：</th>
       <td>
         基本的计算机能力，和基本的
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">对 HTML 的理解</a
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">对 HTML 的理解</a
         >。
       </td>
     </tr>
@@ -201,7 +201,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 
 5. 接下来，我们将在表单中添加一个更大的代码段，在我们之前的代码下面。在这里，您将看到，我们正在将联系人信息字段包装在一个单独的{{htmlelement("section")}}元素中。此外，我们有一组两个单选按钮，每个单选按钮都放在自己的列表中 ({{htmlelement("li")}})) 元素。最后，我们有两个标准文本{{htmlelement("input")}}和它们相关的{{htmlelement("label")}}元素，每个元素包含在{{htmlelement("p")}}中，加上输入密码的密码输入。现在将这些代码添加到您的表单中：
 
-    ```plain
+    ```html
     <section>
         <h2>Contact information</h2>
         <fieldset>
@@ -302,4 +302,23 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 
 - [A List Apart: _Sensible Forms: A Form Usability Checklist_](http://www.alistapart.com/articles/sensibleforms/)
 
-{{PreviousMenuNext("Learn/HTML/Forms/Your_first_HTML_form", "Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms")}}
+{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
+
+## 本章目录
+
+- [你的第一个表单](/zh-CN/docs/Learn/Forms/Your_first_form)
+- [如何构造 HTML 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
+- [原生表单部件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
+- [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
+- [其它表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
+- [样式化 HTML 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
+- [高级表单样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
+- [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
+- [客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
+- [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
+
+### 进阶内容
+
+- [如何构建表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [使用 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [表单控件兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

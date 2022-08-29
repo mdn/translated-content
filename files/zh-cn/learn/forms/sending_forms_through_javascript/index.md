@@ -424,16 +424,21 @@ window.addEventListener('load', function () {
 
 {{PreviousMenuNext("Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms/HTML_forms_in_legacy_browsers", "Learn/HTML/Forms")}}
 
-## In this module
+## 本章目录
 
-- [Your first HTML form](/zh-CN/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [How to structure an HTML form](/zh-CN/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [The native form widgets](/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Sending form data](/zh-CN/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/zh-CN/docs/Learn/HTML/Forms/Form_validation)
-- [How to build custom form widgets](/zh-CN/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Sending forms through JavaScript](/zh-CN/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [HTML forms in legacy browsers](/zh-CN/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Advanced styling for HTML forms](/zh-CN/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Property compatibility table for form widgets](/zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+- [你的第一个表单](/zh-CN/docs/Learn/Forms/Your_first_form)
+- [如何构造 HTML 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
+- [原生表单部件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
+- [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
+- [其它表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
+- [样式化 HTML 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
+- [高级表单样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
+- [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
+- [客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
+- [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
+
+### 进阶内容
+
+- [如何构建表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [使用 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [表单控件兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
