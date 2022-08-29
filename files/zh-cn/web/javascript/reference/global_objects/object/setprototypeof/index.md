@@ -31,7 +31,7 @@ Object.setPrototypeOf(obj, prototype)
 
 - {{jsxref("TypeError")}}
   - : 如果发生以下情况中的任何一个，则抛出该异常：
-    - `obj` 参数是[不可扩展的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible)，或者它是一个[不可变原型的特异对象（exotic object）](https://tc39.es/ecma262/#sec-immutable-prototype-exotic-objects)，例如 `Object.prototype` 或 [`window`](/zh-CN/docs/Web/API/Window).
+    - `obj` 参数是[不可扩展的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible)，或者它是一个[不可修改原型的特异对象（exotic object）](https://tc39.es/ecma262/#sec-immutable-prototype-exotic-objects)，例如 `Object.prototype` 或 [`window`](/zh-CN/docs/Web/API/Window).
     - `prototype` 参数不是对象或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
 
 ## 描述
