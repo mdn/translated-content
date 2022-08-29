@@ -26,15 +26,13 @@ L'ancienne propriété en lecture seule **`loadEventStart`** retourne un `unsign
 let time = performanceTiming.loadEventStart;
 ```
 
-## Specifications
+## Spécifications
 
-| Spécification                                                                                                                                                | Statut                                   | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-loadeventstart', 'PerformanceTiming.loadEventStart')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceTiming.loadEventStart")}}
+{{Compat}}
 
 ## Voir aussi
 
