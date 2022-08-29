@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/name
 
 {{js_property_attributes(0,0,1)}}
 
-> **备注：** 在非标准的 ES2015 之前的实现中，`configurable` 属性也是 `false` 。
+> **备注：** 在非标准的 ES2015 之前的实现中，`configurable` 属性也是 `false`。
 
 ## 描述
 
