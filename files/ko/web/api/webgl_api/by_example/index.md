@@ -11,8 +11,6 @@ tags:
   - WebGL
 translation_of: Web/API/WebGL_API/By_example
 ---
-{{IncludeSubnav("/en-US/Learn")}}
-
 {{Next("Learn/WebGL/By_example/Detect_WebGL")}}
 
 _WebGL by example_ is a series of live samples with short explanations that showcase WebGL concepts and capabilities. The examples are sorted according to topic and level of difficulty, covering the WebGL rendering context, shader programming, textures, geometry, user interaction, and more.
