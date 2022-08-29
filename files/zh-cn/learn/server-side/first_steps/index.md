@@ -11,7 +11,7 @@ slug: Learn/Server-side/First_steps
 你需要先知道“Web 如何工作”，我们推荐你首先阅读下面几个话题：
 
 - [什么是一个 Web 服务器？](/zh-CN/docs/Learn/Common_questions/What_is_a_web_server)
-- [建立一个网站需要什么软件？](/en-US/docs/Learn/Common_questions/What_software_do_I_need)
+- [建立一个网站需要什么软件？](/zh-CN/docs/Learn/Common_questions/What_software_do_I_need)
 - [如何向 Web 服务器上传文件？](/zh-CN/docs/Learn/Common_questions/Upload_files_to_a_web_server)
 
 有了这些基础知识，你已经准备好开始这些模块的学习了。
