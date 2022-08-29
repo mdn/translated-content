@@ -24,16 +24,18 @@ translation_of: Web/EXSLT
 
 EXSLT 확장을 사용하려면 스타일시트에 사용할 확장 기능의 이름공간(namespace)을 선언해야 합니다. 다음 예제에서는 정규 표현식 꾸러미를 사용하는 경우입니다.
 
-    <xsl:stylesheet version="1.0"
-                    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                    xmlns:regexp="http://exslt.org/regular-expressions"
-                    extension-element-prefixes="regexp">
+```xml
+<xsl:stylesheet version="1.0"
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:regexp="http://exslt.org/regular-expressions"
+                extension-element-prefixes="regexp">
 
-    <xsl:import href="regexp.xsl" />
+<xsl:import href="regexp.xsl" />
 
-    ...
+...
 
-    </xsl:stylesheet>
+</xsl:stylesheet>
+```
 
 ### Common
 

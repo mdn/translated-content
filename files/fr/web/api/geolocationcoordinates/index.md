@@ -30,13 +30,11 @@ _L'interface `Coordinates` n'hérite d'aucune propriété._
 
 ## Spécifications
 
-| Spécification                                                                | Statut                           | Commentaire             |
-| ---------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
-| {{SpecName('Geolocation', '#coordinates', 'Coordinates')}} | {{Spec2('Geolocation')}} | Spécification initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.GeolocationCoordinates")}}
+{{Compat}}
 
 ## Voir aussi
 

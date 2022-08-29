@@ -1,11 +1,6 @@
 ---
 title: Streams API の概念
 slug: Web/API/Streams_API/Concepts
-tags:
-  - API
-  - Streams
-  - concepts
-translation_of: Web/API/Streams_API/Concepts
 ---
 {{apiref("Streams")}}
 

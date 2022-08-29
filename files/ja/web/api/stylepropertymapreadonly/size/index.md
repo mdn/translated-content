@@ -1,17 +1,6 @@
 ---
 title: StylePropertyMapReadOnly.size
 slug: Web/API/StylePropertyMapReadOnly/size
-tags:
-  - API
-  - CSS 型付きオブジェクトモデル API
-  - 実験的
-  - Houdini
-  - Property
-  - リファレンス
-  - StylePropertyMapReadOnly
-  - size
-browser-compat: api.StylePropertyMapReadOnly.size
-translation_of: Web/API/StylePropertyMapReadOnly/size
 ---
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 

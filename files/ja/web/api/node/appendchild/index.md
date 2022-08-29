@@ -26,7 +26,7 @@ translation_of: Web/API/Node/appendChild
 let aBlock = document.createElement('block').appendChild( document.createElement('b') );
 ```
 
-`aBlock` に `<b></b>` を追加するだけですが、 `block` に対して複数の `appendChild` を連鎖させるなど、それ以外の操作を連鎖せることはできません。
+`aBlock` に `<b></b>` を追加するだけですが、 `block` に対して複数の `appendChild` を連鎖させるなど、それ以外の操作を連鎖させることはできません。
 
 ## 構文
 

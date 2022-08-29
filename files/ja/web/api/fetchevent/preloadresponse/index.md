@@ -1,17 +1,6 @@
 ---
 title: FetchEvent.preloadResponse
 slug: Web/API/FetchEvent/PreloadResponse
-tags:
-  - API
-  - FetchEvent
-  - Offline
-  - Property
-  - Reference
-  - Service Workers
-  - Web Performance
-  - Workers
-  - request
-translation_of: Web/API/FetchEvent/PreloadResponse
 ---
 {{APIRef("Service Workers API")}}
 

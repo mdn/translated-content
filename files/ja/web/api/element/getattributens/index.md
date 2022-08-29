@@ -1,13 +1,6 @@
 ---
 title: Element.getAttributeNS()
 slug: Web/API/Element/getAttributeNS
-tags:
-  - API
-  - DOM
-  - Element
-  - メソッド
-  - リファレンス
-translation_of: Web/API/Element/getAttributeNS
 ---
 {{APIRef("DOM")}}
 

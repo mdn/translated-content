@@ -1,14 +1,6 @@
 ---
 title: ShadowRoot.host
 slug: Web/API/ShadowRoot/host
-tags:
-  - API
-  - Host
-  - プロパティ
-  - リファレンス
-  - ShadowRoot
-  - シャドウ DOM
-browser-compat: api.ShadowRoot.host
 ---
 {{APIRef("Shadow DOM")}}
 

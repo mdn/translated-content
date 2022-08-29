@@ -59,13 +59,11 @@ tears.forEach(function(el) {
 
 ## Spécifications
 
-| Spécification                                                            | État                                 | Commentaires         |
-| ------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Web Animations', '#start-delay', 'delay')}} | {{Spec2('Web Animations')}} | Brouillon d'édiiton. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.EffectTiming.delay")}}
+{{Compat}}
 
 ## Voir aussi
 

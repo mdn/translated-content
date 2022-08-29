@@ -1,16 +1,6 @@
 ---
 title: 'Document: gotpointercapture イベント'
 slug: Web/API/Element/gotpointercapture_event
-tags:
-  - Document
-  - Event
-  - PointerEvent
-  - Reference
-  - Web
-  - gotpointercapture
-  - イベント
-  - ウェブ
-translation_of: Web/API/Document/gotpointercapture_event
 original_slug: Web/API/Document/gotpointercapture_event
 ---
 {{APIRef}}

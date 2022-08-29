@@ -1,16 +1,6 @@
 ---
 title: SpeechRecognition()
 slug: Web/API/SpeechRecognition/SpeechRecognition
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognition/SpeechRecognition
 ---
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 

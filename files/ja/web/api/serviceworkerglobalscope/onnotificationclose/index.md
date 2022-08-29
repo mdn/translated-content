@@ -1,15 +1,6 @@
 ---
 title: onnotificationclose
 slug: Web/API/ServiceWorkerGlobalScope/onnotificationclose
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Property
-  - Reference
-  - ServiceWorkerGlobalScope
-  - onnotificationclose
-translation_of: Web/API/ServiceWorkerGlobalScope/onnotificationclose
 ---
 {{APIRef("Service Workers API")}}
 

@@ -27,9 +27,7 @@ Un objet {{domxref("LockedFile")}}.
 
 ## Spécifications
 
-| Spécification                        | Statut                           | Commentaire        |
-| ------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('FileSystem')}} | {{Spec2('FileSystem')}} | Brouillon proposé. |
+{{Specifications}}
 
 ## Voir aussi
 

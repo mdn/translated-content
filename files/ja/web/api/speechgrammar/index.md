@@ -1,16 +1,6 @@
 ---
 title: SpeechGrammar
 slug: Web/API/SpeechGrammar
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - SpeechGrammar
-  - Web Speech API
-  - recognition
-  - speech
-translation_of: Web/API/SpeechGrammar
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 

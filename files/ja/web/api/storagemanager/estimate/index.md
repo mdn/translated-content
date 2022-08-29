@@ -1,19 +1,6 @@
 ---
 title: StorageManager.estimate()
 slug: Web/API/StorageManager/estimate
-tags:
-  - API
-  - Method
-  - Quota
-  - Reference
-  - Secure context
-  - Storage
-  - Storage API
-  - StorageManager
-  - Usage
-  - estimate
-  - メソッド
-translation_of: Web/API/StorageManager/estimate
 ---
 {{securecontext_header}}{{APIRef("Storage")}}
 

@@ -520,13 +520,11 @@ Vous pouvez consulter un exemple encore plus détaillé sur l'article _[Timing e
 
 ## Spécifications
 
-| Spécification                                    | État                                         | Commentaire          |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('IntersectionObserver')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserver")}}
+{{Compat}}
 
 ## Voir aussi
 

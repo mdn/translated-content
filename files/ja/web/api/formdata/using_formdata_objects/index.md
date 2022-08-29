@@ -1,15 +1,6 @@
 ---
 title: FormData オブジェクトの使用
 slug: Web/API/FormData/Using_FormData_Objects
-tags:
-  - AJAX
-  - Blob
-  - File
-  - FormData
-  - Forms
-  - XHR
-  - XMLHttpRequest
-translation_of: Web/API/FormData/Using_FormData_Objects
 ---
 {{APIRef("XMLHttpRequest")}}
 

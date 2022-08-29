@@ -1,15 +1,6 @@
 ---
 title: 書き込み可能なストリームの使用
 slug: Web/API/Streams_API/Using_writable_streams
-tags:
-  - API
-  - Controller
-  - Guide
-  - Streams
-  - WritableStream
-  - writable streams
-  - writer
-translation_of: Web/API/Streams_API/Using_writable_streams
 ---
 {{apiref("Streams")}}
 

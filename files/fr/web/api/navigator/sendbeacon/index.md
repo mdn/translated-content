@@ -73,13 +73,11 @@ function enregistrerDonnees() {
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                   | Commentaire         |
-| ------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName('Beacon', '#sec-sendBeacon-method', 'sendBeacon()')}} | {{Spec2('Beacon')}} | Définition initiale |
+{{Specifications}}
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.Navigator.sendBeacon")}}
+{{Compat}}
 
 ## Voir aussi
 

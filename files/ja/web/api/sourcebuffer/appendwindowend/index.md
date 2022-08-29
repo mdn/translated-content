@@ -1,18 +1,6 @@
 ---
 title: SourceBuffer.appendWindowEnd
 slug: Web/API/SourceBuffer/appendWindowEnd
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBuffer
-  - Video
-  - appendWindowEnd
-translation_of: Web/API/SourceBuffer/appendWindowEnd
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 

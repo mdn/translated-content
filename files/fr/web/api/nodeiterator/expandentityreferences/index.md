@@ -36,14 +36,11 @@ expand = nodeIterator.expandEntityReferences;
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                            | Statut                                       | Commentaire                     |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------- |
-| {{SpecName('DOM WHATWG', '#nodeiterator', 'NodeIterator')}}                                                                                                         | {{Spec2('DOM WHATWG')}}             | Suppression de la spécification |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-NodeIterator-expandEntityReferences', 'NodeIterator.expandEntityReferences')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.            |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeIterator.expandEntityReferences")}}
+{{Compat}}
 
 ## Voir aussi
 

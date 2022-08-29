@@ -1,16 +1,6 @@
 ---
 title: Screen.unlockOrientation()
 slug: Web/API/Screen/unlockOrientation
-page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Deprecated
-  - Method
-  - NeedsMarkupWork
-  - Screen Orientation
-browser-compat: api.Screen.unlockOrientation
-translation_of: Web/API/Screen/unlockOrientation
 ---
 {{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
 

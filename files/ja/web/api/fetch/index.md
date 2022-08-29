@@ -1,18 +1,6 @@
 ---
 title: WindowOrWorkerGlobalScope.fetch()
 slug: Web/API/fetch
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Fetch API
-  - GlobalFetch
-  - Method
-  - Reference
-  - WindowOrWorkerGlobalScope
-  - request
-  - メソッド
-translation_of: Web/API/WindowOrWorkerGlobalScope/fetch
 original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 ---
 {{APIRef("Fetch API")}}

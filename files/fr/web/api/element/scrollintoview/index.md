@@ -53,15 +53,13 @@ element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 
 L'élément peut ne pas être aligné complètement avec le haut ou le bas, selon la disposition des autres éléments.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("CSSOM View", "#dom-element-scrollintoview", "Element.scrollIntoView()")}} | {{Spec2("CSSOM View")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.scrollIntoView")}}
+{{Compat}}
 
 ## Voir aussi
 

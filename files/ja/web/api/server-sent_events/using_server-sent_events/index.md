@@ -1,18 +1,6 @@
 ---
 title: サーバー送信イベントの使用
 slug: Web/API/Server-sent_events/Using_server-sent_events
-page-type: guide
-tags:
-  - Advanced
-  - Communication
-  - DOM
-  - Guide
-  - SSE
-  - Server Sent Events
-  - Server-sent events
-  - messaging
-browser-compat: api.EventSource
-translation_of: Web/API/Server-sent_events/Using_server-sent_events
 ---
 {{DefaultAPISidebar("Server Sent Events")}}
 

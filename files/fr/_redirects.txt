@@ -4827,7 +4827,7 @@
 /fr/docs/Web/JavaScript/Language_Resources	/fr/docs/Web/JavaScript/JavaScript_technologies_overview
 /fr/docs/Web/JavaScript/Les_différents_tests_d_égalité	/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /fr/docs/Web/JavaScript/Les_différents_tests_d_égalité_comment_les_utiliser	/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness
-/fr/docs/Web/JavaScript/Performance_les_dangers_liés_à_la_modification_de_Prototype	/fr/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation
+/fr/docs/Web/JavaScript/Performance_les_dangers_liés_à_la_modification_de_Prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 /fr/docs/Web/JavaScript/Reference/A_propos	/fr/docs/Web/JavaScript/Reference/About
 /fr/docs/Web/JavaScript/Reference/Classes/Class_fields	/fr/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /fr/docs/Web/JavaScript/Reference/Commentaires	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Commentaires
@@ -5741,6 +5741,7 @@
 /fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/fr/docs/Web/Security/Same-origin_policy
 /fr/docs/Web/JavaScript/Structures_de_données	/fr/docs/Web/JavaScript/Data_structures
 /fr/docs/Web/JavaScript/Tableaux_typés	/fr/docs/Web/JavaScript/Typed_arrays
+/fr/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 /fr/docs/Web/JavaScript/Une_réintroduction_à_JavaScript	/fr/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 /fr/docs/Web/JavaScript/décoder_encoder_en_base64	/fr/docs/Glossary/Base64
 /fr/docs/Web/JavaScript/guide_de_demarrage	/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics

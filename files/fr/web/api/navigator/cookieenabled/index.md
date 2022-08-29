@@ -25,10 +25,8 @@ if (!navigator.cookieEnabled) {
 
 ## Spécifications
 
-| Specification                                                                                                                            | Status                           | Comment             |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("HTML WHATWG", "webappapis.html#dom-navigator-cookieenabled", "Navigator.cookieEnabled")}} | {{Spec2("HTML WHATWG")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Navigator.cookieEnabled")}}
+{{Compat}}

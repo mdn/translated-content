@@ -81,7 +81,7 @@ You can use most of this API without any special permission. However:
 - {{WebExtAPIRef("tabs.getAllInWindow()")}} {{deprecated_inline}}
   - : Gets details about all tabs in the specified window.
 - {{WebExtAPIRef("tabs.getCurrent()")}}
-  - : Gets information about the tab that this script is running in, as a [`tabs.Tab`](/ko/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab "This type contains information about a tab.") object.
+  - : Gets information about the tab that this script is running in, as a [`tabs.Tab`](/ko/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab) object.
 - {{WebExtAPIRef("tabs.getSelected()")}} {{deprecated_inline}}
   - : Gets the tab that is selected in the specified window.
 - {{WebExtAPIRef("tabs.getZoom()")}}

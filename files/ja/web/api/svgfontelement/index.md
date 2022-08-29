@@ -1,10 +1,6 @@
 ---
 title: SVGFontElement
 slug: Web/API/SVGFontElement
-tags:
-  - SVG
-  - SVG DOM
-translation_of: Web/API/SVGFontElement
 ---
 {{APIRef("SVG")}}{{deprecated_header}}
 

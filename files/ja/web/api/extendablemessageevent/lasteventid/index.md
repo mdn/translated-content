@@ -1,7 +1,6 @@
 ---
 title: ExtendableMessageEvent.lastEventId
 slug: Web/API/ExtendableMessageEvent/lastEventId
-translation_of: Web/API/ExtendableMessageEvent/lastEventId
 ---
 {{APIRef("Service Workers API")}}
 

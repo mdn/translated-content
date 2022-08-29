@@ -1,13 +1,6 @@
 ---
 title: WebAssemblyコードのロードと実行
 slug: WebAssembly/Loading_and_running
-tags:
-  - Fetch
-  - JavaScript
-  - WebAssembly
-  - XMLHttpRequest
-  - バイトコード
-translation_of: WebAssembly/Loading_and_running
 ---
 {{WebAssemblySidebar}}
 

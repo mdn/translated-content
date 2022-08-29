@@ -33,10 +33,8 @@ Si `rootMargin` n'est pas spécifiée à l'initialisation de l'objet, sa valeur 
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('IntersectionObserver', '#dom-intersectionobserver-rootMargin', 'IntersectionObserver.rootMargin')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserver.rootMargin")}}
+{{Compat}}

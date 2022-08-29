@@ -1,16 +1,6 @@
 ---
 title: ServiceWorkerContainer
 slug: Web/API/ServiceWorkerContainer
-tags:
-  - API
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorkerContainer
-  - Workers
-translation_of: Web/API/ServiceWorkerContainer
 ---
 {{APIRef("Service Workers API")}}
 

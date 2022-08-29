@@ -1,17 +1,6 @@
 ---
 title: SpeechRecognitionAlternative.transcript
 slug: Web/API/SpeechRecognitionAlternative/transcript
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognitionAlternative
-  - Web Speech API
-  - recognition
-  - speech
-  - transcript
-translation_of: Web/API/SpeechRecognitionAlternative/transcript
 ---
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
