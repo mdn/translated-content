@@ -25,7 +25,7 @@ Rust と WebAssembly には、主に 2 つの用途があります。
 
 ### Rust のインストール
 
-[Install Rust](https://www.rust-lang.org/install.html) ページに行って指示に従い、Rust をインストールしてください。これによって "rustup" と呼ばれる複数のバージョンの Rust を管理できるようにするツールがインストールされます。既定の設定では、通常の Rust 開発で使いたいであろう最新の安定版 Rust リリースをインストールします。rustup は Rust コンパイラの `rustc` や Rust のパッケージマネージャーの `cargo` や Rust の標準ライブラリの `rust-std` やいくつかの助けになるドキュメント — `rust-docs` をインストールします。
+[Install Rust](https://www.rust-lang.org/install.html) ページに行って指示に従い、Rust をインストールしてください。これによって "rustup" と呼ばれる複数のバージョンの Rust を管理できるようにするツールがインストールされます。既定の設定では、通常の Rust 開発で使いたいであろう最新の安定版 Rust リリースをインストールします。rustup は Rust コンパイラーの `rustc` や Rust のパッケージマネージャーの `cargo` や Rust の標準ライブラリーの `rust-std` やいくつかの助けになるドキュメント — `rust-docs` をインストールします。
 
 > **Note:** **メモ**: インストール後のメモで、cargo の `bin` ディレクトリーをシステムの `PATH` に追加する必要があるという点に注意してください。これは自動的に追加されるはずですが、有効にするためにターミナルを再起動する必要があります。
 
@@ -46,7 +46,7 @@ $ cargo new --lib hello-wasm
      Created library `hello-wasm` project
 ```
 
-これにより新たなライブラリが出発に必要なものすべてと一緒に `hello-wasm` という名前のサブディレクトリーに作成されます。
+これにより新たなライブラリーが出発に必要なものすべてと一緒に `hello-wasm` という名前のサブディレクトリーに作成されます。
 
 ```plain
 +-- Cargo.toml
@@ -98,11 +98,11 @@ pub fn greet(name: &str) {
 use wasm_bindgen::prelude::*;
 ```
 
-ライブラリは Rust では「クレート」と呼ばれます。
+ライブラリーは Rust では「クレート」と呼ばれます。
 
 理解できましたか？ _Cargo_ が*クレート*を取り入れるのです。
 
-3 行目にはコードをライブラリから自分のコードにインポートする `use` コマンドがあります。この場合、`wasm_bindgen::prelude` モジュールにあるものすべてをインポートしています。これらの機能は次の節で使用します。
+3 行目にはコードをライブラリーから自分のコードにインポートする `use` コマンドがあります。この場合、`wasm_bindgen::prelude` モジュールにあるものすべてをインポートしています。これらの機能は次の節で使用します。
 
 次の節に移動する前に、もう少し `wasm-bindgen` について話しておいたほうがいいでしょう。
 
@@ -148,7 +148,7 @@ pub fn greet(name: &str) {
 
 これは alert() に渡されるので、この関数を呼び出すと "Hello, Steve!" と書かれたアラートボックスが現れるでしょう。
 
-ライブラリを書いたので、それをビルドしましょう。
+ライブラリーを書いたので、それをビルドしましょう。
 
 ### コードを WebAssembly にコンパイルする
 
@@ -226,7 +226,7 @@ $ wasm-pack build --target web
 
 このファイルのスクリプトは、js グルーコードをインポートし、wasm モジュールを初期化し、rust で書いた `greet` 関数を呼び出します。
 
-プロジェクトのルートディレクトリに、ローカルのウェブサーバーを用意します（例: `python3 -m http.server` ）。やり方がよくわからない場合は、[シンプルなローカル HTTP サーバーの実行](/ja/docs/Learn/Common_questions/set_up_a_local_testing_server#running_a_simple_local_http_server)を参考にしてください。
+プロジェクトのルートディレクトリーに、ローカルのウェブサーバーを用意します（例: `python3 -m http.server` ）。やり方がよくわからない場合は、[シンプルなローカル HTTP サーバーの実行](/ja/docs/Learn/Common_questions/set_up_a_local_testing_server#running_a_simple_local_http_server)を参考にしてください。
 
 > **Note:** 必ず `application/wasm` という MIME 型に対応している最新のウェブサーバーを使用してください。古いウェブサーバーでは、まだ対応していないかもしれません。
 
