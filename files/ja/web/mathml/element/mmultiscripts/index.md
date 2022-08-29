@@ -14,8 +14,8 @@ MathML は、基部 (基部) に対する後付け (postscripts) および前付
 ```html
 <mmultiscripts>
     base
-     (subscript superscript)*
-     [ <mprescripts/> (前の下付き文字 presuperscript)* ]
+     (下付き文字 上付き文字)*
+     [ <mprescripts/> (前の下付き文字 前の上付き文字)* ]
 </mmultiscripts>
 ```
 
