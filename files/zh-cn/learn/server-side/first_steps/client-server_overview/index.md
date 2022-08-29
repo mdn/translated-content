@@ -38,7 +38,7 @@ slug: learn/Server-side/First_steps/Client-Server_overview
   - `HEAD`: 获取有关指定资源的元数据信息，而不会得到像 GET 的内容部分。例如，您可以使用 HEAD 请求来查找上次更新资源的时间，然后仅使用（更“昂贵”）GET 请求下载资源（如果已更改）。
   - `PUT`：更新一份已经存在的资源（或者在该资源不存在的情况下创建一份新的）。
   - `DELETE`：删除指定的资源。
-  - `TRACE`、`OPTIONS`、`CONNECT、PATCH`等动作是为一些不常见任务设计的，因此我们在这里的讲解不会涉及到他们。
+  - `TRACE`、`OPTIONS`、`CONNECT、PATCH`：这些动作是为一些不常见任务设计的，因此我们在这里的讲解不会涉及到它们。
 
 - 额外的信息可以和请求一起被编码（比如 HTML 表单数据）。信息可以被编码成如下：
 
