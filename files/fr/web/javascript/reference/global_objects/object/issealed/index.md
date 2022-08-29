@@ -19,7 +19,9 @@ La méthode **`Object.isSealed()`** permet de déterminer si un objet est scell�
 
 ## Syntaxe
 
-    Object.isSealed(obj)
+```js
+Object.isSealed(obj)
+```
 
 ### Paramètres
 

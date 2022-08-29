@@ -18,7 +18,9 @@ Cette méthode retourne une valeur ID de veille qui permet de libérer les fonct
 
 ## Syntaxe
 
-    id = navigator.geolocation.watchPosition(success[, error[, options]])
+```js
+id = navigator.geolocation.watchPosition(success[, error[, options]])
+```
 
 ### Paramètres
 
@@ -65,13 +67,11 @@ id = navigator.geolocation.watchPosition(success, error, options);
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
-| {{SpecName('Geolocation', '#watch-position', 'Geolocation.watchPosition()')}} | {{Spec2('Geolocation')}} | Specification initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Geolocation.watchPosition")}}
+{{Compat}}
 
 ## Voir aussi
 

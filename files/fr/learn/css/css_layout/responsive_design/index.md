@@ -75,9 +75,9 @@ Zoe Mickley Gillenwater a grandement contribué au travail de description et de 
 
 Le terme de responsive design a été [inventé par Ethan Marcotte en 2010](https://alistapart.com/article/responsive-web-design/), et décrit la combinaison de trois techniques.
 
-1.  La première était l'idée des grilles fluides, une idée déjà explorée par Gillenwater, que l'on peut lire dans l'article de Marcotte, [Fluid Grids](https://alistapart.com/article/fluidgrids/) (publié en 2009 sur A List Apart).
-2.  La deuxième technique était l'idée [d'images fluides](http://unstoppablerobotninja.com/entry/fluid-images). En utilisant une technique très simple de réglage de la propriété `max-width` à `100%`,  les images deviennent plus petites si leur colonne de contenu devient plus étroite que la taille intrinsèque de l'image, mais ne deviennent jamais plus grandes. Cela permet à une image de se réduire pour s'intégrer dans une colonne de taille flexible, plutôt que de la déborder, mais de ne pas s'agrandir et de devenir pixélisée si la colonne devient plus large que l'image.
-3.  Le troisième élément clé était la [media query](/fr/docs/Web/CSS/Media_Queries). Les Media Queries permettent de changer le type de mise en page que Cameron Adams avait précédemment exploré en utilisant JavaScript, en utilisant uniquement CSS. Au lieu d'avoir une seule mise en page pour toutes les tailles d'écran, la mise en page pouvait être modifiée. Les barres latérales pouvaient être repositionnées pour l'écran plus petit, ou une autre navigation pouvait être affichée.
+1. La première était l'idée des grilles fluides, une idée déjà explorée par Gillenwater, que l'on peut lire dans l'article de Marcotte, [Fluid Grids](https://alistapart.com/article/fluidgrids/) (publié en 2009 sur A List Apart).
+2. La deuxième technique était l'idée [d'images fluides](http://unstoppablerobotninja.com/entry/fluid-images). En utilisant une technique très simple de réglage de la propriété `max-width` à `100%`,  les images deviennent plus petites si leur colonne de contenu devient plus étroite que la taille intrinsèque de l'image, mais ne deviennent jamais plus grandes. Cela permet à une image de se réduire pour s'intégrer dans une colonne de taille flexible, plutôt que de la déborder, mais de ne pas s'agrandir et de devenir pixélisée si la colonne devient plus large que l'image.
+3. Le troisième élément clé était la [media query](/fr/docs/Web/CSS/Media_Queries). Les Media Queries permettent de changer le type de mise en page que Cameron Adams avait précédemment exploré en utilisant JavaScript, en utilisant uniquement CSS. Au lieu d'avoir une seule mise en page pour toutes les tailles d'écran, la mise en page pouvait être modifiée. Les barres latérales pouvaient être repositionnées pour l'écran plus petit, ou une autre navigation pouvait être affichée.
 
 Il est important de comprendre que **le responsive web design n'est pas une technologie à part** - c'est un terme utilisé pour décrire une approche de la conception web, ou un ensemble de bonnes pratiques, utilisées pour créer une mise en page qui peut correspondre à l'appareil utilisé pour visualiser le contenu. Dans la recherche initiale de Marcotte, cela impliquait des grilles flexibles (en utilisant des flotteurs) et des média queries, mais depuis la rédaction de cet article, il y a presque 10 ans, le concept de responsive design est devenu la norme. Les méthodes modernes de mise en page CSS sont par nature responsives, et nous avons intégré de nouvelles choses à la plateforme Web pour faciliter la conception de sites responsives.
 
@@ -111,7 +111,9 @@ En utilisant une grille flexible, vous n'avez qu'à ajouter un point d'arrêt et
 
 Aux débuts du responsive design, notre seule option pour réaliser la mise en page était d'utiliser [floats](/fr/docs/Apprendre/CSS/CSS_layout/Floats). Aux débuts du responsive design, notre seule option pour réaliser la mise en page était d'utiliser des flotteurs. Des mises en page flottantes flexibles ont été réalisées en donnant à chaque élément un pourcentage de largeur et en s'assurant que les totaux ne dépassent pas 100 % dans toute la mise en page. Dans sa publication originale sur les grilles fluides, Marcotte a détaillé une formule pour convertir en pourcentages une mise en page conçue à l'aide de pixels.
 
-    target / context = result
+```
+target / context = result
+```
 
 Par exemple, si la taille de notre colonne cible est de 60 pixels et que le contexte (ou conteneur) dans lequel elle se trouve est de 960 pixels, nous divisons 60 par 960 pour obtenir une valeur que nous pouvons utiliser dans notre CSS, après avoir déplacé le point décimal de deux places vers la droite.
 
@@ -121,11 +123,9 @@ Par exemple, si la taille de notre colonne cible est de 60 pixels et que le cont
 }
 ```
 
-Cette approche se retrouve aujourd'hui à de nombreux endroits sur le Web, et elle est documentée ici dans la section sur la mise en page de notre article sur [Méthodes de mises en page traditionnelles](/fr/docs/Apprendre/CSS/CSS_layout/Legacy_Layout_Methods). Cette approche se retrouve aujourd'hui à de nombreux endroits sur le Web, et elle est documentée ici dans la section sur la mise en page de notre article sur les méthodes de mise en page héritées. Il est probable que vous rencontrerez des sites web utilisant cette approche dans votre travail, donc il est utile de la comprendre, même si vous ne construiriez pas un site moderne en utilisant une grille flexible basée sur le flottement.
+Cette approche se retrouve aujourd'hui à de nombreux endroits sur le Web, et elle est documentée dans notre article sur les [méthodes de mises en page traditionnelles](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods). Il est probable que vous rencontrerez des sites web utilisant cette approche dans votre travail, donc il est utile de la comprendre, même si vous ne construiriez pas un site moderne en utilisant une grille flexible basée sur le flottement.
 
 L'exemple suivant montre une conception simple et responsive en utilisant des médias queries et une grille flexible. Sur des écrans étroits, la mise en page affiche les boîtes entassées les unes sur les autres :
-
-
 
 ![A mobile view of the layout with boxes stacked on top of each other vertically.](mdn-rwd-mobile.png)
 

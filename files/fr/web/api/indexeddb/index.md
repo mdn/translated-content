@@ -1,5 +1,5 @@
 ---
-title: IDBEnvironment.indexedDB
+title: indexedDB
 slug: Web/API/indexedDB
 tags:
   - API
@@ -7,16 +7,18 @@ tags:
   - Propriété
   - Reference
   - WindowOrWorkerGlobalScope
-translation_of: Web/API/WindowOrWorkerGlobalScope/indexedDB
+translation_of: Web/API/indexedDB
 original_slug: Web/API/WindowOrWorkerGlobalScope/indexedDB
 ---
 {{APIRef}}
 
-La propriété **`indexedDB`** en lecture seule, rattachée au _mixin_ {{domxref("WindowOrWorkerGlobalScope")}} fournit un mécanisme qui permet aux applications d'accéder aux bases de données indexées de façon asynchrone.
+La propriété globale en lecture seule **`indexedDB`** fournit un mécanisme qui permet aux applications d'accéder aux bases de données indexées de façon asynchrone.
 
 ## Syntaxe
 
-    var IDBFactory = self.indexedDB;
+```js
+var IDBFactory = self.indexedDB;
+```
 
 ### Valeur de retour
 
@@ -36,14 +38,11 @@ function openDB() {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires                                        |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------- |
-| {{SpecName('IndexedDB 2', '#dom-windoworworkerglobalscope-indexeddb', 'indexedDB')}} | {{Spec2('IndexedDB 2')}} | Rattachement partiel à `WindowOrWorkerGlobalScope`. |
-| {{SpecName('IndexedDB', '#widl-IDBEnvironment-indexedDB', 'indexedDB')}}                 | {{Spec2('IndexedDB')}}     | Définition initiale.                                |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowOrWorkerGlobalScope.indexedDB")}}
+{{Compat}}
 
 ## Voir aussi
 

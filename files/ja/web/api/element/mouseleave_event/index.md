@@ -11,7 +11,6 @@ tags:
   - マウス
   - mouseleave
   - move
-browser-compat: api.Element.mouseleave_event
 translation_of: Web/API/Element/mouseleave_event
 ---
 {{APIRef}}

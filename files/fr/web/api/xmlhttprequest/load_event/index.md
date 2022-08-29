@@ -8,9 +8,11 @@ original_slug: Web/API/XMLHttpRequestEventTarget/onload
 
 The **`XMLHttpRequestEventTarget.onload`** is the function called when an {{domxref("XMLHttpRequest")}} transaction completes successfully.
 
-## Syntax
+## Syntaxe
 
-    XMLHttpRequest.onload = callback;
+```js
+XMLHttpRequest.onload = callback;
+```
 
 ### Values
 

@@ -15,7 +15,9 @@ La propriété **`iconURL`**, rattachée à l'interface {{domxref("PasswordCrede
 
 ## Syntaxe
 
-    url = passwordCredential.iconURL
+```js
+url = passwordCredential.iconURL
+```
 
 ### Valeur
 

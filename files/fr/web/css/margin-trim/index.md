@@ -9,7 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/margin-trim
 ---
-{{CSSRef}}{{Draft}}{{SeeCompatTable}}
+{{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`margin-trim`** permet à un conteneur de rogner les marges de ses éléments enfants qui sont adjacentes aux bords du conteneur.
 

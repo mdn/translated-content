@@ -18,7 +18,9 @@ La méthode **`propertyIsEnumerable()`** renvoie un booléen qui indique si la p
 
 ## Syntaxe
 
-    obj.propertyIsEnumerable(prop)
+```js
+obj.propertyIsEnumerable(prop)
+```
 
 ### Paramètres
 

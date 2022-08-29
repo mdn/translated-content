@@ -11,10 +11,10 @@ translation_of: Web/API/Document/querySelectorAll
 ---
 <div>{{ ApiRef("DOM") }}</div>
 
-<p>Метод <code><strong>querySelectorAll()</strong></code> {{domxref("Document")}} возвращает статический (не динамический) {{domxref("NodeList")}}, содержащий все найденные элементы документа, которые соответствуют указанному селектору.</p>
+<p>Метод <code><strong>querySelectorAll()</strong></code> {{domxref("Document")}} возвращает статический (не динамический) {{domxref("NodeList")}}, содержащий все найденные элементы документа, которые соответствуют указанному селектору.</p>
 
 <div class="blockIndicator note">
-<p><strong>Примечание:</strong> Данный метод реализован на основе миксина {{domxref("ParentNode")}} {{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} метода.</p>
+<p><strong>Примечание:</strong> Данный метод реализован на основе миксина {{domxref("ParentNode")}} {{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} метода.</p>
 </div>
 
 <h2 id="Syntax">Синтаксис</h2>
@@ -26,11 +26,11 @@ translation_of: Web/API/Document/querySelectorAll
 
 <dl>
  <dt><strong><code>selectors</code></strong></dt>
- <dd>Строка {{domxref("DOMString")}}, содержащая один или более <a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors">CSS селектор</a>. Эта строка должна быть валидным <a href="/ru/docs/Web/CSS/CSS_Selectors">CSS селектором</a>. Если это не так, то генерируется <code>SyntaxError</code>. Смотрите <a href="/ru/docs/DOM/DOM_Reference/Locating_DOM_elements_using_selectors">Поиск элементов DOM с использованием селекторов</a> для получения информации о том, распознавать элементы. Несколько селекторов нужно разделить запятыми.</dd>
+ <dd>Строка {{domxref("DOMString")}}, содержащая один или более <a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors">CSS селектор</a>. Эта строка должна быть валидным <a href="/ru/docs/Web/CSS/CSS_Selectors">CSS селектором</a>. Если это не так, то генерируется <code>SyntaxError</code>. Смотрите <a href="/ru/docs/DOM/DOM_Reference/Locating_DOM_elements_using_selectors">Поиск элементов DOM с использованием селекторов</a> для получения информации о том, распознавать элементы. Несколько селекторов нужно разделить запятыми.</dd>
 </dl>
 
 <div class="note">
-<p><strong>Примечание:</strong> Символы, которые не являются частью стандартного синтаксиса CSS, должны быть экранированы с помощью символа обратной косой черты (<code>\</code>). Поскольку в JavaScript также используется экранирование обратной косой черты, при написании строковых литералов с использованием этих символов следует соблюдать особую осторожность. Для более подробной информации смотри {{anch("Escaping special characters")}}.</p>
+<p><strong>Примечание:</strong> Символы, которые не являются частью стандартного синтаксиса CSS, должны быть экранированы с помощью символа обратной косой черты (<code>\</code>). Поскольку в JavaScript также используется экранирование обратной косой черты, при написании строковых литералов с использованием этих символов следует соблюдать особую осторожность. Для более подробной информации смотри <a href="#escaping_special_characters">Escaping special characters</a>.</p>
 </div>
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
@@ -61,7 +61,7 @@ translation_of: Web/API/Document/querySelectorAll
 <pre class="brush: js">var matches = document.querySelectorAll("div.note, div.alert");
 </pre>
 
-<p>Здесь мы получаем список элементов <code>&lt;p&gt;</code>, чьим непосредственным родительским элементом является {{HTMLElement("div")}} с классом <code>highlighted</code>, который расположен внутри контейнера с идентификатором <code>test</code>.</p>
+<p>Здесь мы получаем список элементов <code>&lt;p&gt;</code>, чьим непосредственным родительским элементом является {{HTMLElement("div")}} с классом <code>highlighted</code>, который расположен внутри контейнера с идентификатором <code>test</code>.</p>
 
 <pre class="brush: js">var container = document.querySelector("#test");
 var matches = container.querySelectorAll("div.highlighted &gt; p");</pre>
@@ -89,11 +89,11 @@ highlightedItems.forEach(function(userItem) {
 
 <h2 id="Примечания_пользователя">Примечания пользователя</h2>
 
-<p><code>querySelectorAll()</code> ведёт себя не так, как большинство библиотек JavaScript DOM. Это может привести к неожиданным результатам.</p>
+<p><code>querySelectorAll()</code> ведёт себя не так, как большинство библиотек JavaScript DOM. Это может привести к неожиданным результатам.</p>
 
 <h3 id="HTML">HTML</h3>
 
-<p>Рассмотрим этот HTML с тремя вложенными {{HTMLElement("div")}} блоками.</p>
+<p>Рассмотрим этот HTML с тремя вложенными {{HTMLElement("div")}} блоками.</p>
 
 <pre class="brush: html">&lt;div class="outer"&gt;
   &lt;div class="select"&gt;
@@ -108,9 +108,9 @@ highlightedItems.forEach(function(userItem) {
 var inner = select.querySelectorAll('.outer .inner');
 inner.length; // 1, не 0!</pre>
 
-<p>В данном примере, когда мы выбрали <code>".outer .inner"</code> в контексте <code>&lt;div&gt;</code> с классом <code>"select"</code>, элемент с классом <code>".inner"</code> был всё равно найден, хотя <code>.outer</code> не является потомком элемента в котором происходил поиск (<code>".select"</code>). По умолчанию, <code>querySelectorAll()</code> проверяет только последний элемент без учёта контекста.</p>
+<p>В данном примере, когда мы выбрали <code>".outer .inner"</code> в контексте <code>&lt;div&gt;</code> с классом <code>"select"</code>, элемент с классом <code>".inner"</code> был всё равно найден, хотя <code>.outer</code> не является потомком элемента в котором происходил поиск (<code>".select"</code>). По умолчанию, <code>querySelectorAll()</code> проверяет только последний элемент без учёта контекста.</p>
 
-<p>Псевдокласс {{cssxref(":scope")}} даёт нам ожидаемый результат. Только соответствующие селекторы в потомках базового элемента:</p>
+<p>Псевдокласс {{cssxref(":scope")}} даёт нам ожидаемый результат. Только соответствующие селекторы в потомках базового элемента:</p>
 
 <pre class="brush: js">var select = document.querySelector('.select');
 var inner = select.querySelectorAll(':scope .outer .inner');

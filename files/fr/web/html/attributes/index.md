@@ -1325,7 +1325,7 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Element/html#attr-manifest"
           ><code>manifest</code></a
         >
-        {{obsolete_inline}}
+        {{deprecated_inline}}
       </td>
       <td>
         <a href="/fr/docs/Web/HTML/Element/html"><code>&#x3C;html></code></a>

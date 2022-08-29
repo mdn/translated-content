@@ -18,7 +18,9 @@ La méthode **`Promise.race()`** renvoie une promesse qui est résolue ou rejet�
 
 ## Syntaxe
 
-    Promise.race(itérable);
+```js
+Promise.race(itérable);
+```
 
 ### Paramètres
 

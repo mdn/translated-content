@@ -106,7 +106,7 @@ occasions, comme maintenant.</p>
 
 ### Familles de fontes
 
-Pour définir une police de caractères différente pour le texte, utilisez la propriété {{cssxref("font-family")}} — cela vous permet de spécifier une police (ou une liste de polices) que le navigateur doit appliquer aux éléments sélectionnés. Le navigateur n'appliquera une police de caractères que si elle est disponible sur la machine sur laquelle le site est accessible, sinon, il utilisera une  {{anch("Default fonts", "police par défaut")}} . Un exemple simple pour voir cela :
+Pour définir une police de caractères différente pour le texte, utilisez la propriété {{cssxref("font-family")}} — cela vous permet de spécifier une police (ou une liste de polices) que le navigateur doit appliquer aux éléments sélectionnés. Le navigateur n'appliquera une police de caractères que si elle est disponible sur la machine sur laquelle le site est accessible, sinon, il utilisera une [police par défaut](#polices_par_défaut). Un exemple simple pour voir cela :
 
 ```css
 p {
@@ -339,10 +339,10 @@ text-shadow: 4px 4px 5px red;
 
 Les 4 propriétés sont les suivantes :
 
-1.  Le décalage horizontal de l'ombre par rapport au texte original — cette grandeur acepte la plupart des [unités de longueur et de taille](/fr/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size) des CSS disponibles, mais vous utiliserez en règle générale le px. Cette valeur doit être précisée.
-2.  Le décalage vertical de l'ombre par rapport au texte original — cette grandeur se comporte à la base comme la précédente, sauf que l'ombre est portée vers le haut ou vers le bas, et non vers la gauche ou la droite. Cette valeur doit être précisée.
-3.  Le rayon de floutage — plus cette valeur est élevée, plus l'ombre est étalée largement. Si cette valeur n'est pas précisée, la valeur par défaut est 0, ce qui signifie pas de flou. Elle accepte toutes les [unités de longueur et de taille](/fr/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size) des CSS.
-4.  La couleur de l'ombre, qui peut prendre toute [unité de couleur CSS](/fr/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors). Si elle n'est pas définie, c'est la couleur noire par défaut.
+1. Le décalage horizontal de l'ombre par rapport au texte original — cette grandeur acepte la plupart des [unités de longueur et de taille](/fr/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size) des CSS disponibles, mais vous utiliserez en règle générale le px. Cette valeur doit être précisée.
+2. Le décalage vertical de l'ombre par rapport au texte original — cette grandeur se comporte à la base comme la précédente, sauf que l'ombre est portée vers le haut ou vers le bas, et non vers la gauche ou la droite. Cette valeur doit être précisée.
+3. Le rayon de floutage — plus cette valeur est élevée, plus l'ombre est étalée largement. Si cette valeur n'est pas précisée, la valeur par défaut est 0, ce qui signifie pas de flou. Elle accepte toutes les [unités de longueur et de taille](/fr/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size) des CSS.
+4. La couleur de l'ombre, qui peut prendre toute [unité de couleur CSS](/fr/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors). Si elle n'est pas définie, c'est la couleur noire par défaut.
 
 > **Note :** Les valeurs positives de décalage déplacent l'ombre à droite et en bas, mais vous pouvez aussi utiliser des valeurs négatives pour obtenir une ombre à gauche et en haut, par exemple `-1px -1px`.
 

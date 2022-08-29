@@ -13,7 +13,9 @@ Si le nouveau nœud est un fragment de document, les enfants du fragment sont in
 
 ## Syntaxe
 
-    range.insertNode(newNode);
+```js
+range.insertNode(newNode);
+```
 
 ### Paramètres
 
@@ -43,4 +45,4 @@ range.insertNode(newNode);
 
 ## Voir aussi
 
-- [L’index des interfaces DOM](/en-US/docs/Web/API/Document_Object_Model)
+- [L’index des interfaces DOM](/fr/docs/Web/API/Document_Object_Model)

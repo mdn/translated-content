@@ -13,14 +13,14 @@ En CSS, la locution "ordre canonique" est utilisée pour désigner l'ordre dans 
 
 Par exemple, {{cssxref("background")}}, les valeurs de propriété raccourcie sont constituées de plusieurs propriétés `background-*` . L'ordre canonique de ces valeurs longues est défini comme suit :
 
-1.  {{cssxref("background-image")}}
-2.  {{cssxref("background-position")}}
-3.  {{cssxref("background-size")}}
-4.  {{cssxref("background-repeat")}}
-5.  {{cssxref("background-attachment")}}
-6.  {{cssxref("background-origin")}}
-7.  {{cssxref("background-clip")}}
-8.  {{cssxref("background-color")}}
+1. {{cssxref("background-image")}}
+2. {{cssxref("background-position")}}
+3. {{cssxref("background-size")}}
+4. {{cssxref("background-repeat")}}
+5. {{cssxref("background-attachment")}}
+6. {{cssxref("background-origin")}}
+7. {{cssxref("background-clip")}}
+8. {{cssxref("background-color")}}
 
 De plus, sa syntaxe exige que, si une valeur pour {{cssxref("background-size")}} est donnée, elle doit être spécifiée après la valeur de {{cssxref("background-position")}}, séparée par une barre oblique. D'autres valeurs peuvent apparaître dans n'importe quel ordre.
 

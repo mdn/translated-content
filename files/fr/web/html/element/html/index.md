@@ -16,9 +16,9 @@ L'élément HTML **`<html>`** représente la racine d'un document HTML ou XHTML.
 
 Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-- {{htmlattrdef("manifest")}}{{obsolete_inline}}
-  - : Définit l'URI d'un manifeste de ressources signifiant que les ressources devraient être mises en cache localement. Voir [Ressources hors-ligne dans Firefox](/fr/docs/Utiliser_Application_Cache "en/Offline_resources_in_Firefox") pour plus de détails.
-- {{htmlattrdef("version")}}{{obsolete_inline}}
+- {{htmlattrdef("manifest")}}{{deprecated_inline}}
+  - : Définit l'URI d'un manifeste de ressources signifiant que les ressources devraient être mises en cache localement. Voir [Ressources hors-ligne dans Firefox](/fr/docs/Utiliser_Application_Cache) pour plus de détails.
+- {{htmlattrdef("version")}}{{deprecated_inline}}
   - : Définit la version du document HTML _Document Type Definition_ qui s'applique pour le document courant. Cet attribut n'est pas nécessaire car il est redondant avec l'information de version se trouvant dans la déclaration de type du document (_doctype_).
 - {{htmlattrdef("xmlns")}}
   - : Définit l'espace de noms XML du document. La valeur par défaut est "http\://www\.w3.org/1999/xhtml". Cet attribut est obligatoire dans un document XML et optionnel dans un document de type text/html.
@@ -45,7 +45,7 @@ L'utilisation d'un attribut {{htmlattrxref("lang")}} [valide (au sens de l'IETF)
 
 Ajouter un attribut `lang` valide au sein de l'élément HTML permet également de s'assurer que les métadonnées importantes contenue dans l'élément {{HTMLElement("head")}}, telle que le titre de la page (cf. {{HTMLElement("title")}}) sont énoncées correctement.
 
-- [Comprendre les règles WCAG 3.1](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.1_%E2%80%94_Readable_Make_text_content_readable_and_understandable)
+- [Comprendre les règles WCAG 3.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.1_%E2%80%94_Readable_Make_text_content_readable_and_understandable)
 - _[Understanding Success Criterion 3.1.1 - W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/meaning-doc-lang-id.html)_
 
 ## Résumé technique

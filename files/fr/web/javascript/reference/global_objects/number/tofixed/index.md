@@ -18,7 +18,9 @@ La méthode **`toFixed()`** permet de formater un nombre en notation à point-fi
 
 ## Syntaxe
 
-    numObj.toFixed([nbChiffres])
+```js
+numObj.toFixed([nbChiffres])
+```
 
 ### Paramètres
 

@@ -11,4 +11,4 @@ original_slug: Glossaire/Telnet
 
 ## Plus d'informations
 
-- {{interwiki('wikipedia','Telnet')}} sur Wikipédia
+- [Telnet](https://fr.wikipedia.org/wiki/Telnet) sur Wikipédia

@@ -34,7 +34,9 @@ Un champ d'en-tête `Host` doit être envoyé dans tous les messages de requête
 
 ## Syntaxe
 
-    Host: <host>:<port>
+```
+Host: <host>:<port>
+```
 
 ## Directives
 
@@ -45,7 +47,9 @@ Un champ d'en-tête `Host` doit être envoyé dans tous les messages de requête
 
 ## Exemples
 
-    Host: developer.mozilla.org
+```
+Host: developer.mozilla.org
+```
 
 ## Spécifications
 

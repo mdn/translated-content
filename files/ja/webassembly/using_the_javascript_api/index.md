@@ -1,16 +1,6 @@
 ---
 title: WebAssembly JavaScript API の使用
 slug: WebAssembly/Using_the_JavaScript_API
-tags:
-  - API
-  - 開発ツール
-  - JavaScript
-  - WebAssembly
-  - コンパイル
-  - インスタンス化
-  - メモリー
-  - テーブル
-translation_of: WebAssembly/Using_the_JavaScript_API
 ---
 {{WebAssemblySidebar}}
 
@@ -27,9 +17,9 @@ WebAssembly JavaScript API の使用方法と、wasm モジュールを読み込
 
 ### 例の準備
 
-1.  まずは、 wasm モジュールが必要です! [simple.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm) をコピーしてローカルマシンの新しいディレクトリーの中に保存してください。
-2.  次に、 wasm ファイルと同じディレクトリーに `index.html` という名前でシンプルな HTML ファイルを作成しましょう（簡単に利用できるテンプレートを持っていないのであれば、[単純なテンプレート](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)が利用できます）。
-3.  ここで、何が起こっているのか理解を助けるために、 wasm モジュールのテキスト表現を見てみましょう（[WebAssembly フォーマットから wasm への変換](/ja/docs/WebAssembly/Text_format_to_wasm)も参照してください）。
+1. まずは、 wasm モジュールが必要です! [simple.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm) をコピーしてローカルマシンの新しいディレクトリーの中に保存してください。
+2. 次に、 wasm ファイルと同じディレクトリーに `index.html` という名前でシンプルな HTML ファイルを作成しましょう（簡単に利用できるテンプレートを持っていないのであれば、[単純なテンプレート](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)が利用できます）。
+3. ここで、何が起こっているのか理解を助けるために、 wasm モジュールのテキスト表現を見てみましょう（[WebAssembly フォーマットから wasm への変換](/ja/docs/WebAssembly/Text_format_to_wasm)も参照してください）。
 
     ```js
     (module
@@ -39,7 +29,7 @@ WebAssembly JavaScript API の使用方法と、wasm モジュールを読み込
         call $i))
     ```
 
-4.  2 行目に 2 階層の名前空間を持つインポートの宣言があります。 — 内部関数 `$i` は `imports.imported_func` からインポートされています。wasm モジュールにインポートするオブジェクトを記述するときに、この 2 階層の名前空間を JavaScript に反映させる必要があります。 `<script></script>` 要素を HTML 内に作成して、次のコードを追加してください。
+4. 2 行目に 2 階層の名前空間を持つインポートの宣言があります。 — 内部関数 `$i` は `imports.imported_func` からインポートされています。wasm モジュールにインポートするオブジェクトを記述するときに、この 2 階層の名前空間を JavaScript に反映させる必要があります。 `<script></script>` 要素を HTML 内に作成して、次のコードを追加してください。
 
     ```js
     var importObject = {
@@ -100,8 +90,8 @@ JavaScript では、Memory インスタンスはリサイズ可能な  [`ArrayBu
 
 簡単な例を見ながら、探索を始めましょう。
 
-1.  もう 1 つのシンプルな HTML ページを（[単純なテンプレート](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)をコピーして）作成し、 `memory.html` という名前を付けてください。このページに `<script></script>` 要素を追加してください。
-2.  Memory インスタンスを作成するために、次の行をスクリプトに追加します。
+1. もう 1 つのシンプルな HTML ページを（[単純なテンプレート](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)をコピーして）作成し、 `memory.html` という名前を付けてください。このページに `<script></script>` 要素を追加してください。
+2. Memory インスタンスを作成するために、次の行をスクリプトに追加します。
 
     ```js
     var memory = new WebAssembly.Memory({initial:10, maximum:100});
@@ -121,8 +111,8 @@ JavaScript では、Memory インスタンスはリサイズ可能な  [`ArrayBu
     new Uint32Array(memory.buffer)[0]
     ```
 
-3.  デモで試してみましょう。これまでに追加した内容を保存してブラウザーで読み込んだ後、JavaScript コンソールで上の 2 行を入力してみてください。
- 
+3. デモで試してみましょう。これまでに追加した内容を保存してブラウザーで読み込んだ後、JavaScript コンソールで上の 2 行を入力してみてください。
+
 ### メモリーの拡張
 
 Memory インスタンスは {{jsxref("Memory.prototype.grow()")}} を呼び出すことで拡張することができます。引数は WebAssembly ページ単位で指定します。
@@ -141,20 +131,20 @@ Memory インスタンスの作成時に最大値が指定していて、この�
 
 より複雑なメモリの例を見て、上記のことを明確にしましょう。先に定義したメモリーインスタンスをインポートし、それを整数の配列で埋め込んで、それらを合計する WebAssembly モジュールです。これは [memory.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/memory.wasm) で見ることができます。
 
-1.  `memory.wasm` のローカルコピーを以前と同じディレクトリーに作成します。
+1. `memory.wasm` のローカルコピーを以前と同じディレクトリーに作成します。
 
     > **Note:** モジュールのテキスト表現は [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat) を参照してください。
 
-2.  `memory.html` サンプルファイルに戻って、以前と同じように wasm モジュールを読み取り、コンパイル、インスタンス化します。以下のものをスクリプトの最後に追加してください。
+2. `memory.html` サンプルファイルに戻って、以前と同じように wasm モジュールを読み取り、コンパイル、インスタンス化します。以下のものをスクリプトの最後に追加してください。
 
     ```js
     WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
     .then(results => {
-      // ここにコードを追加
+      // ここにコードを追加
     });
     ```
 
-3.  このモジュールはモジュール内部のメモリーをエクスポートします。 instance という名前でモジュールの Instance が取得され、エクスポートされた関数 `accumulate()` を使用してモジュールの線形メモリー (`mem`) に直接入力された配列を合計する事ができます。指定された場所に、次のコードを追加してみましょう。
+3. このモジュールはモジュール内部のメモリーをエクスポートします。 instance という名前でモジュールの Instance が取得され、エクスポートされた関数 `accumulate()` を使用してモジュールの線形メモリー (`mem`) に直接入力された配列を合計する事ができます。指定された場所に、次のコードを追加してみましょう。
 
     ```js
     var i32 = new Uint32Array(memory.buffer);
@@ -186,32 +176,32 @@ WebAssembly Table は JavaScript と WebAssembly コードの両方でアクセ�
 
 関数ポインターを呼び出すときは、WebAssembly を呼び出す側でインデックスを指定します。インデックスを付けたり、インデックス付けされた関数参照を呼び出す前に安全な境界のチェックをすることができます。したがって、テーブルは現在、安全かつ移植可能に低レベルのプログラミング言語の機能をコンパイルするために使用される、低レベルのプリミティブです。
 
-テーブルは [Table.prototype.set()](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set)` を通してテーブル内の値を1つ更新することができます。さらに、[`Table.prototype.grow()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow) でテーブルに格納できる値の数を増やすことができます。時間の経過とともに間接呼び出しされる関数を変更することを許容し、これは [動的リンク技術](http://webassembly.org/docs/dynamic-linking/) のために必要なものです。変化した値に対してJavaScriptでは [Table.prototype.get()](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get)` を通してすぐにアクセスできます。wasm モジュールからも同様です。
+テーブルは [`Table.prototype.set()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set) を通してテーブル内の値を1つ更新することができます。さらに、[`Table.prototype.grow()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow) でテーブルに格納できる値の数を増やすことができます。時間の経過とともに間接呼び出しされる関数を変更することを許容し、これは [動的リンク技術](http://webassembly.org/docs/dynamic-linking/) のために必要なものです。変化した値に対してJavaScriptでは [`Table.prototype.get()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) を通してすぐにアクセスできます。wasm モジュールからも同様です。
 
 ### テーブルの例
 
 テーブルのシンプルな例を見てみましょう。紹介する WebAssembly モジュールは2つの要素 (要素0は13、要素1は42を返します) を持つテーブルをエクスポートするものです。モジュールは [table.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/table.wasm) から見つけられます。
 
-1.  `table.wasm` をローカルの新しいディレクトリーにコピーします。
+1. `table.wasm` をローカルの新しいディレクトリーにコピーします。
 
     > **Note:** このモジュールのテキスト表現は [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat) を参照してください。
 
-2.  [HTML template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) を `table.html` という名前で同じディレクトリーにコピーします。
-3.  前と同じように、wasm モジュールを読み取り、コンパイル、インスタンス化します。次のコードを HTML の body の末尾の {{htmlelement("script")}} 要素に追加してください。
+2. [HTML template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) を `table.html` という名前で同じディレクトリーにコピーします。
+3. 前と同じように、wasm モジュールを読み取り、コンパイル、インスタンス化します。次のコードを HTML の body の末尾の {{htmlelement("script")}} 要素に追加してください。
 
     ```js
     WebAssembly.instantiateStreaming(fetch('table.wasm'))
     .then(function(results) {
-      // add code here
+      // add code here
     });
     ```
 
-4.  今度はテーブル内のデータにアクセスしてみましょう。コードの指定された場所に次の行を追加してください。
+4. 今度はテーブル内のデータにアクセスしてみましょう。コードの指定された場所に次の行を追加してください。
 
     ```js
     var tbl = results.instance.exports.tbl;
-    console.log(tbl.get(0)());  // 13
-    console.log(tbl.get(1)());  // 42
+    console.log(tbl.get(0)());  // 13
+    console.log(tbl.get(1)());  // 42
     ```
 
 このコードはテーブルに格納されている各関数参照に順番にアクセスし、内包した値をコンソールに書き出すためにインスタンス化します。 [`Table.prototype.get()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) で各関数参照を取得した後、関数を実行するためには括弧を追加することに注意してください。

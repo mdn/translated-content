@@ -13,7 +13,7 @@ original_slug: Glossaire/NNTP
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Network_News_Transfer_Protocol", "NNTP")}} sur Wikipédia
+- [NNTP](https://fr.wikipedia.org/wiki/Network_News_Transfer_Protocol) sur Wikipédia
 
 ### Référence technique
 

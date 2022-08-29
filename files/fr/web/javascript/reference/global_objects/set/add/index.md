@@ -19,7 +19,9 @@ La méthode **`add()`** permet d'ajouter un nouvel élément ayant une valeur do
 
 ## Syntaxe
 
-    monSet.add(valeur);
+```js
+monSet.add(valeur);
+```
 
 ### Paramètres
 

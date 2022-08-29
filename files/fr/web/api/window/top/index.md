@@ -16,7 +16,9 @@ Renvoie une référence à la fenêtre la plus haute dans la hiérarchie des fen
 
 ## Syntaxe
 
-    var topWindow = window.top;
+```js
+var topWindow = window.top;
+```
 
 ## Notes
 

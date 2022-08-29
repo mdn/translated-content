@@ -20,8 +20,8 @@ translation_of: Web/JavaScript/Reference/Functions/get
 ## 構文
 
 ```js
-{get prop() { ... } }
-{get [expression]() { ... } }
+{get prop() { /* ... */ } }
+{get [expression]() { /* ... */ } }
 ```
 
 ### 引数
@@ -40,19 +40,20 @@ translation_of: Web/JavaScript/Reference/Functions/get
 `get` 構文を使用する場合は、以下のことに注意してください。
 
 - 数値または文字列による識別子を持つことができます。
-- 引数の数は 0 でなければなりません (詳しくは [Incompatible ES5
-  change: literal getter and setter functions must now have exactly zero or one
-  arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) をご覧ください)。
+- 引数の数は 0 でなければなりません（詳しくは [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) をご覧ください）。
 - 1 つのオブジェクトリテラル中に、別の `get` が現れてはいけません。例えば次のようなことはできません。
+
   ```js example-bad
-  { 
-    get x() { }, get x() { } 
+  {
+    get x() { }, get x() { }
   }
   ```
+
 - データ項目と同じ名前のプロパティが出現してはいけません。例えば次のようなことはできません。
+
   ```js example-bad
-  { 
-    x: ..., get x() { } 
+  {
+    x: ..., get x() { }
   }
   ```
 
@@ -125,7 +126,7 @@ console.log(MyConstants.foo); // 'foo' です。静的ゲッターの値は変�
 
 ゲッターはオブジェクトのプロパティを*定義*する手段を提供しますが、アクセスされるまでプロパティの値を*計算*しません。ゲッターは値を計算するコストを、値が必要になるまで先送りします。値が必要でなければ、そのコストを負担しません。
 
-プロパティの値の計算を先送りしたり後のアクセスのためにキャッシュするための付加的な最適化技術が、**スマート (または「[メモ化](https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%A2%E5%8C%96)」)ゲッター**です。初めてゲッターにアクセスされたときに、値を計算してキャッシュします。以降のアクセスでは再計算せずに、キャッシュした値を返します。これは次のような状況で役に立ちます。
+プロパティの値の計算を先送りしたり後のアクセスのためにキャッシュするための付加的な最適化技術が、*スマート*（または *[メモ化](https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%A2%E5%8C%96)*）ゲッターです。初めてゲッターにアクセスされたときに、値を計算してキャッシュします。以降のアクセスでは再計算せずに、キャッシュした値を返します。これは次のような状況で役に立ちます。
 
 - プロパティの値の計算コストが高い場合 (大量の RAM や CPU 時間を使用する、ワーカースレッドを生成する、リモートのファイルを読み込むなど)。
 - 値がすぐに必要ではない場合。値を後で使用する、あるいはまったく使用しない場合がある状況。

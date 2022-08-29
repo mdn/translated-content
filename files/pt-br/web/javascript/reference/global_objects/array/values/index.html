@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/values
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <strong><code>values()</code></strong> retorna um novo objeto de  <strong><code>Array Iterator</code></strong> que contém os valores para cada índice no array.</p>
+<p>O método <strong><code>values()</code></strong> retorna um novo objeto de  <strong><code>Array Iterator</code></strong> que contém os valores para cada índice no array.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/values
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Iteração_usando_for...of_loop">Iteração usando <code>for...of</code> loop</h3>
+<h3 id="Iteração_usando_for...of_loop">Iteração usando <code>for...of</code> loop</h3>
 
 <pre class="brush: js">var arr = ['w', 'y', 'k', 'o', 'p'];
 var eArr = arr.values();
@@ -54,60 +54,12 @@ console.log(eArr.next().value); // p
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Array.values")}}
 
 <h2 id="Notas_específicas_do_Firefox">Notas específicas do Firefox</h2>
 
 <ul>
- <li>Devido a um <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=875433">problema de compatibilidade</a>, <code>Array.prototype.values()</code> foi removido do  SpiderMonkey por enquanto.</li>
+ <li>Devido a um <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=875433">problema de compatibilidade</a>, <code>Array.prototype.values()</code> foi removido do  SpiderMonkey por enquanto.</li>
 </ul>
 
 <h2 id="Ver_também">Ver também</h2>

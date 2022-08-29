@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Guide/Text_formatting
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}</div>
 
-<p class="summary">В этой главе приводится порядок работы со строками и текстом в JavaScript.</p>
+<p class="summary">В этой главе приводится порядок работы со строками и текстом в JavaScript.</p>
 
 <h2 id="Строки">Строки</h2>
 
@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Guide/Text_formatting
 <pre>const name = "Alex";
 const str =
   `Привет, ${name},
-   как дела?`;
+   как дела?`;
 
 console.log(str);
 // Привет, Alex,
@@ -72,7 +72,7 @@ typeof s; // Вернёт 'object'
 
 <p>Вы можете вызвать любой метод объекта класса <code>String</code> на строковом литерале - JavaScript сам преобразует строковый литерал во временный объект <code>String</code>, вызовет требуемый метод и затем уничтожит этот временный объект. Со строковыми литералами вы также можете использовать и <code>String.length</code> свойство.</p>
 
-<p>Следует использовать строковые литералы до тех пор, пока вам действительно не обойтись без <code>String</code> объекта, потому что, порой, объект String может вести себя неожиданно (не так, как строковый литерал). Например:</p>
+<p>Следует использовать строковые литералы до тех пор, пока вам действительно не обойтись без <code>String</code> объекта, потому что, порой, объект String может вести себя неожиданно (не так, как строковый литерал). Например:</p>
 
 <pre class="brush: js">var s1 = "2 + 2"; // Создание строкового литерала
 var s2 = new String("2 + 2"); // Создание String объекта
@@ -87,7 +87,7 @@ mystring[0] = 'L'; // Ничего не произойдёт, т.к. строк�
 mystring[0]; // Вернёт: "H"
 </pre>
 
-<p>Объект <code>String</code> имеет множество методов, в том числе и те, которые возвращают преобразованную исходную строку (методы <code>substring</code>, <code>toUpperCase</code> и другие).</p>
+<p>Объект <code>String</code> имеет множество методов, в том числе и те, которые возвращают преобразованную исходную строку (методы <code>substring</code>, <code>toUpperCase</code> и другие).</p>
 
 <p>В таблице ниже представлены методы String объекта.</p>
 
@@ -103,7 +103,7 @@ mystring[0]; // Вернёт: "H"
  </thead>
  <tbody>
   <tr>
-   <td>{{jsxref("String.charAt", "charAt")}}, {{jsxref("String.charCodeAt", "charCodeAt")}}, {{jsxref("String.codePointAt", "codePointAt")}}</td>
+   <td>{{jsxref("String.charAt", "charAt")}}, {{jsxref("String.charCodeAt", "charCodeAt")}}, {{jsxref("String.codePointAt", "codePointAt")}}</td>
    <td>Возвращает символ или символьный код в указанной позиции в строке.</td>
   </tr>
   <tr>
@@ -116,7 +116,7 @@ mystring[0]; // Вернёт: "H"
   </tr>
   <tr>
    <td>{{jsxref("String.concat", "concat")}}</td>
-   <td>Объединяет две строки и возвращает результат в качестве новой строки.</td>
+   <td>Объединяет две строки и возвращает результат в качестве новой строки.</td>
   </tr>
   <tr>
    <td>{{jsxref("String.fromCharCode", "fromCharCode")}}, {{jsxref("String.fromCodePoint", "fromCodePoint")}}</td>
@@ -180,7 +180,7 @@ string text line 2");
 // "string text line 1
 // string text line 2"</pre>
 
-<p>Того же результата можно добиться и другим способом (используя синтаксис шаблонных строк):</p>
+<p>Того же результата можно добиться и другим способом (используя синтаксис шаблонных строк):</p>
 
 <pre class="brush: js">console.log(`string text line 1
 string text line 2`);
@@ -205,7 +205,7 @@ console.log(`Fifteen is ${a + b} and\nnot ${2 * a + b}.`);
 // "Fifteen is 15 and
 // not 20."</pre>
 
-<p>Для более подробной информации смотри  <a href="/en-US/docs/Web/JavaScript/Reference/template_strings">Шаблонные строки</a> в <a href="/en-US/docs/Web/JavaScript/Reference">справочнике по JavaScript</a>.</p>
+<p>Для более подробной информации смотри  <a href="/en-US/docs/Web/JavaScript/Reference/template_strings">Шаблонные строки</a> в <a href="/en-US/docs/Web/JavaScript/Reference">справочнике по JavaScript</a>.</p>
 
 <h2 id="Интернационализация">Интернационализация</h2>
 
@@ -221,7 +221,7 @@ console.log(`Fifteen is ${a + b} and\nnot ${2 * a + b}.`);
 var july172014 = new Date(msPerDay * (44 * 365 + 11 + 197));
 
 var options = { year: "2-digit", month: "2-digit", day: "2-digit",
-                hour: "2-digit", minute: "2-digit", timeZoneName: "short" };
+                hour: "2-digit", minute: "2-digit", timeZoneName: "short" };
 var americanDateTime = new Intl.DateTimeFormat("en-US", options).format;
 
 console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
@@ -229,16 +229,16 @@ console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
 
 <h3 id="Форматирование_чисел">Форматирование чисел</h3>
 
-<p>Объект {{jsxref("NumberFormat")}} полезен при форматировании чисел, например, валют.</p>
+<p>Объект {{jsxref("NumberFormat")}} полезен при форматировании чисел, например, валют.</p>
 
 <pre class="brush: js">var gasPrice = new Intl.NumberFormat("en-US",
-                        { style: "currency", currency: "USD",
-                          minimumFractionDigits: 3 });
+                        { style: "currency", currency: "USD",
+                          minimumFractionDigits: 3 });
 
 console.log(gasPrice.format(5.259)); // $5.259
 
 var hanDecimalRMBInChina = new Intl.NumberFormat("zh-CN-u-nu-hanidec",
-                        { style: "currency", currency: "CNY" });
+                        { style: "currency", currency: "CNY" });
 
 console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一,三一四.二五
 </pre>
@@ -267,7 +267,7 @@ console.log(names.sort(germanDictionary.compare).join(", "));
 // logs "Hochberg, Holzman, Hönigswald"
 </pre>
 
-<p>Для более подробной информации об {{jsxref("Intl")}} API смотри  <a href="https://hacks.mozilla.org/2014/12/introducing-the-javascript-internationalization-api/">Introducing the JavaScript Internationalization API</a>.</p>
+<p>Для более подробной информации об {{jsxref("Intl")}} API смотри  <a href="https://hacks.mozilla.org/2014/12/introducing-the-javascript-internationalization-api/">Introducing the JavaScript Internationalization API</a>.</p>
 
 <h2 id="Регулярные_выражения">Регулярные выражения</h2>
 

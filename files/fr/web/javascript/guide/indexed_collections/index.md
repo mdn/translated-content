@@ -444,7 +444,6 @@ Certains objets JavaScript tels que [`NodeList`](/fr/docs/Web/API/NodeList) (ren
 
 Les méthodes du prototype des tableaux permettent d'utiliser les méthodes d'objets `Array` sur des objets semblables à des tableaux. Attention, elles ne sont pas appelables directement depuis ces objets&nbsp;:
 
-
 ```js example-bad
 function printArguments() {
   arguments.forEach(function(item) {  // TypeError: arguments.forEach is not a function

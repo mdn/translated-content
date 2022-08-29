@@ -15,9 +15,11 @@ Indique le nom du jeu de feuilles de styles actuellement utilisé.
 
 ## Syntaxe
 
-    currentStyleSheetSet = document.selectedStyleSheetSet
+```js
+currentStyleSheetSet = document.selectedStyleSheetSet
 
-    document.selectedStyleSheet = newStyleSheetSet
+document.selectedStyleSheet = newStyleSheetSet
+```
 
 En retour, `currentStyleSheetSet` indique le nom du jeu de feuilles de styles en cours d'utilisation. Vous pouvez aussi définir celui-ci en utilisant cette propriété.
 

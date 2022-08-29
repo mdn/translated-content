@@ -13,7 +13,7 @@ translation_of: Web/API/ServiceWorker
 ---
 {{APIRef("Service Workers API")}}
 
-L'interface **`ServiceWorker`** de l'[API ServiceWorker](/en-US/docs/Web/API/ServiceWorker_API) met à disposition une référence vers un service worker. Plusieurs  {{glossary("browsing context", "contextes de navigations")}} (par exemple une page, un _worker_, etc.) peuvent être associés au même service worker, chacun à travers un unique objet `ServiceWorker`.
+L'interface **`ServiceWorker`** de l'[API ServiceWorker](/fr/docs/Web/API/ServiceWorker_API) met à disposition une référence vers un service worker. Plusieurs  {{glossary("browsing context", "contextes de navigations")}} (par exemple une page, un _worker_, etc.) peuvent être associés au même service worker, chacun à travers un unique objet `ServiceWorker`.
 
 Un objet `ServiceWorker` est disponible dans les propriétés  {{domxref("ServiceWorkerRegistration.active")}} et {{domxref("ServiceWorkerContainer.controller")}} — c'est un service worker qui a été activé et qui contrôle la page (ce service worker a été bien enregistré, et la page contrôlée a été rechargée).
 
@@ -88,8 +88,8 @@ if ('serviceWorker' in navigator) {
 ## Voir aussi
 
 - [ServiceWorker Cookbook](https://serviceworke.rs)
-- [Using Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web workers](/en-US/docs/Web/Guide/Performance/Using_web_workers)
+- [Using web workers](/fr/docs/Web/Guide/Performance/Using_web_workers)

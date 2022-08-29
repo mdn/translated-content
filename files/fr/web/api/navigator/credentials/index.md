@@ -15,7 +15,9 @@ La propriété **`credentials`**, rattachée à l'interface {{domxref("Navigator
 
 ## Syntaxe
 
-    var credentialsContainer = navigator.credentials
+```js
+var credentialsContainer = navigator.credentials
+```
 
 ### Valeur
 
@@ -36,10 +38,8 @@ if ('credentials' in navigator) {
 
 ## Spécifications
 
-| Spécification                                    | État                                         | Commentaires         |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Navigator.credentials")}}
+{{Compat}}

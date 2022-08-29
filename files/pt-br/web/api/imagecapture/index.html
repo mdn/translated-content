@@ -5,13 +5,13 @@ translation_of: Web/API/ImageCapture
 ---
 <div>{{APIRef("MediaStream Image")}}</div>
 
-<p><span class="seoSummary">A interface <strong><code>ImageCapture</code></strong> da <a href="/en-US/docs/Web/API/MediaStream_Image_Capture_API">MediaStream Image Capture API</a> fornece métodos para permitir a captura de images ou fotos de uma câmera ou de um dispositivo fotográfico. É fornecido uma interface para capturar images de um dispositive fotográfico referenciado por meio de um {{domxref("MediaStreamTrack")}} válido.</span></p>
+<p><span class="seoSummary">A interface <strong><code>ImageCapture</code></strong> da <a href="/en-US/docs/Web/API/MediaStream_Image_Capture_API">MediaStream Image Capture API</a> fornece métodos para permitir a captura de images ou fotos de uma câmera ou de um dispositivo fotográfico. É fornecido uma interface para capturar images de um dispositive fotográfico referenciado por meio de um {{domxref("MediaStreamTrack")}} válido.</span></p>
 
 <h2 id="Construtor">Construtor</h2>
 
 <dl>
  <dt>{{domxref("ImageCapture.ImageCapture()", "ImageCapture()")}}</dt>
- <dd>Cria um novo objeto <code>ImageCapture</code> que pode ser usado para capturar quadros estáticos (fotos) de um determinado {{domxref ("MediaStreamTrack")}} que representa um fluxo de vídeo.</dd>
+ <dd>Cria um novo objeto <code>ImageCapture</code> que pode ser usado para capturar quadros estáticos (fotos) de um determinado {{domxref ("MediaStreamTrack")}} que representa um fluxo de vídeo.</dd>
 </dl>
 
 <h2 id="Propriedades">Propriedades</h2>
@@ -27,11 +27,11 @@ translation_of: Web/API/ImageCapture
 
 <dl>
  <dt>{{domxref("ImageCapture.takePhoto()")}}</dt>
- <dd>Faz uma única exposição usando o dispositivo de captura de vídeo que busca um {{domxref ("MediaStreamTrack")}} e retorna um {{jsxref ("Promise")}} que resolve com um {{domxref ("Blob")}} que contém o dados.</dd>
+ <dd>Faz uma única exposição usando o dispositivo de captura de vídeo que busca um {{domxref ("MediaStreamTrack")}} e retorna um {{jsxref ("Promise")}} que resolve com um {{domxref ("Blob")}} que contém o dados.</dd>
  <dt>{{domxref("ImageCapture.getPhotoCapabilities()")}}</dt>
  <dd>Retorna um {{jsxref ("Promise")}} que resolve com um objeto {{domxref ("PhotoCapabilities")}} que contém os intervalos de opções de configuração disponíveis.</dd>
  <dt>{{domxref("ImageCapture.getPhotoSettings()")}}</dt>
- <dd>Retorna um {{jsxref ("Promise")}} que é resolvido com um objeto {{domxref ("PhotoSettings")}} que contém as definições de configuração de foto atuais.</dd>
+ <dd>Retorna um {{jsxref ("Promise")}} que é resolvido com um objeto {{domxref ("PhotoSettings")}} que contém as definições de configuração de foto atuais.</dd>
  <dt>{{domxref("ImageCapture.grabFrame()")}}</dt>
  <dd>Tira uma captura instantânea do vídeo ao vivo em um {{domxref ("MediaStreamTrack")}}, retornando um {{domxref ("ImageBitmap")}}, se for bem-sucedido.</dd>
 </dl>

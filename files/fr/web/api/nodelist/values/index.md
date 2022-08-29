@@ -16,7 +16,9 @@ La méthode **`NodeList.values()`** renvoie un {{jsxref("Les_protocoles_iteratio
 
 ## Syntaxe
 
-    nodeList.values();
+```js
+nodeList.values();
+```
 
 ### Valeur retournée
 
@@ -44,19 +46,19 @@ for(var value of list.values()) {
 
 Le résultat est :
 
-    <p>
-    #text "hey"
-    <span>
+```
+<p>
+#text "hey"
+<span>
+```
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG','#interface-nodelist','values() (as iterable&lt;Node&gt;)')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeList.values")}}
+{{Compat}}
 
 ## Voir aussi
 

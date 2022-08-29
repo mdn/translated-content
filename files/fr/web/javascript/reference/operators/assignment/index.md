@@ -18,7 +18,9 @@ L'opérateur d'assignement simple (`=`) est utilisé pour définir la valeur d'u
 
 ## Syntaxe
 
-    Opérateur : x = y
+```js
+x = y
+```
 
 ## Exemples
 
@@ -49,4 +51,4 @@ x = y = z;
 
 ## Voir aussi
 
-- [Assignment operators in the JS guide](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Expressions_et_Opérateurs)
+- [Assignment operators in the JS guide](/fr/docs/Web/JavaScript/Guide/Expressions_et_Opérateurs)

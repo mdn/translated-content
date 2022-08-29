@@ -5,13 +5,13 @@ translation_of: Web/API/CanvasRenderingContext2D/arcTo
 ---
 <div>{{APIRef}}</div>
 
-<p> </p>
+<p> </p>
 
-<p>O método <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.arcTo()</code></strong> da API 2D do Canvas adiciona um arco ao caminho quando fornecemos seus pontos de controle e raio.</p>
+<p>O método <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.arcTo()</code></strong> da API 2D do Canvas adiciona um arco ao caminho quando fornecemos seus pontos de controle e raio.</p>
 
 <p>O arco será parte de um círculo, nunca de uma elipse. Frequentemente é usado para fazer cantos arredoondados.</p>
 
-<p>Pode-se imaginar o arco como dois segmentos de reta, partindo de um ponto inicial (ponto mais recente definido no caminho) até o primeiro ponto de controle e, em seguida, do primeiro ponto de controle até o segundo ponto de controle. Esses dois segmentos de reta formam um angulo, com o primeiro ponto de controle sendo a curva. Usando arcTo, o ângulo será formado de acordo com o raio fornecido.</p>
+<p>Pode-se imaginar o arco como dois segmentos de reta, partindo de um ponto inicial (ponto mais recente definido no caminho) até o primeiro ponto de controle e, em seguida, do primeiro ponto de controle até o segundo ponto de controle. Esses dois segmentos de reta formam um angulo, com o primeiro ponto de controle sendo a curva. Usando arcTo, o ângulo será formado de acordo com o raio fornecido.</p>
 
 <p>O arco é tangencial ao dois segmentos de reta, e por vezes, pode produzir resultados inesperados se, por exemplo, o raio fornecido for maior que a distância entre o ponto inicial e o primeiro ponto de controle.</p>
 
@@ -28,18 +28,18 @@ translation_of: Web/API/CanvasRenderingContext2D/arcTo
  <dt><code>x1</code></dt>
  <dd>coordenada do eixo x para o primeiro ponto de controle.</dd>
  <dt><code>y1</code></dt>
- <dd>coordenada do eixo y para o primeiro ponto de controle.</dd>
+ <dd>coordenada do eixo y para o primeiro ponto de controle.</dd>
  <dt><code>x2</code></dt>
  <dd>coordenada do eixo x para o segundo ponto de controle.</dd>
  <dt><code>y2</code></dt>
- <dd>coordenada do eixo y para o segundo ponto de controle.</dd>
+ <dd>coordenada do eixo y para o segundo ponto de controle.</dd>
  <dt><code>radius</code></dt>
  <dd>O raio do arco.</dd>
 </dl>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Using_the_arc_method" name="Using_the_arc_method">Usando o método <code>arcTo</code> </h3>
+<h3 id="Using_the_arc_method" name="Using_the_arc_method">Usando o método <code>arcTo</code> </h3>
 
 <p>Esse é um trecho simples de código que desenha um arco. O ponto de partida é azul e os pontos de controls são vermelhos.</p>
 
@@ -72,15 +72,15 @@ ctx.fillRect(50, 20, 10, 10);
 
 <p>{{ EmbedLiveSample('Using_the_arc_method', 315, 165) }}</p>
 
-<h3 id="Trying_the_arcTo_parameters" name="Trying_the_arcTo_parameters">Treinando os parâmetros do  <code>arcTo</code> </h3>
+<h3 id="Trying_the_arcTo_parameters" name="Trying_the_arcTo_parameters">Treinando os parâmetros do  <code>arcTo</code> </h3>
 
 <p>Altere o código abaixo e veja suas alterações atualizadas na tela:</p>
 
 <div class="hidden">
 <pre class="brush: html">&lt;canvas id="canvas" class="playable-canvas" height="200" width="400"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.beginPath();
@@ -129,7 +129,7 @@ window.addEventListener("load", drawCanvas);
   <tr>
    <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-arcto", "CanvasRenderingContext2D.arcTo")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

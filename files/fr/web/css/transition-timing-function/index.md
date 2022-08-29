@@ -24,34 +24,36 @@ Dans les deux cas, la déclaration CSS reste valide.
 
 ## Syntaxe
 
-    /* Valeurs avec un mot-clé */
-    transition-timing-function: ease;
-    transition-timing-function: ease-in;
-    transition-timing-function: ease-out;
-    transition-timing-function: ease-in-out;
-    transition-timing-function: linear;
-    transition-timing-function: step-start;
-    transition-timing-function: step-end;
+```css
+/* Valeurs avec un mot-clé */
+transition-timing-function: ease;
+transition-timing-function: ease-in;
+transition-timing-function: ease-out;
+transition-timing-function: ease-in-out;
+transition-timing-function: linear;
+transition-timing-function: step-start;
+transition-timing-function: step-end;
 
-    /* Valeurs fonctionnelles */
-    transition-timing-function: steps(4, jump-end);
-    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+/* Valeurs fonctionnelles */
+transition-timing-function: steps(4, jump-end);
+transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
 
-    /* Valeurs avec une fonction en escalier */
-    transition-timing-function: steps(4, jump-start);
-    transition-timing-function: steps(10, jump-end);
-    transition-timing-function: steps(20, jump-none);
-    transition-timing-function: steps(5, jump-both);
-    transition-timing-function: steps(6, start);
-    transition-timing-function: steps(8, end);
+/* Valeurs avec une fonction en escalier */
+transition-timing-function: steps(4, jump-start);
+transition-timing-function: steps(10, jump-end);
+transition-timing-function: steps(20, jump-none);
+transition-timing-function: steps(5, jump-both);
+transition-timing-function: steps(6, start);
+transition-timing-function: steps(8, end);
 
-    /* Utilisation de plusieurs fonctions */
-    transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+/* Utilisation de plusieurs fonctions */
+transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
 
-    /* Valeurs globales */
-    transition-timing-function: inherit;
-    transition-timing-function: initial;
-    transition-timing-function: unset;
+/* Valeurs globales */
+transition-timing-function: inherit;
+transition-timing-function: initial;
+transition-timing-function: unset;
+```
 
 ### Valeurs
 
@@ -249,7 +251,7 @@ Toutefois, certaines animations s'avèrent problématiques pour les personnes so
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État/th>                                 | Commentaires        |
+| Spécification                                                                                                                            | État                                 | Commentaires        |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
 | {{SpecName('CSS3 Transitions', '#transition-timing-function-property', 'transition-timing-function')}} | {{Spec2('CSS3 Transitions')}} | Définition initiale |
 
@@ -261,5 +263,5 @@ Toutefois, certaines animations s'avèrent problématiques pour les personnes so
 
 ## Voir aussi
 
-- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Utiliser_transitions_CSS "en/CSS/CSS transitions")
+- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Utiliser_transitions_CSS)
 - {{domxref("TransitionEvent")}}

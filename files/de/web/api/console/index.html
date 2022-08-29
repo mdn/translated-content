@@ -11,13 +11,13 @@ translation_of: Web/API/Console
 ---
 <div>{{APIRef("Console API")}}</div>
 
-<p>Das <strong><code>Console</code></strong> Objekt bietet Zurgiff auf die Debugging-Konsole des Browsers (z. B. die <a href="/de/docs/Tools/Web_Console">Web-Konsole</a> in Firefox). Die Einzelheiten der Funktionsweise sind von Browser zu Browser unterschiedlich, es gibt jedoch <em>de facto</em> eine Reihe von Funktionen, die normalerweise bereitgestellt werden.</p>
+<p>Das <strong><code>Console</code></strong> Objekt bietet Zurgiff auf die Debugging-Konsole des Browsers (z. B. die <a href="/de/docs/Tools/Web_Console">Web-Konsole</a> in Firefox). Die Einzelheiten der Funktionsweise sind von Browser zu Browser unterschiedlich, es gibt jedoch <em>de facto</em> eine Reihe von Funktionen, die normalerweise bereitgestellt werden.</p>
 
 <p>Auf das <code>Console</code> Objekt kann von jedem globalen Objekt aus zugegriffen werden. {{domxref("Window")}} im Browser und {{domxref("WorkerGlobalScope")}} als spezifische Varianten in Workern über die Property-Konsole. Es wird unter {{domxref("Window.console")}} zur Verfügung gestellt und kann als einfache Konsole referenziert werden. Zum Beispiel:</p>
 
 <pre class="brush: js">console.log("Failed to open the specified link")</pre>
 
-<p>Diese Seite dokumentiert die {{anch("Methods", "Methoden")}}, die für das <code>Console</code> Objekt verfügbar sind und enthält einige {{anch("Usage", "Anwendungsbeispiele")}}.</p>
+<p>Diese Seite dokumentiert die <a href="#methods">Methoden</a>, die für das <code>Console</code> Objekt verfügbar sind und enthält einige <a href="#usage">Anwendungsbeispiele</a>.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -170,21 +170,17 @@ console.info("My first car was a", car, ". The object is:", someObject);</pre>
 
 <div>Der Text vor der Direktive wird nicht beeinflusst. Der Text nach der Direktive wird jedoch mit den CSS-Deklarationen im Parameter formatiert.</div>
 
-<div> </div>
+<div> </div>
 
 <div><img alt="" src="https://mdn.mozillademos.org/files/12527/CSS-styling.png" style="display: block; margin: 0 auto;"></div>
 
-<div> </div>
+<div> </div>
 
 <div class="note">
 <p><strong>Hinweis:</strong> Es werden etliche CSS-Eigenschaften von diesem Stil unterstützt. Sie sollten experimentieren und sehen, welche sich als nützlich erweisen.</p>
 </div>
 
-<div> </div>
-
-<div>{{h3_gecko_minversion("Gruppen in der Konsole verwenden", "9.0")}}</div>
-
-<p>Sie können verschachtelte Gruppen verwenden, um Ihre Ausgabe zu organisieren, indem Sie verwandtes Material visuell kombinieren. Um einen neuen verschachtelten Block zu erstellen, rufen Sie <code>console.group()</code> auf. Die Methode <code>console.groupCollapsed()</code> ist ähnlich, erstellt den neuen Block jedoch zusammengeklappt und erfordert die Verwendung einer Schaltfläche zum Öffnen.</p>
+<p>Sie können verschachtelte Gruppen verwenden, um Ihre Ausgabe zu organisieren, indem Sie verwandtes Material visuell kombinieren. Um einen neuen verschachtelten Block zu erstellen, rufen Sie <code>console.group()</code> auf. Die Methode <code>console.groupCollapsed()</code> ist ähnlich, erstellt den neuen Block jedoch zusammengeklappt und erfordert die Verwendung einer Schaltfläche zum Öffnen.</p>
 
 <div class="note"><strong>Hinweis:</strong> Minimierte Gruppen werden in Gecko noch nicht unterstützt. Die Methode <code>groupCollapsed()</code> ist zu diesem Zeitpunkt die gleiche wie <code>group()</code>.</div>
 
@@ -205,8 +201,6 @@ console.debug("Back to the outer level");
 <p>Die Ausgabe sieht folgendermaßen aus:</p>
 
 <p><img alt="nesting.png" class="default internal" src="/@api/deki/files/6082/=nesting.png"></p>
-
-<div>{{h3_gecko_minversion("Timer", "10.0")}}</div>
 
 <p>Um die Dauer einer bestimmten Operation zu berechnen, hat Gecko 10 die Unterstützung von Timern im <code>console</code>-Objekt eingeführt. Um einen Timer zu starten, rufen Sie die Methode <code>console.time</code><code>()</code> auf und geben Sie ihm als einzigen Parameter einen Namen. Um den Timer zu stoppen und die verstrichene Zeit in Millisekunden abzurufen, rufen Sie einfach die Methode <code>console.timeEnd()</code> auf und übergeben den Namen des Timers erneut als Parameter. Auf einer Seite können bis zu 10.000 Timer gleichzeitig ausgeführt werden.</p>
 

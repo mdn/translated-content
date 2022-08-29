@@ -15,7 +15,9 @@ Un objet **`FileList`** est renvoyé par la propriété `files` d'un élément H
 
 Tous les éléments `<input>` possèdent un attribut `files` de type `FileList` qui permet d'accéder aux éléments de cette liste. Ainsi, si le code HTML utilisé est :
 
-    <input id="fileItem" type="file">
+```html
+<input id="fileItem" type="file">
+```
 
 On pourra utiliser la ligne suivant pour récupérer le premier fichier de la liste sous la forme d'un objet [`File`](/fr/docs/Web/API/File) :
 
@@ -49,9 +51,11 @@ var file = document.getElementById('fileItem').files[0]
 
 Cette méthode renvoie un objet [`File`](/fr/docs/Web/API/File) qui représente le fichier à l'indice fourni.
 
-     File item(
-       index
-     );
+```
+File item(
+  index
+);
+```
 
 #### Paramètres
 
@@ -119,14 +123,11 @@ document.querySelector("#myFiles").onchange = recupererFichiers;
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('File API', '#filelist-section', 'FileList')}}                                 | {{Spec2('File API')}}     |              |
-| {{SpecName('HTML WHATWG', '#concept-input-type-file-selected', 'selected files')}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FileList")}}
+{{Compat}}
 
 ## Voir aussi
 

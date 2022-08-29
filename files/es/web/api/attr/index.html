@@ -9,7 +9,7 @@ translation_of: Web/API/Attr
 
 <p>{{InheritanceDiagram}}</p>
 
-<div class="warning"><strong>Advertencia:En el DOM Core 1, 2 y 3</strong>, <code>Attr</code> se hereda del {{domxref("Node")}}. Este ya no es el caso en <a class="external" href="https://www.w3.org/TR/dom/">DOM4</a>.Para llevar la implementación de Attr  a la especifiación, se esta trabajando para cambiarlo y dejar de heredar de{{domxref("Node")}}. No debe de utilizar ninguna propiedad o método de nodo en los objetos <code>Attr</code>. <span class="tlid-translation translation" lang="es"><span title="">A partir de Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4), los que se eliminarán enviarán mensajes de advertencia a la consola</span></span>. <span class="tlid-translation translation" lang="es"><span title="">Debe revisar su código en consecuencia.</span> <span title="">Consulte Propiedades y métodos en desuso para obtener una lista completa.</span></span></div>
+<div class="warning"><strong>Advertencia:En el DOM Core 1, 2 y 3</strong>, <code>Attr</code> se hereda del {{domxref("Node")}}. Este ya no es el caso en <a class="external" href="https://www.w3.org/TR/dom/">DOM4</a>.Para llevar la implementación de Attr  a la especifiación, se esta trabajando para cambiarlo y dejar de heredar de{{domxref("Node")}}. No debe de utilizar ninguna propiedad o método de nodo en los objetos <code>Attr</code>. <span class="tlid-translation translation" lang="es"><span title="">A partir de Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4), los que se eliminarán enviarán mensajes de advertencia a la consola</span></span>. <span class="tlid-translation translation" lang="es"><span title="">Debe revisar su código en consecuencia.</span> <span title="">Consulte Propiedades y métodos en desuso para obtener una lista completa.</span></span></div>
 
 <h2 id="Propiedades">Propiedades</h2>
 
@@ -40,36 +40,36 @@ translation_of: Web/API/Attr
 
 <dl>
  <dt><code>attributes</code></dt>
- <dd>Este propiedad ahora siempre devuelve <code>NULL</code>.</dd>
+ <dd>Este propiedad ahora siempre devuelve <code>NULL</code>.</dd>
  <dt><code>childNodes</code></dt>
- <dd>Este propiedad ahora siempre devuelve <code>NULL</code>.</dd>
+ <dd>Este propiedad ahora siempre devuelve <code>NULL</code>.</dd>
  <dt><code>firstChild</code></dt>
- <dd>Este propiedad ahora siempre devuelve <code>NULL</code>.</dd>
+ <dd>Este propiedad ahora siempre devuelve <code>NULL</code>.</dd>
  <dt><code>isId</code> {{readOnlyInline}}</dt>
  <dd>Indicates whether the attribute is an "ID attribute". An "ID attribute" being an attribute which value is expected to be unique across a DOM Document. In HTML DOM, "id" is the only ID attribute, but XML documents could define others. Whether or not an attribute is unique is often determined by a {{Glossary("DTD")}} or other schema description.</dd>
  <dt><code>lastChild</code></dt>
- <dd>Este propiedad ahora siempre devuelve <code>NULL</code>.</dd>
+ <dd>Este propiedad ahora siempre devuelve <code>NULL</code>.</dd>
  <dt><code>nextSibling</code></dt>
- <dd>Este propiedad ahora siempre devuelve <code>NULL</code>.</dd>
+ <dd>Este propiedad ahora siempre devuelve <code>NULL</code>.</dd>
  <dt><code>nodeName</code></dt>
  <dd>Utilizar {{domxref("Attr.name")}} en su lugar.</dd>
  <dt><code>nodeType</code></dt>
- <dd>Esta propiedad ahora siempre devuelve 2 (<code>ATTRIBUTE_NODE</code>).</dd>
+ <dd>Esta propiedad ahora siempre devuelve 2 (<code>ATTRIBUTE_NODE</code>).</dd>
  <dt><code>nodeValue</code></dt>
  <dd>Utilizar {{domxref("Attr.value")}} en su lugar.</dd>
  <dt><code>ownerDocument</code></dt>
  <dd>Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.</dd>
- <dt><code>ownerElement</code> {{deprecated_inline("7.0")}} {{obsolete_inline("29.0")}} {{readOnlyInline}}</dt>
+ <dt><code>ownerElement</code> {{deprecated_inline("7.0")}} {{obsolete_inline("29.0")}} {{readOnlyInline}}</dt>
  <dd>Since you get an <code>Attr</code> object from an {{domxref("Element")}}, you should already know the associated element.</dd>
  <dd>Contrary to above claim, {{domxref("Document.evaluate")}} can return <code>Attr</code> objects from an XPath, in which case you would not easily know the owner.</dd>
  <dt><code>parentNode</code></dt>
- <dd>Estra propiedad ahora siempre devuelve <code>NULL</code>.</dd>
+ <dd>Estra propiedad ahora siempre devuelve <code>NULL</code>.</dd>
  <dt><code>previousSibling</code></dt>
- <dd>Estra propiedad ahora siempre devuelve <code>NULL</code>.</dd>
+ <dd>Estra propiedad ahora siempre devuelve <code>NULL</code>.</dd>
  <dt><code>schemaTypeInfo</code> {{obsolete_inline}} {{readOnlyInline}}</dt>
  <dd>The type information associated with this attribute. While the type information contained in this attribute is guaranteed to be correct after loading the document or invoking {{domxref("Document.normalizeDocument")}}, this property may not be reliable if the node was moved.</dd>
  <dt><code>specified</code></dt>
- <dd>Estra propiedad ahora siempre devuelve <code>true</code>.</dd>
+ <dd>Estra propiedad ahora siempre devuelve <code>true</code>.</dd>
  <dt><code>textContent</code></dt>
  <dd>Utilizar {{domxref("Attr.value")}} en su lugar.</dd>
 </dl>

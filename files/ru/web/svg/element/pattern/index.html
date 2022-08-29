@@ -10,9 +10,9 @@ original_slug: Web/SVG/Элемент/pattern
 Элемент <strong><code>&lt;pattern&gt;</code></strong> определяет графический объект, который может быть перерисован с повторяющимися координатами <strong>x</strong> и <strong>y</strong> («мозаичным»), чтобы покрыть область.</div>
 
 <div><br>
-На ссылку <code>&lt;pattern&gt;</code> ссылаются атрибуты {{SVGAttr("fill")}} и / или {{SVGAttr("stroke")}} на других <a href="/en-US/docs/Web/SVG/Tutorial/Basic_Shapes">графических элементах</a> , чтобы заполнить или обвести эти элементы указанным шаблоном. </div>
+На ссылку <code>&lt;pattern&gt;</code> ссылаются атрибуты {{SVGAttr("fill")}} и / или {{SVGAttr("stroke")}} на других <a href="/en-US/docs/Web/SVG/Tutorial/Basic_Shapes">графических элементах</a> , чтобы заполнить или обвести эти элементы указанным шаблоном. </div>
 
-<div> </div>
+<div> </div>
 
 <div id="Exemple">
 <div class="hidden">
@@ -20,14 +20,14 @@ original_slug: Web/SVG/Элемент/pattern
 </div>
 
 <pre class="brush: html; highlight[4]">&lt;svg viewBox="0 0 230 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;pattern id="star" viewBox="0,0,10,10" width="10%" height="10%"&gt;
-      &lt;polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2"/&gt;
-    &lt;/pattern&gt;
-  &lt;/defs&gt;
+  &lt;defs&gt;
+    &lt;pattern id="star" viewBox="0,0,10,10" width="10%" height="10%"&gt;
+      &lt;polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2"/&gt;
+    &lt;/pattern&gt;
+  &lt;/defs&gt;
 
-  &lt;circle cx="50"  cy="50" r="50" fill="url(#star)"/&gt;
-  &lt;circle cx="180" cy="50" r="40" fill="none" stroke-width="20" stroke="url(#star)"/&gt;
+  &lt;circle cx="50"  cy="50" r="50" fill="url(#star)"/&gt;
+  &lt;circle cx="180" cy="50" r="40" fill="none" stroke-width="20" stroke="url(#star)"/&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('Exemple', 150, '100%')}}</p>
@@ -40,18 +40,18 @@ original_slug: Web/SVG/Элемент/pattern
  <dd>Этот атрибут определяет высоту плитки шаблона.<br>
  <small><em>Value type</em>: <a href="/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a>; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
  <dt>{{SVGAttr("href")}}</dt>
- <dd>Этот атрибут по умолчанию ссылается на пример шаблона для <code>&lt;pattern&gt;</code><br>
+ <dd>Этот атрибут по умолчанию ссылается на пример шаблона для <code>&lt;pattern&gt;</code><br>
  <small><em>Value type</em>: <a href="/docs/Web/SVG/Content_type#URL"><strong>&lt;URL&gt;</strong></a>; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small></dd>
  <dt>{{SVGAttr("patternContentUnits")}}</dt>
- <dd>Этот атрибут определяет систему координат содержимого {{ SVGElement("pattern") }}. <br>
+ <dd>Этот атрибут определяет систему координат содержимого {{ SVGElement("pattern") }}. <br>
  <small><em>Value type</em>: <code>userSpaceOnUse</code>|<code>objectBoundingBox</code>; <em>Default value</em>: <code>userSpaceOnUse</code>; <em>Animatable</em>: <strong>yes</strong></small>
- <p class="note"><strong>Сноска:</strong> Этот атрибут не действует, если в элементе <code>&lt;pattern&gt;</code> указан атрибут <code>viewBox</code>.</p>
+ <p class="note"><strong>Сноска:</strong> Этот атрибут не действует, если в элементе <code>&lt;pattern&gt;</code> указан атрибут <code>viewBox</code>.</p>
  </dd>
  <dt>{{SVGAttr("patternTransform")}}</dt>
  <dd>Этот атрибут содержит определение необязательного дополнительного преобразования из системы координат шаблона в целевую систему координат.<br>
  <small><em>Value type</em>: <strong><a href="/docs/Web/SVG/Content_type#Transform-list">&lt;transform-list&gt;</a></strong>; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small></dd>
  <dt>{{SVGAttr("patternUnits")}}</dt>
- <dd>Этот атрибут определяет систему координат для атрибутов <code>x</code>, <code>y</code>, <code>width</code> и <code>height</code>. <br>
+ <dd>Этот атрибут определяет систему координат для атрибутов <code>x</code>, <code>y</code>, <code>width</code> и <code>height</code>. <br>
  <small><em>Value type</em>: <code>userSpaceOnUse</code>|<code>objectBoundingBox</code>; <em>Default value</em>: <code>objectBoundingBox</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
  <dt>{{SVGAttr("preserveAspectRatio")}}</dt>
  <dd>Этот атрибут определяет, как фрагмент svg должен быть деформирован, если он встроен в контейнер с другим соотношением сторон.<br>
@@ -68,7 +68,7 @@ original_slug: Web/SVG/Элемент/pattern
  <dt>{{SVGAttr("xlink:href")}} {{deprecated_inline("SVG2")}}</dt>
  <dd>Этот атрибут ссылается на пример шаблона, предоставляющего значения по умолчанию для атрибутов <code>&lt;pattern&gt;</code>.<br>
  <small><em>Value type</em>: <a href="/docs/Web/SVG/Content_type#URL"><strong>&lt;URL&gt;</strong></a>; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small>
- <p class="note"><strong>Сноска:</strong> Для браузеров, реализующих <code>href</code>, если заданы как <code>href</code>, так и <code>xlink:href</code>, <code>xlink:href</code> будет игнорироваться, используя только <code>href</code>.</p>
+ <p class="note"><strong>Сноска:</strong> Для браузеров, реализующих <code>href</code>, если заданы как <code>href</code>, так и <code>xlink:href</code>, <code>xlink:href</code> будет игнорироваться, используя только <code>href</code>.</p>
  </dd>
  <dt>{{SVGAttr("y")}}</dt>
  <dd>Этот атрибут определяет смещение координат y мозаичного элемента.<br>
@@ -108,7 +108,7 @@ original_slug: Web/SVG/Элемент/pattern
   <tr>
    <td>{{SpecName('SVG2', 'pservers.html#Patterns', '&lt;pattern&gt;')}}</td>
    <td>{{Spec2('SVG2')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('SVG1.1', 'pservers.html#Patterns', '&lt;pattern&gt;')}}</td>

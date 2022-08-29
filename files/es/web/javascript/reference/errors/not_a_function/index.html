@@ -28,9 +28,9 @@ translation_of: Web/JavaScript/Reference/Errors/Not_a_function
 <p>Hay muchas funciones propias de Javascript (built-in) que necesitan una función de callback, por lo que tienes que pasar esa función como parámetro para que estos métodos funcionen correctamente.</p>
 
 <ul>
- <li>Cuando se usen objetos {{jsxref("Array")}} o {{jsxref("TypedArray")}}:
+ <li>Cuando se usen objetos {{jsxref("Array")}} o {{jsxref("TypedArray")}}:
   <ul>
-   <li>{{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.filter()")}},  {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}</li>
+   <li>{{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.filter()")}},  {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}</li>
   </ul>
  </li>
  <li>Cuando se usen objetos {{jsxref("Map")}} y {{jsxref("Set")}}:
@@ -50,14 +50,14 @@ translation_of: Web/JavaScript/Reference/Errors/Not_a_function
 // TypeError: document.getElementByID is not a function
 </pre>
 
-<p>El nombre correcto de la función es <code>getElementByI<strong>d</strong></code>:</p>
+<p>El nombre correcto de la función es <code>getElementByI<strong>d</strong></code>:</p>
 
 <pre class="brush: js example-good">var x = document.getElementById("foo");
 </pre>
 
 <h3 id="Función_llamada_en_el_objeto_equivocado">Función llamada en el objeto equivocado</h3>
 
-<p>Puede que el método que queramos usar no esté implementado en el tipo de objeto que estemos usado. En este ejemplo, queremos usar el método map, que recibe una función de callback como argumento, pero solo lo tienen los objetos {{jsxref("Array")}}.</p>
+<p>Puede que el método que queramos usar no esté implementado en el tipo de objeto que estemos usado. En este ejemplo, queremos usar el método map, que recibe una función de callback como argumento, pero solo lo tienen los objetos {{jsxref("Array")}}.</p>
 
 <pre class="brush: js example-bad">var obj = { a: 13, b: 37, c: 42 };
 
@@ -117,7 +117,7 @@ Perro.prototype.nombre = function(nombre) {
 var miNuevoPerro = new Perro();
 miNuevoPerro.nombre("Lilly"); //Perro { edad: 11, color: 'negro', nombrePerro: 'Lilly' }</pre>
 
-<h2 id="Ve_también">Ve también</h2>
+<h2 id="Ve_también">Ve también</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions">Functions</a></li>

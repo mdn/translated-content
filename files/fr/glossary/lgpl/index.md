@@ -16,5 +16,5 @@ La LGPL (GNU Lesser General Public License) est une licence de logiciel libre pu
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "GNU Lesser General Public License", "GNU LGPL")}} sur Wikipédia
+- [LGPL](https://fr.wikipedia.org/wiki/Licence_publique_g%C3%A9n%C3%A9rale_limit%C3%A9e_GNU) sur Wikipédia
 - Texte de la [licence LGPL](http://www.gnu.org/copyleft/lesser.html) sur gnu.org

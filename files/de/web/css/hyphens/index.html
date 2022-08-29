@@ -12,7 +12,7 @@ translation_of: Web/CSS/hyphens
 
 <h2 id="Summary" name="Summary">Übersicht</h2>
 
-<p>Die <code>hyphens </code>Eigenschaft regelt die automatische Silbentrennung. Dazu ist das HTML Attribut <code>lang</code>, bzw. <font face="Courier New">xml:lang </font>unter XML<font face="Courier New">,</font> zwingend notwendig.</p>
+<p>Die <code>hyphens </code>Eigenschaft regelt die automatische Silbentrennung. Dazu ist das HTML Attribut <code>lang</code>, bzw. <font face="Courier New">xml:lang </font>unter XML<font face="Courier New">,</font> zwingend notwendig.</p>
 
 <div class="note"><strong>Hinweis:</strong> Wie die Silbentrennung umgesetzt wird kann von Browser zu Browser, bzw. von Sprache zu Sprache, variieren.</div>
 
@@ -35,20 +35,20 @@ hyphens: inherit
  <dt><code>none</code></dt>
  <dd>Keine Silbentrennung: Wörter werden nicht getrennt und automatische Zeilenumbrüche sind nur bei Leerzeichen möglich.</dd>
  <dt><code>manual</code></dt>
- <dd>Manuelle Silbentrennung: Wörter werden nur dann getrennt, wenn dies definiert wurde (siehe {{anch("Umbrüche manuell definieren")}}).</dd>
+ <dd>Manuelle Silbentrennung: Wörter werden nur dann getrennt, wenn dies definiert wurde (siehe <a href="#umbrüche_manuell_definieren">Umbrüche manuell definieren</a>).</dd>
  <dt><code>auto</code></dt>
- <dd>Automatische Silbentrennung: Der Browser trennt die Wörter automatisch. Manuell definierte Umbrüche werden dabei vorgezogen (siehe {{anch("Umbrüche manuell definieren")}}).</dd>
+ <dd>Automatische Silbentrennung: Der Browser trennt die Wörter automatisch. Manuell definierte Umbrüche werden dabei vorgezogen (siehe <a href="#umbrüche_manuell_definieren">Umbrüche manuell definieren</a>).</dd>
 </dl>
 
 <h2 id="Umbrüche_manuell_definieren">Umbrüche manuell definieren</h2>
 
-<p>Es gibt zwei Möglichkeiten, um Wörter manuell zu trennen. Dafür werden die beiden folgenden Unicode-Zeichen verwendet:</p>
+<p>Es gibt zwei Möglichkeiten, um Wörter manuell zu trennen. Dafür werden die beiden folgenden Unicode-Zeichen verwendet:</p>
 
 <dl>
  <dt>U+2010 (Bindestrich)</dt>
- <dd>Dieser Bindestrich ist <u>immer</u> sichtbar, auch wenn das Wort gar nicht getrennt werden muss.</dd>
+ <dd>Dieser Bindestrich ist immer sichtbar, auch wenn das Wort gar nicht getrennt werden muss.</dd>
  <dt>U+00AD (SHY)</dt>
- <dd>Dieses Zeichen ist unsichtbar und kennzeichnet nur eine mögliche Trennstelle. Sobald eine Trennung notwendig wird, wird ein Bindestrich sichtbar. In HTML lässt sich das Zeichen mit <code>&amp;shy;</code> einfügen.</dd>
+ <dd>Dieses Zeichen ist unsichtbar und kennzeichnet nur eine mögliche Trennstelle. Sobald eine Trennung notwendig wird, wird ein Bindestrich sichtbar. In HTML lässt sich das Zeichen mit <code>&amp;shy;</code> einfügen.</dd>
 </dl>
 
 <h2 id="Beispiel">Beispiel</h2>

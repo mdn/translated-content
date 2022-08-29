@@ -15,7 +15,9 @@ L'utilisation de {{domxref("FileReader.readAsArrayBuffer()")}} est recomandée.
 
 ## Syntaxe
 
-    instanceOfFileReader.readAsBinaryString(blob);
+```js
+instanceOfFileReader.readAsBinaryString(blob);
+```
 
 ### Paramètres
 
@@ -52,14 +54,12 @@ canvas.toBlob(function (blob) {
 
 ## Spécifications
 
-| Specification                                                                            | Status                       | Comment |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------- |
-| {{SpecName('File API','#readAsBinaryString','readAsBinaryString')}} | {{Spec2('File API')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FileReader.readAsBinaryString")}}
+{{Compat}}
 
-## See also
+## Voir aussi
 
 - {{domxref("FileReader")}}

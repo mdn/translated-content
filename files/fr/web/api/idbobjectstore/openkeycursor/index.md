@@ -17,7 +17,9 @@ Afin de déterminer si le curseur a bien été ajouté, on pourra écouter l'év
 
 ## Syntaxe
 
-    var requete = objectStore.openKeyCursor(optionalKeyRange, optionalDirection);
+```js
+var requete = objectStore.openKeyCursor(optionalKeyRange, optionalDirection);
+```
 
 ### Paramètres
 
@@ -62,13 +64,11 @@ request.onsuccess = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB2', '#dom-idbobjectstore-openkeycursor', 'openKeyCursor')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.openKeyCursor")}}
+{{Compat}}
 
 ## Voir aussi
 

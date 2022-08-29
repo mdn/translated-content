@@ -71,15 +71,17 @@ La navigation rapide (aussi appelée _skip navigation_ ou _skipnav_ en anglais) 
 
 Ajouter un attribut {{htmlattrxref("id")}} à l'élément `<main>` lui permet d'être une cible pour la navigation rapide.
 
-    <body>
-      <a href="#main-content">Aller au contenu principal</a>
+```html
+<body>
+  <a href="#main-content">Aller au contenu principal</a>
 
-      <!-- Contenu relatif à la navigation et en-tête du document -->
+  <!-- Contenu relatif à la navigation et en-tête du document -->
 
-      <main id="main-content">
-        <!-- Contenu principal de la page -->
-      </main>
-    </body>
+  <main id="main-content">
+    <!-- Contenu principal de la page -->
+  </main>
+</body>
+```
 
 - [WebAIM : Liens et navigation rapide (en anglais)](https://webaim.org/techniques/skipnav/)
 

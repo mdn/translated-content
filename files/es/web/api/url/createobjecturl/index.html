@@ -12,10 +12,10 @@ translation_of: Web/API/URL/createObjectURL
 ---
 <p>{{ApiRef("URL")}}{{SeeCompatTable}}</p>
 
-<p>El método estático <strong><code>URL.createObjectURL()</code></strong> crea un {{domxref("DOMString")}} que contiene una URL que representa al objeto pasado como parámetro. La vida de la URL está ligado al {{domxref("document")}} de la ventana en la que fue creada. El nuevo objeto URL representa al objeto {{domxref("File")}} especificado o al objeto {{domxref("Blob")}}.</p>
+<p>El método estático <strong><code>URL.createObjectURL()</code></strong> crea un {{domxref("DOMString")}} que contiene una URL que representa al objeto pasado como parámetro. La vida de la URL está ligado al {{domxref("document")}} de la ventana en la que fue creada. El nuevo objeto URL representa al objeto {{domxref("File")}} especificado o al objeto {{domxref("Blob")}}.</p>
 
 <div class="note">
-<p>El uso de un objeto {{domxref("MediaStream")}} como entrada a este método está en proceso de ser obsoleto. Las discusiones están en curso sobre si o no debe ser quitado totalmente. Como tal, <em>se debe de evitar usar este método con  {{domxref("MediaStream")}}s, y se debería usar {{domxref("HTMLMediaElement.srcObject", "HTMLMediaElement.srcObject()")}}</em>.</p>
+<p>El uso de un objeto {{domxref("MediaStream")}} como entrada a este método está en proceso de ser obsoleto. Las discusiones están en curso sobre si o no debe ser quitado totalmente. Como tal, <em>se debe de evitar usar este método con  {{domxref("MediaStream")}}s, y se debería usar {{domxref("HTMLMediaElement.srcObject", "HTMLMediaElement.srcObject()")}}</em>.</p>
 </div>
 
 <p>{{AvailableInWorkers}}</p>
@@ -37,14 +37,14 @@ translation_of: Web/API/URL/createObjectURL
 
 <h2 id="Ejemplo">Ejemplo</h2>
 
-<p>Ver <a href="/en-US/docs/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images" title="https://developer.mozilla.org/en/Using_files_from_web_applications#Example:_Using_object_URLs_to_display_images">Usando objetos URL para representar imágenes</a>.</p>
+<p>Ver <a href="/en-US/docs/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images" title="https://developer.mozilla.org/en/Using_files_from_web_applications#Example:_Using_object_URLs_to_display_images">Usando objetos URL para representar imágenes</a>.</p>
 
 <h2 id="Notas">Notas</h2>
 
-<p>Cada vez que se llama a <code>createObjectURL()</code>, un nuevo objeto URL es creado, incluso si ya creaste uno para el mismo objeto. Cada uno de estos objetos puede ser liberado usando {{domxref("URL.revokeObjectURL()")}} cuándo ya no lo necesitas. Los navegadores liberan estos objetos cuando el documento es cerrado; de todas formas, para obtener un rendimiento óptimo y un óptimo uso de memoria, si hay momentos seguros en los que puedes liberar estos objetos deberías hacerlo. Por ejemplo: No liberar los recursos cuando se ha creado una URL a partir de un {{domxref('MediaStream')}} puede dejar la luz de la cámara del navegador encendida más tiempo del necesario.</p>
+<p>Cada vez que se llama a <code>createObjectURL()</code>, un nuevo objeto URL es creado, incluso si ya creaste uno para el mismo objeto. Cada uno de estos objetos puede ser liberado usando {{domxref("URL.revokeObjectURL()")}} cuándo ya no lo necesitas. Los navegadores liberan estos objetos cuando el documento es cerrado; de todas formas, para obtener un rendimiento óptimo y un óptimo uso de memoria, si hay momentos seguros en los que puedes liberar estos objetos deberías hacerlo. Por ejemplo: No liberar los recursos cuando se ha creado una URL a partir de un {{domxref('MediaStream')}} puede dejar la luz de la cámara del navegador encendida más tiempo del necesario.</p>
 
 <div class="note">
-<p>Notese que no es necesario crear URLs a partir de un {{domxref('MediaStream')}}, ya que los objetos de streams deberían asignarse directamente a elementos de reproducción con {{domxref("HTMLMediaElement.srcObject")}}. La posibilidad de usar un <code>MediaStream</code> como valor de un objeto está obsoleta.</p>
+<p>Notese que no es necesario crear URLs a partir de un {{domxref('MediaStream')}}, ya que los objetos de streams deberían asignarse directamente a elementos de reproducción con {{domxref("HTMLMediaElement.srcObject")}}. La posibilidad de usar un <code>MediaStream</code> como valor de un objeto está obsoleta.</p>
 </div>
 
 <h2 id="Especificaciones">Especificaciones</h2>

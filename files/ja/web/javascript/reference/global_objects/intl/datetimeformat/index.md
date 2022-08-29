@@ -18,7 +18,6 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat.html")}}
 
-
 ## コンストラクター
 
 - {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}

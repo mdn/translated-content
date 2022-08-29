@@ -4,11 +4,14 @@ slug: Web/API/WebGL_API
 tags:
   - WebGL
 translation_of: Web/API/WebGL_API
+browser-compat:
+  - api.WebGLRenderingContext
+  - api.WebGL2RenderingContext
 ---
 <div>{{WebGLSidebar}}</div>
 
 <div class="summary">
-<p>WebGL (Web Graphics Library) é uma API do JavaScript para renderizar gráficos 3D e 2D dentro de um <span id="result_box" lang="pt"><span>navegador web compatível sem o uso de plug-ins</span></span>. <span id="result_box" lang="pt"><span>O WebGL faz isso introduzindo uma API que está de acordo com o OpenGL ES 2.0 e que pode ser usada em elementos do HTML5</span></span> {{HTMLElement("canvas")}}.</p>
+<p>WebGL (Web Graphics Library) é uma API do JavaScript para renderizar gráficos 3D e 2D dentro de um <span id="result_box" lang="pt"><span>navegador web compatível sem o uso de plug-ins</span></span>. <span id="result_box" lang="pt"><span>O WebGL faz isso introduzindo uma API que está de acordo com o OpenGL ES 2.0 e que pode ser usada em elementos do HTML5</span></span> {{HTMLElement("canvas")}}.</p>
 </div>
 
 <p>O suporte para WebGL está presente no <a href="/en-US/Firefox" title="Firefox 4 for developers">Firefox</a> 4+, <a href="http://www.google.com/chrome/">Google Chrome</a> 9+, <a href="http://www.opera.com/">Opera</a> 12+, <a href="http://www.apple.com/safari/">Safari </a>5.1+ e <a href="http://windows.microsoft.com/en-us/internet-explorer/browser-ie">Internet Explorer</a> 11+. N<span id="result_box" lang="pt"><span>o entanto, o dispositivo do usuário também deve ter um hardware que suporte esses recursos.</span></span></p>
@@ -171,104 +174,19 @@ translation_of: Web/API/WebGL_API
   <tr>
    <td>{{SpecName('OpenGL ES 2.0')}}</td>
    <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('OpenGL ES 3.0')}}</td>
    <td>{{Spec2('OpenGL ES 3.0')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Recurso</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>9</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>11</td>
-   <td>12</td>
-   <td>5.1</td>
-  </tr>
-  <tr>
-   <td>WebGL 2</td>
-   <td>56</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("51")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>43</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Recurso</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>25</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>4</td>
-   <td>{{CompatNo}}</td>
-   <td>12</td>
-   <td>8.1</td>
-  </tr>
-  <tr>
-   <td>WebGL 2</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Notas_sobre_compatibilidade">Notas sobre compatibilidade</h3>
-
-<p>Além do navegador, a própria GPU também precisa suportar o recurso. Por exemplo, o S3 Texture Compression (S3TC) só está disponível em tablets baseados em Tegra. A maioria dos navegadores disponibiliza o contexto WebGL usando o nome de contexto <code>webgl</code>, mas navegadores antigos também precisam do nome de contexto <code>experimental-webgl</code>. Além disso, o futuro <a href="/en-US/docs/Web/API/WebGL2RenderingContext">WebGL 2</a> é totalmente retrocompatível e terá o nome de contexto <code>webgl2</code>.</p>
-
-<h3 id="Notas_sobre_o_Gecko">Notas sobre o Gecko</h3>
-
-<h4 id="Debugando_e_testando_WebGL">Debugando e testando WebGL</h4>
-
-<p>Iniciando com o Gecko 10.0 {{geckoRelease("10.0")}}, há duas preferências disponíveis que permitem controlar as funcionalidades do WebGL, para efeitos de teste:</p>
-
-<dl>
- <dt><code>webgl.min_capability_mode</code></dt>
- <dd>Uma propriedade booleana que, quando configurada para <code>true</code>, habilita um modo de capacidade mínima. Neste modo, o WebGL é configurado para suportar somente um conjunto básico de recursos e funcionalidades requeridos pela especificação WebGL. Isto garante que o código WebGL funcione em qualquer dispositivo ou navegador, independente de suas funcionalidades. Esta propriedade tem o valor <code>false</code> por padrão.</dd>
- <dt><code>webgl.disable_extensions</code></dt>
- <dd>Uma propriedade booleana que, quando configurada para <code>true</code>, desabilita todas as extensões WebGL. Esta propriedade tem o valor <code>false</code> por padrão.</dd>
-</dl>
+{{Compat}}
 
 <h2 id="Veja_também">Veja também</h2>
 

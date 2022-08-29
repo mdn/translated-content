@@ -15,7 +15,9 @@ La méthode CanvasGradient.addColorStop () ajoute un nouvel arrêt, défini par 
 
 ## Syntaxe
 
-    void gradient.addColorStop(décalage, couleur);
+```js
+void gradient.addColorStop(décalage, couleur);
+```
 
 ### Paramètres
 
@@ -97,13 +99,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                           | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-canvasgradient-addcolorstop", "CanvasGradient.addColorStop")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasGradient.addColorStop")}}
+{{Compat}}
 
 ## Voir aussi
 

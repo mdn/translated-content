@@ -29,7 +29,9 @@ Le cas d'usage le plus courant est la mise-à-jour d'une entité cachée qui n'a
 
 ## Syntaxe
 
-    If-Modified-Since: <label-jour>, <jour> <mois> <année> <heure>:<minute>:<seconde> GMT
+```
+If-Modified-Since: <label-jour>, <jour> <mois> <année> <heure>:<minute>:<seconde> GMT
+```
 
 ## Directives
 
@@ -52,7 +54,9 @@ Le cas d'usage le plus courant est la mise-à-jour d'une entité cachée qui n'a
 
 ## Exemples
 
-    If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
+```
+If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
+```
 
 ## Specifications
 

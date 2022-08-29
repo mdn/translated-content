@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <strong><code>startsWith()</code></strong> determina se uma string começa com os caracteres especificados, retornando <code>true</code> ou <code>false</code>.</p>
+<p>O método <strong><code>startsWith()</code></strong> determina se uma string começa com os caracteres especificados, retornando <code>true</code> ou <code>false</code>.</p>
 
 <p>{{EmbedInteractiveExample("pages/js/string-startswith.html")}}</p>
 
@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
  <dt><em><code>searchString</code></em></dt>
  <dd>Os caracteres a serem procurados a partir do início dessa string.</dd>
  <dt><em><code>position</code></em></dt>
- <dd>Opcional. A posição nessa string na qual se inicia a busca pela <em><code>searchString</code></em>. O valor padrão é <code>0</code>.</dd>
+ <dd>Opcional. A posição nessa string na qual se inicia a busca pela <em><code>searchString</code></em>. O valor padrão é <code>0</code>.</dd>
  <dt>
  <h3 id="Valor_retornado">Valor retornado</h3>
  </dt>
@@ -42,7 +42,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Usando_startsWith">Usando <code>startsWith()</code></h3>
+<h3 id="Usando_startsWith">Usando <code>startsWith()</code></h3>
 
 <pre class="brush: js notranslate">//startswith
 let str = 'Ser ou não ser, eis a questão.';
@@ -54,18 +54,18 @@ console.log(str.startsWith('não ser', 7))  // true
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>Este método foi adicionaldo à especificação ECMAScript 2015 e pode ainda não estar disponível em todas as implementações do JavaScript. No entanto, você pode usar o polyfill <code>String.prototype.startsWith()</code> adicionando o seguinte código:</p>
+<p>Este método foi adicionaldo à especificação ECMAScript 2015 e pode ainda não estar disponível em todas as implementações do JavaScript. No entanto, você pode usar o polyfill <code>String.prototype.startsWith()</code> adicionando o seguinte código:</p>
 
 <pre class="notranslate">if (!String.prototype.startsWith) {
-    Object.defineProperty(String.prototype, 'startsWith', {
-        value: function(search, rawPos) {
-            var pos = rawPos &gt; 0 ? rawPos|0 : 0;
-            return this.substring(pos, pos + search.length) === search;
-        }
-    });
+    Object.defineProperty(String.prototype, 'startsWith', {
+        value: function(search, rawPos) {
+            var pos = rawPos &gt; 0 ? rawPos|0 : 0;
+            return this.substring(pos, pos + search.length) === search;
+        }
+    });
 }</pre>
 
-<p>Um polyfill mais robusto (totalmente conforme com a especificação ES2015), mas com menor desempenho e compacto está disponível <a href="https://github.com/mathiasbynens/String.prototype.startsWith">no GitHub por Mathias Bynens</a>.</p>
+<p>Um polyfill mais robusto (totalmente conforme com a especificação ES2015), mas com menor desempenho e compacto está disponível <a href="https://github.com/mathiasbynens/String.prototype.startsWith">no GitHub por Mathias Bynens</a>.</p>
 
 <h2 id="Especificações">Especificações</h2>
 

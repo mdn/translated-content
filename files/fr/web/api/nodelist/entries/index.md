@@ -18,7 +18,9 @@ La méthode **`NodeList.entries()`** renvoie un {{jsxref("Les_protocoles_iterati
 
 ## Syntaxe
 
-    list.entries();
+```js
+list.entries();
+```
 
 ### Valeur retournée
 
@@ -45,19 +47,19 @@ for (var entry of list.entries()) {
 
 résultat :
 
-    Array [ 0, <p> ]
-    Array [ 1, #text "hey" ]
-    Array [ 2, <span> ]
+```
+Array [ 0, <p> ]
+Array [ 1, #text "hey" ]
+Array [ 2, <span> ]
+```
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG','#interface-nodelist','entries() (as iterable&lt;Node&gt;)')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeList.entries")}}
+{{Compat}}
 
 ## Voir aussi
 

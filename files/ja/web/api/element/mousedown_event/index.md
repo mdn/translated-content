@@ -15,7 +15,6 @@ tags:
   - ボタン
   - マウス
   - mousedown
-browser-compat: api.Element.mousedown_event
 translation_of: Web/API/Element/mousedown_event
 ---
 {{APIRef}}

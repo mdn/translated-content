@@ -66,7 +66,7 @@ Firefox 16, basé sur Gecko 16.0, est sorti le 9 octobre 2012. Cette page résum
 
 ### Changements dans les interfaces
 
-{{interface("nsIPrivateDOMEvent")}} a été fusionné dans {{interface("nsIDOMEvent")}}. ({{bug("761613")}})
+`nsIPrivateDOMEvent` a été fusionné dans `nsIDOMEvent`. ({{bug("761613")}})
 
 #### Nouvelles interfaces
 

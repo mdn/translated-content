@@ -5,7 +5,7 @@ tags:
   - 日付
   - 日付と時刻
   - 要素
-  - Form input
+  - フォーム入力
   - HTML
   - HTML フォーム
   - Input
@@ -14,13 +14,11 @@ tags:
   - リファレンス
   - 時刻
   - datetime-local
-browser-compat: html.elements.input.input-datetime-local
 translation_of: Web/HTML/Element/input/datetime-local
 ---
-
 {{HTMLRef("Input_types")}}
 
-{{HTMLElement("input")}} 要素の **`datetime-local`** 型は、ユーザーが簡単に日付と時刻、つまり年、月、日と時、分を入力することができる入力コントロールを生成します。ユーザーのローカルタイムゾーンが使用されます。
+{{htmlelement("input")}} 要素の **`datetime-local`** 型は、ユーザーが簡単に日付と時刻、つまり年、月、日と時、分を入力することができる入力コントロールを生成します。ユーザーのローカルタイムゾーンが使用されます。
 
 {{EmbedInteractiveExample("pages/tabbed/input-datetime-local.html", "tabbed-shorter")}}
 
@@ -28,16 +26,16 @@ translation_of: Web/HTML/Element/input/datetime-local
 
 このコントロールは単純に*ローカルの日付と時刻*を表現するためのものであって、*ユーザーのローカルの日付と時刻*を示すとは限りません。言い換えれば、実装では有効な年、月、日、時、分をすべて、仮にその組み合わせがユーザーのタイムゾーンで無効であったとしても (春の夏時間への移行ギャップなど)、許可するべきです。一部のモバイルブラウザーは (特に iOS のものは) これを正しく実装していません。
 
-`datetime-local` は限られたブラウザーしか対応しておらず、入力欄の動作が様々であるため、現在はこれを表示するためにフレームワークやライブラリを使用するか、独自のカスタム入力欄をした方が良いかもしれません。また、 `date` と `time` の入力欄を別々に使用すると、 `datetime-local` よりも対応が広くなります。
+`datetime-local` は限られたブラウザーしか対応しておらず、入力欄の動作が様々であるため、現在はこれを表示するためにフレームワークやライブラリーを使用するか、独自のカスタム入力欄をした方が良いかもしれません。また、 `date` と `time` の入力欄を別々に使用すると、 `datetime-local` よりも対応が広くなります。
 
 一部のブラウザーでは、テキストのみの入力要素を表示し、結果をサーバーに送信する前に妥当な日付/時刻値であることを検証するものもありますが、予期しない動作をすることがあるので、この動作に頼るべきではありません。
 
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("値")}}</strong></td>
+      <td><strong><a href="#値">値</a></strong></td>
       <td>
-        (ローカルタイムゾーンでの) 日付と時刻を表す {{domxref("DOMString")}}、または空欄。
+        (ローカルタイムゾーンでの) 日付と時刻を表す文字列、または空欄。
       </td>
     </tr>
     <tr>
@@ -62,6 +60,10 @@ translation_of: Web/HTML/Element/input/datetime-local
       </td>
     </tr>
     <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>メソッド</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}},
@@ -74,7 +76,7 @@ translation_of: Web/HTML/Element/input/datetime-local
 
 ## 値
 
-入力欄に入力された日付の値を表す {{domxref("DOMString")}} です。この入力型で使われる日付と時刻の値の形式は、[ローカル日時の文字列](/ja/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings)で説明されています。
+入力欄に入力された日付の値を表す文字列です。この入力型で使われる日付と時刻の値の形式は、[ローカル日時の文字列](/ja/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings)で説明されています。
 
 次のように、 {{htmlattrxref("value", "input")}} 属性に日付と時刻を入れることで、入力欄の既定値を設定することができます。
 
@@ -116,9 +118,9 @@ JavaScript の {{jsxref("Date")}} には、数値の日時情報を正しく整�
 
 ### step
 
-`step` 属性は値が吸着する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば `{{anch("min")}}`、そうでなければ {{htmlattrxref("value", "input")}}、どちらも設定されていなければ適切な既定値）のみが妥当となります。
+`step` 属性は値が吸着する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば [`min`](#min)、そうでなければ {{htmlattrxref("value", "input")}}、どちらも設定されていなければ適切な既定値）のみが妥当となります。
 
-文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（`{{anch("min")}}` や `{{anch("max")}}` など、他の制約には制限されます）。
+文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
 
 > **Note:** ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("user agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
 
@@ -130,7 +132,7 @@ _現時点で、 `datetime-local` 入力欄で `step` に `any` の値が何を�
 
 日付や時刻の入力欄は一見すると便利に見えます。簡単に日付と時刻を選択するユーザーインターフェイスを提供し、ユーザーのロケールに関係なく、データ形式を正規化してサーバーに送信するからです。しかし、ブラウザーの互換性が限られているため、 `<input type="datetime-local">` には問題があります。
 
-`<input type="datetime-local">` の基本的な使い方と少し複雑な使い方を見てみてから、その後でブラウザーの互換性の問題を緩和するアドバイスを提供しましょう ({{anch("ブラウザーの対応の扱い")}}を参照してください)。
+`<input type="datetime-local">` の基本的な使い方と少し複雑な使い方を見てみてから、その後でブラウザーの互換性の問題を緩和するアドバイスを提供しましょう ([ブラウザーの対応の扱い](#ブラウザーの対応の扱い)を参照してください)。
 
 ### datetime-local の基本的な使用
 
@@ -138,8 +140,8 @@ _現時点で、 `datetime-local` 入力欄で `step` に `any` の値が何を�
 
 ```html
 <form>
-    <label for="party">パーティーを予約する日時を入力してください。</label>
-    <input id="party" type="datetime-local" name="partydate">
+    <label for="party">パーティーを予約する日時を入力してください。</label>
+    <input id="party" type="datetime-local" name="partydate">
 </form>
 ```
 
@@ -150,10 +152,10 @@ _現時点で、 `datetime-local` 入力欄で `step` に `any` の値が何を�
 {{htmlattrxref("min", "input")}} および {{htmlattrxref("max", "input")}} 属性を使用して、ユーザーが選択できる日時を制限することができます。次の例では、日時の最小値を `2017-06-01T08:30` に、日時の最大値を `2017-06-30T16:30` に設定しています。
 
 ```html
-  <form>
-    <label for="party">パーティーを予約する日時を入力してください。</label>
-    <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30">
-  </form>
+  <form>
+    <label for="party">パーティーを予約する日時を入力してください。</label>
+    <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30">
+  </form>
 ```
 
 {{ EmbedLiveSample('Setting_maximum_and_minimum_dates_and_times', 600, 40) }}
@@ -161,7 +163,7 @@ _現時点で、 `datetime-local` 入力欄で `step` に `any` の値が何を�
 結果は次のようになります。
 
 - この結果は、 2017 年の 6 月の日付のみが選択できるようになります。文字列値の「日」の部分のみが編集可能となり、日付選択ウィジェットで 6 月以外にスクロールすることはできなくなります。
-- どのブラウザーを使用するかによって、指定された値の範囲外の時刻が時刻選択画面で選択できなかったり (Edge など)、無効な値 ({{anch("検証")}}を参照) であっても設定できたりすることがあります (Chrome など)。
+- どのブラウザーを使用するかによって、指定された値の範囲外の時刻が時刻選択画面で選択できなかったり (Edge など)、無効な値 ([検証](#検証)を参照) であっても設定できたりすることがあります (Chrome など)。
 
 > **Note:** {{htmlattrxref("step", "input")}} 属性を使用すると、日時を加算するたびに飛ばす日時を設定できるはずです (例えば、土曜日のみを選択できるようにしたい場合など)。しかし、執筆時点でどの実装も正しく動作していないようです。
 
@@ -171,7 +173,7 @@ _現時点で、 `datetime-local` 入力欄で `step` に `any` の値が何を�
 
 ### タイムゾーンの設定
 
-`datetime-local` 入力型はコントロールのタイムゾーンやロケールを設定する方法がありません。これは [`datetime`](/ja/docs/Web/HTML/Element/input/datetime) 入力型では利用できましたが、この入力型は廃止され、仕様書から削除されました。削除された主な理由はブラウザーの互換性がなく、ユーザーインターフェイスや使い勝手が決まっていなかったからです。単に日付と時刻を設定するコントロールを用意して、別なコントロールで地域を設定したほうが簡単です。
+`datetime-local` 入力型はコントロールのタイムゾーンやロケールを設定する方法がありません。これは [`datetime`](/ja/docs/Web/HTML/Element/input/datetime-local) 入力型では利用できましたが、この入力型は廃止され、仕様書から削除されました。削除された主な理由はブラウザーの互換性がなく、ユーザーインターフェイスや使い勝手が決まっていなかったからです。単に日付と時刻を設定するコントロールを用意して、別なコントロールで地域を設定したほうが簡単です。
 
 例えば、ユーザーがログインしている場所によって地域を設定するようなシステムを開発する場合、タイムゾーンを [`hidden`](/ja/docs/Web/HTML/Element/input/hidden) 入力型で次のように提供することができます。
 
@@ -197,20 +199,20 @@ _現時点で、 `datetime-local` 入力欄で `step` に `any` の値が何を�
 
 既定では、 `<input type="datetime-local">` は入力された値の検証を行いません。ユーザーインターフェイスの実装は一般的に、日付でないものの入力をさせないからです。これは便利です。しかし、それでも入力欄を空のままにしたり、 (`text` 型にフォールバックするブラウザーにおいて) 無効な日付 (例えば 4 月 32 日など) を入力したりすることが可能です。
 
-{{htmlattrxref("min", "input")}} および {{htmlattrxref("max", "input")}} を使用して有効な日付を制限したり ({{anch("日付の最大値と最小値の設定")}}を参照)、 {{htmlattrxref("required", "input")}} 属性を使用して日時の入力を必須にしたりすることができます。その結果、対応しているブラウザーでは、範囲を外れた日付や空の日付欄を送信しようとするとエラーが表示されるでしょう。
+{{htmlattrxref("min", "input")}} および {{htmlattrxref("max", "input")}} を使用して有効な日付を制限したり ([日付の最大値と最小値の設定](#日付の最大値と最小値の設定)を参照)、 {{htmlattrxref("required", "input")}} 属性を使用して日時の入力を必須にしたりすることができます。その結果、対応しているブラウザーでは、範囲を外れた日付や空の日付欄を送信しようとするとエラーが表示されるでしょう。
 
 例を見てみましょう。ここで日付の最小値と最大値を設定し、入力欄を必須にしました。
 
 ```html
 <form>
-    <div>
-        <label for="party">希望するパーティーの日時を選択して下さい (必須、 6 月 1 日午前 8:30 ～ 6 月 30 日午後 4:30) </label>
-        <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30" required>
-        <span class="validity"></span>
-    </div>
-    <div>
-        <input type="submit" value="予約する！">
-    </div>
+    <div>
+        <label for="party">希望するパーティーの日時を選択して下さい (必須、 6 月 1 日午前 8:30 ～ 6 月 30 日午後 4:30) </label>
+        <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30" required>
+        <span class="validity"></span>
+    </div>
+    <div>
+        <input type="submit" value="予約する！">
+    </div>
 </form>
 ```
 
@@ -245,7 +247,7 @@ input:valid+span:after {
 
 > **Warning:** HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するスクリプトの代用にはなりません。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ (または大きすぎるデータ、誤った種類のデータなど) が送信された場合に障害が発生するおそれがあります。
 
-## ブラウザーの対応の扱い
+## ブラウザーの互換性の扱い
 
 前述のように、対応していないブラウザーでは、文字列入力欄に安全に格下げされますが、これはユーザーインターフェイスの一貫性 (表示されるコントロールが異なること) とデータの扱いの両方で問題を生みます。
 
@@ -264,17 +266,17 @@ input:valid+span:after {
 
 ```html
 <form>
-  <div>
-    <label for="party">希望するパーティーの日時を選択して下さい (必須、 6 月 1 日午前 8:30 ～ 6 月 30 日午後 4:30) </label>
-    <input id="party" type="datetime-local" name="partydate"
-           min="2017-06-01T08:30" max="2017-06-30T16:30"
-           pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}" required>
-    <span class="validity"></span>
-  </div>
-  <div>
-    <input type="submit" value="予約する！">
-  </div>
-  <input type="hidden" id="timezone" name="timezone" value="-08:00">
+  <div>
+    <label for="party">希望するパーティーの日時を選択して下さい (必須、 6 月 1 日午前 8:30 ～ 6 月 30 日午後 4:30) </label>
+    <input id="party" type="datetime-local" name="partydate"
+           min="2017-06-01T08:30" max="2017-06-30T16:30"
+           pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}" required>
+    <span class="validity"></span>
+  </div>
+  <div>
+    <input type="submit" value="予約する！">
+  </div>
+  <input type="hidden" id="timezone" name="timezone" value="-08:00">
 </form>
 ```
 
@@ -314,13 +316,13 @@ input:valid + span:after {
 
 ブラウザーに依存しない方法によってフォームで日付を扱う最善の方法は、現時点では年月日を別々なコントロール ({{htmlelement("select")}} 要素が一般的です。以下の実装を見てください) にするか、 [jQuery date picker](https://jqueryui.com/datepicker/) や [jQuery timepicker plugin](https://timepicker.co/) のような JavaScript ライブラリを使用することです。
 
-## 2038年問題 (主にサーバー側)
+## 2038 年問題 (主にサーバー側)
 
 JavaScript は日付を格納するとき、すべての数値と同様に、倍精度浮動小数点を使用しますので、 JavaScript のコードは整数への変換やビット操作が行われない限り、2038 年問題に悩まされることはありません。ビット操作演算は、 32 ビットの符号付き 2 の補数で演算を行っているので影響を受ける可能性があります。
 
 問題はサーバー側で、 2^31-1 よりも大きな日付値を格納する場合です。この問題を解決するには、すべての日付を符号なしの 32 ビット整数、符号付きの 64 ビット整数、または倍精度の浮動小数点のいずれかでサーバーに格納する必要があります。サーバーが PHP で書かれている場合は、PHP 8 または 7 にアップグレードし、ハードウェアを x86_64 または IA64 にアップグレードするだけで解決できるかもしれません。他のハードウェアで行き詰っている場合は、 32 ビット仮想マシン内で 64 ビットハードウェアをエミュレートすることもできますが、ほとんどの仮想マシンはこの種の仮想化をサポートしていないため、安定性が損なわれ、性能が大きく低下する可能性があります。
 
-## 10000年問題 (主にクライアント側)
+## 10000 年問題 (主にクライアント側)
 
 多くのサーバーでは、日付を文字列ではなく数値として保存します。 10000 年以降は、これらの数字は以前よりも少し大きくなるだけなので、多くのサーバーでは 10000 年以降をフォームで送信しても問題が発生することはありません。
 
@@ -336,7 +338,7 @@ JavaScript は日付を格納するとき、すべての数値と同様に、倍
 ```js
 function setValue(element, date) {
     var isoString = date.toISOString()
-    element.value = isoString.substring(0, (isoString.indexOf("T")|0) + 6|0);
+    element.value = isoString.substring(0, (isoString.indexOf("T")|0) + 6|0);
 }
 ```
 
@@ -455,9 +457,9 @@ fallbackLabel.style.display = 'none';
 var test = document.createElement('input');
 
 try {
-  test.type = 'datetime-local';
+  test.type = 'datetime-local';
 } catch (e) {
-  console.log(e.description);
+  console.log(e.description);
 }
 
 // もし文字列入力になるならば、 if() {} ブロックの中のコードを実行する
@@ -476,7 +478,7 @@ if(test.type === 'text') {
 }
 
 function populateDays(month) {
-  // 日の <select> から現在の一連の &lt;option&gt; 要素を削除し、
+  // 日の <select> から現在の一連の <option> 要素を削除し、
   // 挿入のための準備をする
   while(daySelect.firstChild){
     daySelect.removeChild(daySelect.firstChild);
@@ -542,18 +544,18 @@ function populateYears() {
 
 function populateHours() {
   // populate the hours <select> with the 24 hours of the day
-  for(var i = 0; i &lt;= 23; i++) {
+  for(var i = 0; i <= 23; i++) {
     var option = document.createElement('option');
-    option.textContent = (i &lt; 10) ? ("0" + i) : i;
+    option.textContent = (i < 10) ? ("0" + i) : i;
     hourSelect.appendChild(option);
   }
 }
 
 function populateMinutes() {
   // populate the minutes <select> with the 60 hours of each minute
-  for(var i = 0; i &lt;= 59; i++) {
+  for(var i = 0; i <= 59; i++) {
     var option = document.createElement('option');
-    option.textContent = (i &lt; 10) ? ("0" + i) : i;
+    option.textContent = (i < 10) ? ("0" + i) : i;
     minuteSelect.appendChild(option);
   }
 }

@@ -14,7 +14,7 @@ original_slug: Web/HTML/Reglages_des_attributs_CORS
 ---
 {{HTMLSidebar}}
 
-L'attribut **`crossorigin`**, valable sur les éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio), [`<img>`](/fr/docs/Web/HTML/Element/Img), [`<link>`](/fr/docs/Web/HTML/Element/link), [`<script>`](/fr/docs/Web/HTML/Element/script) et [`<video>`](/fr/docs/Web/HTML/Element/video), fournit la prise en charge de [CORS](/en-US/docs/Web/HTTP/CORS), définissant la manière dont l'élément traite les demandes d'origine croisée, permettant ainsi la configuration des demandes CORS pour les données extraites de l'élément. Selon l'élément, l'attribut peut être un attribut de paramètres CORS.
+L'attribut **`crossorigin`**, valable sur les éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio), [`<img>`](/fr/docs/Web/HTML/Element/Img), [`<link>`](/fr/docs/Web/HTML/Element/link), [`<script>`](/fr/docs/Web/HTML/Element/script) et [`<video>`](/fr/docs/Web/HTML/Element/video), fournit la prise en charge de [CORS](/fr/docs/Web/HTTP/CORS), définissant la manière dont l'élément traite les demandes d'origine croisée, permettant ainsi la configuration des demandes CORS pour les données extraites de l'élément. Selon l'élément, l'attribut peut être un attribut de paramètres CORS.
 
 L'attribut de contenu `crossorigin` sur les éléments médias est un attribut de paramétrage CORS.
 

@@ -27,7 +27,6 @@ entries = window.performance.getEntriesByName(name, type);
   - : 取得するエントリーの名前
 - type {{optional_inline}}
   - : "`mark`" など、取得するエントリーの種類。有効なエントリー種別の一覧は {{domxref("PerformanceEntry.entryType")}} にあります。
-</dl>
 
 ### 返値
 

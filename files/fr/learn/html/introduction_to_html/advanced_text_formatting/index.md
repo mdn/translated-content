@@ -50,12 +50,14 @@ Il y a de nombreux autres éléments HTML pour mettre en forme un texte qui n'on
 
 Dans les bases du texte en HTML, nous avons exposé comment on pouvait baliser [des listes simples en HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists), mais sans mentionner le troisième type de liste que vous rencontrerez à l'occasion — **les listes descriptives**. L'objectif de ces listes est de marquer une série d'éléments et leurs descriptions associées, comme termes et définition, ou bien questions et réponse. Voici l'exemple d'un ensemble de termes et leur définitions :
 
-    soliloque
-    Dans une pièce de théâtre, action d'un acteur adressant à lui-même ses pensées ou sentiments intimes et, de la sorte, les faisant partager à son auditoire (mais pas aux autres personnages de la pièce).
-    monologue
-    Dans une pièce de théâtre, action d'un acteur partageant ses pensées à haute voix avec le public et tous les personnages présents.
-    aparté
-    Dans une pièce de théâtre, action d'un acteur partageant une tirade uniquement avec le public en vue de produire un effet dramatique ou humoristique. Il s'agit le plus souvent d'un sentiment, d'une pensée secrète ou d'une information sur le contexte.
+```
+soliloque
+Dans une pièce de théâtre, action d'un acteur adressant à lui-même ses pensées ou sentiments intimes et, de la sorte, les faisant partager à son auditoire (mais pas aux autres personnages de la pièce).
+monologue
+Dans une pièce de théâtre, action d'un acteur partageant ses pensées à haute voix avec le public et tous les personnages présents.
+aparté
+Dans une pièce de théâtre, action d'un acteur partageant une tirade uniquement avec le public en vue de produire un effet dramatique ou humoristique. Il s'agit le plus souvent d'un sentiment, d'une pensée secrète ou d'une information sur le contexte.
+```
 
 Les listes descriptives utilisent une enveloppe de balisage différente de celle des autres types de listes — {{htmlelement("dl")}}&nbsp;; chaque terme est en plus entouré d'un élément {{htmlelement("dt")}} (**d**escription **t**erm) et chaque description d'un élément {{htmlelement("dd")}} (**d**escription **d**efinition). Terminons en balisant l'exemple ci‑dessus :
 
@@ -290,9 +292,9 @@ Les citations sont affichées avec un police italique par défaut. Vous pouvez v
 
 Il est temps de faire un autre apprentissage actif&nbsp;! Dans cet exemple, nous souhaiterions que&nbsp;:
 
-1.  vous marquiez le paragraphe central comme étant une citation comprenant un attribut `cite`.
-2.  une partie du troisième paragraphe soit balisée en tant que citation en ligne, comprenant aussi un attribut `cite`.
-3.  vous incorporiez un élément `<cite>` pour chaque citation
+1. vous marquiez le paragraphe central comme étant une citation comprenant un attribut `cite`.
+2. une partie du troisième paragraphe soit balisée en tant que citation en ligne, comprenant aussi un attribut `cite`.
+3. vous incorporiez un élément `<cite>` pour chaque citation
 
 L'origine des citations dont vous aurez besoin se trouvent aux pages&nbsp;:
 
@@ -430,9 +432,13 @@ textarea.onkeyup = function(){
 
 Un autre élément assez commun rencontré en se promenant dans le Web est l'élément {{htmlelement("abbr")}}}}. Il s'utilise pour entourer une abréviation ou un acronyme et donner le développement complet du terme (inclus dans un attribut {{htmlattrxref("title")}}}. Voyons quelques exemples :
 
-    <p>Nous utilisons l'<abbr title="Hypertext Markup Language">HTML</abbr> pour structurer nos documents web.</p>
+```html
+<p>Nous utilisons l'<abbr title="Hypertext Markup Language">HTML</abbr> pour structurer nos documents web.</p>
+```
 
-    <p>Je pense que le <abbr title="Révérend">R.</abbr> Green l'a fait dans la cuisine avec une tronçonneuse.</p>
+```html
+<p>Je pense que le <abbr title="Révérend">R.</abbr> Green l'a fait dans la cuisine avec une tronçonneuse.</p>
+```
 
 Leur affichage correspond aux deux phrases suivantes (le développement de l'abréviation apparaît dans une infobulle quand le pointeur de souris passe sur le terme) :
 

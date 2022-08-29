@@ -39,8 +39,6 @@ Les codes de langues renvoyés par cette propriété sont définis dans la [RFC 
 
 Ne marche qu'avec l'attribut `lang`, et non avec `xml:lang`.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                | Statut                       | Commentaires |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('DOM2 HTML', 'html.html#ID-59132807', 'id')}} | {{Spec2('DOM2 HTML')}} |              |
+{{Specifications}}

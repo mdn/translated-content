@@ -16,7 +16,9 @@ La propriété en lecture seule **`permission`** de l'interface {{domxref ("Noti
 
 ## Syntaxe
 
-    Notification.permission
+```js
+Notification.permission
+```
 
 ### Valeur
 
@@ -63,17 +65,15 @@ function notifyMe() {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                     | Commentaire     |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------- |
-| {{SpecName("Web Notifications","#dom-notification-permission","permission")}} | {{Spec2('Web Notifications')}} | Living standard |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification.permission")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [API de notifications](/docs/Web/API/Notifications_API)
-- [Utilisation de l'API Notifications](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
-- [Permissions d'API](/en-US/docs/Web/API/Permissions_API)
-- [Utilisation des permissions d'API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API)
+- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Permissions d'API](/fr/docs/Web/API/Permissions_API)
+- [Utilisation des permissions d'API](/fr/docs/Web/API/Permissions_API/Using_the_Permissions_API)

@@ -21,7 +21,9 @@ Cet objet est une enveloppe JavaScript qui représente un tableau WebAssembly et
 
 ## Syntaxe
 
-    var monTableau = new WebAssembly.Table(descripteurTableau);
+```js
+var monTableau = new WebAssembly.Table(descripteurTableau);
+```
 
 ### Paramètres
 

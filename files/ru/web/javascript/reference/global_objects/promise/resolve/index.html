@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 ---
 <div>{{JSRef}}</div>
 
-<p>Метод <code><strong>Promise.resolve(value)</strong></code> возвращает {{jsxref("Promise")}} выполненный с переданным значением. Если переданное значение является thenable - объект (т.е. имеет метод {{jsxref("Promise.then", "\"then\" method")}}), возвращаемый промис будет следовать thenable - объекту, принимая своё состояние; в ином случае возвращаемый промис будет выполнен с переданным значением.</p>
+<p>Метод <code><strong>Promise.resolve(value)</strong></code> возвращает {{jsxref("Promise")}} выполненный с переданным значением. Если переданное значение является thenable - объект (т.е. имеет метод {{jsxref("Promise.then", "\"then\" method")}}), возвращаемый промис будет следовать thenable - объекту, принимая своё состояние; в ином случае возвращаемый промис будет выполнен с переданным значением.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -23,7 +23,7 @@ Promise.resolve(thenable);
 
 <dl>
  <dt>value</dt>
- <dd>Значение с которым будет выполнен промис. Может также быть промисом или объект подобный промису (thenable - объект имеющий метод then).</dd>
+ <dd>Значение с которым будет выполнен промис. Может также быть промисом или объект подобный промису (thenable - объект имеющий метод then).</dd>
 </dl>
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
@@ -32,11 +32,11 @@ Promise.resolve(thenable);
 
 <h2 id="Описание">Описание</h2>
 
-<p><code>Метод Promise.resolve</code> возвращает выполненное промис (<code>Promise</code>).</p>
+<p><code>Метод Promise.resolve</code> возвращает выполненное промис (<code>Promise</code>).</p>
 
 <h2 id="Примеры">Примеры</h2>
 
-<h3 id="Использование_метода_Promise.resolve">Использование метода <code>Promise.resolve</code></h3>
+<h3 id="Использование_метода_Promise.resolve">Использование метода <code>Promise.resolve</code></h3>
 
 <pre class="brush: js">Promise.resolve("Success").then(function(value) {
   console.log(value); // "Success"
@@ -53,7 +53,7 @@ p.then(function(v) {
 });
 </pre>
 
-<h3 id="Выполнение_с_другим_промисом_Promise">Выполнение с другим промисом ( <code>Promise</code>)</h3>
+<h3 id="Выполнение_с_другим_промисом_Promise">Выполнение с другим промисом ( <code>Promise</code>)</h3>
 
 <pre class="brush: js">var original = Promise.resolve(true);
 var cast = Promise.resolve(original);
@@ -62,7 +62,7 @@ cast.then(function(v) {
 });
 </pre>
 
-<h3 id="Выполнение_с_thenable_объектом_и_выбрасывание_исключений">Выполнение с thenable объектом и выбрасывание исключений</h3>
+<h3 id="Выполнение_с_thenable_объектом_и_выбрасывание_исключений">Выполнение с thenable объектом и выбрасывание исключений</h3>
 
 <pre class="brush: js">// Выполнение с thenable объектом
 var p1 = Promise.resolve({

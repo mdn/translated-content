@@ -12,7 +12,6 @@ tags:
   - 入力要素
   - 入力型
   - リファレンス
-browser-compat: html.elements.input.input-date
 translation_of: Web/HTML/Element/input/date
 ---
 
@@ -24,12 +23,12 @@ translation_of: Web/HTML/Element/input/date
 
 {{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}
 
-入力欄のユーザーインターフェイスは、一般にブラウザーによってまちまちです。詳細は{{anch("ブラウザーの互換性")}}を参照してください。対応していないブラウザーでは、このコントロールは単純な [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text) に格下げされます。
+入力欄のユーザーインターフェイスは、一般にブラウザーによってまちまちです。詳細は[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。対応していないブラウザーでは、このコントロールは単純な [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text) に格下げされます。
 
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("値")}}</strong></td>
+      <td><strong><a href="#値">値</a></strong></td>
       <td>
         {{domxref("DOMString")}} で、 YYYY-MM-DD 形式の日付、または空欄を表す
       </td>
@@ -110,9 +109,9 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 
 ### step
 
-`step` 属性は値が吸着する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば `{{anch("min")}}`、 {{htmlattrxref("value", "input")}} そうでなければ適切な既定値）のみが妥当となります。
+`step` 属性は値が吸着する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば [`min`](#min)、 {{htmlattrxref("value", "input")}} そうでなければ適切な既定値）のみが妥当となります。
 
-文字列値の `any` は刻みがなく、どの値でも許可されることを意味します（`{{anch("min")}}` や `{{anch("max")}}` など、他の制約に制限されます）。
+文字列値の `any` は刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約に制限されます）。
 
 > **Note:** ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("user agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
 
@@ -124,7 +123,7 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 
 日付入力は便利に見えます。 — 日付の選択に簡単なインターフェイスを提供し、サーバーに送信するデータの書式をユーザーのロケールに関係なく正規化してくれます。しかし、今のところブラウザーの対応が限定されているため、 `<input type="date">` には問題があります。
 
-この節では、 `<input type="date">` の基本的な使い方と少し複雑な使い方を見てみてから、その後でブラウザーの互換性の問題を緩和するアドバイスを提供しましょう ({{anch("ブラウザーの互換性の扱い")}} を参照してください)。
+この節では、 `<input type="date">` の基本的な使い方と少し複雑な使い方を見てみてから、その後でブラウザーの互換性の問題を緩和するアドバイスを提供しましょう ([ブラウザーの互換性の扱い](#ブラウザーの互換性の扱い) を参照してください)。
 
 > **Note:** 今後ブラウザーの互換性がもっと普遍的になり、この問題が消滅することを願います。
 
@@ -173,7 +172,7 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 
 既定で、 `<input type="date">` は入力された値をその書式を超えて検証しません。インターフェイスは一般的に、日付でないものの入力をさせないからです。 — これは便利です。 — しかし、入力欄を空のままにしたり、 `text` 型に代替されるするブラウザーにおいて、無効な日付を入力したりすることが可能です（例えば 4 月 32 日など）。
 
-{{htmlattrxref("min", "input")}} および {{htmlattrxref("max", "input")}} を使用して有効な日付を制限すると（{{anch("日付の最大値と最小値の設定")}}を参照）、対応しているブラウザーは、範囲を外れたの日付を送信しようとしたときにエラーを表示するでしょう。しかし、ユーザーの端末が日付選択に完全に対応していない場合、値がこれらの日付の中にあることを保証するためには、送信された結果を再度チェックしなければならないでしょう。
+{{htmlattrxref("min", "input")}} および {{htmlattrxref("max", "input")}} を使用して有効な日付を制限すると（[日付の最大値と最小値の設定](#日付の最大値と最小値の設定)を参照）、対応しているブラウザーは、範囲を外れたの日付を送信しようとしたときにエラーを表示するでしょう。しかし、ユーザーの端末が日付選択に完全に対応していない場合、値がこれらの日付の中にあることを保証するためには、送信された結果を再度チェックしなければならないでしょう。
 
 {{htmlattrxref("required", "input")}} 属性を使用して、日付の入力を必須にすることもできます。 — 空の日付欄を送信しようとするとエラーが表示されるでしょう。これは、テキスト入力欄で代替されたとしても、ほとんどのブラウザーで動作するはずです。
 
@@ -220,9 +219,9 @@ input:valid+span::after {
 
 > **Warning:** クライアント側のフォーム検証は、サーバー上の検証の代用にはなりません。誰かが HTML を改変したり、 HTML を完全にバイパスしてサーバーに直接データを送信したりすることは簡単です。サーバーが受信したデータの検証に失敗した場合、不適切な形式のデータ、大きすぎるデータ、誤った種類のデータなどに遭遇すると、障害が発生するおそれがあります。
 
-## ブラウザーの対応の扱い
+## ブラウザーの互換性の扱い
 
-前述のように、現時点で日付入力を書く上で一番の問題は{{anch("ブラウザーの互換性")}}です。
+前述のように、現時点で日付入力を書く上で一番の問題は[ブラウザーの互換性](#ブラウザーの互換性)です。
 
 対応していないブラウザーでは、文字列入力欄に安全に格下げされますが、これはユーザーインターフェイスの一貫性（表示されるコントロールが異なること）とデータの扱い方の両方で問題を生みます。
 
@@ -289,40 +288,40 @@ HTML は次のようになります。
 ```html
 <form>
   <div class="nativeDatePicker">
-    <label for="bday">誕生日を入力してください。</label>
-    <input type="date" id="bday" name="bday">
-    <span class="validity"></span>
-  </div>
-  <p class="fallbackLabel">誕生日を入力してください。</p>
-  <div class="fallbackDatePicker">
-    <span>
-      <select id="year" name="year">
-      </select>
-      <label for="year">年</label>
-    </span>
-    <span>
-      <select id="month" name="month">
-        <option selected>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        <option>6</option>
-        <option>7</option>
-        <option>8</option>
-        <option>9</option>
-        <option>10</option>
-        <option>11</option>
-        <option>12</option>
-      </select>
-      <label for="month">月</label>
-    </span>
-    <span>
-      <select id="day" name="day">
-      </select>
-      <label for="day">日</label>
-    </span>
-  </div>
+    <label for="bday">誕生日を入力してください。</label>
+    <input type="date" id="bday" name="bday">
+    <span class="validity"></span>
+  </div>
+  <p class="fallbackLabel">誕生日を入力してください。</p>
+  <div class="fallbackDatePicker">
+    <span>
+      <select id="year" name="year">
+      </select>
+      <label for="year">年</label>
+    </span>
+    <span>
+      <select id="month" name="month">
+        <option selected>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+      </select>
+      <label for="month">月</label>
+    </span>
+    <span>
+      <select id="day" name="day">
+      </select>
+      <label for="day">日</label>
+    </span>
+  </div>
 </form>
 ```
 
@@ -385,7 +384,7 @@ if(test.type === 'text') {
 }
 
 function populateDays(month) {
-  // delete the current set of &lt;option&gt; elements out of the
+  // delete the current set of <option> elements out of the
   // day <select>, ready for the next set to be injected
   while(daySelect.firstChild){
     daySelect.removeChild(daySelect.firstChild);
@@ -406,8 +405,8 @@ function populateDays(month) {
   isLeap ? dayNum = 29 : dayNum = 28;
   }
 
-  // <select> に正しい数の新しい &lt;option&gt; 要素を挿入
-  for(i = 1; i &lt;= dayNum; i++) {
+  // <select> に正しい数の新しい <option> 要素を挿入
+  for(i = 1; i <= dayNum; i++) {
     var option = document.createElement('option');
     option.textContent = i;
     daySelect.appendChild(option);
@@ -443,7 +442,7 @@ function populateYears() {
   var year = date.getFullYear();
 
   // 今年から 100 年前までの年が <select> で選択できるようにする
-  for(var i = 0; i &lt;= 100; i++) {
+  for(var i = 0; i <= 100; i++) {
     var option = document.createElement('option');
     option.textContent = year-i;
     yearSelect.appendChild(option);

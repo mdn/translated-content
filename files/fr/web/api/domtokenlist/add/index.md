@@ -9,7 +9,9 @@ La méthode **`add()`** de l'interface {{domxref("DOMTokenList")}} ajoute le _to
 
 ## Syntaxe
 
-    tokenList.add(token1[, token2[, ...]]);
+```js
+tokenList.add(token1[, token2[, ...]]);
+```
 
 ### Paramètres
 
@@ -51,10 +53,8 @@ span.classList.add("d", "e", "f");
 
 ## Spécifications
 
-| Spécification                                                                | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG','#dom-domtokenlist-add','add()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMTokenList.add")}}
+{{Compat}}

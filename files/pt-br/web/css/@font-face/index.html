@@ -5,13 +5,13 @@ translation_of: Web/CSS/@font-face
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">O <strong><code>@font-face</code></strong> <a href="/en-US/docs/CSS">CSS</a> <a href="/en-US/docs/CSS/At-rule">at-rule</a> especifica uma fonte customizada com a qual exibe o texto; a fonte pode ser carregada de um servidor remoto ou de uma fonte instalada localmente no computador do usuário.</span> Se a função <code>local()</code> for fornecida, a especificação do nome da fonte a ser procurada no computador do usuário, e a {{Glossary("user agent")}} encontrar uma correspondência, essa fonte local será usada. Caso contrário, o recurso de fonte especificado usando a função <code>url()</code> é baixado e usado.</p>
+<p><span class="seoSummary">O <strong><code>@font-face</code></strong> <a href="/en-US/docs/CSS">CSS</a> <a href="/en-US/docs/CSS/At-rule">at-rule</a> especifica uma fonte customizada com a qual exibe o texto; a fonte pode ser carregada de um servidor remoto ou de uma fonte instalada localmente no computador do usuário.</span> Se a função <code>local()</code> for fornecida, a especificação do nome da fonte a ser procurada no computador do usuário, e a {{Glossary("user agent")}} encontrar uma correspondência, essa fonte local será usada. Caso contrário, o recurso de fonte especificado usando a função <code>url()</code> é baixado e usado.</p>
 
 <p>Ao permitir que os autores forneçam suas próprias fontes, <code>@font-face</code> torna possível projetar conteúdo sem se limitar às chamadas fontes "seguras para a web" (ou seja, as fontes que são tão comuns que são consideradas como universalmente disponível). A capacidade de especificar o nome de uma fonte instalada localmente a ser procurada e usada permite personalizar a fonte além do básico, ao mesmo tempo em que é possível fazê-lo sem depender de uma conexão com a Internet.</p>
 
-<p>É comum usar <code>url()</code> e <code>local()</code> juntos, para que a cópia instalada da fonte do usuário seja usada, se disponível, voltando ao download de uma cópia da fonte, caso ela não seja encontrada no dispositivo do usuário.</p>
+<p>É comum usar <code>url()</code> e <code>local()</code> juntos, para que a cópia instalada da fonte do usuário seja usada, se disponível, voltando ao download de uma cópia da fonte, caso ela não seja encontrada no dispositivo do usuário.</p>
 
-<p>A regra de CSS <code>@font-face</code> pode ser usada não apenas no nível superior de um CSS, mas também dentro de qualquer <a href="/en-US/docs/Web/CSS/At-rule#Conditional_group_rules">CSS conditional-group at-rule</a>.</p>
+<p>A regra de CSS <code>@font-face</code> pode ser usada não apenas no nível superior de um CSS, mas também dentro de qualquer <a href="/en-US/docs/Web/CSS/At-rule#Conditional_group_rules">CSS conditional-group at-rule</a>.</p>
 
 <pre class="brush: css no-line-numbers">@font-face {
   font-family: "Open Sans";
@@ -29,7 +29,7 @@ translation_of: Web/CSS/@font-face
  <dt>{{cssxref("@font-face/font-family", "font-family")}}</dt>
  <dd>Especifica um nome que será usado como o valor nominal da fonte para as propriedades da fonte.</dd>
  <dt>{{cssxref("@font-face/font-stretch", "font-stretch")}}</dt>
- <dd>Um valor {{cssxref ("font-stretch")}}. Desde o Firefox 61 (e em outros navegadores modernos), isso também aceita dois valores para especificar um intervalo suportado por uma fonte, por exemplo, extensão de fonte: <code>font-stretch: 50% 200%;</code></dd>
+ <dd>Um valor {{cssxref ("font-stretch")}}. Desde o Firefox 61 (e em outros navegadores modernos), isso também aceita dois valores para especificar um intervalo suportado por uma fonte, por exemplo, extensão de fonte: <code>font-stretch: 50% 200%;</code></dd>
  <dt>{{cssxref("@font-face/font-style", "font-style")}}</dt>
  <dd>Um valor {{cssxref ("font-style")}}. Desde o Firefox 61 (e em outros navegadores modernos), isso também aceita dois valores para especificar um intervalo suportado por uma fonte, por exemplo <code>font-style: oblique 20deg 50deg;</code></dd>
  <dt>{{cssxref("@font-face/font-weight", "font-weight")}}</dt>
@@ -49,7 +49,7 @@ translation_of: Web/CSS/@font-face
  <pre class="brush: css">src: url(ideal-sans-serif.woff) <strong>format("woff")</strong>,
      url(basic-sans-serif.ttf) <strong>format("truetype")</strong>;</pre>
 
- <p>Os tipos disponíveis são: <code>"woff"</code>, <code>"woff2"</code>, <code>"truetype"</code>, <code>"opentype"</code>, <code>"embedded-opentype"</code>, e <code>"svg"</code>.</p>
+ <p>Os tipos disponíveis são: <code>"woff"</code>, <code>"woff2"</code>, <code>"truetype"</code>, <code>"opentype"</code>, <code>"embedded-opentype"</code>, e <code>"svg"</code>.</p>
  </dd>
  <dt>{{cssxref("@font-face/unicode-range", "unicode-range")}}</dt>
  <dd>O intervalo de pontos de código Unicode a serem usados na fonte.</dd>

@@ -17,8 +17,10 @@ La propriété **`protocol`** de l'interface {{domxref("URL")}} est une {{domxre
 
 ## Syntaxe
 
-    string = object.protocol;
-    object.protocol = string;
+```js
+string = object.protocol;
+object.protocol = string;
+```
 
 ### Valeur
 

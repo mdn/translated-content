@@ -20,7 +20,9 @@ Cependant, une exception sera levée si le {{ domxref("Range") }} découpe un n�
 
 ## Syntaxe
 
-    range.surroundContents(newNode);
+```js
+range.surroundContents(newNode);
+```
 
 ### Paramètres
 

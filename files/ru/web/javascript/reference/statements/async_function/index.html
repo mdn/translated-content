@@ -5,10 +5,10 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<div>Объявление <code style="font-style: normal; font-weight: normal;"><strong>async function</strong></code> определяет <em>асинхронную функцию</em>, которая возвращает объект {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}.</div>
+<div>Объявление <code style="font-style: normal; font-weight: normal;"><strong>async function</strong></code> определяет <em>асинхронную функцию</em>, которая возвращает объект {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}.</div>
 
 <div class="noinclude">
-<p>Вы также можете  определить async-функции, используя  {{jsxref("Operators/async_function", "выражение async function")}}.</p>
+<p>Вы также можете  определить async-функции, используя  {{jsxref("Operators/async_function", "выражение async function")}}.</p>
 </div>
 
 <h2 id="Синтаксис">Синтаксис</h2>
@@ -25,24 +25,24 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 
 <dl>
  <dt><code>param</code></dt>
- <dd>Имя аргумента, который будет передан в функцию.</dd>
+ <dd>Имя аргумента, который будет передан в функцию.</dd>
 </dl>
 
 <dl>
  <dt><code>statements</code></dt>
- <dd>Выражение, содержащее тело функции.</dd>
+ <dd>Выражение, содержащее тело функции.</dd>
 </dl>
 
 <h2 id="Описание">Описание</h2>
 
-<p>После вызова функция <code>async</code> возвращает {{jsxref("Promise")}}. Когда результат был получен, <code>Promise</code> завершается, возвращая полученное значение.  Когда функция <code>async </code>выбрасывает исключение, <code>Promise</code> ответит отказом с выброшенным (<code>throws</code>) значением.</p>
+<p>После вызова функция <code>async</code> возвращает {{jsxref("Promise")}}. Когда результат был получен, <code>Promise</code> завершается, возвращая полученное значение.  Когда функция <code>async </code>выбрасывает исключение, <code>Promise</code> ответит отказом с выброшенным (<code>throws</code>) значением.</p>
 
-<p>Функция async может содержать выражение {{jsxref("Operators/await", "await")}}, которое приостанавливает выполнение функции async и ожидает ответа от переданного <code>Promise</code>, затем возобновляя выполнение функции <code>async</code> и возвращая полученное значение.</p>
+<p>Функция async может содержать выражение {{jsxref("Operators/await", "await")}}, которое приостанавливает выполнение функции async и ожидает ответа от переданного <code>Promise</code>, затем возобновляя выполнение функции <code>async</code> и возвращая полученное значение.</p>
 
-<p>Ключевое слово <code>await</code> допустимо только в асинхронных функциях. В другом контексте вы получите ошибку <code>SyntaxError</code>.</p>
+<p>Ключевое слово <code>await</code> допустимо только в асинхронных функциях. В другом контексте вы получите ошибку <code>SyntaxError</code>.</p>
 
 <div class="note">
-<p>Цель функций async/await упростить использование promises синхронно и воспроизвести некоторое действие над группой  <code>Promises</code>. Точно так же как <code>Promises</code> подобны структурированным колбэкам, async/await подобна комбинации генераторов и promises.</p>
+<p>Цель функций async/await упростить использование promises синхронно и воспроизвести некоторое действие над группой  <code>Promises</code>. Точно так же как <code>Promises</code> подобны структурированным колбэкам, async/await подобна комбинации генераторов и promises.</p>
 </div>
 
 <h2 id="Примеры">Примеры</h2>
@@ -81,10 +81,10 @@ add2(10).then(v =&gt; {
 <div class="warning">
 <h4 id="Не_путайте_await_и_Promise.all">Не путайте await и Promise.all</h4>
 
-<p>Функция <code>add1</code> приостанавливается на 2 секунды для первого <code>await</code> и ещё на 2 для второго. Второй таймер создаётся только после срабатывания первого. В функции <code>add2</code> создаются оба и оба же переходят в состояние <code>await</code>. В результате функция <code>add2</code> завершится скорее через две, чем через четыре секунды, поскольку таймеры работают одновременно. Однако запускаются они всё же не параллельно, а друг за другом - такая конструкция не означает автоматического использования <code>Promise.all</code>. Если два или более Promise должны разрешаться параллельно, следует использовать <code>Promise.all</code>.</p>
+<p>Функция <code>add1</code> приостанавливается на 2 секунды для первого <code>await</code> и ещё на 2 для второго. Второй таймер создаётся только после срабатывания первого. В функции <code>add2</code> создаются оба и оба же переходят в состояние <code>await</code>. В результате функция <code>add2</code> завершится скорее через две, чем через четыре секунды, поскольку таймеры работают одновременно. Однако запускаются они всё же не параллельно, а друг за другом - такая конструкция не означает автоматического использования <code>Promise.all</code>. Если два или более Promise должны разрешаться параллельно, следует использовать <code>Promise.all</code>.</p>
 </div>
 
-<h3 id="Когда_функция_async_выбрасывает_исключение">Когда функция <code>async </code>выбрасывает исключение</h3>
+<h3 id="Когда_функция_async_выбрасывает_исключение">Когда функция <code>async </code>выбрасывает исключение</h3>
 
 <pre class="brush: js">async function throwsValue() {
     throw new Error('oops');
@@ -108,9 +108,9 @@ throwsValue()
 //prints "reject:Error: oops"
 </pre>
 
-<h3 id="Перепись_цепочки_promise_с_использованием_функции_async">Перепись цепочки promise с использованием функции <code>async</code></h3>
+<h3 id="Перепись_цепочки_promise_с_использованием_функции_async">Перепись цепочки promise с использованием функции <code>async</code></h3>
 
-<p>API, которое возвращает {{jsxref("Promise")}}, будет возвращать значение в цепочке, тем самым разбивая функцию на много частей. Рассматривая следующий код:</p>
+<p>API, которое возвращает {{jsxref("Promise")}}, будет возвращать значение в цепочке, тем самым разбивая функцию на много частей. Рассматривая следующий код:</p>
 
 <pre class="brush: js">function getProcessedData(url) {
   return downloadData(url) // returns a promise
@@ -123,7 +123,7 @@ throwsValue()
 }
 </pre>
 
-<p>он может быть переписан с одним использованием функции <code>async</code>:</p>
+<p>он может быть переписан с одним использованием функции <code>async</code>:</p>
 
 <pre class="brush: js">async function getProcessedData(url) {
   let v;
@@ -136,7 +136,7 @@ throwsValue()
 }
 </pre>
 
-<p>Заметьте, что пример выше не содержит <code>await</code> на <code>return</code>, потому что возвращаемое значение функции <code>async</code> неявно обёрнуто в {{jsxref("Promise.resolve")}}.</p>
+<p>Заметьте, что пример выше не содержит <code>await</code> на <code>return</code>, потому что возвращаемое значение функции <code>async</code> неявно обёрнуто в {{jsxref("Promise.resolve")}}.</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 

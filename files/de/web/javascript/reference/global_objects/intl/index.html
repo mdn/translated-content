@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 
 <h2 id="Gebietsidentifikation_und_-verhandlung">Gebietsidentifikation und -verhandlung</h2>
 
-<p>Die Internationalisierungskonstruktoren genauso wie viele sprachsensitive Methoden von anderen Konstruktoren (aufgelistet unter {{anch("Siehe auch", "Siehe auch")}}) benutzten übliche Muster für die Identifizierung von Gebieten und der Feststellung des aktuellen Gebietes: Alle diese akzeptieren <code>locales</code> und <code>options</code> Parameter und verhandeln ein Gebiet aus den gesendeten Gebieten und den Lokal unterstützen Gebieten mithilfe eines Speziellen Algorithmus in der Eigenschaft <code>options.localeMatcher</code> aus.</p>
+<p>Die Internationalisierungskonstruktoren genauso wie viele sprachsensitive Methoden von anderen Konstruktoren (aufgelistet unter <a href="#siehe_auch">Siehe auch</a>) benutzten übliche Muster für die Identifizierung von Gebieten und der Feststellung des aktuellen Gebietes: Alle diese akzeptieren <code>locales</code> und <code>options</code> Parameter und verhandeln ein Gebiet aus den gesendeten Gebieten und den Lokal unterstützen Gebieten mithilfe eines Speziellen Algorithmus in der Eigenschaft <code>options.localeMatcher</code> aus.</p>
 
 <h3 id="locales_Argument"><code>locales</code> Argument</h3>
 
@@ -56,14 +56,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl
  <li><code>"de-DE-u-co-phonebk"</code>: Benutzt die Telefonbuch-Variante der deutschen Sortierreihenfolge, welche Umlaute zu Paaren übersetzt: ä → ae, ö → oe, ü → ue.</li>
  <li><code>"th-TH-u-nu-thai"</code>: Benutzt Thei-Zeichen(๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙) im Nummernformat.</li>
  <li><code>"ja-JP-u-ca-japanese"</code>: Benutzt den Japanischen Kalender für Datums- und Zeitformate, so dass 2013 als Jahr 25 der Heisei Periode ist oder 平成25.</li>
- <li><code>"en-GB-u-ca-islamic"</code>: Benutzt Britisches Englisch mit dem Islamic (Hijri) Kalender, indem das gregorianische Datum 14. Oktober 2017 das Hijri Datum 24 Muharram, 1439 ist.</li>
+ <li><code>"en-GB-u-ca-islamic"</code>: Benutzt Britisches Englisch mit dem Islamic (Hijri) Kalender, indem das gregorianische Datum 14. Oktober 2017 das Hijri Datum 24 Muharram, 1439 ist.</li>
 </ul>
 
 <h3 id="Gebietsauswahl">Gebietsauswahl</h3>
 
-<p>Das <code>locales</code> Argument wird als priorisierte Angabe für die Applikation interpretiert, nach dem alle Unicode-Erweiterungen durchführt wurden. Zur Laufzeut wird gegeben verfügbare Gebiete verglichen und das am besten passende genommen. Es existieren zwei Algorithmen für die Auswahl: die <code>"lookup"</code> Auswahl, die dem im <a href="http://tools.ietf.org/html/rfc4647#section-3.4">BCP 47</a> spezifizierten Algorithmus folgt; die <code>"best fit"</code> Auswahl, bei dem die Laufzeigumgebung mindestens einen gleichgutes Ergebnis wie der Lookup Algorithmus erzielt, wenn nicht sogar einen besseren. Wenn die Applikation kein <code>locales</code> Argument unterstützt oder die Laufzeit kein Gebiet hat, welches passt, dann wird das Standardgebiet der Laufzeitumgebung werdendet. Das Algorithmus zur Auswahl kann über das <code>options</code> Argument ausgewählt werden (siehe unten).</p>
+<p>Das <code>locales</code> Argument wird als priorisierte Angabe für die Applikation interpretiert, nach dem alle Unicode-Erweiterungen durchführt wurden. Zur Laufzeut wird gegeben verfügbare Gebiete verglichen und das am besten passende genommen. Es existieren zwei Algorithmen für die Auswahl: die <code>"lookup"</code> Auswahl, die dem im <a href="http://tools.ietf.org/html/rfc4647#section-3.4">BCP 47</a> spezifizierten Algorithmus folgt; die <code>"best fit"</code> Auswahl, bei dem die Laufzeigumgebung mindestens einen gleichgutes Ergebnis wie der Lookup Algorithmus erzielt, wenn nicht sogar einen besseren. Wenn die Applikation kein <code>locales</code> Argument unterstützt oder die Laufzeit kein Gebiet hat, welches passt, dann wird das Standardgebiet der Laufzeitumgebung werdendet. Das Algorithmus zur Auswahl kann über das <code>options</code> Argument ausgewählt werden (siehe unten).</p>
 
-<p>Wenn der ausgewählte Sprache-Tag eine Unicode Erweiterung hat, wird diese genutzt, um das erstellte Objekte oder das Verhalten der Funktion anzupassen. Jeder Konstruktor oder jede Funktion unterstützt nur eine Untermenge der als Unicode Erweiterungen definierten Schlüssel und die unterstützen Werte sind meistens von Sprach-Tag abhängig. Zum Beispiel ist der <code>"co"</code> Schlüssel (collation) nur in {{jsxref("Collator")}} unterstützt und der <code>"phonebk"</code> Wert ist nur im Deutschen unterstützt.</p>
+<p>Wenn der ausgewählte Sprache-Tag eine Unicode Erweiterung hat, wird diese genutzt, um das erstellte Objekte oder das Verhalten der Funktion anzupassen. Jeder Konstruktor oder jede Funktion unterstützt nur eine Untermenge der als Unicode Erweiterungen definierten Schlüssel und die unterstützen Werte sind meistens von Sprach-Tag abhängig. Zum Beispiel ist der <code>"co"</code> Schlüssel (collation) nur in {{jsxref("Collator")}} unterstützt und der <code>"phonebk"</code> Wert ist nur im Deutschen unterstützt.</p>
 
 <h3 id="options_Argument"><code>options</code> Argument</h3>
 

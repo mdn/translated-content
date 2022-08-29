@@ -80,8 +80,6 @@ Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvo
 
 {{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
 
-
-
 ## Dans ce module
 
 - [Le modèle de boîte&nbsp;: récapitulatif](/fr/Apprendre/CSS/styliser_boites/Box_model_recap)

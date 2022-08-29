@@ -50,7 +50,7 @@ class WordCount extends HTMLParagraphElement {
 
 これはごく簡単な例ですが、ここでできることはもっとあります。クラスの中でライフサイクルコールバックを定義することができ、要素のライフサイクルの特定の時点で実行されます。例えば、`connectedCallback` はドキュメント接続要素にカスタム要素が追加されるたびに実行されます。一方 `attributeChangedCallback` はカスタム要素に属性が追加、削除、変更される時に実行されます。
 
-これらについては、下記の{{anch("ライフサイクルコールバックの使用")}}の節で詳しく学ぶことができます。
+これらについては、下記の[ライフサイクルコールバックの使用](#ライフサイクルコールバックの使用)の節で詳しく学ぶことができます。
 
 カスタム要素には 2 つの種類があります。
 
@@ -96,7 +96,7 @@ icon.setAttribute('class','icon');
 icon.setAttribute('tabindex', 0);
 // アイコンを、定義された属性または既定のアイコンから挿入
 const img = icon.appendChild(document.createElement('img'));
-img.src = this.hasAttribute('src') ? this.getAttribute('src') : 'img/default.png';
+img.src = this.hasAttribute('img') ? this.getAttribute('img') : 'img/default.png';
 
 const info = wrapper.appendChild(document.createElement('span'));
 info.setAttribute('class','info');
@@ -222,14 +222,14 @@ shadow.appendChild(div);
 
 ```js
 function updateStyle(elem) {
-  const shadow = elem.shadowRoot;
-  shadow.querySelector('style').textContent = `
-    div {
-      width: ${elem.getAttribute('l')}px;
-      height: ${elem.getAttribute('l')}px;
-      background-color: ${elem.getAttribute('c')};
-    }
-  `;
+  const shadow = elem.shadowRoot;
+  shadow.querySelector('style').textContent = `
+    div {
+      width: ${elem.getAttribute('l')}px;
+      height: ${elem.getAttribute('l')}px;
+      background-color: ${elem.getAttribute('c')};
+    }
+  `;
 }
 ```
 

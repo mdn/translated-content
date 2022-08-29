@@ -30,9 +30,7 @@ let time = performanceTiming.domContentLoadedEventStart;
 
 | Spécification                                                                                                                                                                                            | Statut                                   | Commentaire          |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing',
-        '#dom-performancetiming-domcontentloadedeventstart',
-        'PerformanceTiming.domContentLoadedEventStart')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+| {{SpecName('Navigation Timing', '#dom-performancetiming-domcontentloadedeventstart', 'PerformanceTiming.domContentLoadedEventStart')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
 
 ## Compatibilité des navigateurs
 

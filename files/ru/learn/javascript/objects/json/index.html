@@ -12,13 +12,13 @@ original_slug: Learn/JavaScript/Объекты/JSON
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}</div>
 
-<p class="summary">Обозначение объектов JavaScript (JSON - JavaScript Object Notation) - стандартный текстовый формат для представления структурированных данных на основе синтаксиса объекта JavaScript. Он обычно используется для передачи данных в веб-приложениях (например, отправка некоторых данных с сервера клиенту,таким образом чтобы это могло отображаться на веб-странице или наоборот). Вы будете сталкиваться с этим довольно часто, поэтому в этой статье мы даём вам все, что вам нужно для работы с JSON используя JavaScript, включая парсинг JSON, чтобы вы могли получить доступ к данным внутри него при создании JSON.</p>
+<p class="summary">Обозначение объектов JavaScript (JSON - JavaScript Object Notation) - стандартный текстовый формат для представления структурированных данных на основе синтаксиса объекта JavaScript. Он обычно используется для передачи данных в веб-приложениях (например, отправка некоторых данных с сервера клиенту,таким образом чтобы это могло отображаться на веб-странице или наоборот). Вы будете сталкиваться с этим довольно часто, поэтому в этой статье мы даём вам все, что вам нужно для работы с JSON используя JavaScript, включая парсинг JSON, чтобы вы могли получить доступ к данным внутри него при создании JSON.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Необходимые знания:</th>
-   <td>Базовая компьютерная грамотность, базовые знания HTML и CSS, знакомство с основами JavaScript (см. <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> и <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>) и основами OOJS  (see <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction to objects</a>).</td>
+   <td>Базовая компьютерная грамотность, базовые знания HTML и CSS, знакомство с основами JavaScript (см. <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> и <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>) и основами OOJS  (see <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction to objects</a>).</td>
   </tr>
   <tr>
    <th scope="row">Цель:</th>
@@ -31,66 +31,66 @@ original_slug: Learn/JavaScript/Объекты/JSON
 
 <p>{{glossary("JSON")}} - текстовый формат данных, следующий за синтаксисом объекта JavaScript, который был популяризирован <a href="https://en.wikipedia.org/wiki/Douglas_Crockford">Дугласом Крокфордом</a>. Несмотря на то, что он очень похож на буквенный синтаксис объекта JavaScript, его можно использовать независимо от JavaScript, и многие среды программирования имеют возможность читать (анализировать) и генерировать JSON.</p>
 
-<p>JSON существует как строка,что необходимо при передаче данных по сети. Он должен быть преобразован в собственный объект JavaScript, если вы хотите получить доступ к данным. Это не большая проблема. JavaScript предоставляет глобальный объект <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a>, который имеет методы для преобразования между ними.</p>
+<p>JSON существует как строка,что необходимо при передаче данных по сети. Он должен быть преобразован в собственный объект JavaScript, если вы хотите получить доступ к данным. Это не большая проблема. JavaScript предоставляет глобальный объект <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a>, который имеет методы для преобразования между ними.</p>
 
 <div class="note">
-<p><strong>Примечание</strong>: Преобразование строки в родной объект называется десериализацией (преобразование из последовательной формы в параллельную<em>)</em>, в то время как преобразовании родного объекта в строку, таким образом ,чтобы он мог быть передан через сеть, называется сериализацией(преобразование в последовательную форму).</p>
+<p><strong>Примечание</strong>: Преобразование строки в родной объект называется десериализацией (преобразование из последовательной формы в параллельную<em>)</em>, в то время как преобразовании родного объекта в строку, таким образом ,чтобы он мог быть передан через сеть, называется сериализацией(преобразование в последовательную форму).</p>
 </div>
 
 <p>Объект JSON может быть сохранён в собственном файле, который в основном представляет собой текстовый файл с расширением <code>.json</code> и {{glossary("MIME type")}} <code>application/json</code>.</p>
 
 <h3 id="Структура_JSON">Структура JSON</h3>
 
-<p>Как описано выше, JSON представляет собой строку, формат которой очень похож на буквенный формат объекта JavaScript. Вы можете включать одни и те же базовые типы данных внутри JSON, так же как и  в стандартном объекте JavaScript - строки, числа, массивы, булевы и другие объектные литералы. Это позволяет построить иерархию данных, к примеру, так:</p>
+<p>Как описано выше, JSON представляет собой строку, формат которой очень похож на буквенный формат объекта JavaScript. Вы можете включать одни и те же базовые типы данных внутри JSON, так же как и  в стандартном объекте JavaScript - строки, числа, массивы, булевы и другие объектные литералы. Это позволяет построить иерархию данных, к примеру, так:</p>
 
 <pre class="brush: json">{
-  "squadName": "Super hero squad",
-  "homeTown": "Metro City",
-  "formed": 2016,
-  "secretBase": "Super tower",
+  "squadName": "Super hero squad",
+  "homeTown": "Metro City",
+  "formed": 2016,
+  "secretBase": "Super tower",
   "active": true,
-  "members": [
-    {
-      "name": "Molecule Man",
-      "age": 29,
-      "secretIdentity": "Dan Jukes",
-      "powers": [
-        "Radiation resistance",
-        "Turning tiny",
-        "Radiation blast"
-      ]
-    },
-    {
-      "name": "Madame Uppercut",
-      "age": 39,
-      "secretIdentity": "Jane Wilson",
-      "powers": [
-        "Million tonne punch",
-        "Damage resistance",
-        "Superhuman reflexes"
-      ]
-    },
-    {
-      "name": "Eternal Flame",
-      "age": 1000000,
-      "secretIdentity": "Unknown",
-      "powers": [
-        "Immortality",
-        "Heat Immunity",
-        "Inferno",
-        "Teleportation",
-        "Interdimensional travel"
-      ]
-    }
-  ]
+  "members": [
+    {
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": [
+        "Radiation resistance",
+        "Turning tiny",
+        "Radiation blast"
+      ]
+    },
+    {
+      "name": "Madame Uppercut",
+      "age": 39,
+      "secretIdentity": "Jane Wilson",
+      "powers": [
+        "Million tonne punch",
+        "Damage resistance",
+        "Superhuman reflexes"
+      ]
+    },
+    {
+      "name": "Eternal Flame",
+      "age": 1000000,
+      "secretIdentity": "Unknown",
+      "powers": [
+        "Immortality",
+        "Heat Immunity",
+        "Inferno",
+        "Teleportation",
+        "Interdimensional travel"
+      ]
+    }
+  ]
 }</pre>
 
-<p>Если бы мы загрузили этот объект в программу JavaScript, создали переменную с названием <code>superHeroes</code>, мы могли бы затем получить доступ к данным внутри неё, используя те же самые точечную и скобочную нотации, которые мы рассмотрели в статье <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics">JavaScript object basics</a>. Например:</p>
+<p>Если бы мы загрузили этот объект в программу JavaScript, создали переменную с названием <code>superHeroes</code>, мы могли бы затем получить доступ к данным внутри неё, используя те же самые точечную и скобочную нотации, которые мы рассмотрели в статье <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics">JavaScript object basics</a>. Например:</p>
 
 <pre class="brush: js">superHeroes.homeTown
 superHeroes['active']</pre>
 
-<p>Чтобы получить доступ к последующим данным  по иерархии, вам просто нужно объединить требуемые имена свойств и индексы массивов. Например, чтобы получить доступ к третьей сверхспособности второго героя, указанного в списке участников, вы должны сделать следующее:</p>
+<p>Чтобы получить доступ к последующим данным  по иерархии, вам просто нужно объединить требуемые имена свойств и индексы массивов. Например, чтобы получить доступ к третьей сверхспособности второго героя, указанного в списке участников, вы должны сделать следующее:</p>
 
 <pre class="brush: js">superHeroes['members'][1]['powers'][2]</pre>
 
@@ -103,12 +103,12 @@ superHeroes['active']</pre>
 </ol>
 
 <div class="note">
-<p><strong>Примечание</strong>. Мы сделали JSON, видимый выше, доступным внутри переменной в нашем примере <a href="http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html">JSONTest.html</a> (см. <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html">исходный код</a>). Попробуйте загрузить это, а затем получить доступ к данным внутри переменной через консоль JavaScript вашего браузера.</p>
+<p><strong>Примечание</strong>. Мы сделали JSON, видимый выше, доступным внутри переменной в нашем примере <a href="http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html">JSONTest.html</a> (см. <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html">исходный код</a>). Попробуйте загрузить это, а затем получить доступ к данным внутри переменной через консоль JavaScript вашего браузера.</p>
 </div>
 
 <h3 id="Массивы_как_JSON">Массивы как JSON</h3>
 
-<p>Выше мы упоминали ,что JSON текст выглядит практически так же как и JavaScript объект,и это почти правильно.Причина,по которой мы говорим почти правильно заключается в том ,что массив также валиден JSON  например:</p>
+<p>Выше мы упоминали ,что JSON текст выглядит практически так же как и JavaScript объект,и это почти правильно.Причина,по которой мы говорим почти правильно заключается в том ,что массив также валиден JSON  например:</p>
 
 <pre class="brush: json">[
   {
@@ -122,15 +122,15 @@ superHeroes['active']</pre>
     ]
   },
   {
-    "name": "Madame Uppercut",
-    "age": 39,
-    "secretIdentity": "Jane Wilson",
-    "powers": [
-      "Million tonne punch",
-      "Damage resistance",
-      "Superhuman reflexes"
-    ]
-  }
+    "name": "Madame Uppercut",
+    "age": 39,
+    "secretIdentity": "Jane Wilson",
+    "powers": [
+      "Million tonne punch",
+      "Damage resistance",
+      "Superhuman reflexes"
+    ]
+  }
 ]</pre>
 
 <p>Вышесказанное вполне справедливо для JSON. Вам просто нужно получить доступ к элементам массива (в его анализируемой версии), начиная с индекса массива, например <code>[0]["powers"][0]</code>.</p>
@@ -140,9 +140,9 @@ superHeroes['active']</pre>
 <ul>
  <li>JSON - это чисто формат данных - он содержит только свойства, без методов.</li>
  <li>JSON требует двойных кавычек, которые будут использоваться вокруг строк и имён свойств. Одиночные кавычки недействительны.</li>
- <li>Даже одна неуместная запятая или двоеточие могут привести к сбою JSON-файла и не работать. Вы должны быть осторожны, чтобы проверить любые данные, которые вы пытаетесь использовать (хотя сгенерированный компьютером JSON с меньшей вероятностью включает ошибки, если программа генератора работает правильно). Вы можете проверить JSON с помощью приложения вроде <a href="http://jsonlint.com/">JSONLint</a>.</li>
+ <li>Даже одна неуместная запятая или двоеточие могут привести к сбою JSON-файла и не работать. Вы должны быть осторожны, чтобы проверить любые данные, которые вы пытаетесь использовать (хотя сгенерированный компьютером JSON с меньшей вероятностью включает ошибки, если программа генератора работает правильно). Вы можете проверить JSON с помощью приложения вроде <a href="http://jsonlint.com/">JSONLint</a>.</li>
  <li>JSON может принимать форму любого типа данных, допустимого для включения в JSON, а не только массивов или объектов. Так, например, одна строка или номер будут действительным объектом JSON.</li>
- <li>В отличие от кода JavaScript, в котором свойства объекта могут не заключаться в двойные кавычки, в JSON в качестве свойств могут использоваться только строки заключённые в двойные кавычки.</li>
+ <li>В отличие от кода JavaScript, в котором свойства объекта могут не заключаться в двойные кавычки, в JSON в качестве свойств могут использоваться только строки заключённые в двойные кавычки.</li>
 </ul>
 
 <h2 id="Активное_обучение_Работа_с_примером_JSON">Активное обучение: Работа с примером JSON</h2>
@@ -172,7 +172,7 @@ var section = document.querySelector('section');</pre>
 
 <h3 id="Получение_JSON">Получение JSON</h3>
 
-<p>Чтобы получить JSON, мы будем использовать API, называемый {{domxref("XMLHttpRequest")}} (часто называемый <strong>XHR</strong>). Это очень полезный объект JavaScript, который позволяет нам делать сетевые запросы для извлечения ресурсов с сервера через JavaScript (например, изображения, текст, JSON, даже фрагменты HTML), что означает, что мы можем обновлять небольшие разделы контента без необходимости перезагрузки всей страницы. Это привело к более отзывчивым веб-страницам и звучит захватывающе, но, к сожалению, выходит за рамки этой статьи, чтобы изучить это гораздо более подробно.</p>
+<p>Чтобы получить JSON, мы будем использовать API, называемый {{domxref("XMLHttpRequest")}} (часто называемый <strong>XHR</strong>). Это очень полезный объект JavaScript, который позволяет нам делать сетевые запросы для извлечения ресурсов с сервера через JavaScript (например, изображения, текст, JSON, даже фрагменты HTML), что означает, что мы можем обновлять небольшие разделы контента без необходимости перезагрузки всей страницы. Это привело к более отзывчивым веб-страницам и звучит захватывающе, но, к сожалению, выходит за рамки этой статьи, чтобы изучить это гораздо более подробно.</p>
 
 <ol>
  <li>Начнём с того, что мы собираемся сохранить URL-адрес JSON, который мы хотим получить в переменной. Добавьте нижеследующий код JavaScript:
@@ -184,10 +184,10 @@ var section = document.querySelector('section');</pre>
  <li>Теперь нам нужно открыть новый запрос, используя метод <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/open">open()</a></code>. Добавьте следующую строку:
   <pre class="brush: js">request.open('GET', requestURL);</pre>
 
-  <p>Это занимает не менее двух параметров - есть другие доступные параметры. Нам нужно только два обязательных для этого простого примера:</p>
+  <p>Это занимает не менее двух параметров - есть другие доступные параметры. Нам нужно только два обязательных для этого простого примера:</p>
 
   <ul>
-   <li>Метод HTTP, который следует использовать при выполнении сетевого запроса. В этом случае <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET">GET</a></code> самый подходящий, так как мы просто извлекаем некоторые простые данные.</li>
+   <li>Метод HTTP, который следует использовать при выполнении сетевого запроса. В этом случае <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET">GET</a></code> самый подходящий, так как мы просто извлекаем некоторые простые данные.</li>
    <li>URL-адрес для запроса - это URL-адрес файла JSON, который мы сохранили ранее.</li>
   </ul>
  </li>
@@ -195,7 +195,7 @@ var section = document.querySelector('section');</pre>
   <pre class="brush: js">request.responseType = 'json';
 request.send();</pre>
  </li>
- <li>Последний бит этого раздела предполагает ожидание ответа на возврат с сервера, а затем работы с ним. Добавьте следующий код ниже вашего предыдущего кода:
+ <li>Последний бит этого раздела предполагает ожидание ответа на возврат с сервера, а затем работы с ним. Добавьте следующий код ниже вашего предыдущего кода:
   <pre class="brush: js">request.onload = function() {
   var superHeroes = request.response;
   populateHeader(superHeroes);
@@ -206,7 +206,7 @@ request.send();</pre>
 
 <p>Здесь мы сохраняем ответ на наш запрос (доступный в свойстве <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/response">response</a></code>) в переменной <code>superHeroes</code>; эта переменная теперь будет содержать объект JavaScript, основанный на JSON! Затем мы передаём этот объект двум вызовам функций - первый из них заполнит <code>&lt;header&gt;</code> правильными данными, а второй создаст информационную карту для каждого героя в команде и вставляет её в <code>&lt;section&gt;</code>.</p>
 
-<p>Мы свернули код в обработчик событий, который запускается, когда событие загрузки запускается в объекте запроса (см. <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload">onload</a></code>) - это связано с тем, что событие загрузки запускается, когда ответ успешно возвращается; поступая  таким образом,это гарантия того, что <code>request.response</code> определённо будет доступен, когда мы начнём работу с ним.</p>
+<p>Мы свернули код в обработчик событий, который запускается, когда событие загрузки запускается в объекте запроса (см. <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload">onload</a></code>) - это связано с тем, что событие загрузки запускается, когда ответ успешно возвращается; поступая  таким образом,это гарантия того, что <code>request.response</code> определённо будет доступен, когда мы начнём работу с ним.</p>
 
 <p>Заполнение заголовка</p>
 
@@ -269,9 +269,9 @@ request.send();</pre>
  <li>Создаём несколько новых элементов: <code>&lt;article&gt;</code>, <code>&lt;h2&gt;</code>, три <code>&lt;p&gt;</code> и <code>&lt;ul&gt;</code>.</li>
  <li>Устанавливаем <code>&lt;h2&gt;</code>, чтобы содержать <code>name</code> текущего героя.</li>
  <li>Заполняем три абзаца своей <code>secretIdentity</code>, <code>age</code> и строкой, в которой говорится: «Суперспособности:», чтобы ввести информацию в список.</li>
- <li>Сохраняем свойство <code>powers</code> в другой новой переменной под названием <code>superPowers</code> - где содержится массив, в котором перечислены сверхспособности текущего героя.</li>
- <li>Используем другой цикл <code>for</code>, чтобы прокрутить сверхспособности текущего героя , для каждого из них мы создаём элемент <code>&lt;li&gt;</code>, помещаем в него сверхспособности, а затем помещаем <code>listItem</code> внутри элемента <code>&lt;ul&gt;</code> (<code>myList</code>) с помощью <code>appendChild()</code>.</li>
- <li>Последнее, что мы делаем, это добавляем <code>&lt;h2&gt;</code>, <code>&lt;p&gt;</code> и <code>&lt;ul&gt;</code> внутри <code>&lt;article&gt;</code> (<code>myArticle</code>), а затем добавляем <code>&lt;article&gt;</code> в <code>&lt;section&gt;</code>. Важное значение имеет порядок, в котором добавляются элементы, так как это порядок, который они будут отображать внутри HTML.</li>
+ <li>Сохраняем свойство <code>powers</code> в другой новой переменной под названием <code>superPowers</code> - где содержится массив, в котором перечислены сверхспособности текущего героя.</li>
+ <li>Используем другой цикл <code>for</code>, чтобы прокрутить сверхспособности текущего героя , для каждого из них мы создаём элемент <code>&lt;li&gt;</code>, помещаем в него сверхспособности, а затем помещаем <code>listItem</code> внутри элемента <code>&lt;ul&gt;</code> (<code>myList</code>) с помощью <code>appendChild()</code>.</li>
+ <li>Последнее, что мы делаем, это добавляем <code>&lt;h2&gt;</code>, <code>&lt;p&gt;</code> и <code>&lt;ul&gt;</code> внутри <code>&lt;article&gt;</code> (<code>myArticle</code>), а затем добавляем <code>&lt;article&gt;</code> в <code>&lt;section&gt;</code>. Важное значение имеет порядок, в котором добавляются элементы, так как это порядок, который они будут отображать внутри HTML.</li>
 </ol>
 
 <div class="note">
@@ -279,7 +279,7 @@ request.send();</pre>
 </div>
 
 <div class="note">
-<p><strong>Примечание</strong>. Если у вас возникли проблемы после нотации точек / скобок, которые мы используем для доступа к объекту JavaScript, в этом поможет открытие файла <a href="http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json">superheroes.json</a> на другой вкладке или в текстовом редакторе ,и обращаться к нему каждый раз, когда вам нужен JavaScript. Вы также можете обратиться к нашей статье <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics">JavaScript objectbasics</a> чтобы получить дополнительную информацию о нотации точек и скобок.</p>
+<p><strong>Примечание</strong>. Если у вас возникли проблемы после нотации точек / скобок, которые мы используем для доступа к объекту JavaScript, в этом поможет открытие файла <a href="http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json">superheroes.json</a> на другой вкладке или в текстовом редакторе ,и обращаться к нему каждый раз, когда вам нужен JavaScript. Вы также можете обратиться к нашей статье <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics">JavaScript objectbasics</a> чтобы получить дополнительную информацию о нотации точек и скобок.</p>
 </div>
 
 <h2 id="Преобразование_между_объектами_и_текстом">Преобразование между объектами и текстом</h2>
@@ -288,14 +288,14 @@ request.send();</pre>
 
 <pre class="brush: js">request.responseType = 'json';</pre>
 
-<p>Но иногда нам не так везёт - иногда мы получаем сырую строку JSON и нам нужно  преобразовать её в объект самостоятельно. И когда мы хотим отправить объект JavaScript по сети, нам нужно  преобразовать его в JSON (строку) перед отправкой. К счастью, эти две проблемы настолько распространены в веб-разработке, что встроенный объект <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> доступен в браузерах, которые содержат следующие два метода:</p>
+<p>Но иногда нам не так везёт - иногда мы получаем сырую строку JSON и нам нужно  преобразовать её в объект самостоятельно. И когда мы хотим отправить объект JavaScript по сети, нам нужно  преобразовать его в JSON (строку) перед отправкой. К счастью, эти две проблемы настолько распространены в веб-разработке, что встроенный объект <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> доступен в браузерах, которые содержат следующие два метода:</p>
 
 <ul>
  <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">parse()</a></code>: принимает строку JSON в качестве параметра и возвращает соответствующий объект JavaScript.</li>
  <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">stringify()</a></code>: принимает объект, как параметр и возвращает эквивалентную строковую JSON строку.</li>
 </ul>
 
-<p>Вы можете увидеть первый метод в действии в нашем примере <a href="http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html">heroes-finished-json-parse.html</a> (см. <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html">исходный код</a>) - это то же самое, что и в примере, который мы создали ранее, за исключением того, что мы установили XHR для возврата сырого JSON текста, затем используется <code>parse()</code>, чтобы преобразовать его в фактический объект JavaScript. Ключевой фрагмент кода находится здесь:</p>
+<p>Вы можете увидеть первый метод в действии в нашем примере <a href="http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html">heroes-finished-json-parse.html</a> (см. <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html">исходный код</a>) - это то же самое, что и в примере, который мы создали ранее, за исключением того, что мы установили XHR для возврата сырого JSON текста, затем используется <code>parse()</code>, чтобы преобразовать его в фактический объект JavaScript. Ключевой фрагмент кода находится здесь:</p>
 
 <pre class="brush: js">request.open('GET', requestURL);
 request.responseType = 'text'; // now we're getting a string!
@@ -315,7 +315,7 @@ myJSON
 var myString = JSON.stringify(myJSON);
 myString</pre>
 
-<p>Здесь мы создаём объект JavaScript, затем проверяем, что он содержит, а затем преобразуем его в строку JSON, используя <code>stringify()</code> , сохраняя возвращаемое значение в новой переменной, а затем снова проверяем его.</p>
+<p>Здесь мы создаём объект JavaScript, затем проверяем, что он содержит, а затем преобразуем его в строку JSON, используя <code>stringify()</code> , сохраняя возвращаемое значение в новой переменной, а затем снова проверяем его.</p>
 
 <h2 id="Резюме">Резюме</h2>
 

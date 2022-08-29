@@ -9,7 +9,7 @@ La propriété `frequency` de l'interface {{ domxref("BiquadFilterNode") }} est 
 
 Sa valeur par défaut est de `350` avec une portée nominale de `10` à la [fréquence de Nyquist](http://en.wikipedia.org/wiki/Nyquist_frequency), qui est la moitié de la fréquence d'échantillonnage.
 
-## Syntax
+## Syntaxe
 
 ```js
 var contexteAudio = new AudioContext();
@@ -54,15 +54,13 @@ filtreBiquad.frequency.value = 1000;
 filtreBiquad.gain.value = 25;
 ```
 
-## Spécification
+## Spécifications
 
-| Specification                                                                                            | Status                               | Comment |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#widl-BiquadFilterNode-frequency', 'frequency')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.BiquadFilterNode.frequency")}}
+{{Compat}}
 
 ## Voir aussi
 

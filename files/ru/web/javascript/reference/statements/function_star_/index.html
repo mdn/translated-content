@@ -13,11 +13,11 @@ translation_of: Web/JavaScript/Reference/Statements/function*
 
 <h2 id="Summary">Сводка</h2>
 
-<p><code><strong>function*</strong></code> (ключевое слово <code>function</code> со звёздочкой) определяет <em>функцию-генератор</em>.</p>
+<p><code><strong>function*</strong></code> (ключевое слово <code>function</code> со звёздочкой) определяет <em>функцию-генератор</em>.</p>
 
 <h2 id="Syntax">Синтаксис</h2>
 
-<pre>function* <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) { <em>statements</em> }
+<pre>function* <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) { <em>statements</em> }
 </pre>
 
 <dl>
@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Statements/function*
 
 <p>Генераторы являются функциями с возможностью выхода и последующего входа. Их контекст исполнения (значения переменных) сохраняется при последующих входах.</p>
 
-<p>Когда вызывается функция-генератор, её тело исполняется не сразу; вместо этого возвращается объект-<a href="/ru/docs/Web/JavaScript/Guide/The_Iterator_protocol">итератор</a>. При вызове метода <code>next() </code>итератора тело функции-генератора исполняется до первого встреченного оператора <a href="/ru/docs/Web/JavaScript/Reference/Operators/yield"><code><strong>yield</strong></code></a>, который определяет возвращаемое значение или делегирует дальнейшее выполнение другому генератору при помощи <code><strong>yield*</strong> anotherGenerator()</code>. Метод <code>next()</code> возвращает объект со свойством <code>value</code>, содержащим отданное значение, и свойством <code>done</code>, которое указывает, что генератор уже отдал своё последнее значение. Вызов метода <code>next()</code> с аргументом прекращает выполнение функции-генератора, и заменяет инструкцию yield на которой было приостановлено выполнение  на аргумент переданный в <code>next().</code></p>
+<p>Когда вызывается функция-генератор, её тело исполняется не сразу; вместо этого возвращается объект-<a href="/ru/docs/Web/JavaScript/Guide/The_Iterator_protocol">итератор</a>. При вызове метода <code>next() </code>итератора тело функции-генератора исполняется до первого встреченного оператора <a href="/ru/docs/Web/JavaScript/Reference/Operators/yield"><code><strong>yield</strong></code></a>, который определяет возвращаемое значение или делегирует дальнейшее выполнение другому генератору при помощи <code><strong>yield*</strong> anotherGenerator()</code>. Метод <code>next()</code> возвращает объект со свойством <code>value</code>, содержащим отданное значение, и свойством <code>done</code>, которое указывает, что генератор уже отдал своё последнее значение. Вызов метода <code>next()</code> с аргументом прекращает выполнение функции-генератора, и заменяет инструкцию yield на которой было приостановлено выполнение  на аргумент переданный в <code>next().</code></p>
 
 <h2 id="Примеры">Примеры</h2>
 

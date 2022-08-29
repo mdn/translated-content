@@ -14,7 +14,7 @@ translation_of: Web/API/Headers
 ---
 {{APIRef("Fetch API")}}
 
-L'interface `Headers` de l'API Fetch vous permet d'effectuer diverses actions sur les en-têtes de requête et de réponse HTTP. Ces actions incluent la récupération, la configuration, l’ajout et la suppression. Un objet `Headers` a une liste `Headers` associée qui est vide lors de l'initialisation et qui est constituée de zéro ou plusieurs paires de noms et de valeurs. Vous pouvez en ajouter via les méthodes comme{{domxref("Headers.append","append()")}} (see {{anch("Examples")}}.)  Dans toutes les méthodes de cette interface, les noms des `Headers` sont reliés à une séquence d'octets sensible à la case.
+L'interface `Headers` de l'API Fetch vous permet d'effectuer diverses actions sur les en-têtes de requête et de réponse HTTP. Ces actions incluent la récupération, la configuration, l’ajout et la suppression. Un objet `Headers` a une liste `Headers` associée qui est vide lors de l'initialisation et qui est constituée de zéro ou plusieurs paires de noms et de valeurs. Vous pouvez en ajouter via les méthodes comme{{domxref("Headers.append","append()")}} (voir la section [Exemples](#exemples).)  Dans toutes les méthodes de cette interface, les noms des `Headers` sont reliés à une séquence d'octets sensible à la case.
 
 Pour des raisons de sécurité, les `Headers` ci-dessous peuvent être controlés uniquement par l'User Agent : {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  et {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
 
@@ -24,7 +24,7 @@ Vous pouvez récuperer un objet `Header` via les propriétés {{domxref("Request
 
 Un objet implémentant `Headers` peut directement être utilisé dans une structure {{jsxref("Statements/for...of", "for...of")}}, au lieu de{{domxref('Headers.entries()', 'entries()')}}: `for (var p of myHeaders)` est équivalent à `for (var p of myHeaders.entries())`.
 
-> **Note :** Vous pouvez trouver plus d'informations à propos des Headers disponibles en lisant la page suivante : [HTTP headers](/en-US/docs/Web/HTTP/Headers).
+> **Note :** Vous pouvez trouver plus d'informations à propos des Headers disponibles en lisant la page suivante : [HTTP headers](/fr/docs/Web/HTTP/Headers).
 
 ## Constructeur
 
@@ -89,18 +89,16 @@ mesHeaders = new Headers([
 mesHeaders.get('Content-Type') // doit retourner 'text/xml'
 ```
 
-## Caractéristiques
+## Spécifications
 
-| Caractéristiques                                                 | Statut                   | Commentaires |
-| ---------------------------------------------------------------- | ------------------------ | ------------ |
-| {{SpecName('Fetch','#headers-class','Headers')}} | {{Spec2('Fetch')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Headers")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [API ServiceWorker](/en-US/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [API ServiceWorker](/fr/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/fr/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/fr/docs/Web/HTTP)

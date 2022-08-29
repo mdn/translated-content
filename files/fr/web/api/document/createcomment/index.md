@@ -14,7 +14,9 @@ translation_of: Web/API/Document/createComment
 
 ## Syntaxe
 
-    CommentNode = document.createComment(data)
+```js
+CommentNode = document.createComment(data)
+```
 
 ### Paramètres
 

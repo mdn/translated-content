@@ -16,7 +16,9 @@ La pseudo-classe **`:-moz-last-node`** correspond à un élément si celui-ci es
 
 ## Syntaxe
 
-    span:-moz-last-node { propriétés de mise en forme }
+```
+span:-moz-last-node { propriétés de mise en forme }
+```
 
 ## Exemples
 

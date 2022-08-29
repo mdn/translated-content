@@ -11,9 +11,11 @@ Voir également le chapitre [Ajout de styles et de couleurs](/fr/docs/Tutoriel_c
 
 ## Syntaxe
 
-    ctx.strokeStyle = color;
-    ctx.strokeStyle = gradient;
-    ctx.strokeStyle = pattern;
+```js
+ctx.strokeStyle = color;
+ctx.strokeStyle = gradient;
+ctx.strokeStyle = pattern;
+```
 
 ### Options
 
@@ -117,24 +119,11 @@ Le résultat devrait ressembler à ça:
 
 ## Spécifications
 
-| Specification                                                                                                                                        | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-strokestyle", "CanvasRenderingContext2D.strokeStyle")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.strokeStyle")}}
-
-## Notes spécifiques à WebKit/Blink
-
-- Dans les navigateurs basés sur WebKit et Blink, une méthode non standard et dépréciée, `ctx.setStrokeColor()`, est implémentée en plus de cette propriété.
-
-  ```js
-  setStrokeColor(color, optional alpha);
-  setStrokeColor(grayLevel, optional alpha);
-  setStrokeColor(r, g, b, a);
-  setStrokeColor(c, m, y, k, a);
-  ```
+{{Compat}}
 
 ## Voir aussi
 

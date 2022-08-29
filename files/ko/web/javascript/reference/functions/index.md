@@ -24,7 +24,7 @@ JavaScript에서 모든 함수는 `Function` 객체입니다. {{jsxref("Function
 
 함수가 기본 값 외의 원하는 값을 반환하도록 하려면 [`return`](/ko/docs/Web/JavaScript/Reference/Statements/return) 문으로 반환할 값을 지정해야 합니다. 반환문 없는 함수는 기본 값을 반환합니다. [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new) 키워드로 호출하는 [생성자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)의 경우, 기본 반환 값은 함수의 `this`가 가리키는 값입니다. 그 외의 모든 함수의 경우, 기본 반환 값은 {{jsxref("undefined")}}입니다.
 
-함수 호출의 매개변수는 함수의 인수(arguments)입니다. 인수는 함수에 값으로서 전달되므로, 함수가 인수의 값을 바꿔도 이 변화는 전역적 또는 호출한 함수에 반영되지 않습니다. 그러나, 객체 참조 역시 (특별한) 값입니다. 함수 내에서 참조된 객체의 속성을 바꾸면, 아래 예제와 같이 이 변화는 함수 밖에서도 확인할 수 있습니다.
+함수 호출의 매개변수는 함수의 인수(arguments)입니다. 인수는 함수에 값으로서 전달되므로, 함수가 인수의 값을 바꿔도 이 변화는 전역적 또는 호출한 함수에 반영되지 않습니다. 그러나, 객체 참조 역시 (특별한) 값입니다. 함수 내에서 참조된 객체의 속성을 바꾸면, 아래 예제와 같이 이 변화는 함수 밖에서도 확인할 수 있습니다.
 
 ```js
 /* 함수 'myFunc' 선언 */
@@ -147,7 +147,6 @@ function* name([param[, param[, ... param]]]) {
 
 생성기 함수 표현식은 생성기 함수 선언과 비슷하고 구문도 같습니다. (자세한 정보는 [`function*` 표현식](/ko/docs/Web/JavaScript/Reference/Operators/function*)을 참고하세요)
 
-
 ```js
 function* [name]([param[, param[, ... param]]]) {
    statements
@@ -251,11 +250,11 @@ ECMAScript 2015부터는 메서드 역시 접근자/설정자와 유사한 짧�
 ```js
 var obj = {
   foo() {},
-  bar() {}
+  bar() {}
 };
 ```
 
-## 생성자 vs. 선언문 vs. 표현식
+## 생성자 vs. 선언문 vs. 표현식
 
 아래의 세 코드 조각을 비교해보세요.
 

@@ -10,13 +10,13 @@ translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 
 <p>Esta página lista funcionalidades do JavaScript que foram descontinuadas (ou seja, continuam disponíveis mas têm remoção planejada) e obsoletas (ou seja, não estão mais disponíveis).</p>
 
-<h2 id="Funcionalidades_descontinuadas"><em>Funcionalidades   </em>descontinuadas</h2>
+<h2 id="Funcionalidades_descontinuadas"><em>Funcionalidades   </em>descontinuadas</h2>
 
-<p>Estas <em>features</em> descontinuadas ainda podem ser usadas, mas com cautela, porque espera-se que sejam removidas por completo no futuro. Aconselha-se que remova-as do seu código.</p>
+<p>Estas <em>features</em> descontinuadas ainda podem ser usadas, mas com cautela, porque espera-se que sejam removidas por completo no futuro. Aconselha-se que remova-as do seu código.</p>
 
-<h3 id="Propriedades_RegExp">Propriedades RegExp</h3>
+<h3 id="Propriedades_RegExp">Propriedades RegExp</h3>
 
-<p>As propriedades a seguir foram descontinuadas. Isto não afeta o uso delas em {{jsxref("String.replace", "replacement strings", "", 1)}}:</p>
+<p>As propriedades a seguir foram descontinuadas. Isto não afeta o uso delas em {{jsxref("String.replace", "replacement strings", "", 1)}}:</p>
 
 <table class="standard-table">
  <tbody>
@@ -27,33 +27,33 @@ translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
   <tr>
    <td>{{jsxref("RegExp.n", "$1-$9")}}</td>
    <td>
-    <p>Encontra <em>substrings </em>dentro de parênteses.<br>
-     <strong>Atenção: </strong> Usar estas propriedades pode resultar em problemas, porque extensões do navegador podem modifica-las. Evite-as!</p>
+    <p>Encontra <em>substrings </em>dentro de parênteses.<br>
+     <strong>Atenção: </strong> Usar estas propriedades pode resultar em problemas, porque extensões do navegador podem modifica-las. Evite-as!</p>
    </td>
   </tr>
   <tr>
    <td>{{jsxref("RegExp.input", "$_")}}</td>
-   <td>Ver <code>input</code>.</td>
+   <td>Ver <code>input</code>.</td>
   </tr>
   <tr>
    <td>{{jsxref("RegExp.multiline", "$*")}}</td>
-   <td>Ver <code>multiline</code>.</td>
+   <td>Ver <code>multiline</code>.</td>
   </tr>
   <tr>
    <td>{{jsxref("RegExp.lastMatch", "$&amp;")}}</td>
-   <td>Ver <code>lastMatch</code>.</td>
+   <td>Ver <code>lastMatch</code>.</td>
   </tr>
   <tr>
    <td>{{jsxref("RegExp.lastParen", "$+")}}</td>
-   <td>Ver <code>lastParen</code>.</td>
+   <td>Ver <code>lastParen</code>.</td>
   </tr>
   <tr>
    <td>{{jsxref("RegExp.leftContext", "$`")}}</td>
-   <td>Ver <code>leftContext</code>.</td>
+   <td>Ver <code>leftContext</code>.</td>
   </tr>
   <tr>
    <td>{{jsxref("RegExp.rightContext", "$'")}}</td>
-   <td>Ver <code>rightContext</code>.</td>
+   <td>Ver <code>rightContext</code>.</td>
   </tr>
   <tr>
    <td>{{jsxref("RegExp.input", "input")}}</td>
@@ -69,7 +69,7 @@ translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
   </tr>
   <tr>
    <td>{{jsxref("RegExp.leftContext", "leftContext")}}</td>
-   <td>A penúltima <em>substring</em> encontrada.</td>
+   <td>A penúltima <em>substring</em> encontrada.</td>
   </tr>
   <tr>
    <td>{{jsxref("RegExp.rightContext", "rightContext")}}</td>
@@ -78,7 +78,7 @@ translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
  </tbody>
 </table>
 
-<p>As propriedades a seguir pertencem a instâncias de um <code>RegExp</code>, não mais ao objeto <code>RegExp</code>:</p>
+<p>As propriedades a seguir pertencem a instâncias de um <code>RegExp</code>, não mais ao objeto <code>RegExp</code>:</p>
 
 <table class="standard-table">
  <tbody>
@@ -112,14 +112,14 @@ translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 <h3 id="Métodos_RegExp">Métodos RegExp</h3>
 
 <ul>
- <li>O método  {{jsxref("RegExp.compile", "compile()")}} foi descontinuado.</li>
- <li>O método <code>valueOf</code>  não é mais especializado para <code>RegExp</code>. Use {{jsxref("Object.valueOf()")}}.</li>
+ <li>O método  {{jsxref("RegExp.compile", "compile()")}} foi descontinuado.</li>
+ <li>O método <code>valueOf</code>  não é mais especializado para <code>RegExp</code>. Use {{jsxref("Object.valueOf()")}}.</li>
 </ul>
 
 <h3 id="Propriedades_de_Função">Propriedades de Função</h3>
 
 <ul>
- <li>As propriedades {{jsxref("Global_Objects/Function/caller", "caller")}} e {{jsxref("Global_Objects/Function/arguments", "arguments")}} foram descontinuadas, porque elas estouram o chamador de funções. Ao invés da propriedade <em>arguments</em>, deve-se usar o objeto {{jsxref("Functions/arguments", "arguments")}} dentro dos fechamentos da função.</li>
+ <li>As propriedades {{jsxref("Global_Objects/Function/caller", "caller")}} e {{jsxref("Global_Objects/Function/arguments", "arguments")}} foram descontinuadas, porque elas estouram o chamador de funções. Ao invés da propriedade <em>arguments</em>, deve-se usar o objeto {{jsxref("Functions/arguments", "arguments")}} dentro dos fechamentos da função.</li>
 </ul>
 
 <h3 id="Legacy_generator">Legacy generator</h3>
@@ -147,22 +147,22 @@ translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 <h3 id="Métodos_de_data">Métodos de data</h3>
 
 <ul>
- <li>{{jsxref("Global_Objects/Date/getYear", "getYear")}} e {{jsxref("Global_Objects/Date/setYear", "setYear")}} foram afetados pelo Bug do Milênio e foram reagrupados em {{jsxref("Global_Objects/Date/getFullYear", "getFullYear")}} e {{jsxref("Global_Objects/Date/setFullYear", "setFullYear")}}.</li>
- <li>Deve-se usar {{jsxref("Global_Objects/Date/toISOString", "toISOString")}} ao invés do método descontinuado {{jsxref("Global_Objects/Date/toGMTString", "toGMTString")}} em códigos novos.</li>
+ <li>{{jsxref("Global_Objects/Date/getYear", "getYear")}} e {{jsxref("Global_Objects/Date/setYear", "setYear")}} foram afetados pelo Bug do Milênio e foram reagrupados em {{jsxref("Global_Objects/Date/getFullYear", "getFullYear")}} e {{jsxref("Global_Objects/Date/setFullYear", "setFullYear")}}.</li>
+ <li>Deve-se usar {{jsxref("Global_Objects/Date/toISOString", "toISOString")}} ao invés do método descontinuado {{jsxref("Global_Objects/Date/toGMTString", "toGMTString")}} em códigos novos.</li>
  <li>{{jsxref("Global_Objects/Date/toLocaleFormat", "toLocaleFormat")}} foi descontinuado.</li>
 </ul>
 
 <h3 id="Funções">Funções</h3>
 
 <ul>
- <li>{{jsxref("Operators/Expression_closures", "Expression closures", "", 1)}} foram descontinuadas. Use {{jsxref("Operators/function", "functions")}} normais ou {{jsxref("Functions/Arrow_functions", "arrow functions", "", 1)}} no lugar delas.</li>
+ <li>{{jsxref("Operators/Expression_closures", "Expression closures", "", 1)}} foram descontinuadas. Use {{jsxref("Operators/function", "functions")}} normais ou {{jsxref("Functions/Arrow_functions", "arrow functions", "", 1)}} no lugar delas.</li>
 </ul>
 
 <h3 id="Proxy">Proxy</h3>
 
 <ul>
  <li><a href="/en-US/docs/Archive/Web/Old_Proxy_API">Proxy.create</a> e <a href="/en-US/docs/Archive/Web/Old_Proxy_API">Proxy.createFunction</a> foram descontinuadas. Use {{jsxref("Proxy")}} no lugar delas.</li>
- <li>As armadilhas a seguir ficaram obsoletas:
+ <li>As armadilhas a seguir ficaram obsoletas:
   <ul>
    <li><code>hasOwn</code> ({{bug(980565)}}, Firefox 33).</li>
    <li><code>getEnumerablePropertyKeys</code> ({{bug(783829)}}, Firefox 37)</li>
@@ -181,8 +181,8 @@ translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 <h3 id="Sequências_de_escape">Sequências de escape</h3>
 
 <ul>
- <li>Sequências de escape octais (\ seguido por um, dois ou três dígitos octais) foram descontinuadas em literais <em>string</em> e expressões regulares.</li>
- <li>As funções {{jsxref("Global_Objects/escape", "escape")}} e {{jsxref("Global_Objects/unescape", "unescape")}} foram descontinuadas. Use {{jsxref("Global_Objects/encodeURI", "encodeURI")}}, {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}}, {{jsxref("Global_Objects/decodeURI", "decodeURI")}} ou {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} para codificar e decodificar sequências de escape para caracteres especiais.</li>
+ <li>Sequências de escape octais (\ seguido por um, dois ou três dígitos octais) foram descontinuadas em literais <em>string</em> e expressões regulares.</li>
+ <li>As funções {{jsxref("Global_Objects/escape", "escape")}} e {{jsxref("Global_Objects/unescape", "unescape")}} foram descontinuadas. Use {{jsxref("Global_Objects/encodeURI", "encodeURI")}}, {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}}, {{jsxref("Global_Objects/decodeURI", "decodeURI")}} ou {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} para codificar e decodificar sequências de escape para caracteres especiais.</li>
 </ul>
 
 <h3 id="Métodos_de_string">Métodos de <em>string</em></h3>
@@ -190,7 +190,7 @@ translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 <ul>
  <li><a href="https://developer.mozilla.org/en-US/docs/tag/HTML%20wrapper%20methods">HTML wrapper methods</a> como {{jsxref("String.prototype.fontsize")}} e {{jsxref("String.prototype.big")}}.</li>
  <li>{{jsxref("String.prototype.quote")}} foi removido do Firefox 37.</li>
- <li>parâmetros flag não padrões em {{jsxref("String.prototype.search")}}, {{jsxref("String.prototype.match")}}, e {{jsxref("String.prototype.replace")}} foram depreciados.</li>
+ <li>parâmetros flag não padrões em {{jsxref("String.prototype.search")}}, {{jsxref("String.prototype.match")}}, e {{jsxref("String.prototype.replace")}} foram depreciados.</li>
 </ul>
 
 <h2 id="Features_obsoletas"><em>Features</em> obsoletas</h2>

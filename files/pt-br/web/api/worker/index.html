@@ -5,11 +5,11 @@ translation_of: Web/API/Worker
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
-<p>A interface <strong>Worker </strong>da <a href="/en-US/docs/Web/API/Web_Workers_API">API do Web Worker</a> representa uma tarefa em background (segundo plano)<em> </em>que pode ser facilmente criada e emitir mensagens de volta ao seu criador. Criar um worker é possível chamando o construtor <code>Worker("path/to/worker/script")</code> e especificando um script para ser executado em sua própria thread.</p>
+<p>A interface <strong>Worker </strong>da <a href="/en-US/docs/Web/API/Web_Workers_API">API do Web Worker</a> representa uma tarefa em background (segundo plano)<em> </em>que pode ser facilmente criada e emitir mensagens de volta ao seu criador. Criar um worker é possível chamando o construtor <code>Worker("path/to/worker/script")</code> e especificando um script para ser executado em sua própria thread.</p>
 
 <p>Um worker pode, por sua vez, gerar outros workers, contanto que estes estejam hospedados na mesma <a href="/en-US/docs/Web/Security/Same-origin_policy">origem</a> da página principal (Nota: workers aninhados <a href="https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU">não estão atualmente implementados no Blink</a>). Além disso, workers podem utilizar <a href="/pt-BR/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> para E/S de rede, desde que seja estipulado que os atributos <code>responseXML</code> e <code>channel</code> em <code>XMLHttpRequest</code> retornem sempre <code>null</code>.</p>
 
-<p><a href="/En/DOM/Worker/Functions_available_to_workers">Não são todas as interfaces e funções que estão disponíveis</a> para o script associado a um <code>Worker</code>.</p>
+<p><a href="/En/DOM/Worker/Functions_available_to_workers">Não são todas as interfaces e funções que estão disponíveis</a> para o script associado a um <code>Worker</code>.</p>
 
 <div class="blockIndicator note">
 <p>No Firefox, se você deseja utilizar workers em extensões e gostaria de ter acesso a <a href="/en/js-ctypes">js-ctypes</a>, você deveria utilizar o objeto {{ domxref("ChromeWorker") }} .</p>
@@ -19,7 +19,7 @@ translation_of: Web/API/Worker
 
 <dl>
  <dt>{{domxref("Worker.Worker", "Worker()")}}</dt>
- <dd>Cria um worker dedicado da web que executa o script especificado na URL. Workers também podem ser construídos usando <a href="/en-US/docs/Web/API/Blob">Blobs</a>.</dd>
+ <dd>Cria um worker dedicado da web que executa o script especificado na URL. Workers também podem ser construídos usando <a href="/en-US/docs/Web/API/Blob">Blobs</a>.</dd>
 </dl>
 
 <h2 id="Propriedades">Propriedades</h2>
@@ -30,14 +30,14 @@ translation_of: Web/API/Worker
 
 <dl>
  <dt>{{domxref("AbstractWorker.onerror")}}</dt>
- <dd>Um {{ domxref("EventListener") }} é chamado sempre quando um {{domxref("ErrorEvent")}} do tipo <code>error</code> é passado através do worker. Este é herdado pelo {{domxref("AbstractWorker")}}.</dd>
+ <dd>Um {{ domxref("EventListener") }} é chamado sempre quando um {{domxref("ErrorEvent")}} do tipo <code>error</code> é passado através do worker. Este é herdado pelo {{domxref("AbstractWorker")}}.</dd>
  <dt>{{domxref("Worker.onmessage")}}</dt>
- <dd>Um {{ domxref("EventListener") }} é chamado sempre quando um {{domxref("MessageEvent")}} do tipo <code>message</code> é passado através do worker — ou seja, quando uma mensagem é enviada para o documento pai do worker via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}. A mensagem é armazenada na propriedade de dados do evento {{domxref("MessageEvent.data", "data")}}.</dd>
+ <dd>Um {{ domxref("EventListener") }} é chamado sempre quando um {{domxref("MessageEvent")}} do tipo <code>message</code> é passado através do worker — ou seja, quando uma mensagem é enviada para o documento pai do worker via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}. A mensagem é armazenada na propriedade de dados do evento {{domxref("MessageEvent.data", "data")}}.</dd>
 </dl>
 
 <h2 id="Métodos">Métodos</h2>
 
-<p><em>Os métodos são herdados de seu pai. {{domxref("EventTarget")}}, e implementa os métodos de {{domxref("AbstractWorker")}}.</em></p>
+<p><em>Os métodos são herdados de seu pai. {{domxref("EventTarget")}}, e implementa os métodos de {{domxref("AbstractWorker")}}.</em></p>
 
 <dl>
  <dt>{{domxref("Worker.postMessage()")}}</dt>
@@ -102,59 +102,9 @@ first.onchange = function() {
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>Support varies for different types of workers. See each worker type's page for specifics.</p>
+<p>Support varies for different types of workers. See each worker type's page for specifics.</p>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4</td>
-   <td>3.5</td>
-   <td>10.0</td>
-   <td>10.6</td>
-   <td>4</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.4</td>
-   <td>3.5</td>
-   <td>1.0.1</td>
-   <td>10.0</td>
-   <td>11.5</td>
-   <td>5.1</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Worker")}}
 
 <h2 id="See_also">See also</h2>
 

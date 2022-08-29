@@ -15,7 +15,9 @@ La méthode **`TreeWalker.previousNode()`** déplace le {{domxref("Node")}} cour
 
 ## Syntaxe
 
-    node = treeWalker.previousNode();
+```js
+node = treeWalker.previousNode();
+```
 
 ## Exemple
 

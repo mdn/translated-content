@@ -49,14 +49,14 @@ var xpathResult = document.evaluate( xpathExpression, contextNode, namespaceReso
 名前空間リゾルバーを作成するには、普通は [document](/ja/docs/Web/API/Document) オブジェクトの `createNSResolver` メソッドを使います。
 
 ```js
-var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
+var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
 ```
 
 または、 `XPathEvaluator` オブジェクトの `createNSResolver` メソッドを使います。
 
 ```js
 var xpEvaluator = new XPathEvaluator();
-var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
+var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
 ```
 
 それから 変数 `nsResolver` を引数 `namespaceResolver` として `document.evaluate` に渡します。
@@ -87,7 +87,7 @@ var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null
 
 ##### 例
 
-下の例では XPath 式 `[count(//p)](/ja/docs/Web/XPath/Functions/count)` によって HTML 文書内の `<p>` 要素の数を取得しています。
+下の例では XPath 式 [`count(//p)`](/ja/docs/Web/XPath/Functions/count) によって HTML 文書内の `<p>` 要素の数を取得しています。
 
 ```js
 var paragraphCount = document.evaluate( 'count(//p)', document, null, XPathResult.ANY_TYPE, null );
@@ -156,7 +156,7 @@ catch (e) {
 ```js
 var nodesSnapshot = document.evaluate('//phoneNumber', documentNode, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
 
-for ( var i=0 ; i < nodesSnapshot.snapshotLength; i++ )
+for ( var i=0 ; i < nodesSnapshot.snapshotLength; i++ )
 {
   alert( nodesSnapshot.snapshotItem(i).textContent );
 }
@@ -183,7 +183,7 @@ alert( 'The first phone number found is ' + firstPhoneNumber.singleNodeValue.tex
 
 引数 `resultType` に指定された結果型が `ANY_TYPE` である場合、返される `XPathResult` オブジェクトは、式を評価した結果から導き出される適切な型になります。
 
-返される結果型は単純型 (`NUMBER_TYPE, STRING_TYPE, BOOLEAN_TYPE` ) のうちのいずれにもなり得ます**が**、もしノード集合であった場合には、`UNORDERED_NODE_ITERATOR_TYPE` に**しか**なり得ません。
+返される結果型は単純型 (`NUMBER_TYPE`, `STRING_TYPE`, `BOOLEAN_TYPE`) のうちのいずれにもなり得ます**が**、もしノード集合であった場合には、`UNORDERED_NODE_ITERATOR_TYPE` に**しか**なり得ません。
 
 評価の後に型を判断するには、 `XPathResult` オブジェクトの `resultType` プロパティを使います。このプロパティの[定数](#xpathresult_の定義済み定数)値は付録に記載されています。 None Yet =====Any_Type Example===== \<pre> \</pre>
 
@@ -226,19 +226,19 @@ while (thisHeading) {
 <?xml version="1.0"?>
 <people xmlns:xul = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" >
   <person>
-	<name first="george" last="bush" />
-	<address street="1600 pennsylvania avenue" city="washington" country="usa"/>
-	<phoneNumber>202-456-1111</phoneNumber>
+    <name first="george" last="bush" />
+    <address street="1600 pennsylvania avenue" city="washington" country="usa"/>
+    <phoneNumber>202-456-1111</phoneNumber>
   </person>
   <person>
-	<name first="tony" last="blair" />
-	<address street="10 downing street" city="london" country="uk"/>
-	<phoneNumber>020 7925 0918</phoneNumber>
+    <name first="tony" last="blair" />
+    <address street="10 downing street" city="london" country="uk"/>
+    <phoneNumber>020 7925 0918</phoneNumber>
   </person>
 </people>
 ```
 
-拡張機能内で XML 文書の内容を取得できるようにするため、`[XMLHttpRequest](/ja/XMLHttpRequest)` オブジェクトを作成して文書を同期的に読み込みます。変数 `xmlDoc` には文書が `[XMLDocument](/ja/XMLDocument)` オブジェクトとして格納されるので、それに対して `evaluate` メソッドを使う事ができます。
+拡張機能内で XML 文書の内容を取得できるようにするため、[`XMLHttpRequest`](/ja/XMLHttpRequest) オブジェクトを作成して文書を同期的に読み込みます。変数 `xmlDoc` には文書が [`XMLDocument`](/ja/XMLDocument) オブジェクトとして格納されるので、それに対して `evaluate` メソッドを使う事ができます。
 
 拡張機能の xul/js 文書で使用する JavaScript は以下の通りです。
 
@@ -250,7 +250,7 @@ req.send(null);
 
 var xmlDoc = req.responseXML;
 
-var nsResolver = xmlDoc.createNSResolver( xmlDoc.ownerDocument == null ? xmlDoc.documentElement : xmlDoc.ownerDocument.documentElement);
+var nsResolver = xmlDoc.createNSResolver( xmlDoc.ownerDocument == null ? xmlDoc.documentElement : xmlDoc.ownerDocument.documentElement);
 
 var personIterator = xmlDoc.evaluate('//person', xmlDoc, nsResolver, XPathResult.ANY_TYPE, null );
 ```
@@ -269,7 +269,9 @@ Components.classes["@mozilla.org/dom/xpath-evaluator;1"].createInstance(Componen
 
 この例は説明のためだけのものです。 この関数は、`xpathExpression` から名前空間接頭辞を取り、その接頭辞に対応する URI を返さなければなりません。例えば、この式は、
 
-    '//xhtml:td/mathml:math'
+```
+'//xhtml:td/mathml:math'
+```
 
 (X)HTML のテーブルデータセル要素の子要素である全ての [MathML](/ja/docs/Web/MathML) 式を選択します。
 
@@ -278,7 +280,7 @@ Components.classes["@mozilla.org/dom/xpath-evaluator;1"].createInstance(Componen
 ```js
 function nsResolver(prefix) {
   var ns = {
-    'xhtml' : 'http://www.w3.org/1999/xhtml',
+    'xhtml' : 'http://www.w3.org/1999/xhtml',
     'mathml': 'http://www.w3.org/1998/Math/MathML'
   };
   return ns[prefix] || null;

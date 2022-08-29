@@ -15,7 +15,9 @@ La propriété **`Window.menubar`** renvoie l'objet `menubar`, dont la visibilit
 
 ## Syntaxe
 
-    objRef = window.menubar
+```js
+objRef = window.menubar
+```
 
 ## Exemple
 

@@ -11,9 +11,9 @@ translation_of: Web/API/HTMLTableElement/insertRow
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>Die Methode <strong><code>HTMLTableElement.insertRow()</code></strong> fügt einer vorhandenen {{HtmlElement("table")}} eine neue Zeile ({{HtmlElement("tr")}}) hinzu und gibt eine Referenz auf die neue Zeile zurück.</p>
+<p>Die Methode <strong><code>HTMLTableElement.insertRow()</code></strong> fügt einer vorhandenen {{HtmlElement("table")}} eine neue Zeile ({{HtmlElement("tr")}}) hinzu und gibt eine Referenz auf die neue Zeile zurück.</p>
 
-<p>Wenn eine Tabelle mehrere {{HtmlElement("tbody")}} Elemente besitzt, wird die neue Zeile standardmäßig dem letzten <code>&lt;tbody&gt;</code> hinzugefügt. Um sie einem bestimmten <code>&lt;tbody&gt;</code> Element hinzuzufügen, beschaffen Sie sich eine Referenz auf das gewünschte <code>&lt;tbody&gt;</code> Element und rufen Sie <code>insertRow()</code> auf diesem Element auf:</p>
+<p>Wenn eine Tabelle mehrere {{HtmlElement("tbody")}} Elemente besitzt, wird die neue Zeile standardmäßig dem letzten <code>&lt;tbody&gt;</code> hinzugefügt. Um sie einem bestimmten <code>&lt;tbody&gt;</code> Element hinzuzufügen, beschaffen Sie sich eine Referenz auf das gewünschte <code>&lt;tbody&gt;</code> Element und rufen Sie <code>insertRow()</code> auf diesem Element auf:</p>
 
 <pre class="brush: js notranslate">let bestimmter_tbody = document.getElementById(tbody_id);
 let zeile = bestimmter_tbody.insertRow(index)</pre>
@@ -21,7 +21,7 @@ let zeile = bestimmter_tbody.insertRow(index)</pre>
 
 
 <div class="blockIndicator note">
-<p><strong>Anmerkung:</strong> <code>insertRow()</code> fügt die Zeile direkt in die Tabelle ein. Die Zeile muss nicht eigens hinzugefügt werden, wie man es tun müsste, wenn man das <code>&lt;tr&gt;</code> Element mittels <a href="/de/docs/Web/API/Document/createElement"><code>Document.createElement()</code></a> erzeugt hätte.</p>
+<p><strong>Anmerkung:</strong> <code>insertRow()</code> fügt die Zeile direkt in die Tabelle ein. Die Zeile muss nicht eigens hinzugefügt werden, wie man es tun müsste, wenn man das <code>&lt;tr&gt;</code> Element mittels <a href="/de/docs/Web/API/Document/createElement"><code>Document.createElement()</code></a> erzeugt hätte.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -34,18 +34,18 @@ let zeile = bestimmter_tbody.insertRow(index)</pre>
 
 <dl>
  <dt><code>index</code> {{optional_inline}}</dt>
- <dd>Der Zeilenindex der neuen Zeile. Ist der Index <code>-1</code> or gleich der Anzahl der vorhandenen Zeilen, wird die Zeile als letzte Zeile angefügt. Wenn <code>index</code> größer als die Anzahl vorhandener Zeilen ist, führt dies zi einer <code>IndexSizeError</code> Exception. Wird <code>index</code> weggelassen, ist der Standardwert <code>-1</code>.</dd>
+ <dd>Der Zeilenindex der neuen Zeile. Ist der Index <code>-1</code> or gleich der Anzahl der vorhandenen Zeilen, wird die Zeile als letzte Zeile angefügt. Wenn <code>index</code> größer als die Anzahl vorhandener Zeilen ist, führt dies zi einer <code>IndexSizeError</code> Exception. Wird <code>index</code> weggelassen, ist der Standardwert <code>-1</code>.</dd>
 </dl>
 
 <h3 id="Rückgabewert">Rückgabewert</h3>
 
-<p><code>neueZeile</code> ist ein {{domxref("HTMLTableRowElement")}}, das die neue Zeile referenziert.</p>
+<p><code>neueZeile</code> ist ein {{domxref("HTMLTableRowElement")}}, das die neue Zeile referenziert.</p>
 
 <h2 id="Beispiel">Beispiel</h2>
 
-<p>Dieses Beispiel verwendet <code>insertRow(-1)</code>, um an eine Tabelle eine neue Zeile anzufügen.</p>
+<p>Dieses Beispiel verwendet <code>insertRow(-1)</code>, um an eine Tabelle eine neue Zeile anzufügen.</p>
 
-<p>Wir verwenden daraufhin {{domxref("HTMLTableRowElement.insertCell()")}}, um der neuen Zeile noch eine Zelle hinzufügen. (Um gültiges HTML zu sein, muss ein <code>&lt;tr&gt;</code> mindestens ein <code>&lt;td&gt;</code> Element enthalten.) Schließlich fügen wir der Zelle mittels {{domxref("Document.createTextNode()")}} und {{domxref("Node.appendChild()")}} Text hinzu.</p>
+<p>Wir verwenden daraufhin {{domxref("HTMLTableRowElement.insertCell()")}}, um der neuen Zeile noch eine Zelle hinzufügen. (Um gültiges HTML zu sein, muss ein <code>&lt;tr&gt;</code> mindestens ein <code>&lt;td&gt;</code> Element enthalten.) Schließlich fügen wir der Zelle mittels {{domxref("Document.createTextNode()")}} und {{domxref("Node.appendChild()")}} Text hinzu.</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -118,5 +118,5 @@ addRow('my-table');</pre>
 
 <ul>
  <li>{{domxref("HTMLTableRowElement.insertCell()")}}</li>
- <li>Das HTML Element, das Zeilen repräsentiert: {{domxref("HTMLTableRowElement")}}</li>
+ <li>Das HTML Element, das Zeilen repräsentiert: {{domxref("HTMLTableRowElement")}}</li>
 </ul>

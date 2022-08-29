@@ -11,23 +11,23 @@ translation_of: Web/API/CryptoKey
 ---
 <p>{{APIRef("Web Crypto API")}}</p>
 
-<p>A interface <strong><code>CryptoKey</code></strong> representa uma {{glossary("key")}} criptografada derivada de uma key de algoritmo definido.</p>
+<p>A interface <strong><code>CryptoKey</code></strong> representa uma {{glossary("key")}} criptografada derivada de uma key de algoritmo definido.</p>
 
 <p>Um objeto <strong><code>CryptoKey</code></strong> pode ser obtido utilizando {{domxref("SubtleCrypto.generateKey()")}}, {{domxref("SubtleCrypto.deriveKey()")}} ou {{domxref("SubtleCrypto.importKey()")}}</p>
 
 <h2 id="Propriedades">Propriedades</h2>
 
-<p><em>Esta interface não herda nehunha propriedade.</em></p>
+<p><em>Esta interface não herda nehunha propriedade.</em></p>
 
 <dl>
  <dt>{{domxref("CryptoKey.type")}}</dt>
- <dd>Retorna um valor enumerado representando o tipo da key, uma key secreta (para algoritmos simétricos), uma key pública ou privada (para algoritmos assimétricos).</dd>
+ <dd>Retorna um valor enumerado representando o tipo da key, uma key secreta (para algoritmos simétricos), uma key pública ou privada (para algoritmos assimétricos).</dd>
  <dt>{{domxref("CryptoKey.extractable")}}</dt>
  <dd>Retorna um {{jsxref("Boolean")}} indicando se a informação bruta pode ser exportada para a aplicação ou não.</dd>
  <dt>{{domxref("CryptoKey.algorithm")}}</dt>
  <dd>Retorna um objeto opaco representando uma cifra em particular que deve ser utilizada com a key.</dd>
  <dt>{{domxref("CryptoKey.usages")}}</dt>
- <dd>Retorna uma matriz de valores enumerados indicando onde a key pode ser utilizada.</dd>
+ <dd>Retorna uma matriz de valores enumerados indicando onde a key pode ser utilizada.</dd>
 </dl>
 
 <h2 id="Métodos">Métodos</h2>
@@ -53,61 +53,7 @@ translation_of: Web/API/CryptoKey
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico.</td>
-   <td>{{ CompatChrome(37) }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop(34) }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico.</td>
-   <td>37</td>
-   <td>{{ CompatChrome(37) }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile(34) }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-
-<p> </p>
-</div>
+{{Compat("api.CryptoKey")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

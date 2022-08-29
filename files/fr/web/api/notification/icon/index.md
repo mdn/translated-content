@@ -17,7 +17,9 @@ La propriété en lecture seule **`icon`** de l'interface {{domxref ("Notificati
 
 ## Syntaxe
 
-    Notification.icon
+```js
+Notification.icon
+```
 
 ### Valeur
 
@@ -25,14 +27,12 @@ Une {{domxref("USVString")}}.
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaire     |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------- |
-| {{SpecName('Web Notifications','#dom-notification-icon','icon')}} | {{Spec2('Web Notifications')}} | Living standard |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification.icon")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

@@ -19,7 +19,9 @@ Cette valeur n'est pas aussi utile que {{domxref("DeviceMotionEvent.acceleration
 
 ## Syntaxe
 
-    var acceleration = instanceOfDeviceMotionEvent.accelerationIncludingGravity;
+```js
+var acceleration = instanceOfDeviceMotionEvent.accelerationIncludingGravity;
+```
 
 ## Valeur
 
@@ -34,13 +36,11 @@ La propriété `accelerationIncludingGravity` est un objet fournissant une infor
 
 ## Spécifications
 
-| Spécification                                | Statut                                   | Commentaire          |
-| -------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DeviceMotionEvent.accelerationIncludingGravity")}}
+{{Compat}}
 
 ## Voir aussi
 

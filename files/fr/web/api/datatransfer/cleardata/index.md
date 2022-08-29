@@ -27,7 +27,7 @@ DataTransfer.clearData([format]);
 
 ## Exemple
 
-Cet exemple illustre l'utilisation des méthodes 
+Cet exemple illustre l'utilisation des méthodes
 [`getData()`](/fr/docs/Web/API/DataTransfer/getData),
 [`setData()`](/fr/docs/Web/API/DataTransfer/setData) et `clearData()` de l'objet [`DataTransfer`](/fr/docs/Web/API/DataTransfer).
 

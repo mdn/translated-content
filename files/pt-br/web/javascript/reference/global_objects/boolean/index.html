@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
 <div>{{JSRef}}</div>
 
-<p>O objeto <strong><code>Boolean</code></strong> é um objeto wrapper para um valor booleano.</p>
+<p>O objeto <strong><code>Boolean</code></strong> é um objeto wrapper para um valor booleano.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -19,16 +19,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 
 <dl>
  <dt><code>value</code></dt>
- <dd>Opcional. O valor inicial do objeto <code>Boolean.</code></dd>
+ <dd>Opcional. O valor inicial do objeto <code>Boolean.</code></dd>
 </dl>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>O valor passado como primeiro parâmetro é convertido para um valor boleano, se necessário. Se o valor é omitido ou é <code>0</code>, <code>-0</code>, {{jsxref("null")}}, <code>false</code>, {{jsxref("NaN")}}, {{jsxref("undefined")}} ou é uma string vazia(<code>""</code>), o objeto terá um valor inicial de <code>false</code>. Todos outros valores, incluindo qualquer objeto ou string <code>"false"</code>,  criam um objeto com valor inicial  <code>true</code>.</p>
+<p>O valor passado como primeiro parâmetro é convertido para um valor boleano, se necessário. Se o valor é omitido ou é <code>0</code>, <code>-0</code>, {{jsxref("null")}}, <code>false</code>, {{jsxref("NaN")}}, {{jsxref("undefined")}} ou é uma string vazia(<code>""</code>), o objeto terá um valor inicial de <code>false</code>. Todos outros valores, incluindo qualquer objeto ou string <code>"false"</code>,  criam um objeto com valor inicial  <code>true</code>.</p>
 
-<p>Não confunda os valores primitivos Boolean <code>true</code> e <code>false</code> com os valores <code>true</code> and <code>false</code> do objeto <code>Boolean</code>.</p>
+<p>Não confunda os valores primitivos Boolean <code>true</code> e <code>false</code> com os valores <code>true</code> and <code>false</code> do objeto <code>Boolean</code>.</p>
 
-<p>Qualquer objeto cujo o valor não é {{jsxref("undefined")}} ou {{jsxref("null")}}, incluindo um objeto <code>Boolean</code> que o valor seja <code>false</code>, é avaliado para <code>true</code> quando passa por uma declaração condicional. Por exemplo, a condição a seguir {{jsxref("Statements/if...else", "if")}} a declaração é avaliada como <code>true</code>:</p>
+<p>Qualquer objeto cujo o valor não é {{jsxref("undefined")}} ou {{jsxref("null")}}, incluindo um objeto <code>Boolean</code> que o valor seja <code>false</code>, é avaliado para <code>true</code> quando passa por uma declaração condicional. Por exemplo, a condição a seguir {{jsxref("Statements/if...else", "if")}} a declaração é avaliada como <code>true</code>:</p>
 
 <pre class="brush: js">var x = new Boolean(false);
 if (x) {
@@ -36,7 +36,7 @@ if (x) {
 }
 </pre>
 
-<p>Esse comportamento não se aplica aos primitivos <code>Boolean</code>. Por exemplo, a condição a seguir {{jsxref("Statements/if...else", "if")}} a declaração é avaliada como <code>false</code>:</p>
+<p>Esse comportamento não se aplica aos primitivos <code>Boolean</code>. Por exemplo, a condição a seguir {{jsxref("Statements/if...else", "if")}} a declaração é avaliada como <code>false</code>:</p>
 
 <pre class="brush: js">var x = false;
 if (x) {
@@ -44,13 +44,13 @@ if (x) {
 }
 </pre>
 
-<p>Não use um objeto <code>Boolean</code> para converter um valor não-boleano para um valor boleano. Ao invés disso use <code>Boolean</code> como uma função para executar essa tarefa:</p>
+<p>Não use um objeto <code>Boolean</code> para converter um valor não-boleano para um valor boleano. Ao invés disso use <code>Boolean</code> como uma função para executar essa tarefa:</p>
 
 <pre class="brush: js">var x = Boolean(expression);     // preferido
 var x = new Boolean(expression); // não use
 </pre>
 
-<p>Se você especificar qualquer objeto, incluindo um objeto <code>Boolean</code> cujo valor é <code>false</code>, como valor inicial de um objeto <code>Boolean</code>, o novo objeto <code>Boolean</code> terá o valor de <code>true</code>.</p>
+<p>Se você especificar qualquer objeto, incluindo um objeto <code>Boolean</code> cujo valor é <code>false</code>, como valor inicial de um objeto <code>Boolean</code>, o novo objeto <code>Boolean</code> terá o valor de <code>true</code>.</p>
 
 <pre class="brush: js">var myFalse = new Boolean(false);   // valor inicial false
 var g = new Boolean(myFalse);       // valor inicial true
@@ -58,7 +58,7 @@ var myString = new String('Hello'); // objeto String
 var s = new Boolean(myString);      // valor inicial true
 </pre>
 
-<p>Não use um um objeto <code>Boolean</code> no lugar de um primitivo B<code>oolean</code>.</p>
+<p>Não use um um objeto <code>Boolean</code> no lugar de um primitivo B<code>oolean</code>.</p>
 
 <h2 id="Propriedades">Propriedades</h2>
 
@@ -66,16 +66,16 @@ var s = new Boolean(myString);      // valor inicial true
  <dt><code>Boolean.length</code></dt>
  <dd>Propriedade Length cujo valor é 1.</dd>
  <dt>{{jsxref("Boolean.prototype")}}</dt>
- <dd>Representa o protótipo para o construtor <code>Boolean</code>.</dd>
+ <dd>Representa o protótipo para o construtor <code>Boolean</code>.</dd>
 </dl>
 
 <h2 id="Métodos">Métodos</h2>
 
-<p>O objeto global <code>Boolean</code> contém métodos próprios, entretanto,  ele herda alguns métodos através da cadeia de protótipos:</p>
+<p>O objeto global <code>Boolean</code> contém métodos próprios, entretanto,  ele herda alguns métodos através da cadeia de protótipos:</p>
 
-<h2 id="Instâncias_Boolean">Instâncias <code>Boolean</code></h2>
+<h2 id="Instâncias_Boolean">Instâncias <code>Boolean</code></h2>
 
-<p>Todas instâncias <code>Boolean</code> herdam de {{jsxref("Boolean.prototype")}}. Assim como todos os construtores, o protótipo do objeto dita as propriedades e métodos herdados.</p>
+<p>Todas instâncias <code>Boolean</code> herdam de {{jsxref("Boolean.prototype")}}. Assim como todos os construtores, o protótipo do objeto dita as propriedades e métodos herdados.</p>
 
 <h3 id="Propriedades_2">Propriedades</h3>
 
@@ -87,7 +87,7 @@ var s = new Boolean(myString);      // valor inicial true
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Criando_objetos_Boolean_com_um_valor_inicial_false">Criando objetos <code>Boolean</code> com um valor inicial <code>false</code></h3>
+<h3 id="Criando_objetos_Boolean_com_um_valor_inicial_false">Criando objetos <code>Boolean</code> com um valor inicial <code>false</code></h3>
 
 <pre class="brush: js">var bNoParam = new Boolean();
 var bZero = new Boolean(0);
@@ -96,7 +96,7 @@ var bEmptyString = new Boolean('');
 var bfalse = new Boolean(false);
 </pre>
 
-<h3 id="Criando_objetos_Boolean_com_um_valor_inicial_true">Criando objetos <code>Boolean</code> com um valor inicial <code>true</code></h3>
+<h3 id="Criando_objetos_Boolean_com_um_valor_inicial_true">Criando objetos <code>Boolean</code> com um valor inicial <code>true</code></h3>
 
 <pre class="brush: js">var btrue = new Boolean(true);
 var btrueString = new Boolean('true');
@@ -123,67 +123,19 @@ var bObjProto = new Boolean({});
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.6', 'Boolean')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-boolean-objects', 'Boolean')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatIE("6.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Boolean")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

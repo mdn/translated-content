@@ -161,9 +161,11 @@ new Promise((resolve, reject) => {
 
 Cela va produire la sortie suivante :
 
-    Initial
-    Do that
-    Do this whatever happened before
+```
+Initial
+Do that
+Do this whatever happened before
+```
 
 Notez que le texte "Do this" n'est pas affiché car l'erreur "Something failed" a produit un rejet.
 

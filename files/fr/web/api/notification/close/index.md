@@ -20,7 +20,9 @@ La méthode `close()` de l'interface {{domxref("Notification")}} est utilisée p
 
 ## Syntaxe
 
-    Notification.close()
+```js
+Notification.close()
+```
 
 ### Paramètres
 
@@ -53,14 +55,12 @@ function spawnNotification(theBody, theIcon, theTitle) {
 
 ## Spécifications
 
-| Spécification                                | Status                                   | Comment         |
-| -------------------------------------------- | ---------------------------------------- | --------------- |
-| {{SpecName('Web Notifications')}} | {{Spec2('Web Notifications')}} | Living standard |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification.close")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

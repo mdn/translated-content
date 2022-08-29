@@ -5,11 +5,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <strong><code>toJSON()</code></strong> retorna uma representação representation do objeto  {{jsxref("Date")}} como string.</p>
+<p>O método <strong><code>toJSON()</code></strong> retorna uma representação representation do objeto  {{jsxref("Date")}} como string.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/date-tojson.html")}}</div>
 
-<p class="hidden">O código fonte para este exemplo interativo está armazenado em um repositório no GitHub. Caso queira contribuir com os exemplos interativos do projeto, por favor clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> e envie-nos um pull request.</p>
+<p class="hidden">O código fonte para este exemplo interativo está armazenado em um repositório no GitHub. Caso queira contribuir com os exemplos interativos do projeto, por favor clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> e envie-nos um pull request.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -21,11 +21,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Instâncias de {{jsxref("Date")}} referem-se a um específico ponto no tempo. Invocar <code>toJSON()</code> retorna uma string (usando {{jsxref("Date.prototype.toISOString()", "toISOString()")}}) representando o valor do objeto {{jsxref("Date")}}. Por padrão este método é destinado a serializar objetos {{jsxref("Date")}} em serializações {{Glossary("JSON")}}.</p>
+<p>Instâncias de {{jsxref("Date")}} referem-se a um específico ponto no tempo. Invocar <code>toJSON()</code> retorna uma string (usando {{jsxref("Date.prototype.toISOString()", "toISOString()")}}) representando o valor do objeto {{jsxref("Date")}}. Por padrão este método é destinado a serializar objetos {{jsxref("Date")}} em serializações {{Glossary("JSON")}}.</p>
 
-<h2 id="Examplos">Examplos</h2>
+<h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Usando_toJSON()">Usando <code>toJSON()</code></h3>
+<h3 id="Usando_toJSON()">Usando <code>toJSON()</code></h3>
 
 <pre class="brush:js">var jsonDate = (new Date()).toJSON();
 var backToDate = new Date(jsonDate);
@@ -50,12 +50,12 @@ console.log(jsonDate); //2015-10-26T07:46:36.611Z
   <tr>
    <td>{{SpecName('ES6', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

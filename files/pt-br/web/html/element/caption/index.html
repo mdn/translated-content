@@ -10,9 +10,9 @@ translation_of: Web/HTML/Element/caption
 ---
 <h2 id="Sumário">Sumário</h2>
 
-<p>O <strong>Elemento</strong> <strong>HTML <code>&lt;caption&gt;</code> (</strong>ou <em>Elemento HTML Subtitulo de Tabela</em>) representa o título de uma tabela. Embora ele seja sempre o primeiro filho de um {{HTMLElement("table")}}, seu estilo, usando CSS pode colocar ele em qualquer lugar relativo a tabela.</p>
+<p>O <strong>Elemento</strong> <strong>HTML <code>&lt;caption&gt;</code> (</strong>ou <em>Elemento HTML Subtitulo de Tabela</em>) representa o título de uma tabela. Embora ele seja sempre o primeiro filho de um {{HTMLElement("table")}}, seu estilo, usando CSS pode colocar ele em qualquer lugar relativo a tabela.</p>
 
-<div class="note"><strong>Nota de Uso</strong>: Quando o elemento {{HTMLElement("table")}} que é o pai deste {{HTMLElement("caption")}} é o único filho de um elemento {{HTMLElement("figure")}}, use o elemento {{HTMLElement("figcaption")}} no lugar.</div>
+<div class="note"><strong>Nota de Uso</strong>: Quando o elemento {{HTMLElement("table")}} que é o pai deste {{HTMLElement("caption")}} é o único filho de um elemento {{HTMLElement("figure")}}, use o elemento {{HTMLElement("figcaption")}} no lugar.</div>
 
 <table class="properties">
  <tbody>
@@ -41,15 +41,15 @@ translation_of: Web/HTML/Element/caption
 
 <h2 id="Atributos">Atributos</h2>
 
-<p>Este elemento inclui os <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" title="HTML/Global attributes">atributos globais</a>.</p>
+<p>Este elemento inclui os <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" title="HTML/Global attributes">atributos globais</a>.</p>
 
-<p> </p>
+<p> </p>
 
 <h3 id="Atributos_obsoletos">Atributos obsoletos</h3>
 
-<p>Os seguintes atributos são obsoletos e não devem ser usados. Estão documentados abaixo apenas como referência ao atualizar o código, e interesse histórico.</p>
+<p>Os seguintes atributos são obsoletos e não devem ser usados. Estão documentados abaixo apenas como referência ao atualizar o código, e interesse histórico.</p>
 
-<p> </p>
+<p> </p>
 
 <dl>
  <dt>{{htmlattrdef("align")}} {{deprecatedGeneric('inline','HTML4.01')}} {{obsoleteGeneric('inline','HTML5')}}</dt>
@@ -61,7 +61,7 @@ translation_of: Web/HTML/Element/caption
   <li><code>bottom</code>, exibido abaixo da tabela</li>
  </ul>
 
- <div class="note"><strong>Nota de uso: </strong>Não use este atributo, como ele foi depreciado: o elemento {{HTMLElement("caption")}} deve ser estilizado usando <a href="/en-US/docs/CSS" title="CSS">CSS</a>. Para dar um efeito similar ao atributo <code>align</code>, use as propriedades <a href="/en-US/docs/CSS" title="CSS">CSS</a> {{cssxref("caption-side")}} e {{cssxref("text-align")}}.</div>
+ <div class="note"><strong>Nota de uso: </strong>Não use este atributo, como ele foi depreciado: o elemento {{HTMLElement("caption")}} deve ser estilizado usando <a href="/en-US/docs/CSS" title="CSS">CSS</a>. Para dar um efeito similar ao atributo <code>align</code>, use as propriedades <a href="/en-US/docs/CSS" title="CSS">CSS</a> {{cssxref("caption-side")}} e {{cssxref("text-align")}}.</div>
  </dd>
 </dl>
 
@@ -117,76 +117,30 @@ table, th, td {
   <tr>
    <td>{{SpecName('HTML WHATWG', 'tables.html#the-caption-element', '&lt;caption&gt;')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML5 W3C', 'tabular-data.html#the-caption-element', '&lt;caption&gt;')}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML4.01', 'struct/tables.html#h-11.2.2', '&lt;caption&gt;')}}</td>
    <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Recurso</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Recurso</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("html.elements.caption")}}
 
 <h2 id="Veja_também">Veja também</h2>
 
 <ul>
  <li>Outros elementos HTML relacionados ao elemento table: {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};</li>
- <li>Propriedades CSS que pode ser especialmente utéis para estilizar o elemento {{HTMLElement("caption")}}:
+ <li>Propriedades CSS que pode ser especialmente utéis para estilizar o elemento {{HTMLElement("caption")}}:
   <ul>
    <li>{{cssxref("text-align")}}, {{cssxref("caption-side")}}.</li>
   </ul>

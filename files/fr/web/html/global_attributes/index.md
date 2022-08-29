@@ -44,7 +44,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
     - `true` ou la chaîne vide : ces valeurs indiquent que l'élément doit pouvoir être édité
     - `false` qui indique que l'élément ne doit pas pouvoir être édité.
 
-- {{htmlattrdef("contextmenu")}}{{obsolete_inline}}
+- {{htmlattrdef("contextmenu")}}{{deprecated_inline}}
   - : La valeur de cet attribut correspond à la valeur de l'attribut {{htmlattrxref("id","menu")}} d'un élément {{HTMLElement("menu")}} qui doit être utilisé comme menu contextuel par cet élément.
 - {{htmlattrdef("data-*")}}
   - : Cette classe d'attribut, appelée « attributs de données personnalisés », permet d'échanger des informations dans un format propriétaire entre le HTML et le DOM afin de pouvoir les manipuler via des langage de scripts. La propriété {{domxref("HTMLElement.dataset")}} permet d'accéder à l'ensemble des attribut définis de cette façon.

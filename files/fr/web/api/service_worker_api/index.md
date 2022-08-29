@@ -17,7 +17,7 @@ Les service workers jouent essentiellement le rôle de serveurs proxy placés en
 
 ## Service worker, concepts et usage
 
-Un service worker est un [worker](/en-US/docs/Web/API/Worker) événementiel enregistré auprès d'une origine et d'un chemin. Il prend la forme d'un fichier JavaScript qui peut contrôler la page ou le site web auquel il est associé, en interceptant et en modifiant la navigation et les requêtes de ressources, et en mettant en cache les ressources selon une granularité très fine pour vous donner une maîtrise complète de la manière dont doit se comporter votre application dans certaines situations (l'une des plus évidentes étant l'indisponibilité du réseau.)
+Un service worker est un [worker](/fr/docs/Web/API/Worker) événementiel enregistré auprès d'une origine et d'un chemin. Il prend la forme d'un fichier JavaScript qui peut contrôler la page ou le site web auquel il est associé, en interceptant et en modifiant la navigation et les requêtes de ressources, et en mettant en cache les ressources selon une granularité très fine pour vous donner une maîtrise complète de la manière dont doit se comporter votre application dans certaines situations (l'une des plus évidentes étant l'indisponibilité du réseau.)
 
 Un service worker fonctionne dans le contexte d'un worker : il n'a donc pas d'accès au DOM, et s'exécute dans une tâche différente de celle du script principal de votre application, ainsi il est non-bloquant. Il est conçu pour être totalement asynchrone; en conséquence, des APIs telles que [XHR](/fr/docs/Web/API/XMLHttpRequest) en synchrone et [localStorage](/fr/docs/Web/API/Web_Storage_API) ne peuvent pas être utilisées au sein d'un service worker.
 
@@ -35,9 +35,9 @@ Un service worker est d'abord enregistré en utilisant la méthode {{domxref("Se
 
 A cette étape, votre service worker observera le cycle de vie suivant :
 
-1.  Téléchargement
-2.  Installation
-3.  Activation
+1. Téléchargement
+2. Installation
+3. Activation
 
 Le service worker est immédiatement téléchargé lorsqu'un utilisateur accède pour la première fois à une page ou à un site contrôlé par un service worker.
 

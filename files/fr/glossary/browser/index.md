@@ -13,7 +13,7 @@ Un _navigateur internet_ est un programme informatique qui reçoit et affiche le
 
 ### Connaissances générales
 
-- {{Interwiki("wikipedia", "Navigateur web")}} sur Wikipédia
+- [Navigateur web](https://fr.wikipedia.org/wiki/Navigateur_web) sur Wikipédia
 - [L'évolution du Web](http://www.evolutionoftheweb.com/)
 
 ### Télécharger un navigateur

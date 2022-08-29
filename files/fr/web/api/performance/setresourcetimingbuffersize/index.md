@@ -54,8 +54,7 @@ function setResourceTimingBufferSize(maxSize) {
 
 | Spécification                                                                                                                                                    | Statut                               | Commentaire          |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Resource Timing', '#dom-performance-setresourcetimingbuffersize',
-        'setResourceTimingBufferSize()')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
+| {{SpecName('Resource Timing', '#dom-performance-setresourcetimingbuffersize', 'setResourceTimingBufferSize()')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
 
 ## Compatibilité des navigateurs
 

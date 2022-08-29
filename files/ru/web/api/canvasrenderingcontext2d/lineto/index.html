@@ -9,9 +9,9 @@ translation_of: Web/API/CanvasRenderingContext2D/lineTo
 ---
 <div>{{APIRef}}</div>
 
-<p><code><strong>lineTo()</strong></code> - метод {{domxref("CanvasRenderingContext2D")}}, часть Canvas 2D API, добавляет линию к текущему под пути с конечной точкой с координатами <code>(x, y)</code>.</p>
+<p><code><strong>lineTo()</strong></code> - метод {{domxref("CanvasRenderingContext2D")}}, часть Canvas 2D API, добавляет линию к текущему под пути с конечной точкой с координатами <code>(x, y)</code>.</p>
 
-<p>Сам метод ничего не рисует, он лишь добавляет подпуть к текущему пути, предоставляя его таким методам, как {{domxref("CanvasRenderingContext2D.fill", "fill()")}} и {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}}, отрисовывающим сам путь.</p>
+<p>Сам метод ничего не рисует, он лишь добавляет подпуть к текущему пути, предоставляя его таким методам, как {{domxref("CanvasRenderingContext2D.fill", "fill()")}} и {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}}, отрисовывающим сам путь.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -24,7 +24,7 @@ translation_of: Web/API/CanvasRenderingContext2D/lineTo
  <dt><code>x</code></dt>
  <dd>OX значение конца линии.</dd>
  <dt><code>y</code></dt>
- <dd>OY значение конца линии.</dd>
+ <dd>OY значение конца линии.</dd>
 </dl>
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
@@ -35,7 +35,7 @@ translation_of: Web/API/CanvasRenderingContext2D/lineTo
 
 <h3 id="Рисование_прямых_линий">Рисование прямых линий</h3>
 
-<p>Этот пример рисует прямую линию используя метод <code>lineTo()</code>.</p>
+<p>Этот пример рисует прямую линию используя метод <code>lineTo()</code>.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -60,7 +60,7 @@ ctx.stroke();          // Отображает путь</pre>
 
 <h3 id="Рисование_соединённых_линий">Рисование соединённых линий</h3>
 
-<p>Каждый вызов <code>lineTo()</code> автоматически добавляет текущий подпуть, это означает, что все линии будут обведены и закрашены вместе. Этот пример рисует букву 'M' линиями одного пути.</p>
+<p>Каждый вызов <code>lineTo()</code> автоматически добавляет текущий подпуть, это означает, что все линии будут обведены и закрашены вместе. Этот пример рисует букву 'M' линиями одного пути.</p>
 
 <h4 id="HTML_2">HTML</h4>
 

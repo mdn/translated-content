@@ -507,7 +507,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/enterkeyhint">enterkeyhint</a></code> 
+        <code><a href="/ja/docs/Web/HTML/Attributes/enterkeyhint">enterkeyhint</a></code>
         {{experimental_inline}}
       </td>
       <td>
@@ -847,7 +847,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
       </td>
       <td>{{ HTMLElement("html") }}</td>
       <td>
-        この文書のキャッシュマニフェストの URL を指定します。 
+        この文書のキャッシュマニフェストの URL を指定します。
         <div class="note">
           <p>
             <strong>注:</strong> この属性は廃止されており、代わりに <a href="/ja/docs/Web/Manifest"><code>&#x3C;link rel="manifest"></code></a> を使用してください。
@@ -1403,7 +1403,7 @@ HTML では、ほとんどの属性に **コンテンツ属性** と **IDL (Inte
 
 IDL 属性は JavaScript プロパティとしても知られています。これらは JavaScript プロパティを使用して、 `element.foo` のように読み書きします。IDL 属性は読み取り時に値を返すため基になるコンテンツ属性を使用したり（ただし、）、書き込み時に コンテンツ属性へ何らかの値を保存したりします。言い換えると、IDL 属性は コンテンツ属性を映し出します。
 
-ほとんどの場合、IDL 属性は実際に使用する値として自身の値を返します。例えば {{HTMLElement("input")}} 要素の `type` 属性のデフォルト値は "text" であるので、`input.type="foobar"` を設定すると `&lt;input&gt;` 要素は (外見と動作が) text タイプになりますが、"type" コンテンツ属性の値は "foobar" になります。しかし、`type` IDL 属性は文字列 "text" を返します。
+ほとんどの場合、IDL 属性は実際に使用する値として自身の値を返します。例えば {{HTMLElement("input")}} 要素の `type` 属性のデフォルト値は "text" であるので、`input.type="foobar"` を設定すると `<input>` 要素は (外見と動作が) text タイプになりますが、"type" コンテンツ属性の値は "foobar" になります。しかし、`type` IDL 属性は文字列 "text" を返します。
 
 IDL 属性は常に文字列とは限りません。例えば `input.maxlength` は数値 (符号付き long) です。IDL 属性を使用するときは望ましい型の値を読み書きするので、`input.maxlength` は常に数値を返し、また `input.maxlength` を設定するときは数値を要求します。他の型で渡すと、標準的な JavaScript の型変換規則に従って自動的に数値へ変換されます。
 
@@ -1416,10 +1416,12 @@ IDL 属性は符号なし long、URL、論理値など[他の型を反映する]
 
 HTML5 では、論理属性に許されている値の制約を定義しています。属性が存在する場合は、値は空文字列 (属性の値が割り当てられないことがあります) または属性の正式名に ASCII で大文字・小文字まで一致する値のどちらかで、前後にホワイトスペースを含んではいけません。以下の例は論理属性をマークアップする正しい方法です。
 
-    <div itemscope> This is valid HTML but invalid XML. </div>
-    <div itemscope=itemscope> This is also valid HTML but invalid XML. </div>
-    <div itemscope=""> This is valid HTML and also valid XML. </div>
-    <div itemscope="itemscope"> This is also valid HTML and XML, but perhaps a bit verbose. </div>
+```html
+<div itemscope> This is valid HTML but invalid XML. </div>
+<div itemscope=itemscope> This is also valid HTML but invalid XML. </div>
+<div itemscope=""> This is valid HTML and also valid XML. </div>
+<div itemscope="itemscope"> This is also valid HTML and XML, but perhaps a bit verbose. </div>
+```
 
 明確にするために、 "`true`" および "`false`" という値は論理属性では許可されていません。偽の値を表すには、属性ごと省略する必要があります。この制約により、いくつかのよくある誤解が明確になります。例えば `checked="false"` は、属性が存在するため、その要素の `checked` 属性が **true** であると解釈されます。
 

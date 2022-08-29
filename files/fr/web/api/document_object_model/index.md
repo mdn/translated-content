@@ -58,7 +58,7 @@ Pour mieux comprendre le fonctionnement du DOM, [une introduction est disponible
 - {{domxref("Worker")}}
 - {{domxref("XMLDocument")}} {{experimental_inline}}
 
-## Interfaces obsolètes du DOM {{obsolete_inline}}
+## Interfaces obsolètes du DOM
 
 Le DOM a été simplifié au cours du temps. Pour cette raison, les interfaces qui suivent, présentes dans la spécification du DOM de niveau 3 ou des niveaux antérieurs, ont été supprimées. Bien qu'il ne soit pas certain qu'elles ne soient pas réintroduites, elles doivent être considérées comme obsolètes et il faut éviter de les utiliser :
 
@@ -177,7 +177,7 @@ Un objet `HTMLDocument` donne également accès à différentes fonctionnalités
 - {{domxref("RadioNodeList")}}
 - {{domxref("MediaError")}}
 
-### Interfaces HTML obsolètes {{obsolete_inline}}
+### Interfaces HTML obsolètes
 
 - {{domxref("HTMLBaseFontElement")}}
 - {{domxref("HTMLIsIndexElement")}}

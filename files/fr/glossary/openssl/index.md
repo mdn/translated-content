@@ -13,5 +13,5 @@ OpenSSL est une implémentation open source de {{glossary("SSL")}} et de {{gloss
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "OpenSSL")}} sur Wikipédia
+- [OpenSSL](https://fr.wikipedia.org/wiki/OpenSSL) sur Wikipédia
 - [Site web officiel](http://www.openssl.org/)

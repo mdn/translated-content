@@ -67,7 +67,7 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-> **Note :** SVG2 introduit les valeurs en pourcentage pour `stroke-opacity`, Cependant, ce n'est pas souvent pris en charge. pour le moment (_voir {{anch("Compatibilité des navigateurs")}} ci-dessous_), il est par conséquent recommendé d'utiliser les valeurs de l'intervalle `[0-1]`.
+> **Note :** SVG2 introduit les valeurs en pourcentage pour `stroke-opacity`, Cependant, ce n'est pas souvent pris en charge. pour le moment (_voir la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous_), il est par conséquent recommendé d'utiliser les valeurs de l'intervalle `[0-1]`.
 
 Il est important de savoir que le contour recouvre partiellement le remplissage d'une forme. Ainsi, un contour avec une opacité différente de 1 affichera partiellement le remplissage du dessous. Pour éviter cet effet, il est possible d'appliquer une opacité globale avec l'attribut {{SVGAttr('opacity')}} ou placer le contour derrière le remplissage avec {{SVGAttr('paint-order')}}.
 

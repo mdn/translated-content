@@ -6,7 +6,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">Метод <strong><code>setInterval()</code></strong> предложен для {{domxref("Window")}} и {{domxref("Worker")}} интерфейсов. Он циклически вызывает функцию или участок кода с фиксированной паузой между каждым вызовом.</span> Уникальный идентификатор intervalID, возвращаемый методом, позволяет впоследствии удалить запущенный <span class="seoSummary"><strong><code>setInterval</code></strong></span> c помощью {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}}. Метод определён с помощью миксина {{domxref("WindowOrWorkerGlobalScope")}}.</p>
+<p><span class="seoSummary">Метод <strong><code>setInterval()</code></strong> предложен для {{domxref("Window")}} и {{domxref("Worker")}} интерфейсов. Он циклически вызывает функцию или участок кода с фиксированной паузой между каждым вызовом.</span> Уникальный идентификатор intervalID, возвращаемый методом, позволяет впоследствии удалить запущенный <span class="seoSummary"><strong><code>setInterval</code></strong></span> c помощью {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}}. Метод определён с помощью миксина {{domxref("WindowOrWorkerGlobalScope")}}.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -18,13 +18,13 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 
 <dl>
  <dt><code>func</code></dt>
- <dd>{{jsxref("function")}} - функция, которая будет вызываться каждые <code>delay</code> миллисекунд. Ожидается, что функция не принимает параметры и ничего не возвращает.</dd>
+ <dd>{{jsxref("function")}} - функция, которая будет вызываться каждые <code>delay</code> миллисекунд. Ожидается, что функция не принимает параметры и ничего не возвращает.</dd>
  <dt><code>code</code></dt>
  <dd>Этот необязательный синтаксис позволяет вам включать строку вместо функции, которая компилируется и выполняется каждые <code>delay</code> миллисекунд. Однако такая форма не рекомендуется по тем же причинам, которые делают {{jsxref("eval", "eval()")}} угрозой безопасности.</dd>
  <dt><code>delay</code></dt>
- <dd>Время в миллисекундах (одна тысячная секунды), на которое таймер выполнит задержку между вызовом функции. Если задано значение меньше 10, то будет использовано число 10. На самом деле задержка может быть больше чем указано, дополнительное объяснение приведено здесь:  {{SectionOnPage("/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout", "Reasons for delays longer than specified")}}.</dd>
+ <dd>Время в миллисекундах (одна тысячная секунды), на которое таймер выполнит задержку между вызовом функции. Если задано значение меньше 10, то будет использовано число 10. На самом деле задержка может быть больше чем указано, дополнительное объяснение приведено здесь:  {{SectionOnPage("/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout", "Reasons for delays longer than specified")}}.</dd>
  <dt><code>param1, ..., paramN</code> {{optional_inline}}</dt>
- <dd>Дополнительные параметры, передаваемые в функцию <em>func</em>.</dd>
+ <dd>Дополнительные параметры, передаваемые в функцию <em>func</em>.</dd>
 </dl>
 
 <div class="note">
@@ -37,7 +37,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 
 <p>It may be helpful to be aware that <code>setInterval()</code> and {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} share the same pool of IDs, and that <code>clearInterval()</code> and {{domxref("WindowOrWorkerGlobalScope.clearTimeout", "clearTimeout()")}} can technically be used interchangeably. For clarity, however, you should try to always match them to avoid confusion when maintaining your code.</p>
 
-<div class="note"><strong>Note</strong>: The <code>delay</code> parameter is converted to a signed 32-bit integer. This effectively limits <code>delay</code> to 2147483647 ms, since it's specified as a signed integer in the IDL.</div>
+<div class="note"><strong>Note</strong>: The <code>delay</code> parameter is converted to a signed 32-bit integer. This effectively limits <code>delay</code> to 2147483647 ms, since it's specified as a signed integer in the IDL.</div>
 
 <h2 id="Примеры">Примеры</h2>
 
@@ -93,7 +93,7 @@ function myCallback() {
 
 <h3 id="Пример_3_Симуляция_пишущей_машинки"><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Пример 3: Симуляция пишущей машинки</span></span></span></h3>
 
-<p>The following example simulates typewriter by first clearing and then slowly typing content into the <a href="/en-US/docs/DOM/NodeList"><code>NodeList</code></a> that matches a specified group of selectors.</p>
+<p>The following example simulates typewriter by first clearing and then slowly typing content into the <a href="/en-US/docs/DOM/NodeList"><code>NodeList</code></a> that matches a specified group of selectors.</p>
 
 <pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -256,7 +256,7 @@ Vivamus blandit massa ut metus mattis in fringilla lectus imperdiet. Proin ac an
 
 <h2 id="Аргументы_колбэк-функции">Аргументы колбэк-функции</h2>
 
-<p>As previously discussed, Internet Explorer versions 9 and below do not support the passing of arguments to the callback function in either <code>setTimeout()</code> or <code>setInterval()</code>. The following <strong>IE-specific</strong> code demonstrates a method for overcoming this limitation.  To use, simply add the following code to the top of your script.</p>
+<p>As previously discussed, Internet Explorer versions 9 and below do not support the passing of arguments to the callback function in either <code>setTimeout()</code> or <code>setInterval()</code>. The following <strong>IE-specific</strong> code demonstrates a method for overcoming this limitation.  To use, simply add the following code to the top of your script.</p>
 
 <pre class="brush:js">/*\
 |*|
@@ -305,17 +305,17 @@ if (document.all &amp;&amp; !window.setInterval.isPolyfill) {
 
 <pre class="brush:js">var intervalID = setInterval(function(arg1) {}.bind(undefined, 10), 1000);</pre>
 
-<p>{{h3_gecko_minversion("Inactive tabs", "5.0")}}</p>
+<h3>Inactive tabs</h3>
 
 <p>Starting in Gecko 5.0 {{geckoRelease("5.0")}}, intervals are clamped to fire no more often than once per second in inactive tabs.</p>
 
 <h2 id="Проблема_с_this">Проблема с "<a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a>"</h2>
 
-<p>When you pass a method to <code>setInterval()</code> or any other function, it is invoked with the wrong <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> value. This problem is explained in detail in the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this#As_an_object_method">JavaScript reference</a>.</p>
+<p>When you pass a method to <code>setInterval()</code> or any other function, it is invoked with the wrong <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> value. This problem is explained in detail in the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this#As_an_object_method">JavaScript reference</a>.</p>
 
 <h3 id="Объяснение">Объяснение</h3>
 
-<p>Code executed by <code>setInterval()</code> runs in a separate execution context than the function from which it was called. As a consequence, the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> keyword for the called function is set to the <code>window</code> (or <code>global</code>) object, it is not the same as the <code>this</code> value for the function that called <code>setTimeout</code>. See the following example (which uses <code>setTimeout()</code> instead of <code>setInterval()</code> – the problem, in fact, is the same for both timers):</p>
+<p>Code executed by <code>setInterval()</code> runs in a separate execution context than the function from which it was called. As a consequence, the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> keyword for the called function is set to the <code>window</code> (or <code>global</code>) object, it is not the same as the <code>this</code> value for the function that called <code>setTimeout</code>. See the following example (which uses <code>setTimeout()</code> instead of <code>setInterval()</code> – the problem, in fact, is the same for both timers):</p>
 
 <pre class="brush:js">myArray = ['zero', 'one', 'two'];
 
@@ -359,7 +359,7 @@ window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentTo
   } : vCallback, nDelay);
 };</pre>
 
-<div class="note">These two replacements also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as <em>non-standard-compliant</em> polyfills also. See the <a href="#Callback_arguments">callback arguments paragraph</a> for a <em>standard-compliant</em> polyfill.</div>
+<div class="note">These two replacements also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as <em>non-standard-compliant</em> polyfills also. See the <a href="#Callback_arguments">callback arguments paragraph</a> for a <em>standard-compliant</em> polyfill.</div>
 
 <p>Новое тестируемое свойство:</p>
 
@@ -376,13 +376,13 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 s
 
 <p>Another, more complex, solution for<strong> </strong>the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> problem<strong> </strong>is <a href="#A_little_framework">the following framework</a>.</p>
 
-<div class="note">JavaScript 1.8.5 introduces the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">Function.prototype.bind()</a></code> method, which lets you specify the value that should be used as <code>this</code> for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a>, with lexical this allowing us to write setInterval( () =&gt; this.myMethod) if we're inside myArray method.</div>
+<div class="note">JavaScript 1.8.5 introduces the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">Function.prototype.bind()</a></code> method, which lets you specify the value that should be used as <code>this</code> for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a>, with lexical this allowing us to write setInterval( () =&gt; this.myMethod) if we're inside myArray method.</div>
 
 <h2 id="MiniDaemon_-_фреймворк_для_управления_таймерами">MiniDaemon - фреймворк для управления таймерами</h2>
 
-<p>In pages requiring many timers, it can often be difficult to keep track of all of the running timer events. One approach to solving this problem is to store information about the state of a timer in an object. Following is a minimal example of such an abstraction. The constructor architecture explicitly avoids the use of closures. It also offers an alternative way to pass the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> object to the callback function (see <a href="#The_.22this.22_problem">The "this" problem</a> for details). The following code is also <a href="https://github.com/madmurphy/minidaemon.js">available on GitHub</a>.</p>
+<p>In pages requiring many timers, it can often be difficult to keep track of all of the running timer events. One approach to solving this problem is to store information about the state of a timer in an object. Following is a minimal example of such an abstraction. The constructor architecture explicitly avoids the use of closures. It also offers an alternative way to pass the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> object to the callback function (see <a href="#The_.22this.22_problem">The "this" problem</a> for details). The following code is also <a href="https://github.com/madmurphy/minidaemon.js">available on GitHub</a>.</p>
 
-<div class="note">For a more complex but still modular version of it (<code><em>Daemon</em></code>) see <a href="/en-US/Add-ons/Code_snippets/Timers/Daemons">JavaScript Daemons Management</a>. This more complex version is nothing but a big and scalable collection of methods for the <code><em>Daemon</em></code> constructor. However, the <code><em>Daemon</em></code> constructor itself is nothing but a clone of <code><em>MiniDaemon</em></code> with an added support for <em>init</em> and <em>onstart</em> functions declarable during the instantiation of the <code><em>daemon</em></code>. <strong>So the <code><em>MiniDaemon</em></code> framework remains the recommended way for simple animations</strong>, because <code><em>Daemon</em></code> without its collection of methods is essentially a clone of it.</div>
+<div class="note">For a more complex but still modular version of it (<code><em>Daemon</em></code>) see <a href="/en-US/Add-ons/Code_snippets/Timers/Daemons">JavaScript Daemons Management</a>. This more complex version is nothing but a big and scalable collection of methods for the <code><em>Daemon</em></code> constructor. However, the <code><em>Daemon</em></code> constructor itself is nothing but a clone of <code><em>MiniDaemon</em></code> with an added support for <em>init</em> and <em>onstart</em> functions declarable during the instantiation of the <code><em>daemon</em></code>. <strong>So the <code><em>MiniDaemon</em></code> framework remains the recommended way for simple animations</strong>, because <code><em>Daemon</em></code> without its collection of methods is essentially a clone of it.</div>
 
 <h3 id="minidaemon.js">minidaemon.js</h3>
 
@@ -456,7 +456,7 @@ MiniDaemon.prototype.start = function (bReverse) {
 };
 </pre>
 
-<div class="note">MiniDaemon passes arguments to the callback function. If you want to work on it with browsers that natively do not support this feature, use one of the methods proposed above.</div>
+<div class="note">MiniDaemon passes arguments to the callback function. If you want to work on it with browsers that natively do not support this feature, use one of the methods proposed above.</div>
 
 <h3 id="Синтаксис_2">Синтаксис</h3>
 
@@ -489,14 +489,14 @@ MiniDaemon.prototype.start = function (bReverse) {
  <dt><code>myDaemon.rate</code></dt>
  <dd>Промежуток времени (в миллисекундах) между каждым вызовом (чтение / запись).</dd>
  <dt><code>myDaemon.length</code></dt>
- <dd>Итоговое количество вызовов. Это может быть положительное целое число или бесконечность <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity"><code>Infinity</code></a> (чтение / запись).</dd>
+ <dd>Итоговое количество вызовов. Это может быть положительное целое число или бесконечность <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity"><code>Infinity</code></a> (чтение / запись).</dd>
 </dl>
 
 <h4 id="MiniDaemon_instances_methods"><code>MiniDaemon</code> instances methods</h4>
 
 <dl>
  <dt><code>myDaemon.isAtEnd()</code></dt>
- <dd>Возвращает логическое значение (true или false), в зависимости от того, находится ли <em>daemon</em> в начальной / конечной позиции или нет.  </dd>
+ <dd>Возвращает логическое значение (true или false), в зависимости от того, находится ли <em>daemon</em> в начальной / конечной позиции или нет.  </dd>
  <dt><code>myDaemon.synchronize()</code></dt>
  <dd>Synchronize the timer of a started daemon with the time of its invocation.</dd>
  <dt><code>myDaemon.pause()</code></dt>
@@ -531,10 +531,10 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 &lt;body&gt;
   &lt;p&gt;
-    &lt;input type="button" onclick="fadeInOut.start(false /* optional */);" value="fade in" /&gt;
+    &lt;input type="button" onclick="fadeInOut.start(false /* optional */);" value="fade in" /&gt;
     &lt;input type="button" onclick="fadeInOut.start(true);" value="fade out"&gt;
-    &lt;input type="button" onclick="fadeInOut.pause();" value="pause" /&gt;
-  &lt;/p&gt;
+    &lt;input type="button" onclick="fadeInOut.pause();" value="pause" /&gt;
+  &lt;/p&gt;
 
   &lt;div id="sample_div"&gt;Some text here&lt;/div&gt;
 
@@ -565,7 +565,7 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 <p>If there is a possibility that your logic could take longer to execute than the interval time, it is recommended that you recursively call a named function using {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}. For example, if using <code>setInterval</code> to poll a remote server every 5 seconds, network latency, an unresponsive server, and a host of other issues could prevent the request from completing in its allotted time. As such, you may find yourself with queued up XHR requests that won't necessarily return in order.</p>
 
-<p>In these cases, a recursive <code>setTimeout()</code> pattern is preferred:</p>
+<p>In these cases, a recursive <code>setTimeout()</code> pattern is preferred:</p>
 
 <pre class="brush:js">(function loop(){
    setTimeout(function() {

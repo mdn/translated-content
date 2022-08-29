@@ -6,7 +6,6 @@ tags:
   - DOM
   - メソッド
   - リファレンス
-browser-compat: api.Element.getAttributeNodeNS
 translation_of: Web/API/Element/getAttributeNodeNS
 ---
 {{ APIRef("DOM") }}

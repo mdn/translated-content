@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date
 ---
 <p>{{JSRef}}</p>
 
-<p>Erstellt eine JavaScript Date Instanz, die einen einzelnen Moment der Zeit repräsentiert. Date Objekte basieren auf dem Zeitwert, der der Anzahl der Millisekunden seit dem 1. Januar 1970 (UTC) entspricht.</p>
+<p>Erstellt eine JavaScript Date Instanz, die einen einzelnen Moment der Zeit repräsentiert. Date Objekte basieren auf dem Zeitwert, der der Anzahl der Millisekunden seit dem 1. Januar 1970 (UTC) entspricht.</p>
 
 <p>{{EmbedInteractiveExample("pages/js/date-constructor.html")}}</p>
 
@@ -22,7 +22,7 @@ new Date(<var>dateString</var>);
 new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hour </var>[, <var>minutes </var>[, <var>seconds</var> [, <var>milliseconds</var>]]]]]);
 </pre>
 
-<p><strong>Anmerkung:</strong> Ein JavaScript <code>Date</code> Objekt kann nur instanziiert werden, wenn JavaScript Date als ein Konstruktor aufgerufen wird: Beim Aufrufen als reguläre Funktion (z. B. ohne den {{jsxref("Operators/new", "new")}} Operator) gibt die Funktion einen String zurück und kein <code>Date</code> Objekt. Anders als andere JavaScript-Datentypen hat das <code>Date</code> Objekt keine Literalsyntax.</p>
+<p><strong>Anmerkung:</strong> Ein JavaScript <code>Date</code> Objekt kann nur instanziiert werden, wenn JavaScript Date als ein Konstruktor aufgerufen wird: Beim Aufrufen als reguläre Funktion (z. B. ohne den {{jsxref("Operators/new", "new")}} Operator) gibt die Funktion einen String zurück und kein <code>Date</code> Objekt. Anders als andere JavaScript-Datentypen hat das <code>Date</code> Objekt keine Literalsyntax.</p>
 
 <h3 id="Parameter">Parameter</h3>
 
@@ -46,7 +46,7 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hour <
 
 <dl>
  <dt><code>year</code></dt>
- <dd>Ganze Zahl, die die Jahre repräsentiert. Werte von 0 bis 99 werden zu den Jahren 1900 bis 1999 umgewandelt. Siehe das  {{anch("Zwei_ziffrige_Zahlen_für_die_Jahre_1900_-_1999", "Beispiel unten")}}.</dd>
+ <dd>Ganze Zahl, die die Jahre repräsentiert. Werte von 0 bis 99 werden zu den Jahren 1900 bis 1999 umgewandelt. Siehe das  <a href="#zwei_ziffrige_zahlen_für_die_jahre_1900_-_1999">Beispiel unten</a>.</dd>
 </dl>
 
 <dl>
@@ -82,9 +82,9 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hour <
 <h2 id="Beschreibung">Beschreibung</h2>
 
 <ul>
- <li>Wenn keine Argumente übergeben werden, erstellt der Konstruktor ein <code>Date</code> Objekt mit dem aktuellen Datum und der aktuellen Zeit der Systemzeitzone.</li>
+ <li>Wenn keine Argumente übergeben werden, erstellt der Konstruktor ein <code>Date</code> Objekt mit dem aktuellen Datum und der aktuellen Zeit der Systemzeitzone.</li>
  <li>Wenn mindestens zwei Argumente übergeben werden, werden fehlende Argumente auf 1 gesetzt (wenn day fehlt) oder auf 0 gesetzt (für alle anderen Fälle).</li>
- <li>Das JavaScript Datum basiert auf einem Zeitwert, der die Millisekunden seit Mitternacht am 1. Januar 1970 UTC beinhaltet. Ein Tag hat 86.400.000 Millisekunden. Der Bereich des JavaScript Datums-Objektes  ist von -100.000.000 Tagen bis 100.000.000 Tagen relativ zum 1. Januar 1970 UTC.</li>
+ <li>Das JavaScript Datum basiert auf einem Zeitwert, der die Millisekunden seit Mitternacht am 1. Januar 1970 UTC beinhaltet. Ein Tag hat 86.400.000 Millisekunden. Der Bereich des JavaScript Datums-Objektes  ist von -100.000.000 Tagen bis 100.000.000 Tagen relativ zum 1. Januar 1970 UTC.</li>
  <li>Das JavaScript <code>Date</code> Objekt unterstützt ein einheitliches plattformübergreifendes Format. Der Zeitwert kann zwischen Systemen ausgetauscht werden, um den gleichen Moment der Zeit zu repräsentieren. Wenn es zum Erstellen eines lokalen <code>date</code> Objektes genutzt wird, wird es die lokale äquivalente Zeit benutzen.</li>
  <li>Das JavaScript <code>Date</code> Objekt unterstützt eine Nummer der UTC (universal) Methode genauso wie eine lokale Zeit Methode. UTC ist auch bekannt als Greenwich-Zeit (GTM), welches die Standardweltzeit ist. Die lokale Zeit ist die Zeit des Computers, auf dem JavaScript ausgeführt wird.</li>
  <li>Das Aufrufen der JavaScript <code>Date</code> Funktion (z. B. ohne den {{jsxref("Operators/new", "new")}} Operator) gibt einen String, der das aktuelle Datum und die aktuelle Zeit repräsentiert, zurück.</li>
@@ -183,7 +183,7 @@ function printElapsedTime (fTest) {
 yourFunctionReturn = printElapsedTime(yourFunction);
 </pre>
 
-<p><strong>Anmerkung:</strong> In Browsern, die die hochauflösende Zeitfunktionen von der {{domxref("window.performance", "Web Performance API", "", 1)}} unterstützen, kann {{domxref("Performance.now()")}} bessere und präzisere Messergebnisse liefern als {{jsxref("Date.now()")}}.</p>
+<p><strong>Anmerkung:</strong> In Browsern, die die hochauflösende Zeitfunktionen von der {{domxref("window.performance", "Web Performance API", "", 1)}} unterstützen, kann {{domxref("Performance.now()")}} bessere und präzisere Messergebnisse liefern als {{jsxref("Date.now()")}}.</p>
 
 <h3 id="Die_Anzahl_der_Sekunden_seit_der_Unix_Epoche_ermitteln">Die Anzahl der Sekunden seit der Unix Epoche ermitteln</h3>
 

@@ -20,8 +20,10 @@ Si le document courant n'est pas un contexte de navigation, la valeur renvoyée 
 
 ## Syntaxe
 
-    locationObj = document.location
-    document.location = 'http://www.mozilla.org' // équivalent à document.location.href = 'http://www.mozilla.org'
+```js
+locationObj = document.location
+document.location = 'http://www.mozilla.org' // équivalent à document.location.href = 'http://www.mozilla.org'
+```
 
 ## Exemple
 
@@ -31,16 +33,13 @@ console.log(document.location);
 // "http://www.example.com/juicybits.html" dans la console
 ```
 
-## Spécification
+## Spécifications
 
-| Specification                                                                                                        | Status                           | Comment                                                  |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "history.html#the-location-interface", "Document.location")}} | {{Spec2('HTML WHATWG')}} | Pas de changement avec {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "browsers.html#the-location-interface", "Document.location")}} | {{Spec2('HTML5 W3C')}}     | Définition initiale.                                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.location")}}
+{{Compat}}
 
 ## Voir également
 

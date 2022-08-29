@@ -15,7 +15,9 @@ La méthode **`TreeWalker.nextSibling()`** déplace le {{domxref("Node")}} coura
 
 ## Syntaxe
 
-    node = treeWalker.nextSibling();
+```js
+node = treeWalker.nextSibling();
+```
 
 ## Exemple
 

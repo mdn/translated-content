@@ -7,22 +7,22 @@ translation_of: Web/API/Document/readyState
 
 <h2 id="Summary" name="Summary">Resumen</h2>
 
-<p>La propiedad <strong>Document.readyState</strong> de un {{ domxref("document") }} describe el estado de carga del documento.</p>
+<p>La propiedad <strong>Document.readyState</strong> de un {{ domxref("document") }} describe el estado de carga del documento.</p>
 
 <h3 id="Valores">Valores</h3>
 
-<p>El readyState de un documento puede tener uno de los siguientes valores:</p>
+<p>El readyState de un documento puede tener uno de los siguientes valores:</p>
 
 <dl>
  <dt>loading</dt>
  <dd>El {{ domxref("document") }} todavía esta cargando.</dd>
  <dt>interactive</dt>
- <dd>El documento ha terminado de cargar y ha sido analizado pero  los sub-recursos como imágenes, estilos y frames aún siguen cargando. El estado indica que el evento {{event("DOMContentLoaded")}} ha sido disparado.</dd>
+ <dd>El documento ha terminado de cargar y ha sido analizado pero  los sub-recursos como imágenes, estilos y frames aún siguen cargando. El estado indica que el evento {{event("DOMContentLoaded")}} ha sido disparado.</dd>
  <dt>complete</dt>
- <dd>El documento y todos los sub-recursos han cargado completamente. El estado indica que el evento {{event("load")}} ha sido disparado.</dd>
+ <dd>El documento y todos los sub-recursos han cargado completamente. El estado indica que el evento {{event("load")}} ha sido disparado.</dd>
 </dl>
 
-<p>Cuando el valor de esta propiedad cambia, un evento {{event("readystatechange")}} se dispara en el objecto {{ domxref("document") }}.</p>
+<p>Cuando el valor de esta propiedad cambia, un evento {{event("readystatechange")}} se dispara en el objecto {{ domxref("document") }}.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -50,7 +50,7 @@ translation_of: Web/API/Document/readyState
 }</span>
 </pre>
 
-<h3 id="readystatechange_como_alternativa_al_evento_DOMContentLoaded">readystatechange como alternativa al evento DOMContentLoaded</h3>
+<h3 id="readystatechange_como_alternativa_al_evento_DOMContentLoaded">readystatechange como alternativa al evento DOMContentLoaded</h3>
 
 <pre class="brush:js">// alternative to DOMContentLoaded event
 document.onreadystatechange = function () {
@@ -80,12 +80,12 @@ document.onreadystatechange = function () {
   <tr>
    <td>{{SpecName("HTML WHATWG", "#current-document-readiness", "Document readiness")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName("HTML5.1", "#current-document-readiness", "Document readiness")}}</td>
    <td>{{Spec2('HTML5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName("HTML5 W3C", "#current-document-readiness", "Document readiness")}}</td>

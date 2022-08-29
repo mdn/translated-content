@@ -68,8 +68,8 @@ Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé&nb
 
 Si vous souhaitez que votre travail soit évalué, ou si vous voulez demander de l'aide&nbsp;:
 
-1.  Mettez votre travail dans un éditeur partageable en ligne tel que [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/). Vous pouvez écrire votre propre code ou utiliser celui des fichiers de démarrage fournis ci-dessus.
-2.  Rédigez un sujet pour demander une évaluation et/ou une aide dans le [forum Discourse du MDN](https://discourse.mozilla.org/c/mdn) et ajoutez la balise "learning" à votre message pour que nous puissions le trouver plus facilement. Incluez dans votre message&nbsp;:
+1. Mettez votre travail dans un éditeur partageable en ligne tel que [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/). Vous pouvez écrire votre propre code ou utiliser celui des fichiers de démarrage fournis ci-dessus.
+2. Rédigez un sujet pour demander une évaluation et/ou une aide dans le [forum Discourse du MDN](https://discourse.mozilla.org/c/mdn) et ajoutez la balise "learning" à votre message pour que nous puissions le trouver plus facilement. Incluez dans votre message&nbsp;:
 
     - Un titre descriptif tel que «&nbsp;Évaluation demandée pour la mise en page flexible 1&nbsp;».
     - Des détails sur ce que vous souhaitez que nous fassions — par exemple, si vous êtes bloqué et avez besoin d'aide, écrivez ce que vous avez déjà essayé.

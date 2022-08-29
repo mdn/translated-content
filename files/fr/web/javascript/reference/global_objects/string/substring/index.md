@@ -18,7 +18,9 @@ La méthode **`substring()`** retourne une sous-chaîne de la chaîne courante, 
 
 ## Syntaxe
 
-    str.substring(indiceA[, indiceB])
+```js
+str.substring(indiceA[, indiceB])
+```
 
 ### Paramètres
 

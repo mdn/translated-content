@@ -19,7 +19,9 @@ La propriété `dialogArguments` renvoie les paramètres qui ont été transmis 
 
 ## Syntaxe
 
-    valeur = window.dialogArguments;
+```js
+valeur = window.dialogArguments;
+```
 
 ## Compatibilité des navigateurs
 

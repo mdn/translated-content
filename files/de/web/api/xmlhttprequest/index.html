@@ -199,7 +199,7 @@ translation_of: Web/API/XMLHttpRequest
      </tbody>
     </table>
 
-    <div class="note"><strong>Anmerkung:</strong> Ab Gecko 11.0  sowie WebKit build 528 kann man in diesen Browsern das <code>responseType</code> Attribut nicht mehr für synchrone Anfragen benutzen. Der Versuch löst einen <code>NS_ERROR_DOM_INVALID_ACCESS_ERR</code> Fehler aus. Diese Änderung wurde dem W3C zur Standardisierung vorgeschlagen.</div>
+    <div class="note"><strong>Anmerkung:</strong> Ab Gecko 11.0  sowie WebKit build 528 kann man in diesen Browsern das <code>responseType</code> Attribut nicht mehr für synchrone Anfragen benutzen. Der Versuch löst einen <code>NS_ERROR_DOM_INVALID_ACCESS_ERR</code> Fehler aus. Diese Änderung wurde dem W3C zur Standardisierung vorgeschlagen.</div>
    </td>
   </tr>
   <tr id="responseXML">
@@ -260,7 +260,7 @@ translation_of: Web/API/XMLHttpRequest
   </tr>
   <tr id="channel">
    <td><code>channel</code> {{ReadOnlyInline}}</td>
-   <td>{{Interface("nsIChannel")}}</td>
+   <td><code>nsIChannel</code></td>
    <td>Der Kanal, der vom Objekt zur Durchführung der Anfrage verwendet wurde. Das ist <code>null</code> falls der Kanal noch nicht erzeugt worden ist. Im Falle von mehrteiligen Anfragen ist das der anfängliche Kanal, nicht derjenige der anderen Teile der mehrteiligen Anfrage.<br>
     <strong>Zugriff nur mit erhöhten Rechten.</strong></td>
   </tr>
@@ -290,7 +290,7 @@ translation_of: Web/API/XMLHttpRequest
    </td>
   </tr>
   <tr id="mozResponseArrayBuffer">
-   <td><code>mozResponseArrayBuffer</code>  {{obsolete_inline("6")}} {{ReadOnlyInline}}</td>
+   <td><code>mozResponseArrayBuffer</code>  {{obsolete_inline("6")}} {{ReadOnlyInline}}</td>
    <td><a href="/en-US/docs/JavaScript_typed_arrays/ArrayBuffer" title="JavaScript typed arrays/ArrayBuffer"><code>ArrayBuffer</code></a></td>
    <td>Die Antwort auf die Anfrage, als typisiertes JavaScript Array. Dies ist <code>NULL</code> falls die Anfrage erfolglos war oder noch nicht gesendet wurde.</td>
   </tr>
@@ -346,7 +346,7 @@ translation_of: Web/API/XMLHttpRequest
 
 <pre>DOMString getAllResponseHeaders();</pre>
 
-<p>Liefert alle Antwort-Header als String, oder <code>null</code> falls keine Antwort empfangen wurde.<strong> </strong></p>
+<p>Liefert alle Antwort-Header als String, oder <code>null</code> falls keine Antwort empfangen wurde. </p>
 
 <p><strong>Anmerkung:</strong> Für mehrteilige Anfragen gibt dies die Header des <em>aktuellen </em>Teils der Anfrage zurück, nicht die des ursprünglichen Kanals.</p>
 
@@ -360,7 +360,7 @@ translation_of: Web/API/XMLHttpRequest
 
 <p>Initialisiert eine Anfrage. Diese Methode ist nur zur Verwendung in JavaScript Code; um eine Anfrage aus nativem Code zu initialisieren, ist stattdessen<code> </code><a href="/en-US/docs/nsIXMLHttpRequest#openRequest()" title="XMLHttpRequest#openRequest()"><code>openRequest()</code></a> zu benutzen.</p>
 
-<div class="note"><strong>Anmerkung:</strong> Der Aufruf dieser Methode für eine bereits aktive Anfrage (eine, für die <code>open()</code>oder <code>openRequest() </code>schon ausgeführt wurde) ist gleichwertig mit  dem Aufruf von <code>abort()</code>.</div>
+<div class="note"><strong>Anmerkung:</strong> Der Aufruf dieser Methode für eine bereits aktive Anfrage (eine, für die <code>open()</code>oder <code>openRequest() </code>schon ausgeführt wurde) ist gleichwertig mit  dem Aufruf von <code>abort()</code>.</div>
 
 <pre>void open(
    DOMString <var>method</var>,
@@ -375,7 +375,7 @@ translation_of: Web/API/XMLHttpRequest
 
 <dl>
  <dt><code>method</code></dt>
- <dd>Die zu benutzende HTTP Methode,  wie "GET", "POST", "PUT", "DELETE", etc. Wird für nicht-HTTP(S) URLs ignoriert.</dd>
+ <dd>Die zu benutzende HTTP Methode,  wie "GET", "POST", "PUT", "DELETE", etc. Wird für nicht-HTTP(S) URLs ignoriert.</dd>
  <dt><code>url</code></dt>
  <dd>Der URL, an den die Anfrage geschickt werden soll.</dd>
  <dt><code>async</code></dt>
@@ -409,7 +409,7 @@ void send(FormData <var>data</var>);</pre>
 
 <p>Falls <em>data</em> ein <code>Document</code> ist, so wird dieses vor dem Senden serialisiert. Beim Senden eines <code>Document</code> senden Firefox Versionen vor Version 3 die Anfrage immer encodiert als UTF-8; <a href="/en-US/docs/Firefox_3" rel="internal" title="Firefox_3">Firefox 3</a> sendet das <code>Document</code> richtigerweise mit dem angegebenen <code>body.xmlEncoding</code>, oder UTF-8 falls keines angegeben wurde.</p>
 
-<p>Falls es ein <code>nsIInputStream</code> ist, muss er kompatibel sein mit der <code>setUploadStream()</code>Methode des <code>nsIUploadChannel</code>. In diesem Fall wird die Länge des Inhalts in einem Content-Length Header zur Anfrage hinzugefügt, dessen Wert mit der <code>available()</code>Methode des <code>nsIInputStream</code> ermittelt wird. Jegliche Header, die am Anfang des Streams enthalten sind, werden als Teil des Nachrichtenkörpers behandelt. Der MIME Typ des Streams sollte vor dem Aufruf von <code>send()</code> angegeben werden, indem der Content-Type Header mit der  <a href="/en-US/docs/nsIXMLHttpRequest#setRequestHeader()" title="XMLHttpRequest#setRequestHeader()"><code>setRequestHeader()</code></a> Methode gesetzt wird.</p>
+<p>Falls es ein <code>nsIInputStream</code> ist, muss er kompatibel sein mit der <code>setUploadStream()</code>Methode des <code>nsIUploadChannel</code>. In diesem Fall wird die Länge des Inhalts in einem Content-Length Header zur Anfrage hinzugefügt, dessen Wert mit der <code>available()</code>Methode des <code>nsIInputStream</code> ermittelt wird. Jegliche Header, die am Anfang des Streams enthalten sind, werden als Teil des Nachrichtenkörpers behandelt. Der MIME Typ des Streams sollte vor dem Aufruf von <code>send()</code> angegeben werden, indem der Content-Type Header mit der  <a href="/en-US/docs/nsIXMLHttpRequest#setRequestHeader()" title="XMLHttpRequest#setRequestHeader()"><code>setRequestHeader()</code></a> Methode gesetzt wird.</p>
 
 <p>Der beste Weg, um binäre Inhalte zu senden (wie beim Hochladen einer Datei), ist die Verwendung von <a href="/en-US/docs/JavaScript/Typed_arrays/ArrayBuffer" title="JavaScript/Typed_arrays/ArrayBuffer">ArrayBuffern</a> oder <a href="/en-US/docs/DOM/Blob" title="DOM/Blob">Blobs</a> in Verbindung mit der <code>send()</code> Methode. Wenn jedoch <a href="/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify" title="JavaScript/Reference/Global_Objects/JSON/stringify">stringifizierbare</a> Rohdaten gesendet werden sollen, ist die <a href="#sendAsBinary()" title="DOM/XMLHttpRequest#sendAsBinary()"><code>sendAsBinary()</code></a> Methode zu verwenden.</p>
 
@@ -486,198 +486,45 @@ void send(FormData <var>data</var>);</pre>
 
 <pre class="brush: js">/*\
 |*|
-|*|  :: XMLHttpRequest.prototype.sendAsBinary() Polyfill ::
+|*|  :: XMLHttpRequest.prototype.sendAsBinary() Polyfill ::
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()
+|*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()
 |*|
 \*/
 
 if (!XMLHttpRequest.prototype.sendAsBinary) {
-  XMLHttpRequest.prototype.sendAsBinary = function (sData) {
-    var nBytes = sData.length, ui8Data = new Uint8Array(nBytes);
-    for (var nIdx = 0; nIdx &lt; nBytes; nIdx++) {
-      ui8Data[nIdx] = sData.charCodeAt(nIdx) &amp; 0xff;
-    }
-    /* sende als ArrayBufferView...: */
+  XMLHttpRequest.prototype.sendAsBinary = function (sData) {
+    var nBytes = sData.length, ui8Data = new Uint8Array(nBytes);
+    for (var nIdx = 0; nIdx &lt; nBytes; nIdx++) {
+      ui8Data[nIdx] = sData.charCodeAt(nIdx) &amp; 0xff;
+    }
+    /* sende als ArrayBufferView...: */
     this.send(ui8Data);
-    /* ...oder als ArrayBuffer (altmodisch)...: this.send(ui8Data.buffer); */
-  };
+    /* ...oder als ArrayBuffer (altmodisch)...: this.send(ui8Data.buffer); */
+  };
 }</pre>
 
-<div class="note"><strong>Anmerkung:</strong> Dieses Polyfill kann mit zwei Datentypen als Argument für <code>send()</code> gebaut werden: einem <a href="/en-US/docs/JavaScript/Typed_arrays/ArrayBuffer" title="JavaScript/Typed_arrays/ArrayBuffer"><code>ArrayBuffer</code></a> (<code>ui8Data.buffer</code> – kommentierter Code) oder einer <a href="/en-US/docs/JavaScript/Typed_arrays/ArrayBufferView" title="JavaScript/Typed_arrays/ArrayBufferView"><code>ArrayBufferView</code></a> (<code>ui8Data</code>, das ist ein <a href="/en-US/docs/JavaScript/Typed_arrays/Uint8Array" title="JavaScript/Typed_arrays/Uint8Array">typisiertes Array von 8-bit Ganzzahlen ohne Vorzeichen</a> – unkommentierter Code). Wenn man jedoch in Google Chrome versucht, einen <code>ArrayBuffer</code> zu senden, erscheint die folgende Warnmeldung: <code>ArrayBuffer is deprecated in XMLHttpRequest.send(). Use ArrayBufferView instead.</code></div>
+<div class="note"><strong>Anmerkung:</strong> Dieses Polyfill kann mit zwei Datentypen als Argument für <code>send()</code> gebaut werden: einem <a href="/en-US/docs/JavaScript/Typed_arrays/ArrayBuffer" title="JavaScript/Typed_arrays/ArrayBuffer"><code>ArrayBuffer</code></a> (<code>ui8Data.buffer</code> – kommentierter Code) oder einer <a href="/en-US/docs/JavaScript/Typed_arrays/ArrayBufferView" title="JavaScript/Typed_arrays/ArrayBufferView"><code>ArrayBufferView</code></a> (<code>ui8Data</code>, das ist ein <a href="/en-US/docs/JavaScript/Typed_arrays/Uint8Array" title="JavaScript/Typed_arrays/Uint8Array">typisiertes Array von 8-bit Ganzzahlen ohne Vorzeichen</a> – unkommentierter Code). Wenn man jedoch in Google Chrome versucht, einen <code>ArrayBuffer</code> zu senden, erscheint die folgende Warnmeldung: <code>ArrayBuffer is deprecated in XMLHttpRequest.send(). Use ArrayBufferView instead.</code></div>
 
 <h2 id="Anmerkungen_2">Anmerkungen</h2>
 
 <ul>
- <li class="note">Standardmässig begrenzt Firefox 3 die Anzahl gleichzeitiger <code>XMLHttpRequest</code> Verbindungen pro Server auf 6 (frühere Versionen begrenzen dies auf 2 pro Server). Manche interaktiven Websites können eine <code>XMLHttpRequest</code> Verbindung offen halten, so dass das Öffnen mehrerer Sitzungen auf solchen Sites dazu führen kann, dass der Browser auf eine Art und Weise hängen bleibt, dass das Fenster nicht mehr neu gezeichnet wird und Steuerelemente nicht mehr reagieren. Dieser Wert lässt sich ändern durch Editieren der Voreinstellung <code>network.http.max-persistent-connections-per-server</code> in <code><a class="linkification-ext" href="/about:config" title="Linkification: about:config">about:config</a></code>.</li>
- <li class="note">Ab Gecko 7 werden Header, die durch {{manch("setRequestHeader")}} gesetzt wurden, mit der Anfrage mitgeschickt, wenn einer Umleitung gefolgt wird. Zuvor wurden diese Header nicht gesendet.</li>
- <li class="note"><code>XMLHttpRequest</code> ist in Gecko implementiert mittels der {{interface("nsIXMLHttpRequest")}}, {{interface("nsIXMLHttpRequestEventTarget")}}, und {{interface("nsIJSXMLHttpRequest")}} Schnittstellen.</li>
+ <li>Standardmässig begrenzt Firefox 3 die Anzahl gleichzeitiger <code>XMLHttpRequest</code> Verbindungen pro Server auf 6 (frühere Versionen begrenzen dies auf 2 pro Server). Manche interaktiven Websites können eine <code>XMLHttpRequest</code> Verbindung offen halten, so dass das Öffnen mehrerer Sitzungen auf solchen Sites dazu führen kann, dass der Browser auf eine Art und Weise hängen bleibt, dass das Fenster nicht mehr neu gezeichnet wird und Steuerelemente nicht mehr reagieren. Dieser Wert lässt sich ändern durch Editieren der Voreinstellung <code>network.http.max-persistent-connections-per-server</code> in <code><a class="linkification-ext" href="/about:config" title="Linkification: about:config">about:config</a></code>.</li>
+ <li>Ab Gecko 7 werden Header, die durch <a href="#setrequestheader">setRequestHeader</a> gesetzt wurden, mit der Anfrage mitgeschickt, wenn einer Umleitung gefolgt wird. Zuvor wurden diese Header nicht gesendet.</li>
+ <li><code>XMLHttpRequest</code> ist in Gecko implementiert mittels der <code>nsIXMLHttpRequest</code>, <code>nsIXMLHttpRequestEventTarget</code>, und <code>nsIJSXMLHttpRequest</code> Schnittstellen.</li>
 </ul>
 
-<h4 class="note" id="Events">Events</h4>
+<h4>Events</h4>
 
 <p><code>onreadystatechange</code> als eine Eigenschaft der <code>XMLHttpRequest</code> Instanz wird von allen Browsern unterstützt.</p>
 
-<p>Seither wurden einige zusätzliche Event Handler in verschiedenen Browsern implementiert (<code>onload</code>, <code>onerror</code>, <code>onprogress</code>, etc.). Diese werden in Firefox unterstützt. Für Genaueres, siehe {{interface("nsIXMLHttpRequestEventTarget")}} und <a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a>.</p>
+<p>Seither wurden einige zusätzliche Event Handler in verschiedenen Browsern implementiert (<code>onload</code>, <code>onerror</code>, <code>onprogress</code>, etc.). Diese werden in Firefox unterstützt. Für Genaueres, siehe <code>nsIXMLHttpRequestEventTarget</code> und <a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a>.</p>
 
 <p>Neuere Browser, inklusive Firefox, unterstützen das 'Horchen' nach <code>XMLHttpRequest </code>Ereignissen mittels der Standard <code><a href="/en-US/docs/DOM/element.addEventListener" title="element.addEventListener">addEventListener</a></code> APIs zusätzlich zum Setzen von <code>on*</code> Eigenschaften auf eine Handler Funktion.</p>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Browser Kompatibilität</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Grundsätzliche Unterstützung (XHR1)</td>
-   <td>1</td>
-   <td>1.0</td>
-   <td>5 (via ActiveXObject)<br>
-    7 (XMLHttpRequest)</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>1.2</td>
-  </tr>
-  <tr>
-   <td><code>send(ArrayBuffer)</code></td>
-   <td>9</td>
-   <td>9</td>
-   <td>{{compatUnknown}}</td>
-   <td>11.60</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>send(Blob)</code></td>
-   <td>7</td>
-   <td>3.6</td>
-   <td>{{compatUnknown}}</td>
-   <td>12</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>send(FormData)</code></td>
-   <td>6</td>
-   <td>4</td>
-   <td>{{compatUnknown}}</td>
-   <td>12</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>sendAsBinary(DOMString)</code></td>
-   <td>{{compatNo}} – benutze <a href="#sendAsBinary%28%29_polyfill" title="sendAsBinary() polyfill">polyfill</a></td>
-   <td>1.9</td>
-   <td>{{compatUnknown}}</td>
-   <td>{{compatUnknown}}</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>response</code></td>
-   <td>10</td>
-   <td>6</td>
-   <td>10</td>
-   <td>11.60</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>responseType</code> = 'arraybuffer'</td>
-   <td>10</td>
-   <td>6</td>
-   <td>10</td>
-   <td>11.60</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>responseType</code> = 'blob'</td>
-   <td>19</td>
-   <td>6</td>
-   <td>10</td>
-   <td>12</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>responseType</code> = 'document'</td>
-   <td>18</td>
-   <td>11</td>
-   <td>10</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>responseType</code> = 'json'</td>
-   <td>{{CompatNo}}</td>
-   <td>10</td>
-   <td>{{CompatNo}}</td>
-   <td>12</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Progress Events</td>
-   <td>7</td>
-   <td>3.5</td>
-   <td>10</td>
-   <td>12</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>withCredentials</code></td>
-   <td>3</td>
-   <td>3.5</td>
-   <td>10</td>
-   <td>12</td>
-   <td>4</td>
-  </tr>
-  <tr>
-   <td><code>timeout</code></td>
-   <td>{{CompatNo}}</td>
-   <td>12.0</td>
-   <td>8</td>
-   <td>{{compatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>responseType</code> = 'moz-blob'</td>
-   <td>{{CompatNo}}</td>
-   <td>12.0</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome für Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Grundsätzliche Unterstützung</td>
-   <td>{{CompatUnknown}}</td>
-   <td>0.16</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h3 id="Gecko_Anmerkungen">Gecko Anmerkungen</h3>
 

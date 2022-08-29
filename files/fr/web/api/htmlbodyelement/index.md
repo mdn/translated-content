@@ -12,24 +12,24 @@ translation_of: Web/API/HTMLBodyElement
 
 L'interface **`HTMLBodyElement`** des propriétés particulières (au-delà de celles de l'interface {{ domxref("HTMLElement") }} dont-elle hérite également) pour manipuler les éléments.
 
-## propriétés
+## Propriétés
 
 _Propriétés hérite de son parent, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}._
 
-- {{domxref("HTMLBodyElement.aLink")}} {{obsolete_inline}}
+- {{domxref("HTMLBodyElement.aLink")}} {{deprecated_inline}}
   - : Est un {{ domxref("DOMString") }} qui représente la couleur des liens hypertextes actifs.
-- {{domxref("HTMLBodyElement.background")}} {{obsolete_inline}}
+- {{domxref("HTMLBodyElement.background")}} {{deprecated_inline}}
   - : Est un {{ domxref("DOMString") }} qui représente la description de l'emplacement de la ressource d'image d'arrière-plan. Notez que ce n'est pas un URI, même si certaines anciennes versions de certains navigateurs s'y attendent.
-- {{domxref("HTMLBodyElement.bgColor")}} {{obsolete_inline}}
+- {{domxref("HTMLBodyElement.bgColor")}} {{deprecated_inline}}
   - : Est un {{ domxref("DOMString") }} qui représente la couleur de fond du document.
-- {{domxref("HTMLBodyElement.link")}} {{obsolete_inline}}
+- {{domxref("HTMLBodyElement.link")}} {{deprecated_inline}}
   - : Est un {{ domxref("DOMString") }} qui représente la couleur des liens non visités.
-- {{domxref("HTMLBodyElement.text")}} {{obsolete_inline}}
+- {{domxref("HTMLBodyElement.text")}} {{deprecated_inline}}
   - : Est un {{ domxref("DOMString") }} qui représente la couleur de premier plan du texte.
-- {{domxref("HTMLBodyElement.vLink")}} {{obsolete_inline}}
+- {{domxref("HTMLBodyElement.vLink")}} {{deprecated_inline}}
   - : Est un {{ domxref("DOMString") }} qui représente la couleur des liens visités.
 
-## méthodes
+## Méthodes
 
 _Aucune méthode spécifique; méthodes hérite de ses parents, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}._
 
@@ -66,19 +66,13 @@ _Pas de gestionnaire d'événement spécifique; gestionnaires d'événements hé
 - {{domxref("WindowEventHandlers.onunload")}}
   - : Est un {{event("Event_handlers", "event handler")}} représentant le code d'appel lorsque l'événement {{event("unload")}} est déclenché.
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                                | Status                           | Comment                                                                                                                                                                                                                                                                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "sections.html#the-body-element", "HTMLBodyElement")}} | {{Spec2('HTML WHATWG')}} | Techniquement, les propriétés liées à l'événement, `onafterprint`, `onbeforeprint`, `onbeforeunload`, `onblur`, `onerror`, `onfocus`, `onhashchange`, `onlanguagechange`, `onload`, `onmessage`, `onoffline`, `ononline`, `onpopstate`, `onresize`, `onstorage` et `onunload`, ont été passées à {{domxref("WindowEventHandlers")}}, et `HTMLBodyElement` implémentant cette interface. |
-| {{SpecName('HTML5.1', "sections.html#the-body-element", "HTMLBodyElement")}}         | {{Spec2('HTML5.1')}}     |                                                                                                                                                                                                                                                                                                                                                                                                   |
-| {{SpecName('HTML5 W3C', "sections.html#the-body-element", "HTMLBodyElement")}}     | {{Spec2('HTML5 W3C')}}     | Les propriétés suivantes sont désormais obsolètes: `aLink`, `bgColor`, `background`, `link`, `text` Les propriétés suivantes ont été ajoutées:. `vLink`, `onafterprint`, `onbeforeprint`, `onbeforeunload`, `onblur`, `onerror`, `onfocus`, `onhashchange`, `onload`, `onmessage`, `onoffline`, `ononline`, `onpopstate`, `onresize`, et `onstorage`.                                             |
-| {{SpecName('DOM2 HTML', 'html.html#ID-62018039', 'HTMLBodyElement')}}                 | {{Spec2('DOM2 HTML')}}     | Ne change pas de {{SpecName("DOM1")}}.                                                                                                                                                                                                                                                                                                                                                    |
-| {{SpecName('DOM1', 'level-one-html.html#ID-62018039', 'HTMLBodyElement')}}         | {{Spec2('DOM1')}}         | Définition initiale.                                                                                                                                                                                                                                                                                                                                                                              |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.HTMLBodyElement")}}
+{{Compat}}
 
 ## Voir aussi
 

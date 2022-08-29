@@ -16,28 +16,32 @@ translation_of: Web/API/XMLHttpRequest/progress_event
 
 **`progress`** イベントは、リクエストがもっとデータを受信した際に定期的に発行されます。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル可能</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("ProgressEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("XMLHttpRequestEventTarget/onprogress", "onprogress")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('progress', event => { })
+
+onprogress = event => { }
+```
+
+## イベント型
+
+{{domxref("ProgressEvent")}} です。 {{domxref("Event")}} から継承しています。
+
+{{InheritanceDiagram("ProgressEvent")}}
+
+## イベントプロパティ
+
+_下記のプロパティに加え、親インターフェイスである {{domxref("Event")}} のプロパティを利用できます。_
+
+- {{domxref("ProgressEvent.lengthComputable", "lengthComputable")}} {{readonlyInline}}
+  - : 基礎となるプロセスで行う作業の合計と、既に行われた作業の量が計算可能かどうかを示す論理値のフラグです。言い換えれば、進捗が測定可能かどうかを示します。
+- {{domxref("ProgressEvent.loaded", "loaded")}} {{readonlyInline}}
+  - : 64 ビット符号なし整数値で、基礎となるプロセスで既に実行された作業量を示す。行われた作業の比率は、 `total` をこのプロパティの値で割ることで計算できる。 HTTP を使用してリソースをダウンロードする場合、これは HTTP メッセージの本文のみをカウントし、ヘッダーやその他のオーバーヘッドは含まれません。
+- {{domxref("ProgressEvent.total", "total")}} {{readonlyInline}}
+  - : 64 ビット符号なし整数で、基礎となるプロセスが実行中の作業の総量を示します。 HTTP でリソースをダウンロードする場合、これは `Content-Length` （メッセージの本文のサイズ）であり、ヘッダーやその他のオーバーヘッドは含まれません。
 
 ## 例
 

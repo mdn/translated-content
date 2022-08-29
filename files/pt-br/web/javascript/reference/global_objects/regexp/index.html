@@ -30,16 +30,16 @@ RegExp(<em>padrão</em>[, <var>flags</var>])</code>
 
 <dl>
  <dt><code>padrão</code></dt>
- <dd>O texto da expressão regular, ou como em ES5, outro objeto RegExp. Os padrões podem incluir caracteres especiais para correspondencia em um intervalo maior de valores do que uma string literal.</dd>
+ <dd>O texto da expressão regular, ou como em ES5, outro objeto RegExp. Os padrões podem incluir caracteres especiais para correspondencia em um intervalo maior de valores do que uma string literal.</dd>
  <dt><code>flags</code></dt>
  <dd>
- <p>Se especificado, <kbd>flags</kbd>indica os marcadores que podem ser adicionados, ou se um objeto é suficiente para o padrão, os valores de flags serão substituidos por qualquer uma das flags de objetos. O valor de <kbd>flags</kbd>é uma string contendo qualquer combinação dos seguintes valores:</p>
+ <p>Se especificado, <kbd>flags</kbd>indica os marcadores que podem ser adicionados, ou se um objeto é suficiente para o padrão, os valores de flags serão substituidos por qualquer uma das flags de objetos. O valor de <kbd>flags</kbd>é uma string contendo qualquer combinação dos seguintes valores:</p>
 
  <dl>
   <dt><code>g</code></dt>
   <dd>corresponder globalmente; acha <strong>todas</strong> as correspondências em vez de parar após achar a primeira</dd>
   <dt><code>i</code></dt>
-  <dd>ignorar maiúsc./minúsc.; Se a <em>flag <kbd>u</kbd></em>  estiver ativa, deve ser utilizado o <em>Unicode case folding</em></dd>
+  <dd>ignorar maiúsc./minúsc.; Se a <em>flag <kbd>u</kbd></em>  estiver ativa, deve ser utilizado o <em>Unicode case folding</em></dd>
   <dt><code>m</code></dt>
   <dd>multilinha; trata caracteres de início e fim (^ e $) ao operar sobre múltiplas linhas (ou seja, corresponder o início ou fim de <em>cada</em> linha (delimitado por \n ou \r), e não apenas o começo ou fim de toda a string de entrada)</dd>
  </dl>
@@ -324,7 +324,7 @@ var re = new RegExp('\\w+');
 
     <p>Por exemplo, <code>/assusto*/</code> corresponde "assustoooo" em "Um fantasma assustoooou" e "assust" em "Não me assustei", mas nada em "Um bode grunhiu".</p>
 
-    <p>Note que no caso acima, o único caractere a ser selecionado é "o", pois ele é o caractere imediatamente anterior ao asterisco e não há qualquer operador de agrupamento que indique que mais caracteres deveriam ser submetidos à repetição. Se quiséssemos selecionar a ocorrência sequencial da palavra completa "blah", por exemplo, poderíamos utilizar algum agrupamento como <code>/(blah)*/</code> o que geraria a seleção de "blahblahblah" na frase "blahblahblah ração para gatos" ou de "blah" na frase "algoritmo blahut-arimoto".</p>
+    <p>Note que no caso acima, o único caractere a ser selecionado é "o", pois ele é o caractere imediatamente anterior ao asterisco e não há qualquer operador de agrupamento que indique que mais caracteres deveriam ser submetidos à repetição. Se quiséssemos selecionar a ocorrência sequencial da palavra completa "blah", por exemplo, poderíamos utilizar algum agrupamento como <code>/(blah)*/</code> o que geraria a seleção de "blahblahblah" na frase "blahblahblah ração para gatos" ou de "blah" na frase "algoritmo blahut-arimoto".</p>
    </td>
   </tr>
   <tr>
@@ -362,7 +362,7 @@ var re = new RegExp('\\w+');
   <tr>
    <td><code><em>x</em>|<em>y</em></code></td>
    <td>
-    <p>Corresponde <code><em>x</em></code><em> </em>ou <code><em>y</em></code><em>.</em></p>
+    <p>Corresponde <code><em>x</em></code><em> </em>ou <code><em>y</em></code><em>.</em></p>
 
     <p>Por exemplo, <code>/verde|vermelha/</code> corresponde "verde" em "maçã verde" e "vermelha" em "maçã vermelha".</p>
 
@@ -372,15 +372,15 @@ var re = new RegExp('\\w+');
   <tr>
    <td><code><em>x</em>{<em>n</em>}</code></td>
    <td>
-    <p>Onde <code><em>n</em></code> é um número inteiro positivo. Corresponde exatamente <code><em>n</em></code> ocorrências do item precedente <em>x</em>.</p>
+    <p>Onde <code><em>n</em></code> é um número inteiro positivo. Corresponde exatamente <code><em>n</em></code> ocorrências do item precedente <em>x</em>.</p>
 
-    <p>Por exemplo, <code>/o{2}/</code> não corresponde o "o" em "brigadeiro", mas corresponde todos os dois "o"s em "brigadeir<u>oo</u>", e o dois primeiros "o"s em "brigadeir<u>oo</u>o".</p>
+    <p>Por exemplo, <code>/o{2}/</code> não corresponde o "o" em "brigadeiro", mas corresponde todos os dois "o"s em "brigadeir<u>oo</u>", e o dois primeiros "o"s em "brigadeir<u>oo</u>o".</p>
    </td>
   </tr>
   <tr>
    <td><code><em>x</em>{<em>n</em>,}</code></td>
    <td>
-    <p>Onde <code><em>n</em></code> é um número inteiro positivo. Corresponde <em>pelo menos</em> <code><em>n</em></code> ocorrências do item precedente <em>x </em>(sem que haja um limite superior).</p>
+    <p>Onde <code><em>n</em></code> é um número inteiro positivo. Corresponde <em>pelo menos</em> <code><em>n</em></code> ocorrências do item precedente <em>x </em>(sem que haja um limite superior).</p>
 
     <p>Por exemplo, <code>/o{2,}/</code> não corresponde o "o" em "brigadeiro", mas corresponde todos os "o"s em "brigadeir<u>oo</u>" e em "brigadeir<u>ooooooooo</u>".</p>
    </td>
@@ -388,11 +388,11 @@ var re = new RegExp('\\w+');
   <tr>
    <td><code><em>x</em>{<em>n</em>,<em>m</em>}</code></td>
    <td>
-    <p>Onde <code><em>n</em></code> e <code><em>m</em></code> são números inteiros positivos. Corresponde pelo menos <code><em>n</em></code> e no máximo <code><em>m</em></code> ocorrências do item precedente <em>x</em>.</p>
+    <p>Onde <code><em>n</em></code> e <code><em>m</em></code> são números inteiros positivos. Corresponde pelo menos <code><em>n</em></code> e no máximo <code><em>m</em></code> ocorrências do item precedente <em>x</em>.</p>
 
-    <p>Por exemplo, <code>/o{2,4}/</code> corresponde nada em "brigadeiro", os dois "o"s em "brigadeir<u>oo</u>", os três "o"s em "brigadeir<u>ooo</u>", e os primeiros quatro "o"s em "brigadeir<u>oooo</u>o".</p>
+    <p>Por exemplo, <code>/o{2,4}/</code> corresponde nada em "brigadeiro", os dois "o"s em "brigadeir<u>oo</u>", os três "o"s em "brigadeir<u>ooo</u>", e os primeiros quatro "o"s em "brigadeir<u>oooo</u>o".</p>
 
-    <p>É importante perceber que no último caso a correspondência não inclui o último "o" de "brigadeirooooo". Isso se deve ao fato do operador quantificador ter definido o número máximo de ocorrências como 4, ignorando a quinta repetição do caractere.</p>
+    <p>É importante perceber que no último caso a correspondência não inclui o último "o" de "brigadeirooooo". Isso se deve ao fato do operador quantificador ter definido o número máximo de ocorrências como 4, ignorando a quinta repetição do caractere.</p>
    </td>
   </tr>
   <tr>
@@ -404,15 +404,15 @@ var re = new RegExp('\\w+');
      <em>x{n,m}?</em></code></p>
    </td>
    <td>
-    <p><strong>Operadores <em>non-greedy </em>ou<em> lazy</em> (não-gulosos ou preguiçosos)</strong><br>
-     Esses operadores com a <code>?</code> no final, operam de maneira semelhante aos seus análogos sem <code>?</code> mostrados acima, correspondendo múltiplas ocorrências do item precedente <em>x.</em> Entretanto, desta vez a ocorrência selecionada será a mínima possível.</p>
+    <p><strong>Operadores <em>non-greedy </em>ou<em> lazy</em> (não-gulosos ou preguiçosos)</strong><br>
+     Esses operadores com a <code>?</code> no final, operam de maneira semelhante aos seus análogos sem <code>?</code> mostrados acima, correspondendo múltiplas ocorrências do item precedente <em>x.</em> Entretanto, desta vez a ocorrência selecionada será a mínima possível.</p>
 
-    <p>No exemplo <code>/(blah)*?/</code>, diante da frase "blahblahblah ração para gatos", nada seria selecionado, pois a ocorrência mínima aceita pelo operador <code>*?</code> seria ocorrência de 0 (zero) vezes da <em>string</em> "blah", o que resulta no nada.</p>
+    <p>No exemplo <code>/(blah)*?/</code>, diante da frase "blahblahblah ração para gatos", nada seria selecionado, pois a ocorrência mínima aceita pelo operador <code>*?</code> seria ocorrência de 0 (zero) vezes da <em>string</em> "blah", o que resulta no nada.</p>
 
-    <p>Já a expressão regular <code>/(blah)+?/</code>, diante da mesma frase, corresponderia a "blah", que é a ocorrência mínima aceita pelo operador <code>+?</code><em>, </em>ou seja, 1 (uma) repetição da sequência "blah".</p>
+    <p>Já a expressão regular <code>/(blah)+?/</code>, diante da mesma frase, corresponderia a "blah", que é a ocorrência mínima aceita pelo operador <code>+?</code><em>, </em>ou seja, 1 (uma) repetição da sequência "blah".</p>
 
-    <p>Em outro exemplo com mais aplicação prática, digamos que se quer corresponder todos os termos que ficam entre aspas em um texto. Se fizéssemos simplesmente a <em>regex</em>  <code>/".*"/</code>, diante de um texto com múltiplas ocorrências de termos entre aspas, como: <em>'Eu "gosto" muito de "estudar" regex'</em>, a nossa expressão regular seria gulosa e selecionaria o maior texto possível que correspondesse à definição, nesse caso, selecionando '<em>"gosto" muito de "estudar"</em>', pois todo esse texto está compreendido entre a primeira aspa (antes de <em>'gosto'</em>) e a última aspa (após <em>'estudar'</em>), o que é um resultado talvez indesejado.<br>
-     Se usarmos a regex <code>/".*?"/</code>, com o operador não-guloso, as correspondências para a mesma frase seriam '<em>"gosto"</em>' e '<em>"estudar"</em>' separadamente, conforme era a intenção inicial.</p>
+    <p>Em outro exemplo com mais aplicação prática, digamos que se quer corresponder todos os termos que ficam entre aspas em um texto. Se fizéssemos simplesmente a <em>regex</em>  <code>/".*"/</code>, diante de um texto com múltiplas ocorrências de termos entre aspas, como: <em>'Eu "gosto" muito de "estudar" regex'</em>, a nossa expressão regular seria gulosa e selecionaria o maior texto possível que correspondesse à definição, nesse caso, selecionando '<em>"gosto" muito de "estudar"</em>', pois todo esse texto está compreendido entre a primeira aspa (antes de <em>'gosto'</em>) e a última aspa (após <em>'estudar'</em>), o que é um resultado talvez indesejado.<br>
+     Se usarmos a regex <code>/".*?"/</code>, com o operador não-guloso, as correspondências para a mesma frase seriam '<em>"gosto"</em>' e '<em>"estudar"</em>' separadamente, conforme era a intenção inicial.</p>
    </td>
   </tr>
  </tbody>
@@ -447,9 +447,9 @@ var re = new RegExp('\\w+');
 
 <h2 id="Examples" name="Examples">Exemplos</h2>
 
-<h3 id="Example_Using_a_regular_expression_to_change_data_format" name="Example:_Using_a_regular_expression_to_change_data_format">Exemplo: Usando uma expressão regular para mudar o fomato dos dados</h3>
+<h3 id="Example_Using_a_regular_expression_to_change_data_format" name="Example:_Using_a_regular_expression_to_change_data_format">Exemplo: Usando uma expressão regular para mudar o fomato dos dados</h3>
 
-<p>O seguinte script usa o método {{jsxref("String.prototype.replace()", "replace()")}} da instância de {{jsxref("Global_Objects/String", "String")}} para casar o nome no format <em>nome sobrenome</em> e produzir no formato <em>sobrenome, nome</em>. No texto substituto, o script usa <code>$1</code> e <code>$2</code> para indicar os respectivos parênteses de casamento no padrão da expressão regular.</p>
+<p>O seguinte script usa o método {{jsxref("String.prototype.replace()", "replace()")}} da instância de {{jsxref("Global_Objects/String", "String")}} para casar o nome no format <em>nome sobrenome</em> e produzir no formato <em>sobrenome, nome</em>. No texto substituto, o script usa <code>$1</code> e <code>$2</code> para indicar os respectivos parênteses de casamento no padrão da expressão regular.</p>
 
 <pre class="brush: js">var re = /(\w+)\s(\w+)/;
 var str = 'John Smith';
@@ -459,15 +459,15 @@ console.log(newstr);
 
 <p>Isto retornará "Smith, John".</p>
 
-<h3 id="Example_Using_regular_expression_on_multiple_lines" name="Example:_Using_regular_expression_on_multiple_lines">Exemplo: Usando expressões regulares para quebrar linhas com diferentes <strong>fins de linha</strong>/<strong>quebras de linha</strong></h3>
+<h3 id="Example_Using_regular_expression_on_multiple_lines" name="Example:_Using_regular_expression_on_multiple_lines">Exemplo: Usando expressões regulares para quebrar linhas com diferentes <strong>fins de linha</strong>/<strong>quebras de linha</strong></h3>
 
-<p>O final de linha padrão depende da plataforma utilizada (Unix, Windows, etc.). A divisão(<em>split</em>) de linha fornecida neste exemplo funciona com todas as plataformas.</p>
+<p>O final de linha padrão depende da plataforma utilizada (Unix, Windows, etc.). A divisão(<em>split</em>) de linha fornecida neste exemplo funciona com todas as plataformas.</p>
 
 <pre class="brush: js">var text = 'Um texto\nE mais um pouco\r\nE ainda mais\rEsse é o fim';
 var lines = text.split(/\r\n|\r|\n/);
 console.log(lines) // prints [ 'Um texto', 'E mais um pouco', 'E ainda mais', 'Esse é o fim' ]</pre>
 
-<p>Note que a ordem dos padrões na expressão regular importa.</p>
+<p>Note que a ordem dos padrões na expressão regular importa.</p>
 
 <h3 id="Example_Using_regular_expression_on_multiple_lines" name="Example:_Using_regular_expression_on_multiple_lines">Exemplo: Usando expressão regular sobre múltiplas linhas</h3>
 
@@ -560,72 +560,7 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // prints 'xxx'
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Sticky flag ("y")</td>
-   <td>{{CompatChrome("39")}} (behind flag)</td>
-   <td>{{CompatGeckoDesktop("1.9")}} ES4-Style {{bug(773687)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome para Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Sticky flag ("y")</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("1.9")}} ES4-Style {{bug(773687)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.RegExp")}}
 
 <h2 id="See_also" name="See_also">Veja também</h2>
 

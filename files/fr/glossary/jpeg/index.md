@@ -15,4 +15,4 @@ original_slug: Glossaire/jpeg
 
 ### **Culture générale**
 
-- {{Interwiki("wikipedia", "JPEG")}} sur Wikipédia
+- [JPEG](https://fr.wikipedia.org/wiki/JPEG) sur Wikipédia

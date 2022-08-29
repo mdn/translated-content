@@ -68,4 +68,3 @@ Dado que Google suele proporcionar la ubicación basada en Wi-Fi, es posible que
 - [Uso de la API de geolocalización](/es/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - [API de geolocalización en w3.org](https://www.w3.org/TR/geolocation-API/)
 - [¿Quién movió mi geolocalización?](https://hacks.mozilla.org/2013/10/who-moved-my-geolocation/) (Hacks blog)
-

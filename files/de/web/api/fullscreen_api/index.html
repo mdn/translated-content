@@ -12,10 +12,10 @@ original_slug: Web/API/Vollbild_API
 ---
 <p>{{DefaultAPISidebar("Fullscreen API")}}</p>
 
-<p class="summary">Die <strong><code>Vollbild-API</code></strong> bietet einen einfachen Weg, um Webinhalte auf dem gesamten Bildschirm des Nutzers anzuzeigen. Der Browser kann einfach angewiesen werden, Elemente und, falls vorhanden, deren Kinder den gesamten Bildschirm einnehmen zu lassen, wodurch jegliche andere Inhalte vorübergehend ausgeblendet werden.</p>
+<p class="summary">Die <strong><code>Vollbild-API</code></strong> bietet einen einfachen Weg, um Webinhalte auf dem gesamten Bildschirm des Nutzers anzuzeigen. Der Browser kann einfach angewiesen werden, Elemente und, falls vorhanden, deren Kinder den gesamten Bildschirm einnehmen zu lassen, wodurch jegliche andere Inhalte vorübergehend ausgeblendet werden.</p>
 
 <div class="note">
-<p>Momentan benutzen nicht alle Browser die Version der API ohne Präfixe. Siehe <a href="#Prefixing">Vendor Präfixe</a> für Unterschiede zwischen Präfixen und Namen. </p>
+<p>Momentan benutzen nicht alle Browser die Version der API ohne Präfixe. Siehe <a href="#Prefixing">Vendor Präfixe</a> für Unterschiede zwischen Präfixen und Namen. </p>
 
 <p>Für eine universelle Lösung des Problems siehe <a href="https://github.com/rafrex/fscreen">Fscreen</a>.</p>
 </div>
@@ -27,8 +27,8 @@ original_slug: Web/API/Vollbild_API
 <p>Nehmen wir dieses {{ HTMLElement("video") }}-Element als Beispiel:</p>
 
 <pre class="brush: html">&lt;video controls id="myvideo"&gt;
-  &lt;source src="somevideo.webm"&gt;&lt;/source&gt;
-  &lt;source src="somevideo.mp4"&gt;&lt;/source&gt;
+  &lt;source src="somevideo.webm"&gt;&lt;/source&gt;
+  &lt;source src="somevideo.mp4"&gt;&lt;/source&gt;
 &lt;/video&gt;
 </pre>
 
@@ -45,8 +45,8 @@ if (elem.requestFullscreen) {
 <p>An dieser Stelle lohnt es sich, einen wichtigen Unterschied zwischen Gecko und WebKit aufzuzeigen: Gecko fügt automatisch CSS-Regeln zum betroffenen Element hinzu, damit es den ganzen Bildschirm einnimmt: "<code>width: 100%; height: 100%</code>". WebKit tut dies allerdings nicht; stattdessen wird das Vollbild-Element in der selben Größe zentriert vor einem schwarzen Hintergrund dargestellt. Um das gleich Vollbild-Verhalten in WebKit zu erhalten, müssen Sie selbst eine "<code>width: 100%; height: 100%;</code>"-CSS-Regel zum entsprechenden Element hinzufügen:</p>
 
 <pre class="brush: css">#myvideo:-webkit-full-screen {
-  width: 100%;
-  height: 100%;
+  width: 100%;
+  height: 100%;
 }
 </pre>
 
@@ -61,12 +61,12 @@ if (elem.requestFullscreen) {
 <p>Es ist nicht garantiert, dass der Wechsel in den Vollbild-Modus möglich ist. {{ HTMLElement("iframe") }}-Elements etwa haben das {{ HTMLAttrXRef("allowfullscreen", "iframe") }}-Attribut, um ihrem Inhalt zu erlauben, in den Vollbild-Modus zu wechseln. Zusätzlich gibt es bestimmte Arten von Inhalten, wie etwa windowed plug-ins, welche nicht im Vollbild-Modus angezeigt werden können. Wenn versucht wird, ein Element, welches nicht im Vollbild-Modus dargestellt werden kann (oder ein Eltern- bzw. Kind-Knoten eines solchen Elements), wird dies nicht funktionieren. Stattdessen wird das Element, welches den Vollbild-Modus angefragt hat, ein <code>mozfullscreenerror</code>-Event erhalten. Wenn eine Vollbild-Anfrage scheitert, wird Firefox eine Fehlermeldung auf der Web-Konsole ausgeben, welche erklärt, warum die Anfrage fehlgeschlagen ist. In Chrome und neueren Versionen von Opera werden allerdings keine solchen Warnungen produziert.</p>
 
 <div class="note">
-<p><strong>Hinweis:</strong> Vollbild-Anfragen müssen aus einem Event-Handler heraus gestellt werden oder die Anfrage wird abgelehnt. </p>
+<p><strong>Hinweis:</strong> Vollbild-Anfragen müssen aus einem Event-Handler heraus gestellt werden oder die Anfrage wird abgelehnt. </p>
 </div>
 
 <h2 id="Verlassen_des_Vollbildmodus">Verlassen des Vollbildmodus</h2>
 
-<p>Der Nutzer hat immer die Möglichkeit, selbst den Vollbildmodus zu verlassen; siehe {{ anch("Things your users want to know") }}. Der Vollbildmodus kann aber auch programmatisch mithilfe der  {{domxref("Document.exitFullscreen()")}}-Methode beendet werden.</p>
+<p>Der Nutzer hat immer die Möglichkeit, selbst den Vollbildmodus zu verlassen; siehe <a href="#things_your_users_want_to_know">Things your users want to know</a>. Der Vollbildmodus kann aber auch programmatisch mithilfe der  {{domxref("Document.exitFullscreen()")}}-Methode beendet werden.</p>
 
 <h2 id="Weitere_Informationen">Weitere Informationen</h2>
 
@@ -83,7 +83,7 @@ if (elem.requestFullscreen) {
 
 <p>Sie sollten die Nutzer wissen lassen, dass sie den Vollbildmodus jederzeit mit <kbd>ESC</kbd> (oder <kbd>F11</kbd>) verlassen können.</p>
 
-<p>Zusätzlich beendet das Navigieren zu einer anderen Seite oder das Wechseln von Tabs oder Programmen (etwa mit  <kbd>Alt</kbd>+<kbd>Tab</kbd>) auch den Vollbildmodus.</p>
+<p>Zusätzlich beendet das Navigieren zu einer anderen Seite oder das Wechseln von Tabs oder Programmen (etwa mit  <kbd>Alt</kbd>+<kbd>Tab</kbd>) auch den Vollbildmodus.</p>
 
 <h2 id="Specification" name="Specification">Beispiel</h2>
 
@@ -96,9 +96,9 @@ if (elem.requestFullscreen) {
 <p>When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.</p>
 
 <pre class="brush: js">document.addEventListener("keydown", function(e) {
-  if (e.keyCode == 13) {
-    toggleFullScreen();
-  }
+  if (e.keyCode == 13) {
+    toggleFullScreen();
+  }
 }, false);
 </pre>
 
@@ -107,13 +107,13 @@ if (elem.requestFullscreen) {
 <p>This code is called when the user hits the <kbd>Enter</kbd> key, as seen above.</p>
 
 <pre class="brush: js">function toggleFullScreen() {
-  if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
-  } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    }
-  }
+  if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
 }
 </pre>
 
@@ -215,84 +215,9 @@ if (elem.requestFullscreen) {
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Browser Kompatibilität</h2>
 
-<p>All browsers implement this APIs. Nevertheless some implement it with prefixed names with slightly different spelling; e.g., instead of <code>requestFullscreen()</code>, there is <code>MozRequestFullScreen()</code>.</p>
+<p>All browsers implement this APIs. Nevertheless some implement it with prefixed names with slightly different spelling; e.g., instead of <code>requestFullscreen()</code>, there is <code>MozRequestFullScreen()</code>.</p>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>15 {{ property_prefix("-webkit") }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop("9.0") }} {{ property_prefix("-moz") }}<br>
-    {{CompatGeckoDesktop("47")}} (behind <code>full-screen-api.unprefix.enabled</code>)</td>
-   <td>11 {{ property_prefix("-ms") }}</td>
-   <td>12.10</td>
-   <td>5.0 {{ property_prefix("-webkit") }}</td>
-  </tr>
-  <tr>
-   <td><code>fullscreenEnabled</code></td>
-   <td>20 {{ property_prefix("-webkit") }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop("10.0") }} {{ property_prefix("-moz") }}<br>
-    {{CompatGeckoDesktop("47")}} (behind <code>full-screen-api.unprefix.enabled</code>)</td>
-   <td>11 {{ property_prefix("-ms") }}</td>
-   <td>12.10</td>
-   <td>5.1 {{ property_prefix("-webkit") }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>28 {{ property_prefix("-webkit") }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile("9.0") }}{{ property_prefix("-moz") }}<br>
-    {{CompatGeckoMobile("47")}} (behind <code>full-screen-api.unprefix.enabled</code>)</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td><code>fullscreenEnabled</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>28 {{ property_prefix("-webkit") }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile("10.0") }} {{ property_prefix("moz") }}<br>
-    {{CompatGeckoMobile("47")}} (behind <code>full-screen-api.unprefix.enabled</code>)</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Siehe_auch">Siehe auch</h2>
 

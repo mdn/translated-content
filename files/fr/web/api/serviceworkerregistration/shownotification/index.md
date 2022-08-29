@@ -20,7 +20,9 @@ La méthode **`showNotification()`** de l'interface {{domxref("ServiceWorkerRegi
 
 ## Syntaxe
 
-    serviceWorkerRegistration.showNotification(title, [options])
+```js
+serviceWorkerRegistration.showNotification(title, [options])
+```
 
 ### Paramètres
 

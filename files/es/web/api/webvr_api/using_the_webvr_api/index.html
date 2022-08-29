@@ -17,7 +17,7 @@ translation_of: Web/API/WebVR_API/Using_the_WebVR_API
 <p class="summary"><span id="result_box" lang="es"><span>La API WebVR es una fantástica adición al kit de herramientas del desarrollador web, permitiendo que las escenas de WebGL sean presentadas en pantallas de realidad virtual como el Oculus Rift y HTC Vive.</span> <span>Pero, ¿cómo empezar a desarrollar aplicaciones VR para la Web?</span> <span>Este artículo le guiará a través de los fundamentos.</span></span></p>
 
 <div class="note">
-<p><span id="result_box" lang="es"><span><strong>Nota:</strong> La versión más estable de la API de WebVR (1.1) se ha implementado recientemente en Firefox 55 (Windows en versión de lanzamiento y Mac OS X sólo en Nightly) y también está disponible en Chrome cuando se usa con hardware de Google Daydream.</span> <span>También hay una evolución posterior de la especificación 2.0, pero esto está en una etapa temprana ahora mismo.</span> <span>Puede encontrar información sobre el estado más reciente de las especificaciones en </span></span> <a href="https://w3c.github.io/webvr/">WebVR Spec Version List</a>.</p>
+<p><span id="result_box" lang="es"><span><strong>Nota:</strong> La versión más estable de la API de WebVR (1.1) se ha implementado recientemente en Firefox 55 (Windows en versión de lanzamiento y Mac OS X sólo en Nightly) y también está disponible en Chrome cuando se usa con hardware de Google Daydream.</span> <span>También hay una evolución posterior de la especificación 2.0, pero esto está en una etapa temprana ahora mismo.</span> <span>Puede encontrar información sobre el estado más reciente de las especificaciones en </span></span> <a href="https://w3c.github.io/webvr/">WebVR Spec Version List</a>.</p>
 </div>
 
 <h2 id="Empezando"><span class="short_text" id="result_box" lang="es"><span>Empezando</span></span></h2>
@@ -47,7 +47,7 @@ translation_of: Web/API/WebVR_API/Using_the_WebVR_API
 <p><img alt="" src="https://mdn.mozillademos.org/files/15121/Capture1.png" style="display: block; height: 761px; margin: 0px auto; width: 1341px;"></p>
 
 <div class="note">
-<p><span id="result_box" lang="es"><span><strong>Nota:</strong> Puedes encontrar el <a href="https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example">código fuente de nuestra demo</a> en </span></span> GitHub, <span id="result_box" lang="es"><span>y <a href="https://mdn.github.io/webvr-tests/raw-webgl-example/">verlo en vivo </a>también. </span></span></p>
+<p><span id="result_box" lang="es"><span><strong>Nota:</strong> Puedes encontrar el <a href="https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example">código fuente de nuestra demo</a> en </span></span> GitHub, <span id="result_box" lang="es"><span>y <a href="https://mdn.github.io/webvr-tests/raw-webgl-example/">verlo en vivo </a>también. </span></span></p>
 </div>
 
 <div class="note">
@@ -79,7 +79,7 @@ translation_of: Web/API/WebVR_API/Using_the_WebVR_API
  <li>{{domxref("Navigator.getVRDisplays()")}} <span id="result_box" lang="es"><span>se utiliza para obtener una referencia a la visualización VR.</span></span></li>
  <li>{{domxref("VRDisplay.requestPresent()")}} <span id="result_box" lang="es"><span>se utiliza para iniciar la presentación en la pantalla VR.</span></span></li>
  <li><span class="short_text" id="result_box" lang="es"><span>WebVR's dedicado </span></span>{{domxref("VRDisplay.requestAnimationFrame()")}} <span id="result_box" lang="es"><span>se utiliza para ejecutar el bucle de representación de la aplicación a la velocidad de actualización correcta para la pantalla.</span></span></li>
- <li><span id="result_box" lang="es"><span>Dentro del bucle de procesamiento, se capturan los datos necesarios para mostrar el marco actual </span></span>({{domxref("VRDisplay.getFrameData()")}}), <span id="result_box" lang="es"><span>dibuja la escena visualizada dos veces - una vez para la vista en cada ojo -</span>  <span>luego envia la vista renderizada a la pantalla para mostrar al usuario a través de </span></span>({{domxref("VRDisplay.submitFrame()")}}).</li>
+ <li><span id="result_box" lang="es"><span>Dentro del bucle de procesamiento, se capturan los datos necesarios para mostrar el marco actual </span></span>({{domxref("VRDisplay.getFrameData()")}}), <span id="result_box" lang="es"><span>dibuja la escena visualizada dos veces - una vez para la vista en cada ojo -</span>  <span>luego envia la vista renderizada a la pantalla para mostrar al usuario a través de </span></span>({{domxref("VRDisplay.submitFrame()")}}).</li>
 </ol>
 
 <p><span id="result_box" lang="es"><span>En las secciones siguientes veremos en detalle nuestra demostración raw-webgl y veremos dónde se utilizan exactamente las características anteriores.</span></span></p>
@@ -270,7 +270,7 @@ document.body.onload = start;</pre>
     displayPoseStats(curFramePose);
   }</pre>
 
-<p>  We now clear the canvas before we start drawing on it, so that the next frame is clearly seen, and we don't also see previous rendered frames:</p>
+<p>  We now clear the canvas before we start drawing on it, so that the next frame is clearly seen, and we don't also see previous rendered frames:</p>
 
 <pre class="brush: js notranslate">  // Clear the canvas before we start drawing on it.
 

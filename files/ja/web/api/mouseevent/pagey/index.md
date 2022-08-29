@@ -19,7 +19,6 @@ translation_of: Web/API/MouseEvent/pageY
 
 `double` 型の浮動小数点値。
 
-
 ## 例
 
 ```js

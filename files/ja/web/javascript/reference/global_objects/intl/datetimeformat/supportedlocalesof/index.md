@@ -18,7 +18,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supp
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-supportedlocalesof.html","shorter")}}
 
-
 ## 構文
 
 ```js

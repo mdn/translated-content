@@ -19,7 +19,9 @@ La méthode **`delete()`** permet de retirer un élément donné d'un objet `Map
 
 ## Syntaxe
 
-    maMap.delete(clé);
+```js
+maMap.delete(clé);
+```
 
 ### Paramètres
 

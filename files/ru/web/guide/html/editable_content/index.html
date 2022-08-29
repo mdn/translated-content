@@ -6,7 +6,7 @@ tags:
   - contenteditable
 translation_of: Web/Guide/HTML/Editable_content
 ---
-<p><font>В HTML любой элемент может быть доступен для редактирования. </font><font>Используя некоторые обработчики событий JavaScript, вы можете превратить свою веб-страницу в полноценный и быстрый текстовый редактор. </font><font>В этой статье содержится некоторая информация об этой функции.</font></p>
+<p><font>В HTML любой элемент может быть доступен для редактирования. </font><font>Используя некоторые обработчики событий JavaScript, вы можете превратить свою веб-страницу в полноценный и быстрый текстовый редактор. </font><font>В этой статье содержится некоторая информация об этой функции.</font></p>
 
 <h2 id="Как_это_работает">Как это работает?</h2>
 
@@ -20,35 +20,35 @@ translation_of: Web/Guide/HTML/Editable_content
 
 <p>Вот приведённый выше HTML-код в песочнице:</p>
 
-<p>{{ EmbedLiveSample('Как_это_работает') }} </p>
+<p>{{ EmbedLiveSample('Как_это_работает') }} </p>
 
 <h2 id="Выполнение_команд">Выполнение команд</h2>
 
-<p>Когда HTML-элемент имеет <code>contenteditable</code> установленный в <code>true</code>, метод {{ domxref("document.execCommand()") }} становится доступным. Это позволяет запускать команды для управления содержимым редактируемого региона. Большинство команд влияют на выбор документа, например, применяя стиль к тексту (полужирный, курсив и т. д.), в то время как другие вставляют новые элементы (например, добавление ссылки) или влияют на всю строку (отступы). При использовании  <code>contentEditable</code>,  вызов  <code>execCommand()</code>  будет влиять на текущий активный редактируемый элемент.</p>
+<p>Когда HTML-элемент имеет <code>contenteditable</code> установленный в <code>true</code>, метод {{ domxref("document.execCommand()") }} становится доступным. Это позволяет запускать команды для управления содержимым редактируемого региона. Большинство команд влияют на выбор документа, например, применяя стиль к тексту (полужирный, курсив и т. д.), в то время как другие вставляют новые элементы (например, добавление ссылки) или влияют на всю строку (отступы). При использовании  <code>contentEditable</code>,  вызов  <code>execCommand()</code>  будет влиять на текущий активный редактируемый элемент.</p>
 
 <h2 id="Различия_в_генерации_разметки">Различия в генерации разметки</h2>
 
-<p>Использование  <code>contenteditable</code>  в разных браузерах было болезненным в течение длительного времени из-за различий в сгенерированной разметке между браузерами. Например, даже что-то простое, что происходит, когда вы нажимаете Enter/Return для создания новой строки текста внутри редактируемого элемента, обрабатывалось по-разному в основных браузерах (Firefox вставлял элементы {{htmlelement("br")}}, IE/Opera использовала {{htmlelement("p")}}, в Chrome/Safari использовался {{htmlelement("div")}}). </p>
+<p>Использование  <code>contenteditable</code>  в разных браузерах было болезненным в течение длительного времени из-за различий в сгенерированной разметке между браузерами. Например, даже что-то простое, что происходит, когда вы нажимаете Enter/Return для создания новой строки текста внутри редактируемого элемента, обрабатывалось по-разному в основных браузерах (Firefox вставлял элементы {{htmlelement("br")}}, IE/Opera использовала {{htmlelement("p")}}, в Chrome/Safari использовался {{htmlelement("div")}}). </p>
 
-<p>К счастью, в современных браузерах ситуация несколько более последовательна. Начиная с  <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/60">Firefox 60</a>,  Firefox будет обновлён, чтобы обернуть отдельные строки в элементах {{htmlelement("div")}}, соответствующих поведению Chrome, современной Opera, Edge и Safari.</p>
+<p>К счастью, в современных браузерах ситуация несколько более последовательна. Начиная с  <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/60">Firefox 60</a>,  Firefox будет обновлён, чтобы обернуть отдельные строки в элементах {{htmlelement("div")}}, соответствующих поведению Chrome, современной Opera, Edge и Safari.</p>
 
 <p>Попробуйте это в приведённом выше примере.</p>
 
 <div class="note">
-<p><strong>Примечание</strong>: Internet Explorer, который больше не разрабатывается, использует элементы {{htmlelement("p")}} вместо <code>&lt;div&gt;</code>.</p>
+<p><strong>Примечание</strong>: Internet Explorer, который больше не разрабатывается, использует элементы {{htmlelement("p")}} вместо <code>&lt;div&gt;</code>.</p>
 </div>
 
-<p>Если вы хотите использовать другой разделитель абзацев, все вышеперечисленные браузеры поддерживают {{domxref("document.execCommand")}}, предоставляющий для этих изменений команду  <code>defaultParagraphSeparator</code>. Например, чтобы использовать элементы {{htmlelement("p")}}:</p>
+<p>Если вы хотите использовать другой разделитель абзацев, все вышеперечисленные браузеры поддерживают {{domxref("document.execCommand")}}, предоставляющий для этих изменений команду  <code>defaultParagraphSeparator</code>. Например, чтобы использовать элементы {{htmlelement("p")}}:</p>
 
 <pre><code class="language-js">document<span class="punctuation token">.</span><span class="function token">execCommand</span><span class="punctuation token">(</span><span class="string token">"defaultParagraphSeparator"</span><span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">,</span> <span class="string token">"p"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
-<p>Добавочно, Firefox поддерживает нестандартный аргумент, <code>br</code>, для <code>defaultParagraphSeparator</code>  с Firefox 55. Это действительно полезно, если ваше веб-приложение обеспечивало поддержку старого Firefox, а у вас, к сожалению, нет времени исправить его для более нового Firefox, то вы можете вернуть прежнее поведение Firefox вставкой этой строки во время инициализации <code>designMode</code> или  <code>contenteditable</code> редактора:</p>
+<p>Добавочно, Firefox поддерживает нестандартный аргумент, <code>br</code>, для <code>defaultParagraphSeparator</code>  с Firefox 55. Это действительно полезно, если ваше веб-приложение обеспечивало поддержку старого Firefox, а у вас, к сожалению, нет времени исправить его для более нового Firefox, то вы можете вернуть прежнее поведение Firefox вставкой этой строки во время инициализации <code>designMode</code> или  <code>contenteditable</code> редактора:</p>
 
 <pre><code class="language-js">document<span class="punctuation token">.</span><span class="function token">execCommand</span><span class="punctuation token">(</span><span class="string token">"defaultParagraphSeparator"</span><span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">,</span> <span class="string token">"br"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
 <h2 id="Безопасность">Безопасность</h2>
 
-<p>По соображениям безопасности Firefox не позволяет JavaScript-коду использовать связанные с буфером функции (копировать, вставлять и т. д.) по умолчанию. Используя  <code>about:config</code> вы можете включить их, установив настройки, показанные ниже:</p>
+<p>По соображениям безопасности Firefox не позволяет JavaScript-коду использовать связанные с буфером функции (копировать, вставлять и т. д.) по умолчанию. Используя  <code>about:config</code> вы можете включить их, установив настройки, показанные ниже:</p>
 
 <pre class="code">user_pref("capability.policy.policynames", "allowclipboard");
 user_pref("capability.policy.allowclipboard.sites", "https://www.mozilla.org");
@@ -175,53 +175,53 @@ img.intLink { border: 0; }
 <pre class="brush: js">var oDoc, sDefTxt;
 
 function initDoc() {
-  oDoc = document.getElementById("textBox");
-  sDefTxt = oDoc.innerHTML;
-  if (document.compForm.switchBox.checked) { setDocMode(true); }
+  oDoc = document.getElementById("textBox");
+  sDefTxt = oDoc.innerHTML;
+  if (document.compForm.switchBox.checked) { setDocMode(true); }
 }
 
 function formatDoc(sCmd, sValue) {
-  if (validateMode()) { document.execCommand(sCmd, false, sValue); oDoc.focus(); }
+  if (validateMode()) { document.execCommand(sCmd, false, sValue); oDoc.focus(); }
 }
 
 function validateMode() {
-  if (!document.compForm.switchBox.checked) { return true ; }
-  alert("Uncheck \"Показать HTML\"."); /* убрать галочку из "Показать HTML" */
-  oDoc.focus();
-  return false;
+  if (!document.compForm.switchBox.checked) { return true ; }
+  alert("Uncheck \"Показать HTML\"."); /* убрать галочку из "Показать HTML" */
+  oDoc.focus();
+  return false;
 }
 
 function setDocMode(bToSource) {
-  var oContent;
-  if (bToSource) {
-    oContent = document.createTextNode(oDoc.innerHTML);
-    oDoc.innerHTML = "";
-    var oPre = document.createElement("pre");
-    oDoc.contentEditable = false;
-    oPre.id = "sourceText";
-    oPre.contentEditable = true;
-    oPre.appendChild(oContent);
-    oDoc.appendChild(oPre);
-    document.execCommand("defaultParagraphSeparator", false, "div");
-  } else {
-    if (document.all) {
-      oDoc.innerHTML = oDoc.innerText;
-    } else {
-      oContent = document.createRange();
-      oContent.selectNodeContents(oDoc.firstChild);
-      oDoc.innerHTML = oContent.toString();
-    }
-    oDoc.contentEditable = true;
-  }
-  oDoc.focus();
+  var oContent;
+  if (bToSource) {
+    oContent = document.createTextNode(oDoc.innerHTML);
+    oDoc.innerHTML = "";
+    var oPre = document.createElement("pre");
+    oDoc.contentEditable = false;
+    oPre.id = "sourceText";
+    oPre.contentEditable = true;
+    oPre.appendChild(oContent);
+    oDoc.appendChild(oPre);
+    document.execCommand("defaultParagraphSeparator", false, "div");
+  } else {
+    if (document.all) {
+      oDoc.innerHTML = oDoc.innerText;
+    } else {
+      oContent = document.createRange();
+      oContent.selectNodeContents(oDoc.firstChild);
+      oDoc.innerHTML = oContent.toString();
+    }
+    oDoc.contentEditable = true;
+  }
+  oDoc.focus();
 }
 
 function printDoc() {
-  if (!validateMode()) { return; }
-  var oPrntWin = window.open("","_blank","width=450,height=470,left=400,top=100,menubar=yes,toolbar=no,location=no,scrollbars=yes");
-  oPrntWin.document.open();
-  oPrntWin.document.write("&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;Print&lt;\/title&gt;&lt;\/head&gt;&lt;body onload=\"print();\"&gt;" + oDoc.innerHTML + "&lt;\/body&gt;&lt;\/html&gt;");
-  oPrntWin.document.close(); /*  */
+  if (!validateMode()) { return; }
+  var oPrntWin = window.open("","_blank","width=450,height=470,left=400,top=100,menubar=yes,toolbar=no,location=no,scrollbars=yes");
+  oPrntWin.document.open();
+  oPrntWin.document.write("&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;Print&lt;\/title&gt;&lt;\/head&gt;&lt;body onload=\"print();\"&gt;" + oDoc.innerHTML + "&lt;\/body&gt;&lt;\/html&gt;");
+  oPrntWin.document.close(); /*  */
 }
 
 </pre>
@@ -230,7 +230,7 @@ function printDoc() {
 <p><br>
  Результат: {{EmbedLiveSample('Пример')}}</p>
 
-<div class="note"><strong>Примечание:</strong> если вы хотите увидеть, как стандартизировать создание и вставку вашего редактора на свою страницу, см. <a href="https://developer.mozilla.org/@api/deki/files/6243/=rich-text-editor.zip" title="rich-text-editor.zip">наш более полный пример редактора.</a> </div>
+<div class="note"><strong>Примечание:</strong> если вы хотите увидеть, как стандартизировать создание и вставку вашего редактора на свою страницу, см. <a href="https://developer.mozilla.org/@api/deki/files/6243/=rich-text-editor.zip" title="rich-text-editor.zip">наш более полный пример редактора.</a> </div>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

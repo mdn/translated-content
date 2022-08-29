@@ -20,9 +20,11 @@ Pour insérer le HTML dans le document, plutôt que de remplacer le contenu d'un
 
 ## Syntaxe
 
-    const content = element.innerHTML;
+```js
+const content = element.innerHTML;
 
-    element.innerHTML = htmlString;
+element.innerHTML = htmlString;
+```
 
 ### Valeur
 
@@ -73,9 +75,9 @@ document.documentElement.innerHTML = "<pre>" +
 
 Qu'arrive-t-il exactement quand vous définissez la valeur de `innerHTML` ?  Cela entraîne l'agent utilisateur à suivre ces étapes :
 
-1.  La valeur spécifiée est analysée en HTML ou XML (en fonction du type de document), ce qui donne un objet {{domxref ("DocumentFragment")}} représentant le nouvel ensemble de nœuds DOM pour les nouveaux éléments.
-2.  Si l'élément dont le contenu est remplacé est un élément {{HTMLElement ("template")}}, l'attribut {{domxref ("HTMLTemplateElement.content", "content")}} de l'élément `<template>` est remplacé par le nouveau `DocumentFragment` créé à l'étape 1.
-3.  Pour tous les autres éléments, le contenu de l'élément est remplacé par les noeuds du nouveau `DocumentFragment`.
+1. La valeur spécifiée est analysée en HTML ou XML (en fonction du type de document), ce qui donne un objet {{domxref ("DocumentFragment")}} représentant le nouvel ensemble de nœuds DOM pour les nouveaux éléments.
+2. Si l'élément dont le contenu est remplacé est un élément {{HTMLElement ("template")}}, l'attribut {{domxref ("HTMLTemplateElement.content", "content")}} de l'élément `<template>` est remplacé par le nouveau `DocumentFragment` créé à l'étape 1.
+3. Pour tous les autres éléments, le contenu de l'élément est remplacé par les noeuds du nouveau `DocumentFragment`.
 
 ### Considérations de sécurité
 
@@ -92,7 +94,7 @@ name = "<script>alert('I am John in an annoying alert!')</script>";
 el.innerHTML = name; // inoffensif dans ce cas
 ```
 
-Bien que cela puisse ressembler à une attaque {{interwiki ("wikipedia", "cross-site_scripting","cross-site scripting")}}, le résultat est inoffensif. HTML5 spécifie qu'une balise {{HTMLElement ("script")}} insérée avec `innerHTML` [ne doit pas s'exécuter](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
+Bien que cela puisse ressembler à une attaque [<i lang="en">cross-site scripting</i>](https://fr.wikipedia.org/wiki/Cross-site_scripting), le résultat est inoffensif. HTML5 spécifie qu'une balise {{HTMLElement ("script")}} insérée avec `innerHTML` [ne doit pas s'exécuter](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
 
 Cependant, il existe des moyens d'exécuter JavaScript sans utiliser les éléments {{HTMLElement ("script")}}, donc il existe toujours un risque de sécurité chaque fois que vous utilisez `innerHTML` pour définir des chaînes sur lesquelles vous n'avez aucun contrôle. Par exemple :
 
@@ -186,11 +188,9 @@ Le contenu résultant ressemble à ceci. Vous pouvez voir la sortie dans le jour
 
 {{EmbedLiveSample("Exemple", 640, 350)}}
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                        | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('DOM Parsing', '#innerhtml', 'Element.innerHTML')}} | {{ Spec2('DOM Parsing') }} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

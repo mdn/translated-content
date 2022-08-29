@@ -16,7 +16,9 @@ Renvoie la "Document Type Declaration (DTD)" (_déclaration de type de document_
 
 ## Syntaxe
 
-    doctype = document.doctype;
+```js
+doctype = document.doctype;
+```
 
 - `doctype` est une propriété en lecture seule.
 
@@ -41,7 +43,4 @@ DOM level 2 ne prend pas en charge l'édition de la déclaration de type de docu
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                       | Commentaire                                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("DOM3 Core", "core.html#ID-B63ED1A31", "Document.doctype")}} | {{Spec2("DOM3 Core")}} | Valeur de retour modifiée pour les documents HTML avec absence d'élément {{HTMLElement("html")}}. Définit que le type de document peut être modifié. |
-| {{SpecName("DOM2 Core", "core.html#ID-B63ED1A31", "Document.doctype")}} | {{Spec2("DOM2 Core")}} | Définition initiale                                                                                                                                           |
+{{Specifications}}

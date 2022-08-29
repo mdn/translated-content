@@ -7,7 +7,6 @@ tags:
   - Document
   - インターフェイス
   - リファレンス
-browser-compat: api.Document
 translation_of: Web/API/Document
 ---
 {{APIRef("DOM")}}
@@ -39,9 +38,9 @@ _このインターフェイスは、 {{DOMxRef("Node")}} インターフェイ�
   - : 現在の文書の子要素の数を返します。
 - {{domxref("Document.children")}} {{readonlyInline}}
   - : 現在の文書の子要素を返します。
-- {{DOMxRef("Document.compatMode")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.compatMode")}} {{Experimental_Inline}}{{ReadOnlyInline}}
   - : 文書が _Quirks_ モードと _Strict_ モードのどちらで描画されているかを示します。
-- {{DOMxRef("Document.contentType")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.contentType")}} {{Experimental_Inline}}{{ReadOnlyInline}}
   - : 現在の文書の MIME ヘッダーから Content-Type を返します。
 - {{DOMxRef("Document.currentScript")}}{{ReadOnlyInline}}
   - : {{HTMLElement("script")}} 要素のうち、現在処理中で、かつ [JavaScript モジュールでないもの](https://github.com/whatwg/html/issues/997)を返します。
@@ -73,7 +72,7 @@ _このインターフェイスは、 {{DOMxRef("Node")}} インターフェイ�
   - : 現在の文書における最後の子要素を返します。
 - {{DOMxRef("Document.links")}}{{ReadOnlyInline}}
   - : {{DOMxRef("HTMLCollection")}} で、文書内のすべてのハイパーリンクのリストを返します。
-- {{DOMxRef("Document.mozSyntheticDocument")}} {{Non-standard_Inline}}
+- {{DOMxRef("Document.mozSyntheticDocument")}} {{Non-standard_Inline}}
   - : 単独の画像、動画、音声ファイルなど、文書が合成されたものである限り `true` を返します。
 - {{DOMxRef("Document.pictureInPictureElement")}} {{ReadOnlyInline}}
   - : この文書で現在、ピクチャインピクチャモードで表示されている要素 ({{DOMxRef('Element')}}) を返します。
@@ -81,9 +80,9 @@ _このインターフェイスは、 {{DOMxRef("Node")}} インターフェイ�
   - : ピクチャインピクチャ機能が有効であれば true を返します。
 - {{DOMxRef("Document.plugins")}}{{ReadOnlyInline}}
   - : {{DOMxRef("HTMLCollection")}} で、利用可能なプラグインのリストを返します。
-- {{DOMxRef("Document.pointerLockElement")}} {{ReadOnlyInline}}
+- {{DOMxRef("Document.pointerLockElement")}} {{ReadOnlyInline}}
   - : ポインターがロックされている場合、マウスイベントのターゲットとして設定された要素を返します。ロック町の場合、ポインターがロックされていない場合、ターゲットが他の文書にある場合は `null` を返します。
-- {{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}}{{ReadOnlyInline}}
   - : 特定の文書に適用される機能ポリシーを簡単に導入するための API を提供する {{DOMxRef("FeaturePolicy")}} インターフェイスを返します。
 - {{DOMxRef("Document.scripts")}}{{ReadOnlyInline}}
   - : {{DOMxRef("HTMLCollection")}} で、文書内のすべての {{HTMLElement("script")}} 要素を返します。
@@ -91,7 +90,7 @@ _このインターフェイスは、 {{DOMxRef("Node")}} インターフェイ�
   - : 文書をスクロールする {{DOMxRef("Element")}} への参照を返します。
 - {{DOMxRef("Document.styleSheets")}} {{ReadOnlyInline}}
   - : {{DOMxRef('StyleSheetList')}} で、文書で明示的にリンクされているスタイルシートや、文書に埋め込まれているスタイルシート（{{DOMxRef('CSSStyleSheet')}} オブジェクトのリスト）を返します。
-- {{DOMxRef("Document.timeline")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.timeline")}} {{Experimental_Inline}}{{ReadOnlyInline}}
   - : タイムラインを {{domxref("DocumentTimeline")}} の特別なインスタンスで返します。これはページの読み込み時に自動的に生成されます。
 - {{DOMxRef("Document.visibilityState")}}{{ReadOnlyInline}}
   - : 文書の可視性を表す `string` を返します。 `visible`, `hidden`, `prerender`, `unloaded` のいずれかの値になります。
@@ -108,7 +107,7 @@ _HTML 文書用の `Document` インターフェイスは {{DOMxRef("HTMLDocumen
   - : 文書全体を編集可能かを取得/設定します。
 - {{DOMxRef("Document.dir")}}
   - : 文書の書字方向 (rtl/ltr) を取得/設定します。
-- {{DOMxRef("Document.domain")}} {{Deprecated_Inline}}
+- {{DOMxRef("Document.domain")}} {{Deprecated_Inline}}
   - : 現在の文書のドメインを取得/設定します。
 - {{DOMxRef("Document.lastModified")}}{{ReadOnlyInline}}
   - : 文書の最終更新日を返します。
@@ -127,70 +126,70 @@ _HTML 文書用の `Document` インターフェイスは {{DOMxRef("HTMLDocumen
 
 _`Document` インターフェイスは [GlobalEventHandlers](/ja/docs/Web/API/GlobalEventHandlers#event_handlers) で定義されているその他のイベントハンドラーで拡張されています。_
 
-- {{DOMxRef("Document.onafterscriptexecute")}} {{Non-standard_Inline}}
+- {{DOMxRef("Document.onafterscriptexecute")}} {{Non-standard_Inline}}
   - : {{domxref("Document/afterscriptexecute_event", "afterscriptexecute")}} イベント用のイベントハンドラーを表します。
-- {{DOMxRef("Document.onbeforescriptexecute")}} {{Non-standard_Inline}}
+- {{DOMxRef("Document.onbeforescriptexecute")}} {{Non-standard_Inline}}
   - : {{domxref("Document/beforescriptexecute_event", "beforescriptexecute")}} イベント用のイベントハンドラーを表します。
-- {{DOMxRef("Document.oncopy")}} {{Non-standard_Inline}}
+- {{DOMxRef("Document.oncopy")}} {{Non-standard_Inline}}
   - : {{domxref("Document/copy_event", "copy")}} イベント用のイベントハンドラーを表します。
-- {{DOMxRef("Document.oncut")}} {{Non-standard_Inline}}
+- {{DOMxRef("Document.oncut")}} {{Non-standard_Inline}}
   - : {{domxref("Document/cut_event", "cut")}} イベント用のイベントハンドラーを表します。
 - {{DOMxRef("Document.onfullscreenchange")}}
   - : [イベントハンドラー](/ja/docs/Web/Events/Event_handlers)で、  {{domxref("Document/fullscreenchange_event", "fullscreenchange")}} イベントが発行されたときに呼び出されるコードを表します。
 - {{DOMxRef("Document.onfullscreenerror")}}
   - : [イベントハンドラー](/ja/docs/Web/Events/Event_handlers)で、  {{domxref("Document/fullscreenerror_event", "fullscreenerror")}} イベントが発行されたときに呼び出されるコードを表します。
-- {{DOMxRef("Document.onpaste")}} {{Non-standard_Inline}}
+- {{DOMxRef("Document.onpaste")}} {{Non-standard_Inline}}
   - : {{domxref("Document/paste_event", "paste")}} イベント用のイベントハンドラーを表します。
 - {{DOMxRef("Document.onreadystatechange")}}
   - : {{domxref("Document/readystatechange_event", "readystatechange")}} イベント用のイベントハンドラーを表します。
-- {{DOMxRef("GlobalEventHandlers.onselectionchange")}} {{Experimental_Inline}}
+- {{DOMxRef("GlobalEventHandlers.onselectionchange")}} {{Experimental_Inline}}
   - : [イベントハンドラー](/ja/docs/Web/Events/Event_handlers)で、  {{domxref("Document/selectionchange_event", "selectionchange")}} イベントが発行されたときに呼び出されるコードを表します。
 - {{DOMxRef("Document.onvisibilitychange")}}
   - : [イベントハンドラー](/ja/docs/Web/Events/Event_handlers)で、  {{domxref("Document/visibilitychange_event", "visibilitychange")}} イベントが発行されたときに呼び出されるコードを表します。
 
 ### 非推奨のプロパティ
 
-- {{DOMxRef("Document.alinkColor")}} {{Deprecated_Inline}}
+- {{DOMxRef("Document.alinkColor")}} {{Deprecated_Inline}}
   - : 文書本文内のアクティブなリンクの色を取得または設定します。
-- {{DOMxRef("Document.all")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- {{DOMxRef("Document.all")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 文書内のすべての要素にアクセスできます。文書ノードを起点とする {{DOMxRef('HTMLAllCollection')}} を返します。これは古い標準外のプロパティですので、使用しないようにしてください。
-- {{DOMxRef("Document.anchors")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.anchors")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
   - : 文書内のすべてのアンカーのリストを返します。
-- {{DOMxRef("Document.applets")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.applets")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
   - : 文書内にあるアプレットのリスト (出現順) を返します。
-- {{DOMxRef("Document.bgColor")}} {{Deprecated_Inline}}
+- {{DOMxRef("Document.bgColor")}} {{Deprecated_Inline}}
   - : 現在の文書の背景色を取得または設定します。
-- {{DOMxRef("Document.characterSet","Document.charset")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.characterSet","Document.charset")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
   - : {{DOMxRef("Document.characterSet")}} の別名です。代わりに {{DOMxRef("Document.characterSet")}} を使用してください。
-- {{DOMxRef("Document.fgColor")}} {{Deprecated_Inline}}
+- {{DOMxRef("Document.fgColor")}} {{Deprecated_Inline}}
   - : 現在の文書の前景色または文字色を取得/設定します。
-- {{DOMxRef("Document.fullscreen")}} {{deprecated_inline}}
+- {{DOMxRef("Document.fullscreen")}} {{deprecated_inline}}
   - : 文書が{{DOMxRef("Using_full-screen_mode","全画面モード", "", 1)}}であるときに、`true` になります。
-- {{DOMxRef("Document.height")}} {{Non-standard_Inline}} {{deprecated_inline}}
+- {{DOMxRef("Document.height")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : 現在の文書の高さを取得/設定します。
-- {{DOMxRef("Document.characterSet", "Document.inputEncoding")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.characterSet", "Document.inputEncoding")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
   - : {{DOMxRef("Document.characterSet")}} の別名です。代わりにそちらを使用してください。
-- {{DOMxRef("Document.lastStyleSheetSet")}} {{deprecated_inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.lastStyleSheetSet")}} {{deprecated_inline}}{{ReadOnlyInline}}
   - : 直前に有効であったスタイルシートセットの名称を返します。 {{DOMxRef("Document.selectedStyleSheetSet","selectedStyleSheetSet")}} に値を設定してスタイルシートを変更するまで、この値は `null` になります。
-- {{DOMxRef("Document.linkColor")}} {{Deprecated_Inline}}
+- {{DOMxRef("Document.linkColor")}} {{Deprecated_Inline}}
   - : document 内のハイパーリンクの色を取得/設定します。
-- {{DOMxRef("Document.preferredStyleSheetSet")}} {{deprecated_inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.preferredStyleSheetSet")}} {{deprecated_inline}}{{ReadOnlyInline}}
   - : ページの作者によって設定された、優先的なスタイルシートを返します。
-- {{DOMxRef("Document.rootElement")}} {{Deprecated_Inline}}
+- {{DOMxRef("Document.rootElement")}} {{Deprecated_Inline}}
   - : {{DOMxRef("Document.documentElement")}} と同様ですが、 {{SVGElement("svg")}} ルート要素専用です。こちらのプロパティを代わりに使用してください。
-- {{DOMxRef("Document.selectedStyleSheetSet")}} {{deprecated_inline}}
+- {{DOMxRef("Document.selectedStyleSheetSet")}} {{deprecated_inline}}
   - : 現在どのスタイルシートセットを使用しているかを返します。
-- {{DOMxRef("Document.styleSheetSets")}} {{deprecated_inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.styleSheetSets")}} {{deprecated_inline}}{{ReadOnlyInline}}
   - : 文書で使用できるスタイルシートセットのリストを返します。
-- {{DOMxRef("Document.vlinkColor")}} {{Deprecated_Inline}}
+- {{DOMxRef("Document.vlinkColor")}} {{Deprecated_Inline}}
   - : 訪問済みのハイパーリンクの色を取得/設定します。
-- {{DOMxRef("Document.width")}} {{Non-standard_Inline}} {{deprecated_inline}}
+- {{DOMxRef("Document.width")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : 現在の文書の幅を返します。
-- {{DOMxRef("Document.xmlEncoding")}} {{Deprecated_Inline}}
+- {{DOMxRef("Document.xmlEncoding")}} {{Deprecated_Inline}}
   - : XML 宣言によって決められたエンコーディングを返します。
-- {{DOMxRef("Document.xmlStandalone")}} {{deprecated_inline}}
+- {{DOMxRef("Document.xmlStandalone")}} {{deprecated_inline}}
   - : XML 宣言で文書がスタンドアロンである (_例_: DTD の外部パートが文書のコンテンツに影響する) 場合に `true` を、そうでない場合に `false` を返します。
-- {{DOMxRef("Document.xmlVersion")}} {{deprecated_inline}}
+- {{DOMxRef("Document.xmlVersion")}} {{deprecated_inline}}
   - : XML 宣言で指定されたバージョン番号、または宣言が省略されている場合に `"1.0"` を返します。
 
 ## メソッド
@@ -201,11 +200,11 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
   - : 外部文書からノードを取り込みます。
 - {{DOMxRef("Document.append()")}}
   - : 文書の最後の子の後に {{domxref("Node")}} オブジェクトまたは {{domxref("DOMString")}} オブジェクトの集合を挿入します。
-- {{DOMxRef("Document.captureEvents()")}} {{Deprecated_Inline}}
+- {{DOMxRef("Document.captureEvents()")}} {{Deprecated_Inline}}
   - : {{DOMxRef("Window.captureEvents")}} をご覧ください。
 - {{DOMxRef("Document.caretPositionFromPoint()")}}
   - : キャレットを含む DOM ノードと、そのノード内でのキャレットの文字オフセットを含む {{DOMxRef('CaretPosition')}} オブジェクトを返します。
-- {{DOMxRef("Document.caretRangeFromPoint()")}} {{Non-standard_Inline}}
+- {{DOMxRef("Document.caretRangeFromPoint()")}} {{Non-standard_Inline}}
   - : 指定した座標にある文書の断片の {{DOMxRef("Range")}} オブジェクトを取得します。
 - {{DOMxRef("Document.createAttribute()")}}
   - : 新しい {{DOMxRef("Attr")}} オブジェクトを生成して、返します。
@@ -221,7 +220,7 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
   - : 指定したタグ名で新しい要素を生成します。
 - {{DOMxRef("Document.createElementNS()")}}
   - : 指定したタグ名およびネームスペース URI で、新しい要素を生成します。
-- {{DOMxRef("Document.createEntityReference()")}} {{deprecated_inline}}
+- {{DOMxRef("Document.createEntityReference()")}} {{deprecated_inline}}
   - : 新しい Entity Reference オブジェクトを生成して、返します。
 - {{DOMxRef("Document.createEvent()")}}
   - : Event オブジェクトを生成します。
@@ -233,9 +232,9 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
   - : {{DOMxRef("Range")}} オブジェクトを生成します。
 - {{DOMxRef("Document.createTextNode()")}}
   - : テキストノードを生成します。
-- {{DOMxRef("Document.createTouch()")}} {{Deprecated_Inline}}
+- {{DOMxRef("Document.createTouch()")}} {{Deprecated_Inline}}
   - : {{DOMxRef("Touch")}} オブジェクトを生成します。
-- {{DOMxRef("Document.createTouchList()")}} {{Deprecated_Inline}}
+- {{DOMxRef("Document.createTouchList()")}} {{Deprecated_Inline}}
   - : {{DOMxRef("TouchList")}} オブジェクトを生成します。
 - {{DOMxRef("Document.createTreeWalker()")}}
   - : {{DOMxRef("TreeWalker")}} オブジェクトを生成します。
@@ -243,11 +242,11 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
   - : 指定された座標の最上位の要素を返します。
 - {{DOMxRef("Document.elementsFromPoint()")}}
   - : 指定された座標にあるすべての要素の配列を返します。
-- {{DOMxRef("Document.enableStyleSheetsForSet()")}} {{deprecated_inline}}
+- {{DOMxRef("Document.enableStyleSheetsForSet()")}} {{deprecated_inline}}
   - : 指定したスタイルシートセットのスタイルシートを有効化します。
 - {{DOMxRef("Document.exitPictureInPicture()")}}
   - : 浮動ピクチャーインピクチャーウィンドウから動画を取り出し、元のコンテナーに戻します。
-- {{DOMxRef("Document.exitPointerLock()")}} {{Experimental_Inline}}
+- {{DOMxRef("Document.exitPointerLock()")}} {{Experimental_Inline}}
   - : ポインターロックを解放します。
 - {{DOMxRef("Document.getAnimations()")}}
   - : 現在実行中であるすべての {{DOMxRef("Animation")}} オブジェクトの配列を返します。この対象要素は、`document` の子孫要素です。
@@ -263,11 +262,11 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
   - : 指定されたタグ名と名前空間を持つ要素のリストを返します。
 - {{DOMxRef("Document.getSelection()")}}
   - : ユーザーが現在選択しているテキスト範囲、または現在のキャレットの位置を表す {{DOMxRef('Selection')}} オブジェクトを返します。
-- {{DOMxRef("Document.hasStorageAccess()")}} {{Experimental_Inline}}
+- {{DOMxRef("Document.hasStorageAccess()")}} {{Experimental_Inline}}
   - : 文書が自分自身 (first-party) のストレージにアクセスしたかどうかを示す論理値で解決する {{jsxref("Promise")}} を返します。
 - {{DOMxRef("Document.importNode()")}}
   - : 外部文書のノードの複製を返します。
-- {{DOMxRef("Document.normalizeDocument()")}} {{deprecated_inline}}
+- {{DOMxRef("Document.normalizeDocument()")}} {{deprecated_inline}}
   - : エンティティの置換や、テキストノードの正規化などを行います。
 - {{DOMxRef("Document.prepend()")}}
   - : 文書の最初の子の前に、 {{domxref("Node")}} オブジェクトまたは {{domxref("DOMString")}} オブジェクトを挿入します。
@@ -275,9 +274,9 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
   - : 指定したセレクターに一致する、文書内で最初の要素ノードを返します。
 - {{DOMxRef("Document.querySelectorAll()")}}
   - : 指定したセレクターに一致する、文書内のすべての要素ノードのリストを返します。
-- {{DOMxRef("Document.releaseCapture()")}} {{Non-standard_Inline}}
+- {{DOMxRef("Document.releaseCapture()")}} {{Non-standard_Inline}}
   - : この文書内の要素でマウスキャプチャを行っている場合、マウスキャプチャを解放します。
-- {{DOMxRef("Document.releaseEvents()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+- {{DOMxRef("Document.releaseEvents()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : {{DOMxRef("Window.releaseEvents()")}} をご覧ください。
 - {{DOMxRef("Document.replaceChildren()")}}
   - : 文書の既存の子を、指定された新しい子の集合で置き換えます。
@@ -299,11 +298,11 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
 
 HTML 文書用の `Document` インターフェイスは {{DOMxRef("HTMLDocument")}} インターフェイスから継承する、あるいは HTML5 文書向けに拡張されています。
 
-- {{DOMxRef("Document.clear()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+- {{DOMxRef("Document.clear()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : 最近の Firefox や Internet Explorer を含む大部分の現行ブラウザーは、何も行いません。
 - {{DOMxRef("Document.close()")}}
   - : 書き込み用の文書ストリームを閉じます。
-- {{DOMxRef("Document.execCommand()")}} {{deprecated_inline}}
+- {{DOMxRef("Document.execCommand()")}} {{deprecated_inline}}
   - : 編集可能な文書で、フォーマットコマンドを実行します。
 - {{DOMxRef("Document.getElementsByName()")}}
   - : (引数で) 与えられた名前 (name) を持つ要素のリストを返します。
@@ -311,15 +310,15 @@ HTML 文書用の `Document` インターフェイスは {{DOMxRef("HTMLDocument
   - : 指定した文書内にフォーカスがある場合に、 `true` を返します。
 - {{DOMxRef("Document.open()")}}
   - : 書き込み用の文書ストリームを開きます。
-- {{DOMxRef("Document.queryCommandEnabled()")}} {{deprecated_inline}}
+- {{DOMxRef("Document.queryCommandEnabled()")}} {{deprecated_inline}}
   - : 現在の領域でフォーマットコマンドを実行できる場合に、 true を返します。
-- {{DOMxRef("Document.queryCommandIndeterm()")}} {{deprecated_inline}}
+- {{DOMxRef("Document.queryCommandIndeterm()")}} {{deprecated_inline}}
   - : 現在の領域でフォーマットコマンドの状態が不確定である場合に true を返します。
-- {{DOMxRef("Document.queryCommandState()")}} {{deprecated_inline}}
+- {{DOMxRef("Document.queryCommandState()")}} {{deprecated_inline}}
   - : 現在の領域でフォーマットコマンドを実行した場合に true を返します。
-- {{DOMxRef("Document.queryCommandSupported()")}} {{deprecated_inline}}
+- {{DOMxRef("Document.queryCommandSupported()")}} {{deprecated_inline}}
   - : 現在の領域でフォーマットコマンドをサポートしている場合に、true を返します。
-- {{DOMxRef("Document.queryCommandValue()")}} {{deprecated_inline}}
+- {{DOMxRef("Document.queryCommandValue()")}} {{deprecated_inline}}
   - : 指定したフォーマットコマンドについて、現在の領域における値を返します。
 - {{DOMxRef("Document.write()")}}
   - : 文書にテキストを書き込みます。
@@ -508,7 +507,7 @@ Firefox は、いくつかの標準外のメソッドを定義しています。
 
 - {{DOMxRef("Document.execCommandShowHelp()")}} {{deprecated_inline}}
   - : このメソッドは何も行わずに例外が発生することから、 Gecko 14.0 {{geckoRelease("14.0")}} で削除されました。
-- {{DOMxRef("Document.getBoxObjectFor()")}} {{deprecated_inline}}
+- {{DOMxRef("Document.getBoxObjectFor()")}} {{deprecated_inline}}
   - : 代わりに {{DOMxRef("Element.getBoundingClientRect()")}} メソッドを使用してください。
 - {{DOMxRef("Document.loadOverlay()")}} {{deprecated_inline}}
   - : [XUL overlay](/ja/docs/XUL_Overlays) を動的に読み込みます。これは XUL 文書のみで動作します。
@@ -519,7 +518,7 @@ Firefox は、いくつかの標準外のメソッドを定義しています。
 
 Microsoft は、標準外のプロパティを定義しています。
 
-- {{DOMxRef("Document.fileSize")}}\* {{Non-standard_Inline}} {{deprecated_inline}}
+- {{DOMxRef("Document.fileSize")}}\* {{Non-standard_Inline}} {{deprecated_inline}}
   - : 文書の長さをバイト単位で返します。 Internet Explorer 11 より、このプロパティには対応していません。[MSDN](https://msdn.microsoft.com/ja/library/ms533752%28v=VS.85%29.aspx) をご覧ください。
 
 ## 仕様書

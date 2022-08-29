@@ -13,7 +13,7 @@ translation_of: Web/CSS/@namespace
 ---
 {{CSSRef}}
 
-**`@namespace`** は[アットルール](/ja/docs/Web/CSS/At-rule)で、 
+**`@namespace`** は[アットルール](/ja/docs/Web/CSS/At-rule)で、
 [CSS](/ja/docs/Glossary/CSS) [スタイルシート](/ja/docs/Web/API/StyleSheet) で使用する [XML 名前空間](/ja/docs/Namespaces)を定義します。
 
 ## 構文

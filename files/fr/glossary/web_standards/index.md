@@ -26,4 +26,4 @@ Cette liste non exhaustive vous donne une idée des standards auxquels les sites
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Standards du Web")}} sur Wikipédia
+- [Standards du Web](https://fr.wikipedia.org/wiki/Standards_du_Web) sur Wikipédia

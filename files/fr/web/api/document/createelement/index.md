@@ -9,14 +9,16 @@ Dans un document [HTML](/fr/docs/Web/HTML), la méthode **`document.createElemen
 
 ## Syntaxe
 
-    var element = document.createElement(tagName[, options]);
+```js
+var element = document.createElement(tagName[, options]);
+```
 
 ### Paramètres
 
 - tagName
   - : Une chaîne de caractères ({{domxref("DOMString")}}) spécifiant le type d’élément à créer. Le {{domxref("Node.nodeName", "nodeName")}} (_nom du noeud_) de l’élément créé est initialisé avec la valeur de `tagName`. N’utilisez pas le nom qualifié (comme `"html:a"`) avec cette méthode. Quand elle est appelée sur un document HTML, `createElement()` convertit `tagName` en minuscules avant de créer l’élément. Dans Firefox, Opera et Chrome, `createElement(null)` fonctionne comme `createElement("null")`.
 - options{{optional_inline}}
-  - : Un objet `ElementCreationOptions` facultatif contenant une seule propriété nommée `is` dont la valeur est le nom de balise d’un élément personnalisé précédemment défini avec `customElements.define()`. Voir {{anch("Web component example")}} pour plus de détails.
+  - : Un objet `ElementCreationOptions` facultatif contenant une seule propriété nommée `is` dont la valeur est le nom de balise d’un élément personnalisé précédemment défini avec `customElements.define()`. Voir [Exemple de composant web](#exemple_de_composant_web) pour plus de détails.
 
 ### Valeur de retour
 
@@ -93,19 +95,13 @@ Le nouvel élément donnera un attribut [`is`](/docs/Web/HTML/Global_attributes/
 
 > **Note :** Pour la rétrocompatibilité avec les versions précédentes de la [spécification des éléments personnalisés](https://www.w3.org/TR/custom-elements/), quelques navigateurs permettent de passer une chaîne de caractères ici, à la place d’un objet, dont la valeur est la balise de nom de l’élément personnalisé.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', "#dom-document-createelement", "Document.createElement")}} | {{Spec2('DOM WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.createElement")}}
-
-### Notes CSS Quantum
-
-- Dans Gecko, quand vous voulez créer un sous-arbre détaché (par exemple, un {{htmlelement("div")}} créé avec `createElement()` qui n’est pas encore inséré dans le DOM), l’élément racine du sous-arbre est défini comme un élément de niveau bloc. Dans le nouveau moteur CSS parallèle de Firefox (aussi connu comme [Quantum CSS](https://wiki.mozilla.org/Quantum) ou [Stylo](https://wiki.mozilla.org/Quantum/Stylo), prévu pour être publié dans Firefox 57), il est défini comme "inline", ({{bug(1374994)}}) selon la spécification.
+{{Compat}}
 
 ## Voir aussi
 

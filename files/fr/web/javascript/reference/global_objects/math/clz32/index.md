@@ -19,7 +19,9 @@ La fonction **`Math.clz32()`** renvoie le nombre de zéros de tête dans la repr
 
 ## Syntaxe
 
-    Math.clz32(x)
+```js
+Math.clz32(x)
+```
 
 ### Paramètres
 

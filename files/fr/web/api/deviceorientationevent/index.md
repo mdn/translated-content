@@ -42,18 +42,16 @@ window.addEventListener('deviceorientation', function(event) {
 
 ## Spécifications
 
-| Spécification                                | Statut                                   | Commentaires         |
-| -------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DeviceMotionEvent")}}
+{{Compat}}
 
 ## Voir aussi
 
 - {{ event("deviceorientation") }}
 - {{ domxref("DeviceMotionEvent") }}
 - {{ event("devicemotion") }}
-- [Detecting device orientation](/en-US/docs/WebAPI/Detecting_device_orientation)
+- [Detecting device orientation](/fr/docs/WebAPI/Detecting_device_orientation)
 - [Orientation and motion data explained](/en/DOM/Orientation_and_motion_data_explained)

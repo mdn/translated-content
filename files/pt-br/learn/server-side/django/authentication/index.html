@@ -48,15 +48,15 @@ translation_of: Learn/Server-side/Django/Authentication
 
 <pre class="brush: python notranslate">INSTALLED_APPS = [
     ...
-<strong>    'django.contrib.auth',  </strong>#Core authentication framework and its default models.
-<strong>    'django.contrib.contenttypes',  #</strong>Django content type system (allows permissions to be associated with models).
+<strong>    'django.contrib.auth',  </strong>#Core authentication framework and its default models.
+<strong>    'django.contrib.contenttypes',  #</strong>Django content type system (allows permissions to be associated with models).
     ....
 
 MIDDLEWARE = [
     ...
-<strong>    'django.contrib.sessions.middleware.SessionMiddleware',</strong>  #Manages sessions across requests
+<strong>    'django.contrib.sessions.middleware.SessionMiddleware',</strong>  #Manages sessions across requests
     ...
-<strong>    'django.contrib.auth.middleware.AuthenticationMiddleware',</strong>  #Associates users with requests using sessions.
+<strong>    'django.contrib.auth.middleware.AuthenticationMiddleware',</strong>  #Associates users with requests using sessions.
     ....
 </pre>
 
@@ -122,7 +122,7 @@ user.save()
 </div>
 
 <div class="note">
-<p><strong>Nota: </strong>Nesse caso, poderíamos colocar razoavelmente as páginas de autenticação, incluindo os URLs e modelos, dentro do nosso aplicativo de catálogo. No entanto, se tivéssemos vários aplicativos, seria melhor separar esse comportamento de login compartilhado e disponibilizá-lo em todo o site, e é isso que mostramos aqui!</p>
+<p><strong>Nota: </strong>Nesse caso, poderíamos colocar razoavelmente as páginas de autenticação, incluindo os URLs e modelos, dentro do nosso aplicativo de catálogo. No entanto, se tivéssemos vários aplicativos, seria melhor separar esse comportamento de login compartilhado e disponibilizá-lo em todo o site, e é isso que mostramos aqui!</p>
 </div>
 
 <h3 id="URLs_do_Projeto">URLs do Projeto</h3>
@@ -135,10 +135,10 @@ urlpatterns += [
 ]
 </pre>
 
-<p>Navegue até URL <a href="http://127.0.0.1:8000/accounts/">http://127.0.0.1:8000/accounts/</a> (observe a barra à direita!) e o Django mostrará um erro que não foi possível encontrar esse URL e listará todos os URLs que ele tentou. A partir disso, você pode ver os URLs que funcionarão, por exemplo:</p>
+<p>Navegue até URL <a href="http://127.0.0.1:8000/accounts/">http://127.0.0.1:8000/accounts/</a> (observe a barra à direita!) e o Django mostrará um erro que não foi possível encontrar esse URL e listará todos os URLs que ele tentou. A partir disso, você pode ver os URLs que funcionarão, por exemplo:</p>
 
 <div class="note">
-<p><strong>Nota: </strong>O uso do método acima adiciona os seguintes URLs com nomes entre colchetes, que podem ser usados para reverter os mapeamentos de URL. Você não precisa implementar mais nada - o mapeamento de URL acima mapeia automaticamente os URLs mencionados abaixo.</p>
+<p><strong>Nota: </strong>O uso do método acima adiciona os seguintes URLs com nomes entre colchetes, que podem ser usados para reverter os mapeamentos de URL. Você não precisa implementar mais nada - o mapeamento de URL acima mapeia automaticamente os URLs mencionados abaixo.</p>
 
 <pre class="brush: python notranslate">accounts/ login/ [name='login']
 accounts/ logout/ [name='logout']
@@ -166,10 +166,10 @@ Exception Value:    <strong>registration/login.html</strong></pre>
 <div class="note">
 <p><strong>Nota:</strong> Sua estrutura de pastas agora deve se parecer como abaixo:<br>
  locallibrary (Django project folder)<br>
-    |_catalog<br>
-    |_locallibrary<br>
-    |_templates <strong>(new)</strong><br>
-                 |_registration</p>
+    |_catalog<br>
+    |_locallibrary<br>
+    |_templates <strong>(new)</strong><br>
+                 |_registration</p>
 </div>
 
 <p>Para tornar esses diretórios visíveis para o carregador de modelos (ou seja, para colocar esse diretório no caminho de pesquisa de modelos), abra as configurações do projeto (<strong>/locallibrary/locallibrary/settings.py</strong>) e atualize o seção <code>TEMPLATES</code> linha <code>'DIRS'</code> como mostrado abaixo.</p>
@@ -200,23 +200,23 @@ Exception Value:    <strong>registration/login.html</strong></pre>
 
   {% if next %}
     {% if user.is_authenticated %}
-      &lt;p&gt;Your account doesn't have access to this page. To proceed,
-      please login with an account that has access.&lt;/p&gt;
-    {% else %}
-      &lt;p&gt;Please login to see this page.&lt;/p&gt;
-    {% endif %}
+      &lt;p&gt;Your account doesn't have access to this page. To proceed,
+      please login with an account that has access.&lt;/p&gt;
+    {% else %}
+      &lt;p&gt;Please login to see this page.&lt;/p&gt;
+    {% endif %}
   {% endif %}
 
   &lt;form method="post" action="{% url 'login' %}"&gt;
     {% csrf_token %}
     &lt;table&gt;
       &lt;tr&gt;
-        &lt;td&gt;\{{ form.username.label_tag }}&lt;/td&gt;
-        &lt;td&gt;\{{ form.username }}&lt;/td&gt;
+        &lt;td&gt;\{{ form.username.label_tag }}&lt;/td&gt;
+        &lt;td&gt;\{{ form.username }}&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-        &lt;td&gt;\{{ form.password.label_tag }}&lt;/td&gt;
-        &lt;td&gt;\{{ form.password }}&lt;/td&gt;
+        &lt;td&gt;\{{ form.password.label_tag }}&lt;/td&gt;
+        &lt;td&gt;\{{ form.password }}&lt;/td&gt;
       &lt;/tr&gt;
     &lt;/table&gt;
     &lt;input type="submit" value="login" /&gt;
@@ -376,7 +376,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <h3 id="Testando_nos_templates">Testando nos templates</h3>
 
-<p>Você pode obter informações sobre o usuário conectado no momento em modelos com a variável de template <code>\{{ user }}</code> (isso é adicionado ao contexto do template por padrão quando você configura o projeto como fizemos em nosso esqueleto).</p>
+<p>Você pode obter informações sobre o usuário conectado no momento em modelos com a variável de template <code>\{{ user }}</code> (isso é adicionado ao contexto do template por padrão quando você configura o projeto como fizemos em nosso esqueleto).</p>
 
 <p>Normalmente você primeiro testará contra a variável de template <code>\{{ user.is_authenticated }}</code> para determinar se o usuário está qualificado para ver conteúdo específico. Para demonstrar isso, em seguida, atualizaremos nossa barra lateral para exibir um link "Login" se o usuário estiver desconectado e um link "Logout" se estiverem conectados.</p>
 
@@ -394,7 +394,7 @@ LOGIN_REDIRECT_URL = '/'
    <strong>{% endif %} </strong>
   &lt;/ul&gt;</pre>
 
-<p>Como você pode ver, usamos template tags <code>if</code>-<code>else</code>-<code>endif</code> para exibir condicionalmente o texto com base em <code>\{{ user.is_authenticated }}</code> ser verdadeiro. Se o usuário estiver autenticado, sabemos que temos um usuário válido, por isso chamamos <code>\{{ user.get_username }}</code><strong> </strong>para exibir o nome deles.</p>
+<p>Como você pode ver, usamos template tags <code>if</code>-<code>else</code>-<code>endif</code> para exibir condicionalmente o texto com base em <code>\{{ user.is_authenticated }}</code> ser verdadeiro. Se o usuário estiver autenticado, sabemos que temos um usuário válido, por isso chamamos <code>\{{ user.get_username }}</code><strong> </strong>para exibir o nome deles.</p>
 
 <p>Criamos os URLs dos links de logon e logout usando a template tag <code>url</code> e os nomes das respectivas configurações de URL. Observe também como anexamos <code>?next=\{{request.path}}</code> no final dos URLs. O que isso faz é adicionar um parâmetro de URL a seguir, contendo o endereço (URL) da página atual, ao final do URL vinculado. Após o usuário ter efetuado login/logout com sucesso, as visualizações usarão este valor "<code>next</code>" para redirecionar o usuário de volta à página em que ele clicou pela primeira vez no link de logon/logout.</p>
 
@@ -413,17 +413,17 @@ def my_view(request):
     ...</pre>
 
 <div class="note">
-<p><strong>Nota:</strong> Você pode fazer o mesmo tipo de coisa manualmente testando em<code>request.user.is_authenticated</code>, mas o decorator é muito mais conveniente!</p>
+<p><strong>Nota:</strong> Você pode fazer o mesmo tipo de coisa manualmente testando em<code>request.user.is_authenticated</code>, mas o decorator é muito mais conveniente!</p>
 </div>
 
-<p>Da mesma forma, a maneira mais fácil de restringir o acesso a usuários logados em suas visualizações baseadas em classe é derivar de <code>LoginRequiredMixin</code>. Você precisa declarar esse mixin primeiro na lista de superclasses, antes da classe de visualização principal.</p>
+<p>Da mesma forma, a maneira mais fácil de restringir o acesso a usuários logados em suas visualizações baseadas em classe é derivar de <code>LoginRequiredMixin</code>. Você precisa declarar esse mixin primeiro na lista de superclasses, antes da classe de visualização principal.</p>
 
 <pre class="brush: python notranslate">from django.contrib.auth.mixins import LoginRequiredMixin
 
 class MyView(LoginRequiredMixin, View):
     ...</pre>
 
-<p>Isso tem exatamente o mesmo comportamento de redirecionamento que o decorator <code>login_required</code>. Você também pode especificar um local alternativo para redirecionar o usuário se ele não estiver autenticado (<code>login_url</code>), e um nome de parâmetro de URL em vez de "<code>next</code>" para inserir o caminho absoluto atual (<code>redirect_field_name</code>).</p>
+<p>Isso tem exatamente o mesmo comportamento de redirecionamento que o decorator <code>login_required</code>. Você também pode especificar um local alternativo para redirecionar o usuário se ele não estiver autenticado (<code>login_url</code>), e um nome de parâmetro de URL em vez de "<code>next</code>" para inserir o caminho absoluto atual (<code>redirect_field_name</code>).</p>
 
 <pre class="brush: python notranslate">class MyView(LoginRequiredMixin, View):
     login_url = '/login/'
@@ -482,17 +482,17 @@ python3 manage.py migrate
 
 <pre class="brush: python notranslate">@admin.register(BookInstance)
 class BookInstanceAdmin(admin.ModelAdmin):
-    list_display = ('book', 'status'<strong>, 'borrower'</strong>, 'due_back', 'id')
-    list_filter = ('status', 'due_back')
+    list_display = ('book', 'status'<strong>, 'borrower'</strong>, 'due_back', 'id')
+    list_filter = ('status', 'due_back')
 
-    fieldsets = (
-        (None, {
-            'fields': ('book','imprint', 'id')
-        }),
-        ('Availability', {
-            'fields': ('status', 'due_back'<strong>,'borrower'</strong>)
-        }),
-    )</pre>
+    fieldsets = (
+        (None, {
+            'fields': ('book','imprint', 'id')
+        }),
+        ('Availability', {
+            'fields': ('status', 'due_back'<strong>,'borrower'</strong>)
+        }),
+    )</pre>
 
 <h3 id="Emprestando_alguns_livros">Emprestando alguns livros</h3>
 
@@ -592,27 +592,27 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <pre class="brush: python notranslate">class BookInstance(models.Model):
     ...
-    class Meta:
-        ...
+    class Meta:
+        ...
 <strong>        permissions = (("can_mark_returned", "Set book as returned"),)  </strong> </pre>
 
 <p>Poderíamos então atribuir a permissão a um grupo "Librarian" no site do administrador.</p>
 
-<p>Abra <strong>catalog/models.py</strong>, e adicione a permissão como mostrado acima. Você ira precisar atualizar seus <em>migrations</em> (execute <code>python3 manage.py makemigrations</code> e <code>python3 manage.py migrate</code>) para atualizar o banco de dados apropriadamente.</p>
+<p>Abra <strong>catalog/models.py</strong>, e adicione a permissão como mostrado acima. Você ira precisar atualizar seus <em>migrations</em> (execute <code>python3 manage.py makemigrations</code> e <code>python3 manage.py migrate</code>) para atualizar o banco de dados apropriadamente.</p>
 
 <h3 id="Templates">Templates</h3>
 
-<p>As permissões do usuário atual são armazenadas em uma variável de modelo chamada <code>\{{ perms }}</code>. Você pode verificar se o usuário atual tem uma permissão específica usando o nome da variável específica no "aplicativo" associado ao Django — e.g. <code>\{{ perms.catalog.can_mark_returned }}</code> será <code>True</code> se o usuário tiver essa permissão, caso contrário,  <code>False</code>. Normalmente testamos a permissão usando a template tag <code>{% if %}</code> como mostrado:</p>
+<p>As permissões do usuário atual são armazenadas em uma variável de modelo chamada <code>\{{ perms }}</code>. Você pode verificar se o usuário atual tem uma permissão específica usando o nome da variável específica no "aplicativo" associado ao Django — e.g. <code>\{{ perms.catalog.can_mark_returned }}</code> será <code>True</code> se o usuário tiver essa permissão, caso contrário,  <code>False</code>. Normalmente testamos a permissão usando a template tag <code>{% if %}</code> como mostrado:</p>
 
 <pre class="brush: python notranslate">{% if perms.catalog.can_mark_returned %}
     &lt;!-- We can mark a BookInstance as returned. --&gt;
-    &lt;!-- Perhaps add code to link to a "book return" view here. --&gt;
+    &lt;!-- Perhaps add code to link to a "book return" view here. --&gt;
 {% endif %}
 </pre>
 
 <h3 id="Views">Views</h3>
 
-<p>As permissões podem ser testadas na exibição de funções usando o decorator <code>permission_required</code> ou em uma view baseada em classe usando o <code>PermissionRequiredMixin</code>. O padrão e o comportamento são os mesmos da autenticação de login, embora, é claro, você possa razoavelmente precisar adicionar várias permissões.</p>
+<p>As permissões podem ser testadas na exibição de funções usando o decorator <code>permission_required</code> ou em uma view baseada em classe usando o <code>PermissionRequiredMixin</code>. O padrão e o comportamento são os mesmos da autenticação de login, embora, é claro, você possa razoavelmente precisar adicionar várias permissões.</p>
 
 <p>Função view decorator:</p>
 
@@ -657,7 +657,7 @@ class MyView(PermissionRequiredMixin, View):
 
 <h2 id="Resumo">Resumo</h2>
 
-<p>Excelente trabalho — Você criou um site no qual os membros da biblioteca podem fazer login e ver seu próprio conteúdo e que os bibliotecários (com as permissões corretas) podem usar para visualizar todos os livros emprestados e seus devedores. No momento, ainda estamos apenas visualizando conteúdo, mas os mesmos princípios e técnicas são usadas quando você deseja começar a modificar e adicionar dados.</p>
+<p>Excelente trabalho — Você criou um site no qual os membros da biblioteca podem fazer login e ver seu próprio conteúdo e que os bibliotecários (com as permissões corretas) podem usar para visualizar todos os livros emprestados e seus devedores. No momento, ainda estamos apenas visualizando conteúdo, mas os mesmos princípios e técnicas são usadas quando você deseja começar a modificar e adicionar dados.</p>
 
 <p>Em nosso próximo artigo, veremos como você pode usar os formulários Django para coletar entradas do usuário, e então começar a modificar alguns dos nossos dados armazenados.</p>
 
@@ -665,7 +665,7 @@ class MyView(PermissionRequiredMixin, View):
 
 <ul>
  <li><a href="https://docs.djangoproject.com/en/2.1/topics/auth/">Autenticação de usuário no Django</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/topics/auth/default//">Usando o sistema (default) de Autenticação do Django</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/topics/auth/default//">Usando o sistema (default) de Autenticação do Django</a> (Django docs)</li>
  <li><a href="https://docs.djangoproject.com/en/2.1/topics/class-based-views/intro/#decorating-class-based-views">Introdução a views baseadas em classe &gt; Decorating class-based views</a> (Django docs)</li>
 </ul>
 
@@ -677,16 +677,16 @@ class MyView(PermissionRequiredMixin, View):
  <li><a href="/pt-BR/docs/Learn/Server-side/Django/Introduction">Introdução ao Django</a></li>
  <li><a href="/pt-BR/docs/Learn/Server-side/Django/development_environment">Configurando um ambiente de desenvolvimento Django</a></li>
  <li><a href="/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial Django: Website de uma Biblioteca Local</a></li>
- <li><a href="/pt-BR/docs/Learn/Server-side/Django/skeleton_website">Tutorial Django Parte 2: Criando a base do website</a></li>
- <li><a href="/pt-BR/docs/Learn/Server-side/Django/Models">Tutorial Django Parte 3: Usando models</a></li>
- <li><a href="/pt-BR/docs/Learn/Server-side/Django/Admin_site">Tutorial Django Parte 4: Django admin site</a></li>
- <li><a href="/pt-BR/docs/Learn/Server-side/Django/Home_page">Tutorial Django Parte 5: Criando nossa página principal</a></li>
- <li><a href="/pt-BR/docs/Learn/Server-side/Django/Generic_views">Tutorial Django Parte 6: Lista genérica e detail views</a></li>
- <li><a href="/pt-BR/docs/Learn/Server-side/Django/Sessions">Tutorial Django Parte 7: Framework de Sessões</a></li>
- <li><a href="/pt-BR/docs/Learn/Server-side/Django/Authentication">Tutorial Django Parte 8: Autenticação de Usuário e permissões</a></li>
- <li><a href="/pt-BR/docs/Learn/Server-side/Django/Forms">Tutorial Django Parte 9: Trabalhando com formulários</a></li>
- <li><a href="/pt-BR/docs/Learn/Server-side/Django/Testing">Tutorial Django Parte 10: Testando uma aplicação web Django</a></li>
- <li><a href="/pt-BR/docs/Learn/Server-side/Django/Deployment">Tutorial Django Parte 11: Implantando Django em produção</a></li>
+ <li><a href="/pt-BR/docs/Learn/Server-side/Django/skeleton_website">Tutorial Django Parte 2: Criando a base do website</a></li>
+ <li><a href="/pt-BR/docs/Learn/Server-side/Django/Models">Tutorial Django Parte 3: Usando models</a></li>
+ <li><a href="/pt-BR/docs/Learn/Server-side/Django/Admin_site">Tutorial Django Parte 4: Django admin site</a></li>
+ <li><a href="/pt-BR/docs/Learn/Server-side/Django/Home_page">Tutorial Django Parte 5: Criando nossa página principal</a></li>
+ <li><a href="/pt-BR/docs/Learn/Server-side/Django/Generic_views">Tutorial Django Parte 6: Lista genérica e detail views</a></li>
+ <li><a href="/pt-BR/docs/Learn/Server-side/Django/Sessions">Tutorial Django Parte 7: Framework de Sessões</a></li>
+ <li><a href="/pt-BR/docs/Learn/Server-side/Django/Authentication">Tutorial Django Parte 8: Autenticação de Usuário e permissões</a></li>
+ <li><a href="/pt-BR/docs/Learn/Server-side/Django/Forms">Tutorial Django Parte 9: Trabalhando com formulários</a></li>
+ <li><a href="/pt-BR/docs/Learn/Server-side/Django/Testing">Tutorial Django Parte 10: Testando uma aplicação web Django</a></li>
+ <li><a href="/pt-BR/docs/Learn/Server-side/Django/Deployment">Tutorial Django Parte 11: Implantando Django em produção</a></li>
  <li><a rel="nofollow" title="A página ainda não foi criada.">Segurança de aplicações web Django</a></li>
  <li><a href="/pt-BR/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>
 </ul>

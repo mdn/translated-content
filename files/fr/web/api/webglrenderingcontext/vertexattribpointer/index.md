@@ -15,7 +15,9 @@ La méthode **`WebGLRenderingContext.vertexAttribPointer()`** de l'[API WebGL](/
 
 ## Syntaxe
 
-    void gl.vertexAttribPointer(indice, taille, type, normalise, pas, decalage);
+```js
+void gl.vertexAttribPointer(indice, taille, type, normalise, pas, decalage);
+```
 
 ### Paramètres
 
@@ -98,9 +100,9 @@ Vous pouvez appeler {{domxref ("WebGLRenderingContext.getVertexAttrib()", "gl.ge
 
 Cet exemple montre comment envoyer vos attributs de sommet au programme shader. Nous utilisons une structure de données imaginaire, dans laquelle les attributs de chaque sommet sont stockés entrelacés avec une longueur de 20 octets par sommet :
 
-1.  **position :** nous devons stocker les coordonnées X, Y et Z. Pour une précision maximale, nous utilisons des flottants 32 bits ; au total, cela utilise 12 octets ;
-2.  **vecteur normal :** nous avons besoin de stocker les composantes X, Y et Z du vecteur normal, mais comme la précision n'est pas si importante que cela, nous utilisons des entiers signés sur 8 bits. Pour de meilleures performances, nous alignons les données sur 32 bits en stockant également une quatrième composante de valeur zéro, ce qui porte la taille totale à 4 octets. Également, nous indiquons à WebGL de normaliser les valeurs, car nos normales sont toujours dans la plage \[-1, 1] ;
-3.  **coordonnées de texture :** nous avons besoin de stocker les coordonnées U et V ; pour que ces nombres entiers non signés sur 16 bits offrent suffisamment de précision, la taille totale est de 4 octets. Nous indiquons également à WebGL de normaliser les valeurs à \[0, 1].
+1. **position :** nous devons stocker les coordonnées X, Y et Z. Pour une précision maximale, nous utilisons des flottants 32 bits ; au total, cela utilise 12 octets ;
+2. **vecteur normal :** nous avons besoin de stocker les composantes X, Y et Z du vecteur normal, mais comme la précision n'est pas si importante que cela, nous utilisons des entiers signés sur 8 bits. Pour de meilleures performances, nous alignons les données sur 32 bits en stockant également une quatrième composante de valeur zéro, ce qui porte la taille totale à 4 octets. Également, nous indiquons à WebGL de normaliser les valeurs, car nos normales sont toujours dans la plage \[-1, 1] ;
+3. **coordonnées de texture :** nous avons besoin de stocker les coordonnées U et V ; pour que ces nombres entiers non signés sur 16 bits offrent suffisamment de précision, la taille totale est de 4 octets. Nous indiquons également à WebGL de normaliser les valeurs à \[0, 1].
 
 Par exemple, le sommet suivant :
 

@@ -14,16 +14,18 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toDateString
 
 La méthode **`toDateString()`** renvoie la date contenue dans un objet {{jsxref("Date")}} sous la forme d'une chaîne de caractères lisible par un humain, en anglais américain et au format suivant :
 
-1.  Les trois premières lettre indiquent le jour
-2.  Les trois lettres suivantes indiquent le mois
-3.  Les deux chiffres suivants indiquent le jour du mois (et sont complétés avec un 0 devant si besoin)
-4.  Les quatre chiffres restants indiquent l'année (si besoin complétées avec des 0 comme préfixe)
+1. Les trois premières lettre indiquent le jour
+2. Les trois lettres suivantes indiquent le mois
+3. Les deux chiffres suivants indiquent le jour du mois (et sont complétés avec un 0 devant si besoin)
+4. Les quatre chiffres restants indiquent l'année (si besoin complétées avec des 0 comme préfixe)
 
 {{EmbedInteractiveExample("pages/js/date-todatestring.html")}}
 
 ## Syntaxe
 
-    dateObj.toDateString()
+```js
+dateObj.toDateString()
+```
 
 ### Valeur de retour
 

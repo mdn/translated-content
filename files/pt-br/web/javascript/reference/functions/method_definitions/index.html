@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Functions/Definicoes_metodos
 ---
 <div>{{JsSidebar("Functions")}}</div>
 
-<p>No ECMAScript 2015 foi introduzida uma sintaxe reduzida para definição de métodos em inicializadores de objetos. É uma abreviação para uma função atribuída ao nome do método.</p>
+<p>No ECMAScript 2015 foi introduzida uma sintaxe reduzida para definição de métodos em inicializadores de objetos. É uma abreviação para uma função atribuída ao nome do método.</p>
 
 <p>{{EmbedInteractiveExample("pages/js/functions-definitions.html")}}</p>
 
@@ -36,7 +36,7 @@ original_slug: Web/JavaScript/Reference/Functions/Definicoes_metodos
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>A sintaxe reduzida é similar à da <a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a> e <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a>  introduzida no ECMAScript 5.</p>
+<p>A sintaxe reduzida é similar à da <a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a> e <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a>  introduzida no ECMAScript 5.</p>
 
 <p>Dado o seguinte código:</p>
 
@@ -49,15 +49,15 @@ original_slug: Web/JavaScript/Reference/Functions/Definicoes_metodos
 
 <pre class="brush: js">var obj = {
   foo() {},
-  bar() {}
+  bar() {}
 };</pre>
 
 <h3 id="Generator_methods">Generator methods</h3>
 
-<p>Os <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/function*">generator methods</a> também podem ser definidos utilizando a sintaxe reduzida.</p>
+<p>Os <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/function*">generator methods</a> também podem ser definidos utilizando a sintaxe reduzida.</p>
 
 <ul>
- <li>Observe que o asterisco (*) na sintaxe reduzida deve estar antes do nome da propriedade generator. Assim, <code>* g(){}</code> funcionará, porém <code>g *(){}</code> não.</li>
+ <li>Observe que o asterisco (*) na sintaxe reduzida deve estar antes do nome da propriedade generator. Assim, <code>* g(){}</code> funcionará, porém <code>g *(){}</code> não.</li>
  <li>Se o método não for generator, sua definição não pode conter a palavra-chave <code>yield</code>. Dessa forma, <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/Generator_function_legada">generator functions legadas </a>também não funcionarão, lançando um {{jsxref("SyntaxError")}}. Sempre utilize <code>yield</code> em conjunto com o asterisco (*)</li>
 </ul>
 
@@ -103,7 +103,7 @@ console.log(coisa.next().value); // 1</pre>
 
 <h3 id="Generator_methods_assíncronos">Generator methods assíncronos</h3>
 
-<p>  Os <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/function*">generator methods</a> também podem ser {{jsxref("Statements/funcoes_assincronas", "assíncronos", "", 1)}}</p>
+<p>  Os <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/function*">generator methods</a> também podem ser {{jsxref("Statements/funcoes_assincronas", "assíncronos", "", 1)}}</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> obj4 <span class="operator token">=</span> <span class="punctuation token">{</span>
   f<span class="punctuation token">:</span> <span class="keyword token">async</span> <span class="keyword token">function</span><span class="operator token">*</span> <span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
@@ -179,7 +179,7 @@ console.log(bar.foo2()); // 2</pre>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

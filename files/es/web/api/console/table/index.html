@@ -13,17 +13,17 @@ original_slug: Web/API/Console/tabla
 
 <p><span class="seoSummary">Muestra datos tabulares como una tabla.</span></p>
 
-<p>Esta función toma un argumento obligatorio: <code>data</code>, que debe ser un array o un objeto, y un parámetro adicional: <code>columns</code>.</p>
+<p>Esta función toma un argumento obligatorio: <code>data</code>, que debe ser un array o un objeto, y un parámetro adicional: <code>columns</code>.</p>
 
-<p>Muestra <code>data</code> como una tabla en la consola. Cada elemento en el array (o propiedad enumerable si <code>data</code> es un objeto) será una fila en la tabla.</p>
+<p>Muestra <code>data</code> como una tabla en la consola. Cada elemento en el array (o propiedad enumerable si <code>data</code> es un objeto) será una fila en la tabla.</p>
 
-<p>La primera columna de la tabla se identificará como <code>(index)</code>. Si <code>data</code> es un array, sus valores serán los índices del array. Si <code>data</code> es un objeto, entonces sus valores serán los nombres de las propiedades. Tenga en cuenta que (en Firefox) <code>console.table</code> está limitado a mostrar 1000 filas (la primera columna es la llamada <code>index</code>).</p>
+<p>La primera columna de la tabla se identificará como <code>(index)</code>. Si <code>data</code> es un array, sus valores serán los índices del array. Si <code>data</code> es un objeto, entonces sus valores serán los nombres de las propiedades. Tenga en cuenta que (en Firefox) <code>console.table</code> está limitado a mostrar 1000 filas (la primera columna es la llamada <code>index</code>).</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h3 id="Colecciones_de_tipos_primitivos">Colecciones de tipos primitivos</h3>
 
-<p>El argumento <code>data</code> puede ser un array o un objeto.</p>
+<p>El argumento <code>data</code> puede ser un array o un objeto.</p>
 
 <pre class="brush: js">// un array de strings
 
@@ -34,8 +34,8 @@ console.table(["apples", "oranges", "bananas"]);</pre>
 <pre class="brush: js">// un objeto cuyas propiedades son strings
 
 function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
+  this.firstName = firstName;
+  this.lastName = lastName;
 }
 
 var me = new Person("John", "Smith");
@@ -68,7 +68,7 @@ var emily = new Person("Emily", "Jones");
 
 console.table([john, jane, emily]);</pre>
 
-<p>Tenga en cuenta que si el array contiene objetos, las columnas se etiquetarán con el nombre de la propiedad.</p>
+<p>Tenga en cuenta que si el array contiene objetos, las columnas se etiquetarán con el nombre de la propiedad.</p>
 
 <p><img alt="Table displaying array of objects" src="https://mdn.mozillademos.org/files/8563/console-table-array-of-objects.png"></p>
 
@@ -86,7 +86,7 @@ console.table(family);</pre>
 
 <h3 id="Restringiendo_las_columnas_mostradas">Restringiendo las columnas mostradas</h3>
 
-<p>Por defecto, <code>console.table()</code> muestra todos los elementos de cada fila. Puedes emplear el parámetro opcional <code>columns</code>  para seleccionar un subconjunto de columnas que mostrar:</p>
+<p>Por defecto, <code>console.table()</code> muestra todos los elementos de cada fila. Puedes emplear el parámetro opcional <code>columns</code>  para seleccionar un subconjunto de columnas que mostrar:</p>
 
 <pre class="brush: js">// an array of objects, logging only firstName
 
@@ -105,7 +105,7 @@ console.table([john, jane, emily], ["firstName"]);</pre>
 
 <h3 id="Ordenando_columnas">Ordenando columnas</h3>
 
-<p>Se puede ordenar la tabla por una columna en particular pulsando en la etiqueta de dicha columna.</p>
+<p>Se puede ordenar la tabla por una columna en particular pulsando en la etiqueta de dicha columna.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 

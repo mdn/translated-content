@@ -41,7 +41,7 @@ translation_of: Web/API/Document/getElementsByClassName
 
 <pre class="brush: js">document.getElementById('main').getElementsByClassName('test');</pre>
 
-<p>Man kann auch Methoden von Array.prototype auf {{ domxref("HTMLCollection") }} anwenden, in dem die <var>HTMLCollection</var>  in dem sie an die <var>this</var> Werte der Methoden übergeben wird. Hier finden wir alle div-Elemente der Klasse 'test':</p>
+<p>Man kann auch Methoden von Array.prototype auf {{ domxref("HTMLCollection") }} anwenden, in dem die <var>HTMLCollection</var>  in dem sie an die <var>this</var> Werte der Methoden übergeben wird. Hier finden wir alle div-Elemente der Klasse 'test':</p>
 
 <pre class="brush: js">var testElements = document.getElementsByClassName('test');
 var testDivs = Array.prototype.filter.call(testElements, function(testElement){
@@ -50,53 +50,7 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 <h2 id="Browserkompabilität">Browserkompabilität</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>3.0</td>
-   <td>9.0</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Specification" name="Specification">Spezifikation</h2>
 

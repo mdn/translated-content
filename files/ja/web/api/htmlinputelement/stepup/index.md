@@ -139,14 +139,14 @@ button.addEventListener('click', function() {
 })
 
 function steponup() {
-  let input = document.getElementById('theNumber')
-  let val = document.getElementById('incrementer').value
+  let input = document.getElementById('theNumber')
+  let val = document.getElementById('incrementer').value
 
-  if (val) {  /* 引数付きで加算 */
-    input.stepUp(val)
-  } else {    /* 引数なしで加算。 0 を試してください。 */
-    input.stepUp()
-  }
+  if (val) {  /* 引数付きで加算 */
+    input.stepUp(val)
+  } else {    /* 引数なしで加算。 0 を試してください。 */
+    input.stepUp()
+  }
 }
 ```
 

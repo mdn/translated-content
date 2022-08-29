@@ -15,7 +15,9 @@ La propriété **`host`** est une propriété en lecture seule, rattachée à l'
 
 ## Syntaxe
 
-    var element = shadowRoot.host
+```js
+var element = shadowRoot.host
+```
 
 ### Valeur
 

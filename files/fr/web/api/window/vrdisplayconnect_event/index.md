@@ -11,7 +11,7 @@ translation_of: Web/API/Window/vrdisplayconnect_event
 ---
 {{APIRef("Window")}}
 
-L'événement **`vrdisplayconnect`** de l'[API WebVR](/en-US/docs/Web/API/WebVR_API) est déclenché lorsqu'un écran VR compatible est connecté à l'ordinateur.
+L'événement **`vrdisplayconnect`** de l'[API WebVR](/fr/docs/Web/API/WebVR_API) est déclenché lorsqu'un écran VR compatible est connecté à l'ordinateur.
 
 <table class="properties">
   <tbody>
@@ -42,7 +42,7 @@ L'événement **`vrdisplayconnect`** de l'[API WebVR](/en-US/docs/Web/API/WebVR_
 
 ## Exemples
 
-Vous pouvez utiliser l'événement `vrdisplayconnect` dans une méthode [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) :
+Vous pouvez utiliser l'événement `vrdisplayconnect` dans une méthode [`addEventListener`](/fr/docs/Web/API/EventTarget/addEventListener) :
 
 ```js
 window.addEventListener('vrdisplayconnect', function() {
@@ -51,7 +51,7 @@ window.addEventListener('vrdisplayconnect', function() {
 });
 ```
 
-Ou utilisez la propriété du gestionnaire d'événements [`onvrdisplayconnect`](/en-US/docs/Web/API/Window/onvrdisplayconnect) :
+Ou utilisez la propriété du gestionnaire d'événements [`onvrdisplayconnect`](/fr/docs/Web/API/Window/onvrdisplayconnect) :
 
 ```js
 window.onvrdisplayconnect = function() {
@@ -72,5 +72,5 @@ window.onvrdisplayconnect = function() {
 
 ## Voir également
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
+- [WebVR API homepage](/fr/docs/Web/API/WebVR_API)
 - [MozVr.com](http://mozvr.com/) — démos, téléchargements et autres ressources de l'équipe Mozilla VR.

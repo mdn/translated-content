@@ -65,7 +65,7 @@ translation_of: Web/Manifest
 }
 ```
 
-## マニフェストの展開<
+## マニフェストの展開
 
 ウェブアプリマニフェストは、文書の {{HTMLElement("head")}} 内の {{HTMLElement("link")}} 要素を使用して HTML ページから展開されます。
 

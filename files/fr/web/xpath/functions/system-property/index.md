@@ -12,7 +12,9 @@ La fonction `system-property()` retourne un objet représentant la propriété s
 
 ### Syntaxe
 
-    system-property( nom )
+```
+system-property( nom )
+```
 
 ### Arguments
 

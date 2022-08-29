@@ -94,86 +94,88 @@ Pour mettre en œuvre le marquage sémantique, HTML fournit des balises dédiée
 
 Notre exemple affiché plus haut est représenté par le code ci‑après (vous le trouverez également [dans le dépôt Github](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html)). Nous aimerions que vous regardiez cet exemple et que vous recherchiez dans le listing suivant les sections constituant les diverses parties du visuel.
 
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
 
-        <title>Intitulé de ma page</title>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="style.css">
+    <title>Intitulé de ma page</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
 
-        <!-- Les trois lignes ci‑dessous sont un correctif pour que la sémantique
-             HTML5 fonctionne correctement avec les anciennes versions de
-             Internet Explorer-->
-        <!--[if lt IE 9]>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-        <![endif]-->
-      </head>
+    <!-- Les trois lignes ci‑dessous sont un correctif pour que la sémantique
+          HTML5 fonctionne correctement avec les anciennes versions de
+          Internet Explorer-->
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-      <body>
-        <!-- Voici notre en‑tête principale utilisée dans toutes les pages
-             de notre site web -->
-        <header>
-          <h1>En-tête</h1>
-        </header>
+  <body>
+    <!-- Voici notre en‑tête principale utilisée dans toutes les pages
+          de notre site web -->
+    <header>
+      <h1>En-tête</h1>
+    </header>
 
-        <nav>
-          <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">L'équipe</a></li>
-            <li><a href="#">Projets</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+    <nav>
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">L'équipe</a></li>
+        <li><a href="#">Projets</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
 
-           <!-- Un formulaire de recherche est une autre façon de naviguer de
-                façon non‑linéaire dans un site. -->
+        <!-- Un formulaire de recherche est une autre façon de naviguer de
+            façon non‑linéaire dans un site. -->
 
-           <form>
-             <input type="search" name="q" placeholder="Rechercher">
-             <input type="submit" value="Lancer !">
-           </form>
-         </nav>
+        <form>
+          <input type="search" name="q" placeholder="Rechercher">
+          <input type="submit" value="Lancer !">
+        </form>
+      </nav>
 
-        <!-- Ici nous mettons le contenu de la page -->
-        <main>
+    <!-- Ici nous mettons le contenu de la page -->
+    <main>
 
-          <!-- Il contient un article -->
-          <article>
-            <h2>En-tête d'article</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
+      <!-- Il contient un article -->
+      <article>
+        <h2>En-tête d'article</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
 
-            <h3>Sous‑section</h3>
-            <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
-            <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
+        <h3>Sous‑section</h3>
+        <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
+        <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
 
-            <h3>Autre sous‑section</h3>
-            <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
-            <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
-          </article>
+        <h3>Autre sous‑section</h3>
+        <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+        <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
+      </article>
 
-          <!-- Le contenu « à côté » peut aussi être intégré dans le contenu
-               principal -->
-          <aside>
-            <h2>En relation</h2>
-            <ul>
-              <li><a href="#">Combien j'aime être près des rivages</a></li>
-              <li><a href="#">Combien j'aime être près de la mer</a></li>
-              <li><a href="#">Bien que dans le nord de l'Angleterre</a></li>
-              <li><a href="#">Il n'arrête jamais de pleuvoir</a></li>
-              <li><a href="#">Eh bien…</a></li>
-            </ul>
-          </aside>
+      <!-- Le contenu « à côté » peut aussi être intégré dans le contenu
+            principal -->
+      <aside>
+        <h2>En relation</h2>
+        <ul>
+          <li><a href="#">Combien j'aime être près des rivages</a></li>
+          <li><a href="#">Combien j'aime être près de la mer</a></li>
+          <li><a href="#">Bien que dans le nord de l'Angleterre</a></li>
+          <li><a href="#">Il n'arrête jamais de pleuvoir</a></li>
+          <li><a href="#">Eh bien…</a></li>
+        </ul>
+      </aside>
 
-        </main>
+    </main>
 
-        <!-- Et voici notre pied de page utilisé sur toutes les pages du site -->
-        <footer>
-          <p>©Copyright 2050 par personne. Tous droits reversés.</p>
-        </footer>
+    <!-- Et voici notre pied de page utilisé sur toutes les pages du site -->
+    <footer>
+      <p>©Copyright 2050 par personne. Tous droits reversés.</p>
+    </footer>
 
-      </body>
-    </html>
+  </body>
+</html>
+```
 
 Prenez le temps voulu pour regarder ce code et le comprendre — les commentaires inclus doivent également vous aider à comprendre. Il n'y a pas grand-chose d'autre à faire dans cet article, car la clé pour comprendre une mise en page de document est d'écrire une bonne structure HTML, puis de la mettre en page avec les CSS. Nous attendrons donc que vous ayez commencé à étudier la mise en page avec les CSS.
 
@@ -263,11 +265,11 @@ sera rendu ainsi&nbsp;:
 
 Une fois planifié le contenu d'une simple page Web, l'étape logique suivante est d'essayer de déterminer le contenu que vous voulez mettre sur le site Web en entier, les pages dont vous avez besoin et la façon dont elles doivent être organisées et les liens les unes vers les autres pour la meilleure expérience utilisateur possible. C'est ce qu'on appelle {{glossary("Information architecture")}} (architecture de l'information). Dans un grand site web complexe, beaucoup de planification peut entrer dans ce processus, mais pour un simple site Web de quelques pages, cela peut être assez simple et amusant !
 
-1.  Gardez à l'esprit que vous aurez quelques éléments communs à la plupart des pages (sinon à toutes) — comme le menu de navigation et le contenu du pied de page. Si votre site est destiné à une entreprise, par exemple, c'est une bonne idée d'avoir les informations de contact dans le pied de page de chaque page. Notez ce que vous voulez avoir en commun dans chaque page. ![les caractéristiques communes du site de voyage pour aller sur chaque page : titre et logo, contact, copyright, termes et conditions, choix de la langue, politique d'accessibilité.](fr_commun.png)
-2.  Ensuite, dessinez une esquisse de ce à quoi vous voudriez que la structure de chaque page ressemble (elle pourrait ressembler à notre simple site Web ci-dessus.) Notez ce que chaque bloc va être. ![Un diagramme simple d'une structure d'exemple de site, avec un en-tête, une zone de contenu principal, deux barres latérales optionnelles et un pied de page.](fr-structure.png)
-3.  Maintenant, faites un remue-méninges sur tous les autres contenus (qui ne sont pas communs à toutes les pages) que vous voulez avoir sur votre site Web - écrivez une grande liste. ![Une longue liste de toutes les fonctionnalités que nous pourrions mettre sur notre site de voyage, de la recherche, aux offres spéciales et aux informations spécifiques à chaque pays.](fr-liste.png)
-4.  Ensuite, essayez de trier tous ces éléments de contenu par groupes, pour vous donner une idée des parties qui pourraient aller ensemble sur diverses pages. C'est très similaire à une technique appelée {{glossary("Card sorting","Tri de cartes")}}.![Les articles qui devraient apparaître sur un site de vacances triés en 5 catégories : Recherche, spéciaux, informations spécifiques au pays, résultats de la recherche et choses à acheter.](fr-tri.png)
-5.  Essayez maintenant d'esquisser un plan de site grossier — entourez d'un cercle chaque page de votre site et tracez des flèches pour montrer les flux de travail typiques entre pages. La page d'accueil sera probablement au centre et en lien vers la plupart sinon la totalité des autres ; la plupart des pages d'un petit site devraient être disponibles à partir de la navigation principale, bien qu'il y ait des exceptions. Vous voudrez peut-être aussi ajouter des notes sur la présentation des choses. ![Une carte du site montrant la page d'accueil, la page du pays, les résultats de recherche, la page spéciale, la page de paiement et la page d'achat.](fr-map.png)
+1. Gardez à l'esprit que vous aurez quelques éléments communs à la plupart des pages (sinon à toutes) — comme le menu de navigation et le contenu du pied de page. Si votre site est destiné à une entreprise, par exemple, c'est une bonne idée d'avoir les informations de contact dans le pied de page de chaque page. Notez ce que vous voulez avoir en commun dans chaque page. ![les caractéristiques communes du site de voyage pour aller sur chaque page : titre et logo, contact, copyright, termes et conditions, choix de la langue, politique d'accessibilité.](fr_commun.png)
+2. Ensuite, dessinez une esquisse de ce à quoi vous voudriez que la structure de chaque page ressemble (elle pourrait ressembler à notre simple site Web ci-dessus.) Notez ce que chaque bloc va être. ![Un diagramme simple d'une structure d'exemple de site, avec un en-tête, une zone de contenu principal, deux barres latérales optionnelles et un pied de page.](fr-structure.png)
+3. Maintenant, faites un remue-méninges sur tous les autres contenus (qui ne sont pas communs à toutes les pages) que vous voulez avoir sur votre site Web - écrivez une grande liste. ![Une longue liste de toutes les fonctionnalités que nous pourrions mettre sur notre site de voyage, de la recherche, aux offres spéciales et aux informations spécifiques à chaque pays.](fr-liste.png)
+4. Ensuite, essayez de trier tous ces éléments de contenu par groupes, pour vous donner une idée des parties qui pourraient aller ensemble sur diverses pages. C'est très similaire à une technique appelée {{glossary("Card sorting","Tri de cartes")}}.![Les articles qui devraient apparaître sur un site de vacances triés en 5 catégories : Recherche, spéciaux, informations spécifiques au pays, résultats de la recherche et choses à acheter.](fr-tri.png)
+5. Essayez maintenant d'esquisser un plan de site grossier — entourez d'un cercle chaque page de votre site et tracez des flèches pour montrer les flux de travail typiques entre pages. La page d'accueil sera probablement au centre et en lien vers la plupart sinon la totalité des autres ; la plupart des pages d'un petit site devraient être disponibles à partir de la navigation principale, bien qu'il y ait des exceptions. Vous voudrez peut-être aussi ajouter des notes sur la présentation des choses. ![Une carte du site montrant la page d'accueil, la page du pays, les résultats de recherche, la page spéciale, la page de paiement et la page d'achat.](fr-map.png)
 
 ### Apprentissage actif&nbsp;: créez la cartographie de votre propre site
 

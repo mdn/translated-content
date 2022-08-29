@@ -15,6 +15,6 @@ PHP est un langage de script côté serveur conçu pour le développement web ma
 ## Pour approfondir
 
 - [PHP - Site officiel](http://php.net/)
-- {{Interwiki("wikipedia", "PHP")}} sur Wikipédia
+- [PHP](https://fr.wikipedia.org/wiki/PHP) sur Wikipédia
 - [PHP](https://fr.wikibooks.org/wiki/Programmation_PHP) sur Wikibooks
 - [Intro to PHP W3Schools](https://www.w3schools.com/PhP/php_intro.asp) (en)

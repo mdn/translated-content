@@ -5,7 +5,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 ---
 <div>{{JSRef}} {{SeeCompatTable}}</div>
 
-<p>O método <strong><code>flatMap()</code></strong> primeiro mapeia cada elemento usando uma função de mapeamento e, em seguida, nivela o resultado em um novo array. É idêntico a um <code>map</code> seguido por um <code>flat</code> de profundidade 1, mas <strong><code>flatMap</code></strong> é bastante útil e mescla ambos em um método um pouco mais eficiente.\{{EmbedInteractiveExample("pages/js/array-flatmap.html")}}</p>
+<p>O método <strong><code>flatMap()</code></strong> primeiro mapeia cada elemento usando uma função de mapeamento e, em seguida, nivela o resultado em um novo array. É idêntico a um <code>map</code> seguido por um <code>flat</code> de profundidade 1, mas <strong><code>flatMap</code></strong> é bastante útil e mescla ambos em um método um pouco mais eficiente.</p>
+
+<div>{{EmbedInteractiveExample("pages/js/array-flatmap.html","shorter")}}</div>
 
 <p class="hidden">A fonte deste exemplo interativo é armazenada em um repositório GitHub. Se você quiser contribuir com o projeto de exemplos interativos, clone https://github.com/mdn/interactive-examples e envie-nos um PR</p>
 
@@ -73,9 +75,9 @@ arr1.flatMap(x =&gt; x.split(" ")<span class="js source"><span class="function-c
 // ["it's","Sunny","in", "", "California"]</span></span></span></span>
 </pre>
 
-<p>Perceba, o comprimento da lista de saída pode ser diferente do comprimento da lista de entrada.</p>
+<p>Perceba, o comprimento da lista de saída pode ser diferente do comprimento da lista de entrada.</p>
 
-<div class="line"><span class="js source"><span class="comment double-slash js line"><span class="comment definition js punctuation"><span>//</span></span><span>=&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span></span></div>
+<div class="line"><span class="js source"><span class="comment double-slash js line"><span class="comment definition js punctuation"></div>
 
 <h2 id="Alternativa">Alternativa</h2>
 
@@ -86,10 +88,8 @@ arr1.flatMap(x =&gt; x.split(" ")<span class="js source"><span class="function-c
 arr1.flatMap(x =&gt; [x * 2]<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>);</span></span></span></span></span>
 // é equivalente a
 arr1.reduce((acc, x) =&gt; acc.concat([x * 2]<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>), []);</span></span></span></span></span>
-<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>// [2, 4, 6, 8]</span></span></span></span></span>
+// [ 2, 4, 6, 8 ]
 </pre>
-
-<div class="line"><span class="js source"><span class="comment double-slash js line"><span class="comment definition js punctuation"><span>//</span></span><span>=&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span></span></div>
 
 <h2 id="Especificações">Especificações</h2>
 

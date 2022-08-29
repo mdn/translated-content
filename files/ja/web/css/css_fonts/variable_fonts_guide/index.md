@@ -53,15 +53,15 @@ translation_of: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
 
 #### メモ
 
-1.  `font-variation-settings` を使用する際には、軸名の大文字と小文字が区別されることに注意する必要があります。登録済みの軸名は小文字で、カスタム軸は大文字でなければなりません。例えば、以下のようになります。
+1. `font-variation-settings` を使用する際には、軸名の大文字と小文字が区別されることに注意する必要があります。登録済みの軸名は小文字で、カスタム軸は大文字でなければなりません。例えば、以下のようになります。
 
     ```css
     font-variation-settings: 'wght' 375, 'GRAD' 88;
     ```
 
-    `wght` (太さ) は登録済みの軸で、`GRAD` (等級) はカスタム軸です。
+    `wght` (太さ) は登録済みの軸で、`GRAD` (等級) はカスタム軸です。
 
-2.  `font-variation-settings` を使って値を設定していて、そのうちの 1 つの値を変更したい場合は、すべての値を再宣言しなければなりません ({{cssxref("font-feature-settings")}} を使って OpenType フォントの特性を設定したときと同じ方法です)。この制限を回避するには、個々の値に [CSS カスタムプロパティ](/ja/docs/Web/CSS/Using_CSS_custom_properties) (CSS 変数)を使用し、個々のカスタムプロパティの値を変更してください。ガイドの最後にサンプルコードを掲載しています。
+2. `font-variation-settings` を使って値を設定していて、そのうちの 1 つの値を変更したい場合は、すべての値を再宣言しなければなりません ({{cssxref("font-feature-settings")}} を使って OpenType フォントの特性を設定したときと同じ方法です)。この制限を回避するには、個々の値に [CSS カスタムプロパティ](/ja/docs/Web/CSS/Using_CSS_custom_properties) (CSS 変数)を使用し、個々のカスタムプロパティの値を変更してください。ガイドの最後にサンプルコードを掲載しています。
 
 ### 太さ (Weight)
 
@@ -99,7 +99,7 @@ font-variation-settings: 'wdth' 115;
 
 イタリック (`ital`) 軸は、オンかオフのどちらかであるという点で動作が異なり、その中間はありません。イタリックのデザインには、正立のデザインとは大きく異なる字形が含まれていることが多く、正立からイタリックへの移行の際には、通常、いくつかのグリフ (または文字) の置換が行われます。イタリックと斜体は同じように使われることが多いのですが、実際には全く異なるものです。斜体はこの文脈では `slant` という用語で定義されており (下の節を参照)、書体は通常どちらか一方を持ちますが、両方を持つことはありません。
 
-CSS では、{{cssxref("font-style")}} プロパティを使用して、イタリックと斜体の両方をテキストに適用します。 また、`font-synthesis: none;` が導入され、ブラウザーが誤って変動軸と合成されたイタリックを適用するのを防ぐことができます。これは、擬似太字を防ぐためにも使用できます。
+CSS では、{{cssxref("font-style")}} プロパティを使用して、イタリックと斜体の両方をテキストに適用します。 また、`font-synthesis: none;` が導入され、ブラウザーが誤って変動軸と合成されたイタリックを適用するのを防ぐことができます。これは、擬似太字を防ぐためにも使用できます。
 
 ```css
 font-style: italic;
@@ -117,7 +117,7 @@ font-synthesis: none;
 
 斜体 (`slnt`タグで表される) は、または 'oblique' とも良く呼ばれますが、文字の角度を変えるという点で真のイタリックとは異なりますが、何らかの文字の置換を行うわけではありません。また、数値の範囲で表現されるという点で、可変性があります。これにより、フォントをその軸に沿ってどこでも変化させることができます。許容される範囲は通常 0 (直立) から 20 度で、その範囲内の任意の数値を与えることができるので、フォントをほんの少しだけ斜めにすることができます。ただし、-90 〜 90 度の範囲であれば、どのような値でも有効です。
 
-> **Note:** `deg` キーワードは `font-variation-settings` を使用する上では不要です。
+> **Note:** `deg` キーワードは `font-variation-settings` を使用する上では不要です。
 
 ```css
 font-style: oblique 14deg;
@@ -179,7 +179,7 @@ font-variation-settings: 'GRAD' 88;
  src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
  font-weight: 125 950;
  font-stretch: 75% 125%;
- font-style: normal;
+ font-style: normal;
 }
 ```
 
@@ -191,7 +191,7 @@ font-variation-settings: 'GRAD' 88;
  src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
  font-weight: 125 950;
  font-stretch: 75% 125%;
- font-style: oblique 0deg 20deg;
+ font-style: oblique 0deg 20deg;
 }
 ```
 
@@ -205,7 +205,7 @@ font-variation-settings: 'GRAD' 88;
  src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
  font-weight: 125 950;
  font-stretch: 75% 125%;
- font-style: italic;
+ font-style: italic;
 }
 ```
 
@@ -217,7 +217,7 @@ font-variation-settings: 'GRAD' 88;
  src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
  font-weight: 125 950;
  font-stretch: 75% 125%;
- font-style: oblique 0deg 12deg;
+ font-style: oblique 0deg 12deg;
 }
 ```
 

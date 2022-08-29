@@ -42,7 +42,7 @@ Le contenu de repli pourrait, par exemple, donner une description texte du canva
 </canvas>
 
 <canvas id="clock" width="150" height="150">
-  <img src="images/clock.png" width="150" height="150" alt=""/>
+  <img src="images/clock.png" width="150" height="150" alt="une horloge"/>
 </canvas>
 ```
 

@@ -101,7 +101,7 @@ scene.add(camera);
 <p>Стоит поэкспериментировать с этими значениями, чтобы лучше разобраться в том, как они влияют на отрисовку сцены.</p>
 
 <div class="note">
-<p><strong>На заметку</strong>: значения позиции  (например координата z) безразмерны, устанавливайте их так, чтобы вам было удобно с ними работать.</p>
+<p><strong>На заметку</strong>: значения позиции  (например координата z) безразмерны, устанавливайте их так, чтобы вам было удобно с ними работать.</p>
 </div>
 
 <h2 id="Отрисовка_сцены">Отрисовка сцены</h2>
@@ -155,7 +155,7 @@ render();
 <pre class="brush: js">scene.add(cube);
 </pre>
 
-<p>Если вы сохраните код и обновите вкладку браузера, вы увидите квадрат, а не куб, потому, что он стоит ровно напротив камеры и мы видим только одну сторону. У объектов есть полезное свойство - мы можем изменять их как хотим. Например, вы можете вращать его и масштабировать, сколько угодно. Что давайте немного повернём его, чтобы видеть больше сторон.  Добавить в конец кода эту строку:</p>
+<p>Если вы сохраните код и обновите вкладку браузера, вы увидите квадрат, а не куб, потому, что он стоит ровно напротив камеры и мы видим только одну сторону. У объектов есть полезное свойство - мы можем изменять их как хотим. Например, вы можете вращать его и масштабировать, сколько угодно. Что давайте немного повернём его, чтобы видеть больше сторон.  Добавить в конец кода эту строку:</p>
 
 <pre class="brush: js">cube.rotation.set(0.4, 0.2, 0);
 </pre>
@@ -168,7 +168,7 @@ render();
 
 <p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/bwup75fa/","","350")}}</p>
 
-<p>Вы также можете <a href="https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/cube.html">просмотреть на GitHub</a>.</p>
+<p>Вы также можете <a href="https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/cube.html">просмотреть на GitHub</a>.</p>
 
 <h2 id="More_shapes_and_materials">More shapes and materials</h2>
 
@@ -221,7 +221,7 @@ scene.add(light);
 
 <h3 id="Вращение">Вращение</h3>
 
-<p>Вращать фигуры просто. Вы просто добавляете или отнимаете значение по оси вращения. Добавьте эту строку кода сразу после: <code>requestAnimationFrame()</code> invocation inside the <code>render</code> function:</p>
+<p>Вращать фигуры просто. Вы просто добавляете или отнимаете значение по оси вращения. Добавьте эту строку кода сразу после: <code>requestAnimationFrame()</code> invocation inside the <code>render</code> function:</p>
 
 <pre class="brush: js">cube.rotation.y += 0.01;
 </pre>
@@ -241,7 +241,7 @@ scene.add(light);
 torus.scale.y = Math.abs(Math.sin(t));
 </pre>
 
-<p>We use <code>Math.sin</code>, ending up with quite an interesting result. This scales the torus, repeating the process, as <code>sin</code> is a periodic function. We're wrapping the scale value in <code>Math.abs</code>, to pass the absolute values, greater or equal to 0. As sin is between -1 and 1,  negative values might render out torus in unexpected way. In this case it looks black half the time.</p>
+<p>We use <code>Math.sin</code>, ending up with quite an interesting result. This scales the torus, repeating the process, as <code>sin</code> is a periodic function. We're wrapping the scale value in <code>Math.abs</code>, to pass the absolute values, greater or equal to 0. As sin is between -1 and 1,  negative values might render out torus in unexpected way. In this case it looks black half the time.</p>
 
 <p>Now, onto movement.</p>
 

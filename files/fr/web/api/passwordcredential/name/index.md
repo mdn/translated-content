@@ -15,7 +15,9 @@ La propriété **`name`** est accessible en lecture seule et est rattachée à l
 
 ## Syntaxe
 
-    name = passwordCredential.name
+```js
+name = passwordCredential.name
+```
 
 ### Valeur
 

@@ -15,28 +15,22 @@ La propriété en lecture seule **`Node.lastChild`** renvoie le dernier enfant d
 
 ## Syntaxe
 
-    var childNode = node.lastChild;
-
-
+```js
+var childNode = node.lastChild;
+```
 
 ## Exemple
-
-
 
 ```js
 var tr = document.getElementById("row1");
 var corner_td = tr.lastChild;
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG', '#dom-node-lastchild', 'Node.lastChild')}}         | {{Spec2('DOM WHATWG')}} | Pas de changement   |
-| {{SpecName('DOM3 Core', 'core.html#ID-61AD09FB', 'Node.lastChild')}}     | {{Spec2('DOM3 Core')}}     | Pas de changement   |
-| {{SpecName('DOM2 Core', 'core.html#ID-61AD09FB', 'Node.lastChild')}}     | {{Spec2('DOM2 Core')}}     | Pas de changement   |
-| {{SpecName('DOM1', 'level-one-core.html#ID-61AD09FB', 'Node.lastChild')}} | {{Spec2('DOM1')}}         | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.lastChild")}}
+{{Compat}}
+

@@ -56,7 +56,6 @@ place-self: unset;
 
 ### 値
 
-
 - `auto`
   - : 親の {{cssxref("align-items")}} の値で計算します。
 - `normal`
@@ -104,10 +103,10 @@ place-self: unset;
 
 ```html
 <article class="container">
-  <span>First</span>
-  <span>Second</span>
-  <span>Third</span>
-  <span>Fourth</span>
+  <span>First</span>
+  <span>Second</span>
+  <span>Third</span>
+  <span>Fourth</span>
 </article>
 ```
 

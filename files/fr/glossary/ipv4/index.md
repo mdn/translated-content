@@ -17,4 +17,4 @@ Formalisé pour la première fois en 1981, IPv4 prend ces racines dans le dével
 
 ### **Culture générale**
 
-{{interwiki("wikipedia", "IPv4", "IPv4")}} sur Wikipédia
+- [IPv4](https://fr.wikipedia.org/wiki/IPv4) sur Wikipédia

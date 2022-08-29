@@ -12,4 +12,4 @@ Une **structure de données** est une façon particulière d'organiser des _donn
 
 ### **En général**
 
-- {{interwiki("wikipedia", "Structure_de_données", "Structure de données")}} sur Wikipédia
+- [Structure de données](https://fr.wikipedia.org/wiki/Structure_de_donn%C3%A9es) sur Wikipédia

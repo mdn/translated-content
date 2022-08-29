@@ -15,4 +15,4 @@ Une **exception** est un état qui interrompt l'exécution normale du code. En J
 
 ### Connaissances générales
 
-- {{Interwiki("wikipedia", "Système de gestion d'exceptions")}} sur Wikipedia
+- [Système de gestion d'exceptions](https://fr.wikipedia.org/wiki/Syst%C3%A8me_de_gestion_d'exceptions) sur Wikipédia

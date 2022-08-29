@@ -21,7 +21,9 @@ Il s'agit d'une liste des actions définies par l'application que l'utilisateur 
 
 ## Syntaxe
 
-    Notification.actions
+```js
+Notification.actions
+```
 
 ### Valeur
 
@@ -29,15 +31,13 @@ Un tableau en lecture seule d'objets {{domxref ("NotificationAction")}}, chacun 
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaire     |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | --------------- |
-| {{SpecName('Web Notifications','#dom-notification-actions','actions')}} | {{Spec2('Web Notifications')}} | Living standard |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification.actions")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
 - {{DOMxRef("Notification.maxActions")}}

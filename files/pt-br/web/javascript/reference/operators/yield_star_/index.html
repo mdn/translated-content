@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Operators/yield*
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>A <strong>expressão</strong> <strong><code>yield*</code> </strong>é usada para delegar para outro objeto {{jsxref("Statements/function*", "generator")}} ou iterable.</p>
+<p>A <strong>expressão</strong> <strong><code>yield*</code> </strong>é usada para delegar para outro objeto {{jsxref("Statements/function*", "generator")}} ou iterable.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -28,15 +28,15 @@ translation_of: Web/JavaScript/Reference/Operators/yield*
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>A expressão <code>yield*</code> itera sobre a operação e yields cada valor retornado por ele.</p>
+<p>A expressão <code>yield*</code> itera sobre a operação e yields cada valor retornado por ele.</p>
 
-<p>O valor da expressão <code>yield*</code> sozinha é o valor retornado pelo iterator quando ele for fechado (i.e., quando <code>done</code> é <code>true</code>).</p>
+<p>O valor da expressão <code>yield*</code> sozinha é o valor retornado pelo iterator quando ele for fechado (i.e., quando <code>done</code> é <code>true</code>).</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
 <h3 id="Delegando_para_outro_generator">Delegando para outro generator</h3>
 
-<p>No código seguinte, valores "yeldados" por <code>g1()</code> são retornados por <code>next()</code> chamam apenas os que foram "yeldados" por <code>g2()</code>.</p>
+<p>No código seguinte, valores "yeldados" por <code>g1()</code> são retornados por <code>next()</code> chamam apenas os que foram "yeldados" por <code>g2()</code>.</p>
 
 <pre class="brush: js">function* g1() {
   yield 2;
@@ -62,7 +62,7 @@ console.log(iterator.next()); // {value: undefined, done: true}
 
 <h3 id="Outros_objetos_Iterables">Outros objetos Iterables</h3>
 
-<p>Além de objetos generator, <code>yield*</code> também podem <code>yield</code> outros tipos de objetos iterables, e.g. arrays, strings ou objetos de argumentos.</p>
+<p>Além de objetos generator, <code>yield*</code> também podem <code>yield</code> outros tipos de objetos iterables, e.g. arrays, strings ou objetos de argumentos.</p>
 
 <pre class="brush: js">function* g3() {
   yield* [1, 2];
@@ -81,9 +81,9 @@ console.log(iterator.next()); // {value: 6, done: false}
 console.log(iterator.next()); // {value: undefined, done: true}
 </pre>
 
-<h3 id="O_valor_da_expressão_yield*_sozinha">O valor da expressão <code>yield*</code> sozinha</h3>
+<h3 id="O_valor_da_expressão_yield*_sozinha">O valor da expressão <code>yield*</code> sozinha</h3>
 
-<p><code>yield*</code> é uma expressão, não uma declaração, então ele espera um valor.</p>
+<p><code>yield*</code> é uma expressão, não uma declaração, então ele espera um valor.</p>
 
 <pre class="brush: js">function* g4() {
   yield* [1, 2, 3];
@@ -102,7 +102,7 @@ console.log(iterator.next()); // {value: 1, done: false}
 console.log(iterator.next()); // {value: 2, done: false}
 console.log(iterator.next()); // {value: 3, done: false}
 console.log(iterator.next()); // {value: undefined, done: true},
-                              // g4() returned {value: 'foo', done: true} nesse ponto
+                              // g4() returned {value: 'foo', done: true} nesse ponto
 
 console.log(result);          // "foo"
 </pre>
@@ -126,64 +126,14 @@ console.log(result);          // "foo"
   <tr>
    <td>{{SpecName('ESDraft', '#', 'Yield')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("27.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatSafari("10")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("27.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatSafari("10")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.operators.yield_star")}}
 
 <h2 id="Notas_específicas_do_Firefox">Notas específicas do Firefox</h2>
 

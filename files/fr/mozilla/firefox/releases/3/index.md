@@ -158,12 +158,12 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 <!---->
 
 - [Service Idle](/fr/nsIIdleService)
-  - : Firefox 3 propose une nouvelle interface {{ Interface("nsIIdleService") }} qui permet aux extensions de savoir depuis quand l'utilisateur n'a plus appuyé sur une touche ou déplacé la souris.
+  - : Firefox 3 propose une nouvelle interface `nsIIdleService` qui permet aux extensions de savoir depuis quand l'utilisateur n'a plus appuyé sur une touche ou déplacé la souris.
 
 <!---->
 
 - [ZIP writer](/fr/NsIZipWriter)
-  - : La nouvelle interface {{ Interface("nsIZipWriter") }} permet aux extensions de pouvoir créer des archives ZIP.
+  - : La nouvelle interface `nsIZipWriter` permet aux extensions de pouvoir créer des archives ZIP.
 
 <!---->
 
@@ -178,7 +178,7 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 <!---->
 
 - [Le gestionnaire de threads](/fr/Le_gestionnaire_de_threads)
-  - : Firefox 3 propose une nouvelle interface {{ Interface("nsIThreadManager") }}, accompagnée de nouvelles interfaces pour les threads et les évènements liés, qui offre une manière pratique de créer et gérer des threads dans votre code.
+  - : Firefox 3 propose une nouvelle interface `nsIThreadManager`, accompagnée de nouvelles interfaces pour les threads et les évènements liés, qui offre une manière pratique de créer et gérer des threads dans votre code.
 
 <!---->
 
@@ -188,7 +188,7 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 <!---->
 
 - [L'interface `nsIJSON`](/fr/NsIJSON)
-  - : Firefox 3 propose la nouvelle interface {{ Interface("nsIJSON") }}, qui offre des chaînes de caractères [JSON](/fr/JSON) de codage et décodage en haute performance.
+  - : Firefox 3 propose la nouvelle interface `nsIJSON`, qui offre des chaînes de caractères [JSON](/fr/JSON) de codage et décodage en haute performance.
 
 <!---->
 

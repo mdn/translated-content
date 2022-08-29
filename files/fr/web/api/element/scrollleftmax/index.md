@@ -9,7 +9,9 @@ La propriété non modifiable  **`Element.scrollLeftMax`** renvoie un {{jsxref("
 
 ## Syntaxe
 
-    var pxl = elt.scrollLeftMax;
+```js
+var pxl = elt.scrollLeftMax;
+```
 
 ## Spécifications
 

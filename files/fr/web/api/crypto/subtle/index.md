@@ -11,17 +11,17 @@ La propriété **`Crypto.subtle`** en mode lecture seule retourne un objet {{dom
 
 ## Syntaxe
 
-    var crypto = crypto.subtle;
+```js
+var crypto = crypto.subtle;
+```
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                                   | Commentaire          |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{ SpecName('Web Crypto API', '#dfn-Crypto', 'Crypto.subtle') }} | {{ Spec2('Web Crypto API') }} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.Crypto.subtle")}}
+{{Compat}}
 
 ## Voir aussi
 

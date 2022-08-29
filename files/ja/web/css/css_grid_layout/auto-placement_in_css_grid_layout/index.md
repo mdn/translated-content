@@ -130,12 +130,12 @@ CSS グリッドレイアウト仕様書には、作成したグリッド上に�
      <div>Two</div>
      <div>Three</div>
      <div>Four
-     <br>This cell
-     <br>Has extra
-     <br>content.
-     <br>Max is auto
-     <br>so the row expands.
-     </div>
+     <br>This cell
+     <br>Has extra
+     <br>content.
+     <br>Max is auto
+     <br>so the row expands.
+     </div>
      <div>Five</div>
 </div>
 ```

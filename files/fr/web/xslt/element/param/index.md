@@ -12,9 +12,11 @@ L'élément `<xsl:param>` définit un paramètre par son nom et, éventuellement
 
 ### Syntaxe
 
-    <xsl:param name=NOM select=EXPRESSION>
-    	MODÈLE
-    </xsl:param>
+```xml
+<xsl:param name=NOM select=EXPRESSION>
+  MODÈLE
+</xsl:param>
+```
 
 ### Attribut obligatoire
 

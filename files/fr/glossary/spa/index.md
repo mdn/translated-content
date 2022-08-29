@@ -19,14 +19,8 @@ Certains des frameworks SPA les plus populaires incluent:
 
 ## Voir aussi
 
-1.  Articles wikipedia
-
-    1.  {{Interwiki("wikipedia", "Application web monopage")}}
-
-2.  [Glossaire](/fr/docs/Glossary)
-
-    1.  [API](/fr/docs/Glossary/API)
-    2.  [AJAX](/fr/docs/Glossary/AJAX)
-    3.  [JavaScript](/fr/docs/Glossary/JavaScript)
-
-3.  [Comprendre les frameworks JavaScript côté client](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
+- [Application web monopage](https://fr.wikipedia.org/wiki/Application_web_monopage) sur Wikipédia
+- [API](/fr/docs/Glossary/API)
+- [AJAX](/fr/docs/Glossary/AJAX)
+- [JavaScript](/fr/docs/Glossary/JavaScript)
+- [Comprendre les frameworks JavaScript côté client](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)

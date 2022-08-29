@@ -16,7 +16,9 @@ L'instruction **`var`** (pour variable) permet de déclarer une variable et éve
 
 ## Syntaxe
 
-    var nomVar1 [= valeur1] [, nomVar2 [= valeur2] ... [, nomVarN [= valeurN]]];
+```js
+var nomVar1 [= valeur1] [, nomVar2 [= valeur2] … [, nomVarN [= valeurN]]];
+```
 
 - `nomvarN`
   - : Le nom de la variable, cela peut être n'importe quel identifiant valide.
@@ -29,7 +31,7 @@ Les déclarations de variables sont traitées avant que le code soit exécuté, 
 
 Si on affecte une valeur à une variable qui n'a pas été déclarée (le mot-clé `var` n'a pas été utilisé), cela devient une variable globale (une propriété de l'objet global) lorsque l'affectation est exécutée. Les différences entre les variables déclarées et les variables non-déclarées sont :
 
-1.  Les variables déclarées sont contraintes dans le contexte d'exécution dans lequel elles sont déclarées. Les variables non-déclarées sont toujours globales.
+1. Les variables déclarées sont contraintes dans le contexte d'exécution dans lequel elles sont déclarées. Les variables non-déclarées sont toujours globales.
 
     ```js
     function x() {
@@ -44,7 +46,7 @@ Si on affecte une valeur à une variable qui n'a pas été déclarée (le mot-cl
                     // z n'est pas définie en dehors de x
     ```
 
-2.  Les variables déclarées sont créées avant que n'importe quel autre code soit exécuté. Les variables non-déclarées n'existent pas tant que leur code n'est pas exécuté.
+2. Les variables déclarées sont créées avant que n'importe quel autre code soit exécuté. Les variables non-déclarées n'existent pas tant que leur code n'est pas exécuté.
 
     ```js
     console.log(a);                // Lève une exception ReferenceError.
@@ -57,7 +59,7 @@ Si on affecte une valeur à une variable qui n'a pas été déclarée (le mot-cl
     console.log('on continue...'); // Affiche "on continue...".
     ```
 
-3.  Les variables déclarées sont des propriétés non-configurables de leur contexte d'exécution (la fonction courante ou le contexte global). Les variables non-déclarées sont configurables (ce qui signifie qu'elles peuvent être supprimées).
+3. Les variables déclarées sont des propriétés non-configurables de leur contexte d'exécution (la fonction courante ou le contexte global). Les variables non-déclarées sont configurables (ce qui signifie qu'elles peuvent être supprimées).
 
     ```js
     var a = 1;

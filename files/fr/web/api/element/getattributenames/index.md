@@ -17,7 +17,9 @@ L'utilisation de `getAttributeNames()` complété par {{domxref("Element.getAttr
 
 ## Syntaxe
 
-    let attributeNames = element.getAttributeNames();
+```js
+let attributeNames = element.getAttributeNames();
+```
 
 ## Exemple
 
@@ -25,8 +27,8 @@ L'utilisation de `getAttributeNames()` complété par {{domxref("Element.getAttr
 // Itérer sur les attributs de l'élément
 for(let name of element.getAttributeNames())
 {
-	let value = element.getAttribute(name);
-	console.log(name, value);
+  let value = element.getAttribute(name);
+  console.log(name, value);
 }
 ```
 
@@ -48,10 +50,8 @@ if (Element.prototype.getAttributeNames == undefined) {
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName("DOM WHATWG", "#dom-element-getattributenames", "Element.getAttributeNames")}} | {{Spec2("DOM WHATWG")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.getAttributeNames")}}
+{{Compat}}

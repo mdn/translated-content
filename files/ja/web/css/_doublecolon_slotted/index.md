@@ -21,12 +21,12 @@ translation_of: Web/CSS/::slotted
 ```css
 /* スロット内に配置された任意の要素を選択 */
 ::slotted(*) {
-  font-weight: bold;
+  font-weight: bold;
 }
 
-/* スロット内に配置された &lt;span&gt; 要素を選択 */
+/* スロット内に配置された <span> 要素を選択 */
 ::slotted(span) {
-  font-weight: bold;
+  font-weight: bold;
 }
 ```
 
@@ -36,7 +36,7 @@ translation_of: Web/CSS/::slotted
 
 ## 例
 
-###スロット化された要素を強調
+### スロット化された要素を強調
 
 以下のコードの断片は [slotted-pseudo-element](https://github.com/mdn/web-components-examples/tree/master/slotted-pseudo-element) デモから取られたものです ([ライブでもご覧ください](https://mdn.github.io/web-components-examples/slotted-pseudo-element/))。
 

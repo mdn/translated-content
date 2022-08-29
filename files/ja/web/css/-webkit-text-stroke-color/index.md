@@ -31,7 +31,7 @@ translation_of: Web/CSS/-webkit-text-stroke-color
 
 ### 値
 
- `<color>`
+- `<color>`
   - : 線の色。
 
 ## 公式定義

@@ -9,8 +9,10 @@ La méthode **`CanvasRenderingContext2D.fill()`** de l'API Canvas 2D remplit le 
 
 ## Syntaxe
 
-    void ctx.fill([fillRule]);
-    void ctx.fill(path[, fillRule]);
+```js
+void ctx.fill([fillRule]);
+void ctx.fill(path[, fillRule]);
+```
 
 ### Paramètres
 
@@ -174,13 +176,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Specification                                                                                                                        | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fill", "CanvasRenderingContext2D.fill")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.fill")}}
+{{Compat}}
 
 ## Voir aussi
 

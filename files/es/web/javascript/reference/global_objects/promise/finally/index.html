@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/finally
 ---
 <div>{{JSRef}}</div>
 
-<p>El método <code><strong>finally()</strong></code> devuelve una {{jsxref("Promise")}}. Cuando la promesa se resuelve, sea exitosa o rechazada, la función de callback específicada será ejecutada. Esto ofrece una forma de ejecutar código sin importar como se haya resuelto la promesa.</p>
+<p>El método <code><strong>finally()</strong></code> devuelve una {{jsxref("Promise")}}. Cuando la promesa se resuelve, sea exitosa o rechazada, la función de callback específicada será ejecutada. Esto ofrece una forma de ejecutar código sin importar como se haya resuelto la promesa.</p>
 
 <p>Esto ayuda a evitar tener código duplicado tanto en el {{jsxref("Promise.then", "then()")}} como en el {{jsxref("Promise.catch", "catch()")}}.</p>
 
@@ -23,28 +23,28 @@ p.finally(function() {
 
 <dl>
  <dt><code>alFinalizar</code></dt>
- <dd>Una {{jsxref("Function")}} llamada cuando la <code>Promise</code> se resuelve con éxito o falla.</dd>
+ <dd>Una {{jsxref("Function")}} llamada cuando la <code>Promise</code> se resuelve con éxito o falla.</dd>
 </dl>
 
 <h3 id="Valor_de_retorno">Valor de retorno</h3>
 
-<p>Devuelve una {{jsxref("Promise")}} cuyo <code>finally</code> fue fijado a la función específicada en <code>alFinalizar</code>.</p>
+<p>Devuelve una {{jsxref("Promise")}} cuyo <code>finally</code> fue fijado a la función específicada en <code>alFinalizar</code>.</p>
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>El método <code>finally()</code> puede ser de utilidad si quieres hacer algún proceso o limpieza una vez que la promesa termina, sin importar su resultado.</p>
+<p>El método <code>finally()</code> puede ser de utilidad si quieres hacer algún proceso o limpieza una vez que la promesa termina, sin importar su resultado.</p>
 
-<p>Utilizar <code>finally()</code> es muy similar a llamar <code>.then(onFinally, onFinally)</code>, sin embargo tiene algunas diferencias:</p>
+<p>Utilizar <code>finally()</code> es muy similar a llamar <code>.then(onFinally, onFinally)</code>, sin embargo tiene algunas diferencias:</p>
 
 <ul>
  <li>Cuando usamos una función <code>inline</code>, se la puede pasar una sola vez, en vez de estar forzado a declararla dos veces, o guardarla en una variable.</li>
- <li>Un callback <code>finally</code> no recibe ningún argumento, ya que no hay una manera fehaciente de determinar si la promesa fue exitosa o fallida. Este caso de uso es precisamente para cuando <em>no nos importa</em> la razón por la que falló o el valor al que resuelve, y no hay necesidad de proveerlos.</li>
- <li>A diferencia de <code>Promise.resolve(2).then(() =&gt; {}, () =&gt; {})</code> (que va a resolver a <code>undefined</code>), <code>Promise.resolve(2).finally(() =&gt; {})</code> resolverá con un <code>2</code>.</li>
- <li>Del mismo modo, a diferencia de <code>Promise.reject(3).then(() =&gt; {}, () =&gt; {})</code> (que resolverá con <code>undefined</code>), <code>Promise.reject(3).finally(() =&gt; {})</code> será rechazada con un <code>3</code>.</li>
+ <li>Un callback <code>finally</code> no recibe ningún argumento, ya que no hay una manera fehaciente de determinar si la promesa fue exitosa o fallida. Este caso de uso es precisamente para cuando <em>no nos importa</em> la razón por la que falló o el valor al que resuelve, y no hay necesidad de proveerlos.</li>
+ <li>A diferencia de <code>Promise.resolve(2).then(() =&gt; {}, () =&gt; {})</code> (que va a resolver a <code>undefined</code>), <code>Promise.resolve(2).finally(() =&gt; {})</code> resolverá con un <code>2</code>.</li>
+ <li>Del mismo modo, a diferencia de <code>Promise.reject(3).then(() =&gt; {}, () =&gt; {})</code> (que resolverá con <code>undefined</code>), <code>Promise.reject(3).finally(() =&gt; {})</code> será rechazada con un <code>3</code>.</li>
 </ul>
 
 <div class="note">
-<p><strong>Nota:</strong> Un <code>throw</code> (o retornar una promesa rechazada) en el callback <code>finally</code> va a rechazar la nueva promesa con la razón de rechazo especificada al llamar <code>throw()</code>.</p>
+<p><strong>Nota:</strong> Un <code>throw</code> (o retornar una promesa rechazada) en el callback <code>finally</code> va a rechazar la nueva promesa con la razón de rechazo especificada al llamar <code>throw()</code>.</p>
 </div>
 
 <h2 id="Ejemplos">Ejemplos</h2>

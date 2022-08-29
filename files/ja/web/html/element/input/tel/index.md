@@ -13,7 +13,6 @@ tags:
   - 入力型
   - Phone Numbers
   - リファレンス
-browser-compat: html.elements.input.input-tel
 translation_of: Web/HTML/Element/input/tel
 ---
 
@@ -30,7 +29,7 @@ translation_of: Web/HTML/Element/input/tel
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("値")}}</strong></td>
+      <td><strong><a href="#値">値</a></strong></td>
       <td>
         電話番号を表す {{domxref("DOMString")}}、または空欄
       </td>
@@ -106,7 +105,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 > **Note:** {{htmlattrxref("title", "input")}} 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
 
-詳細と例については後述の{{anch("パターン検証")}}を参照してください。
+詳細と例については後述の[パターン検証](#パターン検証)を参照してください。
 
 ### placeholder
 
@@ -126,7 +125,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 `size` 属性は数値であり、入力欄の幅を何文字分とするかを示します。値はゼロより大きな数値である必要があり、既定値は 20 です。文字の幅は様々であるため、これは正確ではない可能性もあり、依存することはできません。結果の入力欄は文字数やフォント（使用中の {{cssxref("font")}} 設定）によって、指定された文字数より狭くなったり広くなったりすることがあります。
 
-これはユーザーがフィールドに入力することができる文字数の制限を設定するものではありません。これは一度に見える文字数をおよそ指定するだけです。入力データの長さの上限を設定するには、 `{{anch("maxlength")}}` 属性を使用してください。
+これはユーザーがフィールドに入力することができる文字数の制限を設定するものではありません。これは一度に見える文字数をおよそ指定するだけです。入力データの長さの上限を設定するには、 [`maxlength`](#maxlength) 属性を使用してください。
 
 ## 標準外の属性
 
@@ -153,7 +152,7 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 
 ウェブにおいて、電話番号はとてもよく収集されるデータの種類です。例えば、何らかの会員登録や通信販売サイトで、商取引や緊急時連絡の目的でユーザーに電話番号を尋ねることが良くあります。一般的にどのように電話番号が入力されるかを考えれば、残念ながら「1つのサイズですべてに合う」ような解決策は現実的ではありません。
 
-幸い、自分でサイトの要件を検討し、自分で適切なレベルの検証を実装することができます。詳しくは、以下の{{anch("検証")}}をご覧ください。
+幸い、自分でサイトの要件を検討し、自分で適切なレベルの検証を実装することができます。詳しくは、以下の[検証](#検証)をご覧ください。
 
 ### カスタムキーボード
 
@@ -184,7 +183,7 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       placeholder="123-4567-8901">
+       placeholder="123-4567-8901">
 ```
 
 {{ EmbedLiveSample('Placeholders', 600, 40) }}
@@ -199,7 +198,7 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       size="20">
+       size="20">
 ```
 
 {{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}
@@ -212,12 +211,12 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       size="20" minlength="9" maxlength="14">
+       size="20" minlength="9" maxlength="14">
 ```
 
 {{EmbedLiveSample("Element_value_length", 600, 40) }}
 
-> **Note:** 上記の属性は{{anch("検証")}}に影響します。 - 上記の例では、値の長さが 9 文字未満、または 14 文字以上の場合、入力は無効とみなされます。ほとんどのブラウザーでは、最大長を超える値を入力することさえできません。
+> **Note:** 上記の属性は[検証](#検証)に影響します。 - 上記の例では、値の長さが 9 文字未満、または 14 文字以上の場合、入力は無効とみなされます。ほとんどのブラウザーでは、最大長を超える値を入力することさえできません。
 
 ### 既定のオプションの提供
 
@@ -227,7 +226,7 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       value="333-4444-4444">
+       value="333-4444-4444">
 ```
 
 {{EmbedLiveSample("Providing_a_single_default_using_the_value_attribute", 600, 40)}}
@@ -241,10 +240,10 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 <input id="telNo" name="telNo" type="tel" list="defaultTels">
 
 <datalist id="defaultTels">
-  <option value="111-1111-1111">111-1111-1111</option>
-  <option value="122-2222-2222">122-2222-2222</option>
-  <option value="333-3333-3333">333-3333-3333</option>
-  <option value="344-4444-4444">344-4444-4444</option>
+  <option value="111-1111-1111">111-1111-1111</option>
+  <option value="122-2222-2222">122-2222-2222</option>
+  <option value="333-3333-3333">333-3333-3333</option>
+  <option value="344-4444-4444">344-4444-4444</option>
 </datalist>
 ```
 

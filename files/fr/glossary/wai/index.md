@@ -14,4 +14,4 @@ La WAI ou Web Accessibility Initiative a été lancée par le World Wide Web Con
 ### Culture générale
 
 - [Site web de la WAI](http://www.w3.org/WAI/)
-- {{Interwiki("wikipedia", "Web Accessibility Initiative")}} sur Wikipédia
+- [WAI](https://fr.wikipedia.org/wiki/Web_Accessibility_Initiative) sur Wikipédia

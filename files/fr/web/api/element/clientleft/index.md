@@ -30,8 +30,8 @@ Dans l'exemple qui suit, la zone du client possède un arrière-plan blanc avec 
 <div id="container">
   <div id="contained">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-	  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-	  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   </div>
 </div>
 ```
@@ -41,17 +41,17 @@ Dans l'exemple qui suit, la zone du client possède un arrière-plan blanc avec 
 ```css
 
 #container {
-	margin: 3rem;
-	background-color: rgb(255, 255, 204);
-	border: 4px dashed black;
+  margin: 3rem;
+  background-color: rgb(255, 255, 204);
+  border: 4px dashed black;
 }
 
 #contained {
-	margin: 1rem;
-	border-left: 24px black solid;
-	padding: 0px 28px;
-	overflow: auto;
-	background-color: white;
+  margin: 1rem;
+  border-left: 24px black solid;
+  padding: 0px 28px;
+  overflow: auto;
+  background-color: white;
 }
 ```
 

@@ -18,7 +18,9 @@ La méthode **`setMilliseconds()`** définit les millièmes de secondes pour la 
 
 ## Syntaxe
 
-    dateObj.setMilliseconds(valeurMs)
+```js
+dateObj.setMilliseconds(valeurMs)
+```
 
 ### Paramètres
 

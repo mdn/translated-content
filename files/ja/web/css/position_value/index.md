@@ -66,15 +66,17 @@ keyword value keyword value /* それぞれの値はその前のキーワード�
 
 ### 有効な位置
 
-    center
-    left
-    center top
+```
+center
+left
+center top
 
-    right 8.5%
-    bottom 12vmin right -6px
+right 8.5%
+bottom 12vmin right -6px
 
-    10% 20%
-    8rem 14px
+10% 20%
+8rem 14px
+```
 
 ### 無効な位置
 

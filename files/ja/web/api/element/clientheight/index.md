@@ -7,7 +7,6 @@ tags:
   - NeedsMarkupWork
   - プロパティ
   - リファレンス
-browser-compat: api.Element.clientHeight
 translation_of: Web/API/Element/clientHeight
 ---
 {{APIRef("DOM")}}

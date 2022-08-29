@@ -7,14 +7,14 @@ translation_of: Web/API/Window/getSelection
 
 <h2 id="Summary" name="Summary">Resumo</h2>
 
-<p>Retorna um objeto {{domxref("Selection")}} representando a parte do texto selecionada pelo usuário ou a posição atual do cursor.</p>
+<p>Retorna um objeto {{domxref("Selection")}} representando a parte do texto selecionada pelo usuário ou a posição atual do cursor.</p>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 
 <pre class="syntaxbox"><em>selection</em> = <em>window</em>.getSelection();</pre>
 
 <ul>
- <li><code>selection</code> é um objeto {{domxref("Selection")}}. Quando convertido para string, seja adicionando uma string vazia (" ") ou usando {{jsxref("String.toString()")}}, esse objeto retorna o texto selecionado.</li>
+ <li><code>selection</code> é um objeto {{domxref("Selection")}}. Quando convertido para string, seja adicionando uma string vazia (" ") ou usando {{jsxref("String.toString()")}}, esse objeto retorna o texto selecionado.</li>
 </ul>
 
 <h2 id="Example" name="Example">Example</h2>
@@ -28,26 +28,26 @@ translation_of: Web/API/Window/getSelection
 
 <h2 id="Notes" name="Notes">Nota</h2>
 
-<h3 id="Representação_do_objeto_Selection_em_String">Representação do objeto Selection em String</h3>
+<h3 id="Representação_do_objeto_Selection_em_String">Representação do objeto Selection em String</h3>
 
-<p>No  JavaScript, quando um objeto é passado para uma função que espera uma string (como {{ Domxref("window.alert()") }} ou {{ Domxref("document.write()") }}), o método {{jsxref("Object.toString", "toString()")}} do objeto é chamado e o valor retornado é passado para a função. Isso pode fazer com que o objeto pareça ser uma string quando usado com outras funções quando na verdade é um objeto com propriedades e métodos.</p>
+<p>No  JavaScript, quando um objeto é passado para uma função que espera uma string (como {{ Domxref("window.alert()") }} ou {{ Domxref("document.write()") }}), o método {{jsxref("Object.toString", "toString()")}} do objeto é chamado e o valor retornado é passado para a função. Isso pode fazer com que o objeto pareça ser uma string quando usado com outras funções quando na verdade é um objeto com propriedades e métodos.</p>
 
-<p>No exemplo acima, <code>selObj.toString()</code> é chamado automaticamente quando é passado para {{domxref("window.alert()")}}. Contudo,  tentar usar propriedades ou métodos do objeto JavaScript <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" title="JS/String">String</a> como <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length" title="JS/String.length">length</a></code> ou <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr" title="JS/String.substr">substr</a> diretamente no objeto</code> {{domxref("Selection")}} resultará em erro se o objeto não possuir essa propriedade ou método e pode retornar valores inesperados mesmo se os tiver. Para usar um objecto <code>Selection</code> como uma string, faça a chamada do seu método <code>toString()</code> diretamente:</p>
+<p>No exemplo acima, <code>selObj.toString()</code> é chamado automaticamente quando é passado para {{domxref("window.alert()")}}. Contudo,  tentar usar propriedades ou métodos do objeto JavaScript <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" title="JS/String">String</a> como <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length" title="JS/String.length">length</a></code> ou <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr" title="JS/String.substr">substr</a> diretamente no objeto</code> {{domxref("Selection")}} resultará em erro se o objeto não possuir essa propriedade ou método e pode retornar valores inesperados mesmo se os tiver. Para usar um objecto <code>Selection</code> como uma string, faça a chamada do seu método <code>toString()</code> diretamente:</p>
 
 <pre class="brush:js;gutter:false;">var selectedText = selObj.toString();</pre>
 
 <ul>
- <li><code>selObj</code> é um objeto <code>Selection</code>.</li>
+ <li><code>selObj</code> é um objeto <code>Selection</code>.</li>
  <li><code>selectedText</code> é uma string (Selected text).</li>
 </ul>
 
 <h3 id="Objectos_Relacionados">Objectos Relacionados</h3>
 
-<p>É útil também notar que você pode chamar {{domxref("Document.getSelection()")}},  que funciona de forma idêntica.</p>
+<p>É útil também notar que você pode chamar {{domxref("Document.getSelection()")}},  que funciona de forma idêntica.</p>
 
-<p>Inputs HTML provêm APIs mais simples para se trabalhar com seleções (veja {{domxref("HTMLInputElement.setSelectionRange()")}}).</p>
+<p>Inputs HTML provêm APIs mais simples para se trabalhar com seleções (veja {{domxref("HTMLInputElement.setSelectionRange()")}}).</p>
 
-<p>Note a diferença entre <em>selection</em> e <em>focus</em>. {{domxref("Document.activeElement")}} retorna o elemento com foco.</p>
+<p>Note a diferença entre <em>selection</em> e <em>focus</em>. {{domxref("Document.activeElement")}} retorna o elemento com foco.</p>
 
 <h2 id="Especificações">Especificações</h2>
 
@@ -70,53 +70,7 @@ translation_of: Web/API/Window/getSelection
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>9</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Window.getSelection")}}
 
 <h2 id="See_also" name="See_also">Veja também</h2>
 

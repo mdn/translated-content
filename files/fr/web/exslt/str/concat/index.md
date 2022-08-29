@@ -12,7 +12,9 @@ translation_of: Web/EXSLT/str/concat
 
 ### Syntaxe
 
-    str:concat(ensembleNœud)
+```
+str:concat(ensembleNœud)
+```
 
 ### Arguments
 

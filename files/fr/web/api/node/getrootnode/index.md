@@ -15,7 +15,9 @@ La méthode **`getRootNode()`** de l'interface {{domxref("Node")}} renvoie le co
 
 ## Syntaxe
 
-    var root = node.getRootNode(options)
+```js
+var root = node.getRootNode(options)
+```
 
 ### Paramètres
 
@@ -70,10 +72,8 @@ Cet exemple plus complexe montre la différence entre retourner une racine norma
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG','#dom-node-getrootnode','getRootNode()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.getRootNode")}}
+{{Compat}}

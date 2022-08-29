@@ -11,11 +11,13 @@ translation_of: Web/API/WebGLRenderingContext/shaderSource
 ---
 {{APIRef("WebGL")}}
 
-La méthode **`WebGLRenderingContext.shaderSource()`** de l'[API WebGL](/en-US/docs/Web/API/WebGL_API) définit le code source d'un {{domxref("WebGLShader")}}.
+La méthode **`WebGLRenderingContext.shaderSource()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) définit le code source d'un {{domxref("WebGLShader")}}.
 
 ## Syntaxe
 
-    void gl.shaderSource(shader, source);
+```js
+void gl.shaderSource(shader, source);
+```
 
 ### Parameters
 

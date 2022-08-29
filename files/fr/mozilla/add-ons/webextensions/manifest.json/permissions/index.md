@@ -62,9 +62,11 @@ Les privilèges supplémentaires incluent :
 
 Dans Firefox, à partir de la version 56, les extensions reçoivent automatiquement les permissions d'hôte pour leur propre origine, qui se présentent sous la forme :
 
-    moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
+```
+moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
+```
 
-Où `60a20a9b-1ad4-af49-9b6c-c64c98c37920` est l'ID interne de l'extension. L'extension peut obtenir cette URL par programmation en appelant [extension.getURL() ](/fr/Add-ons/WebExtensions/API/extension/getURL):
+Où `60a20a9b-1ad4-af49-9b6c-c64c98c37920` est l'ID interne de l'extension. L'extension peut obtenir cette URL par programmation en appelant [extension.getURL()](/fr/Add-ons/WebExtensions/API/extension/getURL):
 
 ```js
 browser.extension.getURL("");
@@ -121,7 +123,7 @@ Les mots clés suivants sont actuellement disponibles:
 
 Dans la plupart des cas, la permission accorde uniquement l'accès à l'API, avec les exceptions suivantes :
 
-- `tabs` vous permet d'accéder aux [parties privilégiées des API de l'onglet ](/fr/Add-ons/WebExtensions/API/tabs): `Tab.url`, `Tab.title`, et `Tab.faviconUrl`. Dans Firefox, vous avez également besoin de  `tabs` si vous souhaitez inclure `url` dans le paramètre `queryInfo` dans [`tabs.query()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query). Le reste de l'API `tabs` peut être utilisé sans demander aucune permission.
+- `tabs` vous permet d'accéder aux [parties privilégiées des API de l'onglet](/fr/Add-ons/WebExtensions/API/tabs) : `Tab.url`, `Tab.title`, et `Tab.faviconUrl`. Dans Firefox, vous avez également besoin de  `tabs` si vous souhaitez inclure `url` dans le paramètre `queryInfo` dans [`tabs.query()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query). Le reste de l'API `tabs` peut être utilisé sans demander aucune permission.
 - `webRequestBlocking` vous permet d'utiliser l'argument "blocage", afin que vous puissiez [modifier et annuler les requêtes](/fr/Add-ons/WebExtensions/API/WebRequest).
 - `downloads.open` vous permet d'utiliser l'API {{WebExtAPIRef("downloads.open()")}}.
 - `tabHide` vous permet d'utiliser l'API {{WebExtAPIRef("tabs.hide()")}}.
@@ -154,7 +156,7 @@ Il existe deux permissions qui permettent aux extensions d'interagir avec le Pre
 - `clipboardWrite`: écrivez dans le presse-papiers à l'aide de {{DOMxRef("Clipboard.write()")}}, {{DOMxRef("Clipboard.writeText()")}}, `document.execCommand("copy")` ou `document.execCommand("cut")`
 - `clipboardRead`: lisez le presse-papiers à l'aide de  {{DOMxRef("Clipboard.read()")}}, {{DOMxRef("Clipboard.readText()")}} ou `document.execCommand("paste")`
 
-Voir [Intérargir avec le presse-papiers ](/fr/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard)pour tous les détails de ce sujet.
+Voir [Intérargir avec le presse-papiers](/fr/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard) pour tous les détails de ce sujet.
 
 ## Stockage illimité
 

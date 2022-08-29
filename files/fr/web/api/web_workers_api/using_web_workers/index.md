@@ -216,7 +216,9 @@ Toutefois, la communication entre les _web workers_ est contrôlée explicitemen
 
 Les _workers_ disposent de leur propre contexte d'exécution, distinct de celui du document qui les a créés. Aussi, en général, les _workers_ ne sont pas gérés par la [politique de sécurité de contenu](/fr/docs/Web/HTTP/CSP) du document (ou du _worker_ parent) responsable de leur création. Ainsi, si un document est servi avec l'en-tête suivant :
 
-    Content-Security-Policy: script-src 'self'
+```
+Content-Security-Policy: script-src 'self'
+```
 
 Cette règle empêchera n'importe quel script inclus dans le document d'utiliser [`eval()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/eval). Toutefois, si le script génère un _worker_, le code exécuté par ce _worker_ pourra utiliser `eval()`.
 
@@ -476,7 +478,7 @@ Les ordinateurs dotés de plusieurs coeurs se généralisent et il peut s'avére
 
 En plus des web _workers_ (dédiés et partagés), il existe d'autres types de _workers_ :
 
-- [Les service _workers_](/en-US/docs/Web/API/ServiceWorker_API) peuvent notamment servir de serveurs mandataires (_proxy_) entre les applications web, le navigateur et le réseau (lorsque celui-ci est disponible). Ces _workers_ sont conçus afin de permettre des utilisations hors-ligne en interceptant les requêtes réseau et en déclenchant les actions nécessaires selon que le réseau est disponible ou non et que les ressources souhaitées sont disponibles sur le serveur. Ces _workers_ permettent de déclencher des notifications _push_ et d'utiliser des API de synchronisation en arrière-plan.
+- [Les service _workers_](/fr/docs/Web/API/ServiceWorker_API) peuvent notamment servir de serveurs mandataires (_proxy_) entre les applications web, le navigateur et le réseau (lorsque celui-ci est disponible). Ces _workers_ sont conçus afin de permettre des utilisations hors-ligne en interceptant les requêtes réseau et en déclenchant les actions nécessaires selon que le réseau est disponible ou non et que les ressources souhaitées sont disponibles sur le serveur. Ces _workers_ permettent de déclencher des notifications _push_ et d'utiliser des API de synchronisation en arrière-plan.
 - [Les _worklets_ audio](/fr/docs/Web/API/Web_Audio_API#Audio_processing_in_JavaScript) permettent de traiter des signaux audios en arrière-plan (fonctionnalité expérimentale).
 
 ## Fonctions et interfaces disponibles pour les _workers_

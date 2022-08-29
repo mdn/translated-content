@@ -18,8 +18,10 @@ La méthode **`EventTarget.removeEventListener()`** supprime d'une {{domxref("Ev
 
 ## Syntaxe
 
-    target.removeEventListener(type, listener[, options]);
-    target.removeEventListener(type, listener[, useCapture]);
+```js
+target.removeEventListener(type, listener[, options]);
+target.removeEventListener(type, listener[, useCapture]);
+```
 
 ### Paramètres
 
@@ -131,15 +133,11 @@ mouseOverTarget.addEventListener('mouseover', function () {
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName("DOM WHATWG", "#dom-eventtarget-removeeventlistener", "EventTarget.removeEventListener()")}}         | {{Spec2("DOM WHATWG")}} |                      |
-| {{SpecName("DOM4", "#dom-eventtarget-removeeventlistener", "EventTarget.removeEventListener()")}}                 | {{Spec2("DOM4")}}         |                      |
-| {{SpecName("DOM2 Events", "#Events-EventTarget-removeEventListener", "EventTarget.removeEventListener()")}} | {{Spec2("DOM2 Events")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.EventTarget.removeEventListener", 3)}}
+{{Compat}}
 
 ## Prothèse (_polyfill_) pour la prise en charge des navigateurs anciens
 

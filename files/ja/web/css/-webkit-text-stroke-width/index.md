@@ -23,7 +23,7 @@ translation_of: Web/CSS/-webkit-text-stroke-width
 -webkit-text-stroke-width: medium;
 -webkit-text-stroke-width: thick;
 
-/* &lt;length&gt; 値 */
+/* <length> 値 */
 -webkit-text-stroke-width: 2px;
 -webkit-text-stroke-width: 0.1em;
 -webkit-text-stroke-width: 1mm;

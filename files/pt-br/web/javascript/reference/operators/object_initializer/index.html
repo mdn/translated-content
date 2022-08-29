@@ -15,7 +15,7 @@ original_slug: Web/JavaScript/Reference/Operators/Inicializador_Objeto
 ---
 <div>{{JsSidebar("Operadores")}}</div>
 
-<p>Objetos podem ser inicializados utilizando <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>new Object()</code></a>,<code> <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/create">Object.create()</a></code>, ou a notação <em>literal</em>. Um inicializador de objetos é uma lista de zero ou mais pares de <em>propriedade: valor</em>, separados por vírgula e fechado por um par de chaves (<code>{}</code>).</p>
+<p>Objetos podem ser inicializados utilizando <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>new Object()</code></a>,<code> <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/create">Object.create()</a></code>, ou a notação <em>literal</em>. Um inicializador de objetos é uma lista de zero ou mais pares de <em>propriedade: valor</em>, separados por vírgula e fechado por um par de chaves (<code>{}</code>).</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -34,7 +34,7 @@ var o = {
 
 <h3 id="Novas_notações_em_ECMAScript_2015">Novas notações em ECMAScript 2015</h3>
 
-<p>Por favor, verifique o suporte das anotações na tabela de compatibilidade. Em ambientes que não dão suporte às anotações, ocorrerá erros de sintaxe.</p>
+<p>Por favor, verifique o suporte das anotações na tabela de compatibilidade. Em ambientes que não dão suporte às anotações, ocorrerá erros de sintaxe.</p>
 
 <pre class="brush: js">// // Abreviação em nomes de propriedades (ES2015)
 var a = "foo", b = 42, c = {};
@@ -56,15 +56,15 @@ var o = {
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Um inicializador de objetos é uma expressão que descreve a inicialização de um {{jsxref("Object")}}. Objects consiste de <em>propriedades</em>, as quais descrevem um objeto. Os valores das propriedades de um objeto podem ser tipos de dados {{Glossary("primitivos")}} ou outros objetos .</p>
+<p>Um inicializador de objetos é uma expressão que descreve a inicialização de um {{jsxref("Object")}}. Objects consiste de <em>propriedades</em>, as quais descrevem um objeto. Os valores das propriedades de um objeto podem ser tipos de dados {{Glossary("primitivos")}} ou outros objetos .</p>
 
 <h3 id="Criando_objetos">Criando objetos</h3>
 
-<p>Um objeto vazio, sem propriedades, pode ser criado como: </p>
+<p>Um objeto vazio, sem propriedades, pode ser criado como: </p>
 
 <pre class="brush: js">var object = {};</pre>
 
-<p>Contudo, a vantagem em utilizar a notação <em>literal </em>ou o <em>inicializador</em> é a possibilidade de rapidamente criar objetos com propriedades dentro de chaves (<code>{}</code>). Você simplesmente cria uma lista de pares <em>chave: valor</em>, separados por vírgula. O código abaixo cria um objeto com três propriedades, sendo as chaves "foo", "age" e "baz", com seus respectivos valores, tipo string de valor "bar", tipo number de valor 42 e, por último, um outro objeto com seus respectivos pares de <em>chave: valor</em>. </p>
+<p>Contudo, a vantagem em utilizar a notação <em>literal </em>ou o <em>inicializador</em> é a possibilidade de rapidamente criar objetos com propriedades dentro de chaves (<code>{}</code>). Você simplesmente cria uma lista de pares <em>chave: valor</em>, separados por vírgula. O código abaixo cria um objeto com três propriedades, sendo as chaves "foo", "age" e "baz", com seus respectivos valores, tipo string de valor "bar", tipo number de valor 42 e, por último, um outro objeto com seus respectivos pares de <em>chave: valor</em>. </p>
 
 <pre class="brush: js">var object = {
   foo: "bar",
@@ -74,7 +74,7 @@ var o = {
 
 <h3 id="Acessando_propriedades">Acessando propriedades</h3>
 
-<p>Uma vez que você criou um objeto, é interessante que possa ler ou alterá-lo. As propriedades de um objeto podem ser acessadas utilizando a notação de ponto ou colchetes. Veja <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors">assessores de propriedade</a> para mais informações.</p>
+<p>Uma vez que você criou um objeto, é interessante que possa ler ou alterá-lo. As propriedades de um objeto podem ser acessadas utilizando a notação de ponto ou colchetes. Veja <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors">assessores de propriedade</a> para mais informações.</p>
 
 <pre class="brush: js">object.foo; // "bar"
 object["age"]; // 42
@@ -84,7 +84,7 @@ object.foo = "baz";
 
 <h3 id="Definições_de_propriedade">Definições de propriedade</h3>
 
-<p>Nós temos aprendido como descrever propriedades utilizando a sintaxe <em>inicializador</em>. No entanto, às vezes, há variáveis que queremos inserir em nosso objeto. Então teremos um código parecido como abaixo: </p>
+<p>Nós temos aprendido como descrever propriedades utilizando a sintaxe <em>inicializador</em>. No entanto, às vezes, há variáveis que queremos inserir em nosso objeto. Então teremos um código parecido como abaixo: </p>
 
 <pre class="brush: js">var a = "foo",
     b = 42,
@@ -96,7 +96,7 @@ var o = {
   c: c
 };</pre>
 
-<p>Com ECMAScript 2015, há uma notação mais curta que possibilita atingir o mesmo resultado: </p>
+<p>Com ECMAScript 2015, há uma notação mais curta que possibilita atingir o mesmo resultado: </p>
 
 <pre class="brush: js">var a = "foo",
     b = 42,
@@ -109,7 +109,7 @@ var o = { a, b, c };
 console.log((o.a === { a }.a)); // true
 </pre>
 
-<h4 id="Duplicação_em_nomes_de_propriedades">Duplicação em nomes de propriedades</h4>
+<h4 id="Duplicação_em_nomes_de_propriedades">Duplicação em nomes de propriedades</h4>
 
 <p>Quando se está utilizando o mesmo nome para suas propriedades, a última sobrescreverá as anteriores.</p>
 
@@ -117,7 +117,7 @@ console.log((o.a === { a }.a)); // true
 console.log(a); // { x: 2}
 </pre>
 
-<p>Em códigos ECMAScript 5 no modo estrito, duplicação em nomes de propriedades serão consideradas {{jsxref("SyntaxError")}}. Porém, com a introdução de "nomes de propriedades computadas", tornou-se possível a duplicação das propriedades em tempo de execução. Assim, ECMAScript 2015 removeu a restrição.</p>
+<p>Em códigos ECMAScript 5 no modo estrito, duplicação em nomes de propriedades serão consideradas {{jsxref("SyntaxError")}}. Porém, com a introdução de "nomes de propriedades computadas", tornou-se possível a duplicação das propriedades em tempo de execução. Assim, ECMAScript 2015 removeu a restrição.</p>
 
 <pre class="brush: js">function haveES2015DuplicatePropertySemantics(){
   "use strict";
@@ -134,7 +134,7 @@ console.log(a); // { x: 2}
 
 <h3 id="Definição_de_métodos">Definição de métodos</h3>
 
-<p>Uma propriedade de um objeto pode se referir à <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a>, ou aos métodos <a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/get">getter</a> ou <a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/set">setter</a>.</p>
+<p>Uma propriedade de um objeto pode se referir à <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a>, ou aos métodos <a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/get">getter</a> ou <a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/set">setter</a>.</p>
 
 <pre class="brush: js">var o = {
   <var>propriedade: function </var>([<var>parâmetros</var>]) {},
@@ -152,7 +152,7 @@ var o = {
   * <var>gerador</var>() {}
 };</pre>
 
-<p>Com ECMAScript 2015, há uma forma concisa em criar propriedades cujo valor é uma função gerador. </p>
+<p>Com ECMAScript 2015, há uma forma concisa em criar propriedades cujo valor é uma função gerador. </p>
 
 <pre class="brush: js">var o = {
   * <var>gerador</var>() {
@@ -172,7 +172,7 @@ var o = {
 
 <h3 id="Nomes_de_propriedades_computados">Nomes de propriedades computados</h3>
 
-<p>Começando com ECMAScript 2015, a sintaxe <em>inicializador</em> de objeto também suporta "nomes de propriedades computados". Isso permite que você possa inserir uma expressão dentro de colchetes <code>[]</code>, que será computada como o nome de uma propriedade. Isto é semelhante à notação de chaves utilizado em <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors">acessor de propriedade</a>, utilizado para ler a alterar as propriedades existentes em um objeto. Segue um exemplo utilizando a mesma sintaxe em objetos literais: </p>
+<p>Começando com ECMAScript 2015, a sintaxe <em>inicializador</em> de objeto também suporta "nomes de propriedades computados". Isso permite que você possa inserir uma expressão dentro de colchetes <code>[]</code>, que será computada como o nome de uma propriedade. Isto é semelhante à notação de chaves utilizado em <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors">acessor de propriedade</a>, utilizado para ler a alterar as propriedades existentes em um objeto. Segue um exemplo utilizando a mesma sintaxe em objetos literais: </p>
 
 <pre class="brush: js">// Nomes de propriedades computados (ES2015)
 var i = 0;
@@ -194,9 +194,9 @@ var config = {
 
 console.log(config); // { size: 12, mobileSize: 4 }</pre>
 
-<h3 id="Mutação_Prototype">Mutação Prototype </h3>
+<h3 id="Mutação_Prototype">Mutação Prototype </h3>
 
-<p>Uma definição de propriedade na forma de  <code>__proto__: valor</code> or <code>"__proto__": valor</code> não cria uma propriedade com o nome  <code>__proto__</code>.  Inclusive, se o valor fornecido for um objeto ou <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>, muda o <code>[[Prototype]]</code> do objeto criado para o valor informado. (Se o valor fornecido não é um objeto ou null, o valor não será alterado.)</p>
+<p>Uma definição de propriedade na forma de  <code>__proto__: valor</code> or <code>"__proto__": valor</code> não cria uma propriedade com o nome  <code>__proto__</code>.  Inclusive, se o valor fornecido for um objeto ou <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>, muda o <code>[[Prototype]]</code> do objeto criado para o valor informado. (Se o valor fornecido não é um objeto ou null, o valor não será alterado.)</p>
 
 <pre class="brush: js">var obj1 = {};
 assert(Object.getPrototypeOf(obj1) === Object.prototype);
@@ -213,9 +213,9 @@ assert(Object.getPrototypeOf(obj4) === Object.prototype);
 assert(!obj4.hasOwnProperty("__proto__"));
 </pre>
 
-<p>Apenas uma única mudança em prototype é permitida em um objeto: múltiplas mudanças gera erro de sintaxe. </p>
+<p>Apenas uma única mudança em prototype é permitida em um objeto: múltiplas mudanças gera erro de sintaxe. </p>
 
-<p>Definições de propriedade que não utilizam da notação de ":", não são consideradas mudanças de prototype: são definições de propriedades que se comportam de forma semelhante às definições utilizando qualquer outro nome. </p>
+<p>Definições de propriedade que não utilizam da notação de ":", não são consideradas mudanças de prototype: são definições de propriedades que se comportam de forma semelhante às definições utilizando qualquer outro nome. </p>
 
 <pre class="brush: js">var __proto__ = "variable";
 
@@ -233,11 +233,11 @@ assert(obj3.__proto__ === 17);
 
 <h2 id="Notação_de_objeto_literal_vs_JSON">Notação de objeto literal vs JSON</h2>
 
-<p>A notação de objeto literal não é a mesma de <strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation (<a href="/pt-BR/docs/JSON">JSON</a>).  Mesmo que possuam semelhanças, há as seguintes diferenças:</p>
+<p>A notação de objeto literal não é a mesma de <strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation (<a href="/pt-BR/docs/JSON">JSON</a>).  Mesmo que possuam semelhanças, há as seguintes diferenças:</p>
 
 <ul>
- <li>JSON permite definições de propriedades utilizando apenas aspas duplas, como  <code>"propriedade": valor</code>.  E a definição não pode ser abreviada.</li>
- <li>Os valores JSON podem ser apenas strings, numbers, arrays, <code>true</code>, <code>false</code>, <code>null</code>, ou outro objeto JSON.</li>
+ <li>JSON permite definições de propriedades utilizando apenas aspas duplas, como  <code>"propriedade": valor</code>.  E a definição não pode ser abreviada.</li>
+ <li>Os valores JSON podem ser apenas strings, numbers, arrays, <code>true</code>, <code>false</code>, <code>null</code>, ou outro objeto JSON.</li>
  <li>Uma função como valor (veja "Métodos" acima) não pode ser atribuido em JSON.</li>
  <li>Objetos como {{jsxref("Date")}} serão do tipo string após {{jsxref("JSON.parse()")}}.</li>
  <li>{{jsxref("JSON.parse()")}} rejeitará "nomes de propriedades computados" e um erro será lançado.</li>
@@ -260,7 +260,7 @@ assert(obj3.__proto__ === 17);
   <tr>
    <td>{{SpecName('ES5.1', '#sec-11.1.5', 'Object Initializer')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td><a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/get">getter</a> e <a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/set">setter</a> adicionados.</td>
+   <td><a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/get">getter</a> e <a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/set">setter</a> adicionados.</td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-object-initializer', 'Object Initializer')}}</td>
@@ -270,118 +270,14 @@ assert(obj3.__proto__ === 17);
   <tr>
    <td>{{SpecName('ESDraft', '#sec-object-initializer', 'Object Initializer')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatChrome(1.0)}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>1</td>
-   <td>1</td>
-   <td>1</td>
-  </tr>
-  <tr>
-   <td>Nomes de propriedades computados</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("34")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>7.1</td>
-  </tr>
-  <tr>
-   <td>Abreviação em nomes de propriedades</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("33")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Abreviação em nomes de métodos</td>
-   <td>{{CompatChrome(42.0)}}</td>
-   <td>{{CompatGeckoDesktop("34")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>1</td>
-   <td>1</td>
-   <td>1</td>
-   <td>{{CompatChrome(1.0)}}</td>
-  </tr>
-  <tr>
-   <td>Nomes de propriedades computados</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("34")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Abreviação em nomes de propriedades</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("33")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Abreviação em nomes de métodos</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-   <td>{{CompatGeckoMobile("34")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.operators.object_initializer")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

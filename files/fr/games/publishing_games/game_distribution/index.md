@@ -70,7 +70,7 @@ Il existe également des portails indépendants qui rassemblent des jeux intére
 
 ### Le Web et les magasins d'applications natifs
 
-Vous pouvez aussi uploader et publier votre jeu directement sur différentes boutiques, ou marketplaces (places de marché). Pour cela vous devrez au préalable préparer et empaqueter votre jeu dans un format de construction spécifique à chaque écosystème d'application que vous visez. Voir à ce sujet la section {{anch("Marketplaces — Plateformes de distribution")}} pour obtenir plus de détails sur les différents types de marketplace disponibles.
+Vous pouvez aussi uploader et publier votre jeu directement sur différentes boutiques, ou marketplaces (places de marché). Pour cela vous devrez au préalable préparer et empaqueter votre jeu dans un format de construction spécifique à chaque écosystème d'application que vous visez. Voir à ce sujet la section [Marketplaces — Plateformes de distribution](#marketplaces_—_plateformes_de_distribution) pour obtenir plus de détails sur les différents types de marketplace disponibles.
 
 ## Marketplaces — Plateformes de distribution
 

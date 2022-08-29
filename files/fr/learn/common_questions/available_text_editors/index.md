@@ -414,8 +414,8 @@ Si vous appréciez avoir de _nombreuses_ fonctionnalités et que tout ces plugin
 
 Il est toujours bon de savoir s'il est possible d'avoir de l'aide lorsqu'on utilise un logiciel. En ce qui concerne les éditeurs de texte, ces deux points seront relativement importants :
 
-1.  Est-ce qu'il existe des documents à destination des utilisateurs ? (FAQ, manuel, aide en ligne)
-2.  Existe-t-il des ressources pour discuter avec les développeurs ou d'autres utilisateurs ? (forum, e-mail, IRC)
+1. Est-ce qu'il existe des documents à destination des utilisateurs ? (FAQ, manuel, aide en ligne)
+2. Existe-t-il des ressources pour discuter avec les développeurs ou d'autres utilisateurs ? (forum, e-mail, IRC)
 
 N'hésitez pas à utiliser la documentation écrite disponible lorsque vous démarrez avec un éditeur. Vous pouvez également échanger avec les autres utilisateurs sur des forums ou listes de diffusion pour diagnostiquer les éventuels problèmes que vous rencontrez lors de l'installation ou de l'utilisation de l'éditeur.
 

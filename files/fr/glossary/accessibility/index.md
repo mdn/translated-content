@@ -14,7 +14,7 @@ _L'Accessibilité du web_ (**A11Y**) correspond aux bonnes pratiques assurant qu
 ### Culture générale
 
 - [Ressources sur l'accessibilité](/fr/docs/Accessibilit%C3%A9) sur MDN
-- {{Interwiki("wikipedia", "Accessibilité du web")}} sur Wikipédia
+- [Accessibilité](https://fr.wikipedia.org/wiki/Accessibilit%C3%A9_du_web) sur Wikipédia
 
 ### Informations techniques
 

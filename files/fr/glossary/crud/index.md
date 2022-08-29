@@ -13,4 +13,4 @@ original_slug: Glossaire/CRUD
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "CRUD")}} sur Wikipedia
+- [CRUD](https://fr.wikipedia.org/wiki/CRUD) sur Wikipédia

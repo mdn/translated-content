@@ -38,16 +38,16 @@ const xhr = new XMLHttpRequest(),
 
 xhr.open(method, url, true);
 xhr.onreadystatechange = function () {
-  // ローカルファイルでは、 Mozilla Firefox で成功するとステータスは0になります
+  // ローカルファイルでは、 Mozilla Firefox で成功するとステータスは0になります
   if(xhr.readyState === XMLHttpRequest.DONE) {
-    var status = xhr.status;
-    if (status === 0 || (status &gt;= 200 &amp;&amp; status &lt; 400)) {
-      // リクエストが正常に終了した
-      console.log(xhr.responseText);
-    } else {
+    var status = xhr.status;
+    if (status === 0 || (status >= 200 && status < 400)) {
+      // リクエストが正常に終了した
+      console.log(xhr.responseText);
+    } else {
       // あらら! リクエストでエラーが発生しました!
-    }
-  }
+    }
+  }
 };
 xhr.send();
 ```

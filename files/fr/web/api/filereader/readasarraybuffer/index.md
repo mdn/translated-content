@@ -16,7 +16,9 @@ La méthode **`readAsArrayBuffer()`** de l'interface {{domxref("FileReader")}} p
 
 ## Syntaxe
 
-    instanceOfFileReader.readAsArrayBuffer(blob);
+```js
+instanceOfFileReader.readAsArrayBuffer(blob);
+```
 
 ### Paramètres
 
@@ -25,13 +27,11 @@ La méthode **`readAsArrayBuffer()`** de l'interface {{domxref("FileReader")}} p
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                       | Commentaire          |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("File API", "#readAsArrayBuffer", "FileReader.readAsArrayBuffer")}} | {{Spec2("File API")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FileReader.readAsArrayBuffer")}}.
+{{Compat}}
 
 ## Voir aussi
 

@@ -18,7 +18,9 @@ La propriété en lecture seule **`title`** de l'interface {{domxref ("Notificat
 
 ## Syntaxe
 
-    Notification.title
+```js
+Notification.title
+```
 
 ### Valeur
 
@@ -26,14 +28,12 @@ Une {{domxref("DOMString")}}.
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaire     |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------- |
-| {{SpecName('Web Notifications','#dom-notification-title','title')}} | {{Spec2('Web Notifications')}} | Living standard |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification.title")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

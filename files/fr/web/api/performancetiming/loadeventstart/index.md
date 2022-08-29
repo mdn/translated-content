@@ -30,8 +30,7 @@ let time = performanceTiming.loadEventStart;
 
 | Spécification                                                                                                                                                | Statut                                   | Commentaire          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-loadeventstart',
-        'PerformanceTiming.loadEventStart')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+| {{SpecName('Navigation Timing', '#dom-performancetiming-loadeventstart', 'PerformanceTiming.loadEventStart')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
 
 ## Compatibilité des navigateurs
 

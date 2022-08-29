@@ -27,7 +27,9 @@ L'uniform lui-même est déclaré dans le programme shader en utilisant GLSL.
 
 ## Syntaxe
 
-    WebGLUniformLocation = WebGLRenderingContext.getUniformLocation(programme, nom);
+```js
+WebGLUniformLocation = WebGLRenderingContext.getUniformLocation(programme, nom);
+```
 
 ### Paramètres
 

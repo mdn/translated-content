@@ -11,7 +11,9 @@ Cet ID peut aussi être utilisé comme un fragement d'URL pour charger une piste
 
 ## Syntaxe
 
-    var trackID = VideoTrack.id;
+```js
+var trackID = VideoTrack.id;
+```
 
 Valeur
 

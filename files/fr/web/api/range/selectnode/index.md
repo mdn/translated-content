@@ -14,7 +14,9 @@ La méthode `Range.selectNode()` définit le {{domxref ("Range")}} destiné à c
 
 ## Syntaxe
 
-    range.selectNode(noeudDeReference);
+```js
+range.selectNode(noeudDeReference);
+```
 
 ### Paramètres
 

@@ -15,7 +15,9 @@ La méthode **`WebGLRenderingContext.createProgram()`** de l'[API WebGL](/fr-FR/
 
 ## Syntaxe
 
-    WebGLProgram gl.createProgram();
+```js
+WebGLProgram gl.createProgram();
+```
 
 ### Paramètres
 

@@ -18,9 +18,11 @@ La méthode **`focus()`** de l'interface {{domxref("WindowClient")}} focus le cl
 
 ## Syntaxe
 
-    Client.focus().then(function(WindowClient) {
-      // utilisez le WindowClient une fois qu'il est focus
-    });
+```js
+Client.focus().then(function(WindowClient) {
+  // utilisez le WindowClient une fois qu'il est focus
+});
+```
 
 ### Paramètres
 

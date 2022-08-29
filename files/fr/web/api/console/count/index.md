@@ -39,10 +39,12 @@ console.count();
 
 La console affichera les lignes suivantes :
 
-    "<no label>: 1"
-    "<no label>: 2"
-    "<no label>: 3"
-    "<no label>: 1"
+```
+"<no label>: 1"
+"<no label>: 2"
+"<no label>: 3"
+"<no label>: 1"
+```
 
 A noter, la dernière ligne inscrite dans la console fait référence à l'appel de la fonction `count()` de la ligne 11 qui est traité comme un événement indépendant.
 
@@ -64,16 +66,20 @@ console.count("alice");
 
 La console affichera les lignes suivantes :
 
-    "bob: 1"
-    "alice: 1"
-    "alice: 2"
-    "alice: 3"
+```
+"bob: 1"
+"alice: 1"
+"alice: 2"
+"alice: 3"
+```
 
 Nous obtenons maintenant deux compteurs distinct basés sur un libellé différent. L'appel de la fonction `count()` avec "alice" à la ligne 11 n'est pas considéré comme un événement indépendant car le compteur existe déjà.
 
 ## Syntaxe
 
-    console.count([label]);
+```js
+console.count([label]);
+```
 
 ## Paramètres
 
@@ -82,10 +88,8 @@ Nous obtenons maintenant deux compteurs distinct basés sur un libellé différe
 
 ## Spécifications
 
-| Spécification                                                                | Status                           | Commentaire         |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#count", "console.count()")}} | {{Spec2("Console API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.count")}}
+{{Compat}}

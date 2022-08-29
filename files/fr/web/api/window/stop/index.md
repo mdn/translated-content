@@ -19,7 +19,9 @@ En raison de la manière dont les scripts sont exécutés, cette méthode ne peu
 
 ## Syntaxe
 
-    window.stop()
+```js
+window.stop()
+```
 
 ## Exemple
 

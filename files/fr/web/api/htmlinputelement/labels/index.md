@@ -14,7 +14,9 @@ La propriété en lecture seule **`HTMLInputElement.labels`** renvoie une {{domx
 
 ## Syntaxe
 
-    var labelElements = input.labels;
+```js
+var labelElements = input.labels;
+```
 
 ### Valeur retournée
 
@@ -45,11 +47,8 @@ window.addEventListener("DOMContentLoaded", function() {
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName("HTML WHATWG", "forms.html#dom-lfe-labels", "labels")}} | {{Spec2("HTML WHATWG")}} | Pas de changement.   |
-| {{SpecName("HTML5 W3C", "forms.html#dom-lfe-labels", "labels")}}     | {{Spec2("HTML5 W3C")}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLInputElement.labels")}}
+{{Compat}}

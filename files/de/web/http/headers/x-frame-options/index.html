@@ -5,9 +5,9 @@ translation_of: Web/HTTP/Headers/X-Frame-Options
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>Die <strong><code>X-Frame-Options</code></strong> im <a href="/en-US/docs/Web/HTTP">HTTP</a> Antwort Header kann verwendet werden, um zu bestimmen, ob ein aufrufender Browser die Zielseite in einem {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} oder {{HTMLElement("object")}} rendern also einbetten darf. Webseiten können diesen Header verwenden, um {{interwiki("wikipedia", "clickjacking")}} Attacken abzuwehren, indem sie unterbinden, dass ihr Content in fremden Seiten eingebettet wird.</p>
+<p>Die <strong><code>X-Frame-Options</code></strong> im <a href="/en-US/docs/Web/HTTP">HTTP</a> Antwort Header kann verwendet werden, um zu bestimmen, ob ein aufrufender Browser die Zielseite in einem {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} oder {{HTMLElement("object")}} rendern also einbetten darf. Webseiten können diesen Header verwenden, um {{interwiki("wikipedia", "clickjacking")}} Attacken abzuwehren, indem sie unterbinden, dass ihr Content in fremden Seiten eingebettet wird.</p>
 
-<p>Die somit erreichte Sicherheit wird nur dann gewährleistet, wenn der User zum Aufruf einen Browser verwendet, der die <code>X-Frame-Options</code> Funktion auch unterstützt.</p>
+<p>Die somit erreichte Sicherheit wird nur dann gewährleistet, wenn der User zum Aufruf einen Browser verwendet, der die <code>X-Frame-Options</code> Funktion auch unterstützt.</p>
 
 <table class="properties">
  <tbody>
@@ -24,7 +24,7 @@ translation_of: Web/HTTP/Headers/X-Frame-Options
 
 <h2 id="Syntax">Syntax</h2>
 
-<p>Es gibt drei mögliche Ausprägungen der <code>X-Frame-Options</code>:</p>
+<p>Es gibt drei mögliche Ausprägungen der <code>X-Frame-Options</code>:</p>
 
 <pre class="syntaxbox">X-Frame-Options: deny
 X-Frame-Options: sameorigin
@@ -39,20 +39,20 @@ X-Frame-Options: allow-from https://example.com/
  <dt><code>deny</code></dt>
  <dd>Die Seite kann nicht in einem Frame eingebettet werden, egal welches die aufrufende Webseite ist.</dd>
  <dt><code>sameorigin</code></dt>
- <dd>Die Seite kann nur als Frame eingebettet werden, wenn beide von der gleichen Quellseite (same origin) stammen. Die Spezifikation lässt es Browserherstellern offen, auf welcher Ebene dieser Wert greift: auf höchster Ebene, der nächsthöheren oder der gesamten Kette. Es wird jedoch festgestellt, dass die Option wenig nützlich ist, sofern nicht alle Eltern-Webseiten von der gleichen Quelle stammen (siehe {{bug(725490)}}).  Siehe weiterhin {{anch("Browser compatibility")}} zur Browserunterstützung.</dd>
+ <dd>Die Seite kann nur als Frame eingebettet werden, wenn beide von der gleichen Quellseite (same origin) stammen. Die Spezifikation lässt es Browserherstellern offen, auf welcher Ebene dieser Wert greift: auf höchster Ebene, der nächsthöheren oder der gesamten Kette. Es wird jedoch festgestellt, dass die Option wenig nützlich ist, sofern nicht alle Eltern-Webseiten von der gleichen Quelle stammen (siehe {{bug(725490)}}).  Siehe weiterhin <a href="#browser_compatibility">Browser compatibility</a> zur Browserunterstützung.</dd>
  <dt><code>allow-from <em>uri</em></code></dt>
- <dd>Die Seite lässt sich ausschließlich dann einbetten, wenn die einbettende Seite aus der Quelle <em><code>uri</code></em> stammt. Hinweis: In Firefox besteht hier das gleiche Problem wie bei <code>sameorigin</code> -  die Eltern-Frames werden nicht darauf hin geprüft, ob sie aus der gleichen Quelle stammen.</dd>
+ <dd>Die Seite lässt sich ausschließlich dann einbetten, wenn die einbettende Seite aus der Quelle <em><code>uri</code></em> stammt. Hinweis: In Firefox besteht hier das gleiche Problem wie bei <code>sameorigin</code> -  die Eltern-Frames werden nicht darauf hin geprüft, ob sie aus der gleichen Quelle stammen.</dd>
 </dl>
 
 <h2 id="Beispiele">Beispiele</h2>
 
 <div class="note">
-<p><strong>Hinweis:</strong> Die Nutzung des <code>meta tag</code> innerhalb des Webseiten-Contents hat keinen Effekt! Beispielsweise die Deklaration <code>&lt;meta http-equiv="X-Frame-Options" content="deny"&gt;</code> führt zu keiner Verhaltensänderung. Ausschließlich die Nutzung der HTTP Header (siehe Beispiele) führt zu einer Verhaltensänderung des Browser.</p>
+<p><strong>Hinweis:</strong> Die Nutzung des <code>meta tag</code> innerhalb des Webseiten-Contents hat keinen Effekt! Beispielsweise die Deklaration <code>&lt;meta http-equiv="X-Frame-Options" content="deny"&gt;</code> führt zu keiner Verhaltensänderung. Ausschließlich die Nutzung der HTTP Header (siehe Beispiele) führt zu einer Verhaltensänderung des Browser.</p>
 </div>
 
 <h3 id="Apache_Konfiguration">Apache Konfiguration</h3>
 
-<p>Um einen Apache Webserver zum Senden des <code>X-Frame-Options</code> Headers für alle Webseiten zu bewegen, fügen Sie folgenden Eintrag in die Seiten-Konfiguration ein:</p>
+<p>Um einen Apache Webserver zum Senden des <code>X-Frame-Options</code> Headers für alle Webseiten zu bewegen, fügen Sie folgenden Eintrag in die Seiten-Konfiguration ein:</p>
 
 <pre>Header always set X-Frame-Options "sameorigin"
 </pre>
@@ -67,14 +67,14 @@ X-Frame-Options: allow-from https://example.com/
 
 <h3 id="nginx_Konfiguration">nginx Konfiguration</h3>
 
-<p>Um einen nginx Server zum Senden des <code>X-Frame-Options</code> Header aufzufordern, fügen Sie folgenden Eintrag entweder zu Ihrer http, server oder location Konfiguration hinzu:</p>
+<p>Um einen nginx Server zum Senden des <code>X-Frame-Options</code> Header aufzufordern, fügen Sie folgenden Eintrag entweder zu Ihrer http, server oder location Konfiguration hinzu:</p>
 
 <pre>add_header X-Frame-Options sameorigin;
 </pre>
 
 <h3 id="IIS_Konfiguration">IIS Konfiguration</h3>
 
-<p>Um den IIS Server zum Senden des <code>X-Frame-Options</code> Headers aufzufordern, ergänzen Sie folgenden Eintrag entsprechend in Ihrer <code>Web.config</code> Datei:</p>
+<p>Um den IIS Server zum Senden des <code>X-Frame-Options</code> Headers aufzufordern, ergänzen Sie folgenden Eintrag entsprechend in Ihrer <code>Web.config</code> Datei:</p>
 
 <pre class="brush: xml">&lt;system.webServer&gt;
   ...
@@ -91,7 +91,7 @@ X-Frame-Options: allow-from https://example.com/
 
 <h3 id="HAProxy_Konfiguration">HAProxy Konfiguration</h3>
 
-<p>Um HAProxy zum Senden des <code>X-Frame-Options</code> Headers aufzufordern, fügen Sie diesen Eintrag zu Ihrer front-end, listen oder backend Konfiguration hinzu:</p>
+<p>Um HAProxy zum Senden des <code>X-Frame-Options</code> Headers aufzufordern, fügen Sie diesen Eintrag zu Ihrer front-end, listen oder backend Konfiguration hinzu:</p>
 
 <pre>rspadd X-Frame-Options:\ sameorigin</pre>
 

@@ -1,43 +1,55 @@
 ---
 title: XMLDocument.load()
 slug: Web/API/XMLDocument/load
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - Experimental
-  - Expérimental(2)
-  - Method
-  - Reference
-  - Référence(2)
+page-type: web-api-instance-method
 translation_of: Web/API/XMLDocument/load
+browser-compat: api.XMLDocument.load
+l10n:
+  sourceCommit: 95b52aa7aeabbd2670f762da4fb7c0b0133f4d9f
 ---
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-`document.load()` fait partie d'une ancienne version du module W3C [DOM Level 3 Load & Save](http://www.w3.org/TR/2003/WD-DOM-Level-3-LS-20030619/load-save.html#LS-DocumentLS). Elle peut être utilisée avec document.async pour indiquer si la requête est synchrone ou asynchrone (par défaut). À partir d'au moins Gecko 1.9, elle ne prend plus en charge le chargement inter-site de documents (utilisez [XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest) à la place).
+`document.load()` est une méthode spécifiée dans une ancienne version de la spécification [du module de chargement et d'enregistrement du DOM de niveau 3](https://www.w3.org/TR/2003/WD-DOM-Level-3-LS-20030619/load-save.html#LS-DocumentLS) du W3C. Elle peut être utilisée avec [`XMLDocument.async`](/fr/docs/Web/API/XMLDocument/async) pour indiquer si la requête est synchrone ou asynchrone (par défaut).
+
+On utilisera [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) ou [`fetch()`](/fr/docs/Web/API/fetch) à la place.
+
+## Syntaxe
+
+```js
+load()
+```
+
+### Paramètres
+
+Aucun.
+
+### Valeur de retour
+
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ## Exemples
 
-    var docXml = document.implementation.createDocument("", "test", null);
+```js
+const xmlDoc = document.implementation.createDocument("", "test", null);
 
-    function documentCharge (e) {
-      alert(new XMLSerializer().serializeToString(e.target)); // Donne le contenu de querydata.xml comme une chaîne
-    }
+function documentLoaded(e) {
+  console.log(new XMLSerializer().serializeToString(e.target)); // Affiche le contenu de querydata.xml sous forme de chaîne
+}
 
-    xmlDoc.addEventListener("load", documentCharge, false);
-    xmlDoc.load('querydata.xml');
+xmlDoc.addEventListener("load", documentLoaded, false);
+xmlDoc.load('querydata.xml');
+```
 
-{{Source("content/xml/tests/load/", "Voir aussi l'extrait de chargement")}} dans le dossier de tests XML. (Pour tester cette fonctionnalité, créez les fichiers sur votre disque local ou sur un serveur web, plutôt que de charger le fichier load.html depuis la page générée par LXR, qui servira le fichier text.xml comme HTML.)
+## Spécifications
 
-## Spécification
-
-- [Old W3C Working Draft of the DOM Level 3 Load & Save module](http://www.w3.org/TR/2003/WD-DOM-Level-3-LS-20030619/load-save.html#LS-DocumentLS)
+- [Ancien brouillon de travail pour la spécification du DOM de niveau 3&nbsp;: module de chargement et d'enregistrement](https://www.w3.org/TR/2003/WD-DOM-Level-3-LS-20030619/load-save.html#LS-DocumentLS)
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.XMLDocument.load")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [document.async](/fr/docs/Web/API/Document/async)
-- [XML dans Mozilla](/fr/docs/XML_dans_Mozilla)
+- [`XMLDocument.async`](/fr/docs/Web/API/XMLDocument/async)
+- [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)
+- [`fetch()`](/fr/docs/Web/API/fetch)

@@ -17,7 +17,9 @@ Initialement, la spécification DOM3 définissait cet attribut en lecture/écrit
 
 ## Syntaxe
 
-    var string = document.documentURI;
+```js
+var string = document.documentURI;
+```
 
 ## Notes
 
@@ -25,11 +27,8 @@ Les documents HTML ont une propriété {{domxref("document.URL")}} qui renvoie l
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG', '#dom-document-documenturi','documentURI')}} | {{Spec2('DOM WHATWG')}} |                     |
-| {{SpecName('DOM3 Core', '#Document3-documentURI', 'documentURI')}}     | {{Spec2('DOM3 Core')}}     | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.documentURI")}}
+{{Compat}}

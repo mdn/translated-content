@@ -10,11 +10,11 @@ original_slug: Web/CSS/transform-function/perspective()
 ---
 <div>{{CSSRef}}</div>
 
-<p>A função <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>perspective()</code></strong> define uma transformação que configura a distância entre o usuário e o plano z=0. Seu resultado é um dado do tipo {{cssxref("&lt;transform-function&gt;")}}.</p>
+<p>A função <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>perspective()</code></strong> define uma transformação que configura a distância entre o usuário e o plano z=0. Seu resultado é um dado do tipo {{cssxref("&lt;transform-function&gt;")}}.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
-<p>A distância de perspectiva usada por<code>perspective()</code> é especificada por um valor {{cssxref("&lt;length&gt;")}}, que representa a distância entre o usuário e o plano z=0. Um valor positivo faz o elemento parecer mais perto do usuário, e um valor negativo o faz parecer mais longe.</p>
+<p>A distância de perspectiva usada por<code>perspective()</code> é especificada por um valor {{cssxref("&lt;length&gt;")}}, que representa a distância entre o usuário e o plano z=0. Um valor positivo faz o elemento parecer mais perto do usuário, e um valor negativo o faz parecer mais longe.</p>
 
 <pre class="syntaxbox notranslate">perspective(d)
 </pre>
@@ -52,59 +52,59 @@ original_slug: Web/CSS/transform-function/perspective()
 
 <pre class="brush: html notranslate">&lt;p&gt;Sem perspectiva:&lt;/p&gt;
 &lt;div class="no-perspective-box"&gt;
-  &lt;div class="face front"&gt;A&lt;/div&gt;
-  &lt;div class="face top"&gt;B&lt;/div&gt;
-  &lt;div class="face left"&gt;C&lt;/div&gt;
+  &lt;div class="face front"&gt;A&lt;/div&gt;
+  &lt;div class="face top"&gt;B&lt;/div&gt;
+  &lt;div class="face left"&gt;C&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Com perspectiva (7.5cm):&lt;/p&gt;
 &lt;div class="perspective-box"&gt;
-  &lt;div class="face front"&gt;A&lt;/div&gt;
-  &lt;div class="face top"&gt;B&lt;/div&gt;
-  &lt;div class="face left"&gt;C&lt;/div&gt;
+  &lt;div class="face front"&gt;A&lt;/div&gt;
+  &lt;div class="face top"&gt;B&lt;/div&gt;
+  &lt;div class="face left"&gt;C&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <h3 id="CSS">CSS</h3>
 
 <pre class="brush: css notranslate">.face {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
-  font-size: 100px;
-  text-align: center;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 100px;
+  text-align: center;
 }
 
 .no-perspective-box {
-  width: 100px;
-  height: 100px;
-  transform-style: preserve-3d;
-  transform: rotateX(-15deg) rotateY(15deg);
-  margin-left: 100px;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  transform: rotateX(-15deg) rotateY(15deg);
+  margin-left: 100px;
 }
 
 .perspective-box {
-  width: 100px;
-  height: 100px;
-  transform-style: preserve-3d;
-  transform: perspective(7.5cm) rotateX(-15deg) rotateY(15deg);
-  margin-left: 100px;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  transform: perspective(7.5cm) rotateX(-15deg) rotateY(15deg);
+  margin-left: 100px;
 }
 
 .top {
-  background-color: skyblue;
-  transform: rotateX(90deg) translate3d(0, 0, 50px);
+  background-color: skyblue;
+  transform: rotateX(90deg) translate3d(0, 0, 50px);
 }
 
 .left {
-  background-color: pink;
-  transform: rotateY(-90deg) translate3d(0, 0, 50px);
+  background-color: pink;
+  transform: rotateY(-90deg) translate3d(0, 0, 50px);
 }
 
 .front {
-  background-color: limegreen;
-  transform: translate3d(0, 0, 50px);
+  background-color: limegreen;
+  transform: translate3d(0, 0, 50px);
 }
 </pre>
 
@@ -114,7 +114,7 @@ original_slug: Web/CSS/transform-function/perspective()
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>Veja o tipo de dado <code><a href="/en-US/docs/Web/CSS/transform-function#Browser_compatibility">&lt;transform-function&gt;</a></code> para informações de compatibilidade.</p>
+<p>Veja o tipo de dado <code><a href="/en-US/docs/Web/CSS/transform-function#Browser_compatibility">&lt;transform-function&gt;</a></code> para informações de compatibilidade.</p>
 
 <h2 id="Ver_também">Ver também</h2>
 

@@ -11,7 +11,7 @@ translation_of: Web/API/IntersectionObserverEntry
 ---
 {{SeeCompatTable}}{{APIRef("Intersection Observer API")}}
 
-L'interface **`IntersectionObserverEntry`** de l'[API Intersection Observer](/en-US/docs/Web/API/Intersection_Observer_API) décrit l'intersection entre l'élément cible et son conteneur (appelé racine) à un moment spécifique de transition.
+L'interface **`IntersectionObserverEntry`** de l'[API Intersection Observer](/fr/docs/Web/API/Intersection_Observer_API) décrit l'intersection entre l'élément cible et son conteneur (appelé racine) à un moment spécifique de transition.
 
 Les instances de `IntersectionObserverEntry` sont délivrées à une fonction de rappel de l'{{domxref("IntersectionObserver")}} en tant que paramètres `entries` ; autrement, ces objets ne peuvent être obtenus qu'en appelant {{domxref("IntersectionObserver.takeRecords()")}}.
 
@@ -30,7 +30,7 @@ Les instances de `IntersectionObserverEntry` sont délivrées à une fonction de
 - {{domxref("IntersectionObserverEntry.target")}} {{ReadOnlyInline}}
   - : L'{{domxref("Element")}} dont l'intersection avec la racine a changé d'état.
 - {{domxref("IntersectionObserverEntry.time")}} {{readonlyinline}}
-  - : Un {{domxref("DOMHighResTimeStamp")}} indiquant l'instant auquel l'intersection a été enregistrée, relative au [temps originel](/en-US/docs/Web/API/DOMHighResTimeStamp#The_time_origin) de l'`IntersectionObserver`.
+  - : Un {{domxref("DOMHighResTimeStamp")}} indiquant l'instant auquel l'intersection a été enregistrée, relative au [temps originel](/fr/docs/Web/API/DOMHighResTimeStamp#The_time_origin) de l'`IntersectionObserver`.
 
 ## Méthodes
 
@@ -38,10 +38,8 @@ _Cette interface n'a pas de méthode._
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                                       | Commentaire         |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
-| {{SpecName('IntersectionObserver','#intersection-observer-entry','IntersectionObserverEntry')}} | {{Spec2('IntersectionObserver')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserverEntry")}}
+{{Compat}}

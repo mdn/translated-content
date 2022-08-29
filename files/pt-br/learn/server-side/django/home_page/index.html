@@ -23,7 +23,7 @@ translation_of: Learn/Server-side/Django/Home_page
  <tbody>
   <tr>
    <th scope="row">Pré-requisitos:</th>
-   <td>Leia a <a href="/en-US/docs/Learn/Server-side/Django/Introduction">Introdução ao Django</a>. Conclua os tópicos do tutorial anterior (incluindo <a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django Tutorial Part 4: Django admin site</a>).</td>
+   <td>Leia a <a href="/en-US/docs/Learn/Server-side/Django/Introduction">Introdução ao Django</a>. Conclua os tópicos do tutorial anterior (incluindo <a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django Tutorial Part 4: Django admin site</a>).</td>
   </tr>
   <tr>
    <th scope="row">Objetivo:</th>
@@ -50,21 +50,21 @@ translation_of: Learn/Server-side/Django/Home_page
 
 <h2 id="Definindo_os_URLs_do_recurso">Definindo os URLs do recurso</h2>
 
-<p>Como esta versão do <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary </a>é essencialmente somente leitura para usuários finais, precisamos fornecer uma página de destino para o site (uma página inicial) e páginas que exibam visualizações de lista e detalhes de livros e autores.</p>
+<p>Como esta versão do <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary </a>é essencialmente somente leitura para usuários finais, precisamos fornecer uma página de destino para o site (uma página inicial) e páginas que exibam visualizações de lista e detalhes de livros e autores.</p>
 
 <p>As URLs que iremos precisar na nossa página são:</p>
 
 <ul>
- <li><code>catalog/</code> — A página inicial (index).</li>
- <li><code>catalog/books/</code> — Uma lista de todos os livros.</li>
- <li><code>catalog/authors/</code> — Uma lista de todos os autores.</li>
- <li><code>catalog/book/<em>&lt;id&gt;</em></code> — A exibição de detalhes de um livro específico, com uma chave primária de campo <code><em>&lt;id&gt;</em></code> (o padrão). Por exemplo, o URL do terceiro livro adicionado à lista será <code>/catalog/book/3</code>.</li>
- <li><code>catalog/author/<em>&lt;id&gt;</em></code><em> </em>— A exibição de detalhes para o autor específico com um campo de chave primária de <em><code>&lt;id&gt;.  </code></em>Por exemplo, o URL do 11º autor adicionado à lista será  <code>/catalog/author/11</code>.</li>
+ <li><code>catalog/</code> — A página inicial (index).</li>
+ <li><code>catalog/books/</code> — Uma lista de todos os livros.</li>
+ <li><code>catalog/authors/</code> — Uma lista de todos os autores.</li>
+ <li><code>catalog/book/<em>&lt;id&gt;</em></code> — A exibição de detalhes de um livro específico, com uma chave primária de campo <code><em>&lt;id&gt;</em></code> (o padrão). Por exemplo, o URL do terceiro livro adicionado à lista será <code>/catalog/book/3</code>.</li>
+ <li><code>catalog/author/<em>&lt;id&gt;</em></code><em> </em>— A exibição de detalhes para o autor específico com um campo de chave primária de <em><code>&lt;id&gt;.  </code></em>Por exemplo, o URL do 11º autor adicionado à lista será  <code>/catalog/author/11</code>.</li>
 </ul>
 
 <p>Os três primeiros URLs retornarão a página de índice, a lista de livros e a lista de autores. Esses URLs não codificam nenhuma informação adicional e as consultas que buscam dados no banco de dados sempre serão as mesmas. No entanto, os resultados retornados pelas consultas dependerão do conteúdo do banco de dados.</p>
 
-<p>Por outro lado, os dois URLs finais exibirão informações detalhadas sobre um livro ou autor específico. Esses URLs codificam a identidade do item a ser exibido (representado por <code><em>&lt;id&gt;</em></code> acima). O mapeador de URLs extrairá as informações codificadas e as passará para a visualização, e a visualização determinará dinamicamente quais informações serão obtidas do banco de dados. Ao codificar as informações no URL, usaremos um único conjunto de mapeamento de URL, uma visualização e um modelo para lidar com todos os livros (ou autores). </p>
+<p>Por outro lado, os dois URLs finais exibirão informações detalhadas sobre um livro ou autor específico. Esses URLs codificam a identidade do item a ser exibido (representado por <code><em>&lt;id&gt;</em></code> acima). O mapeador de URLs extrairá as informações codificadas e as passará para a visualização, e a visualização determinará dinamicamente quais informações serão obtidas do banco de dados. Ao codificar as informações no URL, usaremos um único conjunto de mapeamento de URL, uma visualização e um modelo para lidar com todos os livros (ou autores). </p>
 
 <div class="note">
 <p><strong>Nota</strong>: Com o Django, você pode construir suas URLs da maneira que desejar - você pode codificar informações no corpo da URL, como mostrado acima, ou incluir <code>GET</code> parâmetros no URL, por exemplo <code>/book/?id=6</code>. Qualquer que seja a abordagem usada, os URLs devem ser mantidos limpos, lógicos e legíveis, conforme <a href="https://www.w3.org/Provider/Style/URI">recomendado pelo W3C</a>.<br>
@@ -83,20 +83,20 @@ translation_of: Learn/Server-side/Django/Home_page
 
 <h3 id="Mapeamento_de_URL">Mapeamento de URL</h3>
 
-<p>Quando criamos o <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">esqueleto do website</a>, atualizamos o arquivo <strong>locallibrary/urls.py</strong> para garantir que sempre que um URL que comece com <code>catalog/</code>  é recebido, o módulo URLConf <code>catalog.urls</code> processará a substring restante.</p>
+<p>Quando criamos o <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">esqueleto do website</a>, atualizamos o arquivo <strong>locallibrary/urls.py</strong> para garantir que sempre que um URL que comece com <code>catalog/</code>  é recebido, o módulo URLConf <code>catalog.urls</code> processará a substring restante.</p>
 
-<p>O seguinte snippet de código de <strong>locallibrary/urls.py </strong>inclui o modulo <code>catalog.urls</code>:</p>
+<p>O seguinte snippet de código de <strong>locallibrary/urls.py </strong>inclui o modulo <code>catalog.urls</code>:</p>
 
 <pre class="notranslate">urlpatterns += [
-    path('catalog/', include('catalog.urls')),
+    path('catalog/', include('catalog.urls')),
 ]
 </pre>
 
 <div class="note">
-<p><strong>Nota</strong>: Sempre que o Django encontra a função de importação  <code><a href="https://docs.djangoproject.com/en/2.1/ref/urls/#django.urls.include" title="django.conf.urls.include">django.urls.include()</a></code>, divide a string da URL no caractere final designado e envia a subsequência restante para o módulo URLconf incluído para processamento adicional.</p>
+<p><strong>Nota</strong>: Sempre que o Django encontra a função de importação  <code><a href="https://docs.djangoproject.com/en/2.1/ref/urls/#django.urls.include" title="django.conf.urls.include">django.urls.include()</a></code>, divide a string da URL no caractere final designado e envia a subsequência restante para o módulo URLconf incluído para processamento adicional.</p>
 </div>
 
-<p>Também criamos um arquivo de espaço reservado para o modulo <em>URLConf</em>, chamado <strong>/catalog/urls.py</strong>. Adicione as seguintes linhas a esse arquivo: </p>
+<p>Também criamos um arquivo de espaço reservado para o modulo <em>URLConf</em>, chamado <strong>/catalog/urls.py</strong>. Adicione as seguintes linhas a esse arquivo: </p>
 
 <pre class="brush: python notranslate">urlpatterns = [
 <strong>    path('', views.index, name='index'),</strong>
@@ -105,8 +105,8 @@ translation_of: Learn/Server-side/Django/Home_page
 <p>A função <code>path()</code> define o seguinte:</p>
 
 <ul>
- <li>Um padrão de URL, que é uma sequência vazia: <code>''</code>. Discutiremos detalhadamente os padrões de URL ao trabalhar em outras visualizações.</li>
- <li>A view function that will be called if the URL pattern is detected: <code>views.index</code>,  which is the function named <code>index()</code> in the <strong>views.py </strong>file. </li>
+ <li>Um padrão de URL, que é uma sequência vazia: <code>''</code>. Discutiremos detalhadamente os padrões de URL ao trabalhar em outras visualizações.</li>
+ <li>A view function that will be called if the URL pattern is detected: <code>views.index</code>,  which is the function named <code>index()</code> in the <strong>views.py </strong>file. </li>
 </ul>
 
 <p>A função <code>path()</code> também especifica um parâmetro de nome, que é um identificador exclusivo para esse mapeamento de URL específico. Você pode usar o nome para "reverter" o mapeador, ou seja, para criar dinamicamente um URL que aponte para o recurso que o mapeador foi projetado para manipular. Por exemplo, podemos usar o parâmetro name para vincular à nossa home page a partir de qualquer outra página adicionando o seguinte link em um modelo:</p>
@@ -114,14 +114,14 @@ translation_of: Learn/Server-side/Django/Home_page
 <pre class="brush: html notranslate">&lt;a href="<strong>{% url 'index' %}</strong>"&gt;Home&lt;/a&gt;.</pre>
 
 <div class="note">
-<p><strong>Nota</strong>: Podemos codificar o link como em <code>&lt;a href="<strong>/catalog/</strong>"&gt;Home&lt;/a&gt;</code>), mas se alterarmos o padrão da nossa página inicial, por exemplo, para <code>/catalog/index</code>) os modelos não serão mais vinculados corretamente. Usar um mapeamento de URL invertido é muito mais flexível e robusto.</p>
+<p><strong>Nota</strong>: Podemos codificar o link como em <code>&lt;a href="<strong>/catalog/</strong>"&gt;Home&lt;/a&gt;</code>), mas se alterarmos o padrão da nossa página inicial, por exemplo, para <code>/catalog/index</code>) os modelos não serão mais vinculados corretamente. Usar um mapeamento de URL invertido é muito mais flexível e robusto.</p>
 </div>
 
 <h3 id="View_function-based">View (function-based)</h3>
 
-<p>Uma view é uma função que processa uma solicitação HTTP, busca os dados necessários no banco de dados, renderiza os dados em uma página HTML usando um modelo HTML e, em seguida, retorna o HTML gerado em uma resposta HTTP para exibir a página ao usuário. A visualização do índice segue esse modelo - ele busca informações sobre o número de <code>Book</code>, <code>BookInstance</code>, disponibilidade de  <code>BookInstance</code> e registros de <code>Author</code> que temos no banco de dados e passa essas informações para um modelo para exibição.</p>
+<p>Uma view é uma função que processa uma solicitação HTTP, busca os dados necessários no banco de dados, renderiza os dados em uma página HTML usando um modelo HTML e, em seguida, retorna o HTML gerado em uma resposta HTTP para exibir a página ao usuário. A visualização do índice segue esse modelo - ele busca informações sobre o número de <code>Book</code>, <code>BookInstance</code>, disponibilidade de  <code>BookInstance</code> e registros de <code>Author</code> que temos no banco de dados e passa essas informações para um modelo para exibição.</p>
 
-<p>Abra <strong>catalog/views.py</strong> e observe que o arquivo já importa o <a href="https://docs.djangoproject.com/en/2.1/topics/http/shortcuts/#django.shortcuts.render">render()</a> da função shortcuts para gerar arquivo HTML usando um modelo e dados: </p>
+<p>Abra <strong>catalog/views.py</strong> e observe que o arquivo já importa o <a href="https://docs.djangoproject.com/en/2.1/topics/http/shortcuts/#django.shortcuts.render">render()</a> da função shortcuts para gerar arquivo HTML usando um modelo e dados: </p>
 
 <pre class="brush: python notranslate">from django.shortcuts import render
 
@@ -157,14 +157,14 @@ def index(request):
 
 <p>A primeira linha importa as classes de models que usaremos para acessar dados em todas as nossas visualizações.</p>
 
-<p>A primeira parte da função view busca o número de registros usando o atributo  <code>objects.all()</code> nas classes de modelo. Também recebe uma lista de objetos de  <code>BookInstance</code> que possuem um valor de 'a' (Disponibilidade) no campo status. Você pode encontrar mais informações sobre como acessar os dados do modelo em nosso tutorial anterior <a href="/en-US/docs/Learn/Server-side/Django/Models#Searching_for_records">Django Tutorial Part 3: Using models &gt; Searching for records</a>.</p>
+<p>A primeira parte da função view busca o número de registros usando o atributo  <code>objects.all()</code> nas classes de modelo. Também recebe uma lista de objetos de  <code>BookInstance</code> que possuem um valor de 'a' (Disponibilidade) no campo status. Você pode encontrar mais informações sobre como acessar os dados do modelo em nosso tutorial anterior <a href="/en-US/docs/Learn/Server-side/Django/Models#Searching_for_records">Django Tutorial Part 3: Using models &gt; Searching for records</a>.</p>
 
 <p>No final da função view chamamos a função <code>render()</code> para criar uma página HTML e retornar a página como resposta. essa função de atalho envolve várias outras funções para simplificar um caso de uso muito comum. A função <code>render()</code> aceita os seguintes parâmetros:</p>
 
 <ul>
  <li>o objeto <code>request</code> original, que é um <code>HttpRequest</code>.</li>
  <li>um modelo HTML com espaços reservados para os dados.</li>
- <li>uma variável <code>context</code>, que é um dicionário Python, contendo os dados a serem inseridos nos espaços reservados. </li>
+ <li>uma variável <code>context</code>, que é um dicionário Python, contendo os dados a serem inseridos nos espaços reservados. </li>
 </ul>
 
 <p>Falaremos mais sobre modelos e variáveis <code>context</code> na próxima seção. Vamos criar nosso template para que possamos exibir algo para o usuário!</p>
@@ -178,7 +178,7 @@ def index(request):
 <p>Você pode verificar isso salvando as alterações anteriores e acessando <code>127.0.0.1:8000</code> no seu navegador - ele exibirá uma mensagem de erro bastante intuitiva: "<code>TemplateDoesNotExist at /catalog/</code>", e outros detalhes.</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Com base no arquivo de configurações do seu projeto, o Django procurará templates em vários locais, pesquisando nos aplicativos instalados por padrão. Você pode descobrir mais sobre como o Django encontra templates e quais formatos ele suporta no <a href="https://docs.djangoproject.com/en/2.1/topics/templates/">the Templates section of the Django documentation</a>.</p>
+<p><strong>Nota</strong>: Com base no arquivo de configurações do seu projeto, o Django procurará templates em vários locais, pesquisando nos aplicativos instalados por padrão. Você pode descobrir mais sobre como o Django encontra templates e quais formatos ele suporta no <a href="https://docs.djangoproject.com/en/2.1/topics/templates/">the Templates section of the Django documentation</a>.</p>
 </div>
 
 <h4 id="Estendendo_templates">Estendendo templates</h4>
@@ -205,7 +205,7 @@ def index(request):
 &lt;/html&gt;
 </pre>
 
-<p>Ao definir um template para uma visualização específica, primeiro especificamos o template base usando a template tag <code>extends</code> — veja o exemplo de código abaixo. Em seguida, declaramos quais seções do template queremos substituir (se houver), usando seções <code>block</code>/<code>endblock</code> como no template base. </p>
+<p>Ao definir um template para uma visualização específica, primeiro especificamos o template base usando a template tag <code>extends</code> — veja o exemplo de código abaixo. Em seguida, declaramos quais seções do template queremos substituir (se houver), usando seções <code>block</code>/<code>endblock</code> como no template base. </p>
 
 <p>Por exemplo, o trecho de código abaixo mostra como usar a template tag <code>extends</code> e substituir o block <code>content</code>. O HTML gerado incluirá o código e a estrutura definidos no template base, incluindo o conteúdo padrão que você definiu no block <code>title</code>, mas o novo block <code>content</code> no lugar do padrão.</p>
 
@@ -255,7 +255,7 @@ def index(request):
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p>O template inclui CSS de <a href="http://getbootstrap.com/">Bootstrap</a> para melhorar o layout e a apresentação da página HTML. O uso do Bootstrap (ou outra estrutura da Web do lado do cliente) é uma maneira rápida de criar uma página atraente que é exibida bem em diferentes tamanhos de tela.</p>
+<p>O template inclui CSS de <a href="http://getbootstrap.com/">Bootstrap</a> para melhorar o layout e a apresentação da página HTML. O uso do Bootstrap (ou outra estrutura da Web do lado do cliente) é uma maneira rápida de criar uma página atraente que é exibida bem em diferentes tamanhos de tela.</p>
 
 <p>O template base também faz referência a um arquivo css local (<strong>styles.css</strong>) que fornece estilo adicional. Criar um arquivo <strong>styles.css </strong>em<strong> </strong><strong>/locallibrary/catalog/static/css/</strong> e cole o seguinte código no arquivo:</p>
 
@@ -267,7 +267,7 @@ def index(request):
 
 <h4 id="O_template_index">O template index</h4>
 
-<p>Crie um novo arquivo HTML <strong><em>index.html </em></strong>em <strong>/locallibrary/catalog/templates/</strong> e cole o seguinte código no arquivo Esse código estende nosso modelo base na primeira linha e substitui o padrão block <code>content</code> para o template. </p>
+<p>Crie um novo arquivo HTML <strong><em>index.html </em></strong>em <strong>/locallibrary/catalog/templates/</strong> e cole o seguinte código no arquivo Esse código estende nosso modelo base na primeira linha e substitui o padrão block <code>content</code> para o template. </p>
 
 <pre class="brush: html notranslate">{% extends "base_generic.html" %}
 
@@ -284,10 +284,10 @@ def index(request):
   &lt;/ul&gt;
 {% endblock %}</pre>
 
-<p>Na seção <em>Dynamic content</em>, declaramos espaços reservados (<em>variáveis de template</em>) para as informações da exibição que queremos incluir. As variáveis são colocadas entre chaves (guiador), como mostrado em negrito no exemplo de código. </p>
+<p>Na seção <em>Dynamic content</em>, declaramos espaços reservados (<em>variáveis de template</em>) para as informações da exibição que queremos incluir. As variáveis são colocadas entre chaves (guiador), como mostrado em negrito no exemplo de código. </p>
 
 <div class="note">
-<p><strong>Nota:</strong> Você pode reconhecer facilmente variáveis de template e template tags (funções) - as variáveis são colocadas entre chaves (<code>\{{ num_books }}</code>), e as tags são colocadas em chaves simples com sinais de porcentagem (<code>{% extends "base_generic.html" %}</code>).</p>
+<p><strong>Nota:</strong> Você pode reconhecer facilmente variáveis de template e template tags (funções) - as variáveis são colocadas entre chaves (<code>\{{ num_books }}</code>), e as tags são colocadas em chaves simples com sinais de porcentagem (<code>{% extends "base_generic.html" %}</code>).</p>
 </div>
 
 <p>O importante a ser observado aqui é que as variáveis são nomeadas com as <em>chaves</em> que passamos para o dicionário <code>context</code> na função <code>render()</code> da nossa view (veja a amostra abaixo). As variáveis serão substituídas pelos <em>valores </em>associados quando o modelo for renderizado.</p>
@@ -303,7 +303,7 @@ return render(request, 'index.html', context=context)</pre>
 
 <h4 id="Referenciando_arquivos_estáticos_nos_templates">Referenciando arquivos estáticos nos templates</h4>
 
-<p>É provável que seu projeto use recursos estáticos, incluindo JavaScript, CSS e imagens. Como a localização desses arquivos pode não ser conhecida (ou pode mudar), o Django permite que você especifique a localização em seus modelos em relação a configuração global <code>STATIC_URL</code>. O site padrão do esqueleto define o valor de <code>STATIC_URL</code> para '<code>/static/</code>', mas você pode optar por hospedá-los em uma rede de entrega de conteúdo ou em outro local.</p>
+<p>É provável que seu projeto use recursos estáticos, incluindo JavaScript, CSS e imagens. Como a localização desses arquivos pode não ser conhecida (ou pode mudar), o Django permite que você especifique a localização em seus modelos em relação a configuração global <code>STATIC_URL</code>. O site padrão do esqueleto define o valor de <code>STATIC_URL</code> para '<code>/static/</code>', mas você pode optar por hospedá-los em uma rede de entrega de conteúdo ou em outro local.</p>
 
 <p>Dentro do template que você chama primeiro na template tag <code>load</code> especificando "static" para adicionar a biblioteca de modelos, conforme mostrado no exemplo de código abaixo. Você pode então usar a template tag <code>static</code> e especifique o URL relativo ao arquivo necessário.</p>
 
@@ -337,26 +337,26 @@ return render(request, 'index.html', context=context)</pre>
 <p>Você precisa dizer ao Django para procurar seus templates na pasta de templates. Para fazer isso, adicione o diretório de templates ao objeto TEMPLATES editando o arquivo <strong>settings.py</strong>, como mostrado em negrito, no seguinte exemplo de código:</p>
 
 <pre class="brush: python notranslate">TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-<strong>            os.path.join(BASE_DIR, 'templates'),
-</strong>        ],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
-    },
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [
+<strong>            os.path.join(BASE_DIR, 'templates'),
+</strong>        ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
 ]</pre>
 
 <h2 id="Com_o_que_se_parece">Com o que se parece?</h2>
 
-<p>Neste ponto, criamos todos os recursos necessários para exibir a página index. Execute o servidor (<code>python3 manage.py runserver</code>) e abra <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> no seu navegador. Se tudo estiver configurado corretamente, seu site deverá ter a seguinte captura de tela.</p>
+<p>Neste ponto, criamos todos os recursos necessários para exibir a página index. Execute o servidor (<code>python3 manage.py runserver</code>) e abra <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> no seu navegador. Se tudo estiver configurado corretamente, seu site deverá ter a seguinte captura de tela.</p>
 
 <p><img alt="Index page for LocalLibrary website" src="https://mdn.mozillademos.org/files/14045/index_page_ok.png" style="border-style: solid; border-width: 1px; display: block; height: 356px; margin: 0px auto; width: 874px;"></p>
 
@@ -372,10 +372,10 @@ return render(request, 'index.html', context=context)</pre>
  <li>O modelo de <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django/Home_page#The_LocalLibrary_base_template">base</a> da BibliotecaLocal inclui um bloco de <code>título</code>. Substitua este bloco no modelo de índice e crie um novo título para a página.</li>
  <li>
   <div class="note">
-  <p><strong>Dica: </strong>A seção<a href="#Extending_templates"> Extendendo Templates</a> explica como criar blocos e  extender um bloco em outro template.</p>
+  <p><strong>Dica: </strong>A seção<a href="#Extending_templates"> Extendendo Templates</a> explica como criar blocos e  extender um bloco em outro template.</p>
   </div>
  </li>
- <li>Modifique a <a href="#View_(function-based)">view</a> para gerar contagens para gêneros e livros que contenham uma palavra específica (case insensitive), e passe o resultado para o <code>contexto.</code> <span class="tlid-translation translation" lang="pt"><span title="">Isso é feito de maneira semelhante à criação e uso de <code>num_books</code> e <code>num_instances_available</code>.</span> <span title="">Em seguida, atualize o template do index para incluir essas variáveis.</span></span></li>
+ <li>Modifique a <a href="#View_(function-based)">view</a> para gerar contagens para gêneros e livros que contenham uma palavra específica (case insensitive), e passe o resultado para o <code>contexto.</code> <span class="tlid-translation translation" lang="pt"><span title="">Isso é feito de maneira semelhante à criação e uso de <code>num_books</code> e <code>num_instances_available</code>.</span> <span title="">Em seguida, atualize o template do index para incluir essas variáveis.</span></span></li>
 </ol>
 
 <ul>
@@ -392,8 +392,8 @@ return render(request, 'index.html', context=context)</pre>
 <ul>
  <li><a href="https://docs.djangoproject.com/pt-br/3.1/intro/tutorial03/">Escrevendo sua primeira aplicação Django, parte 3: View e Templates</a> (documentação do Django)</li>
  <li><a href="https://docs.djangoproject.com/pt-br/3.1/topics/http/urls/">Despachante de URL</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/pt-br/3.1/topics/http/views/">Funções das Views </a> (DJango docs)</li>
- <li><a href="https://docs.djangoproject.com/pt-br/3.1/topics/templates/">Templates</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/pt-br/3.1/topics/http/views/">Funções das Views </a> (DJango docs)</li>
+ <li><a href="https://docs.djangoproject.com/pt-br/3.1/topics/templates/">Templates</a> (Django docs)</li>
  <li><a href="https://docs.djangoproject.com/en/2.1/howto/static-files/">Gerenciando arquivos estáticos</a> (Django docs)</li>
  <li><a href="https://docs.djangoproject.com/en/2.1/topics/http/shortcuts/#django.shortcuts.render">Funções de atalho do Django</a> (Django docs)</li>
 </ul>
@@ -404,17 +404,17 @@ return render(request, 'index.html', context=context)</pre>
 
 <ul>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Introduction">Introdução ao Django</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/development_environment">Configurando um ambiente de desenvolvimento Django</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/development_environment">Configurando um ambiente de desenvolvimento Django</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial Django: Website de uma Biblioteca Local</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website">Tutorial Django Parte 2: Criando a base do website</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website">Tutorial Django Parte 2: Criando a base do website</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Models">Tutorial Django Parte 3: Utilizando models</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site">Tutorial Django Parte 4: Django admin site</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page">Tutorial Django Parte 5: Criando nossa página principal</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views">Tutorial Django Parte 6: Lista genérica e detail views</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views">Tutorial Django Parte 6: Lista genérica e detail views</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Sessions">Tutorial Django Parte 7: Sessões de Framework </a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms">Tutorial Django Parte 9: Trabalhando com formulários</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing">Tutorial Django Parte 10: Testando uma aplicação web Django</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial Django Parte 11: Implantando Django em produção</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial Django Parte 11: Implantando Django em produção</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/web_application_security">Segurança de aplicações web Django</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>
 </ul>

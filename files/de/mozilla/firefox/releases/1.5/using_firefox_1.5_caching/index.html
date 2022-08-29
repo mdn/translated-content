@@ -10,7 +10,7 @@ original_slug: Benutzen_des_Zwischenspeichers_in_Firefox_1.5_(caching)
 ---
 <div>{{FirefoxSidebar}}</div><h3 id="Einführung">Einführung</h3>
 
-<p><a href="/de/Firefox_1.5_für_Entwickler" title="de/Firefox_1.5_für_Entwickler">Firefox 1.5</a> verwendet einen internen Speicher-Cache, der sich den Inhalt der geladenen Webseiten, sowie den Status von JavaScripts für eine Sitzung merkt. Dadurch verbessert sich die Ladezeit bereits geladener Webseiten erheblich und es kann schnell zwischen bereits besuchten Webseiten vor und zurück gewechselt ohne, dass die Seiten neu geladen werden müssen oder der JavaScript-Status verloren geht. Diese Funktion wird als <strong>bfcache</strong>  („Back-Forward Cache“) bezeichnet. Der zwischengespeicherte Status wird solange erhalten, bis der Browser geschlossen wird.</p>
+<p><a href="/de/Firefox_1.5_für_Entwickler" title="de/Firefox_1.5_für_Entwickler">Firefox 1.5</a> verwendet einen internen Speicher-Cache, der sich den Inhalt der geladenen Webseiten, sowie den Status von JavaScripts für eine Sitzung merkt. Dadurch verbessert sich die Ladezeit bereits geladener Webseiten erheblich und es kann schnell zwischen bereits besuchten Webseiten vor und zurück gewechselt ohne, dass die Seiten neu geladen werden müssen oder der JavaScript-Status verloren geht. Diese Funktion wird als <strong>bfcache</strong>  („Back-Forward Cache“) bezeichnet. Der zwischengespeicherte Status wird solange erhalten, bis der Browser geschlossen wird.</p>
 
 <p>Unter bestimmten Umständen, verwendet Firefox diesen Zwischenspeicher jedoch nicht:</p>
 
@@ -117,7 +117,7 @@ function UnloadHandler() {
    "http://www.w3.org/TR/html4/loose.dtd"&gt;
 &lt;HTML&gt;
 &lt;head&gt;
-&lt;title&gt;Order query : Firefox 1.5 Example&lt;/title&gt;
+&lt;title&gt;Order query : Firefox 1.5 Example&lt;/title&gt;
 &lt;style type="text/css"&gt;
 body, p {
 	font-family: Verdana, sans-serif;
@@ -132,7 +132,7 @@ function onLoad() {
 
 function onPageShow() {
 //Berechne die aktuelle Zeit
-        var currentTime= new Date();
+        var currentTime= new Date();
 	var year=currentTime.getFullYear();
 	var month=currentTime.getMonth()+1;
 	var day=currentTime.getDate();
@@ -175,7 +175,7 @@ function onLoad() {
 	loadOnlyFirst();
 
 //Berechne die aktuelle Zeit
-        var currentTime= new Date();
+        var currentTime= new Date();
 	var year = currentTime.getFullYear();
 	var month = currentTime.getMonth()+1;
 	var day = currentTime.getDate();
@@ -202,5 +202,3 @@ function loadOnlyFirst() {
 <p>Firefox 1.5 Erweiterungen müssen diese Zwischenspeicher Funktionalität unterstützen. Falls Sie eine Erweiterung für den Firefox entwickeln, welche kompatibel zu 1.5 und früheren Versionen sein soll, achten Sie darauf, dass Funktionen des <code>onload</code>-Events nur bei Seiten verwendet werden, die zwischengespeichert werden können und Funktionen des <code>pageshow</code>-Events benutzen, bei denen kein Cache verwendet werden soll.</p>
 
 <p>Zum Beispiel sollte die Google-Toolbar für den Firefox bei der autolink-Funktion auf das <code>onload</code>-Event reagieren und für die PageRank-Funktion mit dem <code>pageshow</code>-Event arbeiten, um kompatibel zu allen Firefox-Versionen zu sein.</p>
-
-<p>{{ languages( { "en": "en/Using_Firefox_1.5_caching", "it": "it/Usare_il_caching_di_Firefox_1.5", "fr": "fr/Utilisation_du_cache_de_Firefox_1.5", "ja": "ja/Using_Firefox_1.5_caching" } ) }}</p>

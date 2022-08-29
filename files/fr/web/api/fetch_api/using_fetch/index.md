@@ -19,14 +19,6 @@ L'[API Fetch](/fr/docs/Web/API/Fetch_API) fournit une interface JavaScript pour 
 
 Ce genre de fonctionnalité était auparavant réalisé avec {{domxref("XMLHttpRequest")}}. Fetch fournit une meilleure alternative qui peut être utilisée facilement par d’autres technologies comme {{domxref("ServiceWorker_API", "Service Workers")}}. Fetch fournit aussi un endroit unique et logique pour la définition d'autres concepts liés à HTTP comme CORS et les extensions d'HTTP.
 
-## L'état actuel du support par les navigateurs
-
-Le support de Fetch est à ses débuts, mais les choses progressent. Il a été activé par défaut sur Firefox 39 et supérieur, et sur Chrome 42 et supérieur.
-
-Si vous souhaitez l'utiliser maintenant, il y a un [polyfill Fetch](https://github.com/github/fetch) disponible qui recrée la fonctionnalité pour les navigateurs qui ne le supportent pas. Gardez à l'esprit qu'il est au stade expérimental et pas encore complètement fonctionnel.
-
-> **Note :** Certaines préoccupations ont été soulevées sur le fait que la [spécification de Fetch](https://fetch.spec.whatwg.org/) est en contradition avec la [spécification de Streams](https://streams.spec.whatwg.org/); cependant, les prévisions montrent une intention d'intégrer Streams avec Fetch: pour plus d'informations reportez vous à [Fetch API integrated with Streams](https://github.com/yutakahirano/fetch-with-streams/).
-
 ## Détection de la fonctionnalité
 
 Le support de l'API Fetch peut être détecté en vérifiant l'existence de {{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}} ou {{domxref("GlobalFetch.fetch","fetch()")}} sur la portée de {{domxref("Window")}} ou de {{domxref("Worker")}}. Par exemple, vous pouvez faire cela dans votre script :
@@ -60,7 +52,7 @@ Ici nous récupérons une image à travers le réseau et l'insérons dans un él
 
 Bien sûr, il s'agit seulement d'une réponse HTTP, pas exactement de l'image. Pour extraire le contenu de l'image de la réponse, nous utilisons la méthode {{domxref("Body.blob","blob()")}} (définie sur le mixin {{domxref("Body")}}, qui est implémenté autant par les objets {{domxref("Request")}} que par les objets {{domxref("Response")}}).
 
-> **Note :** Le mixin Body a aussi des méthodes similaires pour extraire d'autres types contenu ; pour plus d'informations regardez la section {{anch("Corps")}}.
+> **Note :** Le mixin Body a aussi des méthodes similaires pour extraire d'autres types contenu ; pour plus d'informations regardez la section [Corps](#corps).
 
 Un objet `objectURL` est ensuite créé à partir du {{domxref("Blob")}} extrait, puis est inseré dans {{domxref("img")}}.
 
@@ -284,13 +276,11 @@ Les Requêtes et Réponses (et par extension la fonction `fetch()`), vont tenter
 
 ## Spécifications
 
-| Spécification                | Statut                   | Commentaire         |
-| ---------------------------- | ------------------------ | ------------------- |
-| {{SpecName('Fetch')}} | {{Spec2('Fetch')}} | Définition initiale |
+{{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.WindowOrWorkerGlobalScope.fetch")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -6,19 +6,19 @@ original_slug: Web/CSS/CSS_Animations/CSS_Animationen_nutzen
 ---
 <p>{{CSSRef}}</p>
 
-<p><span class="seoSummary"><strong>CSS Animationen</strong> ermöglichen animierte Übergänge von einem CSS Style-Konfiguration zur nächsten. Die Animationen bestehen aus zwei Komponenten: Einem Style, der die Animation beschreibt, sowie einer Menge von Keyframes, die Start, Ende und mögliche Zwischenpositionen der Animation festlegt.</span></p>
+<p><span class="seoSummary"><strong>CSS Animationen</strong> ermöglichen animierte Übergänge von einem CSS Style-Konfiguration zur nächsten. Die Animationen bestehen aus zwei Komponenten: Einem Style, der die Animation beschreibt, sowie einer Menge von Keyframes, die Start, Ende und mögliche Zwischenpositionen der Animation festlegt.</span></p>
 
 <p>Es gibt drei zentrale Vorteile von CSS-Animationen gegenüber traditionellen skriptgetriebenen Animationstechniken:</p>
 
 <ol>
- <li>Sie sind einfach zu nutzen für simple Animationen; man kann sie ohne Javascript-Kenntnisse erstellen. </li>
- <li>Die Animationen laufen performant, sogar unter mäßiger Systemauslastung. Im Gegensatz dazu fallen selbst simple Javascript-Animationen durch schlechte Performance auf. Die Engine kann einzelne Frames überspringen und kennt weitere Techniken, um die Ausführung so sauber wie möglich zu gestalten. </li>
+ <li>Sie sind einfach zu nutzen für simple Animationen; man kann sie ohne Javascript-Kenntnisse erstellen. </li>
+ <li>Die Animationen laufen performant, sogar unter mäßiger Systemauslastung. Im Gegensatz dazu fallen selbst simple Javascript-Animationen durch schlechte Performance auf. Die Engine kann einzelne Frames überspringen und kennt weitere Techniken, um die Ausführung so sauber wie möglich zu gestalten. </li>
  <li>Da der Browser die Animation kontrolliert, kann er selbstständig die Performance optimieren, zum Beispiel durch das Drosseln der Freqenz von Animationen in aktuell nicht sichtbaren Browser-Tabs.</li>
 </ol>
 
 <h2 id="Configuring_the_animation">Konfigurieren der Animation</h2>
 
-<p>Um eine CSS-Animation zu erstellen, fügt man dem zu animierenden Element die {{ cssxref("animation") }}-Eigenschaft oder seine Sub-Eigenschaften zu. So lassen sich Timing und Dauer der Animation sowie weitere Details des Animationsablaufes bestimmen. Man legt damit <strong>nicht </strong>die eigentliche Darstellung der Animation fest, die mittels {{ cssxref("@keyframes") }} definiert wird. Siehe {{ anch("Definieren der Animationssequenz mittels Keyframes") }} weiter unten.</p>
+<p>Um eine CSS-Animation zu erstellen, fügt man dem zu animierenden Element die {{ cssxref("animation") }}-Eigenschaft oder seine Sub-Eigenschaften zu. So lassen sich Timing und Dauer der Animation sowie weitere Details des Animationsablaufes bestimmen. Man legt damit <strong>nicht </strong>die eigentliche Darstellung der Animation fest, die mittels {{ cssxref("@keyframes") }} definiert wird. Siehe <a href="#definieren_der_animationssequenz_mittels_keyframes">Definieren der Animationssequenz mittels Keyframes</a> weiter unten.</p>
 
 <p>Die Sub-Eigenschaften der {{ cssxref("animation") }}-Eigenschaft sind:</p>
 
@@ -32,9 +32,9 @@ original_slug: Web/CSS/CSS_Animations/CSS_Animationen_nutzen
  <dt>{{ cssxref("animation-delay") }}</dt>
  <dd>Setzt den Abstand zwischen dem Zeitpunkt, an dem die Animation vollständig geladen ist und dem Start der Animationssequenz.</dd>
  <dt>{{ cssxref("animation-iteration-count") }}</dt>
- <dd>Konfiguriert wie oft die Animation wiederholt wird; mittels <code>infinite</code> wird die Animation unendlich wiederholt.</dd>
+ <dd>Konfiguriert wie oft die Animation wiederholt wird; mittels <code>infinite</code> wird die Animation unendlich wiederholt.</dd>
  <dt>{{ cssxref("animation-direction") }}</dt>
- <dd>Legt fest, ob die Animation nach jedem Durchgang die Abspielrichtung wechselt oder zum Startpunkt zurückspringt und sich wiederholt. </dd>
+ <dd>Legt fest, ob die Animation nach jedem Durchgang die Abspielrichtung wechselt oder zum Startpunkt zurückspringt und sich wiederholt. </dd>
  <dt>{{ cssxref("animation-fill-mode") }}</dt>
  <dd>Legt fest, welche Styles vor und nach dem Ausführen der Animation auf das animierte Element angewendet werden.</dd>
  <dt>{{ cssxref("animation-play-state") }}</dt>
@@ -45,7 +45,7 @@ original_slug: Web/CSS/CSS_Animations/CSS_Animationen_nutzen
 
 <p>Nachdem Sie den zeitlichen Ablauf der Animation festgelegt haben, müssen Sie die Erscheinung der Animation festlegen. Sie erreichen dies, indem Sie zwei oder mehr Keyframes mit Hilfe der {{ cssxref("@keyframes") }} at-Regel erstellen. Jeder Keyframe beschreibt den Darstellungszustand des animierten Elements zum gegebenen Zeitpunkt der Animationssequenz.</p>
 
-<p>Da der zeitliche Ablauf der Animation im CSS-Style, welcher die Animation konfiguriert, festgelegt ist, verwenden Keyframes {{ cssxref("percentage") }} um den Zeitpunkt festzulegen, wann die Animationssequenz beginnen soll. 0% steht für den ersten Moment der Animationssequenz, wohingegen 100%  den letzten Zustand der Animation beschreibt. Weil diese beiden Keyframes so wichtg sind gibt es zwei Wörter für sie: <code>from</code> und <code>to</code>. Sie sind beide optional. Falls <code>from/0%</code> oder <code>to/100%</code> nicht definiert sind , startet oder stoppt der Browser die Animation gemäß der berechneten Werte aller Attribute.</p>
+<p>Da der zeitliche Ablauf der Animation im CSS-Style, welcher die Animation konfiguriert, festgelegt ist, verwenden Keyframes {{ cssxref("percentage") }} um den Zeitpunkt festzulegen, wann die Animationssequenz beginnen soll. 0% steht für den ersten Moment der Animationssequenz, wohingegen 100%  den letzten Zustand der Animation beschreibt. Weil diese beiden Keyframes so wichtg sind gibt es zwei Wörter für sie: <code>from</code> und <code>to</code>. Sie sind beide optional. Falls <code>from/0%</code> oder <code>to/100%</code> nicht definiert sind , startet oder stoppt der Browser die Animation gemäß der berechneten Werte aller Attribute.</p>
 
 <p>Sie können optional zusätzliche Keyframes einfügen, die jeweils Zwischenschritte auf dem Weg vom Start- zum Endpunkt der Animation beschreiben.</p>
 
@@ -81,7 +81,7 @@ original_slug: Web/CSS/CSS_Animations/CSS_Animationen_nutzen
 
 <p>Falls Sie weitere angepasste Styles auf das {{ HTMLElement("p") }}-Element anwenden wollen, die keine CSS-Animationen unterstützen, würden diese hier ebenfalls eingefügt werden. In diesem Falle wollen wir aber außer der Animation keine weiteren Styles festlegen.</p>
 
-<p>Die Keyframes werden anhand der {{ cssxref("@keyframes") }} at-Regel festgelegt. In diesem Beispiel haben wir nur zwei Keyframes. Der erste tritt bei 0% (aufgrund des Aliases <code>from</code>) ein. Hier bestimmen wir einen linken Außenabstand des Elements von 100% (das heißt, am rechten äußeren Rand des umschließenden Elements). Darüberhinaus wird die Breite des Elements auf 300% gesetzt (oder drei Mal der Breite des umgebenden Elements). Dadurch wird der Header im ersten Frame der Animation außerhalb des rechten Randes des Browser-Fensters gezeichnet.</p>
+<p>Die Keyframes werden anhand der {{ cssxref("@keyframes") }} at-Regel festgelegt. In diesem Beispiel haben wir nur zwei Keyframes. Der erste tritt bei 0% (aufgrund des Aliases <code>from</code>) ein. Hier bestimmen wir einen linken Außenabstand des Elements von 100% (das heißt, am rechten äußeren Rand des umschließenden Elements). Darüberhinaus wird die Breite des Elements auf 300% gesetzt (oder drei Mal der Breite des umgebenden Elements). Dadurch wird der Header im ersten Frame der Animation außerhalb des rechten Randes des Browser-Fensters gezeichnet.</p>
 
 <p>Der zweite (und letzte) Keyframe tritt bei 100% ein (aufgrund des Aliases <code>to</code>). Der linke Außenabstand wird auf 0% gesetzt und die Breite des Elements auf 100% aktualisiert. Dadurch beendet der Header seine Animation mit einer Ausrichtung am linken Rand des Inhaltsbereichs.</p>
 
@@ -350,7 +350,7 @@ element.className = "slidein";
 
 <p>Hier gibt es eine Live-Ausgabe:</p>
 
-<div class="notecard note">
+<div class="note">
 <p><strong>Hinweis</strong>: Laden Sie die Seite neu, um die Animation zu sehen. Oder klicken Sie auf den CodePen-Knopf, um die Animation innerhalb der CodePen-Umgebung zu betrachten.</p>
 </div>
 

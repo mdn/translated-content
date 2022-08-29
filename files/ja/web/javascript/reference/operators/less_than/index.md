@@ -88,8 +88,8 @@ console.log(true < 1);         // false
 console.log(null < 0);         // false
 console.log(null < 1);         // true
 
-console.log(undefined < 3);    // false
-console.log(3 < undefined);    // false
+console.log(undefined < 3);    // false
+console.log(3 < undefined);    // false
 
 console.log(3 < NaN);          // false
 console.log(NaN < 3);          // false

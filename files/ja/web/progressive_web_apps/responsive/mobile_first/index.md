@@ -169,57 +169,57 @@ nav {
 
 ```css
 @media (min-width: 480px) {
-  #bottom, #top {
-    display: none;
-  }
+  #bottom, #top {
+    display: none;
+  }
 
-  article, nav {
-    display: block;
-  }
+  article, nav {
+    display: block;
+  }
 
-  nav ul {
-    text-align: center;
-  }
+  nav ul {
+    text-align: center;
+  }
 
-  nav li {
-    display: inline;
-  }
+  nav li {
+    display: inline;
+  }
 
-  nav li a {
-    border-right: 1px solid #AD66D5;
-    border-bottom: none;
-    display: inline-block;
-    padding: 0 5px;
-    font-size: 1.6em;
-  }
+  nav li a {
+    border-right: 1px solid #AD66D5;
+    border-bottom: none;
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 1.6em;
+  }
 
-  nav li:last-child a {
-    border-right: none;
-  }
+  nav li:last-child a {
+    border-right: none;
+  }
 
 }
 
 @media (min-width: 600px) {
-  html {
-    background: #eee;
-    height: 100%;
-  }
+  html {
+    background: #eee;
+    height: 100%;
+  }
 
-  body {
-    width: 600px;
-    height: inherit;
-    margin: 0 auto;
-    background: url(../img/firefox-os.png) bottom left no-repeat, linear-gradient(to bottom, #fff, #eee);
-  }
+  body {
+    width: 600px;
+    height: inherit;
+    margin: 0 auto;
+    background: url(../img/firefox-os.png) bottom left no-repeat, linear-gradient(to bottom, #fff, #eee);
+  }
 
-  .main > p {
-    background: rgba(255,255,255,0.3);
-  }
+  .main > p {
+    background: rgba(255,255,255,0.3);
+  }
 
-  nav li a {
-    padding: 0 10px;
-    font-size: 2em;
-  }
+  nav li a {
+    padding: 0 10px;
+    font-size: 2em;
+  }
 }
 ```
 

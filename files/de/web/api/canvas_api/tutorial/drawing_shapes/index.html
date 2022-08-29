@@ -8,7 +8,7 @@ original_slug: Web/Guide/HTML/Canvas_Tutorial/Formen_zeichnen
 
 <h2 id="Koordinatensystem">Koordinatensystem</h2>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/224/Canvas_default_grid.png" style="float: right; height: 220px; width: 220px;">Bevor wir mit dem Zeichnen beginnen können, müssen wir über das <em>canvas grid</em> oder Koordinatensystem sprechen. Unser HTML-Skelett von der vorigen Seite hatte ein canvas-Element mit den Maßen 150 Pixel Höhe und 150 Pixel Breite. Zur Rechten sieht man diesen canvas, über den das Standard-Grid gelegt wurde. Normalerweise entspricht eine Einheit einem Pixel auf dem canvas. Der Ursprung dieses Rasters befindet sich in der oberen linken Ecke, im Punkt (0,0). Alle Elemente werden relativ zum Ursprung positioniert. Die Position des blauen Quadrates ist also x Pixel vom linken Rand und y Pixel vom oberen Rand entfernt, am Punkt (x,y). Später in diesem Tutorial werden wir sehen, wie wir den Ursprung an eine andere Position verschieben, das Koordinatensystem rotieren und sogar skalieren können, aber für's Erste behalten wir die Standardeinstellungen bei.</p>
+<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/224/Canvas_default_grid.png" style="float: right; height: 220px; width: 220px;">Bevor wir mit dem Zeichnen beginnen können, müssen wir über das <em>canvas grid</em> oder Koordinatensystem sprechen. Unser HTML-Skelett von der vorigen Seite hatte ein canvas-Element mit den Maßen 150 Pixel Höhe und 150 Pixel Breite. Zur Rechten sieht man diesen canvas, über den das Standard-Grid gelegt wurde. Normalerweise entspricht eine Einheit einem Pixel auf dem canvas. Der Ursprung dieses Rasters befindet sich in der oberen linken Ecke, im Punkt (0,0). Alle Elemente werden relativ zum Ursprung positioniert. Die Position des blauen Quadrates ist also x Pixel vom linken Rand und y Pixel vom oberen Rand entfernt, am Punkt (x,y). Später in diesem Tutorial werden wir sehen, wie wir den Ursprung an eine andere Position verschieben, das Koordinatensystem rotieren und sogar skalieren können, aber für's Erste behalten wir die Standardeinstellungen bei.</p>
 
 <h2 id="Rechtecke_zeichnen">Rechtecke zeichnen</h2>
 
@@ -32,9 +32,9 @@ original_slug: Web/Guide/HTML/Canvas_Tutorial/Formen_zeichnen
 
 <div class="hidden">
 <pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
+ &lt;body onload="draw();"&gt;
+   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
+ &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 </div>
@@ -85,9 +85,9 @@ original_slug: Web/Guide/HTML/Canvas_Tutorial/Formen_zeichnen
 
 <div class="hidden">
 <pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
+ &lt;body onload="draw();"&gt;
+   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
+ &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 </div>
@@ -122,9 +122,9 @@ original_slug: Web/Guide/HTML/Canvas_Tutorial/Formen_zeichnen
 
 <div class="hidden">
 <pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
+ &lt;body onload="draw();"&gt;
+   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
+ &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 </div>
@@ -138,7 +138,7 @@ original_slug: Web/Guide/HTML/Canvas_Tutorial/Formen_zeichnen
      ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
      ctx.moveTo(110, 75);
      ctx.arc(75, 75, 35, 0, Math.PI, false);    // Mund
-     ctx.moveTo(65, 65);
+     ctx.moveTo(65, 65);
      ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Linkes Auge
      ctx.moveTo(95, 65);
      ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Rechtes Auge
@@ -151,7 +151,7 @@ original_slug: Web/Guide/HTML/Canvas_Tutorial/Formen_zeichnen
 <p>{{EmbedLiveSample("Stift_bewegen", 160, 160, "https://mdn.mozillademos.org/files/252/Canvas_smiley.png")}}</p>
 
 <div class="note">
-<p><strong>Hinweis:</strong> <code>arc()</code> zeichnet einen Kreisbogen. Mehr dazu: {{anch("Kreisbögen")}}.</p>
+<p><strong>Hinweis:</strong> <code>arc()</code> zeichnet einen Kreisbogen. Mehr dazu: <a href="#kreisbögen">Kreisbögen</a>.</p>
 </div>
 
 <h3 id="Linien">Linien</h3>
@@ -169,9 +169,9 @@ original_slug: Web/Guide/HTML/Canvas_Tutorial/Formen_zeichnen
 
 <div class="hidden">
 <pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
+ &lt;body onload="draw();"&gt;
+   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
+ &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 </div>
@@ -220,9 +220,9 @@ Dieses Beispiel zeigt Kreisbügen mit den unterschiedlichsten Parametern:<br>
 
 <div class="hidden">
 <pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="200"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
+ &lt;body onload="draw();"&gt;
+   &lt;canvas id="canvas" width="150" height="200"&gt;&lt;/canvas&gt;
+ &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 </div>
@@ -276,9 +276,9 @@ Dieses Beispiel zeigt Kreisbügen mit den unterschiedlichsten Parametern:<br>
 
 <div class="hidden">
 <pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
+ &lt;body onload="draw();"&gt;
+   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
+ &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 </div>
@@ -309,9 +309,9 @@ Dieses Beispiel zeigt Kreisbügen mit den unterschiedlichsten Parametern:<br>
 
 <div class="hidden">
 <pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
+ &lt;body onload="draw();"&gt;
+   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
+ &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 </div>
@@ -353,9 +353,9 @@ Dieses Beispiel zeigt Kreisbügen mit den unterschiedlichsten Parametern:<br>
 
 <div class="hidden">
 <pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
+ &lt;body onload="draw();"&gt;
+   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
+ &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 </div>

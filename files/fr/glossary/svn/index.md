@@ -14,8 +14,8 @@ original_slug: Glossaire/SVN
 
 ### Culture générale
 
-- [Official website](https://subversion.apache.org/)
-- {{Interwiki("wikipedia", "Apache_Subversion")}} on Wikipedia
+- [Site officiel](https://subversion.apache.org/)
+- [Apache Subversion](https://fr.wikipedia.org/wiki/Apache_Subversion) sur Wikipédia
 
 ### Apprendre sur ce sujet
 

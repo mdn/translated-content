@@ -14,5 +14,5 @@ Sur le web, {{glossary("HTML")}} 4, {{glossary("XHTML")}} et {{glossary("XML")}}
 
 ## En savoir plus
 
-- {{Interwiki("wikipedia", "SGML")}} sur Wikipedia
+- [SGML](https://fr.wikipedia.org/wiki/Standard_Generalized_Markup_Language) sur Wikipédia
 - [Introduction au SGML](http://isgmlug.org/) (en anglais)

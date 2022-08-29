@@ -35,7 +35,7 @@ original_slug: Learn/Server-side/Django/Introdução
 
 <h2 id="O_que_é_Django">O que é Django?</h2>
 
-<p>Django é um framework web Python de alto nível que permite o rápido desenvolvimento de sites seguros e de fácil manutenção. Construido por desenvolvedores experientes, o Django cuida de grande parte do trabalho de desenvolvimento web, para que você possa se concentrar em escrever seu aplicativo sem precisar reinventar a roda. É gratuito e de código aberto, tem uma comunidade próspera e ativa, ótima documentação e muitas opções de suporte gratuito e pago. </p>
+<p>Django é um framework web Python de alto nível que permite o rápido desenvolvimento de sites seguros e de fácil manutenção. Construido por desenvolvedores experientes, o Django cuida de grande parte do trabalho de desenvolvimento web, para que você possa se concentrar em escrever seu aplicativo sem precisar reinventar a roda. É gratuito e de código aberto, tem uma comunidade próspera e ativa, ótima documentação e muitas opções de suporte gratuito e pago. </p>
 
 <p>Django ajuda você a escrever programas que são:</p>
 
@@ -47,63 +47,63 @@ original_slug: Learn/Server-side/Django/Introdução
  <dd>À medida em que, internamente, fornece opções para quase todo tipo de funcionalidade que você possa querer (por exemplo: vários banco de dados que são populares, motores de template, etc), ele pode também ser extendido para utilizar outros componentes, caso seja necessário.</dd>
  <dt>Seguro</dt>
  <dd>Django ajuda os desenvolvedores a evitar os erros de segurança mais comuns, fornecendo um framework que foi desenhado para "fazer as coisas certas", de modo a proteger o website automaticamente. Por exemplo, Django fornece uma maneira segura de gerenciar as contas dos usuários e suas senhas, evitando erros comuns, tais como colocar informações da sessão em cookies, onde ficam vulneráveis (ao invés disso os cookies contém apenas uma chave e os dados são armazenados no banco de dados), ou armazenar as senhas de forma direta, ao invés de gravar um hash para essas senhas.</dd>
- <dd><em>Um hash de senha é um valor fixed-length (tamanho-fixo) criado mandando a senha por uma <a href="https://pt.wikipedia.org/wiki/Fun%C3%A7%C3%A3o_hash_criptogr%C3%A1fica">cryptographic hash function (função hash criptográfica)</a>. Django pode checar se uma senha inserida está correta executando ela pela função hash e comparando a saída com o valor hash armazenado. Porém devido a natureza "one-way" ("um-caminho") da função, mesmo que o valor hash armazenado estiver comprometido, é difcil para uma pessoa comentendo um ataque resolver a senha original.</em></dd>
- <dd>O Django ativa a proteção contra muitas vulnerabilidades por padrão, incluindo SQL injection (injeção de SQL), cross-site scripting, cross-site request forgery (Falsificação de solicitação entre sites), e clickjacking ("furto de click") (veja <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security">Segurança de sites</a> para mais detalhes de tais ataques).</dd>
+ <dd><em>Um hash de senha é um valor fixed-length (tamanho-fixo) criado mandando a senha por uma <a href="https://pt.wikipedia.org/wiki/Fun%C3%A7%C3%A3o_hash_criptogr%C3%A1fica">cryptographic hash function (função hash criptográfica)</a>. Django pode checar se uma senha inserida está correta executando ela pela função hash e comparando a saída com o valor hash armazenado. Porém devido a natureza "one-way" ("um-caminho") da função, mesmo que o valor hash armazenado estiver comprometido, é difcil para uma pessoa comentendo um ataque resolver a senha original.</em></dd>
+ <dd>O Django ativa a proteção contra muitas vulnerabilidades por padrão, incluindo SQL injection (injeção de SQL), cross-site scripting, cross-site request forgery (Falsificação de solicitação entre sites), e clickjacking ("furto de click") (veja <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security">Segurança de sites</a> para mais detalhes de tais ataques).</dd>
  <dt>Escalável</dt>
  <dd>Django usa uma arquitetura baseada em componentes “<a href="https://en.wikipedia.org/wiki/Shared_nothing_architecture">shared-nothing</a>” ("nada-compartilhado") (cada parte da arquitetura é independente das outras, e consequentemente podem ser substituídas ou mudadas caso necessário). Ter uma separação clara entre as partes diferentes significa que pode se escalar para um tráfego aumentado adicionando hardware em qualquer nível: servidores de cache, servidores de banco de dados ou servidores de aplicação. Alguns dos sites mais ocupados escalaram o Django com sucesso para cumprir com as suas demandas (ex: Instagram e Disqus).</dd>
  <dt>Sustentável</dt>
- <dd>O código do Django é escrito usando princípios de design e padrões que encorajam a criação de codigo sustentável (que facilita a manutenção) e reusável. Em particular, isso utiliza o principio  DRY - Don't Repeat Yourself (Não Repita a Si Mesmo) para que não haja duplicações desnecessárias, reduzindo a quantidade de código. O Django também promove o agrupamento de funcionalidades relacionadas para aplicativos reusáveis e, em um nível mais baixo, grupos de código relacionados para modulos (juntamente as linhas do padrão <a href="https://pt.wikipedia.org/wiki/MVC">MVC - Model View Controller</a>).</dd>
+ <dd>O código do Django é escrito usando princípios de design e padrões que encorajam a criação de codigo sustentável (que facilita a manutenção) e reusável. Em particular, isso utiliza o principio  DRY - Don't Repeat Yourself (Não Repita a Si Mesmo) para que não haja duplicações desnecessárias, reduzindo a quantidade de código. O Django também promove o agrupamento de funcionalidades relacionadas para aplicativos reusáveis e, em um nível mais baixo, grupos de código relacionados para modulos (juntamente as linhas do padrão <a href="https://pt.wikipedia.org/wiki/MVC">MVC - Model View Controller</a>).</dd>
  <dt>Portável</dt>
- <dd>Django é escrito em Python, que executa em muitas plataformas. Isso significa que você não esta preso em nenhuma plataforma de servidor em particular, e pode executar seus aplicativos em muitas distrubuições do Linux, Windows e Mac OS X. Além disso, o Django tem um bom suporte em muitos provedores de servidores de web, que muitas vezes provem infraestrutura especifca e documentação para hospedar sites feitos com Django.</dd>
+ <dd>Django é escrito em Python, que executa em muitas plataformas. Isso significa que você não esta preso em nenhuma plataforma de servidor em particular, e pode executar seus aplicativos em muitas distrubuições do Linux, Windows e Mac OS X. Além disso, o Django tem um bom suporte em muitos provedores de servidores de web, que muitas vezes provem infraestrutura especifca e documentação para hospedar sites feitos com Django.</dd>
 </dl>
 
 <h2 id="De_onde_o_Django_veio">De onde o Django veio?</h2>
 
-<p>Django foi inicialmente desenvolvido entre 2003 e 2005 por um time de web que era responsável por criar e manter sites de jornal. Depois de criar um número de sites, o time começou a fatorar e reutilizar muitos de seus códigos comuns e padrões de design. Esse código comum evoluiu para um framework genérico de desenvolvimento web, que foi lançado como um projeto de código aberto nomeado "Django" em Julho de 2005.</p>
+<p>Django foi inicialmente desenvolvido entre 2003 e 2005 por um time de web que era responsável por criar e manter sites de jornal. Depois de criar um número de sites, o time começou a fatorar e reutilizar muitos de seus códigos comuns e padrões de design. Esse código comum evoluiu para um framework genérico de desenvolvimento web, que foi lançado como um projeto de código aberto nomeado "Django" em Julho de 2005.</p>
 
 <p>Django continou a crescer e aprimorar, desde seu lançamento (1.0) em Setembro de 2008 até a versão recentemente lançada 2.0 em 2017. Cada lançamento adicionou novas funcionalidades e consertou falhas, variando entre suportar novos tipos de banco de dados, mecanismos de template e caches, até a adição de funções view "genéricas" e classes (que reduzem a quantidade de código que os desenvolvedores tem que escrever para um número de tarefas de programação).</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Cheque as <span style="line-height: 1.5;"><a href="https://docs.djangoproject.com/pt-br/2.1/releases/">notas de lançamento</a> no site do Django para ver o que mudou nas versões mais recentes, e quanto trabalho esta sendo feito para tornar o Django melhor.</span></p>
+<p><strong>Nota</strong>: Cheque as <span style="line-height: 1.5;"><a href="https://docs.djangoproject.com/pt-br/2.1/releases/">notas de lançamento</a> no site do Django para ver o que mudou nas versões mais recentes, e quanto trabalho esta sendo feito para tornar o Django melhor.</span></p>
 </div>
 
-<p>Django é um projeto de código aberto, colaborativo e próspero, com milhares de usuários contribuindo. Embora ainda tenha alguns recursos que refletem sua origem, Django evoluiu para um framework versátil que é capaz de desenvovler qualquer tipo de website.</p>
+<p>Django é um projeto de código aberto, colaborativo e próspero, com milhares de usuários contribuindo. Embora ainda tenha alguns recursos que refletem sua origem, Django evoluiu para um framework versátil que é capaz de desenvovler qualquer tipo de website.</p>
 
 <h2 id="Quão_popular_é_o_Django">Quão popular é o Django?</h2>
 
-<p>Não há nenhum método disponível e definitivo para medir a popularidade dos framework server-side (lado do servidor) (apesar de sites como <a href="http://hotframeworks.com/">Hot Frameworks</a> tentam acessar a popularidade usando mecanismos como contar o numero de projetos no GitHub e perguntas no StackOverflow para cada cada platafroma). Uma questão melhor é se o Django é "popular o suficiente" para evitar problemas de plataformas não populares. Ele continua a evoluir? Você consegue ajuda se precisar? Existem oportunidades para você ganhar dinheiro se voce aprender Django?</p>
+<p>Não há nenhum método disponível e definitivo para medir a popularidade dos framework server-side (lado do servidor) (apesar de sites como <a href="http://hotframeworks.com/">Hot Frameworks</a> tentam acessar a popularidade usando mecanismos como contar o numero de projetos no GitHub e perguntas no StackOverflow para cada cada platafroma). Uma questão melhor é se o Django é "popular o suficiente" para evitar problemas de plataformas não populares. Ele continua a evoluir? Você consegue ajuda se precisar? Existem oportunidades para você ganhar dinheiro se voce aprender Django?</p>
 
 <p>Baseado no número de sites com alto perfil que usam Django, o número de pessoas contribuindo para a base de código, e o número de pessoas provendo ambos suporte gratuito e pago, então sim, Django é um framework popular!</p>
 
-<p>Alguns sites de alto perfil que usam Django são: Disqus, Instagram, Knight Foundation, MacArthur Foundation, Mozilla, National Geographic, Open Knowledge Foundation, Pinterest, and Open Stack (fonte: <a href="https://www.djangoproject.com/">Página inicial do django</a>).</p>
+<p>Alguns sites de alto perfil que usam Django são: Disqus, Instagram, Knight Foundation, MacArthur Foundation, Mozilla, National Geographic, Open Knowledge Foundation, Pinterest, and Open Stack (fonte: <a href="https://www.djangoproject.com/">Página inicial do django</a>).</p>
 
 <h2 id="O_Django_é_opinativo">O Django é opinativo?</h2>
 
 <p>Frameworks de web frequentemente referem a si mesmos como "opinativo" e "não opinativo".</p>
 
-<p>Frameworks opinativos são aqueles com opiniões sobre o "modo correto" de como lidar com uma tarefa em particular. Eles frequentemente auxiliam no desenvolvimento rapido <em>em um domínio em particular</em> (resolvendo problemas de um tipo em particular) porque o modo correto de fazer qualquer coisa normalmente já foi bem compreendido e bem documentado. Porém eles podem ser menos flexíveis para resolver problemas fora de seu principal domínio, e tendem a oferecer menos opções para quais componentes e abordagens eles podem usar.</p>
+<p>Frameworks opinativos são aqueles com opiniões sobre o "modo correto" de como lidar com uma tarefa em particular. Eles frequentemente auxiliam no desenvolvimento rapido <em>em um domínio em particular</em> (resolvendo problemas de um tipo em particular) porque o modo correto de fazer qualquer coisa normalmente já foi bem compreendido e bem documentado. Porém eles podem ser menos flexíveis para resolver problemas fora de seu principal domínio, e tendem a oferecer menos opções para quais componentes e abordagens eles podem usar.</p>
 
-<p>Frameworks não opinativos, em contraste, possuem bem menos restrições sobre a melhor maneira de unir os componentes para atingir um objetivo, ou até mesmo quais componentes devem ser usados. Eles tornam mais fácil para os desenvolvedores usar as ferramentas mais adequadas para completar uma tarefa em particular, apesar do custo de você mesmo ter que achar esses componentes.<br>
+<p>Frameworks não opinativos, em contraste, possuem bem menos restrições sobre a melhor maneira de unir os componentes para atingir um objetivo, ou até mesmo quais componentes devem ser usados. Eles tornam mais fácil para os desenvolvedores usar as ferramentas mais adequadas para completar uma tarefa em particular, apesar do custo de você mesmo ter que achar esses componentes.<br>
  <br>
  Django é "moderadamente opinativo" e, portantanto, oferece o "melhor dos dois mundo". Ele fornece um conjunto de componentes para lidar com a maioria das tarefas de desenvolvimento web, e uma (ou duas) maneiras preferidas de usá-las. No entanto, a arquitetura desacoplada do Django significa que você geralmente pode escolher entre várias opções diferentes, ou adicionar suporte para outras completamente novas, se desejar.</p>
 
-<h2 id="Com_o_que_o_código_do_Django_parece">Com o que o código do Django parece?</h2>
+<h2 id="Com_o_que_o_código_do_Django_parece">Com o que o código do Django parece?</h2>
 
-<p>Em um site data-driven (orientado a dados) tradicional, um aplicativo web aguarda solicitações HTTP do navegador da web (ou outro cliente). Quando uma solicitação é recebida, o aplicativo calcula o que é necessário com base na URL e possivelmente nas informações dos dados <code>POST</code> ou <code>GET</code>. Dependendo do que for necessário, ele poderá ler ou gravar informações de um banco de dados ou executar outras tarefas necessárias para satisfazer a solicitação. O aplicativo retornará uma resposta para o navegador da web, normalmente criando dinamicamente uma página HTML para o navegador exibir, inserindo os dados recuperados em espaços reservados em um template HTML.</p>
+<p>Em um site data-driven (orientado a dados) tradicional, um aplicativo web aguarda solicitações HTTP do navegador da web (ou outro cliente). Quando uma solicitação é recebida, o aplicativo calcula o que é necessário com base na URL e possivelmente nas informações dos dados <code>POST</code> ou <code>GET</code>. Dependendo do que for necessário, ele poderá ler ou gravar informações de um banco de dados ou executar outras tarefas necessárias para satisfazer a solicitação. O aplicativo retornará uma resposta para o navegador da web, normalmente criando dinamicamente uma página HTML para o navegador exibir, inserindo os dados recuperados em espaços reservados em um template HTML.</p>
 
 <p>Aplicativos web feitos com Django geralmente agrupam o código que manipula cada uma dessas etapas em arquivos separados:</p>
 
 <p><img alt="" src="https://i.postimg.cc/W4yzpVcd/arq.png" style="border-style: solid; border-width: 1px; height: 503px; width: 713px;"></p>
 
 <ul>
- <li><strong>URLs: </strong>Embora seja possível processar solicitações de cada URL por meio de uma única função, é muito mais simples fazer a manutenção do código escrevendo uma função view (vista) separada para manipular cada recurso. Um mapeador de URLs é usado para redirecionar solicitações HTTP para a view apropriada com base na URL da solicitação. O mapeador de URLs também pode corresponder padrões específicos de strings (cadeia de caracteres) ou dígitos que aparecem em um URL e transmiti-los a uma função view como dados.</li>
- <li><strong>View (Vista):</strong> Uma view é uma função manipuladora de solicitações, que recebe solicitações HTTP e retorna respostas HTTP. As views acessam os dados necessários para satisfazer solicitações por meio dos <em>models (modelos)</em> e encarregam a formatação da resposta aos <em>templates</em>.</li>
- <li><strong>Models (Modelos):</strong> Modelos são objetos em Python que definem a estrutura dos dados de um aplicativo, e fornecem mecanismos para gerenciar (adicionar, modificar e excluir) e consultar registros no banco de dados.</li>
- <li><strong>Templates:</strong> Um template é um arquivo de texto que define a estrutura ou o layout de um arquivo (como uma página HTML), com espaços reservados usados para representar o conteúdo real. Uma <em>view</em> pode criar dinamicamente uma página HTML usando um template HTML, preenchendo-a com dados de um <em>model (modelo)</em>. Um template pode ser usado para definir a estrutura de qualquer tipo de arquivo; não precisa ser HTML!</li>
+ <li><strong>URLs: </strong>Embora seja possível processar solicitações de cada URL por meio de uma única função, é muito mais simples fazer a manutenção do código escrevendo uma função view (vista) separada para manipular cada recurso. Um mapeador de URLs é usado para redirecionar solicitações HTTP para a view apropriada com base na URL da solicitação. O mapeador de URLs também pode corresponder padrões específicos de strings (cadeia de caracteres) ou dígitos que aparecem em um URL e transmiti-los a uma função view como dados.</li>
+ <li><strong>View (Vista):</strong> Uma view é uma função manipuladora de solicitações, que recebe solicitações HTTP e retorna respostas HTTP. As views acessam os dados necessários para satisfazer solicitações por meio dos <em>models (modelos)</em> e encarregam a formatação da resposta aos <em>templates</em>.</li>
+ <li><strong>Models (Modelos):</strong> Modelos são objetos em Python que definem a estrutura dos dados de um aplicativo, e fornecem mecanismos para gerenciar (adicionar, modificar e excluir) e consultar registros no banco de dados.</li>
+ <li><strong>Templates:</strong> Um template é um arquivo de texto que define a estrutura ou o layout de um arquivo (como uma página HTML), com espaços reservados usados para representar o conteúdo real. Uma <em>view</em> pode criar dinamicamente uma página HTML usando um template HTML, preenchendo-a com dados de um <em>model (modelo)</em>. Um template pode ser usado para definir a estrutura de qualquer tipo de arquivo; não precisa ser HTML!</li>
 </ul>
 
 <div class="note">
-<p><strong>Nota</strong>: Django refere a essa organização como uma arquitetura nomeada "Model View Template (MVT)" ("Modelo Vista Template"). Ela tem muitas semelhanças com a familiar arquitetura <a href="https://pt.wikipedia.org/wiki/MVC">Model View Controller (Modelo Vista Controlador)</a>.</p>
+<p><strong>Nota</strong>: Django refere a essa organização como uma arquitetura nomeada "Model View Template (MVT)" ("Modelo Vista Template"). Ela tem muitas semelhanças com a familiar arquitetura <a href="https://pt.wikipedia.org/wiki/MVC">Model View Controller (Modelo Vista Controlador)</a>.</p>
 </div>
 
 <ul>
@@ -113,7 +113,7 @@ original_slug: Learn/Server-side/Django/Introdução
 
 <h3 id="Enviando_a_solicitação_para_a_view_correta_urls.py">Enviando a solicitação para a view correta (urls.py)</h3>
 
-<p>Um mapeador de URLs normalmente é armazenado em um arquivo chamado <strong>urls.py</strong>. No exemplo abaixo, o mapeador (<code>urlpatterns</code>) (<em>padrões de url</em>) define uma lista de mapeamentos entre <em>rotas</em> (<em>padrões</em> específicos de URL) e funções view correspondentes. Se uma solicitação HTTP for recebida com uma URL correspondente a um padrão especificado, a função view associada será chamada e a solicitação/requisição sera transmitida.</p>
+<p>Um mapeador de URLs normalmente é armazenado em um arquivo chamado <strong>urls.py</strong>. No exemplo abaixo, o mapeador (<code>urlpatterns</code>) (<em>padrões de url</em>) define uma lista de mapeamentos entre <em>rotas</em> (<em>padrões</em> específicos de URL) e funções view correspondentes. Se uma solicitação HTTP for recebida com uma URL correspondente a um padrão especificado, a função view associada será chamada e a solicitação/requisição sera transmitida.</p>
 
 <pre class="notranslate"><code>urlpatterns = [
     <strong>path('admin/', admin.site.urls),</strong>
@@ -127,17 +127,17 @@ original_slug: Learn/Server-side/Django/Introdução
 #     path('admin/', admin.site.urls),
 #     path('livro/&lt;int:id&gt;/', views.livro-detalhes, name='livro-detalhes'),
 #     path('catalogo/', include('catalogo.urls')),
-#     re_path(r'^([0-9]+)/$', views.melhor),
+#     re_path(r'^([0-9]+)/$', views.melhor),
 # ]</code>
 </pre>
 
-<p>O objeto <code>urlpatterns</code> é uma lista de funções <code>path()</code> (caminhos) e/ou <code>re_path()</code> (listas em Python são definidas usando colchetes, onde os itens são separados por vírgulas e podem conter opcionalmente uma vírgula no final. Por exemplo: <strong><code>[item1, item2, item3,]</code></strong>).</p>
+<p>O objeto <code>urlpatterns</code> é uma lista de funções <code>path()</code> (caminhos) e/ou <code>re_path()</code> (listas em Python são definidas usando colchetes, onde os itens são separados por vírgulas e podem conter opcionalmente uma vírgula no final. Por exemplo: <strong><code>[item1, item2, item3,]</code></strong>).</p>
 
-<p>O primeiro argumento para ambos os métodos é uma rota (padrão) que será correspondida. O método <code>path()</code> usa sinais de menor e maior (&lt;, &gt;) para definir partes de uma URL que serão capturadas e passadas para a função view como argumentos nomeados. A função <code>re_path()</code> usa uma abordagem de correspondência de padrões flexível, conhecida como expressão regular. Nós vamos falar sobre isso em um artigo posterior!</p>
+<p>O primeiro argumento para ambos os métodos é uma rota (padrão) que será correspondida. O método <code>path()</code> usa sinais de menor e maior (&lt;, &gt;) para definir partes de uma URL que serão capturadas e passadas para a função view como argumentos nomeados. A função <code>re_path()</code> usa uma abordagem de correspondência de padrões flexível, conhecida como expressão regular. Nós vamos falar sobre isso em um artigo posterior!</p>
 
-<p>O segundo argumento é outra função que será chamada quando o padrão for correspondido. A notação <code>views.book-detail</code> (<code>views.livro-detalhes</code>) indica que a função é chamada de <code>book-detail()</code> (<code>livro-detalhes()</code>) e pode ser encontrada em um módulo chamado <code>views</code> (ou seja, dentro de um arquivo chamado <code>views.py</code>)</p>
+<p>O segundo argumento é outra função que será chamada quando o padrão for correspondido. A notação <code>views.book-detail</code> (<code>views.livro-detalhes</code>) indica que a função é chamada de <code>book-detail()</code> (<code>livro-detalhes()</code>) e pode ser encontrada em um módulo chamado <code>views</code> (ou seja, dentro de um arquivo chamado <code>views.py</code>)</p>
 
-<h3 id="Manipulando_a_solicitação_views.py">Manipulando a solicitação (views.py)</h3>
+<h3 id="Manipulando_a_solicitação_views.py">Manipulando a solicitação (views.py)</h3>
 
 <p>As view são o coração do aplicativo web, recebendo solicitações HTTP de clientes da web e retornando respostas HTTP. No meio disto, eles preparam os outros recursos do framework para acessar bancos de dados, renderizar (exibir) templates, etc.</p>
 
@@ -150,7 +150,7 @@ from django.http import HttpResponse
 def index(request):
     # Get an HttpRequest - the request parameter
     # perform operations using information from the request.
-    # Return HttpResponse
+    # Return HttpResponse
     return HttpResponse('Hello from Django!')
 
 <code># favor utilizar o código acima no seu projeto ao invés do que está abaixo</code>
@@ -169,7 +169,7 @@ def index(requisito):
 <p><strong>Nota</strong>: Um pouquinho de Python:</p>
 
 <ul>
- <li><a href="https://docs.python.org/3/tutorial/modules.html">Módulos do Python</a> são "bibliotecas" de funções, armazenadas em arquivos separados, que podemos utilizar em nosso código. Aqui nós importamos apenas o objeto <code>HttpResponse</code> do módulo <code>django.http</code> para que possamos usá-lo em nossa view: <code>from django.http import HttpResponse</code>. Existem outras maneiras de importar alguns ou todos os objetos de um módulo.</li>
+ <li><a href="https://docs.python.org/3/tutorial/modules.html">Módulos do Python</a> são "bibliotecas" de funções, armazenadas em arquivos separados, que podemos utilizar em nosso código. Aqui nós importamos apenas o objeto <code>HttpResponse</code> do módulo <code>django.http</code> para que possamos usá-lo em nossa view: <code>from django.http import HttpResponse</code>. Existem outras maneiras de importar alguns ou todos os objetos de um módulo.</li>
  <li>As funções em Python são declaradas usando a palavra-chave <code>def</code> como mostrado acima, com parâmetros nomeados listados entre parênteses após o nome da função; a linha inteira termina em dois pontos. Observe como as próximas linhas são todas <strong>recuadas</strong>. O recuo é importante, pois especifica que as linhas de código estão dentro desse bloco específico (a indentação obrigatória é um recurso chave do Python e é um dos motivos pelos quais o código Python é tão fácil de ler).</li>
 </ul>
 </div>
@@ -177,27 +177,27 @@ def index(requisito):
 <ul>
 </ul>
 
-<p>Views geralmente são armazenadas em um arquivo chamado <strong>views.py</strong>.</p>
+<p>Views geralmente são armazenadas em um arquivo chamado <strong>views.py</strong>.</p>
 
-<h3 id="Definindo_o_modelo_dos_dados_models.py">Definindo o modelo dos dados (models.py)</h3>
+<h3 id="Definindo_o_modelo_dos_dados_models.py">Definindo o modelo dos dados (models.py)</h3>
 
-<p>Os aplicativos web feitos com Django gerenciam e consultam dados por meio de objetos do Python chamados de modelos. Os modelos definem a estrutura dos dados armazenados, incluindo os <em>tipos </em>do campo e possivelmente também seu tamanho máximo, valores padrão, opções de lista de seleção, texto de ajuda para documentação, texto de etiqueta (label) para formulários etc. A definição do modelo é independente do banco de dados subjacente — você pode escolher um dentre vários como parte das configurações do seu projeto. Uma vez que você escolheu qual banco de dados você quer usar, você não precisa se comunicar diretamente com ele — você apenas escreve a estrutura dos seus modelos e qualquer outro código, e o Django lida com todo o trabalho de se comunicar com o banco de dados para você.</p>
+<p>Os aplicativos web feitos com Django gerenciam e consultam dados por meio de objetos do Python chamados de modelos. Os modelos definem a estrutura dos dados armazenados, incluindo os <em>tipos </em>do campo e possivelmente também seu tamanho máximo, valores padrão, opções de lista de seleção, texto de ajuda para documentação, texto de etiqueta (label) para formulários etc. A definição do modelo é independente do banco de dados subjacente — você pode escolher um dentre vários como parte das configurações do seu projeto. Uma vez que você escolheu qual banco de dados você quer usar, você não precisa se comunicar diretamente com ele — você apenas escreve a estrutura dos seus modelos e qualquer outro código, e o Django lida com todo o trabalho de se comunicar com o banco de dados para você.</p>
 
-<p>O trecho de código abaixo mostra um modelo simples do Django para um objeto <code>Team</code> (Time). A classe <code>Team</code> é derivada da classe do Django <code>models.Model</code>. Ela define o nome e o nível da equipe como campos de caractere e especifica um número máximo de caracteres a serem armazenados para cada registro. O <code>team_level</code> (time_nivel) pode ser um de vários valores, portanto, o definimos como um campo de opção e fornecemos um mapeamento entre as opções a serem exibidas e os dados a serem armazenados, junto com um valor padrão.</p>
+<p>O trecho de código abaixo mostra um modelo simples do Django para um objeto <code>Team</code> (Time). A classe <code>Team</code> é derivada da classe do Django <code>models.Model</code>. Ela define o nome e o nível da equipe como campos de caractere e especifica um número máximo de caracteres a serem armazenados para cada registro. O <code>team_level</code> (time_nivel) pode ser um de vários valores, portanto, o definimos como um campo de opção e fornecemos um mapeamento entre as opções a serem exibidas e os dados a serem armazenados, junto com um valor padrão.</p>
 
 <pre class="brush: python notranslate">## filename: models.py
 
 from django.db import models
 
 class Team(models.Model):
-    team_name = models.CharField(max_length=40)
+    team_name = models.CharField(max_length=40)
 
-    TEAM_LEVELS = (
-        ('U09', 'Under 09s'),
-        ('U10', 'Under 10s'),
-        ('U11', 'Under 11s'),
-        ...  #list other team levels
-    )
+    TEAM_LEVELS = (
+        ('U09', 'Under 09s'),
+        ('U10', 'Under 10s'),
+        ('U11', 'Under 11s'),
+        ...  #list other team levels
+    )
 
     team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
 
@@ -210,31 +210,31 @@ class Time(models.Model):
     # models.CharField define um campo de caractere no banco de dados e max_length define o tamanho maximo permitido
     time_nome = models.CharField(max_length=40)
 
-    TIME_NIVEIS = (
-        ('A09', 'Abaixo de 09'),
-        ('A10', 'Abaixo de 10'),
-        ('A11', 'Abaixo de 11'),
-        ... #list other team levels
-    )
+    TIME_NIVEIS = (
+        ('A09', 'Abaixo de 09'),
+        ('A10', 'Abaixo de 10'),
+        ('A11', 'Abaixo de 11'),
+        ... #list other team levels
+    )
 
-    time_nivel = models.CharField(max_length=3,choices=TIME_NIVEIS,default='A11') # choices-opções / default-padrão
+    time_nivel = models.CharField(max_length=3,choices=TIME_NIVEIS,default='A11') # choices-opções / default-padrão
 </pre>
 
 <div class="note">
 <p><strong>Nota</strong>: Um pouquinho de Python:</p>
 
 <ul>
- <li>O Python suporta "programação orientada a objetos", um estilo de programação onde organizamos nosso código em objetos, que incluem dados e funções relacionadas para operar nesses dados. Os objetos também podem herdar/estender/derivar de outros objetos, permitindo que um comportamento comum entre objetos relacionados seja compartilhado. Em Python, usamos a palavra-chave <code>class</code> (classe) para definir o "blueprint" (modelo/planta/plano) de um objeto. Podemos criar várias <em>instâncias</em> específicas do tipo de objeto com base no modelo da classe.<br>
+ <li>O Python suporta "programação orientada a objetos", um estilo de programação onde organizamos nosso código em objetos, que incluem dados e funções relacionadas para operar nesses dados. Os objetos também podem herdar/estender/derivar de outros objetos, permitindo que um comportamento comum entre objetos relacionados seja compartilhado. Em Python, usamos a palavra-chave <code>class</code> (classe) para definir o "blueprint" (modelo/planta/plano) de um objeto. Podemos criar várias <em>instâncias</em> específicas do tipo de objeto com base no modelo da classe.<br>
   <br>
-  Por exemplo, aqui temos uma classe <code>Team</code> (Time), que deriva da classe <code>Model</code>. Isso significa que é um modelo e conterá todos os métodos de um modelo, mas também podemos fornecer recursos especializados próprios. Em nosso modelo, definimos os campos que nosso banco de dados precisará para armazenar nossos dados, dando-lhes nomes específicos. O Django usa essas definições, incluindo os nomes dos campos, para criar o banco de dados subjacente.</li>
+  Por exemplo, aqui temos uma classe <code>Team</code> (Time), que deriva da classe <code>Model</code>. Isso significa que é um modelo e conterá todos os métodos de um modelo, mas também podemos fornecer recursos especializados próprios. Em nosso modelo, definimos os campos que nosso banco de dados precisará para armazenar nossos dados, dando-lhes nomes específicos. O Django usa essas definições, incluindo os nomes dos campos, para criar o banco de dados subjacente.</li>
 </ul>
 </div>
 
-<h3 id="Consultando_dados_views.py">Consultando dados (views.py)</h3>
+<h3 id="Consultando_dados_views.py">Consultando dados (views.py)</h3>
 
 <p>O modelo Django fornece uma query API simples para buscas no banco de dados. Isto pode combinar com um grande número de campos ao mesmo tempo utilizando diversos critérios (ex.: exato, maiúsculas e minúsculas (case-sensitive), maior que, etc.), e pode suportar definições complexas (por exemplo, você pode especificar a busca por times U11 que tem os nomes começando com 'Fr" ou terminando com "al").</p>
 
-<p>O trecho de código mostra uma função da View (manipulador de recursos) para exibir todos os nossos times U09. A linha em negrito mostra como podemos usar a API modelo de consulta para filtrar todos os registros em que o campo <code>team_level</code> possui exatamente o texto 'U09' (observe como esse critério é passado para a função  <code>filter()</code>  com o argumento no campo de nome e o tipo de busca de correspondência (<strong>exact</strong>) separado por um sublinhado duplo: <strong>(team_level__exact</strong>).</p>
+<p>O trecho de código mostra uma função da View (manipulador de recursos) para exibir todos os nossos times U09. A linha em negrito mostra como podemos usar a API modelo de consulta para filtrar todos os registros em que o campo <code>team_level</code> possui exatamente o texto 'U09' (observe como esse critério é passado para a função  <code>filter()</code>  com o argumento no campo de nome e o tipo de busca de correspondência (<strong>exact</strong>) separado por um sublinhado duplo: <strong>(team_level__exact</strong>).</p>
 
 <pre class="brush: python notranslate">## filename: views.py
 
@@ -242,9 +242,9 @@ from django.shortcuts import render
 from .models import Team
 
 def index(request):
-    <strong>list_teams = Team.objects.filter(team_level__exact="U09")</strong>
-    context = {'youngest_teams': list_teams}
-    return render(request, '/best/index.html', context)
+    <strong>list_teams = Team.objects.filter(team_level__exact="U09")</strong>
+    context = {'youngest_teams': list_teams}
+    return render(request, '/best/index.html', context)
 
 # favor utilizar o código acima no seu projeto ao invés do código abaixo
 ## nome do arquivo: views.py
@@ -276,13 +276,13 @@ def index(request):
 &lt;body&gt;
 
  {% if youngest_teams %}
-    &lt;ul&gt;
-    {% for team in youngest_teams %}
-        &lt;li&gt;\{\{ team.team_name \}\}&lt;/li&gt;
-    {% endfor %}
-    &lt;/ul&gt;
+    &lt;ul&gt;
+    {% for team in youngest_teams %}
+        &lt;li&gt;\{\{ team.team_name \}\}&lt;/li&gt;
+    {% endfor %}
+    &lt;/ul&gt;
 {% else %}
-    &lt;p&gt;No teams are available.&lt;/p&gt;
+    &lt;p&gt;No teams are available.&lt;/p&gt;
 {% endif %}
 
 &lt;/body&gt;
@@ -298,9 +298,9 @@ def index(request):
  {% if youngest_teams %}
     &lt;ul&gt;
      {% for team in youngest_teams %}
-         &lt;li&gt;\{\{ team.team_name \}\}&lt;/li&gt;
-     {% endfor %}     &lt;/ul&gt; {% else %}
-     &lt;p&gt;Nenhum time disponível.&lt;/p&gt;
+         &lt;li&gt;\{\{ team.team_name \}\}&lt;/li&gt;
+     {% endfor %}     &lt;/ul&gt; {% else %}
+     &lt;p&gt;Nenhum time disponível.&lt;/p&gt;
  {% endif %}
  &lt;/body&gt;
  &lt;/html&gt;

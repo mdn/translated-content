@@ -7,7 +7,7 @@ translation_of: Web/CSS/font-weight
 
 <h2 id="Resumo">Resumo</h2>
 
-<p>A propriedade <a href="/en-US/docs/CSS" title="CSS">CSS </a><code>font-weight</code> especifica o peso ou a intensidade da fonte (ex.: negrito). Algumas fontes oferecem apenas as opções <code>normal</code> e negrito.</p>
+<p>A propriedade <a href="/en-US/docs/CSS" title="CSS">CSS </a><code>font-weight</code> especifica o peso ou a intensidade da fonte (ex.: negrito). Algumas fontes oferecem apenas as opções <code>normal</code> e negrito.</p>
 
 <p>{{cssinfo}}</p>
 
@@ -57,12 +57,12 @@ font-weight: unset;
 
 <ul>
  <li>Se solicitado um peso maior que <code>500</code>, usa-se o próximo peso mais escuro (ou, se não houver, usa-se o próximo mais claro).</li>
- <li>Se solicitado um peso menor que <code>400</code>, usa-se o próximo peso mais claro  (ou, se não houver, usa-se o próximo mais escuro).</li>
+ <li>Se solicitado um peso menor que <code>400</code>, usa-se o próximo peso mais claro  (ou, se não houver, usa-se o próximo mais escuro).</li>
  <li>Se solicitado o peso <code>400</code>, usa-se o peso <code>500</code>. Se <code>500</code> não estiver disponível, usa-se a heurística para peso menor do que 500.</li>
  <li>Se solicitado o peso <code>500</code>, usa-se o peso <code>400</code>. Se <code>400</code> não estiver disponível, usa-se a heurística para peso menor do que 400.</li>
 </ul>
 
-<p>Isto significa que para fontes que oferecem apenas <code style="font-style: normal;">normal</code> e negrito, <code style="font-style: normal;">100</code>-<code>500</code> significa normal, e <code style="font-style: normal;">600</code>-<code style="font-style: normal;">900</code> significa negrito.</p>
+<p>Isto significa que para fontes que oferecem apenas <code style="font-style: normal;">normal</code> e negrito, <code style="font-style: normal;">100</code>-<code>500</code> significa normal, e <code style="font-style: normal;">600</code>-<code style="font-style: normal;">900</code> significa negrito.</p>
 
 <h3 id="Significado_de_pesos_relativos">Significado de pesos relativos</h3>
 
@@ -152,7 +152,7 @@ font-weight: unset;
 
 <h3 id="Interpolação">Interpolação</h3>
 
-<p>Um valor de <code>font-weight</code> é interpolado com passos discretos (múltiplos de 100). A interpolação acontece no espaço de números reais e depois é feita uma conversão para números inteiros por arredondamento para o múltiplo de 100 mais próximo. Valores exatamente entre dois múltiplos de 100 são arredondados para mais.</p>
+<p>Um valor de <code>font-weight</code> é interpolado com passos discretos (múltiplos de 100). A interpolação acontece no espaço de números reais e depois é feita uma conversão para números inteiros por arredondamento para o múltiplo de 100 mais próximo. Valores exatamente entre dois múltiplos de 100 são arredondados para mais.</p>
 
 <h3 id="Sintaxe_formal">Sintaxe formal</h3>
 
@@ -228,57 +228,11 @@ span {
   <tr>
    <td>{{SpecName('CSS1', '#font-weight', 'font-weight')}}</td>
    <td>{{Spec2('CSS1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>2.0</td>
-   <td>{{CompatGeckoDesktop(1.0)}}</td>
-   <td>3.0</td>
-   <td>3.5</td>
-   <td>1.3</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoMobile(1.0)}}</td>
-   <td>6.0</td>
-   <td>6.0</td>
-   <td>3.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.properties.font-weight")}}

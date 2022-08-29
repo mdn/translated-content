@@ -16,4 +16,4 @@ En {{glossary("JavaScript")}}, les identifiants ne peuvent contenir que des cara
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Identificateur", "Identificateur")}} sur Wikipédia
+- [Identificateur](https://fr.wikipedia.org/wiki/Identificateur) sur Wikipédia

@@ -15,11 +15,11 @@ translation_of: Web/HTTP/Headers
 <div>{{HTTPSidebar}}</div>
 </div>
 
-<div>Os cabeçalhos HTTP permitem que o cliente e o servidor passem informações adicionais com a solicitação ou a resposta HTTP. Um cabeçalho de solicitação é composto por seu nome <em>case-insensitive</em> (não diferencia letras maiúsculas e minúsculas), seguido por dois pontos ':' e pelo seu valor (sem quebras de linha).  Espaços em branco antes do valor serão ignorados.</div>
+<div>Os cabeçalhos HTTP permitem que o cliente e o servidor passem informações adicionais com a solicitação ou a resposta HTTP. Um cabeçalho de solicitação é composto por seu nome <em>case-insensitive</em> (não diferencia letras maiúsculas e minúsculas), seguido por dois pontos ':' e pelo seu valor (sem quebras de linha).  Espaços em branco antes do valor serão ignorados.</div>
 
 
 
-<p>Cabeçalhos proprietários personalizados podem ser adicionados usando o prefixo 'X-', mas essa convenção foi descontinuada em Junho de 2012, devido aos inconvenientes que causou quando os campos não-padronizados tornaram-se padronizados na <a href="https://tools.ietf.org/html/rfc6648">RFC 6648</a>; outros estão listados em um <a href="http://www.iana.org/assignments/message-headers/perm-headers.html">registro IANA</a>, cujo o conteúdo original foi definido na <a class="external" href="http://tools.ietf.org/html/rfc4229">RFC 4229</a>. O IANA também mantém o <a href="http://www.iana.org/assignments/message-headers/prov-headers.html">registro das propostas de novas mensagens de cabeçalhos HTTP</a>.</p>
+<p>Cabeçalhos proprietários personalizados podem ser adicionados usando o prefixo 'X-', mas essa convenção foi descontinuada em Junho de 2012, devido aos inconvenientes que causou quando os campos não-padronizados tornaram-se padronizados na <a href="https://tools.ietf.org/html/rfc6648">RFC 6648</a>; outros estão listados em um <a href="http://www.iana.org/assignments/message-headers/perm-headers.html">registro IANA</a>, cujo o conteúdo original foi definido na <a class="external" href="http://tools.ietf.org/html/rfc4229">RFC 4229</a>. O IANA também mantém o <a href="http://www.iana.org/assignments/message-headers/prov-headers.html">registro das propostas de novas mensagens de cabeçalhos HTTP</a>.</p>
 
 <p>Cabeçalhos podem ser classificados de acordo com os seus contextos:</p>
 
@@ -62,22 +62,22 @@ translation_of: Web/HTTP/Headers
  <dt>{{HTTPHeader("Cache-Control")}}</dt>
  <dd>Especifica diretivas para mecanismos de cache em requisições e respostas.</dd>
  <dt>{{HTTPHeader("Expires")}}</dt>
- <dd>A data/hora depois que a resposta é considerada obsoleta.</dd>
+ <dd>A data/hora depois que a resposta é considerada obsoleta.</dd>
  <dt>{{HTTPHeader("Pragma")}}</dt>
- <dd>Cabeçalho específico da implementação que pode ter varios efeitos em qualquer lugar ao longo da sequência de requisição-resposta. Usado  para compatibilidade de versões anteriores com caches HTTP/1.0 onde o header Cache-Control ainda não está presente.</dd>
+ <dd>Cabeçalho específico da implementação que pode ter varios efeitos em qualquer lugar ao longo da sequência de requisição-resposta. Usado  para compatibilidade de versões anteriores com caches HTTP/1.0 onde o header Cache-Control ainda não está presente.</dd>
  <dt>{{HTTPHeader("Warning")}}</dt>
  <dd>Um campo de alerta geral contendo informações sobre possíveis problemas.</dd>
 </dl>
 
 <h2 id="Client_hints">Client hints</h2>
 
-<p>O recurso HTTP <a href="/pt-BR/docs/Glossary/Client_hints">Client hints</a> ainda está em desenvolvimento. A documentação está disponível no site do <a href="https://httpwg.org/http-extensions/client-hints.html">HTTP working group.</a></p>
+<p>O recurso HTTP <a href="/pt-BR/docs/Glossary/Client_hints">Client hints</a> ainda está em desenvolvimento. A documentação está disponível no site do <a href="https://httpwg.org/http-extensions/client-hints.html">HTTP working group.</a></p>
 
 <dl>
  <dt>{{HTTPHeader("Accept-CH")}} {{experimental_inline}}</dt>
- <dd>Os servidores podem dar suporte para o <a href="/pt-BR/docs/Glossary/Client_hints">Client hints</a> usando o campo de cabeçalho Accept-CH ou um elemento HTML &lt;meta&gt; equivalente com atributo http-equiv ([HTML5]).</dd>
+ <dd>Os servidores podem dar suporte para o <a href="/pt-BR/docs/Glossary/Client_hints">Client hints</a> usando o campo de cabeçalho Accept-CH ou um elemento HTML &lt;meta&gt; equivalente com atributo http-equiv ([HTML5]).</dd>
  <dt>{{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}}</dt>
- <dd>Os servidores podem solicitar ao cliente que lembre-se do conjunto de <a href="/pt-BR/docs/Glossary/Client_hints">Client hints</a> que o servidor dá suporte por um período de tempo especificado, para permitir a entrega de <a href="/pt-BR/docs/Glossary/Client_hints">Client hints</a> em solicitações seguidas ao servidor de origem([RFC6454]).</dd>
+ <dd>Os servidores podem solicitar ao cliente que lembre-se do conjunto de <a href="/pt-BR/docs/Glossary/Client_hints">Client hints</a> que o servidor dá suporte por um período de tempo especificado, para permitir a entrega de <a href="/pt-BR/docs/Glossary/Client_hints">Client hints</a> em solicitações seguidas ao servidor de origem([RFC6454]).</dd>
  <dt>{{HTTPHeader("Content-DPR")}} {{experimental_inline}}</dt>
  <dd><span class="tlid-translation translation" lang="pt"><span title="">Um número que indica a proporção entre pixels físicos sobre pixels CSS da resposta de imagem selecionada.</span></span></dd>
  <dt>{{HTTPHeader("DPR")}} {{experimental_inline}}</dt>
@@ -98,9 +98,9 @@ translation_of: Web/HTTP/Headers
 
 <dl>
  <dt>{{HTTPHeader("Last-Modified")}}</dt>
- <dd>É um validador, a última data de modificação de um recurso, usado para comparar várias versões de um mesmo recurso. É menos preciso que o {{HTTPHeader("ETag")}}, mas é mais fácil calcular em alguns ambientes. Requisições condicionais usando {{HTTPHeader("If-Modified-Since")}} e {{HTTPHeader("If-Unmodified-Since")}} usam esse valor para modificar o comportamento da requisição.</dd>
+ <dd>É um validador, a última data de modificação de um recurso, usado para comparar várias versões de um mesmo recurso. É menos preciso que o {{HTTPHeader("ETag")}}, mas é mais fácil calcular em alguns ambientes. Requisições condicionais usando {{HTTPHeader("If-Modified-Since")}} e {{HTTPHeader("If-Unmodified-Since")}} usam esse valor para modificar o comportamento da requisição.</dd>
  <dt>{{HTTPHeader("ETag")}}</dt>
- <dd>É um validador, uma string única identificando a versão do recurso. Requisições condicionais usando {{HTTPHeader("If-Match")}} e {{HTTPHeader("If-None-Match")}} usam esse valor para modificar o comportamento da requisição.</dd>
+ <dd>É um validador, uma string única identificando a versão do recurso. Requisições condicionais usando {{HTTPHeader("If-Match")}} e {{HTTPHeader("If-None-Match")}} usam esse valor para modificar o comportamento da requisição.</dd>
  <dt>{{HTTPHeader("If-Match")}}</dt>
  <dd>Faz a requisição condicional e aplica o método apenas se o recurso armazenado corresponder a uma das ETags fornecidas.</dd>
  <dt>{{HTTPHeader("If-None-Match")}}</dt>
@@ -130,7 +130,7 @@ translation_of: Web/HTTP/Headers
  <dt>{{HTTPHeader("Accept-Encoding")}}</dt>
  <dd>Informa ao servidor sobre o algoritmo de codificação, geralmente um algoritmo de compressão, isto pode ser usado no recurso enviado de volta.</dd>
  <dt>{{HTTPHeader("Accept-Language")}}</dt>
- <dd>Informa ao servidor sobre a linguagem que é esperada que o servidor envie de volta. Esta é uma dica e não está necessariamente sob controle total do usuário: o servidor deve sempre prestar atenção para não sobrepor uma escolha explícita do usuário (como selecionar uma linguagem em uma lista suspensa).</dd>
+ <dd>Informa ao servidor sobre a linguagem que é esperada que o servidor envie de volta. Esta é uma dica e não está necessariamente sob controle total do usuário: o servidor deve sempre prestar atenção para não sobrepor uma escolha explícita do usuário (como selecionar uma linguagem em uma lista suspensa).</dd>
 </dl>
 
 <h2 id="Controles">Controles</h2>
@@ -146,13 +146,13 @@ translation_of: Web/HTTP/Headers
 
 <dl>
  <dt>{{HTTPHeader("Cookie")}}</dt>
- <dd>Contém <a href="/pt-BR/docs/Web/HTTP/Cookies">cookies </a>HTTP armazenados previamente enviados pelo servidor com o cabeçalho {{HTTPHeader("Set-Cookie")}}.</dd>
+ <dd>Contém <a href="/pt-BR/docs/Web/HTTP/Cookies">cookies </a>HTTP armazenados previamente enviados pelo servidor com o cabeçalho {{HTTPHeader("Set-Cookie")}}.</dd>
  <dt>{{HTTPHeader("Set-Cookie")}}</dt>
  <dd>Envia cookies do servidor para o agente de usuário.</dd>
  <dt>{{HTTPHeader("Cookie2")}} {{obsolete_inline}}</dt>
- <dd>Contém um cookie HTTP enviado anteriormente pelo servidor com o cabeçalho {{HTTPHeader("Set-Cookie2")}}, mas se tornou obsoleto pela especificação. Use {{HTTPHeader("Cookie")}} em vez disso.</dd>
+ <dd>Contém um cookie HTTP enviado anteriormente pelo servidor com o cabeçalho {{HTTPHeader("Set-Cookie2")}}, mas se tornou obsoleto pela especificação. Use {{HTTPHeader("Cookie")}} em vez disso.</dd>
  <dt>{{HTTPHeader("Set-Cookie2")}} {{obsolete_inline}}</dt>
- <dd>Envia cookies do servidor para o agente-usuário, mas se tornou obsoleto pela especificação. Use {{HTTPHeader("Set-Cookie")}} em vez disso.</dd>
+ <dd>Envia cookies do servidor para o agente-usuário, mas se tornou obsoleto pela especificação. Use {{HTTPHeader("Set-Cookie")}} em vez disso.</dd>
 </dl>
 
 <h2 id="CORS">CORS</h2>
@@ -163,37 +163,37 @@ translation_of: Web/HTTP/Headers
  <dt>{{HTTPHeader("Access-Control-Allow-Credentials")}}</dt>
  <dd>Indica se a resposta a requisição pode ou não ser exposta quando a flag de crendenciais é verdadeira.</dd>
  <dt>{{HTTPHeader("Access-Control-Allow-Headers")}}</dt>
- <dd>Usado na resposta para uma solicitação de comprovação ({{Glossary("Preflight_request", "preflight request")}}) para indicar quais cabeçalhos HTTP podem ser usados ao fazer a solicitação real.</dd>
+ <dd>Usado na resposta para uma solicitação de comprovação ({{Glossary("Preflight_request", "preflight request")}}) para indicar quais cabeçalhos HTTP podem ser usados ao fazer a solicitação real.</dd>
  <dt>{{HTTPHeader("Access-Control-Allow-Methods")}}</dt>
- <dd>Especifica o método, ou métodos, permitido ao acessar o recurso em resposta à solicitação de comprovação ({{Glossary("Preflight_request", "preflight request")}}). </dd>
+ <dd>Especifica o método, ou métodos, permitido ao acessar o recurso em resposta à solicitação de comprovação ({{Glossary("Preflight_request", "preflight request")}}). </dd>
  <dt>{{HTTPHeader("Access-Control-Expose-Headers")}}</dt>
- <dd>Indica quais cabeçalhos podem ser expostos como parte da resposta listando seus nomes.</dd>
+ <dd>Indica quais cabeçalhos podem ser expostos como parte da resposta listando seus nomes.</dd>
  <dt>{{HTTPHeader("Access-Control-Max-Age")}}</dt>
  <dd>Indica por quanto tempo os resultados de uma solicitação de comprovação ({{Glossary("Preflight_request", "preflight request")}}) podem ser armazenados em cache.</dd>
  <dt>{{HTTPHeader("Access-Control-Request-Headers")}}</dt>
- <dd>Utilizado ao emitr uma solicitação de comprovação ({{Glossary("Preflight_request", "preflight request")}}) para informar ao servidor quais cabeçalhos HTTP serão usados quando a solicitação real for realizada. </dd>
+ <dd>Utilizado ao emitr uma solicitação de comprovação ({{Glossary("Preflight_request", "preflight request")}}) para informar ao servidor quais cabeçalhos HTTP serão usados quando a solicitação real for realizada. </dd>
  <dt>{{HTTPHeader("Access-Control-Request-Method")}}</dt>
- <dd>Utilizado ao emitir uma solicitação de comprovação ({{Glossary("Preflight_request", "preflight request")}}) para informar ao servidor qual <a href="/en-US/docs/Web/HTTP/Methods">método HTTP</a> será usado quando a solicitação real for realizada.</dd>
+ <dd>Utilizado ao emitir uma solicitação de comprovação ({{Glossary("Preflight_request", "preflight request")}}) para informar ao servidor qual <a href="/en-US/docs/Web/HTTP/Methods">método HTTP</a> será usado quando a solicitação real for realizada.</dd>
  <dt>{{HTTPHeader("Origin")}}</dt>
  <dd>Inddica de onde uma busca se origina.</dd>
  <dt>{{HTTPHeader("Timing-Allow-Origin")}}</dt>
- <dd>Especifica as origens que tem permissão para ver valores de atributos recuperados por meio de recursos da API de Tempo de Recurso (<a href="/pt-BR/en-US/docs/Web/API/Resource_Timing_API">Resource Timing API</a>) que, de outra forma, seriam relatados como zero devido a restrições de origem cruzada (cross-origin restrictions).</dd>
+ <dd>Especifica as origens que tem permissão para ver valores de atributos recuperados por meio de recursos da API de Tempo de Recurso (<a href="/pt-BR/en-US/docs/Web/API/Resource_Timing_API">Resource Timing API</a>) que, de outra forma, seriam relatados como zero devido a restrições de origem cruzada (cross-origin restrictions).</dd>
 </dl>
 
 <h2 id="Do_Not_Track">Do Not Track</h2>
 
 <dl>
  <dt>{{HTTPHeader("DNT")}}</dt>
- <dd>Usado para expressas a preferência de rastreamento do usuário </dd>
+ <dd>Usado para expressas a preferência de rastreamento do usuário </dd>
  <dt>{{HTTPHeader("Tk")}}</dt>
- <dd>Indica o status de rastreamento aplicado  à requisição correspondente.</dd>
+ <dd>Indica o status de rastreamento aplicado  à requisição correspondente.</dd>
 </dl>
 
 <h2 id="Downloads">Downloads</h2>
 
 <dl>
  <dt>{{HTTPHeader("Content-Disposition")}}</dt>
- <dd>Indica se o recurso transmitido deve ser mostrado em linha (inline - comportamento padrão sem o cabeçalho), ou se deve apresentar uma caixa de diálogo "Salvar como". </dd>
+ <dd>Indica se o recurso transmitido deve ser mostrado em linha (inline - comportamento padrão sem o cabeçalho), ou se deve apresentar uma caixa de diálogo "Salvar como". </dd>
 </dl>
 
 <h2 id="Informações_do_corpo_da_mensagem">Informações do corpo da mensagem</h2>
@@ -215,13 +215,13 @@ translation_of: Web/HTTP/Headers
 
 <dl>
  <dt>{{HTTPHeader("Forwarded")}}</dt>
- <dd>Contém informações do lado do cliente dos servidores <em>proxy</em> que é alterado ou perdido quando um <em>proxy</em> é envolvido no caminho de uma solicitação.</dd>
+ <dd>Contém informações do lado do cliente dos servidores <em>proxy</em> que é alterado ou perdido quando um <em>proxy</em> é envolvido no caminho de uma solicitação.</dd>
  <dt>{{HTTPHeader("X-Forwarded-For")}} {{non-standard_inline}}</dt>
  <dd>Identifica os endereços de IP de origem de um cliente que se conecta a um servidor web por meio de um <em>proxy</em> HTTP ou balanceador de carga.</dd>
  <dt>{{HTTPHeader("X-Forwarded-Host")}} {{non-standard_inline}}</dt>
  <dd>Identifica o host original que um cliente usou para se conectar ao <em>proxy</em> ou balanceador de carga.</dd>
  <dt>{{HTTPHeader("X-Forwarded-Proto")}} {{non-standard_inline}}</dt>
- <dd>Identifica o protocolo (HTTP ou HTTPS) que um cliente usou para se conectar ao seu <em>proxy </em>ou balanceador de carga.</dd>
+ <dd>Identifica o protocolo (HTTP ou HTTPS) que um cliente usou para se conectar ao seu <em>proxy </em>ou balanceador de carga.</dd>
  <dt>{{HTTPHeader("Via")}}</dt>
  <dd>Adicionado por <em>proxies, </em>ambos<em> proxies </em>de encaminhamento<em> (forward) </em>e reverso<em> (reverse), e pode aparecer nos cabeçalhos de solicitação e de resposta.</em></dd>
 </dl>
@@ -233,13 +233,13 @@ translation_of: Web/HTTP/Headers
  <dd>Indica a URL para redirecionar uma página.</dd>
 </dl>
 
-<h2 id="Contexto_da_requisição">Contexto da requisição</h2>
+<h2 id="Contexto_da_requisição">Contexto da requisição</h2>
 
 <dl>
  <dt>{{HTTPHeader("From")}}</dt>
- <dd>Contém um endereço de e-mail da internet para um usuário humano que controla o agente do usuário solicitante.</dd>
+ <dd>Contém um endereço de e-mail da internet para um usuário humano que controla o agente do usuário solicitante.</dd>
  <dt>{{HTTPHeader("Host")}}</dt>
- <dd>Especifica o nome de domínio do servidor (para hospedagem virtual), e (opcionalmente) o número da porta TCP na qual o servidor está ouvindo.</dd>
+ <dd>Especifica o nome de domínio do servidor (para hospedagem virtual), e (opcionalmente) o número da porta TCP na qual o servidor está ouvindo.</dd>
  <dt>{{HTTPHeader("Referer")}}</dt>
  <dd>The address of the previous web page from which a link to the currently requested page was followed.</dd>
  <dt>{{HTTPHeader("Referrer-Policy")}}</dt>
@@ -263,11 +263,11 @@ translation_of: Web/HTTP/Headers
  <dt>{{HTTPHeader("Accept-Ranges")}}</dt>
  <dd>Indica se o servidor suporta solicitações de intervalo, se sim, em qual unidade o intervalo pode ser expresso.</dd>
  <dt>{{HTTPHeader("Range")}}</dt>
- <dd>Indica a parte de um documento que o servidor deve retornar.</dd>
+ <dd>Indica a parte de um documento que o servidor deve retornar.</dd>
  <dt>{{HTTPHeader("If-Range")}}</dt>
- <dd>Cria uma solicitação de intervalo condicional que é atendida se a etag ou data fornecida no parâmetro corresponde ao recurso remoto. Usado para impedir o download de dois intervalos da versão incompatível do recurso.</dd>
+ <dd>Cria uma solicitação de intervalo condicional que é atendida se a etag ou data fornecida no parâmetro corresponde ao recurso remoto. Usado para impedir o download de dois intervalos da versão incompatível do recurso.</dd>
  <dt>{{HTTPHeader("Content-Range")}}</dt>
- <dd>Indica onde uma parte da mensagem faz parte de uma mensagem inteira de corpo.</dd>
+ <dd>Indica onde uma parte da mensagem faz parte de uma mensagem inteira de corpo.</dd>
 </dl>
 
 <h2 id="Segurança">Segurança</h2>
@@ -349,7 +349,7 @@ translation_of: Web/HTTP/Headers
  <dt>{{HTTPHeader("Retry-After")}}</dt>
  <dd>Indica quanto tempo o User-Agent deve esperar antes de realizar uma requisição de acompanhamento.</dd>
  <dt>{{HTTPHeader("Upgrade")}}</dt>
- <dd>This is a Proposed Internet Standard. To view a comprehensive list of all Official and Proposed Internet Standards with detailed information about each, <a href="https://www.rfc-editor.org/standards">visit this Internet Standards reference</a>, which is updated daily.  The relevant RFC document for the <a href="https://tools.ietf.org/html/rfc7230#section-6.7">Upgrade header field standard is RFC 7230, section 6.7</a>.  The standard establishes rules for upgrading or changing to a different protocol on the current client, server, transport protocol connection.  For example, this header standard allows a client to change from HTTP 1.1 to HTTP 2.0, assuming the server decides to acknowledge and implement the Upgrade header field.  Niether party is required to accept the terms specified in the Upgrade header field.  It can be used in both client and server headers.  If the Upgrade header field is specified, then the sender MUST also send the Connection header field with the upgrade option specified.  For details on the Connection header field <a href="https://tools.ietf.org/html/rfc7230#section-6.1">please see section 6.1 of the aforementioned RFC</a>.</dd>
+ <dd>This is a Proposed Internet Standard. To view a comprehensive list of all Official and Proposed Internet Standards with detailed information about each, <a href="https://www.rfc-editor.org/standards">visit this Internet Standards reference</a>, which is updated daily.  The relevant RFC document for the <a href="https://tools.ietf.org/html/rfc7230#section-6.7">Upgrade header field standard is RFC 7230, section 6.7</a>.  The standard establishes rules for upgrading or changing to a different protocol on the current client, server, transport protocol connection.  For example, this header standard allows a client to change from HTTP 1.1 to HTTP 2.0, assuming the server decides to acknowledge and implement the Upgrade header field.  Niether party is required to accept the terms specified in the Upgrade header field.  It can be used in both client and server headers.  If the Upgrade header field is specified, then the sender MUST also send the Connection header field with the upgrade option specified.  For details on the Connection header field <a href="https://tools.ietf.org/html/rfc7230#section-6.1">please see section 6.1 of the aforementioned RFC</a>.</dd>
  <dt>{{HTTPHeader("Vary")}}</dt>
  <dd>Determines how to match future request headers to decide whether a cached response can be used rather than requesting a fresh one from the origin server.</dd>
  <dt>{{HTTPHeader("X-Content-Duration")}}</dt>

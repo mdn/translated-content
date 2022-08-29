@@ -95,8 +95,7 @@ observe_frame.observe({entryTypes: ['frame']});
 
 | Spécification                                                                                                                                                | Statut                                                   | Commentaire          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | -------------------- |
-| {{SpecName('Performance Timeline Level 2',
-        '#dom-performanceobserverentrylist-getentries', 'getEntries()')}} | {{Spec2('Performance Timeline Level 2')}} | Définition initiale. |
+| {{SpecName('Performance Timeline Level 2', '#dom-performanceobserverentrylist-getentries', 'getEntries()')}} | {{Spec2('Performance Timeline Level 2')}} | Définition initiale. |
 
 ## Compatibilité des navigateurs
 

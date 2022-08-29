@@ -5,7 +5,7 @@ translation_of: Web/HTTP/Methods/OPTIONS
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>O <strong>método HTTP <code>OPTIONS</code> </strong>é utilizado para que um cliente possa descobrir quais as opções de requisição permitidas para um determinado recurso em um servidor. O cliente pode especificar uma URL específica no método <code>OPTIONS</code> ou um asterisco(*) indicando que se refere ao servidor como um todo para sanar suas dúvidas em relação as opções de requisição permitidas.</p>
+<p>O <strong>método HTTP <code>OPTIONS</code> </strong>é utilizado para que um cliente possa descobrir quais as opções de requisição permitidas para um determinado recurso em um servidor. O cliente pode especificar uma URL específica no método <code>OPTIONS</code> ou um asterisco(*) indicando que se refere ao servidor como um todo para sanar suas dúvidas em relação as opções de requisição permitidas.</p>
 
 <table class="properties">
  <tbody>
@@ -50,7 +50,7 @@ OPTIONS * HTTP/1.1
 
 <pre class="notranslate">curl -X OPTIONS http://example.org -i</pre>
 
-<p>A resposta terá um cabeçalho  {{HTTPHeader("Allow")}} com os métodos permitidos:</p>
+<p>A resposta terá um cabeçalho  {{HTTPHeader("Allow")}} com os métodos permitidos:</p>
 
 <pre class="notranslate">HTTP/1.1 200 OK
 Allow: OPTIONS, GET, HEAD, POST
@@ -64,7 +64,7 @@ Content-Length: 0
 
 <h3 id="Requisições_Preflighted_no_CORS">Requisições Preflighted no CORS</h3>
 
-<p>No <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a>, uma requisição preflight com o método OPTIONS é enviada para que o servidor possa indicar se é possível enviar uma requisição específica com os parâmetros informados. No exemplo abaixo, o cabeçalho {{HTTPHeader("Access-Control-Request-Method")}} indica para o servidor que quando a requisição específica for enviada, ela será enviada como uma requisição POST. O cabeçalho {{HTTPHeader("Access-Control-Request-Headers")}} indica para o servidor que quando a requisição específica for enviada, ela será enviada com os cabeçalhos customizados <code>X-PINGOTHER</code> e <code>Content-Type</code>. A partir desta requisição com o método OPTIONS, o servidor possui a oportunidade de indicar se a requisição específica será aceita da forma como foi indicada pelos parâmetros supracitados (o método POST e os dois cabeçalhos customizados).</p>
+<p>No <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a>, uma requisição preflight com o método OPTIONS é enviada para que o servidor possa indicar se é possível enviar uma requisição específica com os parâmetros informados. No exemplo abaixo, o cabeçalho {{HTTPHeader("Access-Control-Request-Method")}} indica para o servidor que quando a requisição específica for enviada, ela será enviada como uma requisição POST. O cabeçalho {{HTTPHeader("Access-Control-Request-Headers")}} indica para o servidor que quando a requisição específica for enviada, ela será enviada com os cabeçalhos customizados <code>X-PINGOTHER</code> e <code>Content-Type</code>. A partir desta requisição com o método OPTIONS, o servidor possui a oportunidade de indicar se a requisição específica será aceita da forma como foi indicada pelos parâmetros supracitados (o método POST e os dois cabeçalhos customizados).</p>
 
 <pre class="notranslate">OPTIONS /resources/post-here/ HTTP/1.1
 Host: bar.other
@@ -77,7 +77,7 @@ Origin: http://foo.example
 Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER, Content-Type</pre>
 
-<p>Em nosso exemplo, o servidor responde com  {{HTTPHeader("Access-Control-Allow-Methods")}} indicando que os métodos <code>POST</code>, <code>GET</code>, e <code>OPTIONS</code> são permitidos para utilização em relação ao recurso em questão. Este cabeçalho é similar ao cabeçalho de resposta {{HTTPHeader("Allow")}} , no entanto ele somente é utilizado no contexto do CORS.</p>
+<p>Em nosso exemplo, o servidor responde com  {{HTTPHeader("Access-Control-Allow-Methods")}} indicando que os métodos <code>POST</code>, <code>GET</code>, e <code>OPTIONS</code> são permitidos para utilização em relação ao recurso em questão. Este cabeçalho é similar ao cabeçalho de resposta {{HTTPHeader("Allow")}} , no entanto ele somente é utilizado no contexto do CORS.</p>
 
 <pre class="notranslate">HTTP/1.1 200 OK
 Date: Mon, 01 Dec 2008 01:15:39 GMT

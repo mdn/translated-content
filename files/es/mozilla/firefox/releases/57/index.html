@@ -7,7 +7,7 @@ tags:
   - Notas de publicación
 translation_of: Mozilla/Firefox/Releases/57
 ---
-<div>{{FirefoxSidebar}}</div><p class="summary">Este artículo proporciona información sobre los cambios incluidos en Firefox 57 (también conocido como Firefox Quantum) que conciernen a los desarrolladores. Firefox 57 se disponibilizó al público el <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">14 de noviembre de 2017</a>.</p>
+<div>{{FirefoxSidebar}}</div><p class="summary">Este artículo proporciona información sobre los cambios incluidos en Firefox 57 (también conocido como Firefox Quantum) que conciernen a los desarrolladores. Firefox 57 se disponibilizó al público el <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">14 de noviembre de 2017</a>.</p>
 
 <h2 id="Firefox_57_Firefox_Quantum">Firefox 57 === Firefox Quantum</h2>
 
@@ -17,7 +17,7 @@ translation_of: Mozilla/Firefox/Releases/57
 <p><strong>Nota</strong>: para obtener más información sobre las funciones de Quantum incluidas en esta versión, consúltese el artículo <a href="https://hacks.mozilla.org/2017/09/firefox-quantum-developer-edition-fastest-firefox-ever/">«Firefox Quantum Developer Edition: el Firefox más rápido, con IU Photon y mejores herramientas»</a>, escrito por Dan Callahan.</p>
 </div>
 
-<p><a href="https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/">El nuevo procesador de CSS en paralelo de Firefox</a> ―también denominado <strong>Quantum CSS</strong> o <strong>Stylo</strong>― está activado de manera predeterminada en Firefox 57 para escritorio; las versiones para móviles darán el salto en el futuro. Los programadores no deberían notar ninguna diferencia importante, aparte de la amplia gama de mejoras de rendimiento. Sin embargo, existen algunas diferencias menores de funcionalidad en Stylo, las cuales se han implementado para corregir comportamientos no estándares de Gecko que habrían de desaparecer. Informaremos de esas diferencias en las páginas de referencia y en las notas de publicación según proceda (véanse {{anch("Notas sobre Quantum CSS")}}).</p>
+<p><a href="https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/">El nuevo procesador de CSS en paralelo de Firefox</a> ―también denominado <strong>Quantum CSS</strong> o <strong>Stylo</strong>― está activado de manera predeterminada en Firefox 57 para escritorio; las versiones para móviles darán el salto en el futuro. Los programadores no deberían notar ninguna diferencia importante, aparte de la amplia gama de mejoras de rendimiento. Sin embargo, existen algunas diferencias menores de funcionalidad en Stylo, las cuales se han implementado para corregir comportamientos no estándares de Gecko que habrían de desaparecer. Informaremos de esas diferencias en las páginas de referencia y en las notas de publicación según proceda (véanse <a href="#notas_sobre_quantum_css">Notas sobre Quantum CSS</a>).</p>
 
 <h2 id="Cambios_para_programadores_web">Cambios para programadores web</h2>
 
@@ -45,7 +45,7 @@ translation_of: Mozilla/Firefox/Releases/57
  <li>Los valores de degradados radiales tales como <code>radial-gradient(circle gold,red)</code> funcionan en el sistema de estilos de Gecko anterior, pero no debería por la coma faltante entre <code>circle</code> y <code>gold</code> ({{bug(1383323)}}). Quantum corrige este defecto.</li>
  <li>Cuando se da animación a un elemento ubicado fuera de la pantalla y se establece un tiempo de retardo, Gecko no actualiza la visualización correctamente en algunas plataformas, como Windows ({{bug(1383239)}}). Esto ha quedado corregido en Quantum.</li>
  <li>En Gecko, no es posible desplegar de manera predeterminada los elementos {{htmlelement("details")}} mediante el atributo <code>open</code> si tienen una propiedad {{cssxref("animation")}} activa ({{bug(1382124)}}). Quantum corrige este problema.</li>
- <li>En Gecko, los efectos {{cssxref("transition", "transitions")}} no funcionan si se transiciona desde un {{cssxref("text-shadow")}} con un color especificado a un <code>text-shadow</code> sin ningún color  ({{bug(726550)}}). Este comportamiento se ha corregido en Quantum.</li>
+ <li>En Gecko, los efectos {{cssxref("transition", "transitions")}} no funcionan si se transiciona desde un {{cssxref("text-shadow")}} con un color especificado a un <code>text-shadow</code> sin ningún color  ({{bug(726550)}}). Este comportamiento se ha corregido en Quantum.</li>
  <li>En Gecko, cancelar una animación de relleno (p. ej., con <code>animation-fill-mode: forwards</code> definido) puede desencadenar un conjunto de transiciones en el mismo elemento, aunque únicamente una vez (véase el {{bug(1192592)}} y <a href="https://bug1192592.bmoattachments.org/attachment.cgi?id=8843824">estas pruebas</a> para más información). Por lo general, las animaciones declaratorias no deberían desencadenar animaciones. Esto se ha corregido en Quantum.</li>
  <li>En Gecko, las animaciones que utilizan ems como unidad no reciben las modificaciones realizadas en {{cssxref("font-size")}} en el elemento padre del elemento animado, aunque deberían ({{bug(1254424)}}). Quantum CSS corrige esto.</li>
  <li>Gecko además maneja la herencia de <code>font-size</code> de manera diferente a la de Quantum CSS, por lo que para algunas configuraciones de idioma, los tamaños de letra heredados quedaban más pequeños de lo esperado (véase {{bug(1391341)}}). Quantum corrige esto.</li>
@@ -283,6 +283,6 @@ translation_of: Mozilla/Firefox/Releases/57
  </li>
 </ul>
 
-<h2 id="Versiones_anteriores"> Versiones anteriores</h2>
+<h2 id="Versiones_anteriores"> Versiones anteriores</h2>
 
 <p>{{Firefox_for_developers(56)}}</p>

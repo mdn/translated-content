@@ -16,7 +16,9 @@ La propriété en lecture seule **`NodeIterator.root`** représente le {{DOMxref
 
 ## Syntaxe
 
-    root = nodeIterator.root;
+```js
+root = nodeIterator.root;
+```
 
 ## Exemple
 
@@ -32,14 +34,11 @@ root = nodeIterator.root; // document.body dans ce cas
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                                       | Commentaire                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-nodeiterator-root', 'NodeIterator.root')}}                                         | {{Spec2('DOM WHATWG')}}             | Pas de changement de {{SpecName('DOM2 Traversal_Range')}}. |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-NodeIterator-root', 'NodeIterator.root')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeIterator.root")}}
+{{Compat}}
 
 ## Voir aussi
 

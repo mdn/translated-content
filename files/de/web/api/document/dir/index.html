@@ -5,7 +5,7 @@ translation_of: Web/API/Document/dir
 ---
 <p>{{ApiRef("")}}</p>
 
-<p>Die <code><strong>Document.dir</strong></code> Eigenschaft ist ein {{domxref("DOMString")}}, welcher die direktionaler Bedeutung von einem Text eines Dokuments repräsentiert. Entweder von links nach rechts (Standard) oder rechts nach links. Mögliche Werte sind <code>'rtl'</code> rechts nach links, und <code>'ltr',</code> links nach rechts.</p>
+<p>Die <code><strong>Document.dir</strong></code> Eigenschaft ist ein {{domxref("DOMString")}}, welcher die direktionaler Bedeutung von einem Text eines Dokuments repräsentiert. Entweder von links nach rechts (Standard) oder rechts nach links. Mögliche Werte sind <code>'rtl'</code> rechts nach links, und <code>'ltr',</code> links nach rechts.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -34,59 +34,9 @@ translation_of: Web/API/Document/dir
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basis Unterstützung</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basis Unterstützung</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Vor Firefox 23, hat die <code>Document.dir</code> Eigenschaft "ltr" wiedergegeben. unabhängig der Einstellung von dem dir-Attribut im Haupt-Element (root) {{htmlelement("html")}}. Und wenn eine Richtung im <code>&lt;html&gt;</code> gesetzt war, hatte die Veränderung der Sichtbarkeit keinen Effekt (obwohl der spätere Abruf des <code>Document.dir</code> wird behaupten, dass die Direktionalität geändert wurde). Wenn ein solches Attribut nicht im <code>&lt;html&gt;</code> gesetzt ist und die Eigenschaft geändert wurde, werden beide sichtbaren direktionale geändert und die <code>document.dir</code>  Eigenschaft wird die Änderung korrekt wiedergeben.</p>
+<p>[1] Vor Firefox 23, hat die <code>Document.dir</code> Eigenschaft "ltr" wiedergegeben. unabhängig der Einstellung von dem dir-Attribut im Haupt-Element (root) {{htmlelement("html")}}. Und wenn eine Richtung im <code>&lt;html&gt;</code> gesetzt war, hatte die Veränderung der Sichtbarkeit keinen Effekt (obwohl der spätere Abruf des <code>Document.dir</code> wird behaupten, dass die Direktionalität geändert wurde). Wenn ein solches Attribut nicht im <code>&lt;html&gt;</code> gesetzt ist und die Eigenschaft geändert wurde, werden beide sichtbaren direktionale geändert und die <code>document.dir</code>  Eigenschaft wird die Änderung korrekt wiedergeben.</p>
 
 <h2 id="Siehe_auch">Siehe auch</h2>
 

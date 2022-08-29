@@ -16,7 +16,9 @@ Ce sélecteur est destiné principalement à une utilisation par les développeu
 
 ## Syntaxe
 
-    :-moz-user-disabled
+```css
+:-moz-user-disabled
+```
 
 ## Exemples
 

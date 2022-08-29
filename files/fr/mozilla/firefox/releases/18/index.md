@@ -50,22 +50,22 @@ Firefox 18, basé sur Gecko 18.0, est sorti le 8 janvier 2013. Cette page résum
 
 ### Changements dans les interfaces
 
-- {{interface("nsIStreamListener")}}
+- `nsIStreamListener`
   - : Le 4ème paramètre (aOffset) de la méthode `onDataAvailable()` modifie unsigned long long. ({{bug("784912")}})
-- {{interface("nsIUploadChannel")}}
+- `nsIUploadChannel`
   - : `setUploadStream()` supporte plus de 2 Go de content-length. ({{bug("790617")}})
-- {{interface("nsIEditor")}}
-  - : `addEditorObserver()` a été supprimé, utilisez `setEditorObserver()` à la place, `removeEditorObserver()` ne prend plus le paramètre {{interface("nsIEditorObserver")}}. ({{bug("785091")}})
-- {{interface("nsIHttpProtocolHandler")}}
+- `nsIEditor`
+  - : `addEditorObserver()` a été supprimé, utilisez `setEditorObserver()` à la place, `removeEditorObserver()` ne prend plus le paramètre `nsIEditorObserver`. ({{bug("785091")}})
+- `nsIHttpProtocolHandler`
   - : Il n'y a plus de garantie que les observateurs `http-on-modify-request` soit appelés de manière synchrone au cours de `nsIChannel.asyncOpen().` Pour les observateurs qui ont besoin d'être appelés pendant `asyncOpen`(), le nouvel observateur `http-on-opening-request` a été ajouté. {{bug("800799")}}
-- {{interface("nsIProtocolProxyService")}}
+- `nsIProtocolProxyService`
   - : La méthode `resolve` a été retirée. Maintenant, seule la méthode `asyncResolve` peut être utilisée. Voir ({{bug("769764")}}).
 
 #### Interfaces supprimées
 
 Les interfaces suivantes ont été supprimées.
 
-- {{interface("nsIEditorObserver")}}
+- `nsIEditorObserver`
 
 ## Voir également
 

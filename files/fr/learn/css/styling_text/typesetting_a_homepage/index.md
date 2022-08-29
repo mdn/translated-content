@@ -99,11 +99,7 @@ Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvo
 
 {{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
-
-
 ## Dans ce module
-
-
 
 - [Initiation à la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte)
 - [Style de listes](/fr/docs/Learn/CSS/Styling_text/Styling_lists)

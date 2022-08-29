@@ -20,9 +20,9 @@ translation_of: Web/HTTP/Status
  <dd>이 코드는 클라이언트가 보낸 {{HTTPHeader("Upgrade")}} 요청 헤더에 대한 응답에 들어가며 서버에서 프로토콜을 변경할 것임을 알려줍니다.</dd>
  <dt>{{HTTPStatus(102, "102 Processing")}} ({{Glossary("WebDAV")}})</dt>
  <dd>이 코드는 서버가 요청을 수신하였으며 이를 처리하고 있지만, 아직 제대로 된 응답을 알려줄 수 없음을 알려줍니다.<br>
-  </dd>
+  </dd>
  <dt>{{HTTPStatus(103, "103 Early Hints")}}</dt>
- <dd>이 상태 코드는 주로 {{HTTPHeader("Link")}} 헤더와 함께 사용되어 서버가 응답을 준비하는 동안 사용자 에이전트가(user agent) 사전 로딩(<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content">preloading</a>)을 시작할 수 있도록 한다.</dd>
+ <dd>이 상태 코드는 주로 {{HTTPHeader("Link")}} 헤더와 함께 사용되어 서버가 응답을 준비하는 동안 사용자 에이전트가(user agent) 사전 로딩(<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content">preloading</a>)을 시작할 수 있도록 한다.</dd>
 </dl>
 
 <h2 id="성공_응답">성공 응답</h2>
@@ -34,7 +34,7 @@ translation_of: Web/HTTP/Status
  HEAD: 개체 해더가 메시지 바디에 있습니다.<br>
  PUT 또는 POST: 수행 결과에 대한 리소스가 메시지 바디에 전송되었습니다.<br>
  TRACE: 메시지 바디는 서버에서 수신한 요청 메시지를 포함하고 있습니다.<br>
-  </dd>
+  </dd>
 </dl>
 
 <dl>
@@ -62,7 +62,7 @@ translation_of: Web/HTTP/Status
 </dl>
 
 <p><br>
-  </p>
+  </p>
 
 <h2 id="리다이렉션_메시지">리다이렉션 메시지</h2>
 
@@ -87,8 +87,8 @@ translation_of: Web/HTTP/Status
  <dt>{{HTTPStatus(307, "307 Temporary Redirect")}}</dt>
  <dd>클라리언트가 요청한 리소스가 다른 URI에 있으며, 이전 요청과 동일한 메소드를 사용하여 요청해야할 때, 서버가 클라이언트에 이 응답을 직접 보냅니다. 이것은 <code>302 Found</code> HTTP 응답 코드와 동일한 의미를 가지고 있으며, 사용자 에이전트가 반드시 사용된 HTTP 메소드를 변경하지 말아야 하는 점만 다릅니다: 만약 첫 요청에 <code>POST</code>가 사용되었다면, 두번째 요청도 반드시 <code>POST</code>를 사용해야 합니다.</dd>
  <dt>{{HTTPStatus(308, "308 Permanent Redirect")}}</dt>
- <dd>이것은 리소스가 이제 HTTP 응답 헤더의 <code>Location:</code> 에 명시된 영구히 다른 URI에 위치하고 있음을 의미합니다. 이것은 <code>301 Moved Permanently</code> HTTP 응답 코드와 동일한  의미를 가지고 있으며, 사용자 에이전트가 반드시 HTTP 메소드를 변경하지 말아야 하는 점만 다릅니다: 만약 첫 요청에 <code>POST</code>가 사용되었다면, 두번째 요청도 반드시 <code>POST</code>를 사용해야 합니다.<br>
-  </dd>
+ <dd>이것은 리소스가 이제 HTTP 응답 헤더의 <code>Location:</code> 에 명시된 영구히 다른 URI에 위치하고 있음을 의미합니다. 이것은 <code>301 Moved Permanently</code> HTTP 응답 코드와 동일한  의미를 가지고 있으며, 사용자 에이전트가 반드시 HTTP 메소드를 변경하지 말아야 하는 점만 다릅니다: 만약 첫 요청에 <code>POST</code>가 사용되었다면, 두번째 요청도 반드시 <code>POST</code>를 사용해야 합니다.<br>
+  </dd>
 </dl>
 
 <h2 id="클라이언트_에러_응답">클라이언트 에러 응답</h2>
@@ -97,7 +97,7 @@ translation_of: Web/HTTP/Status
  <dt>{{HTTPStatus(400, "400 Bad Request")}}</dt>
  <dd>이 응답은 잘못된 문법으로 인하여 서버가 요청을 이해할 수 없음을 의미합니다.</dd>
  <dt>{{HTTPStatus(401, "401 Unauthorized")}}</dt>
- <dd>비록 HTTP 표준에서는 "미승인(unauthorized)"를 명확히 하고 있지만, 의미상 이 응답은 "비인증(unauthenticated)"을 의미합니다. 클라이언트는 요청한 응답을 받기 위해서는 반드시 스스로를 인증해야 합니다.</dd>
+ <dd>비록 HTTP 표준에서는 "미승인(unauthorized)"를 명확히 하고 있지만, 의미상 이 응답은 "비인증(unauthenticated)"을 의미합니다. 클라이언트는 요청한 응답을 받기 위해서는 반드시 스스로를 인증해야 합니다.</dd>
  <dt><code>402 Payment Required</code></dt>
  <dd>이 응답 코드는 나중에 사용될 것을 대비해 예약되었습니다. 첫 목표로는 디지털 결제 시스템에 사용하기 위하여 만들어졌지만 지금 사용되고 있지는 않습니다.</dd>
  <dt>{{HTTPStatus(403, "403 Forbidden")}}</dt>
@@ -121,7 +121,7 @@ translation_of: Web/HTTP/Status
  <dt>{{HTTPStatus(412, "412 Precondition Failed")}}</dt>
  <dd>클라이언트의 헤더에 있는 전제조건은 서버의 전제조건에 적절하지 않습니다.</dd>
  <dt>{{HTTPStatus(413, "413 Payload Too Large")}}</dt>
- <dd>요청 엔티티는 서버에서 정의한 한계보다 큽니다; 서버는 연결을 끊거나 혹은 <code>Retry-After</code> 헤더 필드로 돌려보낼 것이다.</dd>
+ <dd>요청 엔티티는 서버에서 정의한 한계보다 큽니다; 서버는 연결을 끊거나 혹은 <code>Retry-After</code> 헤더 필드로 돌려보낼 것이다.</dd>
  <dt>{{HTTPStatus(414, "414 URI Too Long")}}</dt>
  <dd>클라이언트가 요청한 URI는 서버에서 처리하지 않기로 한 길이보다 깁니다.</dd>
  <dt>{{HTTPStatus(415, "415 Unsupported Media Type")}}</dt>
@@ -129,11 +129,11 @@ translation_of: Web/HTTP/Status
  <dt>{{HTTPStatus(416, "416 Requested Range Not Satisfiable")}}</dt>
  <dd><code>Range</code> 헤더 필드에 요청한 지정 범위를 만족시킬 수 없습니다; 범위가 타겟 URI 데이터의 크기를 벗어났을 가능성이 있습니다.</dd>
  <dt>{{HTTPStatus(417, "417 Expectation Failed")}}</dt>
- <dd>이 응답 코드는 <code>Expect</code> 요청 헤더 필드로 요청한 예상이 서버에서는 적당하지 않음을 알려줍니다.</dd>
+ <dd>이 응답 코드는 <code>Expect</code> 요청 헤더 필드로 요청한 예상이 서버에서는 적당하지 않음을 알려줍니다.</dd>
  <dt>{{HTTPStatus(418, "418 I'm a teapot")}}</dt>
  <dd>서버는 커피를 찻 주전자에 끓이는 것을 거절합니다.</dd>
  <dt>{{HTTPStatus(421, "421 Misdirected Request")}}</dt>
- <dd>서버로 유도된 요청은 응답을 생성할 수 없습니다. 이것은 서버에서 요청 URI와 연결된 스킴과 권한을 구성하여 응답을 생성할 수 없을 때 보내집니다.</dd>
+ <dd>서버로 유도된 요청은 응답을 생성할 수 없습니다. 이것은 서버에서 요청 URI와 연결된 스킴과 권한을 구성하여 응답을 생성할 수 없을 때 보내집니다.</dd>
  <dt>{{HTTPStatus(422, "422 Unprocessable Entity")}} ({{Glossary("WebDAV")}})</dt>
  <dd>요청은 잘 만들어졌지만, 문법 오류로 인하여 따를 수 없습니다.</dd>
  <dt>{{HTTPStatus(423, "423 Locked")}} ({{Glossary("WebDAV")}})</dt>
@@ -164,13 +164,13 @@ translation_of: Web/HTTP/Status
  <dt>{{HTTPStatus(503, "503 Service Unavailable")}}</dt>
  <dd>서버가 요청을 처리할 준비가 되지 않았습니다. 일반적인 원인은 유지보수를 위해 작동이 중단되거나 과부하가 걸렸을 때 입니다. 이 응답과 함께 문제를 설명하는 사용자 친화적인 페이지가 전송되어야 한다는 점에 유의하십시오. 이 응답은 임시 조건에 사용되어야 하며, <code>Retry-After:</code> HTTP 헤더는 가능하면 서비스를 복구하기 전 예상 시간을 포함해야 합니다. 웹마스터는 또한 이러한 일시적인 조건 응답을 캐시하지 않아야 하므로 이 응답과 함께 전송되는 캐싱 관련 헤더에 대해서도 주의해야 합니다.</dd>
  <dt>{{HTTPStatus(504, "504 Gateway Timeout")}}</dt>
- <dd>이 오류 응답은 서버가 게이트웨이 역할을 하고 있으며 적시에 응답을 받을 수 없을 때 주어집니다.</dd>
+ <dd>이 오류 응답은 서버가 게이트웨이 역할을 하고 있으며 적시에 응답을 받을 수 없을 때 주어집니다.</dd>
  <dt>{{HTTPStatus(505, "505 HTTP Version Not Supported")}}</dt>
  <dd>요청에 사용된 HTTP 버전은 서버에서 지원되지 않습니다.</dd>
  <dt>{{HTTPStatus(506, "506 Variant Also Negotiates")}}</dt>
  <dd>서버에 내부 구성 오류가 있다. 즉, 요청을 위한 투명한 컨텐츠 협상이 순환 참조로 이어진다.</dd>
  <dt>{{HTTPStatus(507, "507 Insufficient Storage")}}</dt>
- <dd>서버에 내부 구성 오류가 있다. 즉, 선택한 가변 리소스는 투명한 콘텐츠 협상에 참여하도록 구성되므로 협상 프로세스의 적절한 종료 지점이 아닙니다.</dd>
+ <dd>서버에 내부 구성 오류가 있다. 즉, 선택한 가변 리소스는 투명한 콘텐츠 협상에 참여하도록 구성되므로 협상 프로세스의 적절한 종료 지점이 아닙니다.</dd>
  <dt>{{HTTPStatus(508, "508 Loop Detected")}} ({{Glossary("WebDAV")}})</dt>
  <dd>서버가 요청을 처리하는 동안 무한 루프를 감지했습니다.</dd>
  <dt>{{HTTPStatus(510, "510 Not Extended")}}</dt>

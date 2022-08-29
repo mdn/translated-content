@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 
 <dl>
  <dt><code>prop</code></dt>
- <dd>Uma {{jsxref("String")}} ou <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Symbol">symbol</a> indicando o nome da propriedade a ser verificada.</dd>
+ <dd>Uma {{jsxref("String")}} ou <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Symbol">symbol</a> indicando o nome da propriedade a ser verificada.</dd>
 </dl>
 
 <h3 id="Valor_de_Retorno">Valor de Retorno</h3>
@@ -28,11 +28,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 
 <p>Todo objeto descendente de <code>Object</code> herda o método <code>hasOwnProperty</code>. Este método pode ser usado para determinar se um objeto possui a propriedade especificada como propriedade direta do objeto.</p>
 
-<p>Diferentemente do operador {{jsxref("Operators/in", "in")}}, este método não checa a cadeia prototípica do objeto.</p>
+<p>Diferentemente do operador {{jsxref("Operators/in", "in")}}, este método não checa a cadeia prototípica do objeto.</p>
 
 <h2 id="Examples" name="Examples">Nota</h2>
 
-<p>o método <code>hasOwnProperty</code> retorna <code>true</code> mesmo se o valor da propridade em questão é <code>null</code> ou <code>undefined</code></p>
+<p>o método <code>hasOwnProperty</code> retorna <code>true</code> mesmo se o valor da propridade em questão é <code>null</code> ou <code>undefined</code></p>
 
 <pre class="syntaxbox"><code>o = new Object();
 o.propUm = null;
@@ -43,16 +43,16 @@ o.hasOwnProperty('propDois'); // retorna true</code>
 
 <h2 id="Examples" name="Examples">Exemplos</h2>
 
-<h3 id="Example_Using_hasOwnProperty_to_test_for_a_property.27s_existence" name="Example:_Using_hasOwnProperty_to_test_for_a_property.27s_existence">Usando <code>hasOwnProperty</code> para testar a existência de uma propriedade</h3>
+<h3 id="Example_Using_hasOwnProperty_to_test_for_a_property.27s_existence" name="Example:_Using_hasOwnProperty_to_test_for_a_property.27s_existence">Usando <code>hasOwnProperty</code> para testar a existência de uma propriedade</h3>
 
-<p>O seguinte exemplo determina se o objeto <code>o</code> possui uma propriedade com o nome <code>prop</code>:</p>
+<p>O seguinte exemplo determina se o objeto <code>o</code> possui uma propriedade com o nome <code>prop</code>:</p>
 
 <pre><code>o = new Object();
 o.hasOwnProperty('prop'); // retorna false
 o.prop = 'existe';
 o.hasOwnProperty('prop'); // retorna true</code></pre>
 
-<h3 id="Example_Direct_versus_inherited_properties" name="Example:_Direct_versus_inherited_properties">Propriedades Diretas vs Propriedades Herdadas</h3>
+<h3 id="Example_Direct_versus_inherited_properties" name="Example:_Direct_versus_inherited_properties">Propriedades Diretas vs Propriedades Herdadas</h3>
 
 <p>O seguinte exemplo diferencia entre propriedade diretas e propriedade herdadas da cadeia prototípica:</p>
 
@@ -62,11 +62,11 @@ o.hasOwnProperty('prop');             // Retorna true
 o.hasOwnProperty('toString');         // Retorna false
 o.hasOwnProperty('hasOwnProperty');   // Retorna false</pre>
 
-<h3 id="Example_Itarate_over_properties_not_considering_inherited_properties" name="Example:_Itarate_over_properties_not_considering_inherited_properties">Percorrer através das propriedades de um objeto</h3>
+<h3 id="Example_Itarate_over_properties_not_considering_inherited_properties" name="Example:_Itarate_over_properties_not_considering_inherited_properties">Percorrer através das propriedades de um objeto</h3>
 
 <p class="syntaxbox">O seguinte exemplo mostra como percorrer as propriedade de um objeto sem executar as propriedade herdadas.</p>
 
-<p class="syntaxbox">Vale observar que o loop {{jsxref("Statements/for...in", "for...in")}} percorre somente itens enumeráveis. Entretanto, o método hasOwnProperty também funciona com propriedades não enumeráveis.</p>
+<p class="syntaxbox">Vale observar que o loop {{jsxref("Statements/for...in", "for...in")}} percorre somente itens enumeráveis. Entretanto, o método hasOwnProperty também funciona com propriedades não enumeráveis.</p>
 
 <pre class="brush: js">var buz = {
     fog: 'stack'
@@ -132,55 +132,7 @@ Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Object.hasOwnProperty")}}
 
 <h2 id="See_Also" name="See_Also">Veja Também</h2>
 

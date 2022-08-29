@@ -22,7 +22,9 @@ En général, l'URL de base est simplement l'emplacement du document, mais elle 
 
 ## Syntaxe
 
-    var baseURI = node.baseURI;
+```js
+var baseURI = node.baseURI;
+```
 
 - `baseURI` est une {{ domxref("DOMString") }} (_chaîne de caractères_) représentant l'URL de base du {{domxref("Node")}} spécifié. Elle peut être `null` s'il est impossible d'obtenir une URI absolue.
 - `node.baseURI` est en lecture seule.
@@ -49,12 +51,12 @@ Si le document contient des attributs [`xml:base`](/fr/docs/Introduction_%C3%A0_
 
 Vous pouvez utiliser `{{domxref("element")}}.baseURI` pour obtenir l'URL de base d'un élément.
 
-## Spécification
+## Spécifications
 
-- {{spec("http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-baseURI","DOM Level 3 Core: baseURI","REC")}}
+{{Specifications}}
 
 ## Voir aussi
 
 - l'élément {{HTMLElement("base")}} (HTML)
 - l'attribut [`xml:base`](/fr/docs/Introduction_%C3%A0_XML/xml:base) (documents XML).
-- {{domxref("Node.baseURIObject")}} - une variante de cette API pour les add-ons Mozilla et le code interne. Renvoie l'URL de base en tant que {{interface("nsIURI")}}.
+- {{domxref("Node.baseURIObject")}} - une variante de cette API pour les add-ons Mozilla et le code interne. Renvoie l'URL de base en tant que `nsIURI`.

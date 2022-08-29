@@ -45,7 +45,7 @@ La façon dont le texte saisi est traité dépend du navigateur utilisé. Sur le
 
 La valeur de l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value) d'un tel élément contient une chaîne de caractères ([`DOMString`](/fr/docs/Web/API/DOMString)) dont la valeur est le texte qui est en cours de saisie dans le contrôle. Si l'utilisatrice ou l'utilisateur n'a pas encore saisi d'information, la valeur est une chaîne vide. Si l'attribut booléen `required` est utilisé, le mot de passe doit contenir une valeur non vide afin que le formulaire puisse être envoyé.
 
-Si l'attribut [`pattern`](/fr/docs/Web/HTML/Element/Input#attr-pattern) est indiqué, le contenu du contrôle doit respecter l'expression rationnelle indiquée par l'attribut. Pour plus d'informations, voir la section Validation ci-après.
+Si l'attribut [`pattern`](/fr/docs/Web/HTML/Element/Input#attr-pattern) est indiqué, le contenu du contrôle doit respecter l'expression rationnelle indiquée par l'attribut. Pour plus d'informations, voir la section [Validation](#validation) ci-après.
 
 > **Note :** Il n'est pas possible d'utiliser les caractères de fin de ligne (<i lang="en">line feed</i>) (code U+000A) et de retour chariot (<i lang="en">carriage return</i>) (code U+000D) dans la valeur d'un champ `password`. Lorsqu'on saisit la valeur, ces caractères sont retirés si besoin.
 

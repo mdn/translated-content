@@ -18,5 +18,5 @@ Brotli est compatible avec la plupart des navigateurs modernes, mais vous pouvez
 
 - [brotli.org](https://brotli.org/)
 - [Dépôt Github Brotli](https://github.com/google/brotli)
-- [Brotli sur Wikipedia](https://en.wikipedia.org/wiki/Brotli)
+- [Brotli sur Wikipédia](https://en.wikipedia.org/wiki/Brotli)
 - [Brotli sur Caniuse](https://caniuse.com/#feat=brotli)

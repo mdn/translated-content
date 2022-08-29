@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <code><strong>Object.create()</strong></code> cria um novo objeto, utilizando um outro objecto existente como protótipo para o novo objeto a ser criado.</p>
+<p>O método <code><strong>Object.create()</strong></code> cria um novo objeto, utilizando um outro objecto existente como protótipo para o novo objeto a ser criado.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -15,14 +15,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 
 <dl>
  <dt><code>proto</code></dt>
- <dd>O objeto que deve ser o protótipo do objeto recém-criado.</dd>
+ <dd>O objeto que deve ser o protótipo do objeto recém-criado.</dd>
  <dt><code>propertiesObject</code></dt>
- <dd>Opcional. Se especificado e não {{jsxref("undefined")}}, um objeto cuja as propriedades próprias enumeráveis (isto é, aquelas propriedades definidas sobre si mesmo, e <em>não</em> propriedades enumeráveis ao longo da sua cadeia protótipa) especificam os nomes das propriedades a serem adicionadas ao objeto recém-criado, com os nomes das propriedades correspondentes. Essas propriedades correspondem ao segundo argumento de {{jsxref("Object.defineProperties()")}}.</dd>
+ <dd>Opcional. Se especificado e não {{jsxref("undefined")}}, um objeto cuja as propriedades próprias enumeráveis (isto é, aquelas propriedades definidas sobre si mesmo, e <em>não</em> propriedades enumeráveis ao longo da sua cadeia protótipa) especificam os nomes das propriedades a serem adicionadas ao objeto recém-criado, com os nomes das propriedades correspondentes. Essas propriedades correspondem ao segundo argumento de {{jsxref("Object.defineProperties()")}}.</dd>
 </dl>
 
 <h3 id="Retorno">Retorno</h3>
 
-<p>Um novo objeto com o protótipo de objeto e propriedades especificadas.</p>
+<p>Um novo objeto com o protótipo de objeto e propriedades especificadas.</p>
 
 <h3 id="Exceções">Exceções</h3>
 
@@ -104,8 +104,8 @@ o = Object.create(Object.prototype, {
     get: function() { return 10; },
     set: function(value) { console.log('Setting `o.bar` to', value); }
 /* com os ES5 Accessors nosso código pode ser escrito como:
-    get function() { return 10; },
-    set function(value) { console.log('setting `o.bar` to', value); } */
+    get() { return 10; },
+    set(value) { console.log('setting `o.bar` to', value); } */
   }
 });
 
@@ -151,7 +151,7 @@ o2 = Object.create({}, {
 
 <p>Este polyfill cobre o caso de uso principal que é a crição de um novo objeto em que o protótipo foi escolhido mas não leva em consideração o segundo argumento.</p>
 
-<p>Note que, enquanto a configuração  <code>null</code> as <code>[[Prototype]]</code> é suportada no ES5 <code>Object.create</code>, este polyfill não suporta devido à limitação inerente em versões do ECMAScript inferiores a 5.</p>
+<p>Note que, enquanto a configuração  <code>null</code> as <code>[[Prototype]]</code> é suportada no ES5 <code>Object.create</code>, este polyfill não suporta devido à limitação inerente em versões do ECMAScript inferiores a 5.</p>
 
 <pre class="brush: js">if (typeof Object.create != 'function') {
   Object.create = (function() {
@@ -188,67 +188,19 @@ o2 = Object.create({}, {
   <tr>
    <td>{{SpecName('ES6', '#sec-object.create', 'Object.create')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-object.create', 'Object.create')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidade</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatChrome("5")}}</td>
-   <td>{{CompatGeckoDesktop("2")}}</td>
-   <td>{{CompatIE("9")}}</td>
-   <td>{{CompatOpera("11.60")}}</td>
-   <td>{{CompatSafari("5")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidade</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("2")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatOperaMobile("11.5")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Object.create")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

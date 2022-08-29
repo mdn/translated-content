@@ -39,11 +39,11 @@ translation_of: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
       uniform mat4 uMVMatrix;
       uniform mat4 uPMatrix;
 
-      varying lowp vec4 vColor;
+      varying lowp vec4 vColor;
 
       void main(void) {
         gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
-        vColor = aVertexColor;
+        vColor = aVertexColor;
       }
     &lt;/script&gt;
 </pre>
@@ -55,10 +55,10 @@ translation_of: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 <p>Чтобы напомнить, как фрагментный шейдер выглядел ранее, ниже приведён его код:</p>
 
 <pre class="brush: html">    &lt;script id="shader-fs" type="x-shader/x-fragment"&gt;
-      void main(void) {
-        gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
-      }
-    &lt;/script&gt;
+      void main(void) {
+        gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+      }
+    &lt;/script&gt;
 </pre>
 
 <p>Для того, чтобы подобрать интерполируемый цвет каждому пикселю, нам просто необходимо изменить его, получив значение из переменной <code>vColor</code>:</p>

@@ -35,7 +35,7 @@ _Cette interface hérite également des propriétés de son parent {{domxref("Ev
 
 - {{domxref("UIEvent.detail")}}{{readonlyinline}}
   - : Retourne un `long` qui donne quelques détails sur l'évènement, dépendant du type d'évènement.
-- {{domxref("UIEvent.isChar")}} {{obsolete_inline}} {{readonlyinline}}
+- {{domxref("UIEvent.isChar")}} {{deprecated_inline}} {{readonlyinline}}
   - : Retourne un {{jsxref("Boolean")}} indiquant si l'évènement a produit un caractère clé ou non.
 - {{domxref("UIEvent.layerX")}} {{Non-standard_inline}} {{readonlyinline}}
   - : Retourne la coordonnée horizontale de l'évènement par rapport à la couche actuelle.

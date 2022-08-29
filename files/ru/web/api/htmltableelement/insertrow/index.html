@@ -15,18 +15,18 @@ translation_of: Web/API/HTMLTableElement/insertRow
 </div>
 </div>
 
-<p>Метод <strong><code>HTMLTableElement.insertRow()</code></strong><code>добавляет новую строку в таблицу и возвращает на неё ссылку.</code></p>
+<p>Метод <strong><code>HTMLTableElement.insertRow()</code></strong><code>добавляет новую строку в таблицу и возвращает на неё ссылку.</code></p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
 <pre class="syntaxbox">var <em>row</em> = <em>HTMLTableElement</em>.insertRow(<em>optional index = -1</em>);</pre>
 
 <ul>
- <li><a href="/en-US/docs/DOM/HTMLTableElement"><code>HTMLTableElement</code></a> — ссылка на <em>HTML table</em> элемент.</li>
+ <li><a href="/en-US/docs/DOM/HTMLTableElement"><code>HTMLTableElement</code></a> — ссылка на <em>HTML table</em> элемент.</li>
  <li><code>index</code> — индекс новой строки</li>
- <li><code>row</code> присваивается ссылка на новую строку. Ссылка на <a href="/en-US/docs/Web/API/HTMLTableRowElement">HTMLTableRowElement</a>.<br>
-  Если значение <code>index</code> равно -1 или количеству строк, то строка добавляется как последняя. Если значение <code>index</code> превышает количество строк, <em>выбрасывается</em> исключение IndexSizeError. Если аргумент index пропущен, он равен значению по умолчанию — -1.</li>
- <li>Если таблица содержит несколько элементов <code>tbody</code>, то, по умолчанию, новая строка будет добавлена в последний элемент <code>tbody</code>. Добавить строку в определённый элемент <code>tbody</code>:<br>
+ <li><code>row</code> присваивается ссылка на новую строку. Ссылка на <a href="/en-US/docs/Web/API/HTMLTableRowElement">HTMLTableRowElement</a>.<br>
+  Если значение <code>index</code> равно -1 или количеству строк, то строка добавляется как последняя. Если значение <code>index</code> превышает количество строк, <em>выбрасывается</em> исключение IndexSizeError. Если аргумент index пропущен, он равен значению по умолчанию — -1.</li>
+ <li>Если таблица содержит несколько элементов <code>tbody</code>, то, по умолчанию, новая строка будет добавлена в последний элемент <code>tbody</code>. Добавить строку в определённый элемент <code>tbody</code>:<br>
   <code>var <em>specific_tbody</em>=document.getElementById(<em>tbody_id</em>);<br>
   var <em>row</em>=specific_tbody.insertRow(<em>index</em>)</code></li>
 </ul>
@@ -62,7 +62,7 @@ addRow('TableA');
 
 <p>Чтобы быть валидным HTML документом, элемент TR должен содержать хотя бы один TD элемент.</p>
 
-<p>Обратите внимание, что <code>insertRow</code> добавляет строку непосредственно в таблицу и возвращает ссылку на эту строку. Строку не нужно добавлять отдельно, как в случае с методом<code><a href="/en-US/docs/DOM/document.createElement">document.createElement()</a>,</code> для создания нового TR элемента.</p>
+<p>Обратите внимание, что <code>insertRow</code> добавляет строку непосредственно в таблицу и возвращает ссылку на эту строку. Строку не нужно добавлять отдельно, как в случае с методом<code><a href="/en-US/docs/DOM/document.createElement">document.createElement()</a>,</code> для создания нового TR элемента.</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 

@@ -18,11 +18,15 @@ La méthode **`setHours()`** définit les heures pour une date donnée, selon l'
 
 ## Syntaxe
 
-    dateObj.setHours(valeurHeures[, valeurMinutes[, valeurSecondes[, valeurMs]]])
+```js
+dateObj.setHours(valeurHeures[, valeurMinutes[, valeurSecondes[, valeurMs]]])
+```
 
 ### Versions antérieures à JavaScript 1.3
 
-    dateObj.setHours(valeurHeures)
+```js
+dateObj.setHours(valeurHeures)
+```
 
 ### Paramètres
 

@@ -11,8 +11,6 @@ translation_of: Web/SVG/Element/altGlyph
 
 L'élément `altGlyph` permet la selection des glyphes utilisées pour restituer un caractère de donnée.
 
-
-
 ## Contexte d'utilisation
 
 {{svginfo}}
@@ -45,7 +43,7 @@ L'élément `altGlyph` permet la selection des glyphes utilisées pour restituer
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGAltGlyphElement`](/fr/docs/Web/API/SVGAltGlyphElement "en/DOM/SVGAltGlyphElement").
+Cet élément implémente l'interface [`SVGAltGlyphElement`](/fr/docs/Web/API/SVGAltGlyphElement).
 
 ## Spécifications
 

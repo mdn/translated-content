@@ -9,7 +9,9 @@ La méthode **`item()`** de l'interface {{domxref("DOMTokenList")}} renvoie un �
 
 ## Syntaxe
 
-    tokenList.item(index);
+```js
+tokenList.item(index);
+```
 
 ### Paramètres
 
@@ -45,10 +47,8 @@ La sortie ressemble à ceci :
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG','#dom-domtokenlist-item','item()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMTokenList.item")}}
+{{Compat}}

@@ -20,7 +20,9 @@ Dans les navigateurs anciens, comme spécifié dans les anciennes version des sp
 
 ## Syntaxe
 
-    node = nodeIterator.nextNode();
+```js
+node = nodeIterator.nextNode();
+```
 
 ## Exemple
 
@@ -36,14 +38,11 @@ currentNode = nodeIterator.nextNode(); // renvoie le noeud suivant.
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                                       | Commentaire                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-nodeiterator-nextnode', 'NodeIterator.nextNode')}}                                         | {{Spec2('DOM WHATWG')}}             | Comme `detach()` est maintenant une méthode non opérante, cette méthode ne peut plus rien lancer. |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-NodeIterator-nextNode', 'NodeIterator.nextNode')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                                                              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeIterator.nextNode")}}
+{{Compat}}
 
 ## Voir aussi
 

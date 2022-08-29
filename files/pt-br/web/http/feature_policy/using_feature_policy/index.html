@@ -21,7 +21,7 @@ translation_of: Web/HTTP/Feature_Policy/Using_Feature_Policy
 <p>For each policy-controlled feature, the browser maintains a list of origins for which the feature is enabled, known as an allowlist. If you do not specify a policy for a feature, then a default allowlist will be used. The default allowlist is specific to each feature.</p>
 
 <div class="note">
-<p>The <code>Feature-Policy</code> header has now been renamed to <code>Permissions-Policy</code> in the spec, and this article will eventually be updated to reflect that change.</p>
+<p>The <code>Feature-Policy</code> header has now been renamed to <code>Permissions-Policy</code> in the spec, and this article will eventually be updated to reflect that change.</p>
 </div>
 
 <h2 id="Escrevendo_a_política">Escrevendo a política</h2>
@@ -113,7 +113,7 @@ Feature-Policy: camera *;
 
 <p>All iframes inherit the policy of their parent page. If the iframe has an <code>allow</code> attribute, the policies of the parent page and the <code>allow</code> attribute are combined, using the most restrictive subset. For an iframe to have a feature enabled, the origin must be in the allowlist for both the parent page and the allow attribute.</p>
 
-<p>Disabling a feature in a policy is a one-way toggle. If a feature has been disabled for a child frame by its parent frame, the child cannot re-enable it, and neither can any of the child's descendants.</p>
+<p>Disabling a feature in a policy is a one-way toggle. If a feature has been disabled for a child frame by its parent frame, the child cannot re-enable it, and neither can any of the child's descendants.</p>
 
 <h2 id="Enforcing_best_practices_for_good_user_experiences">Enforcing best practices for good user experiences</h2>
 

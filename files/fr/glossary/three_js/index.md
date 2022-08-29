@@ -16,5 +16,5 @@ three.js est un moteur {{Glossary("WebGL")}} en {{Glossary("JavaScript")}} capab
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Three.js")}} sur Wikipédia
+- [Three.js](https://fr.wikipedia.org/wiki/Three.js) sur Wikipédia
 - [Site web officiel de three.js](http://threejs.org/)

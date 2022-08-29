@@ -16,28 +16,28 @@ translation_of: Web/API/Service_Worker_API
 <div>
 <p>{{ServiceWorkerSidebar}}</p>
 
-<p class="summary">Service worker фактически выполняет роль прокси-сервера, находящегося между веб-приложением и браузером, а также сетью (если доступна). Он позволяет (кроме прочего) описывать корректное поведение веб-приложения в режиме офлайн, перехватывать запросы сети и принимать соответствующие меры, основываясь на доступности сети, и обновлять данные, находящиеся на сервере при доступе к нему. Также они имеют доступ к push-уведомлениям и API для фоновой синхронизации.</p>
+<p class="summary">Service worker фактически выполняет роль прокси-сервера, находящегося между веб-приложением и браузером, а также сетью (если доступна). Он позволяет (кроме прочего) описывать корректное поведение веб-приложения в режиме офлайн, перехватывать запросы сети и принимать соответствующие меры, основываясь на доступности сети, и обновлять данные, находящиеся на сервере при доступе к нему. Также они имеют доступ к push-уведомлениям и API для фоновой синхронизации.</p>
 </div>
 
 <h2 id="Концепция_и_использование_Service_Worker">Концепция и использование Service Worker</h2>
 
-<p>Service worker — это событийно-управляемый <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">worker</a>, регистрируемый на уровне источника и пути. Он представляет собой JavaScript-файл, который может контролировать веб-страницу/сайт, с которым он ассоциируется, перехватывать и модифицировать запросы навигации и ресурсов, очень гибко кешировать ресурсы, для того чтобы предоставить вам полный контроль над тем, как приложение ведёт себя в определённых ситуациях (например, когда сеть не доступна).</p>
+<p>Service worker — это событийно-управляемый <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">worker</a>, регистрируемый на уровне источника и пути. Он представляет собой JavaScript-файл, который может контролировать веб-страницу/сайт, с которым он ассоциируется, перехватывать и модифицировать запросы навигации и ресурсов, очень гибко кешировать ресурсы, для того чтобы предоставить вам полный контроль над тем, как приложение ведёт себя в определённых ситуациях (например, когда сеть не доступна).</p>
 
-<p>Service worker запускается в контексте воркеров, поэтому он не имеет доступа к DOM и работает в потоке отдельном от основного потока JavaScript, управляющего вашим приложением, а следовательно — не блокирует его. Он призван быть полностью асинхронным; как следствие, синхронные API, такие как <a href="/en-US/docs/Web/API/XMLHttpRequest">XHR</a> и <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage">localStorage</a>, в Service Worker'е использовать нельзя.</p>
+<p>Service worker запускается в контексте воркеров, поэтому он не имеет доступа к DOM и работает в потоке отдельном от основного потока JavaScript, управляющего вашим приложением, а следовательно — не блокирует его. Он призван быть полностью асинхронным; как следствие, синхронные API, такие как <a href="/en-US/docs/Web/API/XMLHttpRequest">XHR</a> и <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage">localStorage</a>, в Service Worker'е использовать нельзя.</p>
 
-<p>Из соображений безопасности service worker'ы работают только по HTTPS (либо, в целях разработки, на <code>localhost</code>). Давать сторонним людям возможность изменять сетевые запросы крайне опасно. Кроме того, Service Worker API недоступен в <a href="https://support.mozilla.org/ru/kb/privatnyj-prosmotr-prosmotr-veb-stranic-bez-sohran">режиме приватного просмотра</a> браузера Firefox.</p>
+<p>Из соображений безопасности service worker'ы работают только по HTTPS (либо, в целях разработки, на <code>localhost</code>). Давать сторонним людям возможность изменять сетевые запросы крайне опасно. Кроме того, Service Worker API недоступен в <a href="https://support.mozilla.org/ru/kb/privatnyj-prosmotr-prosmotr-veb-stranic-bez-sohran">режиме приватного просмотра</a> браузера Firefox.</p>
 
 <div class="note">
-<p><strong>Примечание</strong>: Service Worker'ы выигрывают у предыдущих решений, таких как <a href="http://alistapart.com/article/application-cache-is-a-douchebag">AppCache,</a> потому что не делают предположений о том, что вы пытаетесь сделать, и не ломаются, в случаях если их предположения не оказываются верными; вы имеете полный контроль над всем.</p>
+<p><strong>Примечание</strong>: Service Worker'ы выигрывают у предыдущих решений, таких как <a href="http://alistapart.com/article/application-cache-is-a-douchebag">AppCache,</a> потому что не делают предположений о том, что вы пытаетесь сделать, и не ломаются, в случаях если их предположения не оказываются верными; вы имеете полный контроль над всем.</p>
 </div>
 
 <div class="note">
-<p><strong>Примечание</strong>: Service worker'ы широко используют промисы (<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a>). В общем случае они будут ждать ответа, после которого вернутся с успешным или неудачным завершением. Архитектура на промисах для этого подходит идеально.</p>
+<p><strong>Примечание</strong>: Service worker'ы широко используют промисы (<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a>). В общем случае они будут ждать ответа, после которого вернутся с успешным или неудачным завершением. Архитектура на промисах для этого подходит идеально.</p>
 </div>
 
 <h3 id="Регистрация">Регистрация</h3>
 
-<p>Service worker сначала регистрируется с помощью метода {{domxref("ServiceWorkerContainer.register()")}}. В случае успешной регистрации, service worker будет загружен клиентом и попытается установиться/активироваться (см. ниже) для всех URL, доступных пользователю, или только для указанного вами подмножества.</p>
+<p>Service worker сначала регистрируется с помощью метода {{domxref("ServiceWorkerContainer.register()")}}. В случае успешной регистрации, service worker будет загружен клиентом и попытается установиться/активироваться (см. ниже) для всех URL, доступных пользователю, или только для указанного вами подмножества.</p>
 
 <h3 id="Загрузка_установка_и_активация">Загрузка, установка и активация</h3>
 
@@ -49,43 +49,43 @@ translation_of: Web/API/Service_Worker_API
  <li>Активация</li>
 </ol>
 
-<p>Когда пользователь впервые запросит доступ к сайту/странице, контролируемой Service Worker'ом, тот моментально будет загружен .</p>
+<p>Когда пользователь впервые запросит доступ к сайту/странице, контролируемой Service Worker'ом, тот моментально будет загружен .</p>
 
-<p>После этого он будет загружаться каждые 24 часа или около того. Он <em>может</em> загружаться и чаще, но он <strong>должен</strong> загружаться как минимум каждые 24 часа, чтобы предотвратить использование старой версии кода клиентом.</p>
+<p>После этого он будет загружаться каждые 24 часа или около того. Он <em>может</em> загружаться и чаще, но он <strong>должен</strong> загружаться как минимум каждые 24 часа, чтобы предотвратить использование старой версии кода клиентом.</p>
 
-<p>Установка производится в случае если загружаемый файл признается новым — либо отличным от уже установленного service worker (определяется через побайтовое сравнение), либо первым устанавливаемым service воркером для этой страницы/сайта.</p>
+<p>Установка производится в случае если загружаемый файл признается новым — либо отличным от уже установленного service worker (определяется через побайтовое сравнение), либо первым устанавливаемым service воркером для этой страницы/сайта.</p>
 
 <p>Если это первый раз, когда service worker оказался доступен, будет проведена установка, а после успешного её завершения — активация.</p>
 
-<p>Если service worker уже существует, новая версия устанавливается в фоновом режиме, но не активируется — worker переходит в состояние <em>в ожидании</em>. Новая версия активируется только тогда, когда больше не останется загруженных страниц, использующих старый service worker. Как только это случится, новый service worker активируется (станет <em>активным воркером</em>). Активация может произойти раньше при использовании {{domxref ("ServiceWorkerGlobalScope.skipWaiting()")}}, а существующие страницы могут быть переведены под контроль активного воркера с помощью {{domxref ("Clients.claim()")}}.</p>
+<p>Если service worker уже существует, новая версия устанавливается в фоновом режиме, но не активируется — worker переходит в состояние <em>в ожидании</em>. Новая версия активируется только тогда, когда больше не останется загруженных страниц, использующих старый service worker. Как только это случится, новый service worker активируется (станет <em>активным воркером</em>). Активация может произойти раньше при использовании {{domxref ("ServiceWorkerGlobalScope.skipWaiting()")}}, а существующие страницы могут быть переведены под контроль активного воркера с помощью {{domxref ("Clients.claim()")}}.</p>
 
-<p>Вы можете подписаться на {{domxref("InstallEvent")}}; для того чтобы подготовить ваш service worker к использованию, к примеру, чтобы создать кеш при помощи встроенного API хранилища и разместить внутри него данные, которые вам необходимы в вашем приложении для работы офлайн.</p>
+<p>Вы можете подписаться на {{domxref("InstallEvent")}}; для того чтобы подготовить ваш service worker к использованию, к примеру, чтобы создать кеш при помощи встроенного API хранилища и разместить внутри него данные, которые вам необходимы в вашем приложении для работы офлайн.</p>
 
-<p>Есть также событие <code>activate</code>. Момент, когда это событие наступает, является удачным для очистки старого кеша и всего, что ассоциировалось с предыдущей версией вашего service worker'а.</p>
+<p>Есть также событие <code>activate</code>. Момент, когда это событие наступает, является удачным для очистки старого кеша и всего, что ассоциировалось с предыдущей версией вашего service worker'а.</p>
 
-<p>Service worker может отвечать на запросы, используя событие {{domxref("FetchEvent")}}. Вы можете изменять ответ на эти запросы на своё усмотрение используя метод {{domxref("FetchEvent.respondWith") }}.</p>
+<p>Service worker может отвечать на запросы, используя событие {{domxref("FetchEvent")}}. Вы можете изменять ответ на эти запросы на своё усмотрение используя метод {{domxref("FetchEvent.respondWith") }}.</p>
 
 <div class="note">
-<p><strong>Примечание</strong>: Так как выполнение <code>oninstall</code>/<code>onactivate</code> может занять время, спецификация service worker предоставляет метод <code>waitUntil</code>, который возвращает промис, когда вызывается <code>oninstall</code> или <code>onactivate</code>. Функциональные события не отправляются service worker, пока промис не завершится успешно.</p>
+<p><strong>Примечание</strong>: Так как выполнение <code>oninstall</code>/<code>onactivate</code> может занять время, спецификация service worker предоставляет метод <code>waitUntil</code>, который возвращает промис, когда вызывается <code>oninstall</code> или <code>onactivate</code>. Функциональные события не отправляются service worker, пока промис не завершится успешно.</p>
 </div>
 
-<p>Для полного руководства по созданию рабочего примера читайте <a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Использование Service Worker</a>.</p>
+<p>Для полного руководства по созданию рабочего примера читайте <a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Использование Service Worker</a>.</p>
 
 <h2 id="Другие_варианты_использования">Другие варианты использования</h2>
 
-<p>Service worker'ы также предназначены для таких вещей, как:</p>
+<p>Service worker'ы также предназначены для таких вещей, как:</p>
 
 <ul>
  <li>Фоновая синхронизация данных</li>
  <li>Ответ на запросы от других источников</li>
  <li>Получение централизованного обновления для данных использующих тяжёлые вычисления, таких как геолокация или гироскоп, для того чтобы несколько страниц могли использовать одни и те же данные</li>
- <li>Компиляция и управление зависимостями на клиентской стороне для CoffeeScript, less, CJS/AMD модулей и т.д. для целей разработки</li>
- <li>Подписка на фоновые сервисы</li>
- <li>Кастомная шаблонизация, основанная на определённых паттернах URL</li>
+ <li>Компиляция и управление зависимостями на клиентской стороне для CoffeeScript, less, CJS/AMD модулей и т.д. для целей разработки</li>
+ <li>Подписка на фоновые сервисы</li>
+ <li>Кастомная шаблонизация, основанная на определённых паттернах URL</li>
  <li>Улучшение производительности, с помощью предварительной загрузки ресурсов, которые понадобятся пользователю в ближайшем будущем, например несколько последующих картинок в фотоальбоме.</li>
 </ul>
 
-<p>В будущем service worker'ы будут способны на многие другие полезные вещи для веб-платформ, приближая их к нативным приложениям. Примечательно, что другие спецификации могут и будут использовать контекст service worker, к примеру для:</p>
+<p>В будущем service worker'ы будут способны на многие другие полезные вещи для веб-платформ, приближая их к нативным приложениям. Примечательно, что другие спецификации могут и будут использовать контекст service worker, к примеру для:</p>
 
 <ul>
  <li><a href="https://github.com/slightlyoff/BackgroundSync">Фоновой синхронизации</a>: запускать service worker даже когда ни одного пользователя нет на сайте, чтобы обновить кеш.</li>
@@ -98,25 +98,25 @@ translation_of: Web/API/Service_Worker_API
 
 <dl>
  <dt>{{domxref("Cache") }}</dt>
- <dd>Представляет хранилище для объектов {{domxref("Request")}} / {{domxref("Response")}}, которые кешируются, как часть жизненного цикла {{domxref("ServiceWorker")}}.</dd>
+ <dd>Представляет хранилище для объектов {{domxref("Request")}} / {{domxref("Response")}}, которые кешируются, как часть жизненного цикла {{domxref("ServiceWorker")}}.</dd>
  <dt>{{domxref("CacheStorage") }}</dt>
- <dd>Представляет хранилище для объектов {{domxref("Cache")}}. Он создаёт главную директорию для всех именованных кешей, к которым {{domxref("ServiceWorker")}} имеет доступ, и поддерживает отображение строковых имён соответствующего объекта {{domxref("Cache")}}.</dd>
+ <dd>Представляет хранилище для объектов {{domxref("Cache")}}. Он создаёт главную директорию для всех именованных кешей, к которым {{domxref("ServiceWorker")}} имеет доступ, и поддерживает отображение строковых имён соответствующего объекта {{domxref("Cache")}}.</dd>
  <dt>{{domxref("Client") }}</dt>
  <dd>Представляет область видимости клиента service worker. Это либо документ в контексте браузера, либо {{domxref("SharedWorker")}}, который контролируется активным воркером.</dd>
  <dt>{{domxref("Clients") }}</dt>
- <dd>Представляет контейнер для списка объектов {{domxref("Client")}}; основной способ получить доступ к клиентам активного service worker'а текущего источника.</dd>
+ <dd>Представляет контейнер для списка объектов {{domxref("Client")}}; основной способ получить доступ к клиентам активного service worker'а текущего источника.</dd>
  <dt>{{domxref("ExtendableEvent") }}</dt>
  <dd>Расширяет жизненный цикл событий <code>install</code> и <code>activate</code>, отправляемых {{domxref("ServiceWorkerGlobalScope")}} как часть жизненного цикла service worker'а. Это гарантирует, что любое функциональное событие (как {{domxref("FetchEvent")}}) не отправится в {{domxref("ServiceWorker")}}, пока он не обновит шаблон данных, удалив устаревшие данные кеша.</dd>
  <dt>{{domxref("ExtendableMessageEvent") }}</dt>
  <dd>Объект событий {{event("message_(ServiceWorker)","message")}} запускается в service worker (когда канал сообщений в {{domxref("ServiceWorkerGlobalScope")}} получил новое сообщение из другого контекста) — расширяет жизненный цикл таких событий.</dd>
  <dt>{{domxref("FetchEvent") }}</dt>
- <dd>Параметр, передающийся в обработчик {{domxref("ServiceWorkerGlobalScope.onfetch")}}, <code>FetchEvent</code> представляет собой событие получения, которое отправляется в  {{domxref("ServiceWorkerGlobalScope")}} {{domxref("ServiceWorker")}}. Он содержит информацию о запросе и результирующем ответе и обеспечивает {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}} метод, который позволяет отправить произвольный ответ обратно контролируемой странице.</dd>
+ <dd>Параметр, передающийся в обработчик {{domxref("ServiceWorkerGlobalScope.onfetch")}}, <code>FetchEvent</code> представляет собой событие получения, которое отправляется в  {{domxref("ServiceWorkerGlobalScope")}} {{domxref("ServiceWorker")}}. Он содержит информацию о запросе и результирующем ответе и обеспечивает {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}} метод, который позволяет отправить произвольный ответ обратно контролируемой странице.</dd>
  <dt>{{domxref("InstallEvent") }}</dt>
- <dd>Параметр, передающийся в  {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}} обработчик, <code>InstallEvent</code> представляет собой событие установки, которое отправляется {{domxref("ServiceWorkerGlobalScope")}} {{domxref("ServiceWorker")}}. Как наследник {{domxref("ExtendableEvent")}}, он гарантирует, что функциональные события, такие как {{domxref("FetchEvent")}}, не будут отправлены во время установки. </dd>
+ <dd>Параметр, передающийся в  {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}} обработчик, <code>InstallEvent</code> представляет собой событие установки, которое отправляется {{domxref("ServiceWorkerGlobalScope")}} {{domxref("ServiceWorker")}}. Как наследник {{domxref("ExtendableEvent")}}, он гарантирует, что функциональные события, такие как {{domxref("FetchEvent")}}, не будут отправлены во время установки. </dd>
  <dt>{{domxref("Navigator.serviceWorker") }}</dt>
- <dd>Возвращает объект {{domxref("ServiceWorkerContainer")}}, который обеспечивает доступ к регистрации, удалению, обновлению и коммуникации с объектами {{domxref("ServiceWorker")}}<a href="https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window">ассоциируемого документа</a>.</dd>
+ <dd>Возвращает объект {{domxref("ServiceWorkerContainer")}}, который обеспечивает доступ к регистрации, удалению, обновлению и коммуникации с объектами {{domxref("ServiceWorker")}}<a href="https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window">ассоциируемого документа</a>.</dd>
  <dt>{{domxref("NotificationEvent") }}</dt>
- <dd>Параметр, передаваемый в обработчик {{domxref("ServiceWorkerGlobalScope.onnotificationclick", "onnotificationclick")}}, интерфейс <code>NotificationEvent</code> представляет событие уведомления на клик, которое отправляется в {{domxref("ServiceWorkerGlobalScope")}} service worker'а.</dd>
+ <dd>Параметр, передаваемый в обработчик {{domxref("ServiceWorkerGlobalScope.onnotificationclick", "onnotificationclick")}}, интерфейс <code>NotificationEvent</code> представляет событие уведомления на клик, которое отправляется в {{domxref("ServiceWorkerGlobalScope")}} service worker'а.</dd>
  <dt>{{domxref("ServiceWorker") }}</dt>
  <dd>Представляет service worker. Несколько контекстов браузера (страницы, worker'ы, и т.д.) могут быть ассоциированы с одним объектом <code>ServiceWorker</code>.</dd>
  <dt>{{domxref("ServiceWorkerContainer") }}</dt>
@@ -124,12 +124,12 @@ translation_of: Web/API/Service_Worker_API
  <dt>{{domxref("ServiceWorkerGlobalScope") }}</dt>
  <dd>Представляет глобальный контекст исполнения service worker'а.</dd>
  <dt>{{domxref("ServiceWorkerMessageEvent")}}</dt>
- <dd>Содержит информацию о событии, отправленном целевому  {{domxref("ServiceWorkerContainer")}}. </dd>
+ <dd>Содержит информацию о событии, отправленном целевому  {{domxref("ServiceWorkerContainer")}}. </dd>
  <dt>{{domxref("ServiceWorkerRegistration") }}</dt>
  <dd>Представляет регистрацию service worker'а.</dd>
  <dt>{{domxref("SyncEvent")}} {{non-standard_inline}}</dt>
  <dd>
- <p>SyncEvent представляет синхронное действие, которое отправляется {{domxref("ServiceWorkerGlobalScope")}} ServiceWorker. </p>
+ <p>SyncEvent представляет синхронное действие, которое отправляется {{domxref("ServiceWorkerGlobalScope")}} ServiceWorker. </p>
  </dd>
  <dt>{{domxref("SyncManager")}} {{non-standard_inline}}</dt>
  <dd>Обеспечивает интерфейс регистрации и перечисления синхронных регистрации.</dd>
@@ -143,7 +143,7 @@ translation_of: Web/API/Service_Worker_API
  <tbody>
   <tr>
    <th scope="col">Спецификации</th>
-   <th scope="col">       Статус</th>
+   <th scope="col">       Статус</th>
    <th scope="col">Комментарий</th>
   </tr>
   <tr>
@@ -266,15 +266,15 @@ translation_of: Web/API/Service_Worker_API
 </table>
 </div>
 
-<p>[1] Service workers (и <a href="/en-US/docs/Web/API/Push_API">Push</a>) были отключены в  <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 Extended Support Release</a> (ESR.)</p>
+<p>[1] Service workers (и <a href="/en-US/docs/Web/API/Push_API">Push</a>) были отключены в  <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 Extended Support Release</a> (ESR.)</p>
 
 <h2 id="Смотрите_также">Смотрите также:</h2>
 
 <ul>
- <li>Кулинарная книга <a href="https://serviceworke.rs">ServiceWorker </a></li>
- <li>Использование<a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers"> Service Workers</a></li>
- <li>Основные примеры кода <a href="https://github.com/mdn/sw-test">Service workers</a></li>
- <li>Готов ли <a href="https://jakearchibald.github.io/isserviceworkerready/">ServiceWorker?</a></li>
+ <li>Кулинарная книга <a href="https://serviceworke.rs">ServiceWorker </a></li>
+ <li>Использование<a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers"> Service Workers</a></li>
+ <li>Основные примеры кода <a href="https://github.com/mdn/sw-test">Service workers</a></li>
+ <li>Готов ли <a href="https://jakearchibald.github.io/isserviceworkerready/">ServiceWorker?</a></li>
  <li>Перспектива</li>
  <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
 </ul>

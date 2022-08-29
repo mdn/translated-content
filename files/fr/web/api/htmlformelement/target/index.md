@@ -9,12 +9,16 @@ La propriété **`HTMLFormElement.target`** représente la cible de l'action (i.
 
 ## Syntaxe
 
-    string = form.target
-    form.target = string
+```js
+string = form.target
+form.target = string
+```
 
 ## Exemple
 
-    myForm.target = document.frames[1].name;
+```js
+myForm.target = document.frames[1].name;
+```
 
 ## Spécification
 

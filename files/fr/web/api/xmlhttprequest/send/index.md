@@ -25,7 +25,9 @@ Si aucun "header"{{HTTPHeader("Accept")}} n'a été paramétré dans {{domxref("
 
 ## Syntaxe
 
-    XMLHttpRequest.send(body)
+```js
+XMLHttpRequest.send(body)
+```
 
 ### Paramètres
 
@@ -101,4 +103,4 @@ xhr.send("foo=bar&lorem=ipsum");
 ## Voir aussi
 
 - [L'utilisation de XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest)
-- [HTML dans XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [HTML dans XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)

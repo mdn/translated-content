@@ -29,9 +29,9 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
   - : Une liste d'une ou plusieurs chaînes de caractères, séparées par des virgules. Cette liste indique un ensemble d'images qui peuvent être utilisées comme sources par le navigateur. Chaque chaîne de caractères se compose :
 
-    1.  D'une URL pointant vers l'image,
-    2.  D'un descripteur de largeur, c'est un entier positif, directement suivi par `'w'`. La valeur par défaut, si ce descripteur est absent, correspond à l'infini positif.
-    3.  D'un descripteur de densité de pixel, c'est un nombre décimal positif, directement suivi par `'x'`. La valeur par défaut, si ce descripteur est absent, est `1x`.
+    1. D'une URL pointant vers l'image,
+    2. D'un descripteur de largeur, c'est un entier positif, directement suivi par `'w'`. La valeur par défaut, si ce descripteur est absent, correspond à l'infini positif.
+    3. D'un descripteur de densité de pixel, c'est un nombre décimal positif, directement suivi par `'x'`. La valeur par défaut, si ce descripteur est absent, est `1x`.
 
     Pour être valide, chaque chaîne de caractères doit comporter au moins un descripteur de largeur ou un descripteur de densité de pixel. Dans cette liste, il ne peut y avoir qu'une seule chaîne pour un même couple de descripteurs largeur/pixels. Le navigateur choisira la meilleure image parmi celles fournies dans la liste.
     L'attribut `srcset` n'aura un effet que lorsque l'élément {{HTMLElement("source")}} est le fils direct de l'élément {{HTMLElement("picture")}}.

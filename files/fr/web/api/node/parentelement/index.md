@@ -13,7 +13,9 @@ translation_of: Web/API/Node/parentElement
 
 ## Syntaxe
 
-    parentElement = node.parentElement
+```js
+parentElement = node.parentElement
+```
 
 **`parentElement`** référence l'élément parent d'un nœud (**`node`**). C'est toujours un objet {{domxref("Element")}} du DOM ou `null`.
 
@@ -25,15 +27,13 @@ if (node.parentElement) {
 }
 ```
 
-## Compatibilité des navigateurs
-
-Sur quelques navigateurs, la propriété `parentElement` est seulement définie sur les noeuds qui sont eux-mêmes des {{domxref("Element")}}. En particulier, elle n'est pas définie sur les noeuds texte.
-
-{{Compat("api.Node.parentElement")}}
-
 ## Spécifications
 
-- {{spec("http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#parent-element", "DOM Level 4: Node.parentElement", "WD")}}
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

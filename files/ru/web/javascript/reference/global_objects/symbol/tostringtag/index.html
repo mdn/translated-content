@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 ---
 <div>{{JSRef}}</div>
 
-<div>Известный символ <strong><code>Symbol.toStringTag</code></strong> - это строковое значение свойства, которое используется при создании строки описания объекта по умолчанию. Доступ к нему осуществляется через {{jsxref("Object.prototype.toString()")}} метод.</div>
+<div>Известный символ <strong><code>Symbol.toStringTag</code></strong> - это строковое значение свойства, которое используется при создании строки описания объекта по умолчанию. Доступ к нему осуществляется через {{jsxref("Object.prototype.toString()")}} метод.</div>
 
 
 
@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 
 <h2 id="Описание">Описание</h2>
 
-<p>Многие Javascript типы имеют теги по умолчанию: </p>
+<p>Многие Javascript типы имеют теги по умолчанию: </p>
 
 <pre class="brush: js">Object.prototype.toString.call('foo');     // "[object String]"
 Object.prototype.toString.call([1, 2]);    // "[object Array]"
@@ -36,14 +36,14 @@ Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
 // ... and more
 </pre>
 
-<p>При создании собственного класса JavaScript по умолчанию использует тег "Object":</p>
+<p>При создании собственного класса JavaScript по умолчанию использует тег "Object":</p>
 
 <pre class="brush: js">class ValidatorClass {}
 
 Object.prototype.toString.call(new ValidatorClass()); // "[object Object]"
 </pre>
 
-<p>С помощью <code>toStringTag</code> можно установить свой собственный тег:</p>
+<p>С помощью <code>toStringTag</code> можно установить свой собственный тег:</p>
 
 <pre class="brush: js">class ValidatorClass {
   get [Symbol.toStringTag]() {

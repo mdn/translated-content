@@ -16,13 +16,15 @@ Libère la capture de la souris si elle est actuellement activée (_bouton gauch
 
 ## Syntaxe
 
-    document.releaseCapture()
+```js
+document.releaseCapture()
+```
 
 Une fois la capture de la souris relâchée, les événements de souris ne seront plus dirigés vers l'élément sur lequel la capture est activée.
 
 ## Exemple
 
-Voir l'[exemple](/en-US/docs/Web/API/element.setCapture#Example) pour {{domxref("element.setCapture()")}}.
+Voir l'[exemple](/fr/docs/Web/API/element.setCapture#Example) pour {{domxref("element.setCapture()")}}.
 
 ## Spécifications
 

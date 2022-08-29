@@ -12,7 +12,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::part
 ---
-{{CSSRef}}{{Draft}}{{SeeCompatTable}}
+{{CSSRef}}{{SeeCompatTable}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::part`** représente n’importe quel élément dans un [arbre fantôme](/fr/docs/Web/Web_Components/Using_shadow_DOM) qui a un attribut {{HTMLAttrxRef("part")}} correspondant.
 

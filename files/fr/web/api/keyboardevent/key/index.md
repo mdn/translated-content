@@ -29,9 +29,9 @@ Voir une liste complète des [valeurs de touches](/fr/docs/Web/API/KeyboardEvent
 
 Les événements `KeyboardEvents` sont déclenchés selon une séquence prédéterminée, et la compréhension de ces éléments contribuera à comprendre la valeur de la propriété `key` pour un événement `KeyboardEvent` particulier. Pour une touche donnée, la séquence de KeyboardEvents est la suivante, en supposant que {{domxref ("Event.preventDefault")}} n'est pas appelée :
 
-1.  Un événement {{domxref("Element/keydown_event", "keydown")}} (_touche abaissée_) est d'abord déclenché. Si la touche est maintenue enfoncée et que la touche est une touche de caractère, l'événement continue d'être émis dans un intervalle dépendant de l'implémentation de la plateforme, et la propriété en lecture seule {{domxref ("KeyboardEvent.repeat")}} est définie sur `true` (_vrai_).
-2.  Si la touche est une touche de caractère qui entraînerait l'insertion d'un caractère dans {{HTMLElement ("entrée")}}, {{HTMLElement ("textarea")}} ou un élément dont {{domxref ("HTMLElement. contentEditable ")}} a la valeur `true`, les types d'événements {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} et {{domxref("HTMLElement/input_event", "input")}} sont déclenchés dans cet ordre. Notez que d'autres implémentations peuvent déclencher l'événement {{event ("keypress")}} si elles sont prises en charge. Les événements seront déclenchés à plusieurs reprises tant que la touche est maintenue enfoncée.
-3.  Un évènement {{domxref("Element/keyup_event", "keyup")}} est déclenché une fois la touche relachée. Ceci complète le processus.
+1. Un événement {{domxref("Element/keydown_event", "keydown")}} (_touche abaissée_) est d'abord déclenché. Si la touche est maintenue enfoncée et que la touche est une touche de caractère, l'événement continue d'être émis dans un intervalle dépendant de l'implémentation de la plateforme, et la propriété en lecture seule {{domxref ("KeyboardEvent.repeat")}} est définie sur `true` (_vrai_).
+2. Si la touche est une touche de caractère qui entraînerait l'insertion d'un caractère dans {{HTMLElement ("entrée")}}, {{HTMLElement ("textarea")}} ou un élément dont {{domxref ("HTMLElement. contentEditable ")}} a la valeur `true`, les types d'événements {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} et {{domxref("HTMLElement/input_event", "input")}} sont déclenchés dans cet ordre. Notez que d'autres implémentations peuvent déclencher l'événement {{event ("keypress")}} si elles sont prises en charge. Les événements seront déclenchés à plusieurs reprises tant que la touche est maintenue enfoncée.
+3. Un évènement {{domxref("Element/keyup_event", "keyup")}} est déclenché une fois la touche relachée. Ceci complète le processus.
 
 Dans les étapes 1 et 3, l'attribut `KeyboardEent.key` est défini et est déclaré à une valeur appropriée en fonction des règles définies.
 
@@ -41,7 +41,7 @@ Considérez la séquence d'événements générée lorsque nous interagissons av
 
 Essayez d'expérimenter en utilisant les deux cas de test suivants :
 
-1.  Maintenez la touche
+1. Maintenez la touche
 
     <kbd>shift</kbd>
 
@@ -55,7 +55,7 @@ Essayez d'expérimenter en utilisant les deux cas de test suivants :
 
     .
 
-2.  Maintenez la touche `shift` enfoncée, puis appuyez sur
+2. Maintenez la touche `shift` enfoncée, puis appuyez sur
 
     <kbd>2</kbd>
 
@@ -219,12 +219,10 @@ window.addEventListener("keydown", function (event) {
 }, true);
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire                                           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------- |
-| {{SpecName('DOM3 Events', '#widl-KeyboardEvent-key', 'KeyboardEvent.key')}} | {{Spec2('DOM3 Events')}} | Définition initiale, incluant les valeurs de touches. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.KeyboardEvent.key")}}
+{{Compat}}

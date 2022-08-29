@@ -7,7 +7,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData
 
 <p>Habilita extensões a limpar os dados que estão acumulados enquando o usuário navega.</p>
 
-<p>Na API <code>browsingData</code>, os dados de navegação são divididos em tipos:</p>
+<p>Na API <code>browsingData</code>, os dados de navegação são divididos em tipos:</p>
 
 <ul>
  <li>cache do browser</li>
@@ -20,18 +20,18 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData
  <li>senhas salvas</li>
 </ul>
 
-<p>Você pode usar a função {{WebExtAPIRef("browsingData.remove()")}} para remover qualquer combinação desses tipos. Há também funções específicas para remover cada tipo de data em particular, como por exemplo {{WebExtAPIRef("browsingData.removePasswords()", "removePasswords()")}}, {{WebExtAPIRef("browsingData.removeHistory()", "removeHistory()")}} e assim por diante.</p>
+<p>Você pode usar a função {{WebExtAPIRef("browsingData.remove()")}} para remover qualquer combinação desses tipos. Há também funções específicas para remover cada tipo de data em particular, como por exemplo {{WebExtAPIRef("browsingData.removePasswords()", "removePasswords()")}}, {{WebExtAPIRef("browsingData.removeHistory()", "removeHistory()")}} e assim por diante.</p>
 
-<p>Todas funções <code>browsingData.remove[X]()</code> pegam o objeto {{WebExtAPIRef("browsingData.RemovalOptions")}} que você usa para controlar outros dois aspectos da remoção de dados:</p>
+<p>Todas funções <code>browsingData.remove[X]()</code> pegam o objeto {{WebExtAPIRef("browsingData.RemovalOptions")}} que você usa para controlar outros dois aspectos da remoção de dados:</p>
 
 <ul>
  <li>quão antigos são os dados para a remoção</li>
  <li>se é para remover dados de páginas normais, ou também para hospedar aplicativos web ou add-ons. Observe que esta opção ainda não é suportada no Firefox.</li>
 </ul>
 
-<p>Finalmente, a API {{WebExtAPIRef("browsingData.settings()")}} fornece uma função que retorna o atual valor das configurações da funcionalidade "Limpar Histórico".</p>
+<p>Finalmente, a API {{WebExtAPIRef("browsingData.settings()")}} fornece uma função que retorna o atual valor das configurações da funcionalidade "Limpar Histórico".</p>
 
-<p>Para usar esta API você deve ter a <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">permissão de API</a> "browsingData".</p>
+<p>Para usar esta API você deve ter a <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">permissão de API</a> "browsingData".</p>
 
 <h2 id="Tipos">Tipos</h2>
 
@@ -50,7 +50,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData
  <dt>{{WebExtAPIRef("browsingData.removeCache()")}}</dt>
  <dd>Limpa o cache do navegador.</dd>
  <dt>{{WebExtAPIRef("browsingData.removeCookies()")}}</dt>
- <dd>Remove os cookies.</dd>
+ <dd>Remove os cookies.</dd>
  <dt>{{WebExtAPIRef("browsingData.removeDownloads()")}}</dt>
  <dd>Remove a lista de arquivos baixados.</dd>
  <dt>{{WebExtAPIRef("browsingData.removeFormData()")}}</dt>
@@ -58,7 +58,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData
  <dt>{{WebExtAPIRef("browsingData.removeHistory()")}}</dt>
  <dd>Limpa o histórico do navegador.</dd>
  <dt>{{WebExtAPIRef("browsingData.removeLocalStorage()")}}</dt>
- <dd>Limpa qualquer <a href="/en-US/docs/Web/API/Window/localStorage">local storage</a> criado por websites.</dd>
+ <dd>Limpa qualquer <a href="/en-US/docs/Web/API/Window/localStorage">local storage</a> criado por websites.</dd>
  <dt>{{WebExtAPIRef("browsingData.removePasswords()")}}</dt>
  <dd>Limpa passwords salvos.</dd>
  <dt>{{WebExtAPIRef("browsingData.removePluginData()")}}</dt>
@@ -72,16 +72,16 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData
 <p>{{Compat("webextensions.api.browsingData", 2)}}</p>
 
 <div class="note hidden">
-<p>A sessão "incompatibilidades do Chrome" está inclusa pela <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> usando o <a href="/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a> macro.</p>
+<p>A sessão "incompatibilidades do Chrome" está inclusa pela <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> usando o <a href="/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a> macro.</p>
 
-<p>Se precisar atualizar este conteúdo, edite <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>, então recarregue esta página para visualizar suas alterações.</p>
+<p>Se precisar atualizar este conteúdo, edite <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>, então recarregue esta página para visualizar suas alterações.</p>
 </div>
 
 <p>{{WebExtExamples("h2")}}</p>
 
 <div class="note"><strong>Agradecimentos</strong>
 
-<p>Esta API é baseada na API <a href="https://developer.chrome.com/extensions/browsingData"><code>chrome.browsingData</code></a> do Chromium.</p>
+<p>Esta API é baseada na API <a href="https://developer.chrome.com/extensions/browsingData"><code>chrome.browsingData</code></a> do Chromium.</p>
 
 <p>Os dados de compatibilidade do Microsoft Edge compatibility são fornecidos pela Microsoft Corporation e aqui estão inclusos sob a Creative Commons Attribution 3.0 United States License.</p>
 </div>

@@ -97,7 +97,7 @@ Uma cor castanho claro.&lt;/textarea&gt;
 &lt;h2&gt;Saída&lt;/h2&gt;
 &lt;div class="output"&gt;&lt;/div&gt;
 &lt;div class="controls"&gt;
-  &lt;input id="reset" type="button" value="Limpar" /&gt;
+  &lt;input id="reset" type="button" value="Limpar" /&gt;
   &lt;input id="solution" type="button" value="Mostrar solução" /&gt;
 &lt;/div&gt;
 </pre>
@@ -146,9 +146,9 @@ window.addEventListener("load", drawOutput);
 
 <p>{{ EmbedLiveSample('Playable_code', 700, 500) }}</p>
 
-<h2 id="Cotações">Cotações</h2>
+<h2 id="citações_1">Citações</h2>
 
-<p>HTML também possui recursos disponíveis para marcação de cotações. Qual elemento você pode usar? Depende se está marcando um bloco ou uma cotação em linha.</p>
+<p>HTML também possui recursos disponíveis para marcação de citações. Qual elemento você pode usar? Depende se está marcando um bloco ou uma citação em linha.</p>
 
 <h3 id="Blockquotes">Blockquotes</h3>
 
@@ -157,7 +157,7 @@ window.addEventListener("load", drawOutput);
 <pre class="brush: html notranslate">&lt;p&gt;The &lt;strong&gt;HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt; Element&lt;/strong&gt; (or &lt;em&gt;HTML Block
 Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended quotation.&lt;/p&gt;</pre>
 
-<p>Para transformar isso em uma cotação em bloco, faríamos assim:</p>
+<p>Para transformar isso em uma citação em bloco, faríamos assim:</p>
 
 <pre class="brush: html notranslate">&lt;blockquote cite="/en-US/docs/Web/HTML/Element/blockquote"&gt;
   &lt;p&gt;The &lt;strong&gt;HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt; Element&lt;/strong&gt; (or &lt;em&gt;HTML Block
@@ -167,23 +167,23 @@ Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended qu
 <p>O estilo padrão do navegador renderiza isso como um parágrafo recuado, como um indicador de que é uma citação. O MDN faz isso, mas também, adiciona um estilo extra:</p>
 
 <blockquote cite="/en-US/docs/Web/HTML/Element/blockquote">
-<p>O <strong>Elemento HTML <code>&lt;blockquote&gt;</code> </strong>(or <em>HTML Block Quotation Element</em>) indica que o texto em anexo é uma cotação estendida.</p>
+<p>O <strong>Elemento HTML <code>&lt;blockquote&gt;</code> </strong>(or <em>HTML Block Quotation Element</em>) indica que o texto em anexo é uma citação estendida.</p>
 </blockquote>
 
-<h3 id="Cotações_em_linha">Cotações em linha</h3>
+<h3 id="Citações_em_linha">Citações em linha</h3>
 
-<p>As cotações embutidas funcionam exatamente da mesma maneira, exceto pelo uso do elemento {{htmlelement("q")}}. Por exemplo, o bit de marcação abaixo contém uma cotação da página MDN &lt;q&gt;:</p>
+<p>As citações embutidas funcionam exatamente da mesma maneira, exceto pelo uso do elemento {{htmlelement("q")}}. Por exemplo, o bit de marcação abaixo contém uma citação da página MDN &lt;q&gt;:</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;The quote element — &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; — is &lt;q cite="/en-US/docs/Web/HTML/Element/q"&gt;intended
 for short quotations that don't require paragraph breaks.&lt;/q&gt;&lt;/p&gt;</pre>
 
-<p>O estilo padrão do navegador renderiza isso como texto normal entre aspas para indicar uma cotação, assim:</p>
+<p>O estilo padrão do navegador renderiza isso como texto normal entre aspas para indicar uma citação, assim:</p>
 
-<p>O elemento de cotação — <code>&lt;q&gt;</code> — é "destinado a citações curtas que não exigem quebras de parágrafo".</p>
+<p>O elemento de citação — <code>&lt;q&gt;</code> — é "destinado a citações curtas que não exigem quebras de parágrafo".</p>
 
-<h3 id="Citações">Citações</h3>
+<h3 id="citações_2">Citações</h3>
 
-<p>O conteúdo do atributo {{htmlattrxref("cite","blockquote")}} parece útil, mas, infelizmente, navegadores, leitores de tela etc. não fazem muito uso dele. Não há como fazer com que o navegador exiba o conteúdo de <code>cite</code>, sem escrever sua própria solução usando JavaScript ou CSS. Se você deseja disponibilizar a fonte da cotação na página, uma maneira melhor de marcá-la é colocar o elemento {{htmlelement("cite")}} próximo ao elemento quote. Isso realmente tem o objetivo de conter o nome da fonte da citação — ou seja, o nome do livro ou o nome da pessoa que disse a citação — mas não há razão para que você não possa vincular o texto dentro de <code>&lt;cite&gt;</code> à citação fonte de alguma forma:</p>
+<p>O conteúdo do atributo {{htmlattrxref("cite","blockquote")}} parece útil, mas, infelizmente, navegadores, leitores de tela etc. não fazem muito uso dele. Não há como fazer com que o navegador exiba o conteúdo de <code>cite</code>, sem escrever sua própria solução usando JavaScript ou CSS. Se você deseja disponibilizar a fonte da citação na página, uma maneira melhor de marcá-la é colocar o elemento {{htmlelement("cite")}} próximo ao elemento quote. Isso realmente tem o objetivo de conter o nome da fonte da citação — ou seja, o nome do livro ou o nome da pessoa que disse a citação — mas não há razão para que você não possa vincular o texto dentro de <code>&lt;cite&gt;</code> à citação fonte de alguma forma:</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;According to the &lt;a href="/en-US/docs/Web/HTML/Element/blockquote"&gt;
 &lt;cite&gt;MDN blockquote page&lt;/cite&gt;&lt;/a&gt;:
@@ -198,19 +198,19 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt;&lt;/p&gt;</p
 for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a href="/en-US/docs/Web/HTML/Element/q"&gt;
 &lt;cite&gt;MDN q page&lt;/cite&gt;&lt;/a&gt;.&lt;/p&gt;</pre>
 
-<p>As citações são estilizadas em fonte itálica por padrão. Você pode ver esse código funcionando em nosso exemplo <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/quotations.html">quotations.html</a>.</p>
+<p>As citações são estilizadas em fonte itálica por padrão. Você pode ver esse código funcionando em nosso exemplo <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/quotations.html">quotations.html</a>.</p>
 
 <h3 id="Aprendizado_ativo_quem_disse_isso">Aprendizado ativo: quem disse isso?</h3>
 
 <p>Hora de outro exemplo de aprendizado ativo! Neste exemplo, gostaríamos que você:</p>
 
 <ol>
- <li>Transforme o parágrafo do meio em uma citação em bloco, que inclui um atributo <code>cite</code>.</li>
- <li>Transforme parte do terceiro parágrafo em uma cotação embutida, que inclui um atributo de <code>cite</code>.</li>
- <li>Inclua um elemento <code>&lt;cite&gt;</code> para cada link.</li>
+ <li>Transforme o parágrafo do meio em uma citação em bloco, que inclui um atributo <code>cite</code>.</li>
+ <li>Transforme parte do terceiro parágrafo em uma citação embutida, que inclui um atributo de <code>cite</code>.</li>
+ <li>Inclua um elemento <code>&lt;cite&gt;</code> para cada link.</li>
 </ol>
 
-<p>Pesquise on-line para encontrar fontes de cotação apropriadas.</p>
+<p>Pesquise on-line para encontrar fontes de citação apropriadas.</p>
 
 <p>Se você cometer um erro, sempre poderá redefini-lo usando o botão 'Limpar'. Se você realmente ficar atolado, pressione o botão 'Mostrar solução' para ver a resposta.</p>
 
@@ -227,7 +227,7 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
 &lt;h2&gt;Saída&lt;/h2&gt;
 &lt;div class="output"&gt;&lt;/div&gt;
 &lt;div class="controls"&gt;
-  &lt;input id="reset" type="button" value="Limpar" /&gt;
+  &lt;input id="reset" type="button" value="Limpar" /&gt;
   &lt;input id="solution" type="button" value="Mostrar solução" /&gt;
 &lt;/div&gt;
 </pre>
@@ -278,7 +278,7 @@ window.addEventListener("load", drawOutput);
 
 <h2 id="Abreviações">Abreviações</h2>
 
-<p>Outro elemento bastante comum que você encontrará ao olhar na Web é o {{htmlelement("abbr")}} — usado para contornar uma abreviação ou sigla e fornecer uma expansão completa do termo (incluído em um atributo {{htmlattrxref("title")}}.) Vejamos alguns exemplos</p>
+<p>Outro elemento bastante comum que você encontrará ao olhar na Web é o {{htmlelement("abbr")}} — usado para contornar uma abreviação ou sigla e fornecer uma expansão completa do termo (incluído em um atributo {{htmlattrxref("title")}}.) Vejamos alguns exemplos</p>
 
 <pre class="notranslate">&lt;p&gt;Usamos &lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt; para estruturar nossos documentos da web.&lt;/p&gt;
 
@@ -306,7 +306,7 @@ window.addEventListener("load", drawOutput);
 &lt;h2&gt;Saída&lt;/h2&gt;
 &lt;div class="output"&gt;&lt;/div&gt;
 &lt;div class="controls"&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
   &lt;input id="solution" type="button" value="Show solution" /&gt;
 &lt;/div&gt;
 </pre>
@@ -397,7 +397,7 @@ window.addEventListener("load", drawOutput);
  <li>{{htmlelement("samp")}}: Para marcar a saída de um programa de computador.</li>
 </ul>
 
-<p>Vejamos alguns exemplos. Você deve tentar brincar com eles (tente pegar uma cópia do nosso arquivo de exemplo <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/other-semantics.html">other-semantics.html</a>):</p>
+<p>Vejamos alguns exemplos. Você deve tentar brincar com eles (tente pegar uma cópia do nosso arquivo de exemplo <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/other-semantics.html">other-semantics.html</a>):</p>
 
 <pre class="brush: html notranslate">&lt;pre&gt;&lt;code&gt;var para = document.querySelector('p');
 

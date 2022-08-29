@@ -27,6 +27,6 @@ Depuis 10 ans, la communauté MDN documente le Web. Qu'il s'agisse de corriger q
 
 ## Subnav
 
-1.  [MDN a 10 ans](/fr/docs/MDN_a_dix_ans/)
-2.  [L'histoire de MDN](/fr/docs/MDN_a_dix_ans/Histoire_MDN)
-3.  [Contribuer à MDN](/en-US/docs/MDN_at_ten/Contributing_to_MDN)
+1. [MDN a 10 ans](/fr/docs/MDN_a_dix_ans/)
+2. [L'histoire de MDN](/fr/docs/MDN_a_dix_ans/Histoire_MDN)
+3. [Contribuer à MDN](/fr/docs/MDN_at_ten/Contributing_to_MDN)

@@ -5,7 +5,7 @@ translation_of: Web/CSS/isolation
 ---
 <div>{{CSSRef}}</div>
 
-<p>A propriedade CSS <strong><code>isolation</code></strong> define se o elemento deve criar um novo {{glossary("stacking context")}}.</p>
+<p>A propriedade CSS <strong><code>isolation</code></strong> define se o elemento deve criar um novo {{glossary("stacking context")}}.</p>
 
 <pre class="brush:css no-line-numbers">/* Keyword values */
 isolation: auto;
@@ -17,13 +17,13 @@ isolation: initial;
 isolation: unset;
 </pre>
 
-<p>É especialmente útil em conjunto com {{cssxref("background-blend-mode")}} que mistura os fundos em um dado stacking context: ela permite isolar grupos de elementos dos seus fundos e misturar as suas cores.</p>
+<p>É especialmente útil em conjunto com {{cssxref("background-blend-mode")}} que mistura os fundos em um dado stacking context: ela permite isolar grupos de elementos dos seus fundos e misturar as suas cores.</p>
 
 <p>{{cssinfo}}</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
-<p>Uma das palavras-chave listadas abaixo.</p>
+<p>Uma das palavras-chave listadas abaixo.</p>
 
 <h3 id="Valores">Valores</h3>
 
@@ -41,12 +41,12 @@ isolation: unset;
 <h2 id="Exemplos">Exemplos</h2>
 
 <pre class="brush: html">&lt;div id="b" class="a"&gt;
-  &lt;div id="d"&gt;
-    &lt;div class="a c"&gt;auto&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div id="d"&gt;
+    &lt;div class="a c"&gt;auto&lt;/div&gt;
+  &lt;/div&gt;
   &lt;div id="e"&gt;
-    &lt;div class="a c"&gt;isolate&lt;/div&gt;
-  &lt;/div&gt;
+    &lt;div class="a c"&gt;isolate&lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -94,57 +94,7 @@ isolation: unset;
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable()}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>
-    <p class="p1">{{CompatChrome(41.0)}}</p>
-   </td>
-   <td>{{CompatGeckoDesktop('36')}}</td>
-   <td>{{CompatNo()}}</td>
-   <td>30</td>
-   <td>7.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>
-    <p class="p1">{{CompatChrome(41.0)}}</p>
-   </td>
-   <td>{{CompatGeckoMobile('36')}}</td>
-   <td>{{CompatNo()}}</td>
-   <td>36</td>
-   <td>8.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.properties.isolation")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

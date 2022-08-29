@@ -16,7 +16,7 @@ HMAC est utilisé pour s'assurer de l'intégrité et de l'authenticité.
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Keyed-Hash_Message_Authentication_Code","HMAC")}} sur Wikipedia
+- [HMAC](https://fr.wikipedia.org/wiki/HMAC) sur Wikipédia
 
 ### Référence technique
 

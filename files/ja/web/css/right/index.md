@@ -132,26 +132,26 @@ right: unset;
 
 ```css
 div {
-  outline: 1px solid #CCCCCC;
+  outline: 1px solid #CCCCCC;
 }
 #parent {
-  width: 200px;
-  height: 200px;
-  background-color: #FFC7E4;
-  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: #FFC7E4;
+  position: relative;
 }
 /* declare both a left and a right */
 #width,
 #noWidth {
-  background-color: #C2FFD7;
-  position: absolute;
-  left: 0;
-  right: 0;
+  background-color: #C2FFD7;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 /* declare a width */
 #width {
-  width: 100px;
-  top: 60px;
+  width: 100px;
+  top: 60px;
 }
 ```
 

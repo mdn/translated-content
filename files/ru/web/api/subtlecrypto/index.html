@@ -5,7 +5,7 @@ translation_of: Web/API/SubtleCrypto
 ---
 <p>{{APIRef("Web Crypto API")}}</p>
 
-<p>Интерфейс <code><strong>SubtileCrypto</strong></code> представляет набор криптографических примитивов. Экземпляр <code><strong>SubtileCrypto</strong></code> доступен как {{domxref("Crypto.subtle")}}, в контексте window ({{domxref("Window.crypto")}}).</p>
+<p>Интерфейс <code><strong>SubtileCrypto</strong></code> представляет набор криптографических примитивов. Экземпляр <code><strong>SubtileCrypto</strong></code> доступен как {{domxref("Crypto.subtle")}}, в контексте window ({{domxref("Window.crypto")}}).</p>
 
 <div class="warning">
 <p>Per the spec: "Developers making use of the SubtleCrypto interface are expected to be aware of the security concerns associated with both the design and implementation of the various algorithms provided. The raw algorithms are provided in order to allow developers maximum flexibility in implementing a variety of protocols and applications, each of which may represent the composition and security parameters in a unique manner that necessitate the use of the raw algorithms."</p>
@@ -19,21 +19,21 @@ translation_of: Web/API/SubtleCrypto
 
 <dl>
  <dt>{{domxref("SubtleCrypto.encrypt()")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}} с данными, зашифрованными на основании исходного текста, алгоритма шифрования и ключа, переданных в качества аргументов.</dd>
+ <dd>Возвращает {{jsxref("Promise")}} с данными, зашифрованными на основании исходного текста, алгоритма шифрования и ключа, переданных в качества аргументов.</dd>
  <dt>{{domxref("SubtleCrypto.decrypt()")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}} с исходным текстом. В качества аргументов принимает зашифрованную строку, алгоритм шифрования и ключ.</dd>
+ <dd>Возвращает {{jsxref("Promise")}} с исходным текстом. В качества аргументов принимает зашифрованную строку, алгоритм шифрования и ключ.</dd>
  <dt>{{domxref("SubtleCrypto.sign()")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}} с сигнатурой, полученной на основании текста, алгоритма шифрования и ключа, переданных в качества аргументов.</dd>
+ <dd>Возвращает {{jsxref("Promise")}} с сигнатурой, полученной на основании текста, алгоритма шифрования и ключа, переданных в качества аргументов.</dd>
  <dt>{{domxref("SubtleCrypto.verify()")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}} с {{jsxref("Boolean")}} значением, определяющим соответствует ли переданная сигнатура тексу, алгоритму шифрования и ключу, также переданным в качества аргументов.</dd>
+ <dd>Возвращает {{jsxref("Promise")}} с {{jsxref("Boolean")}} значением, определяющим соответствует ли переданная сигнатура тексу, алгоритму шифрования и ключу, также переданным в качества аргументов.</dd>
  <dt>{{domxref("SubtleCrypto.digest()")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}} с хеш-суммой сгенерированной на основании алгоритма шифрования и исходного текста, переданных в качества аргументов</dd>
+ <dd>Возвращает {{jsxref("Promise")}} с хеш-суммой сгенерированной на основании алгоритма шифрования и исходного текста, переданных в качества аргументов</dd>
  <dt>{{domxref("SubtleCrypto.generateKey()")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}} с сгенерированным {{domxref("CryptoKey")}} для симметричных алгоритмов, или {{domxref("CryptoKeyPair")}} для асимметричных алгоритмов.</dd>
+ <dd>Возвращает {{jsxref("Promise")}} с сгенерированным {{domxref("CryptoKey")}} для симметричных алгоритмов, или {{domxref("CryptoKeyPair")}} для асимметричных алгоритмов.</dd>
  <dt>{{domxref("SubtleCrypto.deriveKey()")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}} с сгенерированным {{domxref("CryptoKey")}}, на основе переданных в качестве аргументов мастер-ключа и алгоритма шифрования.</dd>
+ <dd>Возвращает {{jsxref("Promise")}} с сгенерированным {{domxref("CryptoKey")}}, на основе переданных в качестве аргументов мастер-ключа и алгоритма шифрования.</dd>
  <dt>{{domxref("SubtleCrypto.deriveBits()")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}} с буфером псевдо-случайных бит, полученных на основании мастер-ключа и алгоритма шифрования, переданных в качества аргументов.</dd>
+ <dd>Возвращает {{jsxref("Promise")}} с буфером псевдо-случайных бит, полученных на основании мастер-ключа и алгоритма шифрования, переданных в качества аргументов.</dd>
  <dt>{{domxref("SubtleCrypto.importKey()")}}</dt>
  <dd>Returns a {{jsxref("Promise")}} of a {{domxref("CryptoKey")}} corresponding to the format, the algorithm, the raw key data, the usages and the extractability given as parameters.</dd>
  <dt>{{domxref("SubtleCrypto.exportKey()")}}</dt>

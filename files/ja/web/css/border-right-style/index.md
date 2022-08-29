@@ -116,5 +116,5 @@ tr, td {
 
 ## 関連情報
 
- - その他の形状に関する境界のプロパティ: {{ Cssxref("border-bottom-style") }}, {{ Cssxref("border-left-style") }}, {{ Cssxref("border-top-style") }}, {{ Cssxref("border-style") }}
- - その他の右側の境界に関するプロパティ: {{ Cssxref("border-right") }}, {{ Cssxref("border-right-color") }}, {{ Cssxref("border-right-width") }}
+- その他の形状に関する境界のプロパティ: {{ Cssxref("border-bottom-style") }}, {{ Cssxref("border-left-style") }}, {{ Cssxref("border-top-style") }}, {{ Cssxref("border-style") }}
+- その他の右側の境界に関するプロパティ: {{ Cssxref("border-right") }}, {{ Cssxref("border-right-color") }}, {{ Cssxref("border-right-width") }}

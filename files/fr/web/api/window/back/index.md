@@ -21,7 +21,9 @@ La méthode obsolète et non standard `back()` sur l'objet {{domxref("window")}}
 
 ## Syntaxe
 
-    window.back();
+```js
+window.back();
+```
 
 ### Paramètres
 

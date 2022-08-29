@@ -100,9 +100,9 @@ Si plusieurs éléments `<base>` sont utilisés, seules les premières valeurs p
 
 Les ancres d'une page ([`<a>`](/fr/docs/Web/HTML/Element/a)), par exemple `<a href="#ancre">ancre</a>`, sont résolues avec l'URL de base fournie via `<base>` et déclenche une requête HTTP vers l'URL de base.
 
-1.  Soit `<base href="https://example.com">`
-2.  … et ce lien : `<a href="#ancre">Anker</a>`
-3.  … le lien enverra vers `https://example.com/#ancre`.
+1. Soit `<base href="https://example.com">`
+2. … et ce lien : `<a href="#ancre">Anker</a>`
+3. … le lien enverra vers `https://example.com/#ancre`.
 
 ### Open Graph
 

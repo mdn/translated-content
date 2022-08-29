@@ -20,7 +20,9 @@ La méthode **`toLocaleString()`** renvoie une chaîne de caractères représent
 
 ## Syntaxe
 
-    bigIntObj.toLocaleString([locales [, options]])
+```js
+bigIntObj.toLocaleString([locales [, options]])
+```
 
 ### Paramètres
 

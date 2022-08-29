@@ -100,7 +100,7 @@ En HTML, les types de lien indiquent la relation entre deux documents, reliés e
       </td>
     </tr>
     <tr>
-      <td><code>archives</code> {{obsolete_inline}}</td>
+      <td><code>archives</code> {{deprecated_inline}}</td>
       <td>
         <p>
           Ce type définit un hyperlien vers un document qui contient un lien
@@ -252,7 +252,7 @@ En HTML, les types de lien indiquent la relation entre deux documents, reliés e
       </td>
     </tr>
     <tr>
-      <td><code>first</code> {{obsolete_inline}}</td>
+      <td><code>first</code> {{deprecated_inline}}</td>
       <td>
         <p>
           Ce type indique que l'hyperlien mène à la première ressource dans la
@@ -387,7 +387,7 @@ En HTML, les types de lien indiquent la relation entre deux documents, reliés e
       </td>
     </tr>
     <tr>
-      <td><code>index</code> {{Obsolete_Inline("HTML5")}}</td>
+      <td><code>index</code> {{deprecated_inline}}</td>
       <td>
         <p>
           Ce type indique que la page fait partie d'une structure hiérarchique
@@ -409,7 +409,7 @@ En HTML, les types de lien indiquent la relation entre deux documents, reliés e
       </td>
     </tr>
     <tr>
-      <td><code>last</code> {{obsolete_inline}}</td>
+      <td><code>last</code> {{deprecated_inline}}</td>
       <td>
         <p>
           Ce type indique que l'hyperlien mène à la dernière ressource dans la
@@ -852,7 +852,7 @@ En HTML, les types de lien indiquent la relation entre deux documents, reliés e
     <tr>
       <td>
         <code>sidebar</code>
-        {{non-standard_inline}}{{Obsolete_Inline("Gecko63")}}
+        {{non-standard_inline}}{{deprecated_inline}}
       </td>
       <td>
         <p>
@@ -929,7 +929,7 @@ En HTML, les types de lien indiquent la relation entre deux documents, reliés e
       </td>
     </tr>
     <tr>
-      <td><code>up</code> {{obsolete_inline}}</td>
+      <td><code>up</code> {{deprecated_inline}}</td>
       <td>
         <p>
           Ce type de lien indique que la page fait partie d'une structure

@@ -20,7 +20,9 @@ La méthode **`some()`** teste si certains éléments du tableau typé remplisse
 
 ## Syntaxe
 
-    typedarray.some(callback[, thisArg])
+```js
+typedarray.some(callback[, thisArg])
+```
 
 ### Paramètres
 

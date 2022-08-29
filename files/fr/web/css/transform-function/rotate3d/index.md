@@ -17,7 +17,9 @@ Dans l'espace (en trois dimensions), les rotations ont trois degrés de liberté
 
 ## Syntaxe
 
-    rotate3d(x, y, z, a)
+```
+rotate3d(x, y, z, a)
+```
 
 ### Valeurs
 

@@ -10,7 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLFrameSetElement
 ---
-{{APIRef("HTML DOM")}}{{Obsolete_header}}
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
 L'interface **`HTMLFrameSetElement`** fournit des propriétés spéciales (au-delà de celles de l'interface standard {{domxref("HTMLElement")}} dont elles héritent aussi) pour manipuler les éléments {{HTMLELEment("frameset")}}.
 
@@ -18,9 +18,9 @@ L'interface **`HTMLFrameSetElement`** fournit des propriétés spéciales (au-de
 
 _Hérite des propriétés de son parent, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}._
 
-- {{domxref("HTMLFrameSetElement.cols")}} {{obsolete_inline}}
+- {{domxref("HTMLFrameSetElement.cols")}} {{deprecated_inline}}
   - : Est un {{domxref("DOMString")}} structuré comme une liste séparée par des virgules spécifiant la largeur de chaque colonne à l'intérieur d'un jeu de cadres.
-- {{domxref("HTMLFrameSetElement.rows")}} {{obsolete_inline}}
+- {{domxref("HTMLFrameSetElement.rows")}} {{deprecated_inline}}
   - : Est un {{domxref("DOMString")}} structuré comme une liste séparée par des virgules spécifiant la hauteur de chaque colonne à l'intérieur d'un jeu de cadres.
 
 ## Méthodes
@@ -62,16 +62,11 @@ _Aucun gestionnaire d'événements spécifique; hérite des gestionnairs d'évé
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire                                                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "#htmlframesetelement", "HTMLFrameSetElement")}}             | {{Spec2('HTML WHATWG')}} | À partir de l'instantané {{SpecName('HTML5 W3C')}}, l'interface {{domxref("WindowEventHandlers")}} a maintenant une propriété `onlanguagechange`. |
-| {{SpecName('HTML5 W3C', "obsolete.html#htmlframesetelement", "HTMLFrameSetElement")}} | {{Spec2('HTML5 W3C')}}     | Instantané d'un précédent {{SpecName('HTML WHATWG')}} Les cadres sont désormais obsolètes. Implémente {{domxref("WindowEventHandlers")}}.       |
-| {{SpecName('DOM2 HTML', 'html.html#ID-ID-43829095', 'HTMLBodyElement')}}                 | {{Spec2('DOM2 HTML')}}     | Aucun changement par rapport à {{SpecName("DOM1")}}.                                                                                                       |
-| {{SpecName('DOM1', 'level-one-html.html#ID-43829095', 'HTMLBodyElement')}}             | {{Spec2('DOM1')}}         | Définition initiale.                                                                                                                                               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLFrameSetElement")}}
+{{Compat}}
 
 ## Voir aussi
 

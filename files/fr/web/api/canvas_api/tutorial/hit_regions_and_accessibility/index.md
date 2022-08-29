@@ -10,7 +10,7 @@ L'élément {{HTMLElement("canvas")}} lui-même est juste un bitmap et ne fourni
 
 ## Moyen de repli
 
-Le contenu à l'intérieur d'un tag `<canvas> ... </canvas>` peut être utilisé comme moyen de secours pour les navigteurs qui ne supportent pas le rendu de canvas. C'est aussi très utile pour les utilisateurs qui utilisent des technologies adaptées (comme les lecteurs d'écran) qui peuvent lire et interpréter les éléments du DOM. Un bon exemple sur [html5accessibility.com](http://www.html5accessibility.com/tests/canvas.html) demontre comment cela peut être fait.
+Le contenu à l'intérieur d'un tag `<canvas> ... </canvas>` peut être utilisé comme moyen de secours pour les navigateurs qui ne supportent pas le rendu de canvas. C'est aussi très utile pour les utilisateurs qui utilisent des technologies adaptées (comme les lecteurs d'écran) qui peuvent lire et interpréter les éléments du DOM. Un bon exemple sur [html5accessibility.com](http://www.html5accessibility.com/tests/canvas.html) demontre comment cela peut être fait.
 
 ```html
 <canvas>
@@ -29,7 +29,7 @@ Jetez un oeil à la [video comment NVDA lit cet exemple par Steve Faulkner](http
 
 ## Les règles ARIA
 
-Accessible Rich Internet Applications **([ARIA](/en-US/docs/Web/Accessibility/ARIA))** (≈ [Les applications Internet Accessibles Riches)](https://fr.wikipedia.org/wiki/Accessible_Rich_Internet_Applications) défini des pistes pour rendre le contenu Web et les applications Web plus accessibles pour les personnes ayant un handicap. Vous pouvez utiliser les attributs ARIA pour decrire le comportement et le but de vos éléments canvas. Allez voir [ARIA](/en-US/docs/Web/Accessibility/ARIA) et [les techniques ARIA](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques) pour plus d'informations.
+Accessible Rich Internet Applications **([ARIA](/fr/docs/Web/Accessibility/ARIA))** (≈ [Les applications Internet Accessibles Riches)](https://fr.wikipedia.org/wiki/Accessible_Rich_Internet_Applications) défini des pistes pour rendre le contenu Web et les applications Web plus accessibles pour les personnes ayant un handicap. Vous pouvez utiliser les attributs ARIA pour decrire le comportement et le but de vos éléments canvas. Allez voir [ARIA](/fr/docs/Web/Accessibility/ARIA) et [les techniques ARIA](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques) pour plus d'informations.
 
 ```html
 <canvas id="button" tabindex="0" role="button" aria-pressed="false" aria-label="Start game"></canvas>

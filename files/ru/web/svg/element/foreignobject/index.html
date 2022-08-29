@@ -14,32 +14,32 @@ original_slug: Web/SVG/Элемент/foreignObject
 </div>
 
 <pre class="brush: html; highlight[16,27]">&lt;svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;style&gt;
-    polygon { fill: black }
+  &lt;style&gt;
+    polygon { fill: black }
 
-    div {
-      color: white;
-      font:18px serif;
-      height: 100%;
-      overflow: auto;
-    }
-  &lt;/style&gt;
+    div {
+      color: white;
+      font:18px serif;
+      height: 100%;
+      overflow: auto;
+    }
+  &lt;/style&gt;
 
-  &lt;polygon points="5,5 195,10 185,185 10,195" /&gt;
+  &lt;polygon points="5,5 195,10 185,185 10,195" /&gt;
 
   &lt;!-- Типичный пример использования: встраивание HTML-текста в SVG --&gt;
-  &lt;foreignObject x="20" y="20" width="160" height="160"&gt;
+  &lt;foreignObject x="20" y="20" width="160" height="160"&gt;
   &lt;!--
 В контексте SVG, внедрённого в HTML, пространство имён XHTML может и следует избегать,
 но это обязательно в контексте документа SVG
    --&gt;
-    &lt;div xmlns="http://www.w3.org/1999/xhtml"&gt;
+    &lt;div xmlns="http://www.w3.org/1999/xhtml"&gt;
     <em>- Смолчал хозяин, да и то, что мог сказать
     - Мне невдомёк, но во владениях чертога
     Поможет дом срубить да судьбы вам связать.
     Не веришь ежли - испроси у Бога...</em>
     &lt;/div&gt;
-  &lt;/foreignObject&gt;
+  &lt;/foreignObject&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('Exemple', 150, '100%')}}</p>
@@ -103,7 +103,7 @@ original_slug: Web/SVG/Элемент/foreignObject
   <tr>
    <td>{{SpecName('SVG2', 'embedded.html#ForeignObjectElement', '&lt;foreignObject&gt;')}}</td>
    <td>{{Spec2('SVG2')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('SVG1.1', 'extend.html#ForeignObjectElement', '&lt;foreignObject&gt;')}}</td>

@@ -20,7 +20,9 @@ La méthode **`fill()`** remplit les éléments d'un tableau typé contenu entre
 
 ## Syntaxe
 
-    typedarray.fill(valeur[, début = 0[, fin = this.length]])
+```js
+typedarray.fill(valeur[, début = 0[, fin = this.length]])
+```
 
 ### Paramètres
 

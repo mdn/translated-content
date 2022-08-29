@@ -39,7 +39,7 @@ translation_of: Web/API/CSSStyleDeclaration
   - : Supprime une propriété du bloc de déclaration CSS.
 - {{domxref("CSSStyleDeclaration.setProperty()")}}
   - : Modifie une propriété CSS existante ou crée une nouvelle propriété CSS dans le bloc de déclaration.
-- {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} {{obsolete_inline}}
+- {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} {{deprecated_inline}}
   - : Uniquement supporté via getComputedStyle dans Firefox. Retourne la valeur de la propriété en tant que {{domxref("CSSPrimitiveValue")}} ou `null` pour les [propriétés raccourcies](/fr/docs/Web/CSS/Propriétés_raccourcies).
 
 ## Exemple
@@ -60,13 +60,10 @@ console.log(objStyle.cssText);
 
 Le bloc de déclaration est la partie de la règle de mise en forme qui apparaît dans les accolades et qui fournit les définitions de mise en forme (pour le sélecteur, la partie qui précède les accolades).
 
+## Spécifications
+
+{{Specifications}}
+
 ## Voir aussi
 
 - [Référence des propriétés CSS](/fr/docs/Web/CSS/CSS_Properties_Reference)
-
-## Spécifications
-
-| Spécification                                                                                                    | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSSOM', '#the-cssstyledeclaration-interface', 'CSSStyleDeclaration')}}     | {{Spec2('CSSOM')}}         |                      |
-| {{SpecName('DOM2 Style', 'css.html#CSS-CSSStyleDeclaration', 'CSSPrimitiveValue')}} | {{Spec2('DOM2 Style')}} | Définition initiale. |

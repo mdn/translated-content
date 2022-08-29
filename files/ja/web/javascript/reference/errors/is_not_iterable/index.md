@@ -101,7 +101,7 @@ for (let x of generate(1,2))
 
 ### 独自の反復可能オブジェクトでの反復処理
 
-独自の反復可能オブジェクトは、 {{jsxref("Symbol.iterator")}} メソッドを実装することで作成することができます。 iterator メソッドはイテレーターであるオブジェクト、すなわち next メソッドを返す必要があります。
+独自の反復可能オブジェクトは、 {{jsxref("Symbol.iterator")}} メソッドを実装することで作成することができます。 iterator メソッドはイテレーターであるオブジェクト、すなわち next メソッドを返す必要があります。
 
 ```js example-bad
 const myEmptyIterable = {
@@ -133,4 +133,3 @@ Array.from(myEmptyIterable);  // []
 - {{jsxref("Map")}}
 - [ジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators#generators)
 - [for…of](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
-</ul>

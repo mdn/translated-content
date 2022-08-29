@@ -41,7 +41,7 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
 
   - : Cet attribut pouvant prendre des valeurs pré-définies représente un objet pouvant modifier le comportement des serveurs ou des agents utilisateur. Sa valeur est définie grâce à l'attribut {{htmlattrxref("content", "meta")}} et peut être l'une des suivantes :
 
-    - `content-language` {{obsolete_inline}}
+    - `content-language` {{deprecated_inline}}
 
       - : Définit la langue par défaut utilisée par une page
 
@@ -49,7 +49,7 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
 
     - `Content-Security-Policy`
       - : Cette valeur permet aux administrateurs de sites web de définir des règles de gestion de contenu pour les ressources qui sont servies. Cela permet notamment d'indiquer les origines valides et les points d'accès aux scripts afin de protéger contre les attaques XSS.
-    - `content-type` {{obsolete_inline}}
+    - `content-type` {{deprecated_inline}}
 
       - : Ce champ d'attribut définit le [type MIME](/fr/docs/Glossaire/Type_MIME) du document et peut être suivi par son jeu de caractères. Il respecte la même syntaxe que le champ `content-type` appartenant à l'en-tête HTTP. Cet attribut faisant, lui, partie d'un élément HTML, il n'est pas possible d'utiliser la plupart des valeurs. La syntaxe correcte pour son contenu est donc la chaîne de caractère `'text/html`' éventuellement suivie par un jeu de caractères avec la syntaxe suivante : '`; charset=`_`IANAcharset`_' où `IANAcharset` est l'appellation MIME du jeu de caractères, [présentée par l'IANA](https://www.iana.org/assignments/character-sets)
 
@@ -66,7 +66,7 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
         - le nombre de secondes qu'il faudrait attendre avant de recharger la page si l'attribut {{htmlattrxref("content", "meta")}} contient seulement un nombre entier positif
         - le nombre de secondes qu'il faudrait attendre avant que la page soit redirigée vers une autre page, si l'attribut {{htmlattrxref("content", "meta")}} contient un nombre entier positif suivi par la chaîne de caractères '`;url=`' ainsi qu'une URL valide.
 
-    - `set-cookie` {{obsolete_inline}}{{non-standard_inline}}
+    - `set-cookie` {{deprecated_inline}}{{non-standard_inline}}
 
       - : Ce champ définit un cookie pour la page. Son contenu doit respecter la syntaxe énoncée par la [IETF HTTP Cookie Specification](https://tools.ietf.org/html/draft-ietf-httpstate-cookie-14).
 
@@ -175,7 +175,7 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
       > - Lorsque plusieurs règles conflictuelles sont définies, c'est la règle `no-referrer` qui est appliquée.
 
     - `theme-color` qui indique une suggestion de couleur que l'agent utilisateur devrait prendre en compte afin de personnaliser l'affichage de la page ou l'interface utilisateur environnante. L'attribut `content` contiendra une couleur valide au sens CSS (cf. {{cssxref("&lt;color&gt;")}}).
-    - - `color-scheme`
+      - `color-scheme`
 
         - : Définit un ou plusieurs modes de couleurs avec lesquels le document est compatible. Le navigateur utilisera cette information ainsi que les réglages du navigateur ou de l'appareil pour déterminer les couleurs à utiliser (que ce soit pour l'arrière-plan, les contrôles, les barres de défilement, etc.). `<meta name="color-scheme">` sert principalement à indiquer la compatibilité et la préférence pour les différents modes de couleur (sombre / clair entre autres).
 
@@ -347,8 +347,6 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
 
     - `viewport`, qui donne une indication quant à la taille du [viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag) (vue virtuelle). Cette information est utilisée pour les terminaux mobiles uniquement :
 
-
-
       <table class="fullwidth-table">
         <caption>
           Valeurs pour le contenu de &#x3C;meta name="viewport">
@@ -421,7 +419,7 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
       > - Les valeurs par défaut peuvent être différentes suivant les appareils et les navigateurs.
       > - Pour en savoir plus sur l'utilisation faite de cet attribut par Firefox pour Mobile, vous pouvez lire [cet article](/fr/docs/Mozilla/Mobile/Viewport_meta_tag).
 
-- {{htmlattrdef("scheme")}} {{obsolete_inline}}
+- {{htmlattrdef("scheme")}} {{deprecated_inline}}
 
   - : Cet attribut définit le schéma dans lequel la métadonnée est décrite. Un schéma, de la même manière qu'un format, est un contexte permettant d'interpréter correctement la valeur de l'attribut {{htmlattrxref("content", "meta")}}.
 

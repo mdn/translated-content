@@ -9,7 +9,9 @@ La méthode **`DOMTokenList.entries()`** renvoie un {{jsxref("Les_protocoles_ite
 
 ## Syntaxe
 
-    tokenList.entries();
+```js
+tokenList.entries();
+```
 
 ### Valeur retournée
 
@@ -43,13 +45,11 @@ La sortie ressemble à ceci :
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG','#interface-domtokenlist','entries() (as iterable&lt;Node&gt;)')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMTokenList.entries")}}
+{{Compat}}
 
 ## Voir aussi
 

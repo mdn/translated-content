@@ -15,4 +15,4 @@ Le concept de références d'objet apparaît lors de l'affectation d'un même ob
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Référence (programmation)")}} sur Wikipédia
+- [Référence](https://fr.wikipedia.org/wiki/R%C3%A9f%C3%A9rence_(programmation)) sur Wikipédia

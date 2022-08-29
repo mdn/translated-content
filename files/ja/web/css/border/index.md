@@ -23,9 +23,9 @@ translation_of: Web/CSS/border
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
- - {{cssxref("border-color")}}
- - {{cssxref("border-style")}}
- - {{cssxref("border-width")}}
+- {{cssxref("border-color")}}
+- {{cssxref("border-style")}}
+- {{cssxref("border-width")}}
 
 ## 構文
 
@@ -71,8 +71,8 @@ border: unset;
 
 境界線と[輪郭線](/ja/docs/Web/CSS/outline)はよく似ています。しかし、輪郭線は以下の点で境界線とは異なります。
 
- - 輪郭線は領域を占有せず、要素のコンテンツの外側に描画されます。
- - 輪郭線は普通は矩形ですが、仕様によれば、矩形である必要はありません。
+- 輪郭線は領域を占有せず、要素のコンテンツの外側に描画されます。
+- 輪郭線は普通は矩形ですが、仕様によれば、矩形である必要はありません。
 
 ## 公式定義
 

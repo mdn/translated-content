@@ -15,7 +15,9 @@ La méthode **`WebGLRenderingContext.deleteBuffer()`** de l'[API WebGL](/fr-FR/d
 
 ## Syntaxe
 
-    void gl.deleteBuffer(tampon);
+```js
+void gl.deleteBuffer(tampon);
+```
 
 ### Paramètres
 

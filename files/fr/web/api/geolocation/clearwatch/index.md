@@ -16,7 +16,9 @@ La méthode **`Geolocation.clearWatch()`** est utilisée pour libérer les resso
 
 ## Syntaxe
 
-    navigator.geolocation.clearWatch(id);
+```js
+navigator.geolocation.clearWatch(id);
+```
 
 ### Paramètres
 
@@ -57,13 +59,11 @@ id = navigator.geolocation.watchPosition(success, error, options);
 
 ## Spécifications
 
-| Spécification                        | Statut                           | Commentaire             |
-| ------------------------------------ | -------------------------------- | ----------------------- |
-| {{SpecName('Geolocation')}} | {{Spec2('Geolocation')}} | Spécification initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Geolocation.clearWatch")}}
+{{Compat}}
 
 ## Voir aussi
 

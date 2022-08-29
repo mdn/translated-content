@@ -26,7 +26,7 @@ translation_of: Web/CSS/animation-iteration-count
 /* キーワード値 */
 animation-iteration-count: infinite;
 
-/* &lt;number&gt; 値 */
+/* <number> 値 */
 animation-iteration-count: 3;
 animation-iteration-count: 2.4;
 

@@ -15,7 +15,9 @@ La propriété **`currentTarget`**, accessible en lecture seule et rattachée à
 
 ## Syntaxe
 
-    var currentEventTarget = event.currentTarget;
+```js
+var currentEventTarget = event.currentTarget;
+```
 
 ### Valeur
 
@@ -49,16 +51,11 @@ document.body.addEventListener('click', hide, false);
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires       |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("DOM WHATWG", "#dom-event-currenttarget", "Event.currentTarget")}}     | {{Spec2("DOM WHATWG")}} |                    |
-| {{SpecName("DOM4", "#dom-event-currenttarget", "Event.currentTarget")}}             | {{Spec2("DOM4")}}         |                    |
-| {{SpecName("DOM3 Events", "#dfn-current-event-target", "current event target")}} | {{Spec2("DOM3 Events")}} |                    |
-| {{SpecName("DOM2 Events", "#Events-Event-currentTarget", "Event.currentTarget")}} | {{Spec2("DOM2 Events")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.currentTarget")}}
+{{Compat}}
 
 ## Voir aussi
 

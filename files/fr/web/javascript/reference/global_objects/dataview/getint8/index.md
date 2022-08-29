@@ -19,7 +19,9 @@ La méthode **`getInt8()`** permet de lire un entier signé sur 8 bits à l'octe
 
 ## Syntaxe
 
-    dataview.getInt8(positionOctet)
+```js
+dataview.getInt8(positionOctet)
+```
 
 ### Paramètres
 

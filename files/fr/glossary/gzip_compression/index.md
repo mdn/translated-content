@@ -13,4 +13,4 @@ gzip est un algorithme de compression qui permet de réduire la taille des fichi
 ## En apprendre plus
 
 - [Enable gzip compression?](https://varvy.com/pagespeed/enable-compression.html)
-- [Gzip sur Wikipedia](https://fr.wikipedia.org/wiki/Gzip)
+- [Gzip sur Wikipédia](https://fr.wikipedia.org/wiki/Gzip)

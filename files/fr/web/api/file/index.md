@@ -16,7 +16,7 @@ Les objets `File` sont généralements obtenus à partir de&nbsp;:
 - l’objet {{domxref("DataTransfer")}} d’une opération de glisser-déposer&nbsp;;
 - l’API `mozGetAsFile()` de l’élément {{domxref("HTMLCanvasElement")}}.
 
-Dans Gecko, le code privilégié peut créer des objets `File` représentant tout fichier local sans nécessiter une interaction de l’utilisateur ou de l’utilisatrice (voir {{anch("Notes d’implémentation")}} pour plus d’informations.)
+Dans Gecko, le code privilégié peut créer des objets `File` représentant tout fichier local sans nécessiter une interaction de l’utilisateur ou de l’utilisatrice (voir [Notes d'implémentation](#notes_dimplémentation) pour plus d’informations.)
 
 Un objet `File` est un genre spécifique de {{domxref("Blob")}}, et peut être utilisé dans tout contexte où un blob peut l’être. En particulier, {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, et {{domxref("XMLHttpRequest", "", "send()")}} acceptent indifféremment des `Blob`s et des `File`s.
 
@@ -62,25 +62,25 @@ _L’interface `File` ne définit aucune méthode, mais hérite des méthodes de
 
 ## Spécifications
 
-| Spécification                    | Statut                       | Commentaire          |
-| -------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('File API')}} | {{Spec2('File API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.File")}}
+{{Compat}}
 
-### Notes d’implémentation
+### Notes d'implémentation
 
-- Dans Gecko, vous pouvez utiliser API depuis du code chrome. Voir [Using the DOM File API in chrome code](/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) pour plus de détails. Pour l’utiliser depuis du code chrome, JSM, ou portée Bootstrap, vous devez l’importer en utilisant `Cu.importGlobalProperties(['File']);`
-- À partir de Gecko 6.0 {{geckoRelease("6.0")}}, le code privilégié (par exemple au sein d’une extension) peut passer un objet {{interface("nsIFile")}} au constructeur DOM `File` pour spécifier le fichier à référencer.
-- À partir de Gecko 8.0 {{geckoRelease("8.0")}}, vous pouvez utiliser `new File` pour créer des objets `File` depuis des composants XPCOM au lieu de devoir instancier les objets {{interface("nsIDOMFile")}} directement. Contrairement à {{domxref("Blob")}}, le constructeur prend le nom de fichier comme second argument. Le nom de fichier peut être une chaîne quelconque.
+- Dans Gecko, vous pouvez utiliser API depuis du code chrome. Voir [Using the DOM File API in chrome code](/fr/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) pour plus de détails. Pour l’utiliser depuis du code chrome, JSM, ou portée Bootstrap, vous devez l’importer en utilisant `Cu.importGlobalProperties(['File']);`
+- À partir de Gecko 6.0 {{geckoRelease("6.0")}}, le code privilégié (par exemple au sein d’une extension) peut passer un objet `nsIFile` au constructeur DOM `File` pour spécifier le fichier à référencer.
+- À partir de Gecko 8.0 {{geckoRelease("8.0")}}, vous pouvez utiliser `new File` pour créer des objets `File` depuis des composants XPCOM au lieu de devoir instancier les objets `nsIDOMFile` directement. Contrairement à {{domxref("Blob")}}, le constructeur prend le nom de fichier comme second argument. Le nom de fichier peut être une chaîne quelconque.
 
-      new File(
-        Array parts,
-        String filename,
-        BlobPropertyBag properties
-      );
+```
+new File(
+  Array parts,
+  String filename,
+  BlobPropertyBag properties
+);
+```
 
 - Les propriétés et méthodes non standard suivantes ont été retirées de Gecko 7 {{geckoRelease("7.0")}}&nbsp;: {{domxref("File.fileName")}}, {{domxref("File.fileSize")}}, {{domxref("File.getAsBinary()")}}, {{domxref("File.getAsDataURL()")}}, {{domxref("File.getAsText()","File.getAsText(string encoding)")}} ({{bug("661876")}}). Les propriétés standard {{domxref("File.name")}}, {{domxref("Blob.size")}}, et les méthodes de {{domxref("FileReader")}} devraient être utilisées à la place.
 
@@ -88,4 +88,4 @@ _L’interface `File` ne définit aucune méthode, mais hérite des méthodes de
 
 - [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File/Using_files_from_web_applications)
 - {{domxref("FileReader")}}
-- [Using the DOM File API in chrome code](/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) (pour du code privilégié s’exécutant dans Gecko, tel que des extensions de Firefox)
+- [Using the DOM File API in chrome code](/fr/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) (pour du code privilégié s’exécutant dans Gecko, tel que des extensions de Firefox)

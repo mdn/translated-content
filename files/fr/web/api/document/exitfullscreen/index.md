@@ -17,7 +17,9 @@ La méthode **`Document.exitFullscreen()`** extrait le document du mode plein é
 
 ## Syntaxe
 
-    document.exitFullscreen();
+```js
+document.exitFullscreen();
+```
 
 ## Exemple
 
@@ -34,13 +36,11 @@ document.onclick = function (event) {
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Fullscreen", "#dom-document-exitfullscreen", "Document.exitFullscreen()")}} | {{Spec2("Fullscreen")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.exitFullscreen")}}
+{{Compat}}
 
 ## Voir aussi
 

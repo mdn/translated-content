@@ -7,15 +7,15 @@ translation_of: Web/CSS/@media
 
 <h2 id="Resumen">Resumen</h2>
 
-<p>La <a href="/es/docs/Web/CSS/At-rule" title="en/CSS/At-rule">regla-at</a> <a href="/es/docs/Web/CSS" title="CSS">CSS</a> <code>@media</code> asocia un grupo de declaraciones anidadas, en un bloque CSS delimitado por llaves, con una condición definida por un <a href="/es/docs/CSS/Media_queries" title="CSS media queries">media query</a>. La regla-at <code>@media</code> puede ser usada no solo en el nivel superior de la hoja de estilos, sino también dentro de cualquier <a href="/es/docs/Web/CSS/At-rule#Grupos_de_Reglas_Condicionales" title="en/CSS/At-rule#Conditional_Group_Rules">grupo de reglas conditionales</a>.</p>
+<p>La <a href="/es/docs/Web/CSS/At-rule" title="en/CSS/At-rule">regla-at</a> <a href="/es/docs/Web/CSS" title="CSS">CSS</a> <code>@media</code> asocia un grupo de declaraciones anidadas, en un bloque CSS delimitado por llaves, con una condición definida por un <a href="/es/docs/CSS/Media_queries" title="CSS media queries">media query</a>. La regla-at <code>@media</code> puede ser usada no solo en el nivel superior de la hoja de estilos, sino también dentro de cualquier <a href="/es/docs/Web/CSS/At-rule#Grupos_de_Reglas_Condicionales" title="en/CSS/At-rule#Conditional_Group_Rules">grupo de reglas conditionales</a>.</p>
 
-<p>La regla-at <code>@media</code> puede ser accesible por medio de la interfaz de modelo de objeto {{domxref("CSSMediaRule")}}.</p>
+<p>La regla-at <code>@media</code> puede ser accesible por medio de la interfaz de modelo de objeto {{domxref("CSSMediaRule")}}.</p>
 
 <h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
 {{csssyntax}}
 
-<p>Un <code>&lt;media-query&gt;</code> está compuesto por un tipo de medio opcional y/o un conjunto de características de medio.</p>
+<p>Un <code>&lt;media-query&gt;</code> está compuesto por un tipo de medio opcional y/o un conjunto de características de medio.</p>
 
 <h2 id="Media_types" name="Media_types">Tipos de medios</h2>
 
@@ -23,18 +23,18 @@ translation_of: Web/CSS/@media
  <dt>all</dt>
  <dd>Aplicable a todos los dispositivos.</dd>
  <dt>print</dt>
- <dd>Destinado material paginado y para documentos visibles en pantalla en modo de vista previa para impresión. Por favor, consulte la sección de <a href="/es/docs/Web/CSS/Paged_Media">medios paginados</a>, y la <a href="/es/docs/Web/CSS/Introducción/Media" title="https://developer.mozilla.org/en/CSS/Getting_Started/Media">sección de Media en el tutorial de Introducción</a> para más información acerca de problemas de formateo específicos para los medios paginados.</dd>
+ <dd>Destinado material paginado y para documentos visibles en pantalla en modo de vista previa para impresión. Por favor, consulte la sección de <a href="/es/docs/Web/CSS/Paged_Media">medios paginados</a>, y la <a href="/es/docs/Web/CSS/Introducción/Media" title="https://developer.mozilla.org/en/CSS/Getting_Started/Media">sección de Media en el tutorial de Introducción</a> para más información acerca de problemas de formateo específicos para los medios paginados.</dd>
  <dt>screen</dt>
  <dd>Destinado a principalmente a pantallas de computadora a color.</dd>
  <dt>speech</dt>
  <dd>Destinado a sintetizadores de voz. Nota: CSS2 tenía un tipo de medio similar llamado 'aural' para este propósito. Vea el apéndice sobre hojas de estilo aural para más detalles.</dd>
 </dl>
 
-<div class="note"><strong>Nota:</strong> CSS2.1 y Media Queries 3 definió varios tipos de media adicionales (<code>tty</code>, <code>tv</code>, <code>projection</code>, <code>handheld</code>, <code>braille</code>, <code>embossed</code>, <code>aural</code>), pero fueron descontinuados en <a href="http://dev.w3.org/csswg/mediaqueries/#media-types">Media Queries 4</a> y no deben ser usados.</div>
+<div class="note"><strong>Nota:</strong> CSS2.1 y Media Queries 3 definió varios tipos de media adicionales (<code>tty</code>, <code>tv</code>, <code>projection</code>, <code>handheld</code>, <code>braille</code>, <code>embossed</code>, <code>aural</code>), pero fueron descontinuados en <a href="http://dev.w3.org/csswg/mediaqueries/#media-types">Media Queries 4</a> y no deben ser usados.</div>
 
 <h2 id="Media_features" name="Media_features">Características de Medios (media feature)</h2>
 
-<p>Cada <em>característica de medios</em> verifica una característica específica del navegador o dispositivo.</p>
+<p>Cada <em>característica de medios</em> verifica una característica específica del navegador o dispositivo.</p>
 
 <table>
  <thead>
@@ -48,37 +48,37 @@ translation_of: Web/CSS/@media
   <tr>
    <td><a href="/en-US/docs/Web/CSS/@media/width"><code>width</code></a></td>
    <td>Anchura del viewport</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/CSS/@media/height"><code>height</code></a></td>
    <td>Altura del viewport</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/CSS/@media/aspect-ratio"><code>aspect-ratio</code></a></td>
    <td>Relación de aspecto anchura-altura del viewport</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/CSS/@media/orientation"><code>orientation</code></a></td>
    <td>Orientación del viewport</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/CSS/@media/resolution"><code>resolution</code></a></td>
    <td>Densidad de pixeles del dispositivo</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/CSS/@media/scan"><code>scan</code></a></td>
    <td>Proceso de escaneo del dispositivo</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/CSS/@media/grid"><code>grid</code></a></td>
    <td>¿El dispositivo es un grid o un mapa de bits?</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/CSS/@media/update-frequency"><code>update-frequency</code></a></td>
@@ -98,22 +98,22 @@ translation_of: Web/CSS/@media
   <tr>
    <td><a href="/en-US/docs/Web/CSS/@media/color"><code>color</code></a></td>
    <td>Componente de número de bits por color del dispositivo, o cero si el dispositivo no es a color.</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/CSS/@media/color-index"><code>color-index</code></a></td>
    <td>Número de entradas en la tabla de búsqueda de color del dispositivo, o cero si el dispositivo no usa una tabla.</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/CSS/@media/display-mode">display-mode</a></code></td>
-   <td>Modo de visualización de la aplicación, según se especifique en la <a href="/es/docs/Web/Manifest#display">propiedad display</a> del manifiesto de la aplicación web.</td>
+   <td>Modo de visualización de la aplicación, según se especifique en la <a href="/es/docs/Web/Manifest#display">propiedad display</a> del manifiesto de la aplicación web.</td>
    <td>Definido en la <a href="http://w3c.github.io/manifest/#the-display-mode-media-feature">especificación del Manifiesto de Aplicación Web</a>.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/CSS/@media/monochrome"><code>monochrome</code></a></td>
    <td>Bits por pixel en el buffer de marco monocromático del dispositivo, o 0 si el dispositivo no es monocromático.</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/CSS/@media/inverted-colors"><code>inverted-colors</code></a></td>
@@ -168,7 +168,7 @@ translation_of: Web/CSS/@media
   <tr>
    <td><a href="/en-US/docs/Web/CSS/@media/-webkit-device-pixel-ratio"><code>-webkit-device-pixel-ratio</code></a> {{non-standard_inline}}</td>
    <td>Número de pixeles reales del dispositivo por pixel CSS</td>
-   <td>No estándar; Específica de WebKit/Blink. De ser posible, use la característica <code><a href="/en-US/docs/Web/CSS/@media/resolution">resolution</a> en su lugar</code>.</td>
+   <td>No estándar; Específica de WebKit/Blink. De ser posible, use la característica <code><a href="/en-US/docs/Web/CSS/@media/resolution">resolution</a> en su lugar</code>.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/CSS/@media/-webkit-transform-3d"><code>-webkit-transform-3d</code></a> {{non-standard_inline}}</td>

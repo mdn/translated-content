@@ -18,19 +18,19 @@ L'objet **`Intl.DisplayNames`** est un constructeur d'objets qui permettent de f
 
 ## Constructeur
 
-- [`Intl.DisplayNames()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames)
+- [`Intl.DisplayNames()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames)
   - : Crée un nouvel objet `Intl.DisplayNames`.
 
 ## Méthodes statiques
 
-- [`Intl.DisplayNames.supportedLocalesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/supportedLocalesOf)
+- [`Intl.DisplayNames.supportedLocalesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/supportedLocalesOf)
   - : Retourne un tableau contenant les langues fournies qui sont supportées sans avoir à se rabattre sur la langue locale par défaut au moment de l'exécution.
 
 ## Méthodes des instances
 
-- [`Intl.DisplayNames.prototype.of()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of)
+- [`Intl.DisplayNames.prototype.of()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of)
   - : Cette méthodes reçoit un `code` et retourne une chaine à partir sur la langue et les options fournies lors de l'instanciation de [`Intl.DisplayNames`](#).
-- [`Intl.DisplayNames.prototype.resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions)
+- [`Intl.DisplayNames.prototype.resolvedOptions()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions)
   - : Retourne un nouvel objet dont les propriété feflètent la langue et les options de formattage calculées lors de l'initialisation de l'objet.
 
 ## Exemples

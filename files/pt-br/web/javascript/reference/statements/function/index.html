@@ -7,7 +7,7 @@ translation_of: Web/JavaScript/Reference/Statements/function
 
 <p>A <strong>declaração function </strong>define uma função com os especificados parâmetros.<strong> </strong></p>
 
-<p>Você pode também definir funções usando o construtor {{jsxref("Function")}}  e uma {{jsxref("Operators/function", "function expression")}}.</p>
+<p>Você pode também definir funções usando o construtor {{jsxref("Function")}}  e uma {{jsxref("Operators/function", "function expression")}}.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -33,19 +33,19 @@ translation_of: Web/JavaScript/Reference/Statements/function
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Uma função criada com uma declaração function é um objeto <code>Function</code> e tem todas as propriedades, métodos e comportamentos dos objetos <code>Function</code>. Veja {{jsxref("Function")}} para informações detalhadas sobre as funções.</p>
+<p>Uma função criada com uma declaração function é um objeto <code>Function</code> e tem todas as propriedades, métodos e comportamentos dos objetos <code>Function</code>. Veja {{jsxref("Function")}} para informações detalhadas sobre as funções.</p>
 
 <p>Uma função pode também ser criada usando uma expressão (veja {{jsxref("Operators/function", "function expression")}}).</p>
 
-<p>Por padrão, funções retornam <code>undefined</code>. Para retornar qualquer outro valor, a função precisa ter uma instrução {{jsxref("Statements/return", "return")}} que especifica o valor para retorno.</p>
+<p>Por padrão, funções retornam <code>undefined</code>. Para retornar qualquer outro valor, a função precisa ter uma instrução {{jsxref("Statements/return", "return")}} que especifica o valor para retorno.</p>
 
 <h3 id="Criando_funções_condicionalmente.">Criando funções condicionalmente.</h3>
 
-<p>Funções podem ser condicionalmente declaradas, isso é, uma instrução de função pode ser aninhada dentro de uma instrução <code>if</code>. A maioria dos navegadores que não sejam Mozilla ir tratar essas declarações condicionais como uma incondicional <span class="short_text" id="result_box" lang="pt"><span class="hps">e criará a função se a condição for true ou não, veja </span></span><a href="http://kangax.github.io/nfe/#function-statements">esse artigo</a> para uma visão geral. Portanto, ela não pode ser usada para <span class="short_text" id="result_box" lang="pt"><span class="hps">criação</span> de <span class="hps">expressões de função</span> <span class="hps">condicional</span><span>.</span></span></p>
+<p>Funções podem ser condicionalmente declaradas, isso é, uma instrução de função pode ser aninhada dentro de uma instrução <code>if</code>. A maioria dos navegadores que não sejam Mozilla ir tratar essas declarações condicionais como uma incondicional <span class="short_text" id="result_box" lang="pt"><span class="hps">e criará a função se a condição for true ou não, veja </span></span><a href="http://kangax.github.io/nfe/#function-statements">esse artigo</a> para uma visão geral. Portanto, ela não pode ser usada para <span class="short_text" id="result_box" lang="pt"><span class="hps">criação</span> de <span class="hps">expressões de função</span> <span class="hps">condicional</span><span>.</span></span></p>
 
 <h3 id="Declarações_de_funções_hoisting">Declarações de funções hoisting</h3>
 
-<p>Declarações de funções em JavaScript <span id="result_box" lang="pt"><span class="hps">são</span> hoisted</span> à<span lang="pt"><span class="hps"> definição da função</span><span>.</span></span> Você pode usar uma função antes de tê-la declarado:</p>
+<p>Declarações de funções em JavaScript <span id="result_box" lang="pt"><span class="hps">são</span> hoisted</span> à<span lang="pt"><span class="hps"> definição da função</span><span>.</span></span> Você pode usar uma função antes de tê-la declarado:</p>
 
 <pre class="brush: js">hoisted(); // logs "foo"
 
@@ -113,55 +113,7 @@ var notHoisted = function() {
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.statements.function")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

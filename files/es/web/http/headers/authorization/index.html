@@ -5,7 +5,7 @@ translation_of: Web/HTTP/Headers/Authorization
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>La cabecera de petición <strong><code>Authorization</code></strong> contiene las credenciales para autenticar a un usuario en un servidor, usualmente luego de que el servidor haya respondido con un estado {{HTTPStatus("401")}} <code>Unauthorized</code> y la cabecera {{HTTPHeader("WWW-Authenticate")}}.</p>
+<p>La cabecera de petición <strong><code>Authorization</code></strong> contiene las credenciales para autenticar a un usuario en un servidor, usualmente luego de que el servidor haya respondido con un estado {{HTTPStatus("401")}} <code>Unauthorized</code> y la cabecera {{HTTPHeader("WWW-Authenticate")}}.</p>
 
 <table class="properties">
  <tbody>
@@ -28,7 +28,7 @@ translation_of: Web/HTTP/Headers/Authorization
 
 <dl>
  <dt>&lt;tipo&gt;</dt>
- <dd><a href="/en-US/docs/Web/HTTP/Authentication#Authentication_schemes">Tipo de Autenticación</a>. Un tipo común es <a href="/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme">"Basic"</a>. Otros tipos:
+ <dd><a href="/en-US/docs/Web/HTTP/Authentication#Authentication_schemes">Tipo de Autenticación</a>. Un tipo común es <a href="/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme">"Basic"</a>. Otros tipos:
  <ul>
   <li><a href="http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">IANA registry of Authentication schemes</a></li>
   <li><a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html">Authentification for AWS servers (<code>AWS4-HMAC-SHA256</code>)</a></li>
@@ -37,8 +37,8 @@ translation_of: Web/HTTP/Headers/Authorization
  <dt>&lt;credenciales&gt;</dt>
  <dd>Si se utiliza el esquema de la autenticación "Basic", las credenciales son construidas de esta forma:
  <ul>
-  <li>El usuario y la contraseña se combinan con dos puntos (<code>aladdin:opensesame</code>).</li>
-  <li>El string resultante está basado en la codificación <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64</a> (<code>YWxhZGRpbjpvcGVuc2VzYW1l</code>).</li>
+  <li>El usuario y la contraseña se combinan con dos puntos (<code>aladdin:opensesame</code>).</li>
+  <li>El string resultante está basado en la codificación <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64</a> (<code>YWxhZGRpbjpvcGVuc2VzYW1l</code>).</li>
  </ul>
 
  <div class="note">
@@ -52,7 +52,7 @@ translation_of: Web/HTTP/Headers/Authorization
 <pre>Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 </pre>
 
-<p>Ver también<a href="/en-US/docs/Web/HTTP/Authentication"> HTTP authentication</a> para ejemplos sobre cómo configurar servidores Apache o nginx para proteger su sitio con contraseña usando la autenticación básica HTTP.</p>
+<p>Ver también<a href="/en-US/docs/Web/HTTP/Authentication"> HTTP authentication</a> para ejemplos sobre cómo configurar servidores Apache o nginx para proteger su sitio con contraseña usando la autenticación básica HTTP.</p>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 

@@ -14,7 +14,7 @@ translation_of: Web/CSS/font-size-adjust
 
 <p>La propiedad {{ Cssxref("font-size-adjust") }} especifica que el tamaño de la fuente debería escogerse basándose en el tamaño de las minúsculas en lugar las mayúsculas.</p>
 
-<p>Esto resulta útil ya que la legibilidad de las fuentes, especialmente en el tamaño pequeño, está determinada por el tamaño de las letras minúsculas más que por las mayúsculas. Esto puede causar problemas cuando la primera opción en {{ Cssxref("font-family") }} no está disponible y su reemplazo tiene significativamente un aspecto distinto (el ratio entre las letras minúsculas y mayúsculas de la fuente).</p>
+<p>Esto resulta útil ya que la legibilidad de las fuentes, especialmente en el tamaño pequeño, está determinada por el tamaño de las letras minúsculas más que por las mayúsculas. Esto puede causar problemas cuando la primera opción en {{ Cssxref("font-family") }} no está disponible y su reemplazo tiene significativamente un aspecto distinto (el ratio entre las letras minúsculas y mayúsculas de la fuente).</p>
 
 <p>Para hacer esto de forma que sea compatible con los navegadores que no soportan {{ Cssxref("font-size-adjust") }}, se ha especificado de forma que sea el número por el que está multiplicada la propiedad {{ Cssxref("font-size") }}. Esto quiere decir que el valor especificado para la propiedad debería ser el valor de<em>ratio</em> o relación de aspecto entre las minúsculas y las mayúsculas de la fuente escogida como primera opción. Por ejemplo, si especificamos una fuente <code><a href="es/CSS/font-size">font-size</a>: 16px; <a href="es/CSS/font-size-adjust">font-size-adjust</a>: 0.5</code>, realmente estamos especificando que las letras minúsculas de la fuente deben tener <code>8px</code> de alto (16px multiplicado por 0.5).</p>
 
@@ -27,9 +27,9 @@ translation_of: Web/CSS/font-size-adjust
 <h3 id="Valores" name="Valores">Valores</h3>
 
 <dl>
- <dt><code>none</code> </dt>
+ <dt><code>none</code> </dt>
  <dd>Escoge el tamaño de la fuente basándose sólo en función de la propiedad {{ Cssxref("font-size") }}.</dd>
- <dt>&lt;número&gt; </dt>
+ <dt>&lt;número&gt; </dt>
  <dd>
  <p>Escoge el tamaño de la fuente de manera tal que su letra minúscula (determinada por la altura-x de la fuente) sea el<em>número</em> de veces el tamaño de {{ Cssxref("font-size") }}.</p>
 

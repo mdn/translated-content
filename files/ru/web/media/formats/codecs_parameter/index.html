@@ -7,66 +7,66 @@ translation_of: Web/Media/Formats/codecs_parameter
 
 <div>На базовом уровне, можно задать тип медиа файла, используя простой</div>
 
-<p>{{Glossary("MIME")}} тип, такой как  <code>video/mp4</code> или <code>audio/mpeg</code>. Однако, многие медиа типы, особенно те, которые поддерживают видео дорожки, более привлекательные из-за способности более точного описания содержащегося формата данных. Например, просто описывая видео в  файле <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MPEG-4</a>  с  MIME типом <code>video/mp4</code> ничего не скажет о том, какой формат в действительности он содержит.</p>
+<p>{{Glossary("MIME")}} тип, такой как  <code>video/mp4</code> или <code>audio/mpeg</code>. Однако, многие медиа типы, особенно те, которые поддерживают видео дорожки, более привлекательные из-за способности более точного описания содержащегося формата данных. Например, просто описывая видео в  файле <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MPEG-4</a>  с  MIME типом <code>video/mp4</code> ничего не скажет о том, какой формат в действительности он содержит.</p>
 
-<p>По этой причине в MIME тип может быть добавлен параметр  <code>codecs</code> , описывающий медиа контент, предоставляя более подробную информацию о содержимом. Эта информация может содержать, к примеру, профиль видео кодека, или тип, используемый аудио треками, и так далее.</p>
+<p>По этой причине в MIME тип может быть добавлен параметр  <code>codecs</code> , описывающий медиа контент, предоставляя более подробную информацию о содержимом. Эта информация может содержать, к примеру, профиль видео кодека, или тип, используемый аудио треками, и так далее.</p>
 
-<p>В этом руководстве кратко рассматривается синтаксис параметра <code>codecs </code>мультимедийного типа и его использование со строкой, описывающей  MIME тип, для предоставления подробных сведений о содержимом аудио- или видеоматериалов, помимо простого указания типа</p>
+<p>В этом руководстве кратко рассматривается синтаксис параметра <code>codecs </code>мультимедийного типа и его использование со строкой, описывающей  MIME тип, для предоставления подробных сведений о содержимом аудио- или видеоматериалов, помимо простого указания типа</p>
 
 <h2 id="Общий_синтаксис">Общий синтаксис</h2>
 
-<p>Основной медиатип определяется установкой строкового значения  (<code>audio</code>, <code>video</code>, и т.д.), после которого идёт символ слеша (<code>/</code>), затем указывается формат контейнера, который будет содержать информацию:</p>
+<p>Основной медиатип определяется установкой строкового значения  (<code>audio</code>, <code>video</code>, и т.д.), после которого идёт символ слеша (<code>/</code>), затем указывается формат контейнера, который будет содержать информацию:</p>
 
 <dl>
  <dt><code>audio/mpeg</code></dt>
- <dd>Аудио файл, использующий тип файла <a href="/en-US/docs/Web/Media/Formats/Containers#MPEG">MPEG</a> , к примеру, MP3.</dd>
+ <dd>Аудио файл, использующий тип файла <a href="/en-US/docs/Web/Media/Formats/Containers#MPEG">MPEG</a> , к примеру, MP3.</dd>
  <dt><code>video/ogg</code></dt>
- <dd>Видео файл, использующий тип файла  <a href="/en-US/docs/Web/Media/Formats/Containers#Ogg">Ogg</a>.</dd>
+ <dd>Видео файл, использующий тип файла  <a href="/en-US/docs/Web/Media/Formats/Containers#Ogg">Ogg</a>.</dd>
  <dt><code>video/mp4</code></dt>
- <dd>Видео файл, использующий тип файла  <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MPEG-4</a>.</dd>
+ <dd>Видео файл, использующий тип файла  <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MPEG-4</a>.</dd>
  <dt><code>video/quicktime</code></dt>
- <dd>Видео файл, Apple формата <a href="/en-US/docs/Web/Media/Formats/Containers#QuickTime">QuickTime</a>. Как уже отмечалось, этот формат обычно  используется в Сети, поскольку требует использования плагинов.</dd>
+ <dd>Видео файл, Apple формата <a href="/en-US/docs/Web/Media/Formats/Containers#QuickTime">QuickTime</a>. Как уже отмечалось, этот формат обычно  используется в Сети, поскольку требует использования плагинов.</dd>
 </dl>
 
-<p>Однако эти MIME являются не прозрачными. Все эти типы поддерживают несколько кодеков, и эти кодеки могут содержать несколько профилей, уровней , и других факторов конфигурирования. По этой причине указывается строковый параметр медиа типа <code>codecs</code>.</p>
+<p>Однако эти MIME являются не прозрачными. Все эти типы поддерживают несколько кодеков, и эти кодеки могут содержать несколько профилей, уровней , и других факторов конфигурирования. По этой причине указывается строковый параметр медиа типа <code>codecs</code>.</p>
 
-<p>Для его добавления, перед ним ставиться точка с запятой (<code>;</code>) , за которой следует строка  <code>codecs=</code> , в значении указывается формат содержимого файла. Некоторые типы носителей позволяют указывать только имена используемых кодеков, в то время как другие позволяют также указывать различные ограничения для этих кодеков. Вы можете указать несколько кодеков, разделяя их запятыми.</p>
+<p>Для его добавления, перед ним ставиться точка с запятой (<code>;</code>) , за которой следует строка  <code>codecs=</code> , в значении указывается формат содержимого файла. Некоторые типы носителей позволяют указывать только имена используемых кодеков, в то время как другие позволяют также указывать различные ограничения для этих кодеков. Вы можете указать несколько кодеков, разделяя их запятыми.</p>
 
 <dl>
  <dt><code>audio/ogg; codecs=vorbis</code></dt>
- <dd>Файл <a href="/en-US/docs/Web/Media/Formats/Containers#Ogg">Ogg</a> содержит  <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#Vorbis">Vorbis</a> аудио трек.</dd>
+ <dd>Файл <a href="/en-US/docs/Web/Media/Formats/Containers#Ogg">Ogg</a> содержит  <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#Vorbis">Vorbis</a> аудио трек.</dd>
  <dt><code>video/webm; codecs="vp8, vorbis"</code></dt>
- <dd>Файл <a href="/en-US/docs/Web/Media/Formats/Containers#WebM">WebM</a> , содержащий <a href="/en-US/docs/Web/Media/Formats/Video_codecs#VP8">VP8</a> видео и/или <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#Vorbis">Vorbis</a> аудио.</dd>
+ <dd>Файл <a href="/en-US/docs/Web/Media/Formats/Containers#WebM">WebM</a> , содержащий <a href="/en-US/docs/Web/Media/Formats/Video_codecs#VP8">VP8</a> видео и/или <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#Vorbis">Vorbis</a> аудио.</dd>
  <dt><code>video/mp4; codecs="avc1.4d002a"</code></dt>
- <dd>Файл <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MPEG-4</a> , содержащий  <a href="/en-US/docs/Web/Media/Formats/Video_codecs#AVC_(H.264)">AVC</a> (H.264) видео, Основной профиль, Уровень 4.2.</dd>
+ <dd>Файл <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MPEG-4</a> , содержащий  <a href="/en-US/docs/Web/Media/Formats/Video_codecs#AVC_(H.264)">AVC</a> (H.264) видео, Основной профиль, Уровень 4.2.</dd>
 </dl>
 
-<p>Как и в случае с  любым параметром MIME типа , <code>codecs</code> должен заменяться на <code>codecs*</code> (обратите внимание на символ звёздочки, <code>*</code>) , если какое-либо из свойств кодека использует специальные символы для указания дополнительной информации (языковые отметки, кодировка байтов в шестнадцатеричные значения и т.д.), входящие в {{RFC(2231, "MIME Parameter Value and Encoded Word Extensions", 4)}}. Можно использовать функции JavaScript {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} для кодирования списка параметров, можно использовать   {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} для декодирования предварительно закодированного списка параметров.</p>
+<p>Как и в случае с  любым параметром MIME типа , <code>codecs</code> должен заменяться на <code>codecs*</code> (обратите внимание на символ звёздочки, <code>*</code>) , если какое-либо из свойств кодека использует специальные символы для указания дополнительной информации (языковые отметки, кодировка байтов в шестнадцатеричные значения и т.д.), входящие в {{RFC(2231, "MIME Parameter Value and Encoded Word Extensions", 4)}}. Можно использовать функции JavaScript {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} для кодирования списка параметров, можно использовать   {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} для декодирования предварительно закодированного списка параметров.</p>
 
 <div class="blockIndicator note">
-<p> Когда используется параметр <code>codecs</code>, указанный список кодеков должен включать каждый кодек, используемый для содержимого файла Список также может содержать кодеки, которых нет в файле.</p>
+<p> Когда используется параметр <code>codecs</code>, указанный список кодеков должен включать каждый кодек, используемый для содержимого файла Список также может содержать кодеки, которых нет в файле.</p>
 </div>
 
 <h2 id="Свойства_кодеков_для_контейнеров">Свойства кодеков для контейнеров</h2>
 
-<p>Контейнеры ниже поддерживают расширенные свойства кодеков в своих параметрах <code>codecs</code> :</p>
+<p>Контейнеры ниже поддерживают расширенные свойства кодеков в своих параметрах <code>codecs</code> :</p>
 
 <div class="index">
 <ul>
- <li>{{anch("ISO-BMFF", "3GP")}}</li>
- <li>{{anch("AV1")}}</li>
- <li>{{anch("ISO-BMFF", "ISO BMFF")}}</li>
- <li>{{anch("ISO-BMFF", "MPEG-4")}}</li>
- <li>{{anch("ISO-BMFF", "QuickTime")}}</li>
- <li>{{anch("WebM")}}</li>
+ <li><a href="#iso-bmff">3GP</a></li>
+ <li><a href="#av1">AV1</a></li>
+ <li><a href="#iso-bmff">ISO BMFF</a></li>
+ <li><a href="#iso-bmff">MPEG-4</a></li>
+ <li><a href="#iso-bmff">QuickTime</a></li>
+ <li><a href="#webm">WebM</a></li>
 </ul>
 </div>
 
-<p>Несколько ссылок выше входят в одину и то же секцию, потому, что все медиатипы основаны на файловом формате  ISO Base Media File Format (ISO BMFF), поэтому они  используют тот же синтаксис.</p>
+<p>Несколько ссылок выше входят в одину и то же секцию, потому, что все медиатипы основаны на файловом формате  ISO Base Media File Format (ISO BMFF), поэтому они  используют тот же синтаксис.</p>
 
 <h3 id="AV1">AV1</h3>
 
-<p>Синтаксис параметра <code>codecs</code> для AV1 определяется спецификацией <a href="https://aomediacodec.github.io/av1-isobmff">AV1 Codec ISO Media File Format Binding</a> , секция 5: <a href="https://aomediacodec.github.io/av1-isobmff/#codecsparam">Строки параметра codecs </a>.</p>
+<p>Синтаксис параметра <code>codecs</code> для AV1 определяется спецификацией <a href="https://aomediacodec.github.io/av1-isobmff">AV1 Codec ISO Media File Format Binding</a> , секция 5: <a href="https://aomediacodec.github.io/av1-isobmff/#codecsparam">Строки параметра codecs </a>.</p>
 
 <pre>av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]</pre>
 
@@ -84,7 +84,7 @@ translation_of: Web/Media/Formats/codecs_parameter
   <tr>
    <td><code>P</code></td>
    <td>
-    <p>Однознаковый номер профиля:</p>
+    <p>Однознаковый номер профиля:</p>
 
     <table class="standard-table">
      <caption>AV1 номера профилей</caption>
@@ -97,11 +97,11 @@ translation_of: Web/Media/Formats/codecs_parameter
      <tbody>
       <tr>
        <td>0</td>
-       <td>"Основной" профиль; поддерживает  YUV 4:2:0 или одноцветный поток битов с глубиной  8 или 10 бит на компонент.</td>
+       <td>"Основной" профиль; поддерживает  YUV 4:2:0 или одноцветный поток битов с глубиной  8 или 10 бит на компонент.</td>
       </tr>
       <tr>
        <td>1</td>
-       <td>"Высокий" профиль добавляет поддержку выбора цветности  4:4:4.</td>
+       <td>"Высокий" профиль добавляет поддержку выбора цветности  4:4:4.</td>
       </tr>
       <tr>
        <td>2</td>
@@ -113,7 +113,7 @@ translation_of: Web/Media/Formats/codecs_parameter
   </tr>
   <tr>
    <td><code>LL</code></td>
-   <td>Двухзначный номер уровня, который преобразуется в формат X.Y, где<code>X = 2 + (LL &gt;&gt; 2)</code> , и  <code>Y = LL &amp; 3</code>. Подробнее <a href="https://aomediacodec.github.io/av1-spec/#levels">Дополнение A, секция 3</a> в спецификации  AV1 .</td>
+   <td>Двухзначный номер уровня, который преобразуется в формат X.Y, где<code>X = 2 + (LL &gt;&gt; 2)</code> , и  <code>Y = LL &amp; 3</code>. Подробнее <a href="https://aomediacodec.github.io/av1-spec/#levels">Дополнение A, секция 3</a> в спецификации  AV1 .</td>
   </tr>
   <tr>
    <td><code>T</code></td>
@@ -257,12 +257,12 @@ translation_of: Web/Media/Formats/codecs_parameter
  <dt><code>cccc[.pp]*</code> (Generic ISO BMFF)</dt>
  <dd>Where <code>cccc</code> is the four-character ID for the codec and <code>pp</code> is where zero or more two-character encoded property values go.</dd>
  <dt><code>mp4a.oo[.A]</code> (MPEG-4 audio)</dt>
- <dd>Where <code>oo</code> is the Object Type Indication value describing the contents of the media more precisely and <code>A</code> is the one-digit <em>audio</em> OTI. The possible values for the OTI can be found on the MP4 Registration Authority web site's <a href="http://mp4ra.org/#/object_types">Object Types page</a>. For example, Opus audio in an MP4 file is <code>mp4a.ad</code>. For further details, see {{anch("MPEG-4 audio")}}.</dd>
+ <dd>Where <code>oo</code> is the Object Type Indication value describing the contents of the media more precisely and <code>A</code> is the one-digit <em>audio</em> OTI. The possible values for the OTI can be found on the MP4 Registration Authority web site's <a href="http://mp4ra.org/#/object_types">Object Types page</a>. For example, Opus audio in an MP4 file is <code>mp4a.ad</code>. For further details, see <a href="#mpeg-4_audio">MPEG-4 audio</a>.</dd>
  <dt><code>mp4v.oo[.V]</code> (MPEG-4 video)</dt>
  <dd>Here, <code>oo</code> is again the OTI describing the contents more precisely, while <code>V</code> is the one-digit <em>video</em> OTI.</dd>
  <dt><code>avc1.oo[.PPCCLL]</code> (AVC video)</dt>
  <dd>
- <p><code>oo</code> is the OTI describing the contents, while <code>PPCCLL</code> is six hexadecimal digits specifying the profile number (<code>PP</code>), constraint set flags (<code>CC</code>), and level (<code>LL</code>). See {{anch("AVC profiles")}} for the possible values of <code>PP</code>.</p>
+ <p><code>oo</code> is the OTI describing the contents, while <code>PPCCLL</code> is six hexadecimal digits specifying the profile number (<code>PP</code>), constraint set flags (<code>CC</code>), and level (<code>LL</code>). See <a href="#avc_profiles">AVC profiles</a> for the possible values of <code>PP</code>.</p>
 
  <p>The constraint set flags byte is comprised of one-bit Boolean flags, with the most significant bit being referred to as flag 0 (or <code>constraint_set0_flag</code>, in some resources), and each successive bit being numbered one higher. Currently, only flags 0 through 2 are used; the other five bits <em>must</em> be zero. The meanings of the flags vary depending on the profile being used.</p>
 
@@ -310,7 +310,7 @@ translation_of: Web/Media/Formats/codecs_parameter
   </tr>
   <tr>
    <td><strong>High Profile (HiP)</strong><br>
-    Currently, HiP is the primary profile used for broadcast and disc-based HD video; it's used both for HD TV broadcasts and for  Blu-Ray video.</td>
+    Currently, HiP is the primary profile used for broadcast and disc-based HD video; it's used both for HD TV broadcasts and for  Blu-Ray video.</td>
    <td><code>64</code></td>
    <td><code>00</code></td>
   </tr>
@@ -498,7 +498,7 @@ translation_of: Web/Media/Formats/codecs_parameter
    <td>Main, Scalable, Speech, LD</td>
   </tr>
   <tr>
-   <td><code>10</code> – <code>11</code></td>
+   <td><code>10</code> – <code>11</code></td>
    <td><em>Reserved</em></td>
    <td></td>
   </tr>
@@ -917,7 +917,7 @@ translation_of: Web/Media/Formats/codecs_parameter
        <td>SMPTE EG 432 (Digital Source Processing: Color Processing for D-Cinema). Engineering guideline making color signal decoding recommendations for digital movies.</td>
       </tr>
       <tr>
-       <td><code>13</code> – <code>21</code></td>
+       <td><code>13</code> – <code>21</code></td>
        <td><em>Reserved for future use by ITU-T or ISO/IEC</em></td>
       </tr>
       <tr>
@@ -925,7 +925,7 @@ translation_of: Web/Media/Formats/codecs_parameter
        <td>EBU Tech 3213-E</td>
       </tr>
       <tr>
-       <td><code>23</code> – <code>255</code></td>
+       <td><code>23</code> – <code>255</code></td>
        <td><em>Reserved for future use by ITU-T or ISO/IEC</em></td>
       </tr>
      </tbody>

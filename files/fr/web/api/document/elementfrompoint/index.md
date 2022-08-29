@@ -1,60 +1,79 @@
 ---
-title: document.elementFromPoint
+title: Document.elementFromPoint()
 slug: Web/API/Document/elementFromPoint
-tags:
-  - Référence_du_DOM_Gecko
 translation_of: Web/API/DocumentOrShadowRoot/elementFromPoint
 translation_of_original: Web/API/Document/elementFromPoint
 original_slug: Web/API/DocumentOrShadowRoot/elementFromPoint
+browser-compat: api.Document.elementFromPoint
 ---
-{{ ApiRef() }}
+{{APIRef("DOM")}}
 
-### Résumé
+La méthode **`elementFromPoint()`**, rattachée à l'interface  [`Document`](/fr/docs/Web/API/Document), renvoie un objet [`Element`](/fr/docs/Web/API/Element) correspondant à l'élément de plus au niveau situé aux coordonnées indiquées en arguments (relativement à la zone d'affichage (<i lang="en">viewport</i>)).
 
-Renvoie l'élément visible au point donné, spécifié relativement au point supérieur gauche visible dans le document.
+Si l'élément placé au point indiqué appartient à un autre document (par exemple le document situé dans un élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)), c'est l'élément parent (par exemple l'élément `<iframe>` même) qui est renvoyé. Si l'élément situé au point indiqué est du contenu anonyme (par exemple les barres de défilement d'une boîte de texte), c'est le premier élément ancêtre non anonyme (par exemple la boîte de texte) qui est renvoyée.
 
-### Syntaxe
+Les éléments pour lesquels [`pointer-events`](/fr/docs/Web/CSS/pointer-events) vaut `none` seront ignorés et ce sera l'élément situé en dessous sera renvoyé.
 
-    element = document.elementFromPoint(x,y);
+Si la méthode est exécutée sur un autre document (par exemple dans le sous-document chargé dans un élément `<iframe>`), les coordonnées seront relatives au document où la méthode est appelée.
 
-where
+Si le point indiqué est situé en dehors des limites visibles du document ou que l'une des coordonnées est négative, le résultat fourni par la méthode sera `null`.
 
-- `element` est un objet [element](fr/DOM/element).
-- `x` et `y` spécifient les coordonnées à vérifier.
+Pour connaître la position précise à l'intérieur de l'élément, on utilisera la méthode [`Document.caretPositionFromPoint()`](/fr/docs/Web/API/Document/caretPositionFromPoint).
 
-### Exemple
+## Syntaxe
 
-```html
-<html>
-<head>
-<title>Exemple d'utilisation d'elementFromPoint</title>
-
-<script type="text/javascript">
-
-function changeColor(newColor)
-{
- elem = document.elementFromPoint(2, 2);
- elem.style.color = newColor;
-}
-</script>
-</head>
-
-<body>
-<p id="para1">Un peu de texte ici</p>
-<button onclick="changeColor('blue');">bleu</button>
-<button onclick="changeColor('red');">rouge</button>
-</body>
-</html>
+```js
+elementFromPoint(x, y)
 ```
 
-### Notes
+### Paramètres
 
-Si l'élément au point spécifié appartient à un autre document (par exemple, les sous-document d'un iframe), l'élément dans le DOM du document appelant (l'iframe lui-même) est renvoyé. Si l'élément au point donné est anonyme ou du contenu généré par XBL, comme la barre de défilement d'une boîte de texte, le premier élément parent non anonyme (par exemple, la boîte de texte) est renvoyé.
+- `x`
+  - : L'abscisse du point relativement au bord gauche de la zone d'affichage ([<i lang="en">viewport</i>](/fr/docs/Glossary/Viewport)) courante.
+- `y`
+  - : L'ordonnée du point relativement au bord haut de la zone d'affichage courante.
 
-Si le point spécifié est en dehors de la portion visible du document ou que l'une ou l'autre des coordonnées est négative, le résultat est `NULL`.
+### Valeur de retour
 
-{{ Note("Les appelants qui sont des documents XUL devraient attendre que l\'évènement <code>onload</code> se soit déclenché avant d\'appeler cette méthode.") }}
+L'élément (l'objet [`Element`](/fr/docs/Web/API/Element)) de plus haut niveau situé aux coordonnées indiquées.
 
-### Spécification
+## Exemples
 
-- Spécification préliminaire&nbsp;: [`elementFromPoint`](http://dev.w3.org/csswg/cssom/#documentlayout-elementfrompoint)
+Dans cet exemple, on crée deux boutons qui permettent de définir la couleur du texte du paragraphe situé aux coordonnées `(2, 2)`.
+
+### JavaScript
+
+```js
+function changeColor(nouvelleCouleur) {
+  elem = document.elementFromPoint(2, 2);
+  elem.style.color = nouvelleCouleur;
+}
+```
+
+La méthode `changeColor()` récupère l'élément situé au point indiqué puis modifie la valeur de la propriété [`color`](/fr/docs/Web/CSS/color) avec la nouvelle couleur passée en argument.
+
+### HTML
+
+```html
+<p id="para1">Un texte ici</p>
+<button onclick="changeColor('blue');">Bleu</button>
+<button onclick="changeColor('red');">Rouge</button>
+```
+
+Ce fragment HTML fournit le paragraphe dont la couleur sera modifiée ainsi que deux boutons pour changer la couleur (un pour le bleu et l'autre pour le rouge).
+
+### Résultat
+
+{{EmbedLiveSample('', 400, 120)}}
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- [`Document.elementsFromPoint()`](/fr/docs/Web/API/Document/elementsFromPoint)

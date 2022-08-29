@@ -7,7 +7,7 @@ translation_of: Web/API/Window/location
 
 <p>O <strong><code>Window.location </code></strong>é uma propriedade de leitura que retorna um objeto {{domxref("Location")}} com informações de localização do documento atual.<br>
  <br>
- Embora <code>Window.location </code>seja apenas um objeto de leitura de localização, você pode também atribuir uma {{domxref("DOMString")}} para ele. Isto significa que você pode trabalhar com <code>location </code>como se fosse uma string na maioria dos casos: <code>location = 'http://www.exemplo.com'</code> é um sinônimo de <code>location.href = 'http://www.exemplo.com'</code>.</p>
+ Embora <code>Window.location </code>seja apenas um objeto de leitura de localização, você pode também atribuir uma {{domxref("DOMString")}} para ele. Isto significa que você pode trabalhar com <code>location </code>como se fosse uma string na maioria dos casos: <code>location = 'http://www.exemplo.com'</code> é um sinônimo de <code>location.href = 'http://www.exemplo.com'</code>.</p>
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
@@ -43,16 +43,16 @@ location = "http://www.mozilla.org";
 }
 </pre>
 
-<div class="note"><strong>Nota: </strong>O exemplo acima funciona em situações onde <code>location.hash</code> não precisa ser retida. Contudo, em navegadores baseados em Gecko, definindo <code>location.pathname</code> desta forma irá apagar qualquer informação em <code>location.hash</code>, enquanto que no WebKit(e possivelmente em outro navegador), definir o pathname não vai alterar  o hash. Se você precisa mudar o pathname mas manter o hash como é, use o <code>método replace(), </code><span id="result_box" lang="pt"><span class="hps">que deve funcionar</span> <span class="hps">de forma consistente</span> <span class="hps">em todos os navegadores</span><span>.</span></span></div>
+<div class="note"><strong>Nota: </strong>O exemplo acima funciona em situações onde <code>location.hash</code> não precisa ser retida. Contudo, em navegadores baseados em Gecko, definindo <code>location.pathname</code> desta forma irá apagar qualquer informação em <code>location.hash</code>, enquanto que no WebKit(e possivelmente em outro navegador), definir o pathname não vai alterar  o hash. Se você precisa mudar o pathname mas manter o hash como é, use o <code>método replace(), </code><span id="result_box" lang="pt"><span class="hps">que deve funcionar</span> <span class="hps">de forma consistente</span> <span class="hps">em todos os navegadores</span><span>.</span></span></div>
 
 <h3 id="Exemplo_4_Mostrar_as_propriedades_da_URL_atual_em_um_alerta">Exemplo #4: Mostrar as propriedades da URL atual em um alerta:</h3>
 
 <pre class="brush: js">function showLoc() {
-  var oLocation = location, aLog = ["Property (Typeof): Value", "location (" + (typeof oLocation) + "): " + oLocation ];
-  for (var sProp in oLocation){
-    aLog.push(sProp + " (" + (typeof oLocation[sProp]) + "): " +  (oLocation[sProp] || "n/a"));
-  }
-  alert(aLog.join("\n"));
+  var oLocation = location, aLog = ["Property (Typeof): Value", "location (" + (typeof oLocation) + "): " + oLocation ];
+  for (var sProp in oLocation){
+    aLog.push(sProp + " (" + (typeof oLocation[sProp]) + "): " +  (oLocation[sProp] || "n/a"));
+  }
+  alert(aLog.join("\n"));
 }
 
 // no html: &lt;button onclick="showLoc();"&gt;Mostrar propriedades de localização&lt;/button&gt;
@@ -78,23 +78,23 @@ location = "http://www.mozilla.org";
 &lt;title&gt;MDN Exemplo&lt;/title&gt;
 &lt;script&gt;
 function showNode (oNode) {
-  var nLeft = 0, nTop = 0;
-  for (var oItNode = oNode; oItNode; nLeft += oItNode.offsetLeft, nTop += oItNode.offsetTop, oItNode = oItNode.offsetParent);
-  document.documentElement.scrollTop = nTop;
-  document.documentElement.scrollLeft = nLeft;
+  var nLeft = 0, nTop = 0;
+  for (var oItNode = oNode; oItNode; nLeft += oItNode.offsetLeft, nTop += oItNode.offsetTop, oItNode = oItNode.offsetParent);
+  document.documentElement.scrollTop = nTop;
+  document.documentElement.scrollLeft = nLeft;
 }
 
 function showBookmark (sBookmark, bUseHash) {
-  if (arguments.length === 1 || bUseHash) { location.hash = sBookmark; return; }
-  var oBookmark = document.querySelector(sBookmark);
-  if (oBookmark) { showNode(oBookmark); }
+  if (arguments.length === 1 || bUseHash) { location.hash = sBookmark; return; }
+  var oBookmark = document.querySelector(sBookmark);
+  if (oBookmark) { showNode(oBookmark); }
 }
 &lt;/script&gt;
 &lt;style&gt;
 span.intLink {
-    cursor: pointer;
-    color: #0000ff;
-    text-decoration: underline;
+    cursor: pointer;
+    color: #0000ff;
+    text-decoration: underline;
 }
 &lt;/style&gt;
 &lt;/head&gt;
@@ -127,48 +127,48 @@ span.intLink {
 &lt;/html&gt;
 </pre>
 
-<div class="note"><strong>Nota: </strong>A função <code>showNode</code> é também um exemplo de uso do ciclo<code> <a href="/en/JavaScript/Reference/Statements/for" title="en/JavaScript/Reference/Statements/for">for</a> sem uma section statement. </code>Neste  caso <strong>o ponto e vírgula é sempre colocado imediatamente depois da declaração do ciclo.</strong></div>
+<div class="note"><strong>Nota: </strong>A função <code>showNode</code> é também um exemplo de uso do ciclo<code> <a href="/en/JavaScript/Reference/Statements/for" title="en/JavaScript/Reference/Statements/for">for</a> sem uma section statement. </code>Neste  caso <strong>o ponto e vírgula é sempre colocado imediatamente depois da declaração do ciclo.</strong></div>
 
 <p>... a mesma coisa mas com uma animação de rolagem na página:</p>
 
 <pre class="brush: js">var showBookmark = (function () {
-  var  _useHash, _scrollX, _scrollY, _nodeX, _nodeY, _itFrame, _scrollId = -1, _bookMark,
-       /*
-       * nDuration: the duration in milliseconds of each frame
-       * nFrames: number of frames for each scroll
-       */
-       nDuration = 200, nFrames = 10;
+  var  _useHash, _scrollX, _scrollY, _nodeX, _nodeY, _itFrame, _scrollId = -1, _bookMark,
+       /*
+       * nDuration: the duration in milliseconds of each frame
+       * nFrames: number of frames for each scroll
+       */
+       nDuration = 200, nFrames = 10;
 
-  function _next () {
-    if (_itFrame &gt; nFrames) { clearInterval(_scrollId); _scrollId = -1; return; }
-    _isBot = true;
-    document.documentElement.scrollTop = Math.round(_scrollY + (_nodeY - _scrollY) * _itFrame / nFrames);
-    document.documentElement.scrollLeft = Math.round(_scrollX + (_nodeX - _scrollX) * _itFrame / nFrames);
-    if (_useHash &amp;&amp; _itFrame === nFrames) { location.hash = _bookMark; }
-    _itFrame++;
-  }
+  function _next () {
+    if (_itFrame &gt; nFrames) { clearInterval(_scrollId); _scrollId = -1; return; }
+    _isBot = true;
+    document.documentElement.scrollTop = Math.round(_scrollY + (_nodeY - _scrollY) * _itFrame / nFrames);
+    document.documentElement.scrollLeft = Math.round(_scrollX + (_nodeX - _scrollX) * _itFrame / nFrames);
+    if (_useHash &amp;&amp; _itFrame === nFrames) { location.hash = _bookMark; }
+    _itFrame++;
+  }
 
-  function _chkOwner () {
-    if (_isBot) { _isBot = false; return; }
-    if (_scrollId &gt; -1) { clearInterval(_scrollId); _scrollId = -1; }
-  }
+  function _chkOwner () {
+    if (_isBot) { _isBot = false; return; }
+    if (_scrollId &gt; -1) { clearInterval(_scrollId); _scrollId = -1; }
+  }
 
-  if (window.addEventListener) { window.addEventListener("scroll", _chkOwner, false); }
-  else if (window.attachEvent) { window.attachEvent("onscroll", _chkOwner); }
+  if (window.addEventListener) { window.addEventListener("scroll", _chkOwner, false); }
+  else if (window.attachEvent) { window.attachEvent("onscroll", _chkOwner); }
 
-  return function (sBookmark, bUseHash) {
-    _scrollY = document.documentElement.scrollTop;
-    _scrollX = document.documentElement.scrollLeft;
-    _bookMark = sBookmark;
-    _useHash = arguments.length === 1 || bUseHash;
-    for (
-      var nLeft = 0, nTop = 0, oNode = document.querySelector(sBookmark);
-      oNode;
-      nLeft += oNode.offsetLeft, nTop += oNode.offsetTop, oNode = oNode.offsetParent
-    );
-    _nodeX = nLeft, _nodeY = nTop, _itFrame = 1;
-    if (_scrollId === -1) { _scrollId = setInterval(_next, Math.round(nDuration / nFrames)); }
-  };
+  return function (sBookmark, bUseHash) {
+    _scrollY = document.documentElement.scrollTop;
+    _scrollX = document.documentElement.scrollLeft;
+    _bookMark = sBookmark;
+    _useHash = arguments.length === 1 || bUseHash;
+    for (
+      var nLeft = 0, nTop = 0, oNode = document.querySelector(sBookmark);
+      oNode;
+      nLeft += oNode.offsetLeft, nTop += oNode.offsetTop, oNode = oNode.offsetParent
+    );
+    _nodeX = nLeft, _nodeY = nTop, _itFrame = 1;
+    if (_scrollId === -1) { _scrollId = setInterval(_next, Math.round(nDuration / nFrames)); }
+  };
 })();
 </pre>
 
@@ -196,71 +196,7 @@ span.intLink {
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>window.location.origin</code></td>
-   <td>30.0.1599.101 (possibly earlier)</td>
-   <td>{{CompatGeckoDesktop("21.0")}}</td>
-   <td>11<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>7 (possibly earlier, see webkit bug 46558)</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>window.location.origin</code></td>
-   <td>30.0.1599.101 (possibly earlier)</td>
-   <td>{{CompatGeckoMobile("21.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td><span style="font-size: 12px; line-height: 18px;">7 (possibly earlier, see webkit bug </span><span style="font-size: 12px; line-height: 18px;">46558)</span></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] In Internet Explorer 11 on Windows 10 window.location.origin is undefined due to a bug, see <a href="https://connect.microsoft.com/IE/feedback/details/1763802/location-origin-is-undefined-in-ie-11-on-windows-10-but-works-on-windows-7">https://connect.microsoft.com/IE/feedback/details/1763802/location-origin-is-undefined-in-ie-11-on-windows-10-but-works-on-windows-7</a>.</p>
+{{Compat("api.Window.location")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

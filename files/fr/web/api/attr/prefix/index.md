@@ -16,7 +16,9 @@ La propriété **`Attr.prefix`** en lecture seule renvoie le préfixe de l'espac
 
 ## Syntaxe
 
-    string = attribute.prefix
+```js
+string = attribute.prefix
+```
 
 ## Exemples
 
@@ -32,13 +34,11 @@ Cela ne fonctionnera que lorsqu'un analyseur conscient de l'espace de noms est u
 
 ## Spécifications
 
-| Spécification                                                            | Statut                   | Commentaire         |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName("DOM4", "#dom-attr-prefix", "Attr.prefix")}} | {{Spec2("DOM4")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Attr.prefix")}}
+{{Compat}}
 
 ## Voir également
 

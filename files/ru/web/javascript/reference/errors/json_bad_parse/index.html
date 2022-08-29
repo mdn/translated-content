@@ -54,11 +54,11 @@ SyntaxError: JSON.parse: unexpected non-whitespace character after JSON data
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="JSON.parse()_не_допускает_запятые"><code>JSON.parse()</code> не допускает запятые</h3>
+<h3 id="JSON.parse()_не_допускает_запятые"><code>JSON.parse()</code> не допускает запятые</h3>
 
 <p>Метод JSON.parse() не разрешает использование, так называемых, trailling запятых.</p>
 
-<p>Обе строки выдадут ошибку типа SyntaxError:</p>
+<p>Обе строки выдадут ошибку типа SyntaxError:</p>
 
 <pre class="brush: js example-bad">JSON.parse('[1, 2, 3, 4,]');
 JSON.parse('{"foo": 1,}');
@@ -66,12 +66,12 @@ JSON.parse('{"foo": 1,}');
 // at line 1 column 14 of the JSON data
 </pre>
 
-<p>Необходимо убрать последние запятые в строках и тогда ошибки не будет:</p>
+<p>Необходимо убрать последние запятые в строках и тогда ошибки не будет:</p>
 
 <pre class="brush: js example-good">JSON.parse('[1, 2, 3, 4]');
 JSON.parse('{"foo": 1}');</pre>
 
-<h3 id="Названия_свойств_должны_быть_в_двойных_кавычках">Названия свойств должны быть в двойных кавычках</h3>
+<h3 id="Названия_свойств_должны_быть_в_двойных_кавычках">Названия свойств должны быть в двойных кавычках</h3>
 
 <p>Вы не можете использовать одинарные кавычки в именах свойств. Например, 'foo'.</p>
 
@@ -96,7 +96,7 @@ JSON.parse('{"foo": 1.}');
 // at line 1 column 2 of the JSON data
 </pre>
 
-<p>Вместо этого напишите просто 1 без нуля и используйте хотя бы одну цифру после точки:</p>
+<p>Вместо этого напишите просто 1 без нуля и используйте хотя бы одну цифру после точки:</p>
 
 <pre class="brush: js example-good">JSON.parse('{"foo": 1}');
 JSON.parse('{"foo": 1.0}');

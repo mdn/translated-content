@@ -17,7 +17,7 @@ translation_of: Web/CSS/border-block-width
 
 {{EmbedInteractiveExample("pages/css/border-block-width.html")}}
 
-他の方向の境界の幅は {{cssxref("border-inline-width")}} で設定でき、これは {{cssxref("border-inline-start-width")}} および {{cssxref("border-inline-end-width")}} を設定します。
+他の方向の境界の幅は {{cssxref("border-inline-width")}} で設定でき、これは {{cssxref("border-inline-start-width")}} および {{cssxref("border-inline-end-width")}} を設定します。
 
 ## 構文
 

@@ -118,4 +118,3 @@ oscillator.channelCount;
 ## Véase también
 
 - [Usando Web Audio API](/es/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-

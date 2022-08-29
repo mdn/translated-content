@@ -36,9 +36,9 @@ Vous pouvez mettre à jour le code suivant pour parvenir à la solution :
 
 Voyons maintenant un autre exercice. Ici, vous avez une chaîne de caractères sur laquelle travailler. Vous devrez :
 
-1.  Convertir la chaîne de caractères en un tableau tout en retirant les caractères `+` lors de la conversion. Stockez ensuite le résultat dans une variable intitulée `myArray`.
-2.  Stocker la longueur du tableau dans une variable intitulée `arrayLength`.
-3.  Stocker le dernier élément du tableau dans une variable intitulée `lastItem`.
+1. Convertir la chaîne de caractères en un tableau tout en retirant les caractères `+` lors de la conversion. Stockez ensuite le résultat dans une variable intitulée `myArray`.
+2. Stocker la longueur du tableau dans une variable intitulée `arrayLength`.
+3. Stocker le dernier élément du tableau dans une variable intitulée `lastItem`.
 
 Essayez de mettre à jour le code qui suit pour parvenir à la solution :
 
@@ -50,10 +50,10 @@ Essayez de mettre à jour le code qui suit pour parvenir à la solution :
 
 Dans ce dernier exercice, vous disposez d'un tableau de départ et vous devrez effectuer les opérations inverses de l'exercice précédent. Voici ce qu'il faudra réaliser :
 
-1.  Retirer le dernier élément du tableau.
-2.  Ajouter deux nouveaux noms à la fin du tableau.
-3.  Parcourir chaque élément du tableau et ajouter son indice, entre parenthèses, après le nom (par exemple `Ryu (0)`). Note : ceci n'est pas indiqué dans l'article sur les tableaux, il vous faudra rechercher comment faire.
-4.  Enfin, fusionner les éléments du tableau dans une chaîne de caractères intitulée `myString` en utilisant "` - `" comme séparateur.
+1. Retirer le dernier élément du tableau.
+2. Ajouter deux nouveaux noms à la fin du tableau.
+3. Parcourir chaque élément du tableau et ajouter son indice, entre parenthèses, après le nom (par exemple `Ryu (0)`). Note : ceci n'est pas indiqué dans l'article sur les tableaux, il vous faudra rechercher comment faire.
+4. Enfin, fusionner les éléments du tableau dans une chaîne de caractères intitulée `myString` en utilisant "` - `" comme séparateur.
 
 Essayez de mettre à jour le code qui suit pour parvenir à la solution :
 
@@ -67,8 +67,8 @@ Vous pouvez vous exercer sur ces exemples grâce aux éditeurs interactifs de la
 
 Si vous souhaitez faire évaluer votre travail ou si vous êtes bloqué·e et que vous voulez demander de l'aide :
 
-1.  Enregistrez votre travail dans un éditeur en ligne tel que [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) pour le partager. Vous pouvez écrire le code vous-même ou utiliser les fichiers téléchargeables indiqués comme point de départ.
-2.  Rédigez un message pour la demande d'aide ou d'évaluation sur [la catégorie _Learning_ du forum Discourse de MDN](https://discourse.mozilla.org/c/mdn/learn). Votre billet devrait inclure :
+1. Enregistrez votre travail dans un éditeur en ligne tel que [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) pour le partager. Vous pouvez écrire le code vous-même ou utiliser les fichiers téléchargeables indiqués comme point de départ.
+2. Rédigez un message pour la demande d'aide ou d'évaluation sur [la catégorie _Learning_ du forum Discourse de MDN](https://discourse.mozilla.org/c/mdn/learn). Votre billet devrait inclure :
 
     - Un titre descriptif comme « Évaluation demandée pour le test Tableaux JavaScript ».
     - Des détails sur ce que vous avez déjà tenté et sur quels aspects vous avez besoin d'aide si vous bloquez.

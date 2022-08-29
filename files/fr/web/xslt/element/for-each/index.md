@@ -12,10 +12,12 @@ L'élément `<xsl:for-each>` sélectionne un ensemble de nœuds et traite chacun
 
 ### Syntaxe
 
-    <xsl:for-each select=EXPRESSION>
-    	<xsl:sort> [optionnel]
-    	MODÈLE
-    </xsl:for-each>
+```xml
+<xsl:for-each select=EXPRESSION>
+  <xsl:sort> [optionnel]
+  MODÈLE
+</xsl:for-each>
+```
 
 ### Attribut obligatoire
 

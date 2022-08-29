@@ -16,7 +16,9 @@ La méthode **`WebAssembly.compile()`**, permet de compiler un module ({{jsxref(
 
 ## Syntaxe
 
-    Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
+```js
+Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
+```
 
 ### Paramètres
 
@@ -34,7 +36,7 @@ Une promesse ({{jsxref("Promise")}}) dont la valeur de résolution est une insta
 
 ## Exemples
 
-Dans l'exemple qui suit, on compile le _bytecode_ `simple.wasm` grâce à la méthode `compile()` puis on envoie le contenu à [un _worker_](https://developer.mozilla.org/fr/docs/Web/API/Web_Workers_API) grâce à la méthode [`postMessage()`](/fr/docs/Web/API/Worker/postMessage).
+Dans l'exemple qui suit, on compile le _bytecode_ `simple.wasm` grâce à la méthode `compile()` puis on envoie le contenu à [un _worker_](/fr/docs/Web/API/Web_Workers_API) grâce à la méthode [`postMessage()`](/fr/docs/Web/API/Worker/postMessage).
 
 ```js
 var worker = new Worker("wasm_worker.js");

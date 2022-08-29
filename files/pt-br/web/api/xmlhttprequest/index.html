@@ -15,9 +15,9 @@ translation_of: Web/API/XMLHttpRequest
 ---
 <p>{{APIRef("XMLHttpRequest")}}</p>
 
-<p><code>XMLHttpRequest</code> é um objeto que fornece funcionalidade ao cliente para transferir dados entre um cliente e um servidor. Ele fornece uma maneira fácil de recuperar dados de um URL sem ter que fazer uma atualização de página inteira. Isso permite que uma página da Web atualize apenas uma parte do conteúdo sem interromper o que o usuário esteja fazendo. XMLHttpRequest é usado constantemente na programação de <a href="/pt-BR/docs/AJAX">AJAX</a>.</p>
+<p><code>XMLHttpRequest</code> é um objeto que fornece funcionalidade ao cliente para transferir dados entre um cliente e um servidor. Ele fornece uma maneira fácil de recuperar dados de um URL sem ter que fazer uma atualização de página inteira. Isso permite que uma página da Web atualize apenas uma parte do conteúdo sem interromper o que o usuário esteja fazendo. XMLHttpRequest é usado constantemente na programação de <a href="/pt-BR/docs/AJAX">AJAX</a>.</p>
 
-<p><code>XMLHttpRequest</code> foi originalmente projetado pela Microsoft e adotado pela Mozilla, Apple e Google. Está sendo padronizado pela <a href="https://xhr.spec.whatwg.org/">WHATWG</a>. Apesar do nome, XMLHttpRequest pode ser usado para recuperar qualquer tipo de dados, e não apenas XML, suportando também, protocolos diferentes de <a href="/en/HTTP" title="en/HTTP">HTTP</a> (incluindo file e ftp ).</p>
+<p><code>XMLHttpRequest</code> foi originalmente projetado pela Microsoft e adotado pela Mozilla, Apple e Google. Está sendo padronizado pela <a href="https://xhr.spec.whatwg.org/">WHATWG</a>. Apesar do nome, XMLHttpRequest pode ser usado para recuperar qualquer tipo de dados, e não apenas XML, suportando também, protocolos diferentes de <a href="/en/HTTP" title="en/HTTP">HTTP</a> (incluindo file e ftp ).</p>
 
 <p>Para criar uma instância de XMLHttpRequest , basta fazer isso:</p>
 
@@ -91,14 +91,14 @@ translation_of: Web/API/XMLHttpRequest
    <td>
     <p>A função de objeto JavaScript que é chamado sempre que o atributo readyState sofre alteração. A função de callback é chamada a partir da thread existente na interface de usuário.</p>
 
-    <div class="warning"><strong>Aviso:</strong> Este não deve ser usado com chamadas síncronas e não deve ser utilizado a partir do código nativo.</div>
+    <div class="warning"><strong>Aviso:</strong> Este não deve ser usado com chamadas síncronas e não deve ser utilizado a partir do código nativo.</div>
    </td>
   </tr>
   <tr id="readyState">
    <td><code>readyState</code></td>
    <td><code>retorna o cabeçalho da requisição.</code></td>
    <td>
-    <p> </p>
+    <p> </p>
 
     <table class="standard-table">
      <tbody>
@@ -140,7 +140,7 @@ translation_of: Web/API/XMLHttpRequest
    <td><code>response</code></td>
    <td>ArrayBuffer, Document,Blob, DOMString</td>
    <td>
-    <p>Retorna um objeto JavaScript de tipo {{domxref("ArrayBuffer")}}, {{domxref("Blob")}} ou {{domxref("Document")}}, de acordo com  o que estiver contido no <code><a href="#responseType">responseType</a>. </code>Retorna <code>null</code> se a request não esteja completa ou não obteve sucesso.</p>
+    <p>Retorna um objeto JavaScript de tipo {{domxref("ArrayBuffer")}}, {{domxref("Blob")}} ou {{domxref("Document")}}, de acordo com  o que estiver contido no <code><a href="#responseType">responseType</a>. </code>Retorna <code>null</code> se a request não esteja completa ou não obteve sucesso.</p>
    </td>
   </tr>
   <tr id="responseText">
@@ -158,7 +158,7 @@ translation_of: Web/API/XMLHttpRequest
      <tbody>
       <tr>
        <td class="header">Valor</td>
-       <td class="header">Tipo de dados de <code>resposta</code> de propriedade</td>
+       <td class="header">Tipo de dados de <code>resposta</code> de propriedade</td>
       </tr>
       <tr>
        <td><code>""</code> (string vazia)</td>
@@ -186,14 +186,14 @@ translation_of: Web/API/XMLHttpRequest
       </tr>
       <tr>
        <td><code>"moz-blob"</code></td>
-       <td>Usado pelo Firefox para permitir recuperar dados parciais do tipo {{ domxref("Blob") }},de eventos de progresso. Isso permite que o manipulador de eventos de progresso iniciar o processamento de dados enquanto ele ainda está sendo recebido.</td>
+       <td>Usado pelo Firefox para permitir recuperar dados parciais do tipo {{ domxref("Blob") }},de eventos de progresso. Isso permite que o manipulador de eventos de progresso iniciar o processamento de dados enquanto ele ainda está sendo recebido.</td>
       </tr>
       <tr>
        <td><code>"moz-chunked-text"</code></td>
        <td>
         <p>Semelhante ao "text" , mas o <em>streaming </em>ainda está fluindo. Isto significa que o valor na response , só está disponível durante a expedição do "progress" do evento e contém apenas os dados recebidos desde a última "progress" do evento.</p>
 
-        <p>Quando response é acessado durante um evento "progress", este contém uma string com os dados. Caso contrário, retorna null .</p>
+        <p>Quando response é acessado durante um evento "progress", este contém uma string com os dados. Caso contrário, retorna null .</p>
 
         <p>Este modo atualmente só funciona no Firefox.</p>
        </td>
@@ -201,7 +201,7 @@ translation_of: Web/API/XMLHttpRequest
       <tr>
        <td><code>"moz-chunked-arraybuffer"</code></td>
        <td>
-        <p>Semelhante ao <code>"arraybuffer"</code>, mas está fluindo. Isto significa que o valor na response , só está disponível durante a expedição do "progress" do evento e contém apenas os dados recebidos desde a última "progress" do evento.</p>
+        <p>Semelhante ao <code>"arraybuffer"</code>, mas está fluindo. Isto significa que o valor na response , só está disponível durante a expedição do "progress" do evento e contém apenas os dados recebidos desde a última "progress" do evento.</p>
 
         <p>Quando response é acessado durante um "progress" evento que contém uma seqüência com os dados. Caso contrário, retorna null .</p>
 
@@ -213,14 +213,14 @@ translation_of: Web/API/XMLHttpRequest
      </tbody>
     </table>
 
-    <div class="note"><strong>Nota:</strong>  Começando com 11,0 Gecko (Firefox 11.0 / 11.0 Thunderbird / SeaMonkey 2.8), bem como WebKit construir 528, esses navegadores não permitem que você use o atributo responseType ao executar solicitações síncronas. Tentativas de fazer isso geram uma exceção do tipo NS_ERROR_DOM_INVALID_ACCESS_ERR. Esta mudança foi proposta para padronização junto à W3C.</div>
+    <div class="note"><strong>Nota:</strong>  Começando com 11,0 Gecko (Firefox 11.0 / 11.0 Thunderbird / SeaMonkey 2.8), bem como WebKit construir 528, esses navegadores não permitem que você use o atributo responseType ao executar solicitações síncronas. Tentativas de fazer isso geram uma exceção do tipo NS_ERROR_DOM_INVALID_ACCESS_ERR. Esta mudança foi proposta para padronização junto à W3C.</div>
    </td>
   </tr>
   <tr id="responseXML">
    <td><code>responseXML</code> {{ReadOnlyInline()}}</td>
    <td><code>Document?</code></td>
    <td>
-    <p>A resposta ao pedido como um DOM <code><a class="internal" href="/en/DOM/document" title="En/DOM/Document">Document</a></code> objeto, ou null se o pedido não foi bem sucedida, ainda não foi enviado, ou não pode ser analisado como XML ou HTML. A resposta é analisado como se fosse um <code>text/html</code> stream. Quando o responseType está definido para "document" e que a solicitação tenha sido feita de forma assíncrona, a resposta é analisado como se fosse um <code>text/html</code> stream.</p>
+    <p>A resposta ao pedido como um DOM <code><a class="internal" href="/en/DOM/document" title="En/DOM/Document">Document</a></code> objeto, ou null se o pedido não foi bem sucedida, ainda não foi enviado, ou não pode ser analisado como XML ou HTML. A resposta é analisado como se fosse um <code>text/html</code> stream. Quando o responseType está definido para "document" e que a solicitação tenha sido feita de forma assíncrona, a resposta é analisado como se fosse um <code>text/html</code> stream.</p>
 
     <div class="note"><strong>Nota:</strong> Se o servidor não se aplica o text/xml cabeçalho Content-Type, você pode usar overrideMimeType() para forçar XMLHttpRequest para analisá-lo como XML de qualquer maneira.</div>
    </td>
@@ -239,7 +239,7 @@ translation_of: Web/API/XMLHttpRequest
    <td><code>timeout</code></td>
    <td><code>unsigned long</code></td>
    <td>
-    <p>    <br>
+    <p>    <br>
      O número de milissegundos de um pedido pode tomar antes de ser automaticamente encerrada. Um valor de 0 (que é o padrão) significa que não há tempo limite.</p>
 
     <div class="note"><strong>Nota:</strong> Você não pode usar um tempo limite para solicitações síncronas com uma janela proprietária.</div>
@@ -258,7 +258,7 @@ translation_of: Web/API/XMLHttpRequest
 
     <div class="note"><strong>Nota:</strong> Esta não afeta as solicitações no mesmo local.</div>
 
-    <div class="note"><strong>Nota:</strong> Começando com 11,0 Gecko (Firefox 11.0 / 11.0 Thunderbird / SeaMonkey 2.8), Gecko não permite que você use os atributos withCredentials ao realizar solicitações síncronas. Ao tentar fazer isso o sistema gera uma exceção do tipo NS_ERROR_DOM_INVALID_ACCESS_ERR.</div>
+    <div class="note"><strong>Nota:</strong> Começando com 11,0 Gecko (Firefox 11.0 / 11.0 Thunderbird / SeaMonkey 2.8), Gecko não permite que você use os atributos withCredentials ao realizar solicitações síncronas. Ao tentar fazer isso o sistema gera uma exceção do tipo NS_ERROR_DOM_INVALID_ACCESS_ERR.</div>
    </td>
   </tr>
  </tbody>
@@ -275,14 +275,14 @@ translation_of: Web/API/XMLHttpRequest
   </tr>
   <tr id="channel">
    <td><code>channel</code> {{ReadOnlyInline()}}</td>
-   <td>{{Interface("nsIChannel")}}</td>
+   <td><code>nsIChannel</code></td>
    <td>O canal utilizado pelo objecto aquando da execução do pedido. Esta é null se o canal não foi criado ainda. No caso de um pedido de múltiplas partes, isto é o canal inicial, não as diferentes partes do pedido de várias partes. <strong>Requer privilégios elevados para o acesso.​​</strong></td>
   </tr>
   <tr id="mozAnon">
    <td><code>mozAnon</code> {{ReadOnlyInline()}}</td>
    <td><code>boolean</code></td>
    <td>
-    <p>Se for verdadeiro (true) o pedido será enviado sem cabeçalhos de cookies e autenticação.</p>
+    <p>Se for verdadeiro (true) o pedido será enviado sem cabeçalhos de cookies e autenticação.</p>
    </td>
   </tr>
   <tr id="mozSystem">
@@ -300,7 +300,7 @@ translation_of: Web/API/XMLHttpRequest
 
     <p>Nos casos em que uma caixa de diálogo de segurança (como a autenticação ou uma notificação certificado ruim) normalmente seriam mostrados, o pedido simplesmente falhar em seu lugar.</p>
 
-    <div class="note"><strong>Nota: </strong>Esta propriedade deve ser definida antes de chamar open().</div>
+    <div class="note"><strong>Nota: </strong>Esta propriedade deve ser definida antes de chamar open().</div>
    </td>
   </tr>
   <tr id="mozResponseArrayBuffer">
@@ -312,7 +312,7 @@ translation_of: Web/API/XMLHttpRequest
    <td><code>multipart</code> {{ obsolete_inline("22") }}</td>
    <td><code>boolean</code></td>
    <td>
-    <p><strong>Este Gecko somente recurso foi removido no Firefox / Gecko 22.</strong> Por favor Utilize <a href="/en-US/docs/Server-sent_events" title="/en-US/docs/Server-sent_events">Server-Sent Events</a>, <a href="/en-US/docs/WebSockets" title="/en-US/docs/WebSockets">Web Sockets</a> ou <code>responseText</code> de eventos de progresso em seu lugar.</p>
+    <p><strong>Este Gecko somente recurso foi removido no Firefox / Gecko 22.</strong> Por favor Utilize <a href="/en-US/docs/Server-sent_events" title="/en-US/docs/Server-sent_events">Server-Sent Events</a>, <a href="/en-US/docs/WebSockets" title="/en-US/docs/WebSockets">Web Sockets</a> ou <code>responseText</code> de eventos de progresso em seu lugar.</p>
 
     <p>Indica se ou não a resposta está prevista para ser uma corrente de, possivelmente, vários documentos XML. Se definido como true , o tipo de conteúdo da resposta inicial deve ser multipart/x-mixed-replace ou ocorrerá um erro. Todos os pedidos devem ser assíncrona.</p>
 
@@ -330,7 +330,7 @@ translation_of: Web/API/XMLHttpRequest
 
 <p>O construtor inicia um XMLHttpRequest. Ele deve ser chamado antes de quaisquer outras chamadas de método.</p>
 
-<p>Gecko/Firefox 16 acrescenta um parâmetro não-padrão para o construtor que pode ativar o modo anônimo (veja <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=692677" title="692677 – Relax same-origin XHR restrictions for privileged applications">Bug 692677</a>). Definir o mozAnon bandeira de true eficácia se assemelha a <a href="http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest" title="see AnonXMLHttpRequest in the XMLHttpRequest specification"><code>AnonXMLHttpRequest()</code></a> construtor descrito na especificação XMLHttpRequest que não tenha sido implementado em qualquer navegador ainda (em setembro de 2012).</p>
+<p>Gecko/Firefox 16 acrescenta um parâmetro não-padrão para o construtor que pode ativar o modo anônimo (veja <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=692677" title="692677 – Relax same-origin XHR restrictions for privileged applications">Bug 692677</a>). Definir o mozAnon bandeira de true eficácia se assemelha a <a href="http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest" title="see AnonXMLHttpRequest in the XMLHttpRequest specification"><code>AnonXMLHttpRequest()</code></a> construtor descrito na especificação XMLHttpRequest que não tenha sido implementado em qualquer navegador ainda (em setembro de 2012).</p>
 
 <pre>XMLHttpRequest (
   JSObject objParameters
@@ -408,7 +408,7 @@ translation_of: Web/API/XMLHttpRequest
 
 <p>Envia a solicitação. Se o pedido é assíncrono (que é o padrão), este método retorna assim que o pedido for enviado. Se o pedido é síncrono, este método não retorna até a resposta chegar.</p>
 
-<div class="note"><strong>Nota:</strong>  Qualquer ouvintes de eventos que pretende definir tem de ser definida antes de chamar send().</div>
+<div class="note"><strong>Nota:</strong>  Qualquer ouvintes de eventos que pretende definir tem de ser definida antes de chamar send().</div>
 
 <pre>void send();
 void send(ArrayBuffer <var>data</var>);
@@ -421,9 +421,9 @@ void send(FormData <var>data</var>);</pre>
 
 <p>Se os dados são um Document , ele é serializado antes de serem enviados. Ao enviar um documento, as versões do Firefox antes da versão 3 sempre enviavam a solicitação usando codificação UTF-8; <a href="/en/Firefox_3" rel="internal" title="en/Firefox_3">Firefox 3</a> envia corretamente o documento usando a codificação especificada por body.xmlEncoding , ou UTF-8 se nenhum encoding é especificado.</p>
 
-<p>Se são uma nsIInputStream , deve ser compatível com nsIUploadChannel 's setUploadStream() método. Nesse caso, um cabeçalho Content-Length é adicionado ao pedido, com o seu valor obtido usando nsIInputStream 's available() método. Quaisquer cabeçalhos incluídos na parte superior da corrente são tratados como parte do corpo da mensagem. MIMEType da transmissão deve ser especificado definindo o cabeçalho Content-Type usando o <a class="internal" href="/en/nsIXMLHttpRequest#setRequestHeader()" title="/en/XMLHttpRequest#setRequestHeader()"><code>setRequestHeader()</code></a> método antes de chamar send().</p>
+<p>Se são uma nsIInputStream , deve ser compatível com nsIUploadChannel 's setUploadStream() método. Nesse caso, um cabeçalho Content-Length é adicionado ao pedido, com o seu valor obtido usando nsIInputStream 's available() método. Quaisquer cabeçalhos incluídos na parte superior da corrente são tratados como parte do corpo da mensagem. MIMEType da transmissão deve ser especificado definindo o cabeçalho Content-Type usando o <a class="internal" href="/en/nsIXMLHttpRequest#setRequestHeader()" title="/en/XMLHttpRequest#setRequestHeader()"><code>setRequestHeader()</code></a> método antes de chamar send().</p>
 
-<p>A melhor maneira de enviar conteúdo binário (como em arquivos de upload) está usando<a href="/en-US/docs/JavaScript/Typed_arrays/ArrayBuffer" title="/en-US/docs/JavaScript/Typed_arrays/ArrayBuffer">ArrayBuffers</a> ou <a href="/en-US/docs/DOM/Blob" title="/en-US/docs/DOM/Blob">Blobs</a>  em conjuncton com o send() método. No entanto, se você quiser enviar uma <a href="/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify" title="/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify">stringifiable</a> dados brutos, use o <a href="/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()" title="/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()"><code>sendAsBinary()</code></a> método em vez disso.</p>
+<p>A melhor maneira de enviar conteúdo binário (como em arquivos de upload) está usando<a href="/en-US/docs/JavaScript/Typed_arrays/ArrayBuffer" title="/en-US/docs/JavaScript/Typed_arrays/ArrayBuffer">ArrayBuffers</a> ou <a href="/en-US/docs/DOM/Blob" title="/en-US/docs/DOM/Blob">Blobs</a>  em conjuncton com o send() método. No entanto, se você quiser enviar uma <a href="/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify" title="/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify">stringifiable</a> dados brutos, use o <a href="/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()" title="/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()"><code>sendAsBinary()</code></a> método em vez disso.</p>
 
 <h3 id="setRequestHeader()" name="setRequestHeader()">setRequestHeader()</h3>
 
@@ -450,7 +450,7 @@ void send(FormData <var>data</var>);</pre>
 
 <p>Inicializa o objeto para uso a partir do código C ++.</p>
 
-<div class="warning"><strong>Nota:</strong> Este método não deve ser chamado a partir do JavaScript.</div>
+<div class="warning"><strong>Nota:</strong> Este método não deve ser chamado a partir do JavaScript.</div>
 
 <pre>[noscript] void init(
    in nsIPrincipal principal,
@@ -467,12 +467,12 @@ void send(FormData <var>data</var>);</pre>
  <dt><code>scriptContext</code></dt>
  <dd>O contexto de script a ser usada para o pedido; não deve ser null.</dd>
  <dt><code>ownerWindow</code></dt>
- <dd>A janela associada com o pedido; pode ser <code>null</code>.</dd>
+ <dd>A janela associada com o pedido; pode ser <code>null</code>.</dd>
 </dl>
 
 <h4 id="openRequest()">openRequest()</h4>
 
-<p>Inicializa um pedido. Este método é para ser usado a partir do código nativo; para inicializar um pedido do código JavaScript, usar <code><a class="internal" href="/en/nsIXMLHttpRequest#open()" title="/en/XMLHttpRequest#open()">open()</a> em seu lugar. Consulte a documentação do open() .</code></p>
+<p>Inicializa um pedido. Este método é para ser usado a partir do código nativo; para inicializar um pedido do código JavaScript, usar <code><a class="internal" href="/en/nsIXMLHttpRequest#open()" title="/en/XMLHttpRequest#open()">open()</a> em seu lugar. Consulte a documentação do open() .</code></p>
 
 <h4 id="sendAsBinary()">sendAsBinary()</h4>
 
@@ -483,7 +483,7 @@ void send(FormData <var>data</var>);</pre>
 );
 </pre>
 
-<p>Este método, usado em conjuncton com o <a href="/en-US/docs/DOM/FileReader#readAsBinaryString()" title="/en-US/docs/DOM/FileReader#readAsBinaryString()"><code>readAsBinaryString</code></a>  método do <a href="/en-US/docs/DOM/FileReader" title="/en-US/docs/DOM/FileReader"><code>FileReader</code></a> API tornar possível <a href="https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files" title="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files">read and <strong>upload</strong> any type of file</a> e para  <a href="/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify" title="/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify">stringify</a> os dados brutos.</p>
+<p>Este método, usado em conjuncton com o <a href="/en-US/docs/DOM/FileReader#readAsBinaryString()" title="/en-US/docs/DOM/FileReader#readAsBinaryString()"><code>readAsBinaryString</code></a>  método do <a href="/en-US/docs/DOM/FileReader" title="/en-US/docs/DOM/FileReader"><code>FileReader</code></a> API tornar possível <a href="https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files" title="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files">read and <strong>upload</strong> any type of file</a> e para  <a href="/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify" title="/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify">stringify</a> os dados brutos.</p>
 
 <h5 id="Parametros_3">Parametros</h5>
 
@@ -498,204 +498,45 @@ void send(FormData <var>data</var>);</pre>
 
 <pre class="brush: js">/*\
 |*|
-|*|  :: XMLHttpRequest.prototype.sendAsBinary() Polifyll ::
+|*|  :: XMLHttpRequest.prototype.sendAsBinary() Polifyll ::
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()
+|*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()
 |*|
 \*/
 
 if (!XMLHttpRequest.prototype.sendAsBinary) {
-  XMLHttpRequest.prototype.sendAsBinary = function (sData) {
-    var nBytes = sData.length, ui8Data = new Uint8Array(nBytes);
-    for (var nIdx = 0; nIdx &lt; nBytes; nIdx++) {
-      ui8Data[nIdx] = sData.charCodeAt(nIdx) &amp; 0xff;
-    }
-    /* send as ArrayBufferView...: */
+  XMLHttpRequest.prototype.sendAsBinary = function (sData) {
+    var nBytes = sData.length, ui8Data = new Uint8Array(nBytes);
+    for (var nIdx = 0; nIdx &lt; nBytes; nIdx++) {
+      ui8Data[nIdx] = sData.charCodeAt(nIdx) &amp; 0xff;
+    }
+    /* send as ArrayBufferView...: */
     this.send(ui8Data);
-    /* ...or as ArrayBuffer (legacy)...: this.send(ui8Data.buffer); */
-  };
+    /* ...or as ArrayBuffer (legacy)...: this.send(ui8Data.buffer); */
+  };
 }</pre>
 
-<div class="note"><strong>Nota:</strong> É possível construir este polyfill colocar dois tipos de dados como argumento para send() : um <a href="/en-US/docs/JavaScript/Typed_arrays/ArrayBuffer" title="/en-US/docs/JavaScript/Typed_arrays/ArrayBuffer"><code>ArrayBuffer</code></a> (ui8Data.buffer - o código comentado) ou um ArrayBufferView ( ui8Data , que é uma <a href="/en-US/docs/JavaScript/Typed_arrays/Uint8Array" title="/en-US/docs/JavaScript/Typed_arrays/Uint8Array">typed array of 8-bit unsigned integers</a> – descomentada código). No entanto, no Google Chrome, quando você tenta enviar uma ArrayBuffer , a seguinte mensagem de aviso aparecerá: ArrayBuffer is deprecated in XMLHttpRequest.send(). Use ArrayBufferView instead. ArrayBuffer is deprecated in XMLHttpRequest.send(). Use ArrayBufferView instead.</div>
+<div class="note"><strong>Nota:</strong> É possível construir este polyfill colocar dois tipos de dados como argumento para send() : um <a href="/en-US/docs/JavaScript/Typed_arrays/ArrayBuffer" title="/en-US/docs/JavaScript/Typed_arrays/ArrayBuffer"><code>ArrayBuffer</code></a> (ui8Data.buffer - o código comentado) ou um ArrayBufferView ( ui8Data , que é uma <a href="/en-US/docs/JavaScript/Typed_arrays/Uint8Array" title="/en-US/docs/JavaScript/Typed_arrays/Uint8Array">typed array of 8-bit unsigned integers</a> – descomentada código). No entanto, no Google Chrome, quando você tenta enviar uma ArrayBuffer , a seguinte mensagem de aviso aparecerá: ArrayBuffer is deprecated in XMLHttpRequest.send(). Use ArrayBufferView instead. ArrayBuffer is deprecated in XMLHttpRequest.send(). Use ArrayBufferView instead.</div>
 
 <h2 id="Notas_2">Notas</h2>
 
 <ul>
  <li class="note">Por padrão, o Firefox 3 limita o número de XMLHttpRequest conexões por servidor a 6 (versões anteriores limitar esta para 2 por servidor). Alguns sites interativos podem manter um XMLHttpRequest conexão aberta, de modo que a abertura de várias sessões para esses sites pode resultar no navegador pendurado de tal forma que a janela já não repaints e controles não respondem. Este valor pode ser alterado através da edição do network.http.max-persistent-connections-per-server preferência no <code><a class="linkification-ext" href="/about:config" title="Linkification: about:config">about:config</a></code>.</li>
- <li class="note">Do Gecko 7 cabeçalhos estabelecidos pela {{ manch("setRequestHeader") }} asão enviados com o pedido, quando na sequência de um redirecionamento. Anteriormente, estes cabeçalhos não iria ser enviado.</li>
- <li class="note"><code>XMLHttpRequest é implementado em Gecko usando os</code> {{ interface("nsIXMLHttpRequest") }}, {{ interface("nsIXMLHttpRequestEventTarget") }}, e {{ interface("nsIJSXMLHttpRequest") }} interfaces.</li>
+ <li class="note">Do Gecko 7 cabeçalhos estabelecidos pela <a href="#setrequestheader">setRequestHeader</a> asão enviados com o pedido, quando na sequência de um redirecionamento. Anteriormente, estes cabeçalhos não iria ser enviado.</li>
+ <li class="note"><code>XMLHttpRequest é implementado em Gecko usando os</code> <code>nsIXMLHttpRequest</code>, <code>nsIXMLHttpRequestEventTarget</code>, e <code>nsIJSXMLHttpRequest</code> interfaces.</li>
 </ul>
 
 <h4 class="note" id="Eventos">Eventos</h4>
 
 <p><code>onreadystatechange</code> como uma propriedade do <code>XMLHttpRequest</code> instância é suportado em todos os navegadores.</p>
 
-<p>Desde então, foram implementadas uma série de manipuladores de eventos adicionais em vários navegadores ( onload , onerror , onprogress , etc.). Estes são suportados no Firefox. Em particular, veja {{ interface("nsIXMLHttpRequestEventTarget") }} and <a href="/en/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="En/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a>.</p>
+<p>Desde então, foram implementadas uma série de manipuladores de eventos adicionais em vários navegadores ( onload , onerror , onprogress , etc.). Estes são suportados no Firefox. Em particular, veja <code>nsIXMLHttpRequestEventTarget</code> and <a href="/en/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="En/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a>.</p>
 
 <p>avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpRequest eventos via padrão <code><a href="/en/DOM/element.addEventListener" title="element.addEventListener">addEventListener</a></code> APIs Além de definir on* propriedades para uma função de manipulador.</p>
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidade do navegador</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support (XHR1)</td>
-   <td>1</td>
-   <td>1.0</td>
-   <td>5 (via ActiveXObject)<br>
-    7 (XMLHttpRequest)</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>1.2</td>
-  </tr>
-  <tr>
-   <td><code>send(ArrayBuffer)</code></td>
-   <td>9</td>
-   <td>9</td>
-   <td>{{ compatUnknown() }}</td>
-   <td>11.60</td>
-   <td>{{ compatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td><code>send(Blob)</code></td>
-   <td>7</td>
-   <td>3.6</td>
-   <td>{{ compatUnknown() }}</td>
-   <td>12</td>
-   <td>{{ compatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td><code>send(FormData)</code></td>
-   <td>6</td>
-   <td>4</td>
-   <td>{{ compatUnknown() }}</td>
-   <td>12</td>
-   <td>{{ compatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td><code>sendAsBinary(DOMString)</code></td>
-   <td>{{ compatNo() }} – use the <a href="#sendAsBinary%28%29_polyfill" title="sendAsBinary() polyfill">polyfill</a></td>
-   <td>1.9</td>
-   <td>{{ compatUnknown() }}</td>
-   <td>{{ compatUnknown() }}</td>
-   <td>{{ compatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td><code>response</code></td>
-   <td>10</td>
-   <td>6</td>
-   <td>10</td>
-   <td>11.60</td>
-   <td>{{ compatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td><code>responseType</code> = 'arraybuffer'</td>
-   <td>10</td>
-   <td>6</td>
-   <td>10</td>
-   <td>11.60</td>
-   <td>{{ compatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td><code>responseType</code> = 'blob'</td>
-   <td>19</td>
-   <td>6</td>
-   <td>10</td>
-   <td>12</td>
-   <td>{{ compatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td><code>responseType</code> = 'document'</td>
-   <td>18</td>
-   <td>11</td>
-   <td>10</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td><code>responseType</code> = 'json'</td>
-   <td>{{ CompatNo() }}</td>
-   <td>10</td>
-   <td>{{ CompatNo() }}</td>
-   <td>12</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td>Progress Events</td>
-   <td>7</td>
-   <td>3.5</td>
-   <td>10</td>
-   <td>12</td>
-   <td>{{ compatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td><code>withCredentials</code></td>
-   <td>3</td>
-   <td>3.5</td>
-   <td>10</td>
-   <td>12</td>
-   <td>4</td>
-  </tr>
-  <tr>
-   <td><code>timeout</code></td>
-   <td>{{ CompatNo() }}</td>
-   <td>12.0</td>
-   <td>8</td>
-   <td>{{ compatUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td><code>responseType</code> = 'moz-blob'</td>
-   <td>{{ CompatNo() }}</td>
-   <td>12.0</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>0.16</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Notas_Gecko">Notas Gecko</h3>
-
-<p>Gecko 11.0 {{ geckoRelease("11.0") }} removeu o suporte para o uso do <code>responseType</code> e <code>withCredentials</code> atribui ao realizar solicitações síncronas. Tentativa de fazer isso gera uma <code>NS_ERROR_DOM_INVALID_ACCESS_ERR</code> exception. Esta mudança foi proposta para o W3C para a normalização.</p>
-
-<p>Gecko 12.0 {{ geckoRelease("12.0") }} e suporte posteriormente usando XMLHttpRequest para ler a partir <a href="/en/data_URIs" title="en/data_URIs"><code>data:</code> URLs</a>.</p>
+{{Compat("api.XMLHttpRequest")}}
 
 <h2 id="Veja_também">Veja também</h2>
 
@@ -708,7 +549,7 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
    <li><a href="/en/DOM/XMLHttpRequest/FormData" title="en/XMLHttpRequest/FormData"><code>FormData</code></a></li>
   </ul>
  </li>
- <li>XMLHttpRequest referencias da W3C  e navegador fornecedores:
+ <li>XMLHttpRequest referencias da W3C  e navegador fornecedores:
   <ul>
    <li><a class="external" href="http://www.w3.org/TR/XMLHttpRequest1/">W3C: XMLHttpRequest</a> (base features)</li>
    <li><a class="external" href="http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html">W3C: XMLHttpRequest</a> (latest editor's draft with extensions to the base functionality, formerly XMLHttpRequest Level 2</li>

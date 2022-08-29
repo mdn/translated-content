@@ -16,7 +16,9 @@ Cette méthode efface l'action spécifiée par {{DOMxRef("window.setImmediate")}
 
 ## Syntaxe
 
-    window.clearImmediate( immediateID )
+```js
+window.clearImmediate( immediateID )
+```
 
 où immediateID est un ID retourné par {{DOMxRef("window.setImmediate")}}.
 

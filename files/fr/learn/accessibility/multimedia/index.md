@@ -302,17 +302,19 @@ Les pistes de texte à afficher avec une vidéo HTML5 doivent être écrites au 
 
 Un fichier WebVTT typique ressemblera à ceci:
 
-    WEBVTT
+```
+WEBVTT
 
-    1
-    00:00:22.230 --> 00:00:24.606
-     Ceci est le premier sous-titre.
+1
+00:00:22.230 --> 00:00:24.606
+  Ceci est le premier sous-titre.
 
-    2
-    00:00:30.739 --> 00:00:34.074
-     C'est le deuxième .
+2
+00:00:30.739 --> 00:00:34.074
+  C'est le deuxième .
 
-      ...
+  ...
+```
 
 Pour que ceci soit affiché avec la lecture du média HTML, vous devez:
 
@@ -347,8 +349,8 @@ Les sections ci-dessus ne couvrent pas tous les types de contenu multimédia que
 
 Pour ce type de contenu, vous devez traiter les problèmes d’accessibilité au cas par cas. Dans certains cas, ce n'est pas si grave, par exemple:
 
-- Si vous intégrez du contenu audio à l'aide d'une technologie de plug-in telle que Flash ou Silverlight, vous pouvez probablement simplement fournir une transcription audio de la même manière que celle décrite ci-dessus dans la section {{anch("Transcript examples")}} .
-- Si vous intégrez du contenu vidéo à l'aide d'une technologie de plug-in telle que Flash ou Silverlight, vous pouvez tirer parti des techniques de sous-titrage / sous-titrage disponibles pour ces technologies. Par exemple, voir  [Flash captions](http://www.adobe.com/accessibility/products/flash/captions.html), [Using the Flash-Only Player API for Closed Captioning](https://support.brightcove.com/en/video-cloud/docs/using-flash-only-player-api-closed-captioning), ou [Playing Subtitles with Videos in Silverlight](https://blogs.msdn.microsoft.com/anilkumargupta/2009/05/01/playing-subtitles-with-videos-in-silverlight/).
+- Si vous intégrez du contenu audio à l'aide d'une technologie de plug-in telle que Flash ou Silverlight, vous pouvez probablement simplement fournir une transcription audio de la même manière que celle décrite ci-dessus dans la section [Exemples de transcription](#exemples_de_transcription).
+- Si vous intégrez du contenu vidéo à l'aide d'une technologie de plug-in telle que Flash ou Silverlight, vous pouvez tirer parti des techniques de sous-titrage / sous-titrage disponibles pour ces technologies. Par exemple, voir [Flash captions](http://www.adobe.com/accessibility/products/flash/captions.html), [Using the Flash-Only Player API for Closed Captioning](https://support.brightcove.com/en/video-cloud/docs/using-flash-only-player-api-closed-captioning), ou [Playing Subtitles with Videos in Silverlight](https://blogs.msdn.microsoft.com/anilkumargupta/2009/05/01/playing-subtitles-with-videos-in-silverlight/).
 
 Cependant, il est difficile de rendre les autres multimédias accessibles. Si, par exemple, vous avez affaire à un jeu immersif en 3D ou à une application de réalité virtuelle, il est vraiment difficile de fournir des alternatives textuelles pour une telle expérience, et vous pouvez soutenir que les utilisateurs non-voyants ne sont pas vraiment dans le groupe-cible de telles applications.
 

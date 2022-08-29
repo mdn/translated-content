@@ -18,7 +18,9 @@ La méthode **`toString()`** renvoie une chaîne de caractères représentant le
 
 ## Syntaxe
 
-    function.toString(indentation)
+```js
+function.toString(indentation)
+```
 
 ### Valeur de retour
 

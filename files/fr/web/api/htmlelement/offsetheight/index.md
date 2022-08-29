@@ -13,7 +13,9 @@ Propriété DHTML permettant d'obtenir la hauteur d'un élément par rapport à 
 
 ### Syntaxe
 
-    var hauteurTotaleElem = document.getElementById(id).offsetHeight;
+```js
+var hauteurTotaleElem = document.getElementById(id).offsetHeight;
+```
 
 _hauteurTotalElem_ est une variable stockant un entier correspondant à la valeur en pixels de la hauteur totale de l'élément identifé par `id`. `offsetHeight` est une propriété en lecture seule.
 

@@ -21,7 +21,7 @@ WebKit est une marque déposée par Apple, et le framework est distribué sous u
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "WebKit")}} sur Wikipédia
+- [WebKit](https://fr.wikipedia.org/wiki/WebKit) sur Wikipédia
 
 ### Référence technique
 

@@ -84,7 +84,7 @@ function foo() {
 })();
 ```
 
-Si vous souhaitez en savoir plus sur les IIFE, consultez la page suivante sur Wikipedia : [Expression de la fonction immédiatement invoquée](https://fr.wikipedia.org/wiki/JavaScript#Expressions_de_fonctions_imm%C3%A9diatement_invoqu%C3%A9es)
+Si vous souhaitez en savoir plus sur les IIFE, consultez la page suivante sur Wikipédia : [Expression de la fonction immédiatement invoquée](https://fr.wikipedia.org/wiki/JavaScript#Expressions_de_fonctions_imm%C3%A9diatement_invoqu%C3%A9es)
 
 ## En apprendre plus
 

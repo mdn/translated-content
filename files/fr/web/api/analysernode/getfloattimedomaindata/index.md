@@ -75,8 +75,6 @@ function dessiner() {
 dessiner();
 ```
 
-
-
 ## Paramètres
 
 - array
@@ -84,13 +82,11 @@ dessiner();
 
 ## Spécifications
 
-| Spécification                                                                                                                                                            | Statut                               | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AnalyserNode-getFloatTimeDomainData-void-Float32Array-array', 'getFloatTimeDomainData()')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AnalyserNode.getFloatTimeDomainData")}}
+{{Compat}}
 
 ## Voir aussi
 

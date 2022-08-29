@@ -23,14 +23,14 @@ translation_of: Web/HTML/Element/slot
         <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>,
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#transparent_content_model">透過的コンテンツ</a>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#透過的コンテンツ">透過的コンテンツ</a>
       </td>
     </tr>
     <tr>
@@ -44,7 +44,7 @@ translation_of: Web/HTML/Element/slot
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>を受け付ける任意の要素
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け付ける任意の要素
       </td>
     </tr>
     <tr>
@@ -82,13 +82,13 @@ translation_of: Web/HTML/Element/slot
     details {font-family: "Open Sans Light", Helvetica, Arial, sans-serif }
     .name {font-weight: bold; color: #217ac0; font-size: 120% }
     h4 {
-      margin: 10px 0 -8px 0;
+      margin: 10px 0 -8px 0;
       background: #217ac0;
-      color: white;
-      padding: 2px 6px;
+      color: white;
+      padding: 2px 6px;
       border: 1px solid #cee9f9;
-      border-radius: 4px;
-    }
+      border-radius: 4px;
+    }
     .attributes { margin-left: 22px; font-size: 90% }
     .attributes p { margin-left: 16px; font-style: italic }
   </style>

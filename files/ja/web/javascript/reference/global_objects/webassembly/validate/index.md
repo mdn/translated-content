@@ -33,20 +33,20 @@ WebAssembly.validate(bufferSource)
 
 ### 例外
 
-`bufferSource` が[型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)または [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) でない場合、{{jsxref("TypeError")}} が発生します。
+`bufferSource` が[型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)または [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) でない場合、{{jsxref("TypeError")}} が発生します。
 
 ## 例
 
 ### validate の使用
 
-以下の例 (`validate.html` の[ソースコード](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/validate.html)と[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/validate.html) をご確認ください) は .wasm モジュールを読み取って型付き配列に変換します。次に、 `validate()` メソッドを使用してモジュールが有効かどうかをチェックします。</p>
+以下の例 (`validate.html` の[ソースコード](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/validate.html)と[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/validate.html) をご確認ください) は .wasm モジュールを読み取って型付き配列に変換します。次に、 `validate()` メソッドを使用してモジュールが有効かどうかをチェックします。</p>
 
 ```js
 fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
+  response.arrayBuffer()
 ).then(function(bytes) {
-  var valid = WebAssembly.validate(bytes);
-  console.log("The given bytes are "
+  var valid = WebAssembly.validate(bytes);
+  console.log("The given bytes are "
     + (valid ? "" : "not ") + "a valid wasm module");
 });
 ```

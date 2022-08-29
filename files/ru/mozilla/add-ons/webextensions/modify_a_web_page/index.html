@@ -4,7 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 translation_of: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 original_slug: Mozilla/Add-ons/WebExtensions/модификация_веб_страницы
 ---
-<p> </p>
+<p> </p>
 
 <div>{{AddonSidebar}}</div>
 
@@ -53,7 +53,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/модификация_веб_ст�
 </div>
 
 <div class="note">
-<p>Ключ <code>content_scripts</code> также имеет свойство  <code>"css"</code>, которое вы можете использовать для вставки CSS-таблиц.</p>
+<p>Ключ <code>content_scripts</code> также имеет свойство  <code>"css"</code>, которое вы можете использовать для вставки CSS-таблиц.</p>
 </div>
 
 <p>Далее, создадим файл "page-eater.js", внутри директории "modify-page":</p>
@@ -98,7 +98,7 @@ document.body.appendChild(header);</pre>
 <p>Мы удалили ключ <code>content_scripts</code> и добавили два новых:</p>
 
 <ul>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions (разрешения)</a></code>: для внедрения скрипта, нам нужны разрешения для страниц, которые мы модифицируем.  <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">Разрешение <code>activeTab</code></a> это способ получить доступ к текущей вкладки. Нам также нужно разрешение <code>contextMenus</code>, чтобы добавлять в контекстное меню новые элементы.</li>
+ <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions (разрешения)</a></code>: для внедрения скрипта, нам нужны разрешения для страниц, которые мы модифицируем.  <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">Разрешение <code>activeTab</code></a> это способ получить доступ к текущей вкладки. Нам также нужно разрешение <code>contextMenus</code>, чтобы добавлять в контекстное меню новые элементы.</li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background">background (фоновый)</a></code>: мы используем этот ключ, для загрузки постоянного <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">"фонового скрипта"</a>, с именем "background.js", в котором мы настроим контекстное меню и внедрим контентный скрипт.</li>
 </ul>
 

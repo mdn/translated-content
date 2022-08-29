@@ -18,7 +18,9 @@ La méthode statique **`Atomics.wait()`** permet de vérifier qu'un emplacement 
 
 ## Syntaxe
 
-    Atomics.wait(typedArray, index, valeur[, timeout])
+```js
+Atomics.wait(typedArray, index, valeur[, timeout])
+```
 
 ### Paramètres
 

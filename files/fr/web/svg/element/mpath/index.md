@@ -19,8 +19,8 @@ L'élément **`<mpath>`** se place dans un élément {{SVGElement("animateMotion
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base "en/SVG/Attribute#Core")
-- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#Attributs_XLink "en/SVG/Attribute#XLink")
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
+- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#Attributs_XLink)
 - {{SVGAttr("externalResourcesRequired")}}
 
 ### Attributs spécifiques

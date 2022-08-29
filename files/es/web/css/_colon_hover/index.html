@@ -11,16 +11,16 @@ translation_of: 'Web/CSS/:hover'
 ---
 <div>{{ CSSRef }}</div>
 
-<p>La <a href="/es/docs/Web/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-clase</a> <strong><code>:hover</code></strong> de <a href="/es/docs/Web/CSS">CSS</a> coincide cuando el usuario interactúa con un elemento con un dispositivo señalador, pero no necesariamente lo activa. Generalmente se activa cuando el usuario se desplaza sobre un elemento con el cursor (puntero del mouse).</p>
+<p>La <a href="/es/docs/Web/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-clase</a> <strong><code>:hover</code></strong> de <a href="/es/docs/Web/CSS">CSS</a> coincide cuando el usuario interactúa con un elemento con un dispositivo señalador, pero no necesariamente lo activa. Generalmente se activa cuando el usuario se desplaza sobre un elemento con el cursor (puntero del mouse).</p>
 
 <pre class="brush: css no-line-numbers">/* Selecciona cualquier elemento &lt;a&gt; cuando está "mantenido (hovered)" */
 a:hover {
   color: orange;
 }</pre>
 
-<p>Los estilos definidos por la pseudoclase <code>:active</code> serán anulados por cualquier pseudo-clase posterior relacionada con el <em>enlace </em>({{ cssxref(":link") }}, {{ cssxref(":visited") }}, o {{ cssxref(":active") }}) que tenga al menos la misma especificidad. Para darle un estilo apropiado a los enlaces, coloque la regla <code>:hover</code> después de las reglas <code>:link</code> y <code>:visited</code>, pero antes de <code>:active</code>, según lo definido por el <em>orden LVHA</em>: <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code>.</p>
+<p>Los estilos definidos por la pseudoclase <code>:active</code> serán anulados por cualquier pseudo-clase posterior relacionada con el <em>enlace </em>({{ cssxref(":link") }}, {{ cssxref(":visited") }}, o {{ cssxref(":active") }}) que tenga al menos la misma especificidad. Para darle un estilo apropiado a los enlaces, coloque la regla <code>:hover</code> después de las reglas <code>:link</code> y <code>:visited</code>, pero antes de <code>:active</code>, según lo definido por el <em>orden LVHA</em>: <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code>.</p>
 
-<div class="note"><strong>Nota</strong>: La pseudo-clase <code>:hover</code> es problemática en las pantallas táctiles. Dependiendo del navegador, la pseudo-clase <code>:hover</code> podría no coincidir, coincidir solo por un momento después de tocar un elemento, o continuar coincidiendo incluso después de que el usuario haya dejado de tocar y hasta que el usuario toque otro elemento. Los desarrolladores web deben asegurarse de que el contenido sea accesible en dispositivos con capacidades <em>hovering </em>limitadas o inexistentes.</div>
+<div class="note"><strong>Nota</strong>: La pseudo-clase <code>:hover</code> es problemática en las pantallas táctiles. Dependiendo del navegador, la pseudo-clase <code>:hover</code> podría no coincidir, coincidir solo por un momento después de tocar un elemento, o continuar coincidiendo incluso después de que el usuario haya dejado de tocar y hasta que el usuario toque otro elemento. Los desarrolladores web deben asegurarse de que el contenido sea accesible en dispositivos con capacidades <em>hovering </em>limitadas o inexistentes.</div>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -69,7 +69,7 @@ a:hover {
   <tr>
    <td>{{ SpecName('HTML WHATWG', 'scripting.html#selector-hover', ':hover') }}</td>
    <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{ SpecName('CSS4 Selectors', '#the-hover-pseudo', ':hover') }}</td>
@@ -100,6 +100,6 @@ a:hover {
 <h2 id="Ver_también">Ver también</h2>
 
 <ul>
- <li><a href="https://code.google.com/p/chromium/issues/detail?id=370155">Chromium bug #370155: No ponga <code>:hover</code> sticky en los sitios que configuran una ventana gráfica móvil</a></li>
+ <li><a href="https://code.google.com/p/chromium/issues/detail?id=370155">Chromium bug #370155: No ponga <code>:hover</code> sticky en los sitios que configuran una ventana gráfica móvil</a></li>
  <li><a href="https://code.google.com/p/chromium/issues/detail?id=306581">Chromium bug #306581: Inmediatamente muestra los estados hover y active al tocar cuando la página no se puede desplazar.</a></li>
 </ul>

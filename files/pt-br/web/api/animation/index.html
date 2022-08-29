@@ -16,7 +16,7 @@ translation_of: Web/API/Animation
 ---
 <p>{{ APIRef("Web Animations API") }}{{SeeCompatTable}}</p>
 
-<p>A interface <strong><code>Animation</code></strong> da <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> representa um único player de animação e fornece controles e uma linha do tempo (timeline) para um nó de animação ou recurso.</p>
+<p>A interface <strong><code>Animation</code></strong> da <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> representa um único player de animação e fornece controles e uma linha do tempo (timeline) para um nó de animação ou recurso.</p>
 
 <h2 id="Construtor">Construtor</h2>
 
@@ -29,23 +29,23 @@ translation_of: Web/API/Animation
 
 <dl>
  <dt>{{domxref("Animation.currentTime")}}</dt>
- <dd>O valor do tempo atual da animação, em milissegundos, esteja ela executando ou pausada. Se a animação não tem uma {{domxref("AnimationTimeline", "timeline")}}, está inativa ou ainda não foi executada, este valor é <code>null</code>.</dd>
+ <dd>O valor do tempo atual da animação, em milissegundos, esteja ela executando ou pausada. Se a animação não tem uma {{domxref("AnimationTimeline", "timeline")}}, está inativa ou ainda não foi executada, este valor é <code>null</code>.</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("Animation.effect")}}</dt>
- <dd>Obtém e define o {{domxref("KeyframeEffect")}} associado a essa animação.</dd>
+ <dd>Obtém e define o {{domxref("KeyframeEffect")}} associado a essa animação.</dd>
  <dt>{{domxref("Animation.finished")}} {{readOnlyInline}}</dt>
  <dd>Retorna a <code>Primise</code> de finalização atual para essa animação.</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("Animation.id")}}</dt>
- <dd>Obtém e define a <code>String</code> usada para identificar a animação.</dd>
+ <dd>Obtém e define a <code>String</code> usada para identificar a animação.</dd>
  <dt>{{domxref("Animation.oncancel")}}</dt>
- <dd>Obtém e define o manipulador para o evento <code>cancel</code>.</dd>
+ <dd>Obtém e define o manipulador para o evento <code>cancel</code>.</dd>
  <dt>{{domxref("Animation.onfinish")}}</dt>
- <dd>Obtém e define o manipulador para o evento <code>finish</code>.</dd>
+ <dd>Obtém e define o manipulador para o evento <code>finish</code>.</dd>
  <dt>{{domxref("Animation.playState")}} {{readOnlyInline}}</dt>
  <dd>Retorna um valor enumerado descrevendo o estado de execução de uma animação.</dd>
 </dl>
@@ -67,7 +67,7 @@ translation_of: Web/API/Animation
 
 <dl>
  <dt>{{domxref("Animation.timeline")}}</dt>
- <dd>Obtém ou define a {{domxref("AnimationTimeline", "timeline")}} associada a essa animação.</dd>
+ <dd>Obtém ou define a {{domxref("AnimationTimeline", "timeline")}} associada a essa animação.</dd>
 </dl>
 
 <h2 id="Métodos">Métodos</h2>
@@ -89,7 +89,7 @@ translation_of: Web/API/Animation
 
 <dl>
  <dt>{{domxref("Animation.play()")}}</dt>
- <dd>Inicia ou continua a execução de uma animação ou a recomeça se ela tiver terminado anteriormente.</dd>
+ <dd>Inicia ou continua a execução de uma animação ou a recomeça se ela tiver terminado anteriormente.</dd>
 </dl>
 
 <dl>
@@ -116,56 +116,4 @@ translation_of: Web/API/Animation
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Recurso</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatChrome(39.0)}} [1]</td>
-   <td>{{CompatGeckoDesktop(40.0)}} [2]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Recurso</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>{{CompatGeckoDesktop(40.0)}} [2]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Implementado como <code>AnimationPlayer</code> (nome da interface em uma versão primária da especificação).</p>
-
-<p>[2] Anteriormente ao Firefox 40, estava disponível como <code>AnimationPlayer</code>. Em ambos os casos, é necessário definir a preferência <code>dom.animations-api.core.enabled</code> para poder usá-la.</p>
-
-<p> </p>
+{{Compat("api.Animation")}}

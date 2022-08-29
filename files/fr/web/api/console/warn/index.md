@@ -20,8 +20,10 @@ Affiche un message d'avertissement dans la console web.
 
 ## Syntaxe
 
-    console.warn(obj1 [, obj2, ..., objN]);
-    console.warn(msg [, subst1, ..., substN]);
+```js
+console.warn(obj1 [, obj2, ..., objN]);
+console.warn(msg [, subst1, ..., substN]);
+```
 
 ## Paramétres
 
@@ -34,15 +36,13 @@ Affiche un message d'avertissement dans la console web.
 
 Voir [Outputting text to the console](/fr/docs/Web/API/console#Outputting_text_to_the_console) dans la documentation de {{ domxref("console") }} pour plus de détails.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                            | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#warn", "console.warn()")}} | {{Spec2("Console API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.warn")}}
+{{Compat}}
 
 ## Voir aussi
 

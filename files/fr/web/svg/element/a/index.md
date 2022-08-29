@@ -62,15 +62,13 @@ svgns|a:hover, svgns|a:active {
 
 ## Attributs
 
-
-
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base "SVG/Attribute#Core")
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel "SVG/Attribute#ConditionalProccessing")
-- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#Événement_graphiques "SVG/Attribute#GraphicalEvent")
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_présentation "SVG/Attribute#Presentation")
-- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#Attributs_XLink "SVG/Attribute#XLink")
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel)
+- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#Événement_graphiques)
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_présentation)
+- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#Attributs_XLink)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}
@@ -94,7 +92,7 @@ svgns|a:hover, svgns|a:active {
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGAElement`](/fr/docs/DOM/SVGAElement "DOM/SVGAElement").
+Cet élément implémente l'interface [`SVGAElement`](/fr/docs/DOM/SVGAElement).
 
 ## Spécifications
 

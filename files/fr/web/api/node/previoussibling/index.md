@@ -14,7 +14,9 @@ La propriété en lecture seule  **`Node.previousSibling`** renvoie le nœud (`n
 
 ## Syntaxe
 
-    previousNode = node.previousSibling;
+```js
+previousNode = node.previousSibling;
+```
 
 ## Exemple
 
@@ -29,7 +31,7 @@ alert(document.getElementById("b2").previousSibling.id); // "b1"
 
 Les navigateurs basés sur Gecko insèrent des nœuds texte dans un document pour représenter des espaces
 vides dans le balisage source. Par conséquent, un nœud obtenu par exemple via [`Node.firstChild`](/fr/docs/Web/API/Node/firstChild) ou
-[`Node.previousSibling`](/fr/docs/Web/API/Node/previousSibling "{{APIRef("DOM")}}") peut faire référence à un nœud texte contenant des espaces plutôt qu'au véritable élément
+[`Node.previousSibling`](/fr/docs/Web/API/Node/previousSibling) peut faire référence à un nœud texte contenant des espaces plutôt qu'au véritable élément
 que l'auteur comptait obtenir.
 
 Consultez [Gestion des espaces dans le DOM](/fr/docs/Gestion_des_espaces_dans_le_DOM)

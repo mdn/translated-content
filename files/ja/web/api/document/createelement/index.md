@@ -8,7 +8,6 @@ tags:
   - メソッド
   - リファレンス
   - createElement
-browser-compat: api.Document.createElement
 translation_of: Web/API/Document/createElement
 ---
 {{APIRef("DOM")}}
@@ -26,7 +25,7 @@ let element = document.createElement(tagName[, options]);
 - _tagName_
   - : 生成される要素の型を特定する文字列です。生成される要素の {{domxref("Node.nodeName", "nodeName")}} は _tagName_ の値で初期化されます。このメソッドで修飾名 ("html:a" など) を使用しないでください。 HTML 文書で呼び出すと、 `createElement()` は要素を生成する前に _tagName_ を小文字に変換します。 Firefox, Opera, Chrome では、 `createElement(null)` は `createElement("null")` のように動作します。
 - _options_{{optional_inline}}
-  - : 省略可能な `ElementCreationOptions` オブジェクトで、 `is` という名前のプロパティをひとつ持ち、その値は前に `customElements.define()` を使用して定義したカスタム要素の名前です。詳しくは{{anch("ウェブコンポーネントの例")}}を参照してください。
+  - : 省略可能な `ElementCreationOptions` オブジェクトで、 `is` という名前のプロパティをひとつ持ち、その値は前に `customElements.define()` を使用して定義したカスタム要素の名前です。詳しくは[ウェブコンポーネントの例](#ウェブコンポーネントの例)を参照してください。
 
 ### 返値
 

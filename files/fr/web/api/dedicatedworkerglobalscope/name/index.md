@@ -15,7 +15,9 @@ La propriété en lecture seule **`name`** de l'interface {{domxref("DedicatedWo
 
 ## Syntaxe
 
-    var nameObj = self.name;
+```js
+var nameObj = self.name;
+```
 
 ### Valeur
 
@@ -39,13 +41,11 @@ self.name
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', '#dom-dedicatedworkerglobalscope-name', 'name')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DedicatedWorkerGlobalScope.name")}}
+{{Compat}}
 
 ## Voir aussi
 

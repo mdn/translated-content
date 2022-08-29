@@ -17,8 +17,10 @@ La méthode **`count()`**, rattachée à l'interface {{domxref("IDBIndex")}}, re
 
 ## Syntaxe
 
-    var request = monIndex.count();
-    var request = monIndex.count(cle);
+```js
+var request = monIndex.count();
+var request = monIndex.count(cle);
+```
 
 ### Paramètres
 
@@ -102,14 +104,11 @@ function displayDataByIndex() {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-count-IDBRequest-any-key', 'count()')}} | {{Spec2('IndexedDB')}}     |              |
-| {{SpecName("IndexedDB 2", "#dom-idbindex-count", "count()")}}                         | {{Spec2("IndexedDB 2")}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.count")}}
+{{Compat}}
 
 ## Voir aussi
 

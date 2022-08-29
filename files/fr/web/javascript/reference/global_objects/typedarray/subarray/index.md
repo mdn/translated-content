@@ -18,7 +18,9 @@ La méthode `subarray()` permet de renvoyer un nouvel objet _TypedArray_ basé s
 
 ## Syntaxe
 
-    typedarray.subarray([début[,fin]])
+```js
+typedarray.subarray([début[,fin]])
+```
 
 ### Paramètres
 

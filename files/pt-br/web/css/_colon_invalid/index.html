@@ -10,14 +10,14 @@ translation_of: 'Web/CSS/:invalid'
 ---
 <div>{{CSSRef}}</div>
 
-<p>A <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classe CSS</a> <strong><code>:invalid</code></strong> representa qualquer elemento {{HTMLElement("input")}} ou {{HTMLElement("form")}} cujo conteúdo não esteja <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">válido</a>.</p>
+<p>A <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classe CSS</a> <strong><code>:invalid</code></strong> representa qualquer elemento {{HTMLElement("input")}} ou {{HTMLElement("form")}} cujo conteúdo não esteja <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">válido</a>.</p>
 
 <pre class="brush: css no-line-numbers">/* Seleciona todos os inputs inválidos */
 input:invalid {
   background-color: pink;
 }</pre>
 
-<p>Essa pseudo-classe é útil para usuário identificar quais campos foram preenchidos incorretamente.</p>
+<p>Essa pseudo-classe é útil para usuário identificar quais campos foram preenchidos incorretamente.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -25,7 +25,7 @@ input:invalid {
 
 <h2 id="Exemplo">Exemplo</h2>
 
-<p>Esse exemplo apresenta um simples formulário onde a cor verde realça um input válido e a cor vermelha realça um input inválido.</p>
+<p>Esse exemplo apresenta um simples formulário onde a cor verde realça um input válido e a cor vermelha realça um input inválido.</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -73,13 +73,13 @@ input:required:invalid {
 
 <h3 id="Radio_buttons">Radio buttons</h3>
 
-<p>Se algum radio button de um grupo possuir o atributo <code>required</code>, a pseudo-classe <code>:invalid</code> é aplicada a todos se nenhum deles for selecionado. (Radio buttons agrupados compartilham o mesmo valor pelo atributo <code>name</code>.)</p>
+<p>Se algum radio button de um grupo possuir o atributo <code>required</code>, a pseudo-classe <code>:invalid</code> é aplicada a todos se nenhum deles for selecionado. (Radio buttons agrupados compartilham o mesmo valor pelo atributo <code>name</code>.)</p>
 
 <h3 id="Gecko_defaults">Gecko defaults</h3>
 
-<p>Por padrão, Gecko não aplica o estilo para a pseudo-classe <code>:invalid</code>. Entretanto, pode-se aplicar um estilo (um "brilho" vermelho usando a propriedade {{Cssxref("box-shadow")}}) à pseudo-classe {{cssxref(":-moz-ui-invalid")}}, que são um conjunto que se aplicam como o <code>:invalid</code>.</p>
+<p>Por padrão, Gecko não aplica o estilo para a pseudo-classe <code>:invalid</code>. Entretanto, pode-se aplicar um estilo (um "brilho" vermelho usando a propriedade {{Cssxref("box-shadow")}}) à pseudo-classe {{cssxref(":-moz-ui-invalid")}}, que são um conjunto que se aplicam como o <code>:invalid</code>.</p>
 
-<p>Você pode desabilitar o "brilho" usando o CSS a seguir, ou substituir completamente para alterar a aparência dos campos inválidos: </p>
+<p>Você pode desabilitar o "brilho" usando o CSS a seguir, ou substituir completamente para alterar a aparência dos campos inválidos: </p>
 
 <pre class="brush: css">:invalid {
   box-shadow: none;

@@ -12,20 +12,20 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
 ---
 <div class="warning">
-<p><strong>Cuidado:</strong> Alterando o <code>[[Prototype]]</code> de um objeto é, pela natureza que as engines do Javascript modernos otimizam os acessos à propriedades, uma operação muito lenta, em <strong><em>TODOS </em></strong>os mecanismos browsers e JavaScript. Os efeitos no desempenho de alteração na herança são sutis e distantes, e não se limitam simplesmente ao tempo gasto em na declaração <code>obj.__proto__ = ...</code>, mas podem se estender para <strong><em>qualquer</em></strong> código que tenha acesso a <strong><em>qualquer</em></strong> objeto cujo <code>[[Prototype]]</code> foi alterado. Se você se preocupa com desempenho, evite configurar o <code>[[Prototype]]</code> de um objeto. Ao invés disso, crie um novo objeto com o <code>[[Prototype]]</code> desejado usando {{jsxref("Object.create()")}}.</p>
+<p><strong>Cuidado:</strong> Alterando o <code>[[Prototype]]</code> de um objeto é, pela natureza que as engines do Javascript modernos otimizam os acessos à propriedades, uma operação muito lenta, em <strong><em>TODOS </em></strong>os mecanismos browsers e JavaScript. Os efeitos no desempenho de alteração na herança são sutis e distantes, e não se limitam simplesmente ao tempo gasto em na declaração <code>obj.__proto__ = ...</code>, mas podem se estender para <strong><em>qualquer</em></strong> código que tenha acesso a <strong><em>qualquer</em></strong> objeto cujo <code>[[Prototype]]</code> foi alterado. Se você se preocupa com desempenho, evite configurar o <code>[[Prototype]]</code> de um objeto. Ao invés disso, crie um novo objeto com o <code>[[Prototype]]</code> desejado usando {{jsxref("Object.create()")}}.</p>
 </div>
 
 <div class="warning">
-<p><strong>Cuidado:</strong> Enquanto <code>Object.prototype.__proto__</code> é suportado hoje em dia em quase todos os navegadores, a existência e o comportamento exato foram padronizados na especificação ECMAScript 2015 como um recurso legado para assegurar compatibilidade com os navegadores. Para melhor suporte, recomenda-se que apenas {{jsxref("Object.getPrototypeOf()")}} seja usado em vez disso.</p>
+<p><strong>Cuidado:</strong> Enquanto <code>Object.prototype.__proto__</code> é suportado hoje em dia em quase todos os navegadores, a existência e o comportamento exato foram padronizados na especificação ECMAScript 2015 como um recurso legado para assegurar compatibilidade com os navegadores. Para melhor suporte, recomenda-se que apenas {{jsxref("Object.getPrototypeOf()")}} seja usado em vez disso.</p>
 </div>
 
 <div>{{JSRef}}</div>
 
-<p>A propriedade <code>__proto__</code> de {{jsxref("Object.prototype")}} é uma propriedade de acesso (uma função getter e uma setter) que expõe o interno <code>[[Prototype]]</code> (ou um objeto ou {{jsxref("Global_Objects/null", "null")}}) de um objeto o qual é acessado.</p>
+<p>A propriedade <code>__proto__</code> de {{jsxref("Object.prototype")}} é uma propriedade de acesso (uma função getter e uma setter) que expõe o interno <code>[[Prototype]]</code> (ou um objeto ou {{jsxref("Global_Objects/null", "null")}}) de um objeto o qual é acessado.</p>
 
-<p>O uso de <code>__proto__</code> é controverso, e foi desencorajado. Nunca foi incluído originalmente na especificação do idioma EcmaScript, mas os navegadores modernos decidiram implementá-lo de qualquer maneira. Somente recentemente, a propriedade <code>__proto__</code> foi padronizada na especificação de linguagem ECMAScript 2015 para navegadores para garantir compatibilidade, e então ser suportada no futuro. É obsoleta a favor de {{jsxref("Object.getPrototypeOf")}}/{{jsxref("Reflect.getPrototypeOf")}} e {{jsxref("Object.setPrototypeOf")}}/{{jsxref("Reflect.setPrototypeOf")}} (embora ainda, definir <code>[[Prototype]]</code> é uma operação lenta que deve ser evitada se o desempenho for uma preocupação).</p>
+<p>O uso de <code>__proto__</code> é controverso, e foi desencorajado. Nunca foi incluído originalmente na especificação do idioma EcmaScript, mas os navegadores modernos decidiram implementá-lo de qualquer maneira. Somente recentemente, a propriedade <code>__proto__</code> foi padronizada na especificação de linguagem ECMAScript 2015 para navegadores para garantir compatibilidade, e então ser suportada no futuro. É obsoleta a favor de {{jsxref("Object.getPrototypeOf")}}/{{jsxref("Reflect.getPrototypeOf")}} e {{jsxref("Object.setPrototypeOf")}}/{{jsxref("Reflect.setPrototypeOf")}} (embora ainda, definir <code>[[Prototype]]</code> é uma operação lenta que deve ser evitada se o desempenho for uma preocupação).</p>
 
-<p>A propriedade <code>__proto__</code> também pode ser usada em uma definição literal de objeto para definir o objeto <code>[[Prototype]]</code> na criação, como uma alternativa para {{jsxref("Object.create()")}}. Veja: <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object initializer / literal syntax</a>.</p>
+<p>A propriedade <code>__proto__</code> também pode ser usada em uma definição literal de objeto para definir o objeto <code>[[Prototype]]</code> na criação, como uma alternativa para {{jsxref("Object.create()")}}. Veja: <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object initializer / literal syntax</a>.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -108,13 +108,13 @@ obj.myname();//myname
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>A função getter de <code>__proto__</code> expõe o valor interno de <code>[[Prototype]]</code> de um objeto. Para objetos criado usando um objeto literal, este valor é {{jsxref("Object.prototype")}}. Para os objetos criados usando literais de matrizes, esse valor é {{jsxref("Array.prototype")}}. Para funções, esse valor é {{jsxref("Function.prototype")}}. Para objeto criados usando <code>new fun</code>, onde <code>fun</code> é uma função construtora built-in fornecida pelo JavaScript ({{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("String")}}, e assim por diante — incluindo novos construtores adicionados como evolução do JavaScript), este valor é sempre <code>fun.prototype</code>. Para objetos criados usando <code>new fun</code>, onde <code>fun</code> é uma função definida em um script, esse valor é o valor de  <code>fun.prototype</code>. (Ou seja, se o construtor não retornou um outro objeto explicitamente, ou o <code>fun.prototype</code> foi reatribuído desde que a instância foi criada).</p>
+<p>A função getter de <code>__proto__</code> expõe o valor interno de <code>[[Prototype]]</code> de um objeto. Para objetos criado usando um objeto literal, este valor é {{jsxref("Object.prototype")}}. Para os objetos criados usando literais de matrizes, esse valor é {{jsxref("Array.prototype")}}. Para funções, esse valor é {{jsxref("Function.prototype")}}. Para objeto criados usando <code>new fun</code>, onde <code>fun</code> é uma função construtora built-in fornecida pelo JavaScript ({{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("String")}}, e assim por diante — incluindo novos construtores adicionados como evolução do JavaScript), este valor é sempre <code>fun.prototype</code>. Para objetos criados usando <code>new fun</code>, onde <code>fun</code> é uma função definida em um script, esse valor é o valor de  <code>fun.prototype</code>. (Ou seja, se o construtor não retornou um outro objeto explicitamente, ou o <code>fun.prototype</code> foi reatribuído desde que a instância foi criada).</p>
 
-<p>O setter <code>__proto__</code> permite ao <code>[[Prototype]]</code> de um objeto sejá mutável. O objeto deve ser extensível de acordo com {{jsxref("Object.isExtensible()")}}: se não for, um erro {{jsxref("Global_Objects/TypeError", "TypeError")}} é emitido. O valor fornecido deve ser um objeto ou {{jsxref("Global_Objects/null", "null")}}. Fornecer qualquer outro valor não fará nada.</p>
+<p>O setter <code>__proto__</code> permite ao <code>[[Prototype]]</code> de um objeto sejá mutável. O objeto deve ser extensível de acordo com {{jsxref("Object.isExtensible()")}}: se não for, um erro {{jsxref("Global_Objects/TypeError", "TypeError")}} é emitido. O valor fornecido deve ser um objeto ou {{jsxref("Global_Objects/null", "null")}}. Fornecer qualquer outro valor não fará nada.</p>
 
 <p>Para entender como os prototypes são usados para herança, veja o artigo:<a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">Inheritance and the prototype chain</a>.</p>
 
-<p>A propriedade <code>__proto__</code> é simplesmente uma propriedade acessora {{jsxref("Object.prototype")}} consistindo de uma função getter e setter. Um acesso de propriedade para <code>__proto__</code> que eventualmente consulte {{jsxref("Object.prototype")}} irá encontrar esta propriedade, mas um acesso que não consulta {{jsxref("Object.prototype")}} não a encontrará. Se alguma outra propriedade <code>__proto__</code> for encontrada antes de consultar {{jsxref("Object.prototype")}}, essa propriedade irá ocultar a que encontrou {{jsxref("Object.prototype")}}.</p>
+<p>A propriedade <code>__proto__</code> é simplesmente uma propriedade acessora {{jsxref("Object.prototype")}} consistindo de uma função getter e setter. Um acesso de propriedade para <code>__proto__</code> que eventualmente consulte {{jsxref("Object.prototype")}} irá encontrar esta propriedade, mas um acesso que não consulta {{jsxref("Object.prototype")}} não a encontrará. Se alguma outra propriedade <code>__proto__</code> for encontrada antes de consultar {{jsxref("Object.prototype")}}, essa propriedade irá ocultar a que encontrou {{jsxref("Object.prototype")}}.</p>
 
 <h2 id="Especificações">Especificações</h2>
 
@@ -133,66 +133,18 @@ obj.myname();//myname
   <tr>
    <td>{{SpecName('ESDraft', '#sec-additional-properties-of-the-object.prototype-object', 'Object.prototype.__proto__')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatIE("11")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Object.proto")}}
 
 <h2 id="Notas_de_compatibilidade">Notas de compatibilidade</h2>
 
-<p>Enquanto a especificação ECMAScript 2015 dita que o suporte para <code>__proto__</code> é requerido <em>somente</em> para navegadores (apesar de ser normativo), outros ambientes podem suportar também para uso legado.</p>
+<p>Enquanto a especificação ECMAScript 2015 dita que o suporte para <code>__proto__</code> é requerido <em>somente</em> para navegadores (apesar de ser normativo), outros ambientes podem suportar também para uso legado.</p>
 
 <h2 id="Veja_também">Veja também</h2>
 

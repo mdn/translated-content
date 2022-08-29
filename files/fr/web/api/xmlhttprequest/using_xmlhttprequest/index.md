@@ -14,7 +14,7 @@ tags:
 translation_of: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 original_slug: Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest
 ---
-[`XMLHttpRequest`](/en-US/docs/DOM/XMLHttpRequest) permet d'envoyer des requêtes HTTP de manière très simple.  Il suffit de créer une instance de l'objet, d'ouvrir une URL, et d'envoyer la requête.  Le [status HTTP](/en-US/docs/HTTP/HTTP_response_codes) du résultat, tout comme le contenu de la réponse, sont disponibles dans l'objet de la requête quand la transaction est terminée. Cette page présente quelques-uns des cas d'utilisation communs et même un peu obscurs pour cet objet JavaScript puissant.
+[`XMLHttpRequest`](/fr/docs/DOM/XMLHttpRequest) permet d'envoyer des requêtes HTTP de manière très simple.  Il suffit de créer une instance de l'objet, d'ouvrir une URL, et d'envoyer la requête.  Le [status HTTP](/fr/docs/HTTP/HTTP_response_codes) du résultat, tout comme le contenu de la réponse, sont disponibles dans l'objet de la requête quand la transaction est terminée. Cette page présente quelques-uns des cas d'utilisation communs et même un peu obscurs pour cet objet JavaScript puissant.
 
 ```js
 function reqListener () {
@@ -29,7 +29,7 @@ oReq.send();
 
 ## Types de requêtes
 
-Une demande faite via XMLHttpRequest peut récupérer les données dans l'une des deux façons, de manière asynchrone ou synchrone. Le type de demande est dictée par l'argument optionnel async (le troisième argument) qui est mis sur la méthode [open()](</en-US/docs/DOM/XMLHttpRequest#open()>) XMLHttpRequest (). Si cet argument est true ou non spécifié, l'objet XMLHttpRequest est traitée de manière asynchrone, sinon le processus est effectué de façon synchrone. Une discussion détaillée et des démonstrations de ces deux types de demandes peuvent être trouvés sur la page des [requêtes synchrones et asynchrones](/en-US/docs/DOM/XMLHttpRequest/Synchronous_and_Asynchronous_Requests). En général, vous devriez rarement, voire jamais, utiliser requêtes synchrones.
+Une demande faite via XMLHttpRequest peut récupérer les données dans l'une des deux façons, de manière asynchrone ou synchrone. Le type de demande est dictée par l'argument optionnel async (le troisième argument) qui est mis sur la méthode [open()](</en-US/docs/DOM/XMLHttpRequest#open()>) XMLHttpRequest (). Si cet argument est true ou non spécifié, l'objet XMLHttpRequest est traitée de manière asynchrone, sinon le processus est effectué de façon synchrone. Une discussion détaillée et des démonstrations de ces deux types de demandes peuvent être trouvés sur la page des [requêtes synchrones et asynchrones](/fr/docs/DOM/XMLHttpRequest/Synchronous_and_Asynchronous_Requests). En général, vous devriez rarement, voire jamais, utiliser requêtes synchrones.
 
 > **Note :** A partir de Gecko 30.0 {{ geckoRelease("30.0") }}, les requêtes synchrones sur le processus principal ont été dépréciées en raison de l'effet négatif sur l'expérience utilisateur.
 
@@ -41,21 +41,21 @@ Il existe plusieurs types [d'attributs de réponse](http://www.w3.org/TR/XMLHttp
 
 Si vous utilisez `XMLHttpRequest` pour obtenir le contenu d'un fichier XML distant, la propriété `responseXML` sera un objet DOM contenant le document XML parsé, qui peut être difficile à manipuler et analyser. Il y a quatre moyens principaux d'analyser ce document XML&nbsp;:
 
-1.  Utiliser [XPath](/en-US/docs/XPath) pour localiser des parties.
-2.  Utiliser [JXON](/en-US/docs/JXON) pour le convertir en Objet structuré JavaScript.
-3.  Manuellement [parser et serializer le XML](/en-US/docs/Parsing_and_serializing_XML) en chaînes de caractères ou en objets.
-4.  Utiliser [XMLSerializer](/en-US/docs/XMLSerializer) pour serializer **le DOM en chaînes ou en fichiers.**
-5.  [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) peut être utilisé si vous connaissez à l'avance le contenu du document XML. Vous pouvez supprimer les sauts de ligne si vous utilisez `RegExp` en prenant en compte ces sauts. Toutefois, cette méthode est un «&nbsp;dernier recours&nbsp;», car si le code XML change légèrement, la méthode échouera probablement.
+1. Utiliser [XPath](/fr/docs/XPath) pour localiser des parties.
+2. Utiliser [JXON](/fr/docs/JXON) pour le convertir en Objet structuré JavaScript.
+3. Manuellement [parser et serializer le XML](/fr/docs/Parsing_and_serializing_XML) en chaînes de caractères ou en objets.
+4. Utiliser [XMLSerializer](/fr/docs/XMLSerializer) pour serializer **le DOM en chaînes ou en fichiers.**
+5. [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) peut être utilisé si vous connaissez à l'avance le contenu du document XML. Vous pouvez supprimer les sauts de ligne si vous utilisez `RegExp` en prenant en compte ces sauts. Toutefois, cette méthode est un «&nbsp;dernier recours&nbsp;», car si le code XML change légèrement, la méthode échouera probablement.
 
 ### Analyser et manipuler une propriété `responseText` contenant un document HTML
 
-> **Note :** La spécification W3C [XMLHttpRequest](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html)  autorise le HTML a être parsé via la propritété `XMLHttpRequest.responseXML`. Lisez l'article à propos du [HTML dans XMLHttpRequest](/en-US/docs/HTML_in_XMLHttpRequest) pour plus de détails.
+> **Note :** La spécification W3C [XMLHttpRequest](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html)  autorise le HTML a être parsé via la propritété `XMLHttpRequest.responseXML`. Lisez l'article à propos du [HTML dans XMLHttpRequest](/fr/docs/HTML_in_XMLHttpRequest) pour plus de détails.
 
 Si vous utilisez `XMLHttpRequest` pour récupérer le contenu d'une page HTML distante, la propriété `responseText` est une chaîne de caractères contenant une "soupe" de tous les tags HTML, qui peut être difficile à manipuler et à analyser. Il y a trois moyens principaux d'analyser cette soupe de HTML :
 
-1.  Utiliser la propriété `XMLHttpRequest.responseXML`.
-2.  Injecter le contenu dans le body d'un [fragment de document](/en-US/docs/Web/API/DocumentFragment) via `fragment.body.innerHTML` et traverser le DOM du fragment.
-3.  [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) peut être utilisé si vous connaissez à l'avance le contenu du document XML. Vous pouvez supprimer les sauts de ligne si vous utilisez `RegExp` en prenant en compte ces sauts. Toutefois, cette méthode est un «&nbsp;dernier recours&nbsp;», car si le code XML change légèrement, la méthode échouera probablement.
+1. Utiliser la propriété `XMLHttpRequest.responseXML`.
+2. Injecter le contenu dans le body d'un [fragment de document](/fr/docs/Web/API/DocumentFragment) via `fragment.body.innerHTML` et traverser le DOM du fragment.
+3. [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) peut être utilisé si vous connaissez à l'avance le contenu du document XML. Vous pouvez supprimer les sauts de ligne si vous utilisez `RegExp` en prenant en compte ces sauts. Toutefois, cette méthode est un «&nbsp;dernier recours&nbsp;», car si le code XML change légèrement, la méthode échouera probablement.
 
 ## Gérer les données binaires
 
@@ -83,7 +83,7 @@ oReq.onload = function(e) {
 oReq.send();
 ```
 
-Pour plus d'exemples, jettez un oeil à la page [Envoyer et recevoir des données binaires](/en-US/docs/DOM/XMLHttpRequest/Sending_and_Receiving_Binary_Data)
+Pour plus d'exemples, jettez un oeil à la page [Envoyer et recevoir des données binaires](/fr/docs/DOM/XMLHttpRequest/Sending_and_Receiving_Binary_Data)
 
 ## Surveiller la progression
 
@@ -170,14 +170,14 @@ Notez qu'il n'y a pas moyen d'être certain des informations reçues dans l'év�
 Les instances de `XMLHttpRequest` peuvent être utilisées pour envoyer des formulaires de deux façons :
 
 - n'utiliser rien de plus qu'AJAX
-- utiliser l'API [`FormData`](/en-US/docs/DOM/XMLHttpRequest/FormData)
+- utiliser l'API [`FormData`](/fr/docs/DOM/XMLHttpRequest/FormData)
 
-La **seconde solution** (utiliser l'API [`FormData`](/en-US/docs/DOM/XMLHttpRequest/FormData)) est la plus simple et la plus rapide, mais a le désavantage que les données collectées ne peuvent pas être [chainifiées](/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify).
+La **seconde solution** (utiliser l'API [`FormData`](/fr/docs/DOM/XMLHttpRequest/FormData)) est la plus simple et la plus rapide, mais a le désavantage que les données collectées ne peuvent pas être [chainifiées](/fr/docs/JavaScript/Reference/Global_Objects/JSON/stringify).
 La **première solution** est plutôt la plus complexe, mais se prête à être plus flexible et puissante.
 
 ### Rien de plus que `XMLHttpRequest`
 
-Envoyer des formulaires sans l'API [`FormData`](/en-US/docs/DOM/XMLHttpRequest/FormData) ne demande rien de plus, si ce n'est l'API [`FileReader`](/en-US/docs/DOM/FileReader), mais seulement **si vous voulez envoyer un fichier ou plus**.
+Envoyer des formulaires sans l'API [`FormData`](/fr/docs/DOM/XMLHttpRequest/FormData) ne demande rien de plus, si ce n'est l'API [`FileReader`](/fr/docs/DOM/FileReader), mais seulement **si vous voulez envoyer un fichier ou plus**.
 
 #### Une brève introduction au méthodes de submission
 
@@ -192,37 +192,45 @@ Maintenant, considérons qu'on envoie un formulaire contenant seulement deux cha
 
 - Méthode: `POST`; Encodage: `application/x-www-form-urlencoded` (par défaut):
 
-      Content-Type: application/x-www-form-urlencoded
+  ```
+  Content-Type: application/x-www-form-urlencoded
 
-      foo=bar&baz=The+first+line.&#37;0D%0AThe+second+line.%0D%0A
+  foo=bar&baz=The+first+line.&#37;0D%0AThe+second+line.%0D%0A
+  ```
 
 - Méthode: `POST`; Encodage: `text/plain`:
 
-      Content-Type: text/plain
+  ```
+  Content-Type: text/plain
 
-      foo=bar
-      baz=The first line.
-      The second line.
+  foo=bar
+  baz=The first line.
+  The second line.
+  ```
 
 - Méthode: `POST`; Encodage: `multipart/form-data`:
 
-      Content-Type: multipart/form-data; boundary=---------------------------314911788813839
+  ```
+  Content-Type: multipart/form-data; boundary=---------------------------314911788813839
 
-      -----------------------------314911788813839
-      Content-Disposition: form-data; name="foo"
+  -----------------------------314911788813839
+  Content-Disposition: form-data; name="foo"
 
-      bar
-      -----------------------------314911788813839
-      Content-Disposition: form-data; name="baz"
+  bar
+  -----------------------------314911788813839
+  Content-Disposition: form-data; name="baz"
 
-      The first line.
-      The second line.
+  The first line.
+  The second line.
 
-      -----------------------------314911788813839--
+  -----------------------------314911788813839--
+  ```
 
 Si vous utilisez la méthode `GET` à la place, une chaîne comme celle-ci sera simplement ajoutée à l'URL :
 
-    ?foo=bar&baz=The%20first%20line.%0AThe%20second%20line.
+```
+?foo=bar&baz=The%20first%20line.%0AThe%20second%20line.
+```
 
 #### Un petit framework vanilla
 
@@ -502,17 +510,19 @@ print_r($_FILES);
 
 La syntaxe de ce script est la suivante:
 
-    AJAXSubmit(myForm);
+```
+AJAXSubmit(myForm);
+```
 
-> **Note :** Ce framework utilise l'API [`FileReader`](/en-US/docs/DOM/FileReader) pour transmettre les fichiers uploadés. C'est une API récente qui n'est pas implémentée dans IE9 ou inférieur. Pour cette raison, l'upload via AJAX uniquement **est une technique expérimentale**. Si vous n'avez pas besoin de transférer des fichiers binaires, ce framework fonctionne bien dans la majorité des navigateurs.
+> **Note :** Ce framework utilise l'API [`FileReader`](/fr/docs/DOM/FileReader) pour transmettre les fichiers uploadés. C'est une API récente qui n'est pas implémentée dans IE9 ou inférieur. Pour cette raison, l'upload via AJAX uniquement **est une technique expérimentale**. Si vous n'avez pas besoin de transférer des fichiers binaires, ce framework fonctionne bien dans la majorité des navigateurs.
 
-> **Note :** La meilleure façon d'envoyer du contenu binaire est de passer par [ArrayBuffers](/en-US/docs/JavaScript/Typed_arrays/ArrayBuffer) ou [Blobs](/en-US/docs/DOM/Blob) en conjonction avec la méthode [`send()`](/en-US/docs/DOM/XMLHttpRequest#send%28%29) et possiblement avec la méthode [`readAsArrayBuffer()`](</en-US/docs/DOM/FileReader#readAsArrayBuffer()>) de l'API [`FileReader`](/en-US/docs/DOM/FileReader). Mais dans la mesure où le but de ce script est de fonctionner avec des données [chaînifiable](/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify), nous avons utilisé la méthode [`sendAsBinary()`](/en-US/docs/DOM/XMLHttpRequest#sendAsBinary%28%29) en conjonction avec la méthode [`readAsBinaryString()`](/en-US/docs/DOM/FileReader#readAsBinaryString%28%29) de l'API [`FileReader`](/en-US/docs/DOM/FileReader). Du coup, le script ci-dessous n'a de sens que quand vous voulez transférer de petits fichiers. Si vous n'avez pas l'intention de transférer des données binaires, songez plutôt à utilisez l'API [`FormData`](/en-US/docs/DOM/XMLHttpRequest/FormData).
+> **Note :** La meilleure façon d'envoyer du contenu binaire est de passer par [ArrayBuffers](/fr/docs/JavaScript/Typed_arrays/ArrayBuffer) ou [Blobs](/fr/docs/DOM/Blob) en conjonction avec la méthode [`send()`](/fr/docs/DOM/XMLHttpRequest#send%28%29) et possiblement avec la méthode [`readAsArrayBuffer()`](</en-US/docs/DOM/FileReader#readAsArrayBuffer()>) de l'API [`FileReader`](/fr/docs/DOM/FileReader). Mais dans la mesure où le but de ce script est de fonctionner avec des données [chaînifiable](/fr/docs/JavaScript/Reference/Global_Objects/JSON/stringify), nous avons utilisé la méthode [`sendAsBinary()`](/fr/docs/DOM/XMLHttpRequest#sendAsBinary%28%29) en conjonction avec la méthode [`readAsBinaryString()`](/fr/docs/DOM/FileReader#readAsBinaryString%28%29) de l'API [`FileReader`](/fr/docs/DOM/FileReader). Du coup, le script ci-dessous n'a de sens que quand vous voulez transférer de petits fichiers. Si vous n'avez pas l'intention de transférer des données binaires, songez plutôt à utilisez l'API [`FormData`](/fr/docs/DOM/XMLHttpRequest/FormData).
 
 > **Note :** La méthode non-standard `sendAsBinary` est dépréciée à partir de Gecko 31 et sera prochainement supprimée. La méthode standard `send(Blob data)` peut être utilisée à la place.
 
 ### Utiliser les objets FormData
 
-Le constructeur de [`FormData`](/en-US/docs/DOM/XMLHttpRequest/FormData) vous permet de compiler des paires de clé/valeur à envoyer via `XMLHttpRequest`. Il est principalement prévu pour être utilisé dans l'envoi de formulaires, mais il peut être utilisé indépendemment des formulaires dans le but de transmettre des données associées. Les données transmises sont de même format que la méthode `submit()` d'un formulaire utiliserait pour envoyer les données si l'encodage du formulaire était configuré à "multipart/form-data". Les objets FormData peuvent être utilisés de nombreuses manières avec XMLHttpRequest. Pour des exemples et des explications sur la manière d'utiliser FormData avec une XMLHttpRequest, jettez un oeil sur la page [Utiliser les Objets FormData](/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects). Pour des raisons didactiques seulement, nous postons ici **une** **traduction** **[du précédent exemple](#A_little_vanilla_framework) transformé pour utiliser l'API `FormData`**. Notez la brièveté du code :
+Le constructeur de [`FormData`](/fr/docs/DOM/XMLHttpRequest/FormData) vous permet de compiler des paires de clé/valeur à envoyer via `XMLHttpRequest`. Il est principalement prévu pour être utilisé dans l'envoi de formulaires, mais il peut être utilisé indépendemment des formulaires dans le but de transmettre des données associées. Les données transmises sont de même format que la méthode `submit()` d'un formulaire utiliserait pour envoyer les données si l'encodage du formulaire était configuré à "multipart/form-data". Les objets FormData peuvent être utilisés de nombreuses manières avec XMLHttpRequest. Pour des exemples et des explications sur la manière d'utiliser FormData avec une XMLHttpRequest, jettez un oeil sur la page [Utiliser les Objets FormData](/fr/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects). Pour des raisons didactiques seulement, nous postons ici **une** **traduction** **[du précédent exemple](#A_little_vanilla_framework) transformé pour utiliser l'API `FormData`**. Notez la brièveté du code :
 
 ```html
 <!doctype html>
@@ -634,7 +644,7 @@ function AJAXSubmit (oFormElement) {
 </html>
 ```
 
-> **Note :** Comme déjà dit, les objets **{{domxref("FormData")}} ne sont pas des objets [chainifiables](/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify)**. Si vous voulez chainifier les données soumises, utilisez [l'exemple précédent en *pure*-AJAX](#A_little_vanilla_framework). Notez également que, bien que dans cet exemple il y a quelques champs `file` {{ HTMLElement("input") }}, **quand vous soumettez un formulaire via l'API `FormData` vous n'avez pas besoin d'utiliser l'API [`FileReader`](/en-US/docs/DOM/FileReader) également**&nbsp;: les fichiers sont automatiquement chargés et transférés.
+> **Note :** Comme déjà dit, les objets **{{domxref("FormData")}} ne sont pas des objets [chainifiables](/fr/docs/JavaScript/Reference/Global_Objects/JSON/stringify)**. Si vous voulez chainifier les données soumises, utilisez [l'exemple précédent en *pure*-AJAX](#A_little_vanilla_framework). Notez également que, bien que dans cet exemple il y a quelques champs `file` {{ HTMLElement("input") }}, **quand vous soumettez un formulaire via l'API `FormData` vous n'avez pas besoin d'utiliser l'API [`FileReader`](/fr/docs/DOM/FileReader) également**&nbsp;: les fichiers sont automatiquement chargés et transférés.
 
 ## Récupérer la date de modification
 
@@ -687,18 +697,20 @@ ifHasChanged("mapage.html", function (nModif, nVisit) {
 });
 ```
 
-Si vous voulez savoir **si la _page courante_ a changée**, lisez l'article à propos de la propriété [`document.lastModified`](/en-US/docs/Web/API/document.lastModified).
+Si vous voulez savoir **si la _page courante_ a changée**, lisez l'article à propos de la propriété [`document.lastModified`](/fr/docs/Web/API/document.lastModified).
 
 ## Cross-site XMLHttpRequest
 
-Les navigateurs récents supportent les requêtes cross-site en implémentant le Standard [Access Control for Cross-Site Requests](/en-US/docs/HTTP_access_control) (Web Application Working Group).  Tant que le serveur est configuré pour autoriser les requêtes depuis l'origine de votre web application, `XMLHttpRequest` fonctionnera. Sinon, une exception `INVALID_ACCESS_ERR` sera lancée.
+Les navigateurs récents supportent les requêtes cross-site en implémentant le Standard [Access Control for Cross-Site Requests](/fr/docs/HTTP_access_control) (Web Application Working Group).  Tant que le serveur est configuré pour autoriser les requêtes depuis l'origine de votre web application, `XMLHttpRequest` fonctionnera. Sinon, une exception `INVALID_ACCESS_ERR` sera lancée.
 
 ## Contourner le cache
 
 Une approche cross-browser pour contourner le cache est d'ajouter le timestamp à l'URL, en étant sûr d'inclure un "?" ou un "&" selon les cas. Par exemple :
 
-    http://foo.com/bar.html -> http://foo.com/bar.html?12345
-    http://foo.com/bar.html?foobar=baz -> http://foo.com/bar.html?foobar=baz&12345
+```
+http://foo.com/bar.html -> http://foo.com/bar.html?12345
+http://foo.com/bar.html?foobar=baz -> http://foo.com/bar.html?foobar=baz&12345
+```
 
 Comme le cache local est indexé selon les URL, celà permet à toutes les requêtes d'être uniques, et du coup de contourner le cache.
 
@@ -725,7 +737,7 @@ Si vous vous retrouvez avec une `XMLHttpRequest` ayant `status=0` et `statusText
 
 ## Utiliser XMLHttpRequest depuis un module JavaScript / un composant XPCOM
 
-Instancier une `XMLHttpRequest` depuis un [module JavaScript](/en-US/docs/JavaScript_code_modules/Using) ou un composant XPCOM fonctionne un peu différemment; on ne peut pas l'instancier via le constructeur `XMLHttpRequest()`. Le constructeur n'est pas défini dans le composant et le code retourne une erreur. Le meilleur moyen de fixer le problème est d'utiliser le constructeur du composant XPCOM.
+Instancier une `XMLHttpRequest` depuis un [module JavaScript](/fr/docs/JavaScript_code_modules/Using) ou un composant XPCOM fonctionne un peu différemment; on ne peut pas l'instancier via le constructeur `XMLHttpRequest()`. Le constructeur n'est pas défini dans le composant et le code retourne une erreur. Le meilleur moyen de fixer le problème est d'utiliser le constructeur du composant XPCOM.
 
 ```js
 const XMLHttpRequest = Components.Constructor("@mozilla.org/xmlextras/xmlhttprequest;1", "nsIXMLHttpRequest");
@@ -742,13 +754,13 @@ var oReq = new XMLHttpRequest();
 
 ## Voir aussi
 
-1.  [MDN AJAX introduction](/en-US/docs/AJAX/Getting_Started)
-2.  [HTTP access control](/en-US/docs/HTTP_access_control)
-3.  [How to check the security state of an XMLHTTPRequest over SSL](/en-US/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL)
-4.  [XMLHttpRequest - REST and the Rich User Experience](http://www.peej.co.uk/articles/rich-user-experience.html)
-5.  [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
-6.  [Apple developers' reference](http://developer.apple.com/internet/webcontent/xmlhttpreq.html)
-7.  ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
-8.  [The XMLHttpRequest Object: W3C Specification](http://www.w3.org/TR/XMLHttpRequest/)
-9.  [Web Progress Events specification](http://dev.w3.org/2006/webapi/progress/Progress.html)
+1. [MDN AJAX introduction](/fr/docs/AJAX/Getting_Started)
+2. [HTTP access control](/fr/docs/HTTP_access_control)
+3. [How to check the security state of an XMLHTTPRequest over SSL](/fr/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL)
+4. [XMLHttpRequest - REST and the Rich User Experience](http://www.peej.co.uk/articles/rich-user-experience.html)
+5. [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
+6. [Apple developers' reference](http://developer.apple.com/internet/webcontent/xmlhttpreq.html)
+7. ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
+8. [The XMLHttpRequest Object: W3C Specification](http://www.w3.org/TR/XMLHttpRequest/)
+9. [Web Progress Events specification](http://dev.w3.org/2006/webapi/progress/Progress.html)
 10. [XMLHttpRequest (Référence Web API)](/fr/docs/Web/API/XMLHttpRequest)

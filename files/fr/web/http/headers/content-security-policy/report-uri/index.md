@@ -17,7 +17,9 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`report-uri`
 
 > **Attention :** Bien que la directive {{CSP("report-to")}} est prévue remplacer la directive **`report-uri`** maintenant dépréciée, {{CSP("report-to")}} n'est pas encore supportée par la plupart des navigateurs modernes. Par rétrocompatibilité avec les navigateurs courants et tout en prévoyant une compatibilité future quand les navigateurs supporteront {{CSP("report-to")}}, vous pouvez spécifier les deux directives **`report-uri`** et {{CSP("report-to")}}:
 >
->     Content-Security-Policy: ...; report-uri https://endpoint.com; report-to groupname
+> ```
+> Content-Security-Policy: ...; report-uri https://endpoint.com; report-to groupname
+> ```
 >
 > Dans les navigateurs qui supportent {{CSP("report-to")}}, la directive **`report-uri`** sera ignorée.
 
@@ -44,8 +46,10 @@ Cette directive n'a aucun effet en elle-même, mais prend tout son sens en étan
 
 ## Syntaxe
 
-    Content-Security-Policy: report-uri <uri>;
-    Content-Security-Policy: report-uri <uri> <uri>;
+```
+Content-Security-Policy: report-uri <uri>;
+Content-Security-Policy: report-uri <uri> <uri>;
+```
 
 - \<uri>
   - : Une URI où envoyer la requête POST contenant le rapport de violation.
@@ -54,7 +58,9 @@ Cette directive n'a aucun effet en elle-même, mais prend tout son sens en étan
 
 Voir {{HTTPHeader("Content-Security-Policy-Report-Only")}} pour plus d'informations et d'exemples.
 
-    Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/
+```
+Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/
+```
 
 `/csp-violation-report-endpoint/` pourrait par exemple exécuter un script PHP similaire au suivant qui journaliserait le JSON détaillant la violation et, si elle est la première ajoutée au journal, enverrait un courril à l'administrateur :
 

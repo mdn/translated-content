@@ -15,7 +15,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/normalize
 ---
 <div>{{JSRef}}</div>
 
-<p>El método <strong><code>normalize()</code></strong> retorna la Forma de Normalización Unicode de la cadena dada (si el valor no es una cadena, primero será convertido a ese tipo).</p>
+<p>El método <strong><code>normalize()</code></strong> retorna la Forma de Normalización Unicode de la cadena dada (si el valor no es una cadena, primero será convertido a ese tipo).</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -25,12 +25,12 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/normalize
 
 <dl>
  <dt><code>form</code></dt>
- <dd>Uno de<code>"NFC"</code>, <code>"NFD"</code>, <code>"NFKC"</code>, o <code>"NFKD"</code>, especificando la Forma de Normalización Unicode. Si es omitida o {{jsxref("undefined")}}, se utiliza <code>"NFC"</code>.
+ <dd>Uno de<code>"NFC"</code>, <code>"NFD"</code>, <code>"NFKC"</code>, o <code>"NFKD"</code>, especificando la Forma de Normalización Unicode. Si es omitida o {{jsxref("undefined")}}, se utiliza <code>"NFC"</code>.
  <ul>
-  <li><code>NFC</code> — Forma de Normalización de Composición Canónica.</li>
-  <li><code>NFD</code> — Forma de Normalización de Descomposición Canónica.</li>
-  <li><code>NFKC</code> — Forma de Normalización de Composición de Compatibilidad.</li>
-  <li><code>NFKD</code> — Forma de Normalización de Descomposición de Compatibilidad.</li>
+  <li><code>NFC</code> — Forma de Normalización de Composición Canónica.</li>
+  <li><code>NFD</code> — Forma de Normalización de Descomposición Canónica.</li>
+  <li><code>NFKC</code> — Forma de Normalización de Composición de Compatibilidad.</li>
+  <li><code>NFKD</code> — Forma de Normalización de Descomposición de Compatibilidad.</li>
  </ul>
  </dd>
 </dl>
@@ -43,7 +43,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/normalize
 
 <dl>
  <dt>{{jsxref("RangeError")}}</dt>
- <dd>Un error {{jsxref("RangeError")}} es lanzado si <code>form</code> no es uno de los valores especificados arriba.</dd>
+ <dd>Un error {{jsxref("RangeError")}} es lanzado si <code>form</code> no es uno de los valores especificados arriba.</dd>
 </dl>
 
 <h2 id="Descripción">Descripción</h2>
@@ -52,7 +52,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/normalize
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<h3 id="Uso_de_normalize()">Uso de <code>normalize()</code></h3>
+<h3 id="Uso_de_normalize()">Uso de <code>normalize()</code></h3>
 
 <pre class="brush: js">// Cadena inicial
 
@@ -108,7 +108,7 @@ str.normalize('NFKD'); // '\u0073\u0323\u0307'
   <tr>
    <td>{{SpecName('ESDraft', '#sec-string.prototype.normalize', 'String.prototype.normalize')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -122,6 +122,6 @@ str.normalize('NFKD'); // '\u0073\u0323\u0307'
 <h2 id="Vea_también">Vea también</h2>
 
 <ul>
- <li><a href="http://www.unicode.org/reports/tr15/">Anexo del Estándar Unicode #15, Formas de Normalización Unicode</a></li>
+ <li><a href="http://www.unicode.org/reports/tr15/">Anexo del Estándar Unicode #15, Formas de Normalización Unicode</a></li>
  <li><a href="http://en.wikipedia.org/wiki/Unicode_equivalence">Equivalencia Unicode</a></li>
 </ul>

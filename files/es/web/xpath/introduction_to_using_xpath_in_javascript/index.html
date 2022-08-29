@@ -4,13 +4,13 @@ slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
 translation_of: Web/XPath/Introduction_to_using_XPath_in_JavaScript
 original_slug: Web/JavaScript/Introduction_to_using_XPath_in_JavaScript
 ---
-<p>Este documento describe la interfaz para usar <a href="/en-US/docs/Web/XPath">XPath</a> internamente en JavaScript,  en extensiones y desde sitios web. Mozilla implementa una gran parte del <a class="external" href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html">DOM 3 XPath</a>. Esto significa que las expresiones XPath pueden correrse en documentos HTML y XML.</p>
+<p>Este documento describe la interfaz para usar <a href="/en-US/docs/Web/XPath">XPath</a> internamente en JavaScript,  en extensiones y desde sitios web. Mozilla implementa una gran parte del <a class="external" href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html">DOM 3 XPath</a>. Esto significa que las expresiones XPath pueden correrse en documentos HTML y XML.</p>
 
 <p>La interfaz principal a usar con XPath es la función <a href="/en/DOM/document.evaluate" title="en/DOM/document.evaluate">evaluate</a> del objeto <a href="/en/DOM/document" title="en/DOM/document">document</a>.</p>
 
 <h2 id="document.evaluate" name="document.evaluate">document.evaluate</h2>
 
-<p>Este método evalúa expresiones <a href="/en/XPath" title="en/XPath">XPath</a> contra un documento basado en <a href="/en/XML" title="en/XML">XML</a>  (incluyendo documentos HTML), y regresa un objeto <code><a href="/en/XPathResult" title="en/XPathResult">XPathResult</a></code>, el cual puede ser un solo nodo o un conjunto de nodos. La documentación existente para este método se encuentra en <a href="/en/DOM/document.evaluate" title="en/DOM/document.evaluate">document.evaluate</a>, pero de momento es más bien escasa para nuestras necesidades; una examinación más abarcativa será dada a continuación.</p>
+<p>Este método evalúa expresiones <a href="/en/XPath" title="en/XPath">XPath</a> contra un documento basado en <a href="/en/XML" title="en/XML">XML</a>  (incluyendo documentos HTML), y regresa un objeto <code><a href="/en/XPathResult" title="en/XPathResult">XPathResult</a></code>, el cual puede ser un solo nodo o un conjunto de nodos. La documentación existente para este método se encuentra en <a href="/en/DOM/document.evaluate" title="en/DOM/document.evaluate">document.evaluate</a>, pero de momento es más bien escasa para nuestras necesidades; una examinación más abarcativa será dada a continuación.</p>
 
 <pre class="brush: js">var xpathResult = document.evaluate( xpathExpression, contextNode, namespaceResolver, resultType, result );
 </pre>
@@ -21,7 +21,7 @@ original_slug: Web/JavaScript/Introduction_to_using_XPath_in_JavaScript
 
 <ul>
  <li><code>xpathExpression</code>: Una cadena que contiene la expresión XPath a evaluar.</li>
- <li><code>contextNode</code>: Un nodo en el documento contra la  <code>xpathExpression</code> debe ser evaluada, incluyendo todos los nodos descendientes. El nodo <a href="/en/DOM/document" title="en/DOM/document">document</a> es el usado más comúnmente.</li>
+ <li><code>contextNode</code>: Un nodo en el documento contra la  <code>xpathExpression</code> debe ser evaluada, incluyendo todos los nodos descendientes. El nodo <a href="/en/DOM/document" title="en/DOM/document">document</a> es el usado más comúnmente.</li>
  <li><code>namespaceResolver</code>: Una función que pasará cualquier prefijo de namespace contenido en una <code>xpathExpression</code> la cúal regresará una cadena representando al URI del namespace asociado con ese prefijo. Esto activa la conversión entre los prefijos usados en las expresiones XPath y los posiblemente distintos prefijos usados en el documento. La función puede ser:
   <ul>
    <li>Creada usando el metodo <code><a href="/en/DOM/document.createNSResolver" title="en/DOM/document.createNSResolver">createNSResolver</a></code> de un objeto <code><a href="/en/XPathEvaluator" title="en/XPathEvaluator">XPathEvaluator</a></code>. Deberías usar este virtualmente todo el tiempo.</li>
@@ -30,7 +30,7 @@ original_slug: Web/JavaScript/Introduction_to_using_XPath_in_JavaScript
   </ul>
  </li>
  <li><code>resultType</code>: Una <a href="#XPathResult_Defined_Constants">constante</a> que especifica el tipo del resultado deseado a ser regresado. La constante más comúnmente pasada es <code>XPathResult.ANY_TYPE</code> la cúal regresará los resultados de la expresión XPath como el tipo más natural. Hay una sección en el apéndice que contiene una lista completa de las <a href="#XPathResult_Defined_Constants">constantes disponibles</a>. Estas son explicadas debajo, en la sección "<a href="#Specifying_the_Return_Type">Especificando el tipo de valor regresado</a>".</li>
- <li><code>result</code>: Si un objeto <code>XPathResult</code>  existente es especificado, sera reusado para regresar el resultado. Especificando <code>null</code>, un nuevo objeto <code>XPathResult</code> será creado.</li>
+ <li><code>result</code>: Si un objeto <code>XPathResult</code>  existente es especificado, sera reusado para regresar el resultado. Especificando <code>null</code>, un nuevo objeto <code>XPathResult</code> será creado.</li>
 </ul>
 
 <h3 id="Return_Value" name="Return_Value">Valor regresado</h3>
@@ -41,7 +41,7 @@ original_slug: Web/JavaScript/Introduction_to_using_XPath_in_JavaScript
 
 <p>Nosotros creamos un solucionador de namespace usando el método <code>createNSResolver</code> del objeto <a href="/en/DOM/document" title="en/DOM/document">document</a>.</p>
 
-<pre class="brush: js">var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
+<pre class="brush: js">var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
 </pre>
 
 <p><span class="comment">O alternativamente, usar el método <code>createNSResolver</code> de un objeto<code> XPathEvaluator</code>. </span></p>
@@ -81,7 +81,7 @@ var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null
 
 <h5 id="Example" name="Example">Ejemplo</h5>
 
-<p>El siguiente código usa la expresión XPath <code><a href="/en/XPath/Functions/count" title="en/XPath/Functions/count">count(//p)</a></code> para obtener el número de elementos &lt;p&gt; en un  documento HTML:</p>
+<p>El siguiente código usa la expresión XPath <code><a href="/en/XPath/Functions/count" title="en/XPath/Functions/count">count(//p)</a></code> para obtener el número de elementos &lt;p&gt; en un  documento HTML:</p>
 
 <pre class="brush: js  language-js"><code class="language-js"><span class="keyword token">var</span> paragraphCount <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">evaluate<span class="punctuation token">(</span></span> 'count<span class="comment token">(//p)', document, null, XPathResult.ANY_TYPE, null );
 </span>
@@ -115,11 +115,11 @@ alert( 'This document contains ' + paragraphCount.stringValue + ' paragraph elem
  <li><code>ORDERED_NODE_ITERATOR_TYPE</code></li>
 </ul>
 
-<p>El objeto <code>XPathResult</code> regresado es un conjunto de nodos de los nodos coincidentes los cuales se comportarán como un iterador, perimitiendo el acceso individual a los nodos mediante el uso de método <span id="cke_bm_118S" class="hidden"> </span><code>iterateNext()</code><span id="cke_bm_118E" class="hidden"> </span> del <code>XPathResult</code><span id="cke_bm_119E" class="hidden"> </span>.</p>
+<p>El objeto <code>XPathResult</code> regresado es un conjunto de nodos de los nodos coincidentes los cuales se comportarán como un iterador, perimitiendo el acceso individual a los nodos mediante el uso de método <span id="cke_bm_118S" class="hidden"> </span><code>iterateNext()</code><span id="cke_bm_118E" class="hidden"> </span> del <code>XPathResult</code><span id="cke_bm_119E" class="hidden"> </span>.</p>
 
 <p>Una vez que hemos iterado sobre todos los nodos individuales coincidentes,<code> iterateNext()</code> regresará <code>null</code>.</p>
 
-<p>Es importante señalar que si el documento se ha transformado (el arbol del documento se ha modificado) entre iteraciones </p>
+<p>Es importante señalar que si el documento se ha transformado (el arbol del documento se ha modificado) entre iteraciones </p>
 
 <h6 id="Iterator_Example" name="Iterator_Example">Iterator Example</h6>
 
@@ -155,7 +155,7 @@ catch (e) {
 
 <pre class="brush: js">var nodesSnapshot = document.evaluate('//phoneNumber', documentNode, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
 
-for ( var i=0 ; i &lt; nodesSnapshot.snapshotLength; i++ )
+for ( var i=0 ; i &lt; nodesSnapshot.snapshotLength; i++ )
 {
   dump( nodesSnapshot.snapshotItem(i).textContent );
 }
@@ -248,7 +248,7 @@ req.send(null);
 
 var xmlDoc = req.responseXML;
 
-var nsResolver = xmlDoc.createNSResolver( xmlDoc.ownerDocument == null ? xmlDoc.documentElement : xmlDoc.ownerDocument.documentElement);
+var nsResolver = xmlDoc.createNSResolver( xmlDoc.ownerDocument == null ? xmlDoc.documentElement : xmlDoc.ownerDocument.documentElement);
 
 var personIterator = xmlDoc.evaluate('//person', xmlDoc, nsResolver, XPathResult.ANY_TYPE, null );
 </pre>
@@ -274,7 +274,7 @@ var personIterator = xmlDoc.evaluate('//person', xmlDoc, nsResolver, XPathResult
 
 <pre class="brush: js">function nsResolver(prefix) {
   var ns = {
-    'xhtml' : 'http://www.w3.org/1999/xhtml',
+    'xhtml' : 'http://www.w3.org/1999/xhtml',
     'mathml': 'http://www.w3.org/1998/Math/MathML'
   };
   return ns[prefix] || null;
@@ -414,4 +414,4 @@ var thisitemEl = thislevel.iterateNext();
 </ul>
 </div>
 
-<p> </p>
+<p> </p>

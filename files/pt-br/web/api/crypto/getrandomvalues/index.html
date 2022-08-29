@@ -24,7 +24,7 @@ original_slug: Web/API/RandomSource/getRandomValues
 <h3 id="Exceções">Exceções</h3>
 
 <ul>
- <li>Um {{exception("QuotaExceededError")}} {{domxref("DOMException")}} é enviado se o tamanho da requisição for maior que 65536 bytes.</li>
+ <li>Um <code>QuotaExceededError</code> {{domxref("DOMException")}} é enviado se o tamanho da requisição for maior que 65536 bytes.</li>
 </ul>
 
 <h2 id="Exemplo">Exemplo</h2>
@@ -36,7 +36,7 @@ window.crypto.getRandomValues(array);
 
 console.log("Seus números da sorte são:");
 for (var i = 0; i &lt; array.length; i++) {
-    console.log(array[i]);
+    console.log(array[i]);
 }
 </pre>
 
@@ -59,55 +59,7 @@ for (var i = 0; i &lt; array.length; i++) {
 
 <h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>11.0 {{ webkitbug("22049") }}</td>
-   <td>21.0</td>
-   <td>11.0</td>
-   <td>15.0</td>
-   <td>3.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo() }}</td>
-   <td>23.0</td>
-   <td>21.0</td>
-   <td>11.0</td>
-   <td>{{ CompatNo() }}</td>
-   <td>6</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Crypto.getRandomValues")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

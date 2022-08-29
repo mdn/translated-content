@@ -69,7 +69,7 @@ Plusieurs méthodes, fournies par JavaScript (cf. [`Date`](/fr/docs/Web/JavaScri
 
 ## Attributs supplémentaires
 
-En complément des attributs communs à l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Element/Input), les champs de type `"date"` gèrent les attributs suivants.
+En complément des attributs communs à l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Element/Input), les champs de type `date` gèrent les attributs suivants.
 
 ### `max`
 

@@ -17,7 +17,9 @@ La propriété `forms` de {{domxref("Document")}} retourne une collection ({{dom
 
 ## Syntaxe
 
-    collection = document.forms;
+```js
+collection = document.forms;
+```
 
 ### Valeur
 
@@ -88,10 +90,7 @@ var selectFormElement = document.forms[index].elements[index];
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                               | Commentaire          |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('HTML WHATWG', '#dom-document-forms', 'Document.forms')}} | {{ Spec2('HTML WHATWG') }} |                      |
-| {{SpecName('DOM2 HTML', 'html.html#ID-1689064', 'Document.forms')}}     | {{ Spec2('DOM2 Events') }} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

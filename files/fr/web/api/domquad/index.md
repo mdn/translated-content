@@ -38,10 +38,8 @@ Un `DOMQuad` est une collection de 4 `DOMPoint` définissant les coins d'un quad
 
 ## Spécifications
 
-| Spécification                                                                | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Geometry Interfaces','#DOMQuad','DOMQuad')}} | {{Spec2('Geometry Interfaces')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMQuad")}}
+{{Compat}}

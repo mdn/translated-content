@@ -8,23 +8,23 @@ tags:
   - Layout
 translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 ---
-<p><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> introduz um sistema bi-dimensional de grid (literalmente "grades") para CSS. Grids podem ser usados para o design de layouts de grandes seções de uma webpage, assim como de pequenos elementos de interface. Esse artigo apresenta o CSS Grid Layout e a terminologia que é parte da especificação  CSS Grid Layout Level 1. As funcionalidades demonstradas neste resumo serão posteriormente explicadas em maiores detalhes nas demais seções desse guia.</p>
+<p><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> introduz um sistema bi-dimensional de grid (literalmente "grades") para CSS. Grids podem ser usados para o design de layouts de grandes seções de uma webpage, assim como de pequenos elementos de interface. Esse artigo apresenta o CSS Grid Layout e a terminologia que é parte da especificação  CSS Grid Layout Level 1. As funcionalidades demonstradas neste resumo serão posteriormente explicadas em maiores detalhes nas demais seções desse guia.</p>
 
 <h2 id="O_que_é_grid">O que é grid?</h2>
 
-<p>Grid é uma malha formada pela interseção de um conjunto de linhas horizontais e um conjunto de linhas verticais – um dos conjuntos define colunas e outro linhas. Dentro de um  grid, respeitando-se a configuração criada pelas suas linhas, pode-se inserir elementos da marcação. As CSS grid layout preveem as seguintes funcionalidades:</p>
+<p>Grid é uma malha formada pela interseção de um conjunto de linhas horizontais e um conjunto de linhas verticais – um dos conjuntos define colunas e outro linhas. Dentro de um  grid, respeitando-se a configuração criada pelas suas linhas, pode-se inserir elementos da marcação. As CSS grid layout preveem as seguintes funcionalidades:</p>
 
 <h3 id="Dimensões_fixas_ou_flexíveis">Dimensões fixas ou flexíveis</h3>
 
-<p>Você pode criar grids com dimensões fixas – por exemplo: definindo dimensões em pixels. Ou criar grids com dimensões flexíveis definindo-as com uso de porcentagem ou da nova unidade CSS <code>fr</code> criada para esse propósito.</p>
+<p>Você pode criar grids com dimensões fixas – por exemplo: definindo dimensões em pixels. Ou criar grids com dimensões flexíveis definindo-as com uso de porcentagem ou da nova unidade CSS <code>fr</code> criada para esse propósito.</p>
 
 <h3 id="Posicionamento_de_itens">Posicionamento de itens</h3>
 
-<p>Você pode posicionar com precisão itens de uma página usando o número que define uma linha do grid, usando nomes ou ainda fazendo referência a uma determinada região do grid. Existe ainda um algorítmo de controle do posicionamento de itens da página que não possuem uma posição capaz de ser explícitamente definida no grid.</p>
+<p>Você pode posicionar com precisão itens de uma página usando o número que define uma linha do grid, usando nomes ou ainda fazendo referência a uma determinada região do grid. Existe ainda um algorítmo de controle do posicionamento de itens da página que não possuem uma posição capaz de ser explícitamente definida no grid.</p>
 
 <h3 id="Criação_de_grids_adicionais">Criação de grids adicionais</h3>
 
-<p>Além da possibilidade de se criar um grid inicial para o layout a Especificação prevê também a possibilidade de se adicionar linhas e colunas para layoutar conteúdos adicionados fora do grid inicial. Funcionalidades tal como adicionar "tantas colunas quanto necessárias em um grid container existente" são previstas nas Especificações.</p>
+<p>Além da possibilidade de se criar um grid inicial para o layout a Especificação prevê também a possibilidade de se adicionar linhas e colunas para layoutar conteúdos adicionados fora do grid inicial. Funcionalidades tal como adicionar "tantas colunas quanto necessárias em um grid container existente" são previstas nas Especificações.</p>
 
 <h3 id="Alinhamento">Alinhamento</h3>
 
@@ -32,13 +32,13 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <h3 id="Controle_sobre_conteúdos_sobrepostos">Controle sobre conteúdos sobrepostos</h3>
 
-<p>Em uma célula do grid podem ser posicionados mais de um item da página e também é possível que se defina sobreposição parcial de áreas. Esse controle de layers é feito com uso de {{cssxref("z-index")}}.</p>
+<p>Em uma célula do grid podem ser posicionados mais de um item da página e também é possível que se defina sobreposição parcial de áreas. Esse controle de layers é feito com uso de {{cssxref("z-index")}}.</p>
 
-<p>CSS Grid Layout é uma poderosa especificação que se for combinada com outras partes do CSS, tal como <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox</a>, possibilita a criação de layouts que até então eram impossíveis de serem criados com CSS. Tudo começa com a criação de um grid dentro de um <strong>grid container</strong>.</p>
+<p>CSS Grid Layout é uma poderosa especificação que se for combinada com outras partes do CSS, tal como <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox</a>, possibilita a criação de layouts que até então eram impossíveis de serem criados com CSS. Tudo começa com a criação de um grid dentro de um <strong>grid container</strong>.</p>
 
 <h2 id="Grid_container">Grid container</h2>
 
-<p>Cria-se um <em>grid container</em> com as declarações CSS <code>display: grid</code> ou <code>display: inline-grid</code> para um elemento da marcação. Assim declarando, todos os elementos <em>filhos diretos</em> daquele container se transformam em <em>grid items</em>.</p>
+<p>Cria-se um <em>grid container</em> com as declarações CSS <code>display: grid</code> ou <code>display: inline-grid</code> para um elemento da marcação. Assim declarando, todos os elementos <em>filhos diretos</em> daquele container se transformam em <em>grid items</em>.</p>
 
 <p>No exemplo mostrado a seguir um elemento div container ao qual foi atribuída a classe wrapper contém cinco elementos filhos.</p>
 
@@ -51,7 +51,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 &lt;/div&gt;
 </pre>
 
-<p>Façamos de <code>.wrapper</code> um grid container.</p>
+<p>Façamos de <code>.wrapper</code> um grid container.</p>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -82,21 +82,21 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <p>{{ EmbedLiveSample('The_Grid_container', '200', '330') }}</p>
 
-<p>Todos os elementos filhos diretos agora são grid items. Observando a renderização em um navegador web você não notará nenhuma diferença em relação a renderização já conhecida de um elemento container com seus cinco elementos filhos, pois no exemplo foi criado um grid constítuido de uma única coluna para acomodar os elementos filhos. A partir desse ponto você pode achar mais útil trabalhar no <em>Firefox Developer Edition</em>, que possui o <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Inspector</a> disponÍvel como parte das Ferramentas do desenvolvedor. Se você ver este exemplo no Firefox e inspecionar o Grid, você verá um pequeno ícone ao lado do valor Grid (na propiedade <em>display</em> do elemento container). Clique nele e o Grid neste elemento será sobreposto na janela do navegador. </p>
+<p>Todos os elementos filhos diretos agora são grid items. Observando a renderização em um navegador web você não notará nenhuma diferença em relação a renderização já conhecida de um elemento container com seus cinco elementos filhos, pois no exemplo foi criado um grid constítuido de uma única coluna para acomodar os elementos filhos. A partir desse ponto você pode achar mais útil trabalhar no <em>Firefox Developer Edition</em>, que possui o <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Inspector</a> disponÍvel como parte das Ferramentas do desenvolvedor. Se você ver este exemplo no Firefox e inspecionar o Grid, você verá um pequeno ícone ao lado do valor Grid (na propiedade <em>display</em> do elemento container). Clique nele e o Grid neste elemento será sobreposto na janela do navegador. </p>
 
 <p><img alt="Using the Grid Highlighter in DevTools to view a grid" src="https://mdn.mozillademos.org/files/14631/1-grid-inspector.png" style="height: 753px; width: 900px;"></p>
 
-<p>À medida que você aprende e depois trabalha com <em>CSS Grid Layout</em>, esta ferramenta lhe dará uma idéia melhor do que está acontecendo com suas <em>Grids</em> visualmente.</p>
+<p>À medida que você aprende e depois trabalha com <em>CSS Grid Layout</em>, esta ferramenta lhe dará uma idéia melhor do que está acontecendo com suas <em>Grids</em> visualmente.</p>
 
-<p>Se nós queremos começar a fazer isso parecer mais com os <em>Grids layouts</em> , nós precisamos adicionar <em>collumn tracks</em>.</p>
+<p>Se nós queremos começar a fazer isso parecer mais com os <em>Grids layouts</em> , nós precisamos adicionar <em>collumn tracks</em>.</p>
 
 <h2 id="Grid_Tracks">Grid Tracks</h2>
 
-<p>Nós definimos linhas e colunas no nosso grid com as propriedades {{cssxref("grid-template-columns")}} e {{cssxref("grid-template-rows")}}. Isso define o grid tracks. Um <em>grid track</em> é o espaço entre duas linhas em um grid. Na imagem abaixo você pode ver um track highlighter – o track na primeira linha do nosso grid.</p>
+<p>Nós definimos linhas e colunas no nosso grid com as propriedades {{cssxref("grid-template-columns")}} e {{cssxref("grid-template-rows")}}. Isso define o grid tracks. Um <em>grid track</em> é o espaço entre duas linhas em um grid. Na imagem abaixo você pode ver um track highlighter – o track na primeira linha do nosso grid.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14637/1_Grid_Track.png" style="height: 261px; width: 392px;"></p>
 
-<p>Posso adicionar ao exemplo anterior a propriedade <code>grid-template-columns</code>, depois definir o tamanho da column tracks.</p>
+<p>Posso adicionar ao exemplo anterior a propriedade <code>grid-template-columns</code>, depois definir o tamanho da column tracks.</p>
 
 <p>Agora criei um grid com três colunas fixas de 200px. Os itens filhos serão dispostos nessa grade, um em cada célula da grade.</p>
 
@@ -144,7 +144,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <h3 id="A_unidade_fr">A unidade <code>fr</code></h3>
 
-<p>Nas propriedades de grid podem ser utilizadas quaisquer unidades de medida. Para nos ajudar a criar layouts flexíveis utilizando o grid, foi criada uma unidade nova. A unidade <code>fr </code>representa uma fração do espaço disponível no container do grid. A próxima definição de grid cria três espaços com tamanhos iguais que aumentam e diminuem de acordo com o espaço disponível. </p>
+<p>Nas propriedades de grid podem ser utilizadas quaisquer unidades de medida. Para nos ajudar a criar layouts flexíveis utilizando o grid, foi criada uma unidade nova. A unidade <code>fr </code>representa uma fração do espaço disponível no container do grid. A próxima definição de grid cria três espaços com tamanhos iguais que aumentam e diminuem de acordo com o espaço disponível. </p>
 
 <div id="fr_unit_ls">
 <pre class="brush: html">&lt;div class="wrapper"&gt;
@@ -188,7 +188,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 <p>{{ EmbedLiveSample('fr_unit_ls', '220', '180') }}</p>
 </div>
 
-<p>No próximo exemplo, criamos um container <code>.wrapper com uma coluna de 2fr</code> e duas colunas de <code>1fr</code>. Portanto, o espaço disponível será dividido em quatro partes. Duas partes serão para a primeira coluna e uma parte para cada um das próximas duas colunas. </p>
+<p>No próximo exemplo, criamos um container <code>.wrapper com uma coluna de 2fr</code> e duas colunas de <code>1fr</code>. Portanto, o espaço disponível será dividido em quatro partes. Duas partes serão para a primeira coluna e uma parte para cada um das próximas duas colunas. </p>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -204,9 +204,9 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 }
 </pre>
 
-<h3 id="Track_listings_com_a_notação_repeat()">Track listings com a notação <code>repeat()</code></h3>
+<h3 id="Track_listings_com_a_notação_repeat()">Track listings com a notação <code>repeat()</code></h3>
 
-<p>Grids grandes, com muitas tracks podem usar a notação <code>repeat()</code> para repetir todas ou uma seção de track listing. Por exemplo a definição de grid a seguir:</p>
+<p>Grids grandes, com muitas tracks podem usar a notação <code>repeat()</code> para repetir todas ou uma seção de track listing. Por exemplo a definição de grid a seguir:</p>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -230,7 +230,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 }
 </pre>
 
-<p>A notação Repeat tem como parâmetro um track listing, sendo assim você pode usá-lo para criar um padrão de repetição de tracks. Neste exemplo meu grid terá 10 tracks, uma trilha de <code>1fr</code> seguida por uma trilha de <code>2fr</code> , repetida cinco vezes.</p>
+<p>A notação Repeat tem como parâmetro um track listing, sendo assim você pode usá-lo para criar um padrão de repetição de tracks. Neste exemplo meu grid terá 10 tracks, uma trilha de <code>1fr</code> seguida por uma trilha de <code>2fr</code> , repetida cinco vezes.</p>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -240,11 +240,11 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <h3 id="O_grid_implícito_e_explícito">O grid implícito e explícito</h3>
 
-<p>Ao criar nosso grid de exempo definimos nossa coluna de trilhas com a propriedade {{cssxref("grid-template-columns")}}, mas adicionalmente deixamos o grid criar as linhas necessárias para qualquer outro conteúdo. Estas linhas são criadas no grid implícito. O grid explícito é constituído por linhas e colunas que você define com {{cssxref("grid-template-columns")}} e {{cssxref("grid-template-rows")}}. Se você posicionar algo fora do grid definido, ou caso devido à quantidado de conteúdo mais trilhas de grid sejam necessárias, o grid então cria linhas e colunas no grid implícito. Estas trilhas serão seu tamanho definido automaticamente por padrão, resultando em seu tamanho ser basedo no conteúdo que elas contém.</p>
+<p>Ao criar nosso grid de exempo definimos nossa coluna de trilhas com a propriedade {{cssxref("grid-template-columns")}}, mas adicionalmente deixamos o grid criar as linhas necessárias para qualquer outro conteúdo. Estas linhas são criadas no grid implícito. O grid explícito é constituído por linhas e colunas que você define com {{cssxref("grid-template-columns")}} e {{cssxref("grid-template-rows")}}. Se você posicionar algo fora do grid definido, ou caso devido à quantidado de conteúdo mais trilhas de grid sejam necessárias, o grid então cria linhas e colunas no grid implícito. Estas trilhas serão seu tamanho definido automaticamente por padrão, resultando em seu tamanho ser basedo no conteúdo que elas contém.</p>
 
-<p>Você também pode definir o tamanho do conjunto para trilhas criadas na grid implícita com as propriedades  {{cssxref("grid-auto-rows")}} e {{cssxref("grid-auto-columns")}}.</p>
+<p>Você também pode definir o tamanho do conjunto para trilhas criadas na grid implícita com as propriedades  {{cssxref("grid-auto-rows")}} e {{cssxref("grid-auto-columns")}}.</p>
 
-<p>No exemplo abaixo usamos <code>grid-auto-rows</code> para garantir que as trilhas criadas na grid implícita tem 200 pixels de altura.</p>
+<p>No exemplo abaixo usamos <code>grid-auto-rows</code> para garantir que as trilhas criadas na grid implícita tem 200 pixels de altura.</p>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
@@ -291,7 +291,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <p>Quando criando um grid explícito ou definindo o tamanho para as colunas e linha serem criadas automáticamente podemos querer dar um tamanho minimo para os tracks, mas assegure que eles expandam para o tamanho necessário do conteúdo adicionado. Por exemplo eu gostaria que as minhas linhas nunca colapsem para um tamanho menor que 100 pixels, mas se o meu conteúdo aumentar até 300 pixels de altura eu gostaria que a linha aumentasse para essa mesma altura.</p>
 
-<p>Grid tem uma solução para isso com a função {{cssxref("minmax", "minmax()")}}. No próximo exemplo estou usando <code>minmax()</code> no valor de {{cssxref("grid-auto-rows")}}. Automaticamente as linhas criadas terão uma altura mínima de 100 pixels, e a máxima de <code>auto</code>. Usar <code>auto</code> significa que o tamanho vai olhar para o conteúdo e, assim, esticar para que a linha tenha o espaço necessário.</p>
+<p>Grid tem uma solução para isso com a função {{cssxref("minmax", "minmax()")}}. No próximo exemplo estou usando <code>minmax()</code> no valor de {{cssxref("grid-auto-rows")}}. Automaticamente as linhas criadas terão uma altura mínima de 100 pixels, e a máxima de <code>auto</code>. Usar <code>auto</code> significa que o tamanho vai olhar para o conteúdo e, assim, esticar para que a linha tenha o espaço necessário.</p>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -344,13 +344,13 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <p><img alt="Diagram showing numbered grid lines." src="https://mdn.mozillademos.org/files/14761/1_diagram_numbered_grid_lines.png" style="height: 456px; width: 764px;"></p>
 
-<p>Linhas são numeradas de acordo a forma de escrita do documento. Em uma linguagem da esquerda para a direita, a linha 1 está à esquerda do grid. Em uma linguagem da direita para a esquerda, ela está no lado direito do grid. Linhas também podem ser nomeadas, e veremos como fazer isso em um guia posterior nessa série.</p>
+<p>Linhas são numeradas de acordo a forma de escrita do documento. Em uma linguagem da esquerda para a direita, a linha 1 está à esquerda do grid. Em uma linguagem da direita para a esquerda, ela está no lado direito do grid. Linhas também podem ser nomeadas, e veremos como fazer isso em um guia posterior nessa série.</p>
 
-<h3 id="Posicionando_itens_contra_linhas">Posicionando itens contra linhas</h3>
+<h3 id="Posicionando_itens_contra_linhas">Posicionando itens contra linhas</h3>
 
-<p>Exploraremos posicionamento de itens baseado em linhas em um artigo posterior. O exemplo a seguir mostra como fazer isso de forma simples. Quando posicionar um item, focamos a linha - ao invés do rastro.</p>
+<p>Exploraremos posicionamento de itens baseado em linhas em um artigo posterior. O exemplo a seguir mostra como fazer isso de forma simples. Quando posicionar um item, focamos a linha - ao invés do rastro.</p>
 
-<p>Nesse exemplo eu estou posicionando os primeiros dois itens do nosso grid de três colunas, usando as propriedades {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-row-start")}} e {{cssxref("grid-row-end")}}. Da esquerda para a direita, o primeiro item é posicionado contra a linha da coluna 1, e vai até a linha da coluna 4, que no nosso caso é a linha do extremo direito do grid. Começa na linha 1 e termina na linha 3, tendo uma expansão de duas linhas.</p>
+<p>Nesse exemplo eu estou posicionando os primeiros dois itens do nosso grid de três colunas, usando as propriedades {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-row-start")}} e {{cssxref("grid-row-end")}}. Da esquerda para a direita, o primeiro item é posicionado contra a linha da coluna 1, e vai até a linha da coluna 4, que no nosso caso é a linha do extremo direito do grid. Começa na linha 1 e termina na linha 3, tendo uma expansão de duas linhas.</p>
 
 <p>O segundo item inicia na linha da coluna 1, e expande uma linha. Esse é o padrão, então não preciso especificar a linha final. Também vai da linha 3 a linha 5. Os outros itens serão posicionados de acordo com espaço disponível no grid.</p>
 
@@ -406,23 +406,23 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <p>{{ EmbedLiveSample('Positioning_items_against_lines', '220', '410') }}</p>
 
-<p>Não esqueça que o <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Inspector</a> pode ser usado no Firefox Developer Tools para ver como os itens estão posicionados no grid.</p>
+<p>Não esqueça que o <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Inspector</a> pode ser usado no Firefox Developer Tools para ver como os itens estão posicionados no grid.</p>
 
 <h2 id="Células_do_grid">Células do grid</h2>
 
-<p>Uma célula de grid é a menor unidade em um grid. Conceitualmente é como se fosse uma célula de tabela. Como vimos em nossos exemplos anteriores, uma vez que o grid é definido como o pai os itens filhos serão organizados cada um em uma célula do grid definido. Na imagem abaixo, temos destacado a primeira célula do grid.</p>
+<p>Uma célula de grid é a menor unidade em um grid. Conceitualmente é como se fosse uma célula de tabela. Como vimos em nossos exemplos anteriores, uma vez que o grid é definido como o pai os itens filhos serão organizados cada um em uma célula do grid definido. Na imagem abaixo, temos destacado a primeira célula do grid.</p>
 
 <p><img alt="The first cell of the grid highlighted" src="https://mdn.mozillademos.org/files/14643/1_Grid_Cell.png" style="height: 233px; width: 350px;"></p>
 
 <h2 id="Áreas_do_grid">Áreas do grid</h2>
 
-<p>Itens podem se espalhar por uma ou mais células ambas entre linhas ou colunas, e isto cria uma <em>área de grid. </em>Áreas de grid devem ser retangulares – não é possível criar uma área em L por exemplo. A área destacada se espalha por duas trilhas de linhas e duas trilhas de colunas.</p>
+<p>Itens podem se espalhar por uma ou mais células ambas entre linhas ou colunas, e isto cria uma <em>área de grid. </em>Áreas de grid devem ser retangulares – não é possível criar uma área em L por exemplo. A área destacada se espalha por duas trilhas de linhas e duas trilhas de colunas.</p>
 
 <p><img alt="A grid area" src="https://mdn.mozillademos.org/files/14645/1_Grid_Area.png" style="height: 238px; width: 357px;"></p>
 
 <h2 id="Gutters">Gutters</h2>
 
-<p><em>Gutters</em> ou <em>alleys </em>(espaçamentos ou separadores) entre células do grid podem ser criadas usando a propriedade {{cssxref("grid-column-gap")}} e {{cssxref("grid-row-gap")}} ou de forma resumida {{cssxref("grid-gap")}}. No exemplo abaixo, criamos um espaço vazio de 10 pixels entre colunas e um espaço vazio de <code>1em</code> entre linhas.</p>
+<p><em>Gutters</em> ou <em>alleys </em>(espaçamentos ou separadores) entre células do grid podem ser criadas usando a propriedade {{cssxref("grid-column-gap")}} e {{cssxref("grid-row-gap")}} ou de forma resumida {{cssxref("grid-gap")}}. No exemplo abaixo, criamos um espaço vazio de 10 pixels entre colunas e um espaço vazio de <code>1em</code> entre linhas.</p>
 
 <pre class="brush: css">.wrapper {
    display: grid;
@@ -466,11 +466,11 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <p>{{ EmbedLiveSample('Gutters') }}</p>
 
-<p>Qualquer espaço utilizado entre espaços vazios ou <em>gaps</em> deverá ser considerado antes do espaço ser designado para as trilhas de tamanho flexível <code>fr</code> , e <em>gaps</em> agem para propósitos de tamanho como uma trilha de grid normal, entretanto você não pode colocar coisa alguma em um <em>gap</em> Em termos de posicionamento baseado em linhas, o <em>gap</em> age como uma linha preenchida (<em>fat line</em>).</p>
+<p>Qualquer espaço utilizado entre espaços vazios ou <em>gaps</em> deverá ser considerado antes do espaço ser designado para as trilhas de tamanho flexível <code>fr</code> , e <em>gaps</em> agem para propósitos de tamanho como uma trilha de grid normal, entretanto você não pode colocar coisa alguma em um <em>gap</em> Em termos de posicionamento baseado em linhas, o <em>gap</em> age como uma linha preenchida (<em>fat line</em>).</p>
 
 <h2 id="Aninhando_grids">Aninhando grids</h2>
 
-<p>Um item de grid pode se tornar um container de grid. No exemplo a seguir, temos o grid de três colunas criadas anteriormente, com nossos dois itens posicionados. Neste caso o primeiro item possui dois sub itens. Como estes itens não são filhos diretos do grid eles não participam no layout do grid e dessa forma são exibidos no fluxo normal do documento.</p>
+<p>Um item de grid pode se tornar um container de grid. No exemplo a seguir, temos o grid de três colunas criadas anteriormente, com nossos dois itens posicionados. Neste caso o primeiro item possui dois sub itens. Como estes itens não são filhos diretos do grid eles não participam no layout do grid e dessa forma são exibidos no fluxo normal do documento.</p>
 
 <div id="nesting">
 <pre class="brush: html">&lt;div class="wrapper"&gt;
@@ -488,7 +488,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <p><img alt="Nested grid in flow" src="https://mdn.mozillademos.org/files/14641/1_Nested_Grids_in_flow.png" style="height: 512px; width: 900px;"></p>
 
-<p>Se definimos <code>box1</code> como <code>display: grid</code>  podemos dar uma definição de tracks e ela também se tornará uma grid. Os itens então são dispostos nesse novo grid.</p>
+<p>Se definimos <code>box1</code> como <code>display: grid</code>  podemos dar uma definição de tracks e ela também se tornará uma grid. Os itens então são dispostos nesse novo grid.</p>
 
 <pre class="brush: css">.box1 {
    grid-column-start: 1;
@@ -530,13 +530,13 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <h3 id="Subgrid">Subgrid</h3>
 
-<p>No nível das especificações do grid tem uma <em>feature</em> chamada <em>subgrid</em> que nos permitiria criar grids aninhados que usa aquilo que foi definido no grid pai.</p>
+<p>No nível das especificações do grid tem uma <em>feature</em> chamada <em>subgrid</em> que nos permitiria criar grids aninhados que usa aquilo que foi definido no grid pai.</p>
 
 <div class="note">
 <p>Subgrids ainda não foram implementados em nenhum browser, e as especificações são sujeitas a mudanças.</p>
 </div>
 
-<p>Na especificação atual, no exemplo acima editaríamos o grid aninhado usando <code>display: subgrid</code> ao invés de <code>display: grid</code>, e remover o que havia sido definido. O grid aninhado vai usar as propriedades definidas no pai para dispor os itens.</p>
+<p>Na especificação atual, no exemplo acima editaríamos o grid aninhado usando <code>display: subgrid</code> ao invés de <code>display: grid</code>, e remover o que havia sido definido. O grid aninhado vai usar as propriedades definidas no pai para dispor os itens.</p>
 
 <p>Note que o grid aninhado está nas duas dimensões — linhas e colunas. Não há garantia de que o grid implícito funcione com subgrid. Por isso é necessário que haja certeza de que o grid pai tem linhas e colunas suficientes para todos os sub itens.</p>
 
@@ -549,7 +549,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 }
 </pre>
 
-<h2 id="Sobrepondo_itens_com_z-index">Sobrepondo itens com <code>z-index</code></h2>
+<h2 id="Sobrepondo_itens_com_z-index">Sobrepondo itens com <code>z-index</code></h2>
 
 <p>Itens de uma mesma grade podem ocupar uma mesma célula. Se retornarmos ao nosso exemplo com itens dispostos pela linha, podemos fazer com que dois se sobreponham.</p>
 
@@ -607,11 +607,11 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <p>{{ EmbedLiveSample('l_ex', '210', '410') }}</p>
 
-<p>O container <code>box2</code> está sobrepondo <code>box1</code>, é renderizado acima pois vem depois na ordem.</p>
+<p>O container <code>box2</code> está sobrepondo <code>box1</code>, é renderizado acima pois vem depois na ordem.</p>
 
 <h3 id="Manipulando_a_ordem">Manipulando a ordem</h3>
 
-<p>Podemos controlar a ordem na qual os itens irão empilhar-se usando a propriedade <code>z-index</code>. Se <code>box2</code> recebe um <code>z-index</code> menor que <code>box1</code> será mostrado abaixo de <code>box1</code>.</p>
+<p>Podemos controlar a ordem na qual os itens irão empilhar-se usando a propriedade <code>z-index</code>. Se <code>box2</code> recebe um <code>z-index</code> menor que <code>box1</code> será mostrado abaixo de <code>box1</code>.</p>
 
 <pre class="brush: css">.wrapper {
    display: grid;
@@ -669,7 +669,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 <h2 id="Próximos_Passos">Próximos Passos</h2>
 
-<p>Nesse artigo abordamos um pouco da especificação do Grid Layout. Pratique com os exemplos propostos, depois disso passe para a próxima parte onde estudaremos mais a fundo o CSS Grid Layout.</p>
+<p>Nesse artigo abordamos um pouco da especificação do Grid Layout. Pratique com os exemplos propostos, depois disso passe para a próxima parte onde estudaremos mais a fundo o CSS Grid Layout.</p>
 
 <section id="Quick_links">
 <ol>

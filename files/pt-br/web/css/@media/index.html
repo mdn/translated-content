@@ -12,28 +12,28 @@ translation_of: Web/CSS/@media
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>@media</code></strong> <a href="/en/CSS" title="CSS">CSS</a> <a href="/en/CSS/At-rule" title="en/CSS/At-rule">at-rule </a><font><font> pode ser usada para aplicar estilos com base no resultado de uma ou mais consultas de mídia, que testam o tipo, as características específicas e o ambiente de um dispositivo.</font></font></p>
+<p>The <strong><code>@media</code></strong> <a href="/en/CSS" title="CSS">CSS</a> <a href="/en/CSS/At-rule" title="en/CSS/At-rule">at-rule </a><font><font> pode ser usada para aplicar estilos com base no resultado de uma ou mais consultas de mídia, que testam o tipo, as características específicas e o ambiente de um dispositivo.</font></font></p>
 
-<p>No CSS, a regra <code>@media</code> deve ser posta na parte superior do seu código ou aninhada dentro de algum outro <a href="/en/CSS/At-rule#Conditional_Group_Rules" title="en/CSS/At-rule#Conditional_Group_Rules">conditional group at-rule</a>.</p>
+<p>No CSS, a regra <code>@media</code> deve ser posta na parte superior do seu código ou aninhada dentro de algum outro <a href="/en/CSS/At-rule#Conditional_Group_Rules" title="en/CSS/At-rule#Conditional_Group_Rules">conditional group at-rule</a>.</p>
 
 <pre class="brush: css no-line-numbers">/* Media query */
 @media screen and (min-width: 900px) {
   article {
-    padding: 1rem 3rem;
-  }
+    padding: 1rem 3rem;
+  }
 }
 
 /* Nested media query */
 @supports (display: flex) {
-  @media screen and (min-width: 900px) {
-    article {
-      display: flex;
-    }
+  @media screen and (min-width: 900px) {
+    article {
+      display: flex;
+    }
   }
 }
 </pre>
 
-<p>Besides its use in the <code>@media</code> rule, a media query may also be applied to an HTML {{HTMLElement("link")}} element to restrict an entire style sheet to certain media.</p>
+<p>Besides its use in the <code>@media</code> rule, a media query may also be applied to an HTML {{HTMLElement("link")}} element to restrict an entire style sheet to certain media.</p>
 
 <pre class="brush: html no-line-numbers">&lt;!-- Media-dependent style sheet included in HTML --&gt;
 &lt;link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen-styles.css" /&gt;</pre>
@@ -42,17 +42,17 @@ translation_of: Web/CSS/@media
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 
-<p>The <code>@media</code> at-rule is composed of one or more media queries, each of which consists of an optional <a href="#Media_types">media type</a> and any number of <a href="#Media_features">media feature</a> expressions. Multiple queries can be combined in various ways by using <a href="#Logical_operators">logical operators</a>, and are case-insensitive.</p>
+<p>The <code>@media</code> at-rule is composed of one or more media queries, each of which consists of an optional <a href="#Media_types">media type</a> and any number of <a href="#Media_features">media feature</a> expressions. Multiple queries can be combined in various ways by using <a href="#Logical_operators">logical operators</a>, and are case-insensitive.</p>
 
-<p>Corresponding styles are applied only if a media query computes to true, i.e., when the specified media type matches the type of device the document is being displayed on <em>and</em> all media feature expressions compute as true. Queries involving unknown media types are always false.</p>
+<p>Corresponding styles are applied only if a media query computes to true, i.e., when the specified media type matches the type of device the document is being displayed on <em>and</em> all media feature expressions compute as true. Queries involving unknown media types are always false.</p>
 
 <div class="note">
-<p><strong>Note:</strong> A style sheet with a media query attached to its {{HTMLElement("link")}} tag <a href="http://scottjehl.github.com/CSS-Download-Tests/">will still download</a> even if the query returns false. Nevertheless, its contents will not apply unless and until the result of the query changes to true.</p>
+<p><strong>Note:</strong> A style sheet with a media query attached to its {{HTMLElement("link")}} tag <a href="http://scottjehl.github.com/CSS-Download-Tests/">will still download</a> even if the query returns false. Nevertheless, its contents will not apply unless and until the result of the query changes to true.</p>
 </div>
 
 <h3 id="Media_types" name="Media_types">Media types</h3>
 
-<p><em>Media types</em> describe the general category of a device. Unless you use the <code>not</code> or <code>only</code> logical operators, the media type is optional and the <code>all</code> type will be implied.</p>
+<p><em>Media types</em> describe the general category of a device. Unless you use the <code>not</code> or <code>only</code> logical operators, the media type is optional and the <code>all</code> type will be implied.</p>
 
 <dl>
  <dt><code>all</code></dt>
@@ -65,11 +65,11 @@ translation_of: Web/CSS/@media
  <dd>Intended for speech synthesizers.</dd>
 </dl>
 
-<div class="note"><strong>Deprecated media types:</strong> CSS2.1 and <a href="https://drafts.csswg.org/mediaqueries-3/#background">Media Queries 3</a> defined several additional media types (<code>tty</code>, <code>tv</code>, <code>projection</code>, <code>handheld</code>, <code>braille</code>, <code>embossed</code>, and <code>aural</code>), but they were deprecated in <a href="http://dev.w3.org/csswg/mediaqueries/#media-types">Media Queries 4</a> and shouldn't be used. The <code>aural</code> type has been replaced by <code>speech</code>, which is similar.</div>
+<div class="note"><strong>Deprecated media types:</strong> CSS2.1 and <a href="https://drafts.csswg.org/mediaqueries-3/#background">Media Queries 3</a> defined several additional media types (<code>tty</code>, <code>tv</code>, <code>projection</code>, <code>handheld</code>, <code>braille</code>, <code>embossed</code>, and <code>aural</code>), but they were deprecated in <a href="http://dev.w3.org/csswg/mediaqueries/#media-types">Media Queries 4</a> and shouldn't be used. The <code>aural</code> type has been replaced by <code>speech</code>, which is similar.</div>
 
 <h3 id="Media_features" name="Media_features">Media features</h3>
 
-<p><em>Media feature expressions</em> test for specific characteristics of the {{glossary("user agent")}}, output device, or environment. They are entirely optional. Each media feature expression must be surrounded by parentheses.</p>
+<p><em>Media feature expressions</em> test for specific characteristics of the {{glossary("user agent")}}, output device, or environment. They are entirely optional. Each media feature expression must be surrounded by parentheses.</p>
 
 <table>
  <thead>
@@ -147,7 +147,7 @@ translation_of: Web/CSS/@media
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/CSS/@media/display-mode">display-mode</a></code></td>
-   <td>The display mode of the application, as specified in the web app manifest's <a href="/en-US/docs/Web/Manifest#display"><code>display</code></a> member</td>
+   <td>The display mode of the application, as specified in the web app manifest's <a href="/en-US/docs/Web/Manifest#display"><code>display</code></a> member</td>
    <td>Defined in the <a href="http://w3c.github.io/manifest/#the-display-mode-media-feature">Web App Manifest spec</a>.</td>
   </tr>
   <tr>
@@ -218,32 +218,32 @@ translation_of: Web/CSS/@media
   <tr>
    <td><a href="/en-US/docs/Web/CSS/@media/-webkit-transform-2d"><code>-webkit-transform-2d</code></a> {{non-standard_inline}}</td>
    <td>Are CSS 2D {{cssxref("transform")}}s supported?</td>
-   <td>Nonstandard; WebKit-specific. If possible, use {{cssxref("@supports")}} instead.</td>
+   <td>Nonstandard; WebKit-specific. If possible, use {{cssxref("@supports")}} instead.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/CSS/@media/-webkit-transition"><code>-webkit-transition</code></a> {{non-standard_inline}}</td>
    <td>Are CSS {{cssxref("transition")}}s supported?</td>
-   <td>Nonstandard; WebKit-specific. If possible, use {{cssxref("@supports")}} instead.</td>
+   <td>Nonstandard; WebKit-specific. If possible, use {{cssxref("@supports")}} instead.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/CSS/@media/-webkit-animation"><code>-webkit-animation</code></a> {{non-standard_inline}}</td>
    <td>Are CSS {{cssxref("animation")}}s supported?</td>
-   <td>Nonstandard; WebKit-specific. If possible, use {{cssxref("@supports")}} instead.</td>
+   <td>Nonstandard; WebKit-specific. If possible, use {{cssxref("@supports")}} instead.</td>
   </tr>
  </tbody>
 </table>
 
 <h3 id="Logical_operators">Logical operators</h3>
 
-<p>The <em>logical operators</em> <code>not</code>, <code>and</code>, and <code>only</code> can be used to compose a complex media query. You can also combine multiple media queries into a single rule using a comma-separated list.</p>
+<p>The <em>logical operators</em> <code>not</code>, <code>and</code>, and <code>only</code> can be used to compose a complex media query. You can also combine multiple media queries into a single rule using a comma-separated list.</p>
 
 <h4 id="and"><code>and</code></h4>
 
-<p>The <code>and</code> operator is used for combining multiple media features together into a single media query, requiring each chained feature to return true in order for the query to be true. It is also used for joining media features with media types.</p>
+<p>The <code>and</code> operator is used for combining multiple media features together into a single media query, requiring each chained feature to return true in order for the query to be true. It is also used for joining media features with media types.</p>
 
 <h4 id="not"><code>not</code></h4>
 
-<p>The <code>not</code> operator is used to negate a media query, returning true if the query would otherwise return false. If present in a comma-separated list, it will only negate the specific query to which it is applied. If you use the <code>not</code> operator, you <em>must</em> specify an explicit media type.</p>
+<p>The <code>not</code> operator is used to negate a media query, returning true if the query would otherwise return false. If present in a comma-separated list, it will only negate the specific query to which it is applied. If you use the <code>not</code> operator, you <em>must</em> specify an explicit media type.</p>
 
 <div class="note">
 <p><strong>Note:</strong> The <code>not</code> keyword can't be used to negate an individual feature expression, only an entire media query.</p>
@@ -251,7 +251,7 @@ translation_of: Web/CSS/@media
 
 <h4 id="only"><code>only</code></h4>
 
-<p>The <code>only</code> operator is used to apply a style only if an entire query matches, and is useful for preventing older browsers from applying selected styles. If you use the <code>only</code> operator, you <em>must</em> specify an explicit media type.</p>
+<p>The <code>only</code> operator is used to apply a style only if an entire query matches, and is useful for preventing older browsers from applying selected styles. If you use the <code>only</code> operator, you <em>must</em> specify an explicit media type.</p>
 
 <h4 id="comma-separated_lists">comma-separated lists</h4>
 
@@ -283,7 +283,7 @@ translation_of: Web/CSS/@media
 }
 </pre>
 
-<p>For more media feature examples, please see the reference page for each specific feature. For more logical operator examples, please see <a class="internal" href="/en/CSS/Media_queries" title="En/CSS/Media queries">Using media queries</a>.</p>
+<p>For more media feature examples, please see the reference page for each specific feature. For more logical operator examples, please see <a class="internal" href="/en/CSS/Media_queries" title="En/CSS/Media queries">Using media queries</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -330,113 +330,7 @@ translation_of: Web/CSS/@media
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support (<code>all</code>, <code>print</code>, <code>screen</code>)</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop(1.7) }}</td>
-   <td>6.0</td>
-   <td>9.2</td>
-   <td>1.3</td>
-  </tr>
-  <tr>
-   <td><code>speech</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>9.2</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Media features</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop(1.7) }}</td>
-   <td>9.0</td>
-   <td>9.2</td>
-   <td>1.3</td>
-  </tr>
-  <tr>
-   <td><code>display-mode</code> media feature</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop(47) }}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support (<code>all</code>, <code>print</code>, <code>screen</code>)</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile(1.7) }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>9.0</td>
-   <td>3.1</td>
-  </tr>
-  <tr>
-   <td><code>speech</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>9.0</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Media features</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile(1.7) }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>9.0</td>
-   <td>3.1</td>
-  </tr>
-  <tr>
-   <td><code>display-mode</code> media feature</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(47)}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Only the <code>fullscreen</code> and <code>browser</code> values of <code>display-mode</code> were supported in 47. <code>minimal-ui</code> and <code>standalone</code> were added in Firefox 57.</p>
+{{Compat("css.at-rules.media")}}
 
 <h2 id="See_also">See also</h2>
 

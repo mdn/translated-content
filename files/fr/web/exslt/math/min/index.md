@@ -1,36 +1,29 @@
 ---
-title: min
+title: math:min()
 slug: Web/EXSLT/math/min
-tags:
-  - EXSLT
-  - XSLT
 translation_of: Web/EXSLT/math/min
 ---
-{{ XsltRef() }}
+{{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
 
-`math:min()` renvoir la valeur minimale pour un ensemble de nœuds.
+`math:min()` renvoie la valeur minimale d'un ensemble de nœuds.
 
-Pour calculer la valeur minimale d'un ensemble de nœuds, l'ensemble est trié dans l'ordre croissant comme il le serait avec la commande [`xsl:sort()`](fr/XSLT/sort) avec un type de donnée `number`. La valeur minimale est ensuite le premier nœud de la liste triée, converti en nombre.
+Pour calculer la valeur minimale d'un ensemble de nœuds, l'ensemble est trié selon l'ordre croissant, comme on pourrait le faire avec [`xsl:sort()`](/fr/docs/Web/XSLT/sort) en utilisant un type de données `number`. La valeur minimale est ensuite construite avec la valeur du premier nœud de cette liste ordonnée, convertie en nombre.
 
-{{ Note() }}
+## Syntaxe
 
-### Syntaxe
+```
+math:min(nodeSet)
+```
 
-    math:min(nodeSet)
-
-### Arguments
+### Paramètres
 
 - `nodeSet`
-  - : L'ensemble de nœuds dont la valeur la plus faible est recherchée.
+  - : L'ensemble de nœuds dont on souhaite connaître la valeur minimale.
 
-### Renvoie
+### Valeur de retour
 
-Fragment de l'arbre du résultat représentant la valeur numérique du nœud avec la valeur la plus faible sous forme d'une de caractères.
+Un fragment d'arbre de résultat représentant la valeur numérique du nœud avec la plus faible valeur, sous forme d'une chaîne de caractères.
 
-### Défini
+## Spécifications
 
-[EXSLT - MATH:MIN](http://www.exslt.org/regexp/functions/min/index.html)
-
-### Prise en charge par Gecko
-
-Pris en charge par Gecko 1.9 et suivants.
+[EXSLT - MATH:MIN](http://exslt.org/regexp/functions/min/index.html)

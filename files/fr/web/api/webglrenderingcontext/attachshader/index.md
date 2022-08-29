@@ -12,7 +12,9 @@ La méthode **WebGLRenderingContext.attachShader()** de l'[API WebGL](/fr-FR/doc
 
 ## Syntaxe
 
-    void gl.attachShader(programme, shader);
+```js
+void gl.attachShader(programme, shader);
+```
 
 ### Paramètres
 

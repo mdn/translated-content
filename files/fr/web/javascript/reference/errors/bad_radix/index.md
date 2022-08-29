@@ -12,9 +12,11 @@ original_slug: Web/JavaScript/Reference/Erreurs/Bad_radix
 
 ## Message
 
-    RangeError: invalid argument (Edge)
-    RangeError: radix must be an integer at least 2 and no greater than 36 (Firefox)
-    RangeError: toString() radix argument must be between 2 and 36 (Chrome)
+```
+RangeError: invalid argument (Edge)
+RangeError: radix must be an integer at least 2 and no greater than 36 (Firefox)
+RangeError: toString() radix argument must be between 2 and 36 (Chrome)
+```
 
 ## Type d'erreur
 

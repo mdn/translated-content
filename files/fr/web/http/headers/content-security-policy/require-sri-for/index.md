@@ -13,15 +13,17 @@ tags:
   - require-sri-for
 translation_of: Web/HTTP/Headers/Content-Security-Policy/require-sri-for
 ---
-{{Obsolete_header}}
+{{deprecated_header}}
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} **`require-sri-for`** informe l'agent utilisateur de requérir la vérification [d'intégrité des sous-ressources](/en-US/docs/Web/Security/Subresource_Integrity) pour les scripts et styles de la page.
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} **`require-sri-for`** informe l'agent utilisateur de requérir la vérification [d'intégrité des sous-ressources](/fr/docs/Web/Security/Subresource_Integrity) pour les scripts et styles de la page.
 
 ## Syntaxe
 
-    Content-Security-Policy: require-sri-for script;
-    Content-Security-Policy: require-sri-for style;
-    Content-Security-Policy: require-sri-for script style;
+```
+Content-Security-Policy: require-sri-for script;
+Content-Security-Policy: require-sri-for style;
+Content-Security-Policy: require-sri-for script style;
+```
 
 - `script`
   - : Requiert {{Glossary("SRI")}} pour les scripts.
@@ -34,7 +36,9 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} **`require-sri-for`*
 
 Soit cet en-tête CSP :
 
-    Content-Security-Policy: require-sri-for script style
+```
+Content-Security-Policy: require-sri-for script style
+```
 
 Cet élément {{HTMLElement("script")}} sera chargé et exécuté puisqu'il utilise un attribut `integrity` valide.
 
@@ -57,4 +61,4 @@ Toutefois, ce script sera bloqué car il n'utilise pas cet attribut :
 ## Voir aussi
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity)
+- [Subresource Integrity](/fr/docs/Web/Security/Subresource_Integrity)

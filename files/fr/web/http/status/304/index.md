@@ -28,7 +28,7 @@ La réponse [`200 OK`](/fr/docs/Web/HTTP/Status/200) équivalente aurait inclus 
 
 ### Notes de compatibilité
 
-Les différents navigateurs se comportent différemment lorsque la réponse contient, incorrectement, un corps pour les connexions persistantes. Voir [`204 No Content`](/en-US/docs/Web/HTTP/Status/204) pour plus de détails.
+Les différents navigateurs se comportent différemment lorsque la réponse contient, incorrectement, un corps pour les connexions persistantes. Voir [`204 No Content`](/fr/docs/Web/HTTP/Status/204) pour plus de détails.
 
 ## Voir aussi
 

@@ -15,7 +15,7 @@ translation_of: WebAssembly/Loading_and_running
 
 <h2 id="Какие_есть_варианты">Какие есть варианты?</h2>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">WebAssembly ещё не интегрирована с </span></span> <code>&lt;script type='module'&gt;</code> <span class="tlid-translation translation" lang="ru"><span title="">или ES2015 </span><span class="alt-edited" title="">оператором</span></span> <code>import</code>, <span class="tlid-translation translation" lang="ru"><span title="">поэтому не существует пути, позволяющего использовать модули загрузки браузера для использования импорта.</span></span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">WebAssembly ещё не интегрирована с </span></span> <code>&lt;script type='module'&gt;</code> <span class="tlid-translation translation" lang="ru"><span title="">или ES2015 </span><span class="alt-edited" title="">оператором</span></span> <code>import</code>, <span class="tlid-translation translation" lang="ru"><span title="">поэтому не существует пути, позволяющего использовать модули загрузки браузера для использования импорта.</span></span></p>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Старые методы</span></span> {{jsxref("WebAssembly.compile")}}/{{jsxref("WebAssembly.instantiate")}} <span class="tlid-translation translation" lang="ru"><span title="">требуют создания </span></span>{{domxref("ArrayBuffer")}}, <span class="tlid-translation translation" lang="ru"><span title="">содержащего двоичный файл модуля WebAssembly после загрузки необработанных байтов, а затем скомпилировать/создать его экземпляр.</span></span> <span class="tlid-translation translation" lang="ru"><span title="">Это аналог</span></span> <code>new Function(string)</code>,<span class="tlid-translation translation" lang="ru"><span title=""> за исключением того, что мы заменяем строку символов (исходный код JavaScript) буфером байтов массива (исходный код WebAssembly).</span></span></p>
 
@@ -27,7 +27,7 @@ translation_of: WebAssembly/Loading_and_running
 
 <p><a href="/en-US/docs/Web/API/Fetch_API">Fetch</a><span class="tlid-translation translation" lang="ru"><span title=""> - это удобный современный API для извлечения сетевых ресурсов.</span></span></p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Самый быстрый и эффективный способ получить модуль wasm - использовать более новый метод </span></span>{{jsxref("WebAssembly.instantiateStreaming()")}}, <span class="tlid-translation translation" lang="ru"><span title="">который может принять вызов </span></span><code>fetch()</code> <span class="tlid-translation translation" lang="ru"><span title="">в качестве первого аргумента и будет обрабатывать загрузку, компиляцию</span> <span title="">и создание экземпляра модуля за один шаг, получая доступ к необработанному байтовому коду при его потоковой передаче с сервера:</span></span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">Самый быстрый и эффективный способ получить модуль wasm - использовать более новый метод </span></span>{{jsxref("WebAssembly.instantiateStreaming()")}}, <span class="tlid-translation translation" lang="ru"><span title="">который может принять вызов </span></span><code>fetch()</code> <span class="tlid-translation translation" lang="ru"><span title="">в качестве первого аргумента и будет обрабатывать загрузку, компиляцию</span> <span title="">и создание экземпляра модуля за один шаг, получая доступ к необработанному байтовому коду при его потоковой передаче с сервера:</span></span></p>
 
 <pre class="brush: js">WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
 .then(results =&gt; {
@@ -44,7 +44,7 @@ translation_of: WebAssembly/Loading_and_running
   // Do something with the results!
 });</pre>
 
-<p> </p>
+<p> </p>
 
 <h3 id="Помимо_перегрузок_instantiate()"><span class="tlid-translation translation" lang="ru"><span title="">Помимо перегрузок instantiate()</span></span></h3>
 
@@ -92,7 +92,7 @@ translation_of: WebAssembly/Loading_and_running
  <li><span class="tlid-translation translation" lang="ru"><span title="">Создайте новый экземпляр </span></span>{{domxref("XMLHttpRequest()")}} <span class="tlid-translation translation" lang="ru"><span title="">и используйте его метод </span></span>{{domxref("XMLHttpRequest.open","open()")}} <span class="tlid-translation translation" lang="ru"><span title="">для открытия запроса, задав для метода запроса значение </span></span> <code>GET</code> <span class="tlid-translation translation" lang="ru"><span title="">и указав путь к файлу, который мы хотим получить.</span></span></li>
  <li><span class="tlid-translation translation" lang="ru"><span title="">Ключевой частью этого является установка типа ответа </span></span> <code>'arraybuffer'</code> <span class="tlid-translation translation" lang="ru"><span title="">с помощью свойства </span></span>{{domxref("XMLHttpRequest.responseType","responseType")}}.</li>
  <li><span class="tlid-translation translation" lang="ru"><span title="">Затем отправьте запрос с помощью </span></span>{{domxref("XMLHttpRequest.send()")}}.</li>
- <li><span class="tlid-translation translation" lang="ru"><span title="">Затем мы используем обработчик событий </span></span>{{domxref("XMLHttpRequest.onload", "onload")}} <span class="tlid-translation translation" lang="ru"><span title="">для вызова функции после завершения загрузки ответа - в этой функции мы получаем буфер массива из</span></span> {{domxref("XMLHttpRequest.response", "response")}} <span class="tlid-translation translation" lang="ru"><span title="">и затем передайте это в наш метод</span></span> {{jsxref("WebAssembly.instantiate()")}}, <span class="tlid-translation translation" lang="ru"><span title="">как мы это делали с Fetch.</span></span></li>
+ <li><span class="tlid-translation translation" lang="ru"><span title="">Затем мы используем обработчик событий </span></span>{{domxref("XMLHttpRequest.onload", "onload")}} <span class="tlid-translation translation" lang="ru"><span title="">для вызова функции после завершения загрузки ответа - в этой функции мы получаем буфер массива из</span></span> {{domxref("XMLHttpRequest.response", "response")}} <span class="tlid-translation translation" lang="ru"><span title="">и затем передайте это в наш метод</span></span> {{jsxref("WebAssembly.instantiate()")}}, <span class="tlid-translation translation" lang="ru"><span title="">как мы это делали с Fetch.</span></span></li>
 </ol>
 
 <p>Финальный код выглядит так:</p>

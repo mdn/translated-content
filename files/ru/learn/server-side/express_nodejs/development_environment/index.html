@@ -17,7 +17,7 @@ translation_of: Learn/Server-side/Express_Nodejs/development_environment
   </tr>
   <tr>
    <th scope="row">Задача:</th>
-   <td>Создать среду разработки для Express  на вашем компьютере.</td>
+   <td>Создать среду разработки для Express  на вашем компьютере.</td>
   </tr>
  </tbody>
 </table>
@@ -96,7 +96,7 @@ sudo apt-get install -y nodejs</code>
 <ol>
 </ol>
 
-<h3 id="Проверка_вашей_установки_Nodejs_и_NPM">Проверка вашей установки Nodejs и NPM</h3>
+<h3 id="Проверка_вашей_установки_Nodejs_и_NPM">Проверка вашей установки Nodejs и NPM</h3>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Самый простой способ проверить, установлен ли этот узел, - это запустить команду «версия» в своём терминале / командной строке и проверить, что возвращается строка версии:</span></span></p>
 
@@ -121,7 +121,7 @@ const port = 3000;
 //Создание HTTP-сервера
 const server = http.createServer((req, res) =&gt; {
 
-  //Установка HTTP-заголовков ответа с HTTP-статусом и Content type
+  //Установка HTTP-заголовков ответа с HTTP-статусом и Content type
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
   res.end('Hello World\n');
@@ -153,7 +153,7 @@ Server running at http://127.0.0.1:3000/
 <p><span class="tlid-translation translation" lang="ru"><span title="">Помимо самого Node, NPM является наиболее важным инструментом для работы с приложениями Node.</span> <span title="">NPM используется для получения любых пакетов (библиотек JavaScript), которые необходимы приложению для разработки, тестирования и / или производства, а также может использоваться для запуска тестов и инструментов, используемых в процессе разработки.</span></span></p>
 
 <div class="note">
-<p><strong>Замечание:</strong>  <span class="tlid-translation translation" lang="ru"><span title="">С точки зрения Node, Express - это просто ещё один пакет, который вам нужно установить с помощью NPM, а затем установить его в своём собственном коде.</span></span></p>
+<p><strong>Замечание:</strong>  <span class="tlid-translation translation" lang="ru"><span title="">С точки зрения Node, Express - это просто ещё один пакет, который вам нужно установить с помощью NPM, а затем установить его в своём собственном коде.</span></span></p>
 </div>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Вы можете вручную использовать NPM для получения каждого необходимого пакета отдельно.</span> <span title="">Обычно мы вместо этого управляем зависимостями, используя простой текстовый файл с именем package.json.</span> <span title="">В этом файле перечислены все зависимости для конкретного «пакета» JavaScript, включая имя пакета, версию, описание, исходный файл для выполнения, производственные зависимости, зависимости разработки, версии Node, с которыми он может работать, и т. Д. Файл package.json должен</span> <span title="">содержать все, что нужно NPM для загрузки и запуска вашего приложения (если вы пишете библиотеку многократного использования, вы можете использовать это определение для загрузки пакета в репозиторий npm и сделать его доступным для других пользователей).</span></span></p>
@@ -163,7 +163,7 @@ Server running at http://127.0.0.1:3000/
 <p><span class="tlid-translation translation" lang="ru"><span title="">Следующие шаги показывают, как вы можете использовать NPM для загрузки пакета, сохранить его в зависимостях проекта, а затем потребовать его в приложении Node.</span></span></p>
 
 <div class="note">
-<p><strong>Замечание:</strong>  <span class="tlid-translation translation" lang="ru"><span title="">Здесь мы показываем инструкции для получения и установки пакета Express.</span> <span title="">Позже мы покажем, как этот пакет и другие уже указаны для нас с помощью Express Application Generator.</span> <span title="">Этот раздел предоставлен, потому что полезно понять, как работает NPM и что создаётся генератором приложений.</span></span></p>
+<p><strong>Замечание:</strong>  <span class="tlid-translation translation" lang="ru"><span title="">Здесь мы показываем инструкции для получения и установки пакета Express.</span> <span title="">Позже мы покажем, как этот пакет и другие уже указаны для нас с помощью Express Application Generator.</span> <span title="">Этот раздел предоставлен, потому что полезно понять, как работает NPM и что создаётся генератором приложений.</span></span></p>
 </div>
 
 <ol>
@@ -267,7 +267,7 @@ Example app listening on port 8000
 <pre class="brush: js">"scripts": {
   ...
   "lint": "eslint src/js"
-  ...
+  ...
 }
 </pre>
 
@@ -282,7 +282,7 @@ npm run lint</code>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Этот пример может выглядеть не короче, чем исходная команда, но вы можете включить в свои сценарии npm гораздо более крупные команды, включая цепочки из нескольких команд.</span> <span title="">Вы можете определить один скрипт npm, который запускает все ваши тесты одновременно.</span></span></p>
 
-<h2 id="Установка_Express_Application_Generator">Установка Express Application Generator</h2>
+<h2 id="Установка_Express_Application_Generator">Установка Express Application Generator</h2>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Инструмент Express Application Generator создаёт «скелет» приложения Express.</span> <span title="">Установите генератор, используя NPM, как показано (флаг -g устанавливает инструмент глобально, чтобы вы могли вызывать его из любого места):</span></span></p>
 
@@ -305,21 +305,21 @@ npm run lint</code>
 <p><span class="tlid-translation translation" lang="ru"><span title="">Новое приложение будет иметь файл package.json в своём корневом каталоге.</span> <span title="">Вы можете открыть это, чтобы увидеть, какие зависимости установлены, включая Express и библиотеку шаблонов Jade:</span></span></p>
 
 <pre class="brush: js">{
-  "name": "helloworld",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
-  "dependencies": {
-    "body-parser": "~1.18.2",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
-    "express": "~4.15.5",
-    "jade": "~1.11.0",
-    "morgan": "~1.9.0",
-    "serve-favicon": "~2.4.5"
-  }
+  "name": "helloworld",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0",
+    "serve-favicon": "~2.4.5"
+  }
 }</pre>
 </div>
 
@@ -348,7 +348,7 @@ DEBUG=helloworld:* npm start
 &gt; helloworld@0.0.0 start D:\Github\expresstests\helloworld
 &gt; node ./bin/www
 
-  helloworld:server Listening on port 3000 +0ms</pre>
+  helloworld:server Listening on port 3000 +0ms</pre>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Откройте браузер и перейдите по адресу http://127.0.0.1:3000/, чтобы увидеть страницу приветствия Express по умолчанию.</span></span></p>
 
@@ -369,7 +369,7 @@ DEBUG=helloworld:* npm start
 
 <ul>
  <li><a href="https://nodejs.org/en/download/">Downloads</a> page (nodejs.org)</li>
- <li><a href="https://nodejs.org/en/download/package-manager/">Installing Node.js via package manager</a> (nodejs.org)</li>
+ <li><a href="https://nodejs.org/en/download/package-manager/">Installing Node.js via package manager</a> (nodejs.org)</li>
  <li><a href="http://expressjs.com/en/starter/installing.html">Installing Express</a> (expressjs.com)</li>
  <li><a href="https://expressjs.com/en/starter/generator.html">Express Application Generator</a> (expressjs.com)</li>
 </ul>

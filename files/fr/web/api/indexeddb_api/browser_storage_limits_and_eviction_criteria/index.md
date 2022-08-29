@@ -24,7 +24,7 @@ Même dans le même navigateur, en utilisant la même méthode de stockage, il e
 Généralement, les deux principaux types de stockage sont les suivants :
 
 - Persistant : ce sont des données qui doivent être conservées pendant une longue période. Elles ne seront évincéés que si l'utilisateur le choisit (par exemple, dans Firefox, il existe un bouton "nettoyer stockage" dans la boîte de dialogue d'informations sur la page pour chaque page).
-- Temporaire : il s'agit de données qui n'ont pas besoin de persister très longtemps. Elles seront évacuées en-dessous d'un minimum d'utilisation ({{anch("LRU policy")}}) lorsque les limites de stockage sont atteintes.
+- Temporaire : il s'agit de données qui n'ont pas besoin de persister très longtemps. Elles seront évacuées en-dessous d'un minimum d'utilisation (voir la [politique LRU](#politique_lru)) lorsque les limites de stockage sont atteintes.
 
 Par défaut, le stockage temporaire sera utilisé dans la plupart des contextes d'utilisation (par exemple, des applications Web standard) et le persistant pour les applications installées (par exemple, les applications Firefox installées sur le système d'exploitation Firefox OS / Firefox de bureau, les applications Chrome).
 
@@ -32,16 +32,17 @@ Par défaut, le stockage temporaire sera utilisé dans la plupart des contextes 
 
 Dans Firefox, vous pouvez choisir le type de stockage que vous souhaitez utiliser en incluant une option propriétaire — `storage` — lorsque vous créez une base de données IndexedDB en utilisant {{domxref ("IDBFactory.open ()", "open ()")}} :
 
-- ```js
-  var request = indexedDB.open("myDatabase", { version: 1, storage: "persistent" });
-  ```
-- ```js
-  var request = indexedDB.open("myDatabase", { version: 1, storage: "temporary" });
-  ```
+```js
+var request = indexedDB.open("myDatabase", { version: 1, storage: "persistent" });
+```
+
+```js
+var request = indexedDB.open("myDatabase", { version: 1, storage: "temporary" });
+```
 
 Dans Firefox, quand le stockage persistant est choisi, l'utilisateur reçoit une fenêtre de dialogue d'interface utilisateur pour l'avertir que ces données persisteront et lui demander s'il en est satisfait.
 
-Les données de stockage temporaire ne provoquent aucune fenêtre de dialogue vers l'utilisateur, mais il y a des {{anch("Limites de stockage")}}.
+Les données de stockage temporaire ne provoquent aucune fenêtre de dialogue vers l'utilisateur, mais il y a des [limites de stockage](#limites_de_stockage).
 
 ### "Default storage" dans Firefox _(stockage par défaut)_
 
@@ -56,7 +57,7 @@ Chaque type de stockage représente un référentiel distinct, voici la cartogra
 - `<profile>/storage/temporary` — répertoire de stockage des données temporaires.
 - `<profile>/storage/default` — répertoire de stockage des données par défaut.
 
-> **Note :** Depuis l'introduction de l' [API Storage](/en-US/docs/Web/API/Storage_API) , le dossier "permanent" peut être considéré comme obsolète, il n'est plus utilisé que pour les bases de données de type persistant IndexedDB. Peu importe le mode, "best-effort" _(meilleur effort)_ ou "persistant", les données sont stockées sous `<profile>/storage/default`.
+> **Note :** Depuis l'introduction de l' [API Storage](/fr/docs/Web/API/Storage_API) , le dossier "permanent" peut être considéré comme obsolète, il n'est plus utilisé que pour les bases de données de type persistant IndexedDB. Peu importe le mode, "best-effort" _(meilleur effort)_ ou "persistant", les données sont stockées sous `<profile>/storage/default`.
 
 > **Note :** Dans Firefox, vous pouvez trouver votre dossier profil en entrant : `support` dans la barre d'URL et en appuyant sur le bouton _Show in.._. _(Afficher dans ...)_ (par exemple, _"Show in Finder"_ sur Mac OS X) à côté du titre _"Profile Folder" (dossier de profil)_ .
 
@@ -104,7 +105,7 @@ Dans Firefox, les technologies suivantes utilisent le stockage de données du na
 
 Le «dernier temps d'accès» des origines est mis à jour lorsque l'un de ces éléments est activé / désactivé. L'éviction d'origine supprimera les données pour tous ces "quota clients".
 
-Dans Chrome / Opera, l'API " Quota Management" gère les quotas pour [AppCache](/en-US/docs/Web/HTML/Using_the_application_cache), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), WebSQL et [File System API](/en-US/docs/Web/API/File_System_API).
+Dans Chrome / Opera, l'API " Quota Management" gère les quotas pour [AppCache](/fr/docs/Web/HTML/Using_the_application_cache), [IndexedDB](/fr/docs/Web/API/IndexedDB_API), WebSQL et [File System API](/fr/docs/Web/API/File_System_API).
 
 ## Voir aussi
 

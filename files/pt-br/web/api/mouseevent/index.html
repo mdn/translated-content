@@ -11,12 +11,12 @@ tags:
   - TopicStub
 translation_of: Web/API/MouseEvent
 ---
-<p><font><font>A interface </font></font><code><strong>MouseEvent</strong></code><font><font> representa eventos que ocorrem devido à interação do usuário com um dispositivo apontador (como um mouse). Eventos comuns usando esta interface incluem </font></font><code><a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Element/click_event">click</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/dblclick_event">dblclick</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseup_event">mouseup</a></code>, <code><a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Element/mousedown_event">mousedown</a></code>.</p>
+<p><font><font>A interface </font></font><code><strong>MouseEvent</strong></code><font><font> representa eventos que ocorrem devido à interação do usuário com um dispositivo apontador (como um mouse). Eventos comuns usando esta interface incluem </font></font><code><a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Element/click_event">click</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/dblclick_event">dblclick</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseup_event">mouseup</a></code>, <code><a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Element/mousedown_event">mousedown</a></code>.</p>
 
 <p><span class="tlid-translation translation" lang="pt"><span title=""><strong><code>MouseEvent</code></strong> deriva de <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent">UIEvent</a></code>, que por sua vez deriva de <code><a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Event">Event</a></code>.</span> <span title="">Embora o método <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/initMouseEvent">MouseEvent.initMouseEvent()</a></code> seja mantido para compatibilidade com versões anteriores, a criação de um objeto <strong><code>MouseEvent</code></strong> deve ser feita usando o construtor <code>MouseEvent()</code>.</span></span></p>
 
 <p><font><font>Vários eventos mais específicos derivam de </font></font><strong><code>MouseEvent</code></strong><font><font> como:</font></font> <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent">WheelEvent</a></code> e <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/DragEvent">DragEvent</a></code>.<br>
-  </p>
+  </p>
 
 <p>{{InheritanceDiagram}}</p>
 
@@ -24,12 +24,12 @@ translation_of: Web/API/MouseEvent
 
 <dl>
  <dt><strong><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/MouseEvent">MouseEvent()</a></code></strong></dt>
- <dd><font><font>Cria um objeto </font></font><strong><code>MouseEvent</code></strong><font><font>.</font></font></dd>
+ <dd><font><font>Cria um objeto </font></font><strong><code>MouseEvent</code></strong><font><font>.</font></font></dd>
 </dl>
 
 <h2 id="Propriedades">Propriedades</h2>
 
-<p><em><font><font>Essa interface também herda propriedades de seus pais</font></font>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent">UIEvent</a></code>  e <code><a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Event">Event</a></code>.</em></p>
+<p><em><font><font>Essa interface também herda propriedades de seus pais</font></font>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent">UIEvent</a></code>  e <code><a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Event">Event</a></code>.</em></p>
 
 <dl>
  <dt>
@@ -40,7 +40,7 @@ translation_of: Web/API/MouseEvent
  <p><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/altKey">MouseEvent.button</a></code> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></p>
  </dt>
  <dd><font><font>O número do botão que foi pressionado (se aplicável) quando o evento do mouse foi disparado.</font></font></dd>
- <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/button">MouseEvent.buttons</a></code><span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/button">MouseEvent.buttons</a></code><span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd>
  <p><font><font>Os botões sendo pressionados (se houver) quando o evento do mouse foi disparado.</font></font></p>
  </dd>
@@ -55,10 +55,10 @@ translation_of: Web/API/MouseEvent
  <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/movementX">MouseEvent.movementX</a><span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd><font><font>A coordenada X do ponteiro do mouse em relação à posição do último evento </font></font><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event">mousemove</a></code> <font><font>.</font></font></dd>
  <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/movementY">MouseEvent.movementY</a></code> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
- <dd><font><font>A coordenada Y do ponteiro do mouse em relação à posição do último</font></font>  evento <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event">mousemove</a>.</dd>
- <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/offsetX">MouseEvent.offsetX</a></code> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only  </span>   </dt>
+ <dd><font><font>A coordenada Y do ponteiro do mouse em relação à posição do último</font></font>  evento <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event">mousemove</a>.</dd>
+ <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/offsetX">MouseEvent.offsetX</a></code> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only  </span>   </dt>
  <dd><font><font>A coordenada X do ponteiro do mouse em relação à posição da borda de preenchimento do nó de destino.</font></font></dd>
- <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/offsetY">MouseEvent.offsetY</a></code> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only  </span> </dt>
+ <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/offsetY">MouseEvent.offsetY</a></code> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only  </span> </dt>
  <dd><font><font>A coordenada Y do ponteiro do mouse em relação à posição da borda de preenchimento do nó de destino.</font></font></dd>
  <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageX">MouseEvent.pageX</a></code> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd><font><font>A coordenada X do ponteiro do mouse em relação a todo o documento.</font></font></dd>
@@ -83,7 +83,7 @@ translation_of: Web/API/MouseEvent
  <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/mozInputSource">MouseEvent.mozInputSource</a></code> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dt></dt>
  <dd>
- <p><font><font>O tipo de dispositivo que gerou o evento (uma das constantes </font></font><code>MOZ_SOURCE_* </code> <font><font> listadas abaixo). </font><font>Isso permite, por exemplo, determinar se um evento de mouse foi gerado por um mouse real ou por um evento de toque (o que pode afetar o grau de precisão com que você interpreta as coordenadas associadas ao evento).</font></font></p>
+ <p><font><font>O tipo de dispositivo que gerou o evento (uma das constantes </font></font><code>MOZ_SOURCE_* </code> <font><font> listadas abaixo). </font><font>Isso permite, por exemplo, determinar se um evento de mouse foi gerado por um mouse real ou por um evento de toque (o que pode afetar o grau de precisão com que você interpreta as coordenadas associadas ao evento).</font></font></p>
  </dd>
  <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/webkitForce">MouseEvent.webkitForce</a></code> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd><font><font>A quantidade de pressão aplicada ao clicar</font></font></dd>
@@ -192,143 +192,7 @@ document.getElementById("button").addEventListener('click', simulateClick);</pre
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade do navegador</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("MouseEvent.movementX","movementX")}}<br>
-    {{domxref("MouseEvent.movementY","movementY")}}</td>
-   <td>{{CompatChrome(37)}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}} {{property_prefix("moz")}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>{{ domxref("MouseEvent.buttons", "buttons") }}</td>
-   <td>{{CompatChrome(43)}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>{{ domxref("MouseEvent.which", "which") }}</td>
-   <td>{{CompatChrome(1)}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>1.0</td>
-   <td>9.0</td>
-   <td>5.0</td>
-   <td>1.0</td>
-  </tr>
-  <tr>
-   <td>{{domxref("MouseEvent.getModifierState()", "getModifierState()")}}</td>
-   <td>{{CompatChrome(47)}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatGeckoDesktop(15)}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("MouseEvent.mozPressure", "mozPressure")}} and {{domxref("MouseEvent.mozInputSource", "mozInputSource")}} {{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatGeckoDesktop(2)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}</td>
-   <td>{{CompatChrome(45)}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatGeckoDesktop(11)}}</td>
-   <td>9.0</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("MouseEvent.region")}}</td>
-   <td>{{CompatChrome(51)}}<sup>[1]</sup></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatGeckoDesktop(32)}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("MouseEvent.offsetX")}}, and {{domxref("MouseEvent.offsetY")}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>9</td>
-   <td>{{CompatGeckoDesktop(40)}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("MouseEvent.screenX")}}, {{domxref("MouseEvent.screenY")}}, {{domxref("MouseEvent.clientX")}}, and {{domxref("MouseEvent.Y")}} are double instead of long.</td>
-   <td>{{CompatChrome(56)}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Requires enabling the <code>ExperimentalCanvasFeatures</code> flag.</p>
+{{Compat("api.MouseEvent")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

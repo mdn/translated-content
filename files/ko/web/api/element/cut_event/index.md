@@ -50,7 +50,6 @@ browser-compat: api.Element.cut_event
 
 ## 예제
 
-
 ### HTML
 
 ```html

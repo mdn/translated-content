@@ -204,8 +204,8 @@ Promise.all([
   p1.catch(error => { return error }),
   p2.catch(error => { return error }),
 ]).then(values => {
-  console.log(values[0]) // "p1_delayed_resolution"
-  console.error(values[1]) // "Error: p2_immediate_rejection"
+  console.log(values[0]) // "p1_delayed_resolution"
+  console.error(values[1]) // "Error: p2_immediate_rejection"
 })
 ```
 

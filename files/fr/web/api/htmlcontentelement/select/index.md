@@ -15,7 +15,9 @@ La propriété **`HTMLContentElement.select`** represente l'attribut `select`. L
 
 ## Syntaxe
 
-    object.select = "CSSselector CSSselector ...";
+```js
+object.select = "CSSselector CSSselector ...";
+```
 
 ## Exemple
 
@@ -26,13 +28,11 @@ myContentObject.select = "h1 .error";
 
 ## Spécifications
 
-| Specification                                                                    | Status                           | Comment |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('Shadow DOM', '#the-content-element', 'content')}} | {{Spec2('Shadow DOM')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLContentElement.getDistributedNodes")}}
+{{Compat}}
 
 ## Voir aussi
 

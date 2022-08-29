@@ -32,7 +32,7 @@ translation_of: Web/HTTP/Content_negotiation
 
 <p>Стандарт HTTP/1.1 определяет список стандартных заголовков которые используются в этом механизме согласования – ({{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}). Хотя, строго говоря, {{HTTPHeader("User-Agent")}} не находится в этом списке, в некоторых случаях он используется, чтобы послать определённое представление запрошенного ресурса, несмотря на то, что это и не является хорошей практикой. Сервер использует заголовок {{HTTPHeader("Vary")}} чтобы обозначить, какие заголовки он использовал для согласования (точнее, ассоциированные с ними заголовки ответа), чтобы <a href="/en-US/docs/Web/HTTP/Caching">кеширование</a> работало оптимально.</p>
 
-<p>В дополнение к этим, есть предложение добавить больше заголовков в список доступным, так называемые Подсказки Клиента (Client Hints). Они будут предоставлять информацию о типе устройства на котором они используются (например, будет это настольный компьютер или мобильное устройство).</p>
+<p>В дополнение к этим, есть предложение добавить больше заголовков в список доступным, так называемые Подсказки Клиента (Client Hints). Они будут предоставлять информацию о типе устройства на котором они используются (например, будет это настольный компьютер или мобильное устройство).</p>
 
 <p>Согласование на стороне сервера является самым популярным способом согласования контента, но у него есть несколько недостатков:</p>
 
@@ -122,7 +122,7 @@ translation_of: Web/HTTP/Content_negotiation
 
 <h2 id="Согласование_на_основе_агента">Согласование на основе агента</h2>
 
-<p>Server-driven negotiation suffers from a few downsides: it doesn't scale well. There is one header per feature used in the negotiation. If you want to use screen size, resolution or other dimensions, a new HTTP header must be created. Sending of the headers must be done on every request. This is not too problematic with few headers, but with the eventual multiplications of them, the message size would lead to a decrease in performance. The more precise headers are sent, the more entropy is sent, allowing for more HTTP fingerprinting and corresponding privacy concern.</p>
+<p>Server-driven negotiation suffers from a few downsides: it doesn't scale well. There is one header per feature used in the negotiation. If you want to use screen size, resolution or other dimensions, a new HTTP header must be created. Sending of the headers must be done on every request. This is not too problematic with few headers, but with the eventual multiplications of them, the message size would lead to a decrease in performance. The more precise headers are sent, the more entropy is sent, allowing for more HTTP fingerprinting and corresponding privacy concern.</p>
 
 <p>From the beginnings of HTTP, the protocol allowed another negotiation type: <em>agent-driven negotiation</em> or <em>reactive negotiation</em>. In this negotiation, when facing an ambiguous request, the server sends back a page containing links to the available alternative resources. The user is presented the resources and choose the one to use.</p>
 

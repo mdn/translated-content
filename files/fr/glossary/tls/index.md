@@ -19,7 +19,7 @@ Tous les navigateurs modernes supportent le protocole TLS, nécessitant l'envoi 
 
 - [Transport Layer Security](/fr/docs/Web/Security/Transport_Layer_Security)
 - [OWASP: Transport Layer Protection Cheat Sheet](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
-- {{Interwiki("wikipedia", "Transport_Layer_Security","Transport Layer Security")}} sur Wikipédia
+- [<i lang="en">Transport Layer Security</i>](https://fr.wikipedia.org/wiki/Transport_Layer_Security) sur Wikipédia
 
 ### Spécifications
 

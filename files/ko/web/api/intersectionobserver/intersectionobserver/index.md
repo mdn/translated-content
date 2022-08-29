@@ -14,7 +14,7 @@ translation_of: Web/API/IntersectionObserver/IntersectionObserver
 
 **`IntersectionObserver()`** 생성자는 새로운 {{domxref("IntersectionObserver")}} 객체를 생성하고 반환합니다.
 
-`rootMargin` 옵션을 지정했다면 값의 구문이 맞는지, 범위가 0.0 이상 1.0 이하인지, 그리고 역치가 오름차순으로 정렬됐는지 검사합니다. 역치 목록이 없다면 배열 `[0.0]`을 사용합니다.
+`rootMargin` 옵션을 지정했다면 값의 구문이 맞는지, 범위가 0.0 이상 1.0 이하인지, 그리고 역치가 오름차순으로 정렬됐는지 검사합니다. 역치 목록이 없다면 배열 `[0.0]`을 사용합니다.
 
 ## 구문
 
@@ -27,7 +27,7 @@ new IntersectionObserver(callback[, options]);
 - `callback`
   - : 대상 요소의 보이는 영역 비율이 역치를 위아래로 넘을 때 (더 커졌거나 작아졌을 때 모두) 호출할 함수입니다. 두 개의 매개변수를 받습니다.
     - `entries`
-      - : 더 드러나거나 가려져서 지정한 역치를 넘어가게 된 요소를 나타내는 {{domxref("IntersectionObserverEntry")}} 객체의 배열.
+      - : 더 드러나거나 가려져서 지정한 역치를 넘어가게 된 요소를 나타내는 {{domxref("IntersectionObserverEntry")}} 객체의 배열.
     - `observer`
       - : 콜백을 호출한 {{domxref("IntersectionObserver")}}.
 

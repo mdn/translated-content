@@ -69,19 +69,21 @@ Vous faites une simple requête `GET` en cliquant sur un lien ou en faisant une 
 
 Chaque ligne de la requête contient des informations sur celle-ci. La première partie est appelée l'en-tête ( **header**) et contient beaucoup de données utiles. De la même manière qu'un [HTML head](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML) contient des informations utiles (pas le contenu réel qui lui, se trouve dans le corps (body) :
 
-    GET https://developer.mozilla.org/en-US/search?q=la+relation+Client+-+serveur&topic=apps&topic=html&topic=css&topic=js&topic=api&topic=webdev HTTP/1.1
-    Host: developer.mozilla.org
-    Connection: keep-alive
-    Pragma: no-cache
-    Cache-Control: no-cache
-    Upgrade-Insecure-Requests: 1
-    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
-    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-    Referer: https://developer.mozilla.org/en-US/
-    Accept-Encoding: gzip, deflate, sdch, br
-    Accept-Charset: ISO-8859-1,UTF-8;q=0.7,*;q=0.7
-    Accept-Language: en-US,en;q=0.8,es;q=0.6
-    Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; csrftoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT; dwf_section_edit=False; dwf_sg_task_completion=False; _gat=1; _ga=GA1.2.1688886003.1471911953; ffo=true
+```
+GET https://developer.mozilla.org/en-US/search?q=la+relation+Client+-+serveur&topic=apps&topic=html&topic=css&topic=js&topic=api&topic=webdev HTTP/1.1
+Host: developer.mozilla.org
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Referer: https://developer.mozilla.org/en-US/
+Accept-Encoding: gzip, deflate, sdch, br
+Accept-Charset: ISO-8859-1,UTF-8;q=0.7,*;q=0.7
+Accept-Language: en-US,en;q=0.8,es;q=0.6
+Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; csrftoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT; dwf_section_edit=False; dwf_sg_task_completion=False; _gat=1; _ga=GA1.2.1688886003.1471911953; ffo=true
+```
 
 Les premières et secondes lignes contiennent la plupart des données déjà évoquées précédemment :
 
@@ -226,17 +228,17 @@ Le diagramme ci-dessous montre les principaux éléments du site Web "entraîneu
 
 Une fois que l’entraîneur a soumis le formulaire avec le nom de l’équipe et le nombre de joueurs, la séquence des opérations est la suivante:
 
-1.  Le navigateur Web crée une requête HTTP GET au serveur en utilisant l’URL de base de la ressource (/ best) et en codant l’équipe et le numéro du joueur sous forme de paramètres d’URL (par exemple / best? team=my_team_name\&show = 11) ou dans le cadre de l’URL modèle (par exemple / best / my_team_name / 11 /). Une requête GET est utilisée car la requête extrait uniquement des données (sans les modifier).
-2.  Le serveur Web détecte que la demande est "dynamique" et la transmet à l'application Web pour traitement (le serveur Web détermine comment gérer différentes URL en fonction des règles de correspondance de modèle définies dans sa configuration).
-3.  L'application Web identifie l'objectif de la demande d'obtenir la "meilleure liste d'équipes" en fonction de l'URL (/ best /) et recherche le nom d'équipe requis et le nombre de joueurs à partir de l'URL. L'application Web obtient alors les informations requises de la base de données (en utilisant des paramètres "internes" supplémentaires pour définir quels joueurs sont les "meilleurs", et éventuellement en obtenant également l'identité de l'entraîneur connecté à partir d'un cookie côté client).
-4.  L'application Web crée dynamiquement une page HTML en plaçant les données (de la base de données) dans des espaces réservés dans un modèle HTML.
-5.  L'application Web renvoie le code HTML généré au navigateur Web (via le serveur Web), ainsi qu'un code d'état HTTP de 200 ("success"). Si quoi que ce soit empêche le code HTML d'être renvoyé, l'application Web renvoie un autre code, par exemple "404" pour indiquer que l'équipe n'existe pas.
-6.  Le navigateur Web commence alors à traiter le code HTML renvoyé, en envoyant des demandes distinctes pour obtenir tous les fichiers CSS ou JavaScript qu’il référence (voir étape 7).
-7.  Le serveur Web charge les fichiers statiques à partir du système de fichiers et les renvoie directement au navigateur (là encore, le traitement correct des fichiers est basé sur les règles de configuration et la correspondance des types d'URL).
+1. Le navigateur Web crée une requête HTTP GET au serveur en utilisant l’URL de base de la ressource (/ best) et en codant l’équipe et le numéro du joueur sous forme de paramètres d’URL (par exemple / best? team=my_team_name\&show = 11) ou dans le cadre de l’URL modèle (par exemple / best / my_team_name / 11 /). Une requête GET est utilisée car la requête extrait uniquement des données (sans les modifier).
+2. Le serveur Web détecte que la demande est "dynamique" et la transmet à l'application Web pour traitement (le serveur Web détermine comment gérer différentes URL en fonction des règles de correspondance de modèle définies dans sa configuration).
+3. L'application Web identifie l'objectif de la demande d'obtenir la "meilleure liste d'équipes" en fonction de l'URL (/ best /) et recherche le nom d'équipe requis et le nombre de joueurs à partir de l'URL. L'application Web obtient alors les informations requises de la base de données (en utilisant des paramètres "internes" supplémentaires pour définir quels joueurs sont les "meilleurs", et éventuellement en obtenant également l'identité de l'entraîneur connecté à partir d'un cookie côté client).
+4. L'application Web crée dynamiquement une page HTML en plaçant les données (de la base de données) dans des espaces réservés dans un modèle HTML.
+5. L'application Web renvoie le code HTML généré au navigateur Web (via le serveur Web), ainsi qu'un code d'état HTTP de 200 ("success"). Si quoi que ce soit empêche le code HTML d'être renvoyé, l'application Web renvoie un autre code, par exemple "404" pour indiquer que l'équipe n'existe pas.
+6. Le navigateur Web commence alors à traiter le code HTML renvoyé, en envoyant des demandes distinctes pour obtenir tous les fichiers CSS ou JavaScript qu’il référence (voir étape 7).
+7. Le serveur Web charge les fichiers statiques à partir du système de fichiers et les renvoie directement au navigateur (là encore, le traitement correct des fichiers est basé sur les règles de configuration et la correspondance des types d'URL).
 
 Une opération de mise à jour d'un enregistrement dans la base de données serait gérée de la même manière, sauf que, comme toute mise à jour de base de données, la demande HTTP du navigateur devrait être codée en tant que demande POST.
 
-### que faire d'autre?
+### Que faire d'autre?
 
 Le travail d'une application Web consiste à recevoir des requêtes HTTP et à renvoyer des réponses HTTP. Bien que l'interaction avec une base de données pour obtenir ou mettre à jour des informations soit une tâche très courante, le code peut faire d'autres choses en même temps, ou ne pas interagir du tout avec une base de données.Un bon exemple de tâche supplémentaire qu'une application Web pourrait exécuter serait l'envoi d'un courrier électronique aux utilisateurs pour confirmer leur inscription sur le site. Le site peut également effectuer une journalisation ou d’autres opérations.
 

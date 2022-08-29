@@ -51,7 +51,7 @@ class WordCount extends HTMLParagraphElement {
 
 C'est juste un exemple simple, mais vous pouvez faire plus ici. Il est possible de définir des rappels de cycle de vie particuliers dans le constructeur, rappels qui s'exécutent à des points particuliers du cycle de vie de l'élément. Par exemple, `connectedCallback` est appelé lorsque l'élément personnalisé est connecté pour la première fois au DOM du document, tandis que `attributeChangedCallback` est appelé lorsque l'un des attributs de l'élément personnalisé est ajouté, supprimé ou modifié.
 
-Vous en apprendrez plus à ce sujet dans notre section {{anch("Using the lifecycle callbacks")}} ci-dessous.
+Vous en apprendrez plus à ce sujet dans notre section [Utilisation des rappels de cycle de vie](#utilisation_des_rappels_de_cycle_de_vie) ci-dessous.
 
 Il existe deux types d'éléments personnalisés :
 
@@ -258,7 +258,7 @@ attributeChangedCallback(name, oldValue, newValue) {
 }
 ```
 
-Notez que, pour déclencher le rappel `attributeChangedCallback()` lorsqu'un attribut change, vous devez observer les attributs. Cela est réalisé en appelant le getter `observedAttributes()` dans le constructeur, en incluant à l'intérieur une instruction return qui retourne un tableau contenant les noms des attributs que vous voulez observer :
+Notez que, pour déclencher le rappel `attributeChangedCallback()` lorsqu'un attribut change, vous devez observer les attributs. Cela est réalisé en spécifiant la méthode `static get observedAttributes()` dans la classe de l'élément personnalisé, en incluant à l'intérieur une instruction `return` qui renvoie un tableau contenant les noms des attributs que vous voulez observer&nbsp;:
 
 ```js
 static get observedAttributes() {return ['w', 'l']; }

@@ -24,8 +24,10 @@ Afin que les agents utilisateurs évitent de récupérer des ressources pour des
 
 ## Syntaxe
 
-    @import url;
-    @import url liste-requetes-media;
+```
+@import url;
+@import url liste-requetes-media;
+```
 
 où on a :
 

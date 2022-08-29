@@ -113,8 +113,8 @@ div.example {
   -webkit-box-align: center; /* WebKit */
 
   /* 子をこのボックスの下にまとめる */
-  -moz-box-pack: end;             /* Mozilla */
-  -webkit-box-pack: end;          /* WebKit */
+  -moz-box-pack: end;             /* Mozilla */
+  -webkit-box-pack: end;          /* WebKit */
 }
 
 div.example p {

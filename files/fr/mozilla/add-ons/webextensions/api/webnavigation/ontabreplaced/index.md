@@ -50,7 +50,7 @@ Les événements ont trois fonctions :
 
 ## Objets supplémentaires
 
-### détails
+### Détails
 
 - `replacedTabId`
   - : `integer`. L'ID de l'onglet qui a été remplacé.

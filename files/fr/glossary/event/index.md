@@ -20,4 +20,4 @@ Les évèhements sont des éléments actifs générés par les éléments [DOM](
 ### Culture générale
 
 - [Site web officiel](https://www.w3.org/DOM/) (en)
-- {{Interwiki("wikipedia","Document_Object_Model#Événements")}} sur Wikipedia
+- [<i lang="en">Document Object Model</i> - Événements](https://fr.wikipedia.org/wiki/Document_Object_Model#%C3%89v%C3%A9nements) sur Wikipédia

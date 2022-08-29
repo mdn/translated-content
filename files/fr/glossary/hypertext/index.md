@@ -16,7 +16,7 @@ Le terme a été inventé par Ted Nelson aux alentours de 1965.
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Hypertexte", "Hypertexte")}} sur Wikipédia
+- [Hypertexte](https://fr.wikipedia.org/wiki/Hypertexte) sur Wikipédia
 
 ### Référence technique
 

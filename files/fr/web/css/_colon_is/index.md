@@ -13,7 +13,7 @@ translation_of: Web/CSS/:is
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:is()`** prend comme argument une liste de sélecteurs, et cible tous les éléments sélectionnés par chaque sélecteur de cette liste. Cela permet d'écrire des sélecteurs expansifs de façon plus concise.
 
-La plupart des navigateurs prennent encore en charge cette fonctionnalité via `:matches()`, ou via la pseudo-classe préfixée — `:any()` (anciennes versions de Chrome, Firefox et Safari). `:any()` fonctionne exactement comme `:matches()` et `:is()` mais nécessite l'utilisation de préfixes et ne prend pas en charge [les sélecteurs complexes](/en-US/docs/Learn/CSS/Building_blocks/Selectors).
+La plupart des navigateurs prennent encore en charge cette fonctionnalité via `:matches()`, ou via la pseudo-classe préfixée — `:any()` (anciennes versions de Chrome, Firefox et Safari). `:any()` fonctionne exactement comme `:matches()` et `:is()` mais nécessite l'utilisation de préfixes et ne prend pas en charge [les sélecteurs complexes](/fr/docs/Learn/CSS/Building_blocks/Selectors).
 
 > **Note :** `:matches()` a été renommé en `is()` d'après [l'_issue_ 3258 du CSSWG](https://github.com/w3c/csswg-drafts/issues/3258).
 
@@ -176,7 +176,7 @@ En revanche, le modèle d'usage suivant n'est pas recommandée (cf. [la section 
 
 ### Simplifier les sélecteurs de section
 
-La pseudo-classe `:matches` est particulièrement utile lorsqu'on manipule les [sections et en-têtes](/en-US/docs/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document") HTML5. {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}} et {{HTMLElement("nav")}} étant souvent imbriqués les uns dans les autres, les mettre en forme (sans `:matches()`) s'avèrerait plutôt compliqué.
+La pseudo-classe `:matches` est particulièrement utile lorsqu'on manipule les [sections et en-têtes](/fr/docs/Sections_and_Outlines_of_an_HTML5_document) HTML5. {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}} et {{HTMLElement("nav")}} étant souvent imbriqués les uns dans les autres, les mettre en forme (sans `:matches()`) s'avèrerait plutôt compliqué.
 
 Par exemple, pour mettre en forme les éléments {{HTMLElement("h1")}} à différents niveaux sans utiliser `:matches()`, on obtient ces règles plutôt compliquées :
 

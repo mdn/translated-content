@@ -16,7 +16,9 @@ Renvoie le type MIME dans lequel le document est rendu. Il peut provenir d'en-t�
 
 ## Syntaxe
 
-    contentType = document.contentType;
+```js
+contentType = document.contentType;
+```
 
 `contentType` est une propriété en lecture seule.
 
@@ -26,4 +28,4 @@ La propriété n'est pas affectée par les balises META.
 
 ## Spécifications
 
-{{SpecName('DOM WHATWG','#dom-document-contenttype','Document.contenttype')}}
+{{Specifications}}

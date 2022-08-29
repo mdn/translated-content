@@ -16,7 +16,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy-Report-Only
 
 L'en-tête de réponse HTTP **`Content-Security-Policy-Report-Only`** permet aux développeurs web d'expérimenter avec les règles CSP en contrôlant leur application sans bloquer de contenu. Ces rapports de violations sont constitués d'un document {{Glossary("JSON")}} envoyé via une requête HTTP `POST` à l'URI spécifiée.
 
-Pour plus d'informations, voir aussi cet article sur les [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP).
+Pour plus d'informations, voir aussi cet article sur les [Content Security Policy (CSP)](/fr/docs/Web/HTTP/CSP).
 
 <table class="properties">
   <tbody>
@@ -39,7 +39,9 @@ Pour plus d'informations, voir aussi cet article sur les [Content Security Polic
 
 ## Syntaxe
 
-    Content-Security-Policy-Report-Only: <policy-directive>; <policy-directive>
+```js
+Content-Security-Policy-Report-Only: <policy-directive>; <policy-directive>
+```
 
 ## Directives
 
@@ -51,11 +53,15 @@ La directive CSP {{CSP("report-uri")}} doit être utilisée avec celui-ci, ou d�
 
 Cet en-tête rapporte les violations qui seront constatées. Vous pouvez l'utiliser pour améliorer vos CSP. Vous pouvez observer comment votre site fonctionne en consultant les rapports ou [redirections malicieuses](https://secure.wphackedhelp.com/blog/wordpress-malware-redirect-hack-cleanup/), puis choisir les règles voulues pour bloquer le contenu avec l'en-tête {{HTTPHeader("Content-Security-Policy")}}.
 
-    Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
+```
+Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
+```
 
 Si vous voulez toujours recevoir des rapports, mais aussi imposer des règles, utilisez l'en-tête {{HTTPHeader("Content-Security-Policy")}} avec la directive {{CSP("report-uri")}}.
 
-    Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/
+```
+Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/
+```
 
 ## Syntaxe d'un rapport de violation
 
@@ -84,7 +90,9 @@ L'objet de rapport JSON contient les informations suivantes :
 
 Considérons une page à l'adresse `http://example.com/signup.html`. Elle utilise la règle CSP suivante, interdisant tout excepté les feuilles de styles chargées depuis `cdn.example.com`.
 
-    Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports
+```
+Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports
+```
 
 La page HTML correspondant à l'adresse `signup.html` ressemble à :
 
@@ -133,5 +141,5 @@ Comme vous le voyez, la rapport inclut le chemin complet de la ressource à l'or
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - CSP {{CSP("report-uri")}} directive
-- [Content Security in WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
-- [Display security and privacy policies In Firefox Developer Tools](/en-US/docs/Tools/GCLI/Display_security_and_privacy_policies)
+- [Content Security in WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
+- [Display security and privacy policies In Firefox Developer Tools](/fr/docs/Tools/GCLI/Display_security_and_privacy_policies)

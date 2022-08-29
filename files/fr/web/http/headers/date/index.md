@@ -22,7 +22,9 @@ L'en-tête général HTTP **`Date`** contient la date et l'heure d'origine du me
 
 ## Syntaxe
 
-    Date: <day-name>, <jour> <mois> <année> <heure>:<minute>:<seconde> GMT
+```
+Date: <day-name>, <jour> <mois> <année> <heure>:<minute>:<seconde> GMT
+```
 
 ## Directives
 
@@ -45,7 +47,9 @@ L'en-tête général HTTP **`Date`** contient la date et l'heure d'origine du me
 
 ## Exemples
 
-    Date: Wed, 21 Oct 2015 07:28:00 GMT
+```
+Date: Wed, 21 Oct 2015 07:28:00 GMT
+```
 
 ## Spécifications
 

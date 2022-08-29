@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
-<p>O método <code><strong>encodeURIComponent()</strong></code> codifica  uma URI (Identificador recurso uniforme) substituindo cada ocorrência de determinados caracteres por um, dois, três, ou quatro seqüências de escape que representam a codificação UTF-8 do caractere (só será quatro seqüências de escape para caracteres compostos por dois caracteres "substituto").</p>
+<p>O método <code><strong>encodeURIComponent()</strong></code> codifica  uma URI (Identificador recurso uniforme) substituindo cada ocorrência de determinados caracteres por um, dois, três, ou quatro seqüências de escape que representam a codificação UTF-8 do caractere (só será quatro seqüências de escape para caracteres compostos por dois caracteres "substituto").</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 
 <h2 id="Descrição">Descrição</h2>
 
-<p><code>encodeURIComponent</code> escapa todos os caracteres, exceto: alfabeto, dígitos decimais, <code>- _ . ! ~ * ' ( )</code></p>
+<p><code>encodeURIComponent</code> escapa todos os caracteres, exceto: alfabeto, dígitos decimais, <code>- _ . ! ~ * ' ( )</code></p>
 
 <p>Note-se que um{{jsxref("URIError")}} será gerada se uma tentativas para codificar um substituto que não faz parte de um par de alta-baixa, por exemplo,</p>
 
@@ -34,11 +34,11 @@ console.log(encodeURIComponent('\uD800'));
 console.log(encodeURIComponent('\uDFFF'));
 </pre>
 
-<p>Para previnir requisões inesperadas ao servidor, deve-se chamar <code>encodeURIComponent</code> ou qualquer parâmetro fornecido pelo usuário que será passado como parte da URI. Por exemplo, um usuário poderia digitar "<code>Thyme &amp;time=again</code>" para uma variável <code>commentario</code>. Ao não usar <code>encodeURIComponent</code> nessa variável irá ser obetido <code>commentario=Thyme%20&amp;time=again</code>. Note que o ampersa  e o sinal de igual marcam um novo par de chave e valor. Então ao invés de ter um POST com a chave <code>commentario</code> igual a "<code>Thyme &amp;time=again</code>", tem-se chaves em  POST, uma igual a "<code>Thyme </code>" e outra (<code>time</code>) igual a <code>again</code>.</p>
+<p>Para previnir requisões inesperadas ao servidor, deve-se chamar <code>encodeURIComponent</code> ou qualquer parâmetro fornecido pelo usuário que será passado como parte da URI. Por exemplo, um usuário poderia digitar "<code>Thyme &amp;time=again</code>" para uma variável <code>commentario</code>. Ao não usar <code>encodeURIComponent</code> nessa variável irá ser obetido <code>commentario=Thyme%20&amp;time=again</code>. Note que o ampersa  e o sinal de igual marcam um novo par de chave e valor. Então ao invés de ter um POST com a chave <code>commentario</code> igual a "<code>Thyme &amp;time=again</code>", tem-se chaves em  POST, uma igual a "<code>Thyme </code>" e outra (<code>time</code>) igual a <code>again</code>.</p>
 
-<p>Para <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#application/x-www-form-urlencoded-encoding-algorithm"><code>application/x-www-form-urlencoded</code></a>, espaços são substituídos por '+', então pode-se querer seguir um <code>encodeURIComponent</code> substituição com uma substituição adicional de "%20" com "+".</p>
+<p>Para <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#application/x-www-form-urlencoded-encoding-algorithm"><code>application/x-www-form-urlencoded</code></a>, espaços são substituídos por '+', então pode-se querer seguir um <code>encodeURIComponent</code> substituição com uma substituição adicional de "%20" com "+".</p>
 
-<p>Para ser mais rigoroso à aderência da <a class="external" href="http://tools.ietf.org/html/rfc3986">RFC 3986</a> (qual reserva !, ', (, ), e *), mesmo que esses caracteres não tenham usos formalizados de delimitação de URI, o seguinte pode ser usado com segurança:</p>
+<p>Para ser mais rigoroso à aderência da <a class="external" href="http://tools.ietf.org/html/rfc3986">RFC 3986</a> (qual reserva !, ', (, ), e *), mesmo que esses caracteres não tenham usos formalizados de delimitação de URI, o seguinte pode ser usado com segurança:</p>
 
 <pre class="brush: js">function ajustadoEncodeURIComponent (str) {
   return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
@@ -49,7 +49,7 @@ console.log(encodeURIComponent('\uDFFF'));
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<p>O exemplo seguinte provê o encoding especial requerido pelo UTF-8 nos parâmetros <code>Content-Disposition</code> e <code>Link</code> no cabeçalho de uma Response (e.g., UTF-8 filenames):</p>
+<p>O exemplo seguinte provê o encoding especial requerido pelo UTF-8 nos parâmetros <code>Content-Disposition</code> e <code>Link</code> no cabeçalho de uma Response (e.g., UTF-8 filenames):</p>
 
 <pre class="brush: js">var fileName = 'my file(2).txt';
 var header = "Content-Disposition: attachment; filename*=UTF-8''"
@@ -60,14 +60,14 @@ console.log(header);
 
 
 function encodeRFC5987ValueChars (str) {
-    return encodeURIComponent(str).
-        // Note that although RFC3986 reserves "!", RFC5987 does not,
+    return encodeURIComponent(str).
+        // Note that although RFC3986 reserves "!", RFC5987 does not,
         // so we do not need to escape it
-        replace(/['()]/g, escape). // i.e., %27 %28 %29
-        replace(/\*/g, '%2A').
-            // The following are not required for percent-encoding per RFC5987,
+        replace(/['()]/g, escape). // i.e., %27 %28 %29
+        replace(/\*/g, '%2A').
+            // The following are not required for percent-encoding per RFC5987,
             // so we can allow for a little better readability over the wire: |`^
-            replace(/%(?:7C|60|5E)/g, unescape);
+            replace(/%(?:7C|60|5E)/g, unescape);
 }
 </pre>
 
@@ -88,67 +88,19 @@ function encodeRFC5987ValueChars (str) {
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.1.3.4', 'encodeURIComponent')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-encodeuricomponent-uricomponent', 'encodeURIComponent')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.encodeURIComponent")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

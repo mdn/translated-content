@@ -20,4 +20,4 @@ Les frameworks sont considérés comme ayant une syntaxe "propre" s'ils produise
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Syntaxe")}} sur Wikipédia
+- [Syntaxe](https://fr.wikipedia.org/wiki/Syntaxe) sur Wikipédia

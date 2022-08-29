@@ -18,11 +18,15 @@ La méthode **`setMonth()`** définit le mois de la date, selon l'heure locale e
 
 ## Syntaxe
 
-    dateObj.setMonth(valeurMois[, valeurJour])
+```js
+dateObj.setMonth(valeurMois[, valeurJour])
+```
 
 ### Versions antérieures à JavaScript 1.3
 
-    dateObj.setMonth(valeurMois)
+```js
+dateObj.setMonth(valeurMois)
+```
 
 ### Paramètres
 

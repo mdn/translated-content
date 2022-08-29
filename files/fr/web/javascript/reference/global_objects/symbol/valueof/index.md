@@ -17,7 +17,9 @@ La méthode **`valueOf()`** renvoie la valeur primitive correspondant à l'objet
 
 ## Syntaxe
 
-    Symbol().valueOf();
+```js
+Symbol().valueOf();
+```
 
 ### Valeur de retour
 

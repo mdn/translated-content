@@ -14,11 +14,11 @@ translation_of: Web/CSS/filter
 
 <h2 id="Resumen">Resumen</h2>
 
-<p>La propiedad CSS <strong><code>filter</code></strong> dota de efectos gráficos como el desenfoque o cambio de color en la representación antes de que se muestre el elemento. Los filtros se utilizan comúnmente para ajustar la representación de imágenes, fondos o bordes.</p>
+<p>La propiedad CSS <strong><code>filter</code></strong> dota de efectos gráficos como el desenfoque o cambio de color en la representación antes de que se muestre el elemento. Los filtros se utilizan comúnmente para ajustar la representación de imágenes, fondos o bordes.</p>
 
-<p>Hay varias funciones Incluidas en el estándar CSS que logran efectos predefinidos. También puede hacer referencia a un filtro especificado en SVG con una URL  a un <a href="/es/docs/Web/SVG/Element/filter" title="/en/SVG/Element/filter">filtro de un elemento SVG</a>.</p>
+<p>Hay varias funciones Incluidas en el estándar CSS que logran efectos predefinidos. También puede hacer referencia a un filtro especificado en SVG con una URL  a un <a href="/es/docs/Web/SVG/Element/filter" title="/en/SVG/Element/filter">filtro de un elemento SVG</a>.</p>
 
-<div class="note"><strong>Nota:</strong> Versiones anteriores (4.0 hasta 9.0) del navegador Internet Explorer de Windows admiten una propiedad <a class="external" href="https://msdn.microsoft.com/es-es/library/ms532853(v=vs.85).aspx">"filter"</a> no incluida en el estándar que ha quedado en desuso.</div>
+<div class="note"><strong>Nota:</strong> Versiones anteriores (4.0 hasta 9.0) del navegador Internet Explorer de Windows admiten una propiedad <a class="external" href="https://msdn.microsoft.com/es-es/library/ms532853(v=vs.85).aspx">"filter"</a> no incluida en el estándar que ha quedado en desuso.</div>
 
 <p>{{cssinfo}}</p>
 
@@ -71,10 +71,10 @@ filter: unset;
 
 /* funcion del blanco y negro "grayscale" al 50% y un desenfoque "blur" de 10px */
 img {
-  filter: grayscale(0.5) blur(10px);
+  filter: grayscale(0.5) blur(10px);
 }</pre>
 
-<p>Ejemplos del uso de la función  con el recurso SVG se muestran a continuación.</p>
+<p>Ejemplos del uso de la función  con el recurso SVG se muestran a continuación.</p>
 
 <pre class="brush: css">.target { filter: url(#c1); }
 
@@ -83,11 +83,11 @@ img {
 
 <h2 id="Funciones">Funciones</h2>
 
-<p>Para utilizar la propiedad CSS <code>filter</code>, hay que especificar un valor para una de las siguientes funciones. Si el valor no es válido, la función se ejecutará de la misma manera que si se le aplicara "none". Las funciones que toman un valor en procentaje (como en el 34%) también aceptan el valor expresado como decimal (como en 0.34 ó .34).</p>
+<p>Para utilizar la propiedad CSS <code>filter</code>, hay que especificar un valor para una de las siguientes funciones. Si el valor no es válido, la función se ejecutará de la misma manera que si se le aplicara "none". Las funciones que toman un valor en procentaje (como en el 34%) también aceptan el valor expresado como decimal (como en 0.34 ó .34).</p>
 
 <h3 id="url()"><code>url()</code></h3>
 
-<p>La función url() toma la dirección de un archivo XML que especifica un filtro SVG, y puede incluir un ancla para un elemento de filtro especifico.</p>
+<p>La función url() toma la dirección de un archivo XML que especifica un filtro SVG, y puede incluir un ancla para un elemento de filtro especifico.</p>
 
 <pre class="brush: css">filter: url(resources.svg#c1)
 </pre>
@@ -180,7 +180,7 @@ table.standard-table td {
 
 <h3 id="brightness()"><code>brightness()</code></h3>
 
-<p>Se aplica una multiplicación lineal a la imagen, haciendo que parezca más o menos brillante. Un valor de <code>0%</code> convertirá la imagen completamente a negro. Un valor de <code>100%</code> no producirá ningún cambio en la imagen. Otros valores causarán una multiplicación lineal en el efecto. Los valores de una cantidad superior al <code>100%</code> aumentarán el brillo de la imagen. El valor lagunar (si no se especifica ningún valor) es <code>1</code> (equivalente a <code>100%</code>).</p>
+<p>Se aplica una multiplicación lineal a la imagen, haciendo que parezca más o menos brillante. Un valor de <code>0%</code> convertirá la imagen completamente a negro. Un valor de <code>100%</code> no producirá ningún cambio en la imagen. Otros valores causarán una multiplicación lineal en el efecto. Los valores de una cantidad superior al <code>100%</code> aumentarán el brillo de la imagen. El valor lagunar (si no se especifica ningún valor) es <code>1</code> (equivalente a <code>100%</code>).</p>
 
 <pre class="brush: css">filter: brightness(0.5)</pre>
 
@@ -216,7 +216,7 @@ table.standard-table td {
         &lt;feFuncB type="linear" slope="2"/&gt;
     &lt;/feComponentTransfer&gt;
   &lt;/filter&gt;
-  &lt;image xlink:href="/files/3708/Test_Form.jpg" filter="url(#brightness)" width="286px" height="217px" /&gt;
+  &lt;image xlink:href="/files/3708/Test_Form.jpg" filter="url(#brightness)" width="286px" height="217px" /&gt;
 &lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
       &lt;td&gt;&lt;img alt="Test_Form_s.jpg" id="img4" class="internal default" src="/files/3709/Test_Form_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
@@ -274,7 +274,7 @@ table.standard-table td {
 
 <h3 id="contrast()"><code>contrast()</code></h3>
 
-<p>Ajusta el contraste del elemento. Un valor superior a <code>0%</code> creará una imagen completamente gris. Un valor de <code>100%</code> deja al elemento sin cambios. Valores superiores a <code>100%</code> son permitidos, dando como resultado mayor contraste. El valor lagunar de interpolación (si no se especifica ningún valor) es <code>1</code> (equivalente a <code>100%</code>).</p>
+<p>Ajusta el contraste del elemento. Un valor superior a <code>0%</code> creará una imagen completamente gris. Un valor de <code>100%</code> deja al elemento sin cambios. Valores superiores a <code>100%</code> son permitidos, dando como resultado mayor contraste. El valor lagunar de interpolación (si no se especifica ningún valor) es <code>1</code> (equivalente a <code>100%</code>).</p>
 
 <pre class="brush: css">filter: contrast(200%)
 </pre>
@@ -312,7 +312,7 @@ table.standard-table td {
       &lt;feFuncB type="linear" slope="2" intercept="-0.5"/&gt;
     &lt;/feComponentTransfer&gt;
   &lt;/filter&gt;
-  &lt;image xlink:href="/files/3712/Test_Form_3.jpeg" filter="url(#contrast)" width="240px" height="151px" /&gt;
+  &lt;image xlink:href="/files/3712/Test_Form_3.jpeg" filter="url(#contrast)" width="240px" height="151px" /&gt;
 &lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
       &lt;td&gt;&lt;img alt="Test_Form_s.jpg" id="img4" class="internal default" src="/files/3713/Test_Form_3_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
@@ -370,18 +370,18 @@ table.standard-table td {
 
 <h3 id="drop-shadow()"><code>drop-shadow()</code></h3>
 
-<p>Aplica un efecto de sombra a la imagen. Una  sombra es realmente una versión desenfocada y separada de la máscara alfa de la imagen, dibujada en un color particular, debajo de la misma. La función acepta un parámetro de tipo &lt;shadow&gt; (definido en CSS3 Backgrounds), con la excepción de que la palabra clave ‘inset’ no está permitida. Esta función es similar a la propiedad {{cssxref("box-shadow")}}, más establecida; la diferencia es que con filtros, algunos navegadores proveen aceleración de hardware para mayor rendimiento. Los valores para el parámetro <code>&lt;shadow&gt;</code> son los siguientes:</p>
+<p>Aplica un efecto de sombra a la imagen. Una  sombra es realmente una versión desenfocada y separada de la máscara alfa de la imagen, dibujada en un color particular, debajo de la misma. La función acepta un parámetro de tipo &lt;shadow&gt; (definido en CSS3 Backgrounds), con la excepción de que la palabra clave ‘inset’ no está permitida. Esta función es similar a la propiedad {{cssxref("box-shadow")}}, más establecida; la diferencia es que con filtros, algunos navegadores proveen aceleración de hardware para mayor rendimiento. Los valores para el parámetro <code>&lt;shadow&gt;</code> son los siguientes:</p>
 
 <dl>
- <dt><code>&lt;offset-x&gt;</code> <code>&lt;offset-y&gt;</code> <small>(requerido)</small></dt>
- <dd>Son dos valores {{cssxref("&lt;length&gt;")}} para establecer la posición de la sobra respecto a la imagen. <code>&lt;offset-x&gt;</code> especifica la distancia horizontal. Valores negativos establecen la sombra a la izquierda del elemento. <code>&lt;offset-y&gt;</code> especifica la distancia vertical. Valores negativos establecen la sombra arriba del elemento. Véase {{cssxref("&lt;length&gt;")}} para unidades posibles.<br>
- Si ambos valores son <code>0</code>, la sombra será colocada detrás del elemento (y puede generar un efecto de desenfoque si se establecen <code>&lt;blur-radius&gt;</code> y/o <code>&lt;spread-radius&gt;</code>).</dd>
- <dt><code>&lt;blur-radius&gt;</code> <small>(opcional)</small></dt>
- <dd>Es un tercer valor {{cssxref("&lt;length&gt;")}}. Mientras mayor sea el valor, mayor será el desenfoque, por lo que la sombra se vuelve más grande y clara. No se permiten valores negativos. Si no es especificado, su valor predeterminado será <code>0</code> (el borde de la sombra es nítido).</dd>
- <dt><code>&lt;spread-radius&gt;</code> <small>(opcional)</small></dt>
- <dd>Es el cuarto valor {{cssxref("&lt;length&gt;")}}. Valores positivos harán que la sombra se expanda, y valores negativos harán que la sombra se contraiga. Si no se especifica, su valor predeterminado será <code>0</code> (la sombra tendrá el mismo tamaño del elemento). <br>
+ <dt><code>&lt;offset-x&gt;</code> <code>&lt;offset-y&gt;</code> <small>(requerido)</small></dt>
+ <dd>Son dos valores {{cssxref("&lt;length&gt;")}} para establecer la posición de la sobra respecto a la imagen. <code>&lt;offset-x&gt;</code> especifica la distancia horizontal. Valores negativos establecen la sombra a la izquierda del elemento. <code>&lt;offset-y&gt;</code> especifica la distancia vertical. Valores negativos establecen la sombra arriba del elemento. Véase {{cssxref("&lt;length&gt;")}} para unidades posibles.<br>
+ Si ambos valores son <code>0</code>, la sombra será colocada detrás del elemento (y puede generar un efecto de desenfoque si se establecen <code>&lt;blur-radius&gt;</code> y/o <code>&lt;spread-radius&gt;</code>).</dd>
+ <dt><code>&lt;blur-radius&gt;</code> <small>(opcional)</small></dt>
+ <dd>Es un tercer valor {{cssxref("&lt;length&gt;")}}. Mientras mayor sea el valor, mayor será el desenfoque, por lo que la sombra se vuelve más grande y clara. No se permiten valores negativos. Si no es especificado, su valor predeterminado será <code>0</code> (el borde de la sombra es nítido).</dd>
+ <dt><code>&lt;spread-radius&gt;</code> <small>(opcional)</small></dt>
+ <dd>Es el cuarto valor {{cssxref("&lt;length&gt;")}}. Valores positivos harán que la sombra se expanda, y valores negativos harán que la sombra se contraiga. Si no se especifica, su valor predeterminado será <code>0</code> (la sombra tendrá el mismo tamaño del elemento). <br>
  Nota: Webkit, y tal vez otros navegadores, no soportan este cuarto valor; si se incluye, no se aplicará el filtro.</dd>
- <dt><code>&lt;color&gt;</code> <small>(opcional)</small></dt>
+ <dt><code>&lt;color&gt;</code> <small>(opcional)</small></dt>
  <dd>Véanse los valores {{cssxref("&lt;color&gt;")}} para las opciones posibles de palabras clave y notaciones. Si no se especifica, el color depende del navegador. En Gecko (Firefox), Presto (Opera) y Trident (Internet Explorer), se usa el valor de la propiedad {{cssxref("color")}}. Por otro lado, la sombra en WebKit es transparente, y por lo tanto, es inútil si se omite <code>&lt;color&gt;</code>.</dd>
 </dl>
 
@@ -429,24 +429,24 @@ table.standard-table td {
       &lt;td&gt;&lt;img alt="Test_Form_4_s.jpg" id="img4" class="internal default" src="/files/3715/Test_Form_4_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_4 distorded border - Original image" id="img11" class="internal default" src="/files/8467/Test_Form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_4 distorded border - Live example" id="img12" class="internal default" src="/files/8467/Test_Form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img alt="Test_Form_4 distorded border - Original image" id="img11" class="internal default" src="/files/8467/Test_Form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img alt="Test_Form_4 distorded border - Live example" id="img12" class="internal default" src="/files/8467/Test_Form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /&gt;&lt;/td&gt;
       &lt;td&gt;
         &lt;div class="svg-container"&gt;
           &lt;svg xmlns="http://www.w3.org/2000/svg" id="img13" viewbox="0 0 239 187"&gt;
             &lt;filter id="drop-shadow2"&gt;
-              &lt;feGaussianBlur in="SourceAlpha" stdDeviation="4"/&gt;
-              &lt;feOffset dx="8" dy="10"/&gt;
-              &lt;feMerge&gt;
-                &lt;feMergeNode/&gt;
-                &lt;feMergeNode in="SourceGraphic"/&gt;
-              &lt;/feMerge&gt;
+              &lt;feGaussianBlur in="SourceAlpha" stdDeviation="4"/&gt;
+              &lt;feOffset dx="8" dy="10"/&gt;
+              &lt;feMerge&gt;
+                &lt;feMergeNode/&gt;
+                &lt;feMergeNode in="SourceGraphic"/&gt;
+              &lt;/feMerge&gt;
             &lt;/filter&gt;
             &lt;image xlink:href="/files/8467/Test_Form_4_irregular-shape_opacity-gradient.png<span style="font-size: 1rem;">" filter="url(#drop-shadow2)" width="213px" height="161px" /&gt;</span>
           &lt;/svg&gt;
         &lt;div&gt;
       &lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_4 distorded border drop shadow - Static example" id="img14" class="internal default" src="/files/8469/Test_Form_4_irregular-shape_opacity-gradient_drop-shadow.png" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img alt="Test_Form_4 distorded border drop shadow - Static example" id="img14" class="internal default" src="/files/8469/Test_Form_4_irregular-shape_opacity-gradient_drop-shadow.png" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -515,7 +515,7 @@ table.standard-table td {
 
 <h3 id="grayscale()"><code>grayscale()</code></h3>
 
-<p>Convierte la imagen a escala de grises. El valor del parámetro define la proporción de la conversión. Un valor de <code>100%</code> es completamente a escala de grises. Un valor de <code>0%</code> deja la imagen sin cambios. Valores entre <code>0%</code> y <code>100%</code> son múltiplos lineales de este efecto. Si el parámetro no es incluido, se usa el valor de <code>0</code>.</p>
+<p>Convierte la imagen a escala de grises. El valor del parámetro define la proporción de la conversión. Un valor de <code>100%</code> es completamente a escala de grises. Un valor de <code>0%</code> deja la imagen sin cambios. Valores entre <code>0%</code> y <code>100%</code> son múltiplos lineales de este efecto. Si el parámetro no es incluido, se usa el valor de <code>0</code>.</p>
 
 <pre class="brush: css">filter: grayscale(100%)</pre>
 
@@ -541,7 +541,7 @@ table.standard-table td {
                        0.2126 0.7152 0.0722 0 0
                        0 0 0 1 0"/&gt;
   &lt;/filter&gt;
-  &lt;image xlink:href="/files/3716/Test_Form_5.jpeg" filter="url(#grayscale)" width="276px" height="184px" /&gt;
+  &lt;image xlink:href="/files/3716/Test_Form_5.jpeg" filter="url(#grayscale)" width="276px" height="184px" /&gt;
 &lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
       &lt;td&gt;&lt;img alt="Test_Form_5_s.jpg" id="img4" class="internal default" src="/files/3717/Test_Form_5_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
@@ -599,7 +599,7 @@ table.standard-table td {
 
 <h3 id="hue-rotate()"><code>hue-rotate()</code></h3>
 
-<p>Aplica una rotación de tono (matiz) al elemento. El valor del ángulo define el número de grados al rededor del círculo de colores al que se ajustarán los colores de la imagen. Un valor de <code>0deg</code> deja la imagen sin cambios. Si el parámetro del ángulo no es especiicado, se usa valor de <code>0deg</code>. Aunque no hay valor máximo, el efecto de valores encima de <code>360deg</code> da la vuelta al círculo de colores.</p>
+<p>Aplica una rotación de tono (matiz) al elemento. El valor del ángulo define el número de grados al rededor del círculo de colores al que se ajustarán los colores de la imagen. Un valor de <code>0deg</code> deja la imagen sin cambios. Si el parámetro del ángulo no es especiicado, se usa valor de <code>0deg</code>. Aunque no hay valor máximo, el efecto de valores encima de <code>360deg</code> da la vuelta al círculo de colores.</p>
 
 <pre class="brush: css">filter: hue-rotate(90deg)</pre>
 
@@ -622,7 +622,7 @@ table.standard-table td {
     &lt;feColorMatrix type="hueRotate"
                values="90"/&gt;
   &lt;/filter&gt;
-  &lt;image xlink:href="/files/3718/Test_Form_6.jpeg" filter="url(#hue-rotate)" width="266px" height="190px" /&gt;
+  &lt;image xlink:href="/files/3718/Test_Form_6.jpeg" filter="url(#hue-rotate)" width="266px" height="190px" /&gt;
 &lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
       &lt;td&gt;&lt;img alt="Test_Form_6_s.jpg" id="img4" class="internal default" src="/files/3719/Test_Form_6_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
@@ -686,7 +686,7 @@ table.standard-table td {
 
 <h3 id="invert()"><code>invert()</code></h3>
 
-<p>Invierte los colores de la imagen. El parámetro define la proporción de la conversión. Un valor de <code>100%</code> invierte completamente la imagen. Un valor de <code>0%</code> deja a la imagen sin cambios. Valores entre <code>0%</code> y <code>100%</code> son múltiplos lineales del efecto. Si el parámetro no es especificado, se usa un valor de <code>0</code>.</p>
+<p>Invierte los colores de la imagen. El parámetro define la proporción de la conversión. Un valor de <code>100%</code> invierte completamente la imagen. Un valor de <code>0%</code> deja a la imagen sin cambios. Valores entre <code>0%</code> y <code>100%</code> son múltiplos lineales del efecto. Si el parámetro no es especificado, se usa un valor de <code>0</code>.</p>
 
 <pre class="brush: css">filter: invert(100%)</pre>
 
@@ -770,7 +770,7 @@ table.standard-table td {
 
 <h3 id="opacity()"><code>opacity()</code></h3>
 
-<p>Aplica transparencia a la imagen. El valor del parámetro define la proporción de la conversión. Un valor de <code>0%</code> es completamente transparente. Un valor de <code>100%</code> deja la imagen sin cambios. Valores entre <code>0%</code> y <code>100%</code> son múltiplos lineales del efecto. Esto es equivalente a multiplicar las muestras de la imagen por el valor indicado. Si el parámetro no es especificado, se usa un valor de <code>1</code>. Esta función es similar a la propiedad {{cssxref("opacity")}}, más establecida; la diferencia es que con filtros, algunos navegadores proveen aceleración de hardware para mayor rendimiento.</p>
+<p>Aplica transparencia a la imagen. El valor del parámetro define la proporción de la conversión. Un valor de <code>0%</code> es completamente transparente. Un valor de <code>100%</code> deja la imagen sin cambios. Valores entre <code>0%</code> y <code>100%</code> son múltiplos lineales del efecto. Esto es equivalente a multiplicar las muestras de la imagen por el valor indicado. Si el parámetro no es especificado, se usa un valor de <code>1</code>. Esta función es similar a la propiedad {{cssxref("opacity")}}, más establecida; la diferencia es que con filtros, algunos navegadores proveen aceleración de hardware para mayor rendimiento.</p>
 
 <pre class="brush: css">filter: opacity(50%)</pre>
 
@@ -852,7 +852,7 @@ table.standard-table td {
 
 <h3 id="saturate()"><code>saturate()</code></h3>
 
-<p>Aplica saturación a la imagen. El valor del parámetro define la proporción de la conversión. Un valor de <code>0%</code> es completamente sin saturación. Un valor de <code>100%</code> deja la imagen sin cambios. Otros valores son múltiplos lineales del efecto. Valores por encima de <code>100%</code> son permitidos, dando resultados de sobresaturación. Si no se especifica el parámetro, se usa el valor de <code>1</code>.</p>
+<p>Aplica saturación a la imagen. El valor del parámetro define la proporción de la conversión. Un valor de <code>0%</code> es completamente sin saturación. Un valor de <code>100%</code> deja la imagen sin cambios. Otros valores son múltiplos lineales del efecto. Valores por encima de <code>100%</code> son permitidos, dando resultados de sobresaturación. Si no se especifica el parámetro, se usa el valor de <code>1</code>.</p>
 
 <pre class="brush: css">filter: saturate(200%)</pre>
 
@@ -933,7 +933,7 @@ table.standard-table td {
 
 <h3 id="sepia()"><code>sepia()</code></h3>
 
-<p>Convierte la imagen a sepia. El valor del parámetro define la proporción de la conversión. Un valor de <code>100%</code> es completamente sepia. Un valor de <code>0%</code> deja la imagen sin cambios. Valores entre <code>0%</code> y <code>100%</code> son múltiplos lineales del efecto. Si no se especifica el parámetro, se usa el valor de <code>0</code>.</p>
+<p>Convierte la imagen a sepia. El valor del parámetro define la proporción de la conversión. Un valor de <code>100%</code> es completamente sepia. Un valor de <code>0%</code> deja la imagen sin cambios. Valores entre <code>0%</code> y <code>100%</code> son múltiplos lineales del efecto. Si no se especifica el parámetro, se usa el valor de <code>0</code>.</p>
 
 <pre class="brush: css">filter: sepia(100%)</pre>
 

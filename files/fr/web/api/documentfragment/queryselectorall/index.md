@@ -19,7 +19,9 @@ Si les sélecteurs spécifiés dans paramètre sont invalides une {{domxref("DOM
 
 ## Syntaxe
 
-    elementList = documentframgment.querySelectorAll(selectors);
+```js
+elementList = documentframgment.querySelectorAll(selectors);
+```
 
 ### Paramètres
 
@@ -36,13 +38,11 @@ var matches = documentfrag.querySelectorAll("div.note, div.alert");
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Selectors API Level 1', '#queryselector', 'DocumentFragment.querySelectorAll')}} | {{Spec2('Selectors API Level 1')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DocumentFragment.querySelectorAll")}}
+{{Compat}}
 
 ## Voir aussi
 

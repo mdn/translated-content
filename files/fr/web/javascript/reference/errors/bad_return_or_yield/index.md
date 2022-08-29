@@ -13,9 +13,11 @@ original_slug: Web/JavaScript/Reference/Erreurs/Bad_return_or_yield
 
 ## Message
 
-    SyntaxError: 'return' statement outside of function (Edge)
-    SyntaxError: return not in function (Firefox)
-    SyntaxError: yield not in function (Firefox)
+```
+SyntaxError: 'return' statement outside of function (Edge)
+SyntaxError: return not in function (Firefox)
+SyntaxError: yield not in function (Firefox)
+```
 
 ## Type d'erreur
 

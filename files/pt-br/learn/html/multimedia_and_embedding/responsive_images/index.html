@@ -70,12 +70,12 @@ original_slug: Aprender/HTML/Multimedia_and_embedding/Responsive_images
 <p>Nós podemos, entretanto, usar dois novos atributos — {{htmlattrxref("srcset", "img")}} e {{htmlattrxref("sizes", "img")}} —para fornecer várias fontes adicionais juntamente com sugestões para ajudar o navegador a pegar a correta. Você pode ver um exemplo disso no nosso exemplo <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html">responsive.html</a> no Github (ver também <a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html">o código fonte</a>):</p>
 
 <pre class="brush: html">&lt;img srcset="elva-fairy-320w.jpg 320w,
-             elva-fairy-480w.jpg 480w,
-             elva-fairy-800w.jpg 800w"
-     sizes="(max-width: 320px) 280px,
-            (max-width: 480px) 440px,
-            800px"
-     src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy"&gt;</pre>
+             elva-fairy-480w.jpg 480w,
+             elva-fairy-800w.jpg 800w"
+     sizes="(max-width: 320px) 280px,
+            (max-width: 480px) 440px,
+            800px"
+     src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy"&gt;</pre>
 
 <p>Os atributos <code>srcset</code> e <code>sizes</code> parecem complicados, mas não são difíceis de entender se você formata eles como mostrado acima, com uma parte diferente do valor do atributo para cada linha. Cada valor contém uma lista separada por vírgula, e cada parte da lista é dividida em três sub-partes. Vamos percorrer o conteúdo de cada agora:</p>
 
@@ -90,22 +90,22 @@ original_slug: Aprender/HTML/Multimedia_and_embedding/Responsive_images
 <p><strong><code>sizes</code></strong> define um conjunto de condições de mídia (ex.: largura da tela) e indica qual tamanho da imagem deveria ser a melhor escolha, quando certas condições de tela são verdadeiras - Estas são as sugestões que nós falamos antes. Neste caso, antes de cada vírgula nós escrevemos:</p>
 
 <ol>
- <li>Uma <strong>condição de mídia</strong> (<code>(max-width:480px)</code>) — Você vai aprender mais sobre isso no  <a href="/en-US/docs/Learn/CSS">tema CSS</a>, mas para agora vamos somente dizer que a condição de mídia descreve um possível estado em que a tela pode estar. Neste caso, nós estamos dizendo "quando a largura da tela é 480px ou menos".</li>
+ <li>Uma <strong>condição de mídia</strong> (<code>(max-width:480px)</code>) — Você vai aprender mais sobre isso no  <a href="/en-US/docs/Learn/CSS">tema CSS</a>, mas para agora vamos somente dizer que a condição de mídia descreve um possível estado em que a tela pode estar. Neste caso, nós estamos dizendo "quando a largura da tela é 480px ou menos".</li>
  <li>Um espaço.</li>
- <li>A <strong>largura do slot da imagem</strong> vai preencher quando a condição de mídia for verdadeira (<code>440px</code>).</li>
+ <li>A <strong>largura do slot</strong> que a imagem irá preencher quando a condição de mídia for verdadeira (<code>440px</code>).</li>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: Para a largura do slot, você pode fornecer um tamanho absoluto (<code>px</code>, <code>em</code>) ou um tamanho relativo (como porcentagem).Você pode ter notado que o último slot de largura não tem condição de mídia - isto é o padrão que será escolhido quando nenhuma condição for verdadeira. O navegador ignora tudo depois da primeira condição satisfeita, então tenha cuidado com a ordem de condições.</p>
+<p><strong>Note</strong>: Para a largura do slot, você pode fornecer um tamanho absoluto (<code>px</code>, <code>em</code>) ou um tamanho relativo (como porcentagem). Você pode ter notado que o último slot de largura não tem condição de mídia - isto é o padrão que será escolhido quando nenhuma condição for verdadeira. O navegador ignora tudo depois da primeira condição satisfeita, então tenha cuidado com a ordem de condições.</p>
 </div>
 
 <p>Então, com estes atributos no lugar, o navegador irá:</p>
 
 <ol>
  <li>Ver a largura do dispositivo.</li>
- <li>Ver qual condição de mídia na lista <code>sizes</code> é a primeira a ser verdadeira.</li>
+ <li>Ver qual condição de mídia na lista <code>sizes</code> é a primeira a ser verdadeira.</li>
  <li>Ver qual é o slot para aquela condição de mída.</li>
- <li>Carregar a imagem definida na lista <code>srcset</code> que mais chega perto do tamanho do slot.</li>
+ <li>Carregar a imagem definida na lista <code>srcset</code> que possui o mesmo tamanho do slot ou, se não houver, da primeira imagem que é maior que o tamanho do slot escolhido.</li>
 </ol>
 
 <p>E é isto! Então neste ponto, se um navegador suportado com uma largurar de 480px carregar a página, a condição (<code>max-width: 480px</code>) será verdadeira, então o slot <code>440px</code> será escolhido, então o <code>elva-fairy-480w.jpg</code> será carregada, como a largura inerente (<code>480w</code>) é a mais próxima de <code>440px</code>. A imagem de 800px é 128KB no disco enquanto que a versão de 480px é somente 63KB - economizando 65KB. Agora imagine se fosse uma página que tivesse várias imagens. Usando esta técnica poderia economizar os dados de usuários de celular.</p>
@@ -127,7 +127,7 @@ original_slug: Aprender/HTML/Multimedia_and_embedding/Responsive_images
 <p>Próximo, você pode checar se o <code>srcset </code>está funcionando configurando a largura da janela para a qual você quiser (coloque para uma largura estreita, por exemplo), abrindo o Network Inspector (Ferramentas &gt; Web Developer &gt; Network), então recarregue a página. Isto deve dar a você uma lista do que foi carregado na página, e aqui você pode checar qual arquivo da imagem foi escolhida para baixar.</p>
 
 <div class="note">
-<p><strong>Nota:  </strong>Use o Mozilla Firefox para testar <code>srcset</code>. O Chrome carrega a melhor imagem se estiver em cache no navegador, anulando o propósito do teste na ferramenta de desenvolvimento.</p>
+<p><strong>Nota:  </strong>Use o Mozilla Firefox para testar <code>srcset</code>. O Chrome carrega a melhor imagem se estiver em cache no navegador, anulando o propósito do teste na ferramenta de desenvolvimento.</p>
 </div>
 
 <p><img alt="a screenshot of the network inspector in firefox devtools, showing that the HTML for the page has been downloaded, along with three images, which include the two 800 wide versions of the responsive images" src="https://mdn.mozillademos.org/files/12934/network-devtools.png" style="display: block; height: 630px; margin: 0px auto; width: 600px;"></p>
@@ -137,9 +137,9 @@ original_slug: Aprender/HTML/Multimedia_and_embedding/Responsive_images
 <p>Se você está dando suporte a múltiplas resoluções de vídeo, mas todas veem sua imagem no tamanho real na tela, você pode permitir ao navegador escolher uma resolução apropriada para a imagem usando <code>srcset</code> com x indentificadores e sem <code>sizes </code>- uma sintaxe um pouco mais fácil! Você pode encontrar um exemplo de como isto parece em <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html">srcset-resolutions.html </a>(ver também <a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html">o código fonte</a>):</p>
 
 <pre class="brush: html">&lt;img srcset="elva-fairy-320w.jpg,
-             elva-fairy-480w.jpg 1.5x,
-             elva-fairy-640w.jpg 2x"
-     src="elva-fairy-640w.jpg" alt="Elva dressed as a fairy"&gt;
+             elva-fairy-480w.jpg 1.5x,
+             elva-fairy-640w.jpg 2x"
+     src="elva-fairy-640w.jpg" alt="Elva dressed as a fairy"&gt;
 </pre>
 
 <p><img alt="A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image" src="https://mdn.mozillademos.org/files/12942/resolution-example.png" style="display: block; height: 425px; margin: 0px auto; width: 480px;">Neste exemplo, o seguinte CSS é aplicado na imagem, então ela etra uma largura de 320 pixels na tela (também chamado pixels CSS):</p>
@@ -162,8 +162,8 @@ original_slug: Aprender/HTML/Multimedia_and_embedding/Responsive_images
 
 <pre class="brush: html">&lt;picture&gt;
   &lt;source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg"&gt;
-  &lt;source media="(min-width: 800px)" srcset="elva-800w.jpg"&gt;
-  &lt;img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva"&gt;
+  &lt;source media="(min-width: 800px)" srcset="elva-800w.jpg"&gt;
+  &lt;img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva"&gt;
 &lt;/picture&gt;
 </pre>
 

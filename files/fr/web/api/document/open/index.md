@@ -14,15 +14,19 @@ La méthode **`document.open()`** ouvre un document pour [l'écriture](/fr/docs/
 
 ## Syntaxe
 
-    document.open();
+```js
+document.open();
+```
 
 ## Exemple
 
-    // Dans cet exemple, le contenu du document est
-    // écrasé au cours de la réinitialisation avec open()
-    document.write("<html><p>supprimez-moi</p></html>");
-    document.open();
-    // Le document est vide.
+```js
+// Dans cet exemple, le contenu du document est
+// écrasé au cours de la réinitialisation avec open()
+document.write("<html><p>supprimez-moi</p></html>");
+document.open();
+// Le document est vide.
+```
 
 ## Notes
 
@@ -38,14 +42,11 @@ Si vous ne voulez pas créer une entrée d'historique, remplacez `open()` par `o
 
 ## Spécifications
 
-| Spécification                                                                                | Status                           | Comment              |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName("HTML WHATWG", "#dom-document-open", "document.open()")}} | {{Spec2("HTML WHATWG")}} |                      |
-| {{SpecName("DOM2 HTML", "html.html#ID-72161170", "document.open()")}} | {{Spec2("DOM2 HTML")}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.open")}}
+{{Compat}}
 
 ## Voir aussi
 

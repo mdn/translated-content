@@ -15,4 +15,4 @@ original_slug: DHTML
 
 ### Culture générale
 
-Categories {{interwiki("wikipedia","HTML_dynamique","DHTML")}} sur Wikipedia
+- [HTML dynamique](https://fr.wikipedia.org/wiki/HTML_dynamique) sur Wikipédia

@@ -33,9 +33,9 @@ worker.postMessage(sab);
 
 <h3 id="APIs_which_use_SharedArrayBuffer_objects">SharedArrayBuffer オブジェクトを使用する API</h3>
 
-- [`WebGLRenderingContext.bufferData()`](/ja/docs/Web/API/WebGLRenderingContext/bufferData "WebGL API WebGLRenderingContext.bufferData() メソッドは、バッファーオブジェクトのデータストアを初期化、作成します。")
-- [`WebGLRenderingContext.bufferSubData()`](/ja/docs/Web/API/WebGLRenderingContext/bufferSubData "The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.")
-- [`WebGL2RenderingContext.getBufferSubData()`](/ja/docs/Web/API/WebGL2RenderingContext/getBufferSubData "The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.")
+- [`WebGLRenderingContext.bufferData()`](/ja/docs/Web/API/WebGLRenderingContext/bufferData)
+- [`WebGLRenderingContext.bufferSubData()`](/ja/docs/Web/API/WebGLRenderingContext/bufferSubData)
+- [`WebGL2RenderingContext.getBufferSubData()`](/ja/docs/Web/API/WebGL2RenderingContext/getBufferSubData)
 
 ### セキュリティの要件
 
@@ -57,9 +57,9 @@ Cross-Origin-Embedder-Policy: require-corp
 
 ```js
 if (crossOriginIsolated) {
-  // Post SharedArrayBuffer
+  // Post SharedArrayBuffer
 } else {
-  // Do something else
+  // Do something else
 }
 ```
 
@@ -135,6 +135,6 @@ gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);
 - {{jsxref("ArrayBuffer")}}
 - [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
 - [Web Worker](/ja/docs/Web/API/Web_Workers_API)
-- [parlib-simple ](https://github.com/lars-t-hansen/parlib-simple)– 同期と作業分配抽象化を提供するシンプルなライブラリー
+- [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – 同期と作業分配抽象化を提供するシンプルなライブラリー
 - [共有メモリー – 簡潔なチュートリアル](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)
 - [JavaScript の並列処理機能を味見してみる](https://dev.mozilla.jp/2016/05/a-taste-of-javascripts-new-parallel-primitives/)

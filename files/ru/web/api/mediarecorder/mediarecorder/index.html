@@ -5,7 +5,7 @@ translation_of: Web/API/MediaRecorder/MediaRecorder
 ---
 <div>{{APIRef("MediaStream Recording")}}</div>
 
-<p><strong><code>MediaRecorder()</code></strong> конструктор {{domxref("MediaRecorder")}} объекта который будет делать запись переданного {{domxref("MediaStream")}}.</p>
+<p><strong><code>MediaRecorder()</code></strong> конструктор {{domxref("MediaRecorder")}} объекта который будет делать запись переданного {{domxref("MediaStream")}}.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -15,7 +15,7 @@ translation_of: Web/API/MediaRecorder/MediaRecorder
 
 <dl>
  <dt><code><strong>stream</strong></code></dt>
- <dd>Объект потока {{domxref("MediaStream")}} источника из которого будет производиться запись. Может быть потоком, созданным {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} или {{HTMLElement("audio")}}, {{HTMLElement("video")}} или {{HTMLElement("canvas")}} элементами.</dd>
+ <dd>Объект потока {{domxref("MediaStream")}} источника из которого будет производиться запись. Может быть потоком, созданным {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} или {{HTMLElement("audio")}}, {{HTMLElement("video")}} или {{HTMLElement("canvas")}} элементами.</dd>
  <dt>
  <p><strong><code>options</code> </strong>{{optional_inline}}</p>
  </dt>
@@ -23,14 +23,14 @@ translation_of: Web/API/MediaRecorder/MediaRecorder
  <p>Объект, содержащий следующие свойства:</p>
 
  <ul>
-  <li><code>mimeType</code>:  <code>mime</code> тип, определяет формат результата записи, который нужно использовать в качестве контейнера для создаваемого объекта <code>MediaRecorder</code>. Можно просто указать формат контейнера, а браузер сам выберет нужный кодек для записи аудио/видео, или используйте <a href="/en-US/docs/Web/Media/Formats/codecs_parameter">параметр codecs</a> или параметр<code> profiles</code> для расширения информации об использовании и тонкой конфигурации кодеков. Приложения, предварительно, могут проверять поддержку браузерами определённого типа из свойства <code>mimeType</code> , вызывая метод {{domxref("MediaRecorder.isTypeSupported()")}}.</li>
+  <li><code>mimeType</code>:  <code>mime</code> тип, определяет формат результата записи, который нужно использовать в качестве контейнера для создаваемого объекта <code>MediaRecorder</code>. Можно просто указать формат контейнера, а браузер сам выберет нужный кодек для записи аудио/видео, или используйте <a href="/en-US/docs/Web/Media/Formats/codecs_parameter">параметр codecs</a> или параметр<code> profiles</code> для расширения информации об использовании и тонкой конфигурации кодеков. Приложения, предварительно, могут проверять поддержку браузерами определённого типа из свойства <code>mimeType</code> , вызывая метод {{domxref("MediaRecorder.isTypeSupported()")}}.</li>
   <li><code>audioBitsPerSecond</code>: Скорость записи медиа данных аудио.</li>
   <li><code>videoBitsPerSecond</code>: Скорость записи медиа данных видео.</li>
-  <li><code>bitsPerSecond</code>: Скорость записи медиаданных аудио и видео. Может определяться вместо верхних двух. Если определяется вместе с одним из свойств выше, имеет меньший приоритет, и используется  вместо отсутствующей настройки выше..</li>
+  <li><code>bitsPerSecond</code>: Скорость записи медиаданных аудио и видео. Может определяться вместо верхних двух. Если определяется вместе с одним из свойств выше, имеет меньший приоритет, и используется  вместо отсутствующей настройки выше..</li>
  </ul>
 
  <div class="note">
- <p> Если значения битов в секунду не указаны для видео и / или аудио, для видео по умолчанию принимается значение 2,5 Мбит / с, а для аудио по умолчанию используется адаптивный режим, в зависимости от частоты дискретизации и количества каналов.</p>
+ <p> Если значения битов в секунду не указаны для видео и / или аудио, для видео по умолчанию принимается значение 2,5 Мбит / с, а для аудио по умолчанию используется адаптивный режим, в зависимости от частоты дискретизации и количества каналов.</p>
  </div>
  </dd>
 </dl>
@@ -44,7 +44,7 @@ translation_of: Web/API/MediaRecorder/MediaRecorder
 
 <h2 id="Пример">Пример</h2>
 
-<p>В этом примере показано, как создать медиа рекордер для указанного потока, чья скорость передачи звука составляет 128 Кбит / с, а скорость передачи видео - 2,5 Мбит / с. Записанные мультимедийные данные будут храниться в контейнере MP4 (поэтому, если вы соберёте порции мультимедийных данных и сохраните их на диск, они будут в файле с разрешением MP4).</p>
+<p>В этом примере показано, как создать медиа рекордер для указанного потока, чья скорость передачи звука составляет 128 Кбит / с, а скорость передачи видео - 2,5 Мбит / с. Записанные мультимедийные данные будут храниться в контейнере MP4 (поэтому, если вы соберёте порции мультимедийных данных и сохраните их на диск, они будут в файле с разрешением MP4).</p>
 
 <pre class="brush: js">...
 <code class="language-html">
@@ -54,13 +54,13 @@ if (navigator.mediaDevices.getUserMedia) {
   var chunks = [];
 
   </code>var onSuccess = function(stream) {
-    var options = {
-      audioBitsPerSecond : 128000,
-      videoBitsPerSecond : 2500000,
-      mimeType : 'video/mp4'
-    }
-    var mediaRecorder = new MediaRecorder(stream,options);
-    m = mediaRecorder;
+    var options = {
+      audioBitsPerSecond : 128000,
+      videoBitsPerSecond : 2500000,
+      mimeType : 'video/mp4'
+    }
+    var mediaRecorder = new MediaRecorder(stream,options);
+    m = mediaRecorder;
 
 ...</pre>
 

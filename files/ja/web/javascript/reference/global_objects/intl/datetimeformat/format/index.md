@@ -19,7 +19,6 @@ The **`Intl.DateTimeFormat.prototype.format()`** メソッドは、この {{jsxr
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-format.html", "taller")}}
 
-
 ## 構文
 
 ```js

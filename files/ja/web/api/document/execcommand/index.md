@@ -9,7 +9,6 @@ tags:
   - リファレンス
   - エディター
   - 非推奨
-browser-compat: api.Document.execCommand
 translation_of: Web/API/Document/execCommand
 ---
 {{ApiRef("DOM")}}{{deprecated_header}}
@@ -35,7 +34,7 @@ document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 ### 引数
 
 - `aCommandName`
-  - : {{domxref("DOMString")}} で、実行するコマンドの名前を指定します。使用可能なコマンドの一覧は、{{anch("Commands", "コマンド")}}の節をご覧ください。
+  - : {{domxref("DOMString")}} で、実行するコマンドの名前を指定します。使用可能なコマンドの一覧は、[コマンド](#commands)の節をご覧ください。
 - `aShowDefaultUI`
   - : 論理値で、既定のユーザインターフェースを表示するかどうかを指示します。 Mozilla では未実装です。
 - `aValueArgument`
@@ -147,7 +146,6 @@ document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 
 - `AutoUrlDetect`
   - : ブラウザーの自動リンクの動作を変更します (Internet Explorer のみ)。
-
 
 ## 例
 

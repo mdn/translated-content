@@ -15,7 +15,9 @@ La fonction **`parseFloat()`** permet de transformer une chaîne de caractères 
 
 ## Syntaxe
 
-    parseFloat(string)
+```js
+parseFloat(string)
+```
 
 ### Paramètres
 

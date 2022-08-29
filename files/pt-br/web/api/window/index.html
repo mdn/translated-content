@@ -7,41 +7,41 @@ translation_of: Web/API/Window
 
 <p><span class="seoSummary">O objeto <code>window</code> representa uma janela que contém um elemento DOM; a propriedade <code>document</code> aponta para o <a href="/en-US/docs/DOM/document">documento DOM document</a> carregado naquela janela.</span> Uma janela para um dado documento pode ser obtido usando a propriedade {{Domxref("document.defaultView")}}.</p>
 
-<p>Esta seção provê uma breve referência a todos os métodos, propriedades e eventos disponíveis através do objeto DOM <code>window</code>. O objeto <code>window</code> implementa a interface <code>Window</code>, o qual herda da interface <code><a href="http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView">AbstractView</a></code>. Algumas funções globais, objeto de namespace, interfaces e construtores, apesar de não tipicamente associados ao objeto em questão, estão disponíveis e estão listados nas referências <a href="/en-US/docs/JavaScript/Reference">JavaScript Reference</a> e <a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">DOM Reference</a>.</p>
+<p>Esta seção provê uma breve referência a todos os métodos, propriedades e eventos disponíveis através do objeto DOM <code>window</code>. O objeto <code>window</code> implementa a interface <code>Window</code>, o qual herda da interface <code><a href="http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView">AbstractView</a></code>. Algumas funções globais, objeto de namespace, interfaces e construtores, apesar de não tipicamente associados ao objeto em questão, estão disponíveis e estão listados nas referências <a href="/en-US/docs/JavaScript/Reference">JavaScript Reference</a> e <a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">DOM Reference</a>.</p>
 
-<p>Em um navegador com suporte a abas, como o Firefox, cada aba contém seu próprio objeto <code>window</code> (e, se você estiver escrevendo uma extensão, a janela do navegador é uma janela distinta também - veja <a href="/en-US/docs/Working_with_windows_in_chrome_code#Content_windows">Working with windows in chrome code</a> para mais informação). Isto é, o objeto <code>window não é compartilhado entre as abas na mesma janela. Alguns métodos, nomeadamente </code>{{Domxref("window.resizeTo")}} e {{Domxref("window.resizeBy")}} aplicam-se à janela toda e não à aba em questão ao que o objeto <code>window</code> pertence. Geralmente, qualquer coisa que não pode racionalmente pertencer a uma aba, pertence a uma janela..</p>
+<p>Em um navegador com suporte a abas, como o Firefox, cada aba contém seu próprio objeto <code>window</code> (e, se você estiver escrevendo uma extensão, a janela do navegador é uma janela distinta também - veja <a href="/en-US/docs/Working_with_windows_in_chrome_code#Content_windows">Working with windows in chrome code</a> para mais informação). Isto é, o objeto <code>window não é compartilhado entre as abas na mesma janela. Alguns métodos, nomeadamente </code>{{Domxref("window.resizeTo")}} e {{Domxref("window.resizeBy")}} aplicam-se à janela toda e não à aba em questão ao que o objeto <code>window</code> pertence. Geralmente, qualquer coisa que não pode racionalmente pertencer a uma aba, pertence a uma janela..</p>
 
 <h2 id="Propriedades">Propriedades</h2>
 
-<p><em>Esta interface herda propriedades da interface {{domxref("EventTarget")}} e implementa propriedades de {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, e {{domxref("WindowEventHandlers")}}.</em></p>
+<p><em>Esta interface herda propriedades da interface {{domxref("EventTarget")}} e implementa propriedades de {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, e {{domxref("WindowEventHandlers")}}.</em></p>
 
 <p>Perceba que propriedades que são objetos (ex.: sobrecarregar o protótipo de elementos built-in) são listados em uma sessão separada abaixo.</p>
 
 <dl>
- <dt>{{domxref("Window.applicationCache")}}  {{readOnlyInline}} {{gecko_minversion_inline("1.9")}}</dt>
- <dd>Um objeto {{domxref("OfflineResourceList")}} fornece acesso aos recursos offline para o window.</dd>
+ <dt>{{domxref("Window.applicationCache")}}  {{readOnlyInline}} {{gecko_minversion_inline("1.9")}}</dt>
+ <dd>Um objeto {{domxref("OfflineResourceList")}} fornece acesso aos recursos offline para o window.</dd>
  <dt>{{domxref("Window.closed")}} {{Non-standard_inline}}{{readOnlyInline}}</dt>
  <dd>Esta propriedade indica quando a window atual está fechada ou não.</dd>
  <dt><code><a href="/en-US/docs/Components_object">Window.Components</a></code> {{Non-standard_inline}}</dt>
  <dd>O ponto de entrada para muitas características XPCOM. Algumas propriedades, por exemplo, classes, estão apenas disponíveis para código suficientemente privilegiado. Código de Web não deve usar essa propriedade.</dd>
  <dt>{{domxref("console","Window.console")}} {{Non-standard_inline}} {{ReadOnlyInline}}</dt>
- <dd>Retorna uma referência para o objeto console fornecendo acesso ao console debugging do navegador.</dd>
+ <dd>Retorna uma referência para o objeto console fornecendo acesso ao console debugging do navegador.</dd>
  <dt>{{domxref("Window.content")}} and Window._content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}</dt>
  <dd>Retorna uma referência para o elemento de conteúdo na janela atual. A variante obsoleta com sublinhado não está disponível a partir do conteúdo da Web.</dd>
  <dt>{{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}</dt>
  <dd>Retorna os objetos de controlador XUL para a janela atual do crome.</dd>
  <dt>{{domxref("Window.crypto")}} {{readOnlyInline}}</dt>
- <dd>Retorna o objeto de criptografia do navegador.</dd>
+ <dd>Retorna o objeto de criptografia do navegador.</dd>
  <dt>{{domxref("Window.defaultStatus")}} {{Obsolete_inline("gecko23")}}</dt>
  <dd>Obtém/define o texto da barra de status para determinada janela.</dd>
  <dt>{{domxref("Window.devicePixelRatio")}} {{non-standard_inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns the ratio between physical pixels and device independent pixels in the current display.</dd>
  <dt>{{domxref("Window.dialogArguments")}} {{ReadOnlyInline}}</dt>
- <dd>Gets the arguments passed to the window (if it's a dialog box) at the time {{domxref("window.showModalDialog()")}} was called. This is an {{Interface("nsIArray")}}.</dd>
+ <dd>Gets the arguments passed to the window (if it's a dialog box) at the time {{domxref("window.showModalDialog()")}} was called. This is an <code>nsIArray</code>.</dd>
  <dt>{{domxref("Window.directories")}} {{obsolete_inline}}</dt>
  <dd>Synonym of {{domxref("window.personalbar")}}</dd>
  <dt>{{domxref("Window.document")}} {{ReadOnlyInline}}</dt>
- <dd>Retorna a referência à propriedade <code>document</code> que a janela contém.</dd>
+ <dd>Retorna a referência à propriedade <code>document</code> que a janela contém.</dd>
  <dt>{{domxref("Window.frameElement")}} {{readOnlyInline}}</dt>
  <dd>Returns the element in which the window is embedded, or null if the window is not embedded.</dd>
  <dt>{{domxref("Window.frames")}} {{readOnlyInline}}</dt>
@@ -63,7 +63,7 @@ translation_of: Web/API/Window
  <dd>Gets/sets the location, or current URL, of the window object.</dd>
  <dt>{{domxref("Window.locationbar")}} {{ReadOnlyInline}}</dt>
  <dd>Returns the locationbar object, whose visibility can be toggled in the window.</dd>
- <dt>{{domxref("WindowStorage.localStorage")}}  {{readOnlyInline}}{{gecko_minversion_inline("1.9.1")}}</dt>
+ <dt>{{domxref("WindowStorage.localStorage")}}  {{readOnlyInline}}{{gecko_minversion_inline("1.9.1")}}</dt>
  <dd>Returns a reference to the local storage object used to store data that may only be accessed by the origin that created it.</dd>
  <dt>{{domxref("Window.menubar")}} {{ReadOnlyInline}}</dt>
  <dd>Returns the menubar object, whose visibility can be toggled in the window.</dd>
@@ -72,7 +72,7 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.mozAnimationStartTime")}} {{ReadOnlyInline}}{{gecko_minversion_inline("2.0")}}</dt>
  <dd>The time in milliseconds since epoch at which the current animation cycle began.</dd>
  <dt>{{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}}{{non-standard_inline}}{{gecko_minversion_inline("1.9.2")}}</dt>
- <dd>Returns the horizontal (X) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See <code>mozScreenPixelsPerCSSPixel</code> in {{interface("nsIDOMWindowUtils")}} for a conversion factor to adapt to screen pixels if needed.</dd>
+ <dd>Returns the horizontal (X) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See <code>mozScreenPixelsPerCSSPixel</code> in <code>nsIDOMWindowUtils</code> for a conversion factor to adapt to screen pixels if needed.</dd>
  <dt>{{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}{{gecko_minversion_inline("1.9.2")}}</dt>
  <dd>Returns the vertical (Y) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See <code>mozScreenPixelsPerCSSPixel</code> for a conversion factor to adapt to screen pixels if needed.</dd>
  <dt>{{domxref("Window.mozPaintCount")}} {{non-standard_inline}}{{ReadOnlyInline}} {{gecko_minversion_inline("2.0")}}</dt>

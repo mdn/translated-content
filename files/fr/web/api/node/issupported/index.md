@@ -8,13 +8,15 @@ tags:
   - Noeuds
 translation_of: Web/API/Node/isSupported
 ---
-{{APIRef("DOM")}}{{obsolete_header}}
+{{APIRef("DOM")}}{{deprecated_header}}
 
 La méthode **`Node.isSupported()`** renvoie une marque  {{domxref("Boolean","booléenne")}} contenant le résultat du test par lequel est vérifié si une implémentation DOM prend en charge une fonctionnalité spécifique et si celle-ci est supportée par un noeud spécifique.
 
 ### Syntaxe
 
-    boolValue = element.isSupported(feature, version)
+```js
+boolValue = element.isSupported(feature, version)
+```
 
 ### Paramètres
 
@@ -38,17 +40,11 @@ La méthode **`Node.isSupported()`** renvoie une marque  {{domxref("Boolean","bo
 
 ## Spécifications
 
-
-
-| Spécification                                                                                                        | Statut                           | Commentaire                                            |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------ |
-| {{SpecName('DOM WHATWG', '#interface-node', 'Node')}}                                             | {{Spec2('DOM WHATWG')}} | Supprimée de la spécification                          |
-| {{SpecName('DOM3 Core', 'core.html#Level-2-Core-Node-supports', 'Node.isSupported()')}} | {{Spec2('DOM3 Core')}}     | Pas de changement de {{SpecName('DOM2 Core')}}. |
-| {{SpecName('DOM2 Core', 'core.html#Level-2-Core-Node-supports', 'Node.isSupported()')}} | {{Spec2('DOM2 Core')}}     | Définition initiale.                                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.isSupported")}}
+{{Compat}}
 
 ## Voir aussi
 

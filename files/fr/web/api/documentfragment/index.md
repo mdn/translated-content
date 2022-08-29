@@ -53,18 +53,12 @@ _Cette interface hérite des méthodes de son parent, {{domxref("Node")}}_, et i
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                                       | Commentaire                                                                     |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#interface-documentfragment', 'DocumentFragment')}} | {{Spec2('DOM WHATWG')}}             | Ajouté le constructeur et l’implémentation de {{domxref("ParentNode")}}. |
-| {{SpecName('Selectors API Level 1', '#the-apis', 'DocumentFragment')}}             | {{Spec2('Selectors API Level 1')}} | Ajouté les méthodes `querySelector()` et `querySelectorAll()`.                  |
-| {{SpecName('DOM3 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}             | {{Spec2('DOM3 Core')}}                 | Pas de changement depuis {{SpecName('DOM2 Core')}}                       |
-| {{SpecName('DOM2 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}             | {{Spec2('DOM2 Core')}}                 | Pas de changement depuis {{SpecName('DOM1')}}                           |
-| {{SpecName('DOM1', 'level-one-core.html#ID-B63ED1A3', 'DocumentFragment')}}     | {{Spec2('DOM1')}}                     | Définition initiale                                                             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DocumentFragment")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Index des interfaces DOM](/en-US/docs/DOM/DOM_Reference)
+- [Index des interfaces DOM](/fr/docs/DOM/DOM_Reference)

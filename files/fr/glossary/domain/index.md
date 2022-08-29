@@ -13,4 +13,4 @@ Un domaine fait partie d'un réseau informatique au sein duquel une entité cont
 
 ## Pour approfondir
 
-- {{interwiki("wikipedia","Domaine")}} sur Wikipédia
+- [Nom de domaine](https://fr.wikipedia.org/wiki/Nom_de_domaine) sur Wikipédia

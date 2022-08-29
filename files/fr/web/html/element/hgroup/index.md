@@ -61,7 +61,7 @@ Où on voit que le titre principal est suivi de deux points puis d'un espace ava
 
 On pourrait également avoir cet affichage :
 
-![Plan rendu en incluant un élément <hgroup>, avec des parenthèses autour du titre secondaire](outline-paren.png)
+![Plan rendu en incluant un élément \<hgroup>, avec des parenthèses autour du titre secondaire](outline-paren.png)
 
 Ici, le titre secondaire est placé entre parenthèses après le titre principal.
 

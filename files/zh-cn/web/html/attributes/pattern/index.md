@@ -1,12 +1,6 @@
 ---
 title: 'HTML attribute: pattern'
 slug: Web/HTML/Attributes/pattern
-tags:
-  - 属性
-  - 约束验证 API
-  - HTML
-  - 参考
-translation_of: Web/HTML/Attributes/pattern
 ---
 
 {{HTMLSidebar}}
@@ -25,7 +19,7 @@ translation_of: Web/HTML/Attributes/pattern
 
 ### 可用性
 
-当包括一个 `pattern` 时，在控件附近的可见文本中提供对模式的描述。此外，包括一个 [`title`](/en-US/docs/Web/HTML/Global_attributes/title) 属性，对该模式进行描述。用户代理可以在约束验证期间使用标题内容来告诉用户该模式不匹配。一些浏览器会显示标题内容的工具提示，以提高视力障碍者的可用性。此外，当控件获得焦点时，辅助技术可能会大声朗读标题，但这不应该是可访问性的依据。
+当包括一个 `pattern` 时，在控件附近的可见文本中提供对模式的描述。此外，包括一个 [`title`](/en-US/docs/Web/HTML/Global_attributes/title) 属性，对该模式进行描述。用户代理可以在约束验证期间使用标题内容来告诉用户该模式不匹配。一些浏览器会显示标题内容的工具提示，以提高视力障碍者的可用性。此外，当控件获得焦点时，辅助技术可能会大声朗读标题，但这不应该是无障碍的依据。
 
 ### 约束验证
 
@@ -72,7 +66,7 @@ input:invalid {
 ```html
 <form>
   <div>
-    <label for="uname">选择一个用户名: </label>
+    <label for="uname">选择一个用户名：</label>
     <input type="text" id="uname" name="name" required size="45"
            pattern="[a-z]{4,8}" title="4 到 8 个小写字母">
     <span class="validity"></span>
@@ -124,15 +118,11 @@ input:valid+span:after {
 
 ## 规范
 
-| 规范                                                                      | Status                   | Comment |
-| ------------------------------------------------------------------------- | ------------------------ | ------- |
-| {{ SpecName('HTML WHATWG', 'forms.html#attr-input-pattern', 'pattern') }} | {{Spec2('HTML WHATWG')}} |         |
-| {{ SpecName('HTML5.1', 'forms.html#attr-input-pattern', 'pattern') }}     | {{Spec2('HTML5.1')}}     |         |
-| {{ SpecName('HTML5 W3C', 'forms.html#attr-input-pattern', 'pattern') }}   | {{Spec2('HTML5 W3C')}}   |         |
+{{Specifications}}
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.attributes.pattern")}}
+{{Compat}}
 
 ## 参见
 

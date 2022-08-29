@@ -53,11 +53,11 @@ J'ai utilisé un mélange de sélecteurs, d'éléments HTML comme `h1` et `h2` ;
 
 Utilisez CSS pour changer l'apparence de cette biographie en modifiant les valeurs des propriétés CSS utilisées :
 
-1.  Affichez le titre de niveau 1 en `hotpink` ;
-2.  Donnez au titre un {{cssxref("border-bottom")}} de `10px dotted` de couleur `purple` ;
-3.  Affichez le titre de niveau 2 en italique ;
-4.  Colorez la `ul` des détails de contacts en {{cssxref("background-color")}} `#eeeeee`, avec un {{cssxref("border")}} de `5px solid purple`. Utilisez la propriété {{cssxref("padding")}} pour éloigner le contenu du bord.
-5.  Faites que les liens apparaissent en `green` lors d'un survol du curseur.
+1. Affichez le titre de niveau 1 en `hotpink` ;
+2. Donnez au titre un {{cssxref("border-bottom")}} de `10px dotted` de couleur `purple` ;
+3. Affichez le titre de niveau 2 en italique ;
+4. Colorez la `ul` des détails de contacts en {{cssxref("background-color")}} `#eeeeee`, avec un {{cssxref("border")}} de `5px solid purple`. Utilisez la propriété {{cssxref("padding")}} pour éloigner le contenu du bord.
+5. Faites que les liens apparaissent en `green` lors d'un survol du curseur.
 
 Vous devriez obtenir un rendu qui ressemble à cela :
 
@@ -73,17 +73,17 @@ Une fois cette tâche accomplie, n'hésitez pas à explorer des propriétés ren
 
 Si vous voulez une évaluation de votre travail, ou si vous êtes coincé et recherchez de l'aide :
 
-1.  Publiez votre code dans un éditeur en ligne tel [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-2.  Si vous êtes à l'aise en anglais :
+1. Publiez votre code dans un éditeur en ligne tel [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+2. Si vous êtes à l'aise en anglais :
 
-    1.  Dans le [forum MDN Discourse](https://discourse.mozilla.org/c/mdn), écrivez un billet pour évaluation et/ou demande d'aide. Ajouter le tag "learning"  à votre post pour que nous puissions le trouver plus facilement. Votre post devrait contenir :
+    1. Dans le [forum MDN Discourse](https://discourse.mozilla.org/c/mdn), écrivez un billet pour évaluation et/ou demande d'aide. Ajouter le tag "learning"  à votre post pour que nous puissions le trouver plus facilement. Votre post devrait contenir :
 
         - Un titre parlant comme "Assessment wanted for CSS First Steps".
         - Des détails sur ce que vous voudriez que l'on fasse — par exemple, ce que vous avez déjà essayé si vous êtes coincé et demandez de l'aide.
         - Un lien vers l'exemple dans l'éditeur en ligne, sur lequel vous demandez une évaluation ou de l'aide : voilà une bonne pratique — il n'est pas commode d'aider quelqu'un coincé sur son code quand on ne peut pas voir ce code...
         - Un lien vers cette page d'évaluation afin que nous puissions voir la question sur laquelle vous demandez de l'aide.
 
-3.  Sinon, n'hésitez pas à contacter @MDNfr sur Twitter.
+3. Sinon, n'hésitez pas à contacter @MDNfr sur Twitter.
 
 ## La suite ?
 
@@ -93,8 +93,8 @@ Bravo, vous avez suivi ce cours jusqu'au bout. Avec votre connaissance de CSS, v
 
 ## Dans ce cours
 
-1.  [Qu'est-ce que CSS ?](/fr/docs/Learn/CSS/First_steps/Qu_est_ce_que_CSS)
-2.  [Commencer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
-3.  [Comment CSS est structuré](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [CSS, comment ça marche ?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [Mettez en œuvre vos connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [Qu'est-ce que CSS ?](/fr/docs/Learn/CSS/First_steps/Qu_est_ce_que_CSS)
+2. [Commencer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
+3. [Comment CSS est structuré](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [CSS, comment ça marche ?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [Mettez en œuvre vos connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

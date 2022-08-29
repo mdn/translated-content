@@ -16,7 +16,9 @@ La méthode `WebGLRenderingContext.enable()` de l'API WebGL active des fonctionn
 
 ## Syntaxe
 
-    void gl.enable(fon);
+```js
+void gl.enable(fon);
+```
 
 ### Paramètres
 

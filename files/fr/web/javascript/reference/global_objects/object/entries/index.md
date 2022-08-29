@@ -20,7 +20,9 @@ L'ordre du tableau renvoyé par cette méthode ne dépend pas de la façon dont 
 
 ## Syntaxe
 
-    Object.entries(obj)
+```js
+Object.entries(obj)
+```
 
 ### Paramètres
 

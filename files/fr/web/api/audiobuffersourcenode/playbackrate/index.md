@@ -5,7 +5,7 @@ translation_of: Web/API/AudioBufferSourceNode/playbackRate
 ---
 {{ APIRef("Web Audio API") }}
 
-La propriété `playbackRate` de l'interface {{ domxref("AudioBufferSourceNode") }} est un {{domxref("AudioParam")}} de type [k-rate](/en-US/docs/DOM/AudioParam#k-rate) qui définit la vitesse à laquelle le contenu audio sera lu.
+La propriété `playbackRate` de l'interface {{ domxref("AudioBufferSourceNode") }} est un {{domxref("AudioParam")}} de type [k-rate](/fr/docs/DOM/AudioParam#k-rate) qui définit la vitesse à laquelle le contenu audio sera lu.
 
 Une valeur de 1.0 (c'est ) indique que le son doit être lu à la vitesse de son taux d'échantillonnage, une valeur inférieure qu'il doit être lu plus lentement, et une valeur supérieure plus rapidement. la valeur par défaut est `1.0`. Pour toute autre valeur l'`AudioBufferSourceNode` rééchantillone le son avant de l'envoyer vers la sortie.
 
@@ -87,15 +87,13 @@ playbackControl.oninput = function() {
 }
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                            | Statut                               | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-playbackRate', 'playbackRate')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioBufferSourceNode.playbackRate")}}
+{{Compat}}
 
 ## Voir aussi
 

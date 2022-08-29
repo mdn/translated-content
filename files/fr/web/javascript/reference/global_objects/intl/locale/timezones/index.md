@@ -13,7 +13,6 @@ Renvoie un tableau avec les fuseaux horaires pris en charge et associés à l'ob
 
 > **Note :** Si l'identifiant de langue Unicode ne contient pas le tiret indiquant la sous-balise de région, la valeur de retour sera `undefined`.
 
-
 ## Exemples
 
 ### Obtenir les fuseaux horaires pris en charge et associés à une locale

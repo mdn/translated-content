@@ -10,7 +10,7 @@ translation_of: Web/API/Document/documentURIObject
 ---
 {{ ApiRef("DOM") }}
 
-La propriété en lecture seule **`Document.documentURIObject`** renvoie un objet {{ Interface("nsIURI") }} représentant l'URI du [document](/fr/docs/Web/API/document).
+La propriété en lecture seule **`Document.documentURIObject`** renvoie un objet `nsIURI` représentant l'URI du [document](/fr/docs/Web/API/document).
 
 Cette propriété fonctionne uniquement pour les scripts privilégiés (UniversalXPConnect), comme le code des extensions. Pour le contenu Web, elle n'a aucune signification particulière et peut être utilisée comme n'importe quelle propriété personnalisée.
 
@@ -24,15 +24,17 @@ var uri = doc.documentURIObject;
 
 ## Exemple
 
-    // Vérifie que le schéma d'URI pour l'onglet courant dans Firefox est «&nbsp;http&nbsp;»,
-    // en supposant que ce code s'exécute dans le contexte de browser.xul
+```js
+// Vérifie que le schéma d'URI pour l'onglet courant dans Firefox est «&nbsp;http&nbsp;»,
+// en supposant que ce code s'exécute dans le contexte de browser.xul
 
-    var uriObj = content.document.documentURIObject;
-    var uriPort = uriObj.port;
+var uriObj = content.document.documentURIObject;
+var uriPort = uriObj.port;
 
-    if (uriObj.schemeIs('http')) {
-      ...
-    }
+if (uriObj.schemeIs('http')) {
+  ...
+}
+```
 
 ## Spécifications
 

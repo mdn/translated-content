@@ -3,18 +3,18 @@ title: 304 Not Modified
 slug: Web/HTTP/Status/304
 translation_of: Web/HTTP/Status/304
 ---
-<div> </div>
+<div> </div>
 
-<div>El código HTTP de redirección  <code><strong>304 Not Modified</strong></code> en el response de la petición indica que no hay necesidad de retransmitir los recursos solicitados. Es una redirección implícita a un elemento/recurso de caché.</div>
+<div>El código HTTP de redirección  <code><strong>304 Not Modified</strong></code> en el response de la petición indica que no hay necesidad de retransmitir los recursos solicitados. Es una redirección implícita a un elemento/recurso de caché.</div>
 
-<div>Esto sucede cuando el método de la solicitud es {{glossary("seguro")}} ({{glossary("safe")}}), como en el las peticiones con métodos {{HTTPMethod("GET")}} o {{HTTPMethod("HEAD")}}, o cuando el request (petición) está condicionada y usa la cabecera {{HTTPHeader("If-None-Match")}} o un {{HTTPHeader("If-Modified-Since")}}</div>
+<div>Esto sucede cuando el método de la solicitud es {{glossary("seguro")}} ({{glossary("safe")}}), como en el las peticiones con métodos {{HTTPMethod("GET")}} o {{HTTPMethod("HEAD")}}, o cuando el request (petición) está condicionada y usa la cabecera {{HTTPHeader("If-None-Match")}} o un {{HTTPHeader("If-Modified-Since")}}</div>
 
-<div>El response {{HTTPStatus("200")}} <code>OK</code> habría incluido los encabezados {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}}, {{HTTPHeader("Date")}}, {{HTTPHeader("ETag")}}, {{HTTPHeader("Expires")}}, y {{HTTPHeader("Vary")}}.</div>
+<div>El response {{HTTPStatus("200")}} <code>OK</code> habría incluido los encabezados {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}}, {{HTTPHeader("Date")}}, {{HTTPHeader("ETag")}}, {{HTTPHeader("Expires")}}, y {{HTTPHeader("Vary")}}.</div>
 
-<div> </div>
+<div> </div>
 
 <div class="note">
-<p>Muchos <a href="/en-US/docs/Tools/Network_Monitor">developer tools' network panels</a> (paneles de red de desarrollo) de los navegadores crean extraños request que conducen a un "response(respuesta del servidor) <code>304</code> ", entonces el acceso al caché local es accesible a los desarrollodares.</p>
+<p>Muchos <a href="/en-US/docs/Tools/Network_Monitor">developer tools' network panels</a> (paneles de red de desarrollo) de los navegadores crean extraños request que conducen a un "response(respuesta del servidor) <code>304</code> ", entonces el acceso al caché local es accesible a los desarrollodares.</p>
 </div>
 
 <h2 id="Status">Status</h2>

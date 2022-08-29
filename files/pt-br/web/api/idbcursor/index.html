@@ -7,7 +7,7 @@ translation_of: Web/API/IDBCursor
 
 <p>O <code><strong>IDBCursor </strong></code>é uma interface da <a href="/en-US/docs/IndexedDB">API IndexedDB</a> que representa o <a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_cursor">cursor</a> para atravessar ou interagir <span id="result_box" lang="pt"><span class="hps">sobre</span> <span class="hps">vários registros</span> <span class="hps">em</span> <span class="hps">um banco de dados</span><span>.</span></span></p>
 
-<p><span id="result_box" lang="pt"><span class="hps">O</span> <span class="hps">cursor</span> <span class="hps">tem uma fonte</span> <span class="hps">que indica qual</span> <span class="hps">índice ou</span> <span class="hps">armazenamento o objeto</span> <span class="hps">está sobre a</span></span><span lang="pt"><span class="hps"> iteração</span><span>.</span> <span class="hps">Ele tem uma posição</span> <span class="hps">dentro do intervalo</span><span>,</span> <span class="hps">e</span> <span class="hps">move-se</span> <span class="hps">numa direcção</span> <span class="hps">que</span> <span class="hps">é</span> <span class="hps">aumentar ou diminuir</span> <span class="hps">na ordem</span> <span class="hps">de</span> <span class="hps">chaves</span> <span class="hps">ficha</span><span>.</span> <span class="hps">O</span> <span class="hps">cursor</span> <span class="hps">permite que um aplicativo</span> <span class="hps">para processar</span> <span class="hps">de forma assíncrona</span> <span class="hps">todos os registros</span> <span class="hps">na faixa</span> <span class="hps">do</span> <span class="hps">cursor.</span></span></p>
+<p><span id="result_box" lang="pt"><span class="hps">O</span> <span class="hps">cursor</span> <span class="hps">tem uma fonte</span> <span class="hps">que indica qual</span> <span class="hps">índice ou</span> <span class="hps">armazenamento o objeto</span> <span class="hps">está sobre a</span></span><span lang="pt"><span class="hps"> iteração</span><span>.</span> <span class="hps">Ele tem uma posição</span> <span class="hps">dentro do intervalo</span><span>,</span> <span class="hps">e</span> <span class="hps">move-se</span> <span class="hps">numa direcção</span> <span class="hps">que</span> <span class="hps">é</span> <span class="hps">aumentar ou diminuir</span> <span class="hps">na ordem</span> <span class="hps">de</span> <span class="hps">chaves</span> <span class="hps">ficha</span><span>.</span> <span class="hps">O</span> <span class="hps">cursor</span> <span class="hps">permite que um aplicativo</span> <span class="hps">para processar</span> <span class="hps">de forma assíncrona</span> <span class="hps">todos os registros</span> <span class="hps">na faixa</span> <span class="hps">do</span> <span class="hps">cursor.</span></span></p>
 
 <p><span id="result_box" lang="pt"><span class="hps">Pode</span> <span class="hps">ter um número ilimitado</span> <span class="hps">de</span> <span class="hps">cursores</span> <span class="hps">ao mesmo</span> <span class="hps">tempo</span><span>.</span> <span class="hps">Você sempre consegue</span> <span class="hps">o mesmo objeto</span> <span class="hps">IDBCursor</span> <span class="hps">representando</span> <span class="hps">um determinado</span> <span class="hps">cursor.</span> <span class="hps">As operações são</span> <span class="hps">realizadas</span> <span class="hps">na</span> <span class="hps">loja de</span> <span class="hps">índice ou</span> <span class="hps">objeto subjacente</span><span>.</span></span></p>
 
@@ -56,7 +56,7 @@ translation_of: Web/API/IDBCursor
 
 <h2 id="Example">Example</h2>
 
-<p>In this simple fragment we create a transaction, retrieve an object store, then use a cursor to iterate through all the records in the object store. T<span style="line-height: 1.5;">he cursor does not require us to select the data based on a key; we can just grab all of it. Also note that in each iteration of the loop, you can grab data from the current record under the cursor object using </span><code style="font-style: normal; line-height: 1.5;">cursor.value.foo</code><span style="line-height: 1.5;">. For a complete working example, see our <a href="https://github.com/mdn/IDBcursor-example/">IDBCursor example</a></span><span style="line-height: 1.5;"> (</span><a href="http://mdn.github.io/IDBcursor-example/" style="line-height: 1.5;">view example live</a><span style="line-height: 1.5;">.)</span></p>
+<p>In this simple fragment we create a transaction, retrieve an object store, then use a cursor to iterate through all the records in the object store. T<span style="line-height: 1.5;">he cursor does not require us to select the data based on a key; we can just grab all of it. Also note that in each iteration of the loop, you can grab data from the current record under the cursor object using </span><code style="font-style: normal; line-height: 1.5;">cursor.value.foo</code><span style="line-height: 1.5;">. For a complete working example, see our <a href="https://github.com/mdn/IDBcursor-example/">IDBCursor example</a></span><span style="line-height: 1.5;"> (</span><a href="http://mdn.github.io/IDBcursor-example/" style="line-height: 1.5;">view example live</a><span style="line-height: 1.5;">.)</span></p>
 
 <pre><span style="line-height: 1.5;">function displayData() {</span>
   var transaction = db.transaction(['rushAlbumList'], "readonly");
@@ -88,85 +88,14 @@ translation_of: Web/API/IDBCursor
   <tr>
    <td>{{SpecName('IndexedDB', '#idl-def-IDBCursor', 'cursor')}}</td>
    <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>23{{property_prefix("webkit")}}<br>
-    24</td>
-   <td>10 {{property_prefix("moz")}}<br>
-    {{CompatGeckoDesktop("16.0")}}</td>
-   <td>10, partial</td>
-   <td>15</td>
-   <td>7.1</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("37.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.4</td>
-   <td>{{CompatGeckoMobile("22.0")}}</td>
-   <td>1.0.1</td>
-   <td>10</td>
-   <td>22</td>
-   <td>8</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("37.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div class="warning">
-<p>Be careful in Chrome as it still implements the old specification along with the new one. Similarly it still has the prefixed <code>webkitIndexedDB</code> property even if the unprefixed <code>indexedDB</code> is present.</p>
-</div>
+{{Compat("api.IDBCursor")}}
 
 <h2 id="See_also">See also</h2>
 

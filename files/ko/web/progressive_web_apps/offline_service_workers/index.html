@@ -108,7 +108,7 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <p>여기서 두 가지에 대한 설명이 필요합니다: {{domxref("ExtendableEvent.waitUntil")}}이 무엇을 하는지, 그리고 {{domxref("caches","Caches")}} 객체가 무엇인지.</p>
 
-<p>Service worker는 <code>waitUntil</code> 안의 코드가 실행되기전까지 설치되지 않습니다. 이는 promise를 반환합니다. 설치에 약간의 시간이 걸릴 수 있으므로 완료될 때까지 기다려야하기 때문에 이 접근법이 필요합니다.</p>
+<p>Service worker는 <code>waitUntil</code> 안의 코드가 실행되기전까지 설치되지 않습니다. 이는 promise를 반환합니다. 설치에 약간의 시간이 걸릴 수 있으므로 완료될 때까지 기다려야하기 때문에 이 접근법이 필요합니다.</p>
 
 <p><code>Caches</code> 는 데이터를 저장할 수 있도록 주어진 Service Worker의 범위 내에서 사용할 수 있는 특별한 객체입니다. 웹 저장소는 동기적이므로 <a href="/ko/docs/Web/API/Web_Storage_API">웹 저장소</a>로의 저장은 동작하지 않을 것입니다. Service Worker는 Cache API를 대신 사용합니다.</p>
 
@@ -120,7 +120,7 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <h3 id="패치_응답">패치 응답</h3>
 
-<p>처리를 위한 <code>fetch</code> 이벤트도 있습니다. 이는 앱으로부터 HTTP 요청이 출발할 때 마다 발생합니다. 이는 요청을 가로채 커스텀 응답으로 응답할 수 있어 매우 유용합니다.<br>
+<p>처리를 위한 <code>fetch</code> 이벤트도 있습니다. 이는 앱으로부터 HTTP 요청이 출발할 때 마다 발생합니다. 이는 요청을 가로채 커스텀 응답으로 응답할 수 있어 매우 유용합니다.<br>
  다음은 간단한 사용 예시입니다.</p>
 
 <pre class="brush: js">self.addEventListener('fetch', function(e) {
@@ -176,7 +176,7 @@ self.addEventListener('install', function(e) {
 
 <h2 id="캐시_지우기">캐시 지우기</h2>
 
-<p>생략했던 <code>activate</code> 이벤트를 기억하시나요? 더 이상 필요하지 않은 오래된 캐시를 지우는데 사용할 수 있습니다.</p>
+<p>생략했던 <code>activate</code> 이벤트를 기억하시나요? 더 이상 필요하지 않은 오래된 캐시를 지우는데 사용할 수 있습니다.</p>
 
 <pre class="brush: js">self.addEventListener('activate', function(e) {
   e.waitUntil(

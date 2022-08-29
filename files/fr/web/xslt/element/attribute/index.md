@@ -12,9 +12,11 @@ L'élément `<xsl:attribute>` crée un attribut dans le document de sortie, en u
 
 ### Syntaxe
 
-    <xsl:attribute name=NOM namespace=URI>
-    	MODÈLE
-    </xsl:attribute>
+```xml
+<xsl:attribute name=NOM namespace=URI>
+  MODÈLE
+</xsl:attribute>
+```
 
 ### Attributs obligatoires
 

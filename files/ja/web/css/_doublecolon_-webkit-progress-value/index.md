@@ -36,11 +36,11 @@ translation_of: Web/CSS/::-webkit-progress-value
 
 ```css
 progress {
-  -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 ::-webkit-progress-value {
-  background-color: orange;
+  background-color: orange;
 }
 ```
 

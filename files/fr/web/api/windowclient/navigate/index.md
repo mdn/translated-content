@@ -18,9 +18,11 @@ La méthode **`navigate()`** de l'interface  {{domxref("WindowClient")}} charge 
 
 ## Syntaxe
 
-    WindowClient.navigate(url).then(function(WindowClient) {
-      // do something with your WindowClient after navigation
-    });
+```js
+WindowClient.navigate(url).then(function(WindowClient) {
+  // do something with your WindowClient after navigation
+});
+```
 
 ### Paramètres
 

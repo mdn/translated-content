@@ -20,7 +20,7 @@ original_slug: Web/JavaScript/Guide/Trabalhando_com_Objetos
 
 <p>Objetos em JavaScript, assim como em muitas outras linguagens de programação, podem ser comparados com objetos na vida real. O conceito de objetos em JavaScript pode ser entendido com objetos tangíveis da vida real.</p>
 
-<p>Em JavaScript, um objeto é uma entidade independente, com propriedades e tipos. Compare-o com uma xícara, por exemplo. Uma xícara é um objeto, com propriedades. Uma xícara tem uma cor, uma forma, peso, um material de composição, etc. Da mesma forma, objetos em JavaScript podem ter propriedades, que definem suas características.</p>
+<p>Em JavaScript, um objeto é uma entidade independente, com propriedades e tipos. Compare-o com uma xícara, por exemplo. Uma xícara é um objeto, com propriedades. Uma xícara tem uma cor, uma forma, peso, um material de composição, etc. Da mesma forma, objetos em JavaScript podem ter propriedades, que definem suas características.</p>
 
 <h2 id="Objetos_e_propriedades">Objetos e propriedades</h2>
 
@@ -50,7 +50,7 @@ meuCarro["modelo"] = "Mustang";
 meuCarro["ano"] = 1969;
 </pre>
 
-<p>Um nome de propriedade de um objeto pode ser qualquer string JavaScript válida, ou qualquer coisa que possa ser convertida em uma string, incluindo uma string vazia. No entanto, qualquer nome e propriedade que não é um identificador JavaScript válido (por exemplo, um nome de propriedade que tem um espaço ou um hífen, ou que começa com um número) só pode ser acessado(a) usando-se a notação de colchetes. Essa notação é também muito útil quando nomes de propriedades devem ser determinados dinamicamente (quando o nome da propriedade não é determinado até o momento de execução). Exemplos são mostrados a seguir:</p>
+<p>Um nome de propriedade de um objeto pode ser qualquer string JavaScript válida, ou qualquer coisa que possa ser convertida em uma string, incluindo uma string vazia. No entanto, qualquer nome e propriedade que não é um identificador JavaScript válido (por exemplo, um nome de propriedade que tem um espaço ou um hífen, ou que começa com um número) só pode ser acessado(a) usando-se a notação de colchetes. Essa notação é também muito útil quando nomes de propriedades devem ser determinados dinamicamente (quando o nome da propriedade não é determinado até o momento de execução). Exemplos são mostrados a seguir:</p>
 
 <pre class="brush: js">var meuObj = new Object(),
     str = "minhaString",
@@ -150,7 +150,7 @@ meuCarro.ano = 1969</pre>
 
 <p>Se um objeto é criado com um inicializador de objeto em um script de alto nível, JavaScript interpreta o objeto a cada vez que avalia uma expressão contendo o objeto literal. Além disso, um inicializador usado em uma função é criado toda vez que a função é chamada.</p>
 
-<p>O seguinte comando cria um objeto e o atribui à variável <code>x</code> somente se a expressão <code>cond</code> é verdadeira.</p>
+<p>O seguinte comando cria um objeto e o atribui à variável <code>x</code> somente se a expressão <code>cond</code> é verdadeira.</p>
 
 <pre class="brush: js">if (cond) var x = {hi: "there"};
 </pre>
@@ -267,23 +267,23 @@ peixe<span class="punctuation token">.</span><span class="function token">qualTi
 
 <p>Você pode se referir a uma propriedade de um objeto pelo seu nome de propriedade ou pelo seu índice ordinal. Se você inicialmente definiu uma propriedade pelo nome, você deve sempre se referir a ela pelo nome, e se você inicialmente definir uma propriedade por um índice, você deve sempre se referir a ela pelo índice.</p>
 
-<p>Esta restrição se aplica quando  você cria um objeto e suas propriedades com uma função construtora (como fizemos anteriormente com o <font face="Consolas, Liberation Mono, Courier, monospace">objeto do tipo carro</font>) e quando você define propriedades individuais explicitamente (por exemplo, <code>meuCarro.cor = "vermelho"</code>). Se você inicialmente definir uma propriedade do objeto com um índice, tal como <code>meuCarro[5] = "25 mpg"</code>, você pode subsequentemente referir-se á propriedade somente como <code>meuCarro[5]</code>.</p>
+<p>Esta restrição se aplica quando  você cria um objeto e suas propriedades com uma função construtora (como fizemos anteriormente com o <font face="Consolas, Liberation Mono, Courier, monospace">objeto do tipo carro</font>) e quando você define propriedades individuais explicitamente (por exemplo, <code>meuCarro.cor = "vermelho"</code>). Se você inicialmente definir uma propriedade do objeto com um índice, tal como <code>meuCarro[5] = "25 mpg"</code>, você pode subsequentemente referir-se á propriedade somente como <code>meuCarro[5]</code>.</p>
 
-<p>A exceção a esta regra é a objetos refletidos a partir do HTML, como o conjunto de formulários. Você pode sempre se referir a objetos nessas matrizes por seu número de ordem (com base em onde eles aparecem no documento) ou seu nome (se definido). Por exemplo, se a segunda tag <code>&lt;FORM&gt;</code> em um  documento tem um atributo <code>NAME</code> de "meuFormulario", você pode se referir ao formulário como <code>document.forms[1]</code> ou <code>document.forms["meuFormulario"] </code>ou <code>document.meuFormulario</code>.</p>
+<p>A exceção a esta regra é a objetos refletidos a partir do HTML, como o conjunto de formulários. Você pode sempre se referir a objetos nessas matrizes por seu número de ordem (com base em onde eles aparecem no documento) ou seu nome (se definido). Por exemplo, se a segunda tag <code>&lt;FORM&gt;</code> em um  documento tem um atributo <code>NAME</code> de "meuFormulario", você pode se referir ao formulário como <code>document.forms[1]</code> ou <code>document.forms["meuFormulario"] </code>ou <code>document.meuFormulario</code>.</p>
 
-<h2 id="Definindo_propriedades_para_um_tipo_de_objeto">Definindo propriedades para um tipo de objeto</h2>
+<h2 id="Definindo_propriedades_para_um_tipo_de_objeto">Definindo propriedades para um tipo de objeto</h2>
 
-<p>Você pode adicionar uma propriedade a um tipo de objeto definido anteriormente, utilizando a propriedade prototype. Esta define uma propriedade que é partilhada por todos os objetos do tipo especificado, em vez de apenas uma instância do objeto. O código a seguir adiciona uma propriedade <code>cor</code> para todos os objetos do tipo C<code>arro</code>, em seguida adiciona um valor a propriedade <code>cor</code> do objeto <code>carro1</code>.</p>
+<p>Você pode adicionar uma propriedade a um tipo de objeto definido anteriormente, utilizando a propriedade prototype. Esta define uma propriedade que é partilhada por todos os objetos do tipo especificado, em vez de apenas uma instância do objeto. O código a seguir adiciona uma propriedade <code>cor</code> para todos os objetos do tipo C<code>arro</code>, em seguida adiciona um valor a propriedade <code>cor</code> do objeto <code>carro1</code>.</p>
 
 <pre class="brush: js">Carro.prototype.cor = null;
 carro1.cor = "preto";
 </pre>
 
-<p>Consulte a <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function/prototype">propriedade</a> <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function/prototype" title="en-US/docs/JavaScript/Reference/Global Objects/Function/prototype"><code>prototype</code></a> do objeto <code>Function </code>na <a href="/en-US/docs/JavaScript/Reference">Referência</a> <a href="/en-US/docs/JavaScript/Reference" title="en-US/docs/JavaScript/Reference">JavaScript</a>  para mais informações.</p>
+<p>Consulte a <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function/prototype">propriedade</a> <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function/prototype" title="en-US/docs/JavaScript/Reference/Global Objects/Function/prototype"><code>prototype</code></a> do objeto <code>Function </code>na <a href="/en-US/docs/JavaScript/Reference">Referência</a> <a href="/en-US/docs/JavaScript/Reference" title="en-US/docs/JavaScript/Reference">JavaScript</a>  para mais informações.</p>
 
 <h2 id="Definindo_métodos">Definindo métodos</h2>
 
-<p>Um <em>método</em> é uma função associada a um objeto, ou, simplesmente, um método é uma propriedade de um objeto que é uma função. Métodos são definidos da forma que as funções normais são definidas, exceto que eles tenham que ser atribuídos como propriedade de um objeto. São exemplos:</p>
+<p>Um <em>método</em> é uma função associada a um objeto, ou, simplesmente, um método é uma propriedade de um objeto que é uma função. Métodos são definidos da forma que as funções normais são definidas, exceto que eles tenham que ser atribuídos como propriedade de um objeto. São exemplos:</p>
 
 <pre class="brush: js">nomeDoObjeto.nomedometodo = nome_da_funcao;
 
@@ -294,14 +294,14 @@ var meuObjeto = {
 };
 </pre>
 
-<p>Onde <code>nomeDoObjeto</code> é um objeto existente, <code>nomedometodo</code> é o nome que você atribuiu ao método, e <code>nome_da_funcao</code> é o nome da função.</p>
+<p>Onde <code>nomeDoObjeto</code> é um objeto existente, <code>nomedometodo</code> é o nome que você atribuiu ao método, e <code>nome_da_funcao</code> é o nome da função.</p>
 
 <p>Em seguida, você pode chamar o método no contexto do objeto da seguinte forma:</p>
 
 <pre class="brush: js">objeto.<code>nomedometodo</code>(parametros);
 </pre>
 
-<p>Você pode definir métodos para um tipo de objeto incluindo uma definição de metodo na função construtora do objeto. Por exemplo, você poderia definir uma função que iria formatar e mostrar as propriedades do objeto <code>carro</code> previamente definido; por exemplo,</p>
+<p>Você pode definir métodos para um tipo de objeto incluindo uma definição de metodo na função construtora do objeto. Por exemplo, você poderia definir uma função que iria formatar e mostrar as propriedades do objeto <code>carro</code> previamente definido; por exemplo,</p>
 
 <pre class="brush: js">function mostreCarro() {
   var resultado = "Um belo " + this.ano + " " + this.fabricacao
@@ -312,7 +312,7 @@ var meuObjeto = {
 
 <p>onde <code>pretty_print</code> é uma função que mostra uma linha horizontal e uma string. Observe o uso de <code>this</code> para referenciar o objeto ao qual o método pertence.</p>
 
-<p>Você pode fazer desta função um método de <code>carro,</code> adicionando seu estado à definição do objeto.</p>
+<p>Você pode fazer desta função um método de <code>carro,</code> adicionando seu estado à definição do objeto.</p>
 
 <pre class="brush: js">this.mostreCarro = mostreCarro;
 </pre>
@@ -387,11 +387,11 @@ console<span class="punctuation token">.</span><span class="function token">log<
 <ul>
  <li><code>o.a</code> — um número</li>
  <li><code>o.b</code> — um getter que retorna <code>o.a</code> + 1</li>
- <li><code>o.c</code> — um setter que define o valor de <code>o.a</code> pela metade do valor definindo para <code>o.c</code></li>
+ <li><code>o.c</code> — um setter que define o valor de <code>o.a</code> pela metade do valor definindo para <code>o.c</code></li>
 </ul>
 
-<p>Observe que nomes de função de getters e setters definidos em um objeto literal usando "[gs]et <em>property</em>()" (ao contrário de <code>__define[GS]etter__</code> ) não são os próprios nomes dos getters, embora a sintaxe <code>[gs]et <em>propertyName</em>(){ }</code> possa  induzir ao erro e você pensar de outra forma. Para nomear uma função getter ou setter usando a sintaxe "[gs]et <em>property</em>()", define explicitamente um função nomeada programaticamente usando <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineProperty" title="en-US/docs/Core JavaScript 1.5 Reference/Global
-Objects/Object/defineProperty">Object.defineProperty</a></code> (ou o legado fallback <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineGetter" title="en-US/docs/Core JavaScript 1.5 Reference/Global
+<p>Observe que nomes de função de getters e setters definidos em um objeto literal usando "[gs]et <em>property</em>()" (ao contrário de <code>__define[GS]etter__</code> ) não são os próprios nomes dos getters, embora a sintaxe <code>[gs]et <em>propertyName</em>(){ }</code> possa  induzir ao erro e você pensar de outra forma. Para nomear uma função getter ou setter usando a sintaxe "[gs]et <em>property</em>()", define explicitamente um função nomeada programaticamente usando <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineProperty" title="en-US/docs/Core JavaScript 1.5 Reference/Global
+Objects/Object/defineProperty">Object.defineProperty</a></code> (ou o legado fallback <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineGetter" title="en-US/docs/Core JavaScript 1.5 Reference/Global
 Objects/Object/defineGetter">Object.prototype.__defineGetter__</a></code>).</p>
 
 <p>O código a seguir ilustra como getters e setters podem extender o protótipo <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code> para adicionar a propriedade <code>ano</code> para todas as instâncias de classes <code>Date</code> pré-definidas. Ele usa os métodos <code>getFullYear</code> e <code>setFullYear</code> existentes da classe <code>Date</code> para suportar o getter e setter da propriedade <code>ano</code>.</p>
@@ -429,20 +429,20 @@ console<span class="punctuation token">.</span><span class="function token">log<
 </pre>
 
 <p>Getters e setters podem também ser adicionado em um objeto a qualquer hora depois da criação usando o método <code>Object.defineProperties</code>. O primeiro parâmetro deste método é o objeto no qual você quer definir o getter ou setter. O segundo parâmetro é um objeto cujos nomes das propriedades são os nomes getter ou setter, e cujo valores das propriedades são objetos para definição de funções getter ou setter. Aqui está um exemplo que define o mesmo getter e setter usado no exemplo anterior:<br>
-  </p>
+  </p>
 
 <pre class="brush: js">var o = { a:0 }
 
 Object.defineProperties(o, {
-    "b": { get: function () { return this.a + 1; } },
-    "c": { set: function (x) { this.a = x / 2; } }
+    "b": { get: function () { return this.a + 1; } },
+    "c": { set: function (x) { this.a = x / 2; } }
 });
 
 o.c = 10 // Roda o setter, que associa 10 / 2 (5) para a propriedade 'a'
 console.log(o.b) // Roda o getter, que yields a + 1 ou 6
 </pre>
 
-<p>Escolher qual das duas formas depende do seu estilo de programação e tarefa na mão. Se você já vai para o inicializador de objeto ao definir um protótipo, provavelmente a maior parte do tempo escolherá a primeira forma. Esta forma é mais compacta e natural. No entanto, se você precisar adicionar getters e setters mais tarde - porque você não escreveu o protótipo ou objeto particular - então a segunda forma é a única possível. A segunda forma provavelmente melhor representa a natureza dinâmica do JavaScript - mas pode tornar o código difícil de ler e entender.</p>
+<p>Escolher qual das duas formas depende do seu estilo de programação e tarefa na mão. Se você já vai para o inicializador de objeto ao definir um protótipo, provavelmente a maior parte do tempo escolherá a primeira forma. Esta forma é mais compacta e natural. No entanto, se você precisar adicionar getters e setters mais tarde - porque você não escreveu o protótipo ou objeto particular - então a segunda forma é a única possível. A segunda forma provavelmente melhor representa a natureza dinâmica do JavaScript - mas pode tornar o código difícil de ler e entender.</p>
 
 <h2 id="Removendo_propriedades">Removendo propriedades</h2>
 
@@ -458,7 +458,7 @@ delete myobj.a;
 console.log ("a" in myobj) // yields "false"
 </pre>
 
-<p>Você também pode usar <code>delete</code> para remover uma variável global se a <code>var</code> keyword não estiver sendo usada para declarar a variável:</p>
+<p>Você também pode usar <code>delete</code> para remover uma variável global se a <code>var</code> keyword não estiver sendo usada para declarar a variável:</p>
 
 <pre class="brush: js">g = 17;
 delete g;
@@ -466,7 +466,7 @@ delete g;
 
 <h2 id="Comparando_Objetos">Comparando Objetos</h2>
 
-<p>Em JavaScript, objetos são um tipo de referência. Dois objetos distintos nunca são iguais, mesmo que tenham as mesmas propriedades. Apenas comparando o mesmo objeto de referência com ele mesmo produz verdadeiro.</p>
+<p>Em JavaScript, objetos são um tipo de referência. Dois objetos distintos nunca são iguais, mesmo que tenham as mesmas propriedades. Apenas comparando o mesmo objeto de referência com ele mesmo produz verdadeiro.</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Duas variáveis, dois objetos distintos com as mesmas propriedades</span>
 <span class="keyword token">var</span> fruit <span class="operator token">=</span> <span class="punctuation token">{</span>name<span class="punctuation token">:</span> <span class="string token">"apple"</span><span class="punctuation token">}</span><span class="punctuation token">;</span>
@@ -483,13 +483,13 @@ fruit <span class="operator token">===</span> fruitbear <span class="comment tok
 fruit <span class="operator token">==</span> fruitbear <span class="comment token">// return true</span>
 fruit <span class="operator token">===</span> fruitbear <span class="comment token">// return true</span></code></pre>
 
-<p>Para mais informações sobre comparaçāo de operadores, veja <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">Operadores de comparaçāo</a>.</p>
+<p>Para mais informações sobre comparaçāo de operadores, veja <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">Operadores de comparaçāo</a>.</p>
 
 <h2 id="Veja_também">Veja também</h2>
 
 <ul>
- <li>Para se aprofundar, leia sobre os <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model">detalhes do modelo de objetos  javaScript</a>.</li>
- <li>Para saber mais sobre classes em ECMAScript6 (uma nova forma de criar objetos), veja o capítulo <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">JavaScript classes</a>.</li>
+ <li>Para se aprofundar, leia sobre os <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model">detalhes do modelo de objetos  javaScript</a>.</li>
+ <li>Para saber mais sobre classes em ECMAScript6 (uma nova forma de criar objetos), veja o capítulo <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">JavaScript classes</a>.</li>
 </ul>
 
 <div>{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}</div>

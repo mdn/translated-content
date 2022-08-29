@@ -10,19 +10,19 @@ original_slug: Web/CSS/Transiciones_de_CSS
 ---
 <p>{{ SeeCompatTable() }}</p>
 
-<p>Las transiciones CSS, parte del borrador de la especificación CSS3, proporcionan una forma de animar los cambios de las propiedades CSS, en lugar de que los cambios surtan efecto de manera instantánea. Por ejemplo, si cambias el color de un elemento de blanco a negro, normalmente el cambio es instantáneo. Al habilitar las transiciones CSS, el cambio sucede en un intervalo de tiempo que puedes especificar, siguiendo una curva de aceleración que puedes personalizar.</p>
+<p>Las transiciones CSS, parte del borrador de la especificación CSS3, proporcionan una forma de animar los cambios de las propiedades CSS, en lugar de que los cambios surtan efecto de manera instantánea. Por ejemplo, si cambias el color de un elemento de blanco a negro, normalmente el cambio es instantáneo. Al habilitar las transiciones CSS, el cambio sucede en un intervalo de tiempo que puedes especificar, siguiendo una curva de aceleración que puedes personalizar.</p>
 
-<div class="note"><strong>Nota:</strong> como la especificación de las transiciones CSS todavía se encuentra en fase de borrador, a todas las propiedades asociadas con ellas se les añade el prefijo "-moz-" para usarse en Gecko. Para la compatibilidad con WebKit, se aconseja usar también el prefijo "-webkit-" y para la compatibilidad con Opera, el prefijo "-o-". Es decir, por ejemplo,  la propiedad de transición se especificaría como <code>-moz-transition</code>, <code>-webkit-transition </code>y <code>-o-transition</code>.</div>
+<div class="note"><strong>Nota:</strong> como la especificación de las transiciones CSS todavía se encuentra en fase de borrador, a todas las propiedades asociadas con ellas se les añade el prefijo "-moz-" para usarse en Gecko. Para la compatibilidad con WebKit, se aconseja usar también el prefijo "-webkit-" y para la compatibilidad con Opera, el prefijo "-o-". Es decir, por ejemplo,  la propiedad de transición se especificaría como <code>-moz-transition</code>, <code>-webkit-transition </code>y <code>-o-transition</code>.</div>
 
-<h2 id="Las_propiedades_de_transición_CSS">Las propiedades de transición CSS</h2>
+<h2 id="Las_propiedades_de_transición_CSS">Las propiedades de transición CSS</h2>
 
-<p>Las transiciones CSS se controlan mediante la propiedad abreviada {{ cssxref("transition") }}. Es preferible utilizar este método porque de esta forma se evita que la longitud de la lista de parámetros sea diferente, lo que puede dar lugar a tener que emplear un tiempo considerablemente largo en depurar el código CSS.</p>
+<p>Las transiciones CSS se controlan mediante la propiedad abreviada {{ cssxref("transition") }}. Es preferible utilizar este método porque de esta forma se evita que la longitud de la lista de parámetros sea diferente, lo que puede dar lugar a tener que emplear un tiempo considerablemente largo en depurar el código CSS.</p>
 
 <p>Puedes controlar los componentes individuales de la transición usando las siguientes subpropiedades:</p>
 
 <dl>
  <dt>{{ cssxref("transition-property") }}</dt>
- <dd>Especifica el nombre o nombres de las propiedades CSS a las que deberían aplicarse las transiciones. Sólo las propiedades que se enumeran aquí son animadas durante las transiciones; los cambios en el resto de las propiedades suceden de manera instantánea como siempre.</dd>
+ <dd>Especifica el nombre o nombres de las propiedades CSS a las que deberían aplicarse las transiciones. Sólo las propiedades que se enumeran aquí son animadas durante las transiciones; los cambios en el resto de las propiedades suceden de manera instantánea como siempre.</dd>
  <dt>{{ cssxref("transition-duration") }}</dt>
  <dd>Especifica la duración en la que sucederán las transiciones. Puedes especificar una única duración que se aplique a todas las propiedades durante la transición o valores múltiples que permitan a cada propiedad de transición un período de tiempo diferente.</dd>
  <dt>{{ cssxref("transition-timing-function") }}</dt>
@@ -73,7 +73,7 @@ original_slug: Web/CSS/Transiciones_de_CSS
   </tr>
   <tr>
    <td>{{ cssxref("background-position") }}</td>
-   <td>{{cssxref("&lt;percentage&gt;")}} | {{cssxref("&lt;length&gt;")}}</td>
+   <td>{{cssxref("&lt;percentage&gt;")}} | {{cssxref("&lt;length&gt;")}}</td>
   </tr>
   <tr>
    <td>{{ cssxref("background-size") }}</td>
@@ -185,10 +185,10 @@ original_slug: Web/CSS/Transiciones_de_CSS
   </tr>
   <tr>
    <td>{{ cssxref("line-height") }}</td>
-   <td>número | {{cssxref("&lt;percentage&gt;")}} | {{cssxref("&lt;length&gt;")}}</td>
+   <td>número | {{cssxref("&lt;percentage&gt;")}} | {{cssxref("&lt;length&gt;")}}</td>
   </tr>
   <tr>
-   <td>{{ cssxref("margin") }} (including sub-properties)</td>
+   <td>{{ cssxref("margin") }} (including sub-properties)</td>
    <td>{{cssxref("&lt;length&gt;")}}</td>
   </tr>
   <tr>
@@ -319,30 +319,30 @@ original_slug: Web/CSS/Transiciones_de_CSS
 <p>Si cualquier lista de valores de propiedades es más corta que las otras, sus valores se repiten para hacer que coincidan. Por ejemplo:</p>
 
 <pre class="brush: css">div {
-  transition-property: opacity, left, top, height;
-  transition-duration: 3s, 5s;
+  transition-property: opacity, left, top, height;
+  transition-duration: 3s, 5s;
 }
 </pre>
 
 <p>Se considera como si fuera:</p>
 
 <pre class="brush: css">div {
-  transition-property: opacity, left, top, height;
-  transition-duration: 3s, 5s, 3s, 5s;
+  transition-property: opacity, left, top, height;
+  transition-duration: 3s, 5s, 3s, 5s;
 }</pre>
 
 <p>De manera similar, si cualquier lista de valores de propiedades es más larga que la de {{ cssxref("transition-property") }}, se trunca, de forma que si tienes la siguiente CSS:</p>
 
 <pre class="brush: css">div {
-  transition-property: opacity, left;
-  transition-duration: 3s, 5s, 2s, 1s;
+  transition-property: opacity, left;
+  transition-duration: 3s, 5s, 2s, 1s;
 }</pre>
 
 <p>Se interpreta como:</p>
 
 <pre class="brush: css">div {
-  transition-property: opacity, left;
-  transition-duration: 3s, 5s;
+  transition-property: opacity, left;
+  transition-duration: 3s, 5s;
 }</pre>
 
 <h2 id="Funciones_de_intervalos_de_transición">Funciones de intervalos de transición</h2>
@@ -408,7 +408,7 @@ original_slug: Web/CSS/Transiciones_de_CSS
 <pre>transition-timing-function: linear;
 </pre>
 
-<p>Existen distintas funciones de intervalos estándares disponibles; consulta {{ cssxref("transition-timing-function") }} para tener más detalles.</p>
+<p>Existen distintas funciones de intervalos estándares disponibles; consulta {{ cssxref("transition-timing-function") }} para tener más detalles.</p>
 
 <h4 id="Especificar_una_función_de_intervalos_cúbicos_bézier">Especificar una función de intervalos cúbicos bézier</h4>
 
@@ -476,7 +476,7 @@ original_slug: Web/CSS/Transiciones_de_CSS
 }
 </pre>
 
-<p>Esta CSS establece el aspecto del menú con los colores de fondo y del texto que cambian cuando el elemento está en su estado {{ cssxref(":hover") }}.</p>
+<p>Esta CSS establece el aspecto del menú con los colores de fondo y del texto que cambian cuando el elemento está en su estado {{ cssxref(":hover") }}.</p>
 
 <p>En lugar de describir el efecto con todo detalle, puedes echar un <a href="/samples/cssref/transitions/sample2">vistazo a la muestra en vivo</a> si tu navegador admite transiciones (Firefox y WebKit nightlies, Opera 10.5).</p>
 
@@ -509,11 +509,11 @@ original_slug: Web/CSS/Transiciones_de_CSS
 &lt;/html&gt;
 </pre>
 
-<p>Lo único que hay que observar aquí es que establecemos la clase para nuestra caja en "slideRight" inicialmente y cuando el documento haya terminado de cargarse, se ejecuta la función <code>runDemo()</code> del código JavaScript.</p>
+<p>Lo único que hay que observar aquí es que establecemos la clase para nuestra caja en "slideRight" inicialmente y cuando el documento haya terminado de cargarse, se ejecuta la función <code>runDemo()</code> del código JavaScript.</p>
 
 <h4 id="La_CSS">La CSS</h4>
 
-<p>Para crear nuestro efecto de animación, usamos dos clases de CSS, "slideRight" y "slideLeft". Si deseas ver el código completo de CSS, puedes mirar el archivo <a href="/samples/cssref/transitions/sample1/transitions.css" title="https://developer.mozilla.org/samples/cssref/transitions/sample1/transitions.css"><code>transitions.css</code></a> en su totalidad. A continuación se muestran sólo los trozos relevantes:</p>
+<p>Para crear nuestro efecto de animación, usamos dos clases de CSS, "slideRight" y "slideLeft". Si deseas ver el código completo de CSS, puedes mirar el archivo <a href="/samples/cssref/transitions/sample1/transitions.css" title="https://developer.mozilla.org/samples/cssref/transitions/sample1/transitions.css"><code>transitions.css</code></a> en su totalidad. A continuación se muestran sólo los trozos relevantes:</p>
 
 <pre class="deki-transform">.slideRight {
   position: absolute;
@@ -531,7 +531,7 @@ original_slug: Web/CSS/Transiciones_de_CSS
 
 <p>Observa que aquí especificamos de manera explícita la propiedad de posición. Esto es necesario porque sólo aquellos elementos cuya propiedad de posición se defina de manera expresa pueden animar su posición.</p>
 
-<p>La propiedad {{ cssxref("transition-property") }} se usa para enumerar las propiedades CSS que deseamos animar. En este caso, las propiedades que se van a animar son {{ cssxref("background-color") }}, {{ cssxref("color") }} y {{ cssxref("left") }}. La propiedad {{ cssxref("transition-duration") }} indica que deseamos que la animación tarde 5 segundos desde que comienza hasta que termina.</p>
+<p>La propiedad {{ cssxref("transition-property") }} se usa para enumerar las propiedades CSS que deseamos animar. En este caso, las propiedades que se van a animar son {{ cssxref("background-color") }}, {{ cssxref("color") }} y {{ cssxref("left") }}. La propiedad {{ cssxref("transition-duration") }} indica que deseamos que la animación tarde 5 segundos desde que comienza hasta que termina.</p>
 
 <p>Se incluyen los equivalentes WebKit y Opera para permitir que el ejemplo funcione en el software correspondiente.</p>
 
@@ -556,15 +556,15 @@ original_slug: Web/CSS/Transiciones_de_CSS
 }
 </pre>
 
-<p>Los valores de color aquí se han cambiado para hacer que los colores de fondo y del texto cambien durante el tiempo de la secuencia de animación. Además de esto, la propiedad {{ cssxref("left") }} está aquí al 90%.</p>
+<p>Los valores de color aquí se han cambiado para hacer que los colores de fondo y del texto cambien durante el tiempo de la secuencia de animación. Además de esto, la propiedad {{ cssxref("left") }} está aquí al 90%.</p>
 
 <h4 id="El_código_JavaScript">El código JavaScript</h4>
 
 <p>Una vez que hemos establecido los extremos de la secuencia de animación, lo que tenemos que hacer es iniciar la animación. Podemos hacerlo fácilmente usando JavaScript.</p>
 
-<div class="note"><strong>Nota:</strong> una vez que <a class="external" href="http://dev.w3.org/csswg/css3-animations/">la compatibilidad para las animaciones</a> CSS esté disponible, el código JavaScript no será necesario para lograr este efecto.</div>
+<div class="note"><strong>Nota:</strong> una vez que <a class="external" href="http://dev.w3.org/csswg/css3-animations/">la compatibilidad para las animaciones</a> CSS esté disponible, el código JavaScript no será necesario para lograr este efecto.</div>
 
-<p>En primer lugar, la función<code> runDemo()</code> que se llama cuando el documento se carga para inicializar la secuencia de animación:</p>
+<p>En primer lugar, la función<code> runDemo()</code> que se llama cuando el documento se carga para inicializar la secuencia de animación:</p>
 
 <pre class="deki-transform">function runDemo() {
   var el = updateTransition();
@@ -576,9 +576,9 @@ original_slug: Web/CSS/Transiciones_de_CSS
 }
 </pre>
 
-<p>Es bastante sencillo: llama a la función<code> updateTranslation()</code> que definiremos enseguida, cuyo trabajo es establecer la clase para el elemento que estamos animando según la dirección en la que queramos que viaje. A continuación configura un proceso de escucha de evento para observar el evento "transitionend" que se envía cuando se completa una transición; esto nos permite saber cuándo es el momento para cambiar la clase del elemento para revertir la dirección de la animación.</p>
+<p>Es bastante sencillo: llama a la función<code> updateTranslation()</code> que definiremos enseguida, cuyo trabajo es establecer la clase para el elemento que estamos animando según la dirección en la que queramos que viaje. A continuación configura un proceso de escucha de evento para observar el evento "transitionend" que se envía cuando se completa una transición; esto nos permite saber cuándo es el momento para cambiar la clase del elemento para revertir la dirección de la animación.</p>
 
-<p>La función <code>updateTransition()</code> tiene este aspecto:</p>
+<p>La función <code>updateTransition()</code> tiene este aspecto:</p>
 
 <pre class="deki-transform">function updateTransition() {
   var el = document.querySelector("div.slideLeft");

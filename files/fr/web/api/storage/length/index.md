@@ -15,7 +15,9 @@ La propriété en lecture seule de l'interface {{domxref("Storage")}} retourne u
 
 ## Syntaxe
 
-    var aLength = storage.length;
+```js
+var aLength = storage.length;
+```
 
 ### Retour
 

@@ -1,24 +1,12 @@
 ---
-title: 'CSP: style-src-attr'
+title: 'CSP : style-src-attr'
 slug: Web/HTTP/Headers/Content-Security-Policy/style-src-attr
-tags:
-  - CSP
-  - Content
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - Style
-  - Sécurité
-  - source
-  - style-src
-  - style-src-attr
 translation_of: Web/HTTP/Headers/Content-Security-Policy/style-src-attr
+browser-compat: http.headers.csp.Content-Security-Policy.style-src-attr
 ---
 {{HTTPSidebar}}
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`style-src-attr`** spécifie les sources valides pour des feuilles de styles appliquées à des éléments individuels du DOM par l'attribut `style`.
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`style-src-attr`** spécifie les sources valides pour des feuilles de styles appliquées à des éléments individuels du DOM par l'attribut `style`.
 
 <table class="properties">
   <tbody>
@@ -28,16 +16,12 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`style-src-a
     </tr>
     <tr>
       <th scope="row">Type de directive</th>
-      <td>{{Glossary("Fetch directive")}}</td>
+      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
     </tr>
     <tr>
-      <th scope="row">{{CSP("default-src")}} par défaut</th>
+      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
       <td>
-        <p>
-          Oui, si cette directive est absente, l'agent utilisateur consultera la
-          directive {{CSP("style-src")}}, qui a pour valeur par défaut
-          celle de la directive <code>default-src</code>
-        </p>
+        Oui, si cette directive est absente, l'agent utilisateur consultera la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/style-src"><code>style-src</code></a>, qui a pour valeur par défaut celle de la directive <code>default-src</code>.
       </td>
     </tr>
   </tbody>
@@ -45,41 +29,42 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`style-src-a
 
 ## Syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive :
+Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
 
-    Content-Security-Policy: style-src-attr <source>;
-    Content-Security-Policy: style-src-attr <source> <source>;
+```http
+Content-Security-Policy: style-src-attr <source>;
+Content-Security-Policy: style-src-attr <source> <source>;
+```
 
-`style-src-attr` peut être utilisée conjointement à {{CSP("style-src")}} :
+`style-src-attr` peut être utilisée avec [`style-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/style-src)&nbsp;:
 
-    Content-Security-Policy: style-src <source>;
-    Content-Security-Policy: style-src-attr <source>;
+```http
+Content-Security-Policy: style-src <source>;
+Content-Security-Policy: style-src-attr <source>;
+```
 
 ### Sources
 
-{{page("fr/Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
+`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
 
-- 'report-sample'
-  - : Requiert qu'un échantillon du code violant la directive soit inclus dans le rapport envoyé.
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#directives_associées)).
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                       | Commentaire          |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{specName("CSP 3.0", "#directive-style-src-attr", "style-src-attr")}} | {{Spec2("CSP 3.0")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.style-src-attr")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{CSP("style-src")}}
-- {{CSP("style-src-elem")}}
-- {{HTTPHeader("Link")}} header
-- {{HTMLElement("style")}}, {{HTMLElement("link")}}
-- {{cssxref("@import")}}
-- {{domxref("CSSStyleSheet.insertRule()")}}
-- {{domxref("CSSGroupingRule.insertRule()")}}
-- {{domxref("CSSStyleDeclaration.cssText")}}
+- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
+- [`style-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/style-src)
+- [`style-src-elem`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-elem)
+- L'en-tête [`Link`](/fr/docs/Web/HTTP/Headers/Link)
+- [`<style>`](/fr/docs/Web/HTML/Element/style), [`<link>`](/fr/docs/Web/HTML/Element/link)
+- [`@import`](/fr/docs/Web/CSS/@import)
+- [`CSSStyleSheet.insertRule()`](/fr/docs/Web/API/CSSStyleSheet/insertRule)
+- [`CSSGroupingRule.insertRule()`](/fr/docs/Web/API/CSSGroupingRule/insertRule)
+- [`CSSStyleDeclaration.cssText`](/fr/docs/Web/API/CSSStyleDeclaration/cssText)

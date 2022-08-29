@@ -11,7 +11,9 @@ Des éléments dans le tableau peuvent être `null` si un contrôleur est décon
 
 ## Syntaxe
 
-     var arrayGP = navigator.getGamepads();
+```js
+var arrayGP = navigator.getGamepads();
+```
 
 ## Exemple
 
@@ -26,13 +28,11 @@ window.addEventListener("gamepadconnected", function(e) {
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                       | Commentaire          |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('Gamepad', '', 'The Gamepad API specification')}} | {{Spec2('Gamepad')}} | Première définition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Navigator.getGamepads")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -23,10 +23,12 @@ Pensez à la page d'arrière-plan comme une «&nbsp;page cachée d’extension&n
 
 Vous pouvez inclure des fichiers HTML - et les fichiers CSS ou JavaScript associés - dans votre extension. Les fichiers peuvent être inclus à la racine ou organisés dans des sous‐dossiers.
 
-    /my-extension
-        /manifest.json
-        /my-page.html
-        /my-page.js
+```
+/my-extension
+    /manifest.json
+    /my-page.html
+    /my-page.js
+```
 
 ## Affichage des pages d’extension
 

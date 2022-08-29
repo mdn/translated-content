@@ -15,7 +15,7 @@ translation_of: Web/API/Window/localStorage
 ---
 {{APIRef("Web Storage API")}}
 
-La propriété `localStorage` vous permet d'accéder à un objet local {{domxref("Storage")}}. Le `localStorage` est similaire au [`sessionStorage`](/en-US/docs/Web/API/Window.sessionStorage). La seule différence : les données stockées dans le `localStorage` n'ont pas de délai d'expiration, alors que les données stockées dans le `sessionStorage` sont nettoyées quand la session navigateur prend fin — donc quand on ferme le navigateur.
+La propriété `localStorage` vous permet d'accéder à un objet local {{domxref("Storage")}}. Le `localStorage` est similaire au [`sessionStorage`](/fr/docs/Web/API/Window.sessionStorage). La seule différence : les données stockées dans le `localStorage` n'ont pas de délai d'expiration, alors que les données stockées dans le `sessionStorage` sont nettoyées quand la session navigateur prend fin — donc quand on ferme le navigateur.
 
 Il convient de noter que les données stockées dans `localStorage` ou `sessionStorage` **sont spécifiques au protocole de la page.**
 
@@ -47,13 +47,13 @@ localStorage.setItem('monChat', 'Tom');
 La syntaxe pour la lecture de l'article `localStorage` est la suivante :
 
 ```js
-var cat = localStorage.getItem('myCat');
+var cat = localStorage.getItem('monChat');
 ```
 
 La syntaxe pour la suppression de l'élément `localStorage` est la suivante :
 
 ```js
-localStorage.removeItem('myCat');
+localStorage.removeItem('monChat');
 ```
 
 La syntaxe pour supprimer tous les éléments de `localStorage` est la suivante :
@@ -63,7 +63,7 @@ La syntaxe pour supprimer tous les éléments de `localStorage` est la suivante 
 localStorage.clear();
 ```
 
-> **Note :** Se référer à l'article [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) pour voir un exemple complet.
+> **Note :** Se référer à l'article [Using the Web Storage API](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) pour voir un exemple complet.
 
 ## Spécifications
 
@@ -77,7 +77,7 @@ localStorage.clear();
 
 ## Voir aussi
 
-- [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [Using the Web Storage API](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
 - {{domxref("Storage/LocalStorage")}}
 - {{domxref("Window/SessionStorage")}}
 - {{domxref("Window.sessionStorage")}}

@@ -17,13 +17,13 @@ original_slug: Learn/Server-side/Express_Nodejs/Introdução
 
 <div>{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}</div>
 
-<p class="summary">Neste primeiro artigo sobre Express responderemos as questões " O que é Node?" e "O que é Express?", além de dar a você uma visão geral sobre o que torna o Express um framework web tão especial. Vamos descrever as principais características e mostrar alguns dos principais blocos de códigos de construção de um aplicativo Express <span id="result_box" lang="pt"><span>(embora neste momento você ainda não tenha um ambiente de desenvolvimento para testá-lo).</span></span></p>
+<p class="summary">Neste primeiro artigo sobre Express responderemos as questões " O que é Node?" e "O que é Express?", além de dar a você uma visão geral sobre o que torna o Express um framework web tão especial. Vamos descrever as principais características e mostrar alguns dos principais blocos de códigos de construção de um aplicativo Express <span id="result_box" lang="pt"><span>(embora neste momento você ainda não tenha um ambiente de desenvolvimento para testá-lo).</span></span></p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Pré-requisitos:</th>
-   <td>Conhecimentos básicos em informática. Uma compreensão geral de <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/First_steps">programação web no lado servidor (backend)</a>, em particular, nos mecanismos de <a href="/pt-BR/docs/Learn/Server-side/First_steps/Client-Server_overview">interação cliente-servidor de websites</a>.</td>
+   <td>Conhecimentos básicos em informática. Uma compreensão geral de <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/First_steps">programação web no lado servidor (backend)</a>, em particular, nos mecanismos de <a href="/pt-BR/docs/Learn/Server-side/First_steps/Client-Server_overview">interação cliente-servidor de websites</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objetivos:</th>
@@ -34,16 +34,16 @@ original_slug: Learn/Server-side/Express_Nodejs/Introdução
 
 <h2 id="O_que_é_Express_e_Node">O que é Express e Node ?</h2>
 
-<p><a href="https://nodejs.org/">Node</a> (ou formalmente <em>Node.js</em>) é um ambiente em tempo de execução open-source (código aberto) e multiplataforma que permite aos desenvolvedores criarem todo tipo de aplicativos e ferramentas do lado servidor (backend) em <a href="/pt-BR/docs/Glossary/JavaScript">JavaScript</a>.  Node<span id="result_box" lang="pt"><span> é usado fora do contexto de um navegador</span></span> (ou seja executado diretamente no computador ou no servidor). Como tal, <span id="result_box" lang="pt"><span>o ambiente omite APIs JavaScript específicas do navegador e adiciona suporte para APIs de sistema operacional mais tradicionais, incluindo bibliotecas de sistemas HTTP e arquivos.</span></span></p>
+<p><a href="https://nodejs.org/">Node</a> (ou formalmente <em>Node.js</em>) é um ambiente em tempo de execução open-source (código aberto) e multiplataforma que permite aos desenvolvedores criarem todo tipo de aplicativos e ferramentas do lado servidor (backend) em <a href="/pt-BR/docs/Glossary/JavaScript">JavaScript</a>.  Node<span id="result_box" lang="pt"><span> é usado fora do contexto de um navegador</span></span> (ou seja executado diretamente no computador ou no servidor). Como tal, <span id="result_box" lang="pt"><span>o ambiente omite APIs JavaScript específicas do navegador e adiciona suporte para APIs de sistema operacional mais tradicionais, incluindo bibliotecas de sistemas HTTP e arquivos.</span></span></p>
 
 <p><span id="result_box" lang="pt"><span>Do ponto de vista do desenvolvimento de um servidor web, o Node possui vários benefícios:</span></span></p>
 
 <ul>
- <li>Performance excelente. Node foi projetado para otimizar a taxa de transferência e a escalabilidade em aplicações web. É <span id="result_box" lang="pt"><span>uma ótima combinação para resolver muitos problemas comuns no desenvolvimento da web (por exemplo, aplicações em tempo real).</span></span></li>
- <li>O código é escrito em "JavaScript simples e antigo". Isso significa menos tempo gasto para lidar com mudanças de código entre navegador e servidor web, não sendo necessária uma mudança na linguagem.</li>
- <li>JavaScript é uma linguagem de programação relativamente nova e apresenta <span id="result_box" lang="pt"><span>algumas vantagens quando comparadas a outras linguagens tradicionais de servidor</span></span> (por exemplo Python, PHP, etc.). <span id="result_box" lang="pt"><span>Muitas outras linguagens novas e populares compilam/convertem em JavaScript, permitindo que você também use essas linguagens, como TypeScript, CoffeeScript, ClosureScript, Scala, LiveScript, etc.</span></span></li>
- <li>O Gerenciador de Pacotes do Node (NPM, na sigla em inglês) provê acesso a centenas de milhares de pacotes reutiliváveis. <span id="result_box" lang="pt"><span>NPM possui a melhor coleção de dependências e também pode ser usado para automatizar a maior parte da cadeia de ferramentas de compilação.</span></span></li>
- <li><span id="result_box" lang="pt"><span>É portátil, com versões para diferentes sistemas operacionais, como Microsoft Windows, OS X, Linux, Solaris, FreeBSD, OpenBSD, WebOS e NonStop.</span> <span>Além disso, tem excelente suporte de muitos provedores de hospedagem na web, que muitas vezes fornecem documentação e infraestrutura específica para hospedar sites desenvolvidos em Node.</span></span></li>
+ <li>Performance excelente. Node foi projetado para otimizar a taxa de transferência e a escalabilidade em aplicações web. É <span id="result_box" lang="pt"><span>uma ótima combinação para resolver muitos problemas comuns no desenvolvimento da web (por exemplo, aplicações em tempo real).</span></span></li>
+ <li>O código é escrito em "JavaScript simples e antigo". Isso significa menos tempo gasto para lidar com mudanças de código entre navegador e servidor web, não sendo necessária uma mudança na linguagem.</li>
+ <li>JavaScript é uma linguagem de programação relativamente nova e apresenta <span id="result_box" lang="pt"><span>algumas vantagens quando comparadas a outras linguagens tradicionais de servidor</span></span> (por exemplo Python, PHP, etc.). <span id="result_box" lang="pt"><span>Muitas outras linguagens novas e populares compilam/convertem em JavaScript, permitindo que você também use essas linguagens, como TypeScript, CoffeeScript, ClosureScript, Scala, LiveScript, etc.</span></span></li>
+ <li>O Gerenciador de Pacotes do Node (NPM, na sigla em inglês) provê acesso a centenas de milhares de pacotes reutiliváveis. <span id="result_box" lang="pt"><span>NPM possui a melhor coleção de dependências e também pode ser usado para automatizar a maior parte da cadeia de ferramentas de compilação.</span></span></li>
+ <li><span id="result_box" lang="pt"><span>É portátil, com versões para diferentes sistemas operacionais, como Microsoft Windows, OS X, Linux, Solaris, FreeBSD, OpenBSD, WebOS e NonStop.</span> <span>Além disso, tem excelente suporte de muitos provedores de hospedagem na web, que muitas vezes fornecem documentação e infraestrutura específica para hospedar sites desenvolvidos em Node.</span></span></li>
  <li>P<span id="result_box" lang="pt"><span>ossui uma comunidade de desenvolvedores e um ecossistema muito ativo, com muitas pessoas dispostas a ajudar.</span></span></li>
 </ul>
 
@@ -51,7 +51,7 @@ original_slug: Learn/Server-side/Express_Nodejs/Introdução
 
 <h3 id="Olá_Node.js">Olá, Node.js</h3>
 
-<p>O exemplo a seguir cria um servidor web que escuta qualquer tipo de requisição HTTP na URL  <code>http://127.0.0.1:8000/</code>  --  quando uma requisição é recebida, o script vai responder com a string (texto) "Olá Mundo". Se você já instalou o Node, você pode seguir os passos seguintes deste exemplo.</p>
+<p>O exemplo a seguir cria um servidor web que escuta qualquer tipo de requisição HTTP na URL  <code>http://127.0.0.1:8000/</code>  --  quando uma requisição é recebida, o script vai responder com a string (texto) "Olá Mundo". Se você já instalou o Node, você pode seguir os passos seguintes deste exemplo.</p>
 
 <ol>
  <li>Abre o Terminal (no Windows, abra o prompt da linha de comando)</li>
@@ -79,13 +79,13 @@ http.createServer(function(request, response) {
 // Imprime no console a URL de acesso ao servidor
 console.log('Servidor executando em http://127.0.0.1:8000/');</pre>
 
-<p>Salve o arquivo na pasta que você criou acima.</p>
+<p>Salve o arquivo na pasta que você criou acima.</p>
 
-<p>Por último, vá para o terminal e digite o comando a seguir:</p>
+<p>Por último, vá para o terminal e digite o comando a seguir:</p>
 
 <p><code>node hello.js</code></p>
 
-<p>Enfim, abra o browser e digite  <code>http://localhost:8000.</code> Você verá o texto "<strong>Olá, Mundo</strong>", no canto superior esquerdo.</p>
+<p>Enfim, abra o browser e digite <code>http://localhost:8000.</code> Você verá o texto "<strong>Olá, Mundo</strong>", no canto superior esquerdo.</p>
 
 <h2 id="Web_Frameworks">Web Frameworks</h2>
 
@@ -93,36 +93,36 @@ console.log('Servidor executando em http://127.0.0.1:8000/');</pre>
 
 <h2 id="Introduzindo_o_Express">Introduzindo o Express</h2>
 
-<p><a href="https://expressjs.com/">Express</a> é o framework Node mais popular e a biblioteca subjacente para uma série de outros frameworks do Node. O Express oferece soluções para:</p>
+<p><a href="https://expressjs.com/">Express</a> é o framework Node mais popular e a biblioteca subjacente para uma série de outros frameworks do Node. O Express oferece soluções para:</p>
 
 <ul>
- <li>Gerenciar requisições de diferentes verbos HTTP em diferentes URLs.</li>
+ <li>Gerenciar requisições de diferentes verbos HTTP em diferentes URLs.</li>
  <li>Integrar "view engines" para inserir dados nos templates<span id="result_box" lang="pt"><span>.</span></span></li>
  <li>Definir as configurações comuns da aplicação web, como a porta a ser usada para conexão e a localização dos modelos que são usados para renderizar a resposta.</li>
- <li><span id="result_box" lang="pt"><span>Adicionar novos processos de requisição por meio de "middleware" em qualquer ponto da "fila" de requisições.</span></span></li>
+ <li><span id="result_box" lang="pt"><span>Adicionar novos processos de requisição por meio de "middleware" em qualquer ponto da "fila" de requisições.</span></span></li>
 </ul>
 
-<p>O <em>Express </em>é bastante minimalista, no entanto, os desenvolvedores têm liberdade para criar pacotes de middleware específicos com o objetivo de resolver problemas específicos que surgem no desenvolvimento de uma aplicação. Há bibliotecas para trabalhar com cookies, sessões, login de usuários, parâmetros de URL, dados em requisições POST, cabeçalho de segurança e tantos outros. Você pode achar uma lista de pacotes de middleware mantidos pela equipe Express em <a href="http://expressjs.com/en/resources/middleware.html">Express Middleware</a> <span id="result_box" lang="pt"><span>(juntamente com uma lista de pacotes populares desenvolvidos por terceiros).</span></span></p>
+<p>O <em>Express </em>é bastante minimalista, no entanto, os desenvolvedores têm liberdade para criar pacotes de middleware específicos com o objetivo de resolver problemas específicos que surgem no desenvolvimento de uma aplicação. Há bibliotecas para trabalhar com cookies, sessões, login de usuários, parâmetros de URL, dados em requisições POST, cabeçalho de segurança e tantos outros. Você pode achar uma lista de pacotes de middleware mantidos pela equipe Express em <a href="http://expressjs.com/en/resources/middleware.html">Express Middleware</a> <span id="result_box" lang="pt"><span>(juntamente com uma lista de pacotes populares desenvolvidos por terceiros).</span></span></p>
 
 <div class="note">
-<p><strong>Nota:</strong> <span id="result_box" lang="pt"><span>Essa flexibilidade do Express é uma espada de dois gumes.</span> <span>Há pacotes de middleware para resolver quase qualquer problema ou requisito ao longo do desenvolvimento, mas utilizar os pacotes corretos para cada situação às vezes se torna um grande desafio.</span> <span>Não há "caminho certo" para estruturar um aplicativo. Muitos exemplos que você encontra na Internet não são bons ou mostram apenas uma pequena parte do que você precisa fazer para desenvolver uma aplicação web.</span></span></p>
+<p><strong>Nota:</strong> <span id="result_box" lang="pt"><span>Essa flexibilidade do Express é uma espada de dois gumes.</span> <span>Há pacotes de middleware para resolver quase qualquer problema ou requisito ao longo do desenvolvimento, mas utilizar os pacotes corretos para cada situação às vezes se torna um grande desafio.</span> <span>Não há "caminho certo" para estruturar um aplicativo. Muitos exemplos que você encontra na Internet não são bons ou mostram apenas uma pequena parte do que você precisa fazer para desenvolver uma aplicação web.</span></span></p>
 </div>
 
-<h2 id="De_onde_o_Node_e_o_Express_vieram"><span class="short_text" id="result_box" lang="pt"><span>De onde o Node e o Express vieram?</span></span></h2>
+<h2 id="De_onde_o_Node_e_o_Express_vieram"><span class="short_text" id="result_box" lang="pt"><span>De onde o Node e o Express vieram?</span></span></h2>
 
-<p><span id="result_box" lang="pt"><span>Node foi inicialmente lançado em 2009, mas naquela época apenas para Linux. O gerenciador de pacotes NPM veio no ano seguinte, 2010, e o suporte nativo do Windows chegou em 2012. A versão atual do </span></span>Long Term Support (LTS)<span lang="pt"><span> é o Node v8.9.3, enquanto a versão mais recente é o Node 9. Esse é um resumo da rica histórica do Node, mas é possível conhecer mais na</span><span> </span></span><a href="https://pt.wikipedia.org/wiki/Node.js#History">Wikipédia</a><span lang="pt"><span>.</span></span></p>
+<p><span id="result_box" lang="pt"><span>Node foi inicialmente lançado em 2009, mas naquela época apenas para Linux. O gerenciador de pacotes NPM veio no ano seguinte, 2010, e o suporte nativo do Windows chegou em 2012. A versão atual do </span></span>Long Term Support (LTS)<span lang="pt"><span> é o Node v8.9.3, enquanto a versão mais recente é o Node 9. Esse é um resumo da rica histórica do Node, mas é possível conhecer mais na</span><span> </span></span><a href="https://pt.wikipedia.org/wiki/Node.js#History">Wikipédia</a><span lang="pt"><span>.</span></span></p>
 
-<p><span id="result_box" lang="pt"><span>O Express foi lançado em novembro de 2010 e atualmente está na versão 4.16 da API.</span> <span>Você pode verificar o </span></span> <a href="https://expressjs.com/en/changelog/4x.html">changelog</a> <span lang="pt"><span> para obter informações sobre as mudanças na versão atual e o </span></span><a href="https://github.com/expressjs/express/blob/master/History.md">GitHub</a><span lang="pt"><span> para obter notas detalhadas das versões históricas.</span></span></p>
+<p><span id="result_box" lang="pt"><span>O Express foi lançado em novembro de 2010 e atualmente está na versão 4.16 da API.</span> <span>Você pode verificar o </span></span> <a href="https://expressjs.com/en/changelog/4x.html">changelog</a> <span lang="pt"><span> para obter informações sobre as mudanças na versão atual e o </span></span><a href="https://github.com/expressjs/express/blob/master/History.md">GitHub</a><span lang="pt"><span> para obter notas detalhadas das versões históricas.</span></span></p>
 
 <h2 id="O_quão_popular_é_NodeExpress">O quão popular é Node/Express ?</h2>
 
-<p><span id="result_box" lang="pt"><span>É importante considerar a popularidade de um framework web porque indica se a ferramenta continuará sendo mantida e atualizada, além de apontar quais recursos provavelmente estarão disponíveis na documentação, nas bibliotecas de complemento e no suporte técnico.</span></span></p>
+<p><span id="result_box" lang="pt"><span>É importante considerar a popularidade de um framework web porque indica se a ferramenta continuará sendo mantida e atualizada, além de apontar quais recursos provavelmente estarão disponíveis na documentação, nas bibliotecas de complemento e no suporte técnico.</span></span></p>
 
-<p><span id="result_box" lang="pt"><span>Não há nenhum número capaz de medir precisamente a popularidade de um framework (apesar de que alguns sites como o <a href="http://hotframeworks.com/">Hot Frameworks</a> avaliarem a popularidade a partir do número de projetos do GitHub e do número de perguntas do StackOverflow relativas a cada tecnologia).</span></span><span id="result_box" lang="pt"><span> Diante dessa limitação, o mais importante é fazermos algumas outras perguntas para saber se o Node e o Express são "suficientemente populares" para não caírem nos problemas clássicos das tecnologias com pouca adesão da comunidade.</span></span></p>
+<p><span id="result_box" lang="pt"><span>Não há nenhum número capaz de medir precisamente a popularidade de um framework (apesar de que alguns sites como o <a href="http://hotframeworks.com/">Hot Frameworks</a> avaliarem a popularidade a partir do número de projetos do GitHub e do número de perguntas do StackOverflow relativas a cada tecnologia).</span></span><span id="result_box" lang="pt"><span> Diante dessa limitação, o mais importante é fazermos algumas outras perguntas para saber se o Node e o Express são "suficientemente populares" para não caírem nos problemas clássicos das tecnologias com pouca adesão da comunidade.</span></span></p>
 
-<p><span style="">O Node e o Express continuam a evoluir ?</span><span style=""> </span><span style="">Você pode obter ajuda na comunidade caso precise?</span><span style=""> </span><span style="">Existe uma oportunidade para você receber trabalho remunerado ao dominar o Node e o Express ?</span></p>
+<p><span style="">O Node e o Express continuam a evoluir ?</span><span style=""> </span><span style="">Você pode obter ajuda na comunidade caso precise?</span><span style=""> </span><span style="">Existe uma oportunidade para você receber trabalho remunerado ao dominar o Node e o Express ?</span></p>
 
-<p>Baseado no <a href="https://expressjs.com/en/resources/companies-using-express.html">número de empresas de alto perfil</a> que usam Express, no número de pessoas contribuindo para o código base, e no número de pessoas que oferecem suporte (gratuito ou pago), a reposta é sim. O Node e o Express são tecnologias populares!</p>
+<p>Baseado no <a href="https://expressjs.com/en/resources/companies-using-express.html">número de empresas de alto perfil</a> que usam Express, no número de pessoas contribuindo para o código base, e no número de pessoas que oferecem suporte (gratuito ou pago), a reposta é sim. O Node e o Express são tecnologias populares!</p>
 
 <h2 id="Express_é_opinativo">Express é opinativo ?</h2>
 
@@ -132,7 +132,7 @@ console.log('Servidor executando em http://127.0.0.1:8000/');</pre>
 
 <p>Frameworks não opinativos<span id="result_box" lang="pt"><span>, por outro lado, têm muito menos restrições sobre a melhor maneira de utilizar componentes para atingir um objetivo, ou mesmo quais componentes devem ser usados.</span> <span>Eles tornam mais fácil para os desenvolvedores usar as ferramentas mais adequadas para completar uma tarefa específica, embora você precise encontrar esses componentes por si próprio.</span></span></p>
 
-<p>Express é um framework não opinativo. Você pode inserir qualquer middleware que você goste no manuseio das solicitações em quase qualquer ordem que desejar. Pode estruturar o aplicativo em um arquivo ou em vários, usar qualquer estrutura de pastas dentro do diretório principal, etc.</p>
+<p>Express é um framework não opinativo. Você pode inserir qualquer middleware que você goste no manuseio das solicitações em quase qualquer ordem que desejar. Pode estruturar o aplicativo em um arquivo ou em vários, usar qualquer estrutura de pastas dentro do diretório principal, etc.</p>
 
 <h2 id="Como_se_parece_o_código_do_Express">Como se parece o código do Express ?</h2>
 
@@ -144,7 +144,7 @@ console.log('Servidor executando em http://127.0.0.1:8000/');</pre>
 
 <h3 id="Olá_Mundo_Express">Olá Mundo Express</h3>
 
-<p><span id="result_box" lang="pt"><span>Primeiro, considere o padrão do exemplo do Express </span></span><a href="http://expressjs.com/pt-br/starter/hello-world.html">Olá Mundo</a><span lang="pt"><span> (discutiremos cada trecho do código nas seções abaixo e nas seções a seguir).</span></span></p>
+<p><span id="result_box" lang="pt"><span>Primeiro, considere o padrão do exemplo do Express </span></span><a href="http://expressjs.com/pt-br/starter/hello-world.html">Olá Mundo</a><span lang="pt"><span> (discutiremos cada trecho do código nas seções abaixo e nas seções a seguir).</span></span></p>
 
 <div class="note">
 <p><strong>Dica:</strong> <span id="result_box" lang="pt"><span>Se você tiver o Node e o Express já instalados (ou se você os instalar como mostrado no </span></span><a href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/development_environment">próximo artigo</a><span lang="pt"><span>, você pode salvar este código em um arquivo chamado <strong>app.js</strong> e executá-lo em um prompt, ao digitar o comando</span></span> <code>node app.js</code>.</p>
@@ -162,7 +162,7 @@ app.listen(3000, function() {
 });
 </pre>
 
-<p>As duas primeiras linhas <code>require()</code> importam o módulo Express e criam uma aplicação <a href="https://expressjs.com/en/4x/api.html#app">Express</a>. Esse objeto (tradicionalmente nomeado de <code>app</code>), tem métodos de roteamento de requisições HTTP, configurações de middleware, renderização de views HTML, registro de engines de templates e <span id="result_box" lang="pt"><span>modificação das <a href="https://expressjs.com/en/4x/api.html#app.settings.table">configurações</a> que controlam como o aplicativo se comporta (por exemplo, o modo de ambiente, se as definições de rota são sensíveis a maiúsculas e minúsculas, etc).</span></span></p>
+<p>As duas primeiras linhas <code>require()</code> importam o módulo Express e criam uma aplicação <a href="https://expressjs.com/en/4x/api.html#app">Express</a>. Esse objeto (tradicionalmente nomeado de <code>app</code>), tem métodos de roteamento de requisições HTTP, configurações de middleware, renderização de views HTML, registro de engines de templates e <span id="result_box" lang="pt"><span>modificação das <a href="https://expressjs.com/en/4x/api.html#app.settings.table">configurações</a> que controlam como o aplicativo se comporta (por exemplo, o modo de ambiente, se as definições de rota são sensíveis a maiúsculas e minúsculas, etc).</span></span></p>
 
 <p><span id="result_box" lang="pt"><span>A parte do meio do código (as três linhas que começam com </span></span><code>app.get</code><span lang="pt"><span>) mostra uma definição de rota.</span> <span>O método </span></span><code>app.get()</code><span lang="pt"><span> especifica uma função de retorno de chamada que será invocada sempre que exista uma solicitação HTTP </span></span><code>GET</code><span lang="pt"><span> com um caminho (</span></span><code>'/'</code><span lang="pt"><span>) relativo à raiz do site.</span> <span>A função de retorno de chamada requer uma solicitação e um objeto de resposta como argumentos, e simplesmente chama </span></span><code><a href="https://expressjs.com/en/4x/api.html#res.send">send()</a></code><span lang="pt"><span> na resposta para retornar a string "Olá Mundo!"</span></span></p>
 
@@ -170,18 +170,18 @@ app.listen(3000, function() {
 
 <h3 id="Importando_e_criando_módulos">Importando e criando módulos</h3>
 
-<p><span id="result_box" lang="pt"><span>Um módulo é uma biblioteca/arquivo de JavaScript que você pode importar para outro código usando a função </span></span><code>require()</code><span lang="pt"><span> do Node.</span> <span>Express por si é um módulo, assim como as bibliotecas de middleware e banco de dados que usamos em nossos aplicativos Express.</span></span></p>
+<p><span id="result_box" lang="pt"><span>Um módulo é uma biblioteca/arquivo de JavaScript que você pode importar para outro código usando a função </span></span><code>require()</code><span lang="pt"><span> do Node.</span> <span>Express por si é um módulo, assim como as bibliotecas de middleware e banco de dados que usamos em nossos aplicativos Express.</span></span></p>
 
-<p><span lang="pt"><span>O código abaixo mostra como importamos um módulo por nome, usando o quadro Express como um exemplo.</span> <span>Primeiro invocamos a função </span></span><code style="font-style: normal; font-weight: normal;">require()</code><span lang="pt"><span>, especificando o nome do módulo como uma string </span></span>(<code>'express'</code>), <span lang="pt"><span>e chamando o objeto retornado para criar um </span></span><a href="https://expressjs.com/en/4x/api.html#app">aplicativo Express</a><span lang="pt"><span>.</span> <span>Podemos então acessar as propriedades e funções do objeto da aplicação.</span></span></p>
+<p><span lang="pt"><span>O código abaixo mostra como importamos um módulo por nome, usando o quadro Express como um exemplo.</span> <span>Primeiro invocamos a função </span></span><code style="font-style: normal; font-weight: normal;">require()</code><span lang="pt"><span>, especificando o nome do módulo como uma string </span></span>(<code>'express'</code>), <span lang="pt"><span>e chamando o objeto retornado para criar um </span></span><a href="https://expressjs.com/en/4x/api.html#app">aplicativo Express</a><span lang="pt"><span>.</span> <span>Podemos então acessar as propriedades e funções do objeto da aplicação.</span></span></p>
 
 <pre class="brush: js notranslate">var express = require('express');
 var app = express();
 </pre>
 
-<p>Você também pode criar seus próprios módulos para serem importados da mesma maneira.</p>
+<p>Você também pode criar seus próprios módulos para serem importados da mesma maneira.</p>
 
 <div class="note">
-<p><strong>Dica:</strong> Você vai <em><strong>querer</strong></em> criar seus próprios módulos <span id="result_box" lang="pt"><span>porque isso permite que você organize seu código em peças gerenciáveis - um aplicativo monolítico (de arquivo único) é difícil de entender e manter.</span> <span>O uso de módulos também ajuda você a gerenciar o namespace, pois somente as variáveis que você exporta explicitamente são importadas quando você usa um módulo.</span></span></p>
+<p><strong>Dica:</strong> Você vai <em><strong>querer</strong></em> criar seus próprios módulos <span id="result_box" lang="pt"><span>porque isso permite que você organize seu código em peças gerenciáveis - um aplicativo monolítico (de arquivo único) é difícil de entender e manter.</span> <span>O uso de módulos também ajuda você a gerenciar o namespace, pois somente as variáveis que você exporta explicitamente são importadas quando você usa um módulo.</span></span></p>
 </div>
 
 <p>Para tornar os objetos disponíveis fora do módulo, você precisa apenas atribuí-los ao objeto <code>exports</code>. Por Exemplo, o módulo <strong>square.js</strong> abaixo é um arquivo que exporta os métodos <code>area()</code> e <code>perimeter()</code>:</p>
@@ -216,13 +216,13 @@ console.log('The area of a square with a width of 4 is ' + square.area(4));</pre
 
 <h3 id="Usando_APIs_assíncronas">Usando APIs assíncronas</h3>
 
-<p>O código JavaScript frequentemente usa APIs assíncronas em vez de síncronas para operações que podem levar algum tempo para serem concluídas. <span id="result_box" lang="pt"><span>Uma API síncrona é aquela em que cada operação deve ser concluída antes que a próxima operação seja iniciada.</span> <span>Por exemplo, as seguintes funções de log são síncronas e imprimirão o texto no console em ordem (Primeiro, Segundo).</span></span></p>
+<p>O código JavaScript frequentemente usa APIs assíncronas em vez de síncronas para operações que podem levar algum tempo para serem concluídas. <span id="result_box" lang="pt"><span>Uma API síncrona é aquela em que cada operação deve ser concluída antes que a próxima operação seja iniciada.</span> <span>Por exemplo, as seguintes funções de log são síncronas e imprimirão o texto no console em ordem (Primeiro, Segundo).</span></span></p>
 
 <pre class="brush: js notranslate">console.log('Primeiro');
 console.log('Segundo');</pre>
 
 <div id="gt-res-content">
-<div class="trans-verified-button-small" dir="ltr" id="gt-res-dir-ctr"><span id="result_box" lang="pt"><span>Em contrapartida, uma API assíncrona é aquela em que a API iniciará uma operação e retornará imediatamente (antes da conclusão da operação).</span> <span>Assim que a operação terminar, a API usará algum mecanismo para executar operações adicionais.</span> <span>Por exemplo, o código abaixo imprimirá "Segundo, Primeiro". Isso porque, mesmo que o método </span></span><code>setTimeout()</code><span lang="pt"><span> seja chamado primeiro e retornae imediatamente, a operação precisa de três segundos para finalizar.</span></span></div>
+<div class="trans-verified-button-small" dir="ltr" id="gt-res-dir-ctr"><span id="result_box" lang="pt"><span>Em contrapartida, uma API assíncrona é aquela em que a API iniciará uma operação e retornará imediatamente (antes da conclusão da operação).</span> <span>Assim que a operação terminar, a API usará algum mecanismo para executar operações adicionais.</span> <span>Por exemplo, o código abaixo imprimirá "Segundo, Primeiro". Isso porque, mesmo que o método </span></span><code>setTimeout()</code><span lang="pt"><span> seja chamado primeiro e retornae imediatamente, a operação precisa de três segundos para finalizar.</span></span></div>
 
 <div class="trans-verified-button-small" dir="ltr"></div>
 </div>
@@ -235,7 +235,7 @@ console.log('Segundo');
 
 <p><span id="result_box" lang="pt"><span>O uso de APIs assíncronas não bloqueadoras é ainda mais importante no Node do que no navegador, pois o Node é um ambiente de execução orientado por evento único (single threaded).</span> <span>"Single threaded" significa que todos os pedidos para o servidor são executados no mesmo tópico (em vez de serem gerados em processos separados).</span> <span>Esse modelo é extremamente eficiente em termos de velocidade e recursos do servidor, mas isso significa que, se qualquer uma das suas funções chamar métodos síncronos que demoram muito para completar, eles bloquearão não apenas a solicitação atual, mas todas as outras solicitações serão tratadas por</span> <span>sua aplicação web.</span></span></p>
 
-<p><span id="result_box" lang="pt"><span>Há várias maneiras de uma API assíncrona notificar para a aplicação que alguma função chegou ao fim.</span> <span>A maneira mais comum é registrar uma função de retorno de chamada quando você invoca a API assíncrona, que será chamada de volta quando a operação for concluída.</span> <span>Usamos essa abordagem acima.</span></span></p>
+<p><span id="result_box" lang="pt"><span>Há várias maneiras de uma API assíncrona notificar para a aplicação que alguma função chegou ao fim.</span> <span>A maneira mais comum é registrar uma função de retorno de chamada quando você invoca a API assíncrona, que será chamada de volta quando a operação for concluída.</span> <span>Usamos essa abordagem acima.</span></span></p>
 
 <div class="note">
 <p><strong>Dica:</strong> O uso de callbacks pode ser bastante "bagunçado" se você tiver uma sequência de operações assíncronas dependentes que devem ser executadas em ordem, porque isto resulta em multiplo níveis de callbacks aninhados. Este problema é comumente conhecido como "inferno de callback" ou "código hadouken". Pode-se reduzir o problema ao adotar boas práticas de programação (veja <a href="http://callbackhell.com/">http://callbackhell.com/</a>), utilizar um módulo como <a href="https://www.npmjs.com/package/async">async</a>, <span class="short_text" id="result_box" lang="pt"><span>ou mesmo adotar recursos do ES6, como</span></span> <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a>.</p>
@@ -247,7 +247,7 @@ console.log('Segundo');
 
 <h3 id="Criando_manipuladores_de_rotas"><span class="short_text" id="result_box" lang="pt"><span>Criando manipuladores de rotas</span></span></h3>
 
-<p>No nosso <em>Olá Mundo</em> em Express (veja acima), nós definimos uma (callback) função manipuladora de rota para requisição <code>GET</code> HTTP para a raiz do site (<code>'/'</code>).</p>
+<p>No nosso <em>Olá Mundo</em> em Express (veja acima), nós definimos uma (callback) função manipuladora de rota para requisição <code>GET</code> HTTP para a raiz do site (<code>'/'</code>).</p>
 
 <pre class="brush: js notranslate">app.<strong>get</strong>('/', function(req, res) {
   res.send('Olá Mundo');
@@ -262,7 +262,7 @@ console.log('Segundo');
 
 <p><span id="result_box" lang="pt"><span>O Express também fornece métodos para definir manipuladores de rotas para todas as outras requisições HTTP, que são usadas exatamente da mesma maneira: </span></span> <code>post()</code>, <code>put()</code>, <code>delete()</code>, <code>options()</code>, <code>trace()</code>, <code>copy()</code>, <code>lock()</code>, <code>mkcol()</code>, <code>move()</code>, <code>purge()</code>, <code>propfind()</code>, <code>proppatch()</code>, <code>unlock()</code>, <code>report()</code>, <code>mkactivity()</code>, <code>checkout()</code>, <code>merge()</code>, <code>m-</code><code>search()</code>, <code>notify()</code>, <code>subscribe()</code>, <code>unsubscribe()</code>, <code>patch()</code>, <code>search()</code>, e <code>connect()</code>.</p>
 
-<p><span id="result_box" lang="pt"><span>Há um método de roteamento especial, </span></span><code>app.all()</code><span lang="pt"><span>, que será chamado em resposta a qualquer método HTTP.</span> <span>É usado para carregar funções de middleware em um caminho específico para todos os métodos de solicitação.</span> <span>O exemplo a seguir (da documentação Express) mostra um manipulador que será executado para solicitações </span></span><code>/secret</code><span lang="pt"><span>, independentemente do verbo HTTP usado (desde que seja suportado pelo módulo http).</span></span></p>
+<p><span id="result_box" lang="pt"><span>Há um método de roteamento especial, </span></span><code>app.all()</code><span lang="pt"><span>, que será chamado em resposta a qualquer método HTTP.</span> <span>É usado para carregar funções de middleware em um caminho específico para todos os métodos de solicitação.</span> <span>O exemplo a seguir (da documentação Express) mostra um manipulador que será executado para solicitações </span></span><code>/secret</code><span lang="pt"><span>, independentemente do verbo HTTP usado (desde que seja suportado pelo módulo http).</span></span></p>
 
 <pre class="brush: js notranslate">app.all('/secret', function(req, res, next) {
   console.log('Acessando a sessão secreta...');
@@ -292,7 +292,7 @@ module.exports = router;
 </pre>
 
 <div class="note">
-<p><strong>Nota:</strong> <span id="result_box" lang="pt"><span>Adicionar rotas ao objeto </span></span><code>Router</code><span lang="pt"><span> é como adicionar rotas ao objeto </span></span><code>app</code><span lang="pt"><span> (como mostrado anteriormente).</span></span></p>
+<p><strong>Nota:</strong> <span id="result_box" lang="pt"><span>Adicionar rotas ao objeto </span></span><code>Router</code><span lang="pt"><span> é como adicionar rotas ao objeto </span></span><code>app</code><span lang="pt"><span> (como mostrado anteriormente).</span></span></p>
 </div>
 
 <p><span id="result_box" lang="pt"><span>Para usar o roteador em nosso arquivo de aplicativo principal, então, </span></span><code>require()</code><span lang="pt"><span> o módulo de rota (<strong>wiki.js</strong>) e depois </span></span><code>use()</code><span lang="pt"><span> no aplicativo Express para adicionar o Router ao caminho de gerenciamento de middleware.</span> <span>As duas rotas serão acessíveis a partir de </span></span><code style="font-style: normal; font-weight: normal;">/wiki/</code><span lang="pt"><span> e </span></span><code style="font-style: normal; font-weight: normal;">/wiki/about/</code><span lang="pt"><span>.</span></span></p>
@@ -305,10 +305,10 @@ app.use('/wiki', wiki);</pre>
 
 <h3 id="Usando_middleware">Usando middleware</h3>
 
-<p><span id="result_box" lang="pt"><span>O Middleware é usado extensivamente em aplicativos Express para que as tarefas ofereçam arquivos estáticos ao tratamento de erros, a comprensão de respostas HTTP.</span> <span>Enquanto as funções de rota terminam o ciclo de solicitação-resposta HTTP, retornando alguma resposta ao cliente HTTP, as funções de middleware normalmente executam alguma operação na solicitação ou resposta e, em seguida, ligue para a próxima função na "pilha", que pode ser mais um middleware ou uma rota</span> <span>manipuladora.</span> <span>A ordem em que o middleware é chamado depende do desenvolvedor do aplicativo.</span></span></p>
+<p><span id="result_box" lang="pt"><span>O Middleware é usado extensivamente em aplicativos Express para que as tarefas ofereçam arquivos estáticos ao tratamento de erros, a comprensão de respostas HTTP.</span> <span>Enquanto as funções de rota terminam o ciclo de solicitação-resposta HTTP, retornando alguma resposta ao cliente HTTP, as funções de middleware normalmente executam alguma operação na solicitação ou resposta e, em seguida, ligue para a próxima função na "pilha", que pode ser mais um middleware ou uma rota</span> <span>manipuladora.</span> <span>A ordem em que o middleware é chamado depende do desenvolvedor do aplicativo.</span></span></p>
 
 <div class="note">
-<p><strong>Nota:</strong> <span id="result_box" lang="pt"><span>O middleware pode executar qualquer operação, executar qualquer código, fazer alterações no objeto de solicitação e resposta, e também pode encerrar o ciclo de solicitação-resposta.</span> <span>Se não terminar o ciclo, ele deve chamar o </span></span><code>next()</code><span lang="pt"><span> para passar o controle para a próxima função de middleware (ou a solicitação ficará pendurada).</span></span></p>
+<p><strong>Nota:</strong> <span id="result_box" lang="pt"><span>O middleware pode executar qualquer operação, executar qualquer código, fazer alterações no objeto de solicitação e resposta, e também pode encerrar o ciclo de solicitação-resposta.</span> <span>Se não terminar o ciclo, ele deve chamar o </span></span><code>next()</code><span lang="pt"><span> para passar o controle para a próxima função de middleware (ou a solicitação ficará pendurada).</span></span></p>
 </div>
 
 <p><span id="result_box" lang="pt"><span>A maioria dos aplicativos usará middleware de terceiros para simplificar tarefas comuns de desenvolvimento web, como trabalhar com cookies, sessões, autenticação de usuários, acessar dados </span></span><code>POST</code><span lang="pt"><span> e JSON, log, etc. Você pode encontrar uma<a href="http://expressjs.com/en/resources/middleware.html"> lista de pacotes de middleware</a> mantidos pela equipe Express</span> <span>(que também inclui outros pacotes populares de terceiros).</span> <span>Outros pacotes Express estão disponíveis no gerenciador de pacotes do NPM.</span></span></p>
@@ -318,7 +318,7 @@ app.use('/wiki', wiki);</pre>
 <pre class="brush: bash notranslate"><code>$ npm install morgan
 </code></pre>
 
-<p><span id="result_box" lang="pt"><span>Você pode então chamar </span></span><code>use()</code><span lang="pt"><span> no objeto do aplicativo Express para adicionar o middleware à pilha:</span></span></p>
+<p><span id="result_box" lang="pt"><span>Você pode então chamar </span></span><code>use()</code><span lang="pt"><span> no objeto do aplicativo Express para adicionar o middleware à pilha:</span></span></p>
 
 <pre class="brush: js notranslate">var express = require('express');
 <strong>var logger = require('morgan');</strong>
@@ -330,7 +330,7 @@ var app = express();
 <p><strong>Nota:</strong> <span id="result_box" lang="pt"><span>O middleware e as funções de roteamento são chamadas na ordem em que são declaradas.</span> <span>Para alguns middleware, a ordem é importante (por exemplo, se o middleware de sessão depende do middleware de cookies, então o manipulador de cookies deve ser adicionado primeiro).</span> <span>É quase sempre o caso em que o middleware é chamado antes de definir rotas, ou seus manipuladores de rotas não terão acesso à funcionalidade adicionada pelo seu middleware.</span></span></p>
 </div>
 
-<p><span id="result_box" lang="pt"><span>Você pode escrever suas próprias funções de middleware. É provável que você tenha que fazê-lo (somente para criar código de manipulação de erro).</span> <span>A única diferença entre uma função de middleware e um retorno de chamada de manipulador de rotas é que as funções de middleware têm um terceiro argumento </span></span><code>next</code><span lang="pt"><span>, que as funções de middleware devem chamar se não completam o ciclo de solicitação (quando a função de middleware é chamada, isso contém a próxima função</span> <span>que deve ser chamado).</span></span></p>
+<p><span id="result_box" lang="pt"><span>Você pode escrever suas próprias funções de middleware. É provável que você tenha que fazê-lo (somente para criar código de manipulação de erro).</span> <span>A única diferença entre uma função de middleware e um retorno de chamada de manipulador de rotas é que as funções de middleware têm um terceiro argumento </span></span><code>next</code><span lang="pt"><span>, que as funções de middleware devem chamar se não completam o ciclo de solicitação (quando a função de middleware é chamada, isso contém a próxima função</span> <span>que deve ser chamado).</span></span></p>
 
 <p><span id="result_box" lang="pt"><span>Você pode adicionar uma função de middleware à cadeia de processamento com </span></span><code>app.use()</code><span lang="pt"><span> ou </span></span><code>app.add()</code><span lang="pt"><span>, dependendo se você deseja aplicar o middleware a todas as respostas ou a respostas com um verbo HTTP específico (</span></span><code>GET</code>, <code>POST</code><span lang="pt"><span>, etc.</span> <span>).</span> <span>Você especifica rotas o mesmo em ambos os casos, embora a rota seja opcional ao chamar </span></span><strong>app.use()</strong><span lang="pt"><span>.</span></span></p>
 
@@ -341,8 +341,8 @@ var app = express();
 
 // Um exemplo de função middleware
 var a_middleware_function = function(req, res, <em>next</em>) {
-  // ... Executa alguma operação
-  next(); // next() Chama o próximo middleware ou função de rotas
+  // ... Executa alguma operação
+  next(); // next() Chama o próximo middleware ou função de rotas
 }
 
 // Função adicionada com use() para todas rotas e requisições
@@ -357,10 +357,10 @@ app.get('/', a_middleware_function);
 app.listen(3000);</pre>
 
 <div class="note">
-<p><strong>Dica JavaScript:</strong> <span id="result_box" lang="pt"><span>Acima, declaramos a função de middleware separadamente e, em seguida, configuramos como retorno de chamada.</span> <span>Na nossa função anterior do operador de rotas, declaramos a função de retorno de chamada quando foi utilizada.</span> <span>Em JavaScript, ambas abordagens são válidas.</span></span></p>
+<p><strong>Dica JavaScript:</strong> <span id="result_box" lang="pt"><span>Acima, declaramos a função de middleware separadamente e, em seguida, configuramos como retorno de chamada.</span> <span>Na nossa função anterior do operador de rotas, declaramos a função de retorno de chamada quando foi utilizada.</span> <span>Em JavaScript, ambas abordagens são válidas.</span></span></p>
 </div>
 
-<p><span id="result_box" lang="pt"><span>A documentação Express possui uma documentação excelente sobre como usar e escrever o middleware Express.</span></span></p>
+<p><span id="result_box" lang="pt"><span>A documentação Express possui uma documentação excelente sobre como usar e escrever o middleware Express.</span></span></p>
 
 <h3 id="Servindo_arquivos_estáticos">Servindo arquivos estáticos</h3>
 
@@ -377,7 +377,7 @@ http://localhost:3000/js/app.js
 http://localhost:3000/about.html
 </code></pre>
 
-<p><span id="result_box" lang="pt"><span>Você pode chamar </span></span><code>static()</code><span lang="pt"><span> várias vezes para atender vários diretórios.</span> <span>Se um arquivo não puder ser encontrado por uma função de middleware, ele simplesmente será transmitido ao middleware subsequente (a ordem em que o middleware é chamado é baseada em sua ordem de declaração).</span></span></p>
+<p><span id="result_box" lang="pt"><span>Você pode chamar </span></span><code>static()</code><span lang="pt"><span> várias vezes para atender vários diretórios.</span> <span>Se um arquivo não puder ser encontrado por uma função de middleware, ele simplesmente será transmitido ao middleware subsequente (a ordem em que o middleware é chamado é baseada em sua ordem de declaração).</span></span></p>
 
 <pre class="brush: js notranslate">app.use(express.static('public'));
 app.use(express.static('media'));
@@ -423,7 +423,7 @@ http://localhost:3000/media/cry.mp3</code>
 
 <h3 id="Usando_Banco_de_Dados">Usando Banco de Dados</h3>
 
-<p><span id="result_box" lang="pt"><span>Aplicativos Express podem usar qualquer mecanismo de banco de dados suportado pelo Node (o Express em si não define nenhum comportamento/requisitos adicionais específicos para gerenciamento de banco de dados).</span> <span>Existem muitas opções, incluindo PostgreSQL, MySQL, Redis, SQLite, MongoDB, etc.</span></span></p>
+<p><span id="result_box" lang="pt"><span>Aplicativos Express podem usar qualquer mecanismo de banco de dados suportado pelo Node (o Express em si não define nenhum comportamento/requisitos adicionais específicos para gerenciamento de banco de dados).</span> <span>Existem muitas opções, incluindo PostgreSQL, MySQL, Redis, SQLite, MongoDB, etc.</span></span></p>
 
 <p><span id="result_box" lang="pt"><span>Para usá-los, você deve primeiro instalar o driver do banco de dados usando NPM.</span> <span>Por exemplo, para instalar o driver para o popular NoSQL MongoDB você usaria o comando:</span></span></p>
 
@@ -464,7 +464,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'some_template_engine_name');
 </pre>
 
-<p><span id="result_box" lang="pt"><span>A aparência do modelo dependerá do mecanismo que você usa.</span> <span>Supondo que você tenha um arquivo de modelo chamado "índice. &lt;Template_extension&gt;" que contenha espaços reservados para variáveis de dados denominadas 'título' e 'mensagem', você chamaria </span></span><code><a href="http://expressjs.com/en/4x/api.html#res.render">Response.render()</a></code><span lang="pt"><span> em uma função de roteador de rotas para criar e enviar a resposta HTML</span> <span>:</span></span></p>
+<p><span id="result_box" lang="pt"><span>A aparência do modelo dependerá do mecanismo que você usa.</span> <span>Supondo que você tenha um arquivo de modelo chamado "índice. &lt;Template_extension&gt;" que contenha espaços reservados para variáveis de dados denominadas 'título' e 'mensagem', você chamaria </span></span><code><a href="http://expressjs.com/en/4x/api.html#res.render">Response.render()</a></code><span lang="pt"><span> em uma função de roteador de rotas para criar e enviar a resposta HTML</span> <span>:</span></span></p>
 
 <pre class="brush: js notranslate">app.get('/', function(req, res) {
   res.render('index', { title: 'About dogs', message: 'Dogs rock!' });
@@ -483,7 +483,7 @@ app.set('view engine', 'some_template_engine_name');
 
 <h2 id="Sumário">Sumário</h2>
 
-<p><span id="result_box" lang="pt"><span>Parabéns, você completou o primeiro passo em sua viagem Express/Node!</span> <span>Agora você deve entender os principais benefícios do Express e Node, e aproximadamente o que as principais partes de um aplicativo Express podem ser (rotas, middleware, tratamento de erros e código de modelo).</span> <span>Por ser um framework não opinativo, o Express permite que você defina a maneira como essas partes e essas bibliotecas são integradas.</span></span></p>
+<p><span id="result_box" lang="pt"><span>Parabéns, você completou o primeiro passo em sua viagem Express/Node!</span> <span>Agora você deve entender os principais benefícios do Express e Node, e aproximadamente o que as principais partes de um aplicativo Express podem ser (rotas, middleware, tratamento de erros e código de modelo).</span> <span>Por ser um framework não opinativo, o Express permite que você defina a maneira como essas partes e essas bibliotecas são integradas.</span></span></p>
 
 <p><span style="">Claro que Express é deliberadamente uma estrutura de aplicativos web muito leve, tanto seu benefício e potencial vem de bibliotecas e recursos de terceiros.</span><span style=""> </span><span style="">Examinaremos essa questão com mais detalhes nos próximos artigos.</span><span style=""> </span><span style="">No artigo a seguir, vamos analisar a criação de um ambiente de desenvolvimento de Node, para que você possa começar a ver algum código Express em ação.</span></p>
 
@@ -511,10 +511,10 @@ app.set('view engine', 'some_template_engine_name');
  <li><a href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/Introduction">Introdução Express/Node </a>- Módulo Atual</li>
  <li><a href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/development_environment">Configurando um ambiente de desenvolvimento Node (Express)</a></li>
  <li><a href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Express Tutorial: The Local Library website</a></li>
- <li><a href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/skeleton_website">Express Tutorial Part 2: C</a>riando um esqueleto de website</li>
- <li><a href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/mongoose">Express Tutorial Part 3: Utilizando Banco de Dados (com Mongoose)</a></li>
- <li><a href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/routes">Express Tutorial Part 4: R</a>otas e Controladores</li>
+ <li><a href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/skeleton_website">Express Tutorial Part 2: Criando um esqueleto de website</a></li>
+ <li><a href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/mongoose">Express Tutorial Part 3: Utilizando Banco de Dados (com Mongoose)</a></li>
+ <li><a href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/routes">Express Tutorial Part 4: Rotas e Controladores</a></li>
  <li><a href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a></li>
- <li><a href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: </a>Trabalhando com formulários</li>
+ <li><a href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Trabalhando com formulários</a></li>
  <li><a href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/deployment">Express Tutorial Part 7: Deploying to production</a></li>
 </ul>

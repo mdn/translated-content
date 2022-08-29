@@ -30,8 +30,7 @@ let time = performanceTiming.responseEnd;
 
 | Spécification                                                                                                                                        | Statut                                   | Commentaire          |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-responseEnd',
-        'PerformanceTiming.responseEnd')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+| {{SpecName('Navigation Timing', '#dom-performancetiming-responseEnd', 'PerformanceTiming.responseEnd')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
 
 ## Compatibilité des navigateurs
 

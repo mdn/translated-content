@@ -23,7 +23,7 @@ original_slug: Web/JavaScript/Guide/Grammatik_und_Typen
 
 <p>Jedoch ist die Variable <code>früh</code> nicht dieselbe wie <code>Früh</code>, weil JavaScript case-sensitiv ist.</p>
 
-<p>In JavaScript heißen Anweisungen "{{Glossary("Statement", "statements")}}" und werden durch ein Semikolon (;) voneinander getrennt. Ein Semikolon ist nicht nötig, wenn jedes Statement in einer neuen Zeile ist. Wenn mehrere Statements in einer Zeile geschrieben werden, sollte nach jedes mit einem Semikolon trennen. Zudem ist es gängige Praxis, hinter jedem Statement ein Semikolon zu schreiben. Leerzeichen, Tabulatoren und Zeilenumbrüche werden "Whitespace" genannt. Der Quelltext von JavaScript wird vom Interpreter von links nach rechts gelesen und in Sequenzen von Eingabe-Elementen wie JavaScript-Tokens, Steuerzeichen, Zeichenumbrüche, Kommentare und Objektinstanzen (Literale) umgewandelt. ECMAScript beschreibt für den Interpreter reservierte Schlüsselwörter sowie Objektinstanzen und hat eingebaute Regeln für die automatische Einfügung von Semikola (ASI) um Anweisungen zu beenden. Es wird jedoch empfohlen jede Anweisung mit einem Semikolon zu beenden; dies vermeidet ungewollte Nebeneffekte. Mehr Informationen dazu sind in der detaillierten Referenz über JavaScripts <a href="/de/docs/Web/JavaScript/Reference/Lexical_grammar">lexikalische Grammatik</a> zu finden.</p>
+<p>In JavaScript heißen Anweisungen "{{Glossary("Statement", "statements")}}" und werden durch ein Semikolon (;) voneinander getrennt. Ein Semikolon ist nicht nötig, wenn jedes Statement in einer neuen Zeile ist. Wenn mehrere Statements in einer Zeile geschrieben werden, sollte nach jedes mit einem Semikolon trennen. Zudem ist es gängige Praxis, hinter jedem Statement ein Semikolon zu schreiben. Leerzeichen, Tabulatoren und Zeilenumbrüche werden "Whitespace" genannt. Der Quelltext von JavaScript wird vom Interpreter von links nach rechts gelesen und in Sequenzen von Eingabe-Elementen wie JavaScript-Tokens, Steuerzeichen, Zeichenumbrüche, Kommentare und Objektinstanzen (Literale) umgewandelt. ECMAScript beschreibt für den Interpreter reservierte Schlüsselwörter sowie Objektinstanzen und hat eingebaute Regeln für die automatische Einfügung von Semikola (ASI) um Anweisungen zu beenden. Es wird jedoch empfohlen jede Anweisung mit einem Semikolon zu beenden; dies vermeidet ungewollte Nebeneffekte. Mehr Informationen dazu sind in der detaillierten Referenz über JavaScripts <a href="/de/docs/Web/JavaScript/Reference/Lexical_grammar">lexikalische Grammatik</a> zu finden.</p>
 
 <h2 id="Kommentare">Kommentare</h2>
 
@@ -45,9 +45,9 @@ original_slug: Web/JavaScript/Guide/Grammatik_und_Typen
 
 <dl>
  <dt>{{jsxref("Statements/var", "var")}}</dt>
- <dd>Deklariert eine Variable. Optional wird ein Wert initialisiert.</dd>
+ <dd>Deklariert eine Variable. Optional wird ein Wert initialisiert.</dd>
  <dt>{{jsxref("Statements/let", "let")}}</dt>
- <dd>Deklariert eine Variable mit Gültigkeit im aktuellen Block. Optional wird ein Wert initialisiert.</dd>
+ <dd>Deklariert eine Variable mit Gültigkeit im aktuellen Block. Optional wird ein Wert initialisiert.</dd>
  <dt>{{jsxref("Statements/const", "const")}}</dt>
  <dd>Deklariert eine Konstante mit Gültigkeit im aktuellen Block.</dd>
 </dl>
@@ -56,7 +56,7 @@ original_slug: Web/JavaScript/Guide/Grammatik_und_Typen
 
 <p>Variablen werden benutzt, um Werte zu speichern. Dabei gibt man einer Variablen einen Namen, der {{Glossary("identifier", "Bezeichner")}} bzw. Bezeichner genannt wird und der bestimmten Regeln folgt.</p>
 
-<p>Ein JavaScript Bezeichner muss mit einem Buchstaben, Unterstrich (_) oder einem Dollarzeichen ($) beginnen. Die nachfolgenden Zeichen können auch Zahlen sein. Da JavaScript case-sensitive ist, wird zwischen Groß- und Kleinschreibung unterschieden und somit repräsentiert "A" einen anderen Buchstaben als "a".</p>
+<p>Ein JavaScript Bezeichner muss mit einem Buchstaben, Unterstrich (_) oder einem Dollarzeichen ($) beginnen. Die nachfolgenden Zeichen können auch Zahlen sein. Da JavaScript case-sensitive ist, wird zwischen Groß- und Kleinschreibung unterschieden und somit repräsentiert "A" einen anderen Buchstaben als "a".</p>
 
 <p>Es kann ein Großteil der ISO 8859-1 und Unicode-Zeichen benutzt werden, wie z.B. ü oder auch å, aber auch <a href="/de/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals">Unicode escape sequences</a> können genutzt werden.</p>
 
@@ -68,7 +68,7 @@ original_slug: Web/JavaScript/Guide/Grammatik_und_Typen
 
 <ul>
  <li>Mit dem Schlüsselwort {{jsxref("Statements/var", "var")}}, wie <code>var x = 42</code>. Die Syntax kann benutzt werden, um Variablen lokal und global zu deklarieren.</li>
- <li>Mit dem Zuweisen einer Variable, wie <code>x = 42</code>. Wenn diese Form außerhalb einer Funktion genutzt wird, wird die Variable global deklariert. Es wird eine strikte JavaScript-Warnung erzeugt. Diese Variante sollte vermieden werden.</li>
+ <li>Mit dem Zuweisen einer Variable, wie <code>x = 42</code>. Wenn diese Form außerhalb einer Funktion genutzt wird, wird die Variable global deklariert. Es wird eine strikte JavaScript-Warnung erzeugt. Diese Variante sollte vermieden werden.</li>
  <li>Mit dem Schlüsselwort {{jsxref("Statements/let", "let")}} , wie <code>let x = 42</code>. Die Syntax kann benutz werden, um Variablen nur für ihren Scope (Gültigkeitsbereich) zu deklarieren. Siehe <a href="#Variablen Scope">Variablen Scope</a>.</li>
 </ul>
 
@@ -93,7 +93,7 @@ console.log("Der Wert von y ist " + y); // ReferenceError: y is not defined
 let y;
 </pre>
 
-<p><code>undefined</code> kann benutzt werden, um zu überprüfen ob eine Variable einen Wert hat. Im Folgenden Codebeispiel ist der Variable <code>input</code> kein Wert zugewiesen worden und das <code><a href="/de/docs/Web/JavaScript/Reference/Statements/if...else">if</a></code>-Statement wird somit <code>true</code> ausgeben.</p>
+<p><code>undefined</code> kann benutzt werden, um zu überprüfen ob eine Variable einen Wert hat. Im Folgenden Codebeispiel ist der Variable <code>input</code> kein Wert zugewiesen worden und das <code><a href="/de/docs/Web/JavaScript/Reference/Statements/if...else">if</a></code>-Statement wird somit <code>true</code> ausgeben.</p>
 
 <pre class="brush: js notranslate">var input;
 if(input === undefined){
@@ -103,7 +103,7 @@ if(input === undefined){
 }
 </pre>
 
-<p><code>undefined</code> verhält sich wie ein <code>false</code>, wenn es in einem boolschen Kontext verwendet wird. Zum Beispiel wird im folgendem Codebeispiel die Funktion <code>myFunction</code> ausgeführt, weil das <code>myArray</code> Element <code>undefined</code> ist:</p>
+<p><code>undefined</code> verhält sich wie ein <code>false</code>, wenn es in einem boolschen Kontext verwendet wird. Zum Beispiel wird im folgendem Codebeispiel die Funktion <code>myFunction</code> ausgeführt, weil das <code>myArray</code> Element <code>undefined</code> ist:</p>
 
 <pre class="brush: js notranslate">var myArray = [];
 if (!myArray[0]) myFunction();
@@ -114,7 +114,7 @@ if (!myArray[0]) myFunction();
 <pre class="brush: js notranslate">var a;
 a + 2;  //NaN</pre>
 
-<p>Wenn eine {{jsxref("null")}} Variable ausgewertet wird, verhält sie sich im numerischen Kontext wie <code>0</code> und in booleschem Kontext wie <code>false</code>:</p>
+<p>Wenn eine {{jsxref("null")}} Variable ausgewertet wird, verhält sie sich im numerischen Kontext wie <code>0</code> und in booleschem Kontext wie <code>false</code>:</p>
 
 <pre class="brush: js notranslate">var n = null;
 console.log(n * 32);  // wird 0 in die Konsole eintragen
@@ -122,7 +122,7 @@ console.log(n * 32);  // wird 0 in die Konsole eintragen
 
 <h3 id="Variablen_Scope"><a id="Variablen Scope" name="Variablen Scope"></a>Variablen Scope</h3>
 
-<p>Wird eine Variable außerhalb eines Code-Blocks deklariert, wird sie eine <code>globale Variable</code> genannt, da sie jetzt in jedem Bereich verfügbar ist. Wenn eine Variable jedoch innerhalb eines Code-Blocks deklariert wird, so ist sie nur innerhalb dieses Blocks verfügbar und wird aus diesem Grund <code>lokale Variable</code> genannt.</p>
+<p>Wird eine Variable außerhalb eines Code-Blocks deklariert, wird sie eine <code>globale Variable</code> genannt, da sie jetzt in jedem Bereich verfügbar ist. Wenn eine Variable jedoch innerhalb eines Code-Blocks deklariert wird, so ist sie nur innerhalb dieses Blocks verfügbar und wird aus diesem Grund <code>lokale Variable</code> genannt.</p>
 
 <p>JavaScript hatte vor ECMAScript 2015 keinen <a href="/de/docs/JavaScript/Guide/Statements#Block_Statement">Block-Anweisungs</a> Scope; daher wurde eine deklarierte Variable in einem Block immer zu der Funktion (oder dem globalen Scope) gezählt, in dem sich der Block befand. Zum Beispiel wird der folgende Quelltext 5 ausgeben, weil der Scope von <code>x</code> die Funktion ist bzw. der globale Kontext, in dem <code>x</code> deklariert wurde, und nicht der Block, in diesem Fall die <code>if</code> Anweisung, selbst.</p>
 
@@ -142,7 +142,7 @@ console.log(y);  // ReferenceError: y is not defined
 
 <h3 id="Variablen_hochziehen_hoisting">Variablen hochziehen (<strong>hoisting</strong>)</h3>
 
-<p>Eine andere Besonderheit mit Variablen in JavaScript ist, dass man eine Variable referenzieren kann, bevor sie deklariert wurde, ohne das es zu einem Fehler kommt. Diese Konzept ist bekannt als <strong>hoisting</strong> (hochziehen); Variablen in JavaScript sind hochgezogen und quasi zum Anfang der Funktion oder des Statements gehoben worden. Immer wenn Variablen hochgezogen werden, werden sie den Wert <code>undefined</code> zurückgeben. So wird immer <code>undefined</code> zurückgegeben, wenn man die Variablen benutzt, bevor sie deklariert und initialisiert wurden.</p>
+<p>Eine andere Besonderheit mit Variablen in JavaScript ist, dass man eine Variable referenzieren kann, bevor sie deklariert wurde, ohne das es zu einem Fehler kommt. Diese Konzept ist bekannt als <strong>hoisting</strong> (hochziehen); Variablen in JavaScript sind hochgezogen und quasi zum Anfang der Funktion oder des Statements gehoben worden. Immer wenn Variablen hochgezogen werden, werden sie den Wert <code>undefined</code> zurückgeben. So wird immer <code>undefined</code> zurückgegeben, wenn man die Variablen benutzt, bevor sie deklariert und initialisiert wurden.</p>
 
 <pre class="brush: js notranslate">/**
  * Beispiel 1
@@ -326,13 +326,13 @@ y = 42 + " is the answer" // "42 is the answer"
 <p>Man benutzt Literale, um in JavaScript Werte zu repräsentieren. Es sind feste Werte, keine Variablen, die man in einem Skript einsetzt. Dieses Kapitel beschreibt die folgeden Literaltypen:</p>
 
 <ul>
- <li>{{anch("Array Literale")}}</li>
- <li>{{anch("Boolean Literale")}}</li>
- <li>{{anch("Gleitkomma Literale")}}</li>
- <li>{{anch("Ganze Zahlen")}}</li>
- <li>{{anch("Objekt Literale")}}</li>
- <li>{{anch("RegExp Literale")}}</li>
- <li>{{anch("String Literale")}}</li>
+ <li><a href="#array_literale">Array Literale</a></li>
+ <li><a href="#boolean_literale">Boolean Literale</a></li>
+ <li><a href="#gleitkomma_literale">Gleitkomma Literale</a></li>
+ <li><a href="#ganze_zahlen">Ganze Zahlen</a></li>
+ <li><a href="#objekt_literale">Objekt Literale</a></li>
+ <li><a href="#regexp_literale">RegExp Literale</a></li>
+ <li><a href="#string_literale">String Literale</a></li>
 </ul>
 
 <h3 id="Array_Literal">Array Literal</h3>
@@ -483,7 +483,7 @@ console.log(unusualPropertyNames["!"]); // Bang!</pre>
 
 <h4 id="Erweiterte_Objekt_Literale">Erweiterte Objekt Literale</h4>
 
-<p>In ES2015 wurde das Objekt Literal dahingehend erweitert, dass der Prototyp bei der Erstellung gesetzt wird. Desweiteren sind neue Funktionalitäten hinzugekommen, die eine Kurzschreibweise für <code>foo: foo</code> Zuweisungen, die Definitionen für Methoden, das Aufrufen von super Methoden und die Berechnung der Eigenschaftsnamen mit Ausdrücken ermöglichen. Alle diese Funktionen bringen zum Einen Klassendefinition und Objekt Literale näher zusammen und sind somit objektbasiertes Design und zum Anderen häufig vorteilhafter und bequemer.</p>
+<p>In ES2015 wurde das Objekt Literal dahingehend erweitert, dass der Prototyp bei der Erstellung gesetzt wird. Desweiteren sind neue Funktionalitäten hinzugekommen, die eine Kurzschreibweise für <code>foo: foo</code> Zuweisungen, die Definitionen für Methoden, das Aufrufen von super Methoden und die Berechnung der Eigenschaftsnamen mit Ausdrücken ermöglichen. Alle diese Funktionen bringen zum Einen Klassendefinition und Objekt Literale näher zusammen und sind somit objektbasiertes Design und zum Anderen häufig vorteilhafter und bequemer.</p>
 
 <pre class="brush: js notranslate">var obj = {
     // __proto__
@@ -652,7 +652,7 @@ console.log(quote);
 <pre class="eval notranslate">He read "The Cremation of Sam McGee" by R.W. Service.
 </pre>
 
-<p>Um ein Backslash in einem String zu verwenden, muss dieses mit einem Backslash escaped werden. Zum Beispiel muss der Pfad <code>c:\temp</code> wie folgt geschrieben werden:</p>
+<p>Um ein Backslash in einem String zu verwenden, muss dieses mit einem Backslash escaped werden. Zum Beispiel muss der Pfad <code>c:\temp</code> wie folgt geschrieben werden:</p>
 
 <pre class="brush: js notranslate">var home = "c:\\temp";
 </pre>

@@ -18,7 +18,9 @@ L'accesseur **`byteLength`** est une propriété représentant la longueur d'un 
 
 ## Syntaxe
 
-    arraybuffer.byteLength
+```js
+arraybuffer.byteLength
+```
 
 ## Description
 

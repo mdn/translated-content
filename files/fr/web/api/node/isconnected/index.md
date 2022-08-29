@@ -14,7 +14,9 @@ La propriété en lecture seule **`isConnected`** de l'interface {{domxref("Node
 
 ## Syntaxe
 
-    var isItConnected = nodeObjectInstance.isConnected
+```js
+var isItConnected = nodeObjectInstance.isConnected
+```
 
 ### Renvoie la valeur
 
@@ -67,14 +69,10 @@ shadow.appendChild(style);
 console.log(style.isConnected); // renvoie true (vrai)
 ```
 
-
-
 ## Spécifications
 
-| Spécification                                                                        | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG','#dom-node-isconnected','isConnected')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.isConnected")}}
+{{Compat}}

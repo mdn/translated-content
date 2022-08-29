@@ -16,7 +16,9 @@ La valeur **Document.readyState** est une propriété de {{ domxref("document") 
 
 ## Syntaxe
 
-    var string = document.readyState;
+```js
+var string = document.readyState;
+```
 
 ### Valeurs
 
@@ -86,21 +88,11 @@ document.addEventListener('readystatechange', bootstrap, false);
 
 ## Spécifications
 
-| Spécifications                                                                                               | Status                           | Commentaires            |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------- |
-| {{SpecName("HTML WHATWG", "#current-document-readiness", "Document readiness")}} | {{Spec2('HTML WHATWG')}} |                         |
-| {{SpecName("HTML5.1", "#current-document-readiness", "Document readiness")}}         | {{Spec2('HTML5.1')}}     |                         |
-| {{SpecName("HTML5 W3C", "#current-document-readiness", "Document readiness")}}     | {{Spec2('HTML5 W3C')}}     | Spécification initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.readyState")}}
-
-\[1] Ne supporte que 'complete'. Opera Presto notifie 'complete' seulement après l'événement 'load' (dans un ordre incorrect par rapport à la spécification du standard HTML5).
-
-\[2] Internet Explorer 9 et 10 ont des bogues quand l'état 'interactive' [peut être notifié trop tôt](https://bugs.jquery.com/ticket/12282) avant que le document soit entièrement analysé.
-
-\[3] À l'introduction dans IE 4, la propriété était seulement disponible pour les objets document, embed, img, link, object, script, et style. IE 5 a étendu le support à tous les objets élément HTML.
+{{Compat}}
 
 ## Voir aussi
 

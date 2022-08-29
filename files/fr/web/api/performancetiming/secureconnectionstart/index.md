@@ -30,8 +30,7 @@ let time = performanceTiming.secureConnectionStart;
 
 | Spécification                                                                                                                                                                    | Statut                                   | Commentaire          |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-secureconnectionstart',
-        'PerformanceTiming.secureConnectionStart')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+| {{SpecName('Navigation Timing', '#dom-performancetiming-secureconnectionstart', 'PerformanceTiming.secureConnectionStart')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
 
 ## Compatibilité des navigateurs
 

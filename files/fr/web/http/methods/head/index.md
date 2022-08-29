@@ -53,7 +53,9 @@ Si le résultat d'une requête `HEAD` montre qu'une ressource mise en cache apr�
 
 ## Syntaxe
 
-    HEAD /index.html
+```
+HEAD /index.html
+```
 
 ## Spécifications
 

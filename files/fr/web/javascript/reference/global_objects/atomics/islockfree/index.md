@@ -18,7 +18,9 @@ La méthode statique **`Atomics.isLockFree()`** est utilisée afin de détermine
 
 ## Syntaxe
 
-    Atomics.isLockFree(taille)
+```js
+Atomics.isLockFree(taille)
+```
 
 ### Paramètres
 

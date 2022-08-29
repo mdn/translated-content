@@ -35,9 +35,9 @@ Dans cet article, nous listons les logiciels nécessaires pour éditer, mettre e
 
 La plupart des logiciels nécessaires au développement d'un site web peuvent être téléchargés gratuitement sur Internet. Quelques liens seront fournis au fur et à mesure de l'article. Vous aurez besoin d'outils pour :
 
-1.  Créer et éditer des pages web
-2.  Téléverser (_uploader_) vos fichiers vers votre serveur web
-3.  Visualiser votre site web.
+1. Créer et éditer des pages web
+2. Téléverser (_uploader_) vos fichiers vers votre serveur web
+3. Visualiser votre site web.
 
 Tous les systèmes d'exploitation (ou presque) possèdent par défaut un éditeur de texte et un outil pour visualiser des sites web (qu'on appellera un navigateur web). Seul l'outil qui permet de transférer les fichiers vers votre serveur web pourrait manquer à l'appel.
 

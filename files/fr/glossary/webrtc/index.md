@@ -27,6 +27,6 @@ WebRTC est constitué principalement de ces éléments :
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "WebRTC")}} sur Wikipédia
+- [WebRTC](https://fr.wikipedia.org/wiki/WebRTC) sur Wikipédia
 - [Guide WebRTC sur MDN](/fr/docs/Web/Guide/API/WebRTC)
 - [Support WebRTC des navigateurs](http://caniuse.com/#feat=rtcpeerconnection)

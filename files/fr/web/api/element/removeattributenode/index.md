@@ -14,7 +14,9 @@ translation_of: Web/API/Element/removeAttributeNode
 
 ## Syntaxe
 
-    removedAttr =element.removeAttributeNode(attributeNode)
+```js
+removedAttr =element.removeAttributeNode(attributeNode)
+```
 
 - `attributeNode` est le nœud `Attr` à enlever.
 - `removedAttr` est le nœud `Attr` qui vient d'être enlevé.

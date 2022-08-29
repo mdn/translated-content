@@ -13,11 +13,11 @@ translation_of: Web/JavaScript/EventLoop
 ---
 <div>{{JsSidebar("Advanced")}}</div>
 
-<p>JavaScript hat ein Nebenläufigkeitsmodell, auf Basis einer Eventschleife. Dieses Modell unterscheidet sich stark von Modellen aus anderen Sprachen wie C und Java.</p>
+<p>JavaScript hat ein Nebenläufigkeitsmodell, auf Basis einer Eventschleife. Dieses Modell unterscheidet sich stark von Modellen aus anderen Sprachen wie C und Java.</p>
 
 <h2 id="Laufzeitkonzepte">Laufzeitkonzepte</h2>
 
-<p>Der folgenden Abschnitt erklärt ein theoretisches Modell. Moderne JavaScript-Engines implementieren und optimieren die beschriebenen Semantiken sehr stark.</p>
+<p>Der folgenden Abschnitt erklärt ein theoretisches Modell. Moderne JavaScript-Engines implementieren und optimieren die beschriebenen Semantiken sehr stark.</p>
 
 <h3 id="Visuelle_Repräsentation">Visuelle Repräsentation</h3>
 
@@ -50,13 +50,13 @@ console.log(bar(7)); // gibt 42 zurück
 
 <p>Eine JavaScript Laufzeitumgebung benutzt eine Nachrichten-Queue, welche eine Liste von Nachrichten ist, die ausgeführt werden. Jede Nachricht hat eine Funktion, die aufgerufen wird, um die Nachricht abzuarbeiten.</p>
 
-<p>An diesem Punkt, während der {{anch("Eventschleife", "Eventschleife")}}, beginnt die Laufzeitumgebung mit der ältesten Nachricht. Dazu wird die Nachricht aus der Queue entfernt und die zugehörige Funktion mit der Nachricht als Eingabeparameter aufgerufen. Wie immer erzeugt das Aufrufen einer Funktion einen neuen Frame auf dem Stack, für den Funktionsgebrauch.</p>
+<p>An diesem Punkt, während der <a href="#eventschleife">Eventschleife</a>, beginnt die Laufzeitumgebung mit der ältesten Nachricht. Dazu wird die Nachricht aus der Queue entfernt und die zugehörige Funktion mit der Nachricht als Eingabeparameter aufgerufen. Wie immer erzeugt das Aufrufen einer Funktion einen neuen Frame auf dem Stack, für den Funktionsgebrauch.</p>
 
 <p>Die Ausführung von Funktionen geht so lange weiter, bis der Stack wieder leer ist; dann wird die Eventschleife die nächste Nachricht ausführen (wenn eine vorhanden ist).</p>
 
 <h2 id="Eventschleife">Eventschleife</h2>
 
-<p>Die <strong>Eventschleife</strong> ist nach der Art und Weise, wie diese meist implementiert ist, benannt. Dies ähnelt meist der folgenden Struktur:</p>
+<p>Die <strong>Eventschleife</strong> ist nach der Art und Weise, wie diese meist implementiert ist, benannt. Dies ähnelt meist der folgenden Struktur:</p>
 
 <pre class="brush: js">while (queue.waitForMessage()){
   queue.processNextMessage();
@@ -74,7 +74,7 @@ console.log(bar(7)); // gibt 42 zurück
 
 <p>In einem Webbrowser werden Nachrichten immer hinzugefügt, wenn ein Event auftritt und diesem ein Event Listener hinzugefügt wurde. Ist kein Listener vorhanden, geht das Event verloren. Ein Klick auf ein Element mit einem Click-Event-Handler fügt also eine Nachricht hinzu - ähnlich wie bei jedem anderen Ereignis.</p>
 
-<p>Die Funktion {{domxref("WindowTimers.setTimeout", "setTimeout")}} wird mit 2 Argumenten aufgerufen: eine Nachricht, die der Queue hinzugefügt wird, und einen Zeitwert (optional; Standardwert 0). Der Zeitwert gibt die (minimale) Zeit an, nach der die Nachricht zur Queue hinzugefügt wird. Die Nachricht wird nach dieser Zeit aufgeführt, wenn keine anderen Nachrichten ausgeführt werden. Aus diesem Grund ist der zweite Parameter die minimale und nicht die garantierte Zeit.</p>
+<p>Die Funktion {{domxref("WindowTimers.setTimeout", "setTimeout")}} wird mit 2 Argumenten aufgerufen: eine Nachricht, die der Queue hinzugefügt wird, und einen Zeitwert (optional; Standardwert 0). Der Zeitwert gibt die (minimale) Zeit an, nach der die Nachricht zur Queue hinzugefügt wird. Die Nachricht wird nach dieser Zeit aufgeführt, wenn keine anderen Nachrichten ausgeführt werden. Aus diesem Grund ist der zweite Parameter die minimale und nicht die garantierte Zeit.</p>
 
 <p>Hier ist ein Beispiel, welches das Konzept demonstriert (<code>setTimeout</code> wird nicht direkt nach dem Ablaufen der Zeit aufgeführt):</p>
 
@@ -95,11 +95,11 @@ while(true) {
 
 <h3 id="Nullverzögerungen">Nullverzögerungen</h3>
 
-<p>Nullverzögerung bedeutet nicht, dass der Aufruf nach null Millisekunden gefeuert wird. Der Aufruf von {{domxref("WindowTimers.setTimeout", "setTimeout")}} mit einer Verzögerung von 0 Millisekunden führt die übergebene Funktion nicht nach dem gegebenen Intervall aus.</p>
+<p>Nullverzögerung bedeutet nicht, dass der Aufruf nach null Millisekunden gefeuert wird. Der Aufruf von {{domxref("WindowTimers.setTimeout", "setTimeout")}} mit einer Verzögerung von 0 Millisekunden führt die übergebene Funktion nicht nach dem gegebenen Intervall aus.</p>
 
 <p>Die Ausführung hängt von der Anzahl von wartenden Aufrufen in der Queue ab. Im Beispiel unten, wird die Nachricht ''this is just a message'' vor der Ausführung des Callback auf der Konsole ausgegeben, weil die Verzögerung die minimale Verzögerung für die Laufzeigumgebung ist, aber diese nicht garantiert werden kann.</p>
 
-<p>Im Grunde muss setTimeout warten, bis der gesamte Code für Nachrichten in der Warteschlange abgeschlossen wurde, obwohl ein bestimmtes Zeitlimit für setTimeout angegeben wurde.</p>
+<p>Im Grunde muss setTimeout warten, bis der gesamte Code für Nachrichten in der Warteschlange abgeschlossen wurde, obwohl ein bestimmtes Zeitlimit für setTimeout angegeben wurde.</p>
 
 <pre class="brush: js">(function() {
 

@@ -16,7 +16,7 @@ translation_of: Web/HTTP/Headers/Referrer-Policy
 ---
 {{HTTPSidebar}}
 
-L'en-tête {{glossary("HTTP header")}} **`Referrer-Policy`** contrôle la quantité d'[informations sur le référent (referrer)](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) (envoyées par l'en-tête {{HTTPHeader("Referer")}}) incluses dans la requête.
+L'en-tête {{glossary("HTTP header")}} **`Referrer-Policy`** contrôle la quantité d'[informations sur le référent (referrer)](/fr/docs/Web/Security/Referer_header:_privacy_and_security_concerns) (envoyées par l'en-tête {{HTTPHeader("Referer")}}) incluses dans la requête.
 
 <table class="properties">
   <tbody>
@@ -35,14 +35,16 @@ L'en-tête {{glossary("HTTP header")}} **`Referrer-Policy`** contrôle la quanti
 
 > **Note :** Le nom originel de l'en-tête, {{HTTPHeader("Referer")}}, est une faute de frappe du mot anglais "referrer". L'en-tête `Referrer-Policy` ne comporte pas cette erreur.
 
-    Referrer-Policy: no-referrer
-    Referrer-Policy: no-referrer-when-downgrade
-    Referrer-Policy: origin
-    Referrer-Policy: origin-when-cross-origin
-    Referrer-Policy: same-origin
-    Referrer-Policy: strict-origin
-    Referrer-Policy: strict-origin-when-cross-origin
-    Referrer-Policy: unsafe-url
+```
+Referrer-Policy: no-referrer
+Referrer-Policy: no-referrer-when-downgrade
+Referrer-Policy: origin
+Referrer-Policy: origin-when-cross-origin
+Referrer-Policy: same-origin
+Referrer-Policy: strict-origin
+Referrer-Policy: strict-origin-when-cross-origin
+Referrer-Policy: unsafe-url
+```
 
 ## Directives
 
@@ -60,7 +62,7 @@ L'en-tête {{glossary("HTTP header")}} **`Referrer-Policy`** contrôle la quanti
 - `origin-when-cross-origin`
   - : Envoie l'origine, le chemin et les paramètres de requête pour les requêtes {{glossary("Same-origin_policy", "same-origin")}} et seulement l'origine du document dans les autres cas.
 - `same-origin`
-  - : Un référent sera envoyé aux [page de même origine](/en-US/docs/Web/Security/Same-origin_policy), mais des requêtes vers des adresses externes n'enverront aucune information sur le référent.
+  - : Un référent sera envoyé aux [page de même origine](/fr/docs/Web/Security/Same-origin_policy), mais des requêtes vers des adresses externes n'enverront aucune information sur le référent.
 - `strict-origin`
   - : N'envoie que l'origine du document comme référent quand le niveau de sécurité du protocole reste le même (HTTPS vers HTTPS) mais n'envoie rien si la destination est moins sécurisée (HTTPS vers HTTP).
 - `strict-origin-when-cross-origin`
@@ -73,7 +75,7 @@ L'en-tête {{glossary("HTTP header")}} **`Referrer-Policy`** contrôle la quanti
 
 ## Intégration avec HTML
 
-Vous pouvez aussi définir des règles de référent au sein d'HTML. Par exemple, vous pouvez définir la règle de référent pour le document entier avec un élément {{HTMLElement("meta")}} dont le [name](/en-US/docs/Web/HTML/Element/meta#attr-name) est `referrer` :
+Vous pouvez aussi définir des règles de référent au sein d'HTML. Par exemple, vous pouvez définir la règle de référent pour le document entier avec un élément {{HTMLElement("meta")}} dont le [name](/fr/docs/Web/HTML/Element/meta#attr-name) est `referrer` :
 
 ```html
 <meta name="referrer" content="origin">
@@ -85,7 +87,7 @@ Ou le définit pour des requêtes spécifiques avec l'attribut `referrerpolicy` 
 <a href="http://example.com" referrerpolicy="origin">
 ```
 
-Autrement, une [relation de lien](/en-US/docs/Web/HTML/Link_types) définie à `noreferrer` sur un élément `a`, `area`, ou `link` peut être défini :
+Autrement, une [relation de lien](/fr/docs/Web/HTML/Link_types) définie à `noreferrer` sur un élément `a`, `area`, ou `link` peut être défini :
 
 ```html
 <a href="http://example.com" rel="noreferrer">
@@ -98,7 +100,7 @@ Autrement, une [relation de lien](/en-US/docs/Web/HTML/Link_types) définie à `
 CSS peut demander des ressources référencées dans des feuilles de styles. Ces ressources suivent une règle de référent aussi :
 
 - Les feuilles de styles CSS externes utilisant la règle par défaut (`no-referrer-when-downgrade`),  moins qu'elle soit remplacée un l'en-tête HTTP `Referrer-Policy` dans la réponse de la feuille de styles CSS.
-- Pour les éléments {{HTMLElement("style")}} ou [attributs `style`](/en-US/docs/Web/API/HTMLElement/style), la règle de référent du propriétaire du document est utilisée.
+- Pour les éléments {{HTMLElement("style")}} ou [attributs `style`](/fr/docs/Web/API/HTMLElement/style), la règle de référent du propriétaire du document est utilisée.
 
 ## Exemples
 
@@ -204,7 +206,9 @@ CSS peut demander des ressources référencées dans des feuilles de styles. Ces
 
 Si vous voulez spécifier une règle à appliquer par défaut dans les où la règle voulue n'est pas supportée par les navigateurs, utilisez un liste de valeurs séparées par des virgules avec la règle voulue fournie en dernière position :
 
-    Referrer-Policy: no-referrer, strict-origin-when-cross-origin
+```
+Referrer-Policy: no-referrer, strict-origin-when-cross-origin
+```
 
 Ici, `no-referrer` ne sera utilisée que si `strict-origin-when-cross-origin` n'est pas supportée par le navigateur.
 
@@ -234,8 +238,8 @@ Ici, `no-referrer` ne sera utilisée que si `strict-origin-when-cross-origin` n'
 
 ## Voir aussi
 
-- {{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}}
-- En utilisant [Fetch](/en-US/docs/Web/API/Fetch_API) : {{domxref("Request.referrerPolicy")}}
-- La directive obsolète {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{Obsolete_Inline}} de l'en-tête {{HTTPHeader("Content-Security-Policy")}}.
-- [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
+- [Référent](https://fr.wikipedia.org/wiki/R%C3%A9f%C3%A9rent_(informatique)) sur Wikipédia
+- En utilisant [Fetch](/fr/docs/Web/API/Fetch_API) : {{domxref("Request.referrerPolicy")}}
+- La directive obsolète {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{deprecated_inline}} de l'en-tête {{HTTPHeader("Content-Security-Policy")}}.
+- [Same-origin policy](/fr/docs/Web/Security/Same-origin_policy)
 - [Tighter Control Over Your Referrers – Mozilla Security Blog](https://blog.mozilla.org/security/2015/01/21/meta-referrer/)

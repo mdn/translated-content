@@ -231,7 +231,7 @@ window.addEventListener("message", (event) => {
 
 - {{jsxref("Promise.prototype.catch()")}}
   - : プロミスに拒否ハンドラーコールバックを追加し、コールバックが呼び出されたときの返値で解決する、または、プロミスが履行された場合は、元の履行結果で解決する
-	新しいプロミスを返します。
+    新しいプロミスを返します。
 - {{jsxref("Promise.prototype.then()")}}
   - : プロミスに履行ハンドラーと拒否ハンドラーを追加し、呼び出されたハンドラーの返値で解決する新しいプロミスを返します。プロミスが処理されなかった場合 (すなわち、関連するハンドラー `onFulfilled` または `onRejected` が関数ではない場合) は、元の解決値を返します。
 - {{jsxref("Promise.prototype.finally()")}}
@@ -381,7 +381,7 @@ function testPromise() {
   });
 
   // プロミスが解決されたときの処理を then() の呼び出しで定義します。
-	// プロミスが拒否されたときの処理を catch() の呼び出しで定義しています。
+  // プロミスが拒否されたときの処理を catch() の呼び出しで定義しています。
   p1.then(function(val) {
     // Log the fulfillment value
     log.insertAdjacentHTML('beforeend', val + ') Promise 履行<br>');

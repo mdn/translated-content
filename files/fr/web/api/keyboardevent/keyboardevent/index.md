@@ -15,7 +15,9 @@ Le constructeur **`KeyboardEvent()`** crée un nouveau {{domxref("KeyboardEvent"
 
 ## Syntaxe
 
-     event = new KeyboardEvent(typeArg, KeyboardEventInit);
+```js
+event = new KeyboardEvent(typeArg, KeyboardEventInit);
+```
 
 ### Valeurs
 
@@ -42,14 +44,11 @@ Le constructeur **`KeyboardEvent()`** crée un nouveau {{domxref("KeyboardEvent"
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('UI Events','#interface-keyboardevent','KeyboardEvent()')}}     | {{Spec2('UI Events')}}     | Définition actuelle. |
-| {{SpecName('DOM3 Events','#interface-KeyboardEvent','KeyboardEvent()')}} | {{Spec2('DOM3 Events')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.KeyboardEvent.KeyboardEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

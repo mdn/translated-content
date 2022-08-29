@@ -11,7 +11,9 @@ Cette propriété est utile pour les jeux à thème pixel-art, lors d'une mise �
 
 ## Syntaxe
 
-    ctx.imageSmoothingEnabled = valeur;
+```js
+ctx.imageSmoothingEnabled = valeur;
+```
 
 ### Options
 
@@ -64,13 +66,11 @@ img.onload = function() {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                    | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-imagesmoothingenabled", "CanvasRenderingContext2D.imageSmoothingEnabled")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.imageSmoothingEnabled")}}
+{{Compat}}
 
 ## Voir aussi
 

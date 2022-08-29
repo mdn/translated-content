@@ -9,7 +9,9 @@ La méthode **`CanvasRenderingContext2D.lineTo()`** de l'API Canvas 2D connecte 
 
 ## Syntaxe
 
-    void ctx.lineTo(x, y);
+```js
+void ctx.lineTo(x, y);
+```
 
 ### Paramètres
 
@@ -89,13 +91,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-lineto", "CanvasRenderingContext2D.lineTo")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.lineTo")}}
+{{Compat}}
 
 ## Voir aussi
 

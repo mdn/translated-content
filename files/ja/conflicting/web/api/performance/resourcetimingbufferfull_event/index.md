@@ -26,7 +26,6 @@ callback = performance.onresourcetimingbufferfull = buffer_full_cb;
 
 - callback
   - : [イベントハンドラー](/ja/docs/Web/Events/Event_handlers)で、 {{domxref("Performance/resourcetimingbufferfull_event", "resourcetimingbufferfull")}} イベントが発生したときに呼び出されるものです。
-</dl>
 
 ## 例
 

@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/species
 ---
 <div>{{JSRef}}</div>
 
-<p>O símbolo <code><strong>Symbol.species</strong></code> especifica uma propriedade valor-função que a função construtora usa para criar objetos derivados.</p>
+<p>O símbolo <code><strong>Symbol.species</strong></code> especifica uma propriedade valor-função que a função construtora usa para criar objetos derivados.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/symbol-species.html")}}</div>
 
@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/species
 
 <h3 id="Usando_espécies">Usando espécies</h3>
 
-<p>Você pode querer que retorne objetos {{jsxref("Array")}} em sua class derivada de array <code>MyArray</code>. Por exemplo, quando usar métodos tais como {{jsxref("Array.map", "map()")}} que retorna o construtor padrão, você quer que esses métodos retornem um objeto  <code>Array</code> pai, em vez do objeto <code>MyArray</code>. Esses símbolos espécies permitem que você fala isso:</p>
+<p>Você pode querer que retorne objetos {{jsxref("Array")}} em sua class derivada de array <code>MyArray</code>. Por exemplo, quando usar métodos tais como {{jsxref("Array.map", "map()")}} que retorna o construtor padrão, você quer que esses métodos retornem um objeto  <code>Array</code> pai, em vez do objeto <code>MyArray</code>. Esses símbolos espécies permitem que você fala isso:</p>
 
 <pre class="brush: js notranslate">class MyArray extends Array {
   // Substitui espécies para a Array pai construtora

@@ -88,19 +88,19 @@ q::after {
 
 ```html
 <div lang="ja">
-  <q>これが日本語の引用符です。</q>
+  <q>これが日本語の引用符です。</q>
 <div>
 <hr>
 <div lang="ru">
-  <q>Это русская цитата</q>
+  <q>Это русская цитата</q>
 <div>
 <hr>
 <div lang="de">
-  <q>Dies ist ein deutsches Zitat</q>
+  <q>Dies ist ein deutsches Zitat</q>
 <div>
 <hr>
 <div lang="en">
-  <q>This is an English quote.</q>
+  <q>This is an English quote.</q>
 <div>
 ```
 

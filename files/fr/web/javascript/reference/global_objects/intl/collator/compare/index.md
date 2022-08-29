@@ -21,7 +21,9 @@ La méthode **`Intl.Collator.prototype.compare()`** compare deux chaînes de car
 
 ## Syntaxe
 
-    collator.compare(chaine1, chaine2)
+```js
+collator.compare(chaine1, chaine2)
+```
 
 ### Paramètres
 

@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/UTC
 
 <h2 id="Syntax">Синтаксис</h2>
 
-<p> <strong>Начиная с  ECMAScript 2017:</strong></p>
+<p> <strong>Начиная с  ECMAScript 2017:</strong></p>
 
 <pre class="syntaxbox">Date.UTC(<var>year</var>[, <var>month</var>[, <var>day</var>[, <var>hour</var>[, <var>minute</var>[, <var>second</var>[, <var>millisecond</var>]]]]]])</pre>
 
@@ -91,7 +91,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/UTC
 
 <h3 id="Date.UTC_с_менее_чем_двумя_аргументами">Date.UTC() с менее чем двумя аргументами</h3>
 
-<p>Когда вы предоставляете функции <code>Date.UTC()</code> меньше, чем два аргумента, то по стандартам ECMAScript 2017, она должна вернуть {{jsxref("NaN")}}. Браузерные движки, не поддерживающие подобное поведение, были обновлены (смотрите <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1050755">bug 1050755</a>, <a href="https://github.com/tc39/ecma262/pull/642">ecma-262 #642</a>).</p>
+<p>Когда вы предоставляете функции <code>Date.UTC()</code> меньше, чем два аргумента, то по стандартам ECMAScript 2017, она должна вернуть {{jsxref("NaN")}}. Браузерные движки, не поддерживающие подобное поведение, были обновлены (смотрите <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1050755">bug 1050755</a>, <a href="https://github.com/tc39/ecma262/pull/642">ecma-262 #642</a>).</p>
 
 <pre class="brush: js">Date.UTC();
 Date.UTC(1);

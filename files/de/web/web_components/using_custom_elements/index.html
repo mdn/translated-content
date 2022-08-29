@@ -8,7 +8,7 @@ translation_of: Web/Web_Components/Using_custom_elements
 <p class="summary">Eines der Hauptmerkmale des Web Components Standards ist die Möglichkeit, benutzerdefinierte Elemente (custom elements) zu erstellen, die ihre Funktionalität auf einer HTML-Seite kapseln, anstatt sich mit einem langen, verschachtelten Stapel von Elementen begnügen zu müssen, die zusammen eine benutzerdefinierte Seitenfunktion bereitstellen. Dieser Artikel stellt die Verwendung von benutzerdefinierten HTML-Elementen vor.</p>
 
 <div class="note">
-<p><strong>Hinweis</strong>: Benutzerdefinierte Elemente werden standardmäßig in Chrome und Opera unterstützt. Firefox ist sehr weit in der Entwicklung; sie sind derzeit verfügbar, wenn Sie die Einstellungen <code>dom.webcomponents.shadowdom.enabled </code>und <code>dom.webcomponents.customelements.enabled</code> auf <code>true</code> setzen. Die Implementierung von Firefox soll in der Version 60/61 standardmäßig aktiviert werden. Safari unterstützt bisher nur autonome benutzerdefinierte Elemente, und Edge arbeitet auch an einer Implementierung.</p>
+<p><strong>Hinweis</strong>: Benutzerdefinierte Elemente werden standardmäßig in Chrome und Opera unterstützt. Firefox ist sehr weit in der Entwicklung; sie sind derzeit verfügbar, wenn Sie die Einstellungen <code>dom.webcomponents.shadowdom.enabled </code>und <code>dom.webcomponents.customelements.enabled</code> auf <code>true</code> setzen. Die Implementierung von Firefox soll in der Version 60/61 standardmäßig aktiviert werden. Safari unterstützt bisher nur autonome benutzerdefinierte Elemente, und Edge arbeitet auch an einer Implementierung.</p>
 </div>
 
 <h2 id="High-Level-Ansicht">High-Level-Ansicht</h2>
@@ -18,7 +18,7 @@ translation_of: Web/Web_Components/Using_custom_elements
 <p>Um ein benutzerdefiniertes Element auf der Seite zu registrieren, verwenden Sie die Methode {{domxref("CustomElementRegistry.define()")}}. Das sind die Argumente:</p>
 
 <ul>
- <li>Ein {{domxref("DOMString")}} repräsentiert den Namen, den Sie dem Element geben. Beachten Sie, dass benutzerdefinierte Elementnamen einen <a href="https://stackoverflow.com/questions/22545621/do-custom-elements-require-a-dash-in-their-name">Bindestrich erfordern</a>; sie können keine einzelnen Wörter sein.</li>
+ <li>Ein {{domxref("DOMString")}} repräsentiert den Namen, den Sie dem Element geben. Beachten Sie, dass benutzerdefinierte Elementnamen einen <a href="https://stackoverflow.com/questions/22545621/do-custom-elements-require-a-dash-in-their-name">Bindestrich erfordern</a>; sie können keine einzelnen Wörter sein.</li>
  <li>Ein <a href="/en-US/docs/Web/JavaScript/Reference/Classes">Klassenobjekt</a>, das das Verhalten des Elements definiert.</li>
  <li>Optional ein Optionsobjekt, das eine <code>extends</code>Eigenschaft enthält, die das eingebaute Element angibt, von dem Ihr Element erbt, falls vorhanden.</li>
 </ul>
@@ -29,7 +29,7 @@ translation_of: Web/Web_Components/Using_custom_elements
 
 <p>Das Element heißt <code>word-count</code>, sein Klassenobjekt ist WordCount, und es erweitert das Element {{htmlelement("p")}}.</p>
 
-<p>Das Klassenobjekt eines benutzerdefinierten Elements wird mit der ES 2015 Standardsyntax einer Klasse geschrieben. Zum Beispiel ist <code>WordCount</code>so aufgebaut:</p>
+<p>Das Klassenobjekt eines benutzerdefinierten Elements wird mit der ES 2015 Standardsyntax einer Klasse geschrieben. Zum Beispiel ist <code>WordCount</code>so aufgebaut:</p>
 
 <pre class="brush: js">class WordCount extends HTMLParagraphElement {
   constructor() {
@@ -42,29 +42,29 @@ translation_of: Web/Web_Components/Using_custom_elements
   }
 }</pre>
 
-<p>Dies ist nur ein einfaches Beispiel, aber es gibt noch mehr, was Sie hier tun können. Es ist möglich, spezifische Lifecycle-Callbacks innerhalb des Konstruktors zu definieren, die an bestimmten Stellen im Lebenszyklus des Elements ablaufen. Zum Beispiel wird <code>connectedCallback </code>aufgerufen, wenn das benutzerdefinierte Element zum ersten Mal mit dem DOM des Dokuments verbunden wird, während <code>attributeChangedCallback</code> aufgerufen wird, wenn eines der Attribute des benutzerdefinierten Elements hinzugefügt, entfernt oder geändert wird.</p>
+<p>Dies ist nur ein einfaches Beispiel, aber es gibt noch mehr, was Sie hier tun können. Es ist möglich, spezifische Lifecycle-Callbacks innerhalb des Konstruktors zu definieren, die an bestimmten Stellen im Lebenszyklus des Elements ablaufen. Zum Beispiel wird <code>connectedCallback </code>aufgerufen, wenn das benutzerdefinierte Element zum ersten Mal mit dem DOM des Dokuments verbunden wird, während <code>attributeChangedCallback</code> aufgerufen wird, wenn eines der Attribute des benutzerdefinierten Elements hinzugefügt, entfernt oder geändert wird.</p>
 
-<p>Im untenstehenden Kapitel {{anch("Using the lifecycle callbacks")}} wirst du mehr über Lifecycle-Callbacks erfahren.</p>
+<p>Im untenstehenden Kapitel <a href="#using_the_lifecycle_callbacks">Using the lifecycle callbacks</a> wirst du mehr über Lifecycle-Callbacks erfahren.</p>
 
 <p>Es gibt zwei Arten von benutzerdefinierten Elementen:</p>
 
 <ul>
  <li><strong>Autonome benutzerdefinierte Elemente</strong> sind eigenständig, d.h. sie erben nicht von standardisierten HTML-Elementen. Du kannst diese Art von benutzerdefinierten Elementen verwenden, indem du ein HTML-Element mit dem entsprechenden Namen erzeugst, z.B. <code>&lt;popup-info&gt;</code> oder <code>document.createElement("popup-info")</code>.</li>
- <li><strong>Benutzerdefinierte Standardelemente</strong> erben von standardisierten HTML-Elementen. Beim Erstellen eines solchen Elements musst du angeben, von welchem standardisierten HTML-Element geerbt wird (vgl. obige Beispiele). Um ein benutzerdefiniertes Standardelement zu verwenden, erstellst du Objekt des Basiselements mit dem Attribut (oder der Eigenschaft) {{htmlattrxref("is")}}, z.B. <code>&lt;p is="word-count"&gt;</code> oder <code>document.createElement("p", { is: "word-count" })</code>. </li>
+ <li><strong>Benutzerdefinierte Standardelemente</strong> erben von standardisierten HTML-Elementen. Beim Erstellen eines solchen Elements musst du angeben, von welchem standardisierten HTML-Element geerbt wird (vgl. obige Beispiele). Um ein benutzerdefiniertes Standardelement zu verwenden, erstellst du Objekt des Basiselements mit dem Attribut (oder der Eigenschaft) {{htmlattrxref("is")}}, z.B. <code>&lt;p is="word-count"&gt;</code> oder <code>document.createElement("p", { is: "word-count" })</code>. </li>
 </ul>
 
 <h2 id="Weitere_einfache_Beispiele">Weitere einfache Beispiele</h2>
 
-<p>Wir gehen durch einige einfache Beispiele um etwas detaillierter zu zeigen wie benutzerdefinierte Elemente erzeugt werden. </p>
+<p>Wir gehen durch einige einfache Beispiele um etwas detaillierter zu zeigen wie benutzerdefinierte Elemente erzeugt werden. </p>
 
 <h3 id="Autonome_benutzerdefinierte_Elemente"><strong>Autonome benutzerdefinierte Elemente</strong></h3>
 
-<p>Wir betrachten ein Beispiel eines autonomen benutzerdefinierte Elementes —<br>
- <code><a href="https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component">&lt;popup-info-box&gt;</a></code> (siehe hierzu <a href="https://mdn.github.io/web-components-examples/popup-info-box-web-component/">live example</a>).</p>
+<p>Wir betrachten ein Beispiel eines autonomen benutzerdefinierte Elementes —<br>
+ <code><a href="https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component">&lt;popup-info-box&gt;</a></code> (siehe hierzu <a href="https://mdn.github.io/web-components-examples/popup-info-box-web-component/">live example</a>).</p>
 
-<p>Dieses Element nimmt ein Icon und einen Textstring entgegen und fügt das Icon in die Seite ein. Erhält das Icon den Focus, wird der Text in einem Popup-Dialog angezeigt um mehr Information anzubieten</p>
+<p>Dieses Element nimmt ein Icon und einen Textstring entgegen und fügt das Icon in die Seite ein. Erhält das Icon den Focus, wird der Text in einem Popup-Dialog angezeigt um mehr Information anzubieten</p>
 
-<p>Folgendes  JavaScript File definiert eine Klasse  <code>PopUpInfo</code>, welches das {{domxref("HTMLElement")}} erweitert. Autonome benutzerdefinierte Elemente erweitern nahezu immer das <code>HTMLElement</code>.</p>
+<p>Folgendes  JavaScript File definiert eine Klasse  <code>PopUpInfo</code>, welches das {{domxref("HTMLElement")}} erweitert. Autonome benutzerdefinierte Elemente erweitern nahezu immer das <code>HTMLElement</code>.</p>
 
 <pre class="brush: js">class PopUpInfo extends HTMLElement {
   constructor() {
@@ -77,11 +77,11 @@ translation_of: Web/Web_Components/Using_custom_elements
   }
 }</pre>
 
-<p>Dieser Code enthält die {{jsxref("Classes.constructor","constructor")}} Definition für diese Klasse, welche immer mit einem Aufruf von  <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super()</a></code> beginnt, damit die korrekte Prototypkette erzeugt wird.</p>
+<p>Dieser Code enthält die {{jsxref("Classes.constructor","constructor")}} Definition für diese Klasse, welche immer mit einem Aufruf von  <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super()</a></code> beginnt, damit die korrekte Prototypkette erzeugt wird.</p>
 
-<p>Innerhalb des Konstruktors definieren wir alle Funktionalität welche das Element haben wird wenn von diesem eine Instanz erzeugt wird. </p>
+<p>Innerhalb des Konstruktors definieren wir alle Funktionalität welche das Element haben wird wenn von diesem eine Instanz erzeugt wird. </p>
 
-<p>Wir binden eine shadow root an das Element, benutzen DOM-Funktionalität um die interne shadow DOM -Struktur zu erzeugen, welch dann an die shadow root gebunden wird. Abschließend fügen wir der shadow root noch etwas CSS hinzu um diese zu stylen.</p>
+<p>Wir binden eine shadow root an das Element, benutzen DOM-Funktionalität um die interne shadow DOM -Struktur zu erzeugen, welch dann an die shadow root gebunden wird. Abschließend fügen wir der shadow root noch etwas CSS hinzu um diese zu stylen.</p>
 
 <pre class="brush: js">// Create a shadow root
 var shadow = this.attachShadow({mode: 'open'});
@@ -123,19 +123,19 @@ shadow.appendChild(wrapper);
 wrapper.appendChild(icon);
 wrapper.appendChild(info);</pre>
 
-<p>Letztlich registrieren wir unser benutzerdefiniertes Elementen in der <code>CustomElementRegistry</code> mit der Methode <code>define()</code> , in deren Parametern spezifizieren wir den Namen des Elements und dann den Namen der Klasse welche die Funktionalität definiert:</p>
+<p>Letztlich registrieren wir unser benutzerdefiniertes Elementen in der <code>CustomElementRegistry</code> mit der Methode <code>define()</code> , in deren Parametern spezifizieren wir den Namen des Elements und dann den Namen der Klasse welche die Funktionalität definiert:</p>
 
 <pre class="brush: js">customElements.define('popup-info', PopUpInfo);</pre>
 
-<p>Jetzt ist unser benutzerdefiniertes Elementen fertig zur Benutzung auf unserer Seite.<br>
- In unserem HTML sieht das nun so aus:</p>
+<p>Jetzt ist unser benutzerdefiniertes Elementen fertig zur Benutzung auf unserer Seite.<br>
+ In unserem HTML sieht das nun so aus:</p>
 
 <pre class="brush: html">&lt;popup-info img="img/alt.png" text="Your card validation code (CVC)
   is an extra security feature — it is the last 3 or 4 numbers on the
   back of your card."&gt;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Die vollständige <a href="https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js"> JavaScript Quelle </a>.</p>
+<p><strong>Note</strong>: Die vollständige <a href="https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js"> JavaScript Quelle </a>.</p>
 </div>
 
 <h3 id="Customized_built-in_elements">Customized built-in elements</h3>

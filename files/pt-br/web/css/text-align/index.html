@@ -12,7 +12,7 @@ translation_of: Web/CSS/text-align
 
 <h2 id="Sumário">Sumário</h2>
 
-<p><span class="seoSummary">A propriedade CSS <strong><code>text-align</code></strong> descreve como conteúdo inline, como texto, é alinhado no elemento pai em bloco. <code>text-align</code> não controla o alinhamento de elementos em bloco, apenas o seu conteúdo inline.</span></p>
+<p><span class="seoSummary">A propriedade CSS <strong><code>text-align</code></strong> descreve como conteúdo inline, como texto, é alinhado no elemento pai em bloco. <code>text-align</code> não controla o alinhamento de elementos em bloco, apenas o seu conteúdo inline.</span></p>
 
 <p>{{cssinfo}}</p>
 
@@ -42,9 +42,9 @@ text-align: unset;
 
 <dl>
  <dt><code>start</code> {{experimental_inline}}</dt>
- <dd>Igual <code>left</code> se a direção é esquerda-para-direita e <code>right</code> se a direção é direita-para-esquerda.</dd>
+ <dd>Igual <code>left</code> se a direção é esquerda-para-direita e <code>right</code> se a direção é direita-para-esquerda.</dd>
  <dt><code>end</code> {{experimental_inline}}</dt>
- <dd>Igual <code>right</code> se a direção é esquerda-para-direita e <code>left</code> se a direção é direita-para-esquerda.</dd>
+ <dd>Igual <code>right</code> se a direção é esquerda-para-direita e <code>left</code> se a direção é direita-para-esquerda.</dd>
  <dt><code>left</code></dt>
  <dd>O conteúdo é alinhado na borda esquerda do box.</dd>
  <dt><code>right</code></dt>
@@ -54,7 +54,7 @@ text-align: unset;
  <dt><code>justify</code></dt>
  <dd>Os conteúdos inline são justificados. Text should be spaced to line up its left and right edges to the left and right edges of the line box, except for the last line.</dd>
  <dt><code>justify-all</code></dt>
- <dd>Semelhante a <code>justify</code>, porém força a última linha a ser justificada.</dd>
+ <dd>Semelhante a <code>justify</code>, porém força a última linha a ser justificada.</dd>
  <dt><code>match-parent</code> {{experimental_inline}}</dt>
  <dd>Similar to <code>inherit</code>, but the values <code>start</code> and <code>end</code> are calculated according the parent's {{cssxref("direction")}} and are replaced by the adequate <code>left</code> or <code>right</code> value.</dd>
 </dl>
@@ -133,7 +133,7 @@ text-align: unset;
 
 <h3 id="Notas">Notas</h3>
 
-<p>O modo compátivel-padrão de centralizar um bloco em si sem centralizar seu conteúdo inline é setando a {{cssxref("margin")}} left e right para <code>auto</code>, e.g.:</p>
+<p>O modo compátivel-padrão de centralizar um bloco em si sem centralizar seu conteúdo inline é setando a {{cssxref("margin")}} left e right para <code>auto</code>, e.g.:</p>
 
 <pre class="brush: css notranslate">.something {
   margin: auto;
@@ -187,148 +187,7 @@ text-align: unset;
 
 <h2 id="Browser_compatibilidade">Browser compatibilidade</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico (<code>left</code>, <code>right</code>, <code>center</code> and <code>justify</code>)</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>3.0</td>
-   <td>3.5</td>
-   <td>1.0 (85)</td>
-  </tr>
-  <tr>
-   <td>Block alignment values {{non-standard_inline}}</td>
-   <td>1.0{{property_prefix("-webkit")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}{{property_prefix("-moz")}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>1.0 (85){{property_prefix("-khtml")}}<br>
-    1.3 (312){{property_prefix("-webkit")}} [1]</td>
-  </tr>
-  <tr>
-   <td><code>start</code> {{experimental_inline}}</td>
-   <td>1.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>3.1 (525)</td>
-  </tr>
-  <tr>
-   <td><code>end</code> {{experimental_inline}}</td>
-   <td>1.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9.2")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>3.1 (525)</td>
-  </tr>
-  <tr>
-   <td><code>match-parent</code>{{experimental_inline}}</td>
-   <td>16</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("40")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Block alignment values {{non-standard_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>start</code> {{experimental_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>end</code> {{experimental_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>match-parent</code>{{experimental_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("40")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>true</code>(non-standard syntax){{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Both WebKit and Gecko support a prefixed version of <code>left</code>, <code>center</code>, and <code>right</code>, that applies not only to inline content but also to block elements. This is used to implement the legacy {{htmlattrxref("align", "td")}} attributes on table elements and <code>&lt;center&gt;</code>. Do not use these on production Web sites.</p>
+{{Compat("css.properties.text-align")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

@@ -17,11 +17,11 @@ browser-compat: css.types.transform-function.scaleY
 
 ![](scaley.png)
 
-これは要素のそれぞれの点の横座標を一定の係数で修正しますが、係数が 1 である場合はこの関数が恒等変換になるので例外です。変倍は等方性ではなく、要素の角度は保存されません。 `scaleY(-1)` は[軸の線対称](https://en.wikipedia.org/wiki/Axial_symmetry)を定義し、水平軸は ({{cssxref("transform-origin")}} プロパティの指定通りに) 原点を通過します。
+これは要素のそれぞれの点の横座標を一定の係数で修正しますが、係数が 1 である場合はこの関数が恒等変換になるので例外です。変倍は等方性ではなく、要素の角度は保存されません。 `scaleY(-1)` は[軸の線対称](https://en.wikipedia.org/wiki/Axial_symmetry)を定義し、水平軸は ({{cssxref("transform-origin")}} プロパティの指定通りに) 原点を通過します。
 
 > **Note:** `scaleY(sy)` は `scale(1, sy)` または `scale3d(1, sy, 1)` と等価です。
 >
-> `transform: rotateX(180deg);`  === `transform: scaleY(-1);`
+> `transform: rotateX(180deg);`  === `transform: scaleY(-1);`
 
 ## 構文
 

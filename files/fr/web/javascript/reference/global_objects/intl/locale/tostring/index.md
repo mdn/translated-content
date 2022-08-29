@@ -18,7 +18,9 @@ La méthode **`Intl.Locale.prototype.toString()`** renvoie [l'identifiant de loc
 
 ## Syntaxe
 
-    locale.toString()
+```js
+locale.toString()
+```
 
 ### Valeur de retour
 

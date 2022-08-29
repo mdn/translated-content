@@ -14,11 +14,13 @@ translation_of: Web/API/Window/innerHeight
 
 Récupère la hauteur (en pixels) de la partie visible de la fenêtre de navigation en incluant, si elle est affichée, la barre de défilement horizontale.
 
-> **Note :** La valeur retournée par cette propriété correspond le cas échéant à la hauteur de la fenêtre définie par {{ifmethod("nsIDOMWindowUtils", "setCSSViewport")}}, dans le cas où vous utilisez cette méthode pour définir les dimensions de la fenêtre virtuelle dans le but d'agencer la page.
+> **Note :** La valeur retournée par cette propriété correspond le cas échéant à la hauteur de la fenêtre définie par `nsIDOMWindowUtils.setCSSViewport()`, dans le cas où vous utilisez cette méthode pour définir les dimensions de la fenêtre virtuelle dans le but d'agencer la page.
 
 ## Syntaxe
 
-    var hauteur = window.innerHeight;
+```js
+var hauteur = window.innerHeight;
+```
 
 ### Valeur
 

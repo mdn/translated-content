@@ -14,7 +14,6 @@ tags:
   - ボタン
   - マウス
   - mouseup
-browser-compat: api.Element.mouseup_event
 translation_of: Web/API/Element/mouseup_event
 ---
 {{APIRef}}

@@ -5,12 +5,12 @@ translation_of: Web/HTTP/Status/308
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>Код ответа на статус перенаправления "HTTP <code><strong>308</strong></code><strong><code> Permanent Redirect"</code></strong> указывает, что запрошенный ресурс был окончательно перемещён в URL-адрес, указанный в {{HTTPHeader("Location")}}. Браузер перенаправляется на эту страницу, а поисковые системы обновляют свои ссылки на ресурс (в SEO-speak говорится, что link-juice отправляется на новый URL-адрес).</p>
+<p>Код ответа на статус перенаправления "HTTP <code><strong>308</strong></code><strong><code> Permanent Redirect"</code></strong> указывает, что запрошенный ресурс был окончательно перемещён в URL-адрес, указанный в {{HTTPHeader("Location")}}. Браузер перенаправляется на эту страницу, а поисковые системы обновляют свои ссылки на ресурс (в SEO-speak говорится, что link-juice отправляется на новый URL-адрес).</p>
 
-<p>Метод запроса и тело не будут изменены, тогда как {{HTTPStatus("301")}}  иногда может быть неправильно заменён на {{HTTPHeader("GET")}} метод.</p>
+<p>Метод запроса и тело не будут изменены, тогда как {{HTTPStatus("301")}}  иногда может быть неправильно заменён на {{HTTPHeader("GET")}} метод.</p>
 
 <div class="note">
-<p>Некоторые веб-приложения могут использовать <strong>308 Permanent Redirect</strong> нестандартным образом и для других целей. Например, Google Drive использует ответ <strong>308 Resume Incomplete</strong>, чтобы указать клиенту, когда неполная загрузка застопорилась.<a href="https://developers.google.com/drive/v3/web/manage-uploads#resumable">[1]</a></p>
+<p>Некоторые веб-приложения могут использовать <strong>308 Permanent Redirect</strong> нестандартным образом и для других целей. Например, Google Drive использует ответ <strong>308 Resume Incomplete</strong>, чтобы указать клиенту, когда неполная загрузка застопорилась.<a href="https://developers.google.com/drive/v3/web/manage-uploads#resumable">[1]</a></p>
 </div>
 
 <h2 id="Статус">Статус</h2>

@@ -15,7 +15,9 @@ La méthode `Window.prompt()` affiche une boîte de dialogue, éventuellement av
 
 ## Syntaxe
 
-    résultat = window.prompt(message, défaut);
+```js
+résultat = window.prompt(message, défaut);
+```
 
 ### Paramètres
 

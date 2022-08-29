@@ -11,7 +11,9 @@ Aucun rappel ni événement ne se déclenche lorsque la valeur change (par exemp
 
 ## Syntaxe
 
-    valeur = window.devicePixelRatio;
+```js
+valeur = window.devicePixelRatio;
+```
 
 ## Spécifications
 
@@ -25,5 +27,5 @@ Aucun rappel ni événement ne se déclenche lorsque la valeur change (par exemp
 
 ## Voir aussi
 
-- [CSS `resolution` media query](/en-US/docs/Web/CSS/@media/resolution)
+- [CSS `resolution` media query](/fr/docs/Web/CSS/@media/resolution)
 - PPK a effectué des [recherches sur devicePixelRatio](http://www.quirksmode.org/blog/archives/2012/06/devicepixelrati.html)

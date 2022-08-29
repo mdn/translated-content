@@ -7,7 +7,7 @@ translation_of: Web/CSS/object-fit
 
 <h2 id="Summary" name="Summary">Resumo</h2>
 
-<p>A propriedade CSS <code>object-fit</code> especifica como o conteúdo de um elemento substituído deve ser ajustado à caixa estabelecida pela altura e largura usadas.</p>
+<p>A propriedade CSS <code>object-fit</code> especifica como o conteúdo de um elemento substituído deve ser ajustado à caixa estabelecida pela altura e largura usadas.</p>
 
 <p>{{cssinfo}}</p>
 
@@ -34,7 +34,7 @@ translation_of: Web/CSS/object-fit
  <dt><code>none</code></dt>
  <dd>O conteúdo substituído não é redimensionado para caber dentro da caixa de conteúdo do elemento: o tamanho do objeto concreto do objeto é determinado usando o algoritmo de tamanho padrão sem tamanho especificado e um tamanho de objeto padrão igual à largura e altura usadas do elemento substituído.</dd>
  <dt><code>scale-down</code></dt>
- <dd>O conteúdo é dimensionado se <code>none</code> ou <code>contain</code> for especificado, o que resultaria em um tamanho menor de objeto concreto.</dd>
+ <dd>O conteúdo é dimensionado se <code>none</code> ou <code>contain</code> for especificado, o que resultaria em um tamanho menor de objeto concreto.</dd>
 </dl>
 
 <h2 id="Example" name="Example">Exemplos</h2>
@@ -42,79 +42,79 @@ translation_of: Web/CSS/object-fit
 <h3 id="HTML_Content">HTML Content</h3>
 
 <pre class="brush: html">&lt;div&gt;
-  &lt;h2&gt;object-fit: fill&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill"/&gt;
+  &lt;h2&gt;object-fit: fill&lt;/h2&gt;
+  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill"/&gt;
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill narrow"/&gt;
+  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill narrow"/&gt;
 
-  &lt;h2&gt;object-fit: contain&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain"/&gt;
+  &lt;h2&gt;object-fit: contain&lt;/h2&gt;
+  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain"/&gt;
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain narrow"/&gt;
+  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain narrow"/&gt;
 
-  &lt;h2&gt;object-fit: cover&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover"/&gt;
+  &lt;h2&gt;object-fit: cover&lt;/h2&gt;
+  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover"/&gt;
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover narrow"/&gt;
+  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover narrow"/&gt;
 
-  &lt;h2&gt;object-fit: none&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none"/&gt;
+  &lt;h2&gt;object-fit: none&lt;/h2&gt;
+  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none"/&gt;
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none narrow"/&gt;
+  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none narrow"/&gt;
 
-  &lt;h2&gt;object-fit: scale-down&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down"/&gt;
+  &lt;h2&gt;object-fit: scale-down&lt;/h2&gt;
+  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down"/&gt;
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down narrow"/&gt;
+  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down narrow"/&gt;
 
 &lt;/div&gt;</pre>
 
 <h3 id="CSS_Content">CSS Content</h3>
 
 <pre class="brush: css">h2 {
-  font-family: Courier New, monospace;
-  font-size: 1em;
-  margin: 1em 0 0.3em;
+  font-family: Courier New, monospace;
+  font-size: 1em;
+  margin: 1em 0 0.3em;
 }
 
 div {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
   height: 940px;
 }
 
 img {
-  width: 150px;
-  height: 100px;
-  border: 1px solid #000;
+  width: 150px;
+  height: 100px;
+  border: 1px solid #000;
 }
 
 .narrow {
   width: 100px;
-  height: 150px;
-  margin-top: 10px;
+  height: 150px;
+  margin-top: 10px;
 }
 
 .fill {
-  object-fit: fill;
+  object-fit: fill;
 }
 
 .contain {
-  object-fit: contain;
+  object-fit: contain;
 }
 
 .cover {
-  object-fit: cover;
+  object-fit: cover;
 }
 
 .none {
-  object-fit: none;
+  object-fit: none;
 }
 
 .scale-down {
-  object-fit: scale-down;
+  object-fit: scale-down;
 }
 </pre>
 
@@ -148,55 +148,7 @@ img {
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>31.0</td>
-   <td>{{ CompatGeckoDesktop("36") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>11.60{{ property_prefix("-o") }}<br>
-    19.0</td>
-   <td>{{ CompatVersionUnknown }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.4.4</td>
-   <td>{{ CompatGeckoDesktop("36") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>11.5{{ property_prefix("-o") }}<br>
-    24</td>
-   <td>{{ CompatVersionUnknown }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.properties.object-fit")}}
 
 <h2 id="See_also" name="See_also">See also</h2>
 

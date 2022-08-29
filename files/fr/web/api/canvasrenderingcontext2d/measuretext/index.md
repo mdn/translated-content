@@ -15,7 +15,9 @@ La méthode **`CanvasRenderingContext2D.measureText()`** renvoie un objet {{domx
 
 ## Syntaxe
 
-    ctx.measureText(texte);
+```js
+ctx.measureText(texte);
+```
 
 ### Paramètres
 
@@ -46,13 +48,11 @@ texte.width; // 16;
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-measuretext", "CanvasRenderingContext2D.measureText")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.measureText")}}
+{{Compat}}
 
 ## Voir aussi
 

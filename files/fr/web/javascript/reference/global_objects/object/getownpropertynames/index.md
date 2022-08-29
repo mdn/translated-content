@@ -19,7 +19,9 @@ La méthode **`Object.getOwnPropertyNames()`** renvoie un tableau de toutes les 
 
 ## Syntaxe
 
-    Object.getOwnPropertyNames(obj)
+```js
+Object.getOwnPropertyNames(obj)
+```
 
 ### Paramètres
 

@@ -18,7 +18,9 @@ La méthode **`navigator.sendBeacon()`** peut être utilisée pour transférer u
 
 ## Syntaxe
 
-    navigator.sendBeacon(url, donnees);
+```js
+navigator.sendBeacon(url, donnees);
+```
 
 ### Paramètres
 
@@ -71,13 +73,11 @@ function enregistrerDonnees() {
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                   | Commentaire         |
-| ------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName('Beacon', '#sec-sendBeacon-method', 'sendBeacon()')}} | {{Spec2('Beacon')}} | Définition initiale |
+{{Specifications}}
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.Navigator.sendBeacon")}}
+{{Compat}}
 
 ## Voir aussi
 

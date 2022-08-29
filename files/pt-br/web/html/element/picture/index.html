@@ -10,7 +10,7 @@ tags:
   - picture
 translation_of: Web/HTML/Element/picture
 ---
-<p>O <strong> elemento HTML <code>&lt;picture&gt;</code></strong> é um container usado para especificar múltiplos elementos {{HTMLElement("source")}} para um elemento específico {{HTMLElement("img")}} contido nele. O navegador irá escolher a imagem mais adequada de acordo com o layout atual da página, <span id="result_box" lang="pt"><span>caracteristicas do dispositivo em que será exibido (p.e. um dispositivo normal ou um hiDPI), e a habilidade do navegador de renderizar um certo tipo de imagem (p.e., envie uma imagem WebP para os navegadores baseados no Chromium ou PNG para navegadores não-Chromium); se não houver correspondência entre os elementos </span></span>{{HTMLElement("source")}}, o arquivo especificado pelo elemento <code>&lt;img&gt;</code> será selecionado. A imagem selecionada é então exibida no espaço ocupado pelo elemento <code>&lt;img&gt;</code>.</p>
+<p>O <strong> elemento HTML <code>&lt;picture&gt;</code></strong> é um container usado para especificar múltiplos elementos {{HTMLElement("source")}} para um elemento específico {{HTMLElement("img")}} contido nele. O navegador irá escolher a imagem mais adequada de acordo com o layout atual da página, <span id="result_box" lang="pt"><span>caracteristicas do dispositivo em que será exibido (p.e. um dispositivo normal ou um hiDPI), e a habilidade do navegador de renderizar um certo tipo de imagem (p.e., envie uma imagem WebP para os navegadores baseados no Chromium ou PNG para navegadores não-Chromium); se não houver correspondência entre os elementos </span></span>{{HTMLElement("source")}}, o arquivo especificado pelo elemento <code>&lt;img&gt;</code> será selecionado. A imagem selecionada é então exibida no espaço ocupado pelo elemento <code>&lt;img&gt;</code>.</p>
 
 <table class="properties">
  <tbody>
@@ -45,9 +45,9 @@ translation_of: Web/HTML/Element/picture
 
 <p>Esse elemento só inclui <a href="/pt-BR/docs/Web/HTML/Global_attributes">elementos globais</a>.</p>
 
-<h2 id="Exemplo_1_Uso_com_atributo_media">Exemplo 1: Uso com atributo <code>media</code> </h2>
+<h2 id="Exemplo_1_Uso_com_atributo_media">Exemplo 1: Uso com atributo <code>media</code> </h2>
 
-<p>O atributo <code>media</code> permite você especificar uma media query que o navegador irá avaliar para selecionar um elemento {{HTMLElement("source")}} . Se a media query retornar <code>falso</code>, o elemento {{HTMLElement("source")}} é ignorado.</p>
+<p>O atributo <code>media</code> permite você especificar uma media query que o navegador irá avaliar para selecionar um elemento {{HTMLElement("source")}} . Se a media query retornar <code>falso</code>, o elemento {{HTMLElement("source")}} é ignorado.</p>
 
 <pre class="brush: html">&lt;picture&gt;
  &lt;source srcset="mdn-logo-wide.png" media="(min-width: 600px)"&gt;
@@ -55,9 +55,9 @@ translation_of: Web/HTML/Element/picture
 &lt;/picture&gt;
 </pre>
 
-<h2 id="Exemplo_2_Uso_com_atributo_type">Exemplo 2: Uso com atributo type</h2>
+<h2 id="Exemplo_2_Uso_com_atributo_type">Exemplo 2: Uso com atributo type</h2>
 
-<p>O atributo <code>type</code> lhe permite especificar um tipo MIME para o(s) recurso(s) fornecido(s) no atributo srcset do elemento {{HTMLElement("source")}}. Se o navegador não suporta o tipo especificado, o elemento {{HTMLElement("source")}} é ignorado.</p>
+<p>O atributo <code>type</code> lhe permite especificar um tipo MIME para o(s) recurso(s) fornecido(s) no atributo srcset do elemento {{HTMLElement("source")}}. Se o navegador não suporta o tipo especificado, o elemento {{HTMLElement("source")}} é ignorado.</p>
 
 <pre class="brush: html">​&lt;picture&gt;
  &lt;source srcset="mdn-logo.svg" type="image/svg+xml"&gt;
@@ -86,57 +86,7 @@ translation_of: Web/HTML/Element/picture
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>38</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("38")}}</td>
-   <td>Edge 13</td>
-   <td>25</td>
-   <td>9.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>38</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("38")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>25</td>
-   <td>iOS 9.3</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("html.elements.picture")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

@@ -86,8 +86,6 @@ Ce code sera maintenant exécuté chaque fois que l'événement "click" se décl
 
 Vous pourrez voir cet exemple s'afficher sur toute la page en cliquant sur [ce lien.](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html)
 
-
-
 ### Ce ne sont pas que des pages web
 
 Une autre chose qui mérite d'être mentionnée à ce stade est que les événements ne sont pas particuliers à JavaScript - la plupart des langages de programmation ont un certain type de modèle d'événement, et la façon dont cela fonctionne diffère souvent de celle de JavaScript. En fait, le modèle d'événement en JavaScript pour les pages Web diffère du modèle d'événement pour JavaScript tel qu'il est utilisé dans d'autres environnements.
@@ -237,8 +235,6 @@ En outre, il existe un certain nombre d'autres fonctionnalités et options puiss
 Parmi les trois mécanismes, vous ne devriez certainement pas utiliser les attributs du gestionnaire d'événement HTML - ceux-ci sont obsolètes et constituent une mauvaise pratique, comme mentionné ci-dessus.
 
 Les deux autres sont relativement interchangeables, au moins pour des utilisations simples:
-
-
 
 - Les propriétés du gestionnaire d'événement ont moins de puissance et d'options, mais une meilleure compatibilité entre les navigateurs (prise en charge depuis Internet Explorer 8). Vous devriez probablement commencer par ceux-ci pendant votre apprentissage.
 - Les événements du DOM Niveau 2 (`addEventListener()`, etc.) sont plus puissants, mais peuvent aussi devenir plus complexes et moins bien supportés (supportés depuis Internet Explorer 9). Vous devriez également vous entraîner avec, et tenter de les utiliser si possible.
@@ -498,13 +494,15 @@ btn.onclick = function() {
 
 Nous ajoutons ensuite quelques gestionnaires d'événements `onclick` supplémentaires - le premier à `<div>` et le second à `<video>`. L'idée est que lorsque l'on clique sur la zone du `<div>` en dehors de la vidéo, la boîte doit être masquée à nouveau; Lorsque la vidéo elle-même est cliquée, la vidéo devrait commencer à jouer.
 
-    videoBox.onclick = function() {
-      videoBox.setAttribute('class', 'hidden');
-    };
+```js
+videoBox.onclick = function() {
+  videoBox.setAttribute('class', 'hidden');
+};
 
-    video.onclick = function() {
-      video.play();
-    };
+video.onclick = function() {
+  video.play();
+};
+```
 
 Mais il y a un problème - actuellement, lorsque vous cliquez sur la vidéo, elle commence à jouer, mais cela entraîne le fait que `<div>` est également caché en même temps. C'est parce que la vidéo est dans le `<div>` - elle en fait partie - alors que cliquer sur la vidéo lance les _deux_ gestionnaires d'événements ci-dessus.
 

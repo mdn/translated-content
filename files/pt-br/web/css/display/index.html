@@ -11,9 +11,9 @@ translation_of: Web/CSS/display
 
 <h2 id="Resumo">Resumo</h2>
 
-<p>A propriedade CSS  <code>display </code>especifica o tipo de caixa de renderização usada por um elemento. No HTML, os valores padrões da propriedade  <code>display </code>são feitas a partir do comportamento descrito nas especificações HTML ou da folha de estilo padrão do navegador/usuário. O valor padrão em XML é inline.</p>
+<p>A propriedade CSS  <code>display </code>especifica o tipo de caixa de renderização usada por um elemento. No HTML, os valores padrões da propriedade  <code>display </code>são feitas a partir do comportamento descrito nas especificações HTML ou da folha de estilo padrão do navegador/usuário. O valor padrão em XML é inline.</p>
 
-<p><span style="line-height: 1.5;">Além dos muitos tipos diferentes de exibição de caixa, o valor  </span><code style="font-size: 14px;">none </code><span style="line-height: 1.5;">permite desativar a exibição de um elemento; quando você usa </span><code style="font-size: 14px;">none</code><span style="line-height: 1.5;">, todos os elementos descendentes também tem a sua exibição desativada. O documento é renderizado como se o elemento não existisse na árvore do documento.</span></p>
+<p><span style="line-height: 1.5;">Além dos muitos tipos diferentes de exibição de caixa, o valor  </span><code style="font-size: 14px;">none </code><span style="line-height: 1.5;">permite desativar a exibição de um elemento; quando você usa </span><code style="font-size: 14px;">none</code><span style="line-height: 1.5;">, todos os elementos descendentes também tem a sua exibição desativada. O documento é renderizado como se o elemento não existisse na árvore do documento.</span></p>
 
 <p>{{cssinfo}}</p>
 
@@ -67,7 +67,7 @@ display: inherit
     <td>
      <p>Desabilita a exibição do elemento (sem afetar o layout); todos os elementos filhos também tem sua exibição desabilitada. O documento é renderizado como se o elemento não existisse.</p>
 
-     <p>Para renderizar as dimensões de caixa do elemento, tendo ainda seu conteúdo "invisivel", veja a propriedade {{cssxref("visibility")}}.</p>
+     <p>Para renderizar as dimensões de caixa do elemento, tendo ainda seu conteúdo "invisivel", veja a propriedade {{cssxref("visibility")}}.</p>
     </td>
    </tr>
    <tr>
@@ -114,7 +114,7 @@ display: inherit
    </tr>
    <tr>
     <td><code>table-footer-group</code></td>
-    <td>Esses elementos se comportam como o correspondente {{HTMLElement("tfoot")}} HTML elementos</td>
+    <td>Esses elementos se comportam como o correspondente {{HTMLElement("tfoot")}} HTML elementos</td>
    </tr>
    <tr>
     <td><code>table-header-group</code></td>
@@ -208,145 +208,14 @@ display: inherit
   <tr>
    <td>{{SpecName('CSS1', '#display', 'display')}}</td>
    <td>{{Spec2('CSS1')}}</td>
-   <td>Valores básicos:<code>none</code>, <code>block</code>, <code>inline</code>, e <code>list-item</code>.</td>
+   <td>Valores básicos:<code>none</code>, <code>block</code>, <code>inline</code>, e <code>list-item</code>.</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Navegadores compatíveis </h2>
+<h2 id="Browser_compatibility" name="Browser_compatibility">Navegadores compatíveis </h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td><code>none</code>, <code>inline</code> e <code>block</code></td>
-   <td>1.0</td>
-   <td>1.0 (1.0)</td>
-   <td>4.0</td>
-   <td>7.0</td>
-   <td>1.0 (85)</td>
-  </tr>
-  <tr>
-   <td><code>inline-block</code></td>
-   <td>1.0</td>
-   <td>3.0 (1.9)</td>
-   <td>5.5 (-7.0)<br>
-    apenas elementos inline naturais</td>
-   <td>7.0</td>
-   <td>1.0 (85)</td>
-  </tr>
-  <tr>
-   <td><code>list-item</code></td>
-   <td>1.0</td>
-   <td>1.0 (1.0)</td>
-   <td>6.0</td>
-   <td>7.0</td>
-   <td>1.0 (85)</td>
-  </tr>
-  <tr>
-   <td rowspan="2"><code>run-in</code> {{experimental_inline}}</td>
-   <td>1.0<br>
-    Não antes dos elementos inline</td>
-   <td rowspan="2">{{CompatNo}}</td>
-   <td rowspan="2">8.0</td>
-   <td rowspan="2">7.0</td>
-   <td>1.0 (85)<br>
-    Não antes dos elementos inline</td>
-  </tr>
-  <tr>
-   <td>
-    <p>4.0</p>
-
-    <p>Removido em 32</p>
-   </td>
-   <td>5.0 (532.5)</td>
-  </tr>
-  <tr>
-   <td><code>inline-table</code></td>
-   <td>1.0</td>
-   <td>3.0 (1.9)</td>
-   <td>8.0</td>
-   <td>7.0</td>
-   <td>1.0 (85)</td>
-  </tr>
-  <tr>
-   <td><code>table</code>, <code>table-cell</code>, <code>table-column</code>, <code>table-colgroup</code>, <code>table-header-group</code>, <code>table-row-group</code>, <code>table-footer-group</code>, <code>table-row</code>, and <code>table-caption</code></td>
-   <td>1.0</td>
-   <td>1.0 (1.0)</td>
-   <td>8.0</td>
-   <td>7.0</td>
-   <td>1.0 (85)</td>
-  </tr>
-  <tr>
-   <td><code>flex</code></td>
-   <td>21.0{{property_prefix("-webkit")}}</td>
-   <td>{{CompatGeckoDesktop("18.0")}}(behind a pref) [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>12.50</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>inline-flex</code></td>
-   <td>21.0{{property_prefix("-webkit")}}</td>
-   <td>{{CompatGeckoDesktop("18.0")}}(behind a pref) [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>12.50</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>grid</code> {{experimental_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>10.0{{property_prefix("-ms")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>inline-grid</code> {{experimental_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>10.0{{property_prefix("-ms")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Para ativar o suporte ao flexbox, no Firefox 18 e 19, o usuário precisa alterar a preferência about: config "layout.css.flexbox.enabled" para <code>true</code>. O flexbox de várias linhas é suportado desde Firefox 28.</p>
+{{Compat("css.properties.display")}}
 
 <h2 id="Veja_mais">Veja mais</h2>
 

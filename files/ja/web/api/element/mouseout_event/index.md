@@ -11,7 +11,6 @@ tags:
   - マウス
   - mouseout
   - move
-browser-compat: api.Element.mouseout_event
 translation_of: Web/API/Element/mouseout_event
 ---
 {{APIRef}}

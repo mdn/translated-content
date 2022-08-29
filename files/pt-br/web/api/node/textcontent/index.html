@@ -33,7 +33,7 @@ translation_of: Web/API/Node/textContent
 
 <ul>
  <li>Se o nó for um <a href="/en-US/docs/DOM/document">document</a>, um <a href="/en-US/docs/Glossary/Doctype">DOCTYPE</a>, ou uma <a href="/en-US/docs/Web/API/Notation">notation</a>, o <code>textContent</code> retornará <code>null</code>. (Para se obter todo o texto e os <a href="/en-US/docs/Web/API/CDATASection">dados CDATA</a> do documento inteiro, você poderá usar <code><a href="/en-US/docs/DOM/document.documentElement">document.documentElement</a>.textContent</code>.)</li>
- <li>Se o nó for uma <a href="/en-US/docs/Web/API/CDATASection">seção CDATA</a>, comentário, <a href="/en-US/docs/Web/API/ProcessingInstruction">instrução de processamento</a>, ou um <a href="/en-US/docs/Web/API/Document/createTextNode">text node</a>, o  <code>textContent</code> retornará o texto dentro do nó, i.e., o {{domxref("Node.nodeValue")}}.</li>
+ <li>Se o nó for uma <a href="/en-US/docs/Web/API/CDATASection">seção CDATA</a>, comentário, <a href="/en-US/docs/Web/API/ProcessingInstruction">instrução de processamento</a>, ou um <a href="/en-US/docs/Web/API/Document/createTextNode">text node</a>, o  <code>textContent</code> retornará o texto dentro do nó, i.e., o {{domxref("Node.nodeValue")}}.</li>
  <li>Para outros tipos de nó, o <code>textContent</code> retornará a concatenação <code>textContent</code> de cada nó filho, exceto comentários e instruções de processamento. Essa é uma string vazia se o nó não tiver filhos.</li>
 </ul>
 
@@ -45,7 +45,7 @@ translation_of: Web/API/Node/textContent
 
 <ul>
  <li><code>textContent</code> obtém o conteúdo de todos os elementos, incluindo os elementos {{HTMLElement("script")}} e {{HTMLElement("style")}}. por outro lado, o <code>innerText</code> mostra apenas os elementos para "leitura humana".</li>
- <li><code>textContent</code> retorna todos os elementos de um nó. Por outro lado, o  <code>innerText</code> é ciente da estilização e não retorna elementos de texto "escondidos". Além disso, como o <code>innerText</code> leva em consideração os estilos CSS, a leitura do valor de <code>innerText</code> dispara um  {{glossary("reflow")}} para assegurar a atualização dos estilos computados. (Reflows podem ser computacionalmente caros, e devem ser evitados quando for possível.)</li>
+ <li><code>textContent</code> retorna todos os elementos de um nó. Por outro lado, o  <code>innerText</code> é ciente da estilização e não retorna elementos de texto "escondidos". Além disso, como o <code>innerText</code> leva em consideração os estilos CSS, a leitura do valor de <code>innerText</code> dispara um  {{glossary("reflow")}} para assegurar a atualização dos estilos computados. (Reflows podem ser computacionalmente caros, e devem ser evitados quando for possível.)</li>
  <li>ao contrário do <code>textContent</code>, alterar o <code>innerText</code> no Internet Explorer (versão 11 e anteriores) remove os nós filhos do elemento e, <em>destroi permanentemente</em> todos os nós de texto descendentes. Isso torna impossível inserir novamente os nós em qualquer outro elemento ou no mesmo elemento.</li>
 </ul>
 

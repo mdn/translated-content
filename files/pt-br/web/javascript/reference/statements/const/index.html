@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Statements/const
 
 <h2 id="Summary" name="Summary">Resumo</h2>
 
-<p>A <strong> declaração <code>const</code></strong> cria uma variável cujo o valor é fixo, ou seja, uma constante somente leitura. Isso não significa que o valor é imutável, apenas que a variável constante não pode ser alterada ou retribuída.</p>
+<p>A <strong> declaração <code>const</code></strong> cria uma variável cujo o valor é fixo, ou seja, uma constante somente leitura. Isso não significa que o valor é imutável, apenas que a variável constante não pode ser alterada ou retribuída.</p>
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
@@ -34,11 +34,11 @@ translation_of: Web/JavaScript/Reference/Statements/const
 
 <h2 id="Description" name="Description">Descrição</h2>
 
-<p>Esta declaração cria uma constante que pode pertencer tanto ao escopo global (na janela ou objeto) quanto ao local do bloco em que é declarada. Constantes globais não se tornam propriedades do objeto <code>window</code>, diferente da criação de variáveis com <code>var</code>.</p>
+<p>Esta declaração cria uma constante que pode pertencer tanto ao escopo global (na janela ou objeto) quanto ao local do bloco em que é declarada. Constantes globais não se tornam propriedades do objeto <code>window</code>, diferente da criação de variáveis com <code>var</code>.</p>
 
-<p>Toda constante requer um inicializador, ou seja, é preciso especificar um valor para a constante no momento em que ela é declarada (o que faz sentido, uma vez que esse valor não pode ser alterado).</p>
+<p>Toda constante requer um inicializador, ou seja, é preciso especificar um valor para a constante no momento em que ela é declarada (o que faz sentido, uma vez que esse valor não pode ser alterado).</p>
 
-<p>A declaração <strong><code>const</code> </strong>cria uma referência somente leitura a um valor. Isso <strong>não </strong>significa que esse valor é imutável, apenas que o identificador da variável constante não pode ser alterado. Se o conteúdo do identificador for um objeto, isso significa que o conteúdo do objeto (ex. seus parâmetros) podem ser alterados.</p>
+<p>A declaração <strong><code>const</code> </strong>cria uma referência somente leitura a um valor. Isso <strong>não </strong>significa que esse valor é imutável, apenas que o identificador da variável constante não pode ser alterado. Se o conteúdo do identificador for um objeto, isso significa que o conteúdo do objeto (ex. seus parâmetros) podem ser alterados.</p>
 
 <p>Todas as considerações de <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let">"temporal dead zone"</a> se aplicam tanto a <strong><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code></strong> quanto a <strong><code>const</code></strong>.</p>
 
@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Statements/const
 
 <h2 id="Examples" name="Examples">Exemplos</h2>
 
-<p>O exemplo abaixo demonstra o comportamento de uma constante. Experimente executá-lo no console do seu navegador.</p>
+<p>O exemplo abaixo demonstra o comportamento de uma constante. Experimente executá-lo no console do seu navegador.</p>
 
 <pre class="brush:js notranslate">// NOTA: constantes podem ser declaradas em caixa alta ou baixa,
 // mas uma convenção comum é usar apenas caixa alta
@@ -71,15 +71,15 @@ let MY_FAV = 20;
 
 // É importante notar a natureza de escopo por bloco
 if (MY_FAV === 7) {
-    // não tem problema fazer isso, pois cria uma variável de bloco MY_FAV
+    // não tem problema fazer isso, pois cria uma variável de bloco MY_FAV
     // com escopo local (o nome MY_FAV poderia ser usado com let também)
     let MY_FAV = 20;
 
     // MY_FAV agora é 20
     console.log("meu número favorito é " + MY_FAV);
 
-    // isso retorna um erro, pois tenta registrar a variável no contexto global
-    var MY_FAV = 20;
+    // isso retorna um erro, pois tenta registrar a variável no contexto global
+    var MY_FAV = 20;
 }
 
 //MY_FAV ainda é 7
@@ -203,7 +203,7 @@ MY_ARRAY = ['B'];
 
 <h3 id="Observações_específicas_para_Firefox">Observações específicas para Firefox</h3>
 
-<p> A declaração <code>const</code> foi implementada no Firefox muito antes de <code>const</code> aparecer na especificação ECMAScript 6. For <code>const</code> ES6 compliance see {{bug(950547)}} and {{bug(611388)}}.</p>
+<p> A declaração <code>const</code> foi implementada no Firefox muito antes de <code>const</code> aparecer na especificação ECMAScript 6. For <code>const</code> ES6 compliance see {{bug(950547)}} and {{bug(611388)}}.</p>
 
 <ul>
  <li>Iniciando com o Gecko 36 {{geckoRelease("36")}}:
@@ -220,5 +220,5 @@ MY_ARRAY = ['B'];
 <ul>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var"><code>var</code></a></li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Constants">Guia de constantes em JavaScript</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Constants">Guia de constantes em JavaScript</a></li>
 </ul>

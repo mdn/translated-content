@@ -14,7 +14,9 @@ Indique si le document est synthétique ou non ; c'est-à-dire un document repr�
 
 ## Syntaxe
 
-    var isSynthetic = document.mozSyntheticDocument;
+```js
+var isSynthetic = document.mozSyntheticDocument;
+```
 
 En retour, `isSynthetic` est `true` (_vrai_) si le document est synthétique ; sinon, `false` (_faux_).
 
@@ -22,11 +24,13 @@ En retour, `isSynthetic` est `true` (_vrai_) si le document est synthétique ; s
 
 Il peut être utile, si vous avez un élément de menu contextuel que vous souhaitez uniquement afficher pour les documents synthétiques (ou, inversement, pour les documents qui ne sont pas synthétiques).
 
-    var isSynthetic = document.mozSyntheticDocument;
+```js
+var isSynthetic = document.mozSyntheticDocument;
 
-    if (isSynthetic) {
-      /* insert your menu item here */
-    }
+if (isSynthetic) {
+  /* insert your menu item here */
+}
+```
 
 ## Spécifications
 

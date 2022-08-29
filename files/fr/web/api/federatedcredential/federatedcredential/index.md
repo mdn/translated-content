@@ -17,7 +17,9 @@ Pour les navigateurs qui le prennent en charge, une instance de cette classe pou
 
 ## Syntaxe
 
-    var mesCredentials = new FederatedCredential(init)
+```js
+var mesCredentials = new FederatedCredential(init)
+```
 
 ### Paramètres
 
@@ -29,10 +31,8 @@ Pour les navigateurs qui le prennent en charge, une instance de cette classe pou
 
 ## Spécifications
 
-| Spécification                                    | État                                         | Commentaires         |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FederatedCredential.FederatedCredential")}}
+{{Compat}}

@@ -21,7 +21,9 @@ La fonction **`Math.log2()`** renvoie le logarithme en base 2 d'un nombre :
 
 ## Syntaxe
 
-    Math.log2(x)
+```js
+Math.log2(x)
+```
 
 ### Paramètres
 

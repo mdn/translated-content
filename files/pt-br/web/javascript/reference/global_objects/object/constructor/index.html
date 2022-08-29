@@ -12,11 +12,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/constructor
 
 <h2 id="Summary" name="Summary">Sumário</h2>
 
-<p>Retorna uma referência para a função {{jsxref("Global_Objects/Object", "Object")}} que cria a instância do protótipo. Note que o valor desse protótipo é uma referência para a própria função, não uma string contendo o nome da função. O valor é apenas <em>read-only</em> para valores primitivos como <code>1</code>, <code>true</code> e <code>"test"</code>.</p>
+<p>Retorna uma referência para a função {{jsxref("Global_Objects/Object", "Object")}} que cria a instância do protótipo. Note que o valor desse protótipo é uma referência para a própria função, não uma string contendo o nome da função. O valor é apenas <em>read-only</em> para valores primitivos como <code>1</code>, <code>true</code> e <code>"test"</code>.</p>
 
 <h2 id="Description" name="Description">Descrição</h2>
 
-<p>Todos os objetos herdam a propriedade <em>construtor</em> de seu protótipo:</p>
+<p>Todos os objetos herdam a propriedade <em>construtor</em> de seu protótipo:</p>
 
 <pre class="brush: js">var o = {};
 o.constructor === Object; // true
@@ -32,7 +32,7 @@ n.constructor === Number; // true
 
 <h3 id="Example:_Displaying_the_constructor_of_an_object" name="Example:_Displaying_the_constructor_of_an_object">Exemplo: Apresentando o construtor de um objeto</h3>
 
-<p>O exemplo a seguir cria um protótipo, <code>Tree</code>, e um objeto desse tipo, <code>theTree</code>. O exemplo, então, apresenta a propriedade <em>constructor </em>do objeto <code>theTree</code>.</p>
+<p>O exemplo a seguir cria um protótipo, <code>Tree</code>, e um objeto desse tipo, <code>theTree</code>. O exemplo, então, apresenta a propriedade <em>constructor </em>do objeto <code>theTree</code>.</p>
 
 <pre class="brush: js">function Tree(name) {
   this.name = name;
@@ -51,7 +51,7 @@ console.log('theTree.constructor is ' + theTree.constructor);
 
 <h3 id="Example:_Changing_the_constructor_of_an_object" name="Example:_Changing_the_constructor_of_an_object">Exemplo: Mudando o construtor de um objeto</h3>
 
-<p>O exemplo a seguir apresenta como modificar o valor do construtor de um objeto genérico. Apenas <code>true</code>, <code>1</code> e <code>"test" </code>não serão afetados sendo que eles tem <code>construtores </code><em>read-only</em> nativos. Esse exemplo apresenta que nem sempre é seguro depender da propriedade <code>constructor</code> de um objeto.</p>
+<p>O exemplo a seguir apresenta como modificar o valor do construtor de um objeto genérico. Apenas <code>true</code>, <code>1</code> e <code>"test" </code>não serão afetados sendo que eles tem <code>construtores </code><em>read-only</em> nativos. Esse exemplo apresenta que nem sempre é seguro depender da propriedade <code>constructor</code> de um objeto.</p>
 
 <pre class="brush:js">function Type () {}
 
@@ -129,64 +129,16 @@ function String() {
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.2.4.1', 'Object.prototype.constructor')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade de Browser</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Object.constructor")}}

@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 <p>Проверьте раздел <a href="#Browser_compatibility">Совместимость с браузерами</a>, чтобы увидеть, какие браузеры поддерживают аргументы <code>locales</code> и <code>options</code>, и <a href="#Example:_Checking_for_support_for_locales_and_options_arguments">Пример: проверка поддержки аргументов <code>locales</code> и <code>options</code></a> для определения этой возможности.</p>
 
 <div class="note">
-<p><strong>Обратите внимание:</strong> API интернационализации ECMAScript, реализованное в Firefox 29, добавляет аргумент <code>locales</code> к методу <code>Number.toLocaleString()</code>. Если этот аргумент равен {{jsxref("Global_Objects/undefined", "undefined")}}, этот метод возвращает локализованные цифры на языке, определяемом ОС, в то время, как предыдущие версии Firefox возвращали цифры на английском языке. Это изменение было помечено, как регрессия, затрагивающая обратную совместимость, которая скоро может быть исправлена. ({{bug(999003)}})</p>
+<p><strong>Обратите внимание:</strong> API интернационализации ECMAScript, реализованное в Firefox 29, добавляет аргумент <code>locales</code> к методу <code>Number.toLocaleString()</code>. Если этот аргумент равен {{jsxref("Global_Objects/undefined", "undefined")}}, этот метод возвращает локализованные цифры на языке, определяемом ОС, в то время, как предыдущие версии Firefox возвращали цифры на английском языке. Это изменение было помечено, как регрессия, затрагивающая обратную совместимость, которая скоро может быть исправлена. ({{bug(999003)}})</p>
 </div>
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat', 'Parameters')}}</div>
@@ -97,10 +97,10 @@ console.log(number.toLocaleString(['ban', 'id']));
 
 // Запрашиваем формат валюты
 console.log(number.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
-// → 123.456,79 €
+// → 123.456,79 €
 
 console.log(number.toLocaleString('ru-RU', { style: 'currency', currency: 'RUB' }));
-// → 123 456,79 ₽
+// → 123 456,79 ₽
 
 // Японская йена не использует младшие единицы
 console.log(number.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))

@@ -26,13 +26,11 @@ Un double.
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                                       | Commentaire                                        |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------------- |
-| {{SpecName('Geometry Interfaces', '#dom-domrectreadonly-bottom', 'bottom')}} | {{Spec2('Geometry Interfaces')}} | La dernière version de la spécification est un ED. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMRectReadOnly.bottom")}}
+{{Compat}}
 
 ## Voir aussi
 

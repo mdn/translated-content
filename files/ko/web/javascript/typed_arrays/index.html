@@ -26,7 +26,108 @@ translation_of: Web/JavaScript/Typed_arrays
 
 <p>형식화 배열 뷰는 자체 설명형 이름이 있으며 <code>Int8</code>, <code>Uint32</code>, <code>Float64</code> 등과 같은 모든 일반 숫자 형을 위한 뷰를 제공합니다. 특별한 형식화 배열 뷰가 하나 있습니다, <code>Uint8ClampedArray</code>. 값은 0에서 255 사이로 단속(제한)합니다. 예를 들어, 이는 <a href="/ko/docs/Web/API/ImageData">Canvas 데이터 처리</a>에 유용합니다.</p>
 
-<p>{{page("/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_객체")}}</p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Value Range</th>
+      <th>Size in bytes</th>
+      <th>Description</th>
+      <th>Web IDL type</th>
+      <th>Equivalent C type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{jsxref("Int8Array")}}</td>
+      <td><code>-128</code> to <code>127</code></td>
+      <td>1</td>
+      <td>8-bit two's complement signed integer</td>
+      <td><code>byte</code></td>
+      <td><code>int8_t</code></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Uint8Array")}}</td>
+      <td><code>0</code> to <code>255</code></td>
+      <td>1</td>
+      <td>8-bit unsigned integer</td>
+      <td><code>octet</code></td>
+      <td><code>uint8_t</code></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Uint8ClampedArray")}}</td>
+      <td><code>0</code> to <code>255</code></td>
+      <td>1</td>
+      <td>8-bit unsigned integer (clamped)</td>
+      <td><code>octet</code></td>
+      <td><code>uint8_t</code></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Int16Array")}}</td>
+      <td><code>-32768</code> to <code>32767</code></td>
+      <td>2</td>
+      <td>16-bit two's complement signed integer</td>
+      <td><code>short</code></td>
+      <td><code>int16_t</code></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Uint16Array")}}</td>
+      <td><code>0</code> to <code>65535</code></td>
+      <td>2</td>
+      <td>16-bit unsigned integer</td>
+      <td><code>unsigned short</code></td>
+      <td><code>uint16_t</code></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Int32Array")}}</td>
+      <td><code>-2147483648</code> to <code>2147483647</code></td>
+      <td>4</td>
+      <td>32-bit two's complement signed integer</td>
+      <td><code>long</code></td>
+      <td><code>int32_t</code></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Uint32Array")}}</td>
+      <td><code>0</code> to <code>4294967295</code></td>
+      <td>4</td>
+      <td>32-bit unsigned integer</td>
+      <td><code>unsigned long</code></td>
+      <td><code>uint32_t</code></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Float32Array")}}</td>
+      <td><code>-3.4E38</code> to <code>3.4E38</code> and <code>1.2E-38</code> is the min positive number</td>
+      <td>4</td>
+      <td>32-bit IEEE floating point number (7 significant digits e.g., <code>1.123456</code>)</td>
+      <td><code>unrestricted float</code></td>
+      <td><code>float</code></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Float64Array")}}</td>
+      <td><code>-1.8E308</code> to <code>1.8E308</code> and <code>5E-324</code> is the min positive number</td>
+      <td>8</td>
+      <td>64-bit IEEE floating point number (16 significant digits e.g., <code>1.123...15</code>)</td>
+      <td><code>unrestricted double</code></td>
+      <td><code>double</code></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("BigInt64Array")}}</td>
+      <td><code>-2^63</code> to <code>2^63 - 1</code></td>
+      <td>8</td>
+      <td>64-bit two's complement signed integer</td>
+      <td><code>bigint</code></td>
+      <td><code>int64_t (signed long long)</code></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("BigUint64Array")}}</td>
+      <td><code>0</code> to <code>2^64 - 1</code></td>
+      <td>8</td>
+      <td>64-bit unsigned integer</td>
+      <td><code>bigint</code></td>
+      <td><code>uint64_t (unsigned long long)</code></td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="DataView">DataView</h3>
 
@@ -132,84 +233,9 @@ normalArray.length === 4;
 normalArray.constructor === Array;
 </pre>
 
-<h2 id="스펙">스펙</h2>
+<h2 id="Specifications">명세서</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">스펙</th>
-   <th scope="col">상태</th>
-   <th scope="col">설명</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Typed Array')}}</td>
-   <td>{{Spec2('Typed Array')}}</td>
-   <td>ECMAScript 6로 대체됨.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-typedarray-objects', 'TypedArray Objects')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>ECMA 표준에서 초기 정의.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-typedarray-objects', 'TypedArray Objects')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-<p>{{CompatibilityTable}}</p>
-
-<div  >
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>7.0</td>
-   <td>{{ CompatGeckoDesktop("2") }}</td>
-   <td>10</td>
-   <td>11.6</td>
-   <td>5.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div  >
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile("2") }}</td>
-   <td>10</td>
-   <td>11.6</td>
-   <td>4.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Specifications}}
 
 <h2 id="참조">참조</h2>
 

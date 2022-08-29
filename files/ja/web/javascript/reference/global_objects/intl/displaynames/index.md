@@ -18,7 +18,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 
 {{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}
 
-
 ## コンストラクター
 
 - {{jsxref("Intl/DisplayNames/DisplayNames", "Intl.DisplayNames()")}}

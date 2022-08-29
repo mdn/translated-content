@@ -24,8 +24,10 @@ Cette méthode positionne le curseur sur la clé appropriée, dans la direction 
 
 ## Syntaxe
 
-    var monIndex = objectStore.index("index");
-    var request = monIndex.openKeyCursor(keyRange,direction);
+```js
+var monIndex = objectStore.index("index");
+var request = monIndex.openKeyCursor(keyRange,direction);
+```
 
 ### Paramètres
 
@@ -121,13 +123,11 @@ function displayDataByIndex() {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                            | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-openKeyCursor-IDBRequest-any-range-IDBCursorDirection-direction', 'openKeyCursor()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.openKeyCursor")}}
+{{Compat}}
 
 ## Voir aussi
 

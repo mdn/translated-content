@@ -15,8 +15,10 @@ La propriété **`TreeWalker.currentNode`** représente le {{domxref("Node")}} (
 
 ## Syntaxe
 
-    node = treeWalker.currentNode;
-    treeWalker.currentNode = node;
+```js
+node = treeWalker.currentNode;
+treeWalker.currentNode = node;
+```
 
 ## Exemple
 

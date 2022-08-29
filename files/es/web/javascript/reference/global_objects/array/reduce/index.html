@@ -44,13 +44,13 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/reduce
   <dt><code>valorActual</code></dt>
   <dd>El elemento actual que está siendo procesado en el array.</dd>
   <dt><code>índice</code> {{optional_inline}}</dt>
-  <dd>El índice del elemento actual que está siendo procesado en el array. Empieza desde el índice 0 si se provee <code>valorInicial</code>. En caso contrario, comienza desde el índice 1.</dd>
-  <dt><code>array</code> {{optional_inline}}</dt>
+  <dd>El índice del elemento actual que está siendo procesado en el array. Empieza desde el índice 0 si se provee <code>valorInicial</code>. En caso contrario, comienza desde el índice 1.</dd>
+  <dt><code>array</code> {{optional_inline}}</dt>
   <dd>El array sobre el cual se llamó el método <code>reduce()</code>.</dd>
  </dl>
  </dd>
  <dt><code>valorInicial</code> {{optional_inline}}</dt>
- <dd>Un valor a usar como primer argumento en la primera llamada de la función <em><code>callback</code></em>. Si no se proporciona el <em><code>valorInicial</code></em>, el primer elemento del array será utilizado y saltado. Llamando a <code>reduce()</code> sobre un array vacío sin un <em><code>valorInicial</code></em> lanzará un {{jsxref("TypeError")}}.</dd>
+ <dd>Un valor a usar como primer argumento en la primera llamada de la función <em><code>callback</code></em>. Si no se proporciona el <em><code>valorInicial</code></em>, el primer elemento del array será utilizado y saltado. Llamando a <code>reduce()</code> sobre un array vacío sin un <em><code>valorInicial</code></em> lanzará un {{jsxref("TypeError")}}.</dd>
 </dl>
 
 <h2 id="Descripción" name="Descripción">Descripción</h2>
@@ -120,7 +120,7 @@ valorAnterior = 16, valorActual = 4, indice = 4
 <h2 id="Polyfill" name="Polyfill">Polyfill</h2>
 
 <div class="note">
-<p><strong>Polyfill</strong> se refiere a unas líneas de código o un plugin que permite "tener"  (en realidad se simulan de alguna otra manera) las nuevas funcionalidades   de HTML5 en aquellos navegadores que nativamente no lo soportan. Consigue que, en adelante, el código sea transparente para el programador, como si el navegador soportase la funcionalidad nativamente.</p>
+<p><strong>Polyfill</strong> se refiere a unas líneas de código o un plugin que permite "tener"  (en realidad se simulan de alguna otra manera) las nuevas funcionalidades   de HTML5 en aquellos navegadores que nativamente no lo soportan. Consigue que, en adelante, el código sea transparente para el programador, como si el navegador soportase la funcionalidad nativamente.</p>
 </div>
 
 <p><code>reduce</code> es una extensión de JavaScript al estándar ECMA-262; como tal puede que no esté presente en otras implementaciones del estándar. Puedes trabajar con ésto insertando el siguiente código al comienzo de tus scripts, permitiendo el uso de <code>reduce</code> en implementaciones de ECMA-262 que no lo implementan de modo nativo. Este algoritmo es exactamente el mismo usando en Firefox y SpiderMonkey.</p>
@@ -130,7 +130,7 @@ valorAnterior = 16, valorActual = 4, indice = 4
   Array.prototype.reduce = function(fun /*, inicial*/)
   {
     var longitud = this.length;
-    if (typeof fun != "function")
+    if (typeof fun != "function")
       throw new TypeError();
 
     // no se devuelve ningún valor si no hay valor inicial y el array está vacío

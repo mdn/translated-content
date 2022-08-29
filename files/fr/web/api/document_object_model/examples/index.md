@@ -146,15 +146,19 @@ for(var i = 0; i < ss.length; i++) {
 
 Pour un document avec une seule feuille de style dans laquelle les trois règles suivantes sont définies&nbsp;:
 
-    BODY { background-color: darkblue; }
-    P { font-face: Arial; font-size: 10pt; margin-left: .125in; }
-    #lumpy { display: none; }
+```css
+BODY { background-color: darkblue; }
+P { font-face: Arial; font-size: 10pt; margin-left: .125in; }
+#lumpy { display: none; }
+```
 
 Ce script affiche les lignes suivantes&nbsp;:
 
-    BODY
-    P
-    #LUMPY
+```css
+BODY
+P
+#LUMPY
+```
 
 ## Exemple 5&nbsp;: propagation d'évènements
 

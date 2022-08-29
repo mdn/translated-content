@@ -5,15 +5,15 @@ translation_of: WebAssembly
 ---
 <div>{{WebAssemblySidebar}}</div>
 
-<p class="summary" dir="ltr" id="docs-internal-guid-22bb55aa-d69e-e8ef-cbc6-aafea272f684">WebAssembly – это новый открытый формат байт-кода, исполняемого современными браузерами. Он позволяет переносить код, написанный на таких языках как C, C++, C#, Rust, в низкоуровневые ассемблерные инструкции и использовать его в сети. Формат имеет компактные размеры, высокую производительность, близкую к нативной, и может одновременно работать с  JavaScript.</p>
+<p class="summary" dir="ltr" id="docs-internal-guid-22bb55aa-d69e-e8ef-cbc6-aafea272f684">WebAssembly – это новый открытый формат байт-кода, исполняемого современными браузерами. Он позволяет переносить код, написанный на таких языках как C, C++, C#, Rust, в низкоуровневые ассемблерные инструкции и использовать его в сети. Формат имеет компактные размеры, высокую производительность, близкую к нативной, и может одновременно работать с  JavaScript.</p>
 
 <h2 dir="ltr" id="В_двух_словах">В двух словах</h2>
 
 <p dir="ltr">WebAssembly оказывает огромное влияние на веб-платформу — он предоставляет способ исполнения кода, написанного на различных языках, в сети, со скоростью близкой к нативной, чего ранее невозможно было достичь.</p>
 
-<p dir="ltr">WebAssembly разработан для дополнения JavaScript – используя WebAssembly JavaScript API вы можете загружать модули WebAssembly в приложения JavaScript и обеспечивать взаимодействие между ними, используя общие функции. Такой подход позволяет вам получить производительность и мощность WebAssembly, а также выразительность и гибкость JavaScript в ваших приложениях, даже если вы не знаете как писать код WebAssembly, а используете готовые модули.</p>
+<p dir="ltr">WebAssembly разработан для дополнения JavaScript – используя WebAssembly JavaScript API вы можете загружать модули WebAssembly в приложения JavaScript и обеспечивать взаимодействие между ними, используя общие функции. Такой подход позволяет вам получить производительность и мощность WebAssembly, а также выразительность и гибкость JavaScript в ваших приложениях, даже если вы не знаете как писать код WebAssembly, а используете готовые модули.</p>
 
-<p dir="ltr">И что ещё лучше, так это то, что WebAssembly разрабатывается как веб-стандарт <a href="https://www.w3.org/wasm/">W3C WebAssembly Working Group</a> и <a href="https://www.w3.org/community/webassembly/">Community Group</a> при активном участии основных производителей браузеров.</p>
+<p dir="ltr">И что ещё лучше, так это то, что WebAssembly разрабатывается как веб-стандарт <a href="https://www.w3.org/wasm/">W3C WebAssembly Working Group</a> и <a href="https://www.w3.org/community/webassembly/">Community Group</a> при активном участии основных производителей браузеров.</p>
 
 <div class="row topicpage-table">
 <div class="section">
@@ -21,13 +21,13 @@ translation_of: WebAssembly
 
 <dl>
  <dt><a href="/ru/docs/WebAssembly/Concepts">Основы WebAssembly</a></dt>
- <dd>Прежде всего, начните с чтения общего описания WebAssembly - что это такое, чем это может быть полезно, почему он подходит для веб-платформы и как его использовать.</dd>
+ <dd>Прежде всего, начните с чтения общего описания WebAssembly - что это такое, чем это может быть полезно, почему он подходит для веб-платформы и как его использовать.</dd>
  <dt><a href="/en-US/docs/WebAssembly/C_to_wasm">Компиляция кода C/C++ в WebAssembly</a></dt>
- <dd>После того как вы написали код на C / C ++, вы можете скомпилировать его в .wasm, например, с помощью инструмента <a href="/en-US/docs/Mozilla/Projects/Emscripten/">Emscripten</a>. Давайте посмотрим, как это работает.</dd>
+ <dd>После того как вы написали код на C / C ++, вы можете скомпилировать его в .wasm, например, с помощью инструмента <a href="/en-US/docs/Mozilla/Projects/Emscripten/">Emscripten</a>. Давайте посмотрим, как это работает.</dd>
  <dt><a href="https://developer.mozilla.org/en-US/docs/WebAssembly/existing_C_to_wasm">Компиляция существующего кода C в WebAssembly</a></dt>
  <dd>Главное, что позволяет WebAssembly, это использование огромного множества разнообразных и проверенных временем библиотек, написанных на языке C, в сети.</dd>
  <dt><a href="/ru/docs/WebAssembly/Loading_and_running">Загрузка и запуск кода WebAssembly</a></dt>
- <dd>После того, как у вас появился .wasm, эта статья расскажет, как из него получить, скомпилировать и создать экземпляр модуля, совмещая <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly">WebAssembly JavaScript API</a> c <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> или <a href="/en-US/docs/Web/API/XMLHttpRequest">XHR</a> API.</dd>
+ <dd>После того, как у вас появился .wasm, эта статья расскажет, как из него получить, скомпилировать и создать экземпляр модуля, совмещая <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly">WebAssembly JavaScript API</a> c <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> или <a href="/en-US/docs/Web/API/XMLHttpRequest">XHR</a> API.</dd>
  <dt><a href="/en-US/docs/WebAssembly/Caching_modules">Кеширование скомпилированных модулей WebAssembly</a></dt>
  <dd>Кеширование больших модулей WebAssembly на клиенте полезно для повышения скорости запуска приложений. В этой статье объясняется, как это сделать с помощью <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>.</dd>
  <dt><a href="/ru/docs/WebAssembly/Using_the_JavaScript_API">Использование WebAssembly JavaScript API</a></dt>
@@ -48,15 +48,15 @@ translation_of: WebAssembly
  <dt>{{jsxref("Global_objects/WebAssembly", "WebAssembly")}}</dt>
  <dd>Этот объект является пространством имён для всех функций, связанных с WebAssembly.</dd>
  <dt>{{jsxref("Global_objects/WebAssembly/Module", "WebAssembly.Module()")}}</dt>
- <dd>Объект <code>WebAssembly.Module</code> содержит не контролируемый WebAssembly код, который уже скомпилирован браузером и может эффективно использоваться совместно с<a href="/en-US/docs/Web/API/Worker/postMessage"> Workers</a>, <a href="/en-US/docs/WebAssembly/Caching_modules">кешироваться в IndexedDB</a>, и иметь несколько экземпляров.</dd>
+ <dd>Объект <code>WebAssembly.Module</code> содержит не контролируемый WebAssembly код, который уже скомпилирован браузером и может эффективно использоваться совместно с<a href="/en-US/docs/Web/API/Worker/postMessage"> Workers</a>, <a href="/en-US/docs/WebAssembly/Caching_modules">кешироваться в IndexedDB</a>, и иметь несколько экземпляров.</dd>
  <dt>{{jsxref("Global_objects/WebAssembly/Instance", "WebAssembly.Instance()")}}</dt>
- <dd>Объект <code>WebAssembly.Instance</code> это контролируемый, исполняемый экземпляр <code>Module</code>.  <code>Instance</code> содержит все  <a href="/en-US/docs/WebAssembly/Exported_functions">экспортированные функции WebAssembly</a>, которые позволяют вызывать код WebAssembly из JavaScript.</dd>
+ <dd>Объект <code>WebAssembly.Instance</code> это контролируемый, исполняемый экземпляр <code>Module</code>.  <code>Instance</code> содержит все  <a href="/en-US/docs/WebAssembly/Exported_functions">экспортированные функции WebAssembly</a>, которые позволяют вызывать код WebAssembly из JavaScript.</dd>
  <dt>{{jsxref("Global_objects/WebAssembly/instantiateStreaming", "WebAssembly.instantiateStreaming()")}}</dt>
- <dd>Функция <code>WebAssembly.instantiateStreaming()</code> является основной для компиляции и создания экземпляра кода WebAssembly, возвращающая одновременно <code>Module</code> и <code>Instance</code>.</dd>
+ <dd>Функция <code>WebAssembly.instantiateStreaming()</code> является основной для компиляции и создания экземпляра кода WebAssembly, возвращающая одновременно <code>Module</code> и <code>Instance</code>.</dd>
  <dt>{{jsxref("Global_objects/WebAssembly/Memory", "WebAssembly.Memory()")}}</dt>
  <dd><code>WebAssembly.Memory</code> это изменяемый {{jsxref("Global_objects/ArrayBuffer", "ArrayBuffer")}} содержащий в себе данные не имеющие типа к которым обращается <code>Instance</code>.</dd>
  <dt>{{jsxref("Global_objects/WebAssembly/Table", "WebAssembly.Table()")}}</dt>
- <dd><code>WebAssembly.Table</code> объект является изменяемым типизированным массивом значений, таких как ссылки на функции, которые доступны <code>Instance</code>.</dd>
+ <dd><code>WebAssembly.Table</code> объект является изменяемым типизированным массивом значений, таких как ссылки на функции, которые доступны <code>Instance</code>.</dd>
  <dt>{{jsxref("WebAssembly.CompileError()")}}</dt>
  <dd>Создаёт новый WebAssembly <code>CompileError</code> объект.</dd>
  <dt>{{jsxref("WebAssembly.LinkError()")}}</dt>
@@ -71,7 +71,7 @@ translation_of: WebAssembly
 
 <ul dir="ltr">
  <li><a href="https://github.com/JasonWeathersby/WASMSobel">WASMSobel</a></li>
- <li>Больше примеров вы можете найти в нашем репозитории <a href="https://github.com/mdn/webassembly-examples/">webassembly-examples</a>.</li>
+ <li>Больше примеров вы можете найти в нашем репозитории <a href="https://github.com/mdn/webassembly-examples/">webassembly-examples</a>.</li>
 </ul>
 
 <h2 id="Спецификация">Спецификация</h2>

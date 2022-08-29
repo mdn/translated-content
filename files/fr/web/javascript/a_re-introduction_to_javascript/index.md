@@ -194,8 +194,8 @@ JavaScript fait la distinction entre [`null`](/fr/docs/Web/JavaScript/Reference/
 
 JavaScript dispose d'un type booléen, dont les valeurs possibles sont `true` (vrai) et `false` (faux). L'un et l'autre sont des mots clés. Toute valeur peut être convertie en une valeur booléenne selon les règles suivantes :
 
-1.  `false`, `0`, la chaîne vide (`""`), `NaN`, `null` et `undefined` deviennent toutes `false`
-2.  toutes les autres valeurs deviennent `true`.
+1. `false`, `0`, la chaîne vide (`""`), `NaN`, `null` et `undefined` deviennent toutes `false`
+2. toutes les autres valeurs deviennent `true`.
 
 Cette conversion peut être faite de manière explicite à l'aide de la fonction `Boolean()` :
 
@@ -210,7 +210,7 @@ Les opérations booléennes comme `&&` (_et_ logique), `||` (_ou_ logique) et `!
 
 ## Les variables
 
-En JavaScript, on peut déclarer de nouvelles variables grâce à l'un de ces trois mots-clés : [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let), [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const), ou [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var "/en/JavaScript/Reference/Statements/var").
+En JavaScript, on peut déclarer de nouvelles variables grâce à l'un de ces trois mots-clés : [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let), [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const), ou [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var).
 
 **`let`** permet de déclarer des variables qui pourront être utilisées dans un bloc. La variable déclarée avec `let` est uniquement disponible dans le bloc qui contient la déclaration.
 
@@ -263,7 +263,7 @@ JavaScript possède une différence importante quant aux autres langages de prog
 
 ## Les opérateurs
 
-Les opérateurs numériques en JavaScript sont `+`, `-`, `*`, `/` et `%` (qui est [l'opérateur de reste, à ne pas confondre avec le « modulo » mathématique](</fr/docs/conflicting/Web/JavaScript/Reference/Operators#remainder_()>)). Les valeurs sont affectées à l'aide de `=` et il existe également des opérateurs d'affectation combinés comme `+=` et `-=`. Ils sont équivalents à `x = x opérateur y`.
+Les opérateurs numériques en JavaScript sont `+`, `-`, `*`, `/` et `%` (qui est [l'opérateur de reste, à ne pas confondre avec le « modulo » mathématique](</fr/docs/Web/JavaScript/Reference/Operators#remainder_()>)). Les valeurs sont affectées à l'aide de `=` et il existe également des opérateurs d'affectation combinés comme `+=` et `-=`. Ils sont équivalents à `x = x opérateur y`.
 
 ```js
 x += 5;
@@ -272,7 +272,7 @@ x = x + 5;
 
 Vous pouvez utiliser `++` et `--` respectivement pour incrémenter et pour décrémenter. Ils peuvent être utilisés comme opérateurs préfixes ou suffixes.
 
-L'[opérateur `+`](/fr/docs/conflicting/Web/JavaScript/Reference/Operators#addition_(.2b)) permet également de concaténer des chaînes :
+L'[opérateur `+`](/fr/docs/Web/JavaScript/Reference/Operators#addition_(.2b)) permet également de concaténer des chaînes :
 
 ```js
 "coucou" + " monde"; // "coucou monde"
@@ -600,7 +600,7 @@ Les tableaux sont accompagnés d'un certain nombre de méthodes. Voir également
 | `a.unshift(item1[, item2[, ...[, itemN]]])`          | Ajoute des éléments au début du tableau.                                                                                 |
 | `a.slice(start[, end])`                              | Renvoie un sous-tableau.                                                                                                 |
 | `a.sort([cmpfn])`                                    | Trie le tableau (avec une fonction de comparaison optionnelle).                                                          |
-| `a.splice(start, delcount[, item1[, ...[, itemN]]])` | Permet de modifier un tableau en en supprimant une partie et en la remplaçant avec plus d'éléments.                      |
+| `a.splice(start, delcount[, item1[, ...[, itemN]]])` | Permet de modifier un tableau en supprimant une partie et en la remplaçant avec plus d'éléments.                      |
 | `a.reverse()`                                        | Retourne le tableau.                                                                                                     |
 
 ## Les fonctions
@@ -775,7 +775,7 @@ En JavaScript, les fonctions sont également des objets. Il est donc possible de
 
 ## Les objets personnalisés
 
-> **Note :** Pour une approche plus détaillée de la programmation orientée objet en JavaScript, voir l'[Introduction à JavaScript orienté objet](/fr/docs/conflicting/Learn/JavaScript/Objects).
+> **Note :** Pour une approche plus détaillée de la programmation orientée objet en JavaScript, voir l'[Introduction à JavaScript orienté objet](/fr/docs/Learn/JavaScript/Objects).
 
 Dans la programmation orientée objet classique, les objets sont des collections de données et de méthodes opérant sur ces données. Imaginons un objet personne avec les champs prénom et nom. Il y a deux manières d'afficher son nom complet : de la façon « prénom nom » ou de la façon « nom prénom ». À l'aide des fonctions et des objets vus précédemment, voici une manière de le faire :
 

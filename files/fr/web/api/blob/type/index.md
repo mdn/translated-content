@@ -14,7 +14,9 @@ La propriété **`type`** de l'objet [`Blob`](fr/docs/Web/API/Blob) fourni le ty
 
 ## Syntaxe
 
-    var mimetype = instanceOfFile.type
+```js
+var mimetype = instanceOfFile.type
+```
 
 ## Valeur
 
@@ -44,13 +46,11 @@ for (i = 0; i < files.length; i++) {
 
 ## Spécifications
 
-| Spécification                                                | Statut                       | Commentaire          |
-| ------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('File API', '#dfn-type', 'type')}} | {{Spec2('File API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Blob.type")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
 <div>{{JSRef}}</div>
 
-<p><code>BigInt</code> é um objeto nativo que fornece um modo de representar números inteiros maiores que 2<sup>53</sup>, que é o maior número que o JavaScript consegue, com exatidão, representar com o tipo primitivo {{jsxref("Number")}}.</p>
+<p><code>BigInt</code> é um objeto nativo que fornece um modo de representar números inteiros maiores que 2<sup>53</sup>, que é o maior número que o JavaScript consegue, com exatidão, representar com o tipo primitivo {{jsxref("Number")}}.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -16,11 +16,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 
 <dl>
  <dt><code>value</code></dt>
- <dd>O valor numérico do objeto que está sendo criado. Pode ser uma <em>string</em> ou um número inteiro.</dd>
+ <dd>O valor numérico do objeto que está sendo criado. Pode ser uma <em>string</em> ou um número inteiro.</dd>
 </dl>
 
 <div class="blockIndicator note">
-<p><strong>Observação</strong>: <code>BigInt()</code> não é usado com o operador {{jsxref("Operators/new", "new")}}.</p>
+<p><strong>Observação</strong>: <code>BigInt()</code> não é usado com o operador {{jsxref("Operators/new", "new")}}.</p>
 </div>
 
 <dl>
@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Um <code>BigInt</code> é criado com a acrescentação de <code>n</code> ao final de um inteiro literal — <code>10n</code> — ou chamando a função <code>BigInt()</code>.</p>
+<p>Um <code>BigInt</code> é criado com a acrescentação de <code>n</code> ao final de um inteiro literal — <code>10n</code> — ou chamando a função <code>BigInt()</code>.</p>
 
 <pre class="brush: js">const theBiggestInt = 9007199254740991n;
 
@@ -45,30 +45,30 @@ const hugeBin = BigInt("0b11111111111111111111111111111111111111111111111111111"
 // ↪ 9007199254740991n
 </pre>
 
-<p>Isso é parecido com um {{jsxref("Number")}} em algumas partes, mas difere-se em alguns assuntos importantes  — ele não pode ser usado com métodos no objeto {{jsxref("Math")}} e não pode ser misturado em operações ou qualquer instância de <code>Number</code>.</p>
+<p>Isso é parecido com um {{jsxref("Number")}} em algumas partes, mas difere-se em alguns assuntos importantes  — ele não pode ser usado com métodos no objeto {{jsxref("Math")}} e não pode ser misturado em operações ou qualquer instância de <code>Number</code>.</p>
 
 <div class="blockIndicator warning">
-<p>{{jsxref("Number")}} e <code>BigInt</code> não podem ser misturados em operações — eles devem ser manipulados com o mesmo tipo.</p>
+<p>{{jsxref("Number")}} e <code>BigInt</code> não podem ser misturados em operações — eles devem ser manipulados com o mesmo tipo.</p>
 
-<p>Tenha cuidado com a conversão e desconversão de valores, visto que a precisão de <code>BigInt</code> pode ser perdida com a conversào para <code>Number</code>.</p>
+<p>Tenha cuidado com a conversão e desconversão de valores, visto que a precisão de <code>BigInt</code> pode ser perdida com a conversào para <code>Number</code>.</p>
 </div>
 
 <h3 id="Informações_do_tipo">Informações do tipo</h3>
 
-<p>Quando testado com <code>typeof</code> , um <code>BigInt</code> vai devolver "bigint":</p>
+<p>Quando testado com <code>typeof</code> , um <code>BigInt</code> vai devolver "bigint":</p>
 
 <pre class="brush: js">typeof 1n === 'bigint'; // true
 typeof BigInt('1') === 'bigint'; // true
 </pre>
 
-<p>Quando envolvido em um <code>Object</code>, um <code>BigInt</code> vai ser considerado como um tipo normal de "object".</p>
+<p>Quando envolvido em um <code>Object</code>, um <code>BigInt</code> vai ser considerado como um tipo normal de "object".</p>
 
 <pre class="brush: js">typeof Object(1n) === 'object'; // true
 </pre>
 
 <h3 id="Operadores">Operadores</h3>
 
-<p>Os seguintes operadores podem ser usados com <code>BigInt</code>s (ou com <code>BigInt</code>s envolvidos em objetos): <code>+</code>, `<code>*</code>`, `<code>-</code>`, `<code>**</code>`, `<code>%</code>` .</p>
+<p>Os seguintes operadores podem ser usados com <code>BigInt</code>s (ou com <code>BigInt</code>s envolvidos em objetos): <code>+</code>, `<code>*</code>`, `<code>-</code>`, `<code>**</code>`, `<code>%</code>` .</p>
 
 <pre class="brush: js">const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER);
 // ↪ 9007199254740991
@@ -95,10 +95,10 @@ bigN * -1n
 // ↪ –18014398509481984n
 </pre>
 
-<p>O operador <code>/</code>  também funciona com o esperado com números inteiros. No entanto, desde que esses sejam <code>BigInt</code>s e não <code>BigDecimal</code>s, essa operação vai arredondar para 0, o que significa que não vai retornar qualquer valor fracional.</p>
+<p>O operador <code>/</code>  também funciona com o esperado com números inteiros. No entanto, desde que esses sejam <code>BigInt</code>s e não <code>BigDecimal</code>s, essa operação vai arredondar para 0, o que significa que não vai retornar qualquer valor fracional.</p>
 
 <div class="blockIndicator warning">
-<p>Uma operação com um resultado fracional será arredondado com <code>BigInt.</code></p>
+<p>Uma operação com um resultado fracional será arredondado com <code>BigInt.</code></p>
 </div>
 
 <pre class="brush: js">const expected = 4n / 2n;
@@ -111,7 +111,7 @@ const rounded = 5n / 2n;
 
 <h3 id="Comparações">Comparações</h3>
 
-<p>Um <code>BigInt</code> não é estritamente igual a um {{jsxref("Global_Objects/Number", "Number")}}, mas é mais ou menos assim.</p>
+<p>Um <code>BigInt</code> não é estritamente igual a um {{jsxref("Global_Objects/Number", "Number")}}, mas é mais ou menos assim.</p>
 
 <pre class="brush: js">0n === 0
 // ↪ false
@@ -119,7 +119,7 @@ const rounded = 5n / 2n;
 0n == 0
 // ↪ true</pre>
 
-<p>Um {{jsxref("Global_Objects/Number", "Number")}} e um <code>BigInt</code> podem ser comparado normalmente.</p>
+<p>Um {{jsxref("Global_Objects/Number", "Number")}} e um <code>BigInt</code> podem ser comparado normalmente.</p>
 
 <pre class="brush: js">1n &lt; 2
 // ↪ true
@@ -136,7 +136,7 @@ const rounded = 5n / 2n;
 2n &gt;= 2
 // ↪ true</pre>
 
-<p>Eles podem ser misturados em <em>arrays</em> e ordenados.</p>
+<p>Eles podem ser misturados em <em>arrays</em> e ordenados.</p>
 
 <pre class="brush: js">const mixed = [4n, 6, -12n, 10, 4, 0, 0n];
 // ↪  [4n, 6, -12n, 10, 4, 0, 0n]
@@ -145,7 +145,7 @@ mixed.sort();
 // ↪ [-12n, 0, 0n, 10, 4n, 4, 6]
 </pre>
 
-<p>Observe que comparações com <code>BigInt</code>s envolvidos em <code>Object</code> atuam com outros objetos, indicando somente a igualdade onde a mesma instância do objeto é comparada.</p>
+<p>Observe que comparações com <code>BigInt</code>s envolvidos em <code>Object</code> atuam com outros objetos, indicando somente a igualdade onde a mesma instância do objeto é comparada.</p>
 
 <pre class="brush: js">0n === Object(0n); // false
 Object(0n) === Object(0n); // false
@@ -156,7 +156,7 @@ o === o // true
 
 <h3 id="Conditionals">Condicionais</h3>
 
-<p>A <code>BigInt</code> comporta-se como {{jsxref("Global_Objects/Number", "Number")}} nos casos onde ele é convertido para um {{jsxref("Global_Objects/Boolean", "Boolean")}}: através da função {{jsxref("Global_Objects/Boolean", "Boolean")}}; quando usado com operadores lógicos {{jsxref("Operators/Logical_Operators", "Logical Operators")}}  <code>||</code>, `<code>&amp;&amp;</code>`, e <code>!</code>; ou dentro de um teste condicional como um {{jsxref("Statements/if...else", "if statement")}}.</p>
+<p>A <code>BigInt</code> comporta-se como {{jsxref("Global_Objects/Number", "Number")}} nos casos onde ele é convertido para um {{jsxref("Global_Objects/Boolean", "Boolean")}}: através da função {{jsxref("Global_Objects/Boolean", "Boolean")}}; quando usado com operadores lógicos {{jsxref("Operators/Logical_Operators", "Logical Operators")}}  <code>||</code>, `<code>&amp;&amp;</code>`, e <code>!</code>; ou dentro de um teste condicional como um {{jsxref("Statements/if...else", "if statement")}}.</p>
 
 <pre class="brush: js">if (0n) {
   console.log('Olá de um if!');
@@ -189,7 +189,7 @@ Boolean(12n)
 
 <dl>
  <dt><strong><code>BigInt.asIntN()</code></strong></dt>
- <dd>Limita um BigInt entre -2<sup>expoente-1</sup> e 2<sup>expoente-1</sup>-1</dd>
+ <dd>Limita um BigInt entre -2<sup>expoente-1</sup> e 2<sup>expoente-1</sup>-1</dd>
  <dt><code>BigInt.asUintN()</code></dt>
  <dd>Limita um BigInt entre 0 e 2<sup>expoente</sup>-1</dd>
 </dl>
@@ -203,13 +203,13 @@ Boolean(12n)
 
 <h2 id="BigInt_instances">Instâncias <code>BigInt</code></h2>
 
-<p>Todas as instâncias <code>BigInt</code> são herdades de <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">BigInt.prototype</span></font>. O protótipo do objeto do construtor do <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">BigInt</span></font> pode ser modificado para afetar todas as instâncias de <code>BigInt</code>.</p>
+<p>Todas as instâncias <code>BigInt</code> são herdades de <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">BigInt.prototype</span></font>. O protótipo do objeto do construtor do <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">BigInt</span></font> pode ser modificado para afetar todas as instâncias de <code>BigInt</code>.</p>
 
 <h3 id="Methods_2">Métodos</h3>
 
 <p>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/prototype', 'Methods')}}</p>
 
-<h2 id="Examples">Examplos </h2>
+<h2 id="Examples">Exemplos </h2>
 
 <h3 id="Calculating_Primes">Calculando números primos</h3>
 

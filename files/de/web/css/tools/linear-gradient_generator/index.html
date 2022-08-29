@@ -11,58 +11,58 @@ translation_of: Web/CSS/Tools/Linear-gradient_Generator
 
 <h3 id="HTML_Content">HTML Content</h3>
 
-<pre class="brush: html">    &lt;div id="container"&gt;
-        &lt;div id="gradient-container" data-alpha="true"&gt;
-        &lt;/div&gt;
+<pre class="brush: html">    &lt;div id="container"&gt;
+        &lt;div id="gradient-container" data-alpha="true"&gt;
+        &lt;/div&gt;
 
-        &lt;div id="controls"&gt;
-            &lt;div class="section"&gt;
-                &lt;div class="title"&gt; Active point &lt;/div&gt;
-                &lt;div class="property"&gt;
-                &lt;div class="ui-input-slider" data-topic="point-position" data-info="position"
-                    data-unit="px" data-min="-1000" data-value="0" data-max="1000" data-sensivity="5"&gt;&lt;/div&gt;
-                    &lt;div id="delete-point" class="button"&gt; delete point &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div class="ui-color-picker" data-topic="picker"&gt;&lt;/div&gt;
-            &lt;/div&gt;
+        &lt;div id="controls"&gt;
+            &lt;div class="section"&gt;
+                &lt;div class="title"&gt; Active point &lt;/div&gt;
+                &lt;div class="property"&gt;
+                &lt;div class="ui-input-slider" data-topic="point-position" data-info="position"
+                    data-unit="px" data-min="-1000" data-value="0" data-max="1000" data-sensivity="5"&gt;&lt;/div&gt;
+                    &lt;div id="delete-point" class="button"&gt; delete point &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="ui-color-picker" data-topic="picker"&gt;&lt;/div&gt;
+            &lt;/div&gt;
 
-            &lt;div class="section"&gt;
-                &lt;div class="title"&gt; Active axis &lt;/div&gt;
-                &lt;div class="property"&gt;
-                    &lt;div class="name"&gt; axis unit &lt;/div&gt;
-                    &lt;div class="ui-dropdown" data-topic="axis-unit" data-selected="1"&gt;
-                        &lt;div data-value='px'&gt; pixels (px) &lt;/div&gt;
-                        &lt;div data-value='%'&gt; percentage (%) &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div id="delete-axis" class="button"&gt; delete line &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div class="property"&gt;
-                    &lt;div class="ui-slider" data-topic="axis-rotation" data-info="rotation"
-                        data-min="-180" data-value="0" data-max="180"&gt;&lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
+            &lt;div class="section"&gt;
+                &lt;div class="title"&gt; Active axis &lt;/div&gt;
+                &lt;div class="property"&gt;
+                    &lt;div class="name"&gt; axis unit &lt;/div&gt;
+                    &lt;div class="ui-dropdown" data-topic="axis-unit" data-selected="1"&gt;
+                        &lt;div data-value='px'&gt; pixels (px) &lt;/div&gt;
+                        &lt;div data-value='%'&gt; percentage (%) &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div id="delete-axis" class="button"&gt; delete line &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="property"&gt;
+                    &lt;div class="ui-slider" data-topic="axis-rotation" data-info="rotation"
+                        data-min="-180" data-value="0" data-max="180"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
 
-            &lt;div id="tool-section" class="section"&gt;
-                &lt;div class="title"&gt; Tool settings &lt;/div&gt;
-                &lt;div class="property"&gt;
-                    &lt;div class="name"&gt; alpha background &lt;/div&gt;
-                    &lt;div id="canvas-bg"&gt;&lt;/div&gt;
-                    &lt;div id="add-axis" class="button"&gt; add line &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div id="order"&gt;
-                    &lt;div id="gradient-axes"&gt;&lt;/div&gt;
-                    &lt;div id="gradient-order"&gt;&lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+            &lt;div id="tool-section" class="section"&gt;
+                &lt;div class="title"&gt; Tool settings &lt;/div&gt;
+                &lt;div class="property"&gt;
+                    &lt;div class="name"&gt; alpha background &lt;/div&gt;
+                    &lt;div id="canvas-bg"&gt;&lt;/div&gt;
+                    &lt;div id="add-axis" class="button"&gt; add line &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div id="order"&gt;
+                    &lt;div id="gradient-axes"&gt;&lt;/div&gt;
+                    &lt;div id="gradient-order"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
 
-        &lt;div id="output"&gt;
-            &lt;div class="css-property"&gt;
-                &lt;span class="property"&gt;background:&lt;/span&gt;
-                &lt;span class="value"&gt;&lt;/span&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;</pre>
+        &lt;div id="output"&gt;
+            &lt;div class="css-property"&gt;
+                &lt;span class="property"&gt;background:&lt;/span&gt;
+                &lt;span class="value"&gt;&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</pre>
 
 <h3 id="CSS_Content">CSS Content</h3>
 
@@ -3321,7 +3321,7 @@ var LinearGradientTool = (function LinearGradientTool() {
 				for (var i=0; i</pre>
 </div>
 
-<p>{{Draft}}</p>
+<p></p>
 
 <p>Dieses Werkzeug kann dazu verwendet werden, um benutzerdefinierte CSS3 {{cssxref("linear-gradient")}} Hintergründe zu erstellen.</p>
 

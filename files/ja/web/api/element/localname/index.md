@@ -8,7 +8,6 @@ tags:
 - NeedsMobileBrowserCompatibility
 - プロパティ
 - リファレンス
-browser-compat: api.Element.localName
 translation_of: Web/API/Element/localName
 ---
 {{APIRef("DOM")}}

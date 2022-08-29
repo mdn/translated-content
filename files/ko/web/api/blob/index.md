@@ -72,7 +72,7 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'
 
 #### JavaScript
 
-아래 코드의 주제는 `typedArrayToURL()` 함수로, 주어진 형식화 배열에서 `Blob`을 생성한 후 블롭의 객체 URL을 반환합니다. 데이터를 객체 URL로 변환한 후에는 (데이터가 이미지 정보라면) {{HTMLElement("img")}} 요소의 {{htmlattrxref("src", "img")}} 특성에 지정하는 등 다양하게 사용할 수 있습니다. 
+아래 코드의 주제는 `typedArrayToURL()` 함수로, 주어진 형식화 배열에서 `Blob`을 생성한 후 블롭의 객체 URL을 반환합니다. 데이터를 객체 URL로 변환한 후에는 (데이터가 이미지 정보라면) {{HTMLElement("img")}} 요소의 {{htmlattrxref("src", "img")}} 특성에 지정하는 등 다양하게 사용할 수 있습니다.
 
 ```js
 function typedArrayToURL(typedArray, mimeType) {

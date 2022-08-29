@@ -5,17 +5,17 @@ translation_of: Web/CSS/display-inside
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary">Essas palavras-chave especificam o interior do elemento{{CSSxRef("display")}} type, que define o tipo de contexto de formatação que apresenta seu conteúdo (supondo que seja um elemento não substituído). Essas palavras-chave são usadas como valores do <code>display</code> e pode ser usada para fins legados como uma única palavra-chave ou conforme definido na especificação do Nível 3, juntamente com um valor do {{CSSxRef("&lt;display-outside&gt;")}} palavras-chave.</p>
+<p class="summary">Essas palavras-chave especificam o interior do elemento{{CSSxRef("display")}} type, que define o tipo de contexto de formatação que apresenta seu conteúdo (supondo que seja um elemento não substituído). Essas palavras-chave são usadas como valores do <code>display</code> e pode ser usada para fins legados como uma única palavra-chave ou conforme definido na especificação do Nível 3, juntamente com um valor do {{CSSxRef("&lt;display-outside&gt;")}} palavras-chave.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
 <p>O <code>&lt;display-inside&gt;</code> O valor é definido usando uma palavra-chave da lista abaixo:</p>
 
 <dl>
- <dt><code>flow</code> {{Experimental_Inline}}</dt>
+ <dt><code>flow</code> {{Experimental_Inline}}</dt>
  <dd>O elemento expõe seu conteúdo usando o layout de fluxo (layout em bloco e em linha).<br>
  Se o seu tipo de exibição externo for
- <p><code>inline</code> ou <code>run-in</code>,</p>
+ <p><code>inline</code> ou <code>run-in</code>,</p>
 
  <p>e estiver participando de um contexto de formatação em bloco ou em linha, gera uma caixa em linha. Caso contrário, ele gera uma caixa de contêiner de bloco.</p>
 
@@ -23,7 +23,7 @@ translation_of: Web/CSS/display-inside
 
  <p>{{CSSxRef("position")}}, {{CSSxRef("float")}}, ou {{CSSxRef("overflow")}}) e se ele próprio participa de um contexto de formatação em bloco ou embutido, ele estabelece um novo contexto de formatação de bloco (BFC) para seu conteúdo ou integra seu conteúdo ao contexto de formatação pai.</p>
  </dd>
- <dt><code>flow-root</code> {{Experimental_Inline}}</dt>
+ <dt><code>flow-root</code> {{Experimental_Inline}}</dt>
  <dd>O elemento gera uma caixa de elemento de bloco que estabelece um novo contexto de formatação de bloco, definindo onde está a raiz da formatação.</dd>
  <dt><code>table</code></dt>
  <dd>Esses elementos se comportam como HTML{{HTMLElement("table")}} elementos. Ele define uma caixa no nível do bloco.</dd>
@@ -31,7 +31,7 @@ translation_of: Web/CSS/display-inside
  <dd>O elemento se comporta como um elemento de bloco e expõe seu conteúdo de acordo com o modelo flexbox.</dd>
  <dt><code>grid</code></dt>
  <dd>O elemento se comporta como um elemento de bloco e expõe seu conteúdo de acordo com o modelo de grade.</dd>
- <dt><code>ruby</code> {{Experimental_Inline}}</dt>
+ <dt><code>ruby</code> {{Experimental_Inline}}</dt>
  <dd>O elemento se comporta como um elemento embutido e apresenta seu conteúdo de acordo com o modelo de formatação ruby. Ele se comporta como o HTML correspondente{{HTMLElement("ruby")}} elementos.</dd>
 </dl>
 

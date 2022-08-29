@@ -93,13 +93,13 @@ Ainsi [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_O
 
 > **Note :** Ça paraît bizarre, d'avoir une méthode définie au sein d'un constructeur qui est lui même une fonction non&nbsp;? Eh bien, une fonction est aussi un type d'objet — vous pouvez jeter un œil à la documentation du constructeur [`Function()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) si vous ne nous croyez pas.
 
-1.  Vous pouvez vérifier les attributs du prototype en reprenant l'exemple précédent et en entrant le code suivant dans la console JavaScript&nbsp;:
+1. Vous pouvez vérifier les attributs du prototype en reprenant l'exemple précédent et en entrant le code suivant dans la console JavaScript&nbsp;:
 
     ```js
     Personne.prototype
     ```
 
-2.  Il n'y a pas grand-chose renvoyé par le navigateur. En même temps, nous n'avons rien défini dans l'attribut prototype de notre constructeur, et par défaut l'attribut prototype d'un constructeur est toujours vide. Voyons ce que renvoie le code suivant&nbsp;:
+2. Il n'y a pas grand-chose renvoyé par le navigateur. En même temps, nous n'avons rien défini dans l'attribut prototype de notre constructeur, et par défaut l'attribut prototype d'un constructeur est toujours vide. Voyons ce que renvoie le code suivant&nbsp;:
 
     ```js
     Object.prototype
@@ -113,7 +113,7 @@ Vous verrez qu'il existe plein d'exemples de chaine de prototypage dans JavaScri
 let maChaine = 'Ceci est ma chaine de caractères.';
 ```
 
-`maChaine ` possède aussitôt plusieurs méthodes utiles pour manipuler les chaines de caractères telles que [`split()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace)…
+`maChaine` possède aussitôt plusieurs méthodes utiles pour manipuler les chaines de caractères telles que [`split()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace)…
 
 > **Attention :** L'attribut `prototype` est un des éléments JavaScript qui peut le plus prêter à confusion. On pourrait penser qu'il s'agit du prototype objet de l'objet courant mais ça ne l'est pas (on peut y accéder via `__proto__`). L'attribut `prototype` est un attribut qui contient un objet où l'on définit les éléments dont on va pouvoir hériter.
 
@@ -121,13 +121,13 @@ let maChaine = 'Ceci est ma chaine de caractères.';
 
 Nous avons vu précédemment que la méthode [`Object.create()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/create) pouvait être utilisée pour instancier des objets.
 
-1.  Par exemple, vous pouvez essayer le code suivant dans la console JavaScript&nbsp;:
+1. Par exemple, vous pouvez essayer le code suivant dans la console JavaScript&nbsp;:
 
     ```js
     let personne2 = Object.create(personne1);
     ```
 
-2.  En réalité `create()` se contente de créer un nouvel objet à partir d'un prototype spécifique. Dans cet exemple, `personne2` est créé à partir de `personne1` qui agit en tant que prototype. Vous pouvez le vérifier via&nbsp;:
+2. En réalité `create()` se contente de créer un nouvel objet à partir d'un prototype spécifique. Dans cet exemple, `personne2` est créé à partir de `personne1` qui agit en tant que prototype. Vous pouvez le vérifier via&nbsp;:
 
     ```js
     person2.__proto__
@@ -139,7 +139,7 @@ Cela renverra l'objet `personne1`.
 
 Chaque fonction possède un attribut prototype dont la valeur est un objet contenant un attribut [`constructor`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor). L'attribut `constructor` renvoie vers la méthode constructrice utilisée. Nous allons le voir dans la section suivante, les attributs définis dans l'attribut `Personne.prototype` deviennent disponibles pour toutes les instances créées à partir du constructeur `Personne()`. De cette manière, l'attribut `constructor` est aussi disponible au sein de `personne1` et `personne2`.
 
-1.  Par exemple, vous pouvez tester le code suivant&nbsp;:
+1. Par exemple, vous pouvez tester le code suivant&nbsp;:
 
     ```js
     personne1.constructor
@@ -150,13 +150,13 @@ Chaque fonction possède un attribut prototype dont la valeur est un objet conte
 
     Une astuce qui peut s'avérer utile est d'ajouter des parenthèses à la fin de l'attribut `constructor` pour le transformer en méthode. Après tout, le constructeur est une fonction que l'on peut appeler si besoin. Il faut juste utiliser le mot-clé `new` pour signifier que l'on souhaite construire un objet.
 
-2.  Par exemple&nbsp;:
+2. Par exemple&nbsp;:
 
     ```js
     let personne3 = new personne1.constructor('Karen', 'Stephenson', 26, 'femme', ['jouer de la batterie', 'escalade']);
     ```
 
-3.  Vous pouvez désormais essayer d'accéder aux propriétés de personne3&nbsp;:
+3. Vous pouvez désormais essayer d'accéder aux propriétés de personne3&nbsp;:
 
     ```js
     personne3.prenom
@@ -182,7 +182,7 @@ personne1.constructor.name
 
 Voyons au travers d'un exemple comment modifier l'attribut `prototype` d'un constructeur (les méthodes ajoutées au prototype seront alors disponibles pour toutes les instances créées à partir du constructeur).
 
-1.  Revenons à notre exemple [oojs-class-further-exercises.html](https://sphinxknight.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises) et faisons une copie locale du [code source](https://github.com/SphinxKnight/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html). En dessous du JavaScript existant, vous pouvez ajouter le code suivant, ce qui aura pour effet d'ajouter une nouvelle méthode à l'attribut `prototype` du constructeur&nbsp;:
+1. Revenons à notre exemple [oojs-class-further-exercises.html](https://sphinxknight.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises) et faisons une copie locale du [code source](https://github.com/SphinxKnight/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html). En dessous du JavaScript existant, vous pouvez ajouter le code suivant, ce qui aura pour effet d'ajouter une nouvelle méthode à l'attribut `prototype` du constructeur&nbsp;:
 
     ```js
     Personne.prototype.aurevoir = function() {
@@ -190,7 +190,7 @@ Voyons au travers d'un exemple comment modifier l'attribut `prototype` d'un cons
     }
     ```
 
-2.  Enregistrez vos modifications et chargez la page dans votre navigateur. Vous pouvez ensuite entrer le code suivant dans la console&nbsp;:
+2. Enregistrez vos modifications et chargez la page dans votre navigateur. Vous pouvez ensuite entrer le code suivant dans la console&nbsp;:
 
     ```js
     personne1.aurevoir();

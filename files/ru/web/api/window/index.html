@@ -5,91 +5,91 @@ translation_of: Web/API/Window
 ---
 <p>{{APIRef}}</p>
 
-<p><span class="seoSummary">Объект <code>window</code> представляет собой окно, содержащее DOM документ; свойство <code>document</code> указывает на <a href="/en-US/docs/DOM/document">DOM document</a>, загруженный в данном окне.</span> Окно текущего документа может быть получено с помощью свойства {{Domxref("document.defaultView")}}.</p>
+<p><span class="seoSummary">Объект <code>window</code> представляет собой окно, содержащее DOM документ; свойство <code>document</code> указывает на <a href="/en-US/docs/DOM/document">DOM document</a>, загруженный в данном окне.</span> Окно текущего документа может быть получено с помощью свойства {{Domxref("document.defaultView")}}.</p>
 
-<p>Данный раздел содержит описание всех методов, свойств и событий, доступных через объект <code>window</code> DOM. Объект <code>window</code> реализует интерфейс <code>Window</code>, который наследуется от интерфейса <code><a href="http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView">AbstractView</a></code>. Некоторые дополнительные глобальные функции, пространства имён объектов, интерфейсы и конструкторы, как правило, не связанные с окном, но доступные в нем, перечислены в <a href="/en-US/docs/JavaScript/Reference">JavaScript ссылки</a> и <a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">DOM ссылки</a>.</p>
+<p>Данный раздел содержит описание всех методов, свойств и событий, доступных через объект <code>window</code> DOM. Объект <code>window</code> реализует интерфейс <code>Window</code>, который наследуется от интерфейса <code><a href="http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView">AbstractView</a></code>. Некоторые дополнительные глобальные функции, пространства имён объектов, интерфейсы и конструкторы, как правило, не связанные с окном, но доступные в нем, перечислены в <a href="/en-US/docs/JavaScript/Reference">JavaScript ссылки</a> и <a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">DOM ссылки</a>.</p>
 
-<p>В браузерах, поддерживающих вкладки, таком как Firefox, каждая вкладка содержит свой собственный объект <code>window</code> (и если вы пишете расширение, окно браузера тоже является отдельным объектом window - см. <a href="/en-US/docs/Working_with_windows_in_chrome_code#Content_windows">Работа с окнами в chrome коде</a>). Таким образом, объект <code>window</code> не разделяется между разными вкладками в одном и том же окне. Некоторые методы,  а именно {{Domxref("window.resizeTo")}} и {{Domxref("window.resizeBy")}} применяется для всего окна и не принадлежат объекту <code>window</code> отдельной вкладки. Как правило, если что-то логически нельзя отнести ко вкладке, это относят к окну.</p>
+<p>В браузерах, поддерживающих вкладки, таком как Firefox, каждая вкладка содержит свой собственный объект <code>window</code> (и если вы пишете расширение, окно браузера тоже является отдельным объектом window - см. <a href="/en-US/docs/Working_with_windows_in_chrome_code#Content_windows">Работа с окнами в chrome коде</a>). Таким образом, объект <code>window</code> не разделяется между разными вкладками в одном и том же окне. Некоторые методы,  а именно {{Domxref("window.resizeTo")}} и {{Domxref("window.resizeBy")}} применяется для всего окна и не принадлежат объекту <code>window</code> отдельной вкладки. Как правило, если что-то логически нельзя отнести ко вкладке, это относят к окну.</p>
 
 <h2 id="Свойства">Свойства</h2>
 
 <p><em>Данный интерфейс наследует свойства из интерфейса {{domxref("EventTarget")}} и реализует свойства из {{domxref("WindowOrWorkerGlobalScope")}} и миксин {{domxref("WindowEventHandlers")}}.</em></p>
 
-<p>Отметим, что свойства, являющиеся объектами (например, перезаписанные прототипы встроенных элементов), перечислены в отдельном разделе ниже.</p>
+<p>Отметим, что свойства, являющиеся объектами (например, перезаписанные прототипы встроенных элементов), перечислены в отдельном разделе ниже.</p>
 
 <dl>
  <dt>{{domxref("Window.applicationCache")}} {{readOnlyInline}} {{gecko_minversion_inline("1.9")}}</dt>
- <dd>Объект {{domxref("OfflineResourceList")}}, обеспечивающий для окна доступ к ресурсам вне сети.</dd>
+ <dd>Объект {{domxref("OfflineResourceList")}}, обеспечивающий для окна доступ к ресурсам вне сети.</dd>
  <dt>{{domxref("Window.closed")}} {{Non-standard_inline}}{{readOnlyInline}}</dt>
- <dd>Свойство, указывающее было ли текущее окно закрыто или нет.</dd>
+ <dd>Свойство, указывающее было ли текущее окно закрыто или нет.</dd>
  <dt>{{domxref("Window.Components")}} {{Non-standard_inline}}</dt>
- <dd>Точка доступа к богатой функциональности <a href="/en-US/docs/XPCOM">XPCOM</a>. Некоторые свойства, т.к. <a href="/en-US/docs/Components.classes">classes</a>, доступны только для достаточно привилегированного кода. <strong>Web-код не должен использовать эти свойства.</strong></dd>
+ <dd>Точка доступа к богатой функциональности <a href="/en-US/docs/XPCOM">XPCOM</a>. Некоторые свойства, т.к. <a href="/en-US/docs/Components.classes">classes</a>, доступны только для достаточно привилегированного кода. <strong>Web-код не должен использовать эти свойства.</strong></dd>
  <dt>{{domxref("console","Window.console")}} {{Non-standard_inline}} {{ReadOnlyInline}}</dt>
- <dd>Возвращает ссылку на объект консоли, обеспечивающего доступ к консоли браузера.</dd>
+ <dd>Возвращает ссылку на объект консоли, обеспечивающего доступ к консоли браузера.</dd>
  <dt>{{domxref("Window.content")}} and Window._content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}</dt>
- <dd>Возвращает ссылку на элемент содержимого в текущем окне. Устаревший вариант в нижним подчёркиванием более не доступен для Web-содержимого.</dd>
+ <dd>Возвращает ссылку на элемент содержимого в текущем окне. Устаревший вариант в нижним подчёркиванием более не доступен для Web-содержимого.</dd>
  <dt>{{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}</dt>
- <dd>Возвращает XUL контроллер объектов для текущего окна chrome.</dd>
+ <dd>Возвращает XUL контроллер объектов для текущего окна chrome.</dd>
  <dt>{{domxref("Window.crypto")}} {{readOnlyInline}}</dt>
  <dd>Возвращает зашифрованный объект браузера.</dd>
  <dt>{{domxref("Window.defaultStatus")}} {{Obsolete_inline("gecko23")}}</dt>
- <dd>Получает/устанавливает текст статус-бара для данного окна.</dd>
+ <dd>Получает/устанавливает текст статус-бара для данного окна.</dd>
  <dt>{{domxref("Window.devicePixelRatio")}} {{non-standard_inline}}{{ReadOnlyInline}}</dt>
- <dd>Возвращает соотношение между физическими пикселями и пикселями на дисплее текущего устройства.</dd>
+ <dd>Возвращает соотношение между физическими пикселями и пикселями на дисплее текущего устройства.</dd>
  <dt>{{domxref("Window.dialogArguments")}} {{ReadOnlyInline}}</dt>
- <dd>Получает аргументы, переданные в окно (если это диалоговое окно) в момент вызова {{domxref("window.showModalDialog()")}}. Это {{Interface("nsIArray")}}.</dd>
+ <dd>Получает аргументы, переданные в окно (если это диалоговое окно) в момент вызова {{domxref("window.showModalDialog()")}}. Это <code>nsIArray</code>.</dd>
  <dt>{{domxref("Window.directories")}} {{obsolete_inline}}</dt>
- <dd>Синоним {{domxref("window.personalbar")}}</dd>
+ <dd>Синоним {{domxref("window.personalbar")}}</dd>
  <dt>{{domxref("Window.document")}} {{ReadOnlyInline}}</dt>
  <dd>Возвращает ссылку на содержащийся в окне документ.</dd>
  <dt>{{domxref("Window.frameElement")}} {{readOnlyInline}}</dt>
- <dd>Возвращает элемент, в который встроено окно, или null, если оно не встроено.</dd>
+ <dd>Возвращает элемент, в который встроено окно, или null, если оно не встроено.</dd>
  <dt>{{domxref("Window.frames")}} {{readOnlyInline}}</dt>
  <dd>Возвращает массив дополнительных фреймов в текущем окне.</dd>
  <dt>{{domxref("Window.fullScreen")}} {{gecko_minversion_inline("1.9")}}</dt>
  <dd>Это свойство указывает, отображается ли окно в полноэкранном режиме или нет.</dd>
  <dt>{{domxref("Window.globalStorage")}} {{gecko_minversion_inline("1.8.1")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}</dt>
- <dd>Не поддерживает с Gecko 13 (Firefox 13). Использовать вместо него{{domxref("Window.localStorage")}}. Было: Множественные объекты хранения, которые используются для хранения данных на нескольких страницах.</dd>
+ <dd>Не поддерживает с Gecko 13 (Firefox 13). Использовать вместо него{{domxref("Window.localStorage")}}. Было: Множественные объекты хранения, которые используются для хранения данных на нескольких страницах.</dd>
  <dt>{{domxref("Window.history")}} {{ReadOnlyInline}}</dt>
  <dd>Возвращает ссылку на объект истории.</dd>
  <dt>{{domxref("Window.innerHeight")}}</dt>
  <dd>Получает высоту области содержимого окна браузера, включая, если есть, горизонтальный скроллбар.</dd>
  <dt>{{domxref("window.innerWidth")}}</dt>
  <dd>Получает ширину области содержимого окна браузера, включая, если есть, вертикальный скроллбар.</dd>
- <dt>{{domxref("Window.isSecureContext")}} {{readOnlyInline}}</dt>
- <dd>Указывает, способен ли контекст использовать функциональность, требующую безопасного контекста.</dd>
+ <dt>{{domxref("Window.isSecureContext")}} {{readOnlyInline}}</dt>
+ <dd>Указывает, способен ли контекст использовать функциональность, требующую безопасного контекста.</dd>
  <dt>{{domxref("Window.length")}} {{readOnlyInline}}</dt>
- <dd>Возвращает число фреймов в окне. Смотрите также {{domxref("window.frames")}}.</dd>
+ <dd>Возвращает число фреймов в окне. Смотрите также {{domxref("window.frames")}}.</dd>
  <dt>{{domxref("Window.location")}} {{ReadOnlyInline}}</dt>
- <dd>Получает/устанавливает расположение или текущий URL для текущего объекта окна.</dd>
+ <dd>Получает/устанавливает расположение или текущий URL для текущего объекта окна.</dd>
  <dt>{{domxref("Window.locationbar")}} {{ReadOnlyInline}}</dt>
  <dd>Возвращает объект locationbar, который может быть добавлен и убран из окна.</dd>
  <dt>{{domxref("Window.localStorage")}} {{readOnlyInline}}{{gecko_minversion_inline("1.9.1")}}</dt>
- <dd>Возвращает ссылку на локальный объект хранилища, используемый для хранения данных, которые могут быть доступны только первоисточникам, создавшим их.</dd>
+ <dd>Возвращает ссылку на локальный объект хранилища, используемый для хранения данных, которые могут быть доступны только первоисточникам, создавшим их.</dd>
  <dt>{{domxref("Window.menubar")}} {{ReadOnlyInline}}</dt>
- <dd>Возвращает объект menubar, который может быть добавлен и убран из окна.</dd>
+ <dd>Возвращает объект menubar, который может быть добавлен и убран из окна.</dd>
  <dt>{{domxref("Window.messageManager")}} {{gecko_minversion_inline("2.0")}}</dt>
- <dd>Возвращает объект <a href="/en-US/docs/The_message_manager">message manager</a> для окна.</dd>
+ <dd>Возвращает объект <a href="/en-US/docs/The_message_manager">message manager</a> для окна.</dd>
  <dt>{{domxref("Window.mozAnimationStartTime")}} {{ReadOnlyInline}}{{gecko_minversion_inline("2.0")}}</dt>
- <dd>Время в миллисекундах с момента начала цикла данной анимации.</dd>
+ <dd>Время в миллисекундах с момента начала цикла данной анимации.</dd>
  <dt>{{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}}{{non-standard_inline}}{{gecko_minversion_inline("1.9.2")}}</dt>
- <dd>Возвращает горизонтальную (X) координату верхнего левого угла окна просмотра в экранных координатах. Значение возвращается в CSS-пикселях. Смотри <code>mozScreenPixelsPerCSSPixel</code> в {{interface("nsIDOMWindowUtils")}} для конвертирования и адаптирования к экранным пикселям, если необходимо.</dd>
+ <dd>Возвращает горизонтальную (X) координату верхнего левого угла окна просмотра в экранных координатах. Значение возвращается в CSS-пикселях. Смотри <code>mozScreenPixelsPerCSSPixel</code> в <code>nsIDOMWindowUtils</code> для конвертирования и адаптирования к экранным пикселям, если необходимо.</dd>
  <dt>{{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}{{gecko_minversion_inline("1.9.2")}}</dt>
- <dd>Возвращает вертикальные (Y) координаты верхнего левого угла окна просмотра в экранных координатах. Значение возвращается в CSS-пикселях. Смотри <code>mozScreenPixelsPerCSSPixel</code> для конвертирования и адаптирования к экранным пикселям, если необходимо.</dd>
+ <dd>Возвращает вертикальные (Y) координаты верхнего левого угла окна просмотра в экранных координатах. Значение возвращается в CSS-пикселях. Смотри <code>mozScreenPixelsPerCSSPixel</code> для конвертирования и адаптирования к экранным пикселям, если необходимо.</dd>
  <dt>{{domxref("Window.mozPaintCount")}} {{non-standard_inline}}{{ReadOnlyInline}} {{gecko_minversion_inline("2.0")}}</dt>
- <dd>Возвращает количество раз, за которые текущий документ был отрендерен для текущего экрана в этом окне. Может быть использовано для подсчёта скорости преобразования.</dd>
+ <dd>Возвращает количество раз, за которые текущий документ был отрендерен для текущего экрана в этом окне. Может быть использовано для подсчёта скорости преобразования.</dd>
  <dt>{{domxref("Window.name")}}</dt>
  <dd>Получает/устанавливает имя для окна.</dd>
  <dt>{{domxref("Window.navigator")}} {{readOnlyInline}}</dt>
  <dd>Возвращает ссылку на объект навигатора.</dd>
  <dt>{{domxref("Window.opener")}}</dt>
- <dd>Возвращает ссылку на окно, открывшее текущее окно.</dd>
+ <dd>Возвращает ссылку на окно, открывшее текущее окно.</dd>
  <dt>{{domxref("Window.orientation")}}{{non-standard_inline}}{{deprecated_inline}}{{readOnlyInline}}</dt>
- <dd>Возвращает ориентировку в градусах (с увеличением на 90 градусов) окна просмотра относительно настоящей ориентировки устройства.</dd>
+ <dd>Возвращает ориентировку в градусах (с увеличением на 90 градусов) окна просмотра относительно настоящей ориентировки устройства.</dd>
  <dt>{{domxref("Window.outerHeight")}} {{readOnlyInline}}</dt>
- <dd>Получает высоту вместе с внешней частью браузерного окна.</dd>
+ <dd>Получает высоту вместе с внешней частью браузерного окна.</dd>
  <dt>{{domxref("Window.outerWidth")}} {{readOnlyInline}}</dt>
- <dd>Получает ширину вместе с внешней частью браузерного окна.</dd>
+ <dd>Получает ширину вместе с внешней частью браузерного окна.</dd>
  <dt>{{domxref("Window.scrollX","Window.pageXOffset")}} {{readOnlyInline}}</dt>
  <dd>Псевдоним для {{domxref("window.scrollX")}}.</dd>
  <dt>{{domxref("Window.scrollY","Window.pageYOffset")}}{{readOnlyInline}}</dt>
@@ -97,43 +97,43 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.sessionStorage")}} {{readOnlyInline}}</dt>
  <dd>Возвращает ссылку на объект хранения сессии, используемый для хранения данных, которые могут быть получены только источником, создавшим их.</dd>
  <dt>{{domxref("Window.parent")}} {{readOnlyInline}}</dt>
- <dd>Возвращает ссылку на родителя текущего окна или встроенного фрейма.</dd>
+ <dd>Возвращает ссылку на родителя текущего окна или встроенного фрейма.</dd>
  <dt>{{domxref("Window.performance")}} {{readOnlyInline}}</dt>
- <dd>Обеспечивает главенствующее пространство для атрибутов, <a href="/en-US/docs/Navigation_timing">относящихся к производительности</a>.</dd>
+ <dd>Обеспечивает главенствующее пространство для атрибутов, <a href="/en-US/docs/Navigation_timing">относящихся к производительности</a>.</dd>
  <dt>{{domxref("Window.personalbar")}} {{readOnlyInline}}</dt>
  <dd>Возвращает объект personalbar, который может быть добавлен и убран из окна.</dd>
  <dt>{{domxref("Window.pkcs11")}} {{obsolete_inline(29)}}</dt>
- <dd>Раньше предоставлял доступ к установке и удалению PKCS11 модуля.</dd>
+ <dd>Раньше предоставлял доступ к установке и удалению PKCS11 модуля.</dd>
  <dt>{{domxref("Window.returnValue")}}</dt>
- <dd>Возвращаемое значение, которое будет передано в функцию, которая вызвала {{domxref("window.showModalDialog()")}} для отображения окна как модального диалога.</dd>
+ <dd>Возвращаемое значение, которое будет передано в функцию, которая вызвала {{domxref("window.showModalDialog()")}} для отображения окна как модального диалога.</dd>
  <dt>{{domxref("Window.screen")}} {{readOnlyInline}}</dt>
  <dd>Возвращает ссылку на объект экрана, ассоциируемый с окном.</dd>
  <dt>{{domxref("Window.screenX")}} {{readOnlyInline}}</dt>
- <dd>Возвращает горизонтальный размер левой рамки браузера пользователя с левой стороны экрана.</dd>
+ <dd>Возвращает горизонтальный размер левой рамки браузера пользователя с левой стороны экрана.</dd>
  <dt>{{domxref("Window.screenY")}} {{readOnlyInline}}</dt>
- <dd>Возвращает вертикальный размер верхней рамки браузера пользователя с верхней стороны экрана.</dd>
+ <dd>Возвращает вертикальный размер верхней рамки браузера пользователя с верхней стороны экрана.</dd>
  <dt>{{domxref("Window.scrollbars")}} {{readOnlyInline}}</dt>
- <dd>Возвращает объект scrollbars, который может быть добавлен и убран из окна.</dd>
+ <dd>Возвращает объект scrollbars, который может быть добавлен и убран из окна.</dd>
  <dt>{{domxref("Window.scrollMaxX")}}{{non-standard_inline}}{{ReadOnlyInline}}</dt>
- <dd>Максимальный отступ, на который может быть проскроллено окно по горизонтали, состоящее из разницы ширины документа и ширины области просмотра.</dd>
+ <dd>Максимальный отступ, на который может быть проскроллено окно по горизонтали, состоящее из разницы ширины документа и ширины области просмотра.</dd>
  <dt>{{domxref("Window.scrollMaxY")}}{{non-standard_inline}}{{ReadOnlyInline}}</dt>
- <dd>Максимальный отступ, на который может быть проскроллено окно по вертикали, (т.е., разница высоты документа и высоты области просмотра).</dd>
+ <dd>Максимальный отступ, на который может быть проскроллено окно по вертикали, (т.е., разница высоты документа и высоты области просмотра).</dd>
  <dt>{{domxref("Window.scrollX")}} {{readOnlyInline}}</dt>
- <dd>Возвращает число пикселей, на которое документ уже был проскроллен по горизонтали.</dd>
+ <dd>Возвращает число пикселей, на которое документ уже был проскроллен по горизонтали.</dd>
  <dt>{{domxref("Window.scrollY")}} {{readOnlyInline}}</dt>
- <dd>Возвращает число пикселей, на которое документ уже был проскроллен по вертикали.</dd>
+ <dd>Возвращает число пикселей, на которое документ уже был проскроллен по вертикали.</dd>
  <dt>{{domxref("Window.self")}} {{ReadOnlyInline}}</dt>
  <dd>Возвращает ссылку на самого себя.</dd>
  <dt>{{domxref("Window.sessionStorage")}}</dt>
- <dd>Возвращает объект хранилища для данных в пределах сессии одной страницы.</dd>
+ <dd>Возвращает объект хранилища для данных в пределах сессии одной страницы.</dd>
  <dt>{{domxref("Window.sidebar")}} {{non-standard_inline}}{{ReadOnlyInline}}</dt>
  <dd>Возвращает ссылку на объект окна sidebar.</dd>
  <dt>{{domxref("Window.speechSynthesis")}} {{ReadOnlyInline}}</dt>
- <dd>Возвращает объект {{domxref("SpeechSynthesis")}}, который является точкой входа для использования <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a>, функциональности для речевого синтеза.</dd>
+ <dd>Возвращает объект {{domxref("SpeechSynthesis")}}, который является точкой входа для использования <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a>, функциональности для речевого синтеза.</dd>
  <dt>{{domxref("Window.status")}}</dt>
- <dd>Получает/устанавливает текст в statusbar внизу браузера.</dd>
+ <dd>Получает/устанавливает текст в statusbar внизу браузера.</dd>
  <dt>{{domxref("Window.statusbar")}} {{readOnlyInline}}</dt>
- <dd>Возвращает объект statusbar, который может быть добавлен и убран из окна.</dd>
+ <dd>Возвращает объект statusbar, который может быть добавлен и убран из окна.</dd>
  <dt>{{domxref("Window.toolbar")}} {{readOnlyInline}}</dt>
  <dd>Возвращает объект toolbar, который может быть добавлен и убран из окна.</dd>
  <dt>{{domxref("Window.top")}} {{readOnlyInline}}</dt>
@@ -141,39 +141,39 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.window")}} {{ReadOnlyInline}}</dt>
  <dd>Возвращает ссылку на текущее окно.</dd>
  <dt><code>window[0]</code>,<code> window[1]</code>, etc.</dt>
- <dd>Возвращает ссылку на объект окна во фреймах. Смотри {{domxref("Window.frames")}}.</dd>
+ <dd>Возвращает ссылку на объект окна во фреймах. Смотри {{domxref("Window.frames")}}.</dd>
 </dl>
 
-<h3 id="Свойства_реализованные_из_других_мест">Свойства,  реализованные из других мест</h3>
+<h3 id="Свойства_реализованные_из_других_мест">Свойства,  реализованные из других мест</h3>
 
 <dl>
  <dt>{{domxref("WindowOrWorkerGlobalScope.caches")}} {{readOnlyinline}}</dt>
- <dd>Возвращает объект {{domxref("CacheStorage")}}, связанный с текущим контекстом. Этот объект добавляет такой функционал как хранение ресурсов для использования вне сети и генерирования встроенных ответов на запросы.</dd>
+ <dd>Возвращает объект {{domxref("CacheStorage")}}, связанный с текущим контекстом. Этот объект добавляет такой функционал как хранение ресурсов для использования вне сети и генерирования встроенных ответов на запросы.</dd>
  <dt>{{domxref("WindowOrWorkerGlobalScope.indexedDB")}} {{readonlyInline}}</dt>
- <dd>Обеспечивает механизм для приложений для возможности асинхронного доступа индексированных баз данных; возвращает объект {{domxref("IDBFactory")}}.</dd>
+ <dd>Обеспечивает механизм для приложений для возможности асинхронного доступа индексированных баз данных; возвращает объект {{domxref("IDBFactory")}}.</dd>
  <dt>{{domxref("WindowOrWorkerGlobalScope.isSecureContext")}} {{readOnlyinline}}</dt>
- <dd>Возвращает булевское значение, указывающее является ли текущий контент безопасным (<code>true</code>) или нет (<code>false</code>).</dd>
+ <dd>Возвращает булевское значение, указывающее является ли текущий контент безопасным (<code>true</code>) или нет (<code>false</code>).</dd>
  <dt>{{domxref("WindowOrWorkerGlobalScope.origin")}} {{readOnlyinline}}</dt>
- <dd>Возвращает источник глобального объекта, преобразованного в строку. (Это свойство пока ещё не существует, поэтому не может быть использовано в браузерах.)</dd>
+ <dd>Возвращает источник глобального объекта, преобразованного в строку. (Это свойство пока ещё не существует, поэтому не может быть использовано в браузерах.)</dd>
 </dl>
 
 <h2 id="Методы">Методы</h2>
 
-<p><em>Этот интерфейс наследует методы от интерфейса {{domxref("EventTarget")}}  и реализует свойства {{domxref("WindowOrWorkerGlobalScope")}} и {{domxref("EventTarget")}}.</em></p>
+<p><em>Этот интерфейс наследует методы от интерфейса {{domxref("EventTarget")}}  и реализует свойства {{domxref("WindowOrWorkerGlobalScope")}} и {{domxref("EventTarget")}}.</em></p>
 
 <dl>
  <dt>{{domxref("Window.alert()")}}</dt>
- <dd>Отображает предупреждающее диалоговое окно.</dd>
+ <dd>Отображает предупреждающее диалоговое окно.</dd>
  <dt>{{domxref("Window.back()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
  <dd>Возвращается на один шаг назад в истории окна.</dd>
  <dt>{{domxref("Window.blur()")}}</dt>
  <dd>Убирает фокус с окна.</dd>
- <dt>{{domxref("Window.cancelIdleCallback()")}} {{experimental_inline}}</dt>
- <dd>Позволяет отменить колбэк-функцию прежде чем определить расписание её вызова с {{domxref("Window.requestIdleCallback")}}.</dd>
+ <dt>{{domxref("Window.cancelIdleCallback()")}} {{experimental_inline}}</dt>
+ <dd>Позволяет отменить колбэк-функцию прежде чем определить расписание её вызова с {{domxref("Window.requestIdleCallback")}}.</dd>
  <dt>{{domxref("Window.captureEvents()")}} {{Deprecated_inline}}</dt>
  <dd>Регистрирует окно, которое будет перехватывать все события определённого типа.</dd>
  <dt>{{domxref("Window.clearImmediate()")}}</dt>
- <dd>Отменяет повторяющееся исполнение, установленное с помощью <code>setImmediate</code>.</dd>
+ <dd>Отменяет повторяющееся исполнение, установленное с помощью <code>setImmediate</code>.</dd>
  <dt>{{domxref("WindowTimers.clearInterval()")}}</dt>
  <dd>Отменяет повторяющееся исполнение, установленное с помощью {{domxref("WindowTimers.setInterval()")}}.</dd>
  <dt>{{domxref("WindowTimers.clearTimeout()")}}</dt>
@@ -195,21 +195,21 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.focus()")}}</dt>
  <dd>Устанавливает фокус на текущем окне.</dd>
  <dt>{{domxref("Window.forward()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
- <dd>Переходит на один документ вперёд в текущей истории окна.</dd>
+ <dd>Переходит на один документ вперёд в текущей истории окна.</dd>
  <dt>{{domxref("Window.getAttention()")}}</dt>
  <dd>Заставляет мигать иконку приложения.</dd>
  <dt>{{domxref("Window.getAttentionWithCycleCount()")}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
  <dt>{{domxref("Window.getComputedStyle()")}}</dt>
- <dd>Получает подсчитанные стили для определённого элемента. Подсчитанные стили включают подсчитанные значения всех CSS-свойств элемента.</dd>
+ <dd>Получает подсчитанные стили для определённого элемента. Подсчитанные стили включают подсчитанные значения всех CSS-свойств элемента.</dd>
  <dt>{{domxref("Window.getDefaulComputedStyle()")}}</dt>
- <dd>Получает подсчитанные стили по умолчанию для определённого элемента, игнорируя авторские стили.</dd>
+ <dd>Получает подсчитанные стили по умолчанию для определённого элемента, игнорируя авторские стили.</dd>
  <dt>{{domxref("Window.getSelection()")}}</dt>
  <dd>Возвращает выбранный объект, представляющий выбранный элемент(ы).</dd>
  <dt>{{domxref("Window.home()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
  <dd>Возвращает браузер на домашнюю страницу.</dd>
  <dt>{{domxref("Window.matchMedia()")}} {{gecko_minversion_inline("6.0")}}</dt>
- <dd>Возвращает объект {{domxref("MediaQueryList")}}, представляющий указанную строку медиавыражения.</dd>
+ <dd>Возвращает объект {{domxref("MediaQueryList")}}, представляющий указанную строку медиавыражения.</dd>
  <dt>{{domxref("Window.maximize()")}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
  <dt>{{domxref("Window.minimize()")}} (top-level XUL windows only)</dt>
@@ -217,15 +217,15 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.moveBy()")}}</dt>
  <dd>Сдвигает текущее окно на определённое значение.</dd>
  <dt>{{domxref("Window.moveTo()")}}</dt>
- <dd>Сдвигает окно до определённых координат.</dd>
+ <dd>Сдвигает окно до определённых координат.</dd>
  <dt>{{domxref("Window.mozRequestAnimationFrame()")}} {{gecko_minversion_inline("2.0")}}</dt>
- <dd>Сообщает браузеру, что анимация находится в прогрессе, требуя, чтобы браузер определил время перерисовки окна для следующего анимационного фрейма. Это вызовет событие  <code>MozBeforePaint,</code> прежде чем произойдёт перерисовка .</dd>
+ <dd>Сообщает браузеру, что анимация находится в прогрессе, требуя, чтобы браузер определил время перерисовки окна для следующего анимационного фрейма. Это вызовет событие  <code>MozBeforePaint,</code> прежде чем произойдёт перерисовка .</dd>
  <dt>{{domxref("Window.open()")}}</dt>
  <dd>Открывает новое окно.</dd>
  <dt>{{domxref("Window.openDialog()")}}</dt>
  <dd>Opens a new dialog window.</dd>
  <dt>{{domxref("Window.postMessage()")}}</dt>
- <dd>Предоставляет безопасный способ для одного окна передать строку с данными в другое окно, которое должно находиться в пределах того же домена, что и первое.</dd>
+ <dd>Предоставляет безопасный способ для одного окна передать строку с данными в другое окно, которое должно находиться в пределах того же домена, что и первое.</dd>
  <dt>{{domxref("Window.print()")}}</dt>
  <dd>Открывает Print Dialog для распечатки текущего документа.</dd>
  <dt>{{domxref("Window.prompt()")}}</dt>
@@ -234,8 +234,8 @@ translation_of: Web/API/Window
  <dd>Возвращает окно с захваченных событий определённого типа.</dd>
  <dt>{{domxref("element.removeEventListener","Window.removeEventListener()")}}</dt>
  <dd>Удаляет обработчик события из окна.</dd>
- <dt>{{domxref("Window.requestIdleCallback()")}}  {{experimental_inline}}</dt>
- <dd>Позволяет назначить расписание задачи во время периода простоя браузера.</dd>
+ <dt>{{domxref("Window.requestIdleCallback()")}}  {{experimental_inline}}</dt>
+ <dd>Позволяет назначить расписание задачи во время периода простоя браузера.</dd>
  <dt>{{domxref("Window.resizeBy()")}}</dt>
  <dd>Меняет размер текущего окна на определённое число.</dd>
  <dt>{{domxref("Window.resizeTo()")}}</dt>
@@ -259,7 +259,7 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.setImmediate()")}}</dt>
  <dd>Исполняет функцию после того, как браузер некую тяжёлую задачу.</dd>
  <dt>{{domxref("WindowTimers.setInterval()")}}</dt>
- <dd>Назначает выполнение функции каждые X миллисекунд.</dd>
+ <dd>Назначает выполнение функции каждые X миллисекунд.</dd>
  <dt>{{domxref("Window.setResizable")}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
  <dt>{{domxref("WindowTimers.setTimeout()")}}</dt>
@@ -271,7 +271,7 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.stop()")}}</dt>
  <dd>Останавливает загрузку страницы.</dd>
  <dt>{{domxref("Window.updateCommands()")}}</dt>
- <dd>Обновляет состояние команд текущего окна chrome (UI).</dd>
+ <dd>Обновляет состояние команд текущего окна chrome (UI).</dd>
  <dt>
  <h3 id="Методы_реализованные_из_других_мест">Методы, реализованные из других мест</h3>
  </dt>
@@ -282,29 +282,29 @@ translation_of: Web/API/Window
  <dt>{{domxref("WindowOrWorkerGlobalScope.btoa()")}}</dt>
  <dd>Создать закодированную base-64 ASCII строку из строки бинарных данных.</dd>
  <dt>{{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}</dt>
- <dd>Отменяет повторяющееся исполнение, установленного с помощью {{domxref("WindowOrWorkerGlobalScope.setInterval()")}}.</dd>
+ <dd>Отменяет повторяющееся исполнение, установленного с помощью {{domxref("WindowOrWorkerGlobalScope.setInterval()")}}.</dd>
  <dt>{{domxref("WindowOrWorkerGlobalScope.clearTimeout()")}}</dt>
- <dd>Отменяет отложенное исполнение, установленного с   {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}.</dd>
+ <dd>Отменяет отложенное исполнение, установленного с   {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}.</dd>
  <dt>{{domxref("WindowOrWorkerGlobalScope.createImageBitmap()")}}</dt>
- <dd>Принимает множество различных изображений и возвращает {{domxref("Promise")}}, который возвращает {{domxref("ImageBitmap")}}. Опционально ресурс может быть обрезан до прямоугольника, заданного в пикселях <em>(sx, sy)</em> с шириной sw и высотой sh.</dd>
+ <dd>Принимает множество различных изображений и возвращает {{domxref("Promise")}}, который возвращает {{domxref("ImageBitmap")}}. Опционально ресурс может быть обрезан до прямоугольника, заданного в пикселях <em>(sx, sy)</em> с шириной sw и высотой sh.</dd>
  <dt>{{domxref("WindowOrWorkerGlobalScope.fetch()")}}</dt>
  <dd>Начинает процесс загрузки ресурса из сети.</dd>
  <dt>{{domxref("EventTarget.removeEventListener")}}</dt>
  <dd>Удаляет обработчик события из окна.</dd>
  <dt>{{domxref("WindowOrWorkerGlobalScope.setInterval()")}}</dt>
- <dd>Устанавливает расписание для исполнения функции каждый раз через заданное число миллисекунд.</dd>
+ <dd>Устанавливает расписание для исполнения функции каждый раз через заданное число миллисекунд.</dd>
  <dt>{{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}</dt>
- <dd>Устанавливает расписание для исполнения функции в назначенное время.</dd>
+ <dd>Устанавливает расписание для исполнения функции в назначенное время.</dd>
 </dl>
 
 <h2 id="Обработчики_событий">Обработчики событий</h2>
 
 <p>Это методы объекта window, которые могут устанавливаться для перехвата всех событий, которые могут происходить с объектом window.</p>
 
-<p>Интерфейс наследует обработчики событий от <em>{{domxref("EventTarget")}} </em>интерфейса и реализует обработчики событий <em>{{domxref("WindowEventHandlers")}}.</em></p>
+<p>Интерфейс наследует обработчики событий от <em>{{domxref("EventTarget")}} </em>интерфейса и реализует обработчики событий <em>{{domxref("WindowEventHandlers")}}.</em></p>
 
 <div class="note">
-<p><strong>Замета:</strong> Начиная с {{Gecko("9.0")}}, вы можете использовать синтаксис <code>if ("onabort" in window),</code> чтобы определить существует ли обработчик данного события. Интерфейсы обработчиков событий были обновлены таким образом, чтобы соответствовать web IDL интерфейсам. Смотри <a href="/en-US/docs/DOM/DOM_event_handlers">обработчики событий DOM</a> для деталей.</p>
+<p><strong>Замета:</strong> Начиная с {{Gecko("9.0")}}, вы можете использовать синтаксис <code>if ("onabort" in window),</code> чтобы определить существует ли обработчик данного события. Интерфейсы обработчиков событий были обновлены таким образом, чтобы соответствовать web IDL интерфейсам. Смотри <a href="/en-US/docs/DOM/DOM_event_handlers">обработчики событий DOM</a> для деталей.</p>
 </div>
 
 <dl>
@@ -315,17 +315,17 @@ translation_of: Web/API/Window
  <dt>{{domxref("WindowEventHandlers.onbeforeprint")}}</dt>
  <dd>Вызывается, когда открывается диалоговое окно распечатки. Смотри событие {{event("beforeprint")}}.</dd>
  <dt>{{domxref("Window.onbeforeinstallprompt")}}</dt>
- <dd>Событие вызывается прежде чем пользователь согласится сохранить сайт на домашний экран на мобильном устройстве.</dd>
+ <dd>Событие вызывается прежде чем пользователь согласится сохранить сайт на домашний экран на мобильном устройстве.</dd>
  <dt>{{domxref("WindowEventHandlers.onbeforeunload")}}</dt>
  <dd>Событие вызывается перед удалением события из окна.</dd>
  <dt>{{domxref("GlobalEventHandlers.onblur")}}</dt>
  <dd>Свойство обработчика событий для исчезновение фокуса на окне.</dd>
  <dt>{{domxref("GlobalEventHandlers.onchange")}}</dt>
- <dd>Свойство обработчика событий для изменения в окне.</dd>
+ <dd>Свойство обработчика событий для изменения в окне.</dd>
  <dt>{{domxref("GlobalEventHandlers.onclick")}}</dt>
- <dd>Свойство обработчика событий для клика в окне.</dd>
+ <dd>Свойство обработчика событий для клика в окне.</dd>
  <dt>{{domxref("GlobalEventHandlers.ondblclick")}}</dt>
- <dd>Вызывается, когда был сделан двойной клик ЛЮБОЙ кнопкой мыши.</dd>
+ <dd>Вызывается, когда был сделан двойной клик ЛЮБОЙ кнопкой мыши.</dd>
  <dt>{{domxref("GlobalEventHandlers.onclose")}}</dt>
  <dd>Свойство обработчика событий для обработки закрытия окна.</dd>
  <dt>{{domxref("GlobalEventHandlers.oncontextmenu")}}</dt>
@@ -333,7 +333,7 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.ondevicelight")}}</dt>
  <dd>Свойство обработчика событий для отслеживания изменения уровня света.</dd>
  <dt>{domxref("Window.ondevicemotion")}} {{gecko_minversion_inline("6.0")}}</dt>
- <dd>Вызывается, если было определено изменение акселерометра (для мобильных устройств).</dd>
+ <dd>Вызывается, если было определено изменение акселерометра (для мобильных устройств).</dd>
  <dt>{{domxref("Window.ondeviceorientation")}} {{gecko_minversion_inline("6.0")}}</dt>
  <dd>Вызывается, когда была изменена ориентация (для мобильных устройств).</dd>
  <dt>{{domxref("Window.ondeviceorientation")}} {{gecko_minversion_inline("6.0")}}</dt>
@@ -341,27 +341,27 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.ondeviceproximity")}}</dt>
  <dd>Свойство обработчика событий для определения близости устройства.</dd>
  <dt>{{domxref("GlobalEventHandlers.onerror")}}</dt>
- <dd>Свойство обработчика событий для события {{event("error")}}, возникшего в окне.</dd>
+ <dd>Свойство обработчика событий для события {{event("error")}}, возникшего в окне.</dd>
  <dt>{{domxref("GlobalEventHandlers.onfocus")}}</dt>
  <dd>Свойство обработчика событий для события {{event("focus")}} в окне.</dd>
  <dt>{{domxref("WindowEventHandlers.onhashchange")}} {{gecko_minversion_inline("1.9.2")}}</dt>
- <dd>Свойство обработчика событий для отлова изменения хэша в окне; вызывается, когда часть URL после ("#") была изменена.</dd>
+ <dd>Свойство обработчика событий для отлова изменения хэша в окне; вызывается, когда часть URL после ("#") была изменена.</dd>
  <dt>{{domxref("Window.onappinstalled")}}</dt>
- <dd>Вызывается, когда страница установлена, как приложение. Смотри {{event('appinstalled')}} событие.</dd>
+ <dd>Вызывается, когда страница установлена, как приложение. Смотри {{event('appinstalled')}} событие.</dd>
  <dt>{{domxref("Window.oninput")}}</dt>
- <dd>Вызывается, когда значение элемента &lt;input&gt; было изменено.</dd>
+ <dd>Вызывается, когда значение элемента &lt;input&gt; было изменено.</dd>
  <dt>{{domxref("GlobalEventHandlers.onkeydown")}}</dt>
  <dd>Свойство обработчика событий для события {{event("keydown")}} в окне.</dd>
  <dt>{{domxref("GlobalEventHandlers.onkeypress")}}</dt>
- <dd>Свойство обработчика событий для события {{event("keypress")}} в окне.</dd>
+ <dd>Свойство обработчика событий для события {{event("keypress")}} в окне.</dd>
  <dt>{{domxref("GlobalEventHandlers.onkeyup")}}</dt>
- <dd>Свойство обработчика событий для события {{event("keyup")}} в окне.</dd>
+ <dd>Свойство обработчика событий для события {{event("keyup")}} в окне.</dd>
  <dt>{{domxref("WindowEventHandlers.onlanguagechange")}}</dt>
- <dd>Свойство обработчика событий для события {{event("languagechange")}} в окне.</dd>
+ <dd>Свойство обработчика событий для события {{event("languagechange")}} в окне.</dd>
  <dt>{{domxref("GlobalEventHandlers.onload")}}</dt>
  <dd>Свойство обработчика событий для загрузки окна.</dd>
  <dt>{{domxref("WindowEventHandlers.onmessage")}}</dt>
- <dd>{{event("Event_handlers", "event handler")}}, представляющий собой код, который будет вызван, когда произойдёт событие {{event("message")}}.</dd>
+ <dd>{{event("Event_handlers", "event handler")}}, представляющий собой код, который будет вызван, когда произойдёт событие {{event("message")}}.</dd>
  <dt>{{domxref("GlobalEventHandlers.onmousedown")}}</dt>
  <dd>Свойство обработчика событий для события mousedown в окне.</dd>
  <dt>{{domxref("GlobalEventHandlers.onmousemove")}}</dt>
@@ -373,25 +373,25 @@ translation_of: Web/API/Window
  <dt>{{domxref("GlobalEventHandlers.onmouseup")}}</dt>
  <dd>Свойство обработчика событий для события mouseup в окне.</dd>
  <dt>{{domxref("Window.onmozbeforepaint")}} {{gecko_minversion_inline("2.0")}}</dt>
- <dd>Свойство обработчика событий для события <code>MozBeforePaint</code>, которое присылается прежде чем окно будет перерисовано, если событие необходимо из-за вызова метода {{domxref("Window.mozRequestAnimationFrame()")}}.</dd>
+ <dd>Свойство обработчика событий для события <code>MozBeforePaint</code>, которое присылается прежде чем окно будет перерисовано, если событие необходимо из-за вызова метода {{domxref("Window.mozRequestAnimationFrame()")}}.</dd>
  <dt>{{domxref("WindowEventHandlers.onoffline")}}</dt>
  <dd>Вызывается, когда было потеряно соединение с сетью. Смотри событие {{event("offline")}}.</dd>
  <dt>{{domxref("WindowEventHandlers.ononline")}}</dt>
- <dd>Вызывается, когда соединение с сетью было установлено. Смотри событие {{event("online")}}.</dd>
+ <dd>Вызывается, когда соединение с сетью было установлено. Смотри событие {{event("online")}}.</dd>
  <dt>{{domxref("WindowEventHandlers.onpageshow")}}</dt>
- <dd>Свойство обработчика событий для события pageshow в окне.</dd>
+ <dd>Свойство обработчика событий для события pageshow в окне.</dd>
  <dt>{{domxref("WindowEventHandlers.onpagehide")}}</dt>
- <dd>Свойство обработчика событий для события pagehide в окне.</dd>
+ <dd>Свойство обработчика событий для события pagehide в окне.</dd>
  <dt>{{domxref("Window.onpaint")}}</dt>
  <dd>Свойство обработчика событий для события paint в окне.</dd>
  <dt>{{domxref("WindowEventHandlers.onpopstate")}} {{gecko_minversion_inline("2.0")}}</dt>
  <dd>Вызывается, когда была нажата кнопка назад.</dd>
  <dt>{{domxref("Window.onrejectionhandled")}} {{experimental_inline}}</dt>
- <dd>Свойство обработчика событий для обработки отказа события {{jsxref("Promise")}}.</dd>
+ <dd>Свойство обработчика событий для обработки отказа события {{jsxref("Promise")}}.</dd>
  <dt>{{domxref("GlobalEventHandlers.onreset")}}</dt>
- <dd>Свойство обработчика событий для события reset в окне.</dd>
+ <dd>Свойство обработчика событий для события reset в окне.</dd>
  <dt>{{domxref("GlobalEventHandlers.onresize")}}</dt>
- <dd>Свойство обработчика событий для изменения размера окна.</dd>
+ <dd>Свойство обработчика событий для изменения размера окна.</dd>
  <dt>{{domxref("GlobalEventHandlers.onscroll")}}</dt>
  <dd>Свойство обработчика событий для прокрутки окна.</dd>
  <dt>{{domxref("GlobalEventHandlers.onwheel")}}</dt>
@@ -399,7 +399,7 @@ translation_of: Web/API/Window
  <dt>{{domxref("GlobalEventHandlers.onselect")}}</dt>
  <dd>Свойство обработчика событий для события выбора в окне.</dd>
  <dt>{{domxref("GlobalEventHandlers.onselectionchange")}}</dt>
- <dd>{{event("Event_handlers", "event handler")}}, представляющий собой код, который будет вызван, когда произойдёт событие {{event("selectionchange")}}.</dd>
+ <dd>{{event("Event_handlers", "event handler")}}, представляющий собой код, который будет вызван, когда произойдёт событие {{event("selectionchange")}}.</dd>
  <dt>{{domxref("GlobalEventHandlers.onsubmit")}}</dt>
  <dd>Свойство обработчика событий для события submits в окне формы.</dd>
  <dt>{{domxref("WindowEventHandlers.onunhandledrejection")}} {{experimental_inline}}</dt>
@@ -409,20 +409,20 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.onuserproximity")}}</dt>
  <dd>Свойство обработчика событий для события изменения близости пользователя к устройству.</dd>
  <dt>{{domxref("Window.onvrdisplayconnected")}} {{experimental_inline}}</dt>
- <dd>Представляет обработчик события, который будет запущен, когда подходящее устройство виртуальной реальности было присоединено к компьютеру (когда запускается событие {{event("vrdisplayconnected")}}).</dd>
+ <dd>Представляет обработчик события, который будет запущен, когда подходящее устройство виртуальной реальности было присоединено к компьютеру (когда запускается событие {{event("vrdisplayconnected")}}).</dd>
  <dt>{{domxref("Window.onvrdisplaydisconnected")}} {{experimental_inline}}</dt>
- <dd>Представляет обработчик события, который будет запущен, когда подходящее устройство виртуальной реальности было отсоединено от компьютера (когда запускается событие {{event("vrdisplaydisconnected")}}).</dd>
+ <dd>Представляет обработчик события, который будет запущен, когда подходящее устройство виртуальной реальности было отсоединено от компьютера (когда запускается событие {{event("vrdisplaydisconnected")}}).</dd>
  <dt>{{domxref("Window.onvrdisplaypresentchange")}} {{experimental_inline}}</dt>
- <dd>Представляет обработчик события, который будет запущен, когда изменится состояние устройства виртуальной реальности — т.е. перейдёт от  представленного к непредставленному или наоборот (когда будет запущено событие {{event("onvrdisplaypresentchange")}}).</dd>
+ <dd>Представляет обработчик события, который будет запущен, когда изменится состояние устройства виртуальной реальности — т.е. перейдёт от  представленного к непредставленному или наоборот (когда будет запущено событие {{event("onvrdisplaypresentchange")}}).</dd>
 </dl>
 
 <h2 id="Конструкторы">Конструкторы</h2>
 
-<p>Смотрите также <a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">DOM Interfaces</a>.</p>
+<p>Смотрите также <a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">DOM Interfaces</a>.</p>
 
 <dl>
  <dt>{{domxref("Window.ConstantSourceNode")}}</dt>
- <dd>Создаёт экземпляр {{domxref("ConstantSourceNode")}}</dd>
+ <dd>Создаёт экземпляр {{domxref("ConstantSourceNode")}}</dd>
 </dl>
 
 <dl>
@@ -431,7 +431,7 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.GeckoActiveXObject")}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
  <dt>{{domxref("Image")}}</dt>
- <dd>Создаёт {{domxref("HTMLImageElement")}}.</dd>
+ <dd>Создаёт {{domxref("HTMLImageElement")}}.</dd>
  <dt>{{domxref("Option")}}</dt>
  <dd>Создаёт {{domxref("HTMLOptionElement")}}</dd>
  <dt>{{domxref("Window.QueryInterface")}}</dt>
@@ -439,7 +439,7 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.XMLSerializer")}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
  <dt>{{domxref("Worker")}}</dt>
- <dd>Используется для создания  <a href="/en-US/docs/DOM/Using_web_workers">Web worker</a></dd>
+ <dd>Используется для создания  <a href="/en-US/docs/DOM/Using_web_workers">Web worker</a></dd>
  <dt>{{domxref("Window.XPCNativeWrapper")}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
  <dt>{{domxref("Window.XPCSafeJSObjectWrapper")}}</dt>
@@ -448,7 +448,7 @@ translation_of: Web/API/Window
 
 <h2 id="Интерфейс">Интерфейс</h2>
 
-<p>Смотри <a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">DOM Reference</a></p>
+<p>Смотри <a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">DOM Reference</a></p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

@@ -20,7 +20,9 @@ Si cette propriété vaut `null` l'application doit fournir une clé pour chaque
 
 ## Syntaxe
 
-    var mykeyPath = objectStore.keyPath;
+```js
+var mykeyPath = objectStore.keyPath;
+```
 
 ### Valeur
 
@@ -84,13 +86,11 @@ function addData() {
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-keyPath', 'keyPath')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.keyPath")}}
+{{Compat}}
 
 ## Voir aussi
 

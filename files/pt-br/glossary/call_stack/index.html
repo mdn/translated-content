@@ -4,13 +4,13 @@ slug: Glossary/Call_stack
 translation_of: Glossary/Call_stack
 original_slug: Glossario/Call_stack
 ---
-<p>A pilha de chamadas <strong>(call stack)</strong> é um mecanismo do interpretador de uma linguagem que organiza o funcionamento do script quando são chamadas muitas funções, qual função está sendo executada no momento, e quais serão chamadas dentro de alguma função, etc.</p>
+<p>A pilha de chamadas <strong>(call stack)</strong> é um mecanismo do interpretador de uma linguagem que organiza o funcionamento do script quando são chamadas muitas funções, qual função está sendo executada no momento, e quais serão chamadas dentro de alguma função, etc.</p>
 
 <ul>
- <li>Quando o script chama a função, ela é adicionada à pilha de chamadas, e então é iniciado o carregamento da função.</li>
- <li>Qualquer função chamada por essa função será adicionada à pilha de chamadas uma acima da outra.</li>
+ <li>Quando o script chama a função, ela é adicionada à pilha de chamadas, e então é iniciado o carregamento da função.</li>
+ <li>Qualquer função chamada por essa função será adicionada à pilha de chamadas uma acima da outra.</li>
  <li>Quando a função termina a execução, o interpretador retira a função da pilha e continua a execução do programa de onde parou.</li>
- <li>Caso a pilha ocupar mais espaço do que foi separado a ela, será exibido um erro "stack overflow" (estouro de pilha).</li>
+ <li>Caso a pilha ocupar mais espaço do que foi separado a ela, será exibido um erro "stack overflow" (estouro de pilha).</li>
 </ul>
 
 <h2 id="Exemplo">Exemplo</h2>
@@ -33,8 +33,8 @@ saudacao();
 <p>O código acima será executado desta forma pelo interpretador:</p>
 
 <ol>
- <li>Todas as funções serão ignoradas, até chegar na chamada da função <code>saudacao()</code>.</li>
- <li>Adiciona a função <code>saudacao()</code> para a pilha de chamadas.
+ <li>Todas as funções serão ignoradas, até chegar na chamada da função <code>saudacao()</code>.</li>
+ <li>Adiciona a função <code>saudacao()</code> para a pilha de chamadas.
   <div class="note">
   <p>Pilha de chamadas:<br>
    - saudacao</p>
@@ -42,23 +42,23 @@ saudacao();
  </li>
  <li>Executa todas as linhas de código da função <code>saudacao()</code>.</li>
  <li>Chama a função <code>digaOi()</code>.</li>
- <li>Adiciona a função <code>digaOi()</code> na pilha de chamadas.
+ <li>Adiciona a função <code>digaOi()</code> na pilha de chamadas.
   <div class="note">
   <p>Pilha de chamadas:<br>
    - <code>saudacao</code><br>
    - digaOi</p>
   </div>
  </li>
- <li>Executa todas as linhas de código da função <code>digaOi()</code> até o final.</li>
- <li>Retorna a execução na linha onde foi chamada a função <code>digaOi()</code> e continua a execução do resto da função <code>saudacao()</code>.</li>
- <li>Deleta a função <code>digaOi()</code> da pilha de chamadas.
+ <li>Executa todas as linhas de código da função <code>digaOi()</code> até o final.</li>
+ <li>Retorna a execução na linha onde foi chamada a função <code>digaOi()</code> e continua a execução do resto da função <code>saudacao()</code>.</li>
+ <li>Deleta a função <code>digaOi()</code> da pilha de chamadas.
   <div class="note">
   <p>Pilha de chamadas:<br>
    - <code>saudacao</code></p>
   </div>
  </li>
- <li>Quando todas as linhas da função <code>saudacao()</code> forem executadas, retorna para a linha onde a função foi invocada, e continua a execução do resto do código.</li>
- <li>Deleta a função <code>saudacao()</code> da Pilha de chamadas.
+ <li>Quando todas as linhas da função <code>saudacao()</code> forem executadas, retorna para a linha onde a função foi invocada, e continua a execução do resto do código.</li>
+ <li>Deleta a função <code>saudacao()</code> da Pilha de chamadas.
   <div class="note">
   <p>Pilha de chamadas:<br>
    EMPTY</p>

@@ -4,7 +4,7 @@ slug: Learn/Forms/Sending_and_retrieving_form_data
 translation_of: Learn/Forms/Sending_and_retrieving_form_data
 original_slug: Web/Guide/HTML/Forms/Sending_and_retrieving_form_data
 ---
-<p>Em muitos casos, a finalidade de <a href="/en-US/docs/HTML/Forms" title="/en-US/docs/HTML/Forms">HTML Form</a> Um é enviar dados para um servidor. O servidor processa os dados e envia uma resposta ao usuário. Isso parece simples, mas é importante manter algumas coisas em mente para garantir que os dados não danifiquem o servidor ou causem problemas para seus usuários.</p>
+<p>Em muitos casos, a finalidade de <a href="/en-US/docs/HTML/Forms" title="/en-US/docs/HTML/Forms">HTML Form</a> Um é enviar dados para um servidor. O servidor processa os dados e envia uma resposta ao usuário. Isso parece simples, mas é importante manter algumas coisas em mente para garantir que os dados não danifiquem o servidor ou causem problemas para seus usuários.</p>
 
 <h2 id="Para_onde_vão_os_dados">Para onde vão os dados?</h2>
 
@@ -12,17 +12,17 @@ original_slug: Web/Guide/HTML/Forms/Sending_and_retrieving_form_data
 
 <h3 id="Sobre_a_arquitetura_cliente_servidor">Sobre a arquitetura cliente / servidor</h3>
 
-<p>A web é baseada em uma arquitetura cliente / servidor muito básica que pode ser resumida da seguinte forma: um cliente (normalmente um navegador da Web) envia um pedido a um servidor (na maioria das vezes um servidor web como <a href="http://httpd.apache.org/" rel="external">Apache</a>, <a href="http://nginx.com/" rel="external">Nginx</a>, <a href="http://www.iis.net/" rel="external">IIS</a>, <a href="http://tomcat.apache.org/" rel="external">Tomcat</a>, etc.), usando o <a href="/en-US/docs/HTTP" title="/en-US/docs/HTTP">HTTP protocol</a>. O servidor responde a solicitação usando o mesmo protocolo.</p>
+<p>A web é baseada em uma arquitetura cliente / servidor muito básica que pode ser resumida da seguinte forma: um cliente (normalmente um navegador da Web) envia um pedido a um servidor (na maioria das vezes um servidor web como <a href="http://httpd.apache.org/" rel="external">Apache</a>, <a href="http://nginx.com/" rel="external">Nginx</a>, <a href="http://www.iis.net/" rel="external">IIS</a>, <a href="http://tomcat.apache.org/" rel="external">Tomcat</a>, etc.), usando o <a href="/en-US/docs/HTTP" title="/en-US/docs/HTTP">HTTP protocol</a>. O servidor responde a solicitação usando o mesmo protocolo.</p>
 
 <p><img alt="A basic schema of the Web client/server architecture" src="/files/4291/client-server.png" style="height: 141px; width: 400px;"></p>
 
 <p>No lado do cliente, um formulário HTML é nada mais do que uma maneira conveniente e amigável para configurar uma solicitação HTTP para enviar dados para um servidor. Isso permite que o usuário forneça informações a serem entregues na solicitação HTTP.</p>
 
-<h3 id="No_lado_do_cliente_definindo_como_enviar_os_dados">No lado do cliente: definindo como enviar os dados</h3>
+<h3 id="No_lado_do_cliente_definindo_como_enviar_os_dados">No lado do cliente: definindo como enviar os dados</h3>
 
-<p>O elemento {{HTMLElement("form")}} define como os dados serão enviados. Todos os seus atributos são projetados para permitir que você configure o pedido a ser enviado quando um usuário acessa um botão de envio. Os dois atributos mais importantes são:{{htmlattrxref("action","form")}} e {{htmlattrxref("method","form")}}.</p>
+<p>O elemento {{HTMLElement("form")}} define como os dados serão enviados. Todos os seus atributos são projetados para permitir que você configure o pedido a ser enviado quando um usuário acessa um botão de envio. Os dois atributos mais importantes são:{{htmlattrxref("action","form")}} e {{htmlattrxref("method","form")}}.</p>
 
-<h4 id="o_atributo_htmlattrxref(actionform)">o atributo {{htmlattrxref("action","form")}}</h4>
+<h4 id="o_atributo_htmlattrxref(actionform)">o atributo {{htmlattrxref("action","form")}}</h4>
 
 <p>Este atributo define para onde os dados são enviados. Seu valor deve ser um URL válido. Se esse atributo não for fornecido, os dados serão enviados para o URL da página que contém o formulário.</p>
 
@@ -36,7 +36,7 @@ original_slug: Web/Guide/HTML/Forms/Sending_and_retrieving_form_data
 
 <pre class="brush: html">&lt;form action="/somewhere_else"&gt;</pre>
 
-<p class="brush: html">Quando especificado sem atributos, como abaixo, o atributo {{HTMLElement("form")}}   faz com que os dados sejam enviados para a página que inclui o formulário:</p>
+<p class="brush: html">Quando especificado sem atributos, como abaixo, o atributo {{HTMLElement("form")}}   faz com que os dados sejam enviados para a página que inclui o formulário:</p>
 
 <pre class="brush: html">&lt;form&gt;</pre>
 
@@ -48,9 +48,9 @@ original_slug: Web/Guide/HTML/Forms/Sending_and_retrieving_form_data
 <p><strong>Nota: É possível especificar um URL que use o protocolo HTTPS (HTTP seguro). Quando você fizer isso, os dados são criptografados junto com o resto da solicitação, mesmo se o formulário em si é hospedado em uma página insegura acessada usando HTTP. Por outro lado, se o formulário estiver hospedado na página segura, mas você especificar um URL HTTP inseguro com o atributo {{htmlattrxref ( "action", "form")}}, todos os navegadores exibirão um aviso de segurança para o usuário cada vez que Tente enviar dados porque os dados não serão criptografados.</strong></p>
 </div>
 
-<h4 id="o_atributo_htmlattrxref(methodform)">o atributo {{htmlattrxref("method","form")}}</h4>
+<h4 id="o_atributo_htmlattrxref(methodform)">o atributo {{htmlattrxref("method","form")}}</h4>
 
-<p>Este atributo define como os dados são enviados. o <a href="/en-US/docs/HTTP" title="/en-US/docs/HTTP">HTTP protocol</a> </p>
+<p>Este atributo define como os dados são enviados. o <a href="/en-US/docs/HTTP" title="/en-US/docs/HTTP">HTTP protocol</a> </p>
 
 <p>Fornece várias maneiras de executar um pedido; Os dados de formulários HTML podem ser enviados através de pelo menos dois deles: o método GET eo método POST.</p>
 
@@ -99,7 +99,7 @@ say=Hi&amp;to=Mom</pre>
 
 <p>O cabeçalho Content-Length indica o tamanho do corpo eo cabeçalho Content-Type indica o tipo de recurso enviado para o servidor. Vamos discutir esses cabeçalhos em um pouco.</p>
 
-<p>Obviamente, as solicitações HTTP nunca são exibidas para o usuário (se você quiser vê-las, você precisa usar ferramentas como o Firefox <a href="/en-US/docs/Tools/Web_Console" title="/en-US/docs/Tools/Web_Console">Web Console</a> ou o <a href="https://developers.google.com/chrome-developer-tools/">Chrome Developer Tools</a>). A única coisa exibida para o usuário é o URL chamado. Assim, com uma solicitação GET, o usuário verá os dados em sua barra de URL, mas com uma solicitação POST, eles não. Isso pode ser muito importante por duas razões:</p>
+<p>Obviamente, as solicitações HTTP nunca são exibidas para o usuário (se você quiser vê-las, você precisa usar ferramentas como o Firefox <a href="/en-US/docs/Tools/Web_Console" title="/en-US/docs/Tools/Web_Console">Web Console</a> ou o <a href="https://developers.google.com/chrome-developer-tools/">Chrome Developer Tools</a>). A única coisa exibida para o usuário é o URL chamado. Assim, com uma solicitação GET, o usuário verá os dados em sua barra de URL, mas com uma solicitação POST, eles não. Isso pode ser muito importante por duas razões:</p>
 
 <ol>
  <li>Se você precisar enviar uma senha (ou qualquer parte sensível de dados), nunca use o método GET ou corre o risco de exibi-lo na barra de URL.</li>
@@ -153,10 +153,10 @@ print(say, " ", to)</pre>
 <p>Há muitas outras tecnologias do lado do servidor que você pode usar para o tratamento de formulários, incluindo <a href="/en-US/docs/" title="/en-US/docs/">Perl</a>, <a href="/en-US/docs/" title="/en-US/docs/">Java</a>, <a href="http://www.microsoft.com/net">.Net</a>, <a href="/en-US/docs/" title="/en-US/docs/">Ruby</a>, etc. Basta escolher o que você mais gosta. Dito isto, é importante notar que é muito incomum usar essas tecnologias diretamente porque isso pode ser complicado. É mais comum usar um dos muitos frameworks agradáveis que facilitam o manuseio de formulários, como:</p>
 
 <ul>
- <li><a href="http://symfony.com/" rel="external">Symfony</a> Para PHP</li>
- <li><a href="https://www.djangoproject.com/" rel="external">Django</a> Para Python</li>
- <li><a href="http://rubyonrails.org/" rel="external">Ruby On Rails</a> Para Ruby</li>
- <li><a href="http://grails.org/" rel="external">Grails</a> Para Java</li>
+ <li><a href="http://symfony.com/" rel="external">Symfony</a> Para PHP</li>
+ <li><a href="https://www.djangoproject.com/" rel="external">Django</a> Para Python</li>
+ <li><a href="http://rubyonrails.org/" rel="external">Ruby On Rails</a> Para Ruby</li>
+ <li><a href="http://grails.org/" rel="external">Grails</a> Para Java</li>
  <li>etc.</li>
 </ul>
 
@@ -200,7 +200,7 @@ print(say, " ", to)</pre>
 
 <p>Dependendo do que você está fazendo, existem alguns problemas de segurança muito conhecidos:</p>
 
-<h4 id="XSS_e_CSRF">XSS e CSRF</h4>
+<h4 id="XSS_e_CSRF">XSS e CSRF</h4>
 
 <p>Cross-Site Scripting (XSS) e Cross-Site Request Forgery (CSRF) são tipos comuns de ataques que ocorrem quando você exibe dados enviados por um usuário para o usuário ou para outro usuário.</p>
 
@@ -210,7 +210,7 @@ print(say, " ", to)</pre>
 
 <p>Os ataques XSS exploram a confiança que um usuário tem para um site, enquanto os ataques CSRF exploram a confiança que um site tem para seus usuários.</p>
 
-<p>To prevent these attacks, you should always check the data a user sends to your server and (if you need to display it) try not to display the HTML content as provided by the user. Intead, you should process the user-provided data so you don't display it verbatim. <span style="line-height: 1.5;"> Almost all frameworks on the market today implement a minimal filter that removes the HTML {{HTMLElement("script")}}, {{HTMLElement("iframe")}} and {{HTMLElement("object")}} elements from data sent by any user. This helps to mitigate the risk, but doesn't necessarily eradicate it.</span></p>
+<p>To prevent these attacks, you should always check the data a user sends to your server and (if you need to display it) try not to display the HTML content as provided by the user. Intead, you should process the user-provided data so you don't display it verbatim. <span style="line-height: 1.5;"> Almost all frameworks on the market today implement a minimal filter that removes the HTML {{HTMLElement("script")}}, {{HTMLElement("iframe")}} and {{HTMLElement("object")}} elements from data sent by any user. This helps to mitigate the risk, but doesn't necessarily eradicate it.</span></p>
 
 <h4 id="SQL_injection">SQL injection</h4>
 
@@ -226,7 +226,7 @@ print(say, " ", to)</pre>
 
 <h3 id="Be_paranoid_Never_trust_your_users">Be paranoid: Never trust your users</h3>
 
-<p>So, how do you fight these threats? This is a topic far beyond this guide, but there are a few rules to keep in mind. The most important rule is: never ever trust your users, including yourself; even a trusted user could have been hijacked.</p>
+<p>So, how do you fight these threats? This is a topic far beyond this guide, but there are a few rules to keep in mind. The most important rule is: never ever trust your users, including yourself; even a trusted user could have been hijacked.</p>
 
 <p>All data that comes to your server must be checked and sanitized. Always. No exception.</p>
 

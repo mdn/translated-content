@@ -17,7 +17,9 @@ La méthode **`get()`**, rattachéee au prototype de  {{jsxref("WebAssembly.Tabl
 
 ## Syntaxe
 
-    var funcRef = table.get(index);
+```js
+var funcRef = table.get(index);
+```
 
 ### Paramètres
 

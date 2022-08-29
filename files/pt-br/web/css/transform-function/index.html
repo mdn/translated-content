@@ -148,77 +148,7 @@ translation_of: Web/CSS/transform-function
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}<sup>[1]</sup></td>
-   <td>9.0<sup>[2]</sup><br>
-    10.0</td>
-   <td>10.5</td>
-   <td>3.1</td>
-  </tr>
-  <tr>
-   <td>3D Support</td>
-   <td>12.0</td>
-   <td>{{CompatGeckoDesktop("10.0")}}</td>
-   <td>10.0</td>
-   <td>15.0</td>
-   <td>4.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatAndroid(2.1)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>11.5</td>
-   <td>3.2</td>
-  </tr>
-  <tr>
-   <td>3D Support</td>
-   <td>{{CompatAndroid(3.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>22</td>
-   <td>3.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Gecko 14.0 removed experimental support for <code>skew()</code>, but it was reintroduced in Gecko 15.0. Before Firefox 16, the translation values of <code>matrix()</code> and <code>matrix3d()</code> could be {{cssxref("&lt;length&gt;")}}s, in addition to the standard {{cssxref("&lt;number&gt;")}}.</p>
-
-<p>[2] Internet Explorer 5.5 and later support a proprietary <a href="http://msdn.microsoft.com/en-us/library/ms533014%28VS.85,loband%29.aspx">Matrix Filter</a> which can be used to achieve a similar effect. Internet Explorer 9.0 supports 2D but not 3D transforms. Thus, mixing 2D and 3D transform functions in this browser (e.g., <code>-ms-transform: rotate(10deg) translateZ(0);</code>) will invalidate the entire property.</p>
+{{Compat("css.types.transform-function")}}
 
 <h2 id="See_also">See also</h2>
 

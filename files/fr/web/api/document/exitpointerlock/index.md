@@ -17,17 +17,17 @@ Pour connaître le succès ou l'échec de cette requête, il faut surveiller les
 
 ## Syntaxe
 
-    document.exitPointerLock();
+```js
+document.exitPointerLock();
+```
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires                        |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------- |
-| {{SpecName('Pointer Lock','l#extensions-to-the-document-interface','Document')}} | {{Spec2('Pointer Lock')}} | Extension de l'interface `Document` |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.exitPointerLock")}}
+{{Compat}}
 
 ## Voir aussi
 

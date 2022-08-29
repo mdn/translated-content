@@ -1,16 +1,6 @@
 ---
-title: HTML表单指南
+title: HTML 表单指南
 slug: Learn/Forms
-tags:
-  - Beginner
-  - Featured
-  - Forms
-  - Guide
-  - HTML
-  - Landing
-  - Learn
-  - Web
-translation_of: Learn/Forms
 ---
 {{LearnSidebar}}
 
@@ -53,7 +43,7 @@ translation_of: Learn/Forms
 ## 表单样式指南
 
 - [HTML 表单样式](/zh-CN/docs/Learn/Forms/Styling_web_forms)
-  - : 本文介绍了使用CSS的样式表单，包括您可能需要了解的基本样式任务的所有基础知识。
+  - : 本文介绍了使用 CSS 的样式表单，包括您可能需要了解的基本样式任务的所有基础知识。
 - [高级表单样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
   - : 在这里，我们将看到一些更高级的表单样式技术，这些技术需要在处理一些更难以设置样式的元素时使用。
 - [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)

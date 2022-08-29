@@ -1,0 +1,63 @@
+---
+title: window.onload
+slug: Web/API/Window/load_event
+tags:
+  - DOM
+  - DOM_0
+  - Dokumentacja_Gecko_DOM
+  - Gecko
+  - Strony_wymagające_dopracowania
+  - Wszystkie_kategorie
+translation_of: Web/API/GlobalEventHandlers/onload
+original_slug: Web/API/GlobalEventHandlers/onload
+---
+<p>{{ ApiRef() }}</p>
+
+<h3 id="Podsumowanie" name="Podsumowanie">Podsumowanie</h3>
+
+<p>Uchwyt zdarzenia dla zdarzenia wczytywania okna (<a href="/pl/DOM/window" title="pl/DOM/window">window</a>).</p>
+
+<h3 id="Sk.C5.82adnia" name="Sk.C5.82adnia">Składnia</h3>
+
+<pre class="eval">window.onload = <em>funcRef</em>;
+</pre>
+
+<ul>
+ <li><code>funcRef</code> jest funkcją uchwytu.</li>
+</ul>
+
+<h3 id="Przyk.C5.82ad" name="Przyk.C5.82ad">Przykład</h3>
+
+<pre>window.onload = function() {
+  init();
+  doSomethingElse();
+};
+</pre>
+
+<pre>&lt;html&gt;
+&lt;head&gt;
+
+&lt;title&gt;Test onload&lt;/title&gt;
+
+&lt;script type="text/javascript"&gt;
+
+window.onload = load;
+
+function load()
+{
+ alert("Wykryto zdarzenie load!");
+}
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;p&gt;Zdarzenie load występuje w momencie zakończenia ładowania dokumentu!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<h3 id="Uwagi" name="Uwagi">Uwagi</h3>
+
+<p>Zdarzenie load wywoływane jest na końcu procesu ładowania dokumentu. W momencie wystąpienia zdarzenia, DOM zawiera już wszystkie obiekty zawarte w dokumencie oraz zakończone zostało wczytywanie obrazków oraz ramek.<br>
+ <br>
+ Istnieje także zdarzenie <code>DOMContentLoaded</code> (które można zarejestrować za pomocą <code>addEventListener</code>) występujące w momencie gdy DOM dla danej strony został zbudowany ale bez czekania na zakończenie ładowania pozostałych zasobów.</p>

@@ -23,7 +23,7 @@ WebDAV donne aux clients les possibilités suivantes
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "WebDAV")}} sur Wikipédia
+- [WebDAV](https://en.wikipedia.org/wiki/WebDAV) sur Wikipédia
 
 ### Référence technique
 

@@ -7,11 +7,11 @@ tags:
   - Referência(2)
 translation_of: Web/JavaScript/Reference/Global_Objects/Number
 ---
-<div>{{JSRef("Global_Objects", "Number")}} </div>
+<div>{{JSRef("Global_Objects", "Number")}} </div>
 
 <h2 id="Summary" name="Summary">Sumário</h2>
 
-<p>O objeto JavaScript <strong><code>Number</code></strong> é um objeto encapsulado que permite você trabalhar com valores numéricos. Um objeto <code>Number</code> é criado utilizando o construtor <code>Number()</code>.</p>
+<p>O objeto JavaScript <strong><code>Number</code></strong> é um objeto encapsulado que permite você trabalhar com valores numéricos. Um objeto <code>Number</code> é criado utilizando o construtor <code>Number()</code>.</p>
 
 <h2 id="Syntax" name="Syntax">Construtor</h2>
 
@@ -26,11 +26,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number
 
 <h2 id="Description" name="Description">Descrição</h2>
 
-<p>Os principais usos para o objeto <code>Number</code> são:</p>
+<p>Os principais usos para o objeto <code>Number</code> são:</p>
 
 <ul>
- <li>Se o objeto não pode ser convertido para um número, é retornado <code>NaN</code>.</li>
- <li>Fora do contexo de um construtor (Ex., Sem o operador {{jsxref("Operators/new", "new")}}, <code>Number</code> pode ser utilizador para realizar uma conversão de tipo.</li>
+ <li>Se o objeto não pode ser convertido para um número, é retornado <code>NaN</code>.</li>
+ <li>Fora do contexo de um construtor (Ex., Sem o operador {{jsxref("Operators/new", "new")}}, <code>Number</code> pode ser utilizador para realizar uma conversão de tipo.</li>
 </ul>
 
 <h2 id="Properties" name="Properties">Propriedades</h2>
@@ -39,21 +39,21 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number
  <dt>{{jsxref("Number.EPSILON")}} {{experimental_inline}}</dt>
  <dd>O menor intervalo entre dois números representáveis.</dd>
  <dt>{{jsxref("Number.MAX_SAFE_INTEGER")}} {{experimental_inline}}</dt>
- <dd>O inteiro máximo seguro em JavaScript (2<sup>53</sup> -1).</dd>
+ <dd>O inteiro máximo seguro em JavaScript (2<sup>53</sup> -1).</dd>
  <dt>{{jsxref("Number.MAX_VALUE")}}</dt>
  <dd>O maior número representável positivo.</dd>
  <dt>{{jsxref("Number.MIN_SAFE_INTEGER")}} {{experimental_inline}}</dt>
- <dd>O inteiro mínimo seguro em JavaScript (-(2<sup>53</sup> -1)).</dd>
+ <dd>O inteiro mínimo seguro em JavaScript (-(2<sup>53</sup> -1)).</dd>
  <dt>{{jsxref("Number.MIN_VALUE")}}</dt>
- <dd>O número mínimo representável positivo - isto é, o número positivo mais próximo de zero (sem ser zero na verdade).</dd>
+ <dd>O número mínimo representável positivo - isto é, o número positivo mais próximo de zero (sem ser zero na verdade).</dd>
  <dt>{{jsxref("Number.NaN")}}</dt>
  <dd>Valor especial que não é número.</dd>
  <dt>{{jsxref("Number.NEGATIVE_INFINITY")}}</dt>
- <dd>Valor especial representando infinito negativo; retornado no "overflow".</dd>
+ <dd>Valor especial representando infinito negativo; retornado no "overflow".</dd>
  <dt>{{jsxref("Number.POSITIVE_INFINITY")}}</dt>
- <dd> Valor especial representando infinito; retornado no "overflow".</dd>
+ <dd> Valor especial representando infinito; retornado no "overflow".</dd>
  <dt>{{jsxref("Number.prototype")}}</dt>
- <dd>Permite a adição de propriedades a um objeto Number.</dd>
+ <dd>Permite a adição de propriedades a um objeto Number.</dd>
 </dl>
 
 <div>{{jsOverrides("Function", "properties", "MAX_VALUE", "MIN_VALUE", "NaN", "NEGATIVE_INFINITY", "POSITIVE_INFINITY", "protoype")}}</div>
@@ -64,24 +64,24 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number
  <dt>{{jsxref("Number.isNaN()")}} {{experimental_inline}}</dt>
  <dd>Determina se o valor passado é NaN.</dd>
  <dt>{{jsxref("Number.isFinite()")}} {{experimental_inline}}</dt>
- <dd>Determina se o tipo e o valor passado é um número finito.</dd>
+ <dd>Determina se o tipo e o valor passado é um número finito.</dd>
  <dt>{{jsxref("Number.isInteger()")}} {{experimental_inline}}</dt>
- <dd>Determina se o tipo do valor passado é  inteiro.</dd>
+ <dd>Determina se o tipo do valor passado é  inteiro.</dd>
  <dt>{{jsxref("Number.isSafeInteger()")}} {{experimental_inline}}</dt>
- <dd>Determina se o tipo do valor passado é um inteiro seguro (número entre -(2<sup>53</sup> -1) e 2<sup>53</sup> -1).</dd>
+ <dd>Determina se o tipo do valor passado é um inteiro seguro (número entre -(2<sup>53</sup> -1) e 2<sup>53</sup> -1).</dd>
  <dt><s class="obsoleteElement">{{jsxref("Number.toInteger()")}} {{obsolete_inline}}</s></dt>
  <dd><s class="obsoleteElement">Usado para avaliar o valor passado e convertê-lo a um inteiro (ou infinito), mas foi removido.</s></dd>
  <dt>{{jsxref("Number.parseFloat()")}} {{experimental_inline}}</dt>
- <dd>O valor é o mesmo que {{jsxref("Global_Objects/parseFloat", "parseFloat")}} do objeto global.</dd>
+ <dd>O valor é o mesmo que {{jsxref("Global_Objects/parseFloat", "parseFloat")}} do objeto global.</dd>
  <dt>{{jsxref("Number.parseInt()")}} {{experimental_inline}}</dt>
- <dd>O valor é o mesmo que {{jsxref("Global_Objects/parseInt", "parseInt")}} do objeto global.</dd>
+ <dd>O valor é o mesmo que {{jsxref("Global_Objects/parseInt", "parseInt")}} do objeto global.</dd>
 </dl>
 
 <div>{{jsOverrides("Function", "methods", "isNaN")}}</div>
 
-<h2 id="Number_instances" name="Number_instances">Instâncias<code> Number</code>  </h2>
+<h2 id="Number_instances" name="Number_instances">Instâncias<code> Number</code>  </h2>
 
-<p>Toda instância <code>Number</code> herdam de {{jsxref("Number.prototype")}}. O objeto 'prototype' do construtor <code>Number</code> pode ser modificado para afetar todas as instâncias <code>Number</code>.</p>
+<p>Toda instância <code>Number</code> herdam de {{jsxref("Number.prototype")}}. O objeto 'prototype' do construtor <code>Number</code> pode ser modificado para afetar todas as instâncias <code>Number</code>.</p>
 
 <h3 id="Methods_of_number_instance" name="Methods_of_number_instance">Métodos</h3>
 
@@ -89,9 +89,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number
 
 <h2 id="Examples" name="Examples">Exemplos</h2>
 
-<h3 id="Example:_Using_the_Number_object_to_assign_values_to_numeric_variables" name="Example:_Using_the_Number_object_to_assign_values_to_numeric_variables">Exemplo: Usando o objeto <code>Number</code> para atribuir valores a variáveis numéricas</h3>
+<h3 id="Example:_Using_the_Number_object_to_assign_values_to_numeric_variables" name="Example:_Using_the_Number_object_to_assign_values_to_numeric_variables">Exemplo: Usando o objeto <code>Number</code> para atribuir valores a variáveis numéricas</h3>
 
-<p>O seguinte exemplo usa as propriedades do objeto <code>Number</code> para atribuir valores a várias variáveis numéricas:</p>
+<p>O seguinte exemplo usa as propriedades do objeto <code>Number</code> para atribuir valores a várias variáveis numéricas:</p>
 
 <pre class="brush: js">var biggestNum = Number.MAX_VALUE;
 var smallestNum = Number.MIN_VALUE;
@@ -100,19 +100,19 @@ var negInfiniteNum = Number.NEGATIVE_INFINITY;
 var notANum = Number.NaN;
 </pre>
 
-<h3 id="Example:_Using_Number_to_convert_a_Date_object" name="Example:_Using_Number_to_convert_a_Date_object">Exemplo: Intervalo inteiro para <code>Number</code></h3>
+<h3 id="Example:_Using_Number_to_convert_a_Date_object" name="Example:_Using_Number_to_convert_a_Date_object">Exemplo: Intervalo inteiro para <code>Number</code></h3>
 
-<p>O seguinte exemplo mostra os valores inteiros mínimo e máximo que podem ser representados como objeto <code>Number</code> (para mais detalhes, referir-se ao padrão EcmaScript standard (EcmaScript standard), capítulo <em>8.5 O tipo de número (The Number Type</em>):</p>
+<p>O seguinte exemplo mostra os valores inteiros mínimo e máximo que podem ser representados como objeto <code>Number</code> (para mais detalhes, referir-se ao padrão EcmaScript standard (EcmaScript standard), capítulo <em>8.5 O tipo de número (The Number Type</em>):</p>
 
 <pre class="brush: js">var maxInt = 9007199254740992;
 var minInt = -9007199254740992;
 </pre>
 
-<p>Ao analisar dados que foram serializados para JSON, valores inteiros que caem fora desse intervalo podem ser corrompidos quando o analisador JSON os converte ao tipo <code>Number</code>. Usando <code>String </code>em vez disso é uma possível alternativa para se evitar um resultado indesejado.</p>
+<p>Ao analisar dados que foram serializados para JSON, valores inteiros que caem fora desse intervalo podem ser corrompidos quando o analisador JSON os converte ao tipo <code>Number</code>. Usando <code>String </code>em vez disso é uma possível alternativa para se evitar um resultado indesejado.</p>
 
-<h3 id="Example:_Using_Number_to_convert_a_Date_object" name="Example:_Using_Number_to_convert_a_Date_object"><span class="hidden"> </span>Exemplo: Usando <code>Number para converter um objeto</code> <code>Date</code></h3>
+<h3 id="Example:_Using_Number_to_convert_a_Date_object" name="Example:_Using_Number_to_convert_a_Date_object"><span class="hidden"> </span>Exemplo: Usando <code>Number para converter um objeto</code> <code>Date</code></h3>
 
-<p>O exemplo a seguir converte o objeto <code>Date</code> para um valor numérico usando <code>Number como uma função</code>:</p>
+<p>O exemplo a seguir converte o objeto <code>Date</code> para um valor numérico usando <code>Number como uma função</code>:</p>
 
 <pre class="brush: js">var d = new Date("December 17, 1995 03:24:00");
 print(Number(d));
@@ -120,7 +120,7 @@ print(Number(d));
 
 <p>Isto resulta em "819199440000".</p>
 
-<h3 id="Converte_'string'_numérica_em_números">Converte 'string' numérica em números</h3>
+<h3 id="Converte_'string'_numérica_em_números">Converte 'string' numérica em números</h3>
 
 <pre class="brush: js">Number('123')     // 123
 Number('12.3')    // 12.3
@@ -149,7 +149,7 @@ Number('100a')    // NaN
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.7', 'Number')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-number-objects', 'Number')}}</td>
@@ -161,59 +161,11 @@ Number('100a')    // NaN
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Configuração</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Configuração</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Number")}}
 
 <h2 id="See_also" name="See_also">Veja também</h2>
 
 <ul>
  <li>{{jsxref("Global_Objects/NaN", "NaN")}}</li>
- <li>O objeto global {{jsxref("Global_Objects/Math", "Math")}}</li>
+ <li>O objeto global {{jsxref("Global_Objects/Math", "Math")}}</li>
 </ul>

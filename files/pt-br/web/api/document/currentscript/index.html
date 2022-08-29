@@ -5,9 +5,9 @@ translation_of: Web/API/Document/currentScript
 ---
 <div>{{ ApiRef("DOM") }}</div>
 
-<div> </div>
+<div> </div>
 
-<p>Retorna o elemento que está sendo processado atualmente.</p>
+<p>Retorna o elemento que está sendo processado atualmente.</p>
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
@@ -16,7 +16,7 @@ translation_of: Web/API/Document/currentScript
 
 <h2 id="Example" name="Example">Exemplo</h2>
 
-<p>O exemplo abaixo verifica se o script está sendo executado de forma assíncrona:</p>
+<p>O exemplo abaixo verifica se o script está sendo executado de forma assíncrona:</p>
 
 <pre class="brush:js">if (document.currentScript.async) {
   console.log("Execução assíncrona");
@@ -28,61 +28,11 @@ translation_of: Web/API/Document/currentScript
 
 <h2 id="Nota">Nota</h2>
 
-<p>Se o código estiver sendo chamado como um callback ou manipulador de eventos, ele não irá referenciar o  elemento; a referência ao elemento só acontece quando ele está sendo processado inicialmente.</p>
+<p>Se o código estiver sendo chamado como um callback ou manipulador de eventos, ele não irá referenciar o  elemento; a referência ao elemento só acontece quando ele está sendo processado inicialmente.</p>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>29</td>
-   <td>{{ CompatGeckoDesktop("2.0") }}</td>
-   <td>{{ CompatNo() }} (as of IE11)</td>
-   <td>16</td>
-   <td>
-    <p>8 </p>
-   </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>4.4</td>
-   <td><span style="font-size: 12px; line-height: 18px;">{{CompatVersionUnknown}}</span></td>
-   <td><span style="font-size: 12px; line-height: 18px;">{{CompatVersionUnknown}}</span></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>iOS 8</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Document.currentScript")}}
 
 <h2 id="Specification" name="Specification">Especificações</h2>
 

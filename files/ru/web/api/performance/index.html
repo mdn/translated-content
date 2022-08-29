@@ -11,36 +11,36 @@ translation_of: Web/API/Performance
 ---
 <div>{{APIRef("Navigation Timing")}}</div>
 
-<p>Интерфейс <strong><code>Performance</code></strong> представляет информацию о производительности страницы с временными метками.</p>
+<p>Интерфейс <strong><code>Performance</code></strong> представляет информацию о производительности страницы с временными метками.</p>
 
-<p>Объект этого типа может быть получен в результате вызова атрибута {{domxref("Window.performance")}}, доступного только для чтения.</p>
+<p>Объект этого типа может быть получен в результате вызова атрибута {{domxref("Window.performance")}}, доступного только для чтения.</p>
 
 <div class="note">
-<p><strong><em>Замечание</em>: </strong>Этот интерфейс и его составляющие доступны в <a href="/ru/docs/Web/API/Web_Workers_API">фоновых потоках выполнения</a>, за исключением случаев, перечисленных ниже. Заметим, что некоторые доступные части интерфейса ещё не документированы (подробнее см. разделы документации <a href="http://www.w3.org/TR/performance-timeline/#sec-window.performance-attribute">Performance Timeline</a> и <a href="http://www.w3.org/TR/user-timing/#extensions-performance-interface">User Timing</a>). Также заметим, что временные метки производительности относятся к текущему контексту. Если вы создадите метку в основном потоке (или в другом фоновом потоке), то её нельзя будет увидеть в другом фоновом потоке и наоборот.</p>
+<p><strong><em>Замечание</em>: </strong>Этот интерфейс и его составляющие доступны в <a href="/ru/docs/Web/API/Web_Workers_API">фоновых потоках выполнения</a>, за исключением случаев, перечисленных ниже. Заметим, что некоторые доступные части интерфейса ещё не документированы (подробнее см. разделы документации <a href="http://www.w3.org/TR/performance-timeline/#sec-window.performance-attribute">Performance Timeline</a> и <a href="http://www.w3.org/TR/user-timing/#extensions-performance-interface">User Timing</a>). Также заметим, что временные метки производительности относятся к текущему контексту. Если вы создадите метку в основном потоке (или в другом фоновом потоке), то её нельзя будет увидеть в другом фоновом потоке и наоборот.</p>
 </div>
 
 <h2 id="Свойства">Свойства</h2>
 
-<p><em>Интерфейс <code>Performance</code> не наследует никаких других свойств.</em></p>
+<p><em>Интерфейс <code>Performance</code> не наследует никаких других свойств.</em></p>
 
 <dl>
  <dt>{{domxref("Performance.navigation")}} {{readonlyInline}}</dt>
- <dd>Объект {{domxref("PerformanceNavigation")}}, представляющий тип навигации в текущем контексте браузера, как, например, количество перенаправлений, которые нужно пройти, чтобы получить ресурс. Not available in workers.</dd>
+ <dd>Объект {{domxref("PerformanceNavigation")}}, представляющий тип навигации в текущем контексте браузера, как, например, количество перенаправлений, которые нужно пройти, чтобы получить ресурс. Not available in workers.</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("Performance.onresourcetimingbufferfull")}}</dt>
- <dd>Колбэк-функция, реализующая интерфейс {{domxref("EventTarget")}}, вызываемая при наступлении события {{event("resourcetimingbufferfull")}}.</dd>
+ <dd>Колбэк-функция, реализующая интерфейс {{domxref("EventTarget")}}, вызываемая при наступлении события {{event("resourcetimingbufferfull")}}.</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("Performance.timing")}} {{readonlyInline}}</dt>
- <dd>Объект {{domxref("PerformanceTiming")}}, содержащий информацию о производительности, связанной со временем задержек. Not available in workers.</dd>
+ <dd>Объект {{domxref("PerformanceTiming")}}, содержащий информацию о производительности, связанной со временем задержек. Not available in workers.</dd>
 </dl>
 
 <h2 id="Методы">Методы</h2>
 
-<p><em><em>Интерфейс <code>Performance</code> не наследует других методов</em></em>.</p>
+<p><em><em>Интерфейс <code>Performance</code> не наследует других методов</em></em>.</p>
 
 <dl>
  <dt>{{domxref("Performance.clearMarks()")}}</dt>
@@ -48,23 +48,23 @@ translation_of: Web/API/Performance
  <dt>{{domxref("Performance.clearMeasures()")}}</dt>
  <dd>Удаляет из буфера записей производительности браузера указанное <em>измерение</em>.</dd>
  <dt>{{domxref("Performance.clearResourceTimings()")}}</dt>
- <dd>Удаляет все {{domxref("PerformanceEntry","записи о производительности")}} со свойством {{domxref("PerformanceEntry.entryType","entryType")}} равным "<code>resource</code>" из буфера данных производительности браузера.</dd>
+ <dd>Удаляет все {{domxref("PerformanceEntry","записи о производительности")}} со свойством {{domxref("PerformanceEntry.entryType","entryType")}} равным "<code>resource</code>" из буфера данных производительности браузера.</dd>
  <dt>{{domxref("Performance.getEntries()")}}</dt>
- <dd>Возвращает список объектов {{domxref("PerformanceEntry")}}, руководствуясь переданным аргументом <em>filter.</em></dd>
+ <dd>Возвращает список объектов {{domxref("PerformanceEntry")}}, руководствуясь переданным аргументом <em>filter.</em></dd>
  <dt>{{domxref("Performance.getEntriesByName()")}}</dt>
- <dd>Возвращает список объектов {{domxref("PerformanceEntry")}}, руководствуясь аргументами <em>name</em> (название) and <em>entry type</em> (тип записи).</dd>
+ <dd>Возвращает список объектов {{domxref("PerformanceEntry")}}, руководствуясь аргументами <em>name</em> (название) and <em>entry type</em> (тип записи).</dd>
  <dt>{{domxref("Performance.getEntriesByType()")}}</dt>
- <dd>Возвращает список объектов {{domxref("PerformanceEntry")}} переданного, как аргумент, <em>типа записи</em>.</dd>
+ <dd>Возвращает список объектов {{domxref("PerformanceEntry")}} переданного, как аргумент, <em>типа записи</em>.</dd>
  <dt>{{domxref("Performance.mark()")}}</dt>
- <dd>Создаёт {{domxref("DOMHighResTimeStamp","временну́ю метку")}} с заданным именем в <em>буфере записей производительности.</em></dd>
+ <dd>Создаёт {{domxref("DOMHighResTimeStamp","временну́ю метку")}} с заданным именем в <em>буфере записей производительности.</em></dd>
  <dt>{{domxref("Performance.measure()")}}</dt>
- <dd>Создаёт именованную {{domxref("DOMHighResTimeStamp","временну́ю метку")}} в буфере записей производительности браузера между двумя определёнными метками (известных как <em>start mark</em> (начальная метка) и <em>end mark </em>(конечная метка), соответственно).</dd>
+ <dd>Создаёт именованную {{domxref("DOMHighResTimeStamp","временну́ю метку")}} в буфере записей производительности браузера между двумя определёнными метками (известных как <em>start mark</em> (начальная метка) и <em>end mark </em>(конечная метка), соответственно).</dd>
  <dt>{{domxref("Performance.now()")}}</dt>
- <dd>Возвращает объект {{domxref("DOMHighResTimeStamp")}}, представляющий количество миллисекунд, прошедших с начала момента отсчёта.</dd>
+ <dd>Возвращает объект {{domxref("DOMHighResTimeStamp")}}, представляющий количество миллисекунд, прошедших с начала момента отсчёта.</dd>
  <dt>{{domxref("Performance.setResourceTimingBufferSize()")}}</dt>
- <dd>Устанавливает размер буфера измерения ресурсов браузера равным указанному числу объектов {{domxref("PerformanceEntry","записей производительности")}} {{domxref("PerformanceEntry.entryType","типа")}} "<code>resource</code>".</dd>
+ <dd>Устанавливает размер буфера измерения ресурсов браузера равным указанному числу объектов {{domxref("PerformanceEntry","записей производительности")}} {{domxref("PerformanceEntry.entryType","типа")}} "<code>resource</code>".</dd>
  <dt>{{domxref("Performance.toJSON()")}}</dt>
- <dd>Возвращает json объект, представляющий объект <code>Performance.</code></dd>
+ <dd>Возвращает json объект, представляющий объект <code>Performance.</code></dd>
 </dl>
 
 <h2 id="Спецификации">Спецификации</h2>

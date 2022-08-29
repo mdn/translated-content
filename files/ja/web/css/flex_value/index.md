@@ -32,7 +32,7 @@ translation_of: Web/CSS/flex_value
 ```css
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 2.5fr 1.5fr;
+  grid-template-columns: 1fr 1fr 2.5fr 1.5fr;
 }
 ```
 
@@ -46,4 +46,4 @@ translation_of: Web/CSS/flex_value
 
 ## 関連情報
 
- - [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)

@@ -5,7 +5,7 @@ translation_of: 'Web/CSS/::after'
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">Em CSS, <strong><code>::after</code></strong> cria um <a href="/pt-BR/docs/Web/CSS/Pseudo-elementos">pseudo-elemento</a> que é o último filho do elemento selecionado. Muitas vezes é usado para adicionar e melhorar o conteúdo de um elemento como a propriedade {{cssxref("content")}}.</span> É inline por padrão.</p>
+<p><span class="seoSummary">Em CSS, <strong><code>::after</code></strong> cria um <a href="/pt-BR/docs/Web/CSS/Pseudo-elementos">pseudo-elemento</a> que é o último filho do elemento selecionado. Muitas vezes é usado para adicionar e melhorar o conteúdo de um elemento como a propriedade {{cssxref("content")}}.</span> É inline por padrão.</p>
 
 <pre class="brush: css no-line-numbers  language-css"><code class="language-css"><span class="comment token">/* Adiciona uma seta após os links */</span>
 <span class="selector token">a<span class="pseudo-class token">::after</span> </span><span class="punctuation token">{</span>
@@ -17,7 +17,7 @@ translation_of: 'Web/CSS/::after'
 {{csssyntax}}
 
 <div class="note">
-<p>O CSS3 introduziu a notação <code>::after</code> (com dois sinais de dois pontos) para distinguir <a href="/pt-BR/docs/Web/CSS/Pseudo-classes">pseudo-classes</a> dos <a href="/pt-BR/docs/Web/CSS/Pseudo-elements">pseudo-elementos</a>. Os navegadores também aceitam <code>:after</code>, introduzido no CSS2.</p>
+<p>O CSS3 introduziu a notação <code>::after</code> (com dois sinais de dois pontos) para distinguir <a href="/pt-BR/docs/Web/CSS/Pseudo-classes">pseudo-classes</a> dos <a href="/pt-BR/docs/Web/CSS/Pseudo-elements">pseudo-elementos</a>. Os navegadores também aceitam <code>:after</code>, introduzido no CSS2.</p>
 </div>
 
 <h2 id="Exemplos">Exemplos</h2>
@@ -68,7 +68,7 @@ Just hit the edit button to add new live samples, or improve existing samples.&l
 
 <h3 id="Dicas">Dicas</h3>
 
-<p>O exemplo a seguir mostra o uso do <code>::after</code> <a href="/pt-BR/docs/Web/CSS/Pseudo-elementos">pseudo-elemento</a> em conjunto com a expressão CSS <a href="/pt-BR/docs/Web/CSS/attr"><code>attr()</code></a> e um <a href="/pt-BR/docs/Web/HTML/Global_attributes#attr-dataset">atributo data personalizado</a> <code>data-descr</code> para criar uma <em>dica </em>em forma de glossário feito em CSS puro. Verifique a visualização abaixo, ou veja este exemplo em <a href="https://developer.mozilla.org/files/4591/css-only_tooltips.html">página separada.</a></p>
+<p>O exemplo a seguir mostra o uso do <code>::after</code> <a href="/pt-BR/docs/Web/CSS/Pseudo-elementos">pseudo-elemento</a> em conjunto com a expressão CSS <a href="/pt-BR/docs/Web/CSS/attr"><code>attr()</code></a> e um <a href="/pt-BR/docs/Web/HTML/Global_attributes#attr-dataset">atributo data personalizado</a> <code>data-descr</code> para criar uma <em>dica </em>em forma de glossário feito em CSS puro. Verifique a visualização abaixo, ou veja este exemplo em <a href="https://developer.mozilla.org/files/4591/css-only_tooltips.html">página separada.</a></p>
 
 <pre class="brush: html">&lt;p&gt;Aqui está o exemplo ao vivo do código acima.&lt;br /&gt;
   Temos um pouco de &lt;span data-descr="collection of words and punctuation"&gt;texto&lt;/span&gt; aqui com algumas
@@ -144,95 +144,7 @@ span[data-descr]:hover::after {
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Recurso</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Suporte ao <code>:after</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}[1]</td>
-   <td>8.0</td>
-   <td>{{CompatOpera("4")}}</td>
-   <td>4.0</td>
-  </tr>
-  <tr>
-   <td>Suporte ao <code>::after</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.8")}}[1]</td>
-   <td>9.0</td>
-   <td>{{CompatOpera("7")}}</td>
-   <td>4.0</td>
-  </tr>
-  <tr>
-   <td>Suporte à animações e transições</td>
-   <td>26</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Recurso</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte ao <code>:after</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Suporte ao <code>::after</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Suporte à animações e transições</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("4.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] O Firefox anterior à versão 3.5 implementou apenas a versão CSS 2.0 de <code>:after</code>. Não foram permitidos {{cssxref("position")}}, {{cssxref("float")}}, <code>list-style-*</code> e algumas propriedades exibição. O Firefox 3.5 removeu estas restrições.</p>
+{{Compat("css.selectors.after")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

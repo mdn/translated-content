@@ -69,11 +69,13 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
 
 ## Exemples
 
-    Accept-Encoding: gzip
+```
+Accept-Encoding: gzip
 
-    Accept-Encoding: gzip, compress, br
+Accept-Encoding: gzip, compress, br
 
-    Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
+Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
+```
 
 ## Spécifications
 

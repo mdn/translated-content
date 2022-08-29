@@ -11,11 +11,13 @@ translation_of: Web/SVG/Element/feColorMatrix
 
 La primitive de filtre SVG **`<feColorMatrix>`** change les couleurs d'un élément en fonction d'une matrice de transformation. Chaque pixel (représenté par un vecteur \[R,G,B,A]) est [multiplié par matrice](https://fr.wikipedia.org/wiki/Produit_matriciel) pour créer une nouvelle couleur:
 
-    | R' |     | a00 a01 a02 a03 a04 |   | R |
-    | G' |     | a10 a11 a12 a13 a14 |   | G |
-    | B' |  =  | a20 a21 a22 a23 a24 | * | B |
-    | A' |     | a30 a31 a32 a33 a34 |   | A |
-    | 1  |     |  0   0   0   0   1  |   | 1 |
+```
+| R' |     | a00 a01 a02 a03 a04 |   | R |
+| G' |     | a10 a11 a12 a13 a14 |   | G |
+| B' |  =  | a20 a21 a22 a23 a24 | * | B |
+| A' |     | a30 a31 a32 a33 a34 |   | A |
+| 1  |     |  0   0   0   0   1  |   | 1 |
+```
 
 ## Contexte d'utilisation
 

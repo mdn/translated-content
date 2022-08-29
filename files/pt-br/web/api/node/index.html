@@ -5,35 +5,35 @@ translation_of: Web/API/Node
 ---
 <div>{{Apiref("DOM")}}</div>
 
-<p><strong><code>Node</code></strong> é uma interface da qual diversos tipos do DOM herdam, e que permite que esses tipos sejam tratados de forma similar, por exemplo, herdando os mesmos métodos ou sendo testados da mesma forma.<br>
+<p><strong><code>Node</code></strong> é uma interface da qual diversos tipos do DOM herdam, e que permite que esses tipos sejam tratados de forma similar, por exemplo, herdando os mesmos métodos ou sendo testados da mesma forma.<br>
  <br>
  Todos os tipos a seguir herdam essa interface e seus métodos e propriedades (apesar de que alguns podem devolver <code>null</code> em casos particulares em que o método ou a propriedade não são relevantes; ou lançar uma exceção quando adicionando um filho a um tipo de nó que não pode ter filhos): {{domxref("Document")}}, {{domxref("Element")}}, {{domxref("Attr")}}, {{domxref("CharacterData")}} (do qual {{domxref("Text")}}, {{domxref("Comment")}}, e {{domxref("CDATASection")}} herdam), {{domxref("ProcessingInstruction")}}, {{domxref("DocumentFragment")}}, {{domxref("DocumentType")}}, {{domxref("Notation")}}, {{domxref("Entity")}}, {{domxref("EntityReference")}}</p>
 
 <p>{{InheritanceDiagram}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Propriedades">Propriedades</h2>
 
-<p><em>Herda propriedades de seus pais, {{domxref("EventTarget")}}</em>.<sup>[1]</sup></p>
+<p><em>Herda propriedades de seus pais, {{domxref("EventTarget")}}</em>.<sup>[1]</sup></p>
 
 <dl>
  <dt>{{domxref("Node.baseURI")}} {{readonlyInline}}</dt>
- <dd>Retorna uma {{domxref("DOMString")}} representando o URL base do nó. O conceito de URL base muda de uma linguagem para outra; no HTML, ela corresponde ao protocolo, ao nome de domínio e a estrutura de diretório; tudo isso até a última <code>'/'</code>.</dd>
+ <dd>Retorna uma {{domxref("DOMString")}} representando o URL base do nó. O conceito de URL base muda de uma linguagem para outra; no HTML, ela corresponde ao protocolo, ao nome de domínio e a estrutura de diretório; tudo isso até a última <code>'/'</code>.</dd>
  <dt>{{domxref("Node.baseURIObject")}} {{Non-standard_inline()}}</dt>
- <dd>Retorna um objeto {{ Interface("nsIURI") }}, representando o URL base do nó. <em>(Indisponível para conteúdo Web)</em></dd>
+ <dd>Retorna um objeto <code>nsIURI</code>, representando o URL base do nó. <em>(Indisponível para conteúdo Web)</em></dd>
  <dt>{{domxref("Node.childNodes")}} {{readonlyInline}}</dt>
- <dd>Retorna um objeto {{domxref("NodeList")}} "vivo" contendo todos os filhos deste nó. Dizer que um objeto {{domxref("NodeList")}} é vivo significa que se houver alguma mudança em um dos filhos deste nó, o objeto {{domxref("NodeList")}} é automaticamente atualizado com tais mudanças.</dd>
+ <dd>Retorna um objeto {{domxref("NodeList")}} "vivo" contendo todos os filhos deste nó. Dizer que um objeto {{domxref("NodeList")}} é vivo significa que se houver alguma mudança em um dos filhos deste nó, o objeto {{domxref("NodeList")}} é automaticamente atualizado com tais mudanças.</dd>
  <dt>{{domxref("Node.firstChild")}} {{readonlyInline}}</dt>
  <dd>Retorna um {{domxref("Node")}} representando o primeiro filho direto do nó ou <code>null</code>, caso o nó não tenha nenhum filho.</dd>
  <dt>{{domxref("Node.lastChild")}} {{readonlyInline}}</dt>
  <dd>Retorna um {{domxref("Node")}} representando o último filho direto do elemento ou <code>null</code>, caso o elemento não tenha nenhum filho.</dd>
  <dt>{{domxref("Node.nextSibling")}} {{readonlyInline}}</dt>
- <dd>Retorna um {{domxref("Node")}} representando o próximo elemento na árvore ou <code>null</code>, caso tal nó não exista.</dd>
+ <dd>Retorna um {{domxref("Node")}} representando o próximo elemento na árvore ou <code>null</code>, caso tal nó não exista.</dd>
  <dt>{{domxref("Node.nodeName")}} {{readonlyInline}}</dt>
- <dd>Retorna uma {{domxref("DOMString")}} contendo o nome do elemento, do <code>Node</code>. A estrutura do nome irá mudar conforme o tipo do elemento. Veja as diferenças na documentação do método {{domxref("Node.nodeName")}}.  </dd>
+ <dd>Retorna uma {{domxref("DOMString")}} contendo o nome do elemento, do <code>Node</code>. A estrutura do nome irá mudar conforme o tipo do elemento. Veja as diferenças na documentação do método {{domxref("Node.nodeName")}}.  </dd>
  <dt>{{domxref("Node.nodePrincipal")}} {{Non-standard_inline()}}</dt>
- <dd>Uma interface {{ Interface("nsIPrincipal") }} representando o nó principal.</dd>
+ <dd>Uma interface <code>nsIPrincipal</code> representando o nó principal.</dd>
  <dt>{{domxref("Node.nodeType")}}{{readonlyInline}}</dt>
  <dd>Retorna um <code>unsigned short</code> representando o tipo do nodo. Valores possíveis são:</dd>
 </dl>
@@ -109,7 +109,7 @@ translation_of: Web/API/Node
  <dt>{{domxref("Node.textContent")}}</dt>
  <dd>Retorna / Define o conteúdo textual de um elemento e de todos os seus descendentes.<br>
  <br>
-  </dd>
+  </dd>
 </dl>
 
 <h3 id="Propriedades_descontinuadas">Propriedades descontinuadas</h3>
@@ -138,7 +138,7 @@ translation_of: Web/API/Node
 
 <h2 id="Métodos">Métodos</h2>
 
-<p> </p>
+<p> </p>
 
 <ul>
  <li>{{domxref("Node.appendChild")}}</li>
@@ -162,7 +162,7 @@ translation_of: Web/API/Node
  <li>{{domxref("Node.setUserData")}} {{obsolete_inline("22.0")}}</li>
 </ul>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Constantes">Constantes</h2>
 
@@ -256,12 +256,12 @@ translation_of: Web/API/Node
 <p>A função a seguir percorre todos os nós filhos de um nó recursivamente e executa uma função de callback em cada um deles (e no nó pai também).</p>
 
 <pre class="brush: js">function DOMComb (oParent, oCallback) {
-  if (oParent.hasChildNodes()) {
-    for (var oNode = oParent.firstChild; oNode; oNode = oNode.nextSibling) {
-      DOMComb(oNode, oCallback);
-    }
-  }
-  oCallback.call(oParent);
+  if (oParent.hasChildNodes()) {
+    for (var oNode = oParent.firstChild; oNode; oNode = oNode.nextSibling) {
+      DOMComb(oNode, oCallback);
+    }
+  }
+  oCallback.call(oParent);
 }</pre>
 
 <h4 id="Sintaxe">Sintaxe</h4>
@@ -286,11 +286,11 @@ translation_of: Web/API/Node
 <p>O exemplo a seguir envia para a função <code>console.log</code> o conteúdo textual do body:</p>
 
 <pre class="brush: js">function imprimeConteudo () {
-  if (this.nodeValue) { console.log(this.nodeValue); }
+  if (this.nodeValue) { console.log(this.nodeValue); }
 }
 
 onload = function () {
-  DOMComb(document.body, imprimeConteudo);
+  DOMComb(document.body, imprimeConteudo);
 };</pre>
 
 <h2 id="Especificações">Especificações</h2>

@@ -11,7 +11,9 @@ La méthode statique **`URL.revokeObjectURL()`** libère une URL d’objet exist
 
 ## Syntaxe
 
-    window.URL.revokeObjectURL(objectURL);
+```js
+window.URL.revokeObjectURL(objectURL);
+```
 
 ### Paramètres
 

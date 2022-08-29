@@ -14,4 +14,4 @@ En {{Glossary("Symmetric-key cryptography","cryptographie à clé symétrique")}
 
 ## En apprendre plus
 
-- [Principe de Kerckhoff](https://fr.wikipedia.org/wiki/Principe_de_Kerckhoffs) sur Wikipedia
+- [Principe de Kerckhoffs](https://fr.wikipedia.org/wiki/Principe_de_Kerckhoffs) sur Wikipédia

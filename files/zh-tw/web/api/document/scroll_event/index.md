@@ -1,17 +1,6 @@
 ---
 title: 'Document: scroll事件'
 slug: Web/API/Document/scroll_event
-tags:
-  - API
-  - DOM
-  - Document
-  - Event
-  - 事件
-  - Reference
-  - 參考文件
-  - Scroll
-  - UIEvent
-browser-compat: api.Document.scroll_event
 ---
 {{APIRef}}
 
@@ -49,8 +38,6 @@ browser-compat: api.Document.scroll_event
 Since scroll events can fire at a high rate, the event handler shouldn't execute computationally expensive operations such as DOM modifications. Instead, it is recommended to throttle the event using requestAnimationFrame(), setTimeout(), or a CustomEvent, as follows.
 
 Note, however, that input events and animation frames are fired at about the same rate, and therefore the optimization below is often unnecessary. This example optimizes thescroll event for requestAnimationFrame.
-
-
 
 有鑒於`scroll`事件可能會以很高的速率觸發，事件處理常式不應執行計算密集的操作（如DOM修改）。所以，建議改用{{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}、{{DOMxRef("setTimeout()")}}或{{DOMxRef("CustomEvent")}}以調控事件的觸發次數，如下。
 

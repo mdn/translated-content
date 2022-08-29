@@ -8,12 +8,11 @@ tags:
   - メソッド
   - リファレンス
   - ウェブアニメーション
-browser-compat: api.Element.animate
 translation_of: Web/API/Element/animate
 ---
 {{APIRef('Web Animations')}}
 
-{{domxref("Element")}} インターフェイスの **`animate()`** メソッドは、新しい {{domxref("Animation")}} の生成、この要素への適用、そしてアニメーションの再生を行うショートカットメソッドです。生成した {{domxref("Animation")}} オブジェクトのインスタンスを返します。
+{{domxref("Element")}} インターフェイスの **`animate()`** メソッドは、新しい {{domxref("Animation")}} の生成、この要素への適用、そしてアニメーションの再生を行うショートカットメソッドです。生成した {{domxref("Animation")}} オブジェクトのインスタンスを返します。
 
 > **Note:** 要素には複数のアニメーションを適用することができます。 {{domxref("Element.getAnimations()")}} を呼び出すと、要素に作用するアニメーションのリストを取得することができます。
 

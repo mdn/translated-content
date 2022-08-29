@@ -1,0 +1,86 @@
+---
+title: GlobalEventHandlers.onblur
+slug: Web/API/Window/blur_event
+translation_of: Web/API/GlobalEventHandlers/onblur
+original_slug: Web/API/GlobalEventHandlers/onblur
+---
+<div>{{ApiRef("HTML DOM")}}</div>
+
+<p>Właściwość <code><strong>onblur</strong></code> należy do Globalnych Uchwytów Zdarzeń ({{domxref("GlobalEventHandlers")}}) i jest Uchwytem Zdarzenia ({{event("Event_handlers", "event handler")}}), który służy do obsługi zdarzenia {{event("blur")}}. Jest on dostępny dla następujących elementów: {{domxref("Element")}}, {{domxref("Document")}}, oraz {{domxref("Window")}}.</p>
+
+<p>Zdarzenie <code>blur</code> zachodzi, gdy dany element traci "focus" (np. podczas opuszczenia inputa tekstowego).</p>
+
+<div class="blockIndicator note">
+<p><strong>Notatka:</strong> Przeciwieństwem <code>onblur</code> jest {{domxref("GlobalEventHandlers.onfocus", "onfocus")}}.</p>
+</div>
+
+<h2 id="Składnia">Składnia</h2>
+
+<pre class="syntaxbox"><em>cel</em>.onblur = <em>jakasFunkcja</em>();
+</pre>
+
+<h3 id="Wartość">Wartość</h3>
+
+<p><code>jakasFunkcja</code> jest nazwą funkcji albo <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">wyrażeniem funkcji</a>. Jeżeli nie podano argumentu, celowi zostanie przypisana odpowiednia wartość obiektu {{domxref("FocusEvent")}}.</p>
+
+<h2 id="Przykład">Przykład</h2>
+
+<p>Przykład użycia <code>onblur</code> oraz {{domxref("GlobalEventHandlers.onfocus", "onfocus")}} do zmiany tekstu w elemencie {{HtmlElement("input")}}.</p>
+
+<h3 id="HTML">HTML</h3>
+
+<pre class="brush: html">&lt;input type="text" value="CLICK HERE"&gt;
+</pre>
+
+<h3 id="JavaScript">JavaScript</h3>
+
+<pre class="brush: js">let input = document.querySelector('input');
+
+input.onblur = inputBlur;
+input.onfocus = inputFocus;
+
+function inputBlur() {
+  input.value = 'Focus has been lost';
+}
+
+function inputFocus() {
+  input.value = 'Focus is here';
+}</pre>
+
+<h3 id="Rezultat">Rezultat</h3>
+
+<p>Kliknij na pole, a następnie obok niego i obserwuj jak zmienia się jego zawartość.</p>
+
+<p id="Result">{{EmbedLiveSample('Przykład')}}</p>
+
+<h2 id="Specyfikacje">Specyfikacje</h2>
+
+<table class="spectable standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onblur','onblur')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Kompatybilność_przeglądarek">Kompatybilność przeglądarek</h2>
+
+
+
+<p>{{Compat("api.GlobalEventHandlers.onblur")}}</p>
+
+<p>W przeciwieństwie do IE, w którym prawie każdy element może otrzymać efekt zdarzenia <code>blur</code>, tylko kilka elementów z tym zdarzeniem, działa na przeglądarkach opartych o silnik Gecko.</p>
+
+<h2 id="Zobacz_również">Zobacz również</h2>
+
+<ul>
+ <li>Zdarzenie {{event("blur")}}</li>
+ <li>Odwrotny uchwyt zdarzenia: {{domxref("GlobalEventHandlers.onfocus")}}</li>
+</ul>

@@ -13,7 +13,7 @@ translation_of: Web/HTML/Element/dialog
 ---
 <div>{{HTMLRef}}</div>
 
-<p><strong>HTML <code>&lt;dialog&gt;</code> 요소</strong>는 닫을 수 있는 경고, 검사기, 창 등 대화 상자 및 기타 다른 상호작용 가능한 컴포넌트를 나타냅니다.</p>
+<p><strong>HTML <code>&lt;dialog&gt;</code> 요소</strong>는 닫을 수 있는 경고, 검사기, 창 등 대화 상자 및 기타 다른 상호작용 가능한 컴포넌트를 나타냅니다.</p>
 
 <table class="properties">
  <tbody>
@@ -50,10 +50,10 @@ translation_of: Web/HTML/Element/dialog
 
 <h2 id="특성">특성</h2>
 
-<p>이 요소는 <a href="/ko/docs/Web/HTML/Global_attributes">전역 특성</a>을 포함합니다.</p>
+<p>이 요소는 <a href="/ko/docs/Web/HTML/Global_attributes">전역 특성</a>을 포함합니다.</p>
 
 <div class="blockIndicator warning">
-<p><code>tabindex</code> 특성을 <code>&lt;dialog&gt;</code> 요소에 사용해서는 안됩니다.</p>
+<p><code>tabindex</code> 특성을 <code>&lt;dialog&gt;</code> 요소에 사용해서는 안됩니다.</p>
 </div>
 
 <dl>
@@ -65,7 +65,7 @@ translation_of: Web/HTML/Element/dialog
 
 <ul>
  <li><code>method="dialog"</code> 특성을 사용한 {{htmlelement("form")}} 요소는 제출 시 대화 상자를 닫습니다. 이 때, 대화 상자의 {{domxref("HTMLDialogElement.returnValue", "returnValue")}} 속성은 양식을 제출할 때 사용한 버튼의 {{htmlattrxref("value", "button")}}으로 설정됩니다.</li>
- <li>CSS {{cssxref('::backdrop')}} <a href="/ko/docs/Web/CSS/Pseudo-elements">의사 요소</a>를 사용하면, {{domxref("HTMLDialogElement.showModal()")}} 메서드를 사용해 활성화한 <code>&lt;dialog&gt;</code> 요소의 뒤에 스타일을 적용할 수 있습니다. 예를 들면, 모달 대화 상자가 활성화되어 있는 동안 접근할 수 없는 뒤쪽 요소를 어둡게 만들 때 사용합니다.</li>
+ <li>CSS {{cssxref('::backdrop')}} <a href="/ko/docs/Web/CSS/Pseudo-elements">의사 요소</a>를 사용하면, {{domxref("HTMLDialogElement.showModal()")}} 메서드를 사용해 활성화한 <code>&lt;dialog&gt;</code> 요소의 뒤에 스타일을 적용할 수 있습니다. 예를 들면, 모달 대화 상자가 활성화되어 있는 동안 접근할 수 없는 뒤쪽 요소를 어둡게 만들 때 사용합니다.</li>
 </ul>
 
 <h2 id="예제">예제</h2>
@@ -85,24 +85,24 @@ translation_of: Web/HTML/Element/dialog
 
 <pre class="brush: html">&lt;!-- 간단한 양식을 포함한 팝업 대화 상자 --&gt;
 &lt;dialog id="favDialog"&gt;
-  &lt;form method="dialog"&gt;
-    &lt;p&gt;&lt;label&gt;좋아하는 동물:
-      &lt;select&gt;
-        &lt;option&gt;&lt;/option&gt;
-        &lt;option&gt;아르테미아&lt;/option&gt;
-        &lt;option&gt;레서판다&lt;/option&gt;
-        &lt;option&gt;거미원숭이&lt;/option&gt;
-      &lt;/select&gt;
-    &lt;/label&gt;&lt;/p&gt;
-    &lt;menu&gt;
-      &lt;button value="cancel"&gt;취소&lt;/button&gt;
-      &lt;button id="confirmBtn" value="default"&gt;확인&lt;/button&gt;
-    &lt;/menu&gt;
-  &lt;/form&gt;
+  &lt;form method="dialog"&gt;
+    &lt;p&gt;&lt;label&gt;좋아하는 동물:
+      &lt;select&gt;
+        &lt;option&gt;&lt;/option&gt;
+        &lt;option&gt;아르테미아&lt;/option&gt;
+        &lt;option&gt;레서판다&lt;/option&gt;
+        &lt;option&gt;거미원숭이&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/label&gt;&lt;/p&gt;
+    &lt;menu&gt;
+      &lt;button value="cancel"&gt;취소&lt;/button&gt;
+      &lt;button id="confirmBtn" value="default"&gt;확인&lt;/button&gt;
+    &lt;/menu&gt;
+  &lt;/form&gt;
 &lt;/dialog&gt;
 
 &lt;menu&gt;
-  &lt;button id="updateDetails"&gt;상세정보 업데이트&lt;/button&gt;
+  &lt;button id="updateDetails"&gt;상세정보 업데이트&lt;/button&gt;
 &lt;/menu&gt;
 
 &lt;output aria-live="polite"&gt;&lt;/output&gt;</pre>
@@ -136,29 +136,9 @@ favDialog.addEventListener('close', function onClose() {
 
 <p>{{EmbedLiveSample("고급_예제", "100%", 300)}}</p>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#the-dialog-element', '&lt;dialog&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'interactive-elements.html#the-dialog-element', '&lt;dialog&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>최초 정의</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 
