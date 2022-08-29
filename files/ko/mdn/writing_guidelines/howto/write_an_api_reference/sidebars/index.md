@@ -12,9 +12,9 @@ API 레퍼런스 문서에는 수정 가능한 사이드바 를 추가할 수 �
 
 사이드바 생성은 다음 세 단계로 나뉩니다.
 
-1.  API 레퍼런스 페이지를 만듭니다.
-2.  [KumaScript 레파지토리](https://github.com/mdn/kumascript)의 GroupData.json 데이터 파일에 그 API를 위한 엔트리를 추가합니다.
-3.  사이드바가 필요한 페이지에 \\{{APIRef}} 메크로를 추가합니다.
+1. API 레퍼런스 페이지를 만듭니다.
+2. [KumaScript 레파지토리](https://github.com/mdn/kumascript)의 GroupData.json 데이터 파일에 그 API를 위한 엔트리를 추가합니다.
+3. 사이드바가 필요한 페이지에 \\{{APIRef}} 메크로를 추가합니다.
 
 [Fetch API](/ko/docs/Web/API/Fetch_API)를 샘플로 삼아서 단계별로 살펴 보겠습니다.
 
@@ -28,10 +28,10 @@ API 레퍼런스 문서에는 수정 가능한 사이드바 를 추가할 수 �
 
 GroupData.json에 엔트리를 추가하려면 다음을 따르세요.
 
-1.  [GitHub](https://github.com/) 계정이 필요합니다.
-2.  KumaScript 레파지토리를 포크뜨고, 작업할 브랜치를 생성하고 로컬에 클론을 뜹니다.
-3.  생성한 브랜치로 체크아웃을 하고 작업후 오리진으로 푸시합니다.
-4.  MDN 팀이 리뷰할 수 있도록 풀 리퀘스트를 날려주시고, 필요하다 생각이 들면 변경 요청을 주세요.
+1. [GitHub](https://github.com/) 계정이 필요합니다.
+2. KumaScript 레파지토리를 포크뜨고, 작업할 브랜치를 생성하고 로컬에 클론을 뜹니다.
+3. 생성한 브랜치로 체크아웃을 하고 작업후 오리진으로 푸시합니다.
+4. MDN 팀이 리뷰할 수 있도록 풀 리퀘스트를 날려주시고, 필요하다 생각이 들면 변경 요청을 주세요.
 
 GitHub 사용법을 잘 모르겠으면 [호환성 테이블 가이드](/ko/docs/MDN/Contribute/Structures/Compatibility_tables#The_new_way_The_browser_compat_data_repo_and_dynamic_tables) 문서를 참고하세요. 자세한 내용이 있습니다.
 
@@ -72,12 +72,12 @@ GroupData 엔트리에 추가할 수 있는 하위 멤버 목록입니다.
 
 사용가능한 멤버들입니다. 로케일은 en-US로 가정합니다.
 
-1.  `"overview"` — 값은 배열이고, API 오버뷰 문서의 슬러그입니다. 하나인 경우 "Fetch API"이면 다음 같은 링크를 만듭니다. [https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API](/ko/docs/Web/API/Fetch_API).
-2.  `"interfaces"` — 해당 API의 인터페이스 전체 목록을 담은 배열 입니다. 값이 "Body"이면 다음 과 같은 링크를 만듭니다. [https://developer.mozilla.org/en-US/docs/Web/API/Body](/ko/docs/Web/API/Body).
-3.  `"methods"` — the value is an array that should contain any methods the spec adds to interfaces associated with other APIs, such as instantiation methods created on {{domxref("Navigator")}} or {{domxref("Window")}}. If there are a huge number of methods, you might want to consider only listing the most popular ones, or putting them first in the list. "WindowOrWorkerGlobalScope.fetch()" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch](/ko/docs/Web/API/WindowOrWorkerGlobalScope/fetch).
-4.  `"properties"` — the value is an array that should contain all of the properties associated with the API. This can include properties that are members of interfaces defined in the API spec, and properties the API defines on other interfaces. If there are a huge number of properties, you might want to consider only listing the most popular ones, or putting them first in the list. "Headers.append" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/Headers/append](/ko/docs/Web/API/Headers/append).
-5.  `"events"` — the value is an array that should contain all of the events associated with the API, defined in the API spec, or elsewhere. If there are a huge number of events, you might want to consider only listing the most popular ones, or putting them first in the list. "animationstart" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/Events/animationstart](/ko/docs/Web/Events/animationstart).
-6.  `"guides"` — the value is an array containing one or more objects that define links to guides explain how to use the API. Each object contains two submembers — "url", which contains the partial URL pointing to the guide article, and "title", which defines the link test for the link. As an example, the following object:
+1. `"overview"` — 값은 배열이고, API 오버뷰 문서의 슬러그입니다. 하나인 경우 "Fetch API"이면 다음 같은 링크를 만듭니다. [https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API](/ko/docs/Web/API/Fetch_API).
+2. `"interfaces"` — 해당 API의 인터페이스 전체 목록을 담은 배열 입니다. 값이 "Body"이면 다음 과 같은 링크를 만듭니다. [https://developer.mozilla.org/en-US/docs/Web/API/Body](/ko/docs/Web/API/Body).
+3. `"methods"` — the value is an array that should contain any methods the spec adds to interfaces associated with other APIs, such as instantiation methods created on {{domxref("Navigator")}} or {{domxref("Window")}}. If there are a huge number of methods, you might want to consider only listing the most popular ones, or putting them first in the list. "WindowOrWorkerGlobalScope.fetch()" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch](/ko/docs/Web/API/WindowOrWorkerGlobalScope/fetch).
+4. `"properties"` — the value is an array that should contain all of the properties associated with the API. This can include properties that are members of interfaces defined in the API spec, and properties the API defines on other interfaces. If there are a huge number of properties, you might want to consider only listing the most popular ones, or putting them first in the list. "Headers.append" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/Headers/append](/ko/docs/Web/API/Headers/append).
+5. `"events"` — the value is an array that should contain all of the events associated with the API, defined in the API spec, or elsewhere. If there are a huge number of events, you might want to consider only listing the most popular ones, or putting them first in the list. "animationstart" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/Events/animationstart](/ko/docs/Web/Events/animationstart).
+6. `"guides"` — the value is an array containing one or more objects that define links to guides explain how to use the API. Each object contains two submembers — "url", which contains the partial URL pointing to the guide article, and "title", which defines the link test for the link. As an example, the following object:
 
     ```json
     { "url":   "/docs/Web/API/Detecting_device_orientation",

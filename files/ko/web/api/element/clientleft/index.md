@@ -15,7 +15,9 @@ translation_of: Web/API/Element/clientLeft
 
 ## Syntax
 
-    var left = element.clientLeft;
+```js
+var left = element.clientLeft;
+```
 
 ## Example
 

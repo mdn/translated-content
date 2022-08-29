@@ -16,7 +16,9 @@ original_slug: Web/API/Window/crypto
 
 ## 구문
 
-    var cryptoObj = window.crypto || window.msCrypto; // for IE 11
+```js
+var cryptoObj = window.crypto || window.msCrypto; // for IE 11
+```
 
 ## 예제
 

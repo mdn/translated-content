@@ -16,7 +16,9 @@ HTML 문서에서, **`Document.createElement()`** 메서드는 지정한 `tagNam
 
 ## 구문
 
-    let element = document.createElement(tagName[, options]);
+```js
+let element = document.createElement(tagName[, options]);
+```
 
 ### 매개변수
 
