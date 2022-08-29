@@ -1,13 +1,12 @@
 ---
 title: <mmultiscripts>
 slug: Web/MathML/Element/mmultiscripts
-translation_of: Web/MathML/Element/mmultiscripts
 l10n:
   sourceCommit: d3a04bcdd16434b613b132fb488235ce44355891
 ---
 {{MathMLRef}}
 
-MathML の `<mmultiscripts>` 要素によって、テンソル的なものを作ることができます。見た目は、 [テンソル](https://ja.wikipedia.org/wiki/テンソル) は多次元の行列です（数学的には不正確だが喩えて言えば）。テンソルの階数は、それを表す配列の次元によって決まります。例えば、数は 0 次元の配列であり、0 階のテンソルです。1 次元配列（つまり数ベクトル）は 1 階のテンソルです。同様に、2 階のテンソルは四角い行列（訳注：ふつうの意味での行列のこと）で表すことになります。テンソルの数学的背景についてもっと知りたければ、 [ウィキペディアの記事](https://ja.wikipedia.org/wiki/テンソル) を参照してください。
+MathML の `<mmultiscripts>` 要素によって、テンソル的なものを作ることができます。見た目は、 [テンソル](https://ja.wikipedia.org/wiki/テンソル) は多次元の行列です（数学的には不正確だが喩えて言えば）。テンソルの階数は、それを表す配列の次元によって決まります。例えば、数は 0 次元の配列であり、0 階のテンソルです。1 次元配列（つまりベクトル）は 1 階のテンソルです。同様に、2 階のテンソルは四角い行列で表すことになります。テンソルの数学的背景についてもっと知りたければ、 [ウィキペディアの記事](https://ja.wikipedia.org/wiki/テンソル) を参照してください。
 
 MathML は、基部 'base expression) に対する後付け (postscripts) および前付け (prescripts) の下付き／上付きの添字を表すために次のような特定の構文を使います。
 
@@ -19,7 +18,7 @@ MathML は、基部 'base expression) に対する後付け (postscripts) およ
 </mmultiscripts>
 ```
 
-基部のあとに後付けの下付き添字と後付けの上付き添字を指定することができます（訳注：下付き／上付きの組は 2 個以上繰り返すこともできる）。前付けは任意で、空タグ `<mprescripts/>` で区切って置きます（\<mprescripts /> 要素は一つしか置くことができず、これを破ると `DuplicateMprescripts` エラーが[エラーコンソール](/ja/docs/Error_Console)に報告され、表示は "invalid-markup" となります）。また、空の添字にはプレースホルダーとして `<none/>` を置くことができます（基部には使えません）。正しい使い方は例をご覧ください。
+基部のあとに後付けの下付き添字と後付けの上付き添字を指定することができます。前付けは任意で、空タグ `<mprescripts/>` で区切って置きます（\<mprescripts /> 要素は一つしか置くことができず、これを破ると `DuplicateMprescripts` エラーが[エラーコンソール](/ja/docs/Error_Console)に報告され、表示は "invalid-markup" となります）。また、空の添字にはプレースホルダーとして `<none/>` を置くことができます（基部には使えません）。正しい使い方は例をご覧ください。
 
 ## 属性
 
