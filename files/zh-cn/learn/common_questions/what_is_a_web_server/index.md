@@ -10,7 +10,7 @@ slug: Learn/Common_questions/What_is_a_web_server
       <th scope="row">前提：</th>
       <td>
         您应该已经知道
-        <a href="/en-US/docs/learn/How_the_Internet_works">互联网是怎么工作的</a
+        <a href="/zh-CN/docs/learn/How_the_Internet_works">互联网是怎么工作的</a
         >，并且<a
           href="/zh-CN/docs/learn/常见问题/网页，网站，网页服务器和搜索引擎的区别是什么？"
           >了解网页，网站，网络服务器和搜索引擎的区别是什么</a
