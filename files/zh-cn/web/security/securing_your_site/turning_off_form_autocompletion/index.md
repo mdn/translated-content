@@ -8,11 +8,11 @@ slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
 
 这些功能通常是默认启用的，但可能涉及用户的隐私，因此浏览器允许用户禁用这些功能。然而，一些数据可能会在将来失效（例如一次性密码）或包含敏感信息（例如唯一的政府身份识别码或信用卡安全码）。作为网站作者，你可能更希望浏览器不去记住这些字段的值，即使浏览器的自动填充功能已开启。
 
-注意，规则 [WCAG 2.1 Success Criterion 1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html) 并不需要自动补全能够工作——仅仅只是那些与用户个人信息相关的表单字段能够分辨出来。意味着即使表单本身的自动补全功能关闭，你也可以通过在相关字段上添加 [`autocomplete`](/zh-CN/docs/Web/HTML/Attributes/autocomplete) 属性来符合这个规则。
+注意，规则 [WCAG 2.1 Success Criterion 1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html) 并不需要自动补全真的能够工作——仅仅只是那些与用户个人信息相关的表单字段能够通过编程的方式分辨出来。意味着即使表单本身的自动补全功能关闭，你也可以通过在相关字段上添加 [`autocomplete`](/zh-CN/docs/Web/HTML/Attributes/autocomplete) 属性来符合这个规则。
 
-## 禁用自动填充
+## 禁用自动补全
 
-要禁用表单自动填充，你可以将 [`autocomplete`](/zh-CN/docs/Web/HTML/Attributes/autocomplete) 的属性设置为 "off"：
+要禁用表单自动补全，你可以将 [`autocomplete`](/zh-CN/docs/Web/HTML/Attributes/autocomplete) 的属性设置为 "off"：
 
 ```plain
 autocomplete="off"
@@ -51,7 +51,7 @@ autocomplete="off"
 
 即使没有主密码，浏览器内置的密码管理对安全也有益无害。由于用户不需要记住已被浏览器存储的密码，因此他们可以放心选择更强的密码。
 
-由于这个原因，许多现代浏览器都不支持在登录字段中设置 `autocomplete="off"` ：
+由于这个原因，许多现代浏览器都不支持在登录字段中设置 `autocomplete="off"`：
 
 - 如果一个网站为 {{HTMLElement("form")}} 设置了`autocomplete="off"`，表单中包含用户名和密码字段，浏览器仍会为这次登录提供记忆功能，并且如果用户同意，用户在下一次访问网站时，浏览器会自动填写这些字段。
 - 如果网站给用户名和密码的 {{HTMLElement("input")}} 框设置了 `autocomplete="off"`，浏览器仍会为这次登录提供记忆功能，并且如果用户同意，用户在下一次访问网站时，浏览器会自动填写这些字段。
