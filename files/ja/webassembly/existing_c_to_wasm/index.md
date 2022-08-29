@@ -1,5 +1,5 @@
 ---
-title: 既存の C モジュールの WebAssembly へのコンパイル
+title: 既存の C モジュールから WebAssembly へのコンパイル
 slug: WebAssembly/existing_C_to_wasm
 l10n:
   sourceCommit: 891c7c231987ebd17a7410b3c7aab82af15e4248

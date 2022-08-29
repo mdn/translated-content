@@ -6,17 +6,17 @@ i10n:
 ---
 {{WebAssemblySidebar}}
 
-JavaScript で WebAssembly を使用するには、まずコンパイル/インスタンス化の前にモジュールをメモリにプルする必要があります。この記事では、WebAssembly バイトコードをフェッチするために使用できるさまざまなメカニズムのリファレンスと、それをコンパイル/インスタンス化して実行する方法について説明します。
+JavaScript で WebAssembly を使用するには、まずコンパイル/インスタンス化の前にモジュールをメモリーにプルする必要があります。この記事では、WebAssembly バイトコードをフェッチするために使用できるさまざまなメカニズムのリファレンスと、それをコンパイル/インスタンス化して実行する方法について説明します。
 
 ## どんな方法があるの?
 
-WebAssembly は `<script type='module'>` または ES2015 の `import` 文とまだ統合されていないため、インポートを使用してブラウザでモジュールをフェッチする組み込みの方法はありません。
+WebAssembly は `<script type='module'>` または ES2015 の `import` 文とまだ統合されていないため、インポートを使用してブラウザーでモジュールをフェッチする組み込みの方法はありません。
 
-以前の {{jsxref("WebAssembly.compile")}}/{{jsxref("WebAssembly.instantiate")}} メソッドでは、生のバイトをフェッチした後 WebAssembly モジュールのバイナリを含む {{jsxref("ArrayBuffer")}} を作成し、コンパイル/インスタンス化する必要があります。これは文字列(JavaScript ソースコード) をバイトの配列バッファ (WebAssembly ソースコード)で置き換えることを除いて、`new Function(string)` に似ています。
+以前の {{jsxref("WebAssembly.compile")}}/{{jsxref("WebAssembly.instantiate")}} メソッドでは、生のバイトをフェッチした後 WebAssembly モジュールのバイナリーを含む {{jsxref("ArrayBuffer")}} を作成し、コンパイル/インスタンス化する必要があります。これは文字列(JavaScript ソースコード) をバイトの配列バッファー (WebAssembly ソースコード)で置き換えることを除いて、`new Function(string)` に似ています。
 
 新しい {{jsxref("WebAssembly.compileStreaming")}}/{{jsxref("WebAssembly.instantiateStreaming")}} メソッドは、より効率的です。ネットワークからの生のバイトストリームに対して直接アクションを実行し、 {{jsxref("ArrayBuffer")}} ステップの必要性がなくなりました。
 
-では、どのようにバイト列を配列バッファに読み込んでコンパイルするのでしょうか? 次の節で説明します。
+では、どのようにバイト列を配列バッファーに読み込んでコンパイルするのでしょうか? 次の節で説明します。
 
 ## Fetch を使用する
 
