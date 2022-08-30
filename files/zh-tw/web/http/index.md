@@ -39,7 +39,7 @@ slug: Web/HTTP
 - [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Methods)
   - : 透過 HTTP 有幾種不同操作方法：{{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}，或是一些不太常見的請求方式，像是：{{HTTPMethod("OPTIONS")}}, {{HTTPMethod("DELETE")}}, or {{HTTPMethod("TRACE")}}.
 - [HTTP 狀態回應碼](/zh-TW/docs/Web/HTTP/Status)
-  - : HTTP 狀態碼用來表示特定的 HTTP 請求是否已成功完成。響應分為五類：消息響應，成功響應，重定向，客戶端錯誤和服務器錯誤。
+  - : HTTP 狀態碼用來表示特定的 HTTP 請求是否已成功完成。回應分為五類：資訊回應、成功回應、重定向、用戶端錯誤、以及伺服器錯誤。
 - [CSP 指令](/zh-TW/docs/Web/HTTP/Headers/Content-Security-Policy)
   - : {{HTTPHeader("Content-Security-Policy")}} 響應報頭字段允許網站管理員控制頁面上哪些資源能夠被用戶代理程序加載。除了少數例外，此策略主要涉及指定服務器來源和腳本終端。
 
