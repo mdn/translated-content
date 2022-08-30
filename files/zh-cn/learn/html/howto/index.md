@@ -79,7 +79,6 @@ HTML 仅仅建立了文档结构。为解决演示问题，可使用 {{glossary(
 - [如何控制 HTML 换行](/zh-CN/docs/Web/HTML/br)
 - 如何标记内容的更改(增加或删除)——参见 {{htmlelement("ins")}} 与 {{htmlelement("del")}} 元素。
 
-
 ### 高级图像 & 多媒体
 
 - [如何为网页添加响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
