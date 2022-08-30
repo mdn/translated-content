@@ -1,18 +1,40 @@
 ---
 title: Max-Forwards
 slug: Web/HTTP/Headers/Max-Forwards
+tags:
+  - HTTP
+  - HTTP Header
+  - Reference
+  - Request header
+spec-urls: https://httpwg.org/specs/rfc7231.html#header.max-forwards
 ---
 {{HTTPSidebar}}
 
-**`Max-Forwards`** 是一个通用报文首部，在 Trace 或 Options 方法中，该字段以十进制整数形式指定可经过的服务器最大数目。服务器在往下一个服务器转发请求之前，Max-Forwards 的值减 1 后重新赋值。当服务器接收到 Max-Forwards 值为 0 的请求时，则不再进行转发，而是直接返回响应。
+The **`Max-Forwards`** 请求头被用于限制 [`TRACE`](/zh-CN/docs/Web/HTTP/Methods/TRACE) 方法可经过的服务器（通常指代理服务器）数目。 该字段以十进制整数形式指定可经过的服务器最大数目。服务器在进行下一个 [`TRACE`](/zh-CN/docs/Web/HTTP/Methods/TRACE) 请求之前，`Max-Forwards` 的值将减 1 并重新赋值，直到服务器接收到 `Max-Forwards` 的值为 0 的请求时，则不再进行转发，而是直接返回一个 `200 OK` 的响应。 
+
+如果 [`TRACE`](/zh-CN/docs/Web/HTTP/Methods/TRACE) 请求中没有 `Max-Forwards` 请求头，就可以认为，不限制可经过的服务器最大数目。
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 语法
-```plain
-Max-Forwards: <interger>
-```
 
+```http
+Max-Forwards: <integer>
 ## 示例
-```plain
+
+```http
+Max-Forwards: 0
 Max-Forwards: 10
 ```
 
@@ -22,8 +44,8 @@ Max-Forwards: 10
 
 ## 浏览器兼容性
 
-{{Compat}}
+此功能不是针对浏览器实现的。
 
-## 相关内容
-- [Trace](/zh-CN/docs/Web/HTTP/Methods/TRACE)
-- [Options](/zh-CN/docs/Web/HTTP/Methods/OPTIONS)
+## 参见
+
+- The HTTP [`TRACE`](/zh-CN/docs/Web/HTTP/Methods/TRACE) 方法
