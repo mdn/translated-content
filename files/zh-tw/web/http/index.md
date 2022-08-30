@@ -37,7 +37,7 @@ slug: Web/HTTP
 - [HTTP Headers](/zh-TW/docs/Web/HTTP/Headers)
   - : HTTP 消息頭用於描述資源或服務器或客戶端的行為。可以使用 `X-` 前綴添加自定義專有頭。其他的可以在 [IANA registry](https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers) 中找到，其原始定義在 [RFC 4229](https://tools.ietf.org/html/rfc4229)。 IANA 同時也維護著一份 [registry of proposed new HTTP message headers](https://www.iana.org/assignments/message-headers/message-headers.xhtml#prov-headers)。
 - [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Methods)
-  - : 透過 HTTP 有幾種不同操作方法：{{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}，或是一些不太常見的請求方式，像是：{{HTTPMethod("OPTIONS")}}, {{HTTPMethod("DELETE")}}, or {{HTTPMethod("TRACE")}}.
+  - : 透過 HTTP 有幾種不同操作方法：{{HTTPMethod("GET")}}、{{HTTPMethod("POST")}}，或是較少見的請求方法，如 {{HTTPMethod("OPTIONS")}}、{{HTTPMethod("DELETE")}}、或 {{HTTPMethod("TRACE")}}。
 - [HTTP 狀態回應碼](/zh-TW/docs/Web/HTTP/Status)
   - : HTTP 狀態碼用來表示特定的 HTTP 請求是否已成功完成。回應分為五類：資訊回應、成功回應、重定向、用戶端錯誤、以及伺服器錯誤。
 - [CSP 指令](/zh-TW/docs/Web/HTTP/Headers/Content-Security-Policy)
