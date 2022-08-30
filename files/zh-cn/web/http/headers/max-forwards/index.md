@@ -24,5 +24,6 @@ Max-Forwards: 10
 
 {{Compat}}
 
-## 参考
+## 相关内容
 - [Trace](/zh-CN/docs/Web/HTTP/Methods/TRACE)
+- [Options](/zh-CN/docs/Web/HTTP/Methods/OPTIONS)
