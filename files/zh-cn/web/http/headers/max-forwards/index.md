@@ -4,19 +4,19 @@ slug: Web/HTTP/Headers/Max-Forwards
 ---
 {{HTTPSidebar}}
 
-The **`Max-Forwards`** 请求头被用于限制 [`TRACE`](/zh-CN/docs/Web/HTTP/Methods/TRACE) 方法可经过的服务器（通常指代理服务器）数目。 该字段以十进制整数形式指定可经过的服务器最大数目。服务器在进行下一个 [`TRACE`](/zh-CN/docs/Web/HTTP/Methods/TRACE) 请求之前，`Max-Forwards` 的值将减 1 并重新赋值，直到服务器接收到 `Max-Forwards` 的值为 0 的请求时，则不再进行转发，而是直接返回一个 `200 OK` 的响应。 
+**`Max-Forwards`** 请求标头被用于限制 [`TRACE`](/zh-CN/docs/Web/HTTP/Methods/TRACE) 方法可经过的服务器（通常指代理服务器）数目。 它的值是一个整数，指定可经过的服务器最大数目。服务器在转发 `TRACE` 请求之前，将递减 `Max-Forwards` 的值，直到到达目标服务器，或服务器接收到 `Max-Forwards` 的值为 0 的请求。而后直接返回一个 `200 OK` 的响应（可以包含一些标头）。
 
-如果 [`TRACE`](/zh-CN/docs/Web/HTTP/Methods/TRACE) 请求中没有 `Max-Forwards` 请求头，就可以认为，不限制可经过的服务器最大数目。
+如果 `TRACE` 请求中没有 `Max-Forwards` 标头，就可以认为，不限制可经过的服务器最大数目。
 
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Request header")}}</td>
+      <th scope="row">标头类型</th>
+      <td>{{Glossary("Request header", "请求标头")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+      <td>否</td>
     </tr>
   </tbody>
 </table>
@@ -40,7 +40,7 @@ Max-Forwards: 10
 
 ## 浏览器兼容性
 
-此功能不是针对浏览器实现的。
+此特性既不针对浏览器，也不在浏览器中实现。
 
 ## 参见
 
