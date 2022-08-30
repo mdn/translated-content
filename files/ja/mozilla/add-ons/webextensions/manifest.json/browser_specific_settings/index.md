@@ -57,7 +57,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 
 拡張機能 ID は次のどれかでなければなりません:
 
-- [GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier "Generating_GUIDs")
+- [GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)
 - メールアドレスのような文字列フォーマット: `extensionname@example.org`
 
 後者のフォーマットは生成したり扱うのが簡単です。本当のメールアドレスをここで使うと SPAM を呼びかねないのに気を払ってください。

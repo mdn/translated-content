@@ -94,7 +94,7 @@ Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日に�
 - {{ HTMLElement("canvas") }} エレメントの {{ htmlattrxref("width", "canvas") }} と {{ htmlattrxref("height", "canvas") }} 属性は今回から符号付き整数から符合なし整数に変わり、IDL におけるリフレクトを行います（[`HTMLCanvasElement`](/ja/docs/DOM/HTMLCanvasElement) をご覧ください）。
 - `nsIAppStartup2` と `nsIAppStartup_MOZILLA_2_0` インターフェースは`nsIAppStartup` インターフェースに統合されました。
 - `nsIDocShell_MOZILLA_2_0_BRANCH は` `nsIDocShell` インターフェースに統合されました。
-- ` nsIFocusManager_MOZILLA_2_0_BRANCH インターフェースは ``nsIFocusManager ` インターフェースに統合されました。
+- `nsIFocusManager_MOZILLA_2_0_BRANCH` インターフェースは `nsIFocusManager` インターフェースに統合されました。
 - `nsIHTMLEditor_MOZILLA_2_0_BRANCH` インターフェースは `nsIHTMLEditor` インターフェースに統合されました。
 
 #### 新しいインターフェース
@@ -112,11 +112,11 @@ Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日に�
 
 ### デバッグの補助
 
-- 新しい[` DebugOnly<T>`](/ja/docs/Namespace/Mozilla/DebugOnly%3CT%3E) ヘルパーはデバッグモードにおけるビルドにおいてのみ変数の定義を可能にしました。
+- 新しい [`DebugOnly<T>`](/ja/docs/Namespace/Mozilla/DebugOnly%3CT%3E) ヘルパーはデバッグモードにおけるビルドにおいてのみ変数の定義を可能にしました。
 
 ### JavaScript API (SpiderMonkey)
 
-- [`jsdouble`](/ja/docs/SpiderMonkey/JSAPI_Reference/jsdouble)` の値を C の符号付き整数型と符合なし整数型に変換するために JS_DoubleToInt32()` と [`JS_DoubleToUint32()`](/ja/docs/SpiderMonkey/JSAPI_Reference/JS_DoubleToInt32) が追加されました。
+- [`jsdouble`](/ja/docs/SpiderMonkey/JSAPI_Reference/jsdouble) の値を C の符号付き整数型と符合なし整数型に変換するために `JS_DoubleToInt32()` と [`JS_DoubleToUint32()`](/ja/docs/SpiderMonkey/JSAPI_Reference/JS_DoubleToInt32) が追加されました。
 
 ### ビルドシステムの変更点
 

@@ -45,8 +45,8 @@ Firefox 3 は、翻訳された説明文を指定するための新しいプロ�
 
 #### DOM
 
-外部ドキュメントからのノードは、現在のドキュメントに挿入する前に [`document.importNode()`](/ja/docs/Web/API/Document/importNode "外部ドキュメントからノードのコピーを作成し、現在のドキュメントに挿入できるようにします。") を使ってクローンを作る (あるいは
-[`document.adoptNode()`](/ja/docs/Web/API/Document/adoptNode "外部ドキュメントからノードを取り込みます。ノードとそのサブツリーは、(もしあれば) 元あったドキュメントから削除され、ownerDocument が現在のドキュメントに変更されます。そして、そのノードが現在のドキュメントに挿入できるようになります。") を使って取り込む) べきです。[`Node.ownerDocument`](/ja/docs/Web/API/Node/ownerDocument "ownerDocument プロパティは、指定ノードを内包するノードツリーのトップレベルのドキュメントオブジェクトを返します。") 問題の詳細については
+外部ドキュメントからのノードは、現在のドキュメントに挿入する前に [`document.importNode()`](/ja/docs/Web/API/Document/importNode) を使ってクローンを作る (あるいは
+[`document.adoptNode()`](/ja/docs/Web/API/Document/adoptNode) を使って取り込む) べきです。[`Node.ownerDocument`](/ja/docs/Web/API/Node/ownerDocument) 問題の詳細については
 [W3C DOM FAQ](http://www.w3.org/DOM/faq.html#ownerdoc) を参照してください。
 
 Firefox では現在このルールを強制していません。Firefox 3 の開発中には強制していた時期もありましたが、このルールを強制すると多くのサイトが機能しなくなってしまうため取りやめになりました。
@@ -125,15 +125,15 @@ _もし、拡張機能を Firefox 3 対応にするために必要な小さい�
 
 - [`chrome://browser/base/utilityOverlay.js`]() は、セキュリティ上の理由からサポートされなくなりました。これまでこのスクリプトを利用していた場合は、[`chrome://browser/content/utilityOverlay.js`]() へ切り替えてください。
 - [`nsIAboutModule`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAboutModule) の実装には、`getURIFlags` メソッドのサポートが必要になりました。詳しくは [nsIAboutModule.idl](https://dxr.mozilla.org/mozilla-central/source/netwerk/protocol/about/public/nsIAboutModule.idl) を参照してください。これは新しい `about:` URI を提供する拡張機能に影響します ([バグ 337746](https://bugzilla.mozilla.org/show_bug.cgi?id=337746 'FIXED: [FIX]Move "safe about" hardcoding out of security manager'))。
-- [`tabbrowser`](/ja/docs/Mozilla/Tech/XUL/tabbrowser "tabbrowser") 要素は「ツールキット」の一部ではなくなりました ([バグ 339964](https://bugzilla.mozilla.org/show_bug.cgi?id=339964 "FIXED: move tabbrowser.xml out of mozilla/toolkit and into mozilla/browser"))。このため、この要素は今後 XUL アプリケーションや拡張機能の中では利用できません。ただし、Firefox のメインウィンドウ (browser.xul) では今後も使われます。
+- [`tabbrowser`](/ja/docs/Mozilla/Tech/XUL/tabbrowser) 要素は「ツールキット」の一部ではなくなりました ([バグ 339964](https://bugzilla.mozilla.org/show_bug.cgi?id=339964))。このため、この要素は今後 XUL アプリケーションや拡張機能の中では利用できません。ただし、Firefox のメインウィンドウ (browser.xul) では今後も使われます。
 - [nsISupports プロキシ](/ja/nsISupports_proxies) の変更と、おそらくスレッド関連インタフェースへの変更については、ドキュメントを用意する必要があります。
-- XUL ファイル内で `<?xml-stylesheet ?>` などの XML 処理命令を用いている場合、[バグ 319654](https://bugzilla.mozilla.org/show_bug.cgi?id=319654 "FIXED: Processing instructions in XUL are not added to the content model") で行われた以下の変更に注意してください。
+- XUL ファイル内で `<?xml-stylesheet ?>` などの XML 処理命令を用いている場合、[バグ 319654](https://bugzilla.mozilla.org/show_bug.cgi?id=319654) で行われた以下の変更に注意してください。
 
-  1.  XML PI が XUL ドキュメントの DOM に追加されました。これは、[`document.firstChild`](/ja/docs/Web/API/Document/firstChild "この項目についての文書はまだ書かれていません。書いてみませんか？") が必ずしもルート要素を返すとは限らない、ということを意味します。スクリプト内でルートドキュメントを得るには、代わりに [`document.documentElement`](/ja/docs/Web/API/Document/documentElement "Document.documentElement は、その document のルート要素 (例えば、 HTML 文書の場合は <html> 要素) である Element を返します。") を用いてください。
-  2.  `<?xml-stylesheet ?>` と `<?xul-overlay ?>` 処理命令は、ドキュメントの前文以外の場所に書かれた場合、動作しなくなりました。
+  1. XML PI が XUL ドキュメントの DOM に追加されました。これは、[`document.firstChild`](/ja/docs/Web/API/Document/firstChild) が必ずしもルート要素を返すとは限らない、ということを意味します。スクリプト内でルートドキュメントを得るには、代わりに [`document.documentElement`](/ja/docs/Web/API/Document/documentElement) を用いてください。
+  2. `<?xml-stylesheet ?>` と `<?xul-overlay ?>` 処理命令は、ドキュメントの前文以外の場所に書かれた場合、動作しなくなりました。
 
-- `window.addEventListener("load", myFunc, true)` が、Web コンテンツが読み込まれた際 (ブラウザのページ読み込み時) に呼び出されなくなりました。これは、inner ウィンドウと outer ウィンドウの関係が変わったことによります ([バグ 296639](https://bugzilla.mozilla.org/show_bug.cgi?id=296639 "FIXED: Split windows into an inner and outer object"))。簡単な修正方法は、[ここ](/ja/Code_snippets/Tabbed_browser#Detecting_page_load) に書かれているように `gBrowser.addEventListener("load", myFunc, true)` を使うことです。この方法は Firefox 2 でも有効です。
+- `window.addEventListener("load", myFunc, true)` が、Web コンテンツが読み込まれた際 (ブラウザのページ読み込み時) に呼び出されなくなりました。これは、inner ウィンドウと outer ウィンドウの関係が変わったことによります ([バグ 296639](https://bugzilla.mozilla.org/show_bug.cgi?id=296639))。簡単な修正方法は、[ここ](/ja/Code_snippets/Tabbed_browser#Detecting_page_load) に書かれているように `gBrowser.addEventListener("load", myFunc, true)` を使うことです。この方法は Firefox 2 でも有効です。
 - `content.window.getSelection()` は、文字列を返す、非推奨となった `content.document.getSelection()` とは異なり、オブジェクトを返します (`toString()` を使えば文字列に変換できます)。
 - `event.preventBubble()` は Firefox 3 で非推奨となり、Firefox 3 で削除されました。Firefox 2 でも動作する [`event.stopPropagation()`](/ja/DOM/event.stopPropagation) を使ってください。
-- `setTimeout()` を使って開始されるタイマーは、[バグ 52209](https://bugzilla.mozilla.org/show_bug.cgi?id=52209 "FIXED: JS timers can fire while a modal dialog is open") のために行われた修正によって、モーダル形式のウィンドウではブロックされるようになりました。代わりに [`nsITimer`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITimer) を使ってください。
+- `setTimeout()` を使って開始されるタイマーは、[バグ 52209](https://bugzilla.mozilla.org/show_bug.cgi?id=52209) のために行われた修正によって、モーダル形式のウィンドウではブロックされるようになりました。代わりに [`nsITimer`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITimer) を使ってください。
 - 信頼できないソース（例：Web サイト）が拡張のクロームにアクセスできるようにする必要がある場合は、新しい [`contentaccessible` フラグ](../../../../ja/Chrome_Registration#contentaccessible) を使わなければなりません。

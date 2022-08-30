@@ -20,7 +20,7 @@ var removing = browser.browsingData.removeCache(
 
 ### 引数
 
-- `removalOptions `{{optional_inline}}
+- `removalOptions` {{optional_inline}}
   - : {{WebExtAPIRef("browsingData.RemovalOptions")}} オブジェクト このパラメータは無視されます。
 
 ### 返り値

@@ -9,7 +9,7 @@ original_slug: Updating_web_applications_for_Firefox_3
 
 ## DOM の変更
 
-外部ドキュメントからのノードは、現在のドキュメントに挿入する前に [`document.importNode()`](/ja/docs/Web/API/Document/importNode "外部ドキュメントからノードのコピーを作成し、現在のドキュメントに挿入できるようにします。") を使ってクローンを作る (あるいは [`document.adoptNode()`](/ja/docs/Web/API/Document/adoptNode "外部ドキュメントからノードを取り込みます。ノードとそのサブツリーは、(もしあれば) 元あったドキュメントから削除され、ownerDocument が現在のドキュメントに変更されます。そして、そのノードが現在のドキュメントに挿入できるようになります。") を使って取り込む) べきです。[`Node.ownerDocument`](/ja/docs/Web/API/Node/ownerDocument "ownerDocument プロパティは、指定ノードを内包するノードツリーのトップレベルのドキュメントオブジェクトを返します。") 問題の詳細については [W3C DOM FAQ](https://www.w3.org/DOM/faq.html#ownerdoc) を参照してください。
+外部ドキュメントからのノードは、現在のドキュメントに挿入する前に [`document.importNode()`](/ja/docs/Web/API/Document/importNode) を使ってクローンを作る (あるいは [`document.adoptNode()`](/ja/docs/Web/API/Document/adoptNode) を使って取り込む) べきです。[`Node.ownerDocument`](/ja/docs/Web/API/Node/ownerDocument) 問題の詳細については [W3C DOM FAQ](https://www.w3.org/DOM/faq.html#ownerdoc) を参照してください。
 
 Firefox では現在このルールを強制していません。Firefox 3 の開発中には強制していた時期もありましたが、このルールを強制すると多くのサイトが機能しなくなってしまうため取りやめになりました。
 将来的な互換性を高めるため、ウェブ開発者にはこのルールに従ってコードを修正することを推奨します。
@@ -80,7 +80,7 @@ Firefox のこれまでのバージョンでは、ユーザがファイルをア
 
 ### file: URI の同一オリジンポリシーの変更
 
-file: URI の同一オリジンポリシーが Firefox 3 で変更されました。これはコンテンツに影響する可能性があります。詳しくは [file: URI の同一オリジンポリシー](/ja/docs/Same-origin_policy_for_file:_URIs "Same-origin policy for file: URIs")を参照してください。
+file: URI の同一オリジンポリシーが Firefox 3 で変更されました。これはコンテンツに影響する可能性があります。詳しくは [file: URI の同一オリジンポリシー](/ja/docs/Same-origin_policy_for_file:_URIs)を参照してください。
 
 ## JavaScript の変更
 
@@ -89,5 +89,5 @@ Firefox 3 は [JavaScript 1.8](/ja/docs/New_in_JavaScript_1.8) をサポート�
 ## 関連情報
 
 - [開発者向け Firefox 3](/ja/docs/Mozilla/Firefox/Releases/3)
-- [JavaScript 1.8 の新機能](/ja/docs/New_in_JavaScript_1.8 "New_in_JavaScript_1.8")
+- [JavaScript 1.8 の新機能](/ja/docs/New_in_JavaScript_1.8)
 - [Updating extensions for Firefox 3 のための拡張機能の更新](/ja/docs/Mozilla/Firefox/Releases/3/Updating_extensions)

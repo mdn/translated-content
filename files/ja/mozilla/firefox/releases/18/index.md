@@ -8,13 +8,13 @@ Gecko 18 を搭載した Firefox 18 は米国時間 2013 年 1 月 8 日にリ�
 
 ### HTML
 
-- {{HTMLElement("ol")}} 要素の {{htmlattrxref("reversed","ol")}}` 属性をサポートしました。`({{bug("601912")}})
+- {{HTMLElement("ol")}} 要素の {{htmlattrxref("reversed","ol")}} 属性をサポートしました。({{bug("601912")}})
 - {{HTMLElement("link")}} 要素の {{htmlattrxref("crossorigin","link")}} 属性をサポートしました。({{bug("786564")}})
 
 ### CSS
 
 - {{cssxref("min-width")}} と {{cssxref("min-height")}} の初期値が `auto` へ変更されました。(これは flex アイテムにのみ効果があります。なぜなら、他のアイテムでは従来の初期値である `0` になるためです) ({{bug("763689")}})
-- [CSS animations ](/ja/docs/CSS/Using_CSS_animations)にページ作者 CSS における `!important` が適用されるようになりました。 ({{bug("783714")}})
+- [CSS animations](/ja/docs/CSS/Using_CSS_animations) にページ作者 CSS における `!important` が適用されるようになりました。 ({{bug("783714")}})
 - {{cssxref("background")}} プロパティに CSS3 の{{cssxref("background-size")}} プロパティの指定が追加されました。 ({{bug("570326")}})
 - CSS Flexbox モジュールの初期実装が導入されました。デフォルトでは無効化されていますが、`layout.css.flexbox.enabled` 設定を true に設定すると有効化されます。({{bug('666041')}})
 
@@ -60,7 +60,7 @@ Gecko 18 を搭載した Firefox 18 は米国時間 2013 年 1 月 8 日にリ�
 - `nsIEditor`
   - : `addEditorObserver()` が削除されました。代わりに `setEditorObserver()` を使ってください。`removeEditorObserver()` は `nsIEditorObserver` パラメータを受け取らなくなります。({{bug("785091")}})
 - `nsIHttpProtocolHandler`
-  - : `http-on-modify-request` オブザーバが `nsIChannel.asyncOpen() `中に同期的に呼ばれる保証はなくなります。`asyncOpen()` 中に呼び出される必要のあるオブザーバには新しく `http-on-opening-request` オブザーバトピックが追加されています`。詳細は`({{bug("800799")}})をご覧ください。
+  - : `http-on-modify-request` オブザーバが `nsIChannel.asyncOpen()` 中に同期的に呼ばれる保証はなくなります。`asyncOpen()` 中に呼び出される必要のあるオブザーバには新しく `http-on-opening-request` オブザーバトピックが追加されています`。詳細は`({{bug("800799")}})をご覧ください。
 
 #### 新しいインターフェース
 

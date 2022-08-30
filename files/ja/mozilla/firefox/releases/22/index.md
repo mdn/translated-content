@@ -44,7 +44,7 @@ Gecko 22 を搭載した Firefox 22 は米国時間 2013 年 6 月 25 日にリ�
 ## アドオン開発者と Mozilla 開発者向けの変更点
 
 - `nsITreeView` のメソッド `nsITreeView.getCellProperties`、`nsITreeView.getColumnProperties` および `nsITreeView.getRowProperties` から、引数 `properties` を削除しました。これらのメソッドは空白で区切られたプロパティ名の文字列を返すようになります。({{bug('407956')}})
-- `inIDOMUtils.getCSSPropertyNames` メソッドを実装しました。これはサポートしているすべての [CSS プロパティ](/ja/docs/CSS/CSS_Reference "CSS/CSS_Reference")名を返します。
+- `inIDOMUtils.getCSSPropertyNames` メソッドを実装しました。これはサポートしているすべての [CSS プロパティ](/ja/docs/CSS/CSS_Reference)名を返します。
 - さらなる変更点については [こちら](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/) ([日本語訳](https://dev.mozilla.jp/2013/06/firefox-22-addon-compatibility/)) をご覧ください。
 
 ### Firefox 開発ツール

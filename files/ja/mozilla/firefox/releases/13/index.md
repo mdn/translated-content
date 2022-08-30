@@ -22,8 +22,8 @@ Firefox 13 は 米国時間 2012 年 6 月 5 日にリリースされました�
 
 ### JavaScript
 
-- ECMAScript 6 の [`for..of`](/ja/JavaScript/Reference/Statements/for...of "for...of") 構造をサポートしました。
-- ECMAScript 6 の [`Map`](/ja/JavaScript/Reference/Global_Objects/Map "en/JavaScript/Reference/Global_Objects/Map") と [`Set`](/ja/JavaScript/Reference/Global_Objects/Set "en/JavaScript/Reference/Global_Objects/Set") オブジェクトの実験的サポートを実装しました。
+- ECMAScript 6 の [`for..of`](/ja/JavaScript/Reference/Statements/for...of) 構造をサポートしました。
+- ECMAScript 6 の [`Map`](/ja/JavaScript/Reference/Global_Objects/Map) と [`Set`](/ja/JavaScript/Reference/Global_Objects/Set) オブジェクトの実験的サポートを実装しました。
 
 ### DOM
 
@@ -42,12 +42,12 @@ Firefox 13 は 米国時間 2012 年 6 月 5 日にリリースされました�
 
 ### UA 文字列
 
-- Android 版 Firefox は、フォームファクタを示すため [UserAgent 文字列に Tablet または Mobile のトークンを含むようになり](/ja/Gecko_user_agent_string_reference#Mobile_and_Tablet_indicators "en/Gecko_user_agent_string_reference#Mobile_and_Tablet_indicators")、Fennec トークンは持たなくなりました。また "Gecko/" に続く数値は、フリーズした日付から Gecko のバージョン番号に変わります。
+- Android 版 Firefox は、フォームファクタを示すため [UserAgent 文字列に Tablet または Mobile のトークンを含むようになり](/ja/Gecko_user_agent_string_reference#Mobile_and_Tablet_indicators)、Fennec トークンは持たなくなりました。また "Gecko/" に続く数値は、フリーズした日付から Gecko のバージョン番号に変わります。
 - UA 文字列では、Gecko のパッチ番号やリリース状況をバージョン番号で公開しないようになりました。バージョン番号は常に "X.Y" という形式になり、X はメジャーリリース番号、Y はマイナー番号を表します。例えば、"13.0" や "14.1" となります。"14.0.1b1" のようにはなりません。
 
 ### SVG
 
-- {{ domxref("SVGStringList") }} DOM インタフェースが [`Array`](/ja/JavaScript/Reference/Global_Objects/Array "Array") と同様に添字を利用可能になりました。{{ bug("722071") }} をご覧ください。
+- {{ domxref("SVGStringList") }} DOM インタフェースが [`Array`](/ja/JavaScript/Reference/Global_Objects/Array) と同様に添字を利用可能になりました。{{ bug("722071") }} をご覧ください。
 
 ### WebGL
 
@@ -56,7 +56,7 @@ Firefox 13 は 米国時間 2012 年 6 月 5 日にリリースされました�
 ### MathML
 
 - {{ MathMLElement("mtable") }} 要素で `width` 属性をサポートしました ({{ bug("722880") }})。
-- 数学的なテキストで [MathJax fonts](http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/) をデフォルトフォントとして使用するようになりました。詳しくは [Fonts for Mozilla's MathML engine](/ja/Mozilla_MathML_Project/Fonts "Fonts for Mozilla's MathML engine") をご覧ください。
+- 数学的なテキストで [MathJax fonts](http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/) をデフォルトフォントとして使用するようになりました。詳しくは [Fonts for Mozilla's MathML engine](/ja/Mozilla_MathML_Project/Fonts) をご覧ください。
 
 ### Developer tools
 
@@ -66,13 +66,13 @@ Firefox 13 は 米国時間 2012 年 6 月 5 日にリリースされました�
 
 #### スタイルパネルの改良
 
-- [スタイルパネル](/ja/Tools/Page_Inspector/Style_panel "Style panel") でルールの見出しをクリックすると、対応する CSS を [スタイルエディタ](/ja/Tools/Style_Editor "Style Editor") で開くようになりました。
-- [スタイルパネル](/ja/Tools/Page_Inspector/Style_panel "Style panel") でルールを右クリックすると、そのルールをクリップボードへコピーできるようになりました。
+- [スタイルパネル](/ja/Tools/Page_Inspector/Style_panel) でルールの見出しをクリックすると、対応する CSS を [スタイルエディタ](/ja/Tools/Style_Editor) で開くようになりました。
+- [スタイルパネル](/ja/Tools/Page_Inspector/Style_panel) でルールを右クリックすると、そのルールをクリップボードへコピーできるようになりました。
 - 未知のプロパティ名や誤った値を入力すると、プロパティの隣に警告アイコンを表示します。
 
 #### スクラッチパッドの改良
 
-- [スクラッチパッド](/ja/Tools/Scratchpad "Scratchpad") のヘルプメニューに、MDN のスクラッチパッドに関する文書を開くための項目を追加しました。
+- [スクラッチパッド](/ja/Tools/Scratchpad) のヘルプメニューに、MDN のスクラッチパッドに関する文書を開くための項目を追加しました。
 
 ## Mozilla 開発者とアドオン開発者向けの変更点
 
@@ -87,13 +87,13 @@ Firefox 13 より、Windows 版の Firefox は Windows XP Service Pack 2 以降�
 - ソースエディタの API に、ダーティフラグのサポートを追加しました。
 - ソースエディタは、Orion を利用せずに {{ HTMLElement("textarea") }} へフォールバックする動作をサポートしなくなりました。
 - エディタが focus と blue のイベントを公開するようになりました。
-- [`getIndentationString()`](/ja/JavaScript_code_modules/source-editor.jsm#getIndentationString%28%29 "en/JavaScript_code_modules/source-editor.jsm#getIndentationString%28%29") メソッドを追加しました。これは、エディタでテキストのインデントに使用する文字を返します。
+- [`getIndentationString()`](/ja/JavaScript_code_modules/source-editor.jsm#getIndentationString%28%29) メソッドを追加しました。これは、エディタでテキストのインデントに使用する文字を返します。
 - ソースエディタで、ブレークポイントのリストの管理とブレークポイントのオン・オフを切り替えるユーザインタフェースの表示をサポートしました。ただし実際は、ブレークポイントを実装していません。そのためのデバッガのコードを記述するのはあなた次第です。
 - `highlightCurrentLine` 設定オプションを用いて、カレント行をハイライトする機能をサポートしました。
 
 ### ARIA
 
-- CSS プロパティ {{ cssxref("margin-left") }}、{{ cssxref("margin-right") }}、{{ cssxref("margin-top") }}、および {{ cssxref("margin-bottom") }} はすべて、同じ名前で ARIA オブジェクトに反映されます。詳しくは [Gecko object attributes](/ja/Accessibility/AT-APIs/Gecko/Attrs "Gecko Object Attributes") をご覧ください。
+- CSS プロパティ {{ cssxref("margin-left") }}、{{ cssxref("margin-right") }}、{{ cssxref("margin-top") }}、および {{ cssxref("margin-bottom") }} はすべて、同じ名前で ARIA オブジェクトに反映されます。詳しくは [Gecko object attributes](/ja/Accessibility/AT-APIs/Gecko/Attrs) をご覧ください。
 
 ### インタフェースの変更
 

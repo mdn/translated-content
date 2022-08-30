@@ -56,6 +56,6 @@ getAlarms.then(gotAll);
 
 {{WebExtExamples}}
 
-> **Note:** 
+> **Note:**
 >
 > この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API に基づいています。

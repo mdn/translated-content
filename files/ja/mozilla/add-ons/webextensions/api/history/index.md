@@ -6,7 +6,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/history
 
 ブラウザー履歴とやりとりする `history` API を使用します。
 
-> **Note:** downloads は [`HistoryItem`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem "A HistoryItem object provides information about a page in the browser history.") オブジェクトとして扱われるのに注意します。このため、ダウンロードのために [`history.onVisited`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited "Fired each time the user visits a page. A history.HistoryItem object is passed to the listener. This event fires before the page has loaded.") も発火します。
+> **Note:** downloads は [`HistoryItem`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem) オブジェクトとして扱われるのに注意します。このため、ダウンロードのために [`history.onVisited`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited) も発火します。
 
 ブラウザー履歴はユーザーが訪れたページの時間順の記録です。history API では次の事ができます:
 
@@ -34,7 +34,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/history
 ## 関数
 
 - {{WebExtAPIRef("history.search()")}}
-  - : ブラウザー履歴を検索して、所与の条件にマッチする [`history.HistoryItem`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/History/HistoryItem "A HistoryItem object provides information about one result from a history query.") オブジェクトを得る
+  - : ブラウザー履歴を検索して、所与の条件にマッチする [`history.HistoryItem`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/History/HistoryItem) オブジェクトを得る
 - {{WebExtAPIRef("history.getVisits()")}}
   - : 所定のページへの訪問についての情報を取得する
 - {{WebExtAPIRef("history.addUrl()")}}

@@ -9,7 +9,7 @@ Gecko 23 を搭載した Firefox 23 は米国時間 2013 年 8 月 6 日にリ�
 ### セキュリティ
 
 - Mixed content のブロック。Firefox はセキュアな (https) ページでセキュアでない (http) リソースを読み込みません ({{bug(834836)}})。
-- [CSP](/ja/docs/Security/CSP "Security/CSP") 1.0 ポリシーの標準的な構文を実装して、デフォルトで施行します。
+- [CSP](/ja/docs/Security/CSP) 1.0 ポリシーの標準的な構文を実装して、デフォルトで施行します。
 
 ### 開発者ツール
 
@@ -24,7 +24,7 @@ Gecko 23 を搭載した Firefox 23 は米国時間 2013 年 8 月 6 日にリ�
 
 ### JavaScript
 
-- [`Object.defineProperty`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty "Web/JavaScript/Reference/Global_Objects/Object/defineProperty") メソッドが、[`Array`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array "Web/JavaScript/Reference/Global_Objects/Array") オブジェクトの `length` プロパティの再定義に使用できるようになりました。
+- [`Object.defineProperty`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) メソッドが、[`Array`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array) オブジェクトの `length` プロパティの再定義に使用できるようになりました。
 - ウィンドウの移動やコンテキストメニューの置き換えを含む、JavaScript を無効化する選択項目を削除しました。about:config で設定項目 "javascript.enabled" をダブルクリックすることで、JavaScript を無効化できます。
 
 ### DOM

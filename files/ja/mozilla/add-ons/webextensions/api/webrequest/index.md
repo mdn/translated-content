@@ -65,7 +65,7 @@ TLS ハンドシェイクについて詳しく読むことができますが、�
 
 {{WebExtAPIRef("webRequest.filterResponseData")}} にリクエスト ID を渡すことで得られる {{WebExtAPIRef("webRequest.StreamFilter")}} を使うと、ブラウザーが受け取った HTTP リクエストのレスポンス本文を検査したり修正したりすることができます。
 
-そのためには、"webRequestBlocking" パーミッションと "webRequest" [API パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) 、さらに修正したい対象のリクエスト URL にあてはまる [host permission ](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)権限を得ている必要があります。
+そのためには、"webRequestBlocking" パーミッションと "webRequest" [API パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) 、さらに修正したい対象のリクエスト URL にあてはまる [host permission](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) 権限を得ている必要があります。
 
 ## 型
 
@@ -89,7 +89,7 @@ TLS ハンドシェイクについて詳しく読むことができますが、�
 ## プロパティ
 
 - {{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}
-  - : 10 分間に [`handlerBehaviorChanged()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged "Suppose an add-on's job is to block web requests against a pattern, and the following scenario happens:") を最大限呼べる回数。
+  - : 10 分間に [`handlerBehaviorChanged()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged) を最大限呼べる回数。
 
 ## メソッド
 

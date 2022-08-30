@@ -31,9 +31,9 @@ Firefox がページをキャッシュしない場合があります。ページ
 
 ウェブページの標準的な挙動は次のとおりです。
 
-1.  ユーザがページにナビゲートする。
-2.  ページロード時にインラインスクリプトが実行される。
-3.  ページがロードされると `onload` ハンドラが実行される。
+1. ユーザがページにナビゲートする。
+2. ページロード時にインラインスクリプトが実行される。
+3. ページがロードされると `onload` ハンドラが実行される。
 
 4 ステップ目があるページもあります。ページが `unload` ハンドラを使用していると、ユーザがそのページから去るナビゲートをするときにそれが実行されます。`unload` ハンドラが存在しているとそのページはキャッシュされません。
 
@@ -80,7 +80,7 @@ Firefox 1.5 は、そのページの初回ロード時と同じ順番でロー�
 - ページはロードされるたびに現在日時を算出し、表示する。この計算には秒とミリ秒が含まれるため、機能のテストが簡単になる。
 - ページの初回ロード時にカーソルがフォームの Name フィールドに移動する。Firefox 1.5 では、ユーザがそのページに戻るナビゲートをすると、カーソルはユーザがそのページから去るナビゲートをしたときにあったフィールドに残る。他のブラウザではカーソルは Name フィールドに戻る。
 
-```
+```html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
 <HTML>
@@ -88,34 +88,34 @@ Firefox 1.5 は、そのページの初回ロード時と同じ順番でロー�
 <title>Order query : Firefox 1.5 Example</title>
 <style type="text/css">
 body, p {
-	font-family: Verdana, sans-serif;
-	font-size: 12px;
-   	}
+  font-family: Verdana, sans-serif;
+  font-size: 12px;
+     }
 </style>
 <script type="text/javascript">
 function onLoad() {
-	loadOnlyFirst();
-	onPageShow();
+  loadOnlyFirst();
+  onPageShow();
 }
 
 function onPageShow() {
 // 現在時刻の算出
 
-	var currentTime= new Date();
-	var year=currentTime.getFullYear();
-	var month=currentTime.getMonth()+1;
-	var day=currentTime.getDate();
-	var hour=currentTime.getHours();
-	var min=currentTime.getMinutes();
-	var sec=currentTime.getSeconds();
-	var mil=currentTime.getMilliseconds();
-	var displayTime = (month + "/" + day + "/" + year + " " +
-		hour + ":" + min + ":" + sec + ":" + mil);
-	document.getElementById("timefield").value=displayTime;
+  var currentTime= new Date();
+  var year=currentTime.getFullYear();
+  var month=currentTime.getMonth()+1;
+  var day=currentTime.getDate();
+  var hour=currentTime.getHours();
+  var min=currentTime.getMinutes();
+  var sec=currentTime.getSeconds();
+  var mil=currentTime.getMilliseconds();
+  var displayTime = (month + "/" + day + "/" + year + " " +
+    hour + ":" + min + ":" + sec + ":" + mil);
+  document.getElementById("timefield").value=displayTime;
 }
 
 function loadOnlyFirst() {
-	document.zipForm.name.focus();
+  document.zipForm.name.focus();
 }
 </script>
 </head>
@@ -139,27 +139,27 @@ function loadOnlyFirst() {
 
 一方、上記のページが `pageshow` イベントをリスンせず、すべての計算を `load` イベントの一部として扱う（そして代わりに下のサンプルコード片で置き換える）ものだとすると、ユーザがそのページから去るナビゲーションをするとカーソル位置も日時も Firefox 1.5 にキャッシュされます。ユーザがそのページに戻ると、キャッシュされた日時が表示されます。
 
-```
+```html
 <script>
 function onLoad() {
-	loadOnlyFirst();
+  loadOnlyFirst();
 
 // 現在時刻の算出
-	var currentTime= new Date();
-	var year = currentTime.getFullYear();
-	var month = currentTime.getMonth()+1;
-	var day = currentTime.getDate();
-	var hour=currentTime.getHours();
-	var min=currentTime.getMinutes();
-	var sec=currentTime.getSeconds();
-	var mil=currentTime.getMilliseconds();
-	var displayTime = (month + "/" + day + "/" + year + " " +
-		hour + ":" + min + ":" + sec + ":" + mil);
-	document.getElementById("timefield").value=displayTime;
+  var currentTime= new Date();
+  var year = currentTime.getFullYear();
+  var month = currentTime.getMonth()+1;
+  var day = currentTime.getDate();
+  var hour=currentTime.getHours();
+  var min=currentTime.getMinutes();
+  var sec=currentTime.getSeconds();
+  var mil=currentTime.getMilliseconds();
+  var displayTime = (month + "/" + day + "/" + year + " " +
+    hour + ":" + min + ":" + sec + ":" + mil);
+  document.getElementById("timefield").value=displayTime;
 }
 
 function loadOnlyFirst() {
-	document.zipForm.name.focus();
+  document.zipForm.name.focus();
 }
 </script>
 </head>

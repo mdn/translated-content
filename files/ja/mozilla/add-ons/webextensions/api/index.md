@@ -41,7 +41,7 @@ Firefox は `chrome` 名前空間の下でコールバックを使う API も実
 
 Microsoft Edge は `browser` 名前空間を使いますが、promise ベースの非同期 API はサポートされていません。Edge では当面、非同期 API はコールバックを使うのが必須です。
 
-すべてのブラウザーがすべての API をサポートしているわけではありません: 詳しくは[ JavaScript API のブラウザーサポート](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)をご覧ください。
+すべてのブラウザーがすべての API をサポートしているわけではありません: 詳しくは [JavaScript API のブラウザーサポート](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)をご覧ください。
 
 ## JavaScript API 一覧
 

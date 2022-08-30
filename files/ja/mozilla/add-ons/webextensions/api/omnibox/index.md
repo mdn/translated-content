@@ -10,12 +10,12 @@ slug: Mozilla/Add-ons/WebExtensions/API/omnibox
 
 omnibox API は、ユーザーが拡張機能で定義されたキーワードを入力した時に、ドロップダウンに表示されるサジェストを拡張機能がカスタマイズする方法を提供します。これは下記のように動作します:
 
-1.  まず、拡張機能は [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルに "[omnibox](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox)" キーを入れないといけません、ここでキーワードを定義します。
-2.  ユーザーがアドレスバーにフォーカスしてキーワードに続いてスペースをタイプした時、拡張機能は {{WebExtAPIRef("omnibox.onInputStarted")}} イベントを受け取ります。
-3.  オプションとして、拡張機能は {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}} を呼んでアドレスバーのドロップダウンに最初に表示されるサジェストを定義します。
-4.  ユーザーがこの後にも文字をタイプし続けると、拡張機能は {{WebExtAPIRef("omnibox.onInputChanged")}} イベントを受け取ります。イベントリスナーはユーザーがタイプした現在の値を受けて、アドレスバーのドロップダウンにサジェストを生成できます。拡張機能が {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}} を使ったデフォルトのサジェストをセットした場合、これがドロップダウンの最初に出てきます。
-5.  ユーザーがサジェストを受け入れたら、拡張機能は {{WebExtAPIRef("omnibox.onInputEntered")}} イベントを受け取ります。イベントリスナーは受け入れられたサジェストを受け取ります。
-6.  ユーザーがドロップダウンを止めたら、拡張機能は {{WebExtAPIRef("omnibox.onInputCancelled")}} イベントを受け取ります。
+1. まず、拡張機能は [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルに "[omnibox](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox)" キーを入れないといけません、ここでキーワードを定義します。
+2. ユーザーがアドレスバーにフォーカスしてキーワードに続いてスペースをタイプした時、拡張機能は {{WebExtAPIRef("omnibox.onInputStarted")}} イベントを受け取ります。
+3. オプションとして、拡張機能は {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}} を呼んでアドレスバーのドロップダウンに最初に表示されるサジェストを定義します。
+4. ユーザーがこの後にも文字をタイプし続けると、拡張機能は {{WebExtAPIRef("omnibox.onInputChanged")}} イベントを受け取ります。イベントリスナーはユーザーがタイプした現在の値を受けて、アドレスバーのドロップダウンにサジェストを生成できます。拡張機能が {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}} を使ったデフォルトのサジェストをセットした場合、これがドロップダウンの最初に出てきます。
+5. ユーザーがサジェストを受け入れたら、拡張機能は {{WebExtAPIRef("omnibox.onInputEntered")}} イベントを受け取ります。イベントリスナーは受け入れられたサジェストを受け取ります。
+6. ユーザーがドロップダウンを止めたら、拡張機能は {{WebExtAPIRef("omnibox.onInputCancelled")}} イベントを受け取ります。
 
 ## 型
 
