@@ -72,10 +72,10 @@ This example uses an event handler (`window.onhashchange`) to check the new hash
 
 `hashchange` 이벤트에는 다음과 같은 필드가 있습니다:
 
-| Field                                                 | Type        | Description                |
-| ----------------------------------------------------- | ----------- | -------------------------- |
-| `newURL` {{gecko_minversion_inline("6.0")}} | `DOMString` | 탐색할 새로운 URL입니다.   |
-| `oldURL` {{gecko_minversion_inline("6.0")}} | `DOMString` | 탐색했던 이전의 URL입니다. |
+| Field    | Type        | Description             |
+| -------- | ----------- | ----------------------- |
+| `newURL` | `DOMString` | 탐색할 새로운 URL입니다.   |
+| `oldURL` | `DOMString` | 탐색했던 이전의 URL입니다. |
 
 ### 제2의 해결책을 위한 event.newURL 와 event.oldURL
 

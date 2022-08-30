@@ -4,7 +4,7 @@ slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
 translation_of: MDN/Guidelines/Code_guidelines/CSS
 original_slug: MDN/Guidelines/Code_guidelines/CSS
 ---
-{{MDNSidebar}}{{IncludeSubnav("/en-US/docs/MDN")}}
+{{MDNSidebar}}
 
 다음 가이드라인은 MDN code 예제를 위한 CSS 작성 방법을 설명합니다.
 
