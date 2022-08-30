@@ -45,7 +45,7 @@ slug: Web/HTTP
 
 ## 工具與資源
 
-有助於了解和調試 HTTP 的工具和資源。
+有助了解與測試 HTTP 的工具和資源。
 
 - [Firefox 開發者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
   - : [網絡監視器](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
