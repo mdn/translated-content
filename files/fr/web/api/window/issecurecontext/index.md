@@ -36,14 +36,12 @@ if (window.isSecureContext) {
 
 ## Spécifications
 
-| Spécification                            | Statut                                                                                                   | Commentaire             |
-| ---------------------------------------- | -------------------------------------------------------------------------------------------------------- | ----------------------- |
-| {{SpecName('Secure Contexts')}} | {{Spec2('Secure Contexts','#monkey-patching-global-object','isSecureContext')}} | Spécification initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.isSecureContext")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [Contextes sécurisés](/fr/docs/Web/Security/Secure_Contexts)

@@ -33,13 +33,11 @@ myWorker.terminate();
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#dom-worker-terminate", "Worker.terminate()")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Worker.terminate")}}
+{{Compat}}
 
 ## Voir aussi
 

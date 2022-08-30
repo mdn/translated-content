@@ -55,13 +55,11 @@ Pour un exemple complet, consulter notre [Exemple basique de worker dédié](htt
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#handler-worker-onmessage", "Worker.onmessage")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Worker.onmessage")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -20,7 +20,7 @@ L'[API Gamepad](/fr/docs/Web/API/Gamepad_API) est une API assez bien compatible,
 
 Vous pouvez avoir plus d'information sur l'usage de API de base des Gamepad avec l'article [Utilisez l'API Gamepad](/fr/docs/Web/API/Gamepad_API/Using_the_Gamepad_API), et [Implementer des contrôles en utilisant l'API Gamepad](/fr/docs/Games/Techniques/Controls_Gamepad_API).
 
-Dans cet article, nous allons nous attardez sur les nouvelles fonctionnalités offertes dans l'API {{specname("GamepadExtensions")}}, laquelle donne accès à des informations avancés comme des données de position ou d'orientation, ou encore contrôler les retours haptiques (vibrations), et bien plus. Cette API est toute nouvelle et, pour l'instant, seulement disponible dans les versions Beta ou Nightly de Firefox 55 (et suppérieur).
+Dans cet article, nous allons nous attardez sur les nouvelles fonctionnalités offertes dans l'API `GamepadExtensions`, laquelle donne accès à des informations avancés comme des données de position ou d'orientation, ou encore contrôler les retours haptiques (vibrations), et bien plus. Cette API est toute nouvelle et, pour l'instant, seulement disponible dans les versions Beta ou Nightly de Firefox 55 (et suppérieur).
 
 ## Types de contrôlleurs
 
