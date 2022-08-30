@@ -48,7 +48,7 @@ slug: Web/HTTP
 有助了解與測試 HTTP 的工具和資源。
 
 - [Firefox 開發者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
-  - : [網絡監視器](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
+  - : [網路監視器（Network Monitor）](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
 - [Mozilla Observatory](https://observatory.mozilla.org/)
   - : 一個旨在幫助開發人員，系統管理員和安全專業人員安全地配置其站點的項目。
 - [RedBot](https://redbot.org/)
