@@ -50,7 +50,7 @@ slug: Web/HTTP
 - [Firefox 開發者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
   - : [網路監視器（Network Monitor）](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
 - [Mozilla Observatory](https://observatory.mozilla.org/)
-  - : 一個旨在幫助開發人員，系統管理員和安全專業人員安全地配置其站點的項目。
+  - : 旨在幫助開發者、系統管理員和安全專業人員安全地配置網站的專案。
 - [RedBot](https://redbot.org/)
   - : 用於檢查與暫存相關的 HTTP 檔頭的工具。
 - [瀏覽器的工作原理](https://web.dev/howbrowserswork/)
