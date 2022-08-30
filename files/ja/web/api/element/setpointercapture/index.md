@@ -1,15 +1,6 @@
 ---
 title: Element.setPointerCapture()
 slug: Web/API/Element/setPointerCapture
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - PointerEvent
-  - Reference
-  - 要素
-translation_of: Web/API/Element/setPointerCapture
 ---
 {{APIRef("DOM")}}
 

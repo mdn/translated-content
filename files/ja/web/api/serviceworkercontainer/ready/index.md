@@ -1,15 +1,6 @@
 ---
 title: ServiceWorkerContainer.ready
 slug: Web/API/ServiceWorkerContainer/ready
-tags:
-  - API
-  - Property
-  - Ready
-  - Reference
-  - Service worker API
-  - ServiceWorker
-  - ServiceWorkerContainer
-translation_of: Web/API/ServiceWorkerContainer/ready
 ---
 {{APIRef("Service Workers API")}}
 

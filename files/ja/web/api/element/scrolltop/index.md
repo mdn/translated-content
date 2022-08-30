@@ -1,14 +1,6 @@
 ---
 title: Element.scrollTop
 slug: Web/API/Element/scrollTop
-tags:
-  - API
-  - CSSOM View
-  - NeedsArtUpdate
-  - NeedsMarkupWork
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/Element/scrollTop
 ---
 {{APIRef("DOM")}}
 

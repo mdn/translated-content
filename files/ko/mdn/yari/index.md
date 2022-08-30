@@ -8,7 +8,9 @@ tags:
 translation_of: MDN/Kuma
 original_slug: MDN/Kuma
 ---
-{{MDNSidebar}}{{IncludeSubnav("/ko/docs/MDN")}}쿠마(Kuma)는 MDN Web Docs를 작동시키는 Django 코드 입니다.
+{{MDNSidebar}}
+
+쿠마(Kuma)는 MDN Web Docs를 작동시키는 Django 코드 입니다.
 
 {{SubpagesWithSummaries}}
 

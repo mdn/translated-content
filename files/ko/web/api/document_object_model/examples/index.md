@@ -149,9 +149,11 @@ p { font-face: Arial; font-size: 10pt; margin-left: .125in; }
 
 위 스크립트의 결과물은 아래와 같습니다:
 
-    BODY
-    P
-    #LUMPY
+```
+BODY
+P
+#LUMPY
+```
 
 ## 예제 5: Event 전파
 

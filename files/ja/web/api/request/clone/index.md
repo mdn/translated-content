@@ -1,15 +1,6 @@
 ---
 title: Request.clone()
 slug: Web/API/Request/clone
-tags:
-  - API
-  - Experimenal
-  - Fetch
-  - Method
-  - Reference
-  - clone
-  - request
-translation_of: Web/API/Request/clone
 ---
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 

@@ -1,17 +1,6 @@
 ---
 title: SourceBuffer.textTracks
 slug: Web/API/SourceBuffer/textTracks
-tags:
-  - API
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBuffer
-  - Video
-  - textTracks
-translation_of: Web/API/SourceBuffer/textTracks
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 

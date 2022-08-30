@@ -1,20 +1,6 @@
 ---
 title: setInterval()
 slug: Web/API/setInterval
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Intervals
-  - JavaScript タイマー
-  - MakeBrowserAgnostic
-  - メソッド
-  - NeedsMarkupWork
-  - タイマー
-  - setInterval
-  - Polyfill
-browser-compat: api.setInterval
-translation_of: Web/API/setInterval
 original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 ---
 {{APIRef("HTML DOM")}}

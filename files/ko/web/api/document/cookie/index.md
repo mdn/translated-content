@@ -11,7 +11,9 @@ translation_of: Web/API/Document/cookie
 
 ### Read all cookies accessible from this location
 
-    allCookies = document.cookie;
+```js
+allCookies = document.cookie;
+```
 
 위 코드에서 `allCookies` 세미콜론으로 구분되는 모든 쿠키 리스트의 문자열이다. (다른 말로 `key=value`). Note that each _key_ and _value_ may be surrounded by whitespace (space and tab characters): in fact, {{RFC(6265)}} mandates a single space after each semicolon, but some user agents may not abide by this.
 
@@ -191,19 +193,23 @@ The reason for the [syntax](#Syntax) of the `document.cookie` accessor property 
 
 #### The server tells the client to store a cookie
 
-    HTTP/1.0 200 OK
-    Content-type: text/html
-    Set-Cookie: cookie_name1=cookie_value1
-    Set-Cookie: cookie_name2=cookie_value2; expires=Sun, 16 Jul 3567 06:23:41 GMT
+```
+HTTP/1.0 200 OK
+Content-type: text/html
+Set-Cookie: cookie_name1=cookie_value1
+Set-Cookie: cookie_name2=cookie_value2; expires=Sun, 16 Jul 3567 06:23:41 GMT
 
-    [content of the page here]
+[content of the page here]
+```
 
 #### The client sends back to the server its cookies previously stored
 
-    GET /sample_page.html HTTP/1.1
-    Host: www.example.org
-    Cookie: cookie_name1=cookie_value1; cookie_name2=cookie_value2
-    Accept: */*
+```
+GET /sample_page.html HTTP/1.1
+Host: www.example.org
+Cookie: cookie_name1=cookie_value1; cookie_name2=cookie_value2
+Accept: */*
+```
 
 ## Specifications
 

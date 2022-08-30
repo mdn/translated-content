@@ -1,13 +1,6 @@
 ---
 title: ゲームパッド API の使用
 slug: Web/API/Gamepad_API/Using_the_Gamepad_API
-tags:
-  - API
-  - Advanced
-  - Gamepad API
-  - Games
-  - Guide
-translation_of: Web/API/Gamepad_API/Using_the_Gamepad_API
 original_slug: Web/Guide/API/Gamepad
 ---
 {{DefaultAPISidebar("Gamepad API")}}

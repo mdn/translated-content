@@ -113,11 +113,13 @@ var min = minOfArray([5, 6, 2, 3, 7]);
 
 Java 와 유사하게, 객체를 위한 {{jsxref("Operators/new", "constructors", "", 1)}} 체이닝을 위해 `apply` 를 사용할 수 있습니다. 다음 예제에서 인수 리스트 대신 생성자로 유사 배열 객체를 사용할 수 있게 해주는 `construct` 라는 전역 {{jsxref("Function")}} 메소드를 생성할 것입니다.
 
-    Function.prototype.construct = function(aArgs) {
-      var oNew = Object.create(this.prototype);
-      this.apply(oNew, aArgs);
-      return oNew;
-    };
+```js
+Function.prototype.construct = function(aArgs) {
+  var oNew = Object.create(this.prototype);
+  this.apply(oNew, aArgs);
+  return oNew;
+};
+```
 
 > **참고:** **알림:** 위에서 사용된 `Object.create()` 메소드는 상대적으로 새로운 것입니다. 대안으로, 다음 접근법 중 하나를 고려하세요.
 
@@ -130,8 +132,9 @@ Function.prototype.construct = function (aArgs) {
   this.apply(oNew, aArgs);
   return oNew;
   };
-```  
-[클로져](/ko/docs/Web/JavaScript/Guide/Closures) 사용: 
+```
+
+[클로져](/ko/docs/Web/JavaScript/Guide/Closures) 사용:
 
 ```JS
 Function.prototype.construct = function(aArgs) {
@@ -143,7 +146,7 @@ Function.prototype.construct = function(aArgs) {
 };
 ```
 
-{{jsxref("Function")}} 생성자 사용 
+{{jsxref("Function")}} 생성자 사용
 
 ```JS
 Function.prototype.construct = function (aArgs) {

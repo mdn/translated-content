@@ -1,18 +1,6 @@
 ---
 title: ファイルとディレクトリエントリ API の紹介
 slug: Web/API/File_and_Directory_Entries_API/Introduction
-tags:
-  - API
-  - Beginner
-  - File
-  - File System API
-  - File and Directory Entries API
-  - Guide
-  - Introduction
-  - Non-standard
-  - ファイルとディレクトリエントリ API
-  - 標準外
-translation_of: Web/API/File_and_Directory_Entries_API/Introduction
 ---
 {{DefaultAPISidebar("File System API")}}{{Non-standard_header}}
 

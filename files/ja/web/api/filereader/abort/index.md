@@ -1,16 +1,6 @@
 ---
 title: FileReader.abort()
 slug: Web/API/FileReader/abort
-tags:
-  - API
-  - File API
-  - FileReader
-  - Files
-  - Method
-  - Reference
-  - abort
-  - メソッド
-translation_of: Web/API/FileReader/abort
 ---
 {{APIRef("File API")}}
 

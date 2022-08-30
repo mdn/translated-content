@@ -1,13 +1,6 @@
 ---
 title: FileReader.error
 slug: Web/API/FileReader/error
-tags:
-  - API
-  - File API
-  - Reference
-  - ファイル
-  - プロパティ
-translation_of: Web/API/FileReader/error
 ---
 {{APIRef("File API")}}
 

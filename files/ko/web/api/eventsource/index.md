@@ -85,4 +85,4 @@ evtSource.onmessage = function(e) {
 ## See also
 
 - [Server-sent events](/ko/docs/Web/API/Server-sent_events)
-- [Using server-sent events](/ko/docs/Web/API/Server-sent_events/Using_server-sent_events "en/Server-sent events/Using server-sent events")
+- [Using server-sent events](/ko/docs/Web/API/Server-sent_events/Using_server-sent_events)

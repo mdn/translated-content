@@ -1,15 +1,6 @@
 ---
 title: FileReader.result
 slug: Web/API/FileReader/result
-tags:
-  - API
-  - File API
-  - FileReader
-  - Reference
-  - result
-  - ファイル
-  - プロパティ
-translation_of: Web/API/FileReader/result
 ---
 {{APIRef("File API")}}
 

@@ -57,7 +57,7 @@ transform: initial;
 transform: unset;
 ```
 
-`transform` 속성은 키워드 [`none`](#none) 또는 하나 이상의 [`<transform-function>`](#<transform-function>) 값을 사용해 지정할 수 있습니다.
+`transform` 속성은 키워드 [`none`](#none) 또는 하나 이상의 [`<transform-function>`](#transform-function) 값을 사용해 지정할 수 있습니다.
 
 ### 값
 
@@ -120,6 +120,6 @@ div {
 
 ## 같이 보기
 
-- [CSS 변형 사용하기](/ko/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms "/en-US/docs/CSS/Using_CSS_transforms")
+- [CSS 변형 사용하기](/ko/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
 - 변형 함수의 설명을 담은 {{cssxref("&lt;transform-function&gt;")}} 자료형 문서.
 - CSS 변형 함수의 시각화가 가능한 온라인 도구: [CSS Transform Playground](https://css-transform.moro.es/)

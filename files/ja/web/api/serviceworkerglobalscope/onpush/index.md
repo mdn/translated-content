@@ -1,16 +1,6 @@
 ---
 title: ServiceWorkerGlobalScope.onpush
 slug: Web/API/ServiceWorkerGlobalScope/onpush
-tags:
-  - API
-  - Property
-  - Push
-  - Reference
-  - Service Worker
-  - ServiceWorker
-  - ServiceWorkerGlobalScope
-  - onpush
-translation_of: Web/API/ServiceWorkerGlobalScope/onpush
 ---
 {{APIRef("Service Workers API")}}
 

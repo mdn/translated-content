@@ -1,14 +1,6 @@
 ---
 title: Element.hasAttributes()
 slug: Web/API/Element/hasAttributes
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
-  - メソッド
-translation_of: Web/API/Element/hasAttributes
 ---
 {{ApiRef("DOM")}}
 

@@ -14,7 +14,9 @@ translation_of: Web/API/Document/createTextNode
 
 ### 문법
 
-    텍스트 = document.createTextNode(데이터);
+```js
+텍스트 = document.createTextNode(데이터);
+```
 
 ### 매개변수
 
@@ -23,31 +25,33 @@ translation_of: Web/API/Document/createTextNode
 
 ### 예제
 
-    <html>
-    <head>
-    <title>createTextNode 예제</title>
+```html
+<html>
+<head>
+<title>createTextNode 예제</title>
 
-    <script type="text/javascript">
+<script type="text/javascript">
 
-    function addTextNode()
-    {
+function addTextNode()
+{
     var newtext = document.createTextNode(" 동적으로 추가되는 텍스트. ");
     var para = document.getElementById("p1");
     para.appendChild(newtext);
-    }
+}
 
-    </script>
-    </head>
+</script>
+</head>
 
-    <body>
-    <div style="border: 1px solid red">
-    <p id="p1">단락의 첫번째 줄.<br /></p>
-    </div><br />
+<body>
+<div style="border: 1px solid red">
+<p id="p1">단락의 첫번째 줄.<br /></p>
+</div><br />
 
-    <button onclick="addTextNode();">TextNode 추가하기.</button>
+<button onclick="addTextNode();">TextNode 추가하기.</button>
 
-    </body>
-    </html>
+</body>
+</html>
+```
 
 ### 규약
 

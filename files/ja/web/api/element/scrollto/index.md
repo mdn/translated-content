@@ -1,14 +1,6 @@
 ---
 title: Element.scrollTo()
 slug: Web/API/Element/scrollTo
-tags:
-  - API
-  - Element
-  - Method
-  - Reference
-  - scrollTo
-  - メソッド
-translation_of: Web/API/Element/scrollTo
 ---
 {{APIRef}}
 

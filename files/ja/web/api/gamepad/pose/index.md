@@ -1,15 +1,6 @@
 ---
 title: Gamepad.pose
 slug: Web/API/Gamepad/pose
-tags:
-  - API
-  - Experimental
-  - Gamepad
-  - Gamepad API
-  - Property
-  - Reference
-  - pose
-translation_of: Web/API/Gamepad/pose
 ---
 {{APIRef("Gamepad")}}{{SeeCompatTable}}
 

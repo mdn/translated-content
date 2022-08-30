@@ -1,17 +1,6 @@
 ---
 title: SpeechRecognition.onerror
 slug: Web/API/SpeechRecognition/error_event
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - onerror
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognition/onerror
 original_slug: Web/API/SpeechRecognition/onerror
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}

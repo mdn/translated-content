@@ -1,17 +1,6 @@
 ---
 title: FederatedCredential.protocol
 slug: Web/API/FederatedCredential/protocol
-tags:
-  - API
-  - Credential Management API
-  - Experimental
-  - FederatedCredential
-  - NeedsExample
-  - Property
-  - Reference
-  - credential management
-  - プロパティ
-translation_of: Web/API/FederatedCredential/protocol
 ---
 {{SeeCompatTable}}{{APIRef("")}}{{securecontext_header}}
 

@@ -1,17 +1,6 @@
 ---
 title: SpeechRecognition.start()
 slug: Web/API/SpeechRecognition/start
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - recognition
-  - speech
-  - start
-translation_of: Web/API/SpeechRecognition/start
 ---
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 

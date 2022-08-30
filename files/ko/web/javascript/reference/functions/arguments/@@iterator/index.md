@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Functions/arguments/@@iterator
 ## 구문
 
 ```
-    arguments[Symbol.iterator]()
+arguments[Symbol.iterator]()
 ```
 
 ## 예제

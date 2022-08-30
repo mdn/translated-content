@@ -1,15 +1,6 @@
 ---
 title: Request.url
 slug: Web/API/Request/url
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Property
-  - Reference
-  - URL
-  - request
-translation_of: Web/API/Request/url
 ---
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 

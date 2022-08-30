@@ -21,7 +21,7 @@ translation_of: Web/API/Encoding_API
 ## Tutorials & tools
 
 - A [shim](http://code.google.com/p/stringencoding/) allowing to use this interface in browsers that don't support it.
-- [`StringView`](/en-US/Add-ons/Code_snippets/StringView "/en-US/docs/Web/JavaScript/Typed_arrays/StringView") – a C-like representation of strings based on typed arrays.
+- [`StringView`](/en-US/Add-ons/Code_snippets/StringView) – a C-like representation of strings based on typed arrays.
 
 ## Specifications
 

@@ -1,15 +1,6 @@
 ---
 title: Element
 slug: Web/API/Element
-tags:
-  - API
-  - DOM
-  - DOM リファレンス
-  - Element
-  - インターフェイス
-  - リファレンス
-  - Web API
-translation_of: Web/API/Element
 ---
 {{APIRef("DOM")}}
 

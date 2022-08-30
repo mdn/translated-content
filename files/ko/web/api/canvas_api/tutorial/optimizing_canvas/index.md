@@ -87,7 +87,7 @@ stage.style.transform = 'scale(' + scaleToFit + ')';
 
 ### 투명도를 사용하지 마라.
 
-응용 프로그램이 캔버스를 사용하고 투명 배경을 필요로하지 않는 경우 [`HTMLCanvasElement.getContext()`](/ko/docs/Web/API/HTMLCanvasElement/getContext "The HTMLCanvasElement.getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported.")를 사용하여 드로잉 컨텍스트를 만들 때 alpha 옵션을 false로 설정합니다. 이 정보는 렌더링을 최적화하기 위해 브라우저에서 내부적으로 사용할 수 있습니다.
+응용 프로그램이 캔버스를 사용하고 투명 배경을 필요로하지 않는 경우 [`HTMLCanvasElement.getContext()`](/ko/docs/Web/API/HTMLCanvasElement/getContext)를 사용하여 드로잉 컨텍스트를 만들 때 alpha 옵션을 false로 설정합니다. 이 정보는 렌더링을 최적화하기 위해 브라우저에서 내부적으로 사용할 수 있습니다.
 
 ```js
 var ctx = canvas.getContext('2d', { alpha: false });

@@ -1,20 +1,6 @@
 ---
 title: 'Element: click イベント'
 slug: Web/API/Element/click_event
-tags:
-  - API
-  - DOM
-  - Element
-  - イベント
-  - インターフェイス
-  - MouseEvent
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - リファレンス
-  - UI
-  - click
-  - マウス
-translation_of: Web/API/Element/click_event
 ---
 {{APIRef}}
 

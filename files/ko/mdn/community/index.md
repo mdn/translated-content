@@ -11,8 +11,6 @@ original_slug: MDN/Contribute/Feedback
 ---
 <div>{{MDNSidebar}}</div>
 
-<div>{{IncludeSubnav("/ko/docs/MDN")}}</div>
-
 <p>Mozilla 개발자 네트워크에 오신것을 환영합니다!  만일 당신이 MDN을 사용하면서 발견한 문제점들이나 바라는 점들을 제안하고 싶다면 이곳은 당신에게 어울리는 장소입니다. 당신이 피드백을 제공함으로써 당신의 Mozilla 커뮤니티에서의 힘은 더 커질 것이고 우리는 당신의 관심에 감사드릴 것입니다.</p>
 
 <p>당신에게는 당신의 통찰력을 제공하기 위한 몇가지 선택사항들이 있으며 이 문서는 당신에게 도움을 줄 것입니다.</p>

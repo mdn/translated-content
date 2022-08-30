@@ -60,7 +60,7 @@ See [Using files from web applications](/ko/docs/Using_files_from_web_applicatio
 
 - {{domxref("FileReader.abort()")}}
   - : 읽기 요청을 중단시킵니다. 리턴이 되면 readyState 는 DONE이 됩니다.
-- {{domxref("FileReader.readAsArrayBuffer()")}} {{ gecko_minversion_inline("7.0") }}
+- {{domxref("FileReader.readAsArrayBuffer()")}}
   - : Starts reading the contents of the specified {{ domxref("Blob") }}, once finished, the `result` attribute contains an {{domxref("ArrayBuffer")}} representing the file's data.
 - {{domxref("FileReader.readAsBinaryString()")}}
   - : Starts reading the contents of the specified {{ domxref("Blob") }}, once finished, the `result` attribute contains the raw binary data from the file as a string.

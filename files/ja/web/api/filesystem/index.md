@@ -1,16 +1,6 @@
 ---
 title: FileSystem
 slug: Web/API/FileSystem
-tags:
-  - API
-  - File API
-  - File System API
-  - File and Directory Entries API
-  - インターフェイス
-  - オフライン
-  - ファイルシステム
-  - 非標準
-translation_of: Web/API/FileSystem
 ---
 {{APIRef("File System API")}}{{SeeCompatTable}}
 

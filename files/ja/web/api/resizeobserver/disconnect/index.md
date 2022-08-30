@@ -1,17 +1,6 @@
 ---
 title: ResizeObserver.disconnect()
 slug: Web/API/ResizeObserver/disconnect
-page-type: web-api-instance-method
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - リサイズオブザーバー API
-  - ResizeObserver
-  - disconnect()
-  - observers
-browser-compat: api.ResizeObserver.disconnect
-translation_of: Web/API/ResizeObserver/disconnect
 ---
 {{APIRef("Resize Observer API")}}
 

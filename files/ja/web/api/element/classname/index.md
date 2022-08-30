@@ -1,13 +1,6 @@
 ---
 title: Element.className
 slug: Web/API/Element/className
-tags:
-  - API
-  - DOM
-  - Gecko
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/Element/className
 ---
 {{APIRef("DOM")}}
 

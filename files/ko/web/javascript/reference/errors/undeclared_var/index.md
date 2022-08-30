@@ -47,7 +47,7 @@ foo(); // ReferenceError: assignment to undeclared variable bar
 
 ### 허용되는 경우
 
-"bar" 를 선언된 변수로 만들기 위해서, `var `키워드를 변수명 앞에 붙여줍니다.
+"bar" 를 선언된 변수로 만들기 위해서, `var` 키워드를 변수명 앞에 붙여줍니다.
 
 ```js example-good
 function foo() {

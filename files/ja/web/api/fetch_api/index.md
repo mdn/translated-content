@@ -1,15 +1,6 @@
 ---
 title: Fetch API
 slug: Web/API/Fetch_API
-tags:
-  - API
-  - Fetch
-  - Landing
-  - Reference
-  - レスポンス
-  - XMLHttpRequest
-  - リクエスト
-translation_of: Web/API/Fetch_API
 ---
 <div>{{DefaultAPISidebar("Fetch API")}}</div>
 

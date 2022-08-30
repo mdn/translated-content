@@ -1,16 +1,6 @@
 ---
 title: SpeechRecognitionError
 slug: Web/API/SpeechRecognitionErrorEvent
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - SpeechRecognitionError
-  - Web Speech API
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognitionError
 original_slug: Web/API/SpeechRecognitionError
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}

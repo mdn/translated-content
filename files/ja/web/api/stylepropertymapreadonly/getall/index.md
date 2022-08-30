@@ -1,17 +1,6 @@
 ---
 title: StylePropertyMapReadOnly.getAll()
 slug: Web/API/StylePropertyMapReadOnly/getAll
-tags:
-  - API
-  - CSS Typed Object Model API
-  - 実験的
-  - Houdini
-  - メソッド
-  - リファレンス
-  - StylePropertyMapReadOnly
-  - getAll()
-browser-compat: api.StylePropertyMapReadOnly.getAll
-translation_of: Web/API/StylePropertyMapReadOnly/getAll
 ---
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 

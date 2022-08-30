@@ -1,15 +1,6 @@
 ---
 title: Element.hasPointerCapture()
 slug: Web/API/Element/hasPointerCapture
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - PointerEvent
-  - Reference
-  - hasPointerCapture
-translation_of: Web/API/Element/hasPointerCapture
 ---
 {{APIRef("DOM")}}
 

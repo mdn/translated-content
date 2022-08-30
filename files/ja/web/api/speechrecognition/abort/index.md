@@ -1,17 +1,6 @@
 ---
 title: SpeechRecognition.abort()
 slug: Web/API/SpeechRecognition/abort
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - abort
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognition/abort
 ---
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
