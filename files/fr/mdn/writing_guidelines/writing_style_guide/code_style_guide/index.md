@@ -119,7 +119,7 @@ const toolkitProfileService =
 
 ### Hauteur des blocs de code
 
-Les blocs de code doivent être aussi longs que nécessaire, mais pas plus. On visera idéalement une longueur de 15 à 25 lignes. Si un bloc de code devient beaucoup plus grand, on pensera à illustrer le fragment le plus utile et à renvoyer vers l'exemple complet, situé sur un dépôt GitHub ou un outil de partage de code web. 
+Les blocs de code doivent être aussi longs que nécessaire, mais pas plus. On visera idéalement une longueur de 15 à 25 lignes. Si un bloc de code devient beaucoup plus grand, on pensera à illustrer le fragment le plus utile et à renvoyer vers l'exemple complet, situé sur un dépôt GitHub ou un outil de partage de code web.
 
 #### Formatage du code dans le texte
 
