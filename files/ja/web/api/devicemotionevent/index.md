@@ -50,4 +50,4 @@ window.addEventListener('devicemotion', function(event) {
 - {{ domxref("DeviceMotionEvent") }}
 - {{ event("devicemotion") }}
 - [デバイスの方向検出](/ja/docs/WebAPI/Detecting_device_orientation)
-- [向きと動作データの説明](/ja/DOM/Orientation_and_motion_data_explained "向きと動作データの説明")
+- [向きと動作データの説明](/ja/DOM/Orientation_and_motion_data_explained)

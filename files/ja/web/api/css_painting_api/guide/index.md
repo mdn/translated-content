@@ -7,9 +7,9 @@ CSS Paint API を用いると開発者がプログラムで画像を定義でき
 
 CSS スタイルシートで使用される画像をプログラムで作成するには、いくつかのステップを踏む必要があります:
 
-1.  [`registerPaint()`](/ja/docs/Web/API/PaintWorklet/registerPaint) 関数を用いたペイント Worklet を定義します
-2.  その Worklet を登録します
-3.  `{{cssxref('paint()','paint()')}}` という CSS 関数を読み込みます
+1. [`registerPaint()`](/ja/docs/Web/API/PaintWorklet/registerPaint) 関数を用いたペイント Worklet を定義します
+2. その Worklet を登録します
+3. `{{cssxref('paint()','paint()')}}` という CSS 関数を読み込みます
 
 これらの手順を詳しく説明するために、このヘッダーのようなハーフハイライトの背景を作成することから始めます:
 
@@ -129,8 +129,8 @@ registerPaint('headerHighlight', class {
 
 このコード例は、最初の例とは 2 つの違いがあります:
 
-1.  `paint()` の第 2 引数として描画サイズを使用しています。
-2.  矩形の寸法と位置を、絶対値ではなく、要素ボックスのサイズに相対するように変更しました。
+1. `paint()` の第 2 引数として描画サイズを使用しています。
+2. 矩形の寸法と位置を、絶対値ではなく、要素ボックスのサイズに相対するように変更しました。
 
 `paint()` に第 2 引数を渡すことで、`.width` と `.height` プロパティを使って要素の幅と高さにアクセスすることができます。
 
@@ -282,36 +282,36 @@ registerPaint('headerHighlight', class {
 
   paint(ctx, size, props) {
 
-		/* どの場所からハイライトを始めるか、寸法をセットする */
-		const x = 0;
-		const y = size.height * 0.3;
-		const blockWidth = size.width * 0.33;
-		const highlightHeight = size.height * 0.85;
+    /* どの場所からハイライトを始めるか、寸法をセットする */
+    const x = 0;
+    const y = size.height * 0.3;
+    const blockWidth = size.width * 0.33;
+    const highlightHeight = size.height * 0.85;
         const color = props.get('--highColour');
 
-		ctx.fillStyle = color;
+    ctx.fillStyle = color;
 
-		ctx.beginPath();
-		ctx.moveTo( x, y );
-		ctx.lineTo( blockWidth, y );
-		ctx.lineTo( blockWidth + highlightHeight, highlightHeight );
-		ctx.lineTo( x, highlightHeight );
-		ctx.lineTo( x, y );
-		ctx.closePath();
-		ctx.fill();
+    ctx.beginPath();
+    ctx.moveTo( x, y );
+    ctx.lineTo( blockWidth, y );
+    ctx.lineTo( blockWidth + highlightHeight, highlightHeight );
+    ctx.lineTo( x, highlightHeight );
+    ctx.lineTo( x, y );
+    ctx.closePath();
+    ctx.fill();
 
-		/* 破線を作成 */
-		for (let i = 0; i < 4; i++) {
-			let start = i * 2;
-			ctx.beginPath();
-			ctx.moveTo( (blockWidth) + (start * 10) + 10, y );
-			ctx.lineTo( (blockWidth) + (start * 10) + 20, y );
-			ctx.lineTo( (blockWidth) + (start * 10) + 20 + (highlightHeight), highlightHeight );
-			ctx.lineTo( (blockWidth) + (start * 10) + 10 + (highlightHeight), highlightHeight );
-			ctx.lineTo( (blockWidth) + (start * 10) + 10, y );
-			ctx.closePath();
-			ctx.fill();
-		}
+    /* 破線を作成 */
+    for (let i = 0; i < 4; i++) {
+      let start = i * 2;
+      ctx.beginPath();
+      ctx.moveTo( (blockWidth) + (start * 10) + 10, y );
+      ctx.lineTo( (blockWidth) + (start * 10) + 20, y );
+      ctx.lineTo( (blockWidth) + (start * 10) + 20 + (highlightHeight), highlightHeight );
+      ctx.lineTo( (blockWidth) + (start * 10) + 10 + (highlightHeight), highlightHeight );
+      ctx.lineTo( (blockWidth) + (start * 10) + 10, y );
+      ctx.closePath();
+      ctx.fill();
+    }
   } // paint
 });
 ```
@@ -324,7 +324,7 @@ registerPaint('headerHighlight', class {
 <h6 class="fancy">Smallest Header</h6>
 ```
 
-それぞれのヘッダーは、それぞれ異なった値の `--highColor`[ カスタムプロパティ](/ja/docs/Web/CSS/CSS_Variables)を持つことができます。
+それぞれのヘッダーは、それぞれ異なった値の `--highColor` [カスタムプロパティ](/ja/docs/Web/CSS/CSS_Variables)を持つことができます。
 
 ```css
 .fancy {
@@ -355,7 +355,7 @@ CSS で関数を呼び出すときに、これらの引数を追加すること�
 
 ```css
 li {
-	background-image: paint(hollowHighlights, stroke);
+  background-image: paint(hollowHighlights, stroke);
 }
 ```
 
@@ -370,15 +370,15 @@ static get inputArguments() { return ['*']; }
 ```js
 paint(ctx, size, props, args) {
 
-	// カスタム引数を使う
-	const hasStroke = args[0].toString();
+  // カスタム引数を使う
+  const hasStroke = args[0].toString();
 
-	// stroke 引数が 'stroke' の場合は塗りつぶしはしません
-	if (hasStroke === 'stroke') {
-		ctx.fillStyle = 'transparent';
-		ctx.strokeStyle = colour;
-	}
-	...
+  // stroke 引数が 'stroke' の場合は塗りつぶしはしません
+  if (hasStroke === 'stroke') {
+    ctx.fillStyle = 'transparent';
+    ctx.strokeStyle = colour;
+  }
+  ...
 }
 ```
 
@@ -386,7 +386,7 @@ paint(ctx, size, props, args) {
 
 ```css
 li {
-	background-image: paint(hollowHighlights, stroke, 10px);
+  background-image: paint(hollowHighlights, stroke, 10px);
 }
 ```
 
@@ -404,7 +404,7 @@ static get inputArguments() { return ['*', '<length>']; }
 
 ```css
 li {
-	background-image: paint(hollowHighlights, stroke, 10px);
+  background-image: paint(hollowHighlights, stroke, 10px);
 }
 ```
 
@@ -419,15 +419,15 @@ static get inputArguments() { return ['*', '<length>']; }
 ```js
 paint(ctx, size, props, args) {
 
-		const strokeWidth = args[1];
+    const strokeWidth = args[1];
 
-		if (strokeWidth.unit === 'px') {
-			ctx.lineWidth = strokeWidth.value;
-		} else {
-			ctx.lineWidth = 1.0;
-		}
+    if (strokeWidth.unit === 'px') {
+      ctx.lineWidth = strokeWidth.value;
+    } else {
+      ctx.lineWidth = 1.0;
+    }
 
-	...
+  ...
 }
 ```
 
@@ -452,61 +452,61 @@ registerPaint('hollowHighlights', class {
     // ctx   -> 描画コンテキスト
     // size  -> 描画したいボックスの大きさ
     // props -> 要素に存在するカスタププロパティのリスト
-	// args  -> cssから paint() 関数を呼ばれた際のカスタム引数のリスト
+  // args  -> cssから paint() 関数を呼ばれた際のカスタム引数のリスト
 
-		// どの場所からハイライトを始めるか、寸法
-		const x = 0;
-		const y = size.height * 0.3;
-		const blockWidth = size.width * 0.33;
-		const blockHeight = size.height * 0.85;
+    // どの場所からハイライトを始めるか、寸法
+    const x = 0;
+    const y = size.height * 0.3;
+    const blockWidth = size.width * 0.33;
+    const blockHeight = size.height * 0.85;
 
-		// CSS から paint() 関数に渡された値
-		const colour = props.get( '--boxColor' );
-		const strokeType = args[0].toString();
-		const strokeWidth = parseInt(args[1]);
+    // CSS から paint() 関数に渡された値
+    const colour = props.get( '--boxColor' );
+    const strokeType = args[0].toString();
+    const strokeWidth = parseInt(args[1]);
 
 
-		// 線幅を設定する
-		if ( strokeWidth ) {
-			ctx.lineWidth = strokeWidth;
-		} else {
-			ctx.lineWidth = 1.0;
-		}
-		// 塗りつぶしタイプを設定する
-		if ( strokeType === 'stroke' ) {
-			ctx.fillStyle = 'transparent';
-			ctx.strokeStyle = colour;
-		} else if ( strokeType === 'filled' ) {
-			ctx.fillStyle = colour;
-			ctx.strokeStyle = colour;
-		} else {
-			ctx.fillStyle = 'none';
-			ctx.strokeStyle = 'none';
-		}
+    // 線幅を設定する
+    if ( strokeWidth ) {
+      ctx.lineWidth = strokeWidth;
+    } else {
+      ctx.lineWidth = 1.0;
+    }
+    // 塗りつぶしタイプを設定する
+    if ( strokeType === 'stroke' ) {
+      ctx.fillStyle = 'transparent';
+      ctx.strokeStyle = colour;
+    } else if ( strokeType === 'filled' ) {
+      ctx.fillStyle = colour;
+      ctx.strokeStyle = colour;
+    } else {
+      ctx.fillStyle = 'none';
+      ctx.strokeStyle = 'none';
+    }
 
-		// 四角
-		ctx.beginPath();
-		ctx.moveTo( x, y );
-		ctx.lineTo( blockWidth, y );
-		ctx.lineTo( blockWidth + blockHeight, blockHeight );
-		ctx.lineTo( x, blockHeight );
-		ctx.lineTo( x, y );
-		ctx.closePath();
-		ctx.fill();
-		ctx.stroke();
-		// 破線
-		for (let i = 0; i < 4; i++) {
-			let start = i * 2;
-			ctx.beginPath();
-			ctx.moveTo( blockWidth + (start * 10) + 10, y);
-			ctx.lineTo( blockWidth + (start * 10) + 20, y);
-			ctx.lineTo( blockWidth + (start * 10) + 20 + blockHeight, blockHeight);
-			ctx.lineTo( blockWidth + (start * 10) + 10 + blockHeight, blockHeight);
-			ctx.lineTo( blockWidth + (start * 10) + 10, y);
-			ctx.closePath();
-			ctx.fill();
-			ctx.stroke();
-		}
+    // 四角
+    ctx.beginPath();
+    ctx.moveTo( x, y );
+    ctx.lineTo( blockWidth, y );
+    ctx.lineTo( blockWidth + blockHeight, blockHeight );
+    ctx.lineTo( x, blockHeight );
+    ctx.lineTo( x, y );
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+    // 破線
+    for (let i = 0; i < 4; i++) {
+      let start = i * 2;
+      ctx.beginPath();
+      ctx.moveTo( blockWidth + (start * 10) + 10, y);
+      ctx.lineTo( blockWidth + (start * 10) + 20, y);
+      ctx.lineTo( blockWidth + (start * 10) + 20 + blockHeight, blockHeight);
+      ctx.lineTo( blockWidth + (start * 10) + 10 + blockHeight, blockHeight);
+      ctx.lineTo( blockWidth + (start * 10) + 10, y);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+    }
 
   } // paint
 });

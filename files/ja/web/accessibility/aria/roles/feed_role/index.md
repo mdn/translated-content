@@ -33,12 +33,12 @@ translation_of: Web/Accessibility/ARIA/Roles/Feed_Role
 
 フィードパターンは、ウェブページと支援技術の間に次の相互運用性に関する合意を確立することによって、信頼できる支援技術の読み取りモードでのインタラクションを可能にします。
 
-1.  フィードのコンテキストでは、ウェブページのコードは次の責任を負います。
+1. フィードのコンテキストでは、ウェブページのコードは次の責任を負います。
 
     - どの記事に DOM フォーカスが含まれているかに基づいて、コンテンツを適切に視覚的にスクロールします。
     - どの記事に DOM フォーカスが含まれているかに基づいて、フィード記事をロードまたは削除します。
 
-2.  フィードのコンテキストでは、読み取りモードを持つ支援技術は次の責任を負います。
+2. フィードのコンテキストでは、読み取りモードを持つ支援技術は次の責任を負います。
 
     - 記事要素またはその子孫の 1 つに DOM フォーカスがあることを保証することで、どの記事に読み取りカーソルがあるかを示します。
     - DOM フォーカスを次の記事および前の記事に移動するための読み取りモードキーを提供します。
@@ -103,4 +103,4 @@ Coming soon
 - [ARIA: list ロール](/ja/docs/Web/Accessibility/ARIA/Roles/List_role)
 - [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices-1.1/#feed) — フィードデザインパターンの実装に関する詳細。 (英語)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

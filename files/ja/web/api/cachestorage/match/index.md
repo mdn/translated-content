@@ -41,9 +41,9 @@ caches.match(request, options).then(function(response) {
 
 この例は MDN の [sw-test の例](https://github.com/mdn/sw-test/)からのものです（[sw-test をライブで](https://mdn.github.io/sw-test/)見る）。 ここでは、{{domxref("FetchEvent")}} が発生するのを待ちます。 次のようなカスタムレスポンスを作成します。
 
-1.  {{domxref("CacheStorage.match","CacheStorage.match()")}} を使用して、{{domxref("CacheStorage")}} でリクエストの一致が見つかったかどうかを確認します。 もしそうなら、それを提供します。
-2.  そうでない場合は、`open()` を使用して `v1` キャッシュを開き、{{domxref("Cache.put","Cache.put()")}} を使用してデフォルトのネットワークリクエストをキャッシュに入れ、`return response.clone()` を使用してデフォルトのネットワークリクエストのクローンを返します。 `put()` がレスポンスのボディを消費するため、最後が必要です。
-3.  これが失敗した場合（例えば、ネットワークがダウンしているため）、フォールバックレスポンスを返します。
+1. {{domxref("CacheStorage.match","CacheStorage.match()")}} を使用して、{{domxref("CacheStorage")}} でリクエストの一致が見つかったかどうかを確認します。 もしそうなら、それを提供します。
+2. そうでない場合は、`open()` を使用して `v1` キャッシュを開き、{{domxref("Cache.put","Cache.put()")}} を使用してデフォルトのネットワークリクエストをキャッシュに入れ、`return response.clone()` を使用してデフォルトのネットワークリクエストのクローンを返します。 `put()` がレスポンスのボディを消費するため、最後が必要です。
+3. これが失敗した場合（例えば、ネットワークがダウンしているため）、フォールバックレスポンスを返します。
 
 ```js
 self.addEventListener('fetch', function(event) {

@@ -36,7 +36,7 @@ body の背景色に対するスタイルシートを JavaScript で変更して
 
 {{ EmbedLiveSample('Modify_a_stylesheet_rule') }}
 
-DOM の `style` プロパティで利用可能なプロパティの一覧は [DOM CSS プロパティリスト](/ja/docs/DOM/CSS "en/DOM/CSS") に載っています。
+DOM の `style` プロパティで利用可能なプロパティの一覧は [DOM CSS プロパティリスト](/ja/docs/DOM/CSS) に載っています。
 
 CSS の文法を使ってドキュメントのスタイルを変更したい場合は、ルールを追加するか、`innerHTML` に CSS を設定した {{HTMLElement("style")}} を挿入します。
 
@@ -88,11 +88,11 @@ function resetStyle(elemId) {
 
 {{ EmbedLiveSample('Modify_an_element_style') }}
 
-`document.defaultView` オブジェクトの {{domxref("window.getComputedStyle", "getComputedStyle()")}} メソッドは、その要素に対して計算された全てのスタイルを返します。このメソッドの使い方について詳しくはサンプルの [Example 6: getComputedStyle](/ja/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle "en/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle") を参照してください。
+`document.defaultView` オブジェクトの {{domxref("window.getComputedStyle", "getComputedStyle()")}} メソッドは、その要素に対して計算された全てのスタイルを返します。このメソッドの使い方について詳しくはサンプルの [Example 6: getComputedStyle](/ja/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle) を参照してください。
 
 ## DOM Style オブジェクト
 
-`style` オブジェクトは独立したスタイル指定です。 [`document.styleSheets`](/ja/DOM/document.styleSheets "en/DOM/document.styleSheets") から個別にルールを取得するのとは異なり、 style オブジェクトは `document` またはスタイルが適用される要素から取得されます。ある特定の要素の*インライン*スタイルを表します。
+`style` オブジェクトは独立したスタイル指定です。 [`document.styleSheets`](/ja/DOM/document.styleSheets) から個別にルールを取得するのとは異なり、 style オブジェクトは `document` またはスタイルが適用される要素から取得されます。ある特定の要素の*インライン*スタイルを表します。
 
 この記事で例示した CSS プロパティに限らず、 `style` オブジェクトを通して要素のスタイルを個別に操作できるという点が重要です。
 
@@ -126,7 +126,7 @@ function resetStyle(elemId) {
 
 ### setAttribute メソッドの利用
 
-要素のスタイルの変更には、要素の [`setAttribute`](/ja/DOM/element.setAttribute "en/DOM/element.setAttribute") メソッドを使うこともできます。
+要素のスタイルの変更には、要素の [`setAttribute`](/ja/DOM/element.setAttribute) メソッドを使うこともできます。
 
 ```js
 var el = document.getElementById('some-element');
