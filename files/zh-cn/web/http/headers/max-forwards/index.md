@@ -1,12 +1,6 @@
 ---
 title: Max-Forwards
 slug: Web/HTTP/Headers/Max-Forwards
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-spec-urls: https://httpwg.org/specs/rfc7231.html#header.max-forwards
 ---
 {{HTTPSidebar}}
 
@@ -29,8 +23,10 @@ The **`Max-Forwards`** 请求头被用于限制 [`TRACE`](/zh-CN/docs/Web/HTTP/M
 
 ## 语法
 
-```http
+```plain
 Max-Forwards: <integer>
+```
+
 ## 示例
 
 ```http
@@ -48,4 +44,4 @@ Max-Forwards: 10
 
 ## 参见
 
-- The HTTP [`TRACE`](/zh-CN/docs/Web/HTTP/Methods/TRACE) 方法
+- HTTP [`TRACE`](/zh-CN/docs/Web/HTTP/Methods/TRACE) 方法
