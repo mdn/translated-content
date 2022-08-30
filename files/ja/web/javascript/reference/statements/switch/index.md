@@ -50,7 +50,7 @@ switch (expression) {
 
 一致する `case` 節が見つからない場合、プログラムは省略可能な `default` 節を探し、見つかればその節に制御を移し、関連する文を実行します。`default` 節が見つからない場合、プログラムは `switch` の終了に続く文で実行を続けます。慣習では、`default` 節は最後の節ですが、そうである必要はありません。
 
-省略可能な [`break`](/ja/docs/Web/JavaScript/Reference/Statements/break "JavaScript/Reference/Statements/break") 文は、各 `case` 節のラベルに関連付けられれており、一致した文を一回実行した後で `switch` を抜け出し、 `switch` に続く文から実行を継続することを保証します。もし `break` が省略されたら、プログラムは `switch` 文の中の次の文から実行を継続します。
+省略可能な [`break`](/ja/docs/Web/JavaScript/Reference/Statements/break) 文は、各 `case` 節のラベルに関連付けられれており、一致した文を一回実行した後で `switch` を抜け出し、 `switch` に続く文から実行を継続することを保証します。もし `break` が省略されたら、プログラムは `switch` 文の中の次の文から実行を継続します。
 
 ## 例
 

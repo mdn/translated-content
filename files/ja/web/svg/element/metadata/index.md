@@ -29,7 +29,7 @@ _この要素には専用属性はありません。_
 
 ## DOM インターフェース
 
-この要素は [`SVGMetadataElement`](/ja/DOM/SVGMetadataElement "en/DOM/SVGMetadataElement") インターフェースを提供します。
+この要素は [`SVGMetadataElement`](/ja/DOM/SVGMetadataElement) インターフェースを提供します。
 
 ## 仕様
 

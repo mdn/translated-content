@@ -39,9 +39,9 @@ typedarray.filter(callback[, thisArg])
 
 `callback` は 3 つの引数で呼び出されます。
 
-1.  要素の値
-2.  要素の添字
-3.  走査中の型付き配列オブジェクト
+1. 要素の値
+2. 要素の添字
+3. 走査中の型付き配列オブジェクト
 
 引数 `thisArg` が `filter()` に与えられた場合、そのオブジェクトは `callback` が呼び出された際に `this` 値として使われます。そうでない場合、 `undefined` が `this` 値として使われます。`callback` 関数内の最終的な `this` 値は[関数内の `this` を決定する一般的ルール](/ja/docs/Web/JavaScript/Reference/Operators/this)に従って決められます。
 
