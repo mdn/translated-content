@@ -29,7 +29,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
 
 ## 一段簡短的歷史
 
-在 JavaScript 誕生的 1996 年，它的作用僅僅是為當時由靜態文檔組成的網頁，提供些許的交互性和興奮感。而當網路漸漸從*閱讀＊的場所，成為*做事*的場所，JavaScript 也慢慢地紅了起來。JavaScript 開發者們撰寫了許多工具來解決自己遭遇的問題、並打包成能複用的工具包，稱為**函式庫**（library），以便和他人共享自己的解決方案。共享的函式庫生態也推進了網路的增長。
+在 JavaScript 誕生的 1996 年，它的作用僅僅是為當時由靜態文檔組成的網頁，提供些許的互動和興奮感。而當網路漸漸從_閱讀_的媒介，成為_做事_的場所，JavaScript 也慢慢地紅了起來。JavaScript 開發者們撰寫了許多工具，來解決自己遭遇的問題，並打包成能重複使用的工具包，稱為**函式庫**（library），以便和他人共享自己的解決方案。這個共享函式庫的生態，也推進了網路的增長。
 
 目前 JavaScript 已經是網路的必需品了，[大約 95% 的網站都又在使用 JavaScript](https://w3techs.com/technologies/details/cp-javascript)，網路也成了當今生活的必須。使用者可以透過文字與影像，來寫論文、聽音樂、看電影、與人遠距離交流。曾經只能透過裝在電腦內的原生軟體所完成的事情，現在也能網路上做到。這種現代化、複雜度高、還有各種互動的網站，被稱為**網路應用程式**（web applications）。
 
