@@ -7,7 +7,7 @@ Firefox 53 は、米国時間 2017 年 4 月 19 日にリリースされまし�
 ### 開発者ツール
 
 - 非同期パン/ズームによって、ハイライト表示でスクロールに待ち時間が発生する問題を解消しました ({{bug(1312103)}})。
-- 要素の [すべての CSS パスをコピーする ](</ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Copy CSS Path>)メニュー項目を追加しました ({{bug(1323700)}})。
+- 要素の [すべての CSS パスをコピーする](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Copy_CSS_Path) メニュー項目を追加しました ({{bug(1323700)}})。
 - 開発ツールで CSS Color Module Level 4 をサポートしました ({{bug(1310681)}})。
 - マークアップビュー: 折りたたんでいるノードの開始タグと終了タグの間に、視覚的なヒントを追加しました ({{bug(1323193)}})。
 

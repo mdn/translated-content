@@ -29,7 +29,7 @@ var downloading = browser.downloads.download(
       - : リクエストの body を`string`で指定します。
     - `conflictAction`{{optional_inline}}
       - : A string representing the action you want taken if there is a filename conflict, as defined in the {{WebExtAPIRef('downloads.FilenameConflictAction')}} type (defaults to "uniquify" when it is not specified).
-    - `filename`{{optional_inline}}
+    - `filename` {{optional_inline}}
       - : A `string` representing a file path relative to the default downloads directory — this provides the location where you want the file to be saved, and what filename you want to use. Absolute paths, empty paths, and paths containing back-references (`../`) will cause an error. If omitted, this value will default to the filename already given to the download file, and a location immediately inside the downloads directory.
     - `headers`{{optional_inline}}
       - : An `array` of `objects` representing extra HTTP headers to send with the request if the URL uses the HTTP\[s] protocol. Each header is represented as a dictionary object containing the keys `name` and either `value` or `binaryValue`, restricted to those allowed by [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest).

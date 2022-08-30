@@ -13,26 +13,26 @@ Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました�
 ### DOM
 
 - HTML の要素で {{ domxref("element.outerHTML") }} プロパティがサポートされました。
-- [`XMLHttpRequest`](/ja/docs/HTML_in_XMLHttpRequest "HTML_in_XMLHttpRequest") が HTML のパース処理をサポートしました。
+- [`XMLHttpRequest`](/ja/docs/HTML_in_XMLHttpRequest) が HTML のパース処理をサポートしました。
 - 同期リクエストの実行時における、{{ domxref("XMLHttpRequest") }} `responseType` および `withCredentials` 属性の使用のサポートを削除しました。属性の使用を試みると、`NS_ERROR_DOM_INVALID_ACCESS_ERR` 例外が発生します。この変更は、W3C へ標準化の提案が行われました。
 - バイブレーションをサポートするデバイスでバイブレーションを行う {{ domxref("window.navigator.mozVibrate()") }} をサポートしました。Gecko では `mozVibrate()` として実装しています。
-- {{ domxref("window.navigator.mozApps") }} は、[Open Web Applications](/ja/docs/Apps "Apps") のインストールや管理に用いることができる [`Apps`](/ja/docs/DOM/Apps "Apps") オブジェクトを返します。
+- {{ domxref("window.navigator.mozApps") }} は、[Open Web Applications](/ja/docs/Apps) のインストールや管理に用いることができる [`Apps`](/ja/docs/DOM/Apps) オブジェクトを返します。
 - `MozBeforePaint` イベントは発生しなくなりました。{{ domxref("window.requestAnimationFrame","mozRequestAnimationFrame()") }} でこのイベントを使用している場合は、代わりにコールバック関数を渡してください。
 - アニメーションフレームの要求をキャンセルする機能をサポートしました。{{ domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()") }} はリクエスト ID を返すようになり、要求をキャンセルするにはこの値を {{ domxref("window.cancelAnimationFrame", "window.mozCancelAnimationFrame()") }} に渡します。
 - DOM4 仕様書で導入されたいくつかの {{ domxref("Event") }} コンストラクタ (`Event`、HTML イベント、 `UIEvent`、`MouseEvent`) がサポートされました。
 - {{ domxref("window.navigator.mozBattery", "Battery API") }} がデフォルトで有効になりました。
-- [`HTMLMediaElement`](/ja/docs/DOM/HTMLMediaElement "DOM/HTMLMediaElement") で、[`defaultMuted`](/ja/docs/DOM/HTMLMediaElement "DOM/HTMLMediaElement")、[`loop`](/ja/docs/DOM/HTMLMediaElement "DOM/HTMLMediaElement")、[`muted`](/ja/docs/DOM/HTMLMediaElement "DOM/HTMLMediaElement") の各プロパティがサポートされました。
+- [`HTMLMediaElement`](/ja/docs/DOM/HTMLMediaElement) で、[`defaultMuted`](/ja/docs/DOM/HTMLMediaElement)、[`loop`](/ja/docs/DOM/HTMLMediaElement)、[`muted`](/ja/docs/DOM/HTMLMediaElement) の各プロパティがサポートされました。
 - ある要素で {{ domxref("element.mozRequestFullScreen()") }} メソッドを呼び出したときに別の要素がすでにフルスクリーンモードであった場合は、{{ domxref("document.mozCancelFullScreen()") }} を呼び出すときに、前にフルスクリーンモードであった要素を復元するようになりました。
 - {{ domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()") }} メソッドは引数がない形式をサポートしなくなりました。このような形式はあまり使用されておらず、また標準化される見込みもありません。
-- 画像としての SVG が、[canvas を汚染せずに](/ja/docs/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F "CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F") canvas 内へ描画できるようになりました。
+- 画像としての SVG が、[canvas を汚染せずに](/ja/docs/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F) canvas 内へ描画できるようになりました。
 - `GeoPositionAddress`インタフェースの非標準プロパティである `countryCode` を削除しました。`nsIDOMGeoPositionAddress` をご覧ください。
-- [Server-sent events](/ja/docs/Server-sent_events "Server-sent events") が [CORS](/ja/docs/HTTP_access_control "HTTP access control (CORS)") をサポートしました。
+- [Server-sent events](/ja/docs/Server-sent_events) が [CORS](/ja/docs/HTTP_access_control) をサポートしました。
 - 従来、ユーザがリンクをたどると {{ domxref("window.navigator") }} オブジェクトでセットしている値は新しいページが保持していました。これが、新しいページ用に新たな `navigator` オブジェクトを作成するようになりました。これにより、Firefox は他のブラウザと同様に動作します。
 
 ### CSS
 
-- [`text-size-adjust`](/ja/docs/CSS/text-size-adjust "text-size-adjust") プロパティがサポートされました。
-- [CSS3](/ja/docs/CSS/CSS3 "CSS3") [Conditional Rules](/ja/docs/CSS/CSS3#Conditional_Rules "CSS3 Conditional Rules") のサポートが向上しました: [@media](/ja/docs/CSS/@media "@media")、[@-moz-document](/ja/docs/CSS/@document "@document") に入れ子構文を追加できます ([CSS Syntax](/ja/docs/CSS/Syntax "Syntax") および [CSS at-rules](/ja/docs/CSS/At-rule "At-rule") をご覧ください)。
+- [`text-size-adjust`](/ja/docs/CSS/text-size-adjust) プロパティがサポートされました。
+- [CSS3](/ja/docs/CSS/CSS3) [Conditional Rules](/ja/docs/CSS/CSS3#Conditional_Rules) のサポートが向上しました: [@media](/ja/docs/CSS/@media)、[@-moz-document](/ja/docs/CSS/@document) に入れ子構文を追加できます ([CSS Syntax](/ja/docs/CSS/Syntax) および [CSS at-rules](/ja/docs/CSS/At-rule) をご覧ください)。
 
 ### SVG
 
@@ -40,25 +40,25 @@ Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました�
 
 ### WebSocket
 
-- [WebSocket](/ja/docs/WebSockets "WebSockets") API がバイナリ形式のメッセージをサポートしました ({{ bug("676439") }} を参照)。
+- [WebSocket](/ja/docs/WebSockets) API がバイナリ形式のメッセージをサポートしました ({{ bug("676439") }} を参照)。
 - プロトコルおよび API が最新のドラフト仕様に更新され、また API から接頭辞が除去されました ({{ bug("666349") }} および {{ bug("695635") }} を参照)。
 - 以前 Firefox では WebSockets で送受信するメッセージのサイズが 16 MB に制限されていましたが、この制限を 2 GB に引き上げました (メモリ容量の制限で大きなデータを扱えない場合もありますが、Firefox は 2 GB までサポートします)。
 
 ### IndexedDB
 
-- [IDBFactory.cmp()](/ja/docs/IndexedDB/IDBFactory#cmp%28%29 "https://developer.mozilla.org/ja/docs/IndexedDB/IDBFactory#cmp%28%29") がサポートされました。
-- [IndexedDB のキー](/ja/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#section_6 "https://developer.mozilla.org/ja/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#section_6") のタイプは、以下のいずれかにすることができます: (String や Integer だけでなく) Date、Arrays、Float。
+- [IDBFactory.cmp()](/ja/docs/IndexedDB/IDBFactory#cmp%28%29) がサポートされました。
+- [IndexedDB のキー](/ja/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#section_6) のタイプは、以下のいずれかにすることができます: (String や Integer だけでなく) Date、Arrays、Float。
 
 ### Network
 
 - Firefox 8 で変更した、{{ rfc("2231") }} および {{ rfc("5987") }} でダブルクォートを区切り文字として利用できなくした点は、Outlook Web Access など一部のサイトで異常が発生するために取り消しました。
-- HTTP ヘッダのユーザエージェント文字列に、[携帯電話やタブレット上の Firefox がアクセスしているかをサーバが知ることができる](/ja/docs/Gecko_user_agent_string_reference#Mobile_and_Tablet_indicators "Gecko_user_agent_string_reference#Mobile_and_Tablet_indicators")識別子を含むようになりました。
+- HTTP ヘッダのユーザエージェント文字列に、[携帯電話やタブレット上の Firefox がアクセスしているかをサーバが知ることができる](/ja/docs/Gecko_user_agent_string_reference#Mobile_and_Tablet_indicators)識別子を含むようになりました。
 
 ### 開発ツール
 
-- システムが [WebGL](/ja/docs/WebGL "WebGL") をサポートしている場合は、[ページ調査ツール](/ja/docs/Tools/Page_Inspector "Page Inspector") で [3D ビュー](/ja/docs/Tools/Page_Inspector/3D_view "3D view") を提供します。
-- 新しいツールである [スタイルエディタ](/ja/docs/Tools/Style_Editor "Style Editor") は、リアルタイムな CSS スタイルシートの変更や作成を自由自在に行う機能を提供します。
-- [ソース表示機能](/ja/docs/View_source "https://developer.mozilla.org/ja/docs/View_source") が従来の HTML パーサーに代わり新しい HTML5 パーサーを使用するようになりました。
+- システムが [WebGL](/ja/docs/WebGL) をサポートしている場合は、[ページ調査ツール](/ja/docs/Tools/Page_Inspector) で [3D ビュー](/ja/docs/Tools/Page_Inspector/3D_view) を提供します。
+- 新しいツールである [スタイルエディタ](/ja/docs/Tools/Style_Editor) は、リアルタイムな CSS スタイルシートの変更や作成を自由自在に行う機能を提供します。
+- [ソース表示機能](/ja/docs/View_source) が従来の HTML パーサーに代わり新しい HTML5 パーサーを使用するようになりました。
 
 ## Mozilla 開発者とアドオン開発者向けの変更点
 
@@ -70,8 +70,8 @@ Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました�
 
 #### 新しい JavaScript code modules
 
-- [`source-editor.jsm`](/ja/docs/JavaScript_code_modules/source-editor.jsm "source-editor.jsm")
-  - : アドオンで利用可能な、便利で使いやすいソースコードエディタを提供します。これは [スクラッチパッド](/ja/docs/Tools/Scratchpad "Scratchpad") など Firefox に統合している開発ツールで使用しているものと同じです。
+- [`source-editor.jsm`](/ja/docs/JavaScript_code_modules/source-editor.jsm)
+  - : アドオンで利用可能な、便利で使いやすいソースコードエディタを提供します。これは [スクラッチパッド](/ja/docs/Tools/Scratchpad) など Firefox に統合している開発ツールで使用しているものと同じです。
 
 ### インタフェースの変更
 

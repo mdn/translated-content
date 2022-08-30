@@ -110,7 +110,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 また、`"blocking"` というオプションも渡していることに注意してください。このオプションは、リクエストを改変する際に必ず必要となります。これによってネットワークリクエストがリスナ関数にブロックされるため、リスナ関数から処理が戻るまでブラウザは待機します。`"blocking"` に関する詳細は {{WebExtAPIRef("webRequest.onBeforeRequest")}} のドキュメントを参照してください。
 
-それでは実際に動かしてみましょう。画像が多く載っている MDN のページ（[https://developer.mozilla.org/ja/docs/Tools/Network_Monitor](/ja/docs/Tools/Network_Monitor) など）を開き、[ 拡張機能をリロード](/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on) します。終わったら MDN のページをリロードしてみましょう。
+それでは実際に動かしてみましょう。画像が多く載っている MDN のページ（[https://developer.mozilla.org/ja/docs/Tools/Network_Monitor](/ja/docs/Tools/Network_Monitor) など）を開き、[拡張機能をリロード](/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on) します。終わったら MDN のページをリロードしてみましょう。
 
 {{EmbedYouTube("ix5RrXGr0wA")}}
 

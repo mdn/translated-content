@@ -16,8 +16,8 @@ Gecko 24 を搭載した Firefox 24 は米国時間 2013 年 9 月 17 日にリ�
 
 ### JavaScript
 
-- `"use strict"` により明示的に要求される場合を除き、[Arrow functions](/ja/docs/Web/JavaScript/Reference/arrow_functions "Web/JavaScript/Reference/arrow_functions") は自動的に strict モードにならないようにしました。({{bug(852762)}})
-- [`String.prototype.repeat`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/repeat "Web/JavaScript/Reference/Global_Objects/String/repeat") JS メソッドを実装しました ({{bug(815431)}})。
+- `"use strict"` により明示的に要求される場合を除き、[Arrow functions](/ja/docs/Web/JavaScript/Reference/arrow_functions) は自動的に strict モードにならないようにしました。({{bug(852762)}})
+- [`String.prototype.repeat`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/repeat) JS メソッドを実装しました ({{bug(815431)}})。
 
 ### DOM
 

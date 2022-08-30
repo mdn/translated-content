@@ -53,7 +53,7 @@ slug: Mozilla/Firefox/Releases/3.5
 
 - {{ cssxref("color_value#Mozilla_Extensions","-moz-nativehyperlinktext") }} カラー値
   - : この新しいカラー値はユーザーのシステムのデフォルトのハイパーリンクの色を表します。
-- {{ cssxref("-moz-window-shadow") }} プロパティおよび {{ cssxref(":-moz-system-metric(mac-graphite-theme)") }}` `擬似クラス
+- {{ cssxref("-moz-window-shadow") }} プロパティおよび {{ cssxref(":-moz-system-metric(mac-graphite-theme)") }} 擬似クラス
   - : これらの新しい CSS 機能はテーマ作成を手助けするために追加されました。
 - `-moz-appearance` 向けの新しい値
   - : `-moz-win-glass` および `-moz-mac-unified-toolbar` という値が `-moz-appearance` 向けに追加されました。
@@ -109,7 +109,7 @@ slug: Mozilla/Firefox/Releases/3.5
 
 - [HTTP 向けのクロスサイトアクセスコントロール](/ja/docs/Web/HTTP/CORS)
   - : Firefox 3.5 では、サーバーがサポートする場合に、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) によるものも含む HTTP リクエストでドメインを超える動作が可能になりました。
-- [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)[ のための Progress イベント](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
+- [`XMLHttpRequest` のための Progress イベント](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
   - : Progress イベントが拡張がリクエストの進捗を監視できるようにするために提供されるようになりました。
 - 同期 `XMLHttpRequest`サポートの改善
   - : [DOM Timeout](https://bugzilla.mozilla.org/show_bug.cgi?id=340345) と [Input Events](https://bugzilla.mozilla.org/show_bug.cgi?id=333198) が同期 `XMLHttpRequest中に抑制されるようになりました。`
@@ -118,9 +118,9 @@ slug: Mozilla/Firefox/Releases/3.5
 
 #### 新しい Canvas の機能
 
-- [`Canvas`](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text)[ 要素向けの HTML5 テキスト API](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
+- [`Canvas`](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text)[要素向けの HTML5 テキスト API](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
   - : Canvas 要素が HTML5 テキスト API をサポートするようになりました。
-- [`Canvas`](/ja/docs/Canvas_tutorial/Applying_styles_and_colors#Shadows)[ での影付き効果](/ja/docs/Canvas_tutorial/Applying_styles_and_colors#Shadows)
+- [`Canvas` での影付き効果](/ja/docs/Canvas_tutorial/Applying_styles_and_colors#Shadows)
   - : Canvas での影付き効果がサポートされるようになりました。
 - [`createImageData()`](/ja/docs/HTML/Canvas/Pixel_manipulation_with_canvas#Creating_an_ImageData_object)
   - : Canvas の `createImageData()` メソッドがサポートされるようになりました。こ`のメソッドを利用することで、ImageData` オブジェクトを必要なときに自動的に作成させるのではなく、コードで明示的に作成することができます。オブジェクトを作成する必要性を無くすことができるので、このメソッドで他の `ImageData` を扱うメソッドのパフォーマンスを改善することができます。
@@ -153,14 +153,14 @@ slug: Mozilla/Firefox/Releases/3.5
 - SVG ID 参照が動的な変更に対応するようになりました。
 - SVG フィルターが `foreignObject` でも動作するようになりました。
 - 互換性のために `GetSVGDocument()` メソッドが [`object`](/ja/docs/Web/HTML/Element/object) および [`iframe`](/ja/docs/Web/HTML/Element/iframe) 要素に追加されました。
-- JavaScript においてオブジェクトおよび配列の初期化子によるプロパティの暗黙的な設定ではセッターの定義を行わないようになりました。詳細は [オブジェクトおよび配列の初期化子は評価時にセッターの定義を行うべきではない](/web-tech/2009/04/29/object-and-array-initializers-should-not-invoke-setters-when-evaluated "web-tech/2009/04/29/object-and-array-initializers-should-not-invoke-setters-when-evaluated/") というブログ投稿を参照してください。
+- JavaScript においてオブジェクトおよび配列の初期化子によるプロパティの暗黙的な設定ではセッターの定義を行わないようになりました。詳細は [オブジェクトおよび配列の初期化子は評価時にセッターの定義を行うべきではない](/web-tech/2009/04/29/object-and-array-initializers-should-not-invoke-setters-when-evaluated) というブログ投稿を参照してください。
 - `gDownloadLastDir.path` 変数は、パスではなく `nsIFile` を参照しているので、 `gDownloadLastDir.file` に名称変更されました。
 - `gDownloadLastDirPath` 変数は、パスではなく `nsIFile` を参照しているので、 `gDownloadLastDirFile` に名称変更されました。
 - Firefox 3.5 から、`XPCNativeWrapper` オートメーションを得る Chrome パッケージでの `data:` バインディングを利用することはできなくなります。
 
 ### XUL とアドオン開発者向け
 
-拡張開発者であるなら、[Firefox 3.5 向けに拡張を更新する](/ja/docs/Mozilla/Firefox/Releases/3.5/Updating_extensions "Updating extensions for Firefox 3.1") から読み始めるべきです。その記事ではあなたの拡張に影響しうる変更を知る上で役立つ概観を提供しています。
+拡張開発者であるなら、[Firefox 3.5 向けに拡張を更新する](/ja/docs/Mozilla/Firefox/Releases/3.5/Updating_extensions) から読み始めるべきです。その記事ではあなたの拡張に影響しうる変更を知る上で役立つ概観を提供しています。
 
 #### 新しいコンポーネントと機能
 
@@ -178,7 +178,7 @@ slug: Mozilla/Firefox/Releases/3.5
 - XUL [`textbox`](/ja/docs/XUL/textbox) ウィジェットが検索フィールドとして利用するための [`search`](/ja/docs/XUL/Attribute/textbox.type) type を提供するようになりました。
 - ウィンドウ間のタブのドラッグ＆ドロップのサポートのために、[`browser`](/ja/docs/XUL/browser) ウィジェットに [`swapDocShells()`](/ja/XUL/Method/SwapDocShells) メソッドが定義されました。
 - [`panel`](/ja/docs/XUL/panel) 要素に [`level`](/ja/docs/XUL/Attribute/panel.level) 属性が追加されました。 これは panel を他のアプリケーションの手前に表示するか、単純に panel が含まれるウィンドウの手前に表示するかどうかを指定できます。
-- XUL 要素が `clientHeight`、`clientWidth`、`scrollHeight`、`scrollWidth `プロパティをサポートするようになりました。
+- XUL 要素が `clientHeight`、`clientWidth`、`scrollHeight`、`scrollWidth` プロパティをサポートするようになりました。
 - [`keyset`](/ja/docs/XUL/keyset)s now include a `disabled` 要素に `disabled` 属性が追加されました。
 - 加えて、 `keyset` 要素はノードの [`removeChild()`](/ja/docs/Web/API/Node/removeChild) メソッドを用いて削除可能になりました。
 - [`mozIStorageStatement`](/ja/docs/mozIStorageStatement) には `initialize()` メソッドがありましたが、削除されました。利用者は新しいステートメントオブジェクトを得るための代替として [`createStatement()`](</ja/docs/mozIStorageConnection#createStatement()>) メソッドを使うべきです。

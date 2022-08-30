@@ -11,7 +11,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/Walkthrough
 
 これらの機能を以下のように実装していきます。
 
-- **[ブラウザーアクション ](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_action)\*\***（Firefox のツールバーに表示させるボタン）を定義\*\*
+- **[ブラウザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_action)**（Firefox のツールバーに表示させるボタン）を定義
   このボタン用に次のものを用意します。
 
   - "beasts-32.png" というアイコン
@@ -35,7 +35,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/Walkthrough
 - 拡張機能の中においてコンテンツスクリプトと他のスクリプトとを通信させる
 - ウェブページで用いるリソースを拡張機能にパッケージ化する
 
-[ソースコード一式は GitHub で参照できます ](https://github.com/mdn/webextensions-examples/tree/master/beastify)。
+[ソースコード一式は GitHub で参照できます](https://github.com/mdn/webextensions-examples/tree/master/beastify)。
 
 この拡張機能を作成するには、Firefox 45 以上が必要です。
 
@@ -87,7 +87,7 @@ cd beastify
 - 最初の 3 つのキー [`manifest_version`](/ja/Add-ons/WebExtensions/manifest.json/manifest_version)、[`name`](/ja/Add-ons/WebExtensions/manifest.json/name)、[`version`](/ja/Add-ons/WebExtensions/manifest.json/version) は必須であり、拡張機能の基本的なメタデータを指定します
 - [`description`](/ja/Add-ons/WebExtensions/manifest.json/description) と [`homepage_url`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) は省略可能ですが、設定しておくことをお勧めします。これは拡張機能についての役立つ情報となります
 - [`icons`](/ja/Add-ons/WebExtensions/manifest.json/icons) は省略可能ですが、設定しておくことをお勧めします。この値は拡張機能のアイコンを指定するものであり、アイコンはアドオンマネージャーに表示されます
-- [`permissions`](/ja/Add-ons/WebExtensions/manifest.json/permissions) は拡張機能に必要なパーミッションのリストです。ここでは [`activeTab` パーミッション ](/ja/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)を要請しています
+- [`permissions`](/ja/Add-ons/WebExtensions/manifest.json/permissions) は拡張機能に必要なパーミッションのリストです。ここでは [`activeTab` パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) を要請しています
 - [`browser_action`](/ja/Add-ons/WebExtensions/manifest.json/browser_action) はツールバーのボタンを指定するものです。ここでは 3 つの情報を指定しています
 
   - `default_icon` ではボタンのアイコンを指定します（必須項目）
@@ -102,7 +102,7 @@ cd beastify
 
 拡張機能にはアイコンを用意すると良いでしょう。このアイコンは、アドオンマネージャーで拡張機能のリスト横に表示されます（アドオンマネージャーは "about:addons" の URL から確認できます）。今回の manifest.json では "icons/beasts-48.png" を用意していると宣言しています。
 
-"icons" ディレクトリーを作成して、そこにアイコンを "beasts-48.png" という名前で 保存します。必要であれば [サンプルで使用しているアイコン ](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png)を利用しても構いません（このアイコンは [Aha-Soft’s Free Retina iconset](https://www.iconfinder.com/iconsets/free-retina-icon-set) から引用したものであり、該当する [ライセンス ](http://www.aha-soft.com/free-icons/free-retina-icon-set/)の下で使用しています）。
+"icons" ディレクトリーを作成して、そこにアイコンを "beasts-48.png" という名前で 保存します。必要であれば [サンプルで使用しているアイコン](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png)を利用しても構いません（このアイコンは [Aha-Soft’s Free Retina iconset](https://www.iconfinder.com/iconsets/free-retina-icon-set) から引用したものであり、該当する [ライセンス](http://www.aha-soft.com/free-icons/free-retina-icon-set/) の下で使用しています）。
 
 アイコンを自分で用意する場合 48x48 ピクセルのサイズにする必要があります。高解像度のディスプレイに 96x96 ピクセルのアイコンを表示させたい場合は、manifest.json の `icons` オブジェクトに `96` というプロパティで設定してください。
 
@@ -117,7 +117,7 @@ cd beastify
 
 ツールバーのボタンにもアイコンが必要です。今回の manifest.json では "icons/beasts-32.png" を用意していると宣言しています。
 
-アイコンを "beasts-32.png" という名前で "icons" ディレクトリー内に保存します。必要であれば [サンプルで使用しているアイコン ](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-32.png)を利用しても構いません（このアイコンは [IconBeast Lite のアイコン集](http://www.iconbeast.com/free) から引用したものであり、該当する [ライセンス ](http://www.iconbeast.com/faq/)の下で使用しています）。
+アイコンを "beasts-32.png" という名前で "icons" ディレクトリー内に保存します。必要であれば [サンプルで使用しているアイコン](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-32.png) を利用しても構いません（このアイコンは [IconBeast Lite のアイコン集](http://www.iconbeast.com/free) から引用したものであり、該当する [ライセンス](http://www.iconbeast.com/faq/) の下で使用しています）。
 
 ポップアップを使わない場合、ユーザーがボタンをクリックした際にはクリックイベントが拡張機能に向けて送出されます。ポップアップを使う場合にはクリックイベントは送出されず、代わりにポップアップが開きます。今回はポップアップが必要なので、次の項で作成しましょう。
 
@@ -400,7 +400,7 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 
 最後に、動物の画像を用意しておく必要があります。
 
-拡張機能のルートディレクトリー配下に "beasts" という名前のディレクトリーを新しく作成し、その中に 3 つの画像を適切な名前で保存します。画像は [GitHub リポジトリ ](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts)から、またはここからでも取得できます。
+拡張機能のルートディレクトリー配下に "beasts" という名前のディレクトリーを新しく作成し、その中に 3 つの画像を適切な名前で保存します。画像は [GitHub リポジトリ](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts) から、またはここからでも取得できます。
 
 ![](frog.jpg)![](snake.jpg)![](turtle.jpg)
 

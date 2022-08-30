@@ -51,7 +51,7 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 
 - Firefox 53 から設定により使用可能であった **[Collaborative Scheduling of Background Tasks API](/ja/docs/Web/API/Background_Tasks_API)** (またはシンプルに **Background Tasks API** または **`requestIdleCallback` API** として知られる) を、デフォルトで有効にしました。この API は、次の再描画を行う前に利用可能な空き時間があるとブラウザーが判断したときに実行するタスクを予定することができます。これにより、目に見えるパフォーマンス低下を発生させずに空き時間をコードで使用できます ({{bug(1314959)}})。
 - **[WebVR 1.1 API](/ja/docs/Web/API/WebVR_API)** を、Windows でデフォルトで有効にしました (macOS は Nightly で使用できます)。この API はバーチャルリアリティデバイス (例えば Oculus Rift や HTC Vive のようなヘッドマウントディスプレイ) をウェブアプリで使用可能にして、開発者がディスプレイの位置や移動の情報を 3D シーンの移動に変換して、ディスプレイにコンテンツを表示することが可能になります。
-- **[Intersection Observer API](/ja/docs/Web/API/Intersection_Observer_API)** (祖先要素またはトップレベルのドキュメントの [viewport](/ja/docs/Glossary/viewport "viewport: A viewport は、現在表示されているコンピューター画像の中の、多角形 (通常は長方形) 領域を表します。ウェブやブラウザーの場合、表示されているウェブサイトのコンテンツが占めるブラウザーの領域を示します。viewport の外側にあるコンテンツは、オンスクリーンで表示されていません。") と対象要素の交差状態の変化を非同期に監視する手段を提供します) を追加しました ({{bug(1321865)}})。
+- **[Intersection Observer API](/ja/docs/Web/API/Intersection_Observer_API)** (祖先要素またはトップレベルのドキュメントの [viewport](/ja/docs/Glossary/viewport) と対象要素の交差状態の変化を非同期に監視する手段を提供します) を追加しました ({{bug(1321865)}})。
 
 #### DOM
 

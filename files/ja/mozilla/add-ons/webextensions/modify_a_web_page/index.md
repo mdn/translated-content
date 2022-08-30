@@ -40,7 +40,7 @@ WebExtensions API での実現方法は２つあります：
 }
 ```
 
-[`content_scripts`](/ja/Add-ons/WebExtensions/manifest.json/content_scripts) キーは URL パターンと一致するページにスクリプトを読み込む方法です。この場合、`content_scripts` は[ https://developer.mozilla.org/](/) 以下のすべてのページで "page-eater.js" というスクリプトをロードするようにブラウザーに指示します。
+[`content_scripts`](/ja/Add-ons/WebExtensions/manifest.json/content_scripts) キーは URL パターンと一致するページにスクリプトを読み込む方法です。この場合、`content_scripts` は <https://developer.mozilla.org/> 以下のすべてのページで "page-eater.js" というスクリプトをロードするようにブラウザーに指示します。
 
 > **Note:** `content_scripts` の `"js"` プロパティ は配列なので、マッチしているページに複数のスクリプトを挿入できます。これを行うと、ページによってロードされるいくつかのスクリプトと同じように、ページは同じスコープを共有し、配列にリストされている順序でロードされます。
 

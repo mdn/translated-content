@@ -31,7 +31,7 @@ Want to help document Firefox 17? See the [list of bugs that need to be written 
 
 - [`String`](/ja/docs/JavaScript/Reference/Global_Objects/String) オブジェクトが Harmony の `startsWith`、`endsWith`、および `contains` メソッドを提供します。([bug 772733](https://bugzilla.mozilla.org/show_bug.cgi?id=772733))
 - strawman [`ParallelArray`](/ja/docs/JavaScript/Reference/Global_Objects/ParallelArray) オブジェクトが試験的に実装されました。({{ bug("778559") }})
-- [`Map`](/ja/docs/JavaScript/Reference/Global_Objects/Map "/ja/docs/JavaScript/Reference/Global_Objects/Map")/[`Set`](/ja/docs/JavaScript/Reference/Global_Objects/Set "/ja/docs/JavaScript/Reference/Global_Objects/Set") のイテレートをサポートしました。({{ bug("725909") }})
+- [`Map`](/ja/docs/JavaScript/Reference/Global_Objects/Map)/[`Set`](/ja/docs/JavaScript/Reference/Global_Objects/Set) のイテレートをサポートしました。({{ bug("725909") }})
 - Web コンテンツでは、デフォルトで [E4X](/ja/docs/E4X) を無効にしました。({{ bug("778851") }})
 - Chrome JavaScript オブジェクトを content に公開するには、`__exposedProps__` の設定が必要になりました。`__exposedProps__` の設定なしに content から Chrome オブジェクトへのアクセスを試みても失敗します ({{ bug("553102") }})。
 

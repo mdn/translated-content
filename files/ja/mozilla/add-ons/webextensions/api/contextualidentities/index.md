@@ -20,7 +20,7 @@ Firefox での contextual identities のより詳しい情報は[このガイド
 
 Contextual identities は現在その他のブラウザーではサポートされていません。
 
-この API を使うには、 [manifest.json ](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json)ファイル内で "contextualIdentities" [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)を入れます。
+この API を使うには、 [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイル内で "contextualIdentities" [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)を入れます。
 
 ## 型
 
@@ -39,12 +39,11 @@ Contextual identities は現在その他のブラウザーではサポートさ�
   - : 既存の contextual identity のプロパティを更新します
 - {{WebExtAPIRef("contextualIdentities.remove()")}}
   - : contextual identity を削除します
-- ## イベント
 
-  {{WebExtAPIRef("contextualIdentities.onCreated")}}
+## イベント
 
+- {{WebExtAPIRef("contextualIdentities.onCreated")}}
   - : contextual identity 作成時に発火します
-
 - {{WebExtAPIRef("contextualIdentities.onRemoved")}}
   - : contextual identity 削除時に発火します
 - {{WebExtAPIRef("contextualIdentities.onUpdated")}}

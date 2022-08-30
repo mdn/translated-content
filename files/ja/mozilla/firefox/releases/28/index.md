@@ -21,7 +21,7 @@ Firefox 28 は米国時間 2014 年 3 月 18 日にリリースされました�
 - インスペクター: ルールビューでのカラーピッカーや、さまざまなツールチップを追加しました。
 - ブラウザツールボックス: アドオンやプラットフォームの開発者が、ブラウザ自身を対象にしてほぼすべての開発ツールを使用できるようになりました。
 
-詳しくは[こちらの投稿](https://hacks.mozilla.org/2013/12/split-console-pretty-print-minified-js-and-more-firefox-developer-tools-episode-28/ "Split console, pretty-print minified JS and more – Firefox Developer Tools Episode 28")をご覧ください。
+詳しくは[こちらの投稿](https://hacks.mozilla.org/2013/12/split-console-pretty-print-minified-js-and-more-firefox-developer-tools-episode-28/)をご覧ください。
 
 ### CSS
 

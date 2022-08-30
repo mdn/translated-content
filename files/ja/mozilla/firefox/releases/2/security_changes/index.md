@@ -8,7 +8,7 @@ slug: Mozilla/Firefox/Releases/2/Security_changes
 
 ## Weak ciphers disabled by default
 
-[Firefox 2](/ja/Firefox_2_for_developers "en/Firefox_2_for_developers") disables SSLv2 and the weak "export" cipher suites (those with key lengths less than 64 bits) by default, in favor of SSLv3. This provides improved security.
+[Firefox 2](/ja/Firefox_2_for_developers) disables SSLv2 and the weak "export" cipher suites (those with key lengths less than 64 bits) by default, in favor of SSLv3. This provides improved security.
 
 The preferred encryption methods are `TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA` and `TLS_RSA_WITH_3DES_EDE_CBC_SHA`. Some servers refer to these as `SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA` and `SSL_RSA_WITH_3DES_EDE_CBC_SHA`.
 
@@ -26,4 +26,4 @@ As always, you can find out what ciphers are supported -- and which are enabled 
 
 ## Security improved for the jar: protocol
 
-In order to correct a potential security problem when using the `jar:` protocol, it's now necessary to serve JAR files with the MIME type `application/java-archive`. See [Security and the jar protocol](/ja/Security_and_the_jar_protocol "en/Security and the jar protocol") for further details.
+In order to correct a potential security problem when using the `jar:` protocol, it's now necessary to serve JAR files with the MIME type `application/java-archive`. See [Security and the jar protocol](/ja/Security_and_the_jar_protocol) for further details.
