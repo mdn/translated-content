@@ -4,7 +4,7 @@ slug: Web/HTTP
 ---
 {{HTTPSidebar}}
 
-**超文本傳輸協定* (HTTP)*** 是一種用來傳輸超媒體文件 (像是 HTML 文件) 的[應用層](http://en.wikipedia.org/wiki/Application_Layer)協定，被設計來讓瀏覽器和伺服器進行溝通，但也可做其他用途。HTTP 遵循標準[客戶端—伺服器](https://en.wikipedia.org/wiki/Client%E2%80%93server_model)模式，由客戶端連線以發送請求，然後等待接收回應。HTTP 是一種[無狀態協定](https://en.wikipedia.org/wiki/Stateless_protocol)，意思是伺服器不會保存任兩個請求間的任何資料 (狀態)。儘管作為 TCP/IP 的應用層，HTTP 亦可應用於其他可靠的[傳輸層](http://en.wikipedia.org/wiki/Transport_Layer) (例如 [UDP](https://en.wikipedia.org/wiki/User_Datagram_Protocol))，只要不會無聲無息地遺失訊息即可。
+**_超文本傳輸協定 (HTTP)_** 是一種用來傳輸超媒體文件 (像是 HTML 文件) 的[應用層](http://en.wikipedia.org/wiki/Application_Layer)協定，被設計來讓瀏覽器和伺服器進行溝通，但也可做其他用途。HTTP 遵循標準[客戶端—伺服器](https://en.wikipedia.org/wiki/Client%E2%80%93server_model)模式，由客戶端連線以發送請求，然後等待接收回應。HTTP 是一種[無狀態協定](https://en.wikipedia.org/wiki/Stateless_protocol)，意思是伺服器不會保存任兩個請求間的任何資料 (狀態)。儘管作為 TCP/IP 的應用層，HTTP 亦可應用於其他可靠的[傳輸層](http://en.wikipedia.org/wiki/Transport_Layer) (例如 [UDP](https://en.wikipedia.org/wiki/User_Datagram_Protocol))，只要不會無聲無息地遺失訊息即可。
 
 ## 教學
 
