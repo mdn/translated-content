@@ -133,17 +133,17 @@ ECMAScript 5 よりも前では、オブジェクトの全プロパティを列�
 
 ```js
 function listAllProperties(o) {
-	var objectToInspect;
-	var result = [];
+    var objectToInspect;
+    var result = [];
 
-	for(objectToInspect = o; objectToInspect !== null;
+    for(objectToInspect = o; objectToInspect !== null;
            objectToInspect = Object.getPrototypeOf(objectToInspect)) {
         result = result.concat(
             Object.getOwnPropertyNames(objectToInspect)
         );
     }
 
-	return result;
+ return result;
 }
 ```
 
@@ -188,8 +188,8 @@ var myHonda = {color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}};
 
 別の方法として、次の 2 つの手順でオブジェクトを作ることができます。
 
-1.  コンストラクター関数を記述してオブジェクトの型を定義します。この時、便宜上の理由から慣習的に、1 文字目は大文字とします。
-2.  `new` でオブジェクトのインスタンスを作成します。
+1. コンストラクター関数を記述してオブジェクトの型を定義します。この時、便宜上の理由から慣習的に、1 文字目は大文字とします。
+2. `new` でオブジェクトのインスタンスを作成します。
 
 オブジェクトの型を定義するには、名前、プロパティ、メソッドを指定するオブジェクト型用の関数を作ります。例えば、車についてのオブジェクト型を作りたいとしましょう。このオブジェクト型は `car` と呼ばれ、make、model、year のプロパティを持たせたいとします。これを行うには、以下のような関数を書きます。
 
