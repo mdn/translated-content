@@ -1,17 +1,6 @@
 ---
 title: 画面キャプチャ API
 slug: Web/API/Screen_Capture_API
-tags:
-  - API
-  - MediaDevices
-  - MediaStream
-  - 概要
-  - リファレンス
-  - 画面キャプチャ
-  - 画面キャプチャ API
-  - 画面共有
-  - getDisplayMedia
-translation_of: Web/API/Screen_Capture_API
 ---
 {{DefaultAPISidebar("Screen Capture API")}}
 

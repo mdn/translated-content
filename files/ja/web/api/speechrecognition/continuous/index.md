@@ -1,17 +1,6 @@
 ---
 title: SpeechRecognition.continuous
 slug: Web/API/SpeechRecognition/continuous
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - continuous
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognition/continuous
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 

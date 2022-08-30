@@ -1,16 +1,6 @@
 ---
 title: Storage API
 slug: Web/API/Storage_API
-tags:
-  - API
-  - Overview
-  - Quotas
-  - Reference
-  - Secure context
-  - Storage
-  - Storage API
-  - Usage
-translation_of: Web/API/Storage_API
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Storage")}}
 

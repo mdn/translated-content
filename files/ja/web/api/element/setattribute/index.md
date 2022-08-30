@@ -1,12 +1,6 @@
 ---
 title: element.setAttribute
 slug: Web/API/Element/setAttribute
-tags:
-  - DOM
-  - DOM Element Methods
-  - Gecko
-  - Gecko DOM Reference
-translation_of: Web/API/Element/setAttribute
 ---
 {{ApiRef}}
 

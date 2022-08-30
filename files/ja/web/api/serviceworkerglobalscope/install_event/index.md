@@ -1,14 +1,6 @@
 ---
 title: 'ServiceWorkerGlobalScope: install event'
 slug: Web/API/ServiceWorkerGlobalScope/install_event
-tags:
-  - API
-  - Reference
-  - Service Worker
-  - ServiceWorkerGlobalScope
-  - events
-  - install
-translation_of: Web/API/ServiceWorkerGlobalScope/install_event
 ---
 {{DefaultAPISidebar("Service Workers API")}}
 

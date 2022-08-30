@@ -7,7 +7,9 @@ translation_of: Web/API/Document/referrer
 
 ## Syntax
 
-    string = document.referrer;
+```js
+string = document.referrer;
+```
 
 ## Notes
 

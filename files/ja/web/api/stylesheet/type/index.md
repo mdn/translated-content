@@ -1,11 +1,6 @@
 ---
 title: StyleSheet.type
 slug: Web/API/StyleSheet/type
-tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-translation_of: Web/API/StyleSheet/type
 ---
 {{ApiRef}}
 

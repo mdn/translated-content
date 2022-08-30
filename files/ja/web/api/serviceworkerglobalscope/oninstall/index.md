@@ -1,15 +1,6 @@
 ---
 title: ServiceWorkerGlobalScope.oninstall
 slug: Web/API/ServiceWorkerGlobalScope/oninstall
-tags:
-  - API
-  - Property
-  - Reference
-  - Service Worker
-  - ServiceWorker
-  - ServiceWorkerGlobalScope
-  - oninstall
-translation_of: Web/API/ServiceWorkerGlobalScope/oninstall
 ---
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 

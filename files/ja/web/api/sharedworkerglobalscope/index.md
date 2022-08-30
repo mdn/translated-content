@@ -1,15 +1,6 @@
 ---
 title: SharedWorkerGlobalScope
 slug: Web/API/SharedWorkerGlobalScope
-tags:
-  - API
-  - Interface
-  - Reference
-  - SharedWorkerGlobalScope
-  - Web Workers
-  - インターフェイス
-  - ウェブワーカー
-translation_of: Web/API/SharedWorkerGlobalScope
 ---
 {{APIRef("Web Workers API")}}
 

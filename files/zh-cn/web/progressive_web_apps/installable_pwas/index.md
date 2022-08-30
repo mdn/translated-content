@@ -2,7 +2,7 @@
 title: 让 PWA 易于安装
 slug: Web/Progressive_web_apps/Installable_PWAs
 ---
-{{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
 在上一篇文章，我们了解了如何通过 [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API) 让 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 离线工作。我们还可以更进一步，让用户如同本地应用一样在支持的移动浏览器上安装 web 应用。这篇文章讲述如何通过网页清单和添加到主屏特性来做到这一点。
 
@@ -109,6 +109,6 @@ slug: Web/Progressive_web_apps/Installable_PWAs
 
 现在让我们将目光转移到 PWA 的最后一个难点：通过推送通知再次启动（re-engagement）。
 
-{{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Progressive_web_apps/")}}

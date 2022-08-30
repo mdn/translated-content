@@ -41,9 +41,9 @@ dataTransfer.effectAllowed;
 
 分配一个没有效果的其他值给 `effectAllowed`，则保留原值。
 
-Internet Explorer 会将该值改为小写。因此，`linkMove`将会变为`linkmove` ，等等。
+Internet Explorer 会将该值改为小写。因此，`linkMove`将会变为 `linkmove`，等等。
 
-## 举个例子
+## 示例
 
 此例子展示 `effectAllowed` 用法 和 {{domxref("DataTransfer.dropEffect", "dropEffect")}} 属性
 
@@ -106,8 +106,12 @@ function dragover_handler(ev) {
 
 ## 浏览器兼容性
 
-{{Compat("api.DataTransfer.effectAllowed")}}
+{{Compat}}
 
-## 参考链接
+## 参见
 
-{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}
+- [HTML 拖放 API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
+- [拖拽操作](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [推荐的拖拽类型](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [拖拽和放置多个项目](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer 测试——粘贴或拖拽](https://codepen.io/tech_query/pen/MqGgap)

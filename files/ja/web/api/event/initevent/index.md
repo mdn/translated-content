@@ -1,13 +1,6 @@
 ---
 title: Event.initEvent()
 slug: Web/API/Event/initEvent
-page-type: web-api-instance-method
-tags:
-  - 非推奨
-  - メソッド
-  - リファレンス
-browser-compat: api.Event.initEvent
-translation_of: Web/API/Event/initEvent
 ---
 {{ ApiRef("DOM") }}{{deprecated_header}}
 

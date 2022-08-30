@@ -35,7 +35,7 @@ translation_of: Learn/Performance/Measuring_performance
 
 パフォーマンスの改善を助けるために利用できるいくつかの異なるツールがあります。これらは一般的にふたつのカテゴリーに分類できます。
 
-- P[ageSpeed Insights](/ja/docs/Tools/Network_Monitor) や Firefox の [Network Monitor](/ja/docs/Tools/Network_Monitor) と [Performance Monitor](/ja/docs/Tools/Performance) のようなパフォーマンスを測定したり、指し示したりするツール。これらのツールはウェブアプリケーションやサイトの読み込みがどれくらい速いかまたは遅いかを示します。また、ウェブアプリケーションを最適化して改善するべき領域を指し示します。
+- [PageSpeed Insights](/ja/docs/Tools/Network_Monitor) や Firefox の [Network Monitor](/ja/docs/Tools/Network_Monitor) と [Performance Monitor](/ja/docs/Tools/Performance) のようなパフォーマンスを測定したり、指し示したりするツール。これらのツールはウェブアプリケーションやサイトの読み込みがどれくらい速いかまたは遅いかを示します。また、ウェブアプリケーションを最適化して改善するべき領域を指し示します。
 - コードを更新してウェブアプリケーションやサイトのパフォーマンスを改善するツール。たとえば、バンドルツールは HTTP リクエストの回数を減らすためにコードを単一のファイルにまとめ、ミニファイツールはファイルをより小さくするためにコードからホワイトスペースを取り除きます。
 
 このコースでは両方のカテゴリーを取り上げます。そしてパフォーマンスの指標だけではなく、サイトのパフォーマンスが改善しているかどうかを測定するための指標についても議論します。

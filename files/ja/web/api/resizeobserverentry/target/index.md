@@ -1,20 +1,6 @@
 ---
 title: ResizeObserverEntry.target
 slug: Web/API/ResizeObserverEntry/target
-page-type: web-api-instance-property
-tags:
-  - API
-  - バウンディングボックス
-  - プロパティ
-  - リファレンス
-  - リサイズオブザーバー API
-  - ResizeObserver
-  - ResizeObserverEntry
-  - コンテンツボックス
-  - observers
-  - target
-browser-compat: api.ResizeObserverEntry.target
-translation_of: Web/API/ResizeObserverEntry/target
 ---
 {{APIRef("Resize Observer API")}}
 

@@ -1,14 +1,6 @@
 ---
 title: Storage.removeItem()
 slug: Web/API/Storage/removeItem
-tags:
-  - API
-  - Method
-  - Reference
-  - Référence(2)
-  - Storage
-  - Web Storage
-translation_of: Web/API/Storage/removeItem
 ---
 {{APIRef("Web Storage API")}}
 

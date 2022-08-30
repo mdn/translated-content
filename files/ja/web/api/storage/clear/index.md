@@ -1,13 +1,6 @@
 ---
 title: Storage.clear()
 slug: Web/API/Storage/clear
-tags:
-  - API
-  - Method
-  - Reference
-  - Storage
-  - Web Storage
-translation_of: Web/API/Storage/clear
 ---
 {{APIRef("Web Storage API")}}
 

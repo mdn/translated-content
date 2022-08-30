@@ -61,11 +61,11 @@ MIDDLEWARE = [
 
 ## 세션 사용하기
 
-`session` 속성은 `request` parameter 에서 파생된 view 안에 있습니다. ( view 로 전달되는 H`ttpRequest `의 첫번째 함수 ). 이 세션의 속성은 현재의 사용자(정확히는 브라우저) 의 site 에 대한 connection 을 의미합니다. 브라우저의 cookie 안에 정의 되어 있습니다.
+`session` 속성은 `request` parameter 에서 파생된 view 안에 있습니다. ( view 로 전달되는 `HttpRequest `의 첫번째 함수 ). 이 세션의 속성은 현재의 사용자(정확히는 브라우저) 의 site 에 대한 connection 을 의미합니다. 브라우저의 cookie 안에 정의 되어 있습니다.
 
-이 `session` 속성은 사전 같은 객체인데 여러번 읽고 쓰고 심지어 수정까지 가능합니다.여러분은 다양한 dictionary 연산 - 즉, 모든 데이타 삭제, Key 가 존재하는지 데이타를 통한 looping 기타등등. 무엇보다 표준적인 "dictionary" API 를 통해 값을 가져오거나 저장 할 수 있습니다.
+이 `session` 속성은 사전 같은 객체이지만 여러번 읽고 쓰기가 가능합니다.여러분은 다양한 딕셔너리 연산 - 즉, 모든 데이타 삭제, Key 가 존재하는지 데이터를 통한 looping 기타등등. 무엇보다 표준적인 "dictionary" API 를 통해 값을 가져오거나 저장 할 수 있습니다.
 
-아래 코드는 key 값이 "my_car" 인 데이타를 어떻게 읽고 쓰고 삭제하는지 보여줍니다. 물론 그 key 값은 현재의 session (브자우져와 싸이트의 연결정보) 과 연관되어진 key 입니다.
+아래 코드는 key 값이 `"my_car"` 인 데이터를 어떻게 읽고 쓰고 삭제하는지 보여줍니다. 물론 그 key 값은 현재의 session (브라우저와 사이트의 연결정보) 과 연관되어진 key 입니다.
 
 > **참고:** 장고가 대단한점 한가지는 여러분이 이런 session 의 매카니즘에 생각하지 않게끔 한다는 점입니다. 만일 view 안에 있는 아래의 code 를 사용하면 **오직 현재의 브라우저만**이 현재의 request 에 관한 `my_car` 정보를 알 수 있다는 겁니다.
 
@@ -83,18 +83,18 @@ request.session['my_car'] = 'mini'
 del request.session['my_car']
 ```
 
-이 API 는 또한 여러가지 다른 방법을 제공하는데 그들은 대부분 관련된 session cookie 를 다루는데 사용되는 것들 입니다. 예를 들어, 그 cookies 가 사용자의 브라우져에서 지원이 되는지 태스트하거나, 만기일을 알아본다던지, 만기된 session 을 삭제 한다던지. 좀더 알아보고 싶다면 [How to use sessions](https://docs.djangoproject.com/en/2.0/topics/http/sessions/) (Django docs) 에서 그 API 를 배울수 있습니다.
+이 API 는 또한 여러가지 다른 방법을 제공하는데 그들은 대부분 관련된 session cookie 를 다루는데 사용되는 것들 입니다. 예를 들어, 그 cookies 가 사용자의 브라우저에서 지원이 되는지 테스트하거나, 만기일을 알아본다던지, 만기된 session 을 삭제 한다던지. 좀더 알아보고 싶다면 [How to use sessions](https://docs.djangoproject.com/en/2.0/topics/http/sessions/) (Django docs) 에서 그 API 를 배울수 있습니다.
 
 ## 세션 데이터 저장하기
 
-기본적으로 장고는 세션 데이타를 세션 database 에 저장합니다. 그리고 그 session cookie 를 필요할때 client 에게로 내려보내는 거지요. 즉, session 정보가 변경되었거나 삭제 되었을떄. 앞장에서 기술한것처럼, 만일 session key 값을 이용해서 어떤 정보가 변경이 되었다면 우리는 이에 대해 염려 할 필요가 없습니다.예를 들자면 :
+기본적으로 장고는 세션 데이타를 세션 database 에 저장합니다. 그리고 그 session cookie 를 필요할때 client 에게로 내려보내는 거지요. 즉, session 정보가 변경되었거나 삭제 되었을때, 앞장에서 기술한것처럼, 만일 session key 값을 이용해서 어떤 정보가 변경이 되었다면 우리는 이에 대해 염려 할 필요가 없습니다.예를 들자면 :
 
 ```python
 # This is detected as an update to the session, so session data is saved.
 request.session['my_car'] = 'mini'
 ```
 
-만일 당신이 session data 안에 있는 어떤 정보를 수정 했다면 장고는 여러분이 수정한걸 알아채지 못합니다. (예를 들어, 만일 "my_car" 안의 "wheels" 정보를 수정 했다면 ). 이경우 명시적으로 그 session 이 수정 되었다고 아래의 코드처럼 표현해 주어야 합니다.
+만일 당신이 session data 안에 있는 어떤 정보를 수정 했다면 장고는 여러분이 수정한걸 알아채지 못합니다. (예를 들어, 만일 `"my_car"` 안의 `"wheels"` 정보를 수정 했다면 ). 이경우 명시적으로 그 session 이 수정 되었다고 아래의 코드처럼 표현해 주어야 합니다.
 
 ```python
 # Session object not directly modified, only data within the session. Session changes not saved!

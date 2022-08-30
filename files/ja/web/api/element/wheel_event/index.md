@@ -1,15 +1,6 @@
 ---
 title: 'Element: wheel イベント'
 slug: Web/API/Element/wheel_event
-tags:
-  - API
-  - DOM
-  - Element
-  - Event
-  - Reference
-  - WheelEvent
-  - wheel
-translation_of: Web/API/Element/wheel_event
 ---
 {{APIRef}}
 

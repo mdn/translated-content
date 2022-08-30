@@ -1,17 +1,6 @@
 ---
 title: 'Element: fullscreenchange イベント'
 slug: Web/API/Element/fullscreenchange_event
-tags:
-  - API
-  - Fullscreen API
-  - Fullscreen events
-  - events
-  - fullscreen
-  - fullscreenchange
-  - イベント
-  - 全画面 API
-  - 全画面イベント
-translation_of: Web/API/Element/fullscreenchange_event
 ---
 {{APIRef}}
 

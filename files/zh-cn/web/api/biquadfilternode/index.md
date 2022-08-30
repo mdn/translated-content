@@ -65,9 +65,9 @@ _继承方法自父级的 {{domxref("AudioNode")}}_.
 - {{domxref("BiquadFilterNode.getFrequencyResponse()")}}
   - : From the current filter parameter settings this method calculates the frequency response for frequencies specified in the provided array of frequencies.
 
-## 例子
+## 示例
 
-{{page("/en-US/docs/Web/API/AudioContext.createBiquadFilter","Example")}}
+参见 [`AudioContext.createBiquadFilter`](/zh-CN/docs/Web/API/BaseAudioContext/createBiquadFilter#示例) 以获取示例代码，其中展示了如何使用 `AudioContext` 创建一个 Biquad 滤波器节点。
 
 ## 规范
 
@@ -75,8 +75,8 @@ _继承方法自父级的 {{domxref("AudioNode")}}_.
 
 ## 浏览器兼容性
 
-{{Compat("api.BiquadFilterNode")}}
+{{Compat}}
 
-## 相关内容
+## 参见
 
 - [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

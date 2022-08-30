@@ -32,9 +32,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 
 `encodeURIComponent()`는 다음 문자를 **제외**한 문자를 이스케이프 합니다.
 
-    Not Escaped:
+```
+Not Escaped:
 
-        A-Z a-z 0-9 - _ . ! ~ * ' ( )
+    A-Z a-z 0-9 - _ . ! ~ * ' ( )
+```
 
 `encodeURIComponent()`와 {{jsxref("encodeURI", "encodeURI()")}}의 차이는 다음과 같습니다.
 

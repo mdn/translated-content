@@ -14,7 +14,7 @@ The WCAG 2.0 and 2.1 provide a detailed set of guidelines for making web content
 
 ## The four principles
 
-WCAG is broadly broken down into four principles — major things that web content **must be** to be considered accessible (see [Understanding the Four Principles of Accessibility ](https://www.w3.org/TR/UNDERSTANDING-WCAG20/intro.html#introduction-fourprincs-head)for the WCAG definitions).
+WCAG is broadly broken down into four principles — major things that web content **must be** to be considered accessible (see [Understanding the Four Principles of Accessibility](https://www.w3.org/TR/UNDERSTANDING-WCAG20/intro.html#introduction-fourprincs-head) for the WCAG definitions).
 
 Each of the links below will take you to pages that further expand on these areas, giving you practical advice on how to write your web content so it conforms to the success criteria outlined in each of the WCAG 2.0 and 2.1 guidelines that further sub-divides each principle.
 

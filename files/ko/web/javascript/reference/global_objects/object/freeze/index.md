@@ -23,7 +23,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
 
 ## 구문
 
-    Object.freeze(obj)
+```js
+Object.freeze(obj)
+```
 
 ### 매개변수
 

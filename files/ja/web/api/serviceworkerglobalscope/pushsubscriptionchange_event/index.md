@@ -1,21 +1,6 @@
 ---
 title: 'ServiceWorkerGlobalScope: pushsubscriptionchange イベント'
 slug: Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event
-tags:
-  - API
-  - Event
-  - Push
-  - Push API
-  - PushSubscriptionChangeEvent
-  - Reference
-  - Service Workers
-  - Service Workers API
-  - ServiceWorker
-  - ServiceWorkerGlobalScope
-  - Subscription
-  - events
-  - プッシュ通知
-translation_of: Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event
 ---
 {{APIRef("Push API")}}
 

@@ -24,7 +24,9 @@ original_slug: Web/API/DocumentOrShadowRoot/activeElement
 
 ## 구문
 
-    element = DocumentOrShadowRoot.activeElement
+```js
+element = DocumentOrShadowRoot.activeElement
+```
 
 ### 값
 

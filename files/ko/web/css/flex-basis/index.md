@@ -39,7 +39,7 @@ flex-basis: initial;
 flex-basis: unset;
 ```
 
-`flex-basis` 속성값은 `content` 키워드를 사용하거나, [`<'width'>`](#<'width'>)를 나타내는 단위를 사용합니다.
+`flex-basis` 속성값은 `content` 키워드를 사용하거나, [`<'width'>`](#width)를 나타내는 단위를 사용합니다.
 
 ### 값
 
@@ -48,9 +48,9 @@ flex-basis: unset;
 - `content`
   - : 플렉스 아이템의 콘텐츠 크기에 따라 자동으로 크기가 변합니다.
     > **참고:** `content` 키워드는 Flexible Box Layout의 첫 배포에 포함되지 않아, 일부 오래 된 구현체에서는 지원하지 않을 수 있습니다. `flex-basis`와 주 크기({{cssxref("width")}}, {{cssxref("height")}}) 속성을 동시에 `auto`로 설정하면 동일한 효과를 볼 수 있습니다.
-    
+
     > **역사:** 원래 `flex-basis: auto`의 뜻은 자신의 `width` 또는 `height` 속성의 값을 사용하라는 것이었습니다.
-    
+
     - 그 후 `flex-basis: auto`는 자동 크기조절로 바뀌고, 기존의 `auto`는 `main-size`로 바뀌었습니다. [bug 1032922](https://bugzilla.mozilla.org/show_bug.cgi?id=1032922)에서 구현 기록을 볼 수 있습니다.[bug 1093316](https://bugzilla.mozilla.org/show_bug.cgi?id=1093316)에서 되돌려져 `auto` 가 다시 `width` / `height` 속성을 가리키게 됐고, 대신 새로운 `content` 키워드가 자동 크기조절을 맡게 됐습니다. ({{bug("1105111")}}에서 볼 수 있습니다)
 
 ### 형식 구문

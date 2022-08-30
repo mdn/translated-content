@@ -43,7 +43,7 @@ width: unset;
 `width` 속성은 다음과 같이 지정합니다.
 
 - [`min-content`](#min-content), [`max-content`](#max-content), [`fit-content`](#fit-content), [`auto`](#auto) 키워드 중 하나.
-- 하나의 [`<length>`](#<length>) 또는 [`<percentage>`](#<percentage>) 값.
+- 하나의 [`<length>`](#length) 또는 [`<percentage>`](#percentage) 값.
 
 ### 값
 
