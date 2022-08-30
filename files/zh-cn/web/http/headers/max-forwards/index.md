@@ -23,7 +23,7 @@ slug: Web/HTTP/Headers/Max-Forwards
 
 ## 语法
 
-```plain
+```http
 Max-Forwards: <integer>
 ```
 
