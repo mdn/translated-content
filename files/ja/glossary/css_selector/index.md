@@ -48,32 +48,32 @@ div.warning {
 
 {{EmbedLiveSample("glossary-selector-details", 640, 210)}}
 
-1.  CSS 入門内の [CSS セレクターについての詳細](/ja/docs/Learn/CSS/Introduction_to_CSS/Selectors)
-2.  基本的なセレクター
+1. CSS 入門内の [CSS セレクターについての詳細](/ja/docs/Learn/CSS/Introduction_to_CSS/Selectors)
+2. 基本的なセレクター
 
-    1.  [要素型セレクター](/ja/docs/Web/CSS/Type_selectors) `elementname`
-    2.  [クラスセレクター](/ja/docs/Web/CSS/Class_selectors) `.classname`
-    3.  [ID セレクター](/ja/docs/Web/CSS/ID_selectors) `#idname`
-    4.  [全称セレクター](/ja/docs/Web/CSS/Universal_selectors) `* ns|* *|*`
-    5.  [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors) `[attr=value]`
-    6.  [状態セレクター](/ja/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
+    1. [要素型セレクター](/ja/docs/Web/CSS/Type_selectors) `elementname`
+    2. [クラスセレクター](/ja/docs/Web/CSS/Class_selectors) `.classname`
+    3. [ID セレクター](/ja/docs/Web/CSS/ID_selectors) `#idname`
+    4. [全称セレクター](/ja/docs/Web/CSS/Universal_selectors) `* ns|* *|*`
+    5. [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors) `[attr=value]`
+    6. [状態セレクター](/ja/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
 
-3.  グループ化セレクター
+3. グループ化セレクター
 
-    1.  [セレクターリスト](/ja/docs/Web/CSS/Selector_list) `A, B`
+    1. [セレクターリスト](/ja/docs/Web/CSS/Selector_list) `A, B`
 
-4.  結合子
+4. 結合子
 
-    1.  [隣接兄弟セレクター](/ja/docs/Web/CSS/Adjacent_sibling_selectors) `A + B`
-    2.  [一般兄弟セレクター](/ja/docs/Web/CSS/General_sibling_selectors) `A ~ B`
-    3.  [子セレクター](/ja/docs/Web/CSS/Child_selectors) `A > B`
-    4.  [子孫セレクター](/ja/docs/Web/CSS/Descendant_selectors) `A B`
+    1. [隣接兄弟セレクター](/ja/docs/Web/CSS/Adjacent_sibling_selectors) `A + B`
+    2. [一般兄弟セレクター](/ja/docs/Web/CSS/General_sibling_selectors) `A ~ B`
+    3. [子セレクター](/ja/docs/Web/CSS/Child_selectors) `A > B`
+    4. [子孫セレクター](/ja/docs/Web/CSS/Descendant_selectors) `A B`
 
-5.  擬似クラス・要素
+5. 擬似クラス・要素
 
-    1.  [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes) `:`
-    2.  [擬似要素](/ja/docs/Web/CSS/Pseudo-elements) `::`
+    1. [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes) `:`
+    2. [擬似要素](/ja/docs/Web/CSS/Pseudo-elements) `::`
 
-6.  技術リファレンス
+6. 技術リファレンス
 
-    1.  {{SpecName("CSS3 Selectors")}}
+    1. {{SpecName("CSS3 Selectors")}}

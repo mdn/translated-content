@@ -14,10 +14,10 @@ slug: Learn/CSS/Building_blocks
 
 このモジュールを始める前に、次のものを身につけておいてください。
 
-1.  コンピューターの使い方と (ウェブを見たりコンテンツを消費したりといった) ウェブの受動的な使い方に関する基本的な知識に慣れ親しんでいること。
-2.  [基本的なソフトウェアのインストール](/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software)で説明されている基本的な作業環境と、[ファイルの扱い方](/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files)で説明されているファイルの作り方や管理の仕方について理解していること。
-3.  [HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)で説明されている HTML についての基礎知識に慣れ親しんでいること。
-4.  [CSS の第一歩](/ja/docs/Learn/CSS/First_steps)で説明されている CSS の基本について理解していること。
+1. コンピューターの使い方と (ウェブを見たりコンテンツを消費したりといった) ウェブの受動的な使い方に関する基本的な知識に慣れ親しんでいること。
+2. [基本的なソフトウェアのインストール](/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software)で説明されている基本的な作業環境と、[ファイルの扱い方](/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files)で説明されているファイルの作り方や管理の仕方について理解していること。
+3. [HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)で説明されている HTML についての基礎知識に慣れ親しんでいること。
+4. [CSS の第一歩](/ja/docs/Learn/CSS/First_steps)で説明されている CSS の基本について理解していること。
 
 > **Note:** 自分自身でファイルを作れない環境 (タブレットやその他の端末) で作業する場合、(ほとんどの) コードサンプルは [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) といったオンラインコーディングプログラムで試すことが可能です
 
