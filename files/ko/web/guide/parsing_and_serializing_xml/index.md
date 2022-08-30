@@ -16,10 +16,10 @@ original_slug: Web/Guide/XML_파싱_및_직렬화
 ---
 웹 상에서 XML을 파싱하고 직렬화할 때 사용할 수 있는 객체는 다음과 같습니다.
 
-- **DOM 트리를 문자열로 직렬화**하는\*\* \*\*[XMLSerializer](/en/XMLSerializer "en/XMLSerializer")
-- **XML 문서 상의 각기 다른 부분들을 (비 XML 문법을 사용하여) 문자열로 직렬화**하는 [XPath](/en/XPath "en/XPath")
-- XML을 파싱하여 **문자열을 DOM 트리로 변환**하는 [DOMParser](/en/DOM/DOMParser "en/DOMParser")
-- **URL을 사용하여 주소화 가능한(URL-addressable) 리소스를 DOM 트리로** 파싱하는 [XMLHttpRequest](/en/nsIXMLHttpRequest "en/XMLHttpRequest")
+- **DOM 트리를 문자열로 직렬화**하는\*\* \*\*[XMLSerializer](/en/XMLSerializer)
+- **XML 문서 상의 각기 다른 부분들을 (비 XML 문법을 사용하여) 문자열로 직렬화**하는 [XPath](/en/XPath)
+- XML을 파싱하여 **문자열을 DOM 트리로 변환**하는 [DOMParser](/en/DOM/DOMParser)
+- **URL을 사용하여 주소화 가능한(URL-addressable) 리소스를 DOM 트리로** 파싱하는 [XMLHttpRequest](/en/nsIXMLHttpRequest)
 
 ## Part 1: XML 문서 생성법
 
@@ -37,7 +37,7 @@ dump(oDOM.documentElement.nodeName == "parsererror" ? "error while parsing" : oD
 
 ### 자바스크립트 객체 트리를 시작점으로 하여 XML 문서를 생성(JXON)
 
-[JXON 역(reverse) 알고리즘](/en/JXON#Reverse_Algorithms "en/JXON – Reverse Algorithms")을 참고하세요.
+[JXON 역(reverse) 알고리즘](/en/JXON#Reverse_Algorithms)을 참고하세요.
 
 ### URL 주소화 가능한(URL-addressable) 리소스를 DOM 트리로 파싱
 
@@ -66,7 +66,7 @@ Part 1에서 생성한 XML 문서의 콘텐츠를 직렬화할 수 있는 방법
 
 ### DOM 트리를 문자열로 직렬화
 
-제일 먼저 [DOM 트리 생성법](/en/How_to_create_a_DOM_tree "en/How_to_create_a_DOM_tree")에 나와 있는 대로 DOM 트리를 생성합니다. 다른 방법으로는 {{ domxref("XMLHttpRequest") }}에서 얻어낸 DOM 트리를 사용하는 방법이 있습니다.
+제일 먼저 [DOM 트리 생성법](/en/How_to_create_a_DOM_tree)에 나와 있는 대로 DOM 트리를 생성합니다. 다른 방법으로는 {{ domxref("XMLHttpRequest") }}에서 얻어낸 DOM 트리를 사용하는 방법이 있습니다.
 
 이제 `doc`(DOM 트리)를 문자열로 직렬화 해 봅시다.
 
@@ -75,7 +75,7 @@ var oSerializer = new XMLSerializer();
 var sXML = oSerializer.serializeToString(doc);
 ```
 
-`new XMLSerializer()` 생성자는 JS XPCOM 컴포넌트(혹은 [JS module](/en/JavaScript_code_modules "En/JavaScript modules")) 내에서는 사용이 불가능합니다. 대신, 다음과 같은 코드를 작성하세요.
+`new XMLSerializer()` 생성자는 JS XPCOM 컴포넌트(혹은 [JS module](/en/JavaScript_code_modules)) 내에서는 사용이 불가능합니다. 대신, 다음과 같은 코드를 작성하세요.
 
 ```js
 var oSerializer = Components.classes["@mozilla.org/xmlextras/xmlserializer;1"]
@@ -85,7 +85,7 @@ var sXML = oSerializer.serializeToString(doc);
 
 #### DOM 트리를 문자열로 "예쁘게(pretty)" 직렬화
 
-`XMLSerializer와` [E4X](/en/E4X "en/E4X")를 사용하면 DOM 트리를 [예쁘게 출력(pretty print](http://en.wikipedia.org/wiki/Pretty-print)) 할 수 있습니다. 우선, [DOM 트리 생성법](/en/How_to_create_a_DOM_tree "en/How_to_create_a_DOM_tree") 글을 참고하여 DOM 트리를 생성합니다. 혹은 {{ domxref("XMLHttpRequest") }}를 통해 DOM 트리를 뽑아내는 방법도 있습니다. 아래 코드에서 변수 `doc`는 DOM 트리를 가지고 있습니다.
+`XMLSerializer와` [E4X](/en/E4X)를 사용하면 DOM 트리를 [예쁘게 출력(pretty print](http://en.wikipedia.org/wiki/Pretty-print)) 할 수 있습니다. 우선, [DOM 트리 생성법](/en/How_to_create_a_DOM_tree) 글을 참고하여 DOM 트리를 생성합니다. 혹은 {{ domxref("XMLHttpRequest") }}를 통해 DOM 트리를 뽑아내는 방법도 있습니다. 아래 코드에서 변수 `doc`는 DOM 트리를 가지고 있습니다.
 
 ```js
 var oSerializer = new XMLSerializer();
@@ -108,13 +108,13 @@ var sPrettyXML = XML(oSerializer.serializeToString(doc)).toXMLString();
 
 ### DOM 트리를 자바스크립트 객체 트리로 직렬화 (JXON)
 
-[JXON](/en/JXON "en/JXON") (lossless **J**avaScript **X**ML **O**bject **N**otation, 무손실 자바스크립트 XML 객체 표기법)은 XML을 사용하여 자바스크립트 객체를 표현하는 방법입니다. XML 문서의 일부분만 나오게 하고 싶다면, 문서 전체를 JSON으로 변환하지 말고 [XPath](/en/XPath "en/XPath")를 사용하세요! 이 외의 상황이라면 [JSON에 관한 글](/en/JXON "en/JXON")을 참조하세요.
+[JXON](/en/JXON) (lossless **J**avaScript **X**ML **O**bject **N**otation, 무손실 자바스크립트 XML 객체 표기법)은 XML을 사용하여 자바스크립트 객체를 표현하는 방법입니다. XML 문서의 일부분만 나오게 하고 싶다면, 문서 전체를 JSON으로 변환하지 말고 [XPath](/en/XPath)를 사용하세요! 이 외의 상황이라면 [JSON에 관한 글](/en/JXON)을 참조하세요.
 
 ### DOM 트리를 파일로 직렬화
 
-먼저, [DOM 트리 생성법](/en/How_to_create_a_DOM_tree "en/How_to_create_a_DOM_tree") 글에 나와 있는 대로 DOM 트리를 생성하세요. 만약 {{ domxref("XMLHttpRequest") }}를 사용하여 이미 DOM 트리가 존재한다면 이 절의 마지막 부분으로 건너 뛰십시오.
+먼저, [DOM 트리 생성법](/en/How_to_create_a_DOM_tree) 글에 나와 있는 대로 DOM 트리를 생성하세요. 만약 {{ domxref("XMLHttpRequest") }}를 사용하여 이미 DOM 트리가 존재한다면 이 절의 마지막 부분으로 건너 뛰십시오.
 
-이제 DOM 트리인 `doc`를 파일로 직렬화 해봅시다. 파일에 대해 더 알아보고 싶다면, [모질라에서 파일 사용과 관련하여](/en/Code_snippets/File_I//O "en/Code_snippets/File_I//O")를 참조하세요.
+이제 DOM 트리인 `doc`를 파일로 직렬화 해봅시다. 파일에 대해 더 알아보고 싶다면, [모질라에서 파일 사용과 관련하여](/en/Code_snippets/File_I//O)를 참조하세요.
 
 ```js
 var oFOStream = Components.classes["@mozilla.org/network/file-output-stream;1"].createInstance(Components.interfaces.nsIFileOutputStream);
@@ -143,6 +143,6 @@ var serialized = document.documentElement.innerHTML;
 
 ## 참고 자료
 
-- [XPath](/en/XPath "en/XPath")
-- [XMLHttpRequest](/en/nsIXMLHttpRequest "en/XMLHttpRequest")
-- [JXO](/en/JXON "en/JXON")
+- [XPath](/en/XPath)
+- [XMLHttpRequest](/en/nsIXMLHttpRequest)
+- [JXO](/en/JXON)

@@ -1,21 +1,6 @@
 ---
 title: 'Element: dblclick イベント'
 slug: Web/API/Element/dblclick_event
-tags:
-  - API
-  - DOM
-  - Double Click
-  - ダブルクリック
-  - Element
-  - イベント
-  - Input
-  - インターフェイス
-  - MouseEvent
-  - リファレンス
-  - ボタン
-  - dblclick
-  - mouse
-translation_of: Web/API/Element/dblclick_event
 ---
 {{APIRef}}
 

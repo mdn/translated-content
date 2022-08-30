@@ -48,13 +48,11 @@ L'interface **`DOMError`**  décrit un objet d'erreur contenant le nom de l'erre
 
 ## Spécifications
 
-| Spécification                                                            | Statut                   | Commentaire          |
-| ------------------------------------------------------------------------ | ------------------------ | -------------------- |
-| {{SpecName('DOM4', '#interface-domerror', 'DOMError')}} | {{Spec2('DOM4')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMError")}}
+{{Compat}}
 
 ## Voir aussi
 

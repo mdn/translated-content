@@ -1,16 +1,6 @@
 ---
 title: GlobalEventHandlers.onpointerleave
 slug: Web/API/Element/pointerleave_event
-tags:
-  - API
-  - GlobalEventHandlers
-  - HTML DOM
-  - Pointer Events
-  - PointerEvent
-  - Property
-  - Reference
-  - onpointerleave
-translation_of: Web/API/GlobalEventHandlers/onpointerleave
 original_slug: Web/API/GlobalEventHandlers/onpointerleave
 ---
 {{APIRef("HTML DOM")}}

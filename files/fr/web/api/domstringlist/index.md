@@ -26,6 +26,4 @@ Un type renvoyé par certaines API contenant une liste de [DOMString](/fr/docs/W
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                           | Commentaire           |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------- |
-| {{SpecName("HTML WHATWG", "common-dom-interfaces.html#the-domstringlist-interface", "DOMStringList")}} | {{Spec2("HTML WHATWG")}} | Définition initiale. |
+{{Specifications}}

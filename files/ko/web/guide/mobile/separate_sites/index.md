@@ -40,7 +40,7 @@ translation_of: Web/Guide/Mobile/Separate_sites
 
 모바일 플랫폼 개발에 관한 배경과 다른 접근 방식을 다룬 아래 글들을 참조해 보세요.
 
-- [모바일 친화적(mobile-friendliness)이란 무엇인가?](/en/Web_development/Mobile/Mobile-friendliness "Wat is CSS")
+- [모바일 친화적(mobile-friendliness)이란 무엇인가?](/en/Web_development/Mobile/Mobile-friendliness)
 - [반응형 디자인](/ko/docs/Web_Development/Mobile/Responsive_design)
 - [하이브리드 방식](/ko/docs/Web_Development/Mobile/A_hybrid_approach)
 

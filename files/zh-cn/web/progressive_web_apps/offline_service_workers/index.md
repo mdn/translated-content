@@ -2,7 +2,7 @@
 title: 通过 Service workers 让 PWA 离线工作
 slug: Web/Progressive_web_apps/Offline_Service_workers
 ---
-{{PreviousMenuNext("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}
 
 我们已经看到了 js13kPWA 的结构，并且看到了 shell 启动和运行的基本方式，那么现在让我们把目光转向如何使用 Service Worker 实现离线功能。 在本文，我们将看到它在 [js13kPWA example](https://mdn.github.io/pwa-examples/js13kpwa/) 中是如何使用的（[另请参阅源代码](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)）。 我们将研究如何添加脱机功能。
 
@@ -213,6 +213,6 @@ self.addEventListener('activate', function(e) {
 
 Service Worker 在处理[消息推送](/en-US/docs/Web/API/Push_API)的时候也会经常被用到，这一部分我们将会在后面的章节进行讨论。
 
-{{PreviousMenuNext("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Apps/Progressive/")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Apps/Progressive/")}}

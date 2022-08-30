@@ -41,7 +41,7 @@ i10n:
 
 MDN Web Docs チームやコミュニティと連絡を取るには、 [Matrix チャンネル](https://chat.mozilla.org/#/room/#mdn:mozilla.org)、 [Discourse](https://discourse.mozilla.org/c/mdn/236) のフォーラム、 [GitHub](https://github.com/mdn/mdn-community/discussions) のディスカッションが利用できます。
 
-- ウェブ開発を学んでいて、コーディングの問題に行き詰まった場合、質問をしたり助けを求めたりできる[アクティブんはフォーラム](https://discourse.mozilla.org/c/mdn/learn/250)があります。
+- ウェブ開発を学んでいて、コーディングの問題に行き詰まった場合、質問をしたり助けを求めたりできる[アクティブなフォーラム](https://discourse.mozilla.org/c/mdn/learn/250)があります。
 
 ### 一般的なサポートに関する質問
 

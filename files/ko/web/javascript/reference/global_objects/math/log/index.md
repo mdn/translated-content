@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/log
 
 만일 값 `x` 가 마이너스라면, 항상 다음값이 계산됩니다 {{jsxref("NaN")}}.
 
-` 왜그렇냐면 ``Math의 log() 가 정적 메서드이기 때문`,에 매번 다음처럼 `Math.log() 써야합니다` (생성자로 초기화된 `Math` 개체가 아니기 때문입니다).
+왜그렇냐면 `Math` 의 log() 가 정적 메서드이기 때문,에 매번 다음처럼 `Math.log()` 써야합니다 (생성자로 초기화된 `Math` 개체가 아니기 때문입니다).
 
 자연로그 2 나 10, 상수로쓸때 {{jsxref("Math.LN2")}} or {{jsxref("Math.LN10")}} . 로가리즘 기초값 2 나 10, 쓸때는 {{jsxref("Math.log2()")}} 혹은 {{jsxref("Math.log10()")}} . 로가리즘 다른 기초값은 Math.log(x) / Math.log(기초값) 처럼 예제참고; 미리계산하여 1 / Math.log(기초값) 할 수 있습니다.
 

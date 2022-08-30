@@ -3,7 +3,7 @@ title: 쌓임 맥락 예제1
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
 ---
-« [CSS](/ko/CSS "CSS") « [<span class="title">CSS z-index 이해하기</span>](/ko/CSS/Understanding_z-index "Understanding CSS z-index")
+« [CSS](/ko/CSS) « [CSS z-index 이해하기](/ko/CSS/Understanding_z-index)
 
 ### 쌓임 맥락 예제1
 
@@ -113,12 +113,12 @@ span.bold { font-weight: bold; }
 
 ### See also
 
-- [Stacking without z-index](/en/CSS/Understanding_z-index/Stacking_without_z-index "en/CSS/Understanding_z-index/Stacking_without_z-index") : Default stacking rules
-- [Stacking and float](/en/CSS/Understanding_z-index/Stacking_and_float "en/CSS/Understanding_z-index/Stacking_and_float") : How floating elements are handled
-- [Adding z-index](/en/CSS/Understanding_z-index/Adding_z-index "en/CSS/Understanding_z-index/Adding_z-index") : Using z-index to change default stacking
-- [The stacking context](/en/CSS/Understanding_z-index/The_stacking_context "en/CSS/Understanding_z-index/The_stacking_context") : Notes on the stacking context
-- [Stacking context example 2](/en/CSS/Understanding_z-index/Stacking_context_example_2 "en/CSS/Understanding_z-index/Stacking_context_example_2") : 2-level HTML hierarchy, z-index on all levels
-- [Stacking context example 3](/en/CSS/Understanding_z-index/Stacking_context_example_3 "en/CSS/Understanding_z-index/Stacking_context_example_3") : 3-level HTML hierarchy, z-index on the second level
+- [Stacking without z-index](/en/CSS/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
+- [Stacking and float](/en/CSS/Understanding_z-index/Stacking_and_float) : How floating elements are handled
+- [Adding z-index](/en/CSS/Understanding_z-index/Adding_z-index) : Using z-index to change default stacking
+- [The stacking context](/en/CSS/Understanding_z-index/The_stacking_context) : Notes on the stacking context
+- [Stacking context example 2](/en/CSS/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarchy, z-index on all levels
+- [Stacking context example 3](/en/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
 
   <span id="cke_bm_89E" class="hidden"></span>
 

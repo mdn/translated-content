@@ -1,12 +1,6 @@
 ---
 title: ReadableStream.ReadableStream()
 slug: Web/API/ReadableStream/ReadableStream
-tags:
-  - API
-  - Constructor
-  - ReadableStream
-  - Reference
-translation_of: Web/API/ReadableStream/ReadableStream
 ---
 {{APIRef("Streams")}}
 

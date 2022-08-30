@@ -8,7 +8,7 @@ browser-compat: css.properties.animation-duration
 ---
 {{CSSRef}} {{SeeCompatTable}}
 
-**`animation-duration`** [CSS](/ko/docs/CSS "CSS") 속성은 애니메이션이 한 사이클을 완료하는 데 걸리는 시간을 지정합니다.
+**`animation-duration`** [CSS](/ko/docs/CSS) 속성은 애니메이션이 한 사이클을 완료하는 데 걸리는 시간을 지정합니다.
 
 ```css
 /* Single animation */
@@ -53,5 +53,5 @@ animation-duration: 10s, 35s, 230ms;
 
 ## 같이 보기(See also)
 
-- [Using CSS animations](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- [Using CSS animations](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API

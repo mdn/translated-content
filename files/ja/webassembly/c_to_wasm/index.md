@@ -1,7 +1,6 @@
 ---
 title: C/C++からWebAssemblyにコンパイルする
 slug: WebAssembly/C_to_wasm
-translation_of: WebAssembly/C_to_wasm
 ---
 {{WebAssemblySidebar}}
 

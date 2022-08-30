@@ -1,15 +1,6 @@
 ---
 title: Element.assignedSlot
 slug: Web/API/Element/assignedSlot
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - Slottable
-  - ウェブコンポーネント
-  - assignedSlot
-  - シャドウ DOM
-translation_of: Web/API/Element/assignedSlot
 ---
 {{APIRef("Shadow DOM")}}
 

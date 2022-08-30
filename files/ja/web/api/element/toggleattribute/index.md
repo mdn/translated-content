@@ -1,12 +1,6 @@
 ---
 title: Element.toggleAttribute()
 slug: Web/API/Element/toggleAttribute
-tags:
-  - API
-  - Element
-  - メソッド
-  - リファレンス
-translation_of: Web/API/Element/toggleAttribute
 ---
 {{APIRef("DOM")}}
 

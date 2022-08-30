@@ -1,15 +1,6 @@
 ---
 title: Gamepad.hapticActuators
 slug: Web/API/Gamepad/hapticActuators
-tags:
-  - API
-  - Experimental
-  - Gamepad
-  - Gamepad API
-  - Property
-  - Reference
-  - hapticActuators
-translation_of: Web/API/Gamepad/hapticActuators
 ---
 {{APIRef("Gamepad")}}{{SeeCompatTable}}
 

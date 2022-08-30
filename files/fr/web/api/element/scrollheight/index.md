@@ -151,20 +151,13 @@ onload = function () {
 
 [Voir l'exemple en action](/files/4589/readme-example.html)
 
-## Spécification
+## Spécifications
 
-`scrollHeight` fait partie du modèle objet DHTML de Microsoft Internet Explorer. Elle fait partie de la spécification : {{ SpecName("CSSOM View") }}.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-| Navigateur                 | Version                 |
-| -------------------------- | ----------------------- |
-| Internet Explorer          | **8.0**                 |
-| Firefox (Gecko)            | **3.0** (1.9)           |
-| Opera                      | ?                       |
-| Safari \| Chrome \| Webkit | **4.0** \| **4.0** \| ? |
-
-**Dans les versions inférieures à Firefox 21&nbsp;:** quand le contenu d'un élément ne génère pas de barre de défilement verticale, alors sa propriété `scrollHeight` est égale à sa propriété `clientHeight`. Cela signifie soit que le contenu est trop court pour avoir besoin d'une barre de défilement, soit que la propriété CSS [`overflow`](/fr/docs/Web/CSS/overflow) de l'élément a pour valeur `visible`.
+{{Compat}}
 
 ## Voir aussi
 

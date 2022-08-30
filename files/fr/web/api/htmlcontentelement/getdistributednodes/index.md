@@ -27,13 +27,11 @@ var nodes = myContentObject.getDistributedNodes();
 
 ## Spécifications
 
-| Spécification                                                                    | Status                           | Commentaire |
-| -------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('Shadow DOM', '#the-content-element', 'content')}} | {{Spec2('Shadow DOM')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLContentElement.getDistributedNodes")}}
+{{Compat}}
 
 ## Voir aussi
 

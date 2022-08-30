@@ -30,13 +30,11 @@ Les valeurs `min` et/ou `max` spécifiées sont obligatoires. Si aucune correspo
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                               | Commentaire         |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Media Capture', '#dom-doublerange', 'DoubleRange')}} | {{Spec2('Media Capture')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DoubleRange")}}
+{{Compat}}
 
 ## Voir aussi
 

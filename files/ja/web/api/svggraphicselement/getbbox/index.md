@@ -1,15 +1,6 @@
 ---
 title: getBBox()
 slug: Web/API/SVGGraphicsElement/getBBox
-tags:
-  - API
-  - Method
-  - Reference
-  - SVG
-  - SVG DOM
-  - SVGGraphicsElement
-  - メソッド
-translation_of: Web/API/SVGGraphicsElement/getBBox
 ---
 {{APIRef}}
 

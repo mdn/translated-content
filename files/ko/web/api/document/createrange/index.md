@@ -9,7 +9,9 @@ translation_of: Web/API/Document/createRange
 
 ## 문법
 
-    range = document.createRange();
+```js
+range = document.createRange();
+```
 
 `range` 는 생성된 {{domxref("Range")}} 객체입니다.
 

@@ -1,15 +1,6 @@
 ---
 title: SubtleCrypto.digest()
 slug: Web/API/SubtleCrypto/digest
-tags:
-  - API
-  - Method
-  - Reference
-  - SubtleCrypto
-  - WebCrypto API
-  - digest
-  - メソッド
-translation_of: Web/API/SubtleCrypto/digest
 ---
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 

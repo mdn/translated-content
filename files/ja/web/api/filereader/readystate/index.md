@@ -1,13 +1,6 @@
 ---
 title: FileReader.readyState
 slug: Web/API/FileReader/readyState
-tags:
-  - API
-  - File API
-  - Reference
-  - ファイル
-  - プロパティ
-translation_of: Web/API/FileReader/readyState
 ---
 {{APIRef("File API")}}
 

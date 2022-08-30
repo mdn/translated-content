@@ -4,30 +4,40 @@ slug: Web/API/RTCTrackEvent/RTCTrackEvent
 ---
 {{APIRef("WebRTC")}}
 
-The **`RTCTrackEvent()`** constructor creates and returns a new {{domxref("RTCTrackEvent")}} object, configured to describe the track which has been added to the {{domxref("RTCPeerConnection")}}.
+**`RTCTrackEvent()`** 构造函数创建并返回一个新的 {{domxref("RTCTrackEvent")}} 对象，用于描述已经被添加到 {{domxref("RTCPeerConnection")}} 的轨道。
 
-In general, you won't need to use this constructor, as `RTCTrackEvent` objects are created by WebRTC and delivered to your `RTCPeerConnector`'s {{domxref("RTCPeerConnection.ontrack", "ontrack")}} event handler as appropriate.
+通常，你不需要使用这个构造函数，例如 `RTCTrackEvent` 这样的对象会由 WebRTC 创建，并根据需要传递到 `RTCPeerConnector` 的 {{domxref("RTCPeerConnection.ontrack", "ontrack")}} 事件处理器上。
 
-## Syntax
+## 语法
 
 ```
-trackEvent = new RTCTrackEvent(eventInfo);
+new RTCTrackEvent(type, options)
 ```
 
-### Parameters
+### 参数
 
-- `eventInfo`
-  - : An object based on the {{domxref("RTCTrackEventInit")}} dictionary, providing information about the track which has been added to the {{domxref("RTCPeerConnection")}}. This object has the following properties:
-    {{page("/en-US/docs/Web/API/RTCTrackEventInit", "property-list")}}
+- `type`
+  - :  一个表示事件名称的字符串。大小写敏感，且浏览器始终将其设置为 `track`。
+- `options`
+  - : 一个对象，_除了 {{domxref("Event/Event", "Event()")}} 中定义的对象_，还可以使用以下属性：
+    - `receiver`
+      - : 一个 {{domxref("RTCRtpReceiver")}}，用于接收轨道的媒体。
+    - `streams` {{optional_inline}}
+      - : 一个 {{domxref("MediaStream")}} 对象的数组，表示构成事件对应的轨道的流。它默认为一个空数组。
+        It defaults to an empty array.
+    - `track`
+      - : 一个与事件关联的 {{domxref("MediaStreamTrack")}}。
+    - `transceiver`
+      - : 一个与事件关联的 {{domxref("RTCRtpTransceiver")}}。
 
-### Return value
+### 返回值
 
-A new {{domxref("RTCTrackEvent")}} describing a track which has been added to the `RTCPeerConnection`.
+一个新的 {{domxref("RTCTrackEvent")}}，用于描述已经被添加到 `RTCPeerConnection` 的轨道。
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
-{{Compat("api.RTCTrackEvent.RTCTrackEvent")}}
+{{Compat}}

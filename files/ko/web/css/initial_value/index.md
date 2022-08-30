@@ -21,7 +21,7 @@ translation_of: Web/CSS/initial_value
 
 ## 같이 보기
 
-- [CSS Reference](/ko/docs/Web/CSS/CSS_Reference "CSS Reference")
+- [CSS Reference](/ko/docs/Web/CSS/CSS_Reference)
 - CSS 주요 개념
 
   - [CSS 문법](/ko/docs/Web/CSS/Syntax)

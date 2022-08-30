@@ -801,15 +801,11 @@ Vous n'avez pas besoin de vous inquiéter de la valeur de `passive` pour l'évè
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName("DOM WHATWG", "#dom-eventtarget-addeventlistener", "EventTarget.addEventListener()")}}         | {{Spec2("DOM WHATWG")}} |                      |
-| {{SpecName("DOM4", "#dom-eventtarget-addeventlistener", "EventTarget.addEventListener()")}}                 | {{Spec2("DOM4")}}         |                      |
-| {{SpecName("DOM2 Events", "#Events-EventTarget-addEventListener", "EventTarget.addEventListener()")}} | {{Spec2("DOM2 Events")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.EventTarget.addEventListener", 3)}}
+{{Compat}}
 
 ## Voir aussi
 

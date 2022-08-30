@@ -17,7 +17,9 @@ browser-compat: javascript.builtins.Object.create
 
 ## 구문
 
-    Object.create(proto[, propertiesObject])
+```js
+Object.create(proto[, propertiesObject])
+```
 
 ### 매개변수
 

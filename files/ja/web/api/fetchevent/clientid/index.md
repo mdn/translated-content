@@ -1,14 +1,6 @@
 ---
 title: FetchEvent.clientId
 slug: Web/API/FetchEvent/clientId
-tags:
-  - API
-  - FetchEvent
-  - Property
-  - Reference
-  - Service Workers
-  - clientId
-translation_of: Web/API/FetchEvent/clientId
 ---
 {{APIRef("Service Workers API")}}
 

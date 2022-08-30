@@ -21,10 +21,8 @@ document.dir = dirStr;
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName("HTML WHATWG", "#dom-document-dir", "Document.dir")}} | {{Spec2("HTML WHATWG")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.dir")}}
+{{Compat}}

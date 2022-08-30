@@ -69,13 +69,11 @@ _Cette interface hérite des méthodes de l'interface {{domxref("WorkerGlobalSco
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', '#dedicatedworkerglobalscope', 'DedicatedWorkerGlobalScope')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DedicatedWorkerGlobalScope")}}
+{{Compat}}
 
 ## Voir aussi
 

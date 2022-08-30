@@ -133,7 +133,7 @@ p {
 The `width` property is specified as either:
 
 - one of the following keyword values: [`available`](#available), [`min-content`](#min-content), [`max-content`](#max-content), [`fit-content`](#fit-content), [`auto`](#auto).
-- a [`<length>`](#<length>) or a [`<percentage>`](#<percentage>). This may optionally be followed by one of the following keywords: [`border-box`](#border-box), [`content-box`](#content-box).
+- a [`<length>`](#length) or a [`<percentage>`](#percentage). This may optionally be followed by one of the following keywords: [`border-box`](#border-box), [`content-box`](#content-box).
 
 ### Values
 

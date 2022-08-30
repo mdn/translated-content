@@ -39,10 +39,8 @@ document.addEventListener("visibilitychange", function() {
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                                       | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Page Visibility API','#dom-document-visibilitystate', 'Document.visibilityState')}} | {{Spec2('Page Visibility API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.visibilityState")}}
+{{Compat}}

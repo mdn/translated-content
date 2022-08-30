@@ -47,16 +47,11 @@ _Hérite des méthodes de son parent, {{domxref("HTMLElement")}}_.
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commantaire                                                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "#htmltablerowelement", "HTMLTableRowElement")}}             | {{Spec2('HTML WHATWG')}} |                                                                                                                                                                          |
-| {{SpecName('HTML5 W3C', "tabular-data.html#the-tr-element", "HTMLTableRowElement")}} | {{Spec2('HTML5 W3C')}}     | Le paramètre de `insertCell` est désormais facultatif et vaut par défaut `-1`.                                                                                           |
-| {{SpecName('DOM2 HTML', 'html.html#ID-6986576', 'HTMLTableRowElement')}}                 | {{Spec2('DOM2 HTML')}}     | Les propriétés `cells`, `rowIndex`, et `selectionRowIndex` sont désormais en lecture seule. Les méthodes `insertCell` et `deleteCell` peuvent déclencher des exceptions. |
-| {{SpecName('DOM1', 'level-one-html.html#ID-6986576', 'HTMLTableRowElement')}}         | {{Spec2('DOM1')}}         | Défintion initiale.                                                                                                                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLTableRowElement")}}
+{{Compat}}
 
 ## Voir aussi
 

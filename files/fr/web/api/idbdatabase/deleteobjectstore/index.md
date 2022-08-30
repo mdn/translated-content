@@ -86,14 +86,11 @@ Dans cet exemple, on ouvre une connexion à la base de données et dans le gesti
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBDatabase-deleteObjectStore-void-DOMString-name', 'deleteObjectStore()')}} | {{Spec2('IndexedDB')}}     |              |
-| {{SpecName("IndexedDB 2", "#dom-idbdatabase-deleteobjectstore", "deleteObjectStore()")}}                             | {{Spec2("IndexedDB 2")}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBDatabase.deleteObjectStore")}}
+{{Compat}}
 
 ## Voir aussi
 
