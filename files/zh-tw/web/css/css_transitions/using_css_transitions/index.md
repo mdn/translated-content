@@ -2,7 +2,6 @@
 title: CSS 轉場
 slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
 ---
-###
 
 原文 : [https://developer.mozilla.org/en/CSS/CSS_transitions](/en/CSS/CSS_transitions)
 
