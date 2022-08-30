@@ -41,7 +41,7 @@ slug: Web/HTTP
 - [HTTP 狀態回應碼](/zh-TW/docs/Web/HTTP/Status)
   - : HTTP 狀態碼用來表示特定的 HTTP 請求是否已成功完成。回應分為五類：資訊回應、成功回應、重定向、用戶端錯誤、以及伺服器錯誤。
 - [CSP 指令](/zh-TW/docs/Web/HTTP/Headers/Content-Security-Policy)
-  - : {{HTTPHeader("Content-Security-Policy")}} 響應報頭字段允許網站管理員控制頁面上哪些資源能夠被用戶代理程序加載。除了少數例外，此策略主要涉及指定服務器來源和腳本終端。
+  - : {{HTTPHeader("Content-Security-Policy")}} 回應檔頭讓網站管理員控制哪些頁面上的資源能被用戶端程式（user agent）載入。除了少數特例外，此政策主要關於指定來源伺服器和腳本程式的端點（endpoints）。
 
 ## 工具與資源
 
