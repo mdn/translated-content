@@ -81,12 +81,10 @@ xhr.onload = function () {
 xhr.send(null);
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                            | Statut                               | Comment                |
-| -------------------------------------------------------- | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#states')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.XMLHttpRequest.readyState")}}
+{{Compat}}
