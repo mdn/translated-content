@@ -35,7 +35,7 @@ slug: Web/HTTP
 詳細的 HTTP 參考文件。
 
 - [HTTP Headers](/zh-TW/docs/Web/HTTP/Headers)
-  - : HTTP 消息頭用於描述資源或服務器或客戶端的行為。可以使用 `X-` 前綴添加自定義專有頭。其他的可以在 [IANA registry](https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers) 中找到，其原始定義在 [RFC 4229](https://tools.ietf.org/html/rfc4229)。 IANA 同時也維護著一份 [registry of proposed new HTTP message headers](https://www.iana.org/assignments/message-headers/message-headers.xhtml#prov-headers)。
+  - : HTTP 訊息檔頭（header）用於描述資源、伺服器或用戶端的行為。可以透過 `X-` 前綴以增加自定義的專有項目。其他的項目可以在 [IANA registry](https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers) 中找到，其原始定義在 [RFC 4229](https://tools.ietf.org/html/rfc4229)。IANA 同時也維護 [新 HTTP 訊息檔頭的提案登記（registry of proposed new HTTP message headers）](https://www.iana.org/assignments/message-headers/message-headers.xhtml#prov-headers)。
 - [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Methods)
   - : 透過 HTTP 有幾種不同操作方法：{{HTTPMethod("GET")}}、{{HTTPMethod("POST")}}，或是較少見的請求方法，如 {{HTTPMethod("OPTIONS")}}、{{HTTPMethod("DELETE")}}、或 {{HTTPMethod("TRACE")}}。
 - [HTTP 狀態回應碼](/zh-TW/docs/Web/HTTP/Status)
