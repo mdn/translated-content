@@ -8,10 +8,10 @@ slug: Web/API/MediaRecorder/pause
 
 `MediaRecorder` オブジェクトの `pause()` メソッドが呼び出されると、ブラウザーは次の手順を実行するタスクをキューに入れます。
 
-1.  {{domxref("MediaRecorder.state")}} が `"inactive"` の場合は、DOM の `InvalidState` エラーを発生させてこれらの手順を終了します。 そうでない場合は、次の手順に進みます。
-2.  {{domxref("MediaRecorder.state")}} を `"paused"` に設定します。
-3.  現在の {{domxref("Blob")}} へのデータ収集を停止しますが、後で記録を再開できるように使用可能な状態にしておきます。
-4.  {{event("pause")}} イベントを発生させます。
+1. {{domxref("MediaRecorder.state")}} が `"inactive"` の場合は、DOM の `InvalidState` エラーを発生させてこれらの手順を終了します。 そうでない場合は、次の手順に進みます。
+2. {{domxref("MediaRecorder.state")}} を `"paused"` に設定します。
+3. 現在の {{domxref("Blob")}} へのデータ収集を停止しますが、後で記録を再開できるように使用可能な状態にしておきます。
+4. {{event("pause")}} イベントを発生させます。
 
 ## 構文
 

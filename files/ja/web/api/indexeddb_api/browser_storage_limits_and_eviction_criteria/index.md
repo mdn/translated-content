@@ -89,5 +89,5 @@ Firefox では、永続的なストレージが使用されると、ユーザー
 
 ## 関連情報
 
-- [Working with quota on mobile browsers](http://www.html5rocks.com/en/tutorials/offline/quota-research/), by[ Eiji Kitamura.](http://blog.agektmr.com "Eiji Kitamura") モバイルブラウザーのクライアント側ストレージについて詳しく分析した記事。
-- [Quota Management API: Fast Facts](https://developers.google.com/web/updates/2011/11/Quota-Management-API-Fast-Facts), by[ Eiji Kitamura.](http://blog.agektmr.com "Eiji Kitamura") Chrome/Blink (Opera も含まれるでしょう) の Quota Management API について見ていく記事。
+- [Working with quota on mobile browsers](http://www.html5rocks.com/en/tutorials/offline/quota-research/), by [Eiji Kitamura.](http://blog.agektmr.com) モバイルブラウザーのクライアント側ストレージについて詳しく分析した記事。
+- [Quota Management API: Fast Facts](https://developers.google.com/web/updates/2011/11/Quota-Management-API-Fast-Facts), by[Eiji Kitamura.](http://blog.agektmr.com) Chrome/Blink (Opera も含まれるでしょう) の Quota Management API について見ていく記事。

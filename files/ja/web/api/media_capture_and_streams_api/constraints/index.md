@@ -13,10 +13,10 @@ original_slug: Web/API/Media_Streams_API/Constraints
 
 プロセスは次のように動作します（例として {{domxref("MediaStreamTrack")}} を使用）。
 
-1.  必要に応じて、{{domxref("MediaDevices.getSupportedConstraints()")}} を呼び出して、**サポートしている制約**（supported constraints）のリストを取得します。 これにより、ブラウザーが知っている制約可能なプロパティがわかります。 これは必ずしも必要なわけではありません。 知らないものは指定すると単に無視されるためです。 ただし、それなしでは手に入らないものがある場合は、リストに載っていることを確認することから始めることができます。
-2.  使用したいプロパティをサポートしているかどうかをスクリプトが認識すると、トラックの `getCapabilities()` メソッドによって返されたオブジェクトを調べることにより、API とその実装の**能力**を確認できます。 このオブジェクトは、サポートしている各制約と、サポートしている値または値の範囲をリストします。
-3.  最後に、トラックの `applyConstraints()` メソッドを呼び出して、好みの制約可能なプロパティに使用する値または値の範囲を指定することにより、必要に応じて API を構成します。
-4.  トラックの `getConstraints()` メソッドは、`applyConstraints()` の最新の呼び出しに渡された制約セットを返します。 これは、要求された値を調整する必要があるプロパティと、プラットフォームのデフォルト値が表されていないため、トラックの実際の現在の状態を表していない場合があります。 トラックの現在の構成を完全に表現するには、`getSettings()` を使用します。
+1. 必要に応じて、{{domxref("MediaDevices.getSupportedConstraints()")}} を呼び出して、**サポートしている制約**（supported constraints）のリストを取得します。 これにより、ブラウザーが知っている制約可能なプロパティがわかります。 これは必ずしも必要なわけではありません。 知らないものは指定すると単に無視されるためです。 ただし、それなしでは手に入らないものがある場合は、リストに載っていることを確認することから始めることができます。
+2. 使用したいプロパティをサポートしているかどうかをスクリプトが認識すると、トラックの `getCapabilities()` メソッドによって返されたオブジェクトを調べることにより、API とその実装の**能力**を確認できます。 このオブジェクトは、サポートしている各制約と、サポートしている値または値の範囲をリストします。
+3. 最後に、トラックの `applyConstraints()` メソッドを呼び出して、好みの制約可能なプロパティに使用する値または値の範囲を指定することにより、必要に応じて API を構成します。
+4. トラックの `getConstraints()` メソッドは、`applyConstraints()` の最新の呼び出しに渡された制約セットを返します。 これは、要求された値を調整する必要があるプロパティと、プラットフォームのデフォルト値が表されていないため、トラックの実際の現在の状態を表していない場合があります。 トラックの現在の構成を完全に表現するには、`getSettings()` を使用します。
 
 Media Stream API では、{{domxref("MediaStream")}} と {{domxref("MediaStreamTrack")}} の両方に制約可能なプロパティがあります。
 
@@ -394,12 +394,12 @@ function startVideo() {
 
 ここには、次のようないくつかの手順があります。
 
-1.  `buildConstraints()` を呼び出して、編集ボックス内のコードから 2 つのトラックの {{domxref("MediaTrackConstraints")}} オブジェクトを作成します。
-2.  {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} を呼び出し、動画トラックおよび音声トラックの制約オブジェクトを渡します。 これにより、入力に一致するソースからの音声と動画を含む {{domxref("MediaStream")}} が返されます（通常はウェブカメラですが、適切な制約を指定すると他のソースからメディアを取得できます）。
-3.  ストリームを取得したら、画面に表示されるように {{HTMLElement("video")}} 要素に添付し、音声トラックと動画トラックを変数 `audioTrack` と `videoTrack` に取り込みます。
-4.  次に、動画要素で {{event("onloadedmetadata")}} イベントが発生したときに解決する promise を設定します。
-5.  それが起こると、動画の再生を開始したことがわかるので、`getCurrentSettings()` 関数（上記を参照）を呼び出して、制約とハードウェアの能力を考慮した後にブラウザーが決定した実際の設定を表示します。
-6.  エラーが発生した場合は、この記事のもっと下で説明する `handleError()` メソッドを使用してログに記録します。
+1. `buildConstraints()` を呼び出して、編集ボックス内のコードから 2 つのトラックの {{domxref("MediaTrackConstraints")}} オブジェクトを作成します。
+2. {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} を呼び出し、動画トラックおよび音声トラックの制約オブジェクトを渡します。 これにより、入力に一致するソースからの音声と動画を含む {{domxref("MediaStream")}} が返されます（通常はウェブカメラですが、適切な制約を指定すると他のソースからメディアを取得できます）。
+3. ストリームを取得したら、画面に表示されるように {{HTMLElement("video")}} 要素に添付し、音声トラックと動画トラックを変数 `audioTrack` と `videoTrack` に取り込みます。
+4. 次に、動画要素で {{event("onloadedmetadata")}} イベントが発生したときに解決する promise を設定します。
+5. それが起こると、動画の再生を開始したことがわかるので、`getCurrentSettings()` 関数（上記を参照）を呼び出して、制約とハードウェアの能力を考慮した後にブラウザーが決定した実際の設定を表示します。
+6. エラーが発生した場合は、この記事のもっと下で説明する `handleError()` メソッドを使用してログに記録します。
 
 また、\[動画の開始] ボタンがクリックされるのを監視するイベントリスナーを設定する必要があります。
 
@@ -413,10 +413,10 @@ document.getElementById("startButton").addEventListener("click", function() {
 
 次に、\[制約の適用] ボタンのイベントリスナーを設定します。 クリックされ、まだ使用中のメディアがない場合は、`startVideo()` を呼び出し、指定された設定でストリームを開始する機能をその関数に処理させます。 それ以外の場合は、次の手順に従って、更新済みの制約を既にアクティブなストリームに適用します。
 
-1.  `buildConstraints()` を、音声トラック（`audioConstraints`）および動画トラック（`videoConstraints`）の更新された {{domxref("MediaTrackConstraints")}} オブジェクトを構築するために呼び出します。
-2.  {{domxref("MediaStreamTrack.applyConstraints()")}} を、新しい `videoConstraints` を適用するために動画トラック（存在する場合）で呼び出します。 これが成功したら、動画トラックの現在の設定ボックスの内容を、{{domxref("MediaStreamTrack.getSettings", "getSettings()")}} メソッドを呼び出した結果に基づいて更新します。
-3.  それが完了すると、新しい音声制約を適用するために、`applyConstraints()` を音声トラック（存在する場合）で呼び出します。 これが成功したら、音声トラックの現在の設定ボックスの内容を、{{domxref("MediaStreamTrack.getSettings", "getSettings()")}} メソッドを呼び出した結果に基づいて更新しす。
-4.  いずれかの制約セットを適用してエラーが発生した場合、`handleError()` を使用してメッセージをログに出力します。
+1. `buildConstraints()` を、音声トラック（`audioConstraints`）および動画トラック（`videoConstraints`）の更新された {{domxref("MediaTrackConstraints")}} オブジェクトを構築するために呼び出します。
+2. {{domxref("MediaStreamTrack.applyConstraints()")}} を、新しい `videoConstraints` を適用するために動画トラック（存在する場合）で呼び出します。 これが成功したら、動画トラックの現在の設定ボックスの内容を、{{domxref("MediaStreamTrack.getSettings", "getSettings()")}} メソッドを呼び出した結果に基づいて更新します。
+3. それが完了すると、新しい音声制約を適用するために、`applyConstraints()` を音声トラック（存在する場合）で呼び出します。 これが成功したら、音声トラックの現在の設定ボックスの内容を、{{domxref("MediaStreamTrack.getSettings", "getSettings()")}} メソッドを呼び出した結果に基づいて更新しす。
+4. いずれかの制約セットを適用してエラーが発生した場合、`handleError()` を使用してメッセージをログに出力します。
 
 ```js
 document.getElementById("applyButton").addEventListener("click", function() {

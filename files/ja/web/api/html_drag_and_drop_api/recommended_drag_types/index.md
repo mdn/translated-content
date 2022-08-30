@@ -82,7 +82,7 @@ dt.setData("text/plain", "こんにちは、見知らぬ人");
 
 ## ファイルのドラッグ
 
-ローカルのファイルは `application/x-moz-file` 型で、 [nsIFile](/ja/XPCOM_Interface_Reference/nsIFile "nsIFile") のオブジェクトとしてドラッグされます。特権を持っていない Web ページでは、この型のデータを取得することも変更することもできません。
+ローカルのファイルは `application/x-moz-file` 型で、 [nsIFile](/ja/XPCOM_Interface_Reference/nsIFile) のオブジェクトとしてドラッグされます。特権を持っていない Web ページでは、この型のデータを取得することも変更することもできません。
 
 ファイルを文字列にはできないため、データを登録するには {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} メソッドを使用する必要があります。同様に、データを取得するには {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} メソッドを使わなくてはなりません。
 
@@ -92,7 +92,7 @@ event.dataTransfer.mozSetDataAt("application/x-moz-file", file, 0);
 
 可能であれば、`text/uri-list` 型と `text/plain` 型の両方を使ってファイルの URL を含めてください。これらの型は最後に登録されるべきで、それによって、 `application/x-moz-file` 型は優先度の高い、より適切な型となります。
 
-複数のファイルは、データ転送中に複数のアイテムとしてドロップ中に受信されます。これについての詳細は、[複数の項目のドラッグ＆ドロップ](/DragDrop/Dragging_and_Dropping_Multiple_Items "Dragging and Dropping Multiple Items")を参照してください。
+複数のファイルは、データ転送中に複数のアイテムとしてドロップ中に受信されます。これについての詳細は、[複数の項目のドラッグ＆ドロップ](/DragDrop/Dragging_and_Dropping_Multiple_Items)を参照してください。
 
 以下の例は、ドロップしたファイルを受信するための領域を作成する方法を示しています。
 
@@ -137,7 +137,7 @@ if ([...event.dataTransfer.types].includes('text/html')) {
 
 リンクと同様に、`text/plain` 型のデータには URL も含まれている必要があります。しかし、[データ URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) は通常のテキストの内容には有用ではないので、このような状況では `text/plain` 型のデータを除外した方がよいでしょう。
 
-Chrome などの特権的なコードでは、画像の種類に応じて、`image/jpeg`、`image/png`、`image/gif` のいずれかの形式を使用することもできます。データは、[nsIInputStream](/ja/XPCOM_Interface_Reference/nsIInputStream "nsIInputStream") インターフェースを実装したオブジェクトでなければなりません。このストリームが読み込まれる時には、そのファイル形式での画像のデータビットを提供しなければなりません。
+Chrome などの特権的なコードでは、画像の種類に応じて、`image/jpeg`、`image/png`、`image/gif` のいずれかの形式を使用することもできます。データは、[nsIInputStream](/ja/XPCOM_Interface_Reference/nsIInputStream) インターフェースを実装したオブジェクトでなければなりません。このストリームが読み込まれる時には、そのファイル形式での画像のデータビットを提供しなければなりません。
 
 画像がディスク上にある場合は、`application/x-moz-file` 型も含める必要があります。実際に、これは画像ファイルをドラッグする一般的なやり方です。
 
@@ -222,7 +222,7 @@ dataProvider.prototype = {
 
 ## 関連情報
 
-- [HTML Drag and Drop API (Overview)](/Web/API/HTML_Drag_and_Drop_API "HTML Drag and Drop API")
-- [Drag Operations](Web/Guide/HTML/Drag_operations "Drag Operations")
-- [Dragging and Dropping Multiple Items](/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items "Dragging and Dropping Multiple Items")
-- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd "Drag and Drop Standard")
+- [HTML Drag and Drop API (Overview)](/Web/API/HTML_Drag_and_Drop_API)
+- [Drag Operations](Web/Guide/HTML/Drag_operations)
+- [Dragging and Dropping Multiple Items](/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)
+- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

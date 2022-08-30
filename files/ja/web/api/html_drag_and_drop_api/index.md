@@ -21,13 +21,13 @@ HTML ドラッグ & ドロップ では {{domxref("Event","DOM イベントモ�
 | イベント                                                             | On イベントハンドラー                                                            | 発生する条件…                                                                                                                                                                                        |
 | -------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{domxref('Document/drag_event', 'drag')}}             | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}             | …ドラッグ項目 (要素や選択テキスト) がドラッグされた場合                                                                                                                                              |
-| {{domxref('Document/dragend_event', 'dragend')}}     | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | …ドラッグ操作の終了 (マウスボタンを離したり、Esc キーを押したりした場合。詳しくは[ドラッグの終了](/ja/docs/DragDrop/Drag_Operations#dragend "DragDrop/Drag Operations#dragend")を参照してください。) |
-| {{domxref('Document/dragenter_event', 'dragenter')}} | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | …ドラッグ項目が有効なドロップ対象に入った場合([Specifying Drop Targets](/ja/docs/DragDrop/Drag_Operations#droptargets "Specifying Drop Targets") を見てください)                                     |
+| {{domxref('Document/dragend_event', 'dragend')}}     | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | …ドラッグ操作の終了 (マウスボタンを離したり、Esc キーを押したりした場合。詳しくは[ドラッグの終了](/ja/docs/DragDrop/Drag_Operations#dragend)を参照してください。) |
+| {{domxref('Document/dragenter_event', 'dragenter')}} | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | …ドラッグ項目が有効なドロップ対象に入った場合([Specifying Drop Targets](/ja/docs/DragDrop/Drag_Operations#droptargets) を見てください)                                     |
 | {{domxref('Document/dragexit_event', 'dragexit')}} | {{domxref('GlobalEventHandlers.ondragexit','ondragexit')}}     | …要素がドラッグ操作の選択対象でなくなった場合                                                                                                                                                        |
 | {{domxref('Document/dragleave_event', 'dragleave')}} | {{domxref('GlobalEventHandlers.ondragleave','ondragleave')}} | …ドラッグ項目が有効なドロップ対象を離れた場合                                                                                                                                                        |
 | {{domxref('Document/dragover_event', 'dragover')}} | {{domxref('GlobalEventHandlers.ondragover','ondragover')}}     | …ドラッグ項目が有効なドロップ対象にドラッグされた場合、数百ミリ秒ごとに                                                                                                                              |
-| {{domxref('Document/dragstart_event', 'dragstart')}} | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | …ユーザーが項目をドラッグ開始した場合([ドラッグ操作の開始](/ja/docs/DragDrop/Drag_Operations#dragstart "Starting a Drag Operation") を見てください)                                                  |
-| {{domxref('Document/drop_event', 'drop')}}             | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}             | …項目が有効なドロップ対象にドロップされた場合([ドロップの実行](/ja/docs/DragDrop/Drag_Operations#drop "Performing a Drop") を見てください)                                                           |
+| {{domxref('Document/dragstart_event', 'dragstart')}} | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | …ユーザーが項目をドラッグ開始した場合([ドラッグ操作の開始](/ja/docs/DragDrop/Drag_Operations#dragstart) を見てください)                                                  |
+| {{domxref('Document/drop_event', 'drop')}}             | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}             | …項目が有効なドロップ対象にドロップされた場合([ドロップの実行](/ja/docs/DragDrop/Drag_Operations#drop) を見てください)                                                           |
 
 > **Note:** **メモ:** `dragstart` と `dragend` イベントは、どちらも OS からブラウザーにファイルをドラッグしたときには発生しません。
 
@@ -51,7 +51,7 @@ HTML ドラッグとドロップのインターフェイスは {{domxref("DragEv
 
 ### Gecko-特有のインターフェイス
 
-Mozilla と Firefox は、標準のドラッグ＆ドロップのモデルに含まれていないいくつかの機能に対応しています。複数の項目や、文字列以外のデータ (ファイルなど) をドラッグしたりする補助になる*便利な関数*があります。詳しくは[複数の項目のドラッグ＆ドロップ](/ja/docs/DragDrop/Dragging_and_Dropping_Multiple_Items "DragDrop/Dragging and Dropping Multiple Items")を参照してください。加えて、{{domxref("DataTransfer")}} リファレンスページを見るとすべての [Gecko 固有プロパティ](/ja/docs/Web/API/DataTransfer#Gecko_properties)と [Gecko 固有メソッド](/ja/docs/Web/API/DataTransfer#Gecko_methods)がわかります。
+Mozilla と Firefox は、標準のドラッグ＆ドロップのモデルに含まれていないいくつかの機能に対応しています。複数の項目や、文字列以外のデータ (ファイルなど) をドラッグしたりする補助になる*便利な関数*があります。詳しくは[複数の項目のドラッグ＆ドロップ](/ja/docs/DragDrop/Dragging_and_Dropping_Multiple_Items)を参照してください。加えて、{{domxref("DataTransfer")}} リファレンスページを見るとすべての [Gecko 固有プロパティ](/ja/docs/Web/API/DataTransfer#Gecko_properties)と [Gecko 固有メソッド](/ja/docs/Web/API/DataTransfer#Gecko_methods)がわかります。
 
 ## 基本
 
@@ -81,7 +81,7 @@ Mozilla と Firefox は、標準のドラッグ＆ドロップのモデルに含
 
 詳しくは、以下の記事を参照してください。
 
-- [draggable 属性リファレンス](/ja/docs/Web/HTML/Global_attributes/draggable "draggable global attribute")
+- [draggable 属性リファレンス](/ja/docs/Web/HTML/Global_attributes/draggable)
 - [ドラッグ操作ガイド](/ja/docs/Web/Guide/HTML/Drag_operations#draggableattribute)
 
 ### ドラッグするデータの定義
@@ -127,9 +127,9 @@ function dragstart_handler(ev) {
 
 3 通りの効果が発生する可能性があります。
 
-1.  **`copy`** はドラッグしたデータが現在の場所からドロップされる場所にコピーされることを示します。
-2.  **`move`** はドラッグデータが現在の場所からドロップされる場所に移動されることを示します。
-3.  **`link`** はドラッグデータが元からドロップ先にある種の関連や接続が作成されることを示します。
+1. **`copy`** はドラッグしたデータが現在の場所からドロップされる場所にコピーされることを示します。
+2. **`move`** はドラッグデータが現在の場所からドロップされる場所に移動されることを示します。
+3. **`link`** はドラッグデータが元からドロップ先にある種の関連や接続が作成されることを示します。
 
 ドラッグ操作の間、ある効果はある場所にだけ許可されることを示すために、ドラッグ効果は変更される場合があります。
 
@@ -143,7 +143,7 @@ function dragstart_handler(ev) {
 
 詳しくは以下を参照してください。
 
-- [Drag の効果](/ja/docs/Web/Guide/HTML/Drag_operations#drageffects "Drag Effects")
+- [Drag の効果](/ja/docs/Web/Guide/HTML/Drag_operations#drageffects)
 
 ### *ドロップゾーン*の定義
 
@@ -217,7 +217,7 @@ function drop_handler(ev) {
 
 ドラッグ操作の終了を扱うことの詳細は、以下を参照してください。
 
-- [ドラッグの終了](/ja/docs/DragDrop/Drag_Operations#dragend "Finishing a Drag")
+- [ドラッグの終了](/ja/docs/DragDrop/Drag_Operations#dragend)
 
 ## 相互運用性
 
@@ -233,8 +233,8 @@ function drop_handler(ev) {
 
 ## 関連情報
 
-- [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations "Drag Operations")
-- [複数アイテムのドラッグとドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items "Dragging and Dropping Multiple Items")
-- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types "Recommended Drag Types")
-- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd "Drag and Drop Standard")
-- [Drag and Drop interoperability data from CanIUse](http://caniuse.com/#search=draganddrop "Drag and Drop interoperability data from CanIUse")
+- [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [複数アイテムのドラッグとドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
+- [Drag and Drop interoperability data from CanIUse](http://caniuse.com/#search=draganddrop)

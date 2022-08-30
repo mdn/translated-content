@@ -45,6 +45,6 @@ console.log(myString)
 
 ## 関連情報
 
-- [開発ツール](/ja/docs/Tools "Tools")
-- [ウェブコンソール](/ja/docs/Tools/Web_Console "Web Console") — Firefox のウェブコンソールが Console API の呼び出しを処理する方法
+- [開発ツール](/ja/docs/Tools)
+- [ウェブコンソール](/ja/docs/Tools/Web_Console) — Firefox のウェブコンソールが Console API の呼び出しを処理する方法
 - [リモートデバッグ](/ja/docs/Tools/Remote_Debugging) — デバッグ対象がモバイルデバイスである場合のコンソール出力の表示方法

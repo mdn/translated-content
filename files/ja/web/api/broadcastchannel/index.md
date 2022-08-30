@@ -19,12 +19,11 @@ _このインターフェイスは、その親である {{domxref("EventTarget")
 
 - {{domxref("BroadcastChannel.name")}}
   - : チャネルの名前である {{domxref("DOMString")}} を返します。
-- ### イベントハンドラ
 
-  {{domxref("BroadcastChannel.onmessage")}}
+### イベントハンドラ
 
+- {{domxref("BroadcastChannel.onmessage")}}
   - : このオブジェクトで {{event("message")}} イベントが発生したときに実行する関数を指定する {{event("Event_handlers", "event handler")}} プロパティ。
-
 - {{domxref("BroadcastChannel.onmessageerror")}}
   - : {{event("Event_handlers", "event handler")}} は、{{domxref("MessageError")}} 型の {{domxref("MessageEvent")}} が発生したとき、つまり逆シリアル化できないメッセージを受け取ったときに呼び出されます。
 

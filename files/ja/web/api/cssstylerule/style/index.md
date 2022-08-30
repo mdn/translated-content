@@ -33,4 +33,4 @@ function stilo() {
 
 ## 関連情報
 
-- [DOM CSS プロパティ](/CSS/CSS_Reference "/DOM/CSS")
+- [DOM CSS プロパティ](/CSS/CSS_Reference)

@@ -6,9 +6,9 @@ Media Source Extensions を使用する場合、アセットをストリーミ�
 
 ## 入門
 
-1.  最初で最も重要な手順は、ユーザーのブラウザーがサポートするコンテナとコーデックでファイルを構成することです。
-2.  コーデックによっては、[ISO BMFF 仕様](https://www.w3.org/TR/mse-byte-stream-format-isobmff/)に準拠するためにファイルを断片化する必要がある場合があります。
-3.  （オプション）Dynamic Adaptive Streaming over HTTP（DASH、HTTP を介した動的適応的ストリーミング）を使用した適応的ビットレートストリーミングを使用する場合、アセットを複数の解像度にトランスコードする必要があります。 ほとんどの DASH クライアントは、対応する Media Presentation Description（MPD）マニフェストファイルを期待しています。 これは通常、複数の解像度のアセットファイルを生成するときに生成されます。
+1. 最初で最も重要な手順は、ユーザーのブラウザーがサポートするコンテナとコーデックでファイルを構成することです。
+2. コーデックによっては、[ISO BMFF 仕様](https://www.w3.org/TR/mse-byte-stream-format-isobmff/)に準拠するためにファイルを断片化する必要がある場合があります。
+3. （オプション）Dynamic Adaptive Streaming over HTTP（DASH、HTTP を介した動的適応的ストリーミング）を使用した適応的ビットレートストリーミングを使用する場合、アセットを複数の解像度にトランスコードする必要があります。 ほとんどの DASH クライアントは、対応する Media Presentation Description（MPD）マニフェストファイルを期待しています。 これは通常、複数の解像度のアセットファイルを生成するときに生成されます。
 
 以下では、これらのすべての手順を説明しますが、最初にこれをかなり簡単に行うために使用できるツールチェーンを見てみましょう。
 
@@ -22,9 +22,9 @@ Media Source Extensions を使用する場合、アセットをストリーミ�
 
 MSE を使用する場合、次のツールが必要です。
 
-1.  [ffmpeg](http://ffmpeg.org/) — メディアを必要な形式にトランスコードするためのコマンドラインユーティリティ。 [Download FFmpeg のページ](http://ffmpeg.org/download.html)であなたのシステムのバージョンをダウンロードできます。 アーカイブファイルから実行可能ファイルを抽出し、その場所を PATH ステートメントに追加します。 OSX ユーザーは、[homebrew](http://brew.sh/) を使用して ffmpeg をインストールすることもできます。
-2.  [Bento4](https://github.com/axiomatic-systems/Bento4) — アセットのメタデータを取得し、DASH のコンテンツを作成するための一連のコマンドラインユーティリティ。 インストールするには、OS と設定に応じて、提供されたプロジェクトファイル/ソースファイルからアプリを自分でビルド/コンパイルする必要があります。 詳細については、[構築手順](https://github.com/axiomatic-systems/Bento4#building)を参照してください。 構築済みファイルが[ここ](https://www.bento4.com/downloads/)にあります。 `bin` ディレクトリの内容を ffmpeg と同じ場所に入れておきます。
-3.  python2 — Bento4 が使います。
+1. [ffmpeg](http://ffmpeg.org/) — メディアを必要な形式にトランスコードするためのコマンドラインユーティリティ。 [Download FFmpeg のページ](http://ffmpeg.org/download.html)であなたのシステムのバージョンをダウンロードできます。 アーカイブファイルから実行可能ファイルを抽出し、その場所を PATH ステートメントに追加します。 OSX ユーザーは、[homebrew](http://brew.sh/) を使用して ffmpeg をインストールすることもできます。
+2. [Bento4](https://github.com/axiomatic-systems/Bento4) — アセットのメタデータを取得し、DASH のコンテンツを作成するための一連のコマンドラインユーティリティ。 インストールするには、OS と設定に応じて、提供されたプロジェクトファイル/ソースファイルからアプリを自分でビルド/コンパイルする必要があります。 詳細については、[構築手順](https://github.com/axiomatic-systems/Bento4#building)を参照してください。 構築済みファイルが[ここ](https://www.bento4.com/downloads/)にあります。 `bin` ディレクトリの内容を ffmpeg と同じ場所に入れておきます。
+3. python2 — Bento4 が使います。
 
 次のステップに進む前に、これらを正常にインストールしてください。
 

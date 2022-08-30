@@ -8,10 +8,10 @@ slug: Web/API/MediaRecorder/stop
 
 `stop()` メソッドを呼び出すと、UA は次の手順を実行するタスクをキューに入れます。
 
-1.  {{domxref("MediaRecorder.state")}} が `"inactive"` の場合は、DOM の `InvalidState` エラーを発生させてこれらの手順を終了します。 {{domxref("MediaRecorder.state")}} が `"inactive"` でない場合は、次の手順に進みます。
-2.  {{domxref("MediaRecorder.state")}} を `"inactive"` に設定してメディアのキャプチャを停止します。
-3.  収集されたデータの `Blob` を含む `dataavailable` イベントを発生させます。
-4.  `stop` イベントを発生させます。
+1. {{domxref("MediaRecorder.state")}} が `"inactive"` の場合は、DOM の `InvalidState` エラーを発生させてこれらの手順を終了します。 {{domxref("MediaRecorder.state")}} が `"inactive"` でない場合は、次の手順に進みます。
+2. {{domxref("MediaRecorder.state")}} を `"inactive"` に設定してメディアのキャプチャを停止します。
+3. 収集されたデータの `Blob` を含む `dataavailable` イベントを発生させます。
+4. `stop` イベントを発生させます。
 
 ## 構文
 

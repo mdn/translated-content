@@ -153,5 +153,5 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
 ## 関連情報
 
-- IEBlog での [Page Visibility API](http://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx "Page Visibility on IEBlog") の解説
-- Google による [Page Visibility API](http://code.google.com/chrome/whitepapers/pagevisibility.html "Page Visibility API by Google") の解説
+- IEBlog での [Page Visibility API](http://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx) の解説
+- Google による [Page Visibility API](http://code.google.com/chrome/whitepapers/pagevisibility.html) の解説

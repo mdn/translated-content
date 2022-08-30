@@ -86,11 +86,11 @@ var updateSlider = function (newValue) {
 
 ## 使用された ARIA 属性
 
-- [aria-valuemin](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute "en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute")
-- [aria-valuemax](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute "en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute")
-- [aria-valuenow](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute "Using the aria-label attribute")
-- [aria-valuetext](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute "Using the aria-required attribute")
-- [aria-orientation](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute "en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute")
+- [aria-valuemin](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute)
+- [aria-valuemax](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute)
+- [aria-valuenow](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute)
+- [aria-valuetext](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute)
+- [aria-orientation](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute)
 
 ## 関連する ARIA 技術
 
