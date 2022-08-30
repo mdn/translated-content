@@ -52,6 +52,6 @@ slug: Web/HTTP
 - [Mozilla Observatory](https://observatory.mozilla.org/)
   - : 一個旨在幫助開發人員，系統管理員和安全專業人員安全地配置其站點的項目。
 - [RedBot](https://redbot.org/)
-  - : 用於檢查與緩存相關的 HTTP 頭的工具。
+  - : 用於檢查與暫存相關的 HTTP 檔頭的工具。
 - [瀏覽器的工作原理](https://web.dev/howbrowserswork/)
   - : 關於瀏覽器內部實作及 HTTP 通訊協定請求流程的一篇非常詳盡的文章。可以說是所有 Web 開發者都**必讀**的內容。
