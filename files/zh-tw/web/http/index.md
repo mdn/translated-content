@@ -54,4 +54,4 @@ slug: Web/HTTP
 - [RedBot](https://redbot.org/)
   - : 用於檢查與緩存相關的 HTTP 頭的工具。
 - [瀏覽器的工作原理](https://web.dev/howbrowserswork/)
-  - : 一篇非常全面的關於瀏覽器內部實現與通過 HTTP 協議的請求流的文章。可以說是所有 Web 開發者的**必讀內容**。
+  - : 關於瀏覽器內部實作及 HTTP 通訊協定請求流程的一篇非常詳盡的文章。可以說是所有 Web 開發者都**必讀**的內容。
