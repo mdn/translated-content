@@ -58,6 +58,6 @@ console.log(x); // 1
 console.log(x); // ReferenceError: x is not defined
 ```
 
-## 了解更多
+## 参见
 
 - 见维基百科词条：[作用域](https://zh.wikipedia.org/wiki/%E4%BD%9C%E7%94%A8%E5%9F%9F)
