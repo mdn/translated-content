@@ -271,7 +271,7 @@
 /es/docs/DOM/document.cookie	/es/docs/Web/API/Document/cookie
 /es/docs/DOM/document.createRange	/es/docs/Web/API/Document/createRange
 /es/docs/DOM/document.documentElement	/es/docs/Web/API/Document/documentElement
-/es/docs/DOM/document.documentURIObject	/es/docs/Web/API/Document/documentURIObject
+/es/docs/DOM/document.documentURIObject	/es/docs/orphaned/Web/API/Document/documentURIObject
 /es/docs/DOM/document.getElementById	/es/docs/Web/API/Document/getElementById
 /es/docs/DOM/document.getElementsByTagName	/es/docs/Web/API/Document/getElementsByTagName
 /es/docs/DOM/document.getElementsByTagNameNS	/es/docs/Web/API/Document/getElementsByTagNameNS
@@ -340,7 +340,7 @@
 /es/docs/DOM:document.cookie	/es/docs/Web/API/Document/cookie
 /es/docs/DOM:document.createRange	/es/docs/Web/API/Document/createRange
 /es/docs/DOM:document.documentElement	/es/docs/Web/API/Document/documentElement
-/es/docs/DOM:document.documentURIObject	/es/docs/Web/API/Document/documentURIObject
+/es/docs/DOM:document.documentURIObject	/es/docs/orphaned/Web/API/Document/documentURIObject
 /es/docs/DOM:document.getElementById	/es/docs/Web/API/Document/getElementById
 /es/docs/DOM:document.getElementsByTagName	/es/docs/Web/API/Document/getElementsByTagName
 /es/docs/DOM:document.getElementsByTagNameNS	/es/docs/Web/API/Document/getElementsByTagNameNS
@@ -474,6 +474,7 @@
 /es/docs/Glossary/Criptografía	/es/docs/Glossary/Cryptography
 /es/docs/Glossary/DHTML	/es/docs/Glossary
 /es/docs/Glossary/Descifrado	/es/docs/Glossary/Decryption
+/es/docs/Glossary/Dynamic_programming_language	/es/docs/orphaned/Glossary/Dynamic_programming_language
 /es/docs/Glossary/Encriptación	/es/docs/Glossary/Encryption
 /es/docs/Glossary/Entidad	/es/docs/Glossary/Entity
 /es/docs/Glossary/Espacio_en_blanco	/es/docs/Glossary/Whitespace
@@ -1496,7 +1497,7 @@
 /es/docs/SVG	/es/docs/Web/SVG
 /es/docs/SVG/Tutorial	/es/docs/Web/SVG/Tutorial
 /es/docs/SVG/Tutorial/Getting_Started	/es/docs/Web/SVG/Tutorial/Getting_Started
-/es/docs/SVG_en_Firefox	/es/docs/Web/SVG/SVG_1.1_Support_in_Firefox
+/es/docs/SVG_en_Firefox	/es/docs/orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
 /es/docs/Seguridad_en_Firefox_2	/es/docs/Mozilla/Firefox/Releases/2/Security_changes
 /es/docs/Server-sent_events	/es/docs/Web/API/Server-sent_events
 /es/docs/Server-sent_events/utilizando_server_sent_events_sse	/es/docs/Web/API/Server-sent_events/Using_server-sent_events
@@ -1585,6 +1586,7 @@
 /es/docs/Web/API/Blob.Blob	/es/docs/Web/API/Blob/Blob
 /es/docs/Web/API/CSSStyleSheet.insertRule	/es/docs/Web/API/CSSStyleSheet/insertRule
 /es/docs/Web/API/CanvasImageSource	/es/docs/conflicting/Web/API/CanvasRenderingContext2D
+/es/docs/Web/API/Canvas_API/A_basic_ray-caster	/es/docs/orphaned/Web/API/Canvas_API/A_basic_ray-caster
 /es/docs/Web/API/Canvas_API/Tutorial/Compositing/Ejemplo	/es/docs/Web/API/Canvas_API/Tutorial/Compositing/Example
 /es/docs/Web/API/Console/tabla	/es/docs/Web/API/Console/table
 /es/docs/Web/API/Constraint_validation/invalid_event	/es/docs/Web/API/HTMLInputElement/invalid_event
@@ -1596,6 +1598,7 @@
 /es/docs/Web/API/Document/abrir	/es/docs/Web/API/Document/open
 /es/docs/Web/API/Document/async	/es/docs/Web/API/XMLDocument/async
 /es/docs/Web/API/Document/crearAtributo	/es/docs/Web/API/Document/createAttribute
+/es/docs/Web/API/Document/documentURIObject	/es/docs/orphaned/Web/API/Document/documentURIObject
 /es/docs/Web/API/Document/keydown_event	/es/docs/Web/API/Element/keydown_event
 /es/docs/Web/API/Document/keyup_event	/es/docs/Web/API/Element/keyup_event
 /es/docs/Web/API/DocumentOrShadowRoot/getSelection	/es/docs/Web/API/Document/getSelection
@@ -1613,11 +1616,13 @@
 /es/docs/Web/API/Fetch_API/Utilizando_Fetch	/es/docs/Web/API/Fetch_API/Using_Fetch
 /es/docs/Web/API/File/Using_files_from_web_applications	/es/docs/Web/API/File_API/Using_files_from_web_applications
 /es/docs/Web/API/File/fileName	/es/docs/conflicting/Web/API/File/name
+/es/docs/Web/API/FileError	/es/docs/orphaned/Web/API/FileError
 /es/docs/Web/API/FileReader/onload	/es/docs/Web/API/FileReader/load_event
 /es/docs/Web/API/Geolocalización	/es/docs/Web/API/Geolocation
 /es/docs/Web/API/Geolocation.clearWatch	/es/docs/Web/API/Geolocation/clearWatch
 /es/docs/Web/API/Geolocation.getCurrentPosition	/es/docs/Web/API/Geolocation/getCurrentPosition
 /es/docs/Web/API/Geolocation.watchPosition	/es/docs/Web/API/Geolocation/watchPosition
+/es/docs/Web/API/GlobalEventHandlers	/es/docs/orphaned/Web/API/GlobalEventHandlers
 /es/docs/Web/API/GlobalEventHandlers/onblur	/es/docs/Web/API/Window/blur_event
 /es/docs/Web/API/GlobalEventHandlers/onchange	/es/docs/conflicting/Web/API/HTMLElement/change_event
 /es/docs/Web/API/GlobalEventHandlers/onclick	/es/docs/conflicting/Web/API/Element/click_event
@@ -1684,12 +1689,15 @@
 /es/docs/Web/API/Window.onbeforeunload	/es/docs/conflicting/Web/API/Window/beforeunload_event
 /es/docs/Web/API/Window.setTimeout	/es/docs/Web/API/setTimeout
 /es/docs/Web/API/Window/crypto	/es/docs/Web/API/crypto_property
+/es/docs/Web/API/Window/dialogArguments	/es/docs/orphaned/Web/API/Window/dialogArguments
 /es/docs/Web/API/WindowBase64.atob	/es/docs/Web/API/atob
 /es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando	/es/docs/Glossary/Base64
 /es/docs/Web/API/WindowBase64/atob	/es/docs/Web/API/atob
+/es/docs/Web/API/WindowEventHandlers	/es/docs/orphaned/Web/API/WindowEventHandlers
 /es/docs/Web/API/WindowEventHandlers/onbeforeunload	/es/docs/conflicting/Web/API/Window/beforeunload_event
 /es/docs/Web/API/WindowEventHandlers/onhashchange	/es/docs/conflicting/Web/API/Window/hashchange_event
 /es/docs/Web/API/WindowEventHandlers/onpopstate	/es/docs/Web/API/Window/popstate_event
+/es/docs/Web/API/WindowOrWorkerGlobalScope	/es/docs/orphaned/Web/API/WindowOrWorkerGlobalScope
 /es/docs/Web/API/WindowOrWorkerGlobalScope/atob	/es/docs/Web/API/atob
 /es/docs/Web/API/WindowOrWorkerGlobalScope/caches	/es/docs/Web/API/caches
 /es/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/es/docs/Web/API/clearInterval
@@ -1715,10 +1723,12 @@
 /es/docs/Web/Accesibilidad/Understanding_WCAG/Perceivable	/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable
 /es/docs/Web/Accesibilidad/Understanding_WCAG/Perceivable/Color_contraste	/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 /es/docs/Web/Accesibilidad/Understanding_WCAG/Teclado	/es/docs/Web/Accessibility/Understanding_WCAG/Keyboard
-/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_el_atributo_aria-required	/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
+/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_el_atributo_aria-required	/es/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
 /es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_el_rol_alertdialog	/es/docs/Web/Accessibility/ARIA/Roles/alertdialog_role
 /es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/es/docs/Web/Accessibility/ARIA/Roles/alert_role
 /es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role	/es/docs/Web/Accessibility/ARIA/Roles/alertdialog_role
+/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute	/es/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
+/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute	/es/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
 /es/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/es/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
 /es/docs/Web/Accessibility/ARIA/forms/Etiquetas_complejas	/es/docs/Web/Accessibility/ARIA/forms/Multipart_labels
 /es/docs/Web/Accessibility/ARIA/forms/alertas	/es/docs/conflicting/Web/Accessibility/ARIA
@@ -1730,6 +1740,7 @@
 /es/docs/Web/CSS/-moz-box-flex	/es/docs/Web/CSS/box-flex
 /es/docs/Web/CSS/-moz-box-ordinal-group	/es/docs/Web/CSS/box-ordinal-group
 /es/docs/Web/CSS/-moz-box-pack	/es/docs/Web/CSS/box-pack
+/es/docs/Web/CSS/-moz-context-properties	/es/docs/orphaned/Web/CSS/-moz-context-properties
 /es/docs/Web/CSS/-moz-font-language-override	/es/docs/Web/CSS/font-language-override
 /es/docs/Web/CSS/-moz-user-modify	/es/docs/Web/CSS/user-modify
 /es/docs/Web/CSS/-webkit-mask	/es/docs/Web/CSS/mask
@@ -1746,7 +1757,8 @@
 /es/docs/Web/CSS/:not()	/es/docs/Web/CSS/:not
 /es/docs/Web/CSS/@media/altura	/es/docs/Web/CSS/@media/height
 /es/docs/Web/CSS/@media/resolución	/es/docs/Web/CSS/@media/resolution
-/es/docs/Web/CSS/CSS_Animations/Detectar_soporte_de_animación_CSS	/es/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
+/es/docs/Web/CSS/CSS_Animations/Detectar_soporte_de_animación_CSS	/es/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
+/es/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support	/es/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS	/es/docs/Web/CSS/CSS_Animations/Using_CSS_animations
 /es/docs/Web/CSS/CSS_Background_and_Borders	/es/docs/Web/CSS/CSS_Backgrounds_and_Borders
 /es/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generador	/es/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
@@ -1772,6 +1784,7 @@
 /es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_1_del_contexto_de_apilamiento	/es/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
 /es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_2_del_contexto_de_apilamiento	/es/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2
 /es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_3_del_contexto_de_apilamiento	/es/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3
+/es/docs/Web/CSS/CSS_Properties_Reference	/es/docs/orphaned/Web/CSS/CSS_Properties_Reference
 /es/docs/Web/CSS/CSS_Reglas_Condicionales	/es/docs/Web/CSS/CSS_Conditional_Rules
 /es/docs/Web/CSS/Child_selectors	/es/docs/Web/CSS/Child_combinator
 /es/docs/Web/CSS/Columnas_CSS	/es/docs/Web/CSS/CSS_Columns
@@ -1909,7 +1922,7 @@
 /es/docs/Web/HTML/Atributos_Globales/x-ms-acceleratorkey	/es/docs/Web/HTML/Global_attributes/x-ms-acceleratorkey
 /es/docs/Web/HTML/Atributos_de_configuracion_CORS	/es/docs/Web/HTML/Attributes/crossorigin
 /es/docs/Web/HTML/Canvas	/es/docs/Web/API/Canvas_API
-/es/docs/Web/HTML/Canvas/A_basic_ray-caster	/es/docs/Web/API/Canvas_API/A_basic_ray-caster
+/es/docs/Web/HTML/Canvas/A_basic_ray-caster	/es/docs/orphaned/Web/API/Canvas_API/A_basic_ray-caster
 /es/docs/Web/HTML/Consejos_para_la_creación_de_páginas_HTML_de_carga_rápida	/es/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /es/docs/Web/HTML/Element/basefont	/es/docs/conflicting/Web/CSS/CSS_Fonts
 /es/docs/Web/HTML/Element/input/datetime	/es/docs/Web/HTML/Element/input/datetime-local
@@ -2624,6 +2637,7 @@
 /es/docs/Web/MathML/Elemento	/es/docs/Web/MathML/Element
 /es/docs/Web/MathML/Elemento/math	/es/docs/Web/MathML/Element/math
 /es/docs/Web/Performance/mejorando_rendimienot_inicial	/es/docs/Web/Performance/Optimizing_startup_performance
+/es/docs/Web/Progressive_web_apps/Developer_guide	/es/docs/orphaned/Web/Progressive_web_apps/Developer_guide
 /es/docs/Web/Progressive_web_apps/Developer_guide/Instalar	/es/docs/Web/Progressive_web_apps/Installing
 /es/docs/Web/Progressive_web_apps/Developer_guide/Installing	/es/docs/Web/Progressive_web_apps/Installing
 /es/docs/Web/Progressive_web_apps/Responsive/Media_types	/es/docs/Web/CSS/Media_Queries/Using_media_queries
@@ -2649,6 +2663,7 @@
 /es/docs/Web/Reference/Events/wheel	/es/docs/Web/API/Element/wheel_event
 /es/docs/Web/SVG/Element/glifo	/es/docs/Web/SVG/Element/glyph
 /es/docs/Web/SVG/Index	/es/docs/conflicting/Web/SVG
+/es/docs/Web/SVG/SVG_1.1_Support_in_Firefox	/es/docs/orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
 /es/docs/Web/SVG/Tutorial/Introducción	/es/docs/Web/SVG/Tutorial/Introduction
 /es/docs/Web/Security/Same-origin_politica	/es/docs/Web/Security/Same-origin_policy
 /es/docs/Web/Security/Securing_your_site/desactivar_autocompletado_formulario	/es/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion

@@ -188,7 +188,7 @@
 /pt-BR/docs/Glossario/Jank	/pt-BR/docs/Glossary/Jank
 /pt-BR/docs/Glossario/JavaScript	/pt-BR/docs/Glossary/JavaScript
 /pt-BR/docs/Glossario/Key	/pt-BR/docs/Glossary/Key
-/pt-BR/docs/Glossario/Linguagem_de_programação_dinâmica	/pt-BR/docs/Glossary/Dynamic_programming_language
+/pt-BR/docs/Glossario/Linguagem_de_programação_dinâmica	/pt-BR/docs/orphaned/Glossary/Dynamic_programming_language
 /pt-BR/docs/Glossario/Metadata	/pt-BR/docs/Glossary/Metadata
 /pt-BR/docs/Glossario/Mozilla_Firefox	/pt-BR/docs/Glossary/Mozilla_Firefox
 /pt-BR/docs/Glossario/Mutavel	/pt-BR/docs/Glossary/Mutable
@@ -275,6 +275,7 @@
 /pt-BR/docs/Glossario/webp	/pt-BR/docs/Glossary/webp
 /pt-BR/docs/Glossary/404	/pt-BR/docs/conflicting/Web/HTTP/Status/404
 /pt-BR/docs/Glossary/502	/pt-BR/docs/conflicting/Web/HTTP/Status/502
+/pt-BR/docs/Glossary/Dynamic_programming_language	/pt-BR/docs/orphaned/Glossary/Dynamic_programming_language
 /pt-BR/docs/Glossary/Symbol	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol
 /pt-BR/docs/HTML	/pt-BR/docs/Web/HTML
 /pt-BR/docs/HTML/Attributes	/pt-BR/docs/Web/HTML/Attributes
@@ -547,6 +548,7 @@
 /pt-BR/docs/Web/API/BatteryManager/ondischargingtimechange	/pt-BR/docs/Web/API/BatteryManager/dischargingtimechange_event
 /pt-BR/docs/Web/API/BatteryManager/ondischargintimechange	/pt-BR/docs/Web/API/BatteryManager/dischargingtimechange_event
 /pt-BR/docs/Web/API/BatteryManager/onlevelchange	/pt-BR/docs/Web/API/BatteryManager/levelchange_event
+/pt-BR/docs/Web/API/Canvas_API/A_basic_ray-caster	/pt-BR/docs/orphaned/Web/API/Canvas_API/A_basic_ray-caster
 /pt-BR/docs/Web/API/Console.timeEnd	/pt-BR/docs/Web/API/Console/timeEnd
 /pt-BR/docs/Web/API/Coordinates	/pt-BR/docs/Web/API/GeolocationCoordinates
 /pt-BR/docs/Web/API/Coordinates/altitude	/pt-BR/docs/Web/API/GeolocationCoordinates/altitude
@@ -581,6 +583,7 @@
 /pt-BR/docs/Web/API/File/Using_files_from_web_applications	/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications
 /pt-BR/docs/Web/API/FileReader/onload	/pt-BR/docs/Web/API/FileReader/load_event
 /pt-BR/docs/Web/API/FullscreenOptions	/pt-BR/docs/orphaned/Web/API/FullscreenOptions
+/pt-BR/docs/Web/API/GlobalEventHandlers	/pt-BR/docs/orphaned/Web/API/GlobalEventHandlers
 /pt-BR/docs/Web/API/GlobalEventHandlers/onabort	/pt-BR/docs/conflicting/Web/API/HTMLMediaElement/abort_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/onblur	/pt-BR/docs/Web/API/Window/blur_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/onchange	/pt-BR/docs/Web/API/HTMLElement/change_event
@@ -607,6 +610,7 @@
 /pt-BR/docs/Web/API/Node.replaceChild	/pt-BR/docs/Web/API/Node/replaceChild
 /pt-BR/docs/Web/API/Node/innerText	/pt-BR/docs/Web/API/HTMLElement/innerText
 /pt-BR/docs/Web/API/NodeFilter	/pt-BR/docs/Web/API/Document/createNodeIterator
+/pt-BR/docs/Web/API/NotificationAction	/pt-BR/docs/orphaned/Web/API/NotificationAction
 /pt-BR/docs/Web/API/ParentNode/childElementCount	/pt-BR/docs/Web/API/Element/childElementCount
 /pt-BR/docs/Web/API/Position	/pt-BR/docs/Web/API/GeolocationPosition
 /pt-BR/docs/Web/API/Position/coords	/pt-BR/docs/Web/API/GeolocationPosition/coords
@@ -627,10 +631,13 @@
 /pt-BR/docs/Web/API/Window/Window.localStorage	/pt-BR/docs/Web/API/Window/localStorage
 /pt-BR/docs/Web/API/Window/crypto	/pt-BR/docs/Web/API/crypto_property
 /pt-BR/docs/Web/API/Window/performance	/pt-BR/docs/Web/API/performance_property
+/pt-BR/docs/Web/API/Window/setCursor	/pt-BR/docs/orphaned/Web/API/Window/setCursor
 /pt-BR/docs/Web/API/WindowBase64/atob	/pt-BR/docs/Web/API/atob
+/pt-BR/docs/Web/API/WindowEventHandlers	/pt-BR/docs/orphaned/Web/API/WindowEventHandlers
 /pt-BR/docs/Web/API/WindowEventHandlers/onhashchange	/pt-BR/docs/Web/API/Window/hashchange_event
 /pt-BR/docs/Web/API/WindowEventHandlers/onpopstate	/pt-BR/docs/conflicting/Web/API/Window/popstate_event
 /pt-BR/docs/Web/API/WindowEventHandlers/onstorage	/pt-BR/docs/Web/API/Window/storage_event
+/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope	/pt-BR/docs/orphaned/Web/API/WindowOrWorkerGlobalScope
 /pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/atob	/pt-BR/docs/Web/API/atob
 /pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/pt-BR/docs/Web/API/clearTimeout
 /pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/pt-BR/docs/Web/API/fetch
@@ -646,10 +653,14 @@
 /pt-BR/docs/Web/API/document.writeln	/pt-BR/docs/Web/API/Document/writeln
 /pt-BR/docs/Web/API/event.type	/pt-BR/docs/Web/API/Event/type
 /pt-BR/docs/Web/API/notificacoes	/pt-BR/docs/Web/API/Notification
-/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_o_atributo_aria-labelledby	/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
-/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_o_atributo_aria-required	/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
+/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_o_atributo_aria-labelledby	/pt-BR/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
+/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_o_atributo_aria-required	/pt-BR/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_o_slider_role	/pt-BR/docs/Web/Accessibility/ARIA/Roles/slider_role
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/pt-BR/docs/Web/Accessibility/ARIA/Roles/alert_role
+/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute	/pt-BR/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute
+/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute	/pt-BR/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
+/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute	/pt-BR/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
+/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute	/pt-BR/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role	/pt-BR/docs/Web/Accessibility/ARIA/Roles/slider_role
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Utilizando_o_alert_role	/pt-BR/docs/Web/Accessibility/ARIA/Roles/alert_role
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Test_Cases	/pt-BR/docs/conflicting/Web/Accessibility/ARIA_07681b5fb66700d2792e86830388177c
@@ -667,6 +678,8 @@
 /pt-BR/docs/Web/Apps/Progressive	/pt-BR/docs/Web/Progressive_web_apps
 /pt-BR/docs/Web/Apps/Progressive/Introdução	/pt-BR/docs/Web/Progressive_web_apps/Introduction
 /pt-BR/docs/Web/CSS/-moz-box-ordinal-group	/pt-BR/docs/Web/CSS/box-ordinal-group
+/pt-BR/docs/Web/CSS/-moz-context-properties	/pt-BR/docs/orphaned/Web/CSS/-moz-context-properties
+/pt-BR/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support	/pt-BR/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /pt-BR/docs/Web/CSS/CSS_Animations/Usando_animações_CSS	/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animations
 /pt-BR/docs/Web/CSS/CSS_Background_and_Borders	/pt-BR/docs/Web/CSS/CSS_Backgrounds_and_Borders
 /pt-BR/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/pt-BR/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
@@ -775,7 +788,7 @@
 /pt-BR/docs/Web/HTML/Applying_color	/pt-BR/docs/Web/CSS/CSS_Colors/Applying_color
 /pt-BR/docs/Web/HTML/CORS_imagens_habilitadas	/pt-BR/docs/Web/HTML/CORS_enabled_image
 /pt-BR/docs/Web/HTML/Canvas	/pt-BR/docs/Web/API/Canvas_API
-/pt-BR/docs/Web/HTML/Canvas/A_basic_ray-caster	/pt-BR/docs/Web/API/Canvas_API/A_basic_ray-caster
+/pt-BR/docs/Web/HTML/Canvas/A_basic_ray-caster	/pt-BR/docs/orphaned/Web/API/Canvas_API/A_basic_ray-caster
 /pt-BR/docs/Web/HTML/Controlando_verificacao_ortografica_em_formularios_HTML	/pt-BR/docs/Web/HTML/Global_attributes/spellcheck
 /pt-BR/docs/Web/HTML/Dicas_para_criar_páginas_HTML_de_carregamento_rápido	/pt-BR/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /pt-BR/docs/Web/HTML/Element/Input/data	/pt-BR/docs/Web/HTML/Element/input/date
@@ -830,6 +843,7 @@
 /pt-BR/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
 /pt-BR/docs/Web/JavaScript/Reference/Errors/Fata_parênteses_após_lista_argumento	/pt-BR/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 /pt-BR/docs/Web/JavaScript/Reference/Errors/Fecha_chaves_esquecida_apos_lista_propriedades	/pt-BR/docs/Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
+/pt-BR/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
 /pt-BR/docs/Web/JavaScript/Reference/Errors/NãoNomeado_funcão_declaração	/pt-BR/docs/Web/JavaScript/Reference/Errors/Unnamed_function_statement
 /pt-BR/docs/Web/JavaScript/Reference/Errors/Não_definido	/pt-BR/docs/Web/JavaScript/Reference/Errors/Not_defined
 /pt-BR/docs/Web/JavaScript/Reference/Functions/Definicoes_metodos	/pt-BR/docs/Web/JavaScript/Reference/Functions/Method_definitions

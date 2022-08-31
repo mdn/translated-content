@@ -346,12 +346,6 @@
       "enfroze"
     ]
   },
-  "Glossary/Dynamic_programming_language": {
-    "modified": "2019-03-18T21:23:35.310Z",
-    "contributors": [
-      "flat81"
-    ]
-  },
   "Glossary/ECMAScript": {
     "modified": "2020-11-30T15:17:38.947Z",
     "contributors": [
@@ -3259,13 +3253,6 @@
       "Suguni"
     ]
   },
-  "Web/API/Canvas_API/A_basic_ray-caster": {
-    "modified": "2019-05-26T05:55:24.371Z",
-    "contributors": [
-      "alattalatta",
-      "taggon"
-    ]
-  },
   "Web/API/Canvas_API/Manipulating_video_using_canvas": {
     "modified": "2019-06-05T03:56:50.784Z",
     "contributors": [
@@ -3349,12 +3336,6 @@
     "modified": "2020-12-02T07:47:45.530Z",
     "contributors": [
       "chzhclq17"
-    ]
-  },
-  "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility": {
-    "modified": "2019-03-18T21:18:34.778Z",
-    "contributors": [
-      "kbsbroad"
     ]
   },
   "Web/API/Canvas_API/Tutorial/Optimizing_canvas": {
@@ -3563,12 +3544,6 @@
   },
   "Web/API/CustomEvent/CustomEvent": {
     "modified": "2020-10-15T22:13:58.234Z",
-    "contributors": [
-      "cs09g"
-    ]
-  },
-  "Web/API/DOMObject": {
-    "modified": "2019-03-18T21:34:55.307Z",
     "contributors": [
       "cs09g"
     ]
@@ -4690,14 +4665,6 @@
       "hallower",
       "mmnmm",
       "xcoda"
-    ]
-  },
-  "Web/API/GlobalEventHandlers": {
-    "modified": "2020-10-15T21:38:25.913Z",
-    "contributors": [
-      "alattalatta",
-      "cs09g",
-      "jwhitlock"
     ]
   },
   "Web/API/HTMLAnchorElement/href": {
@@ -7032,13 +6999,6 @@
       "pi1992"
     ]
   },
-  "Web/API/WindowEventHandlers": {
-    "modified": "2020-10-15T21:46:21.497Z",
-    "contributors": [
-      "alattalatta",
-      "fscholz"
-    ]
-  },
   "Web/API/Worker": {
     "modified": "2020-10-15T21:47:12.252Z",
     "contributors": [
@@ -7157,12 +7117,6 @@
     "contributors": [
       "alattalatta",
       "dcondrey"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute": {
-    "modified": "2019-05-20T02:23:29.902Z",
-    "contributors": [
-      "dasom0801"
     ]
   },
   "Web/Accessibility/ARIA/Roles": {
@@ -15770,14 +15724,6 @@
       "JeongSeongDae"
     ]
   },
-  "Web/SVG/SVG_1.1_Support_in_Firefox": {
-    "modified": "2019-03-23T23:41:45.344Z",
-    "contributors": [
-      "teoli",
-      "Cliffet",
-      "taggon"
-    ]
-  },
   "Web/SVG/Tutorial": {
     "modified": "2019-09-02T22:37:58.598Z",
     "contributors": [
@@ -17447,6 +17393,12 @@
       "Gilchris"
     ]
   },
+  "orphaned/Glossary/Dynamic_programming_language": {
+    "modified": "2019-03-18T21:23:35.310Z",
+    "contributors": [
+      "flat81"
+    ]
+  },
   "orphaned/How_to_Build_an_XPCOM_Component_in_Javascript": {
     "modified": "2019-03-23T23:49:04.482Z",
     "contributors": [
@@ -17699,6 +17651,19 @@
       "ldss3sang"
     ]
   },
+  "orphaned/Web/API/Canvas_API/A_basic_ray-caster": {
+    "modified": "2019-05-26T05:55:24.371Z",
+    "contributors": [
+      "alattalatta",
+      "taggon"
+    ]
+  },
+  "orphaned/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility": {
+    "modified": "2019-03-18T21:18:34.778Z",
+    "contributors": [
+      "kbsbroad"
+    ]
+  },
   "orphaned/Web/API/ChildNode": {
     "modified": "2020-10-15T22:04:53.961Z",
     "contributors": [
@@ -17713,6 +17678,12 @@
   },
   "orphaned/Web/API/ChildNode/remove": {
     "modified": "2020-10-15T22:10:05.225Z",
+    "contributors": [
+      "cs09g"
+    ]
+  },
+  "orphaned/Web/API/DOMObject": {
+    "modified": "2019-03-18T21:34:55.307Z",
     "contributors": [
       "cs09g"
     ]
@@ -17752,6 +17723,14 @@
       "AshfaqHossain",
       "teoli",
       "Netaras"
+    ]
+  },
+  "orphaned/Web/API/GlobalEventHandlers": {
+    "modified": "2020-10-15T21:38:25.913Z",
+    "contributors": [
+      "alattalatta",
+      "cs09g",
+      "jwhitlock"
     ]
   },
   "orphaned/Web/API/HTMLHyperlinkElementUtils": {
@@ -17864,6 +17843,19 @@
     "modified": "2020-10-15T22:22:07.358Z",
     "contributors": [
       "chansbro"
+    ]
+  },
+  "orphaned/Web/API/WindowEventHandlers": {
+    "modified": "2020-10-15T21:46:21.497Z",
+    "contributors": [
+      "alattalatta",
+      "fscholz"
+    ]
+  },
+  "orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute": {
+    "modified": "2019-05-20T02:23:29.902Z",
+    "contributors": [
+      "dasom0801"
     ]
   },
   "orphaned/Web/CSS/Index": {
@@ -18201,6 +18193,14 @@
       "Netaras",
       "tamnajio",
       "Channy"
+    ]
+  },
+  "orphaned/Web/SVG/SVG_1.1_Support_in_Firefox": {
+    "modified": "2019-03-23T23:41:45.344Z",
+    "contributors": [
+      "teoli",
+      "Cliffet",
+      "taggon"
     ]
   },
   "orphaned/Web/Security/Information_Security_Basics": {
