@@ -415,12 +415,6 @@
       "Rocker"
     ]
   },
-  "Glossary/DHTML": {
-    "modified": "2019-03-23T23:05:14.683Z",
-    "contributors": [
-      "wildsky"
-    ]
-  },
   "Glossary/DNS": {
     "modified": "2019-03-18T21:42:20.975Z",
     "contributors": [
@@ -3648,12 +3642,6 @@
       "MashKao"
     ]
   },
-  "Web/API/GlobalEventHandlers": {
-    "modified": "2019-03-23T22:31:11.882Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
   "Web/API/HTMLCanvasElement": {
     "modified": "2019-03-23T22:48:19.691Z",
     "contributors": [
@@ -4793,13 +4781,6 @@
     "contributors": [
       "jackblackevo",
       "h140100"
-    ]
-  },
-  "Web/CSS/CSS_Properties_Reference": {
-    "modified": "2020-10-21T10:34:59.711Z",
-    "contributors": [
-      "SvampK",
-      "jackblackevo"
     ]
   },
   "Web/CSS/CSS_Selectors": {
@@ -7766,6 +7747,25 @@
       "PatrickTaiwan",
       "Shiyou",
       "alk03073135"
+    ]
+  },
+  "orphaned/Glossary/DHTML": {
+    "modified": "2019-03-23T23:05:14.683Z",
+    "contributors": [
+      "wildsky"
+    ]
+  },
+  "orphaned/Web/API/GlobalEventHandlers": {
+    "modified": "2019-03-23T22:31:11.882Z",
+    "contributors": [
+      "jackblackevo"
+    ]
+  },
+  "orphaned/Web/CSS/CSS_Properties_Reference": {
+    "modified": "2020-10-21T10:34:59.711Z",
+    "contributors": [
+      "SvampK",
+      "jackblackevo"
     ]
   }
 }
