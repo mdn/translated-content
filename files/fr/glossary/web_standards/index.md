@@ -22,7 +22,7 @@ Cette liste non exhaustive vous donne une idée des standards auxquels les sites
 - **Ecma Intl. :** standards pour les langages de scripts, le plus visible étant {{Glossary("JavaScript")}}
 - **{{Glossary("ISO")}}** (International Organization for Standardization) : standards gouvernant un vaste éventail d'aspects, dont l'encodage de caractères, la gestion de sites web et la conception d'interfaces utilisateur
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

@@ -62,6 +62,6 @@ window.ononline = (event) => {
 
 {{Compat("api.Window.online_event")}}
 
-## Voir également
+## Voir aussi
 
 - [`offline`](/fr/docs/Web/API/Window/offline_event)

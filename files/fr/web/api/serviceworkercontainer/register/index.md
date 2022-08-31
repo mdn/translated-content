@@ -118,7 +118,7 @@ Toutefois, les serveurs peuvent supprimer cette restriction en définissant un e
 
 {{Compat("api.ServiceWorkerContainer.register")}}
 
-## Voir également
+## Voir aussi
 
 - [W3.org ServiceWorker Register](https://www.w3.org/TR/service-workers/#navigator-service-worker-register)
 - [W3c.github.io ServiceWorker Register](https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-register)

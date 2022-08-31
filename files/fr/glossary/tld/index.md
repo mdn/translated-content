@@ -30,7 +30,7 @@ De nos jours, {{Glossary("IANA")}} divise les domaines de premier niveau en plus
 - infrastructure top-level domain
   - : Ce groupe consiste en un seul domaine, l'{{Glossary("ARPA", "ARPA")}} (Address and Routing Parameter Area).
 
-## Pour approfondir
+## Voir aussi
 
 ### **Culture générale**
 

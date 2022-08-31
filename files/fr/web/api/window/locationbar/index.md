@@ -52,6 +52,6 @@ var visible = window.locationbar.visible;
 
 {{Compat("api.Window.locationbar")}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("window.locationbar")}}, {{domxref("window.menubar")}}, {{domxref("window.personalbar")}}, {{domxref("window.scrollbars")}}, {{domxref("window.statusbar")}}, {{domxref("window.toolbar")}}

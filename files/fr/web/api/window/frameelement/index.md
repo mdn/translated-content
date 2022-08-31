@@ -45,7 +45,7 @@ if (frameEl) {
 
 {{Compat("api.Window.frameElement")}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("window.frames")}} renvoie un objet de type tableau, listant les sous-cadres directs de la fenêtre courante.
 - {{domxref("window.parent")}} renvoie la fenêtre parente, qui est la fenêtre contenant le `frameElement` de la fenêtre enfant.
