@@ -633,7 +633,7 @@ function avg() {
 avg(2, 3, 4, 5); // 3.5
 ```
 
-这个就有用多了，但是却有些冗长。为了使代码变短一些，我们可以使用[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)来替换 arguments 的使用。在这方法中，我们可以传递任意数量的参数到函数中同时尽量减少我们的代码。这个**剩余参数操作符**在函数中以：**...variable** 的形式被使用，它将在调用函数时，捕获整个参数列表到这个变量中。我们同样也可以将 **for** 循环替换为 **for...of** 循环来返回我们变量的值。
+这个就有用多了，但是却有些冗长。为了使代码变短一些，我们可以使用[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)来替换 arguments 的使用。在这方法中，我们可以传递任意数量的参数到函数中同时尽量减少我们的代码。这个**剩余参数操作符**在函数中以：**...variable** 的形式被使用。在调用函数时，它将包含所有未被捕获的参数。
 
 ```js
 function avg(...args) {
