@@ -1195,7 +1195,6 @@
 /zh-CN/docs/Mozilla_event_reference/unload	/zh-CN/docs/Web/API/Window/unload_event
 /zh-CN/docs/Mozilla_event_reference/visibilitychange	/zh-CN/docs/Web/API/Document/visibilitychange_event
 /zh-CN/docs/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
-/zh-CN/docs/Rich-Text_Editing_in_Mozilla	/zh-CN/docs/orphaned/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
 /zh-CN/docs/SVG	/zh-CN/docs/Web/SVG
 /zh-CN/docs/SVG-840092-dup	/zh-CN/docs/Web/SVG
 /zh-CN/docs/SVG/Element	/zh-CN/docs/Web/SVG/Element
@@ -2223,8 +2222,6 @@
 /zh-CN/docs/Web/Guide/HTML/Canvas_tutorial/Transformations	/zh-CN/docs/Web/API/Canvas_API/Tutorial/Transformations
 /zh-CN/docs/Web/Guide/HTML/Canvas_tutorial/Using_images	/zh-CN/docs/Web/API/Canvas_API/Tutorial/Using_images
 /zh-CN/docs/Web/Guide/HTML/Content_Editable	/zh-CN/docs/Web/Guide/HTML/Editable_content
-/zh-CN/docs/Web/Guide/HTML/Content_Editable/Rich-Text_Editing_in_Mozilla	/zh-CN/docs/orphaned/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
-/zh-CN/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla	/zh-CN/docs/orphaned/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
 /zh-CN/docs/Web/Guide/HTML/Forms	/zh-CN/docs/Learn/Forms
 /zh-CN/docs/Web/Guide/HTML/Forms/How_to_build_custom_form_widgets	/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls
 /zh-CN/docs/Web/Guide/HTML/Forms/My_first_HTML_form	/zh-CN/docs/Learn/Forms/Your_first_form
