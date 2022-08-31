@@ -49,10 +49,8 @@ observer.observe({ entryTypes: ["element"] });
 
 ## Spécifications
 
-| Spécification                                                                                                                                                            | Statut                                   | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('Element Timing API','#dom-performanceelementtiming-intersectionrect','PerformanceElementTiming.intersectionRect')}} | {{Spec2('Element Timing API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceElementTiming.intersectionRect")}}
+{{Compat}}

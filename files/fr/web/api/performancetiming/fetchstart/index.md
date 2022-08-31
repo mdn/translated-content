@@ -26,15 +26,13 @@ L'ancienne propriété en lecture seule **`fetchStart`** retourne un `unsigned l
 let time = performance.timing.fetchStart;
 ```
 
-## Specifications
+## Spécifications
 
-| Spécification                                                                                                                                        | Statut                                   | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-fetchstart', 'PerformanceTiming.fetchStart')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceTiming.fetchStart")}}
+{{Compat}}
 
 ## Voir aussi
 
