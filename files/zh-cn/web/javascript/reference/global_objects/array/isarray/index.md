@@ -32,7 +32,7 @@ Array.isArray(value)
 
 如果对象是 {{jsxref("Array")}}，则返回 `true`，否则为 `false`。
 
-有关更多细节，请参阅文章 [“确定 JavaScript 对象是否为数组”](http://web.mit.edu/jwalden/www/isArray.html)。给定一个 {{jsxref("TypedArray")}} 实例，总是返回 `false`。
+有关更多细节，请参阅文章 [“确定 JavaScript 对象是否为数组”](https://web.mit.edu/jwalden/www/isArray.html)。给定一个 {{jsxref("TypedArray")}} 实例，总是返回 `false`。
 
 ## 示例
 
