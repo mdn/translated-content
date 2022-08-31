@@ -86,7 +86,6 @@ function use_PerformanceEntry_methods() {
 }
 ```
 
-
 ## Spécifications
 
 {{Specifications}}
