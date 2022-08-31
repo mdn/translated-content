@@ -102,15 +102,13 @@ if (typeof TextEncoder === "undefined") {
 }
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                            | Status                       | Comment             |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName("Encoding", "#interface-textencoder", "TextEncoder")}} | {{Spec2("Encoding")}} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.TextEncoder")}}
+{{Compat}}
 
 ## Voir aussi
 

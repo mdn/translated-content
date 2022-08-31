@@ -83,15 +83,13 @@ Listen to this event using [`addEventListener()`](/fr/docs/Web/API/EventTarget/a
   - : Fired on shared workers when a new client connects.
     Also available via the [`onconnect`](/fr/docs/Web/API/SharedWorkerGlobalScope/onconnect) property.
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                                | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', '#sharedworkerglobalscope', 'SharedWorkerGlobalScope')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.SharedWorkerGlobalScope")}}
+{{Compat}}
 
 ## Voir aussi
 

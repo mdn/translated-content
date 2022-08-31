@@ -41,13 +41,11 @@ function peuplerLeStockage() {
 
 ## Spécifications
 
-| Specification                                                                                                | État                             | Commentaire |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-clear', 'Storage.clear')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Storage.clear")}}
+{{Compat}}
 
 ## Voir aussi
 

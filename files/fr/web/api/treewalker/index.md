@@ -168,14 +168,11 @@ _Cette interface n'hérite d'aucune méthode._
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                                       | Commentaire                                           |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ----------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#treeWalker', 'TreeWalker')}}                                                 | {{Spec2('DOM WHATWG')}}             | Suppression de la propriété `expandEntityReferences`. |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-TreeWalker', 'TreeWalker')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.TreeWalker")}}
+{{Compat}}
 
 ## Voir aussi
 

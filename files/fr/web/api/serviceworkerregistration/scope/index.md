@@ -25,13 +25,11 @@ serviceWorkerRegistration.scope
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                                 | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#dom-serviceworkerregistration-scope', 'ServiceWorkerRegistration.scope')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ServiceWorkerRegistration.scope")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -29,12 +29,10 @@ The **`StorageManager`** interface of the the [Storage API](/fr/docs/Web/API/Sto
 - {{domxref("StorageManager.persisted()")}} {{securecontext_inline}}
   - : Returns a {{jsxref('Promise')}} that resolves to `true` if persistence has already been granted for your site's storage.
 
-## Specifications
+## Spécifications
 
-| Specification                                                                | Status                       | Comment             |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Storage','#storagemanager','StorageManger')}} | {{Spec2('Storage')}} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.StorageManager")}}
+{{Compat}}

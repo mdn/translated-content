@@ -54,10 +54,8 @@ self.onnotificationclick = (event) => {
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | État                                     | Commentaire                                                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Web Notifications','#dom-serviceworkerglobalscope-onnotificationclick','onnotificationclick')}} | {{Spec2('Web Notifications')}} | Définition initiale. Cette propriété est spécifiée dans {{domxref ('Notifications_API')}} même si elle fait partie de {{domxref ('ServiceWorkerGlobalScope')}}. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ServiceWorkerGlobalScope.onnotificationclick")}}
+{{Compat}}

@@ -111,15 +111,13 @@ self.addEventListener('fetch', function(event) {
 });
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                                                        | Status                               | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName('Service Workers', '#serviceworkerglobalscope-interface', 'ServiceWorkerGlobalScope')}} | {{Spec2('Service Workers')}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.ServiceWorkerGlobalScope")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -264,15 +264,13 @@ The table below summarises which algorithms are suitable for which cryptographic
   </tbody>
 </table>
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                        | Status                                   | Comment             |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{ SpecName('Web Crypto API', '#subtlecrypto-interface', 'SubtleCrypto') }} | {{ Spec2('Web Crypto API') }} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.SubtleCrypto")}}
+{{Compat}}
 
 ## Voir aussi
 

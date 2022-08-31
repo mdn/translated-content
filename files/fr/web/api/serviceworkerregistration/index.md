@@ -91,18 +91,13 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                                                    | Status                                   | Comment                                                                                                                                                                                                                                                   |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Service Workers', '#service-worker-registration-obj', 'ServiceWorkerRegistration')}} | {{Spec2('Service Workers')}}     | Initial definition.                                                                                                                                                                                                                                       |
-| {{SpecName('Push API', '#widl-ServiceWorkerRegistration-pushManager', 'PushManager')}}             | {{Spec2('Push API')}}             | Adds the {{domxref("PushManager","pushManager")}} property.                                                                                                                                                                                   |
-| {{SpecName('Web Notifications')}}                                                                                     | {{Spec2('Web Notifications')}} | Adds the {{domxref("ServiceWorkerRegistration.showNotification()","showNotification()")}} method and the {{domxref("ServiceWorkerRegistration.getNotifications()","getNotifications()")}} method. |
-| {{SpecName('Background Sync')}}                                                                                         | {{Spec2('Background Sync')}}     | Adds the {{domxref("ServiceWorkerRegistration.sync","sync")}} property.                                                                                                                                                                   |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.ServiceWorkerRegistration")}}
+{{Compat}}
 
 ## Voir aussi
 
