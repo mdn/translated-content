@@ -49,7 +49,7 @@ L'exemple HTML complet suivant montre comment la propriété `visible` de l'obje
 
 {{Compat("api.Window.scrollbars")}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("window.locationbar")}}
 - {{domxref("window.menubar")}}

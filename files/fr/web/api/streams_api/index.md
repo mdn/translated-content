@@ -103,7 +103,7 @@ Examples from other developers:
 
 {{Compat("api.WritableStream")}}
 
-## See also
+## Voir aussi
 
 - [Streams API concepts](/fr/docs/Web/API/Streams_API/Concepts)
 - [Using readable streams](/fr/docs/Web/API/Streams_API/Using_readable_streams)

@@ -107,7 +107,7 @@ Un exemple de chaque propriété, type d'évènement, et un gestionnaire d'évè
 
 {{Compat("api.PointerEvent")}}
 
-## See also
+## Voir aussi
 
 - {{ domxref("Touch_events","Touch Events") }}
 - {{ domxref("GestureEvent") }}

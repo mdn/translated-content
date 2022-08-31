@@ -274,7 +274,7 @@ The table below summarises which algorithms are suitable for which cryptographic
 
 {{Compat("api.SubtleCrypto")}}
 
-## See also
+## Voir aussi
 
 - [Web Crypto API](/fr/docs/Web/API/Web_Crypto_API)
 - [Web security](/fr/docs/Web/Security)

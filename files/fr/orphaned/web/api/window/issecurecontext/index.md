@@ -45,6 +45,6 @@ if (window.isSecureContext) {
 
 {{Compat("api.Window.isSecureContext")}}
 
-## Voir également
+## Voir aussi
 
 - [Contextes sécurisés](/fr/docs/Web/Security/Secure_Contexts)

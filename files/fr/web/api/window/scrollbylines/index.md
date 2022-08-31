@@ -43,6 +43,6 @@ window.scrollByLines(lignes)
 
 Ne fait partie d'aucune spécification.
 
-## See also
+## Voir aussi
 
 - {{domxref("window.scrollBy")}}, {{domxref("window.scrollByPages")}}

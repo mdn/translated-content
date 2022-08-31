@@ -62,7 +62,7 @@ window.addEventListener("rejectionhandled", event => {
 
 {{Compat("api.Window.rejectionhandled_event")}}
 
-## Voir également
+## Voir aussi
 
 - {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}
 - {{domxref("PromiseRejectionEvent")}}

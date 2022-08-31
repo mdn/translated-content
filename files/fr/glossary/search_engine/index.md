@@ -21,7 +21,7 @@ Un moteur de recherche dirige les processus suivants :
 
 Le moteur de recherche le plus populaire est Google. Parmi d'autres moteurs de recherche populaires figurent Yahoo!, Bing, Baidu et AOL.
 
-## Pour approfondir
+## Voir aussi
 
 - [Moteur de recherche](https://fr.wikipedia.org/wiki/Moteur_de_recherche) sur Wikipédia
 - [Moteur de recherche](http://www.webopedia.com/TERM/S/search_engine.html) sur Webopedia (en anglais)

@@ -64,7 +64,7 @@ window.onlanguagechange = function(event) {
 
 {{Compat("api.Window.languagechange_event")}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("NavigatorLanguage.language", "navigator.language")}}
 - {{domxref("NavigatorLanguage.languages", "navigator.languages")}}

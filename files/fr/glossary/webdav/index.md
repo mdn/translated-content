@@ -19,7 +19,7 @@ WebDAV donne aux clients les possibilités suivantes
 - copie et déplacement de pages web
 - verrouillage d'un document pour restreindre son édition à une seule personne à la fois
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

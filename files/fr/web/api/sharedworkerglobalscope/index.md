@@ -93,7 +93,7 @@ Listen to this event using [`addEventListener()`](/fr/docs/Web/API/EventTarget/a
 
 {{Compat("api.SharedWorkerGlobalScope")}}
 
-## See also
+## Voir aussi
 
 - {{domxref("SharedWorker")}}
 - {{domxref("WorkerGlobalScope")}}

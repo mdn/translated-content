@@ -121,7 +121,7 @@ self.addEventListener('fetch', function(event) {
 
 {{Compat("api.ServiceWorkerGlobalScope")}}
 
-## See also
+## Voir aussi
 
 - [Using Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)

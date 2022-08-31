@@ -78,7 +78,7 @@ Vous pouvez trouver un guide complet dans l'article [Using the Payment Request A
 
 {{Compat("api.PaymentRequest", 0)}}
 
-## See also
+## Voir aussi
 
 - [Using the Payment Request API](/fr/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - [Payment processing concepts](/fr/docs/Web/API/Payment_Request_API/Concepts)

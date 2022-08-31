@@ -33,7 +33,7 @@ serviceWorkerRegistration.scope
 
 {{Compat("api.ServiceWorkerRegistration.scope")}}
 
-## Voir également
+## Voir aussi
 
 - [Utilisation des Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Exemple basique de code pour les Services workers](https://github.com/mdn/sw-test)
