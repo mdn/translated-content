@@ -6,7 +6,7 @@ slug: Learn/Forms/HTML_forms_in_legacy_browsers
 
 所有 web 开发者很快就会（有时候是痛苦地）发现 Web 是一个令人不快的地方。我们碰到的最恶毒的诅咒是旧式浏览器。好吧，让我们承认吧，当我们提到“旧式浏览器”时，脑海中出现就是 Safari 和 Internet Explorer……但是，这远远不是全部。那么，在移动世界呢？当浏览器和 OS（操作系统）都不能更新时？是的，有非常多老版本的 Android 手机或 iPhone 没有更新到最新的浏览器。它们同样是旧式浏览器。
 
-可悲的是，处理这些传统浏览器的问题是工作的一部分。幸运的是，有一些技巧可以帮助您解决旧式浏览器导致的大多数问题。如果浏览器不支持某种 HTML {{htmlelement('input')}} 类型，它不会停止工作，而只是回退为默认的 `type=text` 类型。
+可悲的是，处理这些传统浏览器的问题是工作的一部分。幸运的是，有一些技巧可以帮助你解决旧式浏览器导致的大多数问题。如果浏览器不支持某种 HTML {{htmlelement('input')}} 类型，它不会停止工作，而只是回退为默认的 `type=text` 类型。
 
 ## 了解这些问题
 
@@ -151,13 +151,13 @@ API 的兼容性是最大的问题。由于这个原因，与“非侵入式（u
 
 有很多情形，好的”polyfill“能通过提供缺少的 API 以提供帮助。一个 [polyfill](http://remysharp.com/2010/10/08/what-is-a-polyfill/) 是一些用于填补旧式浏览器中缺失功能的 JavaScript 脚本。虽然它们可以用来改善对任何功能的支持，但对 JavaScript 使用它们比对 CSS 或 HTML 使用风险要小；有很多情况下 JavaScript 会崩溃（网络问题、脚本冲突等）。但是对于 JavaScript 来说，如果你在工作中考虑到非侵入式 JavaScript，如果 polyfill 缺失，那也没什么大不了的。
 
-最好的 polyfill 缺失 API 的方式是使用 [Modernizr](https://modernizr.com) 库以及它的子项目 [YepNope](https://yepnopejs.com)。Modernizr 库允许您测试功能可用性，以便采取相应的行动。YepNope 是一个条件加载库。
+最好的 polyfill 缺失 API 的方式是使用 [Modernizr](https://modernizr.com) 库以及它的子项目 [YepNope](https://yepnopejs.com)。Modernizr 库允许你测试功能可用性，以便采取相应的行动。YepNope 是一个条件加载库。
 
 下面是一个例子：
 
 ```js
 Modernizr.load({
-  // 这会测试您的浏览器是否支持 HTML5 表单验证 API
+  // 这会测试你的浏览器是否支持 HTML5 表单验证 API
   test : Modernizr.formvalidation,
 
   // 如果浏览器不支持它，则会加载以下 polyfill
@@ -175,7 +175,7 @@ Modernizr.load({
 
 Modernizr 团队按照惯例维护着[一个优秀的 polyfill 列表](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills)，按需使用即可。
 
-> **备注：** Modernizr 还有其他很棒的功能可以帮助您处理非侵入式 JavaScript 和优雅降级的技术。请阅读 [Modernizr 文档](https://modernizr.com/docs/)。
+> **备注：** Modernizr 还有其他很棒的功能可以帮助你处理非侵入式 JavaScript 和优雅降级的技术。请阅读 [Modernizr 文档](https://modernizr.com/docs/)。
 
 ### 注意性能
 
