@@ -9,7 +9,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components
 <table>
   <tbody>
     <tr>
-      <th scope="row">条件：</th>
+      <th scope="row">预备知识：</th>
       <td>
         <p>
           熟悉核心 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a>
@@ -23,7 +23,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components
     <tr>
       <th scope="row">目标：</th>
       <td>
-        展示一种合理分解 App 的方法。
+        展示一种合理分解待办事项 App 的方法。
       </td>
     </tr>
   </tbody>
@@ -63,7 +63,7 @@ export default function Todo() {
 }
 ```
 
-目前为止很顺利，但我们的组件必须返回一些东西！回到 `src/App.js`，从无序列表中复制第一个 [`<li>`](/zh-CN/docs/Web/HTML/Element/li)并将其粘贴到 `Todo.js`，代码看起来像这样：
+目前为止很顺利，但我们的组件必须返回一些东西！回到 `src/App.js`，从无序列表中复制第一个 [`<li>`](/zh-CN/docs/Web/HTML/Element/li) 并将其粘贴到 `Todo.js`，代码看起来像这样：
 
 ```js
 export default function Todo() {
@@ -134,7 +134,7 @@ import Todo from "./components/Todo";
 
 当你刷新浏览器，你会看到和以前完全一样的东西。我们给了 `<Todo />` 一些 props，但还没有使用它们。让我们回到 `Todo.js` 修改一下。
 
-首先修改你的 `Todo()` 函数定义，使其接受 `props` 参数 。如果你想检查 `props` 是否被组件正确接收，你可以像之前那样使用 `console.log()` 检查你的 `props` 。
+首先修改你的 `Todo()` 函数定义，使其接受 `props` 参数 。如果你想检查 `props` 是否被组件正确接收，你可以像之前那样使用 `console.log()` 检查你的 `props`。
 
 一旦你确信你的组件得到了它的 `props`，你就可以用 `name` prop 来替换每次出现的 `Eat`。记住：当你在 JSX 表达式的中，你可以使用大括号来注入一个变量的值。
 
@@ -163,7 +163,7 @@ export default function Todo(props) {
 }
 ```
 
-_现在_ 你的浏览器应该显示三个不同的任务。但另一个问题仍然存在：它们都是被默认勾选的。
+*现在*你的浏览器应该显示三个不同的任务。但另一个问题仍然存在：它们都是被默认勾选的。
 
 ![现在有了不同标签的待办事项，标签以 props 的形式传入组件。](todo-list-unique-todos.png)
 
@@ -283,6 +283,7 @@ const taskList = props.tasks.map((task) => (
 ```
 
 现在 App 看起来像之前一样了，而我们的代码也变得没有那么重复了。
+
 ## 特殊的 key
 
 现在 React 正在将我们的任务从一个数组中渲染出来，它必须跟踪谁是谁，以便正确的渲染它们。React 通过自行猜测来保持对每一项的追踪，不过我们通过给 `<Todo />` 传递一个 `key` prop 来帮助 React 保持追踪。`key` 是一个被 React 管理的特殊的 prop，你不能将其用于其他目的。
@@ -302,7 +303,7 @@ const taskList = props.tasks.map((task) => (
 );
 ```
 
-**你应该传递不同的 key 给任何使用迭代方式渲染的东西。** 你的浏览器中不会有什么明显变化，不过如果你不使用不同的 key，React 会在你的 console 中记录一个警告，并且你的 App 可能会表现的很奇怪！
+**你应该传递不同的 key 给任何使用迭代方式渲染的东西**。你的浏览器中不会有什么明显变化，不过如果你不使用不同的 key，React 会在你的 console 中记录一个警告，并且你的 App 可能会表现的很奇怪！
 
 ## 整合 App 的其他部分
 
@@ -356,7 +357,7 @@ function Form(props) {
 export default Form;
 ```
 
-### <FilterButton /> 组件
+### \<FilterButton /> 组件
 
 Do the same things you did to create `Form.js` inside `FilterButton.js`, but call the component `FilterButton()` and copy the HTML for the first button inside the `<div>` element with the `class` of `filters` from `App.js` into the `return` statement.
 
@@ -430,7 +431,7 @@ function App(props) {
 export default App;
 ```
 
-有了这些，我们 _几乎_ 已经准备好在 React App 中处理一些交互性问题了!
+有了这些，我们*几乎*已经准备好在 React App 中处理一些交互性问题了!
 
 ## 总结
 
