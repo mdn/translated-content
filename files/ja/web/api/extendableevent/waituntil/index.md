@@ -1,13 +1,6 @@
 ---
 title: ExtendableEvent.waitUntil()
 slug: Web/API/ExtendableEvent/waitUntil
-tags:
-  - API
-  - ExtendableEvent
-  - Method
-  - Reference
-  - waitUntil
-translation_of: Web/API/ExtendableEvent/waitUntil
 ---
 {{APIRef("Service Workers API")}}
 

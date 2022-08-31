@@ -1,12 +1,6 @@
 ---
 title: Element.scrollLeft
 slug: Web/API/Element/scrollLeft
-tags:
-  - API
-  - CSSOM View
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/Element/scrollLeft
 ---
 {{APIRef("DOM")}}
 

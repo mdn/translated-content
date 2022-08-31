@@ -1,14 +1,6 @@
 ---
 title: Event.explicitOriginalTarget
 slug: Web/API/Event/explicitOriginalTarget
-page-type: web-api-instance-property
-tags:
-  - Non-standard
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.Event.explicitOriginalTarget
-translation_of: Web/API/Event/explicitOriginalTarget
 ---
 {{APIRef("DOM")}}{{Non-standard_Header}}
 

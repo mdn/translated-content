@@ -14,7 +14,7 @@ translation_of: Web/CSS/:default
 
 [CSS](/ko/docs/Web/CSS) **`:default`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 연관 요소 내에서의 기본값인 요소를 선택합니다.
 
-이 선택자는[ HTML Standard §4.16.3 Pseudo-classes](https://html.spec.whatwg.org/multipage/semantics-other.html#selector-default)에 정의되어 있듯 {{htmlelement("button")}}, [`<input type="checkbox">`](/ko/docs/Web/HTML/Element/input/checkbox), [`<input type="radio">`](/ko/docs/Web/HTML/Element/input/radio), {{htmlelement("option")}} 요소를 아래와 같은 경우에 선택합니다.
+이 선택자는 [HTML Standard §4.16.3 Pseudo-classes](https://html.spec.whatwg.org/multipage/semantics-other.html#selector-default)에 정의되어 있듯 {{htmlelement("button")}}, [`<input type="checkbox">`](/ko/docs/Web/HTML/Element/input/checkbox), [`<input type="radio">`](/ko/docs/Web/HTML/Element/input/radio), {{htmlelement("option")}} 요소를 아래와 같은 경우에 선택합니다.
 
 - 옵션 요소의 기본값은 `selected` 특성을 가진 제일 첫 요소, 즉 DOM 순서 기준으로 제일 앞의 활성화 옵션입니다. `multiple` 특성의 {{htmlelement("select")}}는 둘 이상의 `selected` 옵션을 가질 수도 있으므로, 모든 옵션이 `:default`로 선택됩니다.
 - `<input type="checkbox">`와 `<input type="radio">`는 `checked` 특성을 가지고 있으면 선택됩니다.

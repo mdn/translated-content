@@ -15,7 +15,7 @@ L'avantage des mixins est qu'ils peuvent être utilisés pour simplifier la conc
 
 Par exemple, le mixin `WindowOrWorkerGlobalScope` est utilisé pour fournir des méthodes et des propriétés qui doivent être disponibles à la fois sur les interfaces {{domxref ("Window")}} et {{domxref ("WorkerGlobalScope")}}. Le mixin est implémenté par ces deux interfaces.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

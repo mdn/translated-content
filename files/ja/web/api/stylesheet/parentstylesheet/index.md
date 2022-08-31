@@ -1,11 +1,6 @@
 ---
 title: StyleSheet.parentStyleSheet
 slug: Web/API/StyleSheet/parentStyleSheet
-tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-translation_of: Web/API/StyleSheet/parentStyleSheet
 ---
 {{ApiRef}}
 

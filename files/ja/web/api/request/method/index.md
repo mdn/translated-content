@@ -1,14 +1,6 @@
 ---
 title: Request.method
 slug: Web/API/Request/method
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Property
-  - Reference
-  - request
-translation_of: Web/API/Request/method
 ---
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 

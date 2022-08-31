@@ -3,8 +3,6 @@ title: 코드에서의 텍스쳐
 slug: Web/API/WebGL_API/By_example/Textures_from_code
 translation_of: Web/API/WebGL_API/By_example/Textures_from_code
 ---
-{{IncludeSubnav("/en-US/Learn")}}
-
 {{PreviousNext("Learn/WebGL/By_example/Hello_vertex_attributes","Learn/WebGL/By_example/Video_textures")}}
 
 단편화된 쉐이더들과 함께 순차적으로 보여주는 간단한 데모

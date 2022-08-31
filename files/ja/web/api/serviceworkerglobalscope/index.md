@@ -1,19 +1,6 @@
 ---
 title: ServiceWorkerGlobalScope
 slug: Web/API/ServiceWorkerGlobalScope
-tags:
-  - API
-  - Draft
-  - Interface
-  - NeedsTranslation
-  - Offline
-  - Reference
-  - Service Workers
-  - ServiceWorkerGlobalScope
-  - TopicStub
-  - Workers
-  - インターフェイス
-translation_of: Web/API/ServiceWorkerGlobalScope
 ---
 {{APIRef("Service Workers API")}}
 

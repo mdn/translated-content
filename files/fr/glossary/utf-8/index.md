@@ -14,7 +14,7 @@ UTF-8 (UCS Transformation Format 8) est le {{Glossary("Character encoding","coda
 
 Les 128 premiers caractères UTF-8 correspondent exactement aux 128 premiers caractères ASCII (numérotés de 0 à 127), ce qui signifie que tous les textes ASCII existants sont déjà valides en UTF-8. Tous les autres caractères utilisent de deux à quatre octets. Chacun de ces octets possède quelques bits réservés à des fins d'encodage. Comme les caractères non-ASCII nécessitent plus d'un octet pour être enregistrés, ils courent le risque d'être corrompus s'ils sont séparés ou s'ils ne sont pas recombinés.
 
-## Pour approfondir
+## Voir aussi
 
 ### **Culture générale**
 

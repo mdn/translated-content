@@ -40,7 +40,7 @@ Cela ne fonctionnera que lorsqu'un analyseur conscient de l'espace de noms est u
 
 {{Compat}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("Attr.namespaceURI")}}
 - {{domxref("Attr.localName")}}

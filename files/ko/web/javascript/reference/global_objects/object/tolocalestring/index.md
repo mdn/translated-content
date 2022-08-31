@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 
 ## 구문
 
-    obj.toLocaleString()
+```js
+obj.toLocaleString()
+```
 
 ### 반환 값
 

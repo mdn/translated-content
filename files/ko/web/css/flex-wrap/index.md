@@ -10,7 +10,7 @@ translation_of: Web/CSS/flex-wrap
 ---
 {{ CSSRef}}
 
-[CSS](/ko/docs/CSS "CSS") **`flex-wrap`** property는 `flex-item` 요소들이 강제로 한줄에 배치되게 할 것인지, 또는 가능한 영역 내에서 벗어나지 않고 여러행으로 나누어 표현 할 것인지 결정하는 속성입니다. 만약 영역 내에서 벗어나지 못하게 설정한다면, 동시에 요소의 방향 축을 결정할 수 있습니다.
+[CSS](/ko/docs/CSS) **`flex-wrap`** property는 `flex-item` 요소들이 강제로 한줄에 배치되게 할 것인지, 또는 가능한 영역 내에서 벗어나지 않고 여러행으로 나누어 표현 할 것인지 결정하는 속성입니다. 만약 영역 내에서 벗어나지 못하게 설정한다면, 동시에 요소의 방향 축을 결정할 수 있습니다.
 
 {{EmbedInteractiveExample("pages/css/flex-wrap.html")}}
 

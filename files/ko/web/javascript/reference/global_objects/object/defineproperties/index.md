@@ -11,7 +11,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 
 ## 문법
 
-    Object.defineProperties(obj, props)
+```js
+Object.defineProperties(obj, props)
+```
 
 ### 인자
 

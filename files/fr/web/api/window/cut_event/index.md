@@ -56,7 +56,7 @@ window.addEventListener('cut', (event) => {
 
 {{Compat("api.Window.cut_event")}}
 
-## Voir également
+## Voir aussi
 
 - Événements liés: {{domxref("Window/copy_event", "copy")}}, {{domxref("Window/paste_event", "paste")}}
 - Cet événement sur {{domxref("Element")}} targets: {{domxref("Element/cut_event", "cut")}}

@@ -1,15 +1,6 @@
 ---
 title: ReadableStreamBYOBReader.cancel()
 slug: Web/API/ReadableStreamBYOBReader/cancel
-tags:
-  - API
-  - Experimental
-  - Method
-  - ReadableStreamBYOBReader
-  - Reference
-  - Streams
-  - cancel
-translation_of: Web/API/ReadableStreamBYOBReader/cancel
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 

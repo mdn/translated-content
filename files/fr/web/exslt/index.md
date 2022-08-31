@@ -94,6 +94,6 @@ Le package EXSLT Strings fournit des fonctions permettant la manipulation de cha
 - [str:split](fr/EXSLT/str/split)
 - [str:tokenize](fr/EXSLT/str/tokenize)
 
-### Voir également
+### Voir aussi
 
 - [Site Web d'EXSLT](http://www.exslt.org/)

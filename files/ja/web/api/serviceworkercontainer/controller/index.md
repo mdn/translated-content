@@ -1,16 +1,6 @@
 ---
 title: ServiceWorkerContainer.controller
 slug: Web/API/ServiceWorkerContainer/controller
-tags:
-  - API
-  - Controller
-  - Property
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - ServiceWorkerController
-translation_of: Web/API/ServiceWorkerContainer/controller
 ---
 {{APIRef("Service Workers API")}}
 

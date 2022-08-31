@@ -30,13 +30,11 @@ L'ancienne propriété **`Performance.timing`** renvoie un objet {{domxref("Perf
 
 ## Spécifications
 
-| Spécification                                                            | Statut                                               | Commentaire          |
-| ------------------------------------------------------------------------ | ---------------------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing Level 2', '#obsolete')}} | {{Spec2('Navigation Timing Level 2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Performance.timing")}}
+{{Compat}}
 
 ## Voir aussi
 

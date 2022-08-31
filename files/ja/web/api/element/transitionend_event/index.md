@@ -1,16 +1,6 @@
 ---
 title: 'Document: transitionend イベント'
 slug: Web/API/Element/transitionend_event
-tags:
-  - CSS トランジション
-  - Document
-  - Event
-  - Reference
-  - Web
-  - transitionend
-  - イベント
-  - ウェブ
-translation_of: Web/API/Document/transitionend_event
 original_slug: Web/API/Document/transitionend_event
 ---
 {{APIRef}}

@@ -1,17 +1,6 @@
 ---
 title: SourceBuffer.audioTracks
 slug: Web/API/SourceBuffer/audioTracks
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBuffer
-  - audiotracks
-translation_of: Web/API/SourceBuffer/audioTracks
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 

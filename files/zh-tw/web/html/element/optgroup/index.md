@@ -9,7 +9,7 @@ In a Web form, the **HTML `<optgroup>` element** creates a grouping of options w
 | [Content categories](/zh-TW/docs/HTML/Content_categories) | None.                                                                                                                                                                    |
 | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Permitted content                                         | Zero or more {{HTMLElement("option")}} elements.                                                                                                                  |
-| Tag omission                                              | The start tag is mandatory. The end tag is optional if this element is immediately followed by another <optgroup> element, or if the parent element has no more content. |
+| Tag omission                                              | The start tag is mandatory. The end tag is optional if this element is immediately followed by another \<optgroup> element, or if the parent element has no more content. |
 | Permitted parent elements                                 | A {{HTMLElement("select")}} element.                                                                                                                              |
 | DOM interface                                             | {{domxref("HTMLOptGroupElement")}}                                                                                                                             |
 

@@ -57,7 +57,7 @@ window.addEventListener('copy', (event) => {
 
 {{Compat("api.Window.copy_event")}}
 
-## Voir également
+## Voir aussi
 
 - Événements liés: {{domxref("Window/cut_event", "cut")}}, {{domxref("Window/paste_event", "paste")}}
 - Cet événement sur {{domxref("Element")}} cible: {{domxref("Element/copy_event", "copy")}}

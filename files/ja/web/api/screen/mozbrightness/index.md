@@ -1,15 +1,6 @@
 ---
 title: Screen.mozBrightness
 slug: Web/API/Screen/mozBrightness
-page-type: web-api-instance-property
-tags:
-  - API
-  - API:Mozilla Extensions
-  - Deprecated
-  - Non-standard
-  - Property
-browser-compat: api.Screen.mozBrightness
-translation_of: Web/API/Screen/mozBrightness
 ---
 {{APIRef("CSSOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 

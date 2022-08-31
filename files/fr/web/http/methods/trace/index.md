@@ -59,6 +59,6 @@ TRACE /index.html
 
 {{Compat("http.methods.TRACE")}}
 
-## Voir également
+## Voir aussi
 
 - [Méthodes HTTP](/fr/docs/Web/HTTP/Méthode)

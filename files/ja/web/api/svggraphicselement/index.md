@@ -1,13 +1,6 @@
 ---
 title: SVGGraphicsElement
 slug: Web/API/SVGGraphicsElement
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG OM
-translation_of: Web/API/SVGGraphicsElement
 ---
 {{APIRef("SVG")}}
 

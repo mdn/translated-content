@@ -11,7 +11,7 @@ original_slug: Glossaire/Parse
 
 En JavaScript, cela est fait pendant le {{glossary("compile time", "moment de compilation")}} ou quand l'{{glossary("parser", "analyseur syntaxique")}} est appelé, comme pendant l'appel à une méthode.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

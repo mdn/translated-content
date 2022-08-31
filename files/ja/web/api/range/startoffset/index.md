@@ -1,14 +1,6 @@
 ---
 title: Range.startOffset
 slug: Web/API/Range/startOffset
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Range
-browser-compat: api.Range.startOffset
-translation_of: Web/API/Range/startOffset
 ---
 {{ApiRef("DOM")}}
 

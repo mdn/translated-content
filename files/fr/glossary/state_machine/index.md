@@ -34,7 +34,7 @@ En _Figure 2_, étant donné l'entrée 'X', l'état peut persister ou passer à 
 
 Notez que toute {{Glossary("regular expression","expression régulière")}} peut être représentée par une machine d'état.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

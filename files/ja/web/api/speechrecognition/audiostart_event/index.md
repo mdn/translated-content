@@ -1,15 +1,6 @@
 ---
 title: 'SpeechRecognition: audiostart イベント'
 slug: Web/API/SpeechRecognition/audiostart_event
-tags:
-  - Event
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - audiostart
-  - onaudiostart
-  - イベント
-translation_of: Web/API/SpeechRecognition/audiostart_event
 ---
 {{APIRef("Web Speech API")}} {{SeeCompatTable}}
 

@@ -1,15 +1,6 @@
 ---
 title: Element.replaceChildren()
 slug: Web/API/Element/replaceChildren
-tags:
-  - API
-  - DOM
-  - メソッド
-  - Node
-  - Element
-  - リファレンス
-  - replaceChildren
-translation_of: Web/API/Element/replaceChildren
 ---
 {{APIRef("DOM")}}
 

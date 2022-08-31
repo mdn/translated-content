@@ -48,7 +48,7 @@ L'exemple HTML complet suivant montre comment la propriété `visible` de l'obje
 
 {{Compat("api.Window.menubar")}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("Window.locationbar")}}
 - {{domxref("Window.personalbar")}}

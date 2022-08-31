@@ -1,17 +1,6 @@
 ---
 title: ServiceWorkerRegistration.periodicSync
 slug: Web/API/ServiceWorkerRegistration/periodicSync
-tags:
-  - API
-  - 実験的
-  - PeriodicSyncManager
-  - プロパティ
-  - リファレンス
-  - サービスワーカー
-  - ServiceWorkerRegistration
-  - periodicSync
-browser-compat: api.ServiceWorkerRegistration.periodicSync
-translation_of: Web/API/ServiceWorkerRegistration/periodicSync
 ---
 {{APIRef("Service Workers API")}}
 

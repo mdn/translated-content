@@ -121,7 +121,7 @@ Les navigateurs basés sur Mozilla 1.2 (ou +) aussi bien que ceux basés sur Moz
 
 Si vous avez des questions ou des commentaires sur le préchargement de liens, n'hésitez pas à me les envoyer&nbsp;:-)
 
-#### Voir également
+#### Voir aussi
 
 - [Prefetching Hints (en)](http://www.edochan.com/programming/pf.htm)
 

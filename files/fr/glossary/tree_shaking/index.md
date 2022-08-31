@@ -13,7 +13,7 @@ Il repose sur les états [import](/fr/docs/Web/JavaScript/Reference/Instructions
 
 Dans les applications JavaScript modernes, nous utilisons des gestionnaires de regroupements de modules (par exemple, [webpack](https://webpack.js.org/) ou [Rollup](https://github.com/rollup/rollup)) pour supprimer automatiquement le code mort lors du regroupement de plusieurs fichiers JavaScript dans des fichiers uniques. Ceci est important pour préparer un code prêt pour la production, par exemple avec des structures propres et une taille de fichier minimale.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

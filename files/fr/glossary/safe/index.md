@@ -34,7 +34,7 @@ Un appel à une méthode idempotente mais non sûre :
 DELETE /idX/delete HTTP/1.1
 ```
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

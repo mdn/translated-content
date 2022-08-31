@@ -48,6 +48,6 @@ key2, value2
 
 {{Compat("api.URLSearchParams.entries")}}
 
-## See also
+## Voir aussi
 
 - Other URL-related interfaces: {{domxref("URL")}}, {{domxref("URLUtils")}}.

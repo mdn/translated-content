@@ -54,10 +54,8 @@ function print_nav_timing_data() {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                                            | Statut                                               | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing Level 2', '#dom-performancenavigationtiming-domcontentloadedeventstart', 'domContentLoadedEventStart')}} | {{Spec2('Navigation Timing Level 2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceNavigationTiming.domContentLoadedEventStart")}}
+{{Compat}}

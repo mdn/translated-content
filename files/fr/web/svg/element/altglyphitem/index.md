@@ -31,7 +31,7 @@ _Aucun_
 
 Cet élément implémente l'interface [`SVGAltGlyphItemElement`](/fr/docs/Web/API/SVGAltGlyphItemElement).
 
-## Voir également
+## Voir aussi
 
 - {{ SVGElement("glyph") }}
 - {{ SVGElement("glyphRef") }}

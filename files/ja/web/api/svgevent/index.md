@@ -1,11 +1,6 @@
 ---
 title: SVGEvent
 slug: Web/API/SVGEvent
-tags:
-  - API
-  - Reference
-  - SVG
-translation_of: Web/API/SVGEvent
 ---
 {{APIRef("SVG")}}
 

@@ -1,17 +1,6 @@
 ---
 title: SpeechRecognition.onresult
 slug: Web/API/SpeechRecognition/result_event
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - onresult
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognition/onresult
 original_slug: Web/API/SpeechRecognition/onresult
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}

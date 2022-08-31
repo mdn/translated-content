@@ -1,15 +1,6 @@
 ---
 title: File.type
 slug: Web/API/File/type
-tags:
-  - API
-  - File API
-  - リファレンス
-  - ファイル
-  - ファイルタイプ
-  - プロパティ
-browser-compat: api.File.type
-translation_of: Web/API/File/type
 ---
 {{APIRef("File API")}}
 

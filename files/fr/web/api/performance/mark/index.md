@@ -65,11 +65,8 @@ performance.clearMarks();
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                                       | Commentaire                                     |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------------- |
-| {{SpecName('User Timing Level 2', '#dom-performance-mark', 'mark()')}} | {{Spec2('User Timing Level 2')}} | Clarification du modèle de traitement `mark()`. |
-| {{SpecName('User Timing', '#dom-performance-mark', 'mark()')}}         | {{Spec2('User Timing')}}             | Définition initiale.                            |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Performance.mark")}}
+{{Compat}}

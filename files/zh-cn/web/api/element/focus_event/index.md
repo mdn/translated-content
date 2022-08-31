@@ -31,7 +31,6 @@ _该接口还从其父级 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承
 
 #### HTML
 
-
 ```html
 <form id="form">
   <input type="text" placeholder="text input">
@@ -57,7 +56,6 @@ _该接口还从其父级 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承
 ```
 
 #### JavaScript
-
 
 ```js
 const form = document.getElementById('form');

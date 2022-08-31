@@ -1,17 +1,6 @@
 ---
 title: SpeechRecognition.lang
 slug: Web/API/SpeechRecognition/lang
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - lang
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognition/lang
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 

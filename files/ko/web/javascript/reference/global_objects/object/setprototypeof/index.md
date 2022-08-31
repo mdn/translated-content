@@ -12,7 +12,9 @@ Object.setPrototypeOf() 메소드는 지정된 객체의 프로토타입 (즉, �
 
 ## Syntax
 
-    Object.setPrototypeOf(obj, prototype);
+```js
+Object.setPrototypeOf(obj, prototype);
+```
 
 ### Parameters
 

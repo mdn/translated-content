@@ -28,13 +28,11 @@ let time = performanceTiming.unloadEventEnd;
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | Statut                                   | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-unloadeventend', 'PerformanceTiming.unloadEventEnd')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceTiming.unloadEventEnd")}}
+{{Compat}}
 
 ## Voir aussi
 

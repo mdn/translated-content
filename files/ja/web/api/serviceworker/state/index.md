@@ -1,15 +1,6 @@
 ---
 title: ServiceWorker.state
 slug: Web/API/ServiceWorker/state
-tags:
-  - API
-  - Property
-  - Reference
-  - Référence(2)
-  - Service Workers
-  - ServiceWorker
-  - state
-translation_of: Web/API/ServiceWorker/state
 ---
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
