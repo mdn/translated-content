@@ -26,7 +26,7 @@ function exampleFunction() {
 console.log(x);  // 报错
 ```
 
-但是，下面的代码是有效的，因为变量在函数外被声明为全局变量：
+但是，下面的代码是有效的，因为变量在函数外被声明，为全局变量：
 
 ```js example-good
 var x = "declared outside function";
