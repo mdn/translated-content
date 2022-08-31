@@ -138,9 +138,9 @@ CSS 和 JavaScript 是了不起的技术，但重要的是确保不会破坏传�
 
 {{cssxref('appearance')}} 属性可用于以平台原生的方式显示元素的样式，如果指定为 `none`，则移除默认基于不同平台的样式。
 
-### Unobtrusive JavaScript
+### 非侵入式 JavaScript
 
-API 的兼容性是最大的问题。由于这个原因，与“不引人注意的（unobtrusive）”JavaScript 一起工作被认为是最佳实践（译者注：此处意思是说没有或忽略 JavaScript 或 JavaScript 出了问题也能工作）。这个开发模式定义了两个需求：
+API 的兼容性是最大的问题。由于这个原因，与“非侵入式（unobtrusive）”JavaScript 一起工作被认为是最佳实践（译者注：此处意思是说没有或忽略 JavaScript 或 JavaScript 出了问题也能工作）。这个开发模式定义了两个需求：
 
 - 结构和行为之间的严格隔离
 - 如果代码出错，内容和基本功能必须保持可访问和可用状态
@@ -149,7 +149,7 @@ API 的兼容性是最大的问题。由于这个原因，与“不引人注意�
 
 ### Modernizr 库
 
-有很多情形，好的 “polyfill” 能通过提供缺少的 API 以提供帮助。一个 [polyfill](http://remysharp.com/2010/10/08/what-is-a-polyfill/) 是一些用于填补旧式浏览器中缺失功能的 JavaScript 脚本。虽然它们可以用来改善对任何功能的支持，但对 JavaScript 使用它们比对 CSS 或 HTML 使用风险要小；有很多情况下 JavaScript 会崩溃（网络问题、脚本冲突等）。但是对于 JavaScript 来说，如果你在工作中考虑到非阻塞性的 JavaScript，如果 polyfill 缺失，那也没什么大不了的。
+有很多情形，好的”polyfill“能通过提供缺少的 API 以提供帮助。一个 [polyfill](http://remysharp.com/2010/10/08/what-is-a-polyfill/) 是一些用于填补旧式浏览器中缺失功能的 JavaScript 脚本。虽然它们可以用来改善对任何功能的支持，但对 JavaScript 使用它们比对 CSS 或 HTML 使用风险要小；有很多情况下 JavaScript 会崩溃（网络问题、脚本冲突等）。但是对于 JavaScript 来说，如果你在工作中考虑到非侵入式 JavaScript，如果 polyfill 缺失，那也没什么大不了的。
 
 最好的 polyfill 缺失 API 的方式是使用 [Modernizr](https://modernizr.com) 库以及它的子项目 [YepNope](https://yepnopejs.com)。Modernizr 库允许您测试功能可用性，以便采取相应的行动。YepNope 是一个条件加载库。
 
@@ -175,7 +175,7 @@ Modernizr.load({
 
 Modernizr 团队按照惯例维护着[一个优秀的 polyfill 列表](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills)，按需使用即可。
 
-> **备注：** Modernizr 还有其他很棒的功能可以帮助您处理 unobtrusive JavaScript 和优雅的降级技术。请阅读 [Modernizr 文档](https://modernizr.com/docs/)。
+> **备注：** Modernizr 还有其他很棒的功能可以帮助您处理非侵入式 JavaScript 和优雅降级的技术。请阅读 [Modernizr 文档](https://modernizr.com/docs/)。
 
 ### 注意性能
 
