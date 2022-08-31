@@ -24,7 +24,7 @@ translation_of: Web/API/XMLHttpRequestEventTarget
 - {{ domxref("XMLHttpRequestEventTarget.onerror") }}
   - : Contient la fonction à appeler lorsqu'une demande rencontre une erreur et que l'événement {{event('error')}} est reçu par cet objet.
 - {{ domxref("XMLHttpRequestEventTarget.onload") }}
-  - : Contient la fonction à appeler lorsqu'une requête HTTP revient après avoir récupéré le contenu avec succès et que l'événement {{event('load')}} est reçu par cet objet.
+  - : Contient la fonction à appeler lorsqu'une requête HTTP revient après avoir récupéré le contenu avec succès et que l'événement [`load`](/fr//docs/Web/API/Window/load_event) est reçu par cet objet.
 - {{ domxref("XMLHttpRequestEventTarget.onloadstart") }}
   - : Contient la fonction qui est appelée lorsque la requête HTTP commence à charger des données et que l'événement {{event('loadstart')}} est reçu par cet objet.
 - {{ domxref("XMLHttpRequestEventTarget.onprogress") }}
