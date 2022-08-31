@@ -9,7 +9,9 @@ translation_of: Web/API/Document/createDocumentFragment
 
 ## Syntax
 
-    var docFragment = document.createDocumentFragment();
+```js
+var docFragment = document.createDocumentFragment();
+```
 
 `docFragment` 는 빈 {{domxref("DocumentFragment")}} 객체를 나타냅니다.
 

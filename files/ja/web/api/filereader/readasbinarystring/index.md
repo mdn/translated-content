@@ -1,13 +1,6 @@
 ---
 title: FileReader.readAsBinaryString()
 slug: Web/API/FileReader/readAsBinaryString
-tags:
-  - API
-  - File API
-  - Files
-  - Method
-  - Reference
-translation_of: Web/API/FileReader/readAsBinaryString
 ---
 {{APIRef("File API")}}
 

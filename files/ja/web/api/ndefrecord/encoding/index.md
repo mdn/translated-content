@@ -1,13 +1,6 @@
 ---
 title: NDEFRecord.encoding
 slug: Web/API/NDEFRecord/encoding
-tags:
-  - Encoding
-  - NDEF
-  - リファレンス
-  - ウェブ NFC
-browser-compat: api.NDEFRecord.encoding
-translation_of: Web/API/NDEFRecord/encoding
 ---
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 

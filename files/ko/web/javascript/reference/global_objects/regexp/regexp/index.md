@@ -20,9 +20,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 
 리터럴, 생성자, 팩토리 표기법이 가능합니다.
 
-    /pattern/flags
-    new RegExp(pattern[, flags])
-    RegExp(pattern[, flags])
+```
+/pattern/flags
+new RegExp(pattern[, flags])
+RegExp(pattern[, flags])
+```
 
 ### 매개변수
 

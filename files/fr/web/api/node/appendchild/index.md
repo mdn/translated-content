@@ -51,18 +51,13 @@ var p = document.createElement("p");
 document.body.appendChild(p);
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire                                            |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------ |
-| {{SpecName('DOM WHATWG', '#dom-node-appendchild', 'Node.appendChild()')}}         | {{Spec2('DOM WHATWG')}} | Pas de changement de {{SpecName("DOM3 Core")}}. |
-| {{SpecName('DOM3 Core', 'core.html#ID-184E7107', 'Node.appendChild()')}}         | {{Spec2('DOM3 Core')}}     | Pas de changement de {{SpecName("DOM2 Core")}}. |
-| {{SpecName('DOM2 Core', 'core.html#ID-184E7107', 'Node.appendChild()')}}         | {{Spec2('DOM2 Core')}}     | Pas de changement de {{SpecName("DOM1")}}.     |
-| {{SpecName('DOM1', 'level-one-core.html#ID-184E7107', 'Node.appendChild()')}} | {{Spec2('DOM1')}}         | Définition initiale.                                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.appendChild")}}
+{{Compat}}
 
 ## Voir aussi
 

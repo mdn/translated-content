@@ -1,18 +1,6 @@
 ---
 title: 'Document: pointermove イベント'
 slug: Web/API/Document/pointermove_event
-tags:
-  - Document
-  - Event
-  - PointerEvent
-  - Reference
-  - Web
-  - pointer
-  - pointermove
-  - イベント
-  - ウェブ
-  - ポインター
-translation_of: Web/API/Document/pointermove_event
 ---
 {{APIRef}}
 

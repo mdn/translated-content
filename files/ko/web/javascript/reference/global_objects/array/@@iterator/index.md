@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 ## 구문
 
 ```js
-    arr[Symbol.iterator]()
+arr[Symbol.iterator]()
 ```
 
 ### 반환 값

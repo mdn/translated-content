@@ -30,11 +30,11 @@ updateBatteryStatus();
 
 ## 規格
 
-{{page("/en-US/docs/Web/API/BatteryManager","Specifications")}}
+{{Specifications}}
 
 ## 瀏覽器相容性
 
-{{page("/en-US/docs/Web/API/BatteryManager","Browser_compatibility")}}
+{{Compat}}
 
 ## 另請參閱
 

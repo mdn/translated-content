@@ -1,9 +1,6 @@
 ---
 title: FileReaderSync.readAsText()
 slug: Web/API/FileReaderSync/readAsText
-page-type: web-api-instance-method
-browser-compat: api.FileReaderSync.readAsText
-translation_of: Web/API/FileReaderSync/readAsText
 ---
 {{APIRef("File API")}}
 

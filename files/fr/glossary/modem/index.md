@@ -12,7 +12,7 @@ Un modem ("**mod**ulateur-**dém**odulateur") est un appareil qui convertit les 
 
 Les modems sont différents des {{Glossary("Router","routeurs")}}, mais de nombreuses entreprises vendent des modems combinés avec des routeurs.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

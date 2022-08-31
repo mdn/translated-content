@@ -1,15 +1,6 @@
 ---
 title: Document.hasStorageAccess()
 slug: Web/API/Document/hasStorageAccess
-tags:
-  - API
-  - DOM
-  - Document
-  - Reference
-  - Storage Access API
-  - hasStorageAccess
-  - メソッド
-translation_of: Web/API/Document/hasStorageAccess
 ---
 {{APIRef}}{{seecompattable}}
 

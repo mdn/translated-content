@@ -1,17 +1,6 @@
 ---
 title: 'Element: touchend イベント'
 slug: Web/API/Element/touchend_event
-tags:
-  - Event
-  - Touch Events
-  - TouchEvent
-  - UI
-  - UI Events
-  - UX
-  - events
-  - touch
-  - touchstart
-translation_of: Web/API/Element/touchend_event
 ---
 {{APIRef}}
 

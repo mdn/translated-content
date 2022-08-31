@@ -1,16 +1,6 @@
 ---
 title: ウェブサイトが正しく動作することをどうやって確認する？
 slug: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
-tags:
-  - Beginner
-  - Document
-  - Guide
-  - NeedsActiveLearning
-  - Web
-  - Web Development
-  - WebMechanics
-  - troubleshooting
-translation_of: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
 ---
 この記事では、ウェブサイトのさまざまなトラブルシューティングの手順と、これらの問題を解決するための基本的な操作について説明します。
 

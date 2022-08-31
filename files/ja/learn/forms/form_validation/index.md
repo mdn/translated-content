@@ -1,18 +1,6 @@
 ---
 title: クライアント側のフォームデータ検証
 slug: Learn/Forms/Form_validation
-tags:
-  - HTML
-  - Intermediate
-  - JavaScript
-  - Web
-  - ウェブ
-  - ガイド
-  - フォーム
-  - フォーム検証
-  - 中級者向け
-  - 例
-translation_of: Learn/Forms/Form_validation
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
 

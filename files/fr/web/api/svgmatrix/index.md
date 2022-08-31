@@ -299,10 +299,8 @@ Une {{domxref("DOMException")}} avec le code `NO_MODIFICATION_ALLOWED_ERR` est l
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                   | Commentaire         |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName("SVG1.1", "coords.html#InterfaceSVGMatrix", "SVGMatrix")}} | {{Spec2("SVG1.1")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.SVGMatrix")}}
+{{Compat}}

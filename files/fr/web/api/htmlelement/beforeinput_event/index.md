@@ -72,13 +72,11 @@ function updateValue(e) {
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                       |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- |
-| {{SpecName('UI Events', "#event-type-beforeinput", "beforeinput event")}} | {{Spec2('UI Events')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLElement.beforeinput_event")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -20,9 +20,11 @@ translation_of: Web/API/Element/outerHTML
 
 ## 문법
 
-    var content = element.outerHTML;
+```js
+var content = element.outerHTML;
 
-    element.outerHTML = htmlString;
+element.outerHTML = htmlString;
+```
 
 ### 값
 

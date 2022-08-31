@@ -16,7 +16,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 
 ## 구문
 
-    Object.isExtensible(obj)
+```js
+Object.isExtensible(obj)
+```
 
 ### 매개변수
 

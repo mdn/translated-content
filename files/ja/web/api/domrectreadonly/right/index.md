@@ -1,15 +1,6 @@
 ---
 title: DOMRectReadOnly.right
 slug: Web/API/DOMRectReadOnly/right
-tags:
-  - API
-  - DOM
-  - DOMRectReadOnly
-  - 位置
-  - プロパティ
-  - リファレンス
-browser-compat: api.DOMRectReadOnly.right
-translation_of: Web/API/DOMRectReadOnly/right
 ---
 {{APIRef("Geometry Interfaces")}}
 

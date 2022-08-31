@@ -1,13 +1,6 @@
 ---
 title: Storage.getItem()
 slug: Web/API/Storage/getItem
-tags:
-  - API
-  - Method
-  - Reference
-  - Storage
-  - Web Storage
-translation_of: Web/API/Storage/getItem
 ---
 {{APIRef("Web Storage API")}}
 

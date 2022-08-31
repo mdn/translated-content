@@ -1,16 +1,6 @@
 ---
 title: GamepadHapticActuator.type
 slug: Web/API/GamepadHapticActuator/type
-tags:
-  - API
-  - Experimental
-  - Gamepad
-  - Gamepad API
-  - GamepadHapticActuator
-  - Property
-  - Reference
-  - Type
-translation_of: Web/API/GamepadHapticActuator/type
 ---
 {{APIRef("Gamepad")}}{{SeeCompatTable}}
 

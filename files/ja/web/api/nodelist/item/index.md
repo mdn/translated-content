@@ -1,12 +1,6 @@
 ---
 title: NodeList.item
 slug: Web/API/NodeList/item
-tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-  - NodeList
-translation_of: Web/API/NodeList/item
 ---
 {{ApiRef}}
 

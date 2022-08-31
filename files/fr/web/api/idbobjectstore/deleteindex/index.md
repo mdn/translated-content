@@ -92,15 +92,13 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
 > **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                                            | État                         | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-deleteIndex-void-DOMString-indexName', 'deleteIndex()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.deleteIndex")}}
+{{Compat}}
 
 ## Voir aussi
 

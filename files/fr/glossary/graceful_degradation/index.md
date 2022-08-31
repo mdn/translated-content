@@ -13,7 +13,7 @@ original_slug: Glossaire/Graceful_degradation
 
 C'est une technique utile qui permet aux développeurs Web de se concentrer sur le développement des meilleurs sites web possibles tout en compensant les problèmes de ces sites auxquels accèdent plusieurs agents utilisateurs inconnus. L'{{Glossary("Progressive enhancement","Amélioration progressive")}} est apparentée mais différente — la dégradation gracieuse est souvent considérée comme allant dans la direction opposée à l'amélioration progressive. En réalité, les deux approches sont valides et peuvent souvent se compléter l'une l'autre.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

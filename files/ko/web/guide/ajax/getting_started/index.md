@@ -70,7 +70,9 @@ httpRequest.send(null);
 
 `send()` 메소드의 파라미터는 POST 방식으로 요구한 경우 서버로 보내고 싶은 어떠한 데이터라도 가능합니다. 데이터는 서버에서 쉽게 parse할 수 있는 형식(format)이어야 합니다. 예를 들자면 아래와 같습니다.
 
-    "name=value&anothername="+encodeURIComponent(myVar)+"&so=on"
+```
+"name=value&anothername="+encodeURIComponent(myVar)+"&so=on"
+```
 
 `multipart/form-data`, JSON, XML, SOAP 등과 같은 다른 형식(format)도 가능합니다.
 
@@ -173,7 +175,7 @@ if (httpRequest.status === 200) {
 
 > **참고:** **주의**: Internet Explorer에서 정적 HTML 파일이 아닌 XML 파일을 받기 위한 request를 보내려면 응답 헤더를 반드시 설정해주어야 합니다. 헤더에 `Content-Type: application/xml`을 설정해주지 않으면 IE는 XML 요소에 접근하고자 할 때 "Object Expected" 예외에러를 발생시킵니다.
 
-> **참고:** **주의 2**: 헤더에 `Cache-Control: no-cache` 를 설정 하지 않는다면, 브라우저는 응답을 캐싱하고 다시 요청하지 않을 수 있습니다. 이는 디버깅하기 매우 어려워 질 수 있음을 기억하십시오. 또는 GET 파라미터로 timestamp(시간정보)나 난수를 추가하면 캐싱을 방지할 수 있습니다. ([캐싱 우회](/ko/docs/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache "https://developer.mozilla.org/En/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache")를 참고하세요)
+> **참고:** **주의 2**: 헤더에 `Cache-Control: no-cache` 를 설정 하지 않는다면, 브라우저는 응답을 캐싱하고 다시 요청하지 않을 수 있습니다. 이는 디버깅하기 매우 어려워 질 수 있음을 기억하십시오. 또는 GET 파라미터로 timestamp(시간정보)나 난수를 추가하면 캐싱을 방지할 수 있습니다. ([캐싱 우회](/ko/docs/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache)를 참고하세요)
 
 > **참고:** **주의 3**: 만약 `httpRequest` 변수가 전역적으로 사용되면, `makeRequest()` 함수를 호출하는 여러 함수들 사이에서 경쟁 상태(race condition)가 발생할 수 있으며, 이 경우 다른 데이터를 덮어쓰게 됩니다. `XMLHttpRequest` 인스턴스는 함수 내의 지역 변수로 선언하는 것을 권장합니다.
 
@@ -213,9 +215,11 @@ function alertContents() {
 
 파일의 확장자를 `.html`에서 `.xml`로 변경합니다:
 
-    ...
-    onclick="makeRequest('test.xml')">
-    ...
+```html
+...
+onclick="makeRequest('test.xml')">
+...
+```
 
 그 다음, `alertContents()`함수에서 `alert()`함수를 실행하는 라인 `alert(httpRequest.responseText);`을 아래와 같이 바꿉니다:
 

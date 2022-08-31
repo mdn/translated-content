@@ -1,7 +1,6 @@
 ---
 title: 'Document: selectstart event'
 slug: Web/API/Document/selectstart_event
-translation_of: Web/API/Document/selectstart_event
 ---
 {{APIRef}}
 

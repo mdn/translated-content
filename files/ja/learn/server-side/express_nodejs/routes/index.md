@@ -1,7 +1,6 @@
 ---
 title: 'Express チュートリアル Part 4: ルートとコントローラ'
 slug: Learn/Server-side/Express_Nodejs/routes
-translation_of: Learn/Server-side/Express_Nodejs/routes
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
 

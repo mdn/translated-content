@@ -1,21 +1,6 @@
 ---
 title: 支払いリクエスト API
 slug: Web/API/Payment_Request_API
-page-type: web-api-overview
-tags:
-  - API
-  - Commerce
-  - Credit Card
-  - Intermediate
-  - Landing
-  - NeedsContent
-  - Overview
-  - Payment Request
-  - Payment Request API
-  - Reference
-  - Secure context
-  - payment
-browser-compat: api.PaymentRequest
 l10n:
   sourceCommit: 2d55f134b973850ecaa4ad01fe55c63bd3982576
 ---

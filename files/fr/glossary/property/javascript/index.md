@@ -10,7 +10,7 @@ Une propriété est une caractéristique d'un objet qui décrit souvent des attr
 
 Une propriété possède un nom ({{glossary("String", "une chaîne de caractères")}}) et une valeur ({{glossary("Primitive","primitive")}}, {{glossary("Method","méthode")}}, ou {{glossary("object reference","référence d'objet")}}). Remarquez que lorsque nous disons « une propriété contient un objet », c'est un raccourci qui signifie « une propriété contient une _référence_ d'objet ». Cette distinction a son importance car l'objet d'origine référencé reste inchangé quand vous modifiez la valeur de la propriété.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

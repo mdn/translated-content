@@ -77,7 +77,7 @@ window.onmessage = (event) => {
 
 {{Compat("api.Window.message_event")}}
 
-## Voir également
+## Voir aussi
 
 - Événements liés: [`messageerror`](/docs/Web/API/Window/messageerror_event).
 - [`Window.postMessage()`](/fr/docs/Web/API/Window/postMessage).

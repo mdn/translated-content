@@ -1,19 +1,6 @@
 ---
 title: Element.querySelectorAll()
 slug: Web/API/Element/querySelectorAll
-tags:
-  - API
-  - CSS セレクター
-  - DOM
-  - Element
-  - Finding Elements
-  - メソッド
-  - リファレンス
-  - Searching Elements
-  - Selecting Elements
-  - セレクター
-  - querySelector
-translation_of: Web/API/Element/querySelectorAll
 original_slug: Web/API/ParentNode/querySelectorAll
 ---
 {{APIRef("DOM")}}

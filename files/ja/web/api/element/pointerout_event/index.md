@@ -1,15 +1,6 @@
 ---
 title: GlobalEventHandlers.onpointerout
 slug: Web/API/Element/pointerout_event
-tags:
-  - API
-  - Event Handler
-  - GlobalEventHandlers
-  - HTML DOM
-  - PointerEvent
-  - Property
-  - Reference
-translation_of: Web/API/GlobalEventHandlers/onpointerout
 original_slug: Web/API/GlobalEventHandlers/onpointerout
 ---
 {{ApiRef("HTML DOM")}}

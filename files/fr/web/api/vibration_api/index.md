@@ -73,13 +73,11 @@ Cette APi est dédiée pour les appareils mobiles. Il peut être indispensable p
 
 ## Spécifications
 
-| Spécification                            | Statut                               | Commentaire                                                        |
-| ---------------------------------------- | ------------------------------------ | ------------------------------------------------------------------ |
-| {{SpecName('Vibration API')}} | {{Spec2('Vibration API')}} | Linked to spec is the latest editor's draft; W3C version is a REC. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Navigator.vibrate")}}
+{{Compat}}
 
 ## Voir aussi
 

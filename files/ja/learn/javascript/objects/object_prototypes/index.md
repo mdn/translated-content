@@ -1,20 +1,6 @@
 ---
 title: Object のプロトタイプ
 slug: Learn/JavaScript/Objects/Object_prototypes
-tags:
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - OOJS
-  - OOP
-  - Object
-  - Prototype
-  - create()
-  - l10n:priority
-  - コンストラクタ
-  - 記事
-translation_of: Learn/JavaScript/Objects/Object_prototypes
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
 

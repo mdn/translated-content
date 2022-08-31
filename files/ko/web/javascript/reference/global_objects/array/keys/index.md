@@ -31,11 +31,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/keys
 
 ### 키 반복기는 빈 인덱스를 무시하지 않음
 
-    var arr = ['a', , 'c'];
-    var sparseKeys = Object.keys(arr);
-    var denseKeys = [...arr.keys()];
-    console.log(sparseKeys); // ['0', '2']
-    console.log(denseKeys);  // [0, 1, 2]
+```js
+var arr = ['a', , 'c'];
+var sparseKeys = Object.keys(arr);
+var denseKeys = [...arr.keys()];
+console.log(sparseKeys); // ['0', '2']
+console.log(denseKeys);  // [0, 1, 2]
+```
 
 ## 명세
 

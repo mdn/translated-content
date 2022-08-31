@@ -1,9 +1,6 @@
 ---
 title: reftest opportunities files
 slug: orphaned/reftest_opportunities_files
-tags:
-  - Automated testing
-  - Developing Mozilla
 original_slug: reftest_opportunities_files
 ---
 ### Introduction

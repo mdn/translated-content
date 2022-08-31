@@ -1,15 +1,6 @@
 ---
 title: GeolocationCoordinates.speed
 slug: Web/API/GeolocationCoordinates/speed
-tags:
-  - API
-  - 位置情報 API
-  - GeolocationCoordinates
-  - プロパティ
-  - 安全なコンテキスト
-  - speed
-browser-compat: api.GeolocationCoordinates.speed
-translation_of: Web/API/GeolocationCoordinates/speed
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 

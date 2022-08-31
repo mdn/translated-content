@@ -1,16 +1,6 @@
 ---
 title: DOMStringMap
 slug: Web/API/DOMStringMap
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsMarkupWork
-  - NeedsNewLayout
-  - NeedsUpdate
-  - Reference
-  - インターフェイス
-translation_of: Web/API/DOMStringMap
 ---
 {{ APIRef("HTML DOM") }}
 

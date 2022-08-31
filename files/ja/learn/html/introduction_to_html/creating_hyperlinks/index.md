@@ -1,19 +1,6 @@
 ---
 title: ハイパーリンクの作成
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - HTML
-  - Learn
-  - Links
-  - Title
-  - absolute
-  - hyperlinks
-  - relative
-  - urls
-translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
 

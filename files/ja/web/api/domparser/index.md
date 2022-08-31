@@ -1,21 +1,6 @@
 ---
 title: DOMParser
 slug: Web/API/DOMParser
-tags:
-  - API
-  - DOM
-  - DOM Parsing
-  - Document
-  - HTML
-  - HTMLDocument
-  - MakeBrowserAgnostic
-  - NeedsMarkupWork
-  - Parsing
-  - Reference
-  - SVG
-  - XML
-  - XMLDocument
-translation_of: Web/API/DOMParser
 ---
 {{APIRef("DOM")}}
 

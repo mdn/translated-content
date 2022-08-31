@@ -95,13 +95,11 @@ var objectStore = db.createObjectStore(name, optionalParameters);
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                                                            | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBDatabase-createObjectStore-IDBObjectStore-DOMString-name-IDBObjectStoreParameters-optionalParameters', 'createObjectStore()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBDatabase.createObjectStore")}}
+{{Compat}}
 
 ## Voir aussi
 

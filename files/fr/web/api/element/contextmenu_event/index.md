@@ -68,13 +68,11 @@ noContext.addEventListener('contextmenu', e => {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{ SpecName('HTML WHATWG', 'indices.html#event-contextmenu', 'contextmenu')}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.contextmenu_event")}}
+{{Compat}}
 
 ## Voir aussi
 

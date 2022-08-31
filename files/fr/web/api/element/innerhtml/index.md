@@ -188,11 +188,9 @@ Le contenu résultant ressemble à ceci. Vous pouvez voir la sortie dans le jour
 
 {{EmbedLiveSample("Exemple", 640, 350)}}
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                        | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('DOM Parsing', '#innerhtml', 'Element.innerHTML')}} | {{ Spec2('DOM Parsing') }} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

@@ -1,21 +1,6 @@
 ---
 title: クライアントサイド Web API
 slug: Learn/JavaScript/Client-side_web_APIs
-tags:
-  - API
-  - CodingScripting
-  - DOM
-  - JavaScript
-  - Landing
-  - WebAPI
-  - グラフィック
-  - データ
-  - メディア
-  - モジュール
-  - 初心者向け
-  - 学習
-  - 記事
-translation_of: Learn/JavaScript/Client-side_web_APIs
 ---
 {{LearnSidebar}}
 

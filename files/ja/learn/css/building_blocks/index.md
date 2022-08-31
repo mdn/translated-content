@@ -1,12 +1,6 @@
 ---
 title: CSS の構成要素
 slug: Learn/CSS/Building_blocks
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - building blocks
-translation_of: Learn/CSS/Building_blocks
 ---
 {{LearnSidebar}}
 

@@ -11,7 +11,9 @@ translation_of: Web/API/Clients/claim
 
 ## Syntax
 
-    await clients.claim();
+```js
+await clients.claim();
+```
 
 ### Parameters
 

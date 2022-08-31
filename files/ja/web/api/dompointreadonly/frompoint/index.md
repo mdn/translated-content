@@ -1,20 +1,6 @@
 ---
 title: DOMPointReadOnly.fromPoint()
 slug: Web/API/DOMPointReadOnly/fromPoint
-page-type: web-api-static-method
-tags:
-  - API
-  - Coordinates
-  - DOM
-  - DOMPointReadOnly
-  - Geometry
-  - Geometry Interfaces
-  - Method
-  - Point
-  - Reference
-  - Static Method
-  - fromPoint
-browser-compat: api.DOMPointReadOnly.fromPoint
 ---
 {{APIRef("DOM")}}
 

@@ -1,14 +1,6 @@
 ---
 title: Element.scrollWidth
 slug: Web/API/Element/scrollWidth
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/Element/scrollWidth
 ---
 {{APIRef("DOM")}}
 

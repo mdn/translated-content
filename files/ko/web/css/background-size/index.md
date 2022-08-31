@@ -136,6 +136,6 @@ Note that it's particularly not recommended to use a pixel dimension and an `aut
 
 ## 같이 보기
 
-- [Scaling background images](/ko/docs/CSS/Scaling_background_images "CSS/Scaling_background_images")
+- [Scaling background images](/ko/docs/CSS/Scaling_background_images)
 - [Scaling of SVG backgrounds](/ko/docs/Web/CSS/Scaling_of_SVG_backgrounds)
 - {{cssxref("object-fit")}}

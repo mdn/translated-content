@@ -1,7 +1,6 @@
 ---
 title: RTCSessionDescriptionCallback
 slug: orphaned/Web/API/RTCSessionDescriptionCallback
-translation_of: Web/API/RTCSessionDescriptionCallback
 original_slug: Web/API/RTCSessionDescriptionCallback
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}RTCSessionDescriptionCallback はオファーまたはアンサーの作成が要求された時に [RTCPeerConnection](/ja/docs/) オブジェクトによって実行されます。

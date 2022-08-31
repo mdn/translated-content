@@ -16,7 +16,9 @@ translation_of: Web/API/Document/documentElement
 
 ## 구문
 
-    const element = document.documentElement
+```js
+const element = document.documentElement
+```
 
 ## 예제
 

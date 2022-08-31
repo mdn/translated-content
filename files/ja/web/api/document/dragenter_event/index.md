@@ -1,18 +1,6 @@
 ---
 title: 'Document: dragenter イベント'
 slug: Web/API/Document/dragenter_event
-page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Document
-  - DragEvent
-  - Event
-  - Reference
-  - Web
-  - drag and drop
-  - dragenter
-translation_of: Web/API/Document/dragenter_event
 ---
 {{APIRef}}
 

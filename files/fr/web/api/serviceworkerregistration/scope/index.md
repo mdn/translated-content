@@ -25,15 +25,13 @@ serviceWorkerRegistration.scope
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                                 | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#dom-serviceworkerregistration-scope', 'ServiceWorkerRegistration.scope')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ServiceWorkerRegistration.scope")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [Utilisation des Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Exemple basique de code pour les Services workers](https://github.com/mdn/sw-test)

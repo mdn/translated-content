@@ -1,16 +1,6 @@
 ---
 title: ウェブパフォーマンスとは
 slug: Learn/Performance/What_is_web_performance
-tags:
-  - Beginner
-  - Introduction
-  - Learn
-  - Performance
-  - Reference
-  - Tutorial
-  - Web Performance
-  - Web パフォーマンス
-translation_of: Learn/Performance/What_is_web_performance
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/why_web_performance", "Learn/Performance/Perceived_performance", "Learn/Performance")}}
 

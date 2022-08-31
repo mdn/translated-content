@@ -34,17 +34,14 @@ L'API synchrone est utile avec les [WebWorkers](/En/Using_web_workers). Contrair
 - [FileEntrySync](/en/DOM/File_API/File_System_API/FileEntrySync) représente un fichier dans un fichier système.
 - [FileException](/en/DOM/File_API/File_System_API/FileException) est une erreur que vous pourriez rencontrer pendant l'utilisation des méthodes synchrones.
 
-## Compatibilité navigateur
+## Spécifications
 
-### `FileSystem`
+{{Specifications}}
 
-{{Compat("api.FileSystem", 0)}}
+## Compatibilité des navigateurs
 
-### Propriété `FileSystemSync`
-
-{{Compat("api.FileSystemSync", 0)}}
+{{Compat}}
 
 ## Voir aussi
 
-- Particularité : {{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "NOTE") }}
 - Commentaire Mozilla : [Why no FileSystem API in Firefox?](https://hacks.mozilla.org/2012/07/why-no-filesystem-api-in-firefox/)

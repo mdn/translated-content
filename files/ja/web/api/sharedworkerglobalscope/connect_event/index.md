@@ -1,15 +1,6 @@
 ---
 title: 'SharedWorkerGlobalScope: connect イベント'
 slug: Web/API/SharedWorkerGlobalScope/connect_event
-tags:
-  - API
-  - Event
-  - Reference
-  - SharedWorkerGlobalScope
-  - connect
-  - events
-  - イベント
-translation_of: Web/API/SharedWorkerGlobalScope/connect_event
 ---
 {{APIRef}}
 

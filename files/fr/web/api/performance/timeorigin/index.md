@@ -30,10 +30,8 @@ Un horodatage haute résolution (voir le type [`DOMHighResTimeStamp`](/fr/docs/W
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                                       |
-| ------------------------------------------------------------------------------------------------ | -------------------------------------------- |
-| {{SpecName('Highres Time Level 2','#timeorigin-attribute','timeOrigin')}} | {{Spec2('Highres Time Level 2')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Performance.timeOrigin")}}
+{{Compat}}

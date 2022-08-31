@@ -15,7 +15,9 @@ browser-compat: javascript.builtins.Object.getPrototypeOf
 
 ## 구문
 
-    Object.getPrototypeOf(obj)
+```js
+Object.getPrototypeOf(obj)
+```
 
 ### 매개변수
 

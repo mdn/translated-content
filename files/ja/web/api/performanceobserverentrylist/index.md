@@ -1,12 +1,6 @@
 ---
 title: PerformanceObserverEntryList
 slug: Web/API/PerformanceObserverEntryList
-tags:
-  - API
-  - Web パフォーマンス
-  - インターフェイス
-  - リファレンス
-translation_of: Web/API/PerformanceObserverEntryList
 ---
 {{APIRef("Performance Timeline API")}}
 

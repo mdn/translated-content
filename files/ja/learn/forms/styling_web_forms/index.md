@@ -1,15 +1,6 @@
 ---
 title: HTML フォームへのスタイル設定
 slug: Learn/Forms/Styling_web_forms
-tags:
-  - CSS
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Intermediate
-  - Web
-translation_of: Learn/Forms/Styling_web_forms
 original_slug: Learn/Forms/Styling_HTML_forms
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}

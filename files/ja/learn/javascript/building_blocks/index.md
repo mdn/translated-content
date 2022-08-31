@@ -1,21 +1,6 @@
 ---
 title: JavaScript の構成要素
 slug: Learn/JavaScript/Building_blocks
-tags:
-  - Article
-  - Assesment
-  - Beginner
-  - CodingScripting
-  - Conditionals
-  - Functions
-  - Guide
-  - JavaScript
-  - Landing
-  - Loops
-  - Module
-  - events
-  - l10n:priority
-translation_of: Learn/JavaScript/Building_blocks
 ---
 {{LearnSidebar}}
 

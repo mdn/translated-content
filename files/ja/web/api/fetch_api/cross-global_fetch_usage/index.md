@@ -1,12 +1,6 @@
 ---
 title: グローバル間フェッチの使用
 slug: Web/API/Fetch_API/Cross-global_fetch_usage
-tags:
-  - Cross global
-  - Fetch
-  - edge case
-  - relative URL
-translation_of: Web/API/Fetch_API/Cross-global_fetch_usage
 ---
 {{DefaultAPISidebar("Fetch API")}}
 

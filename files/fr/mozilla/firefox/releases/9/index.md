@@ -173,7 +173,7 @@ Le parseur IDL ne supporte plus la notion de pointeurs unique qui n'a jamais ét
   navigator
   , qui peut être interrogé pour obtenir des informations concernant l'application exécutant le script.") à l'aide de la catégorie "JavaScript-navigator-property". Voir [Ajout des APIs de l'objet navigator](/En/Developer_Guide/Adding_APIs_to_the_navigator_object) pour plus de détails et des exemples.
 
-## Voir également
+## Voir aussi
 
 - [Firefox 8 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/8)
 - [Firefox 7 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/7)

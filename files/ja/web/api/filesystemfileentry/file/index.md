@@ -1,17 +1,6 @@
 ---
 title: FileSystemFileEntry.file()
 slug: Web/API/FileSystemFileEntry/file
-page-type: web-api-instance-method
-tags:
-  - API
-  - File
-  - ファイルとディレクトリー項目 API
-  - FileSystemFileEntry
-  - ファイル
-  - メソッド
-  - リファレンス
-browser-compat: api.FileSystemFileEntry.file
-translation_of: Web/API/FileSystemFileEntry/file
 ---
 {{APIRef("File and Directory Entries API")}}
 

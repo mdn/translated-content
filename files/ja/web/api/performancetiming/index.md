@@ -1,20 +1,6 @@
 ---
 title: PerformanceTiming
 slug: Web/API/PerformanceTiming
-tags:
-  - API
-  - 後方互換性
-  - 非推奨
-  - インターフェイス
-  - Navigation Timing
-  - Navigation Timing API
-  - Optimization
-  - Performance
-  - Reference
-  - Timing
-  - legacy
-browser-compat: api.PerformanceTiming
-translation_of: Web/API/PerformanceTiming
 ---
 {{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 

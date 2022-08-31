@@ -4,7 +4,7 @@ slug: Web/API/WebSockets_API/Writing_WebSocket_servers
 translation_of: Web/API/WebSockets_API/Writing_WebSocket_servers
 original_slug: WebSockets/Writing_WebSocket_servers
 ---
-{{gecko_minversion_header("2")}}
+{{APIRef("Websockets API")}}
 
 ## 개요
 

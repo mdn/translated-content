@@ -12,7 +12,7 @@ original_slug: Glossaire/TOFU
 
 TOFU est utilisé dans le protocole SSH, dans [HTTP Public Key Pinning](/fr/docs/Web/HTTP/Public_Key_Pinning) ({{Glossary("HPKP")}}) où les navigateurs accepteront la première clé publique renvoyée par le serveur et dans {{HTTPHeader("Strict-Transport-Security")}}  ({{Glossary("HSTS")}}) où un navigateur obéira à la règle de redirection.
 
-## En apprendre plus
+## Voir aussi
 
 - [HTTP Public Key Pinning](/fr/docs/Web/HTTP/Public_Key_Pinning) ({{Glossary("HPKP")}})
 - {{HTTPHeader("Public-Key-Pins")}}

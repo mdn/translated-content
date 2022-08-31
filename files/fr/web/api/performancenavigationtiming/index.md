@@ -68,13 +68,11 @@ L'interface prend également en charge les propriétés suivantes :
 
 ## Spécifications
 
-| Spécifications                                                                                                                                   | Statut                                               | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing Level 2', '#sec-PerformanceNavigationTiming', 'PerformanceNavigationTiming')}} | {{Spec2('Navigation Timing Level 2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceNavigationTiming")}}
+{{Compat}}
 
 ## Voir aussi
 

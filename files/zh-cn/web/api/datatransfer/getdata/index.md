@@ -75,16 +75,20 @@ function drop(dropevent) {
 
 ### 结果
 
-{{ EmbedLiveSample('Example', 600) }}
+{{ EmbedLiveSample('示例', 600) }}
 
-## 说明
+## 规范
 
 {{Specifications}}
 
-## 兼容性
+## 浏览器兼容性
 
-{{Compat("api.DataTransfer.getData")}}
+{{Compat}}
 
-## 参考
+## 参见
 
-{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}
+- [HTML 拖放 API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
+- [拖拽操作](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [推荐的拖拽类型](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [拖拽和放置多个项目](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer 测试——粘贴或拖拽](https://codepen.io/tech_query/pen/MqGgap)

@@ -1,11 +1,6 @@
 ---
 title: コミュニティでの作業
 slug: orphaned/MDN/Community/Working_in_community
-tags:
-  - Community
-  - Guide
-  - MDN Meta
-translation_of: MDN/Community/Working_in_community
 original_slug: MDN/Community/Working_in_community
 ---
 {{MDNSidebar}}

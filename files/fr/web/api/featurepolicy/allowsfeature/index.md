@@ -58,10 +58,8 @@ else
 
 ## Spécifications
 
-| Spécification                                                    | Statut                               | Commentaire          |
-| ---------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("Feature Policy","","allowsFeature")}} | {{Spec2("Feature Policy")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FeaturePolicy.allowsFeature")}}
+{{Compat}}

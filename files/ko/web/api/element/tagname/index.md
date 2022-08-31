@@ -9,7 +9,9 @@ translation_of: Web/API/Element/tagName
 
 ## 구문
 
-    elementName = Element.tagName;
+```js
+elementName = Element.tagName;
+```
 
 ### Value
 

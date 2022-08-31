@@ -15,13 +15,13 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index
 
 이 문서에서는 몇가지 간단한 예를 들어 쌓임 규칙에 대해 설명하려고 한다.
 
-1.  [z-index가 없는 경우의 쌓임](/ko/CSS/Understanding_z-index/Stacking_without_z-index "ko/CSS/Understanding_z-index/Stacking_without_z-index") : 기본 쌓임 규칙
-2.  [floating 엘리먼트의 쌓임](/ko/CSS/Understanding_z-index/Stacking_and_float "ko/CSS/Understanding_z-index/Stacking_and_float") : floating 엘리먼트들은 어떻게 다루어지는가
-3.  [z-index 적용](/ko/CSS/Understanding_z-index/Adding_z-index "ko/CSS/Understanding_z-index/Adding_z-index") : 기본 쌓임 순서를 변경하기 위해 z-index 사용하기
-4.  [쌓임 맥락(stacking context) 이야기](/ko/CSS/Understanding_z-index/The_stacking_context "ko/CSS/Understanding_z-index/The_stacking_context") : 쌓임 맥락(stacking context) 이야기
-5.  [쌓임 맥락 예제1](/ko/CSS/Understanding_z-index/Stacking_context_example_1 "ko/CSS/Understanding_z-index/Stacking_context_example_1") : 2레벨 HTML 계층구조, 마지막 레벨에서 z-index가 지정된 경우
-6.  [쌓임 맥락 예제2](/ko/CSS/Understanding_z-index/Stacking_context_example_2 "ko/CSS/Understanding_z-index/Stacking_context_example_2") : 2레벨 HTML 계층구조, 모든 레벨에서 z-index가 지정된 경우
-7.  [쌓임 맥락 예제3](/ko/CSS/Understanding_z-index/Stacking_context_example_3 "ko/CSS/Understanding_z-index/Stacking_context_example_3") : 3레벨 HTML 계층구조, 두번째 레벨에서 z-index가 지정된 경우
+1. [z-index가 없는 경우의 쌓임](/ko/CSS/Understanding_z-index/Stacking_without_z-index) : 기본 쌓임 규칙
+2. [floating 엘리먼트의 쌓임](/ko/CSS/Understanding_z-index/Stacking_and_float) : floating 엘리먼트들은 어떻게 다루어지는가
+3. [z-index 적용](/ko/CSS/Understanding_z-index/Adding_z-index) : 기본 쌓임 순서를 변경하기 위해 z-index 사용하기
+4. [쌓임 맥락(stacking context) 이야기](/ko/CSS/Understanding_z-index/The_stacking_context) : 쌓임 맥락(stacking context) 이야기
+5. [쌓임 맥락 예제1](/ko/CSS/Understanding_z-index/Stacking_context_example_1) : 2레벨 HTML 계층구조, 마지막 레벨에서 z-index가 지정된 경우
+6. [쌓임 맥락 예제2](/ko/CSS/Understanding_z-index/Stacking_context_example_2) : 2레벨 HTML 계층구조, 모든 레벨에서 z-index가 지정된 경우
+7. [쌓임 맥락 예제3](/ko/CSS/Understanding_z-index/Stacking_context_example_3) : 3레벨 HTML 계층구조, 두번째 레벨에서 z-index가 지정된 경우
 
 _저자의 말: 검토를 해준 Wladimir Palant씨와 Rod Whiteley씨에게 감사의 말을 전합니다._
 

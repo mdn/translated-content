@@ -1,12 +1,6 @@
 ---
 title: ウェブ用のゲーム開発入門
 slug: Games/Introduction
-tags:
-  - Firefox OS
-  - Games
-  - Guide
-  - Mobile
-translation_of: Games/Introduction
 ---
 {{GamesSidebar}}
 

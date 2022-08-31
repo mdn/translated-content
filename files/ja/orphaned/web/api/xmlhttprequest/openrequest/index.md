@@ -1,17 +1,6 @@
 ---
 title: XMLHttpRequest.openRequest()
 slug: orphaned/Web/API/XMLHttpRequest/openRequest
-tags:
-  - API
-  - DOM
-  - Firefox
-  - Gecko
-  - Method
-  - XHR
-  - XMLHttpRequest
-  - openRequest
-  - 非標準
-translation_of: Web/API/XMLHttpRequest/openRequest
 original_slug: Web/API/XMLHttpRequest/openRequest
 ---
 {{APIRef("XMLHttpRequest")}}{{non-standard_header}}

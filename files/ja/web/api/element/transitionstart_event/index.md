@@ -1,17 +1,6 @@
 ---
 title: 'Document: transitionstart イベント'
 slug: Web/API/Element/transitionstart_event
-tags:
-  - DOM
-  - Document
-  - Event
-  - Reference
-  - Web
-  - transitionstart
-  - イベント
-  - ウェブ
-  - トランジション
-translation_of: Web/API/Document/transitionstart_event
 original_slug: Web/API/Document/transitionstart_event
 ---
 {{APIRef}}{{SeeCompatTable}}

@@ -1,14 +1,6 @@
 ---
 title: 'Document: touchcancel イベント'
 slug: Web/API/Document/touchcancel_event
-tags:
-  - Document
-  - Event
-  - Reference
-  - TouchEvent
-  - Web
-  - touchcancel
-translation_of: Web/API/Document/touchcancel_event
 ---
 {{APIRef}}
 

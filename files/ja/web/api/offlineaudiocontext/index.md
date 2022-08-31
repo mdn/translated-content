@@ -1,7 +1,6 @@
 ---
 title: OfflineAudioContext
 slug: Web/API/OfflineAudioContext
-translation_of: Web/API/OfflineAudioContext
 ---
 {{APIRef("Web Audio API")}}`OfflineAudioContext` インターフェイスは {{domxref("AudioContext")}} インターフェイスの一種で、{{domxref("AudioNode")}} をつなげて造られる音声処理グラフを表しています。通常の {{domxref("AudioContext")}} と異なり、`OfflineAudioContext` で処理された音声はハードウェアから再生されることはありません。処理された結果は {{domxref("AudioBuffer")}} に出力されます。
 

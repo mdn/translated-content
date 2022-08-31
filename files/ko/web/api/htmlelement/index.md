@@ -72,7 +72,7 @@ _부모인 {{domxref("Element")}}의 속성을 상속합니다. {{domxref("Globa
   - : 레이아웃에 상대적인 요소의 너비를 갖는 `double` 을 반환합니다.
 - {{domxref("HTMLElement.properties")}} {{readonlyInline}}{{experimental_inline}}
   - : {{domxref("HTMLPropertiesCollection")}}… 을 반환합니다.
-- {{domxref("HTMLElement.spellcheck")}}{{ gecko_minversion_inline("1.9")}}
+- {{domxref("HTMLElement.spellcheck")}}
   - : [철자 검사](/ko/docs/Web/HTML/Global_attributes/spellcheck "en/Controlling_spell_checking_in_HTML_forms")를 제어하는 {{jsxref("Boolean")}} 입니다. 모든 HTML 요소에 존재하지만, 모두에 대해 적용되지는 않습니다.
 - {{domxref("HTMLElement.style")}}
   - : 요소의 스타일 속성의 정의를 나타내는 {{domxref("CSSStyleDeclaration")}} 객체입니다.

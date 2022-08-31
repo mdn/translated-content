@@ -1,24 +1,6 @@
 ---
 title: XRRigidTransform.orientation
 slug: Web/API/XRRigidTransform/orientation
-tags:
-  - API
-  - AR
-  - Orientation
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRRigidTransform
-  - augmented
-  - rotation
-translation_of: Web/API/XRRigidTransform/orientation
 ---
 {{APIRef("WebXR Device API")}}
 

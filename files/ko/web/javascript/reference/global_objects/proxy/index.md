@@ -23,7 +23,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 
 ## 구문
 
-    new Proxy(target, handler);
+```js
+new Proxy(target, handler);
+```
 
 ### 매개변수
 

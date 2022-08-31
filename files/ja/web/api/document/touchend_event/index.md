@@ -1,20 +1,6 @@
 ---
 title: Document:touchend イベント
 slug: Web/API/Document/touchend_event
-tags:
-  - API
-  - Event
-  - Reference
-  - Touch Events
-  - TouchEvent
-  - UI
-  - UI Events
-  - UX
-  - ontouchend
-  - touch
-  - touchend
-  - イベント
-translation_of: Web/API/Document/touchend_event
 ---
 {{APIRef}}
 

@@ -17,7 +17,7 @@ tags:
   - 코딩스크립트
 translation_of: Learn/JavaScript/Objects/Basics
 ---
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
 이 글에서는 JavaScript 객체와 관련된 기본적인 문법을 살펴보고 이전 코스에서 학습해서 이미 알고 있는 JavaScript 의 특징들과 우리가 이미 사용하고 있는 기능들이 이미 객체와 관련되어 있다는 사실을 다시 한번 복습할 것입니다.
 
@@ -318,7 +318,7 @@ var myNotification = new Notification('Hello!');
 
 다음 장에서는 객체지향(OOP) 이론을 배우고, JavaScript 에서는 객체지향이 어떻게 사용되었는지 알아볼 것입니다.
 
-{{NextMenu("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects")}}
+{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
 ## 이 과정에서는
 

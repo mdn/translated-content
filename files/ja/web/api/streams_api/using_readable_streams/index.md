@@ -1,18 +1,6 @@
 ---
 title: 読み取り可能なストリームの使用
 slug: Web/API/Streams_API/Using_readable_streams
-tags:
-  - API
-  - Controller
-  - Fetch
-  - Guide
-  - ReadableStreams
-  - Streams
-  - pipe chains
-  - readable streams
-  - reader
-  - tee
-translation_of: Web/API/Streams_API/Using_readable_streams
 ---
 {{apiref("Streams")}}
 

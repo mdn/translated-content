@@ -34,13 +34,11 @@ Un tableau d'objets [`IntersectionObserverEntry`](/fr/docs/Web/API/IntersectionO
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | Statut                                       | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('IntersectionObserver','#dom-intersectionobserver-takerecords','IntersectionObserver.takeRecords()')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserver.takeRecords")}}
+{{Compat}}
 
 ## Voir aussi
 

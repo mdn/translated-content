@@ -1,15 +1,6 @@
 ---
 title: GeolocationCoordinates.latitude
 slug: Web/API/GeolocationCoordinates/latitude
-tags:
-  - API
-  - 位置情報 API
-  - GeolocationCoordinates
-  - プロパティ
-  - 安全なコンテキスト
-  - latitude
-browser-compat: api.GeolocationCoordinates.latitude
-translation_of: Web/API/GeolocationCoordinates/latitude
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 

@@ -1,14 +1,6 @@
 ---
 title: Document.lastModified
 slug: Web/API/Document/lastModified
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - NeedsSpecTable
-  - Property
-  - Reference
-translation_of: Web/API/Document/lastModified
 ---
 {{APIRef("DOM")}}
 

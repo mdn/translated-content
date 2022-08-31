@@ -1,16 +1,6 @@
 ---
 title: Element.requestPointerLock()
 slug: Web/API/Element/requestPointerLock
-tags:
-  - API
-  - DOM
-  - 実験的
-  - メソッド
-  - NeedsExample
-  - PointerEvent
-  - リファレンス
-  - mouse lock
-translation_of: Web/API/Element/requestPointerLock
 ---
 {{ APIRef("DOM") }}{{ SeeCompatTable }}
 
