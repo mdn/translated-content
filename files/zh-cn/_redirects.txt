@@ -1127,7 +1127,7 @@
 /zh-CN/docs/MDN/Contribute/Feedback	/zh-CN/docs/MDN/Community
 /zh-CN/docs/MDN/Contribute/Fixing_MDN_content_bugs	/zh-CN/docs/MDN/Community/MDN_content
 /zh-CN/docs/MDN/Contribute/Getting_started	/zh-CN/docs/MDN/Community/Contributing/Getting_started
-/zh-CN/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data	/zh-CN/docs/orphaned/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
+/zh-CN/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data	https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md
 /zh-CN/docs/MDN/Contribute/Howto/Compatibility_tables	/zh-CN/docs/MDN/Writing_guidelines/Page_structures
 /zh-CN/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /zh-CN/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples
@@ -1138,7 +1138,7 @@
 /zh-CN/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file	/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
 /zh-CN/docs/MDN/Contribute/Howto/Write_for_SEO	/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide
 /zh-CN/docs/MDN/Contribute/Howto/创建及编辑页面	/zh-CN/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
-/zh-CN/docs/MDN/Contribute/Howto/如何添加或更新浏览器兼容性数据	/zh-CN/docs/orphaned/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
+/zh-CN/docs/MDN/Contribute/Howto/如何添加或更新浏览器兼容性数据	https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md
 /zh-CN/docs/MDN/Contribute/Howto/学习_交互_在线_起步_开始	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /zh-CN/docs/MDN/Contribute/Howto/标签	/zh-CN/docs/MDN/Writing_guidelines/Howto/Tag
 /zh-CN/docs/MDN/Contribute/Localize	/zh-CN/docs/MDN/Community/Contributing/Translated_content
