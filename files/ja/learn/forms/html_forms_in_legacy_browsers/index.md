@@ -120,7 +120,7 @@ HTML フォームの大きな問題の一つは、 CSS によるフォームウ�
 
 一般に、フォームコントロールの既定の外観は変更しない方が良いと考えられています。というのも、 1 つの CSS プロパティの値を変更すると、一部の入力型は変更されますが、他の入力型は変更されないからです。例えば、 `input { font-size: 2rem; }` と宣言した場合、 `number`、`date`、`text` には影響がありますが、 `color` や `range` には影響しません。プロパティを変更すると、予期せぬ形でウィジェットの外観に影響を与えることがあります。例えば、 `[value] { background-color: #ccc; }` は、 `value` 属性を持つすべての {{HTMLElement("input")}} を対象としていますが、 {{HTMLElement("meter")}} の背景色や境界線の角の丸めを変更すると、ブラウザーによって異なる予期せぬ結果になる可能性があります。 {{cssxref('appearance', 'appearance: none;')}} と宣言してブラウザーのスタイルを削除することもできますが、一般的には目的を達成できません。すべてのスタイルが失われ、訪問者が慣れ親しんだ既定のルック＆フィールが削除されるからです。
 
-まとめるとすると、フォームコントロールのウィジェットに CSS でスタイル付けすることで、予測できない副作用が発生することがあります。だからやめましょう。 [フォームウィジェット向けプロパティ実装状況一覧](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)の記事の複雑さからもわかるように、非常に難しいのです。テキスト要素に多少の調整 (サイズやフォントの色など) を行うことはまだ可能でも、必ず副作用が発生します。最良の方法は、 HTML フォームウィジェットにスタイルをまったく適用しないことです。しかし、周囲のアイテムになら、どれでも適用することはできます。また、どうしてもフォームウィジェットの既定のスタイルを変更しなければならない場合は、スタイルガイドを定義して、すべてのフォームコントロールの一貫性を確保し、ユーザーの使い勝手を損なわないようにしてください。また、 [JavaScript でのウィジェットの再構築](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)など、難しいテクニックを検討することもできます。しかし、その場合は、[そのような愚かな要求をするクライアントに請求すること](https://www.smashingmagazine.com/2011/11/03/but-the-client-wants-ie-6-support/)をためらってはいけません。
+まとめるとすると、フォームコントロールのウィジェットに CSS でスタイル付けすることで、予測できない副作用が発生することがあります。だからやめましょう。 [フォームコントロール向けの CSS プロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)の記事の複雑さからもわかるように、非常に難しいのです。テキスト要素に多少の調整 (サイズやフォントの色など) を行うことはまだ可能でも、必ず副作用が発生します。最良の方法は、 HTML フォームウィジェットにスタイルをまったく適用しないことです。しかし、周囲のアイテムになら、どれでも適用することはできます。また、どうしてもフォームウィジェットの既定のスタイルを変更しなければならない場合は、スタイルガイドを定義して、すべてのフォームコントロールの一貫性を確保し、ユーザーの使い勝手を損なわないようにしてください。また、 [JavaScript でのウィジェットの再構築](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)など、難しいテクニックを検討することもできます。しかし、その場合は、[そのような愚かな要求をするクライアントに請求すること](https://www.smashingmagazine.com/2011/11/03/but-the-client-wants-ie-6-support/)をためらってはいけません。
 
 ## 機能検出とポリフィル
 
@@ -209,4 +209,4 @@ Modernizr のようなスクリプトはパフォーマンスを非常に意識�
 - [カスタムフォームウィジェットの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
 - [古いブラウザーでの HTML フォーム](/ja/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
 - [フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
-- [フォームウィジェット向けプロパティ実装状況一覧](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [フォームコントロール向けの CSS プロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
