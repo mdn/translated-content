@@ -27,7 +27,7 @@ Vous pouvez étendre la liste des en-têtes de réponse sécurisés CORS en util
 Access-Control-Expose-Headers: X-Custom-Header, Content-Length
 ```
 
-## En apprendre plus
+## Voir aussi
 
 - [HTTP](/fr/docs/HTTP)
 - [En-têtes HTTP](/fr/docs/HTTP/Headers)

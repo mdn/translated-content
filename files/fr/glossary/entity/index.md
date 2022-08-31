@@ -26,7 +26,7 @@ Pour afficher ces caractères comme texte, il faut les remplacer par l'entité d
 | >         | `&gt;`   | Interprété comme la fin d'une {{Glossary("Tag","balise")}}                                  |
 | "         | `&quot;` | Interprété comme le début et la fin d'une valeur d'{{Glossary('Attribute','attributs')}} |
 
-## En apprendre plus
+## Voir aussi
 
 ### Référence technique
 

@@ -12,7 +12,7 @@ Les enfants directs d'un {{glossary("Flex Container","conteneur flexible")}} (é
 
 Des passages continus de texte à l'intérieur des conteneurs flexibles deviendront également des éléments flexibles.
 
-## En apprendre plus
+## Voir aussi
 
 ### Références de la propriété
 

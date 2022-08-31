@@ -43,6 +43,6 @@ Le principe de « cascade » fait référence aux règles de préséance dans l'
 - [Documentation CSS sur MDN](/fr/docs/Web/CSS)
 - [Les travaux en cours du Groupe de travail CSS](http://www.w3.org/Style/CSS/current-work) (en)
 
-### En apprendre plus sur CSS
+### Voir aussi
 
 - [Cours en ligne sur codecademy.com](http://www.codecademy.com/fr/tracks/web)
