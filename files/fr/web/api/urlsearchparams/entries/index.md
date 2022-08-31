@@ -38,15 +38,13 @@ key1, value1
 key2, value2
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                    | Status               | Comment            |
-| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------ |
-| {{SpecName('URL', '#urlsearchparams','entries() (as iterator&lt;&gt;)')}} | {{Spec2('URL')}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.URLSearchParams.entries")}}
+{{Compat}}
 
 ## Voir aussi
 

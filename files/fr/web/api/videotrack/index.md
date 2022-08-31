@@ -64,10 +64,8 @@ Le {{domxref("VideoTrack.language", "language")}} est au format standard ({{RFC(
 
 ## Spécifications
 
-| Spécification                                                                | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', '#videotrack', 'VideoTrack')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.VideoTrack")}}
+{{Compat}}
