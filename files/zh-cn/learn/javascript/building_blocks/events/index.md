@@ -389,6 +389,7 @@ form.onsubmit = function(e) {
 
 最后即将介绍的这个主题你常常不会深究，但如果你不理解这个主题，就会十分痛苦。事件冒泡和捕捉是两种机制，主要描述当在一个元素上有两个相同类型的事件处理器被激活会发生什么。为了容易理解，我们来看一个例子——在新标签页打开这个[show-video-box.html](http://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box.html) 例子（在这里可以查看源码 [source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html)）。也可以在下面查看：
 
+<!-- 嵌入的例子有问题 -->
 {{ EmbedLiveSample('事件冒泡及捕获', '100%', 500) }}
 
 这是一个非常简单的例子，它显示和隐藏一个包含`<video>`元素的`<div>`元素：
