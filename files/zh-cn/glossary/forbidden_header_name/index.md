@@ -31,7 +31,7 @@ slug: Glossary/Forbidden_header_name
 - {{HTTPHeader("Upgrade")}}
 - {{HTTPHeader("Via")}}
 
-> **备注：** [根据规范](https://fetch.spec.whatwg.org/#terminology-headers)中的禁止修改的标头列表（Firefox 43 中实现了它），{{HTTPHeader("User-Agent")}} 标头不再被禁止，现在可以设置在 Fetch 的 [Headers](/zh-CN/docs/Web/API/Headers) 对象中，或者通过 XHR [setRequestHeader()](/zh-CN/docs/Web/API/XMLHttpRequest/setRequestHeader) 设置。但是，Chrome 会不做提示地从 Fetch 请求中丢弃这个标头（请参阅 [Chromium bug 571722](https://bugs.chromium.org/p/chromium/issues/detail?id=571722)）。
+> **备注：** [根据规范](https://fetch.spec.whatwg.org/#terminology-headers)中的禁止修改的标头列表（Firefox 43 中实现了它），{{HTTPHeader("User-Agent")}} 标头不再被禁止，现在可以设置在 Fetch 的 [Headers](/zh-CN/docs/Web/API/Headers) 对象中，或者通过 `XMLHttpRequest` 的 [setRequestHeader()](/zh-CN/docs/Web/API/XMLHttpRequest/setRequestHeader) 方法设置。但是，Chrome 会不做提示地从 Fetch 请求中丢弃这个标头（请参阅 [Chromium bug 571722](https://bugs.chromium.org/p/chromium/issues/detail?id=571722)）。
 
 ## 参见
 
