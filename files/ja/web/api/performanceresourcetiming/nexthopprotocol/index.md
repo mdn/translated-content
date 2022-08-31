@@ -1,13 +1,6 @@
 ---
 title: PerformanceResourceTiming.nextHopProtocol
 slug: Web/API/PerformanceResourceTiming/nextHopProtocol
-tags:
-  - API
-  - Web パフォーマンス
-  - プロパティ
-  - リソースタイミング API
-  - リファレンス
-translation_of: Web/API/PerformanceResourceTiming/nextHopProtocol
 ---
 {{APIRef("Resource Timing API")}}
 

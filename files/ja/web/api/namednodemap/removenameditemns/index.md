@@ -1,12 +1,6 @@
 ---
 title: NamedNodeMap.removeNamedItemNS()
 slug: Web/API/NamedNodeMap/removeNamedItemNS
-page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
-browser-compat: api.NamedNodeMap.removeNamedItemNS
-translation_of: Web/API/NamedNodeMap/removeNamedItem
 l10n:
   sourceCommit: 6f983d8b9fa0081ba57ccab31a345a41ffccbbb1
 ---

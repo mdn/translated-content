@@ -1,16 +1,6 @@
 ---
 title: PushSubscription
 slug: Web/API/PushSubscription
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Push
-  - Push API
-  - PushSubscription
-  - Reference
-  - Service Workers
-translation_of: Web/API/PushSubscription
 ---
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 

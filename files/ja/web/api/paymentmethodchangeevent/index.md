@@ -1,18 +1,6 @@
 ---
 title: PaymentMethodChangeEvent
 slug: Web/API/PaymentMethodChangeEvent
-tags:
-  - API
-  - Interface
-  - Payment Handler
-  - Payment Request
-  - Payment Request API
-  - PaymentRequestUpdateEvent
-  - Reference
-  - Secure context
-  - payment
-  - インターフェイス
-translation_of: Web/API/PaymentMethodChangeEvent
 ---
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 

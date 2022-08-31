@@ -1,17 +1,6 @@
 ---
 title: PromiseRejectionEvent
 slug: Web/API/PromiseRejectionEvent
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - JavaScript
-  - PromiseRejectionEvent
-  - Promises
-  - Reference
-  - events
-  - イベント
-translation_of: Web/API/PromiseRejectionEvent
 ---
 {{APIRef("HTML DOM")}}
 

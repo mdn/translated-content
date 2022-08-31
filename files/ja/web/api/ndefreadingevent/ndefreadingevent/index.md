@@ -1,13 +1,6 @@
 ---
 title: NDEFReadingEvent.NDEFReadingEvent()
 slug: Web/API/NDEFReadingEvent/NDEFReadingEvent
-tags:
-  - API
-  - コンストラクター
-  - リファレンス
-  - NDEFReadingEvent
-browser-compat: api.NDEFReadingEvent.NDEFReadingEvent
-translation_of: Web/API/NDEFReadingEvent/NDEFReadingEvent
 ---
 {{securecontext_header}}{{APIRef()}}
 

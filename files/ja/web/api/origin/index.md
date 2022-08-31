@@ -1,15 +1,6 @@
 ---
 title: WindowOrWorkerGlobalScope.origin
 slug: Web/API/origin
-tags:
-  - API
-  - DOM
-  - Window
-  - WindowOrWorkerGlobalScope
-  - Worker
-  - ウェブ
-  - プロパティ
-translation_of: Web/API/WindowOrWorkerGlobalScope/origin
 original_slug: Web/API/WindowOrWorkerGlobalScope/origin
 ---
 {{APIRef()}}{{SeeCompatTable}}

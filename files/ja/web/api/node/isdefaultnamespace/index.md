@@ -1,11 +1,6 @@
 ---
 title: Node.isDefaultNamespace()
 slug: Web/API/Node/isDefaultNamespace
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Node.isDefaultNamespace
-translation_of: Web/API/Node/isDefaultNamespace
 ---
 {{APIRef("DOM")}}
 
