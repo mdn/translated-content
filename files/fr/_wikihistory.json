@@ -40366,14 +40366,6 @@
       "dattaz"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf": {
-    "modified": "2019-04-08T13:06:24.098Z",
-    "contributors": [
-      "SphinxKnight",
-      "MaloJaffre",
-      "bbouvier"
-    ]
-  },
   "orphaned/Glossary/DHTML": {
     "modified": "2019-03-24T00:02:32.004Z",
     "contributors": [
