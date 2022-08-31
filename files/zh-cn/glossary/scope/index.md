@@ -12,7 +12,7 @@ JavaScript 的作用域分以下三种：
 
 此外，用 [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 或 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 声明的变量属于额外的作用域：
 
-- 块级作用域：用一对括号（一个[代码块](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)）创建出来的作用域
+- 块级作用域：用一对花括号（一个[代码块](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)）创建出来的作用域
 
 由于{{glossary("function","函数")}}会创建作用域，因而在函数中定义的变量无法从该函数外部访问，也无法从其他函数内部访问，例如，下面的代码是无效的：
 
