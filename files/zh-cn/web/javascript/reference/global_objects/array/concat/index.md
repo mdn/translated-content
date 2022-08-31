@@ -101,7 +101,7 @@ console.log(numbers);
 // results in [[1, 4], 2, [3]]
 ```
 
-### Concatenating array-like objects with Symbol.isConcatSpreadable
+### 使用 Symbol.isConcatSpreadable 合并类数组对象
 
 `concat` does not treat all array-like objects as arrays by default — only if `Symbol.isConcatSpreadable` is set to a truthy value (e.g. `true`).
 
