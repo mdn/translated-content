@@ -8,7 +8,7 @@ tags:
 translation_of: Glossary/Apple_Safari
 original_slug: Glossaire/Apple_Safari
 ---
-[_Safari_](http://www.apple.com/safari/) est un {{Glossary("Browser","navigateur web")}} développé par la société Apple. Il est installé de base sur les systèmes d'exploitation OS X et iOS.
+[_Safari_](http://www.apple.com/safari/) est un {{Glossary("Browser","navigateur web")}} développé par la société Apple. Il est installé de base sur les systèmes d'exploitation OS X et iOS. Il est basé sur le moteur en source ouverte [WebKit](https://webkit.org/).
 
 ## Pour approfondir
 
