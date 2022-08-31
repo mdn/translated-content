@@ -59,4 +59,4 @@ translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 
 ## 같이 보기
 
-- [CSS 그레이디언트 사용하기](/ko/docs/CSS/Using_CSS_gradients "en/Using gradients")
+- [CSS 그레이디언트 사용하기](/ko/docs/CSS/Using_CSS_gradients)

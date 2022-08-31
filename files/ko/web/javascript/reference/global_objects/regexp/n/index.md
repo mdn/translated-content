@@ -9,15 +9,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/n
 
 ## Syntax
 
-    RegExp.$1
-    RegExp.$2
-    RegExp.$3
-    RegExp.$4
-    RegExp.$5
-    RegExp.$6
-    RegExp.$7
-    RegExp.$8
-    RegExp.$9
+```js
+RegExp.$1
+RegExp.$2
+RegExp.$3
+RegExp.$4
+RegExp.$5
+RegExp.$6
+RegExp.$7
+RegExp.$8
+RegExp.$9
+```
 
 ## Description
 

@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
 
 ## 구문
 
-    Reflect.isExtensible(target)
+```js
+Reflect.isExtensible(target)
+```
 
 ### 매개변수
 

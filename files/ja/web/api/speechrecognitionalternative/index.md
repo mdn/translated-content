@@ -1,16 +1,6 @@
 ---
 title: SpeechRecognitionAlternative
 slug: Web/API/SpeechRecognitionAlternative
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - SpeechRecognitionAlternative
-  - Web Speech API
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognitionAlternative
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 

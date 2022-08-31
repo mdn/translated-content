@@ -1,15 +1,6 @@
 ---
 title: Geolocation
 slug: Web/API/Geolocation
-tags:
-  - API
-  - Advanced
-  - 位置情報 API
-  - インターフェイス
-  - リファレンス
-  - 安全なコンテキスト
-browser-compat: api.Geolocation
-translation_of: Web/API/Geolocation
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 

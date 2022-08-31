@@ -11,7 +11,7 @@ original_slug: Glossaire/Programmation_orientée_prototype
 
 En termes simples, ce type de style permet de créer un {{Glossary('Object', 'objet')}} sans définir sa {{Glossary('Class', 'classe')}}.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

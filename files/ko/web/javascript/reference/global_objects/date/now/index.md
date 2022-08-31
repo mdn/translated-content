@@ -52,20 +52,22 @@ if (!Date.now) {
 타이밍 공격 및 핑거 프린팅에 대한 보호를 제공하기 위해 `Date.now ()`의 정밀도는 브라우저 설정에 따라 반올림 될 수 있습니다.
 Firefox에서는 `privacy.reduceTimerPrecision` 기본 설정이 기본적으로 활성화되어 있으며 Firefox 59에서는 기본값이 20µs입니다. 60 분에는 2ms가됩니다.
 
-    // Firefox 60에서 시간 정밀도 (2ms) 감소
-    Date.now();
-    // 1519211809934
-    // 1519211810362
-    // 1519211811670
-    // ...
+```js
+// Firefox 60에서 시간 정밀도 (2ms) 감소
+Date.now();
+// 1519211809934
+// 1519211810362
+// 1519211811670
+// ...
 
 
-    // `privacy.resistFingerprinting`을 활성화하여 시간 정밀도 감소
-    Date.now();
-    // 1519129853500
-    // 1519129858900
-    // 1519129864400
-    // ...
+// `privacy.resistFingerprinting`을 활성화하여 시간 정밀도 감소
+Date.now();
+// 1519129853500
+// 1519129858900
+// 1519129864400
+// ...
+```
 
 Firefox에서는 `privacy.resistFingerprinting`을 활성화 할 수도 있습니다. 정밀도는 100ms 또는 `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` 중 더 큰 값이됩니다.
 

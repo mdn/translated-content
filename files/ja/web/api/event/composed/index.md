@@ -1,13 +1,6 @@
 ---
 title: Event.composed
 slug: Web/API/Event/composed
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.Event.composed
-translation_of: Web/API/Event/composed
 ---
 {{APIRef("Shadow DOM")}}
 

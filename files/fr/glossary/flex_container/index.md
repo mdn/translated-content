@@ -12,7 +12,7 @@ Une mise en page {{glossary("flexbox")}} est définie en utilisant les valeurs `
 
 Une valeur `flex` fait que l'élément devient un conteneur flexible de niveau bloc et `inline-flex`, un conteneur flexible de niveau en ligne. Ces valeurs créent un **contexte de mise en forme flexible** pour l'élément, qui est similaire à un contexte de mise en forme de bloc dans la mesure où les flottants ne s'introduiront pas dans le conteneur et les marges du conteneur ne s'effondreront pas avec celles des articles.
 
-## En apprendre plus
+## Voir aussi
 
 ### Références de la propriété
 

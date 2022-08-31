@@ -1,18 +1,6 @@
 ---
 title: Fetch の使用
 slug: Web/API/Fetch_API/Using_Fetch
-tags:
-  - API
-  - BODY
-  - 実験的
-  - Fetch
-  - ガイド
-  - HTTP
-  - Promise
-  - Response
-  - fetch POST & string body
-  - request
-translation_of: Web/API/Fetch_API/Using_Fetch
 ---
 {{DefaultAPISidebar("Fetch API")}}
 

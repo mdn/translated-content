@@ -70,7 +70,7 @@ window.onstorage = () => {
 
 {{Compat("api.Window.storage_event")}}
 
-## Voir également
+## Voir aussi
 
 - [Web Storage API](/fr/docs/Web/API/Web_Storage_API)
 - [Using the Web Storage API](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

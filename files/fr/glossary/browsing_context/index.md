@@ -12,7 +12,7 @@ Chaque contexte de navigation possède une {{glossary("Origin","origine")}} spé
 
 La communication entre les contextes de navigation est sévèrement restreinte. Entre des contextes de la même origine, il est possible d'ouvrir et utiliser un canal {{domxref("BroadcastChannel")}}.
 
-## En apprendre plus
+## Voir aussi
 
 ### Référence technique
 

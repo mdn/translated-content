@@ -1,15 +1,6 @@
 ---
 title: 'Element: focusin イベント'
 slug: Web/API/Element/focusin_event
-tags:
-  - API
-  - DOM
-  - Element
-  - イベント
-  - FocusEvent
-  - リファレンス
-  - focusin
-translation_of: Web/API/Element/focusin_event
 ---
 {{APIRef}}
 

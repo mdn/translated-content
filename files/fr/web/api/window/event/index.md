@@ -29,6 +29,6 @@ Vous devez éviter d'utiliser cette propriété dans un nouveau code et utiliser
 
 {{Compat("api.Window.event")}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("Event.srcElement")}}

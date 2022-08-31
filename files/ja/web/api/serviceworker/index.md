@@ -1,15 +1,6 @@
 ---
 title: ServiceWorker
 slug: Web/API/ServiceWorker
-tags:
-  - API
-  - Draft
-  - Interface
-  - Offline
-  - Service Workers
-  - ServiceWorker
-  - Workers
-translation_of: Web/API/ServiceWorker
 ---
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 

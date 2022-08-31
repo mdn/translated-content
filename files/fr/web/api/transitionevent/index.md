@@ -40,7 +40,7 @@ _Hérite également des propriétés de son parent {{domxref("Event")}}_ .
 
 {{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [Utilisation des transitions CSS](/fr/docs/Web/Guide/CSS/Using_CSS_transitions)
 - Propriétés de CSS: {{cssxref ("transition")}}, {{cssxref ("transition-delay")}}, {{cssxref ("transition-duration")}}, {{cssxref ("transition-property") }}, {{Cssxref ("transition-timing-function")}}.

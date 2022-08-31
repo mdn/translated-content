@@ -1,12 +1,6 @@
 ---
 title: SVGRect
 slug: Web/API/SVGRect
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
-translation_of: Web/API/SVGRect
 ---
 {{APIRef("SVG")}}
 

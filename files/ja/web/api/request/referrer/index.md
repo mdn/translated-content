@@ -1,15 +1,6 @@
 ---
 title: Request.referrer
 slug: Web/API/Request/referrer
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Property
-  - Reference
-  - referrer
-  - request
-translation_of: Web/API/Request/referrer
 ---
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 

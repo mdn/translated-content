@@ -59,7 +59,7 @@ Dans l'exemple ci-dessous, nous avons créé une grille explicite de 3 colonnes 
 
 {{ EmbedLiveSample('Exemple', '500', '330') }}
 
-## En apprendre plus
+## Voir aussi
 
 ### Références de la propriété
 

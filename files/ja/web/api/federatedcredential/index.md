@@ -1,15 +1,6 @@
 ---
 title: FederatedCredential
 slug: Web/API/FederatedCredential
-tags:
-  - API
-  - Credential Management API
-  - FederatedCredential
-  - Interface
-  - Reference
-  - credential management
-  - インターフェイス
-translation_of: Web/API/FederatedCredential
 ---
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}
 

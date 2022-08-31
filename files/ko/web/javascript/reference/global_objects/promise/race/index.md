@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
 
 ## 구문
 
-    Promise.race(iterable);
+```js
+Promise.race(iterable);
+```
 
 ### 매개변수
 

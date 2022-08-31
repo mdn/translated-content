@@ -3,15 +3,15 @@ title: z-index가 없는 경우의 쌓임
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 ---
-« [CSS](/ko/CSS "CSS") « [<span class="title">CSS z-index 이해하기</span>](/ko/CSS/Understanding_z-index "Understanding CSS z-index")
+« [CSS](/ko/CSS) « [CSS z-index 이해하기](/ko/CSS/Understanding_z-index)
 
 ### z-index가 없는 경우의 쌓임
 
 만약 모든 엘리먼트들에 z-index가 지정되지 않았을 경우에는 엘리먼트들이 다음 순서로 아래에서부터 위로 쌓인다.
 
-1.  뿌리 엘리먼트의 배경과 테두리
-2.  자식 엘리먼트들은 HTML에서 등장하는 순서대로
-3.  position이 지정된 자식 엘리먼트들은 HTML에서 등장하는 순서대로
+1. 뿌리 엘리먼트의 배경과 테두리
+2. 자식 엘리먼트들은 HTML에서 등장하는 순서대로
+3. position이 지정된 자식 엘리먼트들은 HTML에서 등장하는 순서대로
 
 다음 예제에는 위의 쌓임 규칙을 설명하기 위한 적당한 크기의 엘리먼트들이 준비되어있다.
 
@@ -127,12 +127,12 @@ span.bold { font-weight: bold; }
 
 ### See also
 
-- [Stacking and float](/en/CSS/Understanding_z-index/Stacking_and_float "en/CSS/Understanding_z-index/Stacking_and_float") : How floating elements are handled
-- [Adding z-index](/en/CSS/Understanding_z-index/Adding_z-index "en/CSS/Understanding_z-index/Adding_z-index") : Using z-index to change default stacking
-- [The stacking context](/en/CSS/Understanding_z-index/The_stacking_context "en/CSS/Understanding_z-index/The_stacking_context") : Notes on the stacking context
-- [Stacking context example 1](/en/CSS/Understanding_z-index/Stacking_context_example_1 "en/CSS/Understanding_z-index/Stacking_context_example_1") : 2-level HTML hierarchy, z-index on the last level
-- [Stacking context example 2](/en/CSS/Understanding_z-index/Stacking_context_example_2 "en/CSS/Understanding_z-index/Stacking_context_example_2") : 2-level HTML hierarchy, z-index on all levels
-- [Stacking context example 3](/en/CSS/Understanding_z-index/Stacking_context_example_3 "en/CSS/Understanding_z-index/Stacking_context_example_3") : 3-level HTML hierarchy, z-index on the second level
+- [Stacking and float](/en/CSS/Understanding_z-index/Stacking_and_float) : How floating elements are handled
+- [Adding z-index](/en/CSS/Understanding_z-index/Adding_z-index) : Using z-index to change default stacking
+- [The stacking context](/en/CSS/Understanding_z-index/The_stacking_context) : Notes on the stacking context
+- [Stacking context example 1](/en/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
+- [Stacking context example 2](/en/CSS/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarchy, z-index on all levels
+- [Stacking context example 3](/en/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
 
 ### Original Document Information
 

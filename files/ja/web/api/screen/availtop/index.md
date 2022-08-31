@@ -1,16 +1,6 @@
 ---
 title: Screen.availTop
 slug: Web/API/Screen/availTop
-page-type: web-api-instance-property
-tags:
-  - API
-  - API:Mozilla Extensions
-  - API:WebKit Extensions
-  - DOM
-  - Non-standard
-  - Property
-browser-compat: api.Screen.availTop
-translation_of: Web/API/Screen/availTop
 ---
 {{APIRef("CSSOM")}}{{Non-standard_Header}}
 

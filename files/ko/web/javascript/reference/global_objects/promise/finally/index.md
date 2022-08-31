@@ -11,11 +11,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/finally
 
 ## 문법
 
-    p.finally(onFinally);
+```js
+p.finally(onFinally);
 
-    p.finally(function() {
-       // settled (fulfilled or rejected)
-    });
+p.finally(function() {
+    // settled (fulfilled or rejected)
+});
+```
 
 ### Parameters
 

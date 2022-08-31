@@ -6,6 +6,7 @@ original_slug: Web/HTTP/Caching_FAQ
 {{HTTPSidebar}}
 
 ## 概览
+
 HTTP 缓存存储与请求关联的响应，并将存储的响应复用于后续请求。
 
 可复用性有几个优点。首先，由于不需要将请求传递到源服务器，因此客户端和缓存越近，响应速度就越快。最典型的例子是浏览器本身为浏览器请求存储缓存。
@@ -65,6 +66,7 @@ Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
 ```http
 Cache-Control: no-store
 ```
+
 例如，Varnish Cache 使用 VCL（Varnish Configuration Language，一种 {{Glossary("DSL/Domain_specific_language", "DSL")}}）逻辑来处理缓存存储，而 service worker 结合缓存 API 允许你在 JavaScript 中创建该逻辑。
 
 这意味着如果托管缓存故意忽略 `no-store` 指令，则无需将其视为“不符合”标准。你应该做的是，避免使用 kitchen-sink 标头，但仔细阅读你正在使用的任何托管缓存机制的文档，并确保你选择的方式可以正确的控制缓存。
@@ -134,7 +136,6 @@ Age: 86400
 ```
 
 收到该响应的客户端会发现它在剩余的 518400 秒内是新鲜（fresh）的，这是响应的 `max-age` 和 `Age` 之间的差异。
-
 
 ## Expires 或 max-age
 
@@ -479,6 +480,7 @@ Cache-Control: no-cache
 ```http
 Cache-Control: no-cache, private
 ```
+
 ### 缓存破坏
 
 最适合缓存的资源是静态不可变文件，其内容永远不会改变。而对于会变化的资源，通常的最佳实践是每次内容变化时都改变URL，这样URL单元可以被缓存更长的时间。

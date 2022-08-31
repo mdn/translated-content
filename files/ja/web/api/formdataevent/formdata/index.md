@@ -1,15 +1,6 @@
 ---
 title: FormDataEvent.formData
 slug: Web/API/FormDataEvent/formData
-tags:
-  - API
-  - Experimental
-  - FormDataEvent
-  - Forms
-  - Property
-  - Reference
-translation_of: Web/API/FormDataEvent/formData
-browser-compat: api.FormDataEvent.formData
 ---
 {{APIRef("DOM")}}
 

@@ -1,15 +1,6 @@
 ---
 title: ReadableStreamBYOBReader.releaseLock()
 slug: Web/API/ReadableStreamBYOBReader/releaseLock
-tags:
-  - API
-  - Experimental
-  - Method
-  - ReadableStreamBYOBReader
-  - Reference
-  - Streams
-  - releaseLock
-translation_of: Web/API/ReadableStreamBYOBReader/releaseLock
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 

@@ -112,7 +112,7 @@ if (typeof TextEncoder === "undefined") {
 
 {{Compat("api.TextEncoder")}}
 
-## See also
+## Voir aussi
 
 - The {{DOMxRef("TextDecoder")}} interface describing the inverse operation.
 - [`StringView`](/fr/Add-ons/Code_snippets/StringView) – a C-like representation of strings based on typed arrays

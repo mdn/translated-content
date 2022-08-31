@@ -19,13 +19,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/then
 
 ## 구문
 
-    p.then(onFulfilled, onRejected);
+```JS
+p.then(onFulfilled, onRejected);
 
-    p.then(function(value) {
-      // 이행
-    }, function(reason) {
-      // 거부
-    });
+p.then(function(value) {
+  // 이행
+}, function(reason) {
+  // 거부
+});
+```
 
 ### 매개변수
 

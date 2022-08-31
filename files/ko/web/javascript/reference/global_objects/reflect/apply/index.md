@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 
 ## 구문
 
-    Reflect.apply(target, thisArgument, argumentsList)
+```js
+Reflect.apply(target, thisArgument, argumentsList)
+```
 
 ### 매개변수
 

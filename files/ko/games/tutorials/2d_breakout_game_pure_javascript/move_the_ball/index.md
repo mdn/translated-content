@@ -13,7 +13,7 @@ tags:
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/공_움직이기
 ---
-{{GamesSidebar}}{{IncludeSubnav("/ko/docs/Games")}}
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/캔버스_생성과_그리기", "Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Bounce_off_the_walls")}}
 

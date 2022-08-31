@@ -1,13 +1,6 @@
 ---
 title: 'FileReader: load イベント'
 slug: Web/API/FileReader/load_event
-tags:
-  - API
-  - Event
-  - FileReader
-  - Web
-  - load
-translation_of: Web/API/FileReader/load_event
 ---
 {{APIRef}}
 
