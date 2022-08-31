@@ -103,7 +103,7 @@ console.log(numbers);
 
 ### 使用 Symbol.isConcatSpreadable 合并类数组对象
 
-`concat` does not treat all array-like objects as arrays by default — only if `Symbol.isConcatSpreadable` is set to a truthy value (e.g. `true`).
+`concat` 默认情况下不会将类数组对象视作数组——仅在 `Symbol.isConcatSpreadable` 被设置为真值（例如，`true`）时才会将类数组对象视作数组。
 
 ```js
 const obj1 = { 0: 1, 1: 2, 2: 3, length: 3 };
