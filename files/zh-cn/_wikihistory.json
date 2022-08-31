@@ -46773,22 +46773,6 @@
       "ChenXiCC"
     ]
   },
-  "orphaned/Glossary/DHTML": {
-    "modified": "2019-03-23T23:46:38.426Z",
-    "contributors": [
-      "ziyunfei",
-      "Wind930"
-    ]
-  },
-  "orphaned/Glossary/Dynamic_programming_language": {
-    "modified": "2020-07-10T12:09:06.736Z",
-    "contributors": [
-      "JackyJnirvana",
-      "RainSlide",
-      "aimiy",
-      "lukesomnus"
-    ]
-  },
   "orphaned/Glossary_of_translation": {
     "modified": "2019-03-23T23:33:18.884Z",
     "contributors": [
@@ -46883,13 +46867,6 @@
       "jswisher",
       "wbamberg",
       "huangzijian888"
-    ]
-  },
-  "orphaned/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data": {
-    "modified": "2019-03-18T21:38:16.029Z",
-    "contributors": [
-      "wbamberg",
-      "kite-js"
     ]
   },
   "orphaned/MDN/Contribute/Howto/Be_a_beta_tester": {
@@ -47232,18 +47209,6 @@
     "contributors": [
       "teoli",
       "YeClimEric"
-    ]
-  },
-  "orphaned/Web/API/Canvas_API/A_basic_ray-caster": {
-    "modified": "2019-03-23T23:46:06.908Z",
-    "contributors": [
-      "hhxxhg",
-      "ScorpioCat",
-      "Lostangle-M",
-      "NNNaix",
-      "YeClimEric",
-      "ziyunfei",
-      "Blabla cn"
     ]
   },
   "orphaned/Web/API/ChildNode": {
@@ -48132,19 +48097,6 @@
     "contributors": [
       "Song2017",
       "FredWe"
-    ]
-  },
-  "orphaned/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla": {
-    "modified": "2019-11-25T00:57:33.951Z",
-    "contributors": [
-      "gao5252",
-      "SphinxKnight",
-      "chrisdavidmills",
-      "sijinglei",
-      "doodlewind",
-      "zezhou",
-      "Cbgrape",
-      "Teago"
     ]
   },
   "orphaned/Web/Guide/HTML/HTML": {
