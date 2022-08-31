@@ -1,19 +1,6 @@
 ---
 title: CSS の全体像
 slug: Learn/CSS/First_steps/How_CSS_is_structured
-tags:
-  - Beginner
-  - CSS
-  - HTML
-  - Learn
-  - Selectors
-  - Structure
-  - comments
-  - properties
-  - shorthand
-  - values
-  - whitespace
-translation_of: Learn/CSS/First_steps/How_CSS_is_structured
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 

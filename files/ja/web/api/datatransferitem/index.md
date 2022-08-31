@@ -1,15 +1,6 @@
 ---
 title: DataTransferItem
 slug: Web/API/DataTransferItem
-tags:
-  - API
-  - DataTransferItem
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Interface
-  - Reference
-  - drag and drop
-translation_of: Web/API/DataTransferItem
 ---
 {{APIRef("HTML Drag and Drop API")}}
 

@@ -1,14 +1,6 @@
 ---
 title: DragEvent
 slug: Web/API/DragEvent
-page-type: web-api-interface
-tags:
-  - API
-  - DragEvent
-  - Reference
-  - drag and drop
-browser-compat: api.DragEvent
-translation_of: Web/API/DragEvent
 ---
 {{APIRef("HTML Drag and Drop API")}}
 

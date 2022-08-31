@@ -1,14 +1,6 @@
 ---
 title: ウェブゲーム用の音声
 slug: Games/Techniques/Audio_for_Web_Games
-tags:
-  - Audio
-  - Games
-  - Web Audio API
-  - audio sprites
-  - spatialization
-  - syncing tracks
-translation_of: Games/Techniques/Audio_for_Web_Games
 ---
 {{GamesSidebar}}
 

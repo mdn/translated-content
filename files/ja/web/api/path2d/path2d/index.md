@@ -1,16 +1,6 @@
 ---
 title: Path2D()
 slug: Web/API/Path2D/Path2D
-tags:
-  - API
-  - Canvas
-  - Constructor
-  - Drawing
-  - Graphics
-  - Path2D
-  - Paths
-  - Reference
-translation_of: Web/API/Path2D/Path2D
 ---
 {{APIRef("Canvas API")}}{{seeCompatTable}}
 

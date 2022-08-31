@@ -52,10 +52,8 @@ function print_nextHopProtocol(perfEntry) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                                   | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Resource Timing 2', '#dom-performanceresourcetiming-nexthopprotocol', 'nextHopProtocol')}} | {{Spec2('Resource Timing 2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceResourceTiming.nextHopProtocol")}}
+{{Compat}}

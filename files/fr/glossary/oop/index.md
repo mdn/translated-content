@@ -12,7 +12,7 @@ La **POO** (Programmation Orientée Objet) est un paradigme de programmation qui
 
 Le langage {{glossary("JavaScript")}} est massivement orienté objet. Il suit un modèle basé sur le **prototypage** ([contrairement au modèle de classes](/fr/docs/Web/JavaScript/Guide/Le_mod%C3%A8le_objet_JavaScript_en_d%C3%A9tails)).
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

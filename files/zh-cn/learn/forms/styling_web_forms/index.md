@@ -3,7 +3,7 @@ title: 样式化 HTML 表单
 slug: Learn/Forms/Styling_web_forms
 original_slug: Learn/HTML/Forms/Styling_HTML_forms
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/HTML_forms_in_legacy_browsers", "Learn/HTML/Forms/Advanced_styling_for_HTML_forms", "Learn/HTML/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
 在这篇文章中，用户将学习如何使用 HTML 表单和 CSS 以使页面更加美观。令人惊讶的是，这可能有点棘手。由于历史和技术的原因，表单部件不能很好地与 CSS 配合工作。由于这些困难，许多开发人员选择[构建自己的 HTML 小部件](/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets)以获得更好的控制和视觉观感。然而，在现代浏览器中，web 设计者越来越多地控制表单元素的设计。让我们深入研究。
 
@@ -383,20 +383,25 @@ button:focus {
 
 如你所见，若我们想构建只包含文本域和按钮的表单，用 CSS 美化它们非常容易。如果你想要知道更多能够让你的处理表单组件时更轻松的 CSS 小技巧，看一看 [normalize.css](http://necolas.github.com/normalize.css) 项目的表单部分。
 
-[下一篇文章中](/en-US/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms)，我们将会看到如何处理落入"不好的" 和"丑陋的" 分类的表单组件。
+[下一篇文章中](/zh-CN/docs/Learn/Forms/Advanced_form_styling)，我们将会看到如何处理落入“不好的”和“丑陋的”分类的表单组件。
 
-{{PreviousMenuNext("Learn/HTML/Forms/HTML_forms_in_legacy_browsers", "Learn/HTML/Forms/Advanced_styling_for_HTML_forms", "Learn/HTML/Forms")}}
+{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
-## 在本单元中
+## 本章目录
 
-- [Your first HTML form](/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [How to structure an HTML form](/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [The native form widgets](/en-US/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Sending form data](/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/en-US/docs/Learn/HTML/Forms/Form_validation)
-- [How to build custom form widgets](/en-US/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Sending forms through JavaScript](/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [HTML forms in legacy browsers](/en-US/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Advanced styling for HTML forms](/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Property compatibility table for form widgets](/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+- [创建我的第一个表单](/zh-CN/docs/Learn/Forms/Your_first_form)
+- [如何构造 web 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
+- [原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
+- [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
+- [其它表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
+- [样式化 web 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
+- [高级表单样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
+- [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
+- [客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
+- [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
+
+### 进阶内容
+
+- [如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [通过 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [表单控件的属性兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

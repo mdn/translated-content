@@ -1,7 +1,6 @@
 ---
 title: 疑似クラスと疑似要素
 slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
-translation_of: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
 

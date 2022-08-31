@@ -1,16 +1,6 @@
 ---
 title: リストの装飾
 slug: Learn/CSS/Styling_text/Styling_lists
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - Guide
-  - Styling
-  - Text
-  - bullets
-  - lists
-translation_of: Learn/CSS/Styling_text/Styling_lists
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 

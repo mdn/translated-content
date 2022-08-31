@@ -700,8 +700,6 @@ function tmz() {
 
 ## 其它例子
 
-- [A basic ray-caster](/zh-CN/docs/Web/API/Canvas_API/A_basic_ray-caster)
-  - : 一个关于如何使用键盘关联控制动画的优秀的案例。
 - [Advanced animations](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
   - : 我们将在下一章看到一些先进的动画技术和物理现象。
 

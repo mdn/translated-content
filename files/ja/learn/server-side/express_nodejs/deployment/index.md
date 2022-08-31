@@ -1,16 +1,6 @@
 ---
 title: 'Express チュートリアル Part 7: プロダクションへのデプロイ'
 slug: Learn/Server-side/Express_Nodejs/deployment
-tags:
-  - CodingScripting
-  - Express
-  - Node
-  - heroku
-  - サーバサイド
-  - デプロイ
-  - 初心者
-  - 学習
-translation_of: Learn/Server-side/Express_Nodejs/deployment
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 

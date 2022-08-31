@@ -1,13 +1,6 @@
 ---
 title: 'Document: DOMContentLoaded イベント'
 slug: Web/API/Document/DOMContentLoaded_event
-tags:
-  - API
-  - DOMContentLoaded
-  - Document
-  - Event
-  - Web
-translation_of: Web/API/Document/DOMContentLoaded_event
 ---
 {{APIRef}}
 

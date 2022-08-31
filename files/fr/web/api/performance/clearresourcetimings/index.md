@@ -63,10 +63,8 @@ function clear_performance_timings() {
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                               | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Resource Timing', '#dom-performance-clearresourcetimings', 'clearResourceTimings()')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Performance.clearResourceTimings")}}
+{{Compat}}

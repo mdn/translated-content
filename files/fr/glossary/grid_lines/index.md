@@ -153,7 +153,7 @@ Les lignes créées dans la grille explicite peuvent être nommées, en ajoutant
 
 {{ EmbedLiveSample('Nommage_des_lignes', '500', '250') }}
 
-## En apprendre plus
+## Voir aussi
 
 ### Références de propriété
 

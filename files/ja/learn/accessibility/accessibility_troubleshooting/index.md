@@ -1,17 +1,6 @@
 ---
 title: '評価: アクセシビリティのトラブルシューティング'
 slug: Learn/Accessibility/Accessibility_troubleshooting
-tags:
-  - Accessibility
-  - Assesment
-  - Beginner
-  - CSS
-  - CodingScripting
-  - HTML
-  - JavaScript
-  - Learn
-  - WAI-ARIA
-translation_of: Learn/Accessibility/Accessibility_troubleshooting
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 

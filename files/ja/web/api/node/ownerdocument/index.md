@@ -1,12 +1,6 @@
 ---
 title: Node.ownerDocument
 slug: Web/API/Node/ownerDocument
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Node.ownerDocument
-translation_of: Web/API/Node/ownerDocument
 ---
 {{APIRef("DOM")}}
 

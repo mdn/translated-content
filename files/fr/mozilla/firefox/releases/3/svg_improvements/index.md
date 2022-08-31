@@ -46,7 +46,7 @@ Firefox 3 offre un support [SVG](fr/SVG) amélioré par rapport aux versions pr�
 - Les transitions `fill`/`stroke` sont à présent supportées ([spécification](http://www.w3.org/TR/SVG/painting.html#SpecifyingPaint))
 - Les unités `em` et `ex` sont à présent supportées pour l'indication de longueurs ({{ Bug(305859) }}).
 
-### Voir également
+### Voir aussi
 
 - [SVG](fr/SVG)
 - [SVG dans Firefox](fr/SVG_dans_Firefox)

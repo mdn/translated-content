@@ -1,12 +1,6 @@
 ---
 title: PerformanceResourceTiming.decodedBodySize
 slug: Web/API/PerformanceResourceTiming/decodedBodySize
-tags:
-  - API
-  - Web パフォーマンス
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/PerformanceResourceTiming/decodedBodySize
 ---
 {{APIRef("Resource Timing API")}}
 

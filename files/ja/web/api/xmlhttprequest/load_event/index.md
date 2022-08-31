@@ -1,15 +1,6 @@
 ---
 title: 'XMLHttpRequest: load イベント'
 slug: Web/API/XMLHttpRequest/load_event
-tags:
-  - API
-  - イベント
-  - ProgressEvent
-  - ウェブ
-  - XMLHttpRequest
-  - load
-browser-compat: api.XMLHttpRequest.load_event
-translation_of: Web/API/XMLHttpRequest/load_event
 ---
 {{APIRef}}
 

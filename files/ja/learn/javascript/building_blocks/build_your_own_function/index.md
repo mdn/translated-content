@@ -1,20 +1,6 @@
 ---
 title: 独自の関数を作る
 slug: Learn/JavaScript/Building_blocks/Build_your_own_function
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Functions
-  - Guide
-  - JavaScript
-  - Learn
-  - Tutorial
-  - build
-  - invoke
-  - l10n:priority
-  - parameters
-translation_of: Learn/JavaScript/Building_blocks/Build_your_own_function
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
 

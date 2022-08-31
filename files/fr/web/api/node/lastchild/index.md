@@ -33,4 +33,3 @@ var corner_td = tr.lastChild;
 ## Compatibilité des navigateurs
 
 {{Compat}}
-

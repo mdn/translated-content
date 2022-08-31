@@ -1,11 +1,6 @@
 ---
 title: パフォーマンスタイムライン
 slug: Web/API/Performance_Timeline
-tags:
-  - Web パフォーマンス
-  - ガイド
-  - 概要
-translation_of: Web/API/Performance_Timeline
 ---
 {{DefaultAPISidebar("Performance Timeline API")}}
 

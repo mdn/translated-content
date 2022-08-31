@@ -1,23 +1,6 @@
 ---
 title: HTML 表の高度な機能とアクセシビリティ
 slug: Learn/HTML/Tables/Advanced
-tags:
-  - Accessibility
-  - Advanced
-  - Article
-  - Beginner
-  - CodingScripting
-  - HTML
-  - Headers
-  - Learn
-  - caption
-  - scope
-  - sumary
-  - table
-  - tbody
-  - tfoot
-  - thead
-translation_of: Learn/HTML/Tables/Advanced
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
 

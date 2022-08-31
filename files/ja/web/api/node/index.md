@@ -1,11 +1,6 @@
 ---
 title: Node
 slug: Web/API/Node
-tags:
-  - インターフェイス
-  - リファレンス
-browser-compat: api.Node
-translation_of: Web/API/Node
 ---
 {{APIRef("DOM")}}
 

@@ -142,10 +142,8 @@ try {
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                                   | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('Event Timing API','#sec-performance-event-timing','PerformanceEventTiming')}} | {{Spec2('Event Timing API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceEventTiming")}}
+{{Compat}}

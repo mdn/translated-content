@@ -1,12 +1,6 @@
 ---
 title: HTML5
 slug: orphaned/Web/Guide/HTML/HTML5
-tags:
-  - HTML
-  - HTML5
-  - References
-  - Web Development
-translation_of: Web/Guide/HTML/HTML5
 original_slug: Web/Guide/HTML/HTML5
 ---
 HTML5 は [HTML](/ja/docs/HTML "HTML") で定義されている最新の標準仕様の名称です。この用語は、 2 つの異なる概念を表しています。これは HTML 言語の新しいバージョンであり、新しい要素、属性、動作、**および**より多彩でパワフルなウェブサイトやアプリケーションを構築することができるより大きな一連の技術でもあります。このセットは HTML5 & friends と呼ばれることがあり、よく HTML5 と短縮されます。

@@ -1,17 +1,6 @@
 ---
 title: 'Notification: show イベント'
 slug: Web/API/Notification/show_event
-page-type: web-api-event
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Event
-  - Reference
-  - show
-browser-compat: api.Notification.show_event
-translation_of: Web/API/Notification/show_event
 original_slug: Web/API/Notification/onshow
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

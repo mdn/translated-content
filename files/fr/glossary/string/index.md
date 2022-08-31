@@ -13,7 +13,7 @@ Dans les langages de programmation, le terme chaîne de {{Glossary("character","
 
 En {{Glossary("JavaScript")}}, une chaîne de caractères est l'une des {{Glossary("Primitive", "valeurs primitives")}} et l'objet {{jsxref("String")}} est un {{Glossary("wrapper")}} enveloppant une primitive String.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

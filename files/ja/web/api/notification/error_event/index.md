@@ -1,17 +1,6 @@
 ---
 title: 'Notification: error イベント'
 slug: Web/API/Notification/error_event
-page-type: web-api-event
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Event
-  - Reference
-  - error
-browser-compat: api.Notification.error_event
-translation_of: Web/API/Notification/error_event
 original_slug: Web/API/Notification/onerror
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

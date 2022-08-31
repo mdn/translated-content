@@ -54,6 +54,6 @@ Server: Apache/2.4.1 (Unix)
 
 {{Compat("http.headers.Server")}}
 
-## Voir également
+## Voir aussi
 
 - {{HTTPHeader("Allow")}}

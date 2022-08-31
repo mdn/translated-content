@@ -1,7 +1,6 @@
 ---
 title: 'Express チュートリアル Part 6: フォームの操作'
 slug: Learn/Server-side/Express_Nodejs/forms
-translation_of: Learn/Server-side/Express_Nodejs/forms
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
 

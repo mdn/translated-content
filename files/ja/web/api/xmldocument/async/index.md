@@ -1,17 +1,6 @@
 ---
 title: XMLDocument.async
 slug: Web/API/XMLDocument/async
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Deprecated
-  - Document
-  - Non-standard
-  - Property
-  - Reference
-  - async
-translation_of: Web/API/XMLDocument/async
 original_slug: Web/API/Document/async
 ---
 {{APIRef("DOM")}}{{Non-standard_header}}{{Deprecated_header}}

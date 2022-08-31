@@ -1,13 +1,6 @@
 ---
 title: Document()
 slug: Web/API/Document/Document
-tags:
-  - API
-  - DOM
-  - Document
-  - Reference
-  - コンストラクター
-translation_of: Web/API/Document/Document
 ---
 {{APIRef}}
 

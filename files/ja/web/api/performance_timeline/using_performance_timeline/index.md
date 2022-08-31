@@ -1,10 +1,6 @@
 ---
 title: パフォーマンスタイムラインの使用
 slug: Web/API/Performance_Timeline/Using_Performance_Timeline
-tags:
-  - Web パフォーマンス
-  - ガイド
-translation_of: Web/API/Performance_Timeline/Using_Performance_Timeline
 ---
 {{DefaultAPISidebar("Performance Timeline API")}}
 

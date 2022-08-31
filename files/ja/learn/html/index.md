@@ -1,19 +1,6 @@
 ---
 title: 'HTML の学習: ガイドとチュートリアル'
 slug: Learn/HTML
-tags:
-  - Beginner
-  - Guide
-  - HTML
-  - Intro
-  - Learn
-  - Topic
-  - ガイド
-  - トピック
-  - 初心者
-  - 学習
-  - 導入
-translation_of: Learn/HTML
 ---
 {{LearnSidebar}}
 

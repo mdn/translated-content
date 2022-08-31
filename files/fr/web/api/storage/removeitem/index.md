@@ -59,13 +59,11 @@ function populateStorage() {
 
 ## Spécifications
 
-| Spécification                                                                                                            | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-removeitem', 'Storage.removeItem')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Storage.removeItem")}}
+{{Compat}}
 
 ## Voir aussi
 

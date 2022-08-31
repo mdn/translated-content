@@ -1,17 +1,6 @@
 ---
 title: サードパーティ API
 slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
-tags:
-  - 3rd party
-  - API
-  - Beginner
-  - CodingScripting
-  - Google Maps
-  - Learn
-  - NYTimes
-  - Third party
-  - youtube
-translation_of: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
 

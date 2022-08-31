@@ -1,23 +1,6 @@
 ---
 title: 関数 — 再利用可能なコードブロック
 slug: Learn/JavaScript/Building_blocks/Functions
-tags:
-  - API
-  - Article
-  - Beginner
-  - Browser
-  - CodingScripting
-  - Custom
-  - Functions
-  - Guide
-  - JavaScript
-  - Learn
-  - Method
-  - anonymous
-  - invoke
-  - l10n:priority
-  - parameters
-translation_of: Learn/JavaScript/Building_blocks/Functions
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
 

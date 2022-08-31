@@ -1,12 +1,6 @@
 ---
 title: Node.childNodes
 slug: Web/API/Node/childNodes
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Node.childNodes
-translation_of: Web/API/Node/childNodes
 ---
 {{APIRef("DOM")}}
 

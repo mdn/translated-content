@@ -1,16 +1,6 @@
 ---
 title: NavigatorStorage.storage
 slug: orphaned/Web/API/NavigatorStorage/storage
-tags:
-  - API
-  - Navigator
-  - NavigatorStorage
-  - Property
-  - Reference
-  - Secure context
-  - Storage
-  - WorkerNavigator
-translation_of: Web/API/NavigatorStorage/storage
 original_slug: Web/API/NavigatorStorage/storage
 ---
 {{securecontext_header}}{{APIRef("Storage")}}

@@ -1,23 +1,6 @@
 ---
 title: JavaScript とは
 slug: Learn/JavaScript/First_steps/What_is_JavaScript
-tags:
-  - 3rd party
-  - API
-  - Article
-  - Beginner
-  - Browser
-  - CodingScripting
-  - Core
-  - JavaScript
-  - Learn
-  - Script
-  - comments
-  - external
-  - inline
-  - l10n:priority
-  - what
-translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 ---
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 

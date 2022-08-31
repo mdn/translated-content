@@ -1,15 +1,6 @@
 ---
 title: Permissions.revoke()
 slug: Web/API/Permissions/revoke
-tags:
-  - API
-  - Experimental
-  - Method
-  - Permissions
-  - Permissions API
-  - Reference
-  - revoke
-translation_of: Web/API/Permissions/revoke
 ---
 {{APIRef("Permissions API")}}{{SeeCompatTable}}
 

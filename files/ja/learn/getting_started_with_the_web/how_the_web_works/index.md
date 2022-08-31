@@ -1,22 +1,6 @@
 ---
 title: ウェブのしくみ
 slug: Learn/Getting_started_with_the_web/How_the_Web_works
-tags:
-  - Beginner
-  - Client
-  - DNS
-  - HTTP
-  - IP
-  - Infrastructure
-  - Learn
-  - Server
-  - TCP
-  - l10n:priority
-  - クライアント
-  - サーバー
-  - 初心者
-  - 学習
-translation_of: Learn/Getting_started_with_the_web/How_the_Web_works
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
 

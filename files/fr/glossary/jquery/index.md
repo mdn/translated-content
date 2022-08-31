@@ -35,7 +35,7 @@ window.onload = function() {
 | -------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------ |
 | `npm install jquery` | `bower install https://code.jquery.com/jquery-3.2.1.min.js` | `https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js` |
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

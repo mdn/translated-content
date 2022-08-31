@@ -1,14 +1,6 @@
 ---
 title: DOMRectReadOnly.fromRect()
 slug: Web/API/DOMRectReadOnly/fromRect
-tags:
-  - API
-  - DOMRectReadOnly
-  - 位置
-  - メソッド
-  - リファレンス
-browser-compat: api.DOMRectReadOnly.fromRect
-translation_of: Web/API/DOMRectReadOnly/fromRect
 ---
 {{APIRef("Geometry Interfaces")}}
 

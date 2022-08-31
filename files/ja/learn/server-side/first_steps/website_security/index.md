@@ -1,17 +1,6 @@
 ---
 title: Web サイトのセキュリティ
 slug: Learn/Server-side/First_steps/Website_security
-tags:
-  - CodingScripting
-  - Web サイトセキュリティ
-  - Web セキュリティ
-  - イントロダクション
-  - ガイド
-  - サーバサイドプログラミング
-  - セキュリテイ
-  - 初心者
-  - 学習
-translation_of: Learn/Server-side/First_steps/Website_security
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 

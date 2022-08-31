@@ -1,15 +1,6 @@
 ---
 title: PointerEvent.tangentialPressure
 slug: Web/API/PointerEvent/tangentialPressure
-tags:
-  - API
-  - DOM
-  - Pointer Events
-  - PointerEvent
-  - Property
-  - Reference
-  - tangentialPressure
-translation_of: Web/API/PointerEvent/tangentialPressure
 ---
 {{ APIRef("Pointer Events") }}
 

@@ -1,30 +1,6 @@
 ---
 title: ツールとテスト
 slug: Learn/Tools_and_testing
-tags:
-  - Accessibility
-  - Automation
-  - Beginner
-  - CSS
-  - CodingScripting
-  - HTML
-  - JavaScript
-  - Landing
-  - Learn
-  - Testing
-  - Tools
-  - Topic
-  - cross browser
-  - user testing
-  - アクセシビリティ
-  - クロスブラウザー
-  - ツール
-  - テスト
-  - トピック
-  - 初心者
-  - 学習
-  - 自動化
-translation_of: Learn/Tools_and_testing
 ---
 {{LearnSidebar}}
 

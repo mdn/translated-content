@@ -1,15 +1,6 @@
 ---
 title: サーバサイドの Web サイトプログラミングの第一歩
 slug: Learn/Server-side/First_steps
-tags:
-  - CodingScripting
-  - Intro
-  - Landing
-  - ガイド
-  - サーバサイドプログラミング
-  - 初心者
-  - 学習
-translation_of: Learn/Server-side/First_steps
 ---
 {{LearnSidebar}}
 

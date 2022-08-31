@@ -1,24 +1,6 @@
 ---
 title: XRRigidTransform.matrix
 slug: Web/API/XRRigidTransform/matrix
-tags:
-  - API
-  - AR
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRRigidTransform
-  - augmented
-  - matrix
-  - transform
-translation_of: Web/API/XRRigidTransform/matrix
 ---
 {{APIRef("WebXR Device API")}}
 

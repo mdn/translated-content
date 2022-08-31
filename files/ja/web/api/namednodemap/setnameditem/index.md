@@ -1,12 +1,6 @@
 ---
 title: NamedNodeMap.setNamedItem()
 slug: Web/API/NamedNodeMap/setNamedItem
-page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
-browser-compat: api.NamedNodeMap.setNamedItem
-translation_of: Web/API/NamedNodeMap/setNamedItem
 l10n:
   sourceCommit: 6f983d8b9fa0081ba57ccab31a345a41ffccbbb1
 ---

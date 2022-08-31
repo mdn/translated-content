@@ -1,11 +1,6 @@
 ---
 title: Node.firstChild
 slug: Web/API/Node/firstChild
-tags:
-  - プロパティ
-  - リファレンス
-browser-compat: api.Node.firstChild
-translation_of: Web/API/Node/firstChild
 ---
 {{APIRef("DOM")}}
 

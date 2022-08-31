@@ -1,12 +1,6 @@
 ---
 title: バイナリデータの送信と受信
 slug: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
-tags:
-  - AJAX
-  - FileReader
-  - MIME
-  - XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
 ---
 ## JavaScript 型付き配列を使ったバイナリデータの受信
 

@@ -258,7 +258,7 @@ function displayPoseStats(pose) {
 
 This article has given you a very basic idea of how to use the Gamepad Extensions to use VR controllers inside WebVR apps. In a real app you'd probably have a much more complex control system in effect, with controls assigned to the buttons on the VR controllers, and the display being affected by both the display pose and the controller poses simultaneously. Here however, we just wanted to isolate the pure Gamepad Extensions parts of that.
 
-## See also
+## Voir aussi
 
 - [WebVR API](/fr/docs/Web/API/WebVR_API)
 - [Gamepad API](/fr/docs/Web/API/Gamepad_API)

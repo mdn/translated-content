@@ -1,16 +1,6 @@
 ---
 title: PerformanceNavigation.type
 slug: Web/API/PerformanceNavigation/type
-tags:
-  - API
-  - PerformanceNavigation
-  - legacy
-  - ナビゲーションタイミング
-  - プロパティ
-  - 後方互換性
-  - 読み取り専用
-  - 非推奨
-translation_of: Web/API/PerformanceNavigation/type
 ---
 {{APIRef("Navigation Timing")}}
 

@@ -1,21 +1,6 @@
 ---
 title: 便利な文字列メソッド
 slug: Learn/JavaScript/First_steps/Useful_string_methods
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - case
-  - indexof
-  - l10n:priority
-  - length
-  - lower
-  - replace
-  - split
-  - upper
-translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
