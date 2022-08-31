@@ -204,7 +204,6 @@
 /zh-CN/docs/Core_JavaScript_1.5_Reference:Global_Objects:RegExp:lastIndex	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
 /zh-CN/docs/Core_JavaScript_1.5_Reference:Global_Properties	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
 /zh-CN/docs/Core_JavaScript_1.5_Reference:Statements:throw	/zh-CN/docs/Web/JavaScript/Reference/Statements/throw
-/zh-CN/docs/DHTML	/zh-CN/docs/orphaned/Glossary/DHTML
 /zh-CN/docs/DOM/Blob	/zh-CN/docs/Web/API/Blob
 /zh-CN/docs/DOM/BlobBuilder	/zh-CN/docs/Web/API/BlobBuilder
 /zh-CN/docs/DOM/CSSRule	/zh-CN/docs/Web/API/CSSRule
@@ -532,7 +531,6 @@
 /zh-CN/docs/Glossary/404	/zh-CN/docs/Web/HTTP/Status/404
 /zh-CN/docs/Glossary/502	/zh-CN/docs/Web/HTTP/Status/502
 /zh-CN/docs/Glossary/Bézier_curve	/zh-CN/docs/Glossary/Bezier_curve
-/zh-CN/docs/Glossary/DHTML	/zh-CN/docs/orphaned/Glossary/DHTML
 /zh-CN/docs/Glossary/Dynamic_programming_language	/zh-CN/docs/orphaned/Glossary/Dynamic_programming_language
 /zh-CN/docs/Glossary/Header	/zh-CN/docs/Glossary/HTTP_header
 /zh-CN/docs/Glossary/IP地址	/zh-CN/docs/Glossary/IP_Address
