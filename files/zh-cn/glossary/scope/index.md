@@ -60,4 +60,4 @@ console.log(x); // ReferenceError: x is not defined
 
 ## 参见
 
-- 见维基百科词条：[作用域](https://zh.wikipedia.org/wiki/%E4%BD%9C%E7%94%A8%E5%9F%9F)
+- 见维基百科词条：[作用域](https://zh.wikipedia.org/wiki/作用域)
