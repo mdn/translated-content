@@ -90,7 +90,7 @@ This change can be made either by using export or an environment file or using t
 
 Logging calls can have an impact on a high-traffic website. In a production environment, you may need to log website activity (e.g. tracking traffic or logging API calls) but you should attempt to minimize the amount of logging added for debugging purposes.
 
-One way to minimize "debug" logging in production is to use a module like [debug ](https://www.npmjs.com/package/debug)that allows you to control what logging is performed by setting an environment variable. For example, the code fragment below shows how you might set up "author" logging. The debug variable is declared with the name 'author', and the prefix "author" will be automatically displayed for all logs from this object.
+One way to minimize "debug" logging in production is to use a module like [debug](https://www.npmjs.com/package/debug) that allows you to control what logging is performed by setting an environment variable. For example, the code fragment below shows how you might set up "author" logging. The debug variable is declared with the name 'author', and the prefix "author" will be automatically displayed for all logs from this object.
 
 ```js
 var debug = require('debug')('author');
@@ -121,7 +121,7 @@ set DEBUG=author,book
 export DEBUG="author,book"
 ```
 
-> **Note:** **Challenge:** Calls to `debug` can replace logging you might previously have done using `console.log()` or `console.error()`. Replace any `console.log()` calls in your code with logging via the [debug ](https://www.npmjs.com/package/debug)module. Turn the logging on and off in your development environment by setting the DEBUG variable and observe the impact this has on logging.
+> **Note:** **Challenge:** Calls to `debug` can replace logging you might previously have done using `console.log()` or `console.error()`. Replace any `console.log()` calls in your code with logging via the [debug](https://www.npmjs.com/package/debug) module. Turn the logging on and off in your development environment by setting the DEBUG variable and observe the impact this has on logging.
 
 If you need to log website activity you can use a logging library like _Winston_ or _Bunyan_. For more information on this topic see: [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html).
 
@@ -229,23 +229,23 @@ Heroku is closely integrated with the **git** source code version control system
 
 There are a lot of ways of to work with git, but one of the easiest is to first set up an account on [GitHub](https://github.com/), create the repository there, and then sync to it locally:
 
-1.  Visit <https://github.com/> and create an account.
-2.  Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
-3.  Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
+1. Visit <https://github.com/> and create an account.
+2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
+3. Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
 
     - Enter a new repository name (e.g. _express-locallibrary-tutorial_), and description (e.g. "Local Library website written in Express (Node)".
     - Choose **Node** in the _Add .gitignore_ selection list.
     - Choose your preferred license in the _Add license_ selection list.
     - Check **Initialize this repository with a README**.
 
-4.  Press **Create repository**.
-5.  Click the green "**Clone or download**" button on your new repo page.
-6.  Copy the URL value from the text field inside the dialog box that appears (it should be something like: **https\://github.com/_\<your_git_user_id>_/express-locallibrary-tutorial.git**).
+4. Press **Create repository**.
+5. Click the green "**Clone or download**" button on your new repo page.
+6. Copy the URL value from the text field inside the dialog box that appears (it should be something like: **https\://github.com/_\<your_git_user_id>_/express-locallibrary-tutorial.git**).
 
 Now the repository ("repo") is created we are going to want to clone it on our local computer:
 
-1.  Install _git_ for your local computer (you can find versions for different platforms [here](https://git-scm.com/downloads)).
-2.  Open a command prompt/terminal and clone your repository using the URL you copied above:
+1. Install _git_ for your local computer (you can find versions for different platforms [here](https://git-scm.com/downloads)).
+2. Open a command prompt/terminal and clone your repository using the URL you copied above:
 
     ```bash
     git clone https://github.com/<your_git_user_id>/express-locallibrary-tutorial.git
@@ -253,7 +253,7 @@ Now the repository ("repo") is created we are going to want to clone it on our l
 
     This will create the repository below the current point.
 
-3.  Navigate into the new repo.
+3. Navigate into the new repo.
 
     ```bash
     cd express-locallibrary-tutorial
@@ -261,12 +261,14 @@ Now the repository ("repo") is created we are going to want to clone it on our l
 
 The final step is to copy in your application and then add the files to your repo using git:
 
-1.  Copy your Express application into this folder (excluding **/node_modules**, which contains dependency files that you should fetch from NPM as needed).
-2.  Open a command prompt/terminal and use the `add` command to add all files to git.
-3.  ```bash
+1. Copy your Express application into this folder (excluding **/node_modules**, which contains dependency files that you should fetch from NPM as needed).
+2. Open a command prompt/terminal and use the `add` command to add all files to git.
+
+3. ```bash
     git add -A
     ```
-4.  Use the status command to check all files that you are about to add are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
+
+4. Use the status command to check all files that you are about to add are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
 
     ```
     > git status
@@ -278,13 +280,13 @@ The final step is to copy in your application and then add the files to your rep
             new file:   ...
     ```
 
-5.  When you're satisfied commit the files to your local repository:
+5. When you're satisfied commit the files to your local repository:
 
     ```bash
     git commit -m "First version of application moved into github"
     ```
 
-6.  Then synchronize your local repository to the Github website, using the following:
+6. Then synchronize your local repository to the Github website, using the following:
 
     ```
     git push origin master

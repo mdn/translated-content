@@ -20,13 +20,13 @@ p {
 
 コードを働かせるには、この (上記の) CSS を HTML 文書に適用する必要があります。そうしないと、このスタイルはブラウザーの HTML 文書の表示に影響しません。 (今までのプロジェクトを実行していない場合は、ここでいったん止めて[ファイルの扱い](/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files)と [HTML の基本](/ja/docs/Learn/Getting_started_with_the_web/HTML_basics)を読み、まず何をする必要があるのかを見てください。)
 
-1.  `index.html` ファイルを開き、先頭 ({{HTMLElement("head")}} タグと `</head>` タグの間) に以下の行を貼り付けてください。
+1. `index.html` ファイルを開き、先頭 ({{HTMLElement("head")}} タグと `</head>` タグの間) に以下の行を貼り付けてください。
 
     ```html
     <link href="styles/style.css" rel="stylesheet">
     ```
 
-2.  `index.html` を保存し、ブラウザーで読み込んでください。次のように表示されるはずです。
+2. `index.html` を保存し、ブラウザーで読み込んでください。次のように表示されるはずです。
 
 ![Mozilla のロゴといくつかの段落です。段落のテキストは、 CSS によって赤くスタイル付けされています。](website-screenshot-styled.png)段落のテキストが赤くなっていれば、おめでとう！ CSS が動作しています。
 
@@ -91,7 +91,7 @@ p, li, h1 {
 
 CSS の基本をいくつか勉強しましたので、`style.css` ファイルにいくつかの規則と情報を追加して、この例を見栄え良くしましょう。
 
-1.  まず、以前に[ウェブサイトをどんな外見にするか](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)で保存した、 [Google フォントの出力](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#font)を探します。 {{htmlelement("link")}} 要素を `index.html` の先頭のどこか ({{HTMLElement("head")}} タグと `</head>` タグの間) に追加します。それは次のようなものです。
+1. まず、以前に[ウェブサイトをどんな外見にするか](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)で保存した、 [Google フォントの出力](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#font)を探します。 {{htmlelement("link")}} 要素を `index.html` の先頭のどこか ({{HTMLElement("head")}} タグと `</head>` タグの間) に追加します。それは次のようなものです。
 
     ```html
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -99,8 +99,8 @@ CSS の基本をいくつか勉強しましたので、`style.css` ファイル�
 
     このコードは、ウェブページに Open Sans フォントファミリを読み込むスタイルシートにページをリンクします。
 
-2.  次に `style.css` ファイルにある既存の規則を削除します。試験としては良いものでしたが、赤いテキストだらけにするのはもうやめましょう。
-3.  以下の行 (下記参照) を追加し、 `font-family` の割り当てを[ウェブサイトをどんな外見にするか](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)で選択した `font-family` に置き換えます。 `font-family` というプロパティは、テキストに使用するフォントを指します。この規則では、ページ全体の基本フォントとフォントの大きさを定義します。 {{HTMLElement("html")}} はページ全体の親要素なので、その中のすべての要素は同じ `font-size` と `font-family` を継承します。
+2. 次に `style.css` ファイルにある既存の規則を削除します。試験としては良いものでしたが、赤いテキストだらけにするのはもうやめましょう。
+3. 以下の行 (下記参照) を追加し、 `font-family` の割り当てを[ウェブサイトをどんな外見にするか](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)で選択した `font-family` に置き換えます。 `font-family` というプロパティは、テキストに使用するフォントを指します。この規則では、ページ全体の基本フォントとフォントの大きさを定義します。 {{HTMLElement("html")}} はページ全体の親要素なので、その中のすべての要素は同じ `font-size` と `font-family` を継承します。
 
     ```css
     html {
@@ -111,7 +111,7 @@ CSS の基本をいくつか勉強しましたので、`style.css` ファイル�
 
     > **Note:** CSS の `/*` と `*/` の間にあるものは何でも **CSS コメント**になります。ブラウザーはコードをレンダリングするときにこれを無視します。 CSS コメントはコードや論理について役立つメモを書くための方法です。
 
-4.  次に、 HTML 本文内にテキストを配置する要素 ({{htmlelement("h1")}}, {{htmlelement("li")}}, {{htmlelement("p")}}) のフォントの大きさを設定します。また、見出しを中央揃えにします。最後に、 2 つ目の規則セット (下記) を展開して、行の高さや文字の間隔などの設定を行い、本文のコンテンツを読みやすくしましょう。
+4. 次に、 HTML 本文内にテキストを配置する要素 ({{htmlelement("h1")}}, {{htmlelement("li")}}, {{htmlelement("p")}}) のフォントの大きさを設定します。また、見出しを中央揃えにします。最後に、 2 つ目の規則セット (下記) を展開して、行の高さや文字の間隔などの設定を行い、本文のコンテンツを読みやすくしましょう。
 
     ```css
     h1 {
