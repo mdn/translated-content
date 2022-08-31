@@ -3,11 +3,11 @@ title: フォームへの高度なスタイル設定
 slug: Learn/Forms/Advanced_form_styling
 l10n:
   sourceCommit: 05324ee8658ea78ab284a736511581effbaf784b
-original_slug: Learn/Forms/Advanced_styling_for_HTML_forms
+original_slug: Learn/Forms/Learn/Forms/Advanced_form_styling
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
 
-この記事では、スタイル設定がより難しい、「悪しき」「醜い」カテゴリーに分類されるタイプのフォーム制御にスタイル設定するために、 CSS で何ができるかを見ていきます。[前の記事](/ja/docs/Learn/Forms/Styling_web_forms)で見たように、テキストフィールドやボタンでの CSS 使用はまったく問題がありません。ここからは、ウェブフォームへのスタイル設定の闇の部分を見ていきます。
+この記事では、スタイル設定がより難しい、「不良」「劣悪」に分類される種類のフォームコントロールにスタイル設定するために、 CSS で何ができるかを見ていきます。[前の記事](/ja/docs/Learn/Forms/Styling_web_forms)で見たように、テキストフィールドやボタンでの CSS 使用はまったく問題がありません。ここからは、ウェブフォームへのスタイル設定の闇の部分を見ていきます。
 
 <table>
   <tbody>
@@ -30,14 +30,14 @@ original_slug: Learn/Forms/Advanced_styling_for_HTML_forms
 
 始める前に、2 種類の HTML フォームウィジェットについておさらいしましょう。
 
-**不良なもの**: スタイルの設定が難しく複雑なトリックが必要であり、時に CSS の高度な知識が必要である要素です。
+**不良**: スタイルの設定が難しく複雑なトリックが必要であり、時に CSS の高度な知識が必要である要素です。
 
 - チェックボックスやラジオボタン
 - [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search)
 
-**醜いもの**: いくつかの要素は CSS でスタイル設定できません。これらが含まれます。
+**劣悪**: 一部の要素は CSS でスタイル設定できません。含まれているのは以下のものです。
 
-- ドロップダウンウィジェットを作成する要素、{{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("datalist")}} を含む
+- ドロップダウンウィジェットを作成する要素、 {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("datalist")}} を含む
 - [`<input type="color">`](/ja/docs/Web/HTML/Element/input/color)
 - [`<input type="datetime-local">`](/ja/docs/Web/HTML/Element/input/datetime-local)のような日付関連コントロール
 - [`<input type="range">`](/ja/docs/Web/HTML/Element/input/range)
@@ -140,10 +140,10 @@ input[type="checkbox"] {
 }
 ```
 
-ブラウザーによってチェックボックスとスパンの扱いは異なっており多くは醜いものです。
+ブラウザーによってチェックボックスとスパンの扱いは異なっており多くは劣悪なものです。
 
-| ブラウザー                          | 描画結果                                                                   |
-| ----------------------------------- | -------------------------------------------------------------------------- |
+| ブラウザー                          | 描画結果                          |
+| ----------------------------------- | --------------------------------- |
 | Firefox 71 (macOS)                  | ![](firefox-mac-checkbox.png)     |
 | Firefox 57 (Windows 10)             | ![](firefox-windows-checkbox.png) |
 | Chrome 77 (macOS), Safari 13, Opera | ![](chrome-mac-checkbox.png)      |
@@ -243,15 +243,15 @@ input[type="checkbox"]:disabled {
 
 > **Note:** Internet Explorer はどのバージョンでも `appearance` に対応していませんが、`input[type=checkbox]::-ms-check` にて IE のみチェックボックスをターゲットにできます。この手法は、`-ms-check` という名前にもかかわらず、ラジオボタンでも機能します。
 
-## 「醜い」要素に何ができるか
+## 「劣悪」要素に何ができるか
 
-今度は「醜い」コントロールに注目しましょう。これは完全にスタイル設定するのが本当に難しいものです。簡単にいうと、これはドロップダウンボックス、 [`color`](/ja/docs/Web/HTML/Element/input/color) や [`datetime-local`](/ja/docs/Web/HTML/Element/input/datetime-local) のような複合コントロール型、 {{HTMLElement("progress")}} や {{HTMLElement("meter")}} のようなコントロール志向のフィードバックです。
+今度は「劣悪」コントロールに注目しましょう。これは完全にスタイル設定するのが本当に難しいものです。簡単にいうと、これはドロップダウンボックス、 [`color`](/ja/docs/Web/HTML/Element/input/color) や [`datetime-local`](/ja/docs/Web/HTML/Element/input/datetime-local) のような複合コントロール型、 {{HTMLElement("progress")}} や {{HTMLElement("meter")}} のようなコントロール志向のフィードバックです。
 
 問題は、要素はブラウザー同士でいろいろな既定の見た目があって、それにスタイル設定できても、内部のいくつかはスタイル設定できないことです。
 
 ルック＆フィールの違いを受け入れる覚悟があれば、サイズ変更を一貫したものにするためのシンプルなスタイル設定や、 background-color のような単一スタイル設定、システムレベルのスタイル設定を除去できる appearance の使用などで逃げることもできます。
 
-例を見てみましょう。たくさんの「醜い」フォーム機能をつぎつぎに表示しています。
+例を見てみましょう。たくさんの「劣悪」なフォーム機能をつぎつぎに表示しています。
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/ugly-controls.html", '100%', 750)}}
 
