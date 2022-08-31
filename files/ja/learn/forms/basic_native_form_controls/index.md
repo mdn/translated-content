@@ -105,7 +105,7 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 
 > **Note:** この節の例は、[checkable-items.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/checkable-items.html) として GitHub にあります（[ライブで確認できます](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)）。
 
-最大限のユーザービリティ/アクセシビリティを実現するために、関連項目の各リストを {{htmlelement("fieldset")}} で囲み、リストの全体的な説明を示す {{htmlelement("legend")}} で囲むことをお勧めします。 {{htmlelement("label")}}/{{htmlelement("input")}} 要素の個々のペアは、それぞれ独自のリスト項目（または同様のもの）に含める必要があります。関連した {{htmlelement('label')}} はラジオボタンやチェックボックスの直後に、 {{htmlelement("legend")}} の中身にラジオボタンやチェックボックスのグループの説明が置かれます。これは上の例に示されています。
+最大限のユーザビリティ/アクセシビリティを実現するために、関連項目の各リストを {{htmlelement("fieldset")}} で囲み、リストの全体的な説明を示す {{htmlelement("legend")}} で囲むことをお勧めします。 {{htmlelement("label")}}/{{htmlelement("input")}} 要素の個々のペアは、それぞれ独自のリスト項目（または同様のもの）に含める必要があります。関連した {{htmlelement('label')}} はラジオボタンやチェックボックスの直後に、 {{htmlelement("legend")}} の中身にラジオボタンやチェックボックスのグループの説明が置かれます。これは上の例に示されています。
 
 ### チェックボックス
 
