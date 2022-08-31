@@ -208,7 +208,7 @@ JavaScript は CSS と同じような方法で、HTML ページに適用する�
    </script>
    ```
 
-4.  それでは {{htmlelement("script")}} 要素内に JavaScript を書いて、もうちょっと面白いことをしてみましょう。「// JavaScript をここに書きます」と書いてあるすぐ下に、以下のコードを追加してください。
+4. それでは {{htmlelement("script")}} 要素内に JavaScript を書いて、もうちょっと面白いことをしてみましょう。「// JavaScript をここに書きます」と書いてあるすぐ下に、以下のコードを追加してください。
 
    ```js
    document.addEventListener('DOMContentLoaded', () => {
@@ -246,7 +246,7 @@ JavaScript は CSS と同じような方法で、HTML ページに適用する�
    <script src="script.js" defer></script>
    ```
 
-3.  `script.js` に、次のスクリプトを追加します。
+3. `script.js` に、次のスクリプトを追加します。
 
    ```js
    function createParagraph() {

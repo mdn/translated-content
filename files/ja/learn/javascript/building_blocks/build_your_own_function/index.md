@@ -6,7 +6,7 @@ slug: Learn/JavaScript/Building_blocks/Build_your_own_function
 
 前の記事で扱った重要な理屈をたくさん使って、この記事では実践的な練習を行ないます。ここではあなたが自力で独自関数を作成するための練習を行なっていきます。同時に、関数を扱う上で役に立つ細々の説明もしていきます。
 
-| 前提知識: | 基本的なコンピューターの知識、HTML と CSS への理解、[JavaScript の第一歩 ](/ja/docs/Learn/JavaScript/First_steps)、[関数 — 再利用可能なコードブロック](/ja/docs/Learn/JavaScript/Building_blocks/Functions)。 |
+| 前提知識: | 基本的なコンピューターの知識、HTML と CSS への理解、[JavaScript の第一歩](/ja/docs/Learn/JavaScript/First_steps)、[関数 — 再利用可能なコードブロック](/ja/docs/Learn/JavaScript/Building_blocks/Functions)。 |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 目的:     | 独自の関数を作成する練習、役に立つ関連事項についてつっこんだ説明。                                                                                                                                            |
 
@@ -30,8 +30,8 @@ alert('This is a message');
 
 > **Note:** 関数に名前を付ける方針としては、[変数名に名前をつける方針](/ja/docs/Learn/JavaScript/First_steps/Variables#An_aside_on_variable_naming_rules)と同じルールに従うべきです。問題はありません、すぐに見分けがつくからです — 関数ならすぐ後に括弧が付きますが、変数には付きません。
 
-1.  [function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html) ファイルにアクセスして、ローカルコピーを作成するところから初めます。HTML は単純です — body にはボタン一つしかありません。特製メッセージボックス用の基本的な CSS スタイルと、JavaScript を追加していく用の空の {{htmlelement("script")}} 要素が含まれています。
-2.  次に、`<script>` 要素の中に以下を追加して下さい:
+1. [function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html) ファイルにアクセスして、ローカルコピーを作成するところから初めます。HTML は単純です — body にはボタン一つしかありません。特製メッセージボックス用の基本的な CSS スタイルと、JavaScript を追加していく用の空の {{htmlelement("script")}} 要素が含まれています。
+2. 次に、`<script>` 要素の中に以下を追加して下さい:
 
     ```js
     function displayMessage() {
@@ -41,7 +41,7 @@ alert('This is a message');
 
     キーワード `function` から始めますが、これは関数を定義するという意味です。この後には、関数につけたい名前、カッ括弧の組、中括弧の組と続きます。関数に渡したい引数は括弧の中に、関数を呼び出したときに走らせたいコードは中括弧の中に書きます。
 
-3.  最後に、以下のコードを中括弧の中に追加します:
+3. 最後に、以下のコードを中括弧の中に追加します:
 
     ```js
     const html = document.querySelector('html');
@@ -120,7 +120,7 @@ closeBtn.onclick = function() {
 
 これで、`<script>` 要素に書かれた関数定義がうまくいきましたが、それは何もしません。
 
-1.  関数の下に次の行を含めて呼び出してみてください:
+1. 関数の下に次の行を含めて呼び出してみてください:
 
     ```js
     displayMessage();
@@ -128,20 +128,20 @@ closeBtn.onclick = function() {
 
     この行は関数を呼び出し、すぐに実行させます。コードを保存してブラウザーを再読み込みすると、小さなメッセージボックスがすぐに 1 回だけ表示されます。それを一度呼ぶだけです。
 
-2.  サンプルページでブラウザーの開発者ツールを開き、JavaScript コンソールに移動してもう一度その行を入力すると、もう一度表示されます。これは楽しいことです - 私たちは今好きな時に呼び出すことができる再利用可能な関数を持っています。
+2. サンプルページでブラウザーの開発者ツールを開き、JavaScript コンソールに移動してもう一度その行を入力すると、もう一度表示されます。これは楽しいことです - 私たちは今好きな時に呼び出すことができる再利用可能な関数を持っています。
 
     しかし、ユーザーとシステムのアクションに応じて表示されるようにすることをお勧めします。実際のアプリケーションでは、このようなメッセージボックスは、新しいデータが利用可能であること、エラーが発生したこと、ユーザーがプロファイルを削除しようとしている (「これは本当ですか？」)、またはユーザーが 新しい連絡先や操作が正常に終了しました...などが起こったときに呼び出されるでしょう。
 
     このデモでは、ユーザーがボタンをクリックするとメッセージボックスが表示されます。
 
-3.  追加した前の行を削除します。
-4.  次に、ボタンを選択し、そのボタンへの参照を定数に格納します。関数定義の上のコードに次の行を追加します:
+3. 追加した前の行を削除します。
+4. 次に、ボタンを選択し、そのボタンへの参照を定数に格納します。関数定義の上のコードに次の行を追加します:
 
     ```js
     const btn = document.querySelector('button');
     ```
 
-5.  最後に、前の行の下に次の行を追加します:
+5. 最後に、前の行の下に次の行を追加します:
 
     ```js
     btn.onclick = displayMessage;
@@ -149,7 +149,7 @@ closeBtn.onclick = function() {
 
     関数内の `closeBtn.onclick...` 行と同様に、ここではボタンがクリックされたことに応答してコードを呼び出します。しかしこの場合、コードを含む無名関数を呼び出す代わりに、関数名を直接呼び出しています。
 
-6.  ページを保存して再表示してみてください。ボタンをクリックするとメッセージボックスが表示されるはずです。
+6. ページを保存して再表示してみてください。ボタンをクリックするとメッセージボックスが表示されるはずです。
 
 関数名の後ろに括弧が含まれていないのはなぜでしょうか。これは、ボタンがクリックされた後にのみ、関数をすぐに呼びたくないからです。行を次の行に変更しようとすると
 
@@ -165,7 +165,7 @@ btn.onclick = displayMessage();
 
 その機能はそれほど便利ではありません — 毎回同じ既定のメッセージを表示したくはないのです。いくつかのパラメーターを追加して機能を改善し、いくつかの異なるオプションで呼び出すことができるようにしましょう。
 
-1.  まず、関数の最初の行を更新します。
+1. まず、関数の最初の行を更新します。
 
     ```js
     function displayMessage() {
@@ -179,7 +179,7 @@ btn.onclick = displayMessage();
 
     関数を呼び出すと、括弧内に 2 つの変数値を指定して、メッセージボックスに表示するメッセージとそのメッセージのタイプを指定できます。
 
-2.  最初のパラメーターを使用するには、関数内の次の行を更新します:
+2. 最初のパラメーターを使用するには、関数内の次の行を更新します:
 
     ```js
     msg.textContent = 'This is a message box';
@@ -191,7 +191,7 @@ btn.onclick = displayMessage();
     msg.textContent = msgText;
     ```
 
-3.  最後に関数呼び出しを更新して、更新されたメッセージテキストを追加する必要があります。次の行を変更します。
+3. 最後に関数呼び出しを更新して、更新されたメッセージテキストを追加する必要があります。次の行を変更します。
 
     ```js
     btn.onclick = displayMessage;
@@ -207,17 +207,17 @@ btn.onclick = displayMessage();
 
     私たちが呼び出している関数の括弧内にパラメーターを指定したい場合、直接呼び出すことはできません - 直接のスコープにないため、すぐに呼び出されないように無名関数の中に入れる必要があります。ボタンがクリックされるまで呼び出されません。
 
-4.  再読み込みしてコードをもう一度試してみてください。それでもパラメーター内のメッセージを変えてボックスに表示されるメッセージを変えることができます。
+4. 再読み込みしてコードをもう一度試してみてください。それでもパラメーター内のメッセージを変えてボックスに表示されるメッセージを変えることができます。
 
 ### より複雑なパラメーター
 
 次のパラメーターに移りましょう。これにはもう少し作業が必要です。`msgType` パラメーターの設定によって、別のアイコンと異なる背景色が表示されるように設定していきます。
 
-1.  まず始めに、この演習に必要なアイコン ([warning](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/icons/warning.png) と [chat](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/icons/chat.png)) を GitHub からダウンロードしてください。HTML ファイルと同じ場所にある `icons` という新しいフォルダーに保存します
+1. まず始めに、この演習に必要なアイコン ([warning](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/icons/warning.png) と [chat](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/icons/chat.png)) を GitHub からダウンロードしてください。HTML ファイルと同じ場所にある `icons` という新しいフォルダーに保存します
 
     > **Note:** [iconfinder.com](https://www.iconfinder.com/) にある warning と chat のアイコンは [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr) によってデザインされたものです。ありがとう！ (実際のアイコンのページは移動か削除されています。)
 
-2.  次に、HTML ファイル内の CSS を探します。私たちは、アイコンの道を作るためにいくつかの変更を行います。まず `.msgBox` の幅を次のように更新します
+2. 次に、HTML ファイル内の CSS を探します。私たちは、アイコンの道を作るためにいくつかの変更を行います。まず `.msgBox` の幅を次のように更新します
 
     ```css
     width: 200px;
@@ -229,7 +229,7 @@ btn.onclick = displayMessage();
     width: 242px;
     ```
 
-3.  次に、`.msgBox p { ... }` ルール内に次の行を追加します
+3. 次に、`.msgBox p { ... }` ルール内に次の行を追加します
 
     ```css
     padding-left: 82px;
@@ -237,7 +237,7 @@ btn.onclick = displayMessage();
     background-repeat: no-repeat;
     ```
 
-4.  これでアイコンの表示を処理するために、`displayMessage()` 関数にコードを追加する必要があります。関数の終了中括弧 (`}`) のすぐ上に次のブロックを追加します。
+4. これでアイコンの表示を処理するために、`displayMessage()` 関数にコードを追加する必要があります。関数の終了中括弧 (`}`) のすぐ上に次のブロックを追加します。
 
     ```js
     if (msgType === 'warning') {
@@ -253,7 +253,7 @@ btn.onclick = displayMessage();
 
     ここで、`msgType` パラメーターが `'warning'` に設定されている場合、警告アイコンが表示され、パネルの背景色は赤に設定されます。`'chat'`に設定されている場合、チャットアイコンが表示され、パネルの背景色が青色に設定されます。`msgType` パラメーターがまったく設定されていない (または別のものに変更されている) 場合、コードの `else { ... }` 部分が有効になり、段落には単にデフォルトのパディングが与えられ、背景パネルの色もしくはアイコンのどちらかが未設定の状態となります。これは `msgType` パラメーターが指定されていない場合、省略可能なパラメーターであることを意味するデフォルトの状態を提供します。
 
-5.  更新された関数をテストしましょう。この `displayMessage()` 呼び出しを更新して：
+5. 更新された関数をテストしましょう。この `displayMessage()` 呼び出しを更新して：
 
     ```js
     displayMessage('Woo, this is a different message!');

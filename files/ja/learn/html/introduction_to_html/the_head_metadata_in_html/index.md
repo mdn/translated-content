@@ -47,20 +47,20 @@ HTML の head は {{htmlelement("head")}} 要素のコンテンツです — {{h
 
 ### アクティブラーニング: 単純な例を検討する
 
-1.  このアクティブラーニングを始めるのに、我々の GitHub リポジトリに移動して [title-example.html page](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html) のコピーをダウンロードして頂きたいです。これは次のいずれかでできます
+1. このアクティブラーニングを始めるのに、我々の GitHub リポジトリに移動して [title-example.html page](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html) のコピーをダウンロードして頂きたいです。これは次のいずれかでできます
 
-    1.  ページのコードをコピー&ペーストして、コードエディターの新規ファイルに入れて、ふさわしい場所に保存します
-    2.  ページの "Raw" を押すと、新しいタブに生のコードが出ます。次に、ブラウザーメニューから _ファイル > 名前を付けて保存..._ を選んで、ファイルの保存場所を選びます
+    1. ページのコードをコピー&ペーストして、コードエディターの新規ファイルに入れて、ふさわしい場所に保存します
+    2. ページの "Raw" を押すと、新しいタブに生のコードが出ます。次に、ブラウザーメニューから _ファイル > 名前を付けて保存..._ を選んで、ファイルの保存場所を選びます
 
-2.  ファイルをブラウザーで開きます。このようなものが見えるでしょう:
+2. ファイルをブラウザーで開きます。このようなものが見えるでしょう:
 
-    ![A simple web page with the title set to <title> element, and the <h1> set to <h1> element.](title-example.png)\<h1> コンテンツが出ている場所と、`<title>` コンテンツが出ている場所がひと目で分かります!
+    ![A simple web page with the title set to \<title> element, and the \<h1> set to \<h1> element.](title-example.png)\<h1> コンテンツが出ている場所と、`<title>` コンテンツが出ている場所がひと目で分かります!
 
-3.  自分のコードエディターで開いて、この要素を編集して、ブラウザーで再読み込みしてもよいです。楽しんでみてください。
+3. 自分のコードエディターで開いて、この要素を編集して、ブラウザーで再読み込みしてもよいです。楽しんでみてください。
 
 `<title>` 要素はいろいろな方法で使われます。例えば、ページのブックマーク (_ブックマーク > このページをブックマーク または Firefox の URL バーのスターアイコンにて_) してみると、提案されたブックマーク名として `<title>` コンテンツが記入されています。
 
-![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the <title> element ](bookmark-example.png)
+![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the \<title> element](bookmark-example.png)
 
 `<title>` の内容は後述するように、コンテンツは検索結果にも使われます。
 
@@ -116,14 +116,14 @@ started with developing web sites and applications.">
 
 description は検索エンジンの結果ページにも使われます。練習でこれを見ていきましょう。
 
-1.  [Mozilla Developer Network のフロントページ](/ja/)に移動します。
-2.  ページのソースを見ます (ページ上で右クリックまたは&#x20;
+1. [Mozilla Developer Network のフロントページ](/ja/)に移動します。
+2. ページのソースを見ます (ページ上で右クリックまたは&#x20;
 
     <kbd>Ctrl</kbd>
 
     &#x20;を押しながらクリックして、コンテキストメニューからページのソースを表示を選びます)。
 
-3.  description の meta タグを見てみます。それはこのようなものです。
+3. description の meta タグを見てみます。それはこのようなものです。
 
     ```html
     <meta name="description" content="The MDN Web Docs site
@@ -132,7 +132,7 @@ description は検索エンジンの結果ページにも使われます。練�
       progressive web apps.">
     ```
 
-4.  ここでお好きな検索エンジンで "MDN Web Docs" を検索します (ここでは Google を使っています) 。 description の `<meta>` と `<title>` 要素のコンテンツが検索結果で使われています — 確かに値打ちがあります。
+4. ここでお好きな検索エンジンで "MDN Web Docs" を検索します (ここでは Google を使っています) 。 description の `<meta>` と `<title>` 要素のコンテンツが検索結果で使われています — 確かに値打ちがあります。
 
     ![A Yahoo search result for "Mozilla Developer Network"](mdn-search-result.png)
 
@@ -170,8 +170,8 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
 
 ページにファビコンを追加するには:
 
-1.  サイトの index ページと同じディレクトリーに、 `.ico` 形式で保存します (大半のブラウザーは `.gif` や `.png` のような、より一般的な形式のファビコンにも対応していますが、 ICO 形式を使えば Internet Explorer 6 以降の古いブラウザーでも動作することが保証されます)。
-2.  HTML の {{HTMLElement("head")}} ブロックに下記の行を入れて参照します。
+1. サイトの index ページと同じディレクトリーに、 `.ico` 形式で保存します (大半のブラウザーは `.gif` や `.png` のような、より一般的な形式のファビコンにも対応していますが、 ICO 形式を使えば Internet Explorer 6 以降の古いブラウザーでも動作することが保証されます)。
+2. HTML の {{HTMLElement("head")}} ブロックに下記の行を入れて参照します。
 
     ```html
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -222,9 +222,9 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
 
 ### アクティブラーニング: ページに CSS と JavaScript を追加する
 
-1.  アクティブラーニングを始めるにあたって、私たちの [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/script.js) ,[style.css](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/style.css) をコピーしてローカルの同じフォルダに保存してください。ファイル名と拡張子が変わっていないことを確認してください。
-2.  HTML ファイルをブラウザーとテキストエディタで開いてください。
-3.  先に述べた情報に従って、 {{htmlelement("link")}} 要素と {{htmlelement("script")}} 要素を HTML に書き加えてください。すると CSS と JavaScript が HTML に適用されます。
+1. アクティブラーニングを始めるにあたって、私たちの [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/script.js) ,[style.css](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/style.css) をコピーしてローカルの同じフォルダに保存してください。ファイル名と拡張子が変わっていないことを確認してください。
+2. HTML ファイルをブラウザーとテキストエディタで開いてください。
+3. 先に述べた情報に従って、 {{htmlelement("link")}} 要素と {{htmlelement("script")}} 要素を HTML に書き加えてください。すると CSS と JavaScript が HTML に適用されます。
 
 以上を正しく行い、 HTML を保存してブラウザーを更新したら、変化がみられるでしょう。
 
