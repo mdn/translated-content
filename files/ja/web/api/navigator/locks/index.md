@@ -1,15 +1,6 @@
 ---
 title: Navigator.locks
 slug: Web/API/Navigator/locks
-tags:
-  - API
-  - Experimental
-  - LockManager
-  - Property
-  - Reference
-  - Web Locks API
-  - locks
-translation_of: Web/API/Navigator/locks
 ---
 {{SeeCompatTable}}{{APIRef("Web Locks")}}
 

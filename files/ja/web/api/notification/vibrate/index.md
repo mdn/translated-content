@@ -1,18 +1,6 @@
 ---
 title: Notification.vibrate
 slug: Web/API/Notification/vibrate
-page-type: web-api-instance-property
-tags:
-  - API
-  - Device
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - vibrate
-browser-compat: api.Notification.vibrate
-translation_of: Web/API/Notification/vibrate
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 

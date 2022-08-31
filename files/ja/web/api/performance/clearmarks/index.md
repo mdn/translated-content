@@ -1,13 +1,6 @@
 ---
 title: performance.clearMarks()
 slug: Web/API/Performance/clearMarks
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - ウェブパフォーマンス
-browser-compat: api.Performance.clearMarks
-translation_of: Web/API/Performance/clearMarks
 ---
 {{APIRef("User Timing API")}}
 

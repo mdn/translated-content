@@ -1,12 +1,6 @@
 ---
 title: NamedNodeMap.item()
 slug: Web/API/NamedNodeMap/item
-page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
-browser-compat: api.NamedNodeMap.item
-translation_of: Web/API/NamedNodeMap/item
 l10n:
   sourceCommit: 7a45a40ff9c0a0de348c497b325e103aa6d875f8
 ---

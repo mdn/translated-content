@@ -1,14 +1,6 @@
 ---
 title: PushManager.getSubscription()
 slug: Web/API/PushManager/getSubscription
-tags:
-  - API
-  - Experimental
-  - Method
-  - PushManager
-  - Reference
-  - Service Workers
-translation_of: Web/API/PushManager/getSubscription
 ---
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 

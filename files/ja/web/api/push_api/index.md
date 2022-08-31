@@ -1,16 +1,6 @@
 ---
 title: Push API
 slug: Web/API/Push_API
-tags:
-  - API
-  - Experimental
-  - Landing
-  - Notifications
-  - Push
-  - Reference
-  - サービスワーカー
-  - プッシュ通知
-translation_of: Web/API/Push_API
 ---
 {{ApiRef("Push API")}}
 

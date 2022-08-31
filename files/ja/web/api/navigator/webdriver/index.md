@@ -1,15 +1,6 @@
 ---
 title: Navigator.webdriver
 slug: Web/API/Navigator/webdriver
-tags:
-  - API
-  - Navigator
-  - Property
-  - Reference
-  - WebDriver
-  - weblock
-  - プロパティ
-translation_of: Web/API/Navigator/webdriver
 ---
 {{SeeCompatTable}}{{APIRef("WebDriver")}}
 

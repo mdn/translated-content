@@ -1,12 +1,6 @@
 ---
 title: Node.previousSibling
 slug: Web/API/Node/previousSibling
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Node.previousSibling
-translation_of: Web/API/Node/previousSibling
 ---
 {{APIRef("DOM")}}
 

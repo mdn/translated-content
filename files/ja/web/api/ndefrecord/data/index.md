@@ -1,12 +1,6 @@
 ---
 title: NDEFRecord.data
 slug: Web/API/NDEFRecord/data
-tags:
-  - NDEF
-  - リファレンス
-  - ウェブ NFC
-browser-compat: api.NDEFRecord.data
-translation_of: Web/API/NDEFRecord/data
 ---
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 

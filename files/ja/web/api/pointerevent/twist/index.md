@@ -1,15 +1,6 @@
 ---
 title: PointerEvent.twist
 slug: Web/API/PointerEvent/twist
-tags:
-  - API
-  - DOM
-  - Pointer Events
-  - PointerEvent
-  - Property
-  - Reference
-  - twist
-translation_of: Web/API/PointerEvent/twist
 ---
 {{ APIRef("Pointer Events") }}
 

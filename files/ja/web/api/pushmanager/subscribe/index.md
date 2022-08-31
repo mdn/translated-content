@@ -1,15 +1,6 @@
 ---
 title: PushManager.subscribe()
 slug: Web/API/PushManager/subscribe
-tags:
-  - API
-  - Experimental
-  - Method
-  - PushManager
-  - Reference
-  - Web API
-  - subscribe
-translation_of: Web/API/PushManager/subscribe
 ---
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 

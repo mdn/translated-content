@@ -1,17 +1,6 @@
 ---
 title: PushSubscription.toJSON()
 slug: Web/API/PushSubscription/toJSON
-tags:
-  - API
-  - Experimental
-  - Method
-  - Push
-  - Push API
-  - PushSubscription
-  - Reference
-  - Service Workers
-  - toJSON
-translation_of: Web/API/PushSubscription/toJSON
 ---
 {{SeeCompatTable}}{{APIRef("Push API")}}
 
