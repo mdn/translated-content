@@ -1,16 +1,6 @@
 ---
 title: Gamepad.axes
 slug: Web/API/Gamepad/axes
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Référence(2)
-translation_of: Web/API/Gamepad/axes
 ---
 {{APIRef("Gamepad API")}}
 

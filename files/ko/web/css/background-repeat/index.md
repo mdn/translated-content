@@ -77,9 +77,9 @@ background-repeat: unset;
         </tr>
       </tbody>
     </table>
-    
+
     두 개 값 구문의 앞쪽은 가로 반복 방법을, 뒤쪽은 세로 반복 방법을 설정합니다. 각 방법의 동작 방식은 아래 표와 같습니다.
-    
+
     <table class="standard-table">
       <tbody>
         <tr>

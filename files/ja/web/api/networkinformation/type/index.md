@@ -1,15 +1,6 @@
 ---
 title: NetworkInformation.type
 slug: Web/API/NetworkInformation/type
-tags:
-  - API
-  - Experimental
-  - Network Information API
-  - NetworkInformation
-  - Property
-  - Read-only
-  - Reference
-translation_of: Web/API/NetworkInformation/type
 ---
 {{apiref("Network Information API")}}{{SeeCompatTable}}
 

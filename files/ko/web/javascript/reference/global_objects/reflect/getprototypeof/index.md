@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
 
 ## 구문
 
-    Reflect.getPrototypeOf(target)
+```js
+Reflect.getPrototypeOf(target)
+```
 
 ### 매개변수
 

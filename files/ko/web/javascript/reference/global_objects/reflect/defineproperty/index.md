@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 
 ## 구문
 
-    Reflect.defineProperty(target, propertyKey, attributes)
+```js
+Reflect.defineProperty(target, propertyKey, attributes)
+```
 
 ### 매개변수
 

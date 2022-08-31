@@ -11,7 +11,7 @@ SISD signifie **Single Instruction/Single Data** et est une des [catégories d'a
 
 Voir aussi {{Glossary("SIMD")}} pour une architecture parallèle qui permet d'effectuer une même opération sur plusieurs données.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

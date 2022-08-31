@@ -9,7 +9,7 @@ browser-compat: css.properties.animation-fill-mode
 ---
 {{CSSRef}}
 
-**`animation-fill-mode`** [CSS](/en/CSS "CSS") 속성은 CSS 애니메이션이 실행 전과 후에 대상에 스타일을 적용하는 방법을 지정합니다.
+**`animation-fill-mode`** [CSS](/en/CSS) 속성은 CSS 애니메이션이 실행 전과 후에 대상에 스타일을 적용하는 방법을 지정합니다.
 
 ```css
 /* Single animation */
@@ -23,7 +23,7 @@ animation-fill-mode: none, backwards;
 animation-fill-mode: both, forwards, none;
 ```
 
-축약 속성 [`animation`](/ko/docs/Web/CSS/animation "CSS의 animation 속성은 animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction 값들을 지정가능한 축약된 속성(shorthand property)이다.")을 사용하여 모든 애니메이션 속성을 한꺼번에 설정하는 것이 편리합니다.
+축약 속성 [`animation`](/ko/docs/Web/CSS/animation)을 사용하여 모든 애니메이션 속성을 한꺼번에 설정하는 것이 편리합니다.
 
 {{cssinfo}}
 
@@ -58,7 +58,7 @@ animation-fill-mode: both, forwards, none;
 - `both`
   - : 애니메이션은 앞뒤 양쪽 모두의 규칙을 따르므로 애니메이션 속성이 양방향으로 확장됩니다.
 
-> **참고:** **노트**: animation- \* 속성에 여러 개의 쉼표로 구분 된 값을 지정하면 [`animation-name`](/ko/docs/Web/CSS/animation-name "The documentation about this has not yet been written; please consider contributing!") 속성에 지정된 애니메이션에 할당되는 값의 수에 따라 다른 방식으로 지정됩니다. 자세한 내용은 [여러 애니메이션 속성 값 설정](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values)을 참조하십시오.
+> **참고:** **노트**: animation- \* 속성에 여러 개의 쉼표로 구분 된 값을 지정하면 [`animation-name`](/ko/docs/Web/CSS/animation-name) 속성에 지정된 애니메이션에 할당되는 값의 수에 따라 다른 방식으로 지정됩니다. 자세한 내용은 [여러 애니메이션 속성 값 설정](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values)을 참조하십시오.
 
 ### Formal syntax
 
@@ -105,7 +105,7 @@ animation-fill-mode: both, forwards, none;
 
 {{EmbedLiveSample('Example',700,300)}}
 
-자세한 예제는 [CSS animations](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations "CSS/CSS_animations")를 보십시오.
+자세한 예제는 [CSS animations](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations)를 보십시오.
 
 ## 명세
 
@@ -117,5 +117,5 @@ animation-fill-mode: both, forwards, none;
 
 ## 같이 보기(See also)
 
-- [Using CSS animations](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- [Using CSS animations](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API

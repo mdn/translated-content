@@ -310,10 +310,10 @@ function runTaskQueue(deadline) {
 
 실행 시간이 있는 큐의 각 태스트에 대해 다음 작업을 수행합니다:
 
-1.  [큐에서 태스크 객체를 제거합니다.](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
-2.  `currentTaskNumber` 를 증가시켜서 우리가 실행한 태스크의 수를 추적합니다.
-3.  태스크를 처리할 때 호출하는 `task.handler`에 태스크 데이터 객체(`task.data`)를 전달합니다.
-4.  우리는 `scheduleStatusRefresh()`함수를 호출하여 진행 상황의 변화를 반영하도록 화면을 업데이트 합니다.
+1. [큐에서 태스크 객체를 제거합니다.](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
+2. `currentTaskNumber` 를 증가시켜서 우리가 실행한 태스크의 수를 추적합니다.
+3. 태스크를 처리할 때 호출하는 `task.handler`에 태스크 데이터 객체(`task.data`)를 전달합니다.
+4. 우리는 `scheduleStatusRefresh()`함수를 호출하여 진행 상황의 변화를 반영하도록 화면을 업데이트 합니다.
 
 시간이 다 되었을 때, 여전히 리스트에 태스크가 남아있다면 {{domxref("Window.requestIdleCallback", "requestIdleCallback()")}}을 다시 호출하여, 다음에 유휴 시간이 있을 때 작업을 계속 처리할 수 있게 예약 합니다. 큐가 비어 있으면, taskHandle을 0으로 설정하여 콜백을 예약하지 않았음을 나타냅니다. 그러면 우리는 이제 `enqueueTask()`가 호출 된 다음에 콜백을 요청하는 방법을 알 수 있습니다.
 
@@ -373,8 +373,8 @@ function updateDisplay() {
 
 다음으로, 태스크가 큐에 들어간 경우 진행 상태 및 상태 정보를 업데이트 합니다.
 
-1.  진행률 막대의 현재 최대 값이 지금 큐에 대기중인 태스크의 총 개수(`totalTaskCount`)와 다른 경우, 표시되는 전체 태스크 수(`totalTaskCountElem`)의 내용과 진행률 막대의 최대 값을 업데이트 합니다. 이 값은 적절하게 비례합니다.
-2.  지금까지 처리 한 태스크의 수와 동일한 작업을 수행합니다. `progressBarElem.value`가 현재 처리중인 태스크 넘버(`currentTaskNumber`)와 다른 경우, 현재 처리중인 태스크와 진행 막대바의 현재 값을 업데이트하여 표시합니다.
+1. 진행률 막대의 현재 최대 값이 지금 큐에 대기중인 태스크의 총 개수(`totalTaskCount`)와 다른 경우, 표시되는 전체 태스크 수(`totalTaskCountElem`)의 내용과 진행률 막대의 최대 값을 업데이트 합니다. 이 값은 적절하게 비례합니다.
+2. 지금까지 처리 한 태스크의 수와 동일한 작업을 수행합니다. `progressBarElem.value`가 현재 처리중인 태스크 넘버(`currentTaskNumber`)와 다른 경우, 현재 처리중인 태스크와 진행 막대바의 현재 값을 업데이트하여 표시합니다.
 
 그런 다음, 로그에 추가되기를 기다리는 텍스트가 있는 경우(즉, `logFragment`가 `null`이 아닌 경우), {{domxref("Node.appendChild", "Element.appendChild()")}}를 사용하여 log 요소(엘리먼트)에 `logFragment`를 추가합니다. 그 후 `logFragment` 를 `null` 로 설정하여 다시 추가하지 않도록합니다.
 

@@ -1,13 +1,6 @@
 ---
 title: Performance API
 slug: Web/API/Performance_API
-tags:
-  - NeedsContent
-  - Web パフォーマンス
-  - ガイド
-  - パフォーマンス
-  - 概要
-translation_of: Web/API/Performance_API
 ---
 {{DefaultAPISidebar("High Resolution Time")}}
 

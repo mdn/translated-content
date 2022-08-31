@@ -1,16 +1,6 @@
 ---
 title: Gamepad.buttons
 slug: Web/API/Gamepad/buttons
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Référence(2)
-translation_of: Web/API/Gamepad/buttons
 ---
 {{APIRef("Gamepad API")}}
 

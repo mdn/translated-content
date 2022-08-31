@@ -146,14 +146,11 @@ Enfin, poster un message à une page à une URL `file:` requiert actuellement qu
 
 ## Spécifications
 
-| **Spécification**                                                                                                | **Status**                                   | **Comment**aire                                                           |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#dom-window-postmessage", "window.postMessage")}}             | {{Spec2('HTML WHATWG')}}             | Pas de changement depuis {{SpecName('HTML5 Web Messaging')}} |
-| {{SpecName('HTML5 Web Messaging', '#dom-window-postmessage', 'window.postMessage')}} | {{Spec2('HTML5 Web Messaging')}} | Définition initiale.                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.postMessage")}}
+{{Compat}}
 
 ## Voir aussi
 

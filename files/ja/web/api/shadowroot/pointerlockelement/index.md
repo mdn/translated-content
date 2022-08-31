@@ -1,15 +1,6 @@
 ---
 title: ShadowRoot.pointerLockElement
 slug: Web/API/ShadowRoot/pointerLockElement
-tags:
-  - API
-  - DOM
-  - ShadowRoot
-  - プロパティ
-  - リファレンス
-  - マウスロック
-browser-compat: api.ShadowRoot.pointerLockElement
-translation_of: Web/API/ShadowRoot/pointerLockElement
 ---
 {{APIRef("DOM")}}
 

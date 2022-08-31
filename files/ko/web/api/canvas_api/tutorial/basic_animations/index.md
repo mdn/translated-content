@@ -16,13 +16,13 @@ original_slug: Web/HTML/Canvas/Tutorial/Basic_animations
 
 한 장면을 그리려면 아래와 같은 단계를 밟습니다.
 
-1.  **캔버스를 비웁니다.**
+1. **캔버스를 비웁니다.**
     그리려는 도형이 (배경 이미지를 만들 때처럼) 캔버스를 가득 채우는 것이 아니라면, 이전에 그려진 모든 도형을 지울 필요가 있습니다. 가장 쉬운 방법은 `clearRect()` 메소드를 사용하는 것입니다.
-2.  **캔버스 상태를 저장합니다.**
+2. **캔버스 상태를 저장합니다.**
     캔버스 상태에 영향을 주는 (스타일 변경, 모양 변형 등의) 설정값을 바꾸려고 하고, 바뀐 값을 각 장면마다 사용하려고 한다면, 원래 상태를 저장할 필요가 있습니다.
-3.  **애니메이션할 도형을 그립니다.**
+3. **애니메이션할 도형을 그립니다.**
     실제 장면을 그리는 단계입니다.
-4.  **캔버스 상태를 복원합니다.**
+4. **캔버스 상태를 복원합니다.**
     새로운 장면을 그리기 전에 저장된 상태를 복원합니다.
 
 ## 애니메이션 제어하기
@@ -50,11 +50,15 @@ original_slug: Web/HTML/Canvas/Tutorial/Basic_animations
 
 사용자 상호 작용이 **필요하다면**, 우리가 만든 [애니메이션용 프레임웍(framework)](/ko/docs/JavaScript/Timers/Daemons)의 [최소 기능 버전](/ko/docs/DOM/window.setInterval#A_little_framework) 또는 [최대 기능 버전](/ko/docs/JavaScript/Timers/Daemons)을 사용할 수 있을 것입니다.
 
-    var myAnimation = new MiniDaemon(null, animateShape, 500, Infinity);
+```js
+var myAnimation = new MiniDaemon(null, animateShape, 500, Infinity);
+```
 
 또는
 
-    var myAnimation = new Daemon(null, animateShape, 500, Infinity);
+```js
+var myAnimation = new Daemon(null, animateShape, 500, Infinity);
+```
 
 아래 예제에서는, 애니메이션을 제어하기 위해 {{domxref("window.setInterval()")}}을 사용할 것입니다. 페이지 제일 아래쪽에 {{domxref("window.setTimeout()")}}을 사용한 예제 링크도 있습니다.
 

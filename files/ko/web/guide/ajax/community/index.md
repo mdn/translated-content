@@ -16,4 +16,4 @@ AJAX와 관련된 유용한 mailing lists, newsgroups, 포럼, 다른 커뮤니�
 - [community.tableau.com](https://community.tableau.com/search.jspa?q=ajax): Ajax에 사용가능한 커뮤니티 지원 포럼 및 강좌
 - [codementor.io](https://www.codementor.io/community/search?q=ajax): Ajax 포럼 및 튜토리얼이 있는 소셜 플랫폼
 - [lynda.com](https://www.lynda.com/search?q=ajax): Ajax 기초를 배울 수 있는 튜토리얼 제공
-- [Ajax ](https://www.onlineinterviewquestions.com/ajax-interview-questions/)인터뷰 질문 및 질문의 답변
+- [Ajax](https://www.onlineinterviewquestions.com/ajax-interview-questions/) 인터뷰 질문 및 질문의 답변

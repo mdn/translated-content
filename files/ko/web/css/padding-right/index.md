@@ -67,5 +67,5 @@ padding-right: unset;
 
 ## 같이 보기
 
-- [CSS 기본 박스 모델 입문](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model "en/CSS/box model")
+- [CSS 기본 박스 모델 입문](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
 - {{cssxref("padding")}}

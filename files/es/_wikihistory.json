@@ -706,13 +706,6 @@
       "PabloDeTorre"
     ]
   },
-  "Glossary/Dynamic_programming_language": {
-    "modified": "2020-09-12T18:21:07.076Z",
-    "contributors": [
-      "IsraFloores",
-      "DaniNz"
-    ]
-  },
   "Glossary/Dynamic_typing": {
     "modified": "2020-05-04T14:10:14.107Z",
     "contributors": [
@@ -4756,15 +4749,6 @@
       "Mgjbot"
     ]
   },
-  "Web/API/Canvas_API/A_basic_ray-caster": {
-    "modified": "2019-03-19T08:57:21.057Z",
-    "contributors": [
-      "AzazelN28",
-      "Fandres91",
-      "dkocho4",
-      "preteric"
-    ]
-  },
   "Web/API/Canvas_API/Manipulating_video_using_canvas": {
     "modified": "2019-03-24T00:07:00.528Z",
     "contributors": [
@@ -5231,16 +5215,6 @@
     "modified": "2019-03-23T22:39:59.389Z",
     "contributors": [
       "Zholary"
-    ]
-  },
-  "Web/API/Document/documentURIObject": {
-    "modified": "2019-03-23T23:50:26.462Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "khalid32",
-      "HenryGR",
-      "Mgjbot"
     ]
   },
   "Web/API/Document/dragover_event": {
@@ -6227,12 +6201,6 @@
       "BrodaNoel"
     ]
   },
-  "Web/API/FileError": {
-    "modified": "2019-03-23T22:51:12.244Z",
-    "contributors": [
-      "Jarvanux"
-    ]
-  },
   "Web/API/FileReader": {
     "modified": "2019-03-23T23:04:14.656Z",
     "contributors": [
@@ -6395,13 +6363,6 @@
       "rubencidlara",
       "lfentanes",
       "diegogarcia"
-    ]
-  },
-  "Web/API/GlobalEventHandlers": {
-    "modified": "2020-10-15T21:33:09.443Z",
-    "contributors": [
-      "Nachec",
-      "fscholz"
     ]
   },
   "Web/API/HTMLAnchorElement": {
@@ -8297,12 +8258,6 @@
       "Grijander81"
     ]
   },
-  "Web/API/Window/dialogArguments": {
-    "modified": "2019-03-23T22:33:21.065Z",
-    "contributors": [
-      "Grijander81"
-    ]
-  },
   "Web/API/Window/document": {
     "modified": "2019-03-18T21:17:09.045Z",
     "contributors": [
@@ -8578,19 +8533,6 @@
       "UshioSan"
     ]
   },
-  "Web/API/WindowEventHandlers": {
-    "modified": "2019-03-23T23:01:29.892Z",
-    "contributors": [
-      "fscholz"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope": {
-    "modified": "2019-03-23T22:16:40.400Z",
-    "contributors": [
-      "ivannieto",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/Worker": {
     "modified": "2019-03-23T22:48:01.797Z",
     "contributors": [
@@ -8859,24 +8801,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute": {
-    "modified": "2020-12-02T07:09:06.472Z",
-    "contributors": [
-      "AlePerez92",
-      "mitsurugi",
-      "fraboto",
-      "blanchart",
-      "ErikMj69",
-      "NelsonWF"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute": {
-    "modified": "2019-08-28T11:54:04.515Z",
-    "contributors": [
-      "IsraelFloresDGA",
-      "Karla_Glez"
-    ]
-  },
   "Web/Accessibility/ARIA/Roles/alert_role": {
     "modified": "2019-03-18T21:31:32.978Z",
     "contributors": [
@@ -8984,12 +8908,6 @@
     "modified": "2020-11-18T17:43:24.329Z",
     "contributors": [
       "jemilionautoch"
-    ]
-  },
-  "Web/CSS/-moz-context-properties": {
-    "modified": "2020-10-15T22:13:14.061Z",
-    "contributors": [
-      "Adorta4"
     ]
   },
   "Web/CSS/-moz-float-edge": {
@@ -10085,14 +10003,6 @@
       "teoli"
     ]
   },
-  "Web/CSS/CSS_Animations/Detecting_CSS_animation_support": {
-    "modified": "2019-03-23T22:41:48.122Z",
-    "contributors": [
-      "wbamberg",
-      "CristhianLora1",
-      "DracotMolver"
-    ]
-  },
   "Web/CSS/CSS_Animations/Tips": {
     "modified": "2020-08-16T13:05:40.057Z",
     "contributors": [
@@ -10408,12 +10318,6 @@
     "modified": "2019-03-23T22:32:44.958Z",
     "contributors": [
       "javichito"
-    ]
-  },
-  "Web/CSS/CSS_Properties_Reference": {
-    "modified": "2019-03-18T21:24:27.305Z",
-    "contributors": [
-      "pekechis"
     ]
   },
   "Web/CSS/CSS_Selectors": {
@@ -19728,12 +19632,6 @@
       "NicolasKuhn"
     ]
   },
-  "Web/Progressive_web_apps/Developer_guide": {
-    "modified": "2020-09-20T03:25:40.381Z",
-    "contributors": [
-      "Deng_C1"
-    ]
-  },
   "Web/Progressive_web_apps/Installable_PWAs": {
     "modified": "2020-09-20T03:54:28.154Z",
     "contributors": [
@@ -19904,14 +19802,6 @@
       "andysierra",
       "Sebastianz",
       "jorge_castro"
-    ]
-  },
-  "Web/SVG/SVG_1.1_Support_in_Firefox": {
-    "modified": "2019-03-23T23:43:25.545Z",
-    "contributors": [
-      "teoli",
-      "Superruzafa",
-      "Jorolo"
     ]
   },
   "Web/SVG/Tutorial": {
@@ -21672,6 +21562,13 @@
       "ibnkhaldun"
     ]
   },
+  "orphaned/Glossary/Dynamic_programming_language": {
+    "modified": "2020-09-12T18:21:07.076Z",
+    "contributors": [
+      "IsraFloores",
+      "DaniNz"
+    ]
+  },
   "orphaned/Glossary/elemento": {
     "modified": "2019-01-16T19:38:18.287Z",
     "contributors": [
@@ -22131,6 +22028,15 @@
       "camsa"
     ]
   },
+  "orphaned/Web/API/Canvas_API/A_basic_ray-caster": {
+    "modified": "2019-03-19T08:57:21.057Z",
+    "contributors": [
+      "AzazelN28",
+      "Fandres91",
+      "dkocho4",
+      "preteric"
+    ]
+  },
   "orphaned/Web/API/ChildNode": {
     "modified": "2019-03-29T14:12:39.589Z",
     "contributors": [
@@ -22173,6 +22079,16 @@
       "jairopezlo"
     ]
   },
+  "orphaned/Web/API/Document/documentURIObject": {
+    "modified": "2019-03-23T23:50:26.462Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "khalid32",
+      "HenryGR",
+      "Mgjbot"
+    ]
+  },
   "orphaned/Web/API/Document_Object_Model/Events": {
     "modified": "2019-03-18T21:45:13.362Z",
     "contributors": [
@@ -22199,6 +22115,19 @@
       "khalid32",
       "teoli",
       "HenryGR"
+    ]
+  },
+  "orphaned/Web/API/FileError": {
+    "modified": "2019-03-23T22:51:12.244Z",
+    "contributors": [
+      "Jarvanux"
+    ]
+  },
+  "orphaned/Web/API/GlobalEventHandlers": {
+    "modified": "2020-10-15T21:33:09.443Z",
+    "contributors": [
+      "Nachec",
+      "fscholz"
     ]
   },
   "orphaned/Web/API/HTMLOrForeignElement/dataset": {
@@ -22310,10 +22239,67 @@
       "haxdai"
     ]
   },
+  "orphaned/Web/API/Window/dialogArguments": {
+    "modified": "2019-03-23T22:33:21.065Z",
+    "contributors": [
+      "Grijander81"
+    ]
+  },
+  "orphaned/Web/API/WindowEventHandlers": {
+    "modified": "2019-03-23T23:01:29.892Z",
+    "contributors": [
+      "fscholz"
+    ]
+  },
+  "orphaned/Web/API/WindowOrWorkerGlobalScope": {
+    "modified": "2019-03-23T22:16:40.400Z",
+    "contributors": [
+      "ivannieto",
+      "chrisdavidmills"
+    ]
+  },
+  "orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute": {
+    "modified": "2020-12-02T07:09:06.472Z",
+    "contributors": [
+      "AlePerez92",
+      "mitsurugi",
+      "fraboto",
+      "blanchart",
+      "ErikMj69",
+      "NelsonWF"
+    ]
+  },
+  "orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute": {
+    "modified": "2019-08-28T11:54:04.515Z",
+    "contributors": [
+      "IsraelFloresDGA",
+      "Karla_Glez"
+    ]
+  },
+  "orphaned/Web/CSS/-moz-context-properties": {
+    "modified": "2020-10-15T22:13:14.061Z",
+    "contributors": [
+      "Adorta4"
+    ]
+  },
   "orphaned/Web/CSS/:-moz-ui-valid": {
     "modified": "2019-03-23T22:29:23.305Z",
     "contributors": [
       "teoli",
+      "pekechis"
+    ]
+  },
+  "orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support": {
+    "modified": "2019-03-23T22:41:48.122Z",
+    "contributors": [
+      "wbamberg",
+      "CristhianLora1",
+      "DracotMolver"
+    ]
+  },
+  "orphaned/Web/CSS/CSS_Properties_Reference": {
+    "modified": "2019-03-18T21:24:27.305Z",
+    "contributors": [
       "pekechis"
     ]
   },
@@ -22621,6 +22607,12 @@
       "nachofelpete"
     ]
   },
+  "orphaned/Web/Progressive_web_apps/Developer_guide": {
+    "modified": "2020-09-20T03:25:40.381Z",
+    "contributors": [
+      "Deng_C1"
+    ]
+  },
   "orphaned/Web/Reference": {
     "modified": "2019-03-23T23:21:27.898Z",
     "contributors": [
@@ -22645,6 +22637,14 @@
       "gesifred",
       "cmeraz",
       "davy.martinez"
+    ]
+  },
+  "orphaned/Web/SVG/SVG_1.1_Support_in_Firefox": {
+    "modified": "2019-03-23T23:43:25.545Z",
+    "contributors": [
+      "teoli",
+      "Superruzafa",
+      "Jorolo"
     ]
   },
   "orphaned/Web/SVG/SVG_en_Firefox_1.5": {

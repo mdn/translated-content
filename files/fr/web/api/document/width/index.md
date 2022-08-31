@@ -37,7 +37,7 @@ window.innerWidth                      /* largeur de la fenêtre */
 
 HTML5
 
-## Voir également
+## Voir aussi
 
 - {{domxref("document.height")}}
 - {{domxref("Element.clientWidth")}}

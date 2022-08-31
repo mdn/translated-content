@@ -1,22 +1,6 @@
 ---
 title: テキストの装飾
 slug: Learn/CSS/Styling_text
-tags:
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Fonts
-  - Landing
-  - Links
-  - Module
-  - Text
-  - font
-  - letter
-  - line
-  - lists
-  - shadow
-  - web fonts
-translation_of: Learn/CSS/Styling_text
 ---
 {{LearnSidebar}}
 

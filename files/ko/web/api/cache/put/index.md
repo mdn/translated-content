@@ -58,9 +58,9 @@ A {{jsxref("Promise")}} that resolves with void.
 
 This example is from the MDN [sw-test example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/)). Here we wait for a {{domxref("FetchEvent")}} to fire. We construct a custom response like so:
 
-1.  Check whether a match for the request is found in the {{domxref("CacheStorage")}} using {{domxref("CacheStorage.match","CacheStorage.match()")}}. If so, serve that.
-2.  If not, open the `v1` cache using `open()`, put the default network request in the cache using {{domxref("Cache.put","Cache.put()")}} and return a clone of the default network request using `return response.clone()`. Clone is needed because `put()` consumes the response body.
-3.  If this fails (e.g., because the network is down), return a fallback response.
+1. Check whether a match for the request is found in the {{domxref("CacheStorage")}} using {{domxref("CacheStorage.match","CacheStorage.match()")}}. If so, serve that.
+2. If not, open the `v1` cache using `open()`, put the default network request in the cache using {{domxref("Cache.put","Cache.put()")}} and return a clone of the default network request using `return response.clone()`. Clone is needed because `put()` consumes the response body.
+3. If this fails (e.g., because the network is down), return a fallback response.
 
 ```js
 var response;

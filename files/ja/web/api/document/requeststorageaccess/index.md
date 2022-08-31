@@ -1,15 +1,6 @@
 ---
 title: Document.requestStorageAccess()
 slug: Web/API/Document/requestStorageAccess
-tags:
-  - API
-  - DOM
-  - Document
-  - メソッド
-  - Reference
-  - Storage Access API
-  - requestStorageAccess
-translation_of: Web/API/Document/requestStorageAccess
 ---
 {{APIRef}}
 

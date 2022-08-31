@@ -1,16 +1,6 @@
 ---
 title: 'Document: touchstart event'
 slug: Web/API/Document/touchstart_event
-tags:
-  - Document
-  - Event
-  - Reference
-  - TouchEvent
-  - Web
-  - touchstart
-  - イベント
-  - ウェブ
-translation_of: Web/API/Document/touchstart_event
 ---
 {{APIRef}}
 

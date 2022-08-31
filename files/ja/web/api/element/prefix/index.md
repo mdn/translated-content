@@ -1,14 +1,6 @@
 ---
 title: Element.prefix
 slug: Web/API/Element/prefix
-tags:
-- API
-- DOM
-- NeedsBrowserCompatibility
-- NeedsMobileBrowserCompatibility
-- プロパティ
-- リファレンス
-translation_of: Web/API/Element/prefix
 ---
 {{APIRef("DOM")}}
 

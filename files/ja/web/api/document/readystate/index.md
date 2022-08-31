@@ -1,13 +1,6 @@
 ---
 title: Document.readyState
 slug: Web/API/Document/readyState
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-translation_of: Web/API/Document/readyState
 ---
 {{APIRef("DOM")}}
 

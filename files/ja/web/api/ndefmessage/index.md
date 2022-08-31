@@ -1,12 +1,6 @@
 ---
 title: NDEFMessage
 slug: Web/API/NDEFMessage
-tags:
-  - NDEF
-  - リファレンス
-  - ウェブ NFC
-browser-compat: api.NDEFMessage
-translation_of: Web/API/NDEFMessage
 ---
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 

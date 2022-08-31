@@ -59,9 +59,9 @@ When the IFrame has loaded, we run an `iframeLoaded()` function containing an `o
 
 For a start, here we are calling the {{domxref("window.postMessage")}} method — we are posting a message to the IFrame's window context. {{domxref("window.postMessage")}} has three arguments, unlike {{domxref("MessagePort.postMessage")}}, which only has two. The three arguments are:
 
-1.  The message being sent, in this case `textInput.value`.
-2.  The origin the message is to be sent to. \* means "any origin".
-3.  An object, the ownership of which is transferred to the receiving browsing context. In this case, we are transferring {{domxref("MessageChannel.port2")}} to the IFrame, so it can be used to receive the message from the main page.
+1. The message being sent, in this case `textInput.value`.
+2. The origin the message is to be sent to. \* means "any origin".
+3. An object, the ownership of which is transferred to the receiving browsing context. In this case, we are transferring {{domxref("MessageChannel.port2")}} to the IFrame, so it can be used to receive the message from the main page.
 
 At the bottom of the `iframeLoaded()` function there is a {{domxref("MessagePort.onmessage")}} handler, but we'll get to that later.
 

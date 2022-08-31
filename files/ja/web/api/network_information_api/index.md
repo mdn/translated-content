@@ -1,13 +1,6 @@
 ---
 title: Network Information API
 slug: Web/API/Network_Information_API
-tags:
-  - API
-  - Experimental
-  - Network Information API
-  - Reference
-  - WebAPI
-translation_of: Web/API/Network_Information_API
 ---
 {{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
 

@@ -11,8 +11,10 @@ translation_of: Web/API/Element/className
 
 ## 문법
 
-    var cName = elementNodeReference.className;
-    elementNodeReference.className = cName;
+```js
+var cName = elementNodeReference.className;
+elementNodeReference.className = cName;
+```
 
 - _cName은 현재 요소의 클래스 혹은 공백으로 구분된 클래스들을 표현하는 문자열 변수이다._
 

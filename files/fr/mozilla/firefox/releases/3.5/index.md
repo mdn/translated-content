@@ -217,6 +217,6 @@ Si vous développez des extensions, vous devriez tout d'abord lire [Mise à jour
 - Rendu plus rapide des pages
   - : Le contenu web est affiché plus rapidement dans Firefox 3.5, grâce à des technologies telles que l'« analyse spéculative ». Vos utilisateurs n'ont pas besoin de savoir de quoi il s'agit, simplement que ça rend les choses plus rapides.
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('3')}}

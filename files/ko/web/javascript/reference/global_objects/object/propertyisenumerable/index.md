@@ -16,7 +16,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumera
 
 ## 구문
 
-    obj.propertyIsEnumerable(prop)
+```js
+obj.propertyIsEnumerable(prop)
+```
 
 ### 매개변수
 

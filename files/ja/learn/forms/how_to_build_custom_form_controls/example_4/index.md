@@ -1,14 +1,6 @@
 ---
 title: 例 4
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_4
-tags:
-  - Advanced
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Web
-translation_of: Learn/Forms/How_to_build_custom_form_controls/Example_4
 original_slug: Learn/Forms/How_to_build_custom_form_widgets/Example_4
 ---
 これは、[カスタムフォームウィジェットの作成方法](/ja/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)を説明する 4 番目の例です。

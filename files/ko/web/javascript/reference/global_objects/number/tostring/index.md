@@ -32,13 +32,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toString
 ### 예외
 
 - {{jsxref("RangeError")}}
-  - : 만약 `toString()`에` 2`와` 36`의 사잇 값이 아닌 `radix`가 주어지면, {{jsxref("RangeError")}} 에러가 발생합니다.
+  - : 만약 `toString()` 에 `2` 와 `36` 의 사잇 값이 아닌 `radix` 가 주어지면, {{jsxref("RangeError")}} 에러가 발생합니다.
 
 ## 설명
 
-{{jsxref("Number")}} 객체는 {{jsxref("Object")}} 객체의 `toString() `메소드를 오버라이딩하며, {{jsxref("Object.prototype.toString()")}} 를 상속받지 않습니다. {{jsxref( "Number")}} 객체에서 `toString()` 메소드는 특정 진수로 객체를 표현한 문자열을 환원합니다.
+{{jsxref("Number")}} 객체는 {{jsxref("Object")}} 객체의 `toString()`메소드를 오버라이딩하며, {{jsxref("Object.prototype.toString()")}} 를 상속받지 않습니다. {{jsxref( "Number")}} 객체에서 `toString()` 메소드는 특정 진수로 객체를 표현한 문자열을 환원합니다.
 
-`toString() `메소드는 메소드의 첫 번째 아규먼트를 파싱하여, 메소드는 특정 기수(radix)를 기준으로 한 진수 값의 문자열을 환원하기 위한 시도를 합니다. 진수를 나타내는 기수 값(radix) 이 10 이상의 값일 때는, 알파벳의 글자는 9보다 큰 수를 나타냅니다. 예를 들면, 16진수(base 16)는, 알파벳 f 까지 사용하여 표현됩니다.
+`toString()` 메소드는 메소드의 첫 번째 아규먼트를 파싱하여, 메소드는 특정 기수(radix)를 기준으로 한 진수 값의 문자열을 환원하기 위한 시도를 합니다. 진수를 나타내는 기수 값(radix) 이 10 이상의 값일 때는, 알파벳의 글자는 9보다 큰 수를 나타냅니다. 예를 들면, 16진수(base 16)는, 알파벳 f 까지 사용하여 표현됩니다.
 
 만약에 `radix`값 이 지정되지 않으면, 임의로 10진수로 가정하게 됩니다.
 

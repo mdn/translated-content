@@ -1,14 +1,6 @@
 ---
 title: PerformanceEntry.entryType
 slug: Web/API/PerformanceEntry/entryType
-tags:
-  - API
-  - PerformanceEntry
-  - Web パフォーマンス
-  - パフォーマンスタイムライン API
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/PerformanceEntry/entryType
 ---
 {{APIRef("Performance Timeline API")}}
 

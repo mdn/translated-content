@@ -15,7 +15,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/is
 
 ## 구문
 
-    Object.is(value1, value2);
+```js
+Object.is(value1, value2);
+```
 
 ### 매개변수
 

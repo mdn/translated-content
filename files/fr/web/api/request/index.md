@@ -133,13 +133,11 @@ fetch(request)
 
 ## Spécifications
 
-| Spécification                                                    | Statut                   | Commentaire         |
-| ---------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('Fetch','#request-class','Request')}} | {{Spec2('Fetch')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Request")}}
+{{Compat}}
 
 ## Voir aussi
 

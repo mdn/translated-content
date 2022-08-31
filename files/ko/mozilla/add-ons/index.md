@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons
 
 ## 애드온 개발하기
 
-Firefox 애드온을 개발하는데 있어서는 현재 몇가지 툴셋들이 있습니다, 그러나 [웹확장기능(WebExtensions)](https://developer.mozilla.org/en-US/Add-ons/WebExtensions) 이 2017년 말에 표준으로 선정될 것입니다. 나머지 툴들은 같은기간안에 [지원이 중단(deprecated) ](https://developer.mozilla.org/en-US/Add-ons/Overlay_Extensions)될 것으로 예상 됩니다.
+Firefox 애드온을 개발하는데 있어서는 현재 몇가지 툴셋들이 있습니다, 그러나 [웹확장기능(WebExtensions)](https://developer.mozilla.org/en-US/Add-ons/WebExtensions) 이 2017년 말에 표준으로 선정될 것입니다. 나머지 툴들은 같은기간안에 [지원이 중단(deprecated)](https://developer.mozilla.org/en-US/Add-ons/Overlay_Extensions) 될 것으로 예상 됩니다.
 
 이곳에서 당신은 애드온을 개발하는데 이용 가능한 옵션에 대한 정보를 찾을 수 있을 것입니다, 이로써 당신은 지금 당장과 미래에 무엇이 당신에게 가장 좋을지 결정 할 수 있을 것입니다.
 

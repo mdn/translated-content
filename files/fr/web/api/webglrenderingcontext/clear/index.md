@@ -60,14 +60,11 @@ gl.getParameter(gl.STENCIL_CLEAR_VALUE);
 
 ## Spécifications
 
-| Spécification                                                            | Statut                               | Commentaire               |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------------------------- |
-| {{SpecName('WebGL', "#5.14.11", "clear")}}                 | {{Spec2('WebGL')}}             | Définition initiale.      |
-| {{SpecName('OpenGL ES 2.0', "glClear.xml", "glClear")}} | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API OpenGL. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.clear")}}
+{{Compat}}
 
 ## Voir aussi
 

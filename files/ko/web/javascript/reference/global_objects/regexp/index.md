@@ -52,7 +52,7 @@ let re = new RegExp('\\w+')
 
 ### Perl 형태의 `RegExp` 속성
 
-일부 {{JSxRef("RegExp")}} 속성은 같은 값에 대해 긴 이름과 짧은 (Perl 형태의) 이름 모두 가지고 있습니다. (Perl은 JavaScript가 정규 표현식을 만들 때 참고한 프로그래밍 언어입니다.)[ 사용하지 않는 `RegExp` 속성](/ko/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#RegExp_Properties)을 참고하세요.
+일부 {{JSxRef("RegExp")}} 속성은 같은 값에 대해 긴 이름과 짧은 (Perl 형태의) 이름 모두 가지고 있습니다. (Perl은 JavaScript가 정규 표현식을 만들 때 참고한 프로그래밍 언어입니다.) [사용하지 않는 `RegExp` 속성](/ko/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#RegExp_Properties)을 참고하세요.
 
 ## 생성자
 

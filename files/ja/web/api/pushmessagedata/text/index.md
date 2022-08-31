@@ -1,17 +1,6 @@
 ---
 title: PushMessageData.text()
 slug: Web/API/PushMessageData/text
-tags:
-  - API
-  - Experimental
-  - Method
-  - Plain text
-  - Push
-  - PushuMessageData
-  - Reference
-  - Service Workers
-  - Text
-translation_of: Web/API/PushMessageData/text
 ---
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 

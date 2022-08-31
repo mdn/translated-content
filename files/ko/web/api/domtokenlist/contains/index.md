@@ -9,7 +9,9 @@ The **`contains()`** method of the {{domxref("DOMTokenList")}} interface returns
 
 ## Syntax
 
-    tokenList.contains(token);
+```js
+tokenList.contains(token);
+```
 
 ### Parameters
 

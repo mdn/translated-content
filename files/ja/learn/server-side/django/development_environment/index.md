@@ -1,12 +1,6 @@
 ---
 title: Django 開発環境の設定
 slug: Learn/Server-side/Django/development_environment
-tags:
-  - Python
-  - Webフレームワーク
-  - django
-  - サーバーサイドプログラミング
-translation_of: Learn/Server-side/Django/development_environment
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
 

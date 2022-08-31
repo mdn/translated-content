@@ -1,16 +1,6 @@
 ---
 title: 過去のレイアウト方法
 slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
-tags:
-  - Beginner
-  - CSS
-  - Floats
-  - Guide
-  - Layout
-  - Learn
-  - grid system
-  - legacy
-translation_of: Learn/CSS/CSS_layout/Legacy_Layout_Methods
 ---
 {{LearnSidebar}}
 

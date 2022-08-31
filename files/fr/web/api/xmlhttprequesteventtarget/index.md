@@ -36,13 +36,11 @@ translation_of: Web/API/XMLHttpRequestEventTarget
 
 ## Spécifications
 
-| Spécification                            | Statut                               | Commentaire            |
-| ---------------------------------------- | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.XMLHttpRequestEventTarget")}}
+{{Compat}}
 
 ## Voir aussi
 

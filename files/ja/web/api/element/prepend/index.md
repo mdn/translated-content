@@ -1,15 +1,6 @@
 ---
 title: Element.prepend()
 slug: Web/API/Element/prepend
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Element
-  - Reference
-  - prepend
-translation_of: Web/API/Element/prepend
 original_slug: Web/API/ParentNode/prepend
 ---
 {{APIRef("DOM")}}

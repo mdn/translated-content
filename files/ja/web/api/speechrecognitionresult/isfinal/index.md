@@ -1,17 +1,6 @@
 ---
 title: SpeechRecognitionResult.isFinal
 slug: Web/API/SpeechRecognitionResult/isFinal
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognitionResult
-  - Web Speech API
-  - isFinal
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognitionResult/isFinal
 ---
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 

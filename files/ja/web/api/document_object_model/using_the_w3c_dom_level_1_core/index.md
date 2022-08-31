@@ -1,10 +1,6 @@
 ---
 title: W3C DOM Level 1 Core の使用
 slug: Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core
-tags:
-  - DOM
-  - NeedsUpdate
-translation_of: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
 ---
 {{DefaultAPISidebar("DOM")}}
 

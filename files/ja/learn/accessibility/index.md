@@ -1,22 +1,6 @@
 ---
 title: アクセシビリティ
 slug: Learn/Accessibility
-tags:
-  - ARIA
-  - Accessibility
-  - Articles
-  - Beginner
-  - CSS
-  - CodingScripting
-  - HTML
-  - JavaScript
-  - Landing
-  - Learn
-  - Module
-  - アクセシビリティ
-  - ランディング
-  - 初心者
-translation_of: Learn/Accessibility
 ---
 {{LearnSidebar}}
 

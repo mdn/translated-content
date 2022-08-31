@@ -1,14 +1,6 @@
 ---
 title: FileSystemSync
 slug: Web/API/FileSystemSync
-tags:
-  - API
-  - File API
-  - File System API
-  - オフライン
-  - ファイル
-  - ファイルシステム
-translation_of: Web/API/FileSystemSync
 ---
 {{APIRef("File System API")}} {{non-standard_header}}
 

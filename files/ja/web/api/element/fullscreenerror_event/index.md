@@ -1,14 +1,6 @@
 ---
 title: 'Element: fullscreenerror イベント'
 slug: Web/API/Element/fullscreenerror_event
-tags:
-  - API
-  - Element
-  - Reference
-  - events
-  - fullscreenerror
-  - イベント
-translation_of: Web/API/Element/fullscreenerror_event
 ---
 {{APIRef}}
 

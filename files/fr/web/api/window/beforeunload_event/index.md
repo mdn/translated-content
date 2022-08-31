@@ -77,10 +77,7 @@ Noter aussi que de nombreux navigateurs ignorent le résultat de l'événement (
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("HTML WHATWG", "indices.html#event-beforeunload", "beforeunload")}} | {{Spec2("HTML WHATWG")}} |                     |
-| {{SpecName("HTML5 W3C", "browsers.html#unloading-documents", "beforeunload")}} | {{Spec2("HTML5 W3C")}}     | Première définition |
+{{Specifications}}
 
 ## Voir aussi
 

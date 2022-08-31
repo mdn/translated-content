@@ -70,7 +70,7 @@ If-None-Match: *
 
 {{Compat("http.headers.If-None-Match")}}
 
-## Voir également
+## Voir aussi
 
 - {{HTTPHeader("ETag")}}
 - {{HTTPHeader("If-Unmodified-Since")}}

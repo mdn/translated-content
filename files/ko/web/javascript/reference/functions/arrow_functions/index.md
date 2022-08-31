@@ -239,7 +239,7 @@ https\://www\.ecma-international.org/ecma-262/10.0/index.html#sec-arrow-function
 
 #### call 또는 apply를 통한 피호출
 
-화살표 함수에서는 `this가 `바인딩되지 않았기 때문에, `call()` 또는 `apply()` 메서드는 인자만 전달 할 수 있습니다. this는 무시됩니다.
+화살표 함수에서는 `this` 가 바인딩되지 않았기 때문에, `call()` 또는 `apply()` 메서드는 인자만 전달 할 수 있습니다. this는 무시됩니다.
 
 ```js
 var adder = {

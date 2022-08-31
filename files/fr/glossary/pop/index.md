@@ -12,7 +12,7 @@ original_slug: Glossaire/POP
 
 En général, les clients récupèrent tous les messages puis les suppriment du serveur, mais POP3 permet d'en conserver une copie dessus. Quasiment tous les serveurs et clients de messagerie actuels gèrent POP3.
 
-## En apprendre plus
+## Voir aussi
 
 - [RFC 1939](http://www.faqs.org/rfcs/rfc1939.html) (Spécification de POP3)
 - [RFC 2449](http://www.faqs.org/rfcs/rfc2449.html) (Spécification de POP3 extension mechanism)

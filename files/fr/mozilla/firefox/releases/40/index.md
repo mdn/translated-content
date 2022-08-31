@@ -153,7 +153,7 @@ _No change._
 
 - Places Keywords API has been deprecated and will be removed soon ({{bug(1140395)}}).
 
-## See also
+## Voir aussi
 
 - [Site Compatibility for Firefox 40](/fr/docs/Mozilla/Firefox/Releases/40/Site_Compatibility)
 

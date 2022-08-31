@@ -1,14 +1,6 @@
 ---
 title: ExtendableEvent()
 slug: Web/API/ExtendableEvent/ExtendableEvent
-tags:
-  - API
-  - Constructor
-  - ExtendableEvent
-  - Reference
-  - Service Workers
-  - ServiceWorker
-translation_of: Web/API/ExtendableEvent/ExtendableEvent
 ---
 {{APIRef("Service Workers API")}}
 

@@ -70,12 +70,7 @@ function print_json() {
 
 ## Spécifications
 
-Les interfaces décrites dans ce document sont définies dans la norme `High Resolution Time` qui comporte deux niveaux :
-
-| Spécification                                    | Statut                                       | Commentaire                                                            |
-| ------------------------------------------------ | -------------------------------------------- | ---------------------------------------------------------------------- |
-| {{SpecName('Highres Time Level 2')}} | {{Spec2('Highres Time Level 2')}} | Ajout de l'attribut `performance` sur `Window` et `WorkerGlobalScope`. |
-| {{SpecName('Highres Time')}}             | {{Spec2('Highres Time')}}             | Définition initiale.                                                   |
+{{Specifications}}
 
 ## Interopérabilité
 

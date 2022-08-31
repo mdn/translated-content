@@ -1,11 +1,6 @@
 ---
 title: element.setAttributeNode
 slug: Web/API/Element/setAttributeNode
-tags:
-  - DOM
-  - Gecko
-  - 翻訳中
-translation_of: Web/API/Element/setAttributeNode
 ---
 {{ ApiRef("DOM") }}
 

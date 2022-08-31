@@ -1,15 +1,6 @@
 ---
 title: ReadableByteStreamController.byobRequest
 slug: Web/API/ReadableByteStreamController/byobRequest
-tags:
-  - API
-  - Experimental
-  - Property
-  - ReadableByteStreamController
-  - Reference
-  - Streams
-  - byobRequest
-translation_of: Web/API/ReadableByteStreamController/byobRequest
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 

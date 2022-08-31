@@ -1,14 +1,6 @@
 ---
 title: '評価: 太陽系の惑星のデータを構造化する'
 slug: Learn/HTML/Tables/Structuring_planet_data
-tags:
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - HTML
-  - Learn
-  - テーブル
-translation_of: Learn/HTML/Tables/Structuring_planet_data
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 

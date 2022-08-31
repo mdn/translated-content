@@ -1,17 +1,6 @@
 ---
 title: フォームの構築方法
 slug: Learn/Forms/How_to_structure_a_web_form
-tags:
-  - CodingScripting
-  - HTML
-  - Web
-  - ガイド
-  - フォーム
-  - 例
-  - 初心者
-  - 学習
-  - 構造
-translation_of: Learn/Forms/How_to_structure_a_web_form
 original_slug: Learn/Forms/How_to_structure_an_HTML_form
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}

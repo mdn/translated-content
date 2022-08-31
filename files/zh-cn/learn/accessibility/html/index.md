@@ -262,7 +262,7 @@ UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许�
 
 接着你可以按 Enter / Return 来追踪当前获得焦点的链接，或者按按钮来实现（我们已经使用 JavaScript 使按钮同时显示提示消息），或者开始在文本输入中输入文本（其他表单元素具有不同的控件，例如 {{htmlelement("select")}} 元素拥有自己的显示选项，可以使用向上和向下箭头键进行循环）。
 
-> **备注：** 不同的浏览器可能有不同的键盘控制选项。请参阅[使用本机键盘辅助功能](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility)获取更多详细信。
+> **备注：** 不同的浏览器可能有不同的键盘控制选项。请参阅[使用本机键盘辅助功能](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#使用键盘)获取更多详细信息。
 
 实际上，您只需使用适当的元素即可免费获得此功能，例如，
 

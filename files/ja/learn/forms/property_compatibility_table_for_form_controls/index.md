@@ -1,19 +1,6 @@
 ---
 title: フォームウィジェット向けプロパティ実装状況一覧
 slug: Learn/Forms/Property_compatibility_table_for_form_controls
-tags:
-  - Advanced
-  - CSS
-  - Forms
-  - Guide
-  - HTML
-  - NeedsUpdate
-  - Web
-  - ウェブ
-  - ガイド
-  - フォーム
-  - 高度
-translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
 ---
 {{learnsidebar}}
 

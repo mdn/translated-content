@@ -1,16 +1,6 @@
 ---
 title: Screen.height
 slug: Web/API/Screen/height
-page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - NeedsMobileBrowserCompatibility
-  - Property
-  - Reference
-browser-compat: api.Screen.height
-translation_of: Web/API/Screen/height
 ---
 {{APIRef("CSSOM")}}
 

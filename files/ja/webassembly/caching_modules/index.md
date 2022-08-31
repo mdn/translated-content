@@ -1,15 +1,6 @@
 ---
 title: コンパイルされた WebAssembly モジュールをキャッシュする
 slug: WebAssembly/Caching_modules
-tags:
-  - Caching
-  - IndexedDB
-  - JavaScript
-  - Module
-  - WebAssembly
-  - compile
-  - wasm
-translation_of: WebAssembly/Caching_modules
 ---
 {{WebAssemblySidebar}}
 

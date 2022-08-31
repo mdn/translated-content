@@ -12,7 +12,7 @@ original_slug: Glossaire/DTMF
 
 Les ordinateurs peuvent utiliser DTMF lors de la numérotation d'un modem ou lors de l'envoi de commandes à un système de menu pour une téléconférence ou à d'autres fins.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

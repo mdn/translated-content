@@ -1,13 +1,6 @@
 ---
 title: 三次元の衝突検出
 slug: Games/Techniques/3D_collision_detection
-tags:
-  - 3D
-  - Games
-  - JavaScript
-  - bounding boxes
-  - collision detection
-translation_of: Games/Techniques/3D_collision_detection
 ---
 {{GamesSidebar}}
 

@@ -1,15 +1,6 @@
 ---
 title: Navigator.maxTouchPoints
 slug: Web/API/Navigator/maxTouchPoints
-tags:
-  - API
-  - DOM
-  - Navigator
-  - Property
-  - Reference
-  - maxTouchPoints
-  - ポインターイベント
-translation_of: Web/API/Navigator/maxTouchPoints
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,15 +1,6 @@
 ---
 title: 仕上げ
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
-tags:
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Tutorial
-  - lives
-  - requestAnimationFrame
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 ---
 {{GamesSidebar}}

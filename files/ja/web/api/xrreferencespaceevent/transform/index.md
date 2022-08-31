@@ -1,30 +1,6 @@
 ---
 title: XRReferenceSpaceEvent.transform
 slug: Web/API/XRReferenceSpaceEvent/transform
-tags:
-  - API
-  - AR
-  - Coordinate System
-  - Coordinates
-  - Event
-  - Mixed
-  - Orientation
-  - Position
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRReferenceSpace
-  - augmented
-  - reset
-  - transform
-translation_of: Web/API/XRReferenceSpaceEvent/transform
 ---
 {{APIRef("WebXR Device API")}}{{SecureContext_header}}
 

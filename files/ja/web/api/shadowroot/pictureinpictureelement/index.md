@@ -1,14 +1,6 @@
 ---
 title: ShadowRoot.pictureInPictureElement
 slug: Web/API/ShadowRoot/pictureInPictureElement
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - ShadowRoot
-  - ウェブコンポーネント
-  - シャドウ DOM
-browser-compat: api.ShadowRoot.pictureInPictureElement
 ---
 {{APIRef("Shadow DOM")}}
 

@@ -19,7 +19,7 @@ L'algorithme du framework recherche le chemin avec la plus faible latence pour c
 3. Connexion TCP directe, via le port HTTPS
 4. Connexion indirecte via un serveur {{glossary("TURN")}}/relais (si une connexion directe échoue, e.g. si un des pairs est situé derrière un pare-feu qui empêche la traversée du NAT)
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

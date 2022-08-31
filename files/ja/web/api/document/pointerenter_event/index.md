@@ -1,16 +1,6 @@
 ---
 title: 'Document: pointerenter イベント'
 slug: Web/API/Document/pointerenter_event
-tags:
-  - API
-  - Document
-  - Event
-  - PointerEvent
-  - Reference
-  - onpointerenter
-  - pointerenter
-  - イベント
-translation_of: Web/API/Document/pointerenter_event
 ---
 {{APIRef}}
 

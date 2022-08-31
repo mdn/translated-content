@@ -3,8 +3,6 @@ title: 간단한 색깔 애니메이션
 slug: Web/API/WebGL_API/By_example/Simple_color_animation
 translation_of: Web/API/WebGL_API/By_example/Simple_color_animation
 ---
-{{IncludeSubnav("/en-US/Learn")}}
-
 {{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}
 
 {{Glossary("WebGL")}} 를 청소함으로써 매 초 마다 랜덤 색이 버퍼에 그려지는 매우 기본적인 색깔 애니메이션.

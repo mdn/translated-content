@@ -1,17 +1,6 @@
 ---
 title: CSS の基本
 slug: Learn/Getting_started_with_the_web/CSS_basics
-tags:
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Learn
-  - Styling
-  - Web
-  - l10n:priority
-  - 初心者
-  - 学習
-translation_of: Learn/Getting_started_with_the_web/CSS_basics
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
 

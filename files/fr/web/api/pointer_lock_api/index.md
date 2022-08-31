@@ -244,15 +244,11 @@ Tandis que cela fonctionne pour les iframes par défaut, les iframes en "sandbox
 
 ## Spécifications
 
-| Specification                        | Etat                             | Commentaire            |
-| ------------------------------------ | -------------------------------- | ---------------------- |
-| {{SpecName('Pointer Lock')}} | {{Spec2('Pointer Lock')}} | Initial specification. |
+{{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-### `Element.requestPointerLock`
-
-{{Compat("api.Element.requestPointerLock")}}
+{{Compat}}
 
 ## Voir aussi
 

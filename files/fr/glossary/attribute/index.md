@@ -29,7 +29,7 @@ On peut aussi trouver des attributs sans valeur quand elle n'est pas nécessaire
 <input type="text" required="required">
 ```
 
-## Pour approfondir
+## Voir aussi
 
 ### Informations techniques
 

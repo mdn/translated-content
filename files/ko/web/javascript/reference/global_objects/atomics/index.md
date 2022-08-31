@@ -58,6 +58,6 @@ The `wait()` and `wake()` methods are modeled on Linux futexes ("fast user-space
 - {{jsxref("ArrayBuffer")}}
 - [JavaScript typed arrays](/ko/docs/Web/JavaScript/Typed_arrays)
 - [Web Workers](/ko/docs/Web/API/Web_Workers_API)
-- [parlib-simple ](https://github.com/lars-t-hansen/parlib-simple)– a simple library providing synchronization and work distribution abstractions.
+- [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – a simple library providing synchronization and work distribution abstractions.
 - [Shared Memory – a brief tutorial](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)
 - [A Taste of JavaScript’s New Parallel Primitives – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)

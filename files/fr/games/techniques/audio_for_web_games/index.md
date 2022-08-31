@@ -349,7 +349,7 @@ Ceci est particulièrement utile dans un environnement tridimensionnel rendu en 
 
 > **Note :** Voir [Web Audio API Spatialization Basics](/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics) _(Bases de la spacialisation de l'API Web Audio)_ pour plus de détails.
 
-## See Also
+## Voir aussi
 
 - [Web Audio API sur MDN](/fr/docs/Web/API/Web_Audio_API)
 - [`<audio>` sur MDN](/fr/docs/Web/HTML/Element/audio)

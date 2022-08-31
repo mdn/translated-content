@@ -376,12 +376,6 @@
       "SaraJade"
     ]
   },
-  "Glossary/Dynamic_programming_language": {
-    "modified": "2020-07-02T21:45:18.003Z",
-    "contributors": [
-      "raucer"
-    ]
-  },
   "Glossary/ECMA": {
     "modified": "2019-03-23T22:30:25.897Z",
     "contributors": [
@@ -3533,13 +3527,6 @@
       "matheusmariano"
     ]
   },
-  "Web/API/Canvas_API/A_basic_ray-caster": {
-    "modified": "2019-03-23T22:18:52.140Z",
-    "contributors": [
-      "alipseight",
-      "juniorgarcia"
-    ]
-  },
   "Web/API/Canvas_API/Tutorial": {
     "modified": "2019-03-23T23:13:39.145Z",
     "contributors": [
@@ -4938,12 +4925,6 @@
       "emilianocarvalho"
     ]
   },
-  "Web/API/GlobalEventHandlers": {
-    "modified": "2019-03-23T22:31:33.398Z",
-    "contributors": [
-      "teoli"
-    ]
-  },
   "Web/API/HTMLCanvasElement": {
     "modified": "2019-03-23T22:03:54.461Z",
     "contributors": [
@@ -5532,12 +5513,6 @@
       "AlvaroAlves",
       "teoli",
       "salomaosnff"
-    ]
-  },
-  "Web/API/NotificationAction": {
-    "modified": "2020-10-15T22:22:52.083Z",
-    "contributors": [
-      "jowks"
     ]
   },
   "Web/API/OfflineAudioContext": {
@@ -6375,12 +6350,6 @@
       "Fulanodigital"
     ]
   },
-  "Web/API/Window/setCursor": {
-    "modified": "2019-03-23T22:50:55.979Z",
-    "contributors": [
-      "macalha"
-    ]
-  },
   "Web/API/Window/setImmediate": {
     "modified": "2019-03-23T22:04:49.012Z",
     "contributors": [
@@ -6392,20 +6361,6 @@
     "contributors": [
       "GPrimola",
       "gustavoverasmorais"
-    ]
-  },
-  "Web/API/WindowEventHandlers": {
-    "modified": "2020-03-01T23:25:36.916Z",
-    "contributors": [
-      "kudnx",
-      "teoli"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope": {
-    "modified": "2019-03-23T22:06:16.824Z",
-    "contributors": [
-      "angelorubin",
-      "Bzbarsky"
     ]
   },
   "Web/API/Worker": {
@@ -6596,32 +6551,6 @@
       "Sheppy"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute": {
-    "modified": "2020-01-24T10:16:14.859Z",
-    "contributors": [
-      "BiancaPereira"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute": {
-    "modified": "2020-12-10T12:36:57.074Z",
-    "contributors": [
-      "filipetorres",
-      "duduindo",
-      "NeoOrion"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute": {
-    "modified": "2019-03-23T23:02:11.347Z",
-    "contributors": [
-      "eduardojmatos"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute": {
-    "modified": "2019-03-18T21:46:23.148Z",
-    "contributors": [
-      "ivanoliveira"
-    ]
-  },
   "Web/Accessibility/ARIA/Roles": {
     "modified": "2020-09-18T19:22:52.644Z",
     "contributors": [
@@ -6707,12 +6636,6 @@
     "modified": "2019-03-23T22:04:16.687Z",
     "contributors": [
       "filipetorres"
-    ]
-  },
-  "Web/CSS/-moz-context-properties": {
-    "modified": "2020-10-15T22:12:51.330Z",
-    "contributors": [
-      "dekxside"
     ]
   },
   "Web/CSS/-webkit-overflow-scrolling": {
@@ -7064,13 +6987,6 @@
     "modified": "2019-03-23T22:43:49.326Z",
     "contributors": [
       "teoli"
-    ]
-  },
-  "Web/CSS/CSS_Animations/Detecting_CSS_animation_support": {
-    "modified": "2019-03-18T21:31:28.635Z",
-    "contributors": [
-      "wbamberg",
-      "eyglys"
     ]
   },
   "Web/CSS/CSS_Animations/Tips": {
@@ -11480,12 +11396,6 @@
     "modified": "2020-03-12T19:49:26.166Z",
     "contributors": [
       "ViniciusMatias"
-    ]
-  },
-  "Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated": {
-    "modified": "2020-03-12T19:46:42.577Z",
-    "contributors": [
-      "thiagosaife"
     ]
   },
   "Web/JavaScript/Reference/Errors/Illegal_character": {
@@ -16320,6 +16230,12 @@
       "caio"
     ]
   },
+  "orphaned/Glossary/Dynamic_programming_language": {
+    "modified": "2020-07-02T21:45:18.003Z",
+    "contributors": [
+      "raucer"
+    ]
+  },
   "orphaned/Glossary/Tratando_Formulários_com_PHP": {
     "modified": "2019-05-30T02:54:29.717Z",
     "contributors": [
@@ -16559,6 +16475,13 @@
       "tohdi1"
     ]
   },
+  "orphaned/Web/API/Canvas_API/A_basic_ray-caster": {
+    "modified": "2019-03-23T22:18:52.140Z",
+    "contributors": [
+      "alipseight",
+      "juniorgarcia"
+    ]
+  },
   "orphaned/Web/API/ChildNode": {
     "modified": "2020-10-15T21:55:14.252Z",
     "contributors": [
@@ -16590,6 +16513,12 @@
     "modified": "2020-10-15T22:15:52.238Z",
     "contributors": [
       "TecladistaProd"
+    ]
+  },
+  "orphaned/Web/API/GlobalEventHandlers": {
+    "modified": "2019-03-23T22:31:33.398Z",
+    "contributors": [
+      "teoli"
     ]
   },
   "orphaned/Web/API/HTMLOrForeignElement/blur": {
@@ -16698,6 +16627,12 @@
       "Josue-Bastos"
     ]
   },
+  "orphaned/Web/API/NotificationAction": {
+    "modified": "2020-10-15T22:22:52.083Z",
+    "contributors": [
+      "jowks"
+    ]
+  },
   "orphaned/Web/API/ParentNode": {
     "modified": "2019-03-23T22:19:41.961Z",
     "contributors": [
@@ -16722,10 +16657,69 @@
       "rener_bz"
     ]
   },
+  "orphaned/Web/API/Window/setCursor": {
+    "modified": "2019-03-23T22:50:55.979Z",
+    "contributors": [
+      "macalha"
+    ]
+  },
+  "orphaned/Web/API/WindowEventHandlers": {
+    "modified": "2020-03-01T23:25:36.916Z",
+    "contributors": [
+      "kudnx",
+      "teoli"
+    ]
+  },
+  "orphaned/Web/API/WindowOrWorkerGlobalScope": {
+    "modified": "2019-03-23T22:06:16.824Z",
+    "contributors": [
+      "angelorubin",
+      "Bzbarsky"
+    ]
+  },
+  "orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute": {
+    "modified": "2020-01-24T10:16:14.859Z",
+    "contributors": [
+      "BiancaPereira"
+    ]
+  },
+  "orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute": {
+    "modified": "2020-12-10T12:36:57.074Z",
+    "contributors": [
+      "filipetorres",
+      "duduindo",
+      "NeoOrion"
+    ]
+  },
+  "orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute": {
+    "modified": "2019-03-23T23:02:11.347Z",
+    "contributors": [
+      "eduardojmatos"
+    ]
+  },
+  "orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute": {
+    "modified": "2019-03-18T21:46:23.148Z",
+    "contributors": [
+      "ivanoliveira"
+    ]
+  },
   "orphaned/Web/Accessibility/JAWS_Issues_with_Firefox": {
     "modified": "2019-03-23T22:45:26.552Z",
     "contributors": [
       "takahan"
+    ]
+  },
+  "orphaned/Web/CSS/-moz-context-properties": {
+    "modified": "2020-10-15T22:12:51.330Z",
+    "contributors": [
+      "dekxside"
+    ]
+  },
+  "orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support": {
+    "modified": "2019-03-18T21:31:28.635Z",
+    "contributors": [
+      "wbamberg",
+      "eyglys"
     ]
   },
   "orphaned/Web/CSS/image-set()": {
@@ -16870,6 +16864,12 @@
     "modified": "2020-03-12T19:42:40.865Z",
     "contributors": [
       "Franck_Moreira"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated": {
+    "modified": "2020-03-12T19:46:42.577Z",
+    "contributors": [
+      "thiagosaife"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype": {

@@ -48,15 +48,13 @@ window.addEventListener('cut', (event) => {
 
 ## Spécifications
 
-| Spécification                                                            | Statut                               |
-| ------------------------------------------------------------------------ | ------------------------------------ |
-| {{SpecName('Clipboard API', '#clipboard-event-cut')}} | {{Spec2('Clipboard API')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.cut_event")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - Événements liés: {{domxref("Window/copy_event", "copy")}}, {{domxref("Window/paste_event", "paste")}}
 - Cet événement sur {{domxref("Element")}} targets: {{domxref("Element/cut_event", "cut")}}

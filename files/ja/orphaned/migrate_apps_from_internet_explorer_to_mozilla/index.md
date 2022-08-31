@@ -1,8 +1,6 @@
 ---
 title: Migrate apps from Internet Explorer to Mozilla
 slug: orphaned/Migrate_apps_from_Internet_Explorer_to_Mozilla
-tags:
-  - 要更新
 original_slug: Migrate_apps_from_Internet_Explorer_to_Mozilla
 ---
 ### イントロダクション

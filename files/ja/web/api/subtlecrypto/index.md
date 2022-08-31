@@ -1,12 +1,6 @@
 ---
 title: SubtleCrypto
 slug: Web/API/SubtleCrypto
-tags:
-  - API
-  - Interface
-  - Reference
-  - Web Crypto API
-translation_of: Web/API/SubtleCrypto
 ---
 {{APIRef("Web Crypto API")}}
 

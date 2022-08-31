@@ -9,11 +9,13 @@ translation_of: Web/API/Document/embeds
 
 ### Summary
 
-`embeds `는 현재 document 에 embed되어 있는 OBJECT 들의 list 를 반환합니다.
+`embeds` 는 현재 document 에 embed되어 있는 OBJECT 들의 list 를 반환합니다.
 
 ### Syntax
 
-    nodeList = document.embeds
+```js
+nodeList = document.embeds
+```
 
 ### Specifications
 
