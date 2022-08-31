@@ -1,6 +1,8 @@
 ---
 title: Performance.timing
 slug: Web/API/Performance/timing
+l10n:
+  sourceCommit: cadd198e75b25e939938c414e46e95aa7f14318b
 ---
 {{APIRef("Navigation Timing")}}{{deprecated_header}}
 
