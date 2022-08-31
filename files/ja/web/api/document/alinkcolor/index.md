@@ -1,15 +1,6 @@
 ---
 title: Document.alinkColor
 slug: Web/API/Document/alinkColor
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - Document
-  - Reference
-  - alinkColor
-  - プロパティ
-translation_of: Web/API/Document/alinkColor
 ---
 {{APIRef("DOM")}}{{Deprecated_header}}
 

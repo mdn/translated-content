@@ -1,14 +1,6 @@
 ---
 title: Document.fullscreen
 slug: Web/API/Document/fullscreen
-tags:
-  - API
-  - Document
-  - Fullscreen API
-  - Read-only
-  - Reference
-  - プロパティ
-translation_of: Web/API/Document/fullscreen
 ---
 {{APIRef("Fullscreen API")}}{{Deprecated_Header}}
 

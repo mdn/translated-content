@@ -1,14 +1,6 @@
 ---
 title: Document.onafterscriptexecute
 slug: Web/API/Document/afterscriptexecute_event
-tags:
-  - API
-  - DOM
-  - Non-standard
-  - Reference
-  - プロパティ
-  - 標準外
-translation_of: Web/API/Document/onafterscriptexecute
 original_slug: Web/API/Document/onafterscriptexecute
 ---
 {{ApiRef("DOM")}}{{non-standard_header}}

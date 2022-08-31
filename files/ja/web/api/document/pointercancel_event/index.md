@@ -1,15 +1,6 @@
 ---
 title: 'Document: pointercancel イベント'
 slug: Web/API/Document/pointercancel_event
-tags:
-  - API
-  - Document
-  - Event
-  - PointerEvent
-  - onpointercancel
-  - pointercancel
-  - イベント
-translation_of: Web/API/Document/pointercancel_event
 ---
 {{APIRef}}
 

@@ -1,16 +1,6 @@
 ---
 title: 'Document: pointerleave イベント'
 slug: Web/API/Document/pointerleave_event
-tags:
-  - API
-  - Document
-  - Event
-  - PointerEvent
-  - Reference
-  - onpointerleave
-  - pointerleave
-  - イベント
-translation_of: Web/API/Document/pointerleave_event
 ---
 {{APIRef}}
 

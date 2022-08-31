@@ -1,16 +1,6 @@
 ---
 title: DataTransferItemList.clear()
 slug: Web/API/DataTransferItemList/clear
-tags:
-  - API
-  - DataTransferItemList
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Method
-  - Reference
-  - clear
-  - ドラッグアンドドロップ
-translation_of: Web/API/DataTransferItemList/clear
 ---
 {{domxref("DataTransferItemList")}} の **`clear()`** メソッドは、ドラッグデータアイテムリストからすべての {{domxref("DataTransferItem")}} オブジェクトを削除し、リストを空にします。
 

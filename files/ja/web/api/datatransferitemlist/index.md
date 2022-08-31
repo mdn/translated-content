@@ -1,17 +1,6 @@
 ---
 title: DataTransferItemList
 slug: Web/API/DataTransferItemList
-tags:
-  - API
-  - DataTransferItemList
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - drag and drop
-translation_of: Web/API/DataTransferItemList
 ---
 {{APIRef("HTML Drag and Drop API")}}
 

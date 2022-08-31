@@ -1,14 +1,6 @@
 ---
 title: Document.createEntityReference()
 slug: Web/API/Document/createEntityReference
-page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - メソッド
-  - リファレンス
-  - 非推奨
-translation_of: Web/API/Document/createEntityReference
 ---
 {{ApiRef("DOM")}}{{deprecated_header}}
 

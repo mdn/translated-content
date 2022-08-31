@@ -1,13 +1,6 @@
 ---
 title: Document.createAttribute()
 slug: Web/API/Document/createAttribute
-page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-browser-compat: api.Document.createAttribute
 ---
 {{ ApiRef("DOM") }}
 
