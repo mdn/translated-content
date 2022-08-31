@@ -4,7 +4,6 @@ slug: Glossary/AJAX
 tags:
   - AJAX
   - CodingScripting
-  - Encodage
   - Glossaire
   - Infrastructure
   - l10n:priority
@@ -17,15 +16,15 @@ AJAX vous permet de mettre à jour simplement des parties du {{Glossary("DOM")}}
 
 Avec les sites web interactifs et les standards modernes du web, AJAX est progressivement remplacé par des fonctions dans les cadres JavaScript et l'API standard officielle {{domxref("Fetch API")}}.
 
-## Voir aussi
-
-- [Glossaire du MND](/fr/docs/Glossaire):
-
-  - {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}
+## Pour approfondir
 
 - [AJAX](https://fr.wikipedia.org/wiki/Ajax_(informatique)) sur Wikipédia
 - [AJAX](/fr/docs/Web/Guide/AJAX)
 - [AJAX - Premiers pas](/fr/docs/Web/Guide/AJAX/Premiers_pas)
+- [Glossaire du MND](/fr/docs/Glossaire):
+
+  - {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}
+
 - {{DOMxRef("XMLHttpRequest")}}
 - {{DOMxRef("Fetch API")}}
 - [Utilisation de l'API Fetch](/fr/docs/Web/API/Fetch_API/Using_Fetch)
