@@ -51,33 +51,11 @@ gl.uniformMatrix2fv(loc, false, [2.1, 2.2]);
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('WebGL', "#5.14.10", "uniformMatrix")}}
-      </td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td><p>Définition initiale.</p></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('OpenGL ES 2.0', "glUniform.xml", "glUniform")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td><p>Page man de l’API OpenGL.</p></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.uniformMatrix2fv")}}
+{{Compat}}
 
 ## Voir aussi
 

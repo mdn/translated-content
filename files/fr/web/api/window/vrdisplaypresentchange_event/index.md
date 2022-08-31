@@ -70,13 +70,11 @@ window.onvrdisplaypresentchange = function() {
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                       | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('WebVR 1.1', '#dom-window-onvrdisplaypresentchange', 'vrdisplaypresentchange')}} | {{Spec2('WebVR 1.1')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.vrdisplaypresentchange_event")}}
+{{Compat}}
 
 ## Voir aussi
 

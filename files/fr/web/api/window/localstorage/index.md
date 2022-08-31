@@ -67,13 +67,11 @@ localStorage.clear();
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName("HTML WHATWG", "webstorage.html#dom-localstorage", "localStorage")}} | {{Spec2("HTML WHATWG")}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.Window.localStorage")}}
+{{Compat}}
 
 ## Voir aussi
 

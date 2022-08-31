@@ -69,13 +69,11 @@ window.onmessage = (event) => {
 
 ## Spécifications
 
-| Spécification                                                                | Statut                           |
-| ---------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'indices.html#event-message')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.message_event")}}
+{{Compat}}
 
 ## Voir aussi
 

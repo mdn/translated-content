@@ -80,13 +80,11 @@ Il existe plusieurs scripts de secours listés sur [cette page](https://github.c
 
 ## Spécifications
 
-| Spécification                                                                                        | Status                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG', 'indices.html#event-hashchange', 'hashchange')}} | {{Spec2('HTML WHATWG')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.hashchange_event")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -26,13 +26,11 @@ self.onoffline = function() {
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                           | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#handler-workerglobalscope-onoffline", "WorkerGlobalScope.onoffline")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WorkerGlobalScope.onoffline")}}
+{{Compat}}
 
 ## Voir aussi
 

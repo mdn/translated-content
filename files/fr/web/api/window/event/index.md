@@ -21,13 +21,11 @@ Vous devez éviter d'utiliser cette propriété dans un nouveau code et utiliser
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG', "#dom-window-event", "Window.event")}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.event")}}
+{{Compat}}
 
 ## Voir aussi
 

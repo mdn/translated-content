@@ -26,13 +26,11 @@ self.onlanguagechange = function() {
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#handler-workerglobalscope-onlanguagechange", "WorkerGlobalScope.onlanguagechange")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WorkerGlobalScope.onlanguagechange")}}
+{{Compat}}
 
 ## Voir aussi
 
