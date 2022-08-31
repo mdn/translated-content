@@ -7,7 +7,7 @@ Une application monopage ou SPA (« _Single-page application_ » en anglais) est
 
 Cela permet donc aux utilisateurs d'utiliser des sites web sans charger de nouvelles pages entières à partir du serveur, ce qui peut entraîner des gains de performances et une expérience plus dynamique, avec certains inconvénients tels que le référencement (SEO), plus d'efforts nécessaires pour maintenir l'état, mettre en œuvre la navigation et mesurer les performances.
 
-## En apprendre plus
+## Voir aussi
 
 ### Connaissance générale
 
