@@ -33471,14 +33471,6 @@
     "modified": "2020-10-15T22:26:24.148Z",
     "contributors": ["RainSlide"]
   },
-  "conflicting/Web/API/Element/clientHeight": {
-    "modified": "2020-11-06T03:11:40.153Z",
-    "contributors": ["GeekChen"]
-  },
-  "conflicting/Web/API/Element/clientWidth": {
-    "modified": "2019-03-24T00:17:47.703Z",
-    "contributors": ["teoli", "khalid32", "ziyunfei"]
-  },
   "conflicting/Web/API/Element/localName": {
     "modified": "2019-03-24T00:17:44.401Z",
     "contributors": ["teoli", "jsx", "AshfaqHossain", "ziyunfei"]
