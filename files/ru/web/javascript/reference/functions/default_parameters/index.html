@@ -39,8 +39,8 @@ multiply(5);    // NaN !</pre>
 <p>Чтобы такого не происходило, в теле функции использовался код подобный тому, что находится во второй строчке, где в случае, если функция <code>multiply</code> вызывалась только c одним аргументом, параметру <code>b</code> присваивалось значение <code>1</code>:</p>
 
 <pre class="brush: js">function multiply(a, b) {
-  b = typeof b !== 'undefined' ?  b : 1;
-  return a*b;
+  if (typeof b === 'undefined') b = 1;
+  return a * b;
 }
 
 multiply(5, 2); // 10
@@ -50,7 +50,7 @@ multiply(5); // 5
 <p>С появлением в ES2015 параметров по умолчанию стало возможным обходиться без проверки параметров в теле функции. Так, в приведённом выше примере достаточно в заголовке функции указать <code>1</code> в качестве значения по умолчанию для параметра <code>b</code>:</p>
 
 <pre class="brush: js">function multiply(a, b = 1) {
-  return a*b;
+  return a * b;
 }
 
 multiply(5, 2); // 10
@@ -124,36 +124,35 @@ greet('David', 'Hi', 'Happy Birthday!');  // ["David", "Hi", "Happy Birthday!"]<
 }
 
 function withDefaults(a, b = 5, c = b, d = go(), e = this,
-                      f = arguments, g = this.value) {
-  return [a,b,c,d,e,f,g];
+  f = arguments, g = this.value) {
+  return [a, b, c, d, e, f, g];
 }
 function withoutDefaults(a, b, c, d, e, f, g){
   switch(arguments.length){
     case 0:
-      a
+      a;
     case 1:
-      b = 5
+      b = 5;
     case 2:
-      c = b
+      c = b;
     case 3:
       d = go();
     case 4:
-      e = this
+      e = this;
     case 5:
-      f = arguments
+      f = arguments;
     case 6:
       g = this.value;
     default:
   }
-  return [a,b,c,d,e,f,g];
+  return [a, b, c, d, e, f, g];
 }
 
-withDefaults.call({value:"=^_^="});
-// [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
+withDefaults.call({ value: '=^_^=' });
+// [undefined, 5, 5, ":P", {value: "=^_^=" }, arguments, "=^_^="]
 
-
-withoutDefaults.call({value:"=^_^="});
-// [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
+withoutDefaults.call({ value: '=^_^=' });
+// [undefined, 5, 5, ":P", {value: "=^_^=" }, arguments, "=^_^="]
 </pre>
 
 <h3 id="Инициализация_с_помощью_функций_определяемых_в_теле_функции">Инициализация с помощью функций, определяемых в теле функции</h3>
@@ -171,7 +170,7 @@ f(); // ReferenceError: go is not defined
 
 <p>До появления версии Gecko 26 {{geckoRelease(26)}}, следующий код приводил к {{jsxref("SyntaxError")}}. Это было исправлено в {{bug(777060)}} и с тех пор работает корректно. Аргументы, передаваемые при вызове функции, становятся значениями формальных параметров независимо от наличия у последних инициализации по умолчанию, а также независимо от присутствия у функции других параметров, находящихся правее в списке параметров и не имеющих инициализации.</p>
 
-<pre class="brush: js">function f(x=1, y) {
+<pre class="brush: js">function f(x = 1, y) {
   return [x, y];
 }
 
