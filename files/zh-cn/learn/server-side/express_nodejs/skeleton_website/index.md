@@ -1,6 +1,6 @@
 ---
 title: Express 教程 2：创建站点框架
-slug: learn/Server-side/Express_Nodejs/skeleton_website
+slug: Learn/Server-side/Express_Nodejs/skeleton_website
 ---
 {{LearnSidebar}}
 
