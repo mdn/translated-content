@@ -11,7 +11,7 @@ slug: Web
 - [面向 Web 开发者的教程](/zh-CN/docs/Web/Tutorials)
   - : 这些教程帮助你一步一步地学习 API、技术或更广泛的主题。
 - [无障碍](/zh-CN/docs/Web/Accessibility)
-  - : 让更多人能够使用你的网站，即使他们的能力在某种程度上受限。
+  - : 让更多人能够使用你的网站，即使他们的某些能力受限。
 - [性能](/zh-CN/docs/Web/Performance)
   - : 让网站上的内容尽可能快地发挥可用性和交互性。
 - [安全](/zh-CN/docs/Web/Security)
@@ -33,7 +33,7 @@ slug: Web
   - : 事件是 Web 应用的反馈；例如，当一个网页完成加载，或者用户选择什么，按下一个键，调整一个窗口的大小，提交一个表单，或者暂停一个视频。
 - [HTTP](/zh-CN/docs/Web/HTTP)
   - : HTTP是一种基本的互联网协议，用于在网络上获取文档、样式表、脚本、图像、视频、字体和其他资源，并将数据送回到网络服务器。
-- [Media](/zh-CN/docs/Web/Media)
+- [媒体技术](/zh-CN/docs/Web/Media)
   - : 在 Web 文档和应用程序中嵌入和流式传输视频、音频和图像内容的格式、编解码器、协议、API 和技术。
 - [SVG](/zh-CN/docs/Web/SVG)
   - : 可缩放矢量图形（Scalable Vector Graphics）使你能够使用一组矢量与形状来描述图片，在显示时可提供无关大小的零失真的平滑缩放。
@@ -44,7 +44,7 @@ slug: Web
 - [WebDriver](/zh-CN/docs/Web/WebDriver)
   - : WebDriver 是一种浏览器自动化机制，通过模拟真实的人使用浏览器的动作来远程控制浏览器。它被广泛用于网络应用的跨浏览器测试。
 - [Web 扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions)
-  - : 网络扩展是一种在浏览器中为用户提供增强功能的方式——用于阻止广告和其他内容、定制页面的外观以及更多行为。
+  - : Web 扩展是一种在浏览器中为用户提供增强功能的方式——用于阻止广告和其他内容、定制页面的外观以及更多行为。
 - [Web App 清单](/zh-CN/docs/Web/Manifest)
   - : Web 应用清单让你能够让用户将网络应用安装到他们的设备主屏幕上，并预先设置屏幕方向（纵向或横向）和显示模式（如全屏）等方面。
 - [渐进式 Web 应用（PWA）](/zh-CN/docs/Web/Progressive_web_apps)
@@ -53,10 +53,10 @@ slug: Web
 ## 开发者工具文档
 
 - [Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
-  - : Firefox 自带的网络开发者工具的文档。
+  - : Firefox 内置的网络开发者工具的文档。
 - [Chrome 开发者工具](https://developer.chrome.com/docs/devtools/)
-  - : Chrome 自带的网络开发者工具的文档。
+  - : Chrome 内置的网络开发者工具的文档。
 - [Safari Web 监视器](https://webkit.org/web-inspector/)
-  - : Safari 自带的网络开发者工具的文档。
+  - : Safari 内置的网络开发者工具的文档。
 - [Edge 开发者工具](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/landing/)
-  - : Edge 自带的网络开发者工具的文档。
+  - : Edge 内置的网络开发者工具的文档。
