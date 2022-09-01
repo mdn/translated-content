@@ -44,13 +44,13 @@ translation_of: Learn/Server-side/Django/skeleton_website
 
 과정은 직관적입니다:
 
-1.  프로젝트 폴더, 기본적인 파일 템플릿과 프로젝트 관리 스크립트(**manage.py**)를 만들기 위해서 `django-admin`을 사용합니다.
-2.  하나 또는 그 이상의 애플리케이션을 만들기 위해서 **manage.py**를 사용합니다.
+1. 프로젝트 폴더, 기본적인 파일 템플릿과 프로젝트 관리 스크립트(**manage.py**)를 만들기 위해서 `django-admin`을 사용합니다.
+2. 하나 또는 그 이상의 애플리케이션을 만들기 위해서 **manage.py**를 사용합니다.
 
     > **참고:** 하나의 웹사이트는 하나 또는 그 이상의 섹션으로 구성될 수 있습니다. (예를 들어 main site, blog, wiki, downloads area 등). 장고는 필요할 때에 다른 프로젝트에서 재사용이 가능할 수 있게 , 이 요소들을 분리된 어플리케이션으로 개발하는 것을 추천합니다.
 
-3.  프로젝트에 포함시키기 위해 새 어플리케이션들을 등록(register)합니다.
-4.  각 어플리케이션에 대해 url/mapper를 연결(hook up)합니다.
+3. 프로젝트에 포함시키기 위해 새 어플리케이션들을 등록(register)합니다.
+4. 각 어플리케이션에 대해 url/mapper를 연결(hook up)합니다.
 
 [Local Library website](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website) 용으로 웹사이트 폴더와 프로젝트 폴더는 locallibrary라고 이름지어질 것입니다. 그리고 catalog라는 단 하나의 어플리케이션을 가질 겁니다. 그러므로 최상위 폴더 구조는 아래와 같습니다:
 

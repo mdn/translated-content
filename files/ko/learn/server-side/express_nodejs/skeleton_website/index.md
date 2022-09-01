@@ -80,7 +80,7 @@ express
 
 You can also choose a view (template) engine using `--view` and/or a CSS generation engine using `--css`.
 
-> **참고:** The other options for choosing template engines (e.g. `--hogan`, `--ejs`, `--hbs` etc.) are deprecated. Use `--view` (or` -v`)!
+> **참고:** The other options for choosing template engines (e.g. `--hogan`, `--ejs`, `--hbs` etc.) are deprecated. Use `--view` (or `-v`)!
 
 ### What view engine should I use?
 
@@ -171,14 +171,14 @@ At the end of the output, the generator provides instructions on how you install
 
 At this point, we have a complete skeleton project. The website doesn't actually _do_ very much yet, but it's worth running it to show how it works.
 
-1.  First, install the dependencies (the `install` command will fetch all the dependency packages listed in the project's **package.json** file).
+1. First, install the dependencies (the `install` command will fetch all the dependency packages listed in the project's **package.json** file).
 
     ```bash
     cd express-locallibrary-tutorial
     npm install
     ```
 
-2.  Then run the application.
+2. Then run the application.
 
     - On Windows, use this command:
 
@@ -192,7 +192,7 @@ At this point, we have a complete skeleton project. The website doesn't actually
       DEBUG=express-locallibrary-tutorial:* npm start
       ```
 
-3.  Then load <http://localhost:3000/> in your browser to access the app.
+3. Then load <http://localhost:3000/> in your browser to access the app.
 
 You should see a browser page that looks like this:
 

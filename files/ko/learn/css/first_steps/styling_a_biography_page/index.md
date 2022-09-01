@@ -46,11 +46,11 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 
 CSS 를 사용하여 내가 사용한 속성 값을 변경하여 이 전기(biography) 의 모양을 변경하십시오.
 
-1.  CSS color 키워드인 `hotpink` 를 사용하여 h1 제목을 분홍색으로 만듭니다.
-2.  CSS color 키워드 `purple` 을 사용하는 10px 점선 {{cssxref("border-bottom")}} 을 제목으로 지정하십시오.
-3.  h2 제목을 기울임 꼴로 만듭니다.
-4.  연락처 세부 정보에 사용된 `ul` 에 {{cssxref("background-color")}} 를 `#eeeeee` 및 5px 의 단색 자주색 {{cssxref("border")}} 으로 만듭니다. {{cssxref("padding")}} 을 사용하여 콘텐츠를 테두리에서 밀어냅니다.
-5.  마우스를 가리키면 `green` 으로 만듭니다.
+1. CSS color 키워드인 `hotpink` 를 사용하여 h1 제목을 분홍색으로 만듭니다.
+2. CSS color 키워드 `purple` 을 사용하는 10px 점선 {{cssxref("border-bottom")}} 을 제목으로 지정하십시오.
+3. h2 제목을 기울임 꼴로 만듭니다.
+4. 연락처 세부 정보에 사용된 `ul` 에 {{cssxref("background-color")}} 를 `#eeeeee` 및 5px 의 단색 자주색 {{cssxref("border")}} 으로 만듭니다. {{cssxref("padding")}} 을 사용하여 콘텐츠를 테두리에서 밀어냅니다.
+5. 마우스를 가리키면 `green` 으로 만듭니다.
 
 이 이미지와 비슷한 결과가 나옵니다.
 
@@ -66,8 +66,8 @@ CSS 를 사용하여 내가 사용한 속성 값을 변경하여 이 전기(biog
 
 작업을 평가하고 싶거나 작업이 정체되어 도움을 요청하려는 경우:
 
-1.  작업을 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) 또는 [Glitch](https://glitch.com/) 와 같은 온라인 공유 가능 편집기에 입력합니다.
-2.  [MDN 토론 포럼 학습 카데고리](https://discourse.mozilla.org/c/mdn/learn) 에 평가 및 도움을 요청하는 게시물을 작성 하십시오. 게시물에는 다음이 포함되어야 합니다:
+1. 작업을 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) 또는 [Glitch](https://glitch.com/) 와 같은 온라인 공유 가능 편집기에 입력합니다.
+2. [MDN 토론 포럼 학습 카데고리](https://discourse.mozilla.org/c/mdn/learn) 에 평가 및 도움을 요청하는 게시물을 작성 하십시오. 게시물에는 다음이 포함되어야 합니다:
 
     - "CSS 첫 단계에 대한 평가가 필요했습니다" 와 같은 설명적인 제목입니다.
     - 당신이 이미 시도한 내용 및 당신이 우리가 무엇을 하기를 원하는지에 대한 세부 사항 입니다. 예: 당신이 정체되어 있고 도움이 필요하거나 평가를 원하는지에 대한 세부사항들.
@@ -82,8 +82,8 @@ CSS 를 사용하여 내가 사용한 속성 값을 변경하여 이 전기(biog
 
 ## 이번 강의에서는
 
-1.  [CSS 란 무엇인가?](/ko/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [CSS 로 시작하기](/ko/docs/Learn/CSS/First_steps/Getting_started)
-3.  [CSS 의 구조](/ko/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [CSS 작동 방식](/ko/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [새로운 지식을 사용하기](/ko/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [CSS 란 무엇인가?](/ko/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [CSS 로 시작하기](/ko/docs/Learn/CSS/First_steps/Getting_started)
+3. [CSS 의 구조](/ko/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [CSS 작동 방식](/ko/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [새로운 지식을 사용하기](/ko/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
