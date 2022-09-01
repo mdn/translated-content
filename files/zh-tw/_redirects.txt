@@ -539,6 +539,7 @@
 /zh-TW/docs/Web/API/DOMString	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String
 /zh-TW/docs/Web/API/Detecting_device_orientation	/en-US/docs/Web/Events/Detecting_device_orientation
 /zh-TW/docs/Web/API/Document/keyup_event	/zh-TW/docs/Web/API/Element/keyup_event
+/zh-TW/docs/Web/API/Document/width	/zh-TW/docs/Web/API/Element/clientWidth
 /zh-TW/docs/Web/API/DocumentTemp	/zh-TW/docs/Web/API/Document
 /zh-TW/docs/Web/API/DocumentTemp/createElement	/zh-TW/docs/Web/API/Document/createElement
 /zh-TW/docs/Web/API/DocumentTemp/createRange	/zh-TW/docs/Web/API/Document/createRange
@@ -549,7 +550,7 @@
 /zh-TW/docs/Web/API/DocumentTemp/head	/zh-TW/docs/Web/API/Document/head
 /zh-TW/docs/Web/API/DocumentTemp/querySelector	/zh-TW/docs/Web/API/Document/querySelector
 /zh-TW/docs/Web/API/DocumentTemp/readyState	/zh-TW/docs/Web/API/Document/readyState
-/zh-TW/docs/Web/API/DocumentTemp/width	/zh-TW/docs/Web/API/Document/width
+/zh-TW/docs/Web/API/DocumentTemp/width	/zh-TW/docs/Web/API/Element/clientWidth
 /zh-TW/docs/Web/API/Document_Object_Model/Events	/zh-TW/docs/Web/API/Event
 /zh-TW/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/zh-TW/docs/Web/API/Document_Object_Model/Whitespace
 /zh-TW/docs/Web/API/Document_Object_Model/事件	/zh-TW/docs/Web/API/Event

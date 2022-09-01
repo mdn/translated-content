@@ -3686,11 +3686,13 @@
 /fr/docs/Web/API/Document.write	/fr/docs/Web/API/Document/write
 /fr/docs/Web/API/Document/Document.anchors	/fr/docs/Web/API/Document/anchors
 /fr/docs/Web/API/Document/async	/fr/docs/Web/API/XMLDocument/async
+/fr/docs/Web/API/Document/createEntityReference	/fr/docs/conflicting/Web/API/Document
 /fr/docs/Web/API/Document/defaultView/popstate_event	/fr/docs/Web/API/Window/popstate_event
 /fr/docs/Web/API/Document/defaultView/storage_event	/fr/docs/Web/API/Window/storage_event
 /fr/docs/Web/API/Document/documentURIObject	/fr/docs/orphaned/Web/API/Document/documentURIObject
 /fr/docs/Web/API/Document/domConfig	/fr/docs/Web/API/Document
 /fr/docs/Web/API/Document/getBoxObjectFor	/fr/docs/Web/API/Element/getBoundingClientRect
+/fr/docs/Web/API/Document/height	/fr/docs/conflicting/Web/API/Element/clientHeight
 /fr/docs/Web/API/Document/keypress_event	/fr/docs/Web/API/Element/keypress_event
 /fr/docs/Web/API/Document/onafterscriptexecute	/fr/docs/Web/API/Document/afterscriptexecute_event
 /fr/docs/Web/API/Document/onbeforescriptexecute	/fr/docs/Web/API/Document/beforescriptexecute_event
@@ -3698,6 +3700,7 @@
 /fr/docs/Web/API/Document/onoffline	/fr/docs/Web/API/Window/offline_event
 /fr/docs/Web/API/Document/ononline	/fr/docs/Web/API/Window/online_event
 /fr/docs/Web/API/Document/transitionend_event	/fr/docs/Web/API/Element/transitionend_event
+/fr/docs/Web/API/Document/width	/fr/docs/conflicting/Web/API/Element/clientWidth
 /fr/docs/Web/API/DocumentOrShadowRoot/activeElement	/fr/docs/Web/API/Document/activeElement
 /fr/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/fr/docs/Web/API/Document/elementFromPoint
 /fr/docs/Web/API/DocumentOrShadowRoot/elementsFromPoint	/fr/docs/Web/API/Document/elementsFromPoint

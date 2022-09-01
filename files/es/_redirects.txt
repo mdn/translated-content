@@ -1599,6 +1599,7 @@
 /es/docs/Web/API/Document/async	/es/docs/Web/API/XMLDocument/async
 /es/docs/Web/API/Document/crearAtributo	/es/docs/Web/API/Document/createAttribute
 /es/docs/Web/API/Document/documentURIObject	/es/docs/orphaned/Web/API/Document/documentURIObject
+/es/docs/Web/API/Document/height	/es/docs/conflicting/Web/API/Element/clientHeight
 /es/docs/Web/API/Document/keydown_event	/es/docs/Web/API/Element/keydown_event
 /es/docs/Web/API/Document/keyup_event	/es/docs/Web/API/Element/keyup_event
 /es/docs/Web/API/DocumentOrShadowRoot/getSelection	/es/docs/Web/API/Document/getSelection

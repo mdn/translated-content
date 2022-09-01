@@ -1,6 +1,7 @@
 ---
 title: Document.createEntityReference()
-slug: Web/API/Document/createEntityReference
+slug: conflicting/Web/API/Document
+original_slug: Web/API/Document/createEntityReference
 ---
 {{ApiRef("DOM")}}{{deprecated_header}}
 
