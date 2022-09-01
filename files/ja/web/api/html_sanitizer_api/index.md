@@ -1,43 +1,32 @@
 ---
 title: HTML Sanitizer API
 slug: Web/API/HTML_Sanitizer_API
-page-type: web-api-overview
-tags:
-  - HTML Sanitizer API
-  - Experimental
-  - Landing
-  - Web API
-  - sanitize
-browser-compat: api.Sanitizer
+l10n:
+  sourceCommit: b40b71d87ab041f2f36a4675bc09af983b22422a
 ---
 {{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
 
-The **HTML Sanitizer API** allow developers to take untrusted strings of HTML and {{domxref('Document')}} or {{domxref('DocumentFragment')}} objects, and sanitize them for safe insertion into a document's DOM.
+**HTML Sanitizer API** は、信頼できない HTML 文字列と {{domxref('Document')}} または {{domxref('DocumentFragment')}} オブジェクトを受け取り、それらを安全にドキュメントの DOM に挿入するためのサニタイズ処理を行うことができます。
 
-## Concepts and usage
+## 概念と使用方法
 
-Web applications often need to work with untrusted HTML on the client side, for example, as part of a client-side templating solution or for rendering user generated content, or when including data in a frame from another site.
-The Sanitizer API allows for rendering of this potentially untrusted HTML in a safe manner.
+例えば、クライアントサイドのテンプレート化ソリューションの一部として、またはユーザー生成コンテンツをレンダリングするために、あるいは他のサイトからのフレームにデータを含めるときに、ウェブアプリケーションはしばしばクライアントサイドで信頼できない HTML を扱う必要があるのです。Sanitizer API を使用すると、このような潜在的に信頼できない HTML を安全な方法でレンダリングすることができます。
 
-To access the API you would use the {{domxref('Sanitizer.Sanitizer()','Sanitizer()')}} constructor to create and configure a {{domxref('Sanitizer')}} instance.
-The configuration options parameter allows you to specify the allowed and dis-allowed elements and attributes, and to enable custom elements and comments.
+API にアクセスするには、{{domxref('Sanitizer.Sanitizer()','Sanitizer()')}} コンストラクタを使用して {{domxref('Sanitizer')}} インスタンスを作成し、設定することになります。設定オプションのパラメータで、許可する要素や許可しない要素、属性を指定し、カスタム要素やコメントを有効にすることができます。
 
-The most common use-case - preventing XSS - is handled by the default configuration.
-Creating a {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} with a custom configuration is necessary only to handle additional, application-specific use cases.
+最も一般的なユースケースである XSS の防止は、デフォルトの設定によって処理されます。カスタム設定による {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} の作成は、アプリケーション固有のユースケースを追加で扱う場合にのみ必要です。
 
-The API has three main methods for sanitizing data:
+APIには、データをサニタイズするための主要な3つのメソッドがあります。
 
-1. {{domxref('Element.setHTML()')}} parses and sanitizes a string of HTML and immediately inserts it into the DOM as a child of the current element.
-   This is essentially a "safe" version of {{domxref('Element.innerHTML')}}, and should be used instead of `innerHTML` when inserting untrusted data.
-2. {{domxref('Sanitizer.sanitizeFor()')}} parses and sanitizes a string of HTML for later insertion into the DOM. This might be used when the target element for the string is not always ready/available for update.
-3. {{domxref('Sanitizer.sanitize()')}} sanitizes data that is in a {{domxref('Document')}} or {{domxref('DocumentFragment')}}. It might be used, for example, to sanitize a {{domxref('Document')}} instance in a frame.
+1. {{domxref('Element.setHTML()')}} は、HTML の文字列を解析してサニタイズし、現在の要素の子として DOM に即座にそれを挿入します。これは本質的に {{domxref('Element.innerHTML')}} の「安全」バージョンであり、信頼できないデータを挿入する際には innerHTML の代わりに使用されるべきものです。
+2. {{domxref('Sanitizer.sanitizeFor()')}} は、後で DOM に挿入するために HTML の文字列を解析しサニタイズします。これは文字列のターゲット要素が、常に更新の準備ができている／利用可能である、とは限らない場合に使用されるかもしれません。
+3. {{domxref('Sanitizer.sanitize()')}} は、{{domxref('Document')}} または {{domxref('DocumentFragment')}} 内にあるデータをサニタイズします。これは、例えば、フレーム内の {{domxref('Document')}} インスタンスをサニタイズするために使用されるかもしれません。
 
-### Parsing and sanitizing strings
+### 文字列のパースとサニタイズ
 
-The result of parsing a string of HTML depends on the context/the element into which it is inserted.
+HTML の文字列をパースした結果は、それが挿入されるコンテキスト／要素に依存します。
 
-For example, an HTML string containing {{HTMLElement("td")}} elements is valid if inserted under a {{HTMLElement("table")}} elements, but will be dropped if inserted in a {{HTMLElement("div")}} element.
-Similarly, an {{HTMLElement("em")}} element is a valid node in a {{HTMLElement("div")}} but the tag will be escaped if used in a {{HTMLElement("textarea")}}:
+例えば、{{HTMLElement("td")}} 要素を含む HTML 文字列は、{{HTMLElement("table")}} 要素の下に挿入すれば有効ですが、{{HTMLElement("div")}} 要素の中に挿入すると落とされます。同様に、{{HTMLElement("em")}} 要素は {{HTMLElement("div")}} の中では有効なノードですが、{{HTMLElement("textarea")}} の中で使われるとタグはエスケープされます。
 
 ```html
 <!-- "<em>bla</em>" inserted into <div> -->
@@ -47,40 +36,37 @@ Similarly, an {{HTMLElement("em")}} element is a valid node in a {{HTMLElement("
 <textarea>&lt;em&gt;bla</textarea>
 ```
 
-The target element must therefore be known when the parser is run and the resulting subtree must be inserted into that same type of element in the DOM, or the result will be incorrect.
+したがって、パーサーの実行時にターゲットとなる要素が分かっている必要があり、結果のサブツリーは DOM 内の同じ種類の要素に挿入されなければならず、さもなければ結果は不正確なものとなります。
 
-For this reason when using {{domxref('Sanitizer.sanitizeFor()')}} developers must specify the tag of the eventual target element as a parameter, and the method returns a matching HTML element with the parsed string as a child (for example, the target tag `"div"` results in a returned object that is an instance of {{domxref("HTMLDivElement")}}).
-The return type ensures that a user always has the context in which the object must be inserted into the DOM.
+このため、{{domxref('Sanitizer.sanitizeFor()')}} を使用する場合、開発者は最終的なターゲット要素のタグをパラメータとして指定する必要があり、メソッドは解析された文字列を子として一致する HTML 要素を返します（例えば、ターゲットタグ `"div"` は {{domxref("HTMLDivElement")}} のインスタンスであるオブジェクトを返します）。この戻り値の型により、DOM に挿入されるオブジェクトのコンテキストをユーザーは常に持つことが保証されます。
 
-This consideration does not matter for {{domxref('Element.setHTML()')}} as it is called on a particular element and the context is therefore implicit.
+{{domxref('Element.setHTML()')}} は特定の要素で呼び出されるため、この配慮は重要ではなく、コンテキストも暗黙的なものになります。
 
-The parser may also perform normalization operations on the input string.
-As a result, even if the HTML is valid and the sanitizer method does nothing, the sanitized output may not precisely match the unsanitized input.
-This applies to both methods.
+パーサーは、入力文字列に対して正規化処理を行うこともあります。その結果、HTML が妥当でありサニタイザーメソッドが何もしない場合でも、サニタイズされた出力がサニタイズされていない入力と正確に一致しないことがあります。これは、両方のメソッドに適用されます。
 
-## Interfaces
+## インターフェイス
 
 - {{domxref('Sanitizer')}}
-  - : Provides the functionality to define a sanitizer configuration, to sanitize untrusted strings of HTML for later insertion into the DOM, and to sanitize {{domxref('Document')}} and {{domxref('DocumentFragment')}} objects.
+  - : サニタイザーの構成を定義する機能、後で DOM に挿入するための信頼できない HTML 文字列をサニタイズする機能、および {{domxref('Document')}} と {{domxref('DocumentFragment')}} オブジェクトをサニタイズする機能を提供します。
 - {{domxref('Element/setHTML','Element.setHTML()')}}
-  - : Parses a string of HTML into a subtree of nodes, sanitizes it using a `Sanitizer` object, then sets it as a child of the current element.
+  - : HTML の文字列をノードのサブツリーにパースし、`Sanitizer` オブジェクトを使用してそれをサニタイズし、そして現在の要素の子としてそれを設定します。
 
-## Examples
+## 例
 
-The following examples show how to use the sanitizer API using the _default_ sanitizer (at time of writing configuration operations are not yet supported).
+以下の例では、デフォルトのサニタイザーを使用して Sanitizer API を使用する方法を示します（執筆時点では、設定操作はまだサポートされていません）。
 
-### Sanitize a string immediately
+### 文字列を即座にサニタイズする
 
-The code below demonstrates how {{domxref('Element/setHTML','Element.setHTML()')}} is used to sanitize a string of HTML and insert it into the `Element` with an id of `target`.
+以下のコードは、{{domxref('Element/setHTML','Element.setHTML()')}} を使って HTML の文字列をサニタイズし、それを `target` という id を持つ `Element` に挿入する方法を示しています。
 
-The `script` element is disallowed by the default sanitizer so the alert is removed.
+`script` 要素はデフォルトのサニタイザーで許可されていないため alert は削除されます。
 
 ```js
-const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // Unsanitized string of HTML
+const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // サニタイズされていない文字列
 
-const sanitizer = new Sanitizer();  // Default sanitizer;
+const sanitizer = new Sanitizer();  // デフォルトのサニタイザー
 
-// Get the Element with id "target" and set it with the sanitized string.
+// id が "target" の要素を取得し、サニタイズした文字列をセットする
 const target = document.getElementById("target");
 target.setHTML(unsanitized_string, { sanitizer });
 
@@ -88,58 +74,58 @@ console.log(target.innerHTML);
 // "abc  def"
 ```
 
-### Sanitize a string for deferred use
+### 遅延使用のための文字列のサニタイズ
 
-The example below shows the same sanitization operation using the {{domxref("Sanitizer.sanitizeFor()")}} method, with the intent of later inserting the returned element into a `<div>` element:
+以下の例では {{domxref("Sanitizer.sanitizeFor()")}} メソッドを使用して同じサニタイズ処理を行い、後で返された要素を `<div>` 要素に挿入することを意図しています。
 
 ```js
-const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // Unsanitized string of HTML
-const sanitizer = new Sanitizer();  // Default sanitizer;
+const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // サニタイズされていない文字列
+const sanitizer = new Sanitizer();  // デフォルトのサニタイザー
 
-// Sanitize the string
+// 文字列をサニタイズする
 const sanitizedDiv = sanitizer.sanitizeFor("div", unsanitized_string);
 
+// 返された要素の型を調べて、サニタイズされた HTML を文字列で表示する
 //We can verify the returned element type, and view sanitized HTML in string form:
 console.log(sanitizedDiv instanceof HTMLDivElement);
 // true
 console.log(sanitizedDiv.innerHTML)
 // "abc  def"
 
-// At some point later…
+// その後に処理をする…
 
-// Get the element to update. This must be a div to match our sanitizeFor() context.
-// Set its content to be the children of our sanitized element.
+// 更新する要素を取得する。要素は sanitizeFor() のコンテキストと一致するように div である必要がある
+// サニタイズされた要素の子となるように内容をセットする
 document.querySelector("div#target").replaceChildren(sanitizedDiv.children);
 ```
 
-> **Note:** If you really must perform a string-to-string operation you can extract the string using `innerHTML`,
-> but you must remember to use the correct context when the string is applied:
+> **Note:** どうしても文字列から文字列への操作を行いたい場合は `innerHTML` を使って文字列を抽出することができますが、文字列が適用されるときに正しいコンテキストを使用することを忘れてはいけません。
 >
 > ```js
 > const unsanitized_string = "abc <script>alert(1)<" + "/script> def";
 > const sanitizedString = new Sanitizer().sanitizeFor("div", unsanitized_string).innerHTML;
 > ```
 
-### Sanitize a frame
+### フレームのサニタイズ
 
-To sanitize data from an {{HTMLElement("iframe")}} with id `userFrame`:
+id が `userFrame` である {{HTMLElement("iframe")}} からのデータをサニタイズする。
 
 ```js
-const sanitizer = new Sanitizer();  // Default sanitizer;
+const sanitizer = new Sanitizer();  // デフォルトのサニタイザー
 
-// Get the frame and its Document object
+// frame の要素とその document オブジェクトを取得する
 const frame_element = document.getElementById("userFrame")
 const unsanitized_frame_tree = frame_element.contentWindow.document;
 
-// Sanitize the document tree and update the frame.
+// ドキュメントツリーをサニタイズし、frame を更新する
 const sanitized_frame_tree = sanitizer.sanitize(unsanitized_frame_tree);
 frame_element.replaceChildren(sanitized_frame_tree);
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
