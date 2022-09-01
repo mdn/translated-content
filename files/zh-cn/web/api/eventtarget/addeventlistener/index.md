@@ -4,9 +4,10 @@ slug: Web/API/EventTarget/addEventListener
 ---
 {{APIRef("DOM")}}
 
-**EventTarget.addEventListener()** 方法将指定的监听器注册到 {{domxref("EventTarget")}} 上，当该对象触发指定的事件时，指定的回调函数就会被执行。事件目标可以是一个文档上的元素 {{domxref("Element")}}、{{domxref("Document")}} 和 {{domxref("Window")}}，也可以是任何支持事件的对象（比如 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)）。
+**EventTarget.addEventListener()** 方法将指定的监听器注册到 {{domxref("EventTarget")}} 上，当该对象触发指定的事件时，指定的回调函数就会被执行。事件目标可以是一个文档上的元素 {{domxref("Element")}}、{{domxref("Document")}} 和 {{domxref("Window")}}，也可以是任何支持事件的对象（比如 {{domxref("XMLHttpRequest")}}）。
 
-> **备注：** 推荐使用 `addEventListener()` 来注册一个事件监听器，理由如下：
+> **备注：** *推荐*使用 `addEventListener()` 来注册一个事件监听器，理由如下：
+>
 > - 它允许为一个事件添加多个监听器。特别是对库、JavaScript 模块和其他需要兼容第三方库/插件的代码来说，这一功能很有用。
 > - 相比于 `onXYZ` 属性绑定来说，它提供了一种更精细的手段来控制 `listener` 的触发阶段。（即可以选择捕获或者冒泡）。
 > - 它对任何事件都有效，而不仅仅是 HTML 或 SVG 元素。
@@ -34,39 +35,38 @@ addEventListener(type, listener, useCapture);
 - `listener`
   - : 当所监听的事件类型触发时，会接收到一个事件通知（实现了 {{domxref("Event")}} 接口的对象）对象。`listener` 必须是一个实现了 {{domxref("EventListener")}} 接口的对象，或者是一个[函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)。有关回调本身的详细信息，请参阅[事件监听回调](#事件监听回调)
 - `options` {{optional_inline}}
-
   - : 一个指定有关 `listener` 属性的可选参数对象。可用的选项如下：
 
     - `capture` {{optional_inline}}
-      - : {{jsxref("Global_Objects/Boolean")}}，表示 `listener` 会在该类型的事件捕获阶段传播到该 `EventTarget` 时触发。
+      - : 一个布尔值，表示 `listener` 会在该类型的事件捕获阶段传播到该 `EventTarget` 时触发。
     - `once` {{optional_inline}}
-      - : {{jsxref("Global_Objects/Boolean")}}，表示 `listener` 在添加之后最多只调用一次。如果为 `true`，`listener` 会在其被调用之后自动移除。
+      - : 一个布尔值，表示 `listener` 在添加之后最多只调用一次。如果为 `true`，`listener` 会在其被调用之后自动移除。
     - `passive` {{optional_inline}}
-      - : {{jsxref("Global_Objects/Boolean")}}，设置为 `true` 时，表示 `listener` 永远不会调用 `preventDefault()`。如果 listener 仍然调用了这个函数，客户端将会忽略它并抛出一个控制台警告。查看 [使用 passive 改善滚屏性能](#使用_passive_改善滚屏性能)以了解更多。
+      - : 一个布尔值，设置为 `true` 时，表示 `listener` 永远不会调用 `preventDefault()`。如果 listener 仍然调用了这个函数，客户端将会忽略它并抛出一个控制台警告。查看[使用 passive 改善滚屏性能](#使用_passive_改善滚屏性能)以了解更多。
     - `signal` {{optional_inline}}
       - : {{domxref("AbortSignal")}}，该 `AbortSignal` 的 {{domxref("AbortController/abort()", "abort()")}} 方法被调用时，监听器会被移除。
 
 - `useCapture` {{optional_inline}}
-  - {{jsxref("Global_Objects/Boolean")}}，表示在 DOM 树中注册了 `listener` 的元素，是否要先于它下面的 `EventTarget` 调用该 `listener`。当 useCapture（设为 true）时，沿着 DOM 树向上冒泡的事件不会触发 listener。当一个元素嵌套了另一个元素，并且两个元素都对同一事件注册了一个处理函数时，所发生的事件冒泡和事件捕获是两种不同的事件传播方式。事件传播模式决定了元素以哪个顺序接收事件。进一步的解释可以查看 [事件流](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow) 及 [JavaScript Event order](https://www.quirksmode.org/js/events_order.html#link4) 文档。如果没有指定，`useCapture` 默认为 false 。
+  - : 一个布尔值，表示在 DOM 树中注册了 `listener` 的元素，是否要先于它下面的 `EventTarget` 调用该 `listener`。当 useCapture（设为 true）时，沿着 DOM 树向上冒泡的事件不会触发 listener。当一个元素嵌套了另一个元素，并且两个元素都对同一事件注册了一个处理函数时，所发生的事件冒泡和事件捕获是两种不同的事件传播方式。事件传播模式决定了元素以哪个顺序接收事件。进一步的解释可以查看 [DOM Level 3 事件](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow)及 [JavaScript 事件顺序](https://www.quirksmode.org/js/events_order.html#link4)文档。如果没有指定，`useCapture` 默认为 `false`。
 
   > **备注：** 对于事件目标上的事件监听器来说，事件会处于“目标阶段”，而不是冒泡阶段或者捕获阶段。捕获阶段的事件监听器会在任何非捕获阶段的事件监听器之前被调用。
 
 - `wantsUntrusted` {{optional_inline}} {{Non-standard_inline}}
-  - : 如果为 `true`，则事件处理程序会接收网页自定义的事件。此参数只适用于 Gecko（{{glossary("chrome")}} 的默认值为 true，其他常规网页的默认值为 false），主要用于附加组件的代码和浏览器本身。
+  - : 如果为 `true`，则事件处理程序会接收网页自定义的事件。此参数只适用于 Gecko（{{glossary("chrome")}} 的默认值为 `false`，其它常规网页的默认值为 `true`），主要用于附加组件的代码和浏览器本身。
 
 ### 返回值
 
-{{jsxref("undefined")}}。
+无（{{jsxref("undefined")}}）。
 
 ## 用法说明
 
 ### 事件监听回调
 
-事件监听器可以被指定为回调函数或实现 {{domxref("EventListener")}} 的对象，其 {{domxref("EventListener.handleEvent", "handleEvent()")}} 方法用作回调函数。
+事件监听器可以被指定为回调函数或一个对象（其 `handleEvent()` 方法用作回调函数）。
 
 回调函数本身具有与 `handleEvent()` 方法相同的参数和返回值；也就是说，回调接受一个参数：一个基于 {{domxref("Event")}} 的对象，描述已发生的事件，并且它不返回任何内容。
 
-例如，一个可同时处理 {{event("fullscreenchange")}} 和 {{event("fullscreenerror")}} 事件的函数如下：
+例如，一个可同时处理 {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} 和 {{domxref("Element/fullscreenerror_event", "fullscreenerror")}} 事件的函数如下：
 
 ```js
 function eventHandler(event) {
@@ -104,7 +104,7 @@ try {
 }
 ```
 
-这段代码为 `passive` 属性创建了一个带有 getter 函数的 `options` 对象；getter 设定了一个标识  `passiveSupported`，被调用后就会把其设为 `true`。那意味着如果浏览器检查 `options` 对象上的 `passive` 值时，`passiveSupported` 将会被设置为 `true`；否则它将保持 `false`。然后我们调用 `addEventListener()` 去设置一个指定这些选项的空事件处理器，这样如果浏览器将第三个参数认定为对象的话，这些选项值就会被检查。
+这段代码为 `passive` 属性创建了一个带有 getter 函数的 `options` 对象；getter 设定了一个标识  `passiveSupported`，被调用后就会把其设为 `true`。那意味着如果浏览器检查 `options` 对象上的 `passive` 值时，`passiveSupported` 将会被设置为 `true`；否则它将保持 `false`。然后我们调用 `addEventListener()` 去设置一个指定这些选项的空事件处理器，这样如果浏览器将第三个参数认定为对象的话，这些选项值就会被检查。我们再调用 [`removeEventListener()`](/zh-CN/docs/Web/API/EventTarget/removeEventListener) 来移除事件处理器（注意：未被调用的事件处理器上的 `handleEvent()` 会被忽略）。
 
 你可以利用这个方法检查 options 之中任一个值。只需使用与上面类似的代码，为选项设定一个 getter。
 
@@ -118,7 +118,7 @@ someElement.addEventListener(
 );
 ```
 
-我们在 `someElement` 这里添加了一个 {{event("mouseup")}}。对于第三个参数，如果 `passiveSupported` 是 `true`，我们传递了一个 `passive` 值为 `true` 的 `options` 对象；如果相反的话，我们知道要传递一个布尔值，于是就传递 `false` 作为 `useCapture` 的参数。
+我们在 `someElement` 这里添加了一个 {{domxref("Element/mouseup_event", "mouseup")}}。对于第三个参数，如果 `passiveSupported` 是 `true`，我们传递了一个 `passive` 值为 `true` 的 `options` 对象；如果相反的话，我们知道要传递一个布尔值，于是就传递 `false` 作为 `useCapture` 的参数。
 
 如果你愿意，你可以用一个类似 [Modernizr](https://modernizr.com/docs) 或 [Detect It](https://github.com/rafrex/detect-it) 的第三方库来帮助你做这项测试。
 
@@ -259,7 +259,7 @@ el.addEventListener("click", () => { modifyText("four"); }, false);
 
 {{EmbedLiveSample('带有箭头函数的监听器')}}
 
-请注意尽管匿名函数和箭头函数有些类似，但是他们绑定不同的`this`对象。匿名函数（和所有传统的 Javascript 函数）创建他们独有的`this`对象，而箭头函数则继承绑定他所在函数的`this`对象。
+请注意尽管匿名函数和箭头函数有些类似，但是他们绑定不同的 `this` 对象。匿名函数（和所有传统的 Javascript 函数）创建他们独有的 `this` 对象，而箭头函数则继承绑定他所在函数的 `this` 对象。
 
 这意味着在使用箭头函数时，原函数中可用的变量和常量在事件处理器中同样可用。
 
@@ -371,9 +371,9 @@ function nonePassiveHandler(event) {
 
 分别点击 outer、middle 和 inner 以查看选项的工作方式。
 
-{{ EmbedLiveSample('options 用法示例', 600, 310) }}
+{{ EmbedLiveSample('options 用法示例', 600, 310, '', 'Web/API/EventTarget/addEventListener') }}
 
-在使用 `options` 对象中具体的值前，最好确保用户的浏览器支持它，因为这些是历史上并非所有浏览器都支持的附加功能。你可以查看 [option 支持的安全检测](#option支持的安全检测)以了解更多
+在使用 `options` 对象中具体的值前，最好确保用户的浏览器支持它，因为这些是历史上并非所有浏览器都支持的附加功能。你可以查看 [option 支持的安全检测](#option_支持的安全检测)以了解更多
 
 ### 拥有多个 option 的监听器
 
@@ -440,7 +440,7 @@ addListener();
 
 通常来说 {{jsxref("Operators/this","this")}} 的值是触发事件的元素的引用，这种特性在多个相似的元素使用同一个通用事件监听器时非常让人满意。
 
-当使用 `addEventListener()` 为一个元素注册事件的时候，句柄里的 {{jsxref("Operators/this","this")}} 值是该元素的引用。其与传递给句柄的 event 参数的 `currentTarget` 属性的值一样。
+当使用 `addEventListener()` 为一个元素注册事件的时候，事件处理器里的 {{jsxref("Operators/this","this")}} 值是该元素的引用。其与传递给句柄的 event 参数的 `currentTarget` 属性的值一样。
 
 ```js
 my_element.addEventListener('click', function (e) {
@@ -458,7 +458,7 @@ my_element.addEventListener('click', (e) => {
 })
 ```
 
-如果一个事件的属性（例如 {{domxref("Element.click_event", "onclick")}}）是在 HTML 代码中指定的，则这个属性中的 JavaScript 语句实际上会被包裹在一个处理函数中，在这个处理函数中使用 this 的效果和使用 addEventListener 来绑定事件的效果是一样的；this 的出现代表了元素的引用。
+如果一个事件的属性（例如 {{domxref("Element.click_event", "onclick")}}）是在 HTML 代码中指定的，则这个属性中的 JavaScript 语句实际上会被包裹在一个处理函数中，在这个处理函数中使用 `this` 的效果和使用 `addEventListener()` 来绑定事件的效果是一样的；`this` 的出现代表了元素的引用。
 
 ```html
 <table id="my_table" onclick="console.log(this.id);"><!-- `this` 指向 table 元素；输出 'my_table' -->
@@ -535,7 +535,7 @@ const Something = function (element) {
 const s = new Something(document.body);
 ```
 
-还有一种控制 this 指向的方法，是给 `EventListener` 传递一个函数，来调用想要访问的对应作用域对象：
+还有一种控制 _this_ 指向的方法，是给 `EventListener` 传递一个函数，来调用想要访问的对应作用域对象：
 
 ```js
 class SomeClass {
@@ -712,5 +712,5 @@ window.addEventListener('scroll', (event) => {
 ## 参见
 
 - {{domxref("EventTarget.removeEventListener()")}}
-- [创建和触发 events](/zh-CN/docs/Web/Events/Creating_and_triggering_events)
+- [创建和触发自定义事件](/zh-CN/docs/Web/Events/Creating_and_triggering_events)
 - [More details on the use of `this` in event handlers](https://www.quirksmode.org/js/this.html)
