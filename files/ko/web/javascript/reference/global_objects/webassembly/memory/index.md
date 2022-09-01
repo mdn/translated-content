@@ -11,7 +11,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
 
 ## Syntax
 
-    var myMemory = new WebAssembly.Memory(memoryDescriptor);
+```js
+var myMemory = new WebAssembly.Memory(memoryDescriptor);
+```
 
 ### Parameters
 
