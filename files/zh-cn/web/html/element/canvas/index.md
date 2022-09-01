@@ -8,9 +8,7 @@ slug: Web/HTML/Element/canvas
 
 ## **属性**
 
-本元素支持 [全局属性](https://developer.mozilla.org/en-
-
-US/docs/HTML/Global_attributes).
+本元素支持 [全局属性](https://developer.mozilla.org/en-US/docs/HTML/Global_attributes).
 
 - {{htmlattrdef("height")}}
   - : 该元素占用空间的高度，以 CSS 像素（px）表示，默认为 150。
