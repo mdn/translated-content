@@ -1,22 +1,15 @@
 ---
 title: Intl.Segmenter() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
-tags:
-  - Constructor
-  - Segmenter
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
-browser-compat: javascript.builtins.Intl.Segmenter.Segmenter
+l10n:
+  sourceCommit: a3dd560fabb1fe4051f6273f41b337a5b1245a6e
 ---
 
-The **`Intl.Segmenter()`** constructor creates [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) objects that enable locale-sensitive text segmentation.
+**`Intl.Segmenter()`** コンストラクタは、ロケールに依存したテキスト分割を可能にする [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトを生成します。
 
 {{EmbedInteractiveExample("pages/js/intl-segmenter.html")}}
 
-## Syntax
+## 構文
 
 ```js
 new Intl.Segmenter()
@@ -24,38 +17,38 @@ new Intl.Segmenter(locales)
 new Intl.Segmenter(locales, options)
 ```
 
-> **Note:** `Intl.Segmenter()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> **Note:** `Intl.Segmenter()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を使用してのみ構築可能です。`new` を使わずに呼び出そうとすると {{jsxref("TypeError")}} が発生します。
 
-### Parameters
+### 引数
 
 - `locales` {{ optional_inline }}
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see the [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) page.
+  - : BCP 47 の言語タグを持つ文字列、またはそのような文字列の配列。引数 `locales` の一般的な形式と解釈については、[`Intl`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#ロケールの識別とネゴシエーション) のページを参照してください。
 - `options` {{ optional_inline }}
-  - : An object with some or all of the following properties:
+  - : 以下のプロパティの一部または全部を持つオブジェクト。
     - `granularity` {{ optional_inline }}
-      - : A string.  Possible values are:
+      - : 文字列。使用可能な値は以下の通り。
         - `"grapheme"` (default)
-          - : Split the input into segments at grapheme cluster (user-perceived character) boundaries, as determined by the locale.
+          - : ロケールに応じた書記素クラスタ（ユーザーが認識する文字）の境界で、入力を分割します。
         - `"word"`
-          - : Split the input into segments at word boundaries, as determined by the locale.
+          - : ロケールに応じた単語の境界で、入力を分割します。
         - `"sentence"`
-          - : Split the input into segments at sentence boundaries, as determined by the locale.
+          - : ロケールに応じた文の境界で、入力を分割します。
     - `localeMatcher` {{ optional_inline }}
-      - : The locale matching algorithm to use. Possible values are:
+      - : 使用するロケールマッチングアルゴリズム。使用できる値は以下の通り。
         - `"best fit"` (default)
-          - : The runtime may choose a possibly more suited locale than the result of the lookup algorithm.
+          - : ランタイムは、ルックアップアルゴリズムの結果よりも適したロケールを選択する可能性があります。
         - `"lookup"`
-          - : Use the [BCP 47 Lookup algorithm](https://datatracker.ietf.org/doc/html/rfc4647#section-3.4) to choose the locale from `locales`. For each locale in `locales`, the runtime returns the first supported locale (possibly removing restricting subtags of the provided locale tag to find such a supported locale. In other words providing `"de-CH"` as `locales` may result in using `"de"` if `"de"` is supported but `"de-CH"` is not).
+          - : [BCP 47 Lookup algorithm](https://datatracker.ietf.org/doc/html/rfc4647#section-3.4) を使用して、`locales` からロケールを選択します。`locales` に含まれる各ロケールについて、ランタイムは最初にサポートされるロケールを返します（場合によっては、サポートされるロケールを見つけるために、与えられたロケールタグのサブタグの制限を取り除きます。つまり、`locales` として `"de-CH"` を指定すると、`"de"` はサポートされているが `"de-CH"` はサポートされていない場合、`"de"` を使用することになる可能性があります）。
 
-### Return value
+### 返値
 
-A new [`Intl.Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) instance.
+新しい [`Intl.Segments`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) のインスタンスです。
 
-## Examples
+## 例
 
-### Basic usage
+### 基本的な使い方
 
-The following example shows how to count words in a string using the Japanese language (where splitting the string using `String` methods would have given an incorrect result).
+次の例は、日本語を使って文字列中の単語を数えるものです（`String` メソッドで文字列を分割すると不正確な結果が得られます）。
 
 ```js
 const text = "吾輩は猫である。名前はたぬき。";
@@ -64,10 +57,10 @@ console.log([...japaneseSegmenter.segment(text)].filter((segment) => segment.isW
 // logs 8 as the text is segmented as '吾輩'|'は'|'猫'|'で'|'ある'|'。'|'名前'|'は'|'たぬき'|'。'
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
