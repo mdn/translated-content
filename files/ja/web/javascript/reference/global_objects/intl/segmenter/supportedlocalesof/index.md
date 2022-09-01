@@ -1,56 +1,40 @@
 ---
 title: Intl.Segmenter.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
-browser-compat: javascript.builtins.Intl.Segmenter.supportedLocalesOf
+l10n:
+  sourceCommit: 2d6d6a1d9f8ba2073c9f8e1bbc6b4e20204fb53c
 ---
 {{JSRef}}
 
-The **`Intl.Segmenter.supportedLocalesOf()`** method returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
+**`Intl.Segmenter.supportedLocalesOf()`** メソッドは、指定したロケールのうち、ランタイムのデフォルトロケールにフォールバックすることなくサポートされているものを含む配列を返します。
 
 {{EmbedInteractiveExample("pages/js/intl-segmenter-supportedlocalesof.html", "shorter")}}
 
-## Syntax
+## 構文
 
 ```js
 supportedLocalesOf(locales)
 supportedLocalesOf(locales, options)
 ```
 
-### Parameters
+### 引数
 
 - `locales`
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general
-    form of the `locales` argument, see the [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) page.
+  - : BCP 47 の言語タグを持つ文字列、またはそのような文字列の配列。引数 `locales` の一般的な形式と解釈については、[`Intl`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#ロケールの識別とネゴシエーション) のページを参照してください。
 - `options` {{optional_inline}}
-  - : An object that may have the following property:
+  - : 以下のプロパティを持つ可能性があるオブジェクト。
     - `localeMatcher`
-      - : The locale matching algorithm to use. Possible values are
-        `"lookup"` and `"best fit"`; the default is
-        `"best fit"`. For information about this option, see the [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_negotiation) page.
+      - : 使用するロケールマッチングアルゴリズム。使用可能な値は `"lookup"` および `"best fit"` で、デフォルトは `"best fit"` です。このオプションの詳細については、[`Intl`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#ロケールの識別とネゴシエーション) のページを参照ください。
 
-### Return value
+### 返値
 
-An array of strings representing a subset of the given locale tags that are supported
-in segmentation without having to fall back to the runtime's default locale.
+指定したロケールタグのサブセットを表す文字列の配列で、ランタイムのデフォルトロケールにフォールバックすることなくセグメンテーションでサポートされるものです。
 
-## Examples
+## 例
 
-### Using supportedLocalesOf()
+### supportedLocalesOf() の使用方法
 
-Assuming a runtime that supports Indonesian and German but not Balinese in list
-formatting, `supportedLocalesOf` returns the Indonesian and German language
-tags unchanged, even though `pinyin` collation is neither relevant to segmentation
-nor used with Indonesian, and a specialized German for Indonesia is
-unlikely to be supported. Note the specification of the `"lookup"`
-algorithm here — a `"best fit"` matcher might decide that Indonesian is an
-adequate match for Balinese since most Balinese speakers also understand Indonesian,
-and therefore return the Balinese language tag as well.
+実行環境がリスト形式でインドネシア語とドイツ語をサポートし、バリ語をサポートしないと仮定すると、`supportedLocalesOf` はインドネシア語とドイツ語の言語タグを変更せずに返します。`pinyin` の照合順序はインドネシア語のセグメンテーションに関係なく、またインドネシア語に特化したドイツ語はないためサポートされません。ここで `"lookup"` アルゴリズムの仕様に注意してください。`"best fit"` マッチでは、バリ島のほとんどの住民がインドネシア語を理解するため、インドネシア語がバリ島の言語に適切に一致すると判断し、バリ島の言語タグも返すことがあります。
 
 ```js
 const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
@@ -59,10 +43,10 @@ console.log(Intl.Segmenter.supportedLocalesOf(locales, options).join(', '));
 // → "id-u-co-pinyin, de-ID"
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
