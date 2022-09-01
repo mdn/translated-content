@@ -12,6 +12,7 @@ MDN 文档中有大量的指南，这些文章意在增加用例，或教你如�
   - : 这篇文章将会让你对 HTML 有一个基本的了解。在遵循本指南后，你可以进一步探索 HTML 学习区的资料。
 
 ## CSS
+
 - [学习使用 CSS 给 HTML 添加样式](/zh-CN/docs/Learn/CSS)
   - : 我们完整的 CSS 指南将带你从头开始，学习如何给文字添加样式、创建布局等更多内容。
 - [CSS 布局指南](/zh-CN/docs/Web/Guide/CSS/CSS_Layout)
@@ -20,6 +21,7 @@ MDN 文档中有大量的指南，这些文章意在增加用例，或教你如�
   - : CSS 动画使得从一个 CSS 样式配置到另一个样式配置的动画过渡成为可能。本指南将帮助你开始使用动画属性。
 
 ## JavaScript
+
 - [JavaScript 学习区](/zh-CN/docs/Learn/JavaScript)
   - : 无论是完全的初学者，还是希望提升你的技能，这里都是好的开始。
 - [AJAX](/zh-CN/docs/Web/Guide/AJAX)
