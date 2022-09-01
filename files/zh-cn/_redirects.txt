@@ -1991,7 +1991,6 @@
 /zh-CN/docs/Web/CSS/Block_formatting_context	/zh-CN/docs/Web/Guide/CSS/Block_formatting_context
 /zh-CN/docs/Web/CSS/CSS3中的关键帧	/zh-CN/docs/Web/CSS/@keyframes
 /zh-CN/docs/Web/CSS/CSSOM_View/坐标系	/zh-CN/docs/Web/CSS/CSSOM_View/Coordinate_systems
-/zh-CN/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support	/zh-CN/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /zh-CN/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
 /zh-CN/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
 /zh-CN/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator	/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
