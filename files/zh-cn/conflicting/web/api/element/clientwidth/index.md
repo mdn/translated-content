@@ -1,6 +1,7 @@
 ---
 title: document.width
-slug: Web/API/Document/width
+slug: conflicting/Web/API/Element/clientWidth
+original_slug: Web/API/Document/width
 ---
 {{ApiRef}} {{deprecated_header}}
 

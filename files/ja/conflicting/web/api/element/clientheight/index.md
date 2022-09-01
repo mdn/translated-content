@@ -1,6 +1,6 @@
 ---
 title: Document.height
-slug: Web/API/Document/height
+slug: conflicting/Web/API/Element/clientHeight
 page-type: web-api-instance-property
 tags:
   - API
@@ -12,6 +12,7 @@ tags:
   - リファレンス
   - 非推奨
 translation_of: Web/API/Document/height
+original_slug: Web/API/Document/height
 ---
 {{APIRef("DOM")}} {{deprecated_header}}
 

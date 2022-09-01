@@ -343,7 +343,7 @@
 /zh-CN/docs/DOM/document.getElementById	/zh-CN/docs/Web/API/Document/getElementById
 /zh-CN/docs/DOM/document.hasFocus	/zh-CN/docs/Web/API/Document/hasFocus
 /zh-CN/docs/DOM/document.head	/zh-CN/docs/Web/API/Document/head
-/zh-CN/docs/DOM/document.height	/zh-CN/docs/Web/API/Document/height
+/zh-CN/docs/DOM/document.height	/zh-CN/docs/conflicting/Web/API/Element/clientHeight
 /zh-CN/docs/DOM/document.images	/zh-CN/docs/Web/API/Document/images
 /zh-CN/docs/DOM/document.importNode	/zh-CN/docs/Web/API/Document/importNode
 /zh-CN/docs/DOM/document.lastModified	/zh-CN/docs/Web/API/Document/lastModified
@@ -357,7 +357,7 @@
 /zh-CN/docs/DOM/document.readyState	/zh-CN/docs/Web/API/Document/readyState
 /zh-CN/docs/DOM/document.referrer	/zh-CN/docs/Web/API/Document/referrer
 /zh-CN/docs/DOM/document.releaseCapture	/zh-CN/docs/Web/API/Document/releaseCapture
-/zh-CN/docs/DOM/document.width	/zh-CN/docs/Web/API/Document/width
+/zh-CN/docs/DOM/document.width	/zh-CN/docs/conflicting/Web/API/Element/clientWidth
 /zh-CN/docs/DOM/element	/zh-CN/docs/Web/API/element
 /zh-CN/docs/DOM/element.addEventListener	/zh-CN/docs/Web/API/EventTarget/addEventListener
 /zh-CN/docs/DOM/element.attributes	/zh-CN/docs/Web/API/Element/attributes
@@ -1369,6 +1369,7 @@
 /zh-CN/docs/Web/API/Document/defaultView/storage_event	/zh-CN/docs/Web/API/Window/storage_event
 /zh-CN/docs/Web/API/Document/documentURIObject	/zh-CN/docs/orphaned/Web/API/Document/documentURIObject
 /zh-CN/docs/Web/API/Document/domConfig	/zh-CN/docs/Web/API/Document
+/zh-CN/docs/Web/API/Document/height	/zh-CN/docs/conflicting/Web/API/Element/clientHeight
 /zh-CN/docs/Web/API/Document/keypress_event	/zh-CN/docs/Web/API/Element/keypress_event
 /zh-CN/docs/Web/API/Document/mozFullScreen	/zh-CN/docs/Web/API/Document/fullscreen
 /zh-CN/docs/Web/API/Document/mozFullScreenElement	/zh-CN/docs/Web/API/Document/fullscreenElement
@@ -1382,6 +1383,7 @@
 /zh-CN/docs/Web/API/Document/onreadystatechange	/en-US/docs/Web/API/Document/readystatechange_event
 /zh-CN/docs/Web/API/Document/onvisibilitychange	/zh-CN/docs/Web/API/Document/visibilitychange_event
 /zh-CN/docs/Web/API/Document/rouchmove_event	/zh-CN/docs/Web/API/Document/touchmove_event
+/zh-CN/docs/Web/API/Document/width	/zh-CN/docs/conflicting/Web/API/Element/clientWidth
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/activeElement	/zh-CN/docs/Web/API/Document/activeElement
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/zh-CN/docs/Web/API/Document/elementFromPoint
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/elementsFromPoint	/zh-CN/docs/Web/API/Document/elementsFromPoint
@@ -1918,7 +1920,7 @@
 /zh-CN/docs/Web/API/document.getElementById	/zh-CN/docs/Web/API/Document/getElementById
 /zh-CN/docs/Web/API/document.hasFocus	/zh-CN/docs/Web/API/Document/hasFocus
 /zh-CN/docs/Web/API/document.head	/zh-CN/docs/Web/API/Document/head
-/zh-CN/docs/Web/API/document.height	/zh-CN/docs/Web/API/Document/height
+/zh-CN/docs/Web/API/document.height	/zh-CN/docs/conflicting/Web/API/Element/clientHeight
 /zh-CN/docs/Web/API/document.images	/zh-CN/docs/Web/API/Document/images
 /zh-CN/docs/Web/API/document.implementation	/zh-CN/docs/Web/API/Document/implementation
 /zh-CN/docs/Web/API/document.lastModified	/zh-CN/docs/Web/API/Document/lastModified
@@ -1934,7 +1936,7 @@
 /zh-CN/docs/Web/API/document.referrer	/zh-CN/docs/Web/API/Document/referrer
 /zh-CN/docs/Web/API/document.scripts	/zh-CN/docs/Web/API/Document/scripts
 /zh-CN/docs/Web/API/document.title	/zh-CN/docs/Web/API/Document/title
-/zh-CN/docs/Web/API/document.width	/zh-CN/docs/Web/API/Document/width
+/zh-CN/docs/Web/API/document.width	/zh-CN/docs/conflicting/Web/API/Element/clientWidth
 /zh-CN/docs/Web/API/document.write	/zh-CN/docs/Web/API/Document/write
 /zh-CN/docs/Web/API/document.writeln	/zh-CN/docs/Web/API/Document/writeln
 /zh-CN/docs/Web/API/element.outerHTML	/zh-CN/docs/Web/API/Element/outerHTML

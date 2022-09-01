@@ -1,6 +1,6 @@
 ---
 title: Document.createEntityReference()
-slug: Web/API/Document/createEntityReference
+slug: conflicting/Web/API/Document
 page-type: web-api-instance-method
 tags:
   - API
@@ -9,6 +9,7 @@ tags:
   - リファレンス
   - 非推奨
 translation_of: Web/API/Document/createEntityReference
+original_slug: Web/API/Document/createEntityReference
 ---
 {{ApiRef("DOM")}}{{deprecated_header}}
 

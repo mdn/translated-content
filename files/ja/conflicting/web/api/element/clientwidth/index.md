@@ -1,6 +1,6 @@
 ---
 title: Document.width
-slug: Web/API/Document/width
+slug: conflicting/Web/API/Element/clientWidth
 page-type: web-api-instance-property
 tags:
   - API
@@ -12,6 +12,7 @@ tags:
   - リファレンス
   - 非推奨
 translation_of: Web/API/Document/width
+original_slug: Web/API/Document/width
 ---
 {{APIRef("DOM")}} {{deprecated_header}}
 
