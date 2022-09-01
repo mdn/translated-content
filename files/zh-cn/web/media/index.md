@@ -20,7 +20,7 @@ original_slug: Web/媒体
 - {{HTMLElement("track")}}
   - : `<track>` 元素可以被放置在 {{HTMLElement("audio")}} 或者 {{HTMLElement("video")}} 元素内部，当在媒体播放时，以提供 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) 格式化字幕或标题轨道的参考。可以通过 JavaScript {{domxref("HTMLTrackElement")}} 对象访问。
 - {{HTMLElement("source")}}
-  - : `<source>` 元素可以放在 {{HTMLElement("audio")}} 或者 {{HTMLElement("video")}} 元素内部，以指定当前显示的源媒体。可以使用多个不同格式、大小、分辨率的媒体源。可以从通过 JavaScript {{domxref("HTMLSourceElement")}} 对象访问。
+  - : `<source>` 元素可以放在 {{HTMLElement("audio")}} 或者 {{HTMLElement("video")}} 元素内部，以指定当前显示的源媒体。可以使用多个不同格式、大小、分辨率的媒体源。可以通过 JavaScript {{domxref("HTMLSourceElement")}} 对象访问。
 
 ### API 接口
 
