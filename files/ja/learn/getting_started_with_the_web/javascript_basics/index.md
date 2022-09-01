@@ -322,7 +322,7 @@ myHTML.onclick = function() {};
 
 また何も入れずに _OK_ を押してみてください — 結果として "Mozilla is cool," というタイトルが表示され、これは理由が明白です。
 
-この問題を避けるには、ユーザーーが `null` や空白の名前を入力していないかチェックするよう、`setUserName()` 関数を書き換えます。
+この問題を避けるには、ユーザーが `null` や空白の名前を入力していないかチェックするよう、`setUserName()` 関数を書き換えます。
 
 ```js
 function setUserName() {

@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Operators/delete
 tags:
   - JavaScript
   - 言語機能
-  - メモリーー管理
+  - メモリー管理
   - Object
   - Operator
   - リファレンス
