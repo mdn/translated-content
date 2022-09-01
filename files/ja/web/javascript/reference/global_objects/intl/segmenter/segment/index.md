@@ -1,36 +1,31 @@
 ---
 title: Intl.Segmenter.prototype.segment()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
-browser-compat: javascript.builtins.Intl.Segmenter.segment
+l10n:
+  sourceCommit: 46c0f5269f597ad055d0b6322f736f5c70996c4c
 ---
 {{JSRef}}
 
-The **`Intl.Segmenter.prototype.segment()`** method segments a string according to the locale and granularity of this [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) object.
+**`Intl.Segmenter.prototype.segment()`** メソッドは、この [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトのロケールおよび粒度に従って文字列を分割します。
 
 {{EmbedInteractiveExample("pages/js/intl-segmenter-prototype-segment.html")}}
 
-## Syntax
+## 構文
 
 ```js
 segment(input)
 ```
 
-### Parameters
+### 引数
 
 - `input`
-  - : The text to be segmented as a [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String).
+  - : 分割するテキストを [`String`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String) で指定します。
 
-### Return value
+### 返値
 
-A new iterable [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) object containing the segments of the input string, using the segmenter's locale and granularity.
+入力文字列のセグメントを含む、反復可能な新しい [`Segments`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) オブジェクトです。
 
-## Examples
+## 例
 
 ```js
 // Create a locale-specific word segmenter
@@ -62,10 +57,10 @@ for (const {segment, index, isWordLike} of segments) {
 // segment at code units [19, 20]: «?»
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
