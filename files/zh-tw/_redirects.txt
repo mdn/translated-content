@@ -609,7 +609,7 @@
 /zh-TW/docs/Web/CSS/CSS_Box_Model/理解邊界重疊的原因	/zh-TW/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 /zh-TW/docs/Web/CSS/CSS_Color	/zh-TW/docs/Web/CSS/CSS_Colors
 /zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes	/zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
-/zh-TW/docs/Web/CSS/CSS_Properties_Reference	/zh-TW/docs/orphaned/Web/CSS/CSS_Properties_Reference
+/zh-TW/docs/Web/CSS/CSS_Properties_Reference	/zh-TW/docs/Web/CSS/Reference#index
 /zh-TW/docs/Web/CSS/CSS_一般問題	/zh-TW/docs/Learn/CSS/Howto/CSS_FAQ
 /zh-TW/docs/Web/CSS/CSS_網格_布局	/zh-TW/docs/Web/CSS/CSS_Grid_Layout
 /zh-TW/docs/Web/CSS/Common_CSS_Questions	/zh-TW/docs/Learn/CSS/Howto/CSS_FAQ
