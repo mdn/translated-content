@@ -34125,27 +34125,27 @@
       "ziyunfei"
     ]
   },
-  "learn/Accessibility": {
+  "Learn/Accessibility": {
     "modified": "2020-07-16T22:40:01.477Z",
     "contributors": ["shinexyt", "pixang", "yatarphae", "guaner", "chenghaihua"]
   },
-  "learn/Accessibility/Accessibility_troubleshooting": {
+  "Learn/Accessibility/Accessibility_troubleshooting": {
     "modified": "2020-07-16T22:40:37.212Z",
     "contributors": ["wsj0124", "kuldahar", "zeng-zhi-yong"]
   },
-  "learn/Accessibility/Mobile": {
+  "Learn/Accessibility/Mobile": {
     "modified": "2020-07-16T22:40:33.086Z",
     "contributors": ["yuyx91", "shenshaohui1991"]
   },
-  "learn/Accessibility/WAI-ARIA_basics": {
+  "Learn/Accessibility/WAI-ARIA_basics": {
     "modified": "2020-07-16T22:40:24.388Z",
     "contributors": ["grape", "Madao-3", "DavidDavidx"]
   },
-  "learn/Front-end_web_developer": {
+  "Learn/Front-end_web_developer": {
     "modified": "2020-07-16T22:40:48.018Z",
     "contributors": ["Ende93", "ex90rts"]
   },
-  "learn/HTML": {
+  "Learn/HTML": {
     "modified": "2020-07-16T22:22:25.734Z",
     "contributors": [
       "anguiao",
@@ -34166,7 +34166,7 @@
       "Metalooze"
     ]
   },
-  "learn/HTML/Howto": {
+  "Learn/HTML/Howto": {
     "modified": "2020-07-16T22:22:31.131Z",
     "contributors": [
       "xmcgcg",
@@ -34180,11 +34180,11 @@
       "qixi"
     ]
   },
-  "learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image": {
+  "Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image": {
     "modified": "2020-07-16T22:22:43.732Z",
     "contributors": ["hebby"]
   },
-  "learn/HTML/Introduction_to_HTML": {
+  "Learn/HTML/Introduction_to_HTML": {
     "modified": "2020-07-16T22:22:54.800Z",
     "contributors": [
       "zixuan945",
@@ -34204,7 +34204,7 @@
       "ZhiRui"
     ]
   },
-  "learn/HTML/Introduction_to_HTML/Advanced_text_formatting": {
+  "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting": {
     "modified": "2020-10-29T09:47:28.341Z",
     "contributors": [
       "kuailekai",
@@ -34235,7 +34235,7 @@
       "weikunzz"
     ]
   },
-  "learn/HTML/Introduction_to_HTML/Debugging_HTML": {
+  "Learn/HTML/Introduction_to_HTML/Debugging_HTML": {
     "modified": "2020-09-22T12:30:11.535Z",
     "contributors": [
       "Roy-Tian",
@@ -34250,7 +34250,7 @@
       "huixiaomu"
     ]
   },
-  "learn/HTML/Introduction_to_HTML/Getting_started": {
+  "Learn/HTML/Introduction_to_HTML/Getting_started": {
     "modified": "2020-07-16T22:23:09.709Z",
     "contributors": [
       "lucida959595",
@@ -34294,7 +34294,7 @@
       "funnyChinese"
     ]
   },
-  "learn/HTML/Introduction_to_HTML/HTML_text_fundamentals": {
+  "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals": {
     "modified": "2020-11-16T00:17:59.659Z",
     "contributors": [
       "sinochen123",
@@ -34325,7 +34325,7 @@
       "funnyChinese"
     ]
   },
-  "learn/HTML/Introduction_to_HTML/Marking_up_a_letter": {
+  "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter": {
     "modified": "2020-07-16T22:23:14.761Z",
     "contributors": [
       "Roy-Tian",
@@ -34346,7 +34346,7 @@
       "Boot95"
     ]
   },
-  "learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content": {
+  "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content": {
     "modified": "2020-07-16T22:24:21.297Z",
     "contributors": [
       "Roy-Tian",
@@ -34359,7 +34359,7 @@
       "ChenLyu01"
     ]
   },
-  "learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML": {
+  "Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML": {
     "modified": "2020-12-06T06:59:19.723Z",
     "contributors": [
       "zrzjohn",
@@ -34397,7 +34397,7 @@
       "sisyphus-zhou"
     ]
   },
-  "learn/JavaScript": {
+  "Learn/JavaScript": {
     "modified": "2020-07-16T22:29:46.300Z",
     "contributors": [
       "oceanMIH",
@@ -34412,7 +34412,7 @@
       "Metalooze"
     ]
   },
-  "learn/JavaScript/Building_blocks": {
+  "Learn/JavaScript/Building_blocks": {
     "modified": "2020-07-16T22:31:11.083Z",
     "contributors": [
       "Drizzt-Yu",
@@ -34434,7 +34434,7 @@
       "iProgramme"
     ]
   },
-  "learn/JavaScript/Building_blocks/Build_your_own_function": {
+  "Learn/JavaScript/Building_blocks/Build_your_own_function": {
     "modified": "2020-08-01T05:11:26.919Z",
     "contributors": [
       "driftingdream",
@@ -34450,7 +34450,7 @@
       "ppphp"
     ]
   },
-  "learn/JavaScript/Building_blocks/Functions": {
+  "Learn/JavaScript/Building_blocks/Functions": {
     "modified": "2020-08-27T11:13:47.934Z",
     "contributors": [
       "shawn20111416",
@@ -34474,7 +34474,7 @@
       "minmino"
     ]
   },
-  "learn/JavaScript/Building_blocks/Looping_code": {
+  "Learn/JavaScript/Building_blocks/Looping_code": {
     "modified": "2020-07-16T22:31:22.467Z",
     "contributors": [
       "agnoCJY",
@@ -34494,7 +34494,7 @@
       "Marslin92"
     ]
   },
-  "learn/JavaScript/Building_blocks/Return_values": {
+  "Learn/JavaScript/Building_blocks/Return_values": {
     "modified": "2020-11-24T04:05:07.114Z",
     "contributors": [
       "Anser0111",
@@ -34511,7 +34511,7 @@
       "minmino"
     ]
   },
-  "learn/JavaScript/Building_blocks/conditionals": {
+  "Learn/JavaScript/Building_blocks/conditionals": {
     "modified": "2020-07-16T22:31:16.388Z",
     "contributors": [
       "SirnoChan",
@@ -34527,27 +34527,27 @@
       "HashubWang"
     ]
   },
-  "learn/JavaScript/Howto": {
+  "Learn/JavaScript/Howto": {
     "modified": "2020-07-16T22:33:11.775Z",
     "contributors": ["wangwenhao", "yuyx91"]
   },
-  "learn/Learning_and_getting_help": {
+  "Learn/Learning_and_getting_help": {
     "modified": "2020-12-06T05:06:52.891Z",
     "contributors": ["3143875691"]
   },
-  "learn/Performance": {
+  "Learn/Performance": {
     "modified": "2020-12-05T12:01:04.505Z",
     "contributors": ["mayerpan", "liguanzeng", "Bayes", "yangchongduo"]
   },
-  "learn/Performance/Web_Performance_Basics": {
+  "Learn/Performance/Web_Performance_Basics": {
     "modified": "2020-07-16T22:40:42.886Z",
     "contributors": ["shuiRong", "creative_fish"]
   },
-  "learn/Server-side": {
+  "Learn/Server-side": {
     "modified": "2020-07-16T22:36:03.668Z",
     "contributors": ["ZuoRight", "xixilog", "JamesZhange", "Munch_TZB", "GHLgh"]
   },
-  "learn/Server-side/Django": {
+  "Learn/Server-side/Django": {
     "modified": "2020-07-16T22:36:36.546Z",
     "contributors": [
       "diyigechipangxie",
@@ -34557,23 +34557,23 @@
       "Zhaoyu"
     ]
   },
-  "learn/Server-side/Django/Authentication": {
+  "Learn/Server-side/Django/Authentication": {
     "modified": "2020-07-16T22:37:25.161Z",
     "contributors": ["floodwater", "edgar-chen", "xixilog"]
   },
-  "learn/Server-side/Django/Deployment": {
+  "Learn/Server-side/Django/Deployment": {
     "modified": "2020-11-23T18:29:57.524Z",
     "contributors": ["keetack", "edgar-chen", "yan-jin", "xixilog"]
   },
-  "learn/Server-side/Django/Forms": {
+  "Learn/Server-side/Django/Forms": {
     "modified": "2020-07-16T22:37:34.229Z",
     "contributors": ["buttre", "edgar-chen", "xixilog"]
   },
-  "learn/Server-side/Django/Generic_views": {
+  "Learn/Server-side/Django/Generic_views": {
     "modified": "2020-07-16T22:37:19.625Z",
     "contributors": ["edgar-chen", "xixilog", "SphinxKnight"]
   },
-  "learn/Server-side/Django/Introduction": {
+  "Learn/Server-side/Django/Introduction": {
     "modified": "2020-07-16T22:36:42.459Z",
     "contributors": [
       "khalim",
@@ -34583,7 +34583,7 @@
       "chinanf-boy"
     ]
   },
-  "learn/Server-side/Django/Models": {
+  "Learn/Server-side/Django/Models": {
     "modified": "2020-07-16T22:37:00.935Z",
     "contributors": [
       "shawPLUSroot",
@@ -34598,23 +34598,23 @@
       "chinanf-boy"
     ]
   },
-  "learn/Server-side/Django/Sessions": {
+  "Learn/Server-side/Django/Sessions": {
     "modified": "2020-07-16T22:37:28.578Z",
     "contributors": ["buttre", "edgar-chen", "xixilog"]
   },
-  "learn/Server-side/Django/Testing": {
+  "Learn/Server-side/Django/Testing": {
     "modified": "2020-07-16T22:37:39.373Z",
     "contributors": ["edgar-chen", "xixilog"]
   },
-  "learn/Server-side/Django/Tutorial_local_library_website": {
+  "Learn/Server-side/Django/Tutorial_local_library_website": {
     "modified": "2020-07-16T22:36:50.644Z",
     "contributors": ["zengqi", "ddtyjmyjm", "hstaoqian"]
   },
-  "learn/Server-side/Django/django_assessment_blog": {
+  "Learn/Server-side/Django/django_assessment_blog": {
     "modified": "2020-07-16T22:37:49.691Z",
     "contributors": ["edgar-chen"]
   },
-  "learn/Server-side/Django/skeleton_website": {
+  "Learn/Server-side/Django/skeleton_website": {
     "modified": "2020-07-16T22:36:55.364Z",
     "contributors": [
       "Nel",
@@ -34625,11 +34625,11 @@
       "hstaoqian"
     ]
   },
-  "learn/Server-side/Django/web_application_security": {
+  "Learn/Server-side/Django/web_application_security": {
     "modified": "2020-07-16T22:37:47.216Z",
     "contributors": ["knktc", "edgar-chen", "xixilog"]
   },
-  "learn/Server-side/Express_Nodejs": {
+  "Learn/Server-side/Express_Nodejs": {
     "modified": "2020-07-16T22:37:56.406Z",
     "contributors": [
       "hellorayza",
@@ -34644,59 +34644,59 @@
       "ant0x00"
     ]
   },
-  "learn/Server-side/Express_Nodejs/Displaying_data": {
+  "Learn/Server-side/Express_Nodejs/Displaying_data": {
     "modified": "2020-10-27T00:17:29.715Z",
     "contributors": ["Megrax", "socovo", "edgar-chen"]
   },
-  "learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page": {
+  "Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page": {
     "modified": "2020-07-16T22:38:39.461Z",
     "contributors": ["woshiqiang1", "edgar-chen"]
   },
-  "learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page": {
+  "Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page": {
     "modified": "2020-07-16T22:38:38.246Z",
     "contributors": ["edgar-chen"]
   },
-  "learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge": {
+  "Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge": {
     "modified": "2020-07-16T22:38:39.803Z",
     "contributors": ["staticfire", "edgar-chen"]
   },
-  "learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page": {
+  "Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page": {
     "modified": "2020-07-16T22:38:37.044Z",
     "contributors": ["edgar-chen"]
   },
-  "learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page": {
+  "Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page": {
     "modified": "2020-07-16T22:38:39.148Z",
     "contributors": ["edgar-chen"]
   },
-  "learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page": {
+  "Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page": {
     "modified": "2020-07-16T22:38:36.367Z",
     "contributors": ["edgar-chen"]
   },
-  "learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment": {
+  "Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment": {
     "modified": "2020-07-16T22:38:37.610Z",
     "contributors": ["edgar-chen"]
   },
-  "learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page": {
+  "Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page": {
     "modified": "2020-07-16T22:38:38.748Z",
     "contributors": ["edgar-chen"]
   },
-  "learn/Server-side/Express_Nodejs/Displaying_data/Home_page": {
+  "Learn/Server-side/Express_Nodejs/Displaying_data/Home_page": {
     "modified": "2020-07-16T22:38:35.735Z",
     "contributors": ["edgar-chen"]
   },
-  "learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template": {
+  "Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template": {
     "modified": "2020-10-27T06:26:13.607Z",
     "contributors": ["Megrax", "edgar-chen"]
   },
-  "learn/Server-side/Express_Nodejs/Displaying_data/Template_primer": {
+  "Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer": {
     "modified": "2020-07-16T22:38:34.671Z",
     "contributors": ["edgar-chen"]
   },
-  "learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async": {
+  "Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async": {
     "modified": "2020-07-16T22:38:33.746Z",
     "contributors": ["edgar-chen"]
   },
-  "learn/Server-side/Express_Nodejs/Introduction": {
+  "Learn/Server-side/Express_Nodejs/Introduction": {
     "modified": "2020-07-16T22:38:13.912Z",
     "contributors": [
       "Roy-Tian",
@@ -34714,15 +34714,15 @@
       "chengzhibing"
     ]
   },
-  "learn/Server-side/Express_Nodejs/Tutorial_local_library_website": {
+  "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website": {
     "modified": "2020-07-16T22:38:17.531Z",
     "contributors": ["Roy-Tian", "chudongsong", "janyin", "edgar-chen"]
   },
-  "learn/Server-side/Express_Nodejs/deployment": {
+  "Learn/Server-side/Express_Nodejs/deployment": {
     "modified": "2020-07-16T22:38:50.827Z",
     "contributors": ["edgar-chen", "codeofjackie"]
   },
-  "learn/Server-side/Express_Nodejs/development_environment": {
+  "Learn/Server-side/Express_Nodejs/development_environment": {
     "modified": "2020-07-16T22:38:02.448Z",
     "contributors": [
       "snaildarter",
@@ -34736,7 +34736,7 @@
       "BarryLiu1995"
     ]
   },
-  "learn/Server-side/Express_Nodejs/forms": {
+  "Learn/Server-side/Express_Nodejs/forms": {
     "modified": "2020-08-07T05:55:45.402Z",
     "contributors": [
       "yunxiaomeng",
@@ -34747,31 +34747,31 @@
       "zhangyu911013"
     ]
   },
-  "learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form": {
+  "Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form": {
     "modified": "2020-07-16T22:38:46.101Z",
     "contributors": ["edgar-chen"]
   },
-  "learn/Server-side/Express_Nodejs/forms/Create_author_form": {
+  "Learn/Server-side/Express_Nodejs/forms/Create_author_form": {
     "modified": "2020-07-16T22:38:44.657Z",
     "contributors": ["edgar-chen"]
   },
-  "learn/Server-side/Express_Nodejs/forms/Create_book_form": {
+  "Learn/Server-side/Express_Nodejs/forms/Create_book_form": {
     "modified": "2020-07-16T22:38:45.191Z",
     "contributors": ["SphinxKnight", "UPUP", "edgar-chen"]
   },
-  "learn/Server-side/Express_Nodejs/forms/Create_genre_form": {
+  "Learn/Server-side/Express_Nodejs/forms/Create_genre_form": {
     "modified": "2020-07-16T22:38:43.645Z",
     "contributors": ["edgar-chen"]
   },
-  "learn/Server-side/Express_Nodejs/forms/Delete_author_form": {
+  "Learn/Server-side/Express_Nodejs/forms/Delete_author_form": {
     "modified": "2020-07-16T22:38:46.761Z",
     "contributors": ["edgar-chen"]
   },
-  "learn/Server-side/Express_Nodejs/forms/Update_Book_form": {
+  "Learn/Server-side/Express_Nodejs/forms/Update_Book_form": {
     "modified": "2020-07-16T22:38:48.713Z",
     "contributors": ["edgar-chen"]
   },
-  "learn/Server-side/Express_Nodejs/mongoose": {
+  "Learn/Server-side/Express_Nodejs/mongoose": {
     "modified": "2020-08-12T09:45:03.710Z",
     "contributors": [
       "Dazhuzhu-github",
@@ -34782,7 +34782,7 @@
       "edgar-chen"
     ]
   },
-  "learn/Server-side/Express_Nodejs/routes": {
+  "Learn/Server-side/Express_Nodejs/routes": {
     "modified": "2020-10-23T08:33:36.699Z",
     "contributors": [
       "Hawaii_zzapi",
@@ -34792,11 +34792,11 @@
       "edgar-chen"
     ]
   },
-  "learn/Server-side/Express_Nodejs/skeleton_website": {
+  "Learn/Server-side/Express_Nodejs/skeleton_website": {
     "modified": "2020-08-26T10:22:11.122Z",
     "contributors": ["Tiny-Wei", "Roy-Tian", "edgar-chen"]
   },
-  "learn/Server-side/First_steps": {
+  "Learn/Server-side/First_steps": {
     "modified": "2020-07-16T22:36:11.413Z",
     "contributors": [
       "DaniellaAngel",
@@ -34807,7 +34807,7 @@
       "07akioni"
     ]
   },
-  "learn/Server-side/First_steps/Client-Server_overview": {
+  "Learn/Server-side/First_steps/Client-Server_overview": {
     "modified": "2020-07-16T22:36:22.601Z",
     "contributors": [
       "DaniellaAngel",
@@ -34827,7 +34827,7 @@
       "Zeng"
     ]
   },
-  "learn/Server-side/First_steps/Introduction": {
+  "Learn/Server-side/First_steps/Introduction": {
     "modified": "2020-09-13T05:53:31.575Z",
     "contributors": [
       "dake0805",
@@ -34842,7 +34842,7 @@
       "Zeng"
     ]
   },
-  "learn/Server-side/First_steps/Web_frameworks": {
+  "Learn/Server-side/First_steps/Web_frameworks": {
     "modified": "2020-07-16T22:36:26.173Z",
     "contributors": [
       "mojiangyuan",
@@ -34861,7 +34861,7 @@
       "Zeng"
     ]
   },
-  "learn/Server-side/First_steps/Website_security": {
+  "Learn/Server-side/First_steps/Website_security": {
     "modified": "2020-10-20T04:30:22.097Z",
     "contributors": [
       "Megrax",

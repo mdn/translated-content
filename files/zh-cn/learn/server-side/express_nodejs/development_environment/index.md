@@ -1,6 +1,6 @@
 ---
 title: 设置 Node 开发环境
-slug: learn/Server-side/Express_Nodejs/development_environment
+slug: Learn/Server-side/Express_Nodejs/development_environment
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 
