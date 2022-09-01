@@ -560,7 +560,6 @@
 /zh-TW/docs/Web/API/File/fileName	/zh-TW/docs/Web/API/File/name
 /zh-TW/docs/Web/API/File_Handle_API	/zh-TW/docs/Web/API/File_and_Directory_Entries_API
 /zh-TW/docs/Web/API/Geolocation/Using_geolocation	/zh-TW/docs/Web/API/Geolocation_API
-/zh-TW/docs/Web/API/GlobalEventHandlers	/zh-TW/docs/orphaned/Web/API/GlobalEventHandlers
 /zh-TW/docs/Web/API/GlobalEventHandlers/onclick	/zh-TW/docs/Web/API/Element/click_event
 /zh-TW/docs/Web/API/GlobalEventHandlers/onclose	/zh-TW/docs/Web/API/HTMLDialogElement/close_event
 /zh-TW/docs/Web/API/HTMLOrForeignElement/dataset	/en-US/docs/Web/API/HTMLElement/dataset
