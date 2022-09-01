@@ -1,43 +1,37 @@
 ---
 title: Intl.Segmenter
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
-browser-compat: javascript.builtins.Intl.Segmenter
+l10n:
+  sourceCommit: 9ce57d5046baf5d25c8eb066e60227f0fbd017cf
 ---
 {{JSRef}}
 
-The **`Intl.Segmenter`** object enables locale-sensitive text segmentation, enabling you to get meaningful items (graphemes, words or sentences) from a string.
+**`Intl.Segmenter`** オブジェクトは、ロケールに応じたテキストのセグメンテーションを可能にし、文字列から意味のある項目（書記素、単語、文）を取得することができます。
 
 {{EmbedInteractiveExample("pages/js/intl-segmenter.html")}}
 
-## Constructor
+## コンストラクター
 
-- [`Intl.Segmenter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter)
-  - : Creates a new `Intl.Segmenter` object.
+- [`Intl.Segmenter()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter)
+  - : 新しい `Intl.Segmenter` オブジェクトを作成します。
 
-## Static methods
+## 静的メソッド
 
-- [`Intl.Segmenter.supportedLocalesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf)
-  - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
+- [`Intl.Segmenter.supportedLocalesOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf)
+  - : 指定したロケールのうち、ランタイムのデフォルトロケールにフォールバックすることなくサポートされているものを含む配列を返します。
 
-## Instance methods
+## インスタンスメソッド
 
-- [`Intl.Segmenter.prototype.resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions)
-  - : Returns a new object with properties reflecting the locale and granularity options computed during initialization of this `Intl.Segmenter` object.
-- [`Intl.Segmenter.prototype.segment()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment)
-  - : Returns a new iterable [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) instance
-    representing the segments of a string according to the locale and granularity of this `Intl.Segmenter` instance.
+- [`Intl.Segmenter.prototype.resolvedOptions()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions)
+  - : この `Intl.Segmenter` オブジェクトの初期化時に計算されたロケールおよび粒度のオプションを反映したプロパティを持つ新しいオブジェクトを返します。
+- [`Intl.Segmenter.prototype.segment()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment)
+  - : この `Intl.Segmenter` のインスタンスのロケールおよび粒度に従って文字列のセグメントを表す、新しい反復可能な [`Segments`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) のインスタンスを返します。
 
-## Examples
+## 例
 
-### Basic usage and difference from String.prototype.split()
+### 基本的な使い方と String.prototype.split() との相違点
 
-If we were to use [`String.prototype.split(" ")`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) to segment a text in words, we would not get the correct result if the locale of the text does not use whitespaces between words (which is the case for Japanese, Chinese, Thai, Lao, Khmer, Myanmar, etc.).
+[`String.prototype.split(" ")`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split) を使ってテキストを単語に分割する場合、テキストのロケールが単語間の空白を使用しない場合（つまり、日本語、中国語、タイ語、ラオス語、クメール語、ミャンマー語などの場合）、正しい結果を得ることはできません。
 
 ```js example-bad
 const str = "吾輩は猫である。名前はたぬき。";
@@ -57,10 +51,10 @@ console.table(Array.from(segments));
 // ]
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
