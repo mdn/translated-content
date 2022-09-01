@@ -44,9 +44,9 @@ console.log(Object.keys(anObj)); // console: ['2', '7', '100']
 
 // getFoo 是一个不可枚举的属性
 const myObj = Object.create({}, {
-    getFoo: {
-        value() { return this.foo; }
-    }
+  getFoo: {
+    value() { return this.foo; }
+  }
 });
 myObj.foo = 1;
 console.log(Object.keys(myObj)); // console: ['foo']
