@@ -86,9 +86,9 @@ console.log(o.b) // Runs the getter, which yields a + 1 (which is 1)
 <p><strong>Примечание:</strong> Вычисляемые свойства являются экспериментальной технологией, частью предложений спецификации ECMAScript 6, и массовой поддержки браузерами пока нет. Код ниже вызовет синтаксическую ошибку в неподдерживаемых средах.</p>
 </div>
 
-<pre class="brush: js">var expr = "foo";
+<pre class="brush: js">const expr = "foo";
 
-var obj = {
+const obj = {
   get [expr]() { return "bar"; }
 };
 
@@ -112,7 +112,8 @@ console.log(obj.foo); // "bar"</pre>
 
 <pre class="brush: js">get notifier() {
   delete this.notifier;
-  return this.notifier = document.getElementById("bookmarked-notification-anchor");
+  const anchor = document.getElementById("bookmarked-notification-anchor");
+  return this.notifier = anchor;
 },</pre>
 
 <p>Для Firefox смотрите также модуль XPCOMUtils.jsm , который определяет функцию <code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()">defineLazyGetter()</a></code>.</p>
