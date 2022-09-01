@@ -45,6 +45,6 @@ document.getElementById("bouton")
 
 {{Compat("api.Window.clearImmediate")}}
 
-## Voir également
+## Voir aussi
 
 - {{DOMxRef("Window.setImmediate()")}}

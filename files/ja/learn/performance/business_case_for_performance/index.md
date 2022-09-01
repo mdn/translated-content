@@ -1,10 +1,6 @@
 ---
 title: ウェブパフォーマンスのビジネスケース
 slug: Learn/Performance/business_case_for_performance
-tags:
-  - Web パフォーマンス
-  - Web 開発
-translation_of: Learn/Performance/business_case_for_performance
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Performance/Mobile", "Learn/Performance")}}
 

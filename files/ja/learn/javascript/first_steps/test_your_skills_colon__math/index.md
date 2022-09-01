@@ -1,12 +1,6 @@
 ---
 title: 'あなたのスキルをテストしよう: 数学'
 slug: Learn/JavaScript/First_steps/Test_your_skills:_Math
-tags:
-  - Beginner
-  - JavaScript
-  - Learn
-  - Math
-  - test your skills
 ---
 {{learnsidebar}}
 

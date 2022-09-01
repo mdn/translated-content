@@ -129,13 +129,11 @@ if (typeof document.addEventListener === "undefined" || typeof document.hidden =
 
 ## Spécifications
 
-| Spécification                                    | Statut                                       | Commentaire          |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Page Visibility API')}} | {{Spec2('Page Visibility API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.visibilityState")}}
+{{Compat}}
 
 ## Voir aussi
 

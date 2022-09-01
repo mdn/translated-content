@@ -1,16 +1,6 @@
 ---
 title: CSS 入門
 slug: Learn/CSS/First_steps/Getting_started
-tags:
-  - Beginner
-  - CSS
-  - Classes
-  - Elements
-  - Learn
-  - Selectors
-  - Syntax
-  - state
-translation_of: Learn/CSS/First_steps/Getting_started
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
 

@@ -130,15 +130,11 @@ from worker, POST send back aBuf.byteLength: 0                 myWorker.js:7:2
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#dom-worker-postmessage", "Worker.postMessage()")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Worker.postMessage")}}
-
-\[1] Internet Explorer ne supporte pas les objets {{domxref("Transferable")}}.
+{{Compat}}
 
 ## Voir aussi
 

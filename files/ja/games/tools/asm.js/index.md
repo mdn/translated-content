@@ -1,11 +1,6 @@
 ---
 title: asm.js
 slug: Games/Tools/asm.js
-tags:
-  - Deprecated
-  - JavaScript
-  - asm.js
-translation_of: Games/Tools/asm.js
 ---
 {{Deprecated_header}}{{GamesSidebar}}
 

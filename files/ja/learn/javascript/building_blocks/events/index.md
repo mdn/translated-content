@@ -1,16 +1,6 @@
 ---
 title: イベントへの入門
 slug: Learn/JavaScript/Building_blocks/Events
-tags:
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - イベント
-  - イベントハンドラー
-  - ガイド
-  - 学習
-  - 記事
-translation_of: Learn/JavaScript/Building_blocks/Events
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
 

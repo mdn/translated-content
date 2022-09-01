@@ -1,16 +1,6 @@
 ---
 title: PushMessageData.json()
 slug: Web/API/PushMessageData/json
-tags:
-  - API
-  - Experimental
-  - JSON
-  - Method
-  - Push
-  - PushMessageData
-  - Reference
-  - Service Workers
-translation_of: Web/API/PushMessageData/json
 ---
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 

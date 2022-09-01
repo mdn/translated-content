@@ -102,17 +102,15 @@ if (typeof TextEncoder === "undefined") {
 }
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                            | Status                       | Comment             |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName("Encoding", "#interface-textencoder", "TextEncoder")}} | {{Spec2("Encoding")}} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.TextEncoder")}}
+{{Compat}}
 
-## See also
+## Voir aussi
 
 - The {{DOMxRef("TextDecoder")}} interface describing the inverse operation.
 - [`StringView`](/fr/Add-ons/Code_snippets/StringView) – a C-like representation of strings based on typed arrays

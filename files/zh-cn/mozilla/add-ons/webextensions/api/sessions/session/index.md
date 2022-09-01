@@ -36,7 +36,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/sessions/Session
 >
 > Microsoft Edge 兼容性数据由 Microsoft Corporation 提供，并在此处包含在 Creative Commons Attribution 3.0 美国许可证下。
 
-<div class="hidden"><pre class="notranslate">//版权所有 2015 The Chromium Authors。版权所有。
+<!--
+//版权所有 2015 The Chromium Authors。版权所有。
 //
 //以或不以源代码和二进制格式重新分发和使用
 //修改，只要满足以下条件
@@ -63,4 +64,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/sessions/Session
 //责任理论，无论是合同形式，严格责任还是侵权行为
 //（包括疏忽大意或其他原因）出于使用目的的任何方式
 //即使已告知可能发生此类损坏，也可以使用本软件。
-</pre></div>
+-->

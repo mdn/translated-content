@@ -1,18 +1,6 @@
 ---
 title: PermissionStatus.state
 slug: Web/API/PermissionStatus/state
-tags:
-  - API
-  - Event Handler
-  - Experimental
-  - PermissionStatus
-  - Permissions
-  - Permissions API
-  - Property
-  - Reference
-  - state
-  - status
-translation_of: Web/API/PermissionStatus/state
 ---
 {{APIRef("Permissions API")}}{{SeeCompatTable}}
 

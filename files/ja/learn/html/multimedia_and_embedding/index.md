@@ -1,34 +1,6 @@
 ---
 title: マルチメディアとその埋め込み方
 slug: Learn/HTML/Multimedia_and_embedding
-tags:
-  - Assessment
-  - Audio
-  - Beginner
-  - CodingScripting
-  - Flash
-  - Guide
-  - HTML
-  - Images
-  - Landing
-  - Learn
-  - SVG
-  - Video
-  - iframes
-  - imagemaps
-  - responsive
-  - イメージマップ
-  - ガイド
-  - フラッシュ
-  - レスポンシブ
-  - 初心者
-  - 動画
-  - 学習
-  - 画像
-  - 着地ページ
-  - 評価試験
-  - 音声
-translation_of: Learn/HTML/Multimedia_and_embedding
 ---
 {{LearnSidebar}}
 

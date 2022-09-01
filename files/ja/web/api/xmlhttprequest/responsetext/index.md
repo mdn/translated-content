@@ -1,17 +1,6 @@
 ---
 title: XMLHttpRequest.responseText
 slug: Web/API/XMLHttpRequest/responseText
-tags:
-  - API
-  - テキストの読み取り
-  - テキストのロード
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - XMLHttpRequest
-  - responseText
-browser-compat: api.XMLHttpRequest.responseText
-translation_of: Web/API/XMLHttpRequest/responseText
 ---
 {{APIRef('XMLHttpRequest')}}
 

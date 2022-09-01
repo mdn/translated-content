@@ -272,7 +272,7 @@ Si vous souhaitez fournir une solution différente pour les ordinateurs de burea
 
 Dans cet article, nous vous avons fourni des détails sur les problèmes courants spécifiques à l'accessibilité mobile et sur la façon de les résoudre. Nous vous avons également montré comment utiliser les lecteurs d'écran les plus courants pour vous aider à effectuer des tests d'accessibilité.
 
-### Voir également
+### Voir aussi
 
 - [Guidelines For Mobile Web Development](https://www.smashingmagazine.com/guidelines-for-mobile-web-development/) — Une liste d'articles dans Smashing Magazine couvrant différentes techniques de conception de sites Web mobiles.
 - [Make your site work on touch devices](http://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644) — Article utile sur l'utilisation d'événements tactiles pour que les interactions fonctionnent sur les appareils mobiles.

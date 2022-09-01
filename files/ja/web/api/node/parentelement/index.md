@@ -1,12 +1,6 @@
 ---
 title: Node.parentElement
 slug: Web/API/Node/parentElement
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Node.parentElement
-translation_of: Web/API/Node/parentElement
 ---
 {{APIRef("DOM")}}
 

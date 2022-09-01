@@ -1,17 +1,6 @@
 ---
 title: PushSubscription.unsubscribe()
 slug: Web/API/PushSubscription/unsubscribe
-tags:
-  - API
-  - Experimental
-  - Method
-  - Push
-  - Push API
-  - PushSubscription
-  - Reference
-  - Service Workers
-  - unsubscribe
-translation_of: Web/API/PushSubscription/unsubscribe
 ---
 {{SeeCompatTable}}{{APIRef("Push API")}}
 

@@ -1,21 +1,6 @@
 ---
 title: XRBoundedReferenceSpace
 slug: Web/API/XRBoundedReferenceSpace
-tags:
-  - API
-  - AR
-  - Boundary
-  - Interface
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRBoundedReferenceSpace
-  - augmented
-translation_of: Web/API/XRBoundedReferenceSpace
 ---
 {{APIRef("WebXR Device API")}}{{secureContext_header}}
 

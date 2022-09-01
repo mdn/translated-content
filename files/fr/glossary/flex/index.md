@@ -14,7 +14,7 @@ La propriété `flex` est un raccourci pour les propriétés `flex-grow`, `flex-
 
 De plus `<flex>` peut se référer à [une longueur flexible](/fr/docs/Web/CSS/flex_value) dans une grille de mise en page CSS.
 
-## En apprendre plus
+## Voir aussi
 
 ### Références de la propriété
 

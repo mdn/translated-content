@@ -1,12 +1,6 @@
 ---
 title: PerformanceEntry.duration
 slug: Web/API/PerformanceEntry/duration
-tags:
-  - API
-  - Web パフォーマンス
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/PerformanceEntry/duration
 ---
 {{APIRef("Performance Timeline API")}}
 

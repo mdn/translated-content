@@ -1,22 +1,6 @@
 ---
 title: JavaScript オブジェクトの基本
 slug: Learn/JavaScript/Objects/Basics
-tags:
-  - API
-  - Article
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Syntax
-  - bracket notation
-  - dot notation
-  - instance
-  - object literal
-  - this
-  - オブジェクト
-  - 学習
-  - 理論
-translation_of: Learn/JavaScript/Objects/Basics
 ---
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 

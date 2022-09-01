@@ -1,17 +1,6 @@
 ---
 title: XMLHttpRequest.status
 slug: Web/API/XMLHttpRequest/status
-tags:
-  - API
-  - エラー
-  - プロパティ
-  - リファレンス
-  - XMLHttpRequest
-  - XMLHttpRequest ステータス
-  - 結果
-  - status
-browser-compat: api.XMLHttpRequest.status
-translation_of: Web/API/XMLHttpRequest/status
 ---
 {{APIRef('XMLHttpRequest')}}
 

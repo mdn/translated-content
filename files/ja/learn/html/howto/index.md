@@ -1,10 +1,6 @@
 ---
 title: 一般的な問題解決に HTML を使う
 slug: Learn/HTML/Howto
-tags:
-  - CodingScripting
-  - HTML
-translation_of: Learn/HTML/Howto
 ---
 {{LearnSidebar}}
 

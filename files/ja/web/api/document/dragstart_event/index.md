@@ -1,13 +1,6 @@
 ---
 title: 'Document: dragstart イベント'
 slug: Web/API/Document/dragstart_event
-page-type: web-api-event
-tags:
-  - DOM
-  - Event
-  - Reference
-  - drag and drop
-translation_of: Web/API/Document/dragstart_event
 ---
 {{APIRef}}
 

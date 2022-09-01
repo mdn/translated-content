@@ -1,12 +1,6 @@
 ---
 title: ProcessingInstruction.target
 slug: Web/API/ProcessingInstruction/target
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.ProcessingInstruction.target
-translation_of: Web/API/ProcessingInstruction/target
 ---
 {{ApiRef("DOM")}}
 

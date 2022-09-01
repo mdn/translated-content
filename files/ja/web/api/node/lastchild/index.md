@@ -1,12 +1,6 @@
 ---
 title: Node.lastChild
 slug: Web/API/Node/lastChild
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Node.lastChild
-translation_of: Web/API/Node/lastChild
 ---
 {{APIRef("DOM")}}
 

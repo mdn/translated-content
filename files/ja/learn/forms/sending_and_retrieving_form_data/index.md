@@ -1,18 +1,6 @@
 ---
 title: フォームデータの送信
 slug: Learn/Forms/Sending_and_retrieving_form_data
-tags:
-  - 初心者
-  - CodingScripting
-  - ファイル
-  - フォーム
-  - ガイド
-  - HTML
-  - HTTP
-  - ヘッダー
-  - セキュリティ
-  - Web
-translation_of: Learn/Forms/Sending_and_retrieving_form_data
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
 

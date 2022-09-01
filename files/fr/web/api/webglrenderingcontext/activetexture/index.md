@@ -56,14 +56,11 @@ gl.getParameter(gl.ACTIVE_TEXTURE);
 
 ## Spécifications
 
-| Spécification                                                                                    | Statué                               | Commentaire               |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------- |
-| {{SpecName('WebGL', "#5.14.3", "activeTexture")}}                                 | {{Spec2('WebGL')}}             | Définition initiale.      |
-| {{SpecName('OpenGL ES 2.0', "glActiveTexture.xml", "glActiveTexture")}} | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API OpenGL. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.activeTexture")}}
+{{Compat}}
 
 ## Voir aussi
 

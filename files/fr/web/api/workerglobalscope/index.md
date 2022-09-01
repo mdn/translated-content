@@ -100,14 +100,11 @@ console.log(navigator);
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire                                                          |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#workerglobalscope', 'WorkerGlobalScope')}} | {{Spec2('HTML WHATWG')}} | Aucun changement par rapport à {{SpecName ("Web Workers")}}. |
-| {{SpecName('Web Workers', '#workerglobalscope', 'WorkerGlobalScope')}} | {{Spec2('Web Workers')}} | Définition initiale.                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WorkerGlobalScope")}}
+{{Compat}}
 
 ## Voir aussi
 

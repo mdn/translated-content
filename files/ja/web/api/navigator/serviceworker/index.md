@@ -1,15 +1,6 @@
 ---
 title: Navigator.serviceWorker
 slug: Web/API/Navigator/serviceWorker
-tags:
-  - API
-  - Navigator
-  - Property
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-translation_of: Web/API/Navigator/serviceWorker
 ---
 {{APIRef("Service Workers API")}}
 

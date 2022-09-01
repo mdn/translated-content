@@ -1,16 +1,6 @@
 ---
 title: DOMRectReadOnly.bottom
 slug: Web/API/DOMRectReadOnly/bottom
-tags:
-  - API
-  - DOM
-  - DOMRectReadOnly
-  - 位置
-  - プロパティ
-  - リファレンス
-  - bottom
-browser-compat: api.DOMRectReadOnly.bottom
-translation_of: Web/API/DOMRectReadOnly/bottom
 ---
 {{APIRef("Geometry Interfaces")}}
 

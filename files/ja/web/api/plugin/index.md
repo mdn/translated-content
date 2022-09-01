@@ -1,16 +1,6 @@
 ---
 title: Plugin
 slug: Web/API/Plugin
-page-type: web-api-interface
-tags:
-  - API
-  - Add-ons
-  - DOM
-  - NeedsContent
-  - Plug-in
-  - Plugins
-browser-compat: api.Plugin
-translation_of: Web/API/Plugin
 ---
 {{ApiRef("HTML DOM")}}{{deprecated_header}}
 

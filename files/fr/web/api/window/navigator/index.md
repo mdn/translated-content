@@ -29,10 +29,8 @@ console.log("Voici l'agent utilisateur du navigateur courant", sUsrAg);
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaires |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', '#dom-navigator', 'Window: navigator')}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.navigator")}}
+{{Compat}}

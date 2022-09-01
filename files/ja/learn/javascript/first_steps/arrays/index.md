@@ -1,21 +1,6 @@
 ---
 title: 配列
 slug: Learn/JavaScript/First_steps/Arrays
-tags:
-  - CodingScripting
-  - JavaScript
-  - Join
-  - Pop
-  - Push
-  - l10n:priority
-  - shift
-  - split
-  - unshift
-  - 初心者
-  - 学習
-  - 記事
-  - 配列
-translation_of: Learn/JavaScript/First_steps/Arrays
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
 

@@ -21,8 +21,6 @@ window.focus()
 if (clicked) { window.focus(); }
 ```
 
-## Spécification
+## Spécifications
 
-| Specification                                                                                                | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG','interaction.html#dom-window-focus','Window.focus()')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}

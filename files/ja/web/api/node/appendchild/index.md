@@ -1,11 +1,6 @@
 ---
 title: Node.appendChild()
 slug: Web/API/Node/appendChild
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Node.appendChild
-translation_of: Web/API/Node/appendChild
 ---
 {{APIRef("DOM")}}
 

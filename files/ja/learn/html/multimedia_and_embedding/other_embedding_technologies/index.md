@@ -1,20 +1,6 @@
 ---
 title: object から iframe へ — その他の埋め込み技術
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Embedding
-  - Flash
-  - Guide
-  - HTML
-  - Learn
-  - Multimedia and embedding
-  - Object
-  - embed
-  - iframe
-translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
 

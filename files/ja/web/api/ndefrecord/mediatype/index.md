@@ -1,12 +1,6 @@
 ---
 title: NDEFRecord.mediaType
 slug: Web/API/NDEFRecord/mediaType
-tags:
-  - NDEF
-  - リファレンス
-  - ウェブ NFC
-browser-compat: api.NDEFRecord.mediaType
-translation_of: Web/API/NDEFRecord/mediaType
 ---
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 

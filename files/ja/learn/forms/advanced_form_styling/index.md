@@ -1,15 +1,6 @@
 ---
 title: HTML フォームへの高度なスタイル設定
 slug: Learn/Forms/Advanced_form_styling
-tags:
-  - Advanced
-  - CSS
-  - Forms
-  - HTML
-  - Web
-  - ガイド
-  - 例
-translation_of: Learn/Forms/Advanced_form_styling
 original_slug: Learn/Forms/Advanced_styling_for_HTML_forms
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}

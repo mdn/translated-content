@@ -1,14 +1,6 @@
 ---
 title: CSS の第一歩
 slug: Learn/CSS/First_steps
-tags:
-  - Beginner
-  - CSS
-  - Landing
-  - Learn
-  - Module
-  - first steps
-translation_of: Learn/CSS/First_steps
 ---
 {{LearnSidebar}}
 

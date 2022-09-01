@@ -396,6 +396,7 @@
 /ru/docs/Web/API/Document/defaultView/storage_event	/ru/docs/Web/API/Window/storage_event
 /ru/docs/Web/API/Document/documentURIObject	/ru/docs/orphaned/Web/API/Document/documentURIObject
 /ru/docs/Web/API/Document/domConfig	/ru/docs/Web/API/Document
+/ru/docs/Web/API/Document/height	/ru/docs/conflicting/Web/API/Element/clientHeight
 /ru/docs/Web/API/Document/keypress_event	/ru/docs/Web/API/Element/keypress_event
 /ru/docs/Web/API/DocumentOrShadowRoot/activeElement	/ru/docs/Web/API/Document/activeElement
 /ru/docs/Web/API/DocumentOrShadowRoot/getSelection	/ru/docs/Web/API/Document/getSelection

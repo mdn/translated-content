@@ -561,6 +561,7 @@
 /pt-BR/docs/Web/API/Document/async	/pt-BR/docs/Web/API/XMLDocument/async
 /pt-BR/docs/Web/API/Document/defaultView/popstate_event	/pt-BR/docs/Web/API/Window/popstate_event
 /pt-BR/docs/Web/API/Document/defaultView/resize_event	/pt-BR/docs/Web/API/Window/resize_event
+/pt-BR/docs/Web/API/Document/height	/pt-BR/docs/Web/API/Element/clientHeight
 /pt-BR/docs/Web/API/Document/keydown_event	/pt-BR/docs/Web/API/Element/keydown_event
 /pt-BR/docs/Web/API/Document/keypress_event	/pt-BR/docs/Web/API/Element/keypress_event
 /pt-BR/docs/Web/API/Document/keyup_event	/pt-BR/docs/conflicting/Web/API/Element/keyup_event_c3958d9a752bb3f2d72ac974b4e226ea

@@ -1,15 +1,6 @@
 ---
 title: Path2D
 slug: Web/API/Path2D
-tags:
-  - API
-  - Canvas
-  - Interface
-  - NeedsTranslation
-  - Path2D
-  - Reference
-  - TopicStub
-translation_of: Web/API/Path2D
 ---
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 

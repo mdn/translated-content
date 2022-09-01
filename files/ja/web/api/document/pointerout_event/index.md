@@ -1,16 +1,6 @@
 ---
 title: 'Document: pointerout イベント'
 slug: Web/API/Document/pointerout_event
-tags:
-  - Document
-  - Event
-  - PointerEvent
-  - Reference
-  - Web
-  - onpointerout
-  - pointerout
-  - イベント
-translation_of: Web/API/Document/pointerout_event
 ---
 {{APIRef}}
 

@@ -1,11 +1,6 @@
 ---
 title: DOMTokenList.entries()
 slug: Web/API/DOMTokenList/entries
-tags:
-- メソッド
-- リファレンス
-browser-compat: api.DOMTokenList.entries
-translation_of: Web/API/DOMTokenList/entries
 ---
 {{APIRef("DOM")}}
 

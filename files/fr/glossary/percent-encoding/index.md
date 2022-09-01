@@ -37,7 +37,7 @@ Les caractères spéciaux nécessitant cet encodage sont : `':'`, `'/'`, `'?'`, 
 
 En fonction du contexte, le caractère `' '` est traduit par un `'+'` (comme dans la version de codage en pourcentage utilisée dans un message `application/x-www-form-urlencoded`), ou en `'%20'` comme dans les URL.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

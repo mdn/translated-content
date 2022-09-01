@@ -1,12 +1,6 @@
 ---
 title: NDEFReader.scan()
 slug: Web/API/NDEFReader/scan
-tags:
-  - NDEF
-  - リファレンス
-  - ウェブ NFC
-  - メソッド
-browser-compat: api.NDEFReader.scan
 ---
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
