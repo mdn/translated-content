@@ -1,51 +1,41 @@
 ---
 title: Intl.Segmenter.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
-browser-compat: javascript.builtins.Intl.Segmenter.resolvedOptions
+l10n:
+  sourceCommit: 2ec681bd9ad77115496f551c62fee2ba50c9007f
 ---
 {{JSRef}}
 
-The **`Intl.Segmenter.prototype.resolvedOptions()`** method returns a new object with properties reflecting the locale and granularity options computed during the initialization of this [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) object.
+**`Intl.Segmenter.prototype.resolvedOptions()`** メソッドは、この [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトの初期化時に計算されたロケールおよび粒度のオプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
 {{EmbedInteractiveExample("pages/js/intl-segmenter-prototype-resolvedoptions.html")}}
 
-## Syntax
+## 構文
 
 ```js
 resolvedOptions()
 ```
 
-### Parameters
+### 引数
 
-None.
+なし。
 
-### Return value
+### 返値
 
-A new object with properties reflecting the locale and collation options computed
-during the initialization of the given [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) object.
+与えられた [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトの初期化時に計算されたロケールおよび照合順序のオプションを反映したプロパティを持つ新しいオブジェクトです。
 
-## Description
+## 解説
 
-The resulting object has the following properties:
+生成されたオブジェクトは以下のプロパティを持ちます。
 
 - `locale`
-  - : The BCP 47 language tag for the locale actually used. If any Unicode extension
-    values were requested in the input BCP 47 language tag that led to this locale,
-    the key-value pairs that were requested and are supported for this locale are
-    included in `locale`.
+  - : 実際に使用されるロケールの BCP 47 言語タグ。初期化のための BCP 47 言語タグに Unicode 拡張値が含まれていた場合、要求され、このロケールに対応しているキーと値のペアが `locale` に含まれる。
 - `granularity`
-  - : The value provided for this property in the `options` argument or filled
-    in as the default.
+  - : オプション引数でこのプロパティに指定された値、またはデフォルト値。
 
-## Examples
+## 例
 
-### Basic usage
+### 基本的な使い方
 
 ```js
 const spanishSegmenter = new Intl.Segmenter("es", {granularity: "sentence"});
@@ -54,7 +44,7 @@ console.log(options.locale); // "es"
 console.log(options.granularity); // "sentence"
 ```
 
-### Default granularity
+### デフォルトの granularity
 
 ```js
 const spanishSegmenter = new Intl.Segmenter("es");
@@ -63,7 +53,7 @@ console.log(options.locale); // "es"
 console.log(options.granularity); // "grapheme"
 ```
 
-### Fallback locale
+### locale のフォールバック
 
 ```js
 const banSegmenter = new Intl.Segmenter("ban");
@@ -74,10 +64,10 @@ console.log(options.locale);
 console.log(options.granularity); // "grapheme"
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
