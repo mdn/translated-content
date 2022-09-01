@@ -23,7 +23,7 @@ hasOwn(instance, prop)
 - `instance`
   - : テストする JavaScript オブジェクトのインスタンス。
 - `prop`
-  - : テストするプロパティの名前の {{jsxref("String")}} または [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)  。
+  - : テストするプロパティの名前の {{jsxref("String")}} または [Symbol](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)  。
 
 ### 返値
 
