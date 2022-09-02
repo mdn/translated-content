@@ -46,8 +46,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function
 
 - {{jsxref("Function.arguments")}} {{deprecated_inline}}
   - : 함수에 전달되는 인수(argument)에 해당하는 배열. 이는 {{jsxref("Function")}}의 속성으로 사라지므로(deprecated), 대신 함수 내에서 이용 가능한 {{jsxref("Functions/arguments", "arguments")}} 객체를 사용하세요.
-- <s class="obsoleteElement">{{jsxref("Function.arity")}} {{deprecated_inline}}</s>
-  - : <s class="obsoleteElement">함수에 의해 기대되는 인수의 수를 지정하기 위해 사용됐으나 제거되었습니다. 대신 {{jsxref("Function.length", "length")}} 속성을 사용하세요.</s>
+- {{jsxref("Function.arity")}} {{deprecated_inline}}
+  - : 함수에 의해 기대되는 인수의 수를 지정하기 위해 사용됐으나 제거되었습니다. 대신 {{jsxref("Function.length", "length")}} 속성을 사용하세요.
 - {{jsxref("Function.caller")}} {{non-standard_inline}}
   - : 현재 실행 중인 함수를 호출한 함수를 지정합니다.
 - {{jsxref("Function.length")}}

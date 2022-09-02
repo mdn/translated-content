@@ -12,7 +12,7 @@ La VoIP (Voice over Internet Protocol) est une technologie utilisée pour transm
 
 La VoIP vous permet d'appeler directement depuis un ordinateur, un téléphone spécial VoIP ou un téléphone traditionnel connecté à un adaptateur spécial. La VoIP nécessite une connexion internet haut débit. En général, les appels téléphoniques via Internet ne génèrent pas de charges en sus de ce que l'utilisateur paye pour son accès Internet, de la même manière que l'utilisateur ne paye pas pour chaque courriel qu'il envoie par Internet.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

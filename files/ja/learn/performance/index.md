@@ -1,15 +1,6 @@
 ---
 title: ウェブパフォーマンス
 slug: Learn/Performance
-tags:
-  - CSS
-  - HTML
-  - HTTP
-  - JavaScript
-  - Learn
-  - Performance
-  - Web Performance
-translation_of: Learn/Performance
 ---
 {{LearnSidebar}}
 

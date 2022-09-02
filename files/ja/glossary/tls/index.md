@@ -1,13 +1,6 @@
 ---
 title: Transport Layer Security (TLS)
 slug: Glossary/TLS
-tags:
-  - Cryptography
-  - Glossary
-  - Infrastructure
-  - Security
-  - Web Performance
-translation_of: Glossary/TLS
 ---
 **TLS (Transport Layer Security)** は、以前は {{Glossary("SSL", "SSL (Secure Sockets Layer)")}} として知られていたもので、ネットワーク上で安全に通信するためにアプリケーションが使用する{{Glossary("protocol", "プロトコル")}}であり、電子メール、ウェブ閲覧、メッセージング、その他のプロトコルの改ざんや盗聴を防止します。 SSL と TLS はどちらもクライアント・サーバー型のプロトコルであり、暗号化したプロトコルを使用してプライバシーを保証することで、ネットワークを通じたセキュリティを提供します。サーバーとクライアントが TLS を使用して通信するすれば、どのメッセージも第三者によって盗聴や改ざんされていないことが保証されます。
 

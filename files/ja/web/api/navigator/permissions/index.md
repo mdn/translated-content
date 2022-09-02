@@ -1,14 +1,6 @@
 ---
 title: Navigator.permissions
 slug: Web/API/Navigator/permissions
-tags:
-  - API
-  - Experimental
-  - Navigator
-  - Permissions
-  - Property
-  - Reference
-translation_of: Web/API/Navigator/permissions
 ---
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 

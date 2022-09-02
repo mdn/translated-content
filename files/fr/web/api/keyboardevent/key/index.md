@@ -219,12 +219,10 @@ window.addEventListener("keydown", function (event) {
 }, true);
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire                                           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------- |
-| {{SpecName('DOM3 Events', '#widl-KeyboardEvent-key', 'KeyboardEvent.key')}} | {{Spec2('DOM3 Events')}} | Définition initiale, incluant les valeurs de touches. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.KeyboardEvent.key")}}
+{{Compat}}

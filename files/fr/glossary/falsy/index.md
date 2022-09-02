@@ -33,7 +33,7 @@ if (document.all) [1]
 
 Parfois écrit falsey, bien qu'en anglais, transformer un mot en adjectif avec un _-y_ fait disparaître tout e final (noise => noisy, ice => icy, shine => shiny) .
 
-## En apprendre plus
+## Voir aussi
 
 - {{Glossary("Truthy")}}
 - {{Glossary("Boolean")}}

@@ -1,15 +1,6 @@
 ---
 title: Element.scrollTopMax
 slug: Web/API/Element/scrollTopMax
-tags:
-  - API
-  - CSSOM View
-  - Element
-  - 標準外
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-translation_of: Web/API/Element/scrollTopMax
 ---
 {{APIRef("DOM")}}{{Non-standard_header}}
 

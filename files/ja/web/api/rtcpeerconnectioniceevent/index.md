@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnectionIceEvent
 slug: Web/API/RTCPeerConnectionIceEvent
-translation_of: Web/API/RTCPeerConnectionIceEvent
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 

@@ -18,7 +18,7 @@ Basé sur une syntaxe {{Glossary("XML")}}, SVG peut être stylé avec {{Glossary
 
 SVG étant un [format d'image vectorielle](http://fr.wikipedia.org/wiki/Image_vectorielle), les images SVG peuvent être redimensionnées à l'infini, ce qui les rend inestimables pour la {{Glossary("Responsive web design","conception web adaptative")}}, car elles permettent de créer des éléments d'interface qui s'adaptent à toutes les tailles d'écran. SVG fournit également un ensemble d'outils, comme du clipping, des masques, des filtres et des animations.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

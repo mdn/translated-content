@@ -1,7 +1,6 @@
 ---
 title: Django Web アプリケーションのセキュリティ
 slug: Learn/Server-side/Django/web_application_security
-translation_of: Learn/Server-side/Django/web_application_security
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}ユーザーのデータを守ることは Web デザインにおいて重要です。 以前、より一般的なセキュリティの脅威の一部を [Web セキュリティ](/ja/docs/Web/Security) の記事で説明しました— 本記事では Django にビルトインされている保護機能がそのような脅威にどう対応しているか、より実践的な動きを見ながら説明していきます。
 

@@ -24,7 +24,9 @@ JavaScript {{jsxref("RegExp")}} 객체는 {{jsxref("RegExp.global", "global")}} 
 
 ## 구문
 
-    regexObj.exec(str)
+```js
+regexObj.exec(str)
+```
 
 ### 매개변수
 
@@ -143,8 +145,10 @@ while ((myArray = myRe.exec(str)) !== null) {
 
 This script displays the following text:
 
-    Found abb. Next match starts at 3
-    Found ab. Next match starts at 9
+```
+Found abb. Next match starts at 3
+Found ab. Next match starts at 9
+```
 
 Note: Do not place the regular expression literal (or {{jsxref("RegExp")}} constructor) within the `while` condition or it will create an infinite loop if there is a match due to the {{jsxref("RegExp.lastIndex", "lastIndex")}} property being reset upon each iteration. Also be sure that the global flag is set or a loop will occur here also.
 

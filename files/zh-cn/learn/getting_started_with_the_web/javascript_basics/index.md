@@ -10,7 +10,7 @@ JavaScript 是一门编程语言，可为网站添加交互功能（例如：游
 
 ## JavaScript 到底是什么？
 
-{{Glossary("JavaScript")}}（缩写：JS）是一门完备的 {{Glossary("Dynamic programming language", "动态编程语言")}}。当应用于 {{Glossary("HTML")}} 文档时，可为网站提供动态交互特性。由布兰登·艾克（Brendan Eich，Mozilla 项目、Mozilla 基金会和 Mozilla 公司的联合创始人）发明。
+{{Glossary("JavaScript")}}（缩写：JS）是一门完备的动态编程语言。当应用于 {{Glossary("HTML")}} 文档时，可为网站提供动态交互特性。由布兰登·艾克（Brendan Eich，Mozilla 项目、Mozilla 基金会和 Mozilla 公司的联合创始人）发明。
 
 JavaScript 的应用场合极其广泛，简单到幻灯片、照片库、浮动布局和响应按钮点击，复杂到游戏、2D/3D 动画、大型数据库驱动程序等等。
 

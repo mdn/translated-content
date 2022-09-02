@@ -20,15 +20,13 @@ lLoc = window.screenX
 
 - _`lLoc`_ is the number of CSS pixels from the left side the screen.
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                | Status                           | Commentaire         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{ SpecName('CSSOM View', '#dom-window-screenx', 'Window.screenX') }} | {{ Spec2('CSSOM View') }} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.screenX")}}
+{{Compat}}
 
 ## Voir aussi
 

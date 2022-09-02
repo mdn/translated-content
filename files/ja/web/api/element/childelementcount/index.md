@@ -1,12 +1,6 @@
 ---
 title: Element.childElementCount
 slug: Web/API/Element/childElementCount
-tags:
-  - API
-  - DOM
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/Element/childElementCount
 original_slug: Web/API/ParentNode/childElementCount
 ---
 {{ APIRef("DOM") }}

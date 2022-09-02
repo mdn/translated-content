@@ -1,14 +1,6 @@
 ---
 title: カスタムフォームコントロールの作成方法
 slug: Learn/Forms/How_to_build_custom_form_controls
-tags:
-  - Advanced
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Web
-translation_of: Learn/Forms/How_to_build_custom_form_controls
 original_slug: Learn/Forms/How_to_build_custom_form_widgets
 ---
 {{LearnSidebar}}

@@ -1,14 +1,6 @@
 ---
 title: データ属性の使用
 slug: Learn/HTML/Howto/Use_data_attributes
-tags:
-  - HTML
-  - HTML5
-  - ウェブ
-  - ガイド
-  - 例
-  - 独自データ属性
-translation_of: Learn/HTML/Howto/Use_data_attributes
 ---
 {{LearnSidebar}}
 

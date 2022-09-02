@@ -20,7 +20,7 @@ CSS transitions는 여러분이 (명시적으로 목록을 작성해서) 어떤 
 
 ## 애니메이션 가능한 CSS 속성은?
 
-웹 작성자는 어떤 속성을 어떤 방식으로 움직일지를 정의할 수 있습니다. 이것은 복잡한 트랜지션을 생성할 수 있게 합니다. 어떤 속성은 움직이게 하는 것이 말이 되지 않으므로, [애니메이션 가능한 속성의 집합](/ko/docs/CSS/CSS_animated_properties "/en-US/docs/")은 유한한 집합으로 제한됩니다.
+웹 작성자는 어떤 속성을 어떤 방식으로 움직일지를 정의할 수 있습니다. 이것은 복잡한 트랜지션을 생성할 수 있게 합니다. 어떤 속성은 움직이게 하는 것이 말이 되지 않으므로, [애니메이션 가능한 속성의 집합](/ko/docs/CSS/CSS_animated_properties)은 유한한 집합으로 제한됩니다.
 
 > **참고:** 노트: 애니메이션 가능한 속성의 집합은 변할 수 있습니다. 개발자는 주의해서 진행해야 합니다.
 
@@ -67,7 +67,7 @@ CSS 트랜지션은 단축(shorthand) 속성 {{cssxref("transition")}}을 사용
 
 여러분은 아래의 서브 속성으로 트랜지션의 개별 컴포넌트를 제어할 수 있습니다:
 
-**(이 트랜지션은 단지 예제를 목적으로 계속해서 루프를 돕니다. 그리고 CSS `transition들은 시작에서 종료까지 어떤 속성의 변화만을 시각화합니다. 그 루프를 시각화하려면 `CSS `animation 속성을 살펴보세요.`)**
+**(이 트랜지션은 단지 예제를 목적으로 계속해서 루프를 돕니다. 그리고 CSS `transition` 들은 시작에서 종료까지 어떤 속성의 변화만을 시각화합니다. 그 루프를 시각화하려면 CSS `animation` 속성을 살펴보세요.)**
 
 - {{ cssxref("transition-property") }}
   - : 트랜지션을 적용해야 하는 CSS 속성의 이름 혹은 이름들을 명시합니다. 여기에 나열한 속성만 트랜지션하는 동안 움직입니다. 또한, 다른 모든 속성에 대한 변화는 보통 때와 같이 즉시 일어납니다.
@@ -873,7 +873,7 @@ div {
 
 ## 트랜지션 완료 감지하기
 
-트랜지션을 완료하면 발생하는 단일 이벤트가 있습니다. 모든 표준을 따르는 브라우저에서 그 이벤트는 `transitionend이며, `WebKit에서는 ` webkitTransitionEnd입니다. 자세한 내용은 맨 아래의 호환성 테이블을 참고하세요. ``transitionend 이벤트는 두 속성을 제공합니다.`
+트랜지션을 완료하면 발생하는 단일 이벤트가 있습니다. 모든 표준을 따르는 브라우저에서 그 이벤트는 `transitionend` 이며, `WebKit` 에서는 `webkitTransitionEnd` 입니다. 자세한 내용은 맨 아래의 호환성 테이블을 참고하세요. `transitionend` 이벤트는 두 속성을 제공합니다.
 
 - `propertyName`
   - : 트랜지션을 완료한 CSS 속성의 이름을 나타내는 문자열
@@ -951,7 +951,7 @@ div {
 
 CSS의 흔한 사용은 사용자가 마우스 커서를 메뉴 위에 올려놓을 때 그 메뉴 아이템을 하이라이팅하는 것입니다. 트랜지션을 사용하여 효과를 훨씬 더 매력적으로 만들 수 있습니다.
 
-코드 스니핏(snippets, 역자주: 재활용이 가능한 소스 조각)을 보기 전에, (여러분의 브라우저가 트랜지션을 지원한다고 가정하면) [라이브 데모](/samples/cssref/transitions/sample2 "http://developer.mozilla.org/samples/cssref/transitions/sample2/")를 보고 싶을지도 모르겠습니다. 그것이 사용한 [CSS를 직접](/samples/cssref/transitions/sample2/transitions.css "http://developer.mozilla.org/samples/cssref/transitions/sample2/transitions.css") 볼 수도 있습니다.
+코드 스니핏(snippets, 역자주: 재활용이 가능한 소스 조각)을 보기 전에, (여러분의 브라우저가 트랜지션을 지원한다고 가정하면) [라이브 데모](/samples/cssref/transitions/sample2)를 보고 싶을지도 모르겠습니다. 그것이 사용한 [CSS를 직접](/samples/cssref/transitions/sample2/transitions.css) 볼 수도 있습니다.
 
 우선 HTML을 사용하여 메뉴를 설정합니다.
 
@@ -1000,7 +1000,7 @@ CSS의 흔한 사용은 사용자가 마우스 커서를 메뉴 위에 올려놓
 
 이 CSS는 그 요소가 {{ cssxref(":hover") }} 상태일 때 배경과 텍스트 색상 모두를 변경하면서 메뉴의 모습을 설정합니다.
 
-그 효과를 장황하게 설명하는 대신, [브라우저가 트랜지션을 지원한다면, ](/en/CSS/CSS_transitions#Browser_compatibility "en/CSS/CSS_transitions#Browser_compatibility")[라이브 샘플을 살펴보세요](/samples/cssref/transitions/sample2 "https://developer.mozilla.org/samples/cssref/transitions/sample2").
+그 효과를 장황하게 설명하는 대신, [브라우저가 트랜지션을 지원한다면](/en/CSS/CSS_transitions#Browser_compatibility), [라이브 샘플을 살펴보세요](/samples/cssref/transitions/sample2).
 
 ## 트랜지션을 이용하여 JavaScript 기능 부드럽게 하기
 
@@ -1049,4 +1049,4 @@ p {
 ## 같이 보기
 
 - [CSS3 Dock Menu](http://techstream.org/Web-Design/Dock-Menu-with-CSS3 "CSS3 Dock Menu using CSS transitions") using CSS transitions
-- The {{ domxref("TransitionEvent") }} interface and the [`transitionend`](/ko/docs/Mozilla_event_reference/transitionend "The 'transitionend' event") event.
+- The {{ domxref("TransitionEvent") }} interface and the [`transitionend`](/ko/docs/Mozilla_event_reference/transitionend) event.

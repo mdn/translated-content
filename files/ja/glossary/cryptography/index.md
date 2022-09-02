@@ -1,14 +1,6 @@
 ---
 title: Cryptography (暗号学)
 slug: Glossary/Cryptography
-tags:
-  - Cryptography
-  - Glossary
-  - Privacy
-  - Security
-  - 暗号
-  - 用語集
-translation_of: Glossary/Cryptography
 ---
 **暗号学**（Cryptography、cryptology）は、メッセージを安全に符号化して送信する方法を研究する科学です。暗号学は、安全でない環境でメッセージを符号化および復号するために使用されるアルゴリズムの設計および研究と、それらの応用です。 **データの機密性**だけではなく、暗号学はまた、**識別**、**認証**、**否認防止**、および**データの完全性**にも取り組んでいます。したがって、**暗号システム**、つまり文脈における暗号方式の使い方も研究します。
 

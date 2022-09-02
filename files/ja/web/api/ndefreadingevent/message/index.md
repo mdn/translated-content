@@ -1,13 +1,6 @@
 ---
 title: NDEFReadingEvent.message
 slug: Web/API/NDEFReadingEvent/message
-tags:
-  - API
-  - Property
-  - リファレンス
-  - message
-  - NDEFReadingEvent
-browser-compat: api.NDEFReadingEvent.message
 ---
 {{securecontext_header}}{{APIRef()}}
 

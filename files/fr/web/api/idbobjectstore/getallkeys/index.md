@@ -81,13 +81,11 @@ Cette méthode peut déclencher une exception {{domxref("DOMException")}} ayant 
 
 ## Spécifications
 
-| Spécification                                                                                    | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('IndexedDB 2', '#dom-idbobjectstore-getallkeys', 'getAll()')}} | {{Spec2('IndexedDB w')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.getAllKeys")}}
+{{Compat}}
 
 ## Voir aussi
 

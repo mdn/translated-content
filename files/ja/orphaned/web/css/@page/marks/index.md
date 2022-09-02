@@ -1,16 +1,6 @@
 ---
 title: marks
 slug: orphaned/Web/CSS/@page/marks
-tags:
-  - '@page'
-  - CSS
-  - CSS ページ化メディア
-  - CSS 記述子
-  - Experimental
-  - Reference
-  - ウェブ
-  - レイアウト
-translation_of: Web/CSS/@page/marks
 original_slug: Web/CSS/@page/marks
 ---
 {{CSSRef}}{{SeeCompatTable}}

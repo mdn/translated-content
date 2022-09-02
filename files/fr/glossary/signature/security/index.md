@@ -20,7 +20,7 @@ Une **signature**, ou _signature numérique_, est un {{glossary("protocol","prot
 
 Le système échoue si la clé privée est compromise ou si le destinataire donne trompeusement une fausse clé publique.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

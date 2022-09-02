@@ -1,12 +1,6 @@
 ---
 title: asm.js の非同期スクリプト
 slug: Games/Techniques/Async_scripts
-tags:
-  - Games
-  - JavaScript
-  - asm.js
-  - async
-translation_of: Games/Techniques/Async_scripts
 ---
 {{GamesSidebar}}
 

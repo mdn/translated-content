@@ -11,7 +11,9 @@ The **`WebAssembly.LinkError()`** constructor creates a new WebAssembly `LinkErr
 
 ## Syntax
 
-    new WebAssembly.LinkError(message, fileName, lineNumber)
+```js
+new WebAssembly.LinkError(message, fileName, lineNumber)
+```
 
 ### Parameters
 

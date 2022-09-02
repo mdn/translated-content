@@ -1,13 +1,6 @@
 ---
 title: SMTP
 slug: Glossary/SMTP
-tags:
-  - Beginner
-  - Collaboration
-  - Glossary
-  - Infrastructure
-  - Sharing
-translation_of: Glossary/SMTP
 ---
 **SMTP** (Simple Mail Transfer Protocol) は、新しいメールを送信するために使用される{{glossary("protocol","プロトコル")}}です。 {{glossary("POP3")}} や {{glossary("NNTP")}} と同様に、{{Glossary("state machine","ステートマシン")}} により駆動するプロトコルです。
 

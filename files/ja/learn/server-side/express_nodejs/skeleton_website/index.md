@@ -1,16 +1,6 @@
 ---
 title: 'Express チュートリアル Part 2: スケルトン Web サイトの作成'
 slug: Learn/Server-side/Express_Nodejs/skeleton_website
-tags:
-  - CodingScripting
-  - Express
-  - Node
-  - イントロダクション
-  - サーバサイド
-  - 初心者
-  - 学習
-  - 開発環境
-translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 ---
 {{LearnSidebar}}
 

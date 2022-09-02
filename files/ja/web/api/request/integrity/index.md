@@ -1,15 +1,6 @@
 ---
 title: Request.integrity
 slug: Web/API/Request/integrity
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Property
-  - Reference
-  - integrity
-  - request
-translation_of: Web/API/Request/integrity
 ---
 {{APIRef("Fetch")}}
 

@@ -1,15 +1,6 @@
 ---
 title: PushManager.permissionState()
 slug: Web/API/PushManager/permissionState
-tags:
-  - API
-  - Experimental
-  - Method
-  - PushManager
-  - Reference
-  - Service Workers
-  - permissionState
-translation_of: Web/API/PushManager/permissionState
 ---
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 

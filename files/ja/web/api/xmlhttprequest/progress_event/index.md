@@ -1,16 +1,6 @@
 ---
 title: 'XMLHttpRequest: progress イベント'
 slug: Web/API/XMLHttpRequest/progress_event
-tags:
-  - API
-  - イベント
-  - ProgressEvent
-  - リファレンス
-  - ウェブ
-  - XMLHttpRequest
-  - progress
-browser-compat: api.XMLHttpRequest.progress_event
-translation_of: Web/API/XMLHttpRequest/progress_event
 ---
 {{APIRef}}
 

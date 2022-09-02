@@ -1,14 +1,6 @@
 ---
 title: Request()
 slug: Web/API/Request/Request
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - request
-  - コンストラクター
-  - リファレンス
-translation_of: Web/API/Request/Request
 ---
 {{APIRef("Fetch")}}
 

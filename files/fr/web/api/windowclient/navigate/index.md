@@ -35,10 +35,8 @@ Une {{jsxref("Promise")}}  qui sera analysée par le demandeur {{domxref("Window
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                               | Commentaire         |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#client-navigate-method', 'navigate()')}} | {{Spec2('Service Workers')}} | définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowClient.navigate")}}
+{{Compat}}

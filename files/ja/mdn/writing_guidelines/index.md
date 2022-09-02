@@ -1,11 +1,6 @@
 ---
 title: 執筆ガイドライン
 slug: MDN/Writing_guidelines
-page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
-translation_of: MDN/Writing_guidelines
 original_slug: MDN/About
 ---
 {{MDNSidebar}}

@@ -1,16 +1,6 @@
 ---
 title: document.bgColor
 slug: Web/API/Document/bgColor
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - Document
-  - Gecko
-  - HTML DOM
-  - Property
-  - Reference
-translation_of: Web/API/Document/bgColor
 ---
 {{APIRef("DOM")}} {{ Deprecated_header() }}
 

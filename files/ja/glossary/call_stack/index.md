@@ -1,14 +1,6 @@
 ---
 title: Call stack (コールスタック)
 slug: Glossary/Call_stack
-tags:
-  - Call Stack
-  - CodingScripting
-  - Glossary
-  - JavaScript
-  - コールスタック
-  - 用語集
-translation_of: Glossary/Call_stack
 ---
 **コールスタック** (call stack) は、インタープリター (ウェブブラウザー内の JavaScript インタープリターなど) の仕組みの一つで、複数階層の{{glossary("function","関数")}}を呼び出したスクリプト内の位置を追跡し続けることです。 — どの関数が現在実行されているのか、その関数の中でどの関数が呼び出されたか、などです。
 

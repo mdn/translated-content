@@ -1,12 +1,6 @@
 ---
 title: PerformanceNavigationTiming.loadEventEnd
 slug: Web/API/PerformanceNavigationTiming/loadEventEnd
-tags:
-  - API
-  - Web パフォーマンス
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/PerformanceNavigationTiming/loadEventEnd
 ---
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 

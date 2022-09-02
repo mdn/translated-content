@@ -1,17 +1,6 @@
 ---
 title: SourceBufferList.length
 slug: Web/API/SourceBufferList/length
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBufferList
-  - Video
-  - length
-translation_of: Web/API/SourceBufferList/length
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 

@@ -1,14 +1,6 @@
 ---
 title: 純粋な JavaScript を使ったブロック崩しゲーム
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Tutorial
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 ---
 {{GamesSidebar}}

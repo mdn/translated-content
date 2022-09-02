@@ -27,12 +27,11 @@ _This interface also inherits properties from its parent, {{domxref("EventTarget
 
 - {{domxref("BroadcastChannel.name")}}
   - : Returns a {{domxref("DOMString")}}, the name of the channel.
-- ### Event handlers
 
-  {{domxref("BroadcastChannel.onmessage")}}
+### Event handlers
 
+- {{domxref("BroadcastChannel.onmessage")}}
   - : An {{event("Event_handlers", "event handler")}} property that specifies the function to execute when a {{event("message")}} event is fired on this object.
-
 - {{domxref("BroadcastChannel.onmessageerror")}}
   - : An {{event("Event_handlers", "event handler")}} called when a {{domxref("MessageEvent")}} of type {{domxref("MessageError")}} is fired—that is, when it receives a message that cannot be deserialized.
 

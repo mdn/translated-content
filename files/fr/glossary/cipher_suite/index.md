@@ -17,6 +17,6 @@ Dans un {{glossary("cryptosystem","protocole de chiffrement")}} tel que {{glossa
 - AES-128 comme chiffre, avec Galois/Counter Mode (GCM) comme mode d'opération de chiffrement par bloc
 - SHA-256 comme code d'authentification des messages (HMAC)
 
-## En apprendre plus
+## Voir aussi
 
 - [Les choix de suites de chiffrement TLS recommandées par Mozilla](https://wiki.mozilla.org/Security/Server_Side_TLS) (en anglais)

@@ -41,4 +41,3 @@ async function handleClick() {
 
 browser.browserAction.onClicked.addListener(handleClick);
 ```
-

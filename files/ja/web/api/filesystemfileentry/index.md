@@ -1,17 +1,6 @@
 ---
 title: FileSystemFileEntry
 slug: Web/API/FileSystemFileEntry
-page-type: web-api-interface
-tags:
-  - API
-  - ファイルとディレクトリー項目 API
-  - FileEntry
-  - ファイル
-  - インターフェイス
-  - オフライン
-  - リファレンス
-browser-compat: api.FileSystemFileEntry
-translation_of: Web/API/FileSystemFileEntry
 ---
 {{APIRef("File and Directory Entries API")}}
 

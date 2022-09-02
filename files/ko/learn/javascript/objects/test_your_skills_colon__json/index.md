@@ -40,7 +40,7 @@ original_slug: Learn/JavaScript/Objects/얼마나_이해했는지_확인해보�
 
 만일 작업을 평가하고나, 막혀서 도움을 요청하고 싶다면:
 
-1.  [MDN 학습 토론 카테고리](https://discourse.mozilla.org/c/mdn/learn/250)에 평가 또는 도움을 요청하는 글을 작성하세요. 글에는 다음 사항이 포함되어야 합니다 :
+1. [MDN 학습 토론 카테고리](https://discourse.mozilla.org/c/mdn/learn/250)에 평가 또는 도움을 요청하는 글을 작성하세요. 글에는 다음 사항이 포함되어야 합니다 :
 
     - "Assessment wanted for JSON skill test (JSON 기술 테스트에 대한 평가를 요청드립니다)" 와 같은 제목을 사용하세요.
     - 이미 시도해보았거나, 원하는 것(예를 들어, 막혀서 도움이 필요하다거나 평가가 필요하다는 것과 같은)에 대한 세부사항을 기입해주세요.

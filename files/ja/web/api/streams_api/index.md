@@ -1,14 +1,6 @@
 ---
 title: Streams API
 slug: Web/API/Streams_API
-tags:
-  - API
-  - Experimental
-  - JavaScript
-  - Landing
-  - Reference
-  - Streams
-translation_of: Web/API/Streams_API
 ---
 {{SeeCompatTable}}{{DefaultAPISidebar("Streams")}}
 

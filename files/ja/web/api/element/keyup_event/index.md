@@ -1,14 +1,6 @@
 ---
 title: 'Element: keyup イベント'
 slug: Web/API/Element/keyup_event
-page-type: web-api-event
-tags:
-  - DOM
-  - Element
-  - Event
-  - Reference
-  - keyup
-translation_of: Web/API/Element/keyup_event
 ---
 {{APIRef}}
 

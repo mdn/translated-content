@@ -1,19 +1,6 @@
 ---
 title: JavaScript での継承
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
-tags:
-  - Article
-  - CodingScripting
-  - Inheritance
-  - JavaScript
-  - OOJS
-  - OOP
-  - Object
-  - Prototype
-  - l10n:priority
-  - 初心者
-  - 学習
-translation_of: Learn/JavaScript/Objects/Inheritance
 original_slug: Learn/JavaScript/Objects/Inheritance
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}

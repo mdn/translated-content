@@ -1,17 +1,6 @@
 ---
 title: SpeechRecognition.onsoundend
 slug: Web/API/SpeechRecognition/soundend_event
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - onsoundend
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognition/onsoundend
 original_slug: Web/API/SpeechRecognition/onsoundend
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}

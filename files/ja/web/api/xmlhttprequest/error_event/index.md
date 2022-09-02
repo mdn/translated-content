@@ -1,15 +1,6 @@
 ---
 title: 'XMLHttpRequest: error イベント'
 slug: Web/API/XMLHttpRequest/error_event
-tags:
-  - API
-  - Error
-  - イベント
-  - ProgressEvent
-  - ウェブ
-  - XMLHttpRequest
-browser-compat: api.XMLHttpRequest.error_event
-translation_of: Web/API/XMLHttpRequest/error_event
 ---
 {{APIRef}}
 

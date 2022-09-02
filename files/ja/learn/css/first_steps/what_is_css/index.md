@@ -1,15 +1,6 @@
 ---
 title: CSSとは何か？
 slug: Learn/CSS/First_steps/What_is_CSS
-tags:
-  - Beginner
-  - CSS
-  - Introduction to CSS
-  - Learn
-  - Modules
-  - Specifications
-  - Syntax
-translation_of: Learn/CSS/First_steps/What_is_CSS
 ---
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
 

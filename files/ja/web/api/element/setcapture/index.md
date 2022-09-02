@@ -1,16 +1,6 @@
 ---
 title: Element.setCapture()
 slug: Web/API/Element/setCapture
-page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Non-standard
-  - Reference
-  - Deprecated
-translation_of: Web/API/Element/setCapture
 ---
 {{Deprecated_Header}}{{non-standard_header}}{{ APIRef("DOM") }}
 

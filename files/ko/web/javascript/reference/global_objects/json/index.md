@@ -21,7 +21,7 @@ JSON은 객체, 배열, 숫자, 문자열, 불리언과 {{jsxref("null")}}을 �
 - 숫자
   - : 선행 0은 허용하지 않습니다. 소숫점 뒤에는 적어도 한 자릿수가 뒤따라야 합니다. {{jsxref("NaN")}}과 {{jsxref("Infinity")}}는 지원하지 않습니다.
 - 모든 JSON 텍스트는 유효한 JavaScript 표현식...
-  - : ...이지만,[ 모든 JSON 텍스트를 올바른 ECMA-262로 만드는 제안](https://github.com/tc39/proposal-json-superset)을 구현한 JavaScript 엔진에서만 그러합니다. 다른 엔진에서는, U+2028 LINE SEPARATOR와 U+2029 PARAGRAPH SEPARATOR를 JSON에서 스트링 리터럴과 속성의 키로 사용할 수 있지만, JavaScript 문자열 리터럴에서 사용하면 {{jsxref("SyntaxError")}}가 발생합니다.
+  - : ...이지만, [모든 JSON 텍스트를 올바른 ECMA-262로 만드는 제안](https://github.com/tc39/proposal-json-superset)을 구현한 JavaScript 엔진에서만 그러합니다. 다른 엔진에서는, U+2028 LINE SEPARATOR와 U+2029 PARAGRAPH SEPARATOR를 JSON에서 스트링 리터럴과 속성의 키로 사용할 수 있지만, JavaScript 문자열 리터럴에서 사용하면 {{jsxref("SyntaxError")}}가 발생합니다.
 
 {{jsxref("JSON.parse()")}}로 JSON 문자열을 분석하고 {{jsxref("eval")}}이 JavaScript 문자열로 실행하는 다음 예시를 참고하세요.
 

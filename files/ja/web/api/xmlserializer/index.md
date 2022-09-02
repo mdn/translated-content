@@ -1,18 +1,6 @@
 ---
 title: XMLSerializer
 slug: Web/API/XMLSerializer
-tags:
-  - Converting
-  - DOM Parsing
-  - Interface
-  - Parsing
-  - Reference
-  - Serialization
-  - Serializing
-  - XML
-  - XML Serializer
-  - conversion
-translation_of: Web/API/XMLSerializer
 original_slug: XMLSerializer
 ---
 {{APIRef("XMLSerializer")}}

@@ -1,13 +1,6 @@
 ---
 title: StyleSheet.media
 slug: Web/API/StyleSheet/media
-tags:
-  - API
-  - CSSOM
-  - Media
-  - StyleSheet
-  - プロパティ
-translation_of: Web/API/StyleSheet/media
 ---
 {{APIRef("CSSOM")}}
 

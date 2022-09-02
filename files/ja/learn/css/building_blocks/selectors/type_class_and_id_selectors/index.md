@@ -1,16 +1,6 @@
 ---
 title: 要素・クラス・ID によるセレクター
 slug: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
-tags:
-  - Beginner
-  - CSS
-  - Class
-  - Learn
-  - Selectors
-  - Syntax
-  - id
-  - universal
-translation_of: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}
 

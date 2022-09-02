@@ -1,11 +1,6 @@
 ---
 title: Certificate authority (認証局)
 slug: Glossary/Certificate_authority
-tags:
-  - 暗号
-  - 用語集
-  - セキュリティ
-translation_of: Glossary/Certificate_authority
 ---
 認証局 (CA) は、{{Glossary("Digital certificate", "デジタル証明書")}}とそれに関連する{{Glossary("Key", "公開鍵")}}に{{Glossary("Signature/Security", "署名")}}し、含まれる情報と鍵が正しいことを保証する組織です。
 

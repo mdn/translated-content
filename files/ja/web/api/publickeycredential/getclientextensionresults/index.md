@@ -1,14 +1,6 @@
 ---
 title: PublicKeyCredential.getClientExtensionResults()
 slug: Web/API/PublicKeyCredential/getClientExtensionResults
-tags:
-  - API
-  - Method
-  - PublicKeyCredential
-  - Reference
-  - Web Authentication API
-  - WebAuthn
-translation_of: Web/API/PublicKeyCredential/getClientExtensionResults
 ---
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 

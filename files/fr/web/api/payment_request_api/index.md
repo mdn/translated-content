@@ -66,19 +66,13 @@ Vous pouvez trouver un guide complet dans l'article [Using the Payment Request A
 
 ## Spécifications
 
-| Specification                                            | Status                                               | Comment                                                                                                                                                       |
-| -------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Payment')}}                         | {{Spec2('Payment')}}                         | Initial definition.                                                                                                                                           |
-| {{SpecName('Basic Card Payment')}}             | {{Spec2('Basic Card Payment')}}             | Defines {{domxref("BasicCardRequest")}} and {{domxref("BasicCardResponse")}}, among other things needed for handling credit card payment |
-| {{SpecName('Payment Method Identifiers')}} | {{Spec2('Payment Method Identifiers')}} | Defines payment method identifiers and how they are validated, and, where applicable, minted and formally registered with the W3C.                            |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-### PaymentRequest interface
+{{Compat}}
 
-{{Compat("api.PaymentRequest", 0)}}
-
-## See also
+## Voir aussi
 
 - [Using the Payment Request API](/fr/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - [Payment processing concepts](/fr/docs/Web/API/Payment_Request_API/Concepts)

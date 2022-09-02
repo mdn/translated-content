@@ -1,16 +1,6 @@
 ---
 title: SyncEvent.lastChance
 slug: Web/API/SyncEvent/lastChance
-tags:
-  - API
-  - Background Sync
-  - Experimental
-  - Property
-  - Reference
-  - ServiceWorker
-  - SyncEvent
-  - lastChance
-translation_of: Web/API/SyncEvent/lastChance
 ---
 {{SeeCompatTable}}{{APIRef("")}}
 

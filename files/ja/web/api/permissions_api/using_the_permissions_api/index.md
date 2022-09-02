@@ -1,13 +1,6 @@
 ---
 title: Permissions API の使用
 slug: Web/API/Permissions_API/Using_the_Permissions_API
-tags:
-  - API
-  - Experimental
-  - Geolocation
-  - Guide
-  - Permissions
-translation_of: Web/API/Permissions_API/Using_the_Permissions_API
 ---
 {{DefaultAPISidebar("Permissions API")}}{{SeeCompatTable}}
 

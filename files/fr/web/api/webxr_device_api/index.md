@@ -153,13 +153,11 @@ Les guides et didacticiels suivants sont une excellente ressource pour apprendre
 
 ## Spécifications
 
-| Spécification                | Status                   | Commentaire          |
-| ---------------------------- | ------------------------ | -------------------- |
-| {{SpecName("WebXR")}} | {{Spec2("WebXR")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Navigator.xr")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,6 @@
 ---
 title: ReadableByteStreamController
 slug: Web/API/ReadableByteStreamController
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Interface
-  - ReadableByteStreamController
-  - Reference
-  - Streams
-translation_of: Web/API/ReadableByteStreamController
 ---
 {{APIRef("Streams")}}{{SeeCompatTable}}
 

@@ -1,13 +1,6 @@
 ---
 title: performance.getEntriesByType()
 slug: Web/API/Performance/getEntriesByType
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - ウェブパフォーマンス
-browser-compat: api.Performance.getEntriesByType
-translation_of: Web/API/Performance/getEntriesByType
 ---
 {{APIRef("Performance Timeline API")}}
 

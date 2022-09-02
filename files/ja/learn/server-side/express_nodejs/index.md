@@ -1,22 +1,6 @@
 ---
 title: Express Web フレームワーク (Node.js/JavaScript)
 slug: Learn/Server-side/Express_Nodejs
-tags:
-  - Beginner
-  - CodingScripting
-  - Express
-  - Express.js
-  - Intro
-  - JavaScript
-  - Learn
-  - Node
-  - Server-side programming
-  - node.js
-  - イントロダクション
-  - サーバサイドプログラミング
-  - 初心者
-  - 学習
-translation_of: Learn/Server-side/Express_Nodejs
 ---
 {{LearnSidebar}}
 

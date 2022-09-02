@@ -56,10 +56,8 @@ function print_initiatorType(perfEntry) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                               | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Resource Timing', '#dom-performanceresourcetiming-initiatortype', 'initiatorType')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceResourceTiming.initiatorType")}}
+{{Compat}}

@@ -1,11 +1,6 @@
 ---
 title: Browsing context (閲覧コンテキスト)
 slug: Glossary/Browsing_context
-tags:
-  - CodingScripting
-  - Glossary
-  - HTML
-translation_of: Glossary/Browsing_context
 ---
 **閲覧コンテキスト**は、{{glossary("browser", "ブラウザー")}} が {{domxref("Document")}} (今日では通常タブであり、場合によってはウィンドウまたはページ内のフレーム) を表示する環境です。
 

@@ -1,16 +1,6 @@
 ---
 title: サーバーサイドウェブフレームワーク
 slug: Learn/Server-side/First_steps/Web_frameworks
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - Intro
-  - Learn
-  - Server
-  - Server-side programming
-  - Web frameworks
-translation_of: Learn/Server-side/First_steps/Web_frameworks
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
 

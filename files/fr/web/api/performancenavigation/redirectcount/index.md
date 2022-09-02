@@ -29,13 +29,11 @@ let amount = performanceNavigation.redirectCount;
 
 ## Spécifications
 
-| Spécifications                                                                                                                                                       | Statut                                   | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancenavigation-redirectcount', 'PerformanceNavigation.redirectCount')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceNavigation.redirectCount")}}
+{{Compat}}
 
 ## Voir aussi
 

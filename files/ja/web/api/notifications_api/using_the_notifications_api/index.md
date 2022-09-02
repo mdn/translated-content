@@ -1,17 +1,6 @@
 ---
 title: 通知 API の使用
 slug: Web/API/Notifications_API/Using_the_Notifications_API
-page-type: guide
-tags:
-  - API
-  - Advanced
-  - Guide
-  - Notifications
-  - Notifications API
-  - Push
-  - Tutorial
-browser-compat: api.Notification
-translation_of: Web/API/Notifications_API/Using_the_Notifications_API
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 

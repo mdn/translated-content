@@ -36,7 +36,7 @@ La distance horizontale entre deux glyphes peut être ajustée minutieusement av
 
 Cet élément implémente l'interface [`SVGHKernElement`](/fr/docs/Web/API/SVGHKernElement).
 
-## Voir également
+## Voir aussi
 
 - {{ SVGElement("font") }}
 - {{ SVGElement("glyph") }}

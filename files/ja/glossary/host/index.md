@@ -1,12 +1,6 @@
 ---
 title: Host (ホスト)
 slug: Glossary/Host
-tags:
-  - Glossary
-  - Intermediate
-  - Web
-  - WebMechanics
-translation_of: Glossary/Host
 ---
 ホストは、{{glossary("Internet", "インターネット")}} (またはローカルネットワーク) に接続する端末です。{{glossary("server","サーバー")}}と呼ばれるホストは、ウェブページの提供や、ファイルやメールの保存のような付加サービスを提供します。
 

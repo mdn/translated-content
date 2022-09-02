@@ -96,15 +96,13 @@ La liste d’autorisations par défaut est `self`, ce qui permet à tout contenu
 
 Voir [Utiliser Feature Policy](/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) pour une explication plus en détail sur comment est utilisé Feature Policy.
 
-## Caracteristiques
+## Spécifications
 
-| Caracteristiques                         | Statut                               | Commentaire         |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Screen Capture')}} | {{Spec2('Screen Capture')}} | Définition Initiale |
+{{Specifications}}
 
-## Compatibilité des Navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.MediaDevices.getDisplayMedia")}}
+{{Compat}}
 
 ## Voir aussi
 

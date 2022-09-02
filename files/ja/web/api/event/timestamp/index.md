@@ -1,13 +1,6 @@
 ---
 title: Event.timeStamp
 slug: Web/API/Event/timeStamp
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Event.timeStamp
-translation_of: Web/API/Event/timeStamp
 ---
 {{APIRef("DOM")}}
 

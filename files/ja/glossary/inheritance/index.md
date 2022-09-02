@@ -1,12 +1,6 @@
 ---
 title: Inheritance (継承)
 slug: Glossary/Inheritance
-tags:
-  - CodingScripting
-  - Glossary
-  - Inheritance
-  - Programming Language
-translation_of: Glossary/Inheritance
 ---
 継承は、{{glossary("OOP","オブジェクト指向プログラミング")}}の大きな特徴です。データ抽象化は、いくつかのレベルで実行できます。つまり、{{glossary("class","クラス")}}にスーパークラスとサブクラスを持たせることができます。
 

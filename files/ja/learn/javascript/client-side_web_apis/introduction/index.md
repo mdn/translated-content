@@ -1,18 +1,6 @@
 ---
 title: Web API の紹介
 slug: Learn/JavaScript/Client-side_web_APIs/Introduction
-tags:
-  - 3rd party
-  - API
-  - Article
-  - Beginner
-  - Browser
-  - CodingScripting
-  - Learn
-  - Object
-  - WebAPI
-  - client-side
-translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 ---
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
 

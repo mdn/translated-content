@@ -1,15 +1,6 @@
 ---
 title: 'Element: touchcancel event'
 slug: Web/API/Element/touchcancel_event
-tags:
-  - Event
-  - Touch Events
-  - TouchEvent
-  - UI
-  - UI Events
-  - UX
-  - touch
-translation_of: Web/API/Element/touchcancel_event
 ---
 {{APIRef}}
 

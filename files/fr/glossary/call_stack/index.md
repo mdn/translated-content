@@ -15,7 +15,7 @@ Une **pile d'exécution** est le mécanisme d'un interpréteur (comme l'interpr�
 - Quand la fonction se termine, l'interpréteur récupère l'adresse de retour la plus récente depuis la pile et reprend l'exécution à partir de l'endroit indiqué par celle-ci.
 - Si la pile est sollicitée au-delà de l'espace qui lui a été affecté, une erreur "dépassement de pile" se produit.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

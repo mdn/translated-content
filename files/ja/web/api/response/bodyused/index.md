@@ -1,16 +1,7 @@
 ---
 title: Response.bodyUsed
 slug: Web/API/Response/bodyUsed
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - bodyUsed
-  - Response
-translation_of: Web/API/Response/bodyUsed
 original_slug: Web/API/Body/bodyUsed
-browser-compat: api.Response.bodyUsed
 ---
 {{APIRef("Fetch")}}
 

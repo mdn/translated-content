@@ -1,16 +1,6 @@
 ---
 title: Notification.lang
 slug: Web/API/Notification/lang
-page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-browser-compat: api.Notification.lang
-translation_of: Web/API/Notification/lang
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 

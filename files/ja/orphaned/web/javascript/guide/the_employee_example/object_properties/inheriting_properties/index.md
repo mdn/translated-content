@@ -1,9 +1,7 @@
 ---
 title: Inheriting Properties
-slug: >-
-  orphaned/Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Inheriting_Properties
-original_slug: >-
-  Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Inheriting_Properties
+slug: orphaned/Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Inheriting_Properties
+original_slug: Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Inheriting_Properties
 ---
 ### プロパティの継承
 

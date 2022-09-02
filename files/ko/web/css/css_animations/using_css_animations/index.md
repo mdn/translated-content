@@ -16,9 +16,9 @@ translation_of: Web/CSS/CSS_Animations/Using_CSS_animations
 
 CSS 애니메이션은 기존에 사용되던 스크립트를 이용한 애니메이션 보다 다음 세 가지 이유에서 이점을 가집니다.
 
-1.  자바스크립트를 모르더라도 간단하게 애니메이션을 만들 수 있습니다.
-2.  자바스크립트를 이용한 애니메이션은 잘 만들어졌더라도 성능이 좋지 못할때가 있습니다. CSS 애니메이션은 frame-skipping 같은 여러 기술을 이용하여 최대한 부드럽게 렌더링됩니다.
-3.  브라우저는 애니메이션의 성능을 효율적으로 최적화할 수 있습니다. 예를 들어 현재 안보이는 엘리먼트에 대한 애니메이션은 업데이트 주기를 줄여 부하를 최소화할 수 있습니다.
+1. 자바스크립트를 모르더라도 간단하게 애니메이션을 만들 수 있습니다.
+2. 자바스크립트를 이용한 애니메이션은 잘 만들어졌더라도 성능이 좋지 못할때가 있습니다. CSS 애니메이션은 frame-skipping 같은 여러 기술을 이용하여 최대한 부드럽게 렌더링됩니다.
+3. 브라우저는 애니메이션의 성능을 효율적으로 최적화할 수 있습니다. 예를 들어 현재 안보이는 엘리먼트에 대한 애니메이션은 업데이트 주기를 줄여 부하를 최소화할 수 있습니다.
 
 ## 애니메이션 적용하기
 
@@ -336,4 +336,4 @@ function listener(e) {
 ## 더 보기
 
 - {{ domxref("AnimationEvent", "AnimationEvent") }}
-- [Detecting CSS animation support](/ko/docs/CSS/CSS_animations/Detecting_CSS_animation_support "en/CSS/CSS animations/Detecting CSS animation support")
+- [Detecting CSS animation support](/ko/docs/CSS/CSS_animations/Detecting_CSS_animation_support)

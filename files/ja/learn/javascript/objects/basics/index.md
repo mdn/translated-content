@@ -1,24 +1,8 @@
 ---
 title: JavaScript オブジェクトの基本
 slug: Learn/JavaScript/Objects/Basics
-tags:
-  - API
-  - Article
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Syntax
-  - bracket notation
-  - dot notation
-  - instance
-  - object literal
-  - this
-  - オブジェクト
-  - 学習
-  - 理論
-translation_of: Learn/JavaScript/Objects/Basics
 ---
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
 この記事では、基本的な JavaScript オブジェクトの構文を学び、このコースで以前に見た一部の JavaScript の機能を復習し、すでに提供された多くの機能がオブジェクトであるという事実を再確認します。
 
@@ -298,7 +282,7 @@ const myNotification = new Notification('Hello!');
 
 次の記事ではオブジェクト指向プログラミング (OOP) 理論を見ていきます。そして、JavaScript ではそのような素晴らしい技術を使うことができます。
 
-{{NextMenu("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects")}}
+{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
 ## このモジュール
 

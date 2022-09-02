@@ -1,11 +1,6 @@
 ---
 title: Mutable (ミュータブル)
 slug: Glossary/Mutable
-tags:
-  - CodingScripting
-  - Glossary
-  - NeedsContent
-translation_of: Glossary/Mutable
 ---
 ミュータブルは、変更可能な変数の型です。{{glossary("JavaScript")}} では、{{Glossary("primitive", "プリミティブな値")}}ではない、{{Glossary("Object","オブジェクト")}}と{{Glossary("Array","配列")}}だけがミュータブルです。
 

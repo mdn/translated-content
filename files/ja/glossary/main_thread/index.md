@@ -1,11 +1,6 @@
 ---
 title: Main thread (メインスレッド)
 slug: Glossary/Main_thread
-tags:
-  - Glossary
-  - Reference
-  - Web Performance
-translation_of: Glossary/Main_thread
 ---
 **メインスレッド**は、ブラウザーがユーザーのイベントや描画を処理するところです。既定では、ブラウザーは単一のスレッドを使用してページ内のすべての JavaScript を、レイアウト、再フロー、ガベージコレクションなどと同様に実行します。つまり、実行に時間がかかる JavaScript 関数がスレッドをブロックし、ページが反応しなくなり、使い勝手が悪くなります。
 

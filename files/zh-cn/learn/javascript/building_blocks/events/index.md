@@ -391,7 +391,7 @@ form.onsubmit = function(e) {
 
 {{ EmbedLiveSample('事件冒泡及捕获', '100%', 500) }}
 
-这是一个非常简单的例子，它显示和隐藏一个包含`<video>`元素的`<div>`元素：
+这是一个非常简单的例子，它显示和隐藏一个包含 {{htmlelement("video")}} 元素的 {{htmlelement("div")}} 元素：
 
 ```html
 <button>Display video</button>
@@ -400,7 +400,7 @@ form.onsubmit = function(e) {
   <video>
     <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.mp4" type="video/mp4">
     <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm" type="video/webm">
-    <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+    <p>Your browser doesn't support HTML video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
   </video>
 </div>
 ```
@@ -434,28 +434,27 @@ div video {
 
 当“button”元素按钮被单击时，将显示视频，它是通过将改变`<div>的`class 属性值从`hidden`变为`showing`(这个例子的 CSS 包含两个`class`，它们分别控制这个`<div>`盒子在屏幕上显示还是隐藏。)：
 
-```js hidden
+```js
 const btn = document.querySelector('button');
 const videoBox = document.querySelector('div');
-const video = document.querySelector('video');
-```
 
-```js
-btn.onclick = function() {
-  videoBox.setAttribute('class','showing');
+function displayVideo() {
+  if (videoBox.getAttribute('class') === 'hidden') {
+    videoBox.setAttribute('class','showing');
+  }
 }
+
+btn.addEventListener('click', displayVideo);
 ```
 
-然后我们再添加几个`onclick`事件处理器，第一个添加在`<div>`元素上，第二个添加在`<video>`元素上。这个想法是当视频 (`<video>`）外 `<div>`元素内这块区域被单击时，这个视频盒子应该再次隐藏；当单击视频 (`<video>`）本身，这个视频将开始播放。
+然后我们再添加几个`click`事件处理器，第一个添加在`<div>`元素上，第二个添加在`<video>`元素上。这个想法是当视频 (`<video>`）外 `<div>`元素内这块区域被单击时，这个视频盒子应该再次隐藏；当单击视频 (`<video>`）本身，这个视频将开始播放。
 
 ```js
-videoBox.onclick = function() {
-  videoBox.setAttribute('class', 'hidden');
-};
+videoBox.addEventListener('click', () => videoBox.setAttribute('class', 'hidden'));
 
-video.onclick = function() {
-  video.play();
-};
+const video = document.querySelector('video');
+
+video.addEventListener('click', () => video.play());
 ```
 
 但是有一个问题 - 当您点击`video`开始播放的视频时，它会在同一时间导致`<div>`也被隐藏。这是因为`video`在`<div>`之内 - `video`是`<div>`的一个子元素 - 所以点击`video`实际上是同时也运行`<div>`上的事件处理程序。
@@ -471,10 +470,6 @@ video.onclick = function() {
 
 - 浏览器检查实际点击的元素是否在冒泡阶段中注册了一个`onclick`事件处理程序，如果是，则运行它
 - 然后它移动到下一个直接的祖先元素，并做同样的事情，然后是下一个，等等，直到它到达`<html>`元素。
-
-[![](bubbling-capturing.png)](https://mdn.mozillademos.org/files/14075/bubbling-capturing.png)
-
-(单击图片可以放大这个图表)
 
 在现代浏览器中，默认情况下，所有事件处理程序都在冒泡阶段进行注册。因此，在我们当前的示例中，当您单击视频时，这个单击事件从 `<video>`元素向外冒泡直到`<html>`元素。沿着这个事件冒泡线路：
 

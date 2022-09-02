@@ -1,11 +1,6 @@
 ---
 title: イベントターゲットの比較
 slug: Web/API/Event/Comparison_of_Event_Targets
-page-type: guide
-tags:
-  - DOM
-  - Gecko
-  - Guide
 ---
 {{ ApiRef() }}
 

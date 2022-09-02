@@ -35,13 +35,11 @@ Cela fonctionnera uniquement lorsqu'un analyseur connaissant l'espace de noms es
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                   | Commentaire          |
-| -------------------------------------------------------------------------------- | ------------------------ | -------------------- |
-| {{SpecName("DOM4", "#dom-element-prefix", "Element.prefix")}} | {{Spec2("DOM4")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.prefix")}}
+{{Compat}}
 
 ## Voir aussi
 

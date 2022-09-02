@@ -1,33 +1,6 @@
 ---
 title: 'HTML: アクセシビリティの基礎'
 slug: Learn/Accessibility/HTML
-tags:
-  - AT
-  - Accessibility
-  - Article
-  - Beginner
-  - Buttons
-  - CodingScripting
-  - Forms
-  - HTML
-  - Learn
-  - Links
-  - a11y
-  - assistive technology
-  - keyboard
-  - screenreader
-  - semantics
-  - アクセシビリティ
-  - キーボード
-  - スクリーンリーダー
-  - セマンティクス
-  - フォーム
-  - ボタン
-  - リンク
-  - 初心者
-  - 学習
-  - 意味
-translation_of: Learn/Accessibility/HTML
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 

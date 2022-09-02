@@ -1,14 +1,6 @@
 ---
 title: ポインターイベントの使用
 slug: Web/API/Pointer_events/Using_Pointer_Events
-tags:
-  - ガイド
-  - Input
-  - ポインターイベント
-  - PointerEvent
-  - イベント
-  - タッチ
-translation_of: Web/API/Pointer_events/Using_Pointer_Events
 ---
 {{DefaultAPISidebar("Pointer Events")}}
 

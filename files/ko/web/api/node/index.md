@@ -29,10 +29,10 @@ _부모인 {{domxref("EventTarget")}}으로부터 프라퍼티를 상속한다_.
 - {{domxref("Node.lastChild")}} {{readonlyInline}}
   - : Returns a {{domxref("Node")}} representing the last direct child node of the node, or `null` if the node has no child.
 - {{domxref("Node.localName")}} {{deprecated_inline}}{{readonlyInline}}
-  - : Returns a {{domxref("DOMString")}} representing the local part of the qualified name of an element. In Firefox 3.5 and earlier, the property upper-cases the local name for HTML elements (but not XHTML elements). In later versions, this does not happen, so the property is in lower case for both HTML and XHTML. {{ gecko_minversion_inline("1.9.2") }}
+  - : Returns a {{domxref("DOMString")}} representing the local part of the qualified name of an element. In Firefox 3.5 and earlier, the property upper-cases the local name for HTML elements (but not XHTML elements). In later versions, this does not happen, so the property is in lower case for both HTML and XHTML.
     Though recent specifications require `localName` to be defined on the {{domxref("Element")}} interface, Gecko-based browsers still implement it on the {{domxref("Node")}} interface.
 - {{domxref("Node.namespaceURI")}} {{deprecated_inline}}{{readonlyInline}}
-  - : The namespace URI of this node, or `null` if it is no namespace. In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml "Linkification: http://www.w3.org/1999/xhtml") namespace in both HTML and XML trees. {{ gecko_minversion_inline("1.9.2") }}
+  - : The namespace URI of this node, or `null` if it is no namespace. In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml "Linkification: http://www.w3.org/1999/xhtml") namespace in both HTML and XML trees.
     Though recent specifications require `namespaceURI` to be defined on the {{domxref("Element")}} interface, Gecko-based browsers still implement it on the {{domxref("Node")}} interface.
 - {{domxref("Node.nextSibling")}} {{readonlyInline}}
   - : Returns a {{domxref("Node")}} representing the next node in the tree, or `null` if there isn't such node.

@@ -21,7 +21,7 @@ Content editable 은 현재 브라우저들과 완전히 호환된다.
 - Firefox 3.5+
 - Firefox for Android 19+
 - Chrome 4.0+
-- Internet Explorer 5.5+ 
+- Internet Explorer 5.5+
 - Safari 3.1+
 - Opera 9+
 - iOS Safari 5.0+
@@ -41,14 +41,16 @@ Opera Mini 는 아직 지원되지 않는다.
 
 간단한 예제:
 
-    <!DOCTYPE html>
-    <html>
-      <body>
-        <div contentEditable="true">
-          This text can be edited by the user.
-        </div>
-      </body>
-    </html>
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <div contentEditable="true">
+      This text can be edited by the user.
+    </div>
+  </body>
+</html>
+```
 
 LocalStorage 를 이용한 JavaScript 와 합쳐진 작동 예제를 [여기](http://html5demos.com/contenteditable)에서 볼 수 있다. 소스는 [이곳](http://html5demos.com/contenteditable#view-source)에 있다.
 
@@ -61,4 +63,4 @@ user_pref("capability.policy.allowclipboard.Clipboard.cutcopy", "allAccess");
 user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");
 ```
 
-[컨텐트와 상호 작용하는 방법 ](/en/Midas "en/Midas")(오래된 IE 스타일 API) 그리고 [이곳](/en/Rich-Text_Editing_in_Mozilla "en/rich-text editing in mozilla")
+[컨텐트와 상호 작용하는 방법](/en/Midas)(오래된 IE 스타일 API) 그리고 [이곳](/en/Rich-Text_Editing_in_Mozilla)

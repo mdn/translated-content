@@ -14,7 +14,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDes
 
 ## 구문
 
-    Object.getOwnPropertyDescriptor(obj, prop)
+```js
+Object.getOwnPropertyDescriptor(obj, prop)
+```
 
 ### 매개변수
 

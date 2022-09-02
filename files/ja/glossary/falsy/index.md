@@ -1,12 +1,6 @@
 ---
 title: Falsy (偽値)
 slug: Glossary/Falsy
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
-  - 用語集
-translation_of: Glossary/Falsy
 ---
 **偽値** (_falsy_ または _falsey_ な値) は、 {{Glossary("Boolean")}} コンテキストに現れたときに偽とみなされる値です。
 

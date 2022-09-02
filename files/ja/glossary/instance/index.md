@@ -1,14 +1,6 @@
 ---
 title: Instance (インスタンス)
 slug: Glossary/Instance
-tags:
-  - Beginner
-  - CodingScripting
-  - Glossary
-  - JavaScript
-  - NeedsExample
-  - OOP
-translation_of: Glossary/Instance
 ---
 {{glossary("constructor", "コンストラクター")}}によって作成された{{glossary("object","オブジェクト")}}は、そのコンストラクターのインスタンスになります。
 

@@ -1,7 +1,6 @@
 ---
 title: プロトタイプベース
 slug: Glossary/Prototype-based_programming
-translation_of: Glossary/Prototype-based_programming
 ---
 **プロトタイプベース**は、{{Glossary('OOP', 'オブジェクト指向プログラミング')}}のひとつで、{{Glossary('Class', 'クラス')}}を明示的に定義するのではなく、別のクラスのインスタンスや、あまり見かけませんが、空のオブジェクトにプロパティやメソッドを追加するという手法をとっています。
 

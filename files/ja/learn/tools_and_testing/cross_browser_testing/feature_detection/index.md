@@ -1,20 +1,6 @@
 ---
 title: 機能検出の実装
 slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - Modernizr
-  - Testing
-  - Tools
-  - cross browser
-  - feature detection
-  - 機能検出
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
 

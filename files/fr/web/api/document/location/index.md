@@ -41,7 +41,7 @@ console.log(document.location);
 
 {{Compat}}
 
-## Voir également
+## Voir aussi
 
 - L'interface de la valeur renvoyée, {{domxref("Location")}}.
 - Une information similaire mais attachée au contexte de navigation, {{domxref("Window.location")}}

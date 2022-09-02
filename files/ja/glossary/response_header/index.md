@@ -1,10 +1,6 @@
 ---
 title: Response header (レスポンスヘッダー)
 slug: Glossary/Response_header
-tags:
-  - Glossary
-  - WebMechanics
-translation_of: Glossary/Response_header
 ---
 **レスポンスヘッダー**は、 HTTP レスポンスで使用できる {{glossary("header", "HTTP ヘッダー")}}で、メッセージの内容には関連しないものです。 {{HTTPHeader("Age")}}, {{HTTPHeader("Location")}}, {{HTTPHeader("Server")}} のようなレスポンスヘッダーは、レスポンスのものより詳細な文脈を提供するために使用されます。
 

@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 ### 매개변수
 
 - `callback`
-  - : 새로운 배열 요소를 생성하는 함수. 
+  - : 새로운 배열 요소를 생성하는 함수.
     다음 세 가지 인수를 가집니다.
     - `currentValue`
       - : 처리할 현재 요소.

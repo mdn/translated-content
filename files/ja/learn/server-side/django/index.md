@@ -1,16 +1,6 @@
 ---
 title: Djangoウェブフレームワーク (Python)
 slug: Learn/Server-side/Django
-tags:
-  - Python
-  - django
-  - ウェブアプリケーションフレームワーク
-  - サーバーサイドプログラミング
-  - プログラミング
-  - 初心者
-  - 学習
-  - 概要
-translation_of: Learn/Server-side/Django
 ---
 {{LearnSidebar}}
 

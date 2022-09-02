@@ -20,15 +20,13 @@ La propriété `onwheel` renvoie le code du gestionnaire d'évènements `onwheel
 element.onwheel = function() { .. }
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onwheel','onwheel')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.GlobalEventHandlers.onwheel")}}
+{{Compat}}
 
 ## Voir aussi
 

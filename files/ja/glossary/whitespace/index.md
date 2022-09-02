@@ -1,13 +1,6 @@
 ---
 title: Whitespace (ホワイトスペース)
 slug: Glossary/Whitespace
-tags:
-  - Glossary
-  - whitespace
-  - ホワイトスペース
-  - 字句文法
-  - 用語集
-translation_of: Glossary/Whitespace
 ---
 **ホワイトスペース**は他の文字の中で水平または垂直の空間を表すために使用される一連の{{Glossary("Character", "文字")}}です。{{Glossary("HTML")}}, {{Glossary("CSS")}}, {{Glossary("JavaScript")}}, その他のコンピューター言語でトークンを区切るためによく使用されます。ホワイトスペース文字とその使い方は言語によって様々です。
 

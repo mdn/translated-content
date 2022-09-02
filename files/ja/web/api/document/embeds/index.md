@@ -1,15 +1,6 @@
 ---
 title: Document.embeds
 slug: Web/API/Document/embeds
-tags:
-  - API
-  - DOM
-  - Document
-  - HTML DOM
-  - Property
-  - embeds
-  - プロパティ
-translation_of: Web/API/Document/embeds
 ---
 {{ApiRef}}
 

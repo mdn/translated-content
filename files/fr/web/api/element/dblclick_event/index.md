@@ -86,14 +86,11 @@ aside {
 
 ## Spécifications
 
-| Spécification                                                                        | État                             |
-| ------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('UI Events', '#event-type-dblclick', 'dblclick')}}     | {{Spec2('UI Events')}}     |
-| {{SpecName('DOM3 Events', '#event-type-dblclick', 'dblclick')}} | {{Spec2('DOM3 Events')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.dblclick_event")}}
+{{Compat}}
 
 ## Voir aussi
 

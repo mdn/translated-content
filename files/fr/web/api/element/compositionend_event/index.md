@@ -106,13 +106,11 @@ inputElement.addEventListener('compositionend', handleEvent);
 
 ## Spécifications
 
-| Spécification                                                            | Status                       |
-| ------------------------------------------------------------------------ | ---------------------------- |
-| {{SpecName('UI Events', '#event-type-compositionend')}} | {{Spec2('UI Events')}} |
+{{Specifications}}
 
-## Compatibilités navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.Element.compositionend_event")}}
+{{Compat}}
 
 ## Evénements liés
 

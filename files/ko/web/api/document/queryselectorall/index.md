@@ -23,7 +23,9 @@ translation_of: Web/API/Document/querySelectorAll
 
 ## 구문
 
-    elementList = parentNode.querySelectorAll(selectors);
+```js
+elementList = parentNode.querySelectorAll(selectors);
+```
 
 ### 파라미터
 
@@ -145,4 +147,4 @@ inner.length; // 0
 - {{domxref("Document.querySelector()")}}
 - {{domxref("DocumentFragment.querySelector()")}} 와 {{domxref("DocumentFragment.querySelectorAll()")}}
 - {{domxref("ParentNode.querySelector()")}} 와 {{domxref("ParentNode.querySelectorAll()")}}
-- [`querySelector()` 코드 조각](/ko/docs/Archive/Add-ons/Code_snippets/QuerySelector "Code_snippets/QuerySelector")
+- [`querySelector()` 코드 조각](/ko/docs/Archive/Add-ons/Code_snippets/QuerySelector)

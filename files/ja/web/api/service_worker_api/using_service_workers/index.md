@@ -1,13 +1,6 @@
 ---
 title: サービスワーカーの使用
 slug: Web/API/Service_Worker_API/Using_Service_Workers
-tags:
-  - ガイド
-  - サービス
-  - ServiceWorker
-  - ワーカー
-  - basics
-translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 ---
 {{ServiceWorkerSidebar}}
 

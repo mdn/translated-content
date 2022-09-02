@@ -1,12 +1,6 @@
 ---
 title: StyleSheetList
 slug: Web/API/StyleSheetList
-tags:
-  - API
-  - CSSOM
-  - NeedsContent
-  - NeedsUpdate
-translation_of: Web/API/StyleSheetList
 ---
 {{APIRef("CSSOM")}}
 

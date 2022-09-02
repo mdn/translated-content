@@ -79,15 +79,13 @@ function clearData() {
 
 > **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                            | Statut                       | Commentaire |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-clear-IDBRequest', 'clear()')}} | {{Spec2('IndexedDB')}} |             |
+{{Specifications}}
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.clear")}}
+{{Compat}}
 
 ## Voir aussi
 

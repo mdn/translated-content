@@ -1,17 +1,6 @@
 ---
 title: Document.origin
 slug: Web/API/Document/origin
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Document
-  - 実験的
-  - Interface
-  - プロパティ
-  - 読み取り専用
-  - 非推奨
-translation_of: Web/API/Document/origin
 ---
 {{APIRef("DOM")}}{{deprecated_header}}
 

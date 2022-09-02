@@ -1,14 +1,6 @@
 ---
 title: Document.body
 slug: Web/API/Document/body
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-  - プロパティ
-translation_of: Web/API/Document/body
 ---
 {{APIRef("DOM")}}
 

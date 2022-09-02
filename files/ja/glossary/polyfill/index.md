@@ -1,13 +1,6 @@
 ---
 title: Polyfill (ポリフィル)
 slug: Glossary/Polyfill
-tags:
-  - Browser Support
-  - CodingScripting
-  - Glossary
-  - JavaScript
-  - polyfill
-translation_of: Glossary/Polyfill
 ---
 ポリフィルとは、最近の機能をサポートしていない古いブラウザーで、その機能を使えるようにするためのコードです。大抵はウェブ上の JavaScript です。
 

@@ -1,15 +1,6 @@
 ---
 title: ReadableByteStreamController.close()
 slug: Web/API/ReadableByteStreamController/close
-tags:
-  - API
-  - Experimental
-  - Method
-  - ReadableByteStreamController
-  - Reference
-  - Streams
-  - close
-translation_of: Web/API/ReadableByteStreamController/close
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 

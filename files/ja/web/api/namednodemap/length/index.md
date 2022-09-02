@@ -1,13 +1,6 @@
 ---
 title: NamedNodeMap.length
 slug: Web/API/NamedNodeMap/length
-page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
-browser-compat: api.NamedNodeMap.length
-translation_of: Web/API/NamedNodeMap/length
 l10n:
   sourceCommit: 6f983d8b9fa0081ba57ccab31a345a41ffccbbb1
 ---

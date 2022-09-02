@@ -1,17 +1,6 @@
 ---
 title: Navigator.oscpu
 slug: Web/API/Navigator/oscpu
-tags:
-  - API
-  - CPU
-  - HTML DOM
-  - Navigator
-  - NavigatorID
-  - Property
-  - Reference
-  - oscpu
-  - processor
-translation_of: Web/API/Navigator/oscpu
 ---
 {{ ApiRef("HTML DOM") }}
 

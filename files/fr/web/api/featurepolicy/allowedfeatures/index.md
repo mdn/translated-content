@@ -44,10 +44,8 @@ for (const directive of permissions)
 
 ## Spécifications
 
-| Spécification                                                    | Statut                               | Commentaire         |
-| ---------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("Feature Policy","","allowsFeature")}} | {{Spec2("Feature Policy")}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FeaturePolicy.allowedFeatures")}}
+{{Compat}}

@@ -1,17 +1,6 @@
 ---
 title: SpeechRecognition.onnomatch
 slug: Web/API/SpeechRecognition/nomatch_event
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - onnomatch
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognition/onnomatch
 original_slug: Web/API/SpeechRecognition/onnomatch
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}

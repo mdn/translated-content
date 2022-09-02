@@ -1,20 +1,6 @@
 ---
 title: XMLHttpRequest の使用
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
-tags:
-  - AJAX
-  - AJAXfile
-  - DOM
-  - HTTP
-  - JXON
-  - MakeBrowserAgnostic
-  - XHR
-  - XML
-  - XMLHttpRequest
-  - ガイド
-  - チュートリアル
-  - 高度
-translation_of: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 ---
 {{APIRef("XMLHttpRequest")}}
 

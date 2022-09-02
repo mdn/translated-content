@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/globalThis
 ## 설명
 
 역사적으로, 서로 다른 JavaScript 환경의 전역 범위에 접근하는건 서로 다른 구문을 필요로 했습니다. 웹에서는 {{domxref("Window.window", "window")}}, {{domxref("Window.self", "self")}}, {{domxref("Window.frames", "frames")}}를 사용할 수 있지만, [Web Workers](/ko/docs/Web/API/Worker)에서는 `self`만 동작합니다. Node.js에서는 아무것도 쓸 수 없고, 대신 `global`을 사용해야 합니다.
-비엄격 모드에서의 함수 내부에서 `this`를 사용할 수도 있겠지만, 모듈이나 엄격 모드의 함수에서는 {{jsxref("undefined")}}를 가리키는 문제가 있습니다.` Function('return this')()`를 사용하는 방법도 존재하지만, 브라우저의 {{glossary("CSP")}} 등으로 {{jsxref("eval", "eval()")}}을 사용할 수 없는 환경에선 {{jsxref("Function")}}도 이렇게 사용할 수 없습니다.
+비엄격 모드에서의 함수 내부에서 `this`를 사용할 수도 있겠지만, 모듈이나 엄격 모드의 함수에서는 {{jsxref("undefined")}}를 가리키는 문제가 있습니다. `Function('return this')()` 를 사용하는 방법도 존재하지만, 브라우저의 {{glossary("CSP")}} 등으로 {{jsxref("eval", "eval()")}}을 사용할 수 없는 환경에선 {{jsxref("Function")}}도 이렇게 사용할 수 없습니다.
 
 `globalThis` 속성은 환경에 무관하게 전역 `this` 값, 즉 전역 객체에 접근하는 표준 방법을 제공합니다. `window`, `self` 등 비슷한 속성과는 다르게 브라우저/비 브라우저 맥락 모두에서의 동작을 보장합니다. 따라서 코드를 구동하는 환경을 모르더라도 전역 객체에 일관적으로 접근할 수 있습니다.
 

@@ -1,14 +1,6 @@
 ---
 title: 短いアンケートの実施プロセス
 slug: MDN/Contribute/Processes/Short_surveys
-tags:
-  - MDN
-  - MDN Meta
-  - Meta
-  - Meta Docs
-  - Process
-  - Surveys
-  - Short surveys
 ---
 {{MDNSidebar}}
 

@@ -23,7 +23,7 @@ Lier, ou connecter des ressources grâce à des {{Glossary("Hyperlink","hyperlie
 
 Peu de temps après avoir inventé le web, Tim Berners-Lee a fondé le {{Glossary("W3C")}} (World Wide Web Consortium) pour le développer et le standardiser. Le consortium est constitué des principaux groupes d'intérêt du web, comme des développeurs de navigateur web, des entités gouvernementales, des chercheurs et des universités. Sa mission inclut aussi l'éducation et la sensibilisation.
 
-## Pour approfondir
+## Voir aussi
 
 ### Apprendre sur ce sujet
 

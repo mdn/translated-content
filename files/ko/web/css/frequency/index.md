@@ -10,7 +10,7 @@ translation_of: Web/CSS/frequency
 ---
 {{CSSRef}}
 
-[CSS ](/ko/docs/Web/CSS)**`<frequency>`** [자료형](/ko/docs/Web/CSS/CSS_Types)은 목소리의 높낮이 등 주파수를 나타냅니다. 현재 어떤 CSS 속성도 `<frequency>`를 사용하지 않습니다.
+[CSS](/ko/docs/Web/CSS) **`<frequency>`** [자료형](/ko/docs/Web/CSS/CSS_Types)은 목소리의 높낮이 등 주파수를 나타냅니다. 현재 어떤 CSS 속성도 `<frequency>`를 사용하지 않습니다.
 
 ## 구문
 
@@ -18,9 +18,9 @@ translation_of: Web/CSS/frequency
 
 ### 단위
 
-- [`Hz`]()
+- `Hz`
   - : 헤르츠로 주파수를 나타냅니다. 예시: `0Hz`, `1500Hz`, `10000Hz`.
-- [`kHz`]()
+- `kHz`
   - : 킬로헤르츠로 주파수를 나타냅니다. 예시: `0kHz`, `1.5kHz`, `10kHz`.
 
 > **참고:** `0`은 단위와 상관없이 언제나 같은 값을 나타내지만, 주파수에서는 단위를 생략할 수 없습니다. 즉 `0`은 유효한 주파수가 아니며 `0Hz`나 `0kHz`를 나타내지 않습니다. 단위 문자가 대소문자를 구분하지 않기는 하지만, [SI](https://ko.wikipedia.org/wiki/%EA%B5%AD%EC%A0%9C%EB%8B%A8%EC%9C%84%EA%B3%84)에서 명시한 대로 "H"는 대문자로 표기하는 게 좋습니다.

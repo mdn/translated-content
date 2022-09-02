@@ -1,15 +1,6 @@
 ---
 title: GeolocationCoordinates.accuracy
 slug: Web/API/GeolocationCoordinates/accuracy
-tags:
-  - API
-  - 位置情報 API
-  - GeolocationCoordinates
-  - プロパティ
-  - 安全なコンテキスト
-  - accuracy
-browser-compat: api.GeolocationCoordinates.accuracy
-translation_of: Web/API/GeolocationCoordinates/accuracy
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 

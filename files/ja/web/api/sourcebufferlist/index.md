@@ -1,17 +1,6 @@
 ---
 title: SourceBufferList
 slug: Web/API/SourceBufferList
-tags:
-  - API
-  - Audio
-  - Experimental
-  - Interface
-  - MSE
-  - Media Source Extensions
-  - Reference
-  - SourceBufferList
-  - Video
-translation_of: Web/API/SourceBufferList
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 

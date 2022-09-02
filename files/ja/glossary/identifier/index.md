@@ -1,12 +1,6 @@
 ---
 title: Identifier (識別子)
 slug: Glossary/Identifier
-tags:
-  - Beginner
-  - CodingScripting
-  - Glossary
-  - Sharing
-translation_of: Glossary/Identifier
 ---
 **識別子** (identifier) は {{glossary("variable", "変数")}}、{{glossary("function", "関数")}}、{{glossary("property", "プロパティ")}} などを識別するコード内の文字の並びです。
 
