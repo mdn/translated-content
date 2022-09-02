@@ -1,31 +1,26 @@
 ---
 title: Intl.Segments
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segments
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
-browser-compat: javascript.builtins.Intl.Segments
+l10n:
+  sourceCommit: 46c0f5269f597ad055d0b6322f736f5c70996c4c
 ---
 {{JSRef}}
 
-An **`Intl.Segments`** instance is an iterable collection of the segments of a text string. It is returned by a call to the [`segment()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment) method of an [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) object.
+**`Intl.Segments`** のインスタンスは、テキスト文字列のセグメントを反復可能なコレクションとして保持します。[`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトの [`segment()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment) メソッドをコールすると、このインスタンスが返されます。
 
 {{EmbedInteractiveExample("pages/js/intl-segments-prototype-containing.html")}}
 
-## Instance methods
+## インスタンスメソッド
 
-- [`Segments.prototype.containing()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments/containing)
-  - : Returns an object describing the segment in the original string that includes the code unit at a specified index.
-- [`Segments.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments/@@iterator)
-  - : Returns an iterator to iterate over the segments.
+- [`Segments.prototype.containing()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments/containing)
+  - : 指定されたインデックスのコードユニットを含む元の文字列のセグメントを記述したオブジェクトを返します。
+- [`Segments.prototype[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments/@@iterator)
+  - : セグメントを反復処理するためのイテレータを返します。
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
