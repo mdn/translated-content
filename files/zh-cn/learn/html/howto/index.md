@@ -11,7 +11,7 @@ slug: Learn/HTML/Howto
 HTML 应用最基础的是文档结构。如果你是 HTML 新手那么你应该和我们一起从这里开始学习。
 
 - [如何创建 HTML 文档](/zh-CN/docs/learn/HTML/Introduction_to_HTML/Getting_started#实践操作_创建你的第一个HTML文档)
-- [如何将网页分成有逻辑的段落](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+- [如何将网页分成有逻辑的部分](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
 - [如何设置一个适当的标题和段落结构](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#基础：标题和段落)
 
 ### 基本文本语义
@@ -38,20 +38,19 @@ HTML 专门为文档提供语义信息，因此，HTML 能够解答关于如何�
 
 - [如何在页面中添加图片](/zh-CN/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#怎样将一幅图片放到网页上？)
 - [如何在页面中添加视频](/zh-CN/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [如何在页面中添加音频](/zh-CN/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 
 ### 脚本 & 样式
 
 HTML 仅仅建立了文档结构。为解决演示问题，可使用 {{glossary("CSS")}} 或脚本使页面具有交互功能。
 
-- [如何在网页中使用 CSS](/zh-CN/Learn/CSS/Introduction_to_CSS/How_CSS_works#How_to_apply_your_CSS_to_your_HTML)
+- [如何在网页中使用 CSS](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works#how_to_apply_your_css_to_your_html)
 - [如何在网页中使用 JavaScript](/zh-CN/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage)
 
 ### 嵌入内容
 
-- [如何在网页中嵌入另一个页面](/zh-CN/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
+- [如何在网页中嵌入另一个页面](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
 
-## 进阶问题
+## 不常见或进阶的问题
 
 除了基本问题，HTML 还有更丰富的功能，其提供了高级特性用于解决复杂问题。这些文章可以帮助你解决一些相对不常见的问题：
 
@@ -59,39 +58,39 @@ HTML 仅仅建立了文档结构。为解决演示问题，可使用 {{glossary(
 
 表单是一种复杂的 HTML 结构，用于从网页向网络服务器发送数据。我们鼓励你仔细阅读[完整指南](/zh-CN/docs/Learn/Forms)。你可由此入门：
 
-- [如何创建一个简单的网页表单](/zh-CN/docs/Web/Guide/HTML/Forms/Your_first_form)
-- [如何组织一个网页表单](/zh-CN/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form)
+- [如何创建一个简单的网页表单](/zh-CN/docs/Learn/Forms/Your_first_form)
+- [如何组织一个网页表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
 
 ### 表格信息
 
-一些表格化信息/数据需用行和列整合到表格中去. 而表格是最复杂的 HTML 结构之一，熟练掌握它并不容易：
+一些表格化信息/数据需用行和列整合到表格中去。而表格是最复杂的 HTML 结构之一，熟练掌握它并不容易：
 
-- [如何创建一张数据电子表格](/zh-CN/docs/Learn/HTML/Tables/Basics)
-- [如何使 HTML 表格更具可读性](/zh-CN/docs/Learn/HTML/Tables/Advanced)
+- [如何创建一张数据表格](/zh-CN/docs/Learn/HTML/Tables/Basics)
+- [如何使 HTML 表格更具无障碍性](/zh-CN/docs/Learn/HTML/Tables/Advanced)
 
 ### 数据表示
 
 - 如何用 HTML 表示数值和代码，参见[上标和下标](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#上标和下标)以及[展示计算机代码](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#展示计算机代码)
-- [如何使用数据属性](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes)
+- [如何使用 data 属性](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes)
 
 ### 高级文本语义
 
-- [如何控制 HTML 换行](/zh-CN/docs/Web/HTML/br)
-- 如何标记内容的更改(增加或删除)——参见 {{htmlelement("ins")}} 与 {{htmlelement("del")}} 元素。
+- [如何控制 HTML 换行](/zh-CN/docs/Web/HTML/Element/br)
+- 如何标记内容的更改（文字的增加或删除）——参见 {{htmlelement("ins")}} 与 {{htmlelement("del")}} 元素。
 
 ### 高级图像 & 多媒体
 
 - [如何为网页添加响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 - [如何为网页添加矢量图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [如何在图像上添加热区](/zh-CN/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)
+- [如何在图像上添加 hit map](/zh-CN/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)
 
 ### 国际化
 
-HTML 支持多语言。其提供了用于解决常见的国际化问题的工具。
+HTML 支持多语言，其提供了用于解决常见的国际化问题的工具。
 
 - [如何为单一网页添加多语言支持](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#为文档设定主语言)
 - [如何用 HTML 展现时间和日期](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#标记时间和日期)
 
 ### 性能
 
-- [如何创造快速加载的 HTML 页面](/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages)
+- [如何写一个加载速度很快的 HTML 页面](/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages)
