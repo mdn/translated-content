@@ -454,7 +454,10 @@
 /ko/docs/Web/API/DOMString	/ko/docs/Web/JavaScript/Reference/Global_Objects/String
 /ko/docs/Web/API/Document/defaultView/popstate_event	/ko/docs/Web/API/Window/popstate_event
 /ko/docs/Web/API/Document/defaultView/resize_event	/ko/docs/Web/API/Window/resize_event
-/ko/docs/Web/API/Document/drag_이벤트	/ko/docs/Web/API/Document/drag_event
+/ko/docs/Web/API/Document/drag_event	/ko/docs/Web/API/HTMLElement/drag_event
+/ko/docs/Web/API/Document/drag_이벤트	/ko/docs/Web/API/HTMLElement/drag_event
+/ko/docs/Web/API/Document/dragend_event	/ko/docs/Web/API/HTMLElement/dragend_event
+/ko/docs/Web/API/Document/dragstart_event	/ko/docs/Web/API/HTMLElement/dragstart_event
 /ko/docs/Web/API/Document/keydown_event	/ko/docs/Web/API/Element/keydown_event
 /ko/docs/Web/API/Document/keyup_event	/ko/docs/Web/API/Element/keyup_event
 /ko/docs/Web/API/DocumentOrShadowRoot/activeElement	/ko/docs/Web/API/Document/activeElement
@@ -626,7 +629,7 @@
 /ko/docs/Web/Events/canplay	/ko/docs/Web/API/HTMLMediaElement/canplay_event
 /ko/docs/Web/Events/canplaythrough	/ko/docs/Web/API/HTMLMediaElement/canplaythrough_event
 /ko/docs/Web/Events/click	/ko/docs/Web/API/Element/click_event
-/ko/docs/Web/Events/dragstart	/ko/docs/Web/API/Document/dragstart_event
+/ko/docs/Web/Events/dragstart	/ko/docs/Web/API/HTMLElement/dragstart_event
 /ko/docs/Web/Events/keydown	/ko/docs/Web/API/Element/keydown_event
 /ko/docs/Web/Events/load	/ko/docs/Web/API/Window/load_event
 /ko/docs/Web/Events/message	/ko/docs/Web/API/BroadcastChannel/message_event
