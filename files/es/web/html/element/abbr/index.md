@@ -30,7 +30,7 @@ Este elemento sólo incluye los [atributos globales](/es/docs/Web/HTML/Atributos
 
 Cada elemento `<abbr>` usado es independiente de todos los otros; dar un `<title>` a uno no hace que automáticamente todos los demás adquieran la misma descripción.
 
-> **Nota:**En lenguajes con números gramaticales (especialmente lenguajes con más de dos números, como el Árabe), utiliza el mismo número gramatical en el atributo `title` como dentro del elemento `<abbr>`.
+> **Nota:** En lenguajes con números gramaticales (especialmente lenguajes con más de dos números, como el Árabe), utiliza el mismo número gramatical en el atributo `title` como dentro del elemento `<abbr>`.
 
 ## Especificaciones
 

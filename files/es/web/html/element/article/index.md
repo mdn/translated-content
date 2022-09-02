@@ -6,8 +6,8 @@ original_slug: Web/HTML/Elemento/article
 ---
 El _Elemento article de HTML_ (\<article>) representa una composición auto-contenida en un documento, página, una aplicación o en el sitio, que se destina a distribuir de forma independiente o reutilizable, por ejemplo, en la indicación. Podría ser un mensaje en un foro, un artículo de una revista o un periódico, una entrada de blog, un comentario de un usuario, un widget interactivo o gadget, o cualquier otro elemento independiente del contenido.
 
-> **Nota:** _Notas de uso:_\* Cuando los elementos `<article>` están anidados, los internos representan artículos relacionados con el exterior. Por ejemplo, los comentarios de un blog pueden ser elementos `<article>` anidados al que representa la entrada del blog.
->
+> **Nota:** Notas de uso: 
+> - Cuando los elementos `<article>` están anidados, los internos representan artículos relacionados con el exterior. Por ejemplo, los comentarios de un blog pueden ser elementos `<article>` anidados al que representa la entrada del blog.
 > - Los datos del autor de un elemento `<article>` pueden ser proporcionados a través del elemento {{ HTMLElement ("address") }}, pero no se aplica a los elementos `<article>` anidados.
 > - La fecha de publicación y el tiempo de un elemento `<article>` pueden ser descritos con el atributo {{ htmlattrxref ("pubdate", "time") }} atributo de un elemento {{ HTMLElement("time") }}.
 

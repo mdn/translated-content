@@ -12,7 +12,8 @@ original_slug: Web/HTML/Elemento/aside
 ---
 El **elemento HTML `<aside>`** representa una sección de una página que consiste en contenido que está indirectamente relacionado con el contenido principal del documento. Estas secciones son a menudo representadas como barras laterales o como inserciones y contienen una explicación al margen como una definición de glosario, elementos relacionados indirectamente, como publicidad, la biografía del autor, o en aplicaciones web, la información de perfil o enlaces a blogs relacionados.
 
-> **Nota:** _Notas de uso:_\* No utilices el elemento `<aside>` para etiquetar texto entre paréntesis, ya que este tipo de texto se considera parte del flujo principal.
+> **Nota:** Notas de uso:
+> - No utilices el elemento `<aside>` para etiquetar texto entre paréntesis, ya que este tipo de texto se considera parte del flujo principal.
 
 ### Contexto de uso
 
