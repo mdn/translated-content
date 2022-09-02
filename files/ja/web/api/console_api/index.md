@@ -1,16 +1,6 @@
 ---
 title: Console API
 slug: Web/API/Console_API
-tags:
-  - API
-  - Debugging
-  - Overview
-  - console
-  - dump
-  - log
-  - output
-  - test
-translation_of: Web/API/Console_API
 ---
 {{DefaultAPISidebar("Console API")}}
 

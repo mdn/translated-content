@@ -1,13 +1,6 @@
 ---
 title: HTMLButtonElement.disabled
 slug: Web/API/HTMLButtonElement/disabled
-tags:
-  - API
-  - HTML DOM
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLButtonElement.disabled
-translation_of: Web/API/HTMLButtonElement/disabled
 ---
 {{APIRef("DOM")}}
 

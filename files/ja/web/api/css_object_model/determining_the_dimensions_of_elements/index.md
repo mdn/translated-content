@@ -1,17 +1,6 @@
 ---
 title: 要素の寸法の決定
 slug: Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
-tags:
-  - API
-  - CSSOM View
-  - Client width
-  - Guide
-  - Intermediate
-  - client height
-  - offsetHeight
-  - offsetWidth
-  - size of displayed content
-translation_of: Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 ---
 {{DefaultAPISidebar("CSSOM View")}}
 

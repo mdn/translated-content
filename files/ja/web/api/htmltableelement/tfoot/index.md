@@ -1,14 +1,6 @@
 ---
 title: HTMLTableElement.tFoot
 slug: Web/API/HTMLTableElement/tFoot
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLTableElement.tFoot
-translation_of: Web/API/HTMLTableElement/tFoot
 ---
 {{APIRef("HTML DOM")}}
 

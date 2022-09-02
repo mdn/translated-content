@@ -1,14 +1,6 @@
 ---
 title: HTMLElement.offsetParent
 slug: Web/API/HTMLElement/offsetParent
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLElement.offsetParent
-translation_of: Web/API/HTMLElement/offsetParent
 ---
 {{ APIRef("HTML DOM") }}
 

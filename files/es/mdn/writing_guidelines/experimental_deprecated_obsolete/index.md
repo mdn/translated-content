@@ -121,7 +121,7 @@ A veces, durante el desarrollo de una nueva especificación, o en el transcurso 
 
 - Si el elemento se implementó en una o más versiones de publicaciones de navegadores, sin que sea necesario cambiar una preferencia o una marca, marca el elemento como obsoleto, de la siguiente manera:
 
-  - Si el elemento tiene páginas de documentación que describen solo ese elemento (como {{domxref("RTCPeerConnection.close()")}}), agrega la macro {{TemplateLink("deprecated_header")}} en la parte superior de la página y agrega la etiqueta {{tag("Deprecated")}} a la lista de etiquetas de la página.
+  - Si el elemento tiene páginas de documentación que describen solo ese elemento (como {{domxref("RTCPeerConnection.close()")}}), agrega la macro {{TemplateLink("deprecated_header")}} en la parte superior de la página y agrega la etiqueta `Deprecated` a la lista de etiquetas de la página.
   - En la página de descripción general del elemento, la interfaz o la API, busca la lista de elementos que incluyan el elemento que se ha eliminado de la especificación y agrega la macro {{TemplateLink("deprecated_inline")}} después del nombre del elemento en esa lista.
   - Busca en el texto informativo de la página de descripción general de esa interfaz, elemento, etc., cualquier referencia al elemento eliminado. Agrega recuadros de advertencia en los lugares apropiados con texto del tipo "\[lo que sea] se ha eliminado de la especificación y está obsoleto. Es posible que se elimine de los navegadores en el futuro, por lo que no debes usarlo. Consulta \[enlace a la página] para conocer una nueva forma de hacer esto."
   - Del mismo modo, busca cualquier discusión sobre el tema en las guías y tutoriales sobre la API o tecnología relevante. Agrega advertencias similares.

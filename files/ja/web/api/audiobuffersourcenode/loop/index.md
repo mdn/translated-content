@@ -1,21 +1,6 @@
 ---
 title: AudioBufferSourceNode.loop
 slug: Web/API/AudioBufferSourceNode/loop
-tags:
-  - API
-  - Audio
-  - AudioBufferSourceNode
-  - Loop
-  - Media
-  - Property
-  - Reference
-  - Web Audio API
-  - sound
-  - プロパティ
-  - メディア
-  - 繰り返し
-  - 音声
-translation_of: Web/API/AudioBufferSourceNode/loop
 ---
 {{ APIRef("Web Audio API") }}
 

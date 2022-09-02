@@ -1,18 +1,13 @@
 ---
 title: console
 slug: Web/API/console
-tags:
-  - API
-  - デバッグ
-  - インターフェイス
-  - リファレンス
-  - ウェブコンソール
-browser-compat: api.console
-translation_of: Web/API/Console
+l10n:
+  sourceCommit: 7d44ce9ab391c7f52bd6b7fbc39576abbe52c2d5
 ---
 {{APIRef("Console API")}}
 
-**`console`** オブジェクトは、ブラウザーのデバッグコンソール（例えば Firefox の[ウェブコンソール](/ja/docs/Tools/Web_Console)）へのアクセスを提供します。このオブジェクトの詳細な動作はブラウザーによって異なりますが、*一般的に共通の*機能セットが提供されています。
+**`console`** オブジェクトは、ブラウザーのデバッグコンソール（例えば Firefox の[ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)）へのアクセスを提供します。
+このオブジェクトの詳細な動作はブラウザーによって異なりますが、*一般的に共通の*機能セットが提供されています。
 
 `console` オブジェクトには任意のグローバルオブジェクトからアクセスできます。閲覧スコープの {{domxref("Window")}} や、特定の種類のワーカーを表す {{domxref("WorkerGlobalScope")}} の console プロパティを通してアクセスできます。これは {{domxref("Window.console")}} として公開されていますが、単に `console` として参照できます。
 
@@ -20,7 +15,7 @@ translation_of: Web/API/Console
 console.log("Failed to open the specified link")
 ```
 
-このページでは、 `console` オブジェクトで使用できる[メソッド](#メソッド)やいくらかの[使用](#使用)例を提供します。
+このページでは、 `console` オブジェクトで使用できる[メソッド](#メソッド)やいくらかの[使用例](#使用例)を提供します。
 
 {{AvailableInWorkers}}
 
@@ -42,7 +37,7 @@ console.log("Failed to open the specified link")
   - : 指定したオブジェクトを XML/HTML 要素で表現したものを表示します。表現できない場合は、JavaScript オブジェクトビューを表示します。
 - {{domxref("console.error()")}}
   - : エラーメッセージを出力します。このメソッドでは、[文字列置換](#文字列置換の使用)および追加の引数を使用することができます。
-- {{domxref("console.exception()")}} {{Non-standard_inline}} {{deprecated_inline}}
+- `console.exception()` {{Non-standard_inline}} {{deprecated_inline}}
   - : `error()` の別名です。
 - {{domxref("console.group()")}}
   - : 新たなインライン[グループ](#コンソールでのグループの使用)を作成し、以降のすべての出力を別なレベルに字下げします。レベルを戻すには、`groupEnd()` を呼び出します。
@@ -55,9 +50,9 @@ console.log("Failed to open the specified link")
 - {{domxref("console.log()")}}
   - : 一般タイプのログ情報を出力します。このメソッドでは、[文字列置換](#文字列置換の使用)および追加の引数を使用することができます。
 - {{domxref("console.profile()")}} {{Non-standard_inline}}
-  - : ブラウザー内蔵のプロファイラー (例えば [Firefox のパフォーマンスツール](/ja/docs/Tools/Performance)) を開始します。プロファイルの名称を指定することができます。
+  - : ブラウザー内蔵のプロファイラー (例えば [Firefox のパフォーマンスツール](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)) を開始します。プロファイルの名称を指定することができます。
 - {{domxref("console.profileEnd()")}} {{Non-standard_inline}}
-  - : プロファイラーを停止します。結果のプロファイルは、ブラウザーのパフォーマンスツール (例えば [Firefox のパフォーマンスツール](/ja/docs/Tools/Performance)) で確認できます。
+  - : プロファイラーを停止します。結果のプロファイルは、ブラウザーのパフォーマンスツール (例えば [Firefox のパフォーマンスツール](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)) で確認できます。
 - {{domxref("console.table()")}}
   - : 表形式のデータを、表を使用して表示します。
 - {{domxref("console.time()")}}
@@ -67,7 +62,7 @@ console.log("Failed to open the specified link")
 - {{domxref("console.timeLog()")}}
   - : 指定された[タイマー](#タイマー)の値をコンソールへ出力します。
 - {{domxref("console.timeStamp()")}} {{Non-standard_inline}}
-  - : ブラウザーの[タイムライン](https://developer.chrome.com/devtools/docs/timeline)や[ウォーターフォール](/ja/docs/Tools/Performance/Waterfall)ツールにマーカーを追加します。
+  - : ブラウザー（[Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/) または [Firefox](https://profiler.firefox.com/docs/#/./guide-ui-tour-timeline)）のパフォーマンスツールのタイムラインにマーカーを追加します（。
 - {{domxref("console.trace()")}}
   - : [スタックトレース](#スタックトレース)を出力します。
 - {{domxref("console.warn()")}}
@@ -86,14 +81,14 @@ console.log("Failed to open the specified link")
 もっとも簡単にログを記録する方法は、単一のオブジェクトを出力することです。
 
 ```js
-var someObject = { str: "Some text", id: 5 };
+const someObject = { str: "Some text", id: 5 };
 console.log(someObject);
 ```
 
 出力内容は以下のようになります。
 
 ```bash
-[09:27:13.475] ({str:"Some text", id:5})
+{str:"Some text", id:5}
 ```
 
 #### 複数のオブジェクトの出力
@@ -101,15 +96,15 @@ console.log(someObject);
 ログ出力のメソッドを呼び出すときにオブジェクトを羅列することで、複数のオブジェクトを出力することもできます。
 
 ```js
-var car = "Dodge Charger";
-var someObject = { str: "Some text", id: 5 };
+const car = "Dodge Charger";
+const someObject = { str: "Some text", id: 5 };
 console.info("My first car was a", car, ". The object is:", someObject);
 ```
 
 出力は以下のようになります。
 
 ```bash
-[09:28:22.711] My first car was a Dodge Charger . The object is: ({str:"Some text", id:5})
+My first car was a Dodge Charger . The object is: ({str:"Some text", id:5})
 ```
 
 #### 文字列置換の使用
@@ -130,19 +125,19 @@ console.info("My first car was a", car, ". The object is:", someObject);
 これらは引数リストの書式化文字列の後にある引数を引用します。例えば次のようになります。
 
 ```js
-for (var i=0; i<5; i++) {
+for (let i=0; i<5; i++) {
   console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
 }
 ```
 
 出力は以下のようになります。
 
-```bash
-[13:14:13.481] Hello, Bob. You've called me 1 times.
-[13:14:13.483] Hello, Bob. You've called me 2 times.
-[13:14:13.485] Hello, Bob. You've called me 3 times.
-[13:14:13.487] Hello, Bob. You've called me 4 times.
-[13:14:13.488] Hello, Bob. You've called me 5 times.
+```
+Hello, Bob. You've called me 1 times.
+Hello, Bob. You've called me 2 times.
+Hello, Bob. You've called me 3 times.
+Hello, Bob. You've called me 4 times.
+Hello, Bob. You've called me 5 times.
 ```
 
 #### コンソールの出力のスタイル付け
@@ -219,7 +214,7 @@ console.debug("Back to the outer level");
 console.time("answer time");
 alert("Click to continue");
 console.timeLog("answer time");
-alert("Do a bunch of other stuff...");
+alert("Do a bunch of other stuff…");
 console.timeEnd("answer time");
 ```
 
@@ -265,12 +260,12 @@ foo();
 
 ## 関連情報
 
-- [Firefox 開発ツール](/ja/docs/Tools)
-- [ウェブコンソール](/ja/docs/Tools/Web_Console) — Firefox のウェブコンソールがコンソール API の呼び出しを処理する方法
-- [リモートデバッグ](/ja/docs/Tools/Remote_Debugging) — モバイル端末がデバッグ対象である場合に、コンソールの出力を確認する方法
+- [Firefox 開発者ツール](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+- [ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) — Firefox のウェブコンソールがコンソール API の呼び出しを処理する方法
+- [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) — モバイル端末がデバッグ対象である場合に、コンソールの出力を確認する方法
 
 ### その他の実装
 
-- [Google Chrome DevTools](https://developers.google.com/chrome-developer-tools/docs/console-api)
-- [Microsoft Edge DevTools](https://docs.microsoft.com/microsoft-edge/devtools-guide/console/console-api)
-- [Safari Web Inspector](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)
+- [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/console/api/)
+- [Microsoft Edge DevTools](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/)
+- [Safari Web Inspector](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)

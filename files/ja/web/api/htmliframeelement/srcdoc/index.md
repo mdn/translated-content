@@ -1,9 +1,6 @@
 ---
 title: HTMLIFrameElement.srcdoc
 slug: Web/API/HTMLIFrameElement/srcdoc
-page-type: web-api-instance-property
-browser-compat: api.HTMLIFrameElement.srcdoc
-translation_of: Web/API/HTMLIFrameElement/srcdoc
 ---
 {{APIRef('HTMLIFrameElement')}}
 

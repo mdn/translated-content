@@ -1,14 +1,6 @@
 ---
 title: Tabs API を使う
 slug: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
-tags:
-  - Add-ons
-  - Beginner
-  - Extensions
-  - How-to
-  - WebExtensions
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 ---
 {{AddonSidebar}}
 

@@ -1,17 +1,6 @@
 ---
 title: Animation.cancel()
 slug: Web/API/Animation/cancel
-tags:
-  - API
-  - Animation
-  - メソッド
-  - リファレンス
-  - ウェブアニメーション
-  - cancel
-  - waapi
-  - ウェブアニメーション API
-browser-compat: api.Animation.cancel
-translation_of: Web/API/Animation/cancel
 ---
 {{ APIRef("Web Animations") }}
 

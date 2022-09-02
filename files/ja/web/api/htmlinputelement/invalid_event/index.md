@@ -1,16 +1,6 @@
 ---
 title: 'HTMLInputElement: invalid イベント'
 slug: Web/API/HTMLInputElement/invalid_event
-tags:
-  - API
-  - 制約検証 API
-  - 制約検証
-  - イベント
-  - フォーム
-  - リファレンス
-  - invalid
-browser-compat: api.HTMLInputElement.invalid_event
-translation_of: Web/API/HTMLInputElement/invalid_event
 ---
 {{APIRef}}
 

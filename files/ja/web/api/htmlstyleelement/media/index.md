@@ -1,14 +1,6 @@
 ---
 title: HTMLStyleElement.media
 slug: Web/API/HTMLStyleElement/media
-tags:
-  - API
-  - HTML DOM
-  - HTMLStyleElement
-  - Media
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/HTMLStyleElement/media
 ---
 {{APIRef("HTML DOM")}}
 

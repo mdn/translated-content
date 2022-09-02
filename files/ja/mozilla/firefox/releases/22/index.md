@@ -1,10 +1,6 @@
 ---
 title: Firefox 22 for developers
 slug: Mozilla/Firefox/Releases/22
-tags:
-  - Firefox
-  - Firefox 22
-translation_of: Mozilla/Firefox/Releases/22
 ---
 Gecko 22 を搭載した Firefox 22 は米国時間 2013 年 6 月 25 日にリリースされました。このページでは、開発者に影響する Firefox 22 の変更点をまとめています。
 

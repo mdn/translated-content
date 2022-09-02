@@ -1,10 +1,6 @@
 ---
 title: 初めての拡張機能
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
-tags:
-  - Guide
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
 {{AddonSidebar}}
 

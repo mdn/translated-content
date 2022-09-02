@@ -1,15 +1,6 @@
 ---
 title: HTMLAreaElement.relList
 slug: Web/API/HTMLAreaElement/relList
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLAreaElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAreaElement.relList
-translation_of: Web/API/HTMLAreaElement/relList
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,17 +1,6 @@
 ---
 title: HTMLTableElement.rules
 slug: Web/API/HTMLTableElement/rules
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - NeedsBrowserCompatibility
-  - NeedsSpecTable
-  - プロパティ
-  - リファレンス
-  - 非推奨
-browser-compat: api.HTMLTableElement.rules
-translation_of: Web/API/HTMLTableElement/rules
 ---
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 

@@ -1,15 +1,6 @@
 ---
 title: AudioContext.createMediaStreamDestination()
 slug: Web/API/AudioContext/createMediaStreamDestination
-tags:
-  - API
-  - AudioContext
-  - Method
-  - Reference
-  - Référence(2)
-  - Web Audio API
-  - createMediaStreamDestination
-translation_of: Web/API/AudioContext/createMediaStreamDestination
 ---
 {{ APIRef("Web Audio API") }}
 

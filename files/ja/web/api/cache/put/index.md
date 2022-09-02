@@ -1,16 +1,6 @@
 ---
 title: Cache.put()
 slug: Web/API/Cache/put
-tags:
-  - API
-  - Cache
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - put
-translation_of: Web/API/Cache/put
 ---
 {{APIRef("Service Workers API")}}
 

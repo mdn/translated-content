@@ -1,7 +1,6 @@
 ---
 title: AudioParam
 slug: Web/API/AudioParam
-translation_of: Web/API/AudioParam
 ---
 {{APIRef("Web Audio API")}}
 

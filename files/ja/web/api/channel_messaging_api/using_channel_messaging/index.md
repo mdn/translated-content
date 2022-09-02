@@ -1,14 +1,6 @@
 ---
 title: チャンネルメッセージングの使用
 slug: Web/API/Channel_Messaging_API/Using_channel_messaging
-tags:
-  - API
-  - チャンネルメッセージング
-  - HTML5
-  - MessageChannel
-  - MessagePort
-  - チュートリアル
-translation_of: Web/API/Channel_Messaging_API/Using_channel_messaging
 ---
 {{DefaultAPISidebar("Channel Messaging API")}}
 

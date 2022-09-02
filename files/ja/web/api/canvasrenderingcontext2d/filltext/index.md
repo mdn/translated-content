@@ -1,22 +1,6 @@
 ---
 title: CanvasRenderingContext2D.fillText()
 slug: Web/API/CanvasRenderingContext2D/fillText
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Draw String
-  - Draw Text
-  - 文字列の描画
-  - テキストの描画
-  - Fill Text
-  - Filling Text
-  - メソッド
-  - リファレンス
-  - テキスト
-  - fillText
-browser-compat: api.CanvasRenderingContext2D.fillText
-translation_of: Web/API/CanvasRenderingContext2D/fillText
 ---
 {{APIRef("HTML DOM")}}
 

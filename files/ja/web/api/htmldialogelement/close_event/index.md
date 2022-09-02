@@ -1,17 +1,6 @@
 ---
 title: window.onclose
 slug: Web/API/HTMLDialogElement/close_event
-tags:
-  - API
-  - Dialog
-  - Event Handler
-  - Experimental
-  - GlobalEventHandlers
-  - HTML DOM
-  - NeedsExample
-  - Property
-  - Reference
-translation_of: Web/API/GlobalEventHandlers/onclose
 original_slug: Web/API/GlobalEventHandlers/onclose
 ---
 {{ApiRef("HTML DOM")}} {{SeeCompatTable}}

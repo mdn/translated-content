@@ -1,10 +1,6 @@
 ---
 title: Firefox 41 for developers
 slug: Mozilla/Firefox/Releases/41
-tags:
-  - Firefox
-  - Releases
-translation_of: Mozilla/Firefox/Releases/41
 ---
 Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされました。このページでは、開発者に影響する Firefox 41 の変更点をまとめています。
 

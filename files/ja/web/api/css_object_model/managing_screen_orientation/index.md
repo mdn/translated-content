@@ -1,12 +1,6 @@
 ---
 title: 画面の向きを制御する
 slug: Web/API/CSS_Object_Model/Managing_screen_orientation
-tags:
-  - Advanced
-  - CSSOM View
-  - Guide
-  - Screen Orientation
-translation_of: Web/API/CSS_Object_Model/Managing_screen_orientation
 ---
 {{DefaultAPISidebar("Screen Orientation API")}}{{SeeCompatTable}}
 

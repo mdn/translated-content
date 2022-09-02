@@ -1,12 +1,6 @@
 ---
 title: CanvasPattern
 slug: Web/API/CanvasPattern
-tags:
-  - API
-  - Canvas
-  - Interface
-  - Reference
-translation_of: Web/API/CanvasPattern
 ---
 {{APIRef("Canvas API")}}
 

@@ -1,14 +1,6 @@
 ---
 title: HTMLAreaElement
 slug: Web/API/HTMLAreaElement
-page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.HTMLAreaElement
-translation_of: Web/API/HTMLAreaElement
 ---
 {{APIRef("HTML DOM")}}
 

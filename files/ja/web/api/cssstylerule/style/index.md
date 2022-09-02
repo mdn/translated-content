@@ -1,12 +1,6 @@
 ---
 title: CSSStyleRule.style
 slug: Web/API/CSSStyleRule/style
-tags:
-  - API
-  - CSSOM
-  - Property
-  - Reference
-translation_of: Web/API/CSSStyleRule/style
 ---
 {{ APIRef("CSSOM") }}
 

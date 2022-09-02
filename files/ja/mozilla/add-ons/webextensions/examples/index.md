@@ -1,10 +1,6 @@
 ---
 title: 拡張機能の例
 slug: Mozilla/Add-ons/WebExtensions/Examples
-tags:
-  - Interface
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Examples
 ---
 {{AddonSidebar}}
 
