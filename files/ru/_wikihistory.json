@@ -4680,10 +4680,6 @@
     "modified": "2020-10-15T22:00:11.368Z",
     "contributors": ["boxa6", "nikolaifedorov", "Horuslllll"]
   },
-  "Web/API/Document/dragstart_event": {
-    "modified": "2020-10-15T22:21:52.889Z",
-    "contributors": ["Dzvonek"]
-  },
   "Web/API/Document/embeds": {
     "modified": "2020-10-15T21:50:45.207Z",
     "contributors": ["boxa6", "samgozman"]
@@ -16747,6 +16743,10 @@
   "conflicting/Web/API/Geolocation/getCurrentPosition": {
     "modified": "2019-03-23T22:21:01.208Z",
     "contributors": ["Casus", "devkudasov"]
+  },
+  "conflicting/Web/API/HTMLElement/dragstart_event": {
+    "modified": "2020-10-15T22:21:52.889Z",
+    "contributors": ["Dzvonek"]
   },
   "conflicting/Web/API/HTMLMediaElement/abort_event": {
     "modified": "2019-03-23T22:08:50.066Z",

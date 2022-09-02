@@ -3711,10 +3711,6 @@
     "modified": "2019-03-23T22:39:59.389Z",
     "contributors": ["Zholary"]
   },
-  "Web/API/Document/dragover_event": {
-    "modified": "2019-04-30T14:24:25.773Z",
-    "contributors": ["wbamberg", "fscholz", "ExE-Boss", "Vickysolo"]
-  },
   "Web/API/Document/embeds": {
     "modified": "2020-10-15T22:22:17.171Z",
     "contributors": ["iarah"]
@@ -4562,6 +4558,10 @@
   "Web/API/HTMLElement/contentEditable": {
     "modified": "2020-10-15T22:23:54.889Z",
     "contributors": ["lauramacdaleno"]
+  },
+  "Web/API/HTMLElement/dragover_event": {
+    "modified": "2019-04-30T14:24:25.773Z",
+    "contributors": ["wbamberg", "fscholz", "ExE-Boss", "Vickysolo"]
   },
   "Web/API/HTMLElement/input_event": {
     "modified": "2020-10-15T22:17:41.989Z",
