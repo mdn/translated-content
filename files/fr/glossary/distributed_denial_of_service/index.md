@@ -28,8 +28,8 @@ L'équipe de préparation aux urgences informatiques des États-Unis (US-CERT) d
 - Déconnexion d'une connexion Internet sans fil ou filaire
 - Refus à long terme de l'accès au web ou à des services internet.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Attaque_par_déni_de_service", "Attaque par déni de service")}} sur Wikipedia
+- [Attaque par déni de service](https://fr.wikipedia.org/wiki/Attaque_par_d%C3%A9ni_de_service) sur Wikipédia

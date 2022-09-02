@@ -11,7 +11,7 @@ original_slug: Web/SVG/Элемент/use
 ---
 <div>{{SVGRef}}</div>
 
-<p>Элемент <strong><code>&lt;use&gt;</code></strong> берёт элементы из SVG-документа и дублирует их где-то ещё.</p>
+<p>Элемент <strong><code>&lt;use&gt;</code></strong> берёт элементы из SVG-документа и дублирует их где-то ещё.</p>
 
 <div id="Exemple">
 <div class="hidden">
@@ -19,31 +19,31 @@ original_slug: Web/SVG/Элемент/use
 </div>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;circle id="myCircle" cx="5" cy="5" r="4" stroke="blue"/&gt;
-  &lt;use href="#myCircle" x="10" fill="blue"/&gt;
-  &lt;use href="#myCircle" x="20" fill="white" stroke="red"/&gt;
-  &lt;!--
-  В данном случае атрибут stroke="red" будет игнорироваться, так как
-  ранее он был задан непосредственно для фигуры круга с id "myCircle".
-  Большинство атрибутов (кроме x, y, width, height и (xlink:)href) не
-  переопределяют значения, заданные у предка.
-  Вот почему круги имеют разные координаты "x", но одинаковое значение "stroke".
+  &lt;circle id="myCircle" cx="5" cy="5" r="4" stroke="blue"/&gt;
+  &lt;use href="#myCircle" x="10" fill="blue"/&gt;
+  &lt;use href="#myCircle" x="20" fill="white" stroke="red"/&gt;
+  &lt;!--
+  В данном случае атрибут stroke="red" будет игнорироваться, так как
+  ранее он был задан непосредственно для фигуры круга с id "myCircle".
+  Большинство атрибутов (кроме x, y, width, height и (xlink:)href) не
+  переопределяют значения, заданные у предка.
+  Вот почему круги имеют разные координаты "x", но одинаковое значение "stroke".
   --&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('Exemple', 100, 100)}}</p>
 </div>
 
-<p>Эффект такой же, как если бы элементы были полностью склонированы в DOM, а затем расположены в месте, где находится элемент <code>use</code>, подобно элементам <code>&lt;template&gt;</code> в HTML 5.<br>
+<p>Эффект такой же, как если бы элементы были полностью склонированы в DOM, а затем расположены в месте, где находится элемент <code>use</code>, подобно элементам <code>&lt;template&gt;</code> в HTML 5.<br>
  <br>
- Большинство атрибутов <code>use</code> <strong>не</strong> переопределяют те, что уже заданы у элемента, на который <code>use</code> ссылается. (Это отличается от того, как атрибуты CSS-стилей, переопределяют те, что были заданы раньше в каскаде). <strong>Только</strong> атрибуты {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}} и {{SVGAttr("href")}} элемента <code>use</code> будут переопределять те, что были заданы у элемента, на который <code>use</code> ссылается. Однако к элементу <code>use</code> будут применены любые другие атрибуты, не заданные у элемента, на который <code>use</code> ссылается.<br>
+ Большинство атрибутов <code>use</code> <strong>не</strong> переопределяют те, что уже заданы у элемента, на который <code>use</code> ссылается. (Это отличается от того, как атрибуты CSS-стилей, переопределяют те, что были заданы раньше в каскаде). <strong>Только</strong> атрибуты {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}} и {{SVGAttr("href")}} элемента <code>use</code> будут переопределять те, что были заданы у элемента, на который <code>use</code> ссылается. Однако к элементу <code>use</code> будут применены любые другие атрибуты, не заданные у элемента, на который <code>use</code> ссылается.<br>
  <br>
- Поскольку клонированные элементы не отображаются, нужно соблюдать осторожность при использовании <a href="/en-US/docs/Web/CSS" title="en/CSS">CSS</a> для стилизации элемента <code>use</code> и его клонированных потомков. Нет гарантии, что CSS-свойства будут унаследованы клонированным DOM, пока вы явно не зададите им использование <a href="/en-US/docs/Web/CSS/inheritance">CSS-наследования</a>.<br>
+ Поскольку клонированные элементы не отображаются, нужно соблюдать осторожность при использовании <a href="/en-US/docs/Web/CSS" title="en/CSS">CSS</a> для стилизации элемента <code>use</code> и его клонированных потомков. Нет гарантии, что CSS-свойства будут унаследованы клонированным DOM, пока вы явно не зададите им использование <a href="/en-US/docs/Web/CSS/inheritance">CSS-наследования</a>.<br>
  <br>
- По соображениям безопасности, браузеры могут применять <a href="/en-US/docs/Web/Security/Same-origin_policy">правило ограничения домена</a> для элементов <code>use</code> и могут отказаться загружать URL другого источника в атрибуте {{SVGAttr("href")}}.</p>
+ По соображениям безопасности, браузеры могут применять <a href="/en-US/docs/Web/Security/Same-origin_policy">правило ограничения домена</a> для элементов <code>use</code> и могут отказаться загружать URL другого источника в атрибуте {{SVGAttr("href")}}.</p>
 
 <div class="warning">
-<p>Начиная с SVG 2, атрибут {{SVGAttr("xlink:href")}} получил статус "Устарело" в пользу {{SVGAttr("href")}}. Дополнительную информацию ищите на странице {{SVGAttr("xlink:href")}}. Тем не менее,  на практике всё ещё может быть потребность в использовании {{SVGAttr("xlink:href")}} для кроссбраузерной совместимости (смотрите <a href="#browser-compatibility">таблицу совместимости</a> ниже).</p>
+<p>Начиная с SVG 2, атрибут {{SVGAttr("xlink:href")}} получил статус "Устарело" в пользу {{SVGAttr("href")}}. Дополнительную информацию ищите на странице {{SVGAttr("xlink:href")}}. Тем не менее,  на практике всё ещё может быть потребность в использовании {{SVGAttr("xlink:href")}} для кроссбраузерной совместимости (смотрите <a href="#browser-compatibility">таблицу совместимости</a> ниже).</p>
 </div>
 
 <h2 id="Атрибуты">Атрибуты</h2>
@@ -56,21 +56,21 @@ original_slug: Web/SVG/Элемент/use
  <dd>{{Deprecated_Header("SVG2")}}<a href="/en/SVG/Content_type#IRI" title="https://developer.mozilla.org/en/SVG/Content_type#IRI">&lt;IRI&gt;</a>-ссылка на элемент/фрагмент, который нужно продублировать.<br>
  <small><em>Тип значения</em>: <a href="/docs/Web/SVG/Content_type#IRI"><strong>&lt;IRI&gt;</strong></a> ; <em>Значение по умолчанию</em>: <code>none</code>; <em>Анимируется</em>: <strong>да</strong></small></dd>
  <dt>{{SVGAttr("x")}}</dt>
- <dd>Координата "x" элемента <code>use</code>.<br>
+ <dd>Координата "x" элемента <code>use</code>.<br>
  <small><em>Тип значения</em>: <a href="/docs/Web/SVG/Content_type#Coordinate"><strong>&lt;coordinate&gt;</strong></a> ; <em>Значение по умолчанию</em>: <code>0</code>; <em>Анимируется</em>: <strong>да</strong></small></dd>
  <dt id="attr-cy">{{SVGAttr("y")}}</dt>
- <dd>Координата "y" элемента <code>use</code>.<br>
+ <dd>Координата "y" элемента <code>use</code>.<br>
  <small><em>Тип значения</em>: <a href="/docs/Web/SVG/Content_type#Coordinate"><strong>&lt;coordinate&gt;</strong></a> ; <em>Значение по умолчанию</em>: <code>0</code>; <em>Анимируется</em>: <strong>да</strong></small></dd>
  <dt id="attr-r">{{SVGAttr("width")}}</dt>
- <dd>Ширина элемента <code>use</code>.<br>
+ <dd>Ширина элемента <code>use</code>.<br>
  <small><em>Тип значения</em>: <a href="/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a> ; <em>Значение по умолчанию</em>: <code>0</code>; <em>Анимируется</em>: <strong>да</strong></small></dd>
  <dt>{{SVGAttr("height")}}</dt>
- <dd>Высота элемента <code>use</code>.<br>
+ <dd>Высота элемента <code>use</code>.<br>
  <small><em>Тип значения</em>: <a href="/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a> ; <em>Значение по умолчанию</em>: <code>0</code>; <em>Анимируется</em>: <strong>да</strong></small></dd>
 </dl>
 
 <div class="note">
-<p><strong>Примечание:</strong> Начиная с SVG2, <code>x</code>, <code>y</code>, <code>width</code>, и <code>height</code> являются <em>Свойствами Геометрии</em>, то есть эти атрибуты также могут быть использованы в качестве CSS-свойств для этого элемента.</p>
+<p><strong>Примечание:</strong> Начиная с SVG2, <code>x</code>, <code>y</code>, <code>width</code>, и <code>height</code> являются <em>Свойствами Геометрии</em>, то есть эти атрибуты также могут быть использованы в качестве CSS-свойств для этого элемента.</p>
 </div>
 
 <h3 id="Глобальные_атрибуты">Глобальные атрибуты</h3>

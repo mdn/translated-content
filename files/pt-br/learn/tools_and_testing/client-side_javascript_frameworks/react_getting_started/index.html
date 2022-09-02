@@ -31,9 +31,9 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Comecan
 
 <h2 id="Olá_React">Olá, React</h2>
 
-<p>Segundo seu slogan oficial, <a href="https://reactjs.org/">React</a> é uma biblioteca para construção de interfaces de usuário. React não é um framework – nem mesmo é exclusivo para web. É utilizado com outras bibliotecas para renderização em certos ambientes. Por exemplo, <a href="https://reactnative.dev/">React Native</a> pode ser usado para construção de aplicativos móveis; <a href="https://facebook.github.io/react-360/">React 360</a> pode ser usado para construir aplicações de realidade virtual; e muitas outras possibilidades.</p>
+<p>Segundo seu slogan oficial, <a href="https://reactjs.org/">React</a> é uma biblioteca para construção de interfaces de usuário. React não é um framework – nem mesmo é exclusivo para web. É utilizado com outras bibliotecas para renderização em certos ambientes. Por exemplo, <a href="https://reactnative.dev/">React Native</a> pode ser usado para construção de aplicativos móveis; <a href="https://facebook.github.io/react-360/">React 360</a> pode ser usado para construir aplicações de realidade virtual; e muitas outras possibilidades.</p>
 
-<p>Para construir para web, desenvolvedores usam React em conjunto com <a href="https://reactjs.org/docs/react-dom.html">ReactDOM</a>. React e ReactDOM são frequentemente discutidos nos mesmos espaços e utlizados para resolver os mesmos problemas como outros arcabouços (frameworks). Quando referimos React como "arcabouço" (framework) estamos trabalhando com o termo/entendimento coloquial.</p>
+<p>Para construir para web, desenvolvedores usam React em conjunto com <a href="https://reactjs.org/docs/react-dom.html">ReactDOM</a>. React e ReactDOM são frequentemente discutidos nos mesmos espaços e utlizados para resolver os mesmos problemas como outros arcabouços (frameworks). Quando referimos React como "arcabouço" (framework) estamos trabalhando com o termo/entendimento coloquial.</p>
 
 <p>A meta primária do React é minimizar os erros que ocorrem quando os desenvolvedores estão construindo UIs (User Interface). Isto é devido ao uso de componentes - autocontidos, partes lógicas de códigos que descrevem uma parte da interface do usuário. Estes componentes são adicionados para criar uma UI completa e o React concentra muito do trabalho de renderizar, proporcionando que se concentre no projeto de UI.</p>
 
@@ -41,11 +41,11 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Comecan
 
 <p>Diferente de outros frameworks comentados neste módulo, React não implementa regras restritas no código como convenções ou organizações de arquivos. Isto permite que times criem convenções próprias que melhor se adequem e para adotar o React do jeito que desejar. React pode manusear um botão único, poucas partes da interface ou a interface inteira de um app.</p>
 
-<p>Enquanto React pode ser utilizado por <a href="https://reactjs.org/docs/add-react-to-a-website.html">pequenos pedaços de interface</a> e não "cai" em uma aplicação com uma biblioteca como jQuery ou até mesmo como um framework como Vue - é mais acessível quando você constrói todo o app com React.</p>
+<p>Enquanto React pode ser utilizado por <a href="https://reactjs.org/docs/add-react-to-a-website.html">pequenos pedaços de interface</a> e não "cai" em uma aplicação com uma biblioteca como jQuery ou até mesmo como um framework como Vue - é mais acessível quando você constrói todo o app com React.</p>
 
-<p>Além disso, muitos dos beneficios da experiencias de desenvolvimento de uma aplicação React, tais como escrever interfaces com JSX, requerem um processo de compilação. Adicionar um compilador como o Babel em um website faz o código funcionar lentamente, então os desenvolvedores geralmente configuram algumas ferramentas para fazer compilações em etapas. React, sem duvídas, tem um grande ecossistema de ferramentas, mas isso pode ser aprendido.</p>
+<p>Além disso, muitos dos beneficios da experiencias de desenvolvimento de uma aplicação React, tais como escrever interfaces com JSX, requerem um processo de compilação. Adicionar um compilador como o Babel em um website faz o código funcionar lentamente, então os desenvolvedores geralmente configuram algumas ferramentas para fazer compilações em etapas. React, sem duvídas, tem um grande ecossistema de ferramentas, mas isso pode ser aprendido.</p>
 
-<p>Este artigo será focado no caso de uso do React para renderizar toda a interface do usuario de um aplicativo, usando ferramentas fornecidas pelo prórpio <a href="https://create-react-app.dev/">create-react-app</a> do Facebook.</p>
+<p>Este artigo será focado no caso de uso do React para renderizar toda a interface do usuario de um aplicativo, usando ferramentas fornecidas pelo prórpio <a href="https://create-react-app.dev/">create-react-app</a> do Facebook.</p>
 
 <h2 id="Como_React_usa_Javascript">Como React usa JavaScript?</h2>
 
@@ -70,7 +70,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Comecan
     &lt;h1&gt;Mozilla Developer Network&lt;/h1&gt;
 &lt;/header&gt;</pre>
 
-<p>Entretanto, isso é meio estranho, porquê a tag <code><a href="/en-US/docs/Web/HTML/Element/header">&lt;header&gt;</a></code>  que inicia a expressão não está alinhada na mesma posição que sua tag de fechamento correspondente.</p>
+<p>Entretanto, isso é meio estranho, porquê a tag <code><a href="/en-US/docs/Web/HTML/Element/header">&lt;header&gt;</a></code>  que inicia a expressão não está alinhada na mesma posição que sua tag de fechamento correspondente.</p>
 </div>
 
 <p>Claro, seu navegador não é capaz de ler o JSX sem alguma ajuda. Quando compilado (utilizando uma ferramenta como <a href="https://babeljs.io/">Babel</a> ou <a href="https://parceljs.org/">Parcel </a>), nossa expressão de cabeçalho ficaria assim:</p>
@@ -98,7 +98,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Comecan
 <p>Você também pode utilizar o gerenciador de pacotes <em>Yarn </em>como uma alternativa, mas nós iremos assumir que você está utilizando o <em>npm </em>para esta série de tutoriais. Veja <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management"> Gerenciador de pacotes - básico </a>para mais informações sobre o <em>npm </em>ou o <em>Yarn</em>.</p>
 
 <p>Se você está utilizando o Windows, você vai precisar instalar alguns softwares adicionais para que você tenha as mesmas capacidades de um terminal Unix/macOS e utilizar os comandos de terminal que serão mencionados neste tutorial. <strong>Gitbash </strong>(que vem junto como parte do pacote de ferramentas <a href="https://gitforwindows.org/"> Git para o Windows </a>) ou o <a href="https://docs.microsoft.com/en-us/windows/wsl/about"> subsistema Windows para Linux </a>(<strong>WSL</strong>) ambos são adequados. Veja o <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">Curso intensivo - Linha de comando </a>para mais informações sobre estes e sobre comandos de terminal no geral.<br>
-  </p>
+  </p>
 
 <p>Mantenha em mente também que React e ReactDOM produzem aplicativos que funcionam apenas em navegadores consideravelmente modernos, IE9+ (Internet Explorer 9) com o auxílio de alguns <em><a href="https://en.wikipedia.org/wiki/Polyfill_(programming)">polyfills</a>. </em>É recomendado que você utilize um navegador moderno com o Firefox, Safari, Chrome ou Edge enquanto estiver trabalhando nestes tutoriais.</p>
 
@@ -217,7 +217,7 @@ import './App.css';</pre>
 
 <p>A terceira declaração importa o CSS relacionado ao nosso componente App. Note que não existe um nome de variável e também não há a diretriz <code>from</code>. Essa declaração de <em>import </em>em particular não é nativa à sintaxe de módulos do Javascript — esta vem do <em>Webpack</em>, a ferramenta que o aplicativo <em>create-react-app </em>utiliza para agrupar todos nosso arquivos de JavaScript e servi-los ao navegador.</p>
 
-<h3 id="O_componente_App">O componente <code>App</code></h3>
+<h3 id="O_componente_App">O componente <code>App</code></h3>
 
 <p>Depois dos <em>imports, </em>nós temos uma função chamada <code>App</code>. Enquanto a maior parte da nossa comunidade JavaScript prefere nomes utilizando o padrão <em>camel-case</em> como <code>helloWorld</code>, os componentes React utilizam o padrão de formatação para variáveis em <em>pascal-case</em>, como <code>HelloWorld</code>, para ficar claro que um dado elemento JSX é um componente React e não apenas uma <em>tag </em>de HTML comum. Se você mudasse o nome da função <code>App</code> para <code>app</code>o seu navegador iria mostrar um erro.</p>
 
@@ -248,7 +248,7 @@ import './App.css';</pre>
 
 <p>Alguns elementos na expressão têm atributos, que são escritos assim como no HTML, seguindo o seguinte padrão de <code>atributo="valor"</code>. Na linha 3, a tag <code><a href="/en-US/docs/Web/HTML/Element/div">&lt;div&gt; </a></code>de abertaura tem o atributo <em><code>className</code></em>. Isso é o mesmo que o atributo <code><a href="/pt-BR/docs/Web/HTML/Global_attributes/class">class</a></code>no HTML, porém por conta do JSX ser Javascript, nós não podemos utilizar a palavra <code>class</code> — esta é reservada, isso quer dizer que o JavaScript já utiliza-a para um propósito específico e causaria problemas no nosso código inseri-lá aqui. Alguns outros atributos de HTML são escritos diferentes em JSX em comparação com o HTML, pela mesma razão. Nós falaremos sobre estes quando encontrarmos os mesmos.</p>
 
-<p>Tome um momento para mudar a <em>tag </em><code><a href="/en-US/docs/Web/HTML/Element/p">&lt;p&gt;</a></code> na linha 6 para que esta diga "Hello, world!", e então salve o arquivo. Você irá notar que esta mudança é imediatamente refletida e renderiza no servidor de desenvolvimento executando em <code>http://localhost:3000</code> em seu navegador. Agora delete a <em>tag </em><code><a href="/en-US/docs/Web/HTML/Element/a">&lt;a&gt;</a></code> e salve; o link <em>"Learn React" </em>vai desaparecer.</p>
+<p>Tome um momento para mudar a <em>tag </em><code><a href="/en-US/docs/Web/HTML/Element/p">&lt;p&gt;</a></code> na linha 6 para que esta diga "Hello, world!", e então salve o arquivo. Você irá notar que esta mudança é imediatamente refletida e renderiza no servidor de desenvolvimento executando em <code>http://localhost:3000</code> em seu navegador. Agora delete a <em>tag </em><code><a href="/en-US/docs/Web/HTML/Element/a">&lt;a&gt;</a></code> e salve; o link <em>"Learn React" </em>vai desaparecer.</p>
 
 <p>Seu componente <code>App</code> deve estar assim agora:</p>
 
@@ -316,7 +316,7 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre>
 
 <p>A seguir, nós usaremos algumas de nossas habilidades de JavaScript para ficarmos mais confortáveis editando componentes e trabalhando com dados no React. Nós falaremos sobre como variáveis são utilizadas dentro do JSX, introduziremos <em>props</em>, que são por si uma forma de passar dados para um componente (que então podem ser acessadas utilizando-se de variáveis).</p>
 
-<h3 id="Variáveis_no_JSX">Variáveis no JSX</h3>
+<h3 id="Variáveis_no_JSX">Variáveis no JSX</h3>
 
 <p>De volta ao <code>App.js</code> vamos focar na linha 9:</p>
 

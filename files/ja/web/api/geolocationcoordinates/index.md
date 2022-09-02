@@ -1,13 +1,6 @@
 ---
 title: GeolocationCoordinates
 slug: Web/API/GeolocationCoordinates
-tags:
-  - API
-  - 位置情報 API
-  - GeolocationCoordinates
-  - Interface
-  - 安全なコンテキスト
-translation_of: Web/API/GeolocationCoordinates
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 

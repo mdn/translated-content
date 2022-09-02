@@ -22,7 +22,7 @@ original_slug: Web/API/File/Using_files_from_web_applications
 
 <pre class="brush: js">const selectedFile = document.getElementById('input').files[0];</pre>
 
-<p>Обращение к одному выбранному файлу через <a href="http://jquery.com/">jQuery</a>:</p>
+<p>Обращение к одному выбранному файлу через <a href="http://jquery.com/">jQuery</a>:</p>
 
 <pre class="brush: js">var selectedFile = $('#input').get(0).files[0];
 
@@ -42,11 +42,11 @@ function handleFiles() {
   const fileList = this.files; /* now you can work with the file list */
 }</pre>
 
-<p>Обработчик события <code>change</code> можно назначить атрибутом элемента:</p>
+<p>Обработчик события <code>change</code> можно назначить атрибутом элемента:</p>
 
 <pre class="brush: html">&lt;input type="file" id="input" onchange="handleFiles(this.files)"&gt;</pre>
 
-<p>Когда пользователь выбирает файл, функция <span style="font-family: consolas,monaco,andale mono,monospace;">handleFiles() будет вызвана с объектом </span>{{ domxref("FileList") }}, который состоит из объектов {{ domxref("File") }}, представляющих файлы, выбранные пользователем.</p>
+<p>Когда пользователь выбирает файл, функция <span style="font-family: consolas,monaco,andale mono,monospace;">handleFiles() будет вызвана с объектом </span>{{ domxref("FileList") }}, который состоит из объектов {{ domxref("File") }}, представляющих файлы, выбранные пользователем.</p>
 
 <h2 id="Получение_информации_о_выделенных_файлах">Получение информации о выделенных файлах</h2>
 
@@ -64,7 +64,7 @@ function handleFiles() {
 
 <p>Этот цикл проходит по всем файлам в списке файлов.</p>
 
-<p>Всего существует три атрибута, предоставляемых объектом {{ domxref("File") }}, которые содержат полезную информацию о файле.</p>
+<p>Всего существует три атрибута, предоставляемых объектом {{ domxref("File") }}, которые содержат полезную информацию о файле.</p>
 
 <dl>
  <dt><code>name</code></dt>
@@ -72,7 +72,7 @@ function handleFiles() {
  <dt><code>size</code></dt>
  <dd>Размер файла в байтах, как 64-битное целое число (возможно только чтение).</dd>
  <dt><code>type</code></dt>
- <dd>MIME тип файла, как строка доступная только для чтения, или пустая строка (<code>"") </code>если тип файла не может быть определён.</dd>
+ <dd>MIME тип файла, как строка доступная только для чтения, или пустая строка (<code>"") </code>если тип файла не может быть определён.</dd>
 </dl>
 
 <h3 id="Пример_Отображение_размера_файлаов">Пример: Отображение размера файла(ов)</h3>
@@ -115,7 +115,7 @@ function updateSize() {
 
 <h2 id="Использование_метода_click_скрытых_элементов_выбора_файла">Использование метода click() скрытых элементов выбора файла</h2>
 
-<p>Начиная с Gecko 2.0 {{ geckoRelease("2.0") }}, вы можете скрыть непривлекательный элемент {{ HTMLElement("input") }} и предоставить свой собственный интерфейс для открытия диалогового окна выбора и отображения файла или файлов, выбранных пользователем. Вы можете сделать это, присвоив свойству display элемента input  значение none (display:none) и вызывая метод {{ domxref("element.click","click()") }} скрытого элемента {{ HTMLElement("input") }}.</p>
+<p>Начиная с Gecko 2.0 {{ geckoRelease("2.0") }}, вы можете скрыть непривлекательный элемент {{ HTMLElement("input") }} и предоставить свой собственный интерфейс для открытия диалогового окна выбора и отображения файла или файлов, выбранных пользователем. Вы можете сделать это, присвоив свойству display элемента input  значение none (display:none) и вызывая метод {{ domxref("element.click","click()") }} скрытого элемента {{ HTMLElement("input") }}.</p>
 
 <p>Рассмотрим следующую разметку HTML:</p>
 
@@ -137,22 +137,22 @@ fileSelect.addEventListener("click", function (e) {
 
 <p>Таким образом, вы можете стилизовать новую кнопку открытия диалога выбора файла так, как пожелаете.</p>
 
-<h2 id="Использование_элемента_label_скрытого_элемента_input">Использование элемента label скрытого элемента input</h2>
+<h2 id="Использование_элемента_label_скрытого_элемента_input">Использование элемента label скрытого элемента input</h2>
 
-<p>Для того, чтобы открыть диалог выбора файла без использования JavaScript (метода click()), можно воспользоваться элементом {{ HTMLElement("label") }}.</p>
+<p>Для того, чтобы открыть диалог выбора файла без использования JavaScript (метода click()), можно воспользоваться элементом {{ HTMLElement("label") }}.</p>
 
 <p>Рассмотрим следующую разметку HTML:</p>
 
 <pre class="brush: html"><code>&lt;input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)"&gt;
 &lt;label for="fileElem"&gt;Select some files&lt;/label&gt;</code></pre>
 
-<p>В данном случае нет необходимости добавлять код JavaScript для того, чтобы вызвать <code>fileElem.click()</code>. Также в данном случае вы можете стилизовать элемент label так, как пожелаете.</p>
+<p>В данном случае нет необходимости добавлять код JavaScript для того, чтобы вызвать <code>fileElem.click()</code>. Также в данном случае вы можете стилизовать элемент label так, как пожелаете.</p>
 
 <h2 id="Выбор_файлов_с_использованием_технологии_drag_and_drop">Выбор файлов с использованием технологии drag and drop</h2>
 
 <p>Также вы можете предоставить пользователю возможность непосредственно перетаскивать файлы в ваше веб-приложение.</p>
 
-<p>На первом шаге необходимо определить зону, в которую будут перетаскиваться файлы. В каждом конкретном случае часть содержимого вашей страницы, ответственная за приёмку перетаскиваемых файлов, может варьироваться в зависимости от дизайна приложения, тем не менее, заставить элемент воспринимать события перетаскивания достаточно просто:</p>
+<p>На первом шаге необходимо определить зону, в которую будут перетаскиваться файлы. В каждом конкретном случае часть содержимого вашей страницы, ответственная за приёмку перетаскиваемых файлов, может варьироваться в зависимости от дизайна приложения, тем не менее, заставить элемент воспринимать события перетаскивания достаточно просто:</p>
 
 <pre class="brush: js">var dropbox;
 
@@ -162,9 +162,9 @@ dropbox.addEventListener("dragover", dragover, false);
 dropbox.addEventListener("drop", drop, false);
 </pre>
 
-<p>В данном примере мы превращаем элемент с ID, равным <code>dropbox, в нашу зону перетаскивания при помощи добавления обработчиков для событий </code><code>dragenter</code>, <code>dragover и</code> <code>drop</code>.</p>
+<p>В данном примере мы превращаем элемент с ID, равным <code>dropbox, в нашу зону перетаскивания при помощи добавления обработчиков для событий </code><code>dragenter</code>, <code>dragover и</code> <code>drop</code>.</p>
 
-<p>В нашем случае нет необходимости делать что-то особенное при обработке событий <code>dragenter</code> и <code>dragover</code>, таким образом, обе функции, ответственные за обработку данных событий, довольно просты. Они останавливают распространение события и предотвращают возникновение действия по умолчанию:</p>
+<p>В нашем случае нет необходимости делать что-то особенное при обработке событий <code>dragenter</code> и <code>dragover</code>, таким образом, обе функции, ответственные за обработку данных событий, довольно просты. Они останавливают распространение события и предотвращают возникновение действия по умолчанию:</p>
 
 <pre class="brush: js">function dragenter(e) {
   e.stopPropagation();
@@ -177,7 +177,7 @@ function dragover(e) {
 }
 </pre>
 
-<p>Вся настоящая магия происходит в функции <code>drop()</code>:</p>
+<p>Вся настоящая магия происходит в функции <code>drop()</code>:</p>
 
 <pre class="brush: js">function drop(e) {
   e.stopPropagation();
@@ -190,11 +190,11 @@ function dragover(e) {
 }
 </pre>
 
-<p>Здесь мы извлекаем из события поле <code>dataTransfer</code>, затем вытаскиваем из него список файлов и передаём этот список в <code>handleFiles()</code>. После этого процесс обработки файлов одинаков вне зависимости от того, использовал ли пользователь для их выбора элемент <code>input</code> или технологию drag and drop.</p>
+<p>Здесь мы извлекаем из события поле <code>dataTransfer</code>, затем вытаскиваем из него список файлов и передаём этот список в <code>handleFiles()</code>. После этого процесс обработки файлов одинаков вне зависимости от того, использовал ли пользователь для их выбора элемент <code>input</code> или технологию drag and drop.</p>
 
 <h2 id="Пример_Отображение_эскизов_изображений_выбранных_пользователем">Пример: Отображение эскизов изображений, выбранных пользователем</h2>
 
-<p>Представим, что вы разрабатываете очередной веб-сайт для обмена фотографиями и вы хотите использовать возможности HTML5 для предварительного просмотра изображений перед тем, как пользователь загрузит их. Вы можете создать <code>input</code> элемент или зону перетаскивания, как обсуждалось ранее, и вызвать такую функцию, как <code>handleFiles()</code> ниже.</p>
+<p>Представим, что вы разрабатываете очередной веб-сайт для обмена фотографиями и вы хотите использовать возможности HTML5 для предварительного просмотра изображений перед тем, как пользователь загрузит их. Вы можете создать <code>input</code> элемент или зону перетаскивания, как обсуждалось ранее, и вызвать такую функцию, как <code>handleFiles()</code> ниже.</p>
 
 <pre class="brush: js">function handleFiles(files) {
   for (var i = 0; i &lt; files.length; i++) {
@@ -214,11 +214,11 @@ function dragover(e) {
 }
 </pre>
 
-<p>Здесь наш цикл обрабатывает выбранные пользователем файлы, проверяя атрибут <code>type</code> у каждого файла, чтобы определить является ли файл изображением (выполняется регулярное выражение в строке "<code>image.*</code>"). Для каждого файла, который является изображением, мы создаём новый <code>img</code> элемент. Можно использовать CSS для установки красивых рамок, теней, и указания размеров изображения, но здесь нет нужды делать этого.</p>
+<p>Здесь наш цикл обрабатывает выбранные пользователем файлы, проверяя атрибут <code>type</code> у каждого файла, чтобы определить является ли файл изображением (выполняется регулярное выражение в строке "<code>image.*</code>"). Для каждого файла, который является изображением, мы создаём новый <code>img</code> элемент. Можно использовать CSS для установки красивых рамок, теней, и указания размеров изображения, но здесь нет нужды делать этого.</p>
 
-<p>Каждое изображение имеет CSS класс <code>obj</code> добавленный к нему для упрощения его поиска в DOM дереве. Мы также добавили атрибут <code>file</code> к каждому изображению, указав {{ domxref("File") }} ; это позволит нам получить изображения для фактической загрузки позже. Наконец, мы используем {{ domxref("Node.appendChild()") }} для того, чтобы добавить новый эскиз в область предпросмотра нашего документа.</p>
+<p>Каждое изображение имеет CSS класс <code>obj</code> добавленный к нему для упрощения его поиска в DOM дереве. Мы также добавили атрибут <code>file</code> к каждому изображению, указав {{ domxref("File") }} ; это позволит нам получить изображения для фактической загрузки позже. Наконец, мы используем {{ domxref("Node.appendChild()") }} для того, чтобы добавить новый эскиз в область предпросмотра нашего документа.</p>
 
-<p>Затем мы устанавливаем {{ domxref("FileReader") }} для обработки асинхронной загрузки изображения и прикрепления его к <code>img</code> элементу. После создания нового объекта <code>FileReader</code>, мы настраиваем его функцию <code>onload</code>, затем вызываем <code>readAsDataURL()</code> для запуска операции чтения в фоновом режиме. Когда всё содержимое файла изображения загружено, они преобразуют его в <code>data:</code> URL, который передаётся в колбэк <code>onload</code> . Наша реализация этой процедуры просто устанавливает атрибут <code>src</code> у элемента <code>img</code> загруженного изображения, в результате чего миниатюра изображения появляется на экране пользователя.</p>
+<p>Затем мы устанавливаем {{ domxref("FileReader") }} для обработки асинхронной загрузки изображения и прикрепления его к <code>img</code> элементу. После создания нового объекта <code>FileReader</code>, мы настраиваем его функцию <code>onload</code>, затем вызываем <code>readAsDataURL()</code> для запуска операции чтения в фоновом режиме. Когда всё содержимое файла изображения загружено, они преобразуют его в <code>data:</code> URL, который передаётся в колбэк <code>onload</code> . Наша реализация этой процедуры просто устанавливает атрибут <code>src</code> у элемента <code>img</code> загруженного изображения, в результате чего миниатюра изображения появляется на экране пользователя.</p>
 
 <h2 id="Использование_URLs_объектов">Использование URLs объектов</h2>
 
@@ -245,7 +245,7 @@ function dragover(e) {
 &lt;/div&gt;
 </pre>
 
-<p>Здесь определяется элемент файла {{ HTMLElement("input") }}, а также ссылка, которая вызывает окно выбора файла, т.к. мы сделали элемент ввода файла скрытым, чтобы этот не слишком привлекательный элемент интерфейса не отображался. Об этом рассказывается в разделе <a href="#использование_метода_click_скрытых_элементов_выбора_файла">Использование метода click() скрытых элементов выбора файла</a>, как о методе вызова окна выбора файла.</p>
+<p>Здесь определяется элемент файла {{ HTMLElement("input") }}, а также ссылка, которая вызывает окно выбора файла, т.к. мы сделали элемент ввода файла скрытым, чтобы этот не слишком привлекательный элемент интерфейса не отображался. Об этом рассказывается в разделе <a href="#использование_метода_click_скрытых_элементов_выбора_файла">Использование метода click() скрытых элементов выбора файла</a>, как о методе вызова окна выбора файла.</p>
 
 <p>Метод <code>handleFiles()</code> может быть реализован таким образом:</p>
 
@@ -271,18 +271,18 @@ function handleFiles(files) {
       var li = document.createElement("li");
       list.appendChild(li);
 
-      var img = document.createElement("img");
-      img.src = window.URL.<strong>createObjectURL</strong>(files[i]);
-      img.height = 60;
-      img.onload = function() {
+      var img = document.createElement("img");
+      img.src = window.URL.<strong>createObjectURL</strong>(files[i]);
+      img.height = 60;
+      img.onload = function() {
         window.URL.<strong>revokeObjectURL</strong>(this.src);
-      }
-      li.appendChild(img);
-      var info = document.createElement("span");
-      info.innerHTML = files[i].name + ": " + files[i].size + " bytes";
-      li.appendChild(info);
-    }
-  }
+      }
+      li.appendChild(img);
+      var info = document.createElement("span");
+      info.innerHTML = files[i].name + ": " + files[i].size + " bytes";
+      li.appendChild(info);
+    }
+  }
 }
 </pre>
 
@@ -373,55 +373,55 @@ function handleFiles(files) {
 <pre class="brush: js">&lt;?php
 if (isset($_FILES['myFile'])) {
     // Example:
-    move_uploaded_file($_FILES['myFile']['tmp_name'], "uploads/" . $_FILES['myFile']['name']);
-    exit;
+    move_uploaded_file($_FILES['myFile']['tmp_name'], "uploads/" . $_FILES['myFile']['name']);
+    exit;
 }
 ?&gt;&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-    &lt;title&gt;dnd binary upload&lt;/title&gt;
-    &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
-    &lt;script type="text/javascript"&gt;
-        function sendFile(file) {
-            var uri = "/index.php";
-            var xhr = new XMLHttpRequest();
-            var fd = new FormData();
+    &lt;title&gt;dnd binary upload&lt;/title&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+    &lt;script type="text/javascript"&gt;
+        function sendFile(file) {
+            var uri = "/index.php";
+            var xhr = new XMLHttpRequest();
+            var fd = new FormData();
 
-            xhr.open("POST", uri, true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 &amp;&amp; xhr.status == 200) {
-                    // Handle response.
-                    alert(xhr.responseText); // handle response.
-                }
-            };
-            fd.append('myFile', file);
-            // Initiate a multipart/form-data upload
-            xhr.send(fd);
-        }
-
-        window.onload = function() {
-            var dropzone = document.getElementById("dropzone");
-            dropzone.ondragover = dropzone.ondragenter = function(event) {
-                event.stopPropagation();
-                event.preventDefault();
-            }
-
-            dropzone.ondrop = function(event) {
-                event.stopPropagation();
-                event.preventDefault();
-
-                var filesArray = event.dataTransfer.files;
-                for (var i=0; i&lt;filesArray.length; i++) {
-                    sendFile(filesArray[i]);
-                }
-            }
+            xhr.open("POST", uri, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 &amp;&amp; xhr.status == 200) {
+                    // Handle response.
+                    alert(xhr.responseText); // handle response.
+                }
+            };
+            fd.append('myFile', file);
+            // Initiate a multipart/form-data upload
+            xhr.send(fd);
         }
-    &lt;/script&gt;
+
+        window.onload = function() {
+            var dropzone = document.getElementById("dropzone");
+            dropzone.ondragover = dropzone.ondragenter = function(event) {
+                event.stopPropagation();
+                event.preventDefault();
+            }
+
+            dropzone.ondrop = function(event) {
+                event.stopPropagation();
+                event.preventDefault();
+
+                var filesArray = event.dataTransfer.files;
+                for (var i=0; i&lt;filesArray.length; i++) {
+                    sendFile(filesArray[i]);
+                }
+            }
+        }
+    &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;div&gt;
-        &lt;div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;"&gt;Drag &amp; drop your file here...&lt;/div&gt;
-    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;"&gt;Drag &amp; drop your file here...&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
@@ -455,7 +455,7 @@ window.URL.revokeObjectURL(obj_url);</pre>
 <h2 id="Specification">Спецификации</h2>
 
 <ul>
- <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#file-upload-state-%28type=file%29" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected">File upload state</a> (Рабочие материалы HTML 5)</li>
+ <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#file-upload-state-%28type=file%29" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected">File upload state</a> (Рабочие материалы HTML 5)</li>
  <li><a href="http://www.w3.org/TR/FileAPI/">File API</a></li>
 </ul>
 

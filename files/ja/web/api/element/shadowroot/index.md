@@ -1,15 +1,6 @@
 ---
 title: Element.shadowRoot
 slug: Web/API/Element/shadowRoot
-tags:
-  - API
-  - Element
-  - プロパティ
-  - リファレンス
-  - ShadowRoot
-  - シャドウ DOM
-browser-compat: api.Element.shadowRoot
-translation_of: Web/API/Element/shadowRoot
 ---
 {{APIRef("Shadow DOM")}}
 
@@ -49,20 +40,20 @@ attributeChangedCallback(name, oldValue, newValue) {
 
 ```js
 function updateStyle(elem) {
-  const shadow = elem.shadowRoot;
-  const childNodes = Array.from(shadow.childNodes);
+  const shadow = elem.shadowRoot;
+  const childNodes = Array.from(shadow.childNodes);
 
-  childNodes.forEach(childNode => {
-    if (childNode.nodeName === 'STYLE') {
-      childNode.textContent = `
-        div {
-          width: ${elem.getAttribute('l')}px;
-          height: ${elem.getAttribute('l')}px;
-          background-color: ${elem.getAttribute('c')};
-        }
-      `;
-    }
-  });
+  childNodes.forEach(childNode => {
+    if (childNode.nodeName === 'STYLE') {
+      childNode.textContent = `
+        div {
+          width: ${elem.getAttribute('l')}px;
+          height: ${elem.getAttribute('l')}px;
+          background-color: ${elem.getAttribute('c')};
+        }
+      `;
+    }
+  });
 }
 ```
 

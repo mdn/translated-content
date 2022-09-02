@@ -65,11 +65,11 @@ overscroll-behavior-inline: unset;
 
 ```html
 <main>
-  <div>
-    <div>
-      <p><code>overscroll-behavior-inline</code> has been used to make it so that when the scroll boundaries of the yellow inner box are reached, the whole page does not begin to scroll.</p>
-    </div>
-  </div>
+  <div>
+    <div>
+      <p><code>overscroll-behavior-inline</code> has been used to make it so that when the scroll boundaries of the yellow inner box are reached, the whole page does not begin to scroll.</p>
+    </div>
+  </div>
 </main>
 ```
 

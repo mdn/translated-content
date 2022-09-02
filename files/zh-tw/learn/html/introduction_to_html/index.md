@@ -1,7 +1,6 @@
 ---
 title: HTML介紹
 slug: Learn/HTML/Introduction_to_HTML
-translation_of: Learn/HTML/Introduction_to_HTML
 ---
 {{LearnSidebar}}
 

@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 ---
 <div>{{JSRef}}</div>
 
-<p>O símbolo <strong><code>Symbol.toStringTag</code></strong> é uma propriedade com valor string que é usada para a criação de uma descrição de string de um objeto padrão. É acessado internalmente pelo método {{jsxref("Object.prototype.toString()")}}.</p>
+<p>O símbolo <strong><code>Symbol.toStringTag</code></strong> é uma propriedade com valor string que é usada para a criação de uma descrição de string de um objeto padrão. É acessado internalmente pelo método {{jsxref("Object.prototype.toString()")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/symbol-tostringtag.html")}}</div>
 
@@ -26,7 +26,7 @@ Object.prototype.toString.call(null);      // "[object Null]"
 // ... e mais
 </pre>
 
-<h3 id="Símbolos_built-in_toStringTag">Símbolos built-in toStringTag </h3>
+<h3 id="Símbolos_built-in_toStringTag">Símbolos built-in toStringTag </h3>
 
 <pre class="brush: js notranslate">Object.prototype.toString.call(new Map());       // "[object Map]"
 Object.prototype.toString.call(function* () {}); // "[object GeneratorFunction]"
@@ -36,7 +36,7 @@ Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
 
 <h3 id="Classes_personalizadas_para_objeto_tag">Classes personalizadas para objeto tag</h3>
 
-<p>Quando cria sua própria classe, o JavaScript padroniza para "Object" tag:</p>
+<p>Quando cria sua própria classe, o JavaScript padroniza para "Object" tag:</p>
 
 <pre class="brush: js notranslate">class ValidatorClass {}
 
@@ -45,7 +45,7 @@ Object.prototype.toString.call(new ValidatorClass()); // "[object Object]"
 
 <h3 id="Tag_costumizada_com_toStringTag">Tag costumizada com toStringTag</h3>
 
-<p>Agora, com a ajuda do <code>toStringTag</code>, você é capaz de costumizar sua própria tag:</p>
+<p>Agora, com a ajuda do <code>toStringTag</code>, você é capaz de costumizar sua própria tag:</p>
 
 <pre class="brush: js notranslate">class ValidatorClass {
   get [Symbol.toStringTag]() {
@@ -56,9 +56,9 @@ Object.prototype.toString.call(new ValidatorClass()); // "[object Object]"
 Object.prototype.toString.call(new ValidatorClass()); // "[object Validator]"
 </pre>
 
-<h3 id="toStringTag_disponível_em_todos_os_objetos_protótipos_da_DOM">toStringTag disponível em todos os objetos protótipos da DOM </h3>
+<h3 id="toStringTag_disponível_em_todos_os_objetos_protótipos_da_DOM">toStringTag disponível em todos os objetos protótipos da DOM </h3>
 
-<p>Devido a uma mudança nas especificações <a href="https://github.com/heycam/webidl/pull/357">WebIDL spec change</a> em meados de 2020, navegadores estão adicionando uma propriedade <code>Symbol.toStringTag</code> para todos os objetos protótipos da DOM . Por exemplo, para acessar a propriedade <code>Symbol.toStringTag</code> no {{domxref("HTMLButtonElement")}}:</p>
+<p>Devido a uma mudança nas especificações <a href="https://github.com/heycam/webidl/pull/357">WebIDL spec change</a> em meados de 2020, navegadores estão adicionando uma propriedade <code>Symbol.toStringTag</code> para todos os objetos protótipos da DOM . Por exemplo, para acessar a propriedade <code>Symbol.toStringTag</code> no {{domxref("HTMLButtonElement")}}:</p>
 
 <pre class="brush: js notranslate">let test = document.createElement('button');
 test.toString(); // Retorna [object HTMLButtonElement]

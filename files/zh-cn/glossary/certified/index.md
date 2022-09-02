@@ -1,7 +1,6 @@
 ---
 title: Certified
 slug: Glossary/Certified
-translation_of: Glossary/Certified
 ---
 **已认证标识**意味着一个程序、一项内容或一次数据传输已经成功经过了相关领域专家的认证，因此该项目被认为是完整的、安全的、可信的。
 
@@ -12,7 +11,7 @@ translation_of: Glossary/Certified
 ### 一般性知识
 
 - [信息安全教程](/zh-CN/Learn/tutorial/Information_Security_Basics)
-- 维基百科中的{{Interwiki("wikipedia", "Professional_certification_(computer_technology)#Information_systems_security", "证书")}}
+- 维基百科中的[证书](https://zh.wikipedia.org/wiki/Professional_certification_(computer_technology)#Information_systems_security)
 
 ### Firefox OS
 

@@ -2,10 +2,10 @@
 title: '@counter-style'
 slug: Web/CSS/@counter-style
 tags:
-  - アットルール
+  - At-rule
   - CSS
-  - CSS カウンター
-  - リファレンス
+  - CSS Counter
+  - Reference
   - counter
 browser-compat: css.at-rules.counter-style
 translation_of: Web/CSS/@counter-style
@@ -95,7 +95,9 @@ ul {
 
 ## 形式文法
 
-{{csssyntax}}
+```
+@counter-style <counter-style-name> { <declaration-list> }
+```
 
 ## 例
 
@@ -123,14 +125,13 @@ ul {
 Ⓑ Two
 Ⓒ Three
 Ⓓ Four
-Ⓔ FIve
-...
-...
-Ⓨ Twenty Five
-Ⓩ Twenty Six
-27 Twenty Seven
-28 Twenty Eight
-29 Twenty Nine
+Ⓔ Five
+…
+Ⓨ Twenty-five
+Ⓩ Twenty-six
+27 Twenty-seven
+28 Twenty-eight
+29 Twenty-nine
 30 Thirty
 
 他の例は[デモページ](https://mdn.github.io/css-examples/counter-style-demo/)をご覧ください。
@@ -152,6 +153,6 @@ ul {
 ## 関連情報
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}, {{Cssxref("list-style-type")}}
-- 無名のカウンタースタイルを作成する関数表記である {{cssxref("symbols()", "symbols()")}}
-- CSS の {{Cssxref("counter()")}} および {{Cssxref("counters()")}} 関数
-- [カウンタースタイルのデモ](https://mdn.github.io/css-examples/counter-style-demo/) ([コード](https://github.com/mdn/css-examples/tree/master/counter-style-demo))
+- 無名のカウンタースタイルを作成する関数表記である {{cssxref("symbols", "symbols()")}}
+- CSS の {{Cssxref("counter", "counter()")}} および {{Cssxref("counters", "counters()")}} 関数
+- [カウンタースタイルのデモ](https://mdn.github.io/css-examples/counter-style-demo/) ([コード](https://github.com/mdn/css-examples/tree/main/counter-style-demo))

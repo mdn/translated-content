@@ -1,7 +1,6 @@
 ---
 title: Method
 slug: Glossary/Method
-translation_of: Glossary/Method
 ---
 一个方法就是一个函数，是对象的属性之一。有两种类型的方法：*实例方法*是由对象实例执行的内置任务，另一种是*静态方法*，在对象构造函数内直接调用的任务*。*
 
@@ -11,7 +10,7 @@ translation_of: Glossary/Method
 
 ### Learn about it
 
-- {{InterWiki("wikipedia","Method (computer programming)")}} in Wikipedia
+- [Method (computer programming)](https://zh.wikipedia.org/wiki/Method_(computer_programming)) in Wikipedia
 - [Defining a method in JavaScript](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions) (comparison of the traditional syntax and the new shorthand)
 
 ### Technical reference

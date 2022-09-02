@@ -109,7 +109,7 @@ fit-content(40%)
 
 ## 関連情報
 
-- 関連する大きさのキーワード: {{cssxref("min-content")}}, {{cssxref("max-content")}}
+- 関連する大きさのキーワード: {{cssxref("min-content")}}, {{cssxref("max-content")}}
 - 関連する CSS グリッドプロパティ: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}
 - グリッドレイアウトガイド: _[Line-based placement with CSS Grid](/ja/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
 - グリッドレイアウトガイド: _[Grid template areas - Grid definition shorthands](/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#grid_definition_shorthands)_

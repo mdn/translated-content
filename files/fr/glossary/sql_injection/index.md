@@ -67,9 +67,9 @@ $id = $_GET['id']
 
 Ainsi, en raison de (1) chaque guillemet simple (') dans la chaîne d'entrée est remplacé par des guillemets ("), et en raison de (2) avant chaque (') est ajouté un (/). La chaîne magique contrôlée échoue à contourner l'authentification et votre base de données reste sécurisée.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 
-- {{Interwiki("wikipedia","Injection_SQL","Injection SQL")}} sur Wikipedia
+- [Injection SQL](https://fr.wikipedia.org/wiki/Injection_SQL) sur Wikipédia
 - [Explication de l'injection SQL](https://www.owasp.org/index.php/SQL_Injection) sur OWASP (Open Web Application Security Project) (en)

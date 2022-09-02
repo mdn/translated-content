@@ -85,13 +85,11 @@ En utilisant d'autres méthodes de {{domxref("FileReader")}}, on peut lire le co
 
 ## Spécifications
 
-| Spécification                                        | État                         | Commentaires         |
-| ---------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('File API','#blob','Blob')}} | {{Spec2('File API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Blob")}}
+{{Compat}}
 
 ## Voir aussi
 

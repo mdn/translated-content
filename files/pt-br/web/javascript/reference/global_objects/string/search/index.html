@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/search
 
 <dl>
  <dt><code>regexp</code></dt>
- <dd>Um objeto contendo uma expressão regular. Se um objeto <code>obj</code> for passado como parâmetro e não for do tipo <code>RegExp</code>, ele será implicitamente convertido para uma {{jsxref("RegExp")}} através da instrução <code>new RegExp(obj)</code>.</dd>
+ <dd>Um objeto contendo uma expressão regular. Se um objeto <code>obj</code> for passado como parâmetro e não for do tipo <code>RegExp</code>, ele será implicitamente convertido para uma {{jsxref("RegExp")}} através da instrução <code>new RegExp(obj)</code>.</dd>
 </dl>
 
 <h3 id="Valor_retornado">Valor retornado</h3>
@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/search
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Usando_search">Usando <code>search()</code></h3>
+<h3 id="Usando_search">Usando <code>search()</code></h3>
 
 <p>O exemplo a seguir pesquisa uma string com dois objetos <code>regexp</code> diferentes para mostrar uma pesquisa bem-sucedida (valor positivo) vs. uma pesquisa mal-sucedida (-1).</p>
 
@@ -82,67 +82,15 @@ console.log(str.search(reDot)) // retorna -1 pois não conseguiu encontrar o pon
 
 <h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.String.search")}}
 
 <h2 id="Notas_específicas_para_a_engine_Gecko">Notas específicas para a engine Gecko</h2>
 
 <ul>
- <li>Antes do {{Gecko("8.0")}}, <code>search()</code> foi implementado incorretamente. Quando era chamadosem parâmetros ou com {{jsxref("undefined")}}, ele buscava pela string '<code>undefined</code>', ao invés de buscar pela string vazia. Isto foi corrigido. Agora <code>'a'.search()</code> e <code>'a'.search(undefined)</code> corretamente retornam 0.</li>
- <li>A partir do Gecko 39 {{geckoRelease(39)}}, o argumento não-padrão <code>flags</code> está defasado (deprecated) e dispara um aviso no console ({{bug(1142351)}}).</li>
- <li>A partir do Gecko 47 {{geckoRelease(47)}}, o argumento não-padrão <code>flags</code> não é mais suportado em builds <em>non-release</em> e em breve será removido inteiramente ({{bug(1245801)}}).</li>
- <li>A partir do Gecko 49 {{geckoRelease(49)}}, o argumento não-padrão <code>flags</code> não é mais suportado ({{bug(1108382)}}).</li>
+ <li>Antes do {{Gecko("8.0")}}, <code>search()</code> foi implementado incorretamente. Quando era chamadosem parâmetros ou com {{jsxref("undefined")}}, ele buscava pela string '<code>undefined</code>', ao invés de buscar pela string vazia. Isto foi corrigido. Agora <code>'a'.search()</code> e <code>'a'.search(undefined)</code> corretamente retornam 0.</li>
+ <li>A partir do Gecko 39 {{geckoRelease(39)}}, o argumento não-padrão <code>flags</code> está defasado (deprecated) e dispara um aviso no console ({{bug(1142351)}}).</li>
+ <li>A partir do Gecko 47 {{geckoRelease(47)}}, o argumento não-padrão <code>flags</code> não é mais suportado em builds <em>non-release</em> e em breve será removido inteiramente ({{bug(1245801)}}).</li>
+ <li>A partir do Gecko 49 {{geckoRelease(49)}}, o argumento não-padrão <code>flags</code> não é mais suportado ({{bug(1108382)}}).</li>
 </ul>
 
 <h2 id="Veja_também">Veja também</h2>

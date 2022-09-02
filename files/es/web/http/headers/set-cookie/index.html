@@ -71,7 +71,7 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
  <dt><code>&lt;cookie-name&gt;=&lt;cookie-value&gt;</code></dt>
  <dd>Una cookie comienza con un par nombre-valor:
  <ul>
-  <li>Un <code>&lt;cookie-name&gt;</code> puede ser cualquier cosa excepto caracteres de control (CTLs) o espacios y tabulaciones. Tampoco debe contener caracteres de separación como los siguientes: <code>( ) &lt; &gt; @ , ; : \ " /  [ ] ? = { }</code>.</li>
+  <li>Un <code>&lt;cookie-name&gt;</code> puede ser cualquier cosa excepto caracteres de control (CTLs) o espacios y tabulaciones. Tampoco debe contener caracteres de separación como los siguientes: <code>( ) &lt; &gt; @ , ; : \ " /  [ ] ? = { }</code>.</li>
   <li>Un <code>&lt;cookie-value&gt;</code> opcionalmente puede ser establecido dentro de comillas dobles y se permite usar cualquier caracter US-ASCII excluyendo CTLs, espacios en blanco, comillas dobles, comas, punto y coma y la barra invertida. <strong>Codificación:</strong> Muchas implementaciones realizan codificación de URL sobre los valores de la cookie, aunque esto no es requerido por la especificación RFC. Esto ayuda a satisfacer los requerimientos sobre los caracteres permitidos para &lt;cookie-value&gt;.</li>
   <li><strong><code>Prefijo __Secure-</code></strong>: Las cookies cuyo nombre comience por <code>__Secure-</code> (los guiones forman parte del prefijo) deben ser establecidas con la bandera <code>secure </code>y deben provenir de una página segura (HTTPS).</li>
   <li><strong><code>Prefijo __Host-</code></strong>: Las cookies cuyo nombre comience por <code>__Host-</code> deben ser establecidas con la bandera <code>secure</code>, provenir de una página segura (HTTPS), no deben tener especificado un dominio (y por tanto no son enviadas a subdominios) y la ruta debe ser "/".</li>
@@ -79,16 +79,16 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
  </dd>
  <dt>Expires=&lt;date&gt; {{optional_inline}}</dt>
  <dd>
- <p>El tiempo de vida máximo útil de una cookie como marca HTTP-date timestamp. Ver {{HTTPHeader("Date")}} para el detalle del formato.</p>
+ <p>El tiempo de vida máximo útil de una cookie como marca HTTP-date timestamp. Ver {{HTTPHeader("Date")}} para el detalle del formato.</p>
 
- <p>Si no está especificado, la cookie tendrá el tiempo de vida de una <strong>session cookie. </strong>Una sesión finaliza cuando el cliente lo culmina, esto quiere decir que la sesión será removida en ese punto.</p>
+ <p>Si no está especificado, la cookie tendrá el tiempo de vida de una <strong>session cookie. </strong>Una sesión finaliza cuando el cliente lo culmina, esto quiere decir que la sesión será removida en ese punto.</p>
 
  <div class="blockIndicator warning">
- <p><strong>Advertencia:</strong> Sin embargo, muchos navegadores web tiene una caracteristica llamada "restaurar" que almacenará todas tus pestañas para tenerlas lista cuando el navegador sea usado nuevamente. Las cookies de sesión tambien estarán presentes como si nunca se hubiera cerrado el navegador.</p>
+ <p><strong>Advertencia:</strong> Sin embargo, muchos navegadores web tiene una caracteristica llamada "restaurar" que almacenará todas tus pestañas para tenerlas lista cuando el navegador sea usado nuevamente. Las cookies de sesión tambien estarán presentes como si nunca se hubiera cerrado el navegador.</p>
  </div>
  Cuando una fecha de Expires es definida, la fecha límite es relativa al <em>cliente </em>donde la cookie se define, no en el servidor.</dd>
  <dt><code>Max-Age=&lt;non-zero-digit&gt;</code> {{optional_inline}}</dt>
- <dd>Número de segundos hasta que la cookie expire. Un cero o un número negativo hace expirar la cookie inmediatamente. Los navegadores antiguos (ie6, ie7, and ie8) no soportan max-age. Para otros navegadores, si ambos estan definidos (<code>Expires</code> y <code>Max-Age</code>), <code>Max-Age</code> tendrá mayor importancia.</dd>
+ <dd>Número de segundos hasta que la cookie expire. Un cero o un número negativo hace expirar la cookie inmediatamente. Los navegadores antiguos (ie6, ie7, and ie8) no soportan max-age. Para otros navegadores, si ambos estan definidos (<code>Expires</code> y <code>Max-Age</code>), <code>Max-Age</code> tendrá mayor importancia.</dd>
  <dt><code>Domain=&lt;domain-value&gt;</code> {{optional_inline}}</dt>
  <dd>Anfitriones donde la cookie será enviada.
  <ul>
@@ -101,7 +101,7 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
  <dd>Una ruta que debe existir en la URL solicitada, o el navegador no enviará el encabezado <code>Cookie</code>.</dd>
  <dd>El caracter diagonal (<code>/</code>) es interpretado como un separador de directorios y subdirectorios que serán también comparados: para <code>Path=/docs</code>, <code>/docs</code>, <code>/docs/Web/</code>, y <code>/docs/Web/HTTP</code> todos tendrán que coincidir.</dd>
  <dt id="Secure"><code>Secure</code> {{optional_inline}}</dt>
- <dd>Una cookie segura es sólo enviada al servidor cuando una petición es enviada con el esquema <code>https:</code>. (Sin embargo, información confidencial nunca debería ser almacenada en Cookies HTTP, como todo el mecanismo es  However, confidential information should never be stored in HTTP Cookies, ya que todo el mecanismo es inherentemente inseguro y no encripta ninguna información.)
+ <dd>Una cookie segura es sólo enviada al servidor cuando una petición es enviada con el esquema <code>https:</code>. (Sin embargo, información confidencial nunca debería ser almacenada en Cookies HTTP, como todo el mecanismo es  However, confidential information should never be stored in HTTP Cookies, ya que todo el mecanismo es inherentemente inseguro y no encripta ninguna información.)
  <p class="note"><strong>Nota:</strong> Sitios inseguros (<code>http:</code>) no puenden almacenar directivas "seguras" apartir de Chrome 52+ y Firefox 52+.</p>
  </dd>
  <dt id="HttpOnly"><code>HttpOnly</code> {{optional_inline}}</dt>

@@ -7,7 +7,7 @@ translation_of: Web/CSS/background-attachment
 
 <h2 id="Resumo">Resumo</h2>
 
-<p>Se um {{cssxref("background-image")}} é especificado, a propriedade <a href="/en-US/docs/CSS" title="CSS">CSS</a> <strong><code>background-attachment</code></strong> determina se aquela posição da imagem é fixa com o viewport, ou se irá rolar juntamente com o seu bloco.</p>
+<p>Se um {{cssxref("background-image")}} é especificado, a propriedade <a href="/en-US/docs/CSS" title="CSS">CSS</a> <strong><code>background-attachment</code></strong> determina se aquela posição da imagem é fixa com o viewport, ou se irá rolar juntamente com o seu bloco.</p>
 
 <p>{{cssinfo}}</p>
 
@@ -24,11 +24,11 @@ background-attachment: inherit;
 
 <dl>
  <dt><code>fixed</code></dt>
- <dd>Essa chave significa que o background é fixo em relação ao viewport. Mesmo que um elemento tenha um mecanismo de rolar, o  background ‘fixed’ não movimenta com o elemento.</dd>
+ <dd>Essa chave significa que o background é fixo em relação ao viewport. Mesmo que um elemento tenha um mecanismo de rolar, o  background ‘fixed’ não movimenta com o elemento.</dd>
  <dt><code>local</code></dt>
- <dd>Essa chave significa que o background é fixo em relação ao conteúdo do elemento: ise ele tem um mecanismo de rolar, o background rola com o conteúdo do elemento, e a área pintada e o posicionamento do background são relativos à área de rolagem do elemento ao invés da borda de fronteira deles.</dd>
+ <dd>Essa chave significa que o background é fixo em relação ao conteúdo do elemento: ise ele tem um mecanismo de rolar, o background rola com o conteúdo do elemento, e a área pintada e o posicionamento do background são relativos à área de rolagem do elemento ao invés da borda de fronteira deles.</dd>
  <dt><code>scroll</code></dt>
- <dd>Essa chave significa que o background é fixo em relação ao elemento em si e não rola com seu conteúdo. (É efetivamente ligado à borda do elemento.)</dd>
+ <dd>Essa chave significa que o background é fixo em relação ao elemento em si e não rola com seu conteúdo. (É efetivamente ligado à borda do elemento.)</dd>
  <dt>
  <h3 id="Formal_syntax">Formal syntax</h3>
  </dt>
@@ -63,7 +63,7 @@ background-attachment: inherit;
 
 <h3 id="Suporte_de_múltiplas_imagem_de_background">Suporte de múltiplas imagem de background</h3>
 
-<p>Essa propriedade suporta múltiplas imagens de background. Você pode especificar <code>&lt;attachment&gt;</code> para cada background, separado por vírgulas. Cada imagem é combinada com o correspondente tipo de anexo, do primeiro especificado ao último.</p>
+<p>Essa propriedade suporta múltiplas imagens de background. Você pode especificar <code>&lt;attachment&gt;</code> para cada background, separado por vírgulas. Cada imagem é combinada com o correspondente tipo de anexo, do primeiro especificado ao último.</p>
 
 <h4 id="CSS_2">CSS</h4>
 
@@ -126,85 +126,7 @@ background-attachment: inherit;
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>4.0</td>
-   <td>3.5</td>
-   <td>1.0</td>
-  </tr>
-  <tr>
-   <td>Multiple backgrounds</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1.9.2")}}</td>
-   <td>9.0</td>
-   <td>10.5</td>
-   <td>1.3</td>
-  </tr>
-  <tr>
-   <td><code>local</code></td>
-   <td>4.0</td>
-   <td>{{CompatGeckoDesktop("25")}}</td>
-   <td>9.0</td>
-   <td>10.5</td>
-   <td>5.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>2.1</td>
-   <td>{{CompatGeckoMobile("1.9.2")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>10.0</td>
-   <td>3.2</td>
-  </tr>
-  <tr>
-   <td>Multiple backgrounds</td>
-   <td>2.1</td>
-   <td>{{CompatGeckoMobile("1.9.2")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>10.0</td>
-   <td>3.2</td>
-  </tr>
-  <tr>
-   <td><code>local</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("25")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.properties.background-attachment")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

@@ -9,7 +9,7 @@ translation_of: Web/API/Event/target
 ---
 <p>{{ApiRef("DOM")}}</p>
 
-<p>La propiedad <code><strong>target</strong></code> de la interfaz del {{domxref("event.currentTarget")}} es una referencia al objeto en el cual se lanzo el evento. Es diferente de {{domxref("event.currentTarget")}} donde el controlador de eventos (event handler) es llamado durante la fase de bubbling or capturing del evento.</p>
+<p>La propiedad <code><strong>target</strong></code> de la interfaz del {{domxref("event.currentTarget")}} es una referencia al objeto en el cual se lanzo el evento. Es diferente de {{domxref("event.currentTarget")}} donde el controlador de eventos (event handler) es llamado durante la fase de bubbling or capturing del evento.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -17,7 +17,7 @@ translation_of: Web/API/Event/target
 
 <h2 id="Ejemplo">Ejemplo</h2>
 
-<p>La propiedad <code>event.target</code>  puede ser usada para implementar una <strong>delegación del evento</strong>.</p>
+<p>La propiedad <code>event.target</code>  puede ser usada para implementar una <strong>delegación del evento</strong>.</p>
 
 <pre class="brush: js notranslate">// Crear una lista
 const ul = document.createElement('ul');
@@ -29,9 +29,9 @@ ul.appendChild(li1);
 ul.appendChild(li2);
 
 function hide(e){
-  // e.target se refiere elemento clickado &lt;li&gt;
-  // Esto es diferente de e.currentTarget, que se referiría al padre &lt;ul&gt; en este contexto
-  e.target.style.visibility = 'hidden';
+  // e.target se refiere elemento clickado &lt;li&gt;
+  // Esto es diferente de e.currentTarget, que se referiría al padre &lt;ul&gt; en este contexto
+  e.target.style.visibility = 'hidden';
 }
 
 // Incluir el 'listener' a la lista
@@ -72,7 +72,7 @@ ul.addEventListener('click', hide, false);
 
 <h2 id="Notas_de_compatibilidad">Notas de compatibilidad</h2>
 
-<p>En IE 6-8 el evento 'model' es diferente. Los eventos 'listeners' son  are incluidos con el método no estándar {{domxref('EventTarget.attachEvent')}}. En este modelo, el evento 'object' tiene una propiedad {{domxref('Event.srcElement')}}, en vez de la propiedad <code>target</code>, y tiene la misma semántica que <code>event.target</code>.</p>
+<p>En IE 6-8 el evento 'model' es diferente. Los eventos 'listeners' son  are incluidos con el método no estándar {{domxref('EventTarget.attachEvent')}}. En este modelo, el evento 'object' tiene una propiedad {{domxref('Event.srcElement')}}, en vez de la propiedad <code>target</code>, y tiene la misma semántica que <code>event.target</code>.</p>
 
 <pre class="brush: js notranslate">function hide(e) {
   // Soporte en IE6-8
@@ -81,8 +81,8 @@ ul.addEventListener('click', hide, false);
 }
 </pre>
 
-<h2 id="También_ver">También  ver</h2>
+<h2 id="También_ver">También  ver</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Event/Comparison_of_Event_Targets"> Comparación de los Eventos</a></li>
+ <li><a href="/en-US/docs/Web/API/Event/Comparison_of_Event_Targets"> Comparación de los Eventos</a></li>
 </ul>

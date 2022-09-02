@@ -30,17 +30,15 @@ tbd
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                           | Commentaire        |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("Fullscreen", "#dom-element-requestfullscreen", "Element.requestFullScreen()")}} | {{Spec2("Fullscreen")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.requestFullscreen")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Full-screen API](/en-US/docs/Web/API/Fullscreen_API)
+- [Full-screen API](/fr/docs/Web/API/Fullscreen_API)
 - {{ domxref("Element.requestFullscreen()") }}
 - {{ domxref("Document.exitFullscreen()") }}
 - {{ domxref("Document.fullscreen") }}

@@ -11,9 +11,9 @@ Dans un environnement de programmation, la portée globale ( _global scope_ ) es
 
 Dans le JavaScript côté client, la portée globale est généralement la page web à l'intérieur de laquelle tout le code est en cours d'exécution.
 
-## En apprendre plus
+## Voir aussi
 
 ### Apprendre sur ce sujet
 
 - [Introduction à la portée des variables en JavaScript](/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Les_portées_de_variables)
-- {{interwiki("wikipedia", "Portée (informatique)", "Portée")}} sur Wikipédia
+- [Portée](https://fr.wikipedia.org/wiki/Port%C3%A9e_(informatique)) sur Wikipédia

@@ -12,17 +12,17 @@ translation_of: Web/API/FileList
 <div>Объект этого типа возвращается свойством {{HTMLElement("input")}} элемента, что позволяет получить список выбранных файлов из <code>&lt;input type="file"&gt;</code>. Также используется для получения списка файлов, брошенных в область веб-контента (<strong>Web content</strong>) по средствам drag and drop API. Смотрите <a href="/en-US/docs/DragDrop/DataTransfer" title="DragDrop/DataTransfer">DataTransfer</a> для детального понимания как это использовать.</div>
 
 <div class="note">
-<p><strong>Примечание:</strong> До версии {{Gecko("1.9.2")}}, input элемент поддерживает только один выбранный файл, это значит что FileList содержит только один файл. Начиная с {{Gecko("1.9.2")}}, если input содержит атрибут multiple=true, то FileList может содержать несколько файлов.</p>
+<p><strong>Примечание:</strong> До версии {{Gecko("1.9.2")}}, input элемент поддерживает только один выбранный файл, это значит что FileList содержит только один файл. Начиная с {{Gecko("1.9.2")}}, если input содержит атрибут multiple=true, то FileList может содержать несколько файлов.</p>
 </div>
 
-<h2 id="Using_the_file_list">Использование FileList</h2>
+<h2 id="Using_the_file_list">Использование FileList</h2>
 
-<p>Все <code>&lt;input&gt;</code> элементы имеют файловые массивы которые позволяют получить доступ к файлам. Пример файлового тега:</p>
+<p>Все <code>&lt;input&gt;</code> элементы имеют файловые массивы которые позволяют получить доступ к файлам. Пример файлового тега:</p>
 
 <pre>&lt;input id="fileItem" type="file"&gt;
 </pre>
 
-<p><code><font face="Open Sans, Arial, sans-serif">Этот код извлекает первый </font><a href="/en-US/docs/DOM/File" title="DOM/File">File</a></code> object из списка:</p>
+<p><code><font face="Open Sans, Arial, sans-serif">Этот код извлекает первый </font><a href="/en-US/docs/DOM/File" title="DOM/File">File</a></code> object из списка:</p>
 
 <pre class="brush: js">var file = document.getElementById('fileItem').files[0];
 </pre>
@@ -58,7 +58,7 @@ translation_of: Web/API/FileList
 
 <h3 id="item()">item()</h3>
 
-<p>Возвращает <a href="/en-US/docs/DOM/File" title="DOM/File"><code>File</code></a> объект по его индексу в списке.</p>
+<p>Возвращает <a href="/en-US/docs/DOM/File" title="DOM/File"><code>File</code></a> объект по его индексу в списке.</p>
 
 <pre> File item(
    index
@@ -74,7 +74,7 @@ translation_of: Web/API/FileList
 
 <h6 id="Return_value">Возвращаемое значение</h6>
 
-<p><code>Тип <a href="/en-US/docs/DOM/File" title="DOM/File">File</a>, соотвествует запрашиваемому файлу.</code></p>
+<p><code>Тип <a href="/en-US/docs/DOM/File" title="DOM/File">File</a>, соотвествует запрашиваемому файлу.</code></p>
 
 <h2 id="Example">Примеры</h2>
 

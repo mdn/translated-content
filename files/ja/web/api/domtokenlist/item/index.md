@@ -1,11 +1,6 @@
 ---
 title: DOMTokenList.item()
 slug: Web/API/DOMTokenList/item
-tags:
-- メソッド
-- リファレンス
-browser-compat: api.DOMTokenList.item
-translation_of: Web/API/DOMTokenList/item
 ---
 {{APIRef("DOM")}}
 
@@ -27,7 +22,7 @@ tokenList.item(index)
 
 ### 返値
 
-返された要素を表す文字列です。数値がそのリストの `length` 以上であった場合は `null` を返します。
+返された要素を表す文字列です。数値がそのリストの `length` 以上であった場合は `null` を返します。
 
 ### 例外
 

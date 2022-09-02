@@ -7,9 +7,9 @@ translation_of: Web/SVG/Attribute/ry
 ---
 <div>{{SVGRef}}</div>
 
-<p>Атрибут <strong><code>ry</code></strong> определяет радиус круга по оси y.</p>
+<p>Атрибут <strong><code>ry</code></strong> определяет радиус круга по оси y.</p>
 
-<p>Два элемента используют этот атрибут: <a href="https://developer.mozilla.org/ru/docs/Web/SVG/Element/ellipse" rel="nofollow" title="Документация об этом ещё не написана; пожалуйста, поспособствуйте её написанию!"><code>&lt;ellipse&gt;</code></a> и <a href="https://developer.mozilla.org/ru/docs/Web/SVG/Element/rect" rel="nofollow" title="Документация об этом ещё не написана; пожалуйста, поспособствуйте её написанию!"><code>&lt;rect&gt;</code></a></p>
+<p>Два элемента используют этот атрибут: <a href="https://developer.mozilla.org/ru/docs/Web/SVG/Element/ellipse" rel="nofollow" title="Документация об этом ещё не написана; пожалуйста, поспособствуйте её написанию!"><code>&lt;ellipse&gt;</code></a> и <a href="https://developer.mozilla.org/ru/docs/Web/SVG/Element/rect" rel="nofollow" title="Документация об этом ещё не написана; пожалуйста, поспособствуйте её написанию!"><code>&lt;rect&gt;</code></a></p>
 
 <div id="topExample">
 <div class="hidden">
@@ -17,13 +17,13 @@ translation_of: Web/SVG/Attribute/ry
 </div>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;ellipse cx="50"  cy="50" ry="0"  rx="25" /&gt;
-  &lt;ellipse cx="150" cy="50" ry="25" rx="25" /&gt;
-  &lt;ellipse cx="250" cy="50" ry="50" rx="25" /&gt;
+  &lt;ellipse cx="50"  cy="50" ry="0"  rx="25" /&gt;
+  &lt;ellipse cx="150" cy="50" ry="25" rx="25" /&gt;
+  &lt;ellipse cx="250" cy="50" ry="50" rx="25" /&gt;
 
-  &lt;rect x="20"  y="120" width="60" height="60" ry="0"   rx="15"/&gt;
-  &lt;rect x="120" y="120" width="60" height="60" ry="15"  rx="15"/&gt;
-  &lt;rect x="220" y="120" width="60" height="60" ry="150" rx="15"/&gt;
+  &lt;rect x="20"  y="120" width="60" height="60" ry="0"   rx="15"/&gt;
+  &lt;rect x="120" y="120" width="60" height="60" ry="15"  rx="15"/&gt;
+  &lt;rect x="220" y="120" width="60" height="60" ry="150" rx="15"/&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('topExample', '100%', 200)}}</p>
@@ -50,18 +50,18 @@ translation_of: Web/SVG/Attribute/ry
  </tbody>
 </table>
 
-<p class="note"><strong>Примечание. </strong>Начиная с <strong>SVG2</strong>, <strong>ry</strong> - <em>свойство геометрии(Geometry Property). </em>Это означает, что атрибут также можно использовать как свойство CSS для эллипсов.</p>
+<p class="note"><strong>Примечание. </strong>Начиная с <strong>SVG2</strong>, <strong>ry</strong> - <em>свойство геометрии(Geometry Property). </em>Это означает, что атрибут также можно использовать как свойство CSS для эллипсов.</p>
 
 <h2 id="rect">rect</h2>
 
-<p>Для {{SVGElement('rect')}}, <code>ry</code> определяет радиус эллипса по оси x, используется для скругления углов прямоугольника.</p>
+<p>Для {{SVGElement('rect')}}, <code>ry</code> определяет радиус эллипса по оси x, используется для скругления углов прямоугольника.</p>
 
 <p>Способ интерпретации значения атрибута <code>ry</code> зависит как от атрибута {{SVGAttr("rx")}} , так и от ширины прямоугольника:</p>
 
 <ul>
  <li>Если правильно задано значение для <code>ry</code>, но не для {{SVGAttr("rx")}} (или наоборот), то браузер сочтёт отсутствующее значение равным указанному.</li>
  <li>Если ни <code>ry</code>, ни {{SVGAttr("rx")}} не имеют правильно указанного значения, браузер нарисует прямоугольник с квадратными углами.</li>
- <li>Если <code>ry</code> больше половины ширины прямоугольника, то браузер будет считать значение <code>ry</code> половиной ширины прямоугольника.</li>
+ <li>Если <code>ry</code> больше половины ширины прямоугольника, то браузер будет считать значение <code>ry</code> половиной ширины прямоугольника.</li>
 </ul>
 
 <table class="standard-table">
@@ -107,7 +107,7 @@ translation_of: Web/SVG/Attribute/ry
   <tr>
    <td>{{SpecName("SVG1.1", "shapes.html#RectElementRYAttribute", "ry")}}</td>
    <td>{{Spec2("SVG1.1")}}</td>
-   <td>Начальное определение для <code>&lt;rect&gt;</code></td>
+   <td>Начальное определение для <code>&lt;rect&gt;</code></td>
   </tr>
  </tbody>
 </table>

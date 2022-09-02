@@ -1,12 +1,6 @@
 ---
 title: 正規表示式
 slug: Glossary/Regular_expression
-tags:
-  - CodingScripting
-  - Glossary
-  - Regular Expression
-  - l10n:priority
-translation_of: Glossary/Regular_expression
 ---
 **正規表示式**（_Regular expressions_，或是*regex*）是主宰著字符序列搜索的規則。
 
@@ -16,7 +10,7 @@ translation_of: Glossary/Regular_expression
 
 ### 基本知識
 
-- 維基百科上的 {{Interwiki("wikipedia", "Regular expressions")}}
+- 維基百科上的 [Regular expressions](https://zh.wikipedia.org/wiki/Regular_expressions)
 - [互動教學](http://regexone.com/)
 - [正規表示式視覺化](http://regexper.com/)
 

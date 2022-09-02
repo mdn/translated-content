@@ -1,16 +1,6 @@
 ---
 title: Document.xmlVersion
 slug: Web/API/Document/xmlVersion
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM リファレンス
-  - プロパティ
-  - リファレンス
-  - 非推奨
-browser-compat: api.Document.xmlVersion
-translation_of: Web/API/Document/xmlVersion
 ---
 {{APIRef("DOM")}}{{deprecated_header}}
 

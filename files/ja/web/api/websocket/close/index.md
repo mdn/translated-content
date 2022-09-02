@@ -12,7 +12,7 @@ translation_of: Web/API/WebSocket/close
 ---
 {{APIRef("Web Sockets API")}}
 
-**`WebSocket.close()`** メソッドは、 {{domxref("WebSocket")}} の接続、もしくは接続試行（存在した場合）を閉じます。接続がすでに `CLOSED` だった場合、このメソッドは何もしません。
+**`WebSocket.close()`** メソッドは、 {{domxref("WebSocket")}} の接続、もしくは接続試行（存在した場合）を閉じます。接続がすでに `CLOSED` だった場合、このメソッドは何もしません。
 
 > **Note:** 接続を閉じるプロセスは[クロージングハンドシェイク](https://www.rfc-editor.org/rfc/rfc6455.html#section-1.4)で始まり、 `close()` メソッドはそのクロージングハンドシェイクを開始する前に以前に送信したメッセージを破棄しません。たとえユーザーエージェントがまだそれらのメッセージを送信するのに忙しい場合でも、ハンドシェイクはメッセージが送信されてから開始されます。
 

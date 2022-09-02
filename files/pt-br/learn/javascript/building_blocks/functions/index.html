@@ -8,7 +8,7 @@ original_slug: Aprender/JavaScript/Elementos_construtivos/Functions
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}</div>
 
-<p>Outro conceito essencial em código é função, que permitem que você armazene um pedaço de código que realiza uma simples tarefa dentro de um bloco, e então chama aquele código sempre que você precisar usá-lo com um curto comando — em vez de ter que escrever o mesmo código multiplas vezes. Neste artigo nós vamos explorar conceitos fundamentais por trás  das funções como sintaxe básica, como invocá-las e defini-las, escopo, e parâmetros.</p>
+<p>Outro conceito essencial em código é função, que permitem que você armazene um pedaço de código que realiza uma simples tarefa dentro de um bloco, e então chama aquele código sempre que você precisar usá-lo com um curto comando — em vez de ter que escrever o mesmo código multiplas vezes. Neste artigo nós vamos explorar conceitos fundamentais por trás  das funções como sintaxe básica, como invocá-las e defini-las, escopo, e parâmetros.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -28,7 +28,7 @@ original_slug: Aprender/JavaScript/Elementos_construtivos/Functions
 <p>Em JavaScript, você encontrará funções em todos os lugares, de fato, nós vamos usar funções ao longo de todo o curso; nós só não falaremos sobre elas em damasia. Agora está na hora, contudo, para falarmos sobre funções explicitamente, e realmente explorar sua sintaxe.</p>
 
 <div id="gt-res-content">
-<div class="trans-verified-button-large" dir="ltr" id="gt-res-dir-ctr"><span class="short_text" id="result_box" lang="pt"><span>Praticamente sempre que você faz uso de um</span></span> uma estrutura JavaScript em que tem um par de parenteses — <code>()</code> — e você <strong>não</strong> está usando uma estrutura  embutida da linguagem como um <a href="/en-US/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop">for loop</a>, <a href="/en-US/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while">while or do...while loop</a>, ou <a href="/en-US/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements">if...else statement</a>, você está fazendo uso de uma função.</div>
+<div class="trans-verified-button-large" dir="ltr" id="gt-res-dir-ctr"><span class="short_text" id="result_box" lang="pt"><span>Praticamente sempre que você faz uso de um</span></span> uma estrutura JavaScript em que tem um par de parenteses — <code>()</code> — e você <strong>não</strong> está usando uma estrutura  embutida da linguagem como um <a href="/en-US/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop">for loop</a>, <a href="/en-US/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while">while or do...while loop</a>, ou <a href="/en-US/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements">if...else statement</a>, você está fazendo uso de uma função.</div>
 </div>
 
 <h2 id="Funções_embutidas_do_navegador">Funções embutidas do navegador</h2>
@@ -74,7 +74,7 @@ console.log(madeAString);
 
 <p>A distinção é que métodos são funções definidas dentro de objetos. Funções embutidas de navegador (métodos) e variáveis (que são chamadas <strong>propriedades</strong>) são armazenadas dentro de objetos estruturados, para tornar o código mais estruturado e fácil de manipular.</p>
 
-<p>Você não precisa aprender sobre o<span class="short_text" id="result_box" lang="pt"><span> funcionamento interno</span></span> de objetos estruturados em JavaScript ainda — você pode esperar nosso módulo posterior que ensinará tudo sobre <span class="short_text" id="result_box" lang="pt"><span>funcionamento interno</span></span> de objetos, e como criar o seu próprio. Por hora, nós só queremos esclarecer qualquer confusão possível de método versus função — é pr<span class="short_text" id="result_box" lang="pt"><span>ovável que você encontre ambos</span></span> termos enquanto você olhar os recursos disponível pela  Web.</p>
+<p>Você não precisa aprender sobre o<span class="short_text" id="result_box" lang="pt"><span> funcionamento interno</span></span> de objetos estruturados em JavaScript ainda — você pode esperar nosso módulo posterior que ensinará tudo sobre <span class="short_text" id="result_box" lang="pt"><span>funcionamento interno</span></span> de objetos, e como criar o seu próprio. Por hora, nós só queremos esclarecer qualquer confusão possível de método versus função — é pr<span class="short_text" id="result_box" lang="pt"><span>ovável que você encontre ambos</span></span> termos enquanto você olhar os recursos disponível pela  Web.</p>
 
 <h2 id="Funções_personalizadas">Funções personalizadas</h2>
 
@@ -127,7 +127,7 @@ myFunction()
   alert('hello');
 }</pre>
 
-<p>Isto é chamado<strong> Função anônima</strong> — não tem nome! E também não fará nada em si mesma. Você geralmente cria funções anônimas junto com um<span class="short_text" id="result_box" lang="pt"><span>  manipulador de eventos</span></span>, o exemplo a seguir poderia rodar o código dentro da função sempre que o botão associado é clicado:</p>
+<p>Isto é chamado<strong> Função anônima</strong> — não tem nome! E também não fará nada em si mesma. Você geralmente cria funções anônimas junto com um<span class="short_text" id="result_box" lang="pt"><span>  manipulador de eventos</span></span>, o exemplo a seguir poderia rodar o código dentro da função sempre que o botão associado é clicado:</p>
 
 <pre class="brush: js">var myButton = document.querySelector('button');
 
@@ -184,7 +184,7 @@ anotherGreeting();</pre>
 
 <pre class="brush: js">var myNumber = Math.random();</pre>
 
-<p>A função embutida de navegador <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace()</a>  entretanto precisa de dois parâmetros — a substring para encotrar a string principal, e a substring para ser substituida com ela:</p>
+<p>A função embutida de navegador <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace()</a>  entretanto precisa de dois parâmetros — a substring para encotrar a string principal, e a substring para ser substituida com ela:</p>
 
 <pre class="brush: js">var myText = 'I am a string';
 var newString = myText.replace('string', 'sausage');</pre>
@@ -232,7 +232,7 @@ function greeting() {
   alert('Nossa compania é chamada ' + name + '.');
 }</pre>
 
-<p>Ambas as funções que você quer chamar são chamadas <code>greeting()</code>, mas você só pode acessar o arquivo <code>second.js</code> da função <code>greeting()</code>  — Ele é aplicado no HTML depois no código fonte, então suas variáveis e funções sobrescrevem as de <code>first.js</code>.</p>
+<p>Ambas as funções que você quer chamar são chamadas <code>greeting()</code>, mas você só pode acessar o arquivo <code>second.js</code> da função <code>greeting()</code>  — Ele é aplicado no HTML depois no código fonte, então suas variáveis e funções sobrescrevem as de <code>first.js</code>.</p>
 
 <div class="note">
 <p><strong>Nota</strong>: Você pode ver este exemplo <a href="http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html">rodando no GitHub</a> (veja também <a href="https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions">o código fonte</a>).</p>
@@ -240,7 +240,7 @@ function greeting() {
 
 <p>Manter parte de seus código trancada em funções evita tais problemas, e é considerado boa prática.</p>
 
-<p>Parece um pouco com um zoológico. Os leões, zebras, tigres, e pinguins são mantidos em seus próprios cercados, e só tem acesso as coisas dentro de seu cercado — da mesma maneira que escopos de função. Se eles forem capazes de entrar em outros cercados, problemas podem acontecer. No melhor caso, diferentes animais poderiam sentir-se ralmente desconfortáveis dentro de habitats não familiares — um leão e um tigre poderiam sentir-se muito mal dentro de um úmido e gelado terreno. No pior caso, os leões e tigres poderiam tentar comer os pinguins!</p>
+<p>Parece um pouco com um zoológico. Os leões, zebras, tigres, e pinguins são mantidos em seus próprios cercados, e só tem acesso as coisas dentro de seu cercado — da mesma maneira que escopos de função. Se eles forem capazes de entrar em outros cercados, problemas podem acontecer. No melhor caso, diferentes animais poderiam sentir-se ralmente desconfortáveis dentro de habitats não familiares — um leão e um tigre poderiam sentir-se muito mal dentro de um úmido e gelado terreno. No pior caso, os leões e tigres poderiam tentar comer os pinguins!</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14079/MDN-mozilla-zoo.png" style="display: block; margin: 0 auto;"></p>
 
@@ -253,13 +253,13 @@ function greeting() {
 <ol>
  <li>Primeiro, faça uma cópia local de nosso exmplo <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-scope.html">function-scope.html</a>. Isto contém duas funções chamadas <code>a()</code> e <code>b()</code>, e três variáveis — <code>x</code>, <code>y</code>, e <code>z</code> — duas das quais estão definidas dentro de funções, e uma no escopo global. Ele também contém uma terceira função chamada <code>output()</code>, que leva um simples parâmetro e mostra-o em um parágrafo na página.</li>
  <li>Abra o exemplo em um navegador e em um editor de textos.</li>
- <li>Abra o console JavaScript no developer tools de seu navegador. No console  JavaScript, digite o seguinte comando:
+ <li>Abra o console JavaScript no developer tools de seu navegador. No console  JavaScript, digite o seguinte comando:
   <pre class="brush: js">output(x);</pre>
   Você deve ver o valor da variável <code>x</code> exibida na página.</li>
  <li>Agora tente digitar o seguinte no seu console:
   <pre class="brush: js">output(y);
 output(z);</pre>
-  Ambos dever retornar um erro com as seguintes linhas "<a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: y is not defined</a>". Por que isso? Porque o escopo da função — <code>y</code> e <code>z</code> estão trancadas dentro das funções <code>a()</code> e  <code>b()</code>, então <code>output()</code> não pode acessá-las quando chamadas do escopo global.</li>
+  Ambos dever retornar um erro com as seguintes linhas "<a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: y is not defined</a>". Por que isso? Porque o escopo da função — <code>y</code> e <code>z</code> estão trancadas dentro das funções <code>a()</code> e  <code>b()</code>, então <code>output()</code> não pode acessá-las quando chamadas do escopo global.</li>
  <li>Contudo, que tal chamá-las de dentro de outra função? Tente editar <code>a()</code> e <code>b()</code> para que fiquem desta forma:
   <pre class="brush: js">function a() {
   var y = 2;
@@ -285,11 +285,11 @@ function b() {
   var z = 3;
   output(x);
 }</pre>
-  Salve e atualize novamente, e tente isso novamente em seu console JavaScript:         </li>
+  Salve e atualize novamente, e tente isso novamente em seu console JavaScript:         </li>
  <li>
   <pre class="brush: js">a();
 b();</pre>
-  Ambas chamadas de <code>a()</code> e <code>b()</code> devem mostrar o valor de x — 1. Isso dá certo porque até mesmo a chamada de  <code>output()</code> não está no mesmo escopo em que <code>x</code> é definido, <code>x</code> é uma variável global então é disponível dentro de todo código, em toda parte.</li>
+  Ambas chamadas de <code>a()</code> e <code>b()</code> devem mostrar o valor de x — 1. Isso dá certo porque até mesmo a chamada de  <code>output()</code> não está no mesmo escopo em que <code>x</code> é definido, <code>x</code> é uma variável global então é disponível dentro de todo código, em toda parte.</li>
  <li>Finalmente, tente atualizar o código o seguinte:
   <pre class="brush: js">function a() {
   var y = 2;
@@ -300,7 +300,7 @@ function b() {
   var z = 3;
   output(y);
 }</pre>
-  Salve e atualize novamente, e tente isso novamente em seu console JavaScript: </li>
+  Salve e atualize novamente, e tente isso novamente em seu console JavaScript: </li>
  <li>
   <pre class="brush: js">a();
 b();</pre>
@@ -320,7 +320,7 @@ b();</pre>
 
 <h3 id="Funções_dentro_de_funções">Funções dentro de funções</h3>
 
-<p>Tenha em mente que você pode chamar uma função de qualquer lugar, até mesmo dentro de outra função.  Isso é frenquentemente usado para manter o código organizado — se você tem uma função grande e complexa, é mais fácil de entendê-la se você quebrá-la em várias subfunções:</p>
+<p>Tenha em mente que você pode chamar uma função de qualquer lugar, até mesmo dentro de outra função.  Isso é frenquentemente usado para manter o código organizado — se você tem uma função grande e complexa, é mais fácil de entendê-la se você quebrá-la em várias subfunções:</p>
 
 <pre class="brush: js">function myBigFunction() {
   var myValue;

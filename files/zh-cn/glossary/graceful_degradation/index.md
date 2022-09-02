@@ -1,11 +1,6 @@
 ---
 title: Graceful degradation（优雅降级）
 slug: Glossary/Graceful_degradation
-tags:
-  - 优雅降级
-  - 设计
-  - 词汇表
-translation_of: Glossary/Graceful_degradation
 original_slug: Glossary/优雅降级
 ---
 **优雅降级**（Graceful degradation）是一种设计理念，其核心是尝试构建可在最新浏览器中运行的现代网站/应用程序，而作为降级体验，在低版本浏览器中仍然提供必要的内容和功能。
@@ -18,7 +13,7 @@ original_slug: Glossary/优雅降级
 
 ### 基本知识
 
-- 维基百科的{{Interwiki("wikipedia", "优雅降级")}}
+- 维基百科的[优雅降级](https://zh.wikipedia.org/wiki/优雅降级)
 - [MDN Web 文档词汇表](/zh-CN/docs/Glossary)
 
   - {{Glossary("Graceful degradation")}}

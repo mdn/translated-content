@@ -27,7 +27,7 @@ translation_of: Web/CSS/@keyframes
 
 <h3 id="Valid_keyframe_lists">Valid keyframe lists</h3>
 
-<p>If a keyframe rule doesn't specify the start or end states of the animation (that is, <code>0%</code>/<code>from</code> and <code>100%</code>/<code>to</code>, browsers will use the element's existing styles for the start/end states. This can be used to animate an element from its initial state and back.</p>
+<p>If a keyframe rule doesn't specify the start or end states of the animation (that is, <code>0%</code>/<code>from</code> and <code>100%</code>/<code>to</code>, browsers will use the element's existing styles for the start/end states. This can be used to animate an element from its initial state and back.</p>
 
 <p>Properties that can't be animated in keyframe rules are ignored, but supported properties will still be animated.</p>
 
@@ -72,16 +72,16 @@ translation_of: Web/CSS/@keyframes
 <p>Declarations in a keyframe qualified with <code>!important</code> are ignored.</p>
 
 <pre class="brush: css">@keyframes important1 {
-  from { margin-top: 50px; }
-  50%  { margin-top: 150px !important; } /* ignored */
-  to   { margin-top: 100px; }
+  from { margin-top: 50px; }
+  50%  { margin-top: 150px !important; } /* ignored */
+  to   { margin-top: 100px; }
 }
 
 @keyframes important2 {
   from { margin-top: 50px;
-         margin-bottom: 100px; }
-  to   { margin-top: 150px !important; /* ignored */
-         margin-bottom: 50px; }
+         margin-bottom: 100px; }
+  to   { margin-top: 150px !important; /* ignored */
+         margin-bottom: 50px; }
 }
 </pre>
 
@@ -122,91 +122,14 @@ translation_of: Web/CSS/@keyframes
   <tr>
    <td>{{ SpecName('CSS3 Animations', '#keyframes', '@keyframes') }}</td>
    <td>{{ Spec2('CSS3 Animations') }}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>
-    <p>{{ CompatVersionUnknown() }}{{ property_prefix("-webkit") }}<br>
-     43.0</p>
-   </td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop("5.0") }}{{ property_prefix("-moz") }}<br>
-    {{ CompatGeckoDesktop("16.0") }}</td>
-   <td>10</td>
-   <td>12 {{ property_prefix("-o") }}<br>
-    12.10 <a href="http://my.opera.com/ODIN/blog/2012/08/03/a-hot-opera-12-50-summer-time-snapshot">#</a></td>
-   <td>
-    <p>4.0{{ property_prefix("-webkit") }}<br>
-     9.0 <a href="https://developer.apple.com/library/content/releasenotes/General/WhatsNewInSafari/Articles/Safari_9_0.html#//apple_ref/doc/uid/TP40014305-CH9-SW35">#</a></p>
-   </td>
-  </tr>
-  <tr>
-   <td>ignore <code>!important</code> declarations</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop(19)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}{{ property_prefix("-webkit") }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile("5.0") }}{{ property_prefix("-moz") }}<br>
-    {{ CompatGeckoMobile("16.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>ignore <code>!important</code> declarations</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(19)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.at-rules.keyframes")}}
 
 <h2 id="Notes">Notes</h2>
 

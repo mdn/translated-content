@@ -11,45 +11,45 @@ original_slug: Web/HTML/Microdatos
 ---
 <h2 id="Resumen">Resumen</h2>
 
-<p>Los microdatos son una especificación HTML de <a href="https://developer.mozilla.org/en-US/docs/Glossary/WHATWG">WHATWG</a> que se emplea para anidar metadatos en el contenido existente de las páginas web.[1] Buscadores, arañas web y navegadores pueden extraer y procesar los microdatos a partir de una página y utilizarlos para proveer una experiencia más enriquecida para los usuarios. Los buscadores se benefician considerablemente del acceso directo a estos datos estructurados, ya que les permite entender la información contenida en las páginas y ofrecer mejores resultados a sus usuarios. Los microdatos utilizan un vocabulario de apoyo para describir tanto los elementos como conjuntos de nombre y valor y así asignar valores a sus propiedades. Los microdatos representan un intento de brindar una manera más sencilla de anotar elementos HTML con etiquetas legibles por máquinas que los métodos similares consistentes en usar RDFa y microformatos.</p>
+<p>Los microdatos son una especificación HTML de <a href="https://developer.mozilla.org/en-US/docs/Glossary/WHATWG">WHATWG</a> que se emplea para anidar metadatos en el contenido existente de las páginas web.[1] Buscadores, arañas web y navegadores pueden extraer y procesar los microdatos a partir de una página y utilizarlos para proveer una experiencia más enriquecida para los usuarios. Los buscadores se benefician considerablemente del acceso directo a estos datos estructurados, ya que les permite entender la información contenida en las páginas y ofrecer mejores resultados a sus usuarios. Los microdatos utilizan un vocabulario de apoyo para describir tanto los elementos como conjuntos de nombre y valor y así asignar valores a sus propiedades. Los microdatos representan un intento de brindar una manera más sencilla de anotar elementos HTML con etiquetas legibles por máquinas que los métodos similares consistentes en usar RDFa y microformatos.</p>
 
 <p>El Grupo de Trabajo de HTML del W3C no pudo encontrar un editor que se encargase de la especificación y, por ende, puso término a su desarrollo en 2013 con una «nota».</p>
 
-<p>En un nivel elevado, los microdatos consisten de un grupo de conjuntos nombre-valor. Tales grupos se denominan elementos, y cada conjunto nombre-valor es una propiedad. Los elementos y las propiedades los representan elementos ordinarios.</p>
+<p>En un nivel elevado, los microdatos consisten de un grupo de conjuntos nombre-valor. Tales grupos se denominan elementos, y cada conjunto nombre-valor es una propiedad. Los elementos y las propiedades los representan elementos ordinarios.</p>
 
 <ul>
- <li>Para crear un elemento, se utiliza el atributo <strong>itemscope </strong>(‘alcance de elemento’).</li>
- <li>Para añadir una propiedad a un elemento, el atributo <strong>itemprop</strong> (‘propiedad de elemento’)<strong> </strong>se emplea en uno de los descendientes del elemento.</li>
+ <li>Para crear un elemento, se utiliza el atributo <strong>itemscope </strong>(‘alcance de elemento’).</li>
+ <li>Para añadir una propiedad a un elemento, el atributo <strong>itemprop</strong> (‘propiedad de elemento’)<strong> </strong>se emplea en uno de los descendientes del elemento.</li>
 </ul>
 
 <h2 id="Vocabularios"><span class="mw-headline" id="Vocabularies">Vocabularios</span></h2>
 
-<p>Google, así como otros de los principales buscadores, admiten el vocabulario para datos estructurados de <a href="schema.org">Schema.org</a>. Este vocabulario define un conjunto estandarizado de nombres de tipos y de propiedades: por ejemplo, <a href="http://schema.org/MusicEvent">Evento musical de Schema.org</a> señala conciertos, e incluye las propiedades <em><a href="http://schema.org/startDate">startDate</a></em> (‘fecha inicial’) y <em><a href="http://schema.org/location">location</a></em> (‘ubicación’) para definir los detalles clave del acontecimiento. En este caso, <a href="http://schema.org/MusicEvent">Evento musical de Schema.org</a> es el URL usado por <em>itemtype</em> y <em>startDate</em>, y la ubicación corresponde a las <em>itemprop</em> que defina <a href="http://schema.org/MusicEvent">Evento musical de Schema.org</a>.</p>
+<p>Google, así como otros de los principales buscadores, admiten el vocabulario para datos estructurados de <a href="schema.org">Schema.org</a>. Este vocabulario define un conjunto estandarizado de nombres de tipos y de propiedades: por ejemplo, <a href="http://schema.org/MusicEvent">Evento musical de Schema.org</a> señala conciertos, e incluye las propiedades <em><a href="http://schema.org/startDate">startDate</a></em> (‘fecha inicial’) y <em><a href="http://schema.org/location">location</a></em> (‘ubicación’) para definir los detalles clave del acontecimiento. En este caso, <a href="http://schema.org/MusicEvent">Evento musical de Schema.org</a> es el URL usado por <em>itemtype</em> y <em>startDate</em>, y la ubicación corresponde a las <em>itemprop</em> que defina <a href="http://schema.org/MusicEvent">Evento musical de Schema.org</a>.</p>
 
 <div class="note">
-<p><strong>Nota:</strong> para obtener más información sobre los atributos <em>itemtype</em>, véase <a href="http://schema.org/Thing">http://schema.org/Thing</a> (en inglés)</p>
+<p><strong>Nota:</strong> para obtener más información sobre los atributos <em>itemtype</em>, véase <a href="http://schema.org/Thing">http://schema.org/Thing</a> (en inglés)</p>
 </div>
 
-<p>Los vocabularios de microdatos brindan la semántica, o el significado, de los elementos. Los programadores web pueden diseñar un vocabulario personalizado o servirse de los que existen disponibles en la web, como el ampliamente utilizado vocabulario de <a href="http://schema.org">Schema.org</a>. Schema.org ofrece una colección de vocabularios de etiquetado usados frecuentemente.</p>
+<p>Los vocabularios de microdatos brindan la semántica, o el significado, de los elementos. Los programadores web pueden diseñar un vocabulario personalizado o servirse de los que existen disponibles en la web, como el ampliamente utilizado vocabulario de <a href="http://schema.org">Schema.org</a>. Schema.org ofrece una colección de vocabularios de etiquetado usados frecuentemente.</p>
 
 <p>Vocabularios usados frecuentemente:</p>
 
 <ul>
- <li>Obras creativas: <em><a href="http://schema.org/CreativeWork">CreativeWork</a></em> (‘obra creativa’),<em> <a href="http://schema.org/Book">Book</a></em> (‘libro’), <em><a href="http://schema.org/Movie">Movie</a></em> (película),<em> <a href="http://schema.org/MusicRecording">MusicRecording</a></em> (‘grabación musical’),<em> <a href="http://schema.org/Recipe">Recipe</a></em> (‘receta’),<em> <a href="http://schema.org/TVSeries">TVSeries</a></em> (‘serie de televisión’)</li>
- <li>Objetos distintos del texto incrustados: <em><a href="http://schema.org/AudioObject">AudioObject</a></em> (‘objeto de audio’), <em><a href="http://schema.org/ImageObject">ImageObject</a></em> (‘objeto de imagen’),<em> <a href="http://schema.org/VideoObject">VideoObject</a></em> (‘objeto de vídeo’)</li>
- <li><em><a href="http://schema.org/Event">Event</a></em> (‘acontecimiento’)</li>
- <li><a href="http://schema.org/docs/meddocs.html">Tipos relativos a la salud y la medicina</a>: las notas sobre los tipos relativos a la salud y la medicina se encuentran bajo <em><a href="http://schema.org/MedicalEntity">MedicalEntity</a></em> (‘entidad médica’)</li>
- <li><em><a href="http://schema.org/Organization">Organization</a></em> (‘organización’)</li>
- <li><em><a href="http://schema.org/Person">Person</a></em> (‘persona’)</li>
- <li><em><a href="http://schema.org/Place">Place</a></em> (‘sitio’), <em><a href="http://schema.org/LocalBusiness">LocalBusiness</a></em> (‘negocio local’), <em><a href="http://schema.org/Restaurant">Restaurant</a></em> (‘restaurante’)</li>
- <li><em><a href="http://schema.org/Product">Product</a></em> (‘producto’), <em><a href="http://schema.org/Offer">Offer</a></em> (‘oferta’), <em><a href="http://schema.org/AggregateOffer">AggregateOffer</a></em> (‘oferta general’)</li>
- <li><em><a href="http://schema.org/Review">Review</a></em> (‘reseña’), <em><a href="http://schema.org/AggregateRating">AggregateRating</a></em> (‘valoración totalizada’)</li>
- <li><em><a href="http://schema.org/Action">Action</a></em> (‘acción’)</li>
- <li><em><a href="http://schema.org/Thing">Thing</a></em> (‘cosa’)</li>
+ <li>Obras creativas: <em><a href="http://schema.org/CreativeWork">CreativeWork</a></em> (‘obra creativa’),<em> <a href="http://schema.org/Book">Book</a></em> (‘libro’), <em><a href="http://schema.org/Movie">Movie</a></em> (película),<em> <a href="http://schema.org/MusicRecording">MusicRecording</a></em> (‘grabación musical’),<em> <a href="http://schema.org/Recipe">Recipe</a></em> (‘receta’),<em> <a href="http://schema.org/TVSeries">TVSeries</a></em> (‘serie de televisión’)</li>
+ <li>Objetos distintos del texto incrustados: <em><a href="http://schema.org/AudioObject">AudioObject</a></em> (‘objeto de audio’), <em><a href="http://schema.org/ImageObject">ImageObject</a></em> (‘objeto de imagen’),<em> <a href="http://schema.org/VideoObject">VideoObject</a></em> (‘objeto de vídeo’)</li>
+ <li><em><a href="http://schema.org/Event">Event</a></em> (‘acontecimiento’)</li>
+ <li><a href="http://schema.org/docs/meddocs.html">Tipos relativos a la salud y la medicina</a>: las notas sobre los tipos relativos a la salud y la medicina se encuentran bajo <em><a href="http://schema.org/MedicalEntity">MedicalEntity</a></em> (‘entidad médica’)</li>
+ <li><em><a href="http://schema.org/Organization">Organization</a></em> (‘organización’)</li>
+ <li><em><a href="http://schema.org/Person">Person</a></em> (‘persona’)</li>
+ <li><em><a href="http://schema.org/Place">Place</a></em> (‘sitio’), <em><a href="http://schema.org/LocalBusiness">LocalBusiness</a></em> (‘negocio local’), <em><a href="http://schema.org/Restaurant">Restaurant</a></em> (‘restaurante’)</li>
+ <li><em><a href="http://schema.org/Product">Product</a></em> (‘producto’), <em><a href="http://schema.org/Offer">Offer</a></em> (‘oferta’), <em><a href="http://schema.org/AggregateOffer">AggregateOffer</a></em> (‘oferta general’)</li>
+ <li><em><a href="http://schema.org/Review">Review</a></em> (‘reseña’), <em><a href="http://schema.org/AggregateRating">AggregateRating</a></em> (‘valoración totalizada’)</li>
+ <li><em><a href="http://schema.org/Action">Action</a></em> (‘acción’)</li>
+ <li><em><a href="http://schema.org/Thing">Thing</a></em> (‘cosa’)</li>
  <li><em><a href="http://schema.org/Intangible">Intangible</a></em></li>
 </ul>
 
-<p>Con el objeto de mejorar los resultados de las búsquedas, las empresas operarias de los principales buscadores, como Google, Microsoft y Yahoo!, dependen del vocabulario de <a href="http://schema.org/">Schema.org</a>. Para algunos propósitos específicos, es necesario diseñar un vocabulario especializado. Siempre que resulta posible, se anima a los autores a servirse de vocabularios existentes, dado que esto facilita la reutilización del contenido.</p>
+<p>Con el objeto de mejorar los resultados de las búsquedas, las empresas operarias de los principales buscadores, como Google, Microsoft y Yahoo!, dependen del vocabulario de <a href="http://schema.org/">Schema.org</a>. Para algunos propósitos específicos, es necesario diseñar un vocabulario especializado. Siempre que resulta posible, se anima a los autores a servirse de vocabularios existentes, dado que esto facilita la reutilización del contenido.</p>
 
 <h2 id="Regionalización"><span class="mw-headline" id="Localization">Regionalización</span></h2>
 
@@ -57,15 +57,15 @@ original_slug: Web/HTML/Microdatos
 
 <h2 id="Atributos_globales"><span class="mw-headline" id="Global_attributes">Atributos globales</span></h2>
 
-<p><span class="mw-headline"><em><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemid">itemid</a></em>: el identificador unívoco y global de un elemento</span>.</p>
+<p><span class="mw-headline"><em><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemid">itemid</a></em>: el identificador unívoco y global de un elemento</span>.</p>
 
-<p><span class="mw-headline"><em><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop</a></em>: utilizado para añadir propiedades a un elemento. Cualquier elemento </span>HTML puede contener un atributo <em>itemprop</em> definido, y tal <em>itemprop</em> consiste de un nombre y un valor.</p>
+<p><span class="mw-headline"><em><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop</a></em>: utilizado para añadir propiedades a un elemento. Cualquier elemento </span>HTML puede contener un atributo <em>itemprop</em> definido, y tal <em>itemprop</em> consiste de un nombre y un valor.</p>
 
-<p><span class="mw-headline"><em><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemref">itemref</a></em>: las </span>propiedades que no desciendan de un elemento y contengan el atributo <code>itemscope</code> pueden asociarse con el elemento a través de una <em><strong>itemref</strong></em>. <em>Itemref</em> proporciona una lista de identificadores de elementos (distintos de los <code>itemid</code>s) con propiedades adicionales en otras partes del documento.</p>
+<p><span class="mw-headline"><em><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemref">itemref</a></em>: las </span>propiedades que no desciendan de un elemento y contengan el atributo <code>itemscope</code> pueden asociarse con el elemento a través de una <em><strong>itemref</strong></em>. <em>Itemref</em> proporciona una lista de identificadores de elementos (distintos de los <code>itemid</code>s) con propiedades adicionales en otras partes del documento.</p>
 
-<p><span class="mw-headline"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemscope"><em>itemscope</em></a>: </span><em>Itemscope</em> (por lo general) funciona en conjunto con <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemtype"><em>itemtype</em> </a>para especificar que el HTML contenido en un bloque se refiere a un término concreto. <em>itemscope</em> crea el elemento y define el alcance del <em>itemtype</em> asociado con él. <em>itemtype</em> es un URL válido de un vocabulario (como <a class="external external-icon" href="http://schema.org/">Schema.org</a>) que describe el elemento y el contexto de sus propiedades.</p>
+<p><span class="mw-headline"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemscope"><em>itemscope</em></a>: </span><em>Itemscope</em> (por lo general) funciona en conjunto con <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemtype"><em>itemtype</em> </a>para especificar que el HTML contenido en un bloque se refiere a un término concreto. <em>itemscope</em> crea el elemento y define el alcance del <em>itemtype</em> asociado con él. <em>itemtype</em> es un URL válido de un vocabulario (como <a class="external external-icon" href="http://schema.org/">Schema.org</a>) que describe el elemento y el contexto de sus propiedades.</p>
 
-<p><span class="mw-headline"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemtype"><em>itemtype</em></a>: Es</span>pecifica el URL del vocabulario que se empleará para definir <em>itemprops</em> (‘propiedades de elementos’) en la estructura de datos. Se emplea <em><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemscope">Itemscope</a></em> para establecer el alcance del área de funcionamiento del vocabulario establecido por <em>itemtype</em> dentro de la estructura de datos.</p>
+<p><span class="mw-headline"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemtype"><em>itemtype</em></a>: Es</span>pecifica el URL del vocabulario que se empleará para definir <em>itemprops</em> (‘propiedades de elementos’) en la estructura de datos. Se emplea <em><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemscope">Itemscope</a></em> para establecer el alcance del área de funcionamiento del vocabulario establecido por <em>itemtype</em> dentro de la estructura de datos.</p>
 
 <h2 id="Ejemplo"><span class="mw-headline" id="Example">Ejemplo</span></h2>
 
@@ -161,7 +161,7 @@ original_slug: Web/HTML/Microdatos
 <p>{{ EmbedLiveSample('HTML', '', '100', '', 'Web/HTML/Microdata') }}</p>
 
 <div class="note">
-<p><strong>Nota</strong>: una útil herramienta para extraer estructuras de microdatos a partir de HTML es la <a href="https://developers.google.com/structured-data/testing-tool/ Structured Data Testing Tool">Herramienta de pruebas de datos estructurados</a> de Google. Ponla a prueba en el HTML mostrado más arriba.</p>
+<p><strong>Nota</strong>: una útil herramienta para extraer estructuras de microdatos a partir de HTML es la <a href="https://developers.google.com/structured-data/testing-tool/ Structured Data Testing Tool">Herramienta de pruebas de datos estructurados</a> de Google. Ponla a prueba en el HTML mostrado más arriba.</p>
 </div>
 
 

@@ -7,10 +7,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 
 <h2 id="Sumário">Sumário</h2>
 
-<p>O objeto WeakMap é uma coleção de pares key/value na qual as chaves são fracamente referenciadas.<br>
+<p>O objeto WeakMap é uma coleção de pares key/value na qual as chaves são fracamente referenciadas.<br>
  As chaves <strong>devem </strong>ser objetos, e os valores podem ser de tipos arbitrários.</p>
 
-<p>Você pode descobrir mais sobre <code>WeakMap</code>s na seção {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Keyed_collections", "WeakMap object")}}.</p>
+<p>Você pode descobrir mais sobre <code>WeakMap</code>s na seção {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Keyed_collections", "WeakMap object")}}.</p>
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
@@ -21,16 +21,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 
 <dl>
  <dt><code>iterable</code></dt>
- <dt><span style="font-weight: normal; line-height: 1.5;">Iterable é um Array ou outro objeto iterável cujos elementos são pares key-value (Arrays de dois elementos). Cada par key-value será adicionados ao novo <code>WeakMap</code>. <code>null</code> é tratado como <code>undefined</code>.</span></dt>
+ <dt><span style="font-weight: normal; line-height: 1.5;">Iterable é um Array ou outro objeto iterável cujos elementos são pares key-value (Arrays de dois elementos). Cada par key-value será adicionados ao novo <code>WeakMap</code>. <code>null</code> é tratado como <code>undefined</code>.</span></dt>
 </dl>
 
 <h2 id="Descrição">Descrição</h2>
 
-<h3 id="Por_quê_WeakMap">Por quê <em>Weak</em>Map?</h3>
+<h3 id="Por_quê_WeakMap">Por quê <em>Weak</em>Map?</h3>
 
-<p><span style="line-height: 1.5;">Um programador JavaScript experiente vai notar que esta API pode ser implementada em JavaScript com dois arrays (um para chaves, um para valores) compartilhado pelos 4 métodos da API. Tal implementação teria duas principais incoveniências. A primeira é uma busca O(n) (n sendo o número de chaves no map). A segunda é o problema de memory leak. Com maps escritos manualmente, o array de chaves guardaria referências para objetos chave, prevenindo-os de serem coletados pelo Garbage Collector. Nos WeakMaps nativos, referências aos objetos chave são segurados de modo "fraco", o que significa que eles não previnem a coleção pelo GC no caso de não haver nenhuma outra referência ao objeto. </span></p>
+<p><span style="line-height: 1.5;">Um programador JavaScript experiente vai notar que esta API pode ser implementada em JavaScript com dois arrays (um para chaves, um para valores) compartilhado pelos 4 métodos da API. Tal implementação teria duas principais incoveniências. A primeira é uma busca O(n) (n sendo o número de chaves no map). A segunda é o problema de memory leak. Com maps escritos manualmente, o array de chaves guardaria referências para objetos chave, prevenindo-os de serem coletados pelo Garbage Collector. Nos WeakMaps nativos, referências aos objetos chave são segurados de modo "fraco", o que significa que eles não previnem a coleção pelo GC no caso de não haver nenhuma outra referência ao objeto. </span></p>
 
-<p><span style="line-height: 1.5;">Por conta das referências serem fracas, chaves de <code>WeakMap</code> não são enumeráveis (i.e. não existe um método que dá a você uma lista de chaves). Se existisse tal método, a lista dependeria no estado da coleção do GC, introduzindo não-determinismo. Se você quiser ter uma lista de chaves, deve usar um {{jsxref("Map")}}. </span></p>
+<p><span style="line-height: 1.5;">Por conta das referências serem fracas, chaves de <code>WeakMap</code> não são enumeráveis (i.e. não existe um método que dá a você uma lista de chaves). Se existisse tal método, a lista dependeria no estado da coleção do GC, introduzindo não-determinismo. Se você quiser ter uma lista de chaves, deve usar um {{jsxref("Map")}}. </span></p>
 
 <h2 id="constructor" name="constructor">Construtor</h2>
 
@@ -65,7 +65,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Exemplo_Usando_WeakMap">Exemplo: Usando <code>WeakMap</code></h3>
+<h3 id="Exemplo_Usando_WeakMap">Exemplo: Usando <code>WeakMap</code></h3>
 
 <pre class="brush: js">var wm1 = new WeakMap(),
     wm2 = new WeakMap(),
@@ -117,7 +117,7 @@ wm1.has(o1);   // false
   <tr>
    <td>{{SpecName('ESDraft', '#sec-weakmap-objects', 'WeakMap')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -127,7 +127,7 @@ wm1.has(o1);   // false
 <p><br>
  {{Compat("javascript.builtins.WeakMap")}}</p>
 
-<div id="compat-mobile"> </div>
+<div id="compat-mobile"> </div>
 
 <h2 id="Veja_também">Veja também</h2>
 

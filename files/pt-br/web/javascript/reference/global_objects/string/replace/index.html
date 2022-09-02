@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
  <dt><code>newSubStr</code></dt>
  <dd>A {{jsxref("Global_Objects/String", "String")}} que substitui a <code>substr</code> recebida do parâmetro #1. Uma série de padrões de substituições especiais são suportados. Veja a seção "<a href="#" id="Specifying_a_string_as_a_parameter">Especificando uma string como parâmetro</a>" abaixo.</dd>
  <dt><code>function</code></dt>
- <dd>A função (function) chamada cria uma nova substring (para ser colocada no lugar da substring recebida pelo parametro #1). Os argumentos fornececidos para essa função estão descritos na seção "<a href="#" id="Specifying_a_string_as_a_parameter">Especificando uma função como parâmetro</a>" mais abaixo.</dd>
+ <dd>A função (function) chamada cria uma nova substring (para ser colocada no lugar da substring recebida pelo parametro #1). Os argumentos fornececidos para essa função estão descritos na seção "<a href="#" id="Specifying_a_string_as_a_parameter">Especificando uma função como parâmetro</a>" mais abaixo.</dd>
  <dt><code>flags</code> {{non-standard_inline}}</dt>
  <dd>
  <p>Uma string especificando uma combinação de <a href="/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions">flags de expressão regular</a>. O uso do parâmetro <code>flags</code> no método <code>String.prototype.replace()</code> é não-padrão. Ao invés de usar este parâmetro, use um objeto {{jsxref("Global_Objects/RegExp", "RegExp")}} com as flags correspondentes. O valor deste parâmetro deve ser uma string consistindo em um ou mais dos seguintes caracteres para afetar a operação, tais como descrito:</p>
@@ -62,7 +62,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
 
 <p>Este método não muda o objeto {{jsxref("Global_Objects/String", "String")}}. Ele simplesmente retorna uma nova string.</p>
 
-<p>Para realizar uma pesquisa global e substituir, inclua a flag <code>g</code> na expressão regular ou se o primeiro parâmetro for uma string, inclua <code>g</code> no parâmetro flags.</p>
+<p>Para realizar uma pesquisa global e substituir, inclua a flag <code>g</code> na expressão regular ou se o primeiro parâmetro for uma string, inclua <code>g</code> no parâmetro flags.</p>
 
 <h3 id="Specifying_a_string_as_a_parameter" name="Specifying_a_string_as_a_parameter">Especificando uma string como parâmetro</h3>
 
@@ -71,7 +71,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
 <table class="fullwidth-table" style="height: 140px; width: 575px;">
  <tbody>
   <tr>
-   <td class="header"><strong>Padrão       </strong></td>
+   <td class="header"><strong>Padrão       </strong></td>
    <td class="header"><strong>Insere</strong></td>
   </tr>
   <tr>
@@ -91,31 +91,31 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
    <td>Insere a porção da string que segue a substring combinada.</td>
   </tr>
   <tr>
-   <td><code>$<em>n</em></code> ou <code>$<em>nn</em></code></td>
-   <td>Onde <code><em>n</em></code> ou <code><em>nn</em></code> são dígitos decimais, insere a <em>n</em>-ésima substring entre parêntesis casada, dado o primeiro argumento foi um objeto {{jsxref("Global_Objects/RegExp", "RegExp")}}.</td>
+   <td><code>$<em>n</em></code> ou <code>$<em>nn</em></code></td>
+   <td>Onde <code><em>n</em></code> ou <code><em>nn</em></code> são dígitos decimais, insere a <em>n</em>-ésima substring entre parêntesis casada, dado o primeiro argumento foi um objeto {{jsxref("Global_Objects/RegExp", "RegExp")}}.</td>
   </tr>
  </tbody>
 </table>
 
 <h3 id="Specifying_a_function_as_a_parameter" name="Specifying_a_function_as_a_parameter">Especificando uma função como parâmetro</h3>
 
-<p>Você pode especificar uma função no segundo parâmetro. Neste caso, a função será chamada depois que a correspôndecia for encontrada. O resultado da função (valor retornado) será usado como a string substituta. (Atenção: os padrões de substituição citados acima não se aplicam neste caso). Note que a função será chamada múltiplas vezes para combinação que deve ser substituída se a expressão regular no primeiro parâmetro tiver a regra global.</p>
+<p>Você pode especificar uma função no segundo parâmetro. Neste caso, a função será chamada depois que a correspôndecia for encontrada. O resultado da função (valor retornado) será usado como a string substituta. (Atenção: os padrões de substituição citados acima não se aplicam neste caso). Note que a função será chamada múltiplas vezes para combinação que deve ser substituída se a expressão regular no primeiro parâmetro tiver a regra global.</p>
 
 <p>Os parâmetros da função são:</p>
 
 <table class="fullwidth-table" style="height: 375px; width: 490px;">
  <tbody>
   <tr>
-   <td class="header"><strong>Possíveis nomes            </strong></td>
+   <td class="header"><strong>Possíveis nomes            </strong></td>
    <td class="header"><strong>Valor fornecido</strong></td>
   </tr>
   <tr>
    <td><code>match</code></td>
-   <td>A substring encontrada. Corresponde ao <code>$&amp;</code> acima.</td>
+   <td>A substring encontrada. Corresponde ao <code>$&amp;</code> acima.</td>
   </tr>
   <tr>
    <td><code>p1, p2, ...</code></td>
-   <td>O enésimo parâmetro entre parênteses da RegEx no primeiro parâmetro na função <code>replace()</code> {{jsxref("Global_Objects/RegExp", "RegExp")}}. (Corresponde a <code>$1</code>, <code>$2</code>, etc. acima.) Por exemplo, se <code>/(\a+)(\b+)/</code>, for o primeiro parâmetro, <code>p1</code> é a combinação para <code>\a+</code>, e <code>p2</code> para <code>\b+</code>.</td>
+   <td>O enésimo parâmetro entre parênteses da RegEx no primeiro parâmetro na função <code>replace()</code> {{jsxref("Global_Objects/RegExp", "RegExp")}}. (Corresponde a <code>$1</code>, <code>$2</code>, etc. acima.) Por exemplo, se <code>/(\a+)(\b+)/</code>, for o primeiro parâmetro, <code>p1</code> é a combinação para <code>\a+</code>, e <code>p2</code> para <code>\b+</code>.</td>
   </tr>
   <tr>
    <td><code>offset</code></td>
@@ -132,9 +132,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
  </tbody>
 </table>
 
-<p>(O número exato de argumentos dependerá se o primeiro parâmetro for uma {{jsxref("Global_Objects/RegExp", "RegExp")}} e de quantas combinações entre parênteses houver).</p>
+<p>(O número exato de argumentos dependerá se o primeiro parâmetro for uma {{jsxref("Global_Objects/RegExp", "RegExp")}} e de quantas combinações entre parênteses houver).</p>
 
-<p>O exemplo a seguir irá substituir o valor de <code>newString</code> para <code>'abc - 12345 - #$*%'</code>:</p>
+<p>O exemplo a seguir irá substituir o valor de <code>newString</code> para <code>'abc - 12345 - #$*%'</code>:</p>
 
 <pre class="brush: js notranslate">function replacer(match, p1, p2, p3, offset, string) {
   // p1 não possui digitos,
@@ -162,9 +162,9 @@ console.log(newstr);
 <p><strong>Nota:</strong> Veja <a href="/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions">este guia</a> para maiores explicações as sobre expressões regulares.</p>
 </div>
 
-<h3 id="Usando_global_e_ignore_com_replace">Usando <code>global</code> e <code>ignore</code> com <code>replace()</code></h3>
+<h3 id="Usando_global_e_ignore_com_replace">Usando <code>global</code> e <code>ignore</code> com <code>replace()</code></h3>
 
-<p>Substituir globalmente, "<code>g</code>", só pode ser feito com uma expressão regular. No exemplo a seguir, a expressão regular inclui as flags global e ignore que permitem a função <code>replace()</code> substituir cada "<code>maçãs</code>" por "<code>laranjas</code>" na string.</p>
+<p>Substituir globalmente, "<code>g</code>", só pode ser feito com uma expressão regular. No exemplo a seguir, a expressão regular inclui as flags global e ignore que permitem a função <code>replace()</code> substituir cada "<code>maçãs</code>" por "<code>laranjas</code>" na string.</p>
 
 <pre class="notranslate"><code>var re = /maçãs/gi;
 var str = '</code>As maçãs são redondas. As maçãs são suculentas<code>.';
@@ -198,19 +198,19 @@ console.log(newstr);  // Smith, John</code></pre>
   return propertyName.replace(/[A-Z]/g, upperToHyphenLower);
 }</code></pre>
 
-<p>Dado o seguinte parâmetro: <code>styleHyphenFormat('borderTop')</code>, o valor retornado é '<code>border-top</code>'.</p>
+<p>Dado o seguinte parâmetro: <code>styleHyphenFormat('borderTop')</code>, o valor retornado é '<code>border-top</code>'.</p>
 
-<p>Como queremos transformar o resultado da coincidencia antes da substituição final, nós devemos usar uma função. Isto força que a transformação seja feita antes da chamada do método {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}. Se tivéssemos tentado isto sem a função, o método {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} não teria efeito.</p>
+<p>Como queremos transformar o resultado da coincidencia antes da substituição final, nós devemos usar uma função. Isto força que a transformação seja feita antes da chamada do método {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}. Se tivéssemos tentado isto sem a função, o método {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} não teria efeito.</p>
 
 <pre class="brush: js example-bad notranslate">let newString = propertyName.replace(/[A-Z]/g, '-' + '$&amp;'.toLowerCase());  // não funciona</pre>
 
-<p>Isso acontece porque <code>'$&amp;'.toLowerCase()</code> será executada antes (resultando no mesmo que <code>'$&amp;'</code>) em vez de usar os caracteres da string a ser transformada.</p>
+<p>Isso acontece porque <code>'$&amp;'.toLowerCase()</code> será executada antes (resultando no mesmo que <code>'$&amp;'</code>) em vez de usar os caracteres da string a ser transformada.</p>
 
 <h3 id="Substituindo_graus_Fahrenheit_em_Celsius">Substituindo graus Fahrenheit em Celsius</h3>
 
-<p>O exemplo a seguir converte graus Fahrenheit em Celsius. O grau Fahrenheit deve ser um número terminado com "<code>F</code>". A função retorna o número em Celsius terminando em "<code>C</code>". Por exemplo, se o valor de entrada for "<code>212F</code>", a função deve retornar "<code>100C</code>". Se o número for "<code>0F</code>", a função deve retornar "<code>-17.77777777777778C</code>".</p>
+<p>O exemplo a seguir converte graus Fahrenheit em Celsius. O grau Fahrenheit deve ser um número terminado com "<code>F</code>". A função retorna o número em Celsius terminando em "<code>C</code>". Por exemplo, se o valor de entrada for "<code>212F</code>", a função deve retornar "<code>100C</code>". Se o número for "<code>0F</code>", a função deve retornar "<code>-17.77777777777778C</code>".</p>
 
-<p>A expressão regular <code>test</code> verifica por números que terminem com "<code>F</code>". O número de graus Fahrenheit é acessível pela função pelo segundo parâmetro, <code>p1</code>. A função calcula o Celsius baseado no Fahrenheit passado via string para a função <code>f2c()</code>. A <code>f2c()</code> então retorna o número em Celsius.</p>
+<p>A expressão regular <code>test</code> verifica por números que terminem com "<code>F</code>". O número de graus Fahrenheit é acessível pela função pelo segundo parâmetro, <code>p1</code>. A função calcula o Celsius baseado no Fahrenheit passado via string para a função <code>f2c()</code>. A <code>f2c()</code> então retorna o número em Celsius.</p>
 
 <pre class="notranslate"><code>function f2c(x) {
   function convert(str, p1, offset, s) {
@@ -227,7 +227,7 @@ console.log(newstr);  // Smith, John</code></pre>
 
 <p><strong>Entrada:</strong></p>
 
-<p>Uma string com caracteres: <code>x</code>, <code>-</code> e <code>_</code></p>
+<p>Uma string com caracteres: <code>x</code>, <code>-</code> e <code>_</code></p>
 
 <pre class="notranslate"><code>x-x_
 x---x---x---x---
@@ -236,7 +236,7 @@ x_x_x___x___x___</code></pre>
 
 <p><strong>Saída:</strong></p>
 
-<p>Um array de objetos. Um <code>'x'</code> denota um estado <code>'on'</code>, um <code>'-'</code> (hífen) denota um estado <code>'off'</code>  e um <code>'_'</code> (underline) denota o comprimento do estado <code>'on'</code>.</p>
+<p>Um array de objetos. Um <code>'x'</code> denota um estado <code>'on'</code>, um <code>'-'</code> (hífen) denota um estado <code>'off'</code>  e um <code>'_'</code> (underline) denota o comprimento do estado <code>'on'</code>.</p>
 
 <pre class="notranslate"><code>[
   { on: true, length: 1 },
@@ -287,61 +287,7 @@ console.log(retArr);</code></pre>
 
 <h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Notas_específicas_do_Firefox">Notas específicas do Firefox</h3>
-
-<ul>
- <li>Começando no Gecko 27 {{geckoRelease(27)}}, esse método foi ajustado conforme as especificações do ECMAScript. Quando <code>replace()</code> é chamado com uma expressão regular global, a propriedade {{jsxref("RegExp.lastIndex")}} (se especificada) será resetada para <code>0</code> ({{bug(501739)}}).</li>
-</ul>
+{{Compat("javascript.builtins.String.replace")}}
 
 <h2 id="See_also" name="See_also">Veja também</h2>
 

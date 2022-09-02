@@ -1,14 +1,6 @@
 ---
 title: flex-grow
 slug: Web/CSS/flex-grow
-tags:
-  - CSS
-  - CSS 弹性盒
-  - 布局
-  - 网络
-  - recipe:CSS 属性
-browser-compat: css.properties.flex-grow
-translation_of: Web/CSS/flex-grow
 ---
 {{CSSRef}}
 
@@ -46,7 +38,7 @@ flex-grow: unset;
 
 剩余空间是 flex 容器的大小减去所有 flex 项的大小加起来的大小。如果所有的兄弟项目都有相同的 flex-grow 系数，那么所有的项目将剩余空间按相同比例分配，否则将根据不同的 flex-grow 定义的比例进行分配。
 
- `flex-grow` 与其他的 flex 属性{{cssxref("flex-shrink")}}和{{cssxref("flex-basis")}}一起使用，通常使用{{cssxref("flex")}} 速记来定义，以确保所有的值都被设置。</p>
+ `flex-grow` 与其他的 flex 属性{{cssxref("flex-shrink")}}和{{cssxref("flex-basis")}}一起使用，通常使用{{cssxref("flex")}} 速记来定义，以确保所有的值都被设置。</p>
 
 ## 正式定义
 
@@ -99,7 +91,7 @@ flex-grow: unset;
 
 #### 结果
 
-{{EmbedLiveSample('Setting_flex_item_grow_factor', '700px', '300px', '', 'Web/CSS/flex-grow')}}
+{{EmbedLiveSample('设置 flex 项目增长因子', '700px', '300px')}}
 
 ## 规范
 

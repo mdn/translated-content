@@ -1,7 +1,6 @@
 ---
 title: SVG教學
 slug: Web/SVG/Tutorial
-translation_of: Web/SVG/Tutorial
 ---
 [SVG](/en/SVG)是 W3C XML 的方言之一，用於標記可縮放的向量圖形。目前在 Firefox、Opera、Webkit 瀏覽器、IE 等瀏覽器中已經部分實作。
 

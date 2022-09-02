@@ -1,7 +1,6 @@
 ---
 title: String
 slug: Glossary/String
-translation_of: Glossary/String
 ---
 在任何计算机编程语言中，字符串都是用于表示文本的{{Glossary("character", "字符")}}序列。
 
@@ -11,5 +10,5 @@ translation_of: Glossary/String
 
 ### 基本知识
 
-- 维基百科上的{{Interwiki("wikipedia", "字符串")}}
+- 维基百科上的[字符串](https://zh.wikipedia.org/wiki/字符串)
 - [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures#String_type)

@@ -10,7 +10,7 @@ translation_of: Web/API/HTMLElement/input_event
 ---
 <div>{{APIRef}}</div>
 
-<p>El evento <strong><code>input</code></strong> se dispara cuando el valor (<code>value</code>) de un elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, o {{HTMLElement("textarea")}} ha sido cambiado. </p>
+<p>El evento <strong><code>input</code></strong> se dispara cuando el valor (<code>value</code>) de un elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, o {{HTMLElement("textarea")}} ha sido cambiado. </p>
 
 <table class="properties">
  <tbody>
@@ -41,7 +41,7 @@ translation_of: Web/API/HTMLElement/input_event
  </tbody>
 </table>
 
-<p>El evento también aplica a los elementos con la propiedad {{domxref("HTMLElement.contentEditable", "contenteditable")}} habilidado, y para cualquier otro elemento cuando la propiedad {{domxref("Document.designMode", "designMode")}} esta encendida. En el caso de un <code>contenteditable</code> y <code>designMode</code>, el objetivo del evento es el  the event target is the <em>editing host</em>. Si estas propiedades aplian a múltiples elementos, el host de edición es el elemento ancestro más cercano cuyo padre no es editable.</p>
+<p>El evento también aplica a los elementos con la propiedad {{domxref("HTMLElement.contentEditable", "contenteditable")}} habilidado, y para cualquier otro elemento cuando la propiedad {{domxref("Document.designMode", "designMode")}} esta encendida. En el caso de un <code>contenteditable</code> y <code>designMode</code>, el objetivo del evento es el  the event target is the <em>editing host</em>. Si estas propiedades aplian a múltiples elementos, el host de edición es el elemento ancestro más cercano cuyo padre no es editable.</p>
 
 <p>Para elementos <code>&lt;input&gt;</code> con <code>type=checkbox</code> o <code>type=radio</code>, el evento <code>input</code> debería disparar cuando el usuario alterna el control, por <a href="https://html.spec.whatwg.org/multipage/input.html#the-input-element:event-input-2">la especificación HTML5</a>. Sin embargo, históricamente no siempre es el caso. Revise la compatibilidad o use el evento {{event("change")}} en su lugar para estos tipos.</p>
 

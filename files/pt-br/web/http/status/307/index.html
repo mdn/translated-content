@@ -7,9 +7,9 @@ translation_of: Web/HTTP/Status/307
 
 <p>{{Glossary("HTTP")}} O código de estado <code><strong>307 Redirecionamento temporário</strong></code> indica que o recurso da requisição foi temporariamente alterado para a URL informada no cabeçalho {{HTTPHeader("Location")}}.</p>
 
-<p>O método e o corpo da requisição original são reutilizados para realizar a requisição de redirecionamento. Em casos onde você deseja que o método utilizado seja alterado para {{HTTPMethod("GET")}}, utilize o código de estado {{HTTPStatus("303", "303 See Other")}}. Isto é util quando você deseja dar uma resposta a um método  {{HTTPMethod("PUT")}} que não seja o recurso enviado, mas uma mensagem de confirmação (como por exemplo "Envio de XYZ concluído com sucesso").</p>
+<p>O método e o corpo da requisição original são reutilizados para realizar a requisição de redirecionamento. Em casos onde você deseja que o método utilizado seja alterado para {{HTTPMethod("GET")}}, utilize o código de estado {{HTTPStatus("303", "303 See Other")}}. Isto é util quando você deseja dar uma resposta a um método  {{HTTPMethod("PUT")}} que não seja o recurso enviado, mas uma mensagem de confirmação (como por exemplo "Envio de XYZ concluído com sucesso").</p>
 
-<p>A única diferença entre  <code>307</code> e {{HTTPStatus("302")}} é que o <code>307</code> garante que o método e o corpo não são alterados quando o redirecionamento é feito. Com o <code>302</code>, alguns clientes antigos alteram o método para {{HTTPMethod("GET")}}: o comportamento com métodos não-<code>GET</code> e <code>302</code> fica assim imprevisível na Web, enquanto o comportamento com <code>307</code> é previsível. Para requisições <code>GET</code>, seu comportamento é identico.</p>
+<p>A única diferença entre  <code>307</code> e {{HTTPStatus("302")}} é que o <code>307</code> garante que o método e o corpo não são alterados quando o redirecionamento é feito. Com o <code>302</code>, alguns clientes antigos alteram o método para {{HTTPMethod("GET")}}: o comportamento com métodos não-<code>GET</code> e <code>302</code> fica assim imprevisível na Web, enquanto o comportamento com <code>307</code> é previsível. Para requisições <code>GET</code>, seu comportamento é identico.</p>
 
 <h2 id="Status">Status</h2>
 

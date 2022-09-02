@@ -1,13 +1,6 @@
 ---
 title: performance.getEntries()
 slug: Web/API/Performance/getEntries
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - ウェブパフォーマンス
-browser-compat: api.Performance.getEntries
-translation_of: Web/API/Performance/getEntries
 ---
 {{APIRef("Performance Timeline API")}}
 

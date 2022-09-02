@@ -13,7 +13,7 @@ original_slug: Web/CSS/sintaxe
 
 <h2 id="Declarações_do_CSS">Declarações do CSS</h2>
 
-<p>A definição de propriedades CSS para um valor específico é a função principal da linguagem CSS. A propriedade e valor são chamados de <strong>declaração</strong>, e qualquer motor do CSS calcula quais declarações serão aplicadas para todos um único elemento da página em ordem <span id="result_box" lang="pt"><span class="hps">adequadamente</span><span>, a fim de</span> exibí-lo<span class="hps"> </span><span class="hps">com o estilo</span> correto<span class="hps">.</span></span></p>
+<p>A definição de propriedades CSS para um valor específico é a função principal da linguagem CSS. A propriedade e valor são chamados de <strong>declaração</strong>, e qualquer motor do CSS calcula quais declarações serão aplicadas para todos um único elemento da página em ordem <span id="result_box" lang="pt"><span class="hps">adequadamente</span><span>, a fim de</span> exibí-lo<span class="hps"> </span><span class="hps">com o estilo</span> correto<span class="hps">.</span></span></p>
 
 <p>Tanto as propriedades como os valores são case-sensitive no CSS. Os pares se separam por dois pontos, '<code>:</code>' (<code>U+003A COLON</code>), e espaços em branco antes, entre e depois de propriedades e valores, porém os espaços dentro da declaração são ignorados.</p>
 
@@ -27,7 +27,7 @@ original_slug: Web/CSS/sintaxe
 
 <p><img alt="css syntax - block.png" class="default internal" src="/@api/deki/files/6165/=css_syntax_-_block.png" style="border: 1px solid black; padding: 1em;"></p>
 
-<p>Esses blocos são chamados de <strong>blocos de declaração</strong> e as declarações dentro deles são separadas por, '<code>;</code>' (<code>U+003B SEMICOLON</code>). Um bloco de declaração pode não conter nenhuma declaração. Espaços em branco em volta das declarações não são consideradas. Não é necessário que a última declaração possua ponto e vírgula, apesar de ser considerada uma boa prática pois previne o esquecimento de acrescê-la quando for necessário aumentar o bloco.</p>
+<p>Esses blocos são chamados de <strong>blocos de declaração</strong> e as declarações dentro deles são separadas por, '<code>;</code>' (<code>U+003B SEMICOLON</code>). Um bloco de declaração pode não conter nenhuma declaração. Espaços em branco em volta das declarações não são consideradas. Não é necessário que a última declaração possua ponto e vírgula, apesar de ser considerada uma boa prática pois previne o esquecimento de acrescê-la quando for necessário aumentar o bloco.</p>
 
 <p><img alt="css syntax - declarations block.png" class="default internal" src="/@api/deki/files/6166/=css_syntax_-_declarations_block.png" style="border: 1px solid black; padding: 1em;"></p>
 
@@ -41,7 +41,7 @@ original_slug: Web/CSS/sintaxe
 
 <p>Um elemento pode ser modificado por diversos seletores, e por isso por diversas regras que potencialmente podem conter diversas propriedades, com diferentes valores, o CSS padrão define aquele que possui a precedência e que será aplicado: esse é o tal algoritmo em <a href="/pt-BR/docs/Web/CSS/Getting_Started/Cascading_and_inheritance">cascata</a>.</p>
 
-<div class="note">É importante perceber que quando uma regra é caracterizada por um grupo de seletores que são algum tipo de atalho com cada um sendo um simples seletor isso não se aplica a validade da regra por si só.<br>
+<div class="note">É importante perceber que quando uma regra é caracterizada por um grupo de seletores que são algum tipo de atalho com cada um sendo um simples seletor isso não se aplica a validade da regra por si só.<br>
 <br>
 Isso leva a uma importante consequência: se apenas um dos seletores for inválido, como usar uma pseudo-classe ou pseudo-elemento desconhecido, todo o <em>seletor</em> é inválido e por isso toda a regra é ignorada (invalidada também).</div>
 
@@ -57,7 +57,7 @@ Isso leva a uma importante consequência: se apenas um dos seletores for inváli
 
 <ul>
  <li><strong>Rulesets</strong> (or <em>rules</em>) that, as seen, associate a collection of CSS declarations to a condition described by a selector.</li>
- <li><strong>At-rules</strong> that start with an at sign, '<code>@</code>' (<code>U+0040 COMMERCIAL AT</code>), followed by an identifier and then continuing up the end of the statement, that is up to the next semi-colon (;) outside of a block, or the end of the next block. Each type of <a href="/en/CSS/At-rule" title="At-rule">at-rules</a>, defined by the identifier, may have its own internal syntax, and semantics of course. They are used to convey meta-data information (like {{ cssxref("@charset") }} or {{ cssxref("@import") }}), conditional information (like {{ cssxref("@media") }} or {{ cssxref("@document") }}), or descriptive information (like {{ cssxref("@font-face") }}).</li>
+ <li><strong>At-rules</strong> that start with an at sign, '<code>@</code>' (<code>U+0040 COMMERCIAL AT</code>), followed by an identifier and then continuing up the end of the statement, that is up to the next semi-colon (;) outside of a block, or the end of the next block. Each type of <a href="/en/CSS/At-rule" title="At-rule">at-rules</a>, defined by the identifier, may have its own internal syntax, and semantics of course. They are used to convey meta-data information (like {{ cssxref("@charset") }} or {{ cssxref("@import") }}), conditional information (like {{ cssxref("@media") }} or {{ cssxref("@document") }}), or descriptive information (like {{ cssxref("@font-face") }}).</li>
 </ul>
 
 <p>Any statement which isn't a rule or an at-rule is invalid and ignored.</p>

@@ -1,11 +1,6 @@
 ---
 title: Key
 slug: Glossary/Key
-tags:
-  - Key
-  - 安全性
-  - 術語表
-translation_of: Glossary/Key
 ---
 密鑰是密碼({{Glossary("cipher")}})用於加密({{Glossary("encryption")}}) 和/或解密({{Glossary("decryption")}})的一條信息。關於加密系統({{Glossary("cryptosystem")}})的所有加密信息都應該保持安全，除了密鑰，這是公共的認知。
 
@@ -15,4 +10,4 @@ translation_of: Glossary/Key
 
 ### 技術參考
 
-- 維基百科上的  [Kerckhoffs's principle](http://en.wikipedia.org/wiki/Kerckhoffs%27s_principle)
+- 維基百科上的  [Kerckhoffs's principle](http://en.wikipedia.org/wiki/Kerckhoffs%27s_principle)

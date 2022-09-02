@@ -71,13 +71,11 @@ function setView() {
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                                       | Commentaire                                     |
-| -------------------------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------------- |
-| {{SpecName('Geometry Interfaces', '#DOMPoint', 'DOMPoint')}} | {{Spec2('Geometry Interfaces')}} | Dernière version de la spécification est un ED. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMPoint")}}
+{{Compat}}
 
 ## Voir aussi
 

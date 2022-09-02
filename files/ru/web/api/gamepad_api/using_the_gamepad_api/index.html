@@ -5,24 +5,24 @@ translation_of: Web/API/Gamepad_API/Using_the_Gamepad_API
 ---
 <p>{{DefaultAPISidebar("Gamepad API")}}</p>
 
-<p><span class="seoSummary">HTML5 представляет большое количество необходимых компонентов для полной и интерактивной разработки игр. Такие технологии, как <code>&lt;canvas&gt;</code>, WebGL, <code>&lt;audio&gt;</code>, и <code>&lt;video&gt;</code>, вместе с Javascript сейчас поддерживают большое количество задач, для которых раньше требовались нативные программы.  Gamepad API - это способ получения данных с геймпада и других игровых контроллеров. </span></p>
+<p><span class="seoSummary">HTML5 представляет большое количество необходимых компонентов для полной и интерактивной разработки игр. Такие технологии, как <code>&lt;canvas&gt;</code>, WebGL, <code>&lt;audio&gt;</code>, и <code>&lt;video&gt;</code>, вместе с Javascript сейчас поддерживают большое количество задач, для которых раньше требовались нативные программы.  Gamepad API - это способ получения данных с геймпада и других игровых контроллеров. </span></p>
 
-<p><a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> добавляет в  объект {{ domxref("Window") }}  новые события для получения событий контроллера. Дополнительно к этим событиям, API также добавляет объект {{ domxref("Gamepad") }}, который позволяет получить  состояние подключённого контроллера, и метод {{ domxref("navigator.getGamepads()") }} который позволяет получить все контроллеры, определённые на странице браузера.</p>
+<p><a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> добавляет в  объект {{ domxref("Window") }}  новые события для получения событий контроллера. Дополнительно к этим событиям, API также добавляет объект {{ domxref("Gamepad") }}, который позволяет получить  состояние подключённого контроллера, и метод {{ domxref("navigator.getGamepads()") }} который позволяет получить все контроллеры, определённые на странице браузера.</p>
 
 <h2 id="conntecting">Подключение геймпада</h2>
 
-<p>Когда новый  геймпад подключается, на странице срабатывают события  {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }}. Если геймпад уже был подключён к моменту загрузки страницы, события  {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} сработают, когда пользователь нажмёт на любую кнопку или передвинет стики. </p>
+<p>Когда новый  геймпад подключается, на странице срабатывают события  {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }}. Если геймпад уже был подключён к моменту загрузки страницы, события  {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} сработают, когда пользователь нажмёт на любую кнопку или передвинет стики. </p>
 
 <div class="blockIndicator geckoVersionNote">
-<p>В Firefox геймпад определяется только тогда, когда пользователь взаимодействует с ним, и при этом страница видна и в фокусе. Это помогает предотвратить использование геймпадов для идентификации пользователя. После взаимодействия с одним геймпадом другие подключённые геймпады будут автоматически видны.</p>
+<p>В Firefox геймпад определяется только тогда, когда пользователь взаимодействует с ним, и при этом страница видна и в фокусе. Это помогает предотвратить использование геймпадов для идентификации пользователя. После взаимодействия с одним геймпадом другие подключённые геймпады будут автоматически видны.</p>
 </div>
 
-<p>Вы можете использовать  {{domxref("Window/gamepadconnected_event", "gamepadconnected")}} как в примере:</p>
+<p>Вы можете использовать  {{domxref("Window/gamepadconnected_event", "gamepadconnected")}} как в примере:</p>
 
 <pre class="brush: js;">window.addEventListener("gamepadconnected", function(e) {
-  console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
-    e.gamepad.index, e.gamepad.id,
-    e.gamepad.buttons.length, e.gamepad.axes.length);
+  console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
+    e.gamepad.index, e.gamepad.id,
+    e.gamepad.buttons.length, e.gamepad.axes.length);
 });
 </pre>
 
@@ -33,8 +33,8 @@ translation_of: Web/API/Gamepad_API/Using_the_Gamepad_API
 <p>When a gamepad is disconnected, and if a page has previously received data for that gamepad (e.g. {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }}), a second event is dispatched to the focused window, {{ event("gamepaddisconnected") }}:</p>
 
 <pre class="brush: js">window.addEventListener("gamepaddisconnected", function(e) {
-  console.log("Gamepad disconnected from index %d: %s",
-    e.gamepad.index, e.gamepad.id);
+  console.log("Gamepad disconnected from index %d: %s",
+    e.gamepad.index, e.gamepad.id);
 });</pre>
 
 <p>The gamepad's {{domxref("Gamepad.index", "index")}} property will be unique per-device connected to the system, even if multiple controllers of the same type are used. The <code>index</code> property also functions as the index into the {{jsxref("Array")}} returned by {{ domxref("Navigator.getGamepads()") }}.</p>
@@ -42,26 +42,26 @@ translation_of: Web/API/Gamepad_API/Using_the_Gamepad_API
 <pre class="brush: js">var gamepads = {};
 
 function gamepadHandler(event, connecting) {
-  var gamepad = event.gamepad;
+  var gamepad = event.gamepad;
   // Note:
   // gamepad === navigator.getGamepads()[gamepad.index]
 
-  if (connecting) {
-    gamepads[gamepad.index] = gamepad;
-  } else {
-    delete gamepads[gamepad.index];
-  }
+  if (connecting) {
+    gamepads[gamepad.index] = gamepad;
+  } else {
+    delete gamepads[gamepad.index];
+  }
 }
 
 window.addEventListener("gamepadconnected", function(e) { gamepadHandler(e, true); }, false);
 window.addEventListener("gamepaddisconnected", function(e) { gamepadHandler(e, false); }, false);
 </pre>
 
-<p>This previous example also demonstrates how the <code>gamepad</code> property can be held after the event has completed — a technique we will use for device state querying later.</p>
+<p>This previous example also demonstrates how the <code>gamepad</code> property can be held after the event has completed — a technique we will use for device state querying later.</p>
 
 <h2 id="querying">Querying the Gamepad object</h2>
 
-<p>As you can see, the <strong>gamepad</strong> events discussed above include a <code>gamepad</code> property on the event object, which returns a {{ domxref("Gamepad") }} object. We can use this in order to determine which gamepad (i.e., its ID) had caused the event, since multiple gamepads might be connected at once. We can do much more with the {{ domxref("Gamepad") }} object, including holding a reference to it and querying it to find out which buttons and axes are being pressed at any one time. Doing so is often desirable for games or other interactive web pages that need to know the state of a gamepad now vs. the next time an event fires.</p>
+<p>As you can see, the <strong>gamepad</strong> events discussed above include a <code>gamepad</code> property on the event object, which returns a {{ domxref("Gamepad") }} object. We can use this in order to determine which gamepad (i.e., its ID) had caused the event, since multiple gamepads might be connected at once. We can do much more with the {{ domxref("Gamepad") }} object, including holding a reference to it and querying it to find out which buttons and axes are being pressed at any one time. Doing so is often desirable for games or other interactive web pages that need to know the state of a gamepad now vs. the next time an event fires.</p>
 
 <p>Performing such checks tends to involve using the {{ domxref("Gamepad") }} object in conjunction with an animation loop (e.g., {{ domxref("Window.requestAnimationFrame","requestAnimationFrame") }}), where developers want to make decisions for the current frame based on the state of the gamepad or gamepads.</p>
 
@@ -147,7 +147,7 @@ function pollGamepads() {
   }
 }</pre>
 
-<p>Now on to the main game loop. In each execution of the loop we check if one of four buttons is being pressed; if so, we update the values of the <code>a</code> and <code>b</code> movement variables appropriately, then update the {{ cssxref("left") }} and {{ cssxref("top") }} properties, changing their values to the current values of <code>a</code> and <code>b</code> respectively. This has the effect of moving the ball around the screen.  In current versions of Chrome (version 34 as of this writing) the button values are stored as an array of double values, instead of {{ domxref("GamepadButton") }} objects. This is fixed in development versions.</p>
+<p>Now on to the main game loop. In each execution of the loop we check if one of four buttons is being pressed; if so, we update the values of the <code>a</code> and <code>b</code> movement variables appropriately, then update the {{ cssxref("left") }} and {{ cssxref("top") }} properties, changing their values to the current values of <code>a</code> and <code>b</code> respectively. This has the effect of moving the ball around the screen.  In current versions of Chrome (version 34 as of this writing) the button values are stored as an array of double values, instead of {{ domxref("GamepadButton") }} objects. This is fixed in development versions.</p>
 
 <p>After all this is done, we use our <code>requestAnimationFrame()</code> to request the next animation frame, running <code>gameLoop()</code> again.</p>
 

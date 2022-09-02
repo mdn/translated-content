@@ -1,12 +1,6 @@
 ---
 title: MIME type
 slug: Glossary/MIME_type
-tags:
-  - MIME Types
-  - 内容類型
-  - 媒體類型
-  - 術語表
-translation_of: Glossary/MIME_type
 ---
 **MIME 類型** (現在被更準確的稱作「媒體類型」（media type），但有時也被稱作「内容類型」（content type）) 是一種隨附文件發送的標識字符串。它主要用於標示文件類型、描述內容的類型：例如說，一個聲音文件就可能標為`audio/ogg`、或者圖像檔案就可能是 `image/png`。
 
@@ -16,7 +10,7 @@ translation_of: Glossary/MIME_type
 
 ### 基礎知識
 
-- 維基百科上的 {{interwiki("wikipedia", "Internet media type", "Internet media type")}}
+- 維基百科上的 [Internet media type](https://zh.wikipedia.org/wiki/Internet_media_type)
 
 ### 技術參考
 

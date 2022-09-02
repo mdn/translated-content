@@ -1,15 +1,6 @@
 ---
 title: WritableStream.abort()
 slug: Web/API/WritableStream/abort
-page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Streams
-  - WritableStream
-  - abort
-translation_of: Web/API/WritableStream/abort
 ---
 {{APIRef("Streams")}}
 

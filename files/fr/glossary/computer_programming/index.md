@@ -16,5 +16,5 @@ En utilisant un langage approprié, vous pouvez programmer / créer toutes sorte
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Programmation informatique")}} sur Wikipédia
-- {{Interwiki("wikipedia", "Liste_de_langages_de_programmation")}} sur Wikipédia
+- [Programmation informatique](https://fr.wikipedia.org/wiki/Programmation_informatique) sur Wikipédia
+- [Liste de langages de programmation](https://fr.wikipedia.org/wiki/Liste_de_langages_de_programmation) sur Wikipédia

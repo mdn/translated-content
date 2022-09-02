@@ -19,7 +19,7 @@ translation_of: Web/CSS/width
 
 <p>A propriedade <a href="pt-BR/docs/Web/CSS">CSS</a> <strong>width</strong> determina a largura da área de conteúdo de um elemento. A <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area">área de conteúdo</a> fica dentro do preenchimento, da borda, e da margem de um elemento.</p>
 
-<p>As propriedades {{cssxref("min-width")}} e {{cssxref("max-width")}} sobrescrevem o {{cssxref("width")}}.</p>
+<p>As propriedades {{cssxref("min-width")}} e {{cssxref("max-width")}} sobrescrevem o {{cssxref("width")}}.</p>
 
 <p>{{cssinfo}}</p>
 
@@ -51,13 +51,13 @@ width: unset;
 
 <dl>
  <dt><code>&lt;length&gt;</code></dt>
- <dd>Veja {{cssxref("&lt;length&gt;")}} para possíveis unidades.</dd>
+ <dd>Veja {{cssxref("&lt;length&gt;")}} para possíveis unidades.</dd>
  <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Especificado como {{cssxref("&lt;percentage&gt;")}} da largura do bloco contido. Se a largura do bloco contido depender da largura do elemento, o layout resultante é indefinido.</dd>
+ <dd>Especificado como {{cssxref("&lt;percentage&gt;")}} da largura do bloco contido. Se a largura do bloco contido depender da largura do elemento, o layout resultante é indefinido.</dd>
  <dt><code>border-box </code>{{experimental_inline}}</dt>
- <dd>Se presente, o precedente {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} é aplicado para o border box do elemento.</dd>
+ <dd>Se presente, o precedente {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} é aplicado para o border box do elemento.</dd>
  <dt><code>content-box</code> {{experimental_inline}}</dt>
- <dd>Se presente, o precedente {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} é aplicado para o content box do elemento.</dd>
+ <dd>Se presente, o precedente {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} é aplicado para o content box do elemento.</dd>
  <dt><code>auto</code></dt>
  <dd>O navegador irá calcular e selecionar a largura para o elemento específicado.</dd>
  <dt>fill {{experimental_inline}}</dt>
@@ -71,7 +71,7 @@ width: unset;
  <dt><code>fit-content</code> {{experimental_inline}}</dt>
  <dd>A largura:
  <ul>
-  <li>do comprimento interno mínimo.</li>
+  <li>do comprimento interno mínimo.</li>
   <li>do menor comprimento interno preferível e da largura disponível.</li>
  </ul>
  </dd>
@@ -166,7 +166,7 @@ width: unset;
   <tr>
    <td>{{SpecName('CSS3 Box', '#the-width-and-height-properties', 'width')}}</td>
    <td>{{Spec2('CSS3 Box')}}</td>
-   <td>Adicionadas as palavras-chave <code>max-content</code>, <code>min-content</code>, <code>available</code>, <code>fit-content</code>, <code>border-box</code>, <code>content-box</code></td>
+   <td>Adicionadas as palavras-chave <code>max-content</code>, <code>min-content</code>, <code>available</code>, <code>fit-content</code>, <code>border-box</code>, <code>content-box</code></td>
   </tr>
   <tr>
    <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'width')}}</td>
@@ -193,216 +193,7 @@ width: unset;
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Características</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>4</td>
-   <td>3.5</td>
-   <td>1.0 (85)</td>
-  </tr>
-  <tr>
-   <td>Animação{{experimental_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("16.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>max-content</code>{{experimental_inline}}</td>
-   <td>{{CompatChrome(22.0)}} {{property_prefix("-webkit")}}<br>
-    {{CompatChrome(46.0)}} [1]</td>
-   <td>{{CompatGeckoDesktop("1.9")}}{{property_prefix("-moz")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>15 {{property_prefix("-webkit")}}</td>
-   <td>2.0 (421) (<code>intrinsic</code> value)<br>
-    6.1 {{property_prefix("-webkit")}}</td>
-  </tr>
-  <tr>
-   <td><code>min-content</code>{{experimental_inline}}</td>
-   <td>
-    <p>{{CompatChrome(22.0)}} [4] {{property_prefix("-webkit")}}<br>
-     {{CompatChrome(46.0)}} [1]</p>
-   </td>
-   <td>{{CompatGeckoDesktop("1.9")}} {{property_prefix("-moz")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>15 {{property_prefix("-webkit")}}</td>
-   <td>2.0 (421) (<code>min-intrinsic</code> value)<br>
-    6.1 {{property_prefix("-webkit")}}</td>
-  </tr>
-  <tr>
-   <td><code>available</code>{{experimental_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("1.9")}} {{property_prefix("-moz")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}<sup>[1]</sup></td>
-  </tr>
-  <tr>
-   <td><code>fill-available</code>{{experimental_inline}}</td>
-   <td>{{CompatChrome(22.0)}} {{property_prefix("-webkit")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>6.1 {{property_prefix("-webkit")}}</td>
-  </tr>
-  <tr>
-   <td><code>fit-content</code>{{experimental_inline}}</td>
-   <td>{{CompatChrome(22.0)}} [4] {{property_prefix("-webkit")}}<br>
-    {{CompatChrome(46.0)}} [1]</td>
-   <td>{{CompatGeckoDesktop("1.9")}} {{property_prefix("-moz")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>15 {{property_prefix("-webkit")}}</td>
-   <td>6.1 {{property_prefix("-webkit")}}<sup>[2]</sup></td>
-  </tr>
-  <tr>
-   <td><code>border-box</code> e <code>content-box</code>{{experimental_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>fill</code></td>
-   <td>{{CompatChrome(46.0)}}</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Características</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome para Android</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Animação{{experimental_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("16.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>max-content</code>{{experimental_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(46.0)}} [1]</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(46.0)}} [1]</td>
-  </tr>
-  <tr>
-   <td><code>min-content</code>{{experimental_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(46.0)}} [1]</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(46.0)}} [1]</td>
-  </tr>
-  <tr>
-   <td><code>available</code>{{experimental_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>fill-available</code>{{experimental_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(46.0)}} [1]</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(46.0)}} [1]</td>
-  </tr>
-  <tr>
-   <td><code>fit-content</code>{{experimental_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(46.0)}} [1]</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(46.0)}} [1]</td>
-  </tr>
-  <tr>
-   <td><code>border-box</code> e <code>content-box</code>{{experimental_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>fill</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(46.0)}}</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td>{{CompatChrome(46.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] WebKit implementou uma variação deste valor sob o nome <em><code>fill-available</code></em> em Dezembro de 2013.</p>
-
-<p>[2] Versões anteriores do WebKit implementaram uma versão anterior deste valore sob o nome <em><code>intrinsic</code></em>, mas implementam <em><code>fit-content</code></em> desde a versão 6.1 também.</p>
-
-<p>[3] Não fixado.</p>
-
-<p>[4] O antigo WebKit suporta as palavras-chave <em><code>intrinsic</code></em> e <em><code>min-intrinsic</code></em>, mas foi removido no <a href="https://www.chromestatus.com/feature/5758434351775744">Chrome 48</a>.</p>
+{{Compat("css.properties.width")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

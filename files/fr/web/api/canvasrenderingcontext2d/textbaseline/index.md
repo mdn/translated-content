@@ -101,13 +101,11 @@ window.addEventListener('load', drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-textbaseline", "CanvasRenderingContext2D.textBaseline")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.textBaseline")}}
+{{Compat}}
 
 ## Voir aussi
 

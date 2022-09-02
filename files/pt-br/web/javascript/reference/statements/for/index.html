@@ -7,7 +7,7 @@ translation_of: Web/JavaScript/Reference/Statements/for
 
 <p>A instrução <code>for</code><strong> </strong>cria um loop que consiste em três expressões opcionais, dentro de parênteses e separadas por ponto e vírgula, seguidas por uma declaração ou uma sequência de declarações executadas em sequência.</p>
 
-<p>A fonte desse exemplo interativo está armazenada em um repositório do GitHub. Se você gostaria de contribuir com os projetos de exemplos interativos, por favor clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>  e nos envie um pull request (requisição para puxar).</p>
+<p>A fonte desse exemplo interativo está armazenada em um repositório do GitHub. Se você gostaria de contribuir com os projetos de exemplos interativos, por favor clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>  e nos envie um pull request (requisição para puxar).</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -20,18 +20,18 @@ translation_of: Web/JavaScript/Reference/Statements/for
  <dd>Uma expressão (incluindo expressões de atribuição) ou declarações variáveis. Geralmente usada para iniciar o contador de variáveis. Esta expressão pode, opcionalmente, declarar novas variáveis com a palavra chave <code>var</code>. Essas variáveis não são locais no loop, isto é, elas estão no mesmo escopo que o loop <code>for</code><strong> </strong>está. Variáveis declaradas com let são locais para a declaração.</dd>
  <dd>O resultado desta expressão é descartado.</dd>
  <dt><code>condição</code></dt>
- <dd>Uma expressão para ser avaliada antes de cada iteração do loop. Se esta expressão for avaliada para true, <code>declaração</code> será executado. Este teste da condição é opcional. Se omitido, a condição sempre será avaliada como verdadeira. Se a expressão for avaliada como falsa, a execução irá para a primeira expressão após a construção loop <code>for</code>.</dd>
+ <dd>Uma expressão para ser avaliada antes de cada iteração do loop. Se esta expressão for avaliada para true, <code>declaração</code> será executado. Este teste da condição é opcional. Se omitido, a condição sempre será avaliada como verdadeira. Se a expressão for avaliada como falsa, a execução irá para a primeira expressão após a construção loop <code>for</code>.</dd>
  <dt><code>expressão final</code></dt>
  <dd>Uma expressão que será validada no final de cada iteração de loop. Isso ocorre antes da próxima avaliação da condição. Geralmente usado para atualizar ou incrementar a variável do contador.</dd>
  <dt><code>declaração</code></dt>
- <dd>Uma declaração que é executada enquanto a condição for verdadeira. Para executar múltiplas condições dentro do loop, use uma instrução de bloco <code>({...})</code> para agrupar essas condições. Para não executar declarações dentro do loop, use uma instrução vazia <code>(;)</code>.</dd>
+ <dd>Uma declaração que é executada enquanto a condição for verdadeira. Para executar múltiplas condições dentro do loop, use uma instrução de bloco <code>({...})</code> para agrupar essas condições. Para não executar declarações dentro do loop, use uma instrução vazia <code>(;)</code>.</dd>
 </dl>
 
 <h2 id="Exemplos_de_uso">Exemplos de uso</h2>
 
-<h3 id="Usando_for">Usando <code>for</code></h3>
+<h3 id="Usando_for">Usando <code>for</code></h3>
 
-<p>A declaração <code>for</code> começa declarando a variável <code>i</code> e inicializando-a como <code>0</code>. Ela verifica se <code>i</code> é menor que nove, executa as duas instruções subsequentes e incrementa 1 a variável <code>i</code> após cada passagem pelo loop.</p>
+<p>A declaração <code>for</code> começa declarando a variável <code>i</code> e inicializando-a como <code>0</code>. Ela verifica se <code>i</code> é menor que nove, executa as duas instruções subsequentes e incrementa 1 a variável <code>i</code> após cada passagem pelo loop.</p>
 
 <pre class="brush: js notranslate">for (var i = 0; i &lt; 9; i++) {
    console.log(i);
@@ -39,9 +39,9 @@ translation_of: Web/JavaScript/Reference/Statements/for
 }
 </pre>
 
-<h3 id="Expressões_for_opcionais">Expressões <code>for</code> opcionais</h3>
+<h3 id="Expressões_for_opcionais">Expressões <code>for</code> opcionais</h3>
 
-<p>Todas as três expressões na condição do loop <code>for</code> são opcionais.</p>
+<p>Todas as três expressões na condição do loop <code>for</code> são opcionais.</p>
 
 <p>Por exemplo, no bloco de <em>inicialização</em>, não é necessário inicializar variáveis:</p>
 
@@ -60,7 +60,7 @@ for (; i &lt; 9; i++) {
    // more statements
 }</pre>
 
-<p>Você também pode omitir todos os três blocos. Novamente, certifique-se de usar uma instrução <code>break</code> no final do loop e também modificar (incrementar) uma variável, para que a condição do <code>break</code> seja verdadeira em algum momento.</p>
+<p>Você também pode omitir todos os três blocos. Novamente, certifique-se de usar uma instrução <code>break</code> no final do loop e também modificar (incrementar) uma variável, para que a condição do <code>break</code> seja verdadeira em algum momento.</p>
 
 <pre class="brush: js notranslate">var i = 0;
 
@@ -71,7 +71,7 @@ for (;;) {
 }
 </pre>
 
-<h3 id="Usando_for_sem_uma_declaração">Usando <code>for</code> sem uma declaração </h3>
+<h3 id="Usando_for_sem_uma_declaração">Usando <code>for</code> sem uma declaração </h3>
 
 <p>O ciclo <code>for</code> a seguir calcula a posição de deslocamento de um nó na seção [expressão final] e, portanto, não requer o uso de uma declaração ou de um bloco de declaração, e no seu lugar é usado um ponto-vírgula - <code>;</code>.</p>
 
@@ -95,7 +95,7 @@ showOffsetPos("content");
 // left: 0px;
 // top: 153px;"</pre>
 
-<div class="note"><strong>Nota:</strong> Nesse caso, quando você não usa a seção de declaração, <strong>o</strong><strong> ponto-e-vírgula é colocada imediatamente após a declaração do ciclo</strong>.</div>
+<div class="note"><strong>Nota:</strong> Nesse caso, quando você não usa a seção de declaração, <strong>o</strong><strong> ponto-e-vírgula é colocada imediatamente após a declaração do ciclo</strong>.</div>
 
 <h2 id="Especificações">Especificações</h2>
 
@@ -128,55 +128,7 @@ showOffsetPos("content");
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome para Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.statements.for")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

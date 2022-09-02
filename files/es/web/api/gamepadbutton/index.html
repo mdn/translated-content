@@ -10,9 +10,9 @@ translation_of: Web/API/GamepadButton
 ---
 <div>{{APIRef("Gamepad API")}}</div>
 
-<p>La interfaz <strong><code>GamepadButton</code></strong> define un botón individual de un gamepad u otro control, dando acceso al estado actual de diferentes tipos de botones disponibles en el dispositivo de control.</p>
+<p>La interfaz <strong><code>GamepadButton</code></strong> define un botón individual de un gamepad u otro control, dando acceso al estado actual de diferentes tipos de botones disponibles en el dispositivo de control.</p>
 
-<p>Un objeto <code>GamepadButton</code> se devuelve al solicitar cualquier valor del array devuelto por la propiedad <code>buttons</code> de la interfaz {{domxref("Gamepad")}}.</p>
+<p>Un objeto <code>GamepadButton</code> se devuelve al solicitar cualquier valor del array devuelto por la propiedad <code>buttons</code> de la interfaz {{domxref("Gamepad")}}.</p>
 
 <div class="note">
 <p><strong>Nota</strong>: Este es el caso en Firefox Gecko 28 en adelante; Chrome y versiones anteriores de Firefox continúan devolviendo un array de valores dobles cuando se accede a esta propiedad.</p>
@@ -22,14 +22,14 @@ translation_of: Web/API/GamepadButton
 
 <dl>
  <dt>{{domxref("GamepadButton.value")}} {{readonlyInline}}</dt>
- <dd>Un valor doble usado para representar el estado actual de botones análogos, así como los gatillos de muchos gamepads modernos. Los valores se normalizan al rango 0.0 —1.0, donde 0.0 representa un botón que no está presionado, y 1.0 representa un botón que está completamente presionado.</dd>
+ <dd>Un valor doble usado para representar el estado actual de botones análogos, así como los gatillos de muchos gamepads modernos. Los valores se normalizan al rango 0.0 —1.0, donde 0.0 representa un botón que no está presionado, y 1.0 representa un botón que está completamente presionado.</dd>
  <dt>{{domxref("GamepadButton.pressed")}} {{readonlyInline}}</dt>
- <dd>Un valor {{domxref("Boolean")}} que indica el estado el botón, ya sea que actualmente se encuentre presionado (<code>true</code>) o sin presionar (<code>false</code>).</dd>
+ <dd>Un valor {{domxref("Boolean")}} que indica el estado el botón, ya sea que actualmente se encuentre presionado (<code>true</code>) o sin presionar (<code>false</code>).</dd>
 </dl>
 
 <h2 id="Ejemplo">Ejemplo</h2>
 
-<p>El siguiente código se toma de mi demostración del botón del API de Gamepad (puedes <a href="http://chrisdavidmills.github.io/gamepad-buttons/">ver el demo en vivo</a>, y <a href="https://github.com/chrisdavidmills/gamepad-buttons/tree/master">encontrar el código fuente</a> en Github.) Nota que el código — en Chrome {{domxref("Navigator.getGamepads")}} necesita un prefijo <code>webkit</code> y los valores del botón serán guardados como un array de valores dobles, mientras qe en Firefox {{domxref("Navigator.getGamepads")}} no se necesita un prefijo, y los valores de los botones se guardan como un array de objetos {{domxref("GamepadButton")}}; estas son las propiedades {{domxref("GamepadButton.value")}} o {{domxref("GamepadButton.pressed")}} a las que necesitamos acceder, dependiendo de qué tipo de botones haya. En este simple ejemplo yo solo he permitido estos.</p>
+<p>El siguiente código se toma de mi demostración del botón del API de Gamepad (puedes <a href="http://chrisdavidmills.github.io/gamepad-buttons/">ver el demo en vivo</a>, y <a href="https://github.com/chrisdavidmills/gamepad-buttons/tree/master">encontrar el código fuente</a> en Github.) Nota que el código — en Chrome {{domxref("Navigator.getGamepads")}} necesita un prefijo <code>webkit</code> y los valores del botón serán guardados como un array de valores dobles, mientras qe en Firefox {{domxref("Navigator.getGamepads")}} no se necesita un prefijo, y los valores de los botones se guardan como un array de objetos {{domxref("GamepadButton")}}; estas son las propiedades {{domxref("GamepadButton.value")}} o {{domxref("GamepadButton.pressed")}} a las que necesitamos acceder, dependiendo de qué tipo de botones haya. En este simple ejemplo yo solo he permitido estos.</p>
 
 <pre class="brush: js notranslate">function gameLoop() {
   if(navigator.webkitGetGamepads) {
@@ -87,4 +87,4 @@ translation_of: Web/API/GamepadButton
 
 <h2 id="Recomendado">Recomendado</h2>
 
-<p><a href="/en-US/docs/Web/Guide/API/Gamepad">Usando la API de Gamepad</a></p>
+<p><a href="/en-US/docs/Web/Guide/API/Gamepad">Usando la API de Gamepad</a></p>

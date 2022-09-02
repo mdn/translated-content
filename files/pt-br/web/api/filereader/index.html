@@ -7,15 +7,15 @@ translation_of: Web/API/FileReader
 
 <h2 id="Resumo">Resumo</h2>
 
-<p>O objeto <code>FileReader</code> permite aplicações web ler assincronamente o conteúdo dos arquivos (ou buffers de dados puros) do computador do usuário, utilizando o objeto {{ domxref("File") }} ou {{ domxref("Blob") }} para especificar o arquivo ou os dados a serem lidos.</p>
+<p>O objeto <code>FileReader</code> permite aplicações web ler assincronamente o conteúdo dos arquivos (ou buffers de dados puros) do computador do usuário, utilizando o objeto {{ domxref("File") }} ou {{ domxref("Blob") }} para especificar o arquivo ou os dados a serem lidos.</p>
 
-<p>Objetos File podem ser obtidos a partir de um objeto {{ domxref("FileList") }} retornado como resultado da seleção de um usuário utilizando um elemento {{ HTMLElement("input") }}, a partir de uma operação de drag and drop <a href="/En/DragDrop/DataTransfer" title="En/DragDrop/DataTransfer"><code>DataTransfer</code></a>, ou a partir de um <code>mozGetAsFile()</code> da api {{ domxref("HTMLCanvasElement") }}.</p>
+<p>Objetos File podem ser obtidos a partir de um objeto {{ domxref("FileList") }} retornado como resultado da seleção de um usuário utilizando um elemento {{ HTMLElement("input") }}, a partir de uma operação de drag and drop <a href="/En/DragDrop/DataTransfer" title="En/DragDrop/DataTransfer"><code>DataTransfer</code></a>, ou a partir de um <code>mozGetAsFile()</code> da api {{ domxref("HTMLCanvasElement") }}.</p>
 
 <h2 id="Construtor">Construtor</h2>
 
 <pre class="syntaxbox">FileReader FileReader();</pre>
 
-<p>Veja <a href="/en/Using_files_from_web_applications" title="en/Using files from web applications">Using files from web applications</a> para detalhes e exemplos.</p>
+<p>Veja <a href="/en/Using_files_from_web_applications" title="en/Using files from web applications">Using files from web applications</a> para detalhes e exemplos.</p>
 
 <h2 id="Properties" name="Properties">Propriedades</h2>
 
@@ -23,7 +23,7 @@ translation_of: Web/API/FileReader
  <dt>{{domxref("FileReader.error")}} {{readonlyinline}}</dt>
  <dd>Um {{domxref("DOMError")}} representa o erro que ocorreu durante a leitura do arquivo.</dd>
  <dt>{{domxref("FileReader.readyState")}} {{readonlyinline}}</dt>
- <dd>Um número indicando o estado do <code>FileReader</code>. Este poderá ser um dos seguintes estados <a href="#state_constants">State constants</a>.</dd>
+ <dd>Um número indicando o estado do <code>FileReader</code>. Este poderá ser um dos seguintes estados <a href="#state_constants">State constants</a>.</dd>
  <dt>{{domxref("FileReader.result")}} {{readonlyinline}}</dt>
  <dd>O conteúdo do arquivo. Esta propriedade é válida apenas após a operação de leitura estar completa, e o formato dos dados dependem de qual método foi usado para iniciar a operação de leitura.</dd>
 </dl>
@@ -52,24 +52,24 @@ translation_of: Web/API/FileReader
 <h3 id="State_constants" name="State_constants">Constantes de estado</h3>
 
 <ul>
- <li><code>EMPTY  </code> : <code>0</code> : Nenhum dado foi carregado ainda.</li>
+ <li><code>EMPTY  </code> : <code>0</code> : Nenhum dado foi carregado ainda.</li>
  <li><code>LOADING</code> : <code>1</code> : Os dados estão sendo carregados.</li>
- <li><code>DONE   </code> : <code>2</code> : Toda a requisição de leitura foi completada.</li>
+ <li><code>DONE   </code> : <code>2</code> : Toda a requisição de leitura foi completada.</li>
 </ul>
 
 <h2 id="Methods" name="Methods">Métodos</h2>
 
 <dl>
  <dt>{{domxref("FileReader.abort()")}}</dt>
- <dd>Aborta a operação de leitura. O retorno, no <code>readyState</code> será <code>DONE</code>.</dd>
+ <dd>Aborta a operação de leitura. O retorno, no <code>readyState</code> será <code>DONE</code>.</dd>
  <dt>{{domxref("FileReader.readAsArrayBuffer()")}} {{ gecko_minversion_inline("7.0") }}</dt>
- <dd>Inicia a leitura do conteúdo do {{ domxref("Blob") }} espeficado, uma vez finalizado, o atributo <code>result</code> conterá um {{domxref("ArrayBuffer")}} representando os dados do arquivo.</dd>
+ <dd>Inicia a leitura do conteúdo do {{ domxref("Blob") }} espeficado, uma vez finalizado, o atributo <code>result</code> conterá um {{domxref("ArrayBuffer")}} representando os dados do arquivo.</dd>
  <dt>{{domxref("FileReader.readAsBinaryString()")}}</dt>
- <dd>Inicia a leitura do conteúdo do {{ domxref("Blob") }} especificado, uma vez finalizado, o atributo <code>result</code> conterá os dados raw binários do arquivo como  string.</dd>
+ <dd>Inicia a leitura do conteúdo do {{ domxref("Blob") }} especificado, uma vez finalizado, o atributo <code>result</code> conterá os dados raw binários do arquivo como  string.</dd>
  <dt>{{domxref("FileReader.readAsDataURL()")}}</dt>
- <dd>Inicia a leitura do conteúdo do {{ domxref("Blob") }} especificado, uma vez finalizado, o atributo <code>result</code> conterá um <code>data:</code> URL representando os dados do arquivo.</dd>
+ <dd>Inicia a leitura do conteúdo do {{ domxref("Blob") }} especificado, uma vez finalizado, o atributo <code>result</code> conterá um <code>data:</code> URL representando os dados do arquivo.</dd>
  <dt>{{domxref("FileReader.readAsText()")}}</dt>
- <dd>Inicia a leitura do conteúdo do {{ domxref("Blob") }} especificado, uma vez finalizado, o atributo <code>result</code> conterá o conteúdo do arquivo como string de  texto.</dd>
+ <dd>Inicia a leitura do conteúdo do {{ domxref("Blob") }} especificado, uma vez finalizado, o atributo <code>result</code> conterá o conteúdo do arquivo como string de  texto.</dd>
 </dl>
 
 <h2 id="Especificações">Especificações</h2>
@@ -91,67 +91,7 @@ translation_of: Web/API/FileReader
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer*</th>
-   <th>Opera*</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatGeckoDesktop("1.9.2") }}</td>
-   <td>7</td>
-   <td>10</td>
-   <td>12.02</td>
-   <td>6.0.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>32</td>
-   <td>3</td>
-   <td>10</td>
-   <td>11.5</td>
-   <td>6.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Notas_de_implementações">Notas de implementações</h3>
-
-<ul>
- <li>IE9 possui uma <a href="http://html5labs.interoperabilitybridges.com/prototypes/fileapi/fileapi/info">File API Lab</a>.</li>
- <li>Opera possui <a href="http://www.opera.com/docs/specs/presto28/file/">suporte parcial</a> na versão 11.1.</li>
-</ul>
-
-<h4 id="Notas_específicas_para_Gecko">Notas específicas para Gecko</h4>
-
-<ul>
- <li>Em versões anteriores ao Gecko 2.0 beta 7 (Firefox 4.0 beta 7), todos os parâmetros {{ domxref("Blob") }} abaixo eram parâmetros {{ domxref("File") }}. Isto foi então atualizado para adequarem-se corretamente às especificações.</li>
- <li>Em versões anteriores ao Gecko 13.0 {{ geckoRelease("13.0") }}, a propriedade <code>FileReader.error</code> retornava um objeto {{ domxref("FileError") }}. Esta interface foi removida e a propriedade <code>FileReader.error</code> agora retorna o objeto {{ domxref("DOMError") }}, assim como está definido na última versão da FileAPI.</li>
-</ul>
+{{Compat("api.FileReader")}}
 
 <h2 id="See_also" name="See_also">Veja também</h2>
 

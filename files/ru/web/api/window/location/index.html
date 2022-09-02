@@ -13,7 +13,7 @@ translation_of: Web/API/Window/location
 
 <p>Свойство только для чтения <strong><code>Window.location</code></strong> возвращает объект {{domxref("Location")}} с информацией о текущем расположении документа.</p>
 
-<p>Хотя <code>Window.location</code> представляет собой объект <em>только для чтения</em> <code>Location</code>, вы можете присвоить ему  {{domxref("DOMString")}}. Это значит что в большинстве случаев вы можете работать с <code>location</code> как со строкой: <code>location = 'http://www.example.com'</code> это синоним для <code>location.href = 'http://www.example.com'</code>.</p>
+<p>Хотя <code>Window.location</code> представляет собой объект <em>только для чтения</em> <code>Location</code>, вы можете присвоить ему  {{domxref("DOMString")}}. Это значит что в большинстве случаев вы можете работать с <code>location</code> как со строкой: <code>location = 'http://www.example.com'</code> это синоним для <code>location.href = 'http://www.example.com'</code>.</p>
 
 <h2 id="Syntax">Синтаксис</h2>
 
@@ -54,11 +54,11 @@ location = "http://www.mozilla.org";
 <h3 id="Пример_№4_Отображение_свойств_текущего_URL_в_диалоге_alert">Пример №4: Отображение свойств текущего URL в диалоге alert</h3>
 
 <pre class="brush: js">function showLoc() {
-  var oLocation = location, aLog = ["Property (Typeof): Value", "location (" + (typeof oLocation) + "): " + oLocation ];
-  for (var sProp in oLocation){
-    aLog.push(sProp + " (" + (typeof oLocation[sProp]) + "): " +  (oLocation[sProp] || "n/a"));
-  }
-  alert(aLog.join("\n"));
+  var oLocation = location, aLog = ["Property (Typeof): Value", "location (" + (typeof oLocation) + "): " + oLocation ];
+  for (var sProp in oLocation){
+    aLog.push(sProp + " (" + (typeof oLocation[sProp]) + "): " +  (oLocation[sProp] || "n/a"));
+  }
+  alert(aLog.join("\n"));
 }
 
 // в html: &lt;button onclick="showLoc();"&gt;Показать свойства location&lt;/button&gt;
@@ -84,23 +84,23 @@ location = "http://www.mozilla.org";
 &lt;title&gt;MDN Example&lt;/title&gt;
 &lt;script&gt;
 function showNode (oNode) {
-  var nLeft = 0, nTop = 0;
-  for (var oItNode = oNode; oItNode; nLeft += oItNode.offsetLeft, nTop += oItNode.offsetTop, oItNode = oItNode.offsetParent);
-  document.documentElement.scrollTop = nTop;
-  document.documentElement.scrollLeft = nLeft;
+  var nLeft = 0, nTop = 0;
+  for (var oItNode = oNode; oItNode; nLeft += oItNode.offsetLeft, nTop += oItNode.offsetTop, oItNode = oItNode.offsetParent);
+  document.documentElement.scrollTop = nTop;
+  document.documentElement.scrollLeft = nLeft;
 }
 
 function showBookmark (sBookmark, bUseHash) {
-  if (arguments.length === 1 || bUseHash) { location.hash = sBookmark; return; }
-  var oBookmark = document.querySelector(sBookmark);
-  if (oBookmark) { showNode(oBookmark); }
+  if (arguments.length === 1 || bUseHash) { location.hash = sBookmark; return; }
+  var oBookmark = document.querySelector(sBookmark);
+  if (oBookmark) { showNode(oBookmark); }
 }
 &lt;/script&gt;
 &lt;style&gt;
 span.intLink {
-    cursor: pointer;
-    color: #0000ff;
-    text-decoration: underline;
+    cursor: pointer;
+    color: #0000ff;
+    text-decoration: underline;
 }
 &lt;/style&gt;
 &lt;/head&gt;
@@ -138,43 +138,43 @@ span.intLink {
 <p>…тоже самое только с анимированной прокруткой страницы:</p>
 
 <pre class="brush: js">var showBookmark = (function () {
-  var  _useHash, _scrollX, _scrollY, _nodeX, _nodeY, _itFrame, _scrollId = -1, _bookMark,
-       /*
-       * nDuration: the duration in milliseconds of each frame
-       * nFrames: number of frames for each scroll
-       */
-       nDuration = 200, nFrames = 10;
+  var  _useHash, _scrollX, _scrollY, _nodeX, _nodeY, _itFrame, _scrollId = -1, _bookMark,
+       /*
+       * nDuration: the duration in milliseconds of each frame
+       * nFrames: number of frames for each scroll
+       */
+       nDuration = 200, nFrames = 10;
 
-  function _next () {
-    if (_itFrame &gt; nFrames) { clearInterval(_scrollId); _scrollId = -1; return; }
-    _isBot = true;
-    document.documentElement.scrollTop = Math.round(_scrollY + (_nodeY - _scrollY) * _itFrame / nFrames);
-    document.documentElement.scrollLeft = Math.round(_scrollX + (_nodeX - _scrollX) * _itFrame / nFrames);
-    if (_useHash &amp;&amp; _itFrame === nFrames) { location.hash = _bookMark; }
-    _itFrame++;
-  }
+  function _next () {
+    if (_itFrame &gt; nFrames) { clearInterval(_scrollId); _scrollId = -1; return; }
+    _isBot = true;
+    document.documentElement.scrollTop = Math.round(_scrollY + (_nodeY - _scrollY) * _itFrame / nFrames);
+    document.documentElement.scrollLeft = Math.round(_scrollX + (_nodeX - _scrollX) * _itFrame / nFrames);
+    if (_useHash &amp;&amp; _itFrame === nFrames) { location.hash = _bookMark; }
+    _itFrame++;
+  }
 
-  function _chkOwner () {
-    if (_isBot) { _isBot = false; return; }
-    if (_scrollId &gt; -1) { clearInterval(_scrollId); _scrollId = -1; }
-  }
+  function _chkOwner () {
+    if (_isBot) { _isBot = false; return; }
+    if (_scrollId &gt; -1) { clearInterval(_scrollId); _scrollId = -1; }
+  }
 
-  if (window.addEventListener) { window.addEventListener("scroll", _chkOwner, false); }
-  else if (window.attachEvent) { window.attachEvent("onscroll", _chkOwner); }
+  if (window.addEventListener) { window.addEventListener("scroll", _chkOwner, false); }
+  else if (window.attachEvent) { window.attachEvent("onscroll", _chkOwner); }
 
-  return function (sBookmark, bUseHash) {
-    _scrollY = document.documentElement.scrollTop;
-    _scrollX = document.documentElement.scrollLeft;
-    _bookMark = sBookmark;
-    _useHash = arguments.length === 1 || bUseHash;
-    for (
-      var nLeft = 0, nTop = 0, oNode = document.querySelector(sBookmark);
-      oNode;
-      nLeft += oNode.offsetLeft, nTop += oNode.offsetTop, oNode = oNode.offsetParent
-    );
-    _nodeX = nLeft, _nodeY = nTop, _itFrame = 1;
-    if (_scrollId === -1) { _scrollId = setInterval(_next, Math.round(nDuration / nFrames)); }
-  };
+  return function (sBookmark, bUseHash) {
+    _scrollY = document.documentElement.scrollTop;
+    _scrollX = document.documentElement.scrollLeft;
+    _bookMark = sBookmark;
+    _useHash = arguments.length === 1 || bUseHash;
+    for (
+      var nLeft = 0, nTop = 0, oNode = document.querySelector(sBookmark);
+      oNode;
+      nLeft += oNode.offsetLeft, nTop += oNode.offsetTop, oNode = oNode.offsetParent
+    );
+    _nodeX = nLeft, _nodeY = nTop, _itFrame = 1;
+    if (_scrollId === -1) { _scrollId = setInterval(_next, Math.round(nDuration / nFrames)); }
+  };
 })();
 </pre>
 

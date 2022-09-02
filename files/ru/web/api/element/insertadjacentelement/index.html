@@ -13,7 +13,7 @@ translation_of: Web/API/Element/insertAdjacentElement
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>Метод <strong><code>insertAdjacentElement()</code></strong> добавляет переданный элемент в DOM-дерево относительно элемента, вызвавшего метод.</p>
+<p>Метод <strong><code>insertAdjacentElement()</code></strong> добавляет переданный элемент в DOM-дерево относительно элемента, вызвавшего метод.</p>
 
 <h2 id="Syntax">Синтаксис</h2>
 
@@ -23,12 +23,12 @@ translation_of: Web/API/Element/insertAdjacentElement
 
 <dl>
  <dt>position</dt>
- <dd>{{domxref("DOMString")}} - определяет позицию добавляемого элемента относительно элемента, вызвавшего метод. Должно соответствовать одному из следующих значений (чувствительно к регистру):
+ <dd>{{domxref("DOMString")}} - определяет позицию добавляемого элемента относительно элемента, вызвавшего метод. Должно соответствовать одному из следующих значений (чувствительно к регистру):
  <ul>
-  <li><code style="color: red;">'beforebegin'</code>: перед самим элементом <code>targetElement</code>.</li>
-  <li><code style="color: green;">'afterbegin'</code>: внутри элемента <code>targetElement</code>, перед его первым потомком.</li>
-  <li><code style="color: blue;">'beforeend'</code>: внутри элемента <code>targetElement</code>, после его последнего потомка.</li>
-  <li><code style="color: magenta;">'afterend'</code>: после самого элемента <code>targetElement</code>.</li>
+  <li><code style="color: red;">'beforebegin'</code>: перед самим элементом <code>targetElement</code>.</li>
+  <li><code style="color: green;">'afterbegin'</code>: внутри элемента <code>targetElement</code>, перед его первым потомком.</li>
+  <li><code style="color: blue;">'beforeend'</code>: внутри элемента <code>targetElement</code>, после его последнего потомка.</li>
+  <li><code style="color: magenta;">'afterend'</code>: после самого элемента <code>targetElement</code>.</li>
  </ul>
  </dd>
  <dt>element</dt>
@@ -37,7 +37,7 @@ translation_of: Web/API/Element/insertAdjacentElement
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
-<p>Метод возвращает добавляемый элемент, либо <code>null</code>, если добавление элемента завершилось ошибкой.</p>
+<p>Метод возвращает добавляемый элемент, либо <code>null</code>, если добавление элемента завершилось ошибкой.</p>
 
 <h3 id="Исключения">Исключения</h3>
 
@@ -51,11 +51,11 @@ translation_of: Web/API/Element/insertAdjacentElement
  <tbody>
   <tr>
    <td><code>SyntaxError</code></td>
-   <td>Переданное значение <code>position</code> не соответствует ни одному из допустимых.</td>
+   <td>Переданное значение <code>position</code> не соответствует ни одному из допустимых.</td>
   </tr>
   <tr>
    <td><code>TypeError</code></td>
-   <td>Передаваемый <code>element</code> не является валидным.</td>
+   <td>Передаваемый <code>element</code> не является валидным.</td>
   </tr>
  </tbody>
 </table>
@@ -70,7 +70,7 @@ foo
 <code style="font-weight: bold;">&lt;/p&gt;</code>
 &lt;!-- <strong><code style="color: magenta;">afterend</code></strong> --&gt;</pre>
 
-<div class="note"><strong>Примечание:</strong> значения <code>beforebegin</code> и <code>afterend</code> работают только если targetElement находится в DOM-дереве и имеет родительский элемент.</div>
+<div class="note"><strong>Примечание:</strong> значения <code>beforebegin</code> и <code>afterend</code> работают только если targetElement находится в DOM-дереве и имеет родительский элемент.</div>
 
 <h2 id="Example">Примеры</h2>
 
@@ -92,7 +92,7 @@ afterBtn.addEventListener('click', function() {
   setListener(tempDiv);
 });</pre>
 
-<p>Посмотрите наше демо <a href="https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html">insertAdjacentElement.html</a> на Github (так же посмотрите <a href="https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html">исходный код</a>). В этом демо мы имеем последовательность {{htmlelement("div")}} элементов внутри контейнера. При выборе одного из них можно нажать кнопку <em>Insert before</em> или <em>Insert after</em> и добавить новые div до или после выбранного  элемента используя метод <code>insertAdjacentElement()</code>.</p>
+<p>Посмотрите наше демо <a href="https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html">insertAdjacentElement.html</a> на Github (так же посмотрите <a href="https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html">исходный код</a>). В этом демо мы имеем последовательность {{htmlelement("div")}} элементов внутри контейнера. При выборе одного из них можно нажать кнопку <em>Insert before</em> или <em>Insert after</em> и добавить новые div до или после выбранного  элемента используя метод <code>insertAdjacentElement()</code>.</p>
 
 <h2 id="Specification">Спецификация</h2>
 
@@ -125,5 +125,5 @@ afterBtn.addEventListener('click', function() {
  <li>{{domxref("Element.insertAdjacentHTML()")}}</li>
  <li>{{domxref("Element.insertAdjacentText()")}}</li>
  <li>{{domxref("Node.insertBefore()")}}</li>
- <li>{{domxref("Node.appendChild()")}} (такой же эффект со значением position <code>beforeend</code>)</li>
+ <li>{{domxref("Node.appendChild()")}} (такой же эффект со значением position <code>beforeend</code>)</li>
 </ul>

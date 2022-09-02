@@ -40,15 +40,11 @@ boolValue = element.isSupported(feature, version)
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire                                            |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------ |
-| {{SpecName('DOM WHATWG', '#interface-node', 'Node')}}                                             | {{Spec2('DOM WHATWG')}} | Supprimée de la spécification                          |
-| {{SpecName('DOM3 Core', 'core.html#Level-2-Core-Node-supports', 'Node.isSupported()')}} | {{Spec2('DOM3 Core')}}     | Pas de changement de {{SpecName('DOM2 Core')}}. |
-| {{SpecName('DOM2 Core', 'core.html#Level-2-Core-Node-supports', 'Node.isSupported()')}} | {{Spec2('DOM2 Core')}}     | Définition initiale.                                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.isSupported")}}
+{{Compat}}
 
 ## Voir aussi
 

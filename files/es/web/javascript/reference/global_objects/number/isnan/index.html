@@ -50,12 +50,12 @@ Number.isNaN(" ");
 <h2 id="Polyfill">Polyfill</h2>
 
 <pre class="brush: js notranslate">Number.isNaN = Number.isNaN || function(value) {
-    return typeof value === "number" &amp;&amp; isNaN(value);
+    return typeof value === "number" &amp;&amp; isNaN(value);
 }
 
 // O
 Number.isNaN = Number.isNaN || function(value) {
-    return value !== value;
+    return value !== value;
 }
 </pre>
 

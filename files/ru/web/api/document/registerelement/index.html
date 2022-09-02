@@ -5,15 +5,13 @@ translation_of: Web/API/Document/registerElement
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>{{draft()}}</p>
-
-<p>Метод <code><strong>Document.registerElement()</strong></code> регистрирует новый кастомный элемент (<a href="/en-US/docs/Web/Web_Components/Custom_Elements">custom element</a>) в браузере и возвращает конструктор для этого нового элемента.</p>
+<p>Метод <code><strong>Document.registerElement()</strong></code> регистрирует новый кастомный элемент (<a href="/en-US/docs/Web/Web_Components/Custom_Elements">custom element</a>) в браузере и возвращает конструктор для этого нового элемента.</p>
 
 <div class="note">
-<p><strong>Примечание:</strong> Это экспериментальная технология. Браузер который вы используете должен поддерживать Веб Компоненты (Web Components). Смотри больше: <a href="/en-US/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox">Enabling Web Components in Firefox</a>.</p>
+<p><strong>Примечание:</strong> Это экспериментальная технология. Браузер который вы используете должен поддерживать Веб Компоненты (Web Components). Смотри больше: <a href="/en-US/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox">Enabling Web Components in Firefox</a>.</p>
 </div>
 <div class="note">
-<p><strong>Примечание:</strong> Устарело. Используйте интерфейс <a href = "https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry">CustomElementRegistry</a> и его метод <a href = "https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define">define()</a>, чтобы зарегистрировать новый Тег.</p>
+<p><strong>Примечание:</strong> Устарело. Используйте интерфейс <a href = "https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry">CustomElementRegistry</a> и его метод <a href = "https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define">define()</a>, чтобы зарегистрировать новый Тег.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -24,7 +22,7 @@ translation_of: Web/API/Document/registerElement
 
 <dl>
  <dt><em>tag-name</em></dt>
- <dd>Имя кастомного элемента. Имя должно содержать символ дефиса (-), например: <code>my-tag</code>.</dd>
+ <dd>Имя кастомного элемента. Имя должно содержать символ дефиса (-), например: <code>my-tag</code>.</dd>
  <dt><em>options {{optional_inline}}</em></dt>
  <dd>An object that names the prototype to base the custom element on, and an existing tag to extend. Both of these are optional.</dd>
 </dl>
@@ -36,7 +34,7 @@ translation_of: Web/API/Document/registerElement
 <pre class="brush: js">var Mytag = document.registerElement('my-tag');
 </pre>
 
-<p>Now the new tag is registered in the browser. The <code>Mytag</code> variable holds a constructor that you can use to create a <code>my-tag</code> element in the document as follows:</p>
+<p>Now the new tag is registered in the browser. The <code>Mytag</code> variable holds a constructor that you can use to create a <code>my-tag</code> element in the document as follows:</p>
 
 <pre class="brush: js">document.body.appendChild(new Mytag());</pre>
 

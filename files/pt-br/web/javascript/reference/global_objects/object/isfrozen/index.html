@@ -61,14 +61,14 @@ Object.isFrozen(oneProp); // === true
 var nonWritable = { e: 'plep' };
 Object.preventExtensions(nonWritable);
 Object.defineProperty(nonWritable, 'e', {
-  writable: false
+  writable: false
 }); // tornar não modificável
 Object.isFrozen(nonWritable); // === false
 
 // Alterando a propriedade para não configurável
 // tornará o objeto frozen.
 Object.defineProperty(nonWritable, 'e', {
-  configurable: false
+  configurable: false
 }); // make non-configurable
 Object.isFrozen(nonWritable); // === true
 
@@ -77,14 +77,14 @@ Object.isFrozen(nonWritable); // === true
 var nonConfigurable = { release: 'the kraken!' };
 Object.preventExtensions(nonConfigurable);
 Object.defineProperty(nonConfigurable, 'release', {
-  configurable: false
+  configurable: false
 });
 Object.isFrozen(nonConfigurable); // === false
 
 // Alterando a propriedade para não modificável
 // tornará o objeto frozen.
 Object.defineProperty(nonConfigurable, 'release', {
-  writable: false
+  writable: false
 });
 Object.isFrozen(nonConfigurable); // === true
 
@@ -97,7 +97,7 @@ Object.isFrozen(accessor); // === false
 // ...Mas alterando essa propriedade para não configurável
 // o objeto se tornará frozen.
 Object.defineProperty(accessor, 'food', {
-  configurable: false
+  configurable: false
 });
 Object.isFrozen(accessor); // === true
 

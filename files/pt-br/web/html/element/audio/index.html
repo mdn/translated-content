@@ -15,7 +15,7 @@ translation_of: Web/HTML/Element/audio
  <tbody>
   <tr>
    <td>Conteúdo permitido</td>
-   <td><a href="/en-US/docs/HTML/Content_categories#transparent_content" title="en-US/docs/HTML/Content categories#transparent content">Transparent content</a>, tanto um atributo <code>src</code> quanto um ou mais elementos {{ HTMLElement("source") }}, seguidos por um <a href="/en-US/docs/HTML/Content_categories#flow_content" title="en-US/docs/HTML/Content categories#flow content">flow content</a> ou <a href="/en-US/docs/HTML/Content_categories#phrasing_content" title="en-US/docs/HTML/Content categories#phrasing content">phrasing content</a>, sem{{ HTMLElement("video") }} ou elementos <code>&lt;audio&gt;</code>.</td>
+   <td><a href="/en-US/docs/HTML/Content_categories#transparent_content" title="en-US/docs/HTML/Content categories#transparent content">Transparent content</a>, tanto um atributo <code>src</code> quanto um ou mais elementos {{ HTMLElement("source") }}, seguidos por um <a href="/en-US/docs/HTML/Content_categories#flow_content" title="en-US/docs/HTML/Content categories#flow content">flow content</a> ou <a href="/en-US/docs/HTML/Content_categories#phrasing_content" title="en-US/docs/HTML/Content categories#phrasing content">phrasing content</a>, sem{{ HTMLElement("video") }} ou elementos <code>&lt;audio&gt;</code>.</td>
   </tr>
   <tr>
    <td>Omissão de tag</td>
@@ -23,7 +23,7 @@ translation_of: Web/HTML/Element/audio
   </tr>
   <tr>
    <td>Elementos pai permitidos</td>
-   <td>Qualquer elemento que aceite <a href="/en-US/docs/HTML/Content_categories#flow_content" rel="internal">flow content</a>, ou qualquer elemento que aceite <a href="/en-US/docs/HTML/Content_categories#phrasing_content" rel="internal">phrasing content</a>.</td>
+   <td>Qualquer elemento que aceite <a href="/en-US/docs/HTML/Content_categories#flow_content" rel="internal">flow content</a>, ou qualquer elemento que aceite <a href="/en-US/docs/HTML/Content_categories#phrasing_content" rel="internal">phrasing content</a>.</td>
   </tr>
   <tr>
    <td>Documento normativo</td>
@@ -40,7 +40,7 @@ translation_of: Web/HTML/Element/audio
  <dt>{{ htmlattrdef("autoplay") }}</dt>
  <dd>Um atributo Booleano; se especificado (mesmo se o valor for "false"!), o áudio iniciará automaticamente assim que possível sem parar de carregar os dados.</dd>
  <dt>{{ htmlattrdef("autobuffer") }} {{ obsolete_inline("2.0") }}</dt>
- <dd>Um atributo Booleano; se especificado, o audio será baixado automaticamente, mesmo se não está configurado para reprodução automática. Isto continua até que o cache de mídia esteja cheio, ou até que o o arquivo de áudio completo tenha sido baixado, o que vier primeiro. Isto deve ser utilizado apenas quando é esperado que o usuário escolherá tocar o áudio; por exemplo, se o usuário navegou para a página utilizando um link "Reproduzir".  Este atributo foi removido no Gecko 2.0 {{ geckoRelease("2.0") }} em razão do atributo <code>preload</code>.</dd>
+ <dd>Um atributo Booleano; se especificado, o audio será baixado automaticamente, mesmo se não está configurado para reprodução automática. Isto continua até que o cache de mídia esteja cheio, ou até que o o arquivo de áudio completo tenha sido baixado, o que vier primeiro. Isto deve ser utilizado apenas quando é esperado que o usuário escolherá tocar o áudio; por exemplo, se o usuário navegou para a página utilizando um link "Reproduzir".  Este atributo foi removido no Gecko 2.0 {{ geckoRelease("2.0") }} em razão do atributo <code>preload</code>.</dd>
  <dt>{{ htmlattrdef("buffered") }}</dt>
  <dd>Um atributo que pode ser lido para determinar os intervalos do áudio que já foram carregados. Este atributo contém um objeto {{ domxref("TimeRanges") }}.</dd>
  <dt>{{ htmlattrdef("controls") }}</dt>
@@ -104,187 +104,7 @@ translation_of: Web/HTML/Element/audio
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Recurso</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>3.0</td>
-   <td>{{ CompatGeckoDesktop("1.9.1") }}</td>
-   <td>9.0</td>
-   <td>10.5</td>
-   <td>3.1</td>
-  </tr>
-  <tr>
-   <td>
-    <p>Atributo<code> autoplay</code></p>
-   </td>
-   <td>3.0</td>
-   <td>{{ CompatGeckoDesktop("1.9.1") }}</td>
-   <td>9.0</td>
-   <td>10.5</td>
-   <td>3.1</td>
-  </tr>
-  <tr>
-   <td>
-    <p>Atributo<code> buffered</code></p>
-   </td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop("2.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>controls</code></td>
-   <td>3.0</td>
-   <td>{{ CompatGeckoDesktop("1.9.1") }}</td>
-   <td>9.0</td>
-   <td>10.5</td>
-   <td>3.1</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>loop</code></td>
-   <td>3.0</td>
-   <td>{{ CompatGeckoDesktop("11.0") }}</td>
-   <td>9.0</td>
-   <td>10.5</td>
-   <td>3.1</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>muted</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop("11.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Propriedade <code>played</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop("15.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Atributo<code> preload</code></td>
-   <td>3.0</td>
-   <td>{{ CompatGeckoDesktop("2.0") }}</td>
-   <td>9.0</td>
-   <td>Supported under the older name <code>autobuffer</code></td>
-   <td>3.1</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>src</code></td>
-   <td>3.0</td>
-   <td>{{ CompatGeckoDesktop("1.9.1") }}</td>
-   <td>9.0</td>
-   <td>10.5</td>
-   <td>3.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Recurso</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>autoplay</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>buffered</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("2.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>controls</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>loop</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("11.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>muted</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("11.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Propriedade <code>played</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("15.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>preload</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("2.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>src</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div class="note"><strong>Nota:</strong> Para que o Gecko reproduza o áudio, o servidor deve disponibilizar o arquivo utilizando o tipo MIME correto.</div>
+{{Compat("html.elements.audio")}}
 
 <h2 id="Veja_também">Veja também</h2>
 
@@ -297,5 +117,4 @@ translation_of: Web/HTML/Element/audio
  <li><a class="internal" href="/en-US/docs/Using_HTML5_audio_and_video" title="en-US/docs/Using audio and video in Firefox">Using audio and video</a></li>
  <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#audio">The <code>audio</code> element</a> (Especificação HTML5)</li>
 </ul>
-
 

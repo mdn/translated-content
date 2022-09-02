@@ -5,9 +5,9 @@ translation_of: Web/API/Window/innerHeight
 ---
 <div>{{APIRef}}</div>
 
-<p>Altura (em pixels) da janela de visualização do navegador, incluindo, se renderizado, a barra de rolagem horizontal.</p>
+<p>Altura (em pixels) da janela de visualização do navegador, incluindo, se renderizado, a barra de rolagem horizontal.</p>
 
-<div class="note"><strong>Note:</strong> If you use {{ifmethod("nsIDOMWindowUtils", "setCSSViewport")}} to set the virtual window size for page layout purposes, the value returned by this property corresponds to the viewport height set using that method.</div>
+<div class="note"><strong>Note:</strong> If you use <code>nsIDOMWindowUtils.setCSSViewport()</code> to set the virtual window size for page layout purposes, the value returned by this property corresponds to the viewport height set using that method.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -15,7 +15,7 @@ translation_of: Web/API/Window/innerHeight
 
 <h3 id="Value">Value</h3>
 
-<p>On return, <code>intViewportHeight</code> is the height of the browser window's viewport.</p>
+<p>On return, <code>intViewportHeight</code> is the height of the browser window's viewport.</p>
 
 <p>The <code>window.innerHeight</code> property is read only; it has no default value.</p>
 
@@ -74,59 +74,7 @@ var intOuterFramesetHeight = top.innerHeight;
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(1.0)}}<sup>[1]</sup></td>
-   <td>9</td>
-   <td>9</td>
-   <td>3</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(1.0)}}<sup>[1]</sup></td>
-   <td>9</td>
-   <td>9</td>
-   <td>3</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] From Firefox 4 to 24 this property was buggy and could give a wrong value before page load on certain circumstances, see {{bug(641188)}}.</p>
+{{Compat("api.Window.innerHeight")}}
 
 <h2 id="See_also">See also</h2>
 

@@ -1,7 +1,6 @@
 ---
 title: SVG
 slug: Glossary/SVG
-translation_of: Glossary/SVG
 ---
 **可縮放向量圖形**（_Scalable Vector Graphics, SVG_）是基於 {{Glossary("XML")}} 語法的 2D 向量圖片格式。
 
@@ -15,7 +14,7 @@ translation_of: Glossary/SVG
 
 ### 基本知識
 
-- 維基百科的 {{Interwiki("wikipedia", "SVG")}}
+- 維基百科的 [SVG](https://zh.wikipedia.org/wiki/SVG)
 
 ### 理解 SVG
 

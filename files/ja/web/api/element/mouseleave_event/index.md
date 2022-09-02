@@ -1,18 +1,6 @@
 ---
 title: 'Element: mouseleave イベント'
 slug: Web/API/Element/mouseleave_event
-tags:
-  - API
-  - DOM
-  - Element
-  - イベント
-  - MouseEvent
-  - リファレンス
-  - マウス
-  - mouseleave
-  - move
-browser-compat: api.Element.mouseleave_event
-translation_of: Web/API/Element/mouseleave_event
 ---
 {{APIRef}}
 

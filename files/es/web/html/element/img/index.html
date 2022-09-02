@@ -69,7 +69,7 @@ original_slug: Web/HTML/Elemento/img
   <dd>Una petición cross-origin (i.e., with <code>Origin:</code> HTTP header) es realizada con credenciales (i.e., a cookie, a certificate, and HTTP Basic authentication is performed). Sí el servidor no emite credenciales al sitio de origen (a través del <code>Access-Control-Allow-Credentials:</code> HTTP header), la imagen será pintada y su uso restringido.</dd>
  </dl>
 
- <p>Cuando no existe, el recurso es buscado sin petición CORS (i.e., <code>sin enviar el Origen:</code> HTTP header) , previniendo el uso no pintado del elemento {{HTMLElement('canvas')}}. Si es inválido, se maneja como si se hubiese usado <strong>anonymous</strong>. Ver <a href="https://developer.mozilla.org/es/docs/HTML/CORS_settings_attributes">atributos de configuración CORS</a> para más información.</p>
+ <p>Cuando no existe, el recurso es buscado sin petición CORS (i.e., <code>sin enviar el Origen:</code> HTTP header) , previniendo el uso no pintado del elemento {{HTMLElement('canvas')}}. Si es inválido, se maneja como si se hubiese usado <strong>anonymous</strong>. Ver <a href="https://developer.mozilla.org/es/docs/HTML/CORS_settings_attributes">atributos de configuración CORS</a> para más información.</p>
  </dd>
 </dl>
 
@@ -87,7 +87,7 @@ original_slug: Web/HTML/Elemento/img
  <dt>{{htmlattrdef("longdesc")}}</dt>
  <dd>La URL como descripción de una imagen mostrada, complementa al texto de {{htmlattrdef("alt", "img")}}.</dd>
  <dt>{{htmlattrdef("name")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}</dt>
- <dd>El nombre para el elemento. Soportado en {{HTMLVersionInline(4)}} solo para compatibilidad con versiones anteriores. En su lugar, usa el atributo <code><strong>id</strong></code>.</dd>
+ <dd>El nombre para el elemento. Soportado en {{HTMLVersionInline(4)}} solo para compatibilidad con versiones anteriores. En su lugar, usa el atributo <code><strong>id</strong></code>.</dd>
  <dt>{{htmlattrdef("referrerpolicy")}} {{experimental_inline}}</dt>
  <dd>Una cadena indicando que referencia usar cuando buscas un recurso:
  <ul>
@@ -126,7 +126,7 @@ original_slug: Web/HTML/Elemento/img
 
  <p>Es inválido mezclar ancho y densidad del píxel en el mismo atributo <code>srcset</code>. Descriptores duplicados (por ejemplo, dos fuentes en el mismo <code>srcset</code> definidos ambos con '<code>2x</code>') son inválidos, también.</p>
 
- <p>Los agentes de usuario son discretos al elegir cualquiera de las fuentes disponibles. <span id="result_box" lang="es"><span class="hps">Esto les proporciona</span> <span class="hps">un margen</span> <span class="hps">significativo para</span> <span class="hps">adaptar su</span> <span class="hps">selección basada en</span> <span class="hps">cosas como</span> <span class="hps">las preferencias del usuario</span> <span class="hps">o las condiciones</span> <span class="hps">de ancho de banda</span><span>.</span></span></p>
+ <p>Los agentes de usuario son discretos al elegir cualquiera de las fuentes disponibles. <span id="result_box" lang="es"><span class="hps">Esto les proporciona</span> <span class="hps">un margen</span> <span class="hps">significativo para</span> <span class="hps">adaptar su</span> <span class="hps">selección basada en</span> <span class="hps">cosas como</span> <span class="hps">las preferencias del usuario</span> <span class="hps">o las condiciones</span> <span class="hps">de ancho de banda</span><span>.</span></span></p>
  </dd>
  <dt>{{htmlattrdef("width")}}</dt>
  <dd>El ancho de la imagen en píxeles CSS {{HTMLVersionInline(5)}}, o píxeles o porcentaje en {{HTMLVersionInline(4)}}.</dd>
@@ -162,7 +162,7 @@ original_slug: Web/HTML/Elemento/img
 
 <h2 id="Interacción_con_CSS">Interacción con CSS</h2>
 
-<p>Respecto a CSS, <code>una &lt;img&gt;</code> es un <a href="https://developer.mozilla.org/es/docs/Web/CSS/Elemento_reemplazo">elemento de reemplazo</a>. No tiene base, asi que cuando las imágenes se usan en un contexto de formato en línea con {{cssxref("vertical-align")}}: <code>baseline</code>, el bajo de la imagen se posa sobre la base del contenedor.</p>
+<p>Respecto a CSS, <code>una &lt;img&gt;</code> es un <a href="https://developer.mozilla.org/es/docs/Web/CSS/Elemento_reemplazo">elemento de reemplazo</a>. No tiene base, asi que cuando las imágenes se usan en un contexto de formato en línea con {{cssxref("vertical-align")}}: <code>baseline</code>, el bajo de la imagen se posa sobre la base del contenedor.</p>
 
 <p>Dependiendo de su tipo, una imagen puede tener ancho y alto intrínseco, pero no necesariamente. Por ejempo, las imagenes SVG no tienen dimensiones intrínsecas.</p>
 
@@ -188,7 +188,7 @@ original_slug: Web/HTML/Elemento/img
 
 <h2 id="Ejemplo_4_Uso_de_atributos_srcset_y_sizes">Ejemplo 4: Uso de atributos <code>srcset</code> y <code>sizes</code></h2>
 
-<p>El atributo<code> src</code> es ignorado en agentes de usuario que soportan <code>srcset</code> cuando usan descriptores <code>'w'</code>. Cuando la condición de media <code>(min-width: 600px)</code> encaja, la imagen será 200px de ancho, de otra manera será 50vw de ancho (50% del ancho del dispositivo).</p>
+<p>El atributo<code> src</code> es ignorado en agentes de usuario que soportan <code>srcset</code> cuando usan descriptores <code>'w'</code>. Cuando la condición de media <code>(min-width: 600px)</code> encaja, la imagen será 200px de ancho, de otra manera será 50vw de ancho (50% del ancho del dispositivo).</p>
 
 <pre class="brush: html line-numbers  language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>img</span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>clock-demo-thumb-200.png<span class="punctuation token">"</span></span>
       <span class="attr-name token">alt</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Clock<span class="punctuation token">"</span></span>

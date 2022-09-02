@@ -12,7 +12,6 @@ tags:
   - MakeBrowserAgnostic
   - リファレンス
   - ウェブ
-browser-compat: html.elements.input
 translation_of: Web/HTML/Element/input
 ---
 

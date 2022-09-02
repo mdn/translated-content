@@ -1,13 +1,6 @@
 ---
 title: WebGL
 slug: Glossary/WebGL
-tags:
-  - WebGL
-  - Web 图像
-  - 术语表
-  - 编程脚本
-  - 高级
-translation_of: Glossary/WebGL
 ---
 **WebGL** (_Web 图形库_) 是一个用于绘制交互式 2D/3D 图形的 {{Glossary("JavaScript")}} {{Glossary("API")}} ，基于 {{Glossary("OpenGL")}} ES 2.0。
 
@@ -21,7 +14,7 @@ translation_of: Glossary/WebGL
 
 ### 常识
 
-- 维基百科上的 {{Interwiki("wikipedia", "WebGL")}}
+- 维基百科上的 [WebGL](https://zh.wikipedia.org/wiki/WebGL)
 - [检查你的设备是否支持 WebGL](https://get.webgl.org/)
 
 ### 技术信息

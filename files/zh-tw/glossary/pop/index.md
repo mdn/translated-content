@@ -1,11 +1,6 @@
 ---
 title: POP3
 slug: Glossary/POP
-tags:
-  - POP3
-  - 基礎
-  - 術語表
-translation_of: Glossary/POP
 ---
 **POP3** (郵局協定)是一種常見協定({{glossary("protocol")}}) 用於從伺服器接收郵件通過 {{glossary("TCP")}} 鏈接.不同於{{Glossary("IMAP4")}}, 由於 POP3 結構更爲複雜，更難以實施，POP3 不支持多資料夾。
 
@@ -17,4 +12,4 @@ translation_of: Glossary/POP
 - [RFC 2449](http://www.faqs.org/rfcs/rfc2449.html) (POP3 的規範擴展機制)
 - [RFC 1734](http://www.faqs.org/rfcs/rfc1734.html) (POP3 的規範認證機制)
 - {{Glossary("IMAP4")}}
-- 維基百科上的{{Interwiki("wikipedia", "Post Office Protocol", "POP")}}
+- 維基百科上的[POP](https://zh.wikipedia.org/wiki/Post_Office_Protocol)

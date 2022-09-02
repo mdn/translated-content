@@ -1,13 +1,6 @@
 ---
 title: Forbidden header name (禁止ヘッダー名)
 slug: Glossary/Forbidden_header_name
-tags:
-  - Fetch
-  - 用語集
-  - HTTP
-  - ヘッダー
-  - forbidden
-translation_of: Glossary/Forbidden_header_name
 ---
 **禁止ヘッダー名**はプログラムから変更することができない [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)の名前、特に、 HTTP **リクエスト**ヘッダーの名前です (反対に、{{Glossary("Forbidden response header name", "禁止レスポンスヘッダー名")}}もあります)。
 

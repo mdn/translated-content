@@ -22,14 +22,12 @@ var policy = HTMLIFrameElement.featurePolicy
 
 ### Valeur
 
-Un objet [`FeaturePolicy`](/en-US/docs/Web/API/FeaturePolicy) pouvant être utilisé pour consulter les paramètres Feature Policy appliqués au cadre.
+Un objet [`FeaturePolicy`](/fr/docs/Web/API/FeaturePolicy) pouvant être utilisé pour consulter les paramètres Feature Policy appliqués au cadre.
 
-## Spécification
+## Spécifications
 
-| Spécification                            | État                                 | Commentaire          |
-| ---------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("Feature Policy")}} | {{Spec2("Feature Policy")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLIFrameElement.featurePolicy")}}
+{{Compat}}

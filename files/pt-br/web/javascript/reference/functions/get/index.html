@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Functions/get
 ---
 <div>{{jsSidebar("Functions")}}</div>
 
-<div>A sintaxe de <strong>get </strong>associa uma propriedade de um objeto a uma função que será chamada quando tal propriedade é acessada.</div>
+<div>A sintaxe de <strong>get </strong>associa uma propriedade de um objeto a uma função que será chamada quando tal propriedade é acessada.</div>
 
 
 
@@ -31,11 +31,11 @@ translation_of: Web/JavaScript/Reference/Functions/get
 
 <ul>
  <li>Pode haver um identificador que seja um número ou uma string;</li>
- <li>Deve haver exatamente zero parâmetros (veja  <a class="external" href="http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/" rel="external nofollow">Incompatible <abbr title="ECMAScript 5th edition">ES5</abbr> change: literal getter and setter functions must now have exactly zero or one arguments</a> para mais informações)</li>
- <li>Não deve haver mais de um getter para a mesma propriedade nem uma propriedade comum como o mesmo nome do getter (<code>{ get x() { }, get x() { } }</code> and <code>{ x: ..., get x() { } }</code> são proibidos).</li>
+ <li>Deve haver exatamente zero parâmetros (veja  <a class="external" href="http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/" rel="external nofollow">Incompatible <abbr title="ECMAScript 5th edition">ES5</abbr> change: literal getter and setter functions must now have exactly zero or one arguments</a> para mais informações)</li>
+ <li>Não deve haver mais de um getter para a mesma propriedade nem uma propriedade comum como o mesmo nome do getter (<code>{ get x() { }, get x() { } }</code> and <code>{ x: ..., get x() { } }</code> são proibidos).</li>
 </ul>
 
-<p>Um getter pode ser removido usando o operador <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/delete" title="en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/delete_Operator">delete</a>.</code></p>
+<p>Um getter pode ser removido usando o operador <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/delete" title="en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/delete_Operator">delete</a>.</code></p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
@@ -57,14 +57,14 @@ console.log (obj.latest); // Retornará "test".
 
 <h3 id="Removendo_um_getter_usando_o_operador_delete">Removendo um getter usando o operador <code>delete</code></h3>
 
-<p>Se você quer remover um getter, você pode apenas utilizar <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/delete">delete</a>.</code></p>
+<p>Se você quer remover um getter, você pode apenas utilizar <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/delete">delete</a>.</code></p>
 
 <pre class="brush: js notranslate">delete obj.latest;
 </pre>
 
 <h3 id="Definindo_um_getter_em_objetos_existentes_usando_defineProperty">Definindo um getter em objetos existentes usando <code>defineProperty</code></h3>
 
-<p>Para adicionar um getter a um objeto existente a qualquer momento, use {{jsxref("Object.defineProperty()")}}.</p>
+<p>Para adicionar um getter a um objeto existente a qualquer momento, use {{jsxref("Object.defineProperty()")}}.</p>
 
 <pre class="brush: js notranslate">var o = { a:0 }
 
@@ -75,7 +75,7 @@ console.log(o.b) // Executa o getter, que retornará a + 1 (which is 1)</pre>
 <h3 id="Usando_uma_propriedade_com_nome_computado">Usando uma propriedade com nome computado</h3>
 
 <div class="note">
-<p><strong>Nota:</strong> Propriedades com nome computado são uma tecnologia experimenta, parte da proposta do ECMAScript 6 e não é amplamente suportada pelos navegadores ainda. O exemplo abaixo irá disparar um <code>SyntaxError em ambientes sem suporte.</code></p>
+<p><strong>Nota:</strong> Propriedades com nome computado são uma tecnologia experimenta, parte da proposta do ECMAScript 6 e não é amplamente suportada pelos navegadores ainda. O exemplo abaixo irá disparar um <code>SyntaxError em ambientes sem suporte.</code></p>
 </div>
 
 <pre class="brush: js notranslate">var expr = "foo";
@@ -90,7 +90,7 @@ console.log(obj.foo); // "bar"</pre>
 
 <p>Getters lhe dão uma maneira de definir uma propriedade de um objeto, mas eles não calculam o valor da propriedade até que sejam acessados. Um getter adia o custo de cálculo do valor até que o valor seja necessário e, se nunca o for, você não precisa pagar esse custo.</p>
 
-<p>Uma técnica de otimização adicional para atrasar o cálculo do valor de uma propriedade e cacheá-lo para acesso futuro são os <strong>smart ou <a href="https://en.wikipedia.org/wiki/Memoization">memoized</a> getters</strong>. O valor é calculado na primeira vez que o getter é invocado, sendo então cacheado para que acessos subsequentes retornem o valor em cache sem recalculá-lo. Isso é util nas seguintes situações:</p>
+<p>Uma técnica de otimização adicional para atrasar o cálculo do valor de uma propriedade e cacheá-lo para acesso futuro são os <strong>smart ou <a href="https://en.wikipedia.org/wiki/Memoization">memoized</a> getters</strong>. O valor é calculado na primeira vez que o getter é invocado, sendo então cacheado para que acessos subsequentes retornem o valor em cache sem recalculá-lo. Isso é util nas seguintes situações:</p>
 
 <ul>
  <li>Se o cálculo da propriedade é caro (usa muita RAM ou CPU, cria um worker, retorna um arquivo remoto, etc).</li>
@@ -138,72 +138,7 @@ console.log(obj.foo); // "bar"</pre>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatChrome(1)}}</td>
-   <td>{{ CompatGeckoDesktop("1.8.1") }}</td>
-   <td>{{ CompatIE(9) }}</td>
-   <td>9.5</td>
-   <td>3</td>
-  </tr>
-  <tr>
-   <td>Propriedades com nome computado</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("34") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile("1.8.1") }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Propriedades com nome computado</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("34.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.functions.get")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

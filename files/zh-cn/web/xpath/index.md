@@ -1,9 +1,6 @@
 ---
 title: XPath
 slug: Web/XPath
-tags:
-  - XPath
-translation_of: Web/XPath
 ---
 XPath 的意思是 XML 路径语言。它使用的一个非 XML 语法提供一种灵活地定位 [XML](/zh-CN/docs/XML) 文档的不同部分的方法。它同时也可以用于检测文档中某个节点是否与某个模式（pattern）匹配。
 
@@ -24,7 +21,7 @@ XPath 使用路径标识符通过层级结构来导航 XML 文档。它使用非
 - [Transforming XML with XSLT](/en-US/docs/Transforming_XML_with_XSLT)
   - : XSLT uses XPath to address code segments in a XML document that it wishes to transform.
 - [XPath snippets](/en-US/docs/Web/XPath/Snippets)
-  - : JavaScript utility functions to use in your own code, based on [DOM Level 3 XPath ](http://www.w3.org/TR/DOM-Level-3-XPath/)APIs.
+  - : JavaScript utility functions to use in your own code, based on [DOM Level 3 XPath](http://www.w3.org/TR/DOM-Level-3-XPath/) APIs.
 - [What is XSLT?](http://www.xml.com/pub/a/2000/08/holman/)
   - : This extensive introduction to XSLT and XPath assumes no prior knowledge of the technologies, and guides the reader through background, context, structure, concepts and introductory terminology.
 - [JXON](/en-US/docs/JXON)

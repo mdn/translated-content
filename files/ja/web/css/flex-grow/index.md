@@ -3,10 +3,10 @@ title: flex-grow
 slug: Web/CSS/flex-grow
 tags:
   - CSS
-  - CSS フレックスボックス
-  - CSS プロパティ
+  - CSS Flexible Boxes
+  - CSS Property
   - NeedsContent
-  - リファレンス
+  - Reference
   - recipe:css-property
 browser-compat: css.properties.flex-grow
 translation_of: Web/CSS/flex-grow
@@ -28,6 +28,7 @@ flex-grow: 0.6;
 flex-grow: inherit;
 flex-grow: initial;
 flex-grow: revert;
+flex-grow: revert-layer;
 flex-grow: unset;
 ```
 
@@ -58,7 +59,7 @@ flex-grow: unset;
 
 ## 例
 
-<h3 id="Setting_flex_item_grow_factor">フレックスアイテムの伸長係数の設定</h3>
+### フレックスアイテムの伸長係数の設定
 
 #### HTML
 
@@ -99,7 +100,7 @@ flex-grow: unset;
 
 #### 結果
 
-{{EmbedLiveSample('Setting_flex_item_grow_factor', '700px', '300px', '', 'Web/CSS/flex-grow')}}
+{{EmbedLiveSample('Setting flex item grow factor')}}
 
 ## 仕様書
 

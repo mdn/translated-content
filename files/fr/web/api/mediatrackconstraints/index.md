@@ -30,18 +30,16 @@ Les valeurs `min` et/ou `max` spécifiées sont obligatoires. Si aucune correspo
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                               | Commentaire         |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Media Capture', '#dom-doublerange', 'DoubleRange')}} | {{Spec2('Media Capture')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DoubleRange")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [API de capture multimédia et de flux](/en-US/docs/Web/API/Media_Streams_API)
-- [Capacités, contraintes et paramètres](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [API de capture multimédia et de flux](/fr/docs/Web/API/Media_Streams_API)
+- [Capacités, contraintes et paramètres](/fr/docs/Web/API/Media_Streams_API/Constraints)
 - {{domxref("ConstrainDoubleRange")}}
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaTrackCapabilities")}}

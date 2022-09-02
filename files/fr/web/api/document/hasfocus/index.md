@@ -66,15 +66,13 @@ function openWindow() {
 </html>
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                                | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG', 'interaction.html#dom-document-hasfocus', 'Document.hasFocus()')}} | {{Spec2('HTML WHATWG')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.hasFocus")}}
+{{Compat}}
 
 ## Voir aussi
 

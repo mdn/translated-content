@@ -52,4 +52,4 @@ Ce sont quelques-uns des éléments sémantiques ([source](http://www.w3schools.
 - [Référence des éléments HTML](/fr/docs/Web/HTML/Element#Inline_text_semantics) sur MDN
 - [Problèmes résolus par HTML5](/fr/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Probl%C3%A8mes_r%C3%A9solus_par_HTML5) sur MDN
 - [HTML5 Semantic Elements](http://www.w3schools.com/html/html5_semantic_elements.asp) sur w3schools
-- {{interwiki("wikipedia", "Sémantique des langages de programmation", "La signification de sémantique en informatique")}} sur Wikipédia
+- [Sémantique des langages de programmation](https://fr.wikipedia.org/wiki/S%C3%A9mantique_des_langages_de_programmation) sur Wikipédia

@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/catch
 ---
 <div>{{JSRef}}</div>
 
-<p>El método <strong>catch()</strong> retorna una <code>Promise</code> y solo se ejecuta en los casos en los que la promesa se marca como <code>Reject</code>. Se comporta igual que al llamar {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} (de hecho, al llamar <code>obj.catch(onRejected)</code> internamente llama a <code>obj.then(undefined, onRejected)</code>).</p>
+<p>El método <strong>catch()</strong> retorna una <code>Promise</code> y solo se ejecuta en los casos en los que la promesa se marca como <code>Reject</code>. Se comporta igual que al llamar {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} (de hecho, al llamar <code>obj.catch(onRejected)</code> internamente llama a <code>obj.then(undefined, onRejected)</code>).</p>
 
 <h2 id="Síntaxis">Síntaxis</h2>
 
@@ -26,28 +26,28 @@ p.catch(function(reason) {
   <dt><code>reason</code></dt>
   <dd>La razón del rechazo.</dd>
  </dl>
- La promesa devuelta por <code>catch()</code> es rechazada si <code>onRejected</code> lanza un error o retorna una <code>Promise</code> que a su vez se rechaza, de cualquier otra manera la <code>Promise</code> es resuelta.</dd>
+ La promesa devuelta por <code>catch()</code> es rechazada si <code>onRejected</code> lanza un error o retorna una <code>Promise</code> que a su vez se rechaza, de cualquier otra manera la <code>Promise</code> es resuelta.</dd>
 </dl>
 
 <h3 id="Valor_de_Retorno_(Return)">Valor de Retorno (Return)</h3>
 
-<p>Internamente llama a <code>Promise.prototype.then</code> en el objeto sobre el que se llama, pasándole el parámetro <code>undefined</code> y el manejador <code>onRejected</code> recibido; luego devuelve un valor de esa llamada (que es una {{jsxref("Promise")}}).</p>
+<p>Internamente llama a <code>Promise.prototype.then</code> en el objeto sobre el que se llama, pasándole el parámetro <code>undefined</code> y el manejador <code>onRejected</code> recibido; luego devuelve un valor de esa llamada (que es una {{jsxref("Promise")}}).</p>
 
 <p><strong>Demostración de la llamada interna:</strong></p>
 
 <pre class="brush: js">// overriding original Promise.prototype.then/catch just to add some logs
 (function(Promise){
-    var originalThen = Promise.prototype.then;
-    var originalCatch = Promise.prototype.catch;
+    var originalThen = Promise.prototype.then;
+    var originalCatch = Promise.prototype.catch;
 
-    Promise.prototype.then = function(){
-        console.log('&gt; &gt; &gt; &gt; &gt; &gt; called .then on %o with arguments: %o', this, arguments);
-        return originalThen.apply(this, arguments);
-    };
-    Promise.prototype.catch = function(){
-        console.log('&gt; &gt; &gt; &gt; &gt; &gt; called .catch on %o with arguments: %o', this, arguments);
-        return originalCatch.apply(this, arguments);
-    };
+    Promise.prototype.then = function(){
+        console.log('&gt; &gt; &gt; &gt; &gt; &gt; called .then on %o with arguments: %o', this, arguments);
+        return originalThen.apply(this, arguments);
+    };
+    Promise.prototype.catch = function(){
+        console.log('&gt; &gt; &gt; &gt; &gt; &gt; called .catch on %o with arguments: %o', this, arguments);
+        return originalCatch.apply(this, arguments);
+    };
 
 })(this.Promise);
 
@@ -63,37 +63,37 @@ Promise.resolve().catch(function XXX(){});
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>El método <code>catch</code> puede ser muy útil para el manejo de errores en tu código con promesas.</p>
+<p>El método <code>catch</code> puede ser muy útil para el manejo de errores en tu código con promesas.</p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<h3 id="Usando_y_encadenando_el_método_catch">Usando y encadenando el método <code>catch</code></h3>
+<h3 id="Usando_y_encadenando_el_método_catch">Usando y encadenando el método <code>catch</code></h3>
 
 <pre class="brush: js">var p1 = new Promise(function(resolve, reject) {
-  resolve('Success');
+  resolve('Success');
 });
 
 p1.then(function(value) {
-  console.log(value); // "Success!"
-  throw 'oh, no!';
+  console.log(value); // "Success!"
+  throw 'oh, no!';
 }).catch(function(e) {
-  console.log(e); // "oh, no!"
+  console.log(e); // "oh, no!"
 }).then(function(){
-  console.log('after a catch the chain is restored');
+  console.log('after a catch the chain is restored');
 }, function () {
-  console.log('Not fired due to the catch');
+  console.log('Not fired due to the catch');
 });
 
 // The following behaves the same as above
 p1.then(function(value) {
-  console.log(value); // "Success!"
+  console.log(value); // "Success!"
   return Promise.reject('oh, no!');
 }).catch(function(e) {
-  console.log(e); // "oh, no!"
+  console.log(e); // "oh, no!"
 }).then(function(){
-  console.log('after a catch the chain is restored');
+  console.log('after a catch the chain is restored');
 }, function () {
-  console.log('Not fired due to the catch');
+  console.log('Not fired due to the catch');
 });
 </pre>
 
@@ -101,32 +101,32 @@ p1.then(function(value) {
 
 <pre class="brush: js">// Hacer un throw llamará al método catch
 var p1 = new Promise(function(resolve, reject) {
-  throw 'Uh-oh!';
+  throw 'Uh-oh!';
 });
 
 p1.catch(function(e) {
-  console.log(e); // "Uh-oh!"
+  console.log(e); // "Uh-oh!"
 });
 
 // Los errores que se lancen dentro de funciones asíncronas actuarán como errores no capturados
 var p2 = new Promise(function(resolve, reject) {
-  setTimeout(function() {
-    throw 'Uncaught Exception!';
-  }, 1000);
+  setTimeout(function() {
+    throw 'Uncaught Exception!';
+  }, 1000);
 });
 
 p2.catch(function(e) {
-  console.log(e); // Nunca será llamado
+  console.log(e); // Nunca será llamado
 });
 
 // Errores lanzados después de resolve() serán omitidos
 var p3 = new Promise(function(resolve, reject) {
   resolve();
-  throw 'Silenced Exception!';
+  throw 'Silenced Exception!';
 });
 
 p3.catch(function(e) {
-   console.log(e); // Nunca será llamado
+   console.log(e); // Nunca será llamado
 });</pre>
 
 <h3 id="Si_se_resuelve_la_promesa">Si se resuelve la promesa</h3>
@@ -135,17 +135,17 @@ p3.catch(function(e) {
 var p1 = Promise.resolve("calling next");
 
 var p2 = p1.catch(function (reason) {
-    // Nunca será llamado
-    console.log("catch p1!");
-    console.log(reason);
+    // Nunca será llamado
+    console.log("catch p1!");
+    console.log(reason);
 });
 
 p2.then(function (value) {
-    console.log("next promise's onFulfilled"); /* next promise's onFulfilled */
-    console.log(value); /* calling next */
+    console.log("next promise's onFulfilled"); /* next promise's onFulfilled */
+    console.log(value); /* calling next */
 }, function (reason) {
-    console.log("next promise's onRejected");
-    console.log(reason);
+    console.log("next promise's onRejected");
+    console.log(reason);
 });</pre>
 
 <h2 id="Especificación">Especificación</h2>
@@ -165,7 +165,7 @@ p2.then(function (value) {
   <tr>
    <td>{{SpecName('ESDraft', '#sec-promise.prototype.catch', 'Promise.prototype.catch')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

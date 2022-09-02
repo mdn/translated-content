@@ -10,35 +10,38 @@ tags:
   - sessionStorage
 translation_of: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 original_slug: Web/API/Web_Storage_API_pt_br/Using_the_Web_Storage_API
+browser-compat:
+  - api.Window.localStorage
+  - api.Window.sessionStorage
 ---
 <div>{{DefaultAPISidebar("Web Storage API")}}</div>
 
 <div class="summary">
-<p>A API Web Storage fornece mecanismos pelos quais os navegadores podem armazenar pares de chaves/valores de uma maneira muito mais segura e intuitiva do que usar cookies. Este artigo fornece um passo a passo sobre como usar essa tecnologia.</p>
+<p>A API Web Storage fornece mecanismos pelos quais os navegadores podem armazenar pares de chaves/valores de uma maneira muito mais segura e intuitiva do que usar cookies. Este artigo fornece um passo a passo sobre como usar essa tecnologia.</p>
 </div>
 
 <h2 id="Conceitos_básicos">Conceitos básicos</h2>
 
-<p>Objetos <code>Storage</code> são simples conjuntos contendo pares de chave/valor, de forma parecida com objetos, porém eles permanecem intactos mesmo após a página ser recarregada. As chaves e valores são sempre strings (note que chaves cujo nome seja um número inteiro serão automaticamente convertidas par strings, assim como acontece nos objetos). Você pode acessar esses valores como você faria com um objeto ou usando os métodos {{domxref("Storage.getItem()")}} e {{domxref("Storage.setItem()")}}. As três linhas seguintes definem o valor de <code>corDefinida</code> de maneiras diferentes, mas com o mesmo resultado:</p>
+<p>Objetos <code>Storage</code> são simples conjuntos contendo pares de chave/valor, de forma parecida com objetos, porém eles permanecem intactos mesmo após a página ser recarregada. As chaves e valores são sempre strings (note que chaves cujo nome seja um número inteiro serão automaticamente convertidas par strings, assim como acontece nos objetos). Você pode acessar esses valores como você faria com um objeto ou usando os métodos {{domxref("Storage.getItem()")}} e {{domxref("Storage.setItem()")}}. As três linhas seguintes definem o valor de <code>corDefinida</code> de maneiras diferentes, mas com o mesmo resultado:</p>
 
 <pre class="brush: js" style="white-space: pre;">localStorage.corDefinida = '#a4509b';
 localStorage['corDefinida'] = '#a4509b';
 localStorage.setItem('corDefinida', '#a4509b');</pre>
 
 <div class="note">
-<p><strong>Nota</strong>: Recomendamos que você utilize a API Web Storage (<code>setItem</code>, <code>getItem</code>, <code>removeItem</code>, <code>key</code>, <code>length</code>) para evitar as <a href="http://www.2ality.com/2012/01/objects-as-maps.html">armadilhas</a> associadas ao uso de objetos literais como mapas de chave-valor.</p>
+<p><strong>Nota</strong>: Recomendamos que você utilize a API Web Storage (<code>setItem</code>, <code>getItem</code>, <code>removeItem</code>, <code>key</code>, <code>length</code>) para evitar as <a href="http://www.2ality.com/2012/01/objects-as-maps.html">armadilhas</a> associadas ao uso de objetos literais como mapas de chave-valor.</p>
 </div>
 
 <p>Os dois mecanismos presentes na Web Storage são os seguintes:</p>
 
 <ul>
  <li>O<strong> <code>sessionStorage</code> </strong>mantém uma área de armazenamento separada para cada origem diferente. Cada uma dessas áreas fica disponível durante a sessão da página (ou seja, enquanto a aba do navegador estiver aberta, incluindo recarregamentos e restaurações de páginas).</li>
- <li>O <strong><code>localStorage</code> </strong>faz a mesma coisa, mas os dados armazenados aqui continuam existindo mesmo depois do navegador ser fechado e reaberto.</li>
+ <li>O <strong><code>localStorage</code> </strong>faz a mesma coisa, mas os dados armazenados aqui continuam existindo mesmo depois do navegador ser fechado e reaberto.</li>
 </ul>
 
-<p>Esses mecanismos estão disponíveis através das propriedades {{domxref("Window.sessionStorage")}} e {{domxref("Window.localStorage")}} (de forma mais específica, em navegadores compatíveis, o objeto <code>Window</code> implementa os objetos <code>WindowLocalStorage</code> e <code>WindowSessionStorage</code>, aos quais as propriedades <code>localStorage</code> and <code>sessionStorage</code> pertencem, respectivamente) — invocar uma dessas propriedades irá criar uma instância do objeto {{domxref("Storage")}}, através do qual itens de dados podem ser definidos, acessados e removidos. Cada origem recebe objetos Storage diferentes para <code>sessionStorage</code> and <code>localStorage</code> — eles operam e são controlados separadamente.</p>
+<p>Esses mecanismos estão disponíveis através das propriedades {{domxref("Window.sessionStorage")}} e {{domxref("Window.localStorage")}} (de forma mais específica, em navegadores compatíveis, o objeto <code>Window</code> implementa os objetos <code>WindowLocalStorage</code> e <code>WindowSessionStorage</code>, aos quais as propriedades <code>localStorage</code> and <code>sessionStorage</code> pertencem, respectivamente) — invocar uma dessas propriedades irá criar uma instância do objeto {{domxref("Storage")}}, através do qual itens de dados podem ser definidos, acessados e removidos. Cada origem recebe objetos Storage diferentes para <code>sessionStorage</code> and <code>localStorage</code> — eles operam e são controlados separadamente.</p>
 
-<p>Por exemplo, chamar <code>localStorage</code> pela primeira vez em um documento retornará um objeto {{domxref("Storage")}}; chamar <code>sessionStorage</code> em um documento retornará um outro objeto {{domxref("Storage")}}. Ambos podem ser manipulados da mesma maneira, mas de forma isolada.</p>
+<p>Por exemplo, chamar <code>localStorage</code> pela primeira vez em um documento retornará um objeto {{domxref("Storage")}}; chamar <code>sessionStorage</code> em um documento retornará um outro objeto {{domxref("Storage")}}. Ambos podem ser manipulados da mesma maneira, mas de forma isolada.</p>
 
 <h2 id="Detectando_a_disponibilidade_do_localStorage">Detectando a disponibilidade do localStorage</h2>
 
@@ -46,7 +49,7 @@ localStorage.setItem('corDefinida', '#a4509b');</pre>
 
 <h3 id="Testando_a_disponibilidade">Testando a disponibilidade</h3>
 
-<p>Navegadores compatíveis com localStorage terão uma propriedade no objeto <code>window</code> chamada <code>localStorage</code>. Contudo, por várias razões, apenas verificar se essa propriedade existe pode gerar erros. Se ela existir, ainda não haverá garantias de que o localStorage está de fato disponível para uso, já que vários navegadores fornecem opções que desativam o localStorage. Dessa forma, um navegador pode ser <em>compatível</em> com o localStorage, mas também pode não torná-lo <em>disponível</em> para os scripts usarem. One example of that is Safari, which in Private Browsing mode gives us an empty localStorage object with a quota of zero, effectively making it unusable. However, we might still get a legitimate QuotaExceededError, which only means that we've used up all available storage space, but storage is actually <em>available</em>. Our feature detect should take these scenarios into account.</p>
+<p>Navegadores compatíveis com localStorage terão uma propriedade no objeto <code>window</code> chamada <code>localStorage</code>. Contudo, por várias razões, apenas verificar se essa propriedade existe pode gerar erros. Se ela existir, ainda não haverá garantias de que o localStorage está de fato disponível para uso, já que vários navegadores fornecem opções que desativam o localStorage. Dessa forma, um navegador pode ser <em>compatível</em> com o localStorage, mas também pode não torná-lo <em>disponível</em> para os scripts usarem. One example of that is Safari, which in Private Browsing mode gives us an empty localStorage object with a quota of zero, effectively making it unusable. However, we might still get a legitimate QuotaExceededError, which only means that we've used up all available storage space, but storage is actually <em>available</em>. Our feature detect should take these scenarios into account.</p>
 
 <p>Here is a function that detects whether localStorage is both supported and available:</p>
 
@@ -192,74 +195,14 @@ imageForm.onchange = populateStorage;</pre>
   <tr>
    <td>{{SpecName('HTML WHATWG', 'webstorage.html#webstorage')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>localStorage</td>
-   <td>4</td>
-   <td>3.5</td>
-   <td>8</td>
-   <td>10.50</td>
-   <td>4</td>
-  </tr>
-  <tr>
-   <td>sessionStorage</td>
-   <td>5</td>
-   <td>2</td>
-   <td>8</td>
-   <td>10.50</td>
-   <td>4</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>2.1</td>
-   <td>{{ CompatUnknown }}</td>
-   <td>8</td>
-   <td>11</td>
-   <td>iOS 3.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>All browsers have varying capacity levels for both localStorage and sessionStorage. Here is a <a class="external" href="http://dev-test.nemikor.com/web-storage/support-test/">detailed rundown of all the storage capacities for various browsers</a>.</p>
-
-<div class="note">
-<p><strong>Note: </strong>since iOS 5.1, Safari Mobile stores localStorage data in the cache folder, which is subject to occasional cleanup, at the behest of the OS, typically if space is short.</p>
-</div>
+{{Compat}}
 
 <h2 id="See_also">See also</h2>
 

@@ -1,12 +1,6 @@
 ---
 title: JSON
 slug: Glossary/JSON
-tags:
-  - JSON
-  - 介绍
-  - 术语
-  - 脚本编写
-translation_of: Glossary/JSON
 ---
 _JavaScript Object Notation_ (**JSON**) 是一种数据交换格式。尽管不是严格意义上的子集，JSON 非常接近 {{Glossary("JavaScript")}} 语法的子集。
 
@@ -22,8 +16,8 @@ JSON 可以表示数字、布尔值、字符串、`null`、数组（有序序列
 
 ### General knowledge
 
-- {{interwiki("wikipedia", "JSON", "JSON")}} （维基百科）
+- [JSON](https://zh.wikipedia.org/wiki/JSON) （维基百科）
 
 ### Technical reference
 
-- {{Link("/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON")}}（MDN）
+- [JSON](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON)（MDN）

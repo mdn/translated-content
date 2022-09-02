@@ -19,14 +19,11 @@ ElmSelectionne.setCustomValidity(message);
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                           | Commentaire                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-cva-setcustomvalidity', 'HTMLSelectElement.setCustomValidity()')}}         | {{Spec2('HTML WHATWG')}} | Pas de changement depuis la dernière snapshot, {{SpecName('HTML5 W3C')}}. |
-| {{SpecName('HTML5 W3C', 'forms.html#dom-cva-setcustomvalidity', 'HTMLSelectElement.setCustomValidity()')}} | {{Spec2('HTML5 W3C')}}     | Définition initiale, snapshot de {{SpecName('HTML WHATWG')}}            |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLSelectElement.setCustomValidity")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -122,9 +122,9 @@ minhaIdade;</pre>
 
 <h2 id="A_diferença_entre_var_e_let">A diferença entre var e let</h2>
 
-<p>Agora você pode estar pensando "por que precisamos de duas palavras-chave para definir variáveis? Por que <code>var</code> <em>e</em> <code>let</code>?".</p>
+<p>Agora você pode estar pensando "por que precisamos de duas palavras-chave para definir variáveis? Por que <code>var</code> <em>e</em> <code>let</code>?".</p>
 
-<p>As razões são um tanto históricas. Quando o JavaScript foi criado, havia apenas <code>var</code>. Isso funciona basicamente bem na maioria dos casos, mas tem alguns problemas na maneira como funciona — seu design pode ser confuso ou totalmente irritante. Portanto, <code>let</code> foi criada nas versões modernas de JavaScript, uma nova palavra-chave para criar variáveis que funcionam de maneira um pouco diferente para  <code>var</code>, corrigindo seus problemas no processo.</p>
+<p>As razões são um tanto históricas. Quando o JavaScript foi criado, havia apenas <code>var</code>. Isso funciona basicamente bem na maioria dos casos, mas tem alguns problemas na maneira como funciona — seu design pode ser confuso ou totalmente irritante. Portanto, <code>let</code> foi criada nas versões modernas de JavaScript, uma nova palavra-chave para criar variáveis que funcionam de maneira um pouco diferente para  <code>var</code>, corrigindo seus problemas no processo.</p>
 
 <p>Algumas diferenças simples são explicadas abaixo. Não abordaremos todas as diferenças agora, mas você começará a descobri-las à medida que aprender mais sobre JavaScript (se realmente quiser ler sobre elas agora, fique à vontade para conferir nossa <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/let">página de referência let</a>).</p>
 
@@ -144,11 +144,11 @@ var meuNome;</pre>
 <p><strong>Nota</strong>: Isso não funcionará ao digitar linhas individuais em um console JavaScript, apenas ao executar várias linhas de JavaScript em um documento da web.</p>
 </div>
 
-<p>Isso funciona por causa do <strong>hoisting</strong> — leia <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/var#var_hoisting">var hoisting</a> pra mais detalhes.</p>
+<p>Isso funciona por causa do <strong>hoisting</strong> — leia <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/var#var_hoisting">var hoisting</a> pra mais detalhes.</p>
 
-<p>Hoisting não funciona mais com <code>let</code>. Se mudássemos de <code>var</code> para <code>let</code> no exemplo acima, teríamos um erro. Isso é bom — declarar uma variável depois que você a inicializa resulta em código confuso e difícil de entender.</p>
+<p>Hoisting não funciona mais com <code>let</code>. Se mudássemos de <code>var</code> para <code>let</code> no exemplo acima, teríamos um erro. Isso é bom — declarar uma variável depois que você a inicializa resulta em código confuso e difícil de entender.</p>
 
-<p>E depois, ao usar <code>var</code>, você pode declarar a mesma variável quantas vezes quiser, mas com <code>let</code> você não consegue. Isso pode funcionar:</p>
+<p>E depois, ao usar <code>var</code>, você pode declarar a mesma variável quantas vezes quiser, mas com <code>let</code> você não consegue. Isso pode funcionar:</p>
 
 <pre class="brush: js notranslate">var meuNome = 'Chris';
 var meuNome = 'Bob';</pre>
@@ -163,9 +163,9 @@ let meuNome = 'Bob';</pre>
 <pre class="brush: js notranslate">let meuNome = 'Chris';
 meuNome = 'Bob';</pre>
 
-<p>Novamente, essa é uma decisão sensata da linguagem. Não há razão para redeclarar variáveis — isso apenas torna as coisas mais confusas.</p>
+<p>Novamente, essa é uma decisão sensata da linguagem. Não há razão para redeclarar variáveis — isso apenas torna as coisas mais confusas.</p>
 
-<p>Por esses motivos e mais, recomendamos que você use <code>let</code> o máximo possível em seu código, em vez de <code>var</code>. Não há motivo para usar <code>var</code>, a menos que você precise oferecer suporte para versões antigas do Internet Explorer com seu código (ele não suporta <code>let</code> até a versão 11; o navegador mais moderno do Windows, o Edge, suporta <code>let</code>).</p>
+<p>Por esses motivos e mais, recomendamos que você use <code>let</code> o máximo possível em seu código, em vez de <code>var</code>. Não há motivo para usar <code>var</code>, a menos que você precise oferecer suporte para versões antigas do Internet Explorer com seu código (ele não suporta <code>let</code> até a versão 11; o navegador mais moderno do Windows, o Edge, suporta <code>let</code>).</p>
 
 <h2 id="Atualizando_uma_variável">Atualizando uma variável</h2>
 
@@ -182,7 +182,7 @@ minhaIdade = 40;</pre>
  <li>Você não deve usar outros caracteres porque eles podem causar erros ou ser difíceis de entender por uma audiência internacional.</li>
  <li>Não use underline no início do nome de variáveis — isso é utilizado em certos construtores JavaScript para significar coisas específicas, então pode deixar as coisas confusas.</li>
  <li>Não use número no início do nome de variáveis. Isso não é permitido e irá causar um erro.</li>
- <li>Uma conveção segura e se ater é a chamada <a href="https://pt.wikipedia.org/wiki/CamelCase">"lower camel case"</a>, onde você junta várias palavras, usando minúscula para a primeira palavra inteira e, em seguita, maiusculiza a primeira letra das palavras subsequentes. Temos utilizado esse procedimento para os nomes das nossas variáveis nesse artigo até aqui.</li>
+ <li>Uma conveção segura e se ater é a chamada <a href="https://pt.wikipedia.org/wiki/CamelCase">"lower camel case"</a>, onde você junta várias palavras, usando minúscula para a primeira palavra inteira e, em seguida, maiusculiza a primeira letra das palavras subsequentes. Temos utilizado esse procedimento para os nomes das nossas variáveis nesse artigo até aqui.</li>
  <li>Faça nomes de variáveis intuitivos, para que descrevam o dado que ela contém. Não use letras ou números únicos, ou frases muito longas.</li>
  <li>As variáveis diferenciam letras maiúsculas e minúsculas — então <code>minhaidade</code> é uma variável diferente de <code>minhaIdade</code>.</li>
  <li>Um último ponto — você também precisa evitar utilizar palavras reservadas pelo JavaScript como nome para suas variáveis — com isso, queremos dizer as palavras que fazem parte da sintaxe do JavaScript! Então você não pode usar palavras como <code>var</code>, <code>function</code>, <code>let</code> e <code>for</code> como nome de variáveis. Os navegadores vão reconhecê-las como itens de código diferentes e, portanto, você terá erros.</li>
@@ -215,7 +215,7 @@ skjfndskjfnbdskjfb
 esseeumnomedevariavelbemlongoeestupido
 </pre>
 
-<p>Tente criar mais  algumas variáveis agora, com a orientação acima em mente.</p>
+<p>Tente criar mais  algumas variáveis agora, com a orientação acima em mente.</p>
 
 <h2 id="Tipos_de_variáveis">Tipos de variáveis</h2>
 
@@ -231,13 +231,13 @@ esseeumnomedevariavelbemlongoeestupido
 
 <h3 id="Strings_cadeias_de_texto"><em>Strings</em> (cadeias de texto)</h3>
 
-<p><em>Strings</em> são sequências de texto. Quando você dá a uma variável um valor em texto (<em>string</em>), você precisa envolver o texto em aspas simples ou duplas; caso contrário, o JavaScript vai tentar interpretá-lo como sendo outro nome de variável.</p>
+<p><em>Strings</em> são sequências de texto. Quando você dá a uma variável um valor em texto (<em>string</em>), você precisa envolver o texto em aspas simples ou duplas; caso contrário, o JavaScript vai tentar interpretá-lo como sendo outro nome de variável.</p>
 
 <pre class="brush: js notranslate">var despedidaGolfinho = 'Até logo e obrigado por todos os peixes!';</pre>
 
 <h3 id="Booleans_boleanos"><em>Booleans</em> (boleanos)</h3>
 
-<p><em>Booleans</em> são valores verdadeiro/falso (<em>true/false</em>) — eles podem ter dois valores, <code>true</code> (verdadeiro) ou <code>false</code> (falso). São geralmente usados para verificar uma condição, que em seguida o código é executado apopriadamente. Por exemplo, um caso simples seria:</p>
+<p><em>Booleans</em> são valores verdadeiro/falso (<em>true/false</em>) — eles podem ter dois valores, <code>true</code> (verdadeiro) ou <code>false</code> (falso). São geralmente usados para verificar uma condição, que em seguida o código é executado apopriadamente. Por exemplo, um caso simples seria:</p>
 
 <pre class="brush: js notranslate">var estouVivo = true;</pre>
 
@@ -296,37 +296,37 @@ typeof(meuNumero);</pre>
 
 <h2 id="Constants_em_JavaScript">Constants em JavaScript</h2>
 
-<p>Muitas linguagens de programação têm o conceito de <em>constant</em> —  um valor que uma vez declarado não pode ser alterado. Há muitas razões pelas quais você deseja fazer isso, desde segurança (se um script de terceiros alterou esses valores, poderia causar problemas)  até a depuração e a compreensão do código (é mais difícil alterar acidentalmente valores que não devem ser alterados e bagunçar as coisas).</p>
+<p>Muitas linguagens de programação têm o conceito de <em>constant</em> —  um valor que uma vez declarado não pode ser alterado. Há muitas razões pelas quais você deseja fazer isso, desde segurança (se um script de terceiros alterou esses valores, poderia causar problemas)  até a depuração e a compreensão do código (é mais difícil alterar acidentalmente valores que não devem ser alterados e bagunçar as coisas).</p>
 
-<p>Nos primeiros dias do JavaScript, não existiam <em>constants</em>. No JavaScript moderno, temos a palavra-chave <code>const</code>, que nos permite armazenar valores que nunca podem ser alterados:</p>
+<p>Nos primeiros dias do JavaScript, não existiam <em>constants</em>. No JavaScript moderno, temos a palavra-chave <code>const</code>, que nos permite armazenar valores que nunca podem ser alterados:</p>
 
 <pre class="brush: js notranslate">const diasNaSemana = 7<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number">;
 const horasNoDia = 24;</span></span></span></span></pre>
 
-<p><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number"><code>const</code> funciona exatamente da mesma maneira que <code>let</code>, exceto que você não pode atribuir um novo valor a <code>const</code>. No exemplo a seguir, a segunda linha geraria um erro:</span></span></span></span></p>
+<p><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number"><code>const</code> funciona exatamente da mesma maneira que <code>let</code>, exceto que você não pode atribuir um novo valor a <code>const</code>. No exemplo a seguir, a segunda linha geraria um erro:</span></span></span></span></p>
 
 <pre class="brush: js notranslate">const diasNaSemana = 7<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number">;
 </span></span></span></span>diasNaSemana<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number"> = 8;</span></span></span></span></pre>
 
 <h2 id="Teste_suas_habilidades!">Teste suas habilidades!</h2>
 
-<p>Você chegou ao final deste artigo, mas consegue se lembrar das informações mais importantes? Você pode encontrar alguns testes adicionais para verificar se você reteve essas informações antes de prosseguir — veja <a href="/pt-BR/docs/Learn/JavaScript/First_steps/Teste_suas_habilidades:_variaveis">Teste suas habilidades: variáveis</a>.</p>
+<p>Você chegou ao final deste artigo, mas consegue se lembrar das informações mais importantes? Você pode encontrar alguns testes adicionais para verificar se você reteve essas informações antes de prosseguir — veja <a href="/pt-BR/docs/Learn/JavaScript/First_steps/Teste_suas_habilidades:_variaveis">Teste suas habilidades: variáveis</a>.</p>
 
 <h2 id="Sumário">Sumário</h2>
 
-<p>Por agora você deve saber razoavelmente sobre variáveis JavaScript e como criá-las. No próximo artigo Vamos focar nos números em mais detalhes, vendo como fazer matemática básica no JavaScript.</p>
+<p>Por agora você deve saber razoavelmente sobre variáveis JavaScript e como criá-las. No próximo artigo Vamos focar nos números em mais detalhes, vendo como fazer matemática básica no JavaScript.</p>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Maths", "Learn/JavaScript/First_steps")}}</p>
 
 <h2 id="Neste_módulo">Neste módulo</h2>
 
 <ul>
- <li><a href="/pt-BR/docs/Learn/JavaScript/First_steps/O_que_e_JavaScript">O que é JavaScript?</a></li>
+ <li><a href="/pt-BR/docs/Learn/JavaScript/First_steps/O_que_e_JavaScript">O que é JavaScript?</a></li>
  <li><a href="/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash">Um primeiro mergulho no JavaScript</a></li>
- <li><a href="/pt-BR/docs/Learn/JavaScript/First_steps/What_went_wrong">O que deu errado? Resolvendo problemas no JavaScript</a></li>
+ <li><a href="/pt-BR/docs/Learn/JavaScript/First_steps/What_went_wrong">O que deu errado? Resolvendo problemas no JavaScript</a></li>
  <li><a href="/pt-BR/docs/Learn/JavaScript/First_steps/Vari%C3%A1veis">Armazenando as informações que você precisa — Variáveis</a></li>
- <li><a href="/pt-BR/docs/Learn/JavaScript/First_steps/Matematica">Matemática básica no JavaScript — números e operadores</a></li>
- <li><a href="/pt-BR/docs/Learn/JavaScript/First_steps/Strings">Trabalhando com textos — strings em JavaScript</a></li>
+ <li><a href="/pt-BR/docs/Learn/JavaScript/First_steps/Matematica">Matemática básica no JavaScript — números e operadores</a></li>
+ <li><a href="/pt-BR/docs/Learn/JavaScript/First_steps/Strings">Trabalhando com textos — strings em JavaScript</a></li>
  <li><a href="/pt-BR/docs/Learn/JavaScript/First_steps/Useful_string_methods">Métodos úteis de string</a></li>
  <li><a href="/pt-BR/docs/Learn/JavaScript/First_steps/Arrays">Arrays</a></li>
  <li><a href="/pt-BR/docs/Learn/JavaScript/First_steps/Gerador_de_historias_bobas">Avaliação: Gerador de histórias bobas</a></li>

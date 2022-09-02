@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charAt
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <strong><code>charAt()</code></strong> retorna o caractere especificado a partir de uma string.</p>
+<p>O método <strong><code>charAt()</code></strong> retorna o caractere especificado a partir de uma string.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charAt
 
 <dl>
  <dt><code>index</code></dt>
- <dd>Um inteiro entre <code>0</code> e <code>str.length - 1</code>. Se nenhum índice for definido, <code>charAt()</code> usará <code>0</code> como índice.</dd>
+ <dd>Um inteiro entre <code>0</code> e <code>str.length - 1</code>. Se nenhum índice for definido, <code>charAt()</code> usará <code>0</code> como índice.</dd>
 </dl>
 
 <h3 id="Valor_retornado">Valor retornado</h3>
@@ -30,15 +30,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charAt
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Caracteres em uma string são indexados da esquerda para a direita. O índice do primeiro caractere é <code>0</code><strong> </strong>(zero), e o índice do último caractere em uma string declarada como <code>stringName</code> é <code>stringName.length - 1</code>. Se o índice que você fornecer estiver fora do intervalo de índices da string, JavaScript retornará uma string vazia.</p>
+<p>Caracteres em uma string são indexados da esquerda para a direita. O índice do primeiro caractere é <code>0</code><strong> </strong>(zero), e o índice do último caractere em uma string declarada como <code>stringName</code> é <code>stringName.length - 1</code>. Se o índice que você fornecer estiver fora do intervalo de índices da string, JavaScript retornará uma string vazia.</p>
 
 <p>Se nenhum índice for passado para <code>charAt()</code>, <code>0</code> será usado por padrão.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Mostrando_caracteres_em_diferente_localizações_em_uma_string">Mostrando caracteres em diferente localizações em uma string</h3>
+<h3 id="Mostrando_caracteres_em_diferente_localizações_em_uma_string">Mostrando caracteres em diferente localizações em uma string</h3>
 
-<p>O exemplo a seguir mostra caracteres em diferentes locais em uma string <code>"Brave new world"</code>:</p>
+<p>O exemplo a seguir mostra caracteres em diferentes locais em uma string <code>"Brave new world"</code>:</p>
 
 <pre class="brush: js notranslate">var anyString = 'Brave new world';
 
@@ -165,7 +165,7 @@ function getWholeCharAndI(str, i) {
 }
 </pre>
 
-<h3 id="Corrigindo_charAt_para_suportar_caracteres_não-Plano-Multilíngüe-Básico_PMB">Corrigindo <code>charAt()</code> para suportar caracteres não-Plano-Multilíngüe-Básico (PMB)</h3>
+<h3 id="Corrigindo_charAt_para_suportar_caracteres_não-Plano-Multilíngüe-Básico_PMB">Corrigindo <code>charAt()</code> para suportar caracteres não-Plano-Multilíngüe-Básico (PMB)</h3>
 
 <p>Embora o exemplo anterior possa ser mais útil para programas que devem suportar caracteres não BMP (uma vez que não exige que o chamador saiba onde qualquer caractere não BMP pode aparecer), no caso de desejar, na escolha de um caractere por índice, para tratar os pares substitutos em uma string como os caracteres únicos que eles representam, pode-se usar o seguinte:</p>
 
@@ -227,55 +227,7 @@ function getWholeCharAndI(str, i) {
 
 <h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.String.charAt")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

@@ -1,12 +1,6 @@
 ---
 title: IIFE（立即调用函数表达式）
 slug: Glossary/IIFE
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
-  - 术语
-translation_of: Glossary/IIFE
 original_slug: Glossary/立即执行函数表达式
 ---
 **IIFE**（立即调用函数表达式）是一个在定义时就会立即执行的 {{glossary("JavaScript")}} {{glossary("function","函数")}}。
@@ -52,7 +46,7 @@ result; // "Barry"
 
 ### 常识
 
-- {{interwiki("wikipedia", "Immediately-invoked function expression", "IIFE")}} 维基百科
+- [IIFE](https://zh.wikipedia.org/wiki/Immediately-invoked_function_expression) 维基百科
 
 - [相关术语](/zh-CN/docs/Glossary)
 

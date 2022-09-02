@@ -10,6 +10,9 @@ tags:
   - Service Workers
 translation_of: Web/API/Push_API
 original_slug: Web/API/API_Push
+browser-compat:
+  - api.PushEvent
+  - api.PushMessageData
 ---
 <div>{{DefaultAPISidebar("Push API")}}{{SeeCompatTable}}</div>
 
@@ -21,18 +24,18 @@ original_slug: Web/API/API_Push
 
 <h2 id="Conceitos_e_uso_de_Push">Conceitos e uso de Push</h2>
 
-<p>Para uma aplicação receber mensagens push, ela precisa ter um <a href="/en-US/docs/Web/API/ServiceWorker_API">service worker</a> ativo. Quando o service worker está ativo, ele pode se inscrever para utilizar notificações push {{domxref("PushManager.subscribe()")}}.</p>
+<p>Para uma aplicação receber mensagens push, ela precisa ter um <a href="/en-US/docs/Web/API/ServiceWorker_API">service worker</a> ativo. Quando o service worker está ativo, ele pode se inscrever para utilizar notificações push {{domxref("PushManager.subscribe()")}}.</p>
 
-<p>O resultado de {{domxref("PushSubscription")}} inclui toda informação que a aplicação precisa para receber uma mensagem push: um endpoint e a chave encriptada necessária para o envio de dados.</p>
+<p>O resultado de {{domxref("PushSubscription")}} inclui toda informação que a aplicação precisa para receber uma mensagem push: um endpoint e a chave encriptada necessária para o envio de dados.</p>
 
-<p>O service worker será iniciado conforme o necessário para lidar com as mensagens recebidas, que são entregues ao manipulador de evento {{domxref("ServiceWorkerGlobalScope.onpush")}} . Isto permite que a aplicação reaja a cada mensagem recebida, por exemplo para exibir a notificação ao usuário (usando {{domxref("ServiceWorkerRegistration.showNotification()")}}.)</p>
+<p>O service worker será iniciado conforme o necessário para lidar com as mensagens recebidas, que são entregues ao manipulador de evento {{domxref("ServiceWorkerGlobalScope.onpush")}} . Isto permite que a aplicação reaja a cada mensagem recebida, por exemplo para exibir a notificação ao usuário (usando {{domxref("ServiceWorkerRegistration.showNotification()")}}.)</p>
 
-<p>Cada assinatura é única para um service worker.  O endpoint para a assinatura é uma <a href="http://www.w3.org/TR/capability-urls/">capability URL</a> única: o conhecimento do endpoint é tudo que é necessário para enviar uma mensagem para sua aplicação. A URL do endpoint precisa ser mantida em segredo, ou outras aplicações estranhas poderão enviar mensagens push para a sua aplicação.</p>
+<p>Cada assinatura é única para um service worker.  O endpoint para a assinatura é uma <a href="http://www.w3.org/TR/capability-urls/">capability URL</a> única: o conhecimento do endpoint é tudo que é necessário para enviar uma mensagem para sua aplicação. A URL do endpoint precisa ser mantida em segredo, ou outras aplicações estranhas poderão enviar mensagens push para a sua aplicação.</p>
 
-<p>A ativação de um service worker para entregar mensagens push pode resultar em um aumento de uso de recursos, particularmente de bateria. Diferentes navegadores tem diferentes formas para lidar com isso — atualmente não existe uma forma padrão. Firefox permite um número limitado (cota) de mensagens push para serem enviadas para uma aplicação, embora as mensagens Push que gerem notificações são isentas deste limite.  O limite é atualizado a cada site visitado. Numa comparação, Chrome não aplica nenhum limite, mas requer que cada mensagem push exiba uma notificação.</p>
+<p>A ativação de um service worker para entregar mensagens push pode resultar em um aumento de uso de recursos, particularmente de bateria. Diferentes navegadores tem diferentes formas para lidar com isso — atualmente não existe uma forma padrão. Firefox permite um número limitado (cota) de mensagens push para serem enviadas para uma aplicação, embora as mensagens Push que gerem notificações são isentas deste limite.  O limite é atualizado a cada site visitado. Numa comparação, Chrome não aplica nenhum limite, mas requer que cada mensagem push exiba uma notificação.</p>
 
 <div class="note">
-<p><strong>Nota</strong>: A partir do Gecko 44, a cota permitida de mensagens push por aplicação não é incrementada quando uma nova notificação é disparada quando outra está visível, por um período de três segundos. Isso lida com casos em que várias notificações são recebidas ao mesmo tempo, mas nem todas estão visíveis.</p>
+<p><strong>Nota</strong>: A partir do Gecko 44, a cota permitida de mensagens push por aplicação não é incrementada quando uma nova notificação é disparada quando outra está visível, por um período de três segundos. Isso lida com casos em que várias notificações são recebidas ao mesmo tempo, mas nem todas estão visíveis.</p>
 </div>
 
 <div class="note">
@@ -43,26 +46,26 @@ original_slug: Web/API/API_Push
 
 <dl>
  <dt>{{domxref("PushEvent")}}</dt>
- <dd>Representa uma ação push enviada para o <a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope">global scope</a> de um {{domxref("ServiceWorker")}}. Ele contém informações enviadas de uma aplicação para um {{domxref("PushSubscription")}}.</dd>
+ <dd>Representa uma ação push enviada para o <a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope">global scope</a> de um {{domxref("ServiceWorker")}}. Ele contém informações enviadas de uma aplicação para um {{domxref("PushSubscription")}}.</dd>
  <dt>{{domxref("PushManager")}}</dt>
- <dd>Fornece uma forma de receber notificações de servidor third-party bem como solicitar URL para notificações push. Essa interface substitui a funcionalidade oferecida que está obsoleta {{domxref("PushRegistrationManager")}} interface.</dd>
+ <dd>Fornece uma forma de receber notificações de servidor third-party bem como solicitar URL para notificações push. Essa interface substitui a funcionalidade oferecida que está obsoleta {{domxref("PushRegistrationManager")}} interface.</dd>
  <dt>{{domxref("PushMessageData")}}</dt>
- <dd>Fornece acesso aos dados push enviados por um servidor, e inclui métodos para manipular os dados recebidos.</dd>
+ <dd>Fornece acesso aos dados push enviados por um servidor, e inclui métodos para manipular os dados recebidos.</dd>
  <dt>{{domxref("PushSubscription")}}</dt>
- <dd>Fornece a URL de assinatura do endpoint e permite o cancelamento da assinatura de um serviço push.</dd>
+ <dd>Fornece a URL de assinatura do endpoint e permite o cancelamento da assinatura de um serviço push.</dd>
 </dl>
 
 <h2 id="Service_worker_additions">Service worker additions</h2>
 
-<p>As seguintes informações adicionais para a <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> foram especificadas na Push API spec, para fornecer um ponto de entrada para usar mensagens Push, e para monitorar e responder os eventos de envio e assinatura.</p>
+<p>As seguintes informações adicionais para a <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> foram especificadas na Push API spec, para fornecer um ponto de entrada para usar mensagens Push, e para monitorar e responder os eventos de envio e assinatura.</p>
 
 <dl>
  <dt>{{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}</dt>
- <dd>Retorna uma referência para a interface {{domxref("PushManager")}} para administrar assinaturas push incluindo subscrever, obter uma assinatura ativa e acessar o status de permissão de envio. Este é o ponto de entrada para usar mensagens Push.</dd>
+ <dd>Retorna uma referência para a interface {{domxref("PushManager")}} para administrar assinaturas push incluindo subscrever, obter uma assinatura ativa e acessar o status de permissão de envio. Este é o ponto de entrada para usar mensagens Push.</dd>
  <dt>{{domxref("ServiceWorkerGlobalScope.onpush")}}</dt>
- <dd>Um manipulador de eventos disparado sempre que um evento  {{Event("push")}} ocorre; isto é, sempre que uma mensagem do servidor de envio for recebida.</dd>
+ <dd>Um manipulador de eventos disparado sempre que um evento  {{Event("push")}} ocorre; isto é, sempre que uma mensagem do servidor de envio for recebida.</dd>
  <dt>{{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange")}}</dt>
- <dd>Um manipulador de eventos disparado sempre que um evento  {{Event("pushsubscriptionchange")}} ocorre; por exemplo, quando uma assinatura push está inválida, ou está prestes a ser invalidada (ex. quando um serviço push service define um tempo de expiração.)</dd>
+ <dd>Um manipulador de eventos disparado sempre que um evento  {{Event("pushsubscriptionchange")}} ocorre; por exemplo, quando uma assinatura push está inválida, ou está prestes a ser invalidada (ex. quando um serviço push service define um tempo de expiração.)</dd>
 </dl>
 
 <h2 id="Especificações">Especificações</h2>
@@ -84,84 +87,7 @@ original_slug: Web/API/API_Push
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidade</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatChrome(42.0)}}</td>
-   <td>{{CompatGeckoDesktop(44.0)}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("PushEvent.data")}},<br>
-    {{domxref("PushMessageData")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop(44.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidade</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("PushEvent.data")}},<br>
-    {{domxref("PushMessageData")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Atualmente disponível apenas nas versões desktop do Firefox; ainda, mensagens push são encaminhadas apenas quando o Firefox está em execução.</p>
-
-<p>[2] Ainda não implementado. Veja <a href="https://dev.modern.ie/platform/status/pushapi/">Microsoft Edge status information</a>.</p>
+{{Compat}}
 
 <h2 id="Veja_também">Veja também</h2>
 

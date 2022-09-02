@@ -1,10 +1,6 @@
 ---
 title: URL
 slug: Glossary/URL
-tags:
-  - Glossary
-  - Infrastructure
-translation_of: Glossary/URL
 ---
 统一资源定位器（**URL**）是指定在 Internet 上可以找到资源的位置的文本字符串。
 
@@ -16,7 +12,7 @@ URL 也可用于文件传输（{{Glossary("FTP")}}） ，电子邮件（{{Glossa
 
 ### **基本知识**
 
-- 在维基百科的 {{Interwiki("wikipedia", "URL")}}
+- 在维基百科的 [URL](https://zh.wikipedia.org/wiki/URL)
 
 ### 了解
 

@@ -24,15 +24,12 @@ range.detach();
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Status                                       | Commentaires            |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ----------------------- |
-| {{SpecName('DOM WHATWG', '#dom-range-detach', 'Range.detach()')}}                                         | {{Spec2('DOM WHATWG')}}             | Aucun changement.       |
-| {{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-detach', 'Range.detach()')}} | {{Spec2('DOM2 Traversal_Range')}} | Spécification initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Range.detach")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)
+- [The DOM interfaces index](/fr/docs/Web/API/Document_Object_Model)

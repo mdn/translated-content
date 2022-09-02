@@ -12,12 +12,12 @@ original_slug: Web/JavaScript/Reference/Global_Objects/null
 
 
 
-<p>Значение <code>null</code> представляет отсутствие какого-либо объектного значения. В JavaScript, <code>null</code> является {{Glossary("Primitive", "примитивом")}}, и в контексте логических операций, рассматривается как {{Glossary("Falsy", "ложное (falsy)")}}.</p>
+<p>Значение <code>null</code> представляет отсутствие какого-либо объектного значения. В JavaScript, <code>null</code> является {{Glossary("Primitive", "примитивом")}}, и в контексте логических операций, рассматривается как {{Glossary("Falsy", "ложное (falsy)")}}.</p>
 
 <p>{{EmbedInteractiveExample("pages/js/globalprops-null.html")}}</p>
 
 <div class="hidden">
-<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
+<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
 </div>
 
 <h2 id="Syntax">Синтаксис</h2>
@@ -26,7 +26,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/null
 
 <h2 id="Description">Описание</h2>
 
-<p>Значение <code>null</code> записывается литералом <code>null</code>. Оно является самостоятельным, а не свойством глобального объекта (как {{jsxref("Global_Objects/undefined", "undefined")}}). В API, <code>null</code> часто присутствует в местах где ожидается объект, но подходящего объекта нет.</p>
+<p>Значение <code>null</code> записывается литералом <code>null</code>. Оно является самостоятельным, а не свойством глобального объекта (как {{jsxref("Global_Objects/undefined", "undefined")}}). В API, <code>null</code> часто присутствует в местах где ожидается объект, но подходящего объекта нет.</p>
 
 <pre class="brush: js">// переменная foo не существует - она не была определена и никогда не инициализировалась:
 &gt; foo
@@ -41,7 +41,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/null
 
 <h3 id="Difference_between_null_and_undefined">Отличия между <code>null</code> и <code>undefined</code></h3>
 
-<p><code>null</code> является определённым значением отсутствия объекта, тогда как {{jsxref("Global_Objects/undefined", "undefined")}} обозначает неопределённость. Например: </p>
+<p><code>null</code> является определённым значением отсутствия объекта, тогда как {{jsxref("Global_Objects/undefined", "undefined")}} обозначает неопределённость. Например: </p>
 
 <pre class="brush: js">var element;
 // значение переменной element до её инициализации не определённо: undefined
@@ -51,7 +51,7 @@ element = document.getElementById('not-exists');
 // переменная element теперь инициализирована значением null, её значение определено
 </pre>
 
-<p>При проверке на <code>null</code> или {{jsxref("Global_Objects/undefined", "undefined")}}, помните о <a href="/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения#Использование_операторов_равенства">различии между операторами равенства (==) и идентичности (===)</a>: с первым, выполняется преобразование типов. </p>
+<p>При проверке на <code>null</code> или {{jsxref("Global_Objects/undefined", "undefined")}}, помните о <a href="/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения#Использование_операторов_равенства">различии между операторами равенства (==) и идентичности (===)</a>: с первым, выполняется преобразование типов. </p>
 
 <pre class="brush: js">typeof null        // object (не "null" из соображений обратной совместимости)
 typeof undefined   // undefined

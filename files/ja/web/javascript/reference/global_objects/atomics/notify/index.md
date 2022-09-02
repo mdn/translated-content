@@ -29,7 +29,7 @@ Atomics.notify(typedArray, index, count)
   - : 共有された {{jsxref("Int32Array")}}。
 - `index`
   - : 起動する対象となる `typedArray` 中の位置。
-- `count` {{optional_inline}}
+- `count` {{optional_inline}}
   - : 通知する休眠状態のエージェントの数。既定値は {{jsxref("Infinity", "+Infinity")}} です。
 
 ### 返値

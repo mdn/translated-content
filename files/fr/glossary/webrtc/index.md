@@ -23,10 +23,10 @@ WebRTC est constitué principalement de ces éléments :
 - [RTCDataChannels](/fr/docs/Web/API/RTCDataChannel)
   - : fournit une méthode de définition des itinéraires de données {{Glossary("P2P","pair-à-pair")}} entre les navigateurs
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "WebRTC")}} sur Wikipédia
+- [WebRTC](https://fr.wikipedia.org/wiki/WebRTC) sur Wikipédia
 - [Guide WebRTC sur MDN](/fr/docs/Web/Guide/API/WebRTC)
 - [Support WebRTC des navigateurs](http://caniuse.com/#feat=rtcpeerconnection)

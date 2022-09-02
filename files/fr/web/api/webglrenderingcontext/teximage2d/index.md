@@ -174,43 +174,11 @@ gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL', "#5.14.8", "texImage2D")}}</td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td><p>Définition initiale pour WebGL.</p></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('OpenGL ES 2.0', "glTexImage2D.xml", "glTexImage2D")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td><p>Page man de l’API OpenGL ES 2.0 (similaire).</p></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL2', "#3.7.6", "texImage2D")}}</td>
-      <td>{{Spec2('WebGL2')}}</td>
-      <td>Définition mise à jour pour WebGL.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('OpenGL ES 3.0', "glTexImage2D.xhtml", "glTexImage2D")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 3.0')}}</td>
-      <td>Page man de l’API OpenGL ES 3.0 (similaire).</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.texImage2D")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,7 +1,6 @@
 ---
 title: Regular expression
 slug: Glossary/Regular_expression
-translation_of: Glossary/Regular_expression
 ---
 **正则表达式**（*Regular expressions*或 _regex_）是决定了在搜索中使用何种字符串序列的规则。
 
@@ -11,7 +10,7 @@ translation_of: Glossary/Regular_expression
 
 ### 基本知识
 
-- 在维基百科上的 {{Interwiki("wikipedia", "正则表达式")}}
+- 在维基百科上的 [正则表达式](https://zh.wikipedia.org/wiki/正则表达式)
 - [互动教程](https://regexone.com/)
 - [虚拟化的正则表达式](https://regexper.com/)
 

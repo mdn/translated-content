@@ -1,14 +1,6 @@
 ---
 title: 图片库
 slug: Learn/JavaScript/Building_blocks/Image_gallery
-tags:
-  - 事件
-  - 事件句柄
-  - 初学者
-  - 学习
-  - 循环
-  - 评估
-translation_of: Learn/JavaScript/Building_blocks/Image_gallery
 original_slug: learn/JavaScript/Building_blocks/相片走廊
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
@@ -38,7 +30,7 @@ original_slug: learn/JavaScript/Building_blocks/相片走廊
 
 ## 项目简介
 
-我们提供了一些 HTML、CSS、照片和几行 JavaScript 代码。需要你来编写必要的 JavaScript 代码让这个项目运行起来。HTML 的 body 部分如下：
+我们提供了一些 HTML、CSS、照片和几行 JavaScript 代码。需要你来编写必要的 JavaScript 代码让这个项目运行起来。HTML 的 body 部分如下：
 
 ```html
 <h1>Image gallery example</h1>
@@ -61,14 +53,14 @@ original_slug: learn/JavaScript/Building_blocks/相片走廊
 以下是本例中 CSS 文件最值得关注的部分：
 
 - `full-img <div>` 中有三个绝对定位的元素：一个显示全尺寸图片的 `<img>`，一个空 `<div>`（覆盖于 `<img>` 之上，且与之大小相同，用来设置半透明背景色来使图片变暗），和一个用来控制变暗效果的 `<button>`。
-- 将 `thumb-bar <div>` 中图片（即“缩略图”）的宽度设置为 20%，并且将它们沿左侧浮动，使得它们在同一行上依次排列。
+- 将 `thumb-bar <div>` 中图片（即“缩略图”）的宽度设置为 20%，并且将它们沿左侧浮动，使得它们在同一行上依次排列。
 
 JavaScript 部分则需要实现：
 
 - 声明一个 `const` 数组，用于列出每张图像的文件名，例如 `'pic1.jpg'`。
 - 迭代数组中的文件名，为每一个文件名创建一个 `<img>` 元素，并将其插入到 `thumb-bar <div>` 中，这样图片就会嵌入页面。
-- 为 `thumb-bar <div>` 里的每个 `<img>` 元素添加一个 click 事件监听器，在图片被点击时相应的图片将被显示到 `displayed-img <img>` 元素上。
-- 给 `<button>` 元素添加一个 click 事件监听器，当按钮被点击时，将全尺寸图片变暗，再次点击时取消。
+- 为 `thumb-bar <div>` 里的每个 `<img>` 元素添加一个 click 事件监听器，在图片被点击时相应的图片将被显示到 `displayed-img <img>` 元素上。
+- 给 `<button>` 元素添加一个 click 事件监听器，当按钮被点击时，将全尺寸图片变暗，再次点击时取消。
 
 可以看一下[完成的示例](https://mdn.github.io/learning-area/javascript/building-blocks/gallery/)，体会一下。（别偷看代码哦）
 
@@ -82,7 +74,7 @@ JavaScript 部分则需要实现：
 
 ### 迭代照片
 
-我们提供的代码中用一个名为 `thumbBar` 的变量用来存储 `thumb-bar <div>` 的引用，创建了一个新的 `<img>` 元素，将它的 `src` 属性值设置成 `xxx` 占位符，并且将这个新的 `<img>` 元素添加到 `thumbBar` 中。
+我们提供的代码中用一个名为 `thumbBar` 的变量用来存储 `thumb-bar <div>` 的引用，创建了一个新的 `<img>` 元素，将它的 `src` 属性值设置成 `xxx` 占位符，并且将这个新的 `<img>` 元素添加到 `thumbBar` 中。
 
 你需要：
 
@@ -91,19 +83,19 @@ JavaScript 部分则需要实现：
 
 ### 为每一个缩略图添加 click 事件监听器
 
-每次迭代中，你需要给当前的 `newImage` 加上一个 click 事件监听器——它应该查询当前图像的 `scr` 属性值，然后将获取的 `src` 属性值设置为 `displayed-img <img>` 元素 `src` 属性的值。
+每次迭代中，你需要给当前的 `newImage` 加上一个 click 事件监听器——它应该查询当前图像的 `scr` 属性值，然后将获取的 `src` 属性值设置为 `displayed-img <img>` 元素 `src` 属性的值。
 
 或者，你可以只为缩略图栏（`thumb-bar <div>`）添加事件监听器。
 
 ### 为变亮/变暗按钮编写处理器
 
-最后还剩变亮/变暗的 `<button>`。我们已经提供了一个名为 `btn` 的变量来存储 `<button>` 的引用。需要添加一个 click 事件监听器：
+最后还剩变亮/变暗的 `<button>`。我们已经提供了一个名为 `btn` 的变量来存储 `<button>` 的引用。需要添加一个 click 事件监听器：
 
-1. 检查当前 `<button>` 按钮的类名称，你可以使用 `getAttribute()` 方法获得。
-2. 如果类名是 `"dark"`，则将 `<button>` 的类名变为 `"light"`（使用 [`setAttribute()`](/zh-CN/docs/Web/API/Element/setAttribute)），文本内容变为“Lighten”，然后将蒙板 `<div>` 的 {{cssxref("background-color")}} 设为 `"rgba(0,0,0,0.5)"`。
-3. 如果类名不是 `"dark"`，则将 `<button>` 的类名变为 `"dark"`，文本内容变为 "Darken"，然后将蒙板 `<div>` 的 {{cssxref("background-color")}} 设为 `"rgba(0,0,0,0)"`。
+1. 检查当前 `<button>` 按钮的类名称，你可以使用 `getAttribute()` 方法获得。
+2. 如果类名是 `"dark"`，则将 `<button>` 的类名变为 `"light"`（使用 [`setAttribute()`](/zh-CN/docs/Web/API/Element/setAttribute)），文本内容变为“Lighten”，然后将蒙板 `<div>` 的 {{cssxref("background-color")}} 设为 `"rgba(0,0,0,0.5)"`。
+3. 如果类名不是 `"dark"`，则将 `<button>` 的类名变为 `"dark"`，文本内容变为 "Darken"，然后将蒙板 `<div>` 的 {{cssxref("background-color")}} 设为 `"rgba(0,0,0,0)"`。
 
-以下是实现上述 2、3 点所提功能的基本代码：
+以下是实现上述 2、3 点所提功能的基本代码：
 
 ```js
 btn.setAttribute('class', xxx);
@@ -113,7 +105,7 @@ overlay.style.backgroundColor = xxx;
 
 ## 提示
 
-- 完全不需要修改 HTML 和 CSS 文件。
+- 完全不需要修改 HTML 和 CSS 文件。
 
 ## 评估或进一步帮助
 

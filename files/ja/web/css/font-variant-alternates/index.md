@@ -3,9 +3,9 @@ title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
 tags:
   - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
+  - CSS Fonts
+  - CSS Property
+  - Reference
   - recipe:css-property
 browser-compat: css.properties.font-variant-alternates
 translation_of: Web/CSS/font-variant-alternates
@@ -29,9 +29,10 @@ font-variant-alternates: annotation(user-defined-ident);
 font-variant-alternates: swash(ident1) annotation(ident2);
 
 /* グローバル値 */
-font-variant-alternates: initial;
 font-variant-alternates: inherit;
+font-variant-alternates: initial;
 font-variant-alternates: revert;
+font-variant-alternates: revert-layer;
 font-variant-alternates: unset;
 ```
 
@@ -75,16 +76,18 @@ font-variant-alternates: unset;
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
-### HTML
+### 先端装飾書体を有効化
+
+#### HTML
 
 ```html
 <p>Firefox rocks!</p>
 <p class="variant">Firefox rocks!</p>
 ```
 
-### CSS
+#### CSS
 
 ```css
 @font-feature-values "Leitura Display Swashes" {
@@ -105,11 +108,11 @@ p {
 
 > **Note:** この例を有効にするには、 OpenType フォントの _Leitura Display Swashes_ をインストールする必要があります。試験用途の無償版が、 [fontsgeek.com](https://fontsgeek.com/fonts/Leitura-Display-Swashes) などにあります。
 
-{{ EmbedLiveSample('Examples', '', '', '', 'Web/CSS/font-variant-alternates') }}
+{{ EmbedLiveSample('Enabling swash glyphs') }}
 
 ## 仕様書
 
-Not part of any standard.
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -122,3 +125,4 @@ Not part of any standard.
 - {{cssxref("font-variant-east-asian")}}
 - {{cssxref("font-variant-ligatures")}}
 - {{cssxref("font-variant-numeric")}}
+- {{cssxref("@font-feature-values")}}

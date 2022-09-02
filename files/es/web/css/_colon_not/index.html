@@ -12,7 +12,7 @@ original_slug: Web/CSS/:not()
 ---
 <div>{{CSSRef}}</div>
 
-<p>La <a href="/es/docs/Web/CSS/Pseudo-classes">pseudoclase</a> <strong><code>:not()</code></strong> de <a href="/es/docs/Web/CSS">CSS</a> representa elementos que no coinciden con una lista de selectores. Como evita que se seleccionen elementos específicos, se lo conoce como la <em>pseudoclase de negación</em>.</p>
+<p>La <a href="/es/docs/Web/CSS/Pseudo-classes">pseudoclase</a> <strong><code>:not()</code></strong> de <a href="/es/docs/Web/CSS">CSS</a> representa elementos que no coinciden con una lista de selectores. Como evita que se seleccionen elementos específicos, se lo conoce como la <em>pseudoclase de negación</em>.</p>
 
 <pre class="brush: css no-line-numbers notranslate">/* Selecciona cualquier elemento que NO sea un párrafo */
 :not(p) {
@@ -26,7 +26,7 @@ original_slug: Web/CSS/:not()
  <li>Se pueden escribir selectores inútiles usando esta pseudoclase. Por ejemplo, <code>:not(*)</code> coincide con cualquier elemento que no sea un elemento, por lo que la regla nunca se aplicará.</li>
  <li>Esta pseudoclase puede aumentar la <a href="/es/docs/Web/CSS/Specificity">especificidad</a> de una regla. Por ejemplo, <code>#foo:not(#bar)</code> coincidirá con el mismo elemento que el <code>#foo</code> más simple, pero tiene una especificidad más alta.</li>
  <li><code>:not(.foo)</code> coincidirá con cualquier cosa que no sea <code>.foo</code>, <em>incluidos {{HTMLElement("html")}} y {{HTMLElement("body")}}.</em></li>
- <li>Este selector solo se aplica a un elemento; no puedes usarlo para excluir a todos los antepasados. Por ejemplo, <code>body :not(table) a</code> se aplicará a los enlaces dentro de una tabla, ya que {{HTMLElement("tr")}} coincidirá con la parte <code>:not()</code> del selector.</li>
+ <li>Este selector solo se aplica a un elemento; no puedes usarlo para excluir a todos los antepasados. Por ejemplo, <code>body :not(table) a</code> se aplicará a los enlaces dentro de una tabla, ya que {{HTMLElement("tr")}} coincidirá con la parte <code>:not()</code> del selector.</li>
 </ul>
 </div>
 

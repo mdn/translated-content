@@ -14,7 +14,7 @@ translation_of: Web/CSS/background-clip
 
 
 
-<p>Se o elemento não possuir as propriedades {{cssxref("background-image")}} ou {{cssxref("background-color")}} definidas, esta propriedade só terá um efeito visual quando a borda tiver regiões transparentes ou regiões parcialmente opacas (devido ao {{cssxref("border-style")}} ou {{cssxref("border-image")}}); caso contrário a borda encobrirá a diferença.</p>
+<p>Se o elemento não possuir as propriedades {{cssxref("background-image")}} ou {{cssxref("background-color")}} definidas, esta propriedade só terá um efeito visual quando a borda tiver regiões transparentes ou regiões parcialmente opacas (devido ao {{cssxref("border-style")}} ou {{cssxref("border-image")}}); caso contrário a borda encobrirá a diferença.</p>
 
 <p>{{cssinfo}}</p>
 
@@ -35,7 +35,7 @@ translation_of: Web/CSS/background-clip
 
 <dl>
  <dt><code>border-box</code></dt>
- <dd>O fundo se extende até fora da fronteira da borda (mas por baixo da borda na ordenação-z).</dd>
+ <dd>O fundo se extende até fora da fronteira da borda (mas por baixo da borda na ordenação-z).</dd>
  <dt><code>padding-box</code></dt>
  <dd>Nenhum fundo é desenhado abaixo da borda (o fundo se extende até a borda externa do preenchimento).</dd>
  <dt><code>content-box</code></dt>
@@ -50,13 +50,13 @@ translation_of: Web/CSS/background-clip
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Using_border-box" name="Using_border-box">Usando <code>border-box</code></h3>
+<h3 id="Using_border-box" name="Using_border-box">Usando <code>border-box</code></h3>
 
-<h4 id="Conteúdo_HTML">Conteúdo HTML</h4>
+<h4 id="Conteúdo_HTML">Conteúdo HTML</h4>
 
 <pre class="brush: html">&lt;p&gt;O fundo se extende atrás da borda.&lt;/p&gt;</pre>
 
-<h4 id="Conteúdo_CSS">Conteúdo CSS</h4>
+<h4 id="Conteúdo_CSS">Conteúdo CSS</h4>
 
 <pre class="brush: css">p {
 
@@ -74,7 +74,7 @@ translation_of: Web/CSS/background-clip
 
 <p>{{EmbedLiveSample('Using_border-box', 540, 200)}}</p>
 
-<h3 id="Using_padding-box" name="Using_padding-box">Usando <code>padding-box</code></h3>
+<h3 id="Using_padding-box" name="Using_padding-box">Usando <code>padding-box</code></h3>
 
 <h4 id="Conteúdo_HTML_2">Conteúdo HTML</h4>
 
@@ -98,9 +98,9 @@ translation_of: Web/CSS/background-clip
 
 <p>{{EmbedLiveSample('Using_padding-box', 540, 200)}}</p>
 
-<h3 id="Using_content-box" name="Using_content-box">Usando <code>content-box</code></h3>
+<h3 id="Using_content-box" name="Using_content-box">Usando <code>content-box</code></h3>
 
-<h4 id="Conteúdo_HTML_3">Conteúdo HTML</h4>
+<h4 id="Conteúdo_HTML_3">Conteúdo HTML</h4>
 
 <pre class="brush: html">&lt;p&gt;O fundo se extende somente até o limite da caixa de conteúdo.&lt;/p&gt;</pre>
 
@@ -127,7 +127,7 @@ translation_of: Web/CSS/background-clip
 
 <pre class="brush: html">&lt;p&gt;O fundo se extende dentro do texto.&lt;/p&gt;</pre>
 
-<h4 id="Conteúdo_CSS_4">Conteúdo CSS</h4>
+<h4 id="Conteúdo_CSS_4">Conteúdo CSS</h4>
 
 <pre class="brush: css">p {
   border: .8em darkviolet;
@@ -169,75 +169,7 @@ translation_of: Web/CSS/background-clip
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidade</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>1.0 [3]</td>
-   <td>{{CompatGeckoDesktop("2.0")}} [1]</td>
-   <td>9.0 [2]</td>
-   <td>10.5</td>
-   <td>3.0 (522) [3]</td>
-  </tr>
-  <tr>
-   <td><code>content-box</code></td>
-   <td>1.0 [3]</td>
-   <td>{{CompatGeckoDesktop("2.0")}} [1]</td>
-   <td>9.0 [2]</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>3.0 (522) [3]</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidade</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>4.1</td>
-   <td>{{CompatGeckoMobile("14")}}</td>
-   <td>7.1</td>
-   <td>12.1</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>content-box</code></td>
-   <td>4.1</td>
-   <td>{{CompatGeckoMobile("14")}}</td>
-   <td>7.1</td>
-   <td>12.1</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Gecko suportava, desde a versão 1.1 até a versão 1.9.2, que correspende ao Firefox 1.0 até 3.6 incluso uma sintaxe diferente e prefixada: <code>-moz-background-clip: padding | border</code>.</p>
-
-<p>[2] Internet Explorer 7 suportava, mas em outras versões do Internet Explorer ele se comporta como <code>background-clip:padding</code> se <code>overflow: hidden | auto | scroll</code>.</p>
-
-<p>[3] Webkit também suporta a versão prefixada desta propriedade, e neste caso, em adição as palavras chaves atuais, os sinônimos alternativos são: <code>padding</code>, <code>border</code>, and <code>content</code>.</p>
+{{Compat("css.properties.background-clip")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

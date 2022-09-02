@@ -24,8 +24,8 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 <p>Configurar una aplicación web como un controlador de protocolo no es un proceso difícil. Básicamente la aplicación web usa <code><a href="/en-US/docs/Web/API/navigator.registerProtocolHandler" title="DOM/window.navigator.registerProtocolHandler">registerProtocolHandler()</a></code> para registrarse a sí mismo con el navegador como un controlador potencial para un protocolo dado. Por ejemplo:</p>
 
 <pre class="brush: js">navigator.registerProtocolHandler("burger",
-                                  "http://www.google.co.uk/?uri=%s",
-                                  "Burger handler");</pre>
+                                  "http://www.google.co.uk/?uri=%s",
+                                  "Burger handler");</pre>
 
 <p>En donde los parámetros son:</p>
 
@@ -51,8 +51,8 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
   &lt;title&gt;Ejemplo de Controlador de Protocolo Web - Registro&lt;/title&gt;
   &lt;script type="text/javascript"&gt;
     navigator.registerProtocolHandler("burger",
-                                  "http://www.google.co.uk/?uri=%s",
-                                  "Burger handler");
+                                  "http://www.google.co.uk/?uri=%s",
+                                  "Burger handler");
   &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -88,7 +88,7 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 
 <p>El código del lado del servidor puede extraer los parámetros de la cadena de petición y realizar la acción deseada.</p>
 
-<div class="note"><strong>Nota:</strong> Al código del lado del servidor se le pasa todo el contenido del <code>href</code>.  Esto significa que el código del lado del servidor tendrá que analizar el protocolo desde los datos.</div>
+<div class="note"><strong>Nota:</strong> Al código del lado del servidor se le pasa todo el contenido del <code>href</code>.  Esto significa que el código del lado del servidor tendrá que analizar el protocolo desde los datos.</div>
 
 <h3 id="Example_3" name="Example_3">Example</h3>
 

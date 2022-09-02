@@ -71,7 +71,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 
 <h3 id="Example_Using_match" name="Example:_Using_match">Usando <code>match()</code></h3>
 
-<p>No exemplo a seguir, <code>match()</code> é usado para encontrar "Capítulo", seguido de um ou mais caracteres numéricos, seguido por um ponto decimal e caracteres numéricos 0 ou mais vezes. A expressão inclui a flag <code>i</code> para que diferenças de maiúscula/minúscula sejam ignoradas.</p>
+<p>No exemplo a seguir, <code>match()</code> é usado para encontrar "Capítulo", seguido de um ou mais caracteres numéricos, seguido por um ponto decimal e caracteres numéricos 0 ou mais vezes. A expressão inclui a flag <code>i</code> para que diferenças de maiúscula/minúscula sejam ignoradas.</p>
 
 <pre class="brush:js notranslate">var str = "Para maiores informações, veja o Capítulo 3.4.5.1";
 var re = /(capítulo \d+(\.\d)*)/i;
@@ -174,55 +174,7 @@ str3.match(null);       // retorna ["null"]</code></pre>
 
 <h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.String.match")}}
 
 <h2 id="See_also" name="See_also">Veja também</h2>
 

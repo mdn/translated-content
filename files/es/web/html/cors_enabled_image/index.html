@@ -11,19 +11,19 @@ tags:
 translation_of: Web/HTML/CORS_enabled_image
 original_slug: Web/HTML/Imagen_con_CORS_habilitado
 ---
-<p><span class="seoSummary">La especificación HTML introduce un atributo {{ htmlattrxref("crossorigin", "img") }} para imágenes que, en conjunto con el encabezado  {{Glossary("CORS")}} apropiado, permite definir imágenes con el elemento {{ HTMLElement("img") }} que se carguen de orígenes externos dentro de un lienzo (<em>canvas</em>) como si estas fuesen cargadas del origen actual.</span></p>
+<p><span class="seoSummary">La especificación HTML introduce un atributo {{ htmlattrxref("crossorigin", "img") }} para imágenes que, en conjunto con el encabezado  {{Glossary("CORS")}} apropiado, permite definir imágenes con el elemento {{ HTMLElement("img") }} que se carguen de orígenes externos dentro de un lienzo (<em>canvas</em>) como si estas fuesen cargadas del origen actual.</span></p>
 
 <p>Vea el artículo <a href="/en/HTML/CORS_settings_attributes" title="Atributos de configuración CORS">"Atributos de configuración CORS"</a> para mas detalles de como el atributo "crossorigin" es usado.</p>
 
-<h2 id="¿Qué_es_un_tainted_canvas">¿Qué es un "tainted" canvas? </h2>
+<h2 id="¿Qué_es_un_tainted_canvas">¿Qué es un "tainted" canvas? </h2>
 
-<p>Aunque puedes usar imágenes sin la aprobación del CORS en el elemento canvas, hacerlo puede "manchar" el canvas. Por ejemplo, no puedes usar los métodos canvas <code>toBlob()</code>, <code>toDataURL()</code>, or <code>getImageData(). Si los usas se lanzará un mensaje de seguridad.</code></p>
+<p>Aunque puedes usar imágenes sin la aprobación del CORS en el elemento canvas, hacerlo puede "manchar" el canvas. Por ejemplo, no puedes usar los métodos canvas <code>toBlob()</code>, <code>toDataURL()</code>, or <code>getImageData(). Si los usas se lanzará un mensaje de seguridad.</code></p>
 
 <p>Esto protegerá a los usuarios de tener información privada usada por medio de imágenes que cogen información desde otras web sin permiso.</p>
 
 <h2 id="Ejemplo_Almacenando_una_imagen_desde_un_origen_externo">Ejemplo: Almacenando una imagen desde un origen externo</h2>
 
-<p>Debes de tener un servidor de hosting de imágenes con el apropiado <code>Access-Control-Allow-Origin</code> header. Añadiendo el atributo crossOrigin crea un request header.</p>
+<p>Debes de tener un servidor de hosting de imágenes con el apropiado <code>Access-Control-Allow-Origin</code> header. Añadiendo el atributo crossOrigin crea un request header.</p>
 
 <p>Puedes utilizar este fragemto de la configuración del servidor Apache del Boilerplate HTML5 para responder apropiadamente con este encabezado de respuesta.</p>
 

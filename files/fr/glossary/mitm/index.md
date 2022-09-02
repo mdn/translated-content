@@ -18,8 +18,8 @@ Dans le courrier physique et la communication en ligne, il est difficile de se d
 - Les sites sensibles sans cryptage HTTPS sur les réseaux Wi-Fi publics ne sont pas fiables.
 - Vérifiez "HTTPS" dans votre barre d'adresse et assurez-vous que le chiffrement est en place avant de vous connecter.
 
-## En apprendre plus
+## Voir aussi
 
 - Article OWASP : [Man-in-the-middle attack](https://www.owasp.org/index.php/Man-in-the-middle_attack) (en)
-- Wikipedia : [Attaque de l'homme du milieu](https://fr.wikipedia.org/wiki/Attaque_de_l%27homme_du_milieu)
+- Wikipédia : [Attaque de l'homme du milieu](https://fr.wikipedia.org/wiki/Attaque_de_l%27homme_du_milieu)
 - L'en-tête {{HTTPHeader("Public-Key-Pins")}} ({{Glossary("HPKP")}}) peut significativement réduire le risque d'attaque MitM en demandant aux navigateurs d'exiger des certificats valides (liste blanche) pour toute connexion ultérieure à ce site.

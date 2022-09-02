@@ -5,9 +5,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>GeneratorFunction</code> constructor</strong> создаёт новый {{jsxref("Statements/function*", "generator function")}} объект. В JavaScript каждая функция-генератор - это фактически <code>GeneratorFunction</code> объект.</p>
+<p><strong><code>GeneratorFunction</code> constructor</strong> создаёт новый {{jsxref("Statements/function*", "generator function")}} объект. В JavaScript каждая функция-генератор - это фактически <code>GeneratorFunction</code> объект.</p>
 
-<p><code>Обратите внимание, что GeneratorFunction</code> - это не глобальный объект. Он может быть получен при выполнении следующего кода.</p>
+<p><code>Обратите внимание, что GeneratorFunction</code> - это не глобальный объект. Он может быть получен при выполнении следующего кода.</p>
 
 <pre class="brush: js">Object.getPrototypeOf(function*(){}).constructor
 </pre>
@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 
 <dl>
  <dt><code>arg1, arg2, ... arg<em>N</em></code></dt>
- <dd>Имена, используемые функцией как имена формальных аргументов. Каждый должен быть строкой, которая соответствует правильному JavaScript идентификатору или списком таких строк, разделённых запятыми; например "<code>x</code>", "<code>theValue</code>", или "<code>a,b</code>".</dd>
+ <dd>Имена, используемые функцией как имена формальных аргументов. Каждый должен быть строкой, которая соответствует правильному JavaScript идентификатору или списком таких строк, разделённых запятыми; например "<code>x</code>", "<code>theValue</code>", или "<code>a,b</code>".</dd>
  <dt><code>functionBody</code></dt>
  <dd>A string containing the JavaScript statements comprising the function definition.</dd>
 </dl>
@@ -83,7 +83,7 @@ console.log(iterator.next().value); // 20
   <tr>
    <td>{{SpecName('ESDraft', '#sec-generatorfunction-objects', 'GeneratorFunction')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

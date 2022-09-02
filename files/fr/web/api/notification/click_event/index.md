@@ -36,13 +36,11 @@ notification.onclick = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaires      |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------- |
-| {{SpecName('Web Notifications','#dom-notification-onclick','onclick')}} | {{Spec2('Web Notifications')}} | Standard évolutif |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification.onclick")}}
+{{Compat}}
 
 ## Voir aussi
 

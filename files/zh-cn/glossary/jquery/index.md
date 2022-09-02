@@ -1,11 +1,6 @@
 ---
 title: jQuery
 slug: Glossary/jQuery
-tags:
-  - JQuery
-  - JavaScript
-  - 术语
-translation_of: Glossary/jQuery
 ---
 **jQuery** 是一个着重简化 {{Glossary("DOM")}} 操作，{{Glossary("AJAX")}} 调用和{{Glossary("Event", "事件")}}处理的 {{Glossary("JavaScript")}} {{Glossary("Library", "库")}}。一些前端 JavaScript 开发者经常会用到它。
 
@@ -37,7 +32,7 @@ window.onload = function() {
 
 ### 基本知识
 
-- 维基百科上的 {{Interwiki("wikipedia", "jQuery")}}
+- 维基百科上的 [jQuery](https://zh.wikipedia.org/wiki/jQuery)
 - [jQuery 官方网站](https://jquery.com/)
 
 ### 技术信息

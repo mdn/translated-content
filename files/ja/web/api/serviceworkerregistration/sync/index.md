@@ -1,16 +1,6 @@
 ---
 title: ServiceWorkerRegistration.sync
 slug: Web/API/ServiceWorkerRegistration/sync
-tags:
-  - API
-  - 実験的
-  - プロパティ
-  - リファレンス
-  - サービスワーカー
-  - ServiceWorkerRegistration
-  - Sync
-browser-compat: api.ServiceWorkerRegistration.sync
-translation_of: Web/API/ServiceWorkerRegistration/sync
 ---
 {{Non-standard_header}}{{APIRef("Service Workers API")}}
 

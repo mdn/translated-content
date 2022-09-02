@@ -14,7 +14,7 @@ La compilation est un processus consistant à transformer un programme informati
 
 ### Connaissances générales
 
-- {{Interwiki("wikipedia", "Compilateur")}} sur Wikipedia
+- [Compilateur](https://fr.wikipedia.org/wiki/Compilateur) sur Wikipédia
 
 ### **Pour approfondir**
 

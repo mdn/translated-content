@@ -1,16 +1,6 @@
 ---
 title: 'HTMLElement: transitionstart 事件'
 slug: Web/API/Element/transitionstart_event
-tags:
-  - CSS Transitions
-  - 事件
-  - HTML DOM
-  - HTMLElement
-  - 参考
-  - TransitionEvent
-  - transitionstart
-original_slug: Web/API/HTMLElement/transitionstart_event
-browser-compat: api.HTMLElement.transitionstart_event
 ---
 {{APIRef}}{{SeeCompatTable}}
 
@@ -97,7 +87,7 @@ transition.addEventListener('transitionstart', function() {
 });
 
 transition.addEventListener('transitionend', function() {
-  message.textContent = 'transitionend 触发了';
+  message.textContent = 'transitionend 触发了';
 });
 ```
 

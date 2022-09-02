@@ -12,8 +12,8 @@ original_slug: Glossaire/DTMF
 
 Les ordinateurs peuvent utiliser DTMF lors de la numérotation d'un modem ou lors de l'envoi de commandes à un système de menu pour une téléconférence ou à d'autres fins.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 
-- {{interwiki("wikipedia","Code_DTMF","Code DTMF")}} sur Wikipedia
+- [Code DTMF](https://fr.wikipedia.org/wiki/Code_DTMF) sur Wikipédia

@@ -1,15 +1,6 @@
 ---
 title: 工具和测试
 slug: Learn/Tools_and_testing
-tags:
-  - CSS
-  - HTML
-  - JavaScript
-  - 工具
-  - 测试
-  - 自动化
-  - 跨浏览器
-translation_of: Learn/Tools_and_testing
 ---
 {{LearnSidebar}}
 

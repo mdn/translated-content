@@ -1,7 +1,6 @@
 ---
 title: UTF-8
 slug: Glossary/UTF-8
-translation_of: Glossary/UTF-8
 ---
 UTF-8 (UCS Transformation Format 8) 是万维网上最常用的{{Glossary("Character encoding", "字符编码")}}。每个字符由 1 到 4 个字节表示。UTF-8 与 {{Glossary("ASCII")}} 向后兼容，可以表示任何标准的 Unicode 字符。
 
@@ -11,5 +10,5 @@ UTF-8 (UCS Transformation Format 8) 是万维网上最常用的{{Glossary("Chara
 
 ### General knowledge
 
-- {{Interwiki("wikipedia", "UTF-8")}} on Wikipedia
+- [UTF-8](https://zh.wikipedia.org/wiki/UTF-8) on Wikipedia
 - [FAQ about UTF-8 on Unicode website](https://www.unicode.org/faq/utf_bom.html#UTF8)

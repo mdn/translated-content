@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/quadraticCurveTo
 ---
 <div>{{APIRef}}</div>
 
-<p>o método <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.quadraticCurveTo()</code></strong> da API Canvas 2D adiciona uma Curva de Bézier quadrática ao caminho. São exigidos dois pontos. O primeiro ponto é um ponto de controle e o segundo é o ponto final. The starting point is the last point in the current path, which can be changed using <code>moveTo()</code> before creating the quadratic Bézier curve.</p>
+<p>o método <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.quadraticCurveTo()</code></strong> da API Canvas 2D adiciona uma Curva de Bézier quadrática ao caminho. São exigidos dois pontos. O primeiro ponto é um ponto de controle e o segundo é o ponto final. The starting point is the last point in the current path, which can be changed using <code>moveTo()</code> before creating the quadratic Bézier curve.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -18,16 +18,16 @@ translation_of: Web/API/CanvasRenderingContext2D/quadraticCurveTo
  <dt><code>cpx</code></dt>
  <dd>O eixo X da coordenada para o ponto de controle.</dd>
  <dt><code>cpy</code></dt>
- <dd>O eixo Y da coordenada para o ponto de controle.</dd>
+ <dd>O eixo Y da coordenada para o ponto de controle.</dd>
  <dt><code>x</code></dt>
  <dd>O eixo X da coordenada para o ponto final.</dd>
  <dt><code>y</code></dt>
- <dd>O eixo Y da coordenada para o ponto final.</dd>
+ <dd>O eixo Y da coordenada para o ponto final.</dd>
 </dl>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Usando_o_método_quadraticCurveTo">Usando o método <code>quadraticCurveTo</code></h3>
+<h3 id="Usando_o_método_quadraticCurveTo">Usando o método <code>quadraticCurveTo</code></h3>
 
 <p>This is just a simple code snippet drawing a quadratic bezier curve. The <span style="color: red;">control point is red</span> and the <span style="color: blue;">start and end points are blue</span>.</p>
 
@@ -65,8 +65,8 @@ ctx.fillRect(230, 30, 10, 10);</pre>
 <div class="hidden">
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.beginPath();
@@ -115,64 +115,14 @@ window.addEventListener("load", drawCanvas);
   <tr>
    <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-quadraticcurveto", "CanvasRenderingContext2D.quadraticCurveTo")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">{{CompatVersionUnknown}}
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">{{CompatVersionUnknown}}
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.CanvasRenderingContext2D.quadraticCurveTo")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

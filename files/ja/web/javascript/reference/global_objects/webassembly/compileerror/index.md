@@ -41,13 +41,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError
 - {{jsxref("Error.prototype.toSource", "WebAssembly.CompileError.prototype.toSource()")}}
   - : 同じエラーを評価できるコードを返します。 {{jsxref("Error")}} から継承しています。
 - {{jsxref("Error.prototype.toString", "WebAssembly.CompileError.prototype.toString()")}}
-  - : 指定された `Error` オブジェクトを表す文字列を返します。{{jsxref("Error")}} から継承しています。
+  - : 指定された `Error` オブジェクトを表す文字列を返します。{{jsxref("Error")}} から継承しています。
 
 ## 例
 
 ### 新しい CompileError のインスタンスの作成
 
-以下のスニペットでは、新しい `CompileError` インスタンスを生成して、詳細をコンソールに記録します。
+以下のスニペットでは、新しい `CompileError` インスタンスを生成して、詳細をコンソールに記録します。
 
 ```js
 try {

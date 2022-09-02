@@ -1,9 +1,6 @@
 ---
 title: SEO
 slug: Glossary/SEO
-tags:
-  - 搜尋引擎最佳化
-translation_of: Glossary/SEO
 ---
 **搜尋引擎最佳化**（Search Engine Optimization、SEO）是提高網站於搜尋引擎的能見度之過程，又稱搜索排名改進。
 
@@ -24,7 +21,7 @@ SEO 方法分為三大類：
 
 ### 一般常識
 
-- 維基百科的 {{Interwiki("wikipedia", "SEO")}}
+- 維基百科的 [SEO](https://zh.wikipedia.org/wiki/SEO)
 
 ### 理解 SEO
 

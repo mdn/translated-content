@@ -13,7 +13,7 @@ Un *codec*  (terme formé à partir de "**_co_**deur-**_déc_**odeur") est un pr
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Codec")}} sur Wikipédia
+- [Codec](https://fr.wikipedia.org/wiki/Codec) sur Wikipédia
 
 ### Référence technique
 

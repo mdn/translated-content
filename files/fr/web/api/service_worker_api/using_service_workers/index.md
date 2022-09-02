@@ -196,7 +196,7 @@ Après l'enregistrement du service worker, le navigateur tente d'installer puis 
 
 L'événement install est déclenché lorsqu'une installation se termine avec succès. L'événement install est généralement utilisé pour remplir le cache local du navigateur avec les ressources nécessaires pour faire fonctionner l'application en mode déconnecté. A cet effet, la toute nouvelle API de stockage est utilisée — {{domxref("cache")}} — un espace global au niveau du service worker qui permet de stocker les ressources fournies par les réponses, et indexées par leurs requêtes. Cette API fonctionne d'une manière similaire au cache standard du navigateur, mais le cache demeure spécifique au domaine. Il persiste jusqu'à ce qu'il en soit décidé autrement — de nouveau, le contrôle reste total.
 
-> **Note :** L'API Cache n'est pas supportée par tous les navigateurs. Pour l'utiliser à l'heure actuelle, on peut envisager un polyfill comme celui fournit par la [démo Topeka de Google](https://github.com/Polymer/topeka/blob/master/sw.js), ou peut-être stocker les ressources dans [IndexedDB](/en-US/docs/Web/API/IndexedDB_API).
+> **Note :** L'API Cache n'est pas supportée par tous les navigateurs. Pour l'utiliser à l'heure actuelle, on peut envisager un polyfill comme celui fournit par la [démo Topeka de Google](https://github.com/Polymer/topeka/blob/master/sw.js), ou peut-être stocker les ressources dans [IndexedDB](/fr/docs/Web/API/IndexedDB_API).
 
 Commençons cette section par l'examen d'un exemple de code — c'est le [premier bloc présent dans le service worker](https://github.com/mdn/sw-test/blob/gh-pages/sw.js#L1-L18):
 
@@ -222,7 +222,7 @@ this.addEventListener('install', function(event) {
 ```
 
 1. Un écouteur d'événement `install` est d'abord ajouté au service worker (d'où le  `this`), puis une méthode {{domxref("ExtendableEvent.waitUntil()") }} est chaînée à l'événement — cela garantit que le Service Worker ne s'installera pas tant que le code à l'intérieur de `waitUntil()` n'a pas été exécuté avec succès.
-2. A l'intérieur de `waitUntil()` la méthode [`caches.open()`](/en-US/docs/Web/API/CacheStorage/open) est utilisée pour créer un nouveau cache appelé `v1`, ce qui constitue la version 1 du cache de ressources de notre site. Cette fonction retourne une promesse lorsque le cache est créé; une fois résolue, est appelée une fonction qui appelle elle-même `addAll()` sur le cache créé, avec pour paramètre un tableau d'URLs relatives à l'origine correspondant aux ressources à mettre en cache.
+2. A l'intérieur de `waitUntil()` la méthode [`caches.open()`](/fr/docs/Web/API/CacheStorage/open) est utilisée pour créer un nouveau cache appelé `v1`, ce qui constitue la version 1 du cache de ressources de notre site. Cette fonction retourne une promesse lorsque le cache est créé; une fois résolue, est appelée une fonction qui appelle elle-même `addAll()` sur le cache créé, avec pour paramètre un tableau d'URLs relatives à l'origine correspondant aux ressources à mettre en cache.
 3. Si la promesse est rejetée, l'installation échoue, et le worker ne fait rien de plus. Le code peut être alors corrigé et l'opération retentée la prochaine fois que l'enregistrement survient.
 4. Après une installation couronnée de succès, le service worker est activé. Cela ne fait pas une grande différence la première fois que le service worker est installé/activé, mais cela fait plus sens lorsque le service worker est mis à jour (voir la section [Mettre à jour le service worker](#mettre_à_jour_le_service_worker) plus bas).
 
@@ -440,5 +440,5 @@ Firefox a aussi commencé à implanter quelques outils utiles concernant les ser
 ## Voir aussi
 
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Using web workers](/en-US/docs/Web/Guide/Performance/Using_web_workers)
+- [Promises](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [Using web workers](/fr/docs/Web/Guide/Performance/Using_web_workers)

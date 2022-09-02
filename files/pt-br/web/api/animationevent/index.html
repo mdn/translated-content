@@ -16,37 +16,37 @@ translation_of: Web/API/AnimationEvent
 ---
 <p>{{SeeCompatTable}}{{APIRef("Web Animations API")}}</p>
 
-<p>A interface <strong><code>AnimationEvent</code></strong>  representa eventos provendo informações relacionadas a <a href="/en-US/docs/Web/Guide/CSS/Using_CSS_animations/">animações</a>.</p>
+<p>A interface <strong><code>AnimationEvent</code></strong>  representa eventos provendo informações relacionadas a <a href="/en-US/docs/Web/Guide/CSS/Using_CSS_animations/">animações</a>.</p>
 
 <p><code>{{InheritanceDiagram}}</code></p>
 
 <h2 id="Propriedades">Propriedades</h2>
 
-<p><em>Também propriedades herdadas pelo pai <code>{{domxref("Event")}}</code></em>.</p>
+<p><em>Também propriedades herdadas pelo pai <code>{{domxref("Event")}}</code></em>.</p>
 
 <dl>
  <dt><code>{{domxref("AnimationEvent.animationName")}} {{readonlyInline}}</code></dt>
- <dd>O {{domxref("DOMString")}} contém o valor do {{cssxref("animation-name")}} propriedade CSS associada com a transição.</dd>
+ <dd>O {{domxref("DOMString")}} contém o valor do {{cssxref("animation-name")}} propriedade CSS associada com a transição.</dd>
  <dt><code>{{domxref("AnimationEvent.elapsedTime")}} {{readonlyInline}}</code></dt>
- <dd><code><font face="Open Sans, Arial, sans-serif">É um ponto flutuante</font></code> dado pela quantidade de tempo que a animação está rodando, em segundos, quando esse evento termina, excluindo o tempo em que animação esteve pausada. Para o evento <code>"animationstart"</code>, <code>elapsedTime</code> é <code>0.0</code> a não ser que haja um valor negativo para <code>{{cssxref("animation-delay")}}</code>, nesse caso o evento terminará com <code>elapsedTime</code> contendo  <code>(-1 * </code><em>delay</em><code>)</code>.</dd>
+ <dd><code><font face="Open Sans, Arial, sans-serif">É um ponto flutuante</font></code> dado pela quantidade de tempo que a animação está rodando, em segundos, quando esse evento termina, excluindo o tempo em que animação esteve pausada. Para o evento <code>"animationstart"</code>, <code>elapsedTime</code> é <code>0.0</code> a não ser que haja um valor negativo para <code>{{cssxref("animation-delay")}}</code>, nesse caso o evento terminará com <code>elapsedTime</code> contendo  <code>(-1 * </code><em>delay</em><code>)</code>.</dd>
  <dt><code>{{domxref("AnimationEvent.pseudoElement")}} {{readonlyInline}}</code></dt>
- <dd>Um<code> {{domxref("DOMString")}} </code>começa com  <code>'::'</code>, contendo o nome do <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elemento</a> onde a animação roda. Se a animação não rodar no pseudo-elemento mas no elemento, então teremos um <em>string </em>vazio <code>' '</code>.</dd>
+ <dd>Um<code> {{domxref("DOMString")}} </code>começa com  <code>'::'</code>, contendo o nome do <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elemento</a> onde a animação roda. Se a animação não rodar no pseudo-elemento mas no elemento, então teremos um <em>string </em>vazio <code>' '</code>.</dd>
 </dl>
 
 <h2 id="Constructores">Constructores</h2>
 
 <dl>
  <dt><code>{{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}}</code></dt>
- <dd>Cria um evento <code>AnimationEvent</code> com os dados parâmetros.</dd>
+ <dd>Cria um evento <code>AnimationEvent</code> com os dados parâmetros.</dd>
 </dl>
 
 <h2 id="Métodos">Métodos</h2>
 
-<p><em>Também herda métodos do pai <code>{{domxref("Event")}}</code></em>.</p>
+<p><em>Também herda métodos do pai <code>{{domxref("Event")}}</code></em>.</p>
 
 <dl>
  <dt><code>{{domxref("AnimationEvent.initAnimationEvent()")}} {{non-standard_inline}}{{deprecated_inline}}</code></dt>
- <dd>Inicializa um <code>AnimationEvent criado usando diminuído </code>{{domxref("Document.createEvent()", "Document.createEvent(\"AnimationEvent\")")}} método.</dd>
+ <dd>Inicializa um <code>AnimationEvent criado usando diminuído </code>{{domxref("Document.createEvent()", "Document.createEvent(\"AnimationEvent\")")}} método.</dd>
 </dl>
 
 <h2 id="Especificações">Especificações</h2>
@@ -70,122 +70,9 @@ translation_of: Web/API/AnimationEvent
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
+{{Compat("api.AnimationEvent")}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>
-    <p>1.0 {{ property_prefix("webkit") }}</p>
-
-    <p>{{CompatChrome(43.0)}}</p>
-   </td>
-   <td>{{ CompatGeckoDesktop("6.0") }}</td>
-   <td>10.0</td>
-   <td>12 {{ property_prefix("o") }}<br>
-    12.10<br>
-    15.0 {{ property_prefix("webkit") }}</td>
-   <td>4.0 {{ property_prefix("webkit") }}</td>
-  </tr>
-  <tr>
-   <td>AnimationEvent() constructor</td>
-   <td>
-    <p>{{CompatChrome(43.0)}}</p>
-   </td>
-   <td>{{ CompatGeckoDesktop("23.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>initAnimationEvent() {{non-standard_inline}}{{deprecated_inline}}</td>
-   <td>1.0</td>
-   <td>{{ CompatGeckoDesktop("6.0") }}<br>
-    Removed in {{ CompatGeckoDesktop("23.0") }}</td>
-   <td>10.0</td>
-   <td>12</td>
-   <td>4.0</td>
-  </tr>
-  <tr>
-   <td>pseudoelement</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("23.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<p> </p>
-
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}{{ property_prefix("webkit") }}</td>
-   <td>{{ CompatGeckoMobile("6.0") }}</td>
-   <td>10.0</td>
-   <td>12 {{ property_prefix("o") }}<br>
-    12.10<br>
-    15.0 {{ property_prefix("webkit") }}</td>
-   <td>{{CompatVersionUnknown}}{{ property_prefix("webkit") }}</td>
-   <td>{{CompatChrome(43.0)}}</td>
-  </tr>
-  <tr>
-   <td>AnimationEvent() constructor</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("23.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(43.0)}}</td>
-  </tr>
-  <tr>
-   <td>initAnimationEvent() {{non-standard_inline}}{{deprecated_inline}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile("6.0") }}<br>
-    Removed in {{ CompatGeckoMobile("23.0") }}</td>
-   <td>10.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>pseudoelement</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("23.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="sect1"> </h2>
+<h2 id="sect1"> </h2>
 
 <h2 id="Veja_também">Veja também</h2>
 

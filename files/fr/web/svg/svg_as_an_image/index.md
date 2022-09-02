@@ -28,7 +28,7 @@ De plus, Gecko 2.0 {{geckoRelease("2.0")}} prend en charge l'usage du format [SV
 
 Pour plusieurs raisons, Gecko fixe quelques restrictions sur le format SVG lorsqu'il est utilisé en tant qu'image :
 
-- [JavaScript](/fr/docs/Web/JavaScript "JavaScript") est désactivé.
+- [JavaScript](/fr/docs/Web/JavaScript) est désactivé.
 - Les ressources externes (p. ex. images, stylesheets) ne peuvent pas être chargées, cependant elles peuvent être utilisées en étant déclaré à travers des URLs de données.
 - Les liens stylistiques {{cssxref(":visited")}}  ne sont pas interprété.
 - Les widgets stylistiques natifs aux plateformes (basés sur le thème de l'OS) sont désactivés.

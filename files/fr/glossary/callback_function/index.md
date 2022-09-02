@@ -36,5 +36,5 @@ Exécuté de cette façon, asynchrone via l'API Web [`XMLHttpRequest`](/fr/docs/
 
 ### **Culture générale**
 
-- {{interwiki("wikipedia","Fonction_de_rappel","Fonction de rappel")}} sur Wikipedia
+- [Fonction de rappel](https://fr.wikipedia.org/wiki/Fonction_de_rappel) sur Wikipédia
 - [Comprendre les fonctions de rappel JavaScript et les utiliser](https://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/) (en anglais).

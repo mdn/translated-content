@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Classes/static
 
 <h3 id="Вызов_из_другого_статического_метода">Вызов из другого статического метода</h3>
 
-<p>Чтобы вызвать статический метод в другом статическом методе того же класса, вы можете использовать ключевое слово <code><a href="/ru/docs/Web/JavaScript/Reference/Operators/this">this</a></code>.</p>
+<p>Чтобы вызвать статический метод в другом статическом методе того же класса, вы можете использовать ключевое слово <code><a href="/ru/docs/Web/JavaScript/Reference/Operators/this">this</a></code>.</p>
 
 <pre class="brush: js">class StaticMethodCall {
   static staticMethod() {
@@ -38,7 +38,7 @@ StaticMethodCall.anotherStaticMethod();
 
 <h3 id="Вызов_из_конструктора_класса_и_других_методов">Вызов из конструктора класса и других методов</h3>
 
-<p>Статические методы недоступны напрямую, используя ключевое слово <code><a href="/ru/docs/Web/JavaScript/Reference/Operators/this">this</a></code> из нестатических методов. Вам нужно вызвать их с помощью имени класса: <code>CLASSNAME.STATIC_METHOD_NAME()</code> или вызовом метода как свойства конструктора: <code>this.constructor.STATIC_METHOD_NAME()</code>.</p>
+<p>Статические методы недоступны напрямую, используя ключевое слово <code><a href="/ru/docs/Web/JavaScript/Reference/Operators/this">this</a></code> из нестатических методов. Вам нужно вызвать их с помощью имени класса: <code>CLASSNAME.STATIC_METHOD_NAME()</code> или вызовом метода как свойства конструктора: <code>this.constructor.STATIC_METHOD_NAME()</code>.</p>
 
 <pre class="brush: js">class StaticMethodCall {
   constructor() {
@@ -60,7 +60,7 @@ StaticMethodCall.anotherStaticMethod();
 
 <ol>
  <li>Как статический метод реализуется в классе.</li>
- <li>Как переопределить статический метод при наследовании.</li>
+ <li>Как переопределить статический метод при наследовании.</li>
  <li>Как можно и как нельзя вызывать статические методы.</li>
 </ol>
 

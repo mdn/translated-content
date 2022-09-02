@@ -1,14 +1,6 @@
 ---
 title: Gecko
 slug: Glossary/Gecko
-tags:
-  - Firefox OS
-  - Gecko
-  - Glossary
-  - Infrastructure
-  - Intro
-  - Mozilla
-translation_of: Glossary/Gecko
 ---
 **Gecko** 是 Mozilla 项目开发的布局引擎，在许多应用程序/设备中使用，包括{{glossary("Mozilla Firefox","Firefox")}} 和 {{glossary("Firefox OS")}}。
 
@@ -20,7 +12,7 @@ Web {{glossary("browser","浏览器")}} 需要一个被称为布局引擎的软�
 
 ### 基本知识
 
-- {{interwiki("wikipedia", "Gecko (software)", "Gecko")}} on Wikipedia
+- [Gecko](https://zh.wikipedia.org/wiki/Gecko_(software)) on Wikipedia
 
 ### 技术参考
 

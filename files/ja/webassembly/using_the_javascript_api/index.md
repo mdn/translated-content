@@ -1,16 +1,6 @@
 ---
 title: WebAssembly JavaScript API の使用
 slug: WebAssembly/Using_the_JavaScript_API
-tags:
-  - API
-  - 開発ツール
-  - JavaScript
-  - WebAssembly
-  - コンパイル
-  - インスタンス化
-  - メモリー
-  - テーブル
-translation_of: WebAssembly/Using_the_JavaScript_API
 ---
 {{WebAssemblySidebar}}
 
@@ -150,7 +140,7 @@ Memory インスタンスの作成時に最大値が指定していて、この�
     ```js
     WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
     .then(results => {
-      // ここにコードを追加
+      // ここにコードを追加
     });
     ```
 
@@ -202,7 +192,7 @@ WebAssembly Table は JavaScript と WebAssembly コードの両方でアクセ�
     ```js
     WebAssembly.instantiateStreaming(fetch('table.wasm'))
     .then(function(results) {
-      // add code here
+      // add code here
     });
     ```
 
@@ -210,8 +200,8 @@ WebAssembly Table は JavaScript と WebAssembly コードの両方でアクセ�
 
     ```js
     var tbl = results.instance.exports.tbl;
-    console.log(tbl.get(0)());  // 13
-    console.log(tbl.get(1)());  // 42
+    console.log(tbl.get(0)());  // 13
+    console.log(tbl.get(1)());  // 42
     ```
 
 このコードはテーブルに格納されている各関数参照に順番にアクセスし、内包した値をコンソールに書き出すためにインスタンス化します。 [`Table.prototype.get()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) で各関数参照を取得した後、関数を実行するためには括弧を追加することに注意してください。

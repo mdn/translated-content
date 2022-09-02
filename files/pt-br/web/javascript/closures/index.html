@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Guide/Closures
 ---
 <div>{{jsSidebar("Intermediate")}}</div>
 
-<p class="summary">Um <em>closure </em>(fechamento) é uma função que se "lembra" do ambiente — ou escopo léxico — em que ela foi criada.</p>
+<p class="summary">Um <em>closure </em>(fechamento) é uma função que se "lembra" do ambiente — ou escopo léxico — em que ela foi criada.</p>
 
 <h2 id="Escopo_léxico">Escopo léxico</h2>
 
@@ -32,7 +32,7 @@ init();
 
 <p>A função <code>init()</code> cria uma variável local chamada <code>name</code>, e depois define uma função chamada <code>displayName()</code>. <code>displayName()</code> é uma função aninhada (um <em>closure</em>) — ela é definida dentro da função <code>init()</code>, e está disponivel apenas dentro do corpo daquela função. Diferente de <span style="font-family: courier new,andale mono,monospace; line-height: 1.5;">init()</span><span style="line-height: 1.5;">,</span><span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">displayName()</code><span style="line-height: 1.5;"> não tem variáveis locais próprias, e ao invés disso reusa a variável </span><code style="font-style: normal; line-height: 1.5;">name</code><span style="line-height: 1.5;"> declarada na função pai.</span></p>
 
-<p><a href="http://jsfiddle.net/xAFs9/3/">Rode</a> o código e veja que isso funciona. Este é um exemplo de <em>escopo léxico:</em> em JavaScript, o escopo de uma variável é definido por sua localização dentro do código fonte (isto é aparentemente <em>léxico</em>) e funções aninhadas têm acesso às variáveis declaradas em seu escopo externo.</p>
+<p><a href="http://jsfiddle.net/xAFs9/3/">Rode</a> o código e veja que isso funciona. Este é um exemplo de <em>escopo léxico:</em> em JavaScript, o escopo de uma variável é definido por sua localização dentro do código fonte (isto é aparentemente <em>léxico</em>) e funções aninhadas têm acesso às variáveis declaradas em seu escopo externo.</p>
 
 <h2 id="Closure">Closure</h2>
 
@@ -73,7 +73,7 @@ print(add10(2)); // 12
 
 <p>Neste exemplo definimos a função <code>makeAdder(x)</code> que toma um único argumento <code>x</code> e retorna uma nova função. A função retornada toma então um único argumento, <code>y</code>, e retorna então a soma de <code>x</code> e de <code>y</code>.</p>
 
-<p>Na essência o <code>makeAdder</code> trata-se de uma <em>função fábrica - </em>irá construir outras funções que podem adicionar um determinado valor específico a seu argumento. No exemplo acima usamos a fábrica de funções para criar duas novas funções - uma que adiciona 5 ao argumento, e outra que adiciona 10.</p>
+<p>Na essência o <code>makeAdder</code> trata-se de uma <em>função fábrica - </em>irá construir outras funções que podem adicionar um determinado valor específico a seu argumento. No exemplo acima usamos a fábrica de funções para criar duas novas funções - uma que adiciona 5 ao argumento, e outra que adiciona 10.</p>
 
 <p>Ambas as funções <code>add5</code> e <code>add10</code><em> </em><code> </code>são closures. Compartilham o mesmo corpo de definição de função mas armazenam diferentes ambientes. No ambiente da <code>add5</code>, por exemplo, <code>x</code> equivale a 5, enquanto na <code>add10</code> o valor de x é 10.</p>
 
@@ -167,7 +167,7 @@ alert(Counter.value()); /* Alerts 1 */
 
 <p>O ambiente compartilhado é criado no corpo de uma função anônima, da qual é executada assim que é definida. O ambiente contém dois itens privados: uma variável chamada <code>privateCounter</code> e uma função chamada <code>changeBy</code>. Nenhum desses itens privados podem ser acessados diretamente de fora da função anônima. Ao invés disso, eles devem ser acessados pelas três funções públicas que são retornadas.</p>
 
-<p>Aquelas três funções públicas são closures que compartilham o mesmo ambiente. Graças ao escopo léxico do JavaScript, cada uma delas tem acesso a variável <code>privateCounter</code> e à função <code>changeBy</code>.</p>
+<p>Aquelas três funções públicas são closures que compartilham o mesmo ambiente. Graças ao escopo léxico do JavaScript, cada uma delas tem acesso a variável <code>privateCounter</code> e à função <code>changeBy</code>.</p>
 
 <div class="blockIndicator note">
 <p>Você perceberá que estamos definindo uma função anônima que cria um contador , e então o executamos imediatamente e atribuímos o resultado à variável <code>Counter</code>. Poderíamos armazenar essa função em uma variável separada e usá-la para criar diversos contadores.</p>
@@ -202,7 +202,7 @@ alert(Counter1.value()); /* Alerts 1 */
 alert(Counter2.value()); /* Alerts 0 */
 </pre>
 
-<p>Observe como cada um dos contadores mantém a sua independência em relação ao outro. Seu ambiente durante a execução da função <code>makeCounter()</code> é diferente a cada vez que ocorre. A variável <code>privateCounter</code> contém uma instância diferente a cada vez.</p>
+<p>Observe como cada um dos contadores mantém a sua independência em relação ao outro. Seu ambiente durante a execução da função <code>makeCounter()</code> é diferente a cada vez que ocorre. A variável <code>privateCounter</code> contém uma instância diferente a cada vez.</p>
 
 <div class="blockIndicator note">
 <p>Usar closures desta maneira oferece uma série de benefícios que estão normalmente associados a programação orientada a objetos, em particular encapsulamento e ocultação de dados.</p>
@@ -285,7 +285,7 @@ setupHelp();
 
 <h2 id="Considerações_de_performance">Considerações de performance</h2>
 
-<p>Não é sábio criar funções dentro de outras funções se o closure não for necessário para uma tarefa em particular, pois ele afetará a performance do script de forma bem negativa tanto em velocidade de processamento quanto em consumo de memória.</p>
+<p>Não é sábio criar funções dentro de outras funções se o closure não for necessário para uma tarefa em particular, pois ele afetará a performance do script de forma bem negativa tanto em velocidade de processamento quanto em consumo de memória.</p>
 
 <p>Por exemplo, ao criar uma nova classe/objeto, os métodos devem normalmente estar associados ao protótipo do objeto do que definido no construtor. O motivo disso é que sempre que o construtor for chamado os métodos serão reatribuídos (isto é, para cada criação de objeto).</p>
 

@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/add
 ---
 <div>{{JSRef}}</div>
 
-<p>O método estátitico <code><strong>Atomics</strong></code><strong><code>.add()</code></strong> adiciona um dado valor em uma determinada posição no array e retorna o valor antigo daquela posição. Esta operação atômica garante que nenhuma outra escrita ocorra até que o valor modificado seja escrito de volta.</p>
+<p>O método estátitico <code><strong>Atomics</strong></code><strong><code>.add()</code></strong> adiciona um dado valor em uma determinada posição no array e retorna o valor antigo daquela posição. Esta operação atômica garante que nenhuma outra escrita ocorra até que o valor modificado seja escrito de volta.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -22,9 +22,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/add
 
 <dl>
  <dt><code>typedArray</code></dt>
- <dd>Um array tipado de inteiros compartilhado. Pode ser {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, ou {{jsxref("Uint32Array")}}.</dd>
+ <dd>Um array tipado de inteiros compartilhado. Pode ser {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, ou {{jsxref("Uint32Array")}}.</dd>
  <dt><code>index</code></dt>
- <dd>A posição no <code>typedArray</code> onde o <code>value</code> será adicionado.</dd>
+ <dd>A posição no <code>typedArray</code> onde o <code>value</code> será adicionado.</dd>
  <dt><code>value</code></dt>
  <dd>Número que será adicionado.</dd>
 </dl>
@@ -36,9 +36,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/add
 <h3 id="Exceções">Exceções</h3>
 
 <ul>
- <li>Lança uma exceção {{jsxref("TypeError")}}, se o <code>typedArray</code> não for um dos tipos de inteiro permitidos.</li>
- <li>Lança uma exceção {{jsxref("TypeError")}}, se o <code>typedArray</code> não for tipo array tipado compartilhado.</li>
- <li>Lança uma exceção {{jsxref("RangeError")}}, se o <code>index</code> estiver fora dos limites no <code>typedArray</code>.</li>
+ <li>Lança uma exceção {{jsxref("TypeError")}}, se o <code>typedArray</code> não for um dos tipos de inteiro permitidos.</li>
+ <li>Lança uma exceção {{jsxref("TypeError")}}, se o <code>typedArray</code> não for tipo array tipado compartilhado.</li>
+ <li>Lança uma exceção {{jsxref("RangeError")}}, se o <code>index</code> estiver fora dos limites no <code>typedArray</code>.</li>
 </ul>
 
 <h2 id="Exemplos">Exemplos</h2>
@@ -68,61 +68,7 @@ Atomics.load(ta, 0); // 12</pre>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Recurso</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatNo}} [2]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("55")}} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Recurso</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("55")}} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] No Firefox da versão 46 até a versão 54, este recurso fica desabilitado por uma configuração. Em about:config, altere o <code>javascript.options.shared_memory</code> para <code>true</code>. </p>
-
-<p>[2] A implementação está sob desenvolvimento e necessita dessas flags de runtime: <code>--js-flags=--harmony-sharedarraybuffer --enable-blink-feature=SharedArrayBuffer</code></p>
+{{Compat("javascript.builtins.Atomics.add")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

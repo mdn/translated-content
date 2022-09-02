@@ -68,7 +68,7 @@ var request = window.indexedDB.open("MyTestDatabase", 3);
 
 Vous avez vu ? Ouvrir une base de données est comme n'importe quelle autre opération — vous avez juste à le "demander".
 
-La requête "open" n'ouvre pas la base de données ni ne démarre une transaction aussitôt. L'appel de la fonction `open()` retourne un objet [`IDBOpenDBRequest`](/en-US/docs/IndexedDB/IDBOpenDBRequest) avec un résultat  (success) ou une valeur d'erreur qui permet de la gérer comme un évènement. La plupart des autres fonctions asynchrones dans IndexedDB fonctionnent de la même façon ; Elles retournent un objet [`IDBRequest`](/en-US/docs/IndexedDB/IDBRequest) avec le résultat ou une erreur. Le résultat de la fonction "open" est une instance de [`IDBDatabase`](/en-US/docs/IndexedDB/IDBDatabase).
+La requête "open" n'ouvre pas la base de données ni ne démarre une transaction aussitôt. L'appel de la fonction `open()` retourne un objet [`IDBOpenDBRequest`](/fr/docs/IndexedDB/IDBOpenDBRequest) avec un résultat  (success) ou une valeur d'erreur qui permet de la gérer comme un évènement. La plupart des autres fonctions asynchrones dans IndexedDB fonctionnent de la même façon ; Elles retournent un objet [`IDBRequest`](/fr/docs/IndexedDB/IDBRequest) avec le résultat ou une erreur. Le résultat de la fonction "open" est une instance de [`IDBDatabase`](/fr/docs/IndexedDB/IDBDatabase).
 
 Le second paramètre de la méthode open est la version de la base de données. La version de la base détermine le schéma de celle-ci — Les objets stockés dans la base de données et leur structure. Si la base de données n'existe pas déjà, elle est créée via l'opération `open()`, puis, un événement `onupgradeneeded` est déclenché et vous créez le schéma de la base dans le gestionnaire pour cet événement. Si la base de données existe, mais que vous spécifiez un numéro de version plus élevé, un événement `onupgradeneeded` est déclenché immédiatement, vous permettant de mettre à jour le schéma dans son gestionnaire – plus d'informations dans [Updating the version of the database](#Updating_the_version_of_the_database) plus bas et la page référence {{ domxref("IDBFactory.open") }}.
 
@@ -261,7 +261,7 @@ Pour lire les enregistrements d'un objet de stockage existant, la transaction pe
 Vous pouvez accélérer l'accès à vos données en utilisant le bon mode et la bonne portée dans la transaction. Voici deux astuces :
 
 - Lorsque vous définissez la portée, spécifiez uniquement les objets de stockage dont vous avez besoin. De cette manière, vous pouvez exécuter plusieurs transactions simultanément sans qu'elles se chevauchent.
-- Spécifier le mode `readwrite` pour une transaction seulement lorsque c'est nécessaire. Vous pouvez exécuter simulaténement plusieurs transactions `readonly` avec chevauchements, mais vous ne pouvez avoir qu'une seule transaction `readwrite` dans un objet de stockage. Pour en savoir plus, regardez la définition des _[transactions](/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#Database)_ dans l'article des [concepts de base](/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB).
+- Spécifier le mode `readwrite` pour une transaction seulement lorsque c'est nécessaire. Vous pouvez exécuter simulaténement plusieurs transactions `readonly` avec chevauchements, mais vous ne pouvez avoir qu'une seule transaction `readwrite` dans un objet de stockage. Pour en savoir plus, regardez la définition des _[transactions](/fr/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#Database)_ dans l'article des [concepts de base](/fr/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB).
 
 ### Ajouter des données dans la base de données
 
@@ -346,7 +346,7 @@ Vous voyez comment ça fonctionne ? Comme il n'y a qu'un seul objet de stockage,
 Vous pouvez accélérer l’accès à vos données en limitant la portée et le mode de la transaction. Voici deux astuces :
 
 - Lors de la définition de la [scope](/fr/docs/IndexedDB/Using_IndexedDB$edit#scope) _(portée)_, spécifiez seulement l’objet de stockage dont vous avez besoin. De cette manière, vous pouvez avoir de multiples opérations simultanées sans qu’elles se chevauchent.
-- Spécifier une transaction en mode readwrite uniquement lorsque c’est nécessaire. Vous pouvez avoir de multiples opérations simultanées en lecture seule, mais vous ne pouvez avoir qu’une transaction "readwrite" _(lecture/écriture)_ sur un objet de stockage. Pour en savoir plus, voir la définition relative aux [transactions in the Basic Concepts article](/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction).
+- Spécifier une transaction en mode readwrite uniquement lorsque c’est nécessaire. Vous pouvez avoir de multiples opérations simultanées en lecture seule, mais vous ne pouvez avoir qu’une transaction "readwrite" _(lecture/écriture)_ sur un objet de stockage. Pour en savoir plus, voir la définition relative aux [transactions in the Basic Concepts article](/fr/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction).
 
 ### Mettre à jour une entrée dans la base de données
 
@@ -537,7 +537,7 @@ index.openKeyCursor(null, "nextunique").onsuccess = function(event) {
 };
 ```
 
-Voyez "[IDBCursor Constants](/en-US/docs/Web/API/IDBCursor?redirectlocale=en-US&redirectslug=IndexedDB%2FIDBCursor#Constants)" pour les arguments de direction valides.
+Voyez "[IDBCursor Constants](/fr/docs/Web/API/IDBCursor?redirectlocale=en-US&redirectslug=IndexedDB%2FIDBCursor#Constants)" pour les arguments de direction valides.
 
 ## La version change alors qu'une application Web est ouverte dans un autre onglet
 
@@ -1314,8 +1314,8 @@ Référence :
 
 - [IndexedDB API Reference](/en/IndexedDB)
 - [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
-- [Using IndexedDB in chrome](/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome)
-- [Using JavaScript generators in Firefox](/en-US/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox)
+- [Using IndexedDB in chrome](/fr/docs/IndexedDB/Using_IndexedDB_in_chrome)
+- [Using JavaScript generators in Firefox](/fr/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox)
 - IndexedDB [interface files](https://mxr.mozilla.org/mozilla-central/find?text=&string=dom%2FindexedDB%2F.*%5C.idl&regexp=1) dans le code source de Firefox
 
 Tutoriels :

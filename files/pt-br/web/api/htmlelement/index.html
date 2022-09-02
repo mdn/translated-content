@@ -17,9 +17,9 @@ translation_of: Web/API/HTMLElement
 <div>{{ APIRef("HTML DOM") }}</div>
 </div>
 
-<div> </div>
+<div> </div>
 
-<p>A interface <strong><code>HTMLElement</code></strong> representa qualquer elemento <a href="/en-US/docs/Web/HTML" title="/en-US/docs/Web/HTML">HTML</a>. Alguns elementos implementam diretamente essa interface, outros a implementam por meio de uma interface que a herda.</p>
+<p>A interface <strong><code>HTMLElement</code></strong> representa qualquer elemento <a href="/en-US/docs/Web/HTML" title="/en-US/docs/Web/HTML">HTML</a>. Alguns elementos implementam diretamente essa interface, outros a implementam por meio de uma interface que a herda.</p>
 
 <h2 id="Propriedades">Propriedades</h2>
 
@@ -73,7 +73,7 @@ translation_of: Web/API/HTMLElement
  <dt>{{domxref("HTMLElement.properties")}} {{readonlyInline}}{{experimental_inline}}</dt>
  <dd>Returns an {{domxref("HTMLPropertiesCollection")}}…</dd>
  <dt>{{domxref("HTMLElement.spellcheck")}}{{ gecko_minversion_inline("1.9")}}</dt>
- <dd>Is a {{jsxref("Boolean")}} that controls <a href="/en-US/docs/HTML/Controlling_spell_checking_in_HTML_forms" title="en/Controlling_spell_checking_in_HTML_forms">spell-checking</a>. It is present on all HTML elements, though it hasn't an effect on all of them.</dd>
+ <dd>Is a {{jsxref("Boolean")}} that controls <a href="/en-US/docs/HTML/Controlling_spell_checking_in_HTML_forms" title="en/Controlling_spell_checking_in_HTML_forms">spell-checking</a>. It is present on all HTML elements, though it hasn't an effect on all of them.</dd>
  <dt>{{domxref("HTMLElement.style")}}</dt>
  <dd>Is {{domxref("CSSStyleDeclaration")}}, an object representing the declarations of an element's style attributes.</dd>
  <dt>{{domxref("HTMLElement.tabIndex")}}</dt>
@@ -89,9 +89,9 @@ translation_of: Web/API/HTMLElement
 <p>Most events properties, of the form <code>onXYZ</code>, are defined on the {{domxref("GlobalEventHandlers")}} or {{domxref("TouchEventHandlers")}}, implemented by <code>HTMLElement</code>. A few more are specific to <code>HTMLElement</code>.</p>
 
 <dl>
- <dt>{{ domxref("HTMLElement.oncopy") }}  {{ non-standard_inline() }}</dt>
+ <dt>{{ domxref("HTMLElement.oncopy") }}  {{ non-standard_inline() }}</dt>
  <dd>Returns the event handling code for the <code>copy</code> event ({{bug("280959")}}).</dd>
- <dt>{{ domxref("HTMLElement.oncut") }}  {{ non-standard_inline() }}</dt>
+ <dt>{{ domxref("HTMLElement.oncut") }}  {{ non-standard_inline() }}</dt>
  <dd>Returns the event handling code for the <code>cut</code> event ({{bug("280959")}}).</dd>
  <dt>{{ domxref("HTMLElement.onpaste") }} {{ non-standard_inline() }}</dt>
  <dd>Returns the event handling code for the <code>paste</code> event ({{bug("280959")}}).</dd>
@@ -168,240 +168,7 @@ translation_of: Web/API/HTMLElement
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.accessKey", "accessKey")}}</td>
-   <td>{{CompatGeckoDesktop("5.0")}}</td>
-   <td>17.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}(<a class="external" href="http://trac.webkit.org/changeset/107483">535.10</a>)</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.accessKeyLabel", "accessKeyLabel")}}</td>
-   <td>{{CompatGeckoDesktop("8.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}{{WebkitBug(72715)}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.blur()", "blur()")}}</td>
-   <td>{{CompatGeckoDesktop("5.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.click()", "click()")}}</td>
-   <td>{{CompatGeckoDesktop("5.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}(<a class="external" href="http://trac.webkit.org/changeset/107483">535.24</a>)</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.dataset", "dataset")}}</td>
-   <td>{{CompatGeckoDesktop("6.0")}}</td>
-   <td>9.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>11.10</td>
-   <td>5.1</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.focus()", "focus()")}}</td>
-   <td>{{CompatGeckoDesktop("5.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.contentEditable", "contentEditable")}}</td>
-   <td>{{CompatGeckoDesktop("1.9")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>5.5</td>
-   <td>9</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.spellcheck", "spellcheck")}}</td>
-   <td>{{CompatGeckoDesktop("1.8.1")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.style", "style")}}</td>
-   <td>{{CompatVersionUnknown}} (returns a {{domxref("CSS2Properties")}}, rather than a {{domxref("CSSStyleDeclaration")}})</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.forceSpellCheck", "forceSpellCheck()")}} {{experimental_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.dataset", "dataset")}}</td>
-   <td>{{CompatGeckoDesktop("6.0")}}</td>
-   <td>8.0</td>
-   <td>11</td>
-   <td>11.10</td>
-   <td>6</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.draggable", "draggable")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>12.0</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.dropzone", "dropzone")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>12.0</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.offsetLeft", "offsetLeft")}}, {{domxref("HTMLElement.offsetTop", "offsetTop")}}, {{domxref("HTMLElement.offsetParent", "offsetParent")}}, {{domxref("HTMLElement.offsetHeight", "offsetHeight")}} and {{domxref("HTMLElement.offsetWidth", "offsetWidth")}} {{experimental_inline}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.translate", "translate")}} {{experimental_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.itemScope", "itemScope")}}, {{domxref("HTMLElement.itemType", "itemType")}}, {{domxref("HTMLElement.itemRef", "itemRef")}}, {{domxref("HTMLElement.itemId", "itemId")}}, {{domxref("HTMLElement.itemProp", "itemProp")}}, and {{domxref("HTMLElement.itemValue", "itemValue")}} {{experimental_inline}}</td>
-   <td>{{CompatGeckoDesktop("6.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>11.60<br>
-    (Removed in Opera 15)</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.properties", "properties")}} {{experimental_inline}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.ontouchstart")}}, {{domxref("HTMLElement.ontouchend")}}, {{domxref("HTMLElement.ontouchmove")}}, {{domxref("HTMLElement.ontouchenter")}}, {{domxref("HTMLElement.ontouchleave")}}, and {{domxref("HTMLElement.ontouchcancel")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.oncopy")}}, {{domxref("HTMLElement.oncut")}}, and {{domxref("HTMLElement.onpaste")}} {{Non-standard_inline}}</td>
-   <td>{{CompatGeckoDesktop("1.9")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>
-    <p>{{CompatGeckoMobile("1.0")}}</p>
-   </td>
-   <td rowspan="7">{{CompatUnknown}}</td>
-   <td rowspan="7">{{CompatUnknown}}</td>
-   <td rowspan="7">{{CompatUnknown}}</td>
-   <td rowspan="7">{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.accessKey", "accessKey")}}</td>
-   <td>{{CompatGeckoMobile("5.0")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.accessKeyLabel", "accessKeyLabel")}}</td>
-   <td>{{CompatGeckoMobile("8.0")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.blur()", "blur()")}}</td>
-   <td>{{CompatGeckoMobile("5.0")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.click()", "click()")}}</td>
-   <td>{{CompatGeckoMobile("5.0")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.dataset", "dataset")}}</td>
-   <td>{{CompatGeckoMobile("6.0")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.focus()", "focus()")}}</td>
-   <td>{{CompatGeckoMobile("5.0")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLElement.oncopy")}}, {{domxref("HTMLElement.oncut")}}, and {{domxref("HTMLElement.onpaste")}} {{Non-standard_inline}}</td>
-   <td>{{CompatGeckoMobile("1.9")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.HTMLElement")}}
 
 <h2 id="See_also">See also</h2>
 

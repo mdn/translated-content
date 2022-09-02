@@ -48,13 +48,13 @@ The `BiquadFilterNode` interface represents a simple low-order filter, and is cr
 _Inherits properties from its parent,_ _{{domxref("AudioNode")}}_.
 
 - {{domxref("BiquadFilterNode.frequency")}}
-  - : Is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing a frequency in the current filtering algorithm measured in hertz (Hz).
+  - : Is an [a-rate](/ko/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing a frequency in the current filtering algorithm measured in hertz (Hz).
 - {{domxref("BiquadFilterNode.detune")}}
-  - : Is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing detuning of the frequency in [cents](http://en.wikipedia.org/wiki/Cent_%28music%29).
+  - : Is an [a-rate](/ko/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing detuning of the frequency in [cents](http://en.wikipedia.org/wiki/Cent_%28music%29).
 - {{domxref("BiquadFilterNode.Q")}}
-  - : Is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing a [Q factor](http://en.wikipedia.org/wiki/Q_factor), or _quality factor_.
+  - : Is an [a-rate](/ko/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing a [Q factor](http://en.wikipedia.org/wiki/Q_factor), or _quality factor_.
 - {{domxref("BiquadFilterNode.gain")}} {{readonlyInline}}
-  - : Is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing the [gain](http://en.wikipedia.org/wiki/Gain) used in the current filtering algorithm.
+  - : Is an [a-rate](/ko/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing the [gain](http://en.wikipedia.org/wiki/Gain) used in the current filtering algorithm.
 - {{domxref("BiquadFilterNode.type")}}
 
   - : Is a string value defining the kind of filtering algorithm the node is implementing.
@@ -147,11 +147,11 @@ _Inherits properties from its parent,_ _{{domxref("AudioNode")}}_.
         <tr>
           <th scope="row"><code>notch</code></th>
           <td>
-            밴드 스톱, 혹은 밴드 리젝션으로 불리는 표준 <a
+            밴드 스톱, 혹은 밴드 리젝션으로 불리는 표준 <a
               href="http://en.wikipedia.org/wiki/Band-stop_filter"
               title="/en-US/docs/"
               >notch</a
-            > 필터입니다. 이는 밴드패스 필터와 반대입니다. 주어진 대역폭 바깥의
+            > 필터입니다. 이는 밴드패스 필터와 반대입니다. 주어진 대역폭 바깥의
             주파수는 통과하며, 안쪽의 주파수는 감쇠합니다.
           </td>
           <td>주파수 대역의 중앙</td>
@@ -163,15 +163,15 @@ _Inherits properties from its parent,_ _{{domxref("AudioNode")}}_.
         <tr>
           <th scope="row"><code>allpass</code></th>
           <td>
-            표준 2차 <a
+            표준 2차 <a
               href="http://en.wikipedia.org/wiki/All-pass_filter#Digital_Implementation"
               title="/en-US/docs/"
               >allpass</a
-            > 필터입니다. 이는 모든 주파수를 통과시키지만, 가변 주파수 사이의 위상
+            > 필터입니다. 이는 모든 주파수를 통과시키지만, 가변 주파수 사이의 위상
             관계를 변화시킵니다.
           </td>
           <td>
-            최대 <a
+            최대 <a
               href="http://en.wikipedia.org/wiki/Group_delay_and_phase_delay"
               title="/en-US/docs/"
               >group delay</a
@@ -191,11 +191,11 @@ _Inherits properties from its parent,_ _{{domxref("AudioNode")}}_.
 _{{domxref("AudioNode")}} 로부터 메서드를 상속받습니다_.
 
 - {{domxref("BiquadFilterNode.getFrequencyResponse()")}}
-  - : 이 메서드는 현재 필터 파라미터 설정으로부터 제공된 주파수 배열에 지정된 주파수에 대한 주파수 응답을 계산합니다
+  - : 이 메서드는 현재 필터 파라미터 설정으로부터 제공된 주파수 배열에 지정된 주파수에 대한 주파수 응답을 계산합니다
 
 ## Example
 
-See [`AudioContext.createBiquadFilter`](/en-US/docs/Web/API/BaseAudioContext/createBiquadFilter#example) for example code that shows how to use an `AudioContext` to create a Biquad filter node.
+See [`AudioContext.createBiquadFilter`](/ko/docs/Web/API/BaseAudioContext/createBiquadFilter#example) for example code that shows how to use an `AudioContext` to create a Biquad filter node.
 
 ## Specifications
 
@@ -207,4 +207,4 @@ See [`AudioContext.createBiquadFilter`](/en-US/docs/Web/API/BaseAudioContext/cre
 
 ## See also
 
-- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/ko/docs/Web_Audio_API/Using_Web_Audio_API)

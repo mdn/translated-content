@@ -1,14 +1,6 @@
 ---
 title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
-tags:
-  - ECMAScript5
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 ---
 {{JSRef}}
 
@@ -131,7 +123,7 @@ if (user.authenticated) {
 
 ## 示例
 
-### 用 `Object.create()` 实现类式继承
+### 用 `Object.create()` 实现类式继承
 
 下面的例子演示了如何使用 `Object.create()` 来实现类式继承。这是一个所有版本 JavaScript 都支持的单继承。
 
@@ -169,7 +161,7 @@ console.log('Is rect an instance of Shape?', rect instanceof Shape); // true
 rect.move(1, 1); // Outputs, 'Shape moved.'
 ```
 
-### 使用 `Object.create()` 的 `propertyObject` 参数
+### 使用 `Object.create()` 的 `propertyObject` 参数
 
 ```js
 let o;

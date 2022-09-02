@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <code><strong>slice()</strong></code> retorna uma cópia de parte de um array a partir de um subarray criado entre as posições <code>início</code> e <code>fim</code> (<font face="consolas, Liberation Mono, courier, monospace"><span>fim</span></font> não é necessário) de um array original. O Array original não é modificado.</p>
+<p>O método <code><strong>slice()</strong></code> retorna uma cópia de parte de um array a partir de um subarray criado entre as posições <code>início</code> e <code>fim</code> (<font face="consolas, Liberation Mono, courier, monospace"><span>fim</span></font> não é necessário) de um array original. O Array original não é modificado.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -22,14 +22,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 <dl>
  <dt><code>início</code> {{optional_inline}}</dt>
  <dd>Índice baseado em zero no qual se inicia a extração.</dd>
- <dd>Como um índice negativo, <code>início</code> indica um deslocamento em relação ao fim da sequência. <code>slice(-2)</code> extrai os dois últimos elementos do array.</dd>
- <dd>Se <font face="consolas, Liberation Mono, courier, monospace"><span>início</span></font> for omitido, <code>slice</code> inicia a partir do índice <font face="Consolas, Liberation Mono, Courier, monospace">0</font>.</dd>
+ <dd>Como um índice negativo, <code>início</code> indica um deslocamento em relação ao fim da sequência. <code>slice(-2)</code> extrai os dois últimos elementos do array.</dd>
+ <dd>Se <font face="consolas, Liberation Mono, courier, monospace"><span>início</span></font> for omitido, <code>slice</code> inicia a partir do índice <font face="Consolas, Liberation Mono, Courier, monospace">0</font>.</dd>
  <dd>Se <font face="consolas, Liberation Mono, courier, monospace"><span>início</span></font> for maior que o comprimento do array, é retornado um array vazio.</dd>
  <dt><code>fim</code> {{optional_inline}}</dt>
- <dd>Índice baseado em zero o qual é o final da extração. <code>slice</code> extrai até, não incluindo, <code>fim</code>.</dd>
- <dd><code>slice(1,4)</code> extrai do segundo até o quarto elemento (elementos de índice 1, 2 e 3).</dd>
+ <dd>Índice baseado em zero o qual é o final da extração. <code>slice</code> extrai até, não incluindo, <code>fim</code>.</dd>
+ <dd><code>slice(1,4)</code> extrai do segundo até o quarto elemento (elementos de índice 1, 2 e 3).</dd>
  <dd>Como índice negativo, <code>fim</code> indica um deslocamento em relação ao fim do array. <code>slice(2,-1)</code> extrai o terceiro elemento através do segundo-para-o-último elemento no array.</dd>
- <dd>Se <code>fim</code> for omitido ou for maior que o tamanho do array, <code>slice</code> considerará o último elemento do array como sendo o <code>fim </code>(<code>arr.length</code>)<code>.</code></dd>
+ <dd>Se <code>fim</code> for omitido ou for maior que o tamanho do array, <code>slice</code> considerará o último elemento do array como sendo o <code>fim </code>(<code>arr.length</code>)<code>.</code></dd>
 </dl>
 
 <h3 id="Valor_de_retorno">Valor de retorno</h3>
@@ -38,11 +38,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 <h2 id="Descrição">Descrição</h2>
 
-<p><code>slice</code> não altera o array original. Retorna uma cópia de elementos do array original. Elementos do array original são copiados para o array retornado da seguinte maneira:</p>
+<p><code>slice</code> não altera o array original. Retorna uma cópia de elementos do array original. Elementos do array original são copiados para o array retornado da seguinte maneira:</p>
 
 <ul>
- <li>Para referências de objeto (e não o objeto real), <code>slice</code> copia referencias de objeto em um novo array. Ambos, o original e o novo array referem-se ao mesmo objeto. Se um objeto referenciado é alterado, as alterações são visiveis em ambos, no novo array e no array original.</li>
- <li>Para strings e números (não objetos {{jsxref("String")}} e {{jsxref("Number")}}), <code>slice</code> copia strings e números em um novo array. Alterações na string ou número em um array não afetam o outro array.</li>
+ <li>Para referências de objeto (e não o objeto real), <code>slice</code> copia referencias de objeto em um novo array. Ambos, o original e o novo array referem-se ao mesmo objeto. Se um objeto referenciado é alterado, as alterações são visiveis em ambos, no novo array e no array original.</li>
+ <li>Para strings e números (não objetos {{jsxref("String")}} e {{jsxref("Number")}}), <code>slice</code> copia strings e números em um novo array. Alterações na string ou número em um array não afetam o outro array.</li>
 </ul>
 
 <p>Se um novo elemento é adicionado a qualquer array, o outro não é afetado.</p>
@@ -58,9 +58,9 @@ var citricos = frutas.slice(1, 3);
 // citricos contem ['Laranja','Limao']
 </pre>
 
-<h3 id="Usando_slice">Usando <code>slice</code></h3>
+<h3 id="Usando_slice">Usando <code>slice</code></h3>
 
-<p>No exemplo seguinte, <code>slice</code> cria um novo array, <code>novoCarro</code>, do original <code>meuCarro</code>. Ambos incluem uma referência ao objeto,  <code>meuHonda</code>. Quando a cor de <code>meuHonda</code> é alterada para  roxo, ambos os arrays sofrem alteração.</p>
+<p>No exemplo seguinte, <code>slice</code> cria um novo array, <code>novoCarro</code>, do original <code>meuCarro</code>. Ambos incluem uma referência ao objeto,  <code>meuHonda</code>. Quando a cor de <code>meuHonda</code> é alterada para  roxo, ambos os arrays sofrem alteração.</p>
 
 <pre class="brush: js notranslate">// Usando slice para criar novoCarro a partir de meuCarro.
 var meuHonda = { cor: 'vermelho', rodas: 4, motor: { cilindros: 4, tamanho: 2.2 } };
@@ -96,7 +96,7 @@ novoCarro[0].cor = roxo
 
 <h2 id="Objetos_Array-like">Objetos Array-like</h2>
 
-<p>O método <code>slice</code> pode também ser chamado para converter objetos ou coleções Array-like em um novo Array. Você só precisa encadear o método no Array. Os {{jsxref("Functions/arguments", "arguments")}} dentro de uma função são um exemplo de 'objeto array-like'.</p>
+<p>O método <code>slice</code> pode também ser chamado para converter objetos ou coleções Array-like em um novo Array. Você só precisa encadear o método no Array. Os {{jsxref("Functions/arguments", "arguments")}} dentro de uma função são um exemplo de 'objeto array-like'.</p>
 
 <pre class="brush: js notranslate">function list() {
   return Array.prototype.slice.call(arguments);
@@ -105,7 +105,7 @@ novoCarro[0].cor = roxo
 var list1 = list(1, 2, 3); // [1, 2, 3]
 </pre>
 
-<p>Ligações  podem ser feitas com a função .<code>call</code> de {{jsxref("Function.prototype")}} and it can also be reduced using <code>[].slice.call(arguments)</code> ao invés de <code>Array.prototype.slice.call</code>. De qualquer forma, ela pode ser simplificada com {{jsxref("Function.prototype.bind", "bind")}}.</p>
+<p>Ligações  podem ser feitas com a função .<code>call</code> de {{jsxref("Function.prototype")}} and it can also be reduced using <code>[].slice.call(arguments)</code> ao invés de <code>Array.prototype.slice.call</code>. De qualquer forma, ela pode ser simplificada com {{jsxref("Function.prototype.bind", "bind")}}.</p>
 
 <pre class="brush: js notranslate">var unboundSlice = Array.prototype.slice;
 var slice = Function.prototype.call.bind(unboundSlice);

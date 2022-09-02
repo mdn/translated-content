@@ -1,12 +1,6 @@
 ---
 title: Microsoft Internet Explorer
 slug: Glossary/Microsoft_Internet_Explorer
-tags:
-  - Windows
-  - 微软
-  - 术语
-  - 浏览器
-translation_of: Glossary/Microsoft_Internet_Explorer
 ---
 Internet Explorer (or IE) 是一个由微软为遗留企业用户维护的免费的可视化 {{glossary("浏览器")}} 。{{glossary("Microsoft Edge")}} 是 Windows 现在默认的浏览器。
 
@@ -18,9 +12,9 @@ IE 已经发行了许多版本，目前停留在版本 11.0.12，可以得到桌
 
 ### 常识
 
-- {{interwiki("wikipedia", "Internet Explorer", "Internet Explorer")}} on Wikipedia
-- {{interwiki("wikipedia", "History of Internet Explorer", "History of Internet Explorer")}} on Wikipedia
-- {{interwiki("wikipedia", "Internet Explorer versions", "Internet Explorer versions")}} on Wikipedia
+- [Internet Explorer](https://zh.wikipedia.org/wiki/Internet_Explorer) on Wikipedia
+- [History of Internet Explorer](https://zh.wikipedia.org/wiki/History_of_Internet_Explorer) on Wikipedia
+- [Internet Explorer versions](https://zh.wikipedia.org/wiki/Internet_Explorer_versions) on Wikipedia
 
 ### 了解 Internet Explorer
 

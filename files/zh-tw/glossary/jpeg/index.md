@@ -1,7 +1,6 @@
 ---
 title: JPEG
 slug: Glossary/jpeg
-translation_of: Glossary/jpeg
 ---
 **JPEG**（Joint Photographic Experts Group，聯合圖像專家小組）通常指是一種圖片的失真壓縮法。
 
@@ -9,4 +8,4 @@ translation_of: Glossary/jpeg
 
 ### 一般資訊
 
-- 維基百科的 {{Interwiki("wikipedia", "JPEG")}}
+- 維基百科的 [JPEG](https://zh.wikipedia.org/wiki/JPEG)

@@ -11,9 +11,9 @@ Un **PRNG** (_pseudorandom number generator_, ou générateur de nombres pseudo-
 
 En fonction de la qualité de l'algorithme et de l'entropie de l'ensemencement, les PRNG diffèrent en degré de sécurité et donc dans leurs applications.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Générateur de nombres pseudo-aléatoires")}} sur Wikipédia
+- [Générateur de nombres pseudo-aléatoires](https://fr.wikipedia.org/wiki/G%C3%A9n%C3%A9rateur_de_nombres_pseudo-al%C3%A9atoires) sur Wikipédia
 - {{jsxref("Math.random()")}}, une fonction PRNG intégrée à JavaScript

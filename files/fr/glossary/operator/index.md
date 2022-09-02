@@ -13,7 +13,7 @@ original_slug: Glossaire/Operator
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Opérateur (informatique)")}} sur Wikipédia
+- [Opérateur](https://fr.wikipedia.org/wiki/Op%C3%A9rateur_(informatique)) sur Wikipédia
 
 ### Référence technique
 

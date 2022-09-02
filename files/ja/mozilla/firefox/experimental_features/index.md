@@ -65,7 +65,7 @@ translation_of: Mozilla/Firefox/Experimental_features
 
 ### input type="search" のレイアウト
 
-`input type="search"` のレイアウトが更新されました。これにより、何らかの入力を始めたときに、他のブラウザーの実装と同様にクリアアイコンが現れるようになります。 (詳しくは {{bug(558594)}} を参照してください。)
+`input type="search"` のレイアウトが更新されました。これにより、何らかの入力を始めたときに、他のブラウザーの実装と同様にクリアアイコンが現れるようになります。 (詳しくは {{bug(558594)}} を参照してください。)
 
 <table>
   <thead>

@@ -15,9 +15,9 @@ original_slug: Web/CSS/CSS_Grid_Layout/Conceptos_Básicos_del_Posicionamiento_co
 
 <p>Una cuadrícula es un conjunto de líneas horizontales y verticales que se intersectan - un grupo define columnas y el otro filas. Los elementos se pueden colocar en la cuadrícula respetando estas columnas y filas. El diseño de cuadrícula CSS tiene las siguientes características:</p>
 
-<h3 id="Tamaños_fijos_y_flexibles">Tamaños fijos y flexibles</h3>
+<h3 id="Tamaños_fijos_y_flexibles">Tamaños fijos y flexibles</h3>
 
-<p>Usted puede crear una cuadrícula con tamaños fijos, utilizando píxeles, por ejemplo. También se puede crear una cuadrícula utilizando tamaños flexibles con porcentajes o con la nueva unidad de medida <code>fr</code> (fracción), diseñada para este propósito.</p>
+<p>Usted puede crear una cuadrícula con tamaños fijos, utilizando píxeles, por ejemplo. También se puede crear una cuadrícula utilizando tamaños flexibles con porcentajes o con la nueva unidad de medida <code>fr</code> (fracción), diseñada para este propósito.</p>
 
 <h3 id="Posicionamiento_de_elementos">Posicionamiento de elementos</h3>
 
@@ -25,23 +25,23 @@ original_slug: Web/CSS/CSS_Grid_Layout/Conceptos_Básicos_del_Posicionamiento_co
 
 <h3 id="Creación_de_líneas_adicionales_para_alojar_contenido">Creación de líneas adicionales para alojar contenido</h3>
 
-<p>Usted puede definir una cuadrícula explícita con grid layout. La especificación  Grid Layout  es lo suficientemente flexible como para permitir agregar filas y columnas adicionales cuando sea necesario. Características como la adición de "tantas columnas como caben en un contenedor" también fueron incuidas.</p>
+<p>Usted puede definir una cuadrícula explícita con grid layout. La especificación  Grid Layout  es lo suficientemente flexible como para permitir agregar filas y columnas adicionales cuando sea necesario. Características como la adición de "tantas columnas como caben en un contenedor" también fueron incuidas.</p>
 
 <h3 id="Control_de_alineación">Control de alineación</h3>
 
-<p>Grid contiene características de alineación para poder controlar la forma cómo se alinean los elementos una vez colocados en un área de cuadrícula y cómo está alineada toda la cuadrícula.</p>
+<p>Grid contiene características de alineación para poder controlar la forma cómo se alinean los elementos una vez colocados en un área de cuadrícula y cómo está alineada toda la cuadrícula.</p>
 
 <h3 id="Control_de_contenido_superpuesto">Control de contenido superpuesto</h3>
 
-<p>Se puede colocar más de un elemento en una celda de la cuadrícula o área, las cuales pueden solaparse o superponerse total o parcialmente entre sí. Esta estratificación puede ser controlada con la propiedad {{cssxref("z-index")}}.</p>
+<p>Se puede colocar más de un elemento en una celda de la cuadrícula o área, las cuales pueden solaparse o superponerse total o parcialmente entre sí. Esta estratificación puede ser controlada con la propiedad {{cssxref("z-index")}}.</p>
 
-<p>Grid es una poderosa especificación que, cuando se combina con otras partes de CSS como <a href="/es/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox</a>, puede ayudarle a crear diseños que antes eran imposibles de construir en CSS. Todo comienza creando una cuadrícula en su <strong>contenedor de cuadrícula</strong>.</p>
+<p>Grid es una poderosa especificación que, cuando se combina con otras partes de CSS como <a href="/es/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox</a>, puede ayudarle a crear diseños que antes eran imposibles de construir en CSS. Todo comienza creando una cuadrícula en su <strong>contenedor de cuadrícula</strong>.</p>
 
 <h2 id="El_contenedor_de_Grid_2">El contenedor de Grid</h2>
 
 <p>Creamos un <em>contenedor de cuadrícula</em> al declarar <code>display: grid</code> o <code>display: inline-grid</code> en un elemento. Tan pronto como hagamos esto todos los <em>hijos directos</em> de ese elemento se convertirán en <em>elementos de la cuadrícula.</em></p>
 
-<p>En este ejemplo, se tiene un contenedor div con una clase wrapper y dentro hay cinco elementos hijos.</p>
+<p>En este ejemplo, se tiene un contenedor div con una clase wrapper y dentro hay cinco elementos hijos.</p>
 
 <div id="El_contenedor_de_Grid">
 <pre class="brush: html">&lt;div class="wrapper"&gt;
@@ -82,17 +82,17 @@ original_slug: Web/CSS/CSS_Grid_Layout/Conceptos_Básicos_del_Posicionamiento_co
 <p>{{ EmbedLiveSample('El_contenedor_de_Grid', '200', '330') }}</p>
 </div>
 
-<p>Todos los descendientes directos son ahora elementos de la cuadrícula. En un navegador web, usted no verá ninguna diferencia en cómo son mostrados estos elementos antes de convertirlos en una cuadrícula ya que grid ha creado una cuadrícula de una sola columna para los elementos. En este punto usted puede encontrar útil trabajar en Firefox Developer Edition, el cual  tiene disponible el <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Inspector</a> (Inspector de cuádricula) como parte de las Herramientas de Desarrollador. Si ve este ejemplo en Firefox e inspecciona la cuadrícula, verá un icono pequeño junto al valor <code>grid</code>. Haga clic sobre este y la cuadrícula de este elemento se superpondrá en la ventana del navegador.</p>
+<p>Todos los descendientes directos son ahora elementos de la cuadrícula. En un navegador web, usted no verá ninguna diferencia en cómo son mostrados estos elementos antes de convertirlos en una cuadrícula ya que grid ha creado una cuadrícula de una sola columna para los elementos. En este punto usted puede encontrar útil trabajar en Firefox Developer Edition, el cual  tiene disponible el <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Inspector</a> (Inspector de cuádricula) como parte de las Herramientas de Desarrollador. Si ve este ejemplo en Firefox e inspecciona la cuadrícula, verá un icono pequeño junto al valor <code>grid</code>. Haga clic sobre este y la cuadrícula de este elemento se superpondrá en la ventana del navegador.</p>
 
 <p><img alt="Using the Grid Highlighter in DevTools to view a grid" src="https://mdn.mozillademos.org/files/14631/1-grid-inspector.png" style="height: 753px; width: 900px;"></p>
 
 <p>Mientras usted aprende y luego trabaja con CSS Grid Layout esta herramienta le dará una mejor idea de lo que está sucediendo con sus cuadrículas visualmente.</p>
 
-<p>Si queremos empezar a hacer esto más parecido a una cuadrícula necesitamos agregar columnas.</p>
+<p>Si queremos empezar a hacer esto más parecido a una cuadrícula necesitamos agregar columnas.</p>
 
-<h2 id="Vias_filas_y_columnas_del_Grid">Vias, filas y columnas del Grid</h2>
+<h2 id="Vias_filas_y_columnas_del_Grid">Vias, filas y columnas del Grid</h2>
 
-<p>Definimos filas y columnas en nuestra cuadrícula con las propiedades {{cssxref("grid-template-columns")}} y {{cssxref("grid-template-rows")}}. Éstas definen las vías de la cuadrícula. Una vía de cuadrícula es el área entre las dos líneas -horizontales o verticales- dentro de la cuadrícula. En la imagen inferior se puede ver una vía resaltada -  esta es la vía de la primera fila en nuestra cuadrícula.</p>
+<p>Definimos filas y columnas en nuestra cuadrícula con las propiedades {{cssxref("grid-template-columns")}} y {{cssxref("grid-template-rows")}}. Éstas definen las vías de la cuadrícula. Una vía de cuadrícula es el área entre las dos líneas -horizontales o verticales- dentro de la cuadrícula. En la imagen inferior se puede ver una vía resaltada -  esta es la vía de la primera fila en nuestra cuadrícula.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14637/1_Grid_Track.png" style="height: 261px; width: 392px;"></p>
 
@@ -140,7 +140,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Conceptos_Básicos_del_Posicionamiento_co
 
 <h3 id="La_Unidad_fr_2">La Unidad fr</h3>
 
-<p>Las vías se pueden definir usando cualquier unidad de medida. Grid también introduce una unidad de longitud adicional para ayudarnos a crear vías de cuadrícula flexibles. La nueva unidad fr representa una fracción del espacio disponible en el contenedor de la cuadrícula. La siguiente definición de cuadrícula crearía tres vias con el mismo ancho, que se expanden y se encogen de acuerdo el espacio disponible.</p>
+<p>Las vías se pueden definir usando cualquier unidad de medida. Grid también introduce una unidad de longitud adicional para ayudarnos a crear vías de cuadrícula flexibles. La nueva unidad fr representa una fracción del espacio disponible en el contenedor de la cuadrícula. La siguiente definición de cuadrícula crearía tres vias con el mismo ancho, que se expanden y se encogen de acuerdo el espacio disponible.</p>
 
 <div id="La_Unidad_fr">
 <pre class="brush: html">&lt;div class="wrapper"&gt;
@@ -181,7 +181,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Conceptos_Básicos_del_Posicionamiento_co
 <p>{{ EmbedLiveSample('La_Unidad_fr', '220', '140') }}</p>
 </div>
 
-<p>En el próximo ejemplo creamos una definición con una vía de <code>2fr</code> y luego dos vías de <code>1fr</code>. El espacio disponible se divide en cuatro. Dos partes corresponden a la primera vía  y una parte a cada una de las dos vias restantes.</p>
+<p>En el próximo ejemplo creamos una definición con una vía de <code>2fr</code> y luego dos vías de <code>1fr</code>. El espacio disponible se divide en cuatro. Dos partes corresponden a la primera vía  y una parte a cada una de las dos vias restantes.</p>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -199,7 +199,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Conceptos_Básicos_del_Posicionamiento_co
 
 <h3 id="Listando_vías_con_la_notación_repeat">Listando vías con la notación <code>repeat()</code></h3>
 
-<p>Las cuadrículas grandes con muchas vías o celdas pueden utilizar la notación <code>repeat()</code> con el fin de repetir todas o una sección de la lista de vías. Por ejemplo la definición de cuadrícula:</p>
+<p>Las cuadrículas grandes con muchas vías o celdas pueden utilizar la notación <code>repeat()</code> con el fin de repetir todas o una sección de la lista de vías. Por ejemplo la definición de cuadrícula:</p>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -233,7 +233,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Conceptos_Básicos_del_Posicionamiento_co
 
 <h3 id="La_cuadrícula_implícita_y_explícita">La cuadrícula implícita y explícita</h3>
 
-<p>Al crear nuestra cuadrícula de ejemplo definimos nuestras vías de columna con la propiedad {{cssxref("grid-template-columns")}}, pero dejamos que grid creara filas  para el contenido según fuera necesario. Estas filas se crean en la cuadrícula implícita. La cuadrícula explícita consiste en las filas y columnas que se definen con las propiedades {{cssxref("grid-template-columns")}} y {{cssxref("grid-template-rows")}}.</p>
+<p>Al crear nuestra cuadrícula de ejemplo definimos nuestras vías de columna con la propiedad {{cssxref("grid-template-columns")}}, pero dejamos que grid creara filas  para el contenido según fuera necesario. Estas filas se crean en la cuadrícula implícita. La cuadrícula explícita consiste en las filas y columnas que se definen con las propiedades {{cssxref("grid-template-columns")}} y {{cssxref("grid-template-rows")}}.</p>
 
 <p>Si coloca algo fuera de la cuadrícula ya definida, o si debido a la cantidad de contenido, se necesitarán más vías o celdas, entonces grid crea filas y columnas en la cuadrícula implícita. Estas vías varían su tamaño automáticamente de forma predeterminada, así que ajustarán su tamaño basadas en el contenido dentro de ellas.</p>
 
@@ -273,9 +273,9 @@ original_slug: Web/CSS/CSS_Grid_Layout/Conceptos_Básicos_del_Posicionamiento_co
 
 <h3 id="Tamaño_de_vía_y_minmax_2">Tamaño de vía y <code>minmax()</code></h3>
 
-<p>Al configurar una cuadrícula explícita o definir el tamaño de las filas o columnas creadas automáticamente, es posible que desee dar a las vías un tamaño mínimo, pero asegurarse que se expandan para adaptarse a cualquier contenido que se pueda agregar. Por ejemplo, tal vez quiera que mis filas nunca se colapsen a menos de 100 píxeles, pero si mi contenido se extiende a 300 píxeles de altura, me gustaría que la fila se expandiera a esa altura.</p>
+<p>Al configurar una cuadrícula explícita o definir el tamaño de las filas o columnas creadas automáticamente, es posible que desee dar a las vías un tamaño mínimo, pero asegurarse que se expandan para adaptarse a cualquier contenido que se pueda agregar. Por ejemplo, tal vez quiera que mis filas nunca se colapsen a menos de 100 píxeles, pero si mi contenido se extiende a 300 píxeles de altura, me gustaría que la fila se expandiera a esa altura.</p>
 
-<p>Grid tiene una solución para esto con la función {{cssxref("minmax", "minmax()")}}. En el siguiente ejemplo estoy usando <code>minmax()</code> en el valor de la propiedad {{cssxref("grid-auto-rows")}}. Las filas creadas automáticamente tendrán como mínimo de 100 píxeles de alto y un máximo de auto. El uso de auto significa que el tamaño mirará el tamaño del contenido y se estirará para dar espacio al elemento más alto en una celda en esta fila.</p>
+<p>Grid tiene una solución para esto con la función {{cssxref("minmax", "minmax()")}}. En el siguiente ejemplo estoy usando <code>minmax()</code> en el valor de la propiedad {{cssxref("grid-auto-rows")}}. Las filas creadas automáticamente tendrán como mínimo de 100 píxeles de alto y un máximo de auto. El uso de auto significa que el tamaño mirará el tamaño del contenido y se estirará para dar espacio al elemento más alto en una celda en esta fila.</p>
 
 <div id="Tamaño_de_vía_y_minmax">
 <pre class="brush: css">.wrapper {
@@ -327,13 +327,13 @@ original_slug: Web/CSS/CSS_Grid_Layout/Conceptos_Básicos_del_Posicionamiento_co
 
 <p>Las líneas están numeradas según el modo de escritura del documento. En un idioma de izquierda a derecha, la línea 1 está al lado izquierdo de la cuadrícula. En un idioma de derecha a izquierda, está en el lado derecho de la cuadrícula. Las líneas también se pueden nombrar, ya veremos cómo hacer esto en una guía posterior de esta serie.</p>
 
-<h3 id="Posicionando_elementos_de_acuerdo_a_las_líneas">Posicionando elementos de acuerdo a las líneas</h3>
+<h3 id="Posicionando_elementos_de_acuerdo_a_las_líneas">Posicionando elementos de acuerdo a las líneas</h3>
 
-<p>Estaremos explorando la colocación basada en líneas en detalle en un artículo posterior, el siguiente ejemplo demuestra cómo hacer esto de una manera sencilla. Cuando colocamos un elemento  y tomamos como punto de referencia la línea - en lugar de la vía.</p>
+<p>Estaremos explorando la colocación basada en líneas en detalle en un artículo posterior, el siguiente ejemplo demuestra cómo hacer esto de una manera sencilla. Cuando colocamos un elemento  y tomamos como punto de referencia la línea - en lugar de la vía.</p>
 
-<p>En el siguiente ejemplo, estoy posicionando los dos primeros elementos en la cuadrícula de tres vías de columna,  usando las propiedades {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-row-start")}} y {{cssxref("grid-row-end")}}. Trabajando de izquierda a derecha, el primer elemento se coloca partiendo de la línea de la columna 1, y se extiende a la línea de la columna 4, que en nuestro caso es la línea que está mas a la derecha en la cuadrícula. Y comienza en la línea de la fila 1 y termina en la línea de fila la 3, por lo tanto, se extiende sobre dos filas.</p>
+<p>En el siguiente ejemplo, estoy posicionando los dos primeros elementos en la cuadrícula de tres vías de columna,  usando las propiedades {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-row-start")}} y {{cssxref("grid-row-end")}}. Trabajando de izquierda a derecha, el primer elemento se coloca partiendo de la línea de la columna 1, y se extiende a la línea de la columna 4, que en nuestro caso es la línea que está mas a la derecha en la cuadrícula. Y comienza en la línea de la fila 1 y termina en la línea de fila la 3, por lo tanto, se extiende sobre dos filas.</p>
 
-<p>El segundo elemento comienza en la línea de columna 1 de la  cuadrícula y se extiende por toda la fila. Este es el valor por defecto, por lo que no necesito especificar la línea final. También se extiende dos vías de fila de la línea de fila 3 a la línea de fila 5. Los otros elementos se colocarán a sí mismos en espacios vacíos en la cuadrícula.</p>
+<p>El segundo elemento comienza en la línea de columna 1 de la  cuadrícula y se extiende por toda la fila. Este es el valor por defecto, por lo que no necesito especificar la línea final. También se extiende dos vías de fila de la línea de fila 3 a la línea de fila 5. Los otros elementos se colocarán a sí mismos en espacios vacíos en la cuadrícula.</p>
 
 <div id="Líneas_de_Rejilla">
 <pre class="brush: html">&lt;div class="wrapper"&gt;

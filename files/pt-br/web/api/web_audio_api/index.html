@@ -10,12 +10,12 @@ translation_of: Web/API/Web_Audio_API
 original_slug: Web/API/API_Web_Audio
 ---
 <div class="summary">
-<p>A API de áudio da web disponibiliza um poderoso e versátil sistema de controle de áudio para a Web, permitindo aos desenvolvedores escolher arquivos de áudio, adicionar efeitos a estes arquivos, criar reprodutores de áudio, aplicar <em>spatial effects</em> (como <em>panning</em>) e muito mais.</p>
+<p>A API de áudio da web disponibiliza um poderoso e versátil sistema de controle de áudio para a Web, permitindo aos desenvolvedores escolher arquivos de áudio, adicionar efeitos a estes arquivos, criar reprodutores de áudio, aplicar <em>spatial effects</em> (como <em>panning</em>) e muito mais.</p>
 </div>
 
 <h2 id="Web_audio_conceitos_e_uso">Web audio: conceitos e uso</h2>
 
-<p>A API de Web audio envolve manipulação de operações com áudio dentro de um <strong>contexto de áudio</strong>, e foi desenvolvida para permitir o <strong>roteamento</strong><strong> </strong><strong>modular</strong>. Operações básicas de áudio são feitas com <strong><em>audio nodes </em>(nós de áudio</strong>), que são ligados para formar <strong>gráficos de</strong><strong> roteamento </strong><strong>de áudio</strong>. Várias fontes - com diferentes tipos de <em>layout</em> de canal - são suportados mesmo em um único contexto. Este <em>design</em> modular permite flexibilidade para criar funções de áudio complexas com efeitos dinâmicos.</p>
+<p>A API de Web audio envolve manipulação de operações com áudio dentro de um <strong>contexto de áudio</strong>, e foi desenvolvida para permitir o <strong>roteamento</strong><strong> </strong><strong>modular</strong>. Operações básicas de áudio são feitas com <strong><em>audio nodes </em>(nós de áudio</strong>), que são ligados para formar <strong>gráficos de</strong><strong> roteamento </strong><strong>de áudio</strong>. Várias fontes - com diferentes tipos de <em>layout</em> de canal - são suportados mesmo em um único contexto. Este <em>design</em> modular permite flexibilidade para criar funções de áudio complexas com efeitos dinâmicos.</p>
 
 <p><em>Audio nodes</em> são ligados pelas suas entradas e saídas, formando uma cadeia que começa com uma ou mais fontes, passa por um ou mais <em>nodes </em>e então acaba em um destino (embora você não tenha que fornecer um destino, por exemplo, se você quiser apenas visualizar alguns dados de áudio). Um fluxo de trabalho simples, com Web áudio, seria algo parecido com isso:</p>
 
@@ -31,7 +31,7 @@ original_slug: Web/API/API_Web_Audio
 
 <p>O sincronismo é controlado com alta precisão e baixa latência, permitindo aos desenvolvedores escrever códigos que respondam com precisão a eventos e capazes de gerar exemplos específicos, mesmo com uma alta taxa de amostragem. Dessa forma, aplicações como baterias eletrônicas e seqüenciadores estarão facilmente ao alcance dos desenvolvedores.</p>
 
-<p>A API de Web Audio também permite o controle de como o áudio será ordenado. Usando um sistema baseado em um modelo de<em> source-listener</em>, a API permite controlar os painéis de<em> modelo</em> para serem usados e tratados com atenuação de distância induzida ou <em>doppler shift</em> induzido por uma fonte em movimento (ou um ouvinte em movimento).</p>
+<p>A API de Web Audio também permite o controle de como o áudio será ordenado. Usando um sistema baseado em um modelo de<em> source-listener</em>, a API permite controlar os painéis de<em> modelo</em> para serem usados e tratados com atenuação de distância induzida ou <em>doppler shift</em> induzido por uma fonte em movimento (ou um ouvinte em movimento).</p>
 
 <div class="note">
 <p><strong>Nota</strong>: Você pode ver mais detalhes sobre a teoria da API de Web Audio em nosso artigo <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API">Basic concepts behind Web Audio API</a>.</p>
@@ -47,7 +47,7 @@ original_slug: Web/API/API_Web_Audio
 
 <dl>
  <dt>{{domxref("AudioContext")}}</dt>
- <dd>A interface <strong><code>AudioContext</code></strong> representa um grafo de processamento de áudio construído a partir de módulos de áudio ligados entre si, cada um representado por um {{domxref("AudioNode")}}. Um contexto de áudio (audio context) controla a criação dos<em>nós </em>que ele contém e a execução do processamento de áudio, ou a decodificação. Como tudo acontece dentro de um contexto, você deve criar um <code><strong>AudioContext</strong></code> antes de fazer qualquer outra coisa.</dd>
+ <dd>A interface <strong><code>AudioContext</code></strong> representa um grafo de processamento de áudio construído a partir de módulos de áudio ligados entre si, cada um representado por um {{domxref("AudioNode")}}. Um contexto de áudio (audio context) controla a criação dos<em>nós </em>que ele contém e a execução do processamento de áudio, ou a decodificação. Como tudo acontece dentro de um contexto, você deve criar um <code><strong>AudioContext</strong></code> antes de fazer qualquer outra coisa.</dd>
  <dt>{{domxref("AudioNode")}}</dt>
  <dd>A interface <code><strong>AudioNode</strong></code> representa um módulo de processamento de áudio como uma fonte de áudio (por exemplo, um HTML {{HTMLElement("áudio")}} ou um elemento {{HTMLElement("vídeo")}}), destino de áudio, módulo de processamento intermediário (por exemplo, um filtro como {{domxref("BiquadFilterNode")}}, ou controle de volume, como {{domxref("GainNode")}}).</dd>
  <dt>{{domxref("AudioParam")}}</dt>
@@ -62,13 +62,13 @@ original_slug: Web/API/API_Web_Audio
 
 <dl>
  <dt>{{domxref("OscillatorNode")}}</dt>
- <dd>A interface <strong><code>OscillatorNode</code></strong> representa uma onda senoidal. Esta interface é um módulo de processamento de áudio que gera uma onda senoidal com determinada frequência.</dd>
+ <dd>A interface <strong><code>OscillatorNode</code></strong> representa uma onda senoidal. Esta interface é um módulo de processamento de áudio que gera uma onda senoidal com determinada frequência.</dd>
  <dt>{{domxref("AudioBuffer")}}</dt>
  <dd>A interface <strong><code>AudioBuffer</code></strong> representa uma pequena porção de áudio armazenada na memória, criada a partir de um arquivo de áudio usando o método {{ domxref("AudioContext.decodeAudioData()") }}, ou criado com os dados brutos usando o método {{ domxref("AudioContext.createBuffer()") }}. Uma vez decodificado neste formato o áudio pode ser colocada em um {{ domxref("AudioBufferSourceNode") }}.</dd>
  <dt>{{domxref("AudioBufferSourceNode")}}</dt>
  <dd>A interface AudioBufferSourceNode representa uma fonte de áudio que consiste em dados de áudio na memória, armazenados em um {{domxref ("AudioBuffer")}}. É um {{domxref ("AudioNode")}} que atua como uma fonte de áudio.</dd>
  <dt>{{domxref("MediaElementAudioSourceNode")}}</dt>
- <dd>A interface <code><strong>MediaElementAudio</strong></code><strong><code>SourceNode</code></strong>  representa uma fonte de audio consiste de um HTML5 {{ htmlelement("audio") }} ou {{ htmlelement("video") }} elemento. É uma {{domxref("AudioNode")}} que atua como uma fonte de áudio.</dd>
+ <dd>A interface <code><strong>MediaElementAudio</strong></code><strong><code>SourceNode</code></strong>  representa uma fonte de audio consiste de um HTML5 {{ htmlelement("audio") }} ou {{ htmlelement("video") }} elemento. É uma {{domxref("AudioNode")}} que atua como uma fonte de áudio.</dd>
  <dt>{{domxref("MediaStreamAudioSourceNode")}}</dt>
  <dd>The <code><strong>MediaStreamAudio</strong></code><strong><code>SourceNode</code></strong> interface represents an audio source consisting of a <a href="/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}} (such as a webcam or microphone.) It is an {{domxref("AudioNode")}} that acts as an audio source.</dd>
 </dl>
@@ -177,7 +177,7 @@ original_slug: Web/API/API_Web_Audio
 
 <p>Este exemplo mostra uma grande variedade de funções da API de Web Audio que podem ser utilizadas. Você pode ver este código em ação na demo <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-o-matic</a> (também verificar o <a href="https://github.com/mdn/voice-change-o-matic">código-fonte completo no Github</a>) - esta é uma demonstração de um modificador de voz de brinquedo experimental; aconselhamos manter seus alto-falantes baixo ao utilizá-lo, pelo menos para começar!</p>
 
-<p>As linhas API de Web Audio estão destacadas; se você quiser encontrar mais informações sobre os diferentes métodos, faça uma busca através das páginas de referência.</p>
+<p>As linhas API de Web Audio estão destacadas; se você quiser encontrar mais informações sobre os diferentes métodos, faça uma busca através das páginas de referência.</p>
 
 <pre class="brush: js; highlight:[1,2,9,10,11,12,36,37,38,39,40,41,62,63,72,114,115,121,123,124,125,147,151]">var audioCtx = new (window.AudioContext || window.webkitAudioContext)(); // define audio context
 // Webkit/blink browsers need prefix, Safari won't work without window.
@@ -348,67 +348,16 @@ function voiceMute() { // toggle to mute and unmute sound
   <tr>
    <td>{{SpecName('Web Audio API')}}</td>
    <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
+{{Compat("api.AudioContext")}}
 
-<div>
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>14 {{property_prefix("webkit")}}</td>
-   <td>23</td>
-   <td>{{CompatNo}}</td>
-   <td>15 {{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>6 {{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div>
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>28 {{property_prefix("webkit")}}</td>
-   <td>25</td>
-   <td>1.2</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>6 {{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="sect1"> </h2>
+<h2 id="sect1"> </h2>
 
 <h2 id="Veja_também">Veja também</h2>
 

@@ -1,18 +1,16 @@
 ---
-title: Groupes et intervalles
+title: Groupes et références arrière
 slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences
-tags:
-  - Groupes
-  - Guide
-  - Intervalles
-  - JavaScript
-  - RegExp
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
+l10n:
+  sourceCommit: df24a4432fc479f58901c9a101330d1100f1172a
 ---
 {{jsSidebar("JavaScript Guide")}}
 
-Les groupes et intervalles permettent de représenter des groupes ou des intervalles de caractères dans des expressions rationnelles.
+Les groupes permettent de regrouper différents motifs ensemble et les groupes de capture permettent d'extraire des informations supplémentaires quant aux correspondances entre une expression rationnelle et une chaîne de caractères. Les références arrière correspondent au groupe précédemment capturé dans la même expression rationnelle.
+
+{{EmbedInteractiveExample("pages/js/regexp-groups-ranges.html")}}
 
 ## Types
 
@@ -25,148 +23,138 @@ Les groupes et intervalles permettent de représenter des groupes ou des interva
   </thead>
   <tbody>
     <tr>
-      <td><code>x|y</code></td>
-      <td>
-        <p>Correspond à 'x' ou 'y'.</p>
-        <p>
-          Ainsi, <code>/vert|rouge/</code> correspond à 'vert' dans "feu vert"
-          et à 'rouge' dans "feu rouge".
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>[xyz]</code> ou <code>[a-c]</code></td>
-      <td>
-        Un ensemble de caractère. Ce type de motif correspond pour n'importe
-        quel caractètre présent entre les crochets, y compris les
-        <a
-          href="/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Les_caractères_d&#x27;échappement"
-          >séquences d'échappement</a
-        >. Les caractères spéciaux comme le point (.) et l'astérisque ne sont
-        pas considérés comme spéciaux au sein d'un ensemble et n'ont donc pas
-        besoin d'être échappés. Il est possible de donner un ensemble sur un
-        intervalle de caractères en utilisant un tiret (-), comme le montre
-        l'exemple qui suit.<br /><br />Le motif <code>[a-d]</code>,  aura les
-        mêmes correspondances que <code>[abcd]</code>, correspondant au 'b' de
-        "bulle" et au 'c' de "ciel". Les motifis <code>/[a-z.]+/ </code>et
-        <code>/[\w.]+/</code> correspondront pour la chaîne entirère :
-        "Adre.ss.e".
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p><code>[^xyz]</code> ou <code>[^a-c]</code></p>
-      </td>
-      <td>
-        <p>
-          Exclusion d'un ensemble de caractères. Cela correspond à tout ce qui
-          n'est pas compris entre crochets. Il est possible de fournir un
-          intervalle de caractères en utilisant un tiret (-). Les autres règles
-          qui s'appliquent pour l'ensemble de caractères (ci-avant) s'appliquent
-          également ici.
-        </p>
-        <p>
-          Par exemple, <code>[^abc]</code> est équivalent à <code>[^a-c]</code>.
-          Ils correspondent à 'u' dans "bulle" et à 'i' dans "ciel".
-        </p>
-        <div class="note">
-          <p>
-            <strong>Note :</strong> Le caractère <code>^</code> peut également
-            être utilisé afin d'indiquer le
-            <a
-              href="/fr/docs/Web/JavaScript/Guide/Expressions_régulières/Limites"
-              >début d'un champ</a
-            >.
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
       <td><code>(x)</code></td>
       <td>
         <p>
-          Correspond à 'x' et garde la correspondance en mémoire. Les
-          parenthèses permettent de <em>capturer </em>l'expression dans un «
-          groupe ».<br /><br />Les '<code>(toto)</code>' et
-          '<code>(truc)</code>', dans le motif
-          <code>/(toto) (truc) \1 \2/</code> correspondent et gardent en mémoire
-          les deux premiers mots de la chaîne de caractère "toto truc toto
-          truc". Les <code>\1</code> et <code>\2</code> du motif correspondent
-          respectivement à la première et à la deuxième correspondances pour les
-          sous-chaînes entre parenthèses. Lorsqu'on souhaite effectuer un
-          remplacement, on utilisera <code>$1</code> et <code>$2</code> pour
-          faire référence au premier et second groupe et <code>$</code
-          ><code>n </code>pour faire référence au n-ième groupe capturé (ex.
-          <code>('toto truc'.replace(/(...) (...)/, '$2 $1').</code>
-          <code>$&#x26;</code> fera référence à la chaîne entière).
+          <strong>Groupe de capture&nbsp;:</strong> correspond à <code>x</code> et mémorise la correspondance. Ainsi, <code>/(toto)/</code> correspond à "toto" dans la chaîne de caractères `"toto truc"` et mémorise cette correspondance.
         </p>
         <p>
-          Capturing groups have a performance penalty. If you don't need the
-          matched substring to be recalled, prefer non-capturing parentheses
-          (see below).
+          Une expression rationnelle peut avoir plusieurs groupes de capture. Dans les résultats, les correspondances des groupes de capture sont dans un tableau dont les éléments sont généralement dans le même ordre que les parenthèses gauches des groupes de capture. Il s'agit la plupart du temps de l'ordre des groupes de capture, mais peut aider lorsqu'il y a une imbrication de ces groupes. On accède aux correspondances en utilisant les indices du résultat (<code>[1], …, [n]</code
+          >) ou avec les propriétés objets prédéfinies de <code>RegExp</code> (<code>$1, …, $9</code>).
         </p>
         <p>
-          <code
-            ><a
-              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match"
-              >String.match()</a
-            ></code
-          >
-          won't return groups if the <code>/.../g</code> flag is set. However,
-          you can still use
-          <code
-            ><a
-              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll"
-              >String.matchAll()</a
-            ></code
-          >
-          to get all matches.
+          Les groupes de capture ont un impact sur les performances. Si vous n'avez pas besoin de mémoriser les correspondances, préférez l'utilisation des parenthèses non-capturantes (voir ci-après).
+        </p>
+        <p>
+          <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/String/match">String.match()</a></code> ne retournera pas de groupes si le marqueur <code>/.../g</code> est actif. Toutefois, il reste possible d'utiliser <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll">String.matchAll()</a></code> pour obtenir toutes les correspondances.
         </p>
       </td>
     </tr>
     <tr>
-      <td><code>\n</code></td>
+      <td><code>(?&lt;Nom&gt;x)</code></td>
       <td>
         <p>
-          Avec <code><em>n</em></code> un entier positif. Cela permet de faire
-          référence à la dernière sous-chaîne qui correspond au n-ième groupe
-          entre parenthèses de l'expression rationnelle (en comptant les
-          parenthèses gauche). Ainsi,
-          <code>/apple(,)\sorange\1/</code> correspondra à "apple, orange," dans
-          "apple, orange, cherry, peach".
+          <strong>Groupe de capture nommé&nbsp;:</strong> correspond à <code>x</code> et enregistre cette correspondance dans la propriété <code>groups</code> des correspondances renvoyées aevc le nom fourni <code>&lt;Nom&gt;</code>. Les chevrons (<code>&lt;</code>
+          and <code>&gt;</code>) sont nécessaire pour indiquer le nom du groupe.
+        </p>
+        <p>
+          Ainsi, pour extraire le code de zone d'un numéro de téléphone américain, on pourra utiliser <code>/\((?&lt;area>\d\d\d)\)/</code>. Le numéro correspondant serait alors accessible via <code>matches.groups.area</code>.
         </p>
       </td>
     </tr>
     <tr>
-      <td><code>(?&#x3C;Nom>x)</code></td>
+      <td><code>(?:x)</code></td>
       <td>
-        <p>
-          Correspond à <code>x</code> et nomme la correspondance. Les
-          correspondances associées pourront être retrouvées via le nom indiqué.
-          Les chevrons (<code>'&#x3C;'</code> et <code>'>'</code>) sont
-          obligatoires pour encadrer le nom.
-        </p>
-        <p>
-          Ainsi, si on veut extraire la composante de zone d'un numéro de
-          téléphone aux États-Unis, on pourra écrire
-          <code>/\((?&#x3C;area>\d\d\d)\)/</code> et récupérer le nombre voulu
-          avec <code>matches.groups.area</code>.
-        </p>
+        <strong>Groupe non-capturant&nbsp;:</strong> correspond à <code>x</code> mais ne mémorise pas cette correspondance. La sous-chaîne de caractères correspondante ne peut pas être récupérée depuis les éléments du tableau résultant (<code>[1], …, [n]</code>) ou depuis les propriétés prédéfinies de l'objet <code>RegExp</code> (<code>$1, …, $9</code>).
       </td>
     </tr>
     <tr>
-      <td><code>(?:<em>x</em>)</code></td>
       <td>
-        Correspond à 'x' mais ne garde pas la correspondance en mémoire. Les
-        parenthèses ne <em>capturent</em> pas l'expression et permettent
-        d'utiliser des sous-expressions d'une expression régulière pour
-        travailler plus finement. L'expression <code>/(?:zoo){1,2}/</code> sans
-        parenthèes non-capturantes <code>les caractères {1,2}</code> ne
-        s'appliqueraient qu'au dernier 'o' de 'zoo'. Avec les parenthèses
-        capturantes, <code>{1,2}</code> s'applique au mot entier 'zoo'.
+        <code>\n</code>
+      </td>
+      <td>
+        Où <code>n</code> est un entier positif. Une référence arrière à la dernière sous-chaîne correspondant au n-ième groupe (selon l'ordre des parenthèses gauches). Ainsi, <code>/pomme(,)\sorange\1/</code> correspond à "pomme, orange," dans la chaîne de caractères "pomme, orange, cerise, pêche".
+      </td>
+    </tr>
+    <tr>
+      <td><code>\k&lt;Nom&gt;</code></td>
+      <td>
+        <p>
+          Une référence arrière à la dernière correspondance du <strong>groupe de capture nommé</strong> désigné par <code>&lt;Nom&gt;</code>.
+        </p>
+        <p>
+          Ainsi, <code>/(?&lt;titre&gt;\w+), oui \k&lt;titre&gt;/</code> correspondra à "Chef, oui Chef" dans "Bien reçu ? Chef, oui Chef !".
+        </p>
+        <div class="note">
+          <p>
+            <strong>Note :</strong> <code>\k</code> est utilisé ici de façon littérale pour indiquer le début d'une référence arrière vers un groupe de capture nommé.
+          </p>
+        </div>
       </td>
     </tr>
   </tbody>
 </table>
 
-> **Note :** Firefox ne prend pas en charge les groupes nommés. Pour plus d'informations, voir [le bug correspondant](https://bugzilla.mozilla.org/show_bug.cgi?id=1362154).
+## Exemples
+
+### Utiliser les groupes
+
+```js
+const listePersonnes = `Prénom : Jean, Nom_famille : Biche
+Prénom : Jeanne, Nom_famille : Ferrant`;
+
+const regexpNames =  /Prénom : (\w+), Nom_famille : (\w+)/mg;
+for (const correspondance of listePersonnes.matchAll(regexpNames)) {
+  console.log(`Bonjour ${correspondance[1]} ${correspondance[2]}`);
+}
+```
+
+### Utiliser les groupes nommés
+
+```js
+const listePersonnes = `Prénom : Jean, Nom_famille : Biche
+Prénom : Jeanne, Nom_famille : Ferrant`;
+
+const regexpNames =  /Prénom : (?<prenom>\w+), Nom_famille : (?<nom>\w+)/mg;
+for (const correspondance of listePersonnes.matchAll(regexpNames)) {
+  console.log(`Bonjour ${correspondance.groups.prenom} ${correspondance.groups.nom}`);
+}
+```
+
+### Utiliser les groupes et les références arrière
+
+```js
+const citation = `Simple quote "'" et double quote '"'`;
+const regexpQuotes = /(['"]).*?\1/g;
+for (const correspondance of citation.matchAll(regexpQuotes)) {
+  console.log(correspondance[0]);
+}
+```
+
+### Utiliser les groupes et les indices de correspondance
+
+En utilisant le marqueur `d`, les indices de chaque groupe capturant sont renvoyés. Cela s'avère notamment utile si on veut établir des liens entre chaque groupe et le texte d'origine, par exemple pour fournir des diagnostics avec un compilateur.
+
+```js
+const code = `function add(x, y) {
+  return x + y;
+}`;
+const functionRegexp =
+  /(function\s+)(?<name>[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*)/du;
+const match = functionRegexp.exec(code);
+const lines = code.split("\n");
+lines.splice(
+  1,
+  0,
+  " ".repeat(match.indices[1][1] - match.indices[1][0]) +
+    "^".repeat(match.indices.groups.name[1] - match.indices.groups.name[0])
+);
+console.log(lines.join("\n"));
+// function add(x, y) {
+//          ^^^
+//   return x + y;
+// }
+```
+
+## Voir aussi
+
+- [Une prothèse d'émulation pour les groupes de capture nommés](https://github.com/zloirock/core-js#ecmascript-string-and-regexp), disponible avec la bibliothèque [`core-js`](https://github.com/zloirock/core-js)
+- [Guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions)
+
+  - [Classes de caractères](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
+  - [Assertions](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
+  - [Quantificateurs](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
+  - [Séquences d'échappement pour les propriétés Unicode](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
+
+- [Le constructeur `RegExp()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- [`ClassRanges` dans la spécification ECMAScript](https://tc39.es/ecma262/multipage/text-processing.html#sec-classranges)

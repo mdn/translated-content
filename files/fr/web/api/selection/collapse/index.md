@@ -40,14 +40,11 @@ window.getSelection().collapse(body,0);
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | Statut                               | Commentaires        |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Selection API', '#widl-Selection-collapse-void-Node-node-unsigned-long-offset', 'Selection.collapse()')}} | {{Spec2('Selection API')}} |                     |
-| {{SpecName('HTML Editing', '#dom-selection-collapse', 'Selection.collapse()')}}                                                     | {{Spec2('HTML Editing')}}     | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Selection.collapse")}}
+{{Compat}}
 
 ## Voir aussi
 

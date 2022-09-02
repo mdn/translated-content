@@ -34,7 +34,7 @@ original_slug: Aprender/JavaScript/Objetos/Object_building_practice
 
 <h2 id="Começando">Começando</h2>
 
-<p>Para começar, faça cópias locais de nossos arquivos  <code><a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html">index.html</a></code>, <code><a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css">style.css</a></code>, e <code><a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js">main.js</a></code>. Estes contêm o seguinte, respectivamente:</p>
+<p>Para começar, faça cópias locais de nossos arquivos  <code><a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html">index.html</a></code>, <code><a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css">style.css</a></code>, e <code><a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js">main.js</a></code>. Estes contêm o seguinte, respectivamente:</p>
 
 <ol>
  <li>Um documento HTML muito simples com um elemento {{HTMLElement("h1")}}, um elemento {{HTMLElement("canvas")}} para desenhar nossas bolas e elementos para aplicar nosso CSS e JavaScript em nosso HTML.</li>
@@ -53,7 +53,7 @@ const height = canvas.height = window.innerHeight;</pre>
 
 <p>Esse script obtém uma referência ao elemento <code>&lt;canvas&gt;</code> e, em seguida, chama o método <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/getContext">getContext()</a></code> para nos fornecer um contexto no qual podemos começar a desenhar. A variável resultante (<code>ctx</code>) é o objeto que representa diretamente a área de desenho da tela e nos permite desenhar formas 2D nela.</p>
 
-<p>Em seguida, definimos variáveis chamadas <code>width</code> e <code>height</code>, e a largura e altura do elemento canvas (representado pelas propriedades <code>canvas.width</code> e <code>canvas.height</code>) para igualar a largura e a altura da viewport do navegador (a área em que a página da Web aparece — isso pode ser obtido das propriedades {{domxref("Window.innerWidth")}} e {{domxref("Window.innerHeight")}} ).</p>
+<p>Em seguida, definimos variáveis chamadas <code>width</code> e <code>height</code>, e a largura e altura do elemento canvas (representado pelas propriedades <code>canvas.width</code> e <code>canvas.height</code>) para igualar a largura e a altura da viewport do navegador (a área em que a página da Web aparece — isso pode ser obtido das propriedades {{domxref("Window.innerWidth")}} e {{domxref("Window.innerHeight")}} ).</p>
 
 <p>Você verá aqui que estamos encadeando várias tarefas juntas, para que as variáveis sejam todas mais rápidas — isso é perfeitamente aceitável.</p>
 
@@ -71,19 +71,19 @@ const height = canvas.height = window.innerHeight;</pre>
 <p>Nosso programa contará com muitas bolas saltando ao redor da tela. Como todas essas bolas se comportarão da mesma maneira, faz sentido representá-las com um objeto. Vamos começar adicionando o construtor a seguir ao final do código.</p>
 
 <pre class="brush: js">function Ball(x, y, velX, velY, color, size) {
-  this.x = x;
-  this.y = y;
-  this.velX = velX;
-  this.velY = velY;
-  this.color = color;
-  this.size = size;
+  this.x = x;
+  this.y = y;
+  this.velX = velX;
+  this.velY = velY;
+  this.color = color;
+  this.size = size;
 }</pre>
 
 <p>Aqui incluímos alguns parâmetros que definem as propriedades que cada bola precisa para funcionar em nosso programa:</p>
 
 <ul>
- <li>coordenadas <code>x</code> e <code>y</code> — coordenadas horizontal e vertical onde a bola vai começar na tela. Isso pode variar entre 0 (canto superior esquerdo) à largura e altura da janela de visualização do navegador (canto inferior direito).</li>
- <li>velocidade horizontal e vertical (<code>velX</code> e <code>velY</code>) — cada bola recebe uma velocidade horizontal e vertical; em termos reais, esses valores serão adicionados regularmente aos valores das coordenadas <code>x</code>/<code>y</code> quando começarmos a animar as bolas, para movê-las tanto em cada quadro.</li>
+ <li>coordenadas <code>x</code> e <code>y</code> — coordenadas horizontal e vertical onde a bola vai começar na tela. Isso pode variar entre 0 (canto superior esquerdo) à largura e altura da janela de visualização do navegador (canto inferior direito).</li>
+ <li>velocidade horizontal e vertical (<code>velX</code> e <code>velY</code>) — cada bola recebe uma velocidade horizontal e vertical; em termos reais, esses valores serão adicionados regularmente aos valores das coordenadas <code>x</code>/<code>y</code> quando começarmos a animar as bolas, para movê-las tanto em cada quadro.</li>
  <li><code>color</code> — cada bola recebe uma cor.</li>
  <li><code>size</code> — cada bola recebe um tamanho — este será o seu raio, em pixels.</li>
 </ul>
@@ -92,7 +92,7 @@ const height = canvas.height = window.innerHeight;</pre>
 
 <h3 id="Desenhando_a_bola">Desenhando a bola</h3>
 
-<p>Primeiro adicione o seguinte método <code>draw()</code> ao <code>prototype</code> do <code>Ball()</code>:</p>
+<p>Primeiro adicione o seguinte método <code>draw()</code> ao <code>prototype</code> do <code>Ball()</code>:</p>
 
 <pre class="brush: js">Ball.prototype.draw = function() {
   ctx.beginPath();
@@ -106,10 +106,10 @@ const height = canvas.height = window.innerHeight;</pre>
 <ul>
  <li>Primeiro, usamos <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath">beginPath()</a></code> para declarar que queremos desenhar uma forma no papel.</li>
  <li>Em seguida, usamos <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle">fillStyle</a></code> para definir a cor que queremos que a forma seja — nós a definimos como a propriedade <code>color</code> da nossa bola.</li>
- <li>Em seguida, usamos o método  <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/arc">arc()</a></code> para traçar uma forma de arco no papel. Seus parâmetros são:
+ <li>Em seguida, usamos o método  <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/arc">arc()</a></code> para traçar uma forma de arco no papel. Seus parâmetros são:
   <ul>
-   <li>A posição <code>x</code> e <code>y</code> do centro do arco — estamos especificando as propriedades <code>x</code> e <code>y</code> da nossa bola.</li>
-   <li>O raio do nosso arco — estamos especificando a propriedade <code>size</code>  da nossa bola.</li>
+   <li>A posição <code>x</code> e <code>y</code> do centro do arco — estamos especificando as propriedades <code>x</code> e <code>y</code> da nossa bola.</li>
+   <li>O raio do nosso arco — estamos especificando a propriedade <code>size</code>  da nossa bola.</li>
    <li>Os dois últimos parâmetros especificam o número inicial e final de graus em volta do círculo em que o arco é desenhado entre eles. Aqui nós especificamos 0 graus e <code>2 * PI</code>, que é o equivalente a 360 graus em radianos (irritantemente, você tem que especificar isso em radianos). Isso nos dá um círculo completo. Se você tivesse especificado apenas <code>1 * PI</code>, você obteria um semicírculo (180 graus).</li>
   </ul>
  </li>
@@ -135,7 +135,7 @@ testBall.draw()</pre>
 
 <h3 id="Atualizando_os_dados_da_bola">Atualizando os dados da bola</h3>
 
-<p>Podemos desenhar a bola na posição, mas para começar a mover a bola, precisamos de uma função de atualização de algum tipo. Adicione o seguinte código na parte inferior do seu arquivo JavaScript, para adicionar um método  <code>update()</code> ao <code>prototype</code> do <code>Ball()</code>:</p>
+<p>Podemos desenhar a bola na posição, mas para começar a mover a bola, precisamos de uma função de atualização de algum tipo. Adicione o seguinte código na parte inferior do seu arquivo JavaScript, para adicionar um método  <code>update()</code> ao <code>prototype</code> do <code>Ball()</code>:</p>
 
 <pre class="brush: js">Ball.prototype.update = function() {
   if ((this.x + this.size) &gt;= width) {
@@ -158,7 +158,7 @@ testBall.draw()</pre>
   this.y += this.velY;
 }</pre>
 
-<p>As primeiras quatro partes da função verificam se a bola atingiu a borda da tela. Se tiver, invertemos a polaridade da velocidade relevante para fazer a bola viajar na direção oposta. Assim, por exemplo, se a bola estava viajando para cima (positivo <code>velY</code>), então a velocidade vertical é alterada de forma que ela comece a viajar para baixo (negativo <code>velY</code>).</p>
+<p>As primeiras quatro partes da função verificam se a bola atingiu a borda da tela. Se tiver, invertemos a polaridade da velocidade relevante para fazer a bola viajar na direção oposta. Assim, por exemplo, se a bola estava viajando para cima (positivo <code>velY</code>), então a velocidade vertical é alterada de forma que ela comece a viajar para baixo (negativo <code>velY</code>).</p>
 
 <p>Nos quatro casos, estamos verificando se:</p>
 
@@ -171,7 +171,7 @@ testBall.draw()</pre>
 
 <p>Em cada caso, estamos incluindo o <code>size</code> da bola no cálculo, porque as coordenadas <code>x</code>/<code>y</code> estão no centro da bola, mas queremos que a borda da bola saia do perímetro — não queremos a bola para fique no meio da tela antes de quicar de volta.</p>
 
-<p>As duas últimas linhas adicionam o valor <code>velX</code> à coordenada <code>x</code>, e o valor <code>velY</code> à coordenada <code>y</code> —  a bola é efitivamente movida cada vez que este método é chamado.</p>
+<p>As duas últimas linhas adicionam o valor <code>velX</code> à coordenada <code>x</code>, e o valor <code>velY</code> à coordenada <code>y</code> —  a bola é efitivamente movida cada vez que este método é chamado.</p>
 
 <p>Isso é o que será feito por ora; vamos continuar com alguma animação!</p>
 
@@ -214,12 +214,12 @@ while (balls.length < 25) {
   requestAnimationFrame(loop);
 }</pre>
 
-  <p>Todos os programas que animam as coisas geralmente envolvem um loop de animação, que serve para atualizar as informações no programa e renderizar a visualização resultante em cada quadro da animação; esta é a base para a maioria dos jogos e outros programas. Nossa função <code>loop()</code> faz o seguinte:</p>
+  <p>Todos os programas que animam as coisas geralmente envolvem um loop de animação, que serve para atualizar as informações no programa e renderizar a visualização resultante em cada quadro da animação; esta é a base para a maioria dos jogos e outros programas. Nossa função <code>loop()</code> faz o seguinte:</p>
 
   <ul>
    <li>Define a cor de preenchimento da tela como preto semitransparente e desenha um retângulo com a cor em toda a largura e altura da tela, usando <code>fillRect()</code> (os quatro parâmetros fornecem uma coordenada de início e uma largura e altura para o retângulo desenhado ). Isso serve para encobrir o desenho do quadro anterior antes que o próximo seja desenhado. Se você não fizer isso, você verá apenas longas cobras se movimentando ao redor da tela, em vez de mover as bolas! A cor do preenchimento é definida como semitransparente, <code>rgba(0,0,0,0.25)</code>, para permitir que os poucos quadros anteriores brilhem levemente, produzindo as pequenas trilhas atrás das bolas à medida que elas se movem. Se você mudou 0,25 para 1, você não vai mais vê-los. Tente variar esse número para ver o efeito que ele tem.</li>
-   <li>Percorre todas as bolas no array <code>balls</code> e executa a função <code>draw()</code> e <code>update()</code> de cada bola para desenhar cada uma delas na tela, depois faz as atualizações necessárias para a posição e a velocidade a tempo para o próximo quadro.</li>
-   <li>Executa a função novamente usando o método <code>requestAnimationFrame()</code> — quando esse método é executado constantemente e passa o mesmo nome de função, ele executará essa função um número definido de vezes por segundo para criar uma animação suave. Isso geralmente é feito de forma recursiva — o que significa que a função está chamando a si mesma toda vez que é executada, portanto, ela será executada repetidas vezes.</li>
+   <li>Percorre todas as bolas no array <code>balls</code> e executa a função <code>draw()</code> e <code>update()</code> de cada bola para desenhar cada uma delas na tela, depois faz as atualizações necessárias para a posição e a velocidade a tempo para o próximo quadro.</li>
+   <li>Executa a função novamente usando o método <code>requestAnimationFrame()</code> — quando esse método é executado constantemente e passa o mesmo nome de função, ele executará essa função um número definido de vezes por segundo para criar uma animação suave. Isso geralmente é feito de forma recursiva — o que significa que a função está chamando a si mesma toda vez que é executada, portanto, ela será executada repetidas vezes.</li>
   </ul>
  </li>
  <li>Por último mas não menos importante, adicione a seguinte linha à parte inferior do seu código — precisamos chamar a função uma vez para iniciar a animação.
@@ -234,7 +234,7 @@ while (balls.length < 25) {
 <p>Agora, para um pouco de diversão, vamos adicionar alguma detecção de colisão ao nosso programa, para que nossas bolas saibam quando bateram em outra bola.</p>
 
 <ol>
- <li>Primeiro de tudo, adicione a seguinte definição de método abaixo onde você definiu o método  <code>update()</code> (ou seja, o bloco <code>Ball.prototype.update</code>).
+ <li>Primeiro de tudo, adicione a seguinte definição de método abaixo onde você definiu o método  <code>update()</code> (ou seja, o bloco <code>Ball.prototype.update</code>).
 
   <pre class="brush: js">Ball.prototype.collisionDetect = function() {
   for (let j = 0; j &lt; balls.length; j++) {
@@ -253,8 +253,8 @@ while (balls.length < 25) {
   <p>Esse método é um pouco complexo, então não se preocupe se você não entender exatamente como isso funciona agora. Uma explicação a seguir:</p>
 
   <ul>
-   <li>Para cada bola, precisamos checar todas as outras bolas para ver se ela colidiu com a bola atual. Para fazer isso, abrimos outro loop <code>for</code> para percorrer todas as bolas no array <code>balls[]</code>.</li>
-   <li>Imediatamente dentro de nosso loop for, usamos uma instrução  <code>if</code> para verificar se a bola atual em loop é a mesma bola que estamos verificando no momento. Não queremos verificar se uma bola colidiu consigo mesma! Para fazer isso, verificamos se a bola atual (ou seja, a bola cujo método collisionDetect está sendo invocado) é a mesma que a bola de loop (ou seja, a bola que está sendo referenciada pela iteração atual do loop for no collisionDetect método). Nós então usamos <code>!</code> para negar a verificação, para que o código dentro da instrução if seja executado apenas se eles não forem iguais.</li>
+   <li>Para cada bola, precisamos checar todas as outras bolas para ver se ela colidiu com a bola atual. Para fazer isso, abrimos outro loop <code>for</code> para percorrer todas as bolas no array <code>balls[]</code>.</li>
+   <li>Imediatamente dentro de nosso loop for, usamos uma instrução  <code>if</code> para verificar se a bola atual em loop é a mesma bola que estamos verificando no momento. Não queremos verificar se uma bola colidiu consigo mesma! Para fazer isso, verificamos se a bola atual (ou seja, a bola cujo método collisionDetect está sendo invocado) é a mesma que a bola de loop (ou seja, a bola que está sendo referenciada pela iteração atual do loop for no collisionDetect método). Nós então usamos <code>!</code> para negar a verificação, para que o código dentro da instrução if seja executado apenas se eles não forem iguais.</li>
    <li>Em seguida, usamos um algoritmo comum para verificar a colisão de dois círculos. Estamos basicamente verificando se alguma das áreas dos dois círculos se sobrepõe. Isso é explicado ainda mais na <a href="/en-US/docs/Games/Techniques/2D_collision_detection">2D collision detection</a>.</li>
    <li>Se uma colisão for detectada, o código dentro da instrução <code>if</code> interna será executado. Neste caso, estamos apenas definindo a propriedade <code>color</code> de ambos os círculos para uma nova cor aleatória. Poderíamos ter feito algo muito mais complexo, como fazer com que as bolas saltassem umas das outras de forma realista, mas isso teria sido muito mais complexo de implementar. Para essas simulações físicas, os desenvolvedores tendem a usar jogos ou bibliotecas físicas, como <a href="http://wellcaffeinated.net/PhysicsJS/">PhysicsJS</a>, <a href="http://brm.io/matter-js/">matter.js</a>, <a href="http://phaser.io/">Phaser</a>, etc.</li>
   </ul>

@@ -1,7 +1,6 @@
 ---
 title: Constructor
 slug: Glossary/Constructor
-translation_of: Glossary/Constructor
 ---
 **构造函数**属于被实例化的特定类{{glossary("Object","对象")}} 。构造函数初始化这个对象，并提供可以访问其私有信息的方法。构造函数的概念可以应用于大多数{{glossary("OOP","面向对象")}}的编程语言。本质上，{{glossary("JavaScript")}} 中的构造函数通常在{{glossary("class","类")}}的实例中声明。
 
@@ -31,7 +30,7 @@ var defaultReference = new Default();
 
 ### 基本常识
 
-- 维基百科上的 {{Interwiki("wikipedia", "Constructor_%28object-oriented_programming%29", "构造函数")}}
+- 维基百科上的 [构造函数](https://zh.wikipedia.org/wiki/Constructor_%28object-oriented_programming%29)
 
 ### 技术参考
 

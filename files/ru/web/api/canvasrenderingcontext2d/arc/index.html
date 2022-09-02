@@ -12,7 +12,7 @@ translation_of: Web/API/CanvasRenderingContext2D/arc
 ---
 <div>{{APIRef}}</div>
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.arc()</code></strong> метод Canvas 2D API добавляет дугу к пути с центром <em>(x, y)</em> и с радиусом <em>r</em>  с началом в <em>startAngle</em> и с концом <em>endAngle</em> и с направлением против часовой стрелки (по умолчанию по часовой стрелке).</p>
+<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.arc()</code></strong> метод Canvas 2D API добавляет дугу к пути с центром <em>(x, y)</em> и с радиусом <em>r</em>  с началом в <em>startAngle</em> и с концом <em>endAngle</em> и с направлением против часовой стрелки (по умолчанию по часовой стрелке).</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -29,19 +29,19 @@ translation_of: Web/API/CanvasRenderingContext2D/arc
  <dt><code>radius</code></dt>
  <dd>Радиус.</dd>
  <dt><code>startAngle</code></dt>
- <dd>Угол начала дуги. Измеряется по часовой стрелке от положительной оси Х, выражается в радианах.</dd>
+ <dd>Угол начала дуги. Измеряется по часовой стрелке от положительной оси Х, выражается в радианах.</dd>
  <dt><code>endAngle</code></dt>
- <dd>Угол завершения дуги. Измеряется по часовой стрелке от положительной оси Х, выражается в радианах.</dd>
+ <dd>Угол завершения дуги. Измеряется по часовой стрелке от положительной оси Х, выражается в радианах.</dd>
  <dt><code>anticlockwise</code> {{optional_inline}}</dt>
- <dd>Необязательный {{jsxref("Boolean")}}. Задаёт направление рисования дуги.<br>
- Если <code>true</code> - против часовой, <code>false</code> - по часовой.</dd>
+ <dd>Необязательный {{jsxref("Boolean")}}. Задаёт направление рисования дуги.<br>
+ Если <code>true</code> - против часовой, <code>false</code> - по часовой.</dd>
 </dl>
 
 <h2 id="Примеры">Примеры</h2>
 
 <h3 id="Using_the_arc_method">Использование метода <code>arc</code></h3>
 
-<p>Ниже приведён пример простого кода который рисует круг.</p>
+<p>Ниже приведён пример простого кода который рисует круг.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -65,8 +65,8 @@ ctx.stroke();
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.beginPath();
@@ -104,7 +104,7 @@ window.addEventListener("load", drawCanvas);
 
 <h3 id="Different_shapes_demonstrated">Демонстрация разных форм дуг</h3>
 
-<p>В этом примере нарисованные разные формы чтобы показать возможности метода <code>arc()</code>.</p>
+<p>В этом примере нарисованные разные формы чтобы показать возможности метода <code>arc()</code>.</p>
 
 <div class="hidden">
 <h6 id="HTML_2">HTML</h6>
@@ -151,10 +151,10 @@ for (i=0;i&lt;4;i++){
 
 <h2 id="Примечания_относительно_Gecko">Примечания относительно Gecko</h2>
 
-<p>Начиная с Gecko 2.0 {{geckoRelease("2.0")}}:</p>
+<p>Начиная с Gecko 2.0 {{geckoRelease("2.0")}}:</p>
 
 <ul>
- <li><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Параметр </span></font><code>anticlockwise</code> опциональный,</li>
+ <li><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Параметр </span></font><code>anticlockwise</code> опциональный,</li>
  <li>Указывание отрицательного радиуса теперь приводит к ошибке {{domxref("DOMError", "IndexSizeError")}} error ("Index or size is negative or greater than the allowed amount").</li>
 </ul>
 

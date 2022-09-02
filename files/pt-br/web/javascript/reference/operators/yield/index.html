@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Operators/yield
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>A palavra-chave <code>yield</code> é usada para pausar e resumir uma generator function ({{jsxref("Statements/function*", "function*")}} or <a href="/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function">generator function legada</a>).</p>
+<p>A palavra-chave <code>yield</code> é usada para pausar e resumir uma generator function ({{jsxref("Statements/function*", "function*")}} or <a href="/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function">generator function legada</a>).</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -20,31 +20,31 @@ translation_of: Web/JavaScript/Reference/Operators/yield
 
 <dl>
  <dt><code>expressão</code></dt>
- <dd>Define o valor que retorna de uma generator function via <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol">o protocolo iterator</a>. Se omitido, será retornado <code>undefined</code>.</dd>
+ <dd>Define o valor que retorna de uma generator function via <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol">o protocolo iterator</a>. Se omitido, será retornado <code>undefined</code>.</dd>
  <dt><code>rv</code></dt>
  <dd>
- <p>Retorna o valor opcional passado para o metódo <code>next()</code> do generator e resume sua execução.</p>
+ <p>Retorna o valor opcional passado para o metódo <code>next()</code> do generator e resume sua execução.</p>
  </dd>
 </dl>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>A palavra-chave <code>yield</code> pausa a execução de uma generator function e o valor da expressão em frente a palavra-chave <code>yield</code> é retornado para a chamada do generator. Ele pode ser considerado uma versão da palavra-chave <code>return</code> para o generator.</p>
+<p>A palavra-chave <code>yield</code> pausa a execução de uma generator function e o valor da expressão em frente a palavra-chave <code>yield</code> é retornado para a chamada do generator. Ele pode ser considerado uma versão da palavra-chave <code>return</code> para o generator.</p>
 
-<p>A palavra-chave <code>yield</code> atualmente retorna um objeto do tipo <code>IteratorResult</code> com duas propriedades, <code>value</code> e <code>done</code>. A propriedade <code>value</code> é o resultado da avaliação da expressão <code>yield</code>, e <code>done</code> é <code>false</code>, indicando que a generator function não foi totalmente completada.</p>
+<p>A palavra-chave <code>yield</code> atualmente retorna um objeto do tipo <code>IteratorResult</code> com duas propriedades, <code>value</code> e <code>done</code>. A propriedade <code>value</code> é o resultado da avaliação da expressão <code>yield</code>, e <code>done</code> é <code>false</code>, indicando que a generator function não foi totalmente completada.</p>
 
-<p>Uma vez pausado em uma expressão <code>yield</code>, a execução do código do generator permanece pausado até a próxima chamada do métod <code>next()</code>. Cada vez que o método <code>next()</code> do generator é chamado, o generator resume a execução e roda até atingir um dos seguintes estados:</p>
+<p>Uma vez pausado em uma expressão <code>yield</code>, a execução do código do generator permanece pausado até a próxima chamada do métod <code>next()</code>. Cada vez que o método <code>next()</code> do generator é chamado, o generator resume a execução e roda até atingir um dos seguintes estados:</p>
 
 <ul>
- <li> Um <code>yield</code>, que causa a pausa do generator novamente e retorna seu novo valor. Na próxima vez que <code>next()</code> for chamado, a execução resumirá com a declaração imediamente após <code>yield</code>.</li>
- <li>{{jsxref("Statements/throw", "throw")}} é usado para invocar uma exception à partir do generator. Isso irá parar completamente a execução do generator, e a execução resume para onde foi chamado o generator normalmente no caso que uma exception é invocada.</li>
- <li>O final de uma generator function é atingido; nesse caso, a execução do generator termina e um <code>IteratorResult</code> é retornado para onde o generator foi chamado no qual o <code>value</code> é {{jsxref("undefined")}} e <code>done</code> é <code>true</code>.</li>
- <li>Uma declaração {{jsxref("Statements/return", "return")}} é atingida. Nesse caso, a execução do generator termina e um <code>IteratorResult</code> é retornado para onde o generator foi chamado no qual o <code>value</code> é o valor especificado pela declaração <code>return</code> statement e <code>done</code> é <code>true</code>.</li>
+ <li> Um <code>yield</code>, que causa a pausa do generator novamente e retorna seu novo valor. Na próxima vez que <code>next()</code> for chamado, a execução resumirá com a declaração imediamente após <code>yield</code>.</li>
+ <li>{{jsxref("Statements/throw", "throw")}} é usado para invocar uma exception à partir do generator. Isso irá parar completamente a execução do generator, e a execução resume para onde foi chamado o generator normalmente no caso que uma exception é invocada.</li>
+ <li>O final de uma generator function é atingido; nesse caso, a execução do generator termina e um <code>IteratorResult</code> é retornado para onde o generator foi chamado no qual o <code>value</code> é {{jsxref("undefined")}} e <code>done</code> é <code>true</code>.</li>
+ <li>Uma declaração {{jsxref("Statements/return", "return")}} é atingida. Nesse caso, a execução do generator termina e um <code>IteratorResult</code> é retornado para onde o generator foi chamado no qual o <code>value</code> é o valor especificado pela declaração <code>return</code> statement e <code>done</code> é <code>true</code>.</li>
 </ul>
 
-<p>Se um valor opcional é passado para o método <code>next()</code> do generator, esse valor se torna o valor retornado pela operação <code>yield</code> atual do generator.</p>
+<p>Se um valor opcional é passado para o método <code>next()</code> do generator, esse valor se torna o valor retornado pela operação <code>yield</code> atual do generator.</p>
 
-<p>Entre o caminho de código do generator, os seus operadores <code>yield</code>, e a habilidade de especificar um novo valor inicial passando isso para o {{jsxref("Generator.prototype.next()")}}, generators oferecem um poder e controle enormes</p>
+<p>Entre o caminho de código do generator, os seus operadores <code>yield</code>, e a habilidade de especificar um novo valor inicial passando isso para o {{jsxref("Generator.prototype.next()")}}, generators oferecem um poder e controle enormes</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
@@ -56,7 +56,7 @@ translation_of: Web/JavaScript/Reference/Operators/yield
     yield index++;
 }</pre>
 
-<p>Uma vez que a generator function é definida, isso pode ser usada para construir um iterator como mostrado a seguir: </p>
+<p>Uma vez que a generator function é definida, isso pode ser usada para construir um iterator como mostrado a seguir: </p>
 
 <pre class="brush: js">var iterator = foo();
 console.log(iterator.next()); // { value: 0, done: false }
@@ -83,90 +83,22 @@ console.log(iterator.next()); // { value: undefined, done: true }</pre>
   <tr>
    <td>{{SpecName('ESDraft', '#', 'Yield')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>39</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("26.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatSafari("10")}}</td>
-  </tr>
-  <tr>
-   <td><code>IteratorResult</code> object instead of throwing</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("29.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatSafari("10")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("26.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatUnknown}}</td>
-   <td>{{CompatSafari("10")}}</td>
-  </tr>
-  <tr>
-   <td><code>IteratorResult</code> object instead of throwing</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("29.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatSafari("10")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.operators.yield")}}
 
 <h2 id="Notas_específicas_do_Firefox">Notas específicas do Firefox</h2>
 
 <ul>
- <li>A partir do Gecko 29 {{geckoRelease(29)}}, uma generator function completada não invoca mais um {{jsxref("TypeError")}} "generator has already finished". Ao invés, isso retorna um objeto <code>IteratorResult</code> como <code>{ value: undefined, done: true }</code> ({{bug(958951)}}).</li>
- <li>A partir do Gecko 33 {{geckoRelease(33)}}, a análise (parsing) de uma expressão <code>yield</code> foi atualizada para se conformar com a especificação do ES2015 ({{bug(981599)}}):
+ <li>A partir do Gecko 29 {{geckoRelease(29)}}, uma generator function completada não invoca mais um {{jsxref("TypeError")}} "generator has already finished". Ao invés, isso retorna um objeto <code>IteratorResult</code> como <code>{ value: undefined, done: true }</code> ({{bug(958951)}}).</li>
+ <li>A partir do Gecko 33 {{geckoRelease(33)}}, a análise (parsing) de uma expressão <code>yield</code> foi atualizada para se conformar com a especificação do ES2015 ({{bug(981599)}}):
   <ul>
-   <li>A expressão após a palavra-chave <code>yield</code> é opcional e omitir isso não invoca mais um {{jsxref("SyntaxError")}}: <code>function* foo() { yield; }</code></li>
+   <li>A expressão após a palavra-chave <code>yield</code> é opcional e omitir isso não invoca mais um {{jsxref("SyntaxError")}}: <code>function* foo() { yield; }</code></li>
   </ul>
  </li>
 </ul>

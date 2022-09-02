@@ -5,9 +5,9 @@ translation_of: Web/API/Document/location
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>A propriedade, de apenas leitura, <strong><code>Document.location</code></strong> retorna um objeto {{domxref("Location")}}, que contém informações sobre a URL do documento e provém métodos para mudar a URL e carregar outra URL.</p>
+<p>A propriedade, de apenas leitura, <strong><code>Document.location</code></strong> retorna um objeto {{domxref("Location")}}, que contém informações sobre a URL do documento e provém métodos para mudar a URL e carregar outra URL.</p>
 
-<p>Embora <code>Document.location</code> seja um objeto <code>Location de apenas leitura</code>,  você pode atribuir um {{domxref("DOMString")}} para ele. Isso significa que você pode trabalhar com document.location, na maioria dos casos, como se fosse uma string: <code>document.location = 'http://www.example.com'</code> é um sinônimo de <code>document.location.href = 'http://www.example.com'</code>.</p>
+<p>Embora <code>Document.location</code> seja um objeto <code>Location de apenas leitura</code>,  você pode atribuir um {{domxref("DOMString")}} para ele. Isso significa que você pode trabalhar com document.location, na maioria dos casos, como se fosse uma string: <code>document.location = 'http://www.example.com'</code> é um sinônimo de <code>document.location.href = 'http://www.example.com'</code>.</p>
 
 <p>Para recuperar somente a URL como uma string, a propriedade de apenas leitura {{domxref("document.URL")}} pode ser utilizada.</p>
 
@@ -50,53 +50,7 @@ document.location = 'http://www.mozilla.org' // Equivalente a document.location.
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Características</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Características</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Document.location")}}
 
 <h2 id="Veja_também">Veja também</h2>
 
@@ -105,4 +59,4 @@ document.location = 'http://www.mozilla.org' // Equivalente a document.location.
  <li>Uma informação similar, mas anexada ao {{Glossary("browsing context")}}, {{domxref("Window.location")}}.</li>
 </ul>
 
-<p> </p>
+<p> </p>

@@ -1,15 +1,6 @@
 ---
 title: Geolocation.watchPosition()
 slug: Web/API/Geolocation/watchPosition
-tags:
-  - API
-  - Geolocation
-  - 位置情報 API
-  - メソッド
-  - リファレンス
-  - 安全なコンテキスト
-browser-compat: api.Geolocation.watchPosition
-translation_of: Web/API/Geolocation/watchPosition
 ---
 {{securecontext_header}}{{ APIref("Geolocation API") }}
 

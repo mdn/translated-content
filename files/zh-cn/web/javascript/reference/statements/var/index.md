@@ -1,12 +1,6 @@
 ---
 title: var
 slug: Web/JavaScript/Reference/Statements/var
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/var
 ---
 {{jsSidebar("Statements")}}
 
@@ -185,7 +179,7 @@ console.log(x, y); // 0 1
 
 // 在非严格模式下：
 // x 是全局变量。
-// y 是隐式声明的全局变量。 
+// y 是隐式声明的全局变量。 
 ```
 
 在严格模式下运行相同的示例：

@@ -4,11 +4,11 @@ slug: Web/API/Window/beforeunload_event
 translation_of: Web/API/Window/beforeunload_event
 original_slug: Web/Events/beforeunload
 ---
-<div>El evento <strong>beforeunload</strong> es disparado cuando la ventana, el documento y sus recursos estan a punto de ser descargados. El documento todavia es visible y el evento todavia es cancelable en este punto.</div>
+<div>El evento <strong>beforeunload</strong> es disparado cuando la ventana, el documento y sus recursos estan a punto de ser descargados. El documento todavia es visible y el evento todavia es cancelable en este punto.</div>
 
-<div> </div>
+<div> </div>
 
-<p>Si es asignado un string a la propiedad del objeto Evento returnValue, una caja de dialogo aparece, preguntando al usuario que confirme que dejara la pagina(mirar el ejemplo de abajo).  Algunos navegadores muestran el string devuelto en una caja de dialogos, otros muestran un mensaje fijo. Si no se provee ningun valor, el evento procede silenciosamente.</p>
+<p>Si es asignado un string a la propiedad del objeto Evento returnValue, una caja de dialogo aparece, preguntando al usuario que confirme que dejara la pagina(mirar el ejemplo de abajo).  Algunos navegadores muestran el string devuelto en una caja de dialogos, otros muestran un mensaje fijo. Si no se provee ningun valor, el evento procede silenciosamente.</p>
 
 <div class="note">
 <p><strong>Nota:</strong>Para combatir pop-ups indeseados, los navegadores pueden no mostrar mensajes creados en manejadores del evento beforeunload a menos que se haya interactuado con la pagina, o incluso sin que se haya interactuado en nada con esta.</p>
@@ -96,11 +96,11 @@ window.addEventListener("beforeunload", function (event) {
 
 <h2 id="Notas">Notas</h2>
 
-<p>A partir del 25 de Mayo del 2011, la especificion HTML5 establece que llamadas a los metodos {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, y {{domxref("window.prompt()")}}pueden ser ignoradas durante este evento.Mire las <a href="http://www.w3.org/TR/html5/webappapis.html#user-prompts">especificaciones de HTML5</a> para mas detalles.</p>
+<p>A partir del 25 de Mayo del 2011, la especificion HTML5 establece que llamadas a los metodos {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, y {{domxref("window.prompt()")}}pueden ser ignoradas durante este evento.Mire las <a href="http://www.w3.org/TR/html5/webappapis.html#user-prompts">especificaciones de HTML5</a> para mas detalles.</p>
 
-<p>Varios navegadores ignoran el resultado del evento y no le preguntan al usuario por confirmacion en absoluto. El documento siempre se descargara automaticamente. Firefox tiene un switch llamado dom.disable_beforeunload en <a>about:config</a>  para habilitar este comportamiento.</p>
+<p>Varios navegadores ignoran el resultado del evento y no le preguntan al usuario por confirmacion en absoluto. El documento siempre se descargara automaticamente. Firefox tiene un switch llamado dom.disable_beforeunload en <a>about:config</a>  para habilitar este comportamiento.</p>
 
-<p>Usando este manejador de evento tu pagina previene que Firefox cambie el cache de la pagina a uno en memoria bfcache. Mire <a href="en/Using_Firefox_1.5_caching">Usando el almacenamiento en cache Firefox 1.5</a> para detalles.</p>
+<p>Usando este manejador de evento tu pagina previene que Firefox cambie el cache de la pagina a uno en memoria bfcache. Mire <a href="en/Using_Firefox_1.5_caching">Usando el almacenamiento en cache Firefox 1.5</a> para detalles.</p>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 
@@ -116,7 +116,7 @@ window.addEventListener("beforeunload", function (event) {
   <tr>
    <td>{{SpecName("HTML WHATWG", "indices.html#event-beforeunload", "beforeunload")}}</td>
    <td>{{Spec2("HTML WHATWG")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName("HTML5 W3C", "browsers.html#unloading-documents", "beforeunload")}}</td>
@@ -138,5 +138,5 @@ window.addEventListener("beforeunload", function (event) {
  <li>{{Event("load")}}</li>
  <li>{{Event("unload")}}</li>
  <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document">Unloading Documents — Confirmacion para descargar un documento</a></li>
- <li><a href="https://developers.google.com/web/updates/2016/04/chrome-51-deprecations?hl=en#remove_custom_messages_in_onbeforeload_dialogs">Remover mensajes personalizados en dialogos onbeforeload despues de Chrome 51</a> </li>
+ <li><a href="https://developers.google.com/web/updates/2016/04/chrome-51-deprecations?hl=en#remove_custom_messages_in_onbeforeload_dialogs">Remover mensajes personalizados en dialogos onbeforeload despues de Chrome 51</a> </li>
 </ul>

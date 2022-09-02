@@ -12,7 +12,7 @@ translation_of: Web/API/Element/getElementsByClassName
 
 <p><strong><code>Element.getElementsByClassName()</code></strong> метод возвращает объект {{domxref("HTMLCollection")}}, содержащий в себе все дочерние элементы, которые имеют заданные имена классов. Если вызван на объекте document, будут возвращены все элементы, содержащиеся в документе.</p>
 
-<p>Так же, как метод {{domxref("Document.getElementsByClassName", "Document.getElementsByClassName()")}} действует на весь документ; это вернёт элементы, которые являются потомками корневого элемента, содержащие в себе указанные классы.</p>
+<p>Так же, как метод {{domxref("Document.getElementsByClassName", "Document.getElementsByClassName()")}} действует на весь документ; это вернёт элементы, которые являются потомками корневого элемента, содержащие в себе указанные классы.</p>
 
 <p>Syntax</p>
 
@@ -38,7 +38,7 @@ translation_of: Web/API/Element/getElementsByClassName
 
 <pre class="brush: js">document.getElementById('main').getElementsByClassName('test');</pre>
 
-<p>Мы так же можем использовать все методы из {{jsxref("Array.prototype")}} на любом  {{ domxref("HTMLCollection") }} путём передачи <code><var>HTMLCollection</var></code> в метод как значение <var>this</var>. Так мы найдём все {{HTMLElement("div")}} элементы, которые имеют класс test:</p>
+<p>Мы так же можем использовать все методы из {{jsxref("Array.prototype")}} на любом  {{ domxref("HTMLCollection") }} путём передачи <code><var>HTMLCollection</var></code> в метод как значение <var>this</var>. Так мы найдём все {{HTMLElement("div")}} элементы, которые имеют класс test:</p>
 
 <pre class="brush: js">var testElements = document.getElementsByClassName('test');
 var testDivs = Array.prototype.filter.call(testElements, function(testElement){

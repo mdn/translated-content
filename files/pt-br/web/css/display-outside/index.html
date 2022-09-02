@@ -5,7 +5,7 @@ translation_of: Web/CSS/display-outside
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary">O <code>&lt;display-outside&gt;</code> as palavras-chave especificam a parte externa do elemento {{CSSxRef("display")}} type, que é essencialmente seu papel no layout de fluxo. Essas palavras-chave são usadas como valores do <code>display</code> e pode ser usada para fins legados como uma única palavra-chave ou conforme definido na especificação do Nível 3, juntamente com um valor do {{CSSxRef("&lt;display-inside&gt;")}} palavras-chave.</p>
+<p class="summary">O <code>&lt;display-outside&gt;</code> as palavras-chave especificam a parte externa do elemento {{CSSxRef("display")}} type, que é essencialmente seu papel no layout de fluxo. Essas palavras-chave são usadas como valores do <code>display</code> e pode ser usada para fins legados como uma única palavra-chave ou conforme definido na especificação do Nível 3, juntamente com um valor do {{CSSxRef("&lt;display-inside&gt;")}} palavras-chave.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -18,15 +18,15 @@ translation_of: Web/CSS/display-outside
  <dd>O elemento gera uma caixa de elemento de bloco, gerando quebras de linha antes e depois do elemento, quando no fluxo normal.</dd>
  <dt><code>inline</code></dt>
  <dd>O elemento gera uma ou mais caixas de elementos embutidos que não geram quebras de linha antes ou depois de si mesmas. No fluxo normal, o próximo elemento estará na mesma linha se houver espaço</dd>
- <dt><code>run-in</code> {{Experimental_Inline}}</dt>
- <dd>O elemento gera uma caixa de introdução. Se o irmão adjacente do elemento definido como<code>display: run-in</code> box é uma caixa de bloco, o <code>run-in</code> box se torna a primeira caixa embutida da caixa de bloco a seguir.</dd>
+ <dt><code>run-in</code> {{Experimental_Inline}}</dt>
+ <dd>O elemento gera uma caixa de introdução. Se o irmão adjacente do elemento definido como<code>display: run-in</code> box é uma caixa de bloco, o <code>run-in</code> box se torna a primeira caixa embutida da caixa de bloco a seguir.</dd>
  <dd>Os elementos de entrada funcionam como linhas ou blocos, dependendo dos elementos circundantes. Ou seja: Se a caixa de introdução contém uma caixa de bloco, o mesmo que bloco. Se uma caixa de bloco segue a caixa de introdução, a caixa de introdução torna-se a primeira caixa embutida da caixa de bloco. Se uma caixa embutida se seguir, a caixa de introdução se tornará uma caixa de bloco.<br>
-  <br>
-  </dd>
+  <br>
+  </dd>
 </dl>
 
 <div class="note">
-<p><strong>Nota: Navegadores que suportam a sintaxe de dois valores, encontrando apenas o valor externo, como quando</strong><code>display: block</code> ou <code>display: inline</code> especificado, definirá o valor interno como<code>flow</code>. Isso resultará no comportamento esperado; por exemplo, se você especificar um elemento a ser bloco, seria de esperar que os filhos desse elemento participassem do layout de fluxo normal em bloco e em linha.</p>
+<p><strong>Nota: Navegadores que suportam a sintaxe de dois valores, encontrando apenas o valor externo, como quando</strong><code>display: block</code> ou <code>display: inline</code> especificado, definirá o valor interno como<code>flow</code>. Isso resultará no comportamento esperado; por exemplo, se você especificar um elemento a ser bloco, seria de esperar que os filhos desse elemento participassem do layout de fluxo normal em bloco e em linha.</p>
 </div>
 
 <h3 id="Sintaxe_formal">Sintaxe formal</h3>

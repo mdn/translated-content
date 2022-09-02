@@ -1,7 +1,6 @@
 ---
 title: jQuery
 slug: Glossary/jQuery
-translation_of: Glossary/jQuery
 ---
 jQuery 是專精於簡化 {{Glossary("DOM")}}、{{Glossary("AJAX")}}、與 {{Glossary("Event")}} 操作的 {{Glossary("JavaScript")}} {{Glossary("函式庫")}}。
 
@@ -36,7 +35,7 @@ window.addEventListener("load", () => {
 
 ### 基本知識
 
-- 維基百科的 {{Interwiki("wikipedia", "jQuery")}}
+- 維基百科的 [jQuery](https://zh.wikipedia.org/wiki/jQuery)
 - [jQuery 官方網站](https://jquery.com/)
 
 ### 技術資訊

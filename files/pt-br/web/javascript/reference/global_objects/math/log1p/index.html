@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/log1p
 ---
 <div>{{JSRef}}</div>
 
-<p>A função <strong><code>Math.log1p()</code></strong>  retorna o logaritmo natural (base {{jsxref("Math.E", "e")}}) de 1 + um número, isto é</p>
+<p>A função <strong><code>Math.log1p()</code></strong>  retorna o logaritmo natural (base {{jsxref("Math.E", "e")}}) de 1 + um número, isto é</p>
 
 <p><math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mo>-</mo><mn>1</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log1p</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">\forall x &gt; -1, \mathtt{\operatorname{Math.log1p}(x)} = \ln(1 + x)</annotation></semantics></math></p>
 
@@ -34,21 +34,21 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/log1p
 
 <h3 id="Valor_de_retorno">Valor de retorno</h3>
 
-<p>O logaritmo natural (base {{jsxref("Math.E", "e")}}) de <strong>1</strong> mais o número fornecido. Se o número for menor que <strong>-1</strong>, {{jsxref("NaN")}} será retornado.</p>
+<p>O logaritmo natural (base {{jsxref("Math.E", "e")}}) de <strong>1</strong> mais o número fornecido. Se o número for menor que <strong>-1</strong>, {{jsxref("NaN")}} será retornado.</p>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Para valores muito pequenos de <em>x</em>, adicionando 1 pode reduzir ou eliminar precisão. Valores double floats costuman te dar em torno de 15 digitos de precisão no JavaScript. 1 + 1e-15 = 1.000000000000001, porém, 1 + 1e-16 = 1.000000000000000 e portanto, exatamente 1.0 naquele resultado, porque os números que passam de 15 digitos são arredondados.</p>
+<p>Para valores muito pequenos de <em>x</em>, adicionando 1 pode reduzir ou eliminar precisão. Valores double floats costuman te dar em torno de 15 digitos de precisão no JavaScript. 1 + 1e-15 = 1.000000000000001, porém, 1 + 1e-16 = 1.000000000000000 e portanto, exatamente 1.0 naquele resultado, porque os números que passam de 15 digitos são arredondados.</p>
 
-<p>Quando você calcula log(1 + x), você obterá um resultado muito perto de x, se x for um valor pequeno (isto é, porque eles são chamados logaritmos 'naturais'). Se você calcular Math.log(1 + 1.1111111111e-15) você obterá uma resposta perto de1.1111111111e-15. Ao invés, você vai acabar obtendo o logaritmo de<span style="line-height: 1.5;"> </span><span style="line-height: 1.5;">1.00000000000000111022 (o arrendondamento é feito em binário, portanto, as vezes isso pode parecer estranho)</span><span style="line-height: 1.5;">, então você obterá o resultado</span><span style="line-height: 1.5;"> 1.11022...e-15, com somente 3 digitos corretos. Se, ao invés, você calcular  Math.log1p(</span>1.1111111111e-15<span style="line-height: 1.5;">) você terá um retorno mais preciso de 1.1111111110999995e-15 com 15 digitos corretos de precisão (na verdade 16 nesse caso).</span></p>
+<p>Quando você calcula log(1 + x), você obterá um resultado muito perto de x, se x for um valor pequeno (isto é, porque eles são chamados logaritmos 'naturais'). Se você calcular Math.log(1 + 1.1111111111e-15) você obterá uma resposta perto de1.1111111111e-15. Ao invés, você vai acabar obtendo o logaritmo de<span style="line-height: 1.5;"> </span><span style="line-height: 1.5;">1.00000000000000111022 (o arrendondamento é feito em binário, portanto, as vezes isso pode parecer estranho)</span><span style="line-height: 1.5;">, então você obterá o resultado</span><span style="line-height: 1.5;"> 1.11022...e-15, com somente 3 digitos corretos. Se, ao invés, você calcular  Math.log1p(</span>1.1111111111e-15<span style="line-height: 1.5;">) você terá um retorno mais preciso de 1.1111111110999995e-15 com 15 digitos corretos de precisão (na verdade 16 nesse caso).</span></p>
 
-<p>Se o valor de <code>x</code> for menor que -1, o valor retornado será sempre {{jsxref("NaN")}}.</p>
+<p>Se o valor de <code>x</code> for menor que -1, o valor retornado será sempre {{jsxref("NaN")}}.</p>
 
-<p>Por conta do <code>log1p()</code> ser um metódo estático de <code>Math</code>, você sempre chamará como <code>Math.log1p()</code>, ao invés de chamar como um método de um objeto <code>Math</code> que você tenha criado (<code>Math</code> não é um construtor).</p>
+<p>Por conta do <code>log1p()</code> ser um metódo estático de <code>Math</code>, você sempre chamará como <code>Math.log1p()</code>, ao invés de chamar como um método de um objeto <code>Math</code> que você tenha criado (<code>Math</code> não é um construtor).</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Usando_Math.log1p()">Usando <code>Math.log1p()</code></h3>
+<h3 id="Usando_Math.log1p()">Usando <code>Math.log1p()</code></h3>
 
 <pre class="brush: js">Math.log1p(1);  // 0.6931471805599453
 Math.log1p(0);  // 0

@@ -1,15 +1,6 @@
 ---
 title: DataTransfer.effectAllowed
 slug: Web/API/DataTransfer/effectAllowed
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - drag and drop
-browser-compat: api.DataTransfer.effectAllowed
-translation_of: Web/API/DataTransfer/effectAllowed
 ---
 {{APIRef("HTML Drag and Drop API")}}
 

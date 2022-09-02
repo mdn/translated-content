@@ -15,4 +15,4 @@ L'architecture de l'information, appliquée à la conception et au développemen
 
 ### **Culture générale**
 
-- {{interwiki("wikipedia","Architecture_de_l'information","Architecture de l'information")}} sur Wikipedia
+- [Architecture de l'information](https://fr.wikipedia.org/wiki/Architecture_de_l'information) sur Wikipédia

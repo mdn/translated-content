@@ -1,11 +1,6 @@
 ---
 title: DNS
 slug: Glossary/DNS
-tags:
-  - DNS
-  - Web
-  - 域名系统
-translation_of: Glossary/DNS
 ---
 DNS (Domain Name System) 域名系统，是一个层次化、分散化的 Internet 连接资源命名系统。DNS 维护着一个包含{{glossary("domain name","域名")}}与对应资源例如{{Glossary("IP address","IP 地址")}}的列表。
 
@@ -16,4 +11,4 @@ DNS 最突出的功能是将易于记忆的域名 (例如 mozilla.org) 翻译成
 ### 常识
 
 - [理解域名](/zh-CN/Learn/Understanding_domain_names)
-- 在维基百科上的 {{interwiki("wikipedia", "Domain_Name_System", "Domain Name System")}} （DNS）
+- 在维基百科上的 [Domain Name System](https://zh.wikipedia.org/wiki/Domain_Name_System) （DNS）

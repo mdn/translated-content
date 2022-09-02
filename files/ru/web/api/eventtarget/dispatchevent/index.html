@@ -9,28 +9,28 @@ translation_of: Web/API/EventTarget/dispatchEvent
 
 <h2 id="Syntax">Синтаксис</h2>
 
-<pre><em>cancelled</em> = !<em>target</em>.dispatchEvent(<em>event</em>)</pre>
+<pre><em>cancelled</em> = !<em>target</em>.dispatchEvent(<em>event</em>)</pre>
 
 <h3 id="Параметры">Параметры</h3>
 
 <ul>
  <li><code>event</code> - объект {{domxref("Event")}}, который инициализируется.</li>
- <li><code>target</code> - используется для инициализации {{domxref("Event", "", "target")}}  и определяет, какие обработчики события вызвать.</li>
+ <li><code>target</code> - используется для инициализации {{domxref("Event", "", "target")}}  и определяет, какие обработчики события вызвать.</li>
 </ul>
 
 <h3 id="Возвращаемое_Значение">Возвращаемое Значение</h3>
 
 <ul>
- <li>Возвращаемое значение — <code>false</code>, если событие отменяемое и хотя бы один из обработчиков этого события вызвал {{domxref("Event.preventDefault()")}}. В ином случае — <code>true</code>.</li>
+ <li>Возвращаемое значение — <code>false</code>, если событие отменяемое и хотя бы один из обработчиков этого события вызвал {{domxref("Event.preventDefault()")}}. В ином случае — <code>true</code>.</li>
 </ul>
 
-<p>Метод <code>dispatchEvent</code> генерирует исключение <code>UNSPECIFIED_EVENT_TYPE_ERR</code>, если тип события не был указан при инициализации до вызова метода, или если тип события равен <code>null</code><strong> </strong>или пустой строке. Исключения возникающие в обработчиках события работают как неперехваченные исключения; обработчики события отрабатывают во вложенном стеке вызовов: они блокируют вызывающий код до окончания своего выполнения, но исключения не распространяются на вызывающего.</p>
+<p>Метод <code>dispatchEvent</code> генерирует исключение <code>UNSPECIFIED_EVENT_TYPE_ERR</code>, если тип события не был указан при инициализации до вызова метода, или если тип события равен <code>null</code><strong> </strong>или пустой строке. Исключения возникающие в обработчиках события работают как неперехваченные исключения; обработчики события отрабатывают во вложенном стеке вызовов: они блокируют вызывающий код до окончания своего выполнения, но исключения не распространяются на вызывающего.</p>
 
 <h2 id="Примечания">Примечания</h2>
 
-<p>dispatchEvent является последним шагом для процесса создание =&gt; инициализация =&gt; диспетчер, который используется для контроля  событий внутри модели выполнения событий.Событие может быть создано используя метод  <a href="https://developer.mozilla.org/en-US/docs/DOM/document.createEvent" title="DOM/document.createEvent">document.createEvent</a> и инициализировано используя <a href="https://developer.mozilla.org/en-US/docs/DOM/event.initEvent" title="DOM/event.initEvent">initEvent</a> или другой, более конкретный, метод инициализации, такой как <a href="https://developer.mozilla.org/en-US/docs/DOM/event.initMouseEvent" title="DOM/event.initMouseEvent">initMouseEvent</a> или <a href="https://developer.mozilla.org/en-US/docs/DOM/event.initUIEvent" title="DOM/event.initUIEvent">initUIEvent</a>.</p>
+<p>dispatchEvent является последним шагом для процесса создание =&gt; инициализация =&gt; диспетчер, который используется для контроля  событий внутри модели выполнения событий.Событие может быть создано используя метод  <a href="https://developer.mozilla.org/en-US/docs/DOM/document.createEvent" title="DOM/document.createEvent">document.createEvent</a> и инициализировано используя <a href="https://developer.mozilla.org/en-US/docs/DOM/event.initEvent" title="DOM/event.initEvent">initEvent</a> или другой, более конкретный, метод инициализации, такой как <a href="https://developer.mozilla.org/en-US/docs/DOM/event.initMouseEvent" title="DOM/event.initMouseEvent">initMouseEvent</a> или <a href="https://developer.mozilla.org/en-US/docs/DOM/event.initUIEvent" title="DOM/event.initUIEvent">initUIEvent</a>.</p>
 
-<p>Смотрите также  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event">События</a></p>
+<p>Смотрите также  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event">События</a></p>
 
 <h2 id="Example">Пример</h2>
 
@@ -42,9 +42,9 @@ translation_of: Web/API/EventTarget/dispatchEvent
 
 <h2 id="Notes">Примечание</h2>
 
-<p><code>dispatchEvent</code> представляет собой последний шаг в процессе create-init-dispatch, который служит для отправки событий.</p>
+<p><code>dispatchEvent</code> представляет собой последний шаг в процессе create-init-dispatch, который служит для отправки событий.</p>
 
-<p>Событие может быть создано методом <a href="/en/DOM/document.createEvent" title="en/DOM/document.createEvent">document.createEvent</a> и инициализировано <a href="/en/DOM/event.initEvent" title="en/DOM/event.initEvent">initEvent</a> или, более конкретными инициализирующими методами, такими как <a href="/en/DOM/event.initMouseEvent" title="en/DOM/event.initMouseEvent">initMouseEvent</a> или <a href="/en/DOM/event.initUIEvent" title="en/DOM/event.initUIEvent">initUIEvent</a>.</p>
+<p>Событие может быть создано методом <a href="/en/DOM/document.createEvent" title="en/DOM/document.createEvent">document.createEvent</a> и инициализировано <a href="/en/DOM/event.initEvent" title="en/DOM/event.initEvent">initEvent</a> или, более конкретными инициализирующими методами, такими как <a href="/en/DOM/event.initMouseEvent" title="en/DOM/event.initMouseEvent">initMouseEvent</a> или <a href="/en/DOM/event.initUIEvent" title="en/DOM/event.initUIEvent">initUIEvent</a>.</p>
 
 <p>Смотрите также <a href="/en/DOM/event" title="en/DOM/event">справку по Event object</a>.</p>
 

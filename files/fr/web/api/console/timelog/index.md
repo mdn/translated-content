@@ -15,7 +15,7 @@ translation_of: Web/API/Console/timeLog
 
 Affiche dans la console la valeur actuelle d'un timer précédemment appelé par {{domxref("console.time()")}}
 
-Voir [Timers](/en-US/docs/Web/API/console#Timers) dans la documentation pour des exemples et plus de détails
+Voir [Timers](/fr/docs/Web/API/console#Timers) dans la documentation pour des exemples et plus de détails
 
 {{AvailableInWorkers}}
 
@@ -76,13 +76,11 @@ Notez que le nom du timer est à la fois affiché lorsque la valeur est affiché
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#timelog", "console.timeLog()")}} | {{Spec2("Console API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.timeLog")}}
+{{Compat}}
 
 ## Voir aussi
 

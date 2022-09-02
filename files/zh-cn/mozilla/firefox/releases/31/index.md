@@ -1,7 +1,6 @@
 ---
 title: Firefox 31 for developers
 slug: Mozilla/Firefox/Releases/31
-translation_of: Mozilla/Firefox/Releases/31
 ---
 {{FirefoxSidebar}}
 

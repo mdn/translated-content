@@ -5,7 +5,7 @@ translation_of: Web/API/Console/error
 ---
 <div>{{APIRef("Console API")}}{{Non-standard_header}}</div>
 
-<p>'<em>Escreve</em>' uma mensagem de erro no  Web Console.</p>
+<p>'<em>Escreve</em>' uma mensagem de erro no  Web Console.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -18,21 +18,21 @@ console.exception(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
 </pre>
 
 <div class="note">
-<p><strong>Nota:</strong> <code>console.exception()</code> é um alias para <code>console.error()</code>; as funcionalidades deles são identicas.</p>
+<p><strong>Nota:</strong> <code>console.exception()</code> é um alias para <code>console.error()</code>; as funcionalidades deles são identicas.</p>
 </div>
 
 <h3 id="Parâmetros">Parâmetros</h3>
 
 <dl>
  <dt><code>obj1</code> ... <code>objN</code></dt>
- <dd>Uma lista de objetos Javascript para serem escritos. As representações String de cada um destes objetos é ligada junto na ordem listada e escrita.</dd>
+ <dd>Uma lista de objetos Javascript para serem escritos. As representações String de cada um destes objetos é ligada junto na ordem listada e escrita.</dd>
  <dt><code>msg</code></dt>
  <dd>Uma String Javascript contendo zero ou mais Strings de substituição.</dd>
  <dt><code>subst1</code> ... <code>substN</code></dt>
- <dd>Objetos JavaScript o qual substituirão as Strings no <code>msg</code>. Este parâmetro fornece controle adicional sobre o formato de output.</dd>
+ <dd>Objetos JavaScript o qual substituirão as Strings no <code>msg</code>. Este parâmetro fornece controle adicional sobre o formato de output.</dd>
 </dl>
 
-<p>Veja <a href="/en-US/docs/Web/API/console#Outputting_text_to_the_console">Outputting text to the console</a> na documentação de {{domxref("console")}} para mais detalhes.</p>
+<p>Veja <a href="/en-US/docs/Web/API/console#Outputting_text_to_the_console">Outputting text to the console</a> na documentação de {{domxref("console")}} para mais detalhes.</p>
 
 <h2 id="Especificações">Especificações</h2>
 
@@ -55,101 +55,7 @@ console.exception(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>8</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Substituição de Strings</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("9.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>console.exception</code> alias</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("28.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Disponível em workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("38.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("2.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Substituição de Strings</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("9.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>console.exception</code> alias</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("28.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Disponível em workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("38.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.console.error")}}
 
 <h2 id="Ver_também">Ver também</h2>
 

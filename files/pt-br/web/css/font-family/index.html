@@ -14,13 +14,13 @@ translation_of: Web/CSS/font-family
 
 <h2 id="Resumo">Resumo</h2>
 
-<p>A propriedade <code>font-family do</code> CSS permite que se faça uma lista de prioridades de familias de fontes e/ou nomes genéricos de famílias a serem especificados para um elemento selecionado. Ao contrário da maioria das demais propriedades CSS, os valores são separados por vírgula para indicar quais são as alternativas. O Browser irá utilizar a primeira fonte da lista que for encontrada no computador, ou poderá fazer o dowload utilizando a informação contida na regra {{cssxref("@font-face")}}.</p>
+<p>A propriedade <code>font-family do</code> CSS permite que se faça uma lista de prioridades de familias de fontes e/ou nomes genéricos de famílias a serem especificados para um elemento selecionado. Ao contrário da maioria das demais propriedades CSS, os valores são separados por vírgula para indicar quais são as alternativas. O Browser irá utilizar a primeira fonte da lista que for encontrada no computador, ou poderá fazer o dowload utilizando a informação contida na regra {{cssxref("@font-face")}}.</p>
 
-<p>Programadores WEB devem sempre adicionar pelo menos uma família genérica para a lista de <span style="font-family: consolas,monaco,andale mono,monospace;">font-family, </span>já que não há garantia que aquela fonte específica está instalada no computador, ou possa ser baixada pela regra {{cssxref("@font-face")}}. A família genérica permite o browser selecionar uma fonte aceita pelo computador, quando necessário.</p>
+<p>Programadores WEB devem sempre adicionar pelo menos uma família genérica para a lista de <span style="font-family: consolas,monaco,andale mono,monospace;">font-family, </span>já que não há garantia que aquela fonte específica está instalada no computador, ou possa ser baixada pela regra {{cssxref("@font-face")}}. A família genérica permite o browser selecionar uma fonte aceita pelo computador, quando necessário.</p>
 
-<p>É também conveniente usar de antemão a propriedade {{cssxref("font")}} para definir a <code>font-size</code> e outras propriedades relacionadas a fonte todas de uma só vez.</p>
+<p>É também conveniente usar de antemão a propriedade {{cssxref("font")}} para definir a <code>font-size</code> e outras propriedades relacionadas a fonte todas de uma só vez.</p>
 
-<div class="note"><strong>Nota:</strong> A propriedade <code>font-family</code> especifica a lista de fontes, da prioridade mais alta para a mais baixa.
+<div class="note"><strong>Nota:</strong> A propriedade <code>font-family</code> especifica a lista de fontes, da prioridade mais alta para a mais baixa.
 
 <pre dir="ltr" id="tw-target-text">A seleção de fontes não para simplesmente na primeira fonte nomeada na lista que está no sistema do usuário. Em vez disso, a seleção de fontes é feita um caractere de cada vez, para que, se uma fonte disponível não tiver um glifo que possa exibir um caracter necessário, as fontes disponíveis mais tarde sejam tentadas. No entanto, isso não funciona no Internet Explorer 6 ou anterior.
 
@@ -62,7 +62,7 @@ font-family: inherit
     <dl>
      <dt><code>serif</code></dt>
      <dd style='font-family: Palatino,"Palatino Linotype",Palladio,"URW Palladio",serif;'>Glyphs have finishing strokes, flared or tapering ends, or have actual serifed endings.<br>
-     E.g.  Palatino, "Palatino Linotype", Palladio, "URW Palladio", serif</dd>
+     E.g.  Palatino, "Palatino Linotype", Palladio, "URW Palladio", serif</dd>
      <dt><code>sans-serif</code></dt>
      <dd style='font-family: "Trebuchet MS","Liberation Sans","Nimbus Sans L",sans-serif;'>Glyphs have stroke endings that are plain.<br>
      E.g. 'Trebuchet MS', 'Liberation Sans', 'Nimbus Sans L', sans-serif</dd>
@@ -189,50 +189,4 @@ This is an example of a fantasy font.
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1")}}</td>
-   <td>3.0</td>
-   <td>3.5</td>
-   <td>1.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoMobile("1")}}</td>
-   <td>6.0</td>
-   <td>6.0</td>
-   <td>1.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.properties.font-family")}}

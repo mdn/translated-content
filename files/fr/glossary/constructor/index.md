@@ -33,11 +33,11 @@ function Default() {
 var defaultReference = new Default();
 ```
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Constructeur (programmation)", "Constructeur")}} sur Wikipédia
+- [Constructeur](https://fr.wikipedia.org/wiki/Constructeur_(programmation)) sur Wikipédia
 
 ### Référence technique
 

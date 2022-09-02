@@ -1,15 +1,6 @@
 ---
 title: ServiceWorkerRegistration.unregister()
 slug: Web/API/ServiceWorkerRegistration/unregister
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - サービスワーカー
-  - ServiceWorkerRegistration
-  - unregister
-browser-compat: api.ServiceWorkerRegistration.unregister
-translation_of: Web/API/ServiceWorkerRegistration/unregister
 ---
 {{APIRef("Service Workers API")}}
 

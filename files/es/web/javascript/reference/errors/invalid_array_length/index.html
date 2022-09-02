@@ -30,7 +30,7 @@ RangeError: Invalid array buffer length (Chrome)
  <li>cuando se define la propiedad {{jsxref("Array.length")}} a un valor el cual es negativo o es igual o mayor a 2<sup>32</sup>.</li>
 </ul>
 
-<p>¿Por qué el <code>Array</code> y <code>ArrayBuffer</code> tienen longitud limitada? La propiedad de longitud de un <code>Array</code> o un <code>ArrayBuffer</code> está representada con un entero sin signo de 32 bits, el cual sólo puede almacenar valores que estén en el rango de 0 a 2<sup>32</sup>-1.</p>
+<p>¿Por qué el <code>Array</code> y <code>ArrayBuffer</code> tienen longitud limitada? La propiedad de longitud de un <code>Array</code> o un <code>ArrayBuffer</code> está representada con un entero sin signo de 32 bits, el cual sólo puede almacenar valores que estén en el rango de 0 a 2<sup>32</sup>-1.</p>
 
 <p>Si estás creando un <code>Array</code> usando el constructor, es mejor que utilices la notación literal, ya que el primer argumento es interpretado como la longitud del <code>Array</code>.</p>
 

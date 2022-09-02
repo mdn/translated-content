@@ -5,9 +5,9 @@ translation_of: Web/API/CanvasRenderingContext2D
 ---
 <div>{{APIRef}}</div>
 
-<p>La interfaz <code><strong>CanvasRenderingContext2D</strong></code> proporciona el contexto de renderizado 2D para la superficie de dibujo de un elemento {{ HTMLElement("canvas") }}.</p>
+<p>La interfaz <code><strong>CanvasRenderingContext2D</strong></code> proporciona el contexto de renderizado 2D para la superficie de dibujo de un elemento {{ HTMLElement("canvas") }}.</p>
 
-<p>Para obtener un objeto de esta interfaz, llama a {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} en un <code>&lt;canvas&gt;</code>, proporcionando "2d" como argumento:</p>
+<p>Para obtener un objeto de esta interfaz, llama a {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} en un <code>&lt;canvas&gt;</code>, proporcionando "2d" como argumento:</p>
 
 <pre class="brush: js">var canvas = document.getElementById('mycanvas');
 var ctx = canvas.getContext('2d');
@@ -19,32 +19,32 @@ var ctx = canvas.getContext('2d');
 ctx.fillRect(10, 10, 55, 50);
 </pre>
 
-<p>Mira las propiedades y métodos en la barra lateral. El <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">tutorial de canvas</a> tiene más información, ejemplos y recursos también.</p>
+<p>Mira las propiedades y métodos en la barra lateral. El <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">tutorial de canvas</a> tiene más información, ejemplos y recursos también.</p>
 
 <h2 id="Dibujando_rectángulos">Dibujando rectángulos</h2>
 
-<p>Hay 3 métodos que inmediatamente dibujan rectángulos en el bitmap.</p>
+<p>Hay 3 métodos que inmediatamente dibujan rectángulos en el bitmap.</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.clearRect()")}}</dt>
- <dd>Establece todos los píxeles del rectangulo definido por los puntos <em>(x, y) </em>y tamaños <em>(ancho, alto)</em> a negro transparente, borrando cualquier contenido previo.</dd>
+ <dd>Establece todos los píxeles del rectangulo definido por los puntos <em>(x, y) </em>y tamaños <em>(ancho, alto)</em> a negro transparente, borrando cualquier contenido previo.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.fillRect()")}}</dt>
  <dd>Dibuja un rectángulo relleno en la posición <em>(x, y)</em> cuyo tamaño está determinado por la anchura y la altura.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.strokeRect()")}}</dt>
- <dd>Dibuja un rectángulo que tiene como posición inicial <em>(x, y)</em> con un ancho w y altura h sobre el canvas, utilizando el estilo de trazo actual.</dd>
+ <dd>Dibuja un rectángulo que tiene como posición inicial <em>(x, y)</em> con un ancho w y altura h sobre el canvas, utilizando el estilo de trazo actual.</dd>
 </dl>
 
 <h2 id="Dibujando_texto">Dibujando texto</h2>
 
-<p>Los siguientes métodos  se proporcionan para dibujar texto. Mira también el objeto {{domxref("TextMetrics")}} para propiedades de texto.</p>
+<p>Los siguientes métodos  se proporcionan para dibujar texto. Mira también el objeto {{domxref("TextMetrics")}} para propiedades de texto.</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.fillText()")}}</dt>
  <dd>Dibuja (llena) un texto dado en una posición (x, y) dada.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.strokeText()")}}</dt>
- <dd>Dibuja (trazas) un texto dado en una posición (x, y) dada.</dd>
+ <dd>Dibuja (trazas) un texto dado en una posición (x, y) dada.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.measureText()")}}</dt>
- <dd>Devuelve el objeto {{domxref("TextMetrics")}}.</dd>
+ <dd>Devuelve el objeto {{domxref("TextMetrics")}}.</dd>
 </dl>
 
 <h2 id="Los_estilos_de_línea">Los estilos de línea</h2>
@@ -53,17 +53,17 @@ ctx.fillRect(10, 10, 55, 50);
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.lineWidth")}}</dt>
- <dd>Ancho de líneas. Por defecto <code>1.0</code></dd>
+ <dd>Ancho de líneas. Por defecto <code>1.0</code></dd>
  <dt>{{domxref("CanvasRenderingContext2D.lineCap")}}</dt>
  <dd>Tipo de terminaciones en el final de las líneas. Posibles valores: <code>butt</code> (defecto), <code>round</code>, <code>square</code>.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.lineJoin")}}</dt>
  <dd>Define el tipo de esquinas donde dos líneas se encuentran. Pislbes valores: <code>round</code>, <code>bevel</code>, <code>miter</code> (defecto).</dd>
  <dt>{{domxref("CanvasRenderingContext2D.miterLimit")}}</dt>
- <dd>Relación límite angular. Defecto <code>10</code>.</dd>
+ <dd>Relación límite angular. Defecto <code>10</code>.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.getLineDash()")}}</dt>
- <dd>Devuelve la matriz patrón de trazos actual que contiene un número de par de números no negativos.</dd>
+ <dd>Devuelve la matriz patrón de trazos actual que contiene un número de par de números no negativos.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.setLineDash()")}}</dt>
- <dd>Establece el patrón de trazos linea actual.</dd>
+ <dd>Establece el patrón de trazos linea actual.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.lineDashOffset")}}</dt>
  <dd>Especifica donde inicia una gama de instrumentos en una línea.</dd>
 </dl>
@@ -74,7 +74,7 @@ ctx.fillRect(10, 10, 55, 50);
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.font")}}</dt>
- <dd>Ajuste de fuente. Valor por defecto <code>10px sans-serif</code>.</dd>
+ <dd>Ajuste de fuente. Valor por defecto <code>10px sans-serif</code>.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.textAlign")}}</dt>
  <dd>Text alignment setting. Possible values: <code>start</code> (default), <code>end</code>, <code>left</code>, <code>right</code> or <code>center</code>.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.textBaseline")}}</dt>
@@ -85,7 +85,7 @@ ctx.fillRect(10, 10, 55, 50);
 
 <h2 id="Estilo_del_relleno_y_de_los_bordes">Estilo del relleno y de los bordes</h2>
 
-<p>Fill styling es utilizado para estilizar los colores del relleno y los bordes de las  formas.</p>
+<p>Fill styling es utilizado para estilizar los colores del relleno y los bordes de las  formas.</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.fillStyle")}}</dt>
@@ -109,7 +109,7 @@ ctx.fillRect(10, 10, 55, 50);
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.shadowBlur")}}</dt>
- <dd>Especifica el efecto de desenfoque. Predeterminado <code>0</code></dd>
+ <dd>Especifica el efecto de desenfoque. Predeterminado <code>0</code></dd>
  <dt>{{domxref("CanvasRenderingContext2D.shadowColor")}}</dt>
  <dd>Color de la sombra. Predeterminado totalmente transparente negro.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.shadowOffsetX")}}</dt>
@@ -316,9 +316,9 @@ ctx.fillRect(10, 10, 55, 50);
 
 <dl>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozCurrentTransform</code></dt>
- <dd>Sets or gets the current transformation matrix, see {{domxref("CanvasRenderingContext2D.currentTransform")}}.  {{ gecko_minversion_inline("7.0") }}</dd>
+ <dd>Sets or gets the current transformation matrix, see {{domxref("CanvasRenderingContext2D.currentTransform")}}.  {{ gecko_minversion_inline("7.0") }}</dd>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozCurrentTransformInverse</code></dt>
- <dd>Sets or gets the current inversed transformation matrix.  {{ gecko_minversion_inline("7.0") }}</dd>
+ <dd>Sets or gets the current inversed transformation matrix.  {{ gecko_minversion_inline("7.0") }}</dd>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozFillRule</code></dt>
  <dd>The <a class="external" href="http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t">fill rule</a> to use. This must be one of <code>evenodd</code> or <code>nonzero</code> (default).</dd>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozImageSmoothingEnabled</code></dt>
@@ -369,7 +369,7 @@ ctx.fillRect(10, 10, 55, 50);
   <tr>
    <td>{{SpecName('HTML WHATWG', "scripting.html#2dcontext:canvasrenderingcontext2d", "CanvasRenderingContext2D")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -385,13 +385,13 @@ ctx.fillRect(10, 10, 55, 50);
 </ul>
 
 <div id="SLG_balloon_obj" style="display: block;">
-<div class="SLG_ImTranslatorLogo" id="SLG_button" style="display: none; opacity: 1;"> </div>
+<div class="SLG_ImTranslatorLogo" id="SLG_button" style="display: none; opacity: 1;"> </div>
 
-<div id="SLG_shadow_translation_result2" class="hidden"> </div>
+<div id="SLG_shadow_translation_result2" class="hidden"> </div>
 
 <div id="SLG_shadow_translator" style="display: none; box-shadow: rgb(186, 185, 181) 0px 0px 0px;">
 <div id="SLG_planshet">
-<div id="SLG_arrow_up" style=""> </div>
+<div id="SLG_arrow_up" style=""> </div>
 
 <div id="SLG_Bproviders" style="">
 <div class="SLG_BL_LABLE_ON" id="SLG_P0" title="Google">G</div>
@@ -402,9 +402,9 @@ ctx.fillRect(10, 10, 55, 50);
 </div>
 
 <div id="SLG_alert_bbl" class="hidden">
-<div id="SLHKclose" style=""> </div>
+<div id="SLHKclose" style=""> </div>
 
-<div id="SLG_alert_cont"> </div>
+<div id="SLG_alert_cont"> </div>
 </div>
 
 <div id="SLG_TB">
@@ -413,48 +413,48 @@ ctx.fillRect(10, 10, 55, 50);
   <td class="SLG_td"><input></td>
   <td class="SLG_td"><select><option value="auto">Detectar idioma</option><option value="af">Afrikáans</option><option value="sq">Albanés</option><option value="de">Alemán</option><option value="am">Amhárico</option><option value="ar">Árabe</option><option value="hy">Armenio</option><option value="az">Azerí</option><option value="bn">Bengalí</option><option value="be">Bielorruso</option><option value="my">Birmano</option><option value="bs">Bosnio</option><option value="bg">Búlgaro</option><option value="km">Camboyano</option><option value="kn">Canarés</option><option value="ca">Catalán</option><option value="ceb">Cebuano</option><option value="cs">Checo</option><option value="ny">Chichewa</option><option value="zh-CN">Chino simp</option><option value="zh-TW">Chino trad</option><option value="si">Cincalés</option><option value="ko">Coreano</option><option value="co">Corso</option><option value="ht">Criollo haitiano</option><option value="hr">Croata</option><option value="da">Danés</option><option value="sk">Eslovaco</option><option value="sl">Esloveno</option><option value="es">Español</option><option value="eo">Esperanto</option><option value="et">Estonio</option><option value="eu">Euskera</option><option value="fi">Finlandés</option><option value="fr">Francés</option><option value="fy">Frisio</option><option value="gd">Gaélico escocés</option><option value="cy">Galés</option><option value="gl">Gallego</option><option value="ka">Georgiano</option><option value="el">Griego</option><option value="gu">Gujarati</option><option value="ha">Hausa</option><option value="haw">Hawaiano</option><option value="iw">Hebreo</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="nl">Holandés</option><option value="hu">Húngaro</option><option value="ig">Igbo</option><option value="id">Indonesio</option><option value="en">Inglés</option><option value="ga">Irlandés</option><option value="is">Islandés</option><option value="it">Italiano</option><option value="ja">Japonés</option><option value="jw">Javanés</option><option value="kk">Kazajo</option><option value="ky">Kirguís</option><option value="ku">Kurdo</option><option value="lo">Lao</option><option value="la">Latín</option><option value="lv">Letón</option><option value="lt">Lituano</option><option value="lb">Luxemburgués</option><option value="mk">Macedonio</option><option value="ml">Malayalam</option><option value="ms">Malayo</option><option value="mg">Malgache</option><option value="mt">Maltés</option><option value="mi">Maorí</option><option value="mr">Maratí</option><option value="mn">Mongol</option><option value="ne">Nepalí</option><option value="no">Noruego</option><option value="pa">Panyabí</option><option value="ps">Pastún</option><option value="fa">Persa</option><option value="pl">Polaco</option><option value="pt">Portugués</option><option value="ro">Rumano</option><option value="ru">Ruso</option><option value="sm">Samoano</option><option value="sr">Serbio</option><option value="st">Sesoto</option><option value="sn">Shona</option><option value="sd">Sindhi</option><option value="so">Somalí</option><option value="sw">Suajili</option><option value="sv">Sueco</option><option value="su">Sundanés</option><option value="tl">Tagalo</option><option value="th">Tailandés</option><option value="ta">Tamil</option><option value="tg">Tayiko</option><option value="te">Telugu</option><option value="tr">Turco</option><option value="uk">Ucraniano</option><option value="ur">Urdu</option><option value="uz">Uzbeco</option><option value="vi">Vietnamita</option><option value="xh">Xhosa</option><option value="yi">Yidis</option><option value="yo">Yoruba</option><option value="zu">Zulú</option></select></td>
   <td class="SLG_td">
-   <div id="SLG_switch_b" style="" title="Cambiar idiomas"> </div>
+   <div id="SLG_switch_b" style="" title="Cambiar idiomas"> </div>
   </td>
   <td class="SLG_td"><select><option value="af">Afrikáans</option><option value="sq">Albanés</option><option value="de">Alemán</option><option value="am">Amhárico</option><option value="ar">Árabe</option><option value="hy">Armenio</option><option value="az">Azerí</option><option value="bn">Bengalí</option><option value="be">Bielorruso</option><option value="my">Birmano</option><option value="bs">Bosnio</option><option value="bg">Búlgaro</option><option value="km">Camboyano</option><option value="kn">Canarés</option><option value="ca">Catalán</option><option value="ceb">Cebuano</option><option value="cs">Checo</option><option value="ny">Chichewa</option><option value="zh-CN">Chino simp</option><option value="zh-TW">Chino trad</option><option value="si">Cincalés</option><option value="ko">Coreano</option><option value="co">Corso</option><option value="ht">Criollo haitiano</option><option value="hr">Croata</option><option value="da">Danés</option><option value="sk">Eslovaco</option><option value="sl">Esloveno</option><option selected value="es">Español</option><option value="eo">Esperanto</option><option value="et">Estonio</option><option value="eu">Euskera</option><option value="fi">Finlandés</option><option value="fr">Francés</option><option value="fy">Frisio</option><option value="gd">Gaélico escocés</option><option value="cy">Galés</option><option value="gl">Gallego</option><option value="ka">Georgiano</option><option value="el">Griego</option><option value="gu">Gujarati</option><option value="ha">Hausa</option><option value="haw">Hawaiano</option><option value="iw">Hebreo</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="nl">Holandés</option><option value="hu">Húngaro</option><option value="ig">Igbo</option><option value="id">Indonesio</option><option value="en">Inglés</option><option value="ga">Irlandés</option><option value="is">Islandés</option><option value="it">Italiano</option><option value="ja">Japonés</option><option value="jw">Javanés</option><option value="kk">Kazajo</option><option value="ky">Kirguís</option><option value="ku">Kurdo</option><option value="lo">Lao</option><option value="la">Latín</option><option value="lv">Letón</option><option value="lt">Lituano</option><option value="lb">Luxemburgués</option><option value="mk">Macedonio</option><option value="ml">Malayalam</option><option value="ms">Malayo</option><option value="mg">Malgache</option><option value="mt">Maltés</option><option value="mi">Maorí</option><option value="mr">Maratí</option><option value="mn">Mongol</option><option value="ne">Nepalí</option><option value="no">Noruego</option><option value="pa">Panyabí</option><option value="ps">Pastún</option><option value="fa">Persa</option><option value="pl">Polaco</option><option value="pt">Portugués</option><option value="ro">Rumano</option><option value="ru">Ruso</option><option value="sm">Samoano</option><option value="sr">Serbio</option><option value="st">Sesoto</option><option value="sn">Shona</option><option value="sd">Sindhi</option><option value="so">Somalí</option><option value="sw">Suajili</option><option value="sv">Sueco</option><option value="su">Sundanés</option><option value="tl">Tagalo</option><option value="th">Tailandés</option><option value="ta">Tamil</option><option value="tg">Tayiko</option><option value="te">Telugu</option><option value="tr">Turco</option><option value="uk">Ucraniano</option><option value="ur">Urdu</option><option value="uz">Uzbeco</option><option value="vi">Vietnamita</option><option value="xh">Xhosa</option><option value="yi">Yidis</option><option value="yo">Yoruba</option><option value="zu">Zulú</option></select></td>
-  <td class="SLG_td"> </td>
+  <td class="SLG_td"> </td>
   <td class="SLG_td">
-   <div id="SLG_TTS_voice" style="" title="Inglés"> </div>
+   <div id="SLG_TTS_voice" style="" title="Inglés"> </div>
   </td>
   <td class="SLG_td">
-   <div class="SLG_copy" id="SLG_copy" style="" title="Copiar"> </div>
+   <div class="SLG_copy" id="SLG_copy" style="" title="Copiar"> </div>
   </td>
   <td class="SLG_td">
-   <div id="SLG_bbl_font_patch"> </div>
+   <div id="SLG_bbl_font_patch"> </div>
 
-   <div class="SLG_bbl_font" id="SLG_bbl_font" style="" title="Тamaño de fuente"> </div>
+   <div class="SLG_bbl_font" id="SLG_bbl_font" style="" title="Тamaño de fuente"> </div>
   </td>
   <td class="SLG_td">
-   <div id="SLG_bbl_help" style="" title="Ayuda"> </div>
+   <div id="SLG_bbl_help" style="" title="Ayuda"> </div>
   </td>
   <td class="SLG_td">
-   <div class="SLG_pin_off" id="SLG_pin" style="" title="Fijar la ventana de traducción"> </div>
+   <div class="SLG_pin_off" id="SLG_pin" style="" title="Fijar la ventana de traducción"> </div>
   </td>
  </tr>
 </tbody></table>
 </div>
 </div>
 
-<div id="SLG_shadow_translation_result" style=""> </div>
+<div id="SLG_shadow_translation_result" style=""> </div>
 
-<div class="SLG_loading" id="SLG_loading" style=""> </div>
+<div class="SLG_loading" id="SLG_loading" style=""> </div>
 
-<div id="SLG_player2"> </div>
+<div id="SLG_player2"> </div>
 
 <div id="SLG_alert100">La función de sonido está limitada a 200 caracteres</div>
 
 <div id="SLG_Balloon_options" style="background: rgb(255, 255, 255);">
-<div id="SLG_arrow_down" style=""> </div>
+<div id="SLG_arrow_down" style=""> </div>
 
 <table id="SLG_tbl_opt" style="width: 100%;">
  <tbody><tr>
   <td><input></td>
   <td>
-   <div id="SLG_BBL_IMG" style="" title="Mostrar el botón ImTranslator 3 segundos"> </div>
+   <div id="SLG_BBL_IMG" style="" title="Mostrar el botón ImTranslator 3 segundos"> </div>
   </td>
   <td><a class="SLG_options" title="Mostrar opciones">Opciones</a> : <a class="SLG_options" title="Historial de traducciones">Historia</a> : <a class="SLG_options" title="ImTranslator Feedback">Feedback</a> : <a class="SLG_options" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=GD9D8CPW8HFA2" title="Hacer una contribución">Donate</a></td>
   <td><span id="SLG_Balloon_Close" title="Cerrar">Cerrar</span></td>

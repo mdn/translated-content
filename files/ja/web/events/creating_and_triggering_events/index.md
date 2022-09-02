@@ -84,8 +84,8 @@ const textarea = document.querySelector('textarea');
 
 // 新しいイベントを生成し、バブリングを許可し、 "detail" プロパティに渡したいデータを設定する
 const eventAwesome = new CustomEvent('awesome', {
-  bubbles: true,
-  detail: { text: () => textarea.value }
+  bubbles: true,
+  detail: { text: () => textarea.value }
 });
 
 // フォームイベントが "awesome" カスタムイベントを待ち受けし、渡されたものの text() メソッドをコンソールに出力する
@@ -101,7 +101,7 @@ textarea.addEventListener('input', e => e.target.dispatchEvent(eventAwesome));
 
 ```html
 <form>
-  <textarea></textarea>
+  <textarea></textarea>
 </form>
 ```
 
@@ -112,9 +112,9 @@ const textarea = document.querySelector('textarea');
 form.addEventListener('awesome', e => console.log(e.detail.text()));
 
 textarea.addEventListener('input', function() {
-  // Create and dispatch/trigger an event on the fly
-  // Note: Optionally, we've also leveraged the "function expression" (instead of the "arrow function expression") so "this" will represent the element
-  this.dispatchEvent(new CustomEvent('awesome', { bubbles: true, detail: { text: () => textarea.value } }))
+  // Create and dispatch/trigger an event on the fly
+  // Note: Optionally, we've also leveraged the "function expression" (instead of the "arrow function expression") so "this" will represent the element
+  this.dispatchEvent(new CustomEvent('awesome', { bubbles: true, detail: { text: () => textarea.value } }))
 });
 ```
 
@@ -130,7 +130,7 @@ function simulateClick() {
     cancelable: true
   });
   const cb = document.getElementById('checkbox');
-  const cancelled = !cb.dispatchEvent(event);
+  const cancelled = !cb.dispatchEvent(event);
 
   if (cancelled) {
     // A handler called preventDefault.

@@ -345,11 +345,11 @@ CORS のプリフライトリクエストに資格情報を含めてはいけま
 
 資格情報付きリクエストに返答する場合、
 
-- サーバーは `Access-Control-Allow-Origin` ヘッダーで "`*`" ワイルドカードを指定**してはならず**、 `Access-Control-Allow-Origin: https://example.com` のように、明示的にオリジンを指定しなければなりません。
+- サーバーは `Access-Control-Allow-Origin` ヘッダーで "`*`" ワイルドカードを指定**してはならず**、 `Access-Control-Allow-Origin: https://example.com` のように、明示的にオリジンを指定しなければなりません。
 
-- サーバーは `Access-Control-Allow-Headers` ヘッダーで "`*`" ワイルドカードを指定**してはならず**、 `Access-Control-Allow-Headers: X-PINGOTHER, Content-Type` のように、明示的にヘッダー名を指定しなければなりません。
+- サーバーは `Access-Control-Allow-Headers` ヘッダーで "`*`" ワイルドカードを指定**してはならず**、 `Access-Control-Allow-Headers: X-PINGOTHER, Content-Type` のように、明示的にヘッダー名を指定しなければなりません。
 
-- サーバーは `Access-Control-Allow-Methods` ヘッダーで "`*`" ワイルドカードを指定**してはならず**、 `Access-Control-Allow-Methods: POST, GET` のように、明示的にメソッド名を指定しなければなりません。
+- サーバーは `Access-Control-Allow-Methods` ヘッダーで "`*`" ワイルドカードを指定**してはならず**、 `Access-Control-Allow-Methods: POST, GET` のように、明示的にメソッド名を指定しなければなりません。
 
 リクエストが資格情報 (多くの場合は `Cookie` ヘッダー) を含んでおり、そのレスポンスが `Access-Control-Allow-Origin: *` ヘッダー (つまりワイルドカード) を含んでいる場合、ブラウザーはレスポンスへのアクセスをブロックし、開発ツールのコンソールに CORS エラーを報告します。
 
@@ -468,7 +468,7 @@ origin は、リクエストを開始したサーバーを示す URL です。�
 Access-Control-Request-Method: <method>
 ```
 
-使用例は[前述のとおりです。](#preflighted_requests)。
+使用例は[前述のとおりです](#preflighted_requests)。
 
 <h3 id="Access-Control-Request-Headers">Access-Control-Request-Headers</h3>
 
@@ -478,7 +478,7 @@ Access-Control-Request-Method: <method>
 Access-Control-Request-Headers: <field-name>[, <field-name>]*
 ```
 
-使用例は[前述のとおりです。](#preflighted_requests)。
+使用例は[前述のとおりです](#preflighted_requests)。
 
 ## 仕様書
 
@@ -492,10 +492,10 @@ Access-Control-Request-Headers: <field-name>[, <field-name>]*
 
 ## 関連情報
 
-- [CORS のエラー](/en-US/docs/Web/HTTP/CORS/Errors)
+- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors)
 - [Enable CORS: I want to add CORS support to my server](https://enable-cors.org/server.html)
 - {{domxref("XMLHttpRequest")}}
-- [Fetch API](/en-US/docs/Web/API/Fetch_API)
+- [Fetch API](/ja/docs/Web/API/Fetch_API)
 - [Will it CORS?](https://httptoolkit.tech/will-it-cors) - 対話型の CORS の説明および生成
 - [How to run Chrome browser without CORS](https://alfilatov.com/posts/run-chrome-without-cors/)
 - [Using CORS with All (Modern) Browsers](https://www.telerik.com/blogs/using-cors-with-all-modern-browsers)

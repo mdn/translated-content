@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/shift
 
 <h2 id="Summary" name="Summary">Sumário</h2>
 
-<p>O método <strong style="font-family: courier new,andale mono,monospace; line-height: 1.5;">shift()</strong><span style="line-height: 1.5;">remove o <strong>primeiro</strong> elemento de um array e retorna esse elemento. Este método muda o tamanho do array.</span><strong style="font-family: courier new,andale mono,monospace; line-height: 1.5;"> </strong></p>
+<p>O método <strong style="font-family: courier new,andale mono,monospace; line-height: 1.5;">shift()</strong><span style="line-height: 1.5;">remove o <strong>primeiro</strong> elemento de um array e retorna esse elemento. Este método muda o tamanho do array.</span><strong style="font-family: courier new,andale mono,monospace; line-height: 1.5;"> </strong></p>
 
 <p>{{EmbedInteractiveExample("pages/js/array-shift.html")}}</p>
 
@@ -31,9 +31,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/shift
 
 <h2 id="Description" name="Description">Descrição</h2>
 
-<p>O método shift remove o elemento de índice zero, diminui em 1 os indices dos demais valores e retorna o valor removido. Se a propriedade {{jsxref("Array.length", "length")}} for 0, então {{jsxref("undefined")}} é retornado.</p>
+<p>O método shift remove o elemento de índice zero, diminui em 1 os indices dos demais valores e retorna o valor removido. Se a propriedade {{jsxref("Array.length", "length")}} for 0, então {{jsxref("undefined")}} é retornado.</p>
 
-<p><code>shift</code> é intencionalmente genérico; esse método pode ser {{jsxref("Function.call", "chamado", "", 1)}} ou {{jsxref("Function.apply", "aplicado", "", 1)}} para objetos parecidos com arrays. Objetos que não contém a propriedade <code>length </code>representando o tamanho de uma série consecutiva, começando em zero, podem não se comportar de maneira correta.</p>
+<p><code>shift</code> é intencionalmente genérico; esse método pode ser {{jsxref("Function.call", "chamado", "", 1)}} ou {{jsxref("Function.apply", "aplicado", "", 1)}} para objetos parecidos com arrays. Objetos que não contém a propriedade <code>length </code>representando o tamanho de uma série consecutiva, começando em zero, podem não se comportar de maneira correta.</p>
 
 <h2 id="Examples" name="Examples">Exemplos</h2>
 
@@ -59,7 +59,7 @@ console.log('Elemento removido: ' + shifted);
 
 <pre class="brush: js notranslate">var nomes = ["André", "Eduardo", "Paulo", "Cris", "João"];
 while( (i = nomes.shift()) !== undefined ) {
-    console.log(i);
+    console.log(i);
 }
 // André Eduardo Paulo Cris João</pre>
 

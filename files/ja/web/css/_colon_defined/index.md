@@ -18,12 +18,12 @@ translation_of: Web/CSS/:defined
 ```css
 /* 定義されたすべての要素を選択 */
 :defined {
-  font-style: italic;
+  font-style: italic;
 }
 
 /* 特定の custom 要素のすべてのインスタンスを選択 */
 simple-custom:defined {
-  display: block;
+  display: block;
 }
 ```
 

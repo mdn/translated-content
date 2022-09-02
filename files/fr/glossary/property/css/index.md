@@ -25,7 +25,7 @@ div {
 }
 ```
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

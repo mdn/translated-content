@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <code><strong>Object.getPrototypeOf()</strong></code> retorna o prototype (isto é, o valor da propriedade interna <code>[[Prototype]]</code>) do objeto especificado.</p>
+<p>O método <code><strong>Object.getPrototypeOf()</strong></code> retorna o prototype (isto é, o valor da propriedade interna <code>[[Prototype]]</code>) do objeto especificado.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 
 <dl>
  <dt><code>obj</code></dt>
- <dd>O objeto cujo prototype será retornado.</dd>
+ <dd>O objeto cujo prototype será retornado.</dd>
 </dl>
 
 <h2 id="Exemplos">Exemplos</h2>
@@ -27,7 +27,7 @@ Object.getPrototypeOf(obj) === proto; // true
 
 <h2 id="Notas">Notas</h2>
 
-<p>No ES5 será lançada uma exceção {{jsxref("TypeError")}} se o parâmetro obj não for um objeto. No ES6, no entanto, esse valor será submetido a um {{jsxref("Object")}} equivalente ao seu tipo e retornado.</p>
+<p>No ES5 será lançada uma exceção {{jsxref("TypeError")}} se o parâmetro obj não for um objeto. No ES6, no entanto, esse valor será submetido a um {{jsxref("Object")}} equivalente ao seu tipo e retornado.</p>
 
 <pre class="brush: js">Object.getPrototypeOf("foo");
 // TypeError: "foo" não é um objeto (código ES5)
@@ -52,66 +52,18 @@ Object.getPrototypeOf("foo");
   <tr>
    <td>{{SpecName('ES6', '#sec-object.getprototypeof', 'Object.getProtoypeOf')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Características</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatChrome("5")}}</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>{{CompatIE("9")}}</td>
-   <td>{{CompatOpera("12.10")}}</td>
-   <td>{{CompatSafari("5")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Características</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Object.getPrototypeOf")}}
 
 <h2 id="Notas_específicas_para_o_Opera">Notas específicas para o Opera</h2>
 
-<p>Embora as versões mais antigas do Opera não suportem <code>Object.getPrototypeOf()</code>, ele suporta a propriedade não oficial {{jsxref("Object.proto", "__proto__")}} desde de a sua versão 10.50.</p>
+<p>Embora as versões mais antigas do Opera não suportem <code>Object.getPrototypeOf()</code>, ele suporta a propriedade não oficial {{jsxref("Object.proto", "__proto__")}} desde de a sua versão 10.50.</p>
 
 <h2 id="Veja_também">Veja também</h2>
 

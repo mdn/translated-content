@@ -62,13 +62,13 @@ translation_of: Web/HTTP/Headers/Feature-Policy
  <dt>{{httpheader('Feature-Policy/camera', 'camera')}}</dt>
  <dd>Controla se o documento atual é permitido de usar entradas de dispositivos de vídeo. Quando esta política está desabilitada, o {{jsxref("Promise")}} retornado pelo {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} irá rejeitar com um {{DOMxRef("NotAllowedError")}} {{DOMxRef("DOMException")}}.</dd>
  <dt>{{HTTPHeader('Feature-Policy/display-capture', 'display-capture')}}</dt>
- <dd>Controla se o documento atual é permitido ou não de usar o método {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} para capturar conteúdos de tela. Quando esta política está desabilitada, a {{jsxref("Promise")}} retornada pelo <code>getDisplayMedia()</code> irá rejeitar com um <code>NotAllowedError</code> se a permissão não for obtida para capturar os conteúdos da tela.</dd>
+ <dd>Controla se o documento atual é permitido ou não de usar o método {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} para capturar conteúdos de tela. Quando esta política está desabilitada, a {{jsxref("Promise")}} retornada pelo <code>getDisplayMedia()</code> irá rejeitar com um <code>NotAllowedError</code> se a permissão não for obtida para capturar os conteúdos da tela.</dd>
  <dt>{{httpheader('Feature-Policy/document-domain','document-domain')}}</dt>
  <dd>Controle se o documento atual é permitido de colocar {{domxref("document.domain")}}. Quando esta política está desabilitada, tentativas em colocar {{domxref("document.domain")}} irão falhar e causar uma {{DOMxRef("SecurityError")}} {{domxref("DOMException")}} a ser jogada.</dd>
  <dt>{{httpheader('Feature-Policy/encrypted-media', 'encrypted-media')}}</dt>
  <dd>Controla se o documento atual é permitido de usar a API <a href="/en-US/docs/Web/API/Encrypted_Media_Extensions_API">Extensões de Mídias Encriptadas (<em>Encrypted Media Extensions</em>)</a> (EME). Quando esta política é desabilitada, a {{domxref("Promise")}} retornada pelo {{domxref("Navigator.requestMediaKeySystemAccess()")}} irá rejeitar com um {{domxref("DOMException")}}.</dd>
  <dt>{{httpheader('Feature-Policy/execution-while-not-rendered', 'execution-while-not-rendered')}}</dt>
- <dd>Controla se as tarefas devem ser executadas em enquadramentos enquanto não são renderizados (e.g. se um enquadramento é <code><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes/hidden">hidden</a></code> ou <code>display: none</code>).</dd>
+ <dd>Controla se as tarefas devem ser executadas em enquadramentos enquanto não são renderizados (e.g. se um enquadramento é <code><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes/hidden">hidden</a></code> ou <code>display: none</code>).</dd>
  <dt>{{httpheader('Feature-Policy/execution-while-out-of-viewport', 'execution-while-out-of-viewport')}}</dt>
  <dd>Controla se as tarefas devem ser executadas em enquadramentos enquanto eles estão fora da janela de visualização visível.</dd>
 </dl>
@@ -101,11 +101,11 @@ translation_of: Web/HTTP/Headers/Feature-Policy
  <dt>{{httpheader('Feature-Policy/oversized-images','oversized-images')}}</dt>
  <dd>Controla se o documento atual é permitido de baixar e mostrar imagens grandes.</dd>
  <dt>{{httpheader('Feature-Policy/payment', 'payment')}}</dt>
- <dd>Controla se o documento atual permite o uso da <a href="/en-US/docs/Web/API/Payment_Request_API">API de Requisição de Pagamento (<em>Payment Request API</em>)</a>. Quando esta política está desabilitada, o construtor {{domxref("PaymentRequest","PaymentRequest()")}} irá jogar um <code>SecurityError</code> {{domxref("DOMException")}}.</dd>
+ <dd>Controla se o documento atual permite o uso da <a href="/en-US/docs/Web/API/Payment_Request_API">API de Requisição de Pagamento (<em>Payment Request API</em>)</a>. Quando esta política está desabilitada, o construtor {{domxref("PaymentRequest","PaymentRequest()")}} irá jogar um <code>SecurityError</code> {{domxref("DOMException")}}.</dd>
  <dt>{{httpheader('Feature-Policy/picture-in-picture', 'picture-in-picture')}}</dt>
  <dd>Controla se o documento atual permite que um vídeo seja permitido tocar no modo <em>Picture-in-Picture</em> através da API correspondente.</dd>
  <dt>{{httpheader("Feature-Policy/publickey-credentials-get", "publickey-credentials-get")}}</dt>
- <dd>Controla se o documento atual é permitido de usar a <a href="/en-US/docs/Web/API/Web_Authentication_API">API de Autenticação Web</a> para resgatar credenciais de chave pública já guardadas, i.e. através do  {{domxref("CredentialsContainer.get","navigator.credentials.get({publicKey: ..., ...})")}}.</dd>
+ <dd>Controla se o documento atual é permitido de usar a <a href="/en-US/docs/Web/API/Web_Authentication_API">API de Autenticação Web</a> para resgatar credenciais de chave pública já guardadas, i.e. através do  {{domxref("CredentialsContainer.get","navigator.credentials.get({publicKey: ..., ...})")}}.</dd>
  <dt>{{httpheader('Feature-Policy/sync-xhr', 'sync-xhr')}}</dt>
  <dd>Controla se o documento atual é permitido de fazer requisições síncronas {{DOMxRef("XMLHttpRequest")}}.</dd>
  <dt>{{httpheader('Feature-Policy/usb', 'usb')}}</dt>

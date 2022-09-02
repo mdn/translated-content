@@ -314,4 +314,19 @@ Ceci est dû au fait que le sélecteur `h1` cible l'élément spécifiquement, m
 
 - Calculateur de spécificité&nbsp;: un site web interactif permettant de tester et comprendre vos propres règles CSS - <https://specificity.keegan.st/>
 - Spécificité des sélecteurs CSS3 - [http://www.w3.org/TR/selectors/#specificity](https://www.w3.org/TR/selectors/#specificity)
-- {{CSS_Key_Concepts}}
+- Concepts clés de CSS&nbsp;:
+  - [Syntaxe CSS](/fr/docs/Web/CSS/Syntax)
+  - [Spécificité](/fr/docs/Web/CSS/Specificity)
+  - [Héritage](/fr/docs/Web/CSS/inheritance)
+  - [Modèle de boîte](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Modes d'affichage](/fr/docs/Web/CSS/Layout_mode)
+  - [Modèles de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model)
+  - [Fusion des marges](/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - Valeurs
+    - [Initiales](/fr/docs/Web/CSS/initial_value)
+    - [Calculées](/fr/docs/Web/CSS/computed_value)
+    - [Utilisées](/fr/docs/Web/CSS/used_value)
+    - [Effectives](/fr/docs/Web/CSS/actual_value)
+  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Value_definition_syntax)
+  - [Propriétés raccourcies](/fr/docs/Web/CSS/Shorthand_properties)
+  - [Éléments remplacés](/fr/docs/Web/CSS/Replaced_element)

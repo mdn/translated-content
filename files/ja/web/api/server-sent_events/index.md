@@ -1,14 +1,6 @@
 ---
 title: サーバー送信イベント
 slug: Web/API/Server-sent_events
-page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - SSE
-  - Server-sent events
-spec-urls: https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events
-translation_of: Web/API/Server-sent_events
 ---
 {{DefaultAPISidebar("Server Sent Events")}}
 
@@ -30,7 +22,6 @@ translation_of: Web/API/Server-sent_events
 ## 例
 
 - [PHP を使用した簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
-
 
 ## 仕様書
 

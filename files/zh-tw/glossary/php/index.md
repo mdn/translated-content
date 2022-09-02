@@ -1,7 +1,6 @@
 ---
 title: PHP
 slug: Glossary/PHP
-translation_of: Glossary/PHP
 ---
 PHP（PHP: Hypertext Preprocessor 的遞歸縮寫，意為「PHP：超文字預處理器」）是一個開源的伺服器端腳本語言，可用於建制網頁應用和動態網站。
 
@@ -46,7 +45,7 @@ PHP（PHP: Hypertext Preprocessor 的遞歸縮寫，意為「PHP：超文字預�
 ## 參見
 
 - [PHP - 官方網站](http://php.net/)
-- 維基百科的 {{Interwiki("wikipedia", "PHP")}}
+- 維基百科的 [PHP](https://zh.wikipedia.org/wiki/PHP)
 - 維基教科書的 [PHP](https://zh.wikibooks.org/wiki/PHP)
 - [臺灣 php 聯盟](https://twpug.net/)
 - [MDN Web Docs 術語](/zh-TW/docs/Glossary)

@@ -14,7 +14,7 @@ translation_of: Web/API/Document/domain
 ---
 <div>{{ApiRef}}</div>
 
-<div>Свойство <code>domain</code> у {{domxref("Document")}} интерфейса получает/устанавливает доменную часть источника происхождения (origin) текущего документа, используется в <a href="https://developer.mozilla.org/en-US/docs/Same_origin_policy_for_JavaScript" title="Same origin policy for JavaScript">политике ограничения домена (same origin policy)</a>.</div>
+<div>Свойство <code>domain</code> у {{domxref("Document")}} интерфейса получает/устанавливает доменную часть источника происхождения (origin) текущего документа, используется в <a href="https://developer.mozilla.org/en-US/docs/Same_origin_policy_for_JavaScript" title="Same origin policy for JavaScript">политике ограничения домена (same origin policy)</a>.</div>
 
 <h2 id="Summary">Синтаксис</h2>
 
@@ -23,17 +23,17 @@ document.domain = <var>string</var>;</pre>
 
 <h3 id="Значение">Значение</h3>
 
-<p>Доменная часть источника происхождения (origin) текущего документа.</p>
+<p>Доменная часть источника происхождения (origin) текущего документа.</p>
 
 <h3 id="Исключения">Исключения</h3>
 
 <dl>
  <dt><code>SecurityError</code></dt>
- <dd>An attempt has been made to set <code>domain</code> under one of the following conditions:
+ <dd>An attempt has been made to set <code>domain</code> under one of the following conditions:
  <ul>
   <li>The document is inside a sandboxed {{htmlelement("iframe")}}</li>
   <li>The document has no browsing context</li>
-  <li>The document's <a href="https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain">effective domain</a> is <code>null</code></li>
+  <li>The document's <a href="https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain">effective domain</a> is <code>null</code></li>
   <li>The given value is not equal to the document's effective domain (or it is not a registerable domain suffix of it)</li>
   <li>The {{httpheader('Feature-Policy/document-domain','document-domain')}} {{HTTPHeader("Feature-Policy")}} is enabled</li>
  </ul>
@@ -44,13 +44,13 @@ document.domain = <var>string</var>;</pre>
 
 <h3 id="Getting_the_domain">Getting the domain</h3>
 
-<p>For the URI <code>http://developer.mozilla.org/en-US/docs/Web</code>, this example sets <code>currentDomain</code> to the string "<code>developer.mozilla.org</code>".</p>
+<p>For the URI <code>http://developer.mozilla.org/en-US/docs/Web</code>, this example sets <code>currentDomain</code> to the string "<code>developer.mozilla.org</code>".</p>
 
 <pre><code>var currentDomain = document.domain;</code></pre>
 
 <h3 id="Closing_a_window">Closing a window</h3>
 
-<p>If a document, such as <code>www.example.xxx/good.html</code>, has the domain of <code>"www.example.xxx"</code>, this example attempts to close the window.</p>
+<p>If a document, such as <code>www.example.xxx/good.html</code>, has the domain of <code>"www.example.xxx"</code>, this example attempts to close the window.</p>
 
 <pre><code>var badDomain = "www.example.xxx";
 
@@ -61,13 +61,13 @@ if (document.domain == badDomain) {
 
 <h2 id="Notes">Замечания</h2>
 
-<p>Свойство возвращает <code>null</code> если домен документа не может быть идентифицирован, хотя теперь это изменилось с Firefox 62 - смотри обсуждение в {{bug(819475)}}.</p>
+<p>Свойство возвращает <code>null</code> если домен документа не может быть идентифицирован, хотя теперь это изменилось с Firefox 62 - смотри обсуждение в {{bug(819475)}}.</p>
 
-<p>Mozilla позволит вам установить его в супердомен текущего значения, ограниченный его  <a href="/en-US/docs/XPCOM_Interface_Reference/nsIEffectiveTLDService#getBaseDomain.28.29">базовым доменом</a>. Например, на developer.mozilla.org возможно установить его как "mozilla.org" но не как  "mozilla.com" или "org".</p>
+<p>Mozilla позволит вам установить его в супердомен текущего значения, ограниченный его  <a href="/en-US/docs/XPCOM_Interface_Reference/nsIEffectiveTLDService#getBaseDomain.28.29">базовым доменом</a>. Например, на developer.mozilla.org возможно установить его как "mozilla.org" но не как  "mozilla.com" или "org".</p>
 
 <p>Если это свойство успешно установлено, портовая часть источника так же устанавливается на нуль.</p>
 
-<p>Mozilla отличает свойство <code>document.domain</code>, которое никогда не было установлено от явно установленного такого же домена как в URL документа, хотя свойство возвращает одинаковое значение в обоих случаях. Один документ разрешает доступ к другому, если они оба установили <code>document.domain</code> в одинаковое значение, указывая тем самым на их намерение сотрудничать или ни один из них не установил <code>document.domain</code>, а домены в URL-адресах одинаковые (<a class="link-https" href="https://mxr.mozilla.org/mozilla-central/source/caps/nsPrincipal.cpp?rev=ecb7068b07a1&amp;mark=199-215#199" title="https://mxr.mozilla.org/mozilla-central/source/caps/src/nsScriptSecurityManager.cpp#1003">реализация</a>). Если бы не эта специальная политика, то каждый сайт будет подвержен XSS от своих поддоменов (для примера <a class="link-https" href="https://bugzilla.mozilla.org" rel="freelink">https://bugzilla.mozilla.org</a> может быть атакован с помощью заведения багов (bug attachments) на <a class="link-https" href="https://bug*.bugzilla.mozilla.org" rel="freelink">https://bug*.bugzilla.mozilla.org</a>).</p>
+<p>Mozilla отличает свойство <code>document.domain</code>, которое никогда не было установлено от явно установленного такого же домена как в URL документа, хотя свойство возвращает одинаковое значение в обоих случаях. Один документ разрешает доступ к другому, если они оба установили <code>document.domain</code> в одинаковое значение, указывая тем самым на их намерение сотрудничать или ни один из них не установил <code>document.domain</code>, а домены в URL-адресах одинаковые (<a class="link-https" href="https://mxr.mozilla.org/mozilla-central/source/caps/nsPrincipal.cpp?rev=ecb7068b07a1&amp;mark=199-215#199" title="https://mxr.mozilla.org/mozilla-central/source/caps/src/nsScriptSecurityManager.cpp#1003">реализация</a>). Если бы не эта специальная политика, то каждый сайт будет подвержен XSS от своих поддоменов (для примера <a class="link-https" href="https://bugzilla.mozilla.org" rel="freelink">https://bugzilla.mozilla.org</a> может быть атакован с помощью заведения багов (bug attachments) на <a class="link-https" href="https://bug*.bugzilla.mozilla.org" rel="freelink">https://bug*.bugzilla.mozilla.org</a>).</p>
 
 <h2 id="Specification">Спецификации</h2>
 
@@ -83,12 +83,12 @@ if (document.domain == badDomain) {
   <tr>
    <td>{{SpecName('HTML WHATWG','origin.html#relaxing-the-same-origin-restriction','Document.domain')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML 5.2','browsers.html#relaxing-the-same-origin-restriction','Document.domain')}}</td>
    <td>{{Spec2('HTML 5.2')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

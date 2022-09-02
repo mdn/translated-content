@@ -9,11 +9,11 @@ original_slug: Web/HTTP/Заголовки
 ---
 <p>{{ HTTPSidebar }}</p>
 
-<p><span class="seoSummary"><strong>Заголовки HTTP </strong>позволяют клиенту и серверу отправлять дополнительную информацию с HTTP запросом или ответом. В HTTP-заголовке содержится не чувствительное к регистру название, а затем после (<code>:</code>) непосредственно значение.</span> <a href="/en-US/docs/Glossary/Whitespace">Пробелы</a> перед значением игнорируются.</p>
+<p><span class="seoSummary"><strong>Заголовки HTTP </strong>позволяют клиенту и серверу отправлять дополнительную информацию с HTTP запросом или ответом. В HTTP-заголовке содержится не чувствительное к регистру название, а затем после (<code>:</code>) непосредственно значение.</span> <a href="/en-US/docs/Glossary/Whitespace">Пробелы</a> перед значением игнорируются.</p>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Пользовательские собственные заголовки исторически использовались с префиксом X, но это соглашение было объявлено устаревшим в июне 2012 года из-за неудобств, вызванных тем, что нестандартные поля стали стандартом в </span></span> <a href="https://tools.ietf.org/html/rfc6648">RFC 6648</a><span class="tlid-translation translation" lang="ru"><span title="">;</span> <span title="">другие перечислены в реестре <a href="http://www.iana.org/assignments/message-headers/perm-headers.html">IANA</a>, исходное содержимое которого было определено в </span></span> <a class="external external-icon" href="http://tools.ietf.org/html/rfc4229">RFC 4229</a>.<span class="tlid-translation translation" lang="ru"><span title=""> IANA также поддерживает <a href="https://www.iana.org/assignments/message-headers/message-headers.xhtml">реестр предлагаемых новых заголовков HTTP</a>.</span></span></p>
 
-<p>HTTP-заголовки сопровождают обмен данными по протоколу HTTP. Они могут содержать описание данных и информацию, необходимую для взаимодействия между клиентом и сервером. Заголовки и их статусы перечислены в <a href="http://www.iana.org/assignments/message-headers/perm-headers.html">реестре IANA</a>, который постоянно обновляется.</p>
+<p>HTTP-заголовки сопровождают обмен данными по протоколу HTTP. Они могут содержать описание данных и информацию, необходимую для взаимодействия между клиентом и сервером. Заголовки и их статусы перечислены в <a href="http://www.iana.org/assignments/message-headers/perm-headers.html">реестре IANA</a>, который постоянно обновляется.</p>
 
 <p>Заголовки могут быть сгруппированы по следующим контекстам:</p>
 
@@ -38,10 +38,10 @@ original_slug: Web/HTTP/Заголовки
 </ul>
 
 <p><strong>Сквозные заголовки</strong><br>
-      Эти заголовки должны быть переданы конечному получателю сообщения: серверу для запроса или клиенту для ответа. Промежуточные прокси-серверы должны повторно передавать эти заголовки без изменений, а кеши должны их хранить.</p>
+      Эти заголовки должны быть переданы конечному получателю сообщения: серверу для запроса или клиенту для ответа. Промежуточные прокси-серверы должны повторно передавать эти заголовки без изменений, а кеши должны их хранить.</p>
 
 <p><strong>Хоп-хоп заголовки (Хоп-хоп заголовки)</strong><br>
-      Эти заголовки имеют смысл только для одного соединения транспортного уровня и не должны повторно передаваться прокси или кешироваться. Обратите внимание, что с помощью общего заголовка {{httpheader ("Connection")}} могут быть установлены только заголовки переходов.</p>
+      Эти заголовки имеют смысл только для одного соединения транспортного уровня и не должны повторно передаваться прокси или кешироваться. Обратите внимание, что с помощью общего заголовка {{httpheader ("Connection")}} могут быть установлены только заголовки переходов.</p>
 
 <h2 id="Аутентификация">Аутентификация</h2>
 
@@ -52,13 +52,13 @@ original_slug: Web/HTTP/Заголовки
  <strong>{{HTTPHeader("WWW-Authenticate")}}</strong><br>
  Определяет метод аутентификации, который должен использоваться для доступа к ресурсу.<br>
  <strong>{{HTTPHeader ( "Authorization")}}</strong><br>
- Содержит учётные данные для аутентификации агента пользователя на сервере.<br>
+ Содержит учётные данные для аутентификации агента пользователя на сервере.<br>
  <strong>{{HTTPHeader ( "Proxy-Authenticate")}}</strong><br>
- Определяет метод аутентификации, который должен использоваться для доступа к ресурсам на прокси-сервере.<br>
+ Определяет метод аутентификации, который должен использоваться для доступа к ресурсам на прокси-сервере.<br>
  <strong>{{HTTPHeader ( "Proxy-Authorization")}}</strong><br>
  Содержит учётные данные для аутентификации агента пользователя с прокси-сервером.</p>
 
-<p>Ниже перечислены основные HTTP заголовки с кратким описанием:</p>
+<p>Ниже перечислены основные HTTP заголовки с кратким описанием:</p>
 
 <table class="standard-table" style="width: 100%;">
  <tbody>
@@ -187,7 +187,7 @@ original_slug: Web/HTTP/Заголовки
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/Cache-Control" title="en/Cache-Control">Cache-Control</a></code></td>
    <td></td>
-   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
+   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
    <td></td>
   </tr>
   <tr>
@@ -265,7 +265,7 @@ original_slug: Web/HTTP/Заголовки
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/ETag" title="en/ETag">ETag</a></code></td>
    <td></td>
-   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
+   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
    <td></td>
   </tr>
   <tr>
@@ -277,7 +277,7 @@ original_slug: Web/HTTP/Заголовки
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/Expires" title="en/Expires">Expires</a></code></td>
    <td></td>
-   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
+   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
    <td></td>
   </tr>
   <tr>
@@ -301,13 +301,13 @@ original_slug: Web/HTTP/Заголовки
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/If-Modified-Since" title="en/If-Modified-Since">If-Modified-Since</a></code></td>
    <td></td>
-   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
+   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
    <td></td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/If-None-Match" title="en/If-None-Match">If-None-Match</a></code></td>
    <td></td>
-   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
+   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
    <td></td>
   </tr>
   <tr>
@@ -324,14 +324,14 @@ original_slug: Web/HTTP/Заголовки
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/Last-Event-ID" title="en/Last-Event-ID">Last-Event-ID</a></code></td>
-   <td>Содержит идентификатор последнего события полученного клиентом от сервера в предыдущем HTTP запросе. Используется для восстановления синхронизации потока <code>text/event-stream</code>.</td>
+   <td>Содержит идентификатор последнего события полученного клиентом от сервера в предыдущем HTTP запросе. Используется для восстановления синхронизации потока <code>text/event-stream</code>.</td>
    <td><a href="/en-US/docs/Server-sent_events" title="en/Server-Sent Events">Server-Sent Events</a></td>
    <td><a class="external" href="http://dev.w3.org/html5/eventsource/">Server-Sent Events spec</a></td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/Last-Modified" title="en/Last-Modified">Last-Modified</a></code></td>
    <td></td>
-   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
+   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
    <td></td>
   </tr>
   <tr>
@@ -371,7 +371,7 @@ original_slug: Web/HTTP/Заголовки
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/Pragma" title="en/Pragma">Pragma</a></code></td>
    <td></td>
-   <td>for the pragma: nocache value see <a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
+   <td>for the pragma: nocache value see <a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
    <td></td>
   </tr>
   <tr>
@@ -414,31 +414,31 @@ original_slug: Web/HTTP/Заголовки
    <td><code>Sec-Websocket-Extensions</code></td>
    <td></td>
    <td></td>
-   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
+   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
   </tr>
   <tr>
    <td><code>Sec-Websocket-Key</code></td>
    <td></td>
    <td></td>
-   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
+   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
   </tr>
   <tr>
    <td><code>Sec-Websocket-Origin</code></td>
    <td></td>
    <td></td>
-   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
+   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
   </tr>
   <tr>
    <td><code>Sec-Websocket-Protocol</code></td>
    <td></td>
    <td></td>
-   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
+   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
   </tr>
   <tr>
    <td><code>Sec-Websocket-Version</code></td>
    <td></td>
    <td></td>
-   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
+   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/Server" title="en/Server">Server</a></code></td>
@@ -461,8 +461,8 @@ original_slug: Web/HTTP/Заголовки
   <tr>
    <td><code>Strict-Transport-Security</code></td>
    <td></td>
-   <td><a href="/en-US/docs/Security/HTTP_Strict_Transport_Security" title="en/Security/HTTP Strict Transport Security">HTTP Strict Transport Security</a></td>
-   <td><a class="external" href="http://tools.ietf.org/html/draft-hodges-strict-transport-sec-02">IETF reference</a></td>
+   <td><a href="/en-US/docs/Security/HTTP_Strict_Transport_Security" title="en/Security/HTTP Strict Transport Security">HTTP Strict Transport Security</a></td>
+   <td><a class="external" href="http://tools.ietf.org/html/draft-hodges-strict-transport-sec-02">IETF reference</a></td>
   </tr>
   <tr>
    <td><code>TCN</code></td>
@@ -509,7 +509,7 @@ original_slug: Web/HTTP/Заголовки
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Content_negotiation#The_Vary.3a_response_header" title="https://developer.mozilla.org/en/HTTP/Content_negotiation#The_Vary.3a_response_header">Vary</a></code></td>
    <td>lists the headers used as criteria for choosing a specific content by the web server. This server is important for efficient and correct caching of the resource sent.</td>
-   <td><a href="/ru/docs/Web/HTTP/Content_negotiation" title="ru/HTTP/Content_negotiation">HTTP Content Negotiation</a> &amp; <a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
+   <td><a href="/ru/docs/Web/HTTP/Content_negotiation" title="ru/HTTP/Content_negotiation">HTTP Content Negotiation</a> &amp; <a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
    <td></td>
   </tr>
   <tr>
@@ -539,13 +539,13 @@ original_slug: Web/HTTP/Заголовки
   <tr>
    <td><code>X-Content-Security-Policy</code></td>
    <td></td>
-   <td>Using <a href="/en-US/docs/Security/CSP/Using_Content_Security_Policy" title="en/Security/CSP/Using Content Security Policy">Content Security Policy</a></td>
+   <td>Using <a href="/en-US/docs/Security/CSP/Using_Content_Security_Policy" title="en/Security/CSP/Using Content Security Policy">Content Security Policy</a></td>
    <td></td>
   </tr>
   <tr>
    <td><code>X-DNSPrefetch-Control</code></td>
    <td></td>
-   <td><a href="/en-US/docs/Controlling_DNS_prefetching" title="En/Controlling DNS prefetching">Controlling DNS prefetching</a></td>
+   <td><a href="/en-US/docs/Controlling_DNS_prefetching" title="En/Controlling DNS prefetching">Controlling DNS prefetching</a></td>
    <td></td>
   </tr>
   <tr>

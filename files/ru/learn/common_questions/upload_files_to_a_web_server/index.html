@@ -26,14 +26,14 @@ translation_of: Learn/Common_questions/Upload_files_to_a_web_server
 
 <h2 id="Сводка">Сводка</h2>
 
-<p>Если вы создали простую веб-страницу (для примера смотрите <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/HTML_basics">Основы HTML</a>), вы, вероятно, захотите отобразить её онлайн, на веб-сервере. В данной статье мы обсудим как сделать это, используя различные доступные настройки, такие как SFTP клиенты, RSync и GitHub.</p>
+<p>Если вы создали простую веб-страницу (для примера смотрите <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/HTML_basics">Основы HTML</a>), вы, вероятно, захотите отобразить её онлайн, на веб-сервере. В данной статье мы обсудим как сделать это, используя различные доступные настройки, такие как SFTP клиенты, RSync и GitHub.</p>
 
 <h2 id="SFTP_Безопасный_Протокол_Передачи_Файлов">SFTP (Безопасный Протокол Передачи Файлов)</h2>
 
-<p>Существуют различные варианты SFTP клиентов. В нашем примере мы будем использовать <a href="https://filezilla-project.org/">FileZilla</a>, тк он бесплатен и подходит для Windows, macOS и Linux. Чтобы установить менеджер перейдите на страницу загрузки <a href="https://filezilla-project.org/download.php?type=client">FileZilla downloads page</a>, нажмите на кнопку загрузки, затем установите пакет из установочного файла обычным способом.</p>
+<p>Существуют различные варианты SFTP клиентов. В нашем примере мы будем использовать <a href="https://filezilla-project.org/">FileZilla</a>, тк он бесплатен и подходит для Windows, macOS и Linux. Чтобы установить менеджер перейдите на страницу загрузки <a href="https://filezilla-project.org/download.php?type=client">FileZilla downloads page</a>, нажмите на кнопку загрузки, затем установите пакет из установочного файла обычным способом.</p>
 
 <div class="note">
-<p><strong>Примечание</strong>: Конечно, есть много других вариантов. Смотрите <a href="/en-US/Learn/How_much_does_it_cost#Publishing_tools.3A_FTP_client">Publishing tools</a> для других способов.</p>
+<p><strong>Примечание</strong>: Конечно, есть много других вариантов. Смотрите <a href="/en-US/Learn/How_much_does_it_cost#Publishing_tools.3A_FTP_client">Publishing tools</a> для других способов.</p>
 </div>
 
 <p>Откройте приложение FileZilla; вы должны увидеть что-то вроде этого:</p>
@@ -42,12 +42,12 @@ translation_of: Learn/Common_questions/Upload_files_to_a_web_server
 
 <h3 id="Вход_в_систему">Вход в систему</h3>
 
-<p>В этом примере мы предположим, что наш хостинг-провайдер (сервис, на котором находится наш HTTP веб сервер) является фиктивной компанией "Example Hosting Provider", чьи URL адреса выглядят следующим образом: <code>mypersonalwebsite.examplehostingprovider.net</code>.</p>
+<p>В этом примере мы предположим, что наш хостинг-провайдер (сервис, на котором находится наш HTTP веб сервер) является фиктивной компанией "Example Hosting Provider", чьи URL адреса выглядят следующим образом: <code>mypersonalwebsite.examplehostingprovider.net</code>.</p>
 
 <p>Сейчас мы создали аккаунт и получили от хостинг-провайдера следующую информацию:</p>
 
 <blockquote>
-<p>Поздравляем с созданием аккаунта на сервисе "Example Hosting Provider".</p>
+<p>Поздравляем с созданием аккаунта на сервисе "Example Hosting Provider".</p>
 
 <p>Ваш аккаунт: <code>demozilla</code></p>
 
@@ -55,32 +55,32 @@ translation_of: Learn/Common_questions/Upload_files_to_a_web_server
 
 <p><code>demozilla.examplehostingprovider.net</code></p>
 
-<p>Для загрузки файлов на этот аккаунт, пожалуйста, подключитесь через SFTP с использованием следующих учётных данных:</p>
+<p>Для загрузки файлов на этот аккаунт, пожалуйста, подключитесь через SFTP с использованием следующих учётных данных:</p>
 
 <ul>
  <li>SFTP сервер: <code>sftp://demozilla.examplehostingprovider.net</code></li>
  <li>Имя пользователя: <code>demozilla</code></li>
  <li>Пароль: <code>quickbrownfox</code></li>
  <li>Порт: <code>5548</code></li>
- <li>Для публикации в интернет, поместите ваши файлы в папку <code>Public/htdocs</code> .</li>
+ <li>Для публикации в интернет, поместите ваши файлы в папку <code>Public/htdocs</code> .</li>
 </ul>
 </blockquote>
 
-<p>Давайте сначала посмотрим на  <code>http://demozilla.examplehostingprovider.net/</code> — как вы можете видеть, то здесь пока ничего нет:</p>
+<p>Давайте сначала посмотрим на  <code>http://demozilla.examplehostingprovider.net/</code> — как вы можете видеть, то здесь пока ничего нет:</p>
 
 <p><img alt="Our demozilla personal website, seen in a browser: it's empty" src="https://mdn.mozillademos.org/files/9615/demozilla-empty.png" style="border-style: solid; border-width: 1px; display: block; height: 233px; margin: 0 auto; width: 409px;"></p>
 
 <div class="note">
-<p><strong>Примечание</strong>: В зависимости от вашего хостинг-провайдера, когда вы впервые заходите на свой веб-адрес, большую часть времени вы будете видеть страницу, на которой написано что-то вроде этого: “This website is hosted by [Hosting Service].”</p>
+<p><strong>Примечание</strong>: В зависимости от вашего хостинг-провайдера, когда вы впервые заходите на свой веб-адрес, большую часть времени вы будете видеть страницу, на которой написано что-то вроде этого: “This website is hosted by [Hosting Service].”</p>
 </div>
 
-<p>Чтобы подключить SFTP клиент к удалённому серверу, выполните следующие действия:</p>
+<p>Чтобы подключить SFTP клиент к удалённому серверу, выполните следующие действия:</p>
 
 <ol>
- <li>Выберите <em>File &gt; Site Manager...</em> в главном меню.</li>
- <li>В окне <em>Site Manager</em>, нажмите кнопку <em>New Site</em>, затем введите название сайта как <strong>demozilla</strong> в предоставленном месте.</li>
- <li>Укажите SFTP-сервер вашего хоста в предоставленном поле: Host.</li>
- <li>В раскрывающемся списке <em>Logon Type: </em>выберите <em>Normal</em>, затем введите предоставленные имя пользователя и пароль в соответствующие поля.</li>
+ <li>Выберите <em>File &gt; Site Manager...</em> в главном меню.</li>
+ <li>В окне <em>Site Manager</em>, нажмите кнопку <em>New Site</em>, затем введите название сайта как <strong>demozilla</strong> в предоставленном месте.</li>
+ <li>Укажите SFTP-сервер вашего хоста в предоставленном поле: Host.</li>
+ <li>В раскрывающемся списке <em>Logon Type: </em>выберите <em>Normal</em>, затем введите предоставленные имя пользователя и пароль в соответствующие поля.</li>
  <li>Введите правильный порт и другую информацию.</li>
 </ol>
 
@@ -88,11 +88,11 @@ translation_of: Learn/Common_questions/Upload_files_to_a_web_server
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15769/site-manager.png" style="display: block; height: 561px; margin: 0px auto; width: 684px;"></p>
 
-<p>Теперь нажмите <em>Connect</em> для подключения к SFTP-серверу.</p>
+<p>Теперь нажмите <em>Connect</em> для подключения к SFTP-серверу.</p>
 
 <p>Примечание: Убедитесь, что ваш хостинг-провайдер предлагает SFTP (безопасный FTP) подключение к вашему хостинговому пространству. FTP по своей сути небезопасен, и вам не следует его использовать.</p>
 
-<h3 id="Здесь_и_там_локальный_и_удалённый_просмотр">Здесь и там: локальный и удалённый просмотр</h3>
+<h3 id="Здесь_и_там_локальный_и_удалённый_просмотр">Здесь и там: локальный и удалённый просмотр</h3>
 
 <p>После подключения ваш экран должен выглядеть примерно так (мы подключились к нашему собственному примеру, чтобы дать вам представление):<img alt="" src="https://mdn.mozillademos.org/files/15768/connected.png" style="border-style: solid; border-width: 1px; display: block; height: 199px; margin: 0px auto; width: 700px;"></p>
 
@@ -100,17 +100,17 @@ translation_of: Learn/Common_questions/Upload_files_to_a_web_server
 
 <ul>
  <li>По центру левой панели вы можете видеть локальные файлы. Перейдите в каталог, в котором вы храните свой веб-сайт (например, <code>mdn</code>).</li>
- <li>По центру правой панели вы увидеть удалённые файлы. Мы вошли в наш удалённый корень FTP (в данном случае: <code>users/demozilla</code>)</li>
+ <li>По центру правой панели вы увидеть удалённые файлы. Мы вошли в наш удалённый корень FTP (в данном случае: <code>users/demozilla</code>)</li>
  <li>Вы можете пока игнорировать нижнюю и верхнюю панели. Соответственно, это журнал сообщений, показывающий состояние соединения между вашим компьютером и SFTP-сервером, и журнал в реальном времени каждого взаимодействия между вашим SFTP-клиентом и сервером.</li>
 </ul>
 
 <h3 id="Загрузка_на_сервер">Загрузка на сервер</h3>
 
-<p>Наш пример инструкций для хостинга указывает нам следующее: "Чтобы опубликовать в Интернете, поместите свои файлы в каталог: <code>Public/htdocs</code>." Вам нужно перейти в указанный каталог на правой панели. Этот каталог фактически является корнем вашего веб-сайта, где находятся ваши <code>index.html</code> , откуда ваши файл и другие активы будут отправлены.</p>
+<p>Наш пример инструкций для хостинга указывает нам следующее: "Чтобы опубликовать в Интернете, поместите свои файлы в каталог: <code>Public/htdocs</code>." Вам нужно перейти в указанный каталог на правой панели. Этот каталог фактически является корнем вашего веб-сайта, где находятся ваши <code>index.html</code> , откуда ваши файл и другие активы будут отправлены.</p>
 
 <p>После того, как вы нашли правильный удалённый каталог для размещения файлов, чтобы загрузить файлы на сервер, вам необходимо переместить их с левой панели на правую.</p>
 
-<h3 id="Как_узнать_что_они_online">Как узнать, что они online?</h3>
+<h3 id="Как_узнать_что_они_online">Как узнать, что они online?</h3>
 
 <p>Пока все хорошо, но действительно ли файлы в сети? Вы можете перепроверить, перейдя на ваш сайт (например, <code>http://demozilla.examplehostingprovider.net/</code>) в вашем браузере:</p>
 
@@ -120,7 +120,7 @@ translation_of: Learn/Common_questions/Upload_files_to_a_web_server
 
 <h2 id="Rsync">Rsync</h2>
 
-<p>{{Glossary("Rsync")}} is a local-to-remote file synchronizing tool, which is generally available on most Unix-based systems (like macOS and Linux), but Windows versions exist too.</p>
+<p>{{Glossary("Rsync")}} is a local-to-remote file synchronizing tool, which is generally available on most Unix-based systems (like macOS and Linux), but Windows versions exist too.</p>
 
 <p>It is seen as a more advanced tool than SFTP, beause by default it is used on the command line. A basic command looks like so:</p>
 
@@ -138,7 +138,7 @@ translation_of: Learn/Common_questions/Upload_files_to_a_web_server
 
 <p>For more information and further eamples, see <a href="https://www.atlantic.net/hipaa-compliant-cloud-hosting-services/how-to-use-rsync-copy-sync-files-servers/">How to Use Rsync to Copy/Sync Files Between Servers</a>.</p>
 
-<p>Of course, it is a good idea to use a secure connection, like with FTP. In the case of Rsync, you specify SSH details to make the connection over SSH, using the <code>-e</code> option. For example:</p>
+<p>Of course, it is a good idea to use a secure connection, like with FTP. In the case of Rsync, you specify SSH details to make the connection over SSH, using the <code>-e</code> option. For example:</p>
 
 <pre class="brush: bash">rsync [-options] -e "ssh [SSH DETAILS GO HERE]" SOURCE user@x.x.x.x:DESTINATION</pre>
 

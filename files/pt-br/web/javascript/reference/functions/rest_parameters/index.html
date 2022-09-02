@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 ---
 <div>{{jsSidebar("Functions")}}</div>
 
-<p>A sintaxe de <strong>rest parameter (parâmetros rest)</strong>  nos permite representar um número indefinido de argumentos como um array.</p>
+<p>A sintaxe de <strong>rest parameter (parâmetros rest)</strong>  nos permite representar um número indefinido de argumentos como um array.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -16,23 +16,23 @@ translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Se o último argumento nomeado de uma função tiver prefixo com  <code>...</code>, ele irá se tornar um array em que os elemento de 0 (inclusive) até theArgs.length (exclusivo) são disponibilizados pelos argumentos atuais passados à função.</p>
+<p>Se o último argumento nomeado de uma função tiver prefixo com  <code>...</code>, ele irá se tornar um array em que os elemento de 0 (inclusive) até theArgs.length (exclusivo) são disponibilizados pelos argumentos atuais passados à função.</p>
 
-<p>No exemplo acima, <code>theArgs</code> irá coletar o terceiro argumento da função (porquê o primeiro é mapeado para <code>a</code>, e o segundo para <code>b</code>) e assim por diante em todos os argumentos consecutivos.</p>
+<p>No exemplo acima, <code>theArgs</code> irá coletar o terceiro argumento da função (porquê o primeiro é mapeado para <code>a</code>, e o segundo para <code>b</code>) e assim por diante em todos os argumentos consecutivos.</p>
 
-<h3 id="Diferença_entre_rest_parameters_e_arguments_object">Diferença entre <em>rest parameters</em> e <em><code>arguments</code> object</em></h3>
+<h3 id="Diferença_entre_rest_parameters_e_arguments_object">Diferença entre <em>rest parameters</em> e <em><code>arguments</code> object</em></h3>
 
-<p>Há três diferenças principais entre <em>rest parameters</em> e os <a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments" title="arguments"><code>arguments</code></a> objects:</p>
+<p>Há três diferenças principais entre <em>rest parameters</em> e os <a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments" title="arguments"><code>arguments</code></a> objects:</p>
 
 <ul>
- <li><em>rest parameters</em> são os únicos que não foram atribuidos a um nome separado, enquanto os <code>arguments</code> object contêm todos os argumentos passados para a função;</li>
- <li>o objeto <code>arguments</code> não é um array, enquanto  rest parameters são instâncias <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array" title="Array"><code>Array</code></a>,  isso significa que métodos como <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" title="Array sort method"><code>sort</code></a>, <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map" title="Array map method"><code>map</code></a>, <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" title="Array forEach method"><code>forEach</code></a> ou <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" title="Array pop method"><code>pop</code></a> podem ser aplicados diretamente;</li>
- <li> o objeto <code>arguments</code> possui a funcionalidade adicional de especificar ele mesmo (como a propriedade <code>callee</code>). </li>
+ <li><em>rest parameters</em> são os únicos que não foram atribuidos a um nome separado, enquanto os <code>arguments</code> object contêm todos os argumentos passados para a função;</li>
+ <li>o objeto <code>arguments</code> não é um array, enquanto  rest parameters são instâncias <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array" title="Array"><code>Array</code></a>,  isso significa que métodos como <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" title="Array sort method"><code>sort</code></a>, <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map" title="Array map method"><code>map</code></a>, <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" title="Array forEach method"><code>forEach</code></a> ou <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" title="Array pop method"><code>pop</code></a> podem ser aplicados diretamente;</li>
+ <li> o objeto <code>arguments</code> possui a funcionalidade adicional de especificar ele mesmo (como a propriedade <code>callee</code>). </li>
 </ul>
 
 <h3 id="De_arguments_para_array">De arguments para array</h3>
 
-<p>Rest parameters foram criados para reduzir o <span id="result_box" lang="pt"><span>código padrão</span> <span>que</span> <span>foi induzida</span> <span>pelos argumentos</span></span></p>
+<p>Rest parameters foram criados para reduzir o <span id="result_box" lang="pt"><span>código padrão</span> <span>que</span> <span>foi induzida</span> <span>pelos argumentos</span></span></p>
 
 <pre class="brush: js">// Antes rest parameters, o seguinte codigo pode ser encontrado
 function f(a, b){
@@ -50,7 +50,7 @@ function(a, b, ...args) {
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<p>Como  <code>theArgs</code> é um array, você pode pegar número de elementos usando a propriedade <code>length</code>:</p>
+<p>Como  <code>theArgs</code> é um array, você pode pegar número de elementos usando a propriedade <code>length</code>:</p>
 
 <pre class="brush: js">function fun1(...theArgs) {
   console.log(theArgs.length);
@@ -112,59 +112,7 @@ console.log(sortArguments(5,3,7,1));
 
 <h2 id="Compatibilidade">Compatibilidade</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(47)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("15.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(45)}}</td>
-   <td>{{CompatGeckoMobile("15.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(47)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.functions.rest_parameters")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

@@ -350,7 +350,7 @@ Rappelons brièvement comment nous utilisons les tableaux de données. Un tablea
 
 Mais que faire si vous ne pouvez pas créer ces associations visuelles ? Comment pouvez-vous lire un tableau comme celui ci-dessus ? Les personnes malvoyantes utilisent souvent un lecteur d'écran qui leur lit les informations des pages web. Ce n'est pas un problème quand vous lisez du texte brut, mais l'interprêtation d'un tableau peut constituer un défi pour une personne aveugle. Néanmoins, avec le balisage approprié, nous pouvons remplacer des associations visuelles par des associations programmées.
 
-> **Note :** Il y a environ 253 millions de personnes vivant avec des déficiences visuelles selon les  [données de l'OMS en 2017](http://www.who.int/mediacentre/factsheets/fs282/fr/ "Vision Impairment Data").
+> **Note :** Il y a environ 253 millions de personnes vivant avec des déficiences visuelles selon les  [données de l'OMS en 2017](http://www.who.int/mediacentre/factsheets/fs282/fr/).
 
 Cette partie de l'article indique des techniques avancées pour rendre les tableaux les plus accessibles possible.
 

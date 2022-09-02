@@ -14,7 +14,7 @@ Une méthode de saisie (IME pour Input Method Editor) est un programme qui perme
 
 ## Voir aussi
 
-1. Wikipedia articles
+1. Articles Wikipédia
 
     1. [Méthode d'entrée](https://fr.wikipedia.org/wiki/M%C3%A9thode_d%27entr%C3%A9e)
 

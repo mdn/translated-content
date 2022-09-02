@@ -25,11 +25,11 @@ var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
 //Des arrays en JavaScript peuvent contenir différents types de données, comme indiqué ci-dessus.
 ```
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 
-- {{Interwiki("wikipedia","Tableau_(structure_de_données)","Array")}} on Wikipedia
+- [Tableau (structure de données)](https://fr.wikipedia.org/wiki/Tableau_(structure_de_donn%C3%A9es)) sur Wikipédia
 
 ### Informations techniques
 

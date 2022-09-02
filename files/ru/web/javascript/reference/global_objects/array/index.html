@@ -10,9 +10,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array
 ---
 <div>{{JSRef("Global_Objects", "Array")}}</div>
 
-<div> </div>
+<div> </div>
 
-<p>Массив (<strong><code>Array</code></strong>) в JavaScript является глобальным объектом, который используется для создания массивов; которые представляют собой высокоуровневые спископодобные объекты.</p>
+<p>Массив (<strong><code>Array</code></strong>) в JavaScript является глобальным объектом, который используется для создания массивов; которые представляют собой высокоуровневые спископодобные объекты.</p>
 
 <p><strong>Создание массива</strong></p>
 
@@ -31,10 +31,10 @@ var last = fruits[fruits.length - 1];
 // Банан
 </pre>
 
-<p><strong>Итерирование по массиву</strong></p>
+<p><strong>Итерирование по массиву</strong></p>
 
 <pre class="brush: js">fruits.forEach(function(item, index, array) {
-  console.log(item, index);
+  console.log(item, index);
 });
 // Яблоко 0
 // Банан 1
@@ -46,13 +46,13 @@ var last = fruits[fruits.length - 1];
 // ["Яблоко", "Банан", "Апельсин"]
 </pre>
 
-<p><strong>Удаление последнего элемента массива</strong></p>
+<p><strong>Удаление последнего элемента массива</strong></p>
 
 <pre class="brush: js">var last = fruits.pop(); // удалим Апельсин (из конца)
 // ["Яблоко", "Банан"];
 </pre>
 
-<p><strong>Удаление первого элемента массива</strong></p>
+<p><strong>Удаление первого элемента массива</strong></p>
 
 <pre class="brush: js">var first = fruits.shift(); // удалим Яблоко (из начала)
 // ["Банан"];
@@ -97,7 +97,7 @@ console.log(vegetables);
 console.log(removedItems);
 // ["Репа", "Редиска"]</pre>
 
-<p><strong>Создание копии массива</strong></p>
+<p><strong>Создание копии массива</strong></p>
 
 <pre class="brush: js">var shallowCopy = fruits.slice(); // так можно создать копию массива
 // ["Клубника", "Манго"]
@@ -113,7 +113,7 @@ new Array(<var>arrayLength</var>)</code></pre>
  <dt><code>element<em>N</em></code></dt>
  <dd>Массив в JavaScript инициализируется с помощью переданных элементов, за исключением случая, когда в конструктор <code>Array</code> передаётся один аргумент и этот аргумент является числом (см. ниже). Стоит обратить внимание, что этот особый случай применяется только к JavaScript-массивам, создаваемым с помощью конструктора <code>Array</code>, а не к литеральным массивам, создаваемым с использованием скобочного синтаксиса.</dd>
  <dt><code>arrayLength</code></dt>
- <dd>Если конструктору <code>Array</code> передаётся единственный аргумент, являющийся целым числом в диапазоне от 0 до 2<sup>32</sup>-1 (включительно), будет возвращён новый пустой JavaScript-массив, длина которого установится в это число (<strong>примечание</strong>: это означает массив, содержащий <code>arrayLength</code> пустых ячеек, а не ячеек со значениями <code>undefined</code>). Если аргументом будет любое другое число, возникнет исключение {{jsxref("Global_Objects/RangeError", "RangeError")}}.</dd>
+ <dd>Если конструктору <code>Array</code> передаётся единственный аргумент, являющийся целым числом в диапазоне от 0 до 2<sup>32</sup>-1 (включительно), будет возвращён новый пустой JavaScript-массив, длина которого установится в это число (<strong>примечание</strong>: это означает массив, содержащий <code>arrayLength</code> пустых ячеек, а не ячеек со значениями <code>undefined</code>). Если аргументом будет любое другое число, возникнет исключение {{jsxref("Global_Objects/RangeError", "RangeError")}}.</dd>
 </dl>
 
 <h2 id="Description">Описание</h2>
@@ -132,7 +132,7 @@ console.log(arr[1]);              // напечатает 'второй элем
 console.log(arr[arr.length - 1]); // напечатает 'последний элемент'
 </pre>
 
-<p>Элементы массива являются свойствами, точно такими же, как, например, свойство <code>toString</code>, однако попытка получить элемент массива по имени его свойства приведёт к синтаксической ошибке, поскольку имя свойства не является допустимым именем JavaScript:</p>
+<p>Элементы массива являются свойствами, точно такими же, как, например, свойство <code>toString</code>, однако попытка получить элемент массива по имени его свойства приведёт к синтаксической ошибке, поскольку имя свойства не является допустимым именем JavaScript:</p>
 
 <pre class="brush: js">console.log(arr.0); // синтаксическая ошибка
 </pre>
@@ -262,7 +262,7 @@ var myArray = myRe.exec('cdbBdbsbz');
  <dt>{{jsxref("Array.observe()")}} {{experimental_inline}}</dt>
  <dd>Асинхронно наблюдает за изменениями в массиве, подобно методу {{jsxref("Object.observe()")}} для объектов. Метод предоставляет поток изменений в порядке их возникновения.</dd>
  <dt>{{jsxref("Array.of()")}} {{experimental_inline}}</dt>
- <dd>Создаёт новый экземпляр <code>Array</code> из любого количества аргументов, независимо от их количества или типа.</dd>
+ <dd>Создаёт новый экземпляр <code>Array</code> из любого количества аргументов, независимо от их количества или типа.</dd>
 </dl>
 
 <h2 id="Array_instances">Экземпляры массива</h2>
@@ -309,7 +309,7 @@ if (Array.prototype.every.call(str, isLetter)) {
 
 <p>{{jsxref("Global_Objects/String", "Общие методы", "#String_generic_methods", 1)}} также доступны для объекта {{jsxref("Global_Objects/String", "String")}}.</p>
 
-<p>В настоящее время они не являются частью стандартов ECMAScript (хотя в ES2015 для достижения поставленной цели можно использовать <a href="https://github.com/monolithed/ECMAScript-6"><code>Array.from()</code></a>). Следующая прослойка позволяет использовать их во всех браузерах:</p>
+<p>В настоящее время они не являются частью стандартов ECMAScript (хотя в ES2015 для достижения поставленной цели можно использовать <a href="https://github.com/monolithed/ECMAScript-6"><code>Array.from()</code></a>). Следующая прослойка позволяет использовать их во всех браузерах:</p>
 
 <pre class="brush: js">// Предполагаем, что дополнения массива уже присутствуют (для них так же можно использовать polyfill'ы)
 (function() {
@@ -411,7 +411,7 @@ r,n,b,q,k,b,n,r
 
 <p>{{Compat}}</p>
 
-<div> </div>
+<div> </div>
 
 <h2 id="See_also">Смотрите также</h2>
 

@@ -1,11 +1,6 @@
 ---
 title: Node.getRootNode()
 slug: Web/API/Node/getRootNode
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Node.getRootNode
-translation_of: Web/API/Node/getRootNode
 ---
 {{APIRef("DOM")}}
 

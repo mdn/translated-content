@@ -1,7 +1,6 @@
 ---
 title: Ligature
 slug: Glossary/Ligature
-translation_of: Glossary/Ligature
 ---
 “连字”是指将两个字符组合后变为一个形状，像是法语中的“œ” 就是“oe”的连字。
 
@@ -9,4 +8,4 @@ translation_of: Glossary/Ligature
 
 ## 参见
 
-- {{interwiki("wikipedia", "Typographic ligature", "Ligature")}} on Wikipedia
+- [Ligature](https://zh.wikipedia.org/wiki/Typographic_ligature) on Wikipedia

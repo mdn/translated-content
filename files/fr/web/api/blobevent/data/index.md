@@ -24,13 +24,11 @@ associatedBlob = BlobEvent.data
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                                       | Commentaire          |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('MediaStream Recording', '#widl-BlobEvent-data', 'BlobEvent.data')}} | {{Spec2('MediaStream Recording')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.BlobEvent.data")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 ---
 {{JSRef}}
 
-**`Intl.NumberFormat`**은 언어에 맞는 숫자 서식을 지원하는 객체의 생성자입니다.
+**`Intl.NumberFormat`**은 언어에 맞는 숫자 서식을 지원하는 객체의 생성자입니다.
 
 {{EmbedInteractiveExample("pages/js/intl-numberformat.html")}}
 
@@ -85,7 +85,7 @@ console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
 
 ### `options` 사용
 
-`options` 매개변수를 지정해 결과를 원하는 형태로 바꿀 수 있습니다.
+`options` 매개변수를 지정해 결과를 원하는 형태로 바꿀 수 있습니다.
 
 ```js
 var number = 123456.789;

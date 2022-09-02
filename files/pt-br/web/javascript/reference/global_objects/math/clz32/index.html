@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/clz32
 
 <div>{{EmbedInteractiveExample("pages/js/math-clz32.html")}}</div>
 
-<p class="hidden">A fonte para esse exemplo interativo está armazenado em um GitHub repositório. Se você desejar contribuir com o projeto de exemplos interativos, por favor clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> e nos enie um pull request.</p>
+<p class="hidden">A fonte para esse exemplo interativo está armazenado em um GitHub repositório. Se você desejar contribuir com o projeto de exemplos interativos, por favor clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> e nos enie um pull request.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/clz32
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>"<code>clz32</code>" é short para<code>CountLeadingZeroes32</code>.</p>
+<p>"<code>clz32</code>" é short para<code>CountLeadingZeroes32</code>.</p>
 
 <p>Se x não for um número, ele será convertido em um número primeiro e depois convertido em um número inteiro não assinado de 32 bits.</p>
 
@@ -88,11 +88,11 @@ function ctrz(integer){ // contar zeros à direita
     return 32 - clz(~integer) |0; // `|0`garante coerção inteira
 }
 function ctron(integer){ // conta os que estão à direita
-     // Nenhum operador shift-fill-in-with-ones está disponível em
-     // JavaScript, portanto, o código abaixo é o mais rápido
+     // Nenhum operador shift-fill-in-with-ones está disponível em
+     // JavaScript, portanto, o código abaixo é o mais rápido
     return ctrz(~integer);
 / * Implementação alternativa para fins demonstrativos:
-        // 1. apaga todos os bits mais altos após o primeiro zero
+        // 1. apaga todos os bits mais altos após o primeiro zero
        integer &amp;= (integer &lt;&lt; 16) | 0xffff;
        integer &amp;= (integer &lt;&lt; 8 ) | 0x00ff;
        integer &amp;= (integer &lt;&lt; 4 ) | 0x000f;
@@ -122,7 +122,7 @@ function ctron(integer){ // conta os que estão à direita
         return 32 - clz(~integer) |0;
     }
     function ctron(integer) { //contar os últimos
-        integer = integer | 0; // coagir a um número inteiro
+        integer = integer | 0; // coagir a um número inteiro
         return ctrz(~integer) |0;
     }
 // infelizmente, o ASM.JS exige objetos compactos lentos:
@@ -138,9 +138,9 @@ var ctron = countTrailsMethods.b;</pre>
 <pre class="brush: js notranslate">if (!Math.clz32) Math.clz32 = (function(log, LN2){
   return function(x) {
  // Seja n ToUint32 (x).
-     // Seja p o número de zero bits iniciais em
-     // a representação binária de 32 bits de n.
-     // Retornar p.
+     // Seja p o número de zero bits iniciais em
+     // a representação binária de 32 bits de n.
+     // Retornar p.
     var asUint = x &gt;&gt;&gt; 0;
     if (asUint === 0) {
       return 32;

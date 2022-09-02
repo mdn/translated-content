@@ -1,13 +1,6 @@
 ---
 title: ProgressEvent.lengthComputable
 slug: Web/API/ProgressEvent/lengthComputable
-tags:
-  - API
-  - 進捗イベント
-  - ProgressEvent
-  - プロパティ
-browser-compat: api.ProgressEvent.lengthComputable
-translation_of: Web/API/ProgressEvent/lengthComputable
 ---
 {{APIRef("DOM Events")}}
 

@@ -31,14 +31,11 @@ Voir {{domxref("WebGLShader")}} pour l'utilisation et des exemples.
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                               | Commentaire          |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('WebGL', "#5.14.9", "createShader")}}                             | {{Spec2('WebGL')}}             | Définition initiale. |
-| {{SpecName('OpenGL ES 2.0', "glCreateShader.xml", "glCreateShader")}} | {{Spec2('OpenGL ES 2.0')}} | Page man OpenGL.     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.createShader")}}
+{{Compat}}
 
 ## Voir aussi
 

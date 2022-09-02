@@ -1,10 +1,6 @@
 ---
 title: 陣列
 slug: Glossary/array
-tags:
-  - 術語表
-  - 陣列
-translation_of: Glossary/array
 ---
 陣列是個有序資料的集合（按程式語言不同，資料型態可以是{{Glossary("primitive","原始型別")}}或{{Glossary("object","物件")}}）。陣列是用來把複數的值存進一個變數裡。與只能存一個值的變數，呈現強烈的對比。
 
@@ -22,7 +18,7 @@ var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
 
 ### 常規知識
 
-- 維基百科的{{Interwiki("wikipedia", "陣列")}}
+- 維基百科的[陣列](https://zh.wikipedia.org/wiki/陣列)
 
 ### 技術參考
 

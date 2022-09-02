@@ -5,7 +5,7 @@ translation_of: Web/API/WebGLRenderingContext/bindTexture
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><strong><code>WebGLRenderingContext.bindTexture()</code></strong> метод <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> связывает {{domxref("WebGLTexture")}} с <code>target</code>.</p>
+<p><strong><code>WebGLRenderingContext.bindTexture()</code></strong> метод <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> связывает {{domxref("WebGLTexture")}} с <code>target</code>.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -16,7 +16,7 @@ translation_of: Web/API/WebGLRenderingContext/bindTexture
 
 <dl>
  <dt>target</dt>
- <dd>{{domxref("GLenum")}} указывает тип объекта <code>texture</code> для связывания. Возможные значения:
+ <dd>{{domxref("GLenum")}} указывает тип объекта <code>texture</code> для связывания. Возможные значения:
  <ul>
   <li><code>gl.TEXTURE_2D</code>: двухмерная текстура.</li>
   <li><code>gl.TEXTURE_CUBE_MAP</code>: кубическая текстура.</li>
@@ -38,7 +38,7 @@ translation_of: Web/API/WebGLRenderingContext/bindTexture
 
 <h3 id="Исключения">Исключения</h3>
 
-<p><code>gl.INVALID_ENUM</code> исключение если <code>target</code> не<code>gl.TEXTURE_2D</code>, <code>gl.TEXTURE_CUBE_MAP</code>, <code>gl.TEXTURE_3D</code>, или <code>gl.TEXTURE_2D_ARRAY</code>.</p>
+<p><code>gl.INVALID_ENUM</code> исключение если <code>target</code> не<code>gl.TEXTURE_2D</code>, <code>gl.TEXTURE_CUBE_MAP</code>, <code>gl.TEXTURE_3D</code>, или <code>gl.TEXTURE_2D_ARRAY</code>.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
@@ -53,7 +53,7 @@ gl.bindTexture(gl.TEXTURE_2D, texture);
 
 <h3 id="Получить_текущую_привязку">Получить текущую привязку</h3>
 
-<p>Для проверки текущей привязки текстуры, вызовите<code>gl.TEXTURE_BINDING_2D</code> или <code>gl.TEXTURE_BINDING_CUBE_MAP</code>.</p>
+<p>Для проверки текущей привязки текстуры, вызовите<code>gl.TEXTURE_BINDING_2D</code> или <code>gl.TEXTURE_BINDING_CUBE_MAP</code>.</p>
 
 <pre class="brush: js">gl.getParameter(gl.TEXTURE_BINDING_2D);
 </pre>

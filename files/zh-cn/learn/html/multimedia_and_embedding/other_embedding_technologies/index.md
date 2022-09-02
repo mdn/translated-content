@@ -1,7 +1,6 @@
 ---
 title: 从对象到 iframe - 其他嵌入技术
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
-translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
 
@@ -53,7 +52,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 
 一小段时间之后（20 世纪 90 年代末，21 世纪初），插件技术变得非常受欢迎，例如 [Java Applet](/zh-CN/docs/Glossary/Java) 和
 [Flash](/zh-CN/docs/Glossary/Adobe_Flash)——这些技术允许网络开发者将丰富的内容嵌入到网页中，例如视频和动画等，这些内容不能通过 HTML
-单独实现。嵌入这些技术是通过诸如 [`<object>`](/zh-CN/docs/Web/HTML/Element/object) 和较少使用的 [`<embed>`](/zh-CN/docs/Web/HTML/Element/embed) 元素来实现的，当时它们非常有用。由于许多问题，包括可访问性、安全性、文件大小等，它们已经过时了; 如今，大多数移动设备不再支持这些插件，桌面端也逐渐不再支持。
+单独实现。嵌入这些技术是通过诸如 [`<object>`](/zh-CN/docs/Web/HTML/Element/object) 和较少使用的 [`<embed>`](/zh-CN/docs/Web/HTML/Element/embed) 元素来实现的，当时它们非常有用。由于许多问题，包括无障碍、安全性、文件大小等，它们已经过时了; 如今，大多数移动设备不再支持这些插件，桌面端也逐渐不再支持。
 
 最后，[`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe) 元素出现了（连同其他嵌入内容的方式，如
 [`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas)、[`<video>`](/zh-CN/docs/Web/HTML/Element/video) 等），它提供了一种将整个 web
@@ -66,18 +65,18 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 在这篇文章中，我们将直接进入自主学习部分，让你立即体会到嵌入技术的实用性。大家都非常熟悉[Youtube](https://www.youtube.com/)，但很多人不了解它所提供的一些分享功能。让我们来看看
 Youtube 如何让我们通过[`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe)在页面中嵌入喜欢的视频。
 
-1.  首先，去 Youtube 找一个喜欢的视频。
-2.  在视频下方，你会看到一个*共享*按钮 - 点击查看共享选项。
-3.  选择“ *嵌入”*选项卡，你将得到一些 `<iframe>` 代码——复制一下。
-4.  粘贴到下面的*输入*框里，看看*输出*结果是什么。
+1. 首先，去 Youtube 找一个喜欢的视频。
+2. 在视频下方，你会看到一个*共享*按钮 - 点击查看共享选项。
+3. 选择“ *嵌入”*选项卡，你将得到一些 `<iframe>` 代码——复制一下。
+4. 粘贴到下面的*输入*框里，看看*输出*结果是什么。
 
 此外，你还可以试试在示例中嵌入 [Google 地图](https://www.google.com/maps/)：
 
-1.  去 Google 地图找一个喜欢的地图。
-2.  点击 UI 左上角的“汉堡菜单”（三条水平线）。
-3.  选择*共享或嵌入地图*选项。
-4.  选择嵌入地图选项，这将给你一些`<iframe>`代码 - 复制一下。
-5.  粘贴到下面的*输入*框，看看*输出*结果是什么。
+1. 去 Google 地图找一个喜欢的地图。
+2. 点击 UI 左上角的“汉堡菜单”（三条水平线）。
+3. 选择*共享或嵌入地图*选项。
+4. 选择嵌入地图选项，这将给你一些`<iframe>`代码 - 复制一下。
+5. 粘贴到下面的*输入*框，看看*输出*结果是什么。
 
 如果你犯了某些错误，你可以点击 _Reset_ 按钮以重置编辑器。如果你确实被卡住了， 按下 _Show solution_ 按钮以借鉴答案。
 
@@ -112,7 +111,7 @@ Youtube 如何让我们通过[`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe)�
   - : 如果设置为 1，则会告诉浏览器在此框架和其他框架之间绘制边框，这是默认行为。0 删除边框。不推荐这样设置，因为在 [CSS
     中](/zh-CN/docs/Glossary/CSS)可以更好地实现相同的效果。[`border`](/zh-CN/docs/Web/CSS/border)`: none;`
 - [`src`](/zh-CN/docs/Web/HTML/Element/iframe#attr-src)
-  - : 该属性与 [`<video>`](/zh-CN/docs/Web/HTML/Element/video)/[` 元素表示文档中的图像。"><img>`](/zh-CN/docs/Web/HTML/Element/img)一样包含指向要嵌入文档的
+  - : 该属性与 [`<video>`](/zh-CN/docs/Web/HTML/Element/video) / 元素表示文档中的图像。[`<img>`](/zh-CN/docs/Web/HTML/Element/img)一样包含指向要嵌入文档的
     URL 路径。
 - [`width`](/zh-CN/docs/Web/HTML/Element/iframe#attr-width) 和 [`height`](/zh-CN/docs/Web/HTML/Element/iframe#attr-height)
   - : 这些属性指定你想要的 iframe 的宽度和高度。
@@ -161,8 +160,8 @@ CC-BY-SA 下许可的](/zh-CN/docs/MDN/About#版权和许可)，这意味着，�
 [HTTPS](/zh-CN/docs/Glossary/HTTPS) 是 [HTTP](/zh-CN/docs/Glossary/HTTP) 的加密版本。你应该尽可能使用 HTTPS
 为你的网站提供服务：
 
-1.  HTTPS 减少了远程内容在传输过程中被篡改的机会，
-2.  HTTPS 防止嵌入式内容访问你的父文档中的内容，反之亦然。
+1. HTTPS 减少了远程内容在传输过程中被篡改的机会，
+2. HTTPS 防止嵌入式内容访问你的父文档中的内容，反之亦然。
 
 使用 HTTPS 需要一个安全证书，这可能是昂贵的（尽管 [Let's Encrypt](https://letsencrypt.org/) 让这件事变得更容易），如果你没有，可以使用 HTTP
 来为你的父文档提供服务。但是，由于 HTTPS 的第二个好处，_无论成本如何，你绝对不能使用 HTTP 嵌入第三方内容_（在最好的情况下，你的用户的 Web 浏览器会给他们一个可怕的警告）。所有有声望的公司，例如
@@ -238,7 +237,7 @@ Flash 影片的示例（请参阅此处的[Github](https://mdn.github.io/learnin
 </object>
 ```
 
-PDF 是纸与数据之间重要的阶梯，但它们[在可访问性上有些问题](https://webaim.org/techniques/acrobat/acrobat)[，](https://webaim.org/techniques/acrobat/acrobat)并且可能难以在小屏幕上阅读。它们在一些圈子中仍然受欢迎，我们最好是用链接指向它们，而不是将其嵌入到网页中，以便它们可以在单独的页面上被下载或被阅读。
+PDF 是纸与数据之间重要的阶梯，但它们[在无障碍上有些问题](https://webaim.org/techniques/acrobat/acrobat)[，](https://webaim.org/techniques/acrobat/acrobat)并且可能难以在小屏幕上阅读。它们在一些圈子中仍然受欢迎，我们最好是用链接指向它们，而不是将其嵌入到网页中，以便它们可以在单独的页面上被下载或被阅读。
 
 ### 针对插件的情况
 
@@ -246,7 +245,7 @@ PDF 是纸与数据之间重要的阶梯，但它们[在可访问性上有些问
 技术已经变得更加强大，那些日子已经结束了。对于大多数应用程序，现在是停止依赖插件传播内容，开始利用 Web 技术的时候了。
 
 - **扩大你对大家的影响力**。每个人都有一个浏览器，但插件越来越少，特别是在移动用户中。由于 Web 在很大程度上不需要依赖插件而运行，所以人们宁愿只是去竞争对手的网站而不是安装插件。
-- **从 Flash 和其他插件附带的[额外的可访问性问题](https://webaim.org/techniques/flash/)中摆脱**。
+- **从 Flash 和其他插件附带的[额外的无障碍问题](https://webaim.org/techniques/flash/)中摆脱**。
 - **避免额外的安全隐患**。即使经过无数次补丁[，](http://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53) Adobe Flash 也是[非常不安全的](http://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53)。2015
   年，Facebook 的首席安全官 Alex Stamos 甚至[要求 Adobe 停止
   Flash。](http://www.theverge.com/2015/7/13/8948459/adobe-flash-insecure-says-facebook-cso)

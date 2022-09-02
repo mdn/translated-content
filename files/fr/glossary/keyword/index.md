@@ -17,4 +17,4 @@ Lorsque vous utilisez un moteur de recherche, les mots-clés désignent ce que v
 
 ### **Culture générale**
 
-- {{interwiki("wikipedia", "Mot_clef", "Mot-clé")}} sur Wikipédia
+- [Mot-clé](https://fr.wikipedia.org/wiki/Mot_cl%C3%A9) sur Wikipédia

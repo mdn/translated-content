@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Statements/for...of
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p>O loop <strong><code>for...of</code></strong> percorre <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/iterable">objetos iterativos</a> (incluindo {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, o objeto <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments">arguments</a> e assim por diante), chamando uma função personalizada com instruções a serem executadas para o valor de cada objeto distinto.</p>
+<p>O loop <strong><code>for...of</code></strong> percorre <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/iterable">objetos iterativos</a> (incluindo {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, o objeto <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments">arguments</a> e assim por diante), chamando uma função personalizada com instruções a serem executadas para o valor de cada objeto distinto.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -40,7 +40,7 @@ for (let value of iterable) {
 // 20
 // 30</code></pre>
 
-<p>Ao invés de <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a>, você pode usar <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a> se você não for modificar a variável dentro do bloco.</p>
+<p>Ao invés de <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a>, você pode usar <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a> se você não for modificar a variável dentro do bloco.</p>
 
 <pre><code>let iterable = [10, 20, 30];
 
@@ -101,7 +101,7 @@ for (let value of iterable) {
 // 2
 // 3</code></pre>
 
-<h3 id="Iterando_sobre_um_objeto_arguments">Iterando sobre um objeto <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments">arguments</a></h3>
+<h3 id="Iterando_sobre_um_objeto_arguments">Iterando sobre um objeto <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments">arguments</a></h3>
 
 <pre><code>(function() {
   for (let argument of arguments) {
@@ -115,7 +115,7 @@ for (let value of iterable) {
 
 <h3 id="Iterando_sobre_uma_coleção_do_DOM">Iterando sobre uma coleção do DOM</h3>
 
-<p>Iterar sobre uma coleção do DOM como {{domxref("NodeList")}}: o seguinte exemplo adiciona uma classe <code>read</code> aos parágrafos que são descendentes diretos de uma tag <code>article</code>:</p>
+<p>Iterar sobre uma coleção do DOM como {{domxref("NodeList")}}: o seguinte exemplo adiciona uma classe <code>read</code> aos parágrafos que são descendentes diretos de uma tag <code>article</code>:</p>
 
 <pre><code>// Nota: Isso irá funcionar somente em plataformas que tem
 // suporte ao NodeList.prototype[Symbol.iterator]
@@ -127,7 +127,7 @@ for (let paragraph of articleParagraphs) {
 
 <h3 id="Iterando_sobre_generators">Iterando sobre generators</h3>
 
-<p>Você pode também iterar sobre <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*">generators</a>:</p>
+<p>Você pode também iterar sobre <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*">generators</a>:</p>
 
 <pre><code>function* fibonacci() { // uma função geradora (generator)
   let [prev, curr] = [1, 1];
@@ -147,7 +147,7 @@ for (let n of fibonacci()) {
 
 <h4 id="Não_reuse_generators">Não reuse generators</h4>
 
-<p>Generators não devem ser re-usados, mesmo se o loop <code>for...of</code> for terminado precocemente, por exemplo através da palavra-chave {{jsxref("Statements/break", "break")}}. Enquanto em um loop ativo, o generator é fechado e tentar iterar novamente sobre ele não produz (yield) nenhum resultado adicional. O Firefox ainda não implementou este comportamento (o generator pode ser reutilizado, violando o padrão do ES2015 (<a href="https://www.ecma-international.org/ecma-262/6.0/#sec-13.7.5.13">13.7.5.13, step 5m</a>), mas isso irá mudar uma vez que o {{Bug(1147371)}} for resolvido.</p>
+<p>Generators não devem ser re-usados, mesmo se o loop <code>for...of</code> for terminado precocemente, por exemplo através da palavra-chave {{jsxref("Statements/break", "break")}}. Enquanto em um loop ativo, o generator é fechado e tentar iterar novamente sobre ele não produz (yield) nenhum resultado adicional. O Firefox ainda não implementou este comportamento (o generator pode ser reutilizado, violando o padrão do ES2015 (<a href="https://www.ecma-international.org/ecma-262/6.0/#sec-13.7.5.13">13.7.5.13, step 5m</a>), mas isso irá mudar uma vez que o {{Bug(1147371)}} for resolvido.</p>
 
 <pre><code>var gen = (function *(){
   yield 1;
@@ -167,7 +167,7 @@ for (let o of gen) {
 
 <h3 id="Iterando_sobre_outros_objetos_iteráveis">Iterando sobre outros objetos iteráveis</h3>
 
-<p>Você pode também iterar sobre um objeto que implementa explicitamente um protocolo <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterable">iterável</a> protocol:</p>
+<p>Você pode também iterar sobre um objeto que implementa explicitamente um protocolo <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterable">iterável</a> protocol:</p>
 
 <pre><code>var iterable = {
   [Symbol.iterator]() {
@@ -190,13 +190,13 @@ for (var value of iterable) {
 // 1
 // 2</code></pre>
 
-<h3 id="Diferença_entre_for...of_e_for...in">Diferença entre <code>for...of</code> e <code>for...in</code></h3>
+<h3 id="Diferença_entre_for...of_e_for...in">Diferença entre <code>for...of</code> e <code>for...in</code></h3>
 
-<p>O loop <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> irá iterar sobre todas as propriedades enumeráveis de um objeto.</p>
+<p>O loop <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> irá iterar sobre todas as propriedades enumeráveis de um objeto.</p>
 
-<p>A sintaxe do <code>for...of</code> é específica para <strong>coleções</strong>, ao invés de todos os objetos. Ela irá iterar desta maneira sobre os elementos de qualquer coleção que tiver uma propriedade <code>[Symbol.iterator]</code>.</p>
+<p>A sintaxe do <code>for...of</code> é específica para <strong>coleções</strong>, ao invés de todos os objetos. Ela irá iterar desta maneira sobre os elementos de qualquer coleção que tiver uma propriedade <code>[Symbol.iterator]</code>.</p>
 
-<p>O exemplo a seguir mostra a diferença entre um loop <code>for...of</code> e um loop <code>for...in</code>.</p>
+<p>O exemplo a seguir mostra a diferença entre um loop <code>for...of</code> e um loop <code>for...in</code>.</p>
 
 <pre><code>Object.prototype.objCustom = function () {};
 Array.prototype.arrCustom = function () {};
@@ -229,70 +229,18 @@ for (let i of iterable) {
   <tr>
    <td>{{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'for...of statement')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidade</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Edge</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Funções básicas</td>
-   <td>{{CompatChrome(38)}} [1]</td>
-   <td>{{CompatGeckoDesktop("13")}} [2]</td>
-   <td>12</td>
-   <td>25</td>
-   <td>7.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidade</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Funções básicas</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(38)}} [1]</td>
-   <td>{{CompatGeckoMobile("13")}} [2]</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>8</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Do Chrome 29 ao Chrome 37 essa funcionalidade estava disponível através de uma configuração. Em chrome://flags/#enable-javascript-harmony, habilite a função “Enable Experimental JavaScript”.</p>
-
-<p>[2] Do Gecko 17 (Firefox 17 / Thunderbird 17 / SeaMonkey 2.14) ao Gecko 26 (Firefox 26 / Thunderbird 26 / SeaMonkey 2.23 / Firefox OS 1.2) a propriedade i<code>terator</code> era usada (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=907077">bug 907077</a>), e do Gecko 27 ao Gecko 35 o placeholder <code>"@@iterator"</code> era usado. No Gecko 36 (Firefox 36 / Thunderbird 36 / SeaMonkey 2.33), o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">símbolo</a> <code>@@iterator</code> foi implementada (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=918828">bug 918828</a>).</p>
+{{Compat("javascript.statements.for_of")}}
 
 <h2 id="Consulte_também">Consulte também</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for_each...in">for each...in</a> - uma declaração similar, mas que itera entre os valores dos atributos de um objeto, ao invés dos seus nomes (obsoleto).</li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for_each...in">for each...in</a> - uma declaração similar, mas que itera entre os valores dos atributos de um objeto, ao invés dos seus nomes (obsoleto).</li>
  <li>{{jsxref("Array.prototype.forEach()")}}</li>
 </ul>

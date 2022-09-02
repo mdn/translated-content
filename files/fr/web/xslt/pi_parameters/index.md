@@ -125,5 +125,3 @@ Supportées depuis Firefox 2.0.0.1. Dans la version 2, l'attribut **value** est 
 ### Possibilités de développements futurs
 
 Devons-nous autoriser n'importe quelle fonction XSLT dans les expressions&nbsp;? `document()` semble utile, mais il semble difficile de conserver le fait que `generate-id()` devrait produire la même chaîne pour un même document.
-
-Interwiki Language Links

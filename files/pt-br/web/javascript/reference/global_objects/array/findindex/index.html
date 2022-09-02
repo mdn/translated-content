@@ -5,9 +5,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <code><strong>findIndex()</strong></code> retorna o <strong>índice</strong> no array do primeiro elemento que satisfizer a função de teste provida. Caso contrário, retorna -1, indicando que nenhum elemento passou no teste.</p>
+<p>O método <code><strong>findIndex()</strong></code> retorna o <strong>índice</strong> no array do primeiro elemento que satisfizer a função de teste provida. Caso contrário, retorna -1, indicando que nenhum elemento passou no teste.</p>
 
-<p>Veja também o método {{jsxref("Array.find", "find()")}}, que retorna o <strong>valor</strong> de um elemento encontrado no array em vez de seu índice.</p>
+<p>Veja também o método {{jsxref("Array.find", "find()")}}, que retorna o <strong>valor</strong> de um elemento encontrado no array em vez de seu índice.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
   <dt><code>index</code></dt>
   <dd>O índice do elemento atual sendo processado no array.</dd>
   <dt><code>array</code></dt>
-  <dd>O array sobre o qual <code>findIndex</code> foi chamado.</dd>
+  <dd>O array sobre o qual <code>findIndex</code> foi chamado.</dd>
  </dl>
  </dd>
  <dt><code>thisArg</code></dt>
@@ -33,15 +33,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>O método <code>findIndex</code> executa a função <code>callback</code> uma vez para cada elemento presente no array até encontrar um onde o <code>callback</code> retorna um valor verdadeiro. Se tal elemento for encontrado, <code>findIndex</code> imediatamente retorna o índice deste elemento. Caso contrário, <code>findIndex</code> retorna -1. <code>callback</code> é invocado apenas para índices no array que têm valores atribuídos; nunca é invocado para índices que foram deletados ou que nunca tiveram valores atribuídos.</p>
+<p>O método <code>findIndex</code> executa a função <code>callback</code> uma vez para cada elemento presente no array até encontrar um onde o <code>callback</code> retorna um valor verdadeiro. Se tal elemento for encontrado, <code>findIndex</code> imediatamente retorna o índice deste elemento. Caso contrário, <code>findIndex</code> retorna -1. <code>callback</code> é invocado apenas para índices no array que têm valores atribuídos; nunca é invocado para índices que foram deletados ou que nunca tiveram valores atribuídos.</p>
 
-<p><code>callback</code> é invocado com três argumentos: o valor do elemento, o índice do elemento e o objeto Array sendo percorrido.</p>
+<p><code>callback</code> é invocado com três argumentos: o valor do elemento, o índice do elemento e o objeto Array sendo percorrido.</p>
 
-<p>Se um parâmetro <code>thisArg</code> for fornecido para <code>findIndex</code>, ele será usado como o <code>this</code> para cada invocação do <code>callback</code>. Se não for fornecido, então {{jsxref("undefined")}} é usado.</p>
+<p>Se um parâmetro <code>thisArg</code> for fornecido para <code>findIndex</code>, ele será usado como o <code>this</code> para cada invocação do <code>callback</code>. Se não for fornecido, então {{jsxref("undefined")}} é usado.</p>
 
-<p><code>findIndex</code> não modifica o array sobre o qual é chamado.</p>
+<p><code>findIndex</code> não modifica o array sobre o qual é chamado.</p>
 
-<p>A série de elementos processados por <code>findIndex</code> é definida antes da primeira invocação do <code>callback</code>. Elementos que são adicionados ao array depois que a chamada a <code>findIndex</code> começa não serão visitados pelo <code>callback</code>. Se um elemento existente não visitado do array for modificado pelo <code>callback</code>, seu valor passado ao <code>callback</code> será o valor no momento em que <code>findIndex</code> visitar o índice deste elemento; elementos que forem deletados não são visitados.</p>
+<p>A série de elementos processados por <code>findIndex</code> é definida antes da primeira invocação do <code>callback</code>. Elementos que são adicionados ao array depois que a chamada a <code>findIndex</code> começa não serão visitados pelo <code>callback</code>. Se um elemento existente não visitado do array for modificado pelo <code>callback</code>, seu valor passado ao <code>callback</code> será o valor no momento em que <code>findIndex</code> visitar o índice deste elemento; elementos que forem deletados não são visitados.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
@@ -65,7 +65,7 @@ console.log([4, 6, 7, 12].findIndex(isPrime)); // 2
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>Esse método foi adicionado à especificação do ECMAScript 6 e pode não estar disponível em todas as implementações de JavaScript ainda. Contudo, você pode fazer o polyfill de <code>Array.prototype.findIndex</code> com o seguinte trecho de código:</p>
+<p>Esse método foi adicionado à especificação do ECMAScript 6 e pode não estar disponível em todas as implementações de JavaScript ainda. Contudo, você pode fazer o polyfill de <code>Array.prototype.findIndex</code> com o seguinte trecho de código:</p>
 
 <pre class="brush: js notranslate">if (!Array.prototype.findIndex) {
   Array.prototype.findIndex = function(predicate) {

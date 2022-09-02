@@ -11,7 +11,7 @@ translation_of: Web/API/Web_Animations_API
 
 <h2 id="Основные_понятия_и_использование_API">Основные понятия и использование API</h2>
 
-<p>Web Animations API (API веб-анимации) обеспечивает общий язык для браузеров и разработчиков для описания анимации элементов DOM. Для более подробной информации о концепциях, заложенных в API, и о его использовании, прочтите статью <a href="/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API">Использование Web Animations API </a> .</p>
+<p>Web Animations API (API веб-анимации) обеспечивает общий язык для браузеров и разработчиков для описания анимации элементов DOM. Для более подробной информации о концепциях, заложенных в API, и о его использовании, прочтите статью <a href="/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API">Использование Web Animations API </a> .</p>
 
 <h2 id="Интерфейсы_веб-анимации">Интерфейсы веб-анимации</h2>
 
@@ -22,7 +22,7 @@ translation_of: Web/API/Web_Animations_API
  <dt>{{Domxref("Animation")}}</dt>
  <dd>Обеспечивает элементы управления воспроизведением и временную шкалу для узла анимации или источника. Можно взять объект, созданный с помощью {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}} конструктор.</dd>
  <dt>{{Domxref("KeyframeEffect")}}</dt>
- <dd>Описывает наборы анимируемых свойств и значений, называемых  <strong>ключевыми кадрами</strong> и их <a href="/en-US/docs/Web/API/Web_Animations_API/Animation_timing_options">параметры синхронизации </a><strong>. </strong> Они могут затем быть воспроизведены с помощью {{domxref("Animation.Animation", " Animation()")}} конструктор.</dd>
+ <dd>Описывает наборы анимируемых свойств и значений, называемых  <strong>ключевыми кадрами</strong> и их <a href="/en-US/docs/Web/API/Web_Animations_API/Animation_timing_options">параметры синхронизации </a><strong>. </strong> Они могут затем быть воспроизведены с помощью {{domxref("Animation.Animation", " Animation()")}} конструктор.</dd>
  <dt>{{Domxref("AnimationTimeline")}}</dt>
  <dd>Представляет график анимации. Этот интерфейс существует, чтобы определить особенности временной шкалы (наследуемые интерфейсом {{domxref("DocumentTimeline")}} и другими интерфейсами в будущем) и не предназначен для непосредственного использования разработчиками.</dd>
  <dt>{{Domxref("DocumentTimeline")}}</dt>
@@ -37,7 +37,7 @@ translation_of: Web/API/Web_Animations_API
 
 <h2 id="Расширения_для_других_интерфейсов">Расширения для других интерфейсов</h2>
 
-<p>API веб - анимации добавляет некоторые новые функции в <strong style="font-size: 14px; font-weight: 700; line-height: 1.5;">{{domxref("документ")}}</strong> и  <strong style="font-size: 14px; font-weight: 700; line-height: 1.5;">{{domxref("элемент")}}.</strong></p>
+<p>API веб - анимации добавляет некоторые новые функции в <strong style="font-size: 14px; font-weight: 700; line-height: 1.5;">{{domxref("документ")}}</strong> и  <strong style="font-size: 14px; font-weight: 700; line-height: 1.5;">{{domxref("элемент")}}.</strong></p>
 
 <h3 id="Расширения_Documentинтерфейса">Расширения <code>Document</code>интерфейса</h3>
 
@@ -66,7 +66,7 @@ translation_of: Web/API/Web_Animations_API
  <dt>{{Domxref("AnimationEffectReadOnly")}}</dt>
  <dd>Определяет текущие и будущие "Анимационные эффекты" , как {{domxref("KeyframeEffect")}}, который может быть передан {{domxref("Анимация")}} объектов для воспроизведения, и {{domxref("KeyframeEffectReadOnly")}} который используется {{domxref("KeyframeEffect")}} (наследуется <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a> и <a href="/en-US/docs/Web/CSS/CSS_Transitions">Transitions</a> ). Все значения {{domxref("Animation.effect")}} имеют типов на основе <code>AnimationEffectReadOnly</code>.</dd>
  <dt>{{Domxref("KeyframeEffectReadOnly")}}</dt>
- <dd>Описывает наборы Animatable свойств и значений, которые могут быть воспроизведены с помощью {{domxref("Animation.Animation", "анимация()")}} конструктор, и которые унаследованы {{domxref("KeyframeEffect")}}. </dd>
+ <dd>Описывает наборы Animatable свойств и значений, которые могут быть воспроизведены с помощью {{domxref("Animation.Animation", "анимация()")}} конструктор, и которые унаследованы {{domxref("KeyframeEffect")}}. </dd>
 </dl>
 
 <h2 id="Характеристики">Характеристики</h2>
@@ -93,7 +93,7 @@ translation_of: Web/API/Web_Animations_API
  <li><a href="/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API">Использование веб-API Animations</a></li>
  <li><a href="https://mozdevs.github.io/Animation-examples/">Web демки Анимации</a></li>
  <li><a href="https://github.com/web-animations/web-animations-js">Polyfill</a></li>
- <li>Текущая реализация браузера Firefox:  <a href="https://birtles.github.io/areweanimatedyet/">AreWeAnimatedYet</a></li>
+ <li>Текущая реализация браузера Firefox:  <a href="https://birtles.github.io/areweanimatedyet/">AreWeAnimatedYet</a></li>
  <li>
   <p><a href="http://codepen.io/danwilson/pen/xGBKVq">Тест Поддержка браузеров</a></p>
  </li>

@@ -9,21 +9,21 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 <p>Каждое событие запущено на определённой стадии запроса. Типичный порядок событий такой:<img alt="" src="https://mdn.mozillademos.org/files/13376/webRequest-flow.png" style="display: block; height: 680px; margin-left: auto; margin-right: auto; width: 624px;"></p>
 
-<p>{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} Может быть запущен в любой момент во время запроса. Чреда событий может отличаться от приведённой выше: например, в Firefox, после <a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">HSTS</a> обновления, событие <code>onBeforeRedirect</code> будет запущено сразу же после <code>onBeforeRequest</code>.</p>
+<p>{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} Может быть запущен в любой момент во время запроса. Чреда событий может отличаться от приведённой выше: например, в Firefox, после <a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">HSTS</a> обновления, событие <code>onBeforeRedirect</code> будет запущено сразу же после <code>onBeforeRequest</code>.</p>
 
-<p>Все события, кроме <code>onErrorOccurred</code>, могут принимать три аргумента в  <code>addListener()</code>:</p>
+<p>Все события, кроме <code>onErrorOccurred</code>, могут принимать три аргумента в  <code>addListener()</code>:</p>
 
 <ul>
  <li>сам обработчик</li>
- <li>объект {{WebExtAPIRef("webRequest.RequestFilter", "filter")}} , который позволяет получать оповещения о запросах, сделанных к определённым URL или определённым типам ресурсов.</li>
- <li>необязательный объект <code>extraInfoSpec</code> . Может быть использован для передачи дополнительных специфических для события инструкций.</li>
+ <li>объект {{WebExtAPIRef("webRequest.RequestFilter", "filter")}} , который позволяет получать оповещения о запросах, сделанных к определённым URL или определённым типам ресурсов.</li>
+ <li>необязательный объект <code>extraInfoSpec</code> . Может быть использован для передачи дополнительных специфических для события инструкций.</li>
 </ul>
 
-<p>Функции - обработчику передаётся объект <code>details</code> который содержит информацию о запросе. Она содержит ID запроса, который обеспечен для включения надстройки, которая позволяет соотносить события, ассоциируемые с одним запросом. Это уникально в пределах сессии и контекста надстройки. Информация остаётся одинаковой везде на протяжении запроса, даже при перенаправлениях и обменах аутентификации.</p>
+<p>Функции - обработчику передаётся объект <code>details</code> который содержит информацию о запросе. Она содержит ID запроса, который обеспечен для включения надстройки, которая позволяет соотносить события, ассоциируемые с одним запросом. Это уникально в пределах сессии и контекста надстройки. Информация остаётся одинаковой везде на протяжении запроса, даже при перенаправлениях и обменах аутентификации.</p>
 
-<p>Для использования webRequest API для определённого хоста, расширение должно иметь "webRequest" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> и <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission </a>для этого хоста. Для использования возможности "блокирования" расширение должно также иметь "webRequestBlocking" API разрешение.</p>
+<p>Для использования webRequest API для определённого хоста, расширение должно иметь "webRequest" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> и <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission </a>для этого хоста. Для использования возможности "блокирования" расширение должно также иметь "webRequestBlocking" API разрешение.</p>
 
-<p>Для перехвата ресурсов, загруженных страницей (таких как картинки, скрипты или таблицы стилей), расширение должно иметь разрешение хоста для ресурса также как и для главной страницы, запрашивающей ресурс. К примеру, если страница на "https://developer.mozilla.org" загружает картинку из "https://mdn.mozillademos.org", тогда расширение должно иметь разрешения обоих хостов чтобы перехватить запрос картинки.</p>
+<p>Для перехвата ресурсов, загруженных страницей (таких как картинки, скрипты или таблицы стилей), расширение должно иметь разрешение хоста для ресурса также как и для главной страницы, запрашивающей ресурс. К примеру, если страница на "https://developer.mozilla.org" загружает картинку из "https://mdn.mozillademos.org", тогда расширение должно иметь разрешения обоих хостов чтобы перехватить запрос картинки.</p>
 
 <h2 id="Модифицирование_заголовков">Модифицирование заголовков</h2>
 
@@ -37,7 +37,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
    <li>{{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}</li>
   </ul>
  </li>
- <li>перенаправить  запрос в:
+ <li>перенаправить  запрос в:
   <ul>
    <li>{{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}</li>
    <li>{{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}</li>
@@ -63,19 +63,19 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
  </li>
 </ul>
 
-<p>Чтобы сделать это, вам необходимо передать опцию со значением "blocking" в аргументе <code>extraInfoSpec</code> к  <code>addListener()</code>. Это делает обработчик синхронным. В обработчике, вы можете тогда возвратить объект {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}} который индикует модификацию, какую вам нужно сделать: например, модифицированный заголовок запроса который вы хотите отправить.</p>
+<p>Чтобы сделать это, вам необходимо передать опцию со значением "blocking" в аргументе <code>extraInfoSpec</code> к  <code>addListener()</code>. Это делает обработчик синхронным. В обработчике, вы можете тогда возвратить объект {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}} который индикует модификацию, какую вам нужно сделать: например, модифицированный заголовок запроса который вы хотите отправить.</p>
 
-<h2 id="Доступ_к_информации_о_безопасности">Доступ к информации о безопасности</h2>
+<h2 id="Доступ_к_информации_о_безопасности">Доступ к информации о безопасности</h2>
 
-<p>В обработчике {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}} вы имеете доступ к <a href="/en-US/docs/Glossary/TLS">TLS</a> свойствам запроса через вызов {{WebExtAPIRef("webRequest.getSecurityInfo()", "getSecurityInfo()")}}. Чтобы сделать это, вы должны также передать "blocking" в  <code>extraInfoSpec</code> аргументе к  <code>addListener()</code> события.</p>
+<p>В обработчике {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}} вы имеете доступ к <a href="/en-US/docs/Glossary/TLS">TLS</a> свойствам запроса через вызов {{WebExtAPIRef("webRequest.getSecurityInfo()", "getSecurityInfo()")}}. Чтобы сделать это, вы должны также передать "blocking" в  <code>extraInfoSpec</code> аргументе к  <code>addListener()</code> события.</p>
 
-<p>Вы можете прочитать детали TLS хэндшейка, но не можете модифицировать их или перезаписать решения доверы браузера.</p>
+<p>Вы можете прочитать детали TLS хэндшейка, но не можете модифицировать их или перезаписать решения доверы браузера.</p>
 
 <h2 id="Modifying_responses">Modifying responses</h2>
 
-<p>Для того, чтобы модифицировать тело HTTP ответа на запрос, вызовите {{WebExtAPIRef("webRequest.filterResponseData")}}, и передайте ID запроса. Это возвратит объект {{WebExtAPIRef("webRequest.StreamFilter")}} который вы сможете использовать чтобы исследовать и изменять данные когда они получены браузером.</p>
+<p>Для того, чтобы модифицировать тело HTTP ответа на запрос, вызовите {{WebExtAPIRef("webRequest.filterResponseData")}}, и передайте ID запроса. Это возвратит объект {{WebExtAPIRef("webRequest.StreamFilter")}} который вы сможете использовать чтобы исследовать и изменять данные когда они получены браузером.</p>
 
-<p>Чтобы сделать это, у вас должно быть "webRequestBlocking" API разрешение, а также "webRequest" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> и <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission </a>от соответствующего хоста.</p>
+<p>Чтобы сделать это, у вас должно быть "webRequestBlocking" API разрешение, а также "webRequest" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> и <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission </a>от соответствующего хоста.</p>
 
 <h2 id="Types">Types</h2>
 

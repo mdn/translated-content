@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/finally
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <code><strong>finally()</strong></code> retorna uma {{jsxref("Promise")}}. Quando a promise for estabelecida, tenha ela sido realizada ou rejeitada, executa-se a função callback especificada. Isso permite a execução de um código que acontecerá independentemente da <code>Promise</code> ter sido realizada (com sucesso) ou rejeitada (com falha).</p>
+<p>O método <code><strong>finally()</strong></code> retorna uma {{jsxref("Promise")}}. Quando a promise for estabelecida, tenha ela sido realizada ou rejeitada, executa-se a função callback especificada. Isso permite a execução de um código que acontecerá independentemente da <code>Promise</code> ter sido realizada (com sucesso) ou rejeitada (com falha).</p>
 
 <p>Assim, você pode evitar a duplicação do código em ambos os handlers {{jsxref("Promise.then", "then()")}} e {{jsxref("Promise.catch", "catch()")}} da <code>Promise</code>.</p>
 
@@ -27,28 +27,28 @@ p.finally(function() {
 
 <dl>
  <dt><code>quandoEstabelecida</code></dt>
- <dd>Uma {{jsxref("Function")}} chamada quando a <code>Promise</code> é concluída.</dd>
+ <dd>Uma {{jsxref("Function")}} chamada quando a <code>Promise</code> é concluída.</dd>
 </dl>
 
 <h3 id="Valor_de_retorno">Valor de retorno</h3>
 
-<p>Retorna uma {{jsxref("Promise")}} onde o manipulador <code>finally</code> é definido como a função especificada, <code>quandoEstabelecida</code>.</p>
+<p>Retorna uma {{jsxref("Promise")}} onde o manipulador <code>finally</code> é definido como a função especificada, <code>quandoEstabelecida</code>.</p>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>O método <code>finally()</code> pode ser útil quando você deseja realizar algum tipo de processamento ou limpeza quando a promise for estabelecida, independentemente de seu resultado (sucesso ou falha).</p>
+<p>O método <code>finally()</code> pode ser útil quando você deseja realizar algum tipo de processamento ou limpeza quando a promise for estabelecida, independentemente de seu resultado (sucesso ou falha).</p>
 
-<p>O método <code>finally()</code> é bastante similar a chamar <code>.then(quandoEstabelecida, quandoEstabelecida)</code>. Porém, existem algumas diferenças:</p>
+<p>O método <code>finally()</code> é bastante similar a chamar <code>.then(quandoEstabelecida, quandoEstabelecida)</code>. Porém, existem algumas diferenças:</p>
 
 <ul>
  <li>Ao passar a função na linha (entre os parênteses do método), você precisa passá-la apenas uma vez, ao invés de ser forçado a declará-la duas vezes ou a definir em uma variável.</li>
- <li>O callback de <code>finally</code> não poderá receber nenhum argumento, já que não existem meios confiáveis de determinar se a promise foi realizada ou rejeitada. Seu uso é para quando você realmente <em>não se importa</em> com os possíveis motivos de uma falha ou possíveis valores retornados de um sucesso, não tendo, portanto, razão para fornecê-los.</li>
- <li>Diferentemente de <code>Promise.resolve(2).then(() =&gt; {}, () =&gt; {})</code> (será resolvido como <code>undefined</code>), <code>Promise.resolve(2).finally(() =&gt; {})</code> será resolvido como <code>2</code>.</li>
- <li>De maneira semelhante, diferentemente de <code>Promise.reject(3).then(() =&gt; {}, () =&gt; {})</code> (que será resolvido como <code>undefined</code>), <code>Promise.reject(3).finally(() =&gt; {})</code> será rejeitado como <code>3</code>.</li>
+ <li>O callback de <code>finally</code> não poderá receber nenhum argumento, já que não existem meios confiáveis de determinar se a promise foi realizada ou rejeitada. Seu uso é para quando você realmente <em>não se importa</em> com os possíveis motivos de uma falha ou possíveis valores retornados de um sucesso, não tendo, portanto, razão para fornecê-los.</li>
+ <li>Diferentemente de <code>Promise.resolve(2).then(() =&gt; {}, () =&gt; {})</code> (será resolvido como <code>undefined</code>), <code>Promise.resolve(2).finally(() =&gt; {})</code> será resolvido como <code>2</code>.</li>
+ <li>De maneira semelhante, diferentemente de <code>Promise.reject(3).then(() =&gt; {}, () =&gt; {})</code> (que será resolvido como <code>undefined</code>), <code>Promise.reject(3).finally(() =&gt; {})</code> será rejeitado como <code>3</code>.</li>
 </ul>
 
 <div class="note">
-<p><strong>Nota:</strong> Um <code>throw</code> (ou retorno de uma promise rejeitada) no callback de <code>finally</code> rejeitará a nova promise com a razão de rejeição especificada na chamada de <code>throw()</code>.</p>
+<p><strong>Nota:</strong> Um <code>throw</code> (ou retorno de uma promise rejeitada) no callback de <code>finally</code> rejeitará a nova promise com a razão de rejeição especificada na chamada de <code>throw()</code>.</p>
 </div>
 
 <h2 id="Exemplos">Exemplos</h2>
@@ -80,7 +80,7 @@ fetch(minhaRequisicao).then(function(resposta) {
   <tr>
    <td><a href="https://github.com/tc39/proposal-promise-finally">TC39 proposal</a></td>
    <td>Stage 4</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

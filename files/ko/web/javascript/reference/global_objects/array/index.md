@@ -372,7 +372,7 @@ let deepCopy = JSON.parse(JSON.stringify(fruits));
 - {{jsxref("Array.prototype.lastIndexOf()")}}
   - : 배열에서 주어진 값과 일치하는 제일 뒤의 인덱스를 반환합니다. 없으면 `-1`을 반환합니다.
 - {{jsxref("Array.prototype.map()")}}
-  - : 배열의 모든 요소 각각에 대하여 주어진 콜백 함수를 호출하고, 그 반환 값을 모은 새로운 배열을 반환합니다.
+  - : 배열의 모든 요소 각각에 대하여 주어진 콜백 함수를 호출하고, 그 반환 값을 모은 새로운 배열을 반환합니다.
 - {{jsxref("Array.prototype.pop()")}}
   - : 배열에서 마지막 요소를 뽑아내고, 그 요소를 반환합니다.
 - {{jsxref("Array.prototype.push()")}}
@@ -384,7 +384,7 @@ let deepCopy = JSON.parse(JSON.stringify(fruits));
 - {{jsxref("Array.prototype.reverse()")}}
   - : 배열의 요소 순서를 뒤집습니다. 즉 첫 번째 요소가 마지막이 되고 마지막이 첫 번째가 됩니다.
 - {{jsxref("Array.prototype.shift()")}}
-  - : 배열에서 첫 번째 요소를 삭제하고, 그 요소를 반환합니다.
+  - : 배열에서 첫 번째 요소를 삭제하고, 그 요소를 반환합니다.
 - {{jsxref("Array.prototype.slice()")}}
   - : 배열의 일부를 추출한 새 배열을 반환합니다.
 - {{jsxref("Array.prototype.some()")}}

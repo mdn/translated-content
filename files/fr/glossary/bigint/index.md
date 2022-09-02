@@ -16,7 +16,7 @@ Dans {{Glossary("JavaScript")}}, **BigInt** est un type de données numériques 
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Data type#Numeric_types", "Numeric types")}} sur Wikipedia
+- [Les types d'entier en informatique](https://fr.wikipedia.org/wiki/Entier_(informatique)#Types_d'entiers_courants) sur Wikipédia
 
 ### Référence technique
 

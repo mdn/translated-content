@@ -16,8 +16,8 @@ Dans {{Glossary("JavaScript")}}, par exemple, vous pouvez sérialiser un objet d
 
 Les valeurs de {{Glossary("CSS")}} sont sérialisées par appel de la fonction {{domxref("CSSStyleDeclaration.getPropertyValue()")}}.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 
-- [Sérialisation](https://fr.wikipedia.org/wiki/S%C3%A9rialisation) sur Wikipedia
+- [Sérialisation](https://fr.wikipedia.org/wiki/S%C3%A9rialisation) sur Wikipédia

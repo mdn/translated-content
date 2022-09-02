@@ -14,26 +14,26 @@ original_slug: Web/JavaScript/Reference/Statements/import.meta
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>La sintasis consiste de la palabra clave  {{JSxRef("Statements/import","import")}},un punto, y un identificador <code>meta</code>. Normalmente, la parte a la izquierda del punto es el objeto sobre el cual la accion es realizada, pero aqui <code>import</code> no es realmente un objeto.</p>
+<p>La sintasis consiste de la palabra clave  {{JSxRef("Statements/import","import")}},un punto, y un identificador <code>meta</code>. Normalmente, la parte a la izquierda del punto es el objeto sobre el cual la accion es realizada, pero aqui <code>import</code> no es realmente un objeto.</p>
 
-<p>El objeto <code>import.meta</code> es creado por la implementacion ECMAScript , con un prototipo {{JSxRef("null")}} . El objeto es extensible y sus propiedades son grabables, editables y enumerables.</p>
+<p>El objeto <code>import.meta</code> es creado por la implementacion ECMAScript , con un prototipo {{JSxRef("null")}} . El objeto es extensible y sus propiedades son grabables, editables y enumerables.</p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
 <h3 id="Usando_import.meta">Usando import.meta</h3>
 
-<p>Dado un módulo <code>my-module.js</code></p>
+<p>Dado un módulo <code>my-module.js</code></p>
 
 <pre class="brush: html">&lt;script type="module" src="my-module.js"&gt;&lt;/script&gt;
 </pre>
 
-<p>puedes acceder a la meta información  sobre el módulo usando el objeto <code>import.meta</code>.</p>
+<p>puedes acceder a la meta información  sobre el módulo usando el objeto <code>import.meta</code>.</p>
 
 <pre class="brush: js;">console.log(import.meta); // { url: "file:///home/user/my-module.js" }</pre>
 
-<p>Este retorna un objeto con una propiedad  <code>url</code>  indicando la URL base del módulo.Esta será la URL de la que el script fue obtenido, por scripts externos, o  la URL base del documento que contiene el documento, por scripts inline.</p>
+<p>Este retorna un objeto con una propiedad  <code>url</code>  indicando la URL base del módulo.Esta será la URL de la que el script fue obtenido, por scripts externos, o  la URL base del documento que contiene el documento, por scripts inline.</p>
 
-<p>Nota que este incluirá parametros de la consulta y/o el hash (ej: seguido del <code>?</code> or <code>#</code>).</p>
+<p>Nota que este incluirá parametros de la consulta y/o el hash (ej: seguido del <code>?</code> or <code>#</code>).</p>
 
 <p>Por ejemplo, con el siguiente HTML:</p>
 
@@ -41,7 +41,7 @@ original_slug: Web/JavaScript/Reference/Statements/import.meta
 import './index.mjs?someURLInfo=5';
 &lt;/script&gt;</pre>
 
-<p>..El siguiente archivo JavaScript registrará el parámetro <code>someURLInfo</code>:</p>
+<p>..El siguiente archivo JavaScript registrará el parámetro <code>someURLInfo</code>:</p>
 
 <pre class="brush: js">// index.mjs
 new URL(import.meta.url).searchParams.get('someURLInfo'); // 5</pre>
@@ -54,9 +54,9 @@ import './index2.mjs?someURLInfo=5';
 // index2.mjs
 new URL(import.meta.url).searchParams.get('someURLInfo'); // 5</pre>
 
-<p>Nota que mientras Node.js pasa en la consulta los parámetros (o el hash ) como en el último ejemplo, a partir de Node 14.1.0, una URL con parametros en la consulta fallará  cuando se  carguen en el formato <code>node --experimental-modules index.mjs?someURLInfo=5</code> (es tratado como un archivo en lugar de una URL en este contexto).</p>
+<p>Nota que mientras Node.js pasa en la consulta los parámetros (o el hash ) como en el último ejemplo, a partir de Node 14.1.0, una URL con parametros en la consulta fallará  cuando se  carguen en el formato <code>node --experimental-modules index.mjs?someURLInfo=5</code> (es tratado como un archivo en lugar de una URL en este contexto).</p>
 
-<p>Tal argumento específico del archivo podria ser complementario al  usado en toda la aplicacion  <code>location.href</code> (con consultas strings o hash añadidas despues de la ruta HTML) (o en Node.js, mediante <code>process.argv</code>).</p>
+<p>Tal argumento específico del archivo podria ser complementario al  usado en toda la aplicacion  <code>location.href</code> (con consultas strings o hash añadidas despues de la ruta HTML) (o en Node.js, mediante <code>process.argv</code>).</p>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 

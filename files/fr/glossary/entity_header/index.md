@@ -20,7 +20,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101
 Content-Length: 128
 ```
 
-## En apprendre plus
+## Voir aussi
 
 ### Connaissance technique
 

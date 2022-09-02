@@ -61,13 +61,11 @@ oscillator.start();
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                               | Commentaire |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#the-oscillatornode-interface', 'OscillatorNode')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.OscillatorNode")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -132,7 +132,7 @@ let str = 'A\uD87E\uDC04Z'  // We could also use a non-BMP character directly
 for (let i = 0, chr; i < str.length; i++) {
   [chr, i] = getWholeCharAndI(str, i)
 
-  // Adapt this line at the top of each loop, passing in the whole string and
+  // Adapt this line at the top of each loop, passing in the whole string and
   // the current iteration and returning an array with the individual character
   // and 'i' value (only changed if a surrogate pair)
 
@@ -162,12 +162,12 @@ function getWholeCharAndI(str, i) {
     return [str.charAt(i) + str.charAt(i + 1), i + 1]
   }
 
-  // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
+  // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
   if (i === 0) {
     throw 'Low surrogate without preceding high surrogate'
   }
 
-  let prev = str.charCodeAt(i - 1)
+  let prev = str.charCodeAt(i - 1)
 
   // (could change last hex to 0xDB7F to treat high private surrogates
   // as single characters)
@@ -175,7 +175,7 @@ function getWholeCharAndI(str, i) {
     throw 'Low surrogate without preceding high surrogate'
   }
 
-  // Return the next character instead (and increment)
+  // Return the next character instead (and increment)
   return [str.charAt(i + 1), i + 1]
 }
 ```

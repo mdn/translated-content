@@ -1,13 +1,6 @@
 ---
 title: tabs.create()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/create
-tags:
-  - API
-  - 扩展
-  - 方法
-  - 标签页
-  - 页面扩展
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/create
 ---
 {{AddonSidebar()}}
 
@@ -51,7 +44,7 @@ var creating = browser.tabs.create(
         - file: URLs (i.e., files on the filesystem. However, to use a file packaged inside the extension, see below)
         - privileged about: URLs (for example, `about:config`, `about:addons`, `about:debugging`) . Non-privileged URLs (e.g., `about:blank`) are allowed.
         - The New Tab page (`about:newtab`) can be opened if no value for URL is provided.
-        
+
         To load a page that's packaged with your extension, specify an absolute URL starting at the extension's manifest.json file. For example: '/path/to/my-page.html'. If you omit the leading '/', the URL is treated as a relative URL, and different browsers may construct different absolute URLs.
     - `windowId`{{optional_inline}}
       - : `integer`. The window to create the new tab in. Defaults to the current window.
@@ -91,7 +84,8 @@ browser.browserAction.onClicked.addListener(function() {
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -118,4 +112,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

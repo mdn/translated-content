@@ -15,7 +15,7 @@ translation_of: Web/Security/Securing_your_site/Turning_off_form_autocompletion
 
 <h2 id="Desabilitando_o_auto_completar">Desabilitando o auto completar</h2>
 
-<p>Para desabilitar o auto completar nos formulários, o Web Site precisa setar o atributo <code>autocomplete</code> para "off":</p>
+<p>Para desabilitar o auto completar nos formulários, o Web Site precisa setar o atributo <code>autocomplete</code> para "off":</p>
 
 <pre class="brush: html">autocomplete="off"</pre>
 
@@ -33,10 +33,10 @@ translation_of: Web/Security/Securing_your_site/Turning_off_form_autocompletion
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<p>O atributo <code>autocomplete="off"</code> tem dois efeitos:</p>
+<p>O atributo <code>autocomplete="off"</code> tem dois efeitos:</p>
 
 <ul>
- <li>Dirá para o navegador parar de salvar dados inseridos pelo usuário em formulários para um futuro <em>autocomplete</em> (Isso varia de navegador para navegador).</li>
+ <li>Dirá para o navegador parar de salvar dados inseridos pelo usuário em formulários para um futuro <em>autocomplete</em> (Isso varia de navegador para navegador).</li>
  <li>Isso fará o navegador parar de fazer caching dos dados do formulário na <em>session history</em> do navegador. Quando um dado é armazenado no <em>cache</em> no <em>session history</em>, os dados preenchidos pelo usuário serão mostrados para ele no caso dele submeter o formulário e clicar no botão Voltar e retornar à página original do formulário.</li>
 </ul>
 
@@ -46,13 +46,13 @@ translation_of: Web/Security/Securing_your_site/Turning_off_form_autocompletion
 
 <p>Os navegadores também permitem ao usuário selecionar uma senha mestra para que os dados salvos sejam criptografados.</p>
 
-<p>Mesmo sem uma senha mestra, o gerenciamento de senhas dentro do navegador é geralmente vista como um ganho de segurança. Como os usuários não precisam se lembrar das senhas que o navegador salva para eles, eles podem escolher senhas mais fortes do que geralmente escolheriam.</p>
+<p>Mesmo sem uma senha mestra, o gerenciamento de senhas dentro do navegador é geralmente vista como um ganho de segurança. Como os usuários não precisam se lembrar das senhas que o navegador salva para eles, eles podem escolher senhas mais fortes do que geralmente escolheriam.</p>
 
 <p>Por esta razão, muitos navegadores modernos não suportam <code>autocomplete="off"</code> para campos de login.</p>
 
 <ul>
- <li>se um site utiliza <code>autocomplete="off"</code> para um <code><a href="/en-US/docs/Web/HTML/Element/form">form</a></code>, e o formulário inclui campos de usuário e senha, então o navegador ainda assim se oferece para salvar os dados de login, e se o usuário aceitar, o navegador vai preencher estes dados automaticamente na próxima vez que o usuário visita a página.</li>
- <li>se um site utiliza <code>autocomplete="off"</code> para campos <code><a href="/en-US/docs/Web/HTML/Element/input">input</a> de usuário e senha</code> , então o navegador ainda assim se oferece para salvar os dados de login, e se o usuário aceitar, o navegador vai preencher estes dados automaticamente na próxima vez que o usuário visitar a página.</li>
+ <li>se um site utiliza <code>autocomplete="off"</code> para um <code><a href="/en-US/docs/Web/HTML/Element/form">form</a></code>, e o formulário inclui campos de usuário e senha, então o navegador ainda assim se oferece para salvar os dados de login, e se o usuário aceitar, o navegador vai preencher estes dados automaticamente na próxima vez que o usuário visita a página.</li>
+ <li>se um site utiliza <code>autocomplete="off"</code> para campos <code><a href="/en-US/docs/Web/HTML/Element/input">input</a> de usuário e senha</code> , então o navegador ainda assim se oferece para salvar os dados de login, e se o usuário aceitar, o navegador vai preencher estes dados automaticamente na próxima vez que o usuário visitar a página.</li>
 </ul>
 
-<p>Este comportamento existe no Firefox (desde a versão 38), Google Chrome (desde a versão 34), e Internet Explorer (desde a versão 11).</p>
+<p>Este comportamento existe no Firefox (desde a versão 38), Google Chrome (desde a versão 34), e Internet Explorer (desde a versão 11).</p>

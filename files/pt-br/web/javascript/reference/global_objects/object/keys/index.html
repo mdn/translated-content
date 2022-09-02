@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/keys
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <code><strong>Object.keys()</strong></code> retorna um array de propriedades enumeraveis de um determinado objeto, na mesma ordem em que é fornecida por um laço {{jsxref("Statements/for...in", "for...in")}} (a diferença é que um laço for-in  enumera propriedades que estejam na cadeia de protótipos).</p>
+<p>O método <code><strong>Object.keys()</strong></code> retorna um array de propriedades enumeraveis de um determinado objeto, na mesma ordem em que é fornecida por um laço {{jsxref("Statements/for...in", "for...in")}} (a diferença é que um laço for-in  enumera propriedades que estejam na cadeia de protótipos).</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/keys
 
 <h2 id="Descrição">Descrição</h2>
 
-<p><code>Object.keys()</code> retorna um array cujo os  elementos são strings correspondentes para a propriedade enumerável encontrada diretamento sobre o objeto. A ordenação das propriedades é a mesma que a dada pelo loop sobre as propriedades do objeto manualmente.</p>
+<p><code>Object.keys()</code> retorna um array cujo os  elementos são strings correspondentes para a propriedade enumerável encontrada diretamento sobre o objeto. A ordenação das propriedades é a mesma que a dada pelo loop sobre as propriedades do objeto manualmente.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
@@ -46,7 +46,7 @@ console.log(Object.keys(my_obj)); // console: ['foo']
 
 <h2 id="Notas">Notas</h2>
 
-<p>Em ES5, Se o argumento para o método this não é um objeto(um primitivo), em seguida ele irá causar um {{jsxref("TypeError")}}. Em ES2015, um argumento não-objeto será forçado a um objeto.</p>
+<p>Em ES5, Se o argumento para o método this não é um objeto(um primitivo), em seguida ele irá causar um {{jsxref("TypeError")}}. Em ES2015, um argumento não-objeto será forçado a um objeto.</p>
 
 <pre class="brush: js">Object.keys("foo");
 // TypeError: "foo" is not an object (ES5 code)
@@ -57,7 +57,7 @@ Object.keys("foo");
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>Para adicionar suporte Object.keys compatíveis em ambientes mais antigos que não têm suporte nativo para isso, copie o seguinte trecho:</p>
+<p>Para adicionar suporte Object.keys compatíveis em ambientes mais antigos que não têm suporte nativo para isso, copie o seguinte trecho:</p>
 
 <pre class="brush: js">// De https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 if (!Object.keys) {
@@ -102,9 +102,9 @@ if (!Object.keys) {
 }
 </pre>
 
-<p>Por favor, note que o código acima inclui chaves não-enumeráveis no IE7 (e talvez IE8), ao passar em um objeto a partir de uma janela diferente.</p>
+<p>Por favor, note que o código acima inclui chaves não-enumeráveis no IE7 (e talvez IE8), ao passar em um objeto a partir de uma janela diferente.</p>
 
-<p>Para um simples Browser Polyfill, veja <a href="http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html">Javascript - Object.keys Browser Compatibility</a>.</p>
+<p>Para um simples Browser Polyfill, veja <a href="http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html">Javascript - Object.keys Browser Compatibility</a>.</p>
 
 <h2 id="Especificações">Especificações</h2>
 
@@ -118,67 +118,19 @@ if (!Object.keys) {
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.2.3.14', 'Object.keys')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td>Definição inicial. Implementado em  JavaScript 1.8.5.</td>
+   <td>Definição inicial. Implementado em  JavaScript 1.8.5.</td>
   </tr>
   <tr>
    <td>{{SpecName('ES2015', '#sec-object.keys', 'Object.keys')}}</td>
    <td>{{Spec2('ES2015')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibilidade">Browser compatibilidade</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Caracteristica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatChrome("5")}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>{{CompatIE("9")}}</td>
-   <td>{{CompatOpera("12")}}</td>
-   <td>{{CompatSafari("5")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Caracteristica</th>
-   <th>Android</th>
-   <th>Chrome para Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Object.keys")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

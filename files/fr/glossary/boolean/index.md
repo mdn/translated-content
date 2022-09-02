@@ -35,11 +35,11 @@ for (var i=0; i < 4; i++) {
 }
 ```
 
-## Pour Approfondir
+## Voir aussi
 
 ### Culture générale
 
-- [Booléen](http://fr.wikipedia.org/wiki/Bool%C3%A9en) sur Wikipedia
+- [Booléen](http://fr.wikipedia.org/wiki/Bool%C3%A9en) sur Wikipédia
 
 ### Informations techniques
 

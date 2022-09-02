@@ -5,13 +5,13 @@ translation_of: Web/API/Performance/now
 ---
 <div>{{APIRef("High Resolution Timing")}}</div>
 
-<p>O método <code><strong>performance.now()</strong></code> retorna {{domxref("DOMHighResTimeStamp")}}, medido em milisegundos, com precisão de cinco milésimos de milissegundo (5 microsegundos).</p>
+<p>O método <code><strong>performance.now()</strong></code> retorna {{domxref("DOMHighResTimeStamp")}}, medido em milisegundos, com precisão de cinco milésimos de milissegundo (5 microsegundos).</p>
 
-<p>O valor retornado representa o tempo decorrido desde o <strong>time origin </strong>(the {{domxref("PerformanceTiming.navigationStart")}} property). Em um web worker, o tempo inicial é o momento em que o contexto da execução(e.g. thread ou processo) é criado. Em uma janela, é o tempo em que o usuário iniciou a navegação neste documento. Tenha em mente que:</p>
+<p>O valor retornado representa o tempo decorrido desde o <strong>time origin </strong>(the {{domxref("PerformanceTiming.navigationStart")}} property). Em um web worker, o tempo inicial é o momento em que o contexto da execução(e.g. thread ou processo) é criado. Em uma janela, é o tempo em que o usuário iniciou a navegação neste documento. Tenha em mente que:</p>
 
 <ul>
- <li>Em workers dedicados criados do {{domxref("Window")}}, o valor neste worker será inferior a <code>performance.now()</code> na window que gerou este worker. Normalmente é o mesmo que <code>t0</code> no contexto principal, mas esse valor foi alterado.</li>
- <li>Em shared workers ou service workers, o valor do worker pode ser maior em relação ao contexto principal poir estas janelas podem ser criadas depois destes workers.</li>
+ <li>Em workers dedicados criados do {{domxref("Window")}}, o valor neste worker será inferior a <code>performance.now()</code> na window que gerou este worker. Normalmente é o mesmo que <code>t0</code> no contexto principal, mas esse valor foi alterado.</li>
+ <li>Em shared workers ou service workers, o valor do worker pode ser maior em relação ao contexto principal poir estas janelas podem ser criadas depois destes workers.</li>
 </ul>
 
 <h2 id="Sintaxe">Sintaxe</h2>
@@ -28,7 +28,7 @@ console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.");
 
 <p>Unlike other timing data available to JavaScript (for example <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date/now"><code>Date.now</code></a>), the timestamps returned by <code>Performance.now()</code> are not limited to one-millisecond resolution. Instead, they represent times as floating-point numbers with up to microsecond precision.</p>
 
-<p>Also unlike <code>Date.now()</code>, the values returned by <code>Performance.now() </code>always increase at a constant rate, independent of the system clock (which might be adjusted manually or skewed by software like NTP). Otherwise, <code>performance.timing.navigationStart + performance.now() </code>will be approximately equal to<code> Date.now()</code>.</p>
+<p>Also unlike <code>Date.now()</code>, the values returned by <code>Performance.now() </code>always increase at a constant rate, independent of the system clock (which might be adjusted manually or skewed by software like NTP). Otherwise, <code>performance.timing.navigationStart + performance.now() </code>will be approximately equal to<code> Date.now()</code>.</p>
 
 <h2 id="Especificações">Especificações</h2>
 
@@ -54,104 +54,7 @@ console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.");
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome("20.0")}} {{property_prefix("webkit")}}<br>
-    {{CompatChrome("24.0")}} [1]</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("15.0")}}</td>
-   <td>10.0</td>
-   <td>{{CompatOpera("15.0")}}</td>
-   <td>{{CompatSafari("8.0")}}</td>
-  </tr>
-  <tr>
-   <td>on Web workers</td>
-   <td>{{CompatChrome("33")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("34.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>now()</code> in a dedicated worker is now separate from the main context's <code>now()</code>.</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("45.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatAndroid("4.0")}}</td>
-   <td>{{CompatChrome("25.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("15.0")}}</td>
-   <td>10.0</td>
-   <td>{{CompatNo}}</td>
-   <td>9</td>
-   <td>{{CompatChrome("25.0")}}</td>
-  </tr>
-  <tr>
-   <td>on Web workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("34.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>now()</code> in a dedicated worker is now separate from the main context's <code>now()</code>.</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("45.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Windows versions of Chrome 20 through 33 return <code>performance.now()</code> only to millisecond precision.</p>
+{{Compat("api.Performance.now")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

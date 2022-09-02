@@ -1,17 +1,6 @@
 ---
 title: 移动设备上的无障碍
-slug: learn/Accessibility/Mobile
-tags:
-  - 初学者
-  - 响应式
-  - 学习
-  - 屏幕阅读器
-  - 文章
-  - 无障碍
-  - 移动端
-  - 编程
-  - 触摸
-translation_of: Learn/Accessibility/Mobile
+slug: Learn/Accessibility/Mobile
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 
@@ -174,7 +163,7 @@ TalkBack 允许你使用全局和本地菜单，无论你已经导航到哪个�
     1. _说话速率：改变说话速率_
     2. _容器：在页面不同予以的容器间切换_
     3. _标题：在页面上的标题之间切换_
-    4.  _链接：在页面上的链接之间切换_
+    4. _链接：在页面上的链接之间切换_
     5. _表单控件：在页面上的表单控件之间切换_
     6. 语言：在不同的翻译之间切换，如果可用的话
 
@@ -184,9 +173,9 @@ TalkBack 允许你使用全局和本地菜单，无论你已经导航到哪个�
 
 ## 控制机制
 
-在我们的 CSS 和 JavaScript 可访问性文章中，我们研究了特定于某种控制机制的事件的概念（请参阅[鼠标特定的事件](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#mouse-specific_events)）。回顾一下，因为其他控制机制不能激活相关的功能，将会导致辅助功能的问题。
+在我们的 CSS 和 JavaScript 无障碍文章中，我们研究了特定于某种控制机制的事件的概念（请参阅[鼠标特定的事件](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#mouse-specific_events)）。回顾一下，因为其他控制机制不能激活相关的功能，将会导致辅助功能的问题。
 
-举例来说，[点击事件](/en-US/docs/Web/API/GlobalEventHandlers/onclick)在可访问性方面是好的 - 通过点击处理器设置的元素，选中它并按下回车或返回，或者在触摸屏设备上点击它，可以调用关联的事件处理程序。试试我们的例子[simple-button-example.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-button-example.html)([查看在线例子](https://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)) 来看看我们是什么意思。
+举例来说，[点击事件](/en-US/docs/Web/API/GlobalEventHandlers/onclick)在无障碍方面是好的 - 通过点击处理器设置的元素，选中它并按下回车或返回，或者在触摸屏设备上点击它，可以调用关联的事件处理程序。试试我们的例子[simple-button-example.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-button-example.html)([查看在线例子](https://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)) 来看看我们是什么意思。
 
 另一方面，像[mousedown](/en-US/docs/Web/API/GlobalEventHandlers/onmousedown)和[mouseup](/en-US/docs/Web/API/GlobalEventHandlers/onmouseup)这些特定的鼠标事件会产生一些问题 - 他们的事件处理程序不能使用除了鼠标意外的设备操作。
 
@@ -215,7 +204,7 @@ div.ontouchstart = function(e) {
 panel.ontouchend = stopMove;
 ```
 
-我们提供了一个简单的例子来展示如何使用鼠标和触摸事件 - [multi-control-box-drag.html ](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/multi-control-box-drag.html)([查看在线例子](https://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html))
+我们提供了一个简单的例子来展示如何使用鼠标和触摸事件 - [multi-control-box-drag.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/multi-control-box-drag.html) ([查看在线例子](https://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html))
 
 **注意**: 你可以看到一个功能完善的例子，展示如何在实现[游戏控制机制](/en-US/docs/Games/Techniques/Control_mechanisms)中实现不同的控制机制。
 
@@ -239,7 +228,9 @@ panel.ontouchend = stopMove;
 
 我们可以利用[viewport](/en-US/docs/Mozilla/Mobile/Viewport_meta_tag)来禁止用户缩放，在你的[\<head>](/en-US/docs/Web/HTML/Element/head)中加入下列代码即可：
 
-    <meta name="viewport" content="user-scalable=no">
+```html
+<meta name="viewport" content="user-scalable=no">
+```
 
 如果可能的话，你绝对不应该这么做 - 很多人都会依靠缩放来看你网站的内容，所以不使用缩放这个功能是一个很糟糕的主意。在某些情况下缩放会破坏 UI；这种情况下，你觉得你绝对需要缩放，你可以提供一些别的近似的方法。例如增加一个控制文字大小的控件，通过这种方式就不会破坏 UI 了。
 
@@ -266,7 +257,7 @@ panel.ontouchend = stopMove;
 
 ## 总结
 
-在本文中，我们向您提供了有关常见移动设备可访问性问题的一些细节以及如何克服这些问题。我们还通过使用最常用的屏幕阅读器来帮助您进行无障碍测试。
+在本文中，我们向您提供了有关常见移动设备无障碍问题的一些细节以及如何克服这些问题。我们还通过使用最常用的屏幕阅读器来帮助您进行无障碍测试。
 
 ## 参见
 
@@ -277,7 +268,7 @@ panel.ontouchend = stopMove;
 
 ## 在这个模块中
 
-- [什么是可访问性？](/en-US/docs/Learn/Accessibility/What_is_accessibility)
+- [什么是无障碍？](/en-US/docs/Learn/Accessibility/What_is_accessibility)
 - [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML)
 - [CSS and JavaScript accessibility best practices](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
 - [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)

@@ -16,5 +16,5 @@ original_slug: Glossaire/Opera_Browser
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Opera","Navigateur Opera")}} sur Wikipédia
+- [Opera](https://fr.wikipedia.org/wiki/Opera) sur Wikipédia
 - [Site web du navigateur Opera](http://www.opera.com/)

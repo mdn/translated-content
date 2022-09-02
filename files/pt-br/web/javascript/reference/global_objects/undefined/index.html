@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 
 <h2 id="Summary" name="Summary">Resumo</h2>
 
-<p>O valor global <code>undefined</code> representa um valor indefinido. Trata-se de um dos {{Glossary("Primitivo", "tipos primitivos")}} do JavaScript.</p>
+<p>O valor global <code>undefined</code> representa um valor indefinido. Trata-se de um dos {{Glossary("Primitivo", "tipos primitivos")}} do JavaScript.</p>
 
 <p>{{js_property_attributes(0,0,0)}}</p>
 
@@ -23,11 +23,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 
 <p>O <code>undefined</code> é uma propriedade do objeto <code>global</code>, ou seja, é uma variável no escopo global. O valor inicial de <code>undefined</code> é o valor primitivo <code>undefined</code>.</p>
 
-<p>Nos browsers modernos (JavaScript 1.8.5 / Firefox 4+), a especificação ECMAScript 5 define que o <code>undefined</code> é uma propriedade não configurável e somente leitura. Mesmo quando esse não for o caso, evite sobrescrevê-lo.</p>
+<p>Nos browsers modernos (JavaScript 1.8.5 / Firefox 4+), a especificação ECMAScript 5 define que o <code>undefined</code> é uma propriedade não configurável e somente leitura. Mesmo quando esse não for o caso, evite sobrescrevê-lo.</p>
 
-<p>Uma variável que não teve um valor atribuído é do tipo <code>undefined</code>. Um método ou sentença também retorna <code>undefined</code> se a variável que está sendo avaliada não tem um valor atribuído. Uma função retorna <code>undefined</code> se um valor não for {{jsxref("Statements/return", "retornado")}}.</p>
+<p>Uma variável que não teve um valor atribuído é do tipo <code>undefined</code>. Um método ou sentença também retorna <code>undefined</code> se a variável que está sendo avaliada não tem um valor atribuído. Uma função retorna <code>undefined</code> se um valor não for {{jsxref("Statements/return", "retornado")}}.</p>
 
-<p>Uma vez que undefined não é uma {{jsxref("Reserved_Words", "palavra reservada")}}, ele pode ser usado como um <a href="/en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Variables">identificador</a> (nome de variável) em qualquer escopo que não seja o escopo global.</p>
+<p>Uma vez que undefined não é uma {{jsxref("Reserved_Words", "palavra reservada")}}, ele pode ser usado como um <a href="/en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Variables">identificador</a> (nome de variável) em qualquer escopo que não seja o escopo global.</p>
 
 <pre class="brush: js">// escreve no console "foo string"
 (function(){ var undefined = 'foo'; console.log(undefined, typeof undefined); })();
@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Igualdade_estrita_()_e_undefined">Igualdade estrita (===) e <code>undefined</code></h3>
+<h3 id="Igualdade_estrita_()_e_undefined">Igualdade estrita (===) e <code>undefined</code></h3>
 
 <p>Voce pode utilizar <code>undefined</code> com os operadores de igualdade e desigualdade estritas para determinar se a variável possui um valor. No código a seguir, a variável <code>x</code> não foi definida, e o resultado do <code>if</code> é verdadeiro.</p>
 
@@ -52,9 +52,9 @@ else {
 
 </pre>
 
-<div class="note"><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);">Observação: O operador de igualdade estrita (</span><code style="font-style: italic; color: rgba(0, 0, 0, 0.65098);">===</code><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);">) tem que ser utilizado aqui uma vez que </span><code style="font-style: italic; color: rgba(0, 0, 0, 0.65098);">x == undefined</code><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);"> também checa se </span><code style="font-style: italic; color: rgba(0, 0, 0, 0.65098);">x</code><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);"> é nulo, enquanto o operador não o faz. </span><code style="font-style: italic; color: rgba(0, 0, 0, 0.65098);">null</code><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);"> não é equivalente à </span><code style="font-style: italic; color: rgba(0, 0, 0, 0.65098);">undefined</code><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);">. Veja </span><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);">{{jsxref("Operators/Comparison_Operators", "operadores de comparação")}} (em inglês) para maiores detalhes.</span></div>
+<div class="note"><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);">Observação: O operador de igualdade estrita (</span><code style="font-style: italic; color: rgba(0, 0, 0, 0.65098);">===</code><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);">) tem que ser utilizado aqui uma vez que </span><code style="font-style: italic; color: rgba(0, 0, 0, 0.65098);">x == undefined</code><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);"> também checa se </span><code style="font-style: italic; color: rgba(0, 0, 0, 0.65098);">x</code><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);"> é nulo, enquanto o operador não o faz. </span><code style="font-style: italic; color: rgba(0, 0, 0, 0.65098);">null</code><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);"> não é equivalente à </span><code style="font-style: italic; color: rgba(0, 0, 0, 0.65098);">undefined</code><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);">. Veja </span><span style="color: rgba(0, 0, 0, 0.65098); font-style: italic; background-color: rgba(231, 228, 157, 0.247059);">{{jsxref("Operators/Comparison_Operators", "operadores de comparação")}} (em inglês) para maiores detalhes.</span></div>
 
-<h3 id="Operador_Typeof_e_undefined"><code>Operador Typeof</code> e <code>undefined</code></h3>
+<h3 id="Operador_Typeof_e_undefined"><code>Operador Typeof</code> e <code>undefined</code></h3>
 
 <p>Alternativamente, {{jsxref("Operators/typeof", "typeof")}} pode ser usado:</p>
 
@@ -64,7 +64,7 @@ if (typeof x === 'undefined') {
 }
 </pre>
 
-<p>Uma das principais razões para usar o {{jsxref("Operators/typeof", "typeof")}} é que ele não lança erros caso a variável não tenha sido inicializada.</p>
+<p>Uma das principais razões para usar o {{jsxref("Operators/typeof", "typeof")}} é que ele não lança erros caso a variável não tenha sido inicializada.</p>
 
 <pre class="brush: js">// x não foi atribuída anteriormente
 if (typeof x === 'undefined') { // retorna verdadeiro sem lançar erros
@@ -76,11 +76,11 @@ if(x === undefined){ // lança um ReferenceError para x
 }
 </pre>
 
-<p>No entanto, esse tipo de técnica deveria ser evitada. A linguagem JavaScript é uma linguagem com escopo estático, portanto o conhecimento sobre se uma variável está definida pode ser adquirido pela verificação de sua definição dentro do contexto à qual ela pertence. A única exceção é para o escopo global. No entanto, o escopo global é anexado ao objeto global, portanto a verificação da existência de uma variável no contexto global pode ser feita através de uma checagem na propriedade do objeto global usando o operador {{jsxref("Operators/in", "in")}}, por exemplo.</p>
+<p>No entanto, esse tipo de técnica deveria ser evitada. A linguagem JavaScript é uma linguagem com escopo estático, portanto o conhecimento sobre se uma variável está definida pode ser adquirido pela verificação de sua definição dentro do contexto à qual ela pertence. A única exceção é para o escopo global. No entanto, o escopo global é anexado ao objeto global, portanto a verificação da existência de uma variável no contexto global pode ser feita através de uma checagem na propriedade do objeto global usando o operador {{jsxref("Operators/in", "in")}}, por exemplo.</p>
 
 <h3 id="Operador_Void_e_undefined"><code>Operador Void</code> e <code>undefined</code></h3>
 
-<p>O  operador {{jsxref("Operators/void", "void")}} é a terceira alternativa.</p>
+<p>O  operador {{jsxref("Operators/void", "void")}} é a terceira alternativa.</p>
 
 <pre class="brush: js">var x;
 if (x === void 0) {
@@ -110,66 +110,16 @@ if (y === void 0) {
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.1.1.3', 'undefined')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-undefined', 'undefined')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p> </p>
+{{Compat("javascript.builtins.undefined")}}

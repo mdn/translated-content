@@ -10,7 +10,7 @@ original_slug: Web/HTTP/Redirecionamento
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary">Redirecionamento de URL, também conhecido como encaminhamento de URL, é uma técnica que à uma página, formulário ou uma aplicação web inteira, mais de um endereço de URL. HTTP fornece uma espécie especial de respostas, <em><strong>HTTP redirects</strong></em>,  executar esta operação é utilizada para vários objetivos: redirecionamento temporário enquanto está sendo feita a manutenção do web site, redirecionamento permanente para manter links externos funcionando após alterações na arquitetura do web site, páginas de progresso enquanto é feito o envio de um arquivo, e assim por diante.</p>
+<p class="summary">Redirecionamento de URL, também conhecido como encaminhamento de URL, é uma técnica que à uma página, formulário ou uma aplicação web inteira, mais de um endereço de URL. HTTP fornece uma espécie especial de respostas, <em><strong>HTTP redirects</strong></em>,  executar esta operação é utilizada para vários objetivos: redirecionamento temporário enquanto está sendo feita a manutenção do web site, redirecionamento permanente para manter links externos funcionando após alterações na arquitetura do web site, páginas de progresso enquanto é feito o envio de um arquivo, e assim por diante.</p>
 
 <h2 id="Princípio">Princípio</h2>
 
@@ -77,7 +77,7 @@ original_slug: Web/HTTP/Redirecionamento
    <td><code>303</code></td>
    <td><code>Ver outro</code></td>
    <td>{{HTTPMethod("GET")}} Métodos inalterados.<br>
-    Outros <em>alterados</em> para <code>GET</code> (corpo perdido).</td>
+    Outros <em>alterados</em> para <code>GET</code> (corpo perdido).</td>
    <td>Usado para redirecionar após um {{HTTPMethod ("PUT")}} ou um {{HTTPMethod ("POST")}} para evitar uma atualização da página que reativaria a operação.</td>
   </tr>
   <tr>
@@ -196,7 +196,7 @@ original_slug: Web/HTTP/Redirecionamento
 
 <h3 id="Apache">Apache</h3>
 
-<p>Redirects can be set either in the server config file or in the <code>.htaccess</code> of each directory.</p>
+<p>Redirects can be set either in the server config file or in the <code>.htaccess</code> of each directory.</p>
 
 <p>The <a href="https://httpd.apache.org/docs/current/mod/mod_alias.html">mod_alias</a> module has <code>Redirect</code> and <code>Redirect_Match</code> directives that set up a {{HTTPStatus("302")}} response (by default):</p>
 

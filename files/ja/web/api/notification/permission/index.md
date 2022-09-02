@@ -1,16 +1,6 @@
 ---
 title: Notification.permission
 slug: Web/API/Notification/permission
-page-type: web-api-static-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-browser-compat: api.Notification.permission
-translation_of: Web/API/Notification/permission
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
@@ -25,7 +15,7 @@ translation_of: Web/API/Notification/permission
 - `denied`
   - : 現在のオリジンがシステム通知を表示することについて、ユーザーが明示的に拒否している。
 - `default`
-  - : ユーザーの決定は分からない。この場合、アプリケーションは許可が `denied` であるあｋのように動作する。
+  - : ユーザーの決定は分からない。この場合、アプリケーションは許可が `denied` であるかのように動作する。
 
 ## 例
 

@@ -1,7 +1,6 @@
 ---
 title: FileReaderSync.readAsArrayBuffer()
 slug: Web/API/FileReaderSync/readAsArrayBuffer
-translation_of: Web/API/FileReaderSync/readAsArrayBuffer
 ---
 {{APIRef("File API")}}
 
@@ -20,7 +19,7 @@ ArrayBuffer readAsArrayBuffer(blob);
 
 ### 返値
 
-ファイルのデータを表す {{jsxref("ArrayBuffer")}} です。
+ファイルのデータを表す {{jsxref("ArrayBuffer")}} です。
 
 ## 例外
 

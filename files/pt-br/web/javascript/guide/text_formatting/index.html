@@ -88,7 +88,7 @@ var x = minhaString.length;
  </thead>
  <tbody>
   <tr>
-   <td>{{jsxref("String.charAt", "charAt")}}, {{jsxref("String.charCodeAt", "charCodeAt")}}, {{jsxref("String.codePointAt", "codePointAt")}}</td>
+   <td>{{jsxref("String.charAt", "charAt")}}, {{jsxref("String.charCodeAt", "charCodeAt")}}, {{jsxref("String.codePointAt", "codePointAt")}}</td>
    <td>Retorna o código do caractere ou o caractere em uma posição específica na string.</td>
   </tr>
   <tr>
@@ -200,7 +200,7 @@ console.log(`Quinze é ${a + b} e\nnão ${2 * a + b}.`);
 var july172014 = new Date(msPorDia * (44 * 365 + 11 + 197));
 
 var opcoes = { year: "2-digit", month: "2-digit", day: "2-digit",
-                hour: "2-digit", minute: "2-digit", timeZoneName: "short" };
+                hour: "2-digit", minute: "2-digit", timeZoneName: "short" };
 var americanDateTime = new Intl.DateTimeFormat("en-US", opcoes).format;
 
 console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
@@ -211,13 +211,13 @@ console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
 <p>O objeto {{jsxref("NumberFormat")}} é útil para formatar números, por exemplo unidade monetária.</p>
 
 <pre class="brush: js">var precoGasolina = new Intl.NumberFormat("en-US",
-                        { style: "currency", currency: "USD",
-                          minimumFractionDigits: 3 });
+                        { style: "currency", currency: "USD",
+                          minimumFractionDigits: 3 });
 
 console.log(precoGasolina.format(5.259)); // $5.259
 
 var hanDecimalRMBInChina = new Intl.NumberFormat("zh-CN-u-nu-hanidec",
-                        { style: "currency", currency: "CNY" });
+                        { style: "currency", currency: "CNY" });
 
 console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一,三一四.二五
 </pre>

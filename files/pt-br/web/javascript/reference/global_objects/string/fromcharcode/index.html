@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <strong><code>String.fromCharCode()</code></strong> retorna uma string criada ao usar uma sequência específica de valores Unicode.</p>
+<p>O método <strong><code>String.fromCharCode()</code></strong> retorna uma string criada ao usar uma sequência específica de valores Unicode.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -33,11 +33,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 
 <p>Esse método retorna uma string e não um objeto {{jsxref("String")}}.</p>
 
-<p>Como <code>fromCharCode() </code>é um método estático de {{jsxref("String")}}, você sempre o usará como <code>String.fromCharCode()</code>, ao invés de um método de um objeto {{jsxref("String")}} que você tenha criado.</p>
+<p>Como <code>fromCharCode() </code>é um método estático de {{jsxref("String")}}, você sempre o usará como <code>String.fromCharCode()</code>, ao invés de um método de um objeto {{jsxref("String")}} que você tenha criado.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Usando_fromCharCode">Usando <code>fromCharCode()</code></h3>
+<h3 id="Usando_fromCharCode">Usando <code>fromCharCode()</code></h3>
 
 <p>O seguinte exemplo retorna a string "ABC".</p>
 
@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 
 <h2 id="Fazendo-o_funcionar_com_valores_maiores">Fazendo-o funcionar com valores maiores</h2>
 
-<p>Embora os valores Unicode mais comuns possam ser representados com um número de 16 bits (como experado durante a padronização do JavaScript) e o fromCharCode() possa ser usado para retornar um único caracter dos valores mais comuns (por exemplo: valores UCS-2 que são os melhores subconjuntos do UTF-16 com os caractres mais comuns), a fim de resolver TODOS os valores Unicode legais (até 21 bits) o método fromCharCode() sozinho é inadequado. Como os caracteres de ponto de código mais alto usam 2 (valor menor) numeros "substitutos" para formar um único caracter, {{jsxref("String.fromCodePoint()")}} (parte do padrão ES2015) pode ser usado para retornar tal par e ainda representar adequadamente esses caracteres de valores altos.</p>
+<p>Embora os valores Unicode mais comuns possam ser representados com um número de 16 bits (como experado durante a padronização do JavaScript) e o fromCharCode() possa ser usado para retornar um único caracter dos valores mais comuns (por exemplo: valores UCS-2 que são os melhores subconjuntos do UTF-16 com os caractres mais comuns), a fim de resolver TODOS os valores Unicode legais (até 21 bits) o método fromCharCode() sozinho é inadequado. Como os caracteres de ponto de código mais alto usam 2 (valor menor) numeros "substitutos" para formar um único caracter, {{jsxref("String.fromCodePoint()")}} (parte do padrão ES2015) pode ser usado para retornar tal par e ainda representar adequadamente esses caracteres de valores altos.</p>
 
 <h2 id="Especificações">Especificações</h2>
 
@@ -82,55 +82,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 
 <h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Características</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Características</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.String.fromCharCode")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

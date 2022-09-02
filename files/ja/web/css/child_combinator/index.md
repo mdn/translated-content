@@ -15,7 +15,7 @@ translation_of: Web/CSS/Child_combinator
 ```css
 /* "my-things"クラスを持つリストの子要素であるリスト項目 */
 ul.my-things > li {
-  margin: 2em;
+  margin: 2em;
 }
 ```
 

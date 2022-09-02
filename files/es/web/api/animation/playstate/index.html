@@ -12,7 +12,7 @@ translation_of: Web/API/Animation/playState
 ---
 <p>{{APIRef("Web Animations")}}{{SeeCompatTable}}</p>
 
-<p>La propiedad  <code><strong>Animation</strong></code><strong><code>.playState</code></strong> de la <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> devuelve y establece un valor enumerado que describe el estado de reproducción de una animación.</p>
+<p>La propiedad  <code><strong>Animation</strong></code><strong><code>.playState</code></strong> de la <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> devuelve y establece un valor enumerado que describe el estado de reproducción de una animación.</p>
 
 <div class="note">
 <p>Esta propiedad es de solo lectura para las Animaciones y Transiciones en CSS.</p>
@@ -47,22 +47,22 @@ translation_of: Web/API/Animation/playState
 <pre class="brush: js">// <span class="short_text" id="result_box" lang="es"><span>Configurando las animaciones de lágrimas</span></span>
 
 tears.forEach(function(el) {
-  el.animate(
-    tearsFalling,
-    {
-      delay: getRandomMsRange(-1000, 1000), // cada lágrima aleatoria
-      duration: getRandomMsRange(2000, 6000), // cada lágrima aleatoria
-      iterations: Infinity,
-      easing: "cubic-bezier(0.6, 0.04, 0.98, 0.335)"
-    });
-  el.playState = 'paused';
+  el.animate(
+    tearsFalling,
+    {
+      delay: getRandomMsRange(-1000, 1000), // cada lágrima aleatoria
+      duration: getRandomMsRange(2000, 6000), // cada lágrima aleatoria
+      iterations: Infinity,
+      easing: "cubic-bezier(0.6, 0.04, 0.98, 0.335)"
+    });
+  el.playState = 'paused';
 });
 
 
 // Reproduce las lágrimas cayendo cuando el final necesita mostrarlas.
 
 tears.forEach(function(el) {
-  el.playState = 'playing';
+  el.playState = 'playing';
 });
 
 
@@ -100,5 +100,5 @@ tears.forEach(function(el) {
 <ul>
  <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
  <li>{{domxref("Animation")}} <span id="result_box" lang="es"><span>para otros métodos y propiedades que puede usar para controlar la animación de la página web.</span></span></li>
- <li>Los métodos  {{domxref("Animation.play()")}}, {{domxref("Animation.pause()")}}, {{domxref("Animation.finish()")}} pueden establecer el <code>playState</code> de un  <code>Animation</code> .</li>
+ <li>Los métodos  {{domxref("Animation.play()")}}, {{domxref("Animation.pause()")}}, {{domxref("Animation.finish()")}} pueden establecer el <code>playState</code> de un  <code>Animation</code> .</li>
 </ul>

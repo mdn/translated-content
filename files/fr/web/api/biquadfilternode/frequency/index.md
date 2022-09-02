@@ -54,15 +54,13 @@ filtreBiquad.frequency.value = 1000;
 filtreBiquad.gain.value = 25;
 ```
 
-## Spécification
+## Spécifications
 
-| Specification                                                                                            | Status                               | Comment |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#widl-BiquadFilterNode-frequency', 'frequency')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.BiquadFilterNode.frequency")}}
+{{Compat}}
 
 ## Voir aussi
 

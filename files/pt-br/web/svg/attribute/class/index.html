@@ -10,7 +10,7 @@ translation_of: Web/SVG/Attribute/class
 ---
 <p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">Página inicial da referência de atributos do SVG</a></p>
 
-<p>Atribui um nome de classe ou um conjunto de nomes de classe a um elemento. Você pode atribuir o mesmo nome ou nomes de classe para qualquer número de elementos. Se você especificar vários nomes de classe, estes devem ser separados por caracteres de espaço em branco.</p>
+<p>Atribui um nome de classe ou um conjunto de nomes de classe a um elemento. Você pode atribuir o mesmo nome ou nomes de classe para qualquer número de elementos. Se você especificar vários nomes de classe, estes devem ser separados por caracteres de espaço em branco.</p>
 
 <p>O nome de classe de um elemento tem duas funções principais:</p>
 
@@ -49,34 +49,34 @@ translation_of: Web/SVG/Attribute/class
 <h2 id="Exemplo">Exemplo</h2>
 
 <pre class="brush: html">&lt;html&gt;
-    &lt;body&gt;
-  &lt;svg width="120" height="220"
-     viewPort="0 0 120 120" version="1.1"
-     xmlns="http://www.w3.org/2000/svg"&gt;
+    &lt;body&gt;
+  &lt;svg width="120" height="220"
+     viewPort="0 0 120 120" version="1.1"
+     xmlns="http://www.w3.org/2000/svg"&gt;
 
-    &lt;style type="text/css" &gt;
-      &lt;![CDATA[
+    &lt;style type="text/css" &gt;
+      &lt;![CDATA[
 
-        rect.rectClass {
-           stroke: #000066;
-           fill:   #00cc00;
-        }
-       circle.circleClass {
-       stroke: #006600;
-       fill:   #cc0000;
-    }
+        rect.rectClass {
+           stroke: #000066;
+           fill:   #00cc00;
+        }
+       circle.circleClass {
+       stroke: #006600;
+       fill:   #cc0000;
+    }
 
-      ]]&gt;
-    &lt;/style&gt;
+      ]]&gt;
+    &lt;/style&gt;
 
-      &lt;rect class="rectClass" x="10" y="10" width="100" height="100"/&gt;
-     &lt;circle  class="circleClass"   cx="40" cy="50" r="26"/&gt;
+      &lt;rect class="rectClass" x="10" y="10" width="100" height="100"/&gt;
+     &lt;circle  class="circleClass"   cx="40" cy="50" r="26"/&gt;
 &lt;/svg&gt;
 &lt;/body&gt;&lt;/html&gt;</pre>
 
 <h2 id="Elementos">Elementos</h2>
 
-<p>Os seguintes elementos podem utilizar o atributo <code>class</code>:</p>
+<p>Os seguintes elementos podem utilizar o atributo <code>class</code>:</p>
 
 <div class="threecolumns">
 <ul>
@@ -136,60 +136,4 @@ translation_of: Web/SVG/Attribute/class
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Recurso</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>(yes)</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Suporte à animação</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop("5") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Recurso</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p> </p>
+{{Compat("svg.attributes.style.class")}}

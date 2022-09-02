@@ -33,7 +33,7 @@ var mediaStreamTracks = mediaStream.getAudioTracks()
 
 ### 返値
 
-ストリームに含まれる音声トラックである {{domxref("MediaStreamTrack")}} オブジェクトの配列です。音声トラックとは {{domxref("MediaStreamTrack.kind", "kind")}} プロパティが `audio` のトラックです。ストリーム内に音声トラックがない場合は、この配列は空になります。
+ストリームに含まれる音声トラックである {{domxref("MediaStreamTrack")}} オブジェクトの配列です。音声トラックとは {{domxref("MediaStreamTrack.kind", "kind")}} プロパティが `audio` のトラックです。ストリーム内に音声トラックがない場合は、この配列は空になります。
 
 > **Note:** 返されるトラックの順序は仕様書では定義されておらず、実際、 `getAudioTracks()` を呼び出すごとに変わる可能性があります。
 

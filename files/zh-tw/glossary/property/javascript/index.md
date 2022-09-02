@@ -1,7 +1,6 @@
 ---
 title: Property (JavaScript)
 slug: Glossary/property/JavaScript
-translation_of: Glossary/property/JavaScript
 ---
 **property**（屬性）是典型的物件特徵，經常與資料結構聯結。屬性分為兩種類型：
 
@@ -14,5 +13,5 @@ translation_of: Glossary/property/JavaScript
 
 ### 基本知識
 
-- 維基百科的 {{InterWiki('wikipedia','Property (programming)')}}
+- 維基百科的 [Property (programming)](https://zh.wikipedia.org/wiki/Property_(programming))
 - [JavaScript 物件導向介紹](/zh-TW/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)

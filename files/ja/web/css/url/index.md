@@ -171,7 +171,7 @@ URL がフィルターへのパスとして使用される場合、 URL は以�
 
     ```css
     .blur {
-      filter: url(my-file.svg#svg-blur); /* フィルターとして使用する SVG ファイルの URL */
+      filter: url(my-file.svg#svg-blur); /* フィルターとして使用する SVG ファイルの URL */
     }
 
     .inline-blur {

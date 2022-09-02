@@ -15,7 +15,7 @@ L'idée de base de REST est qu'une ressource, par exemple un document, est trans
 
 Parce que HTTP, le protocole derrière le World Wide Web (WWW), transfère des documents et des liens hypertextes et est également une norme, les API HTTP simples sont parfois familièrement appelés API RESTful, RESTful Services ou simplement REST Services même s'ils n'adhèrent pas nécessairement à toutes les contraintes REST. Les débutants peuvent simplement supposer qu'un API REST signifie un service HTTP qui peut être appelé à l'aide de bibliothèques et d'outils web standards.
 
-## Pour approfondir
+## Voir aussi
 
 ### Apprendre
 
@@ -24,5 +24,5 @@ Parce que HTTP, le protocole derrière le World Wide Web (WWW), transfère des d
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Representational_state_transfer", "REST")}} sur Wikipédia
+- [REST](https://fr.wikipedia.org/wiki/Representational_state_transfer) sur Wikipédia
 - [REST Architecture](https://www.service-architecture.com/articles/web-services/representational_state_transfer_rest.html) (en)

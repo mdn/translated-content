@@ -11,9 +11,9 @@ translation_of: Web/CSS/font-variant-alternates
 
 <h2 id="Resumen">Resumen</h2>
 
-<p>La propiedad CSS <strong><code>font-variant-alternates</code></strong> controla el uso de glifos alternos. Estos glifos alternos pueden ser referenciados por nombres alternativos en {{cssxref("@font-feature-values")}}.</p>
+<p>La propiedad CSS <strong><code>font-variant-alternates</code></strong> controla el uso de glifos alternos. Estos glifos alternos pueden ser referenciados por nombres alternativos en {{cssxref("@font-feature-values")}}.</p>
 
-<p>Las reglas-at definen nombres, para un tipo determinado de glifos alternativos (<code>stylistic</code>, <code>styleset</code>, <code>character-variant</code>, <code>swash</code>, <code>ornament</code> o <code>annotation</code>), asociándolos a un valor OpenType dado. Esta propiedad permite utilizar estos nombres de fácil uso (según se defina en {{cssxref("@font-feature-values")}}) dentro de la hoja de estilos.</p>
+<p>Las reglas-at definen nombres, para un tipo determinado de glifos alternativos (<code>stylistic</code>, <code>styleset</code>, <code>character-variant</code>, <code>swash</code>, <code>ornament</code> o <code>annotation</code>), asociándolos a un valor OpenType dado. Esta propiedad permite utilizar estos nombres de fácil uso (según se defina en {{cssxref("@font-feature-values")}}) dentro de la hoja de estilos.</p>
 
 <p>{{cssinfo}}</p>
 
@@ -39,19 +39,19 @@ font-variant-alternates: unset;
 
 <dl>
  <dt><code>normal</code></dt>
- <dd>Se deshabilita el uso de glifos alternos.</dd>
+ <dd>Se deshabilita el uso de glifos alternos.</dd>
  <dt><code>historical-forms</code></dt>
- <dd>Se habilita la muestra de formas históricas , es decir, glifos que eran usados comúnmente en el pasado, pero no en la actualidad. Corresponde al valor de OpenType <code>hist</code>.</dd>
+ <dd>Se habilita la muestra de formas históricas , es decir, glifos que eran usados comúnmente en el pasado, pero no en la actualidad. Corresponde al valor de OpenType <code>hist</code>.</dd>
  <dt><code><a name="stylistic()"></a>stylistic()</code></dt>
- <dd>Esta función habilita la muestra de alternos estilísticos. El parámetro es un nombre específico de fuente mapeado a un número. Corresponde al valor de OpenType <code>salt</code>, como <code>salt 2</code>.</dd>
+ <dd>Esta función habilita la muestra de alternos estilísticos. El parámetro es un nombre específico de fuente mapeado a un número. Corresponde al valor de OpenType <code>salt</code>, como <code>salt 2</code>.</dd>
  <dt><code><a name="styleset()"></a>styleset()</code></dt>
- <dd>Esta función habilita el uso de un conjunto de alternos estilísticos para caracteres. El parámetro es un nombre de fuente específico mapeado a un número. Corresponde al valor de OpenType <code>ssXY</code>, como <code>ss02</code>.</dd>
+ <dd>Esta función habilita el uso de un conjunto de alternos estilísticos para caracteres. El parámetro es un nombre de fuente específico mapeado a un número. Corresponde al valor de OpenType <code>ssXY</code>, como <code>ss02</code>.</dd>
  <dt><code><a name="character-variant()"></a>character-variant()</code></dt>
  <dd>Esta función habilita el uso de un conjunto de alternos estilísticos para caracteres. Es muy similar a <code>styleset()</code>, aunque la variante aquí no crea glifos coherentes a un set de caracteres; los caracteres individuales tendrán estilos indipendientes, no necesariamente coherentes. El parámetro es un nombre específico de fuente mapeado a un número. Corresponde al valor de OpenType <code>cvXY</code>, como <code>cv02</code>.</dd>
  <dt><code><a name="swash()"></a>swash()</code></dt>
- <dd>Esta función habilita la muestra de glifos de tipografía <a href="http://en.wikipedia.org/wiki/Swash_%28typography%29">swash</a>. El parámetro es un nombre específico de fuente mapeado a un número. Corresponde a los valores de OpenType <code>swsh</code> y <code>cswh</code>, como <code>swsh 2</code> y <code>cswh 2</code>.</dd>
+ <dd>Esta función habilita la muestra de glifos de tipografía <a href="http://en.wikipedia.org/wiki/Swash_%28typography%29">swash</a>. El parámetro es un nombre específico de fuente mapeado a un número. Corresponde a los valores de OpenType <code>swsh</code> y <code>cswh</code>, como <code>swsh 2</code> y <code>cswh 2</code>.</dd>
  <dt><code><a name="ornaments()"></a>ornaments()</code></dt>
- <dd>Esta función habilita la muestra de ornamentas, que son <a href="http://en.wikipedia.org/wiki/Fleuron_%28typography%29">florones</a> y otros glifos de estilo dingbat. El parámetro es un nombre específico de fuente mapeado a un número. Corresponde al valor de OpenType <code>ornm</code>, como <code>ornm 2</code>.
+ <dd>Esta función habilita la muestra de ornamentas, que son <a href="http://en.wikipedia.org/wiki/Fleuron_%28typography%29">florones</a> y otros glifos de estilo dingbat. El parámetro es un nombre específico de fuente mapeado a un número. Corresponde al valor de OpenType <code>ornm</code>, como <code>ornm 2</code>.
  <div class="note"><strong>Nota: </strong>para manteneer la semántica de la fuente, se invita a los diseñadores de fuentes a incluir ornamentas qoe no coincidan con caracteres zingbat de Unicode como variantes de ornamenta al caracter de viñeta (U+2022). Las fuentes bien diseñadas lo harán, aunque muchas otras fuentes no.</div>
  </dd>
  <dt><code><a name="annotation()"></a>annotation()</code></dt>
@@ -79,7 +79,7 @@ font-variant-alternates: unset;
 
 <h3 id="Resultado">Resultado</h3>
 
-<p><strong>Nota:</strong> se necesita la fuente Open Type <a href="http://ufonts.com/download/leituradisplay-swashes-opentype/470776.html">Leitura Display Swashes</a> instalada para que este ejemplo funcione</p>
+<p><strong>Nota:</strong> se necesita la fuente Open Type <a href="http://ufonts.com/download/leituradisplay-swashes-opentype/470776.html">Leitura Display Swashes</a> instalada para que este ejemplo funcione</p>
 
 <p>{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/font-variant-alternates') }}</p>
 

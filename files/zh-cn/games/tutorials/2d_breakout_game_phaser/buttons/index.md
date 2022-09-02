@@ -1,16 +1,6 @@
 ---
 title: Buttons
 slug: Games/Tutorials/2D_breakout_game_Phaser/Buttons
-tags:
-  - 2D
-  - Beginner
-  - Buttons
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Buttons
 ---
 {{GamesSidebar}}
 

@@ -1,11 +1,6 @@
 ---
 title: DoS 攻擊
 slug: Glossary/DOS_attack
-tags:
-  - DoS
-  - 安全性
-  - 術語表
-translation_of: Glossary/DOS_attack
 ---
 DoS (拒絕服務)是一種網路攻擊手段，它通過大量的伺服器請求來阻止合法使用伺服器({{glossary("server")}})資源。
 
@@ -25,6 +20,6 @@ DoS 攻擊更多的是一種類別而不是具體的某種方式的攻擊。如�
 
 ## 了解更多
 
-- 維基百科上的 {{interwiki("wikipedia", "Denial-of-service_attack", "拒絕服務攻擊")}}
+- 維基百科上的 [拒絕服務攻擊](https://zh.wikipedia.org/wiki/Denial-of-service_attack)
 - [在 OWASP 上的拒絕服務攻擊](https://www.owasp.org/index.php/Denial_of_Service)
 - {{Glossary("Distributed Denial of Service","DDoS")}}

@@ -36,7 +36,7 @@ HTTP の **`Content-Security-Policy`** レスポンスヘッダーは、ウェ�
 Content-Security-Policy: <policy-directive>; <policy-directive>
 ```
 
-ここで、 `<policy-directive>` は `<directive> <value>` の形であり、内部に区切り文字はありません。
+ここで、 `<policy-directive>` は `<directive> <value>` の形であり、内部に区切り文字はありません。
 
 ## ディレクティブ
 

@@ -29,15 +29,12 @@ _Aucun héritage de méthode statique_.
 
 ## Spécifications
 
-| Spécification                                                                    | Status                                   | Commentaire                         |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------- |
-| {{SpecName('CSSOM', '#the-css.escape%28%29-method', 'CSS')}} | {{Spec2('CSSOM')}}                 | Ajoute la méthode statique escape() |
-| {{SpecName('CSS3 Conditional', '#the-css-interface', 'CSS')}} | {{Spec2('CSS3 Conditional')}} | Définition initiale                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CSS")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
-- [Components.utils.importGlobalProperties](/en-US/docs/Components.utils.importGlobalProperties)
+- [Components.utils.importGlobalProperties](/fr/docs/Components.utils.importGlobalProperties)

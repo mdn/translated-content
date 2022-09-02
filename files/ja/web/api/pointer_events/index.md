@@ -1,15 +1,6 @@
 ---
 title: ポインターイベント
 slug: Web/API/Pointer_events
-tags:
-  - API
-  - インターフェイス
-  - Landing
-  - 概要
-  - ポインターイベント
-  - ウェブ
-  - イベント
-translation_of: Web/API/Pointer_events
 ---
 {{DefaultAPISidebar("Pointer Events")}}
 
@@ -134,7 +125,7 @@ translation_of: Web/API/Pointer_events
         {{domxref('GlobalEventHandlers.onpointermove','onpointermove')}}
       </td>
       <td>
-        ポインターが座標を変更したときに発生します。 また、ポインターの状態の変化がこれ以外のイベントで報告できない場合もこのイベントが使われます。
+        ポインターが座標を変更したときに発生します。 また、ポインターの状態の変化がこれ以外のイベントで報告できない場合もこのイベントが使われます。
       </td>
     </tr>
     <tr>

@@ -10,7 +10,7 @@ translation_of: Web/API/Node/contains
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>El método <strong><code>Node.contains()</code></strong> devuelve un valor {{jsxref("Boolean")}} indicando si un nodo es descendiente de un nodo dado o no, por ejemplo, el propio nodo, uno de sus hijos directos (({{domxref("Node.childNodes", "childNodes")}})), uno de los hijos directos de su nodo hijo, etc.</p>
+<p>El método <strong><code>Node.contains()</code></strong> devuelve un valor {{jsxref("Boolean")}} indicando si un nodo es descendiente de un nodo dado o no, por ejemplo, el propio nodo, uno de sus hijos directos (({{domxref("Node.childNodes", "childNodes")}})), uno de los hijos directos de su nodo hijo, etc.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -19,7 +19,7 @@ translation_of: Web/API/Node/contains
 
 <h2 id="Ejemplo">Ejemplo</h2>
 
-<p>Esta función verifica si un un elemento esté en el cuerpo de la página. Como <code>contains</code> es inclusivo y determinar si el cuerpo se contiene a sí mismo no es la intención de  <code>isInPage</code> este caso explícitamente devuelve <code>false</code>.</p>
+<p>Esta función verifica si un un elemento esté en el cuerpo de la página. Como <code>contains</code> es inclusivo y determinar si el cuerpo se contiene a sí mismo no es la intención de  <code>isInPage</code> este caso explícitamente devuelve <code>false</code>.</p>
 
 <pre class="brush:js">function isInPage(node) {
   return (node === document.body) ? false : document.body.contains(node);

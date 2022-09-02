@@ -1,7 +1,6 @@
 ---
 title: Python
 slug: Glossary/Python
-translation_of: Glossary/Python
 ---
 **Python**是高階通用（general-purpose）程式語言。他使用了多型編程範式（multi-paradigm approach），這意味著他支援了程序化、物件導向、還有一些函式語言程式設計結構體（functional programming constructs）。
 
@@ -11,7 +10,7 @@ Python 是在 OSI 認可的開源許可證規範下開發的，使其能自由�
 
 ## 參見
 
-- 維基百科的 {{interwiki('wikipedia','Python')}}
+- 維基百科的 [Python](https://zh.wikipedia.org/wiki/Python)
 - [Python 官方教學文件](https://docs.python.org/3/tutorial/index.html)
 - [Tutorialspoint Python 教學](http://www.tutorialspoint.com/python/index.htm)
 - [AlphaCodingSkills Python 教學](https://www.alphacodingskills.com/python/python-tutorial.php)

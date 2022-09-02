@@ -30,13 +30,13 @@ translation_of: Learn/CSS/CSS_layout/Positioning
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Вся идея позиционирования заключается в том, чтобы позволить нам переопределять поведение базового потока документа, описанного выше, для того чтобы производить интересные эффекты. Что если вам захочется слегка изменить позицию каких-либо блоков внутри макета относительно их позиции в потоке макета по умолчанию? Ваш инструмент - позиционирование. Или </span></span><span class="tlid-translation translation" lang="ru"><span title="">если вы хотите создать элемент пользовательского интерфейса, который плавает над другими частями страницы и/или всегда располагается на одном и том же месте в окне браузера не зависимо от того сколько прокручивалась страница? Позиционирование делает возможным работу таких макетов.</span></span></p>
 
-<p>Существует несколько разных типов позиционирования<span class="tlid-translation translation" lang="ru"><span title="">, которые вы можете применить к элементам HTML. Для активации специфического типа позиционирования у элемента, мы используем свойство </span></span>{{cssxref("position")}}.</p>
+<p>Существует несколько разных типов позиционирования<span class="tlid-translation translation" lang="ru"><span title="">, которые вы можете применить к элементам HTML. Для активации специфического типа позиционирования у элемента, мы используем свойство </span></span>{{cssxref("position")}}.</p>
 
 <h3 id="Статическое_позиционирование">Статическое позиционирование</h3>
 
-<p>Статическое позиционирование — это умолчание, которое получает каждый элемент, что всего лишь значит "поставить элемент в его нормальное положение в потоке макета документа — ничего особенного для рассмотрения".</p>
+<p>Статическое позиционирование — это умолчание, которое получает каждый элемент, что всего лишь значит "поставить элемент в его нормальное положение в потоке макета документа — ничего особенного для рассмотрения".</p>
 
-<p>Чтобы продемонстрировать это и настроить ваш образец для будущих разделов, сначала добавьте <code>class</code> <code>positioned</code> ко второму {{htmlelement("p")}} в HTML:</p>
+<p>Чтобы продемонстрировать это и настроить ваш образец для будущих разделов, сначала добавьте <code>class</code> <code>positioned</code> ко второму {{htmlelement("p")}} в HTML:</p>
 
 <pre class="brush: html  ">&lt;p class="positioned"&gt; ... &lt;/p&gt;</pre>
 
@@ -55,7 +55,7 @@ translation_of: Learn/CSS/CSS_layout/Positioning
 
 <h3 id="Относительное_позиционирование">Относительное позиционирование</h3>
 
-<p>Относительное позиционирование первый тип позиции, который мы рассмотрим. Оно очень похоже на статическое позиционирование, за исключением того что вы можете модифицировать окончательное положение позиционируемого объекта занявшего своё место в макете нормального потока, в том числе заставлять его перекрывать другие элементы на странице. Двигайтесь далее и обновите объявление <code>position</code> в вашем коде:</p>
+<p>Относительное позиционирование первый тип позиции, который мы рассмотрим. Оно очень похоже на статическое позиционирование, за исключением того что вы можете модифицировать окончательное положение позиционируемого объекта занявшего своё место в макете нормального потока, в том числе заставлять его перекрывать другие элементы на странице. Двигайтесь далее и обновите объявление <code>position</code> в вашем коде:</p>
 
 <pre class="brush: css  ">position: relative;</pre>
 
@@ -72,7 +72,7 @@ left: 30px;</pre>
 <p><strong>Примечание</strong>: значения этих свойств могут принимать любые <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">единицы</a> которые вы ожидаете по логике: пиксели, мм, rems, %, и т.д.</p>
 </div>
 
-<p>Если вы сейчас сохраните и обновите, вы получите примерно такой результат:</p>
+<p>Если вы сейчас сохраните и обновите, вы получите примерно такой результат:</p>
 
 <div class="hidden">
 <pre class="brush: html  ">&lt;h1&gt;Relative positioning&lt;/h1&gt;
@@ -86,8 +86,8 @@ left: 30px;</pre>
 &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</pre>
 
 <pre class="brush: css  ">body {
-  width: 500px;
-  margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
 }
 
 p {
@@ -138,8 +138,8 @@ span {
 &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</pre>
 
 <pre class="brush: css  ">body {
-  width: 500px;
-  margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
 }
 
 p {
@@ -166,7 +166,7 @@ span {
 
 <p>В первую очередь обратите внимание на то, что интервал там, где должен быть позиционируемый элемент в потоке документа теперь отсутствует — первый и третий элементы сблизились так будто, он больше не существует! Ну, в каком-то смысле это правда. Абсолютно позиционированный элемент больше не существует в нормальном потоке макета документа. Вместо этого он располагается на своём собственном слое отдельно от всего остального. Это очень полезно: это значит, что мы можем создавать изолированные функции пользовательского интерфейса, которые не влияют на макет других элементов страницы. Например, всплывающие информационные блоки и меню управления; <span class="tlid-translation translation" lang="ru"><span title="">опрокидывающиеся панели; ф</span></span><span class="tlid-translation translation" lang="ru"><span title="">ункции пользовательского интерфейса, которые можно перетаскивать в любом месте страницы;</span> <span title="">и так далее...</span></span></p>
 
-<p>Во-вторых, обратите внимание, что позиция элемента изменилась — это потому, что {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, и {{cssxref("right")}} ведут себя по-другому с абсолютным позиционированием. <span class="tlid-translation translation" lang="ru"><span title="">Вместо того, чтобы позиционировать элемент на основе его относительного положения в обычном потоке макета документа, они определяют расстояние, на котором элемент должен находиться от каждой из сторон содержащего элемента. Поэтому в этом случае мы говорим, что абсолютно позиционированный элемент должен располагаться в 30px от верха "содержащего элемента" и 30px от левого края (В этом случае "содержащий элемент" является </span></span><strong><span class="tlid-translation translation" lang="ru"><span title="">исходным содержащим блоком</span></span></strong>. См. раздел ниже для дополнительной информации<span class="tlid-translation translation" lang="ru"><span title="">).</span></span></p>
+<p>Во-вторых, обратите внимание, что позиция элемента изменилась — это потому, что {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, и {{cssxref("right")}} ведут себя по-другому с абсолютным позиционированием. <span class="tlid-translation translation" lang="ru"><span title="">Вместо того, чтобы позиционировать элемент на основе его относительного положения в обычном потоке макета документа, они определяют расстояние, на котором элемент должен находиться от каждой из сторон содержащего элемента. Поэтому в этом случае мы говорим, что абсолютно позиционированный элемент должен располагаться в 30px от верха "содержащего элемента" и 30px от левого края (В этом случае "содержащий элемент" является </span></span><strong><span class="tlid-translation translation" lang="ru"><span title="">исходным содержащим блоком</span></span></strong>. См. раздел ниже для дополнительной информации<span class="tlid-translation translation" lang="ru"><span title="">).</span></span></p>
 
 <div class="note">
 <p><strong>Примечание</strong>: вы можете использовать {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, и {{cssxref("right")}} для изменения размера элемента если вам надо. Попробуйте установить <code>top: 0; bottom: 0; left: 0; right: 0;</code> и <code>margin: 0;</code> для вашего позиционируемого элемента и посмотрите, что произойдёт! <span class="tlid-translation translation" lang="ru"><span title="">Потом снова все верните...</span></span></p>
@@ -186,7 +186,7 @@ span {
 
 <p>Если никакие из элементов предков не имеют конкретно заданного свойства позиции, то по умолчанию все элементы предков будут иметь статическую позицию. В результате этого абсолютно позиционируемый элемент будет содержаться в <strong><span class="tlid-translation translation" lang="ru"><span title="">исходным </span></span>содержащем блоке</strong>. <span class="tlid-translation translation" lang="ru"><span title="">Исходный </span></span>содержащий блок <span class="tlid-translation translation" lang="ru"><span title="">имеет размеры области просмотра</span></span>, а также является блоком, содержащим элемент {{htmlelement("html")}}. <span class="tlid-translation translation" lang="ru"><span title="">Проще говоря</span></span>, абсолютно позиционируемый элемент будет отображаться за пределами элемента {{htmlelement("html")}} и будет расположен относительно исходного окна просмотра.</p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Позиционируемый элемент вложен в {{htmlelement ("body")}} в исходном HTML, но в конечном макете он расположен на </span></span>30px от верхнего и левого края страницы. Мы можем изменить <strong>контекст </strong> <strong>позиционирования </strong>— относительно какого элемента позиционируется позиционируемый элемент. <span class="tlid-translation translation" lang="ru"><span title="">Это делается путём установки позиционирования на одном из предков элемента </span></span>— <span class="tlid-translation translation" lang="ru"><span title="">на один из элементов, внутри которого он вложен (вы не можете позиционировать его относительно элемента, внутри которого он НЕ вложен).</span> <span title="">Чтобы продемонстрировать это, добавьте следующее объявление в правило вашего </span></span><code>body</code><span class="tlid-translation translation" lang="ru"><span title="">:</span></span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">Позиционируемый элемент вложен в {{htmlelement ("body")}} в исходном HTML, но в конечном макете он расположен на </span></span>30px от верхнего и левого края страницы. Мы можем изменить <strong>контекст </strong> <strong>позиционирования </strong>— относительно какого элемента позиционируется позиционируемый элемент. <span class="tlid-translation translation" lang="ru"><span title="">Это делается путём установки позиционирования на одном из предков элемента </span></span>— <span class="tlid-translation translation" lang="ru"><span title="">на один из элементов, внутри которого он вложен (вы не можете позиционировать его относительно элемента, внутри которого он НЕ вложен).</span> <span title="">Чтобы продемонстрировать это, добавьте следующее объявление в правило вашего </span></span><code>body</code><span class="tlid-translation translation" lang="ru"><span title="">:</span></span></p>
 
 <pre class="brush: css  ">position: relative;</pre>
 
@@ -204,8 +204,8 @@ span {
 &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</pre>
 
 <pre class="brush: css  ">body {
-  width: 500px;
-  margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -274,8 +274,8 @@ span {
 &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</pre>
 
 <pre class="brush: css  ">body {
-  width: 500px;
-  margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -318,7 +318,7 @@ p:nth-of-type(1) {
 
 <h3 id="Фиксированное_позиционированиее">Фиксированное позиционированиее</h3>
 
-<p>А теперь давайте посмотрим на фиксированное позиционирование. Оно работает точно также как и абсолютное позиционирование, одним ключевым отличием: в то время как абсолютное позиционирование фиксирует элемент в месте относительно его ближайшего позиционированного предка (исходный содержащий блок если нет иного), <strong>фиксированное позиционирование </strong><em>обычно </em>фиксирует элемент в месте относительно <span class="tlid-translation translation" lang="ru"><span title="">видимой части области просмотра</span></span>, <span class="tlid-translation translation" lang="ru"><span title="">кроме случаев, когда один из его потомков</span></span> является фиксированным блоком <span class="tlid-translation translation" lang="ru"><span title="">из-за того, что его</span></span> <a href="/en-US/docs/Web/CSS/transform">свойству transform </a><span class="tlid-translation translation" lang="ru"><span title="">отличается от none. </span></span>Это значит, что вы можете создать <span class="tlid-translation translation" lang="ru"><span title="">элементы пользовательского интерфейса, которые зафиксированы на месте, </span></span> <span class="tlid-translation translation" lang="ru"><span title="">как постоянные меню навигации,</span></span> которые всегда видимы вне зависимости от того сколько прокручивается страница.</p>
+<p>А теперь давайте посмотрим на фиксированное позиционирование. Оно работает точно также как и абсолютное позиционирование, одним ключевым отличием: в то время как абсолютное позиционирование фиксирует элемент в месте относительно его ближайшего позиционированного предка (исходный содержащий блок если нет иного), <strong>фиксированное позиционирование </strong><em>обычно </em>фиксирует элемент в месте относительно <span class="tlid-translation translation" lang="ru"><span title="">видимой части области просмотра</span></span>, <span class="tlid-translation translation" lang="ru"><span title="">кроме случаев, когда один из его потомков</span></span> является фиксированным блоком <span class="tlid-translation translation" lang="ru"><span title="">из-за того, что его</span></span> <a href="/en-US/docs/Web/CSS/transform">свойству transform </a><span class="tlid-translation translation" lang="ru"><span title="">отличается от none. </span></span>Это значит, что вы можете создать <span class="tlid-translation translation" lang="ru"><span title="">элементы пользовательского интерфейса, которые зафиксированы на месте, </span></span> <span class="tlid-translation translation" lang="ru"><span title="">как постоянные меню навигации,</span></span> которые всегда видимы вне зависимости от того сколько прокручивается страница.</p>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Давайте составим простой пример, чтобы показать, что мы имеем в виду. Во-первых, удалите существующие правила </span></span><code>p:nth-of-type(1)</code> и <code>.positioned</code> из вашего CSS.</p>
 
@@ -401,7 +401,7 @@ p:nth-of-type(1) {
 
 <h3 id="position_sticky">position: sticky</h3>
 
-<p>Доступно другое значение позиции называемое <code>position: sticky</code>, которое несколько новее чем другие. <span class="tlid-translation translation" lang="ru"><span title="">По сути, это гибрид относительной и фиксированной позиции, который позволяет позиционируемому элементу вести себя как будто он относительно позиционирован, до тех пор пока он не будет прокручен до определённой пороговой точки (например, 10px от вершины окна просмотра), после чего он становится фиксированным. </span></span> <span class="tlid-translation translation" lang="ru"><span title="">Это можно использовать, например, чтобы заставить панель навигации прокручиваться вместе со страницей до определённой точки, а затем задерживать в верхней части страницы.</span></span></p>
+<p>Доступно другое значение позиции называемое <code>position: sticky</code>, которое несколько новее чем другие. <span class="tlid-translation translation" lang="ru"><span title="">По сути, это гибрид относительной и фиксированной позиции, который позволяет позиционируемому элементу вести себя как будто он относительно позиционирован, до тех пор пока он не будет прокручен до определённой пороговой точки (например, 10px от вершины окна просмотра), после чего он становится фиксированным. </span></span> <span class="tlid-translation translation" lang="ru"><span title="">Это можно использовать, например, чтобы заставить панель навигации прокручиваться вместе со страницей до определённой точки, а затем задерживать в верхней части страницы.</span></span></p>
 
 <div id="Sticky_1">
 <div class="hidden">

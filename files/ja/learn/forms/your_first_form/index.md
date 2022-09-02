@@ -1,17 +1,6 @@
 ---
 title: 初めてのフォーム
 slug: Learn/Forms/Your_first_form
-tags:
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Learn
-  - Web
-translation_of: Learn/Forms/Your_first_form
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
 
@@ -297,7 +286,6 @@ button {
 ## まとめ
 
 おめでとうございます。初めてのウェブフォームが完成しました。こちらが最終結果のデモです。
-
 
 ```html hidden
 <form action="/my-handling-form-page" method="post">

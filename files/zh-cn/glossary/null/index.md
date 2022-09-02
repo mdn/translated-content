@@ -1,11 +1,6 @@
 ---
 title: 'Null'
 slug: Glossary/Null
-tags:
-  - 'Null'
-  - 空值
-  - 空指针
-translation_of: Glossary/Null
 ---
 在计算机学科，**`null`** 值一直是一个被讨论点，通常来说，表示一个不存在或者无效{{glossary("object")}}或者地址引用。语言实现中空引用的含义各不相同。
 
@@ -15,7 +10,7 @@ translation_of: Glossary/Null
 
 ### 一般知识
 
-- 维基百科{{Interwiki("wikipedia", "空指针")}}
+- 维基百科[空指针](https://zh.wikipedia.org/wiki/空指针)
 
 ### 技术参考
 

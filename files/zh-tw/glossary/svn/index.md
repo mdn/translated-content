@@ -1,10 +1,6 @@
 ---
 title: SVN
 slug: Glossary/SVN
-tags:
-  - SVN
-  - 術語表
-translation_of: Glossary/SVN
 ---
 Apache Subversion (**SVN**) 是免費的資源控制管理({{Glossary("SCM")}}) 系統。 它准許開發者保留文本和程式碼修改的歷史記錄。儘管 SVN 可以處理二進制文件，但我們不建議使用。
 
@@ -12,7 +8,7 @@ Apache Subversion (**SVN**) 是免費的資源控制管理({{Glossary("SCM")}}) 
 
 ### 基礎知識
 
-- 維基百科上的 {{Interwiki("wikipedia", "Apache Subversion")}}
+- 維基百科上的 [Apache Subversion](https://zh.wikipedia.org/wiki/Apache_Subversion)
 - [官方站點](https://subversion.apache.org/)
 
 ### 學習使用

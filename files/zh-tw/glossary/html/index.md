@@ -1,12 +1,6 @@
 ---
 title: HTML
 slug: Glossary/HTML
-tags:
-  - CodingScripting
-  - Glossary
-  - HTML
-  - l10n:priority
-translation_of: Glossary/HTML
 ---
 {{QuickLinksWithSubpages("/en-US/docs/Glossary")}}
 
@@ -32,7 +26,7 @@ HTML 文件的副檔名通常存為 `.htm` 或是 `.html`。它們會放在{{Glo
 
 ### 基本知識
 
-- 維基百科的 {{interwiki("wikipedia", "HTML", "HTML")}}
+- 維基百科的 [HTML](https://zh.wikipedia.org/wiki/HTML)
 
 ### 學習 HTML
 

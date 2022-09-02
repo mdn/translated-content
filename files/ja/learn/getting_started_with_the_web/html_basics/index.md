@@ -1,15 +1,6 @@
 ---
 title: HTML の基本
 slug: Learn/Getting_started_with_the_web/HTML_basics
-tags:
-  - Beginner
-  - CodingScripting
-  - Doctype html
-  - HTML
-  - Learn
-  - Web
-  - l10n:priority
-translation_of: Learn/Getting_started_with_the_web/HTML_basics
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
 
@@ -211,7 +202,7 @@ alt テキストのキーワードは「説明文」です。 alt テキスト�
     <a href="">Mozilla Manifesto</a>
     ```
 
- <li>このリンクのリンク先になるウェブアドレスを、この属性の値に書き込みます。
+    このリンクのリンク先になるウェブアドレスを、この属性の値に書き込みます。
 
     ```html
     <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>

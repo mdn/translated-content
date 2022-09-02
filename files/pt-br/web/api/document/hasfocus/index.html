@@ -12,10 +12,10 @@ translation_of: Web/API/Document/hasFocus
 ---
 <div>{{APIRef}}</div>
 
-<div>O método <code><strong>Document.hasFocus()</strong></code> retorna um valor {{jsxref("Boolean")}} que indica se o documento ou qualquer elemento dentro do documento está com o foco ativo. Este método pode ser usado para determinar se o elemento ativo em um documento tem foco.</div>
+<div>O método <code><strong>Document.hasFocus()</strong></code> retorna um valor {{jsxref("Boolean")}} que indica se o documento ou qualquer elemento dentro do documento está com o foco ativo. Este método pode ser usado para determinar se o elemento ativo em um documento tem foco.</div>
 
 <div class="note">
-<p>Quando se está visualizando um documento, um elemento com focus é sempre o ativo no mesmo, mas um elemento ativo não necessariamente tem o foco. Por exemplo, um elemento ativo com uma janela (popup) que não é a principal não tem foco.</p>
+<p>Quando se está visualizando um documento, um elemento com focus é sempre o ativo no mesmo, mas um elemento ativo não necessariamente tem o foco. Por exemplo, um elemento ativo com uma janela (popup) que não é a principal não tem foco.</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
@@ -24,7 +24,7 @@ translation_of: Web/API/Document/hasFocus
 
 <h3 id="Valor_retornado">Valor retornado</h3>
 
-<p><code>false</code> se o elemento ativo no documento não tem foco; <code>true</code> se o elemento ativo no documento tem foco.</p>
+<p><code>false</code> se o elemento ativo no documento não tem foco; <code>true</code> se o elemento ativo no documento tem foco.</p>
 
 <h2 id="Example" name="Example">Exemplo</h2>
 
@@ -89,55 +89,9 @@ function openWindow() {
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat("api.Document.hasFocus")}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidade</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>30</td>
-   <td>{{ CompatGeckoDesktop("1.9") }}</td>
-   <td>6.0</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidade</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1.9") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="sect1"> </h2>
+<h2 id="sect1"> </h2>
 
 <h2 id="Veja_também">Veja também</h2>
 

@@ -14,7 +14,7 @@ translation_of: Web/API/AudioBuffer
 
 **`AudioBuffer`** インターフェイスはメモリー上の短い音声を表すもので、 {{ domxref("AudioContext.decodeAudioData()") }} メソッドで音声ファイルから生成されたり、 {{ domxref("AudioContext.createBuffer()") }} を使って生のデータから生成されたりします。 AudioBuffer に入れた後、その音声は {{ domxref("AudioBufferSourceNode") }} に渡せば再生できます。
 
-これらのオブジェクトは短い、一般的には 45 秒未満の、断片的な音声を保持するために設計されています。それよりも長い音声は、 {{domxref("MediaElementAudioSourceNode")}} のオブジェクトが適しています。バッファーには、ノンインターリーブ IEEE754 32bit リニア PCM で、 `-1` から `+1` の範囲に正規化された形式で格納されます。。つまり、 32 ビット浮動小数点バッファーで、それぞれのサンプルは -1.0 から 1.0 の間です。 AudioBuffer に複数のチャンネルがある場合は、それぞれ分かれたバッファーに格納されます。
+これらのオブジェクトは短い、一般的には 45 秒未満の、断片的な音声を保持するために設計されています。それよりも長い音声は、 {{domxref("MediaElementAudioSourceNode")}} のオブジェクトが適しています。バッファーには、ノンインターリーブ IEEE754 32bit リニア PCM で、 `-1` から `+1` の範囲に正規化された形式で格納されます。つまり、 32 ビット浮動小数点バッファーで、それぞれのサンプルは -1.0 から 1.0 の間です。 AudioBuffer に複数のチャンネルがある場合は、それぞれ分かれたバッファーに格納されます。
 
 ## コンストラクター
 
@@ -67,7 +67,7 @@ for (var channel = 0; channel < myArrayBuffer.numberOfChannels; channel++) {
 // これは AudioBuffer を再生するときに使う AudioNode である
 var source = audioCtx.createBufferSource();
 
-  // AudioBufferSourceNode にバッファーを設定する
+  // AudioBufferSourceNode にバッファーを設定する
 source.buffer = myArrayBuffer;
 
 // AudioBufferSourceNode を出力先に接続すると音声が聞こえるようになる

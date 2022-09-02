@@ -161,7 +161,7 @@ let b = mycar instanceof Object  // true を返す
 ```js
 if (!(mycar instanceof Car)) {
   // 次のようなことをします。
-  // mycar = new Car(mycar)
+  // mycar = new Car(mycar)
 }
 ```
 

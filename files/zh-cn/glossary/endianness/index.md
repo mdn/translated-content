@@ -1,11 +1,6 @@
 ---
 title: Endianness（字节序）
 slug: Glossary/Endianness
-tags:
-  - 数据
-  - 术语
-  - 编程
-translation_of: Glossary/Endianness
 ---
 字节序，或字节顺序（"Endian"、"endianness" 或 "byte-order"），描述了计算机如何组织字节，组成对应的数字。
 
@@ -24,5 +19,5 @@ translation_of: Glossary/Endianness
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
 - [Typed Arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
-- Wikipedia 上的 {{Interwiki("wikipedia", "Endianness")}}
+- Wikipedia 上的 [Endianness](https://zh.wikipedia.org/wiki/Endianness)
 - {{Glossary("Data structure")}}

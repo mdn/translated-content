@@ -1,9 +1,6 @@
 ---
 title: 实体报头
 slug: Glossary/Entity_header
-tags:
-  - 实体报头
-translation_of: Glossary/Entity_header
 ---
 > **备注：** 当前的 HTTP/1.1 规范中不再提及实体、实体报头和实体的体。这中的有些字段现在被称为表示头字段（[RFC 7231, section 3: Representations](https://datatracker.ietf.org/doc/html/rfc7231#section-3)）。
 

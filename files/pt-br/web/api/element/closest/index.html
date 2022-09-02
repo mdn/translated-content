@@ -5,7 +5,7 @@ translation_of: Web/API/Element/closest
 ---
 <div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
 
-<p>O método <code><strong>Element.closest()</strong></code> retorna o ancestral mais próximo, em relação ao elemento atual, que possui o seletor fornecido como parâmetro. No caso de o elemento atual possuir o seletor, o mesmo é retornado.  Caso não exista um ancestral o método retorna <code>null</code>.</p>
+<p>O método <code><strong>Element.closest()</strong></code> retorna o ancestral mais próximo, em relação ao elemento atual, que possui o seletor fornecido como parâmetro. No caso de o elemento atual possuir o seletor, o mesmo é retornado.  Caso não exista um ancestral o método retorna <code>null</code>.</p>
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
@@ -15,20 +15,20 @@ translation_of: Web/API/Element/closest
 <h3 id="Parâmetros">Parâmetros</h3>
 
 <ul>
- <li><em>selectors</em> é um {{domxref("DOMString")}} contendo uma lista de seletores, por exemplo <code>"p:hover, .toto + q"</code></li>
- <li><em>element</em> é um {{domxref("Element")}} posicionado no início da árvore de elementos a ser percorrida.</li>
+ <li><em>selectors</em> é um {{domxref("DOMString")}} contendo uma lista de seletores, por exemplo <code>"p:hover, .toto + q"</code></li>
+ <li><em>element</em> é um {{domxref("Element")}} posicionado no início da árvore de elementos a ser percorrida.</li>
 </ul>
 
 <h3 id="Valor_retornado">Valor retornado</h3>
 
 <ul>
- <li><em>elt</em> é um {{domxref("Element")}} selecionado como ancestral mais próximo  do elemento pelo qual se iniciou a pesquisa. O valor retornado pode ser <code>null</code>.</li>
+ <li><em>elt</em> é um {{domxref("Element")}} selecionado como ancestral mais próximo  do elemento pelo qual se iniciou a pesquisa. O valor retornado pode ser <code>null</code>.</li>
 </ul>
 
 <h3 id="Exceções">Exceções</h3>
 
 <ul>
- <li>{{exception("SyntaxError")}} é lançada caso o parâmetro <code>selectors</code> não seja uma string válida contendo uma lista de seletores.</li>
+ <li><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError"><code>SyntaxError</code></a> é lançada caso o parâmetro <code>selectors</code> não seja uma string válida contendo uma lista de seletores.</li>
 </ul>
 
 <h2 id="Example" name="Example">Exemplo</h2>
@@ -58,38 +58,38 @@ var r4 = el.closest(":not(div)");
 
 <h2 id="Polyfill" name="Polyfill">Polyfill</h2>
 
-<p>Para navegadores que não suportam <code>Element.closest()</code>, mas possuem suporte para <code>element.matches()</code> (ou um prefixo equivalente, ou seja IE9+), o seguinte polyfill pode ser usado: </p>
+<p>Para navegadores que não suportam <code>Element.closest()</code>, mas possuem suporte para <code>element.matches()</code> (ou um prefixo equivalente, ou seja IE9+), o seguinte polyfill pode ser usado: </p>
 
 <pre class="brush: js">if (!Element.prototype.matches)
-    Element.prototype.matches = Element.prototype.msMatchesSelector ||
-                                Element.prototype.webkitMatchesSelector;
+    Element.prototype.matches = Element.prototype.msMatchesSelector ||
+                                Element.prototype.webkitMatchesSelector;
 
 if (!Element.prototype.closest)
-    Element.prototype.closest = function(s) {
+    Element.prototype.closest = function(s) {
         var el = this;
         if (!document.documentElement.contains(el)) return null;
-        do {
-            if (el.matches(s)) return el;
-            el = el.parentElement;
-        } while (el !== null);
-        return null;
-    };
+        do {
+            if (el.matches(s)) return el;
+            el = el.parentElement;
+        } while (el !== null);
+        return null;
+    };
 </pre>
 
-<p>Contudo, se você de fato precisa dar suporte ao IE 8, você pode usar o polyfill abaixo, o qual é lento mas eficaz. Além disso, ele só garante suporte a seletores CSS 2.1 no IE 8 e ainda pode causar picos de lentidão em websites em produção.</p>
+<p>Contudo, se você de fato precisa dar suporte ao IE 8, você pode usar o polyfill abaixo, o qual é lento mas eficaz. Além disso, ele só garante suporte a seletores CSS 2.1 no IE 8 e ainda pode causar picos de lentidão em websites em produção.</p>
 
 <pre class="brush: js">if (window.Element &amp;&amp; !Element.prototype.closest) {
-    Element.prototype.closest =
-    function(s) {
-        var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-            i,
-            el = this;
-        do {
-            i = matches.length;
-            while (--i &gt;= 0 &amp;&amp; matches.item(i) !== el) {};
-        } while ((i &lt; 0) &amp;&amp; (el = el.parentElement));
-        return el;
-    };
+    Element.prototype.closest =
+    function(s) {
+        var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+            i,
+            el = this;
+        do {
+            i = matches.length;
+            while (--i &gt;= 0 &amp;&amp; matches.item(i) !== el) {};
+        } while ((i &lt; 0) &amp;&amp; (el = el.parentElement));
+        return el;
+    };
 }
 </pre>
 

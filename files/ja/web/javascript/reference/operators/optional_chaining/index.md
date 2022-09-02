@@ -73,7 +73,7 @@ let result = someInterface.customMethod?.();
 > **Note:** 関数ではない名前のプロパティがあった場合、 `?.` を使用すると {{JSxRef("TypeError")}} 例外が発生します
 > (`someInterface.customMethod is not a function`)。
 
-> **Note:** `someInterface` 自体が `null` または `undefined` である場合にも、 {{JSxRef("TypeError")}} 例外が発生します (`someInterface is null`)。 `someInterface` 自体が `null` または `undefined` である可能性がある場合は、この位置にも `?.` を使用して `someInterface?.customMethod?.()` のようにする必要があります。
+> **Note:** `someInterface` 自体が `null` または `undefined` である場合にも、 {{JSxRef("TypeError")}} 例外が発生します (`someInterface is null`)。 `someInterface` 自体が `null` または `undefined` である可能性がある場合は、この位置にも `?.` を使用して `someInterface?.customMethod?.()` のようにする必要があります。
 
 #### 省略可能なコールバックやイベントハンドラーの扱い
 

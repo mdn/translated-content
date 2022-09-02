@@ -109,7 +109,7 @@ var myFunction = function() {
 
 ```js
 var myFunction = function namedFunction(){
-    statements
+    statements
 }
 ```
 
@@ -117,7 +117,7 @@ var myFunction = function namedFunction(){
 
 ここまで見てきたように、どちらの例も `function` キーワードから開始されていません。 `function` から開始せずに関数を含んでいる文が関数式です。
 
-関数が一度だけ使われるとき、一般的なパターンが[即時実行関数式 (IIFE, Immediately Invoked Function Expression)](/ja/docs/Glossary/IIFE) です。
+関数が一度だけ使われるとき、一般的なパターンが[即時実行関数式 (IIFE, Immediately Invoked Function Expression)](/ja/docs/Glossary/IIFE) です。
 
 ```js
 (function() {
@@ -129,7 +129,7 @@ var myFunction = function namedFunction(){
 
 ### ジェネレーター関数宣言 (`function*` 文)
 
-ジェネレーター関数の宣言のための特別な構文です (詳細は {{jsxref('Statements/function*', 'function* 文')}} を参照してください)。
+ジェネレーター関数の宣言のための特別な構文です (詳細は {{jsxref('Statements/function*', 'function* 文')}} を参照してください)。
 
 ```js
 function* name([param[, param[, ... param]]]) {
@@ -254,7 +254,7 @@ ECMAScript 2015 からは、独自のメソッドを、ゲッターとセッタ�
 ```js
 var obj = {
   foo() {},
-  bar() {}
+  bar() {}
 };
 ```
 
@@ -272,7 +272,7 @@ var multiply = new Function('x', 'y', 'return x * y');
 
 ```js
 function multiply(x, y) {
-   return x * y;
+   return x * y;
 } // ここにセミコロンは必要ありません
 ```
 

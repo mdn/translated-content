@@ -53,7 +53,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 En este punto se utiliza {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} para llamar la función `logURL()` junstamente después de realizar la solicitud. La función `logURL()` se apropia de la solicitud URL del objeto de eventos y lo registra en la consola del navegador. `El `[patrón](/es/Add-ons/WebExtensions/Match_patterns)` {urls: ["<all_urls>"]}` signinifica que se pueden interceptar todas las solicitudes HTTP de todas las URLs.
 
-Para probarlo, [instala la WebExtension](/es/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), [abre la consola del navegador](/es/docs/Tools/Browser_Console), y abre algunas páginas Web. En la consola del navegador, deberías ver las URLs de cualquier recurso que el navegador solicita:
+Para probarlo, [instala la WebExtension](/es/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), [abre la consola del navegador](/es/docs/Tools/Browser_Console), y abre algunas páginas Web. En la consola del navegador, deberías ver las URLs de cualquier recurso que el navegador solicita:
 
 {{EmbedYouTube("X3rMgkRkB1Q")}}
 

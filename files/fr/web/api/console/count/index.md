@@ -88,10 +88,8 @@ console.count([label]);
 
 ## Spécifications
 
-| Spécification                                                                | Status                           | Commentaire         |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#count", "console.count()")}} | {{Spec2("Console API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.count")}}
+{{Compat}}

@@ -7,9 +7,9 @@ translation_of: Web/API/HTMLImageElement
 
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>Интерфейс <code><strong>HTMLImageElement</strong></code>  предоставляет специальные свойства и методы  (расширяя обычный интерфейс {{domxref("HTMLElement")}}  ) для управления вёрсткой и отображением элемента {{HTMLElement("img")}}. </p>
+<p>Интерфейс <code><strong>HTMLImageElement</strong></code>  предоставляет специальные свойства и методы  (расширяя обычный интерфейс {{domxref("HTMLElement")}}  ) для управления вёрсткой и отображением элемента {{HTMLElement("img")}}. </p>
 
-<p>{{InheritanceDiagram(600,120)}} </p>
+<p>{{InheritanceDiagram(600,120)}} </p>
 
 <h2 id="Свойства">Свойства</h2>
 
@@ -25,9 +25,9 @@ translation_of: Web/API/HTMLImageElement
  </thead>
  <tbody>
   <tr>
-   <td><code>align</code> {{obsolete_inline}}</td>
+   <td><code>align</code> {{obsolete_inline}}</td>
    <td>{{domxref("DOMString")}}</td>
-   <td>Указывает расположение картинки зависящее от окружающего контента. Возможные значения:  <code>"left"</code>, <code>"right"</code>, <code>"justify"</code>, и <code>"center"</code>.</td>
+   <td>Указывает расположение картинки зависящее от окружающего контента. Возможные значения:  <code>"left"</code>, <code>"right"</code>, <code>"justify"</code>, и <code>"center"</code>.</td>
   </tr>
   <tr>
    <td><code>alt</code></td>
@@ -35,24 +35,24 @@ translation_of: Web/API/HTMLImageElement
    <td>Повторяет атрибут HTML {{htmlattrxref("alt", "img")}} указывающий на запасной контекст картинки.</td>
   </tr>
   <tr>
-   <td><code>border</code> {{obsolete_inline}}</td>
+   <td><code>border</code> {{obsolete_inline}}</td>
    <td>{{domxref("DOMString")}}</td>
-   <td>Ширина рамки вокруг картинки. Устарело и вместо него следует использовать свойство CSS {{cssxref("border")}}.</td>
+   <td>Ширина рамки вокруг картинки. Устарело и вместо него следует использовать свойство CSS {{cssxref("border")}}.</td>
   </tr>
   <tr>
-   <td><code>complete</code> {{readonlyInline}}</td>
+   <td><code>complete</code> {{readonlyInline}}</td>
    <td>{{domxref("Boolean")}}</td>
-   <td>Возвращает true, если браузер закончил загрузку картинки с ошибкой или успешно. Также возвращает true, когда не установлено значение  {{domxref("HTMLImageElement.src", "src")}}, во всех остальных случаях - false.</td>
+   <td>Возвращает true, если браузер закончил загрузку картинки с ошибкой или успешно. Также возвращает true, когда не установлено значение  {{domxref("HTMLImageElement.src", "src")}}, во всех остальных случаях - false.</td>
   </tr>
   <tr>
    <td><code>crossOrigin</code></td>
    <td>{{domxref("DOMString")}}</td>
-   <td>Является {{domxref("DOMString")}}, с настройками CORS для этого элемента изображения. Дополнительная информация: <a href="https://developer.mozilla.org/en-US/docs/HTML/CORS_settings_attributes">Атрибуты настроек CORS</a>.  </td>
+   <td>Является {{domxref("DOMString")}}, с настройками CORS для этого элемента изображения. Дополнительная информация: <a href="https://developer.mozilla.org/en-US/docs/HTML/CORS_settings_attributes">Атрибуты настроек CORS</a>.  </td>
   </tr>
   <tr>
    <td><code>currentSrc</code>{{readonlyInline}}{{experimental_inline}}</td>
    <td>{{domxref("DOMString")}}</td>
-   <td>Возвращает {{domxref("DOMString")}} с URL-адресом текущего изображения (что может измениться, например, в ответ на запросы мультимедиа).</td>
+   <td>Возвращает {{domxref("DOMString")}} с URL-адресом текущего изображения (что может измениться, например, в ответ на запросы мультимедиа).</td>
   </tr>
   <tr>
    <td><code>height</code></td>
@@ -60,7 +60,7 @@ translation_of: Web/API/HTMLImageElement
    <td>Отражает атрибут {{htmlattrxref ("height", "img")}} HTML, указывая визуализированную высоту изображения в пикселях CSS.</td>
   </tr>
   <tr>
-   <td><code>hspace</code> {{obsolete_inline}}</td>
+   <td><code>hspace</code> {{obsolete_inline}}</td>
    <td><code>long</code></td>
    <td>Space to the left and right of the image.</td>
   </tr>
@@ -70,29 +70,29 @@ translation_of: Web/API/HTMLImageElement
    <td>Reflects the {{htmlattrxref("ismap", "img")}} HTML attribute, indicating that the image is part of a server-side image map.</td>
   </tr>
   <tr>
-   <td><code>longDesc</code> {{obsolete_inline}}</td>
+   <td><code>longDesc</code> {{obsolete_inline}}</td>
    <td>{{domxref("DOMString")}}</td>
    <td>URI of a long description of the image.</td>
   </tr>
   <tr>
-   <td><code>lowSrc</code> {{obsolete_inline}}</td>
+   <td><code>lowSrc</code> {{obsolete_inline}}</td>
    <td>{{domxref("DOMString")}}</td>
    <td>A reference to a low-quality (but faster to load) copy of the image.</td>
   </tr>
   <tr>
-   <td><code>name</code> {{obsolete_inline}}</td>
+   <td><code>name</code> {{obsolete_inline}}</td>
    <td>{{domxref("DOMString")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
-   <td><code>naturalHeight</code> {{readonlyInline}}</td>
+   <td><code>naturalHeight</code> {{readonlyInline}}</td>
    <td><code>unsigned long</code></td>
-   <td>Intrinsic height of the image in CSS pixels, if it is available; otherwise, <code>0</code>.</td>
+   <td>Intrinsic height of the image in CSS pixels, if it is available; otherwise, <code>0</code>.</td>
   </tr>
   <tr>
-   <td><code>naturalWidth</code> {{readonlyInline}}</td>
+   <td><code>naturalWidth</code> {{readonlyInline}}</td>
    <td><code>unsigned long</code></td>
-   <td>Intrinsic width of the image in CSS pixels, if it is available; otherwise, <code>0</code>.</td>
+   <td>Intrinsic width of the image in CSS pixels, if it is available; otherwise, <code>0</code>.</td>
   </tr>
   <tr>
    <td><code>src</code></td>
@@ -100,9 +100,9 @@ translation_of: Web/API/HTMLImageElement
    <td>Reflects the {{htmlattrxref("src")}} HTML attribute, containing the URL of the image.</td>
   </tr>
   <tr>
-   <td><code>srcset</code> {{experimental_inline}}</td>
-   <td> </td>
-   <td> </td>
+   <td><code>srcset</code> {{experimental_inline}}</td>
+   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><code>useMap</code></td>
@@ -110,22 +110,22 @@ translation_of: Web/API/HTMLImageElement
    <td>Reflects the {{htmlattrxref("usemap", "img")}} HTML attribute, containing a partial URL of a map element.</td>
   </tr>
   <tr>
-   <td><code>vspace</code> {{obsolete_inline}}</td>
+   <td><code>vspace</code> {{obsolete_inline}}</td>
    <td><code>long</code></td>
    <td>Space above and below the image.</td>
   </tr>
   <tr>
    <td><code>width</code></td>
    <td><code>unsigned long</code></td>
-   <td>Reflects the {{htmlattrxref("width", "img")}} HTML attribute, indicating the rendered width of the image in CSS pixels.</td>
+   <td>Reflects the {{htmlattrxref("width", "img")}} HTML attribute, indicating the rendered width of the image in CSS pixels.</td>
   </tr>
   <tr>
-   <td><code>x</code> {{readonlyInline}}{{non-standard_inline}}</td>
+   <td><code>x</code> {{readonlyInline}}{{non-standard_inline}}</td>
    <td><code>long</code></td>
    <td>The horizontal offset from the nearest layer. (Mimic an old Netscape 4 behavior)</td>
   </tr>
   <tr>
-   <td><code>y</code> {{readonlyInline}}{{non-standard_inline}}</td>
+   <td><code>y</code> {{readonlyInline}}{{non-standard_inline}}</td>
    <td><code>long</code></td>
    <td>The vertical offset from the nearest layer. (Mimic an old Netscape 4 behavior)</td>
   </tr>

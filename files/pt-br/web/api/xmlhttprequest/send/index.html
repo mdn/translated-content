@@ -34,9 +34,9 @@ translation_of: Web/API/XMLHttpRequest/send
  <dd>Um corpo de dados a ser enviado na solicitação XHR. Isso pode ser:
  <ul>
   <li>Um {{domxref("Document")}}, caso em que é serializado antes de ser enviado.</li>
-  <li>Um <code>BodyInit</code>, que <a href="https://fetch.spec.whatwg.org/#bodyinit">conforme a espeficicação Fetch</a>, pode ser um objeto {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}} ou {{domxref("USVString")}}.</li>
+  <li>Um <code>BodyInit</code>, que <a href="https://fetch.spec.whatwg.org/#bodyinit">conforme a espeficicação Fetch</a>, pode ser um objeto {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}} ou {{domxref("USVString")}}.</li>
  </ul>
- Se nenhum valor for  espeficicado para o corpo, o valor padrão de <code>null</code> é usado.</dd>
+ Se nenhum valor for  espeficicado para o corpo, o valor padrão de <code>null</code> é usado.</dd>
 </dl>
 
 <p>A melhor maneira de enviar conteúdo binário (por exemplo, em uploads de arquivos) é usando um {{domxref("ArrayBufferView")}} ou {{domxref("Blob")}} em conjunto com o método <code>send()</code>.</p>
@@ -72,7 +72,7 @@ translation_of: Web/API/XMLHttpRequest/send
 xhr.open('GET', '/server', true);
 
 xhr.onload = function () {
-  // Requisição finalizada. Faça o processamento aqui.
+  // Requisição finalizada. Faça o processamento aqui.
 };
 
 xhr.send(null);
@@ -90,9 +90,9 @@ xhr.open("POST", '/server', true);
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
 xhr.onreadystatechange = function() { // Chama a função quando o estado mudar.
-    if (this.readyState === XMLHttpRequest.DONE &amp;&amp; this.status === 200) {
-        // Requisição finalizada. Faça o processamento aqui.
-    }
+    if (this.readyState === XMLHttpRequest.DONE &amp;&amp; this.status === 200) {
+        // Requisição finalizada. Faça o processamento aqui.
+    }
 }
 xhr.send("foo=bar&amp;lorem=ipsum");
 // xhr.send(new Int8Array());

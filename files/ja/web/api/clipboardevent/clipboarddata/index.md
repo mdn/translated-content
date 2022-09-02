@@ -1,21 +1,21 @@
 ---
 title: ClipboardEvent.clipboardData
 slug: Web/API/ClipboardEvent/clipboardData
+page-type: web-api-instance-property
 tags:
   - API
   - Clipboard
-  - クリップボード API
+  - Clipboard API
   - ClipboardEvent
   - Cut
-  - 実験的
-  - プロパティ
-  - 読み取り専用
+  - Property
+  - Read-only
   - copy
   - paste
 browser-compat: api.ClipboardEvent.clipboardData
 translation_of: Web/API/ClipboardEvent/clipboardData
 ---
-{{ apiref("Clipboard API") }} {{SeeCompatTable}}
+{{APIRef("Clipboard API")}}
 
 **`ClipboardEvent.clipboardData`** プロパティは、{{domxref("DataTransfer")}} オブジェクトを保持し、次のように使用します。
 
@@ -24,11 +24,9 @@ translation_of: Web/API/ClipboardEvent/clipboardData
 
 詳しい情報は、{{domxref("Element/cut_event", "cut")}}、{{domxref("Element/copy_event", "copy")}}、{{domxref("Element/paste_event", "paste")}} イベントのドキュメントを参照してください。
 
-## 構文
+## 値
 
-```js
-data = ClipboardEvent.clipboardData
-```
+{{domxref("DataTransfer")}} オブジェクト。
 
 ## 仕様書
 
@@ -40,6 +38,6 @@ data = ClipboardEvent.clipboardData
 
 ## 関連情報
 
-- Copy 関連イベント： {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}
+- Copy 関連イベント： {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}
 - 所属先の {{domxref("ClipboardEvent")}} インターフェイス
 - [クリップボード API](/ja/docs/Web/API/Clipboard_API)

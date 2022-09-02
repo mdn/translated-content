@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set/entries
 ---
 {{JSRef}}
 
-**`entries()`** メソッドは、新しい[反復子](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)オブジェクトを返します。これは **`[value, value]` の配列**で `Set` オブジェクトの各要素を挿入順に返します。 `Set` オブジェクトは、`Map` オブジェクトのように `key` を持つことはありません。しかしながら、`Map` オブジェクトと似た API をもつために、それぞれの*項目*は _key_ と _value_ に対して同じ値を持ちます。そのため、配列 `[value, value]` が返されます。
+**`entries()`** メソッドは、新しい[反復子](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)オブジェクトを返します。これは **`[value, value]` の配列**で `Set` オブジェクトの各要素を挿入順に返します。 `Set` オブジェクトは、`Map` オブジェクトのように `key` を持つことはありません。しかしながら、`Map` オブジェクトと似た API をもつために、それぞれの*項目*は _key_ と _value_ に対して同じ値を持ちます。そのため、配列 `[value, value]` が返されます。
 
 {{EmbedInteractiveExample("pages/js/set-prototype-entries.html")}}
 

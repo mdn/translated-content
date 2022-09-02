@@ -1,13 +1,6 @@
 ---
 title: Element.nextElementSibling
 slug: Web/API/Element/nextElementSibling
-tags:
-  - API
-  - DOM
-  - Element
-  - プロパティ
-browser-compat: api.Element.nextElementSibling
-translation_of: Web/API/Element/nextElementSibling
 ---
 {{APIRef("DOM")}}
 

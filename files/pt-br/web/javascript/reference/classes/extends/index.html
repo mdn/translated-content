@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Classes/extends
 ---
 <div>{{jsSidebar("Classes")}}</div>
 
-<p>A palavra chave <strong><code>extends</code></strong> é usada em uma <a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">class declarations</a> ou <a href="/en-US/docs/Web/JavaScript/Reference/Operators/class">class expressions</a> para criar uma classe filha de outra classe.</p>
+<p>A palavra chave <strong><code>extends</code></strong> é usada em uma <a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">class declarations</a> ou <a href="/en-US/docs/Web/JavaScript/Reference/Operators/class">class expressions</a> para criar uma classe filha de outra classe.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -22,13 +22,13 @@ translation_of: Web/JavaScript/Reference/Classes/extends
 
 <p>A palavra chave extends pode ser usada para tanto classes filhas quanto objetos filhos pré-construidos.</p>
 
-<p>O <code>.prototype</code> da extensão deve ser um {{jsxref("Object")}} ou {{jsxref("null")}}.</p>
+<p>O <code>.prototype</code> da extensão deve ser um {{jsxref("Object")}} ou {{jsxref("null")}}.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Usando_extends">Usando <code>extends</code></h3>
+<h3 id="Usando_extends">Usando <code>extends</code></h3>
 
-<p>O primeiro exemplo cria uma classe chamada <code>Square</code> a partir de uma classe chamada <code>Polygon</code>. Este exemplo foi extraido deste <a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a> <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">(source)</a>.</p>
+<p>O primeiro exemplo cria uma classe chamada <code>Square</code> a partir de uma classe chamada <code>Polygon</code>. Este exemplo foi extraido deste <a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a> <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">(source)</a>.</p>
 
 <pre class="brush: js">class Square extends Polygon {
   constructor(length) {
@@ -49,9 +49,9 @@ translation_of: Web/JavaScript/Reference/Classes/extends
   }
 }</pre>
 
-<h3 id="Usando_extends_com_objetos_pré-construidos">Usando <code>extends</code> com objetos pré-construidos</h3>
+<h3 id="Usando_extends_com_objetos_pré-construidos">Usando <code>extends</code> com objetos pré-construidos</h3>
 
-<p>Este exemplo extende o objeto pré-construido {{jsxref("Date")}}. Este exemplo foi extraido deste <a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a> <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">(source)</a>.</p>
+<p>Este exemplo extende o objeto pré-construido {{jsxref("Date")}}. Este exemplo foi extraido deste <a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a> <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">(source)</a>.</p>
 
 <pre class="brush: js">class myDate extends Date {
   constructor() {
@@ -64,9 +64,9 @@ translation_of: Web/JavaScript/Reference/Classes/extends
   }
 }</pre>
 
-<h3 id="Estendendo_null">Estendendo <code>null</code></h3>
+<h3 id="Estendendo_null">Estendendo <code>null</code></h3>
 
-<p>Estender de {{jsxref("null")}} funciona como em uma classe normal, exceto que o objeto prototype não herda de {{jsxref("Object.prototype")}}.</p>
+<p>Estender de {{jsxref("null")}} funciona como em uma classe normal, exceto que o objeto prototype não herda de {{jsxref("Object.prototype")}}.</p>
 
 <pre class="brush: js"><code>class nullExtends extends null {
   constructor() {}

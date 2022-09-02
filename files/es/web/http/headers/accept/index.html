@@ -10,9 +10,9 @@ translation_of: Web/HTTP/Headers/Accept
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><code><font face="Open Sans, arial, sans-serif">La cabecera de pedido </font><strong>Accept</strong></code> anuncia que tipo de contenido el cliente puede procesar, expresado como un tipo <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME</a>. Usando <a href="/en-US/docs/Web/HTTP/Content_negotiation">negociación de contenido</a>, el servidor selecciona una de las propuestas , la utiliza e informa al cliente de la elección a través de  la cabecera de respuesta {{HTTPHeader("Content-Type")}} .</p>
+<p><code><font face="Open Sans, arial, sans-serif">La cabecera de pedido </font><strong>Accept</strong></code> anuncia que tipo de contenido el cliente puede procesar, expresado como un tipo <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME</a>. Usando <a href="/en-US/docs/Web/HTTP/Content_negotiation">negociación de contenido</a>, el servidor selecciona una de las propuestas , la utiliza e informa al cliente de la elección a través de  la cabecera de respuesta {{HTTPHeader("Content-Type")}} .</p>
 
-<p>Los navegadores configuran los valores adecuados en dependencia del contexto donde se ha hecho el pedido, por ejemplo: al solicitar una hoja de estilos CSS es configurado un valor diferente que cuando se solicita una imagen, un video o un script.</p>
+<p>Los navegadores configuran los valores adecuados en dependencia del contexto donde se ha hecho el pedido, por ejemplo: al solicitar una hoja de estilos CSS es configurado un valor diferente que cuando se solicita una imagen, un video o un script.</p>
 
 <table class="properties">
  <tbody>
@@ -44,20 +44,20 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8</pre>
 
 <dl>
  <dt><code>&lt;MIME_type&gt;/&lt;MIME_subtype&gt;</code></dt>
- <dd>Un único y preciso tipo <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME</a>, como <code>text/html</code>.</dd>
+ <dd>Un único y preciso tipo <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME</a>, como <code>text/html</code>.</dd>
  <dt><code>&lt;MIME_type&gt;/*</code></dt>
  <dd>Un tipo MIME, pero con cualquier subtipo.</dd>
  <dd>Por ejmplo, image/* comincide con:
  <ul>
   <li>image/png</li>
   <li>image/svg</li>
-  <li>image/gif<span class="hidden"> </span></li>
+  <li>image/gif<span class="hidden"> </span></li>
  </ul>
  </dd>
  <dt><code>*/*</code></dt>
  <dd>Culaquier tipo MIME</dd>
  <dt><code>;q=</code> (donde <em>q</em> es la importancia o peso)</dt>
- <dd>Culaquier valor es colocado en orden de preferencia, expresada usando un <a href="/en-US/docs/Glossary/Quality_values">valor de calidad</a> llamado <em>weight</em> (<em>peso</em> en español).</dd>
+ <dd>Culaquier valor es colocado en orden de preferencia, expresada usando un <a href="/en-US/docs/Glossary/Quality_values">valor de calidad</a> llamado <em>weight</em> (<em>peso</em> en español).</dd>
 </dl>
 
 <h2 id="Ejemplos">Ejemplos</h2>

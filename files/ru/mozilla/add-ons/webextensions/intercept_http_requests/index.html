@@ -7,14 +7,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
 
 <ul>
  <li>
-  <h2 id="Для_перехвата_HTTP_запросов_используйте_WebExtAPIRefwebRequest_API._Этот_API_позволит_вам_добавлять_обработчики_на_различных_этапах_создания_HTTP_запросов._В_обработчиках_вы_можете">Для перехвата  HTTP запросов используйте {{WebExtAPIRef("webRequest")}} API. Этот API позволит вам добавлять обработчики, на различных этапах создания HTTP запросов. В обработчиках вы можете:</h2>
+  <h2 id="Для_перехвата_HTTP_запросов_используйте_WebExtAPIRefwebRequest_API._Этот_API_позволит_вам_добавлять_обработчики_на_различных_этапах_создания_HTTP_запросов._В_обработчиках_вы_можете">Для перехвата  HTTP запросов используйте {{WebExtAPIRef("webRequest")}} API. Этот API позволит вам добавлять обработчики, на различных этапах создания HTTP запросов. В обработчиках вы можете:</h2>
  </li>
  <li>получить доступ к заголовкам и телам запроса, к заголовкам ответа</li>
  <li>отменять и перенаправлять запросы</li>
  <li>изменять запрос и заголовки ответа</li>
 </ul>
 
-<p>В этой статье мы рассмотрим три разных способа использования <code>webRequest</code> модуля:</p>
+<p>В этой статье мы рассмотрим три разных способа использования <code>webRequest</code> модуля:</p>
 
 <ul>
  <li>Логирование URL сделанных запросов.</li>
@@ -140,11 +140,11 @@ browser.webRequest.onBeforeSendHeaders.addListener(
   ["blocking", "requestHeaders"]
 );</pre>
 
-<p>Here we use the {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} event listener to run a function just before the request headers are sent.</p>
+<p>Here we use the {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} event listener to run a function just before the request headers are sent.</p>
 
 <p>The listener function will be called only for requests to URLs matching the <code>targetPage</code> <a href="/en-US/Add-ons/WebExtensions/Match_patterns">pattern</a>. Also note that we've again passed <code>"blocking"</code> as an option. We've also passed <code>"requestHeaders"</code>, which means that the listener will be passed an array containing the request headers that we expect to send. See {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}} for more information on these options.</p>
 
-<p>The listener function looks for the "User-Agent" header in the array of request headers, replaces its value with the value of the <code>ua</code> variable, and returns the modified array. This modified array will now be sent to the server.</p>
+<p>The listener function looks for the "User-Agent" header in the array of request headers, replaces its value with the value of the <code>ua</code> variable, and returns the modified array. This modified array will now be sent to the server.</p>
 
 <p>To test it out, open <a href="http://useragentstring.com/">useragentstring.com</a> and check that it identifies the browser as Firefox. Then reload the add-on, reload <a href="http://useragentstring.com/">useragentstring.com</a>, and check that Firefox is now identified as Opera:</p>
 

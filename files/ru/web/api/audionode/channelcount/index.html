@@ -6,15 +6,15 @@ translation_of: Web/API/AudioNode/channelCount
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p><code>channelCount</code> свойство интерфейса {{ domxref("AudioNode") }} представляющее собой целое число использующееся для определения того, сколько каналов участвуют для <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">up-mixing and down-mixing</a> соединений для любого входа узла.</p>
+<p><code>channelCount</code> свойство интерфейса {{ domxref("AudioNode") }} представляющее собой целое число использующееся для определения того, сколько каналов участвуют для <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">up-mixing and down-mixing</a> соединений для любого входа узла.</p>
 </div>
 
 <p><code>Использование и точное значение channelCount</code>'s зависит от {{domxref("AudioNode.channelCountMode")}}:</p>
 
 <ul>
- <li>Игнорируется если значение <code>channelCountMode</code> равно <code>max</code>.</li>
- <li>Используется в качестве максимального значения, если значение <code>channelCountMode</code> равно <code>clamped-max</code>.</li>
- <li>Используется в качестве точного значения, если значение <code>channelCountMode</code> указано явно.</li>
+ <li>Игнорируется если значение <code>channelCountMode</code> равно <code>max</code>.</li>
+ <li>Используется в качестве максимального значения, если значение <code>channelCountMode</code> равно <code>clamped-max</code>.</li>
+ <li>Используется в качестве точного значения, если значение <code>channelCountMode</code> указано явно.</li>
 </ul>
 
 <h2 id="Синтаксис">Синтаксис</h2>

@@ -1,11 +1,6 @@
 ---
 title: WebRTC
 slug: Glossary/WebRTC
-tags:
-  - JavaScript
-  - Web
-  - WebRTC
-translation_of: Glossary/WebRTC
 ---
 **WebRTC** (_Web Real-Time Communication_) 是一个可以用在视频聊天，音频聊天或 P2P 文件分享等 Web App 中的 {{Glossary("API")}}。
 
@@ -20,6 +15,6 @@ WebRTC 主要由以下几个部分组成：
 
 ## 了解更多
 
-- {{Interwiki("wikipedia", "WebRTC")}} on Wikipedia
+- [WebRTC](https://zh.wikipedia.org/wiki/WebRTC) on Wikipedia
 - [Guide to WebRTC on MDN](/zh-CN/docs/Web/API/WebRTC_API)
 - [Browser support of WebRTC](https://caniuse.com/rtcpeerconnection)

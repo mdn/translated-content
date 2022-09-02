@@ -24,10 +24,10 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors
 <p><code>color</code> é uma string que representa um CSS {{cssxref("&lt;color&gt;")}}, um objeto gradiente, ou um objeto padrão. <span id="result_box" lang="pt"><span>Examinaremos sobre objetos de gradiente e padrão mais tarde.</span> <span>Por padrão, a cor do contorno (stroke color) e a cor de preenchimento (fill color) estão definidos como preto</span></span> (valor de cor no CSS é <code>#000000</code>).</p>
 
 <div class="note">
-<p><strong>Nota:</strong> Quando você definir as propriedades <code>strokeStyle</code> e/ou <code>fillStyle</code> , o novo valor será o padrão para todas as formas desenhadas a partir de então.  Para toda forma que você quiser uma cor diferente, você vai precisar alterar o valor da propriedade <code>fillStyle</code> ou <code>strokeStyle</code>.</p>
+<p><strong>Nota:</strong> Quando você definir as propriedades <code>strokeStyle</code> e/ou <code>fillStyle</code> , o novo valor será o padrão para todas as formas desenhadas a partir de então.  Para toda forma que você quiser uma cor diferente, você vai precisar alterar o valor da propriedade <code>fillStyle</code> ou <code>strokeStyle</code>.</p>
 </div>
 
-<p>As strings validas que você pode inserir devem, de acordo com a especificação ser valores CSS {{cssxref("&lt;color&gt;")}}. Cada um dos exemplos a seguir, descrevem a mesma cor.</p>
+<p>As strings validas que você pode inserir devem, de acordo com a especificação ser valores CSS {{cssxref("&lt;color&gt;")}}. Cada um dos exemplos a seguir, descrevem a mesma cor.</p>
 
 <pre class="brush: js notranslate">// these all set the fillStyle to 'orange'
 
@@ -37,7 +37,7 @@ ctx.fillStyle = 'rgb(255, 165, 0)';
 ctx.fillStyle = 'rgba(255, 165, 0, 1)';
 </pre>
 
-<h3 id="A_fillStyle_example" name="A_fillStyle_example">Um <code>fillStyle</code> exemplo</h3>
+<h3 id="A_fillStyle_example" name="A_fillStyle_example">Um <code>fillStyle</code> exemplo</h3>
 
 <p>Neste exemplo, nós vamos mais uma vez utilizar dois <code>for</code> loops para desenhar uma grade de retângulos, cada um com uma cor diferente. A imagem do resultado, deve parecer como a captura de tela. Não existe nada de muito espetacular acontecendo aqui. Nós usamos as duas variéveis <code>i</code> and <code>j</code> para gerar uma única cor em RGB para cada quadrado, e apenas modificando os valores vermelho e verde. O canal azul possui um valor fixo. Modificando os canais, você pode gerar todos os tipos de paletas. Aumentando os passos, você pode alcançar algo que se parece com a paleta de cores dos usuários de Photoshop.</p>
 
@@ -58,13 +58,13 @@ ctx.fillStyle = 'rgba(255, 165, 0, 1)';
 <pre class="brush: js notranslate">draw();</pre>
 </div>
 
-<p>O resultado se parece com isto:</p>
+<p>O resultado se parece com isto:</p>
 
 <p>{{EmbedLiveSample("A_fillStyle_example", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}</p>
 
-<h3 id="A_strokeStyle_example" name="A_strokeStyle_example">Um <code>strokeStyle</code> exemplo</h3>
+<h3 id="A_strokeStyle_example" name="A_strokeStyle_example">Um <code>strokeStyle</code> exemplo</h3>
 
-<p>Este exemplo é similar com o anterior, porém utiliza a propriedade <code>strokeStyle</code> para alterar a cor de contorno das formas. Nós usamos o método <code>arc()</code>  para desenhar círculos ao invés de quadrados.</p>
+<p>Este exemplo é similar com o anterior, porém utiliza a propriedade <code>strokeStyle</code> para alterar a cor de contorno das formas. Nós usamos o método <code>arc()</code>  para desenhar círculos ao invés de quadrados.</p>
 
 <pre class="brush: js;highlight[5,6] notranslate">  function draw() {
     var ctx = document.getElementById('canvas').getContext('2d');
@@ -86,7 +86,7 @@ ctx.fillStyle = 'rgba(255, 165, 0, 1)';
 <pre class="brush: js notranslate">draw();</pre>
 </div>
 
-<p>O resultado se parece com isto:</p>
+<p>O resultado se parece com isto:</p>
 
 <p>{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}</p>
 
@@ -149,30 +149,30 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}</p>
 
-<h3 id="An_example_using_rgba" name="An_example_using_rgba()">Um exemplo usando o <code>rgba()</code></h3>
+<h3 id="An_example_using_rgba" name="An_example_using_rgba()">Um exemplo usando o <code>rgba()</code></h3>
 
-<p>Neste segundo exemplo, fazemos algo semelhante ao anterior, mas em vez de desenhar círculos uns sobre os outros, desenhei pequenos retângulos com crescente opacidade. O uso de rgba () oferece um pouco mais de controle e flexibilidade, pois podemos definir o estilo de preenchimento e traçado/stroke individualmente.</p>
+<p>Neste segundo exemplo, fazemos algo semelhante ao anterior, mas em vez de desenhar círculos uns sobre os outros, desenhei pequenos retângulos com crescente opacidade. O uso de rgba () oferece um pouco mais de controle e flexibilidade, pois podemos definir o estilo de preenchimento e traçado/stroke individualmente.</p>
 
 <pre class="brush: js;highlight[16] notranslate">function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById('canvas').getContext('2d');
 
-  // Draw background
-  ctx.fillStyle = 'rgb(255, 221, 0)';
-  ctx.fillRect(0, 0, 150, 37.5);
-  ctx.fillStyle = 'rgb(102, 204, 0)';
-  ctx.fillRect(0, 37.5, 150, 37.5);
-  ctx.fillStyle = 'rgb(0, 153, 255)';
-  ctx.fillRect(0, 75, 150, 37.5);
-  ctx.fillStyle = 'rgb(255, 51, 0)';
-  ctx.fillRect(0, 112.5, 150, 37.5);
+  // Draw background
+  ctx.fillStyle = 'rgb(255, 221, 0)';
+  ctx.fillRect(0, 0, 150, 37.5);
+  ctx.fillStyle = 'rgb(102, 204, 0)';
+  ctx.fillRect(0, 37.5, 150, 37.5);
+  ctx.fillStyle = 'rgb(0, 153, 255)';
+  ctx.fillRect(0, 75, 150, 37.5);
+  ctx.fillStyle = 'rgb(255, 51, 0)';
+  ctx.fillRect(0, 112.5, 150, 37.5);
 
-  // Draw semi transparent rectangles
-  for (var i = 0; i &lt; 10; i++) {
-    ctx.fillStyle = 'rgba(255, 255, 255, ' + (i + 1) / 10 + ')';
-    for (var j = 0; j &lt; 4; j++) {
-      ctx.fillRect(5 + i * 14, 5 + j * 37.5, 14, 27.5);
-    }
-  }
+  // Draw semi transparent rectangles
+  for (var i = 0; i &lt; 10; i++) {
+    ctx.fillStyle = 'rgba(255, 255, 255, ' + (i + 1) / 10 + ')';
+    for (var j = 0; j &lt; 4; j++) {
+      ctx.fillRect(5 + i * 14, 5 + j * 37.5, 14, 27.5);
+    }
+  }
 }</pre>
 
 <div class="hidden">
@@ -210,7 +210,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>A largura da linha é a espessura do traçado centralizado no caminho especificado. Em outras palavras, a área desenhada se estende até a metade da largura da linha em ambos os lados do caminho.</p>
 
-<p>  Como as coordenadas da tela não fazem referência direta aos pixels, deve-se tomar cuidado especial para obter linhas horizontais e verticais nítidas.</p>
+<p>  Como as coordenadas da tela não fazem referência direta aos pixels, deve-se tomar cuidado especial para obter linhas horizontais e verticais nítidas.</p>
 
 <p>No exemplo abaixo, 10 linhas retas são desenhadas com larguras de linhas crescentes. A linha na extrema esquerda tem 1,0 unidades de largura. No entanto, as linhas de espessura à esquerda e todas as outras linhas com número inteiro ímpar não aparecem nítidas, devido ao posicionamento do caminho.</p>
 
@@ -240,7 +240,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 <p>Se você considerar um caminho de (3,1) a (3,5) com uma espessura de linha de 1,0, você terminará com a situação na segunda imagem. A área real a ser preenchida (azul escuro) se estende apenas até a metade dos pixels dos dois lados do caminho. Uma aproximação disso deve ser renderizada, o que significa que esses pixels são sombreados apenas parcialmente e resultam em toda a área (azul claro e azul escuro) sendo preenchida com uma cor apenas metade da escuridão da cor real do traço. É o que acontece com a linha de largura 1.0 no código de exemplo anterior.</p>
 
 <p>Para corrigir isso, você precisa ser muito preciso na criação do seu caminho. Sabendo que uma linha de largura 1,0 estenderá meia unidade para ambos os lados do caminho, criar o caminho de (3,5,1) a (3,5,5) resulta na situação da terceira imagem - a largura da linha 1,0 termina completamente e preenchendo com precisão uma única linha vertical de pixel.<br>
-  </p>
+  </p>
 
 <div class="note">
 <p><strong>Nota: Esteja ciente de que, no nosso exemplo de linha vertical, a posição Y ainda faz referência a uma posição de linha de grade inteira - se não tivesse, veríamos pixels com meia cobertura nos pontos de extremidade (mas observe também que esse comportamento depende do estilo lineCap atual cujo valor padrão é butt; você pode calcular traçados consistentes com coordenadas de meio pixel para linhas de largura ímpar, configurando o estilo lineCap como quadrado, para que a borda externa do traçado ao redor do ponto de extremidade seja estendida automaticamente para cobrir o pixel inteiro exatamente).</strong></p>
@@ -422,9 +422,9 @@ draw();</pre>
 
 <h3 id="Usando_linhas_tracejadas">Usando linhas tracejadas</h3>
 
-<p><code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">O método </span></font>setLineDash</code> e a propriedade <code>lineDashOffset</code> especificam o padrão de traço para as linhas. O método <code>setLineDash</code> aceita uma lista de números que especificam distâncias para desenhar alternadamente entre uma linha e uma lacuna. Já a propriedade <code>lineDashOffset</code> define a distância até onde se deve iniciar a linha.</p>
+<p><code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">O método </span></font>setLineDash</code> e a propriedade <code>lineDashOffset</code> especificam o padrão de traço para as linhas. O método <code>setLineDash</code> aceita uma lista de números que especificam distâncias para desenhar alternadamente entre uma linha e uma lacuna. Já a propriedade <code>lineDashOffset</code> define a distância até onde se deve iniciar a linha.</p>
 
-<p>Neste exemplo, criaremos um efeito de formigas caminhando. É uma técnica de animação frequentemente usada em computação gráfica, pois ajuda o usuário a fazer uma distinção entre a borda e o plano de fundo animando a borda. Mais tarde neste tutorial, você aprenderá como fazer <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">animações básicas</a>.</p>
+<p>Neste exemplo, criaremos um efeito de formigas caminhando. É uma técnica de animação frequentemente usada em computação gráfica, pois ajuda o usuário a fazer uma distinção entre a borda e o plano de fundo animando a borda. Mais tarde neste tutorial, você aprenderá como fazer <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">animações básicas</a>.</p>
 
 <div class="hidden">
 <pre class="brush: html notranslate">&lt;canvas id="canvas" width="110" height="110"&gt;&lt;/canvas&gt;</pre>
@@ -434,19 +434,19 @@ draw();</pre>
 var offset = 0;
 
 function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.setLineDash([4, 2]);
-  ctx.lineDashOffset = -offset;
-  ctx.strokeRect(10, 10, 100, 100);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.setLineDash([4, 2]);
+  ctx.lineDashOffset = -offset;
+  ctx.strokeRect(10, 10, 100, 100);
 }
 
 function march() {
-  offset++;
-  if (offset &gt; 16) {
-    offset = 0;
-  }
-  draw();
-  setTimeout(march, 20);
+  offset++;
+  if (offset &gt; 16) {
+    offset = 0;
+  }
+  draw();
+  setTimeout(march, 20);
 }
 
 march();</pre>
@@ -710,8 +710,8 @@ var ptrn = ctx.createPattern(img, 'repeat');
 <pre class="brush: js;highlight[6] notranslate">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.beginPath();
-  ctx.arc(50, 50, 30, 0, Math.PI * 2, true);
-  ctx.arc(50, 50, 15, 0, Math.PI * 2, true);
+  ctx.arc(50, 50, 30, 0, Math.PI * 2, true);
+  ctx.arc(50, 50, 15, 0, Math.PI * 2, true);
   ctx.fill('evenodd');
 }</pre>
 

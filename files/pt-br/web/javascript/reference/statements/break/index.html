@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Statements/break
 
 <h2 id="Sumário">Sumário</h2>
 
-<p>O comando <strong>break </strong>encerra o loop atual, {{jsxref("Statements/switch", "switch")}}, ou o loop que foi informado no {{jsxref("Statements/label", "label")}} e transfere o controle da execução do programa para o comando seguinte.</p>
+<p>O comando <strong>break </strong>encerra o loop atual, {{jsxref("Statements/switch", "switch")}}, ou o loop que foi informado no {{jsxref("Statements/label", "label")}} e transfere o controle da execução do programa para o comando seguinte.</p>
 
 <h2 id="Síntaxe">Síntaxe</h2>
 
@@ -22,11 +22,11 @@ translation_of: Web/JavaScript/Reference/Statements/break
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>O comando <code>break</code> inclui um label opcional que permite ao programa encerrar a execução da estrutura que possui o nome informado na label. O comando <code>break</code> deve estar dentro dessa estrutura informada no label. A estrutura que possui o nome informada na label pode ser qualquer comando {{jsxref("Statements/block", "block")}}; não é necessário que seja precedida por um loop.</p>
+<p>O comando <code>break</code> inclui um label opcional que permite ao programa encerrar a execução da estrutura que possui o nome informado na label. O comando <code>break</code> deve estar dentro dessa estrutura informada no label. A estrutura que possui o nome informada na label pode ser qualquer comando {{jsxref("Statements/block", "block")}}; não é necessário que seja precedida por um loop.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<p>A função a seguir possui um comando <code>break</code> que encerra o loop  {{jsxref("Statements/while", "while")}} quando a variável i vale 3, e então retorna o valor 3 * <code>x</code>.</p>
+<p>A função a seguir possui um comando <code>break</code> que encerra o loop  {{jsxref("Statements/while", "while")}} quando a variável i vale 3, e então retorna o valor 3 * <code>x</code>.</p>
 
 <pre class="brush:js;highlight:[6];">function testaBreak(x) {
    var i = 0;
@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Reference/Statements/break
    return i * x;
 }</pre>
 
-<p>O código a seguir possui o comando break dentro de uma estrutura nomeada. O comando <code>break</code> deverá estar dentro da estrutura na qual o label se refere. Veja que  <code>inner_block</code> está dentro de <code>outer_block</code>.</p>
+<p>O código a seguir possui o comando break dentro de uma estrutura nomeada. O comando <code>break</code> deverá estar dentro da estrutura na qual o label se refere. Veja que  <code>inner_block</code> está dentro de <code>outer_block</code>.</p>
 
 <pre class="brush:js;highlight:[1,3,5];">bloco_externo:{
 
@@ -88,67 +88,19 @@ bloco_2:{
   <tr>
    <td>{{SpecName('ES5.1', '#sec-12.8', 'Break statement')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-break-statement', 'Break statement')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidade</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidade</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.statements.break")}}
 
 <h2 id="See_also" name="See_also">Veja também</h2>
 

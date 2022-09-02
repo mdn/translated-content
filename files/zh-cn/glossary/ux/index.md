@@ -1,13 +1,6 @@
 ---
 title: UX
 slug: Glossary/UX
-tags:
-  - 导航
-  - 结构
-  - 设计
-  - 词汇
-  - 辅助性
-translation_of: Glossary/UX
 ---
 UX(User eXperience) 是用户体验的首字母缩写。它是研究用户和系统之间的交互。其目标是使系统易于从用户的角度进行交互。
 
@@ -17,4 +10,4 @@ UX(User eXperience) 是用户体验的首字母缩写。它是研究用户和系
 
 ### 基本知识
 
-- 维基百科{{Interwiki("wikipedia", "User experience")}}
+- 维基百科[User experience](https://zh.wikipedia.org/wiki/User_experience)

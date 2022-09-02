@@ -1,11 +1,6 @@
 ---
 title: 前提条件
 slug: Mozilla/Add-ons/WebExtensions/Prerequisites
-tags:
-  - firefox signature config
-  - firefox webextension config
-  - xpi signatures config
-translation_of: Mozilla/Add-ons/WebExtensions/Prerequisites
 ---
 要使用 WebExtension API 进行开发，你需要进行一些最基本的设置。
 

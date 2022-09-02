@@ -30,11 +30,6 @@ somme = Number(valeur1) + valeur2;
 
 ## Voir aussi
 
-1. [Glossary](/fr/docs/Glossary)
-
-    1. {{Glossary("Type")}}
-    2. {{Glossary("Type conversion")}}
-
-2. Wikipedia article
-
-    1. {{Interwiki("wikipedia", "Type conversion")}}
+- {{Glossary("Type")}}
+- {{Glossary("Type conversion")}}
+- [Conversion de type](https://fr.wikipedia.org/wiki/Conversion_de_type) sur Wikipédia

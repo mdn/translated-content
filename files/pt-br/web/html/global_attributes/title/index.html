@@ -9,7 +9,7 @@ translation_of: Web/HTML/Global_attributes/title
 ---
 <p>{{HTMLSidebar("Global_attributes")}}</p>
 
-<p><span class="seoSummary">O <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributo global</a> <strong>title </strong>contém textos representando informações de orientação, relacionados ao elemento a que pertence. Geralmente, mas não obrigatoriamente, esta informação pode ser apresentada ao usuário como uma dica. Alguns usos comuns:</span></p>
+<p><span class="seoSummary">O <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributo global</a> <strong>title </strong>contém textos representando informações de orientação, relacionados ao elemento a que pertence. Geralmente, mas não obrigatoriamente, esta informação pode ser apresentada ao usuário como uma dica. Alguns usos comuns:</span></p>
 
 <ul>
  <li>Link: título ou descrição do documento vinculado</li>
@@ -18,11 +18,11 @@ translation_of: Web/HTML/Global_attributes/title
  <li>Citação: informação sobre o autor, e assim por diante.</li>
 </ul>
 
-<p>Se este atributo for omitido, significa que o título do antecessor mais próximo desse elemento ainda é relevante (e poderá ser usado como dica para este elemento). Se este atributo estiver difinido como uma <em>string vazia</em>, significa explicitamente que o título do antecessor mais próximo não é relevante (e não deve ser usado como dica para este elemento).</p>
+<p>Se este atributo for omitido, significa que o título do antecessor mais próximo desse elemento ainda é relevante (e poderá ser usado como dica para este elemento). Se este atributo estiver difinido como uma <em>string vazia</em>, significa explicitamente que o título do antecessor mais próximo não é relevante (e não deve ser usado como dica para este elemento).</p>
 
-<p>Semânticas adicionais são anexadas aos atributos <strong>title</strong> dos elementos {{ HTMLElement("link") }}, {{ HTMLElement("abbr") }}, {{ HTMLElement("input") }} e {{ HTMLElement("menuitem") }}.</p>
+<p>Semânticas adicionais são anexadas aos atributos <strong>title</strong> dos elementos {{ HTMLElement("link") }}, {{ HTMLElement("abbr") }}, {{ HTMLElement("input") }} e {{ HTMLElement("menuitem") }}.</p>
 
-<p>O atributo <strong>title</strong> pode conter várias linhas. Cada <code>U+000A LINE FEED</code> (<code>LF</code>) inserida representa uma nova linha. Alguns cuidados devem ser tomados, como a seguir:</p>
+<p>O atributo <strong>title</strong> pode conter várias linhas. Cada <code>U+000A LINE FEED</code> (<code>LF</code>) inserida representa uma nova linha. Alguns cuidados devem ser tomados, como a seguir:</p>
 
 <pre class="brush: html">&lt;p&gt;Novas linhas em título devem ser levadas em conta, como este &lt;abbr title="Este é um
 título de multiplas linhas"&gt;exemplo&lt;/abbr&gt;.&lt;/p&gt;
@@ -64,76 +64,11 @@ título de multiplas linhas"&gt;exemplo&lt;/abbr&gt;.&lt;/p&gt;
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Suporte multi linha</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{CompatGeckoDesktop(12)}}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome para Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Suporte multi linha</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(12)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("html.global_attributes.title")}}
 
 <h2 id="Veja_também">Veja também</h2>
 
 <ul>
- <li>Todos os <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a>.</li>
+ <li>Todos os <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a>.</li>
  <li>{{domxref("HTMLElement.title")}} que reflete este atributo.</li>
 </ul>

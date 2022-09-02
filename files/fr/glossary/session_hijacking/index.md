@@ -40,8 +40,8 @@ Le plus souvent, l'authentification se produit seulement au début d'une session
 - transmettre des données chiffrées entre les utilisateurs et le serveur web
 - utiliser une chaîne ou un long nombre aléatoire comme clé de session
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Hijacking")}} sur Wikipedia
+- [<i lang="en">Hijacking</i>](https://fr.wikipedia.org/wiki/Hijacking) sur Wikipédia

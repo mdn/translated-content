@@ -9,11 +9,11 @@ translation_of: Web/CSS/@font-face/src
 ---
 <div>{{CSSRef}}</div>
 
-<p>El descriptor CSS <strong><code>src</code></strong> de la regla {{cssxref("@font-face")}} especifica el recurso que contiene a la fuente. Es requerido para que la regla <code>@font-face</code> sea válida.</p>
+<p>El descriptor CSS <strong><code>src</code></strong> de la regla {{cssxref("@font-face")}} especifica el recurso que contiene a la fuente. Es requerido para que la regla <code>@font-face</code> sea válida.</p>
 
 <p>Su valor es una lista de referencias externas o nombres de fuentes instaladas, separadas por coma según su prioridad. Cuando se necesita una fuente, el agente usuario itera sobre el conjunto de referencias, usando la primera que pueda ser activada exitosamente. Fuentes que contienen datos inválidos o fuentes locales que no se encuentren son ignoradas, y el agente usuario cargará la siguiente en la lista.</p>
 
-<p>Al igual que con otras URLs en CSS, la URL puede ser relativa, en cuyo caso se resuelve relativamente a la ubicación de la hoja de estilos que contenga la regla <code>@font-face</code>. En caso de fuentes SVG, la URL apunta a un elemento dentro de un documento que contenga definiciones de fuentes SVG. Si se omite la referencia al elemento, se deduce que se usará la referencia a la primera fuente definida. De forma similar, formatos contenedores de fuentes que puedan contener más de una, cargarán solo una de las fuentes para una regla <code>@font-face</code>. Los identificadores de fragmentos son usados para indicar cuál fuente se cargará. Si un formato contenedor no tiene un esquema de identificadores de fragmento definido, se usará un esquema de indexado simple, con base en 1 (por ejemplo, "font-collection#1" para la primera fuente, "font-collection#2" para la segunda fuente).</p>
+<p>Al igual que con otras URLs en CSS, la URL puede ser relativa, en cuyo caso se resuelve relativamente a la ubicación de la hoja de estilos que contenga la regla <code>@font-face</code>. En caso de fuentes SVG, la URL apunta a un elemento dentro de un documento que contenga definiciones de fuentes SVG. Si se omite la referencia al elemento, se deduce que se usará la referencia a la primera fuente definida. De forma similar, formatos contenedores de fuentes que puedan contener más de una, cargarán solo una de las fuentes para una regla <code>@font-face</code>. Los identificadores de fragmentos son usados para indicar cuál fuente se cargará. Si un formato contenedor no tiene un esquema de identificadores de fragmento definido, se usará un esquema de indexado simple, con base en 1 (por ejemplo, "font-collection#1" para la primera fuente, "font-collection#2" para la segunda fuente).</p>
 
 <p>{{cssinfo}}</p>
 

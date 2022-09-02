@@ -1,13 +1,6 @@
 ---
 title: UDP（用户数据报协议）
 slug: Glossary/UDP
-tags:
-  - Glossary
-  - Infrastructure
-  - Networking
-  - Protocols
-  - UDP
-translation_of: Glossary/UDP
 ---
 **UDP**（用户数据报协议）是一个与 {{glossary("IPv6","IP 协议")}} 一起使用的长期{{glossary("protocol", "协议")}}，用于在传输速度和效率比安全性和可靠性更重要的场合下发送数据。
 
@@ -17,5 +10,5 @@ UDP 适用于不需要差错和纠错的应用程序，它的[协议栈](https:/
 
 ## 参见
 
-- 维基百科上的 {{Interwiki("wikipedia", "用户数据报协议")}}
+- 维基百科上的 [用户数据报协议](https://zh.wikipedia.org/wiki/用户数据报协议)
 - [规范](https://datatracker.ietf.org/doc/html/rfc768)

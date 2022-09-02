@@ -13,7 +13,7 @@ browser-compat: api.Notification.permission
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-La propiedad de solo lectura `permission` de la interfaz {{domxref("Notification")}} indica el permiso concedido por el usuario al origen actual para mostrar notificaciones web.
+La propiedad de solo lectura `permission` de la interfaz {{domxref("Notification")}} indica el permiso concedido por el usuario al origen actual para mostrar notificaciones web.
 
 ## Sintaxis
 
@@ -23,10 +23,10 @@ var permission = Notification.permission;
 
 ### Valor
 
-Una {{domxref("DOMString")}} representa el permiso actual. El valor puede ser:
+Una {{domxref("DOMString")}} representa el permiso actual. El valor puede ser:
 
 - `granted`: El usuario ha concedido el permiso explicitamente al origen actual para mostrar notificaciones del sistema.
-- `denied`: El usuario ha denegado el permiso explicitamente al origen actual para mostrar notificaciones del sistema.
+- `denied`: El usuario ha denegado el permiso explicitamente al origen actual para mostrar notificaciones del sistema.
 - `default`: La decisión del usuario es deconocida; en este caso la aplicación actuará como si el permiso fuese `denied`
 
 ## Ejemplos

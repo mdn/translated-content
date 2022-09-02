@@ -5,11 +5,11 @@ translation_of: Web/HTTP/Authentication
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary">HTTP는 액세스 제어와 인증을 위한 프레임워크를 제공합니다. 가장 일반적인 인증 방식은 "Basic" 인증 방식입니다. 이 페이지에서는 일반적인 HTTP 인증 프레임워크를 소개하고 서버에 HTTP의 Basic 인증 방식으로 접근을 제한하는 것을 보여 줍니다.</p>
+<p class="summary">HTTP는 액세스 제어와 인증을 위한 프레임워크를 제공합니다. 가장 일반적인 인증 방식은 "Basic" 인증 방식입니다. 이 페이지에서는 일반적인 HTTP 인증 프레임워크를 소개하고 서버에 HTTP의 Basic 인증 방식으로 접근을 제한하는 것을 보여 줍니다.</p>
 
 <h2 id="일반적인_HTTP_인증_프레임워크">일반적인 HTTP 인증 프레임워크</h2>
 
-<p>{{RFC("7235")}}는 서버에 의해 클라이언트 요청을 시도({{glossary("challenge")}})하고, 클라이언트에 의해 인증 정보를 제공하기 위해 사용될 수 있는 HTTP 인증 프레임워크를 정의합니다. 이러한 시도와 응답 과정은 다음과 같이 작동합니다. 서버는 클라이언트에게 {{HTTPStatus("401")}} (Unauthorized) 응답 코드를 가지고 응답하며, 최소한 한 번의 시도에 포함된 {{HTTPHeader("WWW-Authenticate")}} 응답 헤더로 권한을 부여하는 방법에 대한 정보를 제공합니다. 서버와 인증을 하기를 원하는 클라이언트는 {{HTTPHeader("Authorization")}} 요청 헤더 필드에 인증 정보를 포함함으로써 인증을 수행할 수 있습니다. 클라이언트는 대개 사용자에게 비밀번호 프롬프트를 표시할 것이고 정확한 <code>Authorization</code> 헤더를 포함하는 요청을 만들 것입니다.</p>
+<p>{{RFC("7235")}}는 서버에 의해 클라이언트 요청을 시도({{glossary("challenge")}})하고, 클라이언트에 의해 인증 정보를 제공하기 위해 사용될 수 있는 HTTP 인증 프레임워크를 정의합니다. 이러한 시도와 응답 과정은 다음과 같이 작동합니다. 서버는 클라이언트에게 {{HTTPStatus("401")}} (Unauthorized) 응답 코드를 가지고 응답하며, 최소한 한 번의 시도에 포함된 {{HTTPHeader("WWW-Authenticate")}} 응답 헤더로 권한을 부여하는 방법에 대한 정보를 제공합니다. 서버와 인증을 하기를 원하는 클라이언트는 {{HTTPHeader("Authorization")}} 요청 헤더 필드에 인증 정보를 포함함으로써 인증을 수행할 수 있습니다. 클라이언트는 대개 사용자에게 비밀번호 프롬프트를 표시할 것이고 정확한 <code>Authorization</code> 헤더를 포함하는 요청을 만들 것입니다.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14689/HTTPAuth.png" style="height: 335px; width: 710px;"></p>
 
@@ -21,7 +21,7 @@ translation_of: Web/HTTP/Authentication
 
 <h3 id="접근_거부">접근 거부</h3>
 
-<p>(프록시) 서버가 주어진 리소스에 대한 접근 권한을 얻기 위해 적절하지 않은 유효한 인증 정보를 수신한다면, 서버는 {{HTTPStatus("403")}} <code>Forbidden</code> 상태 코드로 응답하여야 합니다.  {{HTTPStatus("401")}} <code>Unauthorized</code>나 {{HTTPStatus("407")}} <code>Proxy Authentication Required</code>와는 다르게, 해당 사용자에 대한 인증은 불가능합니다.</p>
+<p>(프록시) 서버가 주어진 리소스에 대한 접근 권한을 얻기 위해 적절하지 않은 유효한 인증 정보를 수신한다면, 서버는 {{HTTPStatus("403")}} <code>Forbidden</code> 상태 코드로 응답하여야 합니다.  {{HTTPStatus("401")}} <code>Unauthorized</code>나 {{HTTPStatus("407")}} <code>Proxy Authentication Required</code>와는 다르게, 해당 사용자에 대한 인증은 불가능합니다.</p>
 
 <h3 id="WWW-Authenticate와_Proxy-Authenticate_헤더"><code>WWW-Authenticate</code>와 <code>Proxy-Authenticate</code> 헤더</h3>
 
@@ -85,7 +85,7 @@ user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 
 <h3 id="nginx와_Basic_인증으로_접근_제한하기">nginx와 Basic 인증으로 접근 제한하기</h3>
 
-<p>nginx에서 여러분은 보호하려는 위치와 비밀번호로 보호될 영역의 이름을 나타내는  <code>auth_basic</code> 명령어를 적어줄 필요가 있습니다. 위의 Apache 예제에 있는 것과 같이, <code>auth_basic_user_file</code> 명령어는 암호화된 사용자 인증 정보를 가지고 있는 .htpasswd 파일을 가리킵니다.</p>
+<p>nginx에서 여러분은 보호하려는 위치와 비밀번호로 보호될 영역의 이름을 나타내는  <code>auth_basic</code> 명령어를 적어줄 필요가 있습니다. 위의 Apache 예제에 있는 것과 같이, <code>auth_basic_user_file</code> 명령어는 암호화된 사용자 인증 정보를 가지고 있는 .htpasswd 파일을 가리킵니다.</p>
 
 <pre>location /status {
     auth_basic           "Access to the staging site";

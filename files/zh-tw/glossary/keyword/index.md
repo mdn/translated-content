@@ -1,10 +1,6 @@
 ---
 title: 關鍵詞
 slug: Glossary/Keyword
-tags:
-  - 術語表
-  - 關鍵詞
-translation_of: Glossary/Keyword
 ---
 **關鍵詞**是描述内容的字或短語。在綫關鍵詞被用於搜索引擎的查詢或用來識別站點上的内容.
 
@@ -14,4 +10,4 @@ translation_of: Glossary/Keyword
 
 ### 基礎知識
 
-- 維基百科上的 {{interwiki("wikipedia", "Keyword_research", "關鍵詞")}}
+- 維基百科上的 [關鍵詞](https://zh.wikipedia.org/wiki/Keyword_research)

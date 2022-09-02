@@ -16,7 +16,7 @@ L'élément {{Glossary("HTML")}} _{{HTMLElement("canvas")}}_ fournit une zone gr
 
 ### Culture Générale
 
-- {{Interwiki("wikipedia", "Canvas element", "Canvas")}} sur Wikipedia
+- [L'élément `<canvas>`](https://fr.wikipedia.org/wiki/Canvas_(HTML)) sur Wikipédia
 
 ### Apprentissage
 

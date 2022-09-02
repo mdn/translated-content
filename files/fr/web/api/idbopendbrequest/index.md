@@ -88,14 +88,11 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('IndexedDB', '#idl-def-IDBOpenDBRequest', 'IDBOpenDBRequest')}} | {{Spec2('IndexedDB')}}     | Définition initiale |
-| {{SpecName("IndexedDB 2", "#idbopendbrequest", "IDBOpenDBRequest")}}         | {{Spec2("IndexedDB 2")}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBOpenDBRequest")}}
+{{Compat}}
 
 ## Voir aussi
 

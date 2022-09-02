@@ -1,7 +1,6 @@
 ---
 title: 型別
 slug: Glossary/Type
-translation_of: Glossary/Type
 ---
 **型別**（或*資料型別*）是能決定 {{glossary("value")}} 該存為何種類型的特性：例如 JavaScript 的 {{domxref("Boolean")}} 只能存為 `true`/`false` 兩者其一、而字串（{{domxref("String")}}）能存為文字字串、{{domxref("Number")}} 則能存城任何類型的數字……等等。
 
@@ -11,5 +10,5 @@ translation_of: Glossary/Type
 
 ### 基本知識
 
-- 維基百科的{{Interwiki("wikipedia", "資料型別")}}
+- 維基百科的[資料型別](https://zh.wikipedia.org/wiki/資料型別)
 - [JavaScript 的資料型別](/zh-TW/docs/Web/JavaScript/Data_structures)

@@ -14,5 +14,5 @@ Un **protocole** est un système de règles qui définit la manière dont des do
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Protocole de communication")}} sur Wikipédia
+- [Protocole de communication](https://fr.wikipedia.org/wiki/Protocole_de_communication) sur Wikipédia
 - [RFC Official Internet Protocol Standards](http://www.rfc-editor.org/search/standards.php)

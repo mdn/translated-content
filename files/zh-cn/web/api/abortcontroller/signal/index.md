@@ -1,16 +1,6 @@
 ---
 title: AbortController.signal
 slug: Web/API/AbortController/signal
-page-type: web-api-instance-property
-tags:
-  - API
-  - AbortController
-  - Experimental
-  - Fetch
-  - Property
-  - Reference
-  - signal
-translation_of: Web/API/AbortController/signal
 ---
 {{APIRef("DOM")}}
 

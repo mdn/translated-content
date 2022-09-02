@@ -1,7 +1,6 @@
 ---
 title: fill-rule
 slug: Web/SVG/Attribute/fill-rule
-translation_of: Web/SVG/Attribute/fill-rule
 ---
 « [SVG Attribute reference home](/zh-TW/docs/Web/SVG/Attribute)
 

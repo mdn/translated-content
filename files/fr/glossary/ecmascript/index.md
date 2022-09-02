@@ -13,7 +13,7 @@ original_slug: Glossaire/ECMAScript
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "ECMAScript")}} sur Wikipédia
+- [ECMAScript](https://fr.wikipedia.org/wiki/ECMAScript) sur Wikipédia
 
 ### Référence technique
 

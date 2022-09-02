@@ -61,7 +61,7 @@ eval(expresion.toString());
 
 <h2 id="No_utilice_eval_innecesariamente">No utilice <code>eval</code> innecesariamente</h2>
 
-<p><code>eval()</code> es una función peligrosa, quel ejecuta el código el cual es pasado con los privilegios de quien llama.  Si ejecuta <code>eval()</code> con una cadena de carcteres que podría ser afectada por un elemento malicioso, podría terminar ejecutando código malicioso dentro de la computadora del usuario con los permisos de su página o extensión web . Más importante aún, una parte del código de terceros podría accesar al ámbito en el cual <code>eval()</code> fue invocada, lo que puede permitir la entrada a posibles ataques de formas a las que el constructor {{jsxref("Global_Objects/Function", "Function")}} (art. en inglés) el cual es similar, no es susceptible.</p>
+<p><code>eval()</code> es una función peligrosa, quel ejecuta el código el cual es pasado con los privilegios de quien llama.  Si ejecuta <code>eval()</code> con una cadena de carcteres que podría ser afectada por un elemento malicioso, podría terminar ejecutando código malicioso dentro de la computadora del usuario con los permisos de su página o extensión web . Más importante aún, una parte del código de terceros podría accesar al ámbito en el cual <code>eval()</code> fue invocada, lo que puede permitir la entrada a posibles ataques de formas a las que el constructor {{jsxref("Global_Objects/Function", "Function")}} (art. en inglés) el cual es similar, no es susceptible.</p>
 
 <p><code>eval()</code> es generalmente también más lenta que otras alternativas desde que se invoca en el intérprte de JS, mientras que otros muchos constructores son optimizados por los motores JS modernos.</p>
 
@@ -219,17 +219,17 @@ console<span class="punctuation token">.</span><span class="function token">log<
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.1.2.1', 'eval')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-eval-x', 'eval')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-eval-x', 'eval')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

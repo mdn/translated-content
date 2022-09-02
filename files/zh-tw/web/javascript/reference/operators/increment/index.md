@@ -1,12 +1,6 @@
 ---
 title: 遞增運算子 (++)
 slug: Web/JavaScript/Reference/Operators/Increment
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.increment
 ---
 {{jsSidebar("Operators")}}
 

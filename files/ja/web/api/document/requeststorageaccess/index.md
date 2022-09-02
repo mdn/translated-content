@@ -1,16 +1,6 @@
 ---
 title: Document.requestStorageAccess()
 slug: Web/API/Document/requestStorageAccess
-tags:
-  - API
-  - DOM
-  - Document
-  - メソッド
-  - Reference
-  - Storage Access API
-  - requestStorageAccess
-browser-compat: api.Document.requestStorageAccess
-translation_of: Web/API/Document/requestStorageAccess
 ---
 {{APIRef}}
 
@@ -86,7 +76,7 @@ var promise = document.requestStorageAccess();
 
 ### 返値
 
-ファーストパーティのストレージへのアクセスが許可されたら `undefined` で履行され、アクセスが拒否されたら拒否される {{jsxref("Promise")}} です。
+ファーストパーティのストレージへのアクセスが許可されたら `undefined` で履行され、アクセスが拒否されたら拒否される {{jsxref("Promise")}} です。
 
 プロミスが解決されると、プロミスが履行されたか拒否されたかに関わらず、ユーザージェスチャーが処理されているかのように解決ハンドラーが実行されます。
 
@@ -98,7 +88,7 @@ var promise = document.requestStorageAccess();
 ```js
 document.requestStorageAccess().then(
   () => { console.log('access granted') },
-  () => { console.log('access denied') }
+  () => { console.log('access denied') }
 );
 ```
 

@@ -51,7 +51,7 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 <pre class="notranslate"><em>operando</em> <em>operador</em>
 </pre>
 
-<p>Por exemplo, <code>x++</code> ou <code>++x</code>.</p>
+<p>Por exemplo, <code>x++</code> ou <code>++x</code>.</p>
 
 <h3 id="Operadores_de_atribuição"><a id="operador_atribuicao" name="operador_atribuicao">Operadores de atribuição</a></h3>
 
@@ -139,7 +139,7 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 
 <h3 id="Operadores_de_comparação"><a id="operador_comparacao" name="operador_comparacao">Operadores de comparação</a></h3>
 
-<p><span class="comment">This seems to me kind of poorly explained, mostly the difference betwen "==" and "==="...</span> Um operador de comparação compara seus operandos e retorna um valor lógico baseado em se a comparação é verdadeira. Os operandos podem ser numéricos, strings, lógicos ou objetos. Strings são comparadas com base em ordenação lexográfica utilizando valores Unicode. Na maioria dos casos, se dois operandos não são do mesmo tipo, o JavaScript tenta convertê-los para um tipo apropriado. Isto geralmente resulta na realização de uma comparação numérica. As únicas exceções a esta regra são os operadores <code>===</code> e o <code>!==</code>, que realizam comparações de igualdade e desigualdade "estritas". Estes operadores não tentam converter os operandos em tipos compatíveis antes de verificar a igualdade. A tabela a seguir descreve os operadores de comparação levando em conta o seguinte código:</p>
+<p><span class="comment">This seems to me kind of poorly explained, mostly the difference betwen "==" and "==="...</span> Um operador de comparação compara seus operandos e retorna um valor lógico baseado em se a comparação é verdadeira. Os operandos podem ser numéricos, strings, lógicos ou objetos. Strings são comparadas com base em ordenação lexográfica utilizando valores Unicode. Na maioria dos casos, se dois operandos não são do mesmo tipo, o JavaScript tenta convertê-los para um tipo apropriado. Isto geralmente resulta na realização de uma comparação numérica. As únicas exceções a esta regra são os operadores <code>===</code> e o <code>!==</code>, que realizam comparações de igualdade e desigualdade "estritas". Estes operadores não tentam converter os operandos em tipos compatíveis antes de verificar a igualdade. A tabela a seguir descreve os operadores de comparação levando em conta o seguinte código:</p>
 
 <pre class="brush: js notranslate">var var1 = 3;
 var var2 = 4;
@@ -238,18 +238,18 @@ console.log(1 / 2 == 1.0 / 2.0); /* isto também é verdadeiro */
   <tr>
    <td>Incremento (++)</td>
    <td>Operador unário. Adiciona um ao seu operando. Se usado como operador prefixado (<code>++x</code>), retorna o valor de seu operando após a adição. Se usado como operador pósfixado (<code>x++</code>), retorna o valor de seu operando antes da adição.</td>
-   <td>Se <code>x</code> é 3, então <code>++x</code> define <code>x</code> como 4 e retorna 4, enquanto <code>x++</code> retorna 3 e, somente então, define <code>x</code> como 4.</td>
+   <td>Se <code>x</code> é 3, então <code>++x</code> define <code>x</code> como 4 e retorna 4, enquanto <code>x++</code> retorna 3 e, somente então, define <code>x</code> como 4.</td>
   </tr>
   <tr>
    <td>Decremento (--)</td>
    <td>Operador unário. Subtrai um de seu operando. O valor de retorno é análogo àquele do operador de incremento.</td>
-   <td>Se <code>x</code> é 3, então <code>--x</code> define <code>x</code> como 2 e retorna 2, enquanto <code>x--</code> retorna 3 e, somente então, define <code>x</code> como 2.</td>
+   <td>Se <code>x</code> é 3, então <code>--x</code> define <code>x</code> como 2 e retorna 2, enquanto <code>x--</code> retorna 3 e, somente então, define <code>x</code> como 2.</td>
   </tr>
   <tr>
    <td>Negação (-)</td>
    <td>Operador unário. Retorna a negação de seu operando.</td>
    <td>
-    <p>Se <code>x</code> é 3, então <code>-x</code> retorna -3.</p>
+    <p>Se <code>x</code> é 3, então <code>-x</code> retorna -3.</p>
    </td>
   </tr>
   <tr>
@@ -297,7 +297,7 @@ console.log(1 / 2 == 1.0 / 2.0); /* isto também é verdadeiro */
   <tr>
    <td>OR</td>
    <td><code>a | b</code></td>
-   <td>Retorna um 0 para cada posição em que os bits da posição correspondente de  ambos os operandos sejam zeros.</td>
+   <td>Retorna um 0 para cada posição em que os bits da posição correspondente de  ambos os operandos sejam zeros.</td>
   </tr>
   <tr>
    <td>XOR</td>
@@ -446,12 +446,12 @@ Depois: </code><code class="language-html">           10100000000000000110000000
   <tr>
    <td><code>AND lógico (&amp;&amp;)</code></td>
    <td><code>expr1 &amp;&amp; expr2</code></td>
-   <td>(E lógico) - Retorna <code>expr1</code> caso possa ser convertido para falso; senão, retorna <code>expr2</code>. Assim, quando utilizado com valores booleanos, <code>&amp;&amp;</code> retorna verdadeiro caso ambos operandos sejam verdadeiros; caso contrário, retorna falso.</td>
+   <td>(E lógico) - Retorna <code>expr1</code> caso possa ser convertido para falso; senão, retorna <code>expr2</code>. Assim, quando utilizado com valores booleanos, <code>&amp;&amp;</code> retorna verdadeiro caso ambos operandos sejam verdadeiros; caso contrário, retorna falso.</td>
   </tr>
   <tr>
    <td><code>OU lógico (||)</code></td>
    <td><code>expr1 || expr2</code></td>
-   <td>(OU lógico) -  Retorna <code>expr1</code> caso possa ser convertido para verdadeiro; senão, retorna <code>expr2</code>. Assim, quando utilizado com valores booleanos, <code>||</code> retorna verdadeiro caso ambos os operandos sejam verdadeiro; se ambos forem falsos, retorna falso.</td>
+   <td>(OU lógico) -  Retorna <code>expr1</code> caso possa ser convertido para verdadeiro; senão, retorna <code>expr2</code>. Assim, quando utilizado com valores booleanos, <code>||</code> retorna verdadeiro caso ambos os operandos sejam verdadeiro; se ambos forem falsos, retorna falso.</td>
   </tr>
   <tr>
    <td><code>NOT lógico (!)</code></td>
@@ -498,7 +498,7 @@ var n3 = !"Gato"; // !t retorna false
 
 <ul>
  <li><code>false</code> &amp;&amp; <em>qualquercoisa</em> é avaliado em curto-circuito como falso.</li>
- <li><code>true</code> || <em>qualquercoisa</em> é avaliado em curto-circuito como verdadeiro.</li>
+ <li><code>true</code> || <em>qualquercoisa</em> é avaliado em curto-circuito como verdadeiro.</li>
 </ul>
 
 <p>As regras de lógica garantem que estas avaliações estejam sempre corretas. Repare que a parte <em>qualquercoisa</em> das expressões acima não é avaliada, de forma que qualquer efeito colateral de fazê-lo não produz efeito algum.</p>
@@ -532,7 +532,7 @@ minhaString += "beto"; // É avaliada como "alfabeto" e atribui este valor a <co
 <pre class="brush: js notranslate">var status = (idade &gt;= 18) ? "adulto" : "menor de idade";
 </pre>
 
-<p>Esta declaração atribui o valor "adulto" à variável <code>status</code> caso <code>idade</code> seja dezoito ou mais. Caso contrário, atribui o valor "menor de idade".</p>
+<p>Esta declaração atribui o valor "adulto" à variável <code>status</code> caso <code>idade</code> seja dezoito ou mais. Caso contrário, atribui o valor "menor de idade".</p>
 
 <h3 id="comma_operator" name="comma_operator"><a id="operador_virgula" name="operador_virgula">Operador vírgula</a></h3>
 
@@ -558,13 +558,13 @@ delete nomeObjeto[indice];
 delete propriedade; // válido apenas dentro de uma declaração with
 </pre>
 
-<p>onde <code>nomeObjeto</code> é o nome de um objeto, <code>propriedade</code> é uma propriedade existente e <code>indice</code> é um inteiro que representa a localização de um elemento em uma matriz.</p>
+<p>onde <code>nomeObjeto</code> é o nome de um objeto, <code>propriedade</code> é uma propriedade existente e <code>indice</code> é um inteiro que representa a localização de um elemento em uma matriz.</p>
 
-<p>A quarta forma é permitida somente dentro de uma declaração <code>with</code> para apagar uma propriedade de um objeto.</p>
+<p>A quarta forma é permitida somente dentro de uma declaração <code>with</code> para apagar uma propriedade de um objeto.</p>
 
-<p>Você pode utilizar o operador <code>delete</code> para apagar variáveis declaradas implicitamente mas não aquelas declaradas com <code>var</code>.</p>
+<p>Você pode utilizar o operador <code>delete</code> para apagar variáveis declaradas implicitamente mas não aquelas declaradas com <code>var</code>.</p>
 
-<p>Se o operador <code>delete</code> for bem-sucedido, ele define a propriedade ou elemento para <code>undefined</code>. O operador <code>delete</code> retorna verdadeiro se a operação for possível; ele retorna falso se a operação não for possível.</p>
+<p>Se o operador <code>delete</code> for bem-sucedido, ele define a propriedade ou elemento para <code>undefined</code>. O operador <code>delete</code> retorna verdadeiro se a operação for possível; ele retorna falso se a operação não for possível.</p>
 
 <pre class="brush: js notranslate">x = 42;
 var y = 43;
@@ -579,9 +579,9 @@ delete meuobj;   // retorna true (pode apagar se declarado implicitamente)
 
 <h5 id="Apagando_elementos_de_array">Apagando elementos de array</h5>
 
-<p>Quando você apaga um elemento de um array, o tamanho do array não é afetado. Por exemplo, se você apaga <code>a[3]</code>, o valor de <code>a[4]</code> ainda estará em <code>a[4]</code> e <code>a[3]</code> passa a ser <code>undefined</code>.</p>
+<p>Quando você apaga um elemento de um array, o tamanho do array não é afetado. Por exemplo, se você apaga <code>a[3]</code>, o valor de <code>a[4]</code> ainda estará em <code>a[4]</code> e <code>a[3]</code> passa a ser <code>undefined</code>.</p>
 
-<p>Quando o operador <code>delete</code> remove um elemento do array, aquele elemento não pertence mais ao array. No exemplo a seguir, <code>arvores[3]</code> é removido com <code>delete</code>. Entretanto, <code>arvores[3]</code> ainda é endereçável e retorna <code>undefined</code>.</p>
+<p>Quando o operador <code>delete</code> remove um elemento do array, aquele elemento não pertence mais ao array. No exemplo a seguir, <code>arvores[3]</code> é removido com <code>delete</code>. Entretanto, <code>arvores[3]</code> ainda é endereçável e retorna <code>undefined</code>.</p>
 
 <pre class="brush: js notranslate">var arvores = new Array("pau-brasil", "loureiro", "cedro", "carvalho", "sicômoro");
 delete arvores[3];
@@ -590,7 +590,7 @@ if (3 in arvores) {
 }
 </pre>
 
-<p>Se você quer que um elemento do array exista, mas tenha um valor indefinido, utilize a palavra-chave <code>undefined</code> em vez do operador <code>delete</code>. No exemplo a seguir, o valor <code>undefined</code> é atribuído a <code>arvores[3]</code>, mas o elemento da matriz ainda existe:</p>
+<p>Se você quer que um elemento do array exista, mas tenha um valor indefinido, utilize a palavra-chave <code>undefined</code> em vez do operador <code>delete</code>. No exemplo a seguir, o valor <code>undefined</code> é atribuído a <code>arvores[3]</code>, mas o elemento da matriz ainda existe:</p>
 
 <pre class="brush: js notranslate">var arvores = new Array("pau-brasil", "loureiro", "cedro", "carvalho", "sicômoro");
 arvores[3] = undefined;
@@ -601,13 +601,13 @@ if (3 in arvores) {
 
 <h4 id="typeof" name="typeof"><code>typeof</code></h4>
 
-<p>O operador <code>typeof</code> é utilizado em qualquer uma das seguintes formas:</p>
+<p>O operador <code>typeof</code> é utilizado em qualquer uma das seguintes formas:</p>
 
 <pre class="brush: js notranslate">typeof operando
 typeof (operando)
 </pre>
 
-<p>O operador <code>typeof</code> retorna uma string indicando o tipo do operando sem avaliação. <code>operando</code> é uma string, variável, palavra-chave ou objeto cujo tipo deve ser retornado. Os parênteses são opcionais.</p>
+<p>O operador <code>typeof</code> retorna uma string indicando o tipo do operando sem avaliação. <code>operando</code> é uma string, variável, palavra-chave ou objeto cujo tipo deve ser retornado. Os parênteses são opcionais.</p>
 
 <p>Suponha que você defina as seguintes variáveis:</p>
 
@@ -626,26 +626,26 @@ typeof hoje;      // retorna "object"
 typeof naoExiste; // retorna "undefined"
 </pre>
 
-<p>Para as palavras-chave <code>true</code> e <code>null</code>, o <code>typeof</code> retorna os seguintes resultados:</p>
+<p>Para as palavras-chave <code>true</code> e <code>null</code>, o <code>typeof</code> retorna os seguintes resultados:</p>
 
 <pre class="brush: js notranslate">typeof true; // retorna "boolean"
 typeof null; // retorna "object"
 </pre>
 
-<p>Para um número ou uma string, o <code>typeof</code> retorna os seguintes resultados:</p>
+<p>Para um número ou uma string, o <code>typeof</code> retorna os seguintes resultados:</p>
 
 <pre class="brush: js notranslate">typeof 62;          // retorna "number"
 typeof 'Olá mundo'; // retorna "string"
 </pre>
 
-<p>Para valores de propriedades, o <code>typeof</code> retorna o tipo do valor que a propriedade possui:</p>
+<p>Para valores de propriedades, o <code>typeof</code> retorna o tipo do valor que a propriedade possui:</p>
 
 <pre class="brush: js notranslate">typeof document.lastModified; // retorna "string"
 typeof window.length;         // retorna "number"
 typeof Math.LN2;              // retorna "number"
 </pre>
 
-<p>Para métodos e funções, o <code>typeof</code> retorna os seguintes resultados:</p>
+<p>Para métodos e funções, o <code>typeof</code> retorna os seguintes resultados:</p>
 
 <pre class="brush: js notranslate">typeof blur;        // retorna "function"
 typeof eval;        // retorna "function"
@@ -653,7 +653,7 @@ typeof parseInt;    // retorna "function"
 typeof forma.split; // retorna "function"
 </pre>
 
-<p>Para objetos predefinidos, o <code>typeof</code> retorna os seguintes resultados:</p>
+<p>Para objetos predefinidos, o <code>typeof</code> retorna os seguintes resultados:</p>
 
 <pre class="brush: js notranslate">typeof Date;     // retorna "function"
 typeof Function; // retorna "function"
@@ -664,17 +664,17 @@ typeof String;   // retorna "function"
 
 <h4 id="typeof" name="typeof"><code>void</code></h4>
 
-<p>O operador <code>void</code> é utilizado de qualquer uma das seguintes formas:</p>
+<p>O operador <code>void</code> é utilizado de qualquer uma das seguintes formas:</p>
 
 <pre class="brush: js notranslate">void (expressao)
 void expressao
 </pre>
 
-<p>O operador <code>void</code> especifica que uma expressão deve ser avaliada sem retorno de valor. <code>expressao</code> é uma expressão JavaScript que deve ser avaliada. Os parênteses em torno da expressão são opcionais, mas é uma boa prática utilizá-los.</p>
+<p>O operador <code>void</code> especifica que uma expressão deve ser avaliada sem retorno de valor. <code>expressao</code> é uma expressão JavaScript que deve ser avaliada. Os parênteses em torno da expressão são opcionais, mas é uma boa prática utilizá-los.</p>
 
-<p>Você pode utilizar o operador <code>void</code> para especificar uma expressão como um link de hipertexto. A expressão é avaliada mas não é carregada no lugar do documento atual.</p>
+<p>Você pode utilizar o operador <code>void</code> para especificar uma expressão como um link de hipertexto. A expressão é avaliada mas não é carregada no lugar do documento atual.</p>
 
-<p>O código a seguir cria um link de hipertexto que não faz coisa alguma quando clicado pelo usuário. Quando o usuário clica no link, <code>void(0)</code> é avaliado como indefinido, que não tem efeito em JavaScript.</p>
+<p>O código a seguir cria um link de hipertexto que não faz coisa alguma quando clicado pelo usuário. Quando o usuário clica no link, <code>void(0)</code> é avaliado como indefinido, que não tem efeito em JavaScript.</p>
 
 <pre class="brush: html notranslate">&lt;a href="javascript:void(0)"&gt;Clique aqui para fazer nada&lt;/a&gt;
 </pre>
@@ -690,12 +690,12 @@ Clique aqui para enviar&lt;/a&gt;</pre>
 
 <h4 id="in" name="in"><code>in</code></h4>
 
-<p>O operador <code>in</code> retorna verdadeiro se a propriedade especificada estiver no objeto especificado. A sintaxe é:</p>
+<p>O operador <code>in</code> retorna verdadeiro se a propriedade especificada estiver no objeto especificado. A sintaxe é:</p>
 
 <pre class="brush: js notranslate">nomePropriedadeOuNumero in nomeObjeto
 </pre>
 
-<p>onde <code>nomePropriedadeOuNumero</code> é uma string ou uma expressão numérica que representa um nome de propriedade ou um índice de um array, e <code>nomeObjeto</code> é o nome de um objeto.</p>
+<p>onde <code>nomePropriedadeOuNumero</code> é uma string ou uma expressão numérica que representa um nome de propriedade ou um índice de um array, e <code>nomeObjeto</code> é o nome de um objeto.</p>
 
 <p>Os exemplos a seguir mostram alguns usos do operador <code>in</code>.</p>
 
@@ -721,16 +721,16 @@ var meucarro = {marca: "Honda", modelo: "Accord", ano: 1998};
 
 <h4 id="instanceof" name="instanceof"><code>instanceof</code></h4>
 
-<p>O operador <code>instanceof</code> retorna verdadeiro se o objeto especificado for do tipo de objeto especificado. A sintaxe é:</p>
+<p>O operador <code>instanceof</code> retorna verdadeiro se o objeto especificado for do tipo de objeto especificado. A sintaxe é:</p>
 
 <pre class="brush: js notranslate">nomeObjeto instanceof tipoObjeto
 </pre>
 
-<p>onde <code>nomeObjeto</code> é o nome do objeto a ser comparado com <code>tipoObjeto</code>, e <code>tipoObjeto</code> é um tipo de objeto como <code>Date</code> ou <code>Array</code>.</p>
+<p>onde <code>nomeObjeto</code> é o nome do objeto a ser comparado com <code>tipoObjeto</code>, e <code>tipoObjeto</code> é um tipo de objeto como <code>Date</code> ou <code>Array</code>.</p>
 
-<p>Utilize o <code>instanceof</code> quando você precisar confirmar o tipo de um objeto em tempo de execução. Por exemplo, ao capturar exceções você pode desviar para um código de manipulação de exceção diferente dependendo do tipo de exceção lançada.</p>
+<p>Utilize o <code>instanceof</code> quando você precisar confirmar o tipo de um objeto em tempo de execução. Por exemplo, ao capturar exceções você pode desviar para um código de manipulação de exceção diferente dependendo do tipo de exceção lançada.</p>
 
-<p>Por exemplo, o código a seguir utiliza o <code>instanceof</code> para determinar se <code>dia</code> é um objeto <code>Date</code>. Como <code>dia</code> é um objeto <code>Date</code>, as declarações do <code>if</code> são executadas.</p>
+<p>Por exemplo, o código a seguir utiliza o <code>instanceof</code> para determinar se <code>dia</code> é um objeto <code>Date</code>. Como <code>dia</code> é um objeto <code>Date</code>, as declarações do <code>if</code> são executadas.</p>
 
 <pre class="brush: js notranslate">var dia = new Date(1995, 12, 17);
 if (dia instanceof Date) {
@@ -828,7 +828,7 @@ if (dia instanceof Date) {
 
 <p>Conceitualmente, existem dois tipos de expressões: aquelas que atribuem um valor a uma variável e aquelas que simplesmente possuem um valor.</p>
 
-<p>A expressão <code>x = 7</code> é um exemplo do primeiro tipo. Esta expressão utiliza o <em>operador</em> = para atribuir o valor sete à variável <code>x</code>. A expressão em si é avaliada como sete.</p>
+<p>A expressão <code>x = 7</code> é um exemplo do primeiro tipo. Esta expressão utiliza o <em>operador</em> = para atribuir o valor sete à variável <code>x</code>. A expressão em si é avaliada como sete.</p>
 
 <p>O código <code>3 + 4</code> é um exemplo do segundo tipo de expressão. Esta expressão utiliza o operador + para somar três e quatro sem atribuir o resultado, sete, a uma variável.</p>
 
@@ -848,13 +848,13 @@ if (dia instanceof Date) {
 
 <h4 id="this" name="this"><code>this</code></h4>
 
-<p>Utilize a palavra reservada <code>this</code> para se referir ao objeto atual. Em geral, o <code>this</code> se refere ao objeto chamado em um método. Utilize o <code>this</code> das seguintes formas:</p>
+<p>Utilize a palavra reservada <code>this</code> para se referir ao objeto atual. Em geral, o <code>this</code> se refere ao objeto chamado em um método. Utilize o <code>this</code> das seguintes formas:</p>
 
 <pre class="brush: js notranslate">this["nomePropriedade"]
 this.nomePropriedade
 </pre>
 
-<p>Suponha uma função chamada <code>valide</code> que valida a propriedade <code>valor</code> de um objeto, dado o objeto e os valores máximo e mínimo:</p>
+<p>Suponha uma função chamada <code>valide</code> que valida a propriedade <code>valor</code> de um objeto, dado o objeto e os valores máximo e mínimo:</p>
 
 <pre class="brush: js notranslate">function valide(obj, minimo, maximo){
   if ((obj.valor &lt; minimo) || (obj.valor &gt; maximo))
@@ -862,7 +862,7 @@ this.nomePropriedade
 }
 </pre>
 
-<p>Você poderia chamar <code>valide</code> em cada manipulador de evento <code>onChange</code> de um formulário utilizando <code>this</code> para passar o elemento do formulário, como no exemplo a seguir:</p>
+<p>Você poderia chamar <code>valide</code> em cada manipulador de evento <code>onChange</code> de um formulário utilizando <code>this</code> para passar o elemento do formulário, como no exemplo a seguir:</p>
 
 <pre class="brush: html notranslate">&lt;b&gt;Informe um número entre 18 e 99:&lt;/b&gt;
 &lt;input type="text" name="idade" size=3
@@ -894,10 +894,10 @@ a <span class="operator token">*</span> c <span class="operator token">+</span> 
 <p>Comprehensions são uma característica experimental de JavaScript, marcada para ser inclusa em uma versão futura do ECMAScript. Existem duas versões de Comprehensions:</p>
 
 <p>{{experimental_inline}}<strong><a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Array_comprehensions" title="The array comprehension syntax is a JavaScript expression which allows you to quickly assemble a new array based on an existing one. Comprehensions exist in many programming languages."><code>[for (x of y) x]</code></a></strong><br>
-        Comprehensions de array.</p>
+        Comprehensions de array.</p>
 
 <p>{{experimental_inline}}<strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions" title="The generator comprehension syntax is a JavaScript expression which allows you to quickly assemble a new generator function based on an existing iterable object. Comprehensions exist in many programming languages."><code>(for (x of y) y) </code></a><br>
- <code>  </code></strong><code> gerador de </code>comprehensions</p>
+ <code>  </code></strong><code> gerador de </code>comprehensions</p>
 
 <p>Comprehensions existem em muitas linguagens de programação e permitem que você rapidamente monte um novo array com base em um existente, por exemplo:</p>
 
@@ -914,7 +914,7 @@ a <span class="operator token">*</span> c <span class="operator token">+</span> 
 
 <h4 id="new" name="new"><code>new</code></h4>
 
-<p>Você pode utilizar o <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/new">operador new</a> para criar uma instância de um tipo de objeto definido pelo usuário ou de um dos tipos de objeto predefinidos: <code>Array</code>, <code>Boolean</code>, <code>Date</code>, <code>Function</code>, <code>Image</code>, <code>Number</code>, <code>Object</code>, <code>Option</code>, <code>RegExp </code>ou <code>String</code>. No servidor, você pode também utilizar <code>DbPool</code>, <code>Lock</code>, <code>File </code>ou <code>SendMail</code>. Utilize o operador <code>new</code> da seguinte forma:</p>
+<p>Você pode utilizar o <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/new">operador new</a> para criar uma instância de um tipo de objeto definido pelo usuário ou de um dos tipos de objeto predefinidos: <code>Array</code>, <code>Boolean</code>, <code>Date</code>, <code>Function</code>, <code>Image</code>, <code>Number</code>, <code>Object</code>, <code>Option</code>, <code>RegExp </code>ou <code>String</code>. No servidor, você pode também utilizar <code>DbPool</code>, <code>Lock</code>, <code>File </code>ou <code>SendMail</code>. Utilize o operador <code>new</code> da seguinte forma:</p>
 
 <pre class="brush: js notranslate">var nomeObjeto = new tipoObjeto([parametro1, parametro2, ..., parametroN]);
 </pre>

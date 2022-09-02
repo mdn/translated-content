@@ -21,13 +21,11 @@ connexionInfo = navigator.connection
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                                         | Commentaire            |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ---------------------- |
-| {{SpecName('Network Information', '#h-the-connection-attribute', 'Navigator.connection')}} | {{Spec2('Network Information')}} | Spécification initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Navigator.connection")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Statements/if...else
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p>A condicional<strong> if </strong> é uma estrutura condicional que executa a afirmação, dentro do bloco, se determinada condição for verdadeira. Se for falsa, executa as afirmações dentro de <strong>else</strong>.</p>
+<p>A condicional<strong> if </strong> é uma estrutura condicional que executa a afirmação, dentro do bloco, se determinada condição for verdadeira. Se for falsa, executa as afirmações dentro de <strong>else</strong>.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -24,12 +24,12 @@ translation_of: Web/JavaScript/Reference/Statements/if...else
 
 <dl>
  <dt><code>condição1</code></dt>
- <dd>Condicional que será executada caso a condição em <em>if</em> seja verdadeira (true). Pode ser qualquer instrução, incluindo mais condicionais <em>if</em> aninhadas à instrução. Para executar multiplas instruções, faça um agrupamento com uma instrução em <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block" title="en/JavaScript/Reference/Statements/block">bloco</a> ({ ... }). Para não executar nenhuma instrução, utilize uma instrução vazia (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/Empty">empty</a>).</dd>
+ <dd>Condicional que será executada caso a condição em <em>if</em> seja verdadeira (true). Pode ser qualquer instrução, incluindo mais condicionais <em>if</em> aninhadas à instrução. Para executar multiplas instruções, faça um agrupamento com uma instrução em <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block" title="en/JavaScript/Reference/Statements/block">bloco</a> ({ ... }). Para não executar nenhuma instrução, utilize uma instrução vazia (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/Empty">empty</a>).</dd>
 </dl>
 
 <dl>
  <dt><code>condição2</code></dt>
- <dd>Condicional que será executada caso a condição em <em>if</em> seja avaliada como falsa (false) e a condição <em>else</em> exista. Pode ser qualquer instrução, incluindo instruões em bloco e mais condicionais <em>if</em> aninhadas. </dd>
+ <dd>Condicional que será executada caso a condição em <em>if</em> seja avaliada como falsa (false) e a condição <em>else</em> exista. Pode ser qualquer instrução, incluindo instruões em bloco e mais condicionais <em>if</em> aninhadas. </dd>
 </dl>
 
 <h2 id="Descrição">Descrição</h2>
@@ -59,7 +59,7 @@ else
 ...
 </pre>
 
-<p>Para executar multiplas instruções dentro de uma condição, utilize um bloco (<code>{ ... }</code>) . Em geral, é sempre uma boa prática utilizar instruções dentro de blocos, especialmente em códigos que envolvam condicionais <em>if </em>aninhadas:</p>
+<p>Para executar multiplas instruções dentro de uma condição, utilize um bloco (<code>{ ... }</code>) . Em geral, é sempre uma boa prática utilizar instruções dentro de blocos, especialmente em códigos que envolvam condicionais <em>if </em>aninhadas:</p>
 
 <pre class="eval">if (<em>condição</em>) {
    <em>instrução1</em>
@@ -68,7 +68,7 @@ else
 }
 </pre>
 
-<p>Não confunda os valores boolean primitivos <code>true</code> e <code>false</code> com os valores true e false do objeto <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="en/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>. Qualquer valor que não for <code>undefined</code>, <code>null</code>, <code>0</code>, <code>NaN</code>, ou uma string vazia (<code>""</code>), e qualquer objeto, incluíndo um objeto Boolean cujo valor é false, é avaliado como true quando passado por uma condicional. Por exemplo:</p>
+<p>Não confunda os valores boolean primitivos <code>true</code> e <code>false</code> com os valores true e false do objeto <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="en/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>. Qualquer valor que não for <code>undefined</code>, <code>null</code>, <code>0</code>, <code>NaN</code>, ou uma string vazia (<code>""</code>), e qualquer objeto, incluíndo um objeto Boolean cujo valor é false, é avaliado como true quando passado por uma condicional. Por exemplo:</p>
 
 <pre class="brush: js">var b = new Boolean(false);
 if (b) // essa condição é avaliada como true
@@ -88,7 +88,7 @@ if (b) // essa condição é avaliada como true
 
 <h3 id="Usando_else_if">Usando <code>else if</code></h3>
 
-<p>Perceba que não existe sintaxe de <code>elseif</code> em JavaScript. Entretanto, você pode escrevê-la com um espaço entre o if e o  else.</p>
+<p>Perceba que não existe sintaxe de <code>elseif</code> em JavaScript. Entretanto, você pode escrevê-la com um espaço entre o if e o  else.</p>
 
 <pre class="brush: js">if (x &gt; 5) {
 
@@ -126,22 +126,22 @@ if (b) // essa condição é avaliada como true
   <tr>
    <td>{{SpecName('ESDraft', '#sec-if-statement', 'if statement')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-if-statement', 'if statement')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES5.1', '#sec-12.5', 'if statement')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES3', '#sec-12.5', 'if statement')}}</td>
    <td>{{Spec2('ES3')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES1', '#sec-12.5', 'if statement')}}</td>
@@ -153,55 +153,7 @@ if (b) // essa condição é avaliada como true
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.statements.if_else")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

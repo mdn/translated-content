@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Referencia/Classes/extends
 ---
 <div>{{jsSidebar("Classes")}}</div>
 
-<p>La palabra clave <strong>extends</strong> es usada en la <a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">declaración</a> o <a href="/en-US/docs/Web/JavaScript/Reference/Operators/class">expresión</a> de clases, para crear una clase hija de otra.</p>
+<p>La palabra clave <strong>extends</strong> es usada en la <a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">declaración</a> o <a href="/en-US/docs/Web/JavaScript/Reference/Operators/class">expresión</a> de clases, para crear una clase hija de otra.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -14,15 +14,15 @@ original_slug: Web/JavaScript/Referencia/Classes/extends
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>La palabra clave <code>extends</code> se puede usar para crear una subclase a partir de clases personalizadas, así como sus objetos incorporados.</p>
+<p>La palabra clave <code>extends</code> se puede usar para crear una subclase a partir de clases personalizadas, así como sus objetos incorporados.</p>
 
-<p>La propiedad <code>.prototype</code> de la nueva subclase debe ser un {{jsxref("Object")}} o {{jsxref("null")}}.</p>
+<p>La propiedad <code>.prototype</code> de la nueva subclase debe ser un {{jsxref("Object")}} o {{jsxref("null")}}.</p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<h3 id="Como_usar_extends">Como usar <code>extends</code></h3>
+<h3 id="Como_usar_extends">Como usar <code>extends</code></h3>
 
-<p>El primer ejemplo crea una clase con el nombre <code>Square</code> a partir de una clase llamada <code>Polygon</code>. Este ejemplo ha sido extraido del siguiente <a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a> <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">(código fuente)</a>.</p>
+<p>El primer ejemplo crea una clase con el nombre <code>Square</code> a partir de una clase llamada <code>Polygon</code>. Este ejemplo ha sido extraido del siguiente <a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a> <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">(código fuente)</a>.</p>
 
 <pre class="brush: js">class Square extends Polygon {
   constructor(length) {
@@ -30,7 +30,7 @@ original_slug: Web/JavaScript/Referencia/Classes/extends
     // proporcionada por el ancho y alto de Polygon
     super(length, length);
     // Nota: En las clases extendidas, se debe llamar a super()
-    // antes de poder usar 'this'. El no hacerlo provocará un reference error.
+    // antes de poder usar 'this'. El no hacerlo provocará un reference error.
     this.name = 'Square';
   }
 
@@ -43,9 +43,9 @@ original_slug: Web/JavaScript/Referencia/Classes/extends
   }
 }</pre>
 
-<h3 id="Como_usar_extends_con_objetos_incorporados">Como usar <code>extends</code> con objetos incorporados</h3>
+<h3 id="Como_usar_extends_con_objetos_incorporados">Como usar <code>extends</code> con objetos incorporados</h3>
 
-<p>Este ejemplo extiende el objeto incorporado {{jsxref("Date")}}. Este ejemplo ha sido extraido del siguiente <a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a> <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">(código fuente)</a>.</p>
+<p>Este ejemplo extiende el objeto incorporado {{jsxref("Date")}}. Este ejemplo ha sido extraido del siguiente <a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a> <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">(código fuente)</a>.</p>
 
 <pre class="brush: js">class myDate extends Date {
   constructor() {
@@ -58,7 +58,7 @@ original_slug: Web/JavaScript/Referencia/Classes/extends
   }
 }</pre>
 
-<h3 id="Extendiendo_de_null">Extendiendo de <code>null</code></h3>
+<h3 id="Extendiendo_de_null">Extendiendo de <code>null</code></h3>
 
 <p>Extender de {{jsxref("null")}} es como hacerlo de una clase normal, excepto que el objeto prototype no hereda de {{jsxref("Object.prototype")}}.</p>
 
@@ -86,7 +86,7 @@ Object.getPrototypeOf(nullExtends.prototype) // null</pre>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-class-definitions', 'extends')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

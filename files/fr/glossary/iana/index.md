@@ -14,4 +14,4 @@ original_slug: Glossaire/IANA
 ### Culture générale
 
 - [Site web officiel](https://www.iana.org/)
-- {{interwiki("wikipedia", "Internet Assigned Numbers Authority", "IANA")}} sur Wikipédia
+- [IANA](https://fr.wikipedia.org/wiki/Internet_Assigned_Numbers_Authority) sur Wikipédia

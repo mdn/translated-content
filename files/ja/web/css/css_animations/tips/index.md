@@ -115,25 +115,25 @@ document.querySelector(".runButton").addEventListener("click", play, false);
 
 ```css
 .slidein {
-  animation-duration: 5s;
-  animation-name: slidein;
-  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
 }
 
 .stopped {
-  animation-name: none;
+  animation-name: none;
 }
 
 @keyframes slidein {
-  0% {
-    margin-left: 0%;
-  }
-  50% {
-    margin-left: 50%;
-  }
-  100% {
-    margin-left: 0%;
-  }
+  0% {
+    margin-left: 0%;
+  }
+  50% {
+    margin-left: 50%;
+  }
+  100% {
+    margin-left: 0%;
+  }
 }
 ```
 
@@ -146,10 +146,10 @@ let watchme = document.getElementById('watchme')
 
 watchme.className = 'slidein'
 const listener = (e) => {
-  watchme.className = 'slidein stopped'
+  watchme.className = 'slidein stopped'
 }
 watchme.addEventListener('click', () =>
-  watchme.addEventListener('animationiteration', listener, false)
+  watchme.addEventListener('animationiteration', listener, false)
 )
 ```
 

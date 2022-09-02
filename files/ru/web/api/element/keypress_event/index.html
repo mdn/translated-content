@@ -4,7 +4,7 @@ slug: Web/API/Element/keypress_event
 translation_of: Web/API/Document/keypress_event
 original_slug: Web/API/Document/keypress_event
 ---
-<p><span class="seoSummary">Событие <code>keypress</code> происходит когда нажимается символьная клавиша, то есть клавиша которая создаёт символ. Пример таких клавиш это буквы, цифры, знаки пунктуации и т.д. Примеры клавиш которые не создают символы, это клавиши модификаторы, такие как: </span><kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>Meta</kbd><span class="seoSummary">.</span></p>
+<p><span class="seoSummary">Событие <code>keypress</code> происходит когда нажимается символьная клавиша, то есть клавиша которая создаёт символ. Пример таких клавиш это буквы, цифры, знаки пунктуации и т.д. Примеры клавиш которые не создают символы, это клавиши модификаторы, такие как: </span><kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>Meta</kbd><span class="seoSummary">.</span></p>
 
 <h2 id="Общая_информация">Общая информация</h2>
 
@@ -73,7 +73,7 @@ original_slug: Web/API/Document/keypress_event
    <td><code>char</code> {{readonlyInline}}</td>
    <td>DOMString (string)</td>
    <td>The character value of the key. If the key corresponds to a printable character, this value is a non-empty Unicode string containing that character. If the key doesn't have a printable representation, this is an empty string. See <a href="/en-US/docs/Web/API/KeyboardEvent#Key_names_and_Char_values">key names and char values</a> for the detail.
-    <div class="note"><strong>Примечание:</strong> Если ключ используется в качестве макроса, который вставляет несколько символов, значением этого атрибута является вся строка, а не только первый символ.</div>
+    <div class="note"><strong>Примечание:</strong> Если ключ используется в качестве макроса, который вставляет несколько символов, значением этого атрибута является вся строка, а не только первый символ.</div>
    </td>
   </tr>
   <tr>
@@ -84,7 +84,7 @@ original_slug: Web/API/Document/keypress_event
    </td>
   </tr>
   <tr>
-   <td><code>code</code> {{readonlyInline}}
+   <td><code>code</code> {{readonlyInline}}
 
    </td>
    <td>DOMString (string)</td>
@@ -151,7 +151,7 @@ original_slug: Web/API/Document/keypress_event
 
 <h2 id="Примечания">Примечания</h2>
 
-<p>Chrome не запускает событие <code>keypress</code> для известных сочетаний клавиш (<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=13891#c50">reference</a>). Какие сочетания клавиш известны, зависит от системы пользователя. Используйте событие<code>keydown</code> для реализации сочетаний клавиш.</p>
+<p>Chrome не запускает событие <code>keypress</code> для известных сочетаний клавиш (<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=13891#c50">reference</a>). Какие сочетания клавиш известны, зависит от системы пользователя. Используйте событие<code>keydown</code> для реализации сочетаний клавиш.</p>
 
 <h2 id="Связанные_события">Связанные события</h2>
 

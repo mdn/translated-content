@@ -12,10 +12,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 ---
 <p>{{JSRef}}</p>
 
-<p>O método <code><strong>Object.setPrototypeOf()</strong></code> configura o 'prototype' (i.e., a propriedade interna <code>[[Prototype]]</code>)  de um objeto específico para outro objeto ou {{jsxref("null")}}.</p>
+<p>O método <code><strong>Object.setPrototypeOf()</strong></code> configura o 'prototype' (i.e., a propriedade interna <code>[[Prototype]]</code>)  de um objeto específico para outro objeto ou {{jsxref("null")}}.</p>
 
 <div class="warning">
-<p><strong>Atenção:</strong> Mudar o <code>[[Prototype]]</code> de um objeto é, pela natureza de como os modernos mecanismos JavaScript otimizam os acessos de propriedade, uma operação muito lenta, em <strong><em>todos</em></strong> navegadores e mecanismos JavaScript. O efeito sobre o desempenho de alterar a herança são sutis e vastas e não se limitam simplesmente ao tempo gasto em <code>obj.__proto__ = ...</code> statement, mas pode estender a <strong><em>qualquer</em></strong> código que tem acesso a <strong><em>qualquer</em></strong> objeto cujo <code>[[Prototype]]</code> foi alterado. Se você se preocupa com desempenho, você deveria evitar configurar o <code>[[Prototype]]</code> de um objeto. Em vez disso, crie um novo objeto com o <code>[[Prototype]] desejado usando</code> {{jsxref("Object.create()")}}.</p>
+<p><strong>Atenção:</strong> Mudar o <code>[[Prototype]]</code> de um objeto é, pela natureza de como os modernos mecanismos JavaScript otimizam os acessos de propriedade, uma operação muito lenta, em <strong><em>todos</em></strong> navegadores e mecanismos JavaScript. O efeito sobre o desempenho de alterar a herança são sutis e vastas e não se limitam simplesmente ao tempo gasto em <code>obj.__proto__ = ...</code> statement, mas pode estender a <strong><em>qualquer</em></strong> código que tem acesso a <strong><em>qualquer</em></strong> objeto cujo <code>[[Prototype]]</code> foi alterado. Se você se preocupa com desempenho, você deveria evitar configurar o <code>[[Prototype]]</code> de um objeto. Em vez disso, crie um novo objeto com o <code>[[Prototype]] desejado usando</code> {{jsxref("Object.create()")}}.</p>
 </div>
 
 <h2 id="Sintaxe">Sintaxe</h2>
@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
  <dt><code>obj</code></dt>
  <dd>O objeto que deve ter seu 'prototype' definido.</dd>
  <dt><code>prototype</code></dt>
- <dd>O novo 'prototype' do objeto  (um objeto ou {{jsxref("null")}}).</dd>
+ <dd>O novo 'prototype' do objeto  (um objeto ou {{jsxref("null")}}).</dd>
 </dl>
 
 <h3 id="Valor_de_retorno">Valor de retorno</h3>
@@ -37,9 +37,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Gera uma exceção {{jsxref("TypeError")}} se o objeto cujo <code>[[Prototype]]</code> é para ser modificado não for extensível de acordo com {{jsxref("Object.isExtensible()")}}. Não faz nada se o parâmetro '<code>prototype'</code> não for um objeto ou {{jsxref("null")}} (ex., número, texto, boleano, ou {{jsxref("undefined")}}). Caso contrário, este método muda o <code>[[Prototype]]</code> do <code>obj</code> para um novo valor.</p>
+<p>Gera uma exceção {{jsxref("TypeError")}} se o objeto cujo <code>[[Prototype]]</code> é para ser modificado não for extensível de acordo com {{jsxref("Object.isExtensible()")}}. Não faz nada se o parâmetro '<code>prototype'</code> não for um objeto ou {{jsxref("null")}} (ex., número, texto, boleano, ou {{jsxref("undefined")}}). Caso contrário, este método muda o <code>[[Prototype]]</code> do <code>obj</code> para um novo valor.</p>
 
-<p><code>Object.setPrototypeOf() é uma especificação</code> ECMAScript 2015. É geralmente considerada a maneira correta de definir o 'prototype' de um objeto, em relação à propriedade mais controversa {{jsxref("Object.prototype.__proto__")}}.</p>
+<p><code>Object.setPrototypeOf() é uma especificação</code> ECMAScript 2015. É geralmente considerada a maneira correta de definir o 'prototype' de um objeto, em relação à propriedade mais controversa {{jsxref("Object.prototype.__proto__")}}.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
@@ -48,7 +48,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>Usando a propriedade mais antiga {{jsxref("Object.prototype.__proto__")}}, nós podemos facilmente definir <code>Object.setPrototypeOf</code> se já não estiver disponível:</p>
+<p>Usando a propriedade mais antiga {{jsxref("Object.prototype.__proto__")}}, nós podemos facilmente definir <code>Object.setPrototypeOf</code> se já não estiver disponível:</p>
 
 <pre class="brush: js">// Funciona somente no Chrome e FireFox, não funciona no IE:
 Object.setPrototypeOf = Object.setPrototypeOf || function(obj, proto) {
@@ -59,7 +59,7 @@ Object.setPrototypeOf = Object.setPrototypeOf || function(obj, proto) {
 
 <h2 id="Adicionando_'Prototype'_em_cadeia">Adicionando 'Prototype' em cadeia</h2>
 
-<p>Uma combinação de <code>Object.getPrototypeOf() e</code> {{jsxref("Object.proto", "Object.prototype.__proto__")}} permite anexar toda uma cadeia de 'prototype' a um novo objeto 'prototype':</p>
+<p>Uma combinação de <code>Object.getPrototypeOf() e</code> {{jsxref("Object.proto", "Object.prototype.__proto__")}} permite anexar toda uma cadeia de 'prototype' a um novo objeto 'prototype':</p>
 
 <pre class="brush: js">/**
 *** Object.appendChain(@object, @prototype)
@@ -107,7 +107,7 @@ Object.appendChain = function(oChain, oProto) {
 
 <h3 id="Exemplos_2">Exemplos</h3>
 
-<h4 id="Primeiro_exemplo_Adicionar_uma_cadeia_a_um_'prototype'.">Primeiro exemplo: Adicionar uma cadeia a um 'prototype'.</h4>
+<h4 id="Primeiro_exemplo_Adicionar_uma_cadeia_a_um_'prototype'.">Primeiro exemplo: Adicionar uma cadeia a um 'prototype'.</h4>
 
 <pre class="brush: js">function Mammal() {
   this.isMammal = 'yes';
@@ -133,7 +133,7 @@ Object.appendChain(oCat, new Animal());
 console.log(oCat.breathing); // 'yes'
 </pre>
 
-<h4 id="Segundo_exemplo_Transformar_um_valor_primitivo_em_uma_instância_de_seu_construtor_e_anexar_sua_cadeia_a_um_'prototype'.">Segundo exemplo: Transformar um valor primitivo em uma instância de seu construtor e anexar sua cadeia a um 'prototype'.</h4>
+<h4 id="Segundo_exemplo_Transformar_um_valor_primitivo_em_uma_instância_de_seu_construtor_e_anexar_sua_cadeia_a_um_'prototype'.">Segundo exemplo: Transformar um valor primitivo em uma instância de seu construtor e anexar sua cadeia a um 'prototype'.</h4>
 
 <pre class="brush: js">function MySymbol() {
   this.isSymbol = 'yes';
@@ -150,7 +150,7 @@ console.log(oPrime.isSymbol); // 'yes'
 console.log(typeof oPrime); // 'object'
 </pre>
 
-<h4 id="Terceiro_exemplo_Anexar_uma_cadeia_ao_objeto_Function.prototype_e_anexar_uma_nova_função_a_essa_cadeia.">Terceiro exemplo: Anexar uma cadeia ao objeto Function.prototype e anexar uma nova função a essa cadeia.</h4>
+<h4 id="Terceiro_exemplo_Anexar_uma_cadeia_ao_objeto_Function.prototype_e_anexar_uma_nova_função_a_essa_cadeia.">Terceiro exemplo: Anexar uma cadeia ao objeto Function.prototype e anexar uma nova função a essa cadeia.</h4>
 
 <pre class="brush: js">function Person(sName) {
   this.identity = sName;
@@ -180,64 +180,14 @@ george(); // 'Hello guys!!'
   <tr>
    <td>{{SpecName('ESDraft', '#sec-object.setprototypeof', 'Object.setProtoypeOf')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Configuração</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatChrome("34")}}</td>
-   <td>{{CompatGeckoDesktop("31")}}</td>
-   <td>{{CompatIE("11")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatSafari("9")}}</td>
-  </tr>
- </tbody>
-</table>
-
-<p> </p>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Configuração</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("31")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatSafari("9")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Object.setPrototypeOf")}}
 
 <h2 id="Veja_também">Veja também</h2>
 
@@ -245,5 +195,5 @@ george(); // 'Hello guys!!'
  <li>{{jsxref("Reflect.setPrototypeOf()")}}</li>
  <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>
  <li>{{jsxref("Object.getPrototypeOf()")}}</li>
- <li>{{jsxref("Object.prototype.__proto__")}} </li>
+ <li>{{jsxref("Object.prototype.__proto__")}} </li>
 </ul>

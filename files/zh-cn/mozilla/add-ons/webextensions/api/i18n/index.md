@@ -1,7 +1,6 @@
 ---
 title: i18n
 slug: Mozilla/Add-ons/WebExtensions/API/i18n
-translation_of: Mozilla/Add-ons/WebExtensions/API/i18n
 ---
 {{AddonSidebar}}
 
@@ -38,7 +37,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/i18n
 >
 > 微软 Edge 的兼容性数据由微软公司提供，并在这里收录在《知识共享 3.0 美国许可证》中。
 
-<div class="hidden"><pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -65,4 +65,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/i18n
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,7 +1,6 @@
 ---
 title: Bootstrap
 slug: Glossary/Bootstrap
-translation_of: Glossary/Bootstrap
 ---
 Bootstrap 是自由的 {{Glossary("HTML")}}, CSS, {{Glossary("JavaScript")}} 開源框架。該框架旨在快速建立響應式網站。
 
@@ -9,5 +8,5 @@ Bootstrap 是自由的 {{Glossary("HTML")}}, CSS, {{Glossary("JavaScript")}} 開
 
 ## 參見
 
-- 維基百科的{{interwiki("wikipedia", "Bootstrap")}}
+- 維基百科的[Bootstrap](https://zh.wikipedia.org/wiki/Bootstrap)
 - [Bootstrap 官方網站](https://getbootstrap.com)（[非官方中文翻譯](https://bootstrap.hexschool.com)）

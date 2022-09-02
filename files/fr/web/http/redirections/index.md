@@ -51,7 +51,7 @@ En plus de ces redirections habituelles, il existe deux redirections spécifique
 
 ## Autre façon de spécifier les redirections
 
-Les redirections HTTP ne sont pas les seuls moyens de définir des redirections. Il existe deux autres méthodes: les redirections HTML en utilisant l'élément {{HTMLElement("meta")}}, et les redirections JavaScript en utilisant le [DOM](/en-US/docs/Web/API/Document_Object_Model).
+Les redirections HTTP ne sont pas les seuls moyens de définir des redirections. Il existe deux autres méthodes: les redirections HTML en utilisant l'élément {{HTMLElement("meta")}}, et les redirections JavaScript en utilisant le [DOM](/fr/docs/Web/API/Document_Object_Model).
 
 ### Redirections HTML
 

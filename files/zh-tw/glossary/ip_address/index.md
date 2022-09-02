@@ -1,12 +1,6 @@
 ---
 title: IP 位址
 slug: Glossary/IP_Address
-tags:
-  - Beginner
-  - Glossary
-  - Infrastructure
-  - Web
-translation_of: Glossary/IP_Address
 ---
 IP 位址是一組分配給所有使用網際網路通訊協定的裝置的編號。
 
@@ -16,4 +10,4 @@ IP 位址是一組分配給所有使用網際網路通訊協定的裝置的編�
 
 ### 一般知識
 
-- 維基百科上的 {{interwiki("wikipedia", "IP address", "IP address")}}
+- 維基百科上的 [IP address](https://zh.wikipedia.org/wiki/IP_address)

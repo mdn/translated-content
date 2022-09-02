@@ -14,19 +14,19 @@ translation_of: Web/JavaScript/Reference/Operators/class
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>A <strong>expressão class</strong> é uma das formas de definir uma classe no ECMAScript 2015. Parecido com as <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">expressões function</a>, expressões class poder ser nomeadas ou não. Se nomeada, o nome da classe é local para apenas o corpo da classe. Classes no JavaScript usam herança com base no prototype</p>
+<p>A <strong>expressão class</strong> é uma das formas de definir uma classe no ECMAScript 2015. Parecido com as <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">expressões function</a>, expressões class poder ser nomeadas ou não. Se nomeada, o nome da classe é local para apenas o corpo da classe. Classes no JavaScript usam herança com base no prototype</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
 <pre class="syntaxbox">var MinhaClasse = class <em>[nomeDaClass]</em> [extends] {
-  // corpo da classe
+  // corpo da classe
 };</pre>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Uma expressão de classe tem uma sintaxe similar a uma <a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">declaração de classe</a>. No entanto, com expressões de classe, você poderá omitir o nome da classe ("ligação de identificadores"), que você não pode se usar declarações. Adicionalmente, expressões de classe permitem que você redefina/redeclare classes e <strong>não invocar</strong> nenhum tipo de erros como <a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">declaração de classe</a>. A propriedade construtora é opcional. E o <em>typeof </em>de classes geradas usando essa palavra-chave sempre será "function".</p>
+<p>Uma expressão de classe tem uma sintaxe similar a uma <a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">declaração de classe</a>. No entanto, com expressões de classe, você poderá omitir o nome da classe ("ligação de identificadores"), que você não pode se usar declarações. Adicionalmente, expressões de classe permitem que você redefina/redeclare classes e <strong>não invocar</strong> nenhum tipo de erros como <a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">declaração de classe</a>. A propriedade construtora é opcional. E o <em>typeof </em>de classes geradas usando essa palavra-chave sempre será "function".</p>
 
-<p>Assim como declarações de classes, o corpo das expressões de classe são executados em <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>.</p>
+<p>Assim como declarações de classes, o corpo das expressões de classe são executados em <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>.</p>
 
 <pre class="brush: js">'use strict';
 var Foo = class {}; // propriedade de construtor é opcional
@@ -42,9 +42,9 @@ class Foo {}; // Throws TypeError, não permite re-declaração
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Uma_simples_expressão_de_classe">Uma simples expressão de classe</h3>
+<h3 id="Uma_simples_expressão_de_classe">Uma simples expressão de classe</h3>
 
-<p>Isso é apenas uma simples classe anônima que você pode referir usando a variável "Foo".</p>
+<p>Isso é apenas uma simples classe anônima que você pode referir usando a variável "Foo".</p>
 
 <pre class="brush: js">var Foo = class {
   constructor() {}
@@ -91,83 +91,29 @@ Foo.name; // "NamedFoo"
   <tr>
    <td>{{SpecName('ES2016', '#sec-class-definitions', 'Class definitions')}}</td>
    <td>{{Spec2('ES2016')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES2017', '#sec-class-definitions', 'Class definitions')}}</td>
    <td>{{Spec2('ES2017')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(42.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(45)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(45)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.operators.class")}}
 
 <h2 id="Veja_também">Veja também</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">Expressão <code>function</code> </a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">Declaração <code>class</code> </a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">Expressão <code>function</code> </a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">Declaração <code>class</code> </a></li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
 </ul>

@@ -54,8 +54,8 @@ translation_of: Web/CSS/:not
 <p class="fancy">I am so very fancy!</p>
 <div>I am NOT a paragraph.</div>
 <h2>
-  <span class="foo">foo inside h2</span>
-  <span class="bar">bar inside h2</span>
+  <span class="foo">foo inside h2</span>
+  <span class="bar">bar inside h2</span>
 </h2>
 ```
 
@@ -90,7 +90,7 @@ body :not(div, .fancy) {
 /* <h2> の中にある要素で <span> に foo クラスでないもの */
 /* クラス付き要素のような複雑なセレクターは、まだ対応が充分ではありません。 */
 h2 :not(span.foo) {
-  color: red;
+  color: red;
 }
 ```
 

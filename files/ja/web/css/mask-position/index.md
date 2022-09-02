@@ -23,7 +23,7 @@ mask-position: left;
 mask-position: right;
 mask-position: center;
 
-/* &lt;position&gt; 値 */
+/* <position> 値 */
 mask-position: 25% 75%;
 mask-position: 0px 0px;
 mask-position: 10% 8em;

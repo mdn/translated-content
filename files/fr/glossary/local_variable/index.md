@@ -9,8 +9,8 @@ original_slug: Glossaire/Variable_locale
 ---
 Une {{glossary("Variable","variable")}} dont le nom est associé à sa {{glossary("Value","valeur")}} uniquement dans une {{Glossary("Local scope","portée locale")}}.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Variable locale", "Variable locale")}} sur Wikipédia
+- [Variable locale](https://fr.wikipedia.org/wiki/Variable_locale) sur Wikipédia

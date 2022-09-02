@@ -12,7 +12,7 @@ translation_of: Web/API/Node/cloneNode
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>O método <strong><code>Node.cloneNode()</code></strong> duplica um elemento node (nó) da estrutura de um documento DOM. Ele retorna um clone do elemento para o qual foi invocado.</p>
+<p>O método <strong><code>Node.cloneNode()</code></strong> duplica um elemento node (nó) da estrutura de um documento DOM. Ele retorna um clone do elemento para o qual foi invocado.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -25,13 +25,13 @@ translation_of: Web/API/Node/cloneNode
  <dt><em>dupNode</em></dt>
  <dd>O novo elemento node (nó) resultado da clonagem do elemento node.</dd>
  <dt><em>deep {{optional_inline}} [1]</em></dt>
- <dd>true se os elementos filhos do nó que está sendo clonado devem ser clonados juntos, ou false para clonar apenas o nó específico dispensando, assim, qualquer elemento DOM filho. Veja os exemplos abaixo.</dd>
+ <dd>true se os elementos filhos do nó que está sendo clonado devem ser clonados juntos, ou false para clonar apenas o nó específico dispensando, assim, qualquer elemento DOM filho. Veja os exemplos abaixo.</dd>
 </dl>
 
 <div class="note">
-<p><strong>Nota:</strong> Na especificação do DOM4 (implementado no Gecko 13.0 {{geckoRelease(13)}}), o argumento <code>deep</code> é opcional. Se omitido, por padrão, o método age como se o valor de deep fosse setado como true durante a sua execução.   Para criação de clones superficiais, o argumento <code>deep</code> deve ser setado como <code>false</code>.</p>
+<p><strong>Nota:</strong> Na especificação do DOM4 (implementado no Gecko 13.0 {{geckoRelease(13)}}), o argumento <code>deep</code> é opcional. Se omitido, por padrão, o método age como se o valor de deep fosse setado como true durante a sua execução.   Para criação de clones superficiais, o argumento <code>deep</code> deve ser setado como <code>false</code>.</p>
 
-<p>Este comportamento foi alterado na última especificação. Se omitido o argumento deep, o método irá interpretar o valor de deep como se fosse false. Embora ele continue opcional, é recomendado que você sempre observe o argumento deep para fins de compatibilidade anterior e posterior. Com o Gecko 28.0 {{geckoRelease(28)}}), foi advertido aos desenvolvedores para não omitirem o argumento. Iniciado com o Gecko 29.0 {{geckoRelease(29)}}), um clone superficial é o padrão ao invés de um clone aprofundado.</p>
+<p>Este comportamento foi alterado na última especificação. Se omitido o argumento deep, o método irá interpretar o valor de deep como se fosse false. Embora ele continue opcional, é recomendado que você sempre observe o argumento deep para fins de compatibilidade anterior e posterior. Com o Gecko 28.0 {{geckoRelease(28)}}), foi advertido aos desenvolvedores para não omitirem o argumento. Iniciado com o Gecko 29.0 {{geckoRelease(29)}}), um clone superficial é o padrão ao invés de um clone aprofundado.</p>
 </div>
 
 <h2 id="Exemplo">Exemplo</h2>
@@ -56,19 +56,19 @@ div_p.appendChild(p_clone);
 
 <h2 id="Notas">Notas</h2>
 
-<p>A clonagem de um elemento node copia todos os seus atributos e valores. Porém, não tem o mesmo comportamento em relação aos "event listeners".</p>
+<p>A clonagem de um elemento node copia todos os seus atributos e valores. Porém, não tem o mesmo comportamento em relação aos "event listeners".</p>
 
 <p>O elmento node resultante da ação de clonagem não faz parte da estruturam DOM do documento até que ele seja adicionado utilizando o método appendChild() ou outro similar, conforme exemplo acima.</p>
 
-<p>Se o argumento (deep) for setado como false, os nós filhos do elemento node clonado não serão clonados juntos, assim como os respectivos textos.</p>
+<p>Se o argumento (deep) for setado como false, os nós filhos do elemento node clonado não serão clonados juntos, assim como os respectivos textos.</p>
 
 <p>Se o argumento (deep) for setado como true, os nós filhos, toda a árvore DOM do elemento clonado, será clonada junto.</p>
 
-<div class="warning"><strong>Cuidado:</strong> <code>cloneNode()</code> pode duplicar IDs em um documento.</div>
+<div class="warning"><strong>Cuidado:</strong> <code>cloneNode()</code> pode duplicar IDs em um documento.</div>
 
-<p>Se o elemento node (nó) clonado tiver uma ID e o novo elemento node resultante da clonagem for ser inserido no mesmo documento, a ID de um dos nós deve ser alterada para que observem o princípio de unicidade. Em outras palavras, um mesmo documento não pode ter elementos com IDs iguais. Se for o caso de trabalhar com manipulação de elementos DOM através do atributo "name", tome cuidado em observá-lo.</p>
+<p>Se o elemento node (nó) clonado tiver uma ID e o novo elemento node resultante da clonagem for ser inserido no mesmo documento, a ID de um dos nós deve ser alterada para que observem o princípio de unicidade. Em outras palavras, um mesmo documento não pode ter elementos com IDs iguais. Se for o caso de trabalhar com manipulação de elementos DOM através do atributo "name", tome cuidado em observá-lo.</p>
 
-<p>Clonagem de node (nó)  para um documento diferente, use o seguinte método: {{domxref("Document.importNode()")}}.</p>
+<p>Clonagem de node (nó)  para um documento diferente, use o seguinte método: {{domxref("Document.importNode()")}}.</p>
 
 <h2 id="Specificações">Specificações</h2>
 
@@ -84,12 +84,12 @@ div_p.appendChild(p_clone);
   <tr>
    <td>{{SpecName("DOM WHATWG", "#dom-node-clonenode", "Node.cloneNode()")}}</td>
    <td>{{Spec2("DOM WHATWG")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName("DOM3 Core", "core.html#ID-3A0ED0A4", "Node.cloneNode()")}}</td>
    <td>{{Spec2("DOM3 Core")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName("DOM2 Core", "core.html#ID-3A0ED0A4", "Node.cloneNode()")}}</td>
@@ -101,75 +101,4 @@ div_p.appendChild(p_clone);
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>(deep)</code> como parâmetro opcional</td>
-   <td>
-    <p>{{CompatVersionUnknown}}<sup>[1]</sup></p>
-   </td>
-   <td>{{CompatGeckoDesktop("13.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>
-    <p>{{CompatVersionUnknown}}<sup>[1]</sup></p>
-   </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>(deep)</code> como parâmetro opcional</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("13.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Valor padrão para o argumento (<code>deep)</code> é <code>false</code>.</p>
+{{Compat("api.Node.cloneNode")}}

@@ -1,9 +1,6 @@
 ---
 title: 标识符
 slug: Glossary/Identifier
-tags:
-  - 词汇表
-translation_of: Glossary/Identifier
 ---
 代码中用来标识**{{glossary("variable","变量")}}、{{glossary("function","函数")}}、或{{glossary("property","属性")}}**的字符序列。
 
@@ -13,4 +10,4 @@ translation_of: Glossary/Identifier
 
 ### 基本知识
 
-- {{interwiki("wikipedia", "Identifier#In_computer_science", "Identifier")}} on Wikipedia
+- [Identifier](https://zh.wikipedia.org/wiki/Identifier#In_computer_science) on Wikipedia

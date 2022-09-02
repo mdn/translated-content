@@ -364,7 +364,7 @@ fetch(myRequest)
 
 ## 응답 객체
 
-위에서 본 바와 같이 {{domxref("Response")}} 인스턴스는 `fetch()` 프로미스가 이행할 때 반환됩니다.
+위에서 본 바와 같이 {{domxref("Response")}} 인스턴스는 `fetch()` 프로미스가 이행할 때 반환됩니다.
 
 다음은 응답 객체에서 아마 가장 많이 사용하게 될 속성들입니다.
 
@@ -438,18 +438,16 @@ if (window.fetch) {
 
 ## 명세
 
-| Specification         | Status             | Comment            |
-| --------------------- | ------------------ | ------------------ |
-| {{SpecName('Fetch')}} | {{Spec2('Fetch')}} | Initial definition |
+{{Specifications}}
 
 ## 브라우저 호환성
 
-{{Compat("api.fetch")}}
+{{Compat}}
 
 ## 같이 보기
 
 - [ServiceWorker API](/ko/docs/Web/API/ServiceWorker_API)
-- [HTTP 접근 제어 (CORS)](/ko/docs/Web/HTTP/CORS)
+- [HTTP 접근 제어 (CORS)](/ko/docs/Web/HTTP/CORS)
 - [HTTP](/ko/docs/Web/HTTP)
 - [Fetch 폴리필](https://github.com/github/fetch)
 - [Github의 Fetch 예제](https://github.com/mdn/fetch-examples/)

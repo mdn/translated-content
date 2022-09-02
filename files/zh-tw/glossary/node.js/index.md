@@ -1,7 +1,6 @@
 ---
 title: Node.js
 slug: Glossary/Node.js
-translation_of: Glossary/Node.js
 ---
 Node.js 為 {{Glossary("JavaScript")}} 跨平台執行環境，可讓開發者建立伺服器端 JavaScript 網路程式。
 
@@ -9,7 +8,7 @@ Node.js 為 {{Glossary("JavaScript")}} 跨平台執行環境，可讓開發者�
 
 ### 基本知識
 
-- 維基百科的 {{Interwiki("wikipedia", "Node.js")}}
+- 維基百科的 [Node.js](https://zh.wikipedia.org/wiki/Node.js)
 - [Node.js 官網](https://nodejs.org/)
 
 ### 技術參考

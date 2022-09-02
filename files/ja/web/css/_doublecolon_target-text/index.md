@@ -17,7 +17,7 @@ translation_of: Web/CSS/::target-text
 
 ```css
 ::target-text {
-  background-color: pink;
+  background-color: pink;
 }
 ```
 

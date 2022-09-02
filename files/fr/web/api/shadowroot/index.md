@@ -87,10 +87,8 @@ function updateStyle(elem) {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('DOM WHATWG','#interface-shadowroot','Interface ShadowRoot')}} | {{Spec2('DOM WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ShadowRoot")}}
+{{Compat}}

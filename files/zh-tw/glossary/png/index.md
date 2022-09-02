@@ -1,10 +1,6 @@
 ---
 title: PNG
 slug: Glossary/PNG
-tags:
-  - PNG
-  - 術語表
-translation_of: Glossary/PNG
 ---
 **PNG** (_便攜式網路圖形_) 是一種支持無損數據壓縮的圖片文件格式。
 
@@ -12,4 +8,4 @@ translation_of: Glossary/PNG
 
 ### 基礎知識
 
-- 維基百科上的  [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)
+- 維基百科上的  [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)

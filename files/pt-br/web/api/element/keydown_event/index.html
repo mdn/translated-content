@@ -4,7 +4,7 @@ slug: Web/API/Element/keydown_event
 translation_of: Web/API/Document/keydown_event
 original_slug: Web/API/Document/keydown_event
 ---
-<p>O evento <code>keydown</code> é disparado quando uma tecla é pressionada. Diferente do evento <code><a href="/en-US/docs/Web/Events/keypress">keypress</a></code>, o <code>keydown</code> é disparado para teclas que produzem e que não produzem um caractere.</p>
+<p>O evento <code>keydown</code> é disparado quando uma tecla é pressionada. Diferente do evento <code><a href="/en-US/docs/Web/Events/keypress">keypress</a></code>, o <code>keydown</code> é disparado para teclas que produzem e que não produzem um caractere.</p>
 
 <h2 id="Informações_gerais">Informações gerais</h2>
 
@@ -20,7 +20,7 @@ original_slug: Web/API/Document/keydown_event
  <dt style="float: left; text-align: right; width: 120px;">Alvo</dt>
  <dd style="margin: 0 0 0 120px;">Document, Element</dd>
  <dt style="float: left; text-align: right; width: 120px;">Ação Padrão</dt>
- <dd style="margin: 0 0 0 120px;">Variações: evento <code>keypress</code>; carrega sistema de composição de texto; eventos <code>blur</code> e <code>focus</code>; evento <code>DOMActivate</code>; outro evento</dd>
+ <dd style="margin: 0 0 0 120px;">Variações: evento <code>keypress</code>; carrega sistema de composição de texto; eventos <code>blur</code> e <code>focus</code>; evento <code>DOMActivate</code>; outro evento</dd>
 </dl>
 
 <h2 id="Propriedades">Propriedades</h2>
@@ -72,39 +72,39 @@ original_slug: Web/API/Document/keydown_event
   <tr>
    <td><code>char</code> {{readonlyInline}}</td>
    <td>DOMString (string)</td>
-   <td>O caractere correspondente à tecla. Se a tecla corresponde a um caractere imprimível, este valor é uma string Unicode não vazia, contendo o caractere. Se a tecla não tem uma representação imprimível, o valor é uma string vazia. Veja <a href="/en-US/docs/Web/API/KeyboardEvent#Key_names_and_Char_values">key names and char values</a> para detalhes.
-    <div class="note"><strong>Nota:</strong> Se a tecla for usada como uma macro que insere múltiplos caracteres, o valor deste atributo é toda a string, não apenas o primeiro caractere.</div>
+   <td>O caractere correspondente à tecla. Se a tecla corresponde a um caractere imprimível, este valor é uma string Unicode não vazia, contendo o caractere. Se a tecla não tem uma representação imprimível, o valor é uma string vazia. Veja <a href="/en-US/docs/Web/API/KeyboardEvent#Key_names_and_Char_values">key names and char values</a> para detalhes.
+    <div class="note"><strong>Nota:</strong> Se a tecla for usada como uma macro que insere múltiplos caracteres, o valor deste atributo é toda a string, não apenas o primeiro caractere.</div>
    </td>
   </tr>
   <tr>
    <td><code>key</code> {{readonlyInline}}</td>
    <td>DOMString (string)</td>
-   <td>O valor da tecla pressionada. Se a tecla tem uma representação imprimível, o valor deste atributo é o mesmo do atributo <code>char</code>. Caso contrário, é uma das strings key especificadas em <a href="/en-US/docs/Web/API/KeyboardEvent/key/Key_Values">Key Values</a>. Se a tecla não pode ser identificada, o valor do atributo é a string "Unidentified". Veja <a href="/en-US/docs/Web/API/KeyboardEvent#Key_names_and_Char_values">key names and char values</a> para detalhes. Somente Leitura.</td>
+   <td>O valor da tecla pressionada. Se a tecla tem uma representação imprimível, o valor deste atributo é o mesmo do atributo <code>char</code>. Caso contrário, é uma das strings key especificadas em <a href="/en-US/docs/Web/API/KeyboardEvent/key/Key_Values">Key Values</a>. Se a tecla não pode ser identificada, o valor do atributo é a string "Unidentified". Veja <a href="/en-US/docs/Web/API/KeyboardEvent#Key_names_and_Char_values">key names and char values</a> para detalhes. Somente Leitura.</td>
   </tr>
   <tr>
-   <td><code>code</code> {{readonlyInline}}</td>
+   <td><code>code</code> {{readonlyInline}}</td>
    <td>DOMString (string)</td>
-   <td>Mantém uma string que identifica a tecla física sendo pressionada. O valor não é afetado pelo layout atual do teclado ou estado de modificador, portando uma tecla particular sempre retornará o mesmo valor. </td>
+   <td>Mantém uma string que identifica a tecla física sendo pressionada. O valor não é afetado pelo layout atual do teclado ou estado de modificador, portando uma tecla particular sempre retornará o mesmo valor. </td>
   </tr>
   <tr>
    <td><code>charCode</code> {{readonlyInline}}</td>
    <td>Unsigned long (int)</td>
-   <td>O número de referência Unicode da tecla; este atributo é usado somente pelo evento <a href="/en-US/docs/Mozilla_event_reference/keypress"><code>keypress</code></a>. Para teclas cujo atributo <code>char</code> contém múltiplos caracteres, este é o valor Unicode do primeiro caractere daquele atributo.
-    <div class="warning"><strong>Aviso:</strong> Este atributo está obsoleto; você deve usar <code>char</code> no lugar, se disponível.</div>
+   <td>O número de referência Unicode da tecla; este atributo é usado somente pelo evento <a href="/en-US/docs/Mozilla_event_reference/keypress"><code>keypress</code></a>. Para teclas cujo atributo <code>char</code> contém múltiplos caracteres, este é o valor Unicode do primeiro caractere daquele atributo.
+    <div class="warning"><strong>Aviso:</strong> Este atributo está obsoleto; você deve usar <code>char</code> no lugar, se disponível.</div>
    </td>
   </tr>
   <tr>
    <td><code>keyCode</code> {{readonlyInline}}</td>
    <td>Unsigned long (int)</td>
-   <td>Um código numérico, dependente do sistema e da implementação, identificando o valor não modificado da tecla pressionada. Este é usualmente o código decimal ASCII ({{ RFC(20) }}) ou código Windows 1252 correspondente à tecla; veja <a href="#virtual_key_codes">Virtual key codes</a> para uma lista de valores comuns. Se a tecla não pode ser identificada, este valor é 0.
-    <div class="warning"><strong>Aviso:</strong> Este atributo está obsoleto; você deve usar <code>key</code> no lugar, se disponível.</div>
+   <td>Um código numérico, dependente do sistema e da implementação, identificando o valor não modificado da tecla pressionada. Este é usualmente o código decimal ASCII ({{ RFC(20) }}) ou código Windows 1252 correspondente à tecla; veja <a href="#virtual_key_codes">Virtual key codes</a> para uma lista de valores comuns. Se a tecla não pode ser identificada, este valor é 0.
+    <div class="warning"><strong>Aviso:</strong> Este atributo está obsoleto; você deve usar <code>key</code> no lugar, se disponível.</div>
    </td>
   </tr>
   <tr>
    <td><code>which</code> {{readonlyInline}}</td>
    <td>Unsigned long (int)</td>
-   <td>Um código numérico, dependente do sistema e da implementação, identificando o valor não modificado da tecla pressionada; este é usualmente o mesmo que <code>keyCode</code>.
-    <div class="warning"><strong>Aviso:</strong> Este atributo está obsoleto; você deve usar <code>key</code> no lugar, se disponível.</div>
+   <td>Um código numérico, dependente do sistema e da implementação, identificando o valor não modificado da tecla pressionada; este é usualmente o mesmo que <code>keyCode</code>.
+    <div class="warning"><strong>Aviso:</strong> Este atributo está obsoleto; você deve usar <code>key</code> no lugar, se disponível.</div>
    </td>
   </tr>
   <tr>
@@ -115,39 +115,39 @@ original_slug: Web/API/Document/keydown_event
   <tr>
    <td><code>repeat</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td><code>true</code> se a tecla foi pressionada tempo suficiente para disparar repetição de tecla, <code>false</code> caso contrário.</td>
+   <td><code>true</code> se a tecla foi pressionada tempo suficiente para disparar repetição de tecla, <code>false</code> caso contrário.</td>
   </tr>
   <tr>
    <td><code>locale</code> {{readonlyInline}}</td>
    <td>string</td>
-   <td>O código do idioma para o evento, se disponível; uma string vazia caso contrário.</td>
+   <td>O código do idioma para o evento, se disponível; uma string vazia caso contrário.</td>
   </tr>
   <tr>
    <td><code>ctrlKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td><code>true</code> se a tecla control estava pressionada quando o evento foi disparado. <code>false</code> caso contrário.</td>
+   <td><code>true</code> se a tecla control estava pressionada quando o evento foi disparado. <code>false</code> caso contrário.</td>
   </tr>
   <tr>
    <td><code>shiftKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td><code>true</code> se a tecla shift estava pressionada quando o evento foi disparado. <code>false</code> caso contrário.</td>
+   <td><code>true</code> se a tecla shift estava pressionada quando o evento foi disparado. <code>false</code> caso contrário.</td>
   </tr>
   <tr>
    <td><code>altKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td><code>true</code> se a tecla alt estava pressionada quando o evento foi disparado. <code>false</code> caso contrário.</td>
+   <td><code>true</code> se a tecla alt estava pressionada quando o evento foi disparado. <code>false</code> caso contrário.</td>
   </tr>
   <tr>
    <td><code>metaKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td><code>true</code> se a tecla meta estava pressionada quando o evento foi disparado. <code>false</code> caso contrário.</td>
+   <td><code>true</code> se a tecla meta estava pressionada quando o evento foi disparado. <code>false</code> caso contrário.</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="preventDefault()_do_evento_keydown"><code>preventDefault()</code> do evento <code>keydown</code></h2>
+<h2 id="preventDefault()_do_evento_keydown"><code>preventDefault()</code> do evento <code>keydown</code></h2>
 
-<p>Iniciando com o Gecko 25, uma chamada para o método <code>preventDefault()</code> do evento <code>keydown</code> evita dispachar o evento <code>keypress</code> seguinte. Este é um comportamento válido para a especificação D3E e os principais navegadores web se comportam desta forma. Por outro lado, o Gecko 24 e anteriores dispachavam o evento <code>keypress</code> mesmo que o método <code>preventDefault()</code> do evento <code>keydown</code> anterior fosse chamado, embora o atributo  <code>defaultPrevented</code> do evento <code>keypress</code> fosse <code>true</code> neste caso.</p>
+<p>Iniciando com o Gecko 25, uma chamada para o método <code>preventDefault()</code> do evento <code>keydown</code> evita dispachar o evento <code>keypress</code> seguinte. Este é um comportamento válido para a especificação D3E e os principais navegadores web se comportam desta forma. Por outro lado, o Gecko 24 e anteriores dispachavam o evento <code>keypress</code> mesmo que o método <code>preventDefault()</code> do evento <code>keydown</code> anterior fosse chamado, embora o atributo  <code>defaultPrevented</code> do evento <code>keypress</code> fosse <code>true</code> neste caso.</p>
 
 <h2 id="Eventos_Relacionados">Eventos Relacionados</h2>
 

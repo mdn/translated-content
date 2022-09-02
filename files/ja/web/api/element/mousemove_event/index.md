@@ -1,18 +1,6 @@
 ---
 title: 'Element: mousemove イベント'
 slug: Web/API/Element/mousemove_event
-tags:
-  - API
-  - DOM
-  - イベント
-  - インターフェイス
-  - MouseEvent
-  - リファレンス
-  - マウス
-  - mousemove
-  - move
-  - ポインター
-translation_of: Web/API/Element/mousemove_event
 ---
 {{APIRef}}
 
@@ -87,8 +75,8 @@ const context = myPics.getContext('2d');
 
 // mousedown, mousemove, mouseup にイベントリスナーを追加
 myPics.addEventListener('mousedown', e => {
-  x = e.offsetX;
-  y = e.offsetY;
+  x = e.offsetX;
+  y = e.offsetY;
   isDrawing = true;
 });
 

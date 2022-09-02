@@ -138,7 +138,7 @@ window.confirm("Вы уверены?"); // вызывает оригинальн
 ]</pre>
 
 <div class="blockIndicator note">
-<p><strong>Примечание:</strong> Firefox предоставляет некоторое API, позволяющее встраиваемому скрипту иметь доступ к JavaScript объектам, созданным страничным скриптом, и предоставлять свои собственные JavaScript объекты страничному скрипту.</p>
+<p><strong>Примечание:</strong> Firefox предоставляет некоторое API, позволяющее встраиваемому скрипту иметь доступ к JavaScript объектам, созданным страничным скриптом, и предоставлять свои собственные JavaScript объекты страничному скрипту.</p>
 
 <p>Смотрите <a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts">совместное использование объектов со страничным скриптом</a> для получения дополнительной информации.</p>
 </div>
@@ -192,7 +192,7 @@ window.confirm("Вы уверены?"); // вызывает оригинальн
 
 <p>Встраиваемый скрипт имеет точно такие же кросс-доменные привилегии, как и всё остальное расширение: так что если расширение запросило кросс-доменный доступ на какой-либо домен используя <code><a href="/ru/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> ключ в manifest.json, тогда его встраиваемый скрипт тоже будет иметь доступ к этому домену.</p>
 
-<p>Это достигается, предоставляя встраиваемому скрипту более привилегированные XHR and fetch объекты. Что имеет побочный эффект, связанный с отсутствием <code><a href="/ru/docs/Web/HTTP/Headers/Origin">Origin</a></code> и <code><a href="/ru/docs/Web/HTTP/Headers/Referer">Referer</a></code> заголовков, которые имел бы запрос, выполняемый из страничного скрипта. Зачастую это предпочитаемо, для того чтобы предотвратить раскрытие кросс-доменной натуры запроса. Начиная с версии 58 и дальше, расширения, которым необходимо выполнять запросы, которые должны выглядеть будто они отправлены встраиваемым скриптом, могут использовать  <code>content.XMLHttpRequest</code> и <code>content.fetch()</code>. Кросс-браузерные расширения должны проверять присутствие этих методов.</p>
+<p>Это достигается, предоставляя встраиваемому скрипту более привилегированные XHR and fetch объекты. Что имеет побочный эффект, связанный с отсутствием <code><a href="/ru/docs/Web/HTTP/Headers/Origin">Origin</a></code> и <code><a href="/ru/docs/Web/HTTP/Headers/Referer">Referer</a></code> заголовков, которые имел бы запрос, выполняемый из страничного скрипта. Зачастую это предпочитаемо, для того чтобы предотвратить раскрытие кросс-доменной натуры запроса. Начиная с версии 58 и дальше, расширения, которым необходимо выполнять запросы, которые должны выглядеть будто они отправлены встраиваемым скриптом, могут использовать  <code>content.XMLHttpRequest</code> и <code>content.fetch()</code>. Кросс-браузерные расширения должны проверять присутствие этих методов.</p>
 
 <h2 id="Взаимодействие_с_фоновыми_скриптами">Взаимодействие с фоновыми скриптами</h2>
 
@@ -271,7 +271,7 @@ function notify(message) {
  <li>Одна из сторон должна ждать соединений, используя <code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect">runtime.onConnect</a></code></li>
  <li>Другая сторона должна вызвать:
   <ul>
-   <li><code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs/connect">tabs.connect()</a></code> (при соединении со встраиваемым скриптом); или</li>
+   <li><code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs/connect">tabs.connect()</a></code> (при соединении со встраиваемым скриптом); или</li>
    <li><code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect">runtime.connect()</a></code> (при соединении с фоновым скриптом).</li>
   </ul>
  </li>
@@ -280,7 +280,7 @@ function notify(message) {
 <p>Результатом вызова этих методов будет возвращение <code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> объекта.</p>
 
 <ul>
- <li><code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect">runtime.onConnect</a></code> методу передаётся аргумент, являющийся собственным портом этого скрипта,  <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> объект.</li>
+ <li><code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect">runtime.onConnect</a></code> методу передаётся аргумент, являющийся собственным портом этого скрипта,  <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> объект.</li>
 </ul>
 
 <p>Как только обе стороны имеют порт, они могут:</p>
@@ -359,7 +359,7 @@ browser.browserAction.onClicked.addListener(function() {
 var ports = []
 
 function connected(p) {
-  ports[p.sender.tab.id]    = p
+  ports[p.sender.tab.id]    = p
   //...
 }
 
@@ -367,8 +367,8 @@ browser.runtime.onConnect.addListener(connected)
 
 browser.browserAction.onClicked.addListener(function() {
   ports.forEach(p =&gt; {
-        p.postMessage({greeting: "Они нажали на кнопку!"})
-    })
+        p.postMessage({greeting: "Они нажали на кнопку!"})
+    })
 });
 </pre>
 
@@ -430,7 +430,7 @@ window.addEventListener("message", function(event) {
 <p>В Firefox:</p>
 
 <ul>
- <li>Если вы вызываете <code>eval()</code>,  код выполняется в контексте <strong>встраиваемого скрипта</strong>.</li>
+ <li>Если вы вызываете <code>eval()</code>,  код выполняется в контексте <strong>встраиваемого скрипта</strong>.</li>
  <li>Если вы вызываете <code>window.eval()</code>, код выполняется в контексте <strong>страничного скрипта</strong>.</li>
 </ul>
 
@@ -483,7 +483,7 @@ In page script, window.y: undefined</pre>
 var original = console.log;
 
 console.log = function() {
-  original(true);
+  original(true);
 }
 </pre>
 

@@ -15,9 +15,9 @@ original_slug: Web/API/File/Using_files_from_web_applications
 ---
 <p>{{ gecko_minversion_header("1.9.2") }}</p>
 
-<p> </p>
+<p> </p>
 
-<p>El uso de la API File añadida al DOM en HTML5, ahora hace posible que la página web solicite al usuario que seleccione archivos locales y, a continuación, leer el contenido de esos archivos.  Esta selección se puede hacer, ya sea usando un elemento {{HTMLElement ( "input")}} de HTML o mediante arrastrar y soltar.</p>
+<p>El uso de la API File añadida al DOM en HTML5, ahora hace posible que la página web solicite al usuario que seleccione archivos locales y, a continuación, leer el contenido de esos archivos.  Esta selección se puede hacer, ya sea usando un elemento {{HTMLElement ( "input")}} de HTML o mediante arrastrar y soltar.</p>
 
 <h2 id="Selección_de_ficheros_utilizando_HTML">Selección de ficheros utilizando HTML</h2>
 
@@ -26,14 +26,14 @@ original_slug: Web/API/File/Using_files_from_web_applications
 <pre><code>&lt;input type="file" id="input" onchange="handleFiles(this.files)"&gt;</code>
 </pre>
 
-<p>Cuando el usuario elige el fichero, la función <code>handleFiles()</code> es llamada con un objeto <a href="/en/DOM/FileList" title="en/DOM/FileList"><code>FileList </code></a>el cual a su vez contiene un objeto <a href="/en/DOM/File" title="en/DOM/File"><code>File</code></a> que representa el fichero elegido por el usuario.</p>
+<p>Cuando el usuario elige el fichero, la función <code>handleFiles()</code> es llamada con un objeto <a href="/en/DOM/FileList" title="en/DOM/FileList"><code>FileList </code></a>el cual a su vez contiene un objeto <a href="/en/DOM/File" title="en/DOM/File"><code>File</code></a> que representa el fichero elegido por el usuario.</p>
 
-<p>Si se prefiere permitir al usuario elegir varios ficheros, entonces se pone el atributo <code>multiple </code>en el elemento <code>input:</code></p>
+<p>Si se prefiere permitir al usuario elegir varios ficheros, entonces se pone el atributo <code>multiple </code>en el elemento <code>input:</code></p>
 
 <pre><code>&lt;input type="file" id="input" multiple="true" onchange="handleFiles(this.files)"&gt;</code>
 </pre>
 
-<p>En este caso, la lista de ficheros pasada a la función <code>handleFiles() </code>contiene un objeto <a href="/en/DOM/File" title="en/DOM/File"><code>File </code></a>por cada fichero seleccionado por el usuario. </p>
+<p>En este caso, la lista de ficheros pasada a la función <code>handleFiles() </code>contiene un objeto <a href="/en/DOM/File" title="en/DOM/File"><code>File </code></a>por cada fichero seleccionado por el usuario. </p>
 
 <p>Comenzando en Gecko 2.0 {{ geckoRelease("2.0") }}, se puede ocultar el realmente feo {{ HTMLElement("input") }} y representar tu propio interfaz para abrir el picker de ficheros y pintar que fichero o ficheros ha seleccionado el usuario. Esto se puede hacer añadiendo al elemento input la característica "display:none" en su css, o estilo y llamando al método <code>click() </code>del elemento {{ HTMLElement("input") }}.</p>
 
@@ -49,10 +49,10 @@ original_slug: Web/API/File/Using_files_from_web_applications
 <p>Tu método <code>doClick()</code> puede parecerse al siguiente:</p>
 
 <pre class="deki-transform">function doClick() {
-  var el = document.getElementById("fileElem");
-  if (el) {
-    el.click();
-  }
+  var el = document.getElementById("fileElem");
+  if (el) {
+    el.click();
+  }
 }
 </pre>
 
@@ -60,21 +60,21 @@ original_slug: Web/API/File/Using_files_from_web_applications
 
 <h3 id="Añadir_dinámicamente_un_listener_tipo_change">Añadir dinámicamente un listener tipo change</h3>
 
-<p>Si tu campo input ha sido creado usando una libreria JavaScript como <a class="external" href="http://www.jquery.com/">jQuery</a>, se necesitará usar {{ domxref("element.addEventListener()") }} para añadir el manejador de eventos tipo change, como en el ejemplo siguiente:</p>
+<p>Si tu campo input ha sido creado usando una libreria JavaScript como <a class="external" href="http://www.jquery.com/">jQuery</a>, se necesitará usar {{ domxref("element.addEventListener()") }} para añadir el manejador de eventos tipo change, como en el ejemplo siguiente:</p>
 
 <pre class="deki-transform">var inputElement = document.getElementById("inputField");
 inputElement.addEventListener("change", handleFiles, false);
 
 function handleFiles() {
-  var fileList = this.files;
+  var fileList = this.files;
 
-  /* now you can work with the file list */
+  /* now you can work with the file list */
 }
 </pre>
 
 <p>Nota: en este caso, la función <code>handleFiles() </code>mira la lista de ficheros con la finalidad de aceptar un parametro, mientras los eventos listeners sean añadidos de esta manera no pueden aceptar un parametro del input.</p>
 
-<p>Gecko 2.0 {{ geckoRelease("2.0") }} introduce soporte para los métodos de DOM {{ domxref("window.createBlobURL()") }} y {{ domxref("window.revokeBlobURL()") }}. El cual te permite crear un simple string con la URL que referenciar cualquier dato que pueda referenciar usando un objeto <a href="/en/DOM/File" title="en/DOM/File"><code>File</code></a> DOM, esto incluye los ficheros locales del usuario del dispositivo.</p>
+<p>Gecko 2.0 {{ geckoRelease("2.0") }} introduce soporte para los métodos de DOM {{ domxref("window.createBlobURL()") }} y {{ domxref("window.revokeBlobURL()") }}. El cual te permite crear un simple string con la URL que referenciar cualquier dato que pueda referenciar usando un objeto <a href="/en/DOM/File" title="en/DOM/File"><code>File</code></a> DOM, esto incluye los ficheros locales del usuario del dispositivo.</p>
 
 <p>Cuando tienes un objeto<a href="/en/DOM/File" title="en/DOM/File"><code> File</code></a> te gusta poder referenciarlo con una URL desde el HTML, la manera de crear tu propio blob URL para poder hacer esto es la siguiente:</p>
 
@@ -121,10 +121,10 @@ function dragover(e) {
   e.stopPropagation();
   e.preventDefault();
 
-  var dt = e.dataTransfer;
-  var files = dt.files;
+  var dt = e.dataTransfer;
+  var files = dt.files;
 
-  handleFiles(files);
+  handleFiles(files);
 }
 </pre>
 
@@ -155,7 +155,7 @@ function dragover(e) {
  <dt><code>size</code></dt>
  <dd>Es de solo lectura y es el tamaño del fichero en bytes como un entero de 64-bit.</dd>
  <dt><code>type</code></dt>
- <dd>Es de solo lectura y contiene MIME type del fichero, o "" si el tipo no puede ser determinado.</dd>
+ <dd>Es de solo lectura y contiene MIME type del fichero, o "" si el tipo no puede ser determinado.</dd>
 </dl>
 
 <h2 id="Ejemplo_Mostrando_miniaturas_de_una_selección_de_imágenes_del_usuario">Ejemplo: Mostrando miniaturas de una selección de imágenes del usuario</h2>
@@ -183,11 +183,11 @@ function dragover(e) {
 }
 </pre>
 
-<p>Aquí nuestro bucle recorre los archivos seleccionados por el usuario y mira el atributo <code>type</code> de cada archivo para ver si es una imagen (haciendo que una expresión regular coincida con la cadena de texto "image.*"). Para cada archivo que sea una imagen, creamos un nuevo elemento <code>img</code>. Se puede usar CSS para establecer bordes bonitos, sombras, y especificar el tamaño de la imagen, el de manera que ni siquiera necesita hacerse aquí.</p>
+<p>Aquí nuestro bucle recorre los archivos seleccionados por el usuario y mira el atributo <code>type</code> de cada archivo para ver si es una imagen (haciendo que una expresión regular coincida con la cadena de texto "image.*"). Para cada archivo que sea una imagen, creamos un nuevo elemento <code>img</code>. Se puede usar CSS para establecer bordes bonitos, sombras, y especificar el tamaño de la imagen, el de manera que ni siquiera necesita hacerse aquí.</p>
 
 <p>Cada imagen tiene la clase CSS "obj" añadida, para hacerla mas fácil buscarla en el árbol del DOM. Además añadimos un atributo<code> file</code> a cada imagen especificando el <a href="/en/DOM/File" title="en/DOM/File"><code>Fichero</code></a> para la imagen; esto nos permitira traer el hecho de subir las imágenes más tarde. Finalmente, usamos {{ domxref("Node.appendChild()") }} para añadir la nueva miniatura en el área de la previsualización de nuestro documento.</p>
 
-<p>A continuación establecemos el <a href="/en/DOM/FileReader" title="en/DOM/FileReader"><code>FileReader</code></a> para controlar la carga de la imagen de forma asíncrona y enlazarla con el elemento <code>img</code>. Después de crear el nuevo objeto <code>FileReader</code>, configuramos su función <code>onload</code>, luego llamamos a <code>readAsDataURL()</code> para comenzar la operación de lectura en segundo plano. Cuando el contenido completo de la imagen ha sido cargado, se convierte a  <code>data:</code> URL, el cuál es pasado al callback <code>onload</code>. Nuestra implementación de esta rutina simplemente establece el atributo <code>src</code> del elemento <code>img</code> cargado, cuyo resultado es la imagen apareciendo en la miniatura en la pantalla del usuario.</p>
+<p>A continuación establecemos el <a href="/en/DOM/FileReader" title="en/DOM/FileReader"><code>FileReader</code></a> para controlar la carga de la imagen de forma asíncrona y enlazarla con el elemento <code>img</code>. Después de crear el nuevo objeto <code>FileReader</code>, configuramos su función <code>onload</code>, luego llamamos a <code>readAsDataURL()</code> para comenzar la operación de lectura en segundo plano. Cuando el contenido completo de la imagen ha sido cargado, se convierte a  <code>data:</code> URL, el cuál es pasado al callback <code>onload</code>. Nuestra implementación de esta rutina simplemente establece el atributo <code>src</code> del elemento <code>img</code> cargado, cuyo resultado es la imagen apareciendo en la miniatura en la pantalla del usuario.</p>
 
 <p>Este ejemplo el objeto blob URLs para mostrar las miniaturas de las imágenes. Además, se muestra otra información del archivo incluyendo sus nombres y tamaños. Tú puedes <a href="/samples/domref/file-click-demo.html" title="https://developer.mozilla.org/samples/domref/file-click-demo.html">ver el ejemplo</a> (tenga en cuenta que se requiere una versión <a class="external" href="http://nightly.mozilla.org/">Nghtly</a> de Firefox del 23 de september 23 o mas reciente, o Firefox 4.0 beta 7).</p>
 
@@ -202,7 +202,7 @@ function dragover(e) {
 &lt;/div&gt;
 </pre>
 
-<p>Esto establece nuestro elemento {{ HTMLElement("input") }} de nuestro, así como un enlace que invoca el selector de archivos, ya que mantenmos el input file oculto para prevenir mostrar un UI menos atractivo. Esto se explica anteriormente en al la sección <a href="#using_hidden_file_input_elements_using_the_click_method">Using hidden file input elements using the click() method</a>, así como el método <code>doClick()</code> que invoca el el selector de archivos.</p>
+<p>Esto establece nuestro elemento {{ HTMLElement("input") }} de nuestro, así como un enlace que invoca el selector de archivos, ya que mantenmos el input file oculto para prevenir mostrar un UI menos atractivo. Esto se explica anteriormente en al la sección <a href="#using_hidden_file_input_elements_using_the_click_method">Using hidden file input elements using the click() method</a>, así como el método <code>doClick()</code> que invoca el el selector de archivos.</p>
 
 <p>El método <code>handleFiles()</code> es el siguiente:</p>
 
@@ -269,7 +269,7 @@ function dragover(e) {
 }
 </pre>
 
-<p>La segunda línea crea un array, llamado<code> imgs</code>, de todos los elementos  en el documento con la clase CSS "obj". En nuestro caso, estos serán todas las miniaturas de las imágenes. Una vez que tenemos esa lista,    of all the elements in the document with the CSS class "obj". In our case, these will be all the image thumbnails. Once we have that list, es trivial pasar por la lista, creando una nueva instancia de <code>FileUpload</code> por cada una. Subiendo el correspondiente archivo por cada uno de ellos.</p>
+<p>La segunda línea crea un array, llamado<code> imgs</code>, de todos los elementos  en el documento con la clase CSS "obj". En nuestro caso, estos serán todas las miniaturas de las imágenes. Una vez que tenemos esa lista,    of all the elements in the document with the CSS class "obj". In our case, these will be all the image thumbnails. Once we have that list, es trivial pasar por la lista, creando una nueva instancia de <code>FileUpload</code> por cada una. Subiendo el correspondiente archivo por cada uno de ellos.</p>
 
 <h3 id="Manipulando_el_proceso_de_carga_de_un_archivo">Manipulando el proceso de carga de un archivo</h3>
 
@@ -308,7 +308,7 @@ function dragover(e) {
  <li>El listener del progreso de la carga del <code>XMLHttpRequest</code>'s se configura para actualizar el throbber con una nueva información de porcentaje, por lo que a medida que progresa la carga, el throbber será actualizado en base a la última información.</li>
  <li>El evento "load" de la carga del <code>XMLHttpRequest</code>'s se configura para actualizar el throbber con el 100% como la información de progreso (para asegurar que el indicador de progreso realmente alcanza el 100%, en caso de las <span class="short_text" id="result_box" lang="es"><span class="hps">peculiaridades</span> <span class="hps">de granularidad durante el proceso</span></span>). Entoces se elimina el throbber, puesto que ya no es necesario. Esto causa que el throbber desaparezca una vez la carga está completa.</li>
  <li>La petición para cargar la imagen se inicia llamando al método <code>XMLHttpRequest</code>'s <code>open()</code> para comenzar a generar una petición de tipo POST.</li>
- <li>El MIME type para la carga se establece llamando a la función <code>deXMLHttpRequest</code> <code>overrideMimeType()</code>. En este caso, estamos usando un MIME type genérico; usted puede o no puede necesitar establecer MIME type en absoluto, dependiendo de su necesidad.</li>
+ <li>El MIME type para la carga se establece llamando a la función <code>deXMLHttpRequest</code> <code>overrideMimeType()</code>. En este caso, estamos usando un MIME type genérico; usted puede o no puede necesitar establecer MIME type en absoluto, dependiendo de su necesidad.</li>
  <li>Finalmente, se llama a la función <code>sendAsBinary()</code> del <code>XMLHttpRequest</code> es llamada para subir el contenido del archivo. <em>TEsto es necesario ser revisado, actualmete se está usando la rutina sincronizada en desuso getAsBinary() para extraer los datos del archivo..</em></li>
 </ol>
 

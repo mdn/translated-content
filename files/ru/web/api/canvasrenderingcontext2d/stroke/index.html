@@ -5,11 +5,11 @@ translation_of: Web/API/CanvasRenderingContext2D/stroke
 ---
 <div>{{APIRef}}</div>
 
-<p>Метод <strong><code>CanvasRenderingContext2D.stroke()</code></strong> Canvas 2D API обводит текущий или данный контур цветом <code>strokeStyle</code>.</p>
+<p>Метод <strong><code>CanvasRenderingContext2D.stroke()</code></strong> Canvas 2D API обводит текущий или данный контур цветом <code>strokeStyle</code>.</p>
 
 <p>Обводка выравнивается по центру контура, другими словами, половина линии обводки рисуется с внутренней стороны контура, и половина с внешней.</p>
 
-<p>Обводка отрисовывается согласно правилу ненулевого индекса, а значит, пересекающиеся части контура также будут обведены.</p>
+<p>Обводка отрисовывается согласно правилу ненулевого индекса, а значит, пересекающиеся части контура также будут обведены.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -21,14 +21,14 @@ void <var><em>ctx</em>.stroke(path);</var>
 
 <dl>
  <dt><code>path</code></dt>
- <dd>{{domxref ("Path2D")}} - контур, который нужно обвести.</dd>
+ <dd>{{domxref ("Path2D")}} - контур, который нужно обвести.</dd>
 </dl>
 
 <h2 id="Примеры">Примеры</h2>
 
 <h3 id="Использование_метода_stroke()">Использование метода <code>stroke()</code></h3>
 
-<p>В этом примере с помощью метода <code>rect()</code> создаётся прямоугольник, и затем с помощью <code>stroke()</code> отрисовывается на холсте.</p>
+<p>В этом примере с помощью метода <code>rect()</code> создаётся прямоугольник, и затем с помощью <code>stroke()</code> отрисовывается на холсте.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -43,15 +43,15 @@ ctx.rect(10, 10, 100, 100);
 ctx.stroke();
 </pre>
 
-<p>Отредактируйте приведённый ниже код и посмотрите, как обновляется рисунок на холсте:</p>
+<p>Отредактируйте приведённый ниже код и посмотрите, как обновляется рисунок на холсте:</p>
 
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.rect(10, 10, 100, 100);
@@ -99,5 +99,5 @@ window.addEventListener("load", drawCanvas);
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
- <li>Интерфейс, предоставляющий этот метод - {{domxref("CanvasRenderingContext2D")}}.</li>
+ <li>Интерфейс, предоставляющий этот метод - {{domxref("CanvasRenderingContext2D")}}.</li>
 </ul>

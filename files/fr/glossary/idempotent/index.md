@@ -39,7 +39,7 @@ DELETE /idX/delete HTTP/1.1   -> Retourne 404 comme il vient d'être supprimé
 DELETE /idX/delete HTTP/1.1   -> Retourne 404
 ```
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

@@ -17,7 +17,7 @@ translation_of: Web/API/FeaturePolicy
 ---
 {{APIRef("Feature Policy")}}
 
-L'interface `FeaturePolicy` de l'[API Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) représente l'ensemble des règles appliquées au contexte d'exécution courant.
+L'interface `FeaturePolicy` de l'[API Feature Policy](/fr/docs/Web/HTTP/Feature_Policy) représente l'ensemble des règles appliquées au contexte d'exécution courant.
 
 ## Méthodes de FeaturePolicy
 
@@ -33,17 +33,15 @@ L'interface `FeaturePolicy` de l'[API Feature Policy](/en-US/docs/Web/HTTP/Featu
 - {{DOMxRef("FeaturePolicy.getAllowlistForFeature")}}
   - : Retourne la liste de permissions pour la fonctionnalité spécifiée.
 
-## Spécification
+## Spécifications
 
-| Spécification                            | Statut                               | Commentaire          |
-| ---------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("Feature Policy")}} | {{Spec2("Feature Policy")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FeaturePolicy")}}
+{{Compat}}
 
 ## Voir aussi
 
 - {{HTTPHeader("Feature-Policy")}}
-- [Anonymat et vie privée, permissions et informations sur la sécurité](/en-US/docs/Web/Privacy)
+- [Anonymat et vie privée, permissions et informations sur la sécurité](/fr/docs/Web/Privacy)

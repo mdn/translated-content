@@ -1,7 +1,6 @@
 ---
 title: SEO
 slug: Glossary/SEO
-translation_of: Glossary/SEO
 ---
 **SEO**（搜索引擎优化）是一种让网站在搜索引擎结果中更加清晰，也帮助我们将搜索结果更靠前
 
@@ -22,7 +21,7 @@ SEO 方法分为三大类：
 
 ### 基本知识
 
-- {{Interwiki("wikipedia", "SEO")}} on 维基百科
+- [SEO](https://zh.wikipedia.org/wiki/SEO) on 维基百科
 
 ### 学习 SEO
 

@@ -1,17 +1,6 @@
 ---
 title: Notification.tag
 slug: Web/API/Notification/tag
-page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - tag
-browser-compat: api.Notification.tag
-translation_of: Web/API/Notification/tag
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 

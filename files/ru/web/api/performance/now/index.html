@@ -11,14 +11,14 @@ translation_of: Web/API/Performance/now
 
 <h2 id="Краткое_описание">Краткое описание</h2>
 
-<p>Метод <code><strong>performance.now()</strong></code> возвращает временную метку {{domxref("DOMHighResTimeStamp")}}, измеряемую в миллисекундах, с точностью до одной тысячной миллисекунды.</p>
+<p>Метод <code><strong>performance.now()</strong></code> возвращает временную метку {{domxref("DOMHighResTimeStamp")}}, измеряемую в миллисекундах, с точностью до одной тысячной миллисекунды.</p>
 
-<p>Значение, представленное типом {{domxref("DOMHighResTimeStamp")}}, изменяется в зависимости от контекста. Стоит иметь ввиду следующее:</p>
+<p>Значение, представленное типом {{domxref("DOMHighResTimeStamp")}}, изменяется в зависимости от контекста. Стоит иметь ввиду следующее:</p>
 
 <ul>
- <li>в разделяемых или выделенных потоках выполнения, началом эпохи считается момент начала работы потока.</li>
- <li>вне потоков выполнения, или в выделенных потоках, созданных в контексте {{domxref("Window")}}, началом эпохи считается значение свойства {{domxref("PerformanceTiming.navigationStart")}}.</li>
- <li>в выделенных потоках выполнения, созданных из другого потока, началом эпохи устанавливается начало эпохи этого самого потока.</li>
+ <li>в разделяемых или выделенных потоках выполнения, началом эпохи считается момент начала работы потока.</li>
+ <li>вне потоков выполнения, или в выделенных потоках, созданных в контексте {{domxref("Window")}}, началом эпохи считается значение свойства {{domxref("PerformanceTiming.navigationStart")}}.</li>
+ <li>в выделенных потоках выполнения, созданных из другого потока, началом эпохи устанавливается начало эпохи этого самого потока.</li>
 </ul>
 
 <h2 id="Синтаксис">Синтаксис</h2>
@@ -33,9 +33,9 @@ var t1 = performance.now();
 console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.")
 </pre>
 
-<p>В отличие от других временны́х типов данных, доступных в JavaScript (таких как <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date/now" title="/en-US/docs/JavaScript/Reference/Global_Objects/Date/now"><code>Date.now</code></a>), метки времени, возвращённые из <code>performance.now(),</code> не ограничены кратностью в одну миллисекунду, а представляют значение времени как число с плавающей запятой, с точностью до микросекунд.</p>
+<p>В отличие от других временны́х типов данных, доступных в JavaScript (таких как <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date/now" title="/en-US/docs/JavaScript/Reference/Global_Objects/Date/now"><code>Date.now</code></a>), метки времени, возвращённые из <code>performance.now(),</code> не ограничены кратностью в одну миллисекунду, а представляют значение времени как число с плавающей запятой, с точностью до микросекунд.</p>
 
-<p>Также, в противоположность <code>Date.now</code>, значение, возвращаемое из <code>performance.now(), всегда возрастает с постоянной скоростью, независимо от системного времени </code>(которое может быть установлено вручную или изменено программами наподобие NTP).</p>
+<p>Также, в противоположность <code>Date.now</code>, значение, возвращаемое из <code>performance.now(), всегда возрастает с постоянной скоростью, независимо от системного времени </code>(которое может быть установлено вручную или изменено программами наподобие NTP).</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 
@@ -48,5 +48,5 @@ console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.")
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
- <li><a href="http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now">When milliseconds are not enough: performance.now() </a>от HTML5 Rocks.</li>
+ <li><a href="http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now">When milliseconds are not enough: performance.now() </a>от HTML5 Rocks.</li>
 </ul>

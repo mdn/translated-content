@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 *アロー関数*と*従来の関数*には違いがあり、また制限もあります。
 
 - アロー関数には、[`this`](/ja/docs/Web/JavaScript/Reference/Operators/this)、[`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments)、[`super`](/ja/docs/Web/JavaScript/Reference/Operators/super) への結びつけがないので、[メソッド](/ja/docs/Glossary/Method)として使用することはできません。
-- アロー関数には [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) キーワードがありません。
+- アロー関数には [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) キーワードがありません。
 - アロー関数は、[`call`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call)、[`apply`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)、[`bind`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) のような、一般に[スコープ](/ja/docs/Glossary/Scope)を確立することを前提としたメソッドには適していません。
 - アロー関数は[コンストラクター](/ja/docs/Glossary/Constructor)として使用することはできません。
 - アロー関数は本体内で [`yield`](/ja/docs/Web/JavaScript/Reference/Operators/yield) を使用することはできません。
@@ -312,7 +312,7 @@ obj.doSomethingLater();
 
 ### `arguments` のバインドがない
 
-アロー関数は自身の [`arguments` オブジェクト](/ja/docs/Web/JavaScript/Reference/Functions/arguments)を持ちません。そのため、この例では、`arguments` は囲っているスコープでの同名変数への参照にすぎません。
+アロー関数は自身の [`arguments` オブジェクト](/ja/docs/Web/JavaScript/Reference/Functions/arguments)を持ちません。そのため、この例では、`arguments` は囲っているスコープでの同名変数への参照にすぎません。
 
 ```js
 var arguments = [1, 2, 3];
@@ -328,7 +328,7 @@ function foo(n) {
 foo(3); // 3 + 3 = 6
 ```
 
-多くの場合、[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)が `arguments` オブジェクトの代わりに使えます。
+多くの場合、[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)が `arguments` オブジェクトの代わりに使えます。
 
 ```js
 function foo(n) {

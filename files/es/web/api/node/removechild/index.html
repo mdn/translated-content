@@ -27,13 +27,13 @@ translation_of: Web/API/Node/removeChild
 
 <p>Si hijo(<code>child)</code> no es en realidad hijo del nodo <code>elemento</code>, el método lanza una excepción. Esto también sucederá si <code>child </code>es en realidad hijo de <code>elemento </code>al momento de llamar al método, pero fue eliminado por un controlador(manejador) de eventos(event handler) invocado en el curso de tratar de eliminar el elemento. (e.g. blur).</p>
 
-<p>Por lo tanto el método removeChild(child) lanza una excepción de 2 casos diferentes: </p>
+<p>Por lo tanto el método removeChild(child) lanza una excepción de 2 casos diferentes: </p>
 
-<p style="margin-left: 36.0pt; text-indent: -18.0pt;"><span style="">1.<span style='font: 7.0pt "Times New Roman";'>      </span></span>Si child es un hijo del elemento y por lo tanto existe en el DOM, pero se retiró el método lanza la siguiente excepción:</p>
+<p style="margin-left: 36.0pt; text-indent: -18.0pt;"><span style="">1.<span style='font: 7.0pt "Times New Roman";'>      </span></span>Si child es un hijo del elemento y por lo tanto existe en el DOM, pero se retiró el método lanza la siguiente excepción:</p>
 
 <p style="margin-left: 36.0pt;"><code><span lang="EN-US" style='font-family: "Cambria Math","serif"; font-size: 10.0pt;'>​​</span></code><code><span lang="EN-US" style="font-size: 10.0pt;">Uncaught NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node</span></code><span lang="EN-US" style=""><font><font>.</font></font></span></p>
 
-<p style="margin-left: 36.0pt; text-indent: -18.0pt;"><span style="">2.<span style='font: 7.0pt "Times New Roman";'>      </span></span>Si <code><span style="font-size: 10.0pt;">child</span></code> no existe en el DOM de la página, el método emite la siguiente excepción:<br>
+<p style="margin-left: 36.0pt; text-indent: -18.0pt;"><span style="">2.<span style='font: 7.0pt "Times New Roman";'>      </span></span>Si <code><span style="font-size: 10.0pt;">child</span></code> no existe en el DOM de la página, el método emite la siguiente excepción:<br>
  <br>
  <code><span style="font-size: 10.0pt;">Uncaught TypeError: Failed to execute 'removeChild' on 'Node': parameter 1 is not of type 'Node'.</span></code></p>
 

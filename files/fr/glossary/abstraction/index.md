@@ -17,4 +17,4 @@ L'_Abstraction_ dans le domaine de la {{Glossary("Computer programming","program
 
 ### **Culture générale**
 
-- {{interwiki("wikipedia", "Abstraction_(informatique)", "Abstraction")}} sur Wikipédia.
+- [Abstraction](https://fr.wikipedia.org/wiki/Abstraction_(informatique)) sur Wikipédia.

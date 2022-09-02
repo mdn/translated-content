@@ -32,10 +32,8 @@ xhr.send(null);
 
 ## Spécifications
 
-| Spécification                                                                        | État                                 | Commentaires |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------ |
-| {{SpecName('XMLHttpRequest', '#the-withcredentials-attribute')}} | {{Spec2('XMLHttpRequest')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.XMLHttpRequest.withCredentials")}}
+{{Compat}}

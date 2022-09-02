@@ -1,7 +1,6 @@
 ---
 title: Immutable
 slug: Glossary/Immutable
-translation_of: Glossary/Immutable
 ---
 我們在說一個不可變的{{glossary("物件")}}，意思就是這樣的物件內容部會被改變。
 
@@ -15,4 +14,4 @@ translation_of: Glossary/Immutable
 
 ### 基本知識
 
-- Wikipedia 上的{{interwiki("wikipedia", "不可變物件", "不可變物件")}}
+- Wikipedia 上的[不可變物件](https://zh.wikipedia.org/wiki/不可變物件)

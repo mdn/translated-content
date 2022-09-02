@@ -21,7 +21,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/toString
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>El objeto {{jsxref("Function")}} reconduce el método {{jsxref("Object.prototype.toString", "toString")}} heredado de  {{jsxref("Object")}}; no hereda {{jsxref("Object.prototype.toString")}}. Para objetos {{jsxref("Function")}}, el método <code>toString</code> retorna una representación de cadena del objeto en forma de declaración de función. Esto es, <code>toString</code> descompila la función y la cadena retornada incluye la palabra clave <code>function</code>, la lista de argumentos, llaves y el código fuente del cuerpo de la función.</p>
+<p>El objeto {{jsxref("Function")}} reconduce el método {{jsxref("Object.prototype.toString", "toString")}} heredado de  {{jsxref("Object")}}; no hereda {{jsxref("Object.prototype.toString")}}. Para objetos {{jsxref("Function")}}, el método <code>toString</code> retorna una representación de cadena del objeto en forma de declaración de función. Esto es, <code>toString</code> descompila la función y la cadena retornada incluye la palabra clave <code>function</code>, la lista de argumentos, llaves y el código fuente del cuerpo de la función.</p>
 
 <p>JavaScript llama al método <code>toString</code> automáticamente cuando una {{jsxref("Function")}} va a ser representada como un valor de texto, p.e. cuando una función es concatenada con un valor de cadena (string).</p>
 
@@ -50,7 +50,7 @@ Function.prototype.toString.call(proxy); // TypeError
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.3.4.2', 'Function.prototype.toString')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}</td>
@@ -60,7 +60,7 @@ Function.prototype.toString.call(proxy); // TypeError
   <tr>
    <td>{{SpecName('ESDraft', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -73,7 +73,7 @@ Function.prototype.toString.call(proxy); // TypeError
 
 <ul>
  <li>Desde Gecko 17.0 {{geckoRelease("17")}}, <code>Function.prototype.toString()</code> fue implementada salvando el código fuente de la función. El descompilador fue eliminado, de modo que el parámetro <code>indentation</code> ya no se necesita más. Ver {{bug("761723")}} para más detalles.</li>
- <li>A partir de Gecko 38 {{geckoRelease("38")}}, <code>Function.prototype.toString()</code> produce error para objetos {{jsxref("Proxy")}}  ({{bug(1100936)}}).</li>
+ <li>A partir de Gecko 38 {{geckoRelease("38")}}, <code>Function.prototype.toString()</code> produce error para objetos {{jsxref("Proxy")}}  ({{bug(1100936)}}).</li>
 </ul>
 
 <h2 id="Ver_también">Ver también</h2>

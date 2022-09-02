@@ -1,18 +1,6 @@
 ---
 title: tabs
 slug: Mozilla/Add-ons/WebExtensions/API/tabs
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - NeedsTranslation
-  - Non-standard
-  - Reference
-  - TopicStub
-  - WebExtensions
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 ---
 {{AddonSidebar}}
 
@@ -54,7 +42,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 ## 方法
 
 - {{WebExtAPIRef("tabs.connect()")}}
-  - : 在运行于该标签的任何 [content scripts ](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)和该扩展的后台脚本（或者其他的比如弹出菜单脚本或者设置页面脚本）间创建一个消息连接。
+  - : 在运行于该标签的任何 [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) 和该扩展的后台脚本（或者其他的比如弹出菜单脚本或者设置页面脚本）间创建一个消息连接。
 - {{WebExtAPIRef("tabs.create()")}}
   - : 创建一个新标签。
 - {{WebExtAPIRef("tabs.captureVisibleTab()")}}
@@ -145,7 +133,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -172,4 +161,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

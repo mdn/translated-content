@@ -1,13 +1,12 @@
 ---
 title: PerformanceObserver.takeRecords()
 slug: Web/API/PerformanceObserver/takeRecords
-translation_of: Web/API/PerformanceObserver/takeRecords
 ---
 {{APIRef("Performance Timeline API")}}
 
-{{domxref('PerformanceObserver')}} 接口的 **`takeRecords()`** 方法返回当前存储在性能观察器中的 {{domxref("PerformanceEntry","性能条目")}} 列表，将其清空。
+{{domxref('PerformanceObserver')}} 接口的 **`takeRecords()`** 方法返回当前存储在性能观察器中的{{domxref("PerformanceEntry","性能条目")}}列表，并将其清空。
 
-## Syntax
+## 语法
 
 ```js
 var PerformanceEntry[] = performanceObserver.takeRecords();
@@ -15,7 +14,7 @@ var PerformanceEntry[] = performanceObserver.takeRecords();
 
 ### 参数
 
-None.
+无。
 
 ### 返回值
 

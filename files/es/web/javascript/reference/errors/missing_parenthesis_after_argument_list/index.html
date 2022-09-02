@@ -33,13 +33,13 @@ translation_of: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argume
 
 
 
-<h3 id="Strings_sin_cierre">Strings sin cierre</h3>
+<h3 id="Strings_sin_cierre">Strings sin cierre</h3>
 
 <pre class="brush: js example-bad">console.log('"Java" + "Script" = \"' + 'Java' + 'Script\");
 // SyntaxError: missing ) after argument list
 </pre>
 
-<p>Aquí JavaScript  piensa que tienes <code>);</code> dentro del string y lo ignora, y termina no sabiendo que quisiste utilizar <code>);</code> para cerrar la función <code>console.log</code>. Para solucionar esto, podemos poner un <code>'</code>  después del string "Script":</p>
+<p>Aquí JavaScript  piensa que tienes <code>);</code> dentro del string y lo ignora, y termina no sabiendo que quisiste utilizar <code>);</code> para cerrar la función <code>console.log</code>. Para solucionar esto, podemos poner un <code>'</code>  después del string "Script":</p>
 
 <pre class="brush: js example-good">console.log('"Java" + "Script" = \"' + 'Java' + 'Script\"');
 // '"Java" + "Script" = "JavaScript"'</pre>

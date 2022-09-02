@@ -12,8 +12,8 @@ Une **ligature** est une fusion de deux caractères en un seul nouveau caractèr
 
 Vous pouvez implémenter les ligatures dans vos pages web avec {{cssxref("font-variant-ligatures")}}.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Ligature (écriture)", "Ligature")}} sur Wikipédia
+- [Ligature](https://fr.wikipedia.org/wiki/Ligature_(%C3%A9criture)) sur Wikipédia

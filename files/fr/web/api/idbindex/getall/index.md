@@ -63,13 +63,11 @@ getAllKeysRequest.onsuccess = function() {
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('IndexedDB2', '#dom-idbindex-getall', 'getAll()')}} | {{Spec2('IndexedDB')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.getAll")}}
+{{Compat}}
 
 ## Voir aussi
 

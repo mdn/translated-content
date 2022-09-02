@@ -5,30 +5,30 @@ translation_of: Web/CSS/blend-mode
 ---
 <div>{{CSSRef}}</div>
 
-<p><a href="/pt-BR/docs/Web/CSS/CSS_Tipos">O tipo básico de dados</a> <a href="/pt-BR/docs/Web/CSS">CSS</a> <strong><code>&lt;blend-mode&gt;</code></strong> (modo de mesclagem) descreve como as cores devem aparecer, quando objetos se sobrepõem. Usa-se nas propriedades {{cssxref("background-blend-mode")}} e {{cssxref("mix-blend-mode")}}.</p>
+<p><a href="/pt-BR/docs/Web/CSS/CSS_Tipos">O tipo básico de dados</a> <a href="/pt-BR/docs/Web/CSS">CSS</a> <strong><code>&lt;blend-mode&gt;</code></strong> (modo de mesclagem) descreve como as cores devem aparecer, quando objetos se sobrepõem. Usa-se nas propriedades {{cssxref("background-blend-mode")}} e {{cssxref("mix-blend-mode")}}.</p>
 
-<p>Para cada pixel sobreposto, o <code><strong>blend-mode</strong></code> obtém o valor da cor do pixel da frente e do pixel do fundo, faz um cálculo com esses valores e devolve um novo valor de cor.</p>
+<p>Para cada pixel sobreposto, o <code><strong>blend-mode</strong></code> obtém o valor da cor do pixel da frente e do pixel do fundo, faz um cálculo com esses valores e devolve um novo valor de cor.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<p>O tipo básico de dados <strong><code>&lt;blend-mode&gt;</code></strong> é definido usando uma palavra chave escolhida da lista abaixo.</p>
+<p>O tipo básico de dados <strong><code>&lt;blend-mode&gt;</code></strong> é definido usando uma palavra chave escolhida da lista abaixo.</p>
 
 <h3 id="Valores">Valores</h3>
 
 <dl>
  <dt><code><a id="normal" name="normal">normal</a></code></dt>
  <dd>
- <p>A cor firnal é a do pixel de cima, não importando a cor dor o pixel de baixo.<br>
-  O efeito é como duas folhas de papel opacas se sobrepondo.</p>
+ <p>A cor firnal é a do pixel de cima, não importando a cor dor o pixel de baixo.<br>
+  O efeito é como duas folhas de papel opacas se sobrepondo.</p>
 
  <div id="normal_example">
  <div class="hidden">
  <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
 
  <pre class="brush: css">#div {
-  width: 300px;
-  height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+  width: 300px;
+  height: 300px;
+  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
               url('https://mdn.mozillademos.org/files/8545/tr.png');
   background-blend-mode: normal;
 }</pre>
@@ -48,11 +48,11 @@ translation_of: Web/CSS/blend-mode
  <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
 
  <pre class="brush: css">#div {
-  width: 300px;
-  height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+  width: 300px;
+  height: 300px;
+  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
               url('https://mdn.mozillademos.org/files/8545/tr.png');
-  background-blend-mode: multiply;
+  background-blend-mode: multiply;
 }</pre>
  </div>
  </div>
@@ -70,11 +70,11 @@ translation_of: Web/CSS/blend-mode
  <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
 
  <pre class="brush: css">#div {
-  width: 300px;
-  height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+  width: 300px;
+  height: 300px;
+  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
               url('https://mdn.mozillademos.org/files/8545/tr.png');
-  background-blend-mode: screen;
+  background-blend-mode: screen;
 }</pre>
  </div>
  </div>
@@ -83,17 +83,17 @@ translation_of: Web/CSS/blend-mode
  </dd>
  <dt><code><a id="overlay" name="overlay">overlay</a></code></dt>
  <dd>A cor final será o resultado de <code>multiply</code>, se a cor de baixo for mais escura ou <code>screen</code>, se a cor de baixo for mais clara.<br>
- Este <code>blend-mode</code> é equivalente a <code>hard-light</code> mas com as camadas invertidas.
+ Este <code>blend-mode</code> é equivalente a <code>hard-light</code> mas com as camadas invertidas.
  <div id="overlay_example">
  <div class="hidden">
  <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
 
  <pre class="brush: css">#div {
-  width: 300px;
-  height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+  width: 300px;
+  height: 300px;
+  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
               url('https://mdn.mozillademos.org/files/8545/tr.png');
-  background-blend-mode: overlay;
+  background-blend-mode: overlay;
 }</pre>
  </div>
  </div>
@@ -109,11 +109,11 @@ translation_of: Web/CSS/blend-mode
  <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
 
  <pre class="brush: css">#div {
-  width: 300px;
-  height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+  width: 300px;
+  height: 300px;
+  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
               url('https://mdn.mozillademos.org/files/8545/tr.png');
-  background-blend-mode: darken;
+  background-blend-mode: darken;
 }</pre>
  </div>
  </div>
@@ -128,11 +128,11 @@ translation_of: Web/CSS/blend-mode
  <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
 
  <pre class="brush: css">#div {
-  width: 300px;
-  height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+  width: 300px;
+  height: 300px;
+  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
               url('https://mdn.mozillademos.org/files/8545/tr.png');
-  background-blend-mode: lighten;
+  background-blend-mode: lighten;
 }</pre>
  </div>
  </div>
@@ -142,18 +142,18 @@ translation_of: Web/CSS/blend-mode
  <dt><code><a id="color-dodge" name="color-dodge">color-dodge</a></code></dt>
  <dd>A cor final é o resultado da divisão da cor de baixo pelo inverso da cor de cima.<br>
  Um fundo preto não altera as cores. Uma cor de cima inversa a cor de baixo, resulta em uma cor bastante luminosa.<br>
- Este <code>blend-mode</code> é similar a <code>screen</code>, mas a cor de cima precisa ser apenas tão clara quanto o inverso da cor de fundo para deixar o resultado muito luminoso.</dd>
+ Este <code>blend-mode</code> é similar a <code>screen</code>, mas a cor de cima precisa ser apenas tão clara quanto o inverso da cor de fundo para deixar o resultado muito luminoso.</dd>
  <dd>
  <div id="color-dodge_example">
  <div class="hidden">
  <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
 
  <pre class="brush: css">#div {
-  width: 300px;
-  height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+  width: 300px;
+  height: 300px;
+  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
               url('https://mdn.mozillademos.org/files/8545/tr.png');
-  background-blend-mode: color-dodge;
+  background-blend-mode: color-dodge;
 }</pre>
  </div>
  </div>
@@ -163,19 +163,19 @@ translation_of: Web/CSS/blend-mode
  <dt><code><a id="color-burn" name="color-burn">color-burn</a></code></dt>
  <dd>
  <p>A cor final é o inverso da cor do fundo, dividido pelo valor da cor da frente e então inverte-se o resultado final.<br>
-  Se a cor de cima for branca, não haverá alteração. Se a cor de cima for o inverso da cor de baixo, resultará em uma cor preta.<br>
-  Este <code>blend-mode</code> é similar ao <code>multiply</code>, mas a cor de cima precisa apenas ser tão escura quanto o inverso da cor de baixo para fazer o resultado final ser preto.</p>
+  Se a cor de cima for branca, não haverá alteração. Se a cor de cima for o inverso da cor de baixo, resultará em uma cor preta.<br>
+  Este <code>blend-mode</code> é similar ao <code>multiply</code>, mas a cor de cima precisa apenas ser tão escura quanto o inverso da cor de baixo para fazer o resultado final ser preto.</p>
 
  <div id="color-burn_example">
  <div class="hidden">
  <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
 
  <pre class="brush: css">#div {
-  width: 300px;
-  height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+  width: 300px;
+  height: 300px;
+  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
               url('https://mdn.mozillademos.org/files/8545/tr.png');
-  background-blend-mode: color-burn;
+  background-blend-mode: color-burn;
 }</pre>
  </div>
  </div>
@@ -184,8 +184,8 @@ translation_of: Web/CSS/blend-mode
  </dd>
  <dt><code><a id="hard-light" name="hard-light">hard-light</a></code></dt>
  <dd>
- <p>A cor final é o resultado do <code>multiply</code> se a cor de cima for a mais escura, ou o resultado de <code>screen</code> se a cor de cima for mais clara.<br>
-  Este <code>blend-mode</code> é equivalente ao <code>overlay</code> mas com as camadas invertidas.<br>
+ <p>A cor final é o resultado do <code>multiply</code> se a cor de cima for a mais escura, ou o resultado de <code>screen</code> se a cor de cima for mais clara.<br>
+  Este <code>blend-mode</code> é equivalente ao <code>overlay</code> mas com as camadas invertidas.<br>
   O efeito é o de iluminar o fundo com um holofote muito forte e intenso.</p>
 
  <div id="hard-light_example">
@@ -193,11 +193,11 @@ translation_of: Web/CSS/blend-mode
  <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
 
  <pre class="brush: css">#div {
-  width: 300px;
-  height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+  width: 300px;
+  height: 300px;
+  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
               url('https://mdn.mozillademos.org/files/8545/tr.png');
-  background-blend-mode: hard-light;
+  background-blend-mode: hard-light;
 }</pre>
  </div>
  </div>
@@ -206,7 +206,7 @@ translation_of: Web/CSS/blend-mode
  </dd>
  <dt><code><a id="soft-light" name="soft-light">soft-light</a></code></dt>
  <dd>
- <p>O resultado final é similar ao de <code>hard-light</code>, porém menos intenso.<br>
+ <p>O resultado final é similar ao de <code>hard-light</code>, porém menos intenso.<br>
   O efeito é o de iluminar o fundo com um holofote difuso.</p>
 
  <div id="soft-light_example">
@@ -214,11 +214,11 @@ translation_of: Web/CSS/blend-mode
  <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
 
  <pre class="brush: css">#div {
-  width: 300px;
-  height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+  width: 300px;
+  height: 300px;
+  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
               url('https://mdn.mozillademos.org/files/8545/tr.png');
-  background-blend-mode: soft-light;
+  background-blend-mode: soft-light;
 }</pre>
  </div>
  </div>
@@ -235,11 +235,11 @@ translation_of: Web/CSS/blend-mode
  <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
 
  <pre class="brush: css">#div {
-  width: 300px;
-  height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+  width: 300px;
+  height: 300px;
+  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
               url('https://mdn.mozillademos.org/files/8545/tr.png');
-  background-blend-mode: difference;
+  background-blend-mode: difference;
 }</pre>
  </div>
  </div>
@@ -249,18 +249,18 @@ translation_of: Web/CSS/blend-mode
  <dt><code><a id="exclusion" name="exclusion">exclusion</a></code></dt>
  <dd>
  <p>The final color is similar to <code>difference,</code> but with less contrast.<br>
-  As with <code>difference</code>,  a black layer has no effect, while a white layer inverts the other layer's color.</p>
+  As with <code>difference</code>,  a black layer has no effect, while a white layer inverts the other layer's color.</p>
 
  <div id="exclusion_example">
  <div class="hidden">
  <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
 
  <pre class="brush: css">#div {
-  width: 300px;
-  height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+  width: 300px;
+  height: 300px;
+  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
               url('https://mdn.mozillademos.org/files/8545/tr.png');
-  background-blend-mode: exclusion;
+  background-blend-mode: exclusion;
 }</pre>
  </div>
  </div>
@@ -276,11 +276,11 @@ translation_of: Web/CSS/blend-mode
  <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
 
  <pre class="brush: css">#div {
-  width: 300px;
-  height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+  width: 300px;
+  height: 300px;
+  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
               url('https://mdn.mozillademos.org/files/8545/tr.png');
-  background-blend-mode: hue;
+  background-blend-mode: hue;
 }</pre>
  </div>
  </div>
@@ -297,11 +297,11 @@ translation_of: Web/CSS/blend-mode
  <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
 
  <pre class="brush: css">#div {
-  width: 300px;
-  height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+  width: 300px;
+  height: 300px;
+  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
               url('https://mdn.mozillademos.org/files/8545/tr.png');
-  background-blend-mode: saturation;
+  background-blend-mode: saturation;
 }</pre>
  </div>
  </div>
@@ -318,11 +318,11 @@ translation_of: Web/CSS/blend-mode
  <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
 
  <pre class="brush: css">#div {
-  width: 300px;
-  height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+  width: 300px;
+  height: 300px;
+  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
               url('https://mdn.mozillademos.org/files/8545/tr.png');
-  background-blend-mode: color;
+  background-blend-mode: color;
 }</pre>
  </div>
  </div>
@@ -339,11 +339,11 @@ translation_of: Web/CSS/blend-mode
  <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
 
  <pre class="brush: css">#div {
-  width: 300px;
-  height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+  width: 300px;
+  height: 300px;
+  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
               url('https://mdn.mozillademos.org/files/8545/tr.png');
-  background-blend-mode: luminosity;
+  background-blend-mode: luminosity;
 }</pre>
  </div>
  </div>

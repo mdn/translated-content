@@ -6,11 +6,11 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toJSON
 ---
 <div>{{JSRef}}</div>
 
-<p>El metodo <strong><code>toJSON()</code></strong> retorna una representacion de cadena del objeto {{jsxref("Date")}}</p>
+<p>El metodo <strong><code>toJSON()</code></strong> retorna una representacion de cadena del objeto {{jsxref("Date")}}</p>
 
 <div>{{EmbedInteractiveExample("pages/js/date-tojson.html")}}</div>
 
-<p class="hidden">La tabla de compatibilidad de esta página se genera a partir de datos estructurados. Si desea contribuir con los datos, por favor clone  <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envienos un pull request.</p>
+<p class="hidden">La tabla de compatibilidad de esta página se genera a partir de datos estructurados. Si desea contribuir con los datos, por favor clone  <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envienos un pull request.</p>
 
 <h2 id="Syntaxis">Syntaxis</h2>
 
@@ -22,11 +22,11 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toJSON
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>{{jsxref("Date")}} las instancias se refieren a un momento específico en el tiempo. Llamando a <code>toJSON()</code> retorna un string (usando {{jsxref("Date.prototype.toISOString()", "toISOString()")}}) representando el {{jsxref("Date")}} valor del objeto. Este método generalmente está destinado, de forma predeterminada, a serializar de manera útil {{jsxref("Date")}} objetos durante la serialización <a href="/en-US/docs/Glossary/JSON">JSON</a> .</p>
+<p>{{jsxref("Date")}} las instancias se refieren a un momento específico en el tiempo. Llamando a <code>toJSON()</code> retorna un string (usando {{jsxref("Date.prototype.toISOString()", "toISOString()")}}) representando el {{jsxref("Date")}} valor del objeto. Este método generalmente está destinado, de forma predeterminada, a serializar de manera útil {{jsxref("Date")}} objetos durante la serialización <a href="/en-US/docs/Glossary/JSON">JSON</a> .</p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<h3 id="Usando_toJSON">Usando <code>toJSON()</code></h3>
+<h3 id="Usando_toJSON">Usando <code>toJSON()</code></h3>
 
 <pre class="brush:js notranslate">var jsonDate = (new Date()).toJSON();
 var backToDate = new Date(jsonDate);

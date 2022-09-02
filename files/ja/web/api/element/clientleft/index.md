@@ -1,15 +1,6 @@
 ---
 title: Element.clientLeft
 slug: Web/API/Element/clientLeft
-tags:
-  - API
-  - CSSOM View
-  - NeedsAgnostify
-  - NeedsMarkupWork
-  - プロパティ
-  - リファレンス
-browser-compat: api.Element.clientLeft
-translation_of: Web/API/Element/clientLeft
 ---
 {{ APIRef("DOM") }}
 
@@ -17,7 +8,7 @@ translation_of: Web/API/Element/clientLeft
 
 > **Note:** このプロパティは値を整数に丸めます。小数の値が必要な場合は、 {{ domxref("element.getBoundingClientRect()") }} を使用してください。
 
-> **Note:** 要素に `display: inline` が設定されている場合、境界の幅に関わらず `clientLeft` は `0` を返します。
+> **Note:** 要素に `display: inline` が設定されている場合、境界の幅に関わらず `clientLeft` は `0` を返します。
 
 ## 構文
 

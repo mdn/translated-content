@@ -6,7 +6,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>Создаёт ASCII строку закодированную в base-64 из "строки" бинарных данных.</p>
+<p>Создаёт ASCII строку закодированную в base-64 из "строки" бинарных данных.</p>
 
 <p>Будьте внимательней этот способ не подходит для <a href="http://www.unicode.org/standard/WhatIsUnicode.html">Unicode</a> строк! Описание работы с Unicode в секции ниже.</p>
 
@@ -24,13 +24,13 @@ var decodedData = window.atob(encodedData); // decode the string
 
 <p>Вы можете воспользоваться этим способом, чтобы избежать проблем при передаче данных через сетевое соединение. Для этого нужно перекодировать данные в base64 и отправить их, и на другой стороне с помощью метода <code>{{domxref("WindowBase64.atob","window.atob()")}}</code> декодировать полученные данные в исходный вид. Например, вы можете перекодировать управляющие символы ASCII с 0 до 31.</p>
 
-<p><code>btoa()</code> также доступна для XPCOM компонентов реализованных в JavaScript, даже если <a href="/en-US/docs/DOM/window" title="DOM/window"><code>window</code></a> не является глобальным объектом в компонентах.</p>
+<p><code>btoa()</code> также доступна для XPCOM компонентов реализованных в JavaScript, даже если <a href="/en-US/docs/DOM/window" title="DOM/window"><code>window</code></a> не является глобальным объектом в компонентах.</p>
 
 <h2 id="Строки_Юникод">Строки Юникод</h2>
 
 <p>В большинстве браузеров, вызов <code>window.btoa()</code> на Unicode строке выбросит исключение Character Out Of Range (Символ вне допустимого диапазона).</p>
 
-<p>Чтобы избежать этого, воспользуйтесь паттерном, предложенным <a class="external" href="http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html">Johan Sundström</a>:</p>
+<p>Чтобы избежать этого, воспользуйтесь паттерном, предложенным <a class="external" href="http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html">Johan Sundström</a>:</p>
 
 <pre class="brush:js">function utf8_to_b64(str) {
     return window.btoa(unescape(encodeURIComponent(str)));

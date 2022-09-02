@@ -1,9 +1,6 @@
 ---
 title: 数据库
 slug: Glossary/Database
-tags:
-  - 数据库
-translation_of: Glossary/Database
 original_slug: Glossary/数据库
 ---
 **数据库**是一种用于收集已组织好的数据以便于搜索、结构化和扩充的存储系统。
@@ -16,7 +13,7 @@ original_slug: Glossary/数据库
 
 ## 参见
 
-- 维基百科上的词条 {{Interwiki("wikipedia", "Database")}}
+- 维基百科上的词条 [Database](https://zh.wikipedia.org/wiki/Database)
 
   - {{Glossary("IndexedDB")}}
   - {{Glossary("SQL")}}
