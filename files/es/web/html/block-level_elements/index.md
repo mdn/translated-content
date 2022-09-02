@@ -16,13 +16,13 @@ Los navegadores suelen mostrar el elemento a nivel de bloque con un salto de lí
 
 ## Ejemplo en bloque
 
-### HTML
+HTML
 
 ```html
 <p>Este párrafo es un elemento en bloque; este fondo se ha coloreado para mostrar elemento principal (o padre) del párrafo.</p>
 ```
 
-### CSS
+CSS
 
 ```css
 p { background-color: #8ABB55; }

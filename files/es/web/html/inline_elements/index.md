@@ -15,13 +15,13 @@ Los elementos en HTML (lenguaje de marcas de hipertexto - **Hypertext Markup Lan
 
 ## Ejemplo en línea
 
-### HTML
+HTML
 
 ```html
 <p>Este <span>span</span> es un elemento en línea; este fondo se ha coloreado para mostrar el principio y fin de la influencia del elemento en línea</p>
 ```
 
-### CSS
+CSS
 
 ```css
 span { background-color: #8ABB55; }

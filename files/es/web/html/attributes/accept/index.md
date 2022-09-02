@@ -73,7 +73,7 @@ El atributo `accept` toma como valor una cadena que contiene uno o más de estos
 <input type="file" accept="image/*,.pdf">
 ```
 
-## Usar \_input_s de archivo
+## Usar *input*s de archivo
 
 ### Un ejemplo básico
 
