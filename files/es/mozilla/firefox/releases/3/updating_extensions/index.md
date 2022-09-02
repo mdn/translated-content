@@ -132,11 +132,11 @@ O bien, emplear la siguiente técnica para hacer que la superposición funcione 
 </window>
 ```
 
-> **Note:** Este cambio es efectivo para Firefox 3 beta 4 y la prebeta 4.
+> **Nota:** Este cambio es efectivo para Firefox 3 beta 4 y la prebeta 4.
 
 #### Otros cambios
 
-_Añade aquí cambios sencillos que debas realizar cuando actualizas tu extensión para que funcione con Firefox 3\_\_._
+_Añade aquí cambios sencillos que debas realizar cuando actualizas tu extensión para que funcione con Firefox 3._
 
 - Por razones de seguridad, se ha dejado de implementar [`chrome://browser/base/utilityOverlay.js`](). Si lo estabas usando, deberás cambiarlo por [`chrome://browser/content/utilityOverlay.js`]().
 - Para implementar [`nsIAboutModule`](../../../../es/nsIAboutModule) ahora debes incluir el método `getURIFlags`. Visita [nsIAboutModule.idl](https://mxr.mozilla.org/mozilla-central/source/netwerk/protocol/about/public/nsIAboutModule.idl) para consultar la documentación. Esto afecta a las extensiones que brinden nuevas URIs del tipo `about:`. ( [bug 337746](https://bugzilla.mozilla.org/show_bug.cgi?id=337746) )

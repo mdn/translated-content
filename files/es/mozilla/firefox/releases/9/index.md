@@ -10,104 +10,6 @@ tags:
 translation_of: Mozilla/Firefox/Releases/9
 ---
 
-<ol>
-  <li class="toggle">
-    <details>
-      <summary>Notas de la Versión para Desarrolladores de Firefox</summary>
-      <ol>
-        <li>
-          <a href="/es/docs/Mozilla/Firefox/Releases"
-            >Notas de la Versión para Desarrolladores de Firefox</a
-          >
-        </li>
-      </ol>
-    </details>
-  </li>
-  <li class="toggle">
-    <details>
-      <summary>Complementos</summary>
-      <ol>
-        <li>
-          <a href="/es/Add-ons/WebExtensions">Extensiones del navegador</a>
-        </li>
-        <li><a href="/es/Add-ons/Themes">Temas</a></li>
-      </ol>
-    </details>
-  </li>
-  <li class="toggle">
-    <details>
-      <summary>Firefox por dentro</summary>
-      <ol>
-        <li><a href="/es/docs/Mozilla/">Proyecto Mozilla (Inglés)</a></li>
-        <li><a href="/es/docs/Mozilla/Gecko">Gecko</a></li>
-        <li>
-          <a href="/es/docs/Mozilla/Firefox/Headless_mode">Headless mode</a>
-        </li>
-        <li>
-          <a href="/es/docs/Mozilla/JavaScript_code_modules"
-            >Modulos de código JavaScript (Inglés)</a
-          >
-        </li>
-        <li><a href="/es/docs/Mozilla/js-ctypes">JS-ctypes (Inglés)</a></li>
-        <li><a href="/es/docs/Mozilla/MathML_Project">Proyecto MathML</a></li>
-        <li><a href="/es/docs/Mozilla/MFBT">MFBT (Inglés)</a></li>
-        <li>
-          <a href="/es/docs/Mozilla/Projects">Proyectos Mozilla (Inglés)</a>
-        </li>
-        <li>
-          <a href="/es/docs/Mozilla/Preferences"
-            >Sistema de Preferencias (Inglés)</a
-          >
-        </li>
-        <li>
-          <a href="/es/docs/Mozilla/WebIDL_bindings"
-            >Ataduras WebIDL (Inglés)</a
-          >
-        </li>
-        <li><a href="/es/docs/Mozilla/Tech/XPCOM">XPCOM</a></li>
-        <li><a href="/es/docs/Mozilla/Tech/XUL">XUL</a></li>
-      </ol>
-    </details>
-  </li>
-  <li class="toggle">
-    <details>
-      <summary>Crear y contribuir</summary>
-      <ol>
-        <li>
-          <a href="/es/docs/Mozilla/Developer_guide/Build_Instructions"
-            >Instrucciones para la compilación</a
-          >
-        </li>
-        <li>
-          <a
-            href="/es/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options"
-            >Configurar las opciones de compilación</a
-          >
-        </li>
-        <li>
-          <a
-            href="/es/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works"
-            >Cómo funciona el sistema de compilación (Inglés)</a
-          >
-        </li>
-        <li>
-          <a href="/es/docs/Mozilla/Developer_guide/Source_Code/Mercurial"
-            >Código fuente de Mozilla</a
-          >
-        </li>
-        <li><a href="/es/docs/Mozilla/Localization">Localización</a></li>
-        <li><a href="/es/docs/Mozilla/Mercurial">Mercurial (Inglés)</a></li>
-        <li><a href="/es/docs/Mozilla/QA">Garantía de Calidad</a></li>
-        <li>
-          <a href="/es/docs/Mozilla/Using_Mozilla_code_in_other_projects"
-            >Usar Mozilla en otros proyectos (Inglés)</a
-          >
-        </li>
-      </ol>
-    </details>
-  </li>
-</ol>
-
 Firefox 9 was released for Windows on December 20, 2011. Mac and Linux version 9.0.1, which fixed a crashing bug discovered at the last minute, were released on December 21, 2011.
 
 ## Changes for web developers
@@ -252,3 +154,103 @@ The IDL parser no longer includes support for the never fully-implemented notion
 - [Firefox 3 for developers](/es/docs/Mozilla/Firefox/Releases/3)
 - [Firefox 2 for developers](/es/docs/Mozilla/Firefox/Releases/2)
 - [Firefox 1.5 for developers](/es/docs/Mozilla/Firefox/Releases/1.5)
+
+<section id="Quick_links">
+  <ol>
+    <li class="toggle">
+      <details>
+        <summary>Notas de la Versión para Desarrolladores de Firefox</summary>
+        <ol>
+          <li>
+            <a href="/es/docs/Mozilla/Firefox/Releases"
+              >Notas de la Versión para Desarrolladores de Firefox</a
+            >
+          </li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>Complementos</summary>
+        <ol>
+          <li>
+            <a href="/es/Add-ons/WebExtensions">Extensiones del navegador</a>
+          </li>
+          <li><a href="/es/Add-ons/Themes">Temas</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>Firefox por dentro</summary>
+        <ol>
+          <li><a href="/es/docs/Mozilla/">Proyecto Mozilla (Inglés)</a></li>
+          <li><a href="/es/docs/Mozilla/Gecko">Gecko</a></li>
+          <li>
+            <a href="/es/docs/Mozilla/Firefox/Headless_mode">Headless mode</a>
+          </li>
+          <li>
+            <a href="/es/docs/Mozilla/JavaScript_code_modules"
+              >Modulos de código JavaScript (Inglés)</a
+            >
+          </li>
+          <li><a href="/es/docs/Mozilla/js-ctypes">JS-ctypes (Inglés)</a></li>
+          <li><a href="/es/docs/Mozilla/MathML_Project">Proyecto MathML</a></li>
+          <li><a href="/es/docs/Mozilla/MFBT">MFBT (Inglés)</a></li>
+          <li>
+            <a href="/es/docs/Mozilla/Projects">Proyectos Mozilla (Inglés)</a>
+          </li>
+          <li>
+            <a href="/es/docs/Mozilla/Preferences"
+              >Sistema de Preferencias (Inglés)</a
+            >
+          </li>
+          <li>
+            <a href="/es/docs/Mozilla/WebIDL_bindings"
+              >Ataduras WebIDL (Inglés)</a
+            >
+          </li>
+          <li><a href="/es/docs/Mozilla/Tech/XPCOM">XPCOM</a></li>
+          <li><a href="/es/docs/Mozilla/Tech/XUL">XUL</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>Crear y contribuir</summary>
+        <ol>
+          <li>
+            <a href="/es/docs/Mozilla/Developer_guide/Build_Instructions"
+              >Instrucciones para la compilación</a
+            >
+          </li>
+          <li>
+            <a
+              href="/es/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options"
+              >Configurar las opciones de compilación</a
+            >
+          </li>
+          <li>
+            <a
+              href="/es/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works"
+              >Cómo funciona el sistema de compilación (Inglés)</a
+            >
+          </li>
+          <li>
+            <a href="/es/docs/Mozilla/Developer_guide/Source_Code/Mercurial"
+              >Código fuente de Mozilla</a
+            >
+          </li>
+          <li><a href="/es/docs/Mozilla/Localization">Localización</a></li>
+          <li><a href="/es/docs/Mozilla/Mercurial">Mercurial (Inglés)</a></li>
+          <li><a href="/es/docs/Mozilla/QA">Garantía de Calidad</a></li>
+          <li>
+            <a href="/es/docs/Mozilla/Using_Mozilla_code_in_other_projects"
+              >Usar Mozilla en otros proyectos (Inglés)</a
+            >
+          </li>
+        </ol>
+      </details>
+    </li>
+  </ol>
+</section>

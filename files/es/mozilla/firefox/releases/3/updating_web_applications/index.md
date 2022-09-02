@@ -69,12 +69,10 @@ content mypackage location/ contentaccessible=yes
 
 Esto no debería ser algo que se haga muy seguido, pero está disponible para aquellos casos raros en los que es necesario. Debe tomarse en cuenta que es posible que Firefox alerte al usuario que su extensión utiliza una bandera en el contentaccessible de alguna manera, ya que consituye un riesgo potencial en la seguridad.
 
-> **Nota:** Ya que Firefox 2 no entiende la bandera `contentaccessible` (ignorará la instrucción completa de que contiene la bandera), si se desea que el complemento sea compatible con Firefox 2 y Firefox 3, hay que hacer algo como esto:```
+> **Nota:** Ya que Firefox 2 no entiende la bandera `contentaccessible` (ignorará la instrucción completa de que contiene la bandera), si se desea que el complemento sea compatible con Firefox 2 y Firefox 3, hay que hacer algo como esto:
+> ```
 > content mypackage location/
 > content mypackage location/ contentaccessible=yes
->
-> ```
->
 > ```
 
 #### Campos para subir archivos
