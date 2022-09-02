@@ -1,13 +1,6 @@
 ---
 title: HTMLTableCaptionElement
 slug: Web/API/HTMLTableCaptionElement
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.HTMLTableCaptionElement
-translation_of: Web/API/HTMLTableCaptionElement
 ---
 {{ APIRef("HTML DOM") }}
 

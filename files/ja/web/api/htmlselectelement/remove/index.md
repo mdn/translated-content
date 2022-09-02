@@ -1,14 +1,6 @@
 ---
 title: HTMLSelectElement.remove()
 slug: Web/API/HTMLSelectElement/remove
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - メソッド
-  - リファレンス
-browser-compat: api.HTMLSelectElement.remove
-translation_of: Web/API/HTMLSelectElement/remove
 ---
 {{ APIRef("HTML DOM") }}
 

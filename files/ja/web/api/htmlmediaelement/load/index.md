@@ -1,21 +1,6 @@
 ---
 title: HTMLMediaElement.load()
 slug: Web/API/HTMLMediaElement/load
-page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Element
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Method
-  - Reference
-  - Video
-  - load
-  - reset
-browser-compat: api.HTMLMediaElement.load
-translation_of: Web/API/HTMLMediaElement/load
 ---
 {{APIRef("HTML DOM")}}
 

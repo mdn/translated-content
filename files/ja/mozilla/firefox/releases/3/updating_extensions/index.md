@@ -1,9 +1,6 @@
 ---
 title: Updating extensions for Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
-tags:
-  - Firefox 3
-translation_of: Mozilla/Firefox/Releases/3/Updating_extensions
 original_slug: Updating_extensions_for_Firefox_3
 ---
 このドキュメントは、拡張機能を更新して Firefox 3 に対応させたいと考える開発者のために役立つ情報を提供します。

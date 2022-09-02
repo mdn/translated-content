@@ -1,11 +1,6 @@
 ---
 title: Firefox 24 for developers
 slug: Mozilla/Firefox/Releases/24
-tags:
-  - Firefox
-  - Firefox 24
-  - NeedsContent
-translation_of: Mozilla/Firefox/Releases/24
 ---
 Gecko 24 を搭載した Firefox 24 は米国時間 2013 年 9 月 17 日にリリースされました。このページでは、開発者に影響する Firefox 24 の変更点をまとめています。
 

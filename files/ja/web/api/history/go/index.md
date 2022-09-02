@@ -1,15 +1,6 @@
 ---
 title: History.go()
 slug: Web/API/History/go
-tags:
-  - API
-  - HTML DOM
-  - History
-  - 履歴 API
-  - メソッド
-  - リファレンス
-browser-compat: api.History.go
-translation_of: Web/API/History/go
 ---
 {{APIRef("History API")}}
 

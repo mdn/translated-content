@@ -1,16 +1,6 @@
 ---
 title: HTMLSlotElement.assignedElements()
 slug: Web/API/HTMLSlotElement/assignedElements
-tags:
-  - API
-  - HTMLSlotElement
-  - メソッド
-  - リファレンス
-  - ウェブコンポーネント
-  - assignedElements
-  - シャドウ DOM
-browser-compat: api.HTMLSlotElement.assignedElements
-translation_of: Web/API/HTMLSlotElement/assignedElements
 ---
 {{APIRef("Shadow DOM API")}}
 

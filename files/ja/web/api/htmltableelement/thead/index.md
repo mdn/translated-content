@@ -1,14 +1,6 @@
 ---
 title: HTMLTableElement.tHead
 slug: Web/API/HTMLTableElement/tHead
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLTableElement.tHead
-translation_of: Web/API/HTMLTableElement/tHead
 ---
 {{APIRef("HTML DOM")}}
 

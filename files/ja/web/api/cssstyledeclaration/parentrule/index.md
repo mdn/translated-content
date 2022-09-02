@@ -1,13 +1,6 @@
 ---
 title: CSSStyleDeclaration.parentRule
 slug: Web/API/CSSStyleDeclaration/parentRule
-tags:
-  - API
-  - CSSOM
-  - Property
-  - Reference
-translation_of: Web/API/CSSStyleDeclaration/parentRule
-browser-compat: api.CSSStyleDeclaration.parentRule
 ---
 {{ APIRef("CSSOM") }}
 

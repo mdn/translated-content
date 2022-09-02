@@ -1,12 +1,6 @@
 ---
 title: HTMLQuoteElement
 slug: Web/API/HTMLQuoteElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-translation_of: Web/API/HTMLQuoteElement
 ---
 {{APIRef("HTML DOM")}}
 

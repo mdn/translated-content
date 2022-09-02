@@ -1,16 +1,6 @@
 ---
 title: History.length
 slug: Web/API/History/length
-tags:
-  - API
-  - HTML DOM
-  - History
-  - 履歴 API
-  - プロパティ
-  - Read-only
-  - リファレンス
-browser-compat: api.History.length
-translation_of: Web/API/History/length
 ---
 {{APIRef("History API")}}
 

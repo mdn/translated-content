@@ -1,17 +1,6 @@
 ---
 title: HTMLMediaElement.ended
 slug: Web/API/HTMLMediaElement/ended
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Read-only
-  - Web
-  - ended
-browser-compat: api.HTMLMediaElement.ended
-translation_of: Web/API/HTMLMediaElement/ended
 ---
 {{APIRef("HTML DOM")}}
 

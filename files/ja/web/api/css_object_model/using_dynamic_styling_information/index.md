@@ -1,10 +1,6 @@
 ---
 title: 動的なスタイル情報の利用
 slug: Web/API/CSS_Object_Model/Using_dynamic_styling_information
-tags:
-  - Beginner
-  - CSSOM
-translation_of: Web/API/CSS_Object_Model/Using_dynamic_styling_information
 ---
 {{DefaultAPISidebar("CSSOM")}}
 

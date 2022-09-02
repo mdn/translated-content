@@ -1,12 +1,6 @@
 ---
 title: ブラウザー拡張機能
 slug: Mozilla/Add-ons/WebExtensions
-tags:
-  - Add-ons
-  - Extensions
-  - Landing
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions
 ---
 {{AddonSidebar}}
 

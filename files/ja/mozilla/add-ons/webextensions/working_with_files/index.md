@@ -1,10 +1,6 @@
 ---
 title: ファイルの操作
 slug: Mozilla/Add-ons/WebExtensions/Working_with_files
-tags:
-  - Guide
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Working_with_files
 ---
 {{AddonSidebar()}}
 
