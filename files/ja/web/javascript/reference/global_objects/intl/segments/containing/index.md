@@ -1,45 +1,40 @@
 ---
 title: Intl.Segments.prototype.containing()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segments/containing
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
-browser-compat: javascript.builtins.Intl.Segments.containing
+l10n:
+  sourceCommit: 46c0f5269f597ad055d0b6322f736f5c70996c4c
 ---
 {{JSRef}}
 
-The **`Intl.Segments.containing()`** method returns an object describing the segment in the string that includes the code unit at the specified index.
+**`Intl.Segments.containing()`** メソッドは、指定されたインデックスのコードユニットを含む文字列中のセグメントを記述したオブジェクトを返します。
 
 {{EmbedInteractiveExample("pages/js/intl-segments-prototype-containing.html")}}
 
-## Syntax
+## 構文
 
 ```js
 containing(codeUnitIndex)
 ```
 
-### Parameters
+### 引数
 
 - `codeUnitIndex` {{ optional_inline }}
-  - : A number specifying the index of the code unit in the original input string. If the value is omitted, it defaults to `0`.
+  - : 元の入力文字列におけるコードユニットのインデックスを指定する数値。省略した場合のデフォルトは `0` となります。
 
-### Return Value
+### 返値
 
-An object describing the segment of the original string with the following properties, or `undefined` if the supplied index value is out of bounds.
+元の文字列のセグメントを記述するオブジェクトで以下のプロパティを持ちます。与えられたインデックス値が範囲外の場合は `undefined` となります。
 
 - `segment`
-  - : A string containing the segment extracted from the original input string.
+  - : 元の入力文字列から抽出されたセグメントを含む文字列。
 - `index`
-  - : The code unit index in the original input string at which the segment begins.
+  - : セグメントを開始する元の入力文字列のコードユニットのインデックス。
 - `input`
-  - : The complete input string that was segmented.
+  - : セグメント化された完全な入力文字列。
 - `isWordLike`
-  - : A boolean value only if `granularity` is `"word"`; otherwise, `undefined`.  If `granularity` is `"word"`, then `isWordLike` is `true` when the segment is word-like (i.e., consists of letters/numbers/ideographs/etc.); otherwise, `false`.
+  - : `granularity` が `"word"` の場合のみブール値となり、それ以外は `undefined` です。`granularity` が `"word"` の場合、`isWordLike` は、セグメントが単語のようなもの（すなわち、文字／数字／英字／その他）である場合に `true`、それ以外の場合に `false` となります。
 
-## Examples
+## 例
 
 ```js
 // ┃0 1 2 3 4 5┃6┃7┃8┃9  ← code unit index
@@ -69,10 +64,10 @@ current = segments.containing(current.index + current.segment.length);
 // → undefined
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
