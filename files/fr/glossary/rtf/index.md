@@ -16,10 +16,5 @@ Trois développeurs de l'équipe Microsoft Word ont créé le format RTF dans le
 
 ## Voir aussi
 
-### Culture générale
-
 - [<i lang="en">Rich Text Format</i>](https://fr.wikipedia.org/wiki/Rich_Text_Format) sur Wikipédia
-
-### Référence technique
-
 - [spécification finale de Microsoft](http://www.microsoft.com/en-us/download/details.aspx?id=10725)

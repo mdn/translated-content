@@ -14,12 +14,7 @@ Les expressions régulières (ou expressions rationnelles) sont implémentées d
 
 ## Voir aussi
 
-### Connaissance générale
-
 - [Expressions régulières](https://fr.wikipedia.org/wiki/Expression_r%C3%A9guli%C3%A8re) sur Wikipédia
 - [Tutoriel interactif](http://regexone.com/)
 - [Visualiseur d'expressions régulières](http://regexper.com/)
-
-### Références techniques
-
 - [Ecrire des expressions régulières en JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_r%C3%A9guli%C3%A8res)

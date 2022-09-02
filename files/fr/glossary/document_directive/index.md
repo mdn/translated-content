@@ -21,8 +21,6 @@ Ces directives CSP sont des directives de document :
 
 ## Voir aussi
 
-### Informations Techniques
-
 - {{HTTPHeader("Politique de sécurité de contenu")}}
 - Autres types de directives :
 

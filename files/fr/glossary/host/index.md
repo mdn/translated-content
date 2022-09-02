@@ -13,6 +13,4 @@ Un hôte est un périphérique connecté à l'{{glossary("Internet")}} (ou à un
 
 ## Voir aussi
 
-### Culture générale
-
 - [Hôte](https://fr.wikipedia.org/wiki/H%C3%B4te_(informatique)) sur Wikipédia

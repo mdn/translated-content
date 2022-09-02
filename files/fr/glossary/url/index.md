@@ -15,14 +15,5 @@ Les URL peuvent également être utilisées pour le transfert de fichiers ({{Glo
 
 ## Voir aussi
 
-### Culture générale
-
 - [URL](https://fr.wikipedia.org/wiki/Uniform_Resource_Locator) sur Wikipédia
-
-### Voir aussi
-
 - [Comprendre les URL et leur structure](/fr/Learn/Understanding_URLs)
-
-### Spécification
-
-- La syntaxe des URL est définie dans l'[URL Living Standard](https://url.spec.whatwg.org/).

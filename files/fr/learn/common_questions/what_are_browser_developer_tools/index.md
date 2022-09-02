@@ -93,7 +93,7 @@ Vous aurez remarqué plusieurs onglets en haut du panneau pour le CSS&nbsp;:
 - Polices
   - : Dans Firefox, cet onglet affiche les polices appliquées à l'élément sélectionné.
 
-### Voir aussi
+### En savoir plus
 
 Pour en apprendre plus sur l'inspecteur présent dans les différents navigateurs, les ressources suivantes pourront vous être utiles&nbsp;:
 
@@ -149,7 +149,7 @@ La dernière section, sur les **portées**, montre les valeurs visibles aux diff
 
 ![Capture d'écran partielle qui montre le panneau Sources de l'onglet du débogueur des outils de développement. La pile d'exécution montre que la fonction est appelée à la ligne 83, qu'un point d'arrêt est présent à cette ligne et on peut voir la portée à cet instant.](watch_items.png)
 
-### Voir aussi
+### En savoir plus
 
 Pour plus d'informations sur le débogueur JavaScript dans les différents navigateurs&nbsp;:
 
@@ -204,7 +204,7 @@ Désormais, essayez de saisir ces versions incorrectes pour voir le résultat.
 
 Vous pourrez voir les erreurs que renvoie le navigateur. Il arrive que ces erreurs soient plutôt incompréhensibles, mais comprendre l'origine du problème en relisant le code devrait être jouable&nbsp;!
 
-### Voir aussi
+### En savoir plus
 
 Pour en apprendre plus sur la console JavaScript présente dans les différents navigateurs, les ressources listées ici devraient vous être utiles&nbsp;:
 

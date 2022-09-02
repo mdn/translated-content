@@ -12,7 +12,5 @@ On préfèrera utiliser des feuilles de style externes, car elles permettent de 
 
 ## Voir aussi
 
-### Connaissances générales
-
 - [Premiers pas avec CSS](/fr/docs/Learn/CSS/First_steps)
 - Les feuilles de style sur [Wikipédia](https://fr.wikipedia.org/wiki/Feuille_de_style)

@@ -71,7 +71,7 @@ font-variant-alternates: styleset(alt-g);
 
 et voir comment la lettre a retrouve sa forme normale et comment la lettre g est modifiée.
 
-#### Voir aussi sur les formes alternatives
+#### En savoir plus sur les formes alternatives
 
 - [Lien vers la spécification de la propriété `font-variant-alternates`](https://www.w3.org/TR/css-fonts-4/#propdef-font-variant-alternates)
 - {{cssxref("font-variante-alternates")}}
@@ -156,7 +156,7 @@ Selon la spécification, on peut fournir le code à quatre caractères de la car
 }
 ```
 
-#### Voir aussi sur les codes des caractéristiques `font-feature-settings`
+#### En savoir plus sur les codes des caractéristiques `font-feature-settings`
 
 - [Une démonstration des caractéristiques OpenType](https://sparanoid.com/lab/opentype-features/)
 - [La liste des caractéristiques OpenType sur Wikipédia](https://en.wikipedia.org/wiki/List_of_typographic_features)

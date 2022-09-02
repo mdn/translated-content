@@ -12,6 +12,4 @@ Dans un système d'exploitation, un dossier est un namespace. Chaque fichier ou 
 
 ## Voir aussi
 
-### **Connaissance générale**
-
 - [Espace de noms](https://fr.wikipedia.org/wiki/Espace_de_noms) sur Wikipédia
