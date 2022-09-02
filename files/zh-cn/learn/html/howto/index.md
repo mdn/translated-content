@@ -18,21 +18,21 @@ HTML 应用最基础的是文档结构。如果你是 HTML 新手那么你应该
 
 HTML 专门为文档提供语义信息，因此，HTML 能够解答关于如何在文档中最好地传递消息的许多问题。
 
-- [如何用 HTML 创建列表项](/zh-CN/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#列表)
-- [如何强调或凸显内容](/zh-CN/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Emphasis_and_importance)
-- [如何表明文本是重要的](/zh-CN/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#重点强调)
-- [如何用 HTML 展示计算机代码](/zh-CN/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#展示计算机代码)
+- [如何用 HTML 创建列表项](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#列表)
+- [如何强调或凸显内容](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Emphasis_and_importance)
+- [如何表明文本是重要的](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#重点强调)
+- [如何用 HTML 展示计算机代码](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#展示计算机代码)
 - [如何注释图片和图标](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#通过为图片搭配说明文字的方式来解说图片)
-- [如何注解缩略语并使其可理解](/zh-CN/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#缩略语)
-- [如何为网页添加引述和引用](/zh-CN/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#引用)
+- [如何注解缩略语并使其可理解](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#缩略语)
+- [如何为网页添加引述和引用](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#引用)
 - [如何用 HTML 定义术语](/zh-CN/docs/Learn/HTML/Howto/Define_terms_with_HTML)
 
 ### 超链接
 
 使用 HTML 的主要原因之一，就是可以使用{{Glossary("hyperlink", "超链接")}}来轻松导航，实现方式有以下几种：
 
-- [如何创建超链接](/zh-CN/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [如何创建导航菜单](/zh-CN/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#主动学习：创建一个导航菜单)
+- [如何创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+- [如何创建导航菜单](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#主动学习：创建一个导航菜单)
 
 ### 图像 & 多媒体
 
