@@ -16,7 +16,7 @@ slug: Learn/Forms
 
 ## 预备知识
 
-在开始这个模块之前，您至少应该熟悉[对 HTML 的介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)系列。此时此刻，您应该会发现[基本指南](#基本指南)很容易理解，并且能够使用我们的[原生表单控件](/zh-CN/docs/Learn/HTML/Basic_native_form_controls)指南。
+在开始这个模块之前，您至少应该熟悉[对 HTML 的介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)系列。此时此刻，您应该会发现[基本指南](#基本指南)很容易理解，并且能够使用我们的[原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)指南。
 
 然而，掌握表单需要的不仅仅是 HTML 知识——你还需要学习一些特定的技术来设置表单控件的样式，并且需要一些编码知识来处理诸如验证和创建自定义表单控件之类的事情。因此，在您查看下面列出的其它部分之前，我们建议你先离开，并学习一些 [CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript)。
 
