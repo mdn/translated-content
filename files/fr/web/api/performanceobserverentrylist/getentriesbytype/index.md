@@ -79,10 +79,8 @@ observe_frame.observe({entryTypes: ['frame']});
 
 ## Spécifications
 
-| Spécification                                                                                                                                                    | Statut                                                   | Commentaire                                             |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceobserverentrylist-getentriesbytype', 'getEntriesByType()')}} | {{Spec2('Performance Timeline Level 2')}} | Définition initiale de la méthode `getEntriesByType()`. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceObserverEntryList.getEntriesByType")}}
+{{Compat}}

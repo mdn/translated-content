@@ -1,15 +1,6 @@
 ---
 title: ShadowRoot.mode
 slug: Web/API/ShadowRoot/mode
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - ShadowRoot
-  - mode
-  - シャドウ DOM
-browser-compat: api.ShadowRoot.mode
-translation_of: Web/API/ShadowRoot/mode
 ---
 {{APIRef("Shadow DOM")}}
 

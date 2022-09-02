@@ -1,12 +1,6 @@
 ---
 title: Flex コンテナ
 slug: Glossary/Flex_Container
-tags:
-  - CSS
-  - Glossary
-  - flex container
-  - flexbox
-translation_of: Glossary/Flex_Container
 ---
 {{glossary("Flexbox")}} レイアウトは親要素の `display` プロパティの値に `flex` または `inline-flex` を指定することで定義されます。この親要素が**「flex コンテナ」**となり、その子要素が 「flex アイテム」({{glossary("flex item")}}) となります。
 

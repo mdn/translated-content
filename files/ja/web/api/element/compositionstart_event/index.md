@@ -1,15 +1,6 @@
 ---
 title: 'Element: compositionstart イベント'
 slug: Web/API/Element/compositionstart_event
-tags:
-  - Element
-  - Event
-  - Input method
-  - Reference
-  - compositionstart
-  - イベント
-  - 入力メソッド
-translation_of: Web/API/Element/compositionstart_event
 ---
 {{APIRef}}
 

@@ -74,15 +74,13 @@ oscillator.numberOfOutputs;
 oscillator.channelCount;
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#the-audionode-interface', 'AudioNode')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioNode")}}
+{{Compat}}
 
 ## Voir aussi
 

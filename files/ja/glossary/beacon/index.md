@@ -1,7 +1,6 @@
 ---
 title: beacon (ビーコン)
 slug: Glossary/beacon
-translation_of: Glossary/beacon
 ---
 Web ビーコンは、マークアップに埋め込まれた 1 ピクセル gif などの小さなオブジェクトで、Web サーバーまたはサードパーティのサーバーに情報を戻すために使用されます。
 

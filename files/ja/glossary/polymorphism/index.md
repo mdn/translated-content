@@ -1,10 +1,6 @@
 ---
 title: Polymorphism (多態性)
 slug: Glossary/Polymorphism
-tags:
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/Polymorphism
 ---
 Polymorphism (多態性)とは複数のデータ型を 1 つのインターフェイスにまとめた表現です。
 

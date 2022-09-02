@@ -1,7 +1,6 @@
 ---
 title: DirectoryEntrySync
 slug: Web/API/DirectoryEntrySync
-translation_of: Web/API/DirectoryEntrySync
 ---
 {{APIRef("File System API")}}{{Non-standard_header}}
 

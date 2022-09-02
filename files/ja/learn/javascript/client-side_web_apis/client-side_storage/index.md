@@ -1,23 +1,6 @@
 ---
 title: クライアント側ストレージ
 slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
-tags:
-  - API
-  - Article
-  - Beginner
-  - CodingScripting
-  - Guide
-  - IndexedDB
-  - JavaScript
-  - Learn
-  - Storage
-  - Web Storage
-  - ウェブストレージ
-  - ガイド
-  - 保存
-  - 初心者
-  - 学習
-translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 ---
 {{LearnSidebar}}
 

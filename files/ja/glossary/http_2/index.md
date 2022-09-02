@@ -1,15 +1,6 @@
 ---
 title: HTTP/2
 slug: Glossary/HTTP_2
-tags:
-  - Glossary
-  - HTTP
-  - Infrastructure
-  - Reference
-  - Web Performance
-  - l10n:priority
-  - 用語集
-translation_of: Glossary/HTTP_2
 ---
 **HTTP/2** は [HTTP ネットワークプロトコル](/ja/docs/Web/HTTP/Basics_of_HTTP)の改訂版です。 HTTP/2 の主な目的は、リクエストとレスポンス全体を全二重化できるようにすることで、{{glossary("latency", "レイテンシー")}}を縮小し、 HTTP ヘッダーフィールドを効率的に圧縮することでプロトコルのオーバーヘッドを最小化し、リクエストの優先度やサーバーからのプッシュ通知に対応することです。
 

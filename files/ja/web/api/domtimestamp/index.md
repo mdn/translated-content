@@ -1,12 +1,6 @@
 ---
 title: DOMTimeStamp
 slug: Web/API/DOMTimeStamp
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-translation_of: Web/API/DOMTimeStamp
 ---
 {{APIRef("DOM")}}
 

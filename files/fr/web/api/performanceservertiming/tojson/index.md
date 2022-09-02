@@ -32,10 +32,8 @@ Aucun.
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                               | Commentaire          |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Server Timing','#dom-performanceservertiming-tojson','toJSON')}} | {{Spec2('Server Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceServerTiming.toJSON")}}
+{{Compat}}

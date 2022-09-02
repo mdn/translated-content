@@ -1,13 +1,6 @@
 ---
 title: FileReader.readAsText()
 slug: Web/API/FileReader/readAsText
-tags:
-  - API
-  - File API
-  - Reference
-  - ファイル
-  - メソッド
-translation_of: Web/API/FileReader/readAsText
 ---
 {{APIRef("File API")}}
 

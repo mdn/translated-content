@@ -1,19 +1,6 @@
 ---
 title: バカ話ジェネレーター
 slug: Learn/JavaScript/First_steps/Silly_story_generator
-tags:
-  - Arrays
-  - Assessment
-  - CodingScripting
-  - JavaScript
-  - Numbers
-  - Operators
-  - Variables
-  - l10n:priority
-  - strings
-  - 初心者
-  - 学習
-translation_of: Learn/JavaScript/First_steps/Silly_story_generator
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 

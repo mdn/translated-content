@@ -7,7 +7,7 @@ Le détournement de clic (ou <i lang="en">clickjacking</i>) est une attaque bas�
 
 Le détournement de clic peut être évité en implémentant une [politique de sécurité du contenu avec la directive `frame-ancestors`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) et en implémentant des [attributs `Set-Cookie`](/fr/docs/Web/HTTP/Headers/Set-Cookie#attributs).
 
-## En apprendre plus
+## Voir aussi
 
 - [Sécurité sur le Web&nbsp;: protection contre le détournement de clic](/fr/docs/Web/Security#protection_contre_le_détournement_de_clic)
 - [Le détournement de clic](https://fr.wikipedia.org/wiki/D%C3%A9tournement_de_clic) sur Wikipédia

@@ -24,11 +24,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 
 - `callback`
 
-  - : 새로운 배열의 엘리먼트를 생성하는 함수. 3개의 아규먼트를 갖습니다.\*
+  - : 새로운 배열의 엘리먼트를 생성하는 함수. 3개의 아규먼트를 갖습니다.
 
-        `currentValue`
-        *   : 배열에서 처리되는 현재 엘리먼트.
-
+    - `currentValue`
+      - : 배열에서 처리되는 현재 엘리먼트.
     - `index`{{optional_inline}}
       - : 배열에서 처리되고 있는 현재 엘리먼트의 인덱스.
     - `array`{{optional_inline}}

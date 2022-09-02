@@ -1,16 +1,6 @@
 ---
 title: SyncEvent.tag
 slug: Web/API/SyncEvent/tag
-tags:
-  - API
-  - Background Sync
-  - Experimental
-  - Property
-  - Reference
-  - ServiceWorker
-  - SyncEvent
-  - tag
-translation_of: Web/API/SyncEvent/tag
 ---
 {{SeeCompatTable}}{{APIRef("")}}
 

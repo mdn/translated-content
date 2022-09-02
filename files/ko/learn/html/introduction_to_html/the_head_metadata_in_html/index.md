@@ -65,20 +65,20 @@ HTML {{htmlelement("head")}} 요소의 내용입니다. — 페이지를 열 때
 
 ### 능동적 학습: 간단한 예제 살펴보기
 
-1.  능동적인 학습을 시작하기 위해서, GitHub repo에가서 [title-example.html 페이지](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html)의 복사본을 다운로드 하십시오. 다음 중 하나를 하면 됩니다:
+1. 능동적인 학습을 시작하기 위해서, GitHub repo에가서 [title-example.html 페이지](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html)의 복사본을 다운로드 하십시오. 다음 중 하나를 하면 됩니다:
 
-    1.  복사 붙여넣기를 새로운 텍스트 편집기에서 실행하고 당신이 알 만한 경로에 저장하십시오.
-    2.  페이지에서 "Raw"버튼을 누르면, 새창에 Raw code가 나타납니다. 그런 다음 브라우저 메뉴에서 _File > Save Page As..._ 로 원하는 곳에 저장하십시오
+    1. 복사 붙여넣기를 새로운 텍스트 편집기에서 실행하고 당신이 알 만한 경로에 저장하십시오.
+    2. 페이지에서 "Raw"버튼을 누르면, 새창에 Raw code가 나타납니다. 그런 다음 브라우저 메뉴에서 _File > Save Page As..._ 로 원하는 곳에 저장하십시오
 
-2.  이제 당신의 브라우저에서 받은 파일을 여십시오.아래와 같이 보일 것입니다:
+2. 이제 당신의 브라우저에서 받은 파일을 여십시오.아래와 같이 보일 것입니다:
 
-    ![A simple web page with the title set to <title> element, and the <h1> set to <h1> element.](https://mdn.mozillademos.org/files/12323/title-example.png)\<h1>컨텐츠가 보이는 곳이 어디인지 이제 명백할 것입니다. 그리고 `<title>` 컨텐츠도 어디에 있는지 알 수 있습니다!
+    ![A simple web page with the title set to \<title> element, and the \<h1> set to \<h1> element.](https://mdn.mozillademos.org/files/12323/title-example.png)\<h1>컨텐츠가 보이는 곳이 어디인지 이제 명백할 것입니다. 그리고 `<title>` 컨텐츠도 어디에 있는지 알 수 있습니다!
 
-3.  텍스트 편집기에서도 이것을 열 수 있습니다. 이 요소들을 변경해보고, 페이지 새로고침하면서 즐겨보십시오.
+3. 텍스트 편집기에서도 이것을 열 수 있습니다. 이 요소들을 변경해보고, 페이지 새로고침하면서 즐겨보십시오.
 
 `<title>` 요소는 다른 방식으로 사용될 수도 있는데, 예를 들면 브라우저에서 사이트를 북마크할 때, `<title>`의 내용물을 추천하는 북마크 이름으로 사용하기도 합니다.
 
-![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the <title> element ](https://mdn.mozillademos.org/files/12337/bookmark-example.png)
+![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the \<title> element ](https://mdn.mozillademos.org/files/12337/bookmark-example.png)
 
 `<title>`은 아래에서 보는것 처럼 검색결과로 사용되기도 합니다.
 
@@ -134,14 +134,14 @@ started with developing web sites and applications.">
 
 이 설명은 검색엔진 결과 페이지에서도 사용된다. 한번 알아보자.
 
-1.  다음 링크로 간다. [front page of The Mozilla Developer Network](https://developer.mozilla.org/en-US/).
-2.  페이지의 소스를 본다. (Right/
+1. 다음 링크로 간다. [front page of The Mozilla Developer Network](https://developer.mozilla.org/en-US/).
+2. 페이지의 소스를 본다. (Right/
 
     <kbd>Ctrl</kbd>
 
     \+ click on the page, choose _View Page Source_ from the context menu.)
 
-3.  메타 태그를 찾아본다. 아마 아래와 같은 형태로 생겼을 것이다.
+3. 메타 태그를 찾아본다. 아마 아래와 같은 형태로 생겼을 것이다.
 
     ```html
     <meta name="description" content="The Mozilla Developer Network (MDN) provides
@@ -149,7 +149,7 @@ started with developing web sites and applications.">
     Web sites and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
     ```
 
-4.  지금 당신이 애용하는 검색엔진으로 "Mozilla Developer Network"를 찾아보라(우리는 YAHOO를 사용한다). 검색 결과를 보면, `<meta>` 및 `<title>` 요소의 컨텐츠 설명이 어떤 역할을 했는지 알 수 있을 것이다.
+4. 지금 당신이 애용하는 검색엔진으로 "Mozilla Developer Network"를 찾아보라(우리는 YAHOO를 사용한다). 검색 결과를 보면, `<meta>` 및 `<title>` 요소의 컨텐츠 설명이 어떤 역할을 했는지 알 수 있을 것이다.
 
     ![A Yahoo search result for "Mozilla Developer Network"](https://mdn.mozillademos.org/files/12347/search-result.png)
 
@@ -187,8 +187,8 @@ The humble favicon, which has been around for many years, was the first icon of 
 
 favicon은 다음과 같이 너의 사이트에 추가할 수 있다:
 
-1.  당신의 사이트의 인덱스 페이지와 같은 디렉토리에 `.ico` 포멧의 파일을 저장하라 (most browsers will support favicons in more common formats like `.gif` or `.png`, but using the ICO format will ensure it works as far back as Internet Explorer 6.)
-2.  `다음 줄을 HTML <head>에 추가하여 favicon을 참조하라`:
+1. 당신의 사이트의 인덱스 페이지와 같은 디렉토리에 `.ico` 포멧의 파일을 저장하라 (most browsers will support favicons in more common formats like `.gif` or `.png`, but using the ICO format will ensure it works as far back as Internet Explorer 6.)
+2. `다음 줄을 HTML <head>에 추가하여 favicon을 참조하라`:
 
     ```html
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -237,9 +237,9 @@ favicon은 다음과 같이 너의 사이트에 추가할 수 있다:
 
 ### Active learning: applying CSS and JavaScript to a page
 
-1.  이 실습을 시작하려면, 같은 로컬 디렉토리 안에 [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/script.js) 그리고 [style.css](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/style.css) 파일을 미리 만들어 놓아야 한다. 올바른 이름과 파일 확장자로 저장되어 있는지 확인하는 것도 필수!
-2.  애용하는 브라우져에서 HTML 파일을 열고, 텍스트 에디터도 실행한다.
-3.  위에서 나온 설명대로 CSS와 JavaScript가 HTML에 적용되도록 HTML에 {{htmlelement("link")}} 및 {{htmlelement("script")}} 를 추가한다.
+1. 이 실습을 시작하려면, 같은 로컬 디렉토리 안에 [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/script.js) 그리고 [style.css](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/style.css) 파일을 미리 만들어 놓아야 한다. 올바른 이름과 파일 확장자로 저장되어 있는지 확인하는 것도 필수!
+2. 애용하는 브라우져에서 HTML 파일을 열고, 텍스트 에디터도 실행한다.
+3. 위에서 나온 설명대로 CSS와 JavaScript가 HTML에 적용되도록 HTML에 {{htmlelement("link")}} 및 {{htmlelement("script")}} 를 추가한다.
 
 HTML을 저장하고 브라우저를 새로 고치면 올바르게 변경된 것이다:
 

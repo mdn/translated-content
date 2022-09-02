@@ -1,7 +1,6 @@
 ---
 title: UX
 slug: Glossary/UX
-translation_of: Glossary/UX
 ---
 **UX** とは、User eXperience (ユーザーエクスペリエンス、ユーザー体験) の頭文字語です。UX はユーザーとシステムとの関係を考える研究で、システムがユーザーから見て使いやすいものにすることを目的としています。
 

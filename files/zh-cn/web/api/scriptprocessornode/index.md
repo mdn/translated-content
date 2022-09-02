@@ -53,11 +53,11 @@ _从上一级继承属性，{{domxref("AudioNode")}}。_
 
 ## 方法
 
-_No specific methods; inherits methods from its parent,_ _{{domxref("AudioNode")}}_.
+_No specific methods; inherits methods from its parent, {{domxref("AudioNode")}}_.
 
 ## 示例
 
-{{page("/en-US/docs/Web/API/AudioContext.createScriptProcessor","Example")}}
+参见 [`BaseAudioContext.createScriptProcessor()`](/zh-CN/docs/Web/API/BaseAudioContext/createScriptProcessor#示例) 以获取示例代码。
 
 ## 规范
 
@@ -69,6 +69,6 @@ _No specific methods; inherits methods from its parent,_ _{{domxref("AudioNode")
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [使用 Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

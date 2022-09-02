@@ -1,27 +1,6 @@
 ---
 title: XRReferenceSpace.getOffsetReferenceSpace()
 slug: Web/API/XRReferenceSpace/getOffsetReferenceSpace
-tags:
-  - API
-  - AR
-  - Mixed
-  - Orientation
-  - Position
-  - Reality
-  - Reference
-  - Rotate
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRReferenceSpace
-  - augmented
-  - getOffsetReferenceSpace
-  - move
-  - movement
-translation_of: Web/API/XRReferenceSpace/getOffsetReferenceSpace
 ---
 {{APIRef("WebXR Device API")}}{{secureContext_header}}
 

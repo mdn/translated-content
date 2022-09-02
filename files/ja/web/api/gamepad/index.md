@@ -1,13 +1,6 @@
 ---
 title: Gamepad
 slug: Web/API/Gamepad
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - Interface
-  - Reference
-translation_of: Web/API/Gamepad
 ---
 {{APIRef("Gamepad API")}}
 

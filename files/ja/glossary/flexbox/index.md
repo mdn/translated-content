@@ -1,11 +1,6 @@
 ---
 title: Flexbox (フレックスボックス)
 slug: Glossary/Flexbox
-tags:
-  - CSS
-  - Glossary
-  - flexbox
-translation_of: Glossary/Flexbox
 ---
 Flexbox は、アイテムを列方向や行方向など一次元に並べて表示するためのレイアウトモデルである [CSS Flexible Box Layout Module](https://www.w3.org/TR/css-flexbox-1/) に対する一般的な通称です。
 

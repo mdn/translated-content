@@ -62,13 +62,11 @@ window.addEventListener("beforeunload", function (e) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                             | Commentaire         |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("HTML WHATWG", "browsing-the-web.html#the-beforeunloadevent-interface", "BeforeUnloadEvent")}} | {{Spec2("HTML WHATWG")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.BeforeUnloadEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,9 +1,6 @@
 ---
 title: React ToDoリストをはじめる
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning
-translation_of: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning
 ---
 {{LearnSidebar}}
 

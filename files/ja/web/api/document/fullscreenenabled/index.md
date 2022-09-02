@@ -1,18 +1,6 @@
 ---
 title: Document.fullscreenEnabled
 slug: Web/API/Document/fullscreenEnabled
-tags:
-  - API
-  - Document
-  - Fullscreen API
-  - Property
-  - Read-only
-  - Reference
-  - fullscreenEnabled
-  - プロパティ
-  - 全画面
-  - 画面
-translation_of: Web/API/Document/fullscreenEnabled
 ---
 {{APIRef("Fullscreen API")}}
 

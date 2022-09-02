@@ -1,12 +1,6 @@
 ---
 title: Block cipher mode of operation (暗号利用モード)
 slug: Glossary/Block_cipher_mode_of_operation
-tags:
-  - Block cipher mode of operation
-  - Cryptography
-  - Glossary
-  - Security
-translation_of: Glossary/Block_cipher_mode_of_operation
 ---
 暗号利用モード (通常は単に「モード」と呼ばれます) は、ブロックサイズよりも長いメッセージを暗号化または復号化するためにブロック暗号を使用する方法を指定します。
 

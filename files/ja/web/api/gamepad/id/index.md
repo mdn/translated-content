@@ -1,16 +1,6 @@
 ---
 title: Gamepad.id
 slug: Web/API/Gamepad/id
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Référence(2)
-translation_of: Web/API/Gamepad/id
 ---
 {{APIRef("Gamepad API")}}
 

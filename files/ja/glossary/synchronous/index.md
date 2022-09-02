@@ -1,11 +1,6 @@
 ---
 title: Synchronous (同期通信方式)
 slug: Glossary/Synchronous
-tags:
-  - Glossary
-  - Web
-  - WebMechanics
-translation_of: Glossary/Synchronous
 ---
 同期 (*Synchronous*) とは、各当事者がメッセージを瞬時に（または可能な限り直ちに）受信（また必要な場合には処理および返信）するリアルタイムのコミュニケーションのことを指します。
 

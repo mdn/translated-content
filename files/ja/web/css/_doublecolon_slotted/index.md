@@ -24,7 +24,7 @@ translation_of: Web/CSS/::slotted
   font-weight: bold;
 }
 
-/* スロット内に配置された &lt;span&gt; 要素を選択 */
+/* スロット内に配置された <span> 要素を選択 */
 ::slotted(span) {
   font-weight: bold;
 }

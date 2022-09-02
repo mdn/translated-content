@@ -56,13 +56,11 @@ countRequest.onsuccess = function() {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-count-IDBRequest-any-key', 'count()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.count")}}
+{{Compat}}
 
 ## Voir aussi
 

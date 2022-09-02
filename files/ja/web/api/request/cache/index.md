@@ -1,15 +1,6 @@
 ---
 title: Request.cache
 slug: Web/API/Request/cache
-tags:
-  - API
-  - Cache
-  - Experimental
-  - Fetch
-  - Property
-  - Reference
-  - requesut
-translation_of: Web/API/Request/cache
 ---
 {{APIRef("Fetch")}}
 

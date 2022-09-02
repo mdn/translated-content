@@ -1,12 +1,6 @@
 ---
 title: PerformanceResourceTiming.connectStart
 slug: Web/API/PerformanceResourceTiming/connectStart
-tags:
-  - API
-  - Web パフォーマンス
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/PerformanceResourceTiming/connectStart
 ---
 {{APIRef("Resource Timing API")}}
 

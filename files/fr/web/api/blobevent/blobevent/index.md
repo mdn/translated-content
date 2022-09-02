@@ -30,13 +30,11 @@ _Le constructeur `BlobEvent()`_ _hérite des arguments de {{domxref("Event.Event
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('MediaStream Recording', '#blob-event', 'BlobEvent')}} | {{Spec2('MediaStream Recording')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.BlobEvent.BlobEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

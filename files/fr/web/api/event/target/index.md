@@ -46,27 +46,11 @@ ul.addEventListener('click', hide, false);
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName("DOM WHATWG", "#dom-event-target", "Event.target")}}     | {{Spec2("DOM WHATWG")}} |                      |
-| {{SpecName("DOM4", "#dom-event-target", "Event.target")}}             | {{Spec2("DOM4")}}         |                      |
-| {{SpecName("DOM2 Events", "#Events-Event-target", "Event.target")}} | {{Spec2("DOM2 Events")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.target")}}
-
-## Notes concernant la compatibilité
-
-Sur IE6-8, le modèle d'événement est différent. Les écouteurs sont attachés avec la méthode non standard `{{domxref('EventTarget.attachEvent')}}` . Dans ce modèle, l'objet événement a une propriété  `{{domxref('Event.srcElement')}}`, à la place de la propriété `target`, avec la même sémantique que `event.target`.
-
-```js
-function hide(e) {
-  // Support IE6-8
-  var target = e.target || e.srcElement;
-  target.style.visibility = 'hidden';
-}
-```
+{{Compat}}
 
 ## Voir aussi
 

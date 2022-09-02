@@ -15,7 +15,7 @@ Un proxy peut être sur l'ordinateur local de l'utilisateur, ou n'importe où en
 - Un **proxy direct** qui gère les demandes depuis et vers n'importe où sur Internet.
 - Un **proxy inverse** prenant des requêtes d'Internet et les transmettant aux serveurs d'un réseau interne.
 
-## En apprendre plus
+## Voir aussi
 
 - [Proxy servers and tunneling](/fr/docs/Web/HTTP/Proxy_servers_and_tunneling)
 - [Proxy](https://fr.wikipedia.org/wiki/Proxy) sur Wikipédia

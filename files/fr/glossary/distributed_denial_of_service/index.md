@@ -28,7 +28,7 @@ L'équipe de préparation aux urgences informatiques des États-Unis (US-CERT) d
 - Déconnexion d'une connexion Internet sans fil ou filaire
 - Refus à long terme de l'accès au web ou à des services internet.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

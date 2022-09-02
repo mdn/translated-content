@@ -1,18 +1,6 @@
 ---
 title: NavigatorStorage
 slug: orphaned/Web/API/NavigatorStorage
-tags:
-  - API
-  - Interface
-  - Mixin
-  - Navigator
-  - NavigatorStorage
-  - Reference
-  - Secure context
-  - Storage
-  - Storage Standard
-  - WorkerNavigator
-translation_of: Web/API/NavigatorStorage
 original_slug: Web/API/NavigatorStorage
 ---
 {{securecontext_header}}{{APIRef("Storage")}}

@@ -1,17 +1,6 @@
 ---
 title: Express/Node のイントロダクション
 slug: Learn/Server-side/Express_Nodejs/Introduction
-tags:
-  - Beginner
-  - CodingScripting
-  - Express
-  - Learn
-  - Node
-  - nodejs
-  - server-side
-  - サーバーサイド
-  - 初心者
-translation_of: Learn/Server-side/Express_Nodejs/Introduction
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
 

@@ -1,13 +1,6 @@
 ---
 title: StorageManager.persist()
 slug: Web/API/StorageManager/persist
-tags:
-  - Method
-  - Reference
-  - Secure context
-  - Storage API
-  - persist()
-translation_of: Web/API/StorageManager/persist
 ---
 {{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}
 

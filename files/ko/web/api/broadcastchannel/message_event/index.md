@@ -44,6 +44,6 @@ original_slug: Web/Events/message
 
 ## 보기
 
-- [WebRTC](/ko/docs/Web/Guide/API/WebRTC "/en-US/docs/CSS/Using_CSS_animations")
+- [WebRTC](/ko/docs/Web/Guide/API/WebRTC)
 - BroadcastChannel API
 - WebSockets

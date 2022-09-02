@@ -1,17 +1,6 @@
 ---
 title: User agent (ユーザーエージェント)
 slug: Glossary/User_agent
-tags:
-  - Browser
-  - Glossary
-  - UA
-  - User-agent
-  - Web Browser
-  - WebMechanics
-  - agent
-  - user agent
-  - userAgent
-translation_of: Glossary/User_agent
 ---
 ユーザーエージェントは個人を表すコンピューターのプログラムで、例えば{{Glossary("World Wide Web", "ウェブ")}}における{{Glossary("Browser","ブラウザー")}}に当たるものです。
 

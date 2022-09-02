@@ -1,18 +1,6 @@
 ---
 title: 古いブラウザーのサポート
 slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
-tags:
-  - Beginner
-  - CSS
-  - Guide
-  - Layout
-  - Learn
-  - feature queries
-  - flexbox
-  - float
-  - grid
-  - legacy
-translation_of: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 ---
 {{LearnSidebar}}
 

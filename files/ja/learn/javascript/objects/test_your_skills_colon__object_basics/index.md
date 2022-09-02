@@ -1,7 +1,6 @@
 ---
 title: 'スキルテスト: オブジェクトの基本'
 slug: Learn/JavaScript/Objects/Test_your_skills:_Object_basics
-translation_of: Learn/JavaScript/Objects/Test_your_skills:_Object_basics
 ---
 {{learnsidebar}}
 

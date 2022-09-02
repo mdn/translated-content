@@ -42,13 +42,11 @@ var myDOMPoint = new DOMPoint(0.4, 0.5, -0.5, 1);
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                                       | Commentaire                                        |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------------------------------------- |
-| {{SpecName('Geometry Interfaces', '#dom-dompoint-dompointx-y-z-w', 'DOMPoint()')}} | {{Spec2('Geometry Interfaces')}} | La dernière version de la spécification est un ED. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMPoint.DOMPoint")}}
+{{Compat}}
 
 ## Voir aussi
 

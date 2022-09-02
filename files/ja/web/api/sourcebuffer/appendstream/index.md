@@ -1,18 +1,6 @@
 ---
 title: SourceBuffer.appendStream()
 slug: Web/API/SourceBuffer/appendStream
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - Method
-  - Reference
-  - SourceBuffer
-  - Video
-  - appendstream
-translation_of: Web/API/SourceBuffer/appendStream
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 

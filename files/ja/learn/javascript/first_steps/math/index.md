@@ -1,21 +1,6 @@
 ---
 title: JavaScriptでの基本演算 — 数値と演算子
 slug: Learn/JavaScript/First_steps/Math
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Learn
-  - Math
-  - Operators
-  - augmented
-  - increment
-  - l10n:priority
-  - maths
-  - modulo
-translation_of: Learn/JavaScript/First_steps/Math
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 

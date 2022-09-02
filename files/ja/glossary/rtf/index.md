@@ -1,13 +1,6 @@
 ---
 title: RTF
 slug: Glossary/RTF
-tags:
-  - Composing
-  - Format
-  - Glossary
-  - RTF
-  - Ricth Text Format
-translation_of: Glossary/RTF
 ---
 RTF (リッチテキストフォーマット) は書式設定 (例：太字、イタリック) をサポートしたプレーンテキストベースのファイルフォーマットです。
 

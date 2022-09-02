@@ -1,15 +1,6 @@
 ---
 title: Window.ondeviceproximity
 slug: orphaned/Web/API/Window/ondeviceproximity
-tags:
-  - API
-  - Event Handler
-  - Experimental
-  - Property
-  - Proximitiy Event
-  - Reference
-  - Window
-translation_of: Web/API/Window/ondeviceproximity
 original_slug: Web/API/Window/ondeviceproximity
 ---
 {{ ApiRef() }}

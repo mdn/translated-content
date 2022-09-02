@@ -34,7 +34,7 @@ translation_of: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
 - `display: table-cell`이 적용된 테이블 셀 또는 요소, 여기에는 `display: table-*` 속성 무리를 사용한 익명 테이블 셀도 포함됩니다.
 - `display: table-caption`이 적용된 테이블 캡션이나 요소
 - `visible`이외의 대열이탈 값을 갖는 블록 요소
-- `display: flow-root` 혹은 `display: flow-root list-item `가 적용된 요소
+- `display: flow-root` 혹은 `display: flow-root list-item` 가 적용된 요소
 - {{cssxref("contain", "contain: layout", "#layout")}}, `content`, 또는 `strict`가 적용된 요소
 - {{Glossary("flex item", "flex items")}}
 - 격자 항목

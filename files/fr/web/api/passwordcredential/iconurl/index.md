@@ -25,10 +25,8 @@ Une chaîne de caractères {{domxref("USVString")}} contenant une URL.
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management','#dom-credentialuserdata-iconurl','iconURL')}} | {{Spec2('Credential Management')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PasswordCredential.iconURL")}}
+{{Compat}}

@@ -1,12 +1,6 @@
 ---
 title: SLD
 slug: Glossary/SLD
-tags:
-  - Glossary
-  - Infrastructure
-  - インフラ
-  - 用語集
-translation_of: Glossary/SLD
 ---
 SLD (Second Level Domain; セカンドレベルドメイン) は {{Glossary("TLD")}} 直下の階層のドメイン名です。
 

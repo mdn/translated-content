@@ -1,14 +1,6 @@
 ---
 title: Slug (スラグ)
 slug: Glossary/Slug
-tags:
-  - Community
-  - Glossary
-  - Intermediate
-  - MDN
-  - URL
-  - Web
-translation_of: Glossary/Slug
 original_slug: Glossary/スラグ
 ---
 スラグは、通常は URL の最後にある Web アドレスの固有の識別部分です。

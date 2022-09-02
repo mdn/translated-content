@@ -19,7 +19,9 @@ document.designMode = "off";
 
 {{HTMLElement("iframe")}}의 document를 편집 가능하게 설정합니다.
 
-    iframeNode.contentDocument.designMode = "on";
+```js
+iframeNode.contentDocument.designMode = "on";
+```
 
 ## Specifications
 

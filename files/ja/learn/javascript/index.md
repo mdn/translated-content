@@ -1,16 +1,6 @@
 ---
 title: JavaScript
 slug: Learn/JavaScript
-tags:
-  - CodingScripting
-  - JavaScript
-  - JavaScripting beginner
-  - Landing
-  - Module
-  - Topic
-  - l10n:priority
-  - 初心者
-translation_of: Learn/JavaScript
 ---
 {{LearnSidebar}}
 

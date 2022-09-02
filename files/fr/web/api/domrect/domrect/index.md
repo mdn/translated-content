@@ -42,13 +42,11 @@ myDOMRect = new DOMRect(0,0,100,100);
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                                       | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Geometry Interfaces', '#dom-domrectreadonly-domrectreadonlyx-y-width-height', 'DOMRect()')}} | {{Spec2('Geometry Interfaces')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMRect.DOMRect")}}
+{{Compat}}
 
 ## Voir aussi
 

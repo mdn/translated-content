@@ -33,13 +33,11 @@ close();
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', '#dom-dedicatedworkerglobalscope-close', 'close()')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DedicatedWorkerGlobalScope.close")}}
+{{Compat}}
 
 ## Voir aussi
 

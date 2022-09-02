@@ -1,23 +1,6 @@
 ---
 title: XRRigidTransform()
 slug: Web/API/XRRigidTransform/XRRigidTransform
-tags:
-  - API
-  - AR
-  - Constructor
-  - Mixed Reality
-  - Orientation
-  - Position
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - XR
-  - XRRigidTransform
-  - augmented
-  - transform
-translation_of: Web/API/XRRigidTransform/XRRigidTransform
 ---
 {{APIRef("WebXR Device API")}}
 

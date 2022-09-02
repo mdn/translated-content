@@ -1,17 +1,6 @@
 ---
 title: XMLHttpRequest.open()
 slug: Web/API/XMLHttpRequest/open
-tags:
-  - API
-  - HTTP
-  - メソッド
-  - NeedsExample
-  - リファレンス
-  - XHR
-  - XMLHttpRequest
-  - open
-browser-compat: api.XMLHttpRequest.open
-translation_of: Web/API/XMLHttpRequest/open
 ---
 {{APIRef('XMLHttpRequest')}}
 

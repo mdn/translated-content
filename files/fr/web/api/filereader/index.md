@@ -86,13 +86,11 @@ Pour plus d'informations et d'exemples, consulter [utiliser des fichiers depuis 
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("File API", "#dfn-filereader", "FileReader")}} | {{Spec2("File API")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FileReader")}}
+{{Compat}}
 
 ## Voir aussi
 

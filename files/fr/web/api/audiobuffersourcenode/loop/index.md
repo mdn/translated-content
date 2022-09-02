@@ -71,15 +71,13 @@ play.onclick = function() {
 }
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                    | Statut                               | Commentaire |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-loop', 'loop')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioBufferSourceNode.loop")}}
+{{Compat}}
 
 ## Voir aussi
 

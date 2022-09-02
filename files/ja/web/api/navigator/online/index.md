@@ -1,16 +1,7 @@
 ---
 title: Navigator.onLine
 slug: Web/API/Navigator/onLine
-tags:
-  - API
-  - DOM Reference
-  - Navigator
-  - Online
-  - Property
-  - Reference
-translation_of: Web/API/Navigator/onLine
 original_slug: Web/API/NavigatorOnLine/onLine
-browser-compat: api.Navigator.onLine
 ---
 {{ApiRef("HTML DOM")}}
 

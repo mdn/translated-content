@@ -1,17 +1,6 @@
 ---
 title: Notification.silent
 slug: Web/API/Notification/silent
-page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - silent
-browser-compat: api.Notification.silent
-translation_of: Web/API/Notification/silent
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 

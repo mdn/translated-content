@@ -1,13 +1,6 @@
 ---
 title: MathML
 slug: Glossary/MathML
-tags:
-  - CodingScripting
-  - Glossary
-  - MathML
-  - Mathematical Markup Language
-  - XML
-translation_of: Glossary/MathML
 ---
 **MathML** ({{glossary("XML")}} のアプリケーション) は、ウェブページにおいて数式を表現するためのオープンスタンダードです。 1998 年に、 W3C は{{glossary("browser","ブラウザー")}}で数式を表現するための MathML の最初の勧告を行いました。 MathML には科学コンテンツや音声合成などの他のアプリケーションもあります。
 

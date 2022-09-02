@@ -1,15 +1,6 @@
 ---
 title: DOMException
 slug: Web/API/DOMException
-tags:
-  - API
-  - DOM
-  - DOMException
-  - Error
-  - Error code
-  - Exception
-  - Reference
-translation_of: Web/API/DOMException
 ---
 {{APIRef("DOM")}}
 

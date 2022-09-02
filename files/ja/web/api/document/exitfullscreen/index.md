@@ -1,21 +1,6 @@
 ---
 title: Document.exitFullscreen()
 slug: Web/API/Document/exitFullscreen
-tags:
-  - API
-  - DOM
-  - Document
-  - Full
-  - Full-screen
-  - Fullscreen API
-  - Method
-  - Reference
-  - exitFullscreen
-  - fullscreen
-  - screen
-  - メソッド
-  - 全画面
-translation_of: Web/API/Document/exitFullscreen
 ---
 {{ApiRef("Fullscreen API")}}
 

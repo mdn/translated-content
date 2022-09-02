@@ -1,12 +1,6 @@
 ---
 title: Event.stopPropagation()
 slug: Web/API/Event/stopPropagation
-page-type: web-api-instance-method
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Event.stopPropagation
-translation_of: Web/API/Event/stopPropagation
 ---
 {{APIRef("DOM")}}
 

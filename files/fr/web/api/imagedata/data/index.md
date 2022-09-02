@@ -20,17 +20,15 @@ var imagedata = new ImageData(100, 100);
 imagedata.data; // Uint8ClampedArray[40000]
 ```
 
-## Specification
+## Spécifications
 
-| Specification                                                                                                | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#dom-imagedata-data', 'ImageData.data')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.ImageData.data")}}
+{{Compat}}
 
-## See also
+## Voir aussi
 
 - {{domxref("ImageData.height")}}
 - {{domxref("ImageData.width")}}

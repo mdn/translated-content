@@ -1,20 +1,6 @@
 ---
 title: XMLHttpRequest.getAllResponseHeaders()
 slug: Web/API/XMLHttpRequest/getAllResponseHeaders
-tags:
-  - API
-  - ヘッダーの読み取り
-  - ヘッダーの取得
-  - HTTP
-  - HTTP ヘッダー
-  - メソッド
-  - リファレンス
-  - レスポンスヘッダー
-  - XHR
-  - XMLHttpRequest
-  - getAllResponseHeaders
-browser-compat: api.XMLHttpRequest.getAllResponseHeaders
-translation_of: Web/API/XMLHttpRequest/getAllResponseHeaders
 ---
 {{APIRef('XMLHttpRequest')}}
 

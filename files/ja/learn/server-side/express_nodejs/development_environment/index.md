@@ -1,21 +1,6 @@
 ---
 title: Node 開発環境の設定
 slug: Learn/Server-side/Express_Nodejs/development_environment
-tags:
-  - CodingScripting
-  - Express
-  - Intro
-  - Learn
-  - Node
-  - nodejs
-  - npm
-  - server-side
-  - イントロダクション
-  - サーバサイド
-  - 初心者
-  - 学習
-  - 開発環境
-translation_of: Learn/Server-side/Express_Nodejs/development_environment
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 

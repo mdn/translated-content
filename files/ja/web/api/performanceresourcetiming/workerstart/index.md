@@ -1,14 +1,6 @@
 ---
 title: PerformanceResourceTiming.workerStart
 slug: Web/API/PerformanceResourceTiming/workerStart
-tags:
-  - API
-  - PerformanceResourceTiming
-  - Web パフォーマンス
-  - workerStart
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/PerformanceResourceTiming/workerStart
 ---
 {{APIRef("Resource Timing API")}}
 

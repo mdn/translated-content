@@ -1,13 +1,6 @@
 ---
 title: アクセシビリティとは？
 slug: Learn/Common_questions/What_is_accessibility
-tags:
-  - Accessibility
-  - Beginner
-  - Intro
-  - NeedsActiveLearning
-  - Web
-translation_of: Learn/Common_questions/What_is_accessibility
 ---
 この記事はウェブアクセシビリティの背景にある基本的な概念を紹介します。
 

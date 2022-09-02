@@ -30,13 +30,11 @@ let time = performanceTiming.domInteractive;
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | Statut                                   | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-dominteractive', 'PerformanceTiming.domInteractive')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceTiming.domInteractive")}}
+{{Compat}}
 
 ## Voir aussi
 

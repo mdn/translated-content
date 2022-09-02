@@ -1,20 +1,6 @@
 ---
 title: JavaScriptへの最初のダイブ
 slug: Learn/JavaScript/First_steps/A_first_splash
-tags:
-  - CodingScripting
-  - Conditionals
-  - JavaScript
-  - Objects
-  - Operators
-  - events
-  - l10n:priority
-  - 初心者
-  - 変数
-  - 学習
-  - 記事
-  - 関数
-translation_of: Learn/JavaScript/First_steps/A_first_splash
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
 

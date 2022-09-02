@@ -27,16 +27,11 @@ _Aucune méthode spécifique. Toutes les méthodes sont héritées depuis le par
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires                                                 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "#htmldivelement", "HTMLDivElement")}}                             | {{Spec2('HTML WHATWG')}} |                                                              |
-| {{SpecName('HTML5 W3C', "grouping-content.html#the-div-element", "HTMLDivElement")}} | {{Spec2('HTML5 W3C')}}     | Aucune modification depuis {{SpecName("DOM2 HTML")}}. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-22445964', 'HTMLDivElement')}}                     | {{Spec2('DOM2 HTML')}}     | Aucune modification depuis {{SpecName("DOM1")}}.     |
-| {{SpecName('DOM1', 'level-one-html.html#ID-22445964', 'HTMLDivElement')}}                 | {{Spec2('DOM1')}}         | Définition initiale.                                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLDivElement")}}
+{{Compat}}
 
 ## Voir aussi
 

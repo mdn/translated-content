@@ -1,13 +1,6 @@
 ---
 title: Event.isTrusted
 slug: Web/API/Event/isTrusted
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.Event.isTrusted
-translation_of: Web/API/Event/isTrusted
 ---
 {{APIRef("DOM")}}
 

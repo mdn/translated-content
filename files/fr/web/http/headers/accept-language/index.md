@@ -78,7 +78,7 @@ Accept-Language: en-US,en;q=0.5
 
 {{Compat("http.headers.Accept-Language")}}
 
-## Voir également
+## Voir aussi
 
 - HTTP [négociation de contenu](/fr-FR/docs/Web/HTTP/Content_negotiation)
 - En-tête avec le résultat de la négociation de contenu : {{HTTPHeader("Content-Language")}}

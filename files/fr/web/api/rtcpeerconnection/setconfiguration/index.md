@@ -69,13 +69,11 @@ Pour commencer, on crée une {{domxref("RTCConfiguration")}}, `restartConfig`, e
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                | État                             | Commentaires        |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('WebRTC 1.0', '#widl-RTCPeerConnection-setConfiguration-void-RTCConfiguration-configuration', 'setConfiguration()')}} | {{Spec2('WebRTC 1.0')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.RTCPeerConnection.setConfiguration")}}
+{{Compat}}
 
 ## Voir aussi
 

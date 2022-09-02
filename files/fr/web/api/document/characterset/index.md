@@ -35,10 +35,8 @@ var string = document.characterSet
 
 ## Spécifications
 
-| Specification                                                                                    | Etat                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-document-characterset', 'characterSet')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.characterSet")}}
+{{Compat}}

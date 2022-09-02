@@ -1,7 +1,6 @@
 ---
 title: Resources
 slug: Web/API/XSLTProcessor/Resources
-translation_of: Web/API/XSLTProcessor/Resources
 ---
 ## 参考
 

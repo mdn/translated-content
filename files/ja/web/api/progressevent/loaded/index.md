@@ -1,12 +1,6 @@
 ---
 title: ProgressEvent.loaded
 slug: Web/API/ProgressEvent/loaded
-tags:
-  - API
-  - 進捗イベント
-  - ProgressEvent
-  - プロパティ
-browser-compat: api.ProgressEvent.loaded
 ---
 {{APIRef("DOM Events")}}
 

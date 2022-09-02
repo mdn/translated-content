@@ -1,12 +1,6 @@
 ---
 title: LTR (左書き)
 slug: Glossary/ltr
-tags:
-  - Composing
-  - Glossary
-  - Localization
-  - 用語集
-translation_of: Glossary/ltr
 ---
 **LTR** (**Left To Right**, 左書き) は、テキストが左から右に書かれることを示す{{Glossary("locale", "ロケール")}}プロパティです。例えば、 `en-US` ロケール (アメリカ英語) は左書きを指定します。西洋の言語の多くは、世界中の他の言語と同様に、 LTR で書かれます。
 

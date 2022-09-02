@@ -63,13 +63,11 @@ formData.get('name'); // "72"
 
 ## Spécifications
 
-| Spécification                                                                | Statut                               | Commentaire |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata-set','set()')}} | {{Spec2('XMLHttpRequest')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FormData.set")}}
+{{Compat}}
 
 ## Voir aussi
 

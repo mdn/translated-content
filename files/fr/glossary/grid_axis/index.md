@@ -22,7 +22,7 @@ L'axe de la ligne (ou en ligne) parcourt l'axe des blocs et représente la direc
 
 La direction physique de ces axes peut changer en fonction du [mode d'écriture](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_%C3%A9criture) du document.
 
-## En apprendre plus
+## Voir aussi
 
 ### En lire plus
 

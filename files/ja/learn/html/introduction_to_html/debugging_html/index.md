@@ -1,16 +1,6 @@
 ---
 title: HTML のデバッグ
 slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
-tags:
-  - CodingScripting
-  - HTML
-  - エラー
-  - ガイド
-  - デバッグ
-  - バリデーション
-  - バリデーター
-  - ビギナー
-translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
 

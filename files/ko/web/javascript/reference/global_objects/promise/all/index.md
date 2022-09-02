@@ -16,7 +16,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
 
 ## 구문
 
-    Promise.all(iterable);
+```js
+Promise.all(iterable);
+```
 
 ### 매개변수
 

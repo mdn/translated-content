@@ -163,7 +163,7 @@ My cat is very grumpy
 
 ### 嵌套元素
 
-你也可以把元素放到其它元素之中——这被称作嵌套。如果我们想要表明我们的小猫脾气很暴躁，可以将**“very”**嵌套在{{htmlelement("strong")}} 中，意味着这个单词被着重强调：
+你也可以把元素放到其它元素之中——这被称作嵌套。如果我们想要表明我们的小猫脾气很暴躁，可以将 **very** 嵌套在 {{htmlelement("strong")}} 中，意味着这个单词被着重强调：
 
 ```html
 <p>My cat is <strong>very</strong> grumpy.</p>
@@ -182,7 +182,7 @@ My cat is very grumpy
 在 HTML 中有两种你需要知道的重要元素类别，块级元素和内联元素。
 
 - 块级元素在页面中以块的形式展现 —— 相对于其前面的内容它会出现在新的一行，其后的内容也会被挤到下一行展现。块级元素通常用于展示页面上结构化的内容，例如段落、列表、导航菜单、页脚等等。一个以 block 形式展现的块级元素不会被嵌套进内联元素中，但可以嵌套在其它块级元素中。
-- 内联元素通常出现在块级元素中并环绕文档内容的一小部分，而不是一整个段落或者一组内容。内联元素不会导致文本换行：它通常出现在一堆文字之间例如超链接元素{{htmlelement("a")}}或者强调元素{{htmlelement("em")}}和 {{htmlelement("strong")}}。
+- 内联元素通常出现在块级元素中并环绕文档内容的一小部分，而不是一整个段落或者一组内容。内联元素不会导致文本换行：它通常出现在一堆文字之间，例如超链接元素 {{htmlelement("a")}} 或者强调元素：{{htmlelement("em")}} 和 {{htmlelement("strong")}}。
 
 看一看下面的例子：
 
@@ -192,13 +192,13 @@ My cat is very grumpy
 <p>第四</p><p>第五</p><p>第六</p>
 ```
 
-{{htmlelement("em")}} 是一个内联元素，所以就像你在下方可以看到的，第一行代码中的三个元素都没有间隙的展示在了同一行。而{{htmlelement("p")}}是一个块级元素，所以第二行代码中的每个元素分别都另起了新的一行展现，并且每个段落间都有一些间隔（这是因为默认的浏览器有着默认的展示{{htmlelement("p")}}元素的[CSS styling](/en-US/docs/Learn/CSS/Introduction_to_CSS)）。
+{{htmlelement("em")}} 是一个内联元素，所以就像你在下方可以看到的，第一行代码中的三个元素都没有间隙的展示在了同一行。而 {{htmlelement("p")}} 是一个块级元素，所以第二行代码中的每个元素分别都另起了新的一行展现，并且每个段落间都有一些间隔（这是因为默认的浏览器有着默认的展示 {{htmlelement("p")}} 元素的 [CSS 样式](/zh-CN/docs/Learn/CSS/First_steps)）。
 
 {{ EmbedLiveSample('块级元素和内联元素', 700, 200, "", "", "hide-codepen-jsfiddle") }}
 
 > **备注：** HTML5 重新定义了元素的类别：见 [元素内容分类](https://html.spec.whatwg.org/multipage/indices.html#element-content-categories)([译文](/zh-CN/docs/Web/Guide/HTML/Content_categories))。尽管这些新的定义更精确，但却比上述的“块级元素”和“内联元素”更难理解，因此在之后的讨论中仍使用旧的定义。
 
-> **备注：** 在这篇文章中提到的“块”和“内联”，不应该与 [the types of CSS boxes](/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes) 中的同名术语相混淆。尽管他们默认是相关的，但改变 CSS 显示类型并不会改变元素的分类，也不会影响它可以包含和被包含于哪些元素。防止这种混淆也是 HTML5 摒弃这些术语的原因之一。
+> **备注：** 在这篇文章中提到的“块”和“内联”，不应该与 [CSS 盒子的类型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#块级盒子（block_box）_和_内联盒子（inline_box）)中的同名术语相混淆。尽管它们默认是相关的，但改变 CSS 显示类型并不会改变元素的分类，也不会影响它可以包含和被包含于哪些元素。防止这种混淆也是 HTML5 摒弃这些术语的原因之一。
 
 > **备注：** 你可以查阅包含了块级元素和内联元素列表的参考页面—see [Block-level elements](/en-US/docs/Web/HTML/Block-level_elements) and [Inline elements](/en-US/docs/Web/HTML/Inline_elements).
 
@@ -226,9 +226,9 @@ My cat is very grumpy
 
 一个属性必须包含如下内容：
 
-1. 一个空格，在属性和元素名称之间。(如果已经有一个或多个属性，就与前一个属性之间有一个空格。)
+1. 一个空格，在属性和元素名称之间（如果已经有一个或多个属性，就与前一个属性之间有一个空格）。
 2. 属性名称，后面跟着一个等于号。
-3. 一个属性值，由一对引号“ ”引起来。
+3. 一个属性值，由一对引号("")引起来。
 
 ### 学习实践：为一个元素添加属性
 
@@ -352,7 +352,7 @@ My cat is very grumpy
 <input type="text" disabled="disabled">
 ```
 
-方便起见，我们完全可以将其写成以下形式 (我们还提供了一个非禁止输入的表单元素供您参考，以作为对比)：
+方便起见，我们完全可以将其写成以下形式（我们还提供了一个非禁止输入的表单元素供你参考，以作为对比）：
 
 ```html
 <!-- 使用 disabled 属性来防止终端用户输入文本到输入框中 -->
@@ -408,7 +408,7 @@ My cat is very grumpy
 <a href="http://www.example.com" title="你觉得'好玩吗'？">示例站点链接</a>
 ```
 
-如果你想将引号当作文本显示在 html 中，你就必须使用[实体引用](#实体引用：_在HTML中包含特殊字符)。
+如果你想将引号当作文本显示在 html 中，你就必须使用[实体引用](#实体引用：在_html_中包含特殊字符)。
 
 ## 剖析 HTML 文档
 
@@ -462,8 +462,8 @@ My cat is very grumpy
 - 就在{{htmlelement("body")}} 元素开始标签下方，为这个文档添加一个主标题。这个主标题应该被包含在`<h1>`开始标签和`</h1>`结束标签之间。
 - 编辑这个段落以包含一些你感兴趣的文本。
 - 把字词包含在开始标记`<strong>`和结束标记`</strong>`之间可以使他们以粗体显示，从而突出任何重要的字词。
-- 在你的文档中添加一个超文本链接，[如前所述](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started#%E5%AD%A6%E4%B9%A0%E5%AE%9E%E8%B7%B5%EF%BC%9A%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E6%B7%BB%E5%8A%A0%E5%B1%9E%E6%80%A7)。
-- 在段落下方向你的文档添加一张图片，[如前所述](/zh-CN/docs/learn/HTML/Introduction_to_HTML/Getting_started#%E7%A9%BA%E5%85%83%E7%B4%A0)。如果你尝试对不同的图片 (在你的本地电脑或是在 Web 的其他位置上) 添加链接，那你就更棒了。
+- 在你的文档中添加一个超文本链接，[如前所述](#学习实践：为一个元素添加属性)。
+- 在段落下方向你的文档添加一张图片，[如前所述](#空元素)。如果你尝试对不同的图片（在你的本地电脑或是在 Web 的其他位置上）添加链接，那你就更棒了。
 
 如果写错了，可随时按【重置】按钮重新开始，如果实在想不出来，可按【显示答案】按钮查看答案。
 
@@ -586,21 +586,21 @@ My cat is very grumpy
 
 无论你在 HTML 元素的内容中使用多少空格 (包括空白字符，包括换行)，当渲染这些代码的时候，HTML 解释器会将连续出现的空白字符减少为一个单独的空格符。
 
-那么为什么我们会在 HTML 元素的嵌套中使用那么多的空白呢？答案就是为了可读性 —— 如果你的代码被很好地进行格式化，那么就很容易理解你的代码是怎么回事，反之就只有聚做一团的混乱.。在我们的 HTML 代码中，我们让每一个嵌套的元素以两个空格缩进。你使用什么风格来格式化你的代码取决于你 (比如所对于每层缩进使用多少个空格)，但是你应该坚持使用某种风格。
+那么为什么我们会在 HTML 元素的嵌套中使用那么多的空白呢？答案就是为了可读性 —— 如果你的代码被很好地进行格式化，那么就很容易理解你的代码是怎么回事，反之就只有聚做一团的混乱。在我们的 HTML 代码中，我们让每一个嵌套的元素以两个空格缩进。你使用什么风格来格式化你的代码取决于你 (比如所对于每层缩进使用多少个空格)，但是你应该坚持使用某种风格。
 
 ## 实体引用：在 HTML 中包含特殊字符
 
-在 HTML 中，字符 `<`, `>`,`"`,`'` 和 `&` 是特殊字符。它们是 HTML 语法自身的一部分，那么你如何将这些字符包含进你的文本中呢，比如说如果你真的想要在文本中使用符号&或者小于号，而不想让它们被浏览器视为代码并被解释？
+在 HTML 中，字符 `<`、`>`、`"`、`'` 和 `&` 是特殊字符。它们是 HTML 语法自身的一部分，那么你如何将这些字符包含进你的文本中呢，比如说如果你真的想要在文本中使用符号&或者小于号，而不想让它们被浏览器视为代码并被解释？
 
 我们必须使用字符引用 —— 表示字符的特殊编码，它们可以在那些情况下使用。每个字符引用以符号&开始，以分号 (;) 结束。
 
 | 原义字符 | 等价字符引用 |
 | -------- | ------------ |
-| <        | &lt;         |
-| >        | &gt;         |
-| "        | &quot;       |
-| '        | &apos;       |
-| &        | &amp;        |
+| <        | `&lt;`       |
+| >        | `&gt;`       |
+| "        | `&quot;`     |
+| '        | `&apos;`     |
+| &        | `&amp;`      |
 
 在下面的例子中你可以看到两个段落，它们在谈论 web 技术：
 
@@ -634,7 +634,7 @@ My cat is very grumpy
 
 ## 总结
 
-你已经来到了这篇文章的结尾 —— 希望你享受你的基础的 HTML 学习的旅程。在这里你应该可以理解 HTML 语言的全貌，它在基础的级别是如何工作，而且可以使用一些元素和属性。在这个模块的后续文章中，我们会深入一些你已经见过的东西的细节，并且介绍一些新的 HTML 的特性。未完待续！
+你已经来到了这篇文章的结尾——希望你享受基础的 HTML 学习的旅程。在这里你应该可以理解 HTML 语言的全貌、它基本的工作原理。你应该还学会了一些元素和属性的使用。在这个模块的后续文章中，我们会深入一些你已经见过的东西的细节，并且介绍一些新的 HTML 的特性。未完待续！
 
 > **备注：** 现在，你将开始学习更多关于 HTML 的知识，你可能也想了解一些层叠样式列表（[CSS](/zh-CN/docs/Learn/CSS)）的基础知识。CSS 是一种用来设计网页样式的语言（比如，用它改变字体、颜色或页面布局等）。你很快就会发现，HTML 和 CSS 能很好地协调配合。
 
@@ -647,7 +647,7 @@ My cat is very grumpy
 - [HTML 文字处理初步](/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
 - [创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
 - [高级文字格式](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [文档和站点结构](/zh-CN/docs/learn/HTML/Introduction_to_HTML/文件和网站结构)
+- [文档和站点结构](/zh-CN/docs/learn/HTML/Introduction_to_HTML/Document_and_website_structure)
 - [HTML 调试](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
 - [课程测验：为信件排版](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
 - [课程测验：构建内容丰富的网页](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

@@ -1,16 +1,6 @@
 ---
 title: PHP
 slug: Glossary/PHP
-tags:
-  - Beginner
-  - CodingScripting
-  - Glossary
-  - Infrastructure
-  - Intro
-  - PHP
-  - 初心者
-  - 用語集
-translation_of: Glossary/PHP
 ---
 PHP (再帰的な頭文字語で PHP: Hypertext Preprocessor) はオープンソースのサーバー側スクリプト言語で、 HTML に組み込んで、ウェブアプリや動的なウェブサイトを構築することができます。
 

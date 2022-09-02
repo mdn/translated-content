@@ -1,21 +1,6 @@
 ---
 title: XRInputSource
 slug: Web/API/XRInputSource
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Input
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRInputSource
-  - control
-translation_of: Web/API/XRInputSource
 ---
 {{securecontext_header}}{{APIRef("WebXR Device API")}}
 

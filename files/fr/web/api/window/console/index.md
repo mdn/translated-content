@@ -40,8 +40,4 @@ Voir {{SectionOnPage("/en-US/docs/Web/API/Console", "Usage")}} pour plus d'exemp
 
 ## Spécifications
 
-| Spécification                        | Status                           | Commentaire          |
-| ------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('Console API')}} | {{Spec2('Console API')}} | Définition Initiale. |
-
-> **Note :** Actuellement il y a beaucoup de différences d'implémentation entre les navigateurs, mais ils sont en train d'être standardisés pour les rendre plus consistants entre eux.
+{{Specifications}}

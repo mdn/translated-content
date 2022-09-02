@@ -42,7 +42,7 @@ Vue는 최신의 JavaScript 프레임워크로 [점진적 향상](/ko/docs/Gloss
 
 Vue는 애플리케이션에 Vue를 점진적으로 통합시킬 수 있도록 하며, 마크업 작성에 대해서도 점진적 접근법을 제공합니다. 다른 많은 프레임워크처럼, Vue에서도 컴포넌트를 통해 재사용 가능한 마크업 블록을 생성할 수 있습니다. 대부분의 경우 Vue 컴포넌트는 특별한 HTML 템플릿 구문으로 작성됩니다. HTML에서 가능한 것 이상의 제어가 필요하다면, JSX나 일반 JavaScript 함수를 이용해 컴포넌트를 정의할 수 있습니다.
 
-이 튜토리얼을 진행하는 동안, 다른 탭에 [Vue 가이드 ](https://vuejs.org/v2/guide/)와 [API 문서](https://vuejs.org/v2/api/)를 열어 두고 각 항목에 대해 더 자세한 정보가 필요할 때 참조하세요. Vue와 다른 프레임워크 간의 비교(편향될 가능성 있음)는 [Vue 문서: 다른 프레임워크와의 비교](https://vuejs.org/v2/guide/comparison.html)를 참조하세요.
+이 튜토리얼을 진행하는 동안, 다른 탭에 [Vue 가이드](https://vuejs.org/v2/guide/) 와 [API 문서](https://vuejs.org/v2/api/)를 열어 두고 각 항목에 대해 더 자세한 정보가 필요할 때 참조하세요. Vue와 다른 프레임워크 간의 비교(편향될 가능성 있음)는 [Vue 문서: 다른 프레임워크와의 비교](https://vuejs.org/v2/guide/comparison.html)를 참조하세요.
 
 ## 설치하기
 
@@ -62,8 +62,8 @@ Vue는 애플리케이션에 Vue를 점진적으로 통합시킬 수 있도록 �
 
 하지만 이 방식은 한계가 있습니다. 좀 더 복잡한 앱을 구성하려면 [Vue NPM package](https://www.npmjs.com/package/vue)를 사용하는 것이 좋습니다. Vue NPM 패키지를 사용하면 Vue의 고급 기능을 이용할 수 있고, WebPack 같은 번들 도구를 활용할 수 있습니다. 그리고 Vue CLI를 사용하면 개발 과정을 간소화해 Vue 앱을 더욱 쉽게 구성할 수 있습니다. npm 패키지와 CLI를 사용하기 위해 필요한 사항은 다음과 같습니다.
 
-1.  Node.js 8.11 이상 설치
-2.  npm 또는 yarn
+1. Node.js 8.11 이상 설치
+2. npm 또는 yarn
 
 > **참고:** 아직 위 항목을 설치하지 않았다면, [more about installing npm and Node.js](/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Adding_powerups) 를 참고하세요.
 
@@ -88,38 +88,38 @@ yarn global add @vue/cli
 
 Vue의 다양한 기능을 알아보기 위해, 예제로 할 일 목록(todo list) 앱을 만들어보려고 합니다. Vue CLI를 사용해서 새로운 앱을 구성해봅시다. 아래 내용을 순서대로 따라해보세요:
 
-1.  터미널에서 `cd <디렉토리>`를 입력해 샘플 앱을 만들 위치로 이동하고, `vue create moz-todo-vue`를 실행하세요.
-2.  방향키와
+1. 터미널에서 `cd <디렉토리>`를 입력해 샘플 앱을 만들 위치로 이동하고, `vue create moz-todo-vue`를 실행하세요.
+2. 방향키와
 
     <kbd>Enter</kbd>
 
     를 사용해 "Manually select features" 옵션을 선택하세요.
 
-3.  첫 번째 메뉴에서 프로젝트에 포함하고 싶은 기능들을 선택할 수 있습니다. "Babel"과 "Linter / Formatter"가 선택되어 있나요? 선택되어 있지 않다면 방향키와 스페이스바를 사용해 선택해주세요. 그리고
+3. 첫 번째 메뉴에서 프로젝트에 포함하고 싶은 기능들을 선택할 수 있습니다. "Babel"과 "Linter / Formatter"가 선택되어 있나요? 선택되어 있지 않다면 방향키와 스페이스바를 사용해 선택해주세요. 그리고
 
     <kbd>Enter</kbd>
 
     를 누릅니다.
 
-4.  다음으로 linter / formatter 구성을 선택하겠습니다. "Eslint with error prevention only"로 이동하고 다시
+4. 다음으로 linter / formatter 구성을 선택하겠습니다. "Eslint with error prevention only"로 이동하고 다시
 
     <kbd>Enter</kbd>
 
     를 눌러주세요. 흔히 생기는 에러를 잡는데 도움을 주면서도 너무 엄격하지는 않은 옵션을 선택했습니다.
 
-5.  다음은 자동 lint를 어떤 방식으로 하고 싶은지 묻는 메세지가 표시될 것입니다. "Lint on save"를 선택하세요. 우리가 프로젝트 내부의 파일을 저장할 때 에러를 체크하라는 의미입니다. 이제
+5. 다음은 자동 lint를 어떤 방식으로 하고 싶은지 묻는 메세지가 표시될 것입니다. "Lint on save"를 선택하세요. 우리가 프로젝트 내부의 파일을 저장할 때 에러를 체크하라는 의미입니다. 이제
 
     <kbd>Enter</kbd>
 
     를 누르세요.
 
-6.  이제 구성 파일을 어떻게 관리할지 선택해야 합니다. "In dedicated config files" 옵션을 선택하면 ESLint와 같은 것들의 구성 설정을 그들의 전용 파일에 넣게 됩니다. "In package.json" 옵션의 경우, 모든 구성 설정을 앱의 `package.json` 파일에 넣습니다. 우선 지금은 "In dedicated config files" 옵션을 선택하고
+6. 이제 구성 파일을 어떻게 관리할지 선택해야 합니다. "In dedicated config files" 옵션을 선택하면 ESLint와 같은 것들의 구성 설정을 그들의 전용 파일에 넣게 됩니다. "In package.json" 옵션의 경우, 모든 구성 설정을 앱의 `package.json` 파일에 넣습니다. 우선 지금은 "In dedicated config files" 옵션을 선택하고
 
     <kbd>Enter</kbd>
 
     를 누릅시다.
 
-7.  마지막으로, 지금까지 설정한 내용을 다음에 다시 사용하고 싶은지(현재 설정을 사전 설정 목록에 추가하고 싶은지) 묻는 메세지가 표시됩니다. 이 부분은 여러분이 하고 싶은대로 하시면 돼요. 만약 이 설정을 다음에도 다시 사용하고 싶다면
+7. 마지막으로, 지금까지 설정한 내용을 다음에 다시 사용하고 싶은지(현재 설정을 사전 설정 목록에 추가하고 싶은지) 묻는 메세지가 표시됩니다. 이 부분은 여러분이 하고 싶은대로 하시면 돼요. 만약 이 설정을 다음에도 다시 사용하고 싶다면
 
     <kbd>y</kbd>
 

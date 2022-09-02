@@ -1,17 +1,6 @@
 ---
 title: コミュニティスクールのホームページの組版
 slug: Learn/CSS/Styling_text/Typesetting_a_homepage
-tags:
-  - Assessment
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Link
-  - Styling text
-  - font
-  - list
-  - web font
-translation_of: Learn/CSS/Styling_text/Typesetting_a_homepage
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 

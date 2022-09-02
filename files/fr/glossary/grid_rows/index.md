@@ -14,7 +14,7 @@ De plus, des lignes peuvent être créées dans la grille implicite lorsque les 
 
 Lorsque vous travaillez avec l'alignement dans [une grille](/fr/docs/Web/CSS/CSS_Grid_Layout), l'axe le long duquel les lignes sont exécutées est appelé l'axe de ligne ou en ligne.
 
-## En apprendre plus
+## Voir aussi
 
 ### Références de propriété
 

@@ -45,7 +45,7 @@ text-overflow: unset;
 
 La propriété `text-overflow` peut être définie grâce à une ou deux valeurs.
 
-Si une valeur est fournie, celle-ci indique le comportement du dépassement en fin de ligne (c'est-à-dire l'extrêmité droite pour les textes écrits de gauche à droite et l'extrêmité gauche pour les textes écrits de droite à gauche). Si deux valeurs sont fournies, la première précisera la comportement pour le dépassement à l'extrêmité gauche de la ligne et la seconde indiquera le comportement du dépassement pour l'extrêmité droite de la ligne.
+Si une valeur est fournie, celle-ci indique le comportement du dépassement en fin de ligne (c'est-à-dire l'extrêmité droite pour les textes écrits de gauche à droite et l'extrêmité gauche pour les textes écrits de droite à gauche). Si deux valeurs sont fournies, la première précisera le comportement pour le dépassement à l'extrêmité gauche de la ligne et la seconde indiquera le comportement du dépassement pour l'extrêmité droite de la ligne.
 
 Chacune des valeurs se compose :
 

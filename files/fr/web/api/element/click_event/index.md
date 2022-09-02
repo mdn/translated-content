@@ -107,15 +107,11 @@ Essayez de cliquer rapidement sur le bouton pour augmenter le nombre de clic. Ap
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('UI Events', '#event-type-click')}}                                             | {{Spec2('UI Events')}}     |
-| {{SpecName('DOM3 Events', '#event-type-click', 'click')}}                             | {{Spec2('DOM3 Events')}} |
-| {{SpecName('DOM2 Events', '#Events-eventgroupings-mouseevents-h3', 'click')}} | {{Spec2('DOM2 Events')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.click_event")}}
+{{Compat}}
 
 ## Voir aussi
 

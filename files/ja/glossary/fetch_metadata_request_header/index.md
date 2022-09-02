@@ -1,10 +1,6 @@
 ---
 title: フェッチメタデータリクエストヘッダー
 slug: Glossary/Fetch_metadata_request_header
-tags:
-  - Fetch Metadata Request Headers
-  - Glossary
-translation_of: Glossary/Fetch_metadata_request_header
 ---
 **フェッチメタデータリクエストヘッダー**は、リクエストの発信元のコンテキストに関する追加情報を提供する HTTP リクエストヘッダーです。これらのヘッダー名には `Sec-` の接頭辞が付いており、{{Glossary("Forbidden header name", "禁止ヘッダー名")}}であるため、 JavaScript からヘッダーを変更することはできません。
 

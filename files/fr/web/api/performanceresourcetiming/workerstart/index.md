@@ -64,10 +64,8 @@ function print_start_and_end_properties(perfEntry) {
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                                   | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Resource Timing 2', '#dom-performanceresourcetiming-workerstart', 'workerStart')}} | {{Spec2('Resource Timing 2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceResourceTiming.workerStart")}}
+{{Compat}}

@@ -1,15 +1,6 @@
 ---
 title: エクスポートされた WebAssembly 関数
 slug: WebAssembly/Exported_functions
-tags:
-  - Guide
-  - JavaScript
-  - WebAssembly
-  - export
-  - exported functions
-  - exported wasm functions
-  - wasm
-translation_of: WebAssembly/Exported_functions
 ---
 {{WebAssemblySidebar}}
 

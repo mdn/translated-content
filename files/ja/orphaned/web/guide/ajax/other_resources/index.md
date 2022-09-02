@@ -1,9 +1,6 @@
 ---
 title: AJAX に関するその他の資料
 slug: orphaned/Web/Guide/AJAX/Other_Resources
-tags:
-  - AJAX
-translation_of: Web/Guide/AJAX/Other_Resources
 original_slug: Web/Guide/AJAX/Other_Resources
 ---
 - [AJAX Review](http://www.ajaxreview.com/)

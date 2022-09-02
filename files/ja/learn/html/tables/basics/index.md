@@ -1,22 +1,6 @@
 ---
 title: HTML の表の基本
 slug: Learn/HTML/Tables/Basics
-tags:
-  - Beginner
-  - CodingScripting
-  - HTML
-  - Learn
-  - basics
-  - col
-  - colgroup
-  - colspan
-  - header
-  - row
-  - rowspan
-  - セル
-  - テーブル
-  - 記事
-translation_of: Learn/HTML/Tables/Basics
 ---
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 

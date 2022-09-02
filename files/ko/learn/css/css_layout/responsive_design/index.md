@@ -75,9 +75,9 @@ original_slug: Learn/CSS/CSS_layout/반응형_디자인
 
 반응형 디자인이라는 용어는 [2010년 이단 마르코트가 만든 신조어로](https://alistapart.com/article/responsive-web-design/) 세 가지 기술을 조합한 용법을 설명하고 있습니다.
 
-1.  첫 번째는 이미 길렌워터에 의해 탐구되고 있던 유동 격자라는 아이디어였으며, 마르코트의 [유동 격자](https://alistapart.com/article/fluidgrids/)란(2009년 `A List Apart`에 발표) 문서에서 읽을 수 있다.
-2.  두 번째 기술은 [유동 이미지](http://unstoppablerobotninja.com/entry/fluid-images)라는 개념이다. `max-width` 속성을 `100%`로 설정하는 매우 간단한 기술을 사용하면 이미지의 포함된 열이 이미지의 고유 크기보다 좁아지면 이미지가 더 작아지지만 더 커지지는 않습니다. 이것은 이미지가 대열이탈이 아니라 가변적인 크기의 열에 맞게 축소될 수 있지만 열이 이미지보다 넓어지면 확대되지 않고 픽셀화될 수 있습니다.
-3.  세 번째 핵심 구성요소는 [미디어 쿼리](/ko/docs/Web/CSS/Media_Queries)였습니다. 미디어 쿼리는카메론 아담스가 앞서 자바스크립의 사용을 탐구했던 조판 전환 유형을 씨에스에스만을 사용하여 실현합니다. 모든 화면 크기마다 하나씩 조판을 부여하기 보다는 조판을 변경할 수 있었다. 사이드바를 작은 화면에 맞게 재배치하거나 대체 탐색 매뉴를 표시할 수 있습니다.
+1. 첫 번째는 이미 길렌워터에 의해 탐구되고 있던 유동 격자라는 아이디어였으며, 마르코트의 [유동 격자](https://alistapart.com/article/fluidgrids/)란(2009년 `A List Apart`에 발표) 문서에서 읽을 수 있다.
+2. 두 번째 기술은 [유동 이미지](http://unstoppablerobotninja.com/entry/fluid-images)라는 개념이다. `max-width` 속성을 `100%`로 설정하는 매우 간단한 기술을 사용하면 이미지의 포함된 열이 이미지의 고유 크기보다 좁아지면 이미지가 더 작아지지만 더 커지지는 않습니다. 이것은 이미지가 대열이탈이 아니라 가변적인 크기의 열에 맞게 축소될 수 있지만 열이 이미지보다 넓어지면 확대되지 않고 픽셀화될 수 있습니다.
+3. 세 번째 핵심 구성요소는 [미디어 쿼리](/ko/docs/Web/CSS/Media_Queries)였습니다. 미디어 쿼리는카메론 아담스가 앞서 자바스크립의 사용을 탐구했던 조판 전환 유형을 씨에스에스만을 사용하여 실현합니다. 모든 화면 크기마다 하나씩 조판을 부여하기 보다는 조판을 변경할 수 있었다. 사이드바를 작은 화면에 맞게 재배치하거나 대체 탐색 매뉴를 표시할 수 있습니다.
 
 **반응형 웹 디자인은 별도의 기술이 아니다**라는 것을 이해하는 것이 중요합니다. 즉, 웹 디자인에 대한 접근 방식이나 콘텐츠를 보는데 사용되는 장치에 *반응*할 수 있는 조판 생성에 사용되는 모범 사례 집합을 기술하는 데 사용되는 용어다. 마르코트의 원래 연구에서 이것은 (부동체를 사용하는) 가변 격자와 미디어 쿼리를 의미했지만, 그의 문서가 쓰여진지 거의 10년 만에 반응형으로 동작하는 것이 기본값이 되었다. 현대의 씨에스에스 조판 메서드는 본질적으로 반응형이며 반응형 사이트 설계를 쉽게하기 위해 웹 플랫폼에 새로운 요소들이 내장되어 있습니다.
 
@@ -236,11 +236,7 @@ h1 {
 
 On desktop however we see the larger heading size:
 
-<figcaption></figcaption>
-
 ![큰 머리글이 딸린 두개의 열 조판입니다.](https://mdn.mozillademos.org/files/16839/mdn-rwd-font-desktop.png)
-
-<figcaption></figcaption>
 
 > **참고:** 이 예제의 실제 구현 장면: [예제](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), [소스 코드](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html).
 

@@ -1,14 +1,6 @@
 ---
 title: PointerEvent
 slug: Web/API/PointerEvent
-tags:
-  - API
-  - DOM
-  - Interface
-  - Pointer Events
-  - PointerEvent
-  - Reference
-translation_of: Web/API/PointerEvent
 ---
 {{ APIRef("Pointer Events") }}
 

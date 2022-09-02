@@ -55,13 +55,11 @@ Array [ 2, <span> ]
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG','#interface-nodelist','entries() (as iterable&lt;Node&gt;)')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeList.entries")}}
+{{Compat}}
 
 ## Voir aussi
 

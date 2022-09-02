@@ -81,6 +81,6 @@ Ajax 簡介。
 
 ## 相關主題
 
-[HTML](/zh-TW/docs/HTML), [XHTML](/zh-TW/docs/XHTML), [CSS](/zh-TW/docs/CSS), [DOM](/zh-TW/docs/DOM), [JavaScript](/zh-TW/docs/JavaScript), [XML](/zh-TW/docs/XML), [XMLHttpRequest](/zh-TW/docs/nsIXMLHttpRequest), [XSLT](/zh-TW/docs/XSLT), [DHTML](/zh-TW/docs/DHTML), [Same Origin Policy](/zh-TW/docs/JavaScript/Same_origin_policy_for_JavaScript)
+[HTML](/zh-TW/docs/HTML), [XHTML](/zh-TW/docs/XHTML), [CSS](/zh-TW/docs/CSS), [DOM](/zh-TW/docs/DOM), [JavaScript](/zh-TW/docs/JavaScript), [XML](/zh-TW/docs/XML), [XMLHttpRequest](/zh-TW/docs/nsIXMLHttpRequest), [XSLT](/zh-TW/docs/XSLT), [Same Origin Policy](/zh-TW/docs/JavaScript/Same_origin_policy_for_JavaScript)
 
 {{ListSubpages}}

@@ -49,13 +49,11 @@ var oMyBlob = new Blob(aFileParts, {type : 'text/html'});
 
 ## Spécifications
 
-| Spécification                                                            | État                         | Commentaires         |
-| ------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('File API', '#constructorBlob', 'Blob()')}} | {{Spec2('File API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Blob.Blob")}}
+{{Compat}}
 
 ## Voir aussi
 

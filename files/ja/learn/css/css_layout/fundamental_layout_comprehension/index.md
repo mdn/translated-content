@@ -1,13 +1,6 @@
 ---
 title: 基礎的なレイアウトの理解
 slug: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
-tags:
-  - Assessment
-  - Beginner
-  - CSS
-  - Layout
-  - Learn
-translation_of: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
 

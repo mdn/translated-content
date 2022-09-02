@@ -1,16 +1,6 @@
 ---
 title: ResizeObserverEntry.borderBoxSize
 slug: Web/API/ResizeObserverEntry/borderBoxSize
-page-type: web-api-instance-property
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - リサイズオブザーバー API
-  - ResizeObserverEntry
-  - borderBoxSize
-browser-compat: api.ResizeObserverEntry.borderBoxSize
-translation_of: Web/API/ResizeObserverEntry/borderBoxSize
 ---
 {{APIRef("Resize Observer API")}}
 

@@ -1,18 +1,6 @@
 ---
 title: Search engine (検索エンジン)
 slug: Glossary/Search_engine
-tags:
-  - Definition
-  - Glossary
-  - Indexing
-  - Search Engine
-  - Searching
-  - Web Crawling
-  - WebMechanics
-  - World Wide Web
-  - details
-  - google
-translation_of: Glossary/Search_engine
 ---
 検索エンジンは {{Glossary("World Wide Web")}} から情報を集めて、特定の情報を探しているユーザーに表示するソフトウェアです。
 

@@ -1,24 +1,6 @@
 ---
 title: XRReferenceSpaceEvent
 slug: Web/API/XRReferenceSpaceEvent
-tags:
-  - API
-  - AR
-  - Event
-  - Interface
-  - Mixed
-  - Reality
-  - Reference
-  - Reference Space
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRReferenceSpaceEvent
-  - augmented
-translation_of: Web/API/XRReferenceSpaceEvent
 ---
 {{APIRef("WebXR Device API")}}{{SecureContext_header}}
 

@@ -29,14 +29,11 @@ _Cette interface hérite des méthodes de son parent {{domxref("HTMLCollection")
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                           | Commentaire                                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "infrastructure.html#htmlformcontrolscollection", "HTMLFormControlsCollection")}} | {{Spec2('HTML WHATWG')}} | Pas de changement depuis le dernier instantané {{SpecName('HTML5 W3C')}}.                                             |
-| {{SpecName('HTML5 W3C', "infrastructure.html#htmlformcontrolscollection", "HTMLFormControlsCollection")}}     | {{Spec2('HTML5 W3C')}}     | Dans cet instantané de {{SpecName("HTML WHATWG")}}, `HTMLFormControlsCollections` est défini pour la première fois. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLFormControlsCollection")}}
+{{Compat}}
 
 ## Voir aussi
 

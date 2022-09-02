@@ -1,18 +1,6 @@
 ---
 title: SourceBuffer.appendWindowStart
 slug: Web/API/SourceBuffer/appendWindowStart
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBuffer
-  - Video
-  - appendWindowStart
-translation_of: Web/API/SourceBuffer/appendWindowStart
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 

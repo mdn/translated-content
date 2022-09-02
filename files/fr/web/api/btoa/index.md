@@ -77,16 +77,11 @@ Une solution meilleure, plus fiable et moins coûteuse consiste à [utiliser des
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                           | Commentaire                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'webappapis.html#dom-btoa', 'WindowOrWorkerGlobalScope.btoa()')}} | {{Spec2('HTML WHATWG')}} | Méthode déplacée dans le mixin `WindowOrWorkerGlobalScope` dans la spéc la plus récente.                                               |
-| {{SpecName('HTML WHATWG', '#dom-windowbase64-btoa', 'WindowBase64.btoa()')}}                     | {{Spec2('HTML WHATWG')}} | Pas de changement depuis le dernier instantané, {{SpecName("HTML5.1")}}.                                                      |
-| {{SpecName('HTML5.1', '#dom-windowbase64-btoa', 'WindowBase64.btoa()')}}                         | {{Spec2('HTML5.1')}}     | Instantané de {{SpecName("HTML WHATWG")}}. Pas de changement.                                                                 |
-| {{SpecName("HTML5 W3C", "#dom-windowbase64-btoa", "WindowBase64.btoa()")}}                     | {{Spec2('HTML5 W3C')}}     | Instantané de {{SpecName("HTML WHATWG")}}. Création de `WindowBase64` (les propriétés se trouvaient sur la cible avant cela). |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowOrWorkerGlobalScope.btoa")}}
+{{Compat}}
 
 ## Voir aussi
 

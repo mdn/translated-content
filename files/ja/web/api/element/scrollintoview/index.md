@@ -1,19 +1,6 @@
 ---
 title: Element.scrollIntoView()
 slug: Web/API/Element/scrollIntoView
-tags:
-  - API
-  - CSSOM Views
-  - DOM
-  - Element
-  - Method
-  - Reference
-  - View
-  - scrollIntoView
-  - scrolling
-  - スクロール
-  - メソッド
-translation_of: Web/API/Element/scrollIntoView
 ---
 {{APIRef("DOM")}}{{domxref("Element")}} インターフェイスの **`scrollIntoView()`** メソッドは、 `scrollIntoView()` が呼び出された要素がユーザーに見えるところまで、要素の親コンテナーをスクロールします。
 

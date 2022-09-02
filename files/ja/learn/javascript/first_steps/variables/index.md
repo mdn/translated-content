@@ -1,20 +1,6 @@
 ---
 title: 必要な情報を保存する — 変数
 slug: Learn/JavaScript/First_steps/Variables
-tags:
-  - Arrays
-  - Booleans
-  - JavaScript
-  - Numbers
-  - Objects
-  - Updating
-  - Variables
-  - declaring
-  - initializing
-  - l10n:priority
-  - loose typing
-  - strings
-translation_of: Learn/JavaScript/First_steps/Variables
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
 

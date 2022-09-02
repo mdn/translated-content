@@ -11,7 +11,7 @@ Une variable globale est une {{glossary("Variable")}} déclarée dans une {{glos
 
 En JavaScript, c'est une {{glossary("Property","propriété")}} de l'{{glossary("Global object","objet global")}}.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

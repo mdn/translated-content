@@ -26,7 +26,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 
 결과적으로 코드는 더욱 풍부해지고 전문적이게 될 것이며, 프레임워크가 구축하고 있는 근본적인 웹 플랫폼 기능을 이해한다면 보다 확실하게 문제를 해결할 수 있을 겁니다.
 
-> **알림:** ### 프론트 개발자가 되고 싶으신가요?목표를 달성하는데 필요한 모든 필수 정보가 포함 된 과정을 구성했습니다.[시작하기](/docs/Learn/Front-end_web_developer)
+> **알림:** ### 프론트 개발자가 되고 싶으신가요?목표를 달성하는데 필요한 모든 필수 정보가 포함 된 과정을 구성했습니다.[시작하기](/ko/docs/Learn/Front-end_web_developer)
 
 ## 입문 가이드
 

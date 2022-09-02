@@ -31,10 +31,8 @@ TBD
 
 ## Spécifications
 
-| Spécification                    | État                         | Commentaires         |
-| -------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('WebAuthn')}} | {{Spec2('WebAuthn')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.AuthenticatorAttestationResponse")}}
+{{Compat}}

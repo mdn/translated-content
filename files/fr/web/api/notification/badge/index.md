@@ -26,10 +26,8 @@ Une {{domxref('USVString')}} contenant une URL.
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaire          |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Web Notifications','#dom-notification-badge','badge')}} | {{Spec2('Web Notifications')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification.badge")}}
+{{Compat}}

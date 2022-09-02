@@ -1,15 +1,6 @@
 ---
 title: EventSource.onmessage
 slug: Web/API/EventSource/message_event
-tags:
-  - API
-  - EventSource
-  - Server-sent events
-  - onmessage
-  - イベントハンドラ
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/EventSource/onmessage
 original_slug: Web/API/EventSource/onmessage
 ---
 {{APIRef('WebSockets API')}}

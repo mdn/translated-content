@@ -110,6 +110,6 @@ Les interfaces suivantes ont été supprimées car elles n'étaient plus indispe
 
 - Les extensions qui n'ont pas été mises à jour depuis longtemps sont supposées ne plus être compatible par défaut, ce qui concerne actuellement les add-ons qui indiquent 4.0 pour `maxVersion`.
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('10')}}

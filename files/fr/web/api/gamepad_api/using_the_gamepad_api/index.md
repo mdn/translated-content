@@ -342,10 +342,8 @@ if (!haveEvents) {
 
 ## Spécifications
 
-| Spécification                                            | État                 | Commentaires        |
-| -------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName("Gamepad", "#gamepad-interface", "Gamepad")}} | {{Spec2("Gamepad")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Gamepad")}}
+{{Compat}}

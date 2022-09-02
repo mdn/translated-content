@@ -295,9 +295,9 @@ background-position: 10px 20px,  top right;
 
 새로운 지식을 테스트하려면 아래 예제를 시작점으로 사용하여 배경과 테두리를 사용하여 다음을 작성하십시오:
 
-1.  박스에 둥근 모서리가 10px 인, 5px 검은색 단색 테두리를 지정하십시오.
-2.  배경 이미지를 추가하고 (URL `balloons.jpg` 사용) 박스를 덮도록 크기를 조정하십시오.
-3.  `<h2>` 에 반투명 검정색 배경색을 지정하고 텍스트를 흰색으로 만듭니다.
+1. 박스에 둥근 모서리가 10px 인, 5px 검은색 단색 테두리를 지정하십시오.
+2. 배경 이미지를 추가하고 (URL `balloons.jpg` 사용) 박스를 덮도록 크기를 조정하십시오.
+3. `<h2>` 에 반투명 검정색 배경색을 지정하고 텍스트를 흰색으로 만듭니다.
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/task.html", '100%', 800)}}
 
@@ -313,21 +313,21 @@ background-position: 10px 20px,  top right;
 
 ## 이번 강의에서는
 
-1.  [계단식 및 상속](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors)
+1. [계단식 및 상속](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Type, class 및 ID 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [속성 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Pseudo-classes 및 pseudo-elements](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [결합자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [박스 모델](/ko/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [배경 및 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [다른 텍스트 방향 처리](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [콘텐츠 overflow](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [값 과 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [CSS 에서 항목 크기 조정](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [이미지, 미디어 및 양식 요소](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [박스 모델](/ko/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [배경 및 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [다른 텍스트 방향 처리](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [콘텐츠 overflow](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [값 과 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [CSS 에서 항목 크기 조정](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [이미지, 미디어 및 양식 요소](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [표 스타일링](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [CSS 디버깅](/ko/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [CSS 정리](/ko/docs/Learn/CSS/Building_blocks/Organizing)

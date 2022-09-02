@@ -1,16 +1,6 @@
 ---
 title: EventSource
 slug: Web/API/EventSource
-tags:
-  - API
-  - Communications
-  - EventSource
-  - Interface
-  - Reference
-  - Server-sent event
-  - messaging
-  - インターフェイス
-translation_of: Web/API/EventSource
 ---
 {{APIRef("Server Sent Events")}}
 

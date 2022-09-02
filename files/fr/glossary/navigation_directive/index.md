@@ -18,7 +18,7 @@ Ces directives CSP sont :
 - {{CSP("frame-ancestors")}}
 - {{CSP("navigation-to")}}
 
-## En apprendre plus
+## Voir aussi
 
 - {{HTTPHeader("Content-Security-Policy","politique de sécurité de contenu")}}
 - Autres types de directives:

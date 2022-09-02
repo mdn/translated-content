@@ -1,17 +1,6 @@
 ---
 title: 'Notification: click イベント'
 slug: Web/API/Notification/click_event
-page-type: web-api-event
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Event
-  - Reference
-  - click
-browser-compat: api.Notification.click_event
-translation_of: Web/API/Notification/click_event
 original_slug: Web/API/Notification/onclick
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

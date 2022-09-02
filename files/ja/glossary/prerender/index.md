@@ -1,13 +1,6 @@
 ---
 title: Prerender
 slug: Glossary/prerender
-tags:
-  - Glossary
-  - Prefetch
-  - Security
-  - Web Performance
-  - prerender
-translation_of: Glossary/prerender
 ---
 プリレンダリングを使用すると、コンテンツは[先読み](/ja/docs/Glossary/Prefetch)され、ブラウザーによってバックグラウンドでレンダリングされます。これは、コンテンツが非表示の別のタブにレンダリングされた場合と同じです。ユーザーがプリレンダリングされたコンテンツに移動すると、現在のコンテンツがすぐにプリレンダリングされたコンテンツに置き換えられます。
 

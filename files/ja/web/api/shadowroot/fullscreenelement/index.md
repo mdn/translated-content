@@ -1,15 +1,6 @@
 ---
 title: ShadowRoot.fullscreenElement
 slug: Web/API/ShadowRoot/fullscreenElement
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - ShadowRoot
-  - ウェブコンポーネント
-  - シャドウ DOM
-browser-compat: api.ShadowRoot.fullscreenElement
-translation_of: Web/API/ShadowRoot/fullscreenElement
 ---
 {{APIRef("Shadow DOM")}}
 

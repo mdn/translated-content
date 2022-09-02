@@ -1,12 +1,6 @@
 ---
 title: PerformanceEntry.startTime
 slug: Web/API/PerformanceEntry/startTime
-tags:
-  - API
-  - Web パフォーマンス
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/PerformanceEntry/startTime
 ---
 {{APIRef("Performance Timeline API")}}
 

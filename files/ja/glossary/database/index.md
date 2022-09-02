@@ -1,11 +1,6 @@
 ---
 title: Database
 slug: Glossary/Database
-tags:
-  - Database
-  - Glossary
-  - Sql
-translation_of: Glossary/Database
 ---
 **データベース** は、データの整理や収集を行い保存をするシステムです。データベースを使うことで検索、構造化、拡張などの作業を簡単に行うことができます。
 

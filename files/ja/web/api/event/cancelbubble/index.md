@@ -1,13 +1,6 @@
 ---
 title: Event.cancelBubble
 slug: Web/API/Event/cancelBubble
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - リファレンス
-  - 非推奨
-browser-compat: api.Event.cancelBubble
-translation_of: Web/API/Event/cancelBubble
 ---
 {{APIRef("DOM")}} {{Deprecated_Header}}
 

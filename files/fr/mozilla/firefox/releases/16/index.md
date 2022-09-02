@@ -74,6 +74,6 @@ Firefox 16, basé sur Gecko 16.0, est sorti le 9 octobre 2012. Cette page résum
 
 Les interfaces suivantes ont été supprimées.
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('15')}}

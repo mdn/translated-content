@@ -111,13 +111,11 @@ onconnect = function(e) {
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#messageevent", "MessageEvent")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.MessageEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -48,10 +48,8 @@ self.addEventListener('notificationclick', function(event) {
 
 ## Spécifications
 
-| Spécification                                                            | Statut                               | Commentaire         |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#client-url', 'url')}} | {{Spec2('Service Workers')}} | Défintion initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Client.url")}}
+{{Compat}}

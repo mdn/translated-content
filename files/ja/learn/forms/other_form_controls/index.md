@@ -1,16 +1,6 @@
 ---
 title: その他のフォームコントロール
 slug: Learn/Forms/Other_form_controls
-tags:
-  - Beginner
-  - Controls
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Web
-  - Widgets
-translation_of: Learn/Forms/Other_form_controls
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_HTML_forms", "Learn/Forms")}}
 

@@ -3,7 +3,7 @@ title: Document.readyState
 slug: Web/API/Document/readyState
 translation_of: Web/API/Document/readyState
 ---
-{{APIRef("DOM")}}{{gecko_minversion_header("1.9.2")}}
+{{APIRef("DOM")}}
 
 **`Document.readyState`** 속성을 통해 {{domxref("document")}}의 로딩 상태를 확인할 수 있다.
 
@@ -11,7 +11,9 @@ Document.readyState 속성 값이 바뀔 때 {{event("readystatechange")}} 이�
 
 ## Syntax
 
-    var string = document.readyState;
+```js
+var string = document.readyState;
+```
 
 ### Values
 

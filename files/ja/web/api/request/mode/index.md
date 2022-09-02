@@ -1,15 +1,6 @@
 ---
 title: Request.mode
 slug: Web/API/Request/mode
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Property
-  - Reference
-  - mode
-  - request
-translation_of: Web/API/Request/mode
 ---
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 

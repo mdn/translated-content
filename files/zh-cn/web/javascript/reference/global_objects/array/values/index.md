@@ -10,8 +10,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/values
 
 ## 语法
 
-```plain
-arr.values()
+```js
+values()
 ```
 
 ### 返回值
@@ -20,13 +20,13 @@ arr.values()
 
 ## 示例
 
-### 使用 `for...of` 循环进行迭代
+### 使用 for...of 循环进行迭代
 
 ```js
 const arr = ['a', 'b', 'c', 'd', 'e'];
 const iterator = arr.values();
 
-for (let letter of iterator) {
+for (const letter of iterator) {
   console.log(letter);
 }  //"a" "b" "c" "d" "e"
 ```
@@ -37,7 +37,7 @@ for (let letter of iterator) {
 Array.prototype.values === Array.prototype[Symbol.iterator]  // true
 ```
 
-### 使用 `.next()` 迭代
+### 使用 .next() 迭代
 
 ```js
 const arr = ['a', 'b', 'c', 'd', 'e'];
@@ -58,17 +58,17 @@ iterator.next().value;         // undefined
 ```js
 const arr = ['a', 'b', 'c', 'd', 'e'];
 const iterator = arr.values();
-for (let letter of iterator) {
+for (const letter of iterator) {
   console.log(letter);
 } //"a" "b" "c" "d" "e"
-for (let letter of iterator) {
+for (const letter of iterator) {
   console.log(letter);
 } // undefined
 ```
 
-**解释：**当 `next().done=true` 或 `currentIndex>length` 时， `for..of` 循环结束。参见 [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) 。
+**解释**：当 `next().done=true` 或 `currentIndex>length` 时， `for..of` 循环结束。参见[迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
 
-**值：**数组迭代器中存储的是原数组的地址，而不是数组元素值。
+**值**：数组迭代器中存储的是原数组的地址，而不是数组元素值。
 
 ```js
 const arr = ['a', 'b', 'c', 'd', 'e'];

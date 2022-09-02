@@ -1,18 +1,6 @@
 ---
 title: オブジェクト構築の練習
 slug: Learn/JavaScript/Objects/Object_building_practice
-tags:
-  - Article
-  - Beginner
-  - Canvas
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Learn
-  - Objects
-  - Tutorial
-  - l10n:priority
-translation_of: Learn/JavaScript/Objects/Object_building_practice
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
 

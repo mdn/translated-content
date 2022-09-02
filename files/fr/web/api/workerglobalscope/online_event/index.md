@@ -26,13 +26,11 @@ self.ononline = function() {
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#handler-workerglobalscope-ononline", "WorkerGlobalScope.ononline")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WorkerGlobalScope.ononline")}}
+{{Compat}}
 
 ## Voir aussi
 

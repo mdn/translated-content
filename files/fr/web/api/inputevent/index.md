@@ -36,13 +36,11 @@ Cette interface hérite des méthodes de ses parents, {{domxref("UIEvent")}} et 
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('InputEvents2','#interface-InputEvent','InputEvent')}} | {{Spec2('InputEvents2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.InputEvent")}}
+{{Compat}}
 
 ## Voir aussi
 
