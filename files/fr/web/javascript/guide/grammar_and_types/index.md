@@ -669,7 +669,7 @@ Le miel est sucré,
 Et moi je suis.`
 ```
 
-## En savoir plus
+## Voir aussi
 
 Ce chapitre est centré sur les bases de la syntaxe, les déclarations et les types utilisés en JavaScript. Pour en savoir plus sur les différents composants du langage, voir les chapitres suivants du guide:
 

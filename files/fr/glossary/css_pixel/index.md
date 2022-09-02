@@ -26,6 +26,6 @@ En tant que tel, il suffit généralement de dire que lorsque l'unité `px` est 
 
 - [Module Valeurs et Unités CSS, section 5.2: Longueurs Absolues](https://drafts.csswg.org/css-values-3/#absolute-lengths)
 
-### En savoir plus
+### Voir aussi
 
 - [Longueur CSS Expliquée](https://hacks.mozilla.org/2013/09/css-length-explained/) sur le Blog MDN Hacks

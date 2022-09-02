@@ -50,7 +50,7 @@ Cette requête vous permet d'utiliser toutes les fonctionnalités de l'API Tabs 
 
 L'avantage de cette approche est que l'utilisateur ne recevra pas d'avertissement d'autorisation indiquant que votre extension peut “Accéder à vos données pour tous les sites Web”. En effet, la permission `<all_urls>` permet à une extension d'exécuter des scripts dans n'importe quel onglet, à tout moment, alors que [`"activeTab"`](/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) se limite à autoriser l'extension à effectuer une action demandée par l'utilisateur dans l'onglet en cours.
 
-## En savoir plus sur les onglets et leurs propriétés
+## Voir aussi sur les onglets et leurs propriétés
 
 Il y aura des occasions où vous voulez obtenir une liste de tous les onglets dans toutes les fenêtres du navigateur. D'autres fois, vous pourriez vouloir trouver un sous-ensemble d'onglets qui correspondent à certains critères spécifiques, tels que ceux ouverts à partir d'un onglet spécifique ou l'affichage des pages d'un domaine particulier. Et une fois que vous avez votre liste d'onglets, vous voudrez probablement en savoir plus sur leurs propriétés.
 

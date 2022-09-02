@@ -14,7 +14,7 @@ RTF (Rich Text Format) est un format de fichier en texte brut avec prise en char
 
 Trois développeurs de l'équipe Microsoft Word ont créé le format RTF dans les années 1980, et Microsoft a poursuivi son développement jusqu'en 2008. Malgré ça, de nombreux traitements de texte peuvent toujours lire et écrire du RTF.
 
-## En savoir plus
+## Voir aussi
 
 ### Culture générale
 

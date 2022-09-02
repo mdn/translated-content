@@ -19,7 +19,7 @@ Ces directives CSP sont des directives de document :
 - {{CSP("sandbox")}}
 - {{CSP("disown-opener")}}
 
-## En apprendre en plus
+## Voir aussi
 
 ### Informations Techniques
 

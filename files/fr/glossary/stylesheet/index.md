@@ -10,7 +10,7 @@ Une **feuille de style** est un ensemble de règles CSS utilisé pour contrôler
 
 On préfèrera utiliser des feuilles de style externes, car elles permettent de contrôler le style de plusieurs pages à partir d'un seul endroit, plutôt que d'avoir à répéter le même code CSS sur chaque page.
 
-## En savoir plus
+## Voir aussi
 
 ### Connaissances générales
 

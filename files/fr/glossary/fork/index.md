@@ -13,7 +13,7 @@ Un _fork_ est une copie d’un projet logiciel existant à un moment donné pour
 
 Les _forks_ sont communs dans le développement des logiciels libres et _open source_. C’est maintenant un terme plus populaire grâce au modèle de contribution utilisant Git (et/ou la plateforme GitHub).
 
-## En savoir plus
+## Voir aussi
 
 ### Culture générale
 
