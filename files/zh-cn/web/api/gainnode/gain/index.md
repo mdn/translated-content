@@ -14,7 +14,7 @@ slug: Web/API/GainNode/gain
 
 ## 示例
 
-参见 [`BaseAudioContext.createGain()`](/zh-CN/docs/Web/API/BaseAudioContext/createGain#examples) 以获取示例代码，示例代码展示了如何使用 `AudioContext` 来创建 `GainNode`，并通过修改其 gain 属性值以静音或取消静音。
+参见 [`BaseAudioContext.createGain()`](/zh-CN/docs/Web/API/BaseAudioContext/createGain#示例) 以获取示例代码，示例代码展示了如何使用 `AudioContext` 来创建 `GainNode`，并通过修改其 gain 属性值以静音或取消静音。
 
 ## 规范
 
