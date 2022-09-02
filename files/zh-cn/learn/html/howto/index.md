@@ -36,8 +36,8 @@ HTML 专门为文档提供语义信息，因此，HTML 能够解答关于如何�
 
 ### 图像 & 多媒体
 
-- [如何在页面中添加图片](/zh-CN/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#怎样将一幅图片放到网页上？)
-- [如何在页面中添加视频](/zh-CN/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [如何在页面中添加图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#怎样将一幅图片放到网页上？)
+- [如何在页面中添加视频](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 
 ### 脚本 & 样式
 
