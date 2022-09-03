@@ -2,7 +2,7 @@
 title: CSS 的简写属性
 slug: Web/CSS/Shorthand_properties
 ---
-{{cssref}}
+{{CSSRef}}
 
 **简写属性**是可以让你同时设置好几个 CSS 属性值的 CSS 属性。使用简写属性，Web 开发人员可以编写更简洁、更具可读性的样式表，节省时间和精力。
 
@@ -12,33 +12,53 @@ CSS 规范定义简写属性的目的在于将那些关于同一主题的常见�
 
 虽然它们使用起来非常方便，但在使用时，仍需牢记一些边界情况：
 
-1. 没有指定的值会被设置为它的初始值。这听起来似乎本来就很合理的样子，但这确实意味着，它将会覆盖之前设置的值。因此：
+### 省略属性
 
-    ```css
-    background-color: red;
-    background: url(images/bg.gif) no-repeat top right;
-    ```
+没有指定的值会被设置为它的初始值。这听起来似乎本来就很合理的样子，但这确实意味着，它将会覆盖之前设置的值。因此：
 
-    以上样式不会将 background 的 color 值设置为 `red`，而是 {{cssxref("background-color")}} 的默认值 `transparent`，因为第二条规则优先。
+```css
+p {
+  background-color: red;
+  background: url(images/bg.gif) no-repeat left top;
+}
+```
 
-2. 关键词 inherit 只可以应用于单独属性（individual properties），如果应用于一个简写属性（shorthand property），则必须整体应用，而能对简写属性值的每一个部分单独应用。由于单独属性的漏掉的值会被它们的初始值（initial value）替代，因此不可能允许单个属性通过省略继承的。这意味着让一个属性的值使用继承值的唯一方法就是使用值是 inherit 的普通属性（longhand property）。
-3. 简写属性不试图强制它们替代属性的值的特定顺序。这适用于当这些属性使用不同类型的值时，因为这个时候顺序并不重要。但当几个属性可以设置相同值的时候，就没那么简单了。处理这些情况分以下几种类型：
+以上样式不会将 background 的 color 值设置为 `red`，而是 {{cssxref("background-color")}} 的默认值 `transparent`。
 
-    1. 处理和盒子（box）边界（edge）相关的属性时，比如 {{cssxref("border-style")}}、{{cssxref("margin")}} 或者 {{cssxref("padding")}}， 始终使用一致的 1 个到 4 个值的语法表示这些边界：
+关键词 inherit 只可以应用于单独属性（individual properties），如果应用于一个简写属性（shorthand property），则必须整体应用，而能对简写属性值的每一个部分单独应用。由于单独属性的漏掉的值会被它们的初始值（initial value）替代，因此不可能允许单个属性通过省略继承的。这意味着让一个属性的值使用继承值的唯一方法就是使用值是 `inherit` 的普通属性（longhand property）。
 
-        | ![border1.png](/files/3646/border1.png) | _1 个值的语法：_`border-width: 1em` — 这一个值表示所有的边框宽度                                                                                                                                        |
-        | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-        | ![border2.png](/files/3647/border2.png) | _2 个值的语法：_`border-width: 1em 2em` — 第一个值表示垂直方向的，即 top 和 bottom；第二个值表示水平方向的，即 left 和 right                                                                            |
-        | ![border3.png](/files/3648/border3.png) | _3 个值的语法：_`border-width: 1em 2em 3em` — 第一个值表示 top；第二个值表示水平方向的，即 left 和 right；第三个值表示 bottom                                                                           |
-        | ![border4.png](/files/3649/border4.png) | _4 个值的语法：_`border-width: 1em 2em 3em 4em` — 这四个值分别表示 top、right、bottom、left，总是按此顺序，即从 top 开始的顺时针顺序（Top-Right-Bottom-Left 首字母与英文单词 trouble 的顺序一致：TRBL） |
+### 属性的顺序
 
-    2. 同样，在处理和盒子的角相关的属性时，比如 {{cssxref("border-radius")}}，也始终使用一致的 1 个到 4 个值的语法表示：
+简写属性不试图强制它们替代属性的值的特定顺序。这适用于当这些属性使用不同类型的值时，因为这个时候顺序并不重要。但当几个属性可以设置相同值的时候，就没那么简单了。
 
-        | ![corner1.png](/files/3650/corner1.png) | _1 个值的语法：_`border-radius: 1em` — 这一个值表示所有的表框角度的半径                                                                                                   |
-        | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-        | ![corner2.png](/files/3651/corner2.png) | _2 个值的语法：_`border-radius: 1em 2em` — 第一个值表示 top-left 和 bottom-right 方向的角；第二个值表示 top-right 和 bottom-left 方向的角                                 |
-        | ![corner3.png](/files/3652/corner3.png) | _3 个值的语法：_`border-radius: 1em 2em 3em` — 第一个值表示 top-left 方向的角，第二个值表示 top-right 和 bottom-left 方向的角，第三个值表示 bottom-right 方向的角         |
-        | ![corner4.png](/files/3653/corner4.png) | _4 个值的语法：_`border-radius: 1em 2em 3em 4em` — 这四个值分别表示 top-left、top-right、bottom-right、bottom-left 方向的角。总是按此顺序，即从 top-left 开始的顺时针顺序 |
+两种非常重要的情况如下：
+
+- 与盒子（box）边界（edge）相关的属性，比如 {{cssxref("border-style")}}、{{cssxref("margin")}} 或者 {{cssxref("padding")}}
+- 与盒子的角（corner）相关的属性，比如 {{cssxref("border-radius")}}
+
+#### 盒子边界
+
+在处理和盒子的边界相关的属性时，比如 {{cssxref("border-style")}}、{{cssxref("margin")}} 或者 {{cssxref("padding")}}，始终使用一致的 1 个到 4 个值的语法表示：
+
+- **单值语法**：`border-width: 1em`，这一个值表示所有的边框宽度：![Box edges with one-value syntax](border1.png)
+
+- **双值语法**：`border-width: 1em 2em`，第一个值表示垂直方向的值，即 top 和 bottom；第二个值表示水平方向的值，即 left 和 right：![Box edges with two-value syntax](border2.png)
+
+- **三值语法**：`border-width: 1em 2em 3em`，第一个值表示 top；第二个值表示水平方向的，即 left 和 right；第三个值表示 bottom：![Box edges with three-value syntax](border3.png)                                                                         
+
+- **四值语法**：`border-width: 1em 2em 3em 4em`，这四个值分别表示 top、right、bottom、left，即总是从 top 开始的顺时针顺序：![Box edges with four-value syntax](border4.png) Top-Right-Bottom-Left 的首字母与英文单词 _trouble_ 的辅音字母顺序一致：TRBL。你可以按照时钟指针旋转的顺序来记忆：`1em` 在 12 点钟方向，而 `2em`、`3em` 及 `4em` 分别在 2、3、4 点钟方向。
+
+#### 盒子角
+
+在处理和盒子的角相关的属性时，比如 {{cssxref("border-radius")}}，也始终使用一致的 1 个到 4 个值的语法表示：
+
+- **单值语法**：`border-radius: 1em`，这一个值表示所有的边框宽度：![Box corners with one-value syntax](corner1.png)
+
+- **双值语法：** `border-radius: 1em 2em`，第一个值表示 top-left 和 bottom-right 方向的角；第二个值表示 top-right 和 bottom-left 方向的角：![Box corners with two-value syntax](corner2.png)
+
+- **三值语法**：`border-radius: 1em 2em 3em`，第一个值表示 top-left 方向的角，第二个值表示 top-right 和 bottom-left 方向的角，第三个值表示 bottom-right 方向的角：![Box corners with three-value syntax](corner3.png)                                                                         
+
+- **四值语法**：`border-radius: 1em 2em 3em 4em`，这四个值分别表示 top left、top right、bottom right、bottom left，即总是从 top left 开始的顺时针顺序：![Box corners with four-value syntax](corner4.png) 
 
 ## Background 属性
 
@@ -59,6 +79,8 @@ background: #000 url(images/bg.gif) no-repeat top right;
 
 简写的形式实际上等价于以上普通属性再加上 `background-attachment: scroll` 以及 CSS3 中的一些附加属性。
 
+请查阅 {{cssxref("background")}} 以了解更详细的信息，包含 CSS3 属性。
+
 ## Font 属性
 
 下面的声明：
@@ -77,7 +99,7 @@ font-family: Arial, sans-serif;
 font: italic bold .8em/1.2 Arial, sans-serif;
 ```
 
-这个简写声明实际上等价于以上普通属性再加上 `font-variant: normal` 和 `font-size-adjust: none` (CSS2.0 / CSS3)，`font-stretch: normal` (CSS3)。
+这个简写声明实际上等价于以上普通属性再加上 `font-variant: normal`、`font-size-adjust: none` 和 `font-stretch: normal`。
 
 ## Border 属性
 
@@ -106,7 +128,7 @@ margin-bottom: 10px;
 margin-left: 5px;
 ```
 
-和下面的声明是一样的（注意，值是从 top 顺时针开始的：top、right、bottom、接着是 left）
+和下面的声明是一样的（注意，值是从 top 顺时针开始的：top、right、bottom、接着是 left，与“trouble”的辅音字母顺序相同）。
 
 ```css
 margin: 10px 5px 10px 5px;
@@ -116,18 +138,35 @@ Margin 对于多个值有以下的简写规则：
 
 - 当只有**一个**值声明时，该值会用于所有**四个**值。
 - 当只有**两个**值声明时，第一个值用于**上边距**和**下边距**，第二个值用于**左边距**和**右边距**。
-- 当有三个值声明时，第一个值用于**上边距**，第二个值用于**左边距**和**右边距**，第三个值用于**下边距。**
-- 当有四个值声明时，其会按顺序用于上、右、下、左边距（按顺时针）。
+- 当有**三个**值声明时，第一个值用于**上边距**，第二个值用于**左边距**和**右边距**，第三个值用于**下边距。**
+- 当有**四个**值声明时，其会按顺序用于**上**、**右**、**下**、**左**边距（按顺时针方向）。
 
 ## 通用简写属性
 
-CSS 提供了一个通用的简写属性 {{cssxref("all")}}，它可以应用于文档里所有的属性。它的目的是改变属性的继承模型：
+CSS 提供了一个通用的简写属性 {{cssxref("all")}}，它可以应用于文档里所有的属性。它的目的是改变属性的继承模型。
 
-{{page("/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance", "Controlling_inheritance")}}
+查看[层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)或 [CSS 层叠基础](/zh-CN/docs/Web/CSS/Cascade)以了解更多关于继承的信息。
 
-查看 [Cascade and inheritance](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance) or [Introducing the CSS Cascade](/zh-CN/docs/Web/CSS/Cascade) 了解更多关于继承的信息。
+## 参见
 
-## 另请参阅
+- CSS 重要概念：
 
-- [CSS Reference](/zh-CN/docs/CSS/CSS_Reference)
-- Shorthand properties: {{cssxref("background")}}, {{cssxref("font")}}, {{cssxref("margin")}}, {{cssxref("border")}}, {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}}, {{cssxref("border-width")}}, {{cssxref("border-color")}}, {{cssxref("border-style")}}, {{cssxref("transition")}}, {{cssxref("transform")}}, {{cssxref("padding")}}, {{cssxref("list-style")}}, {{cssxref("border-radius")}}.
+  - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
+  - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
+  - [注释](/zh-CN/docs/Web/CSS/Comments)
+  - [优先级](/zh-CN/docs/Web/CSS/Specificity)
+  - [继承](/zh-CN/docs/Web/CSS/inheritance)
+  - [盒模型](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
+  - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
+  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - 值
+
+    - [初始值](/zh-CN/docs/Web/CSS/initial_value)
+    - [计算值](/zh-CN/docs/Web/CSS/computed_value)
+    - [应用值](/zh-CN/docs/Web/CSS/used_value)
+    - [实际值](/zh-CN/docs/Web/CSS/actual_value)
+
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
+  - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
+- 简写属性：{{cssxref("all")}}、{{cssxref("animation")}}、{{cssxref("background")}}、{{cssxref("border")}}、{{cssxref("border-block-end")}}、{{cssxref("border-block-start")}}、{{cssxref("border-bottom")}}、{{cssxref("border-color")}}、{{cssxref("border-image")}}、{{cssxref("border-inline-end")}}、{{cssxref("border-inline-start")}}、{{cssxref("border-left")}}、{{cssxref("border-radius")}}、{{cssxref("border-right")}}、{{cssxref("border-style")}}、{{cssxref("border-top")}}、{{cssxref("border-width")}}、{{cssxref("column-rule")}}、{{cssxref("columns")}}、{{cssxref("flex")}}、{{cssxref("flex-flow")}}、{{cssxref("font")}}、{{cssxref("gap")}}、{{cssxref("grid")}}、{{cssxref("grid-area")}}、{{cssxref("grid-column")}}、{{cssxref("grid-row")}}、{{cssxref("grid-template")}}、{{cssxref("list-style")}}、{{cssxref("margin")}}、{{cssxref("mask")}}、{{cssxref("offset")}}、{{cssxref("outline")}}、{{cssxref("overflow")}}、{{cssxref("padding")}}、{{cssxref("place-content")}}、{{cssxref("place-items")}}、{{cssxref("place-self")}}、{{cssxref("scroll-margin")}}、{{cssxref("scroll-padding")}}、{{cssxref("text-decoration")}}、{{cssxref("text-emphasis")}}、{{cssxref("transition")}}
