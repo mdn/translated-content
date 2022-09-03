@@ -31589,10 +31589,6 @@
     "modified": "2020-10-15T22:29:46.631Z",
     "contributors": ["Wind1808"]
   },
-  "conflicting/Web/Accessibility": {
-    "modified": "2019-03-23T22:41:12.085Z",
-    "contributors": ["Marsf"]
-  },
   "conflicting/Web/Accessibility/ARIA": {
     "modified": "2019-03-23T23:28:42.286Z",
     "contributors": ["yyss", "teoli"]
