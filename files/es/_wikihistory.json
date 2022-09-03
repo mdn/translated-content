@@ -15121,10 +15121,6 @@
     "modified": "2019-11-03T14:52:14.998Z",
     "contributors": ["totopizzahn"]
   },
-  "conflicting/Web/SVG": {
-    "modified": "2019-01-16T22:36:49.773Z",
-    "contributors": ["jwhitlock", "ComplementosMozilla"]
-  },
   "conflicting/Web/Web_Components/Using_custom_elements": {
     "modified": "2019-03-23T22:21:51.809Z",
     "contributors": ["cawilff", "AlePerez92", "fipadron", "V.Morantes"]

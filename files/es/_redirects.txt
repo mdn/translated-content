@@ -2667,7 +2667,7 @@
 /es/docs/Web/Reference/Events/transitionend	/es/docs/Web/API/Element/transitionend_event
 /es/docs/Web/Reference/Events/wheel	/es/docs/Web/API/Element/wheel_event
 /es/docs/Web/SVG/Element/glifo	/es/docs/Web/SVG/Element/glyph
-/es/docs/Web/SVG/Index	/es/docs/conflicting/Web/SVG
+/es/docs/Web/SVG/Index	/es/docs/Web/SVG
 /es/docs/Web/SVG/SVG_1.1_Support_in_Firefox	/es/docs/orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
 /es/docs/Web/SVG/Tutorial/Introducción	/es/docs/Web/SVG/Tutorial/Introduction
 /es/docs/Web/Security/Same-origin_politica	/es/docs/Web/Security/Same-origin_policy
