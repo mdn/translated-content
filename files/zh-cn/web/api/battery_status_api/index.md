@@ -4,7 +4,7 @@ slug: Web/API/Battery_Status_API
 ---
 {{DefaultAPISidebar("Battery API")}}
 
-**Battery Status API，**更多时候被称之为 **Battery API**, 提供了有关系统充电级别的信息并提供了通过电池等级或者充电状态的改变提醒用户的事件。 这个可以在设备电量低的时候调整应用的资源使用状态，或者在电池用尽前保存应用中的修改以防数据丢失。
+**Battery Status API**，更多时候被称之为 **Battery API**, 提供了有关系统充电级别的信息并提供了通过电池等级或者充电状态的改变提醒用户的事件。 这个可以在设备电量低的时候调整应用的资源使用状态，或者在电池用尽前保存应用中的修改以防数据丢失。
 
 Battery Status API 向 {{domxref("window.navigator")}} 扩展了一个 {{domxref("navigator.getBattery")}} 方法，其返回了一个 battery promise, 完成后传递一个 {{domxref("BatteryManager")}} 对象，并提供了一些新的可以操作电池状态的事件。
 
