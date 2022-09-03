@@ -34075,10 +34075,6 @@
     "modified": "2019-03-23T22:06:02.004Z",
     "contributors": ["wuCrio"]
   },
-  "orphaned/Web/API/FileError": {
-    "modified": "2019-03-24T00:16:24.896Z",
-    "contributors": ["teoli", "ziyunfei"]
-  },
   "orphaned/Web/API/Frame_Timing_API": {
     "modified": "2020-03-18T00:42:57.197Z",
     "contributors": ["fzhyzamt", "peakclown"]

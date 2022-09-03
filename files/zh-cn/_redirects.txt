@@ -227,7 +227,6 @@
 /zh-CN/docs/DOM/File.name	/zh-CN/docs/Web/API/File/name
 /zh-CN/docs/DOM/File.size	/zh-CN/docs/Web/API/Blob/size
 /zh-CN/docs/DOM/File.type	/zh-CN/docs/Web/API/Blob/type
-/zh-CN/docs/DOM/FileError	/zh-CN/docs/orphaned/Web/API/FileError
 /zh-CN/docs/DOM/FileList	/zh-CN/docs/Web/API/FileList
 /zh-CN/docs/DOM/FileReader	/zh-CN/docs/Web/API/FileReader
 /zh-CN/docs/DOM/FileReaderSync	/zh-CN/docs/Web/API/FileReaderSync
@@ -1458,7 +1457,6 @@
 /zh-CN/docs/Web/API/File/fileName	/zh-CN/docs/Web/API/File/name
 /zh-CN/docs/Web/API/File/fileSize	/zh-CN/docs/Web/API/Blob/size
 /zh-CN/docs/Web/API/File/size	/zh-CN/docs/Web/API/Blob/size
-/zh-CN/docs/Web/API/FileError	/zh-CN/docs/orphaned/Web/API/FileError
 /zh-CN/docs/Web/API/FileException	/zh-CN/docs/Web/API/File_and_Directory_Entries_API
 /zh-CN/docs/Web/API/FileReader/onabort	/zh-CN/docs/Web/API/FileReader/abort_event
 /zh-CN/docs/Web/API/FileReader/onload	/zh-CN/docs/Web/API/FileReader/load_event
