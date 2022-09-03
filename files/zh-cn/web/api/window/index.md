@@ -51,8 +51,6 @@ See also the [DOM Interfaces](/en-US/docs/DOM/DOM_Reference).
   - : 返回 console 对象的引用，该对象提供了对浏览器调试控制台的访问。
 - {{domxref("Window.content")}} 和 `Window._content` {{Non-standard_inline}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : 返回当前 window 的 content 元素的引用。通过带下划线的过时变种方法不再可以获得 Web content。
-- {{domxref("Window.controllers")}} {{non-standard_inline}} {{ReadOnlyInline}}
-  - : 返回当前 chrome window 的 XUL 控制器对象。
 - {{domxref("Window.customElements")}} {{ReadOnlyInline}}
   - : returns a reference to the {{domxref("CustomElementRegistry")}} object, which can be used to register new [custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) and get information about previously registered custom elements.
 - {{domxref("Window.crypto")}} {{readOnlyInline}}

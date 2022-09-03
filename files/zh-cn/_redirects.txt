@@ -1803,7 +1803,6 @@
 /zh-CN/docs/Web/API/Window/btoa	/zh-CN/docs/Web/API/btoa
 /zh-CN/docs/Web/API/Window/caches	/zh-CN/docs/Web/API/caches
 /zh-CN/docs/Web/API/Window/clearInterval	/zh-CN/docs/Web/API/clearInterval
-/zh-CN/docs/Web/API/Window/controllers	/zh-CN/docs/orphaned/Web/API/Window/controllers
 /zh-CN/docs/Web/API/Window/crypto	/zh-CN/docs/Web/API/crypto_property
 /zh-CN/docs/Web/API/Window/dialogArguments	/zh-CN/docs/orphaned/Web/API/Window/dialogArguments
 /zh-CN/docs/Web/API/Window/directories	/zh-CN/docs/orphaned/Web/API/Window/directories

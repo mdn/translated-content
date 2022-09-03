@@ -34363,10 +34363,6 @@
     "modified": "2019-03-18T21:29:02.340Z",
     "contributors": ["xiaoyixiang"]
   },
-  "orphaned/Web/API/Window/controllers": {
-    "modified": "2020-09-19T14:18:22.315Z",
-    "contributors": ["RainSlide", "zhongrui97", "ShaojieLiu", "FEhaoxinjie"]
-  },
   "orphaned/Web/API/Window/dialogArguments": {
     "modified": "2019-03-23T22:13:58.259Z",
     "contributors": ["koaqiu", "ChrisChan"]
