@@ -59,8 +59,6 @@ See also the [DOM Interfaces](/en-US/docs/DOM/DOM_Reference).
   - : 获取或设置指定窗口的状态栏文本。
 - {{domxref("Window.devicePixelRatio")}} {{non-standard_inline}} {{ReadOnlyInline}}
   - : 返回当前显示器的物理像素和设备独立像素的比例。
-- {{domxref("Window.directories")}} {{Deprecated_Inline}}
-  - : {{domxref("window.personalbar")}} 的另一种形式。
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
   - : 返回对当前窗口所包含文档的引用。
 - {{domxref("Window.DOMMatrix")}} {{readOnlyInline}} {{experimental_inline}}

@@ -34363,10 +34363,6 @@
     "modified": "2019-03-18T21:29:02.340Z",
     "contributors": ["xiaoyixiang"]
   },
-  "orphaned/Web/API/Window/directories": {
-    "modified": "2019-03-18T21:41:58.715Z",
-    "contributors": ["LoadChange"]
-  },
   "orphaned/Web/API/Window/getAttention": {
     "modified": "2020-10-15T22:21:28.407Z",
     "contributors": ["luoxue-victor"]
