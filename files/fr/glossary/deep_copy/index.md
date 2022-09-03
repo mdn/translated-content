@@ -11,14 +11,14 @@ En JavaScript, les opérations de copie d'objet intégrées standards comme la (
 Une façon de faire une copie complète d'un objet JavaScript, s'il peut être [sérialisé](/fr/docs/glossary/serialization), est d'utilisé {{jsxref("JSON.stringify()")}} pour convertir l'objet en une chaîne JSON, puis {{jsxref("JSON.parse()")}} pour reconvertir la chaîne en un (entièrement nouveau) objet JavaScript :
 
 ```js
-let ingredients_list = ["noodles",{"list":["eggs","flour","water"]}];
-let ingredients_list_deepcopy = JSON.parse(JSON.stringify(ingredients_list));
+let liste_ingredients = ["nouilles", {"liste": ["œufs", "farine", "eau"]}];
+let liste_ingredients_copieprofonde = JSON.parse(JSON.stringify(liste_ingredients));
 
-// Modifiez la valeur de la propriété 'list' dans ingredients_list_deepcopy.
-ingredients_list_deepcopy[1].list = ["rice flour","water"]
-// La propriété 'list' ne change pas dans ingredients_list.
-console.log(ingredients_list[1].list);
-// Array(3) [ "eggs", "flour", "water" ]
+// Modifier la valeur de la propriété 'liste' dans liste_ingredients_copieprofonde
+liste_ingredients_copieprofonde[1].liste = ["farine de riz", "water"];
+// La propriété 'liste' ne change pas dans liste_ingredients
+console.log(liste_ingredients[1].liste);
+// Array(3) [ "œufs", "farine", "eau" ]
 ```
 
 Comme le montre le code ci-dessus, étant donné qu'une copie complète ne partage aucune référence avec son objet source, toute modification apportée à la copie complète n'affecte pas l'objet source.
