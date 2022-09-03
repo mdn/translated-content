@@ -67,4 +67,4 @@ Everything else, including focus changes, timer callbacks, XMLHttpRequest callba
 
 ## スクリーンリーダーが何を提示すべきか？
 
-Please read the live region section of the [WAI-ARIA Screen Reader Implementor's Guide](/ja/ARIA/ARIA_Screen_Reader_Implementors_Guide#Live_Regions "http://developer.mozilla.org/editor/fckeditor/core/editor/En/ARIA_Screen_Reader_Implementors_Guide#Live_Regions").
+Please read the live region section of the [WAI-ARIA Screen Reader Implementor's Guide](/ja/ARIA/ARIA_Screen_Reader_Implementors_Guide#Live_Regions).

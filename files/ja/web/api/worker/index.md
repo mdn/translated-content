@@ -8,7 +8,7 @@ slug: Web/API/Worker
 
 ワーカーは同じ親ページの同一 [オリジン](/ja/docs/Web/Security/Same-origin_policy) 内でホストされている限り、他の新しいワーカーを生成することができます (注: 入れ子になったワーカーは [WebKit では未実装です](https://bugs.webkit.org/show_bug.cgi?id=22723))。
 
-[利用可能なすべてのインターフェイスと関数](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers "Web Worker で利用可能な関数とクラス") がすべて `Worker` の中で利用できるとは限りません。ワーカーはネットワーク通信のために {{domxref("XMLHttpRequest")}} を使うことができますが、 `responseXML` 属性と `channel` 属性は常に `null` になります。 ([`fetch`](/ja/docs/Web/API/Fetch_API) も利用可能であり、このような制限はありません。)
+[利用可能なすべてのインターフェイスと関数](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) がすべて `Worker` の中で利用できるとは限りません。ワーカーはネットワーク通信のために {{domxref("XMLHttpRequest")}} を使うことができますが、 `responseXML` 属性と `channel` 属性は常に `null` になります。 ([`fetch`](/ja/docs/Web/API/Fetch_API) も利用可能であり、このような制限はありません。)
 
 ## コンストラクター
 

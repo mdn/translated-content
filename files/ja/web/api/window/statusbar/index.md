@@ -46,10 +46,8 @@ objRef = window.statusbar
 
 | 仕様書                                                                                                                       | 状態                             | 備考 |
 | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-window-statusbar',
-        'Window.statusbar')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-window-statusbar',
-        'Window.statusbar')}}     | {{Spec2('HTML5 W3C')}}     |      |
+| {{SpecName('HTML WHATWG', 'browsers.html#dom-window-statusbar', 'Window.statusbar')}} | {{Spec2('HTML WHATWG')}} |      |
+| {{SpecName('HTML5 W3C', 'browsers.html#dom-window-statusbar', 'Window.statusbar')}}     | {{Spec2('HTML5 W3C')}}     |      |
 
 ## ブラウザーの互換性
 

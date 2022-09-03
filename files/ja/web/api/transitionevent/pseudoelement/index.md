@@ -4,7 +4,7 @@ slug: Web/API/TransitionEvent/pseudoElement
 ---
 {{ apiref("CSSOM") }} {{SeeCompatTable}}
 
-**`TransitionEvent.pseudoElement`** 読み取り専用プロパティは、 {{domxref("DOMString")}} であり、 `'::'` で始まり、アニメーションが実行される[疑似要素](/ja/docs/Web/CSS/Pseudo-elements "/en-US/docs/Web/CSS/Pseudo-elements")の名前が含まれています。トランジションが擬似要素で実行されない場合は、要素は空文字です: `''` 。
+**`TransitionEvent.pseudoElement`** 読み取り専用プロパティは、 {{domxref("DOMString")}} であり、 `'::'` で始まり、アニメーションが実行される[疑似要素](/ja/docs/Web/CSS/Pseudo-elements)の名前が含まれています。トランジションが擬似要素で実行されない場合は、要素は空文字です: `''` 。
 
 ## 構文
 

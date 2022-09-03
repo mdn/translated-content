@@ -41,17 +41,17 @@ translation_of: Web/HTML/Attributes/accept
 
 ```html
 <p>
-	<label for="soundFile">Select an audio file:</label>
-	<input type="file" id="soundFile" accept="audio/*">
-	</p>
-	<p>
-	<label for="videoFile">Select a video file:</label>
-	<input type="file" id="videoFile" accept="video/*">
-	</p>
-	<p>
-	<label for="imageFile">Select some images:</label>
-	<input type="file" id="imageFile" accept="image/*" multiple>
-	</p>
+  <label for="soundFile">Select an audio file:</label>
+  <input type="file" id="soundFile" accept="audio/*">
+  </p>
+  <p>
+  <label for="videoFile">Select a video file:</label>
+  <input type="file" id="videoFile" accept="video/*">
+  </p>
+  <p>
+  <label for="imageFile">Select some images:</label>
+  <input type="file" id="imageFile" accept="image/*" multiple>
+  </p>
 ```
 
 {{EmbedLiveSample('simple_example', '100%', 200)}}

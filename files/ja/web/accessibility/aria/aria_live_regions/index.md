@@ -138,7 +138,7 @@ renderPlanetInfoButton.addEventListener('click', event => {
 The Paciello Group は、[ライブリージョンのサポート状況についての情報](https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/) (2014) をいくつかもっています。Paul Jadam は特に [aira-atomic と aria-relevant のサポート](http://pauljadam.com/demos/aria-atomic-relevant.html)についてのリサーチをしました。
 
 1. **`aria-atomic`**: `aria-atomic=BOOLEAN` は領域の一部だけが変更された場合でも、スクリーンリーダーが常にライブリージョン全体を読み上げるかどうかを設定します。可能な設定は `false` または `true` で、デフォルトは `false` です。
-2. [**``aria-relevant**](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute): `aria-relevant=[LIST_OF_CHANGES]` はどういったタイプの変更がライブリージョンに関連するかを設定します。可能な設定は `additions`、`removals`、`text`、`all` で、 `additions text` がデフォルトです。
+2. [**`aria-relevant`**](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute): `aria-relevant=[LIST_OF_CHANGES]` はどういったタイプの変更がライブリージョンに関連するかを設定します。可能な設定は `additions`、`removals`、`text`、`all` で、 `additions text` がデフォルトです。
 3. **`aria-labelledby`**: `aria-labelledby=[IDLIST]` は領域とラベルを関連付けるために使われます。`aria-controls` と似ていますが、複数のラベルを領域へ関連付けられ、複数のラベル識別子は空白によって区切られます。
 4. **`aria-describedby`**: `aria-describedby=[IDLIST]` は領域と説明の関連付けを行います。`aria-controls` と似ていますが、複数の説明を領域を関連付けられ、説明の識別子は空白によって区切られます。
 

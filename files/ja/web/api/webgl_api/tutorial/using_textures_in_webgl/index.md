@@ -36,7 +36,7 @@ function handleTextureLoaded(image, texture) {
 
 実際にテクスチャを作成するために、新しいテクスチャが操作したいカレントのテクスチャであることを、`gl.TEXTURE_2D` にバインドすることで指定します。その後読み込んだ画像は、テクスチャとして書き込むために `texImage2D()` へ渡されます。
 
-> **Note:** **注記:** テクスチャの幅と高さのピクセル数は**ほとんどの場合**において、それぞれ 2 のべき乗 (1、2、4、8、16……) にしなければなりません。例外については、"[2 のべき乗ではないテクスチャ](/ja/docs/Web/WebGL/Using_textures_in_WebGL#Non_power-of-two_textures "Web/WebGL/Using_textures_in_WebGL#Using_non_Power-Of-Two_textures")" のセクションをご覧ください。
+> **Note:** **注記:** テクスチャの幅と高さのピクセル数は**ほとんどの場合**において、それぞれ 2 のべき乗 (1、2、4、8、16……) にしなければなりません。例外については、"[2 のべき乗ではないテクスチャ](/ja/docs/Web/WebGL/Using_textures_in_WebGL#Non_power-of-two_textures)" のセクションをご覧ください。
 
 その次の 2 行はテクスチャのフィルタリングを設定しています。これは画像が拡大縮小される際に適用するフィルタの設定です。今回は、画像を拡大する場合はリニアフィルタ、縮小する場合はミップマップを使用します。ミップマップは `generateMipMap()` を呼び出すことで生成され、最後は null を `gl.TEXTURE_2D` にバインドしてテクスチャの操作を終了することで完了します。
 
@@ -192,7 +192,7 @@ GL は 32 個のテクスチャレジスタを提供し、その 1 つ目が `gl
 
 ## クロスドメインのテクスチャ
 
-WebGL のテクスチャの読み込みは、クロスドメインアクセス制御に従います。コンテンツで他のドメインからテクスチャを読み込むためには、CORS で許可を得なければなりません。CORS について詳しくは、[HTTP access control](/ja/docs/HTTP_access_control "HTTP access control") をご覧ください。
+WebGL のテクスチャの読み込みは、クロスドメインアクセス制御に従います。コンテンツで他のドメインからテクスチャを読み込むためには、CORS で許可を得なければなりません。CORS について詳しくは、[HTTP access control](/ja/docs/HTTP_access_control) をご覧ください。
 
 CORS で許可された画像を WebGL のテクスチャとして使用する方法の説明を [こちらの hacks.mozilla.org の記事](http://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) に掲載していますので、[サンプル](http://people.mozilla.org/~bjacob/webgltexture-cors-js.html) と合わせてご覧ください。
 

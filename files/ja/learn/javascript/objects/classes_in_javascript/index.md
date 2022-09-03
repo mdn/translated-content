@@ -120,7 +120,7 @@ function BlueGlassBrick() {
     ここで我々に馴染み深い [`create()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/create) に再度助けてもらいましょう。この場合に新しいオブジェクトを作ってそれを `Teacher.prototype` の値とするのに使います。新しいオブジェクトは `Person.prototype` を自身のプロトタイプとして保持し、それがゆえに(必要となる時には) `Person.prototype` 上で利用できるすべてのメソッドを継承します。
 
 2. 先に進む前にもう一つやることがあります。
-    最後の行を追加した後、` Teacher.``prototype ` の `constructor` プロパティは `Person()` と同じになりました。なぜなら、`Person.prototype` からプロパティを継承するオブジェクトを参照するように `Teacher.prototype` を設定しただけだからです。コードを保存し、ブラウザーでページを読み込み、コンソールに `Teacher.prototype.constructor` と入力して確認してみてください。
+    最後の行を追加した後、`Teacher.prototype` の `constructor` プロパティは `Person()` と同じになりました。なぜなら、`Person.prototype` からプロパティを継承するオブジェクトを参照するように `Teacher.prototype` を設定しただけだからです。コードを保存し、ブラウザーでページを読み込み、コンソールに `Teacher.prototype.constructor` と入力して確認してみてください。
 3. これは問題になるかもしれません、なので以下の内容をすぐに設定しましょう。 ソースコードにまた戻って最後に以下の行を追加しましょう。
 
     ```js
