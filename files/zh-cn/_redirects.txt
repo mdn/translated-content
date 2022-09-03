@@ -1816,8 +1816,6 @@
 /zh-CN/docs/Web/API/Window/ongamepadconnected	/zh-CN/docs/Web/API/Window/gamepadconnected_event
 /zh-CN/docs/Web/API/Window/ongamepaddisconnected	/zh-CN/docs/Web/API/Window/gamepaddisconnected_event
 /zh-CN/docs/Web/API/Window/onhashchange	/zh-CN/docs/Web/API/Window/hashchange_event
-/zh-CN/docs/Web/API/Window/onmozbeforepaint	/zh-CN/docs/orphaned/Web/API/Window/onmozbeforepaint
-/zh-CN/docs/Web/API/Window/onpaint	/zh-CN/docs/orphaned/Web/API/Window/onpaint
 /zh-CN/docs/Web/API/Window/onpopstate	/zh-CN/docs/Web/API/Window/popstate_event
 /zh-CN/docs/Web/API/Window/onresize	/zh-CN/docs/Web/API/Window/resize_event
 /zh-CN/docs/Web/API/Window/onunload	/zh-CN/docs/Web/API/Window/unload_event

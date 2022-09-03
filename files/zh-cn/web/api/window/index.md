@@ -349,8 +349,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Represents an event handler that will run when a gamepad is connected (when the {{event('gamepadconnected')}} event fires).
 - {{domxref("Window.ongamepaddisconnected")}}
   - : Represents an event handler that will run when a gamepad is disconnected (when the {{event('gamepaddisconnected')}} event fires).
-- {{domxref("Window.onmozbeforepaint")}}
-  - : An event handler property for the `MozBeforePaint` event, which is sent before repainting the window if the event has been requested by a call to the {{domxref("Window.mozRequestAnimationFrame()")}} method.
 - {{domxref("Window.onpaint")}}
   - : An event handler property for paint events on the window.
 - {{domxref("Window.onrejectionhandled")}} {{experimental_inline}}

@@ -34375,14 +34375,6 @@
     "modified": "2019-03-18T21:36:54.017Z",
     "contributors": ["eiddie"]
   },
-  "orphaned/Web/API/Window/onmozbeforepaint": {
-    "modified": "2019-03-18T21:35:53.123Z",
-    "contributors": ["plightfield"]
-  },
-  "orphaned/Web/API/Window/onpaint": {
-    "modified": "2019-03-23T22:06:38.393Z",
-    "contributors": ["JARROWXU"]
-  },
   "orphaned/Web/API/Window/onuserproximity": {
     "modified": "2020-10-15T22:25:33.168Z",
     "contributors": ["xAmast"]
