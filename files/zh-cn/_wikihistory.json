@@ -33998,10 +33998,6 @@
     "modified": "2020-10-15T22:01:11.954Z",
     "contributors": ["RainSlide", "zhihongzhong"]
   },
-  "orphaned/Web/API/CanvasRenderingContext2D/drawWidgetAsOnScreen": {
-    "modified": "2019-03-23T22:24:47.226Z",
-    "contributors": ["teoli", "YeClimEric"]
-  },
   "orphaned/Web/API/ChildNode": {
     "modified": "2020-10-15T21:30:05.058Z",
     "contributors": [
