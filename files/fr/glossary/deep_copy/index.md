@@ -1,6 +1,8 @@
 ---
 title: Copie profonde
 slug: Glossary/Deep_copy
+l10n:
+  sourceCommit: 4cf1362de4a7634f5f21deba949973cc240f5fd4
 ---
 {{MDNSidebar}}
 
