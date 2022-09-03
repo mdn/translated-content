@@ -282,8 +282,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : 按指定页数滚动当前文档。
 - {{domxref("Window.scrollTo()")}}
   - : 滚动到文档中的特定坐标集。
-- {{domxref("Window.setCursor()")}} {{Non-standard_inline}} (top-level XUL windows only)
-  - : 更改当前窗口的光标。
 - {{domxref("Window.setImmediate()")}}
   - : 在浏览器完成其他繁重任务后执行一个函数。
 - {{domxref("Window.setResizable()")}} {{Non-standard_inline}}

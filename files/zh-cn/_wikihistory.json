@@ -34379,10 +34379,6 @@
     "modified": "2020-10-15T22:25:33.168Z",
     "contributors": ["xAmast"]
   },
-  "orphaned/Web/API/Window/setCursor": {
-    "modified": "2019-03-23T22:06:17.696Z",
-    "contributors": ["tsilone"]
-  },
   "orphaned/Web/API/XDomainRequest": {
     "modified": "2019-03-23T23:03:13.932Z",
     "contributors": ["biqing", "cungen"]
