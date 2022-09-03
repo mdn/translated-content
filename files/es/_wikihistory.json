@@ -3300,10 +3300,6 @@
     "modified": "2019-03-23T22:06:34.982Z",
     "contributors": ["BrodaNoel"]
   },
-  "Web/API/BlobBuilder": {
-    "modified": "2019-03-23T22:49:30.131Z",
-    "contributors": ["BrodaNoel", "japho"]
-  },
   "Web/API/CSSRule": {
     "modified": "2019-03-23T23:58:11.498Z",
     "contributors": ["SphinxKnight", "fscholz", "khalid32", "teoli", "HenryGR"]
@@ -10478,33 +10474,6 @@
       "RJacinto"
     ]
   },
-  "Web/JavaScript/A_re-introduction_to_JavaScript": {
-    "modified": "2020-09-01T08:31:36.135Z",
-    "contributors": [
-      "Nachec",
-      "pmcarballo",
-      "VictorSan45",
-      "DaniNz",
-      "jlopezfdez",
-      "mariodev12",
-      "javier_junin",
-      "GdoSan",
-      "unaisainz",
-      "oleurud",
-      "JavierHspn",
-      "jlmurgas",
-      "rivacubano",
-      "aaguilera",
-      "StripTM",
-      "bicentenario",
-      "NatiiDC",
-      "NicolasMendoza",
-      "LeoHirsch",
-      "lomejordejr",
-      "rogeliomtx",
-      "Jarkaos"
-    ]
-  },
   "Web/JavaScript/About_JavaScript": {
     "modified": "2020-09-12T13:33:01.910Z",
     "contributors": [
@@ -10937,6 +10906,33 @@
       "Bluterg",
       "jairoambunad",
       "geinerjv"
+    ]
+  },
+  "Web/JavaScript/Language_Overview": {
+    "modified": "2020-09-01T08:31:36.135Z",
+    "contributors": [
+      "Nachec",
+      "pmcarballo",
+      "VictorSan45",
+      "DaniNz",
+      "jlopezfdez",
+      "mariodev12",
+      "javier_junin",
+      "GdoSan",
+      "unaisainz",
+      "oleurud",
+      "JavierHspn",
+      "jlmurgas",
+      "rivacubano",
+      "aaguilera",
+      "StripTM",
+      "bicentenario",
+      "NatiiDC",
+      "NicolasMendoza",
+      "LeoHirsch",
+      "lomejordejr",
+      "rogeliomtx",
+      "Jarkaos"
     ]
   },
   "Web/JavaScript/Memory_Management": {
@@ -13094,10 +13090,6 @@
       "willemsh"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/WeakMap/clear": {
-    "modified": "2020-10-15T22:13:14.699Z",
-    "contributors": ["xochilpili"]
-  },
   "Web/JavaScript/Reference/Global_Objects/WeakMap/delete": {
     "modified": "2019-03-23T22:25:14.754Z",
     "contributors": ["xochilpili", "frank-orellana"]
@@ -14616,6 +14608,10 @@
     "modified": "2019-03-23T22:26:11.317Z",
     "contributors": ["SoftwareRVG"]
   },
+  "conflicting/Web/API/Blob": {
+    "modified": "2019-03-23T22:49:30.131Z",
+    "contributors": ["BrodaNoel", "japho"]
+  },
   "conflicting/Web/API/CanvasRenderingContext2D": {
     "modified": "2019-03-23T22:09:10.185Z",
     "contributors": ["alinarezrangel"]
@@ -14954,6 +14950,10 @@
   "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
     "modified": "2020-03-12T19:47:17.832Z",
     "contributors": ["lajaso", "jpmontoya182"]
+  },
+  "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
+    "modified": "2020-10-15T22:13:14.699Z",
+    "contributors": ["xochilpili"]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {
     "modified": "2019-03-23T22:08:25.338Z",

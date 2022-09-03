@@ -7021,10 +7021,6 @@
     "modified": "2020-10-15T21:55:27.760Z",
     "contributors": ["loella16", "Hennek"]
   },
-  "Web/API/BlobBuilder": {
-    "modified": "2020-10-15T22:05:47.307Z",
-    "contributors": ["velkro", "jgroc-de"]
-  },
   "Web/API/BlobEvent": {
     "modified": "2020-10-15T22:01:50.494Z",
     "contributors": ["SphinxKnight", "illaweb35", "Sheppy"]
@@ -22068,38 +22064,6 @@
       "Mario"
     ]
   },
-  "Web/JavaScript/A_re-introduction_to_JavaScript": {
-    "modified": "2020-07-28T02:45:40.027Z",
-    "contributors": [
-      "Gcob",
-      "SphinxKnight",
-      "takman1",
-      "yoanmalie",
-      "pimpin",
-      "elWombator",
-      "mbrehin",
-      "ecolinet",
-      "arthurlacoste",
-      "Goofy",
-      "kdex",
-      "TheoDardel",
-      "kai23",
-      "teoli",
-      "tregagnon",
-      "Laurent_Lyaudet",
-      "palmsnipe",
-      "XiBe",
-      "Sheppy",
-      "quentinbdx",
-      "JackPotte",
-      "Boa",
-      "Mgjbot",
-      "Ame Nomade",
-      "El riiico",
-      "BenoitL",
-      "Fredchat"
-    ]
-  },
   "Web/JavaScript/About_JavaScript": {
     "modified": "2020-03-12T19:36:54.184Z",
     "contributors": [
@@ -22426,6 +22390,38 @@
       "DocMcBrown",
       "delislejm",
       "goofy_bz"
+    ]
+  },
+  "Web/JavaScript/Language_Overview": {
+    "modified": "2020-07-28T02:45:40.027Z",
+    "contributors": [
+      "Gcob",
+      "SphinxKnight",
+      "takman1",
+      "yoanmalie",
+      "pimpin",
+      "elWombator",
+      "mbrehin",
+      "ecolinet",
+      "arthurlacoste",
+      "Goofy",
+      "kdex",
+      "TheoDardel",
+      "kai23",
+      "teoli",
+      "tregagnon",
+      "Laurent_Lyaudet",
+      "palmsnipe",
+      "XiBe",
+      "Sheppy",
+      "quentinbdx",
+      "JackPotte",
+      "Boa",
+      "Mgjbot",
+      "Ame Nomade",
+      "El riiico",
+      "BenoitL",
+      "Fredchat"
     ]
   },
   "Web/JavaScript/Memory_Management": {
@@ -25806,10 +25802,6 @@
     "modified": "2020-10-15T21:30:53.509Z",
     "contributors": ["SphinxKnight", "316k", "Spotinux"]
   },
-  "Web/JavaScript/Reference/Global_Objects/WeakMap/clear": {
-    "modified": "2020-10-15T21:30:46.863Z",
-    "contributors": ["SphinxKnight"]
-  },
   "Web/JavaScript/Reference/Global_Objects/WeakMap/delete": {
     "modified": "2020-10-15T21:31:00.196Z",
     "contributors": ["SphinxKnight"]
@@ -28140,6 +28132,10 @@
       "dattaz"
     ]
   },
+  "conflicting/Web/API/Blob": {
+    "modified": "2020-10-15T22:05:47.307Z",
+    "contributors": ["velkro", "jgroc-de"]
+  },
   "conflicting/Web/API/Document": {
     "modified": "2019-03-18T21:40:14.903Z",
     "contributors": ["loella16"]
@@ -28151,6 +28147,10 @@
   "conflicting/Web/API/Element/clientWidth": {
     "modified": "2019-03-23T22:07:26.300Z",
     "contributors": ["ap369"]
+  },
+  "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
+    "modified": "2020-10-15T21:30:46.863Z",
+    "contributors": ["SphinxKnight"]
   },
   "orphaned/Glossary/DHTML": {
     "modified": "2019-03-24T00:02:32.004Z",

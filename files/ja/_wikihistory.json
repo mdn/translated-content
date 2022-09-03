@@ -5967,10 +5967,6 @@
     "modified": "2020-10-15T21:21:47.648Z",
     "contributors": ["silverskyvicto", "SphinxKnight", "fscholz", "ethertank"]
   },
-  "Web/API/BlobBuilder": {
-    "modified": "2020-10-15T22:03:45.714Z",
-    "contributors": ["silverskyvicto", "s-onuma"]
-  },
   "Web/API/BlobEvent": {
     "modified": "2020-10-15T21:47:56.465Z",
     "contributors": ["Wind1808", "Marsf", "YuichiNukiyama"]
@@ -23129,23 +23125,6 @@
       "RxOrca"
     ]
   },
-  "Web/JavaScript/A_re-introduction_to_JavaScript": {
-    "modified": "2020-07-24T03:48:20.022Z",
-    "contributors": [
-      "pcw",
-      "mellun",
-      "negibouze",
-      "SphinxKnight",
-      "Uemmra3",
-      "taketaku",
-      "yyss",
-      "ethertank",
-      "Potappo",
-      "Yuichirou",
-      "hokuto",
-      "Mgjbot"
-    ]
-  },
   "Web/JavaScript/About_JavaScript": {
     "modified": "2020-03-12T19:36:54.957Z",
     "contributors": [
@@ -23566,6 +23545,23 @@
       "ethertank",
       "sii",
       "shirayuki"
+    ]
+  },
+  "Web/JavaScript/Language_Overview": {
+    "modified": "2020-07-24T03:48:20.022Z",
+    "contributors": [
+      "pcw",
+      "mellun",
+      "negibouze",
+      "SphinxKnight",
+      "Uemmra3",
+      "taketaku",
+      "yyss",
+      "ethertank",
+      "Potappo",
+      "Yuichirou",
+      "hokuto",
+      "Mgjbot"
     ]
   },
   "Web/JavaScript/Memory_Management": {
@@ -28213,10 +28209,6 @@
     "modified": "2020-11-14T11:30:37.104Z",
     "contributors": ["mfuji09"]
   },
-  "Web/JavaScript/Reference/Global_Objects/WeakMap/clear": {
-    "modified": "2019-03-23T22:54:31.407Z",
-    "contributors": ["teoli", "YuichiNukiyama", "shide55"]
-  },
   "Web/JavaScript/Reference/Global_Objects/WeakMap/delete": {
     "modified": "2020-11-14T11:09:43.834Z",
     "contributors": ["mfuji09", "segayuu", "YuichiNukiyama", "shide55"]
@@ -31169,6 +31161,10 @@
     "modified": "2020-10-15T22:19:08.330Z",
     "contributors": ["Wind1808"]
   },
+  "conflicting/Web/API/Blob": {
+    "modified": "2020-10-15T22:03:45.714Z",
+    "contributors": ["silverskyvicto", "s-onuma"]
+  },
   "conflicting/Web/API/BroadcastChannel/message_event": {
     "modified": "2020-10-15T22:19:53.795Z",
     "contributors": ["Wind1808"]
@@ -31673,6 +31669,10 @@
       "Mgjbot",
       "Shimono"
     ]
+  },
+  "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
+    "modified": "2019-03-23T22:54:31.407Z",
+    "contributors": ["teoli", "YuichiNukiyama", "shide55"]
   },
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {
     "modified": "2020-03-12T19:48:11.857Z",

@@ -1093,7 +1093,7 @@
 /es/docs/JavaScript/Referencia/Sentencias/try...catch	/es/docs/Web/JavaScript/Reference/Statements/try...catch
 /es/docs/JavaScript/Referencia/Sentencias/var	/es/docs/Web/JavaScript/Reference/Statements/var
 /es/docs/JavaScript/Referencia/Sentencias/while	/es/docs/Web/JavaScript/Reference/Statements/while
-/es/docs/JavaScript/Una_nueva_introducción_a_JavaScript	/es/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+/es/docs/JavaScript/Una_nueva_introducción_a_JavaScript	/es/docs/Web/JavaScript/Language_Overview
 /es/docs/Learn/Accessibility/Qué_es_la_accesibilidad	/es/docs/Learn/Accessibility/What_is_accessibility
 /es/docs/Learn/Aprender_y_obtener_ayuda	/es/docs/Learn/Learning_and_getting_help
 /es/docs/Learn/CSS/Building_blocks/Cascada_y_herencia	/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
@@ -1584,6 +1584,7 @@
 /es/docs/Web/API/BatteryManager/onchargingchange	/es/docs/Web/API/BatteryManager/chargingchange_event
 /es/docs/Web/API/BatteryManager/onlevelchange	/es/docs/Web/API/BatteryManager/levelchange_event
 /es/docs/Web/API/Blob.Blob	/es/docs/Web/API/Blob/Blob
+/es/docs/Web/API/BlobBuilder	/es/docs/conflicting/Web/API/Blob
 /es/docs/Web/API/CSSStyleSheet.insertRule	/es/docs/Web/API/CSSStyleSheet/insertRule
 /es/docs/Web/API/CanvasImageSource	/es/docs/conflicting/Web/API/CanvasRenderingContext2D
 /es/docs/Web/API/Canvas_API/A_basic_ray-caster	/es/docs/orphaned/Web/API/Canvas_API/A_basic_ray-caster
@@ -2091,6 +2092,7 @@
 /es/docs/Web/HTTP/Status/8080	/es/docs/Web/HTTP/Status/413
 /es/docs/Web/HTTP/mecanismo_actualizacion_protocolo	/es/docs/Web/HTTP/Protocol_upgrade_mechanism
 /es/docs/Web/HTTP/recursos_y_especificaciones	/es/docs/Web/HTTP/Resources_and_specifications
+/es/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/es/docs/Web/JavaScript/Language_Overview
 /es/docs/Web/JavaScript/Acerca_de_JavaScript	/es/docs/Web/JavaScript/About_JavaScript
 /es/docs/Web/JavaScript/Descripción_de_las_tecnologías_JavaScript	/es/docs/Web/JavaScript/JavaScript_technologies_overview
 /es/docs/Web/JavaScript/Gestion_de_Memoria	/es/docs/Web/JavaScript/Memory_Management
@@ -2212,6 +2214,7 @@
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 /es/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
+/es/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/es/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /es/docs/Web/JavaScript/Reference/Global_Objects/null	/es/docs/Web/JavaScript/Reference/Operators/null
 /es/docs/Web/JavaScript/Reference/Statements/import.meta	/es/docs/Web/JavaScript/Reference/Operators/import.meta
 /es/docs/Web/JavaScript/Referencia	/es/docs/Web/JavaScript/Reference
@@ -2538,7 +2541,7 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/URIError	/es/docs/Web/JavaScript/Reference/Global_Objects/URIError
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Uint8Array	/es/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/WeakMap	/es/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
-/es/docs/Web/JavaScript/Referencia/Objetos_globales/WeakMap/clear	/es/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/WeakMap/clear	/es/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/WeakMap/delete	/es/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/WeakMap/get	/es/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/get
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/WeakMap/has	/es/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/has
@@ -2632,8 +2635,8 @@
 /es/docs/Web/JavaScript/Referencia/Sentencias/var	/es/docs/Web/JavaScript/Reference/Statements/var
 /es/docs/Web/JavaScript/Referencia/Sentencias/while	/es/docs/Web/JavaScript/Reference/Statements/while
 /es/docs/Web/JavaScript/Referencia/template_strings	/es/docs/Web/JavaScript/Reference/Template_literals
-/es/docs/Web/JavaScript/Una_nueva_introducción_a_JavaScript	/es/docs/Web/JavaScript/A_re-introduction_to_JavaScript
-/es/docs/Web/JavaScript/Una_re-introducción_a_JavaScript	/es/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+/es/docs/Web/JavaScript/Una_nueva_introducción_a_JavaScript	/es/docs/Web/JavaScript/Language_Overview
+/es/docs/Web/JavaScript/Una_re-introducción_a_JavaScript	/es/docs/Web/JavaScript/Language_Overview
 /es/docs/Web/JavaScript/Vectores_tipados	/es/docs/Web/JavaScript/Typed_arrays
 /es/docs/Web/JavaScript/enumeracion_y_propietario_de_propiedades	/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties
 /es/docs/Web/MathML/Elemento	/es/docs/Web/MathML/Element

@@ -104,7 +104,7 @@
 /ru/docs/IndexedDB	/ru/docs/Web/API/IndexedDB_API
 /ru/docs/IndexedDB/Using_IndexedDB	/ru/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /ru/docs/JavaScript	/ru/docs/Web/JavaScript
-/ru/docs/JavaScript/A_re-introduction_to_JavaScript	/ru/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+/ru/docs/JavaScript/A_re-introduction_to_JavaScript	/ru/docs/Web/JavaScript/Language_Overview
 /ru/docs/JavaScript/Data_structures	/ru/docs/Web/JavaScript/Data_structures
 /ru/docs/JavaScript/Guide	/ru/docs/Web/JavaScript/Guide
 /ru/docs/JavaScript/Guide/Functions	/ru/docs/Web/JavaScript/Guide/Functions
@@ -705,6 +705,7 @@
 /ru/docs/Web/HTTP/Заголовки/X-XSS-Protection	/ru/docs/Web/HTTP/Headers/X-XSS-Protection
 /ru/docs/Web/HTTP/Куки	/ru/docs/Web/HTTP/Cookies
 /ru/docs/Web/HTTP/Кэширование	/ru/docs/Web/HTTP/Caching
+/ru/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/ru/docs/Web/JavaScript/Language_Overview
 /ru/docs/Web/JavaScript/Guide/Closures	/ru/docs/Web/JavaScript/Closures
 /ru/docs/Web/JavaScript/Guide/Details_of_the_Object_Model	/ru/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ru/docs/Web/JavaScript/Guide/EventLoop	/ru/docs/Web/JavaScript/EventLoop
@@ -762,6 +763,7 @@
 /ru/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight	/ru/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /ru/docs/Web/JavaScript/Reference/Global_Objects/String/contains	/ru/docs/Web/JavaScript/Reference/Global_Objects/String/includes
 /ru/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
+/ru/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/ru/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /ru/docs/Web/JavaScript/Reference/Global_Objects/null	/ru/docs/Web/JavaScript/Reference/Operators/null
 /ru/docs/Web/JavaScript/Reference/Global_Objects/uneval	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects
 /ru/docs/Web/JavaScript/Reference/Methods_Index	/ru/docs/Web/JavaScript/Reference
@@ -882,7 +884,7 @@
 /ru/docs/conflicting/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /ru/docs/en	/en-US/
 /ru/docs/Заглавная_страница	/ru/docs/Web
-/ru/docs/Повторное_введение_в_JavaScript	/ru/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+/ru/docs/Повторное_введение_в_JavaScript	/ru/docs/Web/JavaScript/Language_Overview
 /ru/docs/Руководство_по_JavaScript_1.5	/ru/docs/Web/JavaScript/Guide
 /ru/docs/Руководство_по_JavaScript_1.5/Операторы	/ru/docs/Web/JavaScript/Reference/Operators
 /ru/docs/Руководство_по_JavaScript_1.5/Операторы/Специальные_операторы	/ru/docs/Web/JavaScript/Reference/Operators

@@ -2095,7 +2095,7 @@
 /fr/docs/JSON	/fr/docs/Glossary/JSON
 /fr/docs/JavaScript	/fr/docs/Web/JavaScript
 /fr/docs/JavaScript/A_propos	/fr/docs/Web/JavaScript/About_JavaScript
-/fr/docs/JavaScript/A_re-introduction_to_JavaScript	/fr/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+/fr/docs/JavaScript/A_re-introduction_to_JavaScript	/fr/docs/Web/JavaScript/Language_Overview
 /fr/docs/JavaScript/Autres_outils_JavaScript	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /fr/docs/JavaScript/Gestion_de_la_mémoire	/fr/docs/Web/JavaScript/Memory_Management
 /fr/docs/JavaScript/Guide	/fr/docs/Web/JavaScript/Guide
@@ -2885,7 +2885,7 @@
 /fr/docs/JavaScript/Shells	/fr/docs/Web/JavaScript/Shells
 /fr/docs/JavaScript/Structures_de_données	/fr/docs/Web/JavaScript/Data_structures
 /fr/docs/JavaScript/Tableaux_typés	/fr/docs/Web/JavaScript/Typed_arrays
-/fr/docs/JavaScript/Une_réintroduction_à_JavaScript	/fr/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+/fr/docs/JavaScript/Une_réintroduction_à_JavaScript	/fr/docs/Web/JavaScript/Language_Overview
 /fr/docs/JavaScript_Guide	/fr/docs/Web/JavaScript/Guide
 /fr/docs/JavaScript_Guide/Aperçu_de_JavaScript	/fr/docs/Web/JavaScript/Guide/Introduction
 /fr/docs/JavaScript_Guide/Appel_de_fonctions	/fr/docs/Web/JavaScript/Guide/Functions
@@ -3593,7 +3593,7 @@
 /fr/docs/Tutoriel_canvas:Utilisation_de_base	/fr/docs/Web/API/Canvas_API/Tutorial/Basic_usage
 /fr/docs/Type_MIME_incorrect_pour_les_fichiers_CSS	/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types
 /fr/docs/Un_raycaster_basique_avec_canvas	/fr/docs/orphaned/Web/API/Canvas_API/A_basic_ray-caster
-/fr/docs/Une_réintroduction_à_JavaScript	/fr/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+/fr/docs/Une_réintroduction_à_JavaScript	/fr/docs/Web/JavaScript/Language_Overview
 /fr/docs/Useful_CSS_tips	/fr/docs/Web/CSS
 /fr/docs/Useful_CSS_tips/Color_and_Background	/fr/docs/Web/CSS/color_value
 /fr/docs/Useful_CSS_tips/Links	/fr/docs/Web/CSS/Pseudo-classes
@@ -3626,6 +3626,7 @@
 /fr/docs/Web/API/AnimationEvent.elapsedTime	/fr/docs/Web/API/AnimationEvent/elapsedTime
 /fr/docs/Web/API/AnimationEvent.pseudoElement	/fr/docs/Web/API/AnimationEvent/pseudoElement
 /fr/docs/Web/API/AudioContext/createGain	/fr/docs/Web/API/BaseAudioContext/createGain
+/fr/docs/Web/API/BlobBuilder	/fr/docs/conflicting/Web/API/Blob
 /fr/docs/Web/API/ByteString	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/Web/API/CSSMatrix	/fr/docs/Web/API/DOMMatrix
 /fr/docs/Web/API/Canvas_API/A_basic_ray-caster	/fr/docs/orphaned/Web/API/Canvas_API/A_basic_ray-caster
@@ -4823,6 +4824,7 @@
 /fr/docs/Web/HTTP/Public_Key_Pinning	/fr/docs/Web/Security/Certificate_Transparency
 /fr/docs/Web/HTTP/Requêtes_conditionnelles	/fr/docs/Web/HTTP/Conditional_requests
 /fr/docs/Web/JavaScript/A_propos	/fr/docs/Web/JavaScript/About_JavaScript
+/fr/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/fr/docs/Web/JavaScript/Language_Overview
 /fr/docs/Web/JavaScript/Autres_outils_JavaScript	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement	/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties
 /fr/docs/Web/JavaScript/Concurrence_et_boucle_des_événements	/fr/docs/Web/JavaScript/EventLoop
@@ -4999,6 +5001,7 @@
 /fr/docs/Web/JavaScript/Reference/Global_Objects/String/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toString
+/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/fr/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
 /fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet
 /fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
@@ -5684,7 +5687,7 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Uint8Array	/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Uint8ClampedArray	/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakMap	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
-/fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakMap/clear	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear
+/fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakMap/clear	/fr/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakMap/delete	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakMap/get	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/get
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakMap/has	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/has
@@ -5792,7 +5795,7 @@
 /fr/docs/Web/JavaScript/Structures_de_données	/fr/docs/Web/JavaScript/Data_structures
 /fr/docs/Web/JavaScript/Tableaux_typés	/fr/docs/Web/JavaScript/Typed_arrays
 /fr/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
-/fr/docs/Web/JavaScript/Une_réintroduction_à_JavaScript	/fr/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+/fr/docs/Web/JavaScript/Une_réintroduction_à_JavaScript	/fr/docs/Web/JavaScript/Language_Overview
 /fr/docs/Web/JavaScript/décoder_encoder_en_base64	/fr/docs/Glossary/Base64
 /fr/docs/Web/JavaScript/guide_de_demarrage	/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 /fr/docs/Web/MathML/Attribute/Valeurs	/fr/docs/Web/MathML/Attribute/Values

@@ -6345,10 +6345,6 @@
     "modified": "2020-10-15T21:06:53.138Z",
     "contributors": ["RainSlide", "li9269391", "xc2", "ziyunfei", "ethertank"]
   },
-  "Web/API/BlobBuilder": {
-    "modified": "2019-08-14T07:08:22.933Z",
-    "contributors": ["ziyunfei"]
-  },
   "Web/API/Bluetooth": {
     "modified": "2019-03-23T22:29:44.172Z",
     "contributors": ["githubyangwei", "yellowkingdom", "Joeny", "wth"]
@@ -24826,73 +24822,6 @@
       "lins05"
     ]
   },
-  "Web/JavaScript/A_re-introduction_to_JavaScript": {
-    "modified": "2020-12-11T11:33:32.340Z",
-    "contributors": [
-      "柳涤尘",
-      "SphinxKnight",
-      "BruceHong666",
-      "koo4",
-      "hechenxi",
-      "hufeicom",
-      "eMUQI",
-      "houfengqaz",
-      "licia-tia",
-      "necokeine",
-      "Pro-A",
-      "TianLangStudio",
-      "Frederick-S",
-      "123Jonne",
-      "fenglui",
-      "RainSlide",
-      "zhaoke2018",
-      "coldfog",
-      "edenpan",
-      "kanaza",
-      "LeoB-O",
-      "panle666",
-      "SAM.L",
-      "YRFT",
-      "Park-ma",
-      "LuoYun",
-      "mysmlz",
-      "OldisNewXrf",
-      "Jiasm",
-      "HoldDie",
-      "byoungd",
-      "TheLostXianXian",
-      "RockJerffreason",
-      "JayceZhang9602",
-      "funnyChinese",
-      "liubiantao",
-      "suxiesumiao",
-      "Jack-Q",
-      "w-halo",
-      "marsoln",
-      "Poisonloc",
-      "ngtmuzi",
-      "pramper",
-      "wangbin2015",
-      "Ende93",
-      "machao",
-      "Tienyz",
-      "susutou",
-      "xlyimi",
-      "ziyunfei",
-      "arniu",
-      "Breezewish",
-      "ticketock",
-      "teoli",
-      "xuxun",
-      "Joe_Zhao",
-      "xcffl",
-      "ethertank",
-      "Mgjbot",
-      "Physacco",
-      "Carrie zhxj",
-      "Laser"
-    ]
-  },
   "Web/JavaScript/About_JavaScript": {
     "modified": "2020-03-12T19:36:16.731Z",
     "contributors": [
@@ -25791,6 +25720,73 @@
       "ReyCG_sub",
       "teoli",
       "YuQiang.Yuan"
+    ]
+  },
+  "Web/JavaScript/Language_Overview": {
+    "modified": "2020-12-11T11:33:32.340Z",
+    "contributors": [
+      "柳涤尘",
+      "SphinxKnight",
+      "BruceHong666",
+      "koo4",
+      "hechenxi",
+      "hufeicom",
+      "eMUQI",
+      "houfengqaz",
+      "licia-tia",
+      "necokeine",
+      "Pro-A",
+      "TianLangStudio",
+      "Frederick-S",
+      "123Jonne",
+      "fenglui",
+      "RainSlide",
+      "zhaoke2018",
+      "coldfog",
+      "edenpan",
+      "kanaza",
+      "LeoB-O",
+      "panle666",
+      "SAM.L",
+      "YRFT",
+      "Park-ma",
+      "LuoYun",
+      "mysmlz",
+      "OldisNewXrf",
+      "Jiasm",
+      "HoldDie",
+      "byoungd",
+      "TheLostXianXian",
+      "RockJerffreason",
+      "JayceZhang9602",
+      "funnyChinese",
+      "liubiantao",
+      "suxiesumiao",
+      "Jack-Q",
+      "w-halo",
+      "marsoln",
+      "Poisonloc",
+      "ngtmuzi",
+      "pramper",
+      "wangbin2015",
+      "Ende93",
+      "machao",
+      "Tienyz",
+      "susutou",
+      "xlyimi",
+      "ziyunfei",
+      "arniu",
+      "Breezewish",
+      "ticketock",
+      "teoli",
+      "xuxun",
+      "Joe_Zhao",
+      "xcffl",
+      "ethertank",
+      "Mgjbot",
+      "Physacco",
+      "Carrie zhxj",
+      "Laser"
     ]
   },
   "Web/JavaScript/Memory_Management": {
@@ -30776,10 +30772,6 @@
       "ziyunfei"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/WeakMap/clear": {
-    "modified": "2019-03-23T22:23:38.007Z",
-    "contributors": ["teoli", "xgqfrms-GitHub", "xx1124961758", "xdsnet"]
-  },
   "Web/JavaScript/Reference/Global_Objects/WeakMap/delete": {
     "modified": "2019-03-23T23:13:54.509Z",
     "contributors": ["SphinxKnight", "teoli", "ziyunfei"]
@@ -33852,6 +33844,10 @@
       "xgqfrms-GitHub"
     ]
   },
+  "conflicting/Web/API/Blob": {
+    "modified": "2019-08-14T07:08:22.933Z",
+    "contributors": ["ziyunfei"]
+  },
   "conflicting/Web/API/Element/touchcancel_event": {
     "modified": "2020-10-15T22:29:23.086Z",
     "contributors": ["Carllllo", "anhaoan6"]
@@ -33883,6 +33879,10 @@
   "conflicting/Web/API/HTMLElement/drop_event": {
     "modified": "2020-07-25T06:39:24.729Z",
     "contributors": ["wiki", "鑫花", "wbamberg", "fscholz", "fanyer", "Ende93"]
+  },
+  "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
+    "modified": "2019-03-23T22:23:38.007Z",
+    "contributors": ["teoli", "xgqfrms-GitHub", "xx1124961758", "xdsnet"]
   },
   "learn": {
     "modified": "2020-07-16T22:43:49.854Z",

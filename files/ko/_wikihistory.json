@@ -7576,39 +7576,6 @@
       "JongChun"
     ]
   },
-  "Web/JavaScript/A_re-introduction_to_JavaScript": {
-    "modified": "2020-11-30T14:43:16.912Z",
-    "contributors": [
-      "woochul2",
-      "honggaruy",
-      "jaeminche",
-      "eunjungleecub",
-      "Teperi",
-      "Violet-Bora-Lee",
-      "jjuun",
-      "JaeyiHong",
-      "juddammu",
-      "limkukhyun",
-      "hyunggoo",
-      "ChalkPE",
-      "loslch",
-      "Kimchoky",
-      "pineoc",
-      "fureweb",
-      "zeallat",
-      "gnujoow",
-      "softage",
-      "oox",
-      "Jsfumato",
-      "stephenjang",
-      "cafrii",
-      "teoli",
-      "zziuni",
-      "JaehaAhn",
-      "Joonwon",
-      "Dyhan81"
-    ]
-  },
   "Web/JavaScript/About_JavaScript": {
     "modified": "2020-03-12T19:36:55.143Z",
     "contributors": [
@@ -7955,6 +7922,39 @@
   "Web/JavaScript/JavaScript_technologies_overview": {
     "modified": "2020-03-12T19:37:59.087Z",
     "contributors": ["alattalatta", "teoli", "ethertank", "jaemin_jo"]
+  },
+  "Web/JavaScript/Language_Overview": {
+    "modified": "2020-11-30T14:43:16.912Z",
+    "contributors": [
+      "woochul2",
+      "honggaruy",
+      "jaeminche",
+      "eunjungleecub",
+      "Teperi",
+      "Violet-Bora-Lee",
+      "jjuun",
+      "JaeyiHong",
+      "juddammu",
+      "limkukhyun",
+      "hyunggoo",
+      "ChalkPE",
+      "loslch",
+      "Kimchoky",
+      "pineoc",
+      "fureweb",
+      "zeallat",
+      "gnujoow",
+      "softage",
+      "oox",
+      "Jsfumato",
+      "stephenjang",
+      "cafrii",
+      "teoli",
+      "zziuni",
+      "JaehaAhn",
+      "Joonwon",
+      "Dyhan81"
+    ]
   },
   "Web/JavaScript/Memory_Management": {
     "modified": "2020-03-12T19:37:54.884Z",

@@ -108,7 +108,7 @@
 /ja/docs/ARIA	/ja/docs/Web/Accessibility/ARIA
 /ja/docs/ARIA/Accessible_Rich_Internet_Applications	/ja/docs/Web/Accessibility/ARIA
 /ja/docs/ARIA:_Accessible_Rich_Internet_Applications	/ja/docs/Web/Accessibility/ARIA
-/ja/docs/A_re-introduction_to_JavaScript	/ja/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+/ja/docs/A_re-introduction_to_JavaScript	/ja/docs/Web/JavaScript/Language_Overview
 /ja/docs/Aardvark_(external)	https://addons.mozilla.org/ja/firefox/addon/4111
 /ja/docs/About_JavaScript	/ja/docs/Web/JavaScript/About_JavaScript
 /ja/docs/About_WOFF	/ja/docs/Web/Guide/WOFF
@@ -2102,8 +2102,8 @@
 /ja/docs/Introduction_to_using_XPath_in_JavaScript	/ja/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /ja/docs/JSON	/ja/docs/Glossary/JSON
 /ja/docs/JavaScript	/ja/docs/Web/JavaScript
-/ja/docs/JavaScript/A_re-introduction_to_JavaScript	/ja/docs/Web/JavaScript/A_re-introduction_to_JavaScript
-/ja/docs/JavaScript/A_re-introduction_to_JavaScript-redirect-1	/ja/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+/ja/docs/JavaScript/A_re-introduction_to_JavaScript	/ja/docs/Web/JavaScript/Language_Overview
+/ja/docs/JavaScript/A_re-introduction_to_JavaScript-redirect-1	/ja/docs/Web/JavaScript/Language_Overview
 /ja/docs/JavaScript/About_JavaScript	/ja/docs/Web/JavaScript/About_JavaScript
 /ja/docs/JavaScript/About_JavaScript-redirect-1	/ja/docs/Web/JavaScript/About_JavaScript
 /ja/docs/JavaScript/Data_structures	/ja/docs/Web/JavaScript/Data_structures
@@ -3172,6 +3172,7 @@
 /ja/docs/Web/API/AudioTrackList/onchange	/ja/docs/conflicting/Web/API/AudioTrackList/change_event
 /ja/docs/Web/API/AudioTrackList/onremovetrack	/ja/docs/conflicting/Web/API/AudioTrackList/removetrack_event
 /ja/docs/Web/API/BaseAudioContext/onstatechange	/ja/docs/Web/API/BaseAudioContext/statechange_event
+/ja/docs/Web/API/BlobBuilder	/ja/docs/conflicting/Web/API/Blob
 /ja/docs/Web/API/Boolean	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ja/docs/Web/API/BroadcastChannel/onmessage	/ja/docs/conflicting/Web/API/BroadcastChannel/message_event
 /ja/docs/Web/API/BroadcastChannel/onmessageerror	/ja/docs/conflicting/Web/API/BroadcastChannel/messageerror_event
@@ -4501,6 +4502,7 @@
 /ja/docs/Web/HTTP/Server-Side_Access_Control	/ja/docs/Web/HTTP/CORS
 /ja/docs/Web/HTTP/X-Frame-Options	/ja/docs/Web/HTTP/Headers/X-Frame-Options
 /ja/docs/Web/Houdini	/ja/docs/Web/Guide/Houdini
+/ja/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/ja/docs/Web/JavaScript/Language_Overview
 /ja/docs/Web/JavaScript/Equality_comparisons_and_when_to_use_them	/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /ja/docs/Web/JavaScript/Getting_Started	/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 /ja/docs/Web/JavaScript/Guide/About	/ja/docs/Web/JavaScript/Guide/Introduction
@@ -4713,6 +4715,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint16Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint32Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint8Array
+/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/ja/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakSet
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
