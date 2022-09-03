@@ -34030,10 +34030,6 @@
     "modified": "2019-03-18T20:55:13.743Z",
     "contributors": ["Tommy-White", "xgqfrms-GitHub"]
   },
-  "orphaned/Web/API/Document/documentURIObject": {
-    "modified": "2019-03-24T00:17:51.431Z",
-    "contributors": ["teoli", "AshfaqHossain", "ziyunfei"]
-  },
   "orphaned/Web/API/DocumentOrShadowRoot": {
     "modified": "2020-10-15T21:55:35.186Z",
     "contributors": ["RainSlide", "bei6", "iainreid629"]
