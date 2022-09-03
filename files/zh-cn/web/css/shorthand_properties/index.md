@@ -19,7 +19,7 @@ CSS 规范定义简写属性的目的在于将那些关于同一主题的常见�
     background: url(images/bg.gif) no-repeat top right;
     ```
 
-    以上样式不会将 background 的 color 值设置为 `red，而是` {{cssxref("background-color")}} 的默认值 `transparent，因为第二条规则优先。`
+    以上样式不会将 background 的 color 值设置为 `red`，而是 {{cssxref("background-color")}} 的默认值 `transparent`，因为第二条规则优先。
 
 2. 关键词 inherit 只可以应用于单独属性（individual properties），如果应用于一个简写属性（shorthand property），则必须整体应用，而能对简写属性值的每一个部分单独应用。由于单独属性的漏掉的值会被它们的初始值（initial value）替代，因此不可能允许单个属性通过省略继承的。这意味着让一个属性的值使用继承值的唯一方法就是使用值是 inherit 的普通属性（longhand property）。
 3. 简写属性不试图强制它们替代属性的值的特定顺序。这适用于当这些属性使用不同类型的值时，因为这个时候顺序并不重要。但当几个属性可以设置相同值的时候，就没那么简单了。处理这些情况分以下几种类型：
