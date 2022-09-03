@@ -1607,6 +1607,50 @@
     "modified": "2019-03-24T00:17:24.579Z",
     "contributors": ["OoOoOoOo", "ziyunfei"]
   },
+  "Learn": {
+    "modified": "2020-07-16T22:43:49.854Z",
+    "contributors": [
+      "Roy-Tian",
+      "SirnoChan",
+      "mrg123",
+      "wangfangping",
+      "chentao106",
+      "916106840510",
+      "wushengde",
+      "MingdaHIT",
+      "JiaHua",
+      "Aslemonssss",
+      "SurfingFish",
+      "svarlamov",
+      "RanceLotusLee",
+      "miye",
+      "xmcgcg",
+      "codeofjackie",
+      "xixilog",
+      "Forbidden",
+      "Bearies",
+      "varcat",
+      "2526chen",
+      "zs808",
+      "gao5252",
+      "xcffl",
+      "sefer",
+      "xgqfrms-GitHub",
+      "fan19900404",
+      "WavinFlag",
+      "Simcookies",
+      "m4jing",
+      "liminjun",
+      "sunxiang",
+      "Ende93",
+      "Meteormatt",
+      "lunix01",
+      "27",
+      "chenhui7373",
+      "teoli",
+      "ziyunfei"
+    ]
+  },
   "Learn/Accessibility": {
     "modified": "2020-07-16T22:40:01.477Z",
     "contributors": ["shinexyt", "pixang", "yatarphae", "guaner", "chenghaihua"]
@@ -33860,18 +33904,6 @@
     "modified": "2020-10-15T22:30:05.652Z",
     "contributors": ["Carllllo"]
   },
-  "conflicting/Web/API/HTMLElement/drag_event": {
-    "modified": "2020-02-28T04:53:00.147Z",
-    "contributors": [
-      "鑫花",
-      "wbamberg",
-      "fscholz",
-      "towrabbit",
-      "xiazhe",
-      "tcatche",
-      "Ende93"
-    ]
-  },
   "conflicting/Web/API/HTMLElement/dragleave_event": {
     "modified": "2019-04-30T14:19:10.608Z",
     "contributors": ["wbamberg", "fscholz", "Bayes", "Ende93"]
@@ -33883,49 +33915,5 @@
   "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
     "modified": "2019-03-23T22:23:38.007Z",
     "contributors": ["teoli", "xgqfrms-GitHub", "xx1124961758", "xdsnet"]
-  },
-  "Learn": {
-    "modified": "2020-07-16T22:43:49.854Z",
-    "contributors": [
-      "Roy-Tian",
-      "SirnoChan",
-      "mrg123",
-      "wangfangping",
-      "chentao106",
-      "916106840510",
-      "wushengde",
-      "MingdaHIT",
-      "JiaHua",
-      "Aslemonssss",
-      "SurfingFish",
-      "svarlamov",
-      "RanceLotusLee",
-      "miye",
-      "xmcgcg",
-      "codeofjackie",
-      "xixilog",
-      "Forbidden",
-      "Bearies",
-      "varcat",
-      "2526chen",
-      "zs808",
-      "gao5252",
-      "xcffl",
-      "sefer",
-      "xgqfrms-GitHub",
-      "fan19900404",
-      "WavinFlag",
-      "Simcookies",
-      "m4jing",
-      "liminjun",
-      "sunxiang",
-      "Ende93",
-      "Meteormatt",
-      "lunix01",
-      "27",
-      "chenhui7373",
-      "teoli",
-      "ziyunfei"
-    ]
   }
 }

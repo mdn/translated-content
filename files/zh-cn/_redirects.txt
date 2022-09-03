@@ -1356,7 +1356,7 @@
 /zh-CN/docs/Web/API/Document/defaultView/resize_event	/zh-CN/docs/Web/API/Window/resize_event
 /zh-CN/docs/Web/API/Document/defaultView/storage_event	/zh-CN/docs/Web/API/Window/storage_event
 /zh-CN/docs/Web/API/Document/domConfig	/zh-CN/docs/Web/API/Document
-/zh-CN/docs/Web/API/Document/drag_event	/zh-CN/docs/conflicting/Web/API/HTMLElement/drag_event
+/zh-CN/docs/Web/API/Document/drag_event	/zh-CN/docs/Web/API/HTMLElement/drag_event
 /zh-CN/docs/Web/API/Document/dragend_event	/zh-CN/docs/Web/API/HTMLElement/dragend_event
 /zh-CN/docs/Web/API/Document/dragenter_event	/zh-CN/docs/Web/API/HTMLElement/dragenter_event
 /zh-CN/docs/Web/API/Document/dragleave_event	/zh-CN/docs/conflicting/Web/API/HTMLElement/dragleave_event
@@ -2095,7 +2095,7 @@
 /zh-CN/docs/Web/Events/dblclick	/zh-CN/docs/Web/API/Element/dblclick_event
 /zh-CN/docs/Web/Events/devicechange	/zh-CN/docs/Web/API/MediaDevices/devicechange_event
 /zh-CN/docs/Web/Events/deviceorientation	/zh-CN/docs/Web/API/Window/deviceorientation_event
-/zh-CN/docs/Web/Events/drag	/zh-CN/docs/conflicting/Web/API/HTMLElement/drag_event
+/zh-CN/docs/Web/Events/drag	/zh-CN/docs/Web/API/HTMLElement/drag_event
 /zh-CN/docs/Web/Events/dragend	/zh-CN/docs/Web/API/HTMLElement/dragend_event
 /zh-CN/docs/Web/Events/dragenter	/zh-CN/docs/Web/API/HTMLElement/dragenter_event
 /zh-CN/docs/Web/Events/dragleave	/zh-CN/docs/conflicting/Web/API/HTMLElement/dragleave_event
