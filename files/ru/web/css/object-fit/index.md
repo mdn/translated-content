@@ -9,7 +9,7 @@ translation_of: Web/CSS/object-fit
 ---
 {{CSSRef}}
 
-Свойство** `object-fit`** определяет, как содержимое заменяемого элемента, такого как [`<img>`](/ru/docs/Web/HTML/Element/img "The HTML <img> element embeds an image into the document. It is a replaced element.") или [`<video>`](/ru/docs/Web/HTML/Element/video "The HTML Video element (<video>) embeds a media player which supports video playback into the document."), должно заполнять контейнер относительно его высоты и ширины.
+Свойство** `object-fit`** определяет, как содержимое заменяемого элемента, такого как [`<img>`](/ru/docs/Web/HTML/Element/img) или [`<video>`](/ru/docs/Web/HTML/Element/video), должно заполнять контейнер относительно его высоты и ширины.
 
 {{EmbedInteractiveExample("pages/css/object-fit.html")}}
 
@@ -31,7 +31,7 @@ translation_of: Web/CSS/object-fit
 <!---->
 
 - `scale-down`
-  - : Контент изменяет размер, сравнивая разницу между `none` и `contain, `для того, чтобы найти наименьший конкретный размер объекта.
+  - : Контент изменяет размер, сравнивая разницу между `none` и `contain,`для того, чтобы найти наименьший конкретный размер объекта.
 
 ### Правильный синтаксис
 

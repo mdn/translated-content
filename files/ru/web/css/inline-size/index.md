@@ -5,7 +5,7 @@ translation_of: Web/CSS/inline-size
 ---
 {{CSSRef}}
 
-Свойство [CSS](/ru/docs/Web/CSS "CSS") **`inline-size`** определяет горизонтальные или вертикальные размеры блока в зависимости от режима написания (writing mode). Оно соответствует свойствам {{cssxref("width")}} и {{cssxref("height")}} и зависит от свойства {{cssxref("writing-mode")}}.
+Свойство [CSS](/ru/docs/Web/CSS) **`inline-size`** определяет горизонтальные или вертикальные размеры блока в зависимости от режима написания (writing mode). Оно соответствует свойствам {{cssxref("width")}} и {{cssxref("height")}} и зависит от свойства {{cssxref("writing-mode")}}.
 
 {{EmbedInteractiveExample("pages/css/inline-size.html")}}
 
