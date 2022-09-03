@@ -18,7 +18,9 @@ translation_of: Web/CSS/:-moz-focusring
 
 ## Синтаксис
 
-    :-moz-focusring
+```
+:-moz-focusring
+```
 
 ## Пример
 

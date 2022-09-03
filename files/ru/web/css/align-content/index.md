@@ -251,4 +251,4 @@ display.addEventListener('change', function (evt) {
 
 ## Смотрите также
 
-- [Использование гибких блоков CSS](../../CSS/Using_CSS_flexible_boxes "CSS/Using_CSS_flexible_boxes")
+- [Использование гибких блоков CSS](../../CSS/Using_CSS_flexible_boxes)

@@ -20,24 +20,26 @@ translation_of: Web/CSS/background-repeat
 
 ## Синтаксис
 
-    /*Ключевые значения*/
-    background-repeat: repeat-x;
-    background-repeat: repeat-y;
-    background-repeat: repeat;
-    ​​​​​​​background-repeat: space;
-    ​​​​​​​background-repeat: round;
-    ​​​​​​​background-repeat: no-repeat;
+```css
+/*Ключевые значения*/
+background-repeat: repeat-x;
+background-repeat: repeat-y;
+background-repeat: repeat;
+​​​​​​​background-repeat: space;
+​​​​​​​background-repeat: round;
+​​​​​​​background-repeat: no-repeat;
 
-    /*Два значения: горизонтальное | вертикальное*/
-    background-repeat: repeat space;
-    background-repeat: repeat repeat;
-    background-repeat: round space;
-    background-repeat: no-repeat round;
+/*Два значения: горизонтальное | вертикальное*/
+background-repeat: repeat space;
+background-repeat: repeat repeat;
+background-repeat: round space;
+background-repeat: no-repeat round;
 
-    /* Глобальные значения */
-    background-repeat: inherit;
-    background-repeat: initial;
-    background-repeat: unset;
+/* Глобальные значения */
+background-repeat: inherit;
+background-repeat: initial;
+background-repeat: unset;
+```
 
 ### Значения
 
@@ -132,4 +134,4 @@ div {
 
 ## Смотрите также
 
-- [Использование нескольких CSS фонов](/ru/docs/CSS/Using_CSS_multiple_backgrounds "CSS/Using_CSS_multiple_backgrounds")
+- [Использование нескольких CSS фонов](/ru/docs/CSS/Using_CSS_multiple_backgrounds)

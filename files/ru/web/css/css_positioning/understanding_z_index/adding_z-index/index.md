@@ -8,7 +8,7 @@ original_slug: Web/Guide/CSS/Understanding_z_index/Adding_z-index
 
 The first part of this article, [Stacking without the z-index property](/en/CSS/Understanding_z-index/Stacking_without_z-index "en/CSS/Understanding_z-index/Stacking_without_z-index"), explains how stacking is arranged by default. If you want to create a custom stacking order, you can use the {{cssxref("z-index")}} property on a [positioned](/ru/docs/Web/CSS/position#Types_of_positioning) element.
 
-Свойство `z-index` может иметь значение в целых числах (положительные, ноль, или отрицательные), что представляет собой позицию элемента вдоль оси z. Если вы не знакомы с\*\* **осью** \*\*z, представьте себе страницу как стопку слоёв, имеющих собственное порядковое число. Слои представлены в числовом порядке, with larger numbers above smaller numbers.
+Свойство `z-index` может иметь значение в целых числах (положительные, ноль, или отрицательные), что представляет собой позицию элемента вдоль оси z. Если вы не знакомы с **осью** z, представьте себе страницу как стопку слоёв, имеющих собственное порядковое число. Слои представлены в числовом порядке, with larger numbers above smaller numbers.
 
 - bottom layer _(farthest from the observer)_
 - ...

@@ -11,7 +11,9 @@ CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:last-child` на
 
 ## Синтаксис
 
-    element:last-child { style properties }
+```
+element:last-child { style properties }
+```
 
 ## Пример
 

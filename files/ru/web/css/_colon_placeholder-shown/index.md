@@ -3,7 +3,7 @@ title: ':placeholder-shown'
 slug: Web/CSS/:placeholder-shown
 translation_of: Web/CSS/:placeholder-shown
 ---
-{{CSSRef}}{{SeeCompatTable}}[CSS псевдокласс](/ru/docs/Web/CSS) **`:placeholder-shown`** представляет любой {{htmlElement("input")}} или {{htmlElement("textarea")}} элемент, который отображает в данный момент[ текст заполнитель (плейсхолдер)](/ru/docs/Web/HTML/Element/input#attr-placeholder).
+{{CSSRef}}{{SeeCompatTable}}[CSS псевдокласс](/ru/docs/Web/CSS) **`:placeholder-shown`** представляет любой {{htmlElement("input")}} или {{htmlElement("textarea")}} элемент, который отображает в данный момент [текст заполнитель (плейсхолдер)](/ru/docs/Web/HTML/Element/input#attr-placeholder).
 
 ```css
 /* Выбирает любой элемент с активным плейсхолдером */

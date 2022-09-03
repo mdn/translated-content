@@ -7,7 +7,7 @@ translation_of: Web/CSS/column-rule-color
 ---
 {{CSSRef}}
 
-[CSS ](/ru/docs/Web/CSS)свойство** `column-rule-color`** устанавливает цвет линии, расположенной между колонками при мультиколоночной вёрстке.
+[CSS](/ru/docs/Web/CSS) свойство **`column-rule-color`** устанавливает цвет линии, расположенной между колонками при мультиколоночной вёрстке.
 
 {{EmbedInteractiveExample("pages/css/column-rule-color.html")}}
 

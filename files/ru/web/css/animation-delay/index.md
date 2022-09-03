@@ -11,7 +11,7 @@ translation_of: Web/CSS/animation-delay
 
 ## Описание
 
-[CSS](/ru/docs/CSS "CSS") свойство **`animation-delay`** определяет время задержки перед стартом анимации.
+[CSS](/ru/docs/CSS) свойство **`animation-delay`** определяет время задержки перед стартом анимации.
 
 {{EmbedInteractiveExample("pages/css/animation-delay.html")}}
 
@@ -39,7 +39,7 @@ animation-delay: 2s, 4ms;
 
 ## Примеры
 
-Посмотрите [CSS-анимации](/ru/docs/CSS/CSS_animations "CSS/CSS_animations") для примера.
+Посмотрите [CSS-анимации](/ru/docs/CSS/CSS_animations) для примера.
 
 ## Спецификации
 
@@ -51,5 +51,5 @@ animation-delay: 2s, 4ms;
 
 ## Смотрите также
 
-- [Использование CSS-анимаций](/ru/docs/CSS/Tutorials/Using_CSS_animations "Tutorial about CSS animations")
+- [Использование CSS-анимаций](/ru/docs/CSS/Tutorials/Using_CSS_animations)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

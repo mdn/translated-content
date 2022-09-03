@@ -9,7 +9,7 @@ translation_of: Web/CSS/:read-write
 
 ## Описание
 
-CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы "Pseudo-classes") `:read-write` находит элементы, доступные для редактирования пользователем, такие как текстовые поля.
+CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:read-write` находит элементы, доступные для редактирования пользователем, такие как текстовые поля.
 
 ## Пример
 
@@ -34,4 +34,4 @@ input:read-write { background: #eee; }
 ## See also
 
 - [`:read-only`](/ru/docs/Web/CSS/:read-only)
-- HTML атрибут [`contenteditable`](/ru/docs/HTML/Content_Editable "HTML/Content Editable")
+- HTML атрибут [`contenteditable`](/ru/docs/HTML/Content_Editable)

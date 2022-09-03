@@ -9,7 +9,9 @@ translation_of: Web/CSS/Adjacent_sibling_combinator
 
 ## Синтаксис
 
-    former_element + target_element { style properties }
+```
+former_element + target_element { style properties }
+```
 
 ## Пример
 

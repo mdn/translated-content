@@ -20,7 +20,9 @@ input:default {
 
 ## Синтаксис
 
-    :default
+```
+:default
+```
 
 ## Пример
 
