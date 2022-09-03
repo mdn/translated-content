@@ -1,11 +1,6 @@
 ---
 title: Copie profonde
 slug: Glossary/Deep_copy
-tags:
-  - Glossaire
-  - Copie Profonde
-translation_of: Glossary/Deep-copy
-original_slug: Glossaire/Copie_profonde
 ---
 {{MDNSidebar}}
 
