@@ -34459,10 +34459,6 @@
     "modified": "2019-03-23T23:03:13.932Z",
     "contributors": ["biqing", "cungen"]
   },
-  "orphaned/Web/API/XMLHttpRequest/mozResponseArrayBuffer": {
-    "modified": "2020-08-01T02:48:55.334Z",
-    "contributors": ["MEDASSSSSSS", "YanxuGong"]
-  },
   "orphaned/Web/API/XMLHttpRequest/openRequest": {
     "modified": "2019-03-18T21:28:11.436Z",
     "contributors": ["Arktische"]
