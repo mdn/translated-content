@@ -34359,10 +34359,6 @@
     "modified": "2019-03-24T00:17:23.644Z",
     "contributors": ["ziyunfei", "teoli", "jsx"]
   },
-  "orphaned/Web/API/UIEvent/isChar": {
-    "modified": "2019-03-24T00:17:00.068Z",
-    "contributors": ["ziyunfei", "teoli", "jsx"]
-  },
   "orphaned/Web/API/WebSockets_API/WebSocket_Server_Vb.NET": {
     "modified": "2019-03-18T21:29:02.340Z",
     "contributors": ["xiaoyixiang"]

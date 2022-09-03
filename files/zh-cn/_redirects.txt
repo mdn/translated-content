@@ -402,7 +402,6 @@
 /zh-CN/docs/DOM/event.cancelable	/zh-CN/docs/Web/API/Event/cancelable
 /zh-CN/docs/DOM/event.currentTarget	/zh-CN/docs/Web/API/Event/currentTarget
 /zh-CN/docs/DOM/event.defaultPrevented	/zh-CN/docs/Web/API/Event/defaultPrevented
-/zh-CN/docs/DOM/event.isChar	/zh-CN/docs/orphaned/Web/API/UIEvent/isChar
 /zh-CN/docs/DOM/event.isTrusted	/zh-CN/docs/Web/API/Event/isTrusted
 /zh-CN/docs/DOM/event.pageY	/zh-CN/docs/Web/API/MouseEvent/pageY
 /zh-CN/docs/DOM/event.preventDefault	/zh-CN/docs/Web/API/Event/preventDefault
@@ -1435,7 +1434,6 @@
 /zh-CN/docs/Web/API/Element/removeAttributre	/zh-CN/docs/Web/API/Element/removeAttribute
 /zh-CN/docs/Web/API/Element/select_event	/zh-CN/docs/Web/API/HTMLInputElement/select_event
 /zh-CN/docs/Web/API/Event/CustomEvent	/zh-CN/docs/Web/API/CustomEvent
-/zh-CN/docs/Web/API/Event/isChar	/zh-CN/docs/orphaned/Web/API/UIEvent/isChar
 /zh-CN/docs/Web/API/Event/pageY	/zh-CN/docs/Web/API/MouseEvent/pageY
 /zh-CN/docs/Web/API/Event/禁用时间冒泡	/zh-CN/docs/Web/API/Event/cancelBubble
 /zh-CN/docs/Web/API/EventListener	/zh-CN/docs/Web/API/EventTarget/addEventListener
@@ -1721,7 +1719,6 @@
 /zh-CN/docs/Web/API/Touch.screenY	/zh-CN/docs/Web/API/Touch/screenY
 /zh-CN/docs/Web/API/TouchEvent.changedTouches	/zh-CN/docs/Web/API/TouchEvent/changedTouches
 /zh-CN/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/zh-CN/docs/Web/API/Pointer_events
-/zh-CN/docs/Web/API/UIEvent/isChar	/zh-CN/docs/orphaned/Web/API/UIEvent/isChar
 /zh-CN/docs/Web/API/UIEvent/pageX	/zh-CN/docs/Web/API/MouseEvent/pageX
 /zh-CN/docs/Web/API/UIEvent/pageY	/zh-CN/docs/Web/API/MouseEvent/pageY
 /zh-CN/docs/Web/API/UIEvent/视图	/zh-CN/docs/Web/API/UIEvent/view
@@ -1928,7 +1925,6 @@
 /zh-CN/docs/Web/API/event.cancelable	/zh-CN/docs/Web/API/Event/cancelable
 /zh-CN/docs/Web/API/event.currentTarget	/zh-CN/docs/Web/API/Event/currentTarget
 /zh-CN/docs/Web/API/event.defaultPrevented	/zh-CN/docs/Web/API/Event/defaultPrevented
-/zh-CN/docs/Web/API/event.isChar	/zh-CN/docs/orphaned/Web/API/UIEvent/isChar
 /zh-CN/docs/Web/API/event.isTrusted	/zh-CN/docs/Web/API/Event/isTrusted
 /zh-CN/docs/Web/API/event.pageY	/zh-CN/docs/Web/API/MouseEvent/pageY
 /zh-CN/docs/Web/API/event.preventDefault	/zh-CN/docs/Web/API/Event/preventDefault
