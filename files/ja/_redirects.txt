@@ -3216,7 +3216,7 @@
 /ja/docs/Web/API/Document/keyup_event	/ja/docs/Web/API/Element/keyup_event
 /ja/docs/Web/API/Document/onafterscriptexecute	/ja/docs/Web/API/Document/afterscriptexecute_event
 /ja/docs/Web/API/Document/onbeforescriptexecute	/ja/docs/Web/API/Document/beforescriptexecute_event
-/ja/docs/Web/API/Document/onfullscreenchange	/ja/docs/conflicting/Web/API/Document/fullscreenchange_event
+/ja/docs/Web/API/Document/onfullscreenchange	/ja/docs/Web/API/Document/fullscreenchange_event
 /ja/docs/Web/API/Document/onfullscreenerror	/ja/docs/Web/API/Document/fullscreenerror_event
 /ja/docs/Web/API/Document/onoffline	/ja/docs/Web/API/Window/offline_event
 /ja/docs/Web/API/Document/ononline	/ja/docs/Web/API/Window/online_event
