@@ -5,7 +5,7 @@ original_slug: Web/API/LocalFileSystemSync
 ---
 {{APIRef("File System API")}}{{non-standard_header()}}
 
-The `LocalFileSystemSync` interface of the [File System API](/ja/DOM/File_API/File_System_API "en/DOM/File_API/File_System_APIB") gives you access to a sandboxed file system. It is intended to be used with [WebWorkers](/ja/DOM/Worker "en/DOM/Worker"). The methods are implemented by [worker](/ja/DOM/Worker "En/DOM/Worker") objects.
+The `LocalFileSystemSync` interface of the [File System API](/ja/DOM/File_API/File_System_API) gives you access to a sandboxed file system. It is intended to be used with [WebWorkers](/ja/DOM/Worker). The methods are implemented by [worker](/ja/DOM/Worker) objects.
 
 ## この文書について
 
@@ -71,7 +71,7 @@ FileSystemSync requestFileSystemSync(
 
 ##### 戻り値
 
-- [`FileSystemSync`](/ja/DOM/File_API/File_System_API/FileSystemSync "en/DOM/File_API/File_System_API/FileSystemSync")
+- [`FileSystemSync`](/ja/DOM/File_API/File_System_API/FileSystemSync)
   - : ファイルシステムを表すオブジェクト。
 
 ##### 例外
@@ -99,7 +99,7 @@ void resolveLocalFileSystemURL(
 
 ##### 戻り値
 
-- [`EntrySync`](/ja/DOM/File_API/File_System_API/EntrySync "en/DOM/File_API/File_System_API/EntrySync")
+- [`EntrySync`](/ja/DOM/File_API/File_System_API/EntrySync)
   - : ファイルシステム内のエントリを表すオブジェクト。
 
 ##### 例外
@@ -120,6 +120,6 @@ void resolveLocalFileSystemURL(
 
 Specification:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}
 
-Reference: [File System API](/ja/DOM/File_API/File_System_API "en/DOM/File_API/File_System_API")
+Reference: [File System API](/ja/DOM/File_API/File_System_API)
 
-Introduction: [Basic Concepts About the File System API](/ja/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API "en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API")
+Introduction: [Basic Concepts About the File System API](/ja/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API)

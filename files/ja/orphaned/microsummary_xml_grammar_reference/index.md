@@ -150,10 +150,10 @@ _なし。_
 
 以下のルールに従って、ジェネレータが作成するマイクロサマリにどの間隔を適用すべきかを Firefox は決定します。
 
-1.  Firefox は文書での順番どおりに各 `<condition>` 子要素を処理する。各要素について、サマリを作成するページに対してその要素の XPath の論理式を Firefox は評価する。その式が `true` に評価されれば Firefox はその要素の間隔を適用し、子要素の処理を停止する。このようにして、最初にマッチした `<condition>` によって更新間隔が決まる。
-2.  `<condition>` 子要素がない場合、あるいは `true` に評価される式がない場合、Firefox は `<update>` 要素の `interval` 属性の値を適用する。
-3.  `<update>` 要素に `interval` 属性が含まれていない場合、Firefox は browser.microsummary.updateInterval という設定項目で指定された間隔を適用する。
-4.  その設定項目が未設定の場合、Firefox はそのデフォルトの更新間隔である 30 分を適用する。
+1. Firefox は文書での順番どおりに各 `<condition>` 子要素を処理する。各要素について、サマリを作成するページに対してその要素の XPath の論理式を Firefox は評価する。その式が `true` に評価されれば Firefox はその要素の間隔を適用し、子要素の処理を停止する。このようにして、最初にマッチした `<condition>` によって更新間隔が決まる。
+2. `<condition>` 子要素がない場合、あるいは `true` に評価される式がない場合、Firefox は `<update>` 要素の `interval` 属性の値を適用する。
+3. `<update>` 要素に `interval` 属性が含まれていない場合、Firefox は browser.microsummary.updateInterval という設定項目で指定された間隔を適用する。
+4. その設定項目が未設定の場合、Firefox はそのデフォルトの更新間隔である 30 分を適用する。
 
 **注意：**
 
