@@ -27,7 +27,7 @@ Cependant, alors que l'objet dans le code ci-dessus est assez simple pour être 
 
 Pour les objets qui _sont_ sérialisables, vous pouvez également utiliser le [`structuredClone()`](/en-US/docs/Web/API/structuredClone) méthode pour créer des copies profondes. `structuredClone()` a l'avantage de permettre {{Glossary("transferable objects")}} dans la source pour être _transféré_ vers la nouvelle copie, plutôt que simplement cloné. Mais notez que `structuredClone()` n'est pas une fonctionnalité du langage JavaScript lui-même - c'est plutôt une fonctionnalité des navigateurs et de tout autre environnement d'exécution de JavaScript qui implémente un objet global comme [`window`](/en-US/docs/Web /API/Fenêtre). Et appeler `structuredClone()` pour cloner un objet non sérialisable échouera de la même manière que l'appel de `JSON.stringify()` pour le sérialiser échouera.
 
-## Pour approfondir
+## Voir aussi
 
 - [Copie superficielle](/fr/docs/Glossary/Shallow_copy)
 - [`window.structuredClone()`](/fr/docs/Web/API/structuredClone)
