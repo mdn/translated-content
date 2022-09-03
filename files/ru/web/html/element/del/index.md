@@ -46,24 +46,26 @@ here is the rest of the paragraph.</p>
 
 Присутствие элемента `del` не определено в конфигурации по умолчанию большинством технологий чтения с экрана. Его можно задать, используя свойство CSS {{cssxref("content")}}, а также {{cssxref("::before")}} и с помощью псевдоэлемента {{cssxref("::after")}}.
 
-    del::before,
-    del::after {
-      clip-path: inset(100%);
-      clip: rect(1px, 1px, 1px, 1px);
-      height: 1px;
-      overflow: hidden;
-      position: absolute;
-      white-space: nowrap;
-      width: 1px;
-    }
+```css
+del::before,
+del::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 
-    del::before {
-      content: " [deletion start] ";
-    }
+del::before {
+  content: " [deletion start] ";
+}
 
-    del::after {
-      content: " [deletion end] ";
-    }
+del::after {
+  content: " [deletion end] ";
+}
+```
 
 Некоторые люди, использующие программы чтения с экрана, сознательно отключают определение контента, что создаёт дополнительную многословность. Поэтому важно не злоупотреблять этой техникой, применяя её только в ситуациях, когда незнание контента, который был удалён, может негативно повлиять на восприятие.
 

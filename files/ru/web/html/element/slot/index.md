@@ -12,7 +12,7 @@ HTML-элемент `<slot>` является частью набора техн
 | Разрешённый контент                                        | [Прозрачный](/ru/docs/Web/HTML/Content_categories#Transparent_content_model)                                                                          |
 | События                                                    | {{event("slotchange")}}                                                                                                                      |
 | Пропуск тега                                               | {{no_tag_omission}}                                                                                                                              |
-| Разрешённый родители                                       | Любой элемент, который принимает[ содержание формулировки](/ru/docs/Web/HTML/Content_categories#Phrasing_content)                                     |
+| Разрешённый родители                                       | Любой элемент, который принимает[содержание формулировки](/ru/docs/Web/HTML/Content_categories#Phrasing_content)                                     |
 | Разрешённые роли ARIA                                      | Никакой                                                                                                                                               |
 | Интерфейс DOM                                              | {{domxref("HTMLSlotElement")}}                                                                                                              |
 
@@ -21,7 +21,7 @@ HTML-элемент `<slot>` является частью набора техн
 Этот элемент включает в себя [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 - {{htmlattrdef("name")}}
-  - : Название слота._**Именованный слот**_ это элемент `<slot>` с атрибутом` name`.
+  - : Название слота._**Именованный слот**_ это элемент `<slot>` с атрибутом `name`.
 
 ## Примеры
 

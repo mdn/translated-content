@@ -28,8 +28,8 @@ translation_of: Web/HTML/Element/input
 
 - {{htmlattrdef("type")}}
 
-  - : Тип элемента для отображения. Если этот атрибут не указан, по умолчанию используется `text`. Возможными значениями являются:\* `button`: Кнопка без предопределённого поведения.
-
+  - : Тип элемента для отображения. Если этот атрибут не указан, по умолчанию используется `text`. Возможными значениями являются:
+    - `button`: Кнопка без предопределённого поведения.
     - `checkbox`: Флажок («чекбокс»). Следует использовать атрибут **value** для определения значения, которое будет отдано этим элементом. Используйте атрибут **checked**, чтобы указать, должен ли флажок быть выставлен. Можно также использовать атрибут **indeterminate**, чтобы указать, что флажок находится в неопределённом состоянии (на большинстве платформ при этом рисуется горизонтальная линия поперёк флажка).
     - `color`: {{HTMLVersionInline("5")}} Элемент управления цветом. Пользовательский интерфейс выбора цвета не имеет никаких других функций, кроме принятия простых цветов в виде текста ([больше информации](<http://www.w3.org/TR/html5/forms.html#color-state-(type=color)>)).
     - `date`: {{HTMLVersionInline("5")}} Элемент управления для ввода даты (год, месяц и день, без времени).
@@ -70,7 +70,8 @@ translation_of: Web/HTML/Element/input
 - {{htmlattrdef("mozactionhint")}} {{non-standard_inline}}
   - : Определяет "действие-подсказку", которая используется для определения того, как будет обозначаться клавиша enter на мобильных устройствах с виртуальной клавиатурой. Поддерживаемые значения: `go`, `done`, `next`, `search`, и `send`; они автоматически сопоставляются с необходимой строкой (являются чувствительными к регистру).
 - {{htmlattrdef("autocomplete")}} {{HTMLVersionInline("5")}}
-  - : Этот атрибут указывает, разрешено ли автоматическое заполнение поля браузером. Разрешено по умолчанию, даже если не указано. Данный атрибут игнорируется, если атрибут **type** равен `hidden, password,` `checkbox`, `radio`, `file`, или **type** кнопка (`button`, `submit`, `reset`, `image`). Возможные значения:\* `off`: Пользователь должен каждый раз полностью вводить значение в поле или документ предусматривает свой собственный метод автозаполнения; браузер не делает автоматического заполнения записи.
+  - : Этот атрибут указывает, разрешено ли автоматическое заполнение поля браузером. Разрешено по умолчанию, даже если не указано. Данный атрибут игнорируется, если атрибут **type** равен `hidden, password,` `checkbox`, `radio`, `file`, или **type** кнопка (`button`, `submit`, `reset`, `image`). Возможные значения:
+    - `off`: Пользователь должен каждый раз полностью вводить значение в поле или документ предусматривает свой собственный метод автозаполнения; браузер не делает автоматического заполнения записи.
     - `on`: Браузер автоматически заканчивает значение поля, основываясь на значениях, которые вводились пользователем ранее.Если не атрибут **autocomplete** не указан в `<input>`, тогда браузер использует атрибут **autocomplete** формы, которая является родительской для данной формы. The form owner is either the `form` element that this `<input>` element is a descendant of or the form element whose **id** is specified by the **form** attribute of the input element. For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute in {{HTMLElement("form")}}.
 - {{htmlattrdef("autofocus")}} {{HTMLVersionInline("5")}}
   - : This Boolean attribute lets you specify that a form control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form element in a document can have the **autofocus** attribute, which is a Boolean. It cannot be applied if the **type** attribute is set to `hidden` (that is, you cannot automatically set focus to a hidden control).
@@ -85,23 +86,27 @@ translation_of: Web/HTML/Element/input
 - {{htmlattrdef("formaction")}} {{HTMLVersionInline("5")}}
   - : The URI of a program that processes the information submitted by the input element, if it is a submit button or image. If specified, it overrides the {{htmlattrxref("action","form")}} attribute of the element's form owner.
 - {{htmlattrdef("formenctype")}} {{HTMLVersionInline("5")}}
-  - : If the input element is a submit button or image, this attribute specifies the type of content that is used to submit the form to the server. Possible values are:\* `application/x-www-form-urlencoded`: The default value if the attribute is not specified.
+  - : If the input element is a submit button or image, this attribute specifies the type of content that is used to submit the form to the server. Possible values are:
+    - `application/x-www-form-urlencoded`: The default value if the attribute is not specified.
     - `multipart/form-data`: Use this value if you are using an {{HTMLElement("input")}} element with the {{htmlattrxref("type","input")}} attribute set to `file`.
     - `text/plain`If this attribute is specified, it overrides the {{htmlattrxref("enctype","form")}} attribute of the element's form owner.
 - {{htmlattrdef("formmethod")}} {{HTMLVersionInline("5")}}
-  - : If the input element is a submit button or image, this attribute specifies the HTTP method that the browser uses to submit the form. Possible values are:\* `post`: The data from the form is included in the body of the form and is sent to the server.
+  - : If the input element is a submit button or image, this attribute specifies the HTTP method that the browser uses to submit the form. Possible values are:
+    - `post`: The data from the form is included in the body of the form and is sent to the server.
     - `get`: The data from the form are appended to the **form** attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the element's form owner.
 - {{htmlattrdef("formnovalidate")}} {{HTMLVersionInline("5")}}
   - : If the input element is a submit button or image, this Boolean attribute specifies that the form is not to be validated when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the element's form owner.
 - {{htmlattrdef("formtarget")}} {{HTMLVersionInline("5")}}
-  - : If the input element is a submit button or image, this attribute is a name or keyword indicating where to display the response that is received after submitting the form. This is a name of, or keyword for, a _browsing context_ (for example, tab, window, or inline frame). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the elements's form owner. The following keywords have special meanings:\* \_`self`: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.
+  - : If the input element is a submit button or image, this attribute is a name or keyword indicating where to display the response that is received after submitting the form. This is a name of, or keyword for, a _browsing context_ (for example, tab, window, or inline frame). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the elements's form owner. The following keywords have special meanings:
+    - `_self`: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.
     - `_blank`: Load the response into a new unnamed browsing context.
     - `_parent`: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as `_self`.
     - `_top`: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as `_self`.
 - {{htmlattrdef("height")}} {{HTMLVersionInline("5")}}
   - : If the value of the **type** attribute is `image`, this attribute defines the height of the image displayed for the button.
 - {{htmlattrdef("inputmode")}} {{HTMLVersionInline("5")}}
-  - : A hint to the browser for which keyboard to display. This attribute applies when the value of the **type** attribute is text, password, email, or url. Possible values are:\* `verbatim`: Alphanumeric, non-prose content such as usernames and passwords.
+  - : A hint to the browser for which keyboard to display. This attribute applies when the value of the **type** attribute is text, password, email, or url. Possible values are:
+    - `verbatim`: Alphanumeric, non-prose content such as usernames and passwords.
     - `latin`: Latin-script input in the user's preferred language with typing aids such as text prediction enabled. For human-to-computer communication such as search boxes.
     - `latin-name`: As _latin_, but for human names.
     - `latin-prose`: As _latin_, but with more aggressive typing aids. For human-to-human communication such as instant messaging for email.
@@ -117,11 +122,11 @@ translation_of: Web/HTML/Element/input
 - {{htmlattrdef("max")}} {{HTMLVersionInline("5")}}
   - : The maximum (numeric or date-time) value for this item, which must not be less than its minimum (**min** attribute) value.
 - {{htmlattrdef("maxlength")}}
-  - : If the value of the **type** attribute is `text`, `email`,` search`, `password`, `tel`, or `url`, this attribute specifies the maximum number of characters (in Unicode code points) that the user can enter; for other control types, it is ignored. It can exceed the value of the **size** attribute. If it is not specified, the user can enter an unlimited number of characters. Specifying a negative number results in the default behavior; that is, the user can enter an unlimited number of characters. The constraint is evaluated only when the value of the attribute has been changed.
+  - : If the value of the **type** attribute is `text`, `email`,`search`, `password`, `tel`, or `url`, this attribute specifies the maximum number of characters (in Unicode code points) that the user can enter; for other control types, it is ignored. It can exceed the value of the **size** attribute. If it is not specified, the user can enter an unlimited number of characters. Specifying a negative number results in the default behavior; that is, the user can enter an unlimited number of characters. The constraint is evaluated only when the value of the attribute has been changed.
 - {{htmlattrdef("min")}} {{HTMLVersionInline("5")}}
   - : The minimum (numeric or date-time) value for this item, which must not be greater than its maximum (**max** attribute) value.
 - {{htmlattrdef("minlength")}} {{HTMLVersionInline("5")}}
-  - : If the value of the **type** attribute is `text`, `email`,` search`, `password`, `tel`, or `url`, this attribute specifies the minimum number of characters (in Unicode code points) that the user can enter; for other control types, it is ignored.
+  - : If the value of the **type** attribute is `text`, `email`, `search`, `password`, `tel`, or `url`, this attribute specifies the minimum number of characters (in Unicode code points) that the user can enter; for other control types, it is ignored.
 - {{htmlattrdef("multiple")}} {{HTMLVersionInline("5")}}
   - : Этот Boolean атрибут указывает, может ли пользователь вводить несколько значений. Этот атрибут применяется, если для атрибута type задано значение `email` или `file`; в противном случае он игнорируется.
 - {{htmlattrdef("name")}}
@@ -129,7 +134,8 @@ translation_of: Web/HTML/Element/input
 - {{htmlattrdef("pattern")}} {{HTMLVersionInline("5")}}
   - : A regular expression that the control's value is checked against. The pattern must match the entire value, not just some subset. Use the **title** attribute to describe the pattern to help the user. This attribute applies when the value of the **type** attribute is `text`, `search`, `tel`, `url` or `email`; otherwise it is ignored. The regular expression language is the same as JavaScript's. The pattern is not surrounded by forward slashes.
 - {{htmlattrdef("placeholder")}} {{HTMLVersionInline("5")}}
-  - : A hint to the user of what can be entered in the control . The placeholder text must not contain carriage returns or line-feeds. This attribute applies when the value of the **type** attribute is `text`, `search`, `tel`, `url` or `email`; otherwise it is ignored.> **Примечание:** Do not use the `placeholder` attribute instead of a {{HTMLElement("label")}} element. Their purposes are different: the {{HTMLElement("label")}} attribute describes the role of the form element; that is, it indicates what kind of information is expected, the `placeholder` attribute is a hint about the format the content should take. There are cases in which the `placeholder` attribute is never displayed to the user, so the form must be understandable without it.
+  - : A hint to the user of what can be entered in the control . The placeholder text must not contain carriage returns or line-feeds. This attribute applies when the value of the **type** attribute is `text`, `search`, `tel`, `url` or `email`; otherwise it is ignored.
+    > **Примечание:** Do not use the `placeholder` attribute instead of a {{HTMLElement("label")}} element. Their purposes are different: the {{HTMLElement("label")}} attribute describes the role of the form element; that is, it indicates what kind of information is expected, the `placeholder` attribute is a hint about the format the content should take. There are cases in which the `placeholder` attribute is never displayed to the user, so the form must be understandable without it.
 - {{htmlattrdef("readonly")}}
   - : This Boolean attribute indicates that the user cannot modify the value of the control.{{HTMLVersionInline("5")}} This attribute is ignored if the value of the **type** attribute is `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, or a button type.
 - {{htmlattrdef("required")}} {{HTMLVersionInline("5")}}

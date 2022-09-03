@@ -25,7 +25,7 @@ translation_of: Web/HTML/Element/nav
 
 ## Атрибуты
 
-Этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/%D0%9E%D0%B1%D1%89%D0%B8%D0%B5_%D0%B0%D1%82%D1%80%D0%B8%D0%B1%D1%83%D1%82%D1%8B "HTML/Global attributes").
+Этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/%D0%9E%D0%B1%D1%89%D0%B8%D0%B5_%D0%B0%D1%82%D1%80%D0%B8%D0%B1%D1%83%D1%82%D1%8B).
 
 ## Примечание
 
