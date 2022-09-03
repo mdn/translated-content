@@ -10,7 +10,7 @@ slug: Learn/HTML/Howto
 
 HTML 应用最基础的是文档结构。如果你是 HTML 新手那么你应该和我们一起从这里开始学习。
 
-- [如何创建 HTML 文档](/zh-CN/docs/learn/HTML/Introduction_to_HTML/Getting_started#实践操作_创建你的第一个HTML文档)
+- [如何创建 HTML 文档](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started#主动学习：创建第一个_html_元素)
 - [如何将网页分成有逻辑的部分](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
 - [如何设置一个适当的标题和段落结构](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#基础：标题和段落)
 
@@ -19,7 +19,7 @@ HTML 应用最基础的是文档结构。如果你是 HTML 新手那么你应该
 HTML 专门为文档提供语义信息，因此，HTML 能够解答关于如何在文档中最好地传递消息的许多问题。
 
 - [如何用 HTML 创建列表项](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#列表)
-- [如何强调或凸显内容](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Emphasis_and_importance)
+- [如何强调或凸显内容](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#重点强调)
 - [如何表明文本是重要的](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#重点强调)
 - [如何用 HTML 展示计算机代码](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#展示计算机代码)
 - [如何注释图片和图标](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#通过为图片搭配说明文字的方式来解说图片)
@@ -43,7 +43,7 @@ HTML 专门为文档提供语义信息，因此，HTML 能够解答关于如何�
 
 HTML 仅仅建立了文档结构。为解决演示问题，可使用 {{glossary("CSS")}} 或脚本使页面具有交互功能。
 
-- [如何在网页中使用 CSS](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works#how_to_apply_your_css_to_your_html)
+- [如何在网页中使用 CSS](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works#应用_css_到_dom)
 - [如何在网页中使用 JavaScript](/zh-CN/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage)
 
 ### 嵌入内容
