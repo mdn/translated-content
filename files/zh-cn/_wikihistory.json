@@ -34075,22 +34075,6 @@
     "modified": "2019-03-23T22:06:02.004Z",
     "contributors": ["wuCrio"]
   },
-  "orphaned/Web/API/File/getAsBinary": {
-    "modified": "2019-03-24T00:16:15.441Z",
-    "contributors": ["isLishude", "HappyYawen", "teoli", "ziyunfei"]
-  },
-  "orphaned/Web/API/File/getAsDataURL": {
-    "modified": "2019-03-23T22:26:02.793Z",
-    "contributors": ["Liiked", "ThomasSoloist"]
-  },
-  "orphaned/Web/API/File/getAsText": {
-    "modified": "2019-03-23T23:33:22.949Z",
-    "contributors": ["DearVikki", "teoli", "ziyunfei"]
-  },
-  "orphaned/Web/API/File/mozFullPath": {
-    "modified": "2019-01-17T01:28:04.491Z",
-    "contributors": ["wizardforcel"]
-  },
   "orphaned/Web/API/FileError": {
     "modified": "2019-03-24T00:16:24.896Z",
     "contributors": ["teoli", "ziyunfei"]

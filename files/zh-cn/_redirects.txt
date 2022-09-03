@@ -223,8 +223,6 @@
 /zh-CN/docs/DOM/File	/zh-CN/docs/Web/API/File
 /zh-CN/docs/DOM/File.fileName	/zh-CN/docs/Web/API/File/name
 /zh-CN/docs/DOM/File.fileSize	/zh-CN/docs/Web/API/Blob/size
-/zh-CN/docs/DOM/File.getAsBinary	/zh-CN/docs/orphaned/Web/API/File/getAsBinary
-/zh-CN/docs/DOM/File.getAsText	/zh-CN/docs/orphaned/Web/API/File/getAsText
 /zh-CN/docs/DOM/File.lastModifiedDate	/zh-CN/docs/Web/API/File/lastModifiedDate
 /zh-CN/docs/DOM/File.name	/zh-CN/docs/Web/API/File/name
 /zh-CN/docs/DOM/File.size	/zh-CN/docs/Web/API/Blob/size
@@ -1454,17 +1452,11 @@
 /zh-CN/docs/Web/API/Fetch_API/基本概念	/zh-CN/docs/Web/API/Fetch_API/Basic_concepts
 /zh-CN/docs/Web/API/File.fileName	/zh-CN/docs/Web/API/File/name
 /zh-CN/docs/Web/API/File.fileSize	/zh-CN/docs/Web/API/Blob/size
-/zh-CN/docs/Web/API/File.getAsBinary	/zh-CN/docs/orphaned/Web/API/File/getAsBinary
-/zh-CN/docs/Web/API/File.getAsText	/zh-CN/docs/orphaned/Web/API/File/getAsText
 /zh-CN/docs/Web/API/File.lastModifiedDate	/zh-CN/docs/Web/API/File/lastModifiedDate
 /zh-CN/docs/Web/API/File.name	/zh-CN/docs/Web/API/File/name
 /zh-CN/docs/Web/API/File/Using_files_from_web_applications	/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications
 /zh-CN/docs/Web/API/File/fileName	/zh-CN/docs/Web/API/File/name
 /zh-CN/docs/Web/API/File/fileSize	/zh-CN/docs/Web/API/Blob/size
-/zh-CN/docs/Web/API/File/getAsBinary	/zh-CN/docs/orphaned/Web/API/File/getAsBinary
-/zh-CN/docs/Web/API/File/getAsDataURL	/zh-CN/docs/orphaned/Web/API/File/getAsDataURL
-/zh-CN/docs/Web/API/File/getAsText	/zh-CN/docs/orphaned/Web/API/File/getAsText
-/zh-CN/docs/Web/API/File/mozFullPath	/zh-CN/docs/orphaned/Web/API/File/mozFullPath
 /zh-CN/docs/Web/API/File/size	/zh-CN/docs/Web/API/Blob/size
 /zh-CN/docs/Web/API/FileError	/zh-CN/docs/orphaned/Web/API/FileError
 /zh-CN/docs/Web/API/FileException	/zh-CN/docs/Web/API/File_and_Directory_Entries_API
