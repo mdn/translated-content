@@ -40,26 +40,25 @@ p {
 
 在处理和盒子的边界相关的属性时，比如 {{cssxref("border-style")}}、{{cssxref("margin")}} 或者 {{cssxref("padding")}}，始终使用一致的 1 个到 4 个值的语法表示：
 
-- **单值语法：** `border-width: 1em`，这一个值表示所有的边框宽度：![Box edges with one-value syntax](border1.png)
+- **单值语法**：`border-width: 1em`，这一个值表示所有的边框宽度：![Box edges with one-value syntax](border1.png)
 
-- **双值语法：** `border-width: 1em 2em`，第一个值表示垂直方向的值，即 top 和 bottom；第二个值表示水平方向的值，即 left 和 right：![Box edges with two-value syntax](border2.png)
+- **双值语法**：`border-width: 1em 2em`，第一个值表示垂直方向的值，即 top 和 bottom；第二个值表示水平方向的值，即 left 和 right：![Box edges with two-value syntax](border2.png)
 
-- **三值语法：** `border-width: 1em 2em 3em`，第一个值表示 top；第二个值表示水平方向的，即 left 和 right；第三个值表示 bottom
-：![Box edges with three-value syntax](border3.png)                                                                         
+- **三值语法**：`border-width: 1em 2em 3em`，第一个值表示 top；第二个值表示水平方向的，即 left 和 right；第三个值表示 bottom：![Box edges with three-value syntax](border3.png)                                                                         
 
-- **四值语法：** `border-width: 1em 2em 3em 4em`，这四个值分别表示 top、right、bottom、left，即总是从 top 开始的顺时针顺序：![Box edges with four-value syntax](border4.png) Top-Right-Bottom-Left 的首字母与英文单词 _trouble_ 的辅音字母顺序一致：TRBL。你可以按照时钟指针旋转的顺序来记忆：`1em` 在 12 点钟方向，而 `2em`、`3em` 及 `4em` 分别在 2、3、4 点钟方向。
+- **四值语法**：`border-width: 1em 2em 3em 4em`，这四个值分别表示 top、right、bottom、left，即总是从 top 开始的顺时针顺序：![Box edges with four-value syntax](border4.png) Top-Right-Bottom-Left 的首字母与英文单词 _trouble_ 的辅音字母顺序一致：TRBL。你可以按照时钟指针旋转的顺序来记忆：`1em` 在 12 点钟方向，而 `2em`、`3em` 及 `4em` 分别在 2、3、4 点钟方向。
 
 #### 盒子角
 
 在处理和盒子的角相关的属性时，比如 {{cssxref("border-radius")}}，也始终使用一致的 1 个到 4 个值的语法表示：
 
-- **单值语法：** `border-radius: 1em`，这一个值表示所有的边框宽度：![Box corners with one-value syntax](corner1.png)
+- **单值语法**：`border-radius: 1em`，这一个值表示所有的边框宽度：![Box corners with one-value syntax](corner1.png)
 
 - **双值语法：** `border-radius: 1em 2em`，第一个值表示 top-left 和 bottom-right 方向的角；第二个值表示 top-right 和 bottom-left 方向的角：![Box corners with two-value syntax](corner2.png)
 
-- **三值语法：** `border-radius: 1em 2em 3em`，第一个值表示 top-left 方向的角，第二个值表示 top-right 和 bottom-left 方向的角，第三个值表示 bottom-right 方向的角：![Box corners with three-value syntax](corner3.png)                                                                         
+- **三值语法**：`border-radius: 1em 2em 3em`，第一个值表示 top-left 方向的角，第二个值表示 top-right 和 bottom-left 方向的角，第三个值表示 bottom-right 方向的角：![Box corners with three-value syntax](corner3.png)                                                                         
 
-- **四值语法：** `border-radius: 1em 2em 3em 4em`，这四个值分别表示 top left、top right、bottom right、bottom left，即总是从 top left 开始的顺时针顺序：![Box corners with four-value syntax](corner4.png) 
+- **四值语法**：`border-radius: 1em 2em 3em 4em`，这四个值分别表示 top left、top right、bottom right、bottom left，即总是从 top left 开始的顺时针顺序：![Box corners with four-value syntax](corner4.png) 
 
 ## Background 属性
 
@@ -148,7 +147,7 @@ CSS 提供了一个通用的简写属性 {{cssxref("all")}}，它可以应用于
 
 查看[层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)或 [CSS 层叠基础](/zh-CN/docs/Web/CSS/Cascade)以了解更多关于继承的信息。
 
-## 另请参阅
+## 参见
 
 - CSS 重要概念：
 
@@ -170,4 +169,4 @@ CSS 提供了一个通用的简写属性 {{cssxref("all")}}，它可以应用于
 
   - [属性值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
   - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
-- 简写属性：{{cssxref("all")}}, {{cssxref("animation")}}, {{cssxref("background")}}, {{cssxref("border")}}, {{cssxref("border-block-end")}}, {{cssxref("border-block-start")}}, {{cssxref("border-bottom")}}, {{cssxref("border-color")}}, {{cssxref("border-image")}}, {{cssxref("border-inline-end")}}, {{cssxref("border-inline-start")}}, {{cssxref("border-left")}}, {{cssxref("border-radius")}}, {{cssxref("border-right")}}, {{cssxref("border-style")}}, {{cssxref("border-top")}}, {{cssxref("border-width")}}, {{cssxref("column-rule")}}, {{cssxref("columns")}}, {{cssxref("flex")}}, {{cssxref("flex-flow")}}, {{cssxref("font")}}, {{cssxref("gap")}}, {{cssxref("grid")}}, {{cssxref("grid-area")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("grid-template")}}, {{cssxref("list-style")}}, {{cssxref("margin")}}, {{cssxref("mask")}}, {{cssxref("offset")}}, {{cssxref("outline")}}, {{cssxref("overflow")}}, {{cssxref("padding")}}, {{cssxref("place-content")}}, {{cssxref("place-items")}}, {{cssxref("place-self")}}, {{cssxref("scroll-margin")}}, {{cssxref("scroll-padding")}}, {{cssxref("text-decoration")}}, {{cssxref("text-emphasis")}}, {{cssxref("transition")}}
+- 简写属性：{{cssxref("all")}}、{{cssxref("animation")}}、{{cssxref("background")}}、{{cssxref("border")}}、{{cssxref("border-block-end")}}、{{cssxref("border-block-start")}}、{{cssxref("border-bottom")}}、{{cssxref("border-color")}}、{{cssxref("border-image")}}、{{cssxref("border-inline-end")}}、{{cssxref("border-inline-start")}}、{{cssxref("border-left")}}、{{cssxref("border-radius")}}、{{cssxref("border-right")}}、{{cssxref("border-style")}}、{{cssxref("border-top")}}、{{cssxref("border-width")}}、{{cssxref("column-rule")}}、{{cssxref("columns")}}、{{cssxref("flex")}}、{{cssxref("flex-flow")}}、{{cssxref("font")}}、{{cssxref("gap")}}、{{cssxref("grid")}}、{{cssxref("grid-area")}}、{{cssxref("grid-column")}}、{{cssxref("grid-row")}}、{{cssxref("grid-template")}}、{{cssxref("list-style")}}、{{cssxref("margin")}}、{{cssxref("mask")}}、{{cssxref("offset")}}、{{cssxref("outline")}}、{{cssxref("overflow")}}、{{cssxref("padding")}}、{{cssxref("place-content")}}、{{cssxref("place-items")}}、{{cssxref("place-self")}}、{{cssxref("scroll-margin")}}、{{cssxref("scroll-padding")}}、{{cssxref("text-decoration")}}、{{cssxref("text-emphasis")}}、{{cssxref("transition")}}
