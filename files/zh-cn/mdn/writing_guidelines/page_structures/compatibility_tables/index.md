@@ -478,20 +478,7 @@ browser-compat: api.AbortController
 
 然后源码中的 `\{{Compat}}` 和 `\{{Specifications}}` 宏将会被自动渲染为与元数据对应的兼容性表格和规范表格。
 
-> **备注：** 如果需要在同一页面中插入多个兼容性/规范表格，可以将 `browser-compat` 元数据指定为一个数组。例如，对于 {{domxref("Channel Messaging API")}}，应该这样添加：
->
-> ```yaml
-> ---
-> title: Channel Messaging API
-> slug: Web/API/Channel_Messaging_API
->
-> …
->
-> browser-compat:
->   - api.MessageChannel
->   - api.MessagePort
-> ---
-> ```
+你还可以将宏的第一个参数指定为需要的 API，就像这样：`\{{Compat("api.AbortController")}}`。如果需要在同一页面中插入多个兼容性表格，这会非常有用。
 
 宏的调用会生成以下的表格（以及对应的备注）：
 
