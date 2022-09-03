@@ -39,8 +39,6 @@ RegExp.$1; // "John"
 RegExp.$2; // "Smith"
 ```
 
-###
-
 次のスクリプトは、 {{jsxref("RegExp")}} インスタンスの {{jsxref("RegExp.prototype.test()", "test()")}} メソッドを使用して、一般的な文字列で数値を取得しています。
 
 ```js

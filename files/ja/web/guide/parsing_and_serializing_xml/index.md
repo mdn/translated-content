@@ -82,7 +82,7 @@ Use the following approaches to serialize the contents of the XML document you c
 
 ### DOM ツリーを文字列にシリアライズ
 
-First, create a DOM tree as described in [How to Create a DOM tree](/ja/How_to_create_a_DOM_tree "en/How_to_create_a_DOM_tree"). Alternatively, use a DOM tree obtained from {{ domxref("XMLHttpRequest") }}.
+First, create a DOM tree as described in [How to Create a DOM tree](/ja/How_to_create_a_DOM_tree). Alternatively, use a DOM tree obtained from {{ domxref("XMLHttpRequest") }}.
 
 To serialize the DOM tree `doc` into XML text, call {{domxref("XMLSerializer.serializeToString()")}}:
 

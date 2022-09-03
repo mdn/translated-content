@@ -10,7 +10,7 @@ slug: Web/API/WebGL_API/Tutorial
 
 ## 始める前に
 
-`<canvas>` 要素を使用することはそれほど難しくありませんが、[HTML](/ja/docs/Web/HTML "HTML") や [JavaScript](/ja/docs/Web/JavaScript "JavaScript") の基礎を理解していなければなりません。`<canvas>` 要素や WebGL は古いブラウザでサポートされていませんが、最近のバージョンではすべての主要なブラウザがサポートしています。canvas にグラフィックスを描画するためには、JavaScript コンテキストオブジェクトを使用します。このオブジェクトは、グラフィックスをオンザフライで生成します。
+`<canvas>` 要素を使用することはそれほど難しくありませんが、[HTML](/ja/docs/Web/HTML) や [JavaScript](/ja/docs/Web/JavaScript) の基礎を理解していなければなりません。`<canvas>` 要素や WebGL は古いブラウザでサポートされていませんが、最近のバージョンではすべての主要なブラウザがサポートしています。canvas にグラフィックスを描画するためには、JavaScript コンテキストオブジェクトを使用します。このオブジェクトは、グラフィックスをオンザフライで生成します。
 
 ## チュートリアル
 

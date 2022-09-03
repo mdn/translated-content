@@ -211,7 +211,7 @@ Quotation Element</em>) indicates that the enclosed text is an extended quotatio
 
 ブラウザーのデフォルトのスタイル設定では、これがインデントされた段落として、それが引用であることを示すインジケータとして表示されます。MDN はこれを行いますが、さらにいくつかのスタイルを追加します。
 
-> **HTML `<blockquote>` \*\***要素\*\* (または _HTML Block Quotation 要素_) は、囲まれたテキストが拡張引用符であることを示します。
+> **HTML `<blockquote>`** 要素 (または _HTML Block Quotation 要素_) は、囲まれたテキストが拡張引用符であることを示します。
 
 ### インラインクォート
 

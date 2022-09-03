@@ -258,7 +258,7 @@ padding は、border とコンテンツ領域の間にあります。margin と�
 
 ただし、新しい行に分割されることはなく、`width` プロパティと `height` プロパティを明示的に追加した場合にのみ、コンテンツよりも大きくなります。
 
-**次の例では、`<span>` 要素に `display: inline-block` を追加しました。これを** **`display: block` \*\***変更したり、行を完全に削除したりして、表示モデルの違いを確認してください。\*\*
+次の例では、`<span>` 要素に `display: inline-block` を追加しました。これを `display: block` 変更したり、行を完全に削除したりして、表示モデルの違いを確認してください。
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/inline-block.html", '100%', 800)}}
 

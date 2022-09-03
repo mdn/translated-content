@@ -33,7 +33,7 @@ Gecko 10.0 を搭載した Firefox 10 は米国時間 2012 年 1 月 31 日に�
 - DOM4 仕様書で非推奨とされたため、{{ domxref("document.xmlEncoding") }} 属性が削除されました。
 - DOM4 仕様書で非推奨とされたため、{{ domxref("text.isElementContentWhiteSpace") }} 属性が削除されました。
 - DOM4 仕様書で非推奨とされたため、{{ domxref("text.replaceWholeText") }} メソッドが削除されました。
-- DOM4 仕様書で非推奨とされたため、{{ domxref("node.isSameNode") }} メソッドが削除されました。`node1.isSameNode(node2)` に代わり、`===` 演算子を使用できます。例: ` node1 ===`` node2 `
+- DOM4 仕様書で非推奨とされたため、{{ domxref("node.isSameNode") }} メソッドが削除されました。`node1.isSameNode(node2)` に代わり、`===` 演算子を使用できます。例: `node1 === node2`
 
 #### Page Visibility API
 
@@ -77,7 +77,7 @@ IndexedDB を最新のドラフト仕様に更新するための大きな進展�
 
 #### その他の変更点
 
-- SVG を含む文字列が与えられたとき、適切な MIME タイプ ` image``/svg+xml ` が渡された場合は [`DOMParser` が `SVGDocument` を生成する](/ja/docs/DOM/DOMParser#Parsing_a_SVG_document)ようになりました。
+- SVG を含む文字列が与えられたとき、適切な MIME タイプ `image/svg+xml` が渡された場合は [`DOMParser` が `SVGDocument` を生成する](/ja/docs/DOM/DOMParser#Parsing_a_SVG_document)ようになりました。
 - 従来 {{ domxref("element.setAttribute()") }} が整数値の構文解析を行うときは、数値ではない文字列が含まれる場合 (例えば "42foo") にエラーを報告していました。これが仕様書へ合致させるために、数値 42 へ正しく切り詰めるようになりました。
 - ESC キーで {{ domxref("window.oninput") }} ハンドラが誤って呼び出されるという、間違った結果にならないようになりました。
 - 従来実装されていたものの実際にはアクセスする方法がない {{ domxref("NameList") }} インタフェースは削除されました。
