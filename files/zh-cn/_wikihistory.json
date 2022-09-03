@@ -34347,10 +34347,6 @@
     "modified": "2020-10-15T22:30:43.048Z",
     "contributors": ["Aliom252181"]
   },
-  "orphaned/Web/API/Text/isElementContentWhitespace": {
-    "modified": "2019-03-24T00:16:07.914Z",
-    "contributors": ["teoli", "khalid32", "ziyunfei"]
-  },
   "orphaned/Web/API/TextRange": {
     "modified": "2020-02-27T01:42:43.987Z",
     "contributors": ["MCCF"]
