@@ -34347,10 +34347,6 @@
     "modified": "2020-10-15T22:30:43.048Z",
     "contributors": ["Aliom252181"]
   },
-  "orphaned/Web/API/TextRange": {
-    "modified": "2020-02-27T01:42:43.987Z",
-    "contributors": ["MCCF"]
-  },
   "orphaned/Web/API/TextRange/text": {
     "modified": "2020-02-26T01:25:35.461Z",
     "contributors": ["MCCF"]
