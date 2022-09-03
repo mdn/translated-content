@@ -39,6 +39,6 @@ slug: Web/HTML/Quirks_Mode_and_Standards_Mode
 
 ## 我要如何知道目前是哪个模式？
 
-在 Firefox 中，请从右键菜单选择 *查看页面信息*，然后查看 *渲染模式*。（[了解 Firefox 页面信息窗口](https://support.mozilla.org/en-US/kb/firefox-page-info-window)）
+在 Firefox 中，请从右键菜单选择*查看页面信息*，然后查看*渲染模式*。（[了解 Firefox 页面信息窗口](https://support.mozilla.org/zh-CN/kb/页面信息窗口)）
 
-在 Internet Explorer 中，请按下 *F12*，然后查看 *文档模式*。
+在 Internet Explorer 中，请按下 _F12_，然后查看*文档模式*。
