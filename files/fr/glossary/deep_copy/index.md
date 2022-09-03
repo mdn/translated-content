@@ -29,5 +29,5 @@ Pour les objets qui _sont_ sérialisables, vous pouvez également utiliser le [`
 
 ## Pour approfondir
 
-- [copie superficielle](/en-US/docs/Glossary/Shallow_copy)
-- [`window.structuredClone()`](/en-US/docs/Web/API/structuredClone)
+- [Copie superficielle](/fr/docs/Glossary/Shallow_copy)
+- [`window.structuredClone()`](/fr/docs/Web/API/structuredClone)
