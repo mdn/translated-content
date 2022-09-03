@@ -92,4 +92,4 @@ function submit(event) {
 ## 関連情報
 
 - {{event("invalid")}} event
-- [DOM onevent ハンドラー](/ja/docs/Web/Guide/Events/Event_handlers "/ja/docs/Web/Guide/DOM/Events/Event_handlers")
+- [DOM onevent ハンドラー](/ja/docs/Web/Guide/Events/Event_handlers)

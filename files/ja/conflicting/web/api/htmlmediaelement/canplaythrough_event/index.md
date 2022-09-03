@@ -44,4 +44,4 @@ var handlerFunction = element.oncanplaythrough;
 ## 関連情報
 
 - {{event("canplaythrough")}}
-- [DOM onevent ハンドラー](/ja/docs/Web/Guide/Events/Event_handlers "/ja/docs/Web/Guide/DOM/Events/Event_handlers")
+- [DOM onevent ハンドラー](/ja/docs/Web/Guide/Events/Event_handlers)

@@ -43,4 +43,4 @@ var handlerFunction = element.oncanplay;
 
 ## 関連情報
 
-- [DOM onevent ハンドラー](/ja/docs/Web/Guide/Events/Event_handlers "/ja/docs/Web/Guide/DOM/Events/Event_handlers")
+- [DOM onevent ハンドラー](/ja/docs/Web/Guide/Events/Event_handlers)
