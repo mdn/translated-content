@@ -34114,10 +34114,6 @@
     "modified": "2019-03-24T00:16:26.046Z",
     "contributors": ["teoli", "Hasilt", "sleepholic", "ziyunfei"]
   },
-  "orphaned/Web/API/IDBCursorSync": {
-    "modified": "2019-03-18T21:28:52.330Z",
-    "contributors": ["cryingbat"]
-  },
   "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
     "modified": "2019-09-29T21:07:32.199Z",
     "contributors": [
