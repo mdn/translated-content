@@ -33844,10 +33844,6 @@
       "xgqfrms-GitHub"
     ]
   },
-  "conflicting/Web/API/Blob": {
-    "modified": "2019-08-14T07:08:22.933Z",
-    "contributors": ["ziyunfei"]
-  },
   "conflicting/Web/API/Element/touchcancel_event": {
     "modified": "2020-10-15T22:29:23.086Z",
     "contributors": ["Carllllo", "anhaoan6"]
