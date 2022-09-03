@@ -1466,7 +1466,6 @@
 /zh-CN/docs/Web/API/Fullscreen_API/指南	/zh-CN/docs/Web/API/Fullscreen_API/Guide
 /zh-CN/docs/Web/API/Geolocation/Using_geolocation	/zh-CN/docs/Web/API/Geolocation_API
 /zh-CN/docs/Web/API/GeolocationPosition/获取该位置时的时间戳	/zh-CN/docs/Web/API/GeolocationPosition/timestamp
-/zh-CN/docs/Web/API/GlobalEventHandlers	/zh-CN/docs/orphaned/Web/API/GlobalEventHandlers
 /zh-CN/docs/Web/API/GlobalEventHandlers.onblur	/zh-CN/docs/Web/API/Window/blur_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onchange	/zh-CN/docs/Web/API/HTMLElement/change_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.oncontextmenu	/zh-CN/docs/Web/API/Element/contextmenu_event

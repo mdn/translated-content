@@ -34079,10 +34079,6 @@
     "modified": "2020-10-15T22:20:05.430Z",
     "contributors": ["xiaoxingchi"]
   },
-  "orphaned/Web/API/GlobalEventHandlers": {
-    "modified": "2019-04-24T22:32:51.813Z",
-    "contributors": ["vaynewang", "chenqingyue", "teoli"]
-  },
   "orphaned/Web/API/HTMLElement/forceSpellCheck": {
     "modified": "2019-03-18T21:38:32.415Z",
     "contributors": ["varcat"]
