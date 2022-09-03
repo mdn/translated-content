@@ -2463,7 +2463,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/contains	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/includes
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toString
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null	/zh-CN/docs/Web/JavaScript/Reference/Operators/null
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/uneval	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/生成器函数	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
