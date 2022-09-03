@@ -1,14 +1,6 @@
 ---
 title: WindowEventHandlers.onstorage
 slug: conflicting/Web/API/Window/storage_event
-tags:
-  - API
-  - Event Handler
-  - Property
-  - Reference
-  - Web Storage
-  - WindowEventHandler
-translation_of: Web/API/WindowEventHandlers/onstorage
 original_slug: Web/API/WindowEventHandlers/onstorage
 ---
 <div class="syntaxbox">{{ ApiRef() }}</div>

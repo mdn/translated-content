@@ -49,9 +49,9 @@ var sending = browser.runtime.sendMessage(
 
   - 二番目の引数が次のいずれかである場合、引数は `(message, options)` と解釈され、メッセージは内部的に送信されます。
 
-    1.  有効な `options` オブジェクトである (つまり、ブラウザがサポートする `options` のプロパティのみを持つオブジェクト)
-    2.  null
-    3.  undefined
+    1. 有効な `options` オブジェクトである (つまり、ブラウザがサポートする `options` のプロパティのみを持つオブジェクト)
+    2. null
+    3. undefined
 
   - それ以外の場合、引数は `(extensionId, message)` と解釈され、メッセージは `extensionId` によって識別された拡張機能に送信されます。
 

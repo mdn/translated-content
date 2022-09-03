@@ -16,7 +16,7 @@ let gettingItem = browser.storage.<storageType>.get(
 )
 ```
 
-`<storageType>` は [`storage.sync`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync "sync ストレージ領域を指します。 sync ストレージ内のアイテムはブラウザーによって同期され、ログイン(Firefox sync や Google アカウントなど)しているブラウザー・デバイスの全てのインスタンスで利用できます。") または [`storage.local`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local "この項目についての文書はまだ書かれていません。書いてみませんか？") の書き込み可能なストレージタイプです。
+`<storageType>` は [`storage.sync`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync) または [`storage.local`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) の書き込み可能なストレージタイプです。
 
 ### 引数
 

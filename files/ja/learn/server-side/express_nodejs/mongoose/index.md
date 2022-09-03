@@ -486,37 +486,37 @@ You will first need to [create an account](https://mlab.com/signup/) with mLab (
 
 After logging in, you'll be taken to the [home](https://mlab.com/home) screen:
 
-1.  Click **Create New** in the _MongoDB Deployments_ section.![](mLabCreateNewDeployment.png)
-2.  This will open the _Cloud Provider Selection_ screen.
+1. Click **Create New** in the _MongoDB Deployments_ section.![](mLabCreateNewDeployment.png)
+2. This will open the _Cloud Provider Selection_ screen.
     ![MLab - screen for new deployment](mLab_new_deployment_form_v2.png)
 
     - Select the SANDBOX (Free) plan from the Plan Type section.
     - Select any provider from the _Cloud Provider_ section. Different providers offer different regions (displayed below the selected plan type).
     - Click the **Continue** button.
 
-3.  This will open the _Select Region_ screen.
+3. This will open the _Select Region_ screen.
 
     ![Select new region screen](mLab_new_deployment_select_region_v2.png)
 
     - Select the region closest to you and then **Continue**.
 
-4.  This will open the _Final Details_ screen.
+4. This will open the _Final Details_ screen.
     ![New deployment database name](mLab_new_deployment_final_details.png)
 
     - Enter the name for the new database as `local_library` and then select **Continue**.
 
-5.  This will open the _Order Confirmation_ screen.
+5. This will open the _Order Confirmation_ screen.
     ![Order confirmation screen](mLab_new_deployment_order_confirmation.png)
 
     - Click **Submit Order** to create the database.
 
-6.  You will be returned to the home screen. Click on the new database you just created to open its details screen. As you can see the database has no collections (data).
+6. You will be returned to the home screen. Click on the new database you just created to open its details screen. As you can see the database has no collections (data).
     ![mLab - Database details screen](mLab_new_deployment_database_details.png)
 
     The URL that you need to use to access your database is displayed on the form above (shown for this database circled above). In order to use this you need to create a database user that you can specify in the URL.
 
-7.  Click the **Users** tab and select the **Add database user** button.
-8.  Enter a username and password (twice), and then press **Create**. Do not select _Make read only_.
+7. Click the **Users** tab and select the **Add database user** button.
+8. Enter a username and password (twice), and then press **Create**. Do not select _Make read only_.
     ![](mLab_database_users.png)
 
 You have now created the database, and have an URL (with username and password) that can be used to access it. This will look something like: `mongodb://your_user_namer:your_password@ds119748.mlab.com:19748/local_library`.
@@ -696,23 +696,23 @@ That's it. We now have all models for the site set up!
 
 In order to test the models (and to create some example books and other items that we can use in our next articles) we'll now run an _independent_ script to create items of each type:
 
-1.  Download (or otherwise create) the file [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) inside your _express-locallibrary-tutorial_ directory (in the same level as `package.json`).
+1. Download (or otherwise create) the file [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) inside your _express-locallibrary-tutorial_ directory (in the same level as `package.json`).
 
     > **Note:** You don't need to know how [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) works; it just adds sample data into the database.
 
-2.  Enter the following commands in the project root to install the _async_ module that is required by the script (we'll discuss this in later tutorials, )
+2. Enter the following commands in the project root to install the _async_ module that is required by the script (we'll discuss this in later tutorials, )
 
     ```bash
     npm install async
     ```
 
-3.  Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database (the same one you replaced the _insert_your_database_url_here_ placeholder with, inside `app.js` earlier):
+3. Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database (the same one you replaced the _insert_your_database_url_here_ placeholder with, inside `app.js` earlier):
 
     ```bash
     node populatedb <your mongodb url>​​​​
     ```
 
-4.  The script should run through to completion, displaying items as it creates them in the terminal.
+4. The script should run through to completion, displaying items as it creates them in the terminal.
 
 > **Note:** **Tip:** Go to your database on [mLab](https://mlab.com/home). You should now be able to drill down into individual collections of Books, Authors, Genres and BookInstances, and check out individual documents.
 

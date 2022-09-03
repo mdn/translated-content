@@ -1,21 +1,6 @@
 ---
 title: AudioTrackList.onchange
 slug: conflicting/Web/API/AudioTrackList/change_event
-tags:
-  - API
-  - Adding Audio Tracks
-  - Adding Tracks
-  - Audio
-  - AudioTrackList
-  - Event Handler
-  - HTML DOM
-  - Media
-  - Property
-  - Reference
-  - addTrack
-  - onchange
-  - track
-translation_of: Web/API/AudioTrackList/onchange
 original_slug: Web/API/AudioTrackList/onchange
 ---
 {{APIRef("HTML DOM")}}

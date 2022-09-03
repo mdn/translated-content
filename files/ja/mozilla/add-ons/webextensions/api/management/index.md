@@ -41,12 +41,11 @@ slug: Mozilla/Add-ons/WebExtensions/API/management
   - : 指定したマニフェストストリングに対して表示されるパーミッション警告一覧を取得します。
 - {{WebExtAPIRef("management.setEnabled()")}}
   - : 指定した ID のアドオンを有効化・無効化します。
-- ## イベント
 
-  {{WebExtAPIRef("management.onInstalled")}}
+## イベント
 
+- {{WebExtAPIRef("management.onInstalled")}}
   - : アドオンがインストールされた時に発火します。
-
 - {{WebExtAPIRef("management.onUninstalled")}}
   - : アドオンがアンインストールされた時に発火します。
 - {{WebExtAPIRef("management.onEnabled")}}

@@ -24,12 +24,12 @@ browser.bookmarks.move(
 
   - : ブックマークの移動先を表す {{jsxref("object")}} です。このオブジェクトには以下のプロパティが必ず 1 つ以上含まれます。
 
-    - `parentId `{{optional_inline}}
+    - `parentId` {{optional_inline}}
       - : 移動先フォルダの ID を指定する {{jsxref("string")}} です。この値が省略された場合、現在と同じフォルダ内の新しい場所へ移動されます。
-    - `index `{{optional_inline}}
+    - `index` {{optional_inline}}
       - : 移動先フォルダ内における位置を指定する 0 起点のインデックスです。値が 0 の場合、そのフォルダの先頭に移動されます。値が省略された場合、新しい親フォルダ内の最後に移動されます。
 
-- `callback `{{optional_inline}}
+- `callback` {{optional_inline}}
 
   - : 移動が終了した際に呼び出される {{jsxref("function")}} です。この関数は以下の引数を 1 つ受け取ります。
 
@@ -65,7 +65,7 @@ function moveToFolder(bookmarkId, destinationId) {
 
 {{WebExtExamples}}
 
-> **Note:** この API は Chromium `の `[`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-move) API に基づいています。また、このドキュメント`は `[`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> **Note:** この API は Chromium `の`[`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-move) API に基づいています。また、このドキュメント は [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

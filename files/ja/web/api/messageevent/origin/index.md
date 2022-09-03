@@ -1,16 +1,6 @@
 ---
 title: MessageEvent.origin
 slug: Web/API/MessageEvent/origin
-tags:
-  - API
-  - DOM
-  - MessageEvent
-  - プロパティ
-  - リファレンス
-  - messaging
-  - origin
-browser-compat: api.MessageEvent.origin
-translation_of: Web/API/MessageEvent/origin
 ---
 {{APIRef("HTML DOM")}}
 

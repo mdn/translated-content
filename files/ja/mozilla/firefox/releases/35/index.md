@@ -18,17 +18,17 @@ Gecko 35 を搭載した Firefox 35 は、米国時間 2015 年 1 月 13 日に�
 
 ### CSS
 
-- [`mask-type`](/ja/docs/Web/CSS/mask-type "この項目についての文書はまだ書かれていません。書いてみませんか？") プロパティをデフォルトで有効にしました ([バグ 1058519](https://bugzilla.mozilla.org/show_bug.cgi?id=1058519 "FIXED: Ship mask-type CSS property"))。
-- [`filter`](/ja/docs/Web/CSS/filter "CSS の filter プロパティは、ぼかしや色変化などのグラフィック効果を要素に適用します。フィルターは画像、背景、境界の描画を調整するためによく使われます。") プロパティをデフォルトで有効にしました ([バグ 1057180](https://bugzilla.mozilla.org/show_bug.cgi?id=1057180 "FIXED: Turn on CSS Filters by default (by enabling about:config pref)"))。
-- [`@font-face`](/ja/docs/Web/CSS/@font-face "CSS の @font-face @-規則は、テキストを表示するための独自フォントを指定します。フォントはリモートサーバーまたはユーザー自身のコンピューターのどちらかから読み込むことができます。") @ 規則で WOFF2 フォントをサポートしました ([バグ 1064737](https://bugzilla.mozilla.org/show_bug.cgi?id=1064737 "FIXED: support WOFF2 fonts via @font-face"))。
-- [`symbols()`](</ja/docs/Web/CSS/symbols()> "この項目についての文書はまだ書かれていません。書いてみませんか？") 関数記法をサポートしました ([バグ 966168](https://bugzilla.mozilla.org/show_bug.cgi?id=966168 "FIXED: Implement symbols() CSS function"))。
-- CSS Font Loading API を実装しました ([バグ 1028497](https://bugzilla.mozilla.org/show_bug.cgi?id=1028497 "FIXED: implement the CSS Font Loading API"))。
-- コンボボックスで [`-moz-appearance`](/ja/docs/Web/CSS/-moz-appearance "この項目についての文書はまだ書かれていません。書いてみませんか？") に値 `none` を指定すると、ドロップダウンボタンを表示しないようになりました ([バグ 649849](https://bugzilla.mozilla.org/show_bug.cgi?id=649849 "FIXED: Make -moz-appearance:none on a combobox remove the dropdown button"))。
+- [`mask-type`](/ja/docs/Web/CSS/mask-type) プロパティをデフォルトで有効にしました ([バグ 1058519](https://bugzilla.mozilla.org/show_bug.cgi?id=1058519))。
+- [`filter`](/ja/docs/Web/CSS/filter) プロパティをデフォルトで有効にしました ([バグ 1057180](https://bugzilla.mozilla.org/show_bug.cgi?id=1057180))。
+- [`@font-face`](/ja/docs/Web/CSS/@font-face) @ 規則で WOFF2 フォントをサポートしました ([バグ 1064737](https://bugzilla.mozilla.org/show_bug.cgi?id=1064737))。
+- [`symbols()`](</ja/docs/Web/CSS/symbols()> "この項目についての文書はまだ書かれていません。書いてみませんか？") 関数記法をサポートしました ([バグ 966168](https://bugzilla.mozilla.org/show_bug.cgi?id=966168))。
+- CSS Font Loading API を実装しました ([バグ 1028497](https://bugzilla.mozilla.org/show_bug.cgi?id=1028497))。
+- コンボボックスで [`-moz-appearance`](/ja/docs/Web/CSS/-moz-appearance) に値 `none` を指定すると、ドロップダウンボタンを表示しないようになりました ([バグ 649849](https://bugzilla.mozilla.org/show_bug.cgi?id=649849))。
 - 他ブラウザに合致させるため、プロパティへのアクセス手段である `element.style["css-property-name"]` を追加しました ([バグ 958887](https://bugzilla.mozilla.org/show_bug.cgi?id=958887 'FIXED: Add support for element.style["css-property-name"] non-standard extension'))。
 
 ### HTML
 
-- [`<body>`](/ja/docs/Web/HTML/Element/body "HTML の <body> 要素は、HTML 文書のコンテンツを示す要素です。<body> 要素は文書中に一つだけ配置できます。")要素において廃止済みであり仕様に適合しない `bottommargin`、`leftmargin`、`rightmargin`、`topmargin` の各属性を Quirks モード以外でも有効にしました ([バグ 95530](https://bugzilla.mozilla.org/show_bug.cgi?id=95530 "FIXED: topmargin and leftmargin attributes on the BODY element should be honored in all modes (not just Quirks mode)"))。
+- [`<body>`](/ja/docs/Web/HTML/Element/body)要素において廃止済みであり仕様に適合しない `bottommargin`、`leftmargin`、`rightmargin`、`topmargin` の各属性を Quirks モード以外でも有効にしました ([バグ 95530](https://bugzilla.mozilla.org/show_bug.cgi?id=95530))。
 
 ### JavaScript
 
@@ -37,42 +37,42 @@ Gecko 35 を搭載した Firefox 35 は、米国時間 2015 年 1 月 13 日に�
   - 関数ボディの同一スコープ内で、`let` を使用して既存の変数や引数を再度宣言すると構文エラーになります。
   - 関数ボディで `let` を使用して宣言した変数を、その宣言に到達して評価される前に使用すると、実行時エラーが発生します。
 
-- 最近の仕様の変更に合致するよう、ES6 の [`Symbols`](/ja/docs/Web/JavaScript/Reference/Symbols "この項目についての文書はまだ書かれていません。書いてみませんか？") (Nightly チャンネルのみ有効) を更新しました ([バグ 1042602](https://bugzilla.mozilla.org/show_bug.cgi?id=1042602 "FIXED: Symbol behavior changes in ES6 draft rev 26")):
+- 最近の仕様の変更に合致するよう、ES6 の [`Symbols`](/ja/docs/Web/JavaScript/Reference/Symbols) (Nightly チャンネルのみ有効) を更新しました ([バグ 1042602](https://bugzilla.mozilla.org/show_bug.cgi?id=1042602)):
 
-  - `String(Symbol("1"))` で [`TypeError`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypeError "TypeError オブジェクトは、値が期待される型でない場合のエラーを表します。") が発生しないようになりました。代わりに文字列 (`"Symbol(1)"`) が返ります ([バグ 1058396](https://bugzilla.mozilla.org/show_bug.cgi?id=1058396 "FIXED: String(aSymbol) now returns the symbol’s description in ES6 draft rev 27"))。
+  - `String(Symbol("1"))` で [`TypeError`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypeError) が発生しないようになりました。代わりに文字列 (`"Symbol(1)"`) が返ります ([バグ 1058396](https://bugzilla.mozilla.org/show_bug.cgi?id=1058396))。
 
-- [_TypedArray_ のさまざまなコンストラクタ](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)が `[[Prototype]]` として、ES6 で `%TypedArray%` と示されている単一の関数を持つようになりました (しかし、他には直接公開されません)。各 Typed Array のプロトタイプは、`%TypedArray%.prototype` から継承します。(`%TypedArray%` および `%TypedArray%.prototype` は、それぞれ [`Function.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) および [`Object.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype) から継承しますので、Typed Array のコンストラクタやインスタンスはこれらのオブジェクトに存在するプロパティを持ちます) Typed Array 関数のプロパティは `%TypedArray%.prototype` 上に存在して、Typed Array で動作するようになります。詳しくは [_TypedArray_](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Description) や [バグ 896116](https://bugzilla.mozilla.org/show_bug.cgi?id=896116 "FIXED: Implement ES6 %TypedArray% superclass that all ArrayBufferViews inherit from") をご覧ください。
-- ES6 の、[オブジェクトリテラルを使用して行うプロトタイプミューテーション](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#Prototype_mutation)を実装しました ([バグ 1061853](https://bugzilla.mozilla.org/show_bug.cgi?id=1061853 "FIXED: Implement ES6 object-literal __proto__ restrictions/semantics"))。
+- [_TypedArray_ のさまざまなコンストラクタ](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)が `[[Prototype]]` として、ES6 で `%TypedArray%` と示されている単一の関数を持つようになりました (しかし、他には直接公開されません)。各 Typed Array のプロトタイプは、`%TypedArray%.prototype` から継承します。(`%TypedArray%` および `%TypedArray%.prototype` は、それぞれ [`Function.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) および [`Object.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype) から継承しますので、Typed Array のコンストラクタやインスタンスはこれらのオブジェクトに存在するプロパティを持ちます) Typed Array 関数のプロパティは `%TypedArray%.prototype` 上に存在して、Typed Array で動作するようになります。詳しくは [_TypedArray_](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Description) や [バグ 896116](https://bugzilla.mozilla.org/show_bug.cgi?id=896116) をご覧ください。
+- ES6 の、[オブジェクトリテラルを使用して行うプロトタイプミューテーション](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#Prototype_mutation)を実装しました ([バグ 1061853](https://bugzilla.mozilla.org/show_bug.cgi?id=1061853))。
 
   - オブジェクトリテラル構文内では、`__proto__:value` として指定するメンバーが 1 つだけであれば `[[Prototype]]` のミューテーションを行うようになりました。
   - `__proto__() {}` のようなメソッドメンバーは、`[[Prototype]]` をオーバーライトしないようになりました。
 
 ### インターフェイス/API/DOM
 
-- [`NavigatorLanguage`](/ja/docs/Web/API/NavigatorLanguage "NavigatorLanguage contains methods and properties related to the language of the navigator.") インターフェイスが、[`WorkerNavigator`](/ja/docs/Web/API/WorkerNavigator "この項目についての文書はまだ書かれていません。書いてみませんか？") によって Workers から使用可能になりました ([バグ 925849](https://bugzilla.mozilla.org/show_bug.cgi?id=925849 "FIXED: WorkerNavigator does not implement NavigatorLanguage"))。
-- [`Element.closest()`](/ja/docs/Web/API/Element/closest "この項目についての文書はまだ書かれていません。書いてみませんか？") メソッドは、カレント要素にもっとも近い祖先要素を返します ([バグ 1055533](https://bugzilla.mozilla.org/show_bug.cgi?id=1055533 "FIXED: Implement Element.closest()"))。
-- [`CanvasRenderingContext2D.filter`](/ja/docs/Web/API/CanvasRenderingContext2D/filter "この項目についての文書はまだ書かれていません。書いてみませんか？") プロパティを実験的にサポートしました。設定項目 `canvas.filters.enabled` で制御されます ([バグ 927892](https://bugzilla.mozilla.org/show_bug.cgi?id=927892 "FIXED: Exposing the CSS/SVG Filters as Canvas APIs"))。
-- [`Animation.target`](/ja/docs/Web/API/Animation/target "この項目についての文書はまだ書かれていません。書いてみませんか？") プロパティの実装により、Web Animations の実験的にな実装が進展しました。設定項目 `dom.animations-api.core.enabled` で制御されており、デフォルトで無効化されています ([バグ 1067701](https://bugzilla.mozilla.org/show_bug.cgi?id=1067701 "FIXED: Implement Animation.target"))。
-- 仕様書の定めにより、[`hasAttributes()`](/ja/docs/Web/API/Element/hasAttributes "hasAttributes は現在の要素が何らかの属性を持つか否かを示す真偽値を返します。") メソッドを [`Node`](/ja/docs/Web/API/Node "Node はいくつもの DOM API オブジェクトタイプが継承しているインターフェイスで、それらのさまざまなタイプを同じように扱える (同じメソッドのセットを継承する、または同じ方法でテストできる) ようにします。") から [`Element`](/ja/docs/Web/API/Element "Element は Document の中にあるすべての要素が継承する、もっとも一般的な基底クラスです。このインターフェイスは、すべての種類の要素に共通するメソッドとプロパティを記述するだけのものです。多くの具体的なクラスが Element を継承します。") に移しました ([バグ 1055773](https://bugzilla.mozilla.org/show_bug.cgi?id=1055773 "FIXED: Move hasAttributes() to Element"))。
-- [`HTMLImageElement`](/ja/docs/Web/API/HTMLImageElement "この項目についての文書はまだ書かれていません。書いてみませんか？")、[`HTMLLinkElement`](/ja/docs/Web/API/HTMLLinkElement "HTMLLinkElement インターフェイスは、外部リソースの参照情報、およびそれらのリソースとドキュメントの関係 (またはその逆) を表します。このオブジェクトは、HTMLElement インターフェイスのすべてのプロパティとメソッドを継承します。")、[`HTMLMediaElement`](/ja/docs/Web/API/HTMLMediaElement "HTMLMediaElement は HTMLElement に音声や動画といったメディア関連機能の属性とメソッドを追加します。HTMLVideoElement と HTMLAudioElement はこのインタフェースを継承しています。")、[`HTMLScriptElement`](/ja/docs/Web/API/HTMLScriptElement "DOMの ScriptオブジェクトはHTMLScriptElement (または HTML 4 HTMLScriptElement)インターフェイスに具現化されます．それは通常のelementオブジェクトインターフェイスに加えて(継承によって利用可能)，<script> 要素のレイアウトおよび表現を扱う特別なプロパティとメソッドを提供します．")、[`SVGScriptElement`](/ja/docs/Web/API/SVGScriptElement "この項目についての文書はまだ書かれていません。書いてみませんか？") の `crossOrigin` 属性は有効な値のみを受け入れるようになりました。`""` は有効ではなく、代わりに `null` を使用します ([バグ 880997](https://bugzilla.mozilla.org/show_bug.cgi?id=880997 "FIXED: Reflect crossOrigin as a limited enumerated attribute"))。
-- Resource Timing API をデフォルトで有効にしました ([バグ 1002855](https://bugzilla.mozilla.org/show_bug.cgi?id=1002855 "FIXED: Turn on Resource Timing"))。
-- 仕様に合致させるため、[`Selection.containsNode()`](/ja/docs/Web/API/Selection/containsNode "この項目についての文書はまだ書かれていません。書いてみませんか？") の第一引数を `null` にすることはできなくなりました ([バグ 1068058](https://bugzilla.mozilla.org/show_bug.cgi?id=1068058 "FIXED: Update Selection.containsNode according to the spec"))。
-- [`ImageCapture`](/ja/docs/Web/API/ImageCapture "この項目についての文書はまだ書かれていません。書いてみませんか？") API を新たに実装しました。[`ImageCapture.takePhoto()`](/ja/docs/Web/API/ImageCapture/takePhoto "この項目についての文書はまだ書かれていません。書いてみませんか？") を使用できます ([バグ 916643](https://bugzilla.mozilla.org/show_bug.cgi?id=916643 "FIXED: ImageCapture - Implement WebIDL and takePhoto()"))。
-- HTTP 以外の [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest "XMLHttpRequest (XHR) オブジェクトを使用すると、サーバーと対話することができます。ページ全体を更新する必要なしに、データを受け取ることができます。これでユーザーの作業を中断させることなく、ウェブページの一部を更新することができます。") 要求が成功した場合は (誤りである `0` に代わり) `200` を返すようになりました ([バグ 716491](https://bugzilla.mozilla.org/show_bug.cgi?id=716491 "FIXED: Investigate the status code for non-HTTP XHR."))。
-- [`XMLHttpRequest.responseURL`](/ja/docs/Web/API/XMLHttpRequest/responseURL "XMLHttpRequest.responseURL プロパティは読み取り専用で、レスポンスのシリアライズされた URL を返します。 URL が null の場合は、空文字を返します。 URL に存在する URL フラグメントはすべて取り除かれます。 responseURL の値は、任意のリダイレクト後に得られる最後の URL になります。") を最新の仕様に適合させて、URL のフラグメント (`'#xyz'`) は存在しても含めないようになりました ([バグ 1073882](https://bugzilla.mozilla.org/show_bug.cgi?id=1073882 "FIXED: XMLHttpRequest.prototype.responseURL should not have fragment per latest spec"))。
-- 内部で使用している非標準の [`File.mozFullPath`](/ja/docs/Web/API/File/mozFullPath "File インターフェイスに対する特権的な拡張として、mozFullPath プロパティには、表現されたファイルの絶対パス名が含まれます。") プロパティは content から参照できなくなりました ([バグ 1048293](https://bugzilla.mozilla.org/show_bug.cgi?id=1048293 "FIXED: File::mozFullPath attribute should not be exposed to content."))。
-- [`File`](/ja/docs/Web/API/File "File インターフェイスは、ファイルについての情報を提供したり、ウェブページ内の JavaScript でその内容にアクセスできるようにしたりします。") のコンストラクタを、仕様に準拠するよう拡張しました ([バグ 1047483](https://bugzilla.mozilla.org/show_bug.cgi?id=1047483 "FIXED: Porting DOMFile/DOMBlob to WebIDL"))。
-- 自身を生成したものとは別のエンティティによってアボートされることが可能な Promise である、[`AbortablePromise`](/ja/docs/Web/API/AbortablePromise "この項目についての文書はまだ書かれていません。書いてみませんか？") を実験的に実装しました。接頭辞 `Moz` を付加しており、設定項目 `dom.abortablepromise.enabled` (既定値は `false`) で制御されます ([バグ 1035060](https://bugzilla.mozilla.org/show_bug.cgi?id=1035060 "FIXED: Implement AbortablePromise"))。
-- 非標準の [`Navigator.mozIsLocallyAvailable`](/ja/docs/Web/API/Navigator/mozIsLocallyAvailable "Navigator.mozIsLocallyAvailable() メソッドは、アドオンが指定されたリソースが両可能かどうかを判断できるようにします。") プロパティを削除しました ([バグ 1066826](https://bugzilla.mozilla.org/show_bug.cgi?id=1066826 "FIXED: Remove Navigator::MozisLocallyAvailable API"))。
-- 設定項目 `network.websocket.enabled` (既定値は `true`) を削除しました。今後は [Websocket](/ja/docs/WebSockets) API を無効化できません ([バグ 1091016](https://bugzilla.mozilla.org/show_bug.cgi?id=1091016 "FIXED: Pref network.websocket.enabled is no longer reasonable"))。
-- [`Window.crypto`](/ja/docs/Web/API/Window/crypto "Window.crypto 読み取り専用プロパティは、グローバルオブジェクトに関連付けられた Crypto オブジェクトを返します。このオブジェクトは、ウェブページが暗号に関連したサービスにアクセスできるようにします。") の非標準メソッドおよび非標準プロパティを削除しました ([バグ 1030963](https://bugzilla.mozilla.org/show_bug.cgi?id=1030963 "FIXED: remove proprietary window.crypto functions/properties"))。標準の WebCrypto API で定義されているメソッドおよびプロパティのみが残ります。
+- [`NavigatorLanguage`](/ja/docs/Web/API/NavigatorLanguage) インターフェイスが、[`WorkerNavigator`](/ja/docs/Web/API/WorkerNavigator) によって Workers から使用可能になりました ([バグ 925849](https://bugzilla.mozilla.org/show_bug.cgi?id=925849))。
+- [`Element.closest()`](/ja/docs/Web/API/Element/closest) メソッドは、カレント要素にもっとも近い祖先要素を返します ([バグ 1055533](https://bugzilla.mozilla.org/show_bug.cgi?id=1055533))。
+- [`CanvasRenderingContext2D.filter`](/ja/docs/Web/API/CanvasRenderingContext2D/filter) プロパティを実験的にサポートしました。設定項目 `canvas.filters.enabled` で制御されます ([バグ 927892](https://bugzilla.mozilla.org/show_bug.cgi?id=927892))。
+- [`Animation.target`](/ja/docs/Web/API/Animation/target) プロパティの実装により、Web Animations の実験的にな実装が進展しました。設定項目 `dom.animations-api.core.enabled` で制御されており、デフォルトで無効化されています ([バグ 1067701](https://bugzilla.mozilla.org/show_bug.cgi?id=1067701))。
+- 仕様書の定めにより、[`hasAttributes()`](/ja/docs/Web/API/Element/hasAttributes) メソッドを [`Node`](/ja/docs/Web/API/Node) から [`Element`](/ja/docs/Web/API/Element) に移しました ([バグ 1055773](https://bugzilla.mozilla.org/show_bug.cgi?id=1055773))。
+- [`HTMLImageElement`](/ja/docs/Web/API/HTMLImageElement)、[`HTMLLinkElement`](/ja/docs/Web/API/HTMLLinkElement)、[`HTMLMediaElement`](/ja/docs/Web/API/HTMLMediaElement)、[`HTMLScriptElement`](/ja/docs/Web/API/HTMLScriptElement)、[`SVGScriptElement`](/ja/docs/Web/API/SVGScriptElement) の `crossOrigin` 属性は有効な値のみを受け入れるようになりました。`""` は有効ではなく、代わりに `null` を使用します ([バグ 880997](https://bugzilla.mozilla.org/show_bug.cgi?id=880997))。
+- Resource Timing API をデフォルトで有効にしました ([バグ 1002855](https://bugzilla.mozilla.org/show_bug.cgi?id=1002855))。
+- 仕様に合致させるため、[`Selection.containsNode()`](/ja/docs/Web/API/Selection/containsNode) の第一引数を `null` にすることはできなくなりました ([バグ 1068058](https://bugzilla.mozilla.org/show_bug.cgi?id=1068058))。
+- [`ImageCapture`](/ja/docs/Web/API/ImageCapture) API を新たに実装しました。[`ImageCapture.takePhoto()`](/ja/docs/Web/API/ImageCapture/takePhoto) を使用できます ([バグ 916643](https://bugzilla.mozilla.org/show_bug.cgi?id=916643))。
+- HTTP 以外の [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) 要求が成功した場合は (誤りである `0` に代わり) `200` を返すようになりました ([バグ 716491](https://bugzilla.mozilla.org/show_bug.cgi?id=716491))。
+- [`XMLHttpRequest.responseURL`](/ja/docs/Web/API/XMLHttpRequest/responseURL) を最新の仕様に適合させて、URL のフラグメント (`'#xyz'`) は存在しても含めないようになりました ([バグ 1073882](https://bugzilla.mozilla.org/show_bug.cgi?id=1073882))。
+- 内部で使用している非標準の [`File.mozFullPath`](/ja/docs/Web/API/File/mozFullPath) プロパティは content から参照できなくなりました ([バグ 1048293](https://bugzilla.mozilla.org/show_bug.cgi?id=1048293))。
+- [`File`](/ja/docs/Web/API/File) のコンストラクタを、仕様に準拠するよう拡張しました ([バグ 1047483](https://bugzilla.mozilla.org/show_bug.cgi?id=1047483))。
+- 自身を生成したものとは別のエンティティによってアボートされることが可能な Promise である、[`AbortablePromise`](/ja/docs/Web/API/AbortablePromise) を実験的に実装しました。接頭辞 `Moz` を付加しており、設定項目 `dom.abortablepromise.enabled` (既定値は `false`) で制御されます ([バグ 1035060](https://bugzilla.mozilla.org/show_bug.cgi?id=1035060))。
+- 非標準の [`Navigator.mozIsLocallyAvailable`](/ja/docs/Web/API/Navigator/mozIsLocallyAvailable) プロパティを削除しました ([バグ 1066826](https://bugzilla.mozilla.org/show_bug.cgi?id=1066826))。
+- 設定項目 `network.websocket.enabled` (既定値は `true`) を削除しました。今後は [Websocket](/ja/docs/WebSockets) API を無効化できません ([バグ 1091016](https://bugzilla.mozilla.org/show_bug.cgi?id=1091016))。
+- [`Window.crypto`](/ja/docs/Web/API/Window/crypto) の非標準メソッドおよび非標準プロパティを削除しました ([バグ 1030963](https://bugzilla.mozilla.org/show_bug.cgi?id=1030963))。標準の WebCrypto API で定義されているメソッドおよびプロパティのみが残ります。
 - WebGL 2.0 の実験的な実装を進めています!
 
-  - [`WebGL2RenderingContext.copyBufferSubData()`](/ja/docs/Web/API/WebGL2RenderingContext/copyBufferSubData "この項目についての文書はまだ書かれていません。書いてみませんか？") メソッドを実装しました ([バグ 1048668](https://bugzilla.mozilla.org/show_bug.cgi?id=1048668 "FIXED: WebGL2 - Implement CopyBufferSubData"))。
+  - [`WebGL2RenderingContext.copyBufferSubData()`](/ja/docs/Web/API/WebGL2RenderingContext/copyBufferSubData) メソッドを実装しました ([バグ 1048668](https://bugzilla.mozilla.org/show_bug.cgi?id=1048668))。
 
 ### MathML
 
-- 文字が重ねて置かれる場合 (例えば数学のハット記号がついた、ドットがない i) に、OpenType の `dtls` 機能 (デフォルト CSS スタイルシートの [`font-feature-settings`](/ja/docs/Web/CSS/font-feature-settings "CSS の font-feature-settings プロパティは、 OpenType フォントの拡張タイポグラフィの特性を制御します。") による) が MathML 要素へ自動的に適用されるようになりました。
+- 文字が重ねて置かれる場合 (例えば数学のハット記号がついた、ドットがない i) に、OpenType の `dtls` 機能 (デフォルト CSS スタイルシートの [`font-feature-settings`](/ja/docs/Web/CSS/font-feature-settings) による) が MathML 要素へ自動的に適用されるようになりました。
 
 ### SVG
 
@@ -84,16 +84,16 @@ _変更なし。_
 
 ## ネットワークおよびセキュリティ
 
-- AEAD 暗号化方式を使用する場合に限り、HTTP/2 を実装および有効化しました ([バグ 1027720](https://bugzilla.mozilla.org/show_bug.cgi?id=1027720 "FIXED: Restrict HTTP/2 connections to AEAD ciphers only") および [バグ 1047594](https://bugzilla.mozilla.org/show_bug.cgi?id=1047594 "FIXED: Enable http/2 (and alpn) by default"))。
-- HTTP/2 の `alt-svc` ヘッダをサポートしました ([バグ 1003448](https://bugzilla.mozilla.org/show_bug.cgi?id=1003448 "FIXED: http/2 alt-svc support"))。
-- HTTP の [Public Key Pinning](/ja/docs/Web/Security/Public_Key_Pinning) 拡張 (HPKP) を実装しました ([バグ 787133](https://bugzilla.mozilla.org/show_bug.cgi?id=787133 "FIXED: Implement Public Key Pinning Extension for HTTP (HPKP)"))。
+- AEAD 暗号化方式を使用する場合に限り、HTTP/2 を実装および有効化しました ([バグ 1027720](https://bugzilla.mozilla.org/show_bug.cgi?id=1027720) および [バグ 1047594](https://bugzilla.mozilla.org/show_bug.cgi?id=1047594))。
+- HTTP/2 の `alt-svc` ヘッダをサポートしました ([バグ 1003448](https://bugzilla.mozilla.org/show_bug.cgi?id=1003448))。
+- HTTP の [Public Key Pinning](/ja/docs/Web/Security/Public_Key_Pinning) 拡張 (HPKP) を実装しました ([バグ 787133](https://bugzilla.mozilla.org/show_bug.cgi?id=787133))。
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 
 ### XUL およびアドオン
 
-- [`tabbrowser`](/ja/docs/Mozilla/Tech/XUL/tabbrowser "tabbrowser") のプライベートなメソッドである `_getTabForBrowser()` が非推奨になりました。代わりに、パブリックなメソッドである [`getTabForBrowser`](/ja/docs/Mozilla/Tech/XUL/Method/getTabForBrowser) を新たに追加しました。予想されているとおり、このメソッドは指定した [`browser`](/ja/docs/Mozilla/Tech/XUL/browser "browser") を包含する [`tab`](/ja/docs/Mozilla/Tech/XUL/tab "tab") 要素を返します。
-- [`Performance.now()`](/ja/docs/Web/API/Performance/now "performance.now() メソッドは、ミリ秒単位で計測された DOMHighResTimeStamp を返します。") と対等である `Components.utils.now()` を、window 以外の chrome コード向けに実装しました ([バグ 969490](https://bugzilla.mozilla.org/show_bug.cgi?id=969490 "FIXED: Implement Components.utils.now() to match Performance.now() for non-window chrome code"))。
+- [`tabbrowser`](/ja/docs/Mozilla/Tech/XUL/tabbrowser) のプライベートなメソッドである `_getTabForBrowser()` が非推奨になりました。代わりに、パブリックなメソッドである [`getTabForBrowser`](/ja/docs/Mozilla/Tech/XUL/Method/getTabForBrowser) を新たに追加しました。予想されているとおり、このメソッドは指定した [`browser`](/ja/docs/Mozilla/Tech/XUL/browser) を包含する [`tab`](/ja/docs/Mozilla/Tech/XUL/tab) 要素を返します。
+- [`Performance.now()`](/ja/docs/Web/API/Performance/now) と対等である `Components.utils.now()` を、window 以外の chrome コード向けに実装しました ([バグ 969490](https://bugzilla.mozilla.org/show_bug.cgi?id=969490))。
 
 ### Add-on SDK
 

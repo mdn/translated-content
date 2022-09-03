@@ -1,14 +1,6 @@
 ---
 title: TransformStream
 slug: Web/API/TransformStream
-tags:
-  - API
-  - Interface
-  - Streams API
-  - TransformStream
-  - Web
-  - インターフェイス
-translation_of: Web/API/TransformStream
 ---
 {{APIRef("Media Capture and Streams")}}
 

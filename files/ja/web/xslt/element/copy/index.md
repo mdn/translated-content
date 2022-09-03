@@ -16,7 +16,7 @@ translation_of: Web/XSLT/Element/copy
 
 ```
 <xsl:copy use-attribute-sets=LIST-OF-NAMES>
-	TEMPLATE
+  TEMPLATE
 </xsl:copy>
 ```
 

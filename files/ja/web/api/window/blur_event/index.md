@@ -1,17 +1,6 @@
 ---
 title: 'Window: blur イベント'
 slug: Web/API/Window/blur_event
-tags:
-  - API
-  - イベント
-  - FocusEvent
-  - リファレンス
-  - ウェブ
-  - Window
-  - blur
-  - onblur
-browser-compat: api.Window.blur_event
-translation_of: Web/API/Window/blur_event
 ---
 {{APIRef}}
 

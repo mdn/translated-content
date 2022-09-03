@@ -16,7 +16,7 @@ MathML の `<mspace>` 要素は，空白を作るために使われます。空�
 - height
   - : ベースラインからの希望の高さ（値と単位については [length](/ja/docs/MathML/Attributes/Values#Lengths) 参照）
 - linebreak
-  - : この空白における改行について。取り得る値は `auto`（既定値）, ` newline`, `nobreak`, `goodbreak`, `badbreak`。MathML 3 以降は改行を制御するのに {{ MathMLElement("mo") }} を用いるのが好ましい。
+  - : この空白における改行について。取り得る値は `auto`（既定値）, `newline`, `nobreak`, `goodbreak`, `badbreak`。MathML 3 以降は改行を制御するのに {{ MathMLElement("mo") }} を用いるのが好ましい。
 - mathbackground
   - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/ja/docs/CSS/color_value#Color_Keywords).
 - width

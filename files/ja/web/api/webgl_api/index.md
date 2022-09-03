@@ -1,16 +1,6 @@
 ---
 title: 'WebGL: ウェブの 2D および 3D グラフィック'
 slug: Web/API/WebGL_API
-tags:
-  - 3D
-  - 3D Graphics
-  - Advanced
-  - Graphics
-  - Media
-  - Overview
-  - WebGL
-  - WebGL API
-translation_of: Web/API/WebGL_API
 ---
 {{WebGLSidebar}}
 

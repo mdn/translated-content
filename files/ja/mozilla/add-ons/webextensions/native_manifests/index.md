@@ -123,7 +123,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\<name>
 
 このキーにマニフェストへのパスを示す単一の既定の値を設定します。
 
-Firefox バージョン 64 以降では、32 ビットレジストリ view ([Wow6432Node) ](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system)がこれらのキーの中でまずチェックされ、"native" レジストリ view が続いてチェックされます。いずれの view にしてもアプリケーションにふさわしいレジストリを使用してください。
+Firefox バージョン 64 以降では、32 ビットレジストリ view ([Wow6432Node)](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system) がこれらのキーの中でまずチェックされ、"native" レジストリ view が続いてチェックされます。いずれの view にしてもアプリケーションにふさわしいレジストリを使用してください。
 
 _Firefox バージョン 63 　以前では、もし 32 ビットのアプリケーションであっても、このキーは [Wow6432Node](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system) 下に作成しないで下さい。以前のバージョンのブラウザは常に 32-bit エミュレーションではなくレジストリの "native" view 下のキーを探します。確実に "native" view にキーを作成するために、KEY_WOW64_64KEY または KEY_WOW64_32KEY フラグを RegCreateKeyEx に渡すことができます。[Accessing an Alternate Registry View](<https://msdn.microsoft.com/en-us/library/windows/desktop/aa384129(v=vs.85).aspx>) を参照して下さい。_
 

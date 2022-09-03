@@ -17,7 +17,7 @@ Gecko 25 を搭載した Firefox 25 は米国時間 2013 年 10 月 29 日にリ
 ### CSS
 
 - {{cssxref("background-attachment")}} CSS プロパティの値として、キーワード `local` をサポートしました ({{bug("483446")}})。
-- オペレーティングシステムのバージョンを検出するための、非標準で Mozilla だけのメディアクエリをサポートしました: [`-moz-os-version`](/ja/docs/Web/Guide/CSS/Media_queries#-moz-os-version "Web/Guide/CSS/Media_queries#-moz-os-version") ({{bug("810399")}})。現在このプロパティは、Windows のみで実装されています。
+- オペレーティングシステムのバージョンを検出するための、非標準で Mozilla だけのメディアクエリをサポートしました: [`-moz-os-version`](/ja/docs/Web/Guide/CSS/Media_queries#-moz-os-version) ({{bug("810399")}})。現在このプロパティは、Windows のみで実装されています。
 - {{cssxref("-moz-osx-font-smoothing")}} CSS プロパティを実装しました ({{bug("857142")}})。
 
 ### HTML
@@ -27,20 +27,20 @@ Gecko 25 を搭載した Firefox 25 は米国時間 2013 年 10 月 29 日にリ
 
 ### JavaScript
 
-[EcmaScript 6](/ja/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla "Web/JavaScript/ECMAScript_6_support_in_Mozilla") (Harmony) の実装が続いています!
+[EcmaScript 6](/ja/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) (Harmony) の実装が続いています!
 
-- [`Array`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array "Web/JavaScript/Reference/Global_Objects/Array") に {{jsxref("Array.of()")}} メソッドを実装しました ({{bug("866849")}})。
+- [`Array`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array) に {{jsxref("Array.of()")}} メソッドを実装しました ({{bug("866849")}})。
 - {{jsxref("Array.prototype.find()")}} メソッドおよび {{jsxref("Array.prototype.findIndex()")}} メソッドをサポートしました ({{bug("885553")}})。
 - {{jsxref("Global_Objects/Number/parseInt", "Number.parseInt()")}} および {{jsxref("Global_Objects/Number/parseFloat", "Number.parseFloat()")}} メソッドを実装しました ({{bug("886949")}})。
 - `Map.prototype.forEach()` メソッドおよび `Set.prototype.forEach()` メソッドを実装しました ({{bug("866847")}})。
-- [`Math`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math "Web/JavaScript/Reference/Global_Objects/Math") へ新たに、数学的なメソッドを追加しました: `Math.log10()`, `Math.log2()`, `Math.log1p()`, `Math.expm1()`, `Math.cosh()`, `Math.sinh()`, `Math.tanh()`, `Math.acosh()`, `Math.asinh()`, `Math.atanh()`, `Math.trunc()`, `Math.sign()` and `Math.cbrt()` ({{bug("717379")}}).
+- [`Math`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math) へ新たに、数学的なメソッドを追加しました: `Math.log10()`, `Math.log2()`, `Math.log1p()`, `Math.expm1()`, `Math.cosh()`, `Math.sinh()`, `Math.tanh()`, `Math.acosh()`, `Math.asinh()`, `Math.atanh()`, `Math.trunc()`, `Math.sign()` and `Math.cbrt()` ({{bug("717379")}}).
 - 2 進数および 8 進数の整数リテラルをサポートしました: `0b10101010`, `0B1010`, `0o777`, `0O237` が有効になりました ({{bug("894026")}})。
 - 計算機イプシロン定数 (1 に追加することで 1 ではなくなる、表現可能な最小の値) を {{jsxref("Global_Objects/Number/EPSILON", "Number.EPSILON")}} として使用できます ({{bug("885798")}})。
 
 ### インターフェイス/API/DOM
 
-- [Web Audio API](/ja/docs/Web_Audio_API "Web_Audio_API") をサポートしました。以前は不完全な実装を、設定のもとで使用できました ({{bug("779297")}})。
-- Windows の IME に関するキーの一部を `KeyboardEvent.key` でサポートしました ({{bug("865565")}})。詳しくは[キー名の表](/ja/docs/Web/API/KeyboardEvent#Key_names_and_Char_values "Web/API/KeyboardEvent#keyname_table_win")をご覧ください。
+- [Web Audio API](/ja/docs/Web_Audio_API) をサポートしました。以前は不完全な実装を、設定のもとで使用できました ({{bug("779297")}})。
+- Windows の IME に関するキーの一部を `KeyboardEvent.key` でサポートしました ({{bug("865565")}})。詳しくは[キー名の表](/ja/docs/Web/API/KeyboardEvent#Key_names_and_Char_values)をご覧ください。
 - Metro 版 Firefox が、デスクトップ版と同じ方法でキーイベントを発生させるようになりました ({{bug("843236")}})。
 - 前の `keydown` イベントの `preventDefault()` が呼び出された場合は`keypress` イベントが発生しないようになりました ({{bug("501496")}})。詳しくは [`keydown` イベントのドキュメント](</ja/docs/Web/Reference/Events/keydown#preventDefault()_of_keydown_event> "Web/Reference/Events/keydown#preventDefault()_of_keydown_event")をご覧ください。
 - `Future` インターフェイスの名称を `Promise` に変更しました ({{bug("884279")}})。

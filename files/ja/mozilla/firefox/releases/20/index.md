@@ -9,12 +9,12 @@ Gecko 20 を搭載した Firefox 20 は米国時間 2013 年 4 月 2 日にリ�
 ### HTML
 
 - {{HTMLElement("a")}} 要素および {{HTMLElement("area")}} 要素で {{htmlattrxref("download", "a") }} 属性をサポートしました ({{bug("676619")}})。
-- [グローバル属性](/ja/docs/HTML/Global_attributes) [`dir`](/ja/docs/HTML/Global_attributes#attr-dir "/ja/docs/HTML/Global_attributes") の値 `auto `を実装しました ({{bug("548206")}})。
+- [グローバル属性](/ja/docs/HTML/Global_attributes) [`dir`](/ja/docs/HTML/Global_attributes#attr-dir) の値 `auto`を実装しました ({{bug("548206")}})。
 
 ### JavaScript
 
 - Harmony (EcmaScript 6) の試案に最近追加された、`Weakmap.prototype.clear()` メソッドをサポートしました ({{bug("814562")}})。
-- C 言語スタイルの乗算関数である [`Math.imul()`](/ja/docs/JavaScript/Reference/Global_Objects/Math/imul "/ja/docs/JavaScript/Reference/Global_Objects/Math/imul") メソッドをサポートしました。ただし Harmony (EcmaScript 6) への提案はまだ受け入れられておらず、現在は非標準です ({{bug("808148")}})。
+- C 言語スタイルの乗算関数である [`Math.imul()`](/ja/docs/JavaScript/Reference/Global_Objects/Math/imul) メソッドをサポートしました。ただし Harmony (EcmaScript 6) への提案はまだ受け入れられておらず、現在は非標準です ({{bug("808148")}})。
 - Kinetic 3.x と共にドラッグ可能なテキストを使用している Web アプリが、Canvas バックエンドとして Cairo を使用している場合でも動作するようになりました。({{bug("835064")}})
 - [for each...in](/ja/docs/JavaScript/Reference/Statements/for_each...in) 文は非推奨になりましたので、使用するべきではありません。新たに [for...of](/ja/docs/JavaScript/Reference/Statements/for...of) 文の使用を検討してください ({{Bug("804834")}})。
 
@@ -46,7 +46,7 @@ Gecko 20 を搭載した Firefox 20 は米国時間 2013 年 4 月 2 日にリ�
 ## アドオン開発者と Mozilla 開発者向けの変更点
 
 - [ECMAScript for XML (E4X)](/ja/docs/E4X) はすべての chrome および content のスクリプトで無効になりました。content では先に Firefox 17 で無効にしており、Firefox 21 では完全に削除されます。代わりに DOMParser/DOMSerializer または非ネイティブの JXON アルゴリズムを使用してください。
-- `nsIDOMParserJS` インタフェースを削除しました ({{bug('816410')}})。代替として [`nsIDOMParser`](/ja/docs/nsIDOMParser "/ja/docs/nsIDOMParser") をご覧ください。
+- `nsIDOMParserJS` インタフェースを削除しました ({{bug('816410')}})。代替として [`nsIDOMParser`](/ja/docs/nsIDOMParser) をご覧ください。
 - Content Preferences: `nsIContentPrefService` インタフェースは非推奨になり、非同期の `nsIContentPrefService2` storage API を実装しました。
 
 ## 関連情報

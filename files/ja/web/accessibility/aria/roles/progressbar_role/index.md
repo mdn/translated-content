@@ -52,7 +52,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role
 
 - [progressbar](http://www.w3.org/TR/wai-aria/#progressbar)
 - [aria-valuenow](http://www.w3.org/TR/wai-aria/#aria-valuenow)
-- [aria-valuemin](http://www.w3.org/TR/wai-aria/#aria-valuemin "ARIA techniques")
+- [aria-valuemin](http://www.w3.org/TR/wai-aria/#aria-valuemin)
 - [aria-valuemax](http://www.w3.org/TR/wai-aria/#aria-valuemax)
 - [aria-valuetext](http://www.w3.org/TR/wai-aria/#aria-valuetext)
 

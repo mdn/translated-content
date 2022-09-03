@@ -1,14 +1,6 @@
 ---
 title: TextEncoder()
 slug: Web/API/TextEncoder/TextEncoder
-tags:
-  - API
-  - コンストラクター
-  - エンコーディング
-  - リファレンス
-  - TextEncoder
-browser-compat: api.TextEncoder.TextEncoder
-translation_of: Web/API/TextEncoder/TextEncoder
 ---
 {{APIRef("Encoding API")}}
 

@@ -36,4 +36,4 @@ _このインターフェイスに固有のメソッドはありませんが、�
 
 ## 関連情報
 
-- [DOM インターフェイスの索引](/ja/docs/DOM/DOM_Reference "DOM/DOM_Reference")
+- [DOM インターフェイスの索引](/ja/docs/DOM/DOM_Reference)

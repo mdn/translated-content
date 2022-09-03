@@ -26,7 +26,7 @@ original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 
 ## 概要
 
-JavaScript はマルチパラダイムの動的言語であり、型や演算子、標準組み込みオブジェクト、メソッドがあります。その構文は Java や C 言語に由来するので、それらの言語の多くの構造が JavaScript にも同様に適用できます。JavaScript は、クラスの代わりにオブジェクトプロトタイプによるオブジェクト指向プログラミングをサポートします (詳しくは [プロトタイプの継承](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain "prototypical inheritance") や ES2015 の [classes](/ja/docs/Web/JavaScript/Reference/Classes) をご覧ください)。また、JavaScript は関数型プログラミングもサポートします。関数もオブジェクトであり、関数に実行可能なコードを持たせて、他のオブジェクトと同じように受け渡しすることができます。
+JavaScript はマルチパラダイムの動的言語であり、型や演算子、標準組み込みオブジェクト、メソッドがあります。その構文は Java や C 言語に由来するので、それらの言語の多くの構造が JavaScript にも同様に適用できます。JavaScript は、クラスの代わりにオブジェクトプロトタイプによるオブジェクト指向プログラミングをサポートします (詳しくは [プロトタイプの継承](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) や ES2015 の [classes](/ja/docs/Web/JavaScript/Reference/Classes) をご覧ください)。また、JavaScript は関数型プログラミングもサポートします。関数もオブジェクトであり、関数に実行可能なコードを持たせて、他のオブジェクトと同じように受け渡しすることができます。
 
 まずはあらゆる言語の構成要素、「型」を見ることから始めましょう。 JavaScript のプログラムは値を操作し、それらの値はすべて型に属しています。JavaScript の型は次の通りです。
 
@@ -195,8 +195,8 @@ JavaScript は {{jsxref("null")}} と {{jsxref("undefined")}} を区別します
 
 JavaScript は `true` と `false` (これらはともにキーワードです) を取りうる値とする論理型を持っています。どんな値でも以下の規則に基づいて論理値に変換できます。
 
-1.  `false`、`0`、空文字列 (`""`)、`NaN`、`null`、`undefined` は、すべて `false` になる。
-2.  その他の値はすべて `true` になる。
+1. `false`、`0`、空文字列 (`""`)、`NaN`、`null`、`undefined` は、すべて `false` になる。
+2. その他の値はすべて `true` になる。
 
 `Boolean()` 関数を使うことで、明示的にこの変換を行うことができます。
 

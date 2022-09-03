@@ -1,14 +1,6 @@
 ---
 title: ValidityState
 slug: Web/API/ValidityState
-tags:
-  - API
-  - 制約検証 API
-  - フォーム
-  - HTML DOM
-  - インターフェイス
-browser-compat: api.ValidityState
-translation_of: Web/API/ValidityState
 ---
 {{APIRef("HTML DOM")}}
 

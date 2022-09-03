@@ -8,45 +8,45 @@ Firefox 8 は 2011 年 11 月 8 日にリリースされました。このペー
 
 ### HTML
 
-- [`HTMLImageElement`](/ja/docs/Web/API/HTMLImageElement "この項目についての文書はまだ書かれていません。書いてみませんか？") に `crossOrigin` プロパティが追加され、また [`<img>`](/ja/docs/Web/HTML/Element/img "HTML の <img> 要素は、文書に画像を埋め込みます。これは置換要素です。") 要素に [`crossorigin`](/ja/docs/Web/HTML/Element/img#attr-crossorigin) 属性が追加されました。(参考: [バグ 664299](https://bugzilla.mozilla.org/show_bug.cgi?id=664299 "FIXED: Add crossorigin attribute"))
-- [`HTMLSelectElement.add()`](</ja/docs/Web/API/HTMLSelectElement#add()>) メソッドの引数に、インデックスが追加されました。インデックスが指す要素の前に、新たな項目が挿入されます。このメソッドはこれまで、項目のみがサポートされていました。(参考: [バグ 666200](https://bugzilla.mozilla.org/show_bug.cgi?id=666200 "FIXED: support select.add(element, long before)"))
+- [`HTMLImageElement`](/ja/docs/Web/API/HTMLImageElement) に `crossOrigin` プロパティが追加され、また [`<img>`](/ja/docs/Web/HTML/Element/img) 要素に [`crossorigin`](/ja/docs/Web/HTML/Element/img#attr-crossorigin) 属性が追加されました。(参考: [バグ 664299](https://bugzilla.mozilla.org/show_bug.cgi?id=664299))
+- [`HTMLSelectElement.add()`](</ja/docs/Web/API/HTMLSelectElement#add()>) メソッドの引数に、インデックスが追加されました。インデックスが指す要素の前に、新たな項目が挿入されます。このメソッドはこれまで、項目のみがサポートされていました。(参考: [バグ 666200](https://bugzilla.mozilla.org/show_bug.cgi?id=666200))
 - `HTMLIsIndexElement` コンストラクタが削除されました。Firefox 4 以前から、どの要素もこのインターフェースをインプリメントしていませんでした。
 - HTML5 のコンテキストメニュー機能 (contextmenu 属性) がサポートされました。この機能によって、要素固有のメニュー項目をネイティブのコンテキストメニューに追加できます。(この機能は HTML5 仕様の変更を待っている関係で、現時点では試験実装という扱いです。参考: [バグ 617528](https://bugzilla.mozilla.org/show_bug.cgi?id=617528 'FIXED: implement the HTML5 "context menu" feature (contextmenu attribute)'))
-- すべての要素に [`accesskeylabel`](/ja/docs/HTML/Global_attributes#attr-accesskeylabel "https://developer.mozilla.org/ja/HTML/Global_attributes#attr-accesskeylabel") 属性がサポートされました。
-- [`<input>`](/ja/docs/Web/HTML/Element/input "HTML の <input> 要素は、ユーザーからデータを受け取るための、ウェブベースのフォーム用の対話的なコントロールを作成するために使用します。") と [`<textarea>`](/ja/docs/Web/HTML/Element/textarea "HTML の <textarea> 要素は、複数行のプレーンテキスト編集コントロールを表し、レビューのコメントやお問い合わせフォーム等のように、ユーザーが大量の自由記述テキストを入力できるようにするときに便利です。") に `selectionDirection` アトリビュートが追加されました。また、`setSelectionRange()` メソッドが選択方向を指定できるようになりました。
+- すべての要素に [`accesskeylabel`](/ja/docs/HTML/Global_attributes#attr-accesskeylabel) 属性がサポートされました。
+- [`<input>`](/ja/docs/Web/HTML/Element/input) と [`<textarea>`](/ja/docs/Web/HTML/Element/textarea) に `selectionDirection` アトリビュートが追加されました。また、`setSelectionRange()` メソッドが選択方向を指定できるようになりました。
 - `tabindex` 属性でフォーカス可能になった要素にフォーカスしたとき、ほとんどの要素でフォーカスリングが描画されるようになりました。
 
 ### DOM
 
-- [`insertAdjacentHTML`](/ja/docs/Web/API/Element/insertAdjacentHTML "insertAdjacentHTML() は、第二引数で指定するテキストを HTML または XML としてパースし、その結果であるノードを DOM ツリー内の指定された位置（第一引数で指定）に挿入します。これは挿入先の要素を再度パースするものではないため、既存の要素や要素内部の破壊を伴いません。余分なシリアル化のステップを回避できる分、 innerHTML への代入による直接的な操作よりもはるかに高速な動作となります。") メソッドが実装されました。
-- [`BlobBuilder`](/ja/docs/Web/API/BlobBuilder "BlobBuilder インターフェースは、Blob オブジェクトを構築する簡単な方法を提供します。単に BlobBuilder を作成し、 append() メソッドを使ってデータのチャンクを付け足していってください。blobの生成が完了したら getBlob() メソッドを呼んで、あなたがビルダに送り込んだデータの Blob を取得してください。") に `getFile()` メソッドが追加されました。このメソッドは blob の内容をファイルとして返します。
-- 入れ子になった [`<label>`](/ja/docs/Web/HTML/Element/label "HTML の <label> 要素は、ユーザーインターフェイスの項目のキャプションを表します。") のイベントハンドリングが修正されました。
-- ウィンドウ間での [`window.postMessage()`](/ja/docs/Web/API/Window/postMessage "window.postMessage が呼び出された場合、実行されなければならない保留中のスクリプトが完了した後に MessageEvent が対象ウィンドウにディスパッチされます。（例えば、window.postMessage がイベントハンドラから呼ばれた場合のまだ実行されていない残りのイベントハンドラや、以前に設定された保留中のタイムアウト、など）。 MessageEvent には message という型、window.postMessage に与えられる第一引数の文字列の値に設定される data プロパティ、 window.postMessage が呼び出されたとき、window.postMessage を呼び出しているウィンドウ内のメインドキュメントの生成元に対応する origin プロパティ、window.postMessage を呼び出したウィンドウである source プロパティがあります。（他のイベントの標準プロパティがそれらの期待される値で存在します）") に [`File`](/ja/docs/Web/API/File "File インターフェイスは、ファイルについての情報を提供したり、ウェブページ内の JavaScript でその内容にアクセスできるようにしたりします。") と [`FileList`](/ja/docs/Web/API/FileList 'この型のオブジェクトは、 <input> 要素の files プロパティによって返されます；これによって、 <input type="file"> 要素で選択されたファイルのリストにアクセスできます。 また、drag and drop API を使用しているとき、Web コンテンツにドロップされたファイルのリストにアクセスするためにも使用されます；この使用方法の詳細は DataTransfer オブジェクトを見てください。') が使えるようになりました。
-- [`element.contenteditable`](/ja/docs/Web/API/Element/contenteditable "この項目についての文書はまだ書かれていません。書いてみませんか？") な領域において、見出しで改行した際、もしくはリスト編集モードから 2 回開業して抜け出す際、段落が挿入されるようになりました。(これまでは[`<br>`](/ja/docs/Web/HTML/Element/br "HTML の <br> 要素 は、文中に改行（キャリッジリターン）を生成します。詩や住所など、行の分割が重要な場合に有用です。")でしたが、これからは[`<p>`](/ja/docs/Web/HTML/Element/p "HTML の <p> 要素は、テキストの段落を表します。")が挿入されます。)
-- [`element.contenteditable`](/ja/docs/Web/API/Element/contenteditable "この項目についての文書はまだ書かれていません。書いてみませんか？") な領域において、1 行目に均等割付を与えたときに適切な処理を妨げるバグを修正しました。
-- [`element.contenteditable`](/ja/docs/Web/API/Element/contenteditable "この項目についての文書はまだ書かれていません。書いてみませんか？") な領域の最初で delete もしくは backspace を押した際に、前のブロックに影響するバグを修正しました。
+- [`insertAdjacentHTML`](/ja/docs/Web/API/Element/insertAdjacentHTML) メソッドが実装されました。
+- [`BlobBuilder`](/ja/docs/Web/API/BlobBuilder) に `getFile()` メソッドが追加されました。このメソッドは blob の内容をファイルとして返します。
+- 入れ子になった [`<label>`](/ja/docs/Web/HTML/Element/label) のイベントハンドリングが修正されました。
+- ウィンドウ間での [`window.postMessage()`](/ja/docs/Web/API/Window/postMessage) に [`File`](/ja/docs/Web/API/File) と [`FileList`](/ja/docs/Web/API/FileList) が使えるようになりました。
+- [`element.contenteditable`](/ja/docs/Web/API/Element/contenteditable) な領域において、見出しで改行した際、もしくはリスト編集モードから 2 回開業して抜け出す際、段落が挿入されるようになりました。(これまでは[`<br>`](/ja/docs/Web/HTML/Element/br)でしたが、これからは[`<p>`](/ja/docs/Web/HTML/Element/p)が挿入されます。)
+- [`element.contenteditable`](/ja/docs/Web/API/Element/contenteditable) な領域において、1 行目に均等割付を与えたときに適切な処理を妨げるバグを修正しました。
+- [`element.contenteditable`](/ja/docs/Web/API/Element/contenteditable) な領域の最初で delete もしくは backspace を押した際に、前のブロックに影響するバグを修正しました。
 - [`document.getSelection()`](/ja/docs/Web/API/Document/getSelection "DOM の getSelection() メソッドは、 Window インタフェース及び Document インタフェースで利用可能です。
-  詳細については window.getSelection() の頁を参照して下さい。") が文字列化ではなく、[`window.getSelection()`](/ja/docs/Web/API/Window/getSelection "ユーザーが選択した文字列の範囲やキャレットの現在位置を示す Selection オブジェクトを返します。") と同じ `Selection` オブジェクトを返すようになりました。
+  詳細については window.getSelection() の頁を参照して下さい。") が文字列化ではなく、[`window.getSelection()`](/ja/docs/Web/API/Window/getSelection) と同じ `Selection` オブジェクトを返すようになりました。
 - HTML5 の `selectionDirection` プロパティが実装されました。編集可能テキストで選択した方向を指定できます。
-- [`HTMLMediaElement`](/ja/docs/Web/API/HTMLMediaElement "HTMLMediaElement は HTMLElement に音声や動画といったメディア関連機能の属性とメソッドを追加します。HTMLVideoElement と HTMLAudioElement はこのインタフェースを継承しています。") の `seekable` プロパティが実装されました。このプロパティは [`TimeRanges`](/ja/docs/Web/API/TimeRanges "この項目についての文書はまだ書かれていません。書いてみませんか？") を返します。
-- [`HTMLMediaElement`](/ja/docs/Web/API/HTMLMediaElement "HTMLMediaElement は HTMLElement に音声や動画といったメディア関連機能の属性とメソッドを追加します。HTMLVideoElement と HTMLAudioElement はこのインタフェースを継承しています。")`.preload` 属性が適切な _enumerated value_ を反映するようになりました。
-- [`crossOrigin` プロパティ](/ja/docs/HTML/CORS_settings_attributes "HTML/CORS_settings_attributes") に不正な値が使われた場合は "Anonymous" と扱われるようになりました。
-- [`window.navigator.cookieEnabled`](/ja/docs/Web/API/Window/navigator/cookieEnabled "この項目についての文書はまだ書かれていません。書いてみませんか？") が、サイトごとの設定で Cookie の設定が上書きされている場合においても正しい情報を返すようになりました。
+- [`HTMLMediaElement`](/ja/docs/Web/API/HTMLMediaElement) の `seekable` プロパティが実装されました。このプロパティは [`TimeRanges`](/ja/docs/Web/API/TimeRanges) を返します。
+- [`HTMLMediaElement`](/ja/docs/Web/API/HTMLMediaElement)`.preload` 属性が適切な _enumerated value_ を反映するようになりました。
+- [`crossOrigin` プロパティ](/ja/docs/HTML/CORS_settings_attributes) に不正な値が使われた場合は "Anonymous" と扱われるようになりました。
+- [`window.navigator.cookieEnabled`](/ja/docs/Web/API/Window/navigator/cookieEnabled) が、サイトごとの設定で Cookie の設定が上書きされている場合においても正しい情報を返すようになりました。
 
 ### JavaScript
 
-- 引数なしで呼び出された [`RegExp.exec()`](/ja/docs/JavaScript/Reference/Global_Objects/RegExp/exec "JavaScript/Reference/Global Objects/RegExp/exec"), [`RegExp.test()`](/ja/docs/JavaScript/Reference/Global_Objects/RegExp/test "JavaScript/Reference/Global Objects/RegExp/test") が文字列 "undefined" にマッチするようになりました。
-- 引数なし、もしくは `undefined` をとり呼び出された [`String.search()`](/ja/docs/JavaScript/Reference/Global_Objects/String/search "JavaScript/Reference/Global Objects/String/search"), [`String.match()`](/ja/docs/JavaScript/Reference/Global_Objects/String/match "JavaScript/Reference/Global Objects/String/match") が空文字列にマッチするようになり、つまりはすべての文字列にマッチするようになりました。
-- ウォッチリストのサポートが行われました。ウォッチリストは (非標準の) [`watch()`](/ja/docs/JavaScript/Reference/Global_Objects/Object/watch "JavaScript/Reference/Global_Objects/Object/watch") メソッドおよび [`unwatch()`](/ja/docs/JavaScript/Reference/Global_Objects/Object/unwatch "JavaScript/Reference/Global_Objects/Object/unwatch") メソッドから利用できます。
+- 引数なしで呼び出された [`RegExp.exec()`](/ja/docs/JavaScript/Reference/Global_Objects/RegExp/exec), [`RegExp.test()`](/ja/docs/JavaScript/Reference/Global_Objects/RegExp/test) が文字列 "undefined" にマッチするようになりました。
+- 引数なし、もしくは `undefined` をとり呼び出された [`String.search()`](/ja/docs/JavaScript/Reference/Global_Objects/String/search), [`String.match()`](/ja/docs/JavaScript/Reference/Global_Objects/String/match) が空文字列にマッチするようになり、つまりはすべての文字列にマッチするようになりました。
+- ウォッチリストのサポートが行われました。ウォッチリストは (非標準の) [`watch()`](/ja/docs/JavaScript/Reference/Global_Objects/Object/watch) メソッドおよび [`unwatch()`](/ja/docs/JavaScript/Reference/Global_Objects/Object/unwatch) メソッドから利用できます。
 
 ### CSS
 
-- [`<resolution>`](/ja/docs/Web/CSS/resolution "CSS の <resolution> データ型 は メディアクエリー の resolutions で使われ、出力デバイスのピクセル密度である、解像度を表します。") が仕様に従い、[`<integer>`](/ja/docs/Web/CSS/integer "CSS プロパティで使用される整数値には単位がありません。") だけでなく [`<number>`](/ja/docs/Web/CSS/number "CSS の <number> データ型は、整数または小数部分のある数値を表します。") もサポートしました。
-- [`hyphens`](/ja/docs/Web/CSS/hyphens "CSS の hyphens プロパティは、文字列を複数行にわたって折り返す際に、単語のハイフネーションを行う方法を指定します。ハイフネーションをまったく行わなかったり、文字列中に手動で指定された位置でハイフネーションを行ったり、ブラウザーに適切な位置にハイフンを挿入させたりすることができます。") 利用時のハイフネーション規則がより多くの言語でサポートされました。
-- [`background-size`](/ja/docs/Web/CSS/background-size "CSS の background-size プロパティは、要素の背景画像の寸法を設定します。画像は自然な寸法になったり、引き伸ばされたり、利用可能な領域に収まるように縮小されたりします。") の処理が仕様により従ったものになりました。
-- これまで Quriks モードでの [`text-decoration`](/ja/docs/Web/CSS/text-decoration "CSS の text-decoration プロパティは、テキストの装飾的な線の表示を設定します。これは text-decoration-line, text-decoration-color, text-decoration-style の一括指定です。") は、太い線で描画され、また子孫要素のテキストに沿って描画されていました。Firefox 8 からは、標準モードにより近い表示になります。
-- 要素の水平方向への配置がより仕様に沿った実装になりました。この件に関するドキュメントを準備中ですが、今は [バグ 682780](https://bugzilla.mozilla.org/show_bug.cgi?id=682780 "jig.com looks different in aurora vs. firefox") のコメント 23 をお読みください。
-- [SVG 画像の拡大縮小](/ja/docs/CSS/Scaling_of_SVG_backgrounds "CSS/Scaling_of_SVG_backgrounds") が背景画像においても適切に処理されるようになりました。
+- [`<resolution>`](/ja/docs/Web/CSS/resolution) が仕様に従い、[`<integer>`](/ja/docs/Web/CSS/integer) だけでなく [`<number>`](/ja/docs/Web/CSS/number) もサポートしました。
+- [`hyphens`](/ja/docs/Web/CSS/hyphens) 利用時のハイフネーション規則がより多くの言語でサポートされました。
+- [`background-size`](/ja/docs/Web/CSS/background-size) の処理が仕様により従ったものになりました。
+- これまで Quriks モードでの [`text-decoration`](/ja/docs/Web/CSS/text-decoration) は、太い線で描画され、また子孫要素のテキストに沿って描画されていました。Firefox 8 からは、標準モードにより近い表示になります。
+- 要素の水平方向への配置がより仕様に沿った実装になりました。この件に関するドキュメントを準備中ですが、今は [バグ 682780](https://bugzilla.mozilla.org/show_bug.cgi?id=682780) のコメント 23 をお読みください。
+- [SVG 画像の拡大縮小](/ja/docs/CSS/Scaling_of_SVG_backgrounds) が背景画像においても適切に処理されるようになりました。
 
 ### Network
 
@@ -58,58 +58,58 @@ Firefox 8 は 2011 年 11 月 8 日にリリースされました。このペー
 ### WebSocket
 
 - WebSocket オブジェクトの [`send()`](</ja/docs/WebSockets/WebSockets_reference/WebSocket#send()> "WebSockets/WebSockets_reference/WebSocket#send()") メソッドが不適切に真偽値を返していた挙動が修正されました。
-- [`WebSocket`](/ja/docs/WebSockets/WebSockets_reference/WebSocket "WebSocket") オブジェクトの [`close()`](</ja/docs/WebSockets/WebSockets_reference/WebSocket#close()> "WebSockets/WebSockets_reference/WebSocket#close()") メソッドが現在の標準草案に従ったものになりました。また、クローズイベントが適切に [`CloseEvent`](/ja/docs/WebSockets/WebSockets_reference/CloseEvent "CloseEvent") インターフェースを利用するようになりました。
-- The [`WebSocket`](/ja/docs/WebSockets/WebSockets_reference/WebSocket "WebSocket") オブジェクトの `extensions` アトリビュートがサポートされました。
+- [`WebSocket`](/ja/docs/WebSockets/WebSockets_reference/WebSocket) オブジェクトの [`close()`](</ja/docs/WebSockets/WebSockets_reference/WebSocket#close()> "WebSockets/WebSockets_reference/WebSocket#close()") メソッドが現在の標準草案に従ったものになりました。また、クローズイベントが適切に [`CloseEvent`](/ja/docs/WebSockets/WebSockets_reference/CloseEvent) インターフェースを利用するようになりました。
+- The [`WebSocket`](/ja/docs/WebSockets/WebSockets_reference/WebSocket) オブジェクトの `extensions` アトリビュートがサポートされました。
 - WebSocket コンストラクタがひとつのプロトコル文字列だけではなく、プロトコルの配列もサポートするようになりました。
 - SSL と 非 SSL の混在が WebSocket で認められなくなりました。
 - WebSocket の接続エラーが `onerror` ハンドラをトリガーするようになりました。
-- [WebSocket](/ja/docs/WebSockets "WebSockets") API が最新版の仕様に追従しました。(参考: [バグ 674890](https://bugzilla.mozilla.org/show_bug.cgi?id=674890 "FIXED: Update WebSocket API to latest draft - send() should return void"), [バグ 674527](https://bugzilla.mozilla.org/show_bug.cgi?id=674527 "FIXED: Update WebSocket API to latest draft - array of protocols in ctor"), [バグ 674716](https://bugzilla.mozilla.org/show_bug.cgi?id=674716 "FIXED: Update WebSocket API to latest draft - close codes and reasons"))
+- [WebSocket](/ja/docs/WebSockets) API が最新版の仕様に追従しました。(参考: [バグ 674890](https://bugzilla.mozilla.org/show_bug.cgi?id=674890), [バグ 674527](https://bugzilla.mozilla.org/show_bug.cgi?id=674527), [バグ 674716](https://bugzilla.mozilla.org/show_bug.cgi?id=674716))
 - WebSocket の deflate-stream 拡張が無効にされました。この拡張は非推奨とされており、またいくつかの Web サイトとの互換性を損ねていました。
 
 ### WebGL
 
-- 他のドメインからのテクスチャ読み込みが再び可能になりました。ただし、CORS によってアクセスを許可されている場合に限ります。(参考: [Cross-domain textures](/ja/docs/WebGL/Cross-Domain_Textures "WebGL/Cross-Domain_Textures"))
+- 他のドメインからのテクスチャ読み込みが再び可能になりました。ただし、CORS によってアクセスを許可されている場合に限ります。(参考: [Cross-domain textures](/ja/docs/WebGL/Cross-Domain_Textures))
 - Cross-process rendering with Direct2D/Direct3D 10.
 
 ### MathML
 
-- [`<math>`](/ja/docs/Web/MathML/Element/math "<math>") 要素に `displaystyle` 属性のサポートが追加されました。
-- [`<mtable>`](/ja/docs/Web/MathML/Element/mtable "<mtable>") 要素の `align` において、_負の行数_ の解釈が修正されました。
+- [`<math>`](/ja/docs/Web/MathML/Element/math) 要素に `displaystyle` 属性のサポートが追加されました。
+- [`<mtable>`](/ja/docs/Web/MathML/Element/mtable) 要素の `align` において、_負の行数_ の解釈が修正されました。
 
 ### 開発者ツール
 
-- [`console`](/ja/docs/Using_the_Web_Console#The_console_object "Using_the_Web_Console#The_console_object") オブジェクトが `dir()` メソッドをサポートしました。個のメソッドは指定したオブジェクトについて、インタラクティブなプロパティリストを表示します。
+- [`console`](/ja/docs/Using_the_Web_Console#The_console_object) オブジェクトが `dir()` メソッドをサポートしました。個のメソッドは指定したオブジェクトについて、インタラクティブなプロパティリストを表示します。
 
 ## Mozilla 開発者とアドオン開発者向けの変更点
 
-アドオンを Firefox 8 互換にする際に必要となりそうな変更点は [Updating add-ons for Firefox 8](/ja/docs/Firefox/Updating_add-ons_for_Firefox_8 "Firefox/Updating_add-ons_for_Firefox_8") にまとめられています。
+アドオンを Firefox 8 互換にする際に必要となりそうな変更点は [Updating add-ons for Firefox 8](/ja/docs/Firefox/Updating_add-ons_for_Firefox_8) にまとめられています。
 
-> **Note:** Firefox 8 では、従来のメジャーリリースと同様に、バイナリコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリインタフェース](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces "Developer_Guide/Interface_Compatibility#Binary_Interfaces") をご覧ください。
+> **Note:** Firefox 8 では、従来のメジャーリリースと同様に、バイナリコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリインタフェース](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces) をご覧ください。
 
 ### XPCOM
 
-- [`Components.utils`](/ja/docs/Components.utils "Components.utils")
-  - : 特定のコンパートメントでより簡単にオブジェクトを作成できるようにするため、新しいメソッド [`createObjectIn()`](/ja/docs/Components.utils.createObjectIn "Components.utils.createObjectIn") と [`makeObjectPropsNormal()`](/ja/docs/Components.utils.makeObjectPropsNormal "Components.utils.makeObjectPropsNormal") が追加されました。
+- [`Components.utils`](/ja/docs/Components.utils)
+  - : 特定のコンパートメントでより簡単にオブジェクトを作成できるようにするため、新しいメソッド [`createObjectIn()`](/ja/docs/Components.utils.createObjectIn) と [`makeObjectPropsNormal()`](/ja/docs/Components.utils.makeObjectPropsNormal) が追加されました。
 
 #### その他の XPCOM 関連の変更
 
-- You can now instantiate DOM [`File`](/ja/docs/Web/API/File "File インターフェイスは、ファイルについての情報を提供したり、ウェブページ内の JavaScript でその内容にアクセスできるようにしたりします。") objects from component code by simply doing new File, instead of having to instantiate an [`nsIDOMFile`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMFile) directly.
-- The `nsTPtrArray` array type has been removed. Its functionality is now all available on `nsTArray`, which now offers the `SafeElementAt()` method when instantiated using a pointer type. See the section on [`SafeElementAt()`](/ja/docs/XPCOM_array_guide#Bounds-safe_access_to_elements "XPCOM_array_guide#Bounds-safe_access_to_elements") in the [XPCOM array guide](/ja/docs/XPCOM_array_guide "XPCOM array guide") for more information.
+- You can now instantiate DOM [`File`](/ja/docs/Web/API/File) objects from component code by simply doing new File, instead of having to instantiate an [`nsIDOMFile`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMFile) directly.
+- The `nsTPtrArray` array type has been removed. Its functionality is now all available on `nsTArray`, which now offers the `SafeElementAt()` method when instantiated using a pointer type. See the section on [`SafeElementAt()`](/ja/docs/XPCOM_array_guide#Bounds-safe_access_to_elements) in the [XPCOM array guide](/ja/docs/XPCOM_array_guide) for more information.
 
 ### Workers
 
-ChromeWorkers から XPCOM オブジェクトにアクセスできなくなりました。XPConnect は [バグ 649537](https://bugzilla.mozilla.org/show_bug.cgi?id=649537 "FIXED: Workers: Make one OS thread and JS runtime per worker, and lose XPConnect") によりワーカーコンテキストで無効にされています。
+ChromeWorkers から XPCOM オブジェクトにアクセスできなくなりました。XPConnect は [バグ 649537](https://bugzilla.mozilla.org/show_bug.cgi?id=649537) によりワーカーコンテキストで無効にされています。
 
 ### XUL
 
-- A bug in [`document.execCommand()`](/ja/docs/Web/API/Document/execCommand "HTML 文書が designMode に切り替えられた時、 document オブジェクトは、フォーム入力欄や contenteditable を持った要素のように現在編集可能な領域を操作するためにコマンドを実行するために、 execCommand メソッドを公開します。") that occurred when calling it on the value of `contentDocument` has been fixed. Since Firefox 3, this resulted in errors instead of working correctly.
-- [Bootstrapped add-ons](/ja/docs/Extensions/Bootstrapped_extensions "Bootstrapped extensions") can now load chrome using a [`chrome.manifest`](/ja/docs/Chrome_Registration "chrome.manifest") file. See the section [Adding user interface with a chrome.manifest](/ja/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest "Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest") for details.
+- A bug in [`document.execCommand()`](/ja/docs/Web/API/Document/execCommand) that occurred when calling it on the value of `contentDocument` has been fixed. Since Firefox 3, this resulted in errors instead of working correctly.
+- [Bootstrapped add-ons](/ja/docs/Extensions/Bootstrapped_extensions) can now load chrome using a [`chrome.manifest`](/ja/docs/Chrome_Registration) file. See the section [Adding user interface with a chrome.manifest](/ja/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest) for details.
 
 ### JavaScript コードモジュール
 
 #### ISO8601DateUtils.jsm
 
-- このコードモジュールは削除されました。[`Date.parse()`](/ja/docs/JavaScript/Reference/Global_Objects/Date/parse "JavaScript/Reference/Global_Objects/Date/parse") が ISO 8601 形式の日付を受け付けるようになり、新しい [`Date.toISOString()`](/ja/docs/JavaScript/Reference/Global_Objects/Date/toISOString "JavaScript/Reference/Global_Objects/Date/toISOString") で ISO 形式の日付と時刻を出力できます。今後は ISO8601DateUtils.jsm の代わりにこれらのメソッドを使ってください。なお、今のところこれらは [タイムゾーンに対応していません](https://bugzilla.mozilla.org/show_bug.cgi?id=693077)。
+- このコードモジュールは削除されました。[`Date.parse()`](/ja/docs/JavaScript/Reference/Global_Objects/Date/parse) が ISO 8601 形式の日付を受け付けるようになり、新しい [`Date.toISOString()`](/ja/docs/JavaScript/Reference/Global_Objects/Date/toISOString) で ISO 形式の日付と時刻を出力できます。今後は ISO8601DateUtils.jsm の代わりにこれらのメソッドを使ってください。なお、今のところこれらは [タイムゾーンに対応していません](https://bugzilla.mozilla.org/show_bug.cgi?id=693077)。
 
 ### ビルドシステムの変更
 
@@ -123,20 +123,20 @@ ChromeWorkers から XPCOM オブジェクトにアクセスできなくなり�
 
 ### クロームの登録
 
-- Gecko のバージョン互換性を指定する [`platformversion`](/ja/docs/Chrome_Registration#platformversion "Chrome_Registration#platformversion") フラグが chrome.manifest でも使えるようになりました。
+- Gecko のバージョン互換性を指定する [`platformversion`](/ja/docs/Chrome_Registration#platformversion) フラグが chrome.manifest でも使えるようになりました。
 
 ### インタフェースの変更
 
-- [`mozIJSSubScriptLoader.loadSubScript()`](/ja/docs/XPCOM_Interface_Reference/mozIJSSubScriptLoader#loadSubScript%28%29 "XPCOM_Interface_Reference/mozIJSSubScriptLoader#loadSubScript%28%29") メソッドが、可能な場合、起動キャッシュからスクリプトを読み込むようになりました。
-- [`nsIAccessNode`](/ja/docs/XPCOM_Interface_Reference/NsIAccessNode "XPCOM_Interface_Reference/NsIAccessNode") インタフェースから `ownerWindow` 属性が削除されました。
-- [`nsIDOMStorageWindow`](/ja/docs/XPCOM_Interface_Reference/nsIDOMStorageWindow "XPCOM_Interface_Reference/nsIDOMStorageWindow") インタフェースは [`nsIDOMWindow`](/ja/docs/XPCOM_Interface_Reference/nsIDOMWindow "XPCOM_Interface_Reference/nsIDOMWindow") インタフェースへ統合されました。
-- [`nsIDOMWindowInternal`](/ja/docs/XPCOM_Interface_Reference/nsIDOMWindowInternal "XPCOM_Interface_Reference/nsIDOMWindowInternal") インタフェースの全メンバーが [`nsIDOMWindow`](/ja/docs/XPCOM_Interface_Reference/nsIDOMWindow "XPCOM_Interface_Reference/nsIDOMWindow") インタフェースへ移動されました。インタフェース自体は互換性維持のため Firefox 9 まで (メンバーを持たない状態で) 残されます。
-- [`nsIMemoryReporter`](/ja/docs/XPCOM_Interface_Reference/nsIMemoryReporter "XPCOM_Interface_Reference/nsIMemoryReporter") の `KIND_MAPPED` 属性が廃止され、代わりに `KIND_NONHEAP` 属性と新しい単位型 `UNITS_COUNT_CUMULATIVE`、`UNITS_PERCENTAGE` が追加されました。
-- [`nsINetworkLinkService`](/ja/docs/XPCOM_Interface_Reference/nsINetworkLinkService "XPCOM_Interface_Reference/nsINetworkLinkService") インタフェースに `linkType` 属性が追加されました。この属性で使用中のネットワーク接続の種類を参照できます。ただし、今のところすべての OS で `LINK_TYPE_UNKNOWN` が返ります。Android 対応は、セキュリティの懸念が報告されたため、バックアウトされました。
-- [`nsISelection2`](/ja/docs/XPCOM_Interface_Reference/nsISelection2 "XPCOM_Interface_Reference/nsISelection2") インタフェースは [`nsISelectionPrivate`](/ja/docs/XPCOM_Interface_Reference/nsISelectionPrivate "XPCOM_Interface_Reference/nsISelectionPrivate") インタフェースへ統合されました。
-- [`nsISelection3`](/ja/docs/XPCOM_Interface_Reference/nsISelection3 "XPCOM_Interface_Reference/nsISelection3") インタフェースは [`nsISelection`](/ja/docs/DOM/Selection "nsISelection") インタフェースへ統合されました。
-- [`nsISessionStartup`](/ja/docs/XPCOM_Interface_Reference/nsISessionStartup "XPCOM_Interface_Reference/nsISessionStartup") の属性の状態が、パフォーマンス上の理由から、文字列型ではなく [`jsval`](/ja/docs/SpiderMonkey/JSAPI_Reference/Jsval "SpiderMonkey/JSAPI_Reference/Jsval") 型になりました。
-- [`nsIDocShell`](/ja/docs/XPCOM_Interface_Reference/nsIDocShell "XPCOM_Interface_Reference/nsIDocShell") の `isActive` 属性は、最小化されたウィンドウでは `false` を返すようになりました。
+- [`mozIJSSubScriptLoader.loadSubScript()`](/ja/docs/XPCOM_Interface_Reference/mozIJSSubScriptLoader#loadSubScript%28%29) メソッドが、可能な場合、起動キャッシュからスクリプトを読み込むようになりました。
+- [`nsIAccessNode`](/ja/docs/XPCOM_Interface_Reference/NsIAccessNode) インタフェースから `ownerWindow` 属性が削除されました。
+- [`nsIDOMStorageWindow`](/ja/docs/XPCOM_Interface_Reference/nsIDOMStorageWindow) インタフェースは [`nsIDOMWindow`](/ja/docs/XPCOM_Interface_Reference/nsIDOMWindow) インタフェースへ統合されました。
+- [`nsIDOMWindowInternal`](/ja/docs/XPCOM_Interface_Reference/nsIDOMWindowInternal) インタフェースの全メンバーが [`nsIDOMWindow`](/ja/docs/XPCOM_Interface_Reference/nsIDOMWindow) インタフェースへ移動されました。インタフェース自体は互換性維持のため Firefox 9 まで (メンバーを持たない状態で) 残されます。
+- [`nsIMemoryReporter`](/ja/docs/XPCOM_Interface_Reference/nsIMemoryReporter) の `KIND_MAPPED` 属性が廃止され、代わりに `KIND_NONHEAP` 属性と新しい単位型 `UNITS_COUNT_CUMULATIVE`、`UNITS_PERCENTAGE` が追加されました。
+- [`nsINetworkLinkService`](/ja/docs/XPCOM_Interface_Reference/nsINetworkLinkService) インタフェースに `linkType` 属性が追加されました。この属性で使用中のネットワーク接続の種類を参照できます。ただし、今のところすべての OS で `LINK_TYPE_UNKNOWN` が返ります。Android 対応は、セキュリティの懸念が報告されたため、バックアウトされました。
+- [`nsISelection2`](/ja/docs/XPCOM_Interface_Reference/nsISelection2) インタフェースは [`nsISelectionPrivate`](/ja/docs/XPCOM_Interface_Reference/nsISelectionPrivate) インタフェースへ統合されました。
+- [`nsISelection3`](/ja/docs/XPCOM_Interface_Reference/nsISelection3) インタフェースは [`nsISelection`](/ja/docs/DOM/Selection) インタフェースへ統合されました。
+- [`nsISessionStartup`](/ja/docs/XPCOM_Interface_Reference/nsISessionStartup) の属性の状態が、パフォーマンス上の理由から、文字列型ではなく [`jsval`](/ja/docs/SpiderMonkey/JSAPI_Reference/Jsval) 型になりました。
+- [`nsIDocShell`](/ja/docs/XPCOM_Interface_Reference/nsIDocShell) の `isActive` 属性は、最小化されたウィンドウでは `false` を返すようになりました。
 
 #### 削除されたインターフェース
 
@@ -150,7 +150,7 @@ ChromeWorkers から XPCOM オブジェクトにアクセスできなくなり�
 ### その他の変更
 
 - ウィンドウが最小化されたとき、最小化から復帰したとき、あるいは全画面表示と通常表示の切り替えが行われたときに、`window` が `sizemodechange` イベントを受け取るようになりました。
-- [`extensions.autoDisableScopes` 設定を使う](/ja/docs/Installing_extensions#Preventing_automatic_install_from_specific_locations "Installing_extensions#Preventing_automatic_install_from_specific_locations") ことで、特定の場所からのアドオン自動インストールを無効化できるようになりました。
+- [`extensions.autoDisableScopes` 設定を使う](/ja/docs/Installing_extensions#Preventing_automatic_install_from_specific_locations) ことで、特定の場所からのアドオン自動インストールを無効化できるようになりました。
 
 ## 参考
 

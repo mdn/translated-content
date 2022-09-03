@@ -52,57 +52,57 @@ registerPaint('hollowHighlights', class {
   static get contextOptions() { return {alpha: true}; }
 
   paint(ctx, size, props, args) {
-		const x = 0;
-		const y = size.height * 0.3;
-		const blockWidth = size.width * 0.33;
-		const blockHeight = size.height * 0.85;
+    const x = 0;
+    const y = size.height * 0.3;
+    const blockWidth = size.width * 0.33;
+    const blockHeight = size.height * 0.85;
 
-		const theColor = props.get( '--boxColor' );
-		const strokeType = args[0].toString();
-		const strokeWidth = parseInt(args[1]);
+    const theColor = props.get( '--boxColor' );
+    const strokeType = args[0].toString();
+    const strokeWidth = parseInt(args[1]);
 
-		console.log(theColor);
+    console.log(theColor);
 
-		if ( strokeWidth ) {
-			ctx.lineWidth = strokeWidth;
-		} else {
-			ctx.lineWidth = 1.0;
-		}
+    if ( strokeWidth ) {
+      ctx.lineWidth = strokeWidth;
+    } else {
+      ctx.lineWidth = 1.0;
+    }
 
-		if ( strokeType === 'stroke' ) {
-			ctx.fillStyle = 'transparent';
-			ctx.strokeStyle = theColor;
-		} else if ( strokeType === 'filled' ) {
-			ctx.fillStyle = theColor;
-			ctx.strokeStyle = theColor;
-		} else {
-			ctx.fillStyle = 'none';
-			ctx.strokeStyle = 'none';
-		}
+    if ( strokeType === 'stroke' ) {
+      ctx.fillStyle = 'transparent';
+      ctx.strokeStyle = theColor;
+    } else if ( strokeType === 'filled' ) {
+      ctx.fillStyle = theColor;
+      ctx.strokeStyle = theColor;
+    } else {
+      ctx.fillStyle = 'none';
+      ctx.strokeStyle = 'none';
+    }
 
 
-		ctx.beginPath();
-		ctx.moveTo( x, y );
-		ctx.lineTo( blockWidth, y );
-		ctx.lineTo( blockWidth + blockHeight, blockHeight );
-		ctx.lineTo( x, blockHeight );
-		ctx.lineTo( x, y );
-		ctx.closePath();
-		ctx.fill();
-		ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo( x, y );
+    ctx.lineTo( blockWidth, y );
+    ctx.lineTo( blockWidth + blockHeight, blockHeight );
+    ctx.lineTo( x, blockHeight );
+    ctx.lineTo( x, y );
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
 
-		for (let i = 0; i < 4; i++) {
-			let start = i * 2;
-			ctx.beginPath();
-			ctx.moveTo( blockWidth + (start * 10) + 10, y);
-			ctx.lineTo( blockWidth + (start * 10) + 20, y);
-			ctx.lineTo( blockWidth + (start * 10) + 20 + blockHeight, blockHeight);
-			ctx.lineTo( blockWidth + (start * 10) + 10 + blockHeight, blockHeight);
-			ctx.lineTo( blockWidth + (start * 10) + 10, y);
-			ctx.closePath();
-			ctx.fill();
-			ctx.stroke();
-		}
+    for (let i = 0; i < 4; i++) {
+      let start = i * 2;
+      ctx.beginPath();
+      ctx.moveTo( blockWidth + (start * 10) + 10, y);
+      ctx.lineTo( blockWidth + (start * 10) + 20, y);
+      ctx.lineTo( blockWidth + (start * 10) + 20 + blockHeight, blockHeight);
+      ctx.lineTo( blockWidth + (start * 10) + 10 + blockHeight, blockHeight);
+      ctx.lineTo( blockWidth + (start * 10) + 10, y);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+    }
   }
 });
 ```

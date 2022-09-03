@@ -321,10 +321,10 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 
 `matches` は唯一必須のキーなため、その他の 3 つのキーはそれ以降のマッチ URL の制限に使われます。全体のキーにマッチするために、URL は下記のようでなければなりません:
 
-1.  `matches` プロパティにマッチしている
-2.  かつ、`include_globs` があれば、それにマッチする
-3.  かつ、`exclude_matches` があれば、それにマッチしない
-4.  かつ、`exclude_globs` があれば、それにマッチしない
+1. `matches` プロパティにマッチしている
+2. かつ、`include_globs` があれば、それにマッチする
+3. かつ、`exclude_matches` があれば、それにマッチしない
+4. かつ、`exclude_globs` があれば、それにマッチしない
 
 ### globs
 

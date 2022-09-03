@@ -1,15 +1,6 @@
 ---
 title: MouseEvent()
 slug: Web/API/MouseEvent/MouseEvent
-tags:
-  - API
-  - コンストラクター
-  - DOM
-  - MouseEvent
-  - リファレンス
-  - イベント
-browser-compat: api.MouseEvent.MouseEvent
-translation_of: Web/API/MouseEvent/MouseEvent
 ---
 {{APIRef("DOM Events")}}
 

@@ -4,7 +4,7 @@ slug: Web/API/AnimationEvent/elapsedTime
 ---
 {{SeeCompatTable}}{{ apiref("Web Animations API") }}
 
-**`AnimationEvent.elapsedTime`** は読み取り専用のプロパティで、アニメーションが開始されてからの秒数を `float` 型で表します。このイベントが発生したとき、アニメーションが停止した場合を除いて常に設定されます。 {{domxref("HTMLElement/animationstart_event", "animationstart")}} イベントにおいては `elapsedTime` は `0.0` になりますが、 {{cssxref("animation-delay")}} が負の値の場合は、このイベントは `elapsedTime` が `(-1 * `_待ち時間_`)` であるときに発生します。.
+**`AnimationEvent.elapsedTime`** は読み取り専用のプロパティで、アニメーションが開始されてからの秒数を `float` 型で表します。このイベントが発生したとき、アニメーションが停止した場合を除いて常に設定されます。 {{domxref("HTMLElement/animationstart_event", "animationstart")}} イベントにおいては `elapsedTime` は `0.0` になりますが、 {{cssxref("animation-delay")}} が負の値の場合は、このイベントは `elapsedTime` が `(-1 * 待ち時間 )` であるときに発生します。.
 
 ## 構文
 

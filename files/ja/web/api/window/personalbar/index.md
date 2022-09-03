@@ -1,11 +1,6 @@
 ---
 title: window.personalbar
 slug: Web/API/Window/personalbar
-tags:
-  - Gecko
-  - HTML DOM
-  - Window
-translation_of: Web/API/Window/personalbar
 ---
 {{ApiRef}}
 

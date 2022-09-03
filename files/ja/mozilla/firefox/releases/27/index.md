@@ -37,7 +37,7 @@ Gecko 27 を搭載した Firefox 27 は米国時間 2014 年 2 月 4 日にリ�
 
 ### JavaScript
 
-[EcmaScript 6](/ja/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla "Web/JavaScript/ECMAScript_6_support_in_Mozilla") (Harmony) の実装が続いています!
+[EcmaScript 6](/ja/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) (Harmony) の実装が続いています!
 
 - Harmony の [spread operator](http://wiki.ecmascript.org/doku.php?id=harmony:spread) を、関数呼び出しでサポートしました ({{bug("762363")}})。
 - 数学関数 {{jsxref("Global_Objects/Math/hypot", "Math.hypot()")}} を実装しました ({{bug("896264")}})。

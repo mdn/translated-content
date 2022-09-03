@@ -74,4 +74,4 @@ translation_of: Web/Accessibility/ARIA/Roles/Document_Role
 - [ARIA: widget ロール](/ja/docs/Web/Accessibility/ARIA/Roles/widget_Role)
 - [ARIA: application ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Application_Role)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

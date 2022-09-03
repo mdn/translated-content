@@ -13,7 +13,7 @@ slug: Mozilla/Add-ons/WebExtensions/Match_patterns
 > **Note:** **記:** ブラウザーによってはサポートしていないスキームがあります。
 > 詳しくは[ブラウザー互換性テーブル](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns$edit#Browser_compatibility)を見てください。
 
-すべてのマッチパターンは文字列で指定します。特別な値[ `<all_urls>`](/ja/Add-ons/WebExtensions/Match_patterns#%3Call_urls%3E) を除き、マッチパターンは３つの部分から成り立っています。 _scheme_, _host_, _path_ です。 scheme と host の間は `://` で句切られます。
+すべてのマッチパターンは文字列で指定します。特別な値 [`<all_urls>`](/ja/Add-ons/WebExtensions/Match_patterns#%3Call_urls%3E) を除き、マッチパターンは３つの部分から成り立っています。 _scheme_, _host_, _path_ です。 scheme と host の間は `://` で句切られます。
 
 ```
 <scheme>://<host><path>

@@ -136,7 +136,7 @@ Firefox 71 は、米国時間 2019 年 12 月 3 日 にリリースされまし�
 
 #### 廃止
 
-- [`proxy.register()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register "This method has been deprecated in Firefox 68 and will be removed from Firefox 71. In Firefox 68 or later, calling this method logs an error message to the console:") および [`proxy.unregister()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy/unregister "This method has been deprecated in Firefox 68 and will be removed from Firefox 71. In Firefox 68 or later, calling this method logs an error message to the console:") 関数を削除しました ({{bug(1443259)}})。要求のプロキシ使用を制御するには {{WebExtAPIRef("proxy.onRequest")}} を使用してください。
+- [`proxy.register()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register) および [`proxy.unregister()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy/unregister) 関数を削除しました ({{bug(1443259)}})。要求のプロキシ使用を制御するには {{WebExtAPIRef("proxy.onRequest")}} を使用してください。
 
 ## 関連情報
 

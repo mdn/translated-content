@@ -24,7 +24,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs
 - {{WebExtAPIRef("tabs.MutedInfo")}}
   - : タブがミュートされているかを示す真理値と、最後の変更の理由からなるオブジェクト。
 - {{WebExtAPIRef("tabs.PageSettings")}}
-  - : [`tabs.saveAsPDF()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF "Saves the current page as a PDF. This will open a dialog, supplied by the underlying operating system, asking the user where they want to save the PDF.")メソッドにおいて、どのように PDF を描画するかを制御する。
+  - : [`tabs.saveAsPDF()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF)メソッドにおいて、どのように PDF を描画するかを制御する。
 - {{WebExtAPIRef("tabs.Tab")}}
   - : タブについての情報を含む。
 - {{WebExtAPIRef("tabs.TabStatus")}}
@@ -66,7 +66,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs
 - {{WebExtAPIRef("tabs.getAllInWindow()")}} {{deprecated_inline}}
   - : 特定のウィンドウ内のすべてのタブについての情報を取り出す。
 - {{WebExtAPIRef("tabs.getCurrent()")}}
-  - : スクリプトが実行されているタブについての情報を [`tabs.Tab`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab "This type contains information about a tab.") オブジェクトとして取り出す。
+  - : スクリプトが実行されているタブについての情報を [`tabs.Tab`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab) オブジェクトとして取り出す。
 - {{WebExtAPIRef("tabs.getSelected()")}} {{deprecated_inline}}
   - : あるウィンドウにおいてタブが選択されているかを得る。
 - {{WebExtAPIRef("tabs.getZoom()")}}

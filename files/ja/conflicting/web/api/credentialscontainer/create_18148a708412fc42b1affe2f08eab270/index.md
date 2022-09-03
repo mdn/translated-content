@@ -1,15 +1,6 @@
 ---
 title: PublicKeyCredentialCreationOptions
-slug: >-
-  conflicting/Web/API/CredentialsContainer/create_18148a708412fc42b1affe2f08eab270
-tags:
-  - API
-  - Dictionary
-  - PublicKeyCredentialCreationOptions
-  - Reference
-  - Web Authentication API
-  - WebAuthn
-translation_of: Web/API/PublicKeyCredentialCreationOptions
+slug: conflicting/Web/API/CredentialsContainer/create_18148a708412fc42b1affe2f08eab270
 original_slug: Web/API/PublicKeyCredentialCreationOptions
 ---
 {{APIRef("Web Authentication API")}}{{securecontext_header}}

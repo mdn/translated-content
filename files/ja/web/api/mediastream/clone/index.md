@@ -1,16 +1,6 @@
 ---
 title: MediaStream.clone()
 slug: Web/API/MediaStream/clone
-tags:
-  - API
-  - メディアキャプチャとストリーム API
-  - メディアストリーム API
-  - MediaStream
-  - メソッド
-  - リファレンス
-  - clone
-browser-compat: api.MediaStream.clone
-translation_of: Web/API/MediaStream/clone
 ---
 {{APIRef("Media Capture and Streams")}}
 

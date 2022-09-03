@@ -12,9 +12,9 @@ slug: Mozilla/Add-ons/WebExtensions/Examples
 
 これらの例を試してみる場合は、リポジトリをクローンしてから下記のようにしてください。
 
-1.  一時的なアドオンを読み込む ([Load Temporary Add-on](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)) 機能を使用する。拡張機能は Firefox を再起動するまで読み込まれたままになります。
-2.  コマンドラインで拡張機能のソースフォルダーを開き、 [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) を使用して拡張機能を実行する。拡張機能は Firefox を再起動するまで読み込まれたままになります。
-3.  Firefox で **ファイル** > **ファイルを開く** を使用し、 [build](https://github.com/mdn/webextensions-examples/tree/master/build) フォルダーにある例を探す。 `build` フォルダーにはビルドされ署名されたバージョンのすべての例が置いてあります。これは例を永続的にインストールします。
+1. 一時的なアドオンを読み込む ([Load Temporary Add-on](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)) 機能を使用する。拡張機能は Firefox を再起動するまで読み込まれたままになります。
+2. コマンドラインで拡張機能のソースフォルダーを開き、 [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) を使用して拡張機能を実行する。拡張機能は Firefox を再起動するまで読み込まれたままになります。
+3. Firefox で **ファイル** > **ファイルを開く** を使用し、 [build](https://github.com/mdn/webextensions-examples/tree/master/build) フォルダーにある例を探す。 `build` フォルダーにはビルドされ署名されたバージョンのすべての例が置いてあります。これは例を永続的にインストールします。
 
 > **Warning:** **重要**: この例の WebExtension を addons.mozilla.org (AMO) に投稿しないでください、WebExtension の例を実行するのに署名をする必要はありません。単に上記の手順に従ってください。
 

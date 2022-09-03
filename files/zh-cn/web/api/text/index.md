@@ -10,8 +10,6 @@ New documents have a single `Text` node for each block of text. Over time, more 
 
 ## 属性
 
-- {{domxref("Text.isElementContentWhitespace")}} {{readonlyInline}}{{Deprecated_Inline}}
-  - : Returns a {{domxref("Boolean")}} flag indicatingwhether or not the text node contains only whitespace.
 - {{domxref("Text.wholeText")}} {{readonlyInline}}
   - : Returns a {{domxref("DOMString")}} containing the text of all `Text` nodes logically adjacent to this {{domxref("Node")}}, concatenated in document order.
 

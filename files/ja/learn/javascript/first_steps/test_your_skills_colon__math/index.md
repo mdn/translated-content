@@ -18,11 +18,11 @@ slug: Learn/JavaScript/First_steps/Test_your_skills:_Math
 
 では、完成イメージを再構築するために、下記のライブコードを更新してみましょう。次の手順に従ってください:
 
-1.  数値の変数を 4 つ作成してください。変数にわかりやすい名前を付けてください。
-2.  最初の 2 つの変数を加算し、その結果を別の変数に格納してください。
-3.  3 番目の変数から 4 番目の変数を減算し、その結果を別の変数に格納してください。
-4.  上記 2 つの工程の結果を乗算し、`finalResult` という変数に格納してください。その結果は 48 になるはずです。もしならなければ、初期の設定数値を調整する必要があります。
-5.  最後に、`finalResult` が偶数であるかどうかをチェックする計算式を記述してください。結果を `evenOddResult` という変数に格納してください。
+1. 数値の変数を 4 つ作成してください。変数にわかりやすい名前を付けてください。
+2. 最初の 2 つの変数を加算し、その結果を別の変数に格納してください。
+3. 3 番目の変数から 4 番目の変数を減算し、その結果を別の変数に格納してください。
+4. 上記 2 つの工程の結果を乗算し、`finalResult` という変数に格納してください。その結果は 48 になるはずです。もしならなければ、初期の設定数値を調整する必要があります。
+5. 最後に、`finalResult` が偶数であるかどうかをチェックする計算式を記述してください。結果を `evenOddResult` という変数に格納してください。
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math1.html", '100%', 400)}}
 
@@ -36,10 +36,10 @@ slug: Learn/JavaScript/First_steps/Test_your_skills:_Math
 
 この完成イメージを再構築するために、下記のライブコードを更新してみましょう。次の手順に従ってください:
 
-1.  `result` と `result2` を乗算し、結果を `result` に代入し戻す計算式を記述してください。これは、代入演算子の略記形を使いましょう。
-2.  その結果を小数第 2 位までにフォーマットし、そして `finalResult` という変数に格納する 1 行コードを記述してください。
-3.  `typeof` を使用して `finalResult` のデータ型をチェックしてください。実際には `string` 型であることがわかるでしょう！それを `number` 型に変換し、結果を `finalNumber` という変数に格納する 1 行コードを記述してください。
-4.  `finalNumber` の値は `10.42` にならなければいけません。戻って、この最終結果が得られるように最初に与えられていた計算式を更新してください。数値や演算子は更新しないでくださいね。
+1. `result` と `result2` を乗算し、結果を `result` に代入し戻す計算式を記述してください。これは、代入演算子の略記形を使いましょう。
+2. その結果を小数第 2 位までにフォーマットし、そして `finalResult` という変数に格納する 1 行コードを記述してください。
+3. `typeof` を使用して `finalResult` のデータ型をチェックしてください。実際には `string` 型であることがわかるでしょう！それを `number` 型に変換し、結果を `finalNumber` という変数に格納する 1 行コードを記述してください。
+4. `finalNumber` の値は `10.42` にならなければいけません。戻って、この最終結果が得られるように最初に与えられていた計算式を更新してください。数値や演算子は更新しないでくださいね。
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math2.html", '100%', 400)}}
 
@@ -59,8 +59,8 @@ slug: Learn/JavaScript/First_steps/Test_your_skills:_Math
 
 あなたの制作物を評価してもらいたい、または行き詰まって助けを求めたい場合:
 
-1.  あなたの制作物を、[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、または [Glitch](https://glitch.com/) のような共有可能なオンラインエディターに置いてください。いちから自身でコードを記述することもできますし、上記のセクションでリンク付けされている準備済みファイルを利用するのもよいでしょう。
-2.  [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn) で、評価を希望したり、助けを求めるポストを投稿してください。ポストには以下を含みましょう:
+1. あなたの制作物を、[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、または [Glitch](https://glitch.com/) のような共有可能なオンラインエディターに置いてください。いちから自身でコードを記述することもできますし、上記のセクションでリンク付けされている準備済みファイルを利用するのもよいでしょう。
+2. [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn) で、評価を希望したり、助けを求めるポストを投稿してください。ポストには以下を含みましょう:
 
     - "Assessment wanted for Math 1 skill test" のような説明的なタイトル
     - あなたがこれまで試したことの詳細、そしてあなたが私たちに何をしてほしいか。例えば、行き詰まって助けが必要だとか、評価をしてほしいなど。

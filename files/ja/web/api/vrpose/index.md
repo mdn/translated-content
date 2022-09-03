@@ -1,7 +1,6 @@
 ---
 title: VRPose
 slug: Web/API/VRPose
-translation_of: Web/API/VRPose
 ---
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 

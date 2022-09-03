@@ -1,14 +1,6 @@
 ---
 title: MediaRecorder.state
 slug: Web/API/MediaRecorder/state
-tags:
-  - API
-  - Media Recorder API
-  - MediaRecording
-  - Property
-  - Reference
-  - state
-translation_of: Web/API/MediaRecorder/state
 ---
 {{APIRef("MediaStream Recording")}}
 

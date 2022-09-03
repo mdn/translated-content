@@ -18,7 +18,7 @@ Gecko 29 を搭載した Firefox 29 は、米国時間 2014 年 4 月 29 日に�
 - CSS ソースマップを[スタイルエディタ](/ja/docs/Tools/Style_Editor)でサポートしました ({{bug(926014)}})。
 - CSS プロパティおよび値のオートコンプリート機能を[スタイルエディタ](/ja/docs/Tools/Style_Editor)に追加しました ({{bug(717369)}})。
 
-_詳細および他の小規模な変更点については [Mozilla Hacks ブログの記事](https://hacks.mozilla.org/2014/02/css-source-map-support-network-performance-analysis-more-firefox-developer-tools-episode-29/ "CSS source map support, network performance analysis & more – Firefox Developer Tools Episode 29 ✩ Mozilla Hacks – the Web developer blog")をご覧ください。_
+_詳細および他の小規模な変更点については [Mozilla Hacks ブログの記事](https://hacks.mozilla.org/2014/02/css-source-map-support-network-performance-analysis-more-firefox-developer-tools-episode-29/)をご覧ください。_
 
 ### CSS
 

@@ -28,7 +28,7 @@ browser.downloads.download({url: "https://example.org/image.png"})
 
 ダウンロード API はダウンロードをキャンセル、停止、再開、消去、削除することもできます; ダウンロードマネージャーでダウンロード済みのファイルを探します; コンピューターのファイルマネージャーでダウンロード済みのファイルを表示します; 関連付けられたアプリケーションでそのファイルを開きます。
 
-この API を使うには [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルにて "downloads"[ API パーミッション](/ja/docs/Web/API/Permissions#API_permissions)が必要です。
+この API を使うには [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルにて "downloads" [API パーミッション](/ja/docs/Web/API/Permissions#API_permissions)が必要です。
 
 例: [Latest download](https://github.com/mdn/webextensions-examples/tree/master/latest-download)
 API リファレンス: [downloads API](/ja/docs/Mozilla/Add-ons/WebExtensions/API/downloads)
@@ -41,11 +41,11 @@ API リファレンス: [downloads API](/ja/docs/Mozilla/Add-ons/WebExtensions/A
 ガイド: [Using files from web applications](/ja/docs/Using_files_from_web_applications)
 API リファレンス: [HTML input element](/ja/docs/Web/HTML/Element/input/file) | [DOM File API](/ja/docs/Web/API/File)
 
-> **Note:** 選択したフォルダーの全ファイルにアクセスや処理したい場合、` <input type="file" ``webkitdirectory="true"/> ` を使ってフォルダーを選択して、そこにある全ファイルを返すようにできます。
+> **Note:** 選択したフォルダーの全ファイルにアクセスや処理したい場合、`<input type="file" webkitdirectory="true"/>` を使ってフォルダーを選択して、そこにある全ファイルを返すようにできます。
 
 ## ドラッグアンドドロップを使って拡張機能でファイルを開く
 
-Web Drag and Drop API では別のファイルピッカーがあります。このメソッドを使うには、UI にフィットする ‘drop zone’ を設置して、[dragenter](/ja/docs/Web/Events/dragenter),[ dragover](/ja/docs/Web/Events/dragover), [drop](/ja/docs/Web/Events/drop) イベントのリスナーを要素に追加します。ドロップイベントのハンドラーでは、[DataTransfer.files](/ja/docs/Web/API/DataTransfer/files) を使って dataTransfer プロパティから提供されたオブジェクトからユーザーにドロップされたあらゆるファイルに、コードからアクセスできます。すると [DOM File API](/ja/docs/Web/API/File) を使ってファイルにアクセス・操作することができます。
+Web Drag and Drop API では別のファイルピッカーがあります。このメソッドを使うには、UI にフィットする ‘drop zone’ を設置して、[dragenter](/ja/docs/Web/Events/dragenter), [dragover](/ja/docs/Web/Events/dragover), [drop](/ja/docs/Web/Events/drop) イベントのリスナーを要素に追加します。ドロップイベントのハンドラーでは、[DataTransfer.files](/ja/docs/Web/API/DataTransfer/files) を使って dataTransfer プロパティから提供されたオブジェクトからユーザーにドロップされたあらゆるファイルに、コードからアクセスできます。すると [DOM File API](/ja/docs/Web/API/File) を使ってファイルにアクセス・操作することができます。
 
 例: [Imagify](https://github.com/mdn/webextensions-examples/tree/master/imagify)
 ガイド: [Using files from web applications](/ja/docs/Using_files_from_web_applications) | [File drag and drop](/ja/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop)
@@ -141,7 +141,7 @@ You have two options:
 
 To add the file or blob you want the native application to process use [JSON.stringify()](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
 
-To use this method the extension must request the "nativeMessaging"[ permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its manifest.json file. Reciprocally, the native application must grant permission for the extension by including its ID in the "allowed_extensions" field of the app manifest.
+To use this method the extension must request the "nativeMessaging" [permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its manifest.json file. Reciprocally, the native application must grant permission for the extension by including its ID in the "allowed_extensions" field of the app manifest.
 
 Example: [Native Messaging](https://github.com/mdn/webextensions-examples/tree/master/native-messaging) (illustrates simple messaging only)
 Guides: [Native messaging](/ja/Add-ons/WebExtensions/Native_messaging)

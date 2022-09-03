@@ -8,10 +8,10 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction/ColorArray
 
 RGBA 色を定義する、4 つの 0 から 255 の整数の`配列`です。4 つの値は以下のチャネルを指定します:
 
-1.  赤(Red)
-2.  緑(Green)
-3.  青(Blue)
-4.  アルファ(Alpha) (不透明度)
+1. 赤(Red)
+2. 緑(Green)
+3. 青(Blue)
+4. アルファ(Alpha) (不透明度)
 
 たとえば、不透明な赤は`[255, 0, 0, 255]`です。
 
