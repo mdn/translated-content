@@ -247,7 +247,7 @@ a { display: block; margin-bottom: 0.5em }
 <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
 ```
 
-件名、本文、他の定義済みコンテンツを含めるなど、`mailto` URL スキームの詳細については、[電子メールのリンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#e-mail_links)または {{RFC(6068)}} をご覧ください。
+件名、本文、他の定義済みコンテンツを含めるなど、`mailto` URL スキームの詳細については、[電子メールのリンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#メールのリンク)または {{RFC(6068)}} をご覧ください。
 
 ### 電話番号へのリンク
 
