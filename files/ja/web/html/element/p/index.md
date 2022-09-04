@@ -1,15 +1,6 @@
 ---
 title: '<p>: 段落要素'
 slug: Web/HTML/Element/p
-tags:
-  - HTML
-  - HTML コンテンツグループ化
-  - HTML:フローコンテンツ
-  - HTML:知覚可能コンテンツ
-  - Reference
-  - ウェブ
-  - 要素
-translation_of: Web/HTML/Element/p
 ---
 {{HTMLRef}}
 

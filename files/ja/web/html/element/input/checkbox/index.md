@@ -1,16 +1,6 @@
 ---
 title: <input type="checkbox">
 slug: Web/HTML/Element/input/checkbox
-tags:
-  - HTML
-  - HTML フォーム
-  - Reference
-  - checkbox
-  - チェックボックス
-  - フォーム
-  - 入力型
-  - 要素
-translation_of: Web/HTML/Element/input/checkbox
 ---
 {{HTMLRef}}
 
