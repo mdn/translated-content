@@ -63,13 +63,13 @@ border: unset;
 
 ### 设置粉色外边界
 
-### HTML
+#### HTML
 
 ```html
 <div>I have a border, an outline, AND a box shadow! Amazing, isn't it?</div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 div {
@@ -84,7 +84,7 @@ div {
 }
 ```
 
-### 结果
+#### 结果
 
 {{EmbedLiveSample('设置粉色外边界')}}
 
