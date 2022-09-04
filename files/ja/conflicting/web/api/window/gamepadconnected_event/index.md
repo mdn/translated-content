@@ -1,16 +1,6 @@
 ---
 title: Window.ongamepadconnected
 slug: conflicting/Web/API/Window/gamepadconnected_event
-tags:
-  - API
-  - Event Handler
-  - Experimental
-  - Gamepad API
-  - Property
-  - Reference
-  - Window
-  - ongamepadconnected
-translation_of: Web/API/Window/ongamepadconnected
 original_slug: Web/API/Window/ongamepadconnected
 ---
 {{DefaultAPISidebar("Gamepad API")}}{{SeeCompatTable}}{{domxref("Window")}} インターフェイスの **`ongamepadconnected`** プロパティは、ゲームパッドが接続されたとき ({{event('gamepadconnected')}}イベントが発生したとき) に実行されるイベントハンドラを表します。

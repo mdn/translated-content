@@ -1,14 +1,6 @@
 ---
 title: Touch.clientX
 slug: Web/API/Touch/clientX
-tags:
-  - API
-  - DOM
-  - Property
-  - Read-only
-  - Reference
-  - touch
-translation_of: Web/API/Touch/clientX
 ---
 {{ APIRef("Touch Events") }}
 

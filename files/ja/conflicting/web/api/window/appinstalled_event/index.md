@@ -1,14 +1,6 @@
 ---
 title: Window.onappinstalled
 slug: conflicting/Web/API/Window/appinstalled_event
-tags:
-  - API
-  - Event Handler
-  - Property
-  - Reference
-  - Window
-  - web manifest
-translation_of: Web/API/Window/onappinstalled
 original_slug: Web/API/Window/onappinstalled
 ---
 {{APIRef}}

@@ -1,15 +1,6 @@
 ---
 title: HTMLParamElement
 slug: Web/API/HTMLParamElement
-page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - リファレンス
-  - 非推奨
-browser-compat: api.HTMLParamElement
-translation_of: Web/API/HTMLParamElement
 ---
 {{ APIRef("HTML DOM") }}{{Deprecated_Header}}
 

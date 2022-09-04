@@ -12,7 +12,7 @@ HMAC est un protocole utilisé pour les messages d'authentification {{Glossary("
 
 HMAC est utilisé pour s'assurer de l'intégrité et de l'authenticité.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

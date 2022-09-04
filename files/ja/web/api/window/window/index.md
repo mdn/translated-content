@@ -1,15 +1,6 @@
 ---
 title: window.window
 slug: Web/API/Window/window
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
-  - 要更新
-translation_of: Web/API/Window/window
 ---
 {{ApiRef}}
 

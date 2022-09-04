@@ -1,15 +1,6 @@
 ---
 title: GlobalEventHandlers.onformdata
 slug: conflicting/Web/API/HTMLFormElement/formdata_event
-tags:
-  - API
-  - Event Handler
-  - Experimental
-  - GlobalEventHandlers
-  - HTML DOM
-  - Property
-  - Reference
-translation_of: Web/API/GlobalEventHandlers/onformdata
 original_slug: Web/API/GlobalEventHandlers/onformdata
 ---
 {{ApiRef("HTML DOM")}}

@@ -1,15 +1,6 @@
 ---
 title: WindowEventHandlers.onunload
 slug: conflicting/Web/API/Window/unload_event
-tags:
-  - API
-  - Event Handler
-  - HTML DOM
-  - MakeBrowserAgnostic
-  - Property
-  - Reference
-  - WindowEventHandlers
-translation_of: Web/API/WindowEventHandlers/onunload
 original_slug: Web/API/WindowEventHandlers/onunload
 ---
 {{APIRef("HTML DOM")}}

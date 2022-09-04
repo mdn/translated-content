@@ -1,11 +1,6 @@
 ---
 title: HTMLFormElement.name
 slug: Web/API/HTMLFormElement/name
-tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-translation_of: Web/API/HTMLFormElement/name
 ---
 ## 概要
 

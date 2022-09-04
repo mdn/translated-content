@@ -49,15 +49,13 @@ window.addEventListener('copy', (event) => {
 
 ## Spécifications
 
-| Spécification                                                            | Statut                               |
-| ------------------------------------------------------------------------ | ------------------------------------ |
-| {{SpecName('Clipboard API', '#clipboard-event-copy')}} | {{Spec2('Clipboard API')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.copy_event")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - Événements liés: {{domxref("Window/cut_event", "cut")}}, {{domxref("Window/paste_event", "paste")}}
 - Cet événement sur {{domxref("Element")}} cible: {{domxref("Element/copy_event", "copy")}}

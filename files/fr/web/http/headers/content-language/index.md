@@ -97,7 +97,7 @@ Content-Language: de, en
 
 {{Compat("http.headers.Content-Language")}}
 
-## Voir également
+## Voir aussi
 
 - {{HTTPHeader("Accept-Language")}}
 - [HTTP headers, meta elements and language information](https://www.w3.org/International/questions/qa-http-and-lang.en)

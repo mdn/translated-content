@@ -1,12 +1,6 @@
 ---
 title: PerformanceEntry.toJSON()
 slug: Web/API/PerformanceEntry/toJSON
-tags:
-  - API
-  - Web パフォーマンス
-  - メソッド
-  - リファレンス
-translation_of: Web/API/PerformanceEntry/toJSON
 ---
 {{APIRef("Performance Timeline API")}}
 

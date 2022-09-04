@@ -1,13 +1,6 @@
 ---
 title: performance.mark()
 slug: Web/API/Performance/mark
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - ウェブパフォーマンス
-browser-compat: api.Performance.mark
-translation_of: Web/API/Performance/mark
 ---
 {{APIRef("User Timing API")}}
 

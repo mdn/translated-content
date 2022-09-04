@@ -315,6 +315,6 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 
 {{Compat}}
 
-## See also
+## Voir aussi
 
 - {{domxref("HTMLCanvasElement")}}

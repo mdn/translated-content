@@ -1,13 +1,6 @@
 ---
 title: 連絡先
 slug: Mozilla/Add-ons/Contact_us
-tags:
-  - Add-ons
-  - Extension
-  - Extensions
-  - Landing
-  - Mozilla
-translation_of: Mozilla/Add-ons/Contact_us
 ---
 {{AddonSidebar}}
 

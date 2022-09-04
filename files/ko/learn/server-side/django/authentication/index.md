@@ -86,23 +86,23 @@ MIDDLEWARE = [
 
 첫번째로 우리 도서관 멤버를 위한 새 그룹을 만듭시다.
 
-1.  Add버튼(Group 다음에 있는)을 클릭하여 새 그룹을 만듭니다; "Library Members"라는 이름을 넣으세요.
+1. Add버튼(Group 다음에 있는)을 클릭하여 새 그룹을 만듭니다; "Library Members"라는 이름을 넣으세요.
 
 ![Admin site - add group](https://mdn.mozillademos.org/files/14093/admin_authentication_add_group.png)
 
-1.  우리는 그룹을 위한 어떠한 권한도 필요하지 않습니다. 그러므로 **SAVE** 를 누르세요. (you will be taken to a list of groups).
+1. 우리는 그룹을 위한 어떠한 권한도 필요하지 않습니다. 그러므로 **SAVE** 를 누르세요. (you will be taken to a list of groups).
 
 자 이제 사용자(user)를 만들어봅시다 :
 
-1.  admin 사이트의 홈페이지로 돌아가주세요.
-2.  Users 옆 **Add** 버튼을 클릭하여 user dialog를 열어줍니다.![Admin site - add user pt1](https://mdn.mozillademos.org/files/14095/admin_authentication_add_user_prt1.png)
-3.  당신의 테스트 사용자(user)를 위해 적절한 사용자이름(**Username)** 과 비밀번호(**Password**/**Password confirmation)** 를 입력해주세요.
-4.  사용자(user)를 만들기 위해 **SAVE** 를 눌러줍시다.
+1. admin 사이트의 홈페이지로 돌아가주세요.
+2. Users 옆 **Add** 버튼을 클릭하여 user dialog를 열어줍니다.![Admin site - add user pt1](https://mdn.mozillademos.org/files/14095/admin_authentication_add_user_prt1.png)
+3. 당신의 테스트 사용자(user)를 위해 적절한 사용자이름(**Username)** 과 비밀번호(**Password**/**Password confirmation)** 를 입력해주세요.
+4. 사용자(user)를 만들기 위해 **SAVE** 를 눌러줍시다.
 
     관리자 사이트는 새로운 유저를 만들고, **username**을 바꿀 수 있고 유저모델의 선택 필드에 정보를 추가할 수 있는 _Change user화면으로 즉각 당신에게 보여줄 것입니다. 이 필드들은 이름, 성, 이메일 주소, 유저 상태 및 권한 (오직_ **Active** 표시만 가능합니다)를 포함합니다. 더 밑으로 내려가면 당신의 그룹과 권한 유저와 관련된 중요한 날짜들(예를 들어 가입일과 마지막 로그인 날짜)을 기입할 수 있습니다. ![Admin site - add user pt2](https://mdn.mozillademos.org/files/14097/admin_authentication_add_user_prt2.png)
 
-5.  그룹 섹션에서, Available groups목록에서 **Library Member** 를 선택하고두 박스 사이에 있는 **오른쪽 화살표**를 누르면 Chosen groups box로 이동이 될 거에요![Admin site - add user to group](https://mdn.mozillademos.org/files/14099/admin_authentication_user_add_group.png)
-6.  여기서는 아무것도 필요치 않습니다, 그저 **SAVE** 를 선택하고, 유저 목록으로 가십시오.
+5. 그룹 섹션에서, Available groups목록에서 **Library Member** 를 선택하고두 박스 사이에 있는 **오른쪽 화살표**를 누르면 Chosen groups box로 이동이 될 거에요![Admin site - add user to group](https://mdn.mozillademos.org/files/14099/admin_authentication_user_add_group.png)
+6. 여기서는 아무것도 필요치 않습니다, 그저 **SAVE** 를 선택하고, 유저 목록으로 가십시오.
 
 다됬습니다! 이제 당신은 테스트를 위해 사용할 수 있는 "normal library member" 계정을 갖게 되었습니다(이들이 로그인할 수 있도록 페이지를 만들 때 말이죠).
 
@@ -133,8 +133,9 @@ urlpatterns += [
 
 > **참고:**Using the above method adds the following URLs with names in square brackets, which can be used to reverse the URL mappings. You don't have to implement anything else — the above URL mapping automatically maps the below mentioned URLs.
 
-> **참고:** 
+> **참고:**
 >
+> ```
 > accounts/ login/ [name='login']
 > accounts/ logout/ [name='logout']
 > accounts/ password_change/ [name='password_change']
@@ -143,8 +144,7 @@ urlpatterns += [
 > accounts/ password_reset/done/ [name='password_reset_done']
 > accounts/ reset/<uidb64>/<token>/ [name='password_reset_confirm']
 > accounts/ reset/done/ [name='password_reset_complete']
->
-
+> ```
 
 Now try to navigate to the login URL (<http://127.0.0.1:8000/accounts/login/>). This will fail again, but with an error that tells you that we're missing the required template (**registration/login.html**) on the template search path. You'll see the following lines listed in the yellow section up the top:
 

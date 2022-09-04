@@ -1,15 +1,6 @@
 ---
 title: HTMLSelectElement.selectedIndex
 slug: Web/API/HTMLSelectElement/selectedIndex
-tags:
-  - API
-  - HTML DOM
-  - HTML フォーム
-  - HTMLSelectElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLSelectElement.selectedIndex
-translation_of: Web/API/HTMLSelectElement/selectedIndex
 ---
 {{APIRef("HTML DOM")}}
 

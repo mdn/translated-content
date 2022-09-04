@@ -1,7 +1,6 @@
 ---
 title: notifications.create()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/create
-translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/create
 ---
 {{AddonSidebar()}}
 

@@ -1,18 +1,6 @@
 ---
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
-tags:
-  - AJAX
-  - API
-  - 通信
-  - HTTP
-  - インターフェイス
-  - リファレンス
-  - ウェブ
-  - XHR
-  - XMLHttpRequest
-browser-compat: api.XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest
 ---
 {{DefaultAPISidebar("XMLHttpRequest")}}
 

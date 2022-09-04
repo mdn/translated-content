@@ -92,7 +92,7 @@ function previewFiles() {
 }
 ```
 
-> **Note:** **メモ:** Internet Explorer 10 以前では [`FileReader()`](/ja/docs/Web/API/FileReader) コンストラクターに対応していません。十分な互換性が必要とされるときは [crossbrowser possible solution for image preview](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html "crossbrowser_image_preview.html") または [this more powerful example](https://mdn.mozillademos.org/files/3698/image_upload_preview.html) を参照してください。
+> **Note:** **メモ:** Internet Explorer 10 以前では [`FileReader()`](/ja/docs/Web/API/FileReader) コンストラクターに対応していません。十分な互換性が必要とされるときは [crossbrowser possible solution for image preview](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html) または [this more powerful example](https://mdn.mozillademos.org/files/3698/image_upload_preview.html) を参照してください。
 
 ## 仕様
 

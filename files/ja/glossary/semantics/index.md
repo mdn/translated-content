@@ -1,15 +1,6 @@
 ---
 title: Semantics (セマンティクス)
 slug: Glossary/Semantics
-tags:
-  - CodingScripting
-  - Glossary
-  - HTML
-  - semantics
-  - セマンティクス
-  - セマンティック
-  - 用語集
-translation_of: Glossary/Semantics
 ---
 プログラミングでは、**セマンティクス**とは、コードの断片の*意味*を指します。たとえば、「JavaScript でその行を実行すると、どのような効果があるのか？」、「その HTML 要素には、どのような目的や役割があるのか？」 (「どのように見えるのか？」ではなく)。
 

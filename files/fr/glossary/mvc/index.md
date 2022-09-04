@@ -16,7 +16,7 @@ Les 3 parties du modèle de conception de logiciel MVC peuvent être décrites c
 2. View (_vue_) : gère la disposition et l'affichage.
 3. Controller (_contrôleur_) : achemine les commandes des parties "model" et "view".
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

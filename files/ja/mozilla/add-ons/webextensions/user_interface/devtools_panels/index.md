@@ -1,12 +1,6 @@
 ---
 title: 開発者ツールパネル
 slug: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
-tags:
-  - 初心者
-  - ガイド
-  - ユーザーインターフェイス
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 ---
 {{AddonSidebar}}
 

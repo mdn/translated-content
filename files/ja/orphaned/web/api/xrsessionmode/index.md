@@ -1,22 +1,6 @@
 ---
 title: XRSessionMode
 slug: orphaned/Web/API/XRSessionMode
-tags:
-  - API
-  - AR
-  - Enum
-  - Graphics
-  - Reference
-  - Session
-  - Type
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRSession
-  - XRSessionMode
-translation_of: Web/API/XRSessionMode
 original_slug: Web/API/XRSessionMode
 ---
 {{APIRef("WebXR Device API")}}

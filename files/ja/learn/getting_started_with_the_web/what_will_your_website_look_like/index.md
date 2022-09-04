@@ -1,18 +1,6 @@
 ---
 title: Web サイトをどんな外見にするか
 slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
-tags:
-  - Assets
-  - Composing
-  - Deprecated
-  - Plan
-  - l10n:priority
-  - コンテンツ
-  - デザイン
-  - フォント
-  - 初心者
-  - 学習
-translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 
@@ -24,9 +12,9 @@ translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_l
 
 まずはじめに、次の質問に答える必要があります。
 
-1.  **何について書かれた Web サイトですか？** 犬、ニューヨーク、それともパックマン？
-2.  **テーマについてどんなことを書きますか？** タイトルと少しの文章、それからページに表示させたい画像を考えます。
-3.  **Web サイトをどんな見た目にしますか？** シンプルで高いレベルから考えます。背景の色は何色にする？サイトにピッタリのフォントの種類はどんなもの？フォーマルなフォント？漫画みたいなフォント？くっきりとした太字？それとも、繊細な細字のフォントでしょうか？
+1. **何について書かれた Web サイトですか？** 犬、ニューヨーク、それともパックマン？
+2. **テーマについてどんなことを書きますか？** タイトルと少しの文章、それからページに表示させたい画像を考えます。
+3. **Web サイトをどんな見た目にしますか？** シンプルで高いレベルから考えます。背景の色は何色にする？サイトにピッタリのフォントの種類はどんなもの？フォーマルなフォント？漫画みたいなフォント？くっきりとした太字？それとも、繊細な細字のフォントでしょうか？
 
 > **Note:** 複雑なプロジェクトでは、カラー、フォント、ページのアイテム間のスペース、適切な文章のスタイルなど、詳細なガイドラインが必要です。これは、デザインガイドやデザインシステムやブランドブックと呼ばれます。一例として、 [Firefox Photon Design System](https://design.firefox.com/photon/)があります。
 
@@ -58,8 +46,8 @@ translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_l
 
 画像を探すには、[Google 画像検索](https://www.google.com/imghp?gws_rd=ssl)にアクセスし、ぴったりなものを探しましょう。
 
-1.  欲しい画像が見つかったら、クリックして拡大表示にします。
-2.  画像を右クリック (Mac では Ctrl +クリック) し、\[名前を付けて画像を保存...] を選択して、画像を安全に保存する場所を選択します。または、後で使用するためにブラウザーのアドレスバーから画像の Web アドレスをコピーします。
+1. 欲しい画像が見つかったら、クリックして拡大表示にします。
+2. 画像を右クリック (Mac では Ctrl +クリック) し、\[名前を付けて画像を保存...] を選択して、画像を安全に保存する場所を選択します。または、後で使用するためにブラウザーのアドレスバーから画像の Web アドレスをコピーします。
 
 ![](updated-google-images.png)
 
@@ -71,10 +59,10 @@ translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_l
 
 次のような手順でフォントを選びます。
 
-1.  [Google Fonts](http://www.google.com/fonts) に行き、ページをスクロールして気に入ったフォントを見つけます。右側のコントロールを使って、結果をフィルタすることもできます。
-2.  使いたいフォントの上にある**プラス** (追加) アイコンをクリックします。
-3.  ページ下部のパネルにある "\* Family Selected"\_ \_と書かれたボタンをクリックします ("\*" は選択したフォントの数によって変わります)。
-4.  ポップアップボックスに、Google が用意してくれた数行のコードが表示されるので、あとでテキストエディタに入力する時のためにコピーしておきます。
+1. [Google Fonts](http://www.google.com/fonts) に行き、ページをスクロールして気に入ったフォントを見つけます。右側のコントロールを使って、結果をフィルタすることもできます。
+2. 使いたいフォントの上にある**プラス** (追加) アイコンをクリックします。
+3. ページ下部のパネルにある "\* Family Selected"\_ \_と書かれたボタンをクリックします ("\*" は選択したフォントの数によって変わります)。
+4. ポップアップボックスに、Google が用意してくれた数行のコードが表示されるので、あとでテキストエディタに入力する時のためにコピーしておきます。
 
 ![](font1.png)
 

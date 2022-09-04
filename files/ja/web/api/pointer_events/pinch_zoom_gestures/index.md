@@ -1,11 +1,6 @@
 ---
 title: ピンチズームのジェスチャー
 slug: Web/API/Pointer_events/Pinch_zoom_gestures
-tags:
-  - ガイド
-  - PointerEvent
-  - タッチ
-translation_of: Web/API/Pointer_events/Pinch_zoom_gestures
 ---
 {{DefaultAPISidebar("Pointer Events")}}
 

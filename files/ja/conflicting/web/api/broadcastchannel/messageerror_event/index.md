@@ -1,14 +1,6 @@
 ---
 title: BroadcastChannel.onmessageerror
 slug: conflicting/Web/API/BroadcastChannel/messageerror_event
-tags:
-  - API
-  - BroadcastChannel
-  - Event Handler
-  - Property
-  - Reference
-  - onmessageerror
-translation_of: Web/API/BroadcastChannel/onmessageerror
 original_slug: Web/API/BroadcastChannel/onmessageerror
 ---
 {{APIRef("HTML DOM")}}

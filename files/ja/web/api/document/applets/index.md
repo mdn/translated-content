@@ -1,16 +1,6 @@
 ---
 title: Document.applets
 slug: Web/API/Document/applets
-tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-  - applets
-  - プロパティ
-translation_of: Web/API/Document/applets
 ---
 {{APIRef("DOM")}}{{deprecated_header}}
 

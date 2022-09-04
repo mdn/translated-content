@@ -1,12 +1,6 @@
 ---
 title: Serialization (シリアライズ)
 slug: Glossary/Serialization
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
-  - Serialization
-translation_of: Glossary/Serialization
 ---
 オブジェクトまたはデータ構造が、ネットワークまたはストレージ（例えば、[アレイバッファ](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)またはファイルフォーマット）上の転送に適したフォーマットに変換されるプロセス。
 

@@ -1,16 +1,6 @@
 ---
 title: TransitionEvent.pseudoElement
 slug: Web/API/TransitionEvent/pseudoElement
-tags:
-  - API
-  - CSS
-  - CSS3 Transitions
-  - CSSOM
-  - Experimental
-  - Property
-  - Reference
-  - TransitionEvent
-translation_of: Web/API/TransitionEvent/pseudoElement
 ---
 {{ apiref("CSSOM") }} {{SeeCompatTable}}
 

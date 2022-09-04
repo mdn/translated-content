@@ -1,17 +1,6 @@
 ---
 title: HTMLInputElement.checkValidity()
 slug: Web/API/HTMLInputElement/checkValidity
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - Method
-  - NeedsExample
-  - リファレンス
-  - checkValidity
-  - checkValidity()
-browser-compat: api.HTMLObjectElement.checkValidity
-translation_of: Web/API/HTMLInputElement/checkValidity
 ---
 {{APIRef("HTML DOM")}}
 

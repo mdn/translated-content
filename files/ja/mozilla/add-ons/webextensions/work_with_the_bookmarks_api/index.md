@@ -1,14 +1,6 @@
 ---
 title: Bookmarks API を使う
 slug: Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API
-tags:
-  - Add-ons
-  - Beginner
-  - Bookmarks
-  - Extensions
-  - How-to
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API
 ---
 {{AddonSidebar}}
 

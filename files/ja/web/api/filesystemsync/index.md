@@ -4,7 +4,7 @@ slug: Web/API/FileSystemSync
 ---
 {{APIRef("File System API")}} {{non-standard_header}}
 
-[File System API](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction "en/DOM/File_API/File_System_APIB") では、 `FileSystemSync` オブジェクトはファイルシステムを表します。 それは 2 つの特性を有する。
+[File System API](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction) では、 `FileSystemSync` オブジェクトはファイルシステムを表します。 それは 2 つの特性を有する。
 
 ## このドキュメントについて
 
@@ -31,6 +31,6 @@ slug: Web/API/FileSystemSync
 
 仕様:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}
 
-リファレンス: [File System API](/ja/DOM/File_API/File_System_API "en/DOM/File_API/File_System_API")
+リファレンス: [File System API](/ja/DOM/File_API/File_System_API)
 
-イントロダクション: [Basic Concepts About the File System API](/ja/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API "en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API")
+イントロダクション: [Basic Concepts About the File System API](/ja/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API)

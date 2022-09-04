@@ -258,4 +258,4 @@ function toggleButton(element) {
 - [公式の WAI-ARIA サンプルコード](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html) (英語)
 - [ARIA: menubutton ロール](/ja/docs/Web/Accessibility/ARIA/Roles/menubutton_role)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

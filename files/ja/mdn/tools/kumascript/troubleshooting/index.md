@@ -1,13 +1,6 @@
 ---
 title: KumaScript エラーのトラブルシューティング
 slug: MDN/Tools/KumaScript/Troubleshooting
-tags:
-  - Errors
-  - Guide
-  - KumaScript
-  - MDN Meta
-  - Tools
-translation_of: MDN/Tools/KumaScript/Troubleshooting
 ---
 {{MDNSidebar}}
 

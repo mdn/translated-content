@@ -1,12 +1,6 @@
 ---
 title: ウィジェット
 slug: conflicting/Web/Accessibility/ARIA_229a3bbc8da83524de32990b14561155
-tags:
-  - Accessibility
-  - JavaScript
-  - Landing
-  - NeedsUpdate
-translation_of: Web/Accessibility/ARIA/widgets
 original_slug: Web/Accessibility/ARIA/widgets
 ---
 > **Warning:** 警告: 更新が必要

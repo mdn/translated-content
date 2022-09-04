@@ -67,7 +67,7 @@ $id = $_GET['id']
 
 Ainsi, en raison de (1) chaque guillemet simple (') dans la chaîne d'entrée est remplacé par des guillemets ("), et en raison de (2) avant chaque (') est ajouté un (/). La chaîne magique contrôlée échoue à contourner l'authentification et votre base de données reste sécurisée.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

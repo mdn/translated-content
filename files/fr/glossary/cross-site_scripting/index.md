@@ -27,7 +27,7 @@ Les attaques XSS peuvent être classées en 3 catégories : stockée (aussi appe
 - **Les attaques XSS basées sur DOM**
   - : La charge utile est exécutée à la suite de la modification de l'environnement DOM (dans le navigateur de la victime) utilisé par le script côté client d'origine. En d'autres termes, la page elle-même ne change pas, mais le code côté client contenu dans la page s'exécute de manière inattendue en raison des modifications malveillantes apportées à l'environnement DOM.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

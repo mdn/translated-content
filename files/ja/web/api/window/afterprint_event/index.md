@@ -1,11 +1,6 @@
 ---
 title: 'Window: afterprint イベント'
 slug: Web/API/Window/afterprint_event
-tags:
-  - Event
-  - Reference
-  - イベント
-translation_of: Web/API/Window/afterprint_event
 ---
 {{APIRef}}
 

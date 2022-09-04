@@ -1,21 +1,6 @@
 ---
 title: Navigator.getVRDisplays()
 slug: Web/API/Navigator/getVRDisplays
-page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Media
-  - Method
-  - Navigator
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
-  - getVRDisplays()
-browser-compat: api.Navigator.getVRDisplays
-translation_of: Web/API/Navigator/getVRDisplays
 ---
 {{DefaultAPISidebar("WebVR API")}}{{deprecated_header}}
 

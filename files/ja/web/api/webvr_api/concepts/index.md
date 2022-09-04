@@ -1,7 +1,6 @@
 ---
 title: WebVR concepts
 slug: Web/API/WebVR_API/Concepts
-translation_of: Web/API/WebVR_API/Concepts
 ---
 {{APIRef("WebVR API")}}
 

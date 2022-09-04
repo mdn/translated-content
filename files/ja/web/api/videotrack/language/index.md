@@ -1,19 +1,6 @@
 ---
 title: Videotrack.language
 slug: Web/API/VideoTrack/language
-tags:
-  - API
-  - HTML DOM
-  - Language
-  - Localization
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - VideoTrack
-  - track
-translation_of: Web/API/VideoTrack/language
 ---
 {{APIRef("HTML DOM")}}
 

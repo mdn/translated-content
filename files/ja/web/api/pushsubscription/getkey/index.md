@@ -1,18 +1,6 @@
 ---
 title: PushSubscription.getKey()
 slug: Web/API/PushSubscription/getKey
-tags:
-  - API
-  - Experimental
-  - Method
-  - Non-standard
-  - Push
-  - Push API
-  - PushSubscription
-  - Reference
-  - Service Workers
-  - getKey
-translation_of: Web/API/PushSubscription/getKey
 ---
 {{SeeCompatTable}}{{APIRef("Push API")}}
 

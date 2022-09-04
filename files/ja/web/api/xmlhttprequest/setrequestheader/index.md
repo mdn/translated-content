@@ -1,22 +1,6 @@
 ---
 title: XMLHttpRequest.setRequestHeader()
 slug: Web/API/XMLHttpRequest/setRequestHeader
-tags:
-  - API
-  - HTTP
-  - HTTP ヘッダー
-  - メソッド
-  - NeedsExample
-  - リファレンス
-  - リクエストヘッダー
-  - XHR
-  - XHR リクエスト
-  - XMLHttpRequest
-  - ヘッダー
-  - request
-  - setRequestHeader
-browser-compat: api.XMLHttpRequest.setRequestHeader
-translation_of: Web/API/XMLHttpRequest/setRequestHeader
 ---
 {{APIRef('XMLHttpRequest')}}
 

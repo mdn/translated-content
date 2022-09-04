@@ -32,14 +32,11 @@ Un objet qui implémente l'interface `StyleSheet` représente une seule feuille 
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaire                                                    |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------- |
-| {{SpecName('CSSOM', '#stylesheet', 'StyleSheet')}}                                             | {{Spec2('CSSOM')}}         | Pas de changement depuis {{SpecName('DOM2 Style')}}. |
-| {{SpecName('DOM2 Style', 'stylesheets.html#StyleSheets-StyleSheet', 'StyleSheet')}} | {{Spec2('DOM2 Style')}} | Définition initiale.                                           |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.StyleSheet")}}
+{{Compat}}
 
 ## Voir aussi
 

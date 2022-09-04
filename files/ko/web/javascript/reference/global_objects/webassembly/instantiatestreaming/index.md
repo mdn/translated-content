@@ -9,7 +9,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateS
 
 ## Syntax
 
-    Promise<ResultObject> WebAssembly.instantiateStreaming(source, importObject);
+```js
+Promise<ResultObject> WebAssembly.instantiateStreaming(source, importObject);
+```
 
 ### Parameters
 

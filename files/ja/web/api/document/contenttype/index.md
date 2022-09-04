@@ -1,17 +1,6 @@
 ---
 title: Document.contentType
 slug: Web/API/Document/contentType
-tags:
-  - API
-  - DOM
-  - Document
-  - MIME
-  - Read-only
-  - Reference
-  - contentType
-  - プロパティ
-  - 読み取り専用
-translation_of: Web/API/Document/contentType
 ---
 {{APIRef}}
 

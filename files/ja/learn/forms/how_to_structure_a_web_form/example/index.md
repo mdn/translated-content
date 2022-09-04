@@ -1,7 +1,6 @@
 ---
 title: '例: お支払いフォーム'
 slug: Learn/Forms/How_to_structure_a_web_form/Example
-translation_of: Learn/Forms/How_to_structure_a_web_form/Example
 original_slug: Learn/Forms/How_to_structure_an_HTML_form/Example
 ---
 これは記事 [HTML フォームの構築方法](/ja/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)の基本的なお支払いフォームの例です。

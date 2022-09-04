@@ -1,14 +1,6 @@
 ---
 title: Navigator.buildID
 slug: Web/API/Navigator/buildID
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Navigator
-  - Property
-  - buildID
-translation_of: Web/API/Navigator/buildID
 ---
 {{ ApiRef("HTML DOM") }}
 

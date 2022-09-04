@@ -1,11 +1,6 @@
 ---
 title: 帰属表示と著作権使用許諾
 slug: MDN/Writing_guidelines/Attrib_copyright_license
-page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
-translation_of: MDN/Writing_guidelines/Attrib_copyright_license
 ---
 {{MDNSidebar}}
 

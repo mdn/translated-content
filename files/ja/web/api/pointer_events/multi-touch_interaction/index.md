@@ -1,11 +1,6 @@
 ---
 title: マルチタッチ操作
 slug: Web/API/Pointer_events/Multi-touch_interaction
-tags:
-  - ガイド
-  - ポインターイベント
-  - touch
-translation_of: Web/API/Pointer_events/Multi-touch_interaction
 ---
 {{DefaultAPISidebar("Pointer Events")}}
 

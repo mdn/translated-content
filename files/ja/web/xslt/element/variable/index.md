@@ -16,7 +16,7 @@ translation_of: Web/XSLT/Element/variable
 
 ```
 <xsl:variable name=NAME select=EXPRESSION >
-	TEMPLATE
+  TEMPLATE
 </xsl:variable>
 ```
 

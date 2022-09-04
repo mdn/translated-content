@@ -1,13 +1,6 @@
 ---
 title: HTMLAnchorElement.password
 slug: Web/API/HTMLAnchorElement/password
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - プロパティ
-browser-compat: api.HTMLAnchorElement.password
-translation_of: Web/API/HTMLAnchorElement/password
 original_slug: Web/API/HTMLHyperlinkElementUtils/password
 ---
 {{ApiRef("HTML DOM")}}

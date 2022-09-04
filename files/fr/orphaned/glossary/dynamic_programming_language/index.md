@@ -13,7 +13,7 @@ Un **langage de programmation dynamique** est un langage de programmation dans l
 
 Ceci est opposé aux langages de programmation dits statiques, dans lesquels de tels changements ne sont normalement pas possibles.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

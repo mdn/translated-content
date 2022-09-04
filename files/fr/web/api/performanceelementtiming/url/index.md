@@ -47,10 +47,8 @@ observer.observe({ entryTypes: ["element"] });
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                                   | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Element Timing API','#dom-performanceelementtiming-url','PerformanceElementTiming.url')}} | {{Spec2('Element Timing API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceElementTiming.url")}}
+{{Compat}}

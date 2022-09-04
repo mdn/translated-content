@@ -35,10 +35,8 @@ if (navigator.storage && navigator.storage.persist)
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                       | Commentaire          |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('Storage','#dom-storagemanager-persist','persist')}} | {{Spec2('Storage')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.StorageManager.persist")}}
+{{Compat}}

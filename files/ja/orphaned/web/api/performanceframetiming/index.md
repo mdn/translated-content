@@ -1,15 +1,6 @@
 ---
 title: PerformanceFrameTiming
 slug: orphaned/Web/API/PerformanceFrameTiming
-tags:
-  - API
-  - PerformanceFrameTiming
-  - Web パフォーマンス
-  - インターフェイス
-  - パフォーマンスタイムライン API
-  - フレームタイミング API
-  - リファレンス
-translation_of: Web/API/PerformanceFrameTiming
 original_slug: Web/API/PerformanceFrameTiming
 ---
 {{APIRef("Frame Timing API")}}{{SeeCompatTable}}**`PerformanceFrameTiming`** は、ブラウザーのイベントループに関するフレームタイミングデータを提供する抽象インターフェイスです。 フレームは、DOM イベントの処理、サイズ変更、スクロール、レンダリング、CSS アニメーションなど、[1 つのイベントループ](https://html.spec.whatwg.org/multipage/webappapis.html#processing-model-8)でブラウザーが実行する作業量を表します。60 Hz のリフレッシュレートに対して 60 fps (フレーム/秒) のフレームレートは、応答性の良いユーザーエクスペリエンスの目標です。これはブラウザーが約 16.7 ms でフレームを処理するはずであることを意味します。

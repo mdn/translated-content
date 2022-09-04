@@ -1,16 +1,6 @@
 ---
 title: HTML テーブル
 slug: Learn/HTML/Tables
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Guide
-  - HTML
-  - Landing
-  - Module
-  - Tables
-translation_of: Learn/HTML/Tables
 ---
 {{LearnSidebar}}
 

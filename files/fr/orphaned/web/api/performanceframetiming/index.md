@@ -43,13 +43,11 @@ Voir l'exemple dans l'article [Utilisation de l'API Frame Timing](/fr/docs/Web/A
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('Frame Timing', '#performanceframetiming-interface', 'PerformanceFrameTiming')}} | {{Spec2('Frame Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceFrameTiming")}}
+{{Compat}}
 
 ## Voir aussi
 

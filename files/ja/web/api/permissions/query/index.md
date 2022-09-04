@@ -1,13 +1,6 @@
 ---
 title: Permissions.query()
 slug: Web/API/Permissions/query
-tags:
-  - API
-  - Experimental
-  - Method
-  - Permissions
-  - Reference
-translation_of: Web/API/Permissions/query
 ---
 {{APIRef("Permissions API")}}{{SeeCompatTable}}
 

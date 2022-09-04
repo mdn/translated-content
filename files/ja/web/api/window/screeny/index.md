@@ -1,14 +1,6 @@
 ---
 title: Window.screenY
 slug: Web/API/Window/screenY
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Read-only
-  - Reference
-  - Window
-translation_of: Web/API/Window/screenY
 ---
 {{APIRef}}
 

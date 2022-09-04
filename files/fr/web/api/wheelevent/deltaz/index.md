@@ -32,13 +32,11 @@ console.log(syntheticEvent.deltaZ);
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM3 Events','#widl-WheelEvent-deltaZ','WheelEvent.deltaZ')}} | {{Spec2('DOM3 Events')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WheelEvent.deltaZ")}}
+{{Compat}}
 
 ## Voir aussi
 

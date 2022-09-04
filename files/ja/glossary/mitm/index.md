@@ -1,10 +1,6 @@
 ---
 title: MitM (中間者攻撃)
 slug: Glossary/MitM
-tags:
-  - Glossary
-  - Security
-translation_of: Glossary/MitM
 ---
 **Man-in-the-middle attack**（MitM、中間者攻撃）は、2 つのシステム間の通信を傍受します。たとえば、Wi-Fi ルーターが侵害される可能性があります。
 

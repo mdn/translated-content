@@ -53,9 +53,9 @@ let newArray = arr.filter(callback(element[, index, [array]])[, thisArg])
 
 `callback` は 3 つの引数と共に呼び出されます。
 
-1.  要素の値
-2.  要素の添字
-3.  走査されている配列オブジェクト
+1. 要素の値
+2. 要素の添字
+3. 走査されている配列オブジェクト
 
 `filter` に引数 `thisArg` が与えられた場合、そのオブジェクトは `callback` 関数内の `this` 値として使われます。そうでない場合、 `undefined` が `this` 値として使われます。`callback` 関数内の最終的な `this` 値は[関数内の `this` を決定する一般的ルール](/ja/docs/Web/JavaScript/Reference/Operators/this)に従って決められます。
 

@@ -1,10 +1,6 @@
 ---
 title: MDN のあゆみ
 slug: MDN/At_ten/History_of_MDN
-tags:
-  - History
-  - MDN Meta
-translation_of: MDN_at_ten/History_of_MDN
 original_slug: MDN_at_ten/History_of_MDN
 i10n:
   sourceCommit: 356b0655db61fafedd864b54d39e04529b52fff4
@@ -69,7 +65,7 @@ _0:14:55 - 0:26:08_
 _0:26:08 - 0:31:50_
 _0:43:52 - 0:51:35_
 
-[Kuma ](https://github.com/mdn/kuma) は 2011 年諸島頃に [Kitsune](https://github.com/mozilla/kitsune) からフォークされ、2012 年 8 月 3 日に立ち上がりました。 Django をベースに Mozilla が構築した Wiki プラットフォームで Node.js を使った [KumaScript](/ja/docs/MDN/Tools/KumaScript) マクロシステムも付随してます。
+[Kuma](https://github.com/mdn/kuma) は 2011 年諸島頃に [Kitsune](https://github.com/mozilla/kitsune) からフォークされ、2012 年 8 月 3 日に立ち上がりました。 Django をベースに Mozilla が構築した Wiki プラットフォームで Node.js を使った [KumaScript](/ja/docs/MDN/Tools/KumaScript) マクロシステムも付随してます。
 
 コードは GitHub 上にあったので、コミュニティは、 MDN の CMS にも貢献し始めました。今後、"MDN のハック" には文書を書くことと Kuma のコーディングの両方が含まれることになるでしょう。
 

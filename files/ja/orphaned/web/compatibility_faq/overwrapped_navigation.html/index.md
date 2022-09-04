@@ -1,9 +1,6 @@
 ---
 title: ナビゲーションメニューが他のアイコンと重なって表示されたり、画面からはみ出たりしてしまう
 slug: orphaned/Web/Compatibility_FAQ/Overwrapped_Navigation.html
-tags:
-  - Compatibility
-  - Layout
 original_slug: Web/Compatibility_FAQ/Overwrapped_Navigation.html
 ---
 ## 概要

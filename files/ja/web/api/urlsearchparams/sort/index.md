@@ -1,14 +1,6 @@
 ---
 title: URLSearchParams.sort()
 slug: Web/API/URLSearchParams/sort
-tags:
-  - API
-  - Method
-  - Reference
-  - URL API
-  - URLSearchParams
-  - sort
-translation_of: Web/API/URLSearchParams/sort
 ---
 {{APIRef("URL API")}}
 

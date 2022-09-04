@@ -1,7 +1,6 @@
 ---
 title: vrdisplayconnected
 slug: Web/API/Window/vrdisplayconnect_event
-translation_of: Web/API/Window/vrdisplayconnect_event
 ---
 {{APIRef}}{{SeeCompatTable}}
 

@@ -1,12 +1,6 @@
 ---
 title: Djangoの紹介
 slug: Learn/Server-side/Django/Introduction
-tags:
-  - Python
-  - Webフレームワーク
-  - django
-  - サーバーサイドプログラミング
-translation_of: Learn/Server-side/Django/Introduction
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
 

@@ -1,7 +1,6 @@
 ---
 title: HTML の生成
 slug: Web/API/XSLTProcessor/Generating_HTML
-translation_of: Web/API/XSLTProcessor/Generating_HTML
 ---
 ## HTML の生成
 

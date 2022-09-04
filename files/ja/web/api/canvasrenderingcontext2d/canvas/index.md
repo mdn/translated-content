@@ -1,14 +1,6 @@
 ---
 title: CanvasRenderingContext2D.canvas
 slug: Web/API/CanvasRenderingContext2D/canvas
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - プロパティ
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.canvas
-translation_of: Web/API/CanvasRenderingContext2D/canvas
 ---
 {{APIRef}}
 

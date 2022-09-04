@@ -1,23 +1,6 @@
 ---
 title: XRRigidTransform.position
 slug: Web/API/XRRigidTransform/position
-tags:
-  - 3D
-  - API
-  - AR
-  - Coordinates
-  - Location
-  - Point
-  - Position
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - XR
-  - XRRigidTransform
-  - transform
-translation_of: Web/API/XRRigidTransform/position
 ---
 {{APIRef("WebXR Device API")}}
 

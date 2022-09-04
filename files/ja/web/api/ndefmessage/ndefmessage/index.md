@@ -1,13 +1,6 @@
 ---
 title: NDEFMessage.NDEFMessage()
 slug: Web/API/NDEFMessage/NDEFMessage
-tags:
-  - API
-  - コンストラクター
-  - リファレンス
-  - NDEFMessage
-browser-compat: api.NDEFMessage.NDEFMessage
-translation_of: Web/API/NDEFMessage/NDEFMessage
 ---
 {{securecontext_header}}{{APIRef()}}
 

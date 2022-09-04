@@ -1,17 +1,6 @@
 ---
 title: HTMLMediaElement.fastSeek()
 slug: Web/API/HTMLMediaElement/fastSeek
-page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - HTMLMediaElement
-  - Media
-  - Method
-  - Reference
-  - fastSeek
-browser-compat: api.HTMLMediaElement.fastSeek
-translation_of: Web/API/HTMLMediaElement/fastSeek
 ---
 {{APIRef("HTML DOM")}} {{SeeCompatTable}}
 

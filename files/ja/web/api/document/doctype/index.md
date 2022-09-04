@@ -1,14 +1,6 @@
 ---
 title: Document.doctype
 slug: Web/API/Document/doctype
-tags:
-  - API
-  - DOCTYPE
-  - DOM
-  - Document
-  - Reference
-  - プロパティ
-translation_of: Web/API/Document/doctype
 ---
 {{ApiRef("DOM")}}
 

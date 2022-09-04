@@ -1,13 +1,6 @@
 ---
 title: window.dump()
 slug: Web/API/Window/dump
-tags:
-  - API
-  - DOM
-  - DOM_0
-  - Method
-  - Non-standard
-translation_of: Web/API/Window/dump
 ---
 {{ ApiRef() }}
 
