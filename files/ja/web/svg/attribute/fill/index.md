@@ -1,7 +1,6 @@
 ---
 title: fill
 slug: Web/SVG/Attribute/fill
-translation_of: Web/SVG/Attribute/fill
 ---
 {{SVGRef}}
 
