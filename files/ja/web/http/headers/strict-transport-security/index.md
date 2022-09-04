@@ -1,14 +1,6 @@
 ---
 title: Strict-Transport-Security
 slug: Web/HTTP/Headers/Strict-Transport-Security
-tags:
-  - HSTS
-  - HTTP
-  - HTTPS
-  - セキュリティ
-  - ヘッダー
-  - レスポンスヘッダー
-translation_of: Web/HTTP/Headers/Strict-Transport-Security
 ---
 {{HTTPSidebar}}
 

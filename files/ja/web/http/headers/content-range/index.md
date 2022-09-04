@@ -1,13 +1,6 @@
 ---
 title: Content-Range
 slug: Web/HTTP/Headers/Content-Range
-tags:
-  - HTTP
-  - HTTPヘッダー
-  - ヘッダー
-  - リファレンス
-  - レスポンスヘッダー
-translation_of: Web/HTTP/Headers/Content-Range
 ---
 {{HTTPSidebar}}
 

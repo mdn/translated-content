@@ -1,20 +1,6 @@
 ---
 title: 機能ポリシーの使用
 slug: Web/HTTP/Feature_Policy/Using_Feature_Policy
-tags:
-  - Feature Policy
-  - Feature-Policy
-  - HTTP
-  - Permissions
-  - Privileges
-  - Reference
-  - Security
-  - access
-  - delegation
-  - header
-  - セキュリティ
-  - 機能ポリシー
-translation_of: Web/HTTP/Feature_Policy/Using_Feature_Policy
 ---
 {{HTTPSidebar}}
 
