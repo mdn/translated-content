@@ -26,7 +26,7 @@ JavaScript は主にブラウザーで使用され、これにより {{Glossary(
 
 ### JavaScript の学習
 
-- MDN 上の記事「{{Link("/ja/docs/Web/JavaScript/Guide")}}」
+- MDN 上の記事「[JavaScript ガイド](/ja/docs/Web/JavaScript/Guide)」
 - [NodeSchool による JavaScript ワークショップ](http://nodeschool.io/#workshoppers)
 - [codecademy.com による JavaScript 演習コース](https://www.codecademy.com/tracks/javascript)
 - [John Resig によるチュートリアル _「Learning Advanced JavaScript」_](http://ejohn.org/apps/learn/)
@@ -34,5 +34,5 @@ JavaScript は主にブラウザーで使用され、これにより {{Glossary(
 ### 技術リファレンス
 
 - [最新の ECMAScript 仕様書](http://www.ecma-international.org/publications/standards/Ecma-262.htm)
-- MDN 上の記事「{{Link("/ja/docs/Web/JavaScript/reference")}}」
+- MDN 上の記事「[JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference)」
 - [JavaScript テキスト「Eloquent JavaScript」](http://eloquentjavascript.net/)
