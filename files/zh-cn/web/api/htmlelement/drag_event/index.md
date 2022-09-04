@@ -24,7 +24,7 @@ ondrag = (event) => { };
 
 ## 事件属性
 
-_除了下面列出的属性外，还可以使用父接口 {{domxref("Event")}} 的属性。
+_除了下面列出的属性外，还可以使用父接口 {{domxref("Event")}} 的属性。_
 
 - {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
   - : 在进行拖放操作时，传输的数据。
