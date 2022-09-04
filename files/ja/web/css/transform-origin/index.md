@@ -1,16 +1,6 @@
 ---
 title: transform-origin
 slug: Web/CSS/transform-origin
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 座標変換
-  - Reference
-  - 'default value: center'
-  - recipe:css-property
-  - transform-origin
-browser-compat: css.properties.transform-origin
-translation_of: Web/CSS/transform-origin
 ---
 {{ CSSRef }}
 

@@ -1,14 +1,6 @@
 ---
 title: grid-template-columns
 slug: Web/CSS/grid-template-columns
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.grid-template-columns
-translation_of: Web/CSS/grid-template-columns
 ---
 {{CSSRef}}
 

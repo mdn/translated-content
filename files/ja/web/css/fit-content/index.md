@@ -1,14 +1,6 @@
 ---
 title: fit-content
 slug: Web/CSS/fit-content
-tags:
-  - CSS
-  - キーワード
-  - リファレンス
-  - ウェブ
-  - fit-content
-browser-compat: css.properties.width.fit-content
-translation_of: Web/CSS/fit-content
 ---
 {{CSSRef}}
 

@@ -1,14 +1,6 @@
 ---
 title: overflow-clip-margin
 slug: Web/CSS/overflow-clip-margin
-tags:
-  - CSS
-  - CSS Overflow
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.overflow-clip-margin
-translation_of: Web/CSS/overflow-clip-margin
 ---
 {{CSSRef}}
 

@@ -1,17 +1,7 @@
 ---
 title: url()
 slug: Web/CSS/url
-tags:
-  - CSS
-  - CSS 関数
-  - 関数
-  - レイアウト
-  - リファレンス
-  - ウェブ
-  - url()
-translation_of: Web/CSS/url()
 original_slug: Web/CSS/url()
-browser-compat: css.types.url
 ---
 {{CSSRef}}
 

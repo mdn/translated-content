@@ -1,16 +1,6 @@
 ---
 title: text-underline-offset
 slug: Web/CSS/text-underline-offset
-tags:
-  - CSS
-  - CSS Text Decoration
-  - プロパティ
-  - Reference
-  - recipe:css-property
-  - text-decoration
-  - text-underline-offset
-browser-compat: css.properties.text-underline-offset
-translation_of: Web/CSS/text-underline-offset
 ---
 {{CSSRef}}
 

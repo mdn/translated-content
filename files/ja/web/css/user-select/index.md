@@ -1,16 +1,6 @@
 ---
 title: user-select
 slug: Web/CSS/user-select
-tags:
-  - CSS
-  - CSS プロパティ
-  - プロパティ
-  - Reference
-  - Selection
-  - recipe:css-property
-  - user-select
-browser-compat: css.properties.user-select
-translation_of: Web/CSS/user-select
 ---
 {{CSSRef}}
 
