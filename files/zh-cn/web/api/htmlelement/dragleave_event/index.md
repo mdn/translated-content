@@ -4,7 +4,7 @@ slug: Web/API/HTMLElement/dragleave_event
 ---
 {{APIRef}}
 
-`dragleave` 事件在拖动元素或选择的文本离开一个有效的放置目标时被触发。
+`dragleave` 事件在拖动的元素或选中的文本离开一个有效的放置目标时被触发。
 
 此事件不可取消。
 
@@ -21,6 +21,8 @@ ondragleave = (event) => { };
 ## 事件类型
 
 一个 {{domxref("DragEvent")}}。继承自 {{domxref("Event")}}。
+
+{{InheritanceDiagram("DragEvent")}}
 
 ## 事件属性
 
