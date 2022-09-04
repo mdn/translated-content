@@ -24,7 +24,7 @@ L'_Abstraction_ dans le domaine de la {{Glossary("Computer programming","program
 
 ```js
 class ImplementAbstraction {
-  // method to set values of internal members
+  // méthode pour affecter des valeurs aux membres internes
   set(x, y) {
     this.a = x;
     this.b = y;
