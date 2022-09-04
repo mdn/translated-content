@@ -1,12 +1,6 @@
 ---
 title: <xsl:fallback>
 slug: Web/XSLT/Element/fallback
-tags:
-  - XSLT
-  - fallback
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/fallback
 ---
 {{ XsltRef() }}
 

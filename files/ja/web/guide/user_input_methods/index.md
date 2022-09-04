@@ -1,17 +1,6 @@
 ---
 title: ユーザ入力とコントロール
 slug: Web/Guide/User_input_methods
-tags:
-  - Screen Orientation
-  - contenteditable
-  - drag and drop
-  - fullscreen
-  - keyboard
-  - mouse
-  - pointer lock
-  - touch
-  - user input
-translation_of: Web/Guide/User_input_methods
 ---
 現代のウェブのユーザー入力は、単純なマウスやキーボードだけではありません。この記事では、ユーザー入力を管理し、オープンなウェブアプリに制御を実装するための推奨事項を、FAQ、実例、および基礎となる技術について、より詳細な情報を必要とする人のための詳細な情報へのリンクとともに提供します。関連する API とイベントには、[タッチイベント](/ja/docs/Web/API/Touch_events)、[Pointer Lock API](/ja/docs/Web/API/Pointer_Lock_API)、[Screen Orientation API](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)、[Fullscreen API](/ja/docs/Web/API/Fullscreen_API)、[ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) などがあります。
 

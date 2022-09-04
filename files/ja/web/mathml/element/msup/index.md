@@ -1,7 +1,6 @@
 ---
 title: <msup>
 slug: Web/MathML/Element/msup
-translation_of: Web/MathML/Element/msup
 ---
 {{MathMLRef()}}
 

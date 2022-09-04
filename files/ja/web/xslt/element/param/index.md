@@ -1,12 +1,6 @@
 ---
 title: <xsl:param>
 slug: Web/XSLT/Element/param
-tags:
-  - XSLT
-  - param
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/param
 ---
 {{ XsltRef() }}
 

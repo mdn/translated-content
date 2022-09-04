@@ -1,12 +1,6 @@
 ---
 title: <xsl:output>
 slug: Web/XSLT/Element/output
-tags:
-  - XSLT
-  - output
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/output
 ---
 {{ XsltRef() }}
 

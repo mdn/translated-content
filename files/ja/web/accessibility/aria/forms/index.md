@@ -1,10 +1,6 @@
 ---
 title: フォーム
 slug: Web/Accessibility/ARIA/forms
-tags:
-  - ARIA
-  - アクセシビリティ
-translation_of: Web/Accessibility/ARIA/forms
 ---
 以下のページでは、ウェブフォームのアクセシビリティを向上させるさまざまなテクニックを紹介します。
 

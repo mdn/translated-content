@@ -1,15 +1,6 @@
 ---
 title: ウェブ開発入門
 slug: Web/Guide/Introduction_to_Web_development
-tags:
-  - CSS
-  - CodingScripting
-  - HTML
-  - JavaScript
-  - Web
-  - 初心者
-  - 開発
-translation_of: Web/Guide/Introduction_to_Web_development
 ---
 ウェブ開発を始めたばかりであるか、単に視野を新しいウェブの世界に広げているかに関わらず、ここにあるリンクはあなたが始めるのを助けてくれるはずです。
 

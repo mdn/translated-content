@@ -1,11 +1,6 @@
 ---
 title: <xsl:element>
 slug: Web/XSLT/Element/element
-tags:
-  - XSLT
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/element
 ---
 {{ XsltRef() }}
 
