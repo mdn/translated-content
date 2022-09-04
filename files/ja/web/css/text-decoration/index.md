@@ -1,14 +1,6 @@
 ---
 title: text-decoration
 slug: Web/CSS/text-decoration
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text Decoration
-  - Reference
-  - recipe:css-shorthand-property
-browser-compat: css.properties.text-decoration
-translation_of: Web/CSS/text-decoration
 ---
 {{CSSRef}}
 
