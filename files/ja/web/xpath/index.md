@@ -1,16 +1,6 @@
 ---
 title: XPath
 slug: Web/XPath
-tags:
-  - CSS セレクター
-  - DOM
-  - JXON
-  - Landing
-  - Path
-  - XML
-  - XPath
-  - XSLT
-translation_of: Web/XPath
 ---
 {{XSLTRef}}
 
