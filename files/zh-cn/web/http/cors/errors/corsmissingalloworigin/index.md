@@ -22,7 +22,7 @@ slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 Access-Control-Allow-Origin: https://amazing.site
 ```
 
-你还可以使用`"*"`通配符配置站点使得允许任何站点访问它，这样的处理应该只用于公共的 API，私有 API 永远不应使用 `*`，而应设置特定的一个域或一些域。此外，通配符仅适用于将 {{htmlattrxref("crossorigin")}} 属性设置为 `anonymous` 的请求。
+你还可以使用 `*` 通配符配置站点使得允许任何站点访问它，这样的处理应该只用于公共的 API，私有 API 永远不应使用 `*`，而应设置特定的一个域或一些域。此外，通配符仅适用于将 {{htmlattrxref("crossorigin")}} 属性设置为 `anonymous` 的请求。
 
 ```http
 Access-Control-Allow-Origin: *
