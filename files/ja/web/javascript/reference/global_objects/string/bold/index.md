@@ -1,15 +1,6 @@
 ---
 title: String.prototype.bold()
 slug: Web/JavaScript/Reference/Global_Objects/String/bold
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/bold
 ---
 {{JSRef}} {{deprecated_header}}
 

@@ -1,12 +1,6 @@
 ---
 title: Symbol.match
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/match
 ---
 {{JSRef}}
 

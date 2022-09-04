@@ -1,14 +1,6 @@
 ---
 title: get RegExp[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@species
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@species
 ---
 {{JSRef}}
 
