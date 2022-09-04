@@ -1,10 +1,6 @@
 ---
 title: alignment-baseline
 slug: Web/SVG/Attribute/alignment-baseline
-tags:
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/alignment-baseline
 ---
 {{SVGRef}}
 

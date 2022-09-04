@@ -1,13 +1,6 @@
 ---
 title: 始めましょう
 slug: Web/SVG/Tutorial/Getting_Started
-tags:
-  - Beginner
-  - NeedsBeginnerUpdate
-  - SVG
-  - SVG:Tutorial
-  - 初心者
-translation_of: Web/SVG/Tutorial/Getting_Started
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
 

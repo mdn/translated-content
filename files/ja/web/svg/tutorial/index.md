@@ -1,12 +1,6 @@
 ---
 title: SVG教本
 slug: Web/SVG/Tutorial
-tags:
-  - MDC Project
-  - NeedsContent
-  - SVG
-  - SVG:Tutorial
-translation_of: Web/SVG/Tutorial
 ---
 **変倍ベクタ図形** (Scalable Vector Graphics; [SVG](/ja/docs/SVG)) は図形をタグ付けする W3C の XML 派生言語です。SVG は，Firefox、Opera、WebKit ブラウザ、Internet Explorer 及び他のブラウザにおいて部分的に実装されています。
 
