@@ -16,7 +16,7 @@ AJAX vous permet de mettre à jour simplement des parties du {{Glossary("DOM")}}
 
 Avec les sites web interactifs et les standards modernes du web, AJAX est progressivement remplacé par des fonctions dans les cadres JavaScript et l'API standard officielle {{domxref("Fetch API")}}.
 
-## Pour approfondir
+## Voir aussi
 
 - [AJAX](https://fr.wikipedia.org/wiki/Ajax_(informatique)) sur Wikipédia
 - [AJAX](/fr/docs/Web/Guide/AJAX)
