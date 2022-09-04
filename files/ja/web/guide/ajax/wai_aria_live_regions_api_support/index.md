@@ -1,10 +1,6 @@
 ---
 title: WAI ARIA Live Regions/API サポート
 slug: Web/Guide/AJAX/WAI_ARIA_Live_Regions_API_Support
-tags:
-  - AJAX
-  - アクセシビリティ
-translation_of: Web/Guide/AJAX/WAI_ARIA_Live_Regions_API_Support
 ---
 > **Warning:** これらの注釈は、スクリーンリーダーの開発者向けです。 開発者は、[ARIA ライブリージョン開発者のドキュメント](/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)を使用する必要があります。
 

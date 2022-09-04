@@ -1,12 +1,6 @@
 ---
 title: <xsl:decimal-format>
 slug: Web/XSLT/Element/decimal-format
-tags:
-  - XSLT
-  - decimal-format
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/decimal-format
 ---
 {{ XsltRef() }}
 

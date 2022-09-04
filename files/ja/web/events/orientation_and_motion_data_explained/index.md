@@ -1,14 +1,6 @@
 ---
 title: 方向および動きとして示されるデータ
 slug: Web/Events/Orientation_and_motion_data_explained
-tags:
-  - 中級者
-  - Mobile
-  - Motion
-  - NeedsContent
-  - 向き
-  - rotation
-translation_of: Web/Events/Orientation_and_motion_data_explained
 original_slug: Web/Guide/Events/Orientation_and_motion_data_explained
 ---
 ## 概要

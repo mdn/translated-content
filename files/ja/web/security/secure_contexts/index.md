@@ -1,12 +1,6 @@
 ---
 title: 安全なコンテキスト
 slug: Web/Security/Secure_Contexts
-tags:
-  - Secure contexts
-  - Security
-  - セキュリティ
-  - 安全なコンテキスト
-translation_of: Web/Security/Secure_Contexts
 ---
 **セキュアコンテキスト**とは、認証と機密性の一定の最低基準を満たしている `Window` や `Worker` のことです。多くの Web API や機能は安全なコンテキストでのみアクセス可能です。セキュアコンテキストの主な目的は、{{interwiki("wikipedia", "中間者攻撃", "中間者攻撃")}} が攻撃の犠牲者をさらに危険にさらす可能性のある強力な API にアクセスすることを防ぐことです。
 
