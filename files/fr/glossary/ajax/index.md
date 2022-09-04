@@ -1,14 +1,6 @@
 ---
 title: AJAX
 slug: Glossary/AJAX
-tags:
-  - AJAX
-  - CodingScripting
-  - Glossaire
-  - Infrastructure
-  - l10n:priority
-translation_of: Glossary/AJAX
-original_slug: Glossaire/AJAX
 ---
 Le {{Glossary("JavaScript")}} et {{Glossary("XML")}} asynchrone (AJAX) est une pratique de programmation qui consiste à construire des pages web plus complexes et plus dynamiques en utilisant une technologie connue sous le nom de {{Glossary("XHR_(XMLHttpRequest)", "XMLHttpRequest")}}.
 
