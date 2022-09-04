@@ -35,9 +35,9 @@ Es por eso que generalmente es bueno leer primero un material introductorio para
 
 También es la razón por la que, a veces, puedes quedar realmente atrapado en un problema, pero luego averiguar la respuesta cuando vas a tomar un café (o a caminar). Podrías:
 
-1.  Saber cómo solucionar el problema A con la herramienta A.
-2.  Saber cómo solucionar el problema B con la herramienta B.
-3.  No saber cómo solucionar el problema C.
+1. Saber cómo solucionar el problema A con la herramienta A.
+2. Saber cómo solucionar el problema B con la herramienta B.
+3. No saber cómo solucionar el problema C.
 
 Supongamos que te enfocas en el problema C por un tiempo y te frustras porque no puedes encontrar la solución para resolverlo. Pero luego, después de caminar para tomar un poco de aire fresco, es posible que descubras que, mientras tu mente divaga, de repente estableces una conexión entre la herramienta A y la herramienta B, ¡y te das cuenta de que las puedes usar juntas para solucionar el problema C! No siempre es así de simple, pero también es sorprendente cuántas veces sucede. Esto también resalta la importancia de tomar descansos regulares cuando estás estudiando frente a la computadora.
 
@@ -184,16 +184,20 @@ Un menú de navegación generalmente se crea a partir de una lista de enlaces, a
 
 Para hacer que todos los elementos se asienten horizontalmente en una línea, la forma moderna más fácil es usar flexbox:
 
-    ul {
-      display: flex;
-    }
+```css
+ul {
+  display: flex;
+}
+```
 
 Para eliminar el espacio innecesario y las viñetas, podemos hacer esto:
 
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
+```css
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+```
 
 etc.
 

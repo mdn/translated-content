@@ -332,14 +332,16 @@ Esto está bien. Incluye el contenido que se necesita y es muy personalizable co
 
 Una solución mejor es utilizar los elementos HTML5 {{htmlelement("figure")}} y {{htmlelement("figcaption")}}. Estos se crearon exactamente para este propósito: proporcionar un contenedor semántico para las figuras y vincular claramente la figura con el pie. Nuestro ejemplo anterior, podría reescribirse así:
 
-    <figure>
-      <img src="images/dinosaur.jpg"
-           alt="La cabeza y el torso de un esqueleto de dinosaurio;
-               tiene una cabeza grande con dientes largos y afilados" width="400"
-           height="341">
+```html
+<figure>
+  <img src="images/dinosaur.jpg"
+        alt="La cabeza y el torso de un esqueleto de dinosaurio;
+            tiene una cabeza grande con dientes largos y afilados" width="400"
+        height="341">
 
-      <figcaption>Exposición de un T-Rex en el museo de la Universidad de Manchester.</figcaption>
-    </figure>
+  <figcaption>Exposición de un T-Rex en el museo de la Universidad de Manchester.</figcaption>
+</figure>
+```
 
 El elemento {{htmlelement("figcaption")}} dice al navegador, o a alguna tecnología de apoyo, que el texto que contiene describe la imagen que está contenida en el elemento {{htmlelement("figure")}}.
 
