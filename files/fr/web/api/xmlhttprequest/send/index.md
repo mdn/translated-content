@@ -90,15 +90,13 @@ xhr.send("foo=bar&lorem=ipsum");
 // xhr.send(document);
 ```
 
-## Spécificités
+## Spécifications
 
-| Specificité                                                                          | Statut                               | Commentaire            |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#the-send()-method', 'send()')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.XMLHttpRequest.send")}}
+{{Compat}}
 
 ## Voir aussi
 

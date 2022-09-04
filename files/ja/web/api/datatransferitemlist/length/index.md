@@ -1,16 +1,6 @@
 ---
 title: DataTransferItemList.length
 slug: Web/API/DataTransferItemList/length
-tags:
-  - API
-  - DataTransferItemList
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Property
-  - Reference
-  - length
-  - ドラッグアンドドロップ
-translation_of: Web/API/DataTransferItemList/length
 ---
 {{domxref("DataTransferItemList")}} インターフェイスの **`length`** プロパティは読み取り専用で、ドラッグアイテムリストの中に現在入っているアイテムの数を返します。
 

@@ -1,12 +1,6 @@
 ---
 title: WCAG
 slug: Glossary/WCAG
-tags:
-  - Accessibility
-  - Glossary
-  - WCAG
-  - Web Guidelines
-translation_of: Glossary/WCAG
 ---
 _Web Content Accessibility Guidelines_ (**WCAG**) は {{Glossary("W3C")}} の {{Glossary("WAI","Web Accessibility Initiative")}} が発行している勧告です。まずは障害のある人や、そのほか携帯電話のように端末に制限のあるユーザーのために、コンテンツをアクセシブルにする基準を示したガイドライン集を定めています。
 

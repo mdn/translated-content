@@ -47,7 +47,7 @@ Cache-Control: no-cache
 (…)
 ```
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

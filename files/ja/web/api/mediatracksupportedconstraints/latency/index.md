@@ -1,21 +1,6 @@
 ---
 title: MediaTrackSupportedConstraints.latency
 slug: Web/API/MediaTrackSupportedConstraints/latency
-page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - Web
-  - WebRTC
-  - latency
-browser-compat: api.MediaTrackSupportedConstraints.latency
-translation_of: Web/API/MediaTrackSupportedConstraints/latency
 ---
 {{DefaultAPISidebar("Media Capture and Streams")}}
 

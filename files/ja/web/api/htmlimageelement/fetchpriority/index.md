@@ -1,16 +1,6 @@
 ---
 title: HTMLImageElement.fetchPriority
 slug: Web/API/HTMLImageElement/fetchPriority
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLImageElement
-  - プロパティ
-  - リファレンス
-  - fetchPriority
-browser-compat: api.HTMLImageElement.fetchPriority
-translation_of: Web/API/HTMLImageElement/fetchPriority
 ---
 {{APIRef}}
 

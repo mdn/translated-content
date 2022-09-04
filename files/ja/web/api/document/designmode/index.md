@@ -1,17 +1,6 @@
 ---
 title: Document.designMode
 slug: Web/API/Document/designMode
-tags:
-  - API
-  - DOM
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-  - designmode
-  - editor
-  - エディター
-translation_of: Web/API/Document/designMode
 ---
 {{ApiRef()}}
 

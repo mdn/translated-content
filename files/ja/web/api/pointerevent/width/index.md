@@ -1,14 +1,6 @@
 ---
 title: PointerEvent.width
 slug: Web/API/PointerEvent/width
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
-translation_of: Web/API/PointerEvent/width
 ---
 {{ APIRef("Pointer Events") }}
 

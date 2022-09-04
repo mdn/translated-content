@@ -1,16 +1,6 @@
 ---
 title: WebVRでの VRコントローラーの使用
 slug: Web/API/WebVR_API/Using_VR_controllers_with_WebVR
-tags:
-  - Experimental
-  - Gamepad API
-  - Guide
-  - VR
-  - Virtual Reality
-  - WebGL
-  - WebVR
-  - controllers
-translation_of: Web/API/WebVR_API/Using_VR_controllers_with_WebVR
 ---
 {{APIRef("WebVR API")}}
 

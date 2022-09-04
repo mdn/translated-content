@@ -1,11 +1,6 @@
 ---
 title: MDN にリンクするには
 slug: orphaned/MDN/About/Linking_to_MDN
-tags:
-  - Documentation
-  - Guide
-  - MDN
-translation_of: MDN/About/Linking_to_MDN
 original_slug: MDN/About/Linking_to_MDN
 ---
 {{MDNSidebar}}

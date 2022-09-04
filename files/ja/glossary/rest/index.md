@@ -1,14 +1,6 @@
 ---
 title: REST
 slug: Glossary/REST
-tags:
-  - アーキテクチャ
-  - 初心者
-  - 用語集
-  - HTTP
-  - Rest
-  - WebMechanics
-translation_of: Glossary/REST
 ---
 **REST** (Representational State Transfer) は、効率的で信頼性が高く、スケーラブルな分散システムを実現するためのソフトウェアアーキテクチャ設計上の一連の制約条件のことです。
 

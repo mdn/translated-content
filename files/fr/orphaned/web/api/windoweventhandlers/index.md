@@ -49,15 +49,11 @@ _Cette interface ne définit aucune méthode._
 
 ## Spécifications
 
-| Specification                                                                                        | Status                           | Comment                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#windoweventhandlers', 'GlobalEventHandlers')}} | {{Spec2('HTML WHATWG')}} | Pas de changement depuis {{SpecName("HTML5.1")}}.                                                                       |
-| {{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}         | {{Spec2('HTML5.1')}}     | Snapshot de {{SpecName("HTML WHATWG")}}. Ajoute `onlanguage`.                                                           |
-| {{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}}     | {{Spec2('HTML5 W3C')}}     | Snapshot de {{SpecName("HTML WHATWG")}}. Création de `WindowEventHandlers` (les propriétés étaient sur la cible avant). |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowEventHandlers")}}
+{{Compat}}
 
 ## Voir aussi
 

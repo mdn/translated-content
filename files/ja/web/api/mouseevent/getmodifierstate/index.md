@@ -1,15 +1,6 @@
 ---
 title: MouseEvent.getModifierState()
 slug: Web/API/MouseEvent/getModifierState
-tags:
-  - API
-  - DOM
-  - DOM イベント
-  - メソッド
-  - MouseEvent
-  - リファレンス
-  - getModifierState
-browser-compat: api.MouseEvent.getModifierState
 ---
 {{APIRef("DOM Events")}}
 

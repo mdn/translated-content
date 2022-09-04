@@ -1,9 +1,6 @@
 ---
 title: Firefox 44 for developers
 slug: Mozilla/Firefox/Releases/44
-tags:
-  - Firefox
-translation_of: Mozilla/Firefox/Releases/44
 ---
 {{FirefoxSidebar}}
 

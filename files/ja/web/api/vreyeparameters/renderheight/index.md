@@ -1,7 +1,6 @@
 ---
 title: VREyeParameters.renderHeight
 slug: Web/API/VREyeParameters/renderHeight
-translation_of: Web/API/VREyeParameters/renderHeight
 ---
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 

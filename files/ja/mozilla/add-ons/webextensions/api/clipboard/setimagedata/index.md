@@ -1,7 +1,6 @@
 ---
 title: clipboard.setImageData()
 slug: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
-translation_of: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
 ---
 {{AddonSidebar()}}
 

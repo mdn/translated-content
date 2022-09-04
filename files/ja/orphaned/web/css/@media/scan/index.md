@@ -1,15 +1,6 @@
 ---
 title: scan
 slug: orphaned/Web/CSS/@media/scan
-tags:
-  - '@media'
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
-  - メディアクエリ
-  - メディア特性
-translation_of: Web/CSS/@media/scan
 original_slug: Web/CSS/@media/scan
 ---
 {{cssref}}

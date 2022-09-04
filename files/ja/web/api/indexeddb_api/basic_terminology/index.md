@@ -1,11 +1,6 @@
 ---
 title: IndexedDB の主な特徴と基本用語
 slug: Web/API/IndexedDB_API/Basic_Terminology
-tags:
-  - Advanced
-  - IndexedDB
-  - terminology
-translation_of: Web/API/IndexedDB_API/Basic_Terminology
 ---
 {{DefaultAPISidebar("IndexedDB")}}
 
@@ -115,7 +110,7 @@ IndexedDB は、クライアントサイドのストレージを必要とする�
 
     代わりに、[キー](#gloss_key)を使用してオブジェクトストア内のレコードを検索することもできます。
 
-    インデックスの使用法について詳しくは、[IndexedDB を使用する](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB#using_an_index "IndexedDB/Using_IndexedDB#Using_an_index")をご覧ください。インデックスのリファレンス文書として、[IDBKeyRange](/ja/docs/Web/API/IDBKeyRange) をご覧ください。
+    インデックスの使用法について詳しくは、[IndexedDB を使用する](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB#using_an_index)をご覧ください。インデックスのリファレンス文書として、[IDBKeyRange](/ja/docs/Web/API/IDBKeyRange) をご覧ください。
 
 ### キーと値
 

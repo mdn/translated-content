@@ -1,13 +1,6 @@
 ---
 title: Flex
 slug: Glossary/Flex
-tags:
-  - CSS
-  - Flex
-  - Glossary
-  - flexbox
-  - 用語集
-translation_of: Glossary/Flex
 ---
 `flex` は CSS {{cssxref("display")}}のプロパティに新しく追加された値です。`inline-flex` と同じく、使用すると Element(要素)に {{glossary("flex container", "Flex コンテナ")}} が適用されます。また、その Element(要素)の子 Element(要素)それぞれには {{glossary("flex item", "Flex アイテム")}} が適用されます。flex アイテムが適用された Element(要素)は flex layout を構成し、CSS Flexible Box Layout Module で定義されているプロパティの全てが適用されるはずです。
 

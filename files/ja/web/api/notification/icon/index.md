@@ -1,17 +1,6 @@
 ---
 title: Notification.icon
 slug: Web/API/Notification/icon
-page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - icon
-browser-compat: api.Notification.icon
-translation_of: Web/API/Notification/icon
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 

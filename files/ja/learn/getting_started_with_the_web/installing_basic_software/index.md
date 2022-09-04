@@ -1,16 +1,6 @@
 ---
 title: 基本的なソフトウェアのインストール
 slug: Learn/Getting_started_with_the_web/Installing_basic_software
-tags:
-  - WebMechanics
-  - l10n:priority
-  - セットアップ
-  - ツール
-  - テキストエディタ
-  - ブラウザー
-  - 初心者
-  - 学習
-translation_of: Learn/Getting_started_with_the_web/Installing_basic_software
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
 

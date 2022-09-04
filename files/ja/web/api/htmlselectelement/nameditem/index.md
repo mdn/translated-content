@@ -1,14 +1,6 @@
 ---
 title: HTMLSelectElement.namedItem()
 slug: Web/API/HTMLSelectElement/namedItem
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - メソッド
-  - リファレンス
-browser-compat: api.HTMLSelectElement.namedItem
-translation_of: Web/API/HTMLSelectElement/namedItem
 ---
 {{ APIRef("HTML DOM") }}
 

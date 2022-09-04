@@ -1,13 +1,6 @@
 ---
 title: HTTP
 slug: Glossary/HTTP
-tags:
-  - Beginner
-  - Glossary
-  - HTTP
-  - Infrastructure
-  - l10n:priority
-translation_of: Glossary/HTTP
 ---
 **HTTP** (HyperText Transfer Protocol、ハイパーテキスト転送プロトコル) は、{{glossary("World Wide Web","Web")}}上のハイパーメディア文書の転送を可能にする、基盤となるネットワーク{{glossary("protocol", "プロトコル")}}です。一般にブラウザーとサーバーの間で用いられ、人間が読むことができます。現行の HTTP 仕様のバージョンは {{glossary("HTTP_2", "HTTP/2")}} と呼ばれています。
 

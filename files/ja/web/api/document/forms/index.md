@@ -1,16 +1,6 @@
 ---
 title: Document.forms
 slug: Web/API/Document/forms
-tags:
-  - API
-  - DOM
-  - Document
-  - HTML DOM
-  - HTML フォーム
-  - フォーム
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/Document/forms
 ---
 {{domxref("Document")}} インターフェイスの **`forms`** プロパティは読み取り専用で、文書内に含まれるすべての {{HTMLElement("form")}} を列挙した {{domxref("HTMLCollection")}} を返します。
 

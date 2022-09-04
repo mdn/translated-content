@@ -1,14 +1,6 @@
 ---
 title: 古いブラウザーでの HTML フォーム
 slug: Learn/Forms/HTML_forms_in_legacy_browsers
-tags:
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Intermediate
-  - Web
-translation_of: Learn/Forms/HTML_forms_in_legacy_browsers
 ---
 {{LearnSidebar}}
 

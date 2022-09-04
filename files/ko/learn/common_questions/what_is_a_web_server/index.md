@@ -32,8 +32,8 @@ translation_of: Learn/Common_questions/What_is_a_web_server
 
 "Web server"는 하드웨어, 소프트웨어 혹은 두 개가 같이 동작하는 것을 의미할 수 있습니다.
 
-1.  하드웨어 측면에서, web server는 web server의 소프트웨어와 website의 컴포넌트 파일들을 저장하는 컴퓨터입니다. (컴포넌트 파일에는 HTML 문서, images, CSS stylesheets, 그리고 JavaScript files가 있습니다.) Web server는 인터넷에 연결되어 웹에 연결된 다른 기기들이 웹 서버의 데이터(컴포넌트 파일들)를 주고받을 수 있도록 합니다.
-2.  소프트웨어 측면에서, web server는 기본적으로 웹 사용자가 어떻게 호스트 파일들에 접근하는지를 관리합니다. 이 문서에서 web server는 HTTP서버로 국한합니다. HTTP 서버는 URL(Web addresses)과 HTTP(당신의 브라우저가 웹 페이지를 보여주기 위해 사용하는 프로토콜)의 소프트웨어 일부입니다.
+1. 하드웨어 측면에서, web server는 web server의 소프트웨어와 website의 컴포넌트 파일들을 저장하는 컴퓨터입니다. (컴포넌트 파일에는 HTML 문서, images, CSS stylesheets, 그리고 JavaScript files가 있습니다.) Web server는 인터넷에 연결되어 웹에 연결된 다른 기기들이 웹 서버의 데이터(컴포넌트 파일들)를 주고받을 수 있도록 합니다.
+2. 소프트웨어 측면에서, web server는 기본적으로 웹 사용자가 어떻게 호스트 파일들에 접근하는지를 관리합니다. 이 문서에서 web server는 HTTP서버로 국한합니다. HTTP 서버는 URL(Web addresses)과 HTTP(당신의 브라우저가 웹 페이지를 보여주기 위해 사용하는 프로토콜)의 소프트웨어 일부입니다.
 
 가장 기본적인 단계에서, 브라우저가 웹 서버에서 불려진 파일을 필요로 할때, 브라우저는 HTTP를 통해 파일을 요청합니다. 요청이 올바른 웹 서버(하드웨어)에 도달하였을 때, HTTP 서버(software)는 요청된 문서를 HTTP를 이용해 보내줍니다.
 
@@ -66,7 +66,7 @@ translation_of: Learn/Common_questions/What_is_a_web_server
 - 항상 같은 IP주소를 가지고 있습니다(모든 {{Glossary("ISP", "ISPs")}}가 홈 라인에 대해 고정된 IP주소를 제공하는 것은 아닙니다.)
 - 제 3자에 의해 유지보수 됩니다
 
-이러한 이유들로, 좋은 호스팅 제공자를 찾는 것은 당신의 웹 사이트를 구축하는 것의 핵심 부분입니다. 다양한 서비스 회사들의 조건을 살펴보고 당신의 필요와 예산을 충족하는 하나를 선택하세요 (서비스는 무료부터 매달 수 백만원까지 있습니다.) 더 많은 자세한 사항은 [여기서 ](https://developer.mozilla.org/en-US/Learn/How_much_does_it_cost#Hosting)찾을 수 있습니다.
+이러한 이유들로, 좋은 호스팅 제공자를 찾는 것은 당신의 웹 사이트를 구축하는 것의 핵심 부분입니다. 다양한 서비스 회사들의 조건을 살펴보고 당신의 필요와 예산을 충족하는 하나를 선택하세요 (서비스는 무료부터 매달 수 백만원까지 있습니다.) 더 많은 자세한 사항은 [여기서](https://developer.mozilla.org/en-US/Learn/How_much_does_it_cost#Hosting) 찾을 수 있습니다.
 
 당신이 웹 호스팅 솔루션을 설정했다면, 그저 당신의 [웹 서버에 파일들을 업로드 하시면 됩니다.](/ko/docs/Learn/Upload_files_to_a_web_server)
 
@@ -89,9 +89,9 @@ HTTP는 어떻게 클라이언트와 서버가 통신을 하는지 명확한 규
 
 [![The MDN 404 page as an example of such error page](https://mdn.mozillademos.org/files/8661/mdn-404.jpg)](https://developer.mozilla.org/en-US/404)웹 서버에서, HTTP 서버는 들어오는 요청들에 대해 응답하고, 처리해야 합니다.
 
-1.  요청을 받으면, HTTP 서버는 먼저 요청받은 URL이 존재하는 파일과 매칭이 되는지를 확인합니다.
-2.  만약 매칭된다면, 웹 서버는 그 파일 내용을 브라우저에게 되돌려줍니다. 만약 그렇지 않다면, 애플리케이션 서버는 필요한 파일을 구축합니다.
-3.  만약 위 둘의 과정이 불가능하다면, 웹 서버는 브라우저에게 에러 메시지를 반환합니다, 대부분의 에러 메시지는 "404 Not Found" 입니다.(이 에러는 너무 많이 발생하여 많은 웹 디자이너들은[404 error pages](http://www.404notfound.fr/)를 디자인하는데 많은 시간을 할애합니다.
+1. 요청을 받으면, HTTP 서버는 먼저 요청받은 URL이 존재하는 파일과 매칭이 되는지를 확인합니다.
+2. 만약 매칭된다면, 웹 서버는 그 파일 내용을 브라우저에게 되돌려줍니다. 만약 그렇지 않다면, 애플리케이션 서버는 필요한 파일을 구축합니다.
+3. 만약 위 둘의 과정이 불가능하다면, 웹 서버는 브라우저에게 에러 메시지를 반환합니다, 대부분의 에러 메시지는 "404 Not Found" 입니다.(이 에러는 너무 많이 발생하여 많은 웹 디자이너들은[404 error pages](http://www.404notfound.fr/)를 디자인하는데 많은 시간을 할애합니다.
 
 ### 정적 vs. 동적 컨텐츠
 

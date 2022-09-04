@@ -16,7 +16,7 @@ translation_of: Web/XSLT/Element/key
 
 ```
 <xsl:key name=NAME match=EXPRESSION
-	use=EXPRESSION />
+  use=EXPRESSION />
 ```
 
 ### 必須属性

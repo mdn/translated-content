@@ -15,7 +15,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength
 
 ## 구문
 
-    typedarray.byteLength
+```js
+typedarray.byteLength
+```
 
 ## 설명
 

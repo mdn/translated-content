@@ -1,18 +1,6 @@
 ---
 title: 'XMLHttpRequest: loadend イベント'
 slug: Web/API/XMLHttpRequest/loadend_event
-tags:
-  - API
-  - イベント
-  - NeedsCompatTable
-  - NeedsSpecTable
-  - ProgressEvent
-  - リファレンス
-  - ウェブ
-  - イベント
-  - loadend
-browser-compat: api.XMLHttpRequest.loadend_event
-translation_of: Web/API/XMLHttpRequest/loadend_event
 ---
 {{APIRef}}
 

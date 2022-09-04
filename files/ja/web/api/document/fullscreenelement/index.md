@@ -1,23 +1,6 @@
 ---
 title: DocumentOrShadowRoot.fullscreenElement
 slug: Web/API/Document/fullscreenElement
-tags:
-  - API
-  - Document
-  - DocumentOrShadowRoot
-  - Full-screen
-  - Fullscreen API
-  - Graphics
-  - Property
-  - Read-only
-  - Reference
-  - ShadowRoot
-  - fullscreenElement
-  - screen
-  - グラフィック
-  - 全画面
-  - 読み取り専用
-translation_of: Web/API/DocumentOrShadowRoot/fullscreenElement
 original_slug: Web/API/DocumentOrShadowRoot/fullscreenElement
 ---
 {{ApiRef("Fullscreen API")}}

@@ -1,14 +1,6 @@
 ---
 title: DOMHighResTimeStamp
 slug: Web/API/DOMHighResTimeStamp
-tags:
-  - API
-  - DOMHighResTimeStamp
-  - High Resolution Time
-  - Reference
-  - Time
-  - Type
-translation_of: Web/API/DOMHighResTimeStamp
 ---
 {{APIRef("High Resolution Time")}}
 
@@ -54,5 +46,5 @@ translation_of: Web/API/DOMHighResTimeStamp
 
 ## 関連情報
 
-- [Navigation Timing API](/ja/docs/Navigation_timing "Navigation_timing")
+- [Navigation Timing API](/ja/docs/Navigation_timing)
 - [performance.now()](/ja/docs/Web/API/Performance/now)

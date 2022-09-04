@@ -1,16 +1,6 @@
 ---
 title: MessageEvent.lastEventId
 slug: Web/API/MessageEvent/lastEventId
-tags:
-  - API
-  - DOM
-  - MessageEvent
-  - プロパティ
-  - リファレンス
-  - lastEventID
-  - messaging
-browser-compat: api.MessageEvent.lastEventId
-translation_of: Web/API/MessageEvent/lastEventId
 ---
 {{APIRef("HTML DOM")}}
 

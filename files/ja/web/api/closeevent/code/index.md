@@ -1,13 +1,6 @@
 ---
 title: CloseEvent.code
 slug: Web/API/CloseEvent/code
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - closeEvent
-browser-compat: api.CloseEvent.code
-translation_of: Web/API/CloseEvent/code
 ---
 {{APIRef("Websockets API")}}
 

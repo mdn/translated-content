@@ -1,22 +1,6 @@
 ---
 title: Document.getAnimations()
 slug: Web/API/Document/getAnimations
-tags:
-  - API
-  - Animation
-  - CSS
-  - CSS Animations
-  - CSS Transitions
-  - Document
-  - Experimental
-  - Method
-  - Reference
-  - Transitions
-  - Web Animations
-  - getAnimations
-  - waapi
-  - web animations api
-translation_of: Web/API/DocumentOrShadowRoot/getAnimations
 original_slug: Web/API/DocumentOrShadowRoot/getAnimations
 ---
 {{ SeeCompatTable() }}{{APIRef("Web Animations")}}

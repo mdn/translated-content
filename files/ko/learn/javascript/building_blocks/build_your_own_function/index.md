@@ -49,8 +49,8 @@ alert('This is a message');
 
 > **참고:** 함수에 이름을 붙일 때 [변수 명명 규칙](/ko/docs/Learn/JavaScript/First_steps/Variables#an_aside_on_variable_naming_rules)과 같은 규칙을 따라야 합니다. 함수와 변수를 떼어놓고 이야기할 수 있으므로, 이렇게 하는 것은 괜찮습니다 — 함수명은 뒤에 괄호가 나타나지만 변수는 그렇지 않습니다.
 
-1.  [function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html) 파일을 다운로드한 후 시작해 봅시다. HTML은 간단합니다 — body는 버튼 하나만을 포함하고 있습니다. 또한 커스텀 메시지 박스를 꾸밀 기본적인 CSS와, JavaScript를 넣을 빈 {{htmlelement("script")}} 요소가 제공됩니다.
-2.  다음으로, 다음을 `<script>` 요소 내부에 추가해 보세요:
+1. [function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html) 파일을 다운로드한 후 시작해 봅시다. HTML은 간단합니다 — body는 버튼 하나만을 포함하고 있습니다. 또한 커스텀 메시지 박스를 꾸밀 기본적인 CSS와, JavaScript를 넣을 빈 {{htmlelement("script")}} 요소가 제공됩니다.
+2. 다음으로, 다음을 `<script>` 요소 내부에 추가해 보세요:
 
     ```js
     function displayMessage() {
@@ -60,7 +60,7 @@ alert('This is a message');
 
     우리는 키워드 `function`으로 시작했는데, 이는 우리가 함수를 정의하고 있다는 것을 의미합니다. 이것 다음에는 우리가 함수에 붙이고 싶은 이름이 오고, 그 다음에는 괄호가 오고, 그 다음에는 중괄호가 옵니다. 함수에 넣고자 하는 매개변수(parameter)는 괄호 안에 들어가고, 함수를 호출했을 때 실행될 코드는 중괄호 안에 들어갑니다.
 
-3.  마지막으로, 다음의 코드를 중괄호 안에 추가해 보세요:
+3. 마지막으로, 다음의 코드를 중괄호 안에 추가해 보세요:
 
     ```js
     const html = document.querySelector('html');
@@ -139,7 +139,7 @@ closeBtn.onclick = function() {
 
 이제 여러분은 `<script>` 요소에 아주 잘 작성된 함수 정의를 가지고 있지만, 이것은 현재 상태 그대로는 아무것도 하지 않을 것입니다.
 
-1.  함수를 호출하기 위해, 다음의 코드를 함수 아래에 포함시켜 보세요.
+1. 함수를 호출하기 위해, 다음의 코드를 함수 아래에 포함시켜 보세요.
 
     ```js
     displayMessage();
@@ -147,20 +147,20 @@ closeBtn.onclick = function() {
 
     이 코드는 함수를 호출하는데, 즉시 실행되게 합니다. 코드를 저장하고 브라우저에서 새로고침했을 때, 작은 메시지 박스가 단 한 번, 즉시 나타나는 것을 볼 수 있을 것입니다. 어쨌든 우리는 이 함수를 오직 한 번 호출했으니까요.
 
-2.  이제 예제 페이지에서 브라우저 개발자 도구를 열고, JavaScript 콘솔로 가서 이 코드를 다시 입력해 보면, 메시지 박스가 다시 나타나는 것을 볼 수 있을 것입니다! 이것은 재미있습니다 — 이제 우리는 우리가 원할 때 언제든지 호출할 수 있는 재사용 가능한 함수를 가지고 있는 것입니다.
+2. 이제 예제 페이지에서 브라우저 개발자 도구를 열고, JavaScript 콘솔로 가서 이 코드를 다시 입력해 보면, 메시지 박스가 다시 나타나는 것을 볼 수 있을 것입니다! 이것은 재미있습니다 — 이제 우리는 우리가 원할 때 언제든지 호출할 수 있는 재사용 가능한 함수를 가지고 있는 것입니다.
 
     하지만 우리는 이 함수가 유저와 시스템 작동에 응답하여 나타나기를 원합니다. 실제 어플리케이션에서는, 그러한 메시지 박스는 아마도 이용 가능한 새로운 데이터나, 발생한 에러나, 프로필을 지우려는 유저나 ("정말로 지우시겠습니까?"), 새로운 연락처를 추가한 유저 그리고 성공적으로 완료된 작동 등에 응답하여 호출될 것입니다.
 
     이 예제에서는, 우리는 유저가 버튼을 클릭했을 때 메시지 박스가 나타나게 할 것입니다.
 
-3.  추가한 마지막 줄을 지우세요.
-4.  다음으로, 우리는 버튼을 선택하고 상수에 이것에 대한 참조를 저장할 것입니다. 함수 정의 위에, 다음을 코드에 추가해 보세요:
+3. 추가한 마지막 줄을 지우세요.
+4. 다음으로, 우리는 버튼을 선택하고 상수에 이것에 대한 참조를 저장할 것입니다. 함수 정의 위에, 다음을 코드에 추가해 보세요:
 
     ```js
     const btn = document.querySelector('button');
     ```
 
-5.  마지막으로, 다음을 지난 코드 아래에 추가해 보세요:
+5. 마지막으로, 다음을 지난 코드 아래에 추가해 보세요:
 
     ```js
     btn.onclick = displayMessage;
@@ -168,7 +168,7 @@ closeBtn.onclick = function() {
 
     함수 내부의 `closeBtn.onclick...` 코드와 비슷한 방식으로, 여기서 우리는 클릭된 버튼에 응답하여 몇몇 코드를 호출하고 있습니다. 하지만 이 경우, 코드를 포함하는 익명 함수를 호출하는 대신, 우리는 함수명을 직접 호출하고 있습니다.
 
-6.  저장하고 페이지를 새로고침해 보세요 — 이제 여러분이 버튼을 클릭했을 때 메시지 박스가 나타나는 것을 볼 수 있을 것입니다.
+6. 저장하고 페이지를 새로고침해 보세요 — 이제 여러분이 버튼을 클릭했을 때 메시지 박스가 나타나는 것을 볼 수 있을 것입니다.
 
 왜 함수명 뒤에 괄호를 포함하지 않았는지 궁금할지도 모릅니다. 그 이유는 함수를 즉시 호출하고 싶지 않았기 때문입니다 — 오직 버튼이 클릭된 이후에만 호출되기를 원했습니다. 만약 이 줄을 다음으로 변경하고
 
@@ -184,7 +184,7 @@ btn.onclick = displayMessage();
 
 현재로써는, 함수는 여전히 유용하지 않습니다 — 우리는 같은 기본 메시지를 매번 보이게 하고 싶지 않습니다. 함수를 다른 옵션으로 호출할 수 있게 해 주는 매개변수를 추가해서 우리의 함수를 더 낫게 만들어 봅시다.
 
-1.  우선, 함수의 첫 번째 줄을
+1. 우선, 함수의 첫 번째 줄을
 
     ```js
     function displayMessage() {
@@ -198,7 +198,7 @@ btn.onclick = displayMessage();
 
     이제 함수를 호출할 때, 우리는 메시지 박스에 표시할 메시지와, 메시지의 타입을 나타내기 위해 괄호 안에 두 개의 변수 값을 제공할 수 있습니다.
 
-2.  첫번째 매개변수를 사용하기 위해, 함수 안의 다음의 줄을
+2. 첫번째 매개변수를 사용하기 위해, 함수 안의 다음의 줄을
 
     ```js
     msg.textContent = 'This is a message box';
@@ -210,7 +210,7 @@ btn.onclick = displayMessage();
     msg.textContent = msgText;
     ```
 
-3.  마지막으로 또한 중요한 것은, 업데이트된 메시지 텍스트를 포함시키기 위해 이제 함수 호출을 바꿀 필요가 있다는 것입니다. 다음의 줄을
+3. 마지막으로 또한 중요한 것은, 업데이트된 메시지 텍스트를 포함시키기 위해 이제 함수 호출을 바꿀 필요가 있다는 것입니다. 다음의 줄을
 
     ```js
     btn.onclick = displayMessage;
@@ -226,17 +226,17 @@ btn.onclick = displayMessage();
 
     만약 호출할 함수의 괄호 내부에 매개변수를 넣기 원한다면, 함수는 직접 호출될 수 없습니다 — 대신, 함수를 익명 함수 안에 넣어 함수가 즉각적인 스코프(immediate scope) 내에 있지 않게 하여 즉시 호출되지 않게 할 수 있습니다. 이제 함수는 버튼이 클릭되기 전까지는 호출되지 않을 것입니다.
 
-4.  새로고침하고 다시 시도해 보면, 여전히 아주 잘 작동할 뿐만 아니라 박스 안에 다른 메시지들이 표시될 수 있게 매개변수에 변화를 줄 수 있다는 것 또한 확인할 수 있을 것입니다.
+4. 새로고침하고 다시 시도해 보면, 여전히 아주 잘 작동할 뿐만 아니라 박스 안에 다른 메시지들이 표시될 수 있게 매개변수에 변화를 줄 수 있다는 것 또한 확인할 수 있을 것입니다.
 
 ### 더욱 복잡한 매개변수
 
 다음 매개변수로 가 봅시다. 이것은 약간의 수고를 더 필요로 합니다 — 우리는 이것을 설정하여 `msgType` 매개변수가 무엇으로 설정되어 있는지에 따라, 함수가 다른 아이콘과 다른 배경색을 표시하도록 할 것입니다.
 
-1.  우선, 이 예제를 위해 필요한 아이콘들을 GitHub에서 다운로드하세요 ([경고](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/warning.png) 그리고 [채팅](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/chat.png)). 이것들을 HTML파일과 같은 위치에 있는 `icons` 라는 새로운 폴더에 저장하세요.
+1. 우선, 이 예제를 위해 필요한 아이콘들을 GitHub에서 다운로드하세요 ([경고](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/warning.png) 그리고 [채팅](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/chat.png)). 이것들을 HTML파일과 같은 위치에 있는 `icons` 라는 새로운 폴더에 저장하세요.
 
     > **참고:** 경고와 채팅 아이콘은 원래 [iconfinder.com](https://www.iconfinder.com/)에서 찾아졌고, [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr)가 디자인했습니다 — 감사합니다! (실제 아이콘 페이지는 이전에 이동되거나 삭제되었습니다.)
 
-2.  다음으로, HTML 파일 내부에서 CSS를 찾으세요. 우리는 아이콘이 들어갈 자리를 만들기 위해 약간의 변경을 가할 것입니다. 우선, `.msgBox` 폭을
+2. 다음으로, HTML 파일 내부에서 CSS를 찾으세요. 우리는 아이콘이 들어갈 자리를 만들기 위해 약간의 변경을 가할 것입니다. 우선, `.msgBox` 폭을
 
     ```css
     width: 200px;
@@ -248,7 +248,7 @@ btn.onclick = displayMessage();
     width: 242px;
     ```
 
-3.  다음으로, `.msgBox p { ... }` 규칙 내부에 다음을 추가하세요:
+3. 다음으로, `.msgBox p { ... }` 규칙 내부에 다음을 추가하세요:
 
     ```css
     padding-left: 82px;
@@ -256,7 +256,7 @@ btn.onclick = displayMessage();
     background-repeat: no-repeat;
     ```
 
-4.  이제 우리는 아이콘 표시를 처리하기 위해 `displayMessage()` 함수에 코드를 추가해야 합니다. 다음의 블록을 함수의 닫는 중괄호 (`}`) 바로 위에 추가하세요:
+4. 이제 우리는 아이콘 표시를 처리하기 위해 `displayMessage()` 함수에 코드를 추가해야 합니다. 다음의 블록을 함수의 닫는 중괄호 (`}`) 바로 위에 추가하세요:
 
     ```js
     if (msgType === 'warning') {
@@ -272,7 +272,7 @@ btn.onclick = displayMessage();
 
     여기서, 만약 `msgType` 매개변수가 `'warning'`으로 설정되어 있다면, 경고 아이콘이 표시될 것이고 패널의 배경색이 빨강으로 설정될 것입니다. 만약 이것이 `'chat'`으로 설정되어 있다면, 채팅 아이콘이 표시되고 패널의 배경색이 연한 파랑으로 설정될 것입니다. 만약 `msgType` 매개변수가 전혀 설정되어 있지 않다면 (혹은 무언가 다른 것으로 설정되어 있다면), 코드의 `else { ... }` 부분이 작동하고, 문단은 단순히 기본 패딩이 적용되고 아이콘과 패널 배경색 없이 보여질 것입니다. 즉 `msgType` 매개변수가 제공되지 않으면 기본 상태가 표시되는데, 이는 이 매개변수가 선택적인 매개변수라는 것을 의미합니다!
 
-5.  업데이트된 함수를 시험해 봅시다. `displayMessage()` 호출을
+5. 업데이트된 함수를 시험해 봅시다. `displayMessage()` 호출을
 
     ```js
     displayMessage('Woo, this is a different message!');

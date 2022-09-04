@@ -1,17 +1,6 @@
 ---
 title: XMLHttpRequest.timeout
 slug: Web/API/XMLHttpRequest/timeout
-tags:
-  - AJAX
-  - 非同期 XHR
-  - 非同期 XMLHttpRequest
-  - プロパティ
-  - リファレンス
-  - XHR
-  - XMLHttpRequest
-  - timeout
-browser-compat: api.XMLHttpRequest.timeout
-translation_of: Web/API/XMLHttpRequest/timeout
 ---
 {{APIRef('XMLHttpRequest')}}
 

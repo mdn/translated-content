@@ -1,12 +1,6 @@
 ---
 title: ビデオゲームの解剖学
 slug: Games/Anatomy
-tags:
-  - Games
-  - JavaScript
-  - Main Loop
-  - requestAnimationFrame
-translation_of: Games/Anatomy
 ---
 {{GamesSidebar}}
 

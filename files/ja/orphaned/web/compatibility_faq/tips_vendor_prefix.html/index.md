@@ -1,9 +1,6 @@
 ---
 title: mobile版Firefox向けベンダープレフィックス対処方法まとめ
 slug: orphaned/Web/Compatibility_FAQ/Tips_Vendor_Prefix.html
-tags:
-  - Compatibility
-  - Vendor prefix
 original_slug: Web/Compatibility_FAQ/Tips_Vendor_Prefix.html
 ---
 ## 概要

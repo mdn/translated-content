@@ -19,7 +19,7 @@ D'après leur [site web](https://wiki.whatwg.org/wiki/FAQ#What_is_the_WHATWG.3F)
 
 WHATWG maintient les spécifications du {{Glossary("HTML")}}, du {{Glossary("DOM")}} et de {{Glossary("JavaScript")}}.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

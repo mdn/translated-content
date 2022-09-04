@@ -152,13 +152,11 @@ Vous pouvez trouver différents exemples dans [le dépôt webaudio-example](http
 
 ## Spécifications
 
-| Spécification                            | Statut                               | Commentaire |
-| ---------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.AudioContext", 0)}}
+{{Compat}}
 
 ## Voir aussi
 

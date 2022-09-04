@@ -1,14 +1,6 @@
 ---
 title: CanvasRenderingContext2D.scale()
 slug: Web/API/CanvasRenderingContext2D/scale
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - メソッド
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.scale
-translation_of: Web/API/CanvasRenderingContext2D/scale
 ---
 {{APIRef}}
 

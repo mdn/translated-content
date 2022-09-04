@@ -16,7 +16,7 @@ translation_of: Web/XSLT/Element/message
 
 ```
 <xsl:message terminate="yes" | "no" >
-	TEMPLATE
+  TEMPLATE
 </xsl:message>
 ```
 

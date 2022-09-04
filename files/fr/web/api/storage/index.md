@@ -72,13 +72,11 @@ function setStyles() {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'webstorage.html#the-storage-interface', 'Storage')}} | {{Spec2('Web Storage')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Storage")}}
+{{Compat}}
 
 ## Voir aussi
 

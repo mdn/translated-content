@@ -1,16 +1,6 @@
 ---
 title: Client.postMessage()
 slug: Web/API/Client/postMessage
-tags:
-  - API
-  - Client
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - postMessage
-translation_of: Web/API/Client/postMessage
 ---
 {{APIRef("Service Worker API")}}
 

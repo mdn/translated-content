@@ -1,14 +1,6 @@
 ---
 title: ValidityState.rangeOverflow
 slug: Web/API/ValidityState/rangeOverflow
-tags:
-  - API
-  - 制約検証 API
-  - DOM
-  - プロパティ
-  - リファレンス
-browser-compat: api.ValidityState.rangeOverflow
-translation_of: Web/API/ValidityState/rangeOverflow
 ---
 **`rangeOverflow`** は **[`ValidityState`](/ja/docs/Web/API/ValidityState)** オブジェクトの読み取り専用プロパティで、 {{HTMLElement("input")}} の値がユーザーに変更された後、その要素の [`max`](/ja/docs/Web/HTML/Attributes/max) 属性に設定された制約に適合しないことを示します。
 

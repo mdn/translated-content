@@ -1,8 +1,6 @@
 ---
 title: AudioBufferSourceNode.stop()
 slug: Web/API/AudioScheduledSourceNode/stop
-translation_of: Web/API/AudioScheduledSourceNode/stop
-translation_of_original: Web/API/AudioBufferSourceNode/stop
 original_slug: Web/API/AudioBufferSourceNode/stop
 ---
 {{ APIRef("Web Audio API") }}
@@ -30,7 +28,7 @@ source.stop();
 source.stop(3);
 ```
 
-> **Note:** **注:** stop()の使い方の完全な例は[`AudioContext.decodeAudioData`](/ja/docs/Web/API/AudioContext/decodeAudioData "これはオーディオトラックからWeb Audio APIで音源を生成するよい方法です。")を参照してください。[コードをすぐに実行する](http://mdn.github.io/decode-audio-data/)ことや、[ソースコードを閲覧する](https://github.com/mdn/decode-audio-data)こともできます。
+> **Note:** **注:** stop()の使い方の完全な例は[`AudioContext.decodeAudioData`](/ja/docs/Web/API/AudioContext/decodeAudioData)を参照してください。[コードをすぐに実行する](http://mdn.github.io/decode-audio-data/)ことや、[ソースコードを閲覧する](https://github.com/mdn/decode-audio-data)こともできます。
 
 ## 引数
 

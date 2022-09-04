@@ -1,12 +1,6 @@
 ---
 title: NDEFRecord.recordType
 slug: Web/API/NDEFRecord/recordType
-tags:
-  - NDEF
-  - リファレンス
-  - ウェブ NFC
-browser-compat: api.NDEFRecord.recordType
-translation_of: Web/API/NDEFRecord/recordType
 ---
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 

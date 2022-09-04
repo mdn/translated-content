@@ -1,15 +1,6 @@
 ---
 title: IDBDatabase.close
 slug: Web/API/IDBDatabase/close
-tags:
-  - API
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Method
-  - Storage
-  - close
-translation_of: Web/API/IDBDatabase/close
 ---
 {{ APIRef("IDBDatabase") }}
 

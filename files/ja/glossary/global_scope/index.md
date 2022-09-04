@@ -1,11 +1,6 @@
 ---
 title: Global scope (グローバルスコープ)
 slug: Glossary/Global_scope
-tags:
-  - CodingScripting
-  - Glossary
-  - NeedsContent
-translation_of: Glossary/Global_scope
 ---
 プログラミング環境において、グローバルスコープとは、他のすべてのスコープを含み、他のすべてのスコープからアクセス可能な{{glossary("scope", "スコープ")}}を指します。
 

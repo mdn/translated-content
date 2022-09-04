@@ -1,12 +1,6 @@
 ---
 title: PerformanceResourceTiming.requestStart
 slug: Web/API/PerformanceResourceTiming/requestStart
-tags:
-  - API
-  - Web パフォーマンス
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/PerformanceResourceTiming/requestStart
 ---
 {{APIRef("Resource Timing API")}}
 

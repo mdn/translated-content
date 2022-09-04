@@ -1,14 +1,6 @@
 ---
 title: HTMLAnchorElement
 slug: Web/API/HTMLAnchorElement
-page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.HTMLAnchorElement
-translation_of: Web/API/HTMLAnchorElement
 ---
 {{APIRef("HTML DOM")}}
 

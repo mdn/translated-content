@@ -67,7 +67,7 @@ Les interfaces suivantes ont été supprimées.
 
 - `nsIEditorObserver`
 
-## Voir également
+## Voir aussi
 
 - [Notes de version de Firefox 18](http://www.mozilla.org/en-US/firefox/18.0/releasenotes/)
 - [Aurora 18 : HiDPI & Touch Events](https://hacks.mozilla.org/2012/10/aurora-18-hidpi-touch-events/) (Mozilla Hacks)

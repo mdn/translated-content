@@ -1,14 +1,6 @@
 ---
 title: ValidityState.stepMismatch
 slug: Web/API/ValidityState/stepMismatch
-tags:
-  - API
-  - 制約検証 API
-  - DOM
-  - プロパティ
-  - リファレンス
-browser-compat: api.ValidityState.stepMismatch
-translation_of: Web/API/ValidityState/stepMismatch
 ---
 **`stepMismatch`** は **[`ValidityState`](/ja/docs/Web/API/ValidityState)** オブジェクトの読み取り専用プロパティで、 {{HTMLElement("input")}} の値がユーザーに変更された後、その要素の `step` 属性に設定された制約に適合しないことを示します。
 

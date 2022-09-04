@@ -36,8 +36,6 @@ window.scrollBy(0, window.innerHeight);
 
 [window.scrollBy](/fr/docs/DOM/Window.scrollBy) fait défiler en fonction d'un nombre précis, alors que [window.scroll](/fr/docs/DOM/Window.scroll) fait défiler vers une position absolue dans le document. Voir aussi [window.scrollByLines](/fr/docs/DOM/Window.scrollByLines), [window.scrollByPages](/fr/docs/DOM/Window.scrollByPages)
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{ SpecName('CSSOM View', '#dom-window-scrollby', 'window.scrollBy()') }} | {{ Spec2('CSSOM View') }} | Définition initiale. |
+{{Specifications}}

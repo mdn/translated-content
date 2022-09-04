@@ -1,13 +1,6 @@
 ---
 title: GlobalEventHandlers.oncanplaythrough
 slug: conflicting/Web/API/HTMLMediaElement/canplaythrough_event
-tags:
-  - API
-  - Event Handler
-  - GlobalEventHandlers
-  - Property
-  - Reference
-translation_of: Web/API/GlobalEventHandlers/oncanplaythrough
 original_slug: Web/API/GlobalEventHandlers/oncanplaythrough
 ---
 {{ ApiRef("HTML DOM") }}

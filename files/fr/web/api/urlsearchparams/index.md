@@ -70,13 +70,11 @@ searchParams.toString(); // "q=URLUtils.searchParams"
 
 ## Spécifications
 
-| Spécification                                                                | Statut               | Commentaire          |
-| ---------------------------------------------------------------------------- | -------------------- | -------------------- |
-| {{SpecName('URL', '#urlsearchparams', "URLSearchParams")}} | {{Spec2('URL')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.URLSearchParams")}}
+{{Compat}}
 
 ## Voir aussi
 

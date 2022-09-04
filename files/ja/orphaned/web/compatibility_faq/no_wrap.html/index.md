@@ -1,9 +1,6 @@
 ---
 title: 画面外に不要な空白が発生する
 slug: orphaned/Web/Compatibility_FAQ/No_Wrap.html
-tags:
-  - Compatibility
-  - Layout
 original_slug: Web/Compatibility_FAQ/No_Wrap.html
 ---
 ## 概要

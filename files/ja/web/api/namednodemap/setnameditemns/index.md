@@ -1,12 +1,6 @@
 ---
 title: NamedNodeMap.setNamedItemNS()
 slug: Web/API/NamedNodeMap/setNamedItemNS
-page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
-browser-compat: api.NamedNodeMap.setNamedItemNS
-translation_of: Web/API/NamedNodeMap/setNamedItemNS
 l10n:
   sourceCommit: 8c93f95b9e71b6d43f56e94c49d1b12e81f6ec73
 ---

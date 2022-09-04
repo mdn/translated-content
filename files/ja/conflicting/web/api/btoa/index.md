@@ -1,14 +1,6 @@
 ---
 title: バイナリー文字列
 slug: conflicting/Web/API/btoa
-tags:
-  - DOM
-  - JavaScript
-  - JavaScript typed arrays
-  - JavaScript 型付き配列
-  - Reference
-  - String
-translation_of: Web/API/DOMString/Binary
 original_slug: Web/API/DOMString/Binary
 ---
 {{jsxref("String", "JavaScript の文字列")}} は、UTF-16 でエンコードされた文字列です。つまり、コードの最小単位はメモリー上に 2 バイトを必要とし、`65535` 通りのコードポイントを表現できます。この文字列のある部分集合として、ASCII 文字 (つまりコードポイントが `127` を超えない文字) だけを含む UTF-16 文字列というものが考えられます。例えば、文字列 `"Hello world!"` は、この ASCII 部分集合に含まれますが、文字列 `"ÀÈÌÒÙ"` はそうではありません。**バイナリー文字列**とは、この ASCII 部分集合と似た概念ですが、コードポイントを `127` までではなく、`255` まで許可するものです。しかし、その目的は文字列を表現することではなく、バイナリーデータを表現することです。この方法で表現されるデータの大きさは、バイナリーのままに比べて 2 倍になりますが、JavaScript の文字列の長さは 2 バイトを一つの単位として計算されるため、その大きさがユーザーの目に触れることはありません。

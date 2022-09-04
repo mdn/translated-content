@@ -1,15 +1,6 @@
 ---
 title: 手紙をマークアップする
 slug: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
-tags:
-  - Beginner
-  - CodingScripting
-  - HTML
-  - head
-  - テキスト
-  - リンク
-  - 評価
-translation_of: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}私たちはみんな遅かれ早かれ手紙を書くことを学びます。
 

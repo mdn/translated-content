@@ -60,38 +60,11 @@ L'**API WebSocket** est une technologie évoluée qui permet d'ouvrir un canal d
 
 ## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaires</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("HTML WHATWG", "web-sockets.html", "WebSocket API")}}
-      </td>
-      <td>{{Spec2("HTML WHATWG")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/websockets/">WebSockets</a></td>
-      <td><p>Candidat au statut de Recommendation</p></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{RFC(6455, "The WebSocket Protocol")}}</td>
-      <td>IETF RFC</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebSocket")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,6 @@
 ---
 title: NetworkInformation.downlinkMax
 slug: Web/API/NetworkInformation/downlinkMax
-tags:
-  - API
-  - Experimental
-  - Network Information API
-  - NetworkInformation
-  - Property
-  - Read-only
-  - Reference
-translation_of: Web/API/NetworkInformation/downlinkMax
 ---
 {{APIRef("Network Information API")}}{{SeeCompatTable}}
 

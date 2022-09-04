@@ -1,12 +1,6 @@
 ---
 title: CharacterData.length
 slug: Web/API/CharacterData/length
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.CharacterData.length
-translation_of: Web/API/CharacterData/length
 ---
 {{APIRef("DOM")}}
 

@@ -1,15 +1,6 @@
 ---
 title: HTMLAreaElement.rel
 slug: Web/API/HTMLAreaElement/rel
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLAreaElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAreaElement.rel
-translation_of: Web/API/HTMLAreaElement/rel
 ---
 {{APIRef("HTML DOM")}}
 

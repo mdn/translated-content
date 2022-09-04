@@ -1,19 +1,6 @@
 ---
 title: WebSocket.onerror
 slug: conflicting/Web/API/WebSocket/error_event
-tags:
-  - API
-  - Connection
-  - Error
-  - Error Handler
-  - Networking
-  - Property
-  - Reference
-  - Web API
-  - WebSocket
-  - onerror
-  - プロパティ
-translation_of: Web/API/WebSocket/onerror
 original_slug: Web/API/WebSocket/onerror
 ---
 {{APIRef("Web Sockets API")}}

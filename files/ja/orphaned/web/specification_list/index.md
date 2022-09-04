@@ -1,7 +1,6 @@
 ---
 title: Specification List
 slug: orphaned/Web/Specification_list
-translation_of: Web/Specification_list
 original_slug: Web/Specification_list
 ---
 Open Web の基盤は幾つもの仕様書によって定義されています。このページではそれらの仕様書をリストしています。

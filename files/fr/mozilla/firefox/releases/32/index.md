@@ -114,7 +114,7 @@ A [getDataDirectory()](</fr/Add-ons/Add-on_Manager/Addon#getDataDirectory()>) me
 
 [Bugs fixed between Firefox 31 and Firefox 32](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-06-09&chfield=resolution&query_format=advanced&chfieldfrom=2014-04-28&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=10493962). This will not include any uplifts made after this release entered Aurora.
 
-## See also
+## Voir aussi
 
 - [Site Compatibility for Firefox 32](/fr/docs/Mozilla/Firefox/Releases/32/Site_Compatibility)
 

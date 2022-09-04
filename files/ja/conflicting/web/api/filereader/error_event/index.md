@@ -1,7 +1,6 @@
 ---
 title: onerror
 slug: conflicting/Web/API/FileReader/error_event
-translation_of: Web/API/FileReader/onerror
 original_slug: Web/API/FileReader/onerror
 ---
 [FileReader](/ja/docs/Web/API/FileReader) の onerror ハンドラは、Error オブジェクトではなく Event オブジェクトをパラメータとして受け取りますが、エラーは FileReader オブジェクトから [`instanceOfFileReader.error`](/ja/docs/Web/API/FileReader/error) のようにアクセスすることができます。

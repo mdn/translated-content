@@ -1,18 +1,6 @@
 ---
 title: サーバサイド Web サイトプログラミング
 slug: Learn/Server-side
-tags:
-  - CodingScripting
-  - Landing
-  - NeedsTranslation
-  - Server
-  - Server-side programming
-  - Topic
-  - TopicStub
-  - 初学者
-  - 学習
-  - 導入部
-translation_of: Learn/Server-side
 ---
 {{LearnSidebar}}
 

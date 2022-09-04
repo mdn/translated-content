@@ -1,15 +1,6 @@
 ---
 title: WindowClient.visibilityState
 slug: Web/API/WindowClient/visibilityState
-tags:
-  - API
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - WindowClient
-  - visibilityState
-translation_of: Web/API/WindowClient/visibilityState
 ---
 {{APIRef("Service Workers API")}}
 

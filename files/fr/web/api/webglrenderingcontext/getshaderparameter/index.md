@@ -43,14 +43,11 @@ gl.getShaderParameter(shader, gl.SHADER_TYPE);
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                               | Commentaire                           |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------- |
-| {{SpecName('WebGL', "#5.14.9", "getShaderParameter")}}                 | {{Spec2('WebGL')}}             | Définition initiale.                  |
-| {{SpecName('OpenGL ES 2.0', "glGetShaderiv.xml", "glGetShaderiv")}} | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API OpenGL (similaire). |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.getShaderParameter")}}
+{{Compat}}
 
 ## Voir aussi
 

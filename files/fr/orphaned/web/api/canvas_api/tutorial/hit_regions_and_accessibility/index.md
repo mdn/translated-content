@@ -87,7 +87,7 @@ De plus, la méthode `scrollPathIntoView()` peut être utilisée pour rendre vis
 - {{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}} {{experimental_inline}}
   - : Affiche le chemin courant ou le chemin donné.
 
-## See also
+## Voir aussi
 
 - [Canvas accessibility use cases](https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases)
 - [Canvas element accessibility issues](https://www.w3.org/html/wg/wiki/AddedElementCanvas)

@@ -1,18 +1,7 @@
 ---
 title: WindowEventHandlers.onpopstate
 slug: conflicting/Web/API/Window/popstate_event
-tags:
-  - API
-  - イベントハンドラー
-  - HTML DOM
-  - HTML5
-  - NeedsSpecTable
-  - プロパティ
-  - Window
-  - イベント
-translation_of: Web/API/WindowEventHandlers/onpopstate
 original_slug: Web/API/WindowEventHandlers/onpopstate
-browser-compat: api.WindowEventHandlers.onpopstate
 ---
 {{APIRef}}
 

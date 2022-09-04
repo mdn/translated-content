@@ -15,7 +15,7 @@ Dans le cadre d'une {{glossary("URI")}}, la partie "http\://" s'appelle le "sche
 
 HTTP est textuel (toute communication est faite en texte clair) et sans état (aucune communication n'est au courant des communications précédentes). Cette dernière propriété permet à un utilisateur de naviguer facilement sur internet: la consultation des documents et sites web ne requiert pas de contexte particulier. HTTP peut également être utilisé dans le cadre de services REST pour la communication de serveur à serveur, ou bien via des requêtes AJAX au sein d'un site internet pour le rendre plus dynamique.
 
-## En apprendre plus
+## Voir aussi
 
 - [HTTP sur MDN](/fr/docs/HTTP)
 - [HTTP](https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol) sur Wikipédia

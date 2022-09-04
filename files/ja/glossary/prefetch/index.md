@@ -1,12 +1,6 @@
 ---
 title: プリフェッチ
 slug: Glossary/Prefetch
-tags:
-  - Glossary
-  - Prefetch
-  - Reference
-  - Web Performance
-translation_of: Glossary/Prefetch
 ---
 プリフェッチは、コンテンツが要求される可能性が高いことを前提にして、ユーザーが要求したときにコンテンツを即座にロードできるようにします。コンテンツはユーザーが明示的にリクエストすることなくダウンロードされ、将来の使用を想定してキャッシュされます。
 

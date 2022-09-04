@@ -1,14 +1,6 @@
 ---
 title: NaN (非数)
 slug: Glossary/NaN
-tags:
-  - CodingScripting
-  - Computing
-  - Glossary
-  - NaN
-  - 用語集
-  - 非数
-translation_of: Glossary/NaN
 ---
 非数(英語：Not a Number)とは未定義な値か、特に浮動小数点数の計算の結果で、表すことができない数値({{Glossary("Type", "データ型")}})のことを言います。
 

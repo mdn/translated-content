@@ -111,10 +111,10 @@ NOT FOUND
 
 과정은 다음과 같습니다.
 
-1.  등록 웹사이트로 가세요.
-2.  일반적으로 눈에 띄게 “Get a domain name” 이라는 글자가 있을거에요. 클릭하세요.
-3.  요구하는 상세 정보를 채우세요. 그리고 특별히 원하는 도메인 네임의 스펠링을 정확하게 입력했는지 다시한번 확인해주세요. 한번 지불하면 돌이킬 수 없습니다.
-4.  등록이 잘 되었다면 등록 웹사이트에서 연락이 올 것입니다. 그리고 몇시간내로 모든 DNS 서버들이 당신의 DNS 정보를 받을거구요.
+1. 등록 웹사이트로 가세요.
+2. 일반적으로 눈에 띄게 “Get a domain name” 이라는 글자가 있을거에요. 클릭하세요.
+3. 요구하는 상세 정보를 채우세요. 그리고 특별히 원하는 도메인 네임의 스펠링을 정확하게 입력했는지 다시한번 확인해주세요. 한번 지불하면 돌이킬 수 없습니다.
+4. 등록이 잘 되었다면 등록 웹사이트에서 연락이 올 것입니다. 그리고 몇시간내로 모든 DNS 서버들이 당신의 DNS 정보를 받을거구요.
 
 > **참고:** In this process the registrar asks you for your real-world address. Make sure you fill it properly, since in some countries registrars may be forced to close the domain if they cannot provide a valid address.
 
@@ -128,10 +128,10 @@ DNS databases are stored on every DNS server worldwide, and all these servers re
 
 As we already saw, when you want to display a webpage in your browser it's easier to type a domain name than an IP address. Let's take a look at the process:
 
-1.  Type `mozilla.org` in your browser's location bar.
-2.  Your browser asks your computer if it already recognizes the IP address identified by this domain name (using a local DNS cache). If it does, the name is translated to the IP address and the browser negotiates contents with the web server. End of story.
-3.  If your computer does not know which IP is behind the `mozilla.org` name, it goes on to ask a DNS server, whose job is precisely to tell your computer which IP address matches each registered domain name.
-4.  Now that the computer knows the requested IP address, your browser can negotiate contents with the web server.
+1. Type `mozilla.org` in your browser's location bar.
+2. Your browser asks your computer if it already recognizes the IP address identified by this domain name (using a local DNS cache). If it does, the name is translated to the IP address and the browser negotiates contents with the web server. End of story.
+3. If your computer does not know which IP is behind the `mozilla.org` name, it goes on to ask a DNS server, whose job is precisely to tell your computer which IP address matches each registered domain name.
+4. Now that the computer knows the requested IP address, your browser can negotiate contents with the web server.
 
 ![Explanation of the steps needed to obtain the result to a DNS request](https://mdn.mozillademos.org/files/8961/2014-10-dns-request2.png)
 

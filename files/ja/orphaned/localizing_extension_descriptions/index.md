@@ -1,11 +1,6 @@
 ---
 title: Localizing extension descriptions
 slug: orphaned/Localizing_extension_descriptions
-tags:
-  - Add-ons
-  - Extensions
-  - Internationalization
-  - Localization
 original_slug: Localizing_extension_descriptions
 ---
 ### Gecko 1.9 におけるローカライズ

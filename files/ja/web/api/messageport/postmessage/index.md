@@ -1,13 +1,6 @@
 ---
 title: MessagePort.postMessage()
 slug: Web/API/MessagePort/postMessage
-tags:
-  - API
-  - Channel messagging
-  - MessagePort
-  - Reference
-  - postMessage
-translation_of: Web/API/MessagePort/postMessage
 ---
 {{APIRef("HTML DOM")}}
 

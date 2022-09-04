@@ -1,9 +1,6 @@
 ---
 title: 罫線が表示されない
 slug: orphaned/Web/Compatibility_FAQ/No_Border_Line_Shown.html
-tags:
-  - Compatibility
-  - Invisible element
 original_slug: Web/Compatibility_FAQ/No_Border_Line_Shown.html
 ---
 ## 概要

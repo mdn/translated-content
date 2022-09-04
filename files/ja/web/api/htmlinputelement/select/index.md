@@ -1,15 +1,6 @@
 ---
 title: HTMLInputElement.select()
 slug: Web/API/HTMLInputElement/select
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - メソッド
-  - NeedsCompatTable
-  - リファレンス
-browser-compat: api.HTMLInputElement.select
-translation_of: Web/API/HTMLInputElement/select
 ---
 {{ APIRef("HTML DOM") }}
 

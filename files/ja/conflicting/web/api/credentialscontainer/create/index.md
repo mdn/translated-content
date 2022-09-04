@@ -1,15 +1,6 @@
 ---
 title: PublicKeyCredentialCreationOptions.excludeCredentials
 slug: conflicting/Web/API/CredentialsContainer/create
-tags:
-  - API
-  - Property
-  - PublicKeyCredentialCreationOptions
-  - Reference
-  - Web Authentication API
-  - WebAuthn
-  - プロパティ
-translation_of: Web/API/PublicKeyCredentialCreationOptions/excludeCredentials
 original_slug: Web/API/PublicKeyCredentialCreationOptions/excludeCredentials
 ---
 {{APIRef("Web Authentication API")}}{{securecontext_header}}

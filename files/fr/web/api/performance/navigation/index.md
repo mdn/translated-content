@@ -31,13 +31,11 @@ L'ancienne propriété en lecture seule **`Performance.navigation`** renvoie un 
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                                   | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#sec-window.performance-attribute', 'Performance.navigation')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Performance.navigation")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,7 +1,6 @@
 ---
 title: WebVR APIの使い方
 slug: Web/API/WebVR_API/Using_the_WebVR_API
-translation_of: Web/API/WebVR_API/Using_the_WebVR_API
 ---
 [WebVR API](/ja/docs/Web/API/WebVR_API) はウェブ開発者のツールキットへのすばらしい追加機能で、[Oculus Rift](https://developer.oculus.com/) のようなバーチャルリアリティハードウェアへのアクセスが可能となります。そして出力された動きや向きはウェブアプリの描画更新に変換されます。しかし VR アプリを開発はどのようにやればいいのでしょうか？ この記事では、それに関する基礎的な解説を行います。
 

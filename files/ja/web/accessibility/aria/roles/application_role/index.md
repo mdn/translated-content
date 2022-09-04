@@ -89,4 +89,4 @@ translation_of: Web/Accessibility/ARIA/Roles/Application_Role
 
 - [WAI-ARIA のロール "application" を使用する場合は、賢明にしてください](https://www.marcozehe.de/2012/02/06/if-you-use-the-wai-aria-role-application-please-do-so-wisely/) — Marco Zehe のブログ記事 (英語)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

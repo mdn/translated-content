@@ -1,10 +1,6 @@
 ---
 title: Firefox 2 のための拡張機能の更新
 slug: Mozilla/Firefox/Releases/2/Updating_extensions
-tags:
-  - Add-ons
-  - Extensions
-translation_of: Mozilla/Firefox/Releases/2/Updating_extensions
 original_slug: Updating_extensions_for_Firefox_2
 ---
 {{FirefoxSidebar}}

@@ -1,16 +1,6 @@
 ---
 title: Notification.renotify
 slug: Web/API/Notification/renotify
-page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Notifications
-  - Property
-  - Reference
-  - renotify
-browser-compat: api.Notification.renotify
-translation_of: Web/API/Notification/renotify
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 

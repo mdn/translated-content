@@ -1,7 +1,6 @@
 ---
 title: 序文
 slug: Web/API/XSLTProcessor/Introduction
-translation_of: Web/API/XSLTProcessor/Introduction
 ---
 ## 序文
 

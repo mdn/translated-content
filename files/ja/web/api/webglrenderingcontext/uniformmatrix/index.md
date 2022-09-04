@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.uniformMatrix[234]fv()
 slug: Web/API/WebGLRenderingContext/uniformMatrix
-translation_of: Web/API/WebGLRenderingContext/uniformMatrix
 ---
 {{APIRef("WebGL")}}
 
