@@ -1,21 +1,6 @@
 ---
 title: Window.ondevicemotion
 slug: conflicting/Web/API/Window/devicemotion_event
-tags:
-  - API
-  - Device Orientation
-  - Event Handler
-  - Mobile
-  - Motion
-  - Orientation
-  - Property
-  - Reference
-  - イベントハンドラー
-  - プロパティ
-  - モバイル
-  - 向き
-  - 端末の向き
-translation_of: Web/API/Window/ondevicemotion
 original_slug: Web/API/Window/ondevicemotion
 ---
 {{APIRef("Device Orientation Events")}}

@@ -1,15 +1,6 @@
 ---
 title: cookies
 slug: Mozilla/Add-ons/WebExtensions/API/cookies
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Interface
-  - Reference
-  - dard
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 ---
 {{AddonSidebar}}
 

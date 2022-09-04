@@ -1,13 +1,7 @@
 ---
 title: dir
 slug: conflicting/Web/Manifest
-tags:
-  - マニフェスト
-  - ウェブ
-  - dir
-translation_of: Web/Manifest/dir
 original_slug: Web/Manifest/dir
-browser-compat: html.manifest.dir
 ---
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 

@@ -1,18 +1,6 @@
 ---
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
-tags:
-  - API
-  - DOM
-  - HTML DOM
-  - HTMLInputElement
-  - Input
-  - インターフェイス
-  - NeedsContent
-  - NeedsMarkupWork
-  - リファレンス
-browser-compat: api.HTMLInputElement
-translation_of: Web/API/HTMLInputElement
 ---
 {{ APIRef("HTML DOM") }}
 

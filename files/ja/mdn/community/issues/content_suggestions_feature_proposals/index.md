@@ -1,10 +1,6 @@
 ---
 title: 外部コンテンツを MDN Web Docs に移行するには
 slug: MDN/Community/Issues/Content_suggestions_feature_proposals
-tags:
-  - Content migration
-  - MDN Meta
-translation_of: MDN/Contribute/Howto/Migrate_external_content_to_MDN
 original_slug: MDN/Contribute/Howto/Migrate_external_content_to_MDN
 ---
 {{MDNSidebar}}

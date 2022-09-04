@@ -1,12 +1,6 @@
 ---
 title: Sloppy モード
 slug: Glossary/Sloppy_mode
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
-  - Sloppy
-translation_of: Glossary/Sloppy_mode
 ---
 {{Glossary("ECMAScript")}} 5 以降では、スクリプトで新しい [Strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode) モードをオプトインできます。これにより、JavaScript のセマンティクスがいくつかの方法で変更され、復元力が向上し、問題が発生したときに何が起こっているのかを理解しやすくなります。
 

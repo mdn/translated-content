@@ -1,15 +1,6 @@
 ---
 title: HTMLElement.offsetHeight
 slug: Web/API/HTMLElement/offsetHeight
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - NeedsNonDHMLImage
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLElement.offsetHeight
-translation_of: Web/API/HTMLElement/offsetHeight
 ---
 {{ APIRef("HTML DOM") }}
 

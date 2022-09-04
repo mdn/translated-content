@@ -1,21 +1,6 @@
 ---
 title: URL
 slug: Web/API/URL
-tags:
-  - API
-  - Address
-  - Domain
-  - Interface
-  - Location
-  - Networking
-  - Reference
-  - URI
-  - URL API
-  - Web
-  - hostname
-  - href
-  - origin
-translation_of: Web/API/URL
 ---
 {{APIRef("URL API")}}
 

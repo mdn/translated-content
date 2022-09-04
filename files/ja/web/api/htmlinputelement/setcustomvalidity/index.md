@@ -1,17 +1,6 @@
 ---
 title: HTMLInputElement.setCustomValidity()
 slug: Web/API/HTMLInputElement/setCustomValidity
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - メソッド
-  - NeedsExample
-  - リファレンス
-  - setCustomValidity
-  - setCustomValidity()
-browser-compat: api.HTMLObjectElement.setCustomValidity
-translation_of: Web/API/HTMLInputElement/setCustomValidity
 ---
 {{APIRef("HTML DOM")}}
 

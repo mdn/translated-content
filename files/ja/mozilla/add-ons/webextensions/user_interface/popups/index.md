@@ -1,12 +1,6 @@
 ---
 title: ポップアップ
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Popups
-tags:
-  - UI
-  - ユーザーインターフェイス
-  - WebExtensions
-  - ポップアップ
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Popups
 ---
 {{AddonSidebar}}
 

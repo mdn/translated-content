@@ -62,7 +62,9 @@ translation_of: Web/SVG/Tutorial/Gradients
 <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
 ```
 
-> **Note:** グラデーションに `xlink:href` 属性を用いることもできます。これを使用すると、あるグラデーションの属性や経由点を別のグラデーションに含めることができます。上記の例では、 Gradient2 のすべての経由点を再作成する必要はありません。```
+> **Note:** グラデーションに `xlink:href` 属性を用いることもできます。これを使用すると、あるグラデーションの属性や経由点を別のグラデーションに含めることができます。上記の例では、 Gradient2 のすべての経由点を再作成する必要はありません。
+>
+> ```html
 > <linearGradient id="Gradient1">
 > <stop id="stop1" offset="0%"/>
 > <stop id="stop2" offset="50%"/>
@@ -71,9 +73,9 @@ translation_of: Web/SVG/Tutorial/Gradients
 > <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"
 >     xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Gradient1"/>
 >
-> ```ここでは xlink 名前空間を、通常は文書の先頭にて定義するものですが、このノードで直接定義しました。詳細は[画像について説明する際](/ja/docs/Web/SVG/Tutorial/Other_content_in_SVG)に述べます。
->
 > ```
+>
+> ここでは xlink 名前空間を、通常は文書の先頭にて定義するものですが、このノードで直接定義しました。詳細は[画像について説明する際](/ja/docs/Web/SVG/Tutorial/Other_content_in_SVG)に述べます。
 
 ## 放射状グラデーション
 

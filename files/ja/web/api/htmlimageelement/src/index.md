@@ -1,21 +1,6 @@
 ---
 title: HTMLImageElement.src
 slug: Web/API/HTMLImageElement/src
-page-type: web-api-instance-property
-tags:
-  - 1x
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - 画像
-  - リファレンス
-  - URL
-  - fallback
-  - source
-  - src
-  - プロパティ
-browser-compat: api.HTMLImageElement.src
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,10 +1,6 @@
 ---
 title: Firefox 3 における SVG の改良
 slug: Mozilla/Firefox/Releases/3/SVG_improvements
-tags:
-  - Firefox 3
-  - SVG
-translation_of: Mozilla/Firefox/Releases/3/SVG_improvements
 original_slug: SVG_improvements_in_Firefox_3
 ---
 {{FirefoxSidebar}}

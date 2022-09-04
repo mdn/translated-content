@@ -1,13 +1,6 @@
 ---
 title: HTMLLabelElement.htmlFor
 slug: Web/API/HTMLLabelElement/htmlFor
-tags:
-  - フォーム
-  - HTML DOM
-  - HTMLLabelElement
-  - リファレンス
-  - htmlFor
-browser-compat: api.HTMLLabelElement.htmlFor
 ---
 {{APIRef("HTML DOM")}}
 

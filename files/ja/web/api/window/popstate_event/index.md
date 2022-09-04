@@ -1,20 +1,6 @@
 ---
 title: 'Window: popstate イベント'
 slug: Web/API/Window/popstate_event
-tags:
-  - API
-  - Event
-  - HTML DOM
-  - History
-  - 履歴 API
-  - Location
-  - Navigation
-  - リファレンス
-  - URL
-  - Window
-  - popstate
-browser-compat: api.Window.popstate_event
-translation_of: Web/API/Window/popstate_event
 ---
 {{APIRef}}
 

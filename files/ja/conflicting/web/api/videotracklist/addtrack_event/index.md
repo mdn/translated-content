@@ -1,21 +1,6 @@
 ---
 title: VideoTrackList.onaddtrack
 slug: conflicting/Web/API/VideoTrackList/addtrack_event
-tags:
-  - API
-  - Adding Tracks
-  - Adding Video Tracks
-  - Event Handler
-  - HTML DOM
-  - Media
-  - Property
-  - Reference
-  - Video
-  - VideoTrackList
-  - addTrack
-  - onaddtrack
-  - track
-translation_of: Web/API/VideoTrackList/onaddtrack
 original_slug: Web/API/VideoTrackList/onaddtrack
 ---
 {{APIRef("HTML DOM")}}

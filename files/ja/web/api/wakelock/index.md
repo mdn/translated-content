@@ -1,14 +1,6 @@
 ---
 title: WakeLock
 slug: Web/API/WakeLock
-tags:
-  - インターフェイス
-  - リファレンス
-  - 画面起動ロック API
-  - 起動ロック
-  - 画面
-browser-compat: api.WakeLock
-translation_of: Web/API/WakeLock
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 

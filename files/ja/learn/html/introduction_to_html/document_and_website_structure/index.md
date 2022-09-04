@@ -228,11 +228,11 @@ and his markup didn't read very well.
 
 簡単なウェブページのコンテンツの構造を計画したら、次の論理的なステップは、ウェブサイト全体に掲載したいコンテンツ、必要なページ、および可能な限り最高のユーザーエクスペリエンスを実現するために、それらをどのように配置して互いにリンクさせるかを解決することです。これは {{glossary("Information architecture")}} と呼ばれます。大規模で複雑なウェブサイトでは、このプロセスに多くの計画を立てることがありますが、数ページの単純なウェブサイトでは、かなり単純で楽しいものになります。
 
-1.  ナビゲーションメニューやフッターコンテンツなど、(全部ではないにしても) ほとんどのページに共通の要素がいくつかあることに注意してください。たとえば、サイトがビジネスのためのものである場合、連絡先情報を各ページのフッターで利用可能にすることは良い考えです。すべてのページに共通にしたいものを書き留めます。![the common features of the travel site to go on every page: title and logo, contact, copyright, terms and conditions, language chooser, accessibility policy](common-features.png)
-2.  次に、各ページの構造をどのようにしたらよいかを大まかにスケッチします (上の単純なウェブサイトのようになります)。各ブロックがどうなるかに注意してください。![A simple diagram of a sample site structure, with a header, main content area, two optional sidebars, and footer](site-structure.png)
-3.  さて、自身のウェブサイトに載せたい他のすべての (全ページに共通ではない) コンテンツをブレインストーミングしましょう — 大きなリストに書き留めます。![A long list of all the features that we could put on our travel site, from searching, to special offers and country-specific info](feature-list.png)
-4.  次に、これらすべてのコンテンツ項目をグループに分類して、どの部分が異なるページに共存しているかを把握します。これは {{glossary("Card sorting")}} と呼ばれるテクニックと非常によく似ています。![The items that should appear on a holiday site sorted into 5 categories: Search, Specials, Country-specific info, Search results, and Buy things](card-sorting.png)
-5.  それでは、大まかなサイトマップをスケッチしてみましょう。サイト上の各ページにバブルを付け、ページ間の典型的なワークフローを示すために線を引きます。
+1. ナビゲーションメニューやフッターコンテンツなど、(全部ではないにしても) ほとんどのページに共通の要素がいくつかあることに注意してください。たとえば、サイトがビジネスのためのものである場合、連絡先情報を各ページのフッターで利用可能にすることは良い考えです。すべてのページに共通にしたいものを書き留めます。![the common features of the travel site to go on every page: title and logo, contact, copyright, terms and conditions, language chooser, accessibility policy](common-features.png)
+2. 次に、各ページの構造をどのようにしたらよいかを大まかにスケッチします (上の単純なウェブサイトのようになります)。各ブロックがどうなるかに注意してください。![A simple diagram of a sample site structure, with a header, main content area, two optional sidebars, and footer](site-structure.png)
+3. さて、自身のウェブサイトに載せたい他のすべての (全ページに共通ではない) コンテンツをブレインストーミングしましょう — 大きなリストに書き留めます。![A long list of all the features that we could put on our travel site, from searching, to special offers and country-specific info](feature-list.png)
+4. 次に、これらすべてのコンテンツ項目をグループに分類して、どの部分が異なるページに共存しているかを把握します。これは {{glossary("Card sorting")}} と呼ばれるテクニックと非常によく似ています。![The items that should appear on a holiday site sorted into 5 categories: Search, Specials, Country-specific info, Search results, and Buy things](card-sorting.png)
+5. それでは、大まかなサイトマップをスケッチしてみましょう。サイト上の各ページにバブルを付け、ページ間の典型的なワークフローを示すために線を引きます。
     ホームページはおそらく中心にあり、すべてではないにしてもほとんどのページにリンクするでしょう。例外はありますが、小規模サイトのほとんどのページはメインナビゲーションから利用できるはずです。物事がどのように提示されるかもしれないかについてのメモも含めることをお勧めします。![A map of the site showing the homepage, country page, search results, specials page, checkout, and buy page](site-map.png)
 
 ### アクティブラーニング: 自身のサイトマップを作成する

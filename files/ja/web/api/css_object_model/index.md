@@ -1,13 +1,6 @@
 ---
 title: CSS オブジェクトモデル (CSSOM)
 slug: Web/API/CSS_Object_Model
-tags:
-  - API
-  - CSSOM
-  - Overview
-  - Reference
-  - 概要
-translation_of: Web/API/CSS_Object_Model
 ---
 {{DefaultAPISidebar("CSSOM")}}
 

@@ -1,20 +1,6 @@
 ---
 title: Window
 slug: Web/API/Window
-page-type: web-api-interface
-tags:
-  - API
-  - Browser
-  - HTML DOM
-  - Interface
-  - Reference
-  - Tab
-  - Window
-  - global
-  - global scope
-  - scope
-browser-compat: api.Window
-translation_of: Web/API/Window
 ---
 {{APIRef("DOM")}}
 

@@ -691,6 +691,7 @@
 /zh-TW/docs/Web/HTTP/Status/418_I_m_a_teapot	/zh-TW/docs/Web/HTTP/Status/418
 /zh-TW/docs/Web/HTTP/X-Frame-Options	/zh-TW/docs/Web/HTTP/Headers/X-Frame-Options
 /zh-TW/docs/Web/HTTP/data_URIs	/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
+/zh-TW/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/zh-TW/docs/Web/JavaScript/Language_Overview
 /zh-TW/docs/Web/JavaScript/Guide/Introduction/關於	/zh-TW/docs/Web/JavaScript/Guide/Introduction
 /zh-TW/docs/Web/JavaScript/Guide/JavaScript_Overview	/zh-TW/docs/Web/JavaScript/Guide/Introduction
 /zh-TW/docs/Web/JavaScript/Guide/JavaScript_概觀	/zh-TW/docs/Web/JavaScript/Guide/Introduction
@@ -823,7 +824,7 @@
 /zh-TW/docs/Web/JavaScript/Typed_arrays/ArrayBuffer	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /zh-TW/docs/Web/JavaScript/Typed_arrays/ArrayBuffer/prototype	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /zh-TW/docs/Web/JavaScript/資料結構	/zh-TW/docs/Web/JavaScript/Data_structures
-/zh-TW/docs/Web/JavaScript/重新介紹_JavaScript	/zh-TW/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+/zh-TW/docs/Web/JavaScript/重新介紹_JavaScript	/zh-TW/docs/Web/JavaScript/Language_Overview
 /zh-TW/docs/Web/Reference	/zh-TW/docs/Web
 /zh-TW/docs/Web/Reference/API	/zh-TW/docs/Web/API
 /zh-TW/docs/Web/Reference/Events	/zh-TW/docs/Web/Events
@@ -874,5 +875,5 @@
 /zh-TW/docs/自網頁添加搜尋引擎	/zh-TW/docs/Web/OpenSearch
 /zh-TW/docs/製作_OpenSearch_搜尋模組	/zh-TW/docs/Web/OpenSearch
 /zh-TW/docs/調整列表縮排	/zh-TW/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
-/zh-TW/docs/重新介紹_JavaScript	/zh-TW/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+/zh-TW/docs/重新介紹_JavaScript	/zh-TW/docs/Web/JavaScript/Language_Overview
 /zh-TW/docs/首頁	/zh-TW/docs/Web

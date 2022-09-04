@@ -38,7 +38,7 @@ translation_of: Web/SVG/Element/set
 
 ## DOM インターフェース
 
-この要素は [`SVGSetElement`](/ja/DOM/SVGSetElement "en/DOM/SVGSetElement") インターフェースを提供します。
+この要素は [`SVGSetElement`](/ja/DOM/SVGSetElement) インターフェースを提供します。
 
 ## 仕様
 

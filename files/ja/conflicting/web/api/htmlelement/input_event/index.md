@@ -1,14 +1,6 @@
 ---
 title: GlobalEventHandlers.oninput
 slug: conflicting/Web/API/HTMLElement/input_event
-tags:
-  - API
-  - Event Handler
-  - GlobalEventHandlers
-  - HTML DOM
-  - Property
-  - Reference
-translation_of: Web/API/GlobalEventHandlers/oninput
 original_slug: Web/API/GlobalEventHandlers/oninput
 ---
 {{ApiRef("HTML DOM")}}

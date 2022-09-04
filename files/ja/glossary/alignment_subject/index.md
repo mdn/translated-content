@@ -1,12 +1,6 @@
 ---
 title: Alignment subject (配置対象物)
 slug: Glossary/Alignment_Subject
-tags:
-  - 配置対象物
-  - CSS
-  - 用語集
-  - 配置
-translation_of: Glossary/Alignment_Subject
 ---
 [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)では、**配置対象物**はそのプロパティによって配置されるものを指します。
 

@@ -7537,31 +7537,6 @@
       "tauame"
     ]
   },
-  "Web/JavaScript/A_re-introduction_to_JavaScript": {
-    "modified": "2020-05-27T17:14:30.277Z",
-    "contributors": [
-      "ruanpetterson",
-      "nailtonvieira",
-      "michaelycus",
-      "mateus.mlo",
-      "jhbalestrin",
-      "Sheppy",
-      "TiagoWinehouse",
-      "victorwpbastos",
-      "ruda",
-      "ti.marcosdias",
-      "fredericksilva",
-      "Scr1pt3r",
-      "trestini",
-      "ThiagoMatos",
-      "angelorubin",
-      "jlcarvalho",
-      "TheBorba",
-      "teoli",
-      "gtcarlos",
-      "arthur.luiz"
-    ]
-  },
   "Web/JavaScript/About_JavaScript": {
     "modified": "2020-03-12T19:38:41.483Z",
     "contributors": ["fcard", "teoli", "kuni71"]
@@ -7903,6 +7878,31 @@
       "teoli",
       "cleitongalvao",
       "treax"
+    ]
+  },
+  "Web/JavaScript/Language_Overview": {
+    "modified": "2020-05-27T17:14:30.277Z",
+    "contributors": [
+      "ruanpetterson",
+      "nailtonvieira",
+      "michaelycus",
+      "mateus.mlo",
+      "jhbalestrin",
+      "Sheppy",
+      "TiagoWinehouse",
+      "victorwpbastos",
+      "ruda",
+      "ti.marcosdias",
+      "fredericksilva",
+      "Scr1pt3r",
+      "trestini",
+      "ThiagoMatos",
+      "angelorubin",
+      "jlcarvalho",
+      "TheBorba",
+      "teoli",
+      "gtcarlos",
+      "arthur.luiz"
     ]
   },
   "Web/JavaScript/Memory_Management": {

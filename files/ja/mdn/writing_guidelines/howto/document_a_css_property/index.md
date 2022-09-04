@@ -1,11 +1,6 @@
 ---
 title: CSS プロパティの記事を作成するには
 slug: MDN/Writing_guidelines/Howto/Document_a_CSS_property
-tags:
-  - CSS
-  - ガイド
-  - Howto
-  - MDN Meta
 original_slug: MDN/Contribute/Howto/Document_a_CSS_property
 ---
 {{MDNSidebar}}

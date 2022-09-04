@@ -11,7 +11,7 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
 | --------- | ----------------------------------------------------------------------------------------------------- |
 | 目的:     | HTML フォームを構造化して意味を与えて使いやすくアクセシブルにする方法を理解すること。                 |
 
-フォームは柔軟性があるため、[HTML](/ja/docs/Learn/HTML "HTML") で最も複雑な構造の 1 つとなっています。専用のフォーム要素と属性を使用して、あらゆる種類の基本フォームを作成できます。HTML フォームを構築するときに正しい構造を使用すると、フォームが使用可能で[アクセスしやすい](/ja/docs/Learn/Accessibility)ことを確実にするのに役立ちます。
+フォームは柔軟性があるため、[HTML](/ja/docs/Learn/HTML) で最も複雑な構造の 1 つとなっています。専用のフォーム要素と属性を使用して、あらゆる種類の基本フォームを作成できます。HTML フォームを構築するときに正しい構造を使用すると、フォームが使用可能で[アクセスしやすい](/ja/docs/Learn/Accessibility)ことを確実にするのに役立ちます。
 
 ## \<form> 要素
 
@@ -164,14 +164,14 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
 
 これらのアイデアを実践し、もう少し複雑なフォーム構造、つまり支払いフォームを作成しましょう。このフォームはあなたがまだ理解していないかもしれないウィジェットタイプをいくつも含みますが、今はそのことを心配しないでください。次の記事 ([ネイティブフォームウィジェット](/ja/docs/Learn/HTML/Forms/The_native_form_widgets)) でそれらがどのように機能するのかがわかります。今のところ、以下の説明に沿って説明を注意深く読み、フォームを構成するためにどのラッパー要素を使用しているか、そしてその理由を理解することから始めてください。
 
-1.  あらかじめ、[空のテンプレートファイル](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)と[お支払いフォームの CSS](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) のローカルコピーをコンピューターの新しいディレクトリーに作成します。
-2.  まず最初に、HTML {{htmlelement("head")}} 内に次の行を追加して CSS を HTML に適用します。
+1. あらかじめ、[空のテンプレートファイル](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)と[お支払いフォームの CSS](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) のローカルコピーをコンピューターの新しいディレクトリーに作成します。
+2. まず最初に、HTML {{htmlelement("head")}} 内に次の行を追加して CSS を HTML に適用します。
 
     ```html
     <link href="payment-form.css" rel="stylesheet">
     ```
 
-3.  次に、外側の {{htmlelement("form")}} 要素を追加してフォームを作成します:
+3. 次に、外側の {{htmlelement("form")}} 要素を追加してフォームを作成します:
 
     ```html
     <form>
@@ -179,14 +179,14 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
     </form>
     ```
 
-4.  `<form>` タグ内に、必須フィールドにマークを付ける方法をユーザーに通知するための見出しと段落を追加します:
+4. `<form>` タグ内に、必須フィールドにマークを付ける方法をユーザーに通知するための見出しと段落を追加します:
 
     ```html
     <h1>Payment form</h1>
     <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
     ```
 
-5.  次に、前のエントリーの下に、より大きなコードセクションをフォームに追加します。ここでは、連絡先情報フィールドを個別の {{htmlelement("section")}} 要素内にラップしていることがわかります。さらに、2 つのラジオボタンのセットがあり、それぞれ独自のリスト ({{htmlelement("li")}}) 要素の中に入れています。最後に、2 つの標準テキスト {{htmlelement("input")}} とそれに関連する {{htmlelement("label")}} 要素があり、それぞれ {{htmlelement("p")}} の内側に含まれていて、パスワードを入力するためのパスワード入力があります。フォームにこのコードを追加してください:
+5. 次に、前のエントリーの下に、より大きなコードセクションをフォームに追加します。ここでは、連絡先情報フィールドを個別の {{htmlelement("section")}} 要素内にラップしていることがわかります。さらに、2 つのラジオボタンのセットがあり、それぞれ独自のリスト ({{htmlelement("li")}}) 要素の中に入れています。最後に、2 つの標準テキスト {{htmlelement("input")}} とそれに関連する {{htmlelement("label")}} 要素があり、それぞれ {{htmlelement("p")}} の内側に含まれていて、パスワードを入力するためのパスワード入力があります。フォームにこのコードを追加してください:
 
     ```html
     <section>
@@ -238,7 +238,7 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
     </section>
     ```
 
-6.  それでは、フォームの 2 番目の `<section>` — 支払い情報に目を向けます。ここには 3 つの異なるウィジェットとそのラベルがあり、それぞれ `<p>` の中に含まれています。1 つ目は、クレジットカードの種類を選択するためのドロップダウンメニュー ({{htmlelement("select")}}) です。2 番目は、クレジットカード番号を入力するための `tel` 型の `<input>` 要素です。`number` 型を使うこともできますが、そのスピナー UI は望ましくありません。最後のものは、カードの有効期限を入力するための `date` 型の `<input>` 要素です。これは、サポートしているブラウザーでは日付選択ウィジェットが表示され、サポートしていないブラウザーでは通常のテキスト入力に戻ります。新しい入力タイプは [HTML5 入力タイプ](/ja/docs/Learn/Forms/HTML5_input_types)で再度紹介されます。
+6. それでは、フォームの 2 番目の `<section>` — 支払い情報に目を向けます。ここには 3 つの異なるウィジェットとそのラベルがあり、それぞれ `<p>` の中に含まれています。1 つ目は、クレジットカードの種類を選択するためのドロップダウンメニュー ({{htmlelement("select")}}) です。2 番目は、クレジットカード番号を入力するための `tel` 型の `<input>` 要素です。`number` 型を使うこともできますが、そのスピナー UI は望ましくありません。最後のものは、カードの有効期限を入力するための `date` 型の `<input>` 要素です。これは、サポートしているブラウザーでは日付選択ウィジェットが表示され、サポートしていないブラウザーでは通常のテキスト入力に戻ります。新しい入力タイプは [HTML5 入力タイプ](/ja/docs/Learn/Forms/HTML5_input_types)で再度紹介されます。
 
     前のセクションの下に次のように入力してください。
 
@@ -273,7 +273,7 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
     </section>
     ```
 
-7.  最後に追加するセクションはもっと単純で、フォームデータを送信するための `submit` タイプの {{htmlelement("button")}} のみを含みます。これをフォームの一番下に追加してください:
+7. 最後に追加するセクションはもっと単純で、フォームデータを送信するための `submit` タイプの {{htmlelement("button")}} のみを含みます。これをフォームの一番下に追加してください:
 
     ```html
     <p> <button type="submit">Validate the payment</button> </p>

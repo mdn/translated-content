@@ -1,10 +1,6 @@
 ---
 title: MDN Web Docs プロジェクト
 slug: MDN
-tags:
-  - Landing
-  - MDN Meta
-translation_of: MDN
 i10n:
   commitSource: 8dbe0b2acd7fdbf533a9bd2f517999cc2035d952
 ---

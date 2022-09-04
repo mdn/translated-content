@@ -1,15 +1,6 @@
 ---
 title: Web Audio API
 slug: Web/API/Web_Audio_API
-tags:
-  - API
-  - Audio
-  - Example
-  - Landing
-  - Overview
-  - Web Audio API
-  - sound
-translation_of: Web/API/Web_Audio_API
 ---
 {{DefaultAPISidebar("Web Audio API")}}
 

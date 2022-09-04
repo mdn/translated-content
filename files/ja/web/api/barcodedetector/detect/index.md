@@ -1,15 +1,6 @@
 ---
 title: BarcodeDetector.detect()
 slug: Web/API/BarcodeDetector/detect
-tags:
-  - バーコード検出 API
-  - BarcodeDetector
-  - メソッド
-  - バーコード
-  - 形状認識
-  - 実験的
-browser-compat: api.BarcodeDetector.detect
-translation_of: Web/API/BarcodeDetector/detect
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
 

@@ -4,7 +4,7 @@ slug: Web/API/HTMLElement/click
 ---
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLElement.click()`**方法可以用来模拟鼠标左键单击一个元素。
+**`HTMLElement.click()`** 方法可以用来模拟鼠标左键单击一个元素。
 
 当在支持 `click()` 方法的元素上使用该方法（例如
 {{HTMLElement("input")}}) ，将会产生该元素的一个点击事件。这个事件会冒泡上升到文档树（或事件链）中更高的元素，并触发它们的点击事件。

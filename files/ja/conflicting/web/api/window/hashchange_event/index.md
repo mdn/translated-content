@@ -1,15 +1,6 @@
 ---
 title: WindowEventHandlers.onhashchange
 slug: conflicting/Web/API/Window/hashchange_event
-tags:
-  - Event Handler
-  - HTML DOM
-  - Hash
-  - Property
-  - Reference
-  - URL & Hash
-  - WindowEventHandlers
-translation_of: Web/API/WindowEventHandlers/onhashchange
 original_slug: Web/API/WindowEventHandlers/onhashchange
 ---
 {{APIRef("HTML DOM")}}

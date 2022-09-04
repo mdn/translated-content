@@ -1,16 +1,6 @@
 ---
 title: HTMLMediaElement.controller
 slug: Web/API/HTMLMediaElement/controller
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Web
-  - Deprecated
-browser-compat: api.HTMLMediaElement.controller
-translation_of: Web/API/HTMLMediaElement/controller
 ---
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 

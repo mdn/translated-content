@@ -1,13 +1,6 @@
 ---
 title: HTMLTableSectionElement
 slug: Web/API/HTMLTableSectionElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-browser-compat: api.HTMLTableSectionElement
-translation_of: Web/API/HTMLTableSectionElement
 ---
 {{ APIRef("HTML DOM") }}
 

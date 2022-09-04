@@ -1,14 +1,6 @@
 ---
 title: CSSMediaRule.media
 slug: Web/API/CSSMediaRule/media
-tags:
-  - API
-  - CSSOM
-  - CSSMediaRule
-  - プロパティ
-  - リファレンス
-browser-compat: api.CSSMediaRule.media
-translation_of: Web/API/CSSMediaRule/media
 ---
 {{ APIRef("CSSOM") }}
 

@@ -1,16 +1,6 @@
 ---
 title: BaseAudioContext.createDelay()
 slug: Web/API/BaseAudioContext/createDelay
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - createDelay
-browser-compat: api.BaseAudioContext.createDelay
-translation_of: Web/API/BaseAudioContext/createDelay
 original_slug: Web/API/AudioContext/createDelay
 ---
 {{ APIRef("Web Audio API") }}

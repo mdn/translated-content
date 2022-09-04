@@ -1,18 +1,6 @@
 ---
 title: Effective connection type (有効接続種別)
 slug: Glossary/Effective_connection_type
-tags:
-  - Glossary
-  - Navigator
-  - Network Information API
-  - NetworkInformation
-  - Performance
-  - Reference
-  - Web Performance
-  - connect
-  - effective connection type
-  - effectiveType
-translation_of: Glossary/Effective_connection_type
 ---
 **有効接続種別** (ECT) とは、測定されたネットワーク性能のことで、実際の接続がテザリングされたブロードバンドや WiFi であっても、ブラウザーのページのリクエストの時間とと有効接続種別に基づいて、 3G などの携帯通信接続種別を返します。
 

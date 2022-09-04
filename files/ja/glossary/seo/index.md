@@ -1,13 +1,6 @@
 ---
 title: SEO
 slug: Glossary/SEO
-tags:
-  - Glossary
-  - Intro
-  - SEO
-  - Search
-  - WebMechanic
-translation_of: Glossary/SEO
 ---
 **SEO** (Search Engine Optimization, 検索エンジン最適化)は、検索結果上であるウェブサイトをより目立たさせるための過程です。検索ランキングの改善とも言えます。
 

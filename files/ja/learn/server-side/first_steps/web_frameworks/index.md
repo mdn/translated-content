@@ -175,13 +175,13 @@ def youngest(request):
 
 > **Note:** [Django](https://www.djangoproject.com/) (Python) と [Express](http://expressjs.com/) (Node/JavaScript) のメインウェブサイトに行き、それらのドキュメントとコミュニティを調べてみましょう。
 >
-> 1.  メインサイトに移動する (上記のリンク先)
+> 1. メインサイトに移動する (上記のリンク先)
 >
 >     - Documentation メニューのリンク (Documentation、Guide、API Reference、Getting Started など) をクリックします。
 >     - URL ルーティング、テンプレート、データベース/モデルの設定方法を説明したトピックはありますか？
 >     - ドキュメントは明確ですか？
 >
-> 2.  各サイトのメーリングリストに移動します (コミュニティリンクからアクセス可能)。
+> 2. 各サイトのメーリングリストに移動します (コミュニティリンクからアクセス可能)。
 >
 >     - 過去数日間に投稿された質問の数
 >     - 回答はいくつありますか？

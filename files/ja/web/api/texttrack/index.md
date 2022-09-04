@@ -1,17 +1,6 @@
 ---
 title: TextTrack
 slug: Web/API/TextTrack
-tags:
-  - API
-  - Interface
-  - Media
-  - Reference
-  - TextTrack
-  - TopicStub
-  - Web
-  - WebVTT
-  - インターフェイス
-translation_of: Web/API/TextTrack
 ---
 {{APIRef("WebVTT")}}
 

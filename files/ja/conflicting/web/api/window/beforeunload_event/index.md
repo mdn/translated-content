@@ -1,16 +1,6 @@
 ---
 title: WindowEventHandlers.onbeforeunload
 slug: conflicting/Web/API/Window/beforeunload_event
-tags:
-  - API
-  - DOM
-  - Event Handler
-  - Property
-  - Reference
-  - Window
-  - イベントハンドラー
-  - プロパティ
-translation_of: Web/API/WindowEventHandlers/onbeforeunload
 original_slug: Web/API/WindowEventHandlers/onbeforeunload
 ---
 {{APIRef("HTML DOM")}}

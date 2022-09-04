@@ -1,15 +1,6 @@
 ---
 title: HTMLMediaElement.defaultPlaybackRate
 slug: Web/API/HTMLMediaElement/defaultPlaybackRate
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Web
-browser-compat: api.HTMLMediaElement.defaultPlaybackRate
-translation_of: Web/API/HTMLMediaElement/defaultPlaybackRate
 ---
 {{APIRef("HTML DOM")}}
 

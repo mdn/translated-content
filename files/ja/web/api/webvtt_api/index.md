@@ -1,18 +1,6 @@
 ---
 title: Web ビデオテキストトラックフォーマット (WebVTT)
 slug: Web/API/WebVTT_API
-tags:
-  - API
-  - Intermediate
-  - Media
-  - Reference
-  - Video
-  - Web Video Text Tracks
-  - WebVTT
-  - captions
-  - subtitles
-  - text tracks
-translation_of: Web/API/WebVTT_API
 ---
 {{DefaultAPISidebar("WebVTT")}}
 

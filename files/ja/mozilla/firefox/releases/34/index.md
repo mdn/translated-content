@@ -1,10 +1,6 @@
 ---
 title: Firefox 34 for developers
 slug: Mozilla/Firefox/Releases/34
-tags:
-  - Firefox
-  - Releases
-translation_of: Mozilla/Firefox/Releases/34
 ---
 Gecko 34 を搭載した Firefox 34 は、米国時間 2014 年 12 月 1 日にリリースされました。このページでは、開発者に影響する Firefox 34 の変更点をまとめています。
 
@@ -54,7 +50,7 @@ _変更なし。_
 - ES6 の新たなオブジェクトである {{jsxref("WeakSet")}} を実装しました ({{bug(792439)}})。
 - 最近の仕様の変更に合致するよう、ES6 の [Symbol](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (Nightly チャンネルのみ有効) を更新しました ({{bug(1042602)}}):
 
-  - symbol を数値に変換しようとしたときに、[`TypeError`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypeError "The TypeError object represents an error when a value is not of the expected type.") が発生するようになりました。
+  - symbol を数値に変換しようとしたときに、[`TypeError`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypeError) が発生するようになりました。
   - 寛容な等価性を使用するとき、`Object(sym) == sym` は `true` を返すようになりました。
 
 - 実験的な実装であった {{jsxref("TypedArray.prototype.move()")}} メソッド (以前の Nightly および Aurora チャンネルでのみ有効) を、ES6 標準の {{jsxref("TypedArray.prototype.copyWithin()")}} メソッドの実装で置き換えました ({{bug(1021379)}})。

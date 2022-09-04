@@ -1,15 +1,6 @@
 ---
 title: CustomElementRegistry.whenDefined()
 slug: Web/API/CustomElementRegistry/whenDefined
-tags:
-  - API
-  - CustomElementRegistry
-  - メソッド
-  - リファレンス
-  - ウェブコンポーネント
-  - カスタム要素
-  - whenDefined
-translation_of: Web/API/CustomElementRegistry/whenDefined
 ---
 {{APIRef("CustomElementRegistry")}}
 

@@ -1,16 +1,6 @@
 ---
 title: MouseEvent.shiftKey
 slug: Web/API/MouseEvent/shiftKey
-tags:
-  - API
-  - DOM
-  - DOM イベント
-  - MouseEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.MouseEvent.shiftKey
-translation_of: Web/API/MouseEvent/shiftKey
 ---
 {{APIRef("DOM Events")}}
 

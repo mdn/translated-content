@@ -1,16 +1,6 @@
 ---
 title: WakeLockSentinel.release()
 slug: Web/API/WakeLockSentinel/release
-tags:
-  - API
-  - Method
-  - リファレンス
-  - 画面起動ロック API
-  - 起動ロック
-  - WakeLockSentinel
-  - 画面
-browser-compat: api.WakeLockSentinel.release
-translation_of: Web/API/WakeLockSentinel/release
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 

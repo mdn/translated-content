@@ -1,11 +1,6 @@
 ---
 title: URL
 slug: Glossary/URL
-tags:
-  - Glossary
-  - Infrastructure
-  - l10n:priority
-translation_of: Glossary/URL
 ---
 **Uniform Resource Locator** (**URL**) はインターネット上における(ウェブページや画像や動画といった)リソースの位置を特定するための文字列です。
 

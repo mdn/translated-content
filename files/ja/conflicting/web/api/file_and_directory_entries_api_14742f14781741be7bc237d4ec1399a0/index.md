@@ -1,20 +1,6 @@
 ---
 title: FileSystemEntrySync
-slug: >-
-  conflicting/Web/API/File_and_Directory_Entries_API_14742f14781741be7bc237d4ec1399a0
-tags:
-  - API
-  - EntrySync
-  - File API
-  - File System API
-  - File and Directory Entries API
-  - FileSystemEntrySync
-  - インターフェイス
-  - オフライン
-  - ファイルシステム
-  - リファレンス
-  - 非標準
-translation_of: Web/API/FileSystemEntrySync
+slug: conflicting/Web/API/File_and_Directory_Entries_API_14742f14781741be7bc237d4ec1399a0
 original_slug: Web/API/FileSystemEntrySync
 ---
 {{APIRef("File System API")}}{{Non-standard_header()}}

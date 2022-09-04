@@ -27,22 +27,22 @@ CSS が HTML のスタイル設定できるようになってからも、ユー�
 
 いくつかの要素はプラットフォーム間の問題があるとしても、ほとんど問題なくスタイルを設定できます。これらは以下の構造的な要素が含まれます:
 
-1.  {{HTMLElement("form")}}
-2.  {{HTMLElement("fieldset")}} と {{HTMLElement("legend")}}
-3.  単一行のテキスト {{HTMLElement("input")}} (例 text, url, email...のタイプ) [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search)を除く
-4.  複数行の {{HTMLElement("textarea")}}
-5.  ボタン ({{HTMLElement("input")}} と {{HTMLElement("button")}}の両方)
-6.  {{HTMLElement("label")}}
-7.  {{HTMLElement("output")}}
+1. {{HTMLElement("form")}}
+2. {{HTMLElement("fieldset")}} と {{HTMLElement("legend")}}
+3. 単一行のテキスト {{HTMLElement("input")}} (例 text, url, email...のタイプ) [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search)を除く
+4. 複数行の {{HTMLElement("textarea")}}
+5. ボタン ({{HTMLElement("input")}} と {{HTMLElement("button")}}の両方)
+6. {{HTMLElement("label")}}
+7. {{HTMLElement("output")}}
 
 #### 不良
 
 一部の要素はほとんどスタイル設定ができず、時に CSS3 の高度な知識やトリックが必要になるかもしれません。
 
-1.  チェックボックスとラジオボタン
-2.  [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search)
+1. チェックボックスとラジオボタン
+2. [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search)
 
-これら特殊なケースをどのように扱うかについては、[HTML フォームへの高度なスタイル設定](/ja/docs/Advanced_styling_for_HTML_forms "Advanced_styling_for_HTML_forms")の記事で見ていきます。
+これら特殊なケースをどのように扱うかについては、[HTML フォームへの高度なスタイル設定](/ja/docs/Advanced_styling_for_HTML_forms)の記事で見ていきます。
 
 #### 劣悪
 
@@ -55,17 +55,17 @@ CSS が HTML のスタイル設定できるようになってからも、ユー�
 - ドロップダウンウィジェットの作成に含まれる要素、{{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("datalist")}}を含む。
 - {{HTMLElement("progress")}} と {{HTMLElement("meter")}}
 
-これらの要素をスタイル設定するのに関して何ができるかについては、[HTML フォームへの高度なスタイル設定](/ja/docs/Advanced_styling_for_HTML_forms "Advanced_styling_for_HTML_forms")の記事で見ていきます。
+これらの要素をスタイル設定するのに関して何ができるかについては、[HTML フォームへの高度なスタイル設定](/ja/docs/Advanced_styling_for_HTML_forms)の記事で見ていきます。
 
 これらすべてのウィジェットの主な問題は、ウィジェットの構造がとても複雑であるという事実と、(コントロールの width や margin の変更といった)基本的なスタイル設定を超えると、現在の CSS では(例えばカレンダー日付ピッカーや、選択肢のリストを表示する\<select>のボタンのような)ウィジェットの細かい部分すべてにスタイルを設定できるほどの表現力がないことによります。
 
-これらのウィジェットを完全にカスタマイズしたい場合は、HTML, CSS, JavaScript を使って独自のものを作成する必要があります。それはこのコアフォームの記事の範囲を超えますが、高度な記事の[カスタムウィジェットの作成方法](/ja/docs/HTML/Forms/How_to_build_custom_form_widgets "HTML/Forms/How_to_build_custom_form_widgets")の記事で説明します。
+これらのウィジェットを完全にカスタマイズしたい場合は、HTML, CSS, JavaScript を使って独自のものを作成する必要があります。それはこのコアフォームの記事の範囲を超えますが、高度な記事の[カスタムウィジェットの作成方法](/ja/docs/HTML/Forms/How_to_build_custom_form_widgets)の記事で説明します。
 
 > **Note:** フォームコントロールの内部コンポーネントにスタイル設定するプロプライエタリな CSS 疑似要素、例えば {{cssxref('::-moz-range-track')}}がありますが、これはブラウザー同士で整合していないので、これに頼るべきではありません。これについては後程でも触れます。
 
 ## 良好
 
-CSS での[スタイル設定が容易な要素](/ja/docs/HTML/Forms/Styling_HTML_forms#The_good "HTML/Forms/Styling_HTML_forms#The_good")は、振る舞いが他の HTML 要素とほとんど同じであるため、問題に直面することはないでしょう。ただし、ブラウザー間でユーザーエージェントのスタイルシートが若干矛盾するかもしれませんので、より簡単にスタイルを設定できるようにするためのトリックがあります。
+CSS での[スタイル設定が容易な要素](/ja/docs/HTML/Forms/Styling_HTML_forms#The_good)は、振る舞いが他の HTML 要素とほとんど同じであるため、問題に直面することはないでしょう。ただし、ブラウザー間でユーザーエージェントのスタイルシートが若干矛盾するかもしれませんので、より簡単にスタイルを設定できるようにするためのトリックがあります。
 
 上記で述べた基本的な CSS ツールと同じく、いくつかのセレクターが与えられます — UI 疑似クラス — これにより現在の UI の状態に基づくスタイル設定ができます。これは次の記事である、[UI 疑似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)で扱います。
 
@@ -149,7 +149,7 @@ HTML フォームにスタイルを設定する方法の具体例を見ていき
 
 ### HTML
 
-HTML は、[ガイドの最初の記事](/ja/docs/HTML/Forms/My_first_HTML_form "HTML/Forms/My_first_HTML_form")で使用したものより少しだけ複雑です。いくつか ID やタイトルを追加しています。
+HTML は、[ガイドの最初の記事](/ja/docs/HTML/Forms/My_first_HTML_form)で使用したものより少しだけ複雑です。いくつか ID やタイトルを追加しています。
 
 ```html
 <form>
@@ -182,16 +182,16 @@ HTML は、[ガイドの最初の記事](/ja/docs/HTML/Forms/My_first_HTML_form 
 
 ここからがおもしろいところです! コードを書き始める前に、ここでは 3 つの追加要素が必要です:
 
-1.  はがきの[背景](/files/4151/background.jpg "The postcard background") — この画像をダウンロードして作業している HTML ファイルと同じディレクトリーに保存します。
-2.  タイプライター風フォント: [fontsquirrel.com の "Secret Typewriter" ](http://www.fontsquirrel.com/fonts/Secret-Typewriter)— TTF ファイルを上記と同じディレクトリーにダウンロードします。
-3.  手書き風フォント: [fontsquirrel.com の "Journal" ](http://www.fontsquirrel.com/fonts/Journal)— TTF ファイルを上記と同じディレクトリーにダウンロードします。
+1. はがきの[背景](/files/4151/background.jpg) — この画像をダウンロードして作業している HTML ファイルと同じディレクトリーに保存します。
+2. タイプライター風フォント: [fontsquirrel.com の "Secret Typewriter"](http://www.fontsquirrel.com/fonts/Secret-Typewriter)— TTF ファイルを上記と同じディレクトリーにダウンロードします。
+3. 手書き風フォント: [fontsquirrel.com の "Journal"](http://www.fontsquirrel.com/fonts/Journal)— TTF ファイルを上記と同じディレクトリーにダウンロードします。
 
 始める前にフォントの処理が必要です:
 
-1.  fontsquirrel [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator) に移動します。
-2.  フォームを使って、両方のフォントファイルをアップロードして webfont キットを生成します。キットをコンピューターにダウンロードします。
-3.  zip ファイルを展開します。
-4.  展開した中身には 2 つの `.woff` ファイルと 2 つの `.woff2` ファイルがあります。このファイルを、前と同じ fonts というディレクトリーにコピーします。各フォントの 2 つのファイルはブラウザー互換性を最大化するのに使います; より詳しい情報は [Web fonts](/ja/docs/Learn/CSS/Styling_text/Web_fonts) の記事を見てください。
+1. fontsquirrel [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator) に移動します。
+2. フォームを使って、両方のフォントファイルをアップロードして webfont キットを生成します。キットをコンピューターにダウンロードします。
+3. zip ファイルを展開します。
+4. 展開した中身には 2 つの `.woff` ファイルと 2 つの `.woff2` ファイルがあります。このファイルを、前と同じ fonts というディレクトリーにコピーします。各フォントの 2 つのファイルはブラウザー互換性を最大化するのに使います; より詳しい情報は [Web fonts](/ja/docs/Learn/CSS/Styling_text/Web_fonts) の記事を見てください。
 
 ### CSS
 
@@ -315,7 +315,7 @@ textarea {
 
 #### 送信ボタンにスタイル設定する
 
-{{HTMLElement("button")}} 要素は、CSS によってより便利になります。[疑似要素](/ja/docs/CSS/Pseudo-elements "CSS/Pseudo-elements")を含めて、行いたいことが何でもできます!
+{{HTMLElement("button")}} 要素は、CSS によってより便利になります。[疑似要素](/ja/docs/CSS/Pseudo-elements)を含めて、行いたいことが何でもできます!
 
 ```css
 button {
@@ -354,7 +354,7 @@ button:focus {
 
 ## まとめ
 
-ご覧いただいたとおり、テキストフィールドとボタンだけでフォームを作成する限りでは、CSS を使用したスタイル設定は容易です。[次の記事では](/ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms "Advanced_styling_for_HTML_forms")、"不良" や "劣悪" カテゴリに入っているウィジェットの扱い方を見ていきます。
+ご覧いただいたとおり、テキストフィールドとボタンだけでフォームを作成する限りでは、CSS を使用したスタイル設定は容易です。[次の記事では](/ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)、"不良" や "劣悪" カテゴリに入っているウィジェットの扱い方を見ていきます。
 
 {{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 

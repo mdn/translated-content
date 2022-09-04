@@ -1,14 +1,6 @@
 ---
 title: Localization (ローカライゼーション)
 slug: Glossary/Localization
-tags:
-  - Collaborating
-  - Glossary
-  - Intro
-  - Localization
-  - WebMechanics
-  - ローカライズ
-translation_of: Glossary/Localization
 original_slug: Localization
 ---
 **ローカライゼーション**（ローカライズ）とは、ソフトウェアのユーザーインターフェイスを特定の文化に適合させるプロセスです。

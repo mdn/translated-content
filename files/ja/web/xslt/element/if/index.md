@@ -16,7 +16,7 @@ translation_of: Web/XSLT/Element/if
 
 ```
 <xsl:if test=EXPRESSION>
-	TEMPLATE
+  TEMPLATE
 </xsl:if>
 ```
 

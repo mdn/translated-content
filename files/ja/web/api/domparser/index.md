@@ -78,9 +78,9 @@ let doc = parser.parseFromString(stringContainingXMLSource, "application/xml")
 
 `DOMParser` は SVG 文書のパース {{geckoRelease("10.0")}}、そして HTML 文書のパース {{geckoRelease("12.0")}} にも用いることができます。指定された MIME type によって 3 つの異なる結果となります。
 
-1.  MIME type が `text/xml` の場合、`XMLDocument` が返されます。
-2.  MIME type が `image/svg+xml` の場合、`SVGDocument` が返されます。
-3.  MIME type が `text/html` の場合、`HTMLDocument` が返されます。
+1. MIME type が `text/xml` の場合、`XMLDocument` が返されます。
+2. MIME type が `image/svg+xml` の場合、`SVGDocument` が返されます。
+3. MIME type が `text/html` の場合、`HTMLDocument` が返されます。
 
 ```js
 let parser = new DOMParser()
@@ -112,33 +112,33 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html")
 /*global document, DOMParser*/
 
 (function(DOMParser) {
-	"use strict";
+  "use strict";
 
-	var proto = DOMParser.prototype,
-	nativeParse = proto.parseFromString;
+  var proto = DOMParser.prototype,
+  nativeParse = proto.parseFromString;
 
-	// Firefox/Opera/IE throw errors on unsupported types
-	try {
-		// WebKit returns null on unsupported types
-		if ((new DOMParser()).parseFromString("", "text/html")) {
-			// text/html parsing is natively supported
-			return;
-		}
-	} catch (ex) {}
+  // Firefox/Opera/IE throw errors on unsupported types
+  try {
+    // WebKit returns null on unsupported types
+    if ((new DOMParser()).parseFromString("", "text/html")) {
+      // text/html parsing is natively supported
+      return;
+    }
+  } catch (ex) {}
 
-	proto.parseFromString = function(markup, type) {
-		if (/^\s*text\/html\s*(?:;|$)/i.test(type)) {
-			var doc = document.implementation.createHTMLDocument("");
-				if (markup.toLowerCase().indexOf('<!doctype') > -1) {
-					doc.documentElement.innerHTML = markup;
-				} else {
-					doc.body.innerHTML = markup;
-				}
-			return doc;
-		} else {
-			return nativeParse.apply(this, arguments);
-		}
-	};
+  proto.parseFromString = function(markup, type) {
+    if (/^\s*text\/html\s*(?:;|$)/i.test(type)) {
+      var doc = document.implementation.createHTMLDocument("");
+        if (markup.toLowerCase().indexOf('<!doctype') > -1) {
+          doc.documentElement.innerHTML = markup;
+        } else {
+          doc.body.innerHTML = markup;
+        }
+      return doc;
+    } else {
+      return nativeParse.apply(this, arguments);
+    }
+  };
 }(DOMParser));
 ```
 

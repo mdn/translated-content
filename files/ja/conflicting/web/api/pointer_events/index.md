@@ -1,11 +1,6 @@
 ---
 title: TouchEvent と MouseEvent の両方をサポートする
 slug: conflicting/Web/API/Pointer_events
-tags:
-  - Guide
-  - TouchEvent
-  - touch
-translation_of: Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent
 original_slug: Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent
 ---
 {{DefaultAPISidebar("Touch Events")}}

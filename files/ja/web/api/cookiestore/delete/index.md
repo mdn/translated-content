@@ -1,13 +1,6 @@
 ---
 title: CookieStore.delete()
 slug: Web/API/CookieStore/delete
-tags:
-  - API
-  - Method
-  - Reference
-  - delete()
-  - CookieStore
-browser-compat: api.CookieStore.delete
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
 

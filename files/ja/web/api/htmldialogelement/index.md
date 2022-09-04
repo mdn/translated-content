@@ -1,15 +1,6 @@
 ---
 title: HTMLDialogElement
 slug: Web/API/HTMLDialogElement
-tags:
-  - API
-  - Experimental
-  - HTML DOM
-  - HTMLDialogElement
-  - Interface
-  - Reference
-  - インターフェイス
-translation_of: Web/API/HTMLDialogElement
 ---
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 

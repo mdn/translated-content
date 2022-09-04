@@ -1,14 +1,6 @@
 ---
 title: HTMLSelectElement.form
 slug: Web/API/HTMLSelectElement/form
-tags:
-  - API
-  - HTMLSelectElement
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.HTMLSelectElement.form
-translation_of: Web/API/HTMLSelectElement/form
 ---
 {{ APIRef("HTML DOM") }}
 

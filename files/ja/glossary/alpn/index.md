@@ -1,13 +1,6 @@
 ---
 title: ALPN
 slug: Glossary/ALPN
-tags:
-  - ALPN
-  - Draft
-  - Glossary
-  - NeedsContent
-  - TLS
-translation_of: Glossary/ALPN
 l10n:
   sourceCommit: 5525ac4f1e28d94beedee7196981eac0377f7bc3
 ---

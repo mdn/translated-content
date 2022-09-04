@@ -1,17 +1,6 @@
 ---
 title: BaseAudioContext
 slug: Web/API/BaseAudioContext
-tags:
-  - API
-  - 音声
-  - BaseAudioContext
-  - コンテキスト
-  - インターフェイス
-  - リファレンス
-  - ウェブ音声 API
-  - sound
-browser-compat: api.BaseAudioContext
-translation_of: Web/API/BaseAudioContext
 ---
 {{APIRef("Web Audio API")}}
 

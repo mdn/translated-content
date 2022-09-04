@@ -44,7 +44,7 @@ Rendering in your browser: <math><msup><mi>X</mi> <mn>2</mn></msup></math>
 
 ### Gecko-specific notes
 
-- Starting with Gecko 26.0 {{geckoRelease("26")}} it is no longer possible to use `<none />` as a child element. The rendering has been made more consistent with equivalent configurations of {{MathMLElement("msub")}} and {{MathMLElement("mmultiscripts")}} and a bug with an incorrect application of` the superscriptshift` attribute has been fixed (see {{bug("827713")}} for details).
+- Starting with Gecko 26.0 {{geckoRelease("26")}} it is no longer possible to use `<none />` as a child element. The rendering has been made more consistent with equivalent configurations of {{MathMLElement("msub")}} and {{MathMLElement("mmultiscripts")}} and a bug with an incorrect application of the `superscriptshift` attribute has been fixed (see {{bug("827713")}} for details).
 
 ## 仕様
 
