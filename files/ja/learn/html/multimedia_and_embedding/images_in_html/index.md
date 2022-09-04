@@ -14,7 +14,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 単に画像を Web ページに配置するには、{{htmlelement("img")}} 要素を使用します。これは有用であるために少なくとも 1 つの属性 — `src` (フルタイトルやソースと呼ばれることもあります) を必要とする {{glossary("empty element","空要素")}} (テキストコンテンツまたは終了タグがないことを意味する) です。`src` 属性には、{{htmlelement("a")}} 要素の `href` 属性値と同じように、ページに埋め込む画像を指すパスが含まれ、相対 URL または絶対 URL にすることができます。
 
-> **Note:** 続行する前に、[URL とパスに関する簡単な入門](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths)を読んで、相対 URL と絶対 URL のメモリを更新してください。
+> **Note:** 続行する前に、[URL とパスに関する簡単な入門](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#url_とパスに関する簡単な入門)を読んで、相対 URL と絶対 URL のメモリを更新してください。
 
 例えば、画像が `dinosaur.jpg` というファイル名で、HTML ページと同じディレクトリーにある場合、画像を次のように埋め込むことができます。
 
@@ -82,7 +82,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 - **装飾**。装飾画像に [CSS 背景画像](#css_background_images)を使用する必要がありますが、HTML を使用する必要がある場合は空白の `alt=""` を追加してください。画像がコンテンツの一部でない場合、スクリーンリーダーは時間を浪費してはなりません。
 - **コンテンツ**。画像が重要な情報を提供している場合は、簡単な代替テキストで同じ情報を提供する。それよりもっと良いのは、誰もが見ることができる本文の中で提供する。冗長な代替テキストを書き込まないでください。すべての段落がメインコンテンツに 2 回書かれていると、目に見えるユーザにとってはどれほど迷惑でしょうか? 画像が主たる本文で十分に記述されている場合は、単に `alt=""` を使用できます。
-- **リンク**。{{htmlelement("a")}} タグ内に画像を置くと、画像をリンクに変えるためには、依然として[アクセス可能なリンクテキスト](/ja/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Use_clear_link_wording)を提供する必要があります。そのような場合は、同じ `<a>` 要素内に、または画像の `alt` 属性内に書き込むことができます。
+- **リンク**。{{htmlelement("a")}} タグ内に画像を置くと、画像をリンクに変えるためには、依然として[アクセス可能なリンクテキスト](/ja/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#明確なリンク語を使う)を提供する必要があります。そのような場合は、同じ `<a>` 要素内に、または画像の `alt` 属性内に書き込むことができます。
 - **テキスト**。テキストを画像に入れないでください。たとえば、メインの見出しにドロップシャドウが必要な場合は、テキストを画像に入れるのではなく、[CSS を使用](/ja/docs/Web/CSS/text-shadow)します。しかし、これが避けられない場合は、`alt` 属性にテキストを与える必要があります。
 
 基本的には、画像が見えないときでも、実用的な体験を提供することが鍵です。これにより、すべてのユーザにコンテンツが欠落していないことが保証されます。ブラウザーの画像をオフにして、どのように見えるかを確認してください。画像が見えない場合に、すぐに役立つ代替テキストがどれほどあるかをすぐに理解できます。
@@ -113,7 +113,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 ### 画像のタイトル
 
-[リンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Adding_supporting_information_with_the_title_attribute)と同様に、画像に `title` 属性を追加して、必要に応じてさらにサポート情報を提供することもできます。この例では、これを行うことができます。
+[リンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#title_属性による補足情報の追加)と同様に、画像に `title` 属性を追加して、必要に応じてさらにサポート情報を提供することもできます。この例では、これを行うことができます。
 
 ```html
 <img src="images/dinosaur.jpg"
