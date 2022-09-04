@@ -26,8 +26,8 @@ An author of a webpage can add microformats to their HTML. For example if they w
 
 ### HTML の例
 
-```
-<a class="h-card" href="http://alice.example.com">Alice Blogger</a>
+```html
+<a class="h-card" href="https://alice.example.com">Alice Blogger</a>
 ```
 
 When a parser encounters this data, it will know that this page contains a "card" which describes a person or organization named `Alice Blogger` with a URL of `http://alice.example.com/`. The parser makes this data available via APIs that can be used for different applications.
@@ -71,10 +71,10 @@ The value of each property is defined in HTML using the class property any eleme
 
 #### h-card の例
 
-```
+```html
 <p class="h-card">
-  <img class="u-photo" src="http://example.org/photo.png" alt="" />
-  <a class="p-name u-url" href="http://example.org">Joe Bloggs</a>
+  <img class="u-photo" src="https://example.org/photo.png" alt="" />
+  <a class="p-name u-url" href="https://example.org">Joe Bloggs</a>
   <a class="u-email" href="mailto:joebloggs@example.com">joebloggs@example.com</a>,
   <span class="p-street-address">17 Austerstræti</span>
   <span class="p-locality">Reykjavík</span>
@@ -95,32 +95,32 @@ The value of each property is defined in HTML using the class property any eleme
 
 #### 入れ子になった h-card の例
 
-```
+```html
 <div class="h-card">
   <a class="p-name u-url"
-   href="http://blog.lizardwrangler.com/"
+   href="https://blog.lizardwrangler.com/"
   >Mitchell Baker</a>
   (<a class="p-org h-card"
-    href="http://mozilla.org/"
+    href="https://mozilla.org/"
    >Mozilla Foundation</a>)
 </div>
 ```
 
 Parsed JSON:
 
-```
+```json
 {
   "items": [{
   "type": ["h-card"],
   "properties": {
     "name": ["Mitchell Baker"],
-    "url": ["http://blog.lizardwrangler.com/"],
+    "url": ["https://blog.lizardwrangler.com/"],
     "org": [{
     "value": "Mozilla Foundation",
     "type": ["h-card"],
     "properties": {
       "name": ["Mozilla Foundation"],
-      "url": ["http://mozilla.org/"]
+      "url": ["https://mozilla.org/"]
     }
     }]
   }
@@ -136,10 +136,10 @@ The [h-entry](http://microformats.org/wiki/h-entry) microformat represents episo
 
 Example h-entry as a blog post:
 
-```
+```html
 <article class="h-entry">
   <h1 class="p-name">Microformats are amazing</h1>
-  <p>Published by <a class="p-author h-card" href="http://example.com">W. Developer</a>
+  <p>Published by <a class="p-author h-card" href="https://example.com">W. Developer</a>
    on <time class="dt-published" datetime="2013-06-13 12:00:00">13<sup>th</sup> June 2013</time></p>
 
   <p class="p-summary">In which I extoll the virtues of using microformats.</p>
@@ -162,12 +162,12 @@ Example h-entry as a blog post:
 
 #### Parsed reply h-entry example
 
-```
+```html
 <div class="h-entry">
   <p><span class="p-author h-card">
     <a href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106" ><img class="u-photo" src="https://quickthoughts.jgregorymcverry.com/file/2d6c9cfed7ac8e849f492b5bc7e6a630/thumb.jpg"/></a>
     <a class="p-name u-url" href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106">Greg McVerry</a></span>
-     Replied to <a class="u-in-reply-to" href="https://developer.mozilla.org/ja/docs/Web/HTML/microformats">a post on
+     Replied to <a class="u-in-reply-to" href="https://developer.mozilla.org/en-US/docs/Web/HTML/microformats">a post on
    <strong>developer.mozilla.org</strong> </a>:
   </p>
    <p class="p-name e-content">Hey thanks for making this microformats resource</p>
@@ -183,7 +183,7 @@ Example h-entry as a blog post:
     {
       "type": [ "h-entry" ],
       "properties": {
-        "in-reply-to": [ "https://developer.mozilla.org/ja/docs/Web/HTML/microformats" ],
+        "in-reply-to": [ "https://developer.mozilla.org/en-US/docs/Web/HTML/microformats" ],
         "name": [ "Hey thanks for making this microformats resource" ],
         "url": [ "https://quickthoughts.jgregorymcverry.com/2019/05/31/hey-thanks-for-making-this-microformats-resource" ],
         "published": [ "2019-05-31T14:19:09+0000" ],
@@ -217,12 +217,12 @@ The [h-feed](http://microformats.org/wiki/h-feed) is a stream or feed of [h-entr
 
 #### Example h-feed
 
-```
+```html
 <div class="h-feed">
   <h1 class="p-name">Microformats Blogs</h1>
   <article class="h-entry">
   <h2 class="p-name">Microformats are amazing</h2>
-  <p>Published by <a class="p-author h-card" href="http://example.com">W. Developer</a>
+  <p>Published by <a class="p-author h-card" href="https://example.com">W. Developer</a>
      on <time class="dt-published" datetime="2013-06-13 12:00:00">13<sup>th</sup> June 2013</time>
   </p>
   <p class="p-summary">In which I extoll the virtues of using microformats.</p>
@@ -248,7 +248,7 @@ The [h-feed](http://microformats.org/wiki/h-feed) is a stream or feed of [h-entr
 
 The `h-event` is for events on the web. h-event is often used with both event listings and individual event pages
 
-```
+```html
 <div class="h-event">
   <h1 class="p-name">Microformats Meetup</h1>
   <p>From
@@ -271,7 +271,7 @@ The `h-event` is for events on the web. h-event is often used with both event li
 
 #### Parsed h-event Example
 
-```
+```html
 <div class="h-event">
   <h2 class="p-name">IndieWeb Summit</h2>
   <time class="dt-start" datetime="2019-06-29T09:00:00-07:00">June 29, 2019 at 9:00am  (-0700)</time><br>through <time class="dt-end" datetime="2019-06-30T18:00:00-07:00">June 30, 2019 at 6:00pm (-0700)</time><br>
@@ -330,7 +330,7 @@ The `h-event` is for events on the web. h-event is often used with both event li
             "type": [ "h-card" ],
             "properties": {
               "name": [ "Mozilla" ],
-              p-street-address: [ "1120 NW Couch St" ]
+              "p-street-address": [ "1120 NW Couch St" ]
               "locality": [ "Portland" ],
               "region": [ "Oregon" ],
               "country": [ "US" ],
