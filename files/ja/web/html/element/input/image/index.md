@@ -1,20 +1,6 @@
 ---
 title: <input type="image">
 slug: Web/HTML/Element/input/image
-tags:
-  - 要素
-  - フォーム画像
-  - フォーム画像ボタン
-  - フォーム
-  - HTML
-  - HTML 画像ボタン
-  - HTML フォーム
-  - 画像ボタン
-  - Input
-  - 入力型
-  - Number
-  - リファレンス
-translation_of: Web/HTML/Element/input/image
 ---
 
 {{HTMLRef}}

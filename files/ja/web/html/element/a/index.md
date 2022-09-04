@@ -1,20 +1,6 @@
 ---
 title: '<a>: アンカー要素'
 slug: Web/HTML/Element/a
-tags:
-  - コンテンツ
-  - 要素
-  - HTML
-  - HTML テキストレベルの意味づけ
-  - HTML:フローコンテンツ
-  - HTML:対話的コンテンツ
-  - HTML:知覚可能コンテンツ
-  - HTML:記述コンテンツ
-  - インライン要素
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.a
-translation_of: Web/HTML/Element/a
 ---
 
 {{HTMLRef}}

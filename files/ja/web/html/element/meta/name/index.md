@@ -1,14 +1,6 @@
 ---
 title: 標準メタデータ名
 slug: Web/HTML/Element/meta/name
-tags:
-  - Attribute
-  - HTML
-  - HTML document metadata
-  - Reference
-  - metadata
-translation_of: Web/HTML/Element/meta/name
-browser-compat: html.elements.meta.name
 ---
 {{HTMLRef}}
 

@@ -1,15 +1,6 @@
 ---
 title: '<style>: スタイル情報要素'
 slug: Web/HTML/Element/style
-tags:
-  - CSS
-  - Element
-  - HTML
-  - HTML document metadata
-  - Reference
-  - Style
-  - Web
-translation_of: Web/HTML/Element/style
 ---
 {{HTMLRef}}
 

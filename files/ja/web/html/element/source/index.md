@@ -1,15 +1,6 @@
 ---
 title: '<source>: メディアまたは画像のソース要素'
 slug: Web/HTML/Element/source
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - Media
-  - Reference
-  - Web
-  - Web Performance
-translation_of: Web/HTML/Element/source
 ---
 {{HTMLRef}}
 

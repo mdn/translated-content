@@ -1,12 +1,6 @@
 ---
 title: 'HTML 属性: multiple'
 slug: Web/HTML/Attributes/multiple
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - HTML
-translation_of: Web/HTML/Attributes/multiple
 ---
 {{HTMLSidebar}}
 

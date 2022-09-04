@@ -1,14 +1,6 @@
 ---
 title: <frame>
 slug: Web/HTML/Element/frame
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - Reference
-  - Web
-browser-compat: html.elements.frame
-translation_of: Web/HTML/Element/frame
 ---
 {{HTMLRef}}{{Deprecated_header}}
 

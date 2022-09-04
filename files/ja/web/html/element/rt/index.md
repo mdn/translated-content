@@ -1,16 +1,6 @@
 ---
 title: '<rt>: ルビ文字列要素'
 slug: Web/HTML/Element/rt
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Ruby
-  - Text
-  - Web
-browser-compat: html.elements.rt
-translation_of: Web/HTML/Element/rt
 ---
 {{HTMLRef}}
 
