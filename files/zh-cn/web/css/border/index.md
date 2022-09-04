@@ -6,7 +6,7 @@ slug: Web/CSS/border
 
 ## 概览
 
-[CSS](/zh-CN/docs/CSS)的 border 属性是一个用于设置各种单独的边界属性的[简写属性](Shorthand_properties)。border可以用于设置一个或多个以下属性的值：{{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}。
+[CSS](/zh-CN/docs/CSS) 的 **`border`** 属性是一个用于设置各种单独的边界属性的[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)。`border` 可以用于设置一个或多个以下属性的值：{{Cssxref("border-width")}}、{{Cssxref("border-style")}}、{{Cssxref("border-color")}}。
 
 {{EmbedInteractiveExample("pages/css/border.html")}}
 
@@ -16,7 +16,7 @@ slug: Web/CSS/border
 
 ### Borders vs. outlines
 
-边界`border`和轮廓`outline`很相似。然而轮廓在以下方面与边界不同：
+边界（`border`）和轮廓（`outline`）很相似。然而轮廓在以下方面与边界不同：
 
 - 轮廓不占据空间，他们在元素内容之外绘制。
 - 根据规范，轮廓不必为矩形，尽管通常是矩形。
@@ -53,7 +53,7 @@ border: unset;
 - border-style
   - : 请看 {{ Cssxref("border-style") }}.
 - border-color
-  - : {{cssxref("&lt;color&gt;")}} 可以确定 border 的颜色。如果这个值没有设置，它的默认值是元素的 {{cssxref("color")}} 属性值（是文字颜色而非背景色）。请看 {{ Cssxref("border-color") }}.
+  - : {{cssxref("&lt;color&gt;")}} 可以确定 border 的颜色。如果这个值没有设置，它的默认值是元素的 {{cssxref("color")}} 属性值（是文字颜色而非背景色）。请看 {{ Cssxref("border-color") }}。
 
 ### 形式语法
 
