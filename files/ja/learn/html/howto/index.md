@@ -10,17 +10,17 @@ slug: Learn/HTML/Howto
 
 HTML の最も基本的な適用は文書の構造化です。HTML に慣れていないならここから始めるべきです。
 
-- [基本的な HTML 文書を作成する方法](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Anatomy_of_an_HTML_document)
+- [基本的な HTML 文書を作成する方法](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started#html_文書の構成)
 - [Web ページを論理的なセクションに分割する方法](/ja/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [見出しと段落の適切な構成を設定する方法](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#The_basics_headings_and_paragraphs)
+- [見出しと段落の適切な構成を設定する方法](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#基本_見出しと段落)
 
 ### 基本的なテキストレベルのセマンティクス
 
 HTML は文書の意味的な情報を提供することに特化しているので、HTML 文書内でメッセージをうまく伝える方法についてあなたが抱えるかもしれない多くの質問に答えます。
 
-- [HTML を使ってリスト項目を作成する方法](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists)
-- [コンテンツを強調する方法](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Emphasis_and_importance)
-- [テキストが重要だと示す方法](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Emphasis_and_importance)
+- [HTML を使ってリスト項目を作成する方法](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#リスト)
+- [コンテンツを強調する方法](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#強調と重要性)
+- [テキストが重要だと示す方法](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#強調と重要性)
 - [HTML でコンピュータコードを表示する方法](/ja/docs/Learn/HTML/Introduction_to_HTML/高度なテキスト成型#Representing_computer_code)
 - [画像やグラフィックに注釈を付ける方法](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#Annotating_images_with_figures_and_figure_captions)
 - [略語をマークして理解しやすくする方法](/ja/docs/Learn/HTML/Introduction_to_HTML/高度なテキスト成型#Abbreviations)
@@ -32,7 +32,7 @@ HTML は文書の意味的な情報を提供することに特化しているの
 HTML のための主な理由は {{Glossary("hyperlink", "ハイパーリンク")}}, を使ってナビゲーションを簡単にすることで、それは色々な方法で使われます:
 
 - [ハイパーリンクを作成する方法](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [HTML を使って目次を作成する方法](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Active_learning_creating_a_navigation_menu)
+- [HTML を使って目次を作成する方法](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#アクティブラーニング_ナビゲーションメニューの作成)
 
 ### 画像とマルチメディア
 
