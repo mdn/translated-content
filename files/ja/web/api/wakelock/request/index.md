@@ -1,14 +1,6 @@
 ---
 title: WakeLock.request()
 slug: Web/API/WakeLock/request
-tags:
-  - API
-  - Method
-  - リファレンス
-  - 画面起動ロック API
-  - WakeLock
-browser-compat: api.WakeLock.request
-translation_of: Web/API/WakeLock/request
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 

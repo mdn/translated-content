@@ -1,15 +1,6 @@
 ---
 title: NetworkInformation.onchange
 slug: Web/API/NetworkInformation/change_event
-tags:
-  - API
-  - Event Handler
-  - Experimental
-  - Network Information API
-  - NetworkInformation
-  - Property
-  - Reference
-translation_of: Web/API/NetworkInformation/onchange
 original_slug: Web/API/NetworkInformation/onchange
 ---
 {{apiref("Network Information API")}}{{SeeCompatTable}}

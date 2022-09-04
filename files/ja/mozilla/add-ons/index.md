@@ -1,13 +1,6 @@
 ---
 title: アドオン
 slug: Mozilla/Add-ons
-tags:
-  - Add-ons
-  - Extension
-  - Extensions
-  - Landing
-  - Mozilla
-translation_of: Mozilla/Add-ons
 ---
 {{AddonSidebarMain}}
 

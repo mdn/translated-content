@@ -14,7 +14,7 @@ De plus, des colonnes peuvent être créées dans la grille implicite lorsque le
 
 Lorsque vous travaillez avec l'alignement dans [les grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout), l'axe vers le bas duquel les colonnes s'exécutent est connu comme l'axe de _colonne (ou bloc)_.
 
-## En apprendre plus
+## Voir aussi
 
 ### Références de propriété
 

@@ -1,18 +1,6 @@
 ---
 title: MediaSource.addSourceBuffer()
 slug: Web/API/MediaSource/addSourceBuffer
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media
-  - Media Source Extensions
-  - MediaSource
-  - Method
-  - Reference
-  - Video
-  - addSourceBuffer
-translation_of: Web/API/MediaSource/addSourceBuffer
 ---
 {{APIRef("Media Source Extensions")}}
 

@@ -1,6 +1,6 @@
 ---
 title: 移动设备上的无障碍
-slug: learn/Accessibility/Mobile
+slug: Learn/Accessibility/Mobile
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 

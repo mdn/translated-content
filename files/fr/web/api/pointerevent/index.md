@@ -98,16 +98,13 @@ Un exemple de chaque propriété, type d'évènement, et un gestionnaire d'évè
 
 ## Spécifications
 
-| Specification                                                                                        | Status                                   | Comment              |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Pointer Events 2','#pointerevent-interface', 'PointerEvent')}} | {{Spec2('Pointer Events 2')}} | Version non-stable.  |
-| {{SpecName('Pointer Events', '#pointerevent-interface', 'PointerEvent')}}     | {{Spec2('Pointer Events')}}     | Définition initiale. |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.PointerEvent")}}
+{{Compat}}
 
-## See also
+## Voir aussi
 
 - {{ domxref("Touch_events","Touch Events") }}
 - {{ domxref("GestureEvent") }}

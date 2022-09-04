@@ -1,15 +1,6 @@
 ---
 title: PerformanceObserver
 slug: Web/API/PerformanceObserver
-tags:
-  - API
-  - PerformanceObserver
-  - Web パフォーマンス
-  - observers
-  - インターフェイス
-  - パフォーマンスオブザーバー API
-  - リファレンス
-translation_of: Web/API/PerformanceObserver
 ---
 {{APIRef("Performance Timeline API")}}
 

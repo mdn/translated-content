@@ -1,11 +1,6 @@
 ---
 title: 文書作成のプロセス
 slug: MDN/Contribute/Processes
-tags:
-  - Landing
-  - MDN Meta
-  - Processes
-translation_of: MDN/Contribute/Processes
 ---
 {{MDNSidebar}}
 

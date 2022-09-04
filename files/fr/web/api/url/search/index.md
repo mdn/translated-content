@@ -37,13 +37,11 @@ var queryString = url.search; // Retourne:"?q=123"
 
 ## Spécifications
 
-| Spécification                                                        | État                 | Commentaire          |
-| -------------------------------------------------------------------- | -------------------- | -------------------- |
-| {{SpecName('URL', '#dom-url-search', 'URL.search')}} | {{Spec2('URL')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.URL.search")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,24 +1,6 @@
 ---
 title: Window.requestAnimationFrame()
 slug: Web/API/Window/requestAnimationFrame
-tags:
-  - API
-  - アニメーション
-  - Drawing
-  - Games
-  - Graphics
-  - HTML DOM
-  - 中級者
-  - JavaScript タイマー
-  - メソッド
-  - Performance
-  - リファレンス
-  - スケジュール
-  - Window
-  - requestAnimationFrame
-  - Polyfill
-browser-compat: api.Window.requestAnimationFrame
-translation_of: Web/API/window/requestAnimationFrame
 ---
 {{APIRef}}
 

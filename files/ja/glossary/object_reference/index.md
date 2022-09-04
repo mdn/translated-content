@@ -1,10 +1,6 @@
 ---
 title: Object reference (オブジェクト参照)
 slug: Glossary/Object_reference
-tags:
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/Object_reference
 ---
 **{{glossary("object", "オブジェクト")}}**へのリンクです。オブジェクト参照はまさにリンクされたオブジェクトのように使うことができます。
 

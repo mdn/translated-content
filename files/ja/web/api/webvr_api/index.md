@@ -1,17 +1,6 @@
 ---
 title: WebVR API
 slug: Web/API/WebVR_API
-tags:
-  - API
-  - Deprecated
-  - Experimental
-  - Landing
-  - Obsolete
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
-translation_of: Web/API/WebVR_API
 ---
 {{DefaultAPISidebar("WebVR API")}}{{Deprecated_Header}}
 

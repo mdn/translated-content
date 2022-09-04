@@ -1,12 +1,6 @@
 ---
 title: HTML
 slug: Glossary/HTML
-tags:
-  - CodingScripting
-  - Glossary
-  - HTML
-  - l10n:priority
-translation_of: Glossary/HTML
 l10n:
   sourceCommit: 6f6fab05dbcaddffe9ee5a4490f0ea02c791d5e7
 ---

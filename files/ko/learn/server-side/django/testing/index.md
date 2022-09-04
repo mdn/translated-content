@@ -128,7 +128,7 @@ catalog/
 >
 > 이 skeleton 파일은 우리에게 필요하지 않으니 지우십시오.
 
-**/catalog/tests/test_models.py** 파일을 오픈하십시오. 이 파일은 아래와 같이 `django.test.TestCase `가 import 되었을 것입니다.
+**/catalog/tests/test_models.py** 파일을 오픈하십시오. 이 파일은 아래와 같이 `django.test.TestCase` 가 import 되었을 것입니다.
 
 ```python
 from django.test import TestCase
@@ -864,7 +864,7 @@ The next test (add this to the class too) checks that the view redirects to a li
 >  self.assertRedirects(response, '/catalog/')
 > ```
 
-Copy the last two functions into the class, as seen below. These again test `POST` requests, but in this case with invalid renewal dates. We use `assertFormError() `to verify that the error messages are as expected.
+Copy the last two functions into the class, as seen below. These again test `POST` requests, but in this case with invalid renewal dates. We use `assertFormError()` to verify that the error messages are as expected.
 
 ```python
     def test_form_invalid_renewal_date_past(self):

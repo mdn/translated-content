@@ -23,8 +23,6 @@ _也继承了父代 {{domxref("Event")}} 的一些属性。_
   - : 返回一个 {{jsxref("Boolean")}}，表示该事件的冒泡是否被取消。
 - {{domxref("UIEvent.detail")}}{{readonlyinline}}
   - : Returns a `long` with details about the event, depending on the event type.
-- {{domxref("UIEvent.isChar")}} {{Deprecated_Inline}} {{readonlyinline}}
-  - : 返回一个 {{jsxref("Boolean")}}，表示该事件是否产生了一个键盘字符（key character）。
 - {{domxref("UIEvent.layerX")}} {{Non-standard_inline}} {{readonlyinline}}
   - : 返回事件相对于当前层的水平坐标。
 - {{domxref("UIEvent.layerY")}} {{Non-standard_inline}} {{readonlyinline}}

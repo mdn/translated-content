@@ -20,10 +20,8 @@ window.cancelIdleCallback(idleCallbackId);
 
 ## Spécifications
 
-| Spécification                                | Status                                   | Commentaire          |
-| -------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Background Tasks')}} | {{Spec2('Background Tasks')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.cancelIdleCallback")}}
+{{Compat}}

@@ -1,10 +1,6 @@
 ---
 title: DOM を使用したウェブと XML の開発の例
 slug: Web/API/Document_Object_Model/Examples
-tags:
-  - DOM
-  - DOM リファレンス
-translation_of: Web/API/Document_Object_Model/Examples
 ---
 {{DefaultAPISidebar("DOM")}}
 

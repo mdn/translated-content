@@ -1,21 +1,6 @@
 ---
 title: VideoTrackList.onchange
 slug: conflicting/Web/API/VideoTrackList/change_event
-tags:
-  - API
-  - Adding Tracks
-  - Adding Video Tracks
-  - Event Handler
-  - HTML DOM
-  - Media
-  - Property
-  - Reference
-  - Video
-  - VideoTrackList
-  - addTrack
-  - onchange
-  - track
-translation_of: Web/API/VideoTrackList/onchange
 original_slug: Web/API/VideoTrackList/onchange
 ---
 {{APIRef("HTML DOM")}}

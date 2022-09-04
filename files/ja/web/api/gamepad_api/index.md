@@ -8,19 +8,19 @@ slug: Web/API/Gamepad_API
 
 ## インターフェイス
 
-- [`Gamepad`](/ja/docs/Web/API/Gamepad "The Gamepad interface of the Gamepad API defines an individual gamepad or other controller, allowing access to information such as button presses, axis positions, and id.")
+- [`Gamepad`](/ja/docs/Web/API/Gamepad)
   - : コンピュータに接続しているゲームパッド・コントローラーを表します。
-- [`GamepadButton`](/ja/docs/Web/API/GamepadButton "The GamepadButton interface defines an individual button of a gamepad or other controller, allowing access to the current state of different types of buttons available on the control device.")
+- [`GamepadButton`](/ja/docs/Web/API/GamepadButton)
   - : 接続されているコントローラーのいずれかのボタンを表します。
-- [`GamepadEvent`](/ja/docs/Web/API/GamepadEvent "The GamepadEvent interface of the Gamepad API contains references to gamepads connected to the system, which is what the gamepad events Window.gamepadconnected and Window.gamepaddisconnected are fired in response to.")
+- [`GamepadEvent`](/ja/docs/Web/API/GamepadEvent)
   - : ゲームパッドに関連するイベントを表すイベントオブジェクトです。
 
 ### Gamepad の実験的な拡張機能
 
-- [`GamepadHapticActuator`](/ja/docs/Web/API/GamepadHapticActuator "The GamepadHapticActuator interface of the Gamepad API represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware.")
+- [`GamepadHapticActuator`](/ja/docs/Web/API/GamepadHapticActuator)
   - : ユーザに触覚フィードバックを提供するように設計されたコントローラー内のハードウェア (使用可能な場合)、最も一般的には振動ハードウェアを表します。
-- [`GamepadPose`](/ja/docs/Web/API/GamepadPose "The GamepadPose interface of the Gamepad API represents the pose of a WebVR controller at a given timestamp (which includes orientation, position, velocity, and acceleration information.)")
-  - : [WebVR ](/ja/docs/Web/API/WebVR_API)コントローラーの場合のコントローラーの姿勢 (3D 空間内の位置と向きなど) を表します。これはより新しい [WebXR](/ja/docs/Web/API/WebXR_Device_API) 標準では使用*されません。*
+- [`GamepadPose`](/ja/docs/Web/API/GamepadPose)
+  - : [WebVR](/ja/docs/Web/API/WebVR_API)コントローラーの場合のコントローラーの姿勢 (3D 空間内の位置と向きなど) を表します。これはより新しい [WebXR](/ja/docs/Web/API/WebXR_Device_API) 標準では使用*されません。*
 
 上記の情報にアクセスできる機能については、[Gamepad インターフェイスの拡張機能](/ja/docs/Web/API/Gamepad#Experimental_extensions_to_Gamepad)を参照してください。
 

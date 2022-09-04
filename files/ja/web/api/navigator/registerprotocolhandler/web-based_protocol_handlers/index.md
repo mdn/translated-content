@@ -1,12 +1,6 @@
 ---
 title: ウェブベースのプロトコルハンドラー
 slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
-page-type: guide
-tags:
-  - 上級者
-  - HTML5
-  - ウェブベースのプロトコルハンドラー
-translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 ---
 ## 背景
 

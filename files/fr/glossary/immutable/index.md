@@ -14,7 +14,7 @@ Un objet peut être immuable pour diverses raisons, par exemple :
 - Pour réduire la consommation mémoire (des {{glossary("Object reference","références d'objet")}} sont faites au lieu de cloner l'objet entier)
 - Thread-safety (plusieurs threads peuvent référencer le même objet sans qu'ils n'interfèrent entre eux)
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

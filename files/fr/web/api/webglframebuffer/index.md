@@ -32,13 +32,11 @@ var tampon = gl.createFramebuffer();
 
 ## Spécifications
 
-| Spécification                                                    | Statut                   | Commentaire          |
-| ---------------------------------------------------------------- | ------------------------ | -------------------- |
-| {{SpecName('WebGL', "#5.5", "WebGLFramebuffer")}} | {{Spec2('WebGL')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLFramebuffer")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,11 +1,6 @@
 ---
 title: Node.replaceChild
 slug: Web/API/Node/replaceChild
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Node.replaceChild
-translation_of: Web/API/Node/replaceChild
 ---
 {{APIRef("DOM")}}
 

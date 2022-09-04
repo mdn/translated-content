@@ -1,12 +1,6 @@
 ---
 title: MDN Web Docs のローカライズ
 slug: MDN/Community/Contributing/Translated_content
-page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
-translation_of: MDN/Contribute/Localize
 original_slug: MDN/Contribute/Localize
 l10n:
   sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7

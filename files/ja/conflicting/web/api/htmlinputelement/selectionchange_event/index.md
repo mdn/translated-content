@@ -1,15 +1,6 @@
 ---
 title: Document.onselectionchange
 slug: conflicting/Web/API/HTMLInputElement/selectionchange_event
-tags:
-  - API
-  - Document
-  - Experimental
-  - Reference
-  - イベントハンドラー
-  - プロパティ
-translation_of: Web/API/GlobalEventHandlers/onselectionchange
-translation_of_original: Web/API/Document/onselectionchange
 original_slug: Web/API/GlobalEventHandlers/onselectionchange
 ---
 {{ApiRef('DOM')}}{{SeeCompatTable}}

@@ -65,13 +65,11 @@ resizeObserver.observe(document.querySelector('div'));
 
 ## Spécifications
 
-| Spécification                            | État                                 | Commentaire          |
-| ---------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Resize Observer')}} | {{Spec2('Resize Observer')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ResizeObserver")}}
+{{Compat}}
 
 ## Voir aussi
 

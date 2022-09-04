@@ -1,17 +1,6 @@
 ---
 title: Notification.body
 slug: Web/API/Notification/body
-page-type: web-api-instance-property
-tags:
-  - API
-  - BODY
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-browser-compat: api.Notification.body
-translation_of: Web/API/Notification/body
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 

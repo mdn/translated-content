@@ -153,7 +153,7 @@ In both cases the approach is less elegant, and does not grant access to private
 
 {{Compat}}
 
-## See also
+## Voir aussi
 
 - [Class static initialization blocks](https://v8.dev/features/class-static-initializer-blocks) (v8.dev blog)
 - [ES2022 feature: class static initialization blocks](https://2ality.com/2021/09/class-static-block.html) (2ality.com blog)

@@ -1,15 +1,6 @@
 ---
 title: CSSとは何か？
 slug: Learn/CSS/First_steps/What_is_CSS
-tags:
-  - Beginner
-  - CSS
-  - Introduction to CSS
-  - Learn
-  - Modules
-  - Specifications
-  - Syntax
-translation_of: Learn/CSS/First_steps/What_is_CSS
 ---
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
 
@@ -107,8 +98,8 @@ CSS とは何かについていくらか理解したと思いますので、[CSS
 
 ## このモジュール内
 
-1.  [What is CSS?](/ja/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [Getting started with CSS](/ja/docs/Learn/CSS/First_steps/Getting_started)
-3.  [How CSS is structured](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [How CSS works](/ja/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [Using your new knowledge](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [What is CSS?](/ja/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [Getting started with CSS](/ja/docs/Learn/CSS/First_steps/Getting_started)
+3. [How CSS is structured](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [How CSS works](/ja/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [Using your new knowledge](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

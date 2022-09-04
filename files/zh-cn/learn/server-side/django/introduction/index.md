@@ -1,6 +1,6 @@
 ---
 title: Django 介绍
-slug: learn/Server-side/Django/Introduction
+slug: Learn/Server-side/Django/Introduction
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
 

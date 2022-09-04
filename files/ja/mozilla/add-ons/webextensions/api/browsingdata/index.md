@@ -1,15 +1,6 @@
 ---
 title: browsingData
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browsingData
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData
 ---
 {{AddonSidebar}}拡張機能がユーザーの閲覧中に蓄積したデータをクリアできるようにします。
 

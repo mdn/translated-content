@@ -1,15 +1,6 @@
 ---
 title: 'Document: lostpointercapture イベント'
 slug: Web/API/Document/lostpointercapture_event
-tags:
-  - API
-  - Document
-  - Event
-  - PointerEvent
-  - Reference
-  - lostpointercapture
-  - イベント
-translation_of: Web/API/Document/lostpointercapture_event
 ---
 {{APIRef}}
 

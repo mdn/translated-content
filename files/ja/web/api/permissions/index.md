@@ -1,14 +1,6 @@
 ---
 title: Permissions
 slug: Web/API/Permissions
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Permissions
-  - Permissions API
-  - Reference
-translation_of: Web/API/Permissions
 ---
 {{APIRef("Permissions API")}}{{SeeCompatTable}}
 

@@ -83,9 +83,9 @@ HTML 표 스타일링은 세계에서 가장 매력적인 일이 아니지만, �
 
 표 예제를 함께 스타일링 해 봅시다.
 
-1.  시작하려면, [sample markup](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html) 의 로컬 사본을 만들고 두 이미지 ([노이즈](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png) 및 [표범가죽](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg)) 를 모두 다운로드한 다음, 세 개의 결과 파일을 로컬 컴퓨터의 작업 디렉토리에 넣습니다.
-2.  다음으로, `style.css` 라는 새 파일을 만들고 다른 파일과 같은 디렉토리에 저장하십시오.
-3.  {{htmlelement("head")}} 안에 다음 HTML 행을 배치하여 CSS 를 HTML 에 연결하십시오:
+1. 시작하려면, [sample markup](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html) 의 로컬 사본을 만들고 두 이미지 ([노이즈](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png) 및 [표범가죽](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg)) 를 모두 다운로드한 다음, 세 개의 결과 파일을 로컬 컴퓨터의 작업 디렉토리에 넣습니다.
+2. 다음으로, `style.css` 라는 새 파일을 만들고 다른 파일과 같은 디렉토리에 저장하십시오.
+3. {{htmlelement("head")}} 안에 다음 HTML 행을 배치하여 CSS 를 HTML 에 연결하십시오:
 
     ```html
     <link href="style.css" rel="stylesheet" type="text/css">
@@ -293,21 +293,21 @@ caption {
 
 ## 이번 강의에서는
 
-1.  [계단식 및 상속](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors)
+1. [계단식 및 상속](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Type, class 및 ID 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [속성 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Pseudo-classes 및 pseudo-elements](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [결합자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [박스 모델](/ko/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [배경 및 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [다른 텍스트 방향 처리](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [콘텐츠 overflow](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [값 과 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [CSS 에서 항목 크기 조정](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [이미지, 미디어 및 양식 요소](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [박스 모델](/ko/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [배경 및 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [다른 텍스트 방향 처리](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [콘텐츠 overflow](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [값 과 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [CSS 에서 항목 크기 조정](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [이미지, 미디어 및 양식 요소](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [표 스타일링](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [CSS 디버깅](/ko/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [CSS 정리](/ko/docs/Learn/CSS/Building_blocks/Organizing)

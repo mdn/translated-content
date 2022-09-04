@@ -1,12 +1,6 @@
 ---
 title: Firefox 68 for developers
 slug: Mozilla/Firefox/Releases/68
-tags:
-  - '68'
-  - Firefox
-  - Mozilla
-  - Release
-translation_of: Mozilla/Firefox/Releases/68
 ---
 {{FirefoxSidebar}}
 

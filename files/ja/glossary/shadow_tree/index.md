@@ -1,12 +1,6 @@
 ---
 title: Shadow tree
 slug: Glossary/Shadow_tree
-tags:
-  - DOM
-  - Glossary
-  - Shadow Tree
-  - shadow dom
-translation_of: Glossary/Shadow_tree
 ---
 **Shadow ツリー** は DOM {{Glossary("node", "nodes")}} のツリーで、最上位のノードは **Shadow ルート** ( **Shadow DOM** 内にある最上位のノード) です。Shadow ツリーは標準的な DOM から隠されたツリーで、標準的な DOM ノードがホストになります。 隠されたノードは通常の DOM の機能では直接確認できませんが、特殊な [Shadow DOM API](/ja/docs/Web/Web_Components/Using_shadow_DOM) を使うとアクセスすることができます。
 

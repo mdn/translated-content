@@ -46,7 +46,7 @@ Quant aux propriétés et aux méthodes, sont généralement utilisés :
 - `o` (anciennes versions d'Opera)
 - `ms` (Internet Explorer et Edge)
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

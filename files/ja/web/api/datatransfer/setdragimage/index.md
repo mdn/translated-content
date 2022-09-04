@@ -1,16 +1,6 @@
 ---
 title: DataTransfer.setDragImage()
 slug: Web/API/DataTransfer/setDragImage
-page-type: web-api-instance-method
-tags:
-  - API
-  - H5 DnD
-  - HTML DOM
-  - Method
-  - Reference
-  - drag and drop
-browser-compat: api.DataTransfer.setDragImage
-translation_of: Web/API/DataTransfer/setDragImage
 ---
 {{APIRef("HTML Drag and Drop API")}}
 

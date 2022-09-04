@@ -1,13 +1,6 @@
 ---
 title: CSSRuleList.item()
 slug: Web/API/CSSRuleList/item
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - item
-  - CSSRuleList
-browser-compat: api.CSSRuleList.item
 ---
 {{ APIRef("CSSOM") }}
 

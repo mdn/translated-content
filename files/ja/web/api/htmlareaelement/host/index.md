@@ -1,14 +1,6 @@
 ---
 title: HTMLAreaElement.host
 slug: Web/API/HTMLAreaElement/host
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAreaElement.host
-translation_of: Web/API/api.HTMLAreaElement.host/host
 original_slug: Web/API/HTMLHyperlinkElementUtils/host
 ---
 {{ApiRef("HTML DOM")}}

@@ -1,14 +1,6 @@
 ---
 title: ゲームパッド API を使用したコントロールの実装
 slug: Games/Techniques/Controls_Gamepad_API
-tags:
-  - Controls
-  - Gamepad API
-  - Gamepads
-  - Games
-  - JavaScript
-  - controllers
-translation_of: Games/Techniques/Controls_Gamepad_API
 ---
 {{GamesSidebar}}
 

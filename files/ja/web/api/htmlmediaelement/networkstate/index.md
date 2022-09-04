@@ -1,15 +1,6 @@
 ---
 title: HTMLMediaElement.networkState
 slug: Web/API/HTMLMediaElement/networkState
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Read-only
-  - Web
-browser-compat: api.HTMLMediaElement.networkState
-translation_of: Web/API/HTMLMediaElement/networkState
 ---
 {{APIRef("HTML DOM")}}
 

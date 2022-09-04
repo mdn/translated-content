@@ -1,15 +1,6 @@
 ---
 title: HTMLElement.offsetTop
 slug: Web/API/HTMLElement/offsetTop
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.HTMLElement.offsetTop
-translation_of: Web/API/HTMLElement/offsetTop
 ---
 {{ APIRef("HTML DOM") }}
 

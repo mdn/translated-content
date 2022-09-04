@@ -1,13 +1,6 @@
 ---
 title: PerformanceMeasure
 slug: Web/API/PerformanceMeasure
-tags:
-  - API
-  - Web パフォーマンス
-  - インターフェイス
-  - パフォーマンスタイムライン API
-  - リファレンス
-translation_of: Web/API/PerformanceMeasure
 ---
 {{APIRef("User Timing API")}}
 

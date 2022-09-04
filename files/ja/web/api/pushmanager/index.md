@@ -1,15 +1,6 @@
 ---
 title: PushManager
 slug: Web/API/PushManager
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Push
-  - Push API
-  - Reference
-  - Service Workers
-translation_of: Web/API/PushManager
 ---
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
@@ -29,7 +20,7 @@ translation_of: Web/API/PushManager
 - {{domxref("PushManager.getSubscription()")}}
   - : 既存のプッシュサブスクリプションを受け取ります。これは既存のプッシュサブスクリプションの詳細を含む {{domxref("PushSubscription")}} を解決する {{jsxref("Promise")}} を返します。既存のプッシュサブスクリプションが存在しない場合、`null` 値で解決されます。
 - {{domxref("PushManager.permissionState()")}}
-  - : 現在の {{domxref("PushSubscription")}} の許可状況で解決される {{jsxref("Promise")}} を返します。許可状況は `'granted'`、`'denied'`、`'prompt' `のいずれかです。
+  - : 現在の {{domxref("PushSubscription")}} の許可状況で解決される {{jsxref("Promise")}} を返します。許可状況は `'granted'`、`'denied'`、`'prompt'` のいずれかです。
 - {{domxref("PushManager.subscribe()")}}
   - : プッシュサービスを提供します。プッシュサブスクリプションの詳細を含む {{domxref("PushSubscription")}} オブジェクトで解決される {{jsxref("Promise")}} を返します。現在の service worker に既存のサブスクリプションがない場合、新しいプッシュサブスクリプションが生成されます。
 

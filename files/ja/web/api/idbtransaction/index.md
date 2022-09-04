@@ -1,15 +1,6 @@
 ---
 title: IDBTransaction
 slug: Web/API/IDBTransaction
-tags:
-  - API
-  - Database
-  - IDBTransaction
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
-translation_of: Web/API/IDBTransaction
 ---
 {{APIRef("IndexedDB")}}
 

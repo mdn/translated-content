@@ -1,16 +1,7 @@
 ---
 title: Navigator.appVersion
 slug: Web/API/Navigator/appVersion
-tags:
-  - API
-  - Deprecated
-  - Navigator
-  - Property
-  - Reference
-  - appVersion
-translation_of: Web/API/NavigatorID/appVersion
 original_slug: Web/API/NavigatorID/appVersion
-browser-compat: api.Navigator.appVersion
 ---
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 

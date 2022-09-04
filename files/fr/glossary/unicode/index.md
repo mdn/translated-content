@@ -13,7 +13,7 @@ Avant Unicode, il était difficile et sujet aux erreurs de mélanger les langues
 
 Le codage de caractères Unicode le plus courant sur le Web est {{Glossary("UTF-8")}}. D'autres encodages existent, comme UTF-16 ou l'obsolète UCS-2, mais UTF-8 est recommandé.
 
-## En apprendre plus
+## Voir aussi
 
 - [Unicode](https://fr.wikipedia.org/wiki/Unicode) sur Wikipédia
 - [The Unicode Standard : A Technical Introduction](http://www.unicode.org/standard/principles.html) (en)

@@ -1,6 +1,6 @@
 ---
 title: 'Express 教程 7: 部署到生产环境'
-slug: learn/Server-side/Express_Nodejs/deployment
+slug: Learn/Server-side/Express_Nodejs/deployment
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 

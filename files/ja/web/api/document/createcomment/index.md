@@ -1,12 +1,6 @@
 ---
 title: Document.createComment()
 slug: Web/API/Document/createComment
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-translation_of: Web/API/Document/createComment
 ---
 {{APIRef("DOM")}}
 

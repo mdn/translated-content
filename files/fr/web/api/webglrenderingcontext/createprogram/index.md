@@ -50,14 +50,11 @@ Voir {{domxref ("WebGLShader")}} pour plus d'informations sur la création du `s
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                               | Commentaire                           |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------- |
-| {{SpecName('WebGL', "#5.14.9", "createProgram")}}                                 | {{Spec2('WebGL')}}             | Définition initiale.                  |
-| {{SpecName('OpenGL ES 2.0', "glCreateProgram.xml", "glCreateProgram")}} | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API OpenGL (similaire). |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.createProgram")}}
+{{Compat}}
 
 ## Voir aussi
 

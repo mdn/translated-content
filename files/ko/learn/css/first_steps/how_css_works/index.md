@@ -42,12 +42,12 @@ CSS 기본 사항, CSS 의 목적 및 간단한 스타일 시트 작성 방법�
 
 브라우저가 문서를 표시할 때, 문서의 콘텐츠와 해당 스타일 정보를 결합해야 합니다. 아래 나열된 여러 단계로 문서를 처리합니다. 이것은 브라우저가 웹 페이지를 로드할 때 발생하는 작업의 매우 단순화된 버전이며, 다른 브라우저가 다른 방식으로 작업을 처리한다는 점을 명심하십시오. 그러나 이것은 대략 일어나는 일입니다.
 
-1.  브라우저는 HTML (예: 네트워크에서 HTML 을 수신) 을 로드합니다.
-2.  {{Glossary("HTML")}} 을 {{Glossary("DOM")}} (_Document Object Model_) 로 변환합니다. DOM 은 컴퓨터 메모리의 문서를 나타냅니다. DOM 은 다음 섹션에서 좀 더 자세히 설명됩니다.
-3.  그런 다음 브라우저는 포함된 이미지 및 비디오와 같은 HTML 문서에 연결된 대부분의 리소스와 연결된 CSS 를 가져옵니다! JavaScript 는 작업에서 나중에 처리되므로 더 간단하게 하기위해 여기에서는 다루지 않습니다.
-4.  브라우저는 가져온 CSS 를 구문 분석하고 선택자 유형별로 다른 규칙을 다른 "buckets" 으로 정렬합니다. 예: 요소, class, ID 등 찾은 선택자를 기반으로 DOM 의 어느 노드에 어떤 규칙을 적용해야 하는지 결정하고, 필요에 따라 스타일을 첨부합니다 (이 중간 단계를 render tree 라고 합니다).
-5.  render tree 는 규칙이 적용된 후에 표시되어야 하는 구조로 배치됩니다.
-6.  페이지의 시각적 표시가 화면에 표시됩니다 (이 단계를 painting 이라고 함).
+1. 브라우저는 HTML (예: 네트워크에서 HTML 을 수신) 을 로드합니다.
+2. {{Glossary("HTML")}} 을 {{Glossary("DOM")}} (_Document Object Model_) 로 변환합니다. DOM 은 컴퓨터 메모리의 문서를 나타냅니다. DOM 은 다음 섹션에서 좀 더 자세히 설명됩니다.
+3. 그런 다음 브라우저는 포함된 이미지 및 비디오와 같은 HTML 문서에 연결된 대부분의 리소스와 연결된 CSS 를 가져옵니다! JavaScript 는 작업에서 나중에 처리되므로 더 간단하게 하기위해 여기에서는 다루지 않습니다.
+4. 브라우저는 가져온 CSS 를 구문 분석하고 선택자 유형별로 다른 규칙을 다른 "buckets" 으로 정렬합니다. 예: 요소, class, ID 등 찾은 선택자를 기반으로 DOM 의 어느 노드에 어떤 규칙을 적용해야 하는지 결정하고, 필요에 따라 스타일을 첨부합니다 (이 중간 단계를 render tree 라고 합니다).
+5. render tree 는 규칙이 적용된 후에 표시되어야 하는 구조로 배치됩니다.
+6. 페이지의 시각적 표시가 화면에 표시됩니다 (이 단계를 painting 이라고 함).
 
 다음 그림은 작업의 간단한 보기를 제공합니다.
 
@@ -172,8 +172,8 @@ p {
 
 ## 이번 강의에서는
 
-1.  [CSS 란 무엇인가?](/ko/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [CSS 로 시작하기](/ko/docs/Learn/CSS/First_steps/Getting_started)
-3.  [CSS 의 구조](/ko/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [CSS 작동 방식](/ko/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [새로운 지식을 사용](/ko/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [CSS 란 무엇인가?](/ko/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [CSS 로 시작하기](/ko/docs/Learn/CSS/First_steps/Getting_started)
+3. [CSS 의 구조](/ko/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [CSS 작동 방식](/ko/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [새로운 지식을 사용](/ko/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

@@ -1,16 +1,6 @@
 ---
 title: AuthenticatorResponse
 slug: Web/API/AuthenticatorResponse
-tags:
-  - API
-  - Authentication
-  - AuthenticatorResponse
-  - Interface
-  - Reference
-  - Web Authentication API
-  - WebAuthn
-  - インターフェイス
-translation_of: Web/API/AuthenticatorResponse
 ---
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 

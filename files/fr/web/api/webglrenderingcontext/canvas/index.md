@@ -53,13 +53,11 @@ gl.canvas; // OffscreenCanvas
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                   | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | -------------------- |
-| {{SpecName('WebGL', "#DOM-WebGLRenderingContext-canvas", "WebGLRenderingContext.canvas")}} | {{Spec2('WebGL')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.canvas")}}
+{{Compat}}
 
 ## Voir aussi
 

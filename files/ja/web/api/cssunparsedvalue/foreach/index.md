@@ -1,18 +1,6 @@
 ---
 title: CSSUnparsedValue.forEach()
 slug: Web/API/CSSUnparsedValue/forEach
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnparsedValue
-  - Constructor
-  - Experimental
-  - Method
-  - NeedsExample
-  - Reference
-  - forEach
-  - forEach()
-translation_of: Web/API/CSSUnparsedValue/forEach
 ---
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 

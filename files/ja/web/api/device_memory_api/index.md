@@ -1,9 +1,6 @@
 ---
 title: 端末メモリー API
 slug: Web/API/Device_Memory_API
-tags:
-  - 端末メモリー API
-translation_of: Web/API/Device_Memory_API
 ---
 {{DefaultAPISidebar("Device Memory API")}}{{securecontext_header}}{{SeeCompatTable}}
 

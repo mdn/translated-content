@@ -137,13 +137,11 @@ La plupart des navigateurs récents gère également les évènements via la mé
 
 ## Spécifications
 
-| Spécification                            | État                                 | Commentaires                                |
-| ---------------------------------------- | ------------------------------------ | ------------------------------------------- |
-| {{SpecName('XMLHttpRequest')}} | {{Spec2('XMLHttpRequest')}} | Standard évolutif, version la plus récente. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.XMLHttpRequest")}}
+{{Compat}}
 
 ## Voir aussi
 

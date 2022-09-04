@@ -1,17 +1,6 @@
 ---
 title: PushSubscription.endpoint
 slug: Web/API/PushSubscription/endpoint
-tags:
-  - API
-  - Experimental
-  - Property
-  - Push
-  - Push API
-  - PushSubscription
-  - Reference
-  - Service Workers
-  - endPoint
-translation_of: Web/API/PushSubscription/endpoint
 ---
 {{SeeCompatTable}}{{APIRef("Push API")}}
 

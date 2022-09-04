@@ -37,7 +37,7 @@ Ne fait partie d'aucune spécification ou recommandation technique du W3C.
 
 {{Compat("api.Window.mozInnerScreenY")}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("window.mozInnerScreenX")}}
 - [`nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/fr/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils)

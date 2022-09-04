@@ -1,11 +1,6 @@
 ---
 title: Locale (ロケール)
 slug: Glossary/Locale
-tags:
-  - Composing
-  - Glossary
-  - Locale
-translation_of: Glossary/Locale
 ---
 **ロケール**は、ユーザーインターフェイス用の言語別または国別の基本設定のセットです。
 

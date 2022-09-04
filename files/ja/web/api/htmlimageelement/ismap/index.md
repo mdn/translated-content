@@ -1,20 +1,6 @@
 ---
 title: HTMLImageElement.isMap
 slug: Web/API/HTMLImageElement/isMap
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - 画像 Map
-  - Link
-  - リファレンス
-  - isMap
-  - server-side
-  - プロパティ
-browser-compat: api.HTMLImageElement.isMap
-translation_of: Web/API/HTMLImageElement/isMap
 ---
 {{APIRef("HTML DOM")}}
 

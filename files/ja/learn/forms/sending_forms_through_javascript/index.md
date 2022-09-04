@@ -1,20 +1,6 @@
 ---
 title: JavaScript によるフォームの送信
 slug: Learn/Forms/Sending_forms_through_JavaScript
-tags:
-  - Advanced
-  - Example
-  - Forms
-  - Forms Guide
-  - Guide
-  - HTML
-  - HTML forms
-  - JavaScript
-  - Learn
-  - Security
-  - Web
-  - Web Forms
-translation_of: Learn/Forms/Sending_forms_through_JavaScript
 ---
 {{LearnSidebar}}
 
@@ -22,7 +8,7 @@ HTML フォームは [HTTP](/ja/docs/Web/HTTP) リクエストを宣言的に送
 
 ## フォームは必ずしもフォームであるとは限らない
 
-PWA や SPA やフレームワークベースのアプリが現れたことで、[HTML フォーム](/ja/docs/HTML/Forms "HTML/Forms")を、応答データを受け取ったときに、新しい文書を読み込むことなくデータ送信するのに使用することが次第に一般的になってきました。最初になぜいろいろなアプローチが必要となるのかを話しましょう。
+PWA や SPA やフレームワークベースのアプリが現れたことで、[HTML フォーム](/ja/docs/HTML/Forms)を、応答データを受け取ったときに、新しい文書を読み込むことなくデータ送信するのに使用することが次第に一般的になってきました。最初になぜいろいろなアプローチが必要となるのかを話しましょう。
 
 ### グローバルインターフェイスの制御を取得
 
@@ -30,7 +16,7 @@ PWA や SPA やフレームワークベースのアプリが現れたことで�
 
 最近の多くの UI は、HTML フォームを使用してユーザーからの入力を収集します。ユーザーがデータを送信しようとすると、アプリケーションはバックグラウンドでデータを非同期的に制御して送信し、変更が必要な UI の部分のみを更新します。
 
-任意のデータを非同期に送信することは、**"Asynchronous JavaScript And XML"** を表す頭字語である [AJAX](/ja/docs/AJAX "AJAX") として知られています。
+任意のデータを非同期に送信することは、**"Asynchronous JavaScript And XML"** を表す頭字語である [AJAX](/ja/docs/AJAX) として知られています。
 
 ### その違いは?
 

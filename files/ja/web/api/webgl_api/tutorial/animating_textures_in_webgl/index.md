@@ -1,12 +1,6 @@
 ---
 title: WebGL でのテクスチャのアニメーティング
 slug: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
-tags:
-  - Media
-  - Tutorial
-  - Video
-  - WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 ---
 {{WebGLSidebar("Tutorial") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 

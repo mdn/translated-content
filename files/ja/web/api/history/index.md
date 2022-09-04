@@ -1,14 +1,6 @@
 ---
 title: History
 slug: Web/API/History
-tags:
-  - API
-  - HTML DOM
-  - 履歴 API
-  - インターフェイス
-  - ウェブ
-browser-compat: api.History
-translation_of: Web/API/History
 ---
 {{ APIRef("History API") }}
 

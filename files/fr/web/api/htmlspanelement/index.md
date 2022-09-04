@@ -10,7 +10,7 @@ translation_of: Web/API/HTMLSpanElement
 
 L'élément DOM `span` supporte l'interface `HTMLSpanElement`, qui est dérivé de l'interface {{ domxref("HTMLElement") }}. Il ne supporte aucune propriété ou méthode additionnelle par rapport à `HTMLElement`.
 
-## Voir également
+## Voir aussi
 
 - {{ HTMLElement("span") }}
 - Spécification W3C de l'élément [span](http://www.w3.org/TR/html4/struct/global.html#edef-SPAN)

@@ -1,15 +1,6 @@
 ---
 title: クライアントサイドの JavaScript フレームワークを理解する
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - NeedsTranslation
-  - TopicStub
-  - client-side
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 ---
 
 {{LearnSidebar}}

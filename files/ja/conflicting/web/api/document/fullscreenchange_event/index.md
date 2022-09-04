@@ -1,17 +1,6 @@
 ---
 title: Document.onfullscreenchange
 slug: conflicting/Web/API/Document/fullscreenchange_event
-tags:
-  - API
-  - Document
-  - Event Handler
-  - Fullscreen API
-  - Property
-  - Reference
-  - イベントハンドラー
-  - プロパティ
-  - 全画面 API
-translation_of: Web/API/Document/onfullscreenchange
 original_slug: Web/API/Document/onfullscreenchange
 ---
 {{APIRef("Fullscreen API")}}

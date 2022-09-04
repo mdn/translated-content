@@ -1,18 +1,6 @@
 ---
 title: API リファレンスサイドバー
 slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
-tags:
-  - API
-  - Documentation
-  - Guide
-  - MDN
-  - MDN Meta
-  - Reference
-  - groupdata
-  - metadata
-  - onboarding
-  - sidebars
-translation_of: MDN/Contribute/Howto/Write_an_API_reference/Sidebars
 original_slug: MDN/Contribute/Howto/Write_an_API_reference/Sidebars
 ---
 {{MDNSidebar}}

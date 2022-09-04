@@ -1,15 +1,6 @@
 ---
 title: Document.linkColor
 slug: Web/API/Document/linkColor
-tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-  - プロパティ
-translation_of: Web/API/Document/linkColor
 ---
 {{APIRef("DOM")}} {{Deprecated_header}}
 

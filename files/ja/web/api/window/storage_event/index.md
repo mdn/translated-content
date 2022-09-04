@@ -1,7 +1,6 @@
 ---
 title: storage
 slug: Web/API/Window/storage_event
-translation_of: Web/API/Window/storage_event
 ---
 `storage` イベントは、ストレージエリア (`localStorage` または `sessionStorage`) が変更されたときに発生します。詳しくは [Web Storage API](/ja/docs/Web/API/Web_Storage_API) をご覧ください。
 

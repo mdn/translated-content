@@ -1,14 +1,6 @@
 ---
 title: PerformanceResourceTiming.workerStart
 slug: Web/API/PerformanceResourceTiming/workerStart
-tags:
-  - API
-  - PerformanceResourceTiming
-  - Web パフォーマンス
-  - workerStart
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/PerformanceResourceTiming/workerStart
 ---
 {{APIRef("Resource Timing API")}}
 
@@ -47,7 +39,7 @@ function print_start_and_end_properties(perfEntry) {
                 "requestStart",
                 "responseStart", "responseEnd",
                 "secureConnectionStart",
-		"workerStart"];
+                "workerStart"];
 
   for (var i=0; i < properties.length; i++) {
     // check each property

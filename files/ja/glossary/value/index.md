@@ -1,11 +1,6 @@
 ---
 title: Value (値)
 slug: Glossary/Value
-tags:
-  - CodingScripting
-  - Glossary
-  - NeedsContent
-translation_of: Glossary/Value
 l10n:
   sourceCommit: ba6c97a742adb97092d5b20804bf9c462f3b84f3
 ---

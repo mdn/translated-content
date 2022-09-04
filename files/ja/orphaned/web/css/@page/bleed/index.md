@@ -1,16 +1,6 @@
 ---
 title: bleed
 slug: orphaned/Web/CSS/@page/bleed
-tags:
-  - '@page'
-  - CSS
-  - CSS ページ化メディア
-  - CSS 記述子
-  - Experimental
-  - Reference
-  - bleed
-  - ウェブ
-translation_of: Web/CSS/@page/bleed
 original_slug: Web/CSS/@page/bleed
 ---
 {{CSSRef}}{{SeeCompatTable}}

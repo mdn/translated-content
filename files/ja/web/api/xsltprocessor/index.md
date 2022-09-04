@@ -1,14 +1,6 @@
 ---
 title: XSLTProcessor
 slug: Web/API/XSLTProcessor
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Reference
-  - XSLT
-translation_of: Web/API/XSLTProcessor
-browser-compat: api.XSLTProcessor
 ---
 {{Non-standard_header}}{{SeeCompatTable}}{{APIRef("XSLT")}}
 

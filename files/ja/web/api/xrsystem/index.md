@@ -1,20 +1,6 @@
 ---
 title: XRSystem
 slug: Web/API/XRSystem
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRSystem
-translation_of: Web/API/XRSystem
 ---
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 

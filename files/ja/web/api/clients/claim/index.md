@@ -1,15 +1,6 @@
 ---
 title: Clients.claim()
 slug: Web/API/Clients/claim
-tags:
-  - API
-  - Clients
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - claim
-translation_of: Web/API/Clients/claim
 ---
 {{APIRef("Service Worker Clients")}}
 

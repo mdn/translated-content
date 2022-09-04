@@ -1,14 +1,6 @@
 ---
 title: HTMLHRElement
 slug: Web/API/HTMLHRElement
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - NeedsNewLayout
-  - リファレンス
-browser-compat: api.HTMLHRElement
-translation_of: Web/API/HTMLHRElement
 ---
 {{APIRef("HTML DOM")}}
 

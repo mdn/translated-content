@@ -1,15 +1,6 @@
 ---
 title: DocumentFragment
 slug: Web/API/DocumentFragment
-tags:
-  - API
-  - DOM
-  - DocumentFragment
-  - Reference
-  - インターフェイス
-  - ウェブコンポーネント
-  - 文書
-translation_of: Web/API/DocumentFragment
 ---
 {{ APIRef("DOM") }}
 

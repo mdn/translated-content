@@ -53,13 +53,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'indices.html#event-domcontentloaded')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.DOMContentLoaded_event")}}
+{{Compat}}
 
 ## Voir aussi
 

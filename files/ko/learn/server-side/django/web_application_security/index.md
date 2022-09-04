@@ -36,7 +36,7 @@ translation_of: Learn/Server-side/Django/web_application_security
 
 [Website security](/ko/docs/Web/Security) 문서는 서버사이드 설계에서 웹사이트 보안이란 무엇을 이야기하는건지, 또한 개발자가 막아내야 하는 몇가지 대표적인 위협에 대해 소개합니다. 이 문서에서 중요한 내용중의 하나는 바로 웹 애플리케이션이 브라우저에서 전송된 데이터를 신뢰하는 경우에는 거의 모든 종류의 공격이 가능하다는 것입니다.
 
-> **경고:** **Important:** 웹사이트 보안에 대해 당신이 배울 수 있는 가장 중요한 점 한가지는 **브라우저의 데이터를 절대로 믿지 말라는 것** 입니다. 이건 URL 파라미터의 `GET` request 데이터, `POST `데이터, HTTP 헤더와 쿠키, 사용자가 업로드한 파일들...기타등등을 포함합니다. 언제나 전송받는 모든 데이터를 의심하고 체크하십시오. 언제나 최악을 가정하십시오.
+> **경고:** **Important:** 웹사이트 보안에 대해 당신이 배울 수 있는 가장 중요한 점 한가지는 **브라우저의 데이터를 절대로 믿지 말라는 것** 입니다. 이건 URL 파라미터의 `GET` request 데이터, `POST` 데이터, HTTP 헤더와 쿠키, 사용자가 업로드한 파일들...기타등등을 포함합니다. 언제나 전송받는 모든 데이터를 의심하고 체크하십시오. 언제나 최악을 가정하십시오.
 
 Django 사용자들에게 좋은 소식은 대부분의 일반적인 위협들은 프레임워크에 의해 차단된다는 것입니다! [Security in Django](https://docs.djangoproject.com/en/2.0/topics/security/) 문서는 Django의 보안 개요와 Django 기반의 웹사이트를 어떻게 지킬 수 있는지에 대해 설명하고 있습니다.
 
@@ -50,17 +50,17 @@ XSS is a term used to describe a class of attacks that allow an attacker to inje
 
 Django's template system protects you against the majority of XSS attacks by [escaping specific characters](https://docs.djangoproject.com/en/2.0/ref/templates/language/#automatic-html-escaping) that are "dangerous" in HTML. We can demonstrate this by attempting to inject some JavaScript into our LocalLibrary website using the Create-author form we set up in [Django Tutorial Part 9: Working with forms](/ko/docs/Learn/Server-side/Django/Forms).
 
-1.  Start the website using the development server (`python3 manage.py runserver`).
-2.  Open the site in your local browser and login to your superuser account.
-3.  Navigate to the author-creation page (which should be at URL: [`http://127.0.0.1:8000/catalog/author/create/`](http://127.0.0.1:8000/catalog/author/create/)).
-4.  Enter names and date details for a new user, and then append the following text to the Last Name field:
+1. Start the website using the development server (`python3 manage.py runserver`).
+2. Open the site in your local browser and login to your superuser account.
+3. Navigate to the author-creation page (which should be at URL: [`http://127.0.0.1:8000/catalog/author/create/`](http://127.0.0.1:8000/catalog/author/create/)).
+4. Enter names and date details for a new user, and then append the following text to the Last Name field:
     `<script>alert('Test alert');</script>`.
     ![Author Form XSS test](https://mdn.mozillademos.org/files/14305/author_create_form_alert_xss.png)
 
     > **참고:** This is a harmless script that, if executed, will display an alert box in your browser. If the alert is displayed when you submit the record then the site is vulnerable to XSS threats.
 
-5.  Press **Submit** to save the record.
-6.  When you save the author it will be displayed as shown below. Because of the XSS protections the `alert()` should not be run. Instead the script is displayed as plain text.![Author detail view XSS test](https://mdn.mozillademos.org/files/14307/author_detail_alert_xss.png)
+5. Press **Submit** to save the record.
+6. When you save the author it will be displayed as shown below. Because of the XSS protections the `alert()` should not be run. Instead the script is displayed as plain text.![Author detail view XSS test](https://mdn.mozillademos.org/files/14307/author_detail_alert_xss.png)
 
 If you view the page HTML source code, you can see that the dangerous characters for the script tags have been turned into their harmless escape code equivalents (e.g. `>` is now `&gt;`)
 
@@ -119,7 +119,7 @@ Django also provides other forms of protection (most of which would be hard or n
 - SQL injection protection
   - : SQL injection vulnerabilities enable malicious users to execute arbitrary SQL code on a database, allowing data to be accessed, modified, or deleted irrespective of the user's permissions. In almost every case you'll be accessing the database using Django’s querysets/models, so the resulting SQL will be properly escaped by the underlying database driver. If you do need to write raw queries or custom SQL then you'll need to explicitly think about preventing SQL injection.
 - Clickjacking protection
-  - : In this attack a malicious user hijacks clicks meant for a visible top level site and routes them to a hidden page beneath. This technique might be used, for example, to display a legitimate bank site but capture the login credentials in an invisible [`<iframe>`](/ko/docs/Web/HTML/Element/iframe "The HTML Inline Frame Element (<iframe>) represents a nested browsing context, effectively embedding another HTML page into the current page. In HTML 4.01, a document may contain a head and a body or a head and a frameset, but not both a body and a frameset. However, an <iframe> can be used within a normal document body. Each browsing context has its own session history and active document. The browsing context that contains the embedded content is called the parent browsing context. The top-level browsing context (which has no parent) is typically the browser window.") controlled by the attacker. Django contains [clickjacking protection](https://docs.djangoproject.com/en/2.0/ref/clickjacking/#clickjacking-prevention) in the form of the [`X-Frame-Options middleware`](https://docs.djangoproject.com/en/2.0/ref/middleware/#django.middleware.clickjacking.XFrameOptionsMiddleware "django.middleware.clickjacking.XFrameOptionsMiddleware") which, in a supporting browser, can prevent a site from being rendered inside a frame.
+  - : In this attack a malicious user hijacks clicks meant for a visible top level site and routes them to a hidden page beneath. This technique might be used, for example, to display a legitimate bank site but capture the login credentials in an invisible [`<iframe>`](/ko/docs/Web/HTML/Element/iframe) controlled by the attacker. Django contains [clickjacking protection](https://docs.djangoproject.com/en/2.0/ref/clickjacking/#clickjacking-prevention) in the form of the [`X-Frame-Options middleware`](https://docs.djangoproject.com/en/2.0/ref/middleware/#django.middleware.clickjacking.XFrameOptionsMiddleware "django.middleware.clickjacking.XFrameOptionsMiddleware") which, in a supporting browser, can prevent a site from being rendered inside a frame.
 - Enforcing SSL/HTTPS
   - : SSL/HTTPS can be enabled on the web server in order to encrypt all traffic between the site and browser, including authentication credentials that would otherwise be sent in plain text (enabling HTTPS is highly recommended). If HTTPS is enabled then Django provides a number of other protections you can use:
 - [`SECURE_PROXY_SSL_HEADER`](https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-SECURE_PROXY_SSL_HEADER) can be used to check whether content is secure, even if it is incoming from a non-HTTP proxy.

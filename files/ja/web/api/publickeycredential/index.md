@@ -1,16 +1,6 @@
 ---
 title: PublicKeyCredential
 slug: Web/API/PublicKeyCredential
-tags:
-  - API
-  - Authentication
-  - Interface
-  - PublicKeyCredential
-  - Reference
-  - Web Authentication API
-  - WebAuthn
-  - インターフェイス
-translation_of: Web/API/PublicKeyCredential
 ---
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 

@@ -1,7 +1,6 @@
 ---
 title: tabs.duplicate()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/duplicate
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/duplicate
 ---
 {{AddonSidebar()}}
 

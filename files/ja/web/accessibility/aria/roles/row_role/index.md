@@ -200,4 +200,4 @@ ARIA の行を作成するには、コンテナー要素に行ロール (`role="
 
 - [HTML の表の行要素](/ja/docs/Web/HTML/Element/tr)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

@@ -79,11 +79,8 @@ setTimeout(function() {
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                                       | Commentaire                                          |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------------------------- |
-| {{SpecName('User Timing Level 2', '#dom-performance-measure', 'measure()')}} | {{Spec2('User Timing Level 2')}} | Clarification du modèle de traitement de `mesure()`. |
-| {{SpecName('User Timing', '#dom-performance-measure', 'measure()')}}         | {{Spec2('User Timing')}}             | Définition initiale.                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Performance.measure")}}
+{{Compat}}

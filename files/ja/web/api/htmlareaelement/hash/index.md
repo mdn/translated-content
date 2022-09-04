@@ -1,14 +1,6 @@
 ---
 title: HTMLAreaElement.hash
 slug: Web/API/HTMLAreaElement/hash
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAreaElement.hash
-translation_of: Web/API/HTMLAnchorElement/hash
 original_slug: Web/API/HTMLHyperlinkElementUtils/hash
 ---
 {{ APIRef("HTML DOM") }}

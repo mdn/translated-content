@@ -13,7 +13,7 @@ Par exemple, `NaN` peut représenter une valeur infinie, le résultat d'une divi
 
 Dans la pratique, si l'on divise deux variables dans un programme {{glossary("JavaScript")}}, le résultat peut être `NaN`, qui est prédéfini dans JavaScript comme "{{glossary("undefined")}}". Ainsi, cette division peut casser le programme. Cela signifie que si ce calcul était une petite partie d'un algorithme nettement plus gros, il serait compliqué de localiser où se trouve l'erreur. Heureusement, comme le résultat sera `NaN`, et que nous savons que notre diviseur pourrait être 0, il est possible de mettre en place des tests qui préviendront ce genre de calcul ou informeront que ceux-ci ont eu lieu.
 
-## Pour approfondir
+## Voir aussi
 
 ### Connaissances générales
 

@@ -1,12 +1,6 @@
 ---
 title: Node.nodeType
 slug: Web/API/Node/nodeType
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Node.nodeType
-translation_of: Web/API/Node/nodeType
 ---
 {{APIRef("DOM")}}
 

@@ -1,11 +1,6 @@
 ---
 title: Node.removeChild()
 slug: Web/API/Node/removeChild
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Node.removeChild
-translation_of: Web/API/Node/removeChild
 ---
 {{APIRef("DOM")}}
 

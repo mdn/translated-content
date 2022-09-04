@@ -1,15 +1,6 @@
 ---
 title: ウェブアニメーション API
 slug: Web/API/Web_Animations_API
-tags:
-  - API
-  - Animation
-  - Landing
-  - Reference
-  - Web Animations
-  - アニメーション
-  - ウェブアニメーション
-translation_of: Web/API/Web_Animations_API
 ---
 {{DefaultAPISidebar("Web Animations")}}
 

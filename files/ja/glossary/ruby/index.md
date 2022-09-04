@@ -1,11 +1,6 @@
 ---
 title: Ruby
 slug: Glossary/Ruby
-tags:
-  - CodingScripting
-  - Glossary
-  - Ruby
-translation_of: Glossary/Ruby
 ---
 **Ruby** はオープンソースのプログラミング言語です。{{glossary("world wide web","Web")}} コンテキストでは、Ruby はウェブサイト/アプリを生産するための _Ruby On Rails_ (ROR) フレームワークと一緒にサーバー・サイドでよく使用されます。
 

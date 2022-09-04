@@ -1,13 +1,6 @@
 ---
 title: ページを作成および編集する方法
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
-tags:
-  - 初心者
-  - ガイド
-  - Howto
-  - Intro
-  - MDN メタ
-translation_of: MDN/Contribute/Howto/Create_and_edit_pages
 original_slug: MDN/Contribute/Howto/Create_and_edit_pages
 ---
 {{MDNSidebar}}

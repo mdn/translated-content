@@ -1,15 +1,6 @@
 ---
 title: 'VideoTrackList: removetrack イベント'
 slug: Web/API/VideoTrackList/removetrack_event
-tags:
-  - API
-  - Media Streams API
-  - MediaStreamTrackEvent
-  - Reference
-  - Removing Tracks
-  - events
-  - removeTrack
-translation_of: Web/API/VideoTrackList/removetrack_event
 ---
 {{APIRef}}
 

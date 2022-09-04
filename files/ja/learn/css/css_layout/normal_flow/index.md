@@ -1,15 +1,6 @@
 ---
 title: 通常フロー
 slug: Learn/CSS/CSS_layout/Normal_Flow
-tags:
-  - Beginner
-  - CSS
-  - Layout
-  - Learn
-  - float
-  - grid
-  - normal flow
-translation_of: Learn/CSS/CSS_layout/Normal_Flow
 ---
 {{LearnSidebar}}
 

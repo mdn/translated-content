@@ -53,7 +53,7 @@ Cet élément implémente l'interface [`SVGPathElement`](/fr/DOM/SVGPathElement)
 
 {{Compat("svg.elements.path")}}
 
-## Voir également
+## Voir aussi
 
 - {{ SVGElement("circle") }}
 - {{ SVGElement("ellipse") }}

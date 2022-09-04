@@ -1,13 +1,6 @@
 ---
 title: Document.createEvent()
 slug: Web/API/Document/createEvent
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-  - メソッド
-translation_of: Web/API/Document/createEvent
 ---
 > **Warning:** `createEvent` とともに使用される多くのメソッド (`initCustomEvent` など) は非推奨です。代わりに [イベントのコンストラクター](/ja/docs/Web/API/CustomEvent) を使用してください。
 
