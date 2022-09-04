@@ -14,9 +14,7 @@ slug: Web/CSS/border-radius
 
 即使元素没有边框，圆角也可以用到 {{ Cssxref("background") }} 上面，具体效果受 {{ Cssxref("background-clip") }} 影响。
 
-当 {{Cssxref("border-collapse")}} 的值为 `collapse` 时，`border-radius` 属性不会被应用到表格（
-
-）元素上。
+当 {{Cssxref("border-collapse")}} 的值为 `collapse` 时，`border-radius` 属性不会被应用到表格元素上。
 
 _radius_
 ![all-corner.png](https://developer.mozilla.org/@api/deki/files/6138/=all-corner.png)
@@ -77,29 +75,29 @@ border-bottom-left-radius:  3px 4px;
 
 ## 示例
 
-```
+```css
   border: solid 10px;
   /* the border will curve into a 'D' */
   border-radius: 10px 40px 40px 10px;
 ```
 
-```
+```css
   border: groove 1em red;
   border-radius: 2em;
 ```
 
-```
+```css
   background: gold;
   border: ridge gold;
   border-radius: 13em/3em;
 ```
 
-```
+```css
   border: none;
   border-radius: 40px 10px;
 ```
 
-```
+```css
   border: none;
   border-radius: 50%;
 ```
