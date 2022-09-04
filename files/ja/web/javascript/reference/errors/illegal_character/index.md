@@ -1,12 +1,6 @@
 ---
 title: 'SyntaxError: illegal character'
 slug: Web/JavaScript/Reference/Errors/Illegal_character
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Illegal_character
 ---
 {{jsSidebar("Errors")}}
 
