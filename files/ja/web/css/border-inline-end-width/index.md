@@ -1,19 +1,6 @@
 ---
 title: border-inline-end-width
 slug: Web/CSS/border-inline-end-width
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - border-inline
-  - border-inline-end
-  - border-inline-end-width
-  - border-inline-width
-  - recipe:css-property
-browser-compat: css.properties.border-inline-end-width
-translation_of: Web/CSS/border-inline-end-width
 ---
 {{CSSRef}}
 

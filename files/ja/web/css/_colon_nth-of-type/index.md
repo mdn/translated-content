@@ -1,15 +1,6 @@
 ---
 title: ':nth-of-type()'
 slug: Web/CSS/:nth-of-type
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.nth-of-type
-translation_of: Web/CSS/:nth-of-type
 ---
 {{CSSRef}}
 

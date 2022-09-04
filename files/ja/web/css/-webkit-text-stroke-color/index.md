@@ -1,15 +1,6 @@
 ---
 title: '-webkit-text-stroke-color'
 slug: Web/CSS/-webkit-text-stroke-color
-tags:
-  - CSS
-  - CSS プロパティ
-  - 標準外
-  - リファレンス
-  - WebKit
-  - recipe:css-property
-browser-compat: css.properties.-webkit-text-stroke-color
-translation_of: Web/CSS/-webkit-text-stroke-color
 ---
 {{CSSRef}}{{Non-standard_header}}
 
