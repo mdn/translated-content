@@ -1,16 +1,6 @@
 ---
 title: WebAssembly.CompileError
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError
-tags:
-  - API
-  - Class
-  - CompileError
-  - JavaScript
-  - NativeError
-  - Reference
-  - WebAssembly
-browser-compat: javascript.builtins.WebAssembly.CompileError
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError
 ---
 {{JSRef}}
 

@@ -1,14 +1,6 @@
 ---
 title: TypedArray.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
 ---
 {{JSRef}}
 

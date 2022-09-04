@@ -1,15 +1,6 @@
 ---
 title: WebAssembly
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
-tags:
-  - API
-  - JavaScript
-  - Namespace
-  - Object
-  - Reference
-  - WebAssembly
-browser-compat: javascript.builtins.WebAssembly
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
 {{JSRef}}
 
