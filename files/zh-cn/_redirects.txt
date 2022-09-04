@@ -205,7 +205,7 @@
 /zh-CN/docs/Core_JavaScript_1.5_Reference:Global_Properties	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
 /zh-CN/docs/Core_JavaScript_1.5_Reference:Statements:throw	/zh-CN/docs/Web/JavaScript/Reference/Statements/throw
 /zh-CN/docs/DOM/Blob	/zh-CN/docs/Web/API/Blob
-/zh-CN/docs/DOM/BlobBuilder	/zh-CN/docs/conflicting/Web/API/Blob
+/zh-CN/docs/DOM/BlobBuilder	/zh-CN/docs/Web/API/Blob
 /zh-CN/docs/DOM/CSSRule	/zh-CN/docs/Web/API/CSSRule
 /zh-CN/docs/DOM/CSSRule/cssText	/zh-CN/docs/Web/API/CSSRule/cssText
 /zh-CN/docs/DOM/CSSStyleRule	/zh-CN/docs/Web/API/CSSStyleRule
@@ -1327,7 +1327,7 @@
 /zh-CN/docs/Web/API/Blob.size	/zh-CN/docs/Web/API/Blob/size
 /zh-CN/docs/Web/API/Blob.slice	/zh-CN/docs/Web/API/Blob/slice
 /zh-CN/docs/Web/API/Blob.type	/zh-CN/docs/Web/API/Blob/type
-/zh-CN/docs/Web/API/BlobBuilder	/zh-CN/docs/conflicting/Web/API/Blob
+/zh-CN/docs/Web/API/BlobBuilder	/zh-CN/docs/Web/API/Blob
 /zh-CN/docs/Web/API/BroadcastChannel/onmessage	/zh-CN/docs/Web/API/BroadcastChannel/message_event
 /zh-CN/docs/Web/API/BroadcastChannel/onmessageerror	/zh-CN/docs/Web/API/BroadcastChannel/messageerror_event
 /zh-CN/docs/Web/API/ByteString	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
@@ -2431,7 +2431,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/contains	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/includes
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toString
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null	/zh-CN/docs/Web/JavaScript/Reference/Operators/null
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/uneval	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/生成器函数	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
