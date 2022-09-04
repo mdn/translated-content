@@ -1,12 +1,6 @@
 ---
 title: JavaScript ガイド
 slug: Web/JavaScript/Guide
-tags:
-  - Guide
-  - JavaScript
-  - l10n:priority
-  - ガイド
-translation_of: Web/JavaScript/Guide
 ---
 {{jsSidebar("JavaScript Guide")}}
 
