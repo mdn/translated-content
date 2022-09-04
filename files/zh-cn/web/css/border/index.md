@@ -42,7 +42,7 @@ border: initial;
 border: unset;
 ```
 
-可以使用下面列出的一个，两个或三个值来指定`border`属性。值的顺序无关紧要。
+可以使用下面列出的一个，两个或三个值来指定 `border` 属性。值的顺序无关紧要。
 
 > **备注：** 如果边框的样式未定义，它将不可见。这是因为样式默认为 none。
 
@@ -53,13 +53,15 @@ border: unset;
 - border-style
   - : 请看 {{ Cssxref("border-style") }}.
 - border-color
-  - : {{cssxref("&lt;color&gt;")}} 可以确定 border 的颜色。如果这个值没有设置，它的默认值是元素的{{cssxref("color")}}属性值（是文字颜色而非背景色）。请看{{ Cssxref("border-color") }}.
+  - : {{cssxref("&lt;color&gt;")}} 可以确定 border 的颜色。如果这个值没有设置，它的默认值是元素的 {{cssxref("color")}} 属性值（是文字颜色而非背景色）。请看 {{ Cssxref("border-color") }}.
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
 ## 示例
+
+### 设置粉色外边界
 
 ### HTML
 
@@ -84,7 +86,7 @@ div {
 
 ### 结果
 
-{{EmbedLiveSample('Setting_a_pink_outset_border')}}
+{{EmbedLiveSample('设置粉色外边界')}}
 
 ## 规范
 
@@ -92,4 +94,4 @@ div {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.border")}}
+{{Compat}}
