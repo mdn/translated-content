@@ -1,15 +1,6 @@
 ---
 title: Intl.NumberFormat() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
-tags:
-  - Constructor
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - NumberFormat
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
 ---
 {{JSRef}}
 

@@ -1,11 +1,6 @@
 ---
 title: EvalError() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/EvalError/EvalError
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/EvalError/EvalError
 ---
 {{JSRef}}
 
