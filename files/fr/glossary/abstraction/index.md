@@ -17,7 +17,7 @@ L'_Abstraction_ dans le domaine de la {{Glossary("Computer programming","program
 
 - Aider l'utilisatrice ou l'utilisateur à éviter d'écrire du code de bas niveau.
 - Éviter la duplication de code et augmenter la réutilisabilité.
-- Pouvoir modifier l'implémentation interne de la classe indépendamment sans que l'utilisateur soit affecté.
+- Pouvoir modifier l'implémentation interne de la classe indépendamment sans affecter l'utilisatrice ou l'utilisateur.
 - Aider à augmenter la sécurité d'une application ou d'un programme car seuls les détails importants sont fournis à l'utilisatrice ou l'utilisateur.
 
 ## Exemple
