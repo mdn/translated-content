@@ -6,7 +6,7 @@ slug: Web/CSS/border
 
 ## 概览
 
-[CSS](/zh-CN/docs/CSS)的 border 属性是一个用于设置各种单独的边界属性的[简写属性](Shorthand_properties)。`border可以用于设置一个或多个以下属性的值：` {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}。
+[CSS](/zh-CN/docs/CSS)的 border 属性是一个用于设置各种单独的边界属性的[简写属性](Shorthand_properties)。border可以用于设置一个或多个以下属性的值：{{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}。
 
 {{EmbedInteractiveExample("pages/css/border.html")}}
 
@@ -16,14 +16,14 @@ slug: Web/CSS/border
 
 ### Borders vs. outlines
 
-`边界border`和轮廓`outline`很相似。然而轮廓在以下方面与边界不同
+边界`border`和轮廓`outline`很相似。然而轮廓在以下方面与边界不同：
 
-- 轮廓不占据空间，他们在元素内容之外绘制
+- 轮廓不占据空间，他们在元素内容之外绘制。
 - 根据规范，轮廓不必为矩形，尽管通常是矩形。
 
 ## 语法
 
-```
+```css
 /* style */
 border: solid;
 
@@ -63,13 +63,13 @@ border: unset;
 
 ### HTML
 
-```
+```html
 <div>I have a border, an outline, AND a box shadow! Amazing, isn't it?</div>
 ```
 
 ### CSS
 
-```
+```css
 div {
   border: 0.5rem outset pink;
   outline: 0.5rem solid khaki;
@@ -84,7 +84,7 @@ div {
 
 ### 结果
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Setting_a_pink_outset_border')}}
 
 ## 规范
 
