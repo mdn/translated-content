@@ -1,14 +1,6 @@
 ---
 title: デフォルト引数
 slug: Web/JavaScript/Reference/Functions/Default_parameters
-tags:
-  - ECMAScript 2015
-  - 関数
-  - JavaScript
-  - 言語機能
-  - 関数
-browser-compat: javascript.functions.default_parameters
-translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 ---
 {{jsSidebar("Functions")}}
 

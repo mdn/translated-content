@@ -1,14 +1,6 @@
 ---
 title: 論理積 (&&)
 slug: Web/JavaScript/Reference/Operators/Logical_AND
-tags:
-  - JavaScript
-  - 言語機能
-  - 論理演算子
-  - 演算子
-  - リファレンス
-browser-compat: javascript.operators.logical_and
-translation_of: Web/JavaScript/Reference/Operators/Logical_AND
 ---
 {{jsSidebar("Operators")}}
 
