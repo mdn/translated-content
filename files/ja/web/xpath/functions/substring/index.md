@@ -1,10 +1,6 @@
 ---
 title: substring
 slug: Web/XPath/Functions/substring
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/substring
 ---
 {{ XsltRef() }}
 
