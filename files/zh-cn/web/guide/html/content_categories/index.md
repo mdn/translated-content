@@ -12,17 +12,17 @@ slug: Web/Guide/HTML/Content_categories
 
 [![A Venn diagram showing how the various content categories interrelate. The following sections explain these relationships in text.](content_categories_venn.png)](/en-US/docs/Web/Guide/HTML/Content_categories/content_categories_venn.png)
 
-## 主内容类
+## 主内容分类
 
 ### 元数据内容
 
 属于*元数据内容*（Metadata content）的元素可以修改文档其余部分的呈现或行为，建立与其他文档的链接，或者传达其他*外带*信息。
 
-属于这一类的元素有：{{HTMLElement("base")}}、{{Deprecated_Inline}}{{HTMLElement("command")}}、{{HTMLElement("link")}}、{{HTMLElement("meta")}}、{{HTMLElement("noscript")}}、{{HTMLElement("script")}}、{{HTMLElement("style")}} 和 {{HTMLElement("title")}}。
+属于这一类的元素有：{{HTMLElement("base")}}、{{HTMLElement("command")}} {{Deprecated_Inline}}、{{HTMLElement("link")}}、{{HTMLElement("meta")}}、{{HTMLElement("noscript")}}、{{HTMLElement("script")}}、{{HTMLElement("style")}} 和 {{HTMLElement("title")}}。
 
 ### 流式内容
 
-流式内（Flow content）容是一个广泛的类别，包括大多数可以包含在 {{HTMLElement("body")}} 元素之内的元素，包括标题元素、分段元素、措辞元素、嵌入元素、互动元素和表单相关元素。它还包括文本节点（但不包括那些只由空白字符组成的节点）。
+流式内容（Flow content）是一个广泛的类别，包括大多数可以包含在 {{HTMLElement("body")}} 元素之内的元素，包括标题元素、分段元素、措辞元素、嵌入元素、互动元素和表单相关元素。它还包括文本节点（但不包括那些只由空白字符组成的节点）。
 
 流式元素有：{{HTMLElement("a")}}、{{HTMLElement("abbr")}}、{{HTMLElement("address")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("audio")}}、{{HTMLElement("b")}}、{{HTMLElement("bdo")}}、{{HTMLElement("bdi")}}、{{HTMLElement("blockquote")}}、{{HTMLElement("br")}}、{{HTMLElement("button")}}、{{HTMLElement("canvas")}}、{{HTMLElement("cite")}}、{{HTMLElement("code")}}、{{HTMLElement("command")}} {{deprecated_inline}}、{{HTMLElement("data")}}、{{HTMLElement("datalist")}}、{{HTMLElement("del")}}、{{HTMLElement("details")}}、{{HTMLElement("dfn")}}、{{HTMLElement("div")}}、{{HTMLElement("dl")}}、{{HTMLElement("em")}}、{{HTMLElement("embed")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("figure")}}、{{HTMLElement("footer")}}、{{HTMLElement("form")}}、{{HTMLElement("h1")}}、{{HTMLElement("h2")}}、{{HTMLElement("h3")}}、{{HTMLElement("h4")}}、{{HTMLElement("h5")}}、{{HTMLElement("h6")}}、{{HTMLElement("header")}}、{{HTMLElement("hgroup")}}、{{HTMLElement("hr")}}、{{HTMLElement("i")}}、{{HTMLElement("iframe")}}、{{HTMLElement("img")}}、{{HTMLElement("input")}}、{{HTMLElement("ins")}}、{{HTMLElement("kbd")}}、{{HTMLElement("keygen")}} {{deprecated_inline}}、{{HTMLElement("label")}}、{{HTMLElement("main")}}、{{HTMLElement("map")}}、{{HTMLElement("mark")}}、{{MathMLElement("math")}}、{{HTMLElement("menu")}}、{{HTMLElement("meter")}}、{{HTMLElement("nav")}}、{{HTMLElement("noscript")}}、{{HTMLElement("object")}}、{{HTMLElement("ol")}}、{{HTMLElement("output")}}、{{HTMLElement("p")}}、{{HTMLElement("picture")}}、{{HTMLElement("pre")}}、{{HTMLElement("progress")}}、{{HTMLElement("q")}}、{{HTMLElement("ruby")}}、{{HTMLElement("s")}}、{{HTMLElement("samp")}}、{{HTMLElement("script")}}、{{HTMLElement("section")}}、{{HTMLElement("select")}}、{{HTMLElement("small")}}、{{HTMLElement("span")}}、{{HTMLElement("strong")}}、{{HTMLElement("sub")}}、{{HTMLElement("sup")}}、{{SVGElement("svg")}}、{{HTMLElement("table")}}、{{HTMLElement("template")}}、{{HTMLElement("textarea")}}、{{HTMLElement("time")}}、{{HTMLElement("u")}}、{{HTMLElement("ul")}}、{{HTMLElement("var")}}、{{HTMLElement("video")}}、和 {{HTMLElement("wbr")}}。
 
@@ -33,36 +33,36 @@ slug: Web/Guide/HTML/Content_categories
 - {{HTMLElement("meta")}}，仅限于 [itemprop](/zh-CN/docs/Web/HTML/Global_attributes/itemprop) 属性存在的情形
 - {{HTMLElement("style")}}，仅限于 `scoped` {{deprecated_inline}} 属性存在的情形
 
-### 分节内容
+### 分段内容
 
-分节内容（Sectioning content）是流式内容的一个子集，可以在任何可以使用流式内容的地方出现。属于分段内容模型的元素创建了一个[当前大纲中的分段](/zh-CN/docs/Web/HTML/Element/Heading_Elements)，它定义了 {{HTMLElement("header")}} 元素、{{HTMLElement("footer")}} 元素和标题内容（[heading content](#标题内容)）的范围。
+分段内容（Sectioning content）是流式内容的一个子集，可以在任何可以使用流式内容的地方出现。属于分段内容模型的元素创建了一个[当前大纲中的分段](/zh-CN/docs/Web/HTML/Element/Heading_Elements)，它定义了 {{HTMLElement("header")}} 元素、{{HTMLElement("footer")}} 元素和[标题内容](#标题内容)的范围。
 
 属于此类的元素有：{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("nav")}} 和 {{HTMLElement("section")}}。
 
 ### 标题内容
 
-标题内容（Heading content）是流式内容的一个子集，定义了分节的标题，而这个分节可能由一个明确的[分节内容](#sectioning_content)元素直接标记，也可能由标题本身隐式地定义。标题内容可以在任何可以使用流式内容的地方出现。
+标题内容（Heading content）是流式内容的一个子集，定义了分段的标题，而这个分段可能由一个明确的[分段内容](#分段内容)元素直接标记，也可能由标题本身隐式地定义。标题内容可以在任何可以使用流式内容的地方出现。
 
 属于此分类的元素有：{{HTMLElement("h1")}}、{{HTMLElement("h2")}}、{{HTMLElement("h3")}}、{{HTMLElement("h4")}}、{{HTMLElement("h5")}}、{{HTMLElement("h6")}} 和 {{HTMLElement("hgroup")}}。
 
-> **备注：** 尽管{{HTMLElement("header")}} 可能包含一些标题内容，但 {{HTMLElement("header")}} 并不是标题内容本身。
+> **备注：** 尽管 {{HTMLElement("header")}} 可能包含一些标题内容，但其并不是标题内容本身。
 
-> **备注：** {{HTMLElement("hgroup")}} 元素已不再推荐使用，因为它不能与辅助性技术正常配合工作。在 HTML 5定稿之前，它已从 W3C 的 HTML 规范中删除，但仍是 WHATWG 规范的一部分，并且至少被大多数浏览器部分支持。
+> **备注：** {{HTMLElement("hgroup")}} 元素已不再推荐使用，因为它不能与辅助性技术正常配合工作。在 HTML 5 定稿之前，它已从 W3C 的 HTML 规范中删除，但仍是 WHATWG 规范的一部分，并且至少被大多数浏览器部分支持。
 
 ### 短语内容
 
 短语内容（Phrasing content）是流式内容的一个子集，定义了文本和它包含的标记，且可以在任何可以使用流式内容的地方出现。一些短语内容就构成了段落。
 
-属于此类的元素有：{{HTMLElement("abbr")}}、{{HTMLElement("audio")}}、{{HTMLElement("b")}}、{{HTMLElement("bdo")}}、{{HTMLElement("br")}}、{{HTMLElement("button")}}、{{HTMLElement("canvas")}}、{{HTMLElement("cite")}}、{{HTMLElement("code")}}、{{Deprecated_Inline}}{{HTMLElement("command")}}、{{HTMLElement("datalist")}}、{{HTMLElement("dfn")}}、{{HTMLElement("em")}}、{{HTMLElement("embed")}}、{{HTMLElement("i")}}、{{HTMLElement("iframe")}}、{{HTMLElement("img")}}、{{HTMLElement("input")}}、{{HTMLElement("kbd")}}、{{HTMLElement("keygen")}} {{deprecated_inline()}}、{{HTMLElement("label")}}、{{HTMLElement("mark")}}、{{MathMLElement("math")}}、{{HTMLElement("meter")}}、{{HTMLElement("noscript")}}、{{HTMLElement("object")}}、{{HTMLElement("output")}}、{{HTMLElement("progress")}}、{{HTMLElement("q")}}、{{HTMLElement("ruby")}}、{{HTMLElement("samp")}}、{{HTMLElement("script")}}、{{HTMLElement("select")}}、{{HTMLElement("small")}}、{{HTMLElement("span")}}、{{HTMLElement("strong")}}、{{HTMLElement("sub")}}、{{HTMLElement("sup")}}、{{SVGElement("svg")}}、{{HTMLElement("textarea")}}、{{HTMLElement("time")}}、{{HTMLElement("var")}}、{{HTMLElement("video")}}、{{HTMLElement("wbr")}} 和纯文本（仅当所包含的内容不完全为空字符）。
+属于此类的元素有：{{HTMLElement("abbr")}}、{{HTMLElement("audio")}}、{{HTMLElement("b")}}、{{HTMLElement("bdo")}}、{{HTMLElement("br")}}、{{HTMLElement("button")}}、{{HTMLElement("canvas")}}、{{HTMLElement("cite")}}、{{HTMLElement("code")}}、{{HTMLElement("command")}} {{Deprecated_Inline}}、{{HTMLElement("datalist")}}、{{HTMLElement("dfn")}}、{{HTMLElement("em")}}、{{HTMLElement("embed")}}、{{HTMLElement("i")}}、{{HTMLElement("iframe")}}、{{HTMLElement("img")}}、{{HTMLElement("input")}}、{{HTMLElement("kbd")}}、{{HTMLElement("keygen")}} {{deprecated_inline()}}、{{HTMLElement("label")}}、{{HTMLElement("mark")}}、{{MathMLElement("math")}}、{{HTMLElement("meter")}}、{{HTMLElement("noscript")}}、{{HTMLElement("object")}}、{{HTMLElement("output")}}、{{HTMLElement("progress")}}、{{HTMLElement("q")}}、{{HTMLElement("ruby")}}、{{HTMLElement("samp")}}、{{HTMLElement("script")}}、{{HTMLElement("select")}}、{{HTMLElement("small")}}、{{HTMLElement("span")}}、{{HTMLElement("strong")}}、{{HTMLElement("sub")}}、{{HTMLElement("sup")}}、{{SVGElement("svg")}}、{{HTMLElement("textarea")}}、{{HTMLElement("time")}}、{{HTMLElement("var")}}、{{HTMLElement("video")}}、{{HTMLElement("wbr")}} 和纯文本（仅当所包含的内容不完全为空字符）。
 
 一些其他的元素也属于这个分类，但是只有当如下特殊情况时才会实现：
 
-- {{HTMLElement("a")}}，当它仅包含 phrasing content 时
+- {{HTMLElement("a")}}，当它仅包含短语内容时
 - {{HTMLElement("area")}}，当它为 {{HTMLElement("map")}} 元素的子元素时
-- {{HTMLElement("del")}}，当它仅包含 phrasing content 时
-- {{HTMLElement("ins")}}，当它仅包含 phrasing content 时
+- {{HTMLElement("del")}}，当它仅包含短语内容时
+- {{HTMLElement("ins")}}，当它仅包含短语内容时
 - {{HTMLElement("link")}}，仅限于 [itemprop](/zh-CN/docs/Web/HTML/Global_attributes/itemprop) 属性存在的情形
-- {{HTMLElement("map")}}，当它仅包含 phrasing content 时
+- {{HTMLElement("map")}}，当它仅包含短语内容时
 - {{HTMLElement("meta")}}，仅限于 [itemprop](/zh-CN/docs/Web/HTML/Global_attributes/itemprop) 属性存在的情形
 
 ### 嵌入内容
@@ -88,7 +88,7 @@ slug: Web/Guide/HTML/Content_categories
 
 ### 表单相关内容
 
-与表单相关的内容（Form-associated content）是流程内容的一个子集，包括有表单所有者的元素，通过**form**属性暴露出来，可以在预期有流式内容的地方使用。表单所有者要么是包含 {{HTMLElement("form")}} 的元素，要么是在**form**属性中指定其 id 的元素。
+与表单相关的内容（Form-associated content）是流程内容的一个子集，包括有表单所有者的元素，通过 **form** 属性暴露出来，可以在预期有流式内容的地方使用。表单所有者要么是包含 {{HTMLElement("form")}} 的元素，要么是在 **form** 属性中指定其 id 的元素。
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
