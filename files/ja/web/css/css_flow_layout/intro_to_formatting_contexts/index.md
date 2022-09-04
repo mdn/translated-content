@@ -1,20 +1,6 @@
 ---
 title: 整形コンテキストの紹介
 slug: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
-tags:
-  - BFC
-  - Block Formatting Context
-  - CSS
-  - Formatting contexts
-  - Guide
-  - Intermediate
-  - Layout
-  - flow
-  - ガイド
-  - ブロック整形コンテキスト
-  - 中級者
-  - 整形コンテキスト
-translation_of: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
 ---
 {{CSSRef}}
 

@@ -1,14 +1,6 @@
 ---
 title: column-span
 slug: Web/CSS/column-span
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.column-span
-translation_of: Web/CSS/column-span
 ---
 {{CSSRef}}
 

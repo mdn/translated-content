@@ -1,16 +1,6 @@
 ---
 title: '::marker'
 slug: Web/CSS/::marker
-tags:
-  - CSS
-  - CSS リスト
-  - 実験的
-  - レイアウト
-  - 擬似要素
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.marker
-translation_of: Web/CSS/::marker
 ---
 {{CSSRef}}
 

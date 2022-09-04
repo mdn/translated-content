@@ -1,19 +1,7 @@
 ---
 title: clamp()
 slug: Web/CSS/clamp
-tags:
-  - CSS
-  - CSS 関数
-  - 計算
-  - 演算
-  - 関数
-  - レイアウト
-  - リファレンス
-  - ウェブ
-  - clamp
-translation_of: Web/CSS/clamp()
 original_slug: Web/CSS/clamp()
-browser-compat: css.types.clamp
 ---
 {{CSSRef}}
 

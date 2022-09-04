@@ -1,12 +1,6 @@
 ---
 title: CSS 値と単位
 slug: Web/CSS/CSS_Values_and_Units
-tags:
-  - CSS
-  - ガイド
-  - リファレンス
-  - 値と単位
-translation_of: Web/CSS/CSS_Values_and_Units
 ---
 {{CSSRef}}
 

@@ -1,18 +1,6 @@
 ---
 title: ':-moz-drag-over'
 slug: Web/CSS/:-moz-drag-over
-tags:
-  - CSS
-  - CSS:Mozilla 拡張
-  - Firefox
-  - Mozilla
-  - NeedsCompatTable
-  - 標準外
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors:-moz-drag-over
-translation_of: Web/CSS/:-moz-drag-over
 ---
 {{CSSRef}}{{Non-standard_header}}
 
