@@ -1,18 +1,6 @@
 ---
 title: Feature-Policy
 slug: Web/HTTP/Headers/Feature-Policy
-tags:
-  - 認証
-  - 実験的
-  - Feature-Policy
-  - HTTP
-  - 権限
-  - リファレンス
-  - セキュリティ
-  - ウェブ
-  - ヘッダー
-browser-compat: http.headers.Feature-Policy
-translation_of: Web/HTTP/Headers/Feature-Policy
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 

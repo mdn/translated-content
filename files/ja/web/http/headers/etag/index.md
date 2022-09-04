@@ -1,14 +1,6 @@
 ---
 title: ETag
 slug: Web/HTTP/Headers/ETag
-tags:
-  - HTTP
-  - Reference
-  - ヘッダー
-  - リファレンス
-  - レスポンス
-  - レスポンスヘッダー
-translation_of: Web/HTTP/Headers/ETag
 ---
 {{HTTPSidebar}}
 

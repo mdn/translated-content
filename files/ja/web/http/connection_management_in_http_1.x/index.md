@@ -1,14 +1,6 @@
 ---
 title: HTTP/1.x のコネクション管理
 slug: Web/HTTP/Connection_management_in_HTTP_1.x
-tags:
-  - Connection Management
-  - Guide
-  - HTTP
-  - Networking
-  - Performance
-  - WebMechanics
-translation_of: Web/HTTP/Connection_management_in_HTTP_1.x
 ---
 {{HTTPSidebar}}
 

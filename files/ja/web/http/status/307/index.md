@@ -1,12 +1,6 @@
 ---
 title: 307 Temporary Redirect
 slug: Web/HTTP/Status/307
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - Reference
-  - リダイレクト
-translation_of: Web/HTTP/Status/307
 ---
 {{HTTPSidebar}}
 
