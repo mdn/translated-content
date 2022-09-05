@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 ---
 {{JSRef}}
 
-**`sort()`** 方法用[原地算法](https://en.wikipedia.org/wiki/In-place_algorithm)对数组的元素进行排序，并返回数组。默认排序顺序是在将元素转换为字符串，然后比较它们的 UTF-16 代码单元值序列时构建的
+**`sort()`** 方法用[原地算法](https://zh.wikipedia.org/wiki/原地算法)对数组的元素进行排序，并返回数组。默认排序顺序是在将元素转换为字符串，然后比较它们的 UTF-16 代码单元值序列时构建的
 
 由于它取决于具体实现，因此无法保证排序的时间和空间复杂性。
 
@@ -272,7 +272,7 @@ ES10（EcmaScript 2019）以前没有要求稳定性，意味着你可能会得�
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - {{jsxref("Array.prototype.reverse()")}}
 - {{jsxref("String.prototype.localeCompare()")}}
