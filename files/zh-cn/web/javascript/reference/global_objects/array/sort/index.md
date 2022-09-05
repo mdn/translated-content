@@ -62,10 +62,10 @@ sort(function compareFn(a, b) { /* … */ })
 
 ```js
 function compareFn(a, b) {
-  if (a is less than b by some ordering criterion) {
+  if (在某些排序规则中，a 小于 b) {
     return -1;
   }
-  if (a is greater than b by the ordering criterion) {
+  if (在某些排序规则中，a 大于 b) {
     return 1;
   }
   // a 一定等于 b
