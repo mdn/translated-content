@@ -65,7 +65,7 @@ function compareFn(a, b) {
   if (在某些排序规则中，a 小于 b) {
     return -1;
   }
-  if (在某些排序规则中，a 大于 b) {
+  if (在这一排序规则下，a 大于 b) {
     return 1;
   }
   // a 一定等于 b
