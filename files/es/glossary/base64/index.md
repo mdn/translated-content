@@ -59,7 +59,7 @@ Ambas funciones trabajan sobre cadenas de texto. Si desea trabajar con [ArrayBuf
 - [Vectores o arrays tipados](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays)
 - [ArrayBufferView](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)
 - [`Uint8Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
-- [`StringView`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays/StringView)[, una representación parecida a C de cadenas basadas en arrays tipados](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays/StringView)
+- [`StringView`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays/StringView), una representación parecida a C de cadenas basadas en arrays tipados
 - [`DOMString`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 - [`URI`](https://developer.mozilla.org/en-US/docs/Glossary/URI)
 - [`encodeURI()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)
