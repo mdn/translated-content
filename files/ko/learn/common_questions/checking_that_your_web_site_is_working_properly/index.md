@@ -1,7 +1,6 @@
 ---
 title: 웹 사이트가 제대로 동작하는지 확인하는 방법
 slug: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
-translation_of: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
 original_slug: Learn/Common_questions/웹_사이트가_제대로_동작하는지_확인
 ---
 이번에는 웹사이트 동작과 관련한 다양한 문제해결 단계와 그 문제들을 해결하기 위한 방법들을 알아보겠습니다.
@@ -148,22 +147,4 @@ PING mozilla.org (63.245.215.20): 56 data bytes
 64 bytes from 63.245.215.20: icmp_seq=2 ttl=44 time=148.734 ms
 64 bytes from 63.245.215.20: icmp_seq=3 ttl=44 time=147.857 ms
 ^C
---- mozilla.org ping statistics ---
-4 packets transmitted, 4 packets received, 0.0% packet loss
-round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
-```
-
-Just keep in mind a handy keyboard shortcut: **Ctrl+C**. Ctrl+C sends an “interrupt” signal to the runtime and tells it to stop. If you don't stop the runtime, `ping` will ping the server indefinitely.
-
-### A simple checklist
-
-- Check for 404s
-- Make sure all webpages are behaving as you expect
-- Check your website in several browsers to make sure it renders consistently
-
-## Next steps
-
-Congratulations, your website is up and running for anyone to visit. That's a huge achievement. Now, you can start digging deeper into various subjects.
-
-- Since people can come to your website from all over the world, you should consider making it [accessible to everybody](/ko/docs/Learn/What_is_accessibility).
-- Is the design of your website a bit too rough? It's time to [learn more about CSS](/ko/docs/Learn/CSS/Using_CSS_in_a_web_page).
+--- mozilla.org ping statistics 
