@@ -72,6 +72,8 @@ Los estilos predeterminados del navegador mostrarán listas de descripciones con
 
 {{ EmbedLiveSample('listas-de-descripciones-ejemplo-activo-1', '100%', '285px', '', '', 'hide-codepen-jsfiddle') }}
 
+## Ejemplo
+
 Ten en cuenta que un solo término puede tener múltiples descripciones, por ejemplo:
 
 ```html
