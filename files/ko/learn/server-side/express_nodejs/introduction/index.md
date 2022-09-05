@@ -51,9 +51,9 @@ translation_of: Learn/Server-side/Express_Nodejs/Introduction
 
 이렇게하면 웹 서버가 만들어지고 URL `http://127.0.0.1:8000/` 에 있는 모든 종류의 HTTP 요청에 수신하게 됩니다. 요청이 하나 들어왔을 때, "Hello World" 텍스트 응답을 보내도록 하겠습니다.
 
-1.  터미널을 연다. (윈도우에서는, 커맨드라인 유틸리티)
+1. 터미널을 연다. (윈도우에서는, 커맨드라인 유틸리티)
     ※ 윈도우 키 + R => 'CMD'
-2.  프로그램을 저장할 폴더를 생성하고(여기서는 `test-node`), 아래 명령을 입력하여 해당 폴더로 이동한다.
+2. 프로그램을 저장할 폴더를 생성하고(여기서는 `test-node`), 아래 명령을 입력하여 해당 폴더로 이동한다.
 
 ```
 cd test-node
@@ -290,7 +290,7 @@ var wiki = require('./wiki.js')
 app.use('/wiki', wiki)
 ```
 
-We'll show you a lot more about working with routes, and in particular about using the `Router`, later on in the linked section[ Routes and controllers .](/ko/docs/Learn/Server-side/Express_Nodejs/routes)
+We'll show you a lot more about working with routes, and in particular about using the `Router`, later on in the linked section [Routes and controllers](/ko/docs/Learn/Server-side/Express_Nodejs/routes).
 
 ### 미들웨어의 사용
 
@@ -298,7 +298,7 @@ We'll show you a lot more about working with routes, and in particular about usi
 
 > **참고:** 미들웨어는 모든 작업을 수행하고, 코드를 실행하고, 요청 및 응답 객체를 변경할 수 _있으며, 요청-응답주기를 종료_ 할 _수도_ 있습니다. 만약 주기가 종료되지 않으면, 다음 미들웨어 함수의 제어를 위해 `next()`를 호출해야합니다.( 혹은 요청이 중단된 상태로 유지될 것입니다.)
 
-대부분의 앱은 쿠키, 세션, 사용자 인증,` POST`요청 및 JSON 데이터 접근 , logging 등과 같은 일반적인 웹 개발 작업을 단순화하기 위해*서드파티* 미들웨어를 사용합니다 [. Express 팀에서 관리하는 미들웨어 패키지 목록을](http://expressjs.com/en/resources/middleware.html) 이 곳에서 찾을 수 있습니다 ( 다른 인기있는 서드파티 패키지도 포함). 다른 Express 패키지는 NPM 패키지 관리자에서 사용할 수 있습니다.
+대부분의 앱은 쿠키, 세션, 사용자 인증, `POST` 요청 및 JSON 데이터 접근 , logging 등과 같은 일반적인 웹 개발 작업을 단순화하기 위해*서드파티* 미들웨어를 사용합니다 [. Express 팀에서 관리하는 미들웨어 패키지 목록을](http://expressjs.com/en/resources/middleware.html) 이 곳에서 찾을 수 있습니다 ( 다른 인기있는 서드파티 패키지도 포함). 다른 Express 패키지는 NPM 패키지 관리자에서 사용할 수 있습니다.
 
 서드파티 미들웨어를 사용하려면 먼저 NPM을 사용하여 앱에 설치해야합니다. 예를 들어 [morgan](http://expressjs.com/en/resources/middleware/morgan.html) HTTP 요청 logger 미들웨어 를 설치하려면 다음과 같이 진행합니다.
 

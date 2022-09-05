@@ -1,14 +1,6 @@
 ---
 title: HTMLIFrameElement
 slug: Web/API/HTMLIFrameElement
-page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.HTMLIFrameElement
-translation_of: Web/API/HTMLIFrameElement
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,14 +1,6 @@
 ---
 title: CanvasRenderingContext2D.strokeStyle
 slug: Web/API/CanvasRenderingContext2D/strokeStyle
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - プロパティ
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.strokeStyle
-translation_of: Web/API/CanvasRenderingContext2D/strokeStyle
 ---
 {{APIRef}}
 

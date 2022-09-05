@@ -1,17 +1,6 @@
 ---
 title: DOMRect
 slug: Web/API/DOMRect
-tags:
-  - API
-  - DOM
-  - DOMRect
-  - 位置
-  - 位置インターフェイス
-  - インターフェイス
-  - 矩形
-  - リファレンス
-browser-compat: api.DOMRect
-translation_of: Web/API/DOMRect
 ---
 {{APIRef("Geometry Interfaces")}}
 

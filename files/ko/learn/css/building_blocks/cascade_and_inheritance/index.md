@@ -119,9 +119,9 @@ CSS 는 상속을 제어하기 위한 4 가지 특수 범용 속성 값을 제�
 
 예를 들면:
 
-1.  두 번째 목록 항목에는 `my-class-1` class 가 적용되었습니다. 내부에 중첩된 `<a>` 요소의 색상을 상속하도록 설정합니다. 규칙을 제거하면 링크 색상이 어떻게 변경됩니까?
-2.  왜 세 번째 와 네 번째 링크가 그 색깔인지 이해합니까? 그렇치 않은 경우 위의 값에 대한 설명을 확인하십시오.
-3.  `<a>` 요소에 대해 — 예를 들어 `a { color: red; }` 와 같은 새 색상을 정의하는 경우 어떤 링크가 색상이 변경됩니까?
+1. 두 번째 목록 항목에는 `my-class-1` class 가 적용되었습니다. 내부에 중첩된 `<a>` 요소의 색상을 상속하도록 설정합니다. 규칙을 제거하면 링크 색상이 어떻게 변경됩니까?
+2. 왜 세 번째 와 네 번째 링크가 그 색깔인지 이해합니까? 그렇치 않은 경우 위의 값에 대한 설명을 확인하십시오.
+3. `<a>` 요소에 대해 — 예를 들어 `a { color: red; }` 와 같은 새 색상을 정의하는 경우 어떤 링크가 색상이 변경됩니까?
 
 {{EmbedGHLiveSample("css-examples/learn/cascade/keywords.html", '100%', 700)}}
 
@@ -141,9 +141,9 @@ CSS 속기 속성을 `all` 로 사용하면 이러한 상속 값 중 하나를 (
 
 여기에는 중요도의 내림차순으로 나열된 세 가지 요소가 있습니다. 이전의 것들은 다음 것보다 우선합니다:
 
-1.  **Importance**
-2.  **우선 순위**
-3.  **소스 순서**
+1. **Importance**
+2. **우선 순위**
+3. **소스 순서**
 
 브라우저가 CSS 를 정확히 적용하는 방법을 어떻게 파악하는지 아래부터 위로 살펴보겠습니다.
 
@@ -167,10 +167,10 @@ CSS 속기 속성을 `all` 로 사용하면 이러한 상속 값 중 하나를 (
 
 선택자의 우선 순위는 4개의 다른 값 (또는 구성 요소) 을 사용하여 측정되며, 이는 4개의 열에서 Thousands, Hundreds, Tens 및 Ones\*\* \*\*개의 단일 자릿수로 간주될 수 있습니다.
 
-1.  **Thousands**: 선언이 인라인 스타일인 {{htmlattrxref("style")}} 속성 안에 있으면, 열에서 1점을 얻습니다. 이러한 선언에는 선택자가 없으므로 그 우선 순위는 항상 1000 입니다.
-2.  **Hundreds**: 전체 선택자에 포함된 각 ID 선택자에 대해 이 열에서 1점을 얻습니다.
-3.  **Tens**: 이 선택란에서 전체 선택자 내에 포함된 각 class 선택자, 속성 선택자 또는 pseudo-class 에 대해 이 열에서 1점을 얻습니다.
-4.  **Ones**: 이 항목에서 각 요소 선택자 또는 전체 선택자 내에 포함된 pseudo-element 에 대해 1점을 얻습니다.
+1. **Thousands**: 선언이 인라인 스타일인 {{htmlattrxref("style")}} 속성 안에 있으면, 열에서 1점을 얻습니다. 이러한 선언에는 선택자가 없으므로 그 우선 순위는 항상 1000 입니다.
+2. **Hundreds**: 전체 선택자에 포함된 각 ID 선택자에 대해 이 열에서 1점을 얻습니다.
+3. **Tens**: 이 선택란에서 전체 선택자 내에 포함된 각 class 선택자, 속성 선택자 또는 pseudo-class 에 대해 이 열에서 1점을 얻습니다.
+4. **Ones**: 이 항목에서 각 요소 선택자 또는 전체 선택자 내에 포함된 pseudo-element 에 대해 1점을 얻습니다.
 
 > **참고:** 범용 선택자 (`*`), 결합자 (`+`, `>`, `~`, ' ') 및 부정 pseudo-class (`:not`) 는 우선 순위에 영향을 미치지 않습니다.
 
@@ -208,10 +208,10 @@ CSS 속기 속성을 `all` 로 사용하면 이러한 상속 값 중 하나를 (
 
 이 과정을 통해 어떤 일이 일어나고 있는지 살펴보겠습니다 — 이해하기 어려운 경우 어떤 일이 발생하는지 확인하려면 일부 속성을 제거해 보십시오:
 
-1.  세 번째 규칙의 {{cssxref("color")}} 및 {{cssxref("padding")}} 값이 적용되었지만, {{cssxref("background-color")}} 가 적용되었음을 알 수 있습니다. 왜죠? 소스 순서 후반의 규칙은 일반적으로 이전 규칙보다 우선하기 때문에 세 가지 모두가 반드시 적용되어야 합니다.
-2.  그러나, class 선택자는 요소 선택자보다 높은 우선 순위에 있기 때문에 위의 규칙이 우선합니다.
-3.  두 요소 모두 {{htmlattrxref("class")}} 가 **`더 우수`** 하지만, 두 번째 요소는 {{htmlattrxref("id")}} 도 **`이기고`** 있습니다. ID 는 classe 보다 우선 순위가 _더 높기_ 때문에 페이지에서 각 고유 ID 를 가진 요소는 하나만 가질 수 있지만, class 는 같은 요소가 많습니다 — ID 선택자는 대상에 따라 **_매우 다릅니다_.** 빨간색 배경색과 1 px 검은색 테두리를 두 번째 요소에 적용해야 합니다. 첫 번째 요소는 회색 배경색을 가져오고 class 에서 지정한대로 테두리가 없습니다.
-4.  두 번째 요소는 빨간색 배경색을 얻지만, 테두리는 없습니다. 왜일까요? 두 번째 규칙의 `!important` 선언으로 인해 — `border: none` 뒤에 이것을 포함하면 ID 가 더 높은 우선 순위에도 불구하고 이 선언이 이전 규칙의 테두리 값 보다 우선함을 의미합니다.
+1. 세 번째 규칙의 {{cssxref("color")}} 및 {{cssxref("padding")}} 값이 적용되었지만, {{cssxref("background-color")}} 가 적용되었음을 알 수 있습니다. 왜죠? 소스 순서 후반의 규칙은 일반적으로 이전 규칙보다 우선하기 때문에 세 가지 모두가 반드시 적용되어야 합니다.
+2. 그러나, class 선택자는 요소 선택자보다 높은 우선 순위에 있기 때문에 위의 규칙이 우선합니다.
+3. 두 요소 모두 {{htmlattrxref("class")}} 가 **`더 우수`** 하지만, 두 번째 요소는 {{htmlattrxref("id")}} 도 **`이기고`** 있습니다. ID 는 classe 보다 우선 순위가 _더 높기_ 때문에 페이지에서 각 고유 ID 를 가진 요소는 하나만 가질 수 있지만, class 는 같은 요소가 많습니다 — ID 선택자는 대상에 따라 **_매우 다릅니다_.** 빨간색 배경색과 1 px 검은색 테두리를 두 번째 요소에 적용해야 합니다. 첫 번째 요소는 회색 배경색을 가져오고 class 에서 지정한대로 테두리가 없습니다.
+4. 두 번째 요소는 빨간색 배경색을 얻지만, 테두리는 없습니다. 왜일까요? 두 번째 규칙의 `!important` 선언으로 인해 — `border: none` 뒤에 이것을 포함하면 ID 가 더 높은 우선 순위에도 불구하고 이 선언이 이전 규칙의 테두리 값 보다 우선함을 의미합니다.
 
 > **참고:** 이 `!important` 선언을 재정의하는 유일한 방법은 소스 순서에서 나중에 같은 우선 순위를 가진 선언에 또는 다른 고유한 선언에 다른 `!important` 선언을 포함시키는 것입니다.
 
@@ -227,11 +227,11 @@ CSS 속기 속성을 `all` 로 사용하면 이러한 상속 값 중 하나를 (
 
 충돌 선언은 다음 순서로 적용되며, 이후 선언은 이전 선언보다 우선합니다:
 
-1.  사용자 에이전트 스타일 시트의 선언 (예: 다른 스타일이 설정되지 않은 경우 사용되는 브라우저의 기본 스타일).
-2.  사용자 스타일 시트의 일반 선언 (사용자가 설정한 사용자 정의 스타일).
-3.  작성자 스타일 시트의 일반적인 선언 (웹 개발자가 설정한 스타일).
-4.  작성자 스타일 목록에서 중요한 선언
-5.  사용자 스타일 시트의 중요한 선언
+1. 사용자 에이전트 스타일 시트의 선언 (예: 다른 스타일이 설정되지 않은 경우 사용되는 브라우저의 기본 스타일).
+2. 사용자 스타일 시트의 일반 선언 (사용자가 설정한 사용자 정의 스타일).
+3. 작성자 스타일 시트의 일반적인 선언 (웹 개발자가 설정한 스타일).
+4. 작성자 스타일 목록에서 중요한 선언
+5. 사용자 스타일 시트의 중요한 선언
 
 웹 개발자의 스타일 시트는 사용자 스타일 시트를 재정의 하는것이 합리적이므로 디자인을 의도한대로 유지할 수 있지만, 사용자는 위에서 언급한 것처럼 웹 개발자 스타일을 재정의 해야 할 충분한 이유가 있습니다 — 이는 규칙에서 `important` 를 사용하여 달성할 수 있습니다.
 
@@ -255,21 +255,21 @@ CSS 속기 속성을 `all` 로 사용하면 이러한 상속 값 중 하나를 (
 
 ## 이번 강의에서는
 
-1.  [계단식 및 상속](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors)
+1. [계단식 및 상속](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Type, class 및 ID 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [속성 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Pseudo-classes 및 pseudo-elements](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [결합자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [박스 모델](/ko/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [배경 및 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [다른 텍스트 방향 처리](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [콘텐츠 overflowing](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [값 과 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [CSS 에서 항목 크기 조정](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [이미지, 미디어 및 양식 요소](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [박스 모델](/ko/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [배경 및 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [다른 텍스트 방향 처리](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [콘텐츠 overflowing](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [값 과 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [CSS 에서 항목 크기 조정](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [이미지, 미디어 및 양식 요소](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [표 스타일링](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [CSS 디버깅](/ko/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [CSS 정리](/ko/docs/Learn/CSS/Building_blocks/Organizing)

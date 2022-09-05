@@ -1,20 +1,6 @@
 ---
 title: VideoTrack.id
 slug: Web/API/VideoTrack/id
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - Video Track
-  - VideoTrack
-  - id
-  - track
-translation_of: Web/API/VideoTrack/id
 ---
 {{APIRef("HTML DOM")}}
 

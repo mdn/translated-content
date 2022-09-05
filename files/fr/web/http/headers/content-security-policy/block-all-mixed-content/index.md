@@ -51,7 +51,7 @@ Content-Security-Policy: img-src https:
 
 {{Compat("http.headers.csp.block-all-mixed-content")}}
 
-## Voir également
+## Voir aussi
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{CSP("upgrade-insecure-requests")}}

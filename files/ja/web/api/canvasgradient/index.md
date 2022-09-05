@@ -1,14 +1,6 @@
 ---
 title: CanvasGradient
 slug: Web/API/CanvasGradient
-tags:
-  - API
-  - Canvas
-  - CanvasGradient
-  - Interface
-  - Reference
-  - グラデーション
-translation_of: Web/API/CanvasGradient
 ---
 **`CanvasGradient`** インターフェイスは、グラデーションを記述する[不透明オブジェクト](https://en.wikipedia.org/wiki/Opaque_data_type)を表します。 {{domxref("CanvasRenderingContext2D.createLinearGradient()")}} または {{domxref("CanvasRenderingContext2D.createRadialGradient()")}} メソッドから返されます。
 

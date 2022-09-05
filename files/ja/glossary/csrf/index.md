@@ -1,10 +1,6 @@
 ---
 title: CSRF
 slug: Glossary/CSRF
-tags:
-  - 用語集
-  - セキュリティ
-translation_of: Glossary/CSRF
 ---
 **CSRF** (クロスサイトリクエストフォージェリー、Cross-Site Request Forgery) は、信頼されたユーザーになりすまし、ウェブサイトに対して不正なコマンドを送信する攻撃です。
 

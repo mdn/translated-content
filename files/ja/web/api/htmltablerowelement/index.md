@@ -1,14 +1,6 @@
 ---
 title: HTMLTableRowElement
 slug: Web/API/HTMLTableRowElement
-page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.HTMLTableRowElement
-translation_of: Web/API/HTMLTableRowElement
 ---
 {{ APIRef("HTML DOM") }}
 

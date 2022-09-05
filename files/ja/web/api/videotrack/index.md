@@ -1,16 +1,6 @@
 ---
 title: VideoTrack
 slug: Web/API/VideoTrack
-tags:
-  - HTML
-  - HTML DOM
-  - Interface
-  - Media
-  - Reference
-  - Video
-  - VideoTrack
-  - track
-translation_of: Web/API/VideoTrack
 ---
 {{APIRef("HTML DOM")}}
 

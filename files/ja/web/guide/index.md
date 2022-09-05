@@ -25,7 +25,7 @@ translation_of: Web/Guide
   - : 現代のウェブサイトとアプリケーションは、グラフィックスによる表現を必要としています。
 - [Web API ガイド](/ja/docs/Web/Guide/API)
   - : すべての Web API のリストとそれが何をするのか。
-- [JavaScript](/ja/docs/JavaScript "JavaScript")
+- [JavaScript](/ja/docs/JavaScript)
   - : JavaScript は、ウェブアプリケーションの作成に使われる強力なスクリプト言語です。
 - [Localizations and character encodings](/ja/docs/Web/Guide/Localizations_and_character_encodings)
   - : ブラウザー内部では文章は Unicode 形式で処理されます。ところが、ネットワークを介して文章をブラウザーに送る過程では、文字をバイトで表現する (文字エンコード) ことが行われています。[HTML の仕様では (すべての Unicode 文字を表現できる) UTF-8 エンコーディングを利用することが推奨されており](http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#charset)、如何なるエンコーディングが使われていようと、ウェブコンテンツはそのエンコーディングを宣言する必要があります。

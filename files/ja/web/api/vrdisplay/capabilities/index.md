@@ -1,19 +1,6 @@
 ---
 title: VRDisplay.capabilities
 slug: Web/API/VRDisplay/capabilities
-page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - capabilities
-browser-compat: api.VRDisplay.capabilities
-translation_of: Web/API/VRDisplay/capabilities
 original_slug: Web/API/VRDevice/capabilities
 ---
 {{APIRef("WebVR API")}}{{Deprecated_Header}}

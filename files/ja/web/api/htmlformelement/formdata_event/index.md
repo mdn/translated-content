@@ -1,13 +1,6 @@
 ---
 title: 'HTMLFormElement: formdata イベント'
 slug: Web/API/HTMLFormElement/formdata_event
-tags:
-  - Event
-  - Forms
-  - Reference
-  - formevent
-translation_of: Web/API/HTMLFormElement/formdata_event
-browser-compat: api.HTMLFormElement.formdata_event
 ---
 {{APIRef}}
 

@@ -2,7 +2,7 @@
 title: CSS 參考文件
 slug: Web/CSS/Reference
 ---
-Use this **CSS reference** to browse an [alphabetical index](#Keyword_index) of all the standard [CSS](/zh-TW/docs/Web/CSS) properties, [pseudo-classes](/zh-TW/docs/Web/CSS/Pseudo-classes), [pseudo-elements](/zh-TW/docs/Web/CSS/Pseudo-elements), [data types](/zh-TW/docs/Web/CSS/CSS_Types), and [at-rules](/zh-TW/docs/Web/CSS/At-rule). You can also browse a list of all the CSS [selectors organized by type](#Selectors) and a list of [key CSS concepts](#Concepts). Also included is a brief [DOM-CSS / CSSOM reference](#DOM-CSS_CSSOM).
+Use this **CSS reference** to browse an [alphabetical index](#index) of all the standard [CSS](/zh-TW/docs/Web/CSS) properties, [pseudo-classes](/zh-TW/docs/Web/CSS/Pseudo-classes), [pseudo-elements](/zh-TW/docs/Web/CSS/Pseudo-elements), [data types](/zh-TW/docs/Web/CSS/CSS_Types), and [at-rules](/zh-TW/docs/Web/CSS/At-rule). You can also browse a list of all the CSS [selectors organized by type](#Selectors) and a list of [key CSS concepts](#Concepts). Also included is a brief [DOM-CSS / CSSOM reference](#DOM-CSS_CSSOM).
 
 ## 基本語法規則
 
@@ -37,7 +37,7 @@ For a beginner-level introduction to the syntax of CSS selectors, please see [th
 
 As the structure of at-rules varies widely, please see [At-rule](/zh-TW/docs/Web/CSS/At-rule) to find the syntax of the specific one you want.
 
-## Keyword index
+## Index
 
 > **備註：** The property names in this index do **not** include the [JavaScript names](/zh-TW/docs/Web/CSS/CSS_Properties_Reference) where they differ from the CSS standard names.
 

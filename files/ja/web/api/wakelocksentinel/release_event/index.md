@@ -1,16 +1,6 @@
 ---
 title: 'WakeLockSentinel: release イベント'
 slug: Web/API/WakeLockSentinel/release_event
-tags:
-  - Event Handler
-  - プロパティ
-  - 画面 Wake Lock API
-  - 起動ロック
-  - WakeLockSentinel
-  - 画面
-  - 画面 wake lock
-browser-compat: api.WakeLockSentinel.release_event
-translation_of: Web/API/WakeLockSentinel/release_event
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 

@@ -98,8 +98,6 @@ Rendering: ![](mtable-1.png)
 </math>
 ```
 
-##
-
 ## 仕様
 
 | Specification                                                                            | Status                       | Comment               |

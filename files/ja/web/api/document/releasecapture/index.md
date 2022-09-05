@@ -1,13 +1,6 @@
 ---
 title: Document.releaseCapture()
 slug: Web/API/Document/releaseCapture
-page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-translation_of: Web/API/Document/releaseCapture
 ---
 {{ApiRef("DOM")}}
 

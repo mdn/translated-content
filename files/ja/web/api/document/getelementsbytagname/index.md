@@ -1,12 +1,6 @@
 ---
 title: Document.getElementsByTagName()
 slug: Web/API/Document/getElementsByTagName
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-translation_of: Web/API/Document/getElementsByTagName
 ---
 {{APIRef("DOM")}}
 

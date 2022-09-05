@@ -1,15 +1,6 @@
 ---
 title: TimeRanges
 slug: Web/API/TimeRanges
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Media
-  - NeedsExample
-  - Reference
-  - TopicStub
-translation_of: Web/API/TimeRanges
 ---
 {{APIRef("DOM")}}
 

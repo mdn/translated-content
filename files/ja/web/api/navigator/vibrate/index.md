@@ -1,13 +1,6 @@
 ---
 title: Navigator.vibrate()
 slug: Web/API/Navigator/vibrate
-tags:
-  - API
-  - Method
-  - Navigator
-  - Reference
-  - Vibration API
-translation_of: Web/API/Navigator/vibrate
 ---
 {{APIRef("Vibration API")}}
 

@@ -1,10 +1,6 @@
 ---
 title: Native
 slug: Glossary/Native
-tags:
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/Native
 ---
 *ネイティブ*アプリケーションは、ターゲットアーキテクチャを構成するハードウェア/ソフトウェア環境で実行するようにコンパイルされています。
 

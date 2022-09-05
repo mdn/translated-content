@@ -1,7 +1,6 @@
 ---
 title: VREyeParameters.renderWidth
 slug: Web/API/VREyeParameters/renderWidth
-translation_of: Web/API/VREyeParameters/renderWidth
 ---
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 

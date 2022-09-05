@@ -28,38 +28,11 @@ _L'interface_ _`Transferable`_ _n'implémente ou n'hérite d'aucune méthode sp�
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', "infrastructure.html#transferable-objects", "Transferable")}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>
-        <p>
-          Remplace l'interface <code>Transferable</code> avec l'attribut étendue
-          <code>[Transferable]</code> Web IDL.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5 W3C', "infrastructure.html#transferable-objects", "Transferable")}}
-      </td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Transferable")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,13 +1,6 @@
 ---
 title: 'MDN web docs: How-to ガイド'
 slug: MDN/Contribute/Howto
-tags:
-  - Documentation
-  - ガイド
-  - Howto
-  - Landing
-  - MDN Meta
-translation_of: MDN/Contribute/Howto
 ---
 {{MDNSidebar}}
 

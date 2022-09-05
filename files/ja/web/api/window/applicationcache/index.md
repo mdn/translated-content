@@ -1,14 +1,6 @@
 ---
 title: window.applicationCache
 slug: Web/API/Window/applicationCache
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/Window/applicationCache
 ---
 > **Warning:** **重要**: アプリケーションキャッシュは Firefox 44 で非推奨となり、 Firefox 60 以降では安全ではないコンテキストでは利用できなくなりました ({{bug(1354175)}}、現在は Nightly/Beta のみ)。ウェブサイトをオフラインで利用するために使用しないでください。 — 代わりに[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)の利用を検討してください。
 

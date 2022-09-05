@@ -1,11 +1,6 @@
 ---
 title: Node.nodeValue
 slug: Web/API/Node/nodeValue
-tags:
-  - プロパティ
-  - リファレンス
-browser-compat: api.Node.nodeValue
-translation_of: Web/API/Node/nodeValue
 ---
 {{APIRef("DOM")}}
 

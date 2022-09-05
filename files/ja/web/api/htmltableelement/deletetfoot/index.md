@@ -1,15 +1,6 @@
 ---
 title: HTMLTableElement.deleteTFoot()
 slug: Web/API/HTMLTableElement/deleteTFoot
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - メソッド
-  - NeedsSpecTable
-  - リファレンス
-browser-compat: api.HTMLTableElement.deleteTFoot
-translation_of: Web/API/HTMLTableElement/deleteTFoot
 ---
 {{APIRef("HTML DOM")}}
 

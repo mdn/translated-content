@@ -1,11 +1,6 @@
 ---
 title: Node.textContent
 slug: Web/API/Node/textContent
-tags:
-  - プロパティ
-  - リファレンス
-browser-compat: api.Node.textContent
-translation_of: Web/API/Node/textContent
 ---
 {{APIRef("DOM")}}
 

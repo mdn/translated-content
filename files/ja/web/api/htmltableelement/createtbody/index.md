@@ -1,14 +1,6 @@
 ---
 title: HTMLTableElement.createTBody()
 slug: Web/API/HTMLTableElement/createTBody
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - メソッド
-  - NeedsSpecTable
-  - リファレンス
-browser-compat: api.HTMLTableElement.createTBody
 ---
 {{APIRef("HTML DOM")}}
 

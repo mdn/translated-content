@@ -1,15 +1,6 @@
 ---
 title: PerformancePaintTiming
 slug: Web/API/PerformancePaintTiming
-tags:
-  - API
-  - PerformancePaintTiming
-  - Web パフォーマンス
-  - インターフェイス
-  - パフォーマンスタイムライン API
-  - ペイントタイミング
-  - リファレンス
-translation_of: Web/API/PerformancePaintTiming
 ---
 {{SeeCompatTable}}{{APIRef("Performance Timeline API")}}
 

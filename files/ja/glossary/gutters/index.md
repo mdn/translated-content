@@ -1,9 +1,6 @@
 ---
 title: Gutter (ガター)
 slug: Glossary/Gutters
-tags:
-  - CSS Grids
-translation_of: Glossary/Gutters
 l10n:
   sourceCommit: 21bed6549ed179757c999336ef4637d16f663137
 ---

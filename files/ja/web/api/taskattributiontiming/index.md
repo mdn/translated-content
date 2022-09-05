@@ -1,14 +1,6 @@
 ---
 title: TaskAttributionTiming
 slug: Web/API/TaskAttributionTiming
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Long Tasks API
-  - Performance
-  - TaskAttributionTiming
-translation_of: Web/API/TaskAttributionTiming
 ---
 {{SeeCompatTable}}{{APIRef("Long Tasks")}}
 

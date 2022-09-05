@@ -4,7 +4,7 @@ slug: Web/HTML/Element/Input/tel
 ---
 {{HTMLRef}}
 
-{{HTMLElement("input")}} **`"tel"`** 类型的元素用于让用户输入和编辑电话号码。 Unli 不同于[`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) 和 [`<input type="url">`](/en-US/docs/Web/HTML/Element/input/url) , 在提交表格之前，输入值不会被自动验证为特定格式，因为世界各地的电话号码格式差别很大。
+{{HTMLElement("input")}} **`"tel"`** 类型的元素用于让用户输入和编辑电话号码。不同于[`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email) 和 [`<input type="url">`](/zh-CN/docs/Web/HTML/Element/input/url) , 在提交表格之前，输入值不会被自动验证为特定格式，因为世界各地的电话号码格式差别很大。
 
 尽管 `tel` 类型的输入在功能上和 `text` 输入一致，但它们确实有用; 其中最明显的就是移动浏览器— 特别是在手机上 — 可能会选择提供为输入电话号码而优化的自定义键盘。使用电话号码的特定输入类型也使添加自定义验证和处理电话号码更方便。
 

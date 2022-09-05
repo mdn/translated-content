@@ -1,12 +1,6 @@
 ---
 title: JavaScript 言語情報
 slug: conflicting/Web/JavaScript/JavaScript_technologies_overview
-tags:
-  - Advanced
-  - ECMA
-  - Guide
-  - JavaScript
-translation_of: Web/JavaScript/Language_Resources
 original_slug: Web/JavaScript/Language_Resources
 ---
 {{JsSidebar}}

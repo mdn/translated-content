@@ -1,14 +1,6 @@
 ---
 title: A-Frame を使った基本的なデモの作成
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame
-tags:
-  - 3D
-  - A-Frame
-  - VR
-  - Virtual Reality
-  - Web
-  - WebGL
-translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame
 ---
 {{GamesSidebar}}
 

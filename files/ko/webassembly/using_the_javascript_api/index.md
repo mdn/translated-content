@@ -22,26 +22,26 @@ WebAssembly JavaScript API를 사용하는 방법과 웹 페이지에서 wasm �
 
 ### 예제 준비하기
 
-1.  먼저 wasm 모듈이 필요합니다! [simple.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm) 파일을 로컬 컴퓨터의 새 디렉토리에 저장하세요.
-2.  다음으로, wasm 파일과 동일한 디렉토리에 index.html이라는 간단한 HTML 파일을 작성해보세요 ([simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)을 참고하면 쉽습니다.)
-3.  이제 여기서 무슨 일이 벌어지는지 이해하기 쉽도록 하기위해 wasm 모듈 ([Converting WebAssembly format to wasm](/ko/docs/WebAssembly/Text_format_to_wasm#A_first_look_at_the_text_format)을 참고)의 텍스트 표현을 살펴 보겠습니다.
+1. 먼저 wasm 모듈이 필요합니다! [simple.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm) 파일을 로컬 컴퓨터의 새 디렉토리에 저장하세요.
+2. 다음으로, wasm 파일과 동일한 디렉토리에 index.html이라는 간단한 HTML 파일을 작성해보세요 ([simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)을 참고하면 쉽습니다.)
+3. 이제 여기서 무슨 일이 벌어지는지 이해하기 쉽도록 하기위해 wasm 모듈 ([Converting WebAssembly format to wasm](/ko/docs/WebAssembly/Text_format_to_wasm#A_first_look_at_the_text_format)을 참고)의 텍스트 표현을 살펴 보겠습니다.
 
-```rs
-        (module
-          (func $i (import "imports" "imported_func") (param i32))
-          (func (export "exported_func")
-            i32.const 42
-            call $i))
-```
+    ```rs
+    (module
+      (func $i (import "imports" "imported_func") (param i32))
+      (func (export "exported_func")
+        i32.const 42
+        call $i))
+    ```
 
-4.  두 번째 줄에서 2단계의 import 네임스페이스가 있습니다. 즉, 내부 기능 `$i`는 `imports.imported_func`에서 가져옴을 알 수 있습니다. wasm 모듈로 가져올 객체를 작성할 때 JavaScript에서 이 2단계 네임스페이스를 반영해야 합니다.
+4. 두 번째 줄에서 2단계의 import 네임스페이스가 있습니다. 즉, 내부 기능 `$i`는 `imports.imported_func`에서 가져옴을 알 수 있습니다. wasm 모듈로 가져올 객체를 작성할 때 JavaScript에서 이 2단계 네임스페이스를 반영해야 합니다.
     HTML 파일에 `<script></script>`요소를 만들고 다음 코드를 추가합니다.
 
-```js
-        var importObject = {
-          imports: { imported_func: arg => console.log(arg) }
-        };
-```
+    ```js
+    var importObject = {
+      imports: { imported_func: arg => console.log(arg) }
+    };
+    ```
 
 ### 웹어셈블리 모듈을 스트리밍하기
 
@@ -69,13 +69,13 @@ Firefox 58의 새로운 기능으로 기본 소스에서 직접 WebAssembly 모�
 이와 동등한 코드는 다음과 같습니다.
 
 ```js
-    fetch('simple.wasm').then(response =>
-      response.arrayBuffer()
-    ).then(bytes =>
-      WebAssembly.instantiate(bytes, importObject)
-    ).then(results => {
-      results.instance.exports.exported_func();
-    });
+fetch('simple.wasm').then(response =>
+  response.arrayBuffer()
+).then(bytes =>
+  WebAssembly.instantiate(bytes, importObject)
+).then(results => {
+  results.instance.exports.exported_func();
+});
 ```
 
 ### 개발자 도구에서 웹어셈블리 보기
@@ -96,28 +96,28 @@ WebAssembly의 저수준 메모리 모델에서 메모리는 [Linear Memory](htt
 
 빠르게 예제를 살펴봅시다.
 
-1.  새로운 간단한 HTML 페이지를 만들고 ([simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)을 복사하십시오) `memory.html`을 호출하십시오. `<script></script>` 요소를 페이지에 추가하십시오.
-2.  이제 스크립트 맨 위에 다음 행을 추가하여 메모리 인스턴스를 만듭니다.
+1. 새로운 간단한 HTML 페이지를 만들고 ([simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)을 복사하십시오) `memory.html`을 호출하십시오. `<script></script>` 요소를 페이지에 추가하십시오.
+2. 이제 스크립트 맨 위에 다음 행을 추가하여 메모리 인스턴스를 만듭니다.
 
-```js
-        var memory = new WebAssembly.Memory({initial:10, maximum:100});
-```
+    ```js
+    var memory = new WebAssembly.Memory({initial:10, maximum:100});
+    ```
 
     `initial` 및 `maximum` 단위는 WebAssembly 페이지이며 크기는 64KB로 고정되어 있습니다. 즉, 위 메모리 인스턴스의 초기 크기는 640KB이고 최대 크기는 6.4MB입니다.
 
     WebAssembly 메모리는 ArrayBuffer를 반환하는 버퍼 getter / setter를 제공함으로써 바이트를 노출합니다. 예를 들어 선형 메모리의 첫 번째 단어에 직접 42를 쓰려면 다음과 같이하면됩니다.
 
-```js
-        new Uint32Array(memory.buffer)[0] = 42;
-```
+    ```js
+    new Uint32Array(memory.buffer)[0] = 42;
+    ```
 
     그런 다음 다음을 사용하여 동일한 값을 반환 할 수 있습니다.
 
-```js
-        new Uint32Array(memory.buffer)[0]
-```
+    ```js
+    new Uint32Array(memory.buffer)[0]
+    ```
 
-3.  데모에서 지금 사용해보십시오. 지금까지 추가 한 내용은 저장하고 브라우저에로드 한 다음 JavaScript 콘솔에 위의 두 줄을 입력 해보십시오.
+3. 데모에서 지금 사용해보십시오. 지금까지 추가 한 내용은 저장하고 브라우저에로드 한 다음 JavaScript 콘솔에 위의 두 줄을 입력 해보십시오.
 
 ### 메모리의 확장
 
@@ -137,31 +137,31 @@ WebAssembly의 저수준 메모리 모델에서 메모리는 [Linear Memory](htt
 
 앞서 정의한 메모리 인스턴스를 가져 와서 정수 배열로 채운 다음 더 합친 WebAssembly 모듈을 통해 더 많은 관련 메모리 예제를 살펴봄으로써 위의 내용을 보다 자세히 알아 보겠습니다. [memory.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/memory.wasm)에서 찾을 수 있습니다.
 
-1.  `memory.wasm`을 이전과 같이 같은 폴더에 복사합니다.
+1. `memory.wasm`을 이전과 같이 같은 폴더에 복사합니다.
 
     > **참고:** [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat)에서 모듈의 텍스트 표현을 볼 수 있습니다.
 
-2.  `memory.html` 샘플 파일로 돌아가서 이전처럼 wasm 모듈을 가져 와서 컴파일하고 인스턴스화합니다. - 스크립트의 맨 아래에 다음을 추가하세요.
+2. `memory.html` 샘플 파일로 돌아가서 이전처럼 wasm 모듈을 가져 와서 컴파일하고 인스턴스화합니다. - 스크립트의 맨 아래에 다음을 추가하세요.
 
-```js
-        WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
-        .then(results => {
-          // add code here
-        });
-```
+    ```js
+    WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
+    .then(results => {
+      // add code here
+    });
+    ```
 
-3.  이 모듈은 메모리를 내보내므로 instance라는 이 모듈의 인스턴스가 export 된 함수 `accumulate()`를 사용하여 모듈 인스턴스의 선형 메모리 (`mem`)에 직접 입력 배열을 만들고 채울 수 있습니다. 코드에 다음을 추가하십시오.
+3. 이 모듈은 메모리를 내보내므로 instance라는 이 모듈의 인스턴스가 export 된 함수 `accumulate()`를 사용하여 모듈 인스턴스의 선형 메모리 (`mem`)에 직접 입력 배열을 만들고 채울 수 있습니다. 코드에 다음을 추가하십시오.
 
-```js
-        var i32 = new Uint32Array(memory.buffer);
+    ```js
+    var i32 = new Uint32Array(memory.buffer);
 
-        for (var i = 0; i < 10; i++) {
-          i32[i] = i;
-        }
+    for (var i = 0; i < 10; i++) {
+      i32[i] = i;
+    }
 
-        var sum = results.instance.exports.accumulate(0, 10);
-        console.log(sum);
-```
+    var sum = results.instance.exports.accumulate(0, 10);
+    console.log(sum);
+    ```
 
 Memory 객체의 버퍼 ([`Memory.prototype.buffer`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer))에서 {{domxref ("Uint32Array")}} 뷰를 만드는 방법에 유의하십시오.
 
@@ -188,12 +188,12 @@ WebAssembly 테이블은 JavaScript 및 WebAssembly 코드로 액세스 할 수 
 
 두 요소가 있는 테이블(요소 0은 13을 반환하고 요소 1은 42를 반환)을 만들고 내보내는 WebAssembly 모듈([table.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/table.wasm)에서 확인 가능)로 간단한 테이블 예제를 보겠습니다.
 
-1.  새로운 디렉토리에 `table.wasm`을 복사하여 만듭니다.
+1. 새로운 디렉토리에 `table.wasm`을 복사하여 만듭니다.
 
     > **참고:** [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat)에서 모듈의 텍스트 표현(text representation)을 확인할 수 있습니다.
 
-2.  [HTML template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)를 같은 디렉토리에 복사하여 `table.html`라는 파일명으로 저장합니다.
-3.  wasm 모듈을 fetch, compile, instantiate하기 전 다음의 코드를 HTML body아래의 {{htmlelement("script")}} 요소안에 넣습니다.
+2. [HTML template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)를 같은 디렉토리에 복사하여 `table.html`라는 파일명으로 저장합니다.
+3. wasm 모듈을 fetch, compile, instantiate하기 전 다음의 코드를 HTML body아래의 {{htmlelement("script")}} 요소안에 넣습니다.
 
     ```js
     WebAssembly.instantiateStreaming(fetch('table.wasm'))
@@ -202,7 +202,7 @@ WebAssembly 테이블은 JavaScript 및 WebAssembly 코드로 액세스 할 수 
     });
     ```
 
-4.  이제 테이블 안에 있는 정보에 엑세스 하겠습니다. 다음의 코드를 위의 add code here 부분에 넣습니다.
+4. 이제 테이블 안에 있는 정보에 엑세스 하겠습니다. 다음의 코드를 위의 add code here 부분에 넣습니다.
 
     ```js
     var tbl = results.instance.exports.tbl;

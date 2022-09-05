@@ -1,16 +1,6 @@
 ---
 title: CSSNumericValue.min()
 slug: Web/API/CSSNumericValue/min
-tags:
-  - API
-  - CSS 型付きオブジェクトモデル API
-  - CSSNumericValue
-  - 実験的
-  - Houdini
-  - メソッド
-  - リファレンス
-  - min()
-browser-compat: api.CSSNumericValue.min
 ---
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 

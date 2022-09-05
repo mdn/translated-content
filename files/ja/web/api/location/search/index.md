@@ -1,12 +1,6 @@
 ---
 title: location.search
 slug: Web/API/Location/search
-tags:
-  - API
-  - Location
-  - プロパティ
-browser-compat: api.Location.search
-translation_of: Web/API/Location/search
 ---
 {{ApiRef("Location")}}
 

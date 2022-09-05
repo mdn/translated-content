@@ -1,12 +1,6 @@
 ---
 title: Node.isConnected
 slug: Web/API/Node/isConnected
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Node.isConnected
-translation_of: Web/API/Node/isConnected
 ---
 {{APIRef("DOM")}}
 

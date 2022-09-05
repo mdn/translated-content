@@ -13,7 +13,7 @@ Les outils de développement sont des programmes qui permettent à un développe
 
 Les navigateurs courants fournissent des outils de développement intégrés, qui permettent d'inspecter un site web. Ils permettent aux utilisateurs d'inspecter et de déboguer les pages {{Glossary("HTML")}}, {{Glossary("CSS")}} et {{Glossary("JavaScript")}}, de mesurer le trafic réseau qu'ils provoquent et les performances, et bien plus encore.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

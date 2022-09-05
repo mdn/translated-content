@@ -8,7 +8,7 @@
 /ko/docs/AJAX/Getting_Started	/ko/docs/Web/Guide/AJAX/Getting_Started
 /ko/docs/AJAX:Getting_Started	/ko/docs/Web/Guide/AJAX/Getting_Started
 /ko/docs/A_Basic_RayCaster	/ko/docs/orphaned/Web/API/Canvas_API/A_basic_ray-caster
-/ko/docs/A_re-introduction_to_JavaScript	/ko/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+/ko/docs/A_re-introduction_to_JavaScript	/ko/docs/Web/JavaScript/Language_Overview
 /ko/docs/About_JavaScript	/ko/docs/Web/JavaScript/About_JavaScript
 /ko/docs/About_the_Document_Object_Model	/ko/docs/Web/API/Document_Object_Model
 /ko/docs/Accessibility	/ko/docs/Web/Accessibility
@@ -454,7 +454,10 @@
 /ko/docs/Web/API/DOMString	/ko/docs/Web/JavaScript/Reference/Global_Objects/String
 /ko/docs/Web/API/Document/defaultView/popstate_event	/ko/docs/Web/API/Window/popstate_event
 /ko/docs/Web/API/Document/defaultView/resize_event	/ko/docs/Web/API/Window/resize_event
-/ko/docs/Web/API/Document/drag_이벤트	/ko/docs/Web/API/Document/drag_event
+/ko/docs/Web/API/Document/drag_event	/ko/docs/Web/API/HTMLElement/drag_event
+/ko/docs/Web/API/Document/drag_이벤트	/ko/docs/Web/API/HTMLElement/drag_event
+/ko/docs/Web/API/Document/dragend_event	/ko/docs/Web/API/HTMLElement/dragend_event
+/ko/docs/Web/API/Document/dragstart_event	/ko/docs/Web/API/HTMLElement/dragstart_event
 /ko/docs/Web/API/Document/keydown_event	/ko/docs/Web/API/Element/keydown_event
 /ko/docs/Web/API/Document/keyup_event	/ko/docs/Web/API/Element/keyup_event
 /ko/docs/Web/API/DocumentOrShadowRoot/activeElement	/ko/docs/Web/API/Document/activeElement
@@ -626,7 +629,7 @@
 /ko/docs/Web/Events/canplay	/ko/docs/Web/API/HTMLMediaElement/canplay_event
 /ko/docs/Web/Events/canplaythrough	/ko/docs/Web/API/HTMLMediaElement/canplaythrough_event
 /ko/docs/Web/Events/click	/ko/docs/Web/API/Element/click_event
-/ko/docs/Web/Events/dragstart	/ko/docs/Web/API/Document/dragstart_event
+/ko/docs/Web/Events/dragstart	/ko/docs/Web/API/HTMLElement/dragstart_event
 /ko/docs/Web/Events/keydown	/ko/docs/Web/API/Element/keydown_event
 /ko/docs/Web/Events/load	/ko/docs/Web/API/Window/load_event
 /ko/docs/Web/Events/message	/ko/docs/Web/API/BroadcastChannel/message_event
@@ -692,6 +695,7 @@
 /ko/docs/Web/HTTP/Index	/ko/docs/Web/HTTP
 /ko/docs/Web/HTTP/User_agent를_이용한_브라우저_감지	/ko/docs/Web/HTTP/Browser_detection_using_the_user_agent
 /ko/docs/Web/HTTP/상태_코드	/ko/docs/Web/HTTP/Status
+/ko/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/ko/docs/Web/JavaScript/Language_Overview
 /ko/docs/Web/JavaScript/About	/ko/docs/Web/JavaScript/About_JavaScript
 /ko/docs/Web/JavaScript/Guide/About	/ko/docs/Web/JavaScript/Guide/Introduction
 /ko/docs/Web/JavaScript/Guide/Closures	/ko/docs/Web/JavaScript/Closures

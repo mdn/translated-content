@@ -1,15 +1,6 @@
 ---
 title: 'HTMLDetailsElement: toggle イベント'
 slug: Web/API/HTMLDetailsElement/toggle_event
-tags:
-  - Event
-  - HTMLDetailsElement
-  - Reference
-  - details
-  - events
-  - toggle
-  - イベント
-translation_of: Web/API/HTMLDetailsElement/toggle_event
 ---
 {{APIRef}}
 

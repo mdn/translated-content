@@ -1,18 +1,6 @@
 ---
 title: CSS 型付きオブジェクトモデル API
 slug: Web/API/CSS_Typed_OM_API
-page-type: web-api-overview
-tags:
-  - CSS Typed OM
-  - CSS Typed Object Model API
-  - Houdini
-  - Reference
-browser-compat:
-  - api.CSSStyleValue
-  - api.StylePropertyMap
-  - api.CSSUnparsedValue
-  - api.CSSKeywordValue
-translation_of: Web/API/CSS_Typed_OM_API
 ---
 {{DefaultAPISidebar("CSS Typed Object Model API")}}
 

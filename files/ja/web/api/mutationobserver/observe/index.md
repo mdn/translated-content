@@ -1,7 +1,6 @@
 ---
 title: MutationObserver.observe()
 slug: Web/API/MutationObserver/observe
-translation_of: Web/API/MutationObserver/observe
 ---
 {{APIRef("DOM WHATWG")}}
 

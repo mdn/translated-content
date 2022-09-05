@@ -110,13 +110,13 @@ So [`Object.prototype.watch()`](/ko/docs/Web/JavaScript/Reference/Global_Objects
 
 > **참고:** 척 보기엔 이상합니다. — 함수에 불과한 생성자에 멤버를 정의한다니요? 함수 역시 객체의 하나입니다 — 못 미더우시면 [`Function()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function) 생성자 레퍼런스 페이지를 확인해 보세요.
 
-1.  prototype 속성을 직접 확인해 볼 수 있습니다. — 예제로 돌아가서 Javascript console에 아래 코드를 타이핑 해 보세요:
+1. prototype 속성을 직접 확인해 볼 수 있습니다. — 예제로 돌아가서 Javascript console에 아래 코드를 타이핑 해 보세요:
 
     ```js
     Person.prototype
     ```
 
-2.  출력되는 것이 별로 많지 않을 겁니다 — 아직 이 커스텀 생성자 프로토타입에 아무것도 정의하지 않았거든요! 기본적으로 생성자의 프로토타입은 비어있습니다. 이번에는 아래 코드를 실행해 봅시다:
+2. 출력되는 것이 별로 많지 않을 겁니다 — 아직 이 커스텀 생성자 프로토타입에 아무것도 정의하지 않았거든요! 기본적으로 생성자의 프로토타입은 비어있습니다. 이번에는 아래 코드를 실행해 봅시다:
 
     ```js
     Object.prototype
@@ -138,13 +138,13 @@ var myString = 'This is my string.';
 
 이전에 새 인스턴스를 생성하기 위해서 `Object.create()` 메소드를 사용하는 법을 알아 보았습니다.
 
-1.  예를 들어서 이전 예제에서 아래 코드를 Javascript console에서 실행했었다면:
+1. 예를 들어서 이전 예제에서 아래 코드를 Javascript console에서 실행했었다면:
 
     ```js
     var person2 = Object.create(person1);
     ```
 
-2.  `create()` 메소드가 실제로 하는 일은 주어진 객체를 프로토타입 객체로 삼아 새로운 객체를 생성합니다. 여기서 person2는 person1을 프로토타입 객체로 삼습니다. 아래 코드를 실행하여 이를 확인할 수 있습니다:
+2. `create()` 메소드가 실제로 하는 일은 주어진 객체를 프로토타입 객체로 삼아 새로운 객체를 생성합니다. 여기서 person2는 person1을 프로토타입 객체로 삼습니다. 아래 코드를 실행하여 이를 확인할 수 있습니다:
 
     ```js
     person2.__proto__
@@ -156,7 +156,7 @@ var myString = 'This is my string.';
 
 모든 생성자 함수는 [`constructor`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) 속성을 지닌 객체를 프로토타입 객체로 가지고 있습니다. 이 `constructor` 속성은 원본 생성자 함수 자신을 가리키고 있습니다. 다음 장에서 볼 수 있듯이 `Person.prototype` 속성(또는 위 절에서 언급된 아무 생성자 함수의 prototype 속성)에 정의된 속성들은 `Person()` 생성자로 생성된 모든 인스턴스에서 사용할 수 있습니다. 그러므로 person1과 person2에서도 constructor 속성에 접근할 수 있습니다.
 
-1.  예를 들어 아래 코드를 콘솔에서 실행해 보세요:
+1. 예를 들어 아래 코드를 콘솔에서 실행해 보세요:
 
     ```js
     person1.constructor
@@ -167,13 +167,13 @@ var myString = 'This is my string.';
 
     `constructor` 속성에 괄호를 붙이고 실행하여(인자가 필요하면 전달하구요) 새 인스턴스를 생성하는 트릭이 있습니다. 어쨌든 생성자도 함수의 일종이므로 괄호를 붙이면 실행할 수 있습니다; new 키워드를 통해 실행하면 함수를 인스턴스를 생성하기 위한 생성자로 사용할 수 있죠.
 
-2.  아래 코드를 실행해 보세요:
+2. 아래 코드를 실행해 보세요:
 
     ```js
     var person3 = new person1.constructor('Karen', 'Stephenson', 26, 'female', ['playing drums', 'mountain climbing']);
     ```
 
-3.  새로 생성된 객체를 테스트 해보세요, 아래처럼요:
+3. 새로 생성된 객체를 테스트 해보세요, 아래처럼요:
 
     ```js
     person3.name.first
@@ -201,7 +201,7 @@ person1.constructor.name
 
 `생성자의 prototype` 속성을 수정하는 법에 대해 알아봅시다(프로토타입에 메소드를 추가하면 해당 생성자로 생성된 모든 객체에서 사용 가능합니다).
 
-1.  [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) 예제로 돌아가서 [source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)를 다운 받으세요. 기존 코드에 아래 샘플 코드를 추가하여 `prototype` 속성에 새 메소드를 추가하세요:
+1. [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) 예제로 돌아가서 [source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)를 다운 받으세요. 기존 코드에 아래 샘플 코드를 추가하여 `prototype` 속성에 새 메소드를 추가하세요:
 
     ```js
     Person.prototype.farewell = function() {
@@ -209,7 +209,7 @@ person1.constructor.name
     };
     ```
 
-2.  저장한 코드를 브라우저로 실행하고 콘솔에서 아래 코드를 실행해 보세요.
+2. 저장한 코드를 브라우저로 실행하고 콘솔에서 아래 코드를 실행해 보세요.
 
     ```js
     person1.farewell();

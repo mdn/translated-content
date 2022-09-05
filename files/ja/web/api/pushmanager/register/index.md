@@ -1,14 +1,6 @@
 ---
 title: PushManager.register()
 slug: Web/API/PushManager/register
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - Simple Push API
-  - メソッド
-translation_of: Web/API/PushManager/register
 ---
 {{deprecated_header}}{{ ApiRef("Push API")}}
 

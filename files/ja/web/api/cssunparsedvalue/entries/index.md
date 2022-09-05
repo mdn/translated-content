@@ -1,18 +1,6 @@
 ---
 title: CSSUnparsedValue.entries()
 slug: Web/API/CSSUnparsedValue/entries
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnparsedValue
-  - Constructor
-  - Entries
-  - Experimental
-  - Method
-  - NeedsExample
-  - Reference
-  - メソッド
-translation_of: Web/API/CSSUnparsedValue/entries
 ---
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 

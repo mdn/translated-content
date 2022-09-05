@@ -1,22 +1,6 @@
 ---
 title: JSON の操作
 slug: Learn/JavaScript/Objects/JSON
-tags:
-  - 記事
-  - 初心者
-  - CodingScripting
-  - ガイド
-  - JSON
-  - JSON API
-  - JSON 配列
-  - JSON 解釈
-  - JSON 構造
-  - JavaScript
-  - 学習
-  - オブジェクト
-  - チュートリアル
-  - l10n:priority
-translation_of: Learn/JavaScript/Objects/JSON
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
 

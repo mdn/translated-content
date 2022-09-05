@@ -40,14 +40,11 @@ range.setStart(startNode,startOffset);
 
 ## Spécifications
 
-| Specification                                                                                                                        | Statut                                       | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-range-setstart', 'Range.setStart()')}}                                         | {{Spec2('DOM WHATWG')}}             |                      |
-| {{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-setStart', 'Range.setStart()')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.Range.setStart")}}
+{{Compat}}
 
 ## Voir aussi
 

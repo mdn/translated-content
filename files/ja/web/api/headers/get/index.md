@@ -1,15 +1,6 @@
 ---
 title: Headers.get()
 slug: Web/API/Headers/get
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Headers
-  - Method
-  - Reference
-  - get
-translation_of: Web/API/Headers/get
 ---
 {{APIRef("Fetch")}}
 

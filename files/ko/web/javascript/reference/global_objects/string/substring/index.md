@@ -11,7 +11,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/substring
 
 ## 사용방법
 
-    str.substring(indexStart[, indexEnd])
+```js
+str.substring(indexStart[, indexEnd])
+```
 
 ### 인자값
 

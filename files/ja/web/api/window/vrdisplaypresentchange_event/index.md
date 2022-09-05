@@ -1,7 +1,6 @@
 ---
 title: vrdisplaypresentchange
 slug: Web/API/Window/vrdisplaypresentchange_event
-translation_of: Web/API/Window/vrdisplaypresentchange_event
 ---
 {{APIRef}}{{SeeCompatTable}}
 

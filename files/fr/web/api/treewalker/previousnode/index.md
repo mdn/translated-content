@@ -33,14 +33,11 @@ var node = treeWalker.previousNode(); // renvoie null car il n'y a pas de parent
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | Statut                                       | Commentaire                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-treewalker-previousnode', 'TreeWalker.previousNode')}}                                         | {{Spec2('DOM WHATWG')}}             | Pas de changement de {{SpecName('DOM2 Traversal_Range')}} |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-TreeWalker-previousNode', 'TreeWalker.previousNode')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.TreeWalker.previousNode")}}
+{{Compat}}
 
 ## Voir aussi
 

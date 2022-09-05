@@ -1,12 +1,6 @@
 ---
 title: Vibration API
 slug: Web/API/Vibration_API
-tags:
-  - API
-  - Beginner
-  - Mobile
-  - Vibration
-translation_of: Web/API/Vibration_API
 original_slug: Web/Guide/API/Vibration
 ---
 {{DefaultAPISidebar("Vibration API")}}

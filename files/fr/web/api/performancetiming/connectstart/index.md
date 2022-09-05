@@ -28,13 +28,11 @@ let time = performanceTiming.connectStart;
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | Statut                                   | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-connectstart', 'PerformanceTiming.connectStart')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceTiming.connectStart")}}
+{{Compat}}
 
 ## Voir aussi
 

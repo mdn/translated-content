@@ -25,7 +25,7 @@ Excepté dans les cas de `null` ou `undefined`, pour chaque valeur primitive il 
 
 La méthode [`valueOf()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/valueOf) de ces objets retourne la valeur primitive encapsulée correspondante.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

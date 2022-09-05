@@ -1,11 +1,6 @@
 ---
 title: WebIDL
 slug: Glossary/WebIDL
-tags:
-  - CodingScripting
-  - Glossary
-  - WebIDL
-translation_of: Glossary/WebIDL
 ---
 **WebIDL** は、ウェブアプリケーションプログラミングインターフェイス ({{Glossary("API")}}) を構成する{{Glossary("type", "データ型")}}、{{Glossary("interface", "インターフェイス")}}、{{Glossary("method", "メソッド")}}、{{Glossary("property", "プロパティ")}}、およびその他のコンポーネントを記述するために使用されるインターフェイス記述言語です。これは、特定のプログラミング言語に依存しないやや定式化された構文を使用しているため、API のコンポーネントを JavaScript 互換の構造にマップすることが可能な一方で、各 API を構築するために使用される基礎となるコードは、どの言語であっても最適に記述できます。
 

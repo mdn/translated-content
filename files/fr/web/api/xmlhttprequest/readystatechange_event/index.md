@@ -38,10 +38,8 @@ xhr.send();
 
 ## Spécifications
 
-| Specification                                                                            | Status                               | Comment                |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#handler-xhr-onreadystatechange')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
-## Compatibilité des fureteurs
+## Compatibilité des navigateurs
 
-{{Compat("api.XMLHttpRequest.onreadystatechange")}}
+{{Compat}}

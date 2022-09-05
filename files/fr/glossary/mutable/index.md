@@ -36,7 +36,7 @@ En ajoutant la variable "immutableString" avec une valeur de chaîne, les évén
 4. L'objet "immutableString" pointe maintenant vers le nouvel espace mémoire créé
 5. L'ancien espace mémoire est maintenant disponible pour la récupération de place (nettoyage).
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

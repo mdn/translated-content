@@ -11,7 +11,7 @@ Le contexte d'{{glossary("exécuter","exécution")}} courant. Le contexte dans l
 
 Une **{{glossary("fonction")}}** sert de **fermeture** en {{glossary("JavaScript")}}, et crée ainsi une portée, pour cette raison, par exemple, une variable définie exclusivement à l'intérieur de la fonction ne sera pas accessible en dehors de celle-ci ni depuis d'autres fonctions.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

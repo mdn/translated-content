@@ -263,9 +263,9 @@ _Regular expressions_ 은 정말로 파워풀한 매핑 툴 입니다. 하지만
 
 | Pattern                        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **r'^book/(?P<pk>\d+)$'**      | 이것은 우리가 URL mapper에서 사용한 Regular Expression입니다. 이 표현식은 먼저 문자열이 `book/` 으로 시작하는지 검사하고 (**^book/**), 그 다음에 한 개이상의 숫자가 오는지 (`\d+`), 그리고 문자열이 끝나기 전에 숫자가 아닌 문자가 들어 있지는 않는 지 검사합니다.또한 이 표현식은 모든 숫자들을 변환하고 **(?P\<pk>\d+)** 변환된 값을 view 에 'pk'라는 이름의 parameter로 넘깁니다. **변환된 값은 항상 String type으로 넘어갑니다\*\***!\*\*예를 들어, 이 표현식은 `book/1234` 을 매칭합니다. 그리고 변수 `pk='1234'` 를 view에 넘깁니다. |
+| **r'^book/(?P\<pk>\d+)$'**      | 이것은 우리가 URL mapper에서 사용한 Regular Expression입니다. 이 표현식은 먼저 문자열이 `book/` 으로 시작하는지 검사하고 (**^book/**), 그 다음에 한 개이상의 숫자가 오는지 (`\d+`), 그리고 문자열이 끝나기 전에 숫자가 아닌 문자가 들어 있지는 않는 지 검사합니다.또한 이 표현식은 모든 숫자들을 변환하고 **(?P\<pk>\d+)** 변환된 값을 view 에 'pk'라는 이름의 parameter로 넘깁니다. **변환된 값은 항상 String type으로 넘어갑니다\*\***!\*\*예를 들어, 이 표현식은 `book/1234` 을 매칭합니다. 그리고 변수 `pk='1234'` 를 view에 넘깁니다. |
 | **r'^book/(\d+)$'**            | 이 표현식은 위의 표현식과 동일한 URL들을 매칭합니다. 변환된 정보는 명명되지 않은 argument로 view에 전달됩니다.                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| **r'^book/(?P<stub>[-\w]+)$'** | 이 표현식은 문자열 처음 부분에 `book/` 으로 시작하는지 검사하고 (**^book/**), 그리고 한 개 또는 그 이상의 '-' 나 word character가 오고 (**\[-\w]+**), 그렇게 끝내는지를 매칭합니다. 이 표현식 또한 매칭된 부분을 변환하고 view 에 'stub' 라는 이름의 parameter로 전달합니다.This is a fairly typical pattern for a "stub". Stubs are URL-friendly word-based primary keys for data. You might use a stub if you wanted your book URL to be more informative. For example `/catalog/book/the-secret-garden` rather than `/catalog/book/33`. |
+| **r'^book/(?P\<stub>[-\w]+)$'** | 이 표현식은 문자열 처음 부분에 `book/` 으로 시작하는지 검사하고 (**^book/**), 그리고 한 개 또는 그 이상의 '-' 나 word character가 오고 (**\[-\w]+**), 그렇게 끝내는지를 매칭합니다. 이 표현식 또한 매칭된 부분을 변환하고 view 에 'stub' 라는 이름의 parameter로 전달합니다.This is a fairly typical pattern for a "stub". Stubs are URL-friendly word-based primary keys for data. You might use a stub if you wanted your book URL to be more informative. For example `/catalog/book/the-secret-garden` rather than `/catalog/book/33`. |
 
 당신은 다양한 패턴들을 한번의 매칭을 통해 변환시킬 수 있습니다. 그러므로 다양한 정보들을 URL안에 인코딩할 수 있습니다.
 
@@ -291,7 +291,7 @@ class BookDetailView(generic.DetailView):
     model = Book
 ```
 
-다됬습니다! 이제 해야될 일은 **/locallibrary/catalog/templates/catalog/book_detail.html** template를 만들면, view는 template에 URL mapper에 의해 찾고자 하는 데이터베이스에 있는 특정 `Book `레코드의 정보를 전달할 겁니다. template 안에서 template 변수 `object` 또는 `book`(즉, 일반적으로는 "해당\_모델\_명") 으로 책 목록에 접근할 수 있습니다.
+다됬습니다! 이제 해야될 일은 **/locallibrary/catalog/templates/catalog/book_detail.html** template를 만들면, view는 template에 URL mapper에 의해 찾고자 하는 데이터베이스에 있는 특정 `Book` 레코드의 정보를 전달할 겁니다. template 안에서 template 변수 `object` 또는 `book`(즉, 일반적으로는 "해당\_모델\_명") 으로 책 목록에 접근할 수 있습니다.
 
 만약 필요하다면, 사용하고 있는 template 또는 template 안에서 book을 참조하는 데 사용되는 context object의 이름을 바꿀 수 있습니다. 또한, 예를 들어 context에 정보를 추가하는 식으로, 메서드를 오버라이드 할 수도 있습니다.
 
@@ -392,9 +392,9 @@ def book_detail_view(request, primary_key):
 >
 > 이 튜토리얼은 아직 **Pagination** 에 도달하지는 않았습니다.(곧 하게될 거에요) `sort_by()` 에 parameter를 전달하여 사용하는 것은 (위에서 이야기했던 `filter()` 와 동일한 역할을 합니다.) 사용할 수 없기 때문에, 당신은 3개의 선택권중에 하나를 골라야합니다:
 >
-> 1.  Add a `ordering` inside a `class Meta` declaration on your model.
-> 2.  Add a `queryset` attribute in your custom class-based view, specifying a `order_by()`.
-> 3.  Adding a `get_queryset` method to your custom class-based view and also specify the `order_by()`.
+> 1. Add a `ordering` inside a `class Meta` declaration on your model.
+> 2. Add a `queryset` attribute in your custom class-based view, specifying a `order_by()`.
+> 3. Adding a `get_queryset` method to your custom class-based view and also specify the `order_by()`.
 >
 > 만약 `Author` model에 `class Meta` 사용하기를 결정했다면 (커스터마이징 된 클래스 기반 view만큼 유연하진 않겠지만, 쉬운 방법입니다), 아마 밑에 코드와 비슷하게 끝날 거에요:
 >

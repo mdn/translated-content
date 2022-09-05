@@ -1,11 +1,6 @@
 ---
 title: TextTrackCue
 slug: Web/API/TextTrackCue
-tags:
-  - API
-  - HTML5
-  - WebVTT
-translation_of: Web/API/TextTrackCue
 ---
 {{APIRef("WebVTT")}}
 

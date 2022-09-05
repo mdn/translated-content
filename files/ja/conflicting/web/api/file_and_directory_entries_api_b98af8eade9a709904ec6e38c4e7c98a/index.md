@@ -1,15 +1,6 @@
 ---
 title: LocalFileSystemSync
-slug: >-
-  conflicting/Web/API/File_and_Directory_Entries_API_b98af8eade9a709904ec6e38c4e7c98a
-tags:
-  - API
-  - File API
-  - File System API
-  - オフライン
-  - ファイルシステム
-  - リファレンス
-translation_of: Web/API/LocalFileSystemSync
+slug: conflicting/Web/API/File_and_Directory_Entries_API_b98af8eade9a709904ec6e38c4e7c98a
 original_slug: Web/API/LocalFileSystemSync
 ---
 {{APIRef("File System API")}}{{non-standard_header()}}

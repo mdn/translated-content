@@ -1,15 +1,6 @@
 ---
 title: PermissionStatus
 slug: Web/API/PermissionStatus
-tags:
-  - API
-  - Experimental
-  - Interface
-  - PermissionStatus
-  - Permissions
-  - Permissions API
-  - Reference
-translation_of: Web/API/PermissionStatus
 ---
 {{APIRef("Permissions API")}}{{SeeCompatTable}}
 

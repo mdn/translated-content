@@ -1,8 +1,6 @@
 ---
 title: サイト表示互換性に関するノウハウ
 slug: orphaned/Web/Compatibility_FAQ
-tags:
-  - Compatibility
 original_slug: Web/Compatibility_FAQ
 ---
 ---

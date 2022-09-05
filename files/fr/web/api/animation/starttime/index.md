@@ -31,7 +31,7 @@ time = window.mozAnimationStartTime;
 
 {{Compat("api.Window.mozAnimationStartTime")}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("window.mozRequestAnimationFrame()")}}
 - {{domxref("window.onmozbeforepaint")}}

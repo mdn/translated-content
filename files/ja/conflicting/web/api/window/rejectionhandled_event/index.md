@@ -1,18 +1,6 @@
 ---
 title: WindowEventHandlers.onrejectionhandled
 slug: conflicting/Web/API/Window/rejectionhandled_event
-tags:
-  - API
-  - Event Handler
-  - HTML DOM
-  - JavaScript
-  - Promises
-  - Property
-  - Reference
-  - WindowEventHandlers
-  - events
-  - onrejectionhandled
-translation_of: Web/API/WindowEventHandlers/onrejectionhandled
 original_slug: Web/API/WindowEventHandlers/onrejectionhandled
 ---
 {{APIRef}}

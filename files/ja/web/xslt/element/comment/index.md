@@ -16,7 +16,7 @@ translation_of: Web/XSLT/Element/comment
 
 ```
 <xsl:comment>
-	TEMPLATE
+  TEMPLATE
 </xsl:comment>
 ```
 

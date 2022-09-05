@@ -1,8 +1,6 @@
 ---
 title: AudioBufferSourceNode.onended
 slug: Web/API/AudioScheduledSourceNode/ended_event
-translation_of: Web/API/AudioScheduledSourceNode/onended
-translation_of_original: Web/API/AudioBufferSourceNode/onended
 original_slug: Web/API/AudioScheduledSourceNode/onended
 ---
 {{ APIRef("AudioBufferSourceNode") }}

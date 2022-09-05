@@ -11,7 +11,7 @@ original_slug: Glossaire/évènement
 ---
 Les évèhements sont des éléments actifs générés par les éléments [DOM](/fr/docs/Glossaire/DOM) qui peuvent être manipulés par un code Javascript.
 
-## En apprendre plus
+## Voir aussi
 
 ### Référence technique
 

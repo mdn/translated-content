@@ -9,18 +9,18 @@ translation_of: Web/XSLT
 ---
 {{XSLTRef}}
 
-1.  **[XSLT](/ja/docs/Web/XSLT)**
-2.  **[EXSLT](/ja/docs/Web/EXSLT)**
-3.  **[XPath](/ja/docs/Web/XPath)**
-4.  ガイド
+1. **[XSLT](/ja/docs/Web/XSLT)**
+2. **[EXSLT](/ja/docs/Web/EXSLT)**
+3. **[XPath](/ja/docs/Web/XPath)**
+4. ガイド
 
-    1.  [よくある XSLT のエラー](/ja/docs/Web/XSLT/Common_errors)
-    2.  [PI 引数](/ja/docs/Web/XSLT/PI_Parameters)
-    3.  [Gecko の XSLT/JavaScript インターフェイス](/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko)
-    4.  [XML を XSLT で変換](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT)
-    5.  [Mozilla JavaScript インターフェイスからの XSLT の使用](/ja/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations)
+    1. [よくある XSLT のエラー](/ja/docs/Web/XSLT/Common_errors)
+    2. [PI 引数](/ja/docs/Web/XSLT/PI_Parameters)
+    3. [Gecko の XSLT/JavaScript インターフェイス](/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko)
+    4. [XML を XSLT で変換](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT)
+    5. [Mozilla JavaScript インターフェイスからの XSLT の使用](/ja/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations)
 
-5.  [XSLT Elements](/ja/docs/XSLT/Element){{ListSubpagesForSidebar("/ja/docs/Web/XSLT/Element", "", "", "&lt;xsl:", "&gt;")}}
+5. [XSLT Elements](/ja/docs/XSLT/Element){{ListSubpagesForSidebar("/ja/docs/Web/XSLT/Element", "", "", "&lt;xsl:", "&gt;")}}
 
 {{QuickLinksWithSubpages("/ja/docs/Web/XSLT")}}
 

@@ -16,7 +16,7 @@ Les jambages des caractères tels que _g_ et _p_ s’étendent en dessous de cet
 
 Les écritures est-asiatique n’ont pas de ligne de base. Leurs glyphes sont placés dans une boite carrée sans jambage inférieur ou supérieur.
 
-## En apprendre davantage
+## Voir aussi
 
 ### Culture générale
 

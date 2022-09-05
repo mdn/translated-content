@@ -1,11 +1,6 @@
 ---
 title: ウェブアプリケーションと ARIA の FAQ
 slug: conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122
-tags:
-  - ARIA
-  - Accessibility
-  - Guide
-translation_of: Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ
 original_slug: Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ
 ---
 ## ARIA とは何か

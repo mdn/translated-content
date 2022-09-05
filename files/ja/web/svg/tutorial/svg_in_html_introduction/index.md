@@ -14,7 +14,7 @@ translation_of: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 
 ## ソース
 
-こちらに[この例](/presentations/xtech2005/svg-canvas/SVGDemo.xml "presentations/xtech2005/svg-canvas/SVGDemo.xml")のソースがあります。
+こちらに[この例](/presentations/xtech2005/svg-canvas/SVGDemo.xml)のソースがあります。
 
 ```html
 <html>

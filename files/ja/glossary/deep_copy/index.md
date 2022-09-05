@@ -1,10 +1,6 @@
 ---
 title: Deep copy (ディープコピー)
 slug: Glossary/Deep_copy
-tags:
-  - 用語集
-  - Deep copy
-translation_of: Glossary/Deep_copy
 ---
 {{MDNSidebar}}
 

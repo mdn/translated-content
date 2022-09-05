@@ -62,9 +62,7 @@ Les ajouts à [l'API <i lang="en">Service Worker</i>](/fr/docs/Web/API/Service_W
 
 ## Spécifications
 
-| Spécification                    | Statut                       | Commentaire         |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName("Push API")}} | {{Spec2("Push API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

@@ -361,7 +361,7 @@ slug: Web/Events
         <p>
           与使用<a href="/zh-CN/docs/Web/API/KeyboardEvent">键盘</a>相关的事件。
         </p>
-        <p>用于在案件向上、向下或仅仅只是按下时发出通知。</p>
+        <p>用于在按键向上、向下或仅仅只是按下时发出通知。</p>
       </td>
       <td>
         在

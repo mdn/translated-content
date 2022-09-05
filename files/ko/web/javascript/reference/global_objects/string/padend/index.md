@@ -16,7 +16,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/padEnd
 
 ## 구문
 
-    str.padEnd(targetLength [, padString])
+```js
+str.padEnd(targetLength [, padString])
+```
 
 ### 매개변수
 

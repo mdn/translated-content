@@ -11,7 +11,7 @@ Un **préprocesseur** **CSS** est un programme qui vous permet de générer des 
 
 Pour utiliser un préprocesseur CSS, vous devez installer un compilateur CSS sur votre {{Glossary("Server","serveur")}} web.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

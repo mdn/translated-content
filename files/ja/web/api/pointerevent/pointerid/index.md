@@ -1,14 +1,6 @@
 ---
 title: PointerEvent.pointerId
 slug: Web/API/PointerEvent/pointerId
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
-translation_of: Web/API/PointerEvent/pointerId
 ---
 {{ APIRef("Pointer Events") }}
 

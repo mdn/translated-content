@@ -12,7 +12,7 @@ SIMD (prononcé "seem-dee") est l'acronyme de **Single Instruction/Multiple Data
 
 Voir aussi {{Glossary("SISD")}} qui est une architecture séquentielle sans parallélisme, que ce soit pour le jeu d'instructions ou les données.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

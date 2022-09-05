@@ -1,10 +1,6 @@
 ---
 title: MDN への貢献の変更履歴
 slug: MDN/Contribute/Changelog
-tags:
-  - Changelog
-  - Contribute
-  - MDN
 ---
 {{MDNSidebar}}
 

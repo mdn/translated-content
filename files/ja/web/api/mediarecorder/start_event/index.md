@@ -1,17 +1,6 @@
 ---
 title: MediaRecorder.onstart
 slug: Web/API/MediaRecorder/start_event
-tags:
-  - API
-  - Audio
-  - Media Capture
-  - Media Recorder API
-  - MediaRecorder
-  - Property
-  - Reference
-  - Video
-  - onstart
-translation_of: Web/API/MediaRecorder/onstart
 original_slug: Web/API/MediaRecorder/onstart
 ---
 {{APIRef("Media Recorder API")}}
