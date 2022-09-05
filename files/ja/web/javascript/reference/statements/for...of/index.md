@@ -19,9 +19,8 @@ translation_of: Web/JavaScript/Reference/Statements/for...of
 ## 構文
 
 ```
-for (variable of iterable) {
+for (variable of iterable)
   statement
-}
 ```
 
 - `variable`

@@ -168,7 +168,7 @@ Voici un rapide exemple :
 
 De plus, sauf si le SVG et la page web actuelle ont la même {{glossary('origine')}}, il n'est pas possible d'utiliser JavaScript pour manipuler le SVG depuis la page web.
 
-## En savoir plus
+## Voir aussi
 
 - {{htmlelement("iframe")}}
 - {{htmlelement("object")}}
