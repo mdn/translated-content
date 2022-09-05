@@ -1,12 +1,6 @@
 ---
 title: typeof
 slug: Web/JavaScript/Reference/Operators/typeof
-tags:
-  - JavaScript
-  - Operator
-  - Reference
-  - Unary
-translation_of: Web/JavaScript/Reference/Operators/typeof
 ---
 {{jsSidebar("Operators")}}
 

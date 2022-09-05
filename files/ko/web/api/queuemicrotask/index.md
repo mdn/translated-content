@@ -1,28 +1,6 @@
 ---
 title: queueMicrotask()
 slug: Web/API/queueMicrotask
-tags:
-  - API
-  - HTML DOM
-  - Intervals
-  - JavaScript
-  - Method
-  - Microtask
-  - Performance
-  - Reference
-  - Scheduling
-  - ServiceWorker
-  - SharedWorker
-  - Tasks
-  - Timers
-  - Window
-  - Worker
-  - asynchronous
-  - queueMicrotask
-  - setTimeout
-  - Polyfill
-browser-compat: api.queueMicrotask
-translation_of: Web/API/queueMicrotask
 ---
 {{APIRef("HTML DOM")}}
 

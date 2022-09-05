@@ -1,7 +1,6 @@
 ---
 title: HTMLSelectElement.selectedOptions
 slug: Web/API/HTMLSelectElement/selectedOptions
-translation_of: Web/API/HTMLSelectElement/selectedOptions
 ---
 {{APIRef("HTML DOM")}}
 

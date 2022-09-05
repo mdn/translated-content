@@ -1,14 +1,6 @@
 ---
 title: Element.classList
 slug: Web/API/Element/classList
-tags:
-  - API
-  - DOM
-  - 레퍼런스
-  - 속성
-  - 엘리먼트
-  - 읽기 전용
-translation_of: Web/API/Element/classList
 ---
 {{APIRef("DOM")}}
 

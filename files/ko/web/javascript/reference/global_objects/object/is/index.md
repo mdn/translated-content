@@ -1,13 +1,6 @@
 ---
 title: Object.is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/is
 ---
 {{JSRef}}
 

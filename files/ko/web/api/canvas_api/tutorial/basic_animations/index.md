@@ -1,11 +1,6 @@
 ---
 title: 기본 애니메이션
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
-tags:
-  - HTML5
-  - 그래픽
-  - 캔버스
-translation_of: Web/API/Canvas_API/Tutorial/Basic_animations
 original_slug: Web/HTML/Canvas/Tutorial/Basic_animations
 ---
 {{HTMLElement("canvas")}} 요소는 자바스크립트로 제어하는 것이므로, 애니메이션도 쉽게 만들 수 있습니다. 복잡한 애니메이션을 만드는 것은 추가 작업이 더 필요하고, 앞으로 그에 대한 페이지도 머지 않아 추가되기를 기대합니다.

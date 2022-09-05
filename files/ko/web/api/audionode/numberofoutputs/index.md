@@ -1,14 +1,6 @@
 ---
 title: AudioNode.numberOfOutputs
 slug: Web/API/AudioNode/numberOfOutputs
-tags:
-  - API
-  - AudioNode
-  - Property
-  - Reference
-  - Web Audio API
-  - numberOfOutputs
-browser-compat: api.AudioNode.numberOfOutputs
 ---
 {{APIRef("Web Audio API")}}
 

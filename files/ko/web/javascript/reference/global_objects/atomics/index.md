@@ -1,8 +1,6 @@
 ---
 title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
-browser-compat: javascript.builtins.Atomics
 ---
 {{JSRef}} {{SeeCompatTable}}**Atomics 오브젝트**는 atomic operations 정적메소드로서 제공됩니다. 다음과 같은 오브젝트와 함께 {{jsxref("SharedArrayBuffer")}} 사용합니다.
 

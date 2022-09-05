@@ -1,14 +1,6 @@
 ---
 title: AbortSignal.aborted
 slug: Web/API/AbortSignal/aborted
-tags:
-  - API
-  - AbortSignal
-  - aborted
-  - 레퍼런스
-  - 실험적
-  - 프로퍼티
-translation_of: Web/API/AbortSignal/aborted
 ---
 {{APIRef("DOM")}}{{SeeCompatTable}}
 

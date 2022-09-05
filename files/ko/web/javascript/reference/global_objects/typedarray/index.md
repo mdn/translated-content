@@ -1,12 +1,6 @@
 ---
 title: TypedArray
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
-tags:
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray
-browser-compat: javascript.builtins.TypedArray
 ---
 {{JSRef}}
 

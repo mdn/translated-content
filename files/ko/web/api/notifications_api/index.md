@@ -1,11 +1,6 @@
 ---
 title: Notifications API
 slug: Web/API/Notifications_API
-tags:
-  - 권한
-  - 시스템
-  - 알림
-translation_of: Web/API/Notifications_API
 ---
 {{DefaultAPISidebar("Web Notifications")}}
 

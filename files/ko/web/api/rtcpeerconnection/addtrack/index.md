@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.addTrack()
 slug: Web/API/RTCPeerConnection/addTrack
-translation_of: Web/API/RTCPeerConnection/addTrack
 ---
 {{APIRef("WebRTC")}}
 

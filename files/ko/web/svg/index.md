@@ -1,20 +1,6 @@
 ---
 title: 'SVG: Scalable Vector Graphics'
 slug: Web/SVG
-tags:
-  - 2D Graphics
-  - Graphics
-  - Icons
-  - Images
-  - Reference
-  - Responsive Design
-  - SVG
-  - Scalable Graphics
-  - Scalable Images
-  - Vector Graphics
-  - Web
-  - l10n:priority
-translation_of: Web/SVG
 ---
 {{SVGRef}}
 

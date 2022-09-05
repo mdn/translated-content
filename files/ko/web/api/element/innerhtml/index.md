@@ -1,7 +1,6 @@
 ---
 title: Element.innerHTML
 slug: Web/API/Element/innerHTML
-translation_of: Web/API/Element/innerHTML
 ---
 {{APIRef("DOM")}}
 

@@ -1,7 +1,6 @@
 ---
 title: WebGLShader
 slug: Web/API/WebGLShader
-translation_of: Web/API/WebGLShader
 ---
 {{APIRef("WebGL")}}**WebGLShader** 는 [WebGL API](/ko/docs/Web/API/WebGL_API) 의 일부이며 정점 혹은 프래그먼트 셰이더가 될 수 있다. {{domxref("WebGLProgram")}} 는 두 타입의 셰이더 모두를 요구한다.
 

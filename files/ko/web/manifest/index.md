@@ -1,14 +1,6 @@
 ---
 title: Web app manifests
 slug: Web/Manifest
-tags:
-  - App
-  - Manifest
-  - PWA
-  - Progressive web apps
-  - Reference
-  - Web
-translation_of: Web/Manifest
 ---
 {{QuickLinksWithSubpages("/ko/docs/Web/Manifest")}}{{SeeCompatTable}}
 

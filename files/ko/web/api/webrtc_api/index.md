@@ -1,19 +1,6 @@
 ---
 title: WebRTC API
 slug: Web/API/WebRTC_API
-tags:
-  - API
-  - Audio
-  - Landing
-  - Media
-  - NeedsTranslation
-  - Networking
-  - TopicStub
-  - Video
-  - WebRTC
-  - WebRTC API
-  - streaming
-translation_of: Web/API/WebRTC_API
 ---
 {{APIRef("WebRTC")}}
 

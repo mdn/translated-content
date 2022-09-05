@@ -1,7 +1,6 @@
 ---
 title: <circle>
 slug: Web/SVG/Element/circle
-translation_of: Web/SVG/Element/circle
 ---
 {{SVGRef}}
 

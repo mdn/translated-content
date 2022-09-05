@@ -1,13 +1,6 @@
 ---
 title: background
 slug: Web/CSS/background
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
-translation_of: Web/CSS/background
 ---
 {{CSSRef("CSS Background")}}
 

@@ -1,16 +1,6 @@
 ---
 title: 프로그레시브 웹 앱 구조
 slug: Web/Progressive_web_apps/App_structure
-tags:
-  - App shell
-  - PWA
-  - Service Workers
-  - Streams
-  - js13kGames
-  - 구조
-  - 프로그레시브
-  - 프로그레시브 웹 앱
-translation_of: Web/Progressive_web_apps/App_structure
 ---
 {{PreviousMenuNext("Web/Apps/Progressive/Introduction", "Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive")}}
 

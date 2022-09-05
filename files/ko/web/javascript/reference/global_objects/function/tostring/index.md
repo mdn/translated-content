@@ -1,11 +1,6 @@
 ---
 title: Function.prototype.toSource()
 slug: Web/JavaScript/Reference/Global_Objects/Function/toString
-tags:
-  - JavaScript
-  - 메소드
-  - 함수
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Function/toSource
 ---
 {{JSRef}} {{non-standard_header}}

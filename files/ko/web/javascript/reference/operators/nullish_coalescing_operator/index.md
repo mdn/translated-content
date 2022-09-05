@@ -1,7 +1,6 @@
 ---
 title: Nullish coalescing operator
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
-translation_of: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 ---
 {{JSSidebar("Operators")}}
 

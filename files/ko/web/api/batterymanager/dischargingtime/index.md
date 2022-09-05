@@ -1,7 +1,6 @@
 ---
 title: BatteryManager.dischargingTime (배터리관리기 방전시간)
 slug: Web/API/BatteryManager/dischargingTime
-translation_of: Web/API/BatteryManager/dischargingTime
 ---
 {{APIRef("Battery API")}}
 

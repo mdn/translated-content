@@ -1,7 +1,6 @@
 ---
 title: WritableStream
 slug: Web/API/WritableStream
-translation_of: Web/API/WritableStream
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 

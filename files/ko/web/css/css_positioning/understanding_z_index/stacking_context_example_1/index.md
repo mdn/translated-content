@@ -1,7 +1,6 @@
 ---
 title: 쌓임 맥락 예제1
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
 ---
 « [CSS](/ko/CSS) « [CSS z-index 이해하기](/ko/CSS/Understanding_z-index)
 

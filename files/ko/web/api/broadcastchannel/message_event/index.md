@@ -1,7 +1,6 @@
 ---
 title: message
 slug: Web/API/BroadcastChannel/message_event
-translation_of: Web/API/BroadcastChannel/message_event
 original_slug: Web/Events/message
 ---
 메시지 이벤트는 메시지가 수신되었음을 알리는 메시지, {{domxref("WebSocket")}}, {{domxref("RTCDataConnection")}} 또는 {{domxref("BroadcastChannel")}} 개체를 알려 줍니다.

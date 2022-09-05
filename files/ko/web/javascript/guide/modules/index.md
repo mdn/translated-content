@@ -1,7 +1,6 @@
 ---
 title: JavaScript modules
 slug: Web/JavaScript/Guide/Modules
-translation_of: Web/JavaScript/Guide/Modules
 ---
 {{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
 

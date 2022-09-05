@@ -1,18 +1,6 @@
 ---
 title: Battery Status API
 slug: Web/API/Battery_Status_API
-tags:
-  - API
-  - Apps
-  - Battery API
-  - Battery Status API
-  - Obsolete
-  - 가이드
-  - 개요
-  - 모바일
-  - 배터리
-  - 어플리케이션
-translation_of: Web/API/Battery_Status_API
 original_slug: WebAPI/Battery_Status
 ---
 {{DefaultAPISidebar("Battery API")}}

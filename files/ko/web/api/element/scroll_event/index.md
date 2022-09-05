@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onscroll
 slug: Web/API/Element/scroll_event
-translation_of: Web/API/GlobalEventHandlers/onscroll
 original_slug: Web/API/GlobalEventHandlers/onscroll
 ---
 {{ApiRef("HTML DOM")}}{{domxref("GlobalEventHandlers")}} 의 **`onscroll`** 이벤트는 {{event("Event_handlers", "event handler")}} 의 `scroll` 이벤트를 상속받았습니다.document view 나 element 가 스크롤이 됬을 때 이벤트가 발생합니다.

@@ -1,13 +1,6 @@
 ---
 title: Document.createTreeWalker()
 slug: Web/API/Document/createTreeWalker
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-translation_of: Web/API/Document/createTreeWalker
 ---
 {{ApiRef("Document")}}
 

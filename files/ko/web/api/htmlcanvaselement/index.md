@@ -1,7 +1,6 @@
 ---
 title: HTMLCanvasElement
 slug: Web/API/HTMLCanvasElement
-translation_of: Web/API/HTMLCanvasElement
 ---
 {{APIRef("Canvas API")}}
 

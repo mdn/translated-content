@@ -1,12 +1,6 @@
 ---
 title: WebGL에서 셰이더를 사용하여 색상 적용하기
 slug: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
-tags:
-  - 색상
-  - 셰이더
-  - 웹지엘
-  - 컬러
-translation_of: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 ---
 {{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
 

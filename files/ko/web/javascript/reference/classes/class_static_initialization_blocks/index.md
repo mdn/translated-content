@@ -1,16 +1,6 @@
 ---
 title: Class static initialization blocks
 slug: Web/JavaScript/Reference/Classes/Class_static_initialization_blocks
-tags:
-  - Classes
-  - ECMAScript 2022
-  - JavaScript
-  - Language feature
-  - Static
-  - Reference
-  - Initialization
-browser-compat: javascript.classes.static_initialization_blocks
-translation_of: Web/JavaScript/Reference/Classes/Class_static_initialization_blocks
 ---
 {{jsSidebar("Classes")}}
 

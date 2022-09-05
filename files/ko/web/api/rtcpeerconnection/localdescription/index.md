@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.localDescription
 slug: Web/API/RTCPeerConnection/localDescription
-translation_of: Web/API/RTCPeerConnection/localDescription
 ---
 {{WebRTCSidebar}}{{SeeCompatTable}}
 

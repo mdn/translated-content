@@ -1,12 +1,6 @@
 ---
 title: BatteryManager.chargingTime (배터리관리기 충전시간)
 slug: Web/API/BatteryManager/chargingTime
-tags:
-  - API
-  - Battery API
-  - 목적
-  - 참조
-translation_of: Web/API/BatteryManager/chargingTime
 ---
 {{APIRef("Battery API")}}
 

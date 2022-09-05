@@ -1,14 +1,6 @@
 ---
 title: Int8Array
 slug: Web/JavaScript/Reference/Global_Objects/Int8Array
-tags:
-  - Class
-  - Int8Array
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-  - Polyfill
-browser-compat: javascript.builtins.Int8Array
 ---
 {{JSRef}}
 

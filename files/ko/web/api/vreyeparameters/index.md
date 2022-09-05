@@ -1,15 +1,6 @@
 ---
 title: VREyeParameters
 slug: Web/API/VREyeParameters
-tags:
-  - API
-  - Experimental
-  - Landing
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
-translation_of: Web/API/VREyeParameters
 ---
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 

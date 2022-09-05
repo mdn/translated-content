@@ -1,11 +1,6 @@
 ---
 title: element.lastChild
 slug: Web/API/Node/lastChild
-tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-translation_of: Web/API/Node/lastChild
 ---
 {{ ApiRef() }}
 

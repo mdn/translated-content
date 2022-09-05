@@ -1,15 +1,6 @@
 ---
 title: <image>
 slug: Web/CSS/image
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Images
-  - Graphics
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/CSS/image
 ---
 {{CSSRef}}
 

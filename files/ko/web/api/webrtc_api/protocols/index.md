@@ -1,7 +1,6 @@
 ---
 title: WebRTC 프로토콜 소개
 slug: Web/API/WebRTC_API/Protocols
-translation_of: Web/API/WebRTC_API/Protocols
 ---
 {{WebRTCSidebar}}
 

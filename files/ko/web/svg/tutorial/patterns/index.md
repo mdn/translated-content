@@ -1,9 +1,6 @@
 ---
 title: 패턴
 slug: Web/SVG/Tutorial/Patterns
-tags:
-  - 패턴
-translation_of: Web/SVG/Tutorial/Patterns
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Gradients", "Web/SVG/Tutorial/Texts") }}
 

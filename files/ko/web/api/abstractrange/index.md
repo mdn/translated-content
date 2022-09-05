@@ -1,19 +1,6 @@
 ---
 title: AbstractRange
 slug: Web/API/AbstractRange
-tags:
-  - API
-  - Abstract
-  - Abstract Interface
-  - AbstractRange
-  - DOM
-  - DOM API
-  - Interface
-  - NeedsTranslation
-  - Range
-  - Reference
-  - TopicStub
-translation_of: Web/API/AbstractRange
 ---
 {{APIRef("DOM WHATWG")}}
 

@@ -1,12 +1,6 @@
 ---
 title: CSS Charsets
 slug: Web/CSS/CSS_Charsets
-tags:
-  - CSS
-  - CSS Charsets
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Charsets
 ---
 {{CSSRef}}
 

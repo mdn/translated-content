@@ -1,13 +1,7 @@
 ---
 title: handler.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
-tags:
-  - apply트랩
-  - 트랩
-  - 프록시
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply
-browser-compat: javascript.builtins.Proxy.handler.apply
 ---
 {{JSRef}}
 

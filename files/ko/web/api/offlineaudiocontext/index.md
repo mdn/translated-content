@@ -1,14 +1,6 @@
 ---
 title: OfflineAudioContext
 slug: Web/API/OfflineAudioContext
-tags:
-  - API
-  - Audio
-  - Interface
-  - OfflineAudioContext
-  - Reference
-  - Web Audio API
-browser-compat: api.OfflineAudioContext
 ---
 {{APIRef("Web Audio API")}}
 

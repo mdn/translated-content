@@ -1,11 +1,6 @@
 ---
 title: range
 slug: Web/API/Range
-tags:
-  - API
-  - DOM
-  - Reference
-translation_of: Web/API/Range
 ---
 {{ APIRef("DOM") }}
 

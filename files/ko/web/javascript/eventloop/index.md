@@ -1,16 +1,6 @@
 ---
 title: 이벤트 루프
 slug: Web/JavaScript/EventLoop
-tags:
-  - Advanced
-  - Event Loop
-  - Event Management
-  - Event Queue
-  - Guide
-  - Handling Events
-  - JavaScript
-  - events
-translation_of: Web/JavaScript/EventLoop
 ---
 {{JsSidebar("Advanced")}}
 

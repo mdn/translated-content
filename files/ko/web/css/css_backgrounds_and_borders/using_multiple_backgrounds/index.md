@@ -1,13 +1,6 @@
 ---
 title: 한 번에 여러 배경 사용하기
 slug: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
-tags:
-  - CSS
-  - CSS Background
-  - Example
-  - Guide
-  - Reference
-translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 ---
 {{CSSRef}}
 

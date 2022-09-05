@@ -1,10 +1,6 @@
 ---
 title: document.applets
 slug: Web/API/Document/applets
-tags:
-  - DOM
-  - Gecko
-translation_of: Web/API/Document/applets
 ---
 {{ ApiRef() }}
 

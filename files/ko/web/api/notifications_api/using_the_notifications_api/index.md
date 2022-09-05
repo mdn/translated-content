@@ -1,7 +1,6 @@
 ---
 title: 알림 API 사용하기
 slug: Web/API/Notifications_API/Using_the_Notifications_API
-translation_of: Web/API/Notifications_API/Using_the_Notifications_API
 original_slug: WebAPI/Using_Web_Notifications
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

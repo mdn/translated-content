@@ -1,13 +1,6 @@
 ---
 title: Window.getComputedStyle()
 slug: Web/API/Window/getComputedStyle
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - Reference
-  - Window
-translation_of: Web/API/Window/getComputedStyle
 ---
 {{APIRef}}
 

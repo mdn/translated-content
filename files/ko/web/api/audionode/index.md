@@ -1,13 +1,6 @@
 ---
 title: AudioNode
 slug: Web/API/AudioNode
-tags:
-  - API
-  - AudioNode
-  - Interface
-  - Reference
-  - Web Audio API
-browser-compat: api.AudioNode
 ---
 {{APIRef("Web Audio API")}}
 

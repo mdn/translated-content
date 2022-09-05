@@ -1,12 +1,6 @@
 ---
 title: 어휘 문법
 slug: Web/JavaScript/Reference/Lexical_grammar
-tags:
-  - JavaScript
-  - Keyword
-  - Lexical Grammar
-  - 문법
-translation_of: Web/JavaScript/Reference/Lexical_grammar
 ---
 {{JsSidebar("More")}}
 

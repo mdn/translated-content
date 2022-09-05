@@ -1,13 +1,6 @@
 ---
 title: 캔버스(canvas)를 이용한 도형 그리기
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
-tags:
-  - Canvas
-  - 그래픽
-  - 중급
-  - 캔버스
-  - 튜토리얼
-translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 original_slug: Web/HTML/Canvas/Tutorial/Drawing_shapes
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}

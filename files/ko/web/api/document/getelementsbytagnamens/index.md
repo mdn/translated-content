@@ -1,15 +1,6 @@
 ---
 title: Document.getElementsByTagNameNS()
 slug: Web/API/Document/getElementsByTagNameNS
-tags:
-  - API
-  - DOM
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - getElementsByTagNameNS
-  - 레퍼런스
-  - 메소드
-translation_of: Web/API/Document/getElementsByTagNameNS
 ---
 {{APIRef("DOM")}}
 

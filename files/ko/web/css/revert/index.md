@@ -1,17 +1,6 @@
 ---
 title: revert
 slug: Web/CSS/revert
-tags:
-  - CSS
-  - CSS 속성
-  - Cascade
-  - Style
-  - all:revert
-  - revert
-  - revert style 속성
-  - revert 속성
-  - 스타일
-translation_of: Web/CSS/revert
 ---
 {{CSSRef}}
 

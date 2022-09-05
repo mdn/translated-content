@@ -1,12 +1,6 @@
 ---
 title: Introduction
 slug: Web/JavaScript/Guide/Introduction
-tags:
-  - JavaScript
-  - 가이드
-  - 안내서
-  - 자바스크립트
-translation_of: Web/JavaScript/Guide/Introduction
 original_slug: Web/JavaScript/Guide/소개
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}

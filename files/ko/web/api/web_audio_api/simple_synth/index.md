@@ -1,16 +1,6 @@
 ---
 title: '예제와 튜토리얼: 간단한 신시사이저 키보드'
 slug: Web/API/Web_Audio_API/Simple_synth
-tags:
-  - Audio
-  - Example
-  - Guide
-  - Media
-  - Oscillator
-  - Piano
-  - Synthesizer
-  - Tutorial
-  - Web Audio API
 ---
 {{DefaultAPISidebar("Web Audio API")}}
 

@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.restartIce()
 slug: Web/API/RTCPeerConnection/restartIce
-translation_of: Web/API/RTCPeerConnection/restartIce
 ---
 {{APIRef("WebRTC API")}}
 

@@ -1,12 +1,6 @@
 ---
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
-tags:
-  - ECMAScript6
-  - Generator
-  - Iterator
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Statements/function*
 ---
 {{jsSidebar("Statements")}}
 

@@ -1,12 +1,6 @@
 ---
 title: Event.bubbles
 slug: Web/API/Event/bubbles
-tags:
-  - Property
-  - Read-only
-  - Reference
-browser-compat: api.Event.bubbles
-translation_of: Web/API/Event/bubbles
 ---
 {{ ApiRef("DOM") }}
 

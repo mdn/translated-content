@@ -1,13 +1,6 @@
 ---
 title: Number() 생성자
 slug: Web/JavaScript/Reference/Global_Objects/Number/Number
-tags:
-  - Constructor
-  - JavaScript
-  - Number
-  - Reference
-  - Polyfill
-browser-compat: javascript.builtins.Number.Number
 ---
 
 {{JSRef}}

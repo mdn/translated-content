@@ -1,11 +1,6 @@
 ---
 title: Node.appendChild()
 slug: Web/API/Node/appendChild
-tags:
-  - 노드 붙이기
-  - 노드 이동
-  - 돔
-translation_of: Web/API/Node/appendChild
 ---
 {{APIRef("DOM")}}
 

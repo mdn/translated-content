@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.createAnswer()
 slug: Web/API/RTCPeerConnection/createAnswer
-translation_of: Web/API/RTCPeerConnection/createAnswer
 ---
 {{APIRef("WebRTC")}}
 

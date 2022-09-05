@@ -1,13 +1,6 @@
 ---
 title: <color>
 slug: Web/CSS/color_value
-tags:
-  - CSS
-  - CSS Data Type
-  - Reference
-  - Web
-browser-compat: css.types.color
-translation_of: Web/CSS/color_value
 ---
 
 {{CSSRef}}

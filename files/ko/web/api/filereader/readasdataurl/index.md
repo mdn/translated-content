@@ -1,9 +1,6 @@
 ---
 title: FileReader.readAsDataURL()
 slug: Web/API/FileReader/readAsDataURL
-page-type: web-api-instance-method
-browser-compat: api.FileReader.readAsDataURL
-translation_of: Web/API/FileReader/readAsDataURL
 ---
 {{APIRef("File API")}}
 

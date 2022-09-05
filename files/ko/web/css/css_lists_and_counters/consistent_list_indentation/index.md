@@ -1,11 +1,6 @@
 ---
 title: Consistent List Indentation
 slug: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
-tags:
-  - CSS
-  - Guide
-  - NeedsUpdate
-translation_of: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 original_slug: Consistent_List_Indentation
 ---
 {{CSSRef}}

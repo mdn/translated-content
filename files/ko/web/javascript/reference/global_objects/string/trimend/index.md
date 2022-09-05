@@ -1,15 +1,6 @@
 ---
 title: String.prototype.trimEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
-tags:
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
-- Polyfill
-browser-compat: javascript.builtins.String.trimEnd
-translation_of: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 ---
 {{JSRef}}
 

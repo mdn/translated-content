@@ -1,13 +1,6 @@
 ---
 title: Window.prompt()
 slug: Web/API/Window/prompt
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-  - Window
-translation_of: Web/API/Window/prompt
 ---
 {{ApiRef("Window")}}
 

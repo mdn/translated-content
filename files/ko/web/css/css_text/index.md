@@ -1,12 +1,6 @@
 ---
 title: CSS Text
 slug: Web/CSS/CSS_Text
-tags:
-  - CSS
-  - CSS Text
-  - Guide
-  - Overview
-translation_of: Web/CSS/CSS_Text
 ---
 {{CSSRef}}
 

@@ -1,13 +1,6 @@
 ---
 title: Window.alert()
 slug: Web/API/Window/alert
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
-translation_of: Web/API/Window/alert
 ---
 {{APIRef}}
 

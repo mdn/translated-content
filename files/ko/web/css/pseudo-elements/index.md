@@ -1,13 +1,6 @@
 ---
 title: 의사 요소
 slug: Web/CSS/Pseudo-elements
-tags:
-  - CSS
-  - Overview
-  - Pseudo-element
-  - Reference
-  - Selectors
-translation_of: Web/CSS/Pseudo-elements
 ---
 {{CSSRef}}
 

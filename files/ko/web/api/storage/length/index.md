@@ -1,14 +1,6 @@
 ---
 title: Storage.length
 slug: Web/API/Storage/length
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - Storage
-  - Web Storage
-translation_of: Web/API/Storage/length
 ---
 {{APIRef("Web Storage API")}}
 

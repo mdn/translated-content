@@ -1,7 +1,6 @@
 ---
 title: Web Storage API 사용하기
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
-translation_of: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
 {{DefaultAPISidebar("Web Storage API")}}
 

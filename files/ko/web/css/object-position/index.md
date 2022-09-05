@@ -1,14 +1,6 @@
 ---
 title: object-position
 slug: Web/CSS/object-position
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Reference
-  - Replaced Elements
-  - 대체 요소
-translation_of: Web/CSS/object-position
 ---
 {{CSSRef}}
 

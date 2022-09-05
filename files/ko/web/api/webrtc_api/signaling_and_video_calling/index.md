@@ -1,7 +1,6 @@
 ---
 title: Signaling and video calling
 slug: Web/API/WebRTC_API/Signaling_and_video_calling
-translation_of: Web/API/WebRTC_API/Signaling_and_video_calling
 ---
 {{WebRTCSidebar}}
 

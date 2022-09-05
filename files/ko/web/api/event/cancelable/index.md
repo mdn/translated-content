@@ -1,12 +1,6 @@
 ---
 title: Event.cancelable
 slug: Web/API/Event/cancelable
-tags:
-  - Property
-  - Read-only
-  - Reference
-browser-compat: api.Event.cancelable
-translation_of: Web/API/Event/cancelable
 ---
 {{ ApiRef("DOM") }}
 

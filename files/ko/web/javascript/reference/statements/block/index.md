@@ -1,13 +1,6 @@
 ---
 title: block
 slug: Web/JavaScript/Reference/Statements/block
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/block
-browser-compat: javascript.statements.block
 ---
 {{jsSidebar("Statements")}}
 

@@ -1,15 +1,6 @@
 ---
 title: <angle>
 slug: Web/CSS/angle
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
-  - 자료형
-translation_of: Web/CSS/angle
 ---
 {{CSSRef}}
 

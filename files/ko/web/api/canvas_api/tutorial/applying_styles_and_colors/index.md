@@ -1,11 +1,6 @@
 ---
 title: 스타일과 색 적용하기
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
-tags:
-  - HTML5
-  - 그래픽
-  - 캔버스
-translation_of: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 original_slug: Web/HTML/Canvas/Tutorial/Applying_styles_and_colors
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}

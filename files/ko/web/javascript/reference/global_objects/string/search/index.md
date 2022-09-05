@@ -1,7 +1,6 @@
 ---
 title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
-translation_of: Web/JavaScript/Reference/Global_Objects/String/search
 ---
 {{JSRef}}
 

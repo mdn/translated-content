@@ -1,15 +1,6 @@
 ---
 title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
-tags:
-  - Class
-  - Date
-  - JavaScript
-  - Reference
-  - 날짜
-  - 시간
-translation_of: Web/JavaScript/Reference/Global_Objects/Date
-browser-compat: javascript.builtins.Date
 ---
 {{JSRef}}
 

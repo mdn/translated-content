@@ -1,16 +1,6 @@
 ---
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Promise
-  - Reference
-  - promise.all
-  - Polyfill
-browser-compat: javascript.builtins.Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 ---
 {{JSRef}}
 

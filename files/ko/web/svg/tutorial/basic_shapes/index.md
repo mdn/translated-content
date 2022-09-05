@@ -1,7 +1,6 @@
 ---
 title: 기본 도형
 slug: Web/SVG/Tutorial/Basic_Shapes
-translation_of: Web/SVG/Tutorial/Basic_Shapes
 original_slug: Web/SVG/Tutorial/기본_도형
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}

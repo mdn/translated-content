@@ -1,15 +1,6 @@
 ---
 title: 일반 대열 속 블록 및 인라인 조판
 slug: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
-tags:
-  - 대열
-  - 씨에스에스
-  - 씨에스에스 대열 조판
-  - 안내서
-  - 여백
-  - 조판
-  - 중급
-translation_of: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
 original_slug: Web/CSS/CSS_Flow_Layout/일반_흐름_속_블록_및_인라인_레이아웃
 ---
 {{CSSRef}}

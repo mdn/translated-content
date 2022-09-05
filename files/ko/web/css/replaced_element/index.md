@@ -1,12 +1,6 @@
 ---
 title: 대체 요소
 slug: Web/CSS/Replaced_element
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Reference
-translation_of: Web/CSS/Replaced_element
 ---
 {{CSSRef}}
 

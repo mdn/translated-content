@@ -1,15 +1,6 @@
 ---
 title: 사용자 정의 요소 사용하기
 slug: Web/Web_Components/Using_custom_elements
-tags:
-  - Classes
-  - Guide
-  - HTML
-  - Web Components
-  - autonomous
-  - custom elements
-  - customized
-translation_of: Web/Web_Components/Using_custom_elements
 ---
 {{DefaultAPISidebar("Web Components")}}
 

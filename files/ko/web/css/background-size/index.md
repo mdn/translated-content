@@ -1,12 +1,6 @@
 ---
 title: background-size
 slug: Web/CSS/background-size
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/background-size
 ---
 {{CSSRef}}[CSS](/ko/docs/CSS) **`background-size`** 속성은 요소 배경 이미지의 크기를 설정합니다. 그대로 두거나, 늘리고 줄이거나, 공간에 맞출 수 있습니다.{{EmbedInteractiveExample("pages/css/background-size.html")}}
 

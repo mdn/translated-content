@@ -1,17 +1,6 @@
 ---
 title: Fetch 사용하기
 slug: Web/API/Fetch_API/Using_Fetch
-tags:
-  - API
-  - BODY
-  - Experimental
-  - Fetch
-  - Guide
-  - HTTP
-  - Promise
-  - Response
-  - request
-translation_of: Web/API/Fetch_API/Using_Fetch
 ---
 
 {{DefaultAPISidebar("Fetch API")}}

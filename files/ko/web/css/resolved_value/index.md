@@ -1,10 +1,6 @@
 ---
 title: 결정값
 slug: Web/CSS/resolved_value
-tags:
-  - CSS
-  - Reference
-translation_of: Web/CSS/resolved_value
 ---
 {{cssref}}
 

@@ -1,17 +1,6 @@
 ---
 title: Document.querySelector()
 slug: Web/API/Document/querySelector
-tags:
-  - API
-  - CSS Selectors
-  - DOM
-  - DOM Elements
-  - Document
-  - Method
-  - Reference
-  - Selectors
-  - Web
-translation_of: Web/API/Document/querySelector
 ---
 {{ApiRef("DOM")}}
 

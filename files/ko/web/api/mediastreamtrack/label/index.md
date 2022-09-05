@@ -1,14 +1,6 @@
 ---
 title: MediaStreamTrack.label
 slug: Web/API/MediaStreamTrack/label
-tags:
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Property
-  - Read-only
-  - Reference
-  - WebRTC
-translation_of: Web/API/MediaStreamTrack/label
 ---
 {{APIRef("Media Capture and Streams")}}
 

@@ -1,12 +1,6 @@
 ---
 title: Event.type
 slug: Web/API/Event/type
-tags:
-  - Property
-  - Read-only
-  - Reference
-browser-compat: api.Event.type
-translation_of: Web/API/Event/type
 ---
 {{APIRef}}
 

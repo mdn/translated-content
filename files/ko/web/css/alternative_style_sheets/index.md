@@ -1,7 +1,6 @@
 ---
 title: Alternative style sheets
 slug: Web/CSS/Alternative_style_sheets
-translation_of: Web/CSS/Alternative_style_sheets
 ---
 Firefox는
 _대체 스타일시트_

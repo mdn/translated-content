@@ -1,12 +1,6 @@
 ---
 title: CSS Conditional Rules
 slug: Web/CSS/CSS_Conditional_Rules
-tags:
-  - CSS
-  - CSS Conditional Rules
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Conditional_Rules
 ---
 {{CSSRef}}
 

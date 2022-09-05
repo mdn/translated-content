@@ -1,12 +1,6 @@
 ---
 title: 그룹 연산자
 slug: Web/JavaScript/Reference/Operators/Grouping
-tags:
-  - JavaScript
-  - Operator
-  - Primary Expressions
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Grouping
 ---
 {{jsSidebar("Operators")}}
 

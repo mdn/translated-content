@@ -1,14 +1,6 @@
 ---
 title: Window
 slug: Web/API/Window
-tags:
-  - API
-  - DOM
-  - Interface
-  - JavaScript
-  - Reference
-  - Window
-translation_of: Web/API/Window
 ---
 {{APIRef("DOM")}}
 

@@ -1,11 +1,6 @@
 ---
 title: arguments 객체
 slug: Web/JavaScript/Reference/Functions/arguments
-tags:
-  - Functions
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Functions/arguments
 ---
 {{jsSidebar("Functions")}}
 

@@ -1,11 +1,6 @@
 ---
 title: 시각적 서식 모델
 slug: Web/CSS/Visual_formatting_model
-tags:
-  - 씨에스에스
-  - 씨에스에스 상자 모델
-  - 참조
-translation_of: Web/CSS/Visual_formatting_model
 original_slug: Web/Guide/CSS/Visual_formatting_model
 ---
 {{CSSRef}}

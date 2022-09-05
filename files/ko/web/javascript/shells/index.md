@@ -1,7 +1,6 @@
 ---
 title: JavaScript 쉘
 slug: Web/JavaScript/Shells
-translation_of: Web/JavaScript/Shells
 original_slug: Web/JavaScript/쉘
 ---
 {{JsSidebar}}

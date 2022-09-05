@@ -1,12 +1,6 @@
 ---
 title: Storage.removeItem()
 slug: Web/API/Storage/removeItem
-tags:
-  - 메소드
-  - 스토리지
-  - 웹 스토리지
-  - 참고
-translation_of: Web/API/Storage/removeItem
 ---
 {{APIRef("Web Storage API")}}
 

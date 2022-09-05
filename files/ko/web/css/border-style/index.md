@@ -1,12 +1,6 @@
 ---
 title: border-style
 slug: Web/CSS/border-style
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/border-style
 ---
 {{CSSRef}}
 

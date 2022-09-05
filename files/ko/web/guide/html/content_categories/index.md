@@ -1,13 +1,6 @@
 ---
 title: 콘텐츠 카테고리
 slug: Web/Guide/HTML/Content_categories
-tags:
-  - Advanced
-  - Guide
-  - HTML
-  - HTML5
-  - Web
-translation_of: Web/Guide/HTML/Content_categories
 ---
 {{HTMLSidebar}}
 

@@ -1,12 +1,6 @@
 ---
 title: CSS 다단 레이아웃 사용
 slug: Web/CSS/CSS_Columns/Using_multi-column_layouts
-tags:
-  - Advanced
-  - CSS
-  - Guide
-  - Multi-columns
-translation_of: Web/CSS/CSS_Columns/Using_multi-column_layouts
 original_slug: CSS3_Columns
 ---
 {{CSSRef("CSS Multi-columns")}}

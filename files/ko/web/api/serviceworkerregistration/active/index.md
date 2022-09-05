@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerRegistration.active
 slug: Web/API/ServiceWorkerRegistration/active
-translation_of: Web/API/ServiceWorkerRegistration/active
 ---
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 

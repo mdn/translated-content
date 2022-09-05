@@ -1,13 +1,6 @@
 ---
 title: URL.password
 slug: Web/API/URL/password
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-translation_of: Web/API/URL/password
 ---
 {{ApiRef("URL API")}}
 

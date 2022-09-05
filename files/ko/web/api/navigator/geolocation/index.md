@@ -1,14 +1,6 @@
 ---
 title: Navigator.geolocation
 slug: Web/API/Navigator/geolocation
-tags:
-  - API
-  - Geolocation API
-  - Navigator
-  - Property
-  - Reference
-  - Secure context
-translation_of: Web/API/Navigator/geolocation
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 

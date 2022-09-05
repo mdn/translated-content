@@ -1,10 +1,6 @@
 ---
 title: WebGLRenderbuffer
 slug: Web/API/WebGLRenderbuffer
-tags:
-  - 레퍼런스
-  - 웹지엘
-translation_of: Web/API/WebGLRenderbuffer
 ---
 {{APIRef("WebGL")}}
 

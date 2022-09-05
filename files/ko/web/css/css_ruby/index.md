@@ -1,12 +1,6 @@
 ---
 title: CSS Ruby
 slug: Web/CSS/CSS_Ruby
-tags:
-  - CSS
-  - CSS Ruby
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Ruby
 ---
 {{CSSRef}}
 

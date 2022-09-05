@@ -1,23 +1,6 @@
 ---
 title: Clipboard API
 slug: Web/API/Clipboard_API
-tags:
-  - API
-  - Async Clipboard API
-  - Clipboard
-  - Clipboard API
-  - Clipboard Event API
-  - ClipboardEvent
-  - ClipboardItem
-  - Cut
-  - Landing
-  - Reference
-  - copy
-  - paste
-  - 클립보드
-  - 복사
-  - 붙여넣기
-translation_of: Web/API/Clipboard_API
 ---
 {{DefaultAPISidebar("Clipboard API")}}
 

@@ -1,15 +1,6 @@
 ---
 title: String.prototype.trimStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
-tags:
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
-- Polyfill
-browser-compat: javascript.builtins.String.trimStart
-translation_of: Web/JavaScript/Reference/Global_Objects/String/trimStart
 ---
 {{JSRef}}
 

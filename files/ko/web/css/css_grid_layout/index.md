@@ -1,16 +1,6 @@
 ---
 title: CSS 그리드 레이아웃
 slug: Web/CSS/CSS_Grid_Layout
-tags:
-  - CSS
-  - Grid Layout
-  - Grids
-  - 개요
-  - 그리드
-  - 그리드 레이아웃
-  - 레이아웃
-  - 참고
-translation_of: Web/CSS/CSS_Grid_Layout
 ---
 **CSS 그리드 레이아웃(Grid Layout)**은 페이지를 여러 주요 영역으로 나누거나, 크기와 위치 및 문서 계층 구조의 관점에서 HTML 기본 요소로 작성된 콘트롤 간의 관계를 정의하는 데 아주 탁월합니다.
 

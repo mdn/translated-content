@@ -1,13 +1,6 @@
 ---
 title: 가변상자의 대표적인 사용례
 slug: Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
-tags:
-  - 가변상자
-  - 씨에스에스
-  - 안내서
-  - 용례
-  - 패턴
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/가변상자의_대표적인_사용례
 ---
 {{CSSRef}}

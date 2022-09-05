@@ -1,11 +1,6 @@
 ---
 title: return
 slug: Web/JavaScript/Reference/Statements/return
-tags:
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/return
 ---
 {{jsSidebar("Statements")}}
 

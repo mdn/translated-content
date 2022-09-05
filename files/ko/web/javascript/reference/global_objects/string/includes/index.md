@@ -1,13 +1,6 @@
 ---
 title: String.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/includes
 ---
 {{JSRef}}
 

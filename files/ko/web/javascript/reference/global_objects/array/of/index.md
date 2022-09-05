@@ -1,13 +1,6 @@
 ---
 title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/of
 ---
 {{JSRef}}
 

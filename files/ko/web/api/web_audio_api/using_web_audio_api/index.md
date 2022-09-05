@@ -1,18 +1,6 @@
 ---
 title: Web Audio API 사용하기
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
-tags:
-  - API
-  - Audio
-  - Guide
-  - Playback
-  - Using
-  - Web
-  - Web Audio
-  - Web Audio API
-  - basics
-  - sound
-translation_of: Web/API/Web_Audio_API/Using_Web_Audio_API
 ---
 {{DefaultAPISidebar("Web Audio API")}}
 

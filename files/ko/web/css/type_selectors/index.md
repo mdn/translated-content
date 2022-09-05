@@ -1,14 +1,6 @@
 ---
 title: 유형 선택자
 slug: Web/CSS/Type_selectors
-tags:
-  - CSS
-  - HTML
-  - Node
-  - Reference
-  - Selectors
-  - 선택자
-translation_of: Web/CSS/Type_selectors
 ---
 {{CSSRef("Selectors")}}
 

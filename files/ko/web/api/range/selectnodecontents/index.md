@@ -1,12 +1,6 @@
 ---
 title: Range.selectNodeContents()
 slug: Web/API/Range/selectNodeContents
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
-translation_of: Web/API/Range/selectNodeContents
 ---
 {{ApiRef("DOM")}}
 

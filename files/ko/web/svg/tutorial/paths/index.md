@@ -1,10 +1,6 @@
 ---
 title: 패스
 slug: Web/SVG/Tutorial/Paths
-tags:
-  - SVG
-  - 학습서
-translation_of: Web/SVG/Tutorial/Paths
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 

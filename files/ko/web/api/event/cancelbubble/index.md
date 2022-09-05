@@ -1,12 +1,6 @@
 ---
 title: Event.cancelBubble
 slug: Web/API/Event/cancelBubble
-tags:
-  - Property
-  - Reference
-  - Deprecated
-browser-compat: api.Event.cancelBubble
-translation_of: Web/API/Event/cancelBubble
 ---
 {{APIRef("DOM Events")}} {{Deprecated_Header}}
 

@@ -1,7 +1,6 @@
 ---
 title: 캔버스(Canvas) 기본 사용법
 slug: Web/API/Canvas_API/Tutorial/Basic_usage
-translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 original_slug: Web/HTML/Canvas/Tutorial/Basic_usage
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}

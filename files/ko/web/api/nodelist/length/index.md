@@ -1,11 +1,6 @@
 ---
 title: element.length
 slug: Web/API/NodeList/length
-tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-translation_of: Web/API/NodeList/length
 ---
 {{ ApiRef() }}
 

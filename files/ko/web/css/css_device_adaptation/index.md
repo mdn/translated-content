@@ -1,12 +1,6 @@
 ---
 title: CSS Device Adaptation
 slug: Web/CSS/CSS_Device_Adaptation
-tags:
-  - CSS
-  - CSS Device Adaptation
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Device_Adaptation
 ---
 {{CSSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: An overview of accessible web applications and widgets
 slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
-translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 ---
 웹은 변화하고 있습니다. 페이지 중심의 정적이던 사이트들은 동적으로 변화하고 있고, 데스크톱 웹 어플리케이션들이 JS와 AJAX를 중점으로 사용하며 제작되고 있습니다. 디자이너들은 새로운 위젯들과 컨트롤을 한결같이 JavaScript, HTML, CSS를 조합해서 만들고 있습니다. 이런 변화는 사용성과 반응형 향상에는 극적으로 도움을 주지만, 또 다른 많은 유저들은 접근성 격차로 인해 제약이 발생하는 리스크도 안고 있습니다. JavaScript는 스크린리더 같은 보조기술을 사용하는 유저들이 접근하기 힘들다고 알려져 있었습니다. 하지만 현재는 다양한 사용자가 접근할 수 있는 동적 웹 어플리케이션을 만들 수 있습니다.
 

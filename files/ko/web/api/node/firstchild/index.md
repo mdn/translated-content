@@ -1,10 +1,6 @@
 ---
 title: element.firstChild
 slug: Web/API/Node/firstChild
-tags:
-  - DOM
-  - Gecko
-translation_of: Web/API/Node/firstChild
 ---
 {{ ApiRef() }}
 

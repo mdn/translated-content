@@ -1,16 +1,6 @@
 ---
 title: Web Audio 사용을 분석하기 위한 도구들
 slug: Web/API/Web_Audio_API/Tools
-tags:
-  - API
-  - Audio
-  - Debugging
-  - Media
-  - Tools
-  - Web
-  - Web Audio
-  - Web Audio API
-  - sound
 ---
 {{APIRef("Web Audio API")}}
 

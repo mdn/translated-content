@@ -1,7 +1,6 @@
 ---
 title: Streams API 컨셉
 slug: Web/API/Streams_API/Concepts
-translation_of: Web/API/Streams_API/Concepts
 original_slug: Web/API/Streams_API/컨셉
 ---
 {{apiref("Streams")}}

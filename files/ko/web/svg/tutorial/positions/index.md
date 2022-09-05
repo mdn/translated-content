@@ -1,7 +1,6 @@
 ---
 title: 위치
 slug: Web/SVG/Tutorial/Positions
-translation_of: Web/SVG/Tutorial/Positions
 original_slug: Web/SVG/Tutorial/위치
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}

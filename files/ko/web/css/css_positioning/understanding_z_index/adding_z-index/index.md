@@ -1,7 +1,6 @@
 ---
 title: z-index 적용
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 ---
 « [CSS](/ko/CSS) « [CSS z-index 이해하기](/ko/CSS/Understanding_z-index)
 

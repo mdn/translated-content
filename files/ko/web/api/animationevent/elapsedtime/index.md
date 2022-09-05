@@ -1,15 +1,6 @@
 ---
 title: AnimationEvent.elapsedTime
 slug: Web/API/AnimationEvent/elapsedTime
-tags:
-  - API
-  - AnimationEvent
-  - CSSOM
-  - Property
-  - Reference
-  - Web Animations
-browser-compat: api.AnimationEvent.elapsedTime
-translation_of: Web/API/AnimationEvent/elapsedTime
 ---
 {{APIRef("Web Animations API")}}
 

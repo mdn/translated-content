@@ -1,17 +1,6 @@
 ---
 title: AudioWorkletProcessor.process
 slug: Web/API/AudioWorkletProcessor/process
-tags:
-  - API
-  - Audio
-  - AudioWorkletNode
-  - AudioWorkletProcessor
-  - Experimental
-  - Method
-  - Process
-  - Reference
-  - Web Audio API
-browser-compat: api.AudioWorkletProcessor.process
 ---
 {{APIRef("Web Audio API")}}
 

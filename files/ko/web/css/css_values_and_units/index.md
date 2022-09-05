@@ -1,12 +1,6 @@
 ---
 title: CSS 단위와 값
 slug: Web/CSS/CSS_Values_and_Units
-tags:
-  - CSS
-  - 값과 단위
-  - 안내서
-  - 참조
-translation_of: Web/CSS/CSS_Values_and_Units
 original_slug: Web/CSS/CSS_단위와_값
 ---
 {{CSSRef}}

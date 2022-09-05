@@ -1,13 +1,6 @@
 ---
 title: AbortController
 slug: Web/API/AbortController
-tags:
-  - API
-  - AbortController
-  - 레퍼런스
-  - 실험적
-  - 인터페이스
-translation_of: Web/API/AbortController
 ---
 {{APIRef("DOM")}}{{SeeCompatTable}}
 

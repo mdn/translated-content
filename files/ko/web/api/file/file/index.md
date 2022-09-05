@@ -1,13 +1,6 @@
 ---
 title: File()
 slug: Web/API/File/File
-tags:
-  - API
-  - Constructor
-  - File
-  - Reference
-browser-compat: api.File.File
-translation_of: Web/API/File/File
 ---
 {{APIRef("File")}}
 

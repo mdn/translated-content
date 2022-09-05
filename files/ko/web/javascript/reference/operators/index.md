@@ -1,12 +1,6 @@
 ---
 title: 식 및 연산자
 slug: Web/JavaScript/Reference/Operators
-tags:
-  - JavaScript
-  - Operators
-  - Overview
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators
 ---
 {{jsSidebar("Operators")}}
 

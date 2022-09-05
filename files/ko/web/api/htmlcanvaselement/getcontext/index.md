@@ -1,13 +1,6 @@
 ---
 title: HTMLCanvasElement.getContext()
 slug: Web/API/HTMLCanvasElement/getContext
-tags:
-  - API
-  - Canvas
-  - HTMLCanvasElement
-  - 레퍼런스
-  - 메소드
-translation_of: Web/API/HTMLCanvasElement/getContext
 ---
 {{APIRef("Canvas API")}}
 

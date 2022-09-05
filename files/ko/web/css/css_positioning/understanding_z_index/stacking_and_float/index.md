@@ -1,7 +1,6 @@
 ---
 title: floating 엘리먼트의 쌓임
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 ---
 « [CSS](/ko/CSS) « [CSS z-index 이해하기](/ko/CSS/Understanding_z-index)
 

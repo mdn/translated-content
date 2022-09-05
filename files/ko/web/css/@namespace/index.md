@@ -1,13 +1,6 @@
 ---
 title: '@namespace'
 slug: Web/CSS/@namespace
-tags:
-  - At-rule
-  - CSS
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/CSS/@namespace
 ---
 {{CSSRef}}
 

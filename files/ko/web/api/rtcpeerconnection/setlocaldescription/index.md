@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.setLocalDescription()
 slug: Web/API/RTCPeerConnection/setLocalDescription
-translation_of: Web/API/RTCPeerConnection/setLocalDescription
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 

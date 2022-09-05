@@ -1,13 +1,6 @@
 ---
 title: <position>
 slug: Web/CSS/position_value
-tags:
-  - CSS
-  - CSS Data Type
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/CSS/position_value
 ---
 {{CSSRef}}
 

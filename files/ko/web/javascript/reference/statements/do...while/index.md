@@ -1,10 +1,6 @@
 ---
 title: do...while
 slug: Web/JavaScript/Reference/Statements/do...while
-tags:
-  - 구문
-  - 자바스크립트
-translation_of: Web/JavaScript/Reference/Statements/do...while
 ---
 {{jsSidebar("Statements")}}
 

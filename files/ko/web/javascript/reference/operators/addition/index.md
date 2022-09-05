@@ -1,13 +1,6 @@
 ---
 title: 더하기 (+)
 slug: Web/JavaScript/Reference/Operators/Addition
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Addition
-browser-compat: javascript.operators.addition
 ---
 {{jsSidebar("Operators")}}
 

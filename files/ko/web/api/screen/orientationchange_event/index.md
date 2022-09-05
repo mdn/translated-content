@@ -1,7 +1,6 @@
 ---
 title: window.screen.onorientationchange
 slug: Web/API/Screen/orientationchange_event
-translation_of: Web/API/Screen/onorientationchange
 original_slug: Web/API/Screen/onorientationchange
 ---
 {{ ApiRef() }}

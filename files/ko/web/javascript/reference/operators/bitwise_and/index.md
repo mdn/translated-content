@@ -1,13 +1,6 @@
 ---
 title: AND 비트연산(&)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND
-tags:
-  - Bitwise operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.bitwise_and
 ---
 
 {{jsSidebar("Operators")}}

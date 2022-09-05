@@ -1,15 +1,6 @@
 ---
 title: OffscreenCanvas()
 slug: Web/API/OffscreenCanvas/OffscreenCanvas
-tags:
-  - API
-  - Canvas
-  - Constructor
-  - Experimental
-  - OffscreenCanvas
-  - Reference
-  - WebGL
-translation_of: Web/API/OffscreenCanvas/OffscreenCanvas
 ---
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 

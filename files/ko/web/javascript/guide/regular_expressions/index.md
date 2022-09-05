@@ -1,15 +1,6 @@
 ---
 title: 정규 표현식
 slug: Web/JavaScript/Guide/Regular_Expressions
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
-  - Reference
-  - RegExp
-  - Regular Expressions
-  - 정규식
-translation_of: Web/JavaScript/Guide/Regular_Expressions
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}

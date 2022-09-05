@@ -1,8 +1,6 @@
 ---
 title: FileReader.result
 slug: Web/API/FileReader/result
-browser-compat: api.FileReader.result
-translation_of: Web/API/FileReader/result
 ---
 {{APIRef("File API")}}
 

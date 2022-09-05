@@ -1,12 +1,6 @@
 ---
 title: 시작하기
 slug: Web/SVG/Tutorial/Getting_Started
-tags:
-  - SVG
-  - SVG:Tutorial
-  - 초보자
-  - 튜토리얼
-translation_of: Web/SVG/Tutorial/Getting_Started
 original_slug: Web/SVG/Tutorial/시작하기
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}

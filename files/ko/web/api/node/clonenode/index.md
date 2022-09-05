@@ -1,7 +1,6 @@
 ---
 title: Node.cloneNode()
 slug: Web/API/Node/cloneNode
-translation_of: Web/API/Node/cloneNode
 ---
 {{APIRef("DOM")}}**`Node.cloneNode()`** 메서드는 이 메서드를 호출한 Node 의 복제된 Node를 반환합니다.
 

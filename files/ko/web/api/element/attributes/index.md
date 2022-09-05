@@ -1,11 +1,6 @@
 ---
 title: element.attributes
 slug: Web/API/Element/attributes
-tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-translation_of: Web/API/Element/attributes
 ---
 {{ ApiRef() }}
 

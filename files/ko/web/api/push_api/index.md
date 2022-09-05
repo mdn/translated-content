@@ -1,7 +1,6 @@
 ---
 title: Push API
 slug: Web/API/Push_API
-translation_of: Web/API/Push_API
 ---
 {{DefaultAPISidebar("Push API")}}
 

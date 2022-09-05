@@ -1,15 +1,6 @@
 ---
 title: ConstantSourceNode로 다수의 파라미터 제어하기
 slug: Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode
-tags:
-  - Audio
-  - Example
-  - Guide
-  - Intermediate
-  - Media
-  - Tutorial
-  - Web Audio
-  - Web Audio API
 ---
 {{APIRef("Web Audio API")}}
 

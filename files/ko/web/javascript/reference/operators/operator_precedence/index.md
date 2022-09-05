@@ -1,13 +1,6 @@
 ---
 title: 연산자 우선순위
 slug: Web/JavaScript/Reference/Operators/Operator_Precedence
-tags:
-  - Guide
-  - JavaScript
-  - Operator
-  - 연산자
-  - 우선순위
-translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
 ---
 {{jsSidebar("Operators")}}
 

@@ -1,13 +1,6 @@
 ---
 title: 나머지 매개변수
 slug: Web/JavaScript/Reference/Functions/rest_parameters
-tags:
-  - Functions
-  - JavaScript
-  - Language feature
-  - Reference
-browser-compat: javascript.functions.rest_parameters
-translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 ---
 {{jsSidebar("Functions")}}
 

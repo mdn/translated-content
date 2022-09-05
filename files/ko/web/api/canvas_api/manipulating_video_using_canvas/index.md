@@ -1,12 +1,6 @@
 ---
 title: 캔버스(canvas)를 이용한 비디오 조작하기
 slug: Web/API/Canvas_API/Manipulating_video_using_canvas
-tags:
-  - Canvas
-  - Video
-  - 비디오
-  - 캔버스
-translation_of: Web/API/Canvas_API/Manipulating_video_using_canvas
 original_slug: Web/HTML/Canvas/Manipulating_video_using_canvas
 ---
 {{CanvasSidebar}}

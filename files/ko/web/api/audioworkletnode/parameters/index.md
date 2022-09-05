@@ -1,15 +1,6 @@
 ---
 title: AudioWorkletNode.parameters
 slug: Web/API/AudioWorkletNode/parameters
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - AudioWorkletNode
-  - Property
-  - Reference
-  - Web Audio API
-browser-compat: api.AudioWorkletNode.parameters
 ---
 {{APIRef("Web Audio API")}}
 

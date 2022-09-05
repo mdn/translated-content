@@ -1,7 +1,6 @@
 ---
 title: Document.importNode()
 slug: Web/API/Document/importNode
-translation_of: Web/API/Document/importNode
 ---
 {{APIRef("DOM")}}
 

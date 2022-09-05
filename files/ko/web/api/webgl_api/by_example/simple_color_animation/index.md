@@ -1,7 +1,6 @@
 ---
 title: 간단한 색깔 애니메이션
 slug: Web/API/WebGL_API/By_example/Simple_color_animation
-translation_of: Web/API/WebGL_API/By_example/Simple_color_animation
 ---
 {{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}
 

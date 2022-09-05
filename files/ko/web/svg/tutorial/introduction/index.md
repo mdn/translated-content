@@ -1,13 +1,6 @@
 ---
 title: 소개
 slug: Web/SVG/Tutorial/Introduction
-tags:
-  - SVG
-  - SVG:튜토리얼
-  - 가이드
-  - 초보자
-  - 튜토리얼
-translation_of: Web/SVG/Tutorial/Introduction
 ---
 {{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
 

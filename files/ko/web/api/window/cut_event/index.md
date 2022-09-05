@@ -1,16 +1,6 @@
 ---
 title: 'Window: cut 이벤트'
 slug: Web/API/Window/cut_event
-tags:
-  - API
-  - Clipboard API
-  - Cut
-  - Event
-  - Reference
-  - Web
-  - Window
-browser-compat: api.Window.cut_event
-translation_of: Web/API/Window/cut_event
 ---
 {{APIRef}}
 

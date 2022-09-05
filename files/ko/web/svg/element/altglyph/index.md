@@ -1,11 +1,6 @@
 ---
 title: <altGlyph>
 slug: Web/SVG/Element/altGlyph
-tags:
-  - Element
-  - SVG
-  - "altGlyph\_엘리먼트"
-translation_of: Web/SVG/Element/altGlyph
 ---
 {{SVGRef}}{{deprecated_header}}
 

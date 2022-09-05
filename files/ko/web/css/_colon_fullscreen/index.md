@@ -1,14 +1,6 @@
 ---
 title: ':fullscreen'
 slug: Web/CSS/:fullscreen
-tags:
-  - CSS
-  - Fullscreen API
-  - Pseudo-class
-  - Reference
-  - Selector
-  - 전체화면
-translation_of: Web/CSS/:fullscreen
 ---
 {{CSSRef}}
 

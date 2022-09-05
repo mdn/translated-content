@@ -1,7 +1,6 @@
 ---
 title: 동등 연산자(==)
 slug: Web/JavaScript/Reference/Operators/Equality
-translation_of: Web/JavaScript/Reference/Operators/Equality
 ---
 {{jsSidebar("Operators")}}
 

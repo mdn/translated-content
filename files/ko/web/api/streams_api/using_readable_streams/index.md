@@ -1,7 +1,6 @@
 ---
 title: Using readable streams
 slug: Web/API/Streams_API/Using_readable_streams
-translation_of: Web/API/Streams_API/Using_readable_streams
 ---
 {{apiref("Streams")}}
 

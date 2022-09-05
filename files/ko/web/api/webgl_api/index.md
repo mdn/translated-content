@@ -1,19 +1,6 @@
 ---
 title: WebGL
 slug: Web/API/WebGL_API
-tags:
-  - 3D
-  - 3D Graphics
-  - API
-  - Advanced
-  - Graphics
-  - JavaScript
-  - Media
-  - Overview
-  - Reference
-  - WebGL
-  - WebGL API
-translation_of: Web/API/WebGL_API
 ---
 {{WebGLSidebar}}
 

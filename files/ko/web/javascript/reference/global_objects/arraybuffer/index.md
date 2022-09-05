@@ -1,12 +1,6 @@
 ---
 title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-tags:
-  - ArrayBuffer
-  - JavaScript
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 ---
 {{JSRef}}
 

@@ -1,13 +1,6 @@
 ---
 title: 쌓임 맥락
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
-tags:
-  - Advanced
-  - CSS
-  - Guide
-  - Reference
-  - z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 ---
 {{cssref}}
 

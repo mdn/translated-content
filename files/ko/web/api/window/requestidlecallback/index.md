@@ -1,16 +1,6 @@
 ---
 title: window.requestIdleCallback()
 slug: Web/API/Window/requestIdleCallback
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - JavaScript timers
-  - Method
-  - Reference
-  - Window
-  - requestIdleCallback
-translation_of: Web/API/Window/requestIdleCallback
 ---
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 

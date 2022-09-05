@@ -1,15 +1,6 @@
 ---
 title: AudioWorkletGlobalScope.registerProcessor
 slug: Web/API/AudioWorkletGlobalScope/registerProcessor
-tags:
-  - API
-  - Audio
-  - AudioWorkletGlobalScope
-  - AudioWorkletProcessor
-  - Method
-  - Reference
-  - Web Audio API
-browser-compat: api.AudioWorkletGlobalScope.registerProcessor
 ---
 {{ APIRef("Web Audio API") }}
 

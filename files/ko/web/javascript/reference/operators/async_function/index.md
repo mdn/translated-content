@@ -1,8 +1,6 @@
 ---
 title: async function 표현식
 slug: Web/JavaScript/Reference/Operators/async_function
-translation_of: Web/JavaScript/Reference/Operators/async_function
-browser-compat: javascript.operators.async_function
 ---
 {{jsSidebar("Operators")}}
 

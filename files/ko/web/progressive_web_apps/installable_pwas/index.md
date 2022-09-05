@@ -1,15 +1,6 @@
 ---
 title: PWA를 설치가능하게 만드는 방법
 slug: Web/Progressive_web_apps/Installable_PWAs
-tags:
-  - PWA
-  - a2hs
-  - js13kGames
-  - 설치가능
-  - 프로그레시브
-  - 프로그레시브 웹 앱
-  - 홈 화면에 추가
-translation_of: Web/Progressive_web_apps/Installable_PWAs
 ---
 {{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
 

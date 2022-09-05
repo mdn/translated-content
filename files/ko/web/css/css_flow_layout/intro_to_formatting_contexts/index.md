@@ -1,16 +1,6 @@
 ---
 title: 서식 상황 입문서
 slug: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
-tags:
-  - BFC
-  - 대열
-  - 블록 서식 상황
-  - 서식 상황
-  - 씨에스에스
-  - 안내서
-  - 조판
-  - 중급
-translation_of: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
 ---
 {{CSSRef}}
 

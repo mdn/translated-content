@@ -1,8 +1,6 @@
 ---
 title: Date.prototype.getUTCMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth
-browser-compat: javascript.builtins.Date.getUTCMonth
 ---
 {{JSRef}}
 

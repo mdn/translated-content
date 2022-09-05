@@ -1,14 +1,6 @@
 ---
 title: clip-path
 slug: Web/CSS/clip-path
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Experimental
-  - Reference
-  - Web
-translation_of: Web/CSS/clip-path
 ---
 {{CSSRef}}
 

@@ -1,10 +1,6 @@
 ---
 title: Web audio 공간화 기초
 slug: Web/API/Web_Audio_API/Web_audio_spatialization_basics
-tags:
-  - PannerNode
-  - Web Audio API
-  - panning
 ---
 {{DefaultAPISidebar("Web Audio API")}}
 

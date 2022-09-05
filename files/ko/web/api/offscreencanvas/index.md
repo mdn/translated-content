@@ -1,14 +1,6 @@
 ---
 title: OffscreenCanvas
 slug: Web/API/OffscreenCanvas
-tags:
-  - API
-  - Canvas
-  - Experimental
-  - Interface
-  - Reference
-translation_of: Web/API/OffscreenCanvas
-browser-compat: api.OffscreenCanvas
 ---
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 

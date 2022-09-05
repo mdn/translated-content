@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.ontouchstart
 slug: Web/API/Element/touchstart_event
-translation_of: Web/API/GlobalEventHandlers/ontouchstart
 original_slug: Web/API/GlobalEventHandlers/ontouchstart
 ---
 {{ApiRef("HTML DOM")}}

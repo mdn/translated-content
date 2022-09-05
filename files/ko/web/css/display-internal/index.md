@@ -1,14 +1,6 @@
 ---
 title: <display-internal>
 slug: Web/CSS/display-internal
-tags:
-  - CSS
-  - CSS 데이터 타입
-  - CSS 디스플레이
-  - display-internal
-  - 자료형
-  - 참조
-translation_of: Web/CSS/display-internal
 ---
 {{CSSRef}}
 

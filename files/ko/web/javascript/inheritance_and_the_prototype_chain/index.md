@@ -1,12 +1,6 @@
 ---
 title: 상속과 프로토타입
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
-tags:
-  - JavaScript
-  - 객체지향
-  - 상속
-  - 중급
-translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 original_slug: Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
 ---
 {{jsSidebar("Advanced")}}

@@ -1,8 +1,6 @@
 ---
 title: Date.prototype.setUTCFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
-browser-compat: javascript.builtins.Date.setUTCFullYear
 ---
 {{JSRef}}
 

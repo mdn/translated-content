@@ -1,14 +1,6 @@
 ---
 title: Window.matchMedia()
 slug: Web/API/Window/matchMedia
-tags:
-  - API
-  - CSSOM View
-  - JavaScript
-  - Media Queries
-  - Method
-  - Reference
-translation_of: Web/API/Window/matchMedia
 ---
 {{APIRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: MutationObserver
 slug: Web/API/MutationObserver
-translation_of: Web/API/MutationObserver
 ---
 {{APIRef("DOM")}}
 
