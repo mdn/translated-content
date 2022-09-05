@@ -1,17 +1,6 @@
 ---
 title: WindowEventHandlers.onunhandledrejection
 slug: conflicting/Web/API/Window/unhandledrejection_event
-tags:
-  - API
-  - Event Handler
-  - HTML DOM
-  - Promises
-  - Property
-  - Reference
-  - WindowEventHandlers
-  - events
-  - onunhandledrejection
-translation_of: Web/API/WindowEventHandlers/onunhandledrejection
 original_slug: Web/API/WindowEventHandlers/onunhandledrejection
 ---
 {{APIRef}}

@@ -1,16 +1,6 @@
 ---
 title: HTMLInputElement.setRangeText()
 slug: Web/API/HTMLInputElement/setRangeText
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - メソッド
-  - NeedsCompatTable
-  - リファレンス
-  - テキスト欄選択 API
-browser-compat: api.HTMLInputElement.setRangeText
-translation_of: Web/API/HTMLInputElement/setRangeText
 ---
 {{APIRef("HTML DOM")}}
 

@@ -8,23 +8,23 @@ original_slug: Learn/HTML/Forms
 
 ## 항목
 
-1.  [나의 첫 HTML 폼](/ko/docs/Web/Guide/HTML/%ED%8F%BC/My_first_HTML_form)
-2.  [HTML HTML 폼 구성 방법](/ko/docs/HTML/Forms/How_to_structure_an_HTML_form)
-3.  [기본 폼 위젯](/ko/docs/HTML/Forms/The_native_form_widgets)
-4.  CSS와 HTML 폼
+1. [나의 첫 HTML 폼](/ko/docs/Web/Guide/HTML/%ED%8F%BC/My_first_HTML_form)
+2. [HTML 폼 구성 방법](/ko/docs/HTML/Forms/How_to_structure_an_HTML_form)
+3. [기본 폼 위젯](/ko/docs/HTML/Forms/The_native_form_widgets)
+4. CSS와 HTML 폼
 
-    1.  [HTML 폼 스타일](/ko/docs/HTML/Forms/Styling_HTML_forms)
-    2.  [HTML 폼을 위한 고급 스타일](/ko/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms "/en-US/docs/Advanced_styling_for_HTML_forms")
-    3.  [폼 위젯을 위한 호환성 테이블 속성](/ko/docs/Property_compatibility_table_for_form_widgets)
+    1. [HTML 폼 스타일](/ko/docs/HTML/Forms/Styling_HTML_forms)
+    2. [HTML 폼을 위한 고급 스타일](/ko/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms)
+    3. [폼 위젯을 위한 호환성 테이블 속성](/ko/docs/Property_compatibility_table_for_form_widgets)
 
-5.  [데이터 주고 받기](/ko/docs/HTML/Forms/Sending_and_retrieving_form_data)
-6.  [데이터 유효성 검사](/ko/docs/HTML/Forms/Data_form_validation)
-7.  [사용자 폼 위젯 만드는 방법](/ko/docs/HTML/Forms/How_to_build_custom_form_widgets)
-8.  [자바스크립트를 통해서 폼 전달 하기](/ko/docs/HTML/Forms/Sending_forms_through_JavaScript)
+5. [데이터 주고 받기](/ko/docs/HTML/Forms/Sending_and_retrieving_form_data)
+6. [데이터 유효성 검사](/ko/docs/HTML/Forms/Data_form_validation)
+7. [사용자 폼 위젯 만드는 방법](/ko/docs/HTML/Forms/How_to_build_custom_form_widgets)
+8. [자바스크립트를 통해서 폼 전달 하기](/ko/docs/HTML/Forms/Sending_forms_through_JavaScript)
 
-    1.  [FormData 객체 사용](/ko/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+    1. [FormData 객체 사용](/ko/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
 
-9.  [기존 브라우저에서 HTML 폼](/ko/docs/HTML/Forms/HTML_forms_in_legacy_browsers)
+9. [기존 브라우저에서 HTML 폼](/ko/docs/HTML/Forms/HTML_forms_in_legacy_browsers)
 
 ## HTML 문서
 
@@ -40,10 +40,10 @@ original_slug: Learn/HTML/Forms
 | {{HTMLElement("keygen")}}     | {{domxref("HTMLKeygenElement")}} | `keygen` 요소는 HTML 폼 요소의 일부로서 쉽게 키 데이터를 발생시키고 공개키를 전송을 위해서 존재 합니다.                                                                                                        |
 | {{HTMLElement("label")}}     | {{domxref("HTMLLabelElement")}}     | `label` 요소는 사용자 인터페이스 항목에 대한 캡션을 나타냅니다.                                                                                                                                                |
 | {{HTMLElement("legend")}}     | {{domxref("HTMLLegendElement")}} | `legend` 요소는 상위 요소인 {{ HTMLElement("fieldset") }} 컨텐츠를 위한 캡션을 나타냅니다.                                                                                                          |
-| {{HTMLElement("meter")}}     | {{domxref("HTMLMeterElement")}}     | `meter `요소는 알려진 범위 안에 정해 저 있는 스칼라 값이나 소수 값 주 하나를 나타냅니다.                                                                                                                       |
+| {{HTMLElement("meter")}}     | {{domxref("HTMLMeterElement")}}     | `meter` 요소는 알려진 범위 안에 정해 저 있는 스칼라 값이나 소수 값 주 하나를 나타냅니다.                                                                                                                       |
 | {{HTMLElement("optgroup")}} | {{domxref("HTMLOptGroupElement")}} | `optgroup` 요소는 {{ HTMLElement("select") }} 요소 안에 있는 옵션 그룹을 생성합니다.                                                                                                                  |
-| {{HTMLElement("option")}}     | {{domxref("HTMLOptionElement")}} | HTML\_ \_`option `요소는 {{ HTMLElement("select") }}, {{ HTMLElement("optgroup") }} 또는 {{ HTMLElement("datalist") }}요소 안에 항목을 나타내는 컨트롤을 생성하는데 사용됩니다. |
-| {{HTMLElement("output")}}     | {{domxref("HTMLOutputElement")}} | `output `요소는 계산 결과를 나타냅니다.                                                                                                                                                                        |
+| {{HTMLElement("option")}}     | {{domxref("HTMLOptionElement")}} | HTML\_ \_`option` 요소는 {{ HTMLElement("select") }}, {{ HTMLElement("optgroup") }} 또는 {{ HTMLElement("datalist") }}요소 안에 항목을 나타내는 컨트롤을 생성하는데 사용됩니다. |
+| {{HTMLElement("output")}}     | {{domxref("HTMLOutputElement")}} | `output` 요소는 계산 결과를 나타냅니다.                                                                                                                                                                        |
 | {{HTMLElement("progress")}} | {{domxref("HTMLProgressElement")}} | `progress` 요소는 작업 완료 진행 상태를 나타내는데 사용됩니다.                                                                                                                                                 |
 | {{HTMLElement("select")}}     | {{domxref("HTMLSelectElement")}} | `select` 요소는 옵션 메뉴를 제공하는 컨트롤을 나타냅니다.                                                                                                                                                      |
 | {{HTMLElement("textarea")}} | {{domxref("HTMLTextAreaElement")}} | `textarea` 요소는 다중 라인 일반 텍스트 편집 컨트롤을 나타냅니다.                                                                                                                                              |

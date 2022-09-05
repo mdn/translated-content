@@ -1,19 +1,6 @@
 ---
 title: VRDisplay.resetPose()
 slug: Web/API/VRDisplay/resetPose
-page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDevice
-  - Virtual Reality
-  - WebVR
-  - resetPose()
-browser-compat: api.VRDisplay.resetPose
-translation_of: Web/API/VRDisplay/resetPose
 original_slug: Web/API/VRDevice/resetPose
 ---
 {{APIRef("WebVR API")}}{{deprecated_header}}

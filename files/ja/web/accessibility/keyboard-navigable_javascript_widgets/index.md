@@ -78,8 +78,8 @@ translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 
 ユーザーがウィジェットからタブで離れてから戻ると、フォーカスはフォーカスを持っていた特定の要素、例えば、ツリーアイテムやグリッドセルに戻るべきです。 これを実現するには次の 2 つのテクニックがあります。
 
-1.  動き回る `tabindex`: プログラム的にフォーカスを移動
-2.  `aria-activedescendant`: 「仮想」フォーカスの管理
+1. 動き回る `tabindex`: プログラム的にフォーカスを移動
+2. `aria-activedescendant`: 「仮想」フォーカスの管理
 
 #### テクニック 1: 動き回る tabindex
 
@@ -87,9 +87,9 @@ translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 
 キーダウンハンドラをグループ内の各要素にバインドし、矢印キーを使用して別の要素に移動した場合、
 
-1.  プログラム的に新しい要素にフォーカスを適用します。
-2.  フォーカスされた要素の `tabindex` を `"0"` に更新します。
-3.  以前にフォーカスされた要素の `tabindex` を `"-1"` に更新します。
+1. プログラム的に新しい要素にフォーカスを適用します。
+2. フォーカスされた要素の `tabindex` を `"0"` に更新します。
+3. 以前にフォーカスされた要素の `tabindex` を `"-1"` に更新します。
 
 これはこのテクニックを使った [WAI-ARIA ツリービュー](https://files.paciellogroup.com/training/WWW2012/samples/Samples/aria/tree/index.html)の例です。
 

@@ -1,14 +1,6 @@
 ---
 title: キャンバスの最適化
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
-tags:
-  - 上級者
-  - キャンバス
-  - グラフィック
-  - HTML
-  - HTML5
-  - チュートリアル
-translation_of: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 original_slug: Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}

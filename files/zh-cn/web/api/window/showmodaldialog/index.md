@@ -16,7 +16,7 @@ returnVal = window.showModalDialog(uri[, arguments][, options]);
 
 - `returnVal` 集合类型 (Set) 返回值。由`uri`指定的页面返回。
 - `uri` 要在模态对话框中打开的页面 URI。
-- `arguments` 可选变量。可以通过该参数将需要的值传入对话框; 参数可以通过 [`window`](/en-US/docs/DOM/window) 对象的[`window.dialogArguments`](/en-US/docs/DOM/window.dialogArguments) 属性获取。
+- `arguments` 可选变量。可以通过该参数将需要的值传入对话框。
 - `options` 可选字符串参数。用于设置对话框打开的样式，使用一个或多个逗号分隔。
 
 | Syntax                                           | Description                                                                                                                                          |

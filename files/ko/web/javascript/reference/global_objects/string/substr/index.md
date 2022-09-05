@@ -22,7 +22,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 
 ## 구문
 
-    str.substr(start[, length])
+```js
+str.substr(start[, length])
+```
 
 ### 매개변수
 
@@ -33,7 +35,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 
 ## 설명
 
-`start`는 문자 인덱스입니다. 문자열에서 첫 번째 문자의 인덱스는 0이며, 마지막 문자의 인덱스는 문자열 전체 길이에서 1을 뺀 값입니다. `substr()`는` start`에서 문자들을 추출을 시작하여 `length`만큼 문자들을 수집합니다.
+`start` 는 문자 인덱스입니다. 문자열에서 첫 번째 문자의 인덱스는 0이며, 마지막 문자의 인덱스는 문자열 전체 길이에서 1을 뺀 값입니다. `substr()` 는 `start` 에서 문자들을 추출을 시작하여 `length` 만큼 문자들을 수집합니다.
 
 만약 `start` 값이 양수이고 문자열 전체 길이보다 크거가 같을 경우, `substr()`은 빈 문자열을 반환합니다.
 
@@ -73,7 +75,7 @@ if ('ab'.substr(-1) != 'b') {
     return function(start, length) {
       // call the original method
       return substr.call(this,
-      	// did we get a negative start, calculate how much it is from the beginning of the string
+        // did we get a negative start, calculate how much it is from the beginning of the string
         // adjust the start parameter for negative value
         start < 0 ? this.length + start : start,
         length)

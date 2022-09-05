@@ -1,12 +1,6 @@
 ---
 title: Firefox 65 for developers
 slug: Mozilla/Firefox/Releases/65
-tags:
-  - '65'
-  - Firefox
-  - Mozilla
-  - Release
-translation_of: Mozilla/Firefox/Releases/65
 ---
 {{FirefoxSidebar}}
 

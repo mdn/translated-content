@@ -1,10 +1,6 @@
 ---
 title: 拡張機能とは何か？
 slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
-tags:
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 ---
 {{AddonSidebar}}
 

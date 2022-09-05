@@ -1,15 +1,6 @@
 ---
 title: History.scrollRestoration
 slug: Web/API/History/scrollRestoration
-tags:
-  - API
-  - HTML DOM
-  - History
-  - 履歴 API
-  - プロパティ
-  - リファレンス
-browser-compat: api.History.scrollRestoration
-translation_of: Web/API/History/scrollRestoration
 ---
 {{APIRef("History API")}}
 

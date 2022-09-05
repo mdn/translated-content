@@ -1,22 +1,6 @@
 ---
 title: 'Window: unhandledrejection イベント'
 slug: Web/API/Window/unhandledrejection_event
-tags:
-  - API
-  - Event
-  - HTML DOM
-  - JavaScript
-  - Promise
-  - Promises
-  - Reference
-  - Rejection
-  - Window
-  - Worker
-  - events
-  - global scope
-  - unhandledrejection
-  - イベント
-translation_of: Web/API/Window/unhandledrejection_event
 ---
 {{APIRef("HTML DOM")}}
 

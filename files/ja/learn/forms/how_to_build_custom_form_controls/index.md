@@ -5,7 +5,7 @@ original_slug: Learn/Forms/How_to_build_custom_form_widgets
 ---
 {{LearnSidebar}}
 
-HTML フォームで使用可能なコントロールだけでは十分でない場合が多くあります。例えば、{{HTMLElement("select")}} 要素のようなコントロールに[高度なスタイル設定を行いたい](/ja/docs/Advanced_styling_for_HTML_forms "Advanced_styling_for_HTML_forms")場合や、独自の動作を提供したい場合は、あなた独自のコントロールを作成するしかありません。
+HTML フォームで使用可能なコントロールだけでは十分でない場合が多くあります。例えば、{{HTMLElement("select")}} 要素のようなコントロールに[高度なスタイル設定を行いたい](/ja/docs/Advanced_styling_for_HTML_forms)場合や、独自の動作を提供したい場合は、あなた独自のコントロールを作成するしかありません。
 
 本記事では、そのようなコントロールの作り方を見ていきます。その目的のため、次の例に取り組みます: {{HTMLElement("select")}} 要素の再構築です。このほかに独自コントロール作成をどういう方法でするか、いつするか、またそれが意味をなすのかや、コントロール作成が必須なときに何に気をつけるべきかを扱います。
 
@@ -443,12 +443,12 @@ window.addEventListener("load", function () {
 
 作成しようとしているコードでは、必要な作業すべてのために標準の JavaScript と DOM API を使用するでしょう。ここで使用するつもりである機能は以下のとおりです:
 
-1.  {{domxref("element.classList","classList")}}
-2.  {{domxref("EventTarget.addEventListener","addEventListener")}}
-3.  [`forEach`](/ja/docs/JavaScript/Reference/Global_Objects/Array/forEach "JavaScript/Reference/Global_Objects/Array/forEach")
-4.  {{domxref("element.querySelector","querySelector")}} および {{domxref("element.querySelectorAll","querySelectorAll")}}
+1. {{domxref("element.classList","classList")}}
+2. {{domxref("EventTarget.addEventListener","addEventListener")}}
+3. [`forEach`](/ja/docs/JavaScript/Reference/Global_Objects/Array/forEach)
+4. {{domxref("element.querySelector","querySelector")}} および {{domxref("element.querySelectorAll","querySelectorAll")}}
 
-これら特定機能を利用できるかに加えて、作業を始める前に残されている問題があります。{{domxref("element.querySelectorAll","querySelectorAll()")}} 関数が返すオブジェクトは [`Array`](/ja/docs/JavaScript/Reference/Global_Objects/Array "JavaScript/Reference/Global_Objects/Array") ではなく {{domxref("NodeList")}} です。これは、`Array` オブジェクトは [`forEach`](/ja/docs/JavaScript/Reference/Global_Objects/Array/forEach "JavaScript/Reference/Global_Objects/Array/forEach") 関数をサポートしているが {{domxref("NodeList")}} はサポートしていないために重要な問題です。{{domxref("NodeList")}} は `Array` ととても似ており、また `forEach` はとても便利であることから、作業を楽にするため以下のように {{domxref("NodeList")}} で `forEach` をサポートさせることができます:
+これら特定機能を利用できるかに加えて、作業を始める前に残されている問題があります。{{domxref("element.querySelectorAll","querySelectorAll()")}} 関数が返すオブジェクトは [`Array`](/ja/docs/JavaScript/Reference/Global_Objects/Array) ではなく {{domxref("NodeList")}} です。これは、`Array` オブジェクトは [`forEach`](/ja/docs/JavaScript/Reference/Global_Objects/Array/forEach) 関数をサポートしているが {{domxref("NodeList")}} はサポートしていないために重要な問題です。{{domxref("NodeList")}} は `Array` ととても似ており、また `forEach` はとても便利であることから、作業を楽にするため以下のように {{domxref("NodeList")}} で `forEach` をサポートさせることができます:
 
 ```js
 NodeList.prototype.forEach = function (callback) {
@@ -600,7 +600,7 @@ window.addEventListener('load', function () {
 | Live example                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | {{EmbedLiveSample("Change_states",120,130, "", "HTML/Forms/How_to_build_custom_form_controls/Example_3")}}     |
-| [ソースコードを確認する](/ja/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3 "HTML/Forms/How_to_build_custom_form_widgets/Example_3") |
+| [ソースコードを確認する](/ja/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3) |
 
 ### コントロールの値を制御する
 
@@ -693,14 +693,14 @@ window.addEventListener('load', function () {
 });
 ```
 
-上記のコードで、[`tabIndex`](/ja/docs/Web/API/HTMLElement/tabIndex "/ja/docs/Web/API/HTMLElement/tabIndex") プロパティを使用していることは注目に値します。このプロパティは、ネイティブコントロールにフォーカスが当たらないようにすることと、ユーザーがキーボードやマウスを使用するとカスタムコントロールがフォーカスを得るようにするために必要です。
+上記のコードで、[`tabIndex`](/ja/docs/Web/API/HTMLElement/tabIndex) プロパティを使用していることは注目に値します。このプロパティは、ネイティブコントロールにフォーカスが当たらないようにすることと、ユーザーがキーボードやマウスを使用するとカスタムコントロールがフォーカスを得るようにするために必要です。
 
 これで完了です! 結果は以下のとおりです:
 
 | Live example                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | {{EmbedLiveSample("Change_states",120,130, "", "HTML/Forms/How_to_build_custom_form_controls/Example_4")}}     |
-| [ソースコードを確認する](/ja/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_4 "HTML/Forms/How_to_build_custom_form_widgets/Example_4") |
+| [ソースコードを確認する](/ja/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_4) |
 
 ちょっと待ってください、本当に終わったのでしょうか?
 
@@ -708,15 +708,15 @@ window.addEventListener('load', function () {
 
 フル機能のセレクトボックスとはかけ離れていますが動作するものはできましたし、よく動作しています。しかし、私たちが行ってきたことは DOM の操作にすぎません。これには実際のセマンティクスがなく、またセレクトボックスのように見えていてもブラウザーの視点からはそうではないため、支援技術はそれがセレクトボックスであるとは理解できません。つまり、このきれいなセレクトボックスはアクセシブルではありません!
 
-幸いなことに解決策があり、それは [ARIA](/ja/docs/Accessibility/ARIA "Accessibility/ARIA") と呼ばれます。ARIA は "Accessible Rich Internet Application" を表し、その [W3C 仕様](http://www.w3.org/TR/wai-aria/) は私たちがここで行っていることに特化して設計されています: ウェブアプリケーションやカスタムコントロールをアクセシブルにします。これは基本的には、私たちが作り出した要素がネイティブコントロールとして通るかのように、役割や状態や特性をより説明できるようにするために HTML を拡張する属性のセットです。これらの属性の使用はとても簡単ですので、行ってみましょう。
+幸いなことに解決策があり、それは [ARIA](/ja/docs/Accessibility/ARIA) と呼ばれます。ARIA は "Accessible Rich Internet Application" を表し、その [W3C 仕様](http://www.w3.org/TR/wai-aria/) は私たちがここで行っていることに特化して設計されています: ウェブアプリケーションやカスタムコントロールをアクセシブルにします。これは基本的には、私たちが作り出した要素がネイティブコントロールとして通るかのように、役割や状態や特性をより説明できるようにするために HTML を拡張する属性のセットです。これらの属性の使用はとても簡単ですので、行ってみましょう。
 
 ### `role` 属性
 
-[ARIA](/ja/docs/Accessibility/ARIA "Accessibility/ARIA") で使用される主要な属性が、[`role`](/ja/docs/Accessibility/ARIA/ARIA_Techniques "Accessibility/ARIA/ARIA_Techniques") 属性です。[`role`](/ja/docs/Accessibility/ARIA/ARIA_Techniques "Accessibility/ARIA/ARIA_Techniques") 属性は、要素を何に使用するかを定義する値を受け入れます。それぞれのロールは、自身の要件や動作を定義します。本記事の例では、ロール [`listbox`](/ja/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role "Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role") を使用します。これは "composite role" であり、このロールの要素は子要素を持ち、またそれぞれの子要素も特定のロールを持ちます (この例では、ロール `option` の子要素が少なくとも 1 つ)。
+[ARIA](/ja/docs/Accessibility/ARIA) で使用される主要な属性が、[`role`](/ja/docs/Accessibility/ARIA/ARIA_Techniques) 属性です。[`role`](/ja/docs/Accessibility/ARIA/ARIA_Techniques) 属性は、要素を何に使用するかを定義する値を受け入れます。それぞれのロールは、自身の要件や動作を定義します。本記事の例では、ロール [`listbox`](/ja/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role) を使用します。これは "composite role" であり、このロールの要素は子要素を持ち、またそれぞれの子要素も特定のロールを持ちます (この例では、ロール `option` の子要素が少なくとも 1 つ)。
 
 また、ARIA は標準の HTML マークアップにデフォルトで適用されるロールを定義することも特筆に値します。例えば、{{HTMLElement("table")}} 要素はロール `grid` に、{{HTMLElement("ul")}} 要素はロール `list` にマッチします。{{HTMLElement("ul")}} 要素を使用しているため、私たちのコントロールのロール `listbox` が、{{HTMLElement("ul")}} 要素のロール `list` を置き換えるようにしなければなりません。そのために、ロール `presentation` を使用します。このロールは要素に特別な意味はないことを示せるようにするためのものであり、単に情報を与えるために使用されます。これを {{HTMLElement("ul")}} 要素に適用します。
 
-ロール [`listbox`](/ja/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role "Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role") をサポートするため、HTML を以下のように更新することが必要です:
+ロール [`listbox`](/ja/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role) をサポートするため、HTML を以下のように更新することが必要です:
 
 ```html
 <!-- 最初の要素に role="listbox" 属性を追加します -->
@@ -734,11 +734,11 @@ window.addEventListener('load', function () {
 </div>
 ```
 
-> **Note:** `role` 属性と `class` 属性の両方を含める方法は、[CSS 属性セレクタ](/ja/docs/CSS/Attribute_selectors "CSS/Attribute_selectors")に対応しない古いブラウザーをサポートしたい場合にのみ必要です。
+> **Note:** `role` 属性と `class` 属性の両方を含める方法は、[CSS 属性セレクタ](/ja/docs/CSS/Attribute_selectors)に対応しない古いブラウザーをサポートしたい場合にのみ必要です。
 
 ### `aria-selected` 属性
 
-[`role`](/ja/docs/Accessibility/ARIA/ARIA_Techniques "Accessibility/ARIA/ARIA_Techniques") を使用するだけでは不十分です。[ARIA](/ja/docs/Accessibility/ARIA "Accessibility/ARIA") は、状態や特性を表す多くの属性も提供します。これらをより多くまた適切に使用すると、コントロールが支援技術にもっと良く理解されるようになります。ここでは、使用する属性を 1 つに絞ります: `aria-selected` です。
+[`role`](/ja/docs/Accessibility/ARIA/ARIA_Techniques) を使用するだけでは不十分です。[ARIA](/ja/docs/Accessibility/ARIA) は、状態や特性を表す多くの属性も提供します。これらをより多くまた適切に使用すると、コントロールが支援技術にもっと良く理解されるようになります。ここでは、使用する属性を 1 つに絞ります: `aria-selected` です。
 
 `aria-selected` 属性は、どの選択肢が現在選択されているかを示すために使用します。これにより、支援技術はユーザーに現在何が選択されているかを伝えることができます。ここではユーザーが選択肢を選択するたびに、選択された選択肢を示すためにこの属性を JavaScript で動的に使用します。このために、`updateValue()` 関数の変更が必要です:
 
@@ -769,7 +769,7 @@ function updateValue(select, index) {
 | Live example                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | {{EmbedLiveSample("Change_states",120,130, "", "HTML/Forms/How_to_build_custom_form_controls/Example_5")}}     |
-| [ソースコードを確認する](/ja/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_5 "HTML/Forms/How_to_build_custom_form_widgets/Example_2") |
+| [ソースコードを確認する](/ja/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_5) |
 
 もっと先に進むには、この例でのコードは汎用性や再利用性に改善が必要です。これは課題として挑戦できます。この 2 つのヒントを挙げると:すべての関数で最初の引数は同じで、つまりこれらの関数は同じコンテキストが必要です。そのコンテキストを共有するオブジェクトを作るのが賢明です。
 

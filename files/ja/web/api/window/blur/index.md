@@ -1,13 +1,6 @@
 ---
 title: Window.blur()
 slug: Web/API/Window/blur
-tags:
-  - API
-  - DOM
-  - Gecko
-  - メソッド
-browser-compat: api.Window.blur
-translation_of: Web/API/Window/blur
 ---
 {{APIRef}}
 

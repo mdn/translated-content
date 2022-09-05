@@ -1,15 +1,6 @@
 ---
 title: CSSKeyframesRule.cssRules
 slug: Web/API/CSSKeyframesRule/cssRules
-tags:
-  - API
-  - CSSOM
-  - CSSKeyframesRule
-  - CSS アニメーション
-  - プロパティ
-  - リファレンス
-browser-compat: api.CSSKeyframesRule.cssRules
-translation_of: Web/API/CSSKeyframesRule/cssRules
 ---
 {{APIRef("CSSOM") }}
 

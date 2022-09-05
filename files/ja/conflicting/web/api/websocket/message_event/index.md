@@ -1,14 +1,6 @@
 ---
 title: WebSocket.onmessage
 slug: conflicting/Web/API/WebSocket/message_event
-tags:
-  - API
-  - Property
-  - Reference
-  - Web API
-  - WebSocket
-  - プロパティ
-translation_of: Web/API/WebSocket/onmessage
 original_slug: Web/API/WebSocket/onmessage
 ---
 {{APIRef("Web Sockets API")}}

@@ -1,12 +1,6 @@
 ---
 title: API リファレンスページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template
-page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
-browser-compat: path.to.feature.インターフェイス名
-translation_of: MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template
 original_slug: MDN/Structures/Page_types/API_reference_page_template
 l10n:
   sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7

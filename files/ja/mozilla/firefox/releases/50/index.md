@@ -1,10 +1,6 @@
 ---
 title: Firefox 50 for developers
 slug: Mozilla/Firefox/Releases/50
-tags:
-  - Firefox
-  - Release Notes
-translation_of: Mozilla/Firefox/Releases/50
 ---
 Firefox 50 は、米国時間 2016 年 11 月 15 日にリリースされました。このページでは、開発者に影響する Firefox 50 の変更点をまとめています。
 

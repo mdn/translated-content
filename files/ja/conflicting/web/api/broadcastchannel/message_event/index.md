@@ -1,16 +1,6 @@
 ---
 title: BroadcastChannel.onmessage
 slug: conflicting/Web/API/BroadcastChannel/message_event
-tags:
-  - API
-  - Broadcast Channel API
-  - BroadcastChannel
-  - Event Handler
-  - Experimental
-  - HTML API
-  - Property
-  - Reference
-translation_of: Web/API/BroadcastChannel/onmessage
 original_slug: Web/API/BroadcastChannel/onmessage
 ---
 {{APIRef("BroadCastChannel API")}}

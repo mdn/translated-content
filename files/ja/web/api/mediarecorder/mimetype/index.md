@@ -1,18 +1,6 @@
 ---
 title: MediaRecorder.mimeType
 slug: Web/API/MediaRecorder/mimeType
-tags:
-  - API
-  - Audio
-  - Media
-  - MediaRecorder
-  - MediaRecorder API
-  - MediaStream Recording
-  - Property
-  - Reference
-  - Video
-  - mimeType
-translation_of: Web/API/MediaRecorder/mimeType
 ---
 {{APIRef("MediaStream Recording")}}
 

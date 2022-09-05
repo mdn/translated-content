@@ -1,12 +1,6 @@
 ---
 title: IDBFactory.open
 slug: Web/API/IDBFactory/open
-tags:
-  - Database
-  - IDBFactory
-  - Storage
-  - open
-translation_of: Web/API/IDBFactory/open
 ---
 {{APIRef("IDBFactory")}}
 

@@ -126,4 +126,4 @@ translation_of: Web/Accessibility/ARIA/Roles/dialog_role
 - [ARIA: alertdialog ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Alertdiialog_Role)
 - [alertdialog ロールの使用](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

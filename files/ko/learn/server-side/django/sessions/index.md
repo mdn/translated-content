@@ -61,7 +61,7 @@ MIDDLEWARE = [
 
 ## 세션 사용하기
 
-`session` 속성은 `request` parameter 에서 파생된 view 안에 있습니다. ( view 로 전달되는 `HttpRequest `의 첫번째 함수 ). 이 세션의 속성은 현재의 사용자(정확히는 브라우저) 의 site 에 대한 connection 을 의미합니다. 브라우저의 cookie 안에 정의 되어 있습니다.
+`session` 속성은 `request` parameter 에서 파생된 view 안에 있습니다. ( view 로 전달되는 `HttpRequest` 의 첫번째 함수 ). 이 세션의 속성은 현재의 사용자(정확히는 브라우저) 의 site 에 대한 connection 을 의미합니다. 브라우저의 cookie 안에 정의 되어 있습니다.
 
 이 `session` 속성은 사전 같은 객체이지만 여러번 읽고 쓰기가 가능합니다.여러분은 다양한 딕셔너리 연산 - 즉, 모든 데이타 삭제, Key 가 존재하는지 데이터를 통한 looping 기타등등. 무엇보다 표준적인 "dictionary" API 를 통해 값을 가져오거나 저장 할 수 있습니다.
 

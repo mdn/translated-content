@@ -14,11 +14,15 @@ original_slug: Glossary/Client_hints
 
 クライアントヒントの使用は自動ではありません。 サーバーはクライアントヒントをサポートしていることを知らせる必要があります。 サーバーは、[`Accept-CH`](https://tools.ietf.org/html/draft-grigorik-http-client-hints-03#section-2.2.1) (クライアントヒントを受け入れる) ヘッダーまたは [`http-equiv`](/ja/docs/Web/HTML/Element/meta#Attributes) 属性を持つ同等の HTML の meta 要素を使用して、クライアントヒントのサポートを知らせます。
 
-`Accept-CH: DPR, Width, Viewport-Width, Downlink`
+```
+Accept-CH: DPR, Width, Viewport-Width, Downlink
+```
 
 および/または
 
-` <meta http-equiv="Accept-CH" content="DPR, Width, Viewport-Width, Downlink``"> `
+```html
+<meta http-equiv="Accept-CH" content="DPR, Width, Viewport-Width, Downlink">
+```
 
 クライアントが `Accept-CH` ヘッダーを受信すると、サポートしている場合は、知らされたフィールド値と一致するクライアントヒントのヘッダーを追加します。 例えば、上記の Accept-CH の例に基づいて、クライアントは DPR、Width、Viewport-Width、および Downlink のヘッダーを後続のすべてのリクエストに追加できます。 2 番目の例では、サーバーは Accept-CH meta タグを設定することにより、ブラウザーにヒントを提供します。
 

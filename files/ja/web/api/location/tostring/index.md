@@ -1,14 +1,6 @@
 ---
 title: location.toString()
 slug: Web/API/Location/toString
-tags:
-  - API
-  - Location
-  - メソッド
-  - リファレンス
-  - Stringifier
-browser-compat: api.Location.toString
-translation_of: Web/API/Location/toString
 ---
 {{ApiRef("Location")}}
 

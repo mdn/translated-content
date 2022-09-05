@@ -1,13 +1,6 @@
 ---
 title: UIEvent.detail
 slug: Web/API/UIEvent/detail
-tags:
-  - API
-  - DOM
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.UIEvent.detail
 ---
 {{APIRef("DOM Events")}}
 

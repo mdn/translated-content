@@ -1,11 +1,6 @@
 ---
 title: Class (クラス)
 slug: Glossary/Class
-tags:
-  - CodingScripting
-  - Glossary
-  - 用語集
-translation_of: Glossary/Class
 ---
 {{glossary("OOP","オブジェクト指向プログラミング")}}では、*クラス*は{{glossary("object","オブジェクト")}}の特徴を定義します。クラスはオブジェクトの{{glossary("property","プロパティ")}}や{{glossary("method","メソッド")}}のひな形定義であり、オブジェクトのより具体的なインスタンスが描かれる「青写真」です。
 

@@ -1,15 +1,6 @@
 ---
 title: BroadcastChannel.close()
 slug: Web/API/BroadcastChannel/close
-tags:
-  - API
-  - Broadcast Channel API
-  - BroadcastChannel
-  - Experimental
-  - HTML API
-  - Method
-  - Reference
-translation_of: Web/API/BroadcastChannel/close
 ---
 {{APIRef("BroadCastChannel API")}}
 

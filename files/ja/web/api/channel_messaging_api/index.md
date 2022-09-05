@@ -1,13 +1,6 @@
 ---
 title: チャンネルメッセージング API
 slug: Web/API/Channel_Messaging_API
-tags:
-  - API
-  - チャンネルメッセージング
-  - HTML API
-  - 概要
-  - リファレンス
-translation_of: Web/API/Channel_Messaging_API
 ---
 {{DefaultAPISidebar("Channel Messaging API")}}
 

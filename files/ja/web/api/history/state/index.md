@@ -1,15 +1,6 @@
 ---
 title: History.state
 slug: Web/API/History/state
-tags:
-  - API
-  - HTML DOM
-  - History
-  - 履歴 API
-  - プロパティ
-  - リファレンス
-browser-compat: api.History.state
-translation_of: Web/API/History/state
 ---
 {{APIRef("History API")}}
 

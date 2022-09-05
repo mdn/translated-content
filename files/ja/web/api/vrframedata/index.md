@@ -1,18 +1,6 @@
 ---
 title: VRFrameData
 slug: Web/API/VRFrameData
-page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Interface
-  - Reference
-  - VR
-  - VRFrameData
-  - Virtual Reality
-  - WebVR
-browser-compat: api.VRFrameData
-translation_of: Web/API/VRFrameData
 ---
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 

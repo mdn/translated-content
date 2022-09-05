@@ -1,11 +1,6 @@
 ---
 title: HTMLDataElement
 slug: Web/API/HTMLDataElement
-tags:
-  - API
-  - Interface
-  - Reference
-translation_of: Web/API/HTMLDataElement
 ---
 {{APIRef("HTML DOM")}}
 

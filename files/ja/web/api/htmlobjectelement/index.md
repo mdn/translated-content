@@ -1,14 +1,6 @@
 ---
 title: HTMLObjectElement
 slug: Web/API/HTMLObjectElement
-page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-browser-compat: api.HTMLObjectElement
-translation_of: Web/API/HTMLObjectElement
 ---
 {{ APIRef("HTML DOM") }}
 

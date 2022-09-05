@@ -1,14 +1,6 @@
 ---
 title: HTMLOListElement
 slug: Web/API/HTMLOListElement
-page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.HTMLOListElement
-translation_of: Web/API/HTMLOListElement
 ---
 {{ APIRef("HTML DOM") }}
 

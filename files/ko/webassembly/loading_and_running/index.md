@@ -83,10 +83,10 @@ JavaScript에서 WebAssembly 인스턴스를 사용할 수있게되면 {{jsxref(
 
 [`XMLHttpRequest`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)는 Fetch보다 다소 오래된 방법이지만 형식화 된 배열을 얻는 데 부족함이 없습니다. `simple.wasm`을 그대로 사용하여 진행하겠습니다.
 
-1.  새로운 {{domxref("XMLHttpRequest()")}} 인스턴스를 만들고 {{domxref("XMLHttpRequest.open","open()")}} 메서드를 사용하여 요청을 열고 요청 메서드를 GET으로 설정합니다. , 가져올 파일의 경로를 선언하십시오.
-2.  핵심 부분은 {{domxref("XMLHttpRequest.responseType","responseType")}} 속성을 사용하여 응답 유형을 `'arraybuffer'`로 설정하는 것입니다.
-3.  그런 다음 {{domxref("XMLHttpRequest.send()")}}을 사용하여 요청을 전송합니다.
-4.  그런 다음 응답이 다운로드 완료되면 함수를 호출하기 위해 {{domxref("XMLHttpRequest.onload", "onload")}} 이벤트 핸들러를 사용합니다. 이 함수에서는 {{domxref("XMLHttpRequest.response", "response")}} 프로퍼티를 생성 한 다음, Fetch와 마찬가지로 {{jsxref("WebAssembly.instantiate()")}} 메소드로 넘겨 줍니다.
+1. 새로운 {{domxref("XMLHttpRequest()")}} 인스턴스를 만들고 {{domxref("XMLHttpRequest.open","open()")}} 메서드를 사용하여 요청을 열고 요청 메서드를 GET으로 설정합니다. , 가져올 파일의 경로를 선언하십시오.
+2. 핵심 부분은 {{domxref("XMLHttpRequest.responseType","responseType")}} 속성을 사용하여 응답 유형을 `'arraybuffer'`로 설정하는 것입니다.
+3. 그런 다음 {{domxref("XMLHttpRequest.send()")}}을 사용하여 요청을 전송합니다.
+4. 그런 다음 응답이 다운로드 완료되면 함수를 호출하기 위해 {{domxref("XMLHttpRequest.onload", "onload")}} 이벤트 핸들러를 사용합니다. 이 함수에서는 {{domxref("XMLHttpRequest.response", "response")}} 프로퍼티를 생성 한 다음, Fetch와 마찬가지로 {{jsxref("WebAssembly.instantiate()")}} 메소드로 넘겨 줍니다.
 
 최종코드는 다음과 같습니다.
 

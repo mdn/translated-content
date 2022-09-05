@@ -1,16 +1,6 @@
 ---
 title: BaseAudioContext.createConvolver()
 slug: Web/API/BaseAudioContext/createConvolver
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - createConvolver
-browser-compat: api.BaseAudioContext.createConvolver
-translation_of: Web/API/BaseAudioContext/createConvolver
 original_slug: Web/API/AudioContext/createConvolver
 ---
 {{ APIRef("Web Audio API") }}

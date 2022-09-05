@@ -1,7 +1,6 @@
 ---
 title: WebGL の定数
 slug: Web/API/WebGL_API/Constants
-translation_of: Web/API/WebGL_API/Constants
 ---
 {{WebGLSidebar}}
 

@@ -177,10 +177,10 @@ DevTools는 CSS 문제를 해결할 때 큰 도움이 될 수 있으므로 CSS�
 
 축소된 테스트 사례를 만들려면:
 
-1.  마크업이 동적으로 생성되는 경우(예: CMS를 통해) 문제를 보여주는 출력의 정적 버전을 만드십시오. [CodePen](https://codepen.io/)과 같은 코드 공유 사이트는 축소된 테스트 사례를 호스팅하는 데 유용합니다. 그러면 온라인에서 액세스할 수 있고 동료와 쉽게 공유할 수 있기 때문입니다. 페이지에서 소스 보기를 수행하고 HTML을 CodePen에 복사한 다음 관련 CSS 및 JavaScript를 가져와서 포함할 수 있습니다. 그 후에도 문제가 여전히 분명한지 확인할 수 있습니다.
-2.  JavaScript를 제거해도 문제가 해결되지 않으면 JavaScript를 포함하지 마십시오. JavaScript를 제거해도 문제가 _해결되지 않는_ 경우 가능한 한 많은 JavaScript를 제거하고 문제의 원인은 그대로 두십시오.
-3.  문제에 기여하지 않는 HTML을 제거하십시오. 구성 요소 또는 레이아웃의 주요 요소를 제거합니다. 다시 말하지만, 여전히 문제를 보여주는 가장 작은 양의 코드를 찾아보십시오.
-4.  문제에 영향을 주지 않는 CSS를 제거하세요.
+1. 마크업이 동적으로 생성되는 경우(예: CMS를 통해) 문제를 보여주는 출력의 정적 버전을 만드십시오. [CodePen](https://codepen.io/)과 같은 코드 공유 사이트는 축소된 테스트 사례를 호스팅하는 데 유용합니다. 그러면 온라인에서 액세스할 수 있고 동료와 쉽게 공유할 수 있기 때문입니다. 페이지에서 소스 보기를 수행하고 HTML을 CodePen에 복사한 다음 관련 CSS 및 JavaScript를 가져와서 포함할 수 있습니다. 그 후에도 문제가 여전히 분명한지 확인할 수 있습니다.
+2. JavaScript를 제거해도 문제가 해결되지 않으면 JavaScript를 포함하지 마십시오. JavaScript를 제거해도 문제가 _해결되지 않는_ 경우 가능한 한 많은 JavaScript를 제거하고 문제의 원인은 그대로 두십시오.
+3. 문제에 기여하지 않는 HTML을 제거하십시오. 구성 요소 또는 레이아웃의 주요 요소를 제거합니다. 다시 말하지만, 여전히 문제를 보여주는 가장 작은 양의 코드를 찾아보십시오.
+4. 문제에 영향을 주지 않는 CSS를 제거하세요.
 
 이 작업을 수행하는 과정에서 문제의 원인을 발견하거나 최소한 특정 항목을 제거하여 문제를 켜고 끌 수 있습니다. 무언가를 발견할 때 코드에 몇 가지 주석을 추가할 가치가 있습니다. 도움을 요청해야 하는 경우 이미 시도한 내용을 도움을 주는 사람에게 보여줄 것입니다. 이렇게 하면 들리는 문제와 해결 방법을 검색할 수 있는 충분한 정보를 얻을 수 있습니다.
 
@@ -194,21 +194,21 @@ CSS에 대한 경험이 많을수록 문제를 더 빨리 파악하게 될 것�
 
 ## In this module
 
-1.  [Cascade and inheritance](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascade and inheritance](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Type, class, and ID selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Attribute selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Pseudo-classes and pseudo-elements](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Combinators](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [The box model](/ko/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [Backgrounds and borders](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [Handling different text directions](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Overflowing content](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Values and units](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Sizing items in CSS](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Images, media, and form elements](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [The box model](/ko/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [Backgrounds and borders](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [Handling different text directions](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [Overflowing content](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Values and units](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Sizing items in CSS](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Images, media, and form elements](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Styling tables](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Debugging CSS](/ko/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Organizing your CSS](/ko/docs/Learn/CSS/Building_blocks/Organizing)

@@ -140,7 +140,7 @@ Cela permettra d'obtenir le résultat suivant :
 
 {{EmbedLiveSample("Comment_construire_une_liste_de_descriptions", 600, 180)}}
 
-## En savoir plus
+## Voir aussi
 
 - {{htmlelement("dfn")}}
 - {{htmlelement("dl")}}

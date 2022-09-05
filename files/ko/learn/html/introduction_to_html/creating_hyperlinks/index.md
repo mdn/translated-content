@@ -112,7 +112,7 @@ URL은 파일들을 찾기위해 path를 이용합니다. path는 당신이 관�
 
 ![A simple directory structure. The parent directory is called creating-hyperlinks and contains two files called index.html and contacts.html, and two directories called projects and pdfs, which contain an index.html and a project-brief.pdf file, respectively](https://mdn.mozillademos.org/files/12409/simple-directory.png)
 
-이 디렉토리 구조의 **root**는 `creating-hyperlinks`. 웹사이트를 로컬 단에서 다룰 때에는 전체 웹사이트가 모두 들어갈 수 있는 하나의 디렉토리를 가져야 할 것입니다. Root 안에서 우리는 `index.html` 파일과 `contacts.html `파일을 갖습니다. 진짜 웹사이트 안에서 `index.html` 는 우리의 홈 페이지 또는 랜딩 페이지(웹사이트의 접속 포인트 또는 웹사이트의 특정 부분 이 되는 페이지)가 될 것입니다.
+이 디렉토리 구조의 **root**는 `creating-hyperlinks`. 웹사이트를 로컬 단에서 다룰 때에는 전체 웹사이트가 모두 들어갈 수 있는 하나의 디렉토리를 가져야 할 것입니다. Root 안에서 우리는 `index.html` 파일과 `contacts.html` 파일을 갖습니다. 진짜 웹사이트 안에서 `index.html` 는 우리의 홈 페이지 또는 랜딩 페이지(웹사이트의 접속 포인트 또는 웹사이트의 특정 부분 이 되는 페이지)가 될 것입니다.
 
 또 Root 안에는 두 개의 디렉토리가 있습니다 — `pdfs` 와 `projects`. 이들은 각각 하나의 파일을 내부에 가지고 있습니다 — 각각 PDF (`project-brief.pdf`) 와 `index.html` 파일입니다. 당신은 두 개의 `index.html` 파일들을 각각 파일 시스템의 다른 위치에 있도록 해서 하나의 프로젝트 안에 가질 수 있습니다. 많은 웹 사이트들이 이렇게 하고 있습니다. 두번째 `index.html`는 아마 프로젝트와 관련된 정보의 메인 랜딩 페이지가 될 것입니다.
 
@@ -277,10 +277,10 @@ Firefox 39의 Windows 버전에 대한 다운로드 링크가 있는 예:
 
 당신이 해야할 것:
 
-1.  연결할 페이지의 이름이 포함된 순서 없는 목록을 한 페이지의 지정된 위치에 추가하십시오. 네비게이션 메뉴는 보통 링크의 목록일 뿐이므로 의미적으로 OK이다.
-2.  각 페이지 이름을 해당 페이지 링크로 변경하십시오.
-3.  Navigation 메뉴를 각 페이지에 복사하십시오.
-4.  각 페이지에서 동일한 페이지에 대한 링크만 제거하십시오. — 페이지에 대한 링크가 포함된다는 것은 혼란스럽고 의미가 없으며, 링크가 부족하면 현재 어떤 페이지에 있는지 시각적으로 잘 알 수 있다.
+1. 연결할 페이지의 이름이 포함된 순서 없는 목록을 한 페이지의 지정된 위치에 추가하십시오. 네비게이션 메뉴는 보통 링크의 목록일 뿐이므로 의미적으로 OK이다.
+2. 각 페이지 이름을 해당 페이지 링크로 변경하십시오.
+3. Navigation 메뉴를 각 페이지에 복사하십시오.
+4. 각 페이지에서 동일한 페이지에 대한 링크만 제거하십시오. — 페이지에 대한 링크가 포함된다는 것은 혼란스럽고 의미가 없으며, 링크가 부족하면 현재 어떤 페이지에 있는지 시각적으로 잘 알 수 있다.
 
 완성된 예는 다음과 같다:
 
@@ -318,7 +318,7 @@ Firefox 39의 Windows 버전에 대한 다운로드 링크가 있는 예:
 </a>
 ```
 
-> **참고:** 각 필드의 값은 URL로 인코딩되어야 한다(즉, 출력되지 않은 문자 및 [percent-escaped](http://en.wikipedia.org/wiki/Percent-encoding)). 또한 `mailto: `URL의 각 필드를 구분하는 `&` 의 사용에 유의하십시오. 이것은 표준 URL 쿼리 표기법입니다.
+> **참고:** 각 필드의 값은 URL로 인코딩되어야 한다(즉, 출력되지 않은 문자 및 [percent-escaped](http://en.wikipedia.org/wiki/Percent-encoding)). 또한 `mailto:` URL의 각 필드를 구분하는 `&` 의 사용에 유의하십시오. 이것은 표준 URL 쿼리 표기법입니다.
 
 여기 다른 몇 가지 `mailto` URL 샘플들이 있다:
 

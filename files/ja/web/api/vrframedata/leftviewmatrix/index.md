@@ -1,19 +1,6 @@
 ---
 title: VRFrameData.leftViewMatrix
 slug: Web/API/VRFrameData/leftViewMatrix
-page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRFrameData
-  - Virtual Reality
-  - WebVR
-  - leftViewMatrix
-browser-compat: api.VRFrameData.leftViewMatrix
-translation_of: Web/API/VRFrameData/leftViewMatrix
 ---
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 

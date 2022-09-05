@@ -1,14 +1,6 @@
 ---
 title: GitHub 早見表
 slug: conflicting/MDN/Community/Issues
-tags:
-  - Best practices
-  - Community
-  - GitHub
-  - MDN
-  - Beginners
-  - Cheatsheet
-  - Commands
 original_slug: MDN/Contribute/GitHub_cheatsheet
 ---
 {{MDNSidebar}}

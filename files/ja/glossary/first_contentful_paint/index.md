@@ -1,12 +1,6 @@
 ---
 title: First contentful paint
 slug: Glossary/First_contentful_paint
-tags:
-  - Glossary
-  - Performance
-  - Reference
-  - Web Performance
-translation_of: Glossary/First_contentful_paint
 ---
 **First Contentful Paint** (FCP) は、ブラウザーが DOM からコンテンツの最初のビットをレンダリングし、ページが実際読み込み中というユーザーへの最初のフィードバックがなされる時間です。FCP が終わった時に「起こっているのか」という質問は「はい」です。
 

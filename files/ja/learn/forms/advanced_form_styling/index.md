@@ -5,7 +5,7 @@ original_slug: Learn/Forms/Advanced_styling_for_HTML_forms
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
 
-本記事では、スタイル設定が難しい一部の(不良なものと劣悪なもの)フォームコントロールで CSS を使用する方法を見ていきます。[前の記事](/ja/docs/HTML/Forms/Styling_HTML_forms "HTML/Forms/Styling_HTML_forms")で見たように、テキストフィールドやボタンでの CSS 使用はまったく問題がありません。ここからは、HTML フォームへのスタイル設定の闇の部分を見ていきます。
+本記事では、スタイル設定が難しい一部の(不良なものと劣悪なもの)フォームコントロールで CSS を使用する方法を見ていきます。[前の記事](/ja/docs/HTML/Forms/Styling_HTML_forms)で見たように、テキストフィールドやボタンでの CSS 使用はまったく問題がありません。ここからは、HTML フォームへのスタイル設定の闇の部分を見ていきます。
 
 | 前提条件: | 基本的なコンピューターリテラシーと、[HTML](/ja/docs/Learn/HTML/Introduction_to_HTML) と [CSS](/ja/docs/Learn/CSS/First_steps) の基本的な理解。 |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |

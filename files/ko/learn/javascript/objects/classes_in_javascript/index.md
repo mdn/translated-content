@@ -64,8 +64,8 @@ Person.prototype.greeting = function() {
 
 객체 지향에 대해 처음 정의할 때 언급했었던 `Teacher` 클래스를 만들어 봅시다. `Person`을 상속받고 아래 몇 가지를 추가해서요:
 
-1.  `subject` 속성 — 교사가 가르치는 과목을 나타냅니다.
-2.  기존의 `greeting()` 보다 조금 더 공손한 인사를 하는 메소드 — 교사가 학생들에게 건넬 만한 표현으로 하죠.
+1. `subject` 속성 — 교사가 가르치는 과목을 나타냅니다.
+2. 기존의 `greeting()` 보다 조금 더 공손한 인사를 하는 메소드 — 교사가 학생들에게 건넬 만한 표현으로 하죠.
 
 ## Teacher() 생성자 함수 정의
 
@@ -124,13 +124,13 @@ function BlueGlassBrick() {
 }
 ```
 
-`call() `함수에 this만 넘긴 것을 보세요. — `Brick()` 생성자에서 매개변수를 통해 초기화 하는 속성들이 없으므로 `call()`에도 넘길 필요가 없습니다.
+`call()` 함수에 this만 넘긴 것을 보세요. — `Brick()` 생성자에서 매개변수를 통해 초기화 하는 속성들이 없으므로 `call()`에도 넘길 필요가 없습니다.
 
 ## Teacher()의 프로토타입과 생성자 참조 설정하기
 
 다 좋은데 문제가 있습니다. 방금 정의한 새 생성자에는 생성자 함수 자신에 대한 참조만 가지고 있는 프로토타입 속성이 할당되어 있습니다. 정작 상속 받은 Person() 생성자의 prototype 속성은 없죠. Javascript 콘솔에서 `Object.getOwnPropertyNames(Teacher.prototype)`을 쳐서 확인해 보세요. 다음엔 `Teacher`를 `Person`으로 바꿔서 확인해 보세요. Teacher()생성자는 Person()의 메소드를 상속받지 못하였습니다. `Person.prototype.greeting`과 `Teacher.prototype.greeting` 구문을 실행하여 비교해 보세요. `Teacher()`가 메소드도 상속 받으려면 어떻게 해야 할까요?
 
-1.  기존 코드에 아래 코드를 추가하세요:
+1. 기존 코드에 아래 코드를 추가하세요:
 
     ```js
     Teacher.prototype = Object.create(Person.prototype);
@@ -138,14 +138,14 @@ function BlueGlassBrick() {
 
     구원 투수 [`create()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/create)의 등판입니다. 새 객체를 생성하여 `Teacher.prototype`으로 할당했죠. 새 객체는 `Person.prototype` 객체를 자신의 프로토타입으로 가지고 있으므로 `Person.prototype`에 정의된 모든 메소드를 사용할 수 있습니다.
 
-2.  넘어가기 전에 한가지 더 해야 합니다. 마지막 줄을 추가하고 나면 `Teacher.prototype`의 `constructor` 속성이 Person()으로 되어 있습니다. `Teacher.prototype`에 `Person.prototype`을 상속받은 객체를 할당했기 때문이죠. 코드를 저장한 뒤 브라우저로 불러와서 Teacher.prototype.constructor 구문의 반환 값을 확인해 보세요.
-3.  문제의 소지가 있으므로 고쳐야 됩니다. 소스에 아래 코드를 추가하세요:
+2. 넘어가기 전에 한가지 더 해야 합니다. 마지막 줄을 추가하고 나면 `Teacher.prototype`의 `constructor` 속성이 Person()으로 되어 있습니다. `Teacher.prototype`에 `Person.prototype`을 상속받은 객체를 할당했기 때문이죠. 코드를 저장한 뒤 브라우저로 불러와서 Teacher.prototype.constructor 구문의 반환 값을 확인해 보세요.
+3. 문제의 소지가 있으므로 고쳐야 됩니다. 소스에 아래 코드를 추가하세요:
 
     ```js
     Teacher.prototype.constructor = Teacher;
     ```
 
-4.  저장하고 다시 브라우저에서 불러오면 의도한대로 `Teacher.prototype.constructor`가 `Teacher()`를 반환합니다. 게다가 `Person()`도 상속받았죠!
+4. 저장하고 다시 브라우저에서 불러오면 의도한대로 `Teacher.prototype.constructor`가 `Teacher()`를 반환합니다. 게다가 `Person()`도 상속받았죠!
 
 ## Teacher()에 새 greeting() 함수 부여하기
 
@@ -210,9 +210,9 @@ JavaScript 라이브러리를 쓰면 간단합니다 — 상속 기능을 사용
 
 요약하면, 상속에 있어 고려해야 할 세 가지 유형의 속성/메소드가 있습니다:
 
-1.  생성자 함수 내에서 인스턴스에 정의하는 유형. 직접 작성한 코드에서는 생성자 함수 내에 `this.x = x` 구문과 유사하게 정의되어 있으므로 발견하기 쉽습니다. 브라우저 내장 코드에서는 객체 인스턴스(보통 `new` 키워드를 통해 생성, ex) `var myInstance = new myConstructor()`)에서만 접근할 수 있는 멤버입니다.
-2.  생성자에 직접 정의하는 유형, 생성자에서만 사용 가능합니다. 브라우저 내장 객체에서 흔히 사용하는 방식인데, 인스턴스가 아니라 생성자 함수에서 바로 호출되는 유형입니다. `Object.key()` 같은 함수들이죠.
-3.  인스턴스와 자식 클래스에 상속하기 위해 생성자의 프로토타입에 정의하는 유형. 생성자의 프로토타이비 속성에 정의되는 모든 멤버를 의미합니다. ex) `myConstructor.prototype.x()`.
+1. 생성자 함수 내에서 인스턴스에 정의하는 유형. 직접 작성한 코드에서는 생성자 함수 내에 `this.x = x` 구문과 유사하게 정의되어 있으므로 발견하기 쉽습니다. 브라우저 내장 코드에서는 객체 인스턴스(보통 `new` 키워드를 통해 생성, ex) `var myInstance = new myConstructor()`)에서만 접근할 수 있는 멤버입니다.
+2. 생성자에 직접 정의하는 유형, 생성자에서만 사용 가능합니다. 브라우저 내장 객체에서 흔히 사용하는 방식인데, 인스턴스가 아니라 생성자 함수에서 바로 호출되는 유형입니다. `Object.key()` 같은 함수들이죠.
+3. 인스턴스와 자식 클래스에 상속하기 위해 생성자의 프로토타입에 정의하는 유형. 생성자의 프로토타이비 속성에 정의되는 모든 멤버를 의미합니다. ex) `myConstructor.prototype.x()`.
 
 뭐가 뭔지 헷갈려도 걱정하지 마세요 — 배우는 중이니 차츰 익숙해질겁니다.
 

@@ -4,7 +4,7 @@ slug: Web/CSS/Reference
 ---
 {{CSSRef}}
 
-使用此**CSS 参考**页面以浏览按 [字母索引](#关键字索引) 的所有标准 [CSS](/zh-CN/docs/CSS) 属性、[伪类](/zh-CN/docs/CSS/Pseudo-classes)、[伪元素](/zh-CN/docs/CSS/Pseudo-elements)、[数据类型](/zh-CN/docs/Web/CSS/CSS_Types)、以及[@ 规则](/zh-CN/docs/CSS/At-rule)。你也可以浏览 [按类型排列的 CSS 选择器](#选择器) 列表和 [CSS 关键概念](#概念) 列表。还有一份简短的 [DOM-CSS / CSSOM 参考](#DOM-CSS_CSSOM)。
+使用此**CSS 参考**页面以浏览按[字母索引](#索引)的所有标准 [CSS](/zh-CN/docs/CSS) 属性、[伪类](/zh-CN/docs/CSS/Pseudo-classes)、[伪元素](/zh-CN/docs/CSS/Pseudo-elements)、[数据类型](/zh-CN/docs/Web/CSS/CSS_Types)、以及[@ 规则](/zh-CN/docs/CSS/At-rule)。你也可以浏览 [按类型排列的 CSS 选择器](#选择器) 列表和 [CSS 关键概念](#概念) 列表。还有一份简短的 [DOM-CSS / CSSOM 参考](#DOM-CSS_CSSOM)。
 
 ## 基本规则语法
 
@@ -50,7 +50,7 @@ div.menu-bar li:hover > ul {
 
 由于 @规则间的结构变化很大，请参阅[@规则](/zh-CN/docs/Web/CSS/At-rule)以找到你所想要的特定规则语法。
 
-## 关键字索引
+## 索引
 
 > **备注：** 此索引中的属性名称不包括与 CSS 标准名称不同的 JavaScript 名称。
 

@@ -17,8 +17,8 @@ translation_of: Web/XSLT/Element/for-each
 
 ```
 <xsl:for-each select=EXPRESSION>
-	<xsl:sort> [optional]
-	TEMPLATE
+  <xsl:sort> [optional]
+  TEMPLATE
 </xsl:for-each>
 ```
 

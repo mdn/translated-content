@@ -1,14 +1,6 @@
 ---
 title: MediaRecorder.stream
 slug: Web/API/MediaRecorder/stream
-tags:
-  - API
-  - Media Recorder API
-  - MediaRecorder
-  - Property
-  - Reference
-  - stream
-translation_of: Web/API/MediaRecorder/stream
 ---
 {{APIRef("MediaStream Recording")}}
 

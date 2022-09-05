@@ -1,14 +1,6 @@
 ---
 title: HTMLAreaElement.username
 slug: Web/API/HTMLAreaElement/username
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAreaElement.username
-translation_of: Web/API/HTMLAreaElement/username
 original_slug: Web/API/HTMLHyperlinkElementUtils/username
 ---
 {{ApiRef("HTML DOM")}}

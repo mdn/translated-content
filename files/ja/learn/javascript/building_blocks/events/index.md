@@ -71,7 +71,7 @@ btn.onclick = function() {
 
 ここで言及しておくべき事は、イベントは JavaScript 固有のものではないという事です — ほとんどのプログラミング言語はいくつかのイベントモデルを持ち、その動作する方法はしばしは JavaScript の方式とは異なっています。実際、ウェブページの JavaScript のイベントモデルは他の環境で用いられている JavaScript のイベントモデルと異なっています。
 
-例えば、[Node.js](/ja/docs/Learn/Server-side/Express_Nodejs) は開発者に JavaScript でネットワークとサーバーサイドのアプリケーションを構築することを可能にするとても有名な JavaScript ランタイムです。[Node.js event model](https://nodejs.org/docs/latest-v12.x/api/events.html) はイベントを待ち受けるリスナー、イベントを定期的に発生させるエミッターに依拠しています —たいして違ってないように聞こえますが、コードは極めて異なっていて、イベントリスナーを登録する `on()` や、一度実行したら登録を解除するイベントリスナーを登録するための `once() `のような関数を使っていきます。[HTTP connect event docs](https://nodejs.org/docs/latest-v12.x/api/http.html#http_event_connect) が使い方の良い例を教えてくれます。
+例えば、[Node.js](/ja/docs/Learn/Server-side/Express_Nodejs) は開発者に JavaScript でネットワークとサーバーサイドのアプリケーションを構築することを可能にするとても有名な JavaScript ランタイムです。[Node.js event model](https://nodejs.org/docs/latest-v12.x/api/events.html) はイベントを待ち受けるリスナー、イベントを定期的に発生させるエミッターに依拠しています —たいして違ってないように聞こえますが、コードは極めて異なっていて、イベントリスナーを登録する `on()` や、一度実行したら登録を解除するイベントリスナーを登録するための `once()` のような関数を使っていきます。[HTTP connect event docs](https://nodejs.org/docs/latest-v12.x/api/http.html#http_event_connect) が使い方の良い例を教えてくれます。
 
 その他の例として、[WebExtensions](/ja/docs/Mozilla/Add-ons/WebExtensions) と呼ばれる技術を使って、クロスブラウザーアドオン (ブラウザーの機能拡張) を JavaScript で作成できます。イベントモデルは Web イベントモデルと似ていますが、ほんの少し違いがあります (イベントリスナーのプロパティはキャメルケース (例 `onmessage` でなく `onMessage`) で命名されていて、`addListener` 関数で結び付ける必要があります。例として [`runtime.onMessage` page](/ja/Add-ons/WebExtensions/API/runtime/onMessage#Examples) を確認してください。
 
@@ -118,7 +118,7 @@ btn.onclick = bgChange;
 - [`window.onkeypress`](/ja/docs/Web/API/GlobalEventHandlers/onkeypress), [`window.onkeydown`](/ja/docs/Web/API/GlobalEventHandlers/onkeydown), [`window.onkeyup`](/ja/docs/Web/API/GlobalEventHandlers/onkeyup) — キーボードのキーが押された時に色が変わります。`keypress` は普通のキー入力(ボタンを押して離して)を示しますが、`keydown` と `keyup` はキーストロークのうち押すだけ、離すだけの部分それぞれを指します。ボタンそのもののイベントハンドラーに登録しても上手く動かないことに注意してください — [window](/ja/docs/Web/API/Window) オブジェクトに登録しなければならず、これはブラウザーのウィンドウ全体を表わしています。
 - [`btn.onmouseover`](/ja/docs/Web/API/GlobalEventHandlers/onmouseover) と [`btn.onmouseout`](/ja/docs/Web/API/GlobalEventHandlers/onmouseout) — マウスポインタがボタンの上に来たときとボタンの上から外れた時に色が変わります。
 
-いくつかのイベントはとても汎用的なのでほとんどどこでも使えます(例えば onlick ハンドラはほぼ全ての要素に登録できます)が、いくつかはもっと限定的で、特定の状況でしか使えません(例えば [onplay ](/ja/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay)は{{htmlelement("video")}}のような特定の要素でのみ意味を持ちます)。
+いくつかのイベントはとても汎用的なのでほとんどどこでも使えます(例えば onlick ハンドラはほぼ全ての要素に登録できます)が、いくつかはもっと限定的で、特定の状況でしか使えません(例えば [onplay](/ja/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay) は{{htmlelement("video")}}のような特定の要素でのみ意味を持ちます)。
 
 ### インラインイベントハンドラー — 使っちゃだめ
 

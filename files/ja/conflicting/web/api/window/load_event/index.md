@@ -1,17 +1,7 @@
 ---
 title: GlobalEventHandlers.onload
 slug: conflicting/Web/API/Window/load_event
-tags:
-  - API
-  - Event Handler
-  - GlobalEventHandlers
-  - HTML DOM
-  - Property
-  - Reference
-  - onload
-translation_of: Web/API/GlobalEventHandlers/onload
 original_slug: Web/API/GlobalEventHandlers/onload
-browser-compat: api.GlobalEventHandlers.onload
 ---
 {{ApiRef()}}
 
