@@ -1362,7 +1362,7 @@
 /zh-CN/docs/Web/API/Document/dragleave_event	/zh-CN/docs/Web/API/HTMLElement/dragleave_event
 /zh-CN/docs/Web/API/Document/dragover_event	/zh-CN/docs/Web/API/HTMLElement/dragover_event
 /zh-CN/docs/Web/API/Document/dragstart_event	/zh-CN/docs/Web/API/HTMLElement/dragstart_event
-/zh-CN/docs/Web/API/Document/drop_event	/zh-CN/docs/conflicting/Web/API/HTMLElement/drop_event
+/zh-CN/docs/Web/API/Document/drop_event	/zh-CN/docs/Web/API/HTMLElement/drop_event
 /zh-CN/docs/Web/API/Document/height	/zh-CN/docs/Web/API/Element/clientHeight
 /zh-CN/docs/Web/API/Document/keypress_event	/zh-CN/docs/Web/API/Element/keypress_event
 /zh-CN/docs/Web/API/Document/mozFullScreen	/zh-CN/docs/Web/API/Document/fullscreen
@@ -2101,7 +2101,7 @@
 /zh-CN/docs/Web/Events/dragleave	/zh-CN/docs/Web/API/HTMLElement/dragleave_event
 /zh-CN/docs/Web/Events/dragover	/zh-CN/docs/Web/API/HTMLElement/dragover_event
 /zh-CN/docs/Web/Events/dragstart	/zh-CN/docs/Web/API/HTMLElement/dragstart_event
-/zh-CN/docs/Web/Events/drop	/zh-CN/docs/conflicting/Web/API/HTMLElement/drop_event
+/zh-CN/docs/Web/Events/drop	/zh-CN/docs/Web/API/HTMLElement/drop_event
 /zh-CN/docs/Web/Events/ended	/zh-CN/docs/Web/API/HTMLMediaElement/ended_event
 /zh-CN/docs/Web/Events/error	/zh-CN/docs/Web/API/Element/error_event
 /zh-CN/docs/Web/Events/focus	/zh-CN/docs/Web/API/Element/focus_event
