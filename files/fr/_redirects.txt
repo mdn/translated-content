@@ -3687,7 +3687,7 @@
 /fr/docs/Web/API/Document.write	/fr/docs/Web/API/Document/write
 /fr/docs/Web/API/Document/Document.anchors	/fr/docs/Web/API/Document/anchors
 /fr/docs/Web/API/Document/async	/fr/docs/Web/API/XMLDocument/async
-/fr/docs/Web/API/Document/createEntityReference	/fr/docs/conflicting/Web/API/Document
+/fr/docs/Web/API/Document/createEntityReference	/fr/docs/Web/API/Document
 /fr/docs/Web/API/Document/defaultView/popstate_event	/fr/docs/Web/API/Window/popstate_event
 /fr/docs/Web/API/Document/defaultView/storage_event	/fr/docs/Web/API/Window/storage_event
 /fr/docs/Web/API/Document/documentURIObject	/fr/docs/orphaned/Web/API/Document/documentURIObject
@@ -3700,7 +3700,7 @@
 /fr/docs/Web/API/Document/dragstart_event	/fr/docs/Web/API/HTMLElement/dragstart_event
 /fr/docs/Web/API/Document/drop_event	/fr/docs/Web/API/HTMLElement/drop_event
 /fr/docs/Web/API/Document/getBoxObjectFor	/fr/docs/Web/API/Element/getBoundingClientRect
-/fr/docs/Web/API/Document/height	/fr/docs/conflicting/Web/API/Element/clientHeight
+/fr/docs/Web/API/Document/height	/fr/docs/Web/API/Element/clientHeight
 /fr/docs/Web/API/Document/keypress_event	/fr/docs/Web/API/Element/keypress_event
 /fr/docs/Web/API/Document/onafterscriptexecute	/fr/docs/Web/API/Document/afterscriptexecute_event
 /fr/docs/Web/API/Document/onbeforescriptexecute	/fr/docs/Web/API/Document/beforescriptexecute_event
@@ -3709,7 +3709,7 @@
 /fr/docs/Web/API/Document/ononline	/fr/docs/Web/API/Window/online_event
 /fr/docs/Web/API/Document/touchend_event	/fr/docs/Web/API/Element/touchend_event
 /fr/docs/Web/API/Document/transitionend_event	/fr/docs/Web/API/Element/transitionend_event
-/fr/docs/Web/API/Document/width	/fr/docs/conflicting/Web/API/Element/clientWidth
+/fr/docs/Web/API/Document/width	/fr/docs/Web/API/Element/clientWidth
 /fr/docs/Web/API/DocumentOrShadowRoot/activeElement	/fr/docs/Web/API/Document/activeElement
 /fr/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/fr/docs/Web/API/Document/elementFromPoint
 /fr/docs/Web/API/DocumentOrShadowRoot/elementsFromPoint	/fr/docs/Web/API/Document/elementsFromPoint
@@ -6253,6 +6253,7 @@
 /fr/docs/conflicting/Tools/Responsive_Design_Mode	https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html
 /fr/docs/conflicting/Web/API	/fr/docs/Web/API
 /fr/docs/conflicting/Web/API/Canvas_API/Tutorial	/fr/docs/Web/API/Canvas_API/Tutorial
+/fr/docs/conflicting/Web/API/Document	/fr/docs/Web/API/Document
 /fr/docs/conflicting/Web/API/Document/createEvent	/fr/docs/Web/API/Document/createEvent
 /fr/docs/conflicting/Web/API/Document/createNodeIterator	/fr/docs/Web/API/Document/createNodeIterator
 /fr/docs/conflicting/Web/API/Document/createNodeIterator_313cb22e529a804ace2f1dbb1e813ada	/fr/docs/Web/API/Document/createNodeIterator
@@ -6261,6 +6262,8 @@
 /fr/docs/conflicting/Web/API/Document_Object_Model_03f6e13c52ad7c539d9b4c33c51ac4a3	/fr/docs/Web/API/Document_Object_Model
 /fr/docs/conflicting/Web/API/Document_Object_Model_656f0e51418b39c498011268be9b3a10	/fr/docs/Web/API/Document_Object_Model
 /fr/docs/conflicting/Web/API/Element/click_event	/fr/docs/Web/API/Element/click_event
+/fr/docs/conflicting/Web/API/Element/clientHeight	/fr/docs/Web/API/Element/clientHeight
+/fr/docs/conflicting/Web/API/Element/clientWidth	/fr/docs/Web/API/Element/clientWidth
 /fr/docs/conflicting/Web/API/Element/dblclick_event	/fr/docs/Web/API/Element/dblclick_event
 /fr/docs/conflicting/Web/API/Element/getBoundingClientRect	/fr/docs/Web/API/Element/getBoundingClientRect
 /fr/docs/conflicting/Web/API/Element/keypress_event	/fr/docs/Web/API/Element/keypress_event
