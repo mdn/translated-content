@@ -36,6 +36,7 @@ height: revert;
 height: revert-layer;
 height: unset;
 ```
+
 ### Valores
 
 - {{cssxref("&lt;length&gt;")}}
@@ -54,7 +55,7 @@ height: unset;
   - : Utiliza la fórmula _fit-content_ con el espacio disponible sustituido por el argumento especificado, es decir `min(max-content, max(min-content, <length-percentage>))`
 - {{cssxref("clamp", "clamp()")}}
   - : Permite seleccionar un valor medio dentro de un rango de valores entre un mínimo y un máximo definidos.
-   
+
 ## Problemas de accesibilidad
 
 Asegúrese de que los elementos definidos con `height` no se truncan y/o no oscurecen otros contenidos cuando la página se amplía para aumentar el tamaño del texto.
@@ -112,6 +113,7 @@ div {
   width: 75%;
 }
 ```
+
 #### Result
 
 {{EmbedLiveSample('Setting_height_using_pixels_and_percentages', 'auto', 240)}}
