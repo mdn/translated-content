@@ -14074,7 +14074,12 @@
   },
   "Web/API/Element/touchend_event": {
     "modified": "2019-04-30T14:08:32.474Z",
-    "contributors": ["wbamberg", "irenesmith", "fscholz", "alcalyn"]
+    "contributors": [
+      "wbamberg",
+      "irenesmith",
+      "fscholz",
+      "alcalyn"
+    ]
   },
   "Web/API/Element/transitionend_event": {
     "modified": "2020-10-15T22:23:39.293Z",
@@ -15006,31 +15011,60 @@
   },
   "Web/API/HTMLElement/drag_event": {
     "modified": "2019-04-30T14:17:50.518Z",
-    "contributors": ["wbamberg", "fscholz", "Kalwyn"]
+    "contributors": [
+      "wbamberg",
+      "fscholz",
+      "Kalwyn"
+    ]
   },
   "Web/API/HTMLElement/dragend_event": {
     "modified": "2019-04-30T14:03:40.078Z",
-    "contributors": ["wbamberg", "fscholz", "Kalwyn"]
+    "contributors": [
+      "wbamberg",
+      "fscholz",
+      "Kalwyn"
+    ]
   },
   "Web/API/HTMLElement/dragenter_event": {
     "modified": "2019-04-30T14:21:07.497Z",
-    "contributors": ["wbamberg", "fscholz", "Kalwyn"]
+    "contributors": [
+      "wbamberg",
+      "fscholz",
+      "Kalwyn"
+    ]
   },
   "Web/API/HTMLElement/dragleave_event": {
     "modified": "2019-04-30T14:02:56.864Z",
-    "contributors": ["wbamberg", "fscholz", "Kalwyn"]
+    "contributors": [
+      "wbamberg",
+      "fscholz",
+      "Kalwyn"
+    ]
   },
   "Web/API/HTMLElement/dragover_event": {
     "modified": "2019-04-30T14:24:34.192Z",
-    "contributors": ["wbamberg", "fscholz", "Kalwyn"]
+    "contributors": [
+      "wbamberg",
+      "fscholz",
+      "Kalwyn"
+    ]
   },
   "Web/API/HTMLElement/dragstart_event": {
     "modified": "2019-04-30T14:03:33.933Z",
-    "contributors": ["wbamberg", "fscholz", "Kalwyn"]
+    "contributors": [
+      "wbamberg",
+      "fscholz",
+      "Kalwyn"
+    ]
   },
   "Web/API/HTMLElement/drop_event": {
     "modified": "2019-04-30T14:21:50.701Z",
-    "contributors": ["wbamberg", "fscholz", "areltfc", "Kalwyn"]
+    "contributors": [
+      "wbamberg",
+      "fscholz",
+      "areltfc",
+      "Kalwyn"
+    ]
   },
   "Web/API/HTMLElement/hidden": {
     "modified": "2020-10-15T22:34:15.806Z",
@@ -40300,10 +40334,6 @@
       "si0ls",
       "dattaz"
     ]
-  },
-  "conflicting/Web/API/Blob": {
-    "modified": "2020-10-15T22:05:47.307Z",
-    "contributors": ["velkro", "jgroc-de"]
   },
   "orphaned/Glossary/DHTML": {
     "modified": "2019-03-24T00:02:32.004Z",
