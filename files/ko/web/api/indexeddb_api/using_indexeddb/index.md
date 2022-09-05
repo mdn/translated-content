@@ -137,6 +137,7 @@ request.onupgradeneeded = function(event) {
 ### 데이터베이스 구성
 
 이제 데이터베이스를 구축합니다. IndexedDB는 테이블이 아닌 객체 저장소를 사용하며 하나의 데이터베이스는 여러 개의 객체 저장소를 포함할 수 있습니다. 값을 객체 저장소에 저장할 때마다 값은 키와 연관됩니다. 객체 저장소가 [키 경로](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path "https://developer.mozilla.org/en/IndexedDB#gloss_key_path") 또는 [키 생성기](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator "en/IndexedDB#gloss key generator") 옵션의 사용 여부에 따라 키를 제공할 수 있는 여러 가지 방법이 있습니다.
+
 다음 표는 키가 제공되는 다양한 방법을 보여줍니다:
 
 | 키 경로 (`keyPath`) | 키 생성기 (`autoIncrement`) | Description                                                                                                                                                                                                                                                            |
