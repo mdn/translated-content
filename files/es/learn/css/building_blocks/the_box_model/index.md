@@ -266,7 +266,7 @@ Podemos controlar el área de relleno para todos los lados de un mismo elemento 
 - {{cssxref("padding-bottom")}}
 - {{cssxref("padding-left")}}
 
-**Si cambias los valores para el elleno en la clase `.box` del ejemplo siguiente, puedes ver que cambia dónde comienza el texto en relación con la caja.**
+**Si cambias los valores para el relleno en la clase `.box` del ejemplo siguiente, puedes ver que cambia dónde comienza el texto en relación con la caja.**
 
 **También puedes cambiar el relleno en la clase `.container`, que abrirá el espacio entre el contenedor y la caja. El área de relleno se puede cambiar para cualquier elemento y abrirá espacio entre su borde y lo que esté dentro del elemento.**
 
