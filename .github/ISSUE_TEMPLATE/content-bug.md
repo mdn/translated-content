@@ -6,7 +6,7 @@ assignees:
 title: "Content bug: <TITLE OF PROBLEM>"
 ---
 
-## What page(s) did you find the problem on?
+## What page(s) did you have any problems on?
 
 <!-- include the URL or URLs where you found the problem. If it is a widespread
 problem over many pages, just give us a couple of example URLs rather than the
@@ -28,6 +28,6 @@ Is something just weird?  -->
 <!-- If you have an idea of what the solution to your problem is, please
 provide details here. If you don't know, then that's OK   -->
 
-## Did you test this? If so, how?
+## Did you test this? If so, please explain how?
 
 <!-- Please provide any steps you took to test the problem, if appropriate  -->
