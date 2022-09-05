@@ -1,9 +1,6 @@
 ---
 title: WebExtensions
 slug: Mozilla/Add-ons/WebExtensions
-tags:
-  - 확장기능
-translation_of: Mozilla/Add-ons/WebExtensions
 ---
 {{AddonSidebar}}
 
