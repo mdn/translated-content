@@ -28,7 +28,7 @@ sort(function compareFn(a, b) { /* … */ })
 
 ### 参数
 
-- `compareFn ` {{optional_inline}}
+- `compareFn` {{optional_inline}}
 
   - : 用来指定按某种顺序进行排列的函数。如果省略，元素按照转换为的字符串的各个字符的 Unicode 位点进行排序。
 
