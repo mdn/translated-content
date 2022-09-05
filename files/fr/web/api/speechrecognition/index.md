@@ -99,13 +99,11 @@ recognition.onresult = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                               | Commentaire |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Speech API', '#speechreco-section', 'SpeechRecognition')}} | {{Spec2('Web Speech API')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.SpeechRecognition")}}
+{{Compat}}
 
 ## Voir aussi
 

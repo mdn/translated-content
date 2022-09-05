@@ -1,16 +1,6 @@
 ---
 title: HTML5 入力タイプ
 slug: Learn/Forms/HTML5_input_types
-tags:
-  - Beginner
-  - Controls
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Web
-  - Widgets
-translation_of: Learn/Forms/HTML5_input_types
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
 

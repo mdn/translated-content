@@ -1,18 +1,6 @@
 ---
 title: ゲーム制御機構の搭載
 slug: Games/Techniques/Control_mechanisms
-tags:
-  - Controls
-  - Desktop
-  - Gamepad
-  - Games
-  - JavaScript
-  - Laptop
-  - Mobile
-  - keyboard
-  - mouse
-  - touch
-translation_of: Games/Techniques/Control_mechanisms
 ---
 {{GamesSidebar}}
 

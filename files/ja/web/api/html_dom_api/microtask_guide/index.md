@@ -1,22 +1,6 @@
 ---
 title: JavaScript で queueMicrotask() によるマイクロタスクの使用
 slug: Web/API/HTML_DOM_API/Microtask_guide
-tags:
-  - API
-  - バッチ
-  - ガイド
-  - HTML DOM
-  - JavaScript
-  - マイクロタスク
-  - キュー
-  - リファレンス
-  - ServiceWorker
-  - SharedWorker
-  - Window
-  - ワーカー
-  - 非同期
-  - queueMicrotask
-translation_of: Web/API/HTML_DOM_API/Microtask_guide
 ---
 {{APIRef("HTML DOM")}}
 

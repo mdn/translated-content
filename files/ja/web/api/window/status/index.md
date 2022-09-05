@@ -1,16 +1,6 @@
 ---
 title: Window.status
 slug: Web/API/Window/status
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - NeedsSpecTable
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/Window/status
-browser-compat: api.Window.status
 ---
 {{APIRef}} {{Deprecated_Header}}
 

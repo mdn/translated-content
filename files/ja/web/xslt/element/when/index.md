@@ -16,7 +16,7 @@ translation_of: Web/XSLT/Element/when
 
 ```
 <xsl:when test=EXPRESSION>
-	TEMPLATE
+  TEMPLATE
 </xsl:when>
 ```
 

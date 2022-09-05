@@ -1,16 +1,6 @@
 ---
 title: WebSocket クライアントアプリケーションの記述
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
-tags:
-  - Client
-  - Example
-  - ガイド
-  - ネットワーク
-  - ウェブソケット API
-  - WebSocket
-  - WebSocket API
-  - WebSockets
-translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 ---
 {{APIRef("Websockets API")}}
 

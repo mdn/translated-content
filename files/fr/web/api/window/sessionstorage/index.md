@@ -63,15 +63,11 @@ champ.addEventListener("change", function() {
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName("HTML WHATWG", "webstorage.html#dom-sessionstorage", "sessionStorage")}} | {{Spec2("HTML WHATWG")}} |             |
+{{Specifications}}
 
-## Compatilibité des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.Window.sessionStorage")}}
-
-Chaque navigateur attribue des capacités de stockage limitées pour `localStorage` et `sessionStorage`. Vous en trouverez certaines dans ce [récapitulatif de tests des capacités de stockage attribuées en fonction du navigateur](http://dev-test.nemikor.com/web-storage/support-test/).
+{{Compat}}
 
 ## Voir aussi
 

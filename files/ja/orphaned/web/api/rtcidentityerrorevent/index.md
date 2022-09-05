@@ -1,7 +1,6 @@
 ---
 title: RTCIdentityErrorEvent
 slug: orphaned/Web/API/RTCIdentityErrorEvent
-translation_of: Web/API/RTCIdentityErrorEvent
 original_slug: Web/API/RTCIdentityErrorEvent
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
@@ -48,5 +47,5 @@ pc.onidpassertionerror = function( ev ) {
 
 ## See also
 
-- [WebRTC](/ja/docs/Web/Guide/API/WebRTC "/en-US/docs/CSS/Using_CSS_animations")
+- [WebRTC](/ja/docs/Web/Guide/API/WebRTC)
 - このイベントの通常ターゲット: {{domxref("RTCPeerConnection")}}.

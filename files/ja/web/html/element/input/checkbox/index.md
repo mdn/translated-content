@@ -300,6 +300,7 @@ otherCheckbox.addEventListener('change', () => {
 ```
 
 ### 結果
+
 {{EmbedLiveSample('Examples', '100%', 300)}}
 
 ## 仕様書

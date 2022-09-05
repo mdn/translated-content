@@ -1,7 +1,6 @@
 ---
 title: AudioDestinationNode.maxChannelCount
 slug: Web/API/AudioDestinationNode/maxChannelCount
-translation_of: Web/API/AudioDestinationNode/maxChannelCount
 ---
 {{ APIRef("Web Audio API") }}
 

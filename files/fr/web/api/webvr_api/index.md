@@ -57,17 +57,13 @@ Vous pouvez retrouver plusieurs exemples dans ces repos Github:
 - [mdn/webvr-tests](https://github.com/mdn/webvr-tests): Démos simples conçus pour illustrer des fonctionalités d'usage de base.
 - [MozVR team](https://github.com/MozVR/): Plus de démos avancés, la source de la spec WebVR, et plus!
 
-## Specifications
+## Spécifications
 
-| Specification                | Status                   | Comment            |
-| ---------------------------- | ------------------------ | ------------------ |
-| {{SpecName('WebVR')}} | {{Spec2('WebVR')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### `Navigator.getVRDisplays`
-
-{{Compat("api.Navigator.getVRDisplays")}}
+{{Compat}}
 
 ## Voir aussi
 

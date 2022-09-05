@@ -62,15 +62,13 @@ window.onstorage = () => {
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           |
-| -------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'indices.html#event-storage', 'storage')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.storage_event")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [Web Storage API](/fr/docs/Web/API/Web_Storage_API)
 - [Using the Web Storage API](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

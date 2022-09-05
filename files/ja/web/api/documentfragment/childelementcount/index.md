@@ -1,13 +1,6 @@
 ---
 title: DocumentFragment.childElementCount
 slug: Web/API/DocumentFragment/childElementCount
-tags:
-  - API
-  - DOM
-  - Property
-  - Reference
-translation_of: Web/API/DocumentFragment/childElementCount
-browser-compat: api.DocumentFragment.childElementCount
 ---
 {{ APIRef("DOM") }}
 

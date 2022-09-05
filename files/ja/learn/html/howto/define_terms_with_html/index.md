@@ -1,12 +1,6 @@
 ---
 title: HTML で用語を定義する
 slug: Learn/HTML/Howto/Define_terms_with_HTML
-tags:
-  - Beginner
-  - Guide
-  - HTML
-  - Learn
-translation_of: Learn/HTML/Howto/Define_terms_with_HTML
 ---
 HTML は、インラインであろうと構造化された用語集であろうと、記述の意味を伝達するいくつかの方法を提供します。 この記事では、キーワードを定義する際に適切にマークアップする方法について説明します。
 

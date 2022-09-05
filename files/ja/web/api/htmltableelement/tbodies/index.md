@@ -1,15 +1,6 @@
 ---
 title: HTMLTableElement.tBodies
 slug: Web/API/HTMLTableElement/tBodies
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.HTMLTableElement.tBodies
-translation_of: Web/API/HTMLTableElement/tBodies
 ---
 {{APIRef("HTML DOM")}}
 

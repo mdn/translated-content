@@ -1,14 +1,6 @@
 ---
 title: HTMLAnchorElement.username
 slug: Web/API/HTMLAnchorElement/username
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAnchorElement.username
-translation_of: Web/API/HTMLAnchorElement/username
 original_slug: Web/API/HTMLHyperlinkElementUtils/username
 ---
 {{ApiRef("HTML DOM")}}

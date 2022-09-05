@@ -110,15 +110,13 @@ Toutefois, les serveurs peuvent supprimer cette restriction en définissant un e
 
 ## Spécifications
 
-| Specification                                                                                                                                    | Status                               | Comment              |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#dom-serviceworkercontainer-register', 'ServiceWorkerContainer: register')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ServiceWorkerContainer.register")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [W3.org ServiceWorker Register](https://www.w3.org/TR/service-workers/#navigator-service-worker-register)
 - [W3c.github.io ServiceWorker Register](https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-register)

@@ -1,15 +1,6 @@
 ---
 title: Document.getElementsByTagNameNS()
 slug: Web/API/Document/getElementsByTagNameNS
-tags:
-  - API
-  - DOM
-  - Method
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Reference
-  - getElementsByTagNameNS
-translation_of: Web/API/Document/getElementsByTagNameNS
 ---
 {{APIRef("DOM")}}
 

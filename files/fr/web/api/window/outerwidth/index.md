@@ -31,13 +31,11 @@ Pour récupérer la largeur interne d'une fenêtre, c'est-à-dire la largeur de 
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{ SpecName('CSSOM View', '#dom-window-outerwidth', 'Window.outerWidth') }} | {{ Spec2('CSSOM View') }} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.outerWidth")}}
+{{Compat}}
 
 ## Voir aussi
 

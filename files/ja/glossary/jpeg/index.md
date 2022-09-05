@@ -1,14 +1,6 @@
 ---
 title: JPEG
 slug: Glossary/jpeg
-tags:
-  - Beginner
-  - Composing
-  - Glossary
-  - Images
-  - JPEG
-  - 画像
-translation_of: Glossary/jpeg
 ---
 **JPEG** (_Joint Photographic Experts Group_) とは、一般的に使われている、デジタル画像用の非可逆圧縮の方法です。
 

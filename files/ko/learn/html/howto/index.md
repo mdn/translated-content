@@ -111,4 +111,3 @@ HTML is not monolingual. It provides tools to handle common internationalization
 - [How to add multiple languages into a single webpage](/ko/docs/Learn/HTML/Howto/Add_multiple_languages_into_a_single_webpage)
 - [How to handle Japanese ruby characters](/ko/docs/Learn/HTML/Howto/Handle_Japanese_ruby_characters)
 - [How to display time and date with HTML](/ko/docs/Learn/HTML/Howto/Display_time_and_date_with_HTML)
-

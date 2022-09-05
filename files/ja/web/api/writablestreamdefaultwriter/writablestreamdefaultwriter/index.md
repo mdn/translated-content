@@ -1,14 +1,6 @@
 ---
 title: WritableStreamDefaultWriter.WritableStreamDefaultWriter()
 slug: Web/API/WritableStreamDefaultWriter/WritableStreamDefaultWriter
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Reference
-  - Streams
-  - WritableStreamDefaultWriter
-translation_of: Web/API/WritableStreamDefaultWriter/WritableStreamDefaultWriter
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 

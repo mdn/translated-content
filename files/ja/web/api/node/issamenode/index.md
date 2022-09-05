@@ -1,11 +1,6 @@
 ---
 title: Node.isSameNode()
 slug: Web/API/Node/isSameNode
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Node.isSameNode
-translation_of: Web/API/Node/isSameNode
 ---
 {{APIRef("DOM")}}
 

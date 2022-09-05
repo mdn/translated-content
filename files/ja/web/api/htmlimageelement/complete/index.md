@@ -1,18 +1,6 @@
 ---
 title: HTMLImageElement.complete
 slug: Web/API/HTMLImageElement/complete
-page-type: web-api-instance-property
-tags:
-  - API
-  - Fetching
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Loading
-  - プロパティ
-  - リファレンス
-  - complete
-browser-compat: api.HTMLImageElement.complete
 ---
 {{APIRef("HTML DOM")}}
 

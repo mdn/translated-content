@@ -1,16 +1,6 @@
 ---
 title: Navigator.getBattery()
 slug: Web/API/Navigator/getBattery
-tags:
-  - API
-  - Battery API
-  - Device API
-  - Method
-  - Navigator
-  - Reference
-  - getBattery
-  - メッセージ
-translation_of: Web/API/Navigator/getBattery
 ---
 {{ ApiRef("Battery API") }}{{deprecated_header}}
 

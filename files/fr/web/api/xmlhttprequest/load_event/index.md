@@ -32,12 +32,10 @@ xmlhttp.onload = function () {
 xmlhttp.send();
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                            | Status                               | Comment                |
-| ------------------------------------------------------------------------ | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#handler-xhr-onload')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.XMLHttpRequestEventTarget.onload")}}
+{{Compat}}

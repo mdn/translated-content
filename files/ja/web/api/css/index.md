@@ -1,13 +1,6 @@
 ---
 title: CSS
 slug: Web/API/CSS
-tags:
-  - API
-  - CSSOM
-  - Interface
-  - Painting
-  - リファレンス
-translation_of: Web/API/CSS
 ---
 {{APIRef("CSSOM")}}
 

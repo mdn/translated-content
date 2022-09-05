@@ -62,11 +62,8 @@ L'interface `SVGRect` ne fournit pas de méthode spécifique.
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                                       | Commentaire                                               |
-| ------------------------------------------------------------------------------------ | -------------------------------------------- | --------------------------------------------------------- |
-| {{SpecName("Geometry Interfaces", "#DOMRect", "DOMRect")}}         | {{Spec2("Geometry Interfaces")}} | Changement de SVGRect en tant qu'ancien alias de DOMRect. |
-| {{SpecName("SVG1.1", "types.html#InterfaceSVGRect", "SVGRect")}} | {{Spec2("SVG1.1")}}                     | Définition initiale                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.SVGRect")}}
+{{Compat}}

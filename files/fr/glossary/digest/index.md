@@ -21,7 +21,7 @@ Un condensé peut être utilisé pour effectuer plusieurs tâches :
 
 Il est primordial de choisir la fonction de hachage appropriée à votre cas concret pour éviter les collisions et la prévisibilité.
 
-## Pour approfondir
+## Voir aussi
 
 - Voir {{glossary("hash","fonction de hachage")}}
 - [Fonction de hachage cryptographique](https://fr.wikipedia.org/wiki/Fonction_de_hachage_cryptographique) sur Wikipédia

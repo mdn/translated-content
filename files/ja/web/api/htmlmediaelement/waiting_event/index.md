@@ -1,16 +1,6 @@
 ---
 title: 'HTMLMediaElement: waiting イベント'
 slug: Web/API/HTMLMediaElement/waiting_event
-page-type: web-api-event
-tags:
-  - Audio
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Video
-  - Web
-browser-compat: api.HTMLMediaElement.waiting_event
-translation_of: Web/API/HTMLMediaElement/waiting_event
 ---
 {{APIRef("HTMLMediaElement")}}
 

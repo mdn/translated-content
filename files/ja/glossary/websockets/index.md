@@ -1,15 +1,6 @@
 ---
 title: WebSockets
 slug: Glossary/WebSockets
-tags:
-  - Connection
-  - Glossary
-  - Infrastructure
-  - Networking
-  - Protocols
-  - Web
-  - WebSocket
-translation_of: Glossary/WebSockets
 ---
 _WebSocket_ は、{{Glossary("Server", "サーバー")}}とクライアント間の永続的な {{Glossary("TCP")}} 接続を可能にする{{Glossary("protocol", "プロトコル")}}で、任意のタイミングでデータをやり取りできます。
 

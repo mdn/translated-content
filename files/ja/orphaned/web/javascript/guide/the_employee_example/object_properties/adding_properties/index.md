@@ -1,7 +1,6 @@
 ---
 title: Adding Properties
-slug: >-
-  orphaned/Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Adding_Properties
+slug: orphaned/Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Adding_Properties
 original_slug: Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Adding_Properties
 ---
 ### プロパティの追加

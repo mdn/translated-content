@@ -25,7 +25,6 @@ localeCompare(compareString, locales, options)
 在實現 [`Intl.Collator` API](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)的環境中，這些參數與 [`Intl.Collator()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator) 的參數互相對應；
 若環境沒有實現 `Intl.Collator` ，則這兩個參數就會被忽略，其回傳結果完全看該環境如何實作，唯一的要求是（對於同樣的字串）比較結果必須始終一致。
 
-
 - `compareString`
   - : 要和`referenceStr`進行比較的字串
 - `locales` {{optional_inline}}
@@ -57,7 +56,6 @@ localeCompare(compareString, locales, options)
 >
 > 正數或是負數的回傳值在不同的瀏覽器(也包誇同一瀏覽器但不同版本）之間有可能會有所不同。因為 W3C 規範僅要求值得正負而已。
 > 也因此，某些瀏覽器可能會回傳 `-2` 、 `2` 甚至其他值。
-> 
 
 ## 效能
 

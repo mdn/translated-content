@@ -30,7 +30,7 @@ translation_of: Web/Guide/Mobile/Separate_sites
 
 ## 例
 
-[Facebook](http://m.facebook.com/)、[YouTube](http://m.youtube.com/)、[Digg](http://m.digg.com/ "Mobile Digg")、[Flickr](http://m.flickr.com/ "Mobile Flickr") など、あなたが実際に目にする主要なウェブアプリケーションのほとんどがこの方法を選択しています。実際、Mozilla はモバイル版の [addons.mozilla.org](https://addons.mozilla.org/)（AMO）と [support.mozilla.org](http://support.mozilla.com/)（SUMO）にこの戦略を選択しました。このアプローチの例の背後にあるソースコードを実際に見たい場合は、[AMO](https://github.com/jbalogh/zamboni/) または [SUMO](https://github.com/jsocol/kitsune)（リンク切れ）の github リポジトリをチェックしてください。
+[Facebook](http://m.facebook.com/)、[YouTube](http://m.youtube.com/)、[Digg](http://m.digg.com/)、[Flickr](http://m.flickr.com/) など、あなたが実際に目にする主要なウェブアプリケーションのほとんどがこの方法を選択しています。実際、Mozilla はモバイル版の [addons.mozilla.org](https://addons.mozilla.org/)（AMO）と [support.mozilla.org](http://support.mozilla.com/)（SUMO）にこの戦略を選択しました。このアプローチの例の背後にあるソースコードを実際に見たい場合は、[AMO](https://github.com/jbalogh/zamboni/) または [SUMO](https://github.com/jsocol/kitsune)（リンク切れ）の github リポジトリをチェックしてください。
 
 ## モバイルウェブ開発へのアプローチ
 

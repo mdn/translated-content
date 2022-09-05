@@ -56,7 +56,7 @@ Dans l'exemple, nous avons créé une grille de trois colonnes. Les cinq éléme
 
 {{ EmbedLiveSample('Exemple', '300', '280') }}
 
-## En apprendre plus
+## Voir aussi
 
 ### Références de propriété
 

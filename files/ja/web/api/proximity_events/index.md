@@ -1,12 +1,6 @@
 ---
 title: Proximity Events
 slug: Web/API/Proximity_Events
-tags:
-  - API
-  - Experimental
-  - Proximity Events
-  - Reference
-translation_of: Web/API/Proximity_Events
 original_slug: WebAPI/Proximity
 ---
 {{DefaultAPISidebar("Proximity Events")}}{{ SeeCompatTable }}

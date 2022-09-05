@@ -1,11 +1,6 @@
 ---
 title: セレクターを使用した DOM 要素の特定
 slug: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
-tags:
-  - 初心者向け
-  - DOM
-  - NeedsBeginnerUpdate
-translation_of: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 ---
 {{DefaultAPISidebar("DOM")}}
 

@@ -40,12 +40,12 @@ For live services streaming, the LIVE profile is a requirement. The stream switc
 
 Other reasons to use LIVE profile over Ondemand for VOD content may be:
 
-1.  クライアントかサーバーがレンジリクエストをサポートしていない
-2.  サーバーがレンジリクエストを効率的にキャッシュしない
-3.  サーバーがレンジリクエストを効率的にプリフェッチできない
-4.  The SIDX\* is large and having to load it first slows down startup a little
-5.  同じオリジナルファイルをその他の配信方式でも使用したい (たとえば Microsoft Smooth Streaming)
-6.  同じメディアファイルをライブストリーミングで配信した後 VOD でも配信したい
+1. クライアントかサーバーがレンジリクエストをサポートしていない
+2. サーバーがレンジリクエストを効率的にキャッシュしない
+3. サーバーがレンジリクエストを効率的にプリフェッチできない
+4. The SIDX\* is large and having to load it first slows down startup a little
+5. 同じオリジナルファイルをその他の配信方式でも使用したい (たとえば Microsoft Smooth Streaming)
+6. 同じメディアファイルをライブストリーミングで配信した後 VOD でも配信したい
 
 \*SIDX or SegmentIndexBox is a structure describing a segment by giving its earliest presentation time and other meta-data and can often make up a large portion of the MPD file.
 

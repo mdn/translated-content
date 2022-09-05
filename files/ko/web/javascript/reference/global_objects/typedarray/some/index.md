@@ -18,7 +18,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/some
 
 ## 구문
 
-    typedarray.some(callback[, thisArg])
+```js
+typedarray.some(callback[, thisArg])
+```
 
 ### 매개변수
 

@@ -70,7 +70,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 >
 > Microsoft Edge 兼容性数据由微软公司提供，并以 知识共享 署名 3.0 美国版 许可。
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -97,4 +98,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

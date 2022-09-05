@@ -1,11 +1,6 @@
 ---
 title: 開発者ツール
 slug: Glossary/Developer_Tools
-tags:
-  - CodingScripting
-  - Developer Tools
-  - Glossary
-translation_of: Glossary/Developer_Tools
 ---
 開発者ツール（"DevTools"と略されます）は開発者がソフトウェアを作成、テスト、{{Glossary("debug", "デバッグ")}} するのを助けるプログラムです。
 

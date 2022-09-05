@@ -1,12 +1,6 @@
 ---
 title: Deserialization (デシリアライズ)
 slug: Glossary/Deserialization
-tags:
-  - CodingScripting
-  - Deserialization
-  - Deserialize
-  - JavaScript
-translation_of: Glossary/Deserialization
 ---
 下位レベルのフォーマット（例えば、ネットワークを介して転送された、またはデータストアに格納された）が、読み取り可能なオブジェクトまたは他のデータ構造に変換されるプロセス。
 

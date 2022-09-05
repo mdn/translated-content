@@ -1,11 +1,6 @@
 ---
 title: Modem (モデム)
 slug: Glossary/Modem
-tags:
-  - Glossary
-  - Infrastructure
-  - Navigation
-translation_of: Glossary/Modem
 ---
 モデム（modem、**mod**ulator-**dem**odulator、変調器-復調器）は、ネットワークを介してデータを送信するために、デジタル情報からアナログ信号への変換や、その逆の変換を行うデバイスです。 電話回線用の DSL モデム、短距離無線信号用の Wi-Fi モデム、携帯電話基地局用の 3G モデムなど、異なるネットワークでは異なる種類のモデムが使われます。
 

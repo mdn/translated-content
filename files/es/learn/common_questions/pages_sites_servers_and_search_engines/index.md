@@ -44,9 +44,9 @@ Cubriremos estos términos y tecnologías con más detalle mientras exploramos m
 
 Veamos una analogía simple: una biblioteca pública. Esto es lo que generalmente harías al visitar una biblioteca:
 
-1.  Buscar en un índice de busqueda el título del libro que quieres.
-2.  Tomar nota del número de catálogo del libro.
-3.  Ir a la sección particular que contiene el libro, buscar el número de catálogo del libro y obtener el libro.
+1. Buscar en un índice de busqueda el título del libro que quieres.
+2. Tomar nota del número de catálogo del libro.
+3. Ir a la sección particular que contiene el libro, buscar el número de catálogo del libro y obtener el libro.
 
 Vamos a comparar la biblioteca con un servidor web:
 

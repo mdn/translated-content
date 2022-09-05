@@ -1,14 +1,6 @@
 ---
 title: HTMLElement.dir
 slug: Web/API/HTMLElement/dir
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLElement.dir
-translation_of: Web/API/HTMLElement/dir
 ---
 {{ApiRef("HTML DOM")}}
 

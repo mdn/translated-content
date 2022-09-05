@@ -1,23 +1,6 @@
 ---
 title: XMLHttpRequest.responseXML
 slug: Web/API/XMLHttpRequest/responseXML
-tags:
-  - AJAX
-  - API
-  - Fetching XML
-  - Loading XML
-  - プロパティ
-  - 読み取り専用
-  - Reading XML
-  - リファレンス
-  - 変換
-  - XML
-  - XMLHttpRequest
-  - ダウンロード
-  - responseXML
-  - アップロード
-browser-compat: api.XMLHttpRequest.responseXML
-translation_of: Web/API/XMLHttpRequest/responseXML
 ---
 {{APIRef('XMLHttpRequest')}}
 

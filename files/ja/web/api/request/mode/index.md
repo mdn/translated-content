@@ -4,7 +4,7 @@ slug: Web/API/Request/mode
 ---
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 
-{{domxref("Request")}} インターフェースの **`mode`** 読み取り専用プロパティは、リクエストのモード（たとえば、` cors、``no-cors、``cors-with-forced-preflight、``same-origin `）を含みます。これは、クロスオリジンリクエストに対して有効なレスポンスができるか、またレスポンスのプロパティが読み取り可能かどうかを判定するために使用されます。
+{{domxref("Request")}} インターフェースの **`mode`** 読み取り専用プロパティは、リクエストのモード（たとえば、`cors`、`no-cors`、`cors-with-forced-preflight`、`same-origin`）を含みます。これは、クロスオリジンリクエストに対して有効なレスポンスができるか、またレスポンスのプロパティが読み取り可能かどうかを判定するために使用されます。
 
 ## 構文
 
@@ -17,7 +17,7 @@ var myMode = request.mode;
 {{domxref("RequestMode")}} の値は以下のいずれかです。
 
 - `same-origin` — このモードを設定してほかのオリジンにリクエストをした場合、結果は単純にエラーになります。リクエストが常に同一オリジンに行われることを保証するために使用できます。
-- `no-cors` — `HEAD か` ` GET、``POST  `以外のメソッドを防ぎます。任意の ServiceWorkers がこれらをインターセプトする場合、[シンプルヘッダー](https://fetch.spec.whatwg.org/#simple-header)を除いてヘッダーを追加したりオーバーライドしたりできなくなります。加えて、JavaScript は解決された {{domxref("Response")}} のプロパティにはアクセスできません。これは ServiceWorkers が Web のセマンティクスに影響を与えないことを保証し、ドメインを跨いでデータが流出することでセキュリティやプライバシーの問題が生じるのを防ぎます。
+- `no-cors` — `HEAD か` `GET`、`POST` 以外のメソッドを防ぎます。任意の ServiceWorkers がこれらをインターセプトする場合、[シンプルヘッダー](https://fetch.spec.whatwg.org/#simple-header)を除いてヘッダーを追加したりオーバーライドしたりできなくなります。加えて、JavaScript は解決された {{domxref("Response")}} のプロパティにはアクセスできません。これは ServiceWorkers が Web のセマンティクスに影響を与えないことを保証し、ドメインを跨いでデータが流出することでセキュリティやプライバシーの問題が生じるのを防ぎます。
 - `cors` — クロスオリジンリクエストを許可します。たとえば、サードパーティベンダーが提供する様々な API にアクセスできます。これらは、[CORS プロトコル](/ja/docs/Web/HTTP/Access_control_CORS)に則ることが期待されています。[制限された](https://fetch.spec.whatwg.org/#concept-filtered-response-cors)ヘッダーだけが {{domxref("Response")}} で使用できますが、body は読み取り可能です。
 - `navigate` — ナビゲーションを許可します。`navigate` は HTML ナビゲーションによってのみ利用されることを意図しています。ナビゲーションリクエストはドキュメント間のナビゲーションの場合にだけ生成されます。
 

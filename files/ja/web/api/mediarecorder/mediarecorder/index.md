@@ -1,17 +1,6 @@
 ---
 title: MediaRecorder()
 slug: Web/API/MediaRecorder/MediaRecorder
-tags:
-  - API
-  - Audio
-  - Constructor
-  - Media
-  - Media Capture
-  - Media Recorder API
-  - MediaRecorder
-  - Reference
-  - Video
-translation_of: Web/API/MediaRecorder/MediaRecorder
 ---
 {{APIRef("MediaStream Recording")}}
 

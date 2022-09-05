@@ -1,13 +1,6 @@
 ---
 title: location.hostname
 slug: Web/API/Location/hostname
-tags:
-  - API
-  - Location
-  - プロパティ
-  - リファレンス
-browser-compat: api.Location.hostname
-translation_of: Web/API/Location/hostname
 ---
 {{ApiRef("URL API")}}
 

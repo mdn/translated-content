@@ -1,11 +1,6 @@
 ---
 title: window.scrollbars
 slug: Web/API/Window/scrollbars
-tags:
-  - Gecko
-  - HTML DOM
-  - Window
-translation_of: Web/API/Window/scrollbars
 ---
 {{ApiRef}}
 

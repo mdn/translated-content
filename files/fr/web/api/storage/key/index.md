@@ -53,15 +53,13 @@ for (var i = 0; i < localStorage.length; i++) {
 }
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                            | Status                           | Comment |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-key', 'Storage.key')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Storage.key")}}
+{{Compat}}
 
 ## Voir aussi
 

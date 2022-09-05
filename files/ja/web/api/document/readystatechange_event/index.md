@@ -1,12 +1,6 @@
 ---
 title: 'Document: readystatechange イベント'
 slug: Web/API/Document/readystatechange_event
-tags:
-  - Event
-  - Reference
-  - XMLHttpRequest
-  - interactive
-translation_of: Web/API/Document/readystatechange_event
 ---
 {{APIRef}}
 

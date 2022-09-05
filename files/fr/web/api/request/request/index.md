@@ -122,13 +122,11 @@ var copie = new Request(maRequete);
 
 ## Spécifications
 
-| Spécification                                                    | Statut                   | Commentaire |
-| ---------------------------------------------------------------- | ------------------------ | ----------- |
-| {{SpecName('Fetch','#dom-request','Request()')}} | {{Spec2('Fetch')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Request.Request")}}
+{{Compat}}
 
 ## Voir aussi
 

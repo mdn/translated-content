@@ -1,18 +1,6 @@
 ---
 title: XMLHttpRequest.withCredentials
 slug: Web/API/XMLHttpRequest/withCredentials
-tags:
-  - AJAX
-  - API
-  - プロパティ
-  - リファレンス
-  - セキュリティ
-  - XHR
-  - XMLHttpRequest
-  - 資格情報
-  - 資格情報付き
-browser-compat: api.XMLHttpRequest.withCredentials
-translation_of: Web/API/XMLHttpRequest/withCredentials
 ---
 {{APIRef('XMLHttpRequest')}}
 

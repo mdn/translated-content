@@ -35,7 +35,7 @@ translation_of: Web/Accessibility/Understanding_WCAG/Robust
 
 - [WCAG](/ja/docs/Web/Accessibility/Understanding_WCAG)
 
-  1.  [知覚可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
-  2.  [操作可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable)
-  3.  [理解可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable)
-  4.  堅牢
+  1. [知覚可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
+  2. [操作可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable)
+  3. [理解可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable)
+  4. 堅牢

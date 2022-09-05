@@ -1,12 +1,6 @@
 ---
 title: PerformanceResourceTiming.encodedBodySize
 slug: Web/API/PerformanceResourceTiming/encodedBodySize
-tags:
-  - API
-  - Web パフォーマンス
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/PerformanceResourceTiming/encodedBodySize
 ---
 {{APIRef("Resource Timing API")}}
 

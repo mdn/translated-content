@@ -1,14 +1,6 @@
 ---
 title: 'Window: resize イベント'
 slug: Web/API/Window/resize_event
-tags:
-  - API
-  - Reference
-  - Web
-  - Window
-  - events
-  - resize
-browser-compat: api.Window.resize_event
 ---
 {{APIRef}}
 

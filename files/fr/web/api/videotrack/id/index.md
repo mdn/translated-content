@@ -21,10 +21,8 @@ Une {{domxref("DOMString")}} qui identifie la piste, utilisable par la suite pou
 
 ## Spécifications
 
-| Specification                                                                            | Status                           | Comment |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', '#dom-videotrack-id', 'VideoTrack: id')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.VideoTrack.id")}}
+{{Compat}}

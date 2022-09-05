@@ -1,12 +1,6 @@
 ---
 title: Hoisting (巻き上げ、ホイスティング)
 slug: Glossary/Hoisting
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
-  - 用語集
-translation_of: Glossary/Hoisting
 ---
 巻き上げ (Hoisting) は、[ECMAScript® 2015 言語仕様](http://www.ecma-international.org/ecma-262/6.0/index.html)より前には、どんな規範的な仕様書にもなかったものです。巻き上げは JavaScript の実行コンテキスト (特に作成と実行のフェーズで) では一般的な方法と考えられていました。しかし、巻き上げの概念は誤解に繋がる可能性があります。
 

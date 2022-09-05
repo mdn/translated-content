@@ -41,9 +41,7 @@ window.addEventListener('userproximity', function(event) {
 
 ## Spécifications
 
-| Spécification                                                                | Statut                                   | Commentaire            |
-| ---------------------------------------------------------------------------- | ---------------------------------------- | ---------------------- |
-| {{ SpecName('Proximity Events', '', 'Proximity Events') }} | {{ Spec2('Proximity Events') }} | Spécification initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

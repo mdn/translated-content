@@ -53,11 +53,11 @@ MDN の[ウェブパフォーマンスの学習領域](/ja/docs/Learn/Performanc
 ## パフォーマンス API の使用
 
 - [Performance API](/ja/docs/Web/API/Performance_API/Using_the_Performance_API)
-  - : このガイドでは、 [`Performance`](/ja/docs/Web/API/Performance "Performance インターフェイスは、現在のページのパフォーマンス関連情報へのアクセスを提供します。これは、 High Resolution Time API の一部ですが、Performance Timeline API、Navigation Timing API、User Timing API、Resource Timing API によって拡張されています。") インターフェイスの使い方を説明します。これは [High-Resolution Time](https://w3c.github.io/hr-time/) 標準で定義されているものです。
+  - : このガイドでは、 [`Performance`](/ja/docs/Web/API/Performance) インターフェイスの使い方を説明します。これは [High-Resolution Time](https://w3c.github.io/hr-time/) 標準で定義されているものです。
 - [Resource Timing API](/ja/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
   - : [リソースの読み込みとそのタイミング](/ja/docs/Web/API/Resource_Timing_API)です。リソースバッファの管理や CORS への対応なども含みます。
 - [パフォーマンスタイムライン](/ja/docs/Web/API/Performance_Timeline/Using_Performance_Timeline)
-  - : [Performance Timeline](/ja/docs/Web/API/Performance_Timeline) 標準は、アプリケーション内のクライアントサイドのレイテンシー測定をサポートする [`Performance`](/ja/docs/Web/API/Performance "Performance インターフェイスは、現在のページのパフォーマンス関連情報へのアクセスを提供します。これは、 High Resolution Time API の一部ですが、Performance Timeline API、Navigation Timing API、User Timing API、Resource Timing API によって拡張されています。") インターフェイスの拡張機能を定義しています。これらのインターフェイスを併用することで、アプリケーションのパフォーマンスのボトルネックを特定するのに役立ちます。
+  - : [Performance Timeline](/ja/docs/Web/API/Performance_Timeline) 標準は、アプリケーション内のクライアントサイドのレイテンシー測定をサポートする [`Performance`](/ja/docs/Web/API/Performance) インターフェイスの拡張機能を定義しています。これらのインターフェイスを併用することで、アプリケーションのパフォーマンスのボトルネックを特定するのに役立ちます。
 - [User Timing API](/ja/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
   - : アプリケーション固有のタイムスタンプを生成するために、 [user timing API](/ja/docs/Web/API/User_Timing_API) の "mark" および "measure" の種類の項目を使用します。これらはブラウザーのパフォーマンスタイムラインの一部です。
 - [Frame Timing API](/ja/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API)
@@ -170,7 +170,7 @@ HTML
 
   - [レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 
-- [`rel="preload"` によるコンテンツの先読み](/ja/docs/Web/HTML/Link_types/preload) - [(https://w3c.github.io/preload/ ](https://w3c.github.io/preload/))
+- [`rel="preload"` によるコンテンツの先読み](/ja/docs/Web/HTML/Link_types/preload) - [(https://w3c.github.io/preload/](https://w3c.github.io/preload/))
 
 CSS
 

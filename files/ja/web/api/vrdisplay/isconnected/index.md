@@ -1,19 +1,6 @@
 ---
 title: VRDisplay.isConnected
 slug: Web/API/VRDisplay/isConnected
-page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - isConnected
-browser-compat: api.VRDisplay.isConnected
-translation_of: Web/API/VRDisplay/isConnected
 original_slug: Web/API/VRDevice/isConnected
 ---
 {{APIRef("WebVR API")}}{{Deprecated_Header}}

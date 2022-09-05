@@ -1,19 +1,6 @@
 ---
 title: WebXR 設定の照明
 slug: Web/API/WebXR_Device_API/Lighting
-tags:
-  - 3D
-  - API
-  - Graphics
-  - Light
-  - Shading
-  - Shadows
-  - WebGL
-  - WebXR
-  - WebXR Device API
-  - lighting
-  - rendering
-translation_of: Web/API/WebXR_Device_API/Lighting
 ---
 {{DefaultAPISidebar("WebXR Device API")}}
 

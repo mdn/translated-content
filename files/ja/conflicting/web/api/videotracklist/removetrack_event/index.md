@@ -1,22 +1,6 @@
 ---
 title: VideoTrackList.onremovetrack
 slug: conflicting/Web/API/VideoTrackList/removetrack_event
-tags:
-  - API
-  - Event Handler
-  - HTML DOM
-  - Media
-  - Property
-  - Reference
-  - Removing Tracks
-  - Removing Video Tracks
-  - Video
-  - VideoTrackList
-  - onremovetrack
-  - remove
-  - removeTrack
-  - track
-translation_of: Web/API/VideoTrackList/onremovetrack
 original_slug: Web/API/VideoTrackList/onremovetrack
 ---
 {{APIRef("HTML DOM")}}

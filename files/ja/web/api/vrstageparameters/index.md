@@ -1,7 +1,6 @@
 ---
 title: VRStageParameters
 slug: Web/API/VRStageParameters
-translation_of: Web/API/VRStageParameters
 ---
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 

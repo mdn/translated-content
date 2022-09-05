@@ -1,15 +1,6 @@
 ---
 title: Touch.identifier
 slug: Web/API/Touch/identifier
-tags:
-  - API
-  - DOM
-  - Identifier
-  - Property
-  - Read-only
-  - Reference
-  - touch
-translation_of: Web/API/Touch/identifier
 ---
 {{ APIRef("Touch Events") }}{{SeeCompatTable}}
 

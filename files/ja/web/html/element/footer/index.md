@@ -99,7 +99,7 @@ translation_of: Web/HTML/Element/footer
 ## 使用上のメモ
 
 - セクションの著作者や編集者の連絡先情報は、多くの場合 `<footer>` 要素内に {{HTMLElement("address")}} 要素として配置します。
-- `<footer>` 要素は区分コンテンツではありません。つまり、この要素が新たな[アウトライン](/ja/docs/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document")を生成することはありません。
+- `<footer>` 要素は区分コンテンツではありません。つまり、この要素が新たな[アウトライン](/ja/docs/Sections_and_Outlines_of_an_HTML5_document)を生成することはありません。
 
 ## 例
 

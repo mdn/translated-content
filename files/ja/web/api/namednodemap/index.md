@@ -1,12 +1,6 @@
 ---
 title: NamedNodeMap
 slug: Web/API/NamedNodeMap
-page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
-browser-compat: api.NamedNodeMap
-translation_of: Web/API/NamedNodeMap
 l10n:
   sourceCommit: a33268ca8d264ca3d504f65fdf11ce38a7bcb9bd
 ---

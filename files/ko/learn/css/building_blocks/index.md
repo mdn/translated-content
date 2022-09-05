@@ -20,10 +20,10 @@ translation_of: Learn/CSS/Building_blocks
 
 이 과목을 시작하기 전에 다음이 있어야 합니다:
 
-1.  컴퓨터 사용 및 수동적으로 웹을 사용하는 것 (즉, 보기기만 하고 콘텐츠를 소비하는 것.) 에 대한 기본적인 친숙성.
-2.  [기본 소프트웨어 설치](/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software) 에 설명 된대로 기본 작업 환경과 [파일 처리](/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files) 에 설명 된대로 파일 작성 및 관리 방법에 대한 이해.
-3.  [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML) 과목에서 설명한 HTML 에 대한 기본적인 친숙성.
-4.  [CSS 첫 번째 단계](/ko/docs/Learn/CSS/First_steps) 과목에서 논의된 CSS 의 기본 사항에 대한 이해.
+1. 컴퓨터 사용 및 수동적으로 웹을 사용하는 것 (즉, 보기기만 하고 콘텐츠를 소비하는 것.) 에 대한 기본적인 친숙성.
+2. [기본 소프트웨어 설치](/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software) 에 설명 된대로 기본 작업 환경과 [파일 처리](/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files) 에 설명 된대로 파일 작성 및 관리 방법에 대한 이해.
+3. [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML) 과목에서 설명한 HTML 에 대한 기본적인 친숙성.
+4. [CSS 첫 번째 단계](/ko/docs/Learn/CSS/First_steps) 과목에서 논의된 CSS 의 기본 사항에 대한 이해.
 
 > **참고:** 자신의 파일을 만들 수 없는 컴퓨터/태블릿/기타 장치에서 작업하는 경우, [JSBin](http://jsbin.com/) 또는 [Thimble](https://thimble.mozilla.org/) 와 같은 온라인 코딩 프로그램에서 대부분의 코드 예제를 시험해 볼 수 있습니다.
 

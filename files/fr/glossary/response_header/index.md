@@ -35,7 +35,7 @@ X-kuma-revision: 1085259
 x-frame-options: DENY
 ```
 
-## En apprendre plus
+## Voir aussi
 
 ### Savoir technique
 

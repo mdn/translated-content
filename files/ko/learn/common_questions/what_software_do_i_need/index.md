@@ -114,7 +114,7 @@ _There is no active learning available yet. [Please, consider contributing](/ko/
 - [Microsoft Internet Explorer(인터넷 익스플로러)](http://windows.microsoft.com/en-US/internet-explorer/download-ie)
 - [Apple Safari(사파리)](http://www.apple.com/safari/)
 
-만약 당신이 기술적인 플랫폼이나 국가 등 특정한 그룹을 목적으로 한다면, [Opera](http://www.opera.com/), [Konqueror](http://www.konqueror.org/),[ UC Browser](http://www.ucweb.com/ucbrowser/) 같은 추가적인 브라우저도 테스트해야할 지도 모릅니다.
+만약 당신이 기술적인 플랫폼이나 국가 등 특정한 그룹을 목적으로 한다면, [Opera](http://www.opera.com/), [Konqueror](http://www.konqueror.org/), [UC Browser](http://www.ucweb.com/ucbrowser/) 같은 추가적인 브라우저도 테스트해야할 지도 모릅니다.
 
 그러나 몇몇의 브라우저는 특정한 운영체제에서만 동작하기 때문에 테스트하는 것이 복잡합니다. 애플의 사파리는 iOS와 Max OS 에서만 동작하는 반면에, 인터넷 익스플로러는 윈도우에서만 동작합니다. [Browsershots](http://browsershots.org/)나 [Browserstack](http://www.browserstack.com/) 같은 서비스를 이용하는 것이 좋습니다. Browsershots은 다양한 브라우저에서 볼 때, 웹사이트의 스크린샷을 제공합니다. Browserstack은 사실 당신에게 가상머신에서 완전한 원거리 접근을 가능하게 해줍니다. 그래서 당신은 대부분의 공통 환경에서 사이트를 테스트할 수 있습니다. 그렇지 않으면, 당신 자신의 가상 머신을 설치하면 됩니다. 하지만 이것은 약간의 전문지식이 필요한 작업입니다. (만약 당신이 이런 길을 가고자 한다면, 마이크로소프트에서는 [modern.ie](https://modern.ie).에서 사용 준비가 완료된 가상 머신이 포함된 개발자를 위한 툴들을 가지고 있습니다.)
 

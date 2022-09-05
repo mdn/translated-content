@@ -1,20 +1,6 @@
 ---
 title: XRInputSource.gripSpace
 slug: Web/API/XRInputSource/gripSpace
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRInputSession
-  - gripSpace
-translation_of: Web/API/XRInputSource/gripSpace
 ---
 {{securecontext_header}}{{APIRef("WebXR")}}
 

@@ -88,13 +88,11 @@ onconnect = function(e) {
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                           | Commentaire                                                  |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "#sharedworker", "SharedWorker")}} | {{Spec2('HTML WHATWG')}} | Aucune modification de {{SpecName("Web Workers")}}. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.SharedWorker")}}
+{{Compat}}
 
 ## Voir aussi
 

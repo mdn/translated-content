@@ -1,15 +1,6 @@
 ---
 title: Navigator.getGamepads()
 slug: Web/API/Navigator/getGamepads
-tags:
-  - API
-  - Experimental
-  - Gamepad API
-  - Games
-  - Method
-  - Navigator
-  - Reference
-translation_of: Web/API/Navigator/getGamepads
 ---
 {{APIRef("Gamepad API")}}{{SeeCompatTable}}
 

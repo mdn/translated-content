@@ -1,14 +1,6 @@
 ---
 title: XMLHttpRequestEventTarget
 slug: Web/API/XMLHttpRequestEventTarget
-tags:
-  - AJAX
-  - API
-  - NeedsBrowserCompatibility
-  - NeedsContent
-  - Reference
-  - XMLHttpRequest
-translation_of: Web/API/XMLHttpRequestEventTarget
 ---
 {{APIRef("XMLHttpRequest")}}
 
@@ -46,4 +38,4 @@ translation_of: Web/API/XMLHttpRequestEventTarget
 ## 関連情報
 
 - {{ domxref("XMLHttpRequest") }}
-- [Using XMLHttpRequest](/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using XMLHttpRequest](/DOM/XMLHttpRequest/Using_XMLHttpRequest)

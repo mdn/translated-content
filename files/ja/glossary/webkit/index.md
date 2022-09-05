@@ -1,14 +1,6 @@
 ---
 title: WebKit
 slug: Glossary/WebKit
-tags:
-  - Browser
-  - Glossary
-  - Intro
-  - Web
-  - WebKit
-  - WebMechanics
-translation_of: Glossary/WebKit
 ---
 _WebKit_ はマークアップを基に適切にフォーマットされたウェブページを表示するためのフレームワークの 1 つです。{{Glossary("Apple Safari")}}、そして多くのモバイル向けブラウザーも、Webkit によって動いています (Webkit は移植性もカスタマイズ性も高いからです)。
 

@@ -13,7 +13,7 @@ Rouge Vert Bleu (RVB) est un modèle de couleurs qui représente les couleurs co
 
 Il existe de nombreuses façons de décrire les composantes RVB d'une couleur. En {{Glossary("CSS")}}, elles peuvent être représentées sous la forme d'un unique entier de 24 bits en notation hexadécimale (par exemple, ` #``add `8e6 pour du bleu clair), ou dans une notation fonctionnelle comme trois entiers 8 bits distincts (par exemple, rgb(46, 139, 87) est un vert océan). En {{Glossary("OpenGL")}}, {{Glossary("WebGL")}} et {{Glossary("GLSL")}}, les composantes rouge-vert-bleu sont des fractions (nombres à virgule flottante compris entre 0,0 et 1,0), bien qu'elles soient généralement stockées concrètement en mémoire vidéo comme des entiers 8 bits. Graphiquement, une couleur peut être représentée par un point dans un cube ou sur une grille tridimensionnelle, où chaque dimension (ou axe) correspond à un canal différent.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

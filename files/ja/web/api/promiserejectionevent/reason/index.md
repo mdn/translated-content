@@ -1,17 +1,6 @@
 ---
 title: PromiseRejectionEvent.reason
 slug: Web/API/PromiseRejectionEvent/reason
-tags:
-  - API
-  - HTML DOM
-  - JavaScript
-  - PromiseRejectionEvent
-  - Promises
-  - Property
-  - Reference
-  - events
-  - reason
-translation_of: Web/API/PromiseRejectionEvent/reason
 ---
 {{APIRef("HTML DOM")}}
 

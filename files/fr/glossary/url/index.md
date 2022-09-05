@@ -13,16 +13,7 @@ Dans le contexte de {{Glossary("HTTP")}}, les URL sont appelées "adresse web" o
 
 Les URL peuvent également être utilisées pour le transfert de fichiers ({{Glossary("FTP")}}) , les e-mails ({{Glossary("SMTP")}}), et d'autres applications.
 
-## En savoir plus
-
-### Culture générale
+## Voir aussi
 
 - [URL](https://fr.wikipedia.org/wiki/Uniform_Resource_Locator) sur Wikipédia
-
-### En savoir plus
-
 - [Comprendre les URL et leur structure](/fr/Learn/Understanding_URLs)
-
-### Spécification
-
-- La syntaxe des URL est définie dans l'[URL Living Standard](https://url.spec.whatwg.org/).

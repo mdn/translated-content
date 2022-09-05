@@ -1,15 +1,6 @@
 ---
 title: History.forward()
 slug: Web/API/History/forward
-tags:
-  - API
-  - HTML DOM
-  - History
-  - 履歴 API
-  - メソッド
-  - リファレンス
-browser-compat: api.History.forward
-translation_of: Web/API/History/forward
 ---
 {{APIRef("History API")}}
 

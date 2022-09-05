@@ -65,13 +65,11 @@ var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                                   |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- |
-| {{SpecName("Device Orientation", "#deviceorientation", "l'événement DeviceOrientation")}} | {{Spec2("Device Orientation")}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.deviceorientation_event")}}
+{{Compat}}
 
 ## Voir aussi
 

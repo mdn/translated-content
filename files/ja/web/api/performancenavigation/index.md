@@ -1,19 +1,6 @@
 ---
 title: PerformanceNavigation
 slug: Web/API/PerformanceNavigation
-tags:
-  - API
-  - PerformanceNavigation
-  - legacy
-  - インターフェイス
-  - タイミング
-  - ナビゲーションタイミング
-  - ナビゲーションタイミング API
-  - パフォーマンス
-  - リファレンス
-  - 後方互換性
-  - 非推奨
-translation_of: Web/API/PerformanceNavigation
 ---
 {{APIRef("Navigation Timing")}}
 

@@ -1,14 +1,6 @@
 ---
 title: DocumentType.before()
 slug: Web/API/DocumentType/before
-page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - メソッド
-  - ノード
-  - リファレンス
-browser-compat: api.DocumentType.before
 ---
 {{APIRef("DOM")}}
 

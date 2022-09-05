@@ -1,15 +1,6 @@
 ---
 title: MediaList.mediaText
 slug: Web/API/MediaList/mediaText
-tags:
-  - API
-  - CSSOM
-  - MediaList
-  - プロパティ
-  - リファレンス
-  - mediaText
-browser-compat: api.MediaList.mediaText
-translation_of: Web/API/MediaList/mediaText
 ---
 {{APIRef("CSSOM")}}
 

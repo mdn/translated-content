@@ -26,7 +26,7 @@ Choisissez `column` ou `column-reverse` et votre axe principal parcourt du débu
 
 Sur l'axe principal, vous pouvez contrôler le dimensionnement des éléments flexibles en ajoutant tout espace disponible aux éléments eux-mêmes, par le biais des propriétés `flex` sur les éléments. Ou, vous pouvez contrôler l'espace entre et autour des éléments en utilisant la propriété `justify-content`.
 
-## En apprendre plus
+## Voir aussi
 
 ### Références de la propriété
 

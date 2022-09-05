@@ -1,15 +1,8 @@
 ---
 title: console.table()
 slug: Web/API/console/table
-tags:
-  - API
-  - DOM
-  - デバッグ
-  - メソッド
-  - ウェブ開発
-  - ウェブコンソール
-browser-compat: api.console.table
-translation_of: Web/API/Console/table
+l10n:
+  sourceCommit: 49b07e57dba92be3982e3c0035bc48e7a5036f97
 ---
 {{APIRef("Console API")}}
 
@@ -43,7 +36,7 @@ function Person(firstName, lastName) {
   this.lastName = lastName;
 }
 
-var me = new Person("John", "Smith");
+const me = new Person("John", "Smith");
 
 console.table(me);
 ```
@@ -57,7 +50,7 @@ console.table(me);
 ```js
 // 配列の配列
 
-var people = [["John", "Smith"], ["Jane", "Doe"], ["Emily", "Jones"]]
+const people = [["John", "Smith"], ["Jane", "Doe"], ["Emily", "Jones"]]
 console.table(people);
 ```
 
@@ -71,9 +64,9 @@ function Person(firstName, lastName) {
   this.lastName = lastName;
 }
 
-var john = new Person("John", "Smith");
-var jane = new Person("Jane", "Doe");
-var emily = new Person("Emily", "Jones");
+const john = new Person("John", "Smith");
+const jane = new Person("Jane", "Doe");
+const emily = new Person("Emily", "Jones");
 
 console.table([john, jane, emily]);
 ```
@@ -85,7 +78,7 @@ console.table([john, jane, emily]);
 ```js
 // 値がオブジェクトのプロパティを持つオブジェクト
 
-var family = {};
+const family = {};
 
 family.mother = new Person("Jane", "Smith");
 family.father = new Person("John", "Smith");
@@ -108,9 +101,9 @@ function Person(firstName, lastName) {
   this.lastName = lastName;
 }
 
-var john = new Person("John", "Smith");
-var jane = new Person("Jane", "Doe");
-var emily = new Person("Emily", "Jones");
+const john = new Person("John", "Smith");
+const jane = new Person("Jane", "Doe");
+const emily = new Person("Emily", "Jones");
 
 console.table([john, jane, emily], ["firstName"]);
 ```
@@ -124,8 +117,8 @@ console.table([john, jane, emily], ["firstName"]);
 ## 構文
 
 ```js
-console.table(data);
-console.table(data, columns);
+table(data)
+table(data, columns)
 ```
 
 ### 引数
@@ -134,6 +127,10 @@ console.table(data, columns);
   - : 表示するデータ。配列またはオブジェクトでなければなりません。
 - `columns`
   - : 出力に含める列の名前を含む配列。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 仕様書
 

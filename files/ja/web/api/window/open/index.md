@@ -1,16 +1,6 @@
 ---
 title: Window.open()
 slug: Web/API/Window/open
-page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-  - Window
-  - open
-browser-compat: api.Window.open
-translation_of: Web/API/Window/open
 l10n:
   sourceCommit: 27e11bf5ee2425dc6b939d0d1825ac741414a688
 ---

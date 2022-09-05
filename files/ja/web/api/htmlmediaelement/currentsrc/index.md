@@ -1,16 +1,6 @@
 ---
 title: HTMLMediaElement.currentSrc
 slug: Web/API/HTMLMediaElement/currentSrc
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Read-only
-  - Web
-browser-compat: api.HTMLMediaElement.currentSrc
-translation_of: Web/API/HTMLMediaElement/currentSrc
 ---
 {{APIRef("HTML DOM")}}
 

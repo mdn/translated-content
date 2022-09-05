@@ -1,18 +1,6 @@
 ---
 title: Document.onfullscreenerror
 slug: conflicting/Web/API/Document/fullscreenerror_event
-tags:
-  - API
-  - Document
-  - Event Handler
-  - Fullscreen API
-  - Property
-  - Reference
-  - イベントハンドラー
-  - エラー
-  - 全画面
-  - 全画面 API
-translation_of: Web/API/Document/onfullscreenerror
 original_slug: Web/API/Document/onfullscreenerror
 ---
 {{ApiRef("Fullscreen API")}}

@@ -1,16 +1,6 @@
 ---
 title: CSSUnparsedValue
 slug: Web/API/CSSUnparsedValue
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnparsedValue
-  - Experimental
-  - Houdini
-  - Interface
-  - NeedsExample
-  - Reference
-translation_of: Web/API/CSSUnparsedValue
 ---
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 

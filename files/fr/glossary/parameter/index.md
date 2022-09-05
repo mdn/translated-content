@@ -23,7 +23,7 @@ Deux sortes de paramètres :
 - paramètres de retour/sortie
   - : retournent principalement plusieurs valeurs depuis une fonction, mais ce n'est pas recommandé car cela peut prêter à confusion
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

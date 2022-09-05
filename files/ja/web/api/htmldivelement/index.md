@@ -1,14 +1,6 @@
 ---
 title: HTMLDivElement
 slug: Web/API/HTMLDivElement
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - NeedsNewLayout
-  - リファレンス
-browser-compat: api.HTMLDivElement
-translation_of: Web/API/HTMLDivElement
 ---
 {{ APIRef("HTML DOM") }}
 

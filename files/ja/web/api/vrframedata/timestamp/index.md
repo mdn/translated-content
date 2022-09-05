@@ -1,19 +1,6 @@
 ---
 title: VRFrameData.timestamp
 slug: Web/API/VRFrameData/timestamp
-page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRFrameData
-  - Virtual Reality
-  - WebVR
-  - timeStamp
-browser-compat: api.VRFrameData.timestamp
-translation_of: Web/API/VRFrameData/timestamp
 ---
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 

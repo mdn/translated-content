@@ -1,14 +1,6 @@
 ---
 title: PerformanceResourceTiming.serverTiming
 slug: Web/API/PerformanceResourceTiming/serverTiming
-tags:
-  - API
-  - PerformanceResourceTiming
-  - SecureContextOnly
-  - ServerTiming
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/PerformanceResourceTiming/serverTiming
 ---
 {{APIRef("Resource Timing API")}} {{securecontext_header}}
 

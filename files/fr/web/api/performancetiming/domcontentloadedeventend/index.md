@@ -28,13 +28,11 @@ let time = performanceTiming.domContentLoadedEventEnd;
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                                        | Statut                                   | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-domcontentloadedeventend', 'PerformanceTiming.domContentLoadedEventEnd')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceTiming.domContentLoadedEventEnd")}}
+{{Compat}}
 
 ## Voir aussi
 

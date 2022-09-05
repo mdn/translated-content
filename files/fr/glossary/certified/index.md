@@ -13,7 +13,7 @@ original_slug: Glossaire/Certifié
 
 Pour les détails sur la certification en {{glossary("Cryptography","Cryptographie")}}, veuillez vous référer aux {{glossary("Digital Certificate","certificats numériques")}}.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

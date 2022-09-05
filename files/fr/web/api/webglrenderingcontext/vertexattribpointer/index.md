@@ -217,33 +217,11 @@ gl.enableVertexAttribArray(texUVLoc);
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('WebGL', "#5.14.10", "vertexAttribPointer")}}
-      </td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td><p>Définition initiale.</p></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('OpenGL ES 2.0', "glVertexAttribPointer.xml", "glVertexAttribPointer")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td><p>Page man de l’API OpenGL.</p></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.vertexAttribPointer")}}
+{{Compat}}
 
 ## Voir aussi
 

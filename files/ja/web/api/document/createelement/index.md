@@ -1,14 +1,6 @@
 ---
 title: Document.createElement()
 slug: Web/API/Document/createElement
-tags:
-  - API
-  - DOM
-  - Document
-  - メソッド
-  - リファレンス
-  - createElement
-translation_of: Web/API/Document/createElement
 ---
 {{APIRef("DOM")}}
 

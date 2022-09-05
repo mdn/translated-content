@@ -1,15 +1,6 @@
 ---
 title: DocumentType.after()
 slug: Web/API/DocumentType/after
-page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - メソッド
-  - ノード
-  - リファレンス
-browser-compat: api.DocumentType.after
-translation_of: Web/API/DocumentType/after
 ---
 {{APIRef("DOM")}}
 

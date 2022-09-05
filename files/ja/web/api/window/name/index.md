@@ -1,13 +1,6 @@
 ---
 title: window.name
 slug: Web/API/Window/name
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/Window/name
 ---
 {{ApiRef}}
 

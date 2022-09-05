@@ -1,16 +1,6 @@
 ---
 title: ServiceWorkerGlobalScope.onmessage
 slug: conflicting/Web/API/ServiceWorkerGlobalScope/message_event
-tags:
-  - API
-  - Property
-  - Reference
-  - Service
-  - ServiceWorker
-  - ServiceWorkerGlobalScope
-  - Worker
-  - onmessage
-translation_of: Web/API/ServiceWorkerGlobalScope/onmessage
 original_slug: Web/API/ServiceWorkerGlobalScope/onmessage
 ---
 {{APIRef("Service Workers API")}}

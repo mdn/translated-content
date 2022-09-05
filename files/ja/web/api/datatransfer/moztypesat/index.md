@@ -1,16 +1,6 @@
 ---
 title: DataTransfer.mozTypesAt()
 slug: Web/API/DataTransfer/mozTypesAt
-page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Non-standard
-  - Reference
-  - drag and drop
-  - Deprecated
-browser-compat: api.DataTransfer.mozTypesAt
-translation_of: Web/API/DataTransfer/mozTypesAt
 ---
 {{APIRef("HTML Drag and Drop API")}}
 

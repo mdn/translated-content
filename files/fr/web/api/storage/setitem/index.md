@@ -50,13 +50,11 @@ function remplissageStockage() {
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-setitem', 'Storage.setItem')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Storage.setItem")}}
+{{Compat}}
 
 ## Voir aussi
 

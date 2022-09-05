@@ -128,7 +128,7 @@ value2
 
 - Firefox 5 gère l'en-tête de réponse HTTP `Content-Disposition` plus efficacement si les deux paramètres du nom de fichier et du nom de fichier sont fournis. Il examine tous les noms fournis, en utilisant le paramètre \* du nom de fichier, s'il est disponible, même si un paramètre de nom de fichier est inclus en premier. Auparavant, le premier paramètre correspondant serait utilisé, empêchant ainsi un nom plus approprié d'être utilisé. Voir {{bug (588781)}}.
 
-## Voir également
+## Voir aussi
 
 - [HTML Forms](/fr/docs/Web/Guide/HTML/Forms)
 - {{HTTPHeader("Content-Type")}} définissant la limite du corps multipartie.

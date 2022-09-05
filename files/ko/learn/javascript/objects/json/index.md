@@ -113,11 +113,11 @@ superHeroes['active']
 superHeroes['members'][1]['powers'][2]
 ```
 
-1.  우선 변수 이름은 — `superHeroes`입니다.
-2.  `members` 프로퍼티에 접근하려면, `["members"]`를 입력합니다.
-3.  `members`는 객체로 구성된 배열입니다. 두 번째 객체에 접근할 것이므로 `[1]`를 입력합니다.
-4.  이 객체에서 `powers` 프로퍼티에 접근하려면 `["powers"]`를 입력합니다.
-5.  `powers` 프로퍼티 안에는 위에서 선택한 hero의 superpower들이 있습니다. 세 번째 것을 선택해야 하므로 `[2]`.
+1. 우선 변수 이름은 — `superHeroes`입니다.
+2. `members` 프로퍼티에 접근하려면, `["members"]`를 입력합니다.
+3. `members`는 객체로 구성된 배열입니다. 두 번째 객체에 접근할 것이므로 `[1]`를 입력합니다.
+4. 이 객체에서 `powers` 프로퍼티에 접근하려면 `["powers"]`를 입력합니다.
+5. `powers` 프로퍼티 안에는 위에서 선택한 hero의 superpower들이 있습니다. 세 번째 것을 선택해야 하므로 `[2]`.
 
 > **참고:** 위에서 볼 수 있듯 [JSONTest.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 예제에서 JSON 내 변수([source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html) 참고)를 만들었다. 당신 브라우저의 Javascript 콘솔을 통하여 이 코드를 로드하고 그 변수 안에 얻을 수 있는 데이터에 접근해보자.
 
@@ -193,19 +193,19 @@ JSON 데이터를 다음 깃허브 링크에서 가져올수 있습니다. <http
 
 JSON을 가져오기 위해서는, {{domxref("XMLHttpRequest")}} (때론 **XHR**)로 불리는 API를 사용하면 된다. 이것은 매우 유용한 JavaScript 오브젝트로 JavaScript (e.g. images, text, JSON, even HTML snippets)를 통해 우리가 서버로 부터 다양한 리소스를 가져오는 요청을 만들어 준다. 즉, 전체 페이지를 불러오지 않고도 필요한 부분만을 업데이트 할 수 있다. 이 기능은 좀 더 효과적으로 반응형 웹페이지을 다루는데 흥미로울 수 있으나, 아쉽게도 이 내용에 대한 자세한 부분은 여기서 다루지 않는다.
 
-1.  일단, 변수로 둘 JSON의 URL을 가져와야 합니다. 아래의 코드를 당신의 JavaScript 코드 내에 추가해 주세요.
+1. 일단, 변수로 둘 JSON의 URL을 가져와야 합니다. 아래의 코드를 당신의 JavaScript 코드 내에 추가해 주세요.
 
     ```js
     var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
     ```
 
-2.  요청을 만들기 위해, 우리는 `new` 키워드를 이용하여 `XMLHttpRequest` 생성자로부터 새로운 request 인스턴스를 생성해야 합니다. 아래의 코드를 추가해 주세요.
+2. 요청을 만들기 위해, 우리는 `new` 키워드를 이용하여 `XMLHttpRequest` 생성자로부터 새로운 request 인스턴스를 생성해야 합니다. 아래의 코드를 추가해 주세요.
 
     ```js
     var request = new XMLHttpRequest();
     ```
 
-3.  이제 [`open()`](/en-US/docs/Web/API/XMLHttpRequest/open) 메소드를 사용해 새로운 요청을 만듭니다. 아래의 코드를 추가해 주세요.
+3. 이제 [`open()`](/en-US/docs/Web/API/XMLHttpRequest/open) 메소드를 사용해 새로운 요청을 만듭니다. 아래의 코드를 추가해 주세요.
 
     ```js
     request.open('GET', requestURL);
@@ -216,14 +216,14 @@ JSON을 가져오기 위해서는, {{domxref("XMLHttpRequest")}} (때론 **XHR**
     - HTTP 메서드는 네트워크 요청을 만들 때 사용됩니다. 이 경우 [`GET`](/en-US/docs/Web/HTTP/Methods/GET) 을 사용하는게 좋겠어요. 우린 그저 데이터를 가져오면 되니깐요.
     - URL은 요청을 보낼 곳을 지정합니다. 우리가 저장해 둔 JSON 파일의 URL로 지정할게요.
 
-4.  다음으로, 아래의 두 줄을 추가해 주세요. [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType) 을 JSON으로 설정했어요. XHR로 하여금 서버가 JSON 데이터를 반환할 것이며, 자바스크립트 객체로서 변환될 것이라는 걸 알게 하기 위해서죠. 이제 [`send()`](/en-US/docs/Web/API/XMLHttpRequest/send) 메서드를 이용해 요청을 보냅시다.
+4. 다음으로, 아래의 두 줄을 추가해 주세요. [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType) 을 JSON으로 설정했어요. XHR로 하여금 서버가 JSON 데이터를 반환할 것이며, 자바스크립트 객체로서 변환될 것이라는 걸 알게 하기 위해서죠. 이제 [`send()`](/en-US/docs/Web/API/XMLHttpRequest/send) 메서드를 이용해 요청을 보냅시다.
 
     ```js
     request.responseType = 'json';
     request.send();
     ```
 
-5.  마지막 부분은 서버의 응답을 기다리고, 그것의 처리까지와 관련된 섹션입니다. 코드 아래에 다음의 코드를 추가해 주세요.
+5. 마지막 부분은 서버의 응답을 기다리고, 그것의 처리까지와 관련된 섹션입니다. 코드 아래에 다음의 코드를 추가해 주세요.
 
     ```js
     request.onload = function() {
@@ -298,12 +298,12 @@ function showHeroes(jsonObj) {
 
 다음으로, 우리는 [for loop](/ko/docs/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop)를 사용하여 배열 내의 각 객체에 반복 실행을 걸겁니다.
 
-1.  몇 개의 새로운 요소를 생성해 주세요: `<article>`, `<h2>`, 3개의 `<p>`, 그리고 `<ul>`.
-2.  \<h2>가 히어로의 `name`을 가지도록 설정해 주세요.
-3.  목록 내의 정보를 소개하기 위해 세 개의 paragraph 안에 그들의 `secretIdentity`, `age`, 그리고 "Superpowers:" 라는 문장을 넣어 주세요.
-4.  `superPowers` 라는 새로운 변수 안에 `powers`프로퍼티를 저장해 주세요. 이것은 현재 히어로의 초능력(superpower)을 열거한 배열을 포함합니다.
-5.  현재 히어로의 초능력을 반복 실행할 또다른 `for` 반복문을 사용합니다. 하나의 객체씩 `<li>` 를 생성하고, 그 안에 초능력을 집어 넣고, `appendChild()`를 사용하여 '`myList'` 라는 `<ul>` 안에 `listItem` 을 집어 넣습니다.
-6.  마지막으로 `<article>` (`myArticle`) 안에 `<h2>`, `<p>`, 그리고 `<ul>` 넣은 뒤, `<section>` 안에 `<article>`을 넣어 줍니다. 요소가 추가되어 지는 순서가 중요해요.왜냐하면 HTML 내에 보여질 거거든요.
+1. 몇 개의 새로운 요소를 생성해 주세요: `<article>`, `<h2>`, 3개의 `<p>`, 그리고 `<ul>`.
+2. \<h2>가 히어로의 `name`을 가지도록 설정해 주세요.
+3. 목록 내의 정보를 소개하기 위해 세 개의 paragraph 안에 그들의 `secretIdentity`, `age`, 그리고 "Superpowers:" 라는 문장을 넣어 주세요.
+4. `superPowers` 라는 새로운 변수 안에 `powers`프로퍼티를 저장해 주세요. 이것은 현재 히어로의 초능력(superpower)을 열거한 배열을 포함합니다.
+5. 현재 히어로의 초능력을 반복 실행할 또다른 `for` 반복문을 사용합니다. 하나의 객체씩 `<li>` 를 생성하고, 그 안에 초능력을 집어 넣고, `appendChild()`를 사용하여 '`myList'` 라는 `<ul>` 안에 `listItem` 을 집어 넣습니다.
+6. 마지막으로 `<article>` (`myArticle`) 안에 `<h2>`, `<p>`, 그리고 `<ul>` 넣은 뒤, `<section>` 안에 `<article>`을 넣어 줍니다. 요소가 추가되어 지는 순서가 중요해요.왜냐하면 HTML 내에 보여질 거거든요.
 
 > **참고:** 만약 실습에 문제를 겪고 있다면, [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) 코드를 참조하세요. ([running live](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html) 또한 보세요.)
 

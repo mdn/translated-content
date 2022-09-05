@@ -1,12 +1,6 @@
 ---
 title: Web Workers が使用できる関数とクラス
 slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
-tags:
-  - Reference
-  - Web
-  - Web Worker
-  - Worker
-translation_of: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 ---
 標準的な [JavaScript](/ja/docs/Web/JavaScript) の関数（{{jsxref("String")}} や {{jsxref("Array")}}、{{jsxref("Object")}}、 {{jsxref("JSON")}} など）に加えて、DOM から worker に利用できる様々な関数があります。この記事ではそれらの機能のリストを提供します。
 

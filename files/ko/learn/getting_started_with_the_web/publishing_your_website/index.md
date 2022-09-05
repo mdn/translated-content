@@ -18,7 +18,7 @@ original_slug: Learn/Getting_started_with_the_web/웹사이트_출판하기
 
 만약 여러분이 출판된 웹사이트에 대한 모든 컨트롤를 원한다면, 이것들을 구매해야 할 것입니다:
 
-- 호스팅 — 호스팅 회사의[ 웹 서버](/en-US/Learn/What_is_a_web_server) 에서 빌린 파일 공간. 이 공간에 여러분의 웹사이트 파일을 놓을 것입니다, 그리고 웹 서버는 컨텐트를 요청하는 웹 유저에게 그 컨텐트를 제공합니다.
+- 호스팅 — 호스팅 회사의 [웹 서버](/en-US/Learn/What_is_a_web_server) 에서 빌린 파일 공간. 이 공간에 여러분의 웹사이트 파일을 놓을 것입니다, 그리고 웹 서버는 컨텐트를 요청하는 웹 유저에게 그 컨텐트를 제공합니다.
 - [도메인 이름](/en-US/Learn/Understanding_domain_names) — `http://www.mozilla.org`, `또는 http://www.bbc.co.uk` 같이, 사람들이 여러분의 웹사이트를 찾을 수 있는 특정 주소. **도메인 등록 기관**으로부터 몇 년간 사용할 수 있는 여러분의 도메인을 빌리세요.
 
 많은 전문적인 웹사이트들은 이 방법으로 온라인에 진출합니다.
@@ -61,12 +61,12 @@ HTML, CSS 그리고 JavaScript 를 입력할 수 있게 하고 웹사이트로 �
 
 ### 기본 설치
 
-1.  먼저, 여러분의 장치에 [Git 을 설치](http://git-scm.com/downloads) 하세요. 이것은 GitHub 이 위에서 작동하게 되는 기초가 되는 버전 컨트롤 시스템 소프트웨어 입니다.
-2.  다음으로, [GitHub 계정을 위해 가입하세요](https://github.com/join). 간단하고 쉽습니다.
-3.  가입을 하셨다면, github.com 에 여러분의 유저 이름과 암호로 로그인하세요.
-4.  그리고나서, 여러분의 파일들이 들어가게될 새로운 repo 를 생성해야 합니다. GitHub 홈페이지의 오른쪽 상단에 있는 플러스 (+) 를 클릭하고, _New Repository_ 를 선택하세요.
-5.  이 페이지에서, _Repository name_ 박스 안에, _username_.github.io 를 입력하세요, _username_ 가 있는 곳이 여러분의 유저 이름입니다. 그러니까 예를 들어, 우리 친구 bobsmith 는 _bobsmith.github.io_ 를 입력할 것입니다.![](https://mdn.mozillademos.org/files/9479/github-create-repo.png)
-6.  _Create repository_ 를 클릭하세요. 다음과 같은 페이지로 이동하실 겁니다:![](https://mdn.mozillademos.org/files/9481/github-populate-repo.png)
+1. 먼저, 여러분의 장치에 [Git 을 설치](http://git-scm.com/downloads) 하세요. 이것은 GitHub 이 위에서 작동하게 되는 기초가 되는 버전 컨트롤 시스템 소프트웨어 입니다.
+2. 다음으로, [GitHub 계정을 위해 가입하세요](https://github.com/join). 간단하고 쉽습니다.
+3. 가입을 하셨다면, github.com 에 여러분의 유저 이름과 암호로 로그인하세요.
+4. 그리고나서, 여러분의 파일들이 들어가게될 새로운 repo 를 생성해야 합니다. GitHub 홈페이지의 오른쪽 상단에 있는 플러스 (+) 를 클릭하고, _New Repository_ 를 선택하세요.
+5. 이 페이지에서, _Repository name_ 박스 안에, _username_.github.io 를 입력하세요, _username_ 가 있는 곳이 여러분의 유저 이름입니다. 그러니까 예를 들어, 우리 친구 bobsmith 는 _bobsmith.github.io_ 를 입력할 것입니다.![](https://mdn.mozillademos.org/files/9479/github-create-repo.png)
+6. _Create repository_ 를 클릭하세요. 다음과 같은 페이지로 이동하실 겁니다:![](https://mdn.mozillademos.org/files/9481/github-populate-repo.png)
 
 ### GitHub 에 파일 올리기
 
@@ -84,38 +84,38 @@ HTML, CSS 그리고 JavaScript 를 입력할 수 있게 하고 웹사이트로 �
 
 처음에는 좀 두려우실 수 있지만, 걱정하지마세요 — 기본적인 것들은 금방 익히실 수 있을 것입니다. 무언가를 하기 위해선 명령어를 입력하고 엔터를 누르는 것으로 컴퓨터에게 알려줘야합니다.
 
-1.  커맨드 라인을 여러분의 `test-site` 폴더로 향하게 합니다 (또는 여러분의 웹사이트가 포함된 어디든지). 그러기 위해선, `cd` 명령을 사용합니다 (말하자면 "\_c_hange \_d_irectory"). 여기 만약 `test-site` 폴더 안에 여러분의 웹사이트를 놓으셨다면 여러분이 입력해야 하는 것이 있습니다:
+1. 커맨드 라인을 여러분의 `test-site` 폴더로 향하게 합니다 (또는 여러분의 웹사이트가 포함된 어디든지). 그러기 위해선, `cd` 명령을 사용합니다 (말하자면 "\_c_hange \_d_irectory"). 여기 만약 `test-site` 폴더 안에 여러분의 웹사이트를 놓으셨다면 여러분이 입력해야 하는 것이 있습니다:
 
     ```bash
     cd Desktop/test-site
     ```
 
-2.  커맨드 라인이 여러분의 웹사이트 폴더 안을 가리킬 때, 그 폴더를 git repository 가 되도록 `git` 도구에게 알려주는 다음의 명령을 입력하세요:
+2. 커맨드 라인이 여러분의 웹사이트 폴더 안을 가리킬 때, 그 폴더를 git repository 가 되도록 `git` 도구에게 알려주는 다음의 명령을 입력하세요:
 
     ```bash
     git init
     ```
 
-3.  다음으로, GitHub 사이트로 돌아가세요. 현재 페이지에서, you are interested in the section _…or push an existing repository from the command line_. 이 구역에 나열된 두 코드를 보게 되실 겁니다. 첫 번째 줄의 코드 전체를 복사하고, 커맨드 라인에 붙여넣은 다음, 엔터를 누르세요. 그 명령은 이렇게 보일 것입니다:
+3. 다음으로, GitHub 사이트로 돌아가세요. 현재 페이지에서, you are interested in the section _…or push an existing repository from the command line_. 이 구역에 나열된 두 코드를 보게 되실 겁니다. 첫 번째 줄의 코드 전체를 복사하고, 커맨드 라인에 붙여넣은 다음, 엔터를 누르세요. 그 명령은 이렇게 보일 것입니다:
 
     ```bash
     git remote add origin https://github.com/bobsmith/bobsmith.github.io.git
     ```
 
-4.  다음으로, 다음 두 명령어를 입력하고, 각 명령마다 엔터를 누릅니다. 이것은 GitHub 에 코드를 올릴 준비를 하는 것이고, Git 에게 그 파일들을 관리하도록 요청합니다.
+4. 다음으로, 다음 두 명령어를 입력하고, 각 명령마다 엔터를 누릅니다. 이것은 GitHub 에 코드를 올릴 준비를 하는 것이고, Git 에게 그 파일들을 관리하도록 요청합니다.
 
     ```bash
     git add --all
     git commit -m "adding my files to my repository"
     ```
 
-5.  마지막으로, GitHub 웹 페이지로 가서 3단계에서 봤던 두 개의 명령어중 두 번째 줄을 터미널에 입력하는 것으로 코드를 푸시합니다:
+5. 마지막으로, GitHub 웹 페이지로 가서 3단계에서 봤던 두 개의 명령어중 두 번째 줄을 터미널에 입력하는 것으로 코드를 푸시합니다:
 
     ```bash
     git push -u origin master
     ```
 
-6.  이제 새 브라우저 탭 (_username.github.io_) 에서 여러분의 GitHub 페이지의 웹 주소로 갈 때, 여러분의 사이트를 온라인에서 보실 수 있습니다! 친구들에게 메일을 보내서 여러분의 실력을 뽐내보세요.
+6. 이제 새 브라우저 탭 (_username.github.io_) 에서 여러분의 GitHub 페이지의 웹 주소로 갈 때, 여러분의 사이트를 온라인에서 보실 수 있습니다! 친구들에게 메일을 보내서 여러분의 실력을 뽐내보세요.
 
 > **참고:** **노트**: 만약 막히셨다면, [GitHub Pages 홈페이지](https://pages.github.com/) 또한 아주 도움이 될 것입니다.
 
