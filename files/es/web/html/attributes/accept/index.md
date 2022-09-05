@@ -42,15 +42,15 @@ Cuando se configura en un tipo de entrada de archivo, el selector de archivos na
 <p>
   <label for="soundFile">Selecciona un archivo de audio:</label>
   <input type="file" id="soundFile" accept="audio/*">
-  </p>
-  <p>
+</p>
+<p>
   <label for="videoFile">Selecciona un archivo de video:</label>
   <input type="file" id="videoFile" accept="video/*">
-  </p>
-  <p>
+</p>
+<p>
   <label for="imageFile">Selecciona algunas imágenes:</label>
   <input type="file" id="imageFile" accept="image/*" multiple>
-  </p>
+</p>
 ```
 
 {{EmbedLiveSample('ejemplo_sencillo', '100%', 200)}}
