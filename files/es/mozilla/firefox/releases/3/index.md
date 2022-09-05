@@ -29,7 +29,7 @@ Si eres un desarrollador que intenta ponerse al día con todas las nuevas caract
   - : Firefox 3 tiene APIs que permiten trabajar con microformatos.
 
 - [Hojas de estilo alternativas](/es/Hojas_de_estilo_alternativas)
-  - :Firefox 3 implementa modelos alternativos de hojas de estilo API de objeto CSS.
+  - : Firefox 3 implementa modelos alternativos de hojas de estilo API de objeto CSS.
 - [Eventos arrastrar y soltar](/es/Eventos_arrastrar_y_soltar)
   - : Firefox 3 implementa nuevos eventos que se envían al nodo de origen cuando la operación de arrastre comienza y termina.
 - [Gestión del foco en HTML](/es/Gestión_del_foco_en_HTML)
