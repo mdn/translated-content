@@ -241,6 +241,8 @@ Sin el elemento {{HTMLElement("br")}}, todo el párrafo se habría presentado co
 
 {{EmbedLiveSample('line-break-live-sample', '100%', '125px', '', '', 'hide-codepen-jsfiddle')}}
 
+## Ejemplo
+
 Los elementos {{HTMLElement("hr")}} generan una regla horizontal en el documento que denota un cambio en la temática del texto (como un cambio de tema o de escena). Visualmente tiene el aspecto de una línea horizontal. Por ejemplo:
 
 ```html

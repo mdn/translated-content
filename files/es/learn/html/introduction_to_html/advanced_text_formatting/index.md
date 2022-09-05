@@ -231,6 +231,8 @@ Si una sección de contenido a nivel de bloque (ya sea un párrafo, varios párr
 en bloque independiente</em>) indica que el texto al que delimita es una cita ampliada.</p>
 ```
 
+## Ejemplo
+
 Para convertir esto en una cita en bloque independiente, simplemente harías lo siguiente:
 
 ```html
