@@ -1,11 +1,6 @@
 ---
 title: 하이퍼링크 만들기
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-tags:
-  - a태그
-  - 웹하이퍼링크
-  - 하이퍼링크
-translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
 
