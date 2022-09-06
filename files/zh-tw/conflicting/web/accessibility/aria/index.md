@@ -116,7 +116,7 @@ var validate = function () {
 
 ## 提供有幫助的錯誤訊息
 
-繼續閱讀了解如何使用  [ARIA alerts to enhance forms](/en-US/docs/aria/forms/alerts).
+繼續閱讀了解如何使用  [ARIA alerts to enhance forms](/zh-TW/docs/aria/forms/alerts).
 
 > **備註：** TBD: we should either combine into one article or separate into techniques, or both. Also, is ARIA markup appropriate for error messages in a page loaded after server side validation?
 

@@ -50,7 +50,7 @@ html(lang='en')
 
 此模板使用（並包含）來自 [Bootstrap](http://getbootstrap.com/) 的 JavaScript 和 CSS ，以改進 HTML 頁面的佈局和呈現方式。使用 Bootstrap 或其它客戶端網頁框架，是一種快速的方式，可以創建吸引人的網頁，能夠良好地適應不同的瀏覽器尺寸，並且允許我們處理頁面的呈現，而不需要糾纒於任何不同尺寸的細節—此處我們只想專注於伺服端代碼！
 
-佈局的安排應該相當明白，假如你已經閱讀了之前的 [模板入門](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data#Template_primer)。注意，使用 `block content` 當做定位符號，放到頁面內容將要放置的地方。
+佈局的安排應該相當明白，假如你已經閱讀了之前的 [模板入門](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data#Template_primer)。注意，使用 `block content` 當做定位符號，放到頁面內容將要放置的地方。
 
 基礎模板也參考了一個本地 css 檔 (**style.css**) ，此檔提供了一些額外的樣式。打開 **/public/stylesheets/style.css** ，並用底下的 CSS 代碼，取代它的內容:
 
@@ -66,5 +66,5 @@ html(lang='en')
 
 ## 下一步
 
-- 回到 [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
-- 繼續教學 5 下個章節: [Home page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page).
+- 回到 [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
+- 繼續教學 5 下個章節: [Home page](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page).

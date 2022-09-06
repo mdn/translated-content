@@ -9,4 +9,4 @@ slug: Glossary/Head
 ### HTML head
 
 - MDN 上的 {{htmlelement("head")}} 元件參考
-- [The HTML \<head>](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_HTML_head)  在 MDN 上的學習領域
+- [The HTML \<head>](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/The_HTML_head)  在 MDN 上的學習領域

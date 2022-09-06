@@ -252,7 +252,7 @@ let resetButton;
 
 - 最後兩個變數，一個儲存回合數 1，另一個儲存指向重新開始按鈕的參照 (按鈕現在還不存在，之後會加上的)。
 
-> **備註：** 從[下一篇文章](/en-US/docs/user:chrisdavidmills/variables)開始，你會學到更多有關變數的事。
+> **備註：** 從[下一篇文章](/zh-TW/docs/user:chrisdavidmills/variables)開始，你會學到更多有關變數的事。
 
 ### 函式
 

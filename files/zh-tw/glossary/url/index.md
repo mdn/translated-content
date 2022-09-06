@@ -16,7 +16,7 @@ URLs 同樣可以用於文件傳輸({{Glossary("FTP")}}) , 郵件 ({{Glossary("S
 
 ### 學習其他
 
-- [Understanding URLs and their structure](/en-US/Learn/Understanding_URLs)
+- [Understanding URLs and their structure](/zh-TW/Learn/Understanding_URLs)
 
 ### Specification
 
