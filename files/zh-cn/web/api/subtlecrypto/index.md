@@ -44,7 +44,7 @@ slug: Web/API/SubtleCrypto
 
 如果密钥是敏感的，你需要使用 [`wrapKey()`](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/wrapKey), 该函数导出密钥并且使用另外一个密钥加密它。
 
-` unwrapKey()与``wrapKey() `相反，该函数解密密钥后导入解密的密钥
+`unwrapKey()` 与 `wrapKey()` 相反，该函数解密密钥后导入解密的密钥
 
 #### 存储密钥
 

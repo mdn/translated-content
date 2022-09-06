@@ -323,8 +323,8 @@ class BookAdmin(admin.ModelAdmin):
 
 我们在本节学到了很多东西，所以现在是时候尝试一些事情了。
 
-1\. 对于 `BookInstance`列表视图，添加代码以显示书籍，状态，到期日期和 ID（而不是默认`__str__()`文本）。
-2\. 添加的在线上市 Book 项目的 Author 使用，因为我们做了同样的做法详细视图`Book/ BookInstance。`
+1. 对于 `BookInstance`列表视图，添加代码以显示书籍，状态，到期日期和 ID（而不是默认`__str__()`文本）。
+2. 添加的在线上市 Book 项目的 Author 使用，因为我们做了同样的做法详细视图`Book/ BookInstance。`
 
 ## 概要
 

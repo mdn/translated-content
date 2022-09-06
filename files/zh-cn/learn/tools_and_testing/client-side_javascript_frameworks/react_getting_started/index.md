@@ -179,7 +179,7 @@ moz-todo-react
 
 目录 `public` 会在建立并部署此应用的时候更新。此教程不涉及部署，你可以参考 [Deploying our app](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment) 这一篇教程。
 
-文件 `package.json` 包含了 Node.js/npm 为了建立该应用程序所管理着的文件信息。这个文件不是 React 应用独有的。你无需理解这个文件也能看懂这篇教程。 不过，如果你想了解更多，你可以阅读 [What is the file \`package.json\`? on NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/) 和 [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)。
+文件 `package.json` 包含了 Node.js/npm 为了建立该应用程序所管理着的文件信息。这个文件不是 React 应用独有的。你无需理解这个文件也能看懂这篇教程。 不过，如果你想了解更多，你可以阅读 [What is the file `package.json`? on NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/) 和 [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)。
 
 ## 探索第一个 React 组件 — `<App/>`
 
@@ -235,7 +235,7 @@ import './App.css';
 
 第三行引入了我们的组件所需的 CSS 文件。与上面两句不同，这里没有将引入的内容赋给任何变量、也没有用到 `from` 指令。请注意这种特殊的语法并非原生 JS 的语法 —— 它源自前端资源打包工具 webpack，而 create-react-app 正是基于 webpack 配置而来的。
 
-> **备注：** 译者补充：webpack 可用于打包 JS 和非 JS 的内容 (当然，非 JS 的内容需要一些插件或加载器来处理)，但是 JavaScript 标准只有关于 JS 的内容，所以 webpack 社区使用这种特殊的 \`import\` 语句来声明对非 JS 内容的引用。
+> **备注：** 译者补充：webpack 可用于打包 JS 和非 JS 的内容 (当然，非 JS 的内容需要一些插件或加载器来处理)，但是 JavaScript 标准只有关于 JS 的内容，所以 webpack 社区使用这种特殊的 `import` 语句来声明对非 JS 内容的引用。
 >
 > 详情参见 webpack 官方和社区，截止目前 (2020 年下旬)，webpack 仍是现代前端工作中必不可少的技能之一。
 

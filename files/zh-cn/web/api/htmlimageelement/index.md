@@ -11,7 +11,7 @@ slug: Web/API/HTMLImageElement
 ## Constructor
 
 - {{domxref("HTMLImageElement.Image()", "Image()")}}
-  - : `Image()` 构造器，带有两个可选的参数，分别表示资源的宽度和高度，创建了一个尚未被插入 DOM 树中的 `HTMLImageElement` 实例。When called without parameters, ` new ``Image() ` is equivalent to calling {{DOMxRef("Document.createElement()", 'document.createElement("img")')}}.
+  - : `Image()` 构造器，带有两个可选的参数，分别表示资源的宽度和高度，创建了一个尚未被插入 DOM 树中的 `HTMLImageElement` 实例。When called without parameters, `new Image()` is equivalent to calling {{DOMxRef("Document.createElement()", 'document.createElement("img")')}}.
 
 ## 属性
 

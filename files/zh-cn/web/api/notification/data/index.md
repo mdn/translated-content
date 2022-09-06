@@ -12,7 +12,7 @@ slug: Web/API/notification/data
 
 附加语法糖：关于克隆对象的速度研究。
 
-https\://dassur.ma/things/deep-copy/
+<https://dassur.ma/things/deep-copy/>
 
 博客作者认为目前（参考）最快的 object 克隆、复制方式。
 

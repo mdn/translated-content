@@ -72,7 +72,7 @@ A [pointer](http://phaser.io/docs/2.6.1/Phaser.Pointer.html) represents a single
 
 You can add more pointers to the game by using; `this.game.input.addPointer` up to ten pointers can be managed simultaneously. The most recently used pointer is available in the `this.game.input.activePointer` object — the most recent finger active on the screen.
 
-If you need to access a specific pointer, they are all available at, ` this.game.input.pointer1``this.game.input.pointer2 `, etc. They are assigned dynamically, so if you put three fingers on the screen, then, ` pointer1``pointer2 `, and `pointer3` will be active. Removing the second finger, for example, won't affect the other two, and setting it back again will use the first available property, so `pointer2` will be used again.
+If you need to access a specific pointer, they are all available at, `this.game.input.pointer1`, `this.game.input.pointer2`, etc. They are assigned dynamically, so if you put three fingers on the screen, then, `pointer1`, `pointer2`, and `pointer3` will be active. Removing the second finger, for example, won't affect the other two, and setting it back again will use the first available property, so `pointer2` will be used again.
 
 You can quickly get the coordinates of the most recently active pointer via the `this.game.input.x` and `this.game.input.y` variables.
 

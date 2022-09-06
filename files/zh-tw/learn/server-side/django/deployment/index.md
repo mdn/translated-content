@@ -201,7 +201,7 @@ There are a lot of ways of to work with git, but one of the easiest is to first 
 
 4. Press **Create repository**.
 5. Click the green "**Clone or download**" button on your new repo page.
-6. Copy the URL value from the text field inside the dialog box that appears (it should be something like: **https\://github.com/_\<your_git_user_id>_/django_local_library.git**).
+6. Copy the URL value from the text field inside the dialog box that appears (it should be something like: `https://github.com/<your_git_user_id>/django_local_library.git`).
 
 Now the repository ("repo") is created we are going to want to clone it on our local computer:
 
@@ -315,7 +315,7 @@ The database connection information is supplied to the web dyno using a configur
 Install _dj-database-url_ locally so that it becomes part of our [requirements](#requirements) for Heroku to set up on the remote server:
 
 ```bash
-$ pip3 install dj-database-url
+pip3 install dj-database-url
 ```
 
 ##### settings.py
@@ -395,7 +395,7 @@ The steps to set up _WhiteNoise_ to use with the project are:
 Install whitenoise locally using the following command:
 
 ```bash
-$ pip3 install whitenoise
+pip3 install whitenoise
 ```
 
 ##### settings.py

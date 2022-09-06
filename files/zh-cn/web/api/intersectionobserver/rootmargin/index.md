@@ -20,7 +20,7 @@ var marginString = IntersectionObserver.rootMargin;
 
 这个属性返回的字符串也许会与{{domxref("IntersectionObserver")}}被配置时所指定的值有所差别。浏览器可以改变这些值。
 
-` 如果 rootMargin 在对象初始化的时候未被指定，它将被设置成默认值``"0px 0px 0px 0px"，这将意味着在原根节点边界框与目标边界之间计算交叉值。 ` {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "The root element and root margin")}} 描述了 rootMargin 的更加深入的使用方法。
+如果 rootMargin 在对象初始化的时候未被指定，它将被设置成默认值 `"0px 0px 0px 0px"`，这将意味着在原根节点边界框与目标边界之间计算交叉值。{{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "The root element and root margin")}} 描述了 rootMargin 的更加深入的使用方法。
 
 ## 规范
 
