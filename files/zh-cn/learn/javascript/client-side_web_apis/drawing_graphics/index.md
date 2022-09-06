@@ -398,7 +398,7 @@ ctx.fillText('Canvas text', 50, 150);
 
 ### 创建一个循环
 
-在画布中使用循环是件有趣的事，你可以在 [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) 循环中运行画布命令，和其他 JS 代码一样。
+在画布中使用循环是件有趣的事，你可以在 [`for`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for) 循环中运行画布命令，和其他 JS 代码一样。
 
 我们来创建一个简单的示例。
 
@@ -520,7 +520,7 @@ loop();
 4. 使用 {{domxref("CanvasRenderingContext2D.restore", "restore()")}} 恢复第 2 步中保存的状态。
 5. 调用 `requestAnimationFrame()` 准备下一帧动画。
 
-> **备注** `save()` 和 `restore()` 这里暂不展开，可以访问 [变形](/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations) 教程（及后续内容）来获取详细信息。
+> **备注** `save()` 和 `restore()` 这里暂不展开，可以访问 [变形](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Transformations) 教程（及后续内容）来获取详细信息。
 
 ### 一个简单的人物动画
 
@@ -596,7 +596,7 @@ loop();
 
     将整个功能块放置在 `if (posX % 13 === 0) { ... }` 内。用“模（`%`）运算符”（即 [求余运算符](</en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_()>)）来检测 `posX` 是否可以被 13 整除。如果整除，则通过增加 `sprite` 的值转至下一个精灵（到 5 号精灵时归零）。这实际上意味着每隔 13 帧才更新一次精灵，每秒大约更新 5 帧（`requestAnimationFrame()` 每秒最多调用 60 帧）。我们故意放慢了帧率，因为精灵图只有六个，且如果每秒显示 60 帧的话，这个角色就会快到起飞。
 
-    外部程序块中用一个 [`if ... else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) 语句来检测 `sprite` 的值是否为 5（精灵序号在 0 - 5 间循环，因此 5 代表最后一个精灵）。 如果最后一个精灵已经显示，就把 `sprite` 重置为 0，否则加 1。
+    外部程序块中用一个 [`if ... else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 语句来检测 `sprite` 的值是否为 5（精灵序号在 0 - 5 间循环，因此 5 代表最后一个精灵）。 如果最后一个精灵已经显示，就把 `sprite` 重置为 0，否则加 1。
 
 9. 下一步要算出每帧 `posX` 的值，在上文代码末尾添加以下内容：
 
@@ -687,17 +687,17 @@ draw();
 
 2D 内容告一段落，现在简单了解一下 3D 画布。3D 画布内容可通过的 [WebGL](/zh-CN/docs/Web/API/WebGL_API) API 实现，尽管它和 2D canvas API 都可在 {{htmlelement("canvas")}} 元素上进行渲染，但两者是彼此独立的。
 
-WebGL 基于 [OpenGL](/en-US/docs/Glossary/OpenGL) 图形编程语言实现，可直接与 [GPU](/en-US/docs/Glossary/GPU) 通信，基于此，编写纯 WebGL 代码与常规的 JavaScript 不尽相同，更像 C++ 那样的底层语言，更加复杂，但无比强大。
+WebGL 基于 [OpenGL](/zh-CN/docs/Glossary/OpenGL) 图形编程语言实现，可直接与 [GPU](/zh-CN/docs/Glossary/GPU) 通信，基于此，编写纯 WebGL 代码与常规的 JavaScript 不尽相同，更像 C++ 那样的底层语言，更加复杂，但无比强大。
 
 ### 使用库
 
-由于 3D 绘图的复杂性，大多数人写代码时会使用第三方 JavaScript 库（比如 [Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)、[PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) 或 [Babylon.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js)）。大多数库的原理都基本类似，提供创建基本的、自定义性状的功能、视图定位摄影和光效、表面纹理覆盖，等等。库负责 与 WebGL 通信，你只需完成更高阶工作。
+由于 3D 绘图的复杂性，大多数人写代码时会使用第三方 JavaScript 库（比如 [Three.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)、[PlayCanvas](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) 或 [Babylon.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js)）。大多数库的原理都基本类似，提供创建基本的、自定义性状的功能、视图定位摄影和光效、表面纹理覆盖，等等。库负责 与 WebGL 通信，你只需完成更高阶工作。
 
 接触任何一个库都意味着要学一套全新的 API（这里是第三方的版本），但与纯 WebGL 编程都大同小异。
 
 ### 创建魔方
 
-我们来看一个简单的示例，用一套 WebGL 库（这里我们选择 [Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)，最流行的 3D 绘图库之一）来创建我们在本文开头看到的旋转魔方。
+我们来看一个简单的示例，用一套 WebGL 库（这里我们选择 [Three.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)，最流行的 3D 绘图库之一）来创建我们在本文开头看到的旋转魔方。
 
 1. 首先，下载 [index.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/threejs-cube/index.html)、[metal003.png](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/threejs-cube/metal003.png) 并保存在同一个文件夹。图片将用于魔方的表面纹理。
 2. 然后，继续在同一个文件夹内创建 `main.js` 文件。
@@ -810,7 +810,7 @@ WebGL 基于 [OpenGL](/en-US/docs/Glossary/OpenGL) 图形编程语言实现，�
 
 - [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)：一个详尽的教程系列，更细致深入地讲解了 2D 画布所需的知识。必读。
 - [WebGL 教程](/zh-CN/docs/Web/API/WebGL_API/Tutorial)：纯 WebGL 编程教程系列。
-- [用 Three.js 创建一个简单的示例](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)：Three.js 基础教程。我们还提供 [PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) 和 [Babylon.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js) 的基础教程。
+- [用 Three.js 创建一个简单的示例](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)：Three.js 基础教程。我们还提供 [PlayCanvas](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) 和 [Babylon.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js) 的基础教程。
 - [游戏开发](/zh-CN/docs/Games)：MDN web 游戏开发目录页。提供与 2D、3D 画布相关的实用教程和技术，可参考“技术”和“教程”菜单项。
 
 ## 示例

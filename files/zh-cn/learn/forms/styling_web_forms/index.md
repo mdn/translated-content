@@ -5,7 +5,7 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
-在这篇文章中，用户将学习如何使用 HTML 表单和 CSS 以使页面更加美观。令人惊讶的是，这可能有点棘手。由于历史和技术的原因，表单部件不能很好地与 CSS 配合工作。由于这些困难，许多开发人员选择[构建自己的 HTML 小部件](/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets)以获得更好的控制和视觉观感。然而，在现代浏览器中，web 设计者越来越多地控制表单元素的设计。让我们深入研究。
+在这篇文章中，用户将学习如何使用 HTML 表单和 CSS 以使页面更加美观。令人惊讶的是，这可能有点棘手。由于历史和技术的原因，表单部件不能很好地与 CSS 配合工作。由于这些困难，许多开发人员选择[构建自己的 HTML 小部件](/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets)以获得更好的控制和视觉观感。然而，在现代浏览器中，web 设计者越来越多地控制表单元素的设计。让我们深入研究。
 
 ## 为什么使用 CSS 美化表单组件这么困难？
 
@@ -15,7 +15,7 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
 
 由于用户习惯于各自平台的视觉外观，浏览器厂商不愿意对表单控件样式进行调整;到目前为止，要重建所有控件以使它们可美化仍然是非常困难的。
 
-即使在今天，仍然没有一个浏览器完全实现了 CSS 2.1。然而，随着时间的推移，浏览器厂商已经改进了对表单元素的 CSS 支持，尽管可用性的声誉不好，但现在已经可以使用 CSS 来设计[HTML 表单](/en-US/docs/HTML/Forms)。
+即使在今天，仍然没有一个浏览器完全实现了 CSS 2.1。然而，随着时间的推移，浏览器厂商已经改进了对表单元素的 CSS 支持，尽管可用性的声誉不好，但现在已经可以使用 CSS 来设计[HTML 表单](/zh-CN/docs/HTML/Forms)。
 
 ### 涉及到 CSS，并非所有组件都是平等的
 
@@ -44,7 +44,7 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
 
 有些元素根本不能用应用 CSS 样式。这些包括：所有高级用户界面小部件，如范围，颜色或日期控件; 和所有下拉小部件，包括{{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}}和{{HTMLElement("datalist")}} 元素。文件选择器小部件也被称为不可样式化。新的{{HTMLElement("progress")}}和{{HTMLElement("meter")}} 元素也属于这个类别。
 
-所有这些小部件的主要问题来自于它们具有非常复杂的结构，而 CSS 目前还不足以表达这些小部件的所有细微部分。如果你想定制这些小部件，你必须依靠 JavaScript 来构建一个你能够应用样式的 DOM 树。我们会在 [How to build custom form widgets](/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets)一文中探索如何实现这一点。
+所有这些小部件的主要问题来自于它们具有非常复杂的结构，而 CSS 目前还不足以表达这些小部件的所有细微部分。如果你想定制这些小部件，你必须依靠 JavaScript 来构建一个你能够应用样式的 DOM 树。我们会在 [How to build custom form widgets](/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets)一文中探索如何实现这一点。
 
 ## 基本样式美化
 
@@ -52,7 +52,7 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
 
 ### Search 字段
 
-搜索框是唯一一种应用 CSS 样式有点棘手的文本字段。在基于 WebKit 的浏览器（Chrome，Safari 等）上，您必须使用`-webkit-appearance`专有属性来调整它。我们在文章中进一步讨论这个属性：[HTML 表单的高级样式](/en-US/docs/Advanced_styling_for_HTML_forms)。
+搜索框是唯一一种应用 CSS 样式有点棘手的文本字段。在基于 WebKit 的浏览器（Chrome，Safari 等）上，您必须使用`-webkit-appearance`专有属性来调整它。我们在文章中进一步讨论这个属性：[HTML 表单的高级样式](/zh-CN/docs/Advanced_styling_for_HTML_forms)。
 
 #### Example
 
@@ -162,7 +162,7 @@ textarea {
 
 ### The HTML
 
-HTML 只比我们在 [the first article of this guide](/en-US/docs/HTML/Forms/My_first_HTML_form) 中涉及到的多一些；它只有一些额外的 id 和 title。
+HTML 只比我们在 [the first article of this guide](/zh-CN/docs/HTML/Forms/My_first_HTML_form) 中涉及到的多一些；它只有一些额外的 id 和 title。
 
 ```html
 <form>
@@ -204,7 +204,7 @@ HTML 只比我们在 [the first article of this guide](/en-US/docs/HTML/Forms/My
 1. 打开 fontsquirrel [网络字体生成器](https://www.fontsquirrel.com/tools/webfont-generator).
 2. 使用表单，上传你的字体文件并生成一个网络字体包，将这个包下载到你的电脑上。
 3. 解压提供的 zip 文件。
-4. 再解压后的文件内容里你会找到两个 `.woff` 文件和两个`.woff2` 文件。将这四个文件拷贝到一个叫 fonts 的文件夹里，而 fonts 文件夹位于和上面相同的文件夹里。我们为每种字体使用两个不同的文件以最大限度地保证浏览器兼容性。查看我们的 [Web 字体](/en-US/docs/Learn/CSS/Styling_text/Web_fonts) 一文获取更多信息。
+4. 再解压后的文件内容里你会找到两个 `.woff` 文件和两个`.woff2` 文件。将这四个文件拷贝到一个叫 fonts 的文件夹里，而 fonts 文件夹位于和上面相同的文件夹里。我们为每种字体使用两个不同的文件以最大限度地保证浏览器兼容性。查看我们的 [Web 字体](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts) 一文获取更多信息。
 
 ### CSS
 
@@ -339,7 +339,7 @@ textarea {
 }
 ```
 
-{{HTMLElement("button")}} 元素上使用 CSS 非常方便；你可以做你任何想做得事情，甚至包括使用 [伪元素](/en-US/docs/CSS/Pseudo-elements)：
+{{HTMLElement("button")}} 元素上使用 CSS 非常方便；你可以做你任何想做得事情，甚至包括使用 [伪元素](/zh-CN/docs/CSS/Pseudo-elements)：
 
 ```css
 button {

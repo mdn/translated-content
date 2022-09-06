@@ -10,17 +10,17 @@ slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
 
 我们会简单叙述，因为别处已有很多关于 Web 历史的详尽说明，稍后我们会链接到它们（如果那您对更多细节内容感兴趣，也请试着在您惯用的搜索引擎中搜索“Web 的历史”以获取相关内容。）
 
-在 20 世纪 60 年代末期，美国军方开发了一个名为 [ARPANET](/en-US/docs/Glossary/Arpanet) 的通信网络。这可以认为是 Web 的先驱，因为它基于 [分组交换（ packet switching）](https://en.wikipedia.org/wiki/Packet_switching) 进行工作，并且首次实现了 [TCP/IP 协议族（TCP/IP protocol suite）](https://en.wikipedia.org/wiki/Internet_protocol_suite) 。这两种技术构成了互联网基础设施的基础。
+在 20 世纪 60 年代末期，美国军方开发了一个名为 [ARPANET](/zh-CN/docs/Glossary/Arpanet) 的通信网络。这可以认为是 Web 的先驱，因为它基于 [分组交换（ packet switching）](https://en.wikipedia.org/wiki/Packet_switching) 进行工作，并且首次实现了 [TCP/IP 协议族（TCP/IP protocol suite）](https://en.wikipedia.org/wiki/Internet_protocol_suite) 。这两种技术构成了互联网基础设施的基础。
 
 1980 年，Tim Berners-Lee（通常称之为 TimBL）写了一个叫 ENQUIRE 的笔记本程序，这个程序实现了不同节点之间链接的概念。听起来有点熟悉对吧？
 
 快进到 1989 年，TimBL 在 CERN 撰写了 [《Information Management: A Proposal》](https://www.w3.org/History/1989/proposal.html) 和《HyperText》 ； 这两个出版物共同为 Web 将如何工作做了铺垫。两个出版物获得了极大的关注，这足以说服 TimBL 的上司让他继续前进，并创建一个全球超文本系统。
 
-到 1990 年底，TimBL 已经创建了运行第一个版本的 Web 所需的所有东西—— [HTTP](/en-US/docs/Web/HTTP)，[HTML](/en-US/docs/Web/HTML)，名为 [WorldWideWeb](https://en.wikipedia.org/wiki/WorldWideWeb) 的第一个 Web 浏览器，一个 HTTP 服务器和一些用于查看的网页。
+到 1990 年底，TimBL 已经创建了运行第一个版本的 Web 所需的所有东西—— [HTTP](/zh-CN/docs/Web/HTTP)，[HTML](/zh-CN/docs/Web/HTML)，名为 [WorldWideWeb](https://en.wikipedia.org/wiki/WorldWideWeb) 的第一个 Web 浏览器，一个 HTTP 服务器和一些用于查看的网页。
 
 在随后的几年中，随着多个浏览器的发布，数以千计 Web 服务器的建立，上百万网页的生成，Web 爆发式发展。OK，这只是对事件非常粗略的描述，但我向您说过会简单叙述。
 
-最后一个值得分享的重要事件在 1994 年，TimBL 建立了[万维网联盟（World Wide Web Consortium，W3C）](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium)，该组织汇集了来自许多不同技术公司的代表，共同制定 Web 技术规范。随后其他的技术像 [CSS](/en-US/docs/Web/CSS) 和 [JavaScript](/en-US/docs/Web/JavaScript) 出现了，Web 开始看起来更像我们现在所了解的 Web。
+最后一个值得分享的重要事件在 1994 年，TimBL 建立了[万维网联盟（World Wide Web Consortium，W3C）](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium)，该组织汇集了来自许多不同技术公司的代表，共同制定 Web 技术规范。随后其他的技术像 [CSS](/zh-CN/docs/Web/CSS) 和 [JavaScript](/zh-CN/docs/Web/JavaScript) 出现了，Web 开始看起来更像我们现在所了解的 Web。
 
 ## Web 标准
 
@@ -56,7 +56,7 @@ _唯一不变的就是变化。_
 
 ## 现代网络技术概述
 
-如果您想成为前端 Web 开发人员，可以学习多种技术。在本节中，我们将简要描述它们。有关其中某些功能是如何协同工作的详尽说明，请阅读我们的文章 [Web 是如何工作的](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)。
+如果您想成为前端 Web 开发人员，可以学习多种技术。在本节中，我们将简要描述它们。有关其中某些功能是如何协同工作的详尽说明，请阅读我们的文章 [Web 是如何工作的](/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works)。
 
 ### 浏览器
 
@@ -64,7 +64,7 @@ _唯一不变的就是变化。_
 
 ### HTTP
 
-超文本传输协议（Hypertext Transfer Protocol，[HTTP](/en-US/docs/Web/HTTP/Basics_of_HTTP)），它允许 Web 浏览器与 Web 服务器（存储网站的位置）进行通信。典型的通信就像这样
+超文本传输协议（Hypertext Transfer Protocol，[HTTP](/zh-CN/docs/Web/HTTP/Basics_of_HTTP)），它允许 Web 浏览器与 Web 服务器（存储网站的位置）进行通信。典型的通信就像这样
 
 ```plain
 "你好 Web 服务器。你可以给我用于渲染 bbc.co.uk 的文件吗？"
@@ -78,7 +78,7 @@ HTTP 消息（称为请求和响应）的实际语法不是人类可读的，但
 
 ### HTML , CSS , 和 JavaScript
 
-[HTML](/en-US/docs/Web/HTML)，[CSS](/en-US/docs/Web/CSS)，和 [JavaScript](/en-US/docs/Web/JavaScript) 是您用来建立网站的三种主要技术：
+[HTML](/zh-CN/docs/Web/HTML)，[CSS](/zh-CN/docs/Web/CSS)，和 [JavaScript](/zh-CN/docs/Web/JavaScript) 是您用来建立网站的三种主要技术：
 
 - 超文本标记语言（HTML）是一种标记语言，由可以包装（标记）内容以赋予其含义（语义）和结构的各种元素组成。简单的 HTML 看起来像这样：
 
@@ -115,8 +115,8 @@ HTTP 消息（称为请求和响应）的实际语法不是人类可读的，但
 
 一旦了解了可用于构建网页的“原始”技术（例如 HTML，CSS 和 JavaScript），您很快就会发现各种可用于使工作更轻松或更有效的工具。 例如：
 
-- 现代浏览器中的 [开发人员工具（developer tools）](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)可用于调试代码。
-- 可用于运行测试以显示您的代码是否按预期运行的 [测试工具（Testing tools）](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing)。
+- 现代浏览器中的 [开发人员工具（developer tools）](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)可用于调试代码。
+- 可用于运行测试以显示您的代码是否按预期运行的 [测试工具（Testing tools）](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)。
 - 建立在 JavaScript 之上的库和框架，使您可以更快，更有效地构建某些类型的网站。
 - 所谓的“Linters” ，它包含了一组规则，检查您的代码之后，会突出显示您未正确遵循规则的地方。
 - Minifiers，它将代码文件中的所有空格删除以使其更小，从而可以更快地从服务器下载。
@@ -154,4 +154,4 @@ HTML，CSS 和 JavaScript 是前端（或客户端）语言，这意味着它们
 ## See also
 
 - [History of the World Wide Web](https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web)
-- [How does the internet work?](/en-US/docs/Learn/Common_questions/How_does_the_Internet_work)
+- [How does the internet work?](/zh-CN/docs/Learn/Common_questions/How_does_the_Internet_work)

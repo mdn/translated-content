@@ -42,7 +42,7 @@ slug: Learn/JavaScript/Building_blocks/Events
 - 播放、暂停、关闭视频。
 - 发生错误。
 
-如果您想看看更多其他的事件，请移步至 MDN 的[Event reference](/en-US/docs/Web/Events)。
+如果您想看看更多其他的事件，请移步至 MDN 的[Event reference](/zh-CN/docs/Web/Events)。
 
 每个可用的事件都会有一个**事件处理器**，也就是事件触发时会运行的代码块。当我们定义了一个用来回应事件被激发的代码块的时候，我们说我们**注册了一个事件处理器**。注意事件处理器有时候被叫做**事件监听器**——从我们的用意来看这两个名字是相同的，尽管严格地来说这块代码既监听也处理事件。监听器留意事件是否发生，然后处理器就是对事件发生做出的回应。
 
@@ -87,9 +87,9 @@ btn.onclick = function() {
 
 值得注意的是并不是只有 JavaScript 使用事件——大多的编程语言都有这种机制，并且它们的工作方式不同于 JavaScript。实际上，JavaScript 网页上的事件机制不同于在其他环境中的事件机制。
 
-比如，[Node.js](/en-US/docs/Learn/Server-side/Express_Nodejs) 是一种非常流行的允许开发者使用 JavaScript 来建造网络和服务器端应用的运行环境。[Node.js event model](https://nodejs.org/docs/latest-v5.x/api/events.html) 依赖定期监听事件的监听器和定期处理事件的处理器——虽然听起来好像差不多，但是实现两者的代码是非常不同的，Node.js 使用像 on ( ) 这样的函数来注册一个事件监听器，使用 once ( ) 这样函数来注册一个在运行一次之后注销的监听器。 [HTTP connect event docs](https://nodejs.org/docs/latest-v5.x/api/http.html#http_event_connect) 提供了很多例子。
+比如，[Node.js](/zh-CN/docs/Learn/Server-side/Express_Nodejs) 是一种非常流行的允许开发者使用 JavaScript 来建造网络和服务器端应用的运行环境。[Node.js event model](https://nodejs.org/docs/latest-v5.x/api/events.html) 依赖定期监听事件的监听器和定期处理事件的处理器——虽然听起来好像差不多，但是实现两者的代码是非常不同的，Node.js 使用像 on ( ) 这样的函数来注册一个事件监听器，使用 once ( ) 这样函数来注册一个在运行一次之后注销的监听器。 [HTTP connect event docs](https://nodejs.org/docs/latest-v5.x/api/http.html#http_event_connect) 提供了很多例子。
 
-另外一个例子：您可以使用 JavaScript 来开发跨浏览器的插件（使用 [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) 开发技术。事件模型和网站的事件模型是相似的，仅有一点点不同——事件监听属性是大驼峰的（如`onMessage`而不是`onmessage`），还需要与 `addListener` 函数结合， 参见 [runtime.onMessage page](/en-US/Add-ons/WebExtensions/API/runtime/onMessage#Examples) 上的一个例子。
+另外一个例子：您可以使用 JavaScript 来开发跨浏览器的插件（使用 [WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) 开发技术。事件模型和网站的事件模型是相似的，仅有一点点不同——事件监听属性是大驼峰的（如`onMessage`而不是`onmessage`），还需要与 `addListener` 函数结合， 参见 [runtime.onMessage page](/zh-CN/Add-ons/WebExtensions/API/runtime/onMessage#Examples) 上的一个例子。
 
 您现在不需要掌握这些，我们只想表明不同的编程环境下事件机制是不同的，
 
@@ -110,9 +110,9 @@ btn.onclick = function() {
 }
 ```
 
-这个 [`onclick`](/en-US/docs/Web/API/GlobalEventHandlers/onclick) 是被用在这个情景下的事件处理器的属性，它就像 button 其他的属性（如 [`btn.textContent`](/en-US/docs/Web/API/Node/textContent), or [`btn.style`](/en-US/docs/Web/API/HTMLElement/style)), 但是有一个特别的地方——当您将一些代码赋值给它的时候，只要事件触发代码就会运行。
+这个 [`onclick`](/zh-CN/docs/Web/API/GlobalEventHandlers/onclick) 是被用在这个情景下的事件处理器的属性，它就像 button 其他的属性（如 [`btn.textContent`](/zh-CN/docs/Web/API/Node/textContent), or [`btn.style`](/zh-CN/docs/Web/API/HTMLElement/style)), 但是有一个特别的地方——当您将一些代码赋值给它的时候，只要事件触发代码就会运行。
 
-您也可以将一个有名字的函数赋值给事件处理参数（正如我们在 [Build your own function](/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function) 中看到的），下面的代码也是这样工作的：
+您也可以将一个有名字的函数赋值给事件处理参数（正如我们在 [Build your own function](/zh-CN/docs/Learn/JavaScript/Building_blocks/Build_your_own_function) 中看到的），下面的代码也是这样工作的：
 
 ```js
 const btn = document.querySelector('button');
@@ -129,12 +129,12 @@ btn.onclick = bgChange;
 
 首先将 [random-color-eventhandlerproperty.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerproperty.html) 复制到本地，然后用浏览器打开。别慌，这只是我们之前已经进行过的一个简单随机颜色的示例的代码复制。将 `btn.onclick` 依次换成其他值，在浏览器中观察效果。
 
-- [`btn.onfocus`](/en-US/docs/Web/API/GlobalEventHandlers/onfocus)及[`btn.onblur`](/en-US/docs/Web/API/GlobalEventHandlers/onblur) — 颜色将于按钮被置于焦点或解除焦点时改变（尝试使用 Tab 移动至按钮上，然后再移开）。这些通常用于显示有关如何在置于焦点时填写表单字段的信息，或者如果表单字段刚刚填入不正确的值，则显示错误消息。
-- [`btn.ondblclick`](/en-US/docs/Web/API/GlobalEventHandlers/ondblclick) — 颜色将仅于按钮被双击时改变。
-- [`window.onkeypress`](/en-US/docs/Web/API/GlobalEventHandlers/onkeypress), [`window.onkeydown`](/en-US/docs/Web/API/GlobalEventHandlers/onkeydown), [`window.onkeyup`](/en-US/docs/Web/API/GlobalEventHandlers/onkeyup) — 当按钮被按下时颜色会发生改变。`keypress` 指的是通俗意义上的按下按钮 (按下并松开), 而 `keydown` 和 `keyup` 指的是按键动作的一部分，分别指按下和松开。注意如果你将事件处理器添加到按钮本身，它将不会工作 — 我们只能将它添加到代表整个浏览器窗口的 [window](/en-US/docs/Web/API/Window)对象中。
-- [`btn.onmouseover`](/en-US/docs/Web/API/GlobalEventHandlers/onmouseover) 和 [`btn.onmouseout`](/en-US/docs/Web/API/GlobalEventHandlers/onmouseout) — 颜色将会在鼠标移入按钮上方时发生改变，或者当它从按钮移出时。
+- [`btn.onfocus`](/zh-CN/docs/Web/API/GlobalEventHandlers/onfocus)及[`btn.onblur`](/zh-CN/docs/Web/API/GlobalEventHandlers/onblur) — 颜色将于按钮被置于焦点或解除焦点时改变（尝试使用 Tab 移动至按钮上，然后再移开）。这些通常用于显示有关如何在置于焦点时填写表单字段的信息，或者如果表单字段刚刚填入不正确的值，则显示错误消息。
+- [`btn.ondblclick`](/zh-CN/docs/Web/API/GlobalEventHandlers/ondblclick) — 颜色将仅于按钮被双击时改变。
+- [`window.onkeypress`](/zh-CN/docs/Web/API/GlobalEventHandlers/onkeypress), [`window.onkeydown`](/zh-CN/docs/Web/API/GlobalEventHandlers/onkeydown), [`window.onkeyup`](/zh-CN/docs/Web/API/GlobalEventHandlers/onkeyup) — 当按钮被按下时颜色会发生改变。`keypress` 指的是通俗意义上的按下按钮 (按下并松开), 而 `keydown` 和 `keyup` 指的是按键动作的一部分，分别指按下和松开。注意如果你将事件处理器添加到按钮本身，它将不会工作 — 我们只能将它添加到代表整个浏览器窗口的 [window](/zh-CN/docs/Web/API/Window)对象中。
+- [`btn.onmouseover`](/zh-CN/docs/Web/API/GlobalEventHandlers/onmouseover) 和 [`btn.onmouseout`](/zh-CN/docs/Web/API/GlobalEventHandlers/onmouseout) — 颜色将会在鼠标移入按钮上方时发生改变，或者当它从按钮移出时。
 
-一些事件非常通用，几乎在任何地方都可以用（比如 onclick 几乎可以用在几乎每一个元素上），然而另一些元素就只能在特定场景下使用，比如我们只能在 video 元素上使用 [onplay](/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay) 。
+一些事件非常通用，几乎在任何地方都可以用（比如 onclick 几乎可以用在几乎每一个元素上），然而另一些元素就只能在特定场景下使用，比如我们只能在 video 元素上使用 [onplay](/zh-CN/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay) 。
 
 ### 行内事件处理器 - 请勿使用
 
@@ -177,7 +177,7 @@ for (let i = 0; i < buttons.length; i++) {
 
 ### addEventListener() 和 removeEventListener()
 
-新的事件触发机制被定义在 [Document Object Model (DOM) Level 2 Events](https://www.w3.org/TR/DOM-Level-2-Events/) Specification, 这个细则给浏览器提供了一个函数 — [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener)。这个函数和事件处理属性是类似的，但是语法略有不同。我们可以重写上面的随机颜色背景代码：
+新的事件触发机制被定义在 [Document Object Model (DOM) Level 2 Events](https://www.w3.org/TR/DOM-Level-2-Events/) Specification, 这个细则给浏览器提供了一个函数 — [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener)。这个函数和事件处理属性是类似的，但是语法略有不同。我们可以重写上面的随机颜色背景代码：
 
 ```js
 const btn = document.querySelector('button');
@@ -225,7 +225,7 @@ myElement.addEventListener('click', functionB);
 
 当元素被点击时两个函数都会工作：
 
-此外，该事件机制还提供了许多其他强大的特性和选项。这对于本文来说有点超出范围，但是如果您想要阅读它们，请查看[`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener)和[`removeEventListener()`](/en-US/docs/Web/API/EventTarget/removeEventListener)参考页面。
+此外，该事件机制还提供了许多其他强大的特性和选项。这对于本文来说有点超出范围，但是如果您想要阅读它们，请查看[`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener)和[`removeEventListener()`](/zh-CN/docs/Web/API/EventTarget/removeEventListener)参考页面。
 
 ### 我该使用哪种机制？
 
@@ -478,7 +478,7 @@ video.addEventListener('click', () => video.play());
 
 #### 用 stopPropagation() 修复问题
 
-这是令人讨厌的行为，但有一种方法来解决它！标准事件对象具有可用的名为 [`stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation)的函数，当在事件对象上调用该函数时，它只会让当前事件处理程序运行，但事件不会在**冒泡**链上进一步扩大，因此将不会有更多事件处理器被运行 (不会向上冒泡)。所以，我们可以通过改变前面代码块中的第二个处理函数来解决当前的问题：
+这是令人讨厌的行为，但有一种方法来解决它！标准事件对象具有可用的名为 [`stopPropagation()`](/zh-CN/docs/Web/API/Event/stopPropagation)的函数，当在事件对象上调用该函数时，它只会让当前事件处理程序运行，但事件不会在**冒泡**链上进一步扩大，因此将不会有更多事件处理器被运行 (不会向上冒泡)。所以，我们可以通过改变前面代码块中的第二个处理函数来解决当前的问题：
 
 ```js
 video.onclick = function(e) {
@@ -491,7 +491,7 @@ video.onclick = function(e) {
 
 > **备注：** 为什么我们要弄清楚捕捉和冒泡呢？那是因为，在过去糟糕的日子里，浏览器的兼容性比现在要小得多，Netscape（网景）只使用事件捕获，而 Internet Explorer 只使用事件冒泡。当 W3C 决定尝试规范这些行为并达成共识时，他们最终得到了包括这两种情况（捕捉和冒泡）的系统，最终被应用在现在浏览器里。
 
-> **备注：** 如上所述，默认情况下，所有事件处理程序都是在冒泡阶段注册的，这在大多数情况下更有意义。如果您真的想在捕获阶段注册一个事件，那么您可以通过使用[`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener)注册您的处理程序，并将可选的第三个属性设置为 true。
+> **备注：** 如上所述，默认情况下，所有事件处理程序都是在冒泡阶段注册的，这在大多数情况下更有意义。如果您真的想在捕获阶段注册一个事件，那么您可以通过使用[`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener)注册您的处理程序，并将可选的第三个属性设置为 true。
 
 #### 事件委托
 
@@ -507,12 +507,12 @@ video.onclick = function(e) {
 
 另外，理解 JavaScript 在不同环境下使用不同的事件模型很重要——从 Web api 到其他领域，如浏览器 WebExtensions 和 Node.js(服务器端 JavaScript)。我们并不期望您现在了解所有这些领域，但是当您在学习 web 开发的过程中，理解这些事件的基础是很有帮助的。
 
-如果你有什么不明白的地方，请重新阅读这篇文章，或者联系[contact us](/en-US/Learn#Contact_us)我们寻求帮助。
+如果你有什么不明白的地方，请重新阅读这篇文章，或者联系[contact us](/zh-CN/Learn#Contact_us)我们寻求帮助。
 
 ## 参见
 
 - [Event order](http://www.quirksmode.org/js/events_order.html) (discussion of capturing and bubbling) — an excellently detailed piece by Peter-Paul Koch.
 - [Event accessing](http://www.quirksmode.org/js/events_access.html) (discussing of the event object) — another excellently detailed piece by Peter-Paul Koch.
-- [Event reference](/en-US/docs/Web/Events)
+- [Event reference](/zh-CN/docs/Web/Events)
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}

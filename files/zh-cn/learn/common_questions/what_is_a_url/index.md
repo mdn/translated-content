@@ -35,7 +35,7 @@ slug: Learn/Common_questions/What_is_a_URL
 
 ## 自主学习
 
-_还没有可用的资料。[Please, consider contributing](/en-US/docs/MDN/Getting_started)._
+_还没有可用的资料。[Please, consider contributing](/zh-CN/docs/MDN/Getting_started)._
 
 ## 深入探索
 
@@ -78,7 +78,7 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
 
 可以直接在浏览器的地址栏里输入任何 URL，来获得后台的资源。但是这仅仅是冰山一角。
 
-{{Glossary("HTML")}} 语言 — [后续会再来讨论](/en-US/docs/Learn/HTML/HTML_tags) — 对 URLs 有大量的使用：
+{{Glossary("HTML")}} 语言 — [后续会再来讨论](/zh-CN/docs/Learn/HTML/HTML_tags) — 对 URLs 有大量的使用：
 
 - 为在其他文档中新建链接，用 {{HTMLElement("a")}} ;
 - 为将文档与它的相关资源关联，用各种标签如 {{HTMLElement("link")}} 或 {{HTMLElement("script")}} ;
