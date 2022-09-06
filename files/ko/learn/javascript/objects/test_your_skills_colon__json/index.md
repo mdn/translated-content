@@ -1,7 +1,6 @@
 ---
 title: '얼마나 이해했는지 확인해보자: JSON'
 slug: Learn/JavaScript/Objects/Test_your_skills:_JSON
-translation_of: Learn/JavaScript/Objects/Test_your_skills:_JSON
 original_slug: Learn/JavaScript/Objects/얼마나_이해했는지_확인해보자:_JSON
 ---
 {{learnsidebar}}

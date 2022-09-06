@@ -1,13 +1,6 @@
 ---
 title: 미디어 쿼리 초보자 안내서
 slug: Learn/CSS/CSS_layout/Media_queries
-tags:
-  - 미디어 쿼리
-  - 씨에스에스
-  - 조판
-  - 초보자
-  - 학습
-translation_of: Learn/CSS/CSS_layout/Media_queries
 original_slug: Learn/CSS/CSS_layout/미디어_쿼리_초보자_안내서
 ---
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}

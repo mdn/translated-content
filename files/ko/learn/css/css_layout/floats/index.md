@@ -1,13 +1,6 @@
 ---
 title: Floats
 slug: Learn/CSS/CSS_layout/Floats
-tags:
-  - 다단
-  - 안내서
-  - 정리
-  - 초보자
-  - 코딩스크립팅
-translation_of: Learn/CSS/CSS_layout/Floats
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
 
