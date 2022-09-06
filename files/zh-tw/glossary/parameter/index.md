@@ -25,5 +25,5 @@ slug: Glossary/Parameter
 
 ### 技術參考
 
-- [Function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
-- [Function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
+- [Function declaration](/zh-TW/docs/Web/JavaScript/Reference/Statements/function)
+- [Function expression](/zh-TW/docs/Web/JavaScript/Reference/Operators/function)
