@@ -55,12 +55,12 @@ C나 Java와 같이 블록이 스코프를 생성하는 언어의 경우, 위 �
 ES6에서 JavaScript는 블록 스코프 변수를 생성할 수 있도록 `let`과 `const` 선언과 함께 [시간상 사각지대](/ko/docs/Web/JavaScript/Reference/Statements/let#시간상_사각지대) 등을 도입했다.
 
 ```js
-if (Math.random() > 0.5) {
-  const x = 1;
-} else {
-  const x = 2;
-}
-console.log(x); // ReferenceError: x is not defined
+    if (Math.random() > 0.5) {
+      const x = 1;
+    } else {
+      const x = 2;
+    }
+    console.log(x); // ReferenceError: x is not defined
 ```
 
 요약하자면, ES6부터 블록은 스코프로 취급되기 시작했지만, 이는 `let`과 `const`로 변수를 선언했을 때만 유효하다. 또한, ES6에서 [모듈](/ko/docs/Web/JavaScript/Guide/Modules)을 도입하면서 또 다른 스코프를 제공하게 되었다. 추후 소개하겠지만, 클로저는 이 모든 스코프의 변수를 캡처할 수 있다.
