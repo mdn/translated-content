@@ -83,7 +83,7 @@ JavaScript 有许多内置的函数，可以让您做很多有用的事情，而
 
 ## 自定义函数
 
-您在过去的课程中还看到很多定制功能 - 在代码中定义的功能，而不是在浏览器中。每当您看到一个自定义名称后面都带有括号，那么您使用的是自定义函数。在我们的[循环文章中](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)的[random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html)示例（另见完整的[源代码](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html)）中，我们包括一个如下所示的自定义函数：`draw()`
+您在过去的课程中还看到很多定制功能 - 在代码中定义的功能，而不是在浏览器中。每当您看到一个自定义名称后面都带有括号，那么您使用的是自定义函数。在我们的[循环文章中](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)的[random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html)示例（另见完整的[源代码](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html)）中，我们包括一个如下所示的自定义函数：`draw()`
 
 ```js
 function draw() {
@@ -97,7 +97,7 @@ function draw() {
 }
 ```
 
-该函数在[元素与 canvas 脚本 API 来绘制图形和动画。">`<canvas>`](/en-US/docs/Web/HTML/Element/canvas)元素中绘制 100 个随机圆。每次我们想要这样做，我们可以使用这个函数来调用这个功能
+该函数在[元素与 canvas 脚本 API 来绘制图形和动画。">`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas)元素中绘制 100 个随机圆。每次我们想要这样做，我们可以使用这个函数来调用这个功能
 
 ```js
 draw();
@@ -111,7 +111,7 @@ function random(number) {
 }
 ```
 
-我们需要这个函数，因为浏览器的内置[Math.random（）](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)函数只生成一个 0 到 1 之间的随机十进制数。我们想要一个 0 到一个指定数字之间的随机整数。
+我们需要这个函数，因为浏览器的内置[Math.random（）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/random)函数只生成一个 0 到 1 之间的随机十进制数。我们想要一个 0 到一个指定数字之间的随机整数。
 
 ## 调用函数
 
@@ -211,13 +211,13 @@ myButton.onclick = function() {
 
 > **备注：** 参数有时称为参数（arguments），属性（properties）或甚至属性（attributes）
 
-例如，浏览器的内置[Math.random（）](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)函数不需要任何参数。当被调用时，它总是返回 0 到 1 之间的随机数：
+例如，浏览器的内置[Math.random（）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/random)函数不需要任何参数。当被调用时，它总是返回 0 到 1 之间的随机数：
 
 ```js
 var myNumber = Math.random();
 ```
 
-浏览器的内置字符串[replace（）](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)函数需要两个参数：在主字符串中查找的子字符串，以及用以下替换该字符串的子字符串：
+浏览器的内置字符串[replace（）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace)函数需要两个参数：在主字符串中查找的子字符串，以及用以下替换该字符串的子字符串：
 
 ```js
 var myText = 'I am a string';
@@ -226,7 +226,7 @@ var newString = myText.replace('string', 'sausage');
 
 > **备注：** 当您需要指定多个参数时，它们以逗号分隔。
 
-还应该注意，有时参数不是必须的 —— 您不必指定它们。如果没有，该功能一般会采用某种默认行为。作为示例，数组 [join（）](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join)函数的参数是可选的：
+还应该注意，有时参数不是必须的 —— 您不必指定它们。如果没有，该功能一般会采用某种默认行为。作为示例，数组 [join（）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join)函数的参数是可选的：
 
 ```js
 var myArray = ['I', 'love', 'chocolate', 'frogs'];
@@ -306,7 +306,7 @@ output(y);
 output(z);
 ```
 
-这两个都应该返回错误沿“ [ReferenceError：y 未定义](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) ”。这是为什么？由于函数作用域 - ` y和``z `被锁定在函数`a()`和`b()`函数中，所以`output()`从全局作用域调用时无法访问它们。
+这两个都应该返回错误沿“ [ReferenceError：y 未定义](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined) ”。这是为什么？由于函数作用域 - ` y和``z `被锁定在函数`a()`和`b()`函数中，所以`output()`从全局作用域调用时无法访问它们。
 
 5.但是，从另一个函数里面调用什么呢？尝试编辑`a()`，`b()`所以他们看起来像这样：
 
@@ -375,7 +375,7 @@ a();
 b();
 ```
 
-这次`a()`和`b()`调用都会返回那个令人讨厌的 "[ReferenceError: z is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined)" error — 这是因为`output()`函数的调用和输出变量的定义不在同一个函数作用域内 - 变量对这些函数调用是不可见的。
+这次`a()`和`b()`调用都会返回那个令人讨厌的 "[ReferenceError: z is not defined](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined)" error — 这是因为`output()`函数的调用和输出变量的定义不在同一个函数作用域内 - 变量对这些函数调用是不可见的。
 
 > **备注：** 相同的范围规则不适用于循环（for（）{...}）和条件块（if（）{...}） - 它们看起来非常相似，但它们不一样！小心不要让这些困惑。
 
@@ -433,7 +433,7 @@ function subFunction3(value) {
 
 ## **测试你的技能！**
 
-你已经来到了本文章的结尾，但是你还能记得最重要的知识吗？你可以在离开这里找到一些更深度的测试来证实你已经记住了这些知识——查看[测试你的技能：函数](/en-US/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions)（英文）。后两章文本包含了这个测试需要的技能，所以你可能先需要阅读再尝试该测试。
+你已经来到了本文章的结尾，但是你还能记得最重要的知识吗？你可以在离开这里找到一些更深度的测试来证实你已经记住了这些知识——查看[测试你的技能：函数](/zh-CN/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions)（英文）。后两章文本包含了这个测试需要的技能，所以你可能先需要阅读再尝试该测试。
 
 ## 总结
 
@@ -441,8 +441,8 @@ function subFunction3(value) {
 
 ## 参见
 
-- [Functions detailed guide](/en-US/docs/Web/JavaScript/Guide/Functions) — covers some advanced features not included here.
-- [Functions reference](/en-US/docs/Web/JavaScript/Reference/Functions)
-- [Default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — advanced concept references
+- [Functions detailed guide](/zh-CN/docs/Web/JavaScript/Guide/Functions) — covers some advanced features not included here.
+- [Functions reference](/zh-CN/docs/Web/JavaScript/Reference/Functions)
+- [Default parameters](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters), [Arrow functions](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — advanced concept references
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}

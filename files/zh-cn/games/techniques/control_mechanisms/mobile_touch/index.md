@@ -25,12 +25,12 @@ el.addEventListener("touchcancel", handleCancel);
 
 这样，在移动设备上屏幕上触摸游戏的 {{htmlelement("canvas")}} 将触发这些事件，因为我们就可以随意操控游戏（如：移动太空船）。 事件如下所示：
 
-- [touchstart](/en-US/docs/Web/API/GlobalEventHandlers/ontouchstart) 当用户手指放在屏幕上触发。
-- [touchmove](/en-US/docs/Web/API/GlobalEventHandlers/ontouchmove) 当他们在屏幕上移动手指时触发。
-- [touchend](/en-US/docs/Web/API/GlobalEventHandlers/ontouchend) 当用户在屏幕上停止移动时触发。
-- [touchcancel](/en-US/docs/Web/API/GlobalEventHandlers/ontouchcancel) 触摸被取消是触发，例如当用户将他们的手指移动到屏幕之外时。
+- [touchstart](/zh-CN/docs/Web/API/GlobalEventHandlers/ontouchstart) 当用户手指放在屏幕上触发。
+- [touchmove](/zh-CN/docs/Web/API/GlobalEventHandlers/ontouchmove) 当他们在屏幕上移动手指时触发。
+- [touchend](/zh-CN/docs/Web/API/GlobalEventHandlers/ontouchend) 当用户在屏幕上停止移动时触发。
+- [touchcancel](/zh-CN/docs/Web/API/GlobalEventHandlers/ontouchcancel) 触摸被取消是触发，例如当用户将他们的手指移动到屏幕之外时。
 
-> **备注：** 这篇 [touch events](/en-US/docs/Web/API/Touch_events) 参考文章提供了更多的实例和介绍。
+> **备注：** 这篇 [touch events](/zh-CN/docs/Web/API/Touch_events) 参考文章提供了更多的实例和介绍。
 
 ### 纯 JavaScript 示例
 
