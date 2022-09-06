@@ -57,7 +57,7 @@ filter(function(element, index, array) { /* … */ }, thisArg)
 2. 元素的索引
 3. 被遍历的数组本身
 
-如果为 `filter()` 提供一个 `thisArg` 参数，则它会被作为 `callbackFn` 被调用时的 `this` 值。否则，`callbackFn` 的 `this` 值在非严格模式下将是全局对象，严格模式下为 `undefined`。`callbackFn` 函数最终观察到的 `this` 值是根据[通常函数所看到的 "this" 的规则](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)确定的。
+如果为 `filter()` 提供一个 `thisArg` 参数，则它会被作为 `callbackFn` 被调用时的 `this` 值。否则，`callbackFn` 的 `this` 值在非严格模式下将是全局对象，严格模式下为 `undefined`。`callbackFn` 函数最终观察到的 `this` 值是根据[通常函数所看到的 `this` 的规则](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)确定的。
 
 `filter()` 不会改变原数组，它返回过滤后的新数组。
 
