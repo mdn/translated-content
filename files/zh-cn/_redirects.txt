@@ -1154,6 +1154,7 @@
 /zh-CN/docs/MDN/JavaScript/Reference/Global_Objects	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 /zh-CN/docs/MDN/JavaScript/Reference/Global_Objects/String	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 /zh-CN/docs/MDN/Kuma	/zh-CN/docs/MDN/Yari
+/zh-CN/docs/MDN/MDN_Product_Advisory_Board/Members	/zh-CN/docs/conflicting/MDN/MDN_Product_Advisory_Board
 /zh-CN/docs/MDN/Structures	/zh-CN/docs/MDN/Writing_guidelines/Page_structures
 /zh-CN/docs/MDN/Structures/Compatibility_tables	/zh-CN/docs/MDN/Writing_guidelines/Page_structures
 /zh-CN/docs/MDN/Structures/Live_samples	/zh-CN/docs/MDN/Writing_guidelines/Page_structures

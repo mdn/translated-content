@@ -3835,10 +3835,6 @@
     "modified": "2020-08-06T03:36:58.834Z",
     "contributors": ["mfuji09", "silverskyvicto", "wbamberg"]
   },
-  "MDN/MDN_Product_Advisory_Board/Members": {
-    "modified": "2020-03-14T06:36:03.749Z",
-    "contributors": ["mfuji09", "silverskyvicto"]
-  },
   "MDN/Tools": {
     "modified": "2020-09-30T16:50:20.175Z",
     "contributors": [
@@ -31041,6 +31037,10 @@
   "conflicting/MDN/Community/Issues_508862bdb961f07f5a8b2e723cede961": {
     "modified": "2020-01-07T12:20:24.363Z",
     "contributors": ["peterbe", "mfuji09", "wbamberg", "Uemmra3", "hamasaki"]
+  },
+  "conflicting/MDN/MDN_Product_Advisory_Board": {
+    "modified": "2020-03-14T06:36:03.749Z",
+    "contributors": ["mfuji09", "silverskyvicto"]
   },
   "conflicting/MDN/Writing_guidelines": {
     "modified": "2020-09-30T15:30:23.873Z",

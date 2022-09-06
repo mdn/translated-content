@@ -1,6 +1,7 @@
 ---
 title: Product Advisory Board Members
-slug: MDN/MDN_Product_Advisory_Board/Members
+slug: conflicting/MDN/MDN_Product_Advisory_Board
+original_slug: MDN/MDN_Product_Advisory_Board/Members
 ---
 {{MDNSidebar}}
 
