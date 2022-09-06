@@ -16,7 +16,7 @@ original_slug: Glossary/抽象编程
 
 ```js
 class ImplementAbstraction {
-  // 设置一系列内部数字的方法
+  // 设置一系列内部成员的值的方法
   set(x, y) {
     this.a = x;
     this.b = y;
@@ -35,4 +35,4 @@ obj.display();
 
 ## 参见
 
-- 维基百科相应条目[Abstraction](https://zh.wikipedia.org/wiki/Abstraction_(computer_science))
+- 维基百科上的[抽象化](https://zh.wikipedia.org/wiki/抽象化_(計算機科學))
