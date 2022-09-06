@@ -151,7 +151,7 @@ console.log(filterItems(fruits, 'ap')); // ['apple', 'grapes']
 console.log(filterItems(fruits, 'an')); // ['banana', 'mango', 'orange']
 ```
 
-### 影响初始数组（修改，追加和删除）
+### 影响初始数组（修改、追加和删除）
 
 下面的示例测试在修改数组时 `filter()` 方法的行为。
 
