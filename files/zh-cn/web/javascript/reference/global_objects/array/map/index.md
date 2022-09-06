@@ -51,15 +51,15 @@ map(function(element, index, array) { /* … */ }, thisArg)
 
 `map` 方法会给原数组中的每个元素都按顺序调用一次 `callbackFn` 函数。`callbackFn` 每次执行后的返回值（包括 {{jsxref("undefined")}}）组合起来形成一个新数组。 `callbackFn` 函数只会在有值的索引上被调用；那些从来没被赋过值或者使用 `delete` 删除的索引则不会被调用。
 
-因为 `map` 生成一个新数组，当你不打算使用返回的新数组却使用 `map` 是违背设计初衷的，请用[`forEach`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)或者[`for-of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)替代。你不该使用`map`: A) 你不打算使用返回的新数组，或/且 B) 你没有从回调函数中返回值。
+因为 `map` 生成一个新数组，当你不打算使用返回的新数组却使用 `map` 是违背设计初衷的，请用 [`forEach`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) 或者 [`for-of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 替代。你不该使用 `map`: A) 你不打算使用返回的新数组，或/且 B) 你没有从回调函数中返回值。
 
 `callbackFn` 函数会被自动传入三个参数：数组元素，元素索引，原数组本身。
 
-如果 `thisArg` 参数提供给`map`，则会被用作回调函数的`this`值。否则 {{jsxref("undefined")}} 会被用作回调函数的`this`值。`this`的值最终相对于`callbackFn`函数的可观察性是依据[the usual rules for determining the this seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this)决定的
+如果 `thisArg` 参数提供给 `map`，则会被用作回调函数的 `this` 值。否则 {{jsxref("undefined")}} 会被用作回调函数的 `this` 值。`this` 的值最终相对于 `callbackFn` 函数的可观察性是依据 [the usual rules for determining the this seen by a function](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 决定的
 
 `map` 不修改调用它的原数组本身（当然可以在 `callbackFn` 执行时改变原数组）
 
-`map` 方法处理数组元素的范围是在 `callbackFn` 方法第一次调用之前就已经确定了。调用`map`方法之后追加的数组元素不会被`callbackFn`访问。如果存在的数组元素改变了，那么传给`callbackFn`的值是`map`访问该元素时的值。在`map`函数调用后但在访问该元素前，该元素被删除的话，则无法被访问到。
+`map` 方法处理数组元素的范围是在 `callbackFn` 方法第一次调用之前就已经确定了。调用 `map` 方法之后追加的数组元素不会被 `callbackFn` 访问。如果存在的数组元素改变了，那么传给 `callbackFn` 的值是 `map` 访问该元素时的值。在 `map` 函数调用后但在访问该元素前，该元素被删除的话，则无法被访问到。
 
 根据规范中定义的算法，如果被 map 调用的数组是离散的，新数组将也是离散的保持相同的索引为空。
 
