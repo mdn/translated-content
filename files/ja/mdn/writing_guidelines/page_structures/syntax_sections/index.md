@@ -1,11 +1,6 @@
 ---
 title: 構文の節
 slug: MDN/Writing_guidelines/Page_structures/Syntax_sections
-page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
-translation_of: MDN/Writing_guidelines/Page_structures/Syntax_sections
 original_slug: MDN/Structures/Syntax_sections
 l10n:
   sourceCommit: 1c5c86c721a5935e89065246d49506f1d4cf9567

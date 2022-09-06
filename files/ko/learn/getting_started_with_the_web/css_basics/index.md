@@ -30,13 +30,13 @@ p {
 
 아직 여러분의 HTML 문서에 CSS를 적용하는 것이 남아 있습니다. 그렇지 않으면 CSS 스타일은 그 HTML 문서가 브라우저에 표시될 때 아무 영향도 주지 않을 것입니다. (여러분이 우리 프로젝트를 따라오지 않으셨다면, [파일 다루기](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files)와 [HTML 기본](/ko/Learn/Getting_started_with_the_web/HTML_basics)을 읽고 무엇이 먼저 필요한지를 알아보시기 바랍니다.)
 
-1.  `index.html` 파일을 열고 head의 안쪽 어딘가(즉, `<head>`와 `</head>` 태그 사이)에 아래의 코드를 붙여 넣으세요:
+1. `index.html` 파일을 열고 head의 안쪽 어딘가(즉, `<head>`와 `</head>` 태그 사이)에 아래의 코드를 붙여 넣으세요:
 
     ```html
     <link href="styles/style.css" rel="stylesheet" type="text/css">
     ```
 
-2.  `index.html`을 저장하고 브라우저에서 불러오세요. 여러분은 다음과 같은 것을 보게 되실겁니다:
+2. `index.html`을 저장하고 브라우저에서 불러오세요. 여러분은 다음과 같은 것을 보게 되실겁니다:
 
 ![A mozilla logo and some paragraphs. The paragraph text has been styled red by our css.](https://mdn.mozillademos.org/files/9435/website-screenshot-styled.png)문단의 글자가 빨간색이라면 축하드립니다! 지금 여러분은 첫번째 CSS 를 성공적으로 작성하셨습니다!
 
@@ -92,7 +92,7 @@ p,li,h1 {
 | 요소 선택자 (때때로 태그 또는 타입 선택자라 불림) | 특정 타입의 모든 HTML 요소.                                                                      | `p` `<p> 를 선택`                                                        |
 | 아이디 선택자                                     | 특정 아이디를 가진 페이지의 요소 (주어진 HTML 페이지에서, 아이디당 딱 하나의 요소만 허용됩니다). | `#my-id` `<p id="my-id">` 또는 `<a id="my-id">` 를 선택                  |
 | 클래스 선택자                                     | 특정 클래스를 가진 페이지의 요소 (한 페이지에 클래스가 여러번 나타날 수 있습니다).               | `.my-class` `<p class="my-class">` 와 `<a class="my-class">` 를 선택     |
-| 속성 선택자                                       | 특정 속성을 갖는 페이지의 요소.                                                                  | `img[src]` `<img src="myimage.png">` 를 선택하지만 `<img> `는 선택 안함  |
+| 속성 선택자                                       | 특정 속성을 갖는 페이지의 요소.                                                                  | `img[src]` `<img src="myimage.png">` 를 선택하지만 `<img>` 는 선택 안함  |
 | 수도(Pseudo) 클래스 선택자                        | 특정 요소이지만 특정 상태에 있을 때만, 예를 들면, hover over 상태일 때.                          | `a:hover` `<a>` 를 선택하지만, 마우스 포인터가 링크위에 있을 때만 선택함 |
 
 탐구할 더 많은 선택자가 있습니다. 더 자세한 목록은 [선택자 가이드](/ko/docs/Web/Guide/CSS/Getting_started/Selectors)에서 찾아보세요.
@@ -103,14 +103,14 @@ p,li,h1 {
 
 > **참고:** **노트**: "px" 가 무슨 뜻인지 설명하는 주석을 추가해 두었습니다. CSS 문서의 /\* 와 \*/ 사이에 있는 것은 브라우저가 코드를 표현할 때 무시하는 **CSS 주석**입니다. 여러분이 하고 있는 것에 대한 유용한 메모를 작성하기 위한 공간입니다.
 
-1.  먼저, 돌아가서 여러분이 안전한 어딘가에 저장해 두었던 [구글 글꼴의 결과물](/ko/docs/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like#Font)을 찾으세요. `index.html` 의 head 안 어딘가에 `<link>` 요소를 추가하세요 (다시 말해서, `<head>` 와 `</head>` 태그 사이 어디에나). 이런식이 될 겁니다:
+1. 먼저, 돌아가서 여러분이 안전한 어딘가에 저장해 두었던 [구글 글꼴의 결과물](/ko/docs/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like#Font)을 찾으세요. `index.html` 의 head 안 어딘가에 `<link>` 요소를 추가하세요 (다시 말해서, `<head>` 와 `</head>` 태그 사이 어디에나). 이런식이 될 겁니다:
 
     ```html
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     ```
 
-2.  다음으로, `style.css` 파일에 이미 존재하는 rule 을 지우세요. 좋은 테스트였지만, 빨간색의 글자가 정말 좋아 보이지는 않습니다.
-3.  아래의 코드를 해당 위치에 추가하고, 구글 폰트로부터 얻은 `font-family` 코드를 placeholder 줄에 덮어쓰세요. (`font-family` 는 여러분이 글자를 위해 사용하길 원하는 글꼴을 의미합니다.) 이 rule 은 먼저 전체 페이지의 글자 크기와 기본 글꼴을 설정합니다. (`html`이 전체 페이지의 부모 요소일 때, 이 안의 모든 요소는 같은 `font-size` 와 `font-family` 를 물려 받습니다):
+2. 다음으로, `style.css` 파일에 이미 존재하는 rule 을 지우세요. 좋은 테스트였지만, 빨간색의 글자가 정말 좋아 보이지는 않습니다.
+3. 아래의 코드를 해당 위치에 추가하고, 구글 폰트로부터 얻은 `font-family` 코드를 placeholder 줄에 덮어쓰세요. (`font-family` 는 여러분이 글자를 위해 사용하길 원하는 글꼴을 의미합니다.) 이 rule 은 먼저 전체 페이지의 글자 크기와 기본 글꼴을 설정합니다. (`html`이 전체 페이지의 부모 요소일 때, 이 안의 모든 요소는 같은 `font-size` 와 `font-family` 를 물려 받습니다):
 
     ```css
     html {
@@ -119,7 +119,7 @@ p,li,h1 {
     }
     ```
 
-4.  이제 HTML body 안에 문자를 포함하는 요소 `h1`, `li` 및 `p` 를 위해 글자 크기를 설정할 것입니다. 또한 조금 더 읽기 좋게 하기 위해 body 콘텐츠의 제목을 가운데 정렬하고 줄의 높이(line-height)와 자간(lettet-spacing)도 설정할 것입니다:
+4. 이제 HTML body 안에 문자를 포함하는 요소 `h1`, `li` 및 `p` 를 위해 글자 크기를 설정할 것입니다. 또한 조금 더 읽기 좋게 하기 위해 body 콘텐츠의 제목을 가운데 정렬하고 줄의 높이(line-height)와 자간(lettet-spacing)도 설정할 것입니다:
 
     ```css
     h1 {

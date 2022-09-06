@@ -57,10 +57,8 @@ self.addEventListener('notificationclick', function(event) {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                 | Commentaires          |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | --------------------- |
-| {{SpecName('Service Workers', '#client-focus-method', 'focus()')}} | {{Spec2('Service Workers')}} | Définition initiale.. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowClient.focus")}}
+{{Compat}}

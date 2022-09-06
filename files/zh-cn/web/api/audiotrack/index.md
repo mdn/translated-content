@@ -52,14 +52,14 @@ tracks.forEach(function(track){
 
 {{domxref("AudioTrack.language","language")}}采用标准 ({{RFC(5646)}}) 格式。例如，对于美国英语，这将是`"en-US"`。
 
-## 例
+## 示例
 
-{{page("/en-US/docs/Web/API/AudioTrack/label", "Example")}}
+参见 [`AudioTrack.label`](/zh-CN/docs/Web/API/AudioTrack/label#example) 以获取简单示例，其中展示了如何获取指定媒体元素按轨道类别筛选后的包含轨道类别与标签的数组。
 
-## 产品规格
+## 规范
 
 {{Specifications}}
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioTrack")}}
+{{Compat}}

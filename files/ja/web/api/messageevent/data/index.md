@@ -1,16 +1,6 @@
 ---
 title: MessageEvent.data
 slug: Web/API/MessageEvent/data
-tags:
-  - API
-  - DOM
-  - MessageEvent
-  - プロパティ
-  - リファレンス
-  - data
-  - messaging
-browser-compat: api.MessageEvent.data
-translation_of: Web/API/MessageEvent/data
 ---
 {{APIRef("HTML DOM")}}
 

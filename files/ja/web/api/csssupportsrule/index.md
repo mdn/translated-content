@@ -1,16 +1,10 @@
 ---
 title: CSSSupportsRule
 slug: Web/API/CSSSupportsRule
-tags:
-  - API
-  - CSSOM
-  - Interface
-  - Reference
-translation_of: Web/API/CSSSupportsRule
 ---
 {{APIRef("CSSOM")}}
 
-**`CSSSupportsRule`** インターフェイスは、1 個の CSS {{cssxref("@supports")}} [@-規則](/ja/docs/Web/CSS/At-rule) を表すオブジェクトを表します。これは、{{domxref("CSSConditionRule")}} インターフェイス、さらに型定数の値が `12` (`CSSRule.SUPPORTS_RULE`) の {{domxref("CSSRule")}} インターフェイスと {{domxref("CSSGroupingRule")}} インターフェイスを実装します。
+**`CSSSupportsRule`** インターフェイスは、1 個の CSS {{cssxref("@supports")}} [アット規則](/ja/docs/Web/CSS/At-rule) を表すオブジェクトを表します。これは、{{domxref("CSSConditionRule")}} インターフェイス、さらに型定数の値が `12` (`CSSRule.SUPPORTS_RULE`) の {{domxref("CSSRule")}} インターフェイスと {{domxref("CSSGroupingRule")}} インターフェイスを実装します。
 
 ## 構文
 

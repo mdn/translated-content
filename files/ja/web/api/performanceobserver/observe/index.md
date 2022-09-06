@@ -1,14 +1,6 @@
 ---
 title: PerformanceObserver.observe()
 slug: Web/API/PerformanceObserver/observe
-tags:
-  - API
-  - PerformanceObserver
-  - Web パフォーマンス
-  - パフォーマンス
-  - メソッド
-  - リファレンス
-translation_of: Web/API/PerformanceObserver/observe
 ---
 {{APIRef("Performance Timeline API")}}
 

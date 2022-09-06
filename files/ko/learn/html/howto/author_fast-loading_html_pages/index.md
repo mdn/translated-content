@@ -48,9 +48,9 @@ Summary: Learn common-sense tips for producing HTML pages which load quickly and
 
 추가 정보:
 
-1.  [RSS 해커들을 위한 HTTP 조건부 GET](http://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
-2.  [HTTP 304: Not Modified](http://annevankesteren.nl/archives/2005/05/http-304)
-3.  [On HTTP Last-Modified and ETag](http://www.cmlenz.net/blog/2005/05/on_http_lastmod.html)
+1. [RSS 해커들을 위한 HTTP 조건부 GET](http://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
+2. [HTTP 304: Not Modified](http://annevankesteren.nl/archives/2005/05/http-304)
+3. [On HTTP Last-Modified and ETag](http://www.cmlenz.net/blog/2005/05/on_http_lastmod.html)
 
 #### 페이지 컴포넌트의 순서를 최적화
 
@@ -129,7 +129,7 @@ table-layout: fixed;
     - `{{htmlelement('script')}}`
 
       JavaScript 파일은 페이지를 불러들일 때 필요하지만 DHTML은 페이지 불러오기가 끝난 후에만 동작합니다.
-      
+
       유지보수를 위해 관련되지 않은 JavaScript를 별도의 파일로 분리하고 성능을 위해 파일 수를 최소화하세요.
 
   - `{{htmlelement('body')}}`

@@ -1,14 +1,6 @@
 ---
 title: IDBDatabase.createObjectStore
 slug: Web/API/IDBDatabase/createObjectStore
-tags:
-  - API
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Storage
-  - createObjectStore
-translation_of: Web/API/IDBDatabase/createObjectStore
 ---
 {{ APIRef("IDBDatabase") }}
 

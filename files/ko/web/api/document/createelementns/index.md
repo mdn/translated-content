@@ -27,7 +27,7 @@ var element = document.createElementNS(namespaceURI, qualifiedName[, options]);
 
 ### Return value
 
-The new [`Element`](/ko/docs/Web/API/Element "The Element interface represents an object of a Document. This interface describes methods and properties common to all kinds of elements. Specific behaviors are described in interfaces which inherit from Element but add additional functionality.").
+The new [`Element`](/ko/docs/Web/API/Element).
 
 ## Valid Namespace URIs
 
@@ -38,7 +38,7 @@ The new [`Element`](/ko/docs/Web/API/Element "The Element interface represents a
 
 ## Example
 
-This creates a new `<div>` element in the [XHTML](/ko/docs/XHTML "XHTML") namespace and appends it to the vbox element. Although this is not an extremely useful [XUL](/ko/docs/XUL "XUL") document, it does demonstrate the use of elements from two different namespaces within a single document:
+This creates a new `<div>` element in the [XHTML](/ko/docs/XHTML) namespace and appends it to the vbox element. Although this is not an extremely useful [XUL](/ko/docs/XUL) document, it does demonstrate the use of elements from two different namespaces within a single document:
 
 ```xml
 <?xml version="1.0"?>

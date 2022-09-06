@@ -1,17 +1,7 @@
 ---
 title: Response.json()
 slug: Web/API/Response/json
-tags:
-  - API
-  - Fetch
-  - JSON
-  - Method
-  - Reference
-  - メソッド
-  - Response
-translation_of: Web/API/Response/json
 original_slug: Web/API/Body/json
-browser-compat: api.Response.json
 ---
 {{APIRef("Fetch API")}}
 

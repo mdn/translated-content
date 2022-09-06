@@ -34,14 +34,11 @@ var node = treeWalker.nextSibling(); // renvoie null si le premier enfant de l'�
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | Statut                                       | Commentaire                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-treewalker-nextsibling', 'TreeWalker.nextSibling')}}                                         | {{Spec2('DOM WHATWG')}}             | Pas de changement de {{SpecName('DOM2 Traversal_Range')}} |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-TreeWalker-nextSibling', 'TreeWalker.nextSibling')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.TreeWalker.nextSibling")}}
+{{Compat}}
 
 ## Voir aussi
 

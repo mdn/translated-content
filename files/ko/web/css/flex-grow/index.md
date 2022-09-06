@@ -30,7 +30,7 @@ flex-grow: initial;
 flex-grow: unset;
 ```
 
-`flex-grow` 속성에 대한 값은 [`<number>`](#<number>) 단독으로 표현합니다.
+`flex-grow` 속성에 대한 값은 [`<number>`](#number) 단독으로 표현합니다.
 
 ### Values
 

@@ -16,7 +16,9 @@ original_slug: Web/API/GlobalEventHandlers/ondblclick
 
 ## 구문
 
-    element.ondblclick = function;
+```js
+element.ondblclick = function;
+```
 
 - `function` 은 사용자 정의 함수이며, () 나 변수를 제외하고 생성할 수 있고 또는 아래와 같이 함수명을 선언하지 않고 생성할 수 있습니다.
 

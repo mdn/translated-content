@@ -73,21 +73,8 @@ let nonce = script.nonce;
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td><strong>Spécification</strong></td>
-      <td><strong>État</strong></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('DOM WHATWG','#dom-element-getattribute','getAttribute()')}}
-      </td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.getAttribute")}}
+{{Compat}}

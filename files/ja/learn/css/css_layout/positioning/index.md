@@ -1,18 +1,6 @@
 ---
 title: 位置指定
 slug: Learn/CSS/CSS_layout/Positioning
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Guide
-  - Layout
-  - Positioning
-  - absolute
-  - fixed
-  - relative
-translation_of: Learn/CSS/CSS_layout/Positioning
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
 

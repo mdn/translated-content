@@ -1,13 +1,6 @@
 ---
 title: MDN の慣習と定義
 slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
-tags:
-  - ドキュメント
-  - ガイド
-  - ガイドライン
-  - MDN
-  - MDN メタ
-translation_of: MDN/Guidelines/Conventions_definitions
 original_slug: MDN/Guidelines/Conventions_definitions
 ---
 {{MDNSidebar}}

@@ -19,7 +19,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 
 ## 구문
 
-    regexObj.test(str)
+```js
+regexObj.test(str)
+```
 
 ### 매개변수
 

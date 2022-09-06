@@ -4,7 +4,7 @@ slug: Web/CSS/border-radius
 ---
 {{ CSSRef("CSS Borders") }}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`border-radius`** 允许你设置元素的外边框圆角。当使用一个半径时确定一个圆形，当使用两个半径时确定一个椭圆。这个 (椭) 圆与边框的交集形成圆角效果。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`border-radius`** 允许你设置元素的外边框圆角。当使用一个半径时确定一个圆形，当使用两个半径时确定一个椭圆。这个（椭）圆与边框的交集形成圆角效果。
 
 ![Images of CSS3 rounded corners: no rounding, rounding w/ an arc of circle, rounding w/ an arc of ellipse](/files/3638/border-radius-sh.png)
 
@@ -14,9 +14,7 @@ slug: Web/CSS/border-radius
 
 即使元素没有边框，圆角也可以用到 {{ Cssxref("background") }} 上面，具体效果受 {{ Cssxref("background-clip") }} 影响。
 
-当 {{Cssxref("border-collapse")}} 的值为 `collapse` 时，`border-radius` 属性不会被应用到表格（
-
-）元素上。
+当 {{Cssxref("border-collapse")}} 的值为 `collapse` 时，`border-radius` 属性不会被应用到表格元素上。
 
 _radius_
 ![all-corner.png](https://developer.mozilla.org/@api/deki/files/6138/=all-corner.png)
@@ -71,67 +69,119 @@ border-bottom-right-radius: 6px 2px;
 border-bottom-left-radius:  3px 4px;
 ```
 
-### Formal syntax
+## 形式定义
+
+{{CSSInfo}}
+
+## 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
-```
-  border: solid 10px;
-  /* the border will curve into a 'D' */
-  border-radius: 10px 40px 40px 10px;
+```html hidden
+  <pre id="example-1">
+border: solid 10px;
+border-radius: 10px 40px 40px 10px;
+  </pre>
+  <pre id="example-2">
+border: groove 1em red;
+border-radius: 2em;
+  </pre>
+  <pre id="example-3">
+background: gold;
+border: ridge gold;
+border-radius: 13em/3em;
+  </pre>
+  <pre id="example-4">
+border: none;
+border-radius: 40px 10px;
+background: gold;
+  </pre>
+  <pre id="example-5">
+border: none;
+border-radius: 50%;
+background: burlywood;
+  </pre>
+  <pre id="example-6">
+border: dotted;
+border-width: 10px 4px;
+border-radius: 10px 40px;
+  </pre>
+  <pre id="example-7">
+border: dashed;
+border-width: 2px 4px;
+border-radius: 40px;
+  </pre>
 ```
 
-```
+```css hidden
+pre {
+  margin: 20px;
+  padding: 20px;
+  width: 80%;
+  height: 80px;
+}
+
+pre#example-1 {
+  border: solid 10px;
+  border-radius: 10px 40px 40px 10px;
+}
+
+pre#example-2 {
   border: groove 1em red;
   border-radius: 2em;
-```
+}
 
-```
+pre#example-3 {
   background: gold;
   border: ridge gold;
   border-radius: 13em/3em;
-```
+}
 
-```
+pre#example-4 {
   border: none;
   border-radius: 40px 10px;
-```
+  background: gold;
+}
 
-```
+pre#example-5 {
   border: none;
   border-radius: 50%;
+  background: burlywood;
+}
+
+pre#example-6 {
+  border: dotted;
+  border-width: 10px 4px;
+  border-radius: 10px 40px;
+}
+
+pre#example-7 {
+  border: dashed;
+  border-width: 2px 4px;
+  border-radius: 40px;
+}
 ```
 
-## 在线示例
+{{EmbedLiveSample("示例", "200", "1150")}}
 
-示例 1 : <http://jsfiddle.net/Tripad/qnGKj/2/>
+### 在线示例
 
-示例 2 : <http://jsfiddle.net/Tripad/qnGKj/3/>
-
-示例 3 : <http://jsfiddle.net/Tripad/qnGKj/4/>
-
-示例 4 : <http://jsfiddle.net/Tripad/qnGKj/5/>
-
-示例 5 : <http://jsfiddle.net/Tripad/qnGKj/6/>
-
-## 注意
-
-- 在 Gecko 中，点状和虚线状圆角边框被渲染为了实线 {{ bug("382721") }}.
-- 当表格元素的 {{ Cssxref("border-collapse") }} 为 `collapse` 时 `border-radius` 不会生效。
-- 旧版本 WebKit 对于多重值有不同的处理方式，见下。
+- 示例 1：<http://jsfiddle.net/Tripad/qnGKj/2/>
+- 示例 2：<http://jsfiddle.net/Tripad/qnGKj/3/>
+- 示例 3：<http://jsfiddle.net/Tripad/qnGKj/4/>
+- 示例 4：<http://jsfiddle.net/Tripad/qnGKj/5/>
+- 示例 5：<http://jsfiddle.net/Tripad/qnGKj/6/>
 
 ## 规范
 
 {{Specifications}}
 
-{{cssinfo}}
-
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
-- 与 border-radius 相关的 CSS 属性：{{Cssxref("border-top-left-radius")}}, {{Cssxref("border-top-right-radius")}}, {{Cssxref("border-bottom-right-radius")}}, {{Cssxref("border-bottom-left-radius")}}
+- 与 border-radius 相关的 CSS 属性：{{cssxref("border-top-left-radius")}}、{{cssxref("border-top-right-radius")}}、{{cssxref("border-bottom-right-radius")}}、{{cssxref("border-bottom-left-radius")}}、{{cssxref("border-start-start-radius")}}、{{cssxref("border-start-end-radius")}}、{{cssxref("border-end-start-radius")}}、{{cssxref("border-end-end-radius")}}

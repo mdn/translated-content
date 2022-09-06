@@ -1,7 +1,6 @@
 ---
 title: Navigator.presentation
 slug: Web/API/Navigator/presentation
-translation_of: Web/API/Navigator/presentation
 ---
 {{SeeCompatTable}}{{securecontext_header}}{{APIRef("Presentation API")}}
 

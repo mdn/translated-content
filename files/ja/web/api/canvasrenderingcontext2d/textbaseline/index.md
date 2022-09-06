@@ -1,14 +1,6 @@
 ---
 title: CanvasRenderingContext2D.textBaseline
 slug: Web/API/CanvasRenderingContext2D/textBaseline
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - プロパティ
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.textBaseline
-translation_of: Web/API/CanvasRenderingContext2D/textBaseline
 ---
 {{APIRef}}
 

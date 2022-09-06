@@ -17,7 +17,9 @@ translation_of: Web/API/OffscreenCanvas/OffscreenCanvas
 
 ## 구문
 
-    new OffscreenCanvas(width, height);
+```js
+new OffscreenCanvas(width, height);
+```
 
 ### 매개 변수
 

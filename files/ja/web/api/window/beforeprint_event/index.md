@@ -1,10 +1,6 @@
 ---
 title: 'Window: beforeprint イベント'
 slug: Web/API/Window/beforeprint_event
-tags:
-  - Event
-  - Reference
-translation_of: Web/API/Window/beforeprint_event
 ---
 {{APIRef}}
 

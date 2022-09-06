@@ -53,10 +53,8 @@ La fenêtre que vous créez doit respecter la politique de même origine. Si la 
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaires |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{ SpecName('CSSOM View', '#dom-window-resizeby', 'window.resizeBy()') }} | {{ Spec2('CSSOM View') }} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.resizeBy")}}
+{{Compat}}

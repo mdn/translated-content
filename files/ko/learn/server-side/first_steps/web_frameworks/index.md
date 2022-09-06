@@ -141,7 +141,7 @@ def youngest(request):
 
 웹 프레임워크는 보통 저장된 데이터를 다른 형식으로 쉽게 생성 할 수 있는,{{glossary("JSON")}}, {{glossary("XML")}}을 포함한, 틀을 제공합니다.
 
-예를들어, Django 템플릿 시스템은 구체화된 "double-handlebars" 구조 (예를 들어 ` {`` { variable_name ``}``} `)를 사용하도록 허용하는데, 이것은 페이지가 로딩될 때 뷰 함수의 값들로 대체될 수 있습니다. 템플릿 시스템은 또한 다양한 표현식을 지원하는데 (예를 들어 : `{% expression %}`), 템플리트가 템플리트에 전달 된 목록 값을 반복하는 것과 같은 간단한 조작을 수행 할 수 있습니다.
+예를들어, Django 템플릿 시스템은 구체화된 "double-handlebars" 구조 (예를 들어 `\{{ variable_name }}`)를 사용하도록 허용하는데, 이것은 페이지가 로딩될 때 뷰 함수의 값들로 대체될 수 있습니다. 템플릿 시스템은 또한 다양한 표현식을 지원하는데 (예를 들어 : `{% expression %}`), 템플리트가 템플리트에 전달 된 목록 값을 반복하는 것과 같은 간단한 조작을 수행 할 수 있습니다.
 
 > **참고:** 다른 대부분의 템플릿 시스템들은 비슷한 문법을 사용합니다, 예: Jinja2 (Python), handlebars (JavaScript), moustache (JavaScript), 등등.
 
@@ -194,13 +194,13 @@ def youngest(request):
 
 > **참고:** [Django](https://www.djangoproject.com/) (Python) 와 [Express](http://expressjs.com/) (Node/JavaScript)의 메인 웹사이트로 가보십시오, 그리고 문서와 커뮤니티를 확인하십시오.
 >
-> 1.  (위 링크들의) 메인 사이트를 둘러보기
+> 1. (위 링크들의) 메인 사이트를 둘러보기
 >
 >     - Documentation 메뉴에 링크들(Documentation, Guide, API Reference, Getting Started등)을 클릭해보십시오.
 >     - URL routing, templates, and databases/models등을 설정하는 주제들이 보이십니까?
 >     - 해당 문서들은 명료하게 작성이 되어있습니까?
 >
-> 2.  각각의 사이트에서 mailing lists(해당 커뮤니티의 링크들을 통해서 접근할 수 있습니다)를 둘러보기
+> 2. 각각의 사이트에서 mailing lists(해당 커뮤니티의 링크들을 통해서 접근할 수 있습니다)를 둘러보기
 >
 >     - 지난 며칠동안 얼마나 많은 질문들이 올라왔습니까?
 >     - 얼마나 많은 답변이 있습니까?

@@ -1,16 +1,6 @@
 ---
 title: 'HTMLElement: paste イベント'
 slug: Web/API/HTMLElement/paste_event
-tags:
-  - API
-  - クリップボード API
-  - HTMLElement
-  - Event
-  - リファレンス
-  - ウェブ
-  - paste
-browser-compat: api.HTMLElement.paste_event
-translation_of: Web/API/HTMLElement/paste_event
 original_slug: Web/API/HTMLElement/onpaste
 ---
 {{ APIRef("HTML DOM") }}

@@ -1,10 +1,6 @@
 ---
 title: Entity header(エンティティヘッダー)
 slug: Glossary/Entity_header
-tags:
-  - Glossary
-  - WebMechanics
-translation_of: Glossary/Entity_header
 ---
 エンティティヘッダーは、メッセージボディの内容を記述する{{glossary("header", "HTTP header")}}です。エンティティヘッダーは、HTTP リクエストとレスポンスの両方で使用されます。例えば{{HTTPHeader("Content-Length")}}、{{HTTPHeader("Content-Language")}}、{{HTTPHeader("Content-Encoding")}} は、エンティティヘッダーです。
 

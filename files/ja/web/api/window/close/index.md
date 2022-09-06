@@ -1,14 +1,6 @@
 ---
 title: window.close
 slug: Web/API/Window/close
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Method
-  - Reference
-  - Window
-translation_of: Web/API/Window/close
 ---
 {{APIRef}}
 

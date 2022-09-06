@@ -1,15 +1,6 @@
 ---
 title: DataTransfer.types
 slug: Web/API/DataTransfer/types
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - drag and drop
-browser-compat: api.DataTransfer.types
-translation_of: Web/API/DataTransfer/types
 ---
 {{APIRef("HTML Drag and Drop API")}}
 

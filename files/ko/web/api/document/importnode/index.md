@@ -11,10 +11,12 @@ translation_of: Web/API/Document/importNode
 
 ## 문법
 
-    var node = document.importNode(externalNode, deep);
+```js
+var node = document.importNode(externalNode, deep);
+```
 
 - `node`
-  - : 문서에 추가될 새로운 노드입니다. 새로운 노드가 문서 트리에 추가되기 전까지, 새로운 노드의 [parentNode](/ko/docs/DOM/Node.parentNode "DOM/Node.parentNode")는 null입니다.
+  - : 문서에 추가될 새로운 노드입니다. 새로운 노드가 문서 트리에 추가되기 전까지, 새로운 노드의 [parentNode](/ko/docs/DOM/Node.parentNode)는 null입니다.
 - `externalNode`
   - : 다른 문서에서 가져올 노드입니다.
 - `deep`
@@ -35,7 +37,7 @@ document.getElementById("container").appendChild(newNode);
 
 오리지널 노드는 오리지널 문서에서 삭제되지 않습니다. 추가된 노드는 오리지널 노드의 복사본입니다.
 
-Nodes from external documents should be cloned using [`document.importNode()`](/ko/docs/Web/API/Document/importNode "현재 문서가 아닌 외부 문서의 노드를 복사하여 현재 문서에 넣을 수 있도록 해줍니다.") (or adopted using [`document.adoptNode()`](/ko/docs/Web/API/Document/adoptNode "외부 문서로부터 노드를 가져온다. 해당 노드와 그 하위트리는 기존의 문서에서 지워지고 해당 노드의 ownerDocument 는 현재 문서로 바뀐다. 그리고 그 노드는 현재의 문서에 삽입된다.")) before they can be inserted into the current document. For more on the [`Node.ownerDocument`](/ko/docs/Web/API/Node/ownerDocument "Node.ownerDocument 읽기 전용 속성은 이 node 의 최상위 document 객체를 반환합니다.") issues, see the [W3C DOM FAQ](http://www.w3.org/DOM/faq.html#ownerdoc).
+Nodes from external documents should be cloned using [`document.importNode()`](/ko/docs/Web/API/Document/importNode) (or adopted using [`document.adoptNode()`](/ko/docs/Web/API/Document/adoptNode)) before they can be inserted into the current document. For more on the [`Node.ownerDocument`](/ko/docs/Web/API/Node/ownerDocument) issues, see the [W3C DOM FAQ](http://www.w3.org/DOM/faq.html#ownerdoc).
 
 Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many sites break when this rule is enforced). We encourage Web developers to fix their code to follow this rule for improved future compatibility.
 

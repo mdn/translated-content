@@ -1,12 +1,6 @@
 ---
 title: Element.remove()
 slug: Web/API/Element/remove
-tags:
-  - API
-  - Element
-  - DOM
-  - Method
-translation_of: Web/API/Element/remove
 ---
 {{APIRef("DOM")}}
 

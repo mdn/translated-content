@@ -1,21 +1,6 @@
 ---
 title: グリッド
 slug: Learn/CSS/CSS_layout/Grids
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - CSS Grids
-  - CodingScripting
-  - Grids
-  - Guide
-  - Layout
-  - Learn
-  - Tutorial
-  - grid design
-  - grid framework
-  - grid system
-translation_of: Learn/CSS/CSS_layout/Grids
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
 

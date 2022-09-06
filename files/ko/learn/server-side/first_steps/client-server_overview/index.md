@@ -194,7 +194,7 @@ X-Cache-Info: not cacheable; request wasn't a GET or HEAD
 Content-Length: 0
 ```
 
-> **참고:** HTTP responses 그리고 requests를 보여주는 예시들은 [Fiddler ](https://www.telerik.com/download/fiddler)어플리케이션을 사용하여 캡처하였습니다, 그렇지만 당신은 스니퍼(e.g. <http://web-sniffer.net/>)나 브라우저 확장 기능인 [HttpFox ](https://addons.mozilla.org/en-US/firefox/addon/httpfox/)같은 것을 사용하여 확인 할 수 있습니다. 이러한 것을 직접 시도해보세요. 링크된 도구들을 사용하여 여러 사이트들을 돌아다니고 프로필 정보를 수정 하여 다양한 requests 와 responses를 확인해보세요. 현대의 대부분 브라우저는 네트워크 요청을 모니터 할수 있는 도구 또한 가지고 있습니다 (예를들면, Firefox가 가진 도구인 [Network Monitor](/ko/docs/Tools/Network_Monitor) ).
+> **참고:** HTTP responses 그리고 requests를 보여주는 예시들은 [Fiddler](https://www.telerik.com/download/fiddler) 어플리케이션을 사용하여 캡처하였습니다, 그렇지만 당신은 스니퍼(e.g. <http://web-sniffer.net/>)나 브라우저 확장 기능인 [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/) 같은 것을 사용하여 확인 할 수 있습니다. 이러한 것을 직접 시도해보세요. 링크된 도구들을 사용하여 여러 사이트들을 돌아다니고 프로필 정보를 수정 하여 다양한 requests 와 responses를 확인해보세요. 현대의 대부분 브라우저는 네트워크 요청을 모니터 할수 있는 도구 또한 가지고 있습니다 (예를들면, Firefox가 가진 도구인 [Network Monitor](/ko/docs/Tools/Network_Monitor) ).
 
 ## Static sites
 
@@ -206,7 +206,7 @@ Content-Length: 0
 
 ![A simplified diagram of a static web server.](https://mdn.mozillademos.org/files/13841/Basic%20Static%20App%20Server.png)
 
-유저가 페이지를 탐색하기를 원할 때, 브라우저는 지정된 HTML 페이지의 URL에 HTTP `GET` request를 보냅니다. 서버는 요청한 문서를 파일 시스템에서 탐색하고 문서와[ HTTP Response status code ](/ko/docs/Web/HTTP/Status)"`200 OK`" (성공을 알려주는)를 포함하는 HTTP응답을 반환합니다. 만약 서버가 다른 상태 코드를 반환한다면, 예를들면 "`404 Not Found`"는 파일이 서버에 없는 경우이고 "`301 Moved Permanently`"는 파일은 존재하지만 다른 위치로 리다이렉트된 경우입니다 .
+유저가 페이지를 탐색하기를 원할 때, 브라우저는 지정된 HTML 페이지의 URL에 HTTP `GET` request를 보냅니다. 서버는 요청한 문서를 파일 시스템에서 탐색하고 문서와[HTTP Response status code](/ko/docs/Web/HTTP/Status) "`200 OK`" (성공을 알려주는)를 포함하는 HTTP응답을 반환합니다. 만약 서버가 다른 상태 코드를 반환한다면, 예를들면 "`404 Not Found`"는 파일이 서버에 없는 경우이고 "`301 Moved Permanently`"는 파일은 존재하지만 다른 위치로 리다이렉트된 경우입니다 .
 
 이 정적 사이트는 오직 GET requests만 필요합니다, 왜냐하면 이 서버는 변경 할 수 있는 데이터는 저장하지 않기 때문입니다. 또한 HTTP Request 데이터에 기반한 응답을 바꿀 필요가 없습니다(예. URL 인자들 또는 쿠키).
 
@@ -230,13 +230,13 @@ HTML 템플릿을 통해 HTML 구조를 매우 쉽게 바꿀 수 있도록 만�
 
 코치가 팀 이름과 플레이어의 수를 포함한 폼을 전송하면 작업 시퀀스는 다음과 같습니다:
 
-1.  웹 브라우저는 리소스에 대한 기본 URL을 사용하여 서버에 HTTP `GET` request을 생성합니다 (`/best`) , 그리고 팀 및 플레이어의 수를 URL인자로 인코딩하거나(예. `/best?team=my_team_name&show=11)또는 URL패턴` (예. `/best/my_team_name/11/`) 으로 인코딩 합니다. 이 요청은 데이터를 꺼내오는데에만 사용 하므로(데이터가 수정 되지 않음) GET request를 사용합니다.
-2.  웹 서버는 이 요청이 "동적"임을 감지하고 처리를 위해 웹 어플리케이션에 전달합니다(웹서버는 정의된 설정에 의한 패턴 매칭 방법에 기반한 다양한 URL들을 처리하는 방법을 결정 합니다).
-3.  웹 애플리케션은 이 요청의 대한 의도가 URL에 기반한 "최고의 팀 목록"을 얻는 것 인지 확인하고 (`/best/`) URL에서 필요한 팀 이름과 플레이어의 숫자를 찾아냅니다. 웹 어플리케이션은 데이터베이스를 통해 필요한 정보를 가져옵니다 (추가 "내부의" 인자들을 사용하여 어떤 플레이어가 "최고"인지 정의하고, 또한 클라이언트측 쿠키에서 로그인한 코치의 신분을 확인 할 수 있습니다).
-4.  웹 어플리케이션은 HTML template의 자리 표시 자에 데이터(데이터베이스를 통해)를 넣은 HTML 페이지를 동적으로 생성 합니다.
-5.  웹 어플리케이션은 생성된 HTML을 (웹 서버를 경유하여) 브라우저에 HTTP 상태코드 200 ("success")와 함께 반환합니다. 만약 어떤 것이 HTML을 반환 하는 것을 막았다면 웹 어플리케이션은 다른 코드를 반환할 것 입니다 —예를들자면 "404"는 팀이 존재 하지 않음을 지시합니다.
-6.  웹 브라우저가 반환한 HTML을 처리하고 참조하는 다른 CSS파일이나 Javascript 파일을 얻기위해 별도의 요청을 보냅니다(7단계를 보십시오).
-7.  웹 사이트는 파일 시스템에 있는 정적 파일을 로드하고 즉시 브라우저에 반환합니다(올바른 파일 처리는 설정 방법과 URL패턴 매칭을 기반으로 합니다).
+1. 웹 브라우저는 리소스에 대한 기본 URL을 사용하여 서버에 HTTP `GET` request을 생성합니다 (`/best`) , 그리고 팀 및 플레이어의 수를 URL인자로 인코딩하거나(예. `/best?team=my_team_name&show=11)또는 URL패턴` (예. `/best/my_team_name/11/`) 으로 인코딩 합니다. 이 요청은 데이터를 꺼내오는데에만 사용 하므로(데이터가 수정 되지 않음) GET request를 사용합니다.
+2. 웹 서버는 이 요청이 "동적"임을 감지하고 처리를 위해 웹 어플리케이션에 전달합니다(웹서버는 정의된 설정에 의한 패턴 매칭 방법에 기반한 다양한 URL들을 처리하는 방법을 결정 합니다).
+3. 웹 애플리케션은 이 요청의 대한 의도가 URL에 기반한 "최고의 팀 목록"을 얻는 것 인지 확인하고 (`/best/`) URL에서 필요한 팀 이름과 플레이어의 숫자를 찾아냅니다. 웹 어플리케이션은 데이터베이스를 통해 필요한 정보를 가져옵니다 (추가 "내부의" 인자들을 사용하여 어떤 플레이어가 "최고"인지 정의하고, 또한 클라이언트측 쿠키에서 로그인한 코치의 신분을 확인 할 수 있습니다).
+4. 웹 어플리케이션은 HTML template의 자리 표시 자에 데이터(데이터베이스를 통해)를 넣은 HTML 페이지를 동적으로 생성 합니다.
+5. 웹 어플리케이션은 생성된 HTML을 (웹 서버를 경유하여) 브라우저에 HTTP 상태코드 200 ("success")와 함께 반환합니다. 만약 어떤 것이 HTML을 반환 하는 것을 막았다면 웹 어플리케이션은 다른 코드를 반환할 것 입니다 —예를들자면 "404"는 팀이 존재 하지 않음을 지시합니다.
+6. 웹 브라우저가 반환한 HTML을 처리하고 참조하는 다른 CSS파일이나 Javascript 파일을 얻기위해 별도의 요청을 보냅니다(7단계를 보십시오).
+7. 웹 사이트는 파일 시스템에 있는 정적 파일을 로드하고 즉시 브라우저에 반환합니다(올바른 파일 처리는 설정 방법과 URL패턴 매칭을 기반으로 합니다).
 
 데이터베이스에 업데이트를 기록하는 조작도 이와 비슷하게 처리합니다, 단 데이터베이스 업데이트는 브라우저의 HTTP request가 `POST` request로 인코딩 되어야 합니다.
 

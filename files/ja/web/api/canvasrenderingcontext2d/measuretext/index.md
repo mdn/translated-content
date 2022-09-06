@@ -1,14 +1,6 @@
 ---
 title: CanvasRenderingContext2D.measureText()
 slug: Web/API/CanvasRenderingContext2D/measureText
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - メソッド
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.measureText
-translation_of: Web/API/CanvasRenderingContext2D/measureText
 ---
 {{APIRef}}
 

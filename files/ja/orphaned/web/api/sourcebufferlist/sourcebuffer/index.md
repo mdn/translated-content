@@ -1,19 +1,6 @@
 ---
 title: 'SourceBufferList: indexed property getter'
 slug: orphaned/Web/API/SourceBufferList/SourceBuffer
-tags:
-  - API
-  - Audio
-  - Experimental
-  - Getter
-  - MSE
-  - Media Source Extensions
-  - Method
-  - Reference
-  - SourceBuffer
-  - SourceBufferList
-  - Video
-translation_of: Web/API/SourceBufferList/SourceBuffer
 original_slug: Web/API/SourceBufferList/SourceBuffer
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}

@@ -1,17 +1,6 @@
 ---
 title: SpeechRecognition.grammars
 slug: Web/API/SpeechRecognition/grammars
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - grammars
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognition/grammars
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 

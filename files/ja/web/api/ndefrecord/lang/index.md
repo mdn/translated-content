@@ -1,12 +1,6 @@
 ---
 title: NDEFRecord.lang
 slug: Web/API/NDEFRecord/lang
-tags:
-  - NDEF
-  - リファレンス
-  - ウェブ NFC
-browser-compat: api.NDEFRecord.lang
-translation_of: Web/API/NDEFRecord/lang
 ---
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 

@@ -11,7 +11,9 @@ translation_of: Web/API/Document/forms
 
 ## Syntax
 
-    collection = document.forms;
+```js
+collection = document.forms;
+```
 
 ## Example: Getting form information
 

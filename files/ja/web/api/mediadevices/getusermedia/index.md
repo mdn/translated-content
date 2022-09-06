@@ -1,22 +1,6 @@
 ---
 title: MediaDevices.getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
-tags:
-  - API
-  - Audio
-  - キャプチャ
-  - メディア
-  - メディアキャプチャとストリーム API
-  - メディアストリーム API
-  - MediaDevices
-  - メソッド
-  - 写真
-  - リファレンス
-  - 動画
-  - WebRTC
-  - getusermedia
-browser-compat: api.MediaDevices.getUserMedia
-translation_of: Web/API/MediaDevices/getUserMedia
 ---
 {{securecontext_header}}{{APIRef("Media Capture and Streams")}}
 

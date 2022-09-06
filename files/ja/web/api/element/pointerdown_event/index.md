@@ -1,19 +1,6 @@
 ---
 title: GlobalEventHandlers.onpointerdown
 slug: Web/API/Element/pointerdown_event
-tags:
-  - API
-  - Document
-  - Element
-  - GlobalEventHandlers
-  - HTML DOM
-  - Pointer Events
-  - Pointer Events API
-  - PointerEvent
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/GlobalEventHandlers/onpointerdown
 original_slug: Web/API/GlobalEventHandlers/onpointerdown
 ---
 {{APIRef("HTML DOM")}}

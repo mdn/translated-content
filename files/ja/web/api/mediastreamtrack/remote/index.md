@@ -1,16 +1,6 @@
 ---
 title: MediaStreamTrack.remote
 slug: Web/API/MediaStreamTrack/remote
-page-type: web-api-instance-property
-tags:
-  - Deprecated
-  - MediaStreamTrack
-  - Property
-  - Read-only
-  - Reference
-  - WebRTC
-browser-compat: api.MediaStreamTrack.remote
-translation_of: Web/API/MediaStreamTrack/remote
 ---
 {{APIRef("Media Capture and Streams")}}{{deprecated_header}}
 

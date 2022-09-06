@@ -49,10 +49,8 @@ La sortie ressemble à ceci :
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG','#interface-domtokenList','keys() (as iterable&lt;Node&gt;)')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMTokenList.keys")}}
+{{Compat}}

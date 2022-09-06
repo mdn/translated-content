@@ -29,13 +29,11 @@ Un double.
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                                       | Commentaire                                        |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------------- |
-| {{SpecName('Geometry Interfaces', '#dom-dompointreadonly-x', 'x')}} | {{Spec2('Geometry Interfaces')}} | La dernière version de la spécification est un ED. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMPointReadOnly.x")}}
+{{Compat}}
 
 ## Voir aussi
 

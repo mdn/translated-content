@@ -17,6 +17,6 @@ Le déchiffrement est une primitive cryptographique : il transforme un cryptogra
 
 Le déchiffrement est l'inverse du {{glossary("encryption","chiffrement")}} et si la clé reste secrète, le déchiffrement sans connaître le code secret spécifique sera mathématiquement difficile à réaliser. Le degré de difficulté dépend de la sécurité de l'algorithme cryptographique choisi et évolue au fur et à mesure des progrès de la {{glossary("cryptanalysis","cryptanalyse")}}.
 
-## Pour approfondir
+## Voir aussi
 
 - [Chiffrement et déchiffrement](/fr/docs/Archive/Security/Encryption_and_Decryption)

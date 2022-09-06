@@ -1,14 +1,6 @@
 ---
 title: ReadableStreamDefaultController.ReadableStreamDefaultController()
-slug: >-
-  orphaned/Web/API/ReadableStreamDefaultController/ReadableStreamDefaultController
-tags:
-  - API
-  - Constructor
-  - ReadableStreamDefaultController
-  - Reference
-  - Streams
-translation_of: Web/API/ReadableStreamDefaultController/ReadableStreamDefaultController
+slug: orphaned/Web/API/ReadableStreamDefaultController/ReadableStreamDefaultController
 original_slug: Web/API/ReadableStreamDefaultController/ReadableStreamDefaultController
 ---
 {{APIRef("Streams")}}

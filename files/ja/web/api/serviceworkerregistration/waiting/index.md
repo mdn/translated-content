@@ -1,15 +1,6 @@
 ---
 title: ServiceWorkerRegistration.waiting
 slug: Web/API/ServiceWorkerRegistration/waiting
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - サービスワーカー
-  - ServiceWorkerRegistration
-  - waiting
-browser-compat: api.ServiceWorkerRegistration.waiting
-translation_of: Web/API/ServiceWorkerRegistration/waiting
 ---
 {{APIRef("Service Workers API")}}
 

@@ -18,7 +18,7 @@ HTML 폼은 하나 이상의 위젯으로 만들어 진다. 이러한 위젯들�
 
 HTML을 다루기 위한 텍스트 에디터나 웹 브라우저외는 아무것도 필요 없습니다. 물론 비주얼 스튜디오, 이클립트, 앱타나 등 통합개발환경(IDE)을 사용하면 많은 이점이 있지만 이것은 만드는 사람 마음이다.
 
-HTML 폼과 일반적인 HTML 요소의 주요 차이점은 폼에 의해 수집된 데이터는 대부분 웹서버에 전송된다는 점이다. 이런 경우 데이터를 받거나 처리하는 웹서버를 설정해야한다. 웹서버를 설정하는 방법은 이 문서의 범위를 벗어나지만 알고 싶다면 다음 문서를 참조 하시오 [Sending and retrieving form data](/ko/docs/HTML/Forms/Sending_and_Retrieving_form_data "/en-US/docs/HTML/Forms/Sending_and_retrieving_form_data").
+HTML 폼과 일반적인 HTML 요소의 주요 차이점은 폼에 의해 수집된 데이터는 대부분 웹서버에 전송된다는 점이다. 이런 경우 데이터를 받거나 처리하는 웹서버를 설정해야한다. 웹서버를 설정하는 방법은 이 문서의 범위를 벗어나지만 알고 싶다면 다음 문서를 참조 하시오 [Sending and retrieving form data](/ko/docs/HTML/Forms/Sending_and_Retrieving_form_data).
 
 ## 폼 디자인하기
 
@@ -79,7 +79,7 @@ HTML코드를 다음과 같이 짤 것이다.
 
 {{HTMLElement("div")}} 요소는 코드를 편리하게 구성하고 스타일링 쉽게 만들어 줍니다. 중요한 점은 for속성은 모든{{HTMLElement("label")}} 요소에서 공식적으로 폼 위젯과 라벨을 연결하는데 사용된는 것이다. 이 속성은 위젯에 맞는 ID를 참조한다. 이 것은 몇 가지 장점이 있다. 가장 두드러 지는 것은 사용자가 라벨을 눌럿을때 그거에 맞는 위젯을 활성화 시키는 것이다.만약 이 속성에 대한 장점을 더 알고 싶다면 다음 문서에 자세히 나와있다. [How to structure an HTML form](/ko/docs/HTML/Forms/How_to_structure_an_HTML_form).
 
-{{HTMLElement("input")}} 요소의 가장 중요한 속성은 type 속성이다. 이 속성은 {{HTMLElement("input")}} 요소가 어떻게 입력을 받을 것인지 정의하기 떄문에 매우 중요하다. 이것은 아예 요소를 변경하기 떄문에 주의 해야한다. 만약 이것에 대하여 더 자세한 정보를 알고 싶다면 다음 문서를 참조 하라. [native form widgets](/ko/docs/HTML/Forms/The_native_form_widgets "/en-US/docs/HTML/Forms/The_native_forms_widgets") 우리의 예제에서는 이 속성의 기본 값인 오직 text값만 사용했다. 이 값은 제어나 유효성 검사 없이 모든 종류의 텍스트를 받아 들이는 한줄 텍스트 필드를 나타낸다. 또한 오직 이메일 주소만 받는 한줄 텍스트 필드 email값을 사용했다. 이 마지막 값은 기본 텍스트 필드를 사용자가 입력 한 데이터에 대한 몇 가지 검사를 수행하는 "지능형"필드의 종류로 전환한다. 만약 폼 데이터 유효성 확인에 대하여 자세히 알고싶다면 다음 문서를 참조 해라. [Form data validation](/ko/docs/HTML/Forms/Data_form_validation)
+{{HTMLElement("input")}} 요소의 가장 중요한 속성은 type 속성이다. 이 속성은 {{HTMLElement("input")}} 요소가 어떻게 입력을 받을 것인지 정의하기 떄문에 매우 중요하다. 이것은 아예 요소를 변경하기 떄문에 주의 해야한다. 만약 이것에 대하여 더 자세한 정보를 알고 싶다면 다음 문서를 참조 하라. [native form widgets](/ko/docs/HTML/Forms/The_native_form_widgets) 우리의 예제에서는 이 속성의 기본 값인 오직 text값만 사용했다. 이 값은 제어나 유효성 검사 없이 모든 종류의 텍스트를 받아 들이는 한줄 텍스트 필드를 나타낸다. 또한 오직 이메일 주소만 받는 한줄 텍스트 필드 email값을 사용했다. 이 마지막 값은 기본 텍스트 필드를 사용자가 입력 한 데이터에 대한 몇 가지 검사를 수행하는 "지능형"필드의 종류로 전환한다. 만약 폼 데이터 유효성 확인에 대하여 자세히 알고싶다면 다음 문서를 참조 해라. [Form data validation](/ko/docs/HTML/Forms/Data_form_validation)
 
 마지막 요소를 보기전에 다음 `<input />` VS `<textarea></textarea>요소를 봐야한다`. 이것은 이상한 HTML 요소중 하나이다. `<input>태그는 자동 닫힘 태그다 무슨 의미냐면` 요소가 끝날떄 반드시 "/"닫는 태그에 추가해야 하는 것을 의미한다. 이와 반대로, {{HTMLElement("textarea")}}은 자동 닫힘 태그가 아니다 그래서 반드시 엔딩태그를 사용하여 요소를 종료해야한다. 이 것은 기본 값을 정의하는 특정 기능에 영향을 미친다. 요소의 기본 값 정의는 반드시 value 속성을 다음과 같이 지정 해야 한다.
 

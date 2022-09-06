@@ -284,166 +284,166 @@ Also see the "Customizing select styles" example below for an example of you cou
 
 ```css
 body {
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 .select:focus {
-	border-color: blue;
+  border-color: blue;
 }
 
 html body form fieldset#custom div.select[data-multiple] div.header {
-	display: none;
+  display: none;
 }
 
 html body form fieldset#custom div.select div.header {
-	content: '↓';
-	display: -webkit-inline-box;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	padding: 0;
-	position: relative;
+  content: '↓';
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  position: relative;
 }
 
 html body form fieldset#custom div.select div.header::after {
-	content: '↓';
-	align-self: stretch;
-	display: flex;
-	align-content: center;
-	justify-content: center;
-	justify-items: center;
-	align-items: center;
-	padding: .5em;
+  content: '↓';
+  align-self: stretch;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  padding: .5em;
 }
 
 html body form fieldset#custom div.select div.header:hover:after {
-	background-color: blue;
+  background-color: blue;
 }
 
 .select .header select {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	font-family: inherit;
-	font-size: inherit;
-	padding: 0;
-	border-width: 0;
-	width: 100%;
-	flex: 1;
-	display: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  border-width: 0;
+  width: 100%;
+  flex: 1;
+  display: none;
 }
 
 .select .header select optgroup {
-	display: none;
+  display: none;
 }
 
 .select select div.option {
-	display: none;
+  display: none;
 }
 
 html body form fieldset#custom div.select {
-	user-select: none;
-	box-sizing: border-box;
-	position: relative;
-	border-radius: 4px;
-	border-style: solid;
-	border-width: 0;
-	border-color: gray;
-	width: auto;
-	display: inline-block;
+  user-select: none;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 0;
+  border-color: gray;
+  width: auto;
+  display: inline-block;
 }
 
 html body form fieldset#custom div.select:focus {
-	border-color: blue;
+  border-color: blue;
 }
 
 html body form fieldset#custom div.select:hover {
-	border-color: blue;
+  border-color: blue;
 }
 
 html body form fieldset#custom div.select[data-open] {
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 html body form fieldset#custom div.select[data-open] datalist {
-	display: initial;
+  display: initial;
 }
 
 html body form fieldset#custom div.select datalist {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	position: absolute;
-	border-style: solid;
-	border-width: 1px;
-	border-color: gray;
-	left: 0;
-	display: none;
-	width: 100%;
-	box-sizing: border-box;
-	z-index: 2;
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  border-style: solid;
+  border-width: 1px;
+  border-color: gray;
+  left: 0;
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 2;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 html body form fieldset#custom div.select datalist div.option {
-	background-color: white;
-	margin-bottom: 1px;
-	cursor: pointer;
-	padding: 0.5em;
-	border-width: 0;
+  background-color: white;
+  margin-bottom: 1px;
+  cursor: pointer;
+  padding: 0.5em;
+  border-width: 0;
 }
 
 html body form fieldset#custom div.select datalist div.option:hover {
-	background-color: blue;
-	color: white;
+  background-color: blue;
+  color: white;
 }
 
 html body form fieldset#custom div.select datalist div.option:focus {
-	background-color: blue;
-	color: white;
+  background-color: blue;
+  color: white;
 }
 
 html body form fieldset#custom div.select datalist div.option:checked {
-	background-color: blue;
-	color: white;
+  background-color: blue;
+  color: white;
 }
 
 html body form fieldset#custom div.select div.optgroup div.option[data-disabled] {
-	color: gray;
+  color: gray;
 }
 
 html body form fieldset#custom div.select div.optgroup div.option[data-checked] {
-	background-color: blue;
-	color: white;
+  background-color: blue;
+  color: white;
 }
 
 html body form fieldset#custom div.select div.optgroup div.label {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 html body form fieldset#custom div.select div.optgroup div.option div.label {
-	font-weight: normal;
-	padding: .25em;
+  font-weight: normal;
+  padding: .25em;
 }
 
 html body form fieldset#custom div.select div.header {
-	flex: 1;
-	display: flex;
-	width: auto;
-	box-sizing: border-box;
-	border-width: 1px;
-	border-style: inherit;
-	border-color: inherit;
-	border-radius: inherit;
+  flex: 1;
+  display: flex;
+  width: auto;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: inherit;
+  border-color: inherit;
+  border-radius: inherit;
 }
 
 html body form fieldset#custom div.select div.header span {
-	flex: 1;
-	padding: .5em;
+  flex: 1;
+  padding: .5em;
 }
 ```
 

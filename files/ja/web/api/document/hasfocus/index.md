@@ -1,15 +1,6 @@
 ---
 title: document.hasFocus()
 slug: Web/API/Document/hasFocus
-tags:
-  - API
-  - DOM
-  - Focus
-  - Method
-  - Reference
-  - フォーカス
-  - メソッド
-translation_of: Web/API/Document/hasFocus
 ---
 {{APIRef}}
 

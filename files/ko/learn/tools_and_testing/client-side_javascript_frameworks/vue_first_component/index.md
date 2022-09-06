@@ -46,9 +46,9 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_fi
 
 각각의 할 일 항목 (To-Do Item)을 표시해줄 첫 번째 컴포넌트를 작성해봅시다. 이 항목이 모여서 Todo List가 될 것입니다.
 
-1.  `moz-todo-vue/src/components` 디렉토리 안에 `ToDoItem.vue`라는 이름으로 파일을 생성하고, 에디터에서 파일을 열어주세요.
-2.  파일 상단에 `<template> </template>` 태그를 추가해 컴포넌트의 템플릿 섹션을 만들어주세요.
-3.  템플릿 섹션 밑에 `<script></script>` 섹션을 생성하세요. `<script>` 태그 안에 default export 오브젝트 `export default {}`를 추가하세요. 이것이 바로 우리가 만들고 있는 컴포넌트 오브젝트입니다.
+1. `moz-todo-vue/src/components` 디렉토리 안에 `ToDoItem.vue`라는 이름으로 파일을 생성하고, 에디터에서 파일을 열어주세요.
+2. 파일 상단에 `<template> </template>` 태그를 추가해 컴포넌트의 템플릿 섹션을 만들어주세요.
+3. 템플릿 섹션 밑에 `<script></script>` 섹션을 생성하세요. `<script>` 태그 안에 default export 오브젝트 `export default {}`를 추가하세요. 이것이 바로 우리가 만들고 있는 컴포넌트 오브젝트입니다.
 
 여기까지 잘 따라하셨다면 `ToDoItem.vue` 파일이 아래와 같은 형태가 됩니다.
 
@@ -61,8 +61,8 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_fi
 
 이제 `ToDoItem`에 내용을 추가해보겠습니다. Vue 2의 템플릿은 단일 루트 엘리멘트만을 허용합니다. 즉, 템플릿 섹션 안의 모든 것을 포함하는 하나의 엘리멘트가 존재해야 합니다. (Vue 3에서는 다중 루트 엘리멘트를 지원합니다!) 여기서는 [`<div>`](/en-US/docs/Web/HTML/Element/div) 를 루트 엘리멘트로 지정하겠습니다.
 
-1.  우선 템플릿 섹션에 빈 `<div>` 를 추가하세요.
-2.  `<div>` 안에 체크박스와 레이블을 추가해보겠습니다. 아래와 같이 체크박스에 `id` 를 추가하고, 체크박스 id를 레이블에 매핑하는 `for` 속성을 추가합니다.
+1. 우선 템플릿 섹션에 빈 `<div>` 를 추가하세요.
+2. `<div>` 안에 체크박스와 레이블을 추가해보겠습니다. 아래와 같이 체크박스에 `id` 를 추가하고, 체크박스 id를 레이블에 매핑하는 `for` 속성을 추가합니다.
 
     ```html
     <template>
@@ -77,14 +77,14 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_fi
 
 아주 잘 하고 있어요. 그런데 아직 우리 앱에 컴포넌트를 추가하지 않았기 때문에 잘 작동하는지 테스트할 방법이 없네요. 이제 앱에 컴포넌트를 등록해봅시다.
 
-1.  `App.vue` 파일을 다시 열어주세요.
-2.  `<script>` 태그 상단에 다음을 추가해 `ToDoItem` 컴포넌트를 임포트하세요:
+1. `App.vue` 파일을 다시 열어주세요.
+2. `<script>` 태그 상단에 다음을 추가해 `ToDoItem` 컴포넌트를 임포트하세요:
 
     ```js
     import ToDoItem from './components/ToDoItem.vue';
     ```
 
-3.  컴포넌트 오브젝트 내부에 `components` 속성을 추가하고, 여기에 `ToDoItem` 컴포넌트를 등록하세요.
+3. 컴포넌트 오브젝트 내부에 `components` 속성을 추가하고, 여기에 `ToDoItem` 컴포넌트를 등록하세요.
 
 이제 `<script>` 내부가 이런 모양이 되었을 것입니다.
 
@@ -103,8 +103,8 @@ export default {
 
 `ToDoItem` 컴포넌트를 앱에 실제로 렌더링하려면 `<template>` 태그 안에서 `<to-do-item></to-do-item>` 요소를 사용해야 합니다. JavaScript에서 컴포넌트 파일의 이름과 그 표현은 항상 어퍼카멜케이스(e.g. `ToDoList`)를 사용하며, 해당 커스텀 엘리멘트는 하이픈으로 연결된 소문자(e.g. `<to-do-list>`)로 표현합니다.
 
-1.  [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) 아래에 리스트 아이템([`<li>`](/en-US/docs/Web/HTML/Element/li))을 포함하는 비정렬 리스트([`<ul>`](/en-US/docs/Web/HTML/Element/ul))를 생성합니다.
-2.  리스트 아이템 안에 `<to-do-item></to-do-item>`을 추가합니다.
+1. [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) 아래에 리스트 아이템([`<li>`](/en-US/docs/Web/HTML/Element/li))을 포함하는 비정렬 리스트([`<ul>`](/en-US/docs/Web/HTML/Element/ul))를 생성합니다.
+2. 리스트 아이템 안에 `<to-do-item></to-do-item>`을 추가합니다.
 
 `App.vue` `<template>` 은 아래와 같은 모양이 될 것입니다.
 
@@ -140,18 +140,18 @@ Vue에서는 props를 등록하는 방법이 두 가지 있습니다.
 
 여기서는 오브젝트 등록 방식을 사용해 props를 등록해보겠습니다.
 
-1.  `ToDoItem.vue` 파일을 열어주세요.
-2.  export `default {}` 오브젝트 안에 `props` 속성을 추가하고 빈 오브젝트를 만들어주세요.
-3.  이 오브젝트 안에 `label` 과 `done` 을 키로 사용하는 속성을 추가하세요.
-4.  `label` 키의 값은 두 개의 속성을 갖는 오브젝트입니다.
+1. `ToDoItem.vue` 파일을 열어주세요.
+2. export `default {}` 오브젝트 안에 `props` 속성을 추가하고 빈 오브젝트를 만들어주세요.
+3. 이 오브젝트 안에 `label` 과 `done` 을 키로 사용하는 속성을 추가하세요.
+4. `label` 키의 값은 두 개의 속성을 갖는 오브젝트입니다.
 
-    1.  첫 번째는 `required` 속성입니다. 이 속성의 값을 `true`로 지정하겠습니다. 이 컴포넌트의 모든 인스턴스가 레이블 필드를 반드시 가져야 한다는 의미입니다. 만약 `ToDoItem` 컴포넌트가 레이블 필드를 갖지 않으면 Vue가 경고해줄 것입니다.
-    2.  두 번째는 `type` 속성입니다. 이 속성의 값을 JavaScript `String`(대문자 S)타입으로 설정합니다. 이렇게 하면 label prop이 스트링 값을 가질 것임을 Vue에게 알려줄 수 있습니다.
+    1. 첫 번째는 `required` 속성입니다. 이 속성의 값을 `true`로 지정하겠습니다. 이 컴포넌트의 모든 인스턴스가 레이블 필드를 반드시 가져야 한다는 의미입니다. 만약 `ToDoItem` 컴포넌트가 레이블 필드를 갖지 않으면 Vue가 경고해줄 것입니다.
+    2. 두 번째는 `type` 속성입니다. 이 속성의 값을 JavaScript `String`(대문자 S)타입으로 설정합니다. 이렇게 하면 label prop이 스트링 값을 가질 것임을 Vue에게 알려줄 수 있습니다.
 
-5.  이제 `done` prop으로 넘어가겠습니다.
+5. 이제 `done` prop으로 넘어가겠습니다.
 
-    1.  먼저 `default` 필드를 추가하고, `false` 값을 지정합니다. 이것은 `ToDoItem` 컴포넌트가 `done` prop을 받지 못했을 때, 기본값으로 false를 갖는다는 의미입니다. his means that when no `done` prop is passed to a `ToDoItem` component, the `done` prop will will have a value of false(기본값을 항상 설정할 필요는 없습니다. 필수가 아닌 props에 대해서만 `default`를 지정하면 됩니다).
-    2.  다음으로 `type` 필드를 추가합니다. 값은 `Boolean`으로 지정합니다. 이 prop이 JavaScript 불리언 타입을 가질 것임을 Vue에게 알려주는 것입니다.
+    1. 먼저 `default` 필드를 추가하고, `false` 값을 지정합니다. 이것은 `ToDoItem` 컴포넌트가 `done` prop을 받지 못했을 때, 기본값으로 false를 갖는다는 의미입니다. his means that when no `done` prop is passed to a `ToDoItem` component, the `done` prop will will have a value of false(기본값을 항상 설정할 필요는 없습니다. 필수가 아닌 props에 대해서만 `default`를 지정하면 됩니다).
+    2. 다음으로 `type` 필드를 추가합니다. 값은 `Boolean`으로 지정합니다. 이 prop이 JavaScript 불리언 타입을 가질 것임을 Vue에게 알려주는 것입니다.
 
 이제 컴포넌트 오브젝트는 아래와 같은 모양이 될 것입니다.
 
@@ -199,7 +199,7 @@ found in
 
 This is because we marked the `label` as a required prop, but we never gave the component that prop — we've defined where inside the template we want it used, but we haven't passed it into the component when calling it. Let’s fix that.
 
-Inside your `App.vue `file, add a `label` prop to the `<to-do-item></to-do-item>` component, just like a regular HTML attribute:
+Inside your `App.vue` file, add a `label` prop to the `<to-do-item></to-do-item>` component, just like a regular HTML attribute:
 
 ```html
 <to-do-item label="My ToDo Item"></to-do-item>

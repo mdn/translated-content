@@ -1,17 +1,6 @@
 ---
 title: 'FileReader: error イベント'
 slug: Web/API/FileReader/error_event
-tags:
-  - API
-  - Error
-  - Event
-  - FileReader
-  - ProgressEvent
-  - Reference
-  - Web
-  - onerror
-  - イベント
-translation_of: Web/API/FileReader/error_event
 ---
 {{APIRef}}
 

@@ -1,15 +1,6 @@
 ---
 title: HTMLIFrameElement.referrerPolicy
 slug: Web/API/HTMLIFrameElement/referrerPolicy
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLIFrameElement
-  - プロパティ
-  - リファレンス
-  - リファラーポリシー
-browser-compat: api.HTMLIFrameElement.referrerPolicy
-translation_of: Web/API/HTMLIFrameElement/referrerPolicy
 ---
 {{APIRef}}
 

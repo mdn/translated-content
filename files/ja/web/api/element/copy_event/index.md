@@ -1,14 +1,6 @@
 ---
 title: 'Element: copy イベント'
 slug: Web/API/Element/copy_event
-tags:
-  - API
-  - Clipboard API
-  - Element
-  - Event
-  - Reference
-  - Web
-translation_of: Web/API/Element/copy_event
 ---
 {{APIRef}}
 

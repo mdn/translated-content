@@ -1,13 +1,6 @@
 ---
 title: URLSearchParams.append()
 slug: Web/API/URLSearchParams/append
-tags:
-  - API
-  - Append
-  - Method
-  - URL API
-  - URLSearchParams
-translation_of: Web/API/URLSearchParams/append
 ---
 {{ApiRef("URL API")}}
 

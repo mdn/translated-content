@@ -77,7 +77,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math
 - {{jsxref("Global_Objects/Math/floor", "Math.floor(<var>x</var>)")}}
   - : `x` 以下の最大の整数を返す。
 - {{jsxref("Global_Objects/Math/fround", "Math.fround(<var>x</var>)")}}
-  - : `x` に近似の [単精度](https://ja.wikipedia.org/wiki/%E5%8D%98%E7%B2%BE%E5%BA%A6%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0 "WikiPedia ページへのリンク") 浮動小数点数を返す。
+  - : `x` に近似の [単精度](https://ja.wikipedia.org/wiki/%E5%8D%98%E7%B2%BE%E5%BA%A6%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0) 浮動小数点数を返す。
 - {{jsxref("Global_Objects/Math/hypot", "Math.hypot([<var>x</var>[, <var>y</var>[, …]]])")}}
   - : 引数の二乗和の平方根を返す。
 - {{jsxref("Global_Objects/Math/imul", "Math.imul(<var>x</var>, <var>y</var>)")}}

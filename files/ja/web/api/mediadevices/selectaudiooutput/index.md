@@ -1,16 +1,6 @@
 ---
 title: MediaDevices.selectAudioOutput()
 slug: Web/API/MediaDevices/selectAudioOutput
-tags:
-  - API
-  - MediaDevices
-  - メソッド
-  - リファレンス
-  - WebRTC
-  - selectAudioOutput
-  - 実験的
-browser-compat: api.MediaDevices.selectAudioOutput
-translation_of: Web/API/MediaDevices/selectAudioOutput
 ---
 {{APIRef("WebRTC")}} {{SeeCompatTable}}
 

@@ -1,13 +1,6 @@
 ---
 title: Navigator.vendorSub
 slug: Web/API/Navigator/vendorSub
-tags:
-  - API
-  - HTML DOM
-  - Navigator
-  - Property
-  - Read-only
-translation_of: Web/API/Navigator/vendorSub
 ---
 {{ApiRef}}{{deprecated_header}}
 

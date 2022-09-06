@@ -1,17 +1,7 @@
 ---
 title: Navigator.languages
 slug: Web/API/Navigator/languages
-tags:
-  - API
-  - Experimental
-  - Navigator
-  - Property
-  - Read-only
-  - Reference
-  - languages
-translation_of: Web/API/Navigator/languages
 original_slug: Web/API/NavigatorLanguage/languages
-browser-compat: api.Navigator.languages
 ---
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 

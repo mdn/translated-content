@@ -34,7 +34,7 @@ void dataTransfer.setDragImage(img, xOffset, yOffset);
 
 无
 
-## 举个例子
+## 示例
 
 这个例子展示如何使用 `setDragImage()` 方法。请注意，此例子引用了命名为 `example.gif` 的图片文件。如果此文件存在，它将被用作拖动图像，如果此文件不存在，浏览器会使用其默认的拖动图像。
 
@@ -100,8 +100,12 @@ function drop_handler(ev) {
 
 ## 浏览器兼容性
 
-{{Compat("api.DataTransfer.setDragImage")}}
+{{Compat}}
 
-## 参考链接
+## 参见
 
-{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}
+- [HTML 拖放 API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
+- [拖拽操作](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [推荐的拖拽类型](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [拖拽和放置多个项目](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer 测试——粘贴或拖拽](https://codepen.io/tech_query/pen/MqGgap)

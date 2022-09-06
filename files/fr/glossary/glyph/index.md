@@ -12,7 +12,7 @@ Un **glyphe** est un terme utilisé en typographie pour désigner la représenta
 
 Les polices utilisées par un site web contiennent différents ensembles de glyphes qui représentent les caractères de la police.
 
-## En apprendre davantage
+## Voir aussi
 
 ### Culture générale
 

@@ -1,16 +1,6 @@
 ---
 title: HTML フォーム
 slug: Learn/Forms
-tags:
-  - Beginner
-  - Featured
-  - Forms
-  - Guide
-  - HTML
-  - Landing
-  - Learn
-  - Web
-translation_of: Learn/Forms
 ---
 {{LearnSidebar}}
 

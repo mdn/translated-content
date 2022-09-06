@@ -1,11 +1,6 @@
 ---
 title: DMZ
 slug: Glossary/DMZ
-tags:
-  - Glossary
-  - Networking
-  - Security
-translation_of: Glossary/DMZ
 ---
 DMZ は、内部ネットワーク（企業または個人）と外部の信頼できない世界（通常はインターネット）との間に絶縁された安全なインターフェイスを提供する方法です。それは{{Glossary('node/networking', '外部ノード')}}からの内部ネットワークへのアクセスを拒否しながら、特定のエンドポイントだけを公開します。
 

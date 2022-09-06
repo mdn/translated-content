@@ -1,12 +1,6 @@
 ---
 title: GlobalEventHandlers.ondragleave
 slug: conflicting/Web/API/HTMLElement/dragleave_event
-tags:
-  - API
-  - HTML DOM
-  - Reference
-  - drag and drop
-translation_of: Web/API/GlobalEventHandlers/ondragleave
 original_slug: Web/API/GlobalEventHandlers/ondragleave
 ---
 {{ApiRef("HTML DOM")}}

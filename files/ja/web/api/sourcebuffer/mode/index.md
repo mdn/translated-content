@@ -1,18 +1,6 @@
 ---
 title: SourceBuffer.mode
 slug: Web/API/SourceBuffer/mode
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBuffer
-  - Video
-  - mode
-translation_of: Web/API/SourceBuffer/mode
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 

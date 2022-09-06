@@ -38,14 +38,11 @@ nodeIterator.nextNode(); // lance une exception INVALID_STATE_ERR
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                                       | Commentaire                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-nodeiterator-detach', 'NodeIterator.detach')}}                                         | {{Spec2('DOM WHATWG')}}             | Transformation en non opération |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-NodeIterator-detach', 'NodeIterator.detach')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.            |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeIterator.detach")}}
+{{Compat}}
 
 ## Voir aussi
 

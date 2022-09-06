@@ -37,5 +37,5 @@ document.addEventListener("visibilitychange", function() {
 ## 같이 보기
 
 - [Page Visibility API](/ko/docs/Web/API/Page_Visibility_API)
-- [Using the Page Visibility API](/ko/docs/DOM/Using_the_Page_Visibility_API "DOM/Using_the_Page_Visibility_API")
+- [Using the Page Visibility API](/ko/docs/DOM/Using_the_Page_Visibility_API)
 - {{domxref("Document.visibilityState")}}

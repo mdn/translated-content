@@ -1,15 +1,6 @@
 ---
 title: ファイルとディレクトリー項目 API
 slug: Web/API/File_and_Directory_Entries_API
-page-type: web-api-overview
-tags:
-  - API
-  - ファイルとディレクトリー項目 API
-  - ファイル
-  - 概要
-  - リファレンス
-browser-compat: api.FileSystem
-translation_of: Web/API/File_and_Directory_Entries_API
 ---
 {{DefaultAPISidebar("File and Directory Entries API")}}
 

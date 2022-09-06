@@ -1,11 +1,6 @@
 ---
 title: Grid container
 slug: Glossary/grid_container
-tags:
-  - CSS
-  - Glossary
-  - grid
-translation_of: Glossary/Grid_Container
 ---
 要素に `grid` または `inline-grid` を使用すると、[CSS グリッドレイアウ](/ja/docs/Web/CSS/CSS_Grid_Layout)ト の**グリッドコンテナー**になります。そして直下の子要素はグリッドアイテムになります。
 

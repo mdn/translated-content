@@ -29,7 +29,7 @@ distortion.oversample = enumeratedValue;
 
 ## 示例
 
-{{page("/en-US/docs/Web/API/AudioContext.createWaveShaper","Example")}}
+参见 [`BaseAudioContext.createWaveShaper()`](/zh-CN/docs/Web/API/BaseAudioContext/createWaveShaper#示例) 以获取示例代码。
 
 ## 规范
 
@@ -39,6 +39,6 @@ distortion.oversample = enumeratedValue;
 
 {{Compat}}
 
-## 参考链接
+## 参见
 
-- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)
+- [使用 Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

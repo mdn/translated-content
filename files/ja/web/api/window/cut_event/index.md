@@ -1,16 +1,6 @@
 ---
 title: 'Window: cut イベント'
 slug: Web/API/Window/cut_event
-tags:
-  - API
-  - Clippboard API
-  - Cut
-  - Event
-  - Reference
-  - Web
-  - Window
-  - イベント
-translation_of: Web/API/Window/cut_event
 ---
 {{APIRef}}
 

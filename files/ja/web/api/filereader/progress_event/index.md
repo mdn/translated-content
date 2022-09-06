@@ -1,16 +1,6 @@
 ---
 title: 'FileReader: progress イベント'
 slug: Web/API/FileReader/progress_event
-tags:
-  - API
-  - Event
-  - FileReader
-  - ProgressEvent
-  - Reference
-  - Web
-  - progress
-  - イベント
-translation_of: Web/API/FileReader/progress_event
 ---
 {{APIRef}}
 

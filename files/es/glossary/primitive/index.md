@@ -95,14 +95,15 @@ A excepción de `null` y `undefined`, todos los valores primitivos tienen objeto
 El método {{JSxRef("Objetos_globales/Object/valueOf"," valueOf()")}} del contenedor devuelve el valor primitivo.
 
 ## Aprende más
+
 ### Conocimientos generales
+
 - {{JSxRef("../Data_structures", "Introducción a los tipos de datos de JavaScript")}}
 - {{Interwiki("wikipedia", "Tipo de dato primitivo")}} en Wikipedia
 
 <section id="Quick_links">
  <ol>
   <li>{{Link("/es/docs/Glossary")}}
- 
    <ol>
     <li>{{Glossary("JavaScript")}}</li>
     <li>{{Glossary("string")}}</li>

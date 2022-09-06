@@ -1,14 +1,6 @@
 ---
 title: PointerEvent.height
 slug: Web/API/PointerEvent/height
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
-translation_of: Web/API/PointerEvent/height
 ---
 {{ APIRef("Pointer Events") }}
 

@@ -28,7 +28,7 @@ translation_of: Web/CSS/number
 ### 有効な数値
 
 ```css example-good
-12          生の &lt;integer&gt; は &lt;number&gt; でもある
+12          生の <integer> は <number> でもある
 4.01        正の実数
 -456.8      負の実数
 0.0         ゼロ

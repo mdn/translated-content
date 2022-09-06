@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 
 ## 구문
 
-    obj.hasOwnProperty(prop)
+```js
+obj.hasOwnProperty(prop)
+```
 
 ### 매개변수
 
@@ -79,7 +81,7 @@ for (var name in buz) {
 }
 ```
 
-### 프로퍼티의 명칭으로서 `hasOwnProperty `를 사용하기
+### 프로퍼티의 명칭으로서 `hasOwnProperty` 를 사용하기
 
 자바스크립트는 프로퍼티 명칭으로서 `hasOwnProperty`를 보호하지 않습니다. 그러므로, 이 명칭을 사용하는 프로퍼티를 가지는 객체가 존재하려면, 올바른 결과들을 얻기 위해서는 외부 `hasOwnProperty` 를 사용해야합니다.
 

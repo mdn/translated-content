@@ -478,7 +478,7 @@ if(test.type === 'text') {
 }
 
 function populateDays(month) {
-  // 日の <select> から現在の一連の &lt;option&gt; 要素を削除し、
+  // 日の <select> から現在の一連の <option> 要素を削除し、
   // 挿入のための準備をする
   while(daySelect.firstChild){
     daySelect.removeChild(daySelect.firstChild);
@@ -544,18 +544,18 @@ function populateYears() {
 
 function populateHours() {
   // populate the hours <select> with the 24 hours of the day
-  for(var i = 0; i &lt;= 23; i++) {
+  for(var i = 0; i <= 23; i++) {
     var option = document.createElement('option');
-    option.textContent = (i &lt; 10) ? ("0" + i) : i;
+    option.textContent = (i < 10) ? ("0" + i) : i;
     hourSelect.appendChild(option);
   }
 }
 
 function populateMinutes() {
   // populate the minutes <select> with the 60 hours of each minute
-  for(var i = 0; i &lt;= 59; i++) {
+  for(var i = 0; i <= 59; i++) {
     var option = document.createElement('option');
-    option.textContent = (i &lt; 10) ? ("0" + i) : i;
+    option.textContent = (i < 10) ? ("0" + i) : i;
     minuteSelect.appendChild(option);
   }
 }

@@ -23,8 +23,6 @@ Ils sont également classés en fonction de la manière dont leurs {{glossary("K
 - les algorithmes à [clefs symétriques](https://fr.wikipedia.org/wiki/Cryptographie_symétrique) utilisent la même clef pour chiffrer et déchiffrer un message. Cette clef doit également être envoyée de manière sécurisée afin que le message reste confidentiel.
 - les algorithmes à [clefs asymétriques](https://fr.wikipedia.org/wiki/Cryptographie_asymétrique) utilisent une clef différente pour le chiffrement et le déchiffrement.
 
-## En savoir plus
-
-### Connaissances générales
+## Voir aussi
 
 - [Chiffrement](https://fr.wikipedia.org/wiki/Chiffrement) sur Wikipédia

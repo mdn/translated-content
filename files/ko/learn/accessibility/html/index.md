@@ -61,9 +61,9 @@ Not only do HTML `<button>`s have some suitable styling applied by default (whic
 
 Semantic HTML doesn't take longer to write than non-semantic (bad) markup if you do it consistently from the start of your project, and it also has other benefits beyond accessibility:
 
-1.  **Easier to develop with** — as mentioned above, you get some functionality for free, plus it is arguably easier to understand.
-2.  **Better on mobile** — semantic HTML is arguably lighter in file size than non-semantic spaghetti code, and easier to make responsive.
-3.  **Good for SEO** — search engines give more importance to keywords inside headings, links, etc., than keywords included in non-semantic `<div>`s, etc., so your documents will be more findable by customers.
+1. **Easier to develop with** — as mentioned above, you get some functionality for free, plus it is arguably easier to understand.
+2. **Better on mobile** — semantic HTML is arguably lighter in file size than non-semantic spaghetti code, and easier to make responsive.
+3. **Good for SEO** — search engines give more importance to keywords inside headings, links, etc., than keywords included in non-semantic `<div>`s, etc., so your documents will be more findable by customers.
 
 Let's get on and look at accessible HTML in more detail.
 
@@ -107,10 +107,10 @@ One of the best accessibility aids a screenreader user can have is a good conten
 
 We've prepared a version with longer text for you to try out with a screenreader (see [good-semantics.html](http://mdn.github.io/learning-area/accessibility/html/good-semantics.html)). If you try navigating through this, you'll see that this is pretty easy to navigate:
 
-1.  The screenreader reads each header out as you progress through the content, notifying you what is a heading, what is a paragraph, etc.
-2.  It stops after each element, letting you go at whatever pace is comfortable for you.
-3.  You can jump to next/previous heading in many screenreaders.
-4.  You can also bring up a list of all headings in many screenreaders, allowing you to use them like a handy table of contents to find specific content.
+1. The screenreader reads each header out as you progress through the content, notifying you what is a heading, what is a paragraph, etc.
+2. It stops after each element, letting you go at whatever pace is comfortable for you.
+3. You can jump to next/previous heading in many screenreaders.
+4. You can also bring up a list of all headings in many screenreaders, allowing you to use them like a handy table of contents to find specific content.
 
 People sometimes write headings, paragraphs, etc. using presentational HTML and line breaks, something like the following:
 

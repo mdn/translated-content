@@ -33,7 +33,7 @@ El término "en cascada" se refiere a las reglas que determinan cómo los select
 
 ### Conocimiento general
 
-- [Aprende CSS](https://developer.mozilla.org/es/Learn/CSS)
+- [Aprende CSS](/es/Learn/CSS)
 - {{interwiki("wikipedia", "CSS")}} en Wikipedia
 
 ### Referencia Técnica

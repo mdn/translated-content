@@ -1,19 +1,6 @@
 ---
 title: 'Element: mouseover イベント'
 slug: Web/API/Element/mouseover_event
-tags:
-  - API
-  - Cursor
-  - DOM
-  - イベント
-  - インターフェイス
-  - MouseEvent
-  - リファレンス
-  - マウス
-  - mouseover
-  - move
-  - ポインター
-translation_of: Web/API/Element/mouseover_event
 ---
 {{APIRef}}
 

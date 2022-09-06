@@ -1,15 +1,6 @@
 ---
 title: Client.id
 slug: Web/API/Client/id
-tags:
-  - API
-  - Client
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - id
-translation_of: Web/API/Client/id
 ---
 {{APIRef("Service Workers API")}}
 

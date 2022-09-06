@@ -1,14 +1,6 @@
 ---
 title: Navigator.mozIsLocallyAvailable()
 slug: Web/API/Navigator/mozIsLocallyAvailable
-tags:
-  - API
-  - メソッド
-  - Navigator
-  - Non-standard
-  - 非推奨
-browser-compat: api.Navigator.mozIsLocallyAvailable
-translation_of: Web/API/Navigator/mozIsLocallyAvailable
 ---
 {{APIRef("HTML DOM")}} {{non-standard_header}}{{deprecated_header}}
 

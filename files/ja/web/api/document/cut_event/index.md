@@ -1,15 +1,6 @@
 ---
 title: 'Document: cut イベント'
 slug: Web/API/Document/cut_event
-tags:
-  - API
-  - Clipboard API
-  - Cut
-  - Document
-  - Event
-  - Reference
-  - Web
-translation_of: Web/API/Document/cut_event
 ---
 {{APIRef}}
 

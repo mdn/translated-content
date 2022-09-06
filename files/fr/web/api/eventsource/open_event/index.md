@@ -32,13 +32,11 @@ evtSource.onopen = function() {
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', "comms.html#handler-eventsource-onopen", "onopen")}} | {{Spec2('HTML WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.EventSource.onopen")}}
+{{Compat}}
 
 ## Voir aussi
 

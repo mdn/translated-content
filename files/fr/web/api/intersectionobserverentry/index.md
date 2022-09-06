@@ -38,10 +38,8 @@ _Cette interface n'a pas de méthode._
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                                       | Commentaire         |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
-| {{SpecName('IntersectionObserver','#intersection-observer-entry','IntersectionObserverEntry')}} | {{Spec2('IntersectionObserver')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserverEntry")}}
+{{Compat}}

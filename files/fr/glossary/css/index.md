@@ -31,7 +31,7 @@ p {
 
 Le principe de « cascade » fait référence aux règles de préséance dans l'application des divers {{Glossary("CSS Selector","sélecteurs")}} pointant le même élément de la page. C'est une fonctionnalité particulièrement importante dans la mesure où un site web complexe peut contenir des milliers de règles CSS.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 
@@ -43,6 +43,6 @@ Le principe de « cascade » fait référence aux règles de préséance dans l'
 - [Documentation CSS sur MDN](/fr/docs/Web/CSS)
 - [Les travaux en cours du Groupe de travail CSS](http://www.w3.org/Style/CSS/current-work) (en)
 
-### En apprendre plus sur CSS
+### Voir aussi
 
 - [Cours en ligne sur codecademy.com](http://www.codecademy.com/fr/tracks/web)

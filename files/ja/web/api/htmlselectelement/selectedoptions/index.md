@@ -1,18 +1,6 @@
 ---
 title: HTMLSelectElement.selectedOptions
 slug: Web/API/HTMLSelectElement/selectedOptions
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Options
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - Select
-  - ウェブ
-  - selectedOptions
-browser-compat: api.HTMLSelectElement.selectedOptions
 ---
 {{APIRef("HTML DOM")}}
 

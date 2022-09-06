@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.linkProgram()
 slug: Web/API/WebGLRenderingContext/linkProgram
-translation_of: Web/API/WebGLRenderingContext/linkProgram
 ---
 {{APIRef("WebGL")}}
 

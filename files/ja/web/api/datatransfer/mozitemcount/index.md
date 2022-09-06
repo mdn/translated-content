@@ -1,16 +1,6 @@
 ---
 title: DataTransfer.mozItemCount
 slug: Web/API/DataTransfer/mozItemCount
-page-type: web-api-instance-property
-tags:
-  - API
-  - Non-standard
-  - Property
-  - Reference
-  - drag and drop
-  - Deprecated
-browser-compat: api.DataTransfer.mozItemCount
-translation_of: Web/API/DataTransfer/mozItemCount
 ---
 {{APIRef("HTML Drag and Drop API")}}
 

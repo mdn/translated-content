@@ -1,12 +1,6 @@
 ---
 title: Element.lastElementChild
 slug: Web/API/Element/lastElementChild
-tags:
-  - API
-  - DOM
-  - Element
-  - プロパティ
-translation_of: Web/API/Element/lastElementChild
 ---
 {{ APIRef("DOM") }}
 

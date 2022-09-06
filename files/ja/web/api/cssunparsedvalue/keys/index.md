@@ -1,17 +1,6 @@
 ---
 title: CSSUnparsedValue.keys()
 slug: Web/API/CSSUnparsedValue/keys
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnparsedValue
-  - Constructor
-  - Experimental
-  - Method
-  - NeedsExample
-  - Reference
-  - keys()
-translation_of: Web/API/CSSUnparsedValue/keys
 ---
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 

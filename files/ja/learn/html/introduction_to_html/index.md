@@ -1,17 +1,6 @@
 ---
 title: HTML 入門
 slug: Learn/HTML/Introduction_to_HTML
-tags:
-  - CodingScripting
-  - HTML
-  - Introduction to HTML
-  - Landing
-  - Links
-  - Structure
-  - Text
-  - head
-  - semantics
-translation_of: Learn/HTML/Introduction_to_HTML
 ---
 {{LearnSidebar}}
 

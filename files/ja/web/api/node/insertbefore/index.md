@@ -1,11 +1,6 @@
 ---
 title: Node.insertBefore()
 slug: Web/API/Node/insertBefore
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Node.insertBefore
-translation_of: Web/API/Node/insertBefore
 ---
 {{APIRef("DOM")}}
 

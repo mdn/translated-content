@@ -102,7 +102,7 @@ Firefox 21 est sorti le 14 mai 2013. Cette page résume les principaux changemen
 
 - `nsIHttpChannel.redirectTo` a été ajouté pour permettre de rediriger les canaux HTTP sans faire des bidouilles fragiles.
 
-## Voir également
+## Voir aussi
 
 - [Firefox 21 Release Notes](http://www.mozilla.org/en-US/firefox/21.0/releasenotes/)
 - [Site Compatibility for Firefox 21](/fr/docs/Site_Compatibility_for_Firefox_21)

@@ -1,21 +1,6 @@
 ---
 title: MediaTrackSupportedConstraints.channelCount
 slug: Web/API/MediaTrackSupportedConstraints/channelCount
-page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - Web
-  - WebRTC
-  - channelCount
-browser-compat: api.MediaTrackSupportedConstraints.channelCount
-translation_of: Web/API/MediaTrackSupportedConstraints/channelCount
 ---
 {{DefaultAPISidebar("Media Capture and Streams")}}
 

@@ -1,19 +1,6 @@
 ---
 title: 基本の 3D 理論の解説
 slug: Games/Techniques/3D_on_the_web/Basic_theory
-tags:
-  - 3D
-  - Coordinates
-  - Textures
-  - basics
-  - fragment
-  - lighting
-  - primitives
-  - rendering
-  - theory
-  - vertex
-  - vertices
-translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 ---
 {{GamesSidebar}}
 

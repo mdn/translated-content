@@ -1,18 +1,6 @@
 ---
 title: 高度なテキスト処理
 slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - HTML
-  - Learn
-  - Text
-  - abbreviation
-  - description list
-  - quote
-  - semantic
-translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
 
@@ -223,7 +211,7 @@ Quotation Element</em>) indicates that the enclosed text is an extended quotatio
 
 ブラウザーのデフォルトのスタイル設定では、これがインデントされた段落として、それが引用であることを示すインジケータとして表示されます。MDN はこれを行いますが、さらにいくつかのスタイルを追加します。
 
-> **HTML `<blockquote>` \*\***要素\*\* (または _HTML Block Quotation 要素_) は、囲まれたテキストが拡張引用符であることを示します。
+> **HTML `<blockquote>`** 要素 (または _HTML Block Quotation 要素_) は、囲まれたテキストが拡張引用符であることを示します。
 
 ### インラインクォート
 
@@ -263,9 +251,9 @@ for short quotations that don't require paragraph breaks.</q> -- <a href="https:
 
 もう一つのアクティブラーニングの時間です！ この例では、あなたにお願いします。
 
-1.  中央の段落を `cite` 属性を含むブロッククォートにします。
-2.  3 番目の段落の一部を、`cite` 属性を含むインライン引用に変換します。
-3.  各リンクに `<cite>` 要素を含めます。
+1. 中央の段落を `cite` 属性を含むブロッククォートにします。
+2. 3 番目の段落の一部を、`cite` 属性を含むインライン引用に変換します。
+3. 各リンクに `<cite>` 要素を含めます。
 
 必要な引用元は以下のとおりです。
 

@@ -1,16 +1,6 @@
 ---
 title: Reactをはじめる
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - React
-  - client-side
-translation_of: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -36,7 +26,7 @@ React は[インターフェイスの一部](https://reactjs.org/docs/add-react-
 
 さらに、JSX のインターフェースの作成など、React アプリの開発者体験にはコンパイルプロセスが必要とします。Babel のようなコンパイラーをウェブサイトに追加すると、コードの実行が遅くなるため、開発者はビルドステップでそのようなツールをセットアップすることがよくあります。間違いなく React には厳しいツール要件がありますが、学習することはできます。
 
-この記事では、Facebook 独自の[ create-react-app](https://create-react-app.dev/) を使って、アプリケーションのインターフェイスを構築していきます。
+この記事では、Facebook 独自の [create-react-app](https://create-react-app.dev/) を使って、アプリケーションのインターフェイスを構築していきます。
 
 ## React における JavaScript の書き方
 

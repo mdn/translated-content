@@ -24,7 +24,7 @@ translation_of: Web/CSS/border-image-source
 /* キーワード値 */
 border-image-source: none;
 
-/* &lt;image&gt; 値 */
+/* <image> 値 */
 border-image-source: url(image.jpg);
 border-image-source: linear-gradient(to top, red, yellow);
 

@@ -52,7 +52,7 @@ Les évaluations qui suivent sont là pour tester votre compréhension des bases
 - [Évaluation : page d'accueil Mozilla](/fr/docs/Apprendre/HTML/Multimedia_and_embedding/Mozilla_splash_page)
   - : Cette évaluation concernera vos connaissances de quelques unes des techniques traitées dans les articles de ce module, vous amenant à ajouter des images et vidéos à une page de garde «&nbsp;funky&nbsp;» développant les atouts de Mozilla&nbsp;!
 
-## À voir aussi
+## Voir aussi
 
 - [Intégrer une carte interactive en haut d'une image](/fr/docs/Apprendre/HTML/Comment/Ajouter_carte_zones_cliquables_sur_image)
   - : Une représentation cartographique fournit un mécanisme qui lie différents secteurs d'une image à différents endroits. Pensez à une carte qui fournirait des informations plus approfondies sur chaque pays sur lequel vous cliquez. Cette technique peut parfois être d'une grande utilité.

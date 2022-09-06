@@ -1,13 +1,6 @@
 ---
 title: 'Element: compositionupdate イベント'
 slug: Web/API/Element/compositionupdate_event
-tags:
-  - Element
-  - Event
-  - Input method
-  - Reference
-  - compositionupdate
-translation_of: Web/API/Element/compositionupdate_event
 ---
 {{APIRef}}
 

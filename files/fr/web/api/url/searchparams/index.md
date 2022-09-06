@@ -37,10 +37,8 @@ let age = parseInt(params.get('age')); // le nombre 18
 
 ## Spécifications
 
-| Spécification                                                                    | Statut               | Commentaire          |
-| -------------------------------------------------------------------------------- | -------------------- | -------------------- |
-| {{SpecName('URL', '#dom-url-searchparams', 'searchParams')}} | {{Spec2('URL')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.URL.searchParams")}}
+{{Compat}}

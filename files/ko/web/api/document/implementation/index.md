@@ -15,7 +15,9 @@ translation_of: Web/API/Document/implementation
 
 ## Syntax
 
-    DOMImpObj = document.implementation;
+```js
+DOMImpObj = document.implementation;
+```
 
 ## Example
 

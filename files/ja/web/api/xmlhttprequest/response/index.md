@@ -1,20 +1,6 @@
 ---
 title: XMLHttpRequest.response
 slug: Web/API/XMLHttpRequest/response
-tags:
-  - AJAX
-  - API
-  - コンテンツの読み取り
-  - データの読み取り
-  - データの読み込み
-  - プロパティ
-  - 読み取り専用
-  - Reading Data
-  - リファレンス
-  - Response
-  - サーバー
-  - XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest/response
 ---
 {{APIRef('XMLHttpRequest')}}
 

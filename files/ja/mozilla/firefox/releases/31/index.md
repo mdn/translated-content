@@ -1,11 +1,6 @@
 ---
 title: Firefox 31 for developers
 slug: Mozilla/Firefox/Releases/31
-tags:
-  - Firefox
-  - Firefox 31
-  - Firefox for Developers
-translation_of: Mozilla/Firefox/Releases/31
 ---
 Gecko 31 を搭載した Firefox 31 は、米国時間 2014 年 7 月 22 日にリリースされました。このページでは、開発者に影響する Firefox 31 の変更点をまとめています。
 

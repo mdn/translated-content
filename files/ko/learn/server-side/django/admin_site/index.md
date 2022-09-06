@@ -158,7 +158,7 @@ class AuthorAdmin(admin.ModelAdmin):
 admin.site.register(Author, AuthorAdmin)
 ```
 
-이제 우리는` Book` 그리고 `BookInstance`를 위한 `ModelAdmin` 클래스를 추가할 겁니다. 또다시 원본 등록(registrations)를 주석처리 해야 합니다:
+이제 우리는 `Book` 그리고 `BookInstance`를 위한 `ModelAdmin` 클래스를 추가할 겁니다. 또다시 원본 등록(registrations)를 주석처리 해야 합니다:
 
 ```js
 # admin.site.register(Book)
@@ -311,14 +311,14 @@ class BookAdmin(admin.ModelAdmin):
 
 이 경우 우리는 인라인된 모델의 모든 필드들을 추가하는, 테이블화된 인라인 클래스를 선언했습니다. 레이아웃을 위해 모든 종류의 추가적인 정보들을 지정할 수 있습니다. 표시할 필드, 그것들의 순서, 그것들이 읽기 전용인지 아닌지, 등등을 포함해서요. (더 많은 정보를 위해 [TabularInline](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline) 를 보세요).
 
-> **참고:** **주의**: 이 기능에는 몇 가지 고통스러운 한계가 있습니다! 위의 스크린샷에서 우리는 이미 존재하는 세 개의 책 인스턴스(book instance)와 그 아래에 새로운 책 인스턴스를 위한 세 개의 플레이스홀더(placeholder)를 가지고 있습니다(아주 비슷하게 보이지요!). 기본값으로 예비 책 인스턴스를 위한 플레이스를 홀더를 가지지 **않고** 새로운 북 인스턴스마다 **새로운 북 인스턴스 링크 하나씩** 추가하는 것이 좋습니다. 또는 `BookInstance`를 여기서는 읽기 불가(non-readable) 링크로 목록화하는 것도 좋구요. 전자는` BookInstanceInline` 모델 안의 `extra` 속성을 0으로 설정하여 완료할 수 있습니다. 직접 해보세요.
+> **참고:** **주의**: 이 기능에는 몇 가지 고통스러운 한계가 있습니다! 위의 스크린샷에서 우리는 이미 존재하는 세 개의 책 인스턴스(book instance)와 그 아래에 새로운 책 인스턴스를 위한 세 개의 플레이스홀더(placeholder)를 가지고 있습니다(아주 비슷하게 보이지요!). 기본값으로 예비 책 인스턴스를 위한 플레이스를 홀더를 가지지 **않고** 새로운 북 인스턴스마다 **새로운 북 인스턴스 링크 하나씩** 추가하는 것이 좋습니다. 또는 `BookInstance` 를 여기서는 읽기 불가(non-readable) 링크로 목록화하는 것도 좋구요. 전자는 `BookInstanceInline` 모델 안의 `extra` 속성을 0으로 설정하여 완료할 수 있습니다. 직접 해보세요.
 
 ## 도전 과제
 
 이 섹션에서 많은 것을 배웠기 때문에, 이젠 직접 몇 가지를 도전해 볼 차례입니다.
 
-1.  `BookInstance` 목록 뷰에 책, 상태, 만기 날짜, 그리고 id(book, status, due back date, id)를 표시하기 위한 코드를 추가해 보세요(기본` __str__()` 텍스트 가 아닌).
-2.  Book/BookInstance에서 했던 것고 같은 접근법을 사용해서 Author 세부 사항 뷰에 Book 항목들의 인라인 목록(Inline listing)을 추가해 보세요.
+1. `BookInstance` 목록 뷰에 책, 상태, 만기 날짜, 그리고 id(book, status, due back date, id)를 표시하기 위한 코드를 추가해 보세요(기본`__str__()` 텍스트 가 아닌).
+2. Book/BookInstance에서 했던 것고 같은 접근법을 사용해서 Author 세부 사항 뷰에 Book 항목들의 인라인 목록(Inline listing)을 추가해 보세요.
 
 ## 요약
 

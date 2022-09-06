@@ -1,13 +1,6 @@
 ---
 title: Element.getElementsByTagName()
 slug: Web/API/Element/getElementsByTagName
-tags:
-  - API
-  - DOM
-  - Element
-  - メソッド
-  - リファレンス
-translation_of: Web/API/Element/getElementsByTagName
 ---
 {{ APIRef("DOM") }}
 

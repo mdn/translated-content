@@ -16,7 +16,7 @@ translation_of: Web/XSLT/Transforming_XML_with_XSLT
 
 しかし、最終的には XML 文書に格納されているコンテンツの大部分を人間の読者に提示する必要があります。ブラウザは使い慣れた非常に柔軟なインタフェースを提供するため、このようなプレゼンテーションバージョンの XML コンテンツを配信するための理想的なメカニズムです。さまざまな XML テクノロジを利用してゼロから構築されているため、 Firefox は、元の XML 文書とそれを HTML 表示用にスタイル設定してレイアウトするために使用される特殊なスタイルシートの両方を処理するために必要なすべてのメカニズムを組み込んでおり、クライアントサイド処理によるサーバの負荷を軽減します。
 
-現時点で、 Gecko (Firefox のレイアウトエンジン) は二種類の XML 用のスタイルシートに対応しています。基本的な表示方法の制御 — フォント、色、位置、など — については、 Gecko は [CSS](/ja/docs/CSS "CSS") を使用します。 CSS1 と CSS2 はよく対応されており、 CSS3 標準への対応は開発中です。 CSS についての更なる情報は、 [Eric Meyer's CSS pages](http://www.meyerweb.com/eric/css/) を参照してください。
+現時点で、 Gecko (Firefox のレイアウトエンジン) は二種類の XML 用のスタイルシートに対応しています。基本的な表示方法の制御 — フォント、色、位置、など — については、 Gecko は [CSS](/ja/docs/CSS) を使用します。 CSS1 と CSS2 はよく対応されており、 CSS3 標準への対応は開発中です。 CSS についての更なる情報は、 [Eric Meyer's CSS pages](http://www.meyerweb.com/eric/css/) を参照してください。
 
 ここで注目するのは、 Gecko が対応する二番目の種類のスタイルシート、 XSLT スタイルシートです。 XSLT は eXtensible Stylesheet Language/Transform のことで、名前の通りです。 XSLT ではスタイルシートで最初の XML 文書を二つの意味のある方法、必要に応じてコンテンツを大規模に並べ替えたり、コンテンツを別の形式に変形したりすることで変換します。 (Firefox の場合は、 HTML に変換して表示することができます)。
 
@@ -62,73 +62,73 @@ translation_of: Web/XSLT/Transforming_XML_with_XSLT
 
 ### [軸](/ja/docs/XPath/Axes)
 
-- [ancestor](/ja/docs/XPath/Axes/ancestor "XPath/Axes/ancestor")
-- [ancestor-or-self](/ja/docs/XPath/Axes/ancestor-or-self "XPath/Axes/ancestor-or-self")
-- [attribute](/ja/docs/XPath/Axes/attribute "XPath/Axes/attribute")
-- [child](/ja/docs/XPath/Axes/child "XPath/Axes/child")
-- [descendant](/ja/docs/XPath/Axes/descendant "XPath/Axes/descendant")
-- [descendant-or-self](/ja/docs/XPath/Axes/descendant-or-self "XPath/Axes/descendant-or-self")
-- [following](/ja/docs/XPath/Axes/following "XPath/Axes/following")
-- [following-sibling](/ja/docs/XPath/Axes/following-sibling "XPath/Axes/following-sibling")
-- [namespace](/ja/docs/XPath/Axes/namespace "XPath/Axes/namespace") _(未対応)_
-- [parent](/ja/docs/XPath/Axes/parent "XPath/Axes/parent")
-- [preceding](/ja/docs/XPath/Axes/preceding "XPath/Axes/preceding")
-- [preceding-sibling](/ja/docs/XPath/Axes/preceding-sibling "XPath/Axes/preceding-sibling")
-- [self](/ja/docs/XPath/Axes/self "XPath/Axes/self")
+- [ancestor](/ja/docs/XPath/Axes/ancestor)
+- [ancestor-or-self](/ja/docs/XPath/Axes/ancestor-or-self)
+- [attribute](/ja/docs/XPath/Axes/attribute)
+- [child](/ja/docs/XPath/Axes/child)
+- [descendant](/ja/docs/XPath/Axes/descendant)
+- [descendant-or-self](/ja/docs/XPath/Axes/descendant-or-self)
+- [following](/ja/docs/XPath/Axes/following)
+- [following-sibling](/ja/docs/XPath/Axes/following-sibling)
+- [namespace](/ja/docs/XPath/Axes/namespace) _(未対応)_
+- [parent](/ja/docs/XPath/Axes/parent)
+- [preceding](/ja/docs/XPath/Axes/preceding)
+- [preceding-sibling](/ja/docs/XPath/Axes/preceding-sibling)
+- [self](/ja/docs/XPath/Axes/self)
 
 ### [関数](/ja/docs/XPath/Functions)
 
-- [boolean()](/ja/docs/XPath/Functions/boolean "XPath/Functions/boolean") _(対応済み)_
-- [ceiling()](/ja/docs/XPath/Functions/ceiling "XPath/Functions/ceiling") _(対応済み)_
-- [concat()](/ja/docs/XPath/Functions/concat "XPath/Functions/concat") _(対応済み)_
-- [contains()](/ja/docs/XPath/Functions/contains "XPath/Functions/contains") _(対応済み)_
-- [count()](/ja/docs/XPath/Functions/count "XPath/Functions/count") _(対応済み)_
-- [current()](/ja/docs/XPath/Functions/current "XPath/Functions/current") _(対応済み)_
-- [document()](/ja/docs/XPath/Functions/document "XPath/Functions/document") _(対応済み)_
-- [element-available()](/ja/docs/XPath/Functions/element-available "XPath/Functions/element-available") _(対応済み)_
-- [false()](/ja/docs/XPath/Functions/false "XPath/Functions/false") _(対応済み)_
-- [floor()](/ja/docs/XPath/Functions/floor "XPath/Functions/floor") _(対応済み)_
-- [format-number()](/ja/docs/XPath/Functions/format-number "XPath/Functions/format-number") _(対応済み)_
-- [function-available()](/ja/docs/XPath/Functions/function-available "XPath/Functions/function-available") _(対応済み)_
-- [generate-id()](/ja/docs/XPath/Functions/generate-id "XPath/Functions/generate-id") _(対応済み)_
-- [id()](/ja/docs/XPath/Functions/id "XPath/Functions/id") _(partially 対応済み)_
-- [key()](/ja/docs/XPath/Functions/key "XPath/Functions/key") _(対応済み)_
-- [lang()](/ja/docs/XPath/Functions/lang "XPath/Functions/lang") _(対応済み)_
-- [last()](/ja/docs/XPath/Functions/last "XPath/Functions/last") _(対応済み)_
-- [local-name()](/ja/docs/XPath/Functions/local-name "XPath/Functions/local-name") _(対応済み)_
-- [name()](/ja/docs/XPath/Functions/name "XPath/Functions/name") _(対応済み)_
-- [namespace-uri()](/ja/docs/XPath/Functions/namespace-uri "XPath/Functions/namespace-uri") _(対応済み)_
-- [normalize-space()](/ja/docs/XPath/Functions/normalize-space "XPath/Functions/normalize-space") _(対応済み)_
-- [not()](/ja/docs/XPath/Functions/not "XPath/Functions/not") _(対応済み)_
-- [number()](/ja/docs/XPath/Functions/number "XPath/Functions/number") _(対応済み)_
-- [position()](/ja/docs/XPath/Functions/position "XPath/Functions/position") _(対応済み)_
-- [round()](/ja/docs/XPath/Functions/round "XPath/Functions/round") _(対応済み)_
-- [starts-with()](/ja/docs/XPath/Functions/starts-with "XPath/Functions/starts-with") _(対応済み)_
-- [string()](/ja/docs/XPath/Functions/string "XPath/Functions/string") _(対応済み)_
-- [string-length()](/ja/docs/XPath/Functions/string-length "XPath/Functions/string-length") _(対応済み)_
-- [substring()](/ja/docs/XPath/Functions/substring "XPath/Functions/substring") _(対応済み)_
-- [substring-after()](/ja/docs/XPath/Functions/substring-after "XPath/Functions/substring-after") _(対応済み)_
-- [substring-before()](/ja/docs/XPath/Functions/substring-before "XPath/Functions/substring-before") _(対応済み)_
-- [sum()](/ja/docs/XPath/Functions/sum "XPath/Functions/sum") _(対応済み)_
-- [system-property()](/ja/docs/XPath/Functions/system-property "XPath/Functions/system-property") _(対応済み)_
-- [translate()](/ja/docs/XPath/Functions/translate "XPath/Functions/translate") _(対応済み)_
-- [true()](/ja/docs/XPath/Functions/true "XPath/Functions/true") _(対応済み)_
-- [unparsed-entity-url()](/ja/docs/XPath/Functions/unparsed-entity-url "XPath/Functions/unparsed-entity-url") _(not 対応済み)_
+- [boolean()](/ja/docs/XPath/Functions/boolean) _(対応済み)_
+- [ceiling()](/ja/docs/XPath/Functions/ceiling) _(対応済み)_
+- [concat()](/ja/docs/XPath/Functions/concat) _(対応済み)_
+- [contains()](/ja/docs/XPath/Functions/contains) _(対応済み)_
+- [count()](/ja/docs/XPath/Functions/count) _(対応済み)_
+- [current()](/ja/docs/XPath/Functions/current) _(対応済み)_
+- [document()](/ja/docs/XPath/Functions/document) _(対応済み)_
+- [element-available()](/ja/docs/XPath/Functions/element-available) _(対応済み)_
+- [false()](/ja/docs/XPath/Functions/false) _(対応済み)_
+- [floor()](/ja/docs/XPath/Functions/floor) _(対応済み)_
+- [format-number()](/ja/docs/XPath/Functions/format-number) _(対応済み)_
+- [function-available()](/ja/docs/XPath/Functions/function-available) _(対応済み)_
+- [generate-id()](/ja/docs/XPath/Functions/generate-id) _(対応済み)_
+- [id()](/ja/docs/XPath/Functions/id) _(partially 対応済み)_
+- [key()](/ja/docs/XPath/Functions/key) _(対応済み)_
+- [lang()](/ja/docs/XPath/Functions/lang) _(対応済み)_
+- [last()](/ja/docs/XPath/Functions/last) _(対応済み)_
+- [local-name()](/ja/docs/XPath/Functions/local-name) _(対応済み)_
+- [name()](/ja/docs/XPath/Functions/name) _(対応済み)_
+- [namespace-uri()](/ja/docs/XPath/Functions/namespace-uri) _(対応済み)_
+- [normalize-space()](/ja/docs/XPath/Functions/normalize-space) _(対応済み)_
+- [not()](/ja/docs/XPath/Functions/not) _(対応済み)_
+- [number()](/ja/docs/XPath/Functions/number) _(対応済み)_
+- [position()](/ja/docs/XPath/Functions/position) _(対応済み)_
+- [round()](/ja/docs/XPath/Functions/round) _(対応済み)_
+- [starts-with()](/ja/docs/XPath/Functions/starts-with) _(対応済み)_
+- [string()](/ja/docs/XPath/Functions/string) _(対応済み)_
+- [string-length()](/ja/docs/XPath/Functions/string-length) _(対応済み)_
+- [substring()](/ja/docs/XPath/Functions/substring) _(対応済み)_
+- [substring-after()](/ja/docs/XPath/Functions/substring-after) _(対応済み)_
+- [substring-before()](/ja/docs/XPath/Functions/substring-before) _(対応済み)_
+- [sum()](/ja/docs/XPath/Functions/sum) _(対応済み)_
+- [system-property()](/ja/docs/XPath/Functions/system-property) _(対応済み)_
+- [translate()](/ja/docs/XPath/Functions/translate) _(対応済み)_
+- [true()](/ja/docs/XPath/Functions/true) _(対応済み)_
+- [unparsed-entity-url()](/ja/docs/XPath/Functions/unparsed-entity-url) _(not 対応済み)_
 
 ## [さらなる読み物](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading)
 
-- [書籍](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#Books "Transforming_XML_with_XSLT/For_Further_Reading#Books")
-- [オンライン](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#Online "Transforming_XML_with_XSLT/For_Further_Reading#Online")
+- [書籍](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#Books)
+- [オンライン](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#Online)
 
-  - [The World Wide Web Consortium](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#The_World_Wide_Web_Consortium "Transforming_XML_with_XSLT/For_Further_Reading#The_World_Wide_Web_Consortium")
-  - [Portals](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#Portals "Transforming_XML_with_XSLT/For_Further_Reading#Portals")
-  - [Articles](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#Articles "Transforming_XML_with_XSLT/For_Further_Reading#Articles")
-  - [Tutorials/Examples](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#Tutorials.2FExamples "Transforming_XML_with_XSLT/For_Further_Reading#Tutorials.2FExamples")
-  - [Mailing Lists/Newsgroups](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#Mailing_Lists.2FNewsgroups "Transforming_XML_with_XSLT/For_Further_Reading#Mailing_Lists.2FNewsgroups")
+  - [The World Wide Web Consortium](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#The_World_Wide_Web_Consortium)
+  - [Portals](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#Portals)
+  - [Articles](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#Articles)
+  - [Tutorials/Examples](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#Tutorials.2FExamples)
+  - [Mailing Lists/Newsgroups](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#Mailing_Lists.2FNewsgroups)
 
 ## [リソース](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/Resources)
 
-## [索引](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/Index "Transforming_XML_with_XSLT/Index")
+## [索引](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/Index)
 
 ## 原典情報
 

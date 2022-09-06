@@ -36,11 +36,9 @@ function printFile(file) {
 }
 ```
 
-## Caractéristiques
+## Spécifications
 
-| Caractéristique                  | Status                       | Commentaire         |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('File API')}} | {{Spec2('File API')}} | Définition Initiale |
+{{Specifications}}
 
 ## Voir aussi
 
