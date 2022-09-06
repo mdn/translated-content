@@ -56,7 +56,7 @@ new Proxy(target, {
 
 - 결과는 `Object`여야 합니다.
 
-## 예제들
+## 예제
 
 ### new 연산자 트랩하기
 
