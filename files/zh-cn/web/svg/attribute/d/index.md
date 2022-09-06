@@ -617,7 +617,7 @@ html,body,svg { height:100% }
 
 ### 二次贝塞尔曲线
 
-*二次*[*贝塞尔曲线*](/en-US/docs/Glossary/Bezier_curve)是使用三个点定义的平滑曲线：
+*二次*[*贝塞尔曲线*](/zh-CN/docs/Glossary/Bezier_curve)是使用三个点定义的平滑曲线：
 
 - 起始点（当前位置）
   - : _P<sub>o</sub>_ = {_x<sub>o</sub>_, _y<sub>o</sub>_}
