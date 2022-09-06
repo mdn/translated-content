@@ -24,10 +24,10 @@ slug: Web/API/WebSockets_API
 - [SocketCluster](https://socketcluster.io/): 一个用于[Node.js](https://nodejs.org)的 pub/sub 专注于可伸缩 WebSocket 框架。
 - [WebSocket-Node](https://github.com/Worlize/WebSocket-Node): 一个用 [Node.js](https://nodejs.org/)实现 WebSocket 服务器 API。
 - [Total.js](https://www.totaljs.com/):一个用[Node.js](http://www.nodejs.org/) 实现的的 Web 应用程序框架（例如:WebSocket 聊天）。
-- [Faye](https://www.npmjs.com/package/faye-websocket): 一个 [Node.js](https://nodejs.org/)的[WebSocket](/zh-CN/docs/Web/API/WebSockets_API) (双向连接) 和 [EventSource](/zh-CN/docs/Web/API/EventSource/)（单向连接）的服务器和客户端。
+- [Faye](https://www.npmjs.com/package/faye-websocket): 一个 [Node.js](https://nodejs.org/) 的 [WebSocket](/zh-CN/docs/Web/API/WebSockets_API)（双向连接）和 [EventSource](/zh-CN/docs/Web/API/EventSource)（单向连接）的服务器和客户端。
 - [SignalR](https://dotnet.microsoft.com/zh-cn/apps/aspnet/signalr): SignalR 在可用时将隐藏使用 WebSockets，在不可用时将优雅地使用其他技术和技术，而应用程序代码保持不变。
 - [Caddy](https://caddyserver.com/docs/websocket): 能够将任意命令（stdin/stdout）代理为 websocket 的 web 服务器。
-- [ws](https://github.com/websockets/ws): 一个流行的 WebSocket 客户端和服务器 [Node.js](http://nodejs.org/)库。
+- [ws](https://github.com/websockets/ws): 一个流行的 WebSocket 客户端和服务器 [Node.js](https://nodejs.org/)库。
 - [jsonrpc-bidirectional](https://github.com/bigstepinc/jsonrpc-bidirectional): 易于使用异步 RPC 库，通过单个 WebSocket 或 RTCDataChannel (WebRTC) 连接支持双向调用。TCP / SCTP /等。客户端和服务器可以各自承载自己的 JSONRPC 和服务器端点。
 - [rpc-websockets](https://github.com/elpheria/rpc-websockets): JSON-RPC 2.0 在 websocket 上实现 Node.js 和 JavaScript。
 
