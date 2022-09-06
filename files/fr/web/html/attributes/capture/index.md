@@ -48,13 +48,11 @@ Notez que ceux-ci fonctionnent mieux sur les appareils mobiles ; si votre appare
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                                   |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- |
-| {{SpecName('HTML Media Capture', '#the-capture-attribute','capture attribute')}} | {{Spec2('HTML Media Capture')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attribute.capture")}}
+{{Compat}}
 
 ## Voir aussi
 

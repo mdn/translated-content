@@ -184,12 +184,8 @@ Cela permet de modifier la couleur de chaque bloc {{HTMLElement("p")}} du docume
 
 ## Spécifications
 
-| Spécification                                                                | État                             | Commentaires         |
-| ---------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', '#color-state-(type=color)')}} | {{Spec2('HTML WHATWG')}} |                      |
-| {{SpecName('HTML5 W3C', 'forms.html#the-input-element')}} | {{Spec2('HTML5 W3C')}}     |                      |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.4')}}     | {{Spec2('HTML4.01')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.input.input-color")}}
+{{Compat}}

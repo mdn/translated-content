@@ -42,13 +42,11 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', "custom-elements.html#attr-is", "is")}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.is")}}
+{{Compat}}
 
 ## Voir aussi
 

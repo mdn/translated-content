@@ -52,24 +52,11 @@ La valeur `use-credentials` doit être utilisée lorsqu'on récupère un [manife
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                           |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'infrastructure.html#cors-settings-attributes', 'CORS settings attributes')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#attr-img-crossorigin', 'crossorigin')}}                     | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Pour l'élément script
-
-{{Compat("html.elements.script.crossorigin")}}
-
-### Pour l'élément video
-
-{{Compat("html.elements.video.crossorigin")}}
-
-### Pour l'élément link
-
-{{Compat("html.elements.link.crossorigin")}}
+{{Compat}}
 
 ## Voir aussi
 
