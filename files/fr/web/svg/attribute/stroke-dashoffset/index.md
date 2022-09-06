@@ -99,10 +99,10 @@ html,body,svg { height:100% }
 
 Le décalage est généralement exprimé en unités résolues par {{SVGAttr('pathLength')}} mais si un [\<percentage>](/fr/SVG/Content_type#Percentage) est utilisé, alors la valeur est résolue en pourcentage du viewport.
 
-## Compatibilité des navigateurs
-
-{{Compat("svg.attributes.presentation.stroke-dashoffset")}}
-
 ## Spécifications
 
 {{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
