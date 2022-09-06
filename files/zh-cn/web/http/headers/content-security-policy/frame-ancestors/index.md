@@ -45,7 +45,7 @@ Content-Security-Policy: frame-ancestors <source> <source>;
 
 \<source> 可以是如下内容：
 
-> **备注：** `frame-ancestors`指令的语法类似于其他指令的源列表（source list，如{{CSP("default-src")}}），但不允许` 'unsafe-eval'或``'unsafe-inline' ` 。它也不会回退使用`default-src`的值。仅有如下的源列表是可用的：
+> **备注：** `frame-ancestors` 指令的语法类似于其他指令的源列表（source list，如{{CSP("default-src")}}），但不允许 `'unsafe-eval'` 或`'unsafe-inline'` 。它也不会回退使用 `default-src` 的值。仅有如下的源列表是可用的：
 
 - \<host-source>
   - : 一个 Internet 主机的名称或 IP 地址，以及一个可选的[URL scheme](/zh-CN/docs/URIs_and_URLs)和／或端口号。这些站点的地址可以包含一个可选的引导通配符（星号， `'*'），或者你可以使用通配符`（同样还是， `'*'）作为端口地址`，以示这个源的所有合法端口地址都是有效的。

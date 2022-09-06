@@ -133,7 +133,7 @@ SVG 中使用了许多数据类型。本文列出了这些数据类型以及它�
 ## IRI
 
 - \<IRI>
-  - : 一个国际化资源标识符。在因特网上，资源是用 _IRI_（一个国际化资源标识符）标识的。举个例子，一个 SVG 文档调用了位于 http://example.com 上的 someDrawing.svg，可以使用下面的 _IRI_：
+  - : 一个国际化资源标识符。在因特网上，资源是用 _IRI_（一个国际化资源标识符）标识的。举个例子，一个 SVG 文档调用了位于 `http://example.com` 上的 `someDrawing.svg`，可以使用下面的 _IRI_：
 
     ```
     http://example.com/someDrawing.svg

@@ -32,7 +32,7 @@ Rust 和 WebAssembly 有两大主要用例：
 要构建我们的包，我们需要一个额外工具 `wasm-pack`。它会帮助我们把我们的代码编译成 WebAssembly 并制造出正确的 `npm` 包。使用下面的命令可以下载并安装它：
 
 ```bash
-$ cargo install wasm-pack
+cargo install wasm-pack
 ```
 
 ### 安装 Node.js 并获取 npm 账户
@@ -171,7 +171,7 @@ pub fn greet(name: &str) {
 
 这个函数的名字是 `greet`，它需要一个参数，一个字符串 （写作 `&str`）。它调用了我们前面在 `extern` 块中引入的 `alert` 函数。它传递了一个让我们串联字符串的 `format!` 宏的调用。
 
-`format!` 在这里有两个参数，一个格式化字符串和一个要填入的变量。格式化字符串是 `"Hello, {}!"` 部分。它可以包含一个或多个 `{}`，变量将会被填入其中。传递的变量是 `name`，也就是这个函数的参数。所以当我们调用 `greet("Steve")`时我们就能看到 `"Hello, Steve!"。`
+`format!` 在这里有两个参数，一个格式化字符串和一个要填入的变量。格式化字符串是 `"Hello, {}!"` 部分。它可以包含一个或多个 `{}`，变量将会被填入其中。传递的变量是 `name`，也就是这个函数的参数。所以当我们调用 `greet("Steve")`时我们就能看到 `"Hello, Steve!"`。
 
 这个传递到了 `alert()`，所以当我们调用这个函数时，我们应该能看到他谈弹出了一个带有 "Hello, Steve!" 的消息框。
 
@@ -208,7 +208,7 @@ wasm-bindgen = "0.2"
 现在我们已经完成了所有配置项，开始构建吧！在命令行输入以下命令：
 
 ```bash
-$ wasm-pack build --scope mynpmusername
+wasm-pack build --scope mynpmusername
 ```
 
 这个命令将做一系列事情 (这会花一些时间，特别是当你第一次运行 `wasm-pack`)。想了解详细情况，查看[这篇在 Mozilla Hacks 上的文章](https://hacks.mozilla.org/2018/04/hello-wasm-pack/)。简单来说，`wasm-pack build` 将做以下几件事：
@@ -216,7 +216,7 @@ $ wasm-pack build --scope mynpmusername
 1. 将你的 Rust 代码编译成 WebAssembly。
 2. 在编译好的 WebAssembly 代码基础上运行 `wasm-bindgen`，生成一个 JavaScript 文件将 WebAssembly 文件包装成一个模块以便 npm 能够识别它。
 3. 创建一个 `pkg` 文件夹并将 JavaScript 文件和生成的 WebAssembly 代码移到其中。
-4. 读取你的 `Cargo.toml` 并生成相应的 `package.json。`
+4. 读取你的 `Cargo.toml` 并生成相应的 `package.json`。
 5. 复制你的 `README.md` (如果有的话) 到文件夹中。
 
 最后的结果？你在 `pkg` 文件夹下有了一个 npm 包。
@@ -230,8 +230,8 @@ $ wasm-pack build --scope mynpmusername
 把我们的新包发布到 npm registry:
 
 ```bash
-$ cd pkg
-$ npm publish --access=public
+cd pkg
+npm publish --access=public
 ```
 
 我们现在有了一个 npm 包，使用 Rust 编写，但已经被编译为 WebAssembly 了。现在这个包已经可以被 JavaScript 使用了，而且使用它完全不需要用户安装 Rust；包中的代码是 WebAssembly 代码，而不是 Rust 源码！
@@ -243,9 +243,9 @@ $ npm publish --access=public
 让我们离开`pkg`目录，并创建一个新目录`site`，尝试以下操作：
 
 ```bash
-$ cd ../..
-$ mkdir site
-$ cd site
+cd ../..
+mkdir site
+cd site
 ```
 
 创建一个新文件 `package.json`，然后输入如下代码：
@@ -313,8 +313,8 @@ js.then(js => {
 我们已经完成了所有的文件！让我们试一下：
 
 ```bash
-$ npm install
-$ npm run serve
+npm install
+npm run serve
 ```
 
 这将启动一个 Web 服务器。访问 [http://localhost:8080](http://localhost:8080)，您应该会在屏幕上看到一个警告框，其中包含 `Hello, WebAssembly!` ！我们已经成功地从 JavaScript 调用了 Rust，并从 Rust 调用了 JavaScript。

@@ -222,7 +222,7 @@ ul {
 搜索什么通常是相当直接的。例如：
 
 - 如果你想了解更多关于响应式网页设计的信息，你可以搜索”响应式网页设计”。
-- 如果你想了解更多关于某项特定技术功能的信息，像 HTML 元素，CSS 属性，或者 JavaScript 方法，你应该直接搜索功能的名称。` <video>``background-color``opacity``Date.setTime() `
+- 如果你想了解更多关于某项特定技术功能的信息，像 HTML 元素，CSS 属性，或者 JavaScript 方法，你应该直接搜索功能的名称。`<video>` `background-color` `opacity` `Date.setTime()`
 - 如果您正在寻找一些更具体的信息，您可以添加其他关键字作为补充，例如 "\<video> element autoplay attribute"，或者 "Date.setTime parameters"。
 
 如果你想搜索一些没有那么明显的专业术语的东西，你需要考虑最有可能搜索到想要的东西是什么。

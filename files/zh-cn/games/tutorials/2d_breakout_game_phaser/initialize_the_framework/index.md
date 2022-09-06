@@ -52,7 +52,7 @@ HTML 文档结构非常的简单，这个游戏将整个被渲染在框架生成
 {{htmlelement("canvas")}} 元素是由框架自动生成的。我们是通过 `Phaser.Game` 创建一个对象并赋给了 game 变量来完成初始化的。参数的含义是：
 
 - width 和 height 设置了 {{htmlelement("canvas")}} 宽高。
-- 渲染方式。有三个选项分别是 ` AUTO，``CANVAS ` 和 `WEBGL`。我们可以指定使用 Canvas 还是 WebGL 来渲染，如果使用了 Auto 则优先使用 WebGL，如果浏览器不支持则会选择 Canvas。
+- 渲染方式。有三个选项分别是 `AUTO`，`CANVAS` 和 `WEBGL`。我们可以指定使用 Canvas 还是 WebGL 来渲染，如果使用了 Auto 则优先使用 WebGL，如果浏览器不支持则会选择 Canvas。
 - {{htmlelement("canvas")}} 的 id。如果该参数有值，则使用该值作为 canvas 标签的 id，我们传入 null，则 phaser 会决定 canvas 的 id 值。
 - 第四个参数指定了 phaser 的三个生命周期所对应的函数。我们使用相同的名字来让程序更清晰
 

@@ -30,7 +30,7 @@ Asynchronous JavaScript + XML（异步 JavaScript 和 XML）, 其本身不是一
 - [纯 Ajax 导航示例](/zh-CN/docs/Web/API/History_API/Example)
   - : 本文提供了一个仅由三个页面组成的纯 Ajax 网站的（简易）工作示例。
 - [发送和接收二进制数据](/zh-CN/docs/DOM/XMLHttpRequest/Sending_and_Receiving_Binary_Data)
-  - : 可以设置 `XMLHttpRequest` 对象的 `responseType` 属性以改变从服务器端获取数据的类型。可接受的值为空字符串（默认）、`arraybuffer`、`blob`、`document`、`json` 以 及 `text`。 `response` 属性性根据 `responseType` 的值成为对应的数据对象，如 ` ArrayBuffer，``Blob `、 `Document`、 `JSON` 或者 `string` 。本文会展示一些 Ajax I/O 技术。
+  - : 可以设置 `XMLHttpRequest` 对象的 `responseType` 属性以改变从服务器端获取数据的类型。可接受的值为空字符串（默认）、`arraybuffer`、`blob`、`document`、`json` 以 及 `text`。 `response` 属性性根据 `responseType` 的值成为对应的数据对象，如 `ArrayBuffer`，`Blob`、 `Document`、 `JSON` 或者 `string` 。本文会展示一些 Ajax I/O 技术。
 - [XML](/zh-CN/docs/Glossary/XML)
   - : The **Extensible Markup Language (XML)** 可扩展标记语言是 W3C 推荐的一种专用于创建专用标记语言的通用标记语言 。它是 SGML 的简化子集，能够描述许多不同类型的数据。其主要目的是促进在不同的系统，尤其是通过互联网连接的系统间的数据共享。
 - [解析和序列化 XML](/zh-CN/docs/Web/Guide/Parsing_and_serializing_XML)

@@ -18,7 +18,7 @@ slug: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
 
 要在客户端改正这个问题，只需要确保发出 CORS 请求时将 credential 设置为 false。
 
-- 如果使用 {{domxref("XMLHttpRequest")}} 发出请求，确保未将 {{domxref("XMLHttpRequest.withCredentials", "withCredentials")}} 设置为 `true。`
+- 如果使用 {{domxref("XMLHttpRequest")}} 发出请求，确保未将 {{domxref("XMLHttpRequest.withCredentials", "withCredentials")}} 设置为 `true`。
 - 如果使用 [Server-sent events](/en-US/docs/Web/API/Server-sent_events), 确保 {{domxref("EventSource.withCredentials")}} 的值为 `false` (false 为默认值)。
 - 如果使用 [Fetch API](/en-US/docs/Web/API/Fetch_API)，确保 {{domxref("Request.credentials")}} 的值为 `"omit"`.
 

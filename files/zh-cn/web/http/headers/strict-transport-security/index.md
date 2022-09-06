@@ -28,7 +28,7 @@ Strict-Transport-Security: max-age=<expire-time>; preload
 
 ## 描述
 
-一个网站接受一个 HTTP 的请求，然后跳转到 HTTPS，用户可能在开始跳转前，通过没有加密的方式和服务器对话，比如，用户输入 http\://foo.com 或者直接 foo.com。
+一个网站接受一个 HTTP 的请求，然后跳转到 HTTPS，用户可能在开始跳转前，通过没有加密的方式和服务器对话，比如，用户输入 `http://foo.com` 或者直接 foo.com。
 
 这样存在中间人攻击潜在威胁，跳转过程可能被恶意网站利用来直接接触用户信息，而不是原来的加密信息。
 

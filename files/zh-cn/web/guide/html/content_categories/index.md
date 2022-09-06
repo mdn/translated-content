@@ -81,7 +81,6 @@ slug: Web/Guide/HTML/Content_categories
 - {{HTMLElement("object")}}，若 {{htmlattrxref("usemap", "object")}} 属性存在
 - {{HTMLElement("video")}}，若 {{htmlattrxref("controls", "video")}} 属性存在
 
-
 ### 可感知内容
 
 当内容既不是空的也不是隐藏的时候，它就是可感知（palpable）的；它是被渲染的内容，是实质性的。模型为流动内容的元素应该至少有一个节点是可感知的。
@@ -123,7 +122,7 @@ slug: Web/Guide/HTML/Content_categories
 
 这些支持脚本的元素有：
 
-- {{HTMLElement("script")}} 
+- {{HTMLElement("script")}}
 - {{HTMLElement("template")}}
 
 ## 透明内容模型

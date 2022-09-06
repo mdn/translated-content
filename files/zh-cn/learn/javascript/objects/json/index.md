@@ -287,7 +287,7 @@ function showHeroes(jsonObj) {
 3. 使用他们的`secretIdentity`, `age`, "Superpowers:" 介绍信息列表 填充三个段落来。
 4. 保存 `powers` 属性于另一个变量 `superPowers`，包含英雄的`superpowers`列表。
 5. 使用另一个循环来遍历当前的英雄的 `superpowers` ，对于每一个元素我们创建`<li>`元素，把`superpower`放进去，然后使用`appendChild()`把 `listItem` 放入`<ul>` 元素中。
-6. 最后一件事情是追加` <h2>,<p>,还有``<ul>进入 ` `<article>` (`myArticle`)。然后将`<article>` 追加到 `<section>`。追加的顺序很重要，因为他们将被展示在 HTML 中。
+6. 最后一件事情是追加 `<h2>`, `<p>`, 还有 `<ul>` 进入 `<article>` (`myArticle`)。然后将 `<article>` 追加到 `<section>`。追加的顺序很重要，因为他们将被展示在 HTML 中。
 
 > **备注：** 如有疑难，试试引用我们的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) 代码 (也可见 [running live](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html) )。
 

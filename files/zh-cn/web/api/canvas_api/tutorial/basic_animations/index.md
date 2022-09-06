@@ -681,6 +681,7 @@ function tmz() {
 
 ##### Output
 
+```html
 <table>
   <tbody>
     <tr>
@@ -697,6 +698,7 @@ function tmz() {
     </tr>
   </tbody>
 </table>
+```
 
 ## 其它例子
 

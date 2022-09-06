@@ -203,7 +203,7 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 
 4. 点击 **Create repository**.
 5. 点击新仓库页面上的绿色“克隆或下载”（**Clone or download**）按钮。
-6. 从显示的对话框中的文本字段中复制 URL 值（它应该类似于： **https\://github.com/_\<your_git_user_id>_/django_local_library.git**）。
+6. 从显示的对话框中的文本字段中复制 URL 值（它应该类似于： `https://github.com/<your_git_user_id>/django_local_library.git`）。
 
 现在创建了储存库（“repo”），我们将要在本地计算机上克隆它：
 
@@ -317,7 +317,7 @@ pip3 install gunicorn
 在本地安装 dj-database-url，使其成为我们在远程服务器上设置 Heroku 的 [requirements](#requirements) 的一部分：
 
 ```bash
-$ pip3 install dj-database-url
+pip3 install dj-database-url
 ```
 
 ##### settings.py
@@ -397,7 +397,7 @@ Whitenoise
 使用以下命令在本地安装 whitenoise：
 
 ```bash
-$ pip3 install whitenoise
+pip3 install whitenoise
 ```
 
 ##### settings.py

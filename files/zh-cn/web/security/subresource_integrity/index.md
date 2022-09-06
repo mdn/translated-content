@@ -72,7 +72,7 @@ Content-Security-Policy: require-sri-for style;
 
 ### 在 script 标签中增加 SRI
 
-你可以使用以下的 {{HTMLElement("script")}} 元素告诉浏览器在执行 https\://example.com/example-framework.js 中的内容之前，必须先比较该文件的哈希值是否和预期的一致，只有一致才能执行。
+你可以使用以下的 {{HTMLElement("script")}} 元素告诉浏览器在执行 `https://example.com/example-framework.js` 中的内容之前，必须先比较该文件的哈希值是否和预期的一致，只有一致才能执行。
 
 ```html
 <script src="https://example.com/example-framework.js"

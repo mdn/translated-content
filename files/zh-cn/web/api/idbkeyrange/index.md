@@ -26,13 +26,13 @@ slug: Web/API/IDBKeyRange
 
   - `undefined`
   - 低于正在被鉴定的键值
-  - 等于正在被鉴定的键值，且键范围的`lowerOpen 属性`为`false`.
+  - 等于正在被鉴定的键值，且键范围的 `lowerOpen` 属性为 `false`.
 
 - 键范围的上界值为以下值或符合以下条件之一时：
 
   - `undefined`
   - 高于正在被鉴定的键值
-  - 等于正在被鉴定的键值，且键范围的` upperOpen 属性为``false `.
+  - 等于正在被鉴定的键值，且键范围的 `upperOpen` 属性为 `false`.
 
 {{AvailableInWorkers}}
 

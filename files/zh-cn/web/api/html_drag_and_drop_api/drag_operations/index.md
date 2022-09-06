@@ -16,7 +16,7 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 要使其他的 HTML 元素可拖拽，必须做三件事：
 
-- 将想要拖拽的元素的 `{{htmlattrxref("draggable")}}` 属性设置成 ` {{htmlattrxref("draggable")}}="``true" `。
+- 将想要拖拽的元素的 `{{htmlattrxref("draggable")}}` 属性设置成 `{{htmlattrxref("draggable")}}="true"`。
 - 为 `{{event("dragstart")}}` 事件添加一个监听程序。
 - 在上一步定义的监听程序中 {{domxref("DataTransfer.setData","设置拖拽数据")}}。
 

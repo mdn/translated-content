@@ -41,7 +41,7 @@ My cat is very grumpy
 <p>My cat is very grumpy</p>
 ```
 
-> **备注：** HTML 标签不区分大小写。也就是说，输入标签时既可以使用大写字母也可以使用小写字母。例如，标签 {{htmlelement("title")}} 写作` <title>、``<TITLE> `、`<Title>`、`<TiTlE>`，等等都可以正常工作。不过，从一致性、可读性来说，最好仅使用小写字母。
+> **备注：** HTML 标签不区分大小写。也就是说，输入标签时既可以使用大写字母也可以使用小写字母。例如，标签 {{htmlelement("title")}} 写作 `<title>`、`<TITLE>`、`<Title>`、`<TiTlE>`，等等都可以正常工作。不过，从一致性、可读性来说，最好仅使用小写字母。
 
 ## 剖析一个 HTML 元素
 
