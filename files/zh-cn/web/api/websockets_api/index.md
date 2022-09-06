@@ -8,11 +8,11 @@ slug: Web/API/WebSockets_API
 
 ## 接口
 
-- [`WebSocket`](/en-US/docs/Web/API/WebSocket)
+- [`WebSocket`](/zh-CN/docs/Web/API/WebSocket)
   - : 用于连接 WebSocket 服务器的主要接口，之后可以在这个连接上发送 和接受数据。
-- [`CloseEvent`](/en-US/docs/Web/API/CloseEvent)
+- [`CloseEvent`](/zh-CN/docs/Web/API/CloseEvent)
   - : 连接关闭时 WebSocket 对象发送的事件。
-- [`MessageEvent`](/en-US/docs/Web/API/MessageEvent)
+- [`MessageEvent`](/zh-CN/docs/Web/API/MessageEvent)
   - : 当从服务器获取到消息的时候 WebSocket 对象触发的事件。
 
 ## 工具
@@ -33,14 +33,14 @@ slug: Web/API/WebSockets_API
 
 ## 相关话题
 
-- [AJAX](/en-US/docs/AJAX)
-- [JavaScript](/en-US/docs/JavaScript)
+- [AJAX](/zh-CN/docs/AJAX)
+- [JavaScript](/zh-CN/docs/JavaScript)
 
 ## 参见
 
 - [RFC 6455 — The WebSocket Protocol](http://tools.ietf.org/html/rfc6455)
 - [WebSocket API Specification](http://www.w3.org/TR/websockets/)
-- [Server-Sent Events](/en-US/docs/Server-sent_events)
+- [Server-Sent Events](/zh-CN/docs/Server-sent_events)
 
 ## 浏览器兼容性
 
