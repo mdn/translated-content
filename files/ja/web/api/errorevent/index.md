@@ -1,11 +1,6 @@
 ---
 title: ErrorEvent
 slug: Web/API/ErrorEvent
-tags:
-  - API
-  - Event
-  - Worker API
-translation_of: Web/API/ErrorEvent
 ---
 {{APIRef("HTML DOM")}}
 
@@ -50,4 +45,4 @@ _親である {{domxref("Event")}}_ から関数を継承します。
 
 ## 関連項目
 
-- [web worker を使用して](/ja/docs/Web/Guide/Performance/Using_web_workers "/en-US/docs/Web/Guide/Performance/Using_web_workers")、 その様なイベントを発生させる可能性が最も高いオブジェクト
+- [web worker を使用して](/ja/docs/Web/Guide/Performance/Using_web_workers)、 その様なイベントを発生させる可能性が最も高いオブジェクト

@@ -1,14 +1,6 @@
 ---
 title: Document.close()
 slug: Web/API/Document/close
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Method
-  - Reference
-  - メソッド
-translation_of: Web/API/Document/close
 ---
 {{APIRef("DOM")}}
 

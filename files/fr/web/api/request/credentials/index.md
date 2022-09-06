@@ -37,13 +37,11 @@ var myCred = myRequest.credentials; // renvoie "same-origin" par défaut
 
 ## Spécifications
 
-| Spécification                                                                        | État                     | Commentaires         |
-| ------------------------------------------------------------------------------------ | ------------------------ | -------------------- |
-| {{SpecName('Fetch','#dom-request-credentials','credentials')}} | {{Spec2('Fetch')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Request.credentials")}}
+{{Compat}}
 
 ## Voir aussi
 

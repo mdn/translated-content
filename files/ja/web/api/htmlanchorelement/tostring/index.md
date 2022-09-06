@@ -1,14 +1,6 @@
 ---
 title: HTMLAnchorElement.toString()
 slug: Web/API/HTMLAnchorElement/toString
-page-type: web-api-instance-method
-tags:
-  - API
-  - HTMLAnchorElement
-  - Method
-  - Stringifier
-browser-compat: api.HTMLAnchorElement.toString
-translation_of: Web/API/HTMLAnchorElement/toString
 original_slug: Web/API/HTMLHyperlinkElementUtils/toString
 ---
 {{ApiRef("URL API")}}

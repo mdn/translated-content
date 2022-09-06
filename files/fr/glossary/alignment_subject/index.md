@@ -20,6 +20,6 @@ Pour {{cssxref("justify-content")}} et {{cssxref("align-content")}}, le mode d'�
 - Conteneurs grid
   - : La grille suit l’axe approprié, avec tout espacement inséré entre les pistes ajoutées aux gouttières correspondantes. Les gouttières fusionnées sont traitées comme une seule opportunité d'insertion d'espace.
 
-## Learn more
+## Voir aussi
 
 - [CSS Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)

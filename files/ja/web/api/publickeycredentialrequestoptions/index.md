@@ -1,15 +1,6 @@
 ---
 title: PublicKeyCredentialRequestOptions
 slug: Web/API/PublicKeyCredentialRequestOptions
-tags:
-  - API
-  - Dictionary
-  - PublicKeyCredentialRequestOptions
-  - Reference
-  - Web Authentication API
-  - WebAuthn
-  - 辞書
-translation_of: Web/API/PublicKeyCredentialRequestOptions
 ---
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 

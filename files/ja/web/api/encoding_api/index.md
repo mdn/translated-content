@@ -1,7 +1,6 @@
 ---
 title: Encoding API
 slug: Web/API/Encoding_API
-translation_of: Web/API/Encoding_API
 ---
 {{DefaultAPISidebar("Encoding API")}}{{SeeCompatTable}}
 
@@ -19,7 +18,7 @@ translation_of: Web/API/Encoding_API
 ## チュートリアルとツール
 
 - [shim](http://code.google.com/p/stringencoding/)はこのインターフェースをサポートしていないブラウザでもこのインターフェスを使えるようにします。
-- [`StringView`](/ja/Add-ons/Code_snippets/StringView "/en-US/docs/Web/JavaScript/Typed_arrays/StringView") は C 言語の文字列配列型のような表現を提供します。
+- [`StringView`](/ja/Add-ons/Code_snippets/StringView) は C 言語の文字列配列型のような表現を提供します。
 
 ## 仕様書
 

@@ -1,12 +1,6 @@
 ---
 title: display の新しい 2 値構文への対応
 slug: Web/CSS/display/two-value_syntax_of_display
-tags:
-  - CSS
-  - 例
-  - 実験的
-  - ガイド
-  - 中級者
 ---
 {{CSSRef}}
 

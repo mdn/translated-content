@@ -37,14 +37,12 @@ url.hash // Returns '#Examples'
 
 ## Spécifications
 
-| Spécification                                                    | Statut               | Commentaire         |
-| ---------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('URL', '#dom-url-hash', 'URL.hash')}} | {{Spec2('URL')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.URL.hash")}}
+{{Compat}}
 
-## A voir également
+## Voir aussi
 
 - L'interface {{domxref("URL")}} dont il est contenu.

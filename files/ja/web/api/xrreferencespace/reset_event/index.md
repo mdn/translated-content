@@ -1,23 +1,6 @@
 ---
 title: 'XRReferenceSpace: reset イベント'
 slug: Web/API/XRReferenceSpace/reset_event
-tags:
-  - API
-  - AR
-  - Event
-  - Graphics
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRReferenceSpace
-  - augmented
-  - reset
-translation_of: Web/API/XRReferenceSpace/reset_event
 ---
 {{APIRef("WebXR Device API")}}{{secureContext_header}}
 

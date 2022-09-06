@@ -396,7 +396,7 @@ Dans ce chapitre, nous avons créé la page d'accueil pour notre site — une pa
 
 Nous allons nous appuyer sur ces éléments pour concevoir dans le prochain chapitre les 4 pages qui manquent.
 
-## À voir aussi
+## Voir aussi
 
 - [Ecrire sa première application Django, 3ème partie](https://docs.djangoproject.com/fr/2.2/intro/tutorial03/) (Django docs)
 - [Distribution des URL](https://docs.djangoproject.com/fr/2.2/topics/http/urls/) (Django docs)

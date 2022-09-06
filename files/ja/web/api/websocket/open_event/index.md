@@ -1,14 +1,6 @@
 ---
 title: 'WebSocket: open イベント'
 slug: Web/API/WebSocket/open_event
-tags:
-  - API
-  - Event
-  - WebSocket
-  - イベント
-  - open
-browser-compat: api.WebSocket.open_event
-translation_of: Web/API/WebSocket/open_event
 ---
 {{APIRef}}
 

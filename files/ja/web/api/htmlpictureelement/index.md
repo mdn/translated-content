@@ -1,13 +1,6 @@
 ---
 title: HTMLPictureElement
 slug: Web/API/HTMLPictureElement
-tags:
-  - API
-  - Experimental
-  - HTML DOM
-  - Interface
-  - Reference
-translation_of: Web/API/HTMLPictureElement
 ---
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 

@@ -1,17 +1,6 @@
 ---
 title: HTMLInputElement.webkitEntries
 slug: Web/API/HTMLInputElement/webkitEntries
-tags:
-  - API
-  - ファイルシステム API
-  - ファイルとディレクトリー項目 API
-  - Files
-  - HTML DOM
-  - HTMLInputElement
-  - 標準外
-  - プロパティ
-  - webkitEntries
-browser-compat: api.HTMLInputElement.webkitEntries
 ---
 {{APIRef("File System API")}}{{SeeCompatTable}}{{Non-standard_header}}
 

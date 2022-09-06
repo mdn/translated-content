@@ -39,10 +39,8 @@ const observe_all = new PerformanceObserver(function(list, obs) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | Statut                                                   | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | -------------------- |
-| {{SpecName('Performance Timeline Level 2', '#idl-def-performanceobserverentrylist', 'PerformanceObserverEntryList')}} | {{Spec2('Performance Timeline Level 2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceObserverEntryList")}}
+{{Compat}}

@@ -1,14 +1,6 @@
 ---
 title: MDN のサンプルサーバー
 slug: MDN/Tools/Sample_server
-tags:
-  - Advanced
-  - Draft
-  - Guide
-  - MDN Meta
-  - Site-wide
-  - Tools
-translation_of: MDN/Tools/Sample_server
 ---
 {{MDNSidebar}}
 

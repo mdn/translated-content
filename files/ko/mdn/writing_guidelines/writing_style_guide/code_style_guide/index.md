@@ -14,7 +14,7 @@ tags:
 translation_of: MDN/Guidelines/Code_guidelines/General
 original_slug: MDN/Guidelines/Code_guidelines/General
 ---
-{{MDNSidebar}}{{IncludeSubnav("/ko/docs/MDN")}}
+{{MDNSidebar}}
 
 아래 코드 예제 가이드라인에서 HTML, CSS, JavaScript 나 다른 어느 코드로 예로 들건 , 모든 코드 타입에 적용됩니다.
 

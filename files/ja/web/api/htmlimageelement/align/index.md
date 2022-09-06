@@ -1,21 +1,6 @@
 ---
 title: HTMLImageElement.align
 slug: Web/API/HTMLImageElement/align
-page-type: web-api-instance-property
-tags:
-  - API
-  - Align
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - 画像
-  - プロパティ
-  - リファレンス
-  - alignment
-  - float
-  - img
-  - 非推奨
-browser-compat: api.HTMLImageElement.align
 ---
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 

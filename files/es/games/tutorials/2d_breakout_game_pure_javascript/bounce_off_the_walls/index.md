@@ -107,6 +107,6 @@ Chequea el código acabado para esta parte con el tuyo, y juega:
 
 ## Siguientes pasos
 
-Ahora hemos llegado al punto donde nuestra pelota se mueve y permanece en el tablero de juego. En el capítulo cuarto, veremos la implementación del control de una pala - vea [Control de Pala y teclado](https://developer.mozilla.org/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado).
+Ahora hemos llegado al punto donde nuestra pelota se mueve y permanece en el tablero de juego. En el capítulo cuarto, veremos la implementación del control de una pala - vea [Control de Pala y teclado](/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado).
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado")}}

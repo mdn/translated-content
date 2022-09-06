@@ -199,6 +199,6 @@ Pour tester cette extension, ouvrez la page [http://useragentstring.com](http://
 
 ![useragentstring.com affichant les détails de la chaîne d'agent utilisateur modifiée](modified_request_header.png)
 
-## Pour approfondir
+## Voir aussi
 
 Pour en savoir plus sur tout ce qu'il est possible de réaliser avec l'API `webRequest`, vous pouvez consulter [la documentation de référence sur `webRequest`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest).

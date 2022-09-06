@@ -1,15 +1,6 @@
 ---
 title: 'FileReader: loadstart イベント'
 slug: Web/API/FileReader/loadstart_event
-tags:
-  - API
-  - Event
-  - FileReader
-  - ProgressEvent
-  - Web
-  - loadstart
-  - イベント
-translation_of: Web/API/FileReader/loadstart_event
 ---
 {{APIRef}}
 

@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_text
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
 
-[`canvas`](/en/HTML/Canvas)元素支援在[標準 HTML 5 特色](http://www.whatwg.org/specs/web-apps/current-work/#text-0)以及少許實驗性的 Mozilla 方法和功能上繪製文字。
+[`canvas`](/zh-TW/HTML/Canvas)元素支援在[標準 HTML 5 特色](http://www.whatwg.org/specs/web-apps/current-work/#text-0)以及少許實驗性的 Mozilla 方法和功能上繪製文字。
 
 文字可以包括任何 Unicode 字元，即使用那些超出“基本多文種平面”的字元也可以。
 

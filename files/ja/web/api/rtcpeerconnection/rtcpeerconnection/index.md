@@ -1,15 +1,6 @@
 ---
 title: RTCPeerConnection()
 slug: Web/API/RTCPeerConnection/RTCPeerConnection
-page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
-browser-compat: api.RTCPeerConnection.RTCPeerConnection
-translation_of: Web/API/RTCPeerConnection/RTCPeerConnection
 original_slug: Web/API/RTCConfiguration
 ---
 {{APIRef("WebRTC")}}

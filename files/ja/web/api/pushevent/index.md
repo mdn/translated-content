@@ -1,17 +1,6 @@
 ---
 title: PushEvent
 slug: Web/API/PushEvent
-tags:
-  - API
-  - ExtendableEvent
-  - Interface
-  - Offline
-  - Push
-  - Push API
-  - Reference
-  - Service Workers
-  - Workers
-translation_of: Web/API/PushEvent
 ---
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 

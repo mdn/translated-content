@@ -48,10 +48,8 @@ console.log(records[0].duration);
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                                                   | Commentaire                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | -------------------------------------------------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceobserver-takerecords', 'takeRecords()')}} | {{Spec2('Performance Timeline Level 2')}} | Définition initiale de la méthode `takeRecords()`. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceObserver.takeRecords")}}
+{{Compat}}

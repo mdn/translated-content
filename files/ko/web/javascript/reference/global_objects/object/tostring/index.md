@@ -17,7 +17,9 @@ The **`toString()`** 은 문자열을 반환하는 object의 대표적인 방법
 
 ## 구문
 
-    obj.toString()
+```js
+obj.toString()
+```
 
 ## Description
 
@@ -91,7 +93,7 @@ Dog.prototype.toString = function dogToString() {
 }
 ```
 
-앞선 코드를 사용하면 문자열 컨텍스트에서 `theDog`가 사용될 때마다 자바스크립트는 자동으로 `dogToString() `함수를 호출하여 다음 문자열을 반환합니다:
+앞선 코드를 사용하면 문자열 컨텍스트에서 `theDog`가 사용될 때마다 자바스크립트는 자동으로 `dogToString()` 함수를 호출하여 다음 문자열을 반환합니다:
 
 ```js
 "Dog Gabby is a female chocolate Lab"

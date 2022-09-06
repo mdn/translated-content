@@ -1,14 +1,6 @@
 ---
 title: WebSocket.url
 slug: Web/API/WebSocket/url
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - Web API
-  - WebSocket
-browser-compat: api.WebSocket.url
-translation_of: Web/API/WebSocket/url
 ---
 {{APIRef("Web Sockets API")}}
 

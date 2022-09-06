@@ -32,7 +32,7 @@ translation_of: Web/Guide/Printing
 
 ブラウザーによっては (Firefox 6 以降や Internet Explorer など) コンテンツが印刷を開始することを判断できるように、 `beforeprint` および `afterprint` イベントを送信します。これを使用して、印刷中に表示されるユーザーインターフェイスを調整することができます (例えば、印刷処理中にユーザーインターフェイス要素を表示したり隠したりするなど)。
 
-> **Note:** [`window.onbeforeprint`](/ja/docs/DOM/window.onbeforeprint "DOM/window.onbeforeprint") および [`window.onafterprint`](/ja/docs/DOM/window.onafterprint "DOM/window.onafterprint") を使用してこれらのイベントにハンドラーを割り当てることもできますが、 {{domxref("EventTarget.addEventListener()")}} を使用することをお勧めします。
+> **Note:** [`window.onbeforeprint`](/ja/docs/DOM/window.onbeforeprint) および [`window.onafterprint`](/ja/docs/DOM/window.onafterprint) を使用してこれらのイベントにハンドラーを割り当てることもできますが、 {{domxref("EventTarget.addEventListener()")}} を使用することをお勧めします。
 
 ## 例
 
@@ -40,7 +40,7 @@ translation_of: Web/Guide/Printing
 
 #### ポップアップウィンドウを開き、終了したら閉じる
 
-ユーザーがコンテンツを印刷した後に [popup window](/ja/docs/DOM/window.open "DOM/window.open") (例えば文書の印刷用など) を自動的に閉じたい場合は、次のようなコードで実現できます。
+ユーザーがコンテンツを印刷した後に [popup window](/ja/docs/DOM/window.open) (例えば文書の印刷用など) を自動的に閉じたい場合は、次のようなコードで実現できます。
 
 ```html
 <!doctype html>
@@ -70,7 +70,7 @@ translation_of: Web/Guide/Printing
 
 ### 外部ページを開かずに印刷する
 
-外部ページを開かずに印刷できるようにしたい場合は、非表示の {{HTMLElement("iframe")}} ([HTMLIFrameElement](/ja/docs/DOM/HTMLIFrameElement "DOM/HTMLIFrameElement") を参照) を利用し、ユーザーがコンテンツを印刷した後で自動的にそれを削除するようにすることで実現できます。以下の例は、 `externalPage.html` という名前のファイルを印刷することができる例です。
+外部ページを開かずに印刷できるようにしたい場合は、非表示の {{HTMLElement("iframe")}} ([HTMLIFrameElement](/ja/docs/DOM/HTMLIFrameElement) を参照) を利用し、ユーザーがコンテンツを印刷した後で自動的にそれを削除するようにすることで実現できます。以下の例は、 `externalPage.html` という名前のファイルを印刷することができる例です。
 
 ```html
 <!doctype html>
@@ -116,8 +116,8 @@ function printPage (sURL) {
 
 ## 関連情報
 
-- [`window.print`](/ja/docs/DOM/window.print "DOM/window.print")
-- [`window.onbeforeprint`](/ja/docs/DOM/window.onbeforeprint "DOM/window.onbeforeprint")
-- [`window.onafterprint`](/ja/docs/DOM/window.onafterprint "DOM/window.onafterprint")
-- [Media queries](/ja/docs/CSS/Media_queries "CSS/Media queries")
+- [`window.print`](/ja/docs/DOM/window.print)
+- [`window.onbeforeprint`](/ja/docs/DOM/window.onbeforeprint)
+- [`window.onafterprint`](/ja/docs/DOM/window.onafterprint)
+- [Media queries](/ja/docs/CSS/Media_queries)
 - {{cssxref("@media")}}

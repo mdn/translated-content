@@ -1,16 +1,6 @@
 ---
 title: CSSNumericValue.mul()
 slug: Web/API/CSSNumericValue/mul
-tags:
-  - API
-  - CSS 型付きオブジェクトモデル API
-  - CSSNumericValue
-  - 実験的
-  - Houdini
-  - メソッド
-  - リファレンス
-  - mul()
-browser-compat: api.CSSNumericValue.mul
 ---
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 

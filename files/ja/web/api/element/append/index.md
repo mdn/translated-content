@@ -1,14 +1,6 @@
 ---
 title: Element.append()
 slug: Web/API/Element/append
-tags:
-  - API
-  - DOM
-  - メソッド
-  - Node
-  - Element
-  - リファレンス
-translation_of: Web/API/Element/append
 original_slug: Web/API/ParentNode/append
 ---
 {{APIRef("DOM")}}

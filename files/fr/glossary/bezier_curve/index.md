@@ -23,7 +23,7 @@ Pour tracer la courbe, deux lignes imaginaires sont tracées l'une de P<sub>0</s
 
 - [courbe de Bézier sur Wikipédia](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier)
 
-### En savoir plus
+### Voir aussi
 
 - [Fonctions de synchronisation Cubic Bézier en CSS](</fr/docs/Web/CSS/timing-function#The_cubic-bezier()_class_of_timing_functions>)
 - {{SVGAttr("keySplines")}} Attribut SVG

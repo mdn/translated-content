@@ -47,7 +47,7 @@ slug: Learn/JavaScript/First_steps/Math
 
 ### 我怎麼看都是些數字!
 
-讓我們來快速操作一些數字來重新認識一下我們會需要用到的基本語法。將下面的需求表輸入進你的開發者工具 js 控制台([developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools))，或是簡單建立在任何你偏好的控制台。
+讓我們來快速操作一些數字來重新認識一下我們會需要用到的基本語法。將下面的需求表輸入進你的開發者工具 js 控制台([developer tools JavaScript console](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools))，或是簡單建立在任何你偏好的控制台。
 
 1. 首先，先來宣告兩個變數，並分別賦予他們初始值為整數與浮點數，然後接著打上變數名稱來確認萬事預備:
 
@@ -140,7 +140,7 @@ Arithmetic operators are the basic operators that we use to do sums:
 
 **備註：** You may sometimes see exponents expressed using the older {{jsxref("Math.pow()")}} method, which works in a very similar way. For example, in `Math.pow(7, 3)`, `7` is the base and `3` is the exponent, so the result of the expression is `343`. `Math.pow(7, 3)` is equivalent to `7**3`.
 
-We probably don't need to teach you how to do basic math, but we would like to test your understanding of the syntax involved. Try entering the examples below into your [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools), or use the simple built in console seen earlier if you'd prefer, to familiarize yourself with the syntax.
+We probably don't need to teach you how to do basic math, but we would like to test your understanding of the syntax involved. Try entering the examples below into your [developer tools JavaScript console](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools), or use the simple built in console seen earlier if you'd prefer, to familiarize yourself with the syntax.
 
 1. First try entering some simple examples of your own, such as
 
@@ -191,17 +191,17 @@ If you want to override operator precedence, you can put parentheses round the p
 
 Try it and see.
 
-> **備註：** A full list of all JavaScript operators and their precedence can be found in [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operator_precedence).
+> **備註：** A full list of all JavaScript operators and their precedence can be found in [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operator_precedence).
 
 ## 遞增和遞減運算符
 
-Sometimes you'll want to repeatedly add or subtract one to/from a numeric variable value. This can be conveniently done using the increment (`++`) and decrement(`--`) operators. We used `++` in our "Guess the number" game back in our [first splash into JavaScript](/en-US/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash) article, when we added 1 to our `guessCount` variable to keep track of how many guesses the user has left after each turn.
+Sometimes you'll want to repeatedly add or subtract one to/from a numeric variable value. This can be conveniently done using the increment (`++`) and decrement(`--`) operators. We used `++` in our "Guess the number" game back in our [first splash into JavaScript](/zh-TW/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash) article, when we added 1 to our `guessCount` variable to keep track of how many guesses the user has left after each turn.
 
 ```js
 guessCount++;
 ```
 
-> **備註：** They are most commonly used in [loops](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration), which you'll learn about later on in the course. For example, say you wanted to loop through a list of prices, and add sales tax to each one. You'd use a loop to go through each value in turn and do the necessary calculation for adding the sales tax in each case. The incrementor is used to move to the next value when needed. We've actually provided a simple example showing how this is done — [check it out live](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/loop.html), and [look at the source code](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/maths/loop.html) to see if you can spot the incrementors! We'll look at loops in detail later on in the course.
+> **備註：** They are most commonly used in [loops](/zh-TW/docs/Web/JavaScript/Guide/Loops_and_iteration), which you'll learn about later on in the course. For example, say you wanted to loop through a list of prices, and add sales tax to each one. You'd use a loop to go through each value in turn and do the necessary calculation for adding the sales tax in each case. The incrementor is used to move to the next value when needed. We've actually provided a simple example showing how this is done — [check it out live](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/loop.html), and [look at the source code](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/maths/loop.html) to see if you can spot the incrementors! We'll look at loops in detail later on in the course.
 
 Let's try playing with these in your console. For a start, note that you can't apply these directly to a number, which might seem strange, but we are assigning a variable a new updated value, not operating on the value itself. The following will return an error:
 
@@ -261,7 +261,7 @@ var y = 4; // y contains the value 4
 x *= y; // x now contains the value 12
 ```
 
-> **備註：** There are lots of [other assignment operators available](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment_operators), but these are the basic ones you should learn now.
+> **備註：** There are lots of [other assignment operators available](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment_operators), but these are the basic ones you should learn now.
 
 ## Active learning: sizing a canvas box
 
@@ -342,7 +342,7 @@ In this article we have covered the fundamental information you need to know abo
 
 In the next article, we'll explore text and how JavaScript allows us to manipulate it.
 
-> **備註：** If you do enjoy math and want to read more about how it is implemented in JavaScript, you can find a lot more detail in MDN's main JavaScript section. Great places to start are our [Numbers and dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates) and [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators) articles.
+> **備註：** If you do enjoy math and want to read more about how it is implemented in JavaScript, you can find a lot more detail in MDN's main JavaScript section. Great places to start are our [Numbers and dates](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates) and [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators) articles.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 

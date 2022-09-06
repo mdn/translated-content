@@ -1,13 +1,6 @@
 ---
 title: CookieStore.get()
 slug: Web/API/CookieStore/get
-tags:
-  - API
-  - Method
-  - Reference
-  - get()
-  - CookieStore
-browser-compat: api.CookieStore.get
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
 

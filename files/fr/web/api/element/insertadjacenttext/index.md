@@ -88,15 +88,13 @@ if (!Element.prototype.insertAdjacentText)
   }
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', '#dom-element-insertadjacenttext', 'insertAdjacentText()')}} | {{ Spec2('DOM WHATWG') }} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.insertAdjacentText")}}
+{{Compat}}
 
 ## Voir aussi
 

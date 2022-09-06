@@ -48,13 +48,11 @@ formData.delete('username');
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                               | Commentaire |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata-delete','delete()')}} | {{Spec2('XMLHttpRequest')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FormData.delete")}}
+{{Compat}}
 
 ## Voir aussi
 

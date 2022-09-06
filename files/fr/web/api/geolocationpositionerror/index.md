@@ -30,13 +30,11 @@ _L'interface `GeolocationPositionError` n'hérite d'aucune propriété._
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('Geolocation', '#position_error_interface', 'GeolocationPositionError')}} | {{Spec2('Geolocation')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.GeolocationPositionError")}}
+{{Compat}}
 
 ## Voir aussi
 

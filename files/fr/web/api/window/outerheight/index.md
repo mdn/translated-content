@@ -31,13 +31,11 @@ La figure suivante montre la différence entre `outerHeight` et `innerHeight`.
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{ SpecName('CSSOM View', '#dom-window-outerheight', 'Window.outerHeight') }} | {{ Spec2('CSSOM View') }} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.outerHeight")}}
+{{Compat}}
 
 ## Voir aussi
 

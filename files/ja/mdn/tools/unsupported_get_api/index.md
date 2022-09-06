@@ -1,17 +1,6 @@
 ---
 title: 非公式の GET API
 slug: MDN/Tools/Unsupported_GET_API
-tags:
-  - Advanced
-  - Automation
-  - Documentation
-  - Draft
-  - Guide
-  - MDN Meta
-  - PUT API
-  - Page-level
-  - Tools
-translation_of: MDN/Tools/Unsupported_GET_API
 ---
 {{MDNSidebar}}
 

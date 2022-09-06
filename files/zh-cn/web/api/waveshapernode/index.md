@@ -49,11 +49,11 @@ _包含了继承自父类 {{domxref("AudioNode")}}的属性。_
 
 ## 方法
 
-_没有特有的方法; 从父类_ _{{domxref("AudioNode")}}继承了方法_。
+_没有特有的方法；从父类 {{domxref("AudioNode")}} 继承了方法_。
 
 ## 示例
 
-{{page("/en-US/docs/Web/API/AudioContext.createWaveShaper","Example")}}
+参见 [`BaseAudioContext.createWaveShaper()`](/zh-CN/docs/Web/API/BaseAudioContext/createWaveShaper#示例) 以获取示例代码。
 
 ## 规范
 
@@ -61,8 +61,8 @@ _没有特有的方法; 从父类_ _{{domxref("AudioNode")}}继承了方法_。
 
 ## 浏览器兼容性
 
-{{Compat("api.WaveShaperNode")}}
+{{Compat}}
 
-## 相关链接
+## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [使用 Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

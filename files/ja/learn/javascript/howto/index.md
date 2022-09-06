@@ -1,11 +1,6 @@
 ---
 title: JavaScriptのコードのよくある問題を解決する
 slug: Learn/JavaScript/Howto
-tags:
-  - Beginner
-  - JavaScript
-  - Learn
-translation_of: Learn/JavaScript/Howto
 ---
 {{LearnSidebar}}
 

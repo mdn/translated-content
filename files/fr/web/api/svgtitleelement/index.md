@@ -56,11 +56,8 @@ L'interface `SVGTitleElement` n'a pas de métodes spécifiques.
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                   | Commentaire                                                                                                |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| {{SpecName("SVG2", "struct.html#InterfaceSVGTitleElement", "SVGTitleElement")}}     | {{Spec2("SVG2")}} | Suppression de l'héritage de {{domxref("SVGLangSpace")}} et {{domxref("SVGStylable")}}. |
-| {{SpecName("SVG1.1", "struct.html#InterfaceSVGTitleElement", "SVGTitleElement")}} | {{Spec2("SVG1.1")}} | Définition initiale.                                                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.SVGTitleElement")}}
+{{Compat}}

@@ -1,14 +1,6 @@
 ---
 title: NotificationEvent
 slug: Web/API/NotificationEvent
-tags:
-  - API
-  - Interface
-  - NotificationEvent
-  - Reference
-  - Service Workers
-  - ServiceWorker
-translation_of: Web/API/NotificationEvent
 ---
 {{APIRef("Web Notifications")}}
 

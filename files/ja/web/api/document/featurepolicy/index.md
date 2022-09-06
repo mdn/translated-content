@@ -1,14 +1,6 @@
 ---
 title: Document.featurePolicy
 slug: Web/API/Document/featurePolicy
-tags:
-  - API
-  - Document
-  - Feature Policy
-  - Feature-Policy
-  - Reference
-  - 機能ポリシー
-translation_of: Web/API/Document/featurePolicy
 ---
 {{APIRef("Feature Policy")}}
 

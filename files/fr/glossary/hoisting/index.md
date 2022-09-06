@@ -12,7 +12,7 @@ Le hoisting (_en français,_ _"hissage"_) est un terme que vous _ne_ trouverez d
 
 Conceptuellement, par exemple, une définition stricte du hissage suggère que les déclarations de variables et de fonctions sont déplacées physiquement en haut de votre code, mais ce n'est pas ce qui se passe en fait. A la place, les déclarations de variables et de fonctions sont mises en mémoire pendant la phase de _compilation_, mais restent exactement là où vous les avez tapées dans votre code.
 
-## En apprendre plus
+## Voir aussi
 
 ### Exemple technique
 

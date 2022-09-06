@@ -1,18 +1,7 @@
 ---
 title: Response.formData()
 slug: Web/API/Response/formData
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - FormData
-  - Method
-  - NeedsExample
-  - Reference
-  - Response
-translation_of: Web/API/Response/formData
 original_slug: Web/API/Body/formData
-browser-compat: api.Response.formData
 ---
 {{APIRef("Fetch")}}
 

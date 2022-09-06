@@ -1,12 +1,6 @@
 ---
 title: アドレスバーボタン
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
-tags:
-  - AddressBarButton
-  - ページアクション
-  - ユーザーインターフェイス
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 ---
 {{AddonSidebar}}
 

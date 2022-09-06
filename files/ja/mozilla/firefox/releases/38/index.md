@@ -1,10 +1,6 @@
 ---
 title: Firefox 38 for developers
 slug: Mozilla/Firefox/Releases/38
-tags:
-  - Firefox
-  - Release
-translation_of: Mozilla/Firefox/Releases/38
 ---
 {{FirefoxSidebar}}
 

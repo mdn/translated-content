@@ -1,13 +1,6 @@
 ---
 title: CSS 表示方法
 slug: Web/CSS/CSS_Display
-tags:
-  - CSS
-  - CSS 表示方法
-  - ガイド
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Display
 ---
 {{CSSRef}}
 

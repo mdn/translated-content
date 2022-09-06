@@ -1,17 +1,6 @@
 ---
 title: Screen.left
 slug: Web/API/Screen/left
-page-type: web-api-instance-property
-tags:
-  - API
-  - API:Microsoft Extensions
-  - API:Mozilla Extensions
-  - API:WebKit Extensions
-  - DOM
-  - Non-standard
-  - Property
-browser-compat: api.Screen.left
-translation_of: Web/API/Screen/left
 ---
 {{APIRef("CSSOM")}}{{Non-standard_Header}}
 

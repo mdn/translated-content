@@ -1,11 +1,6 @@
 ---
 title: commands
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/commands
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 ---
 {{AddonSidebar}}
 

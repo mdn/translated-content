@@ -17,4 +17,4 @@ translation_of: Glossary/OOP
 ### Conocimientos generales
 
 - {{Interwiki("wikipedia", "Programación_orientada_a_objetos", "Programaci'ón orientada a objetos")}} en Wikipedia
-- [Introducción a JavaScript prientado a objetos](https://developer.mozilla.org/es/docs/Learn/JavaScript/Objects)
+- [Introducción a JavaScript prientado a objetos](/es/docs/Learn/JavaScript/Objects)

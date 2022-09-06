@@ -1,13 +1,6 @@
 ---
 title: CSS ボックスモデル
 slug: Web/CSS/CSS_Box_Model
-tags:
-  - CSS
-  - CSS ボックスモデル
-  - ガイド
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Box_Model
 ---
 {{CSSRef}}
 

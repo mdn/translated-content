@@ -14,7 +14,7 @@ Un exemple humain est le téléphone : au cours d'un appel téléphonique vous a
 
 De nombreuses commandes de programmation sont synchrones, par exemple quand vous tapez un calcul, l'environnement vous retourne le résultat immédiatement, à moins que vous ne spécifiiez expressément de ne pas le faire.
 
-## Pour approfondir
+## Voir aussi
 
 ### Référence technique
 

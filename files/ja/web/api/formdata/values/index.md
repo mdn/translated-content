@@ -1,14 +1,6 @@
 ---
 title: FormData.values()
 slug: Web/API/FormData/values
-tags:
-  - API
-  - FormData
-  - Iterator
-  - Method
-  - Reference
-  - XMLHttpRequest API
-translation_of: Web/API/FormData/values
 ---
 {{APIRef("XMLHttpRequest")}}
 
@@ -60,6 +52,6 @@ value2
 ## 関連項目
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
-- [Using FormData objects](/ja/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- [Using XMLHttpRequest](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using FormData objects](/ja/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

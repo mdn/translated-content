@@ -1,12 +1,6 @@
 ---
 title: NamedNodeMap.getNamedItem()
 slug: Web/API/NamedNodeMap/getNamedItem
-page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
-browser-compat: api.NamedNodeMap.getNamedItem
-translation_of: Web/API/NamedNodeMap/getNamedItem
 l10n:
   sourceCommit: 6f983d8b9fa0081ba57ccab31a345a41ffccbbb1
 ---

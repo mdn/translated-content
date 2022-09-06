@@ -63,7 +63,7 @@ translation_of: Web/HTML/Element/option
 
 ## 属性
 
-この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes "HTML/Global attributes")を持ちます。
+この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持ちます。
 
 - {{htmlattrdef("disabled")}}
   - : この論理属性を設定すると、選択肢が選択不能になります。多くのブラウザーはそのようなコントロールをグレーアウトで表示し、マウスクリックやフォーカスなど、いかなるイベントも受け付けなくなります。この属性を設定していなくても、祖先のいずれかが無効状態の {{HTMLElement("optgroup")}} 要素である場合は無効化されます。

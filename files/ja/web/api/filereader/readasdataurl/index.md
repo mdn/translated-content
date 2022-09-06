@@ -1,16 +1,6 @@
 ---
 title: FileReader.readAsDataURL()
 slug: Web/API/FileReader/readAsDataURL
-tags:
-  - API
-  - Base 64
-  - File API
-  - FileReader
-  - Files
-  - Method
-  - Reference
-  - メソッド
-translation_of: Web/API/FileReader/readAsDataURL
 ---
 `readAsDataURL` メソッドは、指定された{{domxref("Blob")}} または {{domxref("File")}} の内容を読み込むために使用されます。読み込み操作が終了すると、{{domxref("FileReader.readyState", "readyState")}} が `DONE` となり、{{event("loadend")}} が発生します。このとき、{{domxref("FileReader.result", "result")}} 属性には、ファイルのデータを表す、base64 エンコーディングされた [data: URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) の文字列が格納されます。
 
@@ -102,7 +92,7 @@ function previewFiles() {
 }
 ```
 
-> **Note:** **メモ:** Internet Explorer 10 以前では [`FileReader()`](/ja/docs/Web/API/FileReader) コンストラクターに対応していません。十分な互換性が必要とされるときは [crossbrowser possible solution for image preview](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html "crossbrowser_image_preview.html") または [this more powerful example](https://mdn.mozillademos.org/files/3698/image_upload_preview.html) を参照してください。
+> **Note:** **メモ:** Internet Explorer 10 以前では [`FileReader()`](/ja/docs/Web/API/FileReader) コンストラクターに対応していません。十分な互換性が必要とされるときは [crossbrowser possible solution for image preview](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html) または [this more powerful example](https://mdn.mozillademos.org/files/3698/image_upload_preview.html) を参照してください。
 
 ## 仕様
 

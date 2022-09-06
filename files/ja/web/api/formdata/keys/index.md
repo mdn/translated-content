@@ -1,14 +1,6 @@
 ---
 title: FormData.keys()
 slug: Web/API/FormData/keys
-tags:
-  - API
-  - FormData
-  - Iterator
-  - Method
-  - Reference
-  - XMLHttpRequest API
-translation_of: Web/API/FormData/keys
 ---
 {{APIRef("XMLHttpRequest")}}
 
@@ -60,6 +52,6 @@ key2
 ## 関連項目
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
-- [Using FormData objects](/ja/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- [Using XMLHttpRequest](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using FormData objects](/ja/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

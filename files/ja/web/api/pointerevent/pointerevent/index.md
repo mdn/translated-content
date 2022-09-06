@@ -1,12 +1,6 @@
 ---
 title: PointerEvent.PointerEvent()
 slug: Web/API/PointerEvent/PointerEvent
-tags:
-  - API
-  - Constructor
-  - PointerEvent
-  - Reference
-translation_of: Web/API/PointerEvent/PointerEvent
 ---
 {{APIRef("Pointer Events")}}
 

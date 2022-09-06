@@ -170,16 +170,11 @@ Ces méthodes sont obsolètes et ne doivent plus être utilisées, même si un n
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                               | Commentaire                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | --------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "the-video-element.html#htmlmediaelement", "HTMLMediaElement")}} | {{Spec2('HTML WHATWG')}}     | Pas de changement de {{SpecName('HTML5 W3C')}}                                                     |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement")}} | {{Spec2('HTML5 W3C')}}         | Définition initiale.                                                                                      |
-| {{SpecName('EME', '#introduction', 'Encrypted Media Extensions')}}                                 | {{Spec2('EME')}}                 | Ajout de {{domxref("MediaKeys")}}, {{domxref("MediaEncryptedEvent")}}, et setMediaKeys. |
-| {{SpecName('Media Capture','#htmlmediaelement-extensions','HTMLMediaElement')}}                 | {{Spec2('Media Capture')}} | Ajout de `sinkId`, `setSinkId()` et `captureStream()`.                                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLMediaElement")}}
+{{Compat}}
 
 ## Voir aussi
 

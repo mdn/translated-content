@@ -1,15 +1,6 @@
 ---
 title: WebRTC
 slug: Glossary/WebRTC
-tags:
-  - CodingScripting
-  - Glossary
-  - Infrastructure
-  - P2P
-  - VoIP
-  - Web
-  - WebRTC
-translation_of: Glossary/WebRTC
 ---
 **WebRTC** (_Web Real-Time Communication_)はビデオチャット、音声通話、P2P ファイル共有を行うウェブアプリで使われる API です。
 

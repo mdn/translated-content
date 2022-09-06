@@ -1,12 +1,6 @@
 ---
 title: 'TypeError: invalid arguments'
 slug: orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments
 ---
 {{jsSidebar("Errors")}}
 

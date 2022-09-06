@@ -1,15 +1,6 @@
 ---
 title: SharedWorkerGlobalScope
 slug: Web/API/SharedWorkerGlobalScope
-tags:
-  - API
-  - Interface
-  - Reference
-  - SharedWorkerGlobalScope
-  - Web Workers
-  - インターフェイス
-  - ウェブワーカー
-translation_of: Web/API/SharedWorkerGlobalScope
 ---
 {{APIRef("Web Workers API")}}
 
@@ -58,7 +49,7 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
 - {{domxref("WorkerGlobalScope.dump()")}} {{non-standard_inline}}
   - : Allows you to write a message to stdout — i.e. in your terminal. This is the same as Firefox's {{domxref("window.dump")}}, but for workers.
 - {{domxref("WorkerGlobalScope.importScripts()")}}
-  - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example:` importScripts('foo.js', 'bar.js');`
+  - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example: `importScripts('foo.js', 'bar.js');`
 
 ### 他の場所から実装したもの
 

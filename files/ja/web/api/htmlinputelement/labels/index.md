@@ -1,14 +1,6 @@
 ---
 title: HTMLInputElement.labels
 slug: Web/API/HTMLInputElement/labels
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLInputElement.labels
-translation_of: Web/API/HTMLInputElement/labels
 ---
 {{APIRef("DOM")}}
 

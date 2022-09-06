@@ -1,14 +1,6 @@
 ---
 title: ReadableStreamBYOBReader.ReadableStreamBYOBReader()
 slug: Web/API/ReadableStreamBYOBReader/ReadableStreamBYOBReader
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - ReadableStreamBYOBReader
-  - Reference
-  - Streams
-translation_of: Web/API/ReadableStreamBYOBReader/ReadableStreamBYOBReader
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 

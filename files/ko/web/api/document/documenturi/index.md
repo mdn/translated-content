@@ -14,11 +14,13 @@ DOM3 에서 원래 이 속성은 읽기/쓰기 속성으로 정의되어 있습�
 
 ## Syntax
 
-    var string = document.documentURI;
+```js
+var string = document.documentURI;
+```
 
 ## Notes
 
-HTML documents 는 동일한 값을 반환하는 {{domxref("document.URL")}} 속성을 가집니다. `URL `과는 달리, `documentURI` 는 모든 타입의 documents 에서 이용 가능합니다.
+HTML documents 는 동일한 값을 반환하는 {{domxref("document.URL")}} 속성을 가집니다. `URL` 과는 달리, `documentURI` 는 모든 타입의 documents 에서 이용 가능합니다.
 
 ## Specifications
 

@@ -1,14 +1,6 @@
 ---
 title: Window.showModalDialog()
 slug: Web/API/Window/showModalDialog
-tags:
-  - API
-  - 非推奨
-  - HTML DOM
-  - メソッド
-  - Window
-browser-compat: api.Window.showModalDialog
-translation_of: Web/API/Window/showModalDialog
 ---
 {{deprecated_header}}{{APIRef}}
 

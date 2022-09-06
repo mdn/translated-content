@@ -44,7 +44,7 @@ Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 | 113  | Heuristic Expiration   | 如果缓存服务器采用启发式方法，将缓存的有效时间设定为 24 小时，而在该响应的年龄超过 24 小时时发送。 |
 | 199  | Miscellaneous Warning  | 任意的、未明确指定的警告信息。                                                                     |
 | 214  | Transformation Applied | 由代理服务器添加，如果它对返回的展现内容进行了任何转换，比如改变了内容编码、媒体类型等。           |
-| 299  | Miscellaneous Warning  | 与 199 类似，只不过指代的是持久化警告。                                                            |
+| 299  | Miscellaneous Persistent Warning  | 与 199 类似，只不过指代的是持久化警告。                                                            |
 
 ## 示例
 

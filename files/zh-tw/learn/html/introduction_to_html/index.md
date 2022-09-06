@@ -8,7 +8,7 @@ slug: Learn/HTML/Introduction_to_HTML
 
 ## 預備知識
 
-在開始閱讀之前，你並不需要具備任何 HTML 知識，你只要能夠操作電腦、瀏覽網頁並消化其中的內容即可。你需要[建立一個基礎工作環境](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software)，並且了解[如何建立與管理檔案](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files)── 這些都屬於我們 [Web 入門](/en-US/docs/Learn/Getting_started_with_the_web) 的一部分。
+在開始閱讀之前，你並不需要具備任何 HTML 知識，你只要能夠操作電腦、瀏覽網頁並消化其中的內容即可。你需要[建立一個基礎工作環境](/zh-TW/docs/Learn/Getting_started_with_the_web/Installing_basic_software)，並且了解[如何建立與管理檔案](/zh-TW/docs/Learn/Getting_started_with_the_web/Dealing_with_files)── 這些都屬於我們 [Web 入門](/zh-TW/docs/Learn/Getting_started_with_the_web) 的一部分。
 
 > **備註：** 如果您是在某些無法建立個人檔案的電腦/平板/其他裝置上進行，您可以在一些線上 coding program (如 [JSBin](http://jsbin.com/) 或 [Thimble](https://thimble.mozilla.org/)) 上測試程式碼範例。
 
@@ -25,7 +25,7 @@ slug: Learn/HTML/Introduction_to_HTML
 - [建立超連結](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
   - : 超連結真的非常重要 — 它造就了我們現今所知的網路。這篇文章介紹超連結的使用語法，並且探討建立連結的最佳實踐方法。
 - [進階文字格式](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-  - : 在 HTML 中還有許多可以用來格式化文字的元素，但我們沒有在 [HTML 文字的基礎知識](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)中提及這些內容。雖然這些元素比較鮮為人知，不過還是相當值得一談。在這篇文章中，你將會學到如何表示引言、描述列表、程式碼、上下標，及聯繫訊息等等。
+  - : 在 HTML 中還有許多可以用來格式化文字的元素，但我們沒有在 [HTML 文字的基礎知識](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)中提及這些內容。雖然這些元素比較鮮為人知，不過還是相當值得一談。在這篇文章中，你將會學到如何表示引言、描述列表、程式碼、上下標，及聯繫訊息等等。
 - [文件與網站架構](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
   - : 除了分別定義網頁的各個成分（例如：段落或是圖片），HTML 還能定義網頁上的區塊（例如：標頭、導航列或是主要內容）。這篇文章將介紹如何規劃一個基本的網頁架構，以及如何透過編寫 HTML 來表示網頁架構。
 - [HTML 除錯](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)

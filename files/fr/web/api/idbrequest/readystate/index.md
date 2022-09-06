@@ -66,14 +66,11 @@ objectStoreTitleRequest.onsuccess = function() {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBRequest-readyState', 'readyState')}}     | {{Spec2('IndexedDB')}}     |              |
-| {{SpecName("IndexedDB 2", "#dom-idbrequest-readystate", "readyState")}} | {{Spec2("IndexedDB 2")}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBRequest.readyState")}}
+{{Compat}}
 
 ## Voir aussi
 

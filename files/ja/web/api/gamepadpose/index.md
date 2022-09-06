@@ -1,19 +1,6 @@
 ---
 title: GamepadPose
 slug: Web/API/GamepadPose
-tags:
-  - API
-  - Experimental
-  - Gamepad
-  - GamepadPose
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - VR
-  - Virtual Reality
-  - WebVR
-translation_of: Web/API/GamepadPose
 ---
 {{APIRef("Gamepad API")}}{{SeeCompatTable}}
 

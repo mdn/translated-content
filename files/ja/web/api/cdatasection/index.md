@@ -1,11 +1,6 @@
 ---
 title: CDATASection
 slug: Web/API/CDATASection
-tags:
-  - API
-  - DOM
-  - Deprecated
-translation_of: Web/API/CDATASection
 ---
 {{APIRef("DOM")}}
 

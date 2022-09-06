@@ -24,7 +24,7 @@ Les méthodes de SEO se répartissent en trois grandes classes :
 - popularité
   - : Vous obtenez plus de trafic lorsque d'autres sites établis pointent vers votre site.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

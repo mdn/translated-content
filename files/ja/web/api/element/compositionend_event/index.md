@@ -1,10 +1,6 @@
 ---
 title: 'Element: compositionend イベント'
 slug: Web/API/Element/compositionend_event
-tags:
-  - Event
-  - Reference
-translation_of: Web/API/Element/compositionend_event
 ---
 {{APIRef}}
 

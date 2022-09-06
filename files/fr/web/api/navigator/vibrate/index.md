@@ -29,30 +29,11 @@ window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,3
 
 ## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Vibration API')}}</td>
-      <td>{{Spec2('Vibration API')}}</td>
-      <td>
-        <p>
-          Linked to spec is the latest editor's draft; W3C version is a REC.
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Navigator.vibrate")}}
+{{Compat}}
 
 ## Voir aussi
 

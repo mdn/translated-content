@@ -1,15 +1,6 @@
 ---
 title: HTMLTableElement.deleteCaption()
 slug: Web/API/HTMLTableElement/deleteCaption
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - メソッド
-  - NeedsSpecTable
-  - リファレンス
-browser-compat: api.HTMLTableElement.deleteCaption
-translation_of: Web/API/HTMLTableElement/deleteCaption
 ---
 {{APIRef("HTML DOM")}}
 

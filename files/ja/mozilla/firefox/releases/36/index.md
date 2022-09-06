@@ -1,9 +1,6 @@
 ---
 title: Firefox 36 for developers
 slug: Mozilla/Firefox/Releases/36
-tags:
-  - Firefox
-translation_of: Mozilla/Firefox/Releases/36
 ---
 Firefox 36 は、米国時間 2015 年 2 月 24 日にリリースされました。このページでは、開発者に影響する Firefox 36 の変更点をまとめています。
 

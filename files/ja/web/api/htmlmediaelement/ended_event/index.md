@@ -1,20 +1,6 @@
 ---
 title: 'HTMLMediaElement: ended イベント'
 slug: Web/API/HTMLMediaElement/ended_event
-page-type: web-api-event
-tags:
-  - Audio
-  - Event
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Media Streams API
-  - Reference
-  - Video
-  - ウェブ音声 API
-  - ended
-browser-compat: api.HTMLMediaElement.ended_event
-translation_of: Web/API/HTMLMediaElement/ended_event
 ---
 {{APIRef("HTMLMediaElement")}}
 

@@ -10,8 +10,10 @@ original_slug: Web/API/GlobalEventHandlers/oncontextmenu
 
 ## Syntax
 
-    window.oncontextmenu = funcRef;
-    //funcRef refers to the function to be called
+```js
+window.oncontextmenu = funcRef;
+//funcRef refers to the function to be called
+```
 
 ## Example
 

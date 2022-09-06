@@ -1,14 +1,6 @@
 ---
 title: Event.srcElement
 slug: Web/API/Event/srcElement
-page-type: web-api-instance-property
-tags:
-  - 非推奨
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Event.srcElement
-translation_of: Web/API/Event/srcElement
 ---
 {{ApiRef("DOM")}}{{deprecated_header}}
 

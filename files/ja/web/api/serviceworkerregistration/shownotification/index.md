@@ -1,18 +1,6 @@
 ---
 title: ServiceWorkerRegistration.showNotification()
 slug: Web/API/ServiceWorkerRegistration/showNotification
-tags:
-  - API
-  - 実験的
-  - メソッド
-  - NeedsExample
-  - リファレンス
-  - サービスワーカー
-  - ServiceWorker
-  - ServiceWorkerRegistration
-  - showNotification
-browser-compat: api.ServiceWorkerRegistration.showNotification
-translation_of: Web/API/ServiceWorkerRegistration/showNotification
 ---
 {{APIRef("Service Workers API")}}
 

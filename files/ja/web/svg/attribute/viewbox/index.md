@@ -3,7 +3,7 @@ title: viewBox
 slug: Web/SVG/Attribute/viewBox
 translation_of: Web/SVG/Attribute/viewBox
 ---
-« [SVG Attribute reference home](/ja/SVG/Attribute "en/SVG/Attribute")
+« [SVG Attribute reference home](/ja/SVG/Attribute)
 
 `viewBox`属性は、特定の container 要素に合わせるためのグラフィックス stretch のセットを指定できます。
 
@@ -33,4 +33,4 @@ Negative values for `width` or `height` are not permitted and a value of zero di
 
 ## See also
 
-- [SVG Getting Started: Positions](/ja/SVG/Tutorial/Positions "https://developer.mozilla.org/en/SVG/Tutorial/Positions")
+- [SVG Getting Started: Positions](/ja/SVG/Tutorial/Positions)

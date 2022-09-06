@@ -65,11 +65,11 @@ Color contrast ratio is determined by comparing the luminosity of the text and b
 - [MDN Understanding WCAG, Guideline 1.4 explanations](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
-## 正规定义
+## 形式定义
 
 {{cssinfo}}
 
-## 正规语法
+## 形式语法
 
 {{csssyntax}}
 
@@ -99,9 +99,9 @@ p { color: hsla(0, 100%, 50%, 0.5); }
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.color")}}
+{{Compat}}
 
-## 另请参阅
+## 参见
 
 - 颜色 {{cssxref("&lt;color&gt;")}} 数据类型
 - 其他颜色相关属性：{{cssxref("background-color")}}、{{cssxref("border-color")}}、{{cssxref("outline-color")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-emphasis-color")}}、{{cssxref("text-shadow")}}、{{cssxref("caret-color")}}、{{cssxref("column-rule-color")}}和{{cssxref("color-adjust")}}

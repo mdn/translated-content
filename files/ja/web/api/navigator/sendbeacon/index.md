@@ -1,19 +1,6 @@
 ---
 title: Navigator.sendBeacon()
 slug: Web/API/Navigator/sendBeacon
-tags:
-  - API
-  - Beacon
-  - Method
-  - Navigator
-  - Networking
-  - Reference
-  - Web Performance
-  - sendBeacon
-  - ネットワーク
-  - ビーコン
-  - メソッド
-translation_of: Web/API/Navigator/sendBeacon
 ---
 {{APIRef("HTML DOM")}}
 

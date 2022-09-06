@@ -1,12 +1,6 @@
 ---
 title: Event.eventPhase
 slug: Web/API/Event/eventPhase
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.Event.eventPhase
 ---
 {{ApiRef("DOM")}}
 

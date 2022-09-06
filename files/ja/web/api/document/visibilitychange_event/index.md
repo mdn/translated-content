@@ -1,15 +1,6 @@
 ---
 title: 'Document: visibilitychange イベント'
 slug: Web/API/Document/visibilitychange_event
-tags:
-  - API
-  - Document
-  - Event
-  - Reference
-  - Visibility
-  - Web
-  - visibilitychange
-translation_of: Web/API/Document/visibilitychange_event
 ---
 {{APIRef}}
 

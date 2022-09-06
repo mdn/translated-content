@@ -1,9 +1,6 @@
 ---
 title: Creating toolbar buttons
 slug: orphaned/Creating_toolbar_buttons
-tags:
-  - Add-ons
-  - Extensions
 original_slug: Creating_toolbar_buttons
 ---
 この記事ではツールキットアプリケーション（Firefox、Thunderbird、Nvu など）に [オーバレイ](ja/XUL_Overlays) を使用してツールバーボタンを追加する方法を説明します。[XUL](ja/XUL) と [CSS](ja/CSS) の基礎知識を備えた [拡張機能](ja/Extension) の開発者が対象です。
@@ -127,8 +124,8 @@ Customize Toolbar ウィンドウ (\<tt>chrome://global/content/customizeToolbar
 Firefox/Thunderbird 1.5 向けの拡張機能では代わりに以下のような [chrome.manifest](ja/Chrome.manifest) を使用すべきです：
 
 ```
-skin	myextension	classic/1.0	chrome/skin/
-style	chrome://global/content/customizeToolbar.xul	chrome://myextension/skin/toolbar-button.css
+skin  myextension  classic/1.0  chrome/skin/
+style chrome://global/content/customizeToolbar.xul chrome://myextension/skin/toolbar-button.css
 ```
 
 ### よくある間違い

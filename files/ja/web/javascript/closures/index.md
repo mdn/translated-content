@@ -277,7 +277,7 @@ console.log(s3) //log 20
 
 ## よくある間違い: ループ内でクロージャを作成する
 
-ECMAScript 2015 で [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let "let") キーワードが導入される前までは、ループの内部でクロージャが作成された時にある問題がよく起こっていました。次のような例を考えてみます。
+ECMAScript 2015 で [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) キーワードが導入される前までは、ループの内部でクロージャが作成された時にある問題がよく起こっていました。次のような例を考えてみます。
 
 ```html
 <p id="help">ここにヘルプが表示されます</p>

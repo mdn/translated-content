@@ -1,16 +1,6 @@
 ---
 title: MouseEvent.buttons
 slug: Web/API/MouseEvent/buttons
-tags:
-  - API
-  - DOM
-  - DOM イベント
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - UIEvent
-browser-compat: api.MouseEvent.buttons
-translation_of: Web/API/MouseEvent/buttons
 ---
 {{APIRef("DOM Events")}}
 

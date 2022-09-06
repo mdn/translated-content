@@ -29,7 +29,7 @@ HTML 文件的 {{glossary("Head", "head")}} 是網頁在加載完畢之後，不
 
 ## 什麼是 HTML head?
 
-讓我們再看一次之前所看過的 [HTML 文件](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Anatomy_of_an_HTML_document)：
+讓我們再看一次之前所看過的 [HTML 文件](/zh-TW/Learn/HTML/Introduction_to_HTML/Getting_started#Anatomy_of_an_HTML_document)：
 
 ```html
 <!DOCTYPE html>
@@ -53,7 +53,7 @@ HTML 的 head 就是 {{htmlelement("head")}} 元素裡面的內容 — 跟 {{htm
 </head>
 ```
 
-假如換作是較大型的網頁，head 裡面可能就會有非常多東西了。現在你可以先到幾個你常去的網站，並利用[開發者工具](/en-US/docs/Learn/Discover_browser_developer_tools)來檢視它們的 head。我們在這裡並不打算要向你展示所有能放在 head 中的東西，而是教你使用一些常用的元素，讓你熟悉熟悉它們。總而言之，讓我們開始吧！
+假如換作是較大型的網頁，head 裡面可能就會有非常多東西了。現在你可以先到幾個你常去的網站，並利用[開發者工具](/zh-TW/docs/Learn/Discover_browser_developer_tools)來檢視它們的 head。我們在這裡並不打算要向你展示所有能放在 head 中的東西，而是教你使用一些常用的元素，讓你熟悉熟悉它們。總而言之，讓我們開始吧！
 
 ## 加入標題(title)
 
@@ -125,13 +125,13 @@ started with developing web sites and applications.">
 
 Specifying an author is useful in a few ways: it is useful to be able to work out who wrote the page, if you want to contact them with questions about the content. Some content management systems have facilities to automatically extract page author information and make it available for such purposes.
 
-Specifying a description that includes keywords relating to the content of your page is useful as it has the potential to make your page appear higher in relevant searches performed in search engines (such activities are termed [Search Engine Optimization](/en-US/docs/Glossary/SEO), or {{glossary("SEO")}}.)
+Specifying a description that includes keywords relating to the content of your page is useful as it has the potential to make your page appear higher in relevant searches performed in search engines (such activities are termed [Search Engine Optimization](/zh-TW/docs/Glossary/SEO), or {{glossary("SEO")}}.)
 
 ### Active learning: The description's use in search engines
 
 The description is also used on search engine result pages. Let's go through an exercise to explore this
 
-1. Go to the [front page of The Mozilla Developer Network](/en-US/).
+1. Go to the [front page of The Mozilla Developer Network](/zh-TW/).
 2. View the page's source (Right/
 
     <kbd>Ctrl</kbd>
@@ -249,7 +249,7 @@ If done correctly, when you save your HTML and refresh your browser you'll see t
 
 ## 預設文件語言
 
-Finally, it's worth mentioning that you can (and really should) set the language of your page. This can be done by adding the [lang attribute](/en-US/docs/Web/HTML/Global_attributes/lang) to the opening HTML tag (as seen in the [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html) and shown below.)
+Finally, it's worth mentioning that you can (and really should) set the language of your page. This can be done by adding the [lang attribute](/zh-TW/docs/Web/HTML/Global_attributes/lang) to the opening HTML tag (as seen in the [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html) and shown below.)
 
 ```html
 <html lang="en-US">

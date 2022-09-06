@@ -1,15 +1,6 @@
 ---
 title: CSSRule.type
 slug: Web/API/CSSRule/type
-tags:
-  - API
-  - CSSOM
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-  - 非推奨
-browser-compat: api.CSSRule.type
-translation_of: Web/API/CSSRule/type
 ---
 {{APIRef("CSSOM")}}{{Deprecated_header}}
 

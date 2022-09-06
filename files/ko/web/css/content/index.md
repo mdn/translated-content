@@ -67,9 +67,9 @@ content: unset;
   - : {{cssxref("&lt;url&gt;")}}이나 {{cssxref("&lt;gradient&gt;")}} 자료형을 사용한 {{cssxref("&lt;image&gt;")}}, 또는 {{cssxref("element")}} 함수를 사용해 가리킨, 보여줄 웹페이지의 일부.
 - {{cssxref("&lt;counter&gt;")}}
   - : 보통 숫자인 <a href="/ko/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">CSS 카운터 값</a>.{{cssxref("counter")}}나 {{cssxref("counters")}} 함수를 사용해 지정할 수 있습니다.
-  
+
     {{cssxref("counter")}} 함수는 `counter(<var>name</var>)`과 `counter(<var>name</var>, <var>style</var>)`의 두 형태를 가지고 있습니다. 생성하는 값은 주어진 의사 요소의 현재 범위에서, 해당하는 이름을 가진 가장 안쪽 카운터의 값입니다. 지정한 스타일(기본 `decimal`)에 맞춰 서식을 적용합니다.
-    
+
     {{cssxref("counters")}} 함수 역시 `counters(<var>name</var>, <var>string</var>)'과 'counters(<var>name</var>, <var>string</var>, <var>style</var>)`의 두 형태를 가집니다. 생성하는 값은 주어진 의사 요소의 현재 범위에서, 해당하는 이름을 가진 카운터 값의 목록으로 바깥쪽부터 시작하며 주어진 문자열을 사용해 구분합니다. 지정한 스타일(기본 `decimal`)에 맞춰 서식을 적용합니다..
 - `attr(x)`
   - : 문자열로 변환한, 요소 속성 `x`의 값. `x` 속성이 존재하지 않으면 빈 문자열을 반환합니다. 속성명의 대소문자 구분 여부는 문서 언어에 따릅니다.

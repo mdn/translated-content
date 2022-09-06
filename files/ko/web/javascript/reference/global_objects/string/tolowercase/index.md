@@ -13,7 +13,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 
 ## 구문
 
-    str.toLowerCase()
+```js
+str.toLowerCase()
+```
 
 ### 반환값
 

@@ -17,15 +17,13 @@ var timestamp = geolocationPositionInstance.timestamp
 
 Un objet {{domxref("DOMTimeStamp")}}.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                                        | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('Geolocation', '#dom-geolocationposition-timestamp', 'GeolocationPosition.timestamp')}} | {{Spec2('Geolocation')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.GeolocationPosition.timestamp")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -39,31 +39,11 @@ var tampon = gl.createBuffer();
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL', "#5.14.5", "createBuffer")}}</td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td><p>Définition initiale.</p></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('OpenGL ES 2.0', "glGenBuffers.xml", "glGenBuffers")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td><p>Page man de l’API OpenGL (similaire).</p></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.createBuffer")}}
+{{Compat}}
 
 ## Voir aussi
 

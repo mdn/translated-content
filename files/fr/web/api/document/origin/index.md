@@ -28,14 +28,11 @@ var origin = document.origin;
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire          |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-document-origin', 'Document.origin')}}             | {{Spec2('DOM WHATWG')}} | Définition initiale. |
-| {{SpecName('HTML WHATWG', '#origin:document', 'origin for Document objects')}} | {{Spec2('HTML WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.origin")}}
+{{Compat}}
 
 ## Voir aussi
 

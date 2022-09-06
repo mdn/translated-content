@@ -33,14 +33,11 @@ var node = treeWalker.nextNode(); // renvoie le premier enfant de la racine, car
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                                       | Commentaire                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-treewalker-nextnode', 'TreeWalker.nextNode')}}                                         | {{Spec2('DOM WHATWG')}}             | Pas de changement de {{SpecName('DOM2 Traversal_Range')}} |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-TreeWalker-nextNode', 'TreeWalker.nextNode')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.TreeWalker.nextNode")}}
+{{Compat}}
 
 ## Voir aussi
 

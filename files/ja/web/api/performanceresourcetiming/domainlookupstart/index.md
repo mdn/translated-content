@@ -1,12 +1,6 @@
 ---
 title: PerformanceResourceTiming.domainLookupStart
 slug: Web/API/PerformanceResourceTiming/domainLookupStart
-tags:
-  - API
-  - Web パフォーマンス
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/PerformanceResourceTiming/domainLookupStart
 ---
 {{APIRef("Resource Timing API")}}
 

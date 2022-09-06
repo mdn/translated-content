@@ -1,7 +1,6 @@
 ---
 title: VRDisplayCapabilities.maxLayers
 slug: Web/API/VRDisplayCapabilities/maxLayers
-translation_of: Web/API/VRDisplayCapabilities/maxLayers
 ---
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 

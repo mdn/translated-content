@@ -32,25 +32,15 @@ translation_of: Web/CSS/display
 
 ### 바깥쪽
 
-- ## {{CSSxRef("&lt;display-outside&gt;")}}
-
-      : 요소의 외부 디스플레이 유형을 설정하는 키워드입니다. 외부 디스플레이 유형은 플로우 레이아웃에서 요소 자신의 역할과
-      마찬가지입니다.
-
-
-
-      -   `block`
-          -
-
-              : The element generates a block element box, generating line breaks both before and after the element when in
-              the normal flow.
-
-
-      -   `inline`
-          -
-
-              : The element generates one or more inline element boxes that do not generate line breaks before or after
-              themselves. In normal flow, the next element will be on the same line if there is space
+- {{CSSxRef("&lt;display-outside&gt;")}}
+  - : 요소의 외부 디스플레이 유형을 설정하는 키워드입니다. 외부 디스플레이 유형은 플로우 레이아웃에서 요소 자신의 역할과
+    마찬가지입니다.
+  - `block`
+    - : The element generates a block element box, generating line breaks both before and after the element when in
+      the normal flow.
+  - `inline`
+    - : The element generates one or more inline element boxes that do not generate line breaks before or after
+      themselves. In normal flow, the next element will be on the same line if there is space
 
 > **참고:** Browsers that support the two-value syntax, on finding the outer value only, such as when
 > `display: block` or `display: inline` is specified, will set the inner value to
@@ -59,65 +49,36 @@ translation_of: Web/CSS/display
 
 ### 안쪽
 
-- ## {{CSSxRef("&lt;display-inside&gt;")}}
+- {{CSSxRef("&lt;display-inside&gt;")}}
+  - : 요소의 내부 디스플레이 유형을 설정하는 키워드입니다. 내부 디스플레이 유형은 대체 요소가 아닌 요소의 콘텐츠 서식과
+    배치 방법을 나타냅니다.
 
-      : 요소의 내부 디스플레이 유형을 설정하는 키워드입니다. 내부 디스플레이 유형은 대체 요소가 아닌 요소의 콘텐츠 서식과
-      배치 방법을 나타냅니다.
+    - `flow` {{Experimental_Inline}}
+      - : The element lays out its contents using flow layout (block-and-inline layout).
 
+        If its outer display type is `inline` or `run-in`, and it is participating in a block or
+        inline formatting context, then it generates an inline box. Otherwise it generates a block container box.
 
-
-      -   `flow` {{Experimental_Inline}}
-          -
-
-              : The element lays out its contents using flow layout (block-and-inline layout).
-
-
-
-              If its outer display type is `inline` or `run-in`, and it is participating in a block or
-              inline formatting context, then it generates an inline box. Otherwise it generates a block container box.
-
-
-
-              Depending on the value of other properties (such as {{CSSxRef("position")}}, {{CSSxRef("float")}}, or
-              {{CSSxRef("overflow")}}) and whether it is itself participating in a block or inline formatting context, it
-              either establishes a new
-              [block formatting context](/ko/docs/Web/Guide/CSS/Block_formatting_context) (BFC) for its contents
-              or integrates its contents into its parent formatting context.
-
-
-      -   `flow-root`
-          -
-
-              : The element generates a block element box that establishes a new
-              [block formatting context](/ko/docs/Web/Guide/CSS/Block_formatting_context), defining where the
-              formatting root lies.
-
-
-      -   `table`
-          -
-
-              : These elements behave like HTML {{HTMLElement("table")}} elements. It defines a block-level box.
-
-
-      -   `flex`
-          -
-
-              : The element behaves like a block element and lays out its content according to the
-              [flexbox model](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout).
-
-
-      -   `grid`
-          -
-
-              : The element behaves like a block element and lays out its content according to the
-              [grid model](/ko/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout).
-
-
-      -   `ruby` {{Experimental_Inline}}
-          -
-
-              : The element behaves like an inline element and lays out its content according to the ruby formatting model. It
-              behaves like the corresponding HTML {{HTMLElement("ruby")}} elements.
+        Depending on the value of other properties (such as {{CSSxRef("position")}}, {{CSSxRef("float")}}, or
+        {{CSSxRef("overflow")}}) and whether it is itself participating in a block or inline formatting context, it
+        either establishes a new
+        [block formatting context](/ko/docs/Web/Guide/CSS/Block_formatting_context) (BFC) for its contents
+        or integrates its contents into its parent formatting context.
+    - `flow-root`
+      - : The element generates a block element box that establishes a new
+        [block formatting context](/ko/docs/Web/Guide/CSS/Block_formatting_context), defining where the
+        formatting root lies.
+    - `table`
+      - : These elements behave like HTML {{HTMLElement("table")}} elements. It defines a block-level box.
+    - `flex`
+      - : The element behaves like a block element and lays out its content according to the
+        [flexbox model](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout).
+    - `grid`
+      - : The element behaves like a block element and lays out its content according to the
+        [grid model](/ko/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout).
+    - `ruby` {{Experimental_Inline}}
+      - : The element behaves like an inline element and lays out its content according to the ruby formatting model. It
+        behaves like the corresponding HTML {{HTMLElement("ruby")}} elements.
 
 > **참고:** Browsers that support the two-value syntax, on finding the inner value only, such as when
 > `display: flex` or `display: grid` is specified, will set their outer value to
@@ -126,9 +87,8 @@ translation_of: Web/CSS/display
 
 ### 리스트 아이템
 
-- ## {{cssxref("&lt;display-listitem&gt;")}}
-
-      : 요소가 콘텐츠 블록 박스를 생성하고, 리스트 아이템 인라인 박스를 분리합니다.
+- {{cssxref("&lt;display-listitem&gt;")}}
+  - : 요소가 콘텐츠 블록 박스를 생성하고, 리스트 아이템 인라인 박스를 분리합니다.
 
 A single value of `list-item` will cause the element to behave like a list item. This can be used together
 with {{CSSxRef("list-style-type")}} and {{CSSxRef("list-style-position")}}.
@@ -142,167 +102,81 @@ with {{CSSxRef("list-style-type")}} and {{CSSxRef("list-style-position")}}.
 
 ### 내부적
 
-- ## {{cssxref("&lt;display-internal&gt;")}}
-
-      : `table`, `ruby` 등 일부 레이아웃 모델은 복잡한 내부 구조를 가지며, 자식과 자손이 채워넣을
+- {{cssxref("&lt;display-internal&gt;")}}
+  - : `table`, `ruby` 등 일부 레이아웃 모델은 복잡한 내부 구조를 가지며, 자식과 자손이 채워넣을
       여러가지 역할을 지닙니다. 이 항목은 그런 특정 레이아웃 모드에서만 의미를 갖는 "내부적"인 값을 정의합니다.
-
-
-
-      -   `table-row-group`
-          -
-
-              : These elements behave like {{HTMLElement("tbody")}} HTML elements.
-
-
-      -   `table-header-group`
-          -
-
-              : These elements behave like {{HTMLElement("thead")}} HTML elements.
-
-
-      -   `table-footer-group`
-          -
-
-              : These elements behave like {{HTMLElement("tfoot")}} HTML elements.
-
-
-      -   `table-row`
-          -
-
-              : These elements behave like {{HTMLElement("tr")}} HTML elements.
-
-
-      -   `table-cell`
-          -
-
-              : These elements behave like {{HTMLElement("td")}} HTML elements.
-
-
-      -   `table-column-group`
-          -
-
-              : These elements behave like {{HTMLElement("colgroup")}} HTML elements.
-
-
-      -   `table-column`
-          -
-
-              : These elements behave like {{HTMLElement("col")}} HTML elements.
-
-
-      -   `table-caption`
-          -
-
-              : These elements behave like {{HTMLElement("caption")}} HTML elements.
-
-
-      -   `ruby-base` {{Experimental_Inline}}
-          -
-
-              : These elements behave like {{HTMLElement("rb")}} HTML elements.
-
-
-      -   `ruby-text` {{Experimental_Inline}}
-          -
-
-              : These elements behave like {{HTMLElement("rt")}} HTML elements.
-
-
-      -   `ruby-base-container` {{Experimental_Inline}}
-          -
-
-              : These elements behave like {{HTMLElement("rbc")}} HTML elements generated as anonymous boxes.
-
-
-      -   `ruby-text-container` {{Experimental_Inline}}
-          -
-
-              : These elements behave like {{HTMLElement("rtc")}} HTML elements.
+    - `table-row-group`
+      - : These elements behave like {{HTMLElement("tbody")}} HTML elements.
+    - `table-header-group`
+      - : These elements behave like {{HTMLElement("thead")}} HTML elements.
+    - `table-footer-group`
+      - : These elements behave like {{HTMLElement("tfoot")}} HTML elements.
+    - `table-row`
+      - : These elements behave like {{HTMLElement("tr")}} HTML elements.
+    - `table-cell`
+      - : These elements behave like {{HTMLElement("td")}} HTML elements.
+    - `table-column-group`
+      - : These elements behave like {{HTMLElement("colgroup")}} HTML elements.
+    - `table-column`
+      - : These elements behave like {{HTMLElement("col")}} HTML elements.
+    - `table-caption`
+      - : These elements behave like {{HTMLElement("caption")}} HTML elements.
+    - `ruby-base` {{Experimental_Inline}}
+      - : These elements behave like {{HTMLElement("rb")}} HTML elements.
+    - `ruby-text` {{Experimental_Inline}}
+      - : These elements behave like {{HTMLElement("rt")}} HTML elements.
+    - `ruby-base-container` {{Experimental_Inline}}
+      - : These elements behave like {{HTMLElement("rbc")}} HTML elements generated as anonymous boxes.
+    - `ruby-text-container` {{Experimental_Inline}}
+      - : These elements behave like {{HTMLElement("rtc")}} HTML elements.
 
 ### 박스
 
-- ## {{CSSxRef("&lt;display-box&gt;")}}
+- {{CSSxRef("&lt;display-box&gt;")}}
+  - : 요소의 디스플레이 박스를 생성해야 하는지 지정합니다.
 
-      : 요소의 디스플레이 박스를 생성해야 하는지 지정합니다.
+    - `contents`
+      - : These elements don't produce a specific box by themselves. They are replaced by their pseudo-box and their
+        child boxes. Please note that the CSS Display Level 3 spec defines how the `contents` value should
+        affect "unusual elements" — elements that aren't rendered purely by CSS box concepts such as replaced
+        elements. See
+        [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox)
+        for more details.
 
-
-
-      -   `contents`
-          -
-
-              : These elements don't produce a specific box by themselves. They are replaced by their pseudo-box and their
-              child boxes. Please note that the CSS Display Level 3 spec defines how the `contents` value should
-              affect "unusual elements" — elements that aren't rendered purely by CSS box concepts such as replaced
-              elements. See
-              [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox)
-              for more details.
-
-
-
-              _Due to a bug in browsers, this will currently remove the element from the accessibility tree — screen
-              readers will not look at what's inside. See the
-              [Accessibility concerns](#accessibility_concerns) section below for more details._
-
-
-      -   `none`
-          -
-
-              : Turns off the display of an element so that it has no effect on layout (the document is rendered as though the
-              element did not exist). All descendant elements also have their display turned off. To have an element take up
-              the space that it would normally take, but without actually rendering anything, use the
-              {{CSSxRef("visibility")}} property instead.
+        _Due to a bug in browsers, this will currently remove the element from the accessibility tree — screen
+        readers will not look at what's inside. See the
+        [Accessibility concerns](#accessibility_concerns) section below for more details._
+    - `none`
+      - : Turns off the display of an element so that it has no effect on layout (the document is rendered as though the
+        element did not exist). All descendant elements also have their display turned off. To have an element take up
+        the space that it would normally take, but without actually rendering anything, use the
+        {{CSSxRef("visibility")}} property instead.
 
 ### 레거시
 
-- ## {{CSSxRef("&lt;display-legacy&gt;")}}
+- {{CSSxRef("&lt;display-legacy&gt;")}}
+  - : CSS 2는 `display` 속성에 단일 키워드만 사용했으므로, 같은 레이아웃 모드를 위해 블록 레벨과 인라인 레벨
+    키워드를 각각 필요로 했습니다.
 
-      : CSS 2는 `display` 속성에 단일 키워드만 사용했으므로, 같은 레이아웃 모드를 위해 블록 레벨과 인라인 레벨
-      키워드를 각각 필요로 했습니다.
+    - `inline-block`
+      - : The element generates a block element box that will be flowed with surrounding content as if it were a single
+        inline box (behaving much like a replaced element would).
 
+        It is equivalent to `inline flow-root`.
+    - `inline-table`
+      - : The `inline-table` value does not have a direct mapping in HTML. It behaves like an HTML
+        {{HTMLElement("table")}} element, but as an inline box, rather than a block-level box. Inside the table box is
+        a block-level context.
 
+        It is equivalent to `inline table`.
+    - `inline-flex`
+      - : The element behaves like an inline element and lays out its content according to the flexbox model.
 
-      -   `inline-block`
-          -
+        It is equivalent to `inline flex`.
+    - `inline-grid`
+      - : The element behaves like an inline element and lays out its content according to the grid model.
 
-              : The element generates a block element box that will be flowed with surrounding content as if it were a single
-              inline box (behaving much like a replaced element would).
-
-
-
-              It is equivalent to `inline flow-root`.
-
-
-      -   `inline-table`
-          -
-
-              : The `inline-table` value does not have a direct mapping in HTML. It behaves like an HTML
-              {{HTMLElement("table")}} element, but as an inline box, rather than a block-level box. Inside the table box is
-              a block-level context.
-
-
-
-              It is equivalent to `inline table`.
-
-
-      -   `inline-flex`
-          -
-
-              : The element behaves like an inline element and lays out its content according to the flexbox model.
-
-
-
-              It is equivalent to `inline flex`.
-
-
-      -   `inline-grid`
-          -
-
-              : The element behaves like an inline element and lays out its content according to the grid model.
-
-
-
-              It is equivalent to `inline grid`.
+        It is equivalent to `inline grid`.
 
 ### Which syntax should you use now?
 

@@ -1,18 +1,6 @@
 ---
 title: ShadowRoot.onslotchange
 slug: Web/API/ShadowRoot/onslotchange
-tags:
-  - API
-  - イベントハンドラー
-  - 実験的
-  - ShadowRoot
-  - プロパティ
-  - リファレンス
-  - シャドウ DOM API
-  - slot
-  - slotchange
-  - onslotchange
-browser-compat: api.ShadowRoot.onslotchange
 ---
 {{ApiRef('DOM')}}{{SeeCompatTable}}
 

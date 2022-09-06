@@ -19,7 +19,7 @@ Côté client, la chaîne de l'agent utilisateur est accessible en {{Glossary("J
 
 Une chaîne classique d'agent utilisateur ressemble à ceci : `"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"`.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

@@ -1,13 +1,6 @@
 ---
 title: JSON
 slug: Glossary/JSON
-tags:
-  - CodingScripting
-  - Glossary
-  - Intro
-  - JSON
-  - l10n:priority
-translation_of: Glossary/JSON
 ---
 _JavaScript Object Notation_ (**JSON**) はデータ交換フォーマットです。厳密なサブセットではありませんが、JSON は {{Glossary("JavaScript")}} のサブセットに似ています。多くのプログラミング言語が JSON をサポートしていますが、JSON はウェブサイトやブラウザの拡張機能を含む JavaScript ベースのアプリケーションに特に便利です。
 

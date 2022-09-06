@@ -1,15 +1,6 @@
 ---
 title: IndexedDB API
 slug: Web/API/IndexedDB_API
-tags:
-  - API
-  - Advanced
-  - Database
-  - IndexedDB
-  - Landing
-  - Reference
-  - Storage
-translation_of: Web/API/IndexedDB_API
 ---
 {{DefaultAPISidebar("IndexedDB")}}
 

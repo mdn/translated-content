@@ -68,13 +68,11 @@ console.log(entries[0].serverTiming);
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                               | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Server Timing','#the-performanceservertiming-interface', 'PerformanceServerTiming')}} | {{Spec2('Server Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceServerTiming")}}
+{{Compat}}
 
 ## Voir aussi
 

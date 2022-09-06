@@ -89,14 +89,11 @@ test.addEventListener("mouseout", function( event ) {
 
 ## Spécifications
 
-| Spécification                                                                        | État                             |
-| ------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('UI Events', '#event-type-mouseout', 'mouseout')}}     | {{Spec2('UI Events')}}     |
-| {{SpecName('DOM3 Events', '#event-type-mouseout', 'mouseout')}} | {{Spec2('DOM3 Events')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.mouseout_event")}}
+{{Compat}}
 
 ## Voir aussi
 

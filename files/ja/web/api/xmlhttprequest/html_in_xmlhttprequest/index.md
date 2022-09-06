@@ -1,15 +1,6 @@
 ---
 title: XMLHttpRequest における HTML の扱い
 slug: Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest
-tags:
-  - API
-  - HTML
-  - HTML の解析
-  - HTML の読み込み
-  - XMLHttpRequest
-  - ウェブ
-  - ガイド
-translation_of: Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest
 ---
 {{APIRef("XMLHttpRequest")}}
 

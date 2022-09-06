@@ -1,13 +1,6 @@
 ---
 title: Element.replaceWith()
 slug: Web/API/Element/replaceWith
-tags:
-  - API
-  - DOM
-  - Method
-  - Element
-  - Reference
-translation_of: Web/API/Element/replaceWith
 original_slug: Web/API/ChildNode/replaceWith
 ---
 {{APIRef("DOM")}}

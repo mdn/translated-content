@@ -51,15 +51,13 @@ function displayData() {
   };
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                | Statut                       | Commentaire |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBKeyRange-upperOpen', 'upperOpen')}} | {{Spec2('IndexedDB')}} |             |
+{{Specifications}}
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.IDBKeyRange.upperOpen")}}
+{{Compat}}
 
 ## Voir aussi
 

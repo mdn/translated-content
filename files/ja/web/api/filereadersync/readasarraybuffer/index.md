@@ -1,7 +1,6 @@
 ---
 title: FileReaderSync.readAsArrayBuffer()
 slug: Web/API/FileReaderSync/readAsArrayBuffer
-translation_of: Web/API/FileReaderSync/readAsArrayBuffer
 ---
 {{APIRef("File API")}}
 

@@ -41,14 +41,11 @@ range.surroundContents(newNode);
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | Statut                                       | Commentaire             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ----------------------- |
-| {{SpecName('DOM WHATWG', '#dom-range-surroundcontents', 'Range.surroundContents()')}}                                             | {{Spec2('DOM WHATWG')}}             | Pas de changement.      |
-| {{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-surroundContents', 'Range.surroundContents()')}} | {{Spec2('DOM2 Traversal_Range')}} | Spécification initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Range.surroundContents")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,26 +1,6 @@
 ---
 title: XRReferenceSpaceType
 slug: Web/API/XRSession/requestReferenceSpace
-tags:
-  - API
-  - AR
-  - Enumerated
-  - Enumerated Type
-  - Reality
-  - Reference
-  - Type
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRReferenceSpace
-  - XRReferenceSpaceType
-  - augmented
-  - space
-  - tracking
-translation_of: Web/API/XRReferenceSpaceType
 original_slug: Web/API/XRReferenceSpaceType
 ---
 {{APIRef("WebXR Device API")}}

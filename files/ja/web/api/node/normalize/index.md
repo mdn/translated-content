@@ -1,11 +1,6 @@
 ---
 title: Node.normalize()
 slug: Web/API/Node/normalize
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Node.normalize
-translation_of: Web/API/Node/normalize
 ---
 {{APIRef("DOM")}}
 

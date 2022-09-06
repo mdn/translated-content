@@ -1,15 +1,6 @@
 ---
 title: DocumentOrShadowRoot.caretPositionFromPoint()
 slug: Web/API/Document/caretPositionFromPoint
-tags:
-  - API
-  - Document
-  - DocumentOrShadowRoot
-  - Method
-  - Reference
-  - ShadowRoot
-  - caretPositionFromPoint()
-translation_of: Web/API/DocumentOrShadowRoot/caretPositionFromPoint
 original_slug: Web/API/DocumentOrShadowRoot/caretPositionFromPoint
 ---
 {{APIRef("CSSOM View")}}{{SeeCompatTable}}

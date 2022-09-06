@@ -1,12 +1,6 @@
 ---
 title: 段階変数用のCSSカスタムプロパティ
 slug: Web/CSS/CSS_Variables
-tags:
-  - CSS
-  - CSS Variables
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Variables
 ---
 {{cssref}}
 

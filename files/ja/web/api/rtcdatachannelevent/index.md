@@ -1,7 +1,6 @@
 ---
 title: RTCDataChannelEvent
 slug: Web/API/RTCDataChannelEvent
-translation_of: Web/API/RTCDataChannelEvent
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
@@ -45,5 +44,5 @@ pc.ondatachannel = function( ev ) {
 
 ## See also
 
-- [WebRTC](/ja/docs/Web/Guide/API/WebRTC "/en-US/docs/CSS/Using_CSS_animations")
+- [WebRTC](/ja/docs/Web/Guide/API/WebRTC)
 - このイベントの通常ターゲット: {{domxref("RTCPeerConnection")}}.

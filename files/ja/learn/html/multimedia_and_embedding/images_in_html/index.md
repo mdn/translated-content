@@ -1,24 +1,6 @@
 ---
 title: HTML の画像
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
-tags:
-  - Beginner
-  - Guide
-  - HTML
-  - Image
-  - alt text
-  - captions
-  - figcaption
-  - figure
-  - img
-  - ガイド
-  - キャプション
-  - 代替テキスト
-  - 初心者
-  - 図表
-  - 画像
-  - 記事
-translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 ---
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 

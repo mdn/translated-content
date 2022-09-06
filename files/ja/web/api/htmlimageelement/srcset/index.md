@@ -1,21 +1,6 @@
 ---
 title: HTMLImageElement.srcset
 slug: Web/API/HTMLImageElement/srcset
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - 画像
-  - 画像 Candidates
-  - プロパティ
-  - リファレンス
-  - Responsive Design
-  - list
-  - source
-  - srcset
-browser-compat: api.HTMLImageElement.srcset
 ---
 {{APIRef("HTML DOM")}}
 

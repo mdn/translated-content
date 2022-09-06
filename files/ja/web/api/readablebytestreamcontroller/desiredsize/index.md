@@ -1,15 +1,6 @@
 ---
 title: ReadableByteStreamController.desiredSize
 slug: Web/API/ReadableByteStreamController/desiredSize
-tags:
-  - API
-  - Experimental
-  - Property
-  - ReadableByteStreamController
-  - Reference
-  - Streams
-  - desiredSize
-translation_of: Web/API/ReadableByteStreamController/desiredSize
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 

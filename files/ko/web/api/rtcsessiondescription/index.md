@@ -83,5 +83,5 @@ signalingChannel.onmessage = function (evt) {
 
 ## See also
 
-- [WebRTC](/ko/docs/Web/Guide/API/WebRTC "/en-US/docs/CSS/Using_CSS_animations")
+- [WebRTC](/ko/docs/Web/Guide/API/WebRTC)
 - {{domxref("RTCPeerConnection.setLocalDescription()")}} and {{domxref("RTCPeerConnection.setRemoteDescription()")}}

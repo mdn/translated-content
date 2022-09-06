@@ -1,11 +1,6 @@
 ---
 title: StyleSheet.parentStyleSheet
 slug: Web/API/StyleSheet/parentStyleSheet
-tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-translation_of: Web/API/StyleSheet/parentStyleSheet
 ---
 {{ApiRef}}
 
@@ -41,4 +36,4 @@ if (stylesheet.parentStyleSheet) {
 ## 仕様書
 
 - [parentStyleSheet](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-parentStyleSheet)
-- [CSS Object Model (CSSOM)](http://dev.w3.org/csswg/cssom/#widl-StyleSheet-parentStyleSheet "CSS Object Model (CSSOM)")
+- [CSS Object Model (CSSOM)](http://dev.w3.org/csswg/cssom/#widl-StyleSheet-parentStyleSheet)

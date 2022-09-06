@@ -1,13 +1,6 @@
 ---
 title: Document.clear()
 slug: Web/API/Document/clear
-tags:
-  - DOM
-  - DOM_0
-  - Document
-  - Gecko
-  - HTML5
-translation_of: Web/API/Document/clear
 ---
 {{APIRef("DOM")}}{{ Deprecated_header() }}
 

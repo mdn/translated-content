@@ -1,11 +1,6 @@
 ---
 title: シェルプロンプトのコード例を整形するためのガイドライン
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell
-page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
-translation_of: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell
 original_slug: MDN/Guidelines/Code_guidelines/Shell
 ---
 {{MDNSidebar}}

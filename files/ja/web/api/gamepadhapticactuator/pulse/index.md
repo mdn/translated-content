@@ -1,16 +1,6 @@
 ---
 title: GamepadHapticActuator.pulse()
 slug: Web/API/GamepadHapticActuator/pulse
-tags:
-  - API
-  - Experimental
-  - Gamepad
-  - Gamepad API
-  - GamepadHapticActuator
-  - Method
-  - Reference
-  - pulse
-translation_of: Web/API/GamepadHapticActuator/pulse
 ---
 {{APIRef("Gamepad")}}{{SeeCompatTable}}
 

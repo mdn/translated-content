@@ -1,16 +1,6 @@
 ---
 title: FileSystem
 slug: Web/API/FileSystem
-tags:
-  - API
-  - File API
-  - File System API
-  - File and Directory Entries API
-  - インターフェイス
-  - オフライン
-  - ファイルシステム
-  - 非標準
-translation_of: Web/API/FileSystem
 ---
 {{APIRef("File System API")}}{{SeeCompatTable}}
 
@@ -22,8 +12,8 @@ File and Directory Entries API インターフェイスの **`FileSystem`** は�
 
 `FileSystem` オブジェクトにアクセスするには、2 つの方法があります。
 
-1.  `window.requestFileSystem()` を呼び出すことで、Web アプリのためだけに作成されたサンドボックス化されたファイルシステムを直接要求することができます。その呼び出しが成功した場合、コールバックハンドラが実行され、ファイルシステムを記述する `FileSystem` オブジェクトをパラメータとして受け取ります
-2.  ファイルシステムエントリオブジェクトの {{domxref("FileSystemEntry.filesystem", "filesystem")}} プロパティから取得できます
+1. `window.requestFileSystem()` を呼び出すことで、Web アプリのためだけに作成されたサンドボックス化されたファイルシステムを直接要求することができます。その呼び出しが成功した場合、コールバックハンドラが実行され、ファイルシステムを記述する `FileSystem` オブジェクトをパラメータとして受け取ります
+2. ファイルシステムエントリオブジェクトの {{domxref("FileSystemEntry.filesystem", "filesystem")}} プロパティから取得できます
 
 ## プロパティ
 

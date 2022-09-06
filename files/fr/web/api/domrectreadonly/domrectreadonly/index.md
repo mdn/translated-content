@@ -42,13 +42,11 @@ myDOMRect = new DOMRectReadOnly(0,0,100,100);
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                                       | Commentaire          |
-| -------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Geometry Interfaces', '#DOMRect', 'DOMRect()')}} | {{Spec2('Geometry Interfaces')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMRectReadOnly.DOMRectReadOnly")}}
+{{Compat}}
 
 ## Voir aussi
 

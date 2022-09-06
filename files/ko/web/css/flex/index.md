@@ -10,7 +10,7 @@ translation_of: Web/CSS/flex
 ---
 {{CSSRef}}
 
-**`flex`** [CSS](/ko/docs/CSS "CSS") 속성은 하나의 플렉스 아이템이 자신의 컨테이너가 차지하는 공간에 맞추기 위해 크기를 키우거나 줄이는 방법을 설정하는 속성입니다. `flex`는 {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}}, {{cssxref("flex-basis")}}의 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다.
+**`flex`** [CSS](/ko/docs/CSS) 속성은 하나의 플렉스 아이템이 자신의 컨테이너가 차지하는 공간에 맞추기 위해 크기를 키우거나 줄이는 방법을 설정하는 속성입니다. `flex`는 {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}}, {{cssxref("flex-basis")}}의 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다.
 
 {{EmbedInteractiveExample("pages/css/flex.html")}}
 
@@ -63,9 +63,9 @@ flex: unset;
 
 - **값이 세 개일 때**는 다음 순서를 따라야 합니다.
 
-  1.  `<flex-grow>`에 사용할 {{cssxref("&lt;number&gt;")}}
-  2.  `<flex-shrink>`에 사용할 {{cssxref("&lt;number&gt;")}}
-  3.  `<flex-basis>`에 사용할 {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, 또는 `auto`
+  1. `<flex-grow>` 에 사용할 {{cssxref("&lt;number&gt;")}}
+  2. `<flex-shrink>` 에 사용할 {{cssxref("&lt;number&gt;")}}
+  3. `<flex-basis>` 에 사용할 {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, 또는 `auto`
 
 ### 값
 

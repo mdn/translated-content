@@ -1,13 +1,6 @@
 ---
 title: Storage.key()
 slug: Web/API/Storage/key
-tags:
-  - API
-  - Method
-  - Reference
-  - Storage
-  - Web Storage
-translation_of: Web/API/Storage/key
 ---
 {{APIRef}}
 

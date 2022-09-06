@@ -1,14 +1,6 @@
 ---
 title: Element.attachShadow()
 slug: Web/API/Element/attachShadow
-tags:
-  - API
-  - Element
-  - メソッド
-  - リファレンス
-  - attachShadow
-  - シャドウ DOM
-translation_of: Web/API/Element/attachShadow
 ---
 {{APIRef('Shadow DOM')}}
 

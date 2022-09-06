@@ -25,7 +25,9 @@ translation_of: Web/API/Performance/mark
 
 ## Syntax
 
-    performance.mark(name);
+```js
+performance.mark(name);
+```
 
 ### Arguments
 

@@ -496,9 +496,7 @@ En revanche, un _worker_ ne pourra pas directement manipuler la page parente et 
 
 ## Spécifications
 
-| Spécification                                                            | État                             | Commentaires |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', '#workers', 'Web workers')}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Voir aussi
 

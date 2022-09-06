@@ -2,23 +2,33 @@
 title: Scope（作用域）
 slug: Glossary/Scope
 ---
-当前的执行上下文。{{glossary("value","值")}}和**表达式**在其中 "可见" 或可被访问到的上下文。如果一个**{{glossary("variable","变量")}}**或者其他表达式不 "在当前的作用域中"，那么它就是不可用的。作用域也可以根据代码层次分层，以便子作用域可以访问父作用域，通常是指沿着链式的作用域链查找，而不能从父作用域引用子作用域中的变量和引用。
+**作用域**是当前的执行上下文，{{glossary("value","值")}}和表达式在其中“可见”或可被访问。如果一个{{glossary("variable","变量")}}或表达式不在当前的作用域中，那么它是不可用的。作用域也可以堆叠成层次结构，子作用域可以访问父作用域，反过来则不行。
 
-当然，一个 {{glossary("function","Function")}} 将生成一个闭包（通常是返回一个函数引用），这个函数引用从外部作用域（在当前环境下）可以访问闭包内部的作用域。例如，下面的代码是无效的，并不是闭包的形式）：
+JavaScript 的作用域分以下三种：
 
-```js
+- 全局作用局：脚本模式运行所有代码的默认作用域
+- 模块作用域：模块模式中运行代码的作用域
+- 函数作用域：由{{glossary("function","函数")}}创建的作用域
+
+此外，用 [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 或 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 声明的变量属于额外的作用域：
+
+- 块级作用域：用一对花括号（一个[代码块](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)）创建出来的作用域
+
+由于{{glossary("function","函数")}}会创建作用域，因而在函数中定义的变量无法从该函数外部访问，也无法从其他函数内部访问，例如，下面的代码是无效的：
+
+```js example-bad
 function exampleFunction() {
     var x = "declared inside function";  // x 只能在 exampleFunction 函数中使用
     console.log("Inside function");
     console.log(x);
 }
 
-console.log(x);  // 引发 error
+console.log(x);  // 报错
 ```
 
-但是，由于变量在函数外被声明为全局变量，因此下面的代码是有效的（当前作用域不存在的变量和引用，就沿着作用域链继续寻找）：
+但是，下面的代码是有效的，因为变量在函数外被声明，为全局变量：
 
-```js
+```js example-good
 var x = "declared outside function";
 
 exampleFunction();
@@ -32,22 +42,22 @@ console.log("Outside function");
 console.log(x);
 ```
 
-英文原文中，只提到了闭包的简单特例，也就是父作用域引用子作用域的变量或者引用。这儿做一个补充，当一个函数（foo）执行返回一个内部函数（bar）引用时，bar 将会保存 foo 的作用域引用。例如：
+块级作用域只对 `let` 和 `const` 声明有效，对 `var` 声明无效。
 
-```js
-function foo() {
-    const str = "bar in foo";
-    return function bar() {
-        return str;
-    }
+```js example-good
+{
+  var x = 1;
 }
-
-var fun = foo();
-fun(); // "bar in foo"
+console.log(x); // 1
 ```
 
-## 了解更多
+```js example-bad
+{
+  const x = 1;
+}
+console.log(x); // ReferenceError: x is not defined
+```
 
-### 基础知识
+## 参见
 
-- Wikipedia 上的 [Scope (computer science)](https://zh.wikipedia.org/wiki/Scope_(computer_science))
+- 见维基百科词条：[作用域](https://zh.wikipedia.org/wiki/作用域)

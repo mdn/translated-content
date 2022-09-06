@@ -1,13 +1,6 @@
 ---
 title: SVGStringList
 slug: Web/API/SVGStringList
-page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
-translation_of: Web/API/SVGStringList
 ---
 {{APIRef("SVG")}}
 

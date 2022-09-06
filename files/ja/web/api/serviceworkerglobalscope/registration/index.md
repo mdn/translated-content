@@ -1,15 +1,6 @@
 ---
 title: ServiceWorkerGlobalScope.registration
 slug: Web/API/ServiceWorkerGlobalScope/registration
-tags:
-  - API
-  - Property
-  - Reference
-  - Service Worker
-  - ServiceWorker
-  - ServiceWorkerGlobalScope
-  - registration
-translation_of: Web/API/ServiceWorkerGlobalScope/registration
 ---
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 

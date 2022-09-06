@@ -31,10 +31,8 @@ if (screen.pixelDepth < 8) {
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('CSSOM View', '#dom-window-screen', 'window.screen')}} | {{Spec2('CSSOM View')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.screen")}}
+{{Compat}}
