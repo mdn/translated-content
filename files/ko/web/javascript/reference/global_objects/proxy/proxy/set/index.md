@@ -52,7 +52,7 @@ new Proxy(target, {
 - 할당이 성공했으면 `true`를 반환합니다.
 - 엄격 모드에서 `set()` 메서드가 `false`를 반환하면 {{jsxref("TypeError")}} 예외가 발생합니다.
 
-## Description
+## 설명
 
 **`handler.set()`** 메서드는 속성 값을 설정을 위한 트랩입니다.
 
