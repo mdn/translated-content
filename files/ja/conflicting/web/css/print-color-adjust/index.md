@@ -1,24 +1,7 @@
 ---
 title: color-adjust
 slug: conflicting/Web/CSS/print-color-adjust
-tags:
-  - Adjusting Colors
-  - CSS
-  - CSS 色
-  - CSS プロパティ
-  - HTML 色
-  - HTML スタイル
-  - レイアウト
-  - 標準外
-  - リファレンス
-  - Styling HTML
-  - Styling text
-  - ウェブ
-  - color-adjust
-  - recipe:css-property
-translation_of: Web/CSS/color-adjust
 original_slug: Web/CSS/color-adjust
-browser-compat: css.properties.color-adjust
 ---
 {{CSSRef}}
 

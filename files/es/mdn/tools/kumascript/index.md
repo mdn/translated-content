@@ -53,7 +53,9 @@ Hello #2
 
 Las plantillas KumaScript se invocan en el contenido del documento con macros, como esta:
 
-    \{{ templateName("arg0", "arg1", ..., "argN") }}
+```
+\{{ templateName("arg0", "arg1", ..., "argN") }}
+```
 
 La sintaxis de una Macro se compone de estas reglas:
 
@@ -68,7 +70,9 @@ La sintaxis de una Macro se compone de estas reglas:
 
 Hay una característica semi-experimental disponible para las macros. Puedes proveerlas de un objeto JSON como primero y único parámetro, así:
 
-    \{{ templateName({ "Alpha":"one", "Beta":["a","b","c"], "Foo":"http:\/\/mozilla.org\/" }) }}
+```
+\{{ templateName({ "Alpha":"one", "Beta":["a","b","c"], "Foo":"http:\/\/mozilla.org\/" }) }}
+```
 
 Los datos de esta macro estarán disponibles en un código de plantilla como un objeto en el argumento `$0` (por ejemplo, `$0.Alpha`, `$0.Beta`, `$0.Foo`). Esto también te permite expresar estructuras de datos complejos en los parámetros de macro que son difíciles o imposibles de hacer con una simple lista de parámetros.
 
@@ -76,7 +80,7 @@ Nota que el estilo de este parámetro es muy complejo. Se debe adherir exactamen
 
 #### Cómo escribir "\\{\\{"
 
-Como la secuencia de caracteres "`\{\{`" se usa para indicar el comienzo de una macro, puede ser un problema si justo quieres usar "`\{\{`" and "`\}\}`" como texto de una página. Probablemente dará un mensaje de error `DocumentParsingError`. 
+Como la secuencia de caracteres "`\{\{`" se usa para indicar el comienzo de una macro, puede ser un problema si justo quieres usar "`\{\{`" and "`\}\}`" como texto de una página. Probablemente dará un mensaje de error `DocumentParsingError`.
 
 En este caso, puedes escapar la primer llave con una barra invertida, así: `\\{{`
 
@@ -92,11 +96,13 @@ Las plantillas KumaScript son procesadas por un [motor de plantillas JavaScript 
   - Es un error incluir punto y coma dentro de los bloques.
 
 - Cualquier cosa dentro de un bloque `<% %>` se interpreta como JavaScript. Esto puede incluir bucles, condiciones, etc.
-- No hay nada dentro de un bloque `<% %>` que pueda contribuir al flujo de salida. Pero puedes hacer la transición desde el modo JS al modo de salida usando `<% %> `—Por ejemplo:
+- No hay nada dentro de un bloque `<% %>` que pueda contribuir al flujo de salida. Pero puedes hacer la transición desde el modo JS al modo de salida usando `<% %>` — Por ejemplo:
 
-      <% for (var i = 0; i < $0; i++) { %>
-      Hello #<%= i %>
-      <% } %>
+  ```js
+  <% for (var i = 0; i < $0; i++) { %>
+  Hello #<%= i %>
+  <% } %>
+  ```
 
   Nota como el JS está contenido entre `<% ... %>`, y la salida va en el espacio entre `%> ... <%`. El bucle _for_ en JS puede comenzar en un bloque `<% %>` , luego el flujo de salida, y terminar en un segundo bloque JS `<% %>`.
 
@@ -239,7 +245,9 @@ El resultado de 2 + 2 = <%= math_lib.add(2, 2) %>
 
 Y, el resultado de esta plantilla será:
 
-    el resultado de 2 + 2 = 4
+```
+el resultado de 2 + 2 = 4
+```
 
 #### Módulos cargados automáticamente
 
@@ -360,7 +368,9 @@ It bears repeating: To force templates used on a page to be reloaded after editi
 
 Sometimes, you'll see a scripting message like this when you load a page:
 
-    Kumascript service failed unexpectedly: <class 'httplib.BadStatusLine'>
+```
+Kumascript service failed unexpectedly: <class 'httplib.BadStatusLine'>
+```
 
 This is probably a temporary failure of the KumaScript service. If you Refresh the page, the error may disappear. If that doesn't work, try a Shift-Refresh. If, after a few tries, the error persists - [file an IT bug](https://bugzilla.mozilla.org/enter_bug.cgi?product=mozilla.org&format=itrequest) for Mozilla Developer Network to ask for an investigation.
 
@@ -368,15 +378,21 @@ This is probably a temporary failure of the KumaScript service. If you Refresh t
 
 On some pages, you'll see a scripting error like this:
 
-    Syntax error at line 436, column 461: Expected valid JSON object as the parameter of the preceding macro but...
+```
+Syntax error at line 436, column 461: Expected valid JSON object as the parameter of the preceding macro but...
+```
 
 If you edit the page, you'll probably see a macro like this at the bottom of the page:
 
-    \{{ wiki.languages({ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", ... }) }}
+```
+\{{ wiki.languages({ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", ... }) }}
+```
 
 To fix the problem, just delete the macro. Or, replace the curly braces on either side with HTML comments `<!-- -->` to preserve the information, like so:
 
-    <!-- wiki.languages({ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", ... }) -->
+```html
+<!-- wiki.languages({ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", ... }) -->
+```
 
 Because Kuma supports localization differently, these macros aren't actually needed any more. But, they've been left intact in case we need to revisit the relationships between localized pages. Unfortunately, it seems like migration has failed to convert some of them properly.
 
@@ -583,7 +599,9 @@ Carriage returns added here and there for clarity.
 // From ReleaseChannelInfo() template
 // Before:
 web.html("<p>Firefox " + $0 + ", based on Gecko " + $1 + ", will ship in " + $2 + ". This article provides information about the changes in this release that will affect developers. Nightly builds of what will become Firefox " + $0 + " are " + web.link(url, "currently available") + " on the " + string.ToUpperFirst($3) + " channel.</p>");
- 
+```
+
+```js
 // After:
 <p>Firefox <%= $0 %>, based on Gecko <%= $1 %>, will ship in <%= $2 %>. This
  article provides information about the changes in this release that will
@@ -592,19 +610,23 @@ web.html("<p>Firefox " + $0 + ", based on Gecko " + $1 + ", will ship in " + $2 
  <%= string.ToUpperFirst($3) %> channel.</p>
 ```
 
-    // Before: old Dekiscript snippet
-    if ($1 && string.length($1)) {
-      optionsText = optionsText + "<li>" + LXRSearch("ident", "i", $1) + "</li>";
-    }
+```js
+// Before: old Dekiscript snippet
+if ($1 && string.length($1)) {
+  optionsText = optionsText + "<li>" + LXRSearch("ident", "i", $1) + "</li>";
+}
+```
 
-    // After: new Kumascript. Quote parameters to template() unless it is an arg variable (like $1).
-    if ($1 && string.length($1)) {
-        optionsText = optionsText + "<li>" + template("LXRSearch", ["ident", "i", $1]) + "</li>";
-    }
+```js
+// After: new Kumascript. Quote parameters to template() unless it is an arg variable (like $1).
+if ($1 && string.length($1)) {
+  optionsText = optionsText + "<li>" + template("LXRSearch", ["ident", "i", $1]) + "</li>";
+}
 
-    // Note that template() within <% ... %> outputs nothing directly. If you want to call another
-    // template and display its output, use <%= %> or <%- %> like this:
-    <%- template("LXRSearch", ["ident", "i", $1]) %>
+// Note that template() within <% ... %> outputs nothing directly. If you want to call another
+// template and display its output, use <%= %> or <%- %> like this:
+<%- template("LXRSearch", ["ident", "i", $1]) %>
+```
 
 ## See also
 

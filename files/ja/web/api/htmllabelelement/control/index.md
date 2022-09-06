@@ -1,16 +1,6 @@
 ---
 title: HTMLLabelElement.control
 slug: Web/API/HTMLLabelElement/control
-tags:
-  - フォーム
-  - HTML DOM
-  - HTMLLabelElement
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - コントロール
-browser-compat: api.HTMLLabelElement.control
-translation_of: Web/API/HTMLLabelElement/control
 ---
 {{APIRef("HTML DOM")}}
 

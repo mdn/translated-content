@@ -1,15 +1,6 @@
 ---
 title: HTMLMediaElement.loop
 slug: Web/API/HTMLMediaElement/loop
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Web
-browser-compat: api.HTMLMediaElement.loop
-translation_of: Web/API/HTMLMediaElement/loop
 ---
 {{APIRef("HTML DOM")}}
 

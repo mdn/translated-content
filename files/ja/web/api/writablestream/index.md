@@ -1,14 +1,6 @@
 ---
 title: WritableStream
 slug: Web/API/WritableStream
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - Streams
-  - WritableStream
-translation_of: Web/API/WritableStream
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 

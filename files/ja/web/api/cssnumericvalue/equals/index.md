@@ -1,17 +1,6 @@
 ---
 title: CSSNumericValue.equals()
 slug: Web/API/CSSNumericValue/equals
-tags:
-  - API
-  - CSS 型付きオブジェクトモデル API
-  - CSSNumericValue
-  - 実験的
-  - Houdini
-  - メソッド
-  - リファレンス
-  - equals()
-browser-compat: api.CSSNumericValue.equals
-translation_of: Web/API/CSSNumericValue/equals
 ---
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 

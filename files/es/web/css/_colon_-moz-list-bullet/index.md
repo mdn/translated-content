@@ -49,4 +49,3 @@ No forma parte de ningún estándar.
 
 - {{cssxref(":-moz-list-number")}}
 - {{cssxref("::marker")}}
-

@@ -19,9 +19,7 @@ Ces directives CSP sont des directives de document :
 - {{CSP("sandbox")}}
 - {{CSP("disown-opener")}}
 
-## En apprendre en plus
-
-### Informations Techniques
+## Voir aussi
 
 - {{HTTPHeader("Politique de sécurité de contenu")}}
 - Autres types de directives :

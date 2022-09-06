@@ -1,15 +1,6 @@
 ---
 title: Window.sidebar
 slug: Web/API/Window/sidebar
-page-type: web-api-instance-property
-tags:
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
-  - Non-standard
-  - Deprecated
-translation_of: Web/API/Window/sidebar
 ---
 {{APIRef}} {{Deprecated_Header}}
 

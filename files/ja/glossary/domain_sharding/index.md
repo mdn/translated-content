@@ -1,14 +1,6 @@
 ---
 title: Domain sharding (ドメインシャーディング)
 slug: Glossary/Domain_sharding
-tags:
-  - DNS
-  - Glossary
-  - HTTP
-  - Reference
-  - Web Performance
-  - latency
-translation_of: Glossary/Domain_sharding
 ---
 ブラウザはアクティブな接続数をドメインごとに制限します。この制限を超えてアセットを同時ダウンロードできるようにするために、**ドメインシャーディング**はコンテンツを複数のサブドメインに分割します。複数のアセットを提供するために複数のドメインが使用されると、ブラウザはより多くのリソースを同時にダウンロードすることができるため、より速いページ読み込み時間とユーザ体験の向上をもたらします。
 

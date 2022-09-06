@@ -1,11 +1,6 @@
 ---
 title: CharacterData.insertData()
 slug: Web/API/CharacterData/insertData
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.CharacterData.insertData
-translation_of: Web/API/CharacterData/insertData
 ---
 {{APIRef("DOM")}}
 

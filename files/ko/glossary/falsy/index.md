@@ -22,7 +22,7 @@ translation_of: Glossary/Falsy
 | `""`                             | 빈 [string](/ko/docs/Web/JavaScript/Reference/Global_Objects/String)                                                                     |
 | {{Glossary("null")}}     | [null](/ko/docs/Web/JavaScript/Reference/Global_Objects/null) - 아무런 값도 없음                                                         |
 | {{Glossary("undefined")}} | [undefined](/ko/docs/Web/JavaScript/Reference/Global_Objects/undefined) - 원시값                                                         |
-| {{Glossary("NaN")}}         | [NaN ](/ko/docs/Web/JavaScript/Reference/Global_Objects/NaN)- 숫자가 아님                                                                |
+| {{Glossary("NaN")}}         | [NaN](/ko/docs/Web/JavaScript/Reference/Global_Objects/NaN) - 숫자가 아님                                                                |
 
 > **참고:** 오브젝트는 [\[\[IsHTMLDDA\]\] internal slot](https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot) 을 가지고 있어야 거짓같은 값이 됩니다. 이 슬롯은 [`document.all`](/ko/docs/Web/API/Document/all) 에만 존재하며 자바스크립트로 설정될 수 없습니다.
 

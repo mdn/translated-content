@@ -34,9 +34,9 @@ HTTP の URL では、先頭の `http://` または `https://` に続く部分�
 
 例:
 
-1.  サーバーが `http://www.example.org/whaddup` へのリクエストを受けます (正規のドメインが example.org であるとき)。
-2.  サーバーは `{{HTTPHeader("Location")}}: http://example.org/whaddup` ヘッダーを伴う {{HTTPStatus(301)}} コードのレスポンスを返します。
-3.  クライアントは正規ドメイン `http://example.org/whatddup` へのリクエストを発行します。
+1. サーバーが `http://www.example.org/whaddup` へのリクエストを受けます (正規のドメインが example.org であるとき)。
+2. サーバーは `{{HTTPHeader("Location")}}: http://example.org/whaddup` ヘッダーを伴う {{HTTPStatus(301)}} コードのレスポンスを返します。
+3. クライアントは正規ドメイン `http://example.org/whatddup` へのリクエストを発行します。
 
 [HTML5 boilerplate project](https://github.com/h5bp/html5-boilerplate) に、[あるドメインから別のドメインへリダイレクトするように Apache を設定する方法](https://github.com/h5bp/html5-boilerplate/blob/7a22a33d4041c479d0962499e853501073811887/.htaccess#L219-L258) の例があります。
 

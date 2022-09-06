@@ -37,7 +37,7 @@ greeting(sayHello, "JavaScript!");
 
 我們將 `sayHello()` 函式當成是變數傳遞到 `greeting()` 函式，這說明了我們將函式視為是一個值來使用它。
 
-> **備註：** 將函式作為參數傳遞到另一個函式時，被當作參數傳遞的那個函式我們稱之為回調函式 **[Callback function](/en-US/docs/Glossary/Callback_function)。** *`sayHello` 就是一個回調函式。*
+> **備註：** 將函式作為參數傳遞到另一個函式時，被當作參數傳遞的那個函式我們稱之為回調函式 **[Callback function](/zh-TW/docs/Glossary/Callback_function)。** *`sayHello` 就是一個回調函式。*
 
 ## 範例 | 回傳一個函式
 

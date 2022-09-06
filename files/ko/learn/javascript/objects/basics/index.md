@@ -1,21 +1,6 @@
 ---
 title: JavaScript 객체 기본
 slug: Learn/JavaScript/Objects/Basics
-tags:
-  - API
-  - this
-  - 객체
-  - 객체 리터럴
-  - 괄호 표기법
-  - 구문
-  - 배우기
-  - 이론
-  - 인스턴스
-  - 입문자
-  - 자바스크립트
-  - 점 표기법
-  - 코딩스크립트
-translation_of: Learn/JavaScript/Objects/Basics
 ---
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 

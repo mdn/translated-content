@@ -16,7 +16,7 @@ translation_of: Web/XSLT/Element/with-param
 
 ```
 <xsl:with-param name=NAME select=EXPRESSION>
-	TEMPLATE
+  TEMPLATE
 </xsl:with-param>
 ```
 

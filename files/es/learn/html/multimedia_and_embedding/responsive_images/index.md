@@ -42,7 +42,7 @@ Examinemos un escenario típico. Un sitio web típico puede contener una imagen 
 
 ![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](https://mdn.mozillademos.org/files/12940/picture-element-wide.png)
 
-Esto funciona bien en un dispositivo de pantalla ancha, como una computadora portatil o de escritorio (puedes [ver el ejemplo en vivo ](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html)y encontrar el [código fuente](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html) en Github.) No hablaremos mucho del CSS en esta lección, excepto para decir que:
+Esto funciona bien en un dispositivo de pantalla ancha, como una computadora portatil o de escritorio (puedes [ver el ejemplo en vivo](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) y encontrar el [código fuente](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html) en Github.) No hablaremos mucho del CSS en esta lección, excepto para decir que:
 
 - El contenido del `body` se ha ajustado a un ancho máximo de 1200 píxeles - en pantallas por encima de ese ancho, el cuerpo permanece a 1200px y se centra en el espacio disponible. En pantallas por debajo de ese ancho, el cuerpo permanecerá al 100% del ancho de la ventana.
 - La imagen del encabezado se ha configurado para que su centro siempre permanezca en el centro del encabezado, sin importar el ancho que tenga el encabezado. Por lo tanto, si el sitio se visualiza en una pantalla más estrecha, aún se puede ver el detalle importante en el centro de la imagen (las personas) y el exceso se pierde en ambos lados. Tiene 200px de alto.
@@ -68,7 +68,7 @@ Este tipo de problemas no existían cuando la web se creó por primera vez, a pr
 
 ## ¿Cómo se crean las imágenes adaptables?
 
-En esta sección, veremos los dos problemas ilustrados anteriormente y mostraremos cómo solucionarlos usando las características de imágenes adaptables con HTML. Debe tener en cuenta que nos centraremos en el elemento HTML {{htmlelement("img")}} para esta sección, tal como se muestra en el área de contenido del ejemplo anterior — la imagen en el encabezado del sitio es solo de decoración y, por lo tanto, implementado usando imágenes de fondo con CSS. Se puede decir que[ CSS posee mejores herramientas para el diseño adaptable que HTML](http://blog.cloudfour.com/responsive-images-101-part-8-css-images/), y hablaremos sobre ellas en nuestro módulo [CSS](/es/docs/Web/CSS).
+En esta sección, veremos los dos problemas ilustrados anteriormente y mostraremos cómo solucionarlos usando las características de imágenes adaptables con HTML. Debe tener en cuenta que nos centraremos en el elemento HTML {{htmlelement("img")}} para esta sección, tal como se muestra en el área de contenido del ejemplo anterior — la imagen en el encabezado del sitio es solo de decoración y, por lo tanto, implementado usando imágenes de fondo con CSS. Se puede decir que [CSS posee mejores herramientas para el diseño adaptable que HTML](http://blog.cloudfour.com/responsive-images-101-part-8-css-images/), y hablaremos sobre ellas en nuestro módulo [CSS](/es/docs/Web/CSS).
 
 ### Cambio de resolución: Diferentes tamaños
 
@@ -94,24 +94,24 @@ Los atributos `srcset` y `sizes` parecen complicados, pero resultan más fácile
 
 **`srcset`** define el conjunto de imágenes que el navegador podrá elegir, y el tamaño de cada imagen. Cada conjunto de información de imagen está separado del anterior por una coma. Para cada uno, escribimos:
 
-1.  Un nombre de archivo de imagen (elva-fairy-480w.jpg)
-2.  Un espacio.
-3.  El **ancho intrínseco de la imagen en píxeles** (480w): tenga en cuenta que esto usa la unidad w, no px como cabría esperar. Este es el tamaño real de la imagen, que se puede encontrar inspeccionando el archivo de imagen en su computadora (por ejemplo, en una Mac puede seleccionar la imagen en Finder y presionar <kbd>Cmd</kbd> + <kbd>I</kbd> para que aparezca la pantalla de información).
+1. Un nombre de archivo de imagen (elva-fairy-480w.jpg)
+2. Un espacio.
+3. El **ancho intrínseco de la imagen en píxeles** (480w): tenga en cuenta que esto usa la unidad w, no px como cabría esperar. Este es el tamaño real de la imagen, que se puede encontrar inspeccionando el archivo de imagen en su computadora (por ejemplo, en una Mac puede seleccionar la imagen en Finder y presionar <kbd>Cmd</kbd> + <kbd>I</kbd> para que aparezca la pantalla de información).
 
 **`sizes`** define un conjunto de condiciones de medios (por ejemplo, anchos de pantalla) e indica qué tamaño de imagen sería mejor elegir cuando se cumplen ciertas condiciones de medios — estas son las sugerencias de las que hablamos anterriormente. En este caso, antes de cada coma escribimos:
 
-1.  Una **condición de medios** ((max-width: 600px)): aprenderá más sobre esto en el [tema CSS](/es/docs/Web/CSS), pero por ahora digamos que una condición de medios describe un posible estado en el que puede estar la pantalla. En este caso, estamos diciendo "cuando el ancho de la ventana gráfica es de 600 píxeles o menos".
-2.  Un espacio.
-3.  El **ancho de la ranura** que la imagen llenará cuando la condición de medios sea verdadera (`440px`.)
+1. Una **condición de medios** ((max-width: 600px)): aprenderá más sobre esto en el [tema CSS](/es/docs/Web/CSS), pero por ahora digamos que una condición de medios describe un posible estado en el que puede estar la pantalla. En este caso, estamos diciendo "cuando el ancho de la ventana gráfica es de 600 píxeles o menos".
+2. Un espacio.
+3. El **ancho de la ranura** que la imagen llenará cuando la condición de medios sea verdadera (`440px`.)
 
 > **Nota:** Para el **ancho de la ranura**, debe indicar una longitud absoluta (`px`, `em`) o relativa (como un porcentaje.) Usted debe haber advertido que el ancho de la última ranura no tiene condición de medios (esta es la opción por defecto que se elige cuando ninguna de las condiciones de medios se cumplen). El navegador ignora todo lo posterior a la primera condición coincidente, por eso sea cuidadoso con el orden de las condiciones de medios.
 
 Entonces, con estos atributos establecidos, el navegador:
 
-1.  Verificará el ancho del dispositivo.
-2.  Resolverá qué condición de medios en la lista `sizes` es la primera que se cumple.
-3.  Verificará la medida de la ranura dada a esa consulta de medios.
-4.  Cargará la imagen referenciada en la lista `srcset` con coincidencia más cercana a la medida de la ranura.
+1. Verificará el ancho del dispositivo.
+2. Resolverá qué condición de medios en la lista `sizes` es la primera que se cumple.
+3. Verificará la medida de la ranura dada a esa consulta de medios.
+4. Cargará la imagen referenciada en la lista `srcset` con coincidencia más cercana a la medida de la ranura.
 
 ¡Y eso es todo! Hasta este punto, si un navegador compatible con un ancho de ventana de 480px carga la página, la condición de medios `(max-width: 480px)` se cumplirá, por lo que la ranura de `440px` será elegida y se cargará el archivo de imagen `elva-fairy-480w.jpg`, ya que el ancho inherente (`480w`) es el más cercano a `440px`. La imagen de 800px tiene 128KB en disco mientras que la versión de 480px tiene solo 63KB — un ahorro de 65KB. Ahora imagine si esta fuera una página que tuviera muchas imágenes. Usar esta técnica puede ahorrarle a los usuarios de dispositivos móviles mucho ancho de banda.
 
@@ -210,11 +210,11 @@ There are several exciting new image formats (such as WebP and JPEG-2000) that c
 
 For this active learning, we're expecting you to be brave and go it alone ... mostly. We want you to implement your own suitable art directed narrow screen/wide screen shot using `<picture>`, and a resolution switching example that uses `srcset`.
 
-1.  Write some simple HTML to contain your code (use `not-responsive.html` as a starting point, if you like)
-2.  Find a nice wide screen landscape image with some kind of detail contained in it somewhere. Create a web-sized version of it using a graphics editor, then crop it to show a smaller part that zooms in on the detail, and create a second image (about 480px wide is good for this.)
-3.  Use the `<picture>` element to implement an art direction picture switcher!
-4.  Create multiple image files of different sizes, each showing the same picture.
-5.  Use `srcset`/`size` to create a resolution switcher example, either to serve the same size image at different resolutions, or different image sizes at different viewport widths.
+1. Write some simple HTML to contain your code (use `not-responsive.html` as a starting point, if you like)
+2. Find a nice wide screen landscape image with some kind of detail contained in it somewhere. Create a web-sized version of it using a graphics editor, then crop it to show a smaller part that zooms in on the detail, and create a second image (about 480px wide is good for this.)
+3. Use the `<picture>` element to implement an art direction picture switcher!
+4. Create multiple image files of different sizes, each showing the same picture.
+5. Use `srcset`/`size` to create a resolution switcher example, either to serve the same size image at different resolutions, or different image sizes at different viewport widths.
 
 > **Nota:** Use the browser devtools to help work out what sizes you need, as mentioned above.
 

@@ -1,15 +1,6 @@
 ---
 title: 基本的な 2D WebGL アニメーションの例
 slug: Web/API/WebGL_API/Basic_2D_animation_example
-tags:
-  - 2D Animation
-  - 2D Graphics
-  - Animation
-  - Drawing
-  - Example
-  - WebGL
-  - WebGL API
-translation_of: Web/API/WebGL_API/Basic_2D_animation_example
 ---
 {{WebGLSidebar}}
 

@@ -1,20 +1,6 @@
 ---
 title: HTMLInputElement.webkitdirectory
 slug: Web/API/HTMLInputElement/webkitdirectory
-tags:
-  - API
-  - ファイルシステム API
-  - ファイルとディレクトリー項目 API
-  - ファイル
-  - HTML DOM
-  - HTMLInputElement
-  - 標準外
-  - プロパティ
-  - リファレンス
-  - Web
-  - webkitdirectory
-  - プロパティ
-translation_of: Web/API/HTMLInputElement/webkitdirectory
 ---
 {{APIRef("HTML DOM")}}{{non-standard_header}}
 

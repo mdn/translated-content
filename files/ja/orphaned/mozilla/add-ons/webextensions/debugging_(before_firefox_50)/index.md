@@ -1,14 +1,6 @@
 ---
 title: デバッグ (Firefox 50 より前)
 slug: orphaned/Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)
-tags:
-  - Debugging
-  - Firefox
-  - Guide
-  - Mozilla
-  - Deprecated
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)
 original_slug: Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)
 ---
 {{AddonSidebar}}
@@ -83,7 +75,7 @@ function notify(message) {
 chrome.runtime.onMessage.addListener(notify);
 ```
 
-以下の手順を実際に試してみる際は、 [webextensions-examples](https://github.com/mdn/webextensions-examples) リポジトリからコードを clone し、"notify-link-clicks-i18n" を[ インストールしてください](/ja/docs/orphaned/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)。
+以下の手順を実際に試してみる際は、 [webextensions-examples](https://github.com/mdn/webextensions-examples) リポジトリからコードを clone し、"notify-link-clicks-i18n" を [インストールしてください](/ja/docs/orphaned/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)。
 
 ## ブラウザーツールボックス
 

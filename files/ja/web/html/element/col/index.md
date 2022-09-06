@@ -87,11 +87,12 @@ translation_of: Web/HTML/Element/col
 
     この属性が設定されていない場合、その値は `<col>` 要素が属する {{HTMLElement("colgroup")}} 要素の {{htmlattrxref("align", "colgroup")}} 属性から継承します。それも存在しない場合は、`left` 値であるものとします。
 
-    > **Note:** **補足:**- 値 `left`、`center`、`right`、`justify` と同じ効果を得る方法:
+    > **補足:**
     >
-    >     -   {{cssxref("text-align")}} プロパティを `<col>` 要素を与えたセレクターに設定しようとしてはいけません。 {{HTMLElement("td")}} 要素は `<col>` 要素の子孫ではないため、プロパティを継承しません。
-    >     -   表で {{htmlattrxref("colspan", "td")}} 属性を使用していない場合は、`td:nth-child(an+b)` CSS セレクターを使用してください。 `a` を 0 に、`b` を表内の列の位置を示す序数にします。例えば `td:nth-child(2) { text-align: right; }` は、2 列目を右揃えにします。
-    >     -   表で {{htmlattrxref("colspan", "td")}} 属性を使用している場合は `[colspan=n]` のような、十分な CSS 属性セレクターの組み合わせで実現できますが、容易ではありません。
+    > - 値 `left`、`center`、`right`、`justify` と同じ効果を得る方法:
+    > - {{cssxref("text-align")}} プロパティを `<col>` 要素を与えたセレクターに設定しようとしてはいけません。 {{HTMLElement("td")}} 要素は `<col>` 要素の子孫ではないため、プロパティを継承しません。
+    > - 表で {{htmlattrxref("colspan", "td")}} 属性を使用していない場合は、`td:nth-child(an+b)` CSS セレクターを使用してください。 `a` を 0 に、`b` を表内の列の位置を示す序数にします。例えば `td:nth-child(2) { text-align: right; }` は、2 列目を右揃えにします。
+    > - 表で {{htmlattrxref("colspan", "td")}} 属性を使用している場合は `[colspan=n]` のような、十分な CSS 属性セレクターの組み合わせで実現できますが、容易ではありません。
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
 

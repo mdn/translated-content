@@ -1,13 +1,6 @@
 ---
 title: HTMLFormElement.reportValidity()
 slug: Web/API/HTMLFormElement/reportValidity
-tags:
-  - HTML
-  - HTMLFormElement
-  - Method
-  - Reference
-translation_of: Web/API/HTMLFormElement/reportValidity
-browser-compat: api.HTMLFormElement.reportValidity
 ---
 {{APIRef("HTML DOM")}}
 

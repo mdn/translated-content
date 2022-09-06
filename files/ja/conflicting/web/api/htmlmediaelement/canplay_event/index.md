@@ -1,13 +1,6 @@
 ---
 title: GlobalEventHandlers.oncanplay
 slug: conflicting/Web/API/HTMLMediaElement/canplay_event
-tags:
-  - API
-  - Event Handler
-  - GlobalEventHandlers
-  - Property
-  - Reference
-translation_of: Web/API/GlobalEventHandlers/oncanplay
 original_slug: Web/API/GlobalEventHandlers/oncanplay
 ---
 {{ ApiRef("HTML DOM") }}
@@ -50,4 +43,4 @@ var handlerFunction = element.oncanplay;
 
 ## 関連情報
 
-- [DOM onevent ハンドラー](/ja/docs/Web/Guide/Events/Event_handlers "/ja/docs/Web/Guide/DOM/Events/Event_handlers")
+- [DOM onevent ハンドラー](/ja/docs/Web/Guide/Events/Event_handlers)

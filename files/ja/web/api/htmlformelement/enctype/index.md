@@ -1,10 +1,6 @@
 ---
 title: HTMLFormElement.enctype
 slug: Web/API/HTMLFormElement/enctype
-tags:
-  - Reference
-  - form
-translation_of: Web/API/HTMLFormElement/enctype
 ---
 ## 概要
 

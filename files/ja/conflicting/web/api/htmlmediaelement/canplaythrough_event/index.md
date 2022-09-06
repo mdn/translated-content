@@ -1,13 +1,6 @@
 ---
 title: GlobalEventHandlers.oncanplaythrough
 slug: conflicting/Web/API/HTMLMediaElement/canplaythrough_event
-tags:
-  - API
-  - Event Handler
-  - GlobalEventHandlers
-  - Property
-  - Reference
-translation_of: Web/API/GlobalEventHandlers/oncanplaythrough
 original_slug: Web/API/GlobalEventHandlers/oncanplaythrough
 ---
 {{ ApiRef("HTML DOM") }}
@@ -51,4 +44,4 @@ var handlerFunction = element.oncanplaythrough;
 ## 関連情報
 
 - {{event("canplaythrough")}}
-- [DOM onevent ハンドラー](/ja/docs/Web/Guide/Events/Event_handlers "/ja/docs/Web/Guide/DOM/Events/Event_handlers")
+- [DOM onevent ハンドラー](/ja/docs/Web/Guide/Events/Event_handlers)

@@ -1,12 +1,6 @@
 ---
 title: CORS-safelisted response header (CORS セーフリストレスポンスヘッダー)
 slug: Glossary/CORS-safelisted_response_header
-tags:
-  - CORS
-  - Fetch
-  - HTTP
-  - 用語集
-translation_of: Glossary/CORS-safelisted_response_header
 ---
 _CORS セーフリストレスポンスヘッダー_ は、[CORS](/en-US/docs/Web/HTTP/CORS) レスポンスに含まれる [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)で、クライアントスクリプトに公開しても _安全_ であると見なされます。セーフリストに含まれたレスポンスヘッダーのみがウェブページで利用できます。
 

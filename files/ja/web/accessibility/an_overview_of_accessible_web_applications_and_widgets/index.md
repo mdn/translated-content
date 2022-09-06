@@ -13,7 +13,7 @@ Web は変化しています。静的でページに基づくサイトは、次�
 
 ## 問題点
 
-ほとんどの JavaScript ツールキットは、よく知られたデスクトップインターフェイスの動作を模倣する、クライアントサイドのウィジェットのライブラリを提供します。スライダー、メニューバー、ファイルリストビューなどを JavaScript、CSS、HTML の組み合わせにより構築できます。HTML 4 の仕様はこれらの種類のウィジェットを意味的に表すタグを内蔵していないため、一般的に開発者は \<div> や \<span> といった汎用の要素を使用します。これはデスクトップによく似たもののように見えますが、支援技術が使用するのに値する意味的な情報は、たいていマークアップ内にありません。Web ページ上の動的コンテンツは、どのような理由であれ画面を見ることができないユーザにとって特に問題になる可能性があります。株価表示、Twitter のフィード更新、進捗の表示やそれらに似たコンテンツは、支援技術 (AT) が認識できないかもしれない方法で DOM を変更します。ここが、[ARIA](/ja/docs/ARIA "ARIA") が必要になるところです。
+ほとんどの JavaScript ツールキットは、よく知られたデスクトップインターフェイスの動作を模倣する、クライアントサイドのウィジェットのライブラリを提供します。スライダー、メニューバー、ファイルリストビューなどを JavaScript、CSS、HTML の組み合わせにより構築できます。HTML 4 の仕様はこれらの種類のウィジェットを意味的に表すタグを内蔵していないため、一般的に開発者は \<div> や \<span> といった汎用の要素を使用します。これはデスクトップによく似たもののように見えますが、支援技術が使用するのに値する意味的な情報は、たいていマークアップ内にありません。Web ページ上の動的コンテンツは、どのような理由であれ画面を見ることができないユーザにとって特に問題になる可能性があります。株価表示、Twitter のフィード更新、進捗の表示やそれらに似たコンテンツは、支援技術 (AT) が認識できないかもしれない方法で DOM を変更します。ここが、[ARIA](/ja/docs/ARIA) が必要になるところです。
 
 _例 1: ARIA でラベルをつけずに作成したタブウィジェットのマークアップ。ウィジェットの外観や機能を示す情報は、マークアップ内にありません。_
 
@@ -149,7 +149,7 @@ ARIA によって開発者は、誤った意味を持っていたり意味が存
 
 ### 非同期のコンテンツ変更
 
-> **Note:** 作成中です。[Live Regions](/ja/docs/ARIA/Live_Regions "Live Regions") もご覧ください。
+> **Note:** 作成中です。[Live Regions](/ja/docs/ARIA/Live_Regions) もご覧ください。
 
 ## キーボードナビゲーション
 
@@ -165,14 +165,14 @@ ARIA によって開発者は、誤った意味を持っていたり意味が存
 - フォーム内で、スペースキーはコントロールの選択やアクティブ化を、Enter キーはフォームのデフォルトのアクションの実行を行うべきです。
 - 迷った場合はあなたが作成するコントールの、デスクトップにおける標準的な動作を模倣しましょう。
 
-従って前出のタブウィジェットの例では、ユーザが Tab および Shift+Tab キーを使用してウィジェットのコンテナ (マークアップにおける \<ol>) に出入りするナビゲーションを行えるとよいでしょう。キーボードのフォーカスがコンテナ内に入ったら、矢印キーで各々のタブ (\<li> 要素) を行き来できるとよいでしょう。ここからは、プラットフォームによって慣習が異なります。Windows では、ユーザが矢印キーを押すと自動的に次のタブがアクティブ化されます。Mac OS X では、ユーザは次のタブをアクティブ化するために Enter またはスペースキーを押します。[キーボードでナビゲーション可能な JavaScript ウィジェット](/ja/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets "Accessibility/Keyboard-navigable JavaScript widgets")作成の包括的なチュートリアルで、このような動作を JavaScript で実装する方法を説明します。
+従って前出のタブウィジェットの例では、ユーザが Tab および Shift+Tab キーを使用してウィジェットのコンテナ (マークアップにおける \<ol>) に出入りするナビゲーションを行えるとよいでしょう。キーボードのフォーカスがコンテナ内に入ったら、矢印キーで各々のタブ (\<li> 要素) を行き来できるとよいでしょう。ここからは、プラットフォームによって慣習が異なります。Windows では、ユーザが矢印キーを押すと自動的に次のタブがアクティブ化されます。Mac OS X では、ユーザは次のタブをアクティブ化するために Enter またはスペースキーを押します。[キーボードでナビゲーション可能な JavaScript ウィジェット](/ja/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)作成の包括的なチュートリアルで、このような動作を JavaScript で実装する方法を説明します。
 
 デスクトップスタイルのキーボードナビゲーションの慣習に関する詳細として、包括的な [DHTML style guide](http://access.aol.com/dhtml-style-guide-working-group/) があります。これは、ARIA がサポートする各種ウィジェットで動作すべきキーボードナビゲーションは何かの概要を示します。W3C でもさまざまなウィジェット向けのキーボードナビゲーションやショートカットの慣習を収めた、[ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html) の有用なドキュメントを提供しています。
 
 ## 関連情報
 
-- [ARIA](/ja/docs/ARIA "ARIA")
-- [Web アプリケーションと ARIA の FAQ](/ja/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ "Web applications and ARIA FAQ")
+- [ARIA](/ja/docs/ARIA)
+- [Web アプリケーションと ARIA の FAQ](/ja/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ)
 - [WAI-ARIA Specification](http://www.w3.org/TR/wai-aria/)
 - [WAI-ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html)
 - [DHTML Style Guide](http://access.aol.com/dhtml-style-guide-working-group/)

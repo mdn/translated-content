@@ -94,7 +94,7 @@ slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 
 这个技术是用来让图片**可响应**的，所以在更小的设备上浏览的时候，它们会合适地缩放。你无论怎样都不应该用这个技术先载入大原始尺寸的图片，再对它们在浏览器中进行缩放。图像应该合适地调整尺寸，以使它们不会比预计中展示时所需要的最大尺寸大。下载过大的图像会造成你的网站变慢，如果用户使用按量收费的网络连接，会让用户花更多钱。
 
-> **备注：**了解更多关于[响应式图片技术](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)的事情。
+> **备注：**了解更多关于[响应式图片技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)的事情。
 
 ## 视口单位
 
@@ -110,7 +110,7 @@ slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 
 ## 小结
 
-本节课，你已经得到了一个对于你可能在约束网站上的内容大小的时候，会遇到的一些关键问题的详细介绍。当你继续学习[CSS 布局](/en-US/docs/Learn/CSS/CSS_layout)的时候，约束大小会成为掌握不同布局途径的非常重要的基础，所以在继续之前有必要在这里理解这些概念。
+本节课，你已经得到了一个对于你可能在约束网站上的内容大小的时候，会遇到的一些关键问题的详细介绍。当你继续学习[CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout)的时候，约束大小会成为掌握不同布局途径的非常重要的基础，所以在继续之前有必要在这里理解这些概念。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}
 

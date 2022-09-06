@@ -2,15 +2,6 @@
 title: React todo list 시작하기
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning
-tags:
-  - App
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - React
-  - Style
-  - client-side
 ---
 {{LearnSidebar}}
 

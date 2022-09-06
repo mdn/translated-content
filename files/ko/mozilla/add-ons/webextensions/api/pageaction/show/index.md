@@ -1,7 +1,6 @@
 ---
 title: pageAction.show()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/show
-translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/show
 ---
 {{AddonSidebar()}}
 

@@ -1,11 +1,6 @@
 ---
 title: Regular expression (正規表現)
 slug: Glossary/Regular_expression
-tags:
-  - CodingScripting
-  - Glossary
-  - Regular Expression
-translation_of: Glossary/Regular_expression
 ---
 **正規表現** (または _regex_) は、検索でどの文字の連続が出てくるのかを決めるルールです。
 

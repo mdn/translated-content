@@ -1,18 +1,6 @@
 ---
 title: BaseAudioContext.audioWorklet
 slug: Web/API/BaseAudioContext/audioWorklet
-tags:
-  - API
-  - 音声
-  - AudioContext
-  - AudioWorklet
-  - BaseAudioContext
-  - プロパティ
-  - リファレンス
-  - ウェブ音声 API
-  - Worklet
-browser-compat: api.BaseAudioContext.audioWorklet
-translation_of: Web/API/BaseAudioContext/audioWorklet
 ---
 {{ APIRef("Web Audio API") }}{{securecontext_header}}
 

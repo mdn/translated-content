@@ -32,8 +32,8 @@ HTML문서 구조는 꽤 간단합니다. 게임은 {{htmlelement("canvas")}} �
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
     <style>
-    	* { padding: 0; margin: 0; }
-    	canvas { background: #eee; display: block; margin: 0 auto; }
+      * { padding: 0; margin: 0; }
+      canvas { background: #eee; display: block; margin: 0 auto; }
     </style>
 </head>
 <body>
@@ -41,7 +41,7 @@ HTML문서 구조는 꽤 간단합니다. 게임은 {{htmlelement("canvas")}} �
 <canvas id="myCanvas" width="480" height="320"></canvas>
 
 <script>
-	// JavaScript 코드가 여기에 들어갈 것입니다.
+  // JavaScript 코드가 여기에 들어갈 것입니다.
 </script>
 
 </body>

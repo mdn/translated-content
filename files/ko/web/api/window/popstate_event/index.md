@@ -29,7 +29,7 @@ history.pushState() 또는 history.replaceState()는 popstate 이벤트를 발�
 
 ## Example
 
-예시를 보자, 다음의 코드를 실행하는 `http://example.com/example.html `의 한 페이지는 주석에 쓰여있는 경고들을 발생시킨다.
+예시를 보자, 다음의 코드를 실행하는 `http://example.com/example.html` 의 한 페이지는 주석에 쓰여있는 경고들을 발생시킨다.
 
 ```js
 window.onpopstate = function(event) {

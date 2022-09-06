@@ -33,7 +33,7 @@ CSS の `paint()` 関数のパラメーターには、オプションのパラ�
 
 ```css
 li {
-	background-image: paint(myComponent, stroke, 10px);
+    background-image: paint(myComponent, stroke, 10px);
     --highlights: blue;
     --lowlights: green;
 }

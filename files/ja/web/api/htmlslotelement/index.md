@@ -1,14 +1,6 @@
 ---
 title: HTMLSlotElement
 slug: Web/API/HTMLSlotElement
-tags:
-  - API
-  - HTMLSlotElement
-  - インターフェイス
-  - リファレンス
-  - シャドウ DOM
-browser-compat: api.HTMLSlotElement
-translation_of: Web/API/HTMLSlotElement
 ---
 {{APIRef('Web Components')}}
 

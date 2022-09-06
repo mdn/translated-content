@@ -1,14 +1,6 @@
 ---
 title: CanvasRenderingContext2D.fillRect()
 slug: Web/API/CanvasRenderingContext2D/fillRect
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - メソッド
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.fillRect
-translation_of: Web/API/CanvasRenderingContext2D/fillRect
 ---
 {{APIRef}}
 

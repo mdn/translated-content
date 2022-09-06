@@ -1,12 +1,6 @@
 ---
 title: Computer Programming (コンピュータープログラミング)
 slug: Glossary/Computer_Programming
-tags:
-  - CodingScripting
-  - Computer Programming
-  - Programming Language
-  - programming
-translation_of: Glossary/Computer_Programming
 ---
 コンピュータープログラミングは、一連の命令を構成して体系化する処理です。これらがコンピューター/ソフトウェアのプログラムに何をするべきかを、コンピューターが理解できる言語で指示します。これらの命令は様々なプログラミング言語（C++, Java, JavaScript, HTML, Python, Ruby, Rust など）の形で与えられています。
 

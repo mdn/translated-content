@@ -41,7 +41,7 @@ URL 経由で他の場所に機密データを渡すことを避けるために�
 セキュリティを意識したサーバーサイドのフレームワークは、例えば、このような問題を緩和するための機能が組み込まれていることが多いです。
 
 - [Django におけるセキュリティ](https://docs.djangoproject.com/ja/3.1/topics/security/) (特に [クロス・サイト・リクエスト・フォージェリ(CSRF)の防御](https://docs.djangoproject.com/ja/3.1/topics/security/#cross-site-request-forgery-csrf-protection) を参照してください)
-- [helmetjs referrer-policy ](https://github.com/helmetjs/helmet/tree/d75632db7dece10210e3a1db1a36d6dec686697d/middlewares/referrer-policy)— Node.js/Express アプリで Referrer-Policy を設定するためのミドルウェアです (セキュリティ規定の詳細については [helmetjs](https://github.com/helmetjs) も参照してください)
+- [helmetjs referrer-policy](https://github.com/helmetjs/helmet/tree/d75632db7dece10210e3a1db1a36d6dec686697d/middlewares/referrer-policy)— Node.js/Express アプリで Referrer-Policy を設定するためのミドルウェアです (セキュリティ規定の詳細については [helmetjs](https://github.com/helmetjs) も参照してください)
 
 ## ポリシーと要件
 

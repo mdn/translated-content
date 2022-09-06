@@ -1,14 +1,6 @@
 ---
 title: WebSocket.onopen
 slug: conflicting/Web/API/WebSocket/open_event
-tags:
-  - API
-  - Property
-  - Reference
-  - Web API
-  - WebSocket
-  - プロパティ
-translation_of: Web/API/WebSocket/onopen
 original_slug: Web/API/WebSocket/onopen
 ---
 {{APIRef("Web Sockets API")}}

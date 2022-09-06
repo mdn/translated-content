@@ -1,18 +1,7 @@
 ---
 title: Worker.onerror
 slug: Web/API/Worker/error_event
-tags:
-  - API
-  - Worker
-  - EventHandler
-  - Property
-  - Reference
-  - Web Workers
-  - Workers
-  - onerror
-translation_of: Web/API/Worker/onerror
 original_slug: Web/API/Worker/onerror
-browser-compat: api.Worker.onerror
 ---
 {{APIRef("Web Workers API")}}
 

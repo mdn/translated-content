@@ -12,7 +12,7 @@ slug: Learn/CSS/Building_blocks/Selectors/Combinators
 
 ## 子孫コンビネーター
 
-子孫コンビネーター（通常は単一のスペース（ ``）文字で表される）は、2 つのセレクターを結合して、最初のセレクターと一致する祖先（親、親の親、親の親の親など）要素がある場合、2 番目のセレクターと一致する要素が選択されるようにします。 子孫コンビネーターを利用するセレクターは、子孫セレクターと呼ばれます。
+子孫コンビネーター（通常は単一のスペース（" "）文字で表される）は、2 つのセレクターを結合して、最初のセレクターと一致する祖先（親、親の親、親の親の親など）要素がある場合、2 番目のセレクターと一致する要素が選択されるようにします。 子孫コンビネーターを利用するセレクターは、子孫セレクターと呼ばれます。
 
 ```css
 body article p
@@ -88,21 +88,21 @@ ul > li[class="a"]  {  }
 
 ## このモジュール
 
-1.  [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
+1. [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [要素・クラス・ID によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [属性によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [擬似クラスおよび疑似要素によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [共役](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [要素のはみ出し（オーバーフロー）](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [要素のはみ出し（オーバーフロー）](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [表のスタイリング](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [CSS の整理](/ja/docs/Learn/CSS/Building_blocks/Organizing)

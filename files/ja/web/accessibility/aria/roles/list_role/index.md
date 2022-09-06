@@ -94,4 +94,4 @@ TBD
 - [ARIA: listitem ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Listitem_role)
 - [ARIA: group ロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

@@ -1,14 +1,6 @@
 ---
 title: W3C
 slug: Glossary/W3C
-tags:
-  - Community
-  - Consortium
-  - Glossary
-  - Intro
-  - W3C
-  - Web consortium
-translation_of: Glossary/W3C
 ---
 _World Wide Web Consortium_ (W3C) は、{{Glossary("World Wide Web", "ウェブに関する")}}ルールや枠組みを整備する国際団体です。
 

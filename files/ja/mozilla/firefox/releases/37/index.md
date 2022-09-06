@@ -1,10 +1,6 @@
 ---
 title: Firefox 37 for developers
 slug: Mozilla/Firefox/Releases/37
-tags:
-  - Firefox
-  - Release Notes
-translation_of: Mozilla/Firefox/Releases/37
 ---
 Firefox 37 は、米国時間 2015 年 3 月 31 日にリリースされました。このページでは、開発者に影響する Firefox 37 の変更点をまとめています。
 

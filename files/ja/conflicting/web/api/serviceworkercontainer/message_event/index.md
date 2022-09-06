@@ -1,14 +1,6 @@
 ---
 title: ServiceWorkerContainer.onmessage
 slug: conflicting/Web/API/ServiceWorkerContainer/message_event
-tags:
-  - API
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - ServiceWorkerContainer
-translation_of: Web/API/ServiceWorkerContainer/onmessage
 original_slug: Web/API/ServiceWorkerContainer/onmessage
 ---
 {{APIRef("Service Workers API")}}{{ SeeCompatTable() }}

@@ -1,14 +1,6 @@
 ---
 title: Worker.onmessageerror
 slug: Web/API/Worker/messageerror_event
-tags:
-  - API
-  - Property
-  - Reference
-  - Worker
-  - onmessageerror
-  - イベントハンドラ
-translation_of: Web/API/Worker/onmessageerror
 original_slug: Web/API/Worker/onmessageerror
 ---
 {{APIRef("HTML DOM")}}

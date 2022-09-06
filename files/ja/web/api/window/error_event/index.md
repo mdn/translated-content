@@ -1,12 +1,6 @@
 ---
 title: 'Window: error イベント'
 slug: Web/API/Window/error_event
-tags:
-  - API
-  - Event
-  - UI Events
-  - Window
-translation_of: Web/API/Window/error_event
 ---
 {{APIRef}}
 

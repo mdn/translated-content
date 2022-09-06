@@ -1,17 +1,6 @@
 ---
 title: MediaRecorder.onerror
 slug: conflicting/Web/API/MediaRecorder/error_event
-tags:
-  - API
-  - Audio
-  - Media Capture
-  - Media Recorder API
-  - MediaRecorder
-  - Property
-  - Reference
-  - Video
-  - onerror
-translation_of: Web/API/MediaRecorder/onerror
 original_slug: Web/API/MediaRecorder/onerror
 ---
 {{APIRef("MediaStream Recording")}}

@@ -1,16 +1,6 @@
 ---
 title: BaseAudioContext.createOscillator()
 slug: Web/API/BaseAudioContext/createOscillator
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - createOscillator
-browser-compat: api.BaseAudioContext.createOscillator
-translation_of: Web/API/BaseAudioContext/createOscillator
 original_slug: Web/API/AudioContext/createOscillator
 ---
 {{APIRef("Web Audio API")}}

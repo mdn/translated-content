@@ -42,12 +42,12 @@ PWA の実装方法については、 [PWA 開発者ガイド](/ja/docs/Web/Prog
 
 以下のガイドは PWA を実装するのに必要なことを、単純な例を実行し、すべての部分がどのように動作するかを示します。
 
-1.  [プログレッシブウェブアプリの紹介](/ja/docs/Web/Progressive_web_apps/Introduction)
-2.  [プログレッシブウェブアプリの構造](/ja/docs/Web/Progressive_web_apps/App_structure)
-3.  [サービスワーカーで PWA をオフラインで動作するようにする](/ja/docs/Web/Progressive_web_apps/Offline_Service_workers)
-4.  [PWA をインストール可能にする方法](/ja/docs/Web/Progressive_web_apps/Installable_PWAs)
-5.  [通知とプッシュ通知を使用して PWA を再エンゲージ可能にする方法](/ja/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push)
-6.  [プログレッシブ読み込み](/ja/docs/Web/Progressive_web_apps/Loading)
+1. [プログレッシブウェブアプリの紹介](/ja/docs/Web/Progressive_web_apps/Introduction)
+2. [プログレッシブウェブアプリの構造](/ja/docs/Web/Progressive_web_apps/App_structure)
+3. [サービスワーカーで PWA をオフラインで動作するようにする](/ja/docs/Web/Progressive_web_apps/Offline_Service_workers)
+4. [PWA をインストール可能にする方法](/ja/docs/Web/Progressive_web_apps/Installable_PWAs)
+5. [通知とプッシュ通知を使用して PWA を再エンゲージ可能にする方法](/ja/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push)
+6. [プログレッシブ読み込み](/ja/docs/Web/Progressive_web_apps/Loading)
 
 ## 技術ガイド
 

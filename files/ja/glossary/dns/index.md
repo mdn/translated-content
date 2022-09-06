@@ -1,12 +1,6 @@
 ---
 title: DNS
 slug: Glossary/DNS
-tags:
-  - DNS
-  - Domain Name System
-  - Glossary
-  - Infrastructure
-translation_of: Glossary/DNS
 ---
 **DNS (Domain Name System)** は、インターネットに接続されたリソースのための階層化された分散型の名前付けシステムです。 DNS は{{Glossary("domain name","ドメイン名")}}のリストを、それらに関連付けられた IP アドレスなどのリソースとともに管理しています。
 

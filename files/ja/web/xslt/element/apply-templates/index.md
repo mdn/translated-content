@@ -16,8 +16,8 @@ translation_of: Web/XSLT/Element/apply-templates
 
 ```
 <xsl:apply-templates select=EXPRESSION mode=NAME>
-	<xsl:with-param> [optional]
-	<xsl:sort> [optional]
+  <xsl:with-param> [optional]
+  <xsl:sort> [optional]
 </xsl:apply-templates>
 ```
 

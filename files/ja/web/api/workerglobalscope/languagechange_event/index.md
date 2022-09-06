@@ -1,13 +1,6 @@
 ---
 title: 'WorkerGlobalScope: languagechange イベント'
 slug: Web/API/WorkerGlobalScope/languagechange_event
-tags:
-  - API
-  - Event
-  - Reference
-  - WorkerGlobalScope
-  - イベント
-translation_of: Web/API/WorkerGlobalScope/languagechange_event
 ---
 {{APIRef}}
 

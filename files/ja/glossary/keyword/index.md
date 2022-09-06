@@ -1,12 +1,6 @@
 ---
 title: Keyword (キーワード)
 slug: Glossary/Keyword
-tags:
-  - Glossary
-  - Keyword
-  - Search
-  - keyword search
-translation_of: Glossary/Keyword
 ---
 **キーワード**とは、コンテンツを説明する単語やフレーズです。オンラインのキーワードは、検索エンジンのためのクエリや、ウェブサイトのコンテンツを識別するための言葉として使用されています。
 

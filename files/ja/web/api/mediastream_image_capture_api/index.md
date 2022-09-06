@@ -1,7 +1,6 @@
 ---
 title: MediaStream Image Capture API
 slug: Web/API/MediaStream_Image_Capture_API
-translation_of: Web/API/MediaStream_Image_Capture_API
 ---
 {{DefaultAPISidebar("Image Capture API")}}{{SeeCompatTable}}
 

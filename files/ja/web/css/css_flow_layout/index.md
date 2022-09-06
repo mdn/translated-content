@@ -39,5 +39,5 @@ _通常フロー_ (Normal Flow) 、またはフローレイアウトは、レイ
 
 - {{Glossary("Block/CSS", "ブロック (CSS)")}}
 
-1.  [**CSS**](/ja/docs/Web/CSS)
-2.  [**CSS リファレンス**](/ja/docs/Web/CSS/Reference)
+1. [CSS](/ja/docs/Web/CSS)
+2. [CSS リファレンス](/ja/docs/Web/CSS/Reference)

@@ -97,7 +97,7 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
   document.querySelector('html').style.backgroundColor = 'red';
   ```
 
-- [Math.round()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round) is a built-in JavaScript method that simply rounds the result of a calculation to the nearest whole number.
+- [Math.round()](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/round) is a built-in JavaScript method that simply rounds the result of a calculation to the nearest whole number.
 - There are three instances of strings that need to be replaced. You may repeat the `replace()` method multiple times, or you can use regular expressions. For instance, `var text = 'I am the biggest lover, I love my love'; text.replace(/love/g,'like');` will replace all instances of 'love' to 'like'. Remember, Strings are immutable!
 
 ## 測驗一下
@@ -114,6 +114,6 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 - [儲存你需要的資訊 — 變數](/zh-TW/docs/Learn/JavaScript/First_steps/Variables)
 - [JavaScript 的基本運算— 數字 與 運算子](/zh-TW/docs/Learn/JavaScript/First_steps/Math)
 - [處理文字 — JavaScript 的字串](/zh-TW/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods) [有用的字串方法](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays) [陣列](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays)
+- [Useful string methods](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods) [有用的字串方法](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [Arrays](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays) [陣列](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays)
 - [傻故事產生器](/zh-TW/docs/Learn/JavaScript/First_steps/Silly_story_generator)

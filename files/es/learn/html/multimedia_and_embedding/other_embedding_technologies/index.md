@@ -51,18 +51,18 @@ Con la lección de historia fuera del camino, sigamos y veamos cómo usar alguno
 
 En este artículo vamos a ir directamente a una sección de aprendizaje activo, para darle una idea real de la utilidad de las tecnologías de inclusión. El mundo en línea está muy familiarizado con Youtube, pero muchas personas no conocen algunas de las comodidades para compartir que tiene disponibles. Veamos cómo Youtube nos permite insertar un video en cualquier página que nos guste usando un `<iframe>` .
 
-1.  Primero, ve a Youtube y encuentra el video que te gusta.
-2.  Debajo del video, encontrará un botón _Compartir_ : seleccionelo para mostrar las opciones para compartir.
-3.  Seleccione el botón _Insertar_ y recibirá un código `<iframe>` - copielo.
-4.  Insértelo en el cuadro de _entrada a_ continuación, y vea cuál es el resultado en la _salida_ .
+1. Primero, ve a Youtube y encuentra el video que te gusta.
+2. Debajo del video, encontrará un botón _Compartir_ : seleccionelo para mostrar las opciones para compartir.
+3. Seleccione el botón _Insertar_ y recibirá un código `<iframe>` - copielo.
+4. Insértelo en el cuadro de _entrada a_ continuación, y vea cuál es el resultado en la _salida_ .
 
 Para obtener puntos de bonificación, también puede intentar insertar un mapa de Google en el ejemplo:
 
-1.  Ve a Google Maps y encuentra un mapa que te guste.
-2.  Haga clic en el "Menú Hamburger" (tres líneas horizontales) en la esquina superior izquierda de la IU.
-3.  Seleccione la opción _Compartir o Insertar mapa_ .
-4.  Seleccione la opción Insertar mapa, que le dará un código `<iframe>` - copielo.
-5.  Insértelo en el cuadro de _entrada a_ continuación, y vea cuál es el resultado en la _salida_ .
+1. Ve a Google Maps y encuentra un mapa que te guste.
+2. Haga clic en el "Menú Hamburger" (tres líneas horizontales) en la esquina superior izquierda de la IU.
+3. Seleccione la opción _Compartir o Insertar mapa_ .
+4. Seleccione la opción Insertar mapa, que le dará un código `<iframe>` - copielo.
+5. Insértelo en el cuadro de _entrada a_ continuación, y vea cuál es el resultado en la _salida_ .
 
 Si comete un error, siempre puede restablecerlo usando el botón _Restablecer_ . Si realmente te quedas atascado, presiona el botón _Mostrar solución_ para ver una respuesta.
 
@@ -237,14 +237,14 @@ Algunas veces tiene sentido embeber contenido de terceros— como vídeos de you
 
 Además de la seguridad, debes ser consciente de los temas de propiedad intelectual. La mayoría del contenido tiene derechos de autor, en línea y fuera de línea, incluso contenido que no te esperas(por ejemplo, la mayoría de las imágenes en [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)). Nunca muestres en tu pagina contenido a menos que te pertenezca o que el dueño te haya dado por escrito su permiso inequívoco. Las penalidades por derechos de autor son severas. De nuevo, tu nunca puedes ser demasiado cauteloso.
 
-Si el contenido es licenciado, debes obedecer los terminos de la licencia. Por ejemplo, el contenido en MDN es licenciado bajo[ CC-BY-SA](/es/docs/MDN/About#Copyrights_and_licenses). Esto significa, que tu debes darnos [credito apropiadamente](https://wiki.creativecommons.org/wiki/Best_practices_for_attribution) cuando tu citas nuestro contenido, aun si tu haces cambios substanciales.
+Si el contenido es licenciado, debes obedecer los terminos de la licencia. Por ejemplo, el contenido en MDN es licenciado bajo[CC-BY-SA](/es/docs/MDN/About#Copyrights_and_licenses). Esto significa, que tu debes darnos [credito apropiadamente](https://wiki.creativecommons.org/wiki/Best_practices_for_attribution) cuando tu citas nuestro contenido, aun si tu haces cambios substanciales.
 
 #### Usa HTTPS
 
 {{Glossary("HTTPS")}} es la versión encriptada de {{Glossary("HTTP")}}. Deberias cumplir con tu página web usando HTTPS siempre que sea posible:
 
-1.  HTTPS reduce la oportunidad de que contenido remoto haya sido manipulado en el tránsito.
-2.  HTTPS previene que el contenido embebido acceda al documento padre y viceversa.
+1. HTTPS reduce la oportunidad de que contenido remoto haya sido manipulado en el tránsito.
+2. HTTPS previene que el contenido embebido acceda al documento padre y viceversa.
 
 Usar HTTPS requiere un certificado de seguridad, el cual puede ser costoso (Aunque [Let's Encrypt](https://letsencrypt.org/) hace las cosas más faciles) — si tu no puedes tener uno, tu debes servir tu documento padre con HTTP. Sin embargo, debido al segundo beneficio de HTTPS expuesto arriba, no importa cual sea el costo tu nunca debes embeber contenido de terceros con HTTP. (En el mejor de los casos, el navegador de tus usuarios les dará una advertencia). Todas las empresas con buena reputación que hacen contenido para embeber via `<iframe>` lo harán disponible via HTTPS — mira la URLs dentro del `<iframe>` atributo `src` cuando tu estes embebiendo contenido desde Google Maps o Youtube, por ejemplo.
 
@@ -314,7 +314,7 @@ PDFs were a necessary stepping stone between paper and digital, but they pose ma
 Once upon a time, plugins were indispensable on the Web. Remember the days when you had to install Adobe Flash Player just to watch a movie online? And then you constantly got annoying alerts about updating Flash Player and your Java Runtime Environment. Web technologies have since grown much more robust, and those days are over. For most applications, it's time to stop delivering content that depends on plugins, and start taking advantage of Web technologies instead.
 
 - **Broaden your reach to everyone.** Everyone has a browser, but plugins are increasingly rare, especially among mobile users. Since the Web is largely usable without plugins, people would rather just go to your competitors' websites than install a plugin.
-- **Give yourself a break from the [extra accessibility headaches ](http://webaim.org/techniques/flash/)that come with Flash and other plugins.**
+- **Give yourself a break from the [extra accessibility headaches](http://webaim.org/techniques/flash/) that come with Flash and other plugins.**
 - **Stay clear of additional security hazards.** Adobe Flash is [notoriously insecure,](http://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53) even after countless patches. In 2015, Alex Stamos, chief security officer of Facebook, even [requested that Adobe discontinue Flash.](http://www.theverge.com/2015/7/13/8948459/adobe-flash-insecure-says-facebook-cso)
 
 So what should you do? If you need interactivity, HTML and {{glossary("JavaScript")}} can readily get the job done for you with no need for Java applets or outdated ActiveX/BHO technology. Instead of relying on Adobe Flash, you can use [HTML5 video](/es/docs/Learn/HTML/Howto/Add_audio_or_video_content_to_a_webpage) for your media needs, [SVG](/es/docs/Learn/HTML/Howto/Add_vector_image_to_a_webpage) for vector graphics, and [Canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial) for complex images and animations. [Peter Elst was already writing some years ago](https://plus.google.com/+PeterElst/posts/P5t4pFhptvp) that Adobe Flash is rarely the right tool for the job, except for specialized gaming and business applications. As for ActiveX, even Microsoft's {{glossary("Microsoft Edge","Edge")}} browser no longer supports it.

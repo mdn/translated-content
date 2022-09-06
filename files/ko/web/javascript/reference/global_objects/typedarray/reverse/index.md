@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/reverse
 
 ## 구문
 
-    typedarray.reverse();
+```js
+typedarray.reverse();
+```
 
 ### 반환 값
 

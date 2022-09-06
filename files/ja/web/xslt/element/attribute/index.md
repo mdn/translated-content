@@ -16,7 +16,7 @@ translation_of: Web/XSLT/Element/attribute
 
 ```
 <xsl:attribute name=NAME namespace=URI>
-	TEMPLATE
+  TEMPLATE
 </xsl:attribute>
 ```
 

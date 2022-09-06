@@ -18,7 +18,7 @@ slug: Games/Techniques/3D_collision_detection
 
 ![](rotating_knot.gif)
 
-> **备注：** 参考[这里](/en-US/docs/Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js)，使用 Three.js 进行边界体积碰撞检测。
+> **备注：** 参考[这里](/zh-CN/docs/Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js)，使用 Three.js 进行边界体积碰撞检测。
 
 ### 点与 AABB
 
@@ -140,8 +140,8 @@ We have prepared a [live collision detection demo](http://mozdevs.github.io/game
 
 Related articles on MDN:
 
-- [Bounding volumes collision detection with Three.js](/en-US/docs/Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js)
-- [2D collision detection](/en-US/docs/Games/Techniques/2D_collision_detection)
+- [Bounding volumes collision detection with Three.js](/zh-CN/docs/Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js)
+- [2D collision detection](/zh-CN/docs/Games/Techniques/2D_collision_detection)
 
 External resources:
 

@@ -167,4 +167,4 @@ ARIA の第一のルールは、要素を転用して、ARIA のロール、ス�
 - [HTML 表の高度な機能とアクセシビリティ](/ja/docs/Learn/HTML/Tables/Advanced)
 - [HTML の表の基本](/ja/docs/Learn/HTML/Tables/Basics)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

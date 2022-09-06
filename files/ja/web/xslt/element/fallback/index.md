@@ -16,7 +16,7 @@ translation_of: Web/XSLT/Element/fallback
 
 ```
 <xsl:fallback>
-	TEMPLATE
+  TEMPLATE
 </xsl:fallback>
 ```
 
