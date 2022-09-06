@@ -102,13 +102,11 @@ let myArray = ['Wind', 'Rain', 'Fire']
 
 Puedes referirte al primer elemento del arreglo como `myArray[0]`, al segundo elemento del arreglo como `myArray[1]`, etc… El índice de los elementos comienza en cero.
 
-> **Nota:** **Nota**: También puedes utilizar la [propiedad `accessors`](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors) para acceder a otras propiedades del arreglo, como con un objeto.```js
+> **Nota:** También puedes utilizar la [propiedad `accessors`](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors) para acceder a otras propiedades del arreglo, como con un objeto.
+> ```js
 > let arr = ['one', 'two', 'three']
 > arr[2] // three
 > arr['length'] // 3
->
-> ```
->
 > ```
 
 ### Llenar un arreglo
@@ -122,14 +120,12 @@ emp[1] = 'Phil Lesh'
 emp[2] = 'August West'
 ```
 
-> **Nota:** **Nota**: Si proporcionas un valor no entero al operador `array` en el código anterior, se creará una propiedad en el objeto que representa al arreglo, en lugar de un elemento del arreglo.```js
+> **Nota:** Si proporcionas un valor no entero al operador `array` en el código anterior, se creará una propiedad en el objeto que representa al arreglo, en lugar de un elemento del arreglo.
+> ```js
 > let arr = []
 > arr[3.4] = 'Oranges'
 > console.log(arr.length) // 0
 > console.log(arr.hasOwnProperty(3.4)) // true
->
-> ```
->
 > ```
 
 También puedes rellenar un arreglo cuando lo creas:

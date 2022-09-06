@@ -148,15 +148,13 @@ function square(n) { return n * n }
 
 El ámbito de una función es la función en la que se declara (o el programa completo, si se declara en el nivel superior).
 
-> **Nota:** **Nota**: Esto solo trabaja cuando se define la función usando la sintaxis anterior (es decir, `function funcName() {}`). El siguiente código no trabajará.Esto significa que la elevación de función solo trabaja con _declaraciones_ de función, no con _expresiones_ de función.```js example-bad
+> **Nota:** Esto solo trabaja cuando se define la función usando la sintaxis anterior (es decir, `function funcName() {}`). El siguiente código no trabajará.Esto significa que la elevación de función solo trabaja con _declaraciones_ de función, no con _expresiones_ de función.
+> ```js example-bad
 > console.log(square) // square se eleva con un valor inicial undefined.
 > console.log(square(5)) // Error de tipo no detectado: square no es una función
 > const square = function(n) {
 > return n \* n;
 > }
->
-> ```
->
 > ```
 
 Los argumentos de una función no se limitan a cadenas y números. Puedes pasar objetos completos a una función. La función `show_props()` (definida en {{JSxRef("../Guide/Working_with_Objects", "Trabajar con objetos", "#Objetos_y_propiedades")}} es un ejemplo de una función que toma un objeto como argumento.
@@ -485,17 +483,17 @@ var getCode = (function() {
 getCode();    // Devuelve el apiCode
 ```
 
-> **Nota:** **Precaución** ¡Hay una serie de trampas a tener en cuenta al usar cierres!Si una función encerrada define una variable con el mismo nombre que una variable en el ámbito externo, entonces no hay forma de hacer referencia a la variable en el ámbito externo nuevamente. (La variable de ámbito interno "anula" la externa, hasta que el programa sale de el ámbito interno).```js example-bad
+> **Nota:** **Precaución** ¡Hay una serie de trampas a tener en cuenta al usar cierres!
+>
+> Si una función encerrada define una variable con el mismo nombre que una variable en el ámbito externo, entonces no hay forma de hacer referencia a la variable en el ámbito externo nuevamente. (La variable de ámbito interno "anula" la externa, hasta que el programa sale de el ámbito interno).
+> ```js example-bad
 > var createPet = function(name) { // La función externa define una variable llamada "name".
-> return {
-> setName: function(name) { // La función envolvente también define una variable llamada "name".
-> name = name; // ¿Cómo accedemos al "name" definido por la función externa?
+>   return {
+>     setName: function(name) { // La función envolvente también define una variable llamada "name".
+>       name = name; // ¿Cómo accedemos al "name" definido por la función externa?
+>     }
+>   }
 > }
-> }
-> }
->
-> ```
->
 > ```
 
 ## Usar el objeto `arguments`
