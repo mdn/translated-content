@@ -103,7 +103,7 @@ El método {{JSxRef("Objetos_globales/Object/valueOf"," valueOf()")}} del conten
 
 <section id="Quick_links">
  <ol>
-  <li>{{Link("/es/docs/Glossary")}}
+  <li><a href="/es/docs/Glossary">Glosario</a>
    <ol>
     <li>{{Glossary("JavaScript")}}</li>
     <li>{{Glossary("string")}}</li>
