@@ -2,7 +2,7 @@
 title: 应用层协议协商（ALPN）
 slug: Glossary/ALPN
 ---
-**应用层协议协商**（**Application-Layer Protocol Negotiation**，简称**ALPN**）是由 [RFC 7301](https://www.rfc-editor.org/rfc/rfc7301) 定义的一个 {{Glossary("TLS")}} 扩展，故而应用层协议在协商加密协议的过程中，避免了额外的往返通讯开销。
+**应用层协议协商**（**Application-Layer Protocol Negotiation**，简称 **ALPN**）是由 [RFC 7301](https://www.rfc-editor.org/rfc/rfc7301) 定义的一个 {{Glossary("TLS")}} 扩展，故而应用层协议在协商加密协议的过程中，避免了额外的往返通讯开销。
 
 | 协议                                           | 标识符字节序列                                         |
 | ---------------------------------------------- | ------------------------------------------------------ |
@@ -12,4 +12,4 @@ slug: Glossary/ALPN
 
 ## 参见
 
-- [IANA registered ALPN identifiers](https://www.iana.org/assignments/tls-extensiontype-values/tls-extensiontype-values.xhtml#alpn-protocol-ids)
+- [IANA 注册的 ALPN 标识符](https://www.iana.org/assignments/tls-extensiontype-values/tls-extensiontype-values.xhtml#alpn-protocol-ids)
