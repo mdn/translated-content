@@ -66,13 +66,10 @@ html,body,svg { height:100% }
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                   | Commentaire                                                                        |
-| ------------------------------------------------------------------------------------ | ------------------------ | ---------------------------------------------------------------------------------- |
-| {{SpecName("SVG2", "painting.html#StrokeProperty", "stroke")}} | {{Spec2("SVG2")}} | Définition pour les formes et le texte. Ajoute `context-fill` et `context-stroke`. |
-| {{SpecName("SVG1.1", "painting.html#StrokeProperty", "stroke")}} | {{Spec2("SVG1.1")}} | Définiton initiale pour les formes et le texte                                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.presentation.stroke")}}
+{{Compat}}
 
 > **Note :** Pour plus d'informations sur les valeurs de `context-stroke` (et `context-fill`) à partir de documents HTML, voir la documentation pour la propriété non-standard {{cssxref("-moz-context-properties")}}.
