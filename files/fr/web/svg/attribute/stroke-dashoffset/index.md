@@ -103,9 +103,6 @@ Le décalage est généralement exprimé en unités résolues par {{SVGAttr('pat
 
 {{Compat("svg.attributes.presentation.stroke-dashoffset")}}
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                    | Statut                   | Commentaire                                     |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------- |
-| {{SpecName("SVG2", "painting.html#StrokeDashoffsetProperty", "stroke-dashoffset")}} | {{Spec2("SVG2")}} | Définition pour les formes et le texte          |
-| {{SpecName("SVG1.1", "painting.html#StrokeDashoffsetProperty", "stroke-dashoffset")}} | {{Spec2("SVG1.1")}} | Définition initiale pour les formes et le texte |
+{{Specifications}}
