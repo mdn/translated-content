@@ -141,7 +141,7 @@ console.log('Number of Invalid Entries = ', invalidEntries);
 const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
 
 /**
- * 根据搜索条件(查询)筛选数组项
+ * 根据搜索条件（查询）筛选数组项
  */
 function filterItems(arr, query) {
     return arr.filter((el) => el.toLowerCase().includes(query.toLowerCase()));
