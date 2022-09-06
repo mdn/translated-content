@@ -110,17 +110,11 @@ Au-delà de la prise en charge limitée des navigateurs, `accesskey` pose plusie
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires                                                                                                                                                                                                                                                                                 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML5.2', "editing.html#the-accesskey-attribute", "accesskey")}}             | {{Spec2('HTML5.2')}}     | Un comportement plus réaliste est défini et correspond à ce qui est réellement implémenté.                                                                                                                                                                                                   |
-| {{SpecName('HTML WHATWG', "interaction.html#the-accesskey-attribute", "accesskey")}} | {{Spec2('HTML WHATWG')}} | Aucune modification depuis {{SpecName('HTML5.1')}}                                                                                                                                                                                                                                  |
-| {{SpecName('HTML5.1', "editing.html#the-accesskey-attribute", "accesskey")}}             | {{Spec2('HTML5.1')}}     | Aucune modification depuis {{SpecName('HTML5 W3C')}}                                                                                                                                                                                                                                  |
-| {{SpecName('HTML5 W3C', "editing.html#the-accesskey-attribute", "accesskey")}}         | {{Spec2('HTML5 W3C')}}     | Plusieurs caractères peuvent être définis via cet attribut depuis {{SpecName('HTML4.01')}}. Cet attribut peut désormais être défini sur n'importe quel élément.                                                                                                                      |
-| {{SpecName('HTML4.01', "interact/forms.html#h-17.11.2", "accesskey")}}                     | {{Spec2('HTML4.01')}}     | L'attribut est uniquement pris en charge par {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}} et {{HTMLElement("textarea")}}. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.accesskey")}}
+{{Compat}}
 
 ## Voir aussi
 

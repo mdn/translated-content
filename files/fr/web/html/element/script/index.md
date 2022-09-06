@@ -163,27 +163,11 @@ Les navigateurs qui prennent en charge le type `module` prennent également en c
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                         | Commentaires                                                                  |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "scripting.html#the-script-element", "&lt;script&gt;")}}         | {{Spec2("HTML WHATWG")}}             | Retrait de l'attribut {{HTMLAttrxRef("charset", "script")}}.       |
-| {{SpecName("HTML5.3", "semantics-scripting.html#the-script-element", "&lt;script&gt;")}} | {{Spec2("HTML5.3")}}                 | Retrait de l'attribut {{HTMLAttrxRef("charset", "script")}}.       |
-| {{SpecName("HTML5.2", "semantics-scripting.html#the-script-element", "&lt;script&gt;")}} | {{Spec2("HTML5.2")}}                 | Ajout de la valeur `module` pour {{HTMLAttrxRef("type", "script")}} |
-| {{SpecName("HTML5.1", "semantics-scripting.html#the-script-element", "&lt;script&gt;")}} | {{Spec2("HTML5.1")}}                 |                                                                               |
-| {{SpecName("HTML5 W3C", "scripting-1.html#script", "&lt;script&gt;")}}                         | {{Spec2("HTML5 W3C")}}                 |                                                                               |
-| {{SpecName("HTML4.01", "interact/scripts.html#h-18.2.1", "&lt;script&gt;")}}                 | {{Spec2("HTML4.01")}}                 |                                                                               |
-| {{SpecName("Subresource Integrity", "#htmlscriptelement", "&lt;script&gt;")}}             | {{Spec2("Subresource Integrity")}} | Ajout de l'attribut {{HTMLAttrxRef("integrity", "script")}}.     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.script",2)}}
-
-### Notes de compatibilité
-
-Pour les anciens navigateurs qui ne prennent pas en charge l'attribut `async` attribute, les scripts insérés lors de l'analyse (_parsing_) bloquent l'analyseur, les scripts insérés par d'autres scripts s'exécutent en asynchrone sous IE et WebKit et en synchrone sous Opera et sous Firefox pour les versions antérieures à Firefox 4.0.
-
-Sous Firefox 4.0, la propriété `async` du DOM vaut `true` par défaut pour les scripts créés avec `document.createElement("script").async` afin que le comportement par défaut corresponde au comportement d'IE et de WebKit. Afin que les scripts insérés par des scripts externes soient lancés dans l'ordre d'insertion, on définira `.async=false` pour les scripts dont on souhaite conserver l'ordre d'exécution.
-
-`document.write()` ne doit jamais être appelé sur un script asynchrone avec `async`. Sous Gecko 1.9.2, si on appelle `document.write()`, cela aura un effet imprévisible. Pour Gecko 2.0, appeler `document.write()` depuis un script asynchrone n'aura aucun effet (en dehors d'afficher un message d'erreur dans la console).
+{{Compat}}
 
 ## Voir aussi
 
