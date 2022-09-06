@@ -59,9 +59,11 @@ filter(function(element, index, array) { /* … */ }, thisArg)
 
 如果为 `filter()` 提供一个 `thisArg` 参数，则它会被作为 `callbackFn` 被调用时的 `this` 值。否则，`callbackFn` 的 `this` 值在非严格模式下将是全局对象，严格模式下为 `undefined`。`callbackFn` 函数最终观察到的 `this` 值是根据[通常函数所看到的 `this` 的规则](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)确定的。
 
-`filter()` 不会改变原数组，它返回过滤后的新数组。
+`filter()` 不会改变原数组。
 
-`filter()` 遍历的元素范围在第一次调用 `callbackFn` 之前就已经确定了。在调用 `filter()` 之后被添加到数组中的元素不会被 `filter()` 遍历到。如果已经存在的元素被改变了，则他们传入 `callbackFn` 的值是 `filter()` 遍历到它们那一刻的值。被删除或从未赋值的元素不会被遍历到。
+`filter()` 遍历的元素范围在第一次调用 `callbackFn` 之前就已经确定了。修改已经访问过或遍历范围之外的元素，将不会被 `callbackFn` 访问。如果以相同的方式删除数组中的现有元素，则不会访问它们。
+
+> **警告：** 在上一段中描述的并发修改通常会导致难以理解的代码，通常应该避免(特殊情况除外)。
 
 ## 示例
 
@@ -70,9 +72,10 @@ filter(function(element, index, array) { /* … */ }, thisArg)
 下例使用 `filter()` 创建了一个新数组，该数组的元素由原数组中值大于 `10` 的元素组成。
 
 ```js
-function isBigEnough(element) {
-  return element >= 10;
+function isBigEnough(value) {
+  return value >= 10;
 }
+
 const filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 // filtered is [12, 130, 44]
 ```
