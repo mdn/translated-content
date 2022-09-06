@@ -1,11 +1,6 @@
 ---
 title: VTTRegion
 slug: Web/API/VTTRegion
-tags:
-  - API
-  - VTTRegion
-  - WebVTT
-translation_of: Web/API/VTTRegion
 ---
 {{APIRef("WebVTT")}}
 

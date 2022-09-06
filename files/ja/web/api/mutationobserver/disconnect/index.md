@@ -1,7 +1,6 @@
 ---
 title: MutationObserver.disconnect()
 slug: Web/API/MutationObserver/disconnect
-translation_of: Web/API/MutationObserver/disconnect
 ---
 {{APIRef("DOM WHATWG")}}
 

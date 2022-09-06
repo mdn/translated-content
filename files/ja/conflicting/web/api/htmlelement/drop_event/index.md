@@ -1,12 +1,6 @@
 ---
 title: GlobalEventHandlers.ondrop
 slug: conflicting/Web/API/HTMLElement/drop_event
-tags:
-  - API
-  - HTML DOM
-  - Reference
-  - drag and drop
-translation_of: Web/API/GlobalEventHandlers/ondrop
 original_slug: Web/API/GlobalEventHandlers/ondrop
 ---
 {{ApiRef("HTML DOM")}}

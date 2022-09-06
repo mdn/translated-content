@@ -1,20 +1,6 @@
 ---
 title: HTML DOM API
 slug: Web/API/HTML_DOM_API
-tags:
-  - API
-  - 初心者
-  - DOM
-  - 文書
-  - 要素
-  - HTML DOM
-  - HTML DOM API
-  - ノード
-  - 概要
-  - ウェブ
-  - ウィンドウ
-  - 階層
-translation_of: Web/API/HTML_DOM_API
 ---
 {{DefaultAPISidebar("HTML DOM")}}
 

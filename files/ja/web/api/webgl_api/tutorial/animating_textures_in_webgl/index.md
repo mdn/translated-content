@@ -1,12 +1,6 @@
 ---
 title: WebGL でのテクスチャのアニメーティング
 slug: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
-tags:
-  - Media
-  - Tutorial
-  - Video
-  - WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 ---
 {{WebGLSidebar("Tutorial") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
@@ -111,6 +105,6 @@ function updateTexture() {
 
 ## 関連情報
 
-- [HTML5 の audio 要素と video 要素の使用](/ja/docs/Using_HTML5_audio_and_video "Using audio and video in Firefox")
+- [HTML5 の audio 要素と video 要素の使用](/ja/docs/Using_HTML5_audio_and_video)
 
 {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

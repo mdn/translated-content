@@ -29,7 +29,7 @@ translation_of: Web/Guide/User_input_methods
 
 - デバイスの中にはタッチスクリーンディスプレイを提供するものがあります。そのウェブプラットフォームは、タッチを基にしたユーザーインターフェースで指の動きを解釈するための[タッチイベント](/ja/docs/Web/API/Touch_events)を提供します。
 - ポインターを操作する方法としてマウスやタッチパッドを提供しているデバイスの場合、[Pointer Lock API](/ja/docs/Web/API/Pointer_Lock_API) が一人称視点の 3D ゲームの実装や、他のアプリがポイントを合わせているデバイスの全ての制御を要求するのに役立ちます。そして [Fullscreen API](/ja/docs/Web/API/Fullscreen_API) は、あなたのアプリを全画面モードで表示するのに役立ちます。
-- [コンテンツが編集可能な要素（contentEditable など）](/ja/docs/Web/Guide/HTML/Editable_content)のような機能を使うことで、速いリッチテキストエディターを実装することができ、そして[ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API)はユーザーがあなたのアプリ内に要素を移動することを可能にします。画面の向きがあなたのアプリで問題である時、[Screen Orientation API ](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)を通して、画面の向きの状態を参照でき、またその他のアクションを実行できます。
+- [コンテンツが編集可能な要素（contentEditable など）](/ja/docs/Web/Guide/HTML/Editable_content)のような機能を使うことで、速いリッチテキストエディターを実装することができ、そして[ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API)はユーザーがあなたのアプリ内に要素を移動することを可能にします。画面の向きがあなたのアプリで問題である時、[Screen Orientation API](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) を通して、画面の向きの状態を参照でき、またその他のアクションを実行できます。
 - キーボードのアクセシビリティが適切か常に気に掛ける必要があります。多くのユーザーはキーボードのみを使いウェブサイトやアプリを操作します。ですので、あなたのシステムの機能性からそれを除外することは良くない考えです。
 
 以下は推奨事項一式であり、オープンなウェブアプリでそのようなツールを利用するためのベストプラクティスです。
@@ -128,7 +128,7 @@ if (elem.requestFullscreen) {
 ```html
 <div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
     This text <strong>may</strong> be dragged.
- </div>
+</div>
 ```
 
 私たちが実装する点は以下です:

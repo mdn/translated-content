@@ -1,14 +1,6 @@
 ---
 title: HTMLAnchorElement.hostname
 slug: Web/API/HTMLAnchorElement/hostname
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAnchorElement.hostname
-translation_of: Web/API/HTMLAnchorElement/hostname
 original_slug: Web/API/HTMLHyperlinkElementUtils/hostname
 ---
 {{ApiRef("HTML DOM")}}

@@ -64,7 +64,7 @@ original_slug: Learn/HTML/Forms/Data_form_validation
 
 ## 使用内置表单数据校验
 
-[HTML5](/en-US/docs/HTML/HTML5) 一个特别有用的新功能就是，可以在不写一行脚本代码的情况下，即对用户的输入进行数据校验，这都是通过表单元素的[校验属性](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation)实现的，这些属性可以让你定义一些规则，用于限定用户的输入，比如某个输入框是否必须输入，或者某个输入框的字符串的最小最大长度限制，或者某个输入框必须输入一个数字、邮箱地址等；还有数据必须匹配的模式。如果表单中输入的数据都符合这些限定规则，那么表示这个表单校验通过，否则则认为校验未通过。
+[HTML5](/zh-CN/docs/HTML/HTML5) 一个特别有用的新功能就是，可以在不写一行脚本代码的情况下，即对用户的输入进行数据校验，这都是通过表单元素的[校验属性](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation)实现的，这些属性可以让你定义一些规则，用于限定用户的输入，比如某个输入框是否必须输入，或者某个输入框的字符串的最小最大长度限制，或者某个输入框必须输入一个数字、邮箱地址等；还有数据必须匹配的模式。如果表单中输入的数据都符合这些限定规则，那么表示这个表单校验通过，否则则认为校验未通过。
 
 当一个元素校验通过时：
 
@@ -386,12 +386,12 @@ email.addEventListener("input", function (event) {
 
 越来越多的浏览器支持限制校验 API，并且这逐渐变得可靠。这些 API 由成组的方法和属性构成，可在特定的表单元素接口上调用：
 
-- [HTMLButtonElement](/en-US/docs/Web/API/HTMLButtonElement)
-- [HTMLFieldSetElement](/en-US/docs/Web/API/HTMLFieldSetElement)
-- [HTMLInputElement](/en-US/docs/Web/API/HTMLInputElement)
-- [HTMLOutputElement](/en-US/docs/Web/API/HTMLOutputElement)
-- [HTMLSelectElement](/en-US/docs/Web/API/HTMLSelectElement)
-- [HTMLTextAreaElement](/en-US/docs/Web/API/HTMLTextAreaElement)
+- [HTMLButtonElement](/zh-CN/docs/Web/API/HTMLButtonElement)
+- [HTMLFieldSetElement](/zh-CN/docs/Web/API/HTMLFieldSetElement)
+- [HTMLInputElement](/zh-CN/docs/Web/API/HTMLInputElement)
+- [HTMLOutputElement](/zh-CN/docs/Web/API/HTMLOutputElement)
+- [HTMLSelectElement](/zh-CN/docs/Web/API/HTMLSelectElement)
+- [HTMLTextAreaElement](/zh-CN/docs/Web/API/HTMLTextAreaElement)
 
 #### 约束校验的 API 及属性
 
@@ -470,7 +470,7 @@ email.addEventListener("input", function (event) {
 
 这个简单的表单使用 {{htmlattrxref("novalidate","form")}} 属性关闭浏览器的自动校验；这允许我们使用脚本控制表单校验。但是，这并不禁止对约束校验 API 的支持或是以下 CSS 伪类：{{cssxref(":valid")}}、{{cssxref(":invalid")}}、{{cssxref(":in-range")}} 、{{cssxref(":out-of-range")}} 的应用。这意味着，即使浏览器在发送数据之前没有自动检查表单的有效性，您仍然可以自己做，并相应地设置表单的样式。
 
-[`aria-live`](/en-US/docs/Accessibility/ARIA/ARIA_Live_Regions) 属性确保我们的自定义错误信息将呈现给所有人，包括使用屏幕阅读器等辅助技术的人。
+[`aria-live`](/zh-CN/docs/Accessibility/ARIA/ARIA_Live_Regions) 属性确保我们的自定义错误信息将呈现给所有人，包括使用屏幕阅读器等辅助技术的人。
 
 ##### CSS
 
@@ -576,7 +576,7 @@ form.addEventListener("submit", function (event) {
 
 ### 不使用内建 API 时的表单校验
 
-有时，例如使用旧版浏览器或[自定义小部件](/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets)，您将无法（或不希望）使用约束校验 API。在这种情况下，您仍然可以使用 JavaScript 来校验您的表单。校验表单比起真实数据校验更像是一个用户界面问题。
+有时，例如使用旧版浏览器或[自定义小部件](/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets)，您将无法（或不希望）使用约束校验 API。在这种情况下，您仍然可以使用 JavaScript 来校验您的表单。校验表单比起真实数据校验更像是一个用户界面问题。
 
 要校验表单，您必须问自己几个问题：
 
@@ -612,7 +612,7 @@ form.addEventListener("submit", function (event) {
 </form>
 ```
 
-正如你所看到的，HTML 几乎是一样的；我们只是关闭了 HTML 校验功能。请注意，[ARIA](/en-US/docs/Accessibility/ARIA) 是与 HTML5 无关的独立规范。
+正如你所看到的，HTML 几乎是一样的；我们只是关闭了 HTML 校验功能。请注意，[ARIA](/zh-CN/docs/Accessibility/ARIA) 是与 HTML5 无关的独立规范。
 
 ##### CSS
 

@@ -127,15 +127,13 @@ function load(url, callback) {
 }
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                | Status                               | Comment                |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#the-response-attribute')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.XMLHttpRequest")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,17 +1,6 @@
 ---
 title: 'HTMLElement: drop イベント'
 slug: Web/API/HTMLElement/drop_event
-page-type: web-api-event
-tags:
-  - DOM
-  - Drag Event
-  - Drop
-  - Event
-  - HTML 5
-  - Reference
-  - drag and drop
-browser-compat: api.HTMLElement.drop_event
-translation_of: Web/API/HTMLElement/drop_event
 ---
 {{APIRef}}
 

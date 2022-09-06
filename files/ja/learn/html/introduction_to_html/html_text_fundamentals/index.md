@@ -14,7 +14,7 @@ HTML の役割の 1 つはテキストに構造と意味 ({{glossary("semantics"
 
 たいていの構造化されたテキストは見出しとパラグラフで構成されていて、それは物語でも、新聞でも、大学の教科書でも、雑誌などでも、何を読んでいるのかにかかわらずそうです。
 
-![An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs.](newspaper_small.jpg "An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs.")
+![An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs.](newspaper_small.jpg)
 
 構造化されたコンテンツは読み手にとって読みやすく楽しい体験になります。
 
@@ -66,13 +66,13 @@ HTML では、各パラグラフは {{htmlelement("p")}} 要素で囲む必要�
 
 しかし、この文書をブラウザーで開くと、テキストが 1 つの大きな塊に見えるでしょう!
 
-![A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it.](Screen%20Shot%202017-03-29%20at%2009.20.35.png "A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it.")
+![A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it.](Screen%20Shot%202017-03-29%20at%2009.20.35.png)
 
 これはコンテンツの構造を与える要素がないためですので、ブラウザーはどれが見出しでどれが本文かがわかりません。さらには:
 
 - ウェブページを見ているユーザーは、関連コンテンツを探すのにざっと見たり、時には読み始めるために見出しだけを見ている傾向にあります (we usually [spend a very short time on a web page](http://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/))。しばらく有用なものが見つからない場合、イライラして別の場所に去っていきます。
 - ページをインデックスするサーチエンジンは、見出しのコンテンツを、ページの検索ランクに影響する重要なキーワードとみなします。見出しがないと、{{glossary("SEO")}} (検索エンジン最適化)の点で良くないでしょう。
-- 極めて視覚が不自由な人はウェブページを読みません。つまりその代わりにウェブページを聞きます。これは [スクリーンリーダー](http://en.wikipedia.org/wiki/Screen_reader "screen readers")というソフトウェアで実現されます。このソフトウェアはテキストコンテンツにすばやくアクセスする方法を提供します。さまざまな技術が使用される中で、文書の概要を見出しを読むことで提供し、ユーザーが必要な情報をすばやく見つけられるようにしています。見出しが見つからない場合、文書全体が読み上げられるのを聞くことになってしまいます。
+- 極めて視覚が不自由な人はウェブページを読みません。つまりその代わりにウェブページを聞きます。これは [スクリーンリーダー](http://en.wikipedia.org/wiki/Screen_reader)というソフトウェアで実現されます。このソフトウェアはテキストコンテンツにすばやくアクセスする方法を提供します。さまざまな技術が使用される中で、文書の概要を見出しを読むことで提供し、ユーザーが必要な情報をすばやく見つけられるようにしています。見出しが見つからない場合、文書全体が読み上げられるのを聞くことになってしまいます。
 - {{glossary("CSS")}} でコンテンツをスタイリングしたり、{{glossary("JavaScript")}} で面白いことをさせるには、関連コンテンツを包んでいる要素が必要となり、それを効率的に CSS/JavaScript はターゲットとします。
 
 このため、コンテンツに構造的なマークアップが必要となります。

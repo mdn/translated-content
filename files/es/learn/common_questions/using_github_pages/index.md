@@ -12,23 +12,23 @@ Github es una comunidad muy importante y útil para involucrarse, y Git/GitHub e
 
 ### Configuración básica de Github
 
-1.  Primero que todo, [instala Git](http://git-scm.com/downloads) en tu máquina. Este es el software del sistema de control de versiones subyacente en el que GitHub funciona.
-2.  Seguido, [Regístrate para una cuenta de GitHub](https://github.com/join). Es simple y fácil.
-3.  Una vez te hayas registrado, inicia sesión en [github.com](https://github.com) con tu nombre de usuario y contraseña.
+1. Primero que todo, [instala Git](http://git-scm.com/downloads) en tu máquina. Este es el software del sistema de control de versiones subyacente en el que GitHub funciona.
+2. Seguido, [Regístrate para una cuenta de GitHub](https://github.com/join). Es simple y fácil.
+3. Una vez te hayas registrado, inicia sesión en [github.com](https://github.com) con tu nombre de usuario y contraseña.
 
 ### Preparando tu código para subirlo
 
-Tú puedes almacenar cualquier código que tu quieras en un repositorio de Github, pero para usar la característica páginas de Github con pleno efecto, tu código debe estar estructurado como un sitio web típico, por ejemplo que el punto de entrada primario sea un archivo HTML llamado` index.html`.
+Tú puedes almacenar cualquier código que tu quieras en un repositorio de Github, pero para usar la característica páginas de Github con pleno efecto, tu código debe estar estructurado como un sitio web típico, por ejemplo que el punto de entrada primario sea un archivo HTML llamado `index.html`.
 
 La otra cosa que necesitas hacer antes de seguir adelante es inicializar el directorio de código como un repositorio Git. para hacer esto:
 
-1.  Apunta la línea de comandos a tu directorio `test-site` (o como se llame el directorio que contiene tu sitio web). Para esto, usa el comando `cd` (Es decir "_cambio de directorio_"). Esto es lo que deberías digitar si has puesto tu sitio web en un directorio llamado `test-site` en tu escritorio:
+1. Apunta la línea de comandos a tu directorio `test-site` (o como se llame el directorio que contiene tu sitio web). Para esto, usa el comando `cd` (Es decir "_cambio de directorio_"). Esto es lo que deberías digitar si has puesto tu sitio web en un directorio llamado `test-site` en tu escritorio:
 
     ```sh
     cd Desktop/test-site
     ```
 
-2.  Cuando la línea comandos está apuntando hacia el interior del directorio de tu sitio web, digita el siguiente comando, que le dice a la herramienta `git` para convertir el directorio en un repositorio git:
+2. Cuando la línea comandos está apuntando hacia el interior del directorio de tu sitio web, digita el siguiente comando, que le dice a la herramienta `git` para convertir el directorio en un repositorio git:
 
     ```sh
     git init
@@ -52,39 +52,39 @@ Esto puede parecer un poco espantoso al principio, pero no te preocupes — que 
 
 ### Creando un repositorio para tu código
 
-1.  A continuación, tu necesitas crear un nuevo repositorio para colocar tus archivos en el. Has clic en el signo más (+) en la parte superior derecha de la página de inicio de GitHub, luego escoge _Nuevo Repositorio_.
-2.  En esta página, en la caja _Nombre del Repositorio_, digita el nombre para tu repositorio de código, por ejemplo _my-repository_.
-3.  También llena una descripción para decir lo que tu repositorio va a contener. Tu pantalla debe mostrar algo como esto:
+1. A continuación, tu necesitas crear un nuevo repositorio para colocar tus archivos en el. Has clic en el signo más (+) en la parte superior derecha de la página de inicio de GitHub, luego escoge _Nuevo Repositorio_.
+2. En esta página, en la caja _Nombre del Repositorio_, digita el nombre para tu repositorio de código, por ejemplo _my-repository_.
+3. También llena una descripción para decir lo que tu repositorio va a contener. Tu pantalla debe mostrar algo como esto:
     ![](https://mdn.mozillademos.org/files/12143/create-new-repo.png)
-4.  Has Clic en _Crear repositorio_; Esto debería llevarte a la siguiente página:
+4. Has Clic en _Crear repositorio_; Esto debería llevarte a la siguiente página:
     ![](https://mdn.mozillademos.org/files/12141/github-repo.png)
 
 ### Subiendo tus archivos a GitHub
 
-1.  En la página actual, tú estás interesado en la sección _…o empujar un repositorio existente desde la línea de comandos_. Tú deberias ver dos lineas de código listado en esta sección. Copia la totalidad de la primera línea, pégala en la línea de comandos, presiona la tecla Enter. El comando debería mostrarte algo como esto:
+1. En la página actual, tú estás interesado en la sección _…o empujar un repositorio existente desde la línea de comandos_. Tú deberias ver dos lineas de código listado en esta sección. Copia la totalidad de la primera línea, pégala en la línea de comandos, presiona la tecla Enter. El comando debería mostrarte algo como esto:
 
     ```sh
     git remote add origin https://github.com/chrisdavidmills/my-repository.git
     ```
 
-2.  A continuación, digita los siguientes dos comandos, presionando Enter despues de cada uno. Estos preparán el código para subirlo a GitHub, y pida a GIt que administre estos archivos.
+2. A continuación, digita los siguientes dos comandos, presionando Enter despues de cada uno. Estos preparán el código para subirlo a GitHub, y pida a GIt que administre estos archivos.
 
     ```sh
     git add --all
     git commit -m 'adding my files to my repository'
     ```
 
-3.  Por último, empuja el código hasta GitHub yendo a la página de GitHub en la que estas e ingresando en la terminal el segundo de los dos comandos que vimos _…o empuje un repositorio existente desde la sección de línea de comandos_:
+3. Por último, empuja el código hasta GitHub yendo a la página de GitHub en la que estas e ingresando en la terminal el segundo de los dos comandos que vimos _…o empuje un repositorio existente desde la sección de línea de comandos_:
 
     ```sh
     git push -u origin master
     ```
 
-4.  Ahora necesitas crear la rama gh-pages de tu repositorio; actualiza la página actual y verá una página del repositorio algo así como la de abajo. Tú necesitas presionar el boton que dice _Branch: **master**_, digita _gh-pages_ en el campo de texto, luego presiona el boton azul que dice _Create branch: gh-pages_. Esto crea una rama de código especial llamada gh-pages que es publicada en una ubicación especial. La URL toma la forma _username.github.io/my-repository-name_, asi en mi caso de ejemplo, la URL debería ser _https\://chrisdavidmills.github.io/my-repository_. La página mostrada es la página index.html.
+4. Ahora necesitas crear la rama gh-pages de tu repositorio; actualiza la página actual y verá una página del repositorio algo así como la de abajo. Tú necesitas presionar el boton que dice _Branch: **master**_, digita _gh-pages_ en el campo de texto, luego presiona el boton azul que dice _Create branch: gh-pages_. Esto crea una rama de código especial llamada gh-pages que es publicada en una ubicación especial. La URL toma la forma _username.github.io/my-repository-name_, asi en mi caso de ejemplo, la URL debería ser _https\://chrisdavidmills.github.io/my-repository_. La página mostrada es la página index.html.
 
-![](https://mdn.mozillademos.org/files/12145/repo-site.png)
+    ![](https://mdn.mozillademos.org/files/12145/repo-site.png)
 
-5.  Navega tu dirección web de GitHub pages en un nuevo ta del navegador, y tu deberias ver tu sitio en linea! Mandalo por correo electrónico a tus amigos y muestra tu dominio.
+5. Navega tu dirección web de GitHub pages en un nuevo ta del navegador, y tu deberias ver tu sitio en linea! Mandalo por correo electrónico a tus amigos y muestra tu dominio.
 
 > **Nota:** Si te atascas, la [página de inicio de GitHub Pages](https://pages.github.com/) también es muy útil.
 

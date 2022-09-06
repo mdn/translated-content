@@ -63,15 +63,11 @@ gl.isEnabled(gl.DITHER);
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                               | Commentaire                          |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------ |
-| {{SpecName('WebGL', "#5.14.3", "enable")}}                         | {{Spec2('WebGL')}}             | Définition initiale pour WebGL.      |
-| {{SpecName('OpenGL ES 2.0', "glEnable.xml", "glEnable")}}     | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API OpenGL ES 2.0.     |
-| {{SpecName('OpenGL ES 3.0', "glEnable.xhtml", "glEnable")}} | {{Spec2('OpenGL ES 3.0')}} | Page man de l'API OpenGL ES 3.0 API. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.enable")}}
+{{Compat}}
 
 ## Voir aussi
 

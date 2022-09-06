@@ -1,11 +1,6 @@
 ---
 title: Apple Safari
 slug: Glossary/Apple_Safari
-tags:
-  - Glossary
-  - Navigation
-  - WebMechanics
-translation_of: Glossary/Apple_Safari
 ---
 [Safari](http://www.apple.com/safari/) は{{Glossary("Browser","ウェブブラウザー")}}であり、Apple が開発し、 macOS と iOS の両方に組み込まれています。これは、オープンソースの [WebKit](https://webkit.org/) エンジンに基づいています。
 

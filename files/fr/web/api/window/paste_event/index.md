@@ -45,13 +45,11 @@ window.addEventListener('paste', (event) => {
 
 ## Spécifications
 
-| Specification                                                            | Statut                               |
-| ------------------------------------------------------------------------ | ------------------------------------ |
-| {{SpecName('Clipboard API', '#clipboard-event-paste')}} | {{Spec2('Clipboard API')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.paste_event")}}
+{{Compat}}
 
 ## Voir aussi
 

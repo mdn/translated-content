@@ -1,12 +1,6 @@
 ---
 title: CSS.registerProperty()
 slug: Web/API/CSS/RegisterProperty
-tags:
-  - CSS
-  - Houdini
-  - リファレンス
-browser-compat: api.CSS.registerProperty
-translation_of: Web/API/CSS/RegisterProperty
 ---
 {{SeeCompatTable}}
 

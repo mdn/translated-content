@@ -1,13 +1,6 @@
 ---
 title: 'AudioTrackList: change イベント'
 slug: Web/API/AudioTrackList/change_event
-tags:
-  - API
-  - AudioTrackList
-  - Change
-  - Event
-  - HTML API
-translation_of: Web/API/AudioTrackList/change_event
 ---
 {{APIRef}}
 

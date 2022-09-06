@@ -1,13 +1,6 @@
 ---
 title: Mixin (ミックスイン)
 slug: Glossary/Mixin
-tags:
-  - CodingScripting
-  - Glossary
-  - Method
-  - Mixin
-  - Property
-translation_of: Glossary/Mixin
 ---
 mixin は、その{{Glossary("method", "メソッド")}}や{{Glossary("property", "プロパティ")}}の一部またはすべてが実装されていない{{Glossary("class","クラス")}}または{{Glossary("interface","インターフェイス")}}であり、別のクラスまたはインターフェイスが欠落している実装を提供する必要があります。 新しいクラスまたはインターフェイスには、mixin のプロパティとメソッドと、それ自身で定義したプロパティとメソッドの両方が含まれます。 mixin が実装しているか、mixin を実装しているインターフェイスまたはクラスが実装しているかにかかわらず、すべてのメソッドとプロパティは全く同じように使用できます。
 

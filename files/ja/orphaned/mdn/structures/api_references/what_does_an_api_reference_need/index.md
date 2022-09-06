@@ -13,14 +13,14 @@ original_slug: MDN/Structures/API_references/What_does_an_API_reference_need
 
 An API reference will generally contain the following pages. You can find more details of what each page contains, examples, and templates, in our [Page types](/ja/docs/MDN/Contribute/Structures/Page_types) article.
 
-1.  Overview page
-2.  Interface pages
-3.  Constructor pages
-4.  Method pages
-5.  Property pages (including event handlers properties)
-6.  Event pages
-7.  Concept/guide pages
-8.  Examples
+1. Overview page
+2. Interface pages
+3. Constructor pages
+4. Method pages
+5. Property pages (including event handlers properties)
+6. Event pages
+7. Concept/guide pages
+8. Examples
 
 > **Note:** We'll be referring to the [Web Audio API](/ja/docs/Web/API/Web_Audio_API) for examples in this article.
 

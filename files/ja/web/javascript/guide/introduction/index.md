@@ -130,7 +130,7 @@ JavaScript を書き始めるあたり、ウェブコンソールを複数行モ
 
 ですが、しばらくの間、常にあなたのコードの先頭に `(function(){"use strict";` を、コードの最後に `})();` を記述することを忘れないでください。 [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)と[IIFE](/ja/docs/Glossary/IIFE)の記事でこれらが何であるかを説明していますが、今のところは次のように捉えておいてください。
 
-1.  初心者をつまずかせる、JavaScript のセマンティクスを避ける。
-2.  コンソールで実行されたコードスニペットが相互に影響することを防止する (たとえば、あるコンソールの実行で作成されたものを別のコンソールの実行に使用するなど)。
+1. 初心者をつまずかせる、JavaScript のセマンティクスを避ける。
+2. コンソールで実行されたコードスニペットが相互に影響することを防止する (たとえば、あるコンソールの実行で作成されたものを別のコンソールの実行に使用するなど)。
 
 {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}

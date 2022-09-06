@@ -1,10 +1,6 @@
 ---
 title: Random Number Generator (乱数発生器)
 slug: Glossary/RNG
-tags:
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/RNG
 ---
 **PRNG** (擬似乱数発生器) は、複雑で、予測できないように見えるパターンの数字を出力するためのアルゴリズムです。真の乱数 (放射性線源など) はまったく予測できないのに対し、すべてのアルゴリズムは予測可能なので、 PRNG は、開始パラメーターや*シード*が同じときには同じ数値を返します。
 

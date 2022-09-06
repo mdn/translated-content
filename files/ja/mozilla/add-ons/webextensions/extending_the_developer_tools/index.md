@@ -1,14 +1,6 @@
 ---
 title: developer tools の拡張
 slug: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
-tags:
-  - Add-ons
-  - DevTools
-  - Needs Privileges
-  - WebExtensions
-  - ガイド
-  - 拡張機能
-translation_of: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 ---
 {{AddonSidebar}}
 
@@ -83,7 +75,7 @@ browser.devtools.panels.create(
 
 これは {{WebExtAPIRef("tabs.executeScript()")}} を使用してコンテンツスクリプトを挿入することに似ていますが、1 つの重要な違いがあります:
 
-- コンテンツスクリプトとは異なり、`devtools.inspectedWindow.eval()`\*\* **を使用してロードされたスクリプトは「[DOM のクリーンビュー](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#DOM_access)」を取得**しません\*\*。つまり、ページスクリプトによって行われたページの変更を確認できます。
+- コンテンツスクリプトとは異なり、**`devtools.inspectedWindow.eval()`** を使用してロードされたスクリプトは「[DOM のクリーンビュー](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#DOM_access)」を取得**しません**。つまり、ページスクリプトによって行われたページの変更を確認できます。
 
 > **Note:** DOM のクリーンビューはセキュリティ機能であり、ネイティブ DOM 関数の動作を再定義することにより、悪意のあるページが拡張機能をだますことを防ぐのに役立つことに注意してください。これは eval() を使用する際に非常に注意する必要があることを意味し、可能であれば通常のコンテンツスクリプトを使用する必要があります。
 

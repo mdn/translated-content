@@ -1,9 +1,6 @@
 ---
 title: ツールバーにボタンを追加する
 slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 ---
 {{AddonSidebar}}
 

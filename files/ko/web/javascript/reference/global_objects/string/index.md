@@ -16,13 +16,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
 
 문자열 리터럴은 다음과 같은 형식을 사용합니다.
 
-    'string text'
-    "string text"
-    "中文 español Deutsch English देवनागरी العربية português বাংলা русский 日本語 norsk bokmål ਪੰਜਾਬੀ 한국어 தமிழ் עברית"
+```
+'string text'
+"string text"
+"中文 español Deutsch English देवनागरी العربية português বাংলা русский 日本語 norsk bokmål ਪੰਜਾਬੀ 한국어 தமிழ் עברית"
+```
 
 문자열은 `String` 전역 객체를 직접 사용하여 생성할 수 있습니다.
 
-    String(thing)
+```js
+String(thing)
+```
 
 ### 매개변수
 

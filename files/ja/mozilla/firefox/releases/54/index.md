@@ -1,10 +1,6 @@
 ---
 title: Firefox 54 for developers
 slug: Mozilla/Firefox/Releases/54
-tags:
-  - Firefox
-  - Release Notes
-translation_of: Mozilla/Firefox/Releases/54
 ---
 Firefox 54 は、米国時間 2017 年 6 月 13 日にリリースされました。このページでは、開発者に影響する Firefox 54 の変更点をまとめています。
 

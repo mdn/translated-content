@@ -1,15 +1,6 @@
 ---
 title: Web Worker の使用
 slug: Web/API/Web_Workers_API/Using_web_workers
-tags:
-  - Advanced
-  - Firefox
-  - Guide
-  - HTML5
-  - JavaScript
-  - WebWorkers
-  - Workers
-translation_of: Web/API/Web_Workers_API/Using_web_workers
 ---
 {{DefaultAPISidebar("Web Workers API")}}
 

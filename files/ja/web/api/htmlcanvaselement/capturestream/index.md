@@ -1,17 +1,6 @@
 ---
 title: HTMLCanvasElement.captureStream()
 slug: Web/API/HTMLCanvasElement/captureStream
-tags:
-  - Canvas
-  - Experimental
-  - HTMLCanvasElement
-  - Interface
-  - Media
-  - Media Capture DOM Elements
-  - Method
-  - Reference
-  - Web
-translation_of: Web/API/HTMLCanvasElement/captureStream
 ---
 {{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 

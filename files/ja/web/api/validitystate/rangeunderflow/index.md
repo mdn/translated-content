@@ -1,14 +1,6 @@
 ---
 title: ValidityState.rangeUnderflow
 slug: Web/API/ValidityState/rangeUnderflow
-tags:
-  - API
-  - 制約検証 API
-  - DOM
-  - プロパティ
-  - リファレンス
-browser-compat: api.ValidityState.rangeUnderflow
-translation_of: Web/API/ValidityState/rangeUnderflow
 ---
 **`rangeUnderflow`** は **[`ValidityState`](/ja/docs/Web/API/ValidityState)** オブジェクトの読み取り専用プロパティで、 {{HTMLElement("input")}} の値がユーザーに変更された後、その要素の [`min`](/ja/docs/Web/HTML/Attributes/min) 属性に設定された制約に適合しないことを示します。
 

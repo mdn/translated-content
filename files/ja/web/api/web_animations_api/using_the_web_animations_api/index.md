@@ -1,15 +1,6 @@
 ---
 title: Web Animations API を利用する
 slug: Web/API/Web_Animations_API/Using_the_Web_Animations_API
-tags:
-  - CSS
-  - JavaScript
-  - web animations api
-  - アニメーション
-  - キーフレーム
-  - 不思議の国のアリス
-  - 初心者
-translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 ---
 {{DefaultAPISidebar("Web Animations")}}
 

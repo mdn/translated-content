@@ -41,7 +41,7 @@ translation_of: Web/SVG/Element/radialGradient
 
 ## DOM インターフェース
 
-この要素は [`SVGRadialGradientElement`](/ja/DOM/SVGRadialGradientElement "/ja/DOM/SVGRadialGradientElement") インターフェースを提供します。
+この要素は [`SVGRadialGradientElement`](/ja/DOM/SVGRadialGradientElement) インターフェースを提供します。
 
 ## 例
 

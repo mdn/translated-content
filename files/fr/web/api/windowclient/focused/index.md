@@ -43,12 +43,10 @@ self.addEventListener('notificationclick', function(event) {
 });
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                        | Status                               | Comment            |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Service Workers', '#window-client-interface', 'WindowClient')}} | {{Spec2('Service Workers')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowClient.focused")}}
+{{Compat}}

@@ -1,13 +1,6 @@
 ---
 title: マージン、境界、パディングの論理的プロパティ
 slug: Web/CSS/CSS_Logical_Properties/Margins_borders_padding
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - ガイド
-  - 概念
-  - 書字方向
-translation_of: Web/CSS/CSS_Logical_Properties/Margins_borders_padding
 ---
 {{CSSRef}}
 

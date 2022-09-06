@@ -13,10 +13,8 @@ Les seules valeurs possibles sont `-90`, `0`, `90`, et `180`. Les valeurs positi
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                   | Commentaires |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------ |
-| {{SpecName('Compat', '#dom-window-orientation', 'Window.orientation')}} | {{Spec2('Compat')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.orientation")}}
+{{Compat}}

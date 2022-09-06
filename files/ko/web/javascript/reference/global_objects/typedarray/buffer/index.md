@@ -15,7 +15,9 @@ browser-compat: javascript.builtins.TypedArray.buffer
 
 ## 구문
 
-    typedArray.buffer
+```js
+typedArray.buffer
+```
 
 ## 설명
 

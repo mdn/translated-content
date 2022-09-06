@@ -53,10 +53,10 @@ CDN は地理的に分散したサーバーネットワークで、ユーザー�
 
 詳細情報:
 
-1.  [HTTP Conditional Get for RSS Hackers](https://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
-2.  [HTTP 304: Not Modified](https://annevankesteren.nl/archives/2005/05/http-304)
-3.  [Wikipedia の HTTP ETag の記事](https://ja.wikipedia.org/wiki/HTTP_ETag)
-4.  [Caching in HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html)
+1. [HTTP Conditional Get for RSS Hackers](https://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
+2. [HTTP 304: Not Modified](https://annevankesteren.nl/archives/2005/05/http-304)
+3. [Wikipedia の HTTP ETag の記事](https://ja.wikipedia.org/wiki/HTTP_ETag)
+4. [Caching in HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html)
 
 ### ページのコンポーネントの最適な順序
 

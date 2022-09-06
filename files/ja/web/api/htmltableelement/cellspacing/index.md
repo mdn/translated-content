@@ -1,17 +1,6 @@
 ---
 title: HTMLTableElement.cellSpacing
 slug: Web/API/HTMLTableElement/cellSpacing
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - NeedsSpecTable
-  - プロパティ
-  - リファレンス
-  - cellSpacing
-  - 非推奨
-browser-compat: api.HTMLTableElement.cellSpacing
-translation_of: Web/API/HTMLTableElement/cellSpacing
 ---
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 

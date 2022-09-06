@@ -91,4 +91,4 @@ translation_of: Web/Accessibility/ARIA/Roles/Article_Role
 - {{htmlelement("article")}} 要素
 - [RSS](/ja/docs/Glossary/RSS)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

@@ -1,11 +1,6 @@
 ---
 title: Pixel (ピクセル)
 slug: Glossary/Pixel
-tags:
-  - Design
-  - Glossary
-  - Graphics
-translation_of: Glossary/Pixel
 ---
 ピクセルは、コンピュータ画面のようなグラフィカルな表示の最小構成要素です。
 

@@ -8,7 +8,7 @@ slug: Learn/JavaScript/Building_blocks
 
 ## 前提条件
 
-このモジュールを始める前に、[HTML](/ja/docs/Learn/HTML/Introduction_to_HTML) や [CSS ](/ja/docs/Learn/CSS/Introduction_to_CSS)の基本に慣れておくべきです。また前のモジュールの [JavaScript の第一歩](/ja/docs/Learn/JavaScript/First_steps) も終了させておくべきです。
+このモジュールを始める前に、[HTML](/ja/docs/Learn/HTML/Introduction_to_HTML) や [CSS](/ja/docs/Learn/CSS/Introduction_to_CSS) の基本に慣れておくべきです。また前のモジュールの [JavaScript の第一歩](/ja/docs/Learn/JavaScript/First_steps) も終了させておくべきです。
 
 > **Note:** もしあなたが作業しているコンピュータ・タブレットやその他のデバイスで自分でファイルを作れない場合は、[JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) といったようなオンラインコーディングプログラムで (ほとんどの場合) 試すことができます。
 

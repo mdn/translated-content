@@ -5,7 +5,7 @@ original_slug: learn/Server-side/Django/管理站点
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
 
-好了，我们已经为本地图书馆网站 [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 创建了模型，我们接下来使用 Django 管理站点去添加 一些“真“书数据。首先我们展示如何用管理站点注册模型，然后展示如何登录和创建一些数据。本文最后，我们介绍你可以进一步改进管理站点的建议。
+好了，我们已经为本地图书馆网站 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website) 创建了模型，我们接下来使用 Django 管理站点去添加 一些“真“书数据。首先我们展示如何用管理站点注册模型，然后展示如何登录和创建一些数据。本文最后，我们介绍你可以进一步改进管理站点的建议。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -33,7 +33,7 @@ original_slug: learn/Server-side/Django/管理站点
 
 Django 管理应用程序可以使用您的模型自动构建可用于创建，查看，更新和删除记录的站点区域。这可以在开发过程中节省大量的时间，从而很容易测试您的模型，并了解您是否拥有正确的数据。根据网站的类型，管理应用程序也可用于管理生产中的数据。Django 项目建议仅用于内部数据管理（即仅供管理员或组织内部人员使用），因为以模型为中心的方法不一定是所有用户最好的界面，并且暴露了大量不必要的细节关于模型。
 
-[创建基础项目时，](/en-US/docs/Learn/Server-side/Django/skeleton_website)自动完成所有将您的网站中的管理应用程序包含在内的配置文件（有关所需实际依赖关系的信息 (如有需要请看 [Django docs here](https://docs.djangoproject.com/en/1.10/ref/contrib/admin/)). 其结果是，你必须做你的模型添加到管理应用程序是 注册 他们。在本文末尾，我们将简要介绍如何进一步配置管理区域以更好地显示我们的模型数据。
+[创建基础项目时，](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)自动完成所有将您的网站中的管理应用程序包含在内的配置文件（有关所需实际依赖关系的信息 (如有需要请看 [Django docs here](https://docs.djangoproject.com/en/1.10/ref/contrib/admin/)). 其结果是，你必须做你的模型添加到管理应用程序是 注册 他们。在本文末尾，我们将简要介绍如何进一步配置管理区域以更好地显示我们的模型数据。
 
 注册模型后，我们将展示如何创建一个新的“超级用户”，登录到该网站，并创建一些书籍，作者，书籍实例和流派。这些将有助于测试我们将在下一个教程中开始创建的视图和模板。
 
@@ -58,7 +58,7 @@ admin.site.register(Genre)
 admin.site.register(BookInstance)
 ```
 
-> **备注：** 如果你接受创建模型以表示书籍的自然语言的挑战 ([see the models tutorial article](/en-US/docs/Learn/Server-side/Django/Models)), 导入并注册。
+> **备注：** 如果你接受创建模型以表示书籍的自然语言的挑战 ([see the models tutorial article](/zh-CN/docs/Learn/Server-side/Django/Models)), 导入并注册。
 
 这是在网站上注册模型或多模型的简单方法，管理站点是高度可定制的，我们将进一步讨论注册模型的其他方式。
 

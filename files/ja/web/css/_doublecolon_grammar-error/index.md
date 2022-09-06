@@ -1,14 +1,6 @@
 ---
 title: '::grammar-error'
 slug: Web/CSS/::grammar-error
-tags:
-  - CSS
-  - 実験的
-  - 擬似要素
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.grammar-error
-translation_of: Web/CSS/::grammar-error
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

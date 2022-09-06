@@ -1,9 +1,6 @@
 ---
 title: 通知
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
 ---
 {{AddonSidebar}}
 

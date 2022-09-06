@@ -156,7 +156,7 @@ button:before {
 接下来，我们使用这些内容来显示每个按钮上的图标：
 
 - 我们使用 {{cssxref("::before")}} 选择器在每个 {{htmlelement("button")}} 元素之前显示内容。
-- 我们使用 {{cssxref("content")}} 属性将各情况下要显示的内容设置为 [`data-icon`](/en-US/docs/Learn/HTML/Howto/Use_data_attributes) 属性的内容。例如在播放按钮的情况下，[`data-icon`](/en-US/docs/Learn/HTML/Howto/Use_data_attributes) 包含大写的“P”。
+- 我们使用 {{cssxref("content")}} 属性将各情况下要显示的内容设置为 [`data-icon`](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes) 属性的内容。例如在播放按钮的情况下，[`data-icon`](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes) 包含大写的“P”。
 - 我们使用 {{cssxref("font-family")}} 将自定义 Web 字体应用于我们的按钮上。在该字体中“P”对应的是“播放”图标，因此播放按钮上显示“播放”图标。
 
 图标字体非常酷有很多原因 —— 减少 HTTP 请求，因为您不需要将这些图标作为图像文件下载。同时具有出色的可扩展性，以及您可以使用文本属性来设置它们的样式 —— 例如 {{cssxref("color")}} 和 {{cssxref("text-shadow")}}。
@@ -262,7 +262,7 @@ button:before {
 
 #### 暂停视频
 
-1. 接下来，让我们添加处理视频停止的方法。添加以下的 [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) 行在你之前添加的内容的下面：
+1. 接下来，让我们添加处理视频停止的方法。添加以下的 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 行在你之前添加的内容的下面：
 
     ```js
     stop.addEventListener('click', stopMedia);
@@ -289,7 +289,7 @@ button:before {
 
 有许多方法可以实现快退和快进功能;在这里，我们向您展示了一种相对复杂的方式，当按意外顺序按下不同的按钮时，它不会中断。
 
-1. 首先，在前面的代码之下添加以下两个[`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener)：
+1. 首先，在前面的代码之下添加以下两个[`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener)：
 
     ```js
     rwd.addEventListener('click', mediaBackward);
@@ -459,19 +459,19 @@ clearInterval(intervalFwd);
 
 - {{domxref("HTMLMediaElement")}}
 - [视频和音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)— \<video>和\<audio>的简单指南。
-- [Audio and video delivery](/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery) — detailed guide to delivering media inside the browser, with many tips, tricks, and links to further more advanced tutorials.
-- [Audio 与 video 操作](/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation) — 操作 audio 和 video 的详细指南，例如：使用 [Canvas API](/en-US/docs/Web/API/Canvas_API), [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)，等等。
+- [Audio and video delivery](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery) — detailed guide to delivering media inside the browser, with many tips, tricks, and links to further more advanced tutorials.
+- [Audio 与 video 操作](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation) — 操作 audio 和 video 的详细指南，例如：使用 [Canvas API](/zh-CN/docs/Web/API/Canvas_API), [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)，等等。
 - {{htmlelement("video")}} and {{htmlelement("audio")}} reference pages.
-- [Media formats supported by the HTML audio and video elements](/en-US/docs/Web/HTML/Supported_media_formats).
+- [Media formats supported by the HTML audio and video elements](/zh-CN/docs/Web/HTML/Supported_media_formats).
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
 
 ## 本章目录
 
-- [Introduction to web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)
+- [Introduction to web APIs](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
+- [Manipulating documents](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
+- [Fetching data from the server](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [Third party APIs](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
+- [Drawing graphics](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
+- [Video and audio APIs](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
+- [Client-side storage](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

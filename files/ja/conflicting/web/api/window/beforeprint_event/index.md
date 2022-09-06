@@ -1,16 +1,6 @@
 ---
 title: WindowEventHandlers.onbeforeprint
 slug: conflicting/Web/API/Window/beforeprint_event
-tags:
-  - API
-  - DOM
-  - Event Handler
-  - HTML DOM
-  - Reference
-  - onbeforeprint
-  - プロパティ
-  - 印刷
-translation_of: Web/API/WindowEventHandlers/onbeforeprint
 original_slug: Web/API/WindowEventHandlers/onbeforeprint
 ---
 {{ApiRef}}

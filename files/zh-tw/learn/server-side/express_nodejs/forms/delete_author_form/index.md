@@ -158,5 +158,5 @@ If the author does have books, then you'll be presented with a view like the fol
 
 ## Next steps
 
-- Return to [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms).
-- Proceed to the final subarticle of part 6: [Update Book form](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form).
+- Return to [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms).
+- Proceed to the final subarticle of part 6: [Update Book form](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form).

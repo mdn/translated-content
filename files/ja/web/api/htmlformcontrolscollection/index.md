@@ -1,10 +1,6 @@
 ---
 title: HTMLFormControlsCollection
 slug: Web/API/HTMLFormControlsCollection
-tags:
-  - DOM
-  - DOM Reference
-translation_of: Web/API/HTMLFormControlsCollection
 ---
 {{ApiRef}}
 

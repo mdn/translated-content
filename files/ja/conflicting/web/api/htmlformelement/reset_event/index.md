@@ -1,12 +1,6 @@
 ---
 title: window.onreset
 slug: conflicting/Web/API/HTMLFormElement/reset_event
-tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-  - Window
-translation_of: Web/API/GlobalEventHandlers/onreset
 original_slug: Web/API/GlobalEventHandlers/onreset
 ---
 {{ApiRef}}

@@ -1,20 +1,6 @@
 ---
 title: HTMLImageElement
 slug: Web/API/HTMLImageElement
-page-type: web-api-interface
-tags:
-  - API
-  - 要素
-  - グラフィック
-  - HTML DOM
-  - HTMLImageElement
-  - 画像
-  - インターフェイス
-  - リファレンス
-  - img
-  - picture
-browser-compat: api.HTMLImageElement
-translation_of: Web/API/HTMLImageElement
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,14 +1,6 @@
 ---
 title: AudioBuffer
 slug: Web/API/AudioBuffer
-tags:
-  - API
-  - AudioBuffer
-  - インターフェイス
-  - リファレンス
-  - ウェブ音声 API
-browser-compat: api.AudioBuffer
-translation_of: Web/API/AudioBuffer
 ---
 {{APIRef("Web Audio API")}}
 

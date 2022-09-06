@@ -1,15 +1,6 @@
 ---
 title: TextEncoder.encoding
 slug: Web/API/TextEncoder/encoding
-tags:
-  - API
-  - エンコーディング
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - TextEncoder
-browser-compat: api.TextEncoder.encoding
-translation_of: Web/API/TextEncoder/encoding
 ---
 {{APIRef("Encoding API")}}
 

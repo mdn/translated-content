@@ -29,7 +29,7 @@ Pasarle [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) a un 
 
 ## Ver también
 
-- [String](/es/docs/Web/JavaScript/Reference/Global_Objects/String "/en-US/docs/Web/API/DOMString")
+- [String](/es/docs/Web/JavaScript/Reference/Global_Objects/String)
 - {{domxref("USVString")}}
 - {{domxref("CSSOMString")}}
 - [`StringView` – una representación en C de los strings basados en arrays tipados](/es/docs/Web/JavaScript/Typed_arrays/String_view)

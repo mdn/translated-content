@@ -1,11 +1,6 @@
 ---
 title: CSS グリッドレイアウトでの自動配置
 slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
-tags:
-  - CSS
-  - CSS グリッド
-  - ガイド
-translation_of: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 ---
 {{CSSRef}}
 

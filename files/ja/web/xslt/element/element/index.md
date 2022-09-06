@@ -15,7 +15,7 @@ translation_of: Web/XSLT/Element/element
 
 ```
 <xsl:element name=NAME namespace=URI use-attribute-sets=LIST-OF-NAMES >
-	TEMPLATE
+  TEMPLATE
 </xsl:element>
 ```
 

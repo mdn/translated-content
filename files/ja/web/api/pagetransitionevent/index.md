@@ -12,8 +12,6 @@ Page transition events fire when a webpage is being loaded or unloaded.
 
 EventPageTransitionEvent
 
-##
-
 ## メンバ
 
 **PageTransitionEvent** オブジェクトは、以下のメンバを持ちます：

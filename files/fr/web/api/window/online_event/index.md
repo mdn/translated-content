@@ -54,13 +54,11 @@ window.ononline = (event) => {
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('HTML WHATWG', "indices.html#event-online", "online event")}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.online_event")}}
+{{Compat}}
 
 ## Voir aussi
 

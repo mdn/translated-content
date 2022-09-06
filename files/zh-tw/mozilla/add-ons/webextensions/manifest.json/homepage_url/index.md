@@ -27,9 +27,9 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
 
 套件首頁的 URL。
 
-如果有 [developer](/en-US/Add-ons/WebExtensions/manifest.json/developer) 鍵且它包含 "url" 屬性，這會覆蓋 homepage_url 鍵。
+如果有 [developer](/zh-TW/Add-ons/WebExtensions/manifest.json/developer) 鍵且它包含 "url" 屬性，這會覆蓋 homepage_url 鍵。
 
-這是一個[可侷限的屬性](/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json)。
+這是一個[可侷限的屬性](/zh-TW/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json)。
 
 ## 範例
 

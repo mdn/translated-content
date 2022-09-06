@@ -13,7 +13,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 
 ## Syntax
 
-    var myTable = new WebAssembly.Table(tableDescriptor);
+```js
+var myTable = new WebAssembly.Table(tableDescriptor);
+```
 
 ### Parameters
 

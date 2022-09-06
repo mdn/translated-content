@@ -1,14 +1,6 @@
 ---
 title: WorkerGlobalScope.self
 slug: Web/API/WorkerGlobalScope/self
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Worker
-  - WorkerGlobalScope
-  - self
-translation_of: Web/API/WorkerGlobalScope/self
 ---
 {{APIRef("Web Workers API")}}
 

@@ -25,13 +25,10 @@ Pour des raisons de sécurité, l'objet `History` n'autorise pas l'accès au URL
 
 Il n'y a pas de possibilité de nettoyer l'historique de la session ou de désactiver les boutons précédent et suivant. La solution éventuelle la plus proche serait la méthode [location.replace()](/en/DOM/window.location#replace), permettant de remplacer l'élément actuel de l'historique de la session par l'URL fournie.
 
-## Spécification
+## Spécifications
 
-| Specification                                                                                                            | Status                           | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'browsers.html#the-history-interface', 'The History interface')}} | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5 W3C', 'browsers.html#the-history-interface', 'The History interface')}} | {{Spec2('HTML5 W3C')}}     |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.history")}}
+{{Compat}}

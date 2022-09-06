@@ -20,16 +20,16 @@ translation_of: Web/SVG/Element/polyline
 
 ## 例
 
-» [polyline.svg](polyline.svg "https://developer.mozilla.orgpolyline.svg")
+» [polyline.svg](polyline.svg)
 
 ## 属性
 
 ### グローバル属性
 
-- [条件処理属性](/ja/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
-- [コア属性](/ja/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [グラフィカルイベント属性](/ja/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
-- [プレゼンテーション属性](/ja/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- [条件処理属性](/ja/SVG/Attribute#ConditionalProccessing) »
+- [コア属性](/ja/SVG/Attribute#Core) »
+- [グラフィカルイベント属性](/ja/SVG/Attribute#GraphicalEvent) »
+- [プレゼンテーション属性](/ja/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -41,7 +41,7 @@ translation_of: Web/SVG/Element/polyline
 
 ## DOM インターフェイス
 
-この要素は [`SVGPolylineElement`](/ja/DOM/SVGPolylineElement "en/DOM/SVGPolylineElement") インターフェイスを提供します。
+この要素は [`SVGPolylineElement`](/ja/DOM/SVGPolylineElement) インターフェイスを提供します。
 
 ## 仕様
 

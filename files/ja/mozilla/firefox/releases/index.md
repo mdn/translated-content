@@ -1,12 +1,6 @@
 ---
 title: Firefox 開発者向けリリースノート
 slug: Mozilla/Firefox/Releases
-tags:
-  - Firefox
-  - Landing
-  - Mozilla
-  - Release
-translation_of: Mozilla/Firefox/Releases
 ---
 {{FirefoxSidebar}}
 

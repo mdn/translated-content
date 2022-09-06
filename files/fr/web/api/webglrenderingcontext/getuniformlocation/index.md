@@ -88,33 +88,11 @@ Cela fait, la prochaine fois que les fonctions d'ombrage seront appelées, leurs
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('WebGL', "#5.14.10", "getUniformLocation")}}
-      </td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td><p>Définition initiale.</p></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('OpenGL ES 2.0', "glGetUniformLocation.xml", "glGetUniformLocation")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td>Page man de l’API OpenGL.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.getUniformLocation")}}
+{{Compat}}
 
 ## Voir aussi
 

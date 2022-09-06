@@ -1,14 +1,6 @@
 ---
 title: direction
 slug: Web/CSS/direction
-tags:
-  - BiDi
-  - CSS
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.direction
-translation_of: Web/CSS/direction
 ---
 {{CSSRef}}
 

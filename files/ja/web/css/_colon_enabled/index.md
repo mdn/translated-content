@@ -1,15 +1,6 @@
 ---
 title: ':enabled'
 slug: Web/CSS/:enabled
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.enabled
-translation_of: Web/CSS/:enabled
 ---
 {{CSSRef}}
 

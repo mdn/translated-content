@@ -1,18 +1,6 @@
 ---
 title: Window.find()
 slug: Web/API/Window/find
-tags:
-  - API
-  - HTML DOM
-  - メソッド
-  - NeedsCompatTable
-  - NeedsContent
-  - 標準外
-  - リファレンス
-  - Window
-  - find
-browser-compat: api.Window.find
-translation_of: Web/API/Window/find
 ---
 {{ApiRef}}{{Non-standard_Header}}
 

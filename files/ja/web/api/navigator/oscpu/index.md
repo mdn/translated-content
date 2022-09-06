@@ -28,7 +28,7 @@ oscpuInfo = navigator.oscpu
 | Linux 64 ビット (32 ビット版) | `uname -s` の出力結果に `i686 on x86_64`を加えたもの |
 | Linux                         | `uname -sm` の出力結果                               |
 
-1.  x.y はオペレーティングシステムのバージョンを参照
+1. x.y はオペレーティングシステムのバージョンを参照
 
 ## 例
 

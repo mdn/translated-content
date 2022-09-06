@@ -25,7 +25,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibility
 - 最新のブラウザーを搭載していない可能性がある古いデバイスのユーザー。
 - 低速プロセッサを搭載している可能性がある、低スペックデバイスのユーザー。
 
-ある意味では、このモジュール全体がアクセシビリティについてのものです — クロスブラウザーテストは、あなたのサイトができるだけ多くの人々によって使用できることを確認します。[ アクセシビリティとは？](/ja/docs/Learn/Accessibility/What_is_accessibility)では、この記事よりも完全かつ徹底的にアクセシビリティを定義します。
+ある意味では、このモジュール全体がアクセシビリティについてのものです — クロスブラウザーテストは、あなたのサイトができるだけ多くの人々によって使用できることを確認します。[アクセシビリティとは？](/ja/docs/Learn/Accessibility/What_is_accessibility)では、この記事よりも完全かつ徹底的にアクセシビリティを定義します。
 
 とは言っても、この記事では、クロスブラウザーと障碍のある人々を取り巻く問題のテスト、そして彼らのウェブの使い方について説明します。 モジュール内の他の場所で、[レスポンシブデザイン](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Responsive_design_problems)と[パフォーマンス](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Performance_issues)のような他の分野についてはすでに説明しました。
 
@@ -120,9 +120,9 @@ a:focus, input:focus, button:focus, select:focus {
 
 時にはキーボード・アクセシビリティを失うことが避けられないこともあります。 意味論的にあまり良くないサイトを継承したかもしれませんし（`<div>` で作られたボタンを生成する恐ろしい {{glossary("CMS")}} に行き着くかもしれません）、HTML5 の {{htmlelement("video")}} 要素のようにキーボード・アクセシビリティが組み込まれていない複雑なコントロールを使用しているかもしれません（驚くべきことに、Opera は `<video>` 要素のデフォルトのブラウザーコントロールをタブ操作できる唯一のブラウザーです）。 次のようないくつかの選択肢があります。
 
-1.  `<button>` 要素（デフォルトでタブ移動可能）と JavaScript を使用してカスタムコントロールを作成し、それらの機能を関連付けます。 これについての良い例は、[クロスブラウザーのビデオプレーヤーの作成](/ja/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player)を参照してください。
-2.  JavaScript でキーボードショートカットを作成すると、キーボードの特定のキーを押すことで機能をアクティブにできます。 あらゆる目的に適応できるゲーム関連の例については、[デスクトップのマウスとキーボードのコントロール](/ja/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard)を参照してください。
-3.  偽のボタンの振る舞いのために、いくつかの興味深い戦術を使ってください。 例えば、[fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) の例を見てください（[ソースコード](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)を見る）。 ここでは、それぞれの属性に `tabindex="0"` という属性を与えることで（もっと有用な詳細については WebAIM の [tabindex の記事](http://webaim.org/techniques/keyboard/tabindex)（英語）を見てください）、偽の `<div>` ボタンにフォーカスできるようにしました（タブを介すことも含む）。 これにより、ボタンにタブ移動することはできますが、
+1. `<button>` 要素（デフォルトでタブ移動可能）と JavaScript を使用してカスタムコントロールを作成し、それらの機能を関連付けます。 これについての良い例は、[クロスブラウザーのビデオプレーヤーの作成](/ja/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player)を参照してください。
+2. JavaScript でキーボードショートカットを作成すると、キーボードの特定のキーを押すことで機能をアクティブにできます。 あらゆる目的に適応できるゲーム関連の例については、[デスクトップのマウスとキーボードのコントロール](/ja/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard)を参照してください。
+3. 偽のボタンの振る舞いのために、いくつかの興味深い戦術を使ってください。 例えば、[fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) の例を見てください（[ソースコード](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)を見る）。 ここでは、それぞれの属性に `tabindex="0"` という属性を与えることで（もっと有用な詳細については WebAIM の [tabindex の記事](http://webaim.org/techniques/keyboard/tabindex)（英語）を見てください）、偽の `<div>` ボタンにフォーカスできるようにしました（タブを介すことも含む）。 これにより、ボタンにタブ移動することはできますが、
 
     <kbd>Enter</kbd>
 
@@ -250,7 +250,7 @@ JavaScript はアクセシビリティに関して CSS と同じ種類の問題�
 <p><span id="LiveRegion1" aria-live="polite" aria-atomic="false"></span></p>
 ```
 
-Freedom Scientific の [ARIA（Accessible Rich Internet Applications）のライブリージョン](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)（英語）の例で実行中の例を見ることができます — 強調表示された段落はその内容を 10 秒ごとに更新し、スクリーンリーダーはユーザーにこれを読み上げるべきです。[ ARIA のライブリージョン - Atomic](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegionsAtomic.htm)（英語）は別の有用な例を提 ​​ 供しています。
+Freedom Scientific の [ARIA（Accessible Rich Internet Applications）のライブリージョン](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)（英語）の例で実行中の例を見ることができます — 強調表示された段落はその内容を 10 秒ごとに更新し、スクリーンリーダーはユーザーにこれを読み上げるべきです。[ARIA のライブリージョン - Atomic](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegionsAtomic.htm)（英語）は別の有用な例を提 ​​ 供しています。
 
 ここでは WAI-ARIA を詳細にカバーするためのスペースはありません。 [WAI-ARIA の基本](/ja/docs/Learn/Accessibility/WAI-ARIA_basics)でもっと詳しく学ぶことができます。
 
@@ -268,9 +268,9 @@ Freedom Scientific の [ARIA（Accessible Rich Internet Applications）のライ
 
 Tenon を使って例を見てみましょう。
 
-1.  [Tenon のホームページ](https://tenon.io)（英語）に行きます。
-2.  [bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html) の例の URL（または分析したい別のウェブページの URL）をページ上部のテキスト入力に入力して \[Analyze Your Webpage] を押します。
-3.  次に示すように、error/description のセクションが見つかるまで下にスクロールします。
+1. [Tenon のホームページ](https://tenon.io)（英語）に行きます。
+2. [bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html) の例の URL（または分析したい別のウェブページの URL）をページ上部のテキスト入力に入力して \[Analyze Your Webpage] を押します。
+3. 次に示すように、error/description のセクションが見つかるまで下にスクロールします。
 
 ![](tenon-screenshot.png)
 
@@ -347,9 +347,9 @@ VO にはたくさんのキーボードコマンドがありますので、こ�
 
 NVDA は Windows 専用で、インストールする必要があります。
 
-1.  [nvaccess.org](http://www.nvaccess.org/) からダウンロードしてください。 寄付をするか無料でダウンロードするかを選択できます。 ダウンロードできるようになる前にあなたのメールアドレスを与える必要もあるでしょう。
-2.  ダウンロードしたら、インストールします — インストーラをダブルクリックし、ライセンスに同意して指示に従います。
-3.  NVDA を起動するには、プログラムファイル/ショートカットをダブルクリックするか、キーボードショートカットの&#x20;
+1. [nvaccess.org](http://www.nvaccess.org/) からダウンロードしてください。 寄付をするか無料でダウンロードするかを選択できます。 ダウンロードできるようになる前にあなたのメールアドレスを与える必要もあるでしょう。
+2. ダウンロードしたら、インストールします — インストーラをダブルクリックし、ライセンスに同意して指示に従います。
+3. NVDA を起動するには、プログラムファイル/ショートカットをダブルクリックするか、キーボードショートカットの&#x20;
 
     <kbd>Ctrl</kbd>
 
@@ -412,9 +412,9 @@ NVDA にはたくさんのキーボードコマンドがありますので、こ
 
 次のリストは、プロジェクトで推奨されるアクセシビリティテストを確実に実行したことを確認するためのチェックリストです。
 
-1.  HTML が意味論的にできるだけ正しいことを確認してください。 [監査ツール](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools)を使用して、[それを検証する](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Validation)ことは良いスタートです。
-2.  CSS がオフになっているときにコンテンツが意味をなすことを確認してください。
-3.  機能が[キーボードからアクセス可能であること](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility)を確認してください。&#x20;
+1. HTML が意味論的にできるだけ正しいことを確認してください。 [監査ツール](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools)を使用して、[それを検証する](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Validation)ことは良いスタートです。
+2. CSS がオフになっているときにコンテンツが意味をなすことを確認してください。
+3. 機能が[キーボードからアクセス可能であること](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility)を確認してください。&#x20;
 
     <kbd>Tab</kbd>
 
@@ -428,12 +428,12 @@ NVDA にはたくさんのキーボードコマンドがありますので、こ
 
     &#x20;などを使ってテストします。
 
-4.  テキスト以外のコンテンツに[代替テキスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Text_alternatives)があることを確認してください。 [監査ツール](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools)はそのような問題を捉えるのに適しています。
-5.  適切なチェックツールを使用して、サイトの[カラーコントラスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Color_and_color_contrast)が許容範囲内であることを確認してください。
-6.  [隠されたコンテンツ](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Hiding_content)がスクリーンリーダーに見えるようにしてください。
-7.  可能な限り JavaScript がなくても機能が使えることを確認してください。
-8.  適切な場合は、ARIA を使用してアクセシビリティを向上させます。
-9.  [監査ツール](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools)を通してサイトを運営してください。
+4. テキスト以外のコンテンツに[代替テキスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Text_alternatives)があることを確認してください。 [監査ツール](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools)はそのような問題を捉えるのに適しています。
+5. 適切なチェックツールを使用して、サイトの[カラーコントラスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Color_and_color_contrast)が許容範囲内であることを確認してください。
+6. [隠されたコンテンツ](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Hiding_content)がスクリーンリーダーに見えるようにしてください。
+7. 可能な限り JavaScript がなくても機能が使えることを確認してください。
+8. 適切な場合は、ARIA を使用してアクセシビリティを向上させます。
+9. [監査ツール](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools)を通してサイトを運営してください。
 10. スクリーンリーダーでテストしてください。
 11. あなたが行ったことを言うために、あなたのサイトのどこかに見つけることができるアクセシビリティの方針/声明を含めてください。
 
