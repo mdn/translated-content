@@ -1,17 +1,6 @@
 ---
 title: padding-inline-start
 slug: Web/CSS/padding-inline-start
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - padding-inline
-  - padding-inline-start
-  - recipe:css-property
-browser-compat: css.properties.padding-inline-start
-translation_of: Web/CSS/padding-inline-start
 ---
 {{CSSRef}}
 

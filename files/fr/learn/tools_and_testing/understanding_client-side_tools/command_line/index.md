@@ -277,7 +277,7 @@ Occupons-nous maintenant de quelque chose d'un peu plus compliqué. Nous allons 
 
 En fait, cette URL est celle de l'ancien emplacement de la page. Lorsque vous l'entrez dans un nouvel onglet de votre navigateur, vous êtes (finalement) redirigé sur [https://developer.mozilla.org/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch](/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch).
 
-Par conséquent, si vous utilisez curl pour faire une requête à https\://developer.mozilla.org/docs/Web/API/fetch, vous n'aurez pas de résultat. Essayez :
+Par conséquent, si vous utilisez curl pour faire une requête à `https://developer.mozilla.org/docs/Web/API/fetch`, vous n'aurez pas de résultat. Essayez :
 
 ```bash
 curl https://developer.mozilla.org/fr/docs/Web/API/fetch

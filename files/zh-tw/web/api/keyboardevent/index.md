@@ -6,7 +6,7 @@ slug: Web/API/KeyboardEvent
 
 **`KeyboardEvent`** objects 用來詳述使用者和網頁之間，經由鍵盤產生的互動。每個事件（`event`）都記錄著一次鍵盤動作。事件類型（`keydown` 、 `keypress` 和 `keyup`）用來表示鍵盤執行哪種動作。
 
-> **備註：** `KeyboardEvent` 僅顯示在鍵盤上發生的事。當你需要進行文字輸入的操作，請使用 HTML5 [`input`](/en-US/docs/DOM/DOM_event_reference/input) event 代替 `KeyboardEvent` 。舉例來說，當使用者在手寫系統，例如平板電腦，輸入文字時，並不會啟動 key events 。
+> **備註：** `KeyboardEvent` 僅顯示在鍵盤上發生的事。當你需要進行文字輸入的操作，請使用 HTML5 [`input`](/zh-TW/docs/DOM/DOM_event_reference/input) event 代替 `KeyboardEvent` 。舉例來說，當使用者在手寫系統，例如平板電腦，輸入文字時，並不會啟動 key events 。
 
 ## Constructor
 

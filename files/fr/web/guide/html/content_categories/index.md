@@ -42,7 +42,7 @@ Quelques autres éléments appartiennent à cette catégorie mais seulement sous
 
 ### Contenu sectionnant
 
-Les éléments appartenant à cette catégorie sont ceux créant une nouvelle [section dans le plan du document](/fr/docs/HTML/Sections_and_Outlines_of_an_HTML5_document) qui définit la portée des éléments {{HTMLElement("header")}}, des éléments {{HTMLElement("footer")}} et du [contenu de titre](<#Contenu de titre> "#Contenu de titre").
+Les éléments appartenant à cette catégorie sont ceux créant une nouvelle [section dans le plan du document](/fr/docs/HTML/Sections_and_Outlines_of_an_HTML5_document) qui définit la portée des éléments {{HTMLElement("header")}}, des éléments {{HTMLElement("footer")}} et du [contenu de titre](#contenu_de_titre).
 
 Les éléments appartenant à cette catégorie sont les éléments {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}} et {{HTMLElement("section")}}.
 

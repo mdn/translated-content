@@ -4,7 +4,7 @@ slug: Web/JavaScript/Shells
 ---
 {{JsSidebar}}
 
-JavaScript shell 可以讓你不需要重新載入頁面就能快速的測試 [JavaScript](/en-US/docs/Web/JavaScript) 的程式碼，它們在開發和除錯上面都十分的有用。
+JavaScript shell 可以讓你不需要重新載入頁面就能快速的測試 [JavaScript](/zh-TW/docs/Web/JavaScript) 的程式碼，它們在開發和除錯上面都十分的有用。
 
 ## 獨立的 JavaScript shell
 
@@ -21,9 +21,9 @@ JavaScript shell 可以讓你不需要重新載入頁面就能快速的測試 [J
 
 下列 JavaScript shells 需要 Mozilla 才能運作
 
-- [Scratchpad](/en-US/docs/Tools/Scratchpad) 為 Firefox 6.0 開始內建的 JavaScript 主控台
-- [JavaScript Shell](/en-US/docs/Mozilla/Projects/SpiderMonkey/Introduction_to_the_JavaScript_shell) (`js`) - 是一個 JavaScript 的命令列直譯器
-- [xpcshell](/en-US/docs/Mozilla/XPConnect/xpcshell) 是一個 [XPConnect](/en-US/docs/Mozilla/Tech/XPCOM/Language_bindings/XPConnect) 的 shell - 它有時候用來處理 Mozilla 的開發
+- [Scratchpad](/zh-TW/docs/Tools/Scratchpad) 為 Firefox 6.0 開始內建的 JavaScript 主控台
+- [JavaScript Shell](/zh-TW/docs/Mozilla/Projects/SpiderMonkey/Introduction_to_the_JavaScript_shell) (`js`) - 是一個 JavaScript 的命令列直譯器
+- [xpcshell](/zh-TW/docs/Mozilla/XPConnect/xpcshell) 是一個 [XPConnect](/zh-TW/docs/Mozilla/Tech/XPCOM/Language_bindings/XPConnect) 的 shell - 它有時候用來處理 Mozilla 的開發
 - [Babel REPL](http://babeljs.io/repl) - 以瀏覽器為基準的 [REPL](https://en.wikipedia.org/wiki/REPL)，主要用來實驗未來的 JavaScript
 - [ES6Console.com](http://es6console.com) - 開放原始碼的 JavaScript 主控台，用來測試在瀏覽器裡 ES2015 的程式碼
 - [jsconsole.com](http://jsconsole.com/) - 開放原始碼的 JavaScript 主控台，它能輕易的連結一些特定的表達式

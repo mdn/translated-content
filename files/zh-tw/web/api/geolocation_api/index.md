@@ -228,4 +228,4 @@ Firefox 3.6 (Gecko 1.9.2) 新支援了 [GPSD](http://catb.org/gpsd/) (GPS daemon
 
 - [`navigator.geolocation`](/zh-TW/docs/Web/API/window.navigator.geolocation)
 - [w3.org 的 Geolocation API](http://www.w3.org/TR/geolocation-API/)
-- [Geolocation API 相關 Demos](/en-US/demos/tag/tech:geolocation)
+- [Geolocation API 相關 Demos](/zh-TW/demos/tag/tech:geolocation)

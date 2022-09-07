@@ -1,11 +1,6 @@
 ---
 title: 'ARIA: figure ロール'
 slug: Web/Accessibility/ARIA/Roles/Figure_Role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Figure_Role
 ---
 ARIA の図表 (`figure`) ロールは、適切な意味論がまだ存在しないページコンテンツ内の図表を識別するために使用できます。 図表は一般的に、正規のテキストの流れとは異なる方法で情報を伝える、1 つ以上の画像、コードスニペット、またはその他のコンテンツと見なされます。
 

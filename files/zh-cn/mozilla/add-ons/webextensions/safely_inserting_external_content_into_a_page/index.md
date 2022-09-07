@@ -18,7 +18,7 @@ slug: Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_pag
 
 ### DOM 节点创建方法/函数
 
-一个轻量级的方法来插入字符串到页面是使用原生的 DOM 操纵方法/函数: [`document.createElement`](/en-US/docs/Web/API/Document/createElement), [`Element.setAttribute`](/en-US/docs/Web/API/Element/setAttribute), 以及[`Node.textContent`](/en-US/docs/Web/API/Node/textContent). 安全的方法是分别创建节点并使用 textContent 属性赋值：
+一个轻量级的方法来插入字符串到页面是使用原生的 DOM 操纵方法/函数: [`document.createElement`](/zh-CN/docs/Web/API/Document/createElement), [`Element.setAttribute`](/zh-CN/docs/Web/API/Element/setAttribute), 以及[`Node.textContent`](/zh-CN/docs/Web/API/Node/textContent). 安全的方法是分别创建节点并使用 textContent 属性赋值：
 
 ```js example-good
 var data = JSON.parse(responseText);

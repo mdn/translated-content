@@ -1,11 +1,6 @@
 ---
 title: キーボードでナビゲート可能な JavaScript ウィジェット
 slug: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
-tags:
-  - Accessibility
-  - DOM
-  - JavaScript
-translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 ---
 ### 概要
 

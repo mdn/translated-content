@@ -1,17 +1,6 @@
 ---
 title: <image>
 slug: Web/CSS/image
-tags:
-  - CSS
-  - CSS データ型
-  - CSS 画像
-  - データ型
-  - グラフィック
-  - レイアウト
-  - リファレンス
-  - ウェブ
-browser-compat: css.types.image
-translation_of: Web/CSS/image
 ---
 {{CSSRef}}
 

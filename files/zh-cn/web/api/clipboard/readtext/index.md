@@ -39,6 +39,6 @@ navigator.clipboard.readText().then(
 
 ## See also
 
-- [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
+- [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API)
 - {{domxref("Clipboard.writeText()")}}
 - {{domxref("Clipboard.write()")}}

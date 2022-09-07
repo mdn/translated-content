@@ -42,7 +42,7 @@ The block below shows the basic syntax for some common manifest keys.
 
 > **备注：** This is not intended to be used as a copy-paste-ready example. Selecting the keys you'll need depends on the extension you are developing.
 
-For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples).
+For complete example extensions, see [Example extensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Examples).
 
 ```json
 {
@@ -122,7 +122,7 @@ For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Ad
 
 ## 浏览器兼容性
 
-For a full overview of all manifest keys and their sub-keys, see the [full `manifest.json` browser compatibility table](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json).
+For a full overview of all manifest keys and their sub-keys, see the [full `manifest.json` browser compatibility table](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json).
 
 {{Compat("webextensions.manifest")}}
 

@@ -1,13 +1,6 @@
 ---
 title: 印刷
 slug: Web/Guide/Printing
-tags:
-  - DOM
-  - Guide
-  - NeedsContent
-  - NeedsRelocation
-  - printing
-translation_of: Web/Guide/Printing
 ---
 コンテンツを印刷するときに、ウェブサイトまたはアプリケーションで使い勝手を向上させたい場合があります。考えられるシナリオはいくつかあります。
 

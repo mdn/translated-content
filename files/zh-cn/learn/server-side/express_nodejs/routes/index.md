@@ -105,7 +105,7 @@ router.get('/about', (req, res) => {
 
 该回调有三个参数（通常命名为：`req`、`res`、`next`），分别是：HTTP 请求对象、HTTP 响应、中间件链中的下一个函数。
 
-> **备注：** 路由函数就是 [Express 中间件](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware)，这意味着它们必须（通过响应）结束请求，否则必须调用链中的 `next` 函数。上述示例使用`send()` 完成了请求，所以没有使用 `next` 参数（参数表中将其省略）。
+> **备注：** 路由函数就是 [Express 中间件](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware)，这意味着它们必须（通过响应）结束请求，否则必须调用链中的 `next` 函数。上述示例使用`send()` 完成了请求，所以没有使用 `next` 参数（参数表中将其省略）。
 >
 > 上述路由函数只需要一个回调，可以根据需要指定任意数量的回调参数，或一个回调函数数组。每个函数都将加入中间件链，并且将按添加顺序调用（若有回调完成请求则中止当前周期）。
 
@@ -369,7 +369,7 @@ app.use('/catalog', catalogRouter);  // 将 catalog 路由添加进中间件链
   DEBUG=express-locallibrary-tutorial:* npm start
   ```
 
-- 如果设置过 [nodemon](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)，则可以使用：
+- 如果设置过 [nodemon](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)，则可以使用：
 
   ```bash
   DEBUG=express-locallibrary-tutorial:* npm run devstart

@@ -1,12 +1,6 @@
 ---
 title: do...while
 slug: Web/JavaScript/Reference/Statements/do...while
-tags:
-  - JavaScript
-  - Statement
-  - 文
-  - 言語機能
-translation_of: Web/JavaScript/Reference/Statements/do...while
 ---
 {{jsSidebar("Statements")}}
 

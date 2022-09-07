@@ -103,7 +103,7 @@ requestAnimationFrame(draw);
 
 ## 游戏结束——暂时看来！
 
-祝贺你——你完成了本教程的所有小节！现在，你应该已经掌握 canvas 操纵的基础和 2D 游戏背后的逻辑了。是时候去学习一些框架，继续你的游戏开发之旅了！你可以看看本系列的姊妹篇：[用 Phaser 制作 2D 打砖块游戏](/zh-CN/docs/Games/Workflows/2D_breakout_game_Phaser) 或者 [Cyber Orb built in Phaser](/zh-CN/docs/Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation) 。或者，你也可以在 [MDN 游戏区](/en/docs/Games) 中获得灵感和更多知识。
+祝贺你——你完成了本教程的所有小节！现在，你应该已经掌握 canvas 操纵的基础和 2D 游戏背后的逻辑了。是时候去学习一些框架，继续你的游戏开发之旅了！你可以看看本系列的姊妹篇：[用 Phaser 制作 2D 打砖块游戏](/zh-CN/docs/Games/Workflows/2D_breakout_game_Phaser) 或者 [Cyber Orb built in Phaser](/zh-CN/docs/Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation) 。或者，你也可以在 [MDN 游戏区](/zh-CN/docs/Games) 中获得灵感和更多知识。
 
 你也可以回到[本教程的目录页](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch)。祝编程愉快！
 

@@ -1,11 +1,6 @@
 ---
 title: XSLT の概要
 slug: Web/XSLT/Transforming_XML_with_XSLT/An_Overview
-tags:
-  - Transforming_XML_with_XSLT
-  - XML
-  - XSLT
-translation_of: Web/XSLT/Transforming_XML_with_XSLT/An_Overview
 ---
 [« Transforming XML with XSLT](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT)
 

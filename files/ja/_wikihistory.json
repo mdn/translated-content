@@ -31149,29 +31149,9 @@
     "modified": "2020-09-30T15:30:24.568Z",
     "contributors": ["chrisdavidmills", "dvincent"]
   },
-  "conflicting/Web/API/AudioTrackList/addtrack_event": {
-    "modified": "2020-10-15T22:19:07.769Z",
-    "contributors": ["Wind1808"]
-  },
-  "conflicting/Web/API/AudioTrackList/change_event": {
-    "modified": "2020-10-15T22:19:08.012Z",
-    "contributors": ["Wind1808"]
-  },
-  "conflicting/Web/API/AudioTrackList/removetrack_event": {
-    "modified": "2020-10-15T22:19:08.330Z",
-    "contributors": ["Wind1808"]
-  },
   "conflicting/Web/API/Blob": {
     "modified": "2020-10-15T22:03:45.714Z",
     "contributors": ["silverskyvicto", "s-onuma"]
-  },
-  "conflicting/Web/API/BroadcastChannel/message_event": {
-    "modified": "2020-10-15T22:19:53.795Z",
-    "contributors": ["Wind1808"]
-  },
-  "conflicting/Web/API/BroadcastChannel/messageerror_event": {
-    "modified": "2020-10-15T22:19:54.709Z",
-    "contributors": ["Wind1808"]
   },
   "conflicting/Web/API/CredentialsContainer/create": {
     "modified": "2020-10-15T22:26:49.264Z",
@@ -31184,14 +31164,6 @@
   "conflicting/Web/API/Document": {
     "modified": "2020-10-15T22:12:31.952Z",
     "contributors": ["mfuji09"]
-  },
-  "conflicting/Web/API/Document/fullscreenchange_event": {
-    "modified": "2020-10-15T21:46:54.771Z",
-    "contributors": ["mfuji09", "yyss"]
-  },
-  "conflicting/Web/API/Document/fullscreenerror_event": {
-    "modified": "2020-10-15T21:46:52.945Z",
-    "contributors": ["mfuji09", "yyss"]
   },
   "conflicting/Web/API/Element/clientHeight": {
     "modified": "2020-10-15T21:21:06.996Z",
@@ -31253,18 +31225,6 @@
     "modified": "2020-02-11T06:17:04.429Z",
     "contributors": ["tyankatsu", "Marsf"]
   },
-  "conflicting/Web/API/FileReader/abort_event": {
-    "modified": "2020-09-25T19:31:51.509Z",
-    "contributors": ["silverskyvicto"]
-  },
-  "conflicting/Web/API/FileReader/error_event": {
-    "modified": "2020-09-25T19:37:21.563Z",
-    "contributors": ["silverskyvicto"]
-  },
-  "conflicting/Web/API/FileReader/load_event": {
-    "modified": "2019-03-23T22:37:58.368Z",
-    "contributors": ["YuichiNukiyama"]
-  },
   "conflicting/Web/API/File_and_Directory_Entries_API": {
     "modified": "2019-07-23T07:55:55.727Z",
     "contributors": ["SphinxKnight", "Marsf"]
@@ -31293,124 +31253,40 @@
     "modified": "2019-03-23T22:19:48.329Z",
     "contributors": ["Uemmra3", "unarist"]
   },
-  "conflicting/Web/API/HTMLElement/change_event": {
-    "modified": "2020-10-15T21:36:50.058Z",
-    "contributors": ["Marsf", "Kenju"]
-  },
-  "conflicting/Web/API/HTMLElement/drag_event": {
-    "modified": "2020-10-15T22:34:34.036Z",
-    "contributors": ["silverskyvicto"]
-  },
   "conflicting/Web/API/HTMLElement/drag_event_b6e067958f5eb7e5b6c19e73c98fc256": {
     "modified": "2020-10-15T22:07:20.059Z",
     "contributors": ["mfuji09", "fscholz", "8845musign"]
-  },
-  "conflicting/Web/API/HTMLElement/dragend_event": {
-    "modified": "2020-10-15T22:34:33.934Z",
-    "contributors": ["silverskyvicto"]
   },
   "conflicting/Web/API/HTMLElement/dragend_event_2823bae8fed3efe03a09d01597d1cde8": {
     "modified": "2020-10-15T22:15:37.865Z",
     "contributors": ["silverskyvicto", "mfuji09"]
   },
-  "conflicting/Web/API/HTMLElement/dragenter_event": {
-    "modified": "2020-10-15T22:34:32.930Z",
-    "contributors": ["silverskyvicto"]
-  },
   "conflicting/Web/API/HTMLElement/dragenter_event_2dcc7160dcc0241687dce4442238bbf3": {
     "modified": "2020-10-15T22:15:36.335Z",
     "contributors": ["silverskyvicto", "mfuji09"]
-  },
-  "conflicting/Web/API/HTMLElement/dragleave_event": {
-    "modified": "2020-10-15T22:34:32.769Z",
-    "contributors": ["silverskyvicto"]
   },
   "conflicting/Web/API/HTMLElement/dragleave_event_0d933fa977f195f1bf9fd28b1f8051ee": {
     "modified": "2020-10-15T22:15:36.338Z",
     "contributors": ["mfuji09"]
   },
-  "conflicting/Web/API/HTMLElement/dragover_event": {
-    "modified": "2020-10-15T22:34:32.866Z",
-    "contributors": ["silverskyvicto"]
-  },
   "conflicting/Web/API/HTMLElement/dragover_event_6ef4663f0003f0c263a08969c008baf7": {
     "modified": "2020-10-15T22:15:36.096Z",
     "contributors": ["silverskyvicto", "mfuji09"]
-  },
-  "conflicting/Web/API/HTMLElement/dragstart_event": {
-    "modified": "2020-10-15T22:32:39.807Z",
-    "contributors": ["eltociear"]
   },
   "conflicting/Web/API/HTMLElement/dragstart_event_be9da5ef68a2920309b168752ea03d20": {
     "modified": "2020-10-15T22:15:36.359Z",
     "contributors": ["mfuji09"]
   },
-  "conflicting/Web/API/HTMLElement/drop_event": {
-    "modified": "2020-10-15T22:34:33.359Z",
-    "contributors": ["silverskyvicto"]
-  },
   "conflicting/Web/API/HTMLElement/drop_event_21b7ebf04561093fe90276329e9bddff": {
     "modified": "2020-10-15T22:11:44.847Z",
     "contributors": ["silverskyvicto", "mfuji09", "fscholz"]
-  },
-  "conflicting/Web/API/HTMLElement/input_event": {
-    "modified": "2020-10-15T21:48:35.627Z",
-    "contributors": ["Marsf", "YuichiNukiyama"]
-  },
-  "conflicting/Web/API/HTMLFormElement/formdata_event": {
-    "modified": "2020-10-15T22:34:40.776Z",
-    "contributors": ["mfuji09"]
-  },
-  "conflicting/Web/API/HTMLFormElement/reset_event": {
-    "modified": "2019-03-23T23:29:30.841Z",
-    "contributors": ["teoli", "khalid32", "ethertank"]
   },
   "conflicting/Web/API/HTMLInputElement": {
     "modified": "2019-03-23T22:27:32.009Z",
     "contributors": ["MakeNowJust"]
   },
-  "conflicting/Web/API/HTMLInputElement/invalid_event": {
-    "modified": "2020-10-28T07:14:06.761Z",
-    "contributors": ["mpcjazz"]
-  },
-  "conflicting/Web/API/HTMLInputElement/select_event": {
-    "modified": "2020-10-15T21:23:44.292Z",
-    "contributors": ["sutara79", "teoli", "khalid32", "ethertank"]
-  },
-  "conflicting/Web/API/HTMLInputElement/selectionchange_event": {
-    "modified": "2020-10-15T21:49:11.226Z",
-    "contributors": ["mfuji09", "chikoski"]
-  },
-  "conflicting/Web/API/HTMLMediaElement/canplay_event": {
-    "modified": "2020-10-28T06:22:22.159Z",
-    "contributors": ["mpcjazz"]
-  },
-  "conflicting/Web/API/HTMLMediaElement/canplaythrough_event": {
-    "modified": "2020-10-28T06:55:40.744Z",
-    "contributors": ["mpcjazz"]
-  },
-  "conflicting/Web/API/HTMLMediaElement/playing_event": {
-    "modified": "2020-10-15T22:31:36.004Z",
-    "contributors": ["mfuji09"]
-  },
-  "conflicting/Web/API/IDBRequest/success_event": {
-    "modified": "2020-10-15T22:21:11.208Z",
-    "contributors": ["yuna"]
-  },
   "conflicting/Web/API/MediaDevices/getUserMedia": {
     "modified": "2019-03-18T21:40:37.855Z",
-    "contributors": ["e53e04ac"]
-  },
-  "conflicting/Web/API/MediaRecorder/error_event": {
-    "modified": "2020-10-15T22:18:05.909Z",
-    "contributors": ["Wind1808"]
-  },
-  "conflicting/Web/API/MediaStreamTrack/mute_event": {
-    "modified": "2020-10-15T22:00:10.968Z",
-    "contributors": ["YujiSoftware", "e53e04ac"]
-  },
-  "conflicting/Web/API/MediaStreamTrack/unmute_event": {
-    "modified": "2019-03-18T21:45:15.060Z",
     "contributors": ["e53e04ac"]
   },
   "conflicting/Web/API/Navigator/getBattery": {
@@ -31434,25 +31310,9 @@
       "Koyamak"
     ]
   },
-  "conflicting/Web/API/Performance/resourcetimingbufferfull_event": {
-    "modified": "2020-10-15T22:19:53.003Z",
-    "contributors": ["silverskyvicto"]
-  },
   "conflicting/Web/API/Pointer_events": {
     "modified": "2019-03-18T20:45:32.564Z",
     "contributors": ["mfuji09", "YuichiNukiyama"]
-  },
-  "conflicting/Web/API/ServiceWorkerContainer/message_event": {
-    "modified": "2020-10-15T22:29:17.104Z",
-    "contributors": ["Wind1808"]
-  },
-  "conflicting/Web/API/ServiceWorkerGlobalScope/message_event": {
-    "modified": "2020-10-15T21:51:39.149Z",
-    "contributors": ["Wind1808", "YuichiNukiyama"]
-  },
-  "conflicting/Web/API/SpeechRecognition/audiostart_event": {
-    "modified": "2020-10-15T22:14:17.745Z",
-    "contributors": ["Uemmra3", "takaneichinose"]
   },
   "conflicting/Web/API/StorageManager/estimate": {
     "modified": "2020-10-15T22:20:05.823Z",
@@ -31462,115 +31322,8 @@
     "modified": "2020-10-15T22:32:47.070Z",
     "contributors": ["eltociear"]
   },
-  "conflicting/Web/API/VideoTrackList/addtrack_event": {
-    "modified": "2020-10-15T22:19:19.142Z",
-    "contributors": ["Wind1808"]
-  },
-  "conflicting/Web/API/VideoTrackList/change_event": {
-    "modified": "2020-10-15T22:19:29.008Z",
-    "contributors": ["Wind1808"]
-  },
-  "conflicting/Web/API/VideoTrackList/removetrack_event": {
-    "modified": "2020-10-15T22:19:28.819Z",
-    "contributors": ["Wind1808"]
-  },
-  "conflicting/Web/API/WebSocket/close_event": {
-    "modified": "2020-09-25T11:45:51.374Z",
-    "contributors": ["maechabin"]
-  },
-  "conflicting/Web/API/WebSocket/error_event": {
-    "modified": "2020-10-15T22:27:10.724Z",
-    "contributors": ["mfuji09"]
-  },
-  "conflicting/Web/API/WebSocket/message_event": {
-    "modified": "2020-10-15T22:27:03.005Z",
-    "contributors": ["maechabin", "mfuji09"]
-  },
-  "conflicting/Web/API/WebSocket/open_event": {
-    "modified": "2020-10-15T22:27:03.150Z",
-    "contributors": ["Mr.Chenzm", "mfuji09"]
-  },
-  "conflicting/Web/API/Window/afterprint_event": {
-    "modified": "2020-10-15T21:27:41.445Z",
-    "contributors": ["Wind1808", "teoli", "jsx", "abechiyo"]
-  },
-  "conflicting/Web/API/Window/appinstalled_event": {
-    "modified": "2020-10-15T21:49:27.262Z",
-    "contributors": ["Marsf", "YuichiNukiyama"]
-  },
-  "conflicting/Web/API/Window/beforeprint_event": {
-    "modified": "2020-10-15T22:09:32.822Z",
-    "contributors": ["Wind1808", "mfuji09"]
-  },
-  "conflicting/Web/API/Window/beforeunload_event": {
-    "modified": "2020-10-15T21:23:43.857Z",
-    "contributors": [
-      "mogami74",
-      "mfuji09",
-      "naturallucky",
-      "teoli",
-      "khalid32",
-      "ethertank"
-    ]
-  },
-  "conflicting/Web/API/Window/devicemotion_event": {
-    "modified": "2020-10-15T22:28:07.002Z",
-    "contributors": ["mfuji09"]
-  },
-  "conflicting/Web/API/Window/gamepadconnected_event": {
-    "modified": "2020-10-15T22:12:53.034Z",
-    "contributors": ["T.Ukegawa"]
-  },
-  "conflicting/Web/API/Window/gamepaddisconnected_event": {
-    "modified": "2020-10-15T22:12:51.410Z",
-    "contributors": ["Potappo", "T.Ukegawa"]
-  },
-  "conflicting/Web/API/Window/hashchange_event": {
-    "modified": "2020-10-15T21:22:09.270Z",
-    "contributors": ["Wind1808", "teoli", "khalid32", "ethertank", "yoheiMune"]
-  },
-  "conflicting/Web/API/Window/languagechange_event": {
-    "modified": "2020-10-15T22:23:25.951Z",
-    "contributors": ["Wind1808"]
-  },
-  "conflicting/Web/API/Window/load_event": {
-    "modified": "2019-03-23T23:29:36.980Z",
-    "contributors": ["teoli", "jsx", "ethertank"]
-  },
-  "conflicting/Web/API/Window/messageerror_event": {
-    "modified": "2020-10-15T22:23:26.765Z",
-    "contributors": ["Wind1808"]
-  },
-  "conflicting/Web/API/Window/popstate_event": {
-    "modified": "2020-10-15T22:03:55.956Z",
-    "contributors": ["Wind1808", "mfuji09", "YuichiNukiyama"]
-  },
-  "conflicting/Web/API/Window/rejectionhandled_event": {
-    "modified": "2020-10-15T22:23:28.081Z",
-    "contributors": ["Wind1808"]
-  },
-  "conflicting/Web/API/Window/resize_event": {
-    "modified": "2019-03-23T23:35:46.817Z",
-    "contributors": ["YuichiNukiyama", "teoli", "khalid32", "ethertank"]
-  },
   "conflicting/Web/API/Window/scroll": {
     "modified": "2020-10-15T22:32:16.096Z",
-    "contributors": ["mfuji09"]
-  },
-  "conflicting/Web/API/Window/storage_event": {
-    "modified": "2020-10-15T21:50:13.052Z",
-    "contributors": ["Wind1808", "YuichiNukiyama"]
-  },
-  "conflicting/Web/API/Window/unhandledrejection_event": {
-    "modified": "2020-10-15T22:23:28.012Z",
-    "contributors": ["Wind1808"]
-  },
-  "conflicting/Web/API/Window/unload_event": {
-    "modified": "2020-10-15T22:23:30.085Z",
-    "contributors": ["Wind1808"]
-  },
-  "conflicting/Web/API/XMLHttpRequest/loadend_event": {
-    "modified": "2020-10-15T22:34:54.651Z",
     "contributors": ["mfuji09"]
   },
   "conflicting/Web/API/XRInputSource/handedness": {
