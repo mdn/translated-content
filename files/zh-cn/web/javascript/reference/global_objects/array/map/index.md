@@ -132,7 +132,7 @@ const values = Array.prototype.map.call(elems, ({ value }) => value);
 
 ### 使用技巧案例
 
-[(原文地址)](http://www.wirfs-brock.com/allen/posts/166)
+（[原文地址](https://www.wirfs-brock.com/allen/posts/166)）
 
 通常情况下，`map` 方法中的 `callbackFn` 函数只需要接受一个参数，就是正在被遍历的数组元素本身。但这并不意味着 `map` 只给 `callbackFn` 传了一个参数。这个思维惯性可能会让我们犯一个很容易犯的错误。
 
