@@ -1,16 +1,6 @@
 ---
 title: CSSVariableReferenceValue
 slug: Web/API/CSSVariableReferenceValue
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSVariableReferenceValue
-  - Experimental
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/API/CSSVariableReferenceValue
 ---
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 

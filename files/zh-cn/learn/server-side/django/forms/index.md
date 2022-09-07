@@ -605,11 +605,11 @@ urlpatterns += [
 
 ![Form Example: Create Author](forms_example_create_author.png)
 
-输入字段的值，然后按“提交” **Submit** ，保存作者记录。现在，您应该进入新作者的详细视图，其 URL 为 http\://127.0.0.1:8000/catalog/author/10。
+输入字段的值，然后按“提交” **Submit** ，保存作者记录。现在，您应该进入新作者的详细视图，其 URL 为 `http://127.0.0.1:8000/catalog/author/10`。
 
-您可以通过将 /update/ ，附加到详细视图 URL 的末尾，来测试编辑记录（例如 http\://127.0.0.1:8000/catalog/author/10/update/） - 我们不显示截图，因为它看起来就像“创建”页面！
+您可以通过将 /update/ ，附加到详细视图 URL 的末尾，来测试编辑记录（例如 `http://127.0.0.1:8000/catalog/author/10/update/`） - 我们不显示截图，因为它看起来就像“创建”页面！
 
-最后，我们可以删除页面，方法是将删除，附加到作者详细信息视图 URL 的末尾（例如 http\://127.0.0.1:8000/catalog/author/10/delete/）。Django 应该显示如下所示的删除页面。按 "是，删除" **(Yes, delete)**。删除记录，并将其带到所有作者的列表中。
+最后，我们可以删除页面，方法是将删除，附加到作者详细信息视图 URL 的末尾（例如 `http://127.0.0.1:8000/catalog/author/10/delete/`）。Django 应该显示如下所示的删除页面。按 "是，删除" **(Yes, delete)**。删除记录，并将其带到所有作者的列表中。
 
 ![](forms_example_delete_author.png)
 

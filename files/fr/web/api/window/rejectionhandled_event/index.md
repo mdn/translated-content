@@ -54,13 +54,11 @@ window.addEventListener("rejectionhandled", event => {
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                           | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', 'webappapis.html#unhandled-promise-rejections', 'rejectionhandled')}} | {{Spec2('HTML WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.rejectionhandled_event")}}
+{{Compat}}
 
 ## Voir aussi
 

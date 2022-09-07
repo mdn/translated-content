@@ -7,7 +7,7 @@ original_slug: Learn/Forms/How_to_build_custom_form_widgets
 ---
 {{LearnSidebar}}
 
-HTML フォームで使用可能なコントロールだけでは十分でない場合が多くあります。例えば、{{HTMLElement("select")}} 要素のようなコントロールに[高度なスタイル設定を行いたい](/ja/docs/Learn/Forms/Advanced_form_styling "Advanced_styling_for_HTML_forms")場合や、独自の動作を提供したい場合は、あなた独自のコントロールを作成するしかありません。
+HTML フォームで使用可能なコントロールだけでは十分でない場合が多くあります。例えば、{{HTMLElement("select")}} 要素のようなコントロールに[高度なスタイル設定を行いたい](/ja/docs/Learn/Forms/Advanced_form_styling)場合や、独自の動作を提供したい場合は、あなた独自のコントロールを作成するしかありません。
 
 本記事では、そのようなコントロールの作り方を見ていきます。その目的のため、次の例に取り組みます: {{HTMLElement("select")}} 要素の再構築です。このほかに独自コントロール作成をどういう方法でするか、いつするか、またそれが意味をなすのかや、コントロール作成が必須なときに何に気をつけるべきかを扱います。
 
@@ -692,7 +692,7 @@ window.addEventListener('load', () => {
 
 また、ARIA は標準の HTML マークアップにデフォルトで適用されるロールを定義することも特筆に値します。例えば、{{HTMLElement("table")}} 要素はロール `grid` に、{{HTMLElement("ul")}} 要素はロール `list` にマッチします。{{HTMLElement("ul")}} 要素を使用しているため、私たちのコントロールのロール `listbox` が、{{HTMLElement("ul")}} 要素のロール `list` を置き換えるようにしなければなりません。そのために、ロール `presentation` を使用します。このロールは要素に特別な意味はないことを示せるようにするためのものであり、単に情報を与えるために使用されます。これを {{HTMLElement("ul")}} 要素に適用します。
 
-ロール [`listbox`](/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role) をサポートするため、HTML を以下のように更新することが必要です:
+ロール [`listbox`](/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role) に対応するため、HTML を以下のように更新する必要があります。
 
 ```html
 <!-- 最初の要素に role="listbox" 属性を追加します -->
@@ -855,7 +855,7 @@ JavaScript なしで少しの CSS にて、ラジオボタンのリストをス�
 - [その他のフォームコントロール](/ja/docs/Learn/Forms/Other_form_controls)
 - [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)
 - [フォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
-- [クライアントサイドのフォーム検証](/ja/docs/Learn/Forms/Form_validation)
+- [クライアント側のフォーム検証](/ja/docs/Learn/Forms/Form_validation)
 - [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### 上級トピック

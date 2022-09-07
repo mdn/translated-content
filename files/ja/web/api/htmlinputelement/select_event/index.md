@@ -1,15 +1,6 @@
 ---
 title: 'Element: select イベント'
 slug: Web/API/HTMLInputElement/select_event
-tags:
-  - Element
-  - Event
-  - Event Handler
-  - NeedsCompatTable
-  - Reference
-  - UIEvent
-  - イベント
-translation_of: Web/API/Element/select_event
 original_slug: Web/API/Element/select_event
 ---
 {{APIRef}}

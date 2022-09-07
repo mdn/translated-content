@@ -4,7 +4,7 @@ slug: Web/API/notification/dir
 ---
 {{APIRef("Web Notifications")}}
 
-{{domxref("Notification")}} 的\`dir\`是一个只读属性，它表示 Notification 中显示的文本方向 会{{domxref("Notification.Notification","Notification()")}} 构造函数里制定的\`dir\` 属性的值来设定。
+{{domxref("Notification")}} 的 `dir` 是一个只读属性，它表示 Notification 中显示的文本方向 会{{domxref("Notification.Notification","Notification()")}} 构造函数里制定的 `dir` 属性的值来设定。
 
 {{AvailableInWorkers}}
 

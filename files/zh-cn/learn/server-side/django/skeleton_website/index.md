@@ -312,7 +312,7 @@ python3 manage.py migrate
 在开发期间，你首先要使用开发网络服务器和浏览你本机的浏览器，来测试你的网站。
 
 > **备注：** 这个开发网络服务器并不够强大以及不足以用于生产使用，但是它能非常容易得使你在开发期间，获得你的 Django 网站和运行它，以此来进行快速测试。
-> 默认情况下，服务器会开通（http\://127.0.0.1:8000/),但你也可以选择其他端口。有关更多信息，查阅（ [django-admin and manage.py: runserver](https://docs.djangoproject.com/en/1.10/ref/django-admin/#runserver) ）(Django docs).
+> 默认情况下，服务器会开通（`http://127.0.0.1:8000/`),但你也可以选择其他端口。有关更多信息，查阅（[django-admin and manage.py: runserver](https://docs.djangoproject.com/en/1.10/ref/django-admin/#runserver)）(Django docs).
 
 通过调用 `runserver` 命令运行 Web 服务器（与**manage.py**位于同一目录下）：
 

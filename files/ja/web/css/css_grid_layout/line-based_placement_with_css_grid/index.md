@@ -1,11 +1,6 @@
 ---
 title: CSS グリッドにおける線に基づく配置
 slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
-tags:
-  - CSS
-  - CSS グリッド
-  - ガイド
-translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 ---
 {{CSSRef}}
 

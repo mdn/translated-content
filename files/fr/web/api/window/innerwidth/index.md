@@ -47,10 +47,8 @@ Pour changer la taille de la fenêtre, voir {{domxref("window.resizeBy")}} and {
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSSOM View', '#dom-window-innerwidth', 'window.innerWidth')}} | {{Spec2('CSSOM View')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.innerWidth")}}
+{{Compat}}

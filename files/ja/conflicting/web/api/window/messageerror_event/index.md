@@ -1,16 +1,6 @@
 ---
 title: WindowEventHandlers.onmessageerror
 slug: conflicting/Web/API/Window/messageerror_event
-tags:
-  - API
-  - Event Handler
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
-  - WindowEventHandlers
-  - onmessageerror
-translation_of: Web/API/WindowEventHandlers/onmessageerror
 original_slug: Web/API/WindowEventHandlers/onmessageerror
 ---
 {{APIRef("HTML DOM")}}

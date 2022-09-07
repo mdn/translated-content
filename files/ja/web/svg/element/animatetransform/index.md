@@ -44,11 +44,11 @@ translation_of: Web/SVG/Element/animateTransform
 ### グローバル属性
 
 - [条件処理属性](/ja/docs/Web/SVG/Attribute#ConditionalProccessing) »
-- [コア属性](/ja/docs/Web/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [コア属性](/ja/docs/Web/SVG/Attribute#Core) »
 - [アニメーションイベント属性](/ja/docs/Web/SVG/Attribute#AnimationEvent) »
 - [Xlink 属性](/ja/docs/Web/SVG/Attribute#XLink) »
 - [Animation attribute target attributes](/ja/docs/Web/SVG/Attribute#AnimationAttributeTarget) »
-- [アニメーションタイミング属性](/ja/docs/Web/SVG/Attribute#AnimationTiming "en/SVG/Attribute#AnimationTiming") »
+- [アニメーションタイミング属性](/ja/docs/Web/SVG/Attribute#AnimationTiming) »
 - [Animation value attributes](/ja/docs/Web/SVG/Attribute#AnimationValue) »
 - [Animation addition attributes](/ja/docs/Web/SVG/Attribute#AnimationAddition) »
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -62,7 +62,7 @@ translation_of: Web/SVG/Element/animateTransform
 
 ## DOM インターフェース
 
-この属性は [`SVGAnimateTransformElement`](/ja/docs/DOM/SVGAnimateTransformElement "en/DOM/SVGAnimateTransformElement") インターフェースを提供します。
+この属性は [`SVGAnimateTransformElement`](/ja/docs/DOM/SVGAnimateTransformElement) インターフェースを提供します。
 
 ## 仕様
 

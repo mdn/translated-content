@@ -67,7 +67,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/downloads
 - {{WebExtAPIRef("downloads.onErased")}}
   - : 当一个下载从历史中擦除时被 Fires with the `downloadId` 触发。
 - {{WebExtAPIRef("downloads.onChanged")}}
-  - : 当任意一个 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} 的属性期望 `bytesReceived` 改变时，此事件被这个 \`downloadId\` 和包含了变化属性的对象触发。
+  - : 当任意一个 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} 的属性期望 `bytesReceived` 改变时，此事件被这个 `downloadId` 和包含了变化属性的对象触发。
 
 ## Browser compatibility
 

@@ -1,14 +1,6 @@
 ---
 title: HTMLScriptElement
 slug: Web/API/HTMLScriptElement
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - NeedsNewLayout
-  - リファレンス
-browser-compat: api.HTMLScriptElement
-translation_of: Web/API/HTMLScriptElement
 ---
 {{APIRef("HTML DOM")}}
 

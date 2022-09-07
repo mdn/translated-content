@@ -60,7 +60,7 @@ HTML5 引入了 [history.pushState()](/zh-CN/docs/Web/API/History/pushState) 和
 
 ### pushState() 方法的例子
 
-假设在 http\://mozilla.org/foo.html 页面的 console 中执行了以下 JavaScript 代码：
+假设在 `http://mozilla.org/foo.html` 页面的 console 中执行了以下 JavaScript 代码：
 
 ```js
 window.onpopstate = function(e) {
@@ -74,13 +74,13 @@ let stateObj = {
 history.pushState(stateObj, "page 2", "bar.html");
 ```
 
-这将使浏览器地址栏显示为 http\://mozilla.org/bar.html，但并不会导致浏览器加载 `bar.html` ，甚至不会检查`bar.html` 是否存在。
+这将使浏览器地址栏显示为 `http://mozilla.org/bar.html`，但并不会导致浏览器加载 `bar.html` ，甚至不会检查`bar.html` 是否存在。
 
 假如现在用户在 bar.html 点击了返回按钮，将会执行 alert(2)。
 
-假设现在用户在 bar.html 又访问了 http\://google.com，然后点击了返回按钮。此时，地址栏将显示 http\://mozilla.org/bar.html，` history.``state ` 中包含了 `stateObj` 的一份拷贝。页面此时展现为`bar.html`。且因为页面被重新加载了，所以`popstate`事件将不会被触发，也不会执行 alert(2)。
+假设现在用户在 bar.html 又访问了 `http://google.com`，然后点击了返回按钮。此时，地址栏将显示 `http://mozilla.org/bar.html`， `history.state` 中包含了 `stateObj` 的一份拷贝。页面此时展现为`bar.html`。且因为页面被重新加载了，所以 `popstate` 事件将不会被触发，也不会执行 alert(2)。
 
-如果我们再次点击返回按钮，页面 URL 会变为 http\://mozilla.org/foo.html，文档对象 document 会触发另外一个 `popstate` 事件 (如果有 bar.html，且 bar.html 注册了 onpopstate 事件，将会触发此事件，因此也不会执行 foo 页面注册的 onpopstate 事件，也就是不会执行 alert(2))，这一次的事件对象 state object 为 null。 这里也一样，返回并不改变文档的内容，尽管文档在接收 `popstate` 事件时可能会改变自己的内容，其内容仍与之前的展现一致。
+如果我们再次点击返回按钮，页面 URL 会变为 `http://mozilla.org/foo.html`，文档对象 document 会触发另外一个 `popstate` 事件 (如果有 bar.html，且 bar.html 注册了 onpopstate 事件，将会触发此事件，因此也不会执行 foo 页面注册的 onpopstate 事件，也就是不会执行 alert(2))，这一次的事件对象 state object 为 null。 这里也一样，返回并不改变文档的内容，尽管文档在接收 `popstate` 事件时可能会改变自己的内容，其内容仍与之前的展现一致。
 
 如果我们再次点击返回按钮，页面 URL 变为其他页面的 url，依然不会执行 alert(2)。因为在返回到 foo 页面的时候并没有 pushState。
 
@@ -120,7 +120,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 ### replaceState() 方法示例
 
-假设 http\://mozilla.org/foo.html 执行了如下 JavaScript 代码：
+假设 `http://mozilla.org/foo.html` 执行了如下 JavaScript 代码：
 
 ```js
 let stateObj = {
@@ -130,15 +130,15 @@ let stateObj = {
 history.pushState(stateObj, "page 2", "bar.html");
 ```
 
-上文 2 行代码可以在 "pushState() 方法示例" 部分找到。然后，假设 http\://mozilla.org/bar.html 执行了如下 JavaScript：
+上文 2 行代码可以在 "pushState() 方法示例" 部分找到。然后，假设 `http://mozilla.org/bar.html` 执行了如下 JavaScript：
 
 ```js
 history.replaceState(stateObj, "page 3", "bar2.html");
 ```
 
-这将会导致地址栏显示 http\://mozilla.org/bar2.html,，但是浏览器并不会去加载`bar2.html` 甚至都不需要检查 `bar2.html` 是否存在。
+这将会导致地址栏显示 `http://mozilla.org/bar2.html`，但是浏览器并不会去加载`bar2.html` 甚至都不需要检查 `bar2.html` 是否存在。
 
-假设现在用户重新导向到了 http\://www\.microsoft.com，然后点击了回退按钮。这里，地址栏会显示 http\://mozilla.org/bar2.html。假如用户再次点击回退按钮，地址栏会显示 http\://mozilla.org/foo.html，完全跳过了 bar.html。
+假设现在用户重新导向到了 `http://www.microsoft.com`，然后点击了回退按钮。这里，地址栏会显示 `http://mozilla.org/bar2.html`。假如用户再次点击回退按钮，地址栏会显示 `http://mozilla.org/foo.html`，完全跳过了 bar.html。
 
 ### popstate 事件
 

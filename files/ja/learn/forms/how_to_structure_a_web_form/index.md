@@ -182,14 +182,14 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
 
 これらのアイデアを実践し、もう少し複雑なフォーム構造、つまり支払いフォームを作成しましょう。このフォームはあなたがまだ理解していないかもしれないウィジェットタイプをいくつも含みますが、今はそのことを心配しないでください。次の記事 ([基本的なネイティブフォームコントロール](/ja/docs/Learn/Forms/Basic_native_form_controls)) でそれらがどのように機能するのかがわかります。今のところ、以下の説明に沿って説明を注意深く読み、フォームを構成するためにどのラッパー要素を使用しているか、そしてその理由を理解することから始めてください。
 
-1.  あらかじめ、[空のテンプレートファイル](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)と[お支払いフォームの CSS](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) のローカルコピーをコンピューターの新しいディレクトリーに作成します。
-2.  まず最初に、HTML {{htmlelement("head")}} 内に次の行を追加して CSS を HTML に適用します。
+1. あらかじめ、[空のテンプレートファイル](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)と[お支払いフォームの CSS](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) のローカルコピーをコンピューターの新しいディレクトリーに作成します。
+2. まず最初に、HTML {{htmlelement("head")}} 内に次の行を追加して CSS を HTML に適用します。
 
     ```html
     <link href="payment-form.css" rel="stylesheet">
     ```
 
-3.  次に、外側の {{htmlelement("form")}} 要素を追加してフォームを作成します:
+3. 次に、外側の {{htmlelement("form")}} 要素を追加してフォームを作成します:
 
     ```html
     <form>
@@ -197,14 +197,14 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
     </form>
     ```
 
-4.  `<form>` タグ内に、必須フィールドにマークを付ける方法をユーザーに通知するための見出しと段落を追加します:
+4. `<form>` タグ内に、必須フィールドにマークを付ける方法をユーザーに通知するための見出しと段落を追加します:
 
     ```html
     <h1>Payment form</h1>
     <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
     ```
 
-5.  次に、前のエントリーの下に、より大きなコードセクションをフォームに追加します。ここでは、連絡先情報フィールドを個別の {{htmlelement("section")}} 要素内にラップしていることがわかります。さらに、2 つのラジオボタンのセットがあり、それぞれ独自のリスト ({{htmlelement("li")}}) 要素の中に入れています。最後に、2 つの標準テキスト {{htmlelement("input")}} とそれに関連する {{htmlelement("label")}} 要素があり、それぞれ {{htmlelement("p")}} の内側に含まれていて、パスワードを入力するためのパスワード入力があります。フォームにこのコードを追加してください:
+5. 次に、前のエントリーの下に、より大きなコードセクションをフォームに追加します。ここでは、連絡先情報フィールドを個別の {{htmlelement("section")}} 要素内にラップしていることがわかります。さらに、2 つのラジオボタンのセットがあり、それぞれ独自のリスト ({{htmlelement("li")}}) 要素の中に入れています。最後に、2 つの標準テキスト {{htmlelement("input")}} とそれに関連する {{htmlelement("label")}} 要素があり、それぞれ {{htmlelement("p")}} の内側に含まれていて、パスワードを入力するためのパスワード入力があります。フォームにこのコードを追加してください:
 
     ```html
     <section>
@@ -256,7 +256,7 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
     </section>
     ```
 
-6.  それでは、フォームの 2 番目の `<section>` — 支払い情報に目を向けます。ここには 3 つの異なるウィジェットとそのラベルがあり、それぞれ `<p>` の中に含まれています。1 つ目は、クレジットカードの種類を選択するためのドロップダウンメニュー ({{htmlelement("select")}}) です。2 番目は、クレジットカード番号を入力するための `tel` 型の `<input>` 要素です。`number` 型を使うこともできますが、そのスピナー UI は望ましくありません。最後のものは、カードの有効期限を入力するための `date` 型の `<input>` 要素です。これは、サポートしているブラウザーでは日付選択ウィジェットが表示され、サポートしていないブラウザーでは通常のテキスト入力に戻ります。新しい入力タイプは [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)で再度紹介されます。
+6. それでは、フォームの 2 番目の `<section>` — 支払い情報に目を向けます。ここには 3 つの異なるウィジェットとそのラベルがあり、それぞれ `<p>` の中に含まれています。1 つ目は、クレジットカードの種類を選択するためのドロップダウンメニュー ({{htmlelement("select")}}) です。2 番目は、クレジットカード番号を入力するための `tel` 型の `<input>` 要素です。`number` 型を使うこともできますが、そのスピナー UI は望ましくありません。最後のものは、カードの有効期限を入力するための `date` 型の `<input>` 要素です。これは、サポートしているブラウザーでは日付選択ウィジェットが表示され、サポートしていないブラウザーでは通常のテキスト入力に戻ります。新しい入力型は [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)で再度紹介します。
 
     前のセクションの下に次のように入力してください。
 
@@ -291,7 +291,7 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
     </section>
     ```
 
-7.  最後に追加するセクションはもっと単純で、フォームデータを送信するための `submit` タイプの {{htmlelement("button")}} のみを含みます。これをフォームの一番下に追加してください:
+7. 最後に追加するセクションはもっと単純で、フォームデータを送信するための `submit` タイプの {{htmlelement("button")}} のみを含みます。これをフォームの一番下に追加してください:
 
     ```html
     <p> <button type="submit">Validate the payment</button> </p>
@@ -325,7 +325,7 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
 - [フォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
 - [フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
 - [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)
-- [クライアントサイドのフォーム検証](/ja/docs/Learn/Forms/Form_validation)
+- [クライアント側のフォーム検証](/ja/docs/Learn/Forms/Form_validation)
 - [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### 上級トピック

@@ -7,7 +7,7 @@ slug: Web/API/Window/gamepadconnected_event
 ## 基本信息
 
 - 文档
-  - [: Gamepad](http://www.w3.org/TR/gamepad/#the-gamepadconnected-event)
+  - : [Gamepad](http://www.w3.org/TR/gamepad/#the-gamepadconnected-event)
 - 类型
   - : 事件
 - 冒泡

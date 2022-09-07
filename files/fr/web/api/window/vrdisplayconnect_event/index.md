@@ -62,13 +62,11 @@ window.onvrdisplayconnect = function() {
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                       | Commentair          |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('WebVR 1.1', '#dom-window-onvrdisplayconnect', 'vrdisplayconnect')}} | {{Spec2('WebVR 1.1')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.vrdisplayconnect_event")}}
+{{Compat}}
 
 ## Voir aussi
 

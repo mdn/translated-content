@@ -1,12 +1,6 @@
 ---
 title: HTMLLegendElement
 slug: Web/API/HTMLLegendElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-translation_of: Web/API/HTMLLegendElement
 ---
 {{ APIRef("HTML DOM") }}
 

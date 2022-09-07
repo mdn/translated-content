@@ -1,14 +1,6 @@
 ---
 title: column-fill
 slug: Web/CSS/column-fill
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.column-fill
-translation_of: Web/CSS/column-fill
 ---
 {{CSSRef}}
 

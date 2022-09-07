@@ -9,7 +9,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError
 
 ## Syntax
 
-    new WebAssembly.RuntimeError(message, fileName, lineNumber)
+```js
+new WebAssembly.RuntimeError(message, fileName, lineNumber)
+```
 
 ### Parameters
 

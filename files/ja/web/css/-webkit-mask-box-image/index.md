@@ -1,15 +1,6 @@
 ---
 title: '-webkit-mask-box-image'
 slug: Web/CSS/-webkit-mask-box-image
-tags:
-  - CSS
-  - レイアウト
-  - 標準外
-  - リファレンス
-  - ウェブ
-  - recipe:css-property
-browser-compat: css.properties.-webkit-mask-box-image
-translation_of: Web/CSS/-webkit-mask-box-image
 ---
 {{ CSSRef() }} {{ Non-standard_header() }}
 

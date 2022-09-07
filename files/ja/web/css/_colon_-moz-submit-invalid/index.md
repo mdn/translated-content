@@ -1,16 +1,6 @@
 ---
 title: ':-moz-submit-invalid'
 slug: Web/CSS/:-moz-submit-invalid
-tags:
-  - ':-moz-submit-invalid'
-  - CSS
-  - CSS:Mozilla 拡張
-  - 標準外
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.-moz-submit-invalid
-translation_of: Web/CSS/:-moz-submit-invalid
 ---
 {{CSSRef}}{{Non-standard_Header}}
 

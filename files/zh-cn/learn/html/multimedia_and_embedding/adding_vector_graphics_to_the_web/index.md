@@ -135,7 +135,7 @@ background-size: contain;
 
 ### 如何在 HTML 中引入 SVG 代码
 
-你还可以在文本编辑器中打开 SVG 文件，复制 SVG 代码，并将其粘贴到 HTML 文档中 - 这有时称为将**SVG 内联**或**内联 SVG**。确保您的 SVG 代码在[`<svg></svg>`](/en-US/docs/Web/SVG/Element/svg)标签中（不要在外面添加任何内容）。这是一个非常简单的示例，您可以粘贴到文档中：
+你还可以在文本编辑器中打开 SVG 文件，复制 SVG 代码，并将其粘贴到 HTML 文档中 - 这有时称为将**SVG 内联**或**内联 SVG**。确保您的 SVG 代码在[`<svg></svg>`](/zh-CN/docs/Web/SVG/Element/svg)标签中（不要在外面添加任何内容）。这是一个非常简单的示例，您可以粘贴到文档中：
 
 ```html
 <svg width="300" height="200">
@@ -321,7 +321,7 @@ textarea.onkeyup = function(){
 
 ## 相关链接
 
-- [SVG tutorial](/en-US/docs/Web/SVG/Tutorial/Getting_Started) on MDN
+- [SVG tutorial](/zh-CN/docs/Web/SVG/Tutorial/Getting_Started) on MDN
 - [Quick tips for responsive SVGs](http://thenewcode.com/744/Making-SVG-Responsive)
 - [Sara Soueidan's tutorial on responsive SVG images](http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
 - [Accessibility benefits of SVG](http://www.w3.org/TR/SVG-access/)
@@ -331,9 +331,9 @@ textarea.onkeyup = function(){
 
 ## 在这个模块中
 
-- [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [From \<object> to \<iframe> — other embedding technologies](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Adding vector graphics to the Web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla splash page](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)
+- [Images in HTML](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Video and audio content](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [From \<object> to \<iframe> — other embedding technologies](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
+- [Adding vector graphics to the Web](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
+- [Responsive images](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Mozilla splash page](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

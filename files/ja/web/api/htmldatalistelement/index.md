@@ -1,14 +1,6 @@
 ---
 title: HTMLDataListElement
 slug: Web/API/HTMLDataListElement
-page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-browser-compat: api.HTMLDataListElement
-translation_of: Web/API/HTMLDataListElement
 l10n:
   sourceCommit: d766739f2a7c02812a0a15a0383588c2ada4e6bd
 ---

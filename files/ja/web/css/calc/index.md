@@ -1,19 +1,7 @@
 ---
 title: calc()
 slug: Web/CSS/calc
-tags:
-  - CSS
-  - CSS 関数
-  - 計算
-  - 演算
-  - 関数
-  - レイアウト
-  - リファレンス
-  - ウェブ
-  - calc
-translation_of: Web/CSS/calc()
 original_slug: Web/CSS/calc()
-browser-compat: css.types.calc
 ---
 {{CSSRef}}
 

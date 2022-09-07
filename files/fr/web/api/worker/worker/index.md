@@ -53,15 +53,11 @@ Pour un exemple complet, consultez notre [exemple basique d'un worker dédié](h
 
 ## Spécifications
 
-| Spécification                                                            | Statut                           | Commentaire |
-| ------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#dom-worker", "Worker()")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Worker.Worker")}}
-
-> **Note :** Un navigateur peut indiquer avoir un support complet de `Worker()` même s'il ne supporte pas les fichiers worker écrit comme des modules. À partir du premier août 2019, aucun navigateur n'est connu pour avoir un support en production des fichiers _worker_ écrit comme des modules. Sans ces suppports, les fichiers _workers_ écrit sous forme de module et les modules utilisés dans les workers doivent être transpilés ou convertis en non-module pour être utilisables.
+{{Compat}}
 
 ## Voir aussi
 

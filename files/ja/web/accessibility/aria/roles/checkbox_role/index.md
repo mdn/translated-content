@@ -142,4 +142,4 @@ ARIA の第一のルールは、ネイティブな HTML の要素や属性に必
 - [ARIA: switch ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Switch_role)
 - [ARIA: option ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Option_role)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

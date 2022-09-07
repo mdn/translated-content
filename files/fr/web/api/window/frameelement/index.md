@@ -37,13 +37,11 @@ if (frameEl) {
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire             |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-frameelement', 'Window.frameElement')}} | {{ Spec2('WebRTC 1.0') }} | Spécification initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.frameElement")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -16,7 +16,7 @@ translation_of: Web/XSLT/Element/otherwise
 
 ```
 <xsl:otherwise>
-	TEMPLATE
+  TEMPLATE
 </xsl:otherwise>
 ```
 

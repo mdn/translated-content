@@ -1,15 +1,6 @@
 ---
 title: HTMLElement.enterKeyHint
 slug: Web/API/HTMLElement/enterKeyHint
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - プロパティ
-  - リファレンス
-  - キーボード
-browser-compat: api.HTMLElement.enterKeyHint
-translation_of: Web/API/HTMLElement/enterKeyHint
 ---
 {{APIRef("HTML DOM")}}
 

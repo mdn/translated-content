@@ -48,13 +48,11 @@ var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documen
 
 ## Spécifications
 
-| Spécification                                                                                | Status                           | Commentaire(s) |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------- |
-| {{ SpecName('CSSOM View', '#dom-window-scrolly', 'window.scrollY') }} | {{ Spec2('CSSOM View') }} |                |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.scrollY")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -318,7 +318,7 @@ HTMLElement("progress")}} と {{HTMLElement("meter")}} の対応はかなり良�
 - [フォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
 - [フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
 - [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)
-- [クライアントサイドのフォーム検証](/ja/docs/Learn/Forms/Form_validation)
+- [クライアント側のフォーム検証](/ja/docs/Learn/Forms/Form_validation)
 - [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### 上級トピック

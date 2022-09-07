@@ -19,7 +19,7 @@ browser.tabs.onActivated.hasListener(listener)
 - `removeListener(listener)`
   - : 停止监听此事件。 `listener` 参数是将要移除的监听。
 - `hasListener(listener)`
-  - : 检查 `listener` 是否在此事件中注册。如果正在监听返回 `true` ，否则 `false。`
+  - : 检查 `listener` 是否在此事件中注册。如果正在监听返回 `true` ，否则 `false`。
 
 ## addListener 语法
 

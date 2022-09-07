@@ -30,7 +30,7 @@ web 浏览器的软件中有很多活动的程序片段，而许多片段 web �
 
 ![](document-window-navigator.png)
 
-- window 是载入浏览器的标签，在 JavaScript 中用{{domxref("Window")}}对象来表示，使用这个对象的可用方法，你可以返回窗口的大小（参见{{domxref("Window.innerWidth")}}和{{domxref("Window.innerHeight")}}），操作载入窗口的文档，存储客户端上文档的特殊数据（例如使用本地数据库或其他存储设备），为当前窗口绑定[event handler](/en-US/docs/Learn/JavaScript/Building_blocks/Events#A_series_of_fortunate_events)，等等。
+- window 是载入浏览器的标签，在 JavaScript 中用{{domxref("Window")}}对象来表示，使用这个对象的可用方法，你可以返回窗口的大小（参见{{domxref("Window.innerWidth")}}和{{domxref("Window.innerHeight")}}），操作载入窗口的文档，存储客户端上文档的特殊数据（例如使用本地数据库或其他存储设备），为当前窗口绑定[event handler](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#A_series_of_fortunate_events)，等等。
 - navigator 表示浏览器存在于 web 上的状态和标识（即用户代理）。在 JavaScript 中，用{{domxref("Navigator")}}来表示。你可以用这个对象获取一些信息，比如来自用户摄像头的地理信息、用户偏爱的语言、多媒体流等等。
 - document（在浏览器中用 DOM 表示）是载入窗口的实际页面，在 JavaScript 中用{{domxref("Document")}} 对象表示，你可以用这个对象来返回和操作文档中 HTML 和 CSS 上的信息。例如获取 DOM 中一个元素的引用，修改其文本内容，并应用新的样式，创建新的元素并添加为当前元素的子元素，甚至把他们一起删除。
 
@@ -100,7 +100,7 @@ web 浏览器的软件中有很多活动的程序片段，而许多片段 web �
     link.href = 'https://developer.mozilla.org';
     ```
 
-注意，和 JavaScript 中的许多事情一样，有很多方法可以选择一个元素，并在一个变量中存储一个引用。{{domxref("Document.querySelector()")}}是推荐的主流方法，它允许你使用 CSS 选择器选择元素，使用很方便。上面的`querySelector()`调用会匹配它在文档中遇到的第一个{{htmlelement("a")}}元素。如果想对多个元素进行匹配和操作，你可以使用{{domxref("Document.querySelectorAll()")}}，这个方法匹配文档中每个匹配选择器的元素，并把它们的引用存储在一个[array](/en-US/docs/Learn/JavaScript/First_steps/Arrays)中。
+注意，和 JavaScript 中的许多事情一样，有很多方法可以选择一个元素，并在一个变量中存储一个引用。{{domxref("Document.querySelector()")}}是推荐的主流方法，它允许你使用 CSS 选择器选择元素，使用很方便。上面的`querySelector()`调用会匹配它在文档中遇到的第一个{{htmlelement("a")}}元素。如果想对多个元素进行匹配和操作，你可以使用{{domxref("Document.querySelectorAll()")}}，这个方法匹配文档中每个匹配选择器的元素，并把它们的引用存储在一个[array](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)中。
 
 对于获取元素引用，还有一些更旧的方法，如：
 
@@ -191,7 +191,7 @@ linkPara.parentNode.removeChild(linkPara);
     para.style.textAlign = 'center';
     ```
 
-2. 重新载入页面，你将看到样式已经应用到段落中。如果在浏览器的[Page Inspector/DOM inspector](/en-US/docs/Tools/Page_Inspector)中查看段落，你会看到这些代码的确为文档添加了内联样式：
+2. 重新载入页面，你将看到样式已经应用到段落中。如果在浏览器的[Page Inspector/DOM inspector](/zh-CN/docs/Tools/Page_Inspector)中查看段落，你会看到这些代码的确为文档添加了内联样式：
 
     ```html
     <p style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;">We hope you enjoyed the ride.</p>
@@ -285,15 +285,15 @@ linkPara.parentNode.removeChild(linkPara);
 
 1. 首先，下载[shopping-list.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list.html)文件，并存入本地。你会看到它有一些极小的 CSS，一个带有 label、input 和 button 的 list 和一个空的 list 以及{{htmlelement("script")}} 元素。要添加的所有程序都在 script 里面。
 2. 创建三个变量来保存 list({{htmlelement("ul")}})、{{htmlelement("input")}}和{{htmlelement("button")}}元素的引用。
-3. 创建一个[函数](/en-US/docs/Learn/JavaScript/Building_blocks/Functions)响应点击按钮。
-4. 在函数体内，开始要在一个变量中存储输入框的当前[值](/en-US/docs/Web/API/HTMLInputElement#Properties)。
+3. 创建一个[函数](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions)响应点击按钮。
+4. 在函数体内，开始要在一个变量中存储输入框的当前[值](/zh-CN/docs/Web/API/HTMLInputElement#Properties)。
 5. 然后，为输入框元素设置空字符 - `''`使其为空
 6. 创建三个新元素 — 一个 list 项（{{htmlelement('li')}}），{{htmlelement('span')}}和 {{htmlelement('button')}}，并把它们存入变量之中。
 7. 把 span 和 button 作为 list 项的子节点。
 8. 把之前保存的输入框元素的值设置为 span 的文本内容，按钮的文本内容设置为'Delete'
 9. 把 list 项设置为 list 的子节点。
 10. 为删除按钮绑定事件处理程序。当点击按钮时，删除它所在的整个 list 项。
-11. 最后，使用[`focus()`](/en-US/docs/Web/API/HTMLElement/focus)方法聚焦输入框准备输入下一个购物项。
+11. 最后，使用[`focus()`](/zh-CN/docs/Web/API/HTMLElement/focus)方法聚焦输入框准备输入下一个购物项。
 
 > **备注：** 如果你卡住了，请查看[finished shopping list](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list-finished.html) ([see it running live also](http://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html).)
 

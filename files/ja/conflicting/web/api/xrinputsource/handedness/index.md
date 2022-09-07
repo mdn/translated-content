@@ -1,22 +1,6 @@
 ---
 title: XRHandedness
 slug: conflicting/Web/API/XRInputSource/handedness
-tags:
-  - API
-  - AR
-  - Enum
-  - Enumerated Type
-  - Handedness
-  - Reference
-  - Type
-  - VR
-  - WebXR
-  - WebXR Device API
-  - XRHandedness
-  - hand
-  - left
-  - right
-translation_of: Web/API/XRHandedness
 original_slug: Web/API/XRHandedness
 ---
 {{APIRef("WebXR")}}

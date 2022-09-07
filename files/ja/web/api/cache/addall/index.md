@@ -1,13 +1,6 @@
 ---
 title: Cache.addAll()
 slug: Web/API/Cache/addAll
-tags:
-  - API
-  - Cache
-  - addAll
-  - サービスワーカー
-  - サービスワーカー API
-translation_of: Web/API/Cache/addAll
 ---
 {{APIRef("Service Workers API")}}
 

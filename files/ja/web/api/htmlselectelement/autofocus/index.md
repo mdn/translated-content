@@ -1,14 +1,6 @@
 ---
 title: HTMLSelectElement.autofocus
 slug: Web/API/HTMLSelectElement/autofocus
-tags:
-  - API
-  - HTML フォーム
-  - HTMLSelectElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLSelectElement.autofocus
-translation_of: Web/API/HTMLSelectElement/autofocus
 ---
 {{ APIRef("HTML DOM") }}
 

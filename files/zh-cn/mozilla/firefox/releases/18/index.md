@@ -28,7 +28,7 @@ Firefox 18 已于 2013 年 1 月 8 日发布。
 - 删除了{{domxref("BlobBuilder", "MozBlobBuilder")}}.开发者们应该使用{{domxref("Blob")}}构造函数来创建`Blob对象`. ({{bug("744907")}})
 - {{event("visibilitychange")}}事件和[页面可见性 API](/zh-CN/docs/DOM/Using_the_Page_Visibility_API)取消前缀{{bug("812086")}}).
 - `实现了TextDecoder`和`TextEncoder` .({{bug("764234")}})
-- ` HTMLMediaElement``.src `被分成了两个属性：一个是标准的`src属性`,返回普通的字符串{{domxref("DOMString")}},另一个是带前缀的`mozSrcObject`属性，返回[media streams](/zh-CN/docs/WebRTC/MediaStream_API) ({{bug("792665")}}).
+- `HTMLMediaElement.src` 被分成了两个属性：一个是标准的`src属性`,返回普通的字符串{{domxref("DOMString")}},另一个是带前缀的`mozSrcObject`属性，返回[media streams](/zh-CN/docs/WebRTC/MediaStream_API) ({{bug("792665")}}).
 
 ### JavaScript
 

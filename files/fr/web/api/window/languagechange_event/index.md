@@ -54,15 +54,13 @@ window.onlanguagechange = function(event) {
 };
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                    | Statut                               |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| {{ SpecName('HTML WHATWG', 'indices.html#event-languagechange', 'languagechange') }} | {{ Spec2('HTML WHATWG') }} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.languagechange_event")}}
+{{Compat}}
 
 ## Voir aussi
 

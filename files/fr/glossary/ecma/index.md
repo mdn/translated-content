@@ -12,7 +12,7 @@ original_slug: Glossaire/ECMA
 
 Sur internet, Ecma est célèbre pour être l'organisation qui maintient [la spécification ECMA-262](http://www.ecma-international.org/publications/standards/Ecma-262.htm) (alias. {{Glossary("ECMAScript")}}) qui est le cœur de la spécification pour le langage {{Glossary("JavaScript")}}.
 
-## En savoir plus
+## Voir aussi
 
 - [Ecma International](https://fr.wikipedia.org/wiki/Ecma_International) sur Wikipédia
 - [Le site officiel Ecma International](http://www.ecma-international.org/)

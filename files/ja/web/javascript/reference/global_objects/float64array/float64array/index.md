@@ -92,6 +92,6 @@ var dv = new Float64Array([1, 2, 3]);
 
 ## 関連情報
 
-- [JavaScript typed arrays](/ja/docs/Web/JavaScript/Typed_arrays "en/JavaScript typed arrays")
+- [JavaScript typed arrays](/ja/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

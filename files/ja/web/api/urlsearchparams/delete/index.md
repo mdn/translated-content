@@ -1,13 +1,6 @@
 ---
 title: URLSearchParams.delete()
 slug: Web/API/URLSearchParams/delete
-tags:
-  - API
-  - Method
-  - URL API
-  - URLSearchParams
-  - delete
-translation_of: Web/API/URLSearchParams/delete
 ---
 {{ApiRef("URL API")}}
 

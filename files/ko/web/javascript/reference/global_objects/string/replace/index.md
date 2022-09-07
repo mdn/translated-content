@@ -14,7 +14,9 @@ pattern이 문자열 인 경우, 첫 번째 문자열만 치환이 되며 원래
 
 ## 구문
 
-    var newStr = str.replace(regexp|substr, newSubstr|function)
+```js
+var newStr = str.replace(regexp|substr, newSubstr|function)
+```
 
 ### 매개변수
 
@@ -57,7 +59,7 @@ pattern이 문자열 인 경우, 첫 번째 문자열만 치환이 되며 원래
 
 | Possible name | Supplied value                                                                                                                                                         |
 | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `match`       | 매치된 문자열. (윗쪽의 `$& `표현식으로 매치된 경우와 동일합니다.)                                                                                                      |
+| `match`       | 매치된 문자열. (윗쪽의 `$&` 표현식으로 매치된 경우와 동일합니다.)                                                                                                      |
 | `p1, p2, ...` | 윗쪽의 $n 표현식과 동일합니다. (`$1`은 `p1`, `$2`는 `p2`...) 예를 들어, 만약 정규표현식 `/(\a+)(\b+)/` 이 주어진다면`p1`은 `\a+`와 매치되고 `p2`는 `\b+`와 매치됩니다. |
 | `offset`      | 조사된 전체 문자열 중에서 매치된 문자열의 `index.`(예를 들어, 조사될 전체 문자열이 `abcd`이고, 매치된 문자열이 `bc`면 이 매개변수의 값은 1이 됩니다.)                  |
 | `string`      | 조사된 전체 문자열 (`replace`를 호출한 `string`)                                                                                                                       |
@@ -66,12 +68,14 @@ pattern이 문자열 인 경우, 첫 번째 문자열만 치환이 되며 원래
 
 다음 예제는 `newString`을 `'abc - 12345 - #$*%'`로 교체합니다:
 
-    function replacer(match, p1, p2, p3, offset, string) {
-      // p1 is nondigits, p2 digits, and p3 non-alphanumerics
-      return [p1, p2, p3].join(' - ');
-    }
-    var newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
-    console.log(newString);  // abc - 12345 - #$*%
+```js
+function replacer(match, p1, p2, p3, offset, string) {
+  // p1 is nondigits, p2 digits, and p3 non-alphanumerics
+  return [p1, p2, p3].join(' - ');
+}
+var newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
+console.log(newString);  // abc - 12345 - #$*%
+```
 
 ## 예제
 
@@ -163,10 +167,12 @@ The following example takes a string pattern and converts it into an array of ob
 
 A string made out of the characters `x`, `-` and `_`
 
-    x-x_
-    x---x---x---x---
-    x-xxx-xx-x-
-    x_x_x___x___x___
+```
+x-x_
+x---x---x---x---
+x-xxx-xx-x-
+x_x_x___x___x___
+```
 
 **Output:**
 

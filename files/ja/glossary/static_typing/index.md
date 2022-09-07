@@ -1,11 +1,6 @@
 ---
 title: Static typing (静的型付け)
 slug: Glossary/Static_typing
-tags:
-  - CodingScripting
-  - Glossary
-  - Type
-translation_of: Glossary/Static_typing
 l10n:
   sourceCommit: 0ed71747051ea80a842c7b4dc16765cf97ad2122
 ---

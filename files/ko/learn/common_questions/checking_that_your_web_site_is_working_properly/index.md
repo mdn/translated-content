@@ -1,7 +1,6 @@
 ---
 title: 웹 사이트가 제대로 동작하는지 확인하는 방법
 slug: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
-translation_of: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
 original_slug: Learn/Common_questions/웹_사이트가_제대로_동작하는지_확인
 ---
 이번에는 웹사이트 동작과 관련한 다양한 문제해결 단계와 그 문제들을 해결하기 위한 방법들을 알아보겠습니다.
@@ -122,7 +121,7 @@ Open the console (**Tools ➤ Web developer ➤ Web Console**) and reload the pa
 
 ![A Javascript error is shown in the Console](https://mdn.mozillademos.org/files/9659/js-error.png)
 
-In this example, we learn (quite clearly) what the error is, and we can go fix it (we will cover JavaScript in [another series ](/en-US/Learn/JavaScript)of articles).
+In this example, we learn (quite clearly) what the error is, and we can go fix it (we will cover JavaScript in [another series](/en-US/Learn/JavaScript) of articles).
 
 ### More things to check
 

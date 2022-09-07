@@ -97,7 +97,7 @@ alert(results.length);
 
 ### docEvaluateArray
 
-以下は、ネームスペースリゾルバなどの特別な必要性に関わらず、XPath の結果を配列に取得（順序づけ）する簡単なユーティリティ関数です。そうでない場合は、[`document.evaluate()`](/ja/docs/Web/API/document/evaluate "en/DOM/document.evaluate")のより複雑な構文は避けてください [`XPathResult`](/ja/docs/Web/API/XPathResult "en/XPathResult")の特別なイテレータ（代わりに配列を返す）を使用する必要があります。
+以下は、ネームスペースリゾルバなどの特別な必要性に関わらず、XPath の結果を配列に取得（順序づけ）する簡単なユーティリティ関数です。そうでない場合は、[`document.evaluate()`](/ja/docs/Web/API/document/evaluate)のより複雑な構文は避けてください [`XPathResult`](/ja/docs/Web/API/XPathResult)の特別なイテレータ（代わりに配列を返す）を使用する必要があります。
 
 ##### 例: シンプルな `docEvaluateArray​()` ユーティリティ関数を定義する
 
@@ -128,32 +128,32 @@ function docEvaluateArray (expr, doc, context, resolver) {
 
 ```js
 function getXPathForElement(el, xml) {
-	var xpath = '';
-	var pos, tempitem2;
+  var xpath = '';
+  var pos, tempitem2;
 
-	while(el !== xml.documentElement) {
-		pos = 0;
-		tempitem2 = el;
-		while(tempitem2) {
-			if (tempitem2.nodeType === 1 && tempitem2.nodeName === el.nodeName) { // If it is ELEMENT_NODE of the same name
-				pos += 1;
-			}
-			tempitem2 = tempitem2.previousSibling;
-		}
+  while(el !== xml.documentElement) {
+    pos = 0;
+    tempitem2 = el;
+    while(tempitem2) {
+      if (tempitem2.nodeType === 1 && tempitem2.nodeName === el.nodeName) { // If it is ELEMENT_NODE of the same name
+        pos += 1;
+      }
+      tempitem2 = tempitem2.previousSibling;
+    }
 
-		xpath = "*[name()='"+el.nodeName+"' and namespace-uri()='"+(el.namespaceURI===null?'':el.namespaceURI)+"']["+pos+']'+'/'+xpath;
+    xpath = "*[name()='"+el.nodeName+"' and namespace-uri()='"+(el.namespaceURI===null?'':el.namespaceURI)+"']["+pos+']'+'/'+xpath;
 
-		el = el.parentNode;
-	}
-	xpath = '/*'+"[name()='"+xml.documentElement.nodeName+"' and namespace-uri()='"+(el.namespaceURI===null?'':el.namespaceURI)+"']"+'/'+xpath;
-	xpath = xpath.replace(/\/$/, '');
-	return xpath;
+    el = el.parentNode;
+  }
+  xpath = '/*'+"[name()='"+xml.documentElement.nodeName+"' and namespace-uri()='"+(el.namespaceURI===null?'':el.namespaceURI)+"']"+'/'+xpath;
+  xpath = xpath.replace(/\/$/, '');
+  return xpath;
 }
 ```
 
 ### 関連資料
 
-- [XPath](/ja/docs/Web/XPath "en/XPath")
+- [XPath](/ja/docs/Web/XPath)
 - [Forum discussion on this topic](http://forums.mozillazine.org/viewtopic.php?t=229106)
 
 ## 合わせてお読みください

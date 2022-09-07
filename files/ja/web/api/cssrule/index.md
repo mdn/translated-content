@@ -1,13 +1,6 @@
 ---
 title: CSSRule
 slug: Web/API/CSSRule
-tags:
-  - API
-  - CSSOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.CSSRule
-translation_of: Web/API/CSSRule
 ---
 {{APIRef("CSSOM")}}
 

@@ -1,15 +1,6 @@
 ---
 title: 'HTMLMediaElement: canplay イベント'
 slug: Web/API/HTMLMediaElement/canplay_event
-page-type: web-api-event
-tags:
-  - Audio
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Video
-browser-compat: api.HTMLMediaElement.canplay_event
-translation_of: Web/API/HTMLMediaElement/canplay_event
 ---
 {{APIRef("HTMLMediaElement")}}
 

@@ -1,13 +1,6 @@
 ---
 title: Document.onoffline
 slug: Web/API/Window/offline_event
-tags:
-  - API
-  - DOM
-  - NeedsContent
-  - Property
-  - Reference
-translation_of: Web/API/Document/onoffline
 original_slug: Web/API/Document/onoffline
 ---
 {{APIRef("DOM")}}

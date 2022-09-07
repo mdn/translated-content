@@ -1,16 +1,6 @@
 ---
 title: Window.prompt()
 slug: Web/API/Window/prompt
-tags:
-  - API
-  - HTML DOM
-  - MakeBrowserAgnostic
-  - メソッド
-  - リファレンス
-  - Window
-  - prompt
-browser-compat: api.Window.prompt
-translation_of: Web/API/Window/prompt
 ---
 {{ApiRef("Window")}}
 

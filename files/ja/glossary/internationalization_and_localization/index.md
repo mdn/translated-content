@@ -1,11 +1,6 @@
 ---
 title: Internationalization (国際化)
 slug: Glossary/Internationalization_and_localization
-tags:
-  - Glossary
-  - Internationalization
-  - Reference
-translation_of: Glossary/Internationalization_and_localization
 l10n:
   sourceCommit: 4a43f2f9af30db0721b0150909615f5fe9b041a4
 ---

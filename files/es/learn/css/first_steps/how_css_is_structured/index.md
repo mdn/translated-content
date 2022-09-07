@@ -306,7 +306,7 @@ Esto se traduce así:
 
 {{EmbedLiveSample('calc_example', '100%', 200)}}
 
-##
+## Ejemplo
 
 Una función consta del nombre de la función y, a continuación, unos paréntesis entre los que se colocan los valores permitidos para esa función. En el caso del ejemplo `calc()` anterior, pedimos que el ancho de esta caja sea del 90% del ancho del bloque que la contiene, menos 30 píxeles. Esto no es algo que podamos calcular con anticipación y simplemente introducir el valor en el CSS, ya que no sabemos cuál será el 90%. Como con todos los valores, la página correspondiente del proyecto MDN tendrá ejemplos de uso para que puedas ver cómo funciona.
 
@@ -551,8 +551,8 @@ Resulta útil entender un poco cómo el navegador toma tu HTML y tu CSS y los co
 
 ## En este modulo
 
-1.  [¿Qué es el CSS?](/es/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [Empezar con el CSS](/es/docs/Learn/CSS/First_steps/Getting_started)
-3.  [Cómo se estructura el CSS](/es/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [Cómo funciona CSS](/es/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [Pon en práctica tus conocimientos nuevos](/es/docs/Learn/CSS/First_steps/Styling_a_biography_page)
+1. [¿Qué es el CSS?](/es/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [Empezar con el CSS](/es/docs/Learn/CSS/First_steps/Getting_started)
+3. [Cómo se estructura el CSS](/es/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [Cómo funciona CSS](/es/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [Pon en práctica tus conocimientos nuevos](/es/docs/Learn/CSS/First_steps/Styling_a_biography_page)

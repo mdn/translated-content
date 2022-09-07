@@ -72,7 +72,7 @@ Los estilos predeterminados del navegador mostrarán listas de descripciones con
 
 {{ EmbedLiveSample('listas-de-descripciones-ejemplo-activo-1', '100%', '285px', '', '', 'hide-codepen-jsfiddle') }}
 
-#
+## Ejemplo
 
 Ten en cuenta que un solo término puede tener múltiples descripciones, por ejemplo:
 
@@ -233,7 +233,7 @@ Si una sección de contenido a nivel de bloque (ya sea un párrafo, varios párr
 en bloque independiente</em>) indica que el texto al que delimita es una cita ampliada.</p>
 ```
 
-##
+## Ejemplo
 
 Para convertir esto en una cita en bloque independiente, simplemente harías lo siguiente:
 
@@ -291,9 +291,9 @@ Las citas se escriben en cursiva de forma predeterminada.
 
 ¡Es hora de otro ejemplo de aprendizaje activo! En este ejemplo, nos gustaría que:
 
-1.  Conviertas el párrafo del medio en una cita en bloque independiente, que incluya un atributo `cite`.
-2.  Conviertas "La necesidad de eliminar el diálogo interno negativo" en el tercer párrafo en una cita en línea e incluya un atributo `cite`.
-3.  Envuelvas el título de cada fuente en etiquetas `<cite>` y conviertas cada una en un enlace a esa fuente.
+1. Conviertas el párrafo del medio en una cita en bloque independiente, que incluya un atributo `cite`.
+2. Conviertas "La necesidad de eliminar el diálogo interno negativo" en el tercer párrafo en una cita en línea e incluya un atributo `cite`.
+3. Envuelvas el título de cada fuente en etiquetas `<cite>` y conviertas cada una en un enlace a esa fuente.
 
 Las fuentes de citación que necesitas son:
 

@@ -1,11 +1,6 @@
 ---
 title: MDN の動画コンテンツ
 slug: MDN/Writing_guidelines/Howto/Images_media
-tags:
-  - ガイドライン
-  - メタ
-  - 動画
-translation_of: MDN/Guidelines/Video
 original_slug: MDN/Guidelines/Video
 ---
 {{MDNSidebar}}

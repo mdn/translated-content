@@ -45,8 +45,6 @@ MDN [Web 性能学习专区](/zh-CN/docs/Learn/Performance) 有着涵盖性能�
   - : [Performance Timeline](/zh-CN/docs/Web/API/Performance_Timeline) 标准定义了对 [`Performance`](/zh-CN/docs/Web/API/Performance) 接口的扩展，以支持应用程序中的客户端延迟测量。这些接口一起可以用来帮助识别应用程序的性能瓶颈。
 - [User Timing API](/zh-CN/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
   - : 使用创建特定于应用程序的时间戳 [user timing API](/zh-CN/docs/Web/API/User_Timing_API)'s “标记”和“度量”条目类型 - 它们是浏览器性能时间轴的一部分。
-- [Frame Timing API](/zh-CN/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API)
-  - : [`PerformanceFrameTiming`](/zh-CN/docs/Web/API/PerformanceFrameTiming) 接口提供有关浏览器事件循环的*帧*计时数据。
 - [Beacon API](/zh-CN/docs/Web/API/Beacon_API/Using_the_Beacon_API)
   - : 使用 [Beacon](/zh-CN/docs/Web/API/Beacon_API) 接口调度发送给服务器的异步非阻塞请求。
 - [Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)

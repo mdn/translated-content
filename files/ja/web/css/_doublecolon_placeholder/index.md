@@ -1,14 +1,6 @@
 ---
 title: '::placeholder'
 slug: Web/CSS/::placeholder
-tags:
-  - '::placeholder'
-  - CSS
-  - 擬似要素
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.placeholder
-translation_of: Web/CSS/::placeholder
 ---
 {{CSSRef}}
 

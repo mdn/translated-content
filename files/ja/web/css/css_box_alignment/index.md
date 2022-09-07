@@ -1,16 +1,6 @@
 ---
 title: CSS ボックス配置
 slug: Web/CSS/CSS_Box_Alignment
-tags:
-  - CSS
-  - CSS ボックス配置
-  - グリッドレイアウト
-  - ガイド
-  - 配置
-  - ボックス配置
-  - フレックスボックス
-  - 段組み
-translation_of: Web/CSS/CSS_Box_Alignment
 ---
 {{CSSRef}}
 

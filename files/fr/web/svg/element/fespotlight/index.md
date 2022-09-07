@@ -66,14 +66,11 @@ Cet élément implémente l'interface {{domxref("SVGFESpotLightElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("Filters 1.0", "#feSpotLightElement", "&lt;feSpotLight&gt;")}}             | {{Spec2("Filters 1.0")}} | Aucun changement    |
-| {{SpecName("SVG1.1", "filters.html#feSpotLightElement", "&lt;feSpotLight&gt;")}} | {{Spec2("SVG1.1")}}         | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.feSpotLight")}}
+{{Compat}}
 
 ## Voir aussi
 

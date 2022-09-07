@@ -35,9 +35,9 @@ HTML 自体は構文エラーに悩まされていません。ブラウザーが
 
 HTML コードの寛容な性質を学習する時が来ました。
 
-1.  まず、[debug-example のデモ](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html)をダウンロードしてローカルに保存します。このデモは、調査するために意図的にエラーを含むように書かれています (HTML マークアップは**整形式ではない**と言われており、**整形式**とは対照的です)。
-2.  次にブラウザーで開きます。 このようなものを見るでしょう：![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](badly-formed-html.png)
-3.  これはすぐには良く見えません。ソースコードを調べて、問題が解決できるかどうか確認しましょう (本文の内容だけが表示されます)。
+1. まず、[debug-example のデモ](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html)をダウンロードしてローカルに保存します。このデモは、調査するために意図的にエラーを含むように書かれています (HTML マークアップは**整形式ではない**と言われており、**整形式**とは対照的です)。
+2. 次にブラウザーで開きます。 このようなものを見るでしょう：![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](badly-formed-html.png)
+3. これはすぐには良く見えません。ソースコードを調べて、問題が解決できるかどうか確認しましょう (本文の内容だけが表示されます)。
 
     ```html
     <h1>HTML debugging examples</h1>
@@ -58,16 +58,16 @@ HTML コードの寛容な性質を学習する時が来ました。
     </ul>
     ```
 
-4.  問題を見てみましょう。
+4. 問題を見てみましょう。
 
     - {{htmlelement("p","paragraph")}} と {{htmlelement("li","list item")}} 要素には終了タグがありません。上の画像を見ると、ある要素がどこで終わり、別の要素が始まるべきかを推測するのは簡単なので、これはマークアップのレンダリングにあまり悪い影響を与えていないようです。
     - 最初の {{htmlelement("strong")}} 要素には終了タグがありません。要素がどこで終了するのか分かりにくいので、もう少し問題があります。実際、残りのテキスト全体が強調されています。
     - このセクションはひどくネストされています： `<strong>strong <em>strong emphasised?</strong> what is this?</em>`。前の問題もあって、これがどのように解釈されたかを見分けるのは容易ではありません。
     - {{htmlattrxref("href","a")}} 属性値に、閉じ二重引用符がありません。これが最大の問題を引き起こしているようです。リンクはまったくレンダリングされていません。
 
-5.  それでは、ソースコードのマークアップに対して、ブラウザーがレンダリングしたマークアップを見てみましょう。これを行うには、ブラウザーの開発者ツールを使用できます。ブラウザーの開発者ツールの使い方に慣れていない場合は、[Discover browser developer tools](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools) を数分確認してください。
-6.  DOM インスペクタでは、レンダリングされたマークアップがどのように見えるかを見ることができます。![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)
-7.  DOM インスペクタを使用して、ブラウザーが HTML エラーを修正しようとしている方法を確認するためにコードを詳しく調べてみましょう (もちろん Firefox で確認していますが、他のモダンなブラウザーでも同じ結果が得られる*はず*です)。
+5. それでは、ソースコードのマークアップに対して、ブラウザーがレンダリングしたマークアップを見てみましょう。これを行うには、ブラウザーの開発者ツールを使用できます。ブラウザーの開発者ツールの使い方に慣れていない場合は、[Discover browser developer tools](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools) を数分確認してください。
+6. DOM インスペクタでは、レンダリングされたマークアップがどのように見えるかを見ることができます。![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)
+7. DOM インスペクタを使用して、ブラウザーが HTML エラーを修正しようとしている方法を確認するためにコードを詳しく調べてみましょう (もちろん Firefox で確認していますが、他のモダンなブラウザーでも同じ結果が得られる*はず*です)。
 
     - 段落とリスト項目には終了タグが付けられています。
     - 最初の `<strong>` 要素がどこで閉じられるべきかは明確ではないので、ブラウザーはそれぞれ別々のテキストブロックをそれぞれの strong タグで、ドキュメントの一番下まで閉じています。
@@ -103,10 +103,10 @@ HTML コードの寛容な性質を学習する時が来ました。
 
 [サンプル文書](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html)でこれを試してみましょう。
 
-1.  まず、[Markup Validation Service](https://validator.w3.org/) を 1 つのブラウザータブに読み込みます (まだ読み込まれていない場合)。
-2.  [Validate by Direct Input](https://validator.w3.org/#validate_by_input) タブに切り替えます。
-3.  本文だけでなく、すべてのサンプルドキュメントのコードをコピーして、Markup Validation Service に表示される大きなテキスト領域に貼り付けます。
-4.  _Check_ ボタンを押します
+1. まず、[Markup Validation Service](https://validator.w3.org/) を 1 つのブラウザータブに読み込みます (まだ読み込まれていない場合)。
+2. [Validate by Direct Input](https://validator.w3.org/#validate_by_input) タブに切り替えます。
+3. 本文だけでなく、すべてのサンプルドキュメントのコードをコピーして、Markup Validation Service に表示される大きなテキスト領域に貼り付けます。
+4. _Check_ ボタンを押します
 
 これでエラーと他の情報のリストを提供してくれるはずです。
 

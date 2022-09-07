@@ -1,15 +1,6 @@
 ---
 title: 'HTMLElement: beforeinput イベント'
 slug: Web/API/HTMLElement/beforeinput_event
-tags:
-  - API
-  - イベント
-  - HTML DOM
-  - HTMLElement
-  - InputEvent
-  - リファレンス
-  - beforeinput
-translation_of: Web/API/HTMLElement/beforeinput_event
 ---
 {{APIRef}}
 

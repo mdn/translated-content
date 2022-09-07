@@ -1,17 +1,10 @@
 ---
 title: Worker()
 slug: Web/API/Worker/Worker
-tags:
-  - API
-  - Constructor
-  - Reference
-  - Web Workers
-  - Worker
-translation_of: Web/API/Worker/Worker
 ---
 {{APIRef("Web Workers API")}}
 
-**`Worker()`** コンストラクターは引数の URL で指定されたスクリプトを実行する {{domxref("Worker")}} オブジェクトを作成します。このスクリプトは [同一生成元ポリシー](/Same_origin_policy_for_JavaScript "Same origin policy for JavaScript") (SOP) に従わなければいけません。
+**`Worker()`** コンストラクターは引数の URL で指定されたスクリプトを実行する {{domxref("Worker")}} オブジェクトを作成します。このスクリプトは [同一生成元ポリシー](/Same_origin_policy_for_JavaScript) (SOP) に従わなければいけません。
 
 引数の URL が無効な構文だったり SOP に違反したりしている場合、`SECURITY_ERR` 型の {{domxref("DOMException")}} を返します。
 

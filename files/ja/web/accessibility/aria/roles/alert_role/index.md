@@ -60,4 +60,4 @@ function triggerAlert() {
 - [ARIA ライブリージョン](/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
 - [alert ロールの使用](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

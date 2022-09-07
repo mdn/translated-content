@@ -1,17 +1,6 @@
 ---
 title: HTMLObjectElement.contentWindow
 slug: Web/API/HTMLObjectElement/contentWindow
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - NeedsExample
-  - Property
-  - Reference
-  - contentWindow
-browser-compat: api.HTMLObjectElement.contentWindow
-translation_of: Web/API/HTMLObjectElement/contentWindow
 ---
 {{APIRef("HTML DOM")}}
 

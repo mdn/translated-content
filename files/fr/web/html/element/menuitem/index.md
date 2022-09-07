@@ -124,15 +124,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                             | Commentaires                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "obsolete.html#menuitem", "&lt;menuitem&gt;")}}                             | {{Spec2("HTML WHATWG")}} | Aucune modification depuis la dernière dérivation {{SpecName("HTML5.2")}} |
-| {{SpecName("HTML5.2", "obsolete.html#elementdef-menuitem", "&lt;menuitem&gt;")}}                 | {{Spec2("HTML5.2")}}     | Dérivation de {{SpecName("HTML WHATWG")}}, rendue obsolète.               |
-| {{SpecName("HTML5.1", "interactive-elements.html#the-menuitem-element", "&lt;menuitem&gt;")}} | {{Spec2("HTML5.1")}}     | Dérivation de {{SpecName("HTML WHATWG")}}, définition initiale.           |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.menuitem")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,7 +1,6 @@
 ---
 title: Plugin (プラグイン)
 slug: Glossary/Plugin
-translation_of: Glossary/Plugin
 ---
 ブラウザープラグインとは、ブラウザーがネイティブに対応できないコンテンツを扱うために、ユーザーがインストールすることができるソフトウェアコンポーネントのことです。ブラウザープラグインは通常、 [NPAPI](https://en.wikipedia.org/wiki/NPAPI) (Netscape Plugin Application Programming Interface) アーキテクチャを使用して記述されています。
 

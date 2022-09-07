@@ -1,6 +1,6 @@
 ---
 title: 'Express 教程 7: 部署到生产环境'
-slug: learn/Server-side/Express_Nodejs/deployment
+slug: Learn/Server-side/Express_Nodejs/deployment
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
@@ -254,7 +254,7 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 
 4. 按 **Create repository**.
 5. 单击新仓库页面上的绿色“克隆或下载”按钮 "**Clone or download**"。
-6. 从显示的对话框的文本字段，复制 URL 值（它应该类似于：**https\://github.com/_\<your_git_user_id>_/express-locallibrary-tutorial.git**）。
+6. 从显示的对话框的文本字段，复制 URL 值（它应该类似于：`https://github.com/<your_git_user_id>/express-locallibrary-tutorial.git`）。
 
 现在创建了存储库（“repo”），我们将要在本地计算机上克隆它：
 

@@ -203,7 +203,7 @@ ls -l
 
 在您创建的某个地方的测试目录中使用它们，这样您就不会意外地删除任何重要的内容，使用下面的示例命令作为指导
 
-- `mkdir` —这将在您所在的当前目录中创建一个新目录，名称是您在命令名之后提供的。例如` mkdir my-awesome-website将创建一个新目录叫``my-awesome-website `.
+- `mkdir` —这将在您所在的当前目录中创建一个新目录，名称是您在命令名之后提供的。例如 `mkdir my-awesome-website` 将创建一个新目录叫 `my-awesome-website`。
 - `rmdir` —删除指定目录，但仅当它为空时。例如`rmdir my-awesome-website`
 
   将删除我们在上面创建的目录。如果您希望删除一个非空的目录 (并删除其中包含的所有内容)，则可以使用`-r` 选项（递归），但这很危险。确保以后在目录中不需要任何内容 ​​，因为它将永远消失。
@@ -271,7 +271,7 @@ ls | wc -l
 
 但是，这个 URL 是页面的旧位置。如果您在一个新的浏览器标签中输入它，您将 (最终) 被重定向到[https://developer.mozilla.org/enUS/docs/Web/API/fetch](/en-US/docs/Web/API/fetch).
 
-因此，如果您使用 curl 请求 https\://developer.mozilla.org/docs/Web/API/fetch，则不会得到输出。现在就试试：
+因此，如果您使用 curl 请求 `https://developer.mozilla.org/docs/Web/API/fetch`，则不会得到输出。现在就试试：
 
 ```bash
 curl https://developer.mozilla.org/en-US/docs/Web/API/fetch

@@ -1,13 +1,6 @@
 ---
 title: CookieStore.getAll()
 slug: Web/API/CookieStore/getAll
-tags:
-  - API
-  - Method
-  - Reference
-  - getAll()
-  - CookieStore
-browser-compat: api.CookieStore.getAll
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
 

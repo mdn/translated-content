@@ -1,19 +1,6 @@
 ---
 title: 'TextTrack: cuechange イベント'
 slug: Web/API/TextTrack/cuechange_event
-tags:
-  - API
-  - Event
-  - Reference
-  - TextTrack
-  - WebVTT
-  - cuechange
-  - oncuechange
-  - track
-  - イベント
-  - テキストトラック
-  - トラック
-translation_of: Web/API/TextTrack/cuechange_event
 ---
 {{APIRef}}
 

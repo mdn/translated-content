@@ -1,17 +1,6 @@
 ---
 title: column-count
 slug: Web/CSS/column-count
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - レイアウト
-  - リファレンス
-  - column-count
-  - columns
-  - recipe:css-property
-browser-compat: css.properties.column-count
-translation_of: Web/CSS/column-count
 ---
 {{CSSRef}}
 

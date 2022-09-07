@@ -1,15 +1,6 @@
 ---
 title: WindowEventHandlers.onlanguagechange
 slug: conflicting/Web/API/Window/languagechange_event
-tags:
-  - API
-  - Event Handler
-  - Experimental
-  - HTML DOM
-  - Property
-  - Reference
-  - WindowEventHandlers
-translation_of: Web/API/WindowEventHandlers/onlanguagechange
 original_slug: Web/API/WindowEventHandlers/onlanguagechange
 ---
 {{APIRef("HTML DOM")}} {{SeeCompatTable}}

@@ -72,7 +72,7 @@ slug: Web/HTML/Global_attributes/itemscope
 
 ### 示例
 
-下面示例中有 4 个 `itemscope` 属性。每一个 `itemscope` 设置了相应的 `itemptype` 属性。例子中`itemtype`，`Recipe`，`AggregateRating`，以及 `NutritionInformation` 通过指定了 `itemptype`，也就是“http\://schema.org/Recipe”，也都是 [schema.org](www.schema.org) 提供的一个食谱的结构化数据的一部分。
+下面示例中有 4 个 `itemscope` 属性。每一个 `itemscope` 设置了相应的 `itemptype` 属性。例子中`itemtype`，`Recipe`，`AggregateRating`，以及 `NutritionInformation` 通过指定了 `itemptype`，也就是 `http://schema.org/Recipe`，也都是 [schema.org](www.schema.org) 提供的一个食谱的结构化数据的一部分。
 
 ```html
 <div itemscope itemtype="http://schema.org/Recipe">

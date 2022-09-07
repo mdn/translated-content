@@ -19,7 +19,7 @@ _Les propriétés d'événement, de la forme `onXYZ`, sont définis sur {{domxre
 - {{domxref("WindowEventHandlers.onbeforeprint")}}
   - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("beforeprint")}} est déclenché.
 - {{domxref("WindowEventHandlers.onbeforeunload")}}
-  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("beforeunload")}} est déclenché.
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement [`beforeunload`](/fr/docs/Web/API/Window/beforeunload_event) est déclenché.
 - {{domxref("WindowEventHandlers.onhashchange")}}
   - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("hashchange")}} est déclenché.
 - {{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}
@@ -41,7 +41,7 @@ _Les propriétés d'événement, de la forme `onXYZ`, sont définis sur {{domxre
 - {{domxref("WindowEventHandlers.onstorage")}}
   - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("storage")}} est déclenché.
 - {{domxref("WindowEventHandlers.onunload")}}
-  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("unload")}} est déclenché.
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement [`unload`](/fr/docs/Web/API/Window/unload_event) est déclenché.
 
 ## Méthodes
 
@@ -49,15 +49,11 @@ _Cette interface ne définit aucune méthode._
 
 ## Spécifications
 
-| Specification                                                                                        | Status                           | Comment                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#windoweventhandlers', 'GlobalEventHandlers')}} | {{Spec2('HTML WHATWG')}} | Pas de changement depuis {{SpecName("HTML5.1")}}.                                                                       |
-| {{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}         | {{Spec2('HTML5.1')}}     | Snapshot de {{SpecName("HTML WHATWG")}}. Ajoute `onlanguage`.                                                           |
-| {{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}}     | {{Spec2('HTML5 W3C')}}     | Snapshot de {{SpecName("HTML WHATWG")}}. Création de `WindowEventHandlers` (les propriétés étaient sur la cible avant). |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowEventHandlers")}}
+{{Compat}}
 
 ## Voir aussi
 

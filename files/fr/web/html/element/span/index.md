@@ -102,15 +102,11 @@ p span {
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                             | Commentaires                                                            |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-span-element', '&lt;span&gt;')}} | {{Spec2('HTML WHATWG')}} |                                                                         |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-span-element', '&lt;span&gt;')}}     | {{Spec2('HTML5 W3C')}}     | L'interface DOM est désormais {{domxref("HTMLSpanElement")}}. |
-| {{SpecName('HTML4.01', 'struct/global.html#edef-SPAN', '&lt;span&gt;')}}                         | {{Spec2('HTML4.01')}}     |                                                                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.span")}}
+{{Compat}}
 
 ## Voir aussi
 

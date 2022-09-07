@@ -377,7 +377,7 @@ function updateDisplay() {
 
 #### 向记录添加文本
 
-`log()`函数可以向记录中添加指定的文本。因为我们不知道调用`log()`的时候是否可以立即安全地联系 DOM，我们将缓存记录文本一直到可以安全更新。在上面，在` updateDisplay``() `的代码中，你可以找到更新动画帧时，实际添加记录的代码。
+`log()` 函数可以向记录中添加指定的文本。因为我们不知道调用 `log()` 的时候是否可以立即安全地联系 DOM，我们将缓存记录文本一直到可以安全更新。在上面，在 `updateDisplay()` 的代码中，你可以找到更新动画帧时，实际添加记录的代码。
 
 ```js
 function log(text) {
@@ -455,7 +455,7 @@ document.getElementById("startButton").addEventListener("click", decodeTechnoStu
 - `count` 是要从任务输出到记录中的字符串数量。
 - `text` 是要输出到日志的文本（由`count`指定的次数）。
 
-我们调用`enqueueTask()`来将每个任务排入队列，将` logTaskHandler``() `传入作为处理函数，将`taskData`传入，待处理函数调用时传入其中。
+我们调用 `enqueueTask()` 来将每个任务排入队列，将 `logTaskHandler()` 传入作为处理函数，将 `taskData` 传入，待处理函数调用时传入其中。
 
 ### 结果
 

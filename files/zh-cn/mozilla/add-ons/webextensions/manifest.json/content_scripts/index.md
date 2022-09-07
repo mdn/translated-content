@@ -223,7 +223,7 @@ glob 只是一个可以包含通配符的字符串。有两种类型的通配符
 - "\*" 匹配零个或多个字符
 - "?" 匹配一个字符
 
-`例如，"*na?i"`会匹配` "illuminati"和``"annunaki" `，但不会匹配`"sagnarelli"`.
+例如，`"*na?i"` 会匹配 `"illuminati"` 和 `"annunaki"`，但不会匹配 `"sagnarelli"`.
 
 ## 示例
 

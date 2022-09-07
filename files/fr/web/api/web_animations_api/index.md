@@ -51,9 +51,7 @@ L'API Web Animations ajoute de nouvelles fonctionnalités à {{domxref("document
 
 ## Spécifications
 
-| Spécification                            | Statut                               | Commentaire         |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Web Animations')}} | {{Spec2('Web Animations')}} | Définition initiale |
+{{Specifications}}
 
 ## Voir aussi
 
