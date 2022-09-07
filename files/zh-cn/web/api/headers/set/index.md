@@ -4,7 +4,7 @@ slug: Web/API/Headers/set
 ---
 {{APIRef("Fetch")}}
 
-**[`headers`](https://developer.mozilla.org/en-US/docs/Web/API/Headers)**接口中 **`set()`** 方法在可以在已经声明中的 **`headers`** 对象修改已有的一组键值对或者创建一个新的键值对。
+{{domxref("Headers")}} 接口中 **`set()`** 方法在可以在已经声明中的 **`headers`** 对象修改已有的一组键值对或者创建一个新的键值对。
 
 **`set()`** 方法和 [append()](https://developer.mozilla.org/en-US/docs/Web/API/Headers/append)方法不同的是声明的 **`Headers`** 对象是否已经存在对应的 **`keys`** 是否已经存在并且已经赋值。**`set()`** 方法将会覆盖之前的 **`value`**，然而 [append()](https://developer.mozilla.org/en-US/docs/Web/API/Headers/append)方法只会在 **`Headers`** 对象的尾部添加一个新的键值对。
 
