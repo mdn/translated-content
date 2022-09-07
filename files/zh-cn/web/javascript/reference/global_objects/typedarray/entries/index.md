@@ -14,7 +14,7 @@ arr.entries()
 
 ### 返回值
 
-新的**`Array Iterator`**对象。
+新的 **`Array Iterator`** 对象。
 
 ## 示例
 

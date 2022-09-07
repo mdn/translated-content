@@ -4,7 +4,7 @@ slug: Web/API/Window/message_event
 ---
 {{APIRef("HTML DOM")}}{{ SeeCompatTable() }}
 
-{{domxref("WindowEventHandlers")}}的**`onmessage`** **属性是当对象接收到**{{event("message")}} **事件时被调用的**{{event("Event_handlers", "event handler")}} **.**
+{{domxref("WindowEventHandlers")}}的 **`onmessage`** **属性是当对象接收到**{{event("message")}} **事件时被调用的**{{event("Event_handlers", "event handler")}} **.**
 
 ## 语法
 

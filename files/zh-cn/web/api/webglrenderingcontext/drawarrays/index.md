@@ -4,7 +4,7 @@ slug: Web/API/WebGLRenderingContext/drawArrays
 ---
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) 中的**`WebGLRenderingContext.drawArrays()`**方法用于从向量数组中绘制图元。
+[WebGL API](/en-US/docs/Web/API/WebGL_API) 中的 **`WebGLRenderingContext.drawArrays()`** 方法用于从向量数组中绘制图元。
 
 ## 语法
 
