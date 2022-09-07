@@ -66,7 +66,7 @@ L'élément [`<form>`](/fr/docs/Web/HTML/Element/Form) définit la méthode d'en
 
 Cet attribut définit où les données sont envoyées. Sa valeur doit être une URL valide. S'il n'est pas fourni, les données seront envoyées à l'URL de la page contenant le formulaire.
 
-Dans cet exemple, les données sont envoyées à une URL précise — http\://foo.com :
+Dans cet exemple, les données sont envoyées à une URL précise — `http://foo.com` :
 
 ```html
 <form action="http://foo.com">
