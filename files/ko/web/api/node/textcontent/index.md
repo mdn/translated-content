@@ -10,8 +10,10 @@ slug: Web/API/Node/textContent
 
 ## 구문
 
-    let text = someNode.textContent
-    someOtherNode.textContent = string
+```js
+let text = someNode.textContent
+someOtherNode.textContent = string
+```
 
 ### 값
 

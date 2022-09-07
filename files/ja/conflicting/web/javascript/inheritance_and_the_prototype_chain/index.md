@@ -132,7 +132,7 @@ class Employee {
 }
 ```
 
-#### JavaScript \*\* (代わりにこれを使う)
+#### JavaScript (代わりにこれを使う)
 
 ```js
 function Employee() {

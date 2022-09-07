@@ -8,7 +8,9 @@ slug: Web/API/RTCPeerConnection/close
 
 ## Syntax
 
-    RTCPeerConnection.close();
+```js
+RTCPeerConnection.close();
+```
 
 _이 메소드는 입력 패러미터가 없으며, 반환 값도 없습니다._
 

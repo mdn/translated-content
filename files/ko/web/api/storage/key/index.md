@@ -8,7 +8,9 @@ slug: Web/API/Storage/key
 
 ## 문법
 
-    var aKeyName = storage.key(index);
+```js
+var aKeyName = storage.key(index);
+```
 
 ### Parameters
 

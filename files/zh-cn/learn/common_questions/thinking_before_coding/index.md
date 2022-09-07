@@ -31,7 +31,7 @@ slug: Learn/Common_questions/Thinking_before_coding
 
 ## 自主学习
 
-_暂时还没有相关内容 [Please, consider contributing](/en-US/docs/MDN/Getting_started)._
+_暂时还没有相关内容 [Please, consider contributing](/zh-CN/docs/MDN/Getting_started)._
 
 ## 深入探索
 

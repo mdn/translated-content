@@ -12,8 +12,10 @@ slug: Web/API/URL/hash
 
 ## 구문
 
-    const string = url.hash
-    url.hash = newHash
+```js
+const string = url.hash
+url.hash = newHash
+```
 
 ### 값
 

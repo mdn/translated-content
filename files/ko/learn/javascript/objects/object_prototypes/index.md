@@ -1,12 +1,6 @@
 ---
 title: Object prototypes
 slug: Learn/JavaScript/Objects/Object_prototypes
-tags:
-  - 객체 지향
-  - 상속
-  - 자바스크립트
-  - 프로토타입
-translation_of: Learn/JavaScript/Objects/Object_prototypes
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
 

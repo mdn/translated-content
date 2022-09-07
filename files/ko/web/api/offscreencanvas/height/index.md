@@ -8,8 +8,10 @@ slug: Web/API/OffscreenCanvas/height
 
 ## 구문
 
-    var pxl = offscreen.height;
-    offscreen.height = pxl;
+```js
+var pxl = offscreen.height;
+offscreen.height = pxl;
+```
 
 ## 예시
 

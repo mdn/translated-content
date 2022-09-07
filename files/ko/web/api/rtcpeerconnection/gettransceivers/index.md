@@ -8,7 +8,9 @@ slug: Web/API/RTCPeerConnection/getTransceivers
 
 ## Syntax
 
-    transceiverList = RTCPeerConnection.getTransceivers();
+```js
+transceiverList = RTCPeerConnection.getTransceivers();
+```
 
 ### 매개변수
 

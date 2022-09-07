@@ -61,14 +61,11 @@ Cet élément implémente l'interface {{domxref("SVGFEPointLightElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('Filters 1.0', '#fePointLightElement', '&lt;fePointLight&gt;')}}         | {{Spec2('Filters 1.0')}} | Aucun changement    |
-| {{SpecName('SVG1.1', 'filters.html#fePointLightElement', '&lt;fePointLight&gt;')}} | {{Spec2('SVG1.1')}}         | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.fePointLight")}}
+{{Compat}}
 
 ## Voir aussi
 

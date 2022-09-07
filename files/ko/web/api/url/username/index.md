@@ -10,8 +10,10 @@ slug: Web/API/URL/username
 
 ## 구문
 
-    const usernameString = url.username
-    url.username = newUsername
+```js
+const usernameString = url.username
+url.username = newUsername
+```
 
 ### 값
 

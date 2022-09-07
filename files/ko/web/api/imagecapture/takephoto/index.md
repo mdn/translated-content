@@ -8,7 +8,9 @@ slug: Web/API/ImageCapture/takePhoto
 
 ## 구문
 
-    const blobPromise = imageCaptureObj.takePhoto([photoSettings])
+```js
+const blobPromise = imageCaptureObj.takePhoto([photoSettings])
+```
 
 ### 매개변수
 

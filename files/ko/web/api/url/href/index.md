@@ -10,8 +10,10 @@ slug: Web/API/URL/href
 
 ## 구문
 
-    const urlString = url.href
-    url.href = newUrlString
+```js
+const urlString = url.href
+url.href = newUrlString
+```
 
 ### 값
 

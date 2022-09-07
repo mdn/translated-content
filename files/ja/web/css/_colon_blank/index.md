@@ -1,18 +1,6 @@
 ---
 title: ':blank'
 slug: Web/CSS/:blank
-tags:
-  - ':blank'
-  - CSS
-  - CSS セレクター
-  - Draft
-  - Experimental
-  - NeedsContent
-  - NeedsExample
-  - 擬似クラス
-  - セレクター
-browser-compat: css.selectors.blank
-translation_of: Web/CSS/:blank
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

@@ -10,8 +10,10 @@ slug: Web/API/URL/hostname
 
 ## 구문
 
-    const domain = url.hostname
-    url.hostname = domain
+```js
+const domain = url.hostname
+url.hostname = domain
+```
 
 ### 값
 

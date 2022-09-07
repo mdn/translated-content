@@ -6,7 +6,9 @@ slug: Web/API/Node/cloneNode
 
 ## Syntax
 
-    var dupNode = node.cloneNode(deep);
+```js
+var dupNode = node.cloneNode(deep);
+```
 
 - _node_
   - : 복제되어야 할 node.

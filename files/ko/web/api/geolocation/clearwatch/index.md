@@ -8,7 +8,9 @@ slug: Web/API/Geolocation/clearWatch
 
 ## 구문
 
-    navigator.geolocation.clearWatch(id);
+```js
+navigator.geolocation.clearWatch(id);
+```
 
 ### 매개변수
 

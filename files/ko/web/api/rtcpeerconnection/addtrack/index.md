@@ -10,7 +10,9 @@ slug: Web/API/RTCPeerConnection/addTrack
 
 ## Syntax
 
-    rtpSender = RTCPeerConnection.addTrack(track, stream...);
+```js
+rtpSender = RTCPeerConnection.addTrack(track, stream...);
+```
 
 ### 매개변수
 

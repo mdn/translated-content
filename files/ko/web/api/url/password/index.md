@@ -12,8 +12,10 @@ slug: Web/API/URL/password
 
 ## 구문
 
-    const passwordString = url.password
-    url.password = newPassword
+```js
+const passwordString = url.password
+url.password = newPassword
+```
 
 ### 값
 

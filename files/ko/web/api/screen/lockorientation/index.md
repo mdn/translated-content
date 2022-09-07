@@ -10,7 +10,9 @@ slug: Web/API/Screen/lockOrientation
 
 ## Syntax
 
-    var locked = window.screen.lockOrientation(orientation);
+```js
+var locked = window.screen.lockOrientation(orientation);
+```
 
 ### Parameters
 
@@ -40,11 +42,13 @@ slug: Web/API/Screen/lockOrientation
 
 ## Example
 
-    if (window.screen.mozLockOrientation("landscape-primary")) {
-      // orientation was locked
-    } else {
-      // orientation lock failed
-    }
+```js
+if (window.screen.mozLockOrientation("landscape-primary")) {
+  // orientation was locked
+} else {
+  // orientation lock failed
+}
+```
 
 ## Specifications
 

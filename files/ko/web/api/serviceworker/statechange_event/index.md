@@ -9,8 +9,10 @@ original_slug: Web/API/ServiceWorker/onstatechange
 
 ## Syntax
 
-    ServiceWorker.onstatechange = function(statechangeevent) { ... }
-    ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )
+```js
+ServiceWorker.onstatechange = function(statechangeevent) { ... }
+ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )
+```
 
 ## Examples
 

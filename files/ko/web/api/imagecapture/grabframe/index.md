@@ -8,7 +8,9 @@ slug: Web/API/ImageCapture/grabFrame
 
 ## 구문
 
-    const bitmapPromise = imageCapture.grabFrame()
+```js
+const bitmapPromise = imageCapture.grabFrame()
+```
 
 ### 반환 값
 

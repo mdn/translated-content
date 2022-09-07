@@ -8,7 +8,9 @@ slug: Web/API/Navigator/mediaDevices
 
 ## 구문
 
-    var mediaDevices = navigator.mediaDevices;
+```js
+var mediaDevices = navigator.mediaDevices;
+```
 
 ### 반환 값
 

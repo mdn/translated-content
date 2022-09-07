@@ -10,8 +10,10 @@ El método **`toSource()`** regresa una cadena representando el código fuente d
 
 ## Syntax
 
-    Object.toSource();
-    obj.toSource();
+```js
+Object.toSource();
+obj.toSource();
+```
 
 ### Return value
 

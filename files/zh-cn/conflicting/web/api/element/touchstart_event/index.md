@@ -46,4 +46,4 @@ original_slug: Web/API/Document/touchstart_event
 
 - [Touch events](/zh-CN/docs/Web/API/Touch_events)
 - {{ domxref("GlobalEventHandlers.ontouchstart","ontouchstart")}}
-- 以 [`Element`](/en-US/docs/Web/API/Element) 为目标的相同时间：[`touchstart`](/en-US/docs/Web/API/Element/touchstart_event)
+- 以 [`Element`](/zh-CN/docs/Web/API/Element) 为目标的相同时间：[`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event)

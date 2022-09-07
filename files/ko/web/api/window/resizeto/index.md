@@ -8,7 +8,9 @@ slug: Web/API/Window/resizeTo
 
 ## 구문
 
-    window.resizeTo(width, height)
+```js
+window.resizeTo(width, height)
+```
 
 ### 매개변수
 

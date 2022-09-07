@@ -8,7 +8,9 @@ slug: Web/API/Window/cancelAnimationFrame
 
 ## 구문
 
-    window.cancelAnimationFrame(requestID);
+```js
+window.cancelAnimationFrame(requestID);
+```
 
 ### Parameters
 

@@ -8,7 +8,9 @@ slug: Web/API/Storage/removeItem
 
 ## 문법
 
-    storage.removeItem(keyName);
+```js
+storage.removeItem(keyName);
+```
 
 ### 파라미터
 

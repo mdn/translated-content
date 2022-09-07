@@ -7,11 +7,11 @@ translation_of: Web/HTML/Element/label
 
 <p>Um <strong>elemento</strong> <strong>HTML <code>&lt;label&gt;</code> </strong>representa uma legenda para um item em uma interface de usuário. Ele pode estar associado com um elemento de controle, colocando este dentro do elemento <code>label</code>, ou usando o atributo <code>for</code>. Tal controle é chamado o <em>controle etiquetado</em> do elemento etiqueta. Um input pode ser associado a diversas etiquetas (&lt;label&gt;s).</p>
 
-<ul class="htmlelt">
+<ul>
  <li><dfn><a href="/en-US/docs/Web/HTML/Content_categories">As categorias de conteúdo</a></dfn> <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Interactive_content">interactive content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Form-associated_content">form-associated element</a>, palpable content.</li>
  <li><dfn>conteúdo permitido</dfn> <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">Phrasing content</a>, mas há elementos do rótulo descendente. Nenhum outro do que o controle rotulado elementos labelable são permitidos.</li>
  <li><dfn>Tag omissão</dfn> {{no_tag_omission}}</li>
- <li><dfn><span class="short_text" id="result_box" lang="pt">Elementos pai permitidas</span></dfn> Qualquer elemento que aceita <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</li>
+ <li><dfn>Elementos pai permitidas</dfn> Qualquer elemento que aceita <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</li>
  <li><dfn>DOM interface</dfn> {{domxref("HTMLLabelElement")}}</li>
 </ul>
 
@@ -24,13 +24,11 @@ translation_of: Web/HTML/Element/label
  <dd>A tecla de atalho para acessar este elemento a partir do teclado.</dd>
  <dt>{{htmlattrdef("for")}}</dt>
  <dd>O ID de um elemento de formulário relacionados com labelable no mesmo documento como o elemento label. O primeiro elemento tal no documento com uma ID correspondente ao valor do atributo é o controle marcado for este elemento etiqueta.
- <div class="note"><span id="result_box" lang="pt"><strong>Nota: </strong>Um elemento etiqueta pode ter tanto um for o atributo e um elemento de controlo continham, enquanto os pontos de atributo para o elemento de controlo contido.</span></div>
+ <div class="note"><strong>Nota: </strong>Um elemento etiqueta pode ter tanto um for o atributo e um elemento de controlo continham, enquanto os pontos de atributo para o elemento de controlo contido.</div>
  </dd>
  <dt>{{htmlattrdef("form")}} {{HTMLVersionInline("5")}}</dt>
  <dd>
- <div class="almost_half_cell" id="gt-res-content">
- <div dir="ltr" style="zoom: 1;"><span id="result_box" lang="pt">O elemento de forma que o elemento label está associado a (seu proprietário formulário). O valor do atributo deve ser uma identificação de um {{HTMLElement ("form")}} elemento no mesmo documento. Se este atributo não for especificado, este elemento &lt;label&gt; deve ser um descendente de uma {{HTMLElement ("form")}} elemento. Este atributo permite que você coloque elementos do rótulo em qualquer lugar dentro de um documento, e não apenas como descendentes de seus elementos de formulário.</span></div>
- </div>
+O elemento de forma que o elemento label está associado a (seu proprietário formulário). O valor do atributo deve ser uma identificação de um {{HTMLElement ("form")}} elemento no mesmo documento. Se este atributo não for especificado, este elemento &lt;label&gt; deve ser um descendente de uma {{HTMLElement ("form")}} elemento. Este atributo permite que você coloque elementos do rótulo em qualquer lugar dentro de um documento, e não apenas como descendentes de seus elementos de formulário.
  </dd>
 </dl>
 

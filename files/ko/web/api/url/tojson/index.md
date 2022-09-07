@@ -10,7 +10,9 @@ slug: Web/API/URL/toJSON
 
 ## 구문
 
-    const href = url.toJSON()
+```js
+const href = url.toJSON()
+```
 
 ### 반환 값
 

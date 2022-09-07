@@ -1,13 +1,6 @@
 ---
 title: 論理的プロパティと値の基本概念
 slug: Web/CSS/CSS_Logical_Properties/Basic_concepts
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - ガイド
-  - 概念
-  - 書字方向
-translation_of: Web/CSS/CSS_Logical_Properties/Basic_concepts
 ---
 {{CSSRef}}
 

@@ -15,7 +15,9 @@ slug: Web/API/RTCPeerConnection/setConfiguration
 
 ## Syntax
 
-    RTCPeerConnection.setConfiguration(configuration);
+```js
+RTCPeerConnection.setConfiguration(configuration);
+```
 
 ### 매개변수
 

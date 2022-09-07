@@ -10,7 +10,9 @@ slug: Web/API/HTMLElement/click
 
 ## 구문
 
-    element.click()
+```js
+element.click()
+```
 
 ## 명세
 

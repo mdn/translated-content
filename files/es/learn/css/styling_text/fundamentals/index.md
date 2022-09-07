@@ -350,10 +350,10 @@ text-shadow: 1px 1px 1px red;
 
 Las cuatro propiedades son las siguientes:
 
-1.  El desplazamiento horizontal de la sombra desde el texto original; admite la mayoría de las [unidades y magnitudes](/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS) de que dispone CSS, pero lo más habitual es usar `px`. Es un valor obligatorio.
-2.  El desplazamiento vertical de la sombra desde el texto original; se comporta básicamente igual que el desplazamiento horizontal, excepto porque mueve la sombra arriba/abajo, y no hacia derecha/izquierda. Es un valor obligatorio.
-3.  El radio de desenfoque; cuanto más alto es este valor, mayor es la dispersión de la sombra. Si no se incluye este valor, el valor por defecto es 0, y no hay desenfoque. Esta propiedad admite la mayoría de las [unidades y magnitudes](/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS) de que dispone el CSS.
-4.  El color de base de la sombra, que admite cualquier [unidad de color de que dispone CSS](/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS). Si no se incluye este valor, el valor predeterminado es `negro`.
+1. El desplazamiento horizontal de la sombra desde el texto original; admite la mayoría de las [unidades y magnitudes](/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS) de que dispone CSS, pero lo más habitual es usar `px`. Es un valor obligatorio.
+2. El desplazamiento vertical de la sombra desde el texto original; se comporta básicamente igual que el desplazamiento horizontal, excepto porque mueve la sombra arriba/abajo, y no hacia derecha/izquierda. Es un valor obligatorio.
+3. El radio de desenfoque; cuanto más alto es este valor, mayor es la dispersión de la sombra. Si no se incluye este valor, el valor por defecto es 0, y no hay desenfoque. Esta propiedad admite la mayoría de las [unidades y magnitudes](/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS) de que dispone el CSS.
+4. El color de base de la sombra, que admite cualquier [unidad de color de que dispone CSS](/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS). Si no se incluye este valor, el valor predeterminado es `negro`.
 
 > **Nota:** Los valores con desplazamiento positivo mueven la sombra hacia la derecha o hacia abajo, mientras que los valores con desplazamiento negativo, por ejemplo `-1px -1px`, mueven la sombrea hacia la izquierda o hacia arriba.
 

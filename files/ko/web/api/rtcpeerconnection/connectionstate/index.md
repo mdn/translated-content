@@ -10,7 +10,9 @@ slug: Web/API/RTCPeerConnection/connectionState
 
 ## Syntax
 
-    var connectionState = RTCPeerConnection.connectionState;
+```js
+var connectionState = RTCPeerConnection.connectionState;
+```
 
 ### 값
 

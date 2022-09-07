@@ -14,7 +14,9 @@ slug: Web/API/XMLHttpRequest/setRequestHeader
 
 ## 구문
 
-    myReq.setRequestHeader(header, value);
+```js
+myReq.setRequestHeader(header, value);
+```
 
 ### 매개변수
 

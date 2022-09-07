@@ -10,7 +10,9 @@ slug: Web/API/MediaStreamTrack/getCapabilities
 
 ## 구문
 
-    const capabilities = track.getCapabilities()
+```js
+const capabilities = track.getCapabilities()
+```
 
 ### 반환 값
 

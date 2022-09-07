@@ -156,14 +156,11 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-sub-and-sup-elements', '&lt;sub&gt; and &lt;sup&gt;')}}             | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-sub-and-sup-elements', '&lt;sub&gt; and &lt;sup&gt;;')}} | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.sup")}}
+{{Compat}}
 
 ## Voir aussi
 

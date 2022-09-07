@@ -41,7 +41,7 @@ original_slug: Web/SVG/Element/animateColor
 
 ## DOM インターフェース
 
-この要素は [`SVGAnimateColorElement`](/ja/docs/DOM/SVGAnimateColorElement "en/DOM/SVGAnimateColorElement") インターフェースを提供します。
+この要素は [`SVGAnimateColorElement`](/ja/docs/DOM/SVGAnimateColorElement) インターフェースを提供します。
 
 ## 仕様
 

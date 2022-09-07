@@ -8,7 +8,9 @@ slug: Web/API/NodeList/entries
 
 ## Syntax
 
-    list.entries();
+```js
+list.entries();
+```
 
 ### Return value
 
@@ -35,9 +37,11 @@ for(var entry of list.entries()) {
 
 결과는 다음과 같습니다:
 
-    Array [ 0, <p> ]
-    Array [ 1, #text "hey" ]
-    Array [ 2, <span> ]
+```
+Array [ 0, <p> ]
+Array [ 1, #text "hey" ]
+Array [ 2, <span> ]
+```
 
 ## Specifications
 

@@ -8,7 +8,9 @@ slug: Web/API/Navigator/share
 
 ## Syntax
 
-    var sharePromise = window.navigator.share(data);
+```js
+var sharePromise = window.navigator.share(data);
+```
 
 ### Parameters
 

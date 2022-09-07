@@ -1,14 +1,6 @@
 ---
 title: ':user-invalid (:-moz-ui-invalid)'
 slug: Web/CSS/:user-invalid
-tags:
-  - CSS
-  - CSS Selectors
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.user-invalid
-translation_of: Web/CSS/:user-invalid
 ---
 {{CSSRef}}
 

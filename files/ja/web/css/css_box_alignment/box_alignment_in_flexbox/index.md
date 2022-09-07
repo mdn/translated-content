@@ -1,12 +1,6 @@
 ---
 title: フレックスボックスでのボックス配置
 slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
-tags:
-  - CSS
-  - ガイド
-  - ボックス配置
-  - フレックスボックス
-translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
 ---
 {{CSSRef}}
 

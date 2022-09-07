@@ -12,9 +12,11 @@ slug: Web/API/RTCPeerConnection/setLocalDescription
 
 ## Syntax
 
-    aPromise = RTCPeerConnection.setLocalDescription(sessionDescription);
+```js
+aPromise = RTCPeerConnection.setLocalDescription(sessionDescription);
 
-    pc.setLocalDescription(sessionDescription, successCallback, errorCallback); {{deprecated_inline}}
+pc.setLocalDescription(sessionDescription, successCallback, errorCallback);
+```
 
 ### 매개 변수
 

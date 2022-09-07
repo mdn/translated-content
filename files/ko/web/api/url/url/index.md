@@ -12,7 +12,9 @@ slug: Web/API/URL/URL
 
 ## 구문
 
-    const url = new URL(url [, base])
+```js
+const url = new URL(url [, base])
+```
 
 ### 매개변수
 

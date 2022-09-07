@@ -8,7 +8,9 @@ slug: Web/API/Storage/length
 
 ## 구문
 
-    length = storage.length;
+```js
+length = storage.length;
+```
 
 ### 반환 값
 

@@ -12,22 +12,22 @@ original_slug: Web/HTML/Elemento/br
 
 El elemento HTML _l\_\_ine break_ `<br>` produce un salto de línea en el texto (retorno de carro). Es útil para escribir un poema o una dirección, donde la división de las líneas es significante.
 
-No utilices `<br>` para incrementar el espacio entre líneas de texto; para ello utiliza la propiedad {{cssxref('margin')}} de [CSS](/es/docs/CSS "CSS") o el elemento {{HTMLElement("p")}}.
+No utilices `<br>` para incrementar el espacio entre líneas de texto; para ello utiliza la propiedad {{cssxref('margin')}} de [CSS](/es/docs/CSS) o el elemento {{HTMLElement("p")}}.
 
-| [Content categories](/es/docs/HTML/Content_categories "HTML/Content_categories") | [Flow content](/es/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), [phrasing content](/es/docs/HTML/Content_categories#Phrasing_content "HTML/Content categories#Phrasing content"). |
+| [Content categories](/es/docs/HTML/Content_categories) | [Flow content](/es/docs/HTML/Content_categories#Flow_content), [phrasing content](/es/docs/HTML/Content_categories#Phrasing_content). |
 | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Contenido permitido                                                              | Ninguno, es {{Glossary("empty element")}}.                                                                                                                                                                   |
 | Omisión de etiqueta                                                              | Debe tener etiqueta de inicio y no debe tener etiqueta de cierre. En documentos XHTML este elemento se escribe como `<br />`.                                                                                           |
-| Elementos padre permitidos                                                       | Cualquier elemento que acepte [phrasing content](/es/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content").                                                                         |
+| Elementos padre permitidos                                                       | Cualquier elemento que acepte [phrasing content](/es/docs/HTML/Content_categories#Phrasing_content).                                                                         |
 | Interfaz DOM                                                                     | {{domxref("HTMLBRElement")}}                                                                                                                                                                                    |
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes "HTML/Global attributes").
+Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 
 - {{htmlattrdef("clear")}} {{deprecatedGeneric('inline','HTML4.01')}} {{obsoleteGeneric('inline','HTML5')}}
   - : Indica donde empieza la siguiente línea después del salto.
-  
+
 > **Nota:** **Nota de uso:** Este atributo está obsoleot en {{HTMLVersionInline(5)}} y **no debe utilizarse por los autores**. En su lugar utiliza la propiedad {{CSSxref('clear')}} de CSS.
 
 ## Ejemplo

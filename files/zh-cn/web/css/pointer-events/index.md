@@ -83,7 +83,7 @@ img {
 
 ### 示例 2
 
-点击链接 http\://example.com 时，不会跳转
+点击链接 `http://example.com` 时，不会跳转
 
 ```html
 <ul>

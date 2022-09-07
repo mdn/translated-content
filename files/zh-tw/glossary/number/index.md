@@ -12,5 +12,5 @@ slug: Glossary/Number
 
 ### 技術參考
 
-- JavaScript 數據結構: [Number](/en-US/docs/Web/JavaScript/Data_structures#Number_type)
+- JavaScript 數據結構: [Number](/zh-TW/docs/Web/JavaScript/Data_structures#Number_type)
 - JavaScript 全域物件 {{jsxref("Number")}}

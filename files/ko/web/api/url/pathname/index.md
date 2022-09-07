@@ -10,8 +10,10 @@ slug: Web/API/URL/pathname
 
 ## 구문
 
-    const path = url.pathname
-    url.pathname = newPath
+```js
+const path = url.pathname
+url.pathname = newPath
+```
 
 ### 값
 

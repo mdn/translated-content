@@ -383,48 +383,48 @@ tag `string text ${expression} string text`
 
 ECMAScript 规格提到[自动分号补全的三个规则](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-rules-of-automatic-semicolon-insertion)。
 
-1\. 当出现一个不允许的[行终止符](#Line_terminators)或“}”时，会在其之前插入一个分号。
+1. 当出现一个不允许的[行终止符](#Line_terminators)或“}”时，会在其之前插入一个分号。
 
-```js
-{ 1 2 } 3
+    ```js
+    { 1 2 } 3
 
-// 将会被 ASI 转换为
+    // 将会被 ASI 转换为
 
-{ 1 2 ;} 3;
-```
+    { 1 2 ;} 3;
+    ```
 
-2\. 当捕获到标识符输入流的结尾，并且无法将单个输入流转换为一个完整的程序时，将在结尾插入一个分号。
+2. 当捕获到标识符输入流的结尾，并且无法将单个输入流转换为一个完整的程序时，将在结尾插入一个分号。
 
-在下面这段中，由于在 `b` 和 `++` 之间出现了一个行终止符，所以 `++` 未被当成变量 `b` 的[后置运算符](/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment)。
+    在下面这段中，由于在 `b` 和 `++` 之间出现了一个行终止符，所以 `++` 未被当成变量 `b` 的[后置运算符](/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment)。
 
-```js
-a = b
-++c
+    ```js
+    a = b
+    ++c
 
-// 将被 ASI 转换为
+    // 将被 ASI 转换为
 
-a = b;
-++c;
-```
+    a = b;
+    ++c;
+    ```
 
-3\. 当语句中包含语法中的限制产品后跟一个行终止符的时候，将会在结尾插入一个分号。带“这里没有行终止符”规则的语句有：
+3. 当语句中包含语法中的限制产品后跟一个行终止符的时候，将会在结尾插入一个分号。带“这里没有行终止符”规则的语句有：
 
-- 后置运算符（`++` 和 `--`）
-- `continue`
-- `break`
-- `return`
-- `yield`、`yield*`
-- `module`
+    - 后置运算符（`++` 和 `--`）
+    - `continue`
+    - `break`
+    - `return`
+    - `yield`、`yield*`
+    - `module`
 
-```js
-return
-a + b
+    ```js
+    return
+    a + b
 
-// 将被 ASI 转换为
+    // 将被 ASI 转换为
 
-return;
-a + b;
-```
+    return;
+    a + b;
+    ```
 
 ## 浏览器兼容性
 

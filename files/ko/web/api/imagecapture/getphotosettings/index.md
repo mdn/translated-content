@@ -8,7 +8,9 @@ slug: Web/API/ImageCapture/getPhotoSettings
 
 ## 구문
 
-    const settingsPromise = imageCapture.getPhotoSettings()
+```js
+const settingsPromise = imageCapture.getPhotoSettings()
+```
 
 ### 반환 값
 

@@ -10,7 +10,9 @@ slug: Web/API/History/state
 
 ## 구문
 
-    const currentState = history.state
+```js
+const currentState = history.state
+```
 
 ### 값
 

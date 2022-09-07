@@ -8,7 +8,9 @@ slug: Web/API/RTCPeerConnection/getSenders
 
 ## Syntax
 
-    var senders = RTCPeerConnection.getSenders();
+```js
+var senders = RTCPeerConnection.getSenders();
+```
 
 ### 반환 값
 

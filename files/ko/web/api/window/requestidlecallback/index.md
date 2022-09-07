@@ -12,7 +12,9 @@ idle callback 안에서 `requestIdleCallback()` 을 호출하여 다음 패스�
 
 ## Syntax
 
-    var handle = window.requestIdleCallback(callback[, options])
+```js
+var handle = window.requestIdleCallback(callback[, options])
+```
 
 ### Return value
 

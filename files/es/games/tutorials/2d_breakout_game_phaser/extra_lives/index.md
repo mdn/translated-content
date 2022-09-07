@@ -35,7 +35,7 @@ Estas almacenarán las vidas, el texto que muestra el número de vidas restante,
 
 ## Definiendo las nuevas etiquetas de texto
 
-Definir los textos es parecido a algo que ya hicimos en la lección de la [puntuación](https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/The_score). Añade las siguientes líneas debajo de la definición de `scoreText` dentro de la función `create()`:
+Definir los textos es parecido a algo que ya hicimos en la lección de la [puntuación](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/The_score). Añade las siguientes líneas debajo de la definición de `scoreText` dentro de la función `create()`:
 
 ```js
 livesText = game.add.text(game.world.width-5, 5, 'Lives: '+lives, { font: '18px Arial', fill: '#0095DD' });
@@ -125,6 +125,6 @@ Puedes consultar el código terminado de esta lección en la demo de abajo, y ju
 
 ## Próximos pasos
 
-Las vidas hacen el juego más indulgente — si pierdes una vida, todavía tienes dos más con las que continuar jugando. Ahora expandiremos la apariencia del juego añadiendo [animaciones e interpolaciones](https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens).
+Las vidas hacen el juego más indulgente — si pierdes una vida, todavía tienes dos más con las que continuar jugando. Ahora expandiremos la apariencia del juego añadiendo [animaciones e interpolaciones](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Win_the_game", "Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens")}}

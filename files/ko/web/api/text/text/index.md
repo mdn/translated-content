@@ -8,8 +8,10 @@ slug: Web/API/Text/Text
 
 ## 문법
 
-    text1 = new Text(); // 빈 텍스트 노드 생성
-    text2 = new Text("텍스트 노드입니다");
+```js
+text1 = new Text(); // 빈 텍스트 노드 생성
+text2 = new Text("텍스트 노드입니다");
+```
 
 ## 예제
 
@@ -27,4 +29,4 @@ text = new Text("Test");
 
 ## 함께 보기
 
-- [DOM 인터페이스 목차.](/ko/docs/Gecko_DOM_Reference "/en-US/docs/DOM/DOM_Reference")
+- [DOM 인터페이스 목차.](/ko/docs/Gecko_DOM_Reference)

@@ -8,7 +8,9 @@ slug: Web/API/HTMLElement/accessKeyLabel
 
 ## 구문
 
-    label = element.accessKeyLabel
+```js
+label = element.accessKeyLabel
+```
 
 ## 예시
 

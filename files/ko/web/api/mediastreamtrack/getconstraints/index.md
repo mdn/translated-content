@@ -10,7 +10,9 @@ slug: Web/API/MediaStreamTrack/getConstraints
 
 ## 구문
 
-    const constraints = track.getConstraints()
+```js
+const constraints = track.getConstraints()
+```
 
 ### 반환 값
 

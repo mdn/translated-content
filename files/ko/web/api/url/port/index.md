@@ -10,8 +10,10 @@ slug: Web/API/URL/port
 
 ## 구문
 
-    const portNumber = url.port
-    url.port = newPortNumber
+```js
+const portNumber = url.port
+url.port = newPortNumber
+```
 
 ### 값
 

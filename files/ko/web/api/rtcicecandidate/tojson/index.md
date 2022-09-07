@@ -8,7 +8,9 @@ slug: Web/API/RTCIceCandidate/toJSON
 
 ## Syntax
 
-    json = RTCIceCandidate.toJSON();
+```js
+json = RTCIceCandidate.toJSON();
+```
 
 ### 반환 값
 

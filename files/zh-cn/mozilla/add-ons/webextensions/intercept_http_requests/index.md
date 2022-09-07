@@ -18,7 +18,7 @@ slug: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
 
 ## 记录请求的 URL
 
-新建一个名为`“`requests`”`的目录，在其中新建一个名为`“`manifest.json`”`的文件，文件包含如下 内容：
+新建一个名为 `requests` 的目录，在其中新建一个名为 `manifest.json` 的文件，文件包含如下 内容：
 
 ```json
 {
@@ -38,7 +38,7 @@ slug: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
 }
 ```
 
-接着新加一个名为`“`background.js`”`的文件，包含如下内容：
+接着新加一个名为 `background.js` 的文件，包含如下内容：
 
 ```js
 function logURL(requestDetails) {
@@ -51,7 +51,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-这里我们在请求开始之前用{{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}调用`logURL()`函数。` logURL()``函数 `抓取从事件对象发出的请求中的 URL，然后将其打印到浏览器的控制台窗口中。[参数](/en-US/Add-ons/WebExtensions/Match_patterns)`{urls: ["<all_urls>"]}`表示拦截发往所有 URL 的 HTTP 请求。
+这里我们在请求开始之前用{{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}调用`logURL()`函数。`logURL()` 函数 抓取从事件对象发出的请求中的 URL，然后将其打印到浏览器的控制台窗口中。[参数](/en-US/Add-ons/WebExtensions/Match_patterns)`{urls: ["<all_urls>"]}`表示拦截发往所有 URL 的 HTTP 请求。
 
 测试方法是：[安装该 WebExtension](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)， [打开浏览器的控制台](/en-US/docs/Tools/Browser_Console)，然后开启某个网页即可。在浏览器控制台中就能见到浏览器请求所有资源的 URL：
 
@@ -82,9 +82,9 @@ chrome.webRequest.onBeforeRequest.addListener(
 }
 ```
 
-这里唯一的变化是[`权限`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)里 新增了` “``webRequestBlocking``” `项。新增这个权限是为了随时都能修改请求。
+这里唯一的变化是[`权限`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)里 新增了 `webRequestBlocking` 项。新增这个权限是为了随时都能修改请求。
 
-下一步替换`“`background.js`”`文件内容如下：
+下一步替换 `"background.js"` 文件内容如下：
 
 ```js
 var pattern = "https://mdn.mozillademos.org/*";
@@ -105,9 +105,9 @@ chrome.webRequest.onBeforeRequest.addListener(
 
 此外在请求构造出来之前我们用{{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}事件侦听器来实现 URL 替换。侦听器将会用`redirectUrl`指定的内容替换原有的 URL。
 
-这次我们不拦截所有的请求：`{urls:[pattern], types:["image"]}`选项告诉浏览器必须同时满足如下两点的请求才会被拦截：(1) 在`“` https\://mdn.mozillademos.org/`”`之下的 URL； (2) 图片资源。该功能的更多说明参见{{WebExtAPIRef("webRequest.RequestFilter")}}。
+这次我们不拦截所有的请求：`{urls:[pattern], types:["image"]}`选项告诉浏览器必须同时满足如下两点的请求才会被拦截：(1) 在 "`https://mdn.mozillademos.org/`" 之下的 URL； (2) 图片资源。该功能的更多说明参见{{WebExtAPIRef("webRequest.RequestFilter")}}。
 
-刚才我们忽略了` “blocking``” `选项。要修改请求` 就要用到“blocking``” `选项，该选项让侦听器函数阻塞住发往网络请求，浏览器将会等待侦听器返回才会继续处理。阅读{{WebExtAPIRef("webRequest.onBeforeRequest")}}以了解更多有关`“blocking` `”`的细节。.
+刚才我们忽略了 `blocking` 选项。要修改请求 就要用到 `blocking` 选项，该选项让侦听器函数阻塞住发往网络请求，浏览器将会等待侦听器返回才会继续处理。阅读{{WebExtAPIRef("webRequest.onBeforeRequest")}}以了解更多有关 `blocking` 的细节。
 
 测试时打开 MDN 上的一个包含诸多图片的页面（如[https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor](/en-US/docs/Tools/Network_Monitor) ），重新加载[WebExtension](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on)，然后重新加载这个页面：
 
@@ -115,7 +115,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 
 ## 修改请求报头
 
-最后我们将使用`webRequest`修改请求报头。在这个例子中我们将修改 "User-Agent"报头，使得在浏览" http\://useragentstring.com/"网站下的网页时可以识别浏览器 Opera 12.16。
+最后我们将使用 `webRequest` 修改请求报头。在这个例子中我们将修改 `User-Agent` 报头，使得在浏览 `http://useragentstring.com/` 网站下的网页时可以识别浏览器 Opera 12.16。
 
 "manifest.json" 可以与上一个例子相同。
 

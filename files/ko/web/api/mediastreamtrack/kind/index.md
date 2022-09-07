@@ -8,7 +8,9 @@ slug: Web/API/MediaStreamTrack/kind
 
 ## 구문
 
-    const type = track.kind
+```js
+const type = track.kind
+```
 
 ### 값
 

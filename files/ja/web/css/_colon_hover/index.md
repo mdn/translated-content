@@ -1,15 +1,6 @@
 ---
 title: ':hover'
 slug: Web/CSS/:hover
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.hover
-translation_of: Web/CSS/:hover
 ---
 {{ CSSRef }}
 

@@ -8,7 +8,9 @@ slug: Web/API/Navigator/registerProtocolHandler
 
 ## 구문
 
-    navigator.registerProtocolHandler(protocol, url, title);
+```js
+navigator.registerProtocolHandler(protocol, url, title);
+```
 
 ### 매개변수
 

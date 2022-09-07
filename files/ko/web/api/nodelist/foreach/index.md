@@ -8,7 +8,9 @@ slug: Web/API/NodeList/forEach
 
 ## 문법Syntax
 
-    NodeList.forEach(callback[, thisArg]);
+```js
+NodeList.forEach(callback[, thisArg]);
+```
 
 ### Parameters
 
@@ -19,7 +21,7 @@ slug: Web/API/NodeList/forEach
       - : NodeList에서 처리중인 현재 요소의 인덱스입니다.
     - _`listObj`_
       - : `forEach()` 가 적용되고 있는 NodeList 객체입니다.
-- ` thisArg`` {{Optional_inline}}  `
+- `thisArg` {{Optional_inline}}
   - : `callback` 을 실행할 때 {{jsxref("this")}} 에 대입할 값입니다.
 
 ### Return value
@@ -54,9 +56,11 @@ list.forEach(
 
 결과는 다음과 같습니다.
 
-    [object HTMLParagraphElement], 0, myThisArg
-    [object Text], 1, myThisArg
-    [object HTMLSpanElement], 2, myThisArg
+```
+[object HTMLParagraphElement], 0, myThisArg
+[object Text], 1, myThisArg
+[object HTMLSpanElement], 2, myThisArg
+```
 
 ## Polyfill
 

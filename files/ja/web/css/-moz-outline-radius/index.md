@@ -1,15 +1,6 @@
 ---
 title: '-moz-outline-radius'
 slug: Web/CSS/-moz-outline-radius
-tags:
-  - CSS
-  - CSS プロパティ
-  - Mozilla 拡張
-  - 標準外
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.-moz-outline-radius
-translation_of: Web/CSS/-moz-outline-radius
 ---
 {{CSSRef}}{{deprecated_header}}
 

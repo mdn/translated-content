@@ -8,8 +8,10 @@ slug: Web/API/TreeWalker/currentNode
 
 ## 구문
 
-    node = treeWalker.currentNode;
-    treeWalker.currentNode = node;
+```js
+node = treeWalker.currentNode;
+treeWalker.currentNode = node;
+```
 
 ## 예제
 

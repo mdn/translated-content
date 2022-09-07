@@ -23,7 +23,7 @@ slug: Mozilla/Firefox/Releases/22
 
 ### DOM
 
-- 不再支持` XMLHttpRequest中的``multipart属性和``multipart/x-mixed-replac `响应。这是一个 Gecko 独有的特性，从来没被标准化过。你可以使用[Server-Sent Events](/en-US/docs/Server-sent_events), [Web Sockets](/en-US/docs/WebSockets)或者在 progress 事件中查看`responseText`属性的变化来实现同样的效果。
+- 不再支持 `XMLHttpRequest` 中的 `multipart` 属性和 `multipart/x-mixed-replace` 响应。这是一个 Gecko 独有的特性，从来没被标准化过。你可以使用[Server-Sent Events](/en-US/docs/Server-sent_events), [Web Sockets](/en-US/docs/WebSockets)或者在 progress 事件中查看 `responseText` 属性的变化来实现同样的效果。
 - 实现了[Web Notifications](http://notifications.spec.whatwg.org/) ({{bug(782211)}}).
 - {{domxref("XMLHttpRequest/FormData", "FormData")}}对象的`append`方法现在开始接受第三个参数`filename`({{bug(690659)}}).
 - 移除了{{domxref("Node.isSupported")}}方法 ({{bug(801562)}}).

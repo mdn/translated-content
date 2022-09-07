@@ -11,7 +11,9 @@ original_slug: Web/API/RTCPeerConnection/ondatachannel
 
 ## Syntax
 
-    RTCPeerConnection.ondatachannel = function;
+```js
+RTCPeerConnection.ondatachannel = function;
+```
 
 ### 값
 

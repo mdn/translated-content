@@ -1,16 +1,6 @@
 ---
 title: ':empty'
 slug: Web/CSS/:empty
-tags:
-  - CSS
-  - レイアウト
-  - NeedsUpdate
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.empty
-translation_of: Web/CSS/:empty
 ---
 {{CSSRef}}
 

@@ -8,7 +8,9 @@ slug: Web/API/Window/scrollY
 
 ## 구문
 
-    var y = window.scrollY
+```js
+var y = window.scrollY
+```
 
 ### 값
 

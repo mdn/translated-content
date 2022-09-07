@@ -14,8 +14,10 @@ slug: Web/API/MediaStreamTrack/enabled
 
 ## 구문
 
-    const enabledFlag = track.enabled
-    track.enabled = [true | false]
+```js
+const enabledFlag = track.enabled
+track.enabled = [true | false]
+```
 
 ### 값
 

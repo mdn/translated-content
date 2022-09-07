@@ -10,7 +10,9 @@ slug: Web/API/RTCPeerConnection/getConfiguration
 
 ## Syntax
 
-    var configuration = RTCPeerConnection.getConfiguration();
+```js
+var configuration = RTCPeerConnection.getConfiguration();
+```
 
 ### 매개변수
 

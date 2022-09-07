@@ -13,25 +13,31 @@ Tenga en cuenta que algunas solicitudes / respuestas no almacenables en caché a
 
 Cuando ambos, el método de la solicitud y el estado de la respuesta, se pueden almacenar en caché, la respuesta a la solicitud se puede almacenar en caché:
 
-    GET /pageX.html HTTP / 1.1
-    (...)
+```
+GET /pageX.html HTTP / 1.1
+(...)
 
-    200 OK
-    (...)
+200 OK
+(...)
+```
 
 Una solicitud {{HTTPMethod("PUT")}} no se puede almacenar en caché. Además, invalida los datos en caché para solicitarlos al mismo URI realizado a través de {{HTTPMethod("HEAD")}} o {{HTTPMethod("GET")}}:
 
-    PUT /pageX.html HTTP / 1.1
-    (...)
+```
+PUT /pageX.html HTTP / 1.1
+(...)
 
-    200 OK
-    (...)
+200 OK
+(...)
+```
 
 Un encabezado específico {{HTTPHeader("Cache-Control")}} en la respuesta puede evitar el almacenamiento en caché:
 
-    GET /pageX.html HTTP / 1.1
-    (...)
+```
+GET /pageX.html HTTP / 1.1
+(...)
 
-    200 OK
-    Control de caché: sin caché
-    (...)
+200 OK
+Control de caché: sin caché
+(...)
+```

@@ -51,7 +51,7 @@ slug: Learn/Server-side/Express_Nodejs/routes
 
 有幾種方法可以創建路線。本教程將使用[`express.Router`](http://expressjs.com/en/guide/routing.html#express-router)中間件，因為它允許我們將站點的特定部分的路由處理程序組合在一起，並使用通用的路由前綴訪問它們。我們會將所有與圖書館有關的路由，保存在“目錄”模塊中，如果我們添加路由來處理用戶帳戶或其他功能，我們可以將它們分開保存。
 
-> **備註：** 我們在[Express 簡介>創建路由處理程序](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#Creating_route_handlers)中，簡要討論了 Express 應用程序路由。除了為模塊化提供更好的支持之外（如下面第一小節所述），使用 Router 非常類似於直接在 Express 應用程序對像上定義路由。
+> **備註：** 我們在[Express 簡介>創建路由處理程序](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction#Creating_route_handlers)中，簡要討論了 Express 應用程序路由。除了為模塊化提供更好的支持之外（如下面第一小節所述），使用 Router 非常類似於直接在 Express 應用程序對像上定義路由。
 
 本節的其餘部分，概述瞭如何使用路由器`Router`來定義路由。
 
@@ -104,7 +104,7 @@ router.get('/about', function (req, res) {
 
 回調函數接受三個參數（通常如下所示命名：`req`, `res`, `next`），它將包含 HTTP 請求對象，HTTP 響應，以及中間件鏈中的下一個函數。
 
-> **備註：** 路由器功能是[Express 中間件](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware)，這意味著它們必須完成（響應）請求或調用鏈中的下一個功能`next`。在上面的例子中，我們使用`send()`完成了請求，所以下一個參數`next`沒有被使用（我們選擇不指定它）。
+> **備註：** 路由器功能是[Express 中間件](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware)，這意味著它們必須完成（響應）請求或調用鏈中的下一個功能`next`。在上面的例子中，我們使用`send()`完成了請求，所以下一個參數`next`沒有被使用（我們選擇不指定它）。
 >
 > 上面的路由器函數只需要一次回調，但您可以根據需要指定任意數量的回調參數，或一組回調函數。每個函數都是中間件鏈的一部分，並且將按照添加到鏈中的順序調用（除非前面的函數完成請求）。
 
@@ -592,7 +592,7 @@ app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
   DEBUG=express-locallibrary-tutorial:* npm start
   ```
 
-- 如果您先前設置了[nodemon](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website) ，則可以使用：
+- 如果您先前設置了[nodemon](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website) ，則可以使用：
 
   ```plain
   // Windows
@@ -628,12 +628,12 @@ app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
 
 ## 本教程連結
 
-- [Express/Node introduction](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)
+- [Express/Node introduction](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
+- [Setting up a Node (Express) development environment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)
+- [Express Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
+- [Express Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
+- [Express Tutorial Part 3: Using a Database (with Mongoose)](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose)
+- [Express Tutorial Part 4: Routes and controllers](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)
+- [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms)
+- [Express Tutorial Part 7: Deploying to production](/zh-TW/docs/Learn/Server-side/Express_Nodejs/deployment)

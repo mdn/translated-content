@@ -1,16 +1,6 @@
 ---
 title: ':read-only'
 slug: Web/CSS/:read-only
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - 読み取り専用
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.read-only
-translation_of: Web/CSS/:read-only
 ---
 {{CSSRef}}
 

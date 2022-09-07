@@ -1,15 +1,6 @@
 ---
 title: フレックスボックスの基本概念
 slug: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
-tags:
-  - CSS
-  - Flex
-  - ガイド
-  - axes
-  - 概念
-  - コンテナー
-  - フレックスボックス
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 ---
 {{CSSRef}}
 

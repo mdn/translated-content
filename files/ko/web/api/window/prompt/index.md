@@ -8,7 +8,9 @@ slug: Web/API/Window/prompt
 
 ## 구문
 
-    result = window.prompt(message, default);
+```js
+result = window.prompt(message, default);
+```
 
 ### 매개변수
 

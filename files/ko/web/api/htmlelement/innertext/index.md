@@ -11,8 +11,10 @@ original_slug: Web/API/Node/innerText
 
 ## 구문
 
-    const renderedText = htmlElement.innerText
-    htmlElement.innerText = string
+```js
+const renderedText = htmlElement.innerText
+htmlElement.innerText = string
+```
 
 ### 값
 

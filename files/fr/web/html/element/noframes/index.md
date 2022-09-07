@@ -46,14 +46,11 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ## Spécifications
 
-| Spécification                                                                                    | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('HTML5 W3C', '#noframes', 'noframes')}}                             | {{Spec2('HTML5 W3C')}} |              |
-| {{SpecName('HTML4.01', 'frames.html#edef-NOFRAMES', '&lt;noframes&gt;')}} | {{Spec2('HTML4.01')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.noframes")}}
+{{Compat}}
 
 ## Voir aussi
 

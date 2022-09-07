@@ -20,7 +20,7 @@ slug: Web/Accessibility/ARIA/Attributes/aria-labelledby
 
 ### 对于用户代理和辅助技术的可能影响
 
-当` aria-labelledby 和``aria-label都被使用时 `, 用户代理在生成可访问的名称属性时将为`aria-labelledby 分配更高的优先级。`
+当 `aria-labelledby` 和 `aria-label` 都被使用时, 用户代理在生成可访问的名称属性时将为 `aria-labelledby` 分配更高的优先级。
 
 **注意：** 由于不同的辅助技术对于这一技术的处理可能不同，以上提供的信息尽是诸多可能的一种，而非一般情况。
 

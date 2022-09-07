@@ -12,7 +12,9 @@ slug: Web/API/Window/localStorage
 
 ## 구문
 
-    myStorage = window.localStorage;
+```js
+myStorage = window.localStorage;
+```
 
 ### 값
 

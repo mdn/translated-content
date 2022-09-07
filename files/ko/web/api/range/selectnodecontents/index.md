@@ -10,7 +10,9 @@ slug: Web/API/Range/selectNodeContents
 
 ## 구문
 
-    range.selectNodeContents(referenceNode);
+```js
+range.selectNodeContents(referenceNode);
+```
 
 ### 매개변수
 

@@ -14,7 +14,9 @@ slug: Web/API/URL/createObjectURL
 
 ## 구문
 
-    const objectURL = URL.createObjectURL(object)
+```js
+const objectURL = URL.createObjectURL(object)
+```
 
 ### 매개변수
 
@@ -53,7 +55,7 @@ slug: Web/API/URL/createObjectURL
 
 ## 같이 보기
 
-- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File/Using_files_from_web_applications "Using files from web applications")
+- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File/Using_files_from_web_applications)
 - {{domxref("URL.revokeObjectURL()")}}
 - {{domxref("HTMLMediaElement.srcObject")}}
 - {{domxref("FileReader.readAsDataURL()")}}

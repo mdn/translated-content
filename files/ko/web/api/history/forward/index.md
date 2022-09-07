@@ -10,7 +10,9 @@ slug: Web/API/History/forward
 
 ## 구문
 
-    history.forward()
+```js
+history.forward()
+```
 
 ## 예제
 

@@ -10,7 +10,9 @@ slug: Web/API/Location/reload
 
 ## 구문
 
-    location.reload();
+```js
+location.reload();
+```
 
 ## 명세
 

@@ -54,4 +54,4 @@ slug: Web/API/Text
 
 ## 같이 보기
 
-- [DOM 인터페이스 목차](/ko/docs/Web/API/Document_Object_Model "/en-US/docs/DOM/DOM_Reference").
+- [DOM 인터페이스 목차](/ko/docs/Web/API/Document_Object_Model).

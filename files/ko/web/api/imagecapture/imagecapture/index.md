@@ -8,7 +8,9 @@ slug: Web/API/ImageCapture/ImageCapture
 
 ## 구문
 
-    const imageCapture = new ImageCapture(videoTrack)
+```js
+const imageCapture = new ImageCapture(videoTrack)
+```
 
 ### 매개변수
 

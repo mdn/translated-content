@@ -9,7 +9,9 @@ slug: Web/API/MouseEvent/clientX
 
 ## Syntax
 
-    var x = instanceOfMouseEvent.clientX
+```js
+var x = instanceOfMouseEvent.clientX
+```
 
 ### Return value
 

@@ -10,8 +10,10 @@ slug: Web/API/Window/name
 
 ## 문법
 
-    string = window.name;
-    window.name = string;
+```js
+string = window.name;
+window.name = string;
+```
 
 ## 예제
 

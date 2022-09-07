@@ -8,8 +8,10 @@ slug: Web/API/OffscreenCanvas/width
 
 ## 구문
 
-    var pxl = offscreen.width;
-    offscreen.width = pxl;
+```js
+var pxl = offscreen.width;
+offscreen.width = pxl;
+```
 
 ## 예시
 

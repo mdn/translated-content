@@ -8,7 +8,9 @@ slug: Web/API/ImageCapture/track
 
 ## 구문
 
-    const mediaStreamTrack = imageCaptureObj.track
+```js
+const mediaStreamTrack = imageCaptureObj.track
+```
 
 ### 값
 

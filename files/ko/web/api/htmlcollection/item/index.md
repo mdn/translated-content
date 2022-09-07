@@ -10,7 +10,9 @@ slug: Web/API/HTMLCollection/item
 
 ## Syntax
 
-    var element = HTMLCollection.item(index)
+```js
+var element = HTMLCollection.item(index)
+```
 
 ### 파라미터
 

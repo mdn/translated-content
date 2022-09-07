@@ -10,7 +10,9 @@ slug: Web/API/History/back
 
 ## 구문
 
-    history.back()
+```js
+history.back()
+```
 
 ## 예제
 

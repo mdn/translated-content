@@ -10,7 +10,9 @@ slug: Web/API/History/go
 
 ## 구문
 
-    history.go([delta])
+```js
+history.go([delta])
+```
 
 ### Parameters
 

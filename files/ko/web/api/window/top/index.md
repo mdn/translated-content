@@ -8,7 +8,9 @@ Returns a reference to the topmost window in the window hierarchy.
 
 ## Syntax
 
-    var topWindow = window.top;
+```js
+var topWindow = window.top;
+```
 
 ## Notes
 
