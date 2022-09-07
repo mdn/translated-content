@@ -92,7 +92,7 @@ img {
 
 ### Désactiver les événements de pointeur pour un lien
 
-Dans l'exemple qui suit, on désactive les événements de pointeur pour le lien http\://example.com.
+Dans l'exemple qui suit, on désactive les événements de pointeur pour le lien `http://example.com`.
 
 #### HTML
 
