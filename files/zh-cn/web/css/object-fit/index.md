@@ -4,7 +4,7 @@ slug: Web/CSS/object-fit
 ---
 {{CSSRef}}
 
-**`object-fit`** [CSS](/zh-CN/docs/Web/CSS) 属性指定[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)的内容应该如何适应到其使用高度和宽度确定的框。
+**`object-fit`** [CSS](/zh-CN/docs/Web/CSS) 属性指定[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)（例如：{{HTMLElement("img")}} 或 {{HTMLElement("video")}}）的内容应该如何适应到其使用高度和宽度确定的框。
 
 您可以通过使用 {{cssxref("object-position")}} 属性来切换被替换元素的内容对象在元素框内的对齐方式。
 
@@ -25,6 +25,7 @@ object-fit: revert;
 object-fit: revert-layer;
 object-fit: unset;
 ```
+
 object-fit 属性由下列的值中的单独一个关键字来指定。
 
 ### 取值
@@ -127,7 +128,7 @@ img {
 
 ### 结果
 
-{{ EmbedLiveSample('设置图像的object-fill', 500, 1100) }}
+{{ EmbedLiveSample('为图像设置 object-fill', 500, 1100) }}
 
 ## 规范
 
