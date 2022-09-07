@@ -81,9 +81,9 @@ Noter aussi que de nombreux navigateurs ignorent le résultat de l'événement (
 
 ## Voir aussi
 
-- {{Event("DOMContentLoaded")}}
-- {{Event("readystatechange")}}
-- {{Event("load")}}
-- {{Event("unload")}}
+- [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event)
+- [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event)
+- [`load`](/fr//docs/Web/API/Window/load_event)
+- [`unload`](/fr/docs/Web/API/Window/unload_event)
 - [Unloading Documents — Prompt to unload a document](http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)
 - [Enlever les messages personnalisés dans les boîtes de dialogues onbeforeload après Chrome 51](https://developers.google.com/web/updates/2016/04/chrome-51-deprecations?hl=en#remove_custom_messages_in_onbeforeload_dialogs)

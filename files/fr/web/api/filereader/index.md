@@ -61,7 +61,7 @@ Pour plus d'informations et d'exemples, consulter [utiliser des fichiers depuis 
 - {{domxref("FileReader.onerror")}}
   - : Un gestionnaire pour l'évènement {{event("error")}}. Cet évènement est déclenché à chaque fois qu'il y a une erreur pendant l'opération de lecture.
 - {{domxref("FileReader.onload")}}
-  - : Un gestionnaire pour l'évènement {{event("load")}}. Cet évènement est déclenché à chaque fois qu'une opération de lecture est menée à bien.
+  - : Un gestionnaire pour l'évènement [`load`](/fr//docs/Web/API/Window/load_event). Cet évènement est déclenché à chaque fois qu'une opération de lecture est menée à bien.
 - {{domxref("FileReader.onloadstart")}}
   - : Un gestionnaire pour l'évènement {{event("loadstart")}}. Cet évènement est déclenché chaque fois qu'une opération de lecture commence.
 - {{domxref("FileReader.onloadend")}}
