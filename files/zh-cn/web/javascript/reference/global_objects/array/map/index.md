@@ -92,7 +92,7 @@ const reformattedArray = kvArray.map(({ key, value}) => ({ [key]: value }));
 
 // reformattedArray 现在是 [{1: 10}, {2: 20}, {3: 30}],
 
-// kvArray 依然是:
+// kvArray 依然是：
 // [{key: 1, value: 10},
 //  {key: 2, value: 20},
 //  {key: 3, value: 30}]
