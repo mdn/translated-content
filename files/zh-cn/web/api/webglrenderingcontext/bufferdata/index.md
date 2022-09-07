@@ -4,7 +4,7 @@ slug: Web/API/WebGLRenderingContext/bufferData
 ---
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) 的**`WebGLRenderingContext.bufferData()`**方法创建并初始化了 Buffer 对象的数据存储区。
+[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.bufferData()`** 方法创建并初始化了 Buffer 对象的数据存储区。
 
 ## 语法
 

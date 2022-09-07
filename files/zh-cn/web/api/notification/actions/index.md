@@ -4,7 +4,7 @@ slug: Web/API/notification/actions
 ---
 {{APIRef("Web Notifications")}}
 
-{{domxref("Notification")}}接口的只读属性**`actions`**返回使用{{domxref("Notification.Notification","Notification()")}}构造函数创建通知时使用 actions 选项设置的{{domxref("NotificationAction")}}对象列表。这是用户可以在通知上下文中选择立即执行的应用定义的操作列表。
+{{domxref("Notification")}}接口的只读属性 **`actions`** 返回使用{{domxref("Notification.Notification","Notification()")}}构造函数创建通知时使用 actions 选项设置的{{domxref("NotificationAction")}}对象列表。这是用户可以在通知上下文中选择立即执行的应用定义的操作列表。
 
 {{AvailableInWorkers}}
 

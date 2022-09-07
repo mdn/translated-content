@@ -216,9 +216,9 @@ customElements.define('element-details',
 
 关于以上代码片段，请注意以下几点：
 
-- 该代码片段有 2 个 **`<element-details>` **标签，他们都使用了“slot”属性来引用名为`"element-name"`和`"description"`的槽，并把他们都放在根下。
+- 该代码片段有 2 个 **`<element-details>`** 标签，他们都使用了“slot”属性来引用名为`"element-name"`和`"description"`的槽，并把他们都放在根下。
 - 只有第一个 **`<element-details>`** 元素 引用了名为 `"attributes"` 的槽，而第二个 `<element-details>` 标签没有引用名为`"attributes"`的槽。
-- 只有第一个 **`<element-details>` **标签中的"dl"使用了名为 `"attributes"`的槽，他包含子元素："dt"和"dd"元素。
+- 只有第一个 **`<element-details>`** 标签中的"dl"使用了名为 `"attributes"`的槽，他包含子元素："dt"和"dd"元素。
 
 ### 添加一些最终的样式
 
@@ -247,7 +247,7 @@ body { margin-top: 47px }
 - 在渲染出来的`"details"`标签，**`<element-details>`** 标签从根开始填充了相应的命名的槽。换言之，**`<element-details>`** 的 DOM 树和 shadow root 的内容结合在了一起。
 - 对于这两个 **`<element-details>`** 标签，属性标题会自动的从 shadow root 中添加到名为`"attribute"`的插槽的前面。
 - 因为第一个 **`<element-details>`** 标签的`"dl"`元素就明确的引用了名为`"attributes"`的插槽，所以该`"dl"`元素的内容将会替换该标签中名为`"attributes"`的插槽。
-- 因为第二个 **`<element-details>`**标签没有引用名为`"attributes"` 的槽，所以标签内名为`"attributes"的`插槽的内容将会使用模板中默认的内容。
+- 因为第二个 **`<element-details>`** 标签没有引用名为`"attributes"` 的槽，所以标签内名为`"attributes"的`插槽的内容将会使用模板中默认的内容。
 
 ```html hidden
 <!DOCTYPE html>
