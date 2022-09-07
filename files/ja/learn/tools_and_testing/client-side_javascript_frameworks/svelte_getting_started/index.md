@@ -1,5 +1,5 @@
 ---
-title: Getting started with Svelte
+title: Svelte をはじめる
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
 tags:
@@ -13,98 +13,97 @@ tags:
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-In this article we'll provide a quick introduction to the [Svelte framework](https://svelte.dev/). We will see how Svelte works and what sets it apart from the rest of the frameworks and tools we've seen so far. Then we will learn how to set up our development environment, create a sample app, understand the structure of the project, and see how to run it locally and build it for production.
+この記事では [Svelte](https://svelte.jp/) というフレームワークの簡単な紹介を行います。Svelte の仕組みと、今までのフレームワークやツールとの違いを見ていきましょう。その後は開発環境の構築、サンプルアプリの作成、プロジェクトの構造、ローカル環境での実行方法と本番環境でのビルド方法を学びます。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">Prerequisites:</th>
+      <th scope="row">前提条件:</th>
       <td>
         <p>
-          At minimum, it is recommended that you are familiar with the core
-          <a href="/en-US/docs/Learn/HTML">HTML</a>,
-          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and
-          have knowledge of the
-          <a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
-            >terminal/command line</a
-          >.
+          最低限、主要な
+          <a href="/ja/docs/Learn/HTML">HTML</a> と
+          <a href="/ja/docs/Learn/CSS">CSS</a>、
+          <a href="/ja/docs/Learn/JavaScript">JavaScript</a>
+          に精通していて、
+          <a href="/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">
+            ターミナル / コマンドライン
+          </a>
+          に関する知識があることが推奨されます。
         </p>
         <p>
-          Svelte is a compiler that generates minimal and highly optimized
-          JavaScript code from our sources; you'll need a terminal with node +
-          npm installed to compile and build your app.
+          Svelte はソースコードから最小かつ高度に最適化された JavaScript を生成するコンパイラーです。
+          アプリのコンパイルとビルドには、node と npm がインストールされたターミナルが必要です。
         </p>
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">目的:</th>
       <td>
-        To setup a local Svelte development environment, create and build a
-        starter app, and understand the basics of how it works.
+        Svelte のローカル開発環境を構築して、スターターアプリの作成とビルド、
+        そして仕組みの基本を理解する。
       </td>
     </tr>
   </tbody>
 </table>
 
-## Svelte: A new approach to building rich user interfaces
+## Svelte: 優れたユーザーインターフェースを構築する新しいアプローチ
 
-Svelte provides a different approach to building web apps than some of the other frameworks covered in this module. While frameworks like React and Vue do the bulk of their work in the user's browser while the app is running, Svelte shifts that work into a compile step that happens only when you build your app, producing highly optimized vanilla JavaScript.
+Svelte はこのモジュールで扱われている他のフレームワークとは異なるアプローチでウェブアプリケーションを構築します。React や Vue などのフレームワークはアプリケーションの実行中にユーザーのブラウザーで作業の大半を行いますが、Svelte はその作業をアプリケーションのビルド時にのみ発生するコンパイルの段階で行うことにより、高度に最適化されたバニラ JavaScript を生成します。
 
-The outcome of this approach is not only smaller application bundles and better performance, but also a developer experience that is more approachable for people that have limited experience of the modern tooling ecosystem.
+このアプローチによってアプリケーションバンドルが小さくなり、パフォーマンスが向上するほか、モダンなツールのエコシステムをあまり経験していない人にとってもより親しみやすい開発体験が得られるようになりました。
 
-Svelte sticks closely to the classic web development model of HTML, CSS, and JS, just adding a few extensions to HTML and JavaScript. It arguably has fewer concepts and tools to learn than some of the other framework options.
+Svelte は HTML と CSS、そして JavaScript という昔ながらのウェブ開発モデルに忠実であり、HTML と JavaScript にいくつかの拡張機能を加えただけです。これにより間違いなく他のフレームワークと比べて学ぶべき概念やツールは少ないと言えるでしょう。
 
-Its main current disadvantages are that it is a young framework — its ecosystem is therefore more limited in terms of tooling, support, plugins, clear usage patterns, etc. than more mature frameworks, and there are also fewer job opportunities. But its advantages should be enough to make you interested to explore it.
+現時点での主な欠点はまだ若いフレームワークであるということです。若いということは、そのエコシステムは成熟したフレームワークよりもツール、サポート、プラグイン、明確な使用パターンなどが限られており、求人も少ないです。しかし、今まで紹介した利点は、あなたが Svelte を探究することへの関心を持ってもらうのに十分なはずです。
 
-> **Note:** recently Svelte has added [official TypeScript support](https://svelte.dev/blog/svelte-and-typescript), one of its most requested features. We'll look at it later on in this tutorial series.
+> **Note:** 2020 年より、Svelteは最も要望の多かった機能の 1 つである [TypeScript を公式にサポート](https://svelte.jp/blog/svelte-and-typescript)するようになりました。このチュートリアルシリーズの後半で確認していきます。
 
-We encourage you to go through the [Svelte tutorial](https://svelte.dev/tutorial/basics) for a really quick introduction to the basic concepts, before returning to this tutorial series to learn how to build something slightly more in-depth. It should take you about 30 minutes to complete.
+このチュートリアルシリーズに戻って、より詳細な作成方法について学ぶ前に [Svelte チュートリアル](https://svelte.jp/tutorial/basics)で基本的なコンセプトを簡単に確認することを推奨します。完了までの所要時間は約 30 分です。
 
-## Use cases
+## ユースケース
 
-Svelte can be used to develop small pieces of an interface or whole applications. You can either start from scratch letting Svelte drive your UI or you can incrementally integrate it into an existing application.
+Svelte はインターフェースの一部またはアプリケーション全体の開発に使用できます。Svelte を用いてゼロから UI を開発することも、既存のアプリケーションへ段階的に組み込むことも可能です。
 
-Nevertheless, Svelte is particularly appropriate to tackle the following situations:
+しかしながら、Svelte は特に以下のような状況で用いるのに適しています。
 
-- Web applications intended for low-power devices: Applications built with Svelte have smaller bundle sizes, which is ideal for devices with slow network connections and limited processing power. Less code means fewer KB to download, parse, execute, and keep hanging around in memory.
-- Highly interactive pages or complex visualizations: If you are building data-visualizations that need to display a large number of DOM elements, the performance gains that come from a framework with no runtime overhead will ensure that user interactions are snappy and responsive.
-- Onboarding people with basic web development knowledge: Svelte has a shallow learning curve. Web developers with basic HTML, CSS, and JavaScript knowledge can easily grasp Svelte specifics in a short time and start building web applications.
+- 低消費電力デバイス向けのウェブアプリケーション: Svelte で構築されたアプリケーションはバンドルサイズが小さいため、ネットワーク接続が遅く、処理能力に制限のあるデバイスに最適です。コードが少ないということはダウンロード、解析、実行、そしてメモリー内で保持し続ける KB が少ないことを意味します。
+- 高度にインタラクティブなページや複雑な視覚化: 多くの DOM 要素を表示する必要があるデータ視覚化を構築する場合、ランタイムオーバーヘッドのないフレームワークから得られるパフォーマンスの向上により、ユーザーとのインタラクションが迅速かつ応答性が高くなることを保証します。
+- ウェブ開発の基礎知識がある人のオンボーディング: Svelte は学習曲線が浅いのが特徴です。HTML、CSS、JavaScript の基礎知識を持つウェブ開発者であれば、短期間で簡単に Svelte の仕様を理解してウェブアプリケーションの構築を開始することができます。
 
-Moreover, with the help of [Sapper](https://sapper.svelte.dev/) (a framework based on Svelte), you can also develop applications with advanced features like server-side rendering, code splitting, file-based routing and offline support. And then there's also [Svelte Native](https://svelte-native.technology/), which lets you build native mobile applications.
+さらに Svelte をベースにしたフレームワークである [Sapper (en-US)](https://sapper.svelte.dev/) を利用すればサーバーサイドレンダリング、コード分割、ファイルベースのルーティング、オフラインサポートなどの高度な機能を備えたアプリケーションを開発することも可能です。またネイティブなモバイルアプリケーションを構築できる [Svelte Native (en-US)](https://svelte-native.technology/) もあります。
 
-## How does Svelte work?
+## Svelte の仕組みについて
 
-Being a compiler, Svelte can extend HTML, CSS, and JavaScript, generating optimal JavaScript code without any runtime overhead. To achieve this, Svelte extends vanilla web technologies in the following ways:
+コンパイラーである Svelte は HTML、CSS、JavaScript を拡張して、ランタイムオーバーヘッドなしに最適な JavaScript コードを生成できます。これを実現するために Svelte は以下のような方法でバニラウェブの技術を拡張しています。
 
-- It extends HTML by allowing JavaScript expressions in markup and providing directives to use conditions and loops, in a fashion similar to handlebars.
-- It extends CSS by adding a scoping mechanism, allowing each component to define its own styles without the risk of clashing with other components' styles.
-- It extends JavaScript by reinterpreting specific directives of the language to achieve true reactivity and ease component state management.
+- HTML を拡張してマークアップに JavaScript の表現を与えることで、handlebars と同様の方法で条件やループを使用するディレクティブを提供しています。
+- CSS を拡張してスコープの仕組みを追加することで、各コンポーネントが他のコンポーネントのスタイルと衝突するリスクなしに独自のスタイルを定義できるようにしています。
+- JavaScript を拡張して言語の特定のディレクティブを再解釈することで、真のリアクティビティを実現してコンポーネントの状態管理を容易にしています。
 
-The compiler only intervenes in very specific situations and only in the context of Svelte components. Extensions to the JavaScript language are minimal and carefully picked in order not to break JavaScript syntax or alienate developers. In fact, you will be mostly working with vanilla JavaScript.
+コンパイラーは非常に特殊な状況でのみ、Svelte コンポーネントのコンテキストにだけ介入します。JavaScript 自体の拡張は最小限であり、JavaScript の構文を壊さないように、また開発者を遠ざけることのないように、慎重に選択されています。実際にほとんどの場合はバニラ JavaScript で作業することになるでしょう。
 
-## First steps with Svelte
+## Svelte との第一歩
 
-Since Svelte is a compiler, you can't just add a `<script src="svelte.js">` tag to your page and import it into your app. You'll have to set up your development environment in order to let the compiler do its job.
+Svelte はコンパイラーであるため、`<script src="svelte.js">` タグをページに追加してアプリにインポートすることはできません。コンパイラーを動かすためには開発環境をセットアップする必要があります。
 
-### Requirements
+### 必要条件
 
-In order to work with Svelte, you need to have [Node.js](https://nodejs.org/en/) installed. It's recommended that you use the long-term support (LTS) version. Node includes npm (the node package manager), and npx (the node package runner). Note that you can also use the Yarn package manager in place of npm, but we'll assume you are using npm in this set of tutorials. See [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) for more information on npm and yarn.
+Svelte を動作させるためには [Node.js](https://nodejs.org/ja/) がインストールされている必要があります。ここでは長期サポート (LTS) バージョンを使用することを推奨します。Node には npm (node パッケージマネージャー) と npx (node パッケージランナー) が含まれます。npm の代わりに Yarn パッケージマネージャーを使用することもできますが、このチュートリアルでは npm を使用していることを前提としています。npm と Yarn の詳細については、[パッケージ管理の基礎](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)を参照してください。
 
-If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. Gitbash (which comes as part of the [git for Windows toolset](https://gitforwindows.org/)) or [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/windows/wsl/about) are both suitable. See [Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) for more information on these, and on terminal commands in general.
+Windows を使用している場合、このチュートリアルで説明されているターミナルコマンドを使うためには Unix/macOS のターミナルと同等になるように何らかのソフトウェアをインストールする必要があります。Gitbash ([git for Windows ツールセット (en-US)](https://gitforwindows.org/) の一部として提供されています) と [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/windows/wsl/about) はどちらとも適した選択肢です。これらの一般的なターミナルコマンドについての詳細は [コマンドライン短期集中講座](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) を参照してください。
 
-Also see the following for more information:
+詳細については以下もご覧ください。
 
-- ["What is npm"](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/) on nodejs.org
-- ["Introducing npx"](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner) on the npm blog
-- ["The easiest way to get started with Svelte"](https://svelte.dev/blog/the-easiest-way-to-get-started) on the Svelte blog
+- ["What is npm" (en-US)](https://nodejs.org/ja/knowledge/getting-started/npm/what-is-npm/) - nodejs.org
+- ["Introducing npx" (en-US)](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner) - npm Blog
+- ["Svelte の一番簡単な始め方"](https://svelte.jp/blog/the-easiest-way-to-get-started) - Svelte Blog
 
-### Creating your first Svelte app
+### 最初の Svelte アプリを作成する
 
-The easiest way to create a starter app template is to just download the starter template application. You can do that by visiting [sveltejs/template](https://github.com/sveltejs/template) on GitHub, or you can avoid having to download and unzip it and just use [degit](https://github.com/Rich-Harris/degit).
+スターターアプリのテンプレートを作成する最も簡単な方法は、スターターテンプレートのアプリケーションをダウンロードすることです。GitHub の [sveltejs/template](https://github.com/sveltejs/template) にアクセスすればダウンロードが可能ですが、[degit](https://github.com/Rich-Harris/degit) を使用すればダウンロードや解凍の手間を省くことができます。
 
-To create your starter app template, run the following terminal commands:
+スターターアプリのテンプレートを作成するためには、以下のターミナルコマンドを実行します。
 
 ```bash
 npx degit sveltejs/template moz-todo-svelte
@@ -113,15 +112,15 @@ npm install
 npm run dev
 ```
 
-> **Note:** degit doesn't do any kind of magic — it just lets you download and unzip the latest version of a git repo's contents. This is much quicker than using `git clone` because it will not download all the history of the repo, or create a complete local clone.
+> **Note:** degit は魔法のようなものではありません。ただ最新バージョンにあたる git リポジトリーの内容をダウンロードして解凍しているだけです。これは `git clone` を使うよりもはるかに高速です。なぜならリポジトリーの履歴全てをダウンロードしたり、完全なローカルクローンを作ったりしないためです。
 
-After running `npm run dev`, Svelte will compile and build your application. It will start a local server at `localhost:8080`. Svelte will watch for file updates, and automatically recompile and refresh the app for you when changes are made to the source files. Your browser will display something like this:
+`npm run dev` を実行すると Svelte がアプリケーションのコンパイルとビルドを行います。するとローカルサーバーとして `localhost:8080` が起動します。Svelte はファイルの更新を監視して、ソースファイルに変更があった場合、アプリを自動的に再コンパイルして更新を行います。なおブラウザーには次のように表示されます。
 
-![A simple start page that says hello world, and gives a link to the official svelte tutorials](01-svelte-starter-app.png)
+![hello world と書かれたシンプルなスタートページ、下部には公式の svelte チュートリアルへのリンクがある](01-svelte-starter-app.png)
 
-### Application structure
+### アプリケーションの構造
 
-The starter template comes with the following structure:
+スターターテンプレートは以下のような構造で提供されています。
 
 ```
 moz-todo-svelte
@@ -146,52 +145,52 @@ moz-todo-svelte
     └── main.js
 ```
 
-The contents are as follows:
+内容は以下のとおりです。
 
-- `package.json` and `package-lock.json`: Contains information about the project that Node.js/npm uses to keep it organized. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you can read [What is the file `package.json`](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/)? on NodeJS.org; we also talk about it in our [Package management basics tutorial](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management).
-- `node_modules`: This is where node saves the project dependencies. These dependencies won't be sent to production, they are just used for development purposes.
-- `.gitignore`: Tells git which files or folder to ignore from the project — useful if you decide to include your app in a git repo.
-- `rollup.config.js`: Svelte uses [rollup.js](https://rollupjs.org/) as a module bundler. This configuration file tells rollup how to compile and build your app. If you prefer [webpack](https://webpack.js.org/), you can create your starter project with `npx degit sveltejs/template-webpack svelte-app` instead.
-- `scripts`: Contains setup scripts as required. Currently should only contain `setupTypeScript.js`.
+- `package.json` と `package-lock.json`: Node.js/npm プロジェクトを整理するために使用する情報が含まれています。このチュートリアルを完了するためにこれらのファイルを理解する必要は全くありませんが、詳細を学びたい場合は NodeJS.org の [`package.json` とはどのようなファイルか？ (en-US)](https://nodejs.org/ja/knowledge/getting-started/npm/what-is-the-file-package-json/)、もしくは [パッケージ管理の基礎](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) でも説明しています。
+- `node_modules`: これは node がプロジェクトの依存関係を保存しておく場所です。これらの依存関係は本番環境に送られることはなく、開発目的にのみ使用されます。
+- `.gitignore`: プロジェクトから無視するファイルもしくはフォルダーを git に指示します。アプリを git リポジトリーに含める場合に便利です。
+- `rollup.config.js`: Svelte ではモジュールバンドラーとして [rollup.js (en-US)](https://rollupjs.org/) を使用しています。この設定ファイルはアプリのコンパイルとビルドの方法を rollup に指示します。 [webpack (en-US)](https://webpack.js.org/) が好きな方は `npx degit sveltejs/template-webpack svelte-app` でスタータープロジェクトを作成することもできます。
+- `scripts`: 必要に応じてセットアップスクリプトが含まれます。現在は `setupTypeScript.js` のみを含める必要があります。
 
-  - `setupTypeScript.js`: This script sets up TypeScript support in Svelte. We'll talk about this more in the last article.
+  - `setupTypeScript.js`: このスクリプトは Svelte の TypeScript サポートを設定するものです。最後の記事で詳しく説明します。
 
-- `src`: This directory is where the source code for your application lives — where you'll be creating the code for your app.
+- `src`: このディレクトリーにはアプリケーションのソースコードが入れられます。つまりアプリのコードを作成する場所です。
 
-  - `App.svelte`: This is the top-level component of your app. So far it just renders the 'Hello World!' message.
-  - `main.js`: The entry point to our application. It just instantiates the `App` component and binds it to the body of our HTML page.
+  - `App.svelte`: アプリの最上位コンポーネントです。今のところは 'Hello World!' をレンダリングするだけです。
+  - `main.js`: アプリケーションのエントリポイントです。これは `App` コンポーネントをインスタンス化して、HTML ページの body にバインドするだけです。
 
-- `public`: This directory contains all the files that will be published in production.
+- `public`: このディレクトリーには、本番環境で公開される全てのファイルが含まれています。
 
-  - `favicon.png`: This is the favicon for your app. Currently, it's the Svelte logo.
-  - `index.html`: This is the main page of your app. Initially it's just an empty HTML page that loads the CSS files and js bundles generated by Svelte.
-  - `global.css`: This file contains unscoped styles. It's a regular CSS file that will be applied to the whole application.
-  - `build`: This folder contains the generated CSS and JavaScript source code.
+  - `favicon.png`: アプリのファビコンです。現在は Svelte のロゴになっています。
+  - `index.html`: これがアプリのメインページです。最初は空の HTML ページで、その後 Svelte によって生成された CSS ファイルと js バンドルが読み込まれます。
+  - `global.css`: このファイルにはスコープされていないスタイルが書かれています。これはアプリケーション全体に適用される通常の CSS ファイルです。
+  - `build`: このフォルダーには、生成された CSS と JavaScript のソースコードが入っています。
 
-    - `bundle.css`: The CSS file that Svelte generated from the styles defined for each component.
-    - `bundle.js`: The JavaScript file compiled from all your JavaScript source code.
+    - `bundle.css`: 各コンポーネントに定義されたスタイルから Svelte が生成した CSS ファイル。
+    - `bundle.js`: 全ての JavaScript のソースコードからコンパイルされた JavaScript ファイル。
 
-## Having a look at our first Svelte component
+## 最初の Svelte コンポーネントを見る
 
-Components are the building blocks of Svelte applications. They are written into `.svelte` files using a superset of HTML.
+コンポーネントは Svelte アプリケーションの構成要素です。これらは HTML のスーパーセットを使用して、`.svelte` ファイルに記述されます。
 
-All three sections — `<script>`, `<style>`, and markup — are optional, and can appear in any order you like.
+`<script>`、`<style>`、マークアップの 3 つのセクションは全て任意であり、好きな順序で並べることができます。
 
 ```html
 <script>
-  // logic goes here
+  // ここにロジックを記述
 </script>
 
 <style>
-  /* styles go here */
+  /* ここにスタイルを記述 */
 </style>
 
-<!-- markup (zero or more HTML elements) goes here -->
+<!-- ここにマークアップ (0 個以上の HTML 要素) を記述 -->
 ```
 
-> **Note:** For more information on the component format, have a look at the [Svelte documentation](https://svelte.dev/docs#Component_format).
+> **Note:** コンポーネントの形式についての詳細は、[Svelte のドキュメント](https://svelte.jp/docs#component-format) を参照してください。
 
-With this in mind, let's have a look at the `src/App.svelte` file that came with the starter template. You should see something like the following:
+以上を踏まえてスターターテンプレートに付属の `src/App.svelte` ファイルを見てみましょう。以下のようになっているはずです。
 
 ```html
 <script>
@@ -226,9 +225,9 @@ With this in mind, let's have a look at the `src/App.svelte` file that came with
 </style>
 ```
 
-### The `<script>` section
+### `<script>` セクション
 
-The `<script>` block contains JavaScript that runs when a component instance is created. Variables declared (or imported) at the top level are 'visible' from the component's markup. Top-level variables are the way Svelte handles the component state, and they are reactive by default. We will explain in detail what this means later on.
+`<script>` ブロックには、コンポーネントのインスタンスが作成されたときに実行される JavaScript が含まれています。トップレベルで宣言された (またはインポートされた) 変数は、コンポーネントのマークアップから「表示」できるようになっています。トップレベルの変数は Svelte がコンポーネントの状態を処理する方法であり、デフォルトでリアクティブです。これが何を意味するかは、後ほど詳しく解説します。
 
 ```html
 <script>
@@ -236,11 +235,11 @@ The `<script>` block contains JavaScript that runs when a component instance is 
 </script>
 ```
 
-Svelte uses the [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) keyword to mark a variable declaration as a property (or prop), which means it becomes accessible to consumers of the component (e.g. other components). This is one example of Svelte extending JavaScript syntax to make it more useful, while keeping it familiar.
+Svelte では変数の宣言をプロパティ (または prop) としてマークするために [`export`](/ja/docs/Web/JavaScript/Reference/Statements/export) キーワードを使って、コンポーネントのコンシューマー (他のコンポーネントなど) からアクセスができるようにします。これは Svelte が JavaScript の構文を拡張して、使い慣れた形式を維持しながら、より便利なものにした一例です。
 
-### The markup section
+### マークアップセクション
 
-In the markup section you can insert any HTML you like, and in addition you can insert valid JavaScript expressions inside single curly brackets (`{}`). In this case we are embedding the value of the `name` prop right after the `Hello` text.
+マークアップセクションでは任意の HTML を挿入することができ、さらに 1 つの中括弧 (`{}`) の中に有効な JavaScript を挿入することもできます。例の場合では、`name` prop の値を `Hello` の直後に埋め込んでいます。
 
 ```html
 <main>
@@ -249,11 +248,11 @@ In the markup section you can insert any HTML you like, and in addition you can 
 </main>
 ```
 
-Svelte also supports tags like `{#if}`, `{#each}`, and `{#await}` — these examples allow you to conditionally render a portion of the markup, iterate through a list of elements, and work with async values, respectively.
+Svelte は `{#if}`、`{#each}`、`{#await}` などのタグもサポートしています。これらはそれぞれ、マークアップの一部を条件付きでレンダリングしたり、要素のリストを反復処理したり、非同期的な値を扱う処理ができます。
 
-### The `<style>` section
+### `<style>` セクション
 
-If you have experience working with CSS, the following snippet should make sense:
+CSS を扱ったことがある場合、次のスニペットは理解できるかと思います。
 
 ```html
 <style>
@@ -279,36 +278,36 @@ If you have experience working with CSS, the following snippet should make sense
 </style>
 ```
 
-We are applying a style to our [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element. What will happen to other components with `<h1>` elements in them?
+上記では [`<h1>`](/ja/docs/Web/HTML/Element/Heading_Elements) 要素にスタイルを適用しています。それでは `<h1>` 要素をを含む他のコンポーネントはどうなるでしょうか？
 
-In Svelte, CSS inside a component's `<style>` block will be scoped only to that component. This works by adding a class to selected elements, which is based on a hash of the component styles.
+Svelte ではコンポーネントの `<style>` ブロック内の CSS は、そのコンポーネントにのみスコープされます。これはコンポーネントのスタイルに基づいたハッシュ値を、選択された要素にクラスとして追加することで機能しています。
 
-You can see this in action by opening `localhost:8080` in a new browser tab, right/<kbd>Ctrl</kbd>-clicking on the _HELLO WORLD!_ label, and choosing _Inspect_:
+新しいブラウザのタブで `localhost:8080` を開き、_HELLO WORLD!_ ラベルを右クリック、または <kbd>Ctrl</kbd> キーを押しながらクリックして _検証_ を選ぶことで下の画像と同様の画面を確認することができます。
 
-![Svelte starter app with devtools open, showing classes for scoped styles](02-svelte-component-scoped-styles.png)
+![Svelte のスターターアプリを devtools で開くとスコープされたスタイルのクラスが表示される](02-svelte-component-scoped-styles.png)
 
-When compiling the app, Svelte changes our `h1` styles definition to `h1.svelte-1tky8bj`, and then modifies every `<h1>` element in our component to `<h1 class="svelte-1tky8bj">`, so that it picks up the styles as required.
+アプリをコンパイルする際、Svelte は `h1` のスタイル定義を `h1.svelte-1tky8bj` に変更します。そしてコンポーネント内全ての `<h1>` 要素を `<h1 class="svelte-1tky8bj">` に置き換え、そのコンポーネントが必要とするスタイルを取得できるようにします。
 
-> **Note:** You can override this behavior and apply styles to a selector globally using the `:global()` modifier (see the [Svelte `<style>` docs](https://svelte.dev/docs#style) for more information).
+> **Note:** `:global()` 修飾子を使用することでこの動作をオーバーライドし、スタイルをグローバルなセレクターに適用できます (詳細については [Svelte `<style>` ドキュメント](https://svelte.jp/docs#component-format-style) を参照してください)。
 
-## Making a couple of changes
+## 少しだけ変更を加える
 
-Now that we have a general idea of how it all fits together, we can start making a few changes.
-At this point you can try updating your `App.svelte` component — for example change the `<h1>` element on line 6 of `App.svelte` so that it reads like this:
+どのようにアプリが構成されているのかが大体分かったので、少しだけ変更を加えてみましょう。
+この時点で `App.svelte` コンポーネントの更新を試すことができます。例えば `App.svelte` の 6 行目にある `<h1>` 要素を以下のように変更してください。
 
 ```html
 <h1>Hello {name} from MDN!</h1>
 ```
 
-Just save your changes and the app running at `localhost:8080` will be automatically updated.
+変更を保存するだけで `localhost:8080` で実行されているアプリが自動的に更新されます。
 
-### A first look at Svelte reactivity
+### Svelte のリアクティビティを確認
 
-In the context of a UI framework, reactivity means that the framework can automatically update the DOM when the state of any component is changed.
+UI フレームワークの文脈では、リアクティビティとはコンポーネントの状態が変更されたときにフレームワークが自動的に DOM を更新できることを意味します。
 
-In Svelte, reactivity is triggered by assigning a new value to any top-level variable in a component. For example, we could include a `toggleName()` function in our `App` component, and a button to run it.
+Svelte では、コンポーネント内の任意のトップレベル変数に新しい値を代入することでリアクティビティが発生します。例として `App` コンポーネントに `toggleName()` 関数と、それを実行するためのボタンを組み込むことで確認ができます。
 
-Try updating your `<script>` and markup sections like so:
+`<script>` とマークアップセクションを以下のように更新してみてください。
 
 ```html
 <script>
@@ -330,15 +329,15 @@ Try updating your `<script>` and markup sections like so:
 </main>
 ```
 
-Whenever the button is clicked, Svelte executes the `toggleName()` function, which in turn updates the value of the `name` variable.
+ボタンがクリックされるたびに、Svelte は `toggleName()` 関数を実行して、`name` 変数の値を更新します。
 
-As you can see, the `<h1>` label is automatically updated. Behind the scenes, Svelte created the JavaScript code to update the DOM whenever the value of the name variable changes, without using any virtual DOM or other complex reconciliation mechanism.
+お分かりのように `<h1>` ラベルは自動的に更新されます。その裏側では、Svelte は仮想 DOM やその他の複雑な調整メカニズムを使うことなく、name 変数の値が変更されるたびに DOM を更新する JavaScript コードを作り出しました。
 
-Note the use of `:` in `on:click`. That's Svelte's syntax for listening to DOM events.
+なお `on:click` で `:` を使っていることに注意してください。これは Svelte が DOM イベントをリスニングするための構文です。
 
-## Inspecting main.js: the entry point of our app
+## main.js を見る: アプリのエントリーポイント
 
-Let's open `src/main.js`, which is where the `App` component is being imported and used. This file is the entry point for our app, and it initially looks like this:
+`src/main.js` を開いてみましょう。このファイルは `App` コンポーネントがインポートされて使用される場所です。またアプリのエントリーポイントでもあり、最初は以下のようになっています。
 
 ```js
 import App from './App.svelte';
@@ -353,20 +352,20 @@ const app = new App({
 export default app;
 ```
 
-`main.js` starts by importing the Svelte component that we are going to use. Then in line 3 it instantiates it, passing an option object with the following properties:
+始めに `main.js` は使用する Svelte コンポーネントをインポートします。そして 3 行目でインスタンス化を行い、次のプロパティを持つオプションオブジェクトを渡しています。
 
-- `target`: The DOM element inside which we want the component to be rendered, in this case the `<body>` element.
-- `props`: the values to assign to each prop of the `App` component.
+- `target`: コンポーネントをレンダリングする DOM 要素、上記の場合は `<body>` 要素。
+- `props`: `App` コンポーネントの各 prop に割り当てる値を指定する。
 
-## A look under the hood
+## 細かく見てみる
 
-How does Svelte manage to make all these files work together nicely?
+Svelte はどのようにして、これら全てのファイルを上手く連携させているのでしょうか？
 
-The Svelte compiler processes the `<style>` section of every component and compiles them into the `public/build/bundle.css` file.
+Svelte コンパイラーは各コンポーネントの `<style>` セクションを処理して `public/build/bundle.css` ファイルにコンパイルします。
 
-It also compiles the markup and `<script>` section of every component and stores the result in `public/build/bundle.js`. It also adds the code in `src/main.js` to reference the features of each component.
+次に各コンポーネントのマークアップと `<script>` セクションをコンパイルして、その結果を `public/build/bundle.js` に保存します。くわえて `src/main.js` に各コンポーネントの機能を参照するためのコードを追加します。
 
-Finally the file `public/index.html` includes the generated `bundle.css` and `bundle.js` files:
+そして最後に `public/index.html` ファイルには生成された `bundle.css` と `bundle.js` ファイルが組み込まれます。
 
 ```html
 <!DOCTYPE html>
@@ -389,31 +388,31 @@ Finally the file `public/index.html` includes the generated `bundle.css` and `bu
 </html>
 ```
 
-The minified version of `bundle.js` weighs a little more than 3KB, which includes the "Svelte runtime" (just 300 lines of JavaScript code) and the `App.svelte` compiled component. As you can see, `bundle.js` is the only JavaScript file referenced by `index.html`. There are no other libraries loaded into the web page.
+縮小版の `bundle.js` のサイズは 3KB 程度で、これには「Svelte ランタイム」(わずか 300 行の JavaScript コード) と `App.svelte` のコンパイル済みコンポーネントが含まれています。お分かりのように `bundle.js` は `index.html` から参照される唯一の JavaScript ファイルです。ウェブページに読み込まれる他のライブラリはありません。
 
-This is a much smaller footprint than compiled bundles from other frameworks. Take into account that, in the case of code bundles, it's not just the size of the files you have to download that matter. This is executable code that needs to be parsed, executed, and kept in memory. So this really makes a difference, especially in low-powered devices or CPU-intensive applications.
+これは他のフレームワークからコンパイルされたバンドルよりも、はるかに小さなフットプリントです。コードバンドルの場合、ダウンロードしなければならないファイルのサイズだけが重要ではないことを考慮してください。`bundle.js` は解析され、実行され、メモリー内に保持される必要がある実行可能なコードです。したがって特に低消費電力の機器や CPU に負荷のかかるアプリケーションではこれが大きな違いを生みます。
 
-## Following this tutorial
+## このチュートリアルを行う
 
-In this tutorial series you will be building a complete web application. We'll learn all the basics about Svelte and also quite a few advanced topics.
+このチュートリアルシリーズでは完全なウェブアプリケーションを構築していきます。Svelte についての全ての基本を学び、さらに高度なトピックスもいくつか学習します。
 
-You can just read the content to get a good understanding of Svelte features, but you'll get the most out of this tutorial if you follow along coding the app with us as you go. To make it easier for you to follow each article, we provide a GitHub repository with a folder containing the source for the app as it is at the start of each tutorial.
+内容をしっかりと読むだけでも Svelte の機能を十分に理解することができますが、一緒にアプリをコーディングしながら進めていくと、このチュートリアルを最大限に活用することができます。記事を読み進めやすいように、各チュートリアルの冒頭にはアプリのソースコードを含むフォルダーを GitHub リポジトリーとして提供しています。
 
-Svelte also provides an online REPL, which is a playground for live-coding Svelte apps on the web without having to install anything on your machine. We provide a REPL for each article so you can start coding along right away. Let's talk a bit more about how to use these tools.
+また Svelte はオンライン REPL を提供しており、これはマシンに何もインストールせずにウェブ上で Svelte アプリをライブコーディングするためのプレイグラウンドです。各記事には REPL が用意されているので、すぐにコーディングに取り掛かることができます。これらツールの使い方をもう少し詳しく説明しましょう。
 
-### Using Git
+### Git の活用
 
-The most popular version control system is Git, along with GitHub, a site that provides hosting for your repositories and several tools for working with them.
+最も一般的なバージョン管理システムは Git であり、 GitHub はリポジトリーのホスティングとそれらを操作するためのいくつかのツールを提供するサイトです。
 
-We'll be using GitHub so that you can easily download the source code for each article. You will also be able to get the code as it should be after completing the article, just in case you get lost.
+各記事のソースコードを簡単にダウンロードできるよう、GitHub を活用します。行き詰まった場合に備えて、記事を読み終えると完成するコードを取得できるようになっています。
 
-After [installing git](https://git-scm.com/downloads), to clone the repository you should execute:
+[Git をインストール](https://git-scm.com/downloads)した後、リポジトリーのクローンを作成するために以下を実行します。
 
 ```bash
 git clone https://github.com/opensas/mdn-svelte-tutorial.git
 ```
 
-Then at the beginning of each article, you can just `cd` into the corresponding folder and start the app in dev mode to see what its current state should be, like this:
+そして各記事の冒頭で、以下のように対応するフォルダーに `cd` してからアプリを開発モードで起動すると現在の状態がどのようになっているのかが確認できます。
 
 ```bash
 cd 02-starting-our-todo-app
@@ -421,140 +420,140 @@ npm install
 npm run dev
 ```
 
-If you want lo learn more about git and GitHub, we've compiled a list of links to useful guides — see [Git and GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub).
+Git と GitHub について詳しく知りたい場合は、有益なガイドへのリンクがまとめられている [Git と GitHub](/ja/docs/Learn/Tools_and_testing/GitHub) を参照してください。
 
-> **Note:** If you just want to download the files without cloning the git repo, you can use the degit tool like this — `npx degit opensas/mdn-svelte-tutorial`. You can also download a specific folder with `npx degit opensas/mdn-svelte-tutorial/01-getting-started`. Degit won't create a local git repo, it will just download the files of the specified folder.
+> **Note:** Git リポジトリーをクローンせずにファイルだけをダウンロードしたい場合は、`npx degit opensas/mdn-svelte-tutorial` のように degit ツールを使うことができます。`npx degit opensas/mdn-svelte-tutorial/01-getting-started` で特定のフォルダーをダウンロードすることもできます。degit はローカルの git リポジトリーを作成せずに指定したフォルダーのファイルだけをダウンロードします。
 
-### Using the Svelte REPL
+### Svelte REPL の活用
 
-A REPL ([read–eval–print loop](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)) is an interactive environment that allows you to enter commands and immediately see the results — many programming languages provide a REPL.
+REPL ([Read-Eval-Print Loop](https://ja.wikipedia.org/wiki/REPL)) とはコマンドを入力してすぐに結果を確認できるインタラクティブな環境のことで、多くのプログラミング言語が REPL を提供しています。
 
-Svelte's REPL is much more than that. It's an online tool that allows you to create complete apps, save them online, and share with others.
+ただ Svelte の REPL はそれ以上のものです。完全なアプリの作成、オンラインでの保存、他の人々との共有ができるオンラインツールです。
 
-It's the easiest way to start playing with Svelte from any machine, without having to install anything. It is also widely used by Svelte community. If you want to share an idea, ask for help, or report an issue, it's always extremely useful to create a REPL instance demonstrating the issue.
+何もインストールする必要はなく、どのマシンからでも Svelte を試すことができる最も簡単な方法です。また、Svelte のコミュニティでも広く利用されています。アイデアを共有したり、助けを求めたり、問題を報告したりする場合、それらの事柄を実演する REPL インスタンスを作成することはどのような時でも非常に役立ちます。
 
-Let's have a quick look at the Svelte REPL and how you'd use it. It looks like so:
+それでは Svelte REPL とその使い方を簡単に見てみましょう。以下のようになります。
 
-![the svelte REPL in action, showing component code on the left, and output on the right](03-svelte-repl-in-action.png)
+![動作中の Svelte REPL、それぞれ左側に表示されるのがコンポーネントコード、右側が出力結果](03-svelte-repl-in-action.png)
 
-To start a REPL, open your browser and navigate to <https://svelte.dev/repl>.
+REPL を使い始めるには、ブラウザーを開いて <https://svelte.dev/repl> に移動します。
 
-- On the left side of the screen you'll see the code of your components, and on the right you'll see the running output of your app.
-- The bar above the code lets you create `.svelte` and `.js` files and rearrange them. To create a file inside a folder, just specify the complete pathname, like this: `components/MyComponent.svelte`. The folder will be automatically created.
-- Above that bar you have the title of the REPL. Click on it to edit it.
-- On the right side you have three tabs:
+- 画面の左側にはコンポーネントのコードが表示され、右側にはアプリの実行中の出力が表示されます。
+- コードの上にあるバーで `.svelte` と `.js` のファイルの作成や並べ替えができます。フォルダー内にファイルを作成する場合は、`components/MyComponent.svelte` のように完全なパス名を指定してください。そうすることで自動的にフォルダーが作成されます。
+- そのバーの上には REPL のタイトルがあります。これはクリックすることで編集が可能です。
+- 右側には下記 3 つのタブがあります。
 
-  - The _Result_ tab shows your app output, and provides a console at the bottom.
-  - The _JS output_ tab lets you inspect the JavaScript code generated by Svelte and set compiler options.
-  - The _CSS output_ tab shows the CSS generated by Svelte.
+  - _Result_ タブにはアプリの出力が表示され、下部にはコンソールが用意されています。
+  - _JS output_ タブでは Svelte が生成した JavaScript コードの検査とコンパイラーオプションの設定ができます。
+  - _CSS output_ タブには Svelte によって生成された CSS が表示されます。
 
-- Above the tabs, you'll find a toolbar that lets you enter fullscreen mode and download your app. If you log in with a GitHub account, you'll also be able to fork and save the app. You'll also be able to see all your saved REPLs by clicking on your GitHub username profile and selecting _Your saved apps_.
+- タブの上には、フルスクリーンモードにしたり、アプリをダウンロードしたりするためのツールバーがあります。GitHub のアカウントでログインすると、アプリをフォークして保存することもできるようになります。また GitHub のユーザープロフィールをクリックして _Your saved apps_ を選択すると、保存した全ての REPL を確認することができます。
 
-Whenever you change any file on the REPL, Svelte will recompile the app and update the Result tab. To share your app, share the URL. For example, here's the link for a REPL running our complete app: <https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2>.
+REPL 上のファイルを変更するたびに Svelte はアプリを再コンパイルして Result タブを更新します。アプリを共有したい時は URL を共有してください。例えば、このチュートリアルシリーズの完成版アプリを実行している REPL へのリンクは <https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2> です。
 
-> **Note:** Notice how you can specify Svelte's version in the URL. This is useful when reporting issues related to a specific version of Svelte.
+> **Note:** URL で Svelte のバージョンを指定できることに注目してください。これは Svelte の特定のバージョンに関連する問題を報告する際に役立ちます。
 
-We will provide a REPL at the beginning and end of each article so that you can start coding with us right away.
+各記事の最初と最後に REPL を提供しているため、すぐにでもコーディングを開始することができます。
 
-> **Note:** At the moment the REPL can't handle folder names properly. If you are following the tutorial on the REPL, just create all your components inside the root folder. Then when you see a path in the code, for example `import Todos from './components/Todos.svelte'`, just replace it with a flat URL, e.g. `import Todos from './Todos.svelte'`.
+> **Note:** 現在のところ、REPL はフォルダー名を正しく扱えません。もし REPL 上でチュートリアルを行っている場合は、ルートフォルダー内に全てのコンポーネントを作成してください。例えばコード中に `import Todos from './components/Todos.svelte'` などのパスを見つけたら、 `import Todos from './Todos.svelte'` などのフラットな URL に置き換えるだけです。
 
-## The code so far
+## これまでのコード
 
 ### Git
 
-Clone the GitHub repo (if you haven't already done it) with:
+まだ行っていない場合は、GitHub リポジトリーをクローンします。
 
 ```bash
 git clone https://github.com/opensas/mdn-svelte-tutorial.git
 ```
 
-Then to get to the current app state, run
+次に、現段階のアプリを取得するためには以下を実行します。
 
 ```bash
 cd mdn-svelte-tutorial/01-getting-started
 ```
 
-Or directly download the folder's content:
+もしくはフォルダーのコンテンツを直接ダウンロードします。
 
 ```bash
 npx degit opensas/mdn-svelte-tutorial/01-getting-started
 ```
 
-Remember to run `npm install && npm run dev` to start your app in development mode.
+`npm install && npm run dev` を実行して、アプリを開発モードで起動することを忘れないでください。
 
 ### REPL
 
-To code along with us using the REPL, start at
+チュートリアルを読みながら REPL でコードを書くには、下記のリンクを使ってください。
 
 <https://svelte.dev/repl/fc68b4f059d34b9c84fa042d1cce586c?version=3.23.2>
 
-## Summary
+## まとめ
 
-This brings us to the end of our initial look at Svelte, including how to install it locally, create a starter app, and how the basics work. In the next article we'll start building our first proper application, a todo list. Before we do that, however, let's recap some of the things we've learned.
+ローカルにインストールする方法、スターターアプリを作成する方法、基本的な動作など、Svelte について最初の紹介はこれで終わりです。次の記事では初めてのアプリケーションとなる todo リストの作成を開始します。ですが、その前にこれまでに学んだことをいくつか復習しておきましょう。
 
-In Svelte:
+Svelte の基礎知識:
 
-- We define the script, style, and markup of each component in a single `.svelte` file.
-- Component props are declared with the `export` keyword.
-- Svelte components can be used just by importing the corresponding `.svelte` file.
-- Components styles are scoped, keeping them from clashing with each other.
-- In the markup section you can include any JavaScript expression by putting it between curly braces.
-- The top-level variables of a component constitute its state.
-- Reactivity is fired just by assigning a new value to a top-level variable.
+- 各コンポーネントのスクリプト、スタイル、およびマークアップを 1 つの `.svelte` ファイルで定義します。
+- コンポーネントの props は `export` キーワードで宣言されます。
+- Svelte コンポーネントは対応する `.svelte` ファイルをインポートするだけで使用することができます。
+- コンポーネントのスタイルはスコープが設定されており、お互いに衝突することがないようになっています。
+- マークアップセクションでは中括弧で囲むことにより、任意の JavaScript を含めることができます。
+- コンポーネントのトップレベルで宣言された変数が、状態の構成要素となります。
+- トップレベルの変数に新しい値を代入するだけでリアクティビティが発動します。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-## In this module
+## このモジュール
 
-- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- [Introduction to client-side frameworks](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [Framework main features](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
 - React
 
-  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+  - [Reactをはじめる](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [React ToDoリストをはじめる](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [React アプリのコンポーネント化](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [React interactivity: Events and state](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [React interactivity: Editing, filtering, conditional rendering](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [Accessibility in React](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React のリソース](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
 
 - Ember
 
-  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+  - [Getting started with Ember](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - [Ember app structure and componentization](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Ember interactivity: Events, classes and state](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Ember Interactivity: Footer functionality, conditional rendering](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Routing in Ember](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ember resources and troubleshooting](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
 
 - Vue
 
-  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+  - [Getting started with Vue](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [Creating our first Vue component](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - [Rendering a list of Vue components](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [Adding a new todo form: Vue events, methods, and models](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [Styling Vue components with CSS](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [Using Vue computed properties](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - [Vue conditional rendering: editing existing todos](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [Focus management with Vue refs](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - [Vue resources](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
 
 - Svelte
 
-  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+  - [Svelte をはじめる](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [Starting our Svelte Todo list app](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Dynamic behavior in Svelte: working with variables and props](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [Componentizing our Svelte app](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Working with Svelte stores](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [TypeScript support in Svelte](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [Deployment and next steps](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
 
 - Angular
 
-  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
+  - [Angular をはじめる](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Angular todo リストアプリの事始め](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Angular アプリのスタイリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - [item コンポーネントの作成](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [To Do アイテムのフィルタリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [Building Angular applications and further resources](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
