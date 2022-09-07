@@ -377,7 +377,7 @@ try {
 
 ### 使用 `Error` 物件
 
-根據錯誤的類型，您可以使用 "name" 和 "message" 屬性來獲取更精確的資訊。"name" 提供了錯誤所屬的類別（class）（例如，"DOMException" 或 "Error"），而 "message" 通常提供藉由將錯誤物件轉換為字串所獲得的更簡潔的資訊。參見[巢狀 try 區塊](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks)位於 [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) 參考資料頁面。
+根據錯誤的類型，您可以使用 "name" 和 "message" 屬性來獲取更精確的資訊。"name" 提供了錯誤所屬的類別（class）（例如，"DOMException" 或 "Error"），而 "message" 通常提供藉由將錯誤物件轉換為字串所獲得的更簡潔的資訊。參見[巢狀 try 區塊](/zh-TW/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks)位於 [`try...catch`](/zh-TW/docs/Web/JavaScript/Reference/Statements/try...catch) 參考資料頁面。
 
 假如您要丟出自定義的例外， 為了方便使用這些屬性（例如，如果你的 `catch` 區塊並不要區分你自己的例外和系統的），你可以使用 `Error` 構造子。舉例來說：
 

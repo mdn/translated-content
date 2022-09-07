@@ -284,10 +284,10 @@ var SimplePropertyRetriever = {
 
 ## 參見
 
-- [`in`](/en-US/docs/JavaScript/Reference/Operators/in)
-- [`for..in`](/en-US/docs/JavaScript/Reference/Statements/for...in)
-- [`hasOwnProperty`](/en-US/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
-- [`propertyIsEnumerable`](/en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable)
-- [`getOwnPropertyNames`](/en-US/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
-- [`Object.keys`](/en-US/docs/JavaScript/Reference/Global_Objects/Object/keys)
-- [`Object.getOwnPropertyDescriptors`](/en-US/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors)
+- [`in`](/zh-TW/docs/JavaScript/Reference/Operators/in)
+- [`for..in`](/zh-TW/docs/JavaScript/Reference/Statements/for...in)
+- [`hasOwnProperty`](/zh-TW/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
+- [`propertyIsEnumerable`](/zh-TW/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable)
+- [`getOwnPropertyNames`](/zh-TW/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
+- [`Object.keys`](/zh-TW/docs/JavaScript/Reference/Global_Objects/Object/keys)
+- [`Object.getOwnPropertyDescriptors`](/zh-TW/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors)

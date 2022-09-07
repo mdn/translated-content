@@ -103,7 +103,7 @@ for (let item of mySet) console.log(item);
 
 ### Array 和 Set 之間的相互轉換
 
-You can create an {{jsxref("Array")}} from a Set using {{jsxref("Array.from")}} or the [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator). Also, the `Set` constructor accepts an `Array` to convert in the other direction. Note again that `Set` objects store unique values, so any duplicate elements from an Array are deleted when converting.
+You can create an {{jsxref("Array")}} from a Set using {{jsxref("Array.from")}} or the [spread operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_operator). Also, the `Set` constructor accepts an `Array` to convert in the other direction. Note again that `Set` objects store unique values, so any duplicate elements from an Array are deleted when converting.
 
 ```js
 Array.from(mySet);
