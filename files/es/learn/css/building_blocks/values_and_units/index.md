@@ -42,7 +42,7 @@ Todas las propiedades que se utilizan en CSS tienen un valor o un conjunto de va
 
 En las especificaciones CSS y en las páginas de propiedades de este proyecto MDN, podrás detectar los valores porque estarán escritos entre corchetes angulares, como [`<color>`](/es/docs/Web/CSS/color_value) o [`<length>`](/es/docs/Web/CSS/length). Cuando veas que el valor `<color>` es válido para una propiedad en particular, significa que para esa propiedad puedes usar como valor cualquier color válido de entre los que se enumeran en la página de referencia de la propiedad [`<color>`](/es/docs/Web/CSS/color_value).
 
-> **Nota:** También verás valores CSS denominados _tipos de datos_. Los términos son básicamente intercambiables: cuando veas algo en CSS denominado ‘tipo de datos’, en realidad es solo una forma elegante de decir ‘valor’.
+> **Nota:** También verás valores CSS denominados _tipos de datos_. Los términos son básicamente intercambiables: cuando veas algo en CSS denominado 'tipo de datos', en realidad es solo una forma elegante de decir 'valor'.
 
 > **Nota:** Sí, hay una tendencia de denotar los valores CSS entre corchetes angulares, para diferenciarlos de las propiedades CSS (por ejemplo, la propiedad {{cssxref ("color")}} con respecto al tipo de dato [\<color>](/es/docs/Web/CSS/color_value)). Aunque podría generarte confusión entre los tipos de datos CSS y los elementos HTML, porque ambos usan corchetes angulares, es poco probable porque se usan en contextos muy diferentes.
 
@@ -128,7 +128,7 @@ Para empezar, configuramos un tamaño de letra de 16px en el elemento `<html>`.
 
 **En definitiva, la unidad _em_ significa «el tamaño de letra de mi elemento padre»**. Los elementos {{htmlelement ("li")}} dentro de un elemento {{htmlelement ("ul")}} con una clase de `ems` toman el tamaño con respecto a su elemento padre. Por lo tanto, en cada nivel de anidamiento sucesivo, el tamaño de letra aumenta progresivamente, porque en cada uno el tamaño de letra está establecido en `1.3em` (1,3 veces el tamaño de letra de su elemento padre).
 
-**En definitiva, la unidad _rem_ significa «el tamaño de letra del elemento raíz»**. (‘rem’ viene de «root em»). Los elementos {{htmlelement ("li")}} dentro de un elemento {{htmlelement ("ul")}} con una clase de `rems` toman su tamaño del elemento raíz (`<html>`). Esto significa que el tamaño de letra no aumenta en cada nivel sucesivo de anidamiento.
+**En definitiva, la unidad _rem_ significa «el tamaño de letra del elemento raíz»**. ('rem' viene de «root em»). Los elementos {{htmlelement ("li")}} dentro de un elemento {{htmlelement ("ul")}} con una clase de `rems` toman su tamaño del elemento raíz (`<html>`). Esto significa que el tamaño de letra no aumenta en cada nivel sucesivo de anidamiento.
 
 Sin embargo, si cambias el atributo `font-size` de `<html>` en el CSS, verás que todo lo demás cambia en relación con él, tanto la letra cuyo tamaño está especificado en unidades `rem` como la que lo está en unidades `em`.
 
