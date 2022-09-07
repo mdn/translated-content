@@ -51,12 +51,12 @@ Django 可以使你的应用具有以下优点：
 
     密码哈希是通过[密码散列函数](https://en.wikipedia.org/wiki/Cryptographic_hash_function)发送密码而创建的固定长度值。Django 能通过运行哈希函数来检查输入的密码 - 就是 - 将输出的哈希值与存储的哈希值进行比较是否正确。然而由于功能的“单向”性质，即时存储的哈希值受到威胁，攻击者也难以解决原始密码。（但其实有彩虹表 - 译者观点）
 
-    默认情况下，Django 可以防范许多漏洞，包括 SQL 注入，跨站点脚本，跨站点请求伪造和点击劫持 (请参阅 [网站安全](/en-US/docs/Learn/Server-side/First_steps/Website_security) 相关信息，如有兴趣).
+    默认情况下，Django 可以防范许多漏洞，包括 SQL 注入，跨站点脚本，跨站点请求伪造和点击劫持 (请参阅 [网站安全](/zh-CN/docs/Learn/Server-side/First_steps/Website_security) 相关信息，如有兴趣).
 
 - 可扩展
   - : Django 使用基于组件的“[无共享](https://en.wikipedia.org/wiki/Shared_nothing_architecture)”架构 (架构的每一部分独立于其他架构，因此可以根据需要进行替换或更改). 在不用部分之间有明确的分隔意味着它可以通过在任何级别添加硬件来扩展服务：缓存服务器，数据库服务器或应用程序服务器。一些最繁忙的网站已经成功地缩放了 Django，以满足他们的需求（例如 Instagram 和 Disqus，仅举两个例子，可自行添加）。
 - 可维护性
-  - : Django 代码编写是遵照设计原则和模式，鼓励创建可维护和可重复使用的代码。特别是它使用了不要重复自己（DRY）原则，所以没有不必要的重复，减少了代码的数量。Django 还将相关功能分组到可重用的“应用程序”中，并且在较低级别将相关代码分组或模块（ [模型视图控制器 (MVC)](/en-US/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture) 模式).
+  - : Django 代码编写是遵照设计原则和模式，鼓励创建可维护和可重复使用的代码。特别是它使用了不要重复自己（DRY）原则，所以没有不必要的重复，减少了代码的数量。Django 还将相关功能分组到可重用的“应用程序”中，并且在较低级别将相关代码分组或模块（ [模型视图控制器 (MVC)](/zh-CN/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture) 模式).
 - 灵活性
   - : Django 是用 Python 编写的，它在许多平台上运行。这意味着你不受任务特定的服务器平台的限制，并且可以在许多种类的 Linux，Windows 和 Mac OsX 上运行应用程序。此外，Django 得到许多网络托管提供商的好评，他们经常提供特定的基础设施和托管 Django 网站的文档。
 
@@ -104,7 +104,7 @@ Django 网络应用程序通常将处理每个步骤的代码分组到单独的�
 
 - **Templates:** 模板 是定义文件（例如 HTML 页面）的结构或布局的文本文件，用于表示实际内容的占位符。一个视图可以使用 HTML 模板，从数据填充它动态地创建一个 HTML 页面模型。可以使用模板来定义任何类型的文件的结构; 它不一定是 HTML！
 
-> **备注：** Django 将此组织称为“模型视图模板（MVT）”架构。它与更加熟悉的 [Model View Controller](/en-US/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture) 架构有许多相似之处.
+> **备注：** Django 将此组织称为“模型视图模板（MVT）”架构。它与更加熟悉的 [Model View Controller](/zh-CN/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture) 架构有许多相似之处.
 
 以下部分将为您提供 Django 应用程序的这些主要部分的想法（稍后我们将在进一步详细介绍后，我们将在开发环境中进行更详细的介绍）。
 
