@@ -348,7 +348,7 @@ The CSS simply establishes a size for the box and some basic styling for appeara
 
 #### JavaScript
 
-The script here handles the task of updating the starting color of the border to match the color picker's value. Then two event handlers are added to deal with input from the [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) element.
+The script here handles the task of updating the starting color of the border to match the color picker's value. Then two event handlers are added to deal with input from the [`<input type="color">`](/zh-TW/docs/Web/HTML/Element/input/color) element.
 
 ```js
 let colorPicker = document.getElementById("colorPicker");
