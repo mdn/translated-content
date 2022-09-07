@@ -4,7 +4,7 @@ slug: Web/API/Selection/toString
 ---
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 
-**`Selection.toString()`**返回代表当前 selection 对象的字符串，例如当前选择的文本文字。
+**`Selection.toString()`** 返回代表当前 selection 对象的字符串，例如当前选择的文本文字。
 
 ## 语法
 

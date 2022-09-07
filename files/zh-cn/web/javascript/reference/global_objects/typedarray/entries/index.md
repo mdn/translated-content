@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
 ---
 {{JSRef}}
 
-The **`entries()`**返回新的`Array Iterator`对象，包含数组每个下标处的键值对。
+The **`entries()`** 返回新的`Array Iterator`对象，包含数组每个下标处的键值对。
 
 ## 语法
 
@@ -14,7 +14,7 @@ arr.entries()
 
 ### 返回值
 
-新的**`Array Iterator`**对象。
+新的**`Array Iterator`** 对象。
 
 ## 示例
 

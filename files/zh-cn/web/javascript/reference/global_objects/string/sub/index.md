@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/sub
 ---
 {{JSRef}} {{deprecated_header}}
 
-**`sub()`**方法创建一个 {{HTMLElement("sub")}} HTML 元素，使字符串展示为下标。
+**`sub()`** 方法创建一个 {{HTMLElement("sub")}} HTML 元素，使字符串展示为下标。
 
 ## 语法
 

@@ -4,7 +4,7 @@ slug: Web/API/StorageManager/persist
 ---
 {{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}
 
-**`persist()`**方法是{{domxref("StorageManager")}}的一个接口，用于请求本地数据存储的权限，如果被授予权限，则返回一个 resolved 状态值为`true`的{{jsxref('Promise')}}对象，否则返回`false`。
+**`persist()`** 方法是{{domxref("StorageManager")}}的一个接口，用于请求本地数据存储的权限，如果被授予权限，则返回一个 resolved 状态值为`true`的{{jsxref('Promise')}}对象，否则返回`false`。
 
 ## 语法
 

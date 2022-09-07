@@ -4,7 +4,7 @@ slug: Web/API/Headers/has
 ---
 {{APIRef("Fetch")}}
 
-{{domxref("Headers")}} 接口的 **`has()`**方法返回一个布尔值来声明一个 `Headers`对象 是否包含特定的头信息。
+{{domxref("Headers")}} 接口的 **`has()`** 方法返回一个布尔值来声明一个 `Headers`对象 是否包含特定的头信息。
 
 考虑到安全因素，一些头信息只能被 user agent 来管理。这些头信息包括{{Glossary("Forbidden_header_name", "forbidden header names", 1)}} 和{{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
 

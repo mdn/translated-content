@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
 ---
 {{JSRef}}
 
-**`[@@matchAll]`**方法返回对字符串使用正则表达式的所有匹配项。
+**`[@@matchAll]`** 方法返回对字符串使用正则表达式的所有匹配项。
 
 \\{{EmbedInteractiveExample("pages/js/regexp-prototype-@@matchall.html")}}
 

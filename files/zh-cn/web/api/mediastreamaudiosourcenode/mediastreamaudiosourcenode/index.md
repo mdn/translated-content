@@ -4,7 +4,7 @@ slug: Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode
 ---
 {{APIRef("Web Audio API")}}
 
-**`MediaStreamAudioSourceNode()`**构造器创建一个新的 {{domxref("MediaStreamAudioSourceNode")}}对象实例。
+**`MediaStreamAudioSourceNode()`** 构造器创建一个新的 {{domxref("MediaStreamAudioSourceNode")}}对象实例。
 
 ## 语法
 

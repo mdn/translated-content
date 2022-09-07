@@ -4,7 +4,7 @@ slug: Web/CSS/scrollbar-color
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-**`scrollbar-color`**该[CSS](/zh-CN/docs/Web/CSS)属性设置滚动条轨道和拇指的颜色
+**`scrollbar-color`** 该[CSS](/zh-CN/docs/Web/CSS)属性设置滚动条轨道和拇指的颜色
 
 **track（轨道）**是指滚动条，其一般是固定的而不管滚动位置的背景。
 

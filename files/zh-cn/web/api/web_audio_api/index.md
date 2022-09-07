@@ -111,7 +111,7 @@ Web Audio API 使用的音频源接口。
 这些接口用来添加空间平移效果到音频源。
 
 - {{domxref("AudioListener")}}
-  - : **`AudioListener`**代表场景中正在听声音的人的位置和朝向。
+  - : **`AudioListener`** 代表场景中正在听声音的人的位置和朝向。
 - {{domxref("PannerNode")}}
   - : **`PannerNode`** 用于表示场景是声音的空间行为。它是{{domxref("AudioNode")}}类型的音频处理模块，这个节点用于表示右手笛卡尔坐标系里声源的位置信息，运动信息（通过一个速度向量表示），方向信息（通过一个方向圆锥表示）。
 

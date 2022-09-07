@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError
 ---
 {{JSRef}}
 
-**`WebAssembly.CompileError()`**构造函数创建一个新的 WebAssembly `CompileError`对象，该对象表示 WebAssembly 解码或验证期间的错误。
+**`WebAssembly.CompileError()`** 构造函数创建一个新的 WebAssembly `CompileError`对象，该对象表示 WebAssembly 解码或验证期间的错误。
 
 ## 语法
 

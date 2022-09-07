@@ -4,7 +4,7 @@ slug: Web/API/History/scrollRestoration
 ---
 {{APIRef("History API")}}
 
-{{DOMxRef("History")}} 的接口——**`滚动恢复属性`**允许 web 应用程序在历史导航上显式地设置默认滚动恢复行为
+{{DOMxRef("History")}} 的接口——**`滚动恢复属性`** 允许 web 应用程序在历史导航上显式地设置默认滚动恢复行为
 
 ## 语法
 

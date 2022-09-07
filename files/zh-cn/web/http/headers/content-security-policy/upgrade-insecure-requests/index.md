@@ -4,7 +4,7 @@ slug: Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
 ---
 {{HTTPSidebar}}
 
-HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`upgrade-insecure-requests`**指令指示客户端将该站点的所有不安全 URL（通过 HTTP 提供的 URL）视为已被替换为安全 URL（通过 HTTPS 提供的 URL）。该指令适用于需要重写大量不安全的旧版 URL 的网站。
+HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`upgrade-insecure-requests`** 指令指示客户端将该站点的所有不安全 URL（通过 HTTP 提供的 URL）视为已被替换为安全 URL（通过 HTTPS 提供的 URL）。该指令适用于需要重写大量不安全的旧版 URL 的网站。
 
 `upgrade-insecure-requests`指令在 {{CSP("block-all-mixed-content")}} 之前被执行，如果其被设置，后者实际上是空操作。可以设置其中一个，但不能同时设置。
 

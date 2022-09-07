@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength
 ---
 {{JSRef}}
 
-**`byteLength`**访问器属性表示类型化数组的长度（字节数）。
+**`byteLength`** 访问器属性表示类型化数组的长度（字节数）。
 
 ## 语法
 

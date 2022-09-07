@@ -4,7 +4,7 @@ slug: Web/API/Element/scrollIntoViewIfNeeded
 ---
 {{APIRef("DOM")}}{{Non-standard_header}}
 
-**`Element.scrollIntoViewIfNeeded()`**方法用来将不在浏览器窗口的可见区域内的元素滚动到浏览器窗口的可见区域。 如果该元素已经在浏览器窗口的可见区域内，则不会发生滚动。 此方法是标准的[Element.scrollIntoView()](/zh-CN/docs/Web/API/Element/scrollIntoView)方法的专有变体。
+**`Element.scrollIntoViewIfNeeded()`** 方法用来将不在浏览器窗口的可见区域内的元素滚动到浏览器窗口的可见区域。 如果该元素已经在浏览器窗口的可见区域内，则不会发生滚动。 此方法是标准的[Element.scrollIntoView()](/zh-CN/docs/Web/API/Element/scrollIntoView)方法的专有变体。
 
 ## 语法
 

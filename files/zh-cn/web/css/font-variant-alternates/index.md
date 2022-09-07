@@ -30,7 +30,7 @@ font-variant-alternates: unset;
 
 ## 语法
 
-**`font-variant-alternates`**属性可以采用以下两种形式之一：
+**`font-variant-alternates`** 属性可以采用以下两种形式之一：
 
 - 默认值 `normal`
 - 一个或多个关键词及函数，使用任意顺序用空格分隔。

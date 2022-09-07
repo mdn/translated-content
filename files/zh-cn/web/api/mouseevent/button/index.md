@@ -4,7 +4,7 @@ slug: Web/API/MouseEvent/button
 ---
 {{APIRef("DOM Events")}}
 
-**`MouseEvent.button`**是只读属性，它返回一个值，代表用户按下并触发了事件的鼠标按键。
+**`MouseEvent.button`** 是只读属性，它返回一个值，代表用户按下并触发了事件的鼠标按键。
 
 这个属性只能够表明在触发事件的单个或多个按键按下或释放过程中哪些按键被按下了。因此，它对判断{{event("mouseenter")}}, {{event("mouseleave")}}, {{event("mouseover")}}, {{event("mouseout")}} {{event("mousemove")}}这些事件并不可靠。
 

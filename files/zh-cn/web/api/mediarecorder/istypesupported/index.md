@@ -4,7 +4,7 @@ slug: Web/API/MediaRecorder/isTypeSupported
 ---
 {{APIRef("MediaStream Recording")}}
 
-**`MediaRecorder.isTypeSupported()`**方法会判断其 MIME 格式能否被客户端录制。
+**`MediaRecorder.isTypeSupported()`** 方法会判断其 MIME 格式能否被客户端录制。
 
 ## 语法
 

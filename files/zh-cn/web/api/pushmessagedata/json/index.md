@@ -4,7 +4,7 @@ slug: Web/API/PushMessageData/json
 ---
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
-{{domxref("PushMessageData")}} 接口的 **`json()`**方法将推送消息数据提取为 一个 [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) 对象。
+{{domxref("PushMessageData")}} 接口的 **`json()`** 方法将推送消息数据提取为 一个 [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) 对象。
 
 ## Syntax
 

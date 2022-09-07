@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Statements/try...catch
 ---
 {{jsSidebar("Statements")}}
 
-**`try...catch`**语句标记要尝试的语句块，并指定一个出现异常时抛出的响应。
+**`try...catch`** 语句标记要尝试的语句块，并指定一个出现异常时抛出的响应。
 
 {{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}
 

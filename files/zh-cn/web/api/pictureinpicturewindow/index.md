@@ -4,7 +4,7 @@ slug: Web/API/PictureInPictureWindow
 ---
 {{APIRef("Picture-in-Picture API")}}
 
-**`PictureInPictureWindow`**接口是一个对象，它可以通过编程的方式获得浮动视频窗口的宽度和高度，并调整浮动视频窗口的大小。
+**`PictureInPictureWindow`** 接口是一个对象，它可以通过编程的方式获得浮动视频窗口的宽度和高度，并调整浮动视频窗口的大小。
 
 使用{{domxref("HTMLVideoElement.requestPictureInPicture()")}}返回一个具有此接口的 promise 值
 

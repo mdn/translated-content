@@ -4,7 +4,7 @@ slug: Web/API/HTMLImageElement/Image
 ---
 {{ APIRef("HTML DOM") }}
 
-**`Image()`**函数将会创建一个新的{{domxref("HTMLImageElement")}}实例。
+**`Image()`** 函数将会创建一个新的{{domxref("HTMLImageElement")}}实例。
 
 它的功能等价于 {{domxref("Document.createElement()", "document.createElement('img')")}}
 

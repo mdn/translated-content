@@ -4,7 +4,7 @@ slug: Web/API/Selection/rangeCount
 ---
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 
-The **`Selection.rangeCount`**是一个返回选区 (selection) 中 range 对象数量的只读属性。
+The **`Selection.rangeCount`** 是一个返回选区 (selection) 中 range 对象数量的只读属性。
 
 在网页使用者点击一个加载完毕的新打开的页面之前，**rangeCount**的值是 0。在使用者点击页面之后，rangeCount 的值变为 1，即使并没有可视的选区 (selection)。
 

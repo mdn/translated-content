@@ -4,7 +4,7 @@ slug: Web/API/Window/blur_event
 ---
 {{APIRef}}
 
-当元素失去焦点时，**`blur`**事件将触发。
+当元素失去焦点时，**`blur`** 事件将触发。
 
 与 `blur` 相反的是{{domxref("Window/focus_event", "focus")}}。
 

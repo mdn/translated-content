@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
 ---
 {{JSRef}}
 
-**`slice()`**方法返回一个新的 `ArrayBuffer` ，它的内容是这个 `ArrayBuffer` 的字节副本，从 begin（包括），到 end（不包括）。
+**`slice()`** 方法返回一个新的 `ArrayBuffer` ，它的内容是这个 `ArrayBuffer` 的字节副本，从 begin（包括），到 end（不包括）。
 
 {{EmbedInteractiveExample("pages/js/arraybuffer-slice.html")}}
 

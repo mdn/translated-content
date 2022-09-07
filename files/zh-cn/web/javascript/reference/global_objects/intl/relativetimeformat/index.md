@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 ---
 {{JSRef}}
 
-**`Intl.RelativeTimeFormat`**对象启用本地化的相对时间格式。
+**`Intl.RelativeTimeFormat`** 对象启用本地化的相对时间格式。
 
 {{EmbedInteractiveExample("pages/js/intl-relativetimeformat.html")}}
 

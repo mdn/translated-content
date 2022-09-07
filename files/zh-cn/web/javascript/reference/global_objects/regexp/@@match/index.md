@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
 ---
 {{JSRef}}
 
-对*正则表达式*匹配*字符串*时，**`[@@match]()`**方法用于获取匹配结果。
+对*正则表达式*匹配*字符串*时，**`[@@match]()`** 方法用于获取匹配结果。
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-@@match.html")}}
 

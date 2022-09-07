@@ -4,7 +4,7 @@ slug: Web/CSS/:first-of-type
 ---
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:first-of-type`**表示一组兄弟元素中其类型的第一个元素。
+[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:first-of-type`** 表示一组兄弟元素中其类型的第一个元素。
 
 ```
 /* 选择在父元素中第一个出现的<p>，而不管其在兄弟内的位置如何 */

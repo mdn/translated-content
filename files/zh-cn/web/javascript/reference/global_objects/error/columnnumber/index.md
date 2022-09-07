@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
 ---
 {{JSRef}} {{non-standard_header}}
 
-**`columnNumber`**属性包含引发此错误的文件行中的列号。
+**`columnNumber`** 属性包含引发此错误的文件行中的列号。
 
 ## 例子
 

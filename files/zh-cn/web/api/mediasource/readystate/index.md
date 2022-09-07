@@ -4,7 +4,7 @@ slug: Web/API/MediaSource/readyState
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-**`readyState`**是 {{domxref("MediaSource")}} 接口的一个只读属性。它返回一个集合表明当前 `MediaSource` 的状态。它有三种可能的返回值：
+**`readyState`** 是 {{domxref("MediaSource")}} 接口的一个只读属性。它返回一个集合表明当前 `MediaSource` 的状态。它有三种可能的返回值：
 
 - `closed`：当前源并未附着到一个 media 元素上。
 - `open`：当前源已附着到一个 media 元素并准备好接收 {{domxref("SourceBuffer")}} 对象。

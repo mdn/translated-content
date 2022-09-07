@@ -4,7 +4,7 @@ slug: Web/API/StorageManager/estimate
 ---
 {{securecontext_header}}{{APIRef("Storage")}}
 
-**`estimate()`**方法是{{domxref("StorageManager")}}的一个接口，用于估算某一个域名（或一个站点）下 Storage Manager 的总存储空间和已经使用了的存储空间。此方法为一个异步方法，如果此方法可用，那么其返回一个结果为 resolved 的{{jsxref("Promise")}}对象。resolved 接收的参数是一个带有已使用数据存储空间和总可用总存储空间的{{domxref("StorageEstimate")}}对象。
+**`estimate()`** 方法是{{domxref("StorageManager")}}的一个接口，用于估算某一个域名（或一个站点）下 Storage Manager 的总存储空间和已经使用了的存储空间。此方法为一个异步方法，如果此方法可用，那么其返回一个结果为 resolved 的{{jsxref("Promise")}}对象。resolved 接收的参数是一个带有已使用数据存储空间和总可用总存储空间的{{domxref("StorageEstimate")}}对象。
 
 ## 语法
 

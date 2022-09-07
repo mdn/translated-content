@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
 ---
 {{JSRef}} {{deprecated_header}}
 
-**`fontcolor()`**方法创建一个{{HTMLElement("font")}}的 HTML 元素让字符串被显示成指定的字体颜色。
+**`fontcolor()`** 方法创建一个{{HTMLElement("font")}}的 HTML 元素让字符串被显示成指定的字体颜色。
 
 > **备注：** \<font> 元素已经在在[HTML5 中](/en-US/docs/Web/Guide/HTML/HTML5)被移除并且不应该在使用。替代的是，Web 开发者应该使用[CSS](/en-US/docs/Web/CSS)属性。
 

@@ -4,7 +4,7 @@ slug: Web/API/IDBObjectStore/get
 ---
 {{ APIRef("IndexedDB") }}
 
-{{domxref("IDBObjectStore")}} 的接口 **`get()`**方法 返回 {{domxref("IDBRequest")}} 对象，并在“单独的线程（separate thread）”中返回由指定键选择的“对象储存（object store）” 。这用于从对象储存检索特定记录。
+{{domxref("IDBObjectStore")}} 的接口 **`get()`** 方法 返回 {{domxref("IDBRequest")}} 对象，并在“单独的线程（separate thread）”中返回由指定键选择的“对象储存（object store）” 。这用于从对象储存检索特定记录。
 
 如果成功找到值，则会创建其值的结构化克隆，并设置为“请求对象（request object）”的 [`result`](/en/IndexedDB/IDBRequest#attr_result) 。
 

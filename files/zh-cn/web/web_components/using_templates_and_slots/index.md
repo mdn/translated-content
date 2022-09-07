@@ -247,7 +247,7 @@ body { margin-top: 47px }
 - 在渲染出来的`"details"`标签，**`<element-details>`** 标签从根开始填充了相应的命名的槽。换言之，**`<element-details>`** 的 DOM 树和 shadow root 的内容结合在了一起。
 - 对于这两个 **`<element-details>`** 标签，属性标题会自动的从 shadow root 中添加到名为`"attribute"`的插槽的前面。
 - 因为第一个 **`<element-details>`** 标签的`"dl"`元素就明确的引用了名为`"attributes"`的插槽，所以该`"dl"`元素的内容将会替换该标签中名为`"attributes"`的插槽。
-- 因为第二个 **`<element-details>`**标签没有引用名为`"attributes"` 的槽，所以标签内名为`"attributes"的`插槽的内容将会使用模板中默认的内容。
+- 因为第二个 **`<element-details>`** 标签没有引用名为`"attributes"` 的槽，所以标签内名为`"attributes"的`插槽的内容将会使用模板中默认的内容。
 
 ```html hidden
 <!DOCTYPE html>

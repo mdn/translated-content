@@ -4,7 +4,7 @@ slug: Web/API/CustomElementRegistry
 ---
 {{DefaultAPISidebar("Web Components")}}
 
-**`CustomElementRegistry`**接口提供注册自定义元素和查询已注册元素的方法。要获取它的实例，请使用 {{domxref("window.customElements")}}属性。
+**`CustomElementRegistry`** 接口提供注册自定义元素和查询已注册元素的方法。要获取它的实例，请使用 {{domxref("window.customElements")}}属性。
 
 ## 方法
 

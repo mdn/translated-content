@@ -6,7 +6,7 @@ slug: Web/API/BeforeInstallPromptEvent/prompt
 
 {{SeeCompatTable}}
 
-{{domxref("BeforeInstallPromptEvent")}} 接口的 **`prompt()`**方法允许一个开发人员在自己选择的一个时间显示安装提示。
+{{domxref("BeforeInstallPromptEvent")}} 接口的 **`prompt()`** 方法允许一个开发人员在自己选择的一个时间显示安装提示。
 
 ## 句法
 

@@ -4,7 +4,7 @@ slug: Web/API/Window/history
 ---
 {{ ApiRef("Window") }}
 
-**`Window.history`**是一个只读属性，用来获取{{domxref("History")}} 对象的引用，{{domxref("History")}} 对象提供了操作浏览器*会话历史*（浏览器地址栏中访问的页面，以及当前页面中通过框架加载的页面）的接口。
+**`Window.history`** 是一个只读属性，用来获取{{domxref("History")}} 对象的引用，{{domxref("History")}} 对象提供了操作浏览器*会话历史*（浏览器地址栏中访问的页面，以及当前页面中通过框架加载的页面）的接口。
 
 `History`对象有如下方法：参见 [Manipulating the browser history](/zh-CN/docs/Web/API/History_API) 中的示例和详情。尤其指出的是文章里解释了在使用`pushState()`和`replaceState() 方法前，你需要了解的安全问题。`
 

@@ -4,7 +4,7 @@ slug: Web/API/DOMMatrix
 ---
 {{APIRef("Geometry Interfaces")}}{{SeeCompatTable}}
 
-**`DOMMatrix`**接口代表 4x4 矩阵，适合 2D 和 3D 操作。
+**`DOMMatrix`** 接口代表 4x4 矩阵，适合 2D 和 3D 操作。
 
 一个 4x4 矩阵适于描绘任何 3D 的旋转（rotation ）和过渡（translation）。
 

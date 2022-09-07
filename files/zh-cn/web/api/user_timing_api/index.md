@@ -4,7 +4,7 @@ slug: Web/API/User_Timing_API
 ---
 {{DefaultAPISidebar("自定义时间测量 API")}}
 
-**`User Timing`**接口允许开发者在浏览器性能时间线中创建针对特定应用的 {{domxref("DOMHighResTimeStamp","时间戳")}}。有两种自定义时间测量事件类型："`mark`" {{domxref("PerformanceEntry.entryType","事件类型")}}和"`measure`" {{domxref("PerformanceEntry.entryType","事件类型")}}。
+**`User Timing`** 接口允许开发者在浏览器性能时间线中创建针对特定应用的 {{domxref("DOMHighResTimeStamp","时间戳")}}。有两种自定义时间测量事件类型："`mark`" {{domxref("PerformanceEntry.entryType","事件类型")}}和"`measure`" {{domxref("PerformanceEntry.entryType","事件类型")}}。
 
 `mark事件可以指定任意的名字并且可以在放在应用的任何位置，measure`事件也可以指定为任意的名字，但是需要放在两个 mark 之间，所以它实际上是两个 mark 的中间点。
 
@@ -12,7 +12,7 @@ slug: Web/API/User_Timing_API
 
 ## 性能`标记`
 
-性能**`标记`**是一个由应用创建并指定名称的{{domxref("PerformanceEntry","性能条目")}}。这个标记是浏览器性能时间线上的一个{{domxref("DOMHighResTimeStamp","时间戳")}}。
+性能**`标记`** 是一个由应用创建并指定名称的{{domxref("PerformanceEntry","性能条目")}}。这个标记是浏览器性能时间线上的一个{{domxref("DOMHighResTimeStamp","时间戳")}}。
 
 ### 创建一个性能`标记`
 
@@ -42,7 +42,7 @@ slug: Web/API/User_Timing_API
 
 ## 性能`测量`
 
-**`measure`**事件同样由程序指定名称，但是它被放在两个标记之间因此实际上是两个标记间的中间点。
+**`measure`** 事件同样由程序指定名称，但是它被放在两个标记之间因此实际上是两个标记间的中间点。
 
 ### 创建一个性能`测量`
 

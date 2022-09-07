@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/strike
 ---
 {{JSRef}} {{deprecated_header}}
 
-**`strike()`**方法创建{{HTMLElement("strike")}} HTML 元素，使字符串展示为被删除的文本。
+**`strike()`** 方法创建{{HTMLElement("strike")}} HTML 元素，使字符串展示为被删除的文本。
 
 ## 语法
 
