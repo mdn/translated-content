@@ -41,7 +41,7 @@ map(function(element, index, array) { /* … */ }, thisArg)
       - : `map` 方法调用的数组。
 
 - `thisArg` {{optional_inline}}
-  - : 执行 `callbackFn` 函数时值被用作`this`。
+  - : 执行 `callbackFn` 函数时被用作 `this` 的值。
 
 ### 返回值
 
