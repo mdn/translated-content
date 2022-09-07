@@ -1,15 +1,6 @@
 ---
 title: メディアコンテナ要素の幅と高さの属性をアスペクト比にマッピングする
 slug: Web/Media/images/aspect_ratio_mapping
-tags:
-  - CSS
-  - Images
-  - aspect ratio
-  - height
-  - jank
-  - responsive
-  - width
-translation_of: Web/Media/images/aspect_ratio_mapping
 ---
 This article explains a change that has occured in the way sizes are worked out on web documents when width and height attributes are set on them.
 

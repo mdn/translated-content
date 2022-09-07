@@ -32,7 +32,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
   - : Les balises de `script` classiques enverront un minimum d'informations à {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} pour les scripts qui ne respectent pas les contrôles standard du [CORS](/fr/docs/HTTP/Access_control_CORS). Afin de disposer de plus de renseignements sur les erreurs pour les sites utilisant des domaines séparés pour des documents statiques, on pourra utiliser cet attribut. Voir [la page de réglages des attributs CORS](/fr/docs/Web/HTML/Reglages_des_attributs_CORS) pour plus d'explications quant aux valeurs valides.
 - {{htmlattrdef("defer")}}
 
-  - : Cet attribut booléen permet d'indiquer au navigateur que le script doit être exécuté après l'analyse du document et avant l'évènement {{event("DOMContentLoaded")}}. **_Cet attribut ne doit pas être utilisé si l'attribut `src` est absent (c'est-à-dire pour les scripts contenus déclarés dans les éléments), dans ce cas il n'aurait aucun effet._** Pour obtenir un effet similaire avec les scripts insérés de façon dynamique, on utilisera explicitement `async=false`. Les scripts qui possèdent un attribut `defer` seront exécutés dans l'ordre dans lequel ils apparaissent dans le document.
+  - : Cet attribut booléen permet d'indiquer au navigateur que le script doit être exécuté après l'analyse du document et avant l'évènement [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event). **_Cet attribut ne doit pas être utilisé si l'attribut `src` est absent (c'est-à-dire pour les scripts contenus déclarés dans les éléments), dans ce cas il n'aurait aucun effet._** Pour obtenir un effet similaire avec les scripts insérés de façon dynamique, on utilisera explicitement `async=false`. Les scripts qui possèdent un attribut `defer` seront exécutés dans l'ordre dans lequel ils apparaissent dans le document.
 
     Les scripts qui utilisent l'attribut `defer` empêche le déclenchement de l'évènement `DOMContentLoaded` tant que le script n'a pas été chargé et que son évaluation n'est pas terminée.
 
@@ -78,7 +78,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 ## Notes
 
-Le script doit être servi avec le type MIME `text/javascript`. Cependant, les navigateurs appliquent cette règle avec une certaine flexibilité et ne bloquent que si le script est servi avec un type image (`image/*`), vidéo (`video/*`) ou audio (`audio/*`) ou CSV (`text/csv`). Si le script est bloqué, un évènement {{event("error")}} sera déclenché sur l'élément, sinon, l'évènement {{event("load")}} sera envoyé.
+Le script doit être servi avec le type MIME `text/javascript`. Cependant, les navigateurs appliquent cette règle avec une certaine flexibilité et ne bloquent que si le script est servi avec un type image (`image/*`), vidéo (`video/*`) ou audio (`audio/*`) ou CSV (`text/csv`). Si le script est bloqué, un évènement {{event("error")}} sera déclenché sur l'élément, sinon, l'évènement [`load`](/fr//docs/Web/API/Window/load_event) sera envoyé.
 
 ## Exemples
 

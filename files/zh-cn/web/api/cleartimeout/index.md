@@ -64,4 +64,4 @@ window.onclick = function() { alarm.setup() };
 - {{domxref("WindowTimers.setInterval()")}}
 - {{domxref("WindowTimers.clearInterval()")}}
 - {{domxref("Window.requestAnimationFrame()")}}
-- [_Daemons_ management](/en-US/docs/JavaScript/Timers/Daemons)
+- [_Daemons_ management](/zh-CN/docs/JavaScript/Timers/Daemons)

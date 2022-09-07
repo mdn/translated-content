@@ -1,15 +1,6 @@
 ---
 title: scroll-padding-top
 slug: Web/CSS/scroll-padding-top
-tags:
-  - CSS
-  - Reference
-  - Web
-  - recipe:css-property
-  - scroll-padding
-  - scroll-padding-top
-browser-compat: css.properties.scroll-padding-top
-translation_of: Web/CSS/scroll-padding-top
 ---
 {{CSSRef}}
 

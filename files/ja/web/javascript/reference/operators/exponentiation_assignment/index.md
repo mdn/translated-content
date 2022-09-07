@@ -1,14 +1,6 @@
 ---
 title: べき乗代入 (**=)
 slug: Web/JavaScript/Reference/Operators/Exponentiation_assignment
-tags:
-  - 代入演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.exponentiation_assignment
-translation_of: Web/JavaScript/Reference/Operators/Exponentiation_assignment
 ---
 {{jsSidebar("Operators")}}
 

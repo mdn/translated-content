@@ -24,6 +24,6 @@ Starting with Chrome V46.0 this method is blocked inside an {{htmlelement("ifram
 
 ## 參見
 
-- [Printing](/en/Printing)
+- [Printing](/zh-TW/Printing)
 - {{ domxref("window.onbeforeprint") }}
 - {{ domxref("window.onafterprint") }}

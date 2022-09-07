@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/call
 
 使用給定的`this`參數以及分別給定的參數來呼叫某個函數
 
-> **備註：** 此函數的所有語法大致上與[`apply()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/apply)相同，他們基本上不同處只有 `call()` 接受一連串的參數，而 `apply()` 單一的 array 作為參數
+> **備註：** 此函數的所有語法大致上與[`apply()`](/zh-TW/docs/JavaScript/Reference/Global_Objects/Function/apply)相同，他們基本上不同處只有 `call()` 接受一連串的參數，而 `apply()` 單一的 array 作為參數
 
 <table class="standard-table">
   <thead>

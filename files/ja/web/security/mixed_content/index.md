@@ -1,13 +1,6 @@
 ---
 title: 混在コンテンツ
 slug: Web/Security/Mixed_content
-tags:
-  - HTTP
-  - HTTPS
-  - Security
-  - Web
-  - console
-translation_of: Web/Security/Mixed_content
 ---
 ユーザが {{Glossary("HTTPS")}} を通じてページにアクセスすると、ユーザとウェブサーバとの接続は {{Glossary("TLS")}} で暗号化され、盗聴や中間者攻撃から保護されます。HTTPS のページの中に通常の平文の HTTP で送られてくるコンテンツが含まれている場合、**混在コンテンツ**と呼ばれます。このようなページは部分的にしか暗号化されておらず、盗聴者や中間者攻撃者が暗号化されていないコンテンツにアクセスできてしまいます。つまり、ページは安全ではありません。
 

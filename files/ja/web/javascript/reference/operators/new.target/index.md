@@ -1,14 +1,6 @@
 ---
 title: new.target
 slug: Web/JavaScript/Reference/Operators/new.target
-tags:
-  - クラス
-  - ECMAScript 2015
-  - JavaScript
-  - 言語機能
-  - リファレンス
-browser-compat: javascript.operators.new_target
-translation_of: Web/JavaScript/Reference/Operators/new.target
 ---
 {{JSSidebar("Operators")}}
 

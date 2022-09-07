@@ -1,16 +1,6 @@
 ---
 title: 端末の方向の検出
 slug: Web/Events/Detecting_device_orientation
-tags:
-  - API
-  - 端末の方向
-  - 中級者
-  - Mobile
-  - Motion
-  - 向き
-  - リファレンス
-  - WebAPI
-translation_of: Web/Events/Detecting_device_orientation
 original_slug: Web/Events/Detecting_device_orientation
 ---
 {{SeeCompatTable}}

@@ -40,7 +40,7 @@ Flex 排版的大致定義，是能更改該項目的長與（或）高，以便
 - Lines
   - : Flex items can be laid out on either a single line or on several lines according to the [`flex-wrap`](/zh-TW/docs/Web/CSS/flex-wrap) property, which controls the direction of the cross axis and the direction in which new lines are stacked.
 - Dimensions
-  - : The flex items' agnostic equivalents of height and width are **main size** and **cross size,** which respectively follow the main axis and cross axis of the flex container. The [`min-height`](/en-US/docs/Web/CSS/min-height) and [`min-width`](/en-US/docs/Web/CSS/min-width) properties initial value is 0.
+  - : The flex items' agnostic equivalents of height and width are **main size** and **cross size,** which respectively follow the main axis and cross axis of the flex container. The [`min-height`](/zh-TW/docs/Web/CSS/min-height) and [`min-width`](/zh-TW/docs/Web/CSS/min-width) properties initial value is 0.
     - The [`flex`](/zh-TW/docs/Web/CSS/flex) property shorthands the [`flex-grow`](/zh-TW/docs/Web/CSS/flex-grow), [`flex-shrink`](/zh-TW/docs/Web/CSS/flex-shrink), and [`flex-basis`](/zh-TW/docs/Web/CSS/flex-basis) properties to establish the flexibility of the flex items.
 
 ## 設計一個彈性盒子

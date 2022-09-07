@@ -30,7 +30,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
   </tbody>
 </table>
 
-让浏览器将[content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)加载到匹配网址的网站上
+让浏览器将[content scripts](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)加载到匹配网址的网站上
 
 此键（content_scripts）是一个数组，每个项目都是一个满足下列条件的对象：
 
@@ -194,8 +194,8 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 
 “content_scripts”键基于 URL 匹配将 content scripts 注入到网页上：如果网页的 URL 与键中的规则匹配，则将注入脚本。“content_scripts”中有四个属性，可以用于此规则：
 
-- `matches`: 一个关于[match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)的数组
-- `exclude_matches:` 一个关于[match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)的数组
+- `matches`: 一个关于[match patterns](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)的数组
+- `exclude_matches:` 一个关于[match patterns](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)的数组
 - `include_globs`: 一个关于[globs](#globs)的数组
 - `exclude_globs:` 一个关于[globs](#globs)的数组
 

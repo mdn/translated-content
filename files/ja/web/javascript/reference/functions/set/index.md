@@ -1,14 +1,6 @@
 ---
 title: セッター
 slug: Web/JavaScript/Reference/Functions/set
-tags:
-  - ECMAScript 5
-  - 関数
-  - JavaScript
-  - 言語機能
-  - リファレンス
-browser-compat: javascript.functions.set
-translation_of: Web/JavaScript/Reference/Functions/set
 ---
 {{jsSidebar("Functions")}}
 

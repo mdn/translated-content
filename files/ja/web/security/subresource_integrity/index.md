@@ -1,13 +1,6 @@
 ---
 title: サブリソース完全性
 slug: Web/Security/Subresource_Integrity
-tags:
-  - HTML
-  - HTTP
-  - Intro
-  - Networking
-  - セキュリティ
-translation_of: Web/Security/Subresource_Integrity
 ---
 **サブリソース完全性** (Subresource Integrity, SRI) は、 ({{Glossary("CDN")}} などから) 取得したリソースが意図せず改ざんされていないかをブラウザーが検証するセキュリティ機能です。 SRI を利用する際には、取得したリソースのハッシュ値と一致すべきハッシュ値を指定します。
 

@@ -1,14 +1,6 @@
 ---
 title: left
 slug: Web/CSS/left
-tags:
-  - CSS
-  - CSS 位置指定レイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.left
-translation_of: Web/CSS/left
 ---
 {{CSSRef}}
 

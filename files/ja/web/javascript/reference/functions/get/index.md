@@ -1,15 +1,6 @@
 ---
 title: ゲッター
 slug: Web/JavaScript/Reference/Functions/get
-tags:
-  - ECMAScript 2015
-  - ECMAScript 5
-  - 関数
-  - JavaScript
-  - 言語機能
-  - リファレンス
-browser-compat: javascript.functions.get
-translation_of: Web/JavaScript/Reference/Functions/get
 ---
 {{jsSidebar("Functions")}}
 

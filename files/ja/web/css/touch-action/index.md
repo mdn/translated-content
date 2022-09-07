@@ -1,14 +1,6 @@
 ---
 title: touch-action
 slug: Web/CSS/touch-action
-tags:
-  - CSS
-  - CSS プロパティ
-  - ポインターイベント
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.touch-action
-translation_of: Web/CSS/touch-action
 ---
 {{CSSRef}}
 

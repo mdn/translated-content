@@ -1,14 +1,6 @@
 ---
 title: CSS Houdini
 slug: Web/Guide/Houdini
-tags:
-  - API
-  - CSS
-  - Houdini
-  - JavaScript
-  - Landing
-  - Web
-translation_of: Web/Houdini
 original_slug: Web/Houdini
 ---
 Houdini は、CSS エンジンの一部を公開する低レベル API のセットであり、開発者はブラウザーのレンダリングエンジンのスタイリングおよびレイアウトプロセスにフックすることで CSS を拡張できます。 Houdini は、開発者が [CSS オブジェクトモデル](/ja/docs/Web/API/CSS_Object_Model)（CSSOM）に直接アクセスできるようにする API のグループです。 開発者は、ブラウザーが CSS として解析できるコードを記述できるため、ブラウザーにネイティブに実装されるのを待たずに新しい CSS 機能を作成できます。

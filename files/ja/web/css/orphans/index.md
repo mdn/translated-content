@@ -1,13 +1,6 @@
 ---
 title: orphans
 slug: Web/CSS/orphans
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 断片化
-  - リファレンス
-  - Web
-translation_of: Web/CSS/orphans
 ---
 {{CSSRef}}
 

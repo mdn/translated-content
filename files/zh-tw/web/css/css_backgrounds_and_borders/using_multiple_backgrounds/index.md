@@ -5,7 +5,7 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds
 ---
 {{CSSRef}}
 
-藉由 [CSS3](/en/CSS/CSS3) 我們可以對元素使用 **多重背景**。每個設定的背景被一個個分層，第一個背景在最上面，最後一個背景是在最下面一層。 記得只有最後一個背景可以設定 background color。
+藉由 [CSS3](/zh-TW/CSS/CSS3) 我們可以對元素使用 **多重背景**。每個設定的背景被一個個分層，第一個背景在最上面，最後一個背景是在最下面一層。 記得只有最後一個背景可以設定 background color。
 
 簡易的表達方式:
 
@@ -32,7 +32,7 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds
 
 ## 範例
 
-下面的範例中，重疊三個背景：Firefox logo、[線性漸層](/en/CSS/linear-gradient)、一張泡泡的圖片
+下面的範例中，重疊三個背景：Firefox logo、[線性漸層](/zh-TW/CSS/linear-gradient)、一張泡泡的圖片
 
 ```css
 .multi_bg_example {
