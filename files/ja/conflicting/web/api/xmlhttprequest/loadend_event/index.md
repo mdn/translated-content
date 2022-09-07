@@ -1,17 +1,6 @@
 ---
 title: GlobalEventHandlers.onloadend
 slug: conflicting/Web/API/XMLHttpRequest/loadend_event
-tags:
-  - API
-  - Event Handler
-  - GlobalEventHandlers
-  - HTML DOM
-  - Property
-  - Reference
-  - Web
-  - events
-  - onloadend
-translation_of: Web/API/GlobalEventHandlers/onloadend
 original_slug: Web/API/GlobalEventHandlers/onloadend
 ---
 {{ApiRef}}

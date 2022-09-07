@@ -1,14 +1,6 @@
 ---
 title: CanvasRenderingContext2D.beginPath()
 slug: Web/API/CanvasRenderingContext2D/beginPath
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - メソッド
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.beginPath
-translation_of: Web/API/CanvasRenderingContext2D/beginPath
 ---
 {{APIRef}}
 

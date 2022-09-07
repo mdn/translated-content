@@ -1,11 +1,6 @@
 ---
 title: HTMLFormElement.submit
 slug: Web/API/HTMLFormElement/submit
-tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-translation_of: Web/API/HTMLFormElement/submit
 ---
 {{ApiRef}}
 

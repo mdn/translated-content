@@ -108,7 +108,7 @@ div:nth-of-type(2) {
 
 ## 创建简单的传统网格框架
 
-大多数传统的框架使用{{cssxref("float")}}属性来使列相邻排列，让它们看起来像是一个网格。以用 float 创建网格的流程工作，可以向你展示它们工作的原理，并介绍一些更高级的概念，并在[浮动和清除](/en-US/docs/Learn/CSS/CSS_layout/Floats)这节课中学到的内容之上搭建更多的东西。
+大多数传统的框架使用{{cssxref("float")}}属性来使列相邻排列，让它们看起来像是一个网格。以用 float 创建网格的流程工作，可以向你展示它们工作的原理，并介绍一些更高级的概念，并在[浮动和清除](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)这节课中学到的内容之上搭建更多的东西。
 
 最简单的一类网格创建是固定宽度的——我们只需要计算设计中总的宽度、列的数目、每一列和间隔的宽度。但是，如果我们决定设计的网格是可以根据浏览器宽度缩放的，我们则需要计算每一列和间距的所占的宽度的百分比。
 
@@ -413,7 +413,7 @@ body {
 
 ## 弹性盒网格？
 
-如果你读了之前关于[flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)的文章，你大概会想，弹性布局是个写网格布局的好办法。现在有很多基于弹性布局的网格布局，并且弹性布局可以解决很多上面讲的问题。
+如果你读了之前关于[flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)的文章，你大概会想，弹性布局是个写网格布局的好办法。现在有很多基于弹性布局的网格布局，并且弹性布局可以解决很多上面讲的问题。
 
 但是，弹性布局不是为网格布局而设的，把它当网格布局来用也有新的挑战。举个简单的例子，我们可以使用我们在上面使用过的同样的示例标记，用下面的 CSS 样式化`wrapper`、`row`和`col`类：
 
@@ -479,7 +479,7 @@ body {
 
 Skeleton 不仅包含了网格系统，它还包含了用于排版和其他能作为起始点的页面元素上的 CSS。我们现在把这些部分留作默认值，我们在这里真正感兴趣的是网格。
 
-> **备注：**[Normalize](/en-US/docs/)是由 Nicolas Gallagher 编写的一个很有用的小 CSS 库，它自动做了一些有用的基础布局修正，让元素默认的样式化在不同浏览器中更加协调。
+> **备注：**[Normalize](/zh-CN/docs/)是由 Nicolas Gallagher 编写的一个很有用的小 CSS 库，它自动做了一些有用的基础布局修正，让元素默认的样式化在不同浏览器中更加协调。
 
 我们将会使用和在前面的示例中相似的 HTML。将下面的内容加到你的 HTML body 中：
 
@@ -573,13 +573,13 @@ Skeleton（或者其他任何网格框架）正在做的所有事情是，设定
 
 ## 模块目录
 
-- [CSS 布局介绍](/en-US/docs/Learn/CSS/CSS_layout/Introduction)
-- [正常布局流](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [弹性盒](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-- [网格](/en-US/docs/Learn/CSS/CSS_layout/Grids)
-- [浮动](/en-US/docs/Learn/CSS/CSS_layout/Floats)
-- [定位](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
-- [多列布局](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [传统布局模式](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [支持旧浏览器](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [基础布局掌握测验](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
+- [CSS 布局介绍](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
+- [正常布局流](/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow)
+- [弹性盒](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
+- [网格](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)
+- [浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
+- [定位](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
+- [多列布局](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [传统布局模式](/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
+- [支持旧浏览器](/zh-CN/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
+- [基础布局掌握测验](/zh-CN/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

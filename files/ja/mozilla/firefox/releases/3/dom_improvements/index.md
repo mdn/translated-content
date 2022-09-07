@@ -1,10 +1,6 @@
 ---
 title: Firefox 3 での DOM の改良
 slug: Mozilla/Firefox/Releases/3/DOM_improvements
-tags:
-  - DOM
-  - Firefox 3
-translation_of: Mozilla/Firefox/Releases/3/DOM_improvements
 original_slug: DOM_improvements_in_Firefox_3
 ---
 {{FirefoxSidebar}}

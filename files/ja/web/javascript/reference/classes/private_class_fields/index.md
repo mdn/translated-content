@@ -1,12 +1,6 @@
 ---
 title: プライベートクラス機能
 slug: Web/JavaScript/Reference/Classes/Private_class_fields
-tags:
-  - Classes
-  - Private
-  - JavaScript
-  - Language feature
-translation_of: Web/JavaScript/Reference/Classes/Private_class_fields
 ---
 {{JsSidebar("Classes")}}
 

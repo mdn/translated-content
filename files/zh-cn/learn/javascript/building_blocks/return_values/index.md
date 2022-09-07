@@ -163,21 +163,21 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 因此，我们让它 - 功能是有趣的，非常有用的，虽然有很多要谈论他们的语法和功能，相当容易理解的正确的文章学习。
 
-如果您有什么不明白的地方，可以再通读一遍，或者[联系我们](/en-US/Learn#Contact_us)寻求帮助。
+如果您有什么不明白的地方，可以再通读一遍，或者[联系我们](/zh-CN/Learn#Contact_us)寻求帮助。
 
 ## 参见
 
-- [Functions in-depth](/en-US/docs/Web/JavaScript/Reference/Functions) — 详细介绍更多高级功能相关信息的指南。
+- [Functions in-depth](/zh-CN/docs/Web/JavaScript/Reference/Functions) — 详细介绍更多高级功能相关信息的指南。
 - [Callback functions in JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — 一个常见的 JavaScript 模式是把一个函数传递给另一个函数作为参数，然后在第一个函数中调用它。这有点超出了这门课的范围，但值得学习很久。
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 ## 在本单元中
 
-- [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/en-US/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/en-US/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery)
+- [Making decisions in your code — conditionals](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Looping code](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)
+- [Functions — reusable blocks of code](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions)
+- [Build your own function](/zh-CN/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
+- [Function return values](/zh-CN/docs/Learn/JavaScript/Building_blocks/Return_values)
+- [Introduction to events](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
+- [Image gallery](/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery)

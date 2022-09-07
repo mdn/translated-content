@@ -1,13 +1,6 @@
 ---
 title: CSS 文字セット
 slug: Web/CSS/CSS_Charsets
-tags:
-  - CSS
-  - CSS 文字セット
-  - ガイド
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Charsets
 ---
 {{CSSRef}}
 

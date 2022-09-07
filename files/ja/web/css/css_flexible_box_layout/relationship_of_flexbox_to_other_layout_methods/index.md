@@ -1,18 +1,6 @@
 ---
 title: フレックスボックスと他のレイアウト方法の関係
-slug: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
-tags:
-  - CSS
-  - ガイド
-  - 書字方向
-  - ボックス配置
-  - contents
-  - display
-  - フレックスボックス
-  - grid
-translation_of: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
+slug: Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
 ---
 {{CSSRef}}
 

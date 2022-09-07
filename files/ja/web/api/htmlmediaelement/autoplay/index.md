@@ -1,20 +1,6 @@
 ---
 title: HTMLMediaElement.autoplay
 slug: Web/API/HTMLMediaElement/autoplay
-page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - NeedsExample
-  - Property
-  - Video
-  - Web
-  - autoplay
-browser-compat: api.HTMLMediaElement.autoplay
-translation_of: Web/API/HTMLMediaElement/autoplay
 ---
 {{APIRef("HTML DOM")}}
 

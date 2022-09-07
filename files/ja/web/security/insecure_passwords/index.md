@@ -1,14 +1,6 @@
 ---
 title: 安全でないパスワード
 slug: Web/Security/Insecure_passwords
-tags:
-  - Insecure
-  - Intermediate
-  - Security
-  - Web
-  - password
-  - passwords
-translation_of: Web/Security/Insecure_passwords
 ---
 HTTP を通じてログインフォームを提供することは、ユーザーのパスワードを暴くための広範にわたる攻撃に対して特に危険です。ネットワークの盗聴者は、ネットワークを覗き見たり、転送によって提供されたページを変更したりしてユーザーのパスワードを盗むことができます。
 

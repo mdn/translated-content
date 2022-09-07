@@ -1,15 +1,6 @@
 ---
 title: History.replaceState()
 slug: Web/API/History/replaceState
-tags:
-  - API
-  - HTML DOM
-  - History
-  - 履歴 API
-  - メソッド
-  - リファレンス
-browser-compat: api.History.replaceState
-translation_of: Web/API/History/replaceState
 ---
 {{APIRef("History API")}}
 

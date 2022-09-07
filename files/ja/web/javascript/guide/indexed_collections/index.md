@@ -328,7 +328,7 @@ myArray.sort()
 
 `sort()` は要素を比較する方法を指定するための、コールバック関数を引数として取ることがあります。
 
-コールバック関数を引数として取る `sort` メソッド (および以下のメソッド) は、らかの形で配列全体を反復処理することから、**反復メソッド** (iterative method") と呼ばれています。それぞれが任意で `thisObject` と呼ばれる第二引数を受け取ります。`thisObject` が与えられた場合、これがコールバック関数の本体内で `this` キーワードの値になります。与えられなかった場合は、関数が明示的なオブジェクトコンテキストの外で呼び出された場合と同様に、`this` はアロー関数がコールバックとして使用された場合にはグローバルオブジェクト ([`window`](/ja/docs/Web/API/Window "Window インターフェースは、 DOM 文書を含むウィンドウを表します。 document プロパティは、そのウィンドウに読み込まれた DOM 文書を指します。")) を参照し、通常の関数の場合には `undefined` になります。
+コールバック関数を引数として取る `sort` メソッド (および以下のメソッド) は、らかの形で配列全体を反復処理することから、**反復メソッド** (iterative method") と呼ばれています。それぞれが任意で `thisObject` と呼ばれる第二引数を受け取ります。`thisObject` が与えられた場合、これがコールバック関数の本体内で `this` キーワードの値になります。与えられなかった場合は、関数が明示的なオブジェクトコンテキストの外で呼び出された場合と同様に、`this` はアロー関数がコールバックとして使用された場合にはグローバルオブジェクト ([`window`](/ja/docs/Web/API/Window)) を参照し、通常の関数の場合には `undefined` になります。
 
 コールバック関数は、配列の要素 2 つを引数として呼び出されます。
 
@@ -481,7 +481,7 @@ console.log(arr.property);  // "value" がログに出力される
 
 ### 配列風オブジェクトを利用する
 
-[`document.getElementsByTagName()`](/ja/docs/Web/API/Document/getElementsByTagName "与えられたタグ名を持つ要素の HTMLCollection を返します。") によって返される [`NodeList`](/ja/docs/Web/API/NodeList "NodeList オブジェクトはノードのコレクションで、通常、 Node.childNodes などのプロパティや document.querySelectorAll() などのメソッドによって返されます。") や、関数本体内で利用できる {{jsxref("Functions/arguments","arguments")}} オブジェクトのように、表面上は配列のようにふるまう JavaScript オブジェクトがありますが、これらはメソッドすべてを共有してはいません。例えば、 `arguments` オブジェクトには {{jsxref("Global_Objects/Function/length","length")}} 属性がありますが、{{jsxref("Array.forEach", "forEach()")}} メソッドは実装されていません。
+[`document.getElementsByTagName()`](/ja/docs/Web/API/Document/getElementsByTagName) によって返される [`NodeList`](/ja/docs/Web/API/NodeList) や、関数本体内で利用できる {{jsxref("Functions/arguments","arguments")}} オブジェクトのように、表面上は配列のようにふるまう JavaScript オブジェクトがありますが、これらはメソッドすべてを共有してはいません。例えば、 `arguments` オブジェクトには {{jsxref("Global_Objects/Function/length","length")}} 属性がありますが、{{jsxref("Array.forEach", "forEach()")}} メソッドは実装されていません。
 
 配列風オブジェクトに対して配列メソッドを直接呼び出すことはできません。
 

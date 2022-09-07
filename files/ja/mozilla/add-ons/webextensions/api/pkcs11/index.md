@@ -1,7 +1,6 @@
 ---
 title: pkcs11
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11
-translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11
 ---
 {{AddonSidebar}}
 

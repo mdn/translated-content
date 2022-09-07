@@ -1,19 +1,6 @@
 ---
 title: URL API
 slug: Web/API/URL_API
-tags:
-  - API
-  - Address
-  - Domain
-  - Forms
-  - Host
-  - IP
-  - Overview
-  - URL
-  - URL API
-  - Web
-  - hostname
-translation_of: Web/API/URL_API
 ---
 {{DefaultAPISidebar("URL API")}}
 

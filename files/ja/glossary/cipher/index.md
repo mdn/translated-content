@@ -15,23 +15,23 @@ slug: Glossary/Cipher
 - {{Interwiki("wikipedia", "共通鍵暗号")}}は、メッセージの暗号化と復号に同じ鍵を使用します。メッセージを秘密のままにする場合は、鍵を安全に送信する必要があります。
 - {{Interwiki("wikipedia", "公開鍵暗号")}}は、暗号化と復号に異なる鍵を使用します。
 
-1.  一般知識
+1. 一般知識
 
-    1.  Wikipedia 上の {{Interwiki("wikipedia", "en:Cipher")}} (英語)
-    2.  Wikipedia 上の {{Interwiki("wikipedia", "暗号")}}
-    3.  [暗号化と復号](/ja/docs/Archive/Security/Encryption_and_Decryption)
+    1. Wikipedia 上の {{Interwiki("wikipedia", "en:Cipher")}} (英語)
+    2. Wikipedia 上の {{Interwiki("wikipedia", "暗号")}}
+    3. [暗号化と復号](/ja/docs/Archive/Security/Encryption_and_Decryption)
 
-2.  [MDN Web Docs 用語集](/ja/docs/Glossary)
+2. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1.  {{Glossary("Block cipher mode of operation", "暗号利用モード")}}
-    2.  {{Glossary("Cipher", "サイファー")}}
-    3.  {{Glossary("Ciphertext", "暗号文")}}
-    4.  {{Glossary("Cipher suite", "暗号スイート")}}
-    5.  {{Glossary("Cryptanalysis", "暗号解読")}}
-    6.  {{Glossary("Cryptography", "暗号学")}}
-    7.  {{Glossary("Decryption", "復号")}}
-    8.  {{Glossary("Encryption", "暗号化")}}
-    9.  {{Glossary("Key", "暗号鍵")}}
+    1. {{Glossary("Block cipher mode of operation", "暗号利用モード")}}
+    2. {{Glossary("Cipher", "サイファー")}}
+    3. {{Glossary("Ciphertext", "暗号文")}}
+    4. {{Glossary("Cipher suite", "暗号スイート")}}
+    5. {{Glossary("Cryptanalysis", "暗号解読")}}
+    6. {{Glossary("Cryptography", "暗号学")}}
+    7. {{Glossary("Decryption", "復号")}}
+    8. {{Glossary("Encryption", "暗号化")}}
+    9. {{Glossary("Key", "暗号鍵")}}
     10. {{Glossary("Plaintext", "平文")}}
     11. {{Glossary("Public-key cryptography", "公開鍵暗号")}}
     12. {{Glossary("Symmetric-key cryptography", "共通鍵暗号")}}

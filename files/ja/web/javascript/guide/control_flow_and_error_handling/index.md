@@ -427,8 +427,8 @@ try {
 
 内側の `try...catch` 文に `catch` ブロックが*ない*場合は次のようになります。
 
-1.  `finally` ブロックを含む必要があります。そして、
-2.  囲んでいる `try...catch` 文の `catch` ブロックがエラーの照合先としてチェックされます。
+1. `finally` ブロックを含む必要があります。そして、
+2. 囲んでいる `try...catch` 文の `catch` ブロックがエラーの照合先としてチェックされます。
 
 詳しくは、[`try...catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) の中の [nested try-blocks](/ja/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks) を参照してください。
 

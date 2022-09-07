@@ -112,15 +112,15 @@ function loadShader(gl, type, source) {
 
 loadShader 函数将 WebGL 上下文，着色器类型和`源码`作为参数输入，然后按如下步骤创建和编译着色器：
 
-1\. 调用{{domxref("WebGLRenderingContext.createShader", "gl.createShader()")}}.创建一个新的着色器。
+1. 调用{{domxref("WebGLRenderingContext.createShader", "gl.createShader()")}}.创建一个新的着色器。
 
-2\. 调用{{domxref("WebGLRenderingContext.shaderSource", "gl.shaderSource()")}}.将源代码发送到着色器。
+2. 调用{{domxref("WebGLRenderingContext.shaderSource", "gl.shaderSource()")}}.将源代码发送到着色器。
 
-3\. 一旦着色器获取到源代码，就使用{{domxref("WebGLRenderingContext.compileShader", "gl.compileShader()")}}.进行编译。
+3. 一旦着色器获取到源代码，就使用{{domxref("WebGLRenderingContext.compileShader", "gl.compileShader()")}}.进行编译。
 
-4\. 为了检查是否成功编译了着色器，将检查着色器参数 gl.COMPILE_STATUS 状态。通过调用{{domxref("WebGLRenderingContext.getShaderParameter", "gl.getShaderParameter()")}}获得它的值，并指定着色器和我们想要检查的参数的名字（gl.COMPILE_STATUS）。如果返回错误，则着色器无法编译，因此通过{{domxref("WebGLRenderingContext.getShaderInfoLog", "gl.getShaderInfoLog()")}}从编译器中获取日志信息并 alert，然后删除着色器返回 null，表明加载着色器失败。
+4. 为了检查是否成功编译了着色器，将检查着色器参数 gl.COMPILE_STATUS 状态。通过调用{{domxref("WebGLRenderingContext.getShaderParameter", "gl.getShaderParameter()")}}获得它的值，并指定着色器和我们想要检查的参数的名字（gl.COMPILE_STATUS）。如果返回错误，则着色器无法编译，因此通过{{domxref("WebGLRenderingContext.getShaderInfoLog", "gl.getShaderInfoLog()")}}从编译器中获取日志信息并 alert，然后删除着色器返回 null，表明加载着色器失败。
 
-5\. 如果着色器被加载并成功编译，则返回编译的着色器。
+5. 如果着色器被加载并成功编译，则返回编译的着色器。
 
 我们可以像这样调用这段代码
 

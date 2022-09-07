@@ -13,7 +13,7 @@ var Book = require('../models/book');
 var async = require('async');
 ```
 
-找到导出的` genre_detail``() `控制器方法，并将其替换为以下代码。
+找到导出的 `genre_detail()` 控制器方法，并将其替换为以下代码。
 
 ```js
 // Display detail page for a specific Genre.

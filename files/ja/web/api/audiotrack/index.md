@@ -1,18 +1,6 @@
 ---
 title: AudioTrack
 slug: Web/API/AudioTrack
-page-type: web-api-interface
-tags:
-  - Audio
-  - AudioTrack
-  - HTML
-  - HTML DOM
-  - Interface
-  - Media
-  - Reference
-  - track
-browser-compat: api.AudioTrack
-translation_of: Web/API/AudioTrack
 ---
 {{APIRef("HTML DOM")}}
 

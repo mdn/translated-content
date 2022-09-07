@@ -51,7 +51,7 @@ slug: Learn/Front-end_web_developer
 
 中心となるモジュール
 
-- [基本的なソフトウェアのインストール](/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software)[ ](/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software)— 基本的なツールのステップアップ (15 分で読めます)
+- [基本的なソフトウェアのインストール](/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software) — 基本的なツールのステップアップ (15 分で読めます)
 - [標準的なウェブとウェブのバックグラウンド](/ja/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards) (45 分で読めます)
 - [学習とヘルプ（English）](/ja/docs/Learn/Learning_and_getting_help) (45 分で読めます)
 

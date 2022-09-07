@@ -1,7 +1,6 @@
 ---
 title: VREyeParameters.fieldOfView
 slug: Web/API/VREyeParameters/fieldOfView
-translation_of: Web/API/VREyeParameters/fieldOfView
 ---
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 

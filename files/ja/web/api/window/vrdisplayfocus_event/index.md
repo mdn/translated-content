@@ -1,13 +1,6 @@
 ---
 title: 'Window: vrdisplayfocus event'
 slug: Web/API/Window/vrdisplayfocus_event
-tags:
-  - Reference
-  - WebVR
-  - events
-  - onvrdisplayfocus
-  - vrdisplayfocus
-translation_of: Web/API/Window/vrdisplayfocus_event
 ---
 {{APIRef("Window")}}
 

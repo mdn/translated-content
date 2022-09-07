@@ -1,18 +1,6 @@
 ---
 title: 위치잡기
 slug: Learn/CSS/CSS_layout/Positioning
-tags:
-  - 고정
-  - 글
-  - 상대
-  - 씨에스에스
-  - 안내서
-  - 위치잡기
-  - 절대
-  - 조판
-  - 초보자
-  - 코딩스크립팅
-translation_of: Learn/CSS/CSS_layout/Positioning
 original_slug: Learn/CSS/CSS_layout/위치잡기
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}

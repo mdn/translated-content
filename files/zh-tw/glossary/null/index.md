@@ -14,5 +14,5 @@ slug: Glossary/Null
 
 ### 技術參考
 
-- [JavaScript 的數據類型和結構](/en-US/docs/Web/JavaScript/Data_structures)
+- [JavaScript 的數據類型和結構](/zh-TW/docs/Web/JavaScript/Data_structures)
 - JavaScript 全域物件: {{jsxref("null")}}

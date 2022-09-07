@@ -1,23 +1,6 @@
 ---
 title: 理解可能
 slug: Web/Accessibility/Understanding_WCAG/Understandable
-tags:
-  - Accessibility
-  - HELP
-  - Language
-  - Navigation
-  - Principle 3
-  - Text
-  - Understandable
-  - WCAG
-  - Web Content Accessibility Guidelines
-  - abbreviations
-  - consistency
-  - error messages
-  - form validation
-  - labels
-  - slang
-translation_of: Web/Accessibility/Understanding_WCAG/Understandable
 ---
 この記事では、ウェブコンテンツ・アクセシビリティガイドライン（WCAG）2.0 および 2.1 の**理解可能**原則に概説されている達成基準に準拠するようにウェブコンテンツを作成する方法について実用的なアドバイスを提供します。 理解可能とは、情報とユーザーインターフェースの操作が理解可能でなければならないと述べています。
 
@@ -200,7 +183,7 @@ translation_of: Web/Accessibility/Understanding_WCAG/Understandable
 
 - [WCAG](/ja/docs/Web/Accessibility/Understanding_WCAG)
 
-  1.  [知覚可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
-  2.  [操作可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable)
-  3.  理解可能
-  4.  [堅牢](/ja/docs/Web/Accessibility/Understanding_WCAG/Robust)
+  1. [知覚可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
+  2. [操作可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable)
+  3. 理解可能
+  4. [堅牢](/ja/docs/Web/Accessibility/Understanding_WCAG/Robust)

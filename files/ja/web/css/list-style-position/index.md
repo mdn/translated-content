@@ -1,14 +1,6 @@
 ---
 title: list-style-position
 slug: Web/CSS/list-style-position
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS リスト
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.list-style-position
-translation_of: Web/CSS/list-style-position
 ---
 {{CSSRef}}
 

@@ -1,15 +1,6 @@
 ---
 title: break-after
 slug: Web/CSS/break-after
-tags:
-  - CSS
-  - CSS 断片化
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.break-after
-translation_of: Web/CSS/break-after
 ---
 {{CSSRef}}
 

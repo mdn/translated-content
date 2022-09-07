@@ -1,14 +1,6 @@
 ---
 title: CSS の z-index を理解する
 slug: Web/CSS/CSS_Positioning/Understanding_z_index
-tags:
-  - 上級者
-  - CSS
-  - ガイド
-  - リファレンス
-  - Understanding_CSS_z-index
-  - z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index
 ---
 {{CSSRef}}
 

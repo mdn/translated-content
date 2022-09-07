@@ -123,7 +123,7 @@ bold && <length>
 - `blue yellow`因为一个组成部分最多出现一次。
 - `bold`因为它不允许出现。
 
-> **备注：** “与”组合符的优先级高于“或”组合符，比如`bold || thin && <length>`等价于`bold || [ thin && <length> ]`。它们的合法取值是：`bold`, `thin` `<length>`, `bold thin` `<length>`, 或者`thin <length> bold` ，但不是：` <length>`` bold thin `因为 bold 若出现，则必须出现在`thin && <length>`整体的前面或后面。
+> **备注：** “与”组合符的优先级高于“或”组合符，比如 `bold || thin && <length>` 等价于 `bold || [ thin && <length> ]`。它们的合法取值是：`bold`, `thin <length>`, `bold thin <length>`, 或者 `thin <length> bold` ，但不是：`<length> bold thin` 因为 bold 若出现，则必须出现在 `thin && <length>` 整体的前面或后面。
 
 ### “互斥”组合符：|
 

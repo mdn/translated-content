@@ -45,7 +45,7 @@ typeof Object(1n) === 'object'; // true
 
 ### 运算
 
-以下操作符可以和 `BigInt` 一起使用： `+`、\``*`\`、\``-`\`、\``**`\`、\``%`\` 。除 `>>>` （无符号右移）之外的 [位操作](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) 也可以支持。因为 `BigInt` 都是有符号的， `>>>` （无符号右移）不能用于 `BigInt`。[为了兼容 asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs)，`BigInt` 不支持单目 (`+`) 运算符。
+以下操作符可以和 `BigInt` 一起使用： `+`、`*`、`-`、`**`、`%`。除 `>>>` （无符号右移）之外的 [位操作](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) 也可以支持。因为 `BigInt` 都是有符号的， `>>>` （无符号右移）不能用于 `BigInt`。[为了兼容 asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs)，`BigInt` 不支持单目 (`+`) 运算符。
 
 ```js
 const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER);
@@ -138,7 +138,7 @@ o === o // true
 
 ### 条件
 
-`BigInt` 在需要转换成 {{jsxref("Global_Objects/Boolean", "Boolean")}} 的时表现跟 {{jsxref("Global_Objects/Number", "Number")}} 类似：如通过 {{jsxref("Global_Objects/Boolean", "Boolean")}} 函数转换；用于 {{jsxref("Operators/Logical_Operators", "Logical Operators")}} `||`, \``&&`\`, 和 `!` 的操作数；或者用于在像 {{jsxref("Statements/if...else", "if statement")}} 这样的条件语句中。
+`BigInt` 在需要转换成 {{jsxref("Global_Objects/Boolean", "Boolean")}} 的时表现跟 {{jsxref("Global_Objects/Number", "Number")}} 类似：如通过 {{jsxref("Global_Objects/Boolean", "Boolean")}} 函数转换；用于 {{jsxref("Operators/Logical_Operators", "Logical Operators")}} `||`, `&&`, 和 `!` 的操作数；或者用于在像 {{jsxref("Statements/if...else", "if statement")}} 这样的条件语句中。
 
 ```js
 if (0n) {

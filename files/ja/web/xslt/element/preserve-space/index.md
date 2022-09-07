@@ -1,12 +1,6 @@
 ---
 title: <xsl:preserve-space>
 slug: Web/XSLT/Element/preserve-space
-tags:
-  - XSLT
-  - preserve-space
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/preserve-space
 ---
 {{ XsltRef() }}
 

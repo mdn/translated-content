@@ -8,12 +8,12 @@ slug: Glossary/character_set
 
 文字コードが誤って使用すると (例えば、Big5 でエンコードされた記事に Unicode を使用すると)、壊れた文字ばかりが表示されることがあり、これは{{Interwiki("wikipedia", "文字化け")}}と呼ばれます。
 
-1.  Wikipedia の記事
+1. Wikipedia の記事
 
-    1.  {{Interwiki("wikipedia", "文字コード")}}
-    2.  {{Interwiki("wikipedia", "文字化け")}}
+    1. {{Interwiki("wikipedia", "文字コード")}}
+    2. {{Interwiki("wikipedia", "文字化け")}}
 
-2.  [用語集](/ja/docs/Glossary)
+2. [用語集](/ja/docs/Glossary)
 
-    1.  {{Glossary("Character", "文字")}}
-    2.  {{Glossary("Unicode")}}
+    1. {{Glossary("Character", "文字")}}
+    2. {{Glossary("Unicode")}}

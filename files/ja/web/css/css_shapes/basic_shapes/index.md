@@ -1,12 +1,6 @@
 ---
 title: 基本シェイプ
 slug: Web/CSS/CSS_Shapes/Basic_Shapes
-tags:
-  - CSS
-  - CSS シェイプ
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Shapes/Basic_Shapes
 ---
 {{CSSRef}}
 

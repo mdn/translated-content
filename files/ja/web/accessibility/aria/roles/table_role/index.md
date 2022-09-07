@@ -1,11 +1,6 @@
 ---
 title: 'ARIA: table ロール'
 slug: Web/Accessibility/ARIA/Roles/Table_Role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Table_Role
 ---
 \\{{ariaref}}
 

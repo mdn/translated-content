@@ -85,8 +85,8 @@ original_slug: Learn/CSS/为文本添加样式/Typesetting_a_homepage
 
 ## 在本单元中
 
-- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Styling lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Styling links](/en-US/docs/Learn/CSS/Styling_text/Styling_links)
-- [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Typesetting a community school homepage](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)
+- [Fundamental text and font styling](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)
+- [Styling lists](/zh-CN/docs/Learn/CSS/Styling_text/Styling_lists)
+- [Styling links](/zh-CN/docs/Learn/CSS/Styling_text/Styling_links)
+- [Web fonts](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)
+- [Typesetting a community school homepage](/zh-CN/Learn/CSS/Styling_text/Typesetting_a_homepage)

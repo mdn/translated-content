@@ -1,16 +1,6 @@
 ---
 title: ':-moz-locale-dir(ltr)'
-slug: 'Web/CSS/:-moz-locale-dir(ltr)'
-tags:
-  - CSS
-  - CSS:Mozilla 拡張
-  - ローカライズ
-  - NeedsCompatTable
-  - 標準外
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-translation_of: Web/CSS/:-moz-locale-dir(ltr)
+slug: Web/CSS/:-moz-locale-dir(ltr)
 ---
 {{CSSRef}}{{Non-standard_header}}
 

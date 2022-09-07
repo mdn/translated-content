@@ -376,9 +376,9 @@ foo has been called
 
 在本文写作的时候，只有 Chrome 展示了如上的特性 — Firefox 没有未加载/恢复循环的行为，所以 timers 仍然可以工作。但是，仍然建议不要在 WebExtension 中使用 timers:
 
-1.兼容 Chorme。
+1. 兼容 Chorme。
 
-2.未来行为的改变会引起问题。
+2. 未来行为的改变会引起问题。
 
 ### 最大延时值
 

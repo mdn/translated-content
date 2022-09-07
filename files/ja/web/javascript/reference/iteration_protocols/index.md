@@ -1,15 +1,6 @@
 ---
 title: 反復処理プロトコル
 slug: Web/JavaScript/Reference/Iteration_protocols
-tags:
-  - ECMAScript 2015
-  - ガイド
-  - 中級者
-  - 反復可能
-  - 反復子
-  - JavaScript
-  - プロトコル
-translation_of: Web/JavaScript/Reference/Iteration_protocols
 ---
 {{jsSidebar("More")}}
 

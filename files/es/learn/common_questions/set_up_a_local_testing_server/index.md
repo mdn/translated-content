@@ -57,7 +57,7 @@ Para evitar el problema de las solicitudes asíncronas, necesitamos probar estos
 
 Para hacer esto:
 
-1.  Instalar Python. Si usas Linux o Mac OS X, ya debe estar disponible en tu sistema. Si eres usuario de Windows, puedes conseguir un instalador desde la página principal de Python y seguir las instrucciones para instalarlo:
+1. Instalar Python. Si usas Linux o Mac OS X, ya debe estar disponible en tu sistema. Si eres usuario de Windows, puedes conseguir un instalador desde la página principal de Python y seguir las instrucciones para instalarlo:
 
     - Vé a [python.org](https://www.python.org/)
     - Debajo de la sección de Descarga, haz clic en el link para Python "3.xxx".
@@ -66,7 +66,7 @@ Para hacer esto:
     - En la primera página de instalación, asegúrate de marcar el checkbox "Añadir Python 3.xxx a la ruta"
     - Clic en _Instalar_, luego clic en _Cerrar_ cuando la instalación ya haya finalizado.
 
-2.  Abre la terminal (windows)/terminal (OS X/Linux). Para chequear que Python está instalado, ingrese el siguiente comando.
+2. Abre la terminal (windows)/terminal (OS X/Linux). Para chequear que Python está instalado, ingrese el siguiente comando.
 
     ```bash
     python -V
@@ -74,7 +74,7 @@ Para hacer esto:
 
     > **Nota:** La v del ejemplo en mayuscula (V)
 
-3.  Esto debe retornar un número de versión. Si esto esta bien, navega al directorio que contiene tu ejemplo, usando el comando `cd`.
+3. Esto debe retornar un número de versión. Si esto esta bien, navega al directorio que contiene tu ejemplo, usando el comando `cd`.
 
     ```bash
     # Incluye el nombre del directorio de entrar en él,
@@ -84,7 +84,7 @@ Para hacer esto:
     si es necesario,por ejemplo cd ../
     ```
 
-4.  Ingresa el comando para iniciar el servidor en ese directorio:
+4. Ingresa el comando para iniciar el servidor en ese directorio:
 
     ```bash
     # En Mac y Linux
@@ -93,7 +93,7 @@ Para hacer esto:
     python -m http.server
     ```
 
-5.  Por defecto, se ejecutará el contenido del directorio en un servidor web local, en el puerto 8000. puedes ir a este servidor yendo a la URL `localhost:8000` en tu navegador web. Aquí verá el contenido del directorio listado - haga clic en el archivo HTML que desea ejecutar.
+5. Por defecto, se ejecutará el contenido del directorio en un servidor web local, en el puerto 8000. puedes ir a este servidor yendo a la URL `localhost:8000` en tu navegador web. Aquí verá el contenido del directorio listado - haga clic en el archivo HTML que desea ejecutar.
 
 > **Nota:** si ya tienes corriendo algo en el puerto 8000, puedes escoger otro puerto corriendo el siguiente comando de servidor por un número de puerto alternativo, por ejemplo `python -m SimpleHTTPServer 7800`. Puedes acceder a tu contenido en el`localhost:7800`.
 

@@ -1,15 +1,6 @@
 ---
 title: clip
 slug: Web/CSS/clip
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - 非推奨
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.clip
-translation_of: Web/CSS/clip
 ---
 {{CSSRef}}
 

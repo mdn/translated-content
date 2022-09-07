@@ -20,7 +20,7 @@ For example, even for a document delivered over TLS within an {{HTMLElement("ifr
 
 However, it’s important to note that if a non-secure context causes a new window to be created (with or without specifying [noopener](/en-US/docs/Web/API/Window/open#noopener)), then the fact that the opener was insecure has no effect on whether the new window is considered secure. That’s because the determination of whether or not a particular document is in a secure context is based only on considering it within the top-level browsing context with which it is associated — and not whether a non-secure context happened to be used to create it.
 
-Locally-delivered resources such as those with _http\://127.0.0.1_ URLs, _http\://localhost_ URLs (under certain conditions), and _file://_ URLs are also considered to have been delivered securely.
+Locally-delivered resources such as those with `http://127.0.0.1` URLs, `http://localhost` URLs (under certain conditions), and `file://` URLs are also considered to have been delivered securely.
 
 Resources that are not local, to be considered secure, must meet the following criteria:
 

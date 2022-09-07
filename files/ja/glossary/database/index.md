@@ -10,7 +10,7 @@ slug: Glossary/Database
 
 ブラウザー上で動く {{glossary("IndexedDB")}} と呼ばれる独自データベースシステムもあります。
 
-1.  {{Interwiki("wikipedia", "データベース")}} (Wikipedia)
+1. {{Interwiki("wikipedia", "データベース")}} (Wikipedia)
 
-    1.  {{Glossary("IndexedDB")}}
-    2.  {{Glossary("SQL")}}
+    1. {{Glossary("IndexedDB")}}
+    2. {{Glossary("SQL")}}

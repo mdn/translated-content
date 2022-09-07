@@ -13,7 +13,7 @@ In the JavaScript code executed in response to the event, `this` is bound to the
 
 While these attributes can at times be attractively easy to use, you should avoid using them. Instead, use the {{domxref("EventTarget.addEventListener()")}} function to add a listener for the event.
 
-Event attributes can be blocked by using [Content Security Policy](/en-US/docs/Security/CSP/Introducing_Content_Security_Policy) which if used, blocks all inline scripts unless the _'unsafe-inline'_ keyword is used.
+Event attributes can be blocked by using [Content Security Policy](/zh-TW/docs/Security/CSP/Introducing_Content_Security_Policy) which if used, blocks all inline scripts unless the _'unsafe-inline'_ keyword is used.
 
 ## Example using event attributes
 

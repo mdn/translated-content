@@ -1,21 +1,6 @@
 ---
 title: 操作可能
 slug: Web/Accessibility/Understanding_WCAG/Operable
-tags:
-  - Accessibility
-  - Focus
-  - Navigation
-  - Principle 2
-  - Timing
-  - WCAG
-  - Web Content Accessibility Guidelines
-  - headings
-  - keyboard
-  - keyboard trap
-  - labels
-  - operable
-  - seizures
-translation_of: Web/Accessibility/Understanding_WCAG/Operable
 ---
 この記事では、ウェブコンテンツ・アクセシビリティガイドライン（WCAG）2.0 および 2.1 の**操作可能**原則に概説されている達成基準に準拠するようにウェブコンテンツを作成する方法についての実用的なアドバイスを提供します。 操作可能とは、ユーザーインターフェイス・コンポーネントとナビゲーションが操作可能でなければならないということです。
 
@@ -99,7 +84,7 @@ translation_of: Web/Accessibility/Understanding_WCAG/Operable
 
 - [WCAG](/ja/docs/Web/Accessibility/Understanding_WCAG)
 
-  1.  [知覚可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
-  2.  操作可能
-  3.  [理解可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable)
-  4.  [堅牢](/ja/docs/Web/Accessibility/Understanding_WCAG/Robust)
+  1. [知覚可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
+  2. 操作可能
+  3. [理解可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable)
+  4. [堅牢](/ja/docs/Web/Accessibility/Understanding_WCAG/Robust)

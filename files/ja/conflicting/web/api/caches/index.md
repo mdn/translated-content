@@ -1,14 +1,6 @@
 ---
 title: ServiceWorkerGlobalScope.caches
 slug: conflicting/Web/API/caches
-tags:
-  - API
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - ServiceWorkerGlobalScope
-translation_of: Web/API/ServiceWorkerGlobalScope/caches
 original_slug: Web/API/ServiceWorkerGlobalScope/caches
 ---
 {{APIRef("Service Workers API")}}

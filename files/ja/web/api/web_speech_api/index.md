@@ -1,16 +1,6 @@
 ---
 title: Web Speech API
 slug: Web/API/Web_Speech_API
-tags:
-  - API
-  - Experimental
-  - Landing
-  - Reference
-  - Web Speech API
-  - recognition
-  - speech
-  - synthesis
-translation_of: Web/API/Web_Speech_API
 ---
 {{DefaultAPISidebar("Web Speech API")}}{{seecompattable}}
 

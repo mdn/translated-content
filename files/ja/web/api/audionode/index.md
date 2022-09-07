@@ -1,7 +1,6 @@
 ---
 title: AudioNode
 slug: Web/API/AudioNode
-translation_of: Web/API/AudioNode
 ---
 {{APIRef()}}
 

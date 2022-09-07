@@ -1,12 +1,6 @@
 ---
 title: GlobalEventHandlers.ondragenter
 slug: conflicting/Web/API/HTMLElement/dragenter_event
-tags:
-  - API
-  - HTML DOM
-  - Reference
-  - drag and drop
-translation_of: Web/API/GlobalEventHandlers/ondragenter
 original_slug: Web/API/GlobalEventHandlers/ondragenter
 ---
 {{ApiRef("HTML DOM")}}

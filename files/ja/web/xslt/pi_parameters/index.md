@@ -1,9 +1,6 @@
 ---
 title: PIパラメータ
 slug: Web/XSLT/PI_Parameters
-tags:
-  - XSLT
-translation_of: Web/XSLT/PI_Parameters
 ---
 ### 概要
 

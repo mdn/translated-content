@@ -1,16 +1,6 @@
 ---
 title: HTMLHtmlElement.version
 slug: Web/API/HTMLHtmlElement/version
-tags:
-  - API
-  - 非推奨
-  - HTML DOM
-  - NeedsContent
-  - NeedsLayout
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLHtmlElement.version
-translation_of: Web/API/HTMLHtmlElement/version
 ---
 {{ APIRef("HTML DOM") }} {{deprecated_header}}
 

@@ -9,8 +9,6 @@ translation_of: Web/HTML/Element/textarea
 
 <div>{{EmbedInteractiveExample("pages/tabbed/textarea.html", "tabbed-standard")}}</div>
 
-<p class="hidden">O código fonte deste exemplo interativo está armazenado em um repositório GitHub. Caso queira contribuir com o projeto de exemplos interativos, faça um clone do repósitório <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> e nos envie um  solicitação de recebimento.</p>
-
 <p>Os exemplos acima demonstram vários recursos do <code>&lt;textarea&gt;</code>. O primeiro exemplo mostra o uso mais simples, com apenas um <code>id</code> atributo para permitir que o<code>&lt;textarea&gt;</code> estar associado a um {{htmlelement("label")}} elemento para fins de acessibilidade e um <code>name</code> atributo para definir o nome do ponto de dados associado enviado ao servidor quando o formulário é enviado.</p>
 
 <p>O segundo exemplo mostra alguns recursos mais complexos:</p>
@@ -50,9 +48,8 @@ translation_of: Web/HTML/Element/textarea
  <p>Se o <code>autocomplete</code> atributo não está especificado em um <code>&lt;textarea&gt;</code> elemento, o navegador usa o elemento <code>autocomplete</code> valor do atributo <code>&lt;textarea&gt;</code> proprietário do formulário do elemento. O proprietário do formulário é o {{HTMLElement("form")}} elemento que este<code>&lt;textarea&gt;</code> elemento é um descendente ou o elemento de formulário cuja <code>id</code> é especificado pelo <code>form</code> atributo do elemento de entrada. Para mais informações, consulte o {{htmlattrxref("autocomplete", "form")}} atribuno no {{HTMLElement("form")}}.</p>
  </dd>
  <dt>{{ htmlattrdef("autofocus") }}</dt>
- <dd>Esse atributo booleano permite especificar que um controle de formulário tenha foco de entrada quando a página for carregada. Somente um elemento associado ao formulário em um documento pode ter esse atributo especificado.<br>
-  <br>
- {{ htmlattrdef("cols") }}</dd>
+ <dd>Esse atributo booleano permite especificar que um controle de formulário tenha foco de entrada quando a página for carregada. Somente um elemento associado ao formulário em um documento pode ter esse atributo especificado.</dd>
+ <dt>{{ htmlattrdef("cols") }}</dt>
  <dd>A largura visível do controle de texto, em larguras médias de caracteres. Se for especificado, deve ser um número inteiro positivo. Se não for especificado, o valor padrão é 20.</dd>
  <dt>{{ htmlattrdef("disabled") }}</dt>
  <dd>Esse atributo booleano indica que o usuário não pode interagir com o controle. Se esse atributo não for especificado, o controle herdará sua configuração do elemento que contém, por exemplo {{ HTMLElement("fieldset") }}; se não houver elemento contendo quando o <code>disabled</code> atributo estiver definido, o controle está ativado.</dd>

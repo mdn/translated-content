@@ -1,7 +1,6 @@
 ---
 title: <xsl:sort>
 slug: Web/XSLT/Element/sort
-translation_of: Web/XSLT/Element/sort
 ---
 {{ XsltRef() }}
 
@@ -11,11 +10,11 @@ translation_of: Web/XSLT/Element/sort
 
 ```
 <xsl:sort
-	select=EXPRESSION
-	order="ascending" | "descending"
-	case-order="upper-first" | "lower-first"
-	lang=XML:LANG-CODE
-	data-type="text" | "number" />
+  select=EXPRESSION
+  order="ascending" | "descending"
+  case-order="upper-first" | "lower-first"
+  lang=XML:LANG-CODE
+  data-type="text" | "number" />
 ```
 
 ### 必須属性

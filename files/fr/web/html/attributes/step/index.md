@@ -148,10 +148,7 @@ Fournissez des instructions pour aider les utilisateurs à comprendre comment re
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                           |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'input.html#the-step-attribute', 'l\'attribut step')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', 'input.html#the-step-attribute', 'l\'attribut step')}}     | {{Spec2('HTML5 W3C')}}     |
+{{Specifications}}
 
 ## Voir aussi
 

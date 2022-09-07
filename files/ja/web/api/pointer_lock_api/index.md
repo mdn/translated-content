@@ -12,7 +12,7 @@ Pointer Lock では、カーソルがブラウザーやスクリーンの境界�
 
 ## 基本概念
 
-Pointer Lock は [マウスキャプチャ](/ja/docs/Web/API/Element/setCapture "element.setCapture") と関係があります。マウスキャプチャはマウスのドラッグ中にターゲットの要素へ継続的にイベントを提供しますが、マウスのボタンを離すとイベントが停止します。Pointer Lock とマウスキャプチャの違いは以下のとおりです:
+Pointer Lock は [マウスキャプチャ](/ja/docs/Web/API/Element/setCapture) と関係があります。マウスキャプチャはマウスのドラッグ中にターゲットの要素へ継続的にイベントを提供しますが、マウスのボタンを離すとイベントが停止します。Pointer Lock とマウスキャプチャの違いは以下のとおりです:
 
 - Pointer Lock は永続的です。明示的に API が呼び出されるかユーザーが特定の解放ジェスチャを行うまで、マウスを解放しません。
 - Pointer Lock はブラウザーまたはスクリーンの境界に制限されません。

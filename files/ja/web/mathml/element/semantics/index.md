@@ -1,11 +1,6 @@
 ---
 title: <semantics>
 slug: Web/MathML/Element/semantics
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-translation_of: Web/MathML/Element/semantics
 ---
 {{MathMLRef}}
 

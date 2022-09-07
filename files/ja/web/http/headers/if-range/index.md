@@ -86,5 +86,5 @@ If-Range: Wed, 21 Oct 2015 07:28:00 GMT
 - {{HTTPHeader("If-Unmodified-Since")}}
 - {{HTTPHeader("If-Match")}}
 - {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("206")}}` Partial Content`
+- {{HTTPStatus("206")}} `Partial Content`
 - [HTTP Conditional Requests](/ja/docs/Web/HTTP/Conditional_requests)

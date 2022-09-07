@@ -1,16 +1,6 @@
 ---
 title: MouseEvent.screenX
 slug: Web/API/MouseEvent/screenX
-tags:
-  - API
-  - CSSOM View
-  - DOM イベント
-  - MouseEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.MouseEvent.screenX
-translation_of: Web/API/MouseEvent/screenX
 ---
 {{APIRef("DOM Events")}}
 

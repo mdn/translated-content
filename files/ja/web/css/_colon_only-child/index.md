@@ -1,15 +1,6 @@
 ---
 title: ':only-child'
 slug: Web/CSS/:only-child
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.only-child
-translation_of: Web/CSS/:only-child
 ---
 {{CSSRef}}
 

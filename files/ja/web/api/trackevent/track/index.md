@@ -1,19 +1,6 @@
 ---
 title: TrackEvent.track
 slug: Web/API/TrackEvent/track
-tags:
-  - API
-  - Audio
-  - Event
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - TrackEvent
-  - Video
-  - track
-translation_of: Web/API/TrackEvent/track
 ---
 {{APIRef("HTML DOM")}}
 

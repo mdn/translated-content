@@ -90,7 +90,7 @@ if (typeof document.addEventListener === "undefined" || typeof document[hidden] 
 
 - `visible` : 페이지 컨텐츠가 적어도 부분적으로 보일 수 있다. 실제로 이것은 페이지가 최소화되지 않은 window 의 맨 앞쪽 탭임을 의미한다.
 - `hidden` : 페이지 컨텐츠가 사용자에게 보이지 않는다. 실제로 이것은 document 가 뒤쪽 탭이거나 최소화된 window 의 부분이거나, OS Screen 의 lock 이 활성화되어 있음을 의미한다.
-- `prerender` : 페이지 컨텐츠가 프리렌더되고 있으며 유저에게 보이지 않는다 (`document.hidden `목적으로 숨겨진 것으로 간주). document 는 이 상태에서 시작될 수도 있지만, 다른 값으로부터 이 상태로 전환되지는 않을 것이다. 참고: 브라우저 지원은 optional 하다.
+- `prerender` : 페이지 컨텐츠가 프리렌더되고 있으며 유저에게 보이지 않는다 (`document.hidden` 목적으로 숨겨진 것으로 간주). document 는 이 상태에서 시작될 수도 있지만, 다른 값으로부터 이 상태로 전환되지는 않을 것이다. 참고: 브라우저 지원은 optional 하다.
 - `unloaded` : 페이지가 메모리로부터 unload 되고 있다. 참고: 브라우저 지원은 optional 하다.
 
 ```js

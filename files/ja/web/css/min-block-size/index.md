@@ -1,16 +1,6 @@
 ---
 title: min-block-size
 slug: Web/CSS/min-block-size
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - Experimental
-  - リファレンス
-  - min-block-size
-  - recipe:css-property
-browser-compat: css.properties.min-block-size
-translation_of: Web/CSS/min-block-size
 ---
 {{CSSRef}}
 

@@ -1,17 +1,6 @@
 ---
 title: column-gap (grid-column-gap)
 slug: Web/CSS/column-gap
-tags:
-  - CSS
-  - CSS フレックスボックス
-  - CSS グリッドレイアウト
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - リファレンス
-  - column-gap
-  - recipe:css-property
-browser-compat: css.properties.column-gap
-translation_of: Web/CSS/column-gap
 ---
 {{CSSRef}}
 

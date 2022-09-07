@@ -1,13 +1,6 @@
 ---
 title: Microsoft API extensions
 slug: Web/API/Microsoft_Extensions
-tags:
-  - API
-  - API:Microsoft Extensions
-  - Non-standard
-  - Overview
-  - Reference
-translation_of: Web/API/Microsoft_Extensions
 ---
 {{DefaultAPISidebar("Microsoft Extensions")}}
 

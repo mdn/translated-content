@@ -1,17 +1,6 @@
 ---
 title: SpeechRecognition.onaudiostart
 slug: conflicting/Web/API/SpeechRecognition/audiostart_event
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - onaudiostart
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognition/onaudiostart
 original_slug: Web/API/SpeechRecognition/onaudiostart
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}

@@ -1,12 +1,6 @@
 ---
 title: 'Window: beforeunload イベント'
 slug: Web/API/Window/beforeunload_event
-tags:
-  - Event
-  - Reference
-  - Window
-  - イベント
-translation_of: Web/API/Window/beforeunload_event
 ---
 {{APIRef}}
 

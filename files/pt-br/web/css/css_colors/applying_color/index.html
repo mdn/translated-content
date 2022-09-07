@@ -6,7 +6,7 @@ original_slug: Web/HTML/Applying_color
 ---
 <div>{{HTMLRef}}</div>
 
-<p>O uso de cores é uma forma fundamental da expressão humana. Crianças experimentam com cores antes mesmo de ter a destreza manual para desenhar. Talvez por isso, a cor é uma das primeiras coisas com a qual as pessoas querem experimentar quando estão aprendendo a desenvolver websites. Com<span class="seoSummary"> <a href="/en-US/docs/Web/CSS">CSS</a>, há muitas maneiras de acrescentar cor nos seus <a href="/en-US/docs/Web/HTML/Element">elementos HTML</a> para criar exatamente o visual que você quiser. Esse artigo é um preparativo introduzindo cada uma das formas que a cor CSS pode ser usada no HTML.</span></p>
+<p>O uso de cores é uma forma fundamental da expressão humana. Crianças experimentam com cores antes mesmo de ter a destreza manual para desenhar. Talvez por isso, a cor é uma das primeiras coisas com a qual as pessoas querem experimentar quando estão aprendendo a desenvolver websites. Com <a href="/en-US/docs/Web/CSS">CSS</a>, há muitas maneiras de acrescentar cor nos seus <a href="/en-US/docs/Web/HTML/Element">elementos HTML</a> para criar exatamente o visual que você quiser. Esse artigo é um preparativo introduzindo cada uma das formas que a cor CSS pode ser usada no HTML.</p>
 
 <p>Felizmente, adicionar cor no seu HTML é muito fácil, e você pode colorir praticamente qualquer coisa.</p>
 
@@ -138,11 +138,8 @@ original_slug: Web/HTML/Applying_color
 
 <p>Designers e artistas frequentemente preferem trabalhar usando o método de cor {{interwiki("wikipedia", "HSL and HSV", "HSL")}} (Hue/Saturation/Luminosity, tradução: "Matiz/Saturação/Luminosidade"). Na web, cores HSL são representadas usando notação funcional HSL. O uso da função CSS <code>hsl()</code> é muito similar ao da função <code>rgb().</code></p>
 
-<div style="padding-bottom: 20px;">
-<figure style="width: 500px;"><img alt="HSL color cylinder" src="https://mdn.mozillademos.org/files/15445/1200px-HSL_color_solid_cylinder_alpha_lowgamma.png" style="height: 375px; width: 500px;">
-<figcaption><em><strong>Figura 1. Um cilindro de cor HSL.</strong> Hue (matiz) define a cor em si, com base na sua posição ao longo de um círculo que representa as cores do espectro visível. Saturation (saturação) é uma porcentagem que representa sua posição no caminho entre ser um tom de cinza ou ter a maior quantidade possível da matiz dada. Conforme o valor de Luminance ou Lightness (luminosidade) aumenta, a cor transiciona do mais escura possível até o mais clara possível (do preto ao branco). Imagem cortesia do usuário <a href="http://commons.wikimedia.org/wiki/User:SharkD">SharkD</a> na <a href="https://www.wikipedia.org/">Wikipedia</a>, distribuída sob a licença <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>.</em></figcaption>
-</figure>
-</div>
+<img alt="HSL color cylinder" src="https://mdn.mozillademos.org/files/15445/1200px-HSL_color_solid_cylinder_alpha_lowgamma.png" style="height: 375px; width: 500px;">
+<em><strong>Um cilindro de cor HSL.</strong> Hue (matiz) define a cor em si, com base na sua posição ao longo de um círculo que representa as cores do espectro visível. Saturation (saturação) é uma porcentagem que representa sua posição no caminho entre ser um tom de cinza ou ter a maior quantidade possível da matiz dada. Conforme o valor de Luminance ou Lightness (luminosidade) aumenta, a cor transiciona do mais escura possível até o mais clara possível (do preto ao branco). Imagem cortesia do usuário <a href="http://commons.wikimedia.org/wiki/User:SharkD">SharkD</a> na <a href="https://www.wikipedia.org/">Wikipedia</a>, distribuída sob a licença <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>.</em>
 
 <p>O valor do componente hue/matriz (H) de uma cor HSL é um ângulo partindo do vermelho e passando em círculo pelo amarelo, verde, ciano, azul e magenta (terminando de volta no vermelho em 360°) que identifica qual é a cor base. O valor pode ser especificado em qualquer unidade de {{cssxref("&lt;angle&gt;")}} (ângulo) suportada por CSS, incluindo graus (<code>deg</code>, de "degrees"), radianos (<code>rad</code>, de "radians"), grados (<code>grad</code>, de "gradians") ou revoluções (<code>turn</code>, de "turns"). Mas isso não controla quão vívida ou apagada, ou quão clara ou escura a cor é. </p>
 
@@ -292,7 +289,7 @@ th {
   outline: 2px solid darkred;
 }</pre>
 
-<p><code><font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">A classe </span></font>.boxLeft</code>—que, apropriadamente, é usada para estilizar a caixa na esquerda—flutua a caixa para a esquerda, e então configura as cores:</p>
+<p><code>A classe .boxLeft</code>—que, apropriadamente, é usada para estilizar a caixa na esquerda—flutua a caixa para a esquerda, e então configura as cores:</p>
 
 <ul>
  <li>A cor de fundo da caixa é definida mudando o valor da propriedade CSS {{cssxref("background-color")}} para <code>rgb(245, 130, 130)</code>.</li>

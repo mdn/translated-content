@@ -1,15 +1,6 @@
 ---
 title: GlobalEventHandlers.onplaying
 slug: conflicting/Web/API/HTMLMediaElement/playing_event
-tags:
-  - API
-  - Event Handler
-  - GlobalEventHandlers
-  - Property
-  - Reference
-  - イベントハンドラー
-  - プロパティ
-translation_of: Web/API/GlobalEventHandlers/onplaying
 original_slug: Web/API/GlobalEventHandlers/onplaying
 ---
 {{ApiRef("HTML DOM")}}

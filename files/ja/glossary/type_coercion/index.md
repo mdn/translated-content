@@ -22,11 +22,11 @@ console.log(sum);
 sum = Number(value1) + value2;
 ```
 
-1.  [用語集](/ja/docs/Glossary)
+1. [用語集](/ja/docs/Glossary)
 
-    1.  {{Glossary("Type", "型")}}
-    2.  {{Glossary("Type conversion", "型変換")}}
+    1. {{Glossary("Type", "型")}}
+    2. {{Glossary("Type conversion", "型変換")}}
 
-2.  Wikipedia の記事
+2. Wikipedia の記事
 
-    1.  {{Interwiki("wikipedia", "型変換")}}
+    1. {{Interwiki("wikipedia", "型変換")}}

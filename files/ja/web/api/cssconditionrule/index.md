@@ -1,13 +1,6 @@
 ---
 title: CSSConditionRule
 slug: Web/API/CSSConditionRule
-tags:
-  - API
-  - CSSOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.CSSConditionRule
-translation_of: Web/API/CSSConditionRule
 ---
 {{ APIRef("CSSOM") }}
 

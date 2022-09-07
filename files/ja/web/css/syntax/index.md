@@ -1,12 +1,6 @@
 ---
 title: 構文
 slug: Web/CSS/Syntax
-tags:
-  - CSS
-  - Guide
-  - Reference
-  - Web
-translation_of: Web/CSS/Syntax
 ---
 {{CSSRef}}
 

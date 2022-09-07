@@ -1,7 +1,6 @@
 ---
 title: 'Django 튜토리얼 파트 10: Django 웹 어플리케이션 테스트하기'
 slug: Learn/Server-side/Django/Testing
-translation_of: Learn/Server-side/Django/Testing
 ---
 ## {{LearnSidebar}}
 

@@ -1,13 +1,6 @@
 ---
 title: GlobalEventHandlers.oninvalid
 slug: conflicting/Web/API/HTMLInputElement/invalid_event
-tags:
-  - API
-  - Event Handler
-  - GlobalEventHandlers
-  - Property
-  - Reference
-translation_of: Web/API/GlobalEventHandlers/oninvalid
 original_slug: Web/API/GlobalEventHandlers/oninvalid
 ---
 {{ ApiRef("HTML DOM") }}
@@ -99,4 +92,4 @@ function submit(event) {
 ## 関連情報
 
 - {{event("invalid")}} event
-- [DOM onevent ハンドラー](/ja/docs/Web/Guide/Events/Event_handlers "/ja/docs/Web/Guide/DOM/Events/Event_handlers")
+- [DOM onevent ハンドラー](/ja/docs/Web/Guide/Events/Event_handlers)
