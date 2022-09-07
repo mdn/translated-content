@@ -43,7 +43,7 @@ padEnd(targetLength, padString)
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [Polyfill of `String.prototype.padEnd` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.padStart()")}}

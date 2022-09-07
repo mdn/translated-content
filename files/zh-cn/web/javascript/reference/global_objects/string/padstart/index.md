@@ -60,7 +60,7 @@ console.log(leftFillNum(num, 5));
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [Polyfill of `String.prototype.padStart` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.padEnd()")}}
