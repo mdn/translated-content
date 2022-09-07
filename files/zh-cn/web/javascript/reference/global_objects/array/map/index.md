@@ -149,7 +149,7 @@ const values = Array.prototype.map.call(elems, ({ value }) => value);
 
 我们期望输出 `[1, 2, 3]`, 而实际结果是 `[1, NaN, NaN]`.
 
-parseInt 经常被带着一个参数使用，但是这里接受两个。第一个参数是一个表达式而第二个是 callbackFn function 的基，`Array.prototype.map` 传递 3 个参数：
+parseInt 经常被带着一个参数使用，但是这里接受两个。第一个参数是一个表达式而第二个是回调函数的基，`Array.prototype.map` 传递 3 个参数：
 
 - the element
 - the index
