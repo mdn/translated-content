@@ -1,19 +1,14 @@
 ---
 title: block-size
 slug: Web/CSS/block-size
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.block-size
 ---
 {{CSSRef}}
 
-CSS 的 **`block-size`** 属性会根据元素的书写模式来定义元素块的水平宽度或垂直高度。它会根据 {{cssxref("writing-mode")}} 的值来映射至 {{cssxref("width")}} 属性或 {{cssxref("height")}} 属性。
+[CSS](/zh-CN/docs/Web/CSS) 的 **`block-size`** 属性会根据元素的书写模式来定义元素块的水平宽度或垂直高度。它会根据 {{cssxref("writing-mode")}} 的值来映射至 {{cssxref("width")}} 属性或 {{cssxref("height")}} 属性。
 
 如果书写模式是垂直方向，那么 `block-size` 的值就会和元素的宽有关，否则就会和元素的高有关。一个与 `block-size` 相关的属性是 {{cssxref("inline-size")}}，`block-size` 用于定义元素在某个方向上的长度，而 `inline-size` 用于定义元素在另一个方向上的长度。
+
+{{EmbedInteractiveExample("pages/css/block-size.html")}}
 
 ## 语法
 
@@ -43,11 +38,15 @@ block-size: unset;
 
 `block-size` 属性的值与 {{cssxref("width")}} 属性和 {{cssxref("height")}} 属性的值相同。
 
-### 正式语句
+## 形式定义
+
+{{cssinfo}}
+
+## 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### 垂直文本的 block-size
 
@@ -67,9 +66,9 @@ block-size: unset;
 }
 ```
 
-#### Result
+#### 结果
 
-{{EmbedLiveSample("Block_size_with_vertical_text")}}
+{{EmbedLiveSample("垂直文本的 block-size")}}
 
 ## 规范
 
@@ -79,7 +78,7 @@ block-size: unset;
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - 映射至物理方向的属性：{{cssxref("width")}} 和 {{cssxref("height")}}
 - {{cssxref("writing-mode")}}
