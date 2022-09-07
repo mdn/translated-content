@@ -13,18 +13,18 @@ slug: Glossary/ltr
 - [MDN Web 文档术语](/zh-CN/docs/Glossary)
 
   - {{Glossary("locale")}}
-    - {{Glossary("Localization", "本地化")}}
-    - {{Glossary("LTR", "LTR（从左到右）")}}
-    - {{Glossary("RTL", "RTL（从右到左）")}}
+  - {{Glossary("Localization", "本地化")}}
+  - {{Glossary("LTR", "LTR（从左到右）")}}
+  - {{Glossary("RTL", "RTL（从右到左）")}}
 
 - [HTML 全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 
-    - {{htmlattrxref("dir")}}
-    - {{htmlattrxref("lang")}}
+  - {{htmlattrxref("dir")}}
+  - {{htmlattrxref("lang")}}
 
 - [CSS](/zh-CN/docs/Web/CSS)
 
-    - {{cssxref(":dir")}}
-    - {{cssxref("direction")}}
-    - {{cssxref("unicode-bidi")}}
-    - {{cssxref("writing-mode")}}
+  - {{cssxref(":dir")}}
+  - {{cssxref("direction")}}
+  - {{cssxref("unicode-bidi")}}
+  - {{cssxref("writing-mode")}}
