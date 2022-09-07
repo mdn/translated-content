@@ -4,7 +4,7 @@ slug: Web/CSS/object-fit
 ---
 {{CSSRef}}
 
-**`object-fit`** [CSS](/zh-CN/docs/Web/CSS) 属性指定[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)的内容应该如何适应到其使用的高度和宽度确定的框。
+**`object-fit`** [CSS](/zh-CN/docs/Web/CSS) 属性指定[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)的内容应该如何适应到其使用高度和宽度确定的框。
 
 您可以通过使用 {{cssxref("object-position")}} 属性来切换被替换元素的内容对象在元素框内的对齐方式。
 
@@ -12,6 +12,19 @@ slug: Web/CSS/object-fit
 
 ## 语法
 
+```css
+object-fit: contain;
+object-fit: cover;
+object-fit: fill;
+object-fit: none;
+object-fit: scale-down;
+/* Global values */
+object-fit: inherit;
+object-fit: initial;
+object-fit: revert;
+object-fit: revert-layer;
+object-fit: unset;
+```
 object-fit 属性由下列的值中的单独一个关键字来指定。
 
 ### 取值
@@ -27,35 +40,41 @@ object-fit 属性由下列的值中的单独一个关键字来指定。
 - `scale-down`
   - : 内容的尺寸与 `none` 或 `contain` 中的一个相同，取决于它们两个之间谁得到的对象尺寸会更小一些。
 
-### 正式语法
+## 形式定义
+
+{{cssinfo}}
+
+## 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
-### HTML
+### 为图像设置 object-fill
+
+#### HTML
 
 ```html
 <section>
   <h2>object-fit: fill</h2>
-  <img class="fill" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
-  <img class="fill narrow" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="fill" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="fill narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
   <h2>object-fit: contain</h2>
-  <img class="contain" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
-  <img class="contain narrow" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="contain" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="contain narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
   <h2>object-fit: cover</h2>
-  <img class="cover" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
-  <img class="cover narrow" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="cover" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="cover narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
   <h2>object-fit: none</h2>
-  <img class="none" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
-  <img class="none narrow" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="none" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="none narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
   <h2>object-fit: scale-down</h2>
-  <img class="scale-down" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
-  <img class="scale-down narrow" src="/en-US/docs/Web/CSS/object-fit/mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="scale-down" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="scale-down narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
 </section>
 ```
 
-### CSS
+#### CSS
 
 ```css
 h2 {
@@ -63,43 +82,28 @@ h2 {
   font-size: 1em;
   margin: 1em 0 0.3em;
 }
-
-div {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  height: 940px;
-}
-
 img {
   width: 150px;
   height: 100px;
   border: 1px solid #000;
+  margin: 10px 0;
 }
-
 .narrow {
   width: 100px;
   height: 150px;
-  margin-top: 10px;
 }
-
 .fill {
   object-fit: fill;
 }
-
 .contain {
   object-fit: contain;
 }
-
 .cover {
   object-fit: cover;
 }
-
 .none {
   object-fit: none;
 }
-
 .scale-down {
   object-fit: scale-down;
 }
@@ -107,7 +111,7 @@ img {
 
 ### 结果
 
-{{ EmbedLiveSample('Example', 500, 450) }}
+{{ EmbedLiveSample('设置图像的object-fill', 500, 1100) }}
 
 ## 规范
 
@@ -115,7 +119,7 @@ img {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.object-fit")}}
+{{Compat}}
 
 ## 参见
 
