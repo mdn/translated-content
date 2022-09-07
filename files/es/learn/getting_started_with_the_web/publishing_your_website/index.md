@@ -122,7 +122,7 @@ Aunque este procedimiento pueda parecer un poco aterrador al principio no te pre
 
     ```bash
     cd Desktop/sitio-prueba
-    ````
+    ```
 
     En Windows sería:
 

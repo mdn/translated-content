@@ -436,7 +436,7 @@ In KumaScript, the locale of the current document is exposed as an environment v
 
 ```js
 var lang = env.locale;
-````
+```
 
 In legacy DekiScript templates, coming up with the locale was a bit harder. You'll see chunks of code like this:
 

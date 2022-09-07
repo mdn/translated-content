@@ -33,17 +33,23 @@ JavaScript tiene los siguientes tipos de operadores. Esta sección describe los 
 
 JavaScript tiene ambos operadores _binarios_ y _unarios_, y un operador ternario especial, el operador condicional. Un operador binario requiere dos operandos, uno antes del operando y otro después del operador:
 
-    operando1 operador operando2
+```
+operando1 operador operando2
+```
 
 Por ejemplo, `3+4` o `x*y`.
 
 Un operador unario requiere un solo operando, ya sea antes o después del operador:
 
-    operador operando
+```
+operador operando
+```
 
 o
 
-    operando operador
+```
+operando operador
+```
 
 Por ejemplo, `x++` o `++x`.
 
@@ -122,7 +128,7 @@ var var2 = 4;
 
 | Operador                                                                                                                                | Descripción                                                                                                                                                                                                      | Ejemplos que devuelven `true`        |
 | --------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| {{JSxRef("Operadores/Comparison_Operators", "Igual", "#Igualdad")}} (`==`)                                         | Devuelve `true` si los operandos son iguales.                                                                                                                                                                    | ` 3 == var1`<br>`"3" == var1`<br>`3 == '3' ` |
+| {{JSxRef("Operadores/Comparison_Operators", "Igual", "#Igualdad")}} (`==`)                                         | Devuelve `true` si los operandos son iguales.                                                                                                                                                                    | `3 == var1`<br>`"3" == var1`<br>`3 == '3'` |
 | {{JSxRef("Operadores/Comparison_Operators", "No es igual", "#Desigualdad")}} (`!=`)                             | Devuelve `true` si los operandos _no_ son iguales.                                                                                                                                                               | `var1 != 4`<br>`var2 != "3"`              |
 | {{JSxRef("Operadores/Comparison_Operators", "Estrictamente igual", "#Identidad")}} (`===`)                    | Devuelve `true` si los operandos son iguales y del mismo tipo. Consulta también {{JSxRef("Object.is")}} y {{JSxRef("../Equality_comparisons_and_sameness", "similitud en JS")}}. | `3 === var1`                         |
 | {{JSxRef("Operadores/Comparison_Operators", "Desigualdad estricta", "#No_Identidad")}} (`!==`)            | Devuelve `true` si los operandos son del mismo tipo pero no iguales, o son de diferente tipo.                                                                                                                    | `var1 !== "3"`<br>`3 !== '3'`             |
@@ -287,7 +293,9 @@ mystring += 'bet'; // se evalúa como "alphabet" y asigna este valor a mystring.
 
 El {{JSxRef("Operadores/Conditional_Operator", "operador condicional")}} es el único operador de JavaScript que toma tres operandos. El operador puede tener uno de dos valores según una condición. La sintaxis es:
 
-    condition ? val1 : val2
+```
+condition ? val1 : val2
+```
 
 Si `condition` es `true`, el operador tiene el valor de `val1`. De lo contrario, tiene el valor de `val2`. Puedes utilizar el operador condicional en cualquier lugar donde normalmente utilizas un operador estándar.
 
@@ -354,8 +362,10 @@ Dado que los arreglos solo son objetos, técnicamente es posible `delete` elemen
 
 El {{JSxRef("Operadores/typeof", "operador typeof")}} se utiliza de cualquiera de las siguientes formas:
 
-    typeof operand
-    typeof (operand)
+```
+typeof operand
+typeof (operand)
+```
 
 El operador `typeof` devuelve una cadena que indica el tipo de operando no evaluado. `operando` es la cadena, variable, palabra clave u objeto para el que se devolverá el tipo. Los paréntesis son opcionales.
 
@@ -425,8 +435,10 @@ typeof String;   // devuelve "function"
 
 El {{JSxRef("Operadores/void", "operador void")}} se utiliza de cualquiera de las siguientes formas:
 
-    void (expression)
-    void expression
+```
+void (expression)
+void expression
+```
 
 El operador `void` especifica una expresión que se evaluará sin devolver un valor. `expression` es una expresión de JavaScript para evaluar. Los paréntesis que rodean la expresión son opcionales, pero es un buen estilo usarlos.
 
@@ -471,7 +483,9 @@ var mycar = { make: 'Honda', model: 'Accord', year: 1998 };
 
 El {{JSxRef("Operadores/instanceof", "operador instanceof")}} devuelve `true` si el objeto especificado es del tipo de objeto especificado. La sintaxis es:
 
-    objectName instanceof objectType
+```
+objectName instanceof objectType
+```
 
 donde `objectName` es el nombre del objeto para comparar con `objectType`, y `objectType` es un tipo de objeto, como {{JSxRef("Date")}} o {{JSxRef("Array")}}.
 
@@ -540,8 +554,10 @@ Palabras clave básicas y expresiones generales en JavaScript.
 
 Utiliza la {{JSxRef("Operadores/this", "palabra clave this")}} para hacer referencia al objeto actual. En general, `this` se refiere al objeto que llama en un método. Usa `this` con la notación de punto o entre corchetes:
 
-    this['propertyName']
-    this.propertyName
+```
+this['propertyName']
+this.propertyName
+```
 
 Supongamos que una función llamada `validate` valida la propiedad `value` de un objeto, dado el objeto y los valores alto y bajo:
 
@@ -597,7 +613,9 @@ var objectName = new objectType([param1, param2, ..., paramN]);
 
 La {{JSxRef("Operadores/super", "palabra clave super")}} se utiliza para llamar a funciones en el padre de un objeto. Es útil con {{JSxRef("Classes", "clases")}} llamar al constructor padre, por ejemplo.
 
-    super([arguments]); // llama al constructor padre.
-    super.functionOnParent([arguments]);
+```
+super([arguments]); // llama al constructor padre.
+super.functionOnParent([arguments]);
+```
 
 {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}

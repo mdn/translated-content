@@ -27,12 +27,14 @@ Todas las expresiones e instrucciones de JavaScript también son una declaració
 
 La declaración más básica es una _declaración de bloque_, que se utiliza para agrupar instrucciones. El bloque está delimitado por un par de llaves:
 
-    {
-      statement_1;
-      statement_2;
-      ⋮
-      statement_n;
-    }
+```
+{
+  statement_1;
+  statement_2;
+  ⋮
+  statement_n;
+}
+```
 
 ### Ejemplo
 
@@ -49,12 +51,14 @@ Aquí, `{ x++; }` es la declaración de bloque.
 > **Nota:** **Importante**: JavaScript anterior a ECMAScript2015 (6a edición) **no** tiene ámbito de bloque. En JavaScript más antiguo, las variables introducidas dentro de un bloque tienen como ámbito la función o script que las contiene, y los efectos de establecerlas persisten más allá del bloque en sí mismo. En otras palabras, las _declaraciones de bloque no definen un ámbito_.
 >
 > Los bloques "independientes" en JavaScript pueden producir resultados completamente diferentes de los que producirían en C o Java. Por ejemplo:
+>
 > ```js
 > js var x = 1; {
 >   var x = 2;
 > }
 > console.log(x); // muestra 2
 > ```
+>
 > Esto muestra `2` porque la instrucción `var x` dentro del bloque está en el mismo ámbito que la instrucción `var x` anterior del bloque. (En C o Java, el código equivalente habría generado `1`).
 >
 > **A partir de ECMAScript2015**, las declaraciones de variables `let` y `const` tienen un ámbito de bloque. Consulta las páginas de referencia de {{JSxRef("Sentencias/let", "let")}} y {{JSxRef("Sentencias/const", "const")}} para obtener más información.
@@ -69,11 +73,13 @@ Utiliza la expresión `if` para ejecutar una instrucción si una condición lóg
 
 Una declaración `if` se ve así:
 
-    if (condition) {
-      statement_1;
-    } else {
-      statement_2;
-    }
+```
+if (condition) {
+  statement_1;
+} else {
+  statement_2;
+}
+```
 
 Aquí, la `condition` puede ser cualquier expresión que se evalúe como `true` o `false`. (Consulta {{JSxRef("Objetos_globales/Boolean", "Boolean", "#Description")}} para obtener una explicación de lo que se evalúa como `true` y `false`).
 
@@ -81,15 +87,17 @@ Si `condition` se evalúa como `true`, se ejecuta `statement_1`. De lo contrario
 
 También puedes componer las declaraciones usando `else if` para que se prueben varias condiciones en secuencia, de la siguiente manera:
 
-    if (condition_1) {
-      statement_1;
-    } else if (condition_2) {
-      statement_2;
-    } else if (condition_n) {
-      statement_n;
-    } else {
-      statement_last;
-    }
+```
+if (condition_1) {
+  statement_1;
+} else if (condition_2) {
+  statement_2;
+} else if (condition_n) {
+  statement_n;
+} else {
+  statement_last;
+}
+```
 
 En el caso de múltiples condiciones, solo se ejecutará la primera condición lógica que se evalúe como `true`. Para ejecutar múltiples declaraciones, agrúpalas dentro de una declaración de bloque (`{ … }`).
 
@@ -97,13 +105,15 @@ En el caso de múltiples condiciones, solo se ejecutará la primera condición l
 
 En general, es una buena práctica usar siempre declaraciones de bloque, _especialmente_ al anidar declaraciones `if`:
 
-    if (condition) {
-      statement_1_runs_if_condition_is_true;
-      statement_2_runs_if_condition_is_true;
-    } else {
-      statement_3_runs_if_condition_is_false;
-      statement_4_runs_if_condition_is_false;
-    }
+```
+if (condition) {
+  statement_1_runs_if_condition_is_true;
+  statement_2_runs_if_condition_is_true;
+} else {
+  statement_3_runs_if_condition_is_false;
+  statement_4_runs_if_condition_is_false;
+}
+```
 
 No es aconsejable utilizar asignaciones simples en una expresión condicional, porque la asignación se puede confundir con la igualdad al mirar el código.
 
@@ -169,18 +179,20 @@ Una instrucción `switch` permite que un programa evalúe una expresión e inten
 
 Una instrucción `switch` se ve así:
 
-    switch (expression) {
-      case label_1:
-        statements_1
-        [break;]
-      case label_2:
-        statements_2
-        [break;]
-        …
-      default:
-        statements_def
-        [break;]
-    }
+```
+switch (expression) {
+  case label_1:
+    statements_1
+    [break;]
+  case label_2:
+    statements_2
+    [break;]
+    …
+  default:
+    statements_def
+    [break;]
+}
+```
 
 JavaScript evalúa la instrucción `switch` anterior de la siguiente manera:
 
@@ -243,7 +255,9 @@ Casi cualquier objeto se puede lanzar en JavaScript. Sin embargo, no todos los o
 
 Utiliza la expresión `throw` para lanzar una excepción. Una expresión `throw` especifica el valor que se lanzará:
 
-    throw expression;
+```
+throw expression;
+```
 
 Puedes lanzar cualquier expresión, no solo expresiones de un tipo específico. El siguiente código arroja varias excepciones de distintos tipos:
 
@@ -308,9 +322,11 @@ catch (e) {
 
 Puedes usar un bloque `catch` para manejar todas las excepciones que se puedan generar en el bloque `try`.
 
-    catch (catchID) {
-      instrucciones
-    }
+```
+catch (catchID) {
+  instrucciones
+}
+```
 
 El bloque `catch` especifica un identificador (`catchID` en la sintaxis anterior) que contiene el valor especificado por la expresión `throw`. Puedes usar este identificador para obtener información sobre la excepción que se lanzó.
 
@@ -410,8 +426,8 @@ Puedes anidar una o más declaraciones `try...catch`.
 
 Si un bloque `try` interno _no_ tiene un bloque `catch` correspondiente:
 
-1.  _debe_ contener un bloque `finally`, y
-2.  el bloque `catch` adjunto de la declaración `try...catch` se comprueba para una coincidencia.
+1. _debe_ contener un bloque `finally`, y
+2. el bloque `catch` adjunto de la declaración `try...catch` se comprueba para una coincidencia.
 
 Para obtener más información, consulta {{JSxRef("Sentencias/try...catch", "bloques try anidados", "#Nested_try-blocks")}} en la una página de referencia {{JSxRef("Sentencias/try...catch", "try...catch")}}.
 
