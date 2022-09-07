@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.drawWindow()
-slug: Web/API/CanvasRenderingContext2D/drawWindow
+slug: conflicting/Web/API/CanvasRenderingContext2D/drawImage
+original_slug: Web/API/CanvasRenderingContext2D/drawWindow
 ---
 {{APIRef}} {{deprecated_header}}
 
