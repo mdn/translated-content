@@ -6,7 +6,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/create
 
 新建一个 tab.
 
-这是一个异步函数，返回 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+这是一个异步函数，返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## 语法
 
@@ -24,13 +24,13 @@ var creating = browser.tabs.create(
     - `active` {{optional_inline}}
       - : `boolean`. Whether the tab should become the active tab in the window. Does not affect whether the window is focused (see {{WebExtAPIRef('windows.update')}}). Defaults to `true`.
     - `cookieStoreId` {{optional_inline}}
-      - : `string`. Use this to create a tab whose cookie store ID is `cookieStoreId`. This option is only available if the extension has the `"cookies"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+      - : `string`. Use this to create a tab whose cookie store ID is `cookieStoreId`. This option is only available if the extension has the `"cookies"` [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
     - `index`{{optional_inline}}
       - : `integer`. The position the tab should take in the window. The provided value will be clamped to between zero and the number of tabs in the window.
     - `openerTabId`{{optional_inline}}
       - : `integer`. The ID of the tab that opened this tab. If specified, the opener tab must be in the same window as the newly created tab.
     - `openInReaderMode`{{optional_inline}}
-      - : `boolean`. If `true`, open this tab in [Reader Mode](/en-US/Add-ons/WebExtensions/API/tabs/toggleReaderMode). Defaults to `false`.
+      - : `boolean`. If `true`, open this tab in [Reader Mode](/zh-CN/Add-ons/WebExtensions/API/tabs/toggleReaderMode). Defaults to `false`.
     - `pinned`{{optional_inline}}
       - : `boolean`. Whether the tab should be pinned. Defaults to `false`.
     - `selected`{{optional_inline}}
@@ -51,7 +51,7 @@ var creating = browser.tabs.create(
 
 ### 返回值
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the created tab. If the tab could not be created (for example, because `url` used a privileged scheme) the promise will be rejected with an error message.
+A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the created tab. If the tab could not be created (for example, because `url` used a privileged scheme) the promise will be rejected with an error message.
 
 ## 浏览器兼容性
 
