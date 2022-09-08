@@ -108,7 +108,7 @@ document.querySelector("div#target").replaceChildren(sanitizedDiv.children);
 
 ### フレームのサニタイズ
 
-id が `userFrame` である {{HTMLElement("iframe")}} からのデータをサニタイズする。
+id が `userFrame` である {{HTMLElement("iframe")}} からのデータをサニタイズします。
 
 ```js
 const sanitizer = new Sanitizer();  // デフォルトのサニタイザー
