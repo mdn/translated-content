@@ -115,17 +115,17 @@ window.confirm("Are you sure?"); // 呼叫原本的 window.confirm()
 
 來自 [`extension`](/zh-TW/Add-ons/WebExtensions/API/extension):
 
-- [`getURL()`](</en-US/Add-ons/WebExtensions/API/extension#getURL()>)
+- [`getURL()`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL)
 - [`inIncognitoContext`](/zh-TW/Add-ons/WebExtensions/API/extension#inIncognitoContext)
 
 來自 [`runtime`](/zh-TW/Add-ons/WebExtensions/API/runtime):
 
-- [`connect()`](</en-US/Add-ons/WebExtensions/API/runtime#connect()>)
-- [`getManifest()`](</en-US/Add-ons/WebExtensions/API/runtime#getManifest()>)
-- [`getURL()`](</en-US/Add-ons/WebExtensions/API/runtime#getURL()>)
-- [`onConnect`](/zh-TW/Add-ons/WebExtensions/API/runtime#onConnect)
-- [`onMessage`](/zh-TW/Add-ons/WebExtensions/API/runtime#onMessage)
-- [`sendMessage()`](</en-US/Add-ons/WebExtensions/API/runtime#sendMessage()>)
+- [`connect()`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect)
+- [`getManifest()`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getManifest)
+- [`getURL()`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL)
+- [`onConnect`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect)
+- [`onMessage`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
+- [`sendMessage()`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage)
 
 來自 [`i18n`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/i18n):
 
