@@ -27,6 +27,5 @@ original_slug: Localization
 
 ### 一般知識
 
-- MDN の{{Link("/ja/docs/Mozilla/Localization")}}
 - ウィキペディアの{{interwiki("wikipedia", "ローカライゼーション")}}
 - ウィキペディアの{{interwiki("wikipedia", "国際化と地域化")}}

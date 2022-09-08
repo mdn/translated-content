@@ -205,7 +205,7 @@
 /zh-CN/docs/Core_JavaScript_1.5_Reference:Global_Properties	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
 /zh-CN/docs/Core_JavaScript_1.5_Reference:Statements:throw	/zh-CN/docs/Web/JavaScript/Reference/Statements/throw
 /zh-CN/docs/DOM/Blob	/zh-CN/docs/Web/API/Blob
-/zh-CN/docs/DOM/BlobBuilder	/zh-CN/docs/conflicting/Web/API/Blob
+/zh-CN/docs/DOM/BlobBuilder	/zh-CN/docs/Web/API/Blob
 /zh-CN/docs/DOM/CSSRule	/zh-CN/docs/Web/API/CSSRule
 /zh-CN/docs/DOM/CSSRule/cssText	/zh-CN/docs/Web/API/CSSRule/cssText
 /zh-CN/docs/DOM/CSSStyleRule	/zh-CN/docs/Web/API/CSSStyleRule
@@ -1154,6 +1154,7 @@
 /zh-CN/docs/MDN/JavaScript/Reference/Global_Objects	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 /zh-CN/docs/MDN/JavaScript/Reference/Global_Objects/String	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 /zh-CN/docs/MDN/Kuma	/zh-CN/docs/MDN/Yari
+/zh-CN/docs/MDN/MDN_Product_Advisory_Board/Members	/zh-CN/docs/conflicting/MDN/MDN_Product_Advisory_Board
 /zh-CN/docs/MDN/Structures	/zh-CN/docs/MDN/Writing_guidelines/Page_structures
 /zh-CN/docs/MDN/Structures/Compatibility_tables	/zh-CN/docs/MDN/Writing_guidelines/Page_structures
 /zh-CN/docs/MDN/Structures/Live_samples	/zh-CN/docs/MDN/Writing_guidelines/Page_structures
@@ -1327,7 +1328,7 @@
 /zh-CN/docs/Web/API/Blob.size	/zh-CN/docs/Web/API/Blob/size
 /zh-CN/docs/Web/API/Blob.slice	/zh-CN/docs/Web/API/Blob/slice
 /zh-CN/docs/Web/API/Blob.type	/zh-CN/docs/Web/API/Blob/type
-/zh-CN/docs/Web/API/BlobBuilder	/zh-CN/docs/conflicting/Web/API/Blob
+/zh-CN/docs/Web/API/BlobBuilder	/zh-CN/docs/Web/API/Blob
 /zh-CN/docs/Web/API/BroadcastChannel/onmessage	/zh-CN/docs/Web/API/BroadcastChannel/message_event
 /zh-CN/docs/Web/API/BroadcastChannel/onmessageerror	/zh-CN/docs/Web/API/BroadcastChannel/messageerror_event
 /zh-CN/docs/Web/API/ByteString	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
@@ -1339,6 +1340,7 @@
 /zh-CN/docs/Web/API/CanvasRenderingContext2D.createLinearGradient	/zh-CN/docs/Web/API/CanvasRenderingContext2D/createLinearGradient
 /zh-CN/docs/Web/API/CanvasRenderingContext2D.createPattern	/zh-CN/docs/Web/API/CanvasRenderingContext2D/createPattern
 /zh-CN/docs/Web/API/CanvasRenderingContext2D/currentTransform	/zh-CN/docs/Web/API/CanvasRenderingContext2D
+/zh-CN/docs/Web/API/CanvasRenderingContext2D/drawWindow	/zh-CN/docs/conflicting/Web/API/CanvasRenderingContext2D/drawImage
 /zh-CN/docs/Web/API/Channel_Messaging_API/使用_channel_messaging	/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging
 /zh-CN/docs/Web/API/ChildNode.nextElementSibling	/zh-CN/docs/Web/API/Element/nextElementSibling
 /zh-CN/docs/Web/API/Childnode.previousElementSibling	/zh-CN/docs/Web/API/Element/previousElementSibling
@@ -1356,13 +1358,13 @@
 /zh-CN/docs/Web/API/Document/defaultView/resize_event	/zh-CN/docs/Web/API/Window/resize_event
 /zh-CN/docs/Web/API/Document/defaultView/storage_event	/zh-CN/docs/Web/API/Window/storage_event
 /zh-CN/docs/Web/API/Document/domConfig	/zh-CN/docs/Web/API/Document
-/zh-CN/docs/Web/API/Document/drag_event	/zh-CN/docs/conflicting/Web/API/HTMLElement/drag_event
+/zh-CN/docs/Web/API/Document/drag_event	/zh-CN/docs/Web/API/HTMLElement/drag_event
 /zh-CN/docs/Web/API/Document/dragend_event	/zh-CN/docs/Web/API/HTMLElement/dragend_event
 /zh-CN/docs/Web/API/Document/dragenter_event	/zh-CN/docs/Web/API/HTMLElement/dragenter_event
-/zh-CN/docs/Web/API/Document/dragleave_event	/zh-CN/docs/conflicting/Web/API/HTMLElement/dragleave_event
+/zh-CN/docs/Web/API/Document/dragleave_event	/zh-CN/docs/Web/API/HTMLElement/dragleave_event
 /zh-CN/docs/Web/API/Document/dragover_event	/zh-CN/docs/Web/API/HTMLElement/dragover_event
 /zh-CN/docs/Web/API/Document/dragstart_event	/zh-CN/docs/Web/API/HTMLElement/dragstart_event
-/zh-CN/docs/Web/API/Document/drop_event	/zh-CN/docs/conflicting/Web/API/HTMLElement/drop_event
+/zh-CN/docs/Web/API/Document/drop_event	/zh-CN/docs/Web/API/HTMLElement/drop_event
 /zh-CN/docs/Web/API/Document/height	/zh-CN/docs/Web/API/Element/clientHeight
 /zh-CN/docs/Web/API/Document/keypress_event	/zh-CN/docs/Web/API/Element/keypress_event
 /zh-CN/docs/Web/API/Document/mozFullScreen	/zh-CN/docs/Web/API/Document/fullscreen
@@ -2075,6 +2077,8 @@
 /zh-CN/docs/Web/Events/DOMContentLoaded	/zh-CN/docs/Web/API/Window/DOMContentLoaded_event
 /zh-CN/docs/Web/Events/DOMContentLoaded_(event)	/zh-CN/docs/Web/API/Window/DOMContentLoaded_event
 /zh-CN/docs/Web/Events/DOMMouseScroll	/zh-CN/docs/Web/API/Element/DOMMouseScroll_event
+/zh-CN/docs/Web/Events/Detecting_device_orientation	/zh-CN/docs/Web/API/Device_orientation_events/Detecting_device_orientation
+/zh-CN/docs/Web/Events/Orientation_and_motion_data_explained	/zh-CN/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /zh-CN/docs/Web/Events/afterprint	/zh-CN/docs/Web/API/Window/afterprint_event
 /zh-CN/docs/Web/Events/afterscriptexecute	/zh-CN/docs/Web/API/Element/afterscriptexecute_event
 /zh-CN/docs/Web/Events/animationend	/zh-CN/docs/Web/API/Element/animationend_event
@@ -2095,13 +2099,13 @@
 /zh-CN/docs/Web/Events/dblclick	/zh-CN/docs/Web/API/Element/dblclick_event
 /zh-CN/docs/Web/Events/devicechange	/zh-CN/docs/Web/API/MediaDevices/devicechange_event
 /zh-CN/docs/Web/Events/deviceorientation	/zh-CN/docs/Web/API/Window/deviceorientation_event
-/zh-CN/docs/Web/Events/drag	/zh-CN/docs/conflicting/Web/API/HTMLElement/drag_event
+/zh-CN/docs/Web/Events/drag	/zh-CN/docs/Web/API/HTMLElement/drag_event
 /zh-CN/docs/Web/Events/dragend	/zh-CN/docs/Web/API/HTMLElement/dragend_event
 /zh-CN/docs/Web/Events/dragenter	/zh-CN/docs/Web/API/HTMLElement/dragenter_event
-/zh-CN/docs/Web/Events/dragleave	/zh-CN/docs/conflicting/Web/API/HTMLElement/dragleave_event
+/zh-CN/docs/Web/Events/dragleave	/zh-CN/docs/Web/API/HTMLElement/dragleave_event
 /zh-CN/docs/Web/Events/dragover	/zh-CN/docs/Web/API/HTMLElement/dragover_event
 /zh-CN/docs/Web/Events/dragstart	/zh-CN/docs/Web/API/HTMLElement/dragstart_event
-/zh-CN/docs/Web/Events/drop	/zh-CN/docs/conflicting/Web/API/HTMLElement/drop_event
+/zh-CN/docs/Web/Events/drop	/zh-CN/docs/Web/API/HTMLElement/drop_event
 /zh-CN/docs/Web/Events/ended	/zh-CN/docs/Web/API/HTMLMediaElement/ended_event
 /zh-CN/docs/Web/Events/error	/zh-CN/docs/Web/API/Element/error_event
 /zh-CN/docs/Web/Events/focus	/zh-CN/docs/Web/API/Element/focus_event
@@ -2431,7 +2435,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/contains	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/includes
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toString
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null	/zh-CN/docs/Web/JavaScript/Reference/Operators/null
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/uneval	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/生成器函数	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
@@ -2478,6 +2482,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/template_strings	/zh-CN/docs/Web/JavaScript/Reference/Template_literals
 /zh-CN/docs/Web/JavaScript/Reference/关于	/zh-CN/docs/Web/JavaScript/Reference/About
 /zh-CN/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/zh-CN/docs/Web/Security/Same-origin_policy
+/zh-CN/docs/Web/JavaScript/Shells	/zh-CN/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /zh-CN/docs/Web/JavaScript/Strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
 /zh-CN/docs/Web/JavaScript/Strict_mode/Transitioning_to_strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
 /zh-CN/docs/Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf

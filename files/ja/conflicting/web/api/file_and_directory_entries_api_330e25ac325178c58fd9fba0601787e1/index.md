@@ -5,7 +5,7 @@ original_slug: Web/API/LocalFileSystem
 ---
 {{APIRef("File System API")}}{{non-standard_header()}}
 
-[File System API](/ja/DOM/File_API/File_System_API "en/DOM/File_API/File_System_APIB") の `LocalFileSystem` インターフェイスを使用すると、サンドボックスファイルシステムにアクセスできます。 これらのメソッドは、[window](/ja/docs/Web/API/Window) オブジェクトと [worker](/ja/docs/Web/API/Worker) オブジェクトによって実装されます。
+[File System API](/ja/DOM/File_API/File_System_API) の `LocalFileSystem` インターフェイスを使用すると、サンドボックスファイルシステムにアクセスできます。 これらのメソッドは、[window](/ja/docs/Web/API/Window) オブジェクトと [worker](/ja/docs/Web/API/Worker) オブジェクトによって実装されます。
 
 ## 基本のコンセプト
 
@@ -158,6 +158,6 @@ void resolveLocalFileSystemURL(
 
 仕様書:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}
 
-リファレンス: [File System API](/ja/DOM/File_API/File_System_API "en/DOM/File_API/File_System_API")
+リファレンス: [File System API](/ja/DOM/File_API/File_System_API)
 
-イントロダクション: [Basic Concepts About the File System API](/ja/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API "en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API")
+イントロダクション: [Basic Concepts About the File System API](/ja/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API)

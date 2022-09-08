@@ -104,7 +104,7 @@ greetUser("Veronica");
 - Worker 事件循环
   - : worker 事件循环顾名思义就是驱动 worker 的事件循环。这包括了所有种类的 worker：最基本的 [web worker](/zh-CN/docs/Web/API/Web_Workers_API) 以及 [shared worker](/zh-CN/docs/Web/API/SharedWorker) 和 [service worker](/zh-CN/docs/Web/API/Service_Worker_API)。 Worker 被放在一个或多个独立于 “主代码” 的代理中。浏览器可能会用单个或多个事件循环来处理给定类型的所有 worker。
 - Worklet 事件循环
-  - [: worklet](/zh-CN/docs/Web/API/Worklet) 事件循环用于驱动运行 worklet 的代理。这包含了 {{domxref("Worklet")}}、{{domxref("AudioWorklet")}} 以及 {{domxref("PaintWorklet")}}。
+  - : [worklet](/zh-CN/docs/Web/API/Worklet) 事件循环用于驱动运行 worklet 的代理。这包含了 {{domxref("Worklet")}}、{{domxref("AudioWorklet")}} 以及 {{domxref("PaintWorklet")}}。
 
 多个同{{Glossary("源")}}（译者注：此处同源的源应该不是指同源策略中的源，而是指由同一个窗口打开的多个子窗口或同一个窗口中的多个 iframe 等，意味着起源的意思，下一段内容就会对这里进行说明）窗口可能运行在相同的事件循环中，每个队列任务进入到事件循环中以便处理器能够轮流对它们进行处理。记住这里的网络术语 “window” 实际上指的用于运行网页内容的浏览器级容器，包括实际的 window，一个 tab 标签或者一个 frame。
 

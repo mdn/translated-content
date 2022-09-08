@@ -11,21 +11,21 @@ original_slug: Mejoras_XUL_en_Firefox_3
 
 {{FirefoxSidebar}}
 
-Firefox 3 proporciona varios nuevos elementos [XUL](/es/XUL "es/XUL"), además de mejoras en los elementos existentes. Aún que este material se documenta en detalle en otro lugar, este artículo ofrece una buena lista de estas mejoras así como enlaces a la documentación detallada.
+Firefox 3 proporciona varios nuevos elementos [XUL](/es/XUL), además de mejoras en los elementos existentes. Aún que este material se documenta en detalle en otro lugar, este artículo ofrece una buena lista de estas mejoras así como enlaces a la documentación detallada.
 
 ### Los nuevos elementos
 
-- [Los controles numéricos](/es/Tutorial_de_XUL/Controles_numéricos "es/Tutorial_de_XUL/Controles_numéricos"):
+- [Los controles numéricos](/es/Tutorial_de_XUL/Controles_numéricos):
 
-  - El elemento [`<scale>`](/es/XUL/scale "es/XUL/scale") permite crear escalas deslizantes que dejan al usuario seleccionar cualquier valor dentro de un rango especificado. Este control podría utilizarse, por ejemplo, para crear un control de volumen.
+  - El elemento [`<scale>`](/es/XUL/scale) permite crear escalas deslizantes que dejan al usuario seleccionar cualquier valor dentro de un rango especificado. Este control podría utilizarse, por ejemplo, para crear un control de volumen.
   - El valor `number` para el atributo `type` de cajas de texto (`textbox`) crea una caja de texto donde sólo se pueden introducir números. Además, aparecen botones de flecha en un lateral que permiten incrementar o disminuir los valores. [Más información sobre cajas de texto numérico](https://wiki.mozilla.org/XUL:Specs:NumberBox). {{ Bug(345510) }}
-  - El elemento [`<spinbuttons>`](/es/XUL/spinbuttons "es/XUL/spinbuttons"), que puede usarse para crear controles con la ayuda de vínculos XBL. {{ Bug(155053) }}
-  - Los controles, [`<datepicker>`](/es/XUL/datepicker "es/XUL/datepicker") y [`<timepicker>`](/es/XUL/timepicker "es/XUL/timepicker") sirven para permitir entradas de fecha y hora. El seleccionador de fecha está disponible en varios estilos según el atributo `type` y permite entradas vía cajas de texto o de un calendario. [Más información sobre seleccionadores de fecha (en)](https://wiki.mozilla.org/XUL:Specs:DateTimePickers) [Referencia de seleccionadores de fecha](/es/XUL/datepicker "es/XUL/datepicker") [Referencia de seleccionadores de hora](/es/XUL/timepicker "es/XUL/timepicker")
+  - El elemento [`<spinbuttons>`](/es/XUL/spinbuttons), que puede usarse para crear controles con la ayuda de vínculos XBL. {{ Bug(155053) }}
+  - Los controles, [`<datepicker>`](/es/XUL/datepicker) y [`<timepicker>`](/es/XUL/timepicker) sirven para permitir entradas de fecha y hora. El seleccionador de fecha está disponible en varios estilos según el atributo `type` y permite entradas vía cajas de texto o de un calendario. [Más información sobre seleccionadores de fecha (en)](https://wiki.mozilla.org/XUL:Specs:DateTimePickers) [Referencia de seleccionadores de fecha](/es/XUL/datepicker) [Referencia de seleccionadores de hora](/es/XUL/timepicker)
 
-- Hay una [guía](/es/XUL/Guía_de_popup "es/XUL/Guía_de_popup") sobre menús y elementos emergentes que describe las nuevas funciones disponibles.
+- Hay una [guía](/es/XUL/Guía_de_popup) sobre menús y elementos emergentes que describe las nuevas funciones disponibles.
 
-  - El elemento [`<dropmarker>`](/es/XUL/dropmarker "es/XUL/dropmarker") es útil para crear, con vínculos XBL, controles de estilo de menú. ({{ Bug(348614) }})
-  - El elemento [`<panel>`](/es/XUL/panel "es/XUL/panel") está diseñado para elementos emergentes que no son menús. Pueden albergar cualquier tipo de contenido. Para menús se debería utilizar el elemento \<menupopup>. Los menús permiten la navegación mediante el teclado y apertura/cierre de sub-menús.
+  - El elemento [`<dropmarker>`](/es/XUL/dropmarker) es útil para crear, con vínculos XBL, controles de estilo de menú. ({{ Bug(348614) }})
+  - El elemento [`<panel>`](/es/XUL/panel) está diseñado para elementos emergentes que no son menús. Pueden albergar cualquier tipo de contenido. Para menús se debería utilizar el elemento \<menupopup>. Los menús permiten la navegación mediante el teclado y apertura/cierre de sub-menús.
 
 ### Las mejoras
 
@@ -53,10 +53,10 @@ Firefox 3 proporciona varios nuevos elementos [XUL](/es/XUL "es/XUL"), además d
 
 #### en las cajas de texto
 
-- Definir el atributo `spellcheck` de una [caja de texto](/es/XUL/textbox "es/XUL/textbox") a '`true`' activará la comprobación ortográfica integrada en esa caja de texto. ({{ Bug(346787) }})
+- Definir el atributo `spellcheck` de una [caja de texto](/es/XUL/textbox) a '`true`' activará la comprobación ortográfica integrada en esa caja de texto. ({{ Bug(346787) }})
 - La `<textbox>` tiene el método `reset()` para reiniciar el valor de una caja de texto a su valor predeterminado. La propiedad `defaultValue` se usará para obtener y modificar el valor por defecto de la caja de texto. ({{ Bug(312867) }})
 - Se ofrece la propiedad `editor` que permite obtener la interfaz `nsIEditor` interna del campo de texto.({{ Bug(312867) }})
-- La [`caja de texto`](/es/XUL/textbox "es/XUL/textbox") admite el atributo `newlines` que especifica cómo se tratarán los saltos de linea en el texto pegado. {{ Bug(253481) }}. Los posibles valores son:
+- La [`caja de texto`](/es/XUL/textbox) admite el atributo `newlines` que especifica cómo se tratarán los saltos de linea en el texto pegado. {{ Bug(253481) }}. Los posibles valores son:
 
   - `pasteintact` - pega todo tal cual está
   - `pastetofirst` - (valor por defecto) pega sólo hasta el primer salto de linea
@@ -68,7 +68,7 @@ Firefox 3 proporciona varios nuevos elementos [XUL](/es/XUL "es/XUL"), además d
 ### Otras mejoras
 
 - El atributo `type` de un `<button>` se fijará a `repeat` para crear botones que ejecuten el evento asociado mientras se mantiene pulsado con el ratón.
-- El atributo [`buttondisabledaccept`](/es/XUL/Atributos/buttondisabledaccept "es/XUL/Atributos/buttondisabledaccept") puede usarse en el elemento `<dialog>` para tener el botón aceptar (OK) inicialmente desactivado.
+- El atributo [`buttondisabledaccept`](/es/XUL/Atributos/buttondisabledaccept) puede usarse en el elemento `<dialog>` para tener el botón aceptar (OK) inicialmente desactivado.
 - El elemento `<titlebar>` admite el atributo `allowevents` que permite pasar eventos a los hijos de la barra de título.
 - El `<splitter>` admite el valor adicional `'both'` para el atributo `collapse`, que indica que el separador puede colapsar elementos en ambos lados cuando se arrastra. El atributo `substate` se fijará a antes o después cuando uno es colapsado. ({{ Bug(337955) }})
 - El elemento `<richlistbox>` permite selección múltiple. Se fijará el atributo `seltype` a `'multiple'` para activarlo.
@@ -79,4 +79,4 @@ Firefox 3 proporciona varios nuevos elementos [XUL](/es/XUL "es/XUL"), además d
 
 ### Ver también
 
-- [XUL](/es/XUL "es/XUL")
+- [XUL](/es/XUL)

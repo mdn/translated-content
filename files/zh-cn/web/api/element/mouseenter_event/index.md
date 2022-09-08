@@ -17,7 +17,7 @@ slug: Web/API/Element/mouseenter_event
 ## General info
 
 - Specification
-  - [: DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-mouseenter)
+  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-mouseenter)
 - Interface
   - : {{domxref('MouseEvent')}}
 - Synchronicity

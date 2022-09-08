@@ -13,8 +13,8 @@ Existen varios cambios en el próximo Firefox 3 que pueden afectar tu sitio web 
 
 ### Cambios DOM
 
-Nodes from external documents should be cloned using [`document.importNode()`](/es/docs/Web/API/Document/importNode "Crea una copia de un nodo desde un documento externo para ser insertado en el documento actual.") (or adopted using [`document.adoptNode()`](/es/docs/Web/API/Document/adoptNode "Adopta un nodo extreno. El nodo y sub subnodos son quitados del documento en que se encuentra  y su nuevo  ownerDocument se cambia por el actual. El nodo puede entoces ser insertado en el documento actual.")) before they
-can be inserted into the current document. For more on the [`Node.ownerDocument`](/es/docs/Web/API/Node/ownerDocument "La propiedad de lectura Nodo.ownerDocument devuelve el objecto Document de más alto nivel/jerarquia para ese nodo.") issues, see the
+Nodes from external documents should be cloned using [`document.importNode()`](/es/docs/Web/API/Document/importNode) (or adopted using [`document.adoptNode()`](/es/docs/Web/API/Document/adoptNode)) before they
+can be inserted into the current document. For more on the [`Node.ownerDocument`](/es/docs/Web/API/Node/ownerDocument) issues, see the
 [W3C DOM FAQ](https://www.w3.org/DOM/faq.html#ownerdoc).
 
 Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many
@@ -70,6 +70,7 @@ content mypackage location/ contentaccessible=yes
 Esto no debería ser algo que se haga muy seguido, pero está disponible para aquellos casos raros en los que es necesario. Debe tomarse en cuenta que es posible que Firefox alerte al usuario que su extensión utiliza una bandera en el contentaccessible de alguna manera, ya que consituye un riesgo potencial en la seguridad.
 
 > **Nota:** Ya que Firefox 2 no entiende la bandera `contentaccessible` (ignorará la instrucción completa de que contiene la bandera), si se desea que el complemento sea compatible con Firefox 2 y Firefox 3, hay que hacer algo como esto:
+>
 > ```
 > content mypackage location/
 > content mypackage location/ contentaccessible=yes
@@ -81,8 +82,8 @@ En versiones anteriores de Firefox, había casos en los que cuando el usuario se
 
 ### Cambios en JavaScript
 
-Firefox 3 soporta [JavaScript 1.8](../../../../../en/New_in_JavaScript_1.8). Un cambio importante que quizás requiera actualizaciones en los sitios web o en las aplicaciones, es que los Script obsoletos y no-estandar no son soportados. Esto no es la etiqueta `<script>`, pero un objeto de JavaScript que nunca fue estandarizado. De cualquier manera es muy improbable que se use, así que probablemente no surgan problemas.
+Firefox 3 soporta [JavaScript 1.8](/en/New_in_JavaScript_1.8). Un cambio importante que quizás requiera actualizaciones en los sitios web o en las aplicaciones, es que los Script obsoletos y no-estandar no son soportados. Esto no es la etiqueta `<script>`, pero un objeto de JavaScript que nunca fue estandarizado. De cualquier manera es muy improbable que se use, así que probablemente no surgan problemas.
 
 ### Vea también
 
-- [Firefox 3 para desarrolladores](/es/Firefox_3_for_developers "es/Firefox_3_for_developers") [Nuevo en JavaScript 1.8](/es/New_in_JavaScript_1.8 "es/New_in_JavaScript_1.8") [Actualizando extensiones para Firefox 3](/es/Updating_extensions_for_Firefox_3 "es/Updating_extensions_for_Firefox_3")
+- [Firefox 3 para desarrolladores](/es/Firefox_3_for_developers) [Nuevo en JavaScript 1.8](/es/New_in_JavaScript_1.8) [Actualizando extensiones para Firefox 3](/es/Updating_extensions_for_Firefox_3)

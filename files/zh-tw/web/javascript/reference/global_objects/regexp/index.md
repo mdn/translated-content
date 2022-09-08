@@ -40,7 +40,7 @@ let re = new RegExp('\\w+')
 
 ## Constructor
 
-- [`RegExp()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp)
+- [`RegExp()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp)
   - : Creates a regular expression object.
 
 ## Properties
@@ -62,7 +62,7 @@ The global `RegExp` object has no methods of its own. However, it does inherit s
 
 ### Properties
 
-See also [deprecated `RegExp` properties.](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#RegExp_Properties)
+See also [deprecated `RegExp` properties.](/zh-TW/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#RegExp_Properties)
 
 Note that several of the {{JSxRef("RegExp")}} properties have both long and short (Perl-like) names. Both names always refer to the same value. Perl is the programming language from which JavaScript modeled its regular expressions.
 
@@ -151,7 +151,7 @@ s.match(/yes[^]*day/);
 
 ### Using a regular expression with the sticky flag
 
-The [sticky flag](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) indicates that the regular expression performs sticky matching in the target string by attempting to match starting at {{jsxref("RegExp.prototype.lastIndex")}}.
+The [sticky flag](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) indicates that the regular expression performs sticky matching in the target string by attempting to match starting at {{jsxref("RegExp.prototype.lastIndex")}}.
 
 ```js
 let str = '#foo#'
@@ -203,7 +203,7 @@ console.log(regex.lastIndex) // logs '15'
 // and so on
 ```
 
-The [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) feature introduces a solution, by allowing for a statement as simple as `\p{scx=Cyrl}`. One can also use an external resource for getting the complete Unicode block range for different scripts, such as [Regexp-Unicode-block](http://kourge.net/projects/regexp-unicode-block).
+The [Unicode property escapes](/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) feature introduces a solution, by allowing for a statement as simple as `\p{scx=Cyrl}`. One can also use an external resource for getting the complete Unicode block range for different scripts, such as [Regexp-Unicode-block](http://kourge.net/projects/regexp-unicode-block).
 
 ### Extracting sub-domain name from URL
 
@@ -242,6 +242,6 @@ Note that due to web compatibility, `RegExp.$N` will still return an empty strin
 
 ## See also
 
-- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
+- [Regular Expressions](/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the [JavaScript Guide](/zh-TW/docs/Web/JavaScript/Guide)
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("String.prototype.replace()")}}

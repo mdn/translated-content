@@ -24,7 +24,7 @@ slug: Web/Performance/Optimizing_startup_performance
 
 ## 异步化
 
-关于如何构建你的启动过程，使得其尽可能异步执行，这里有些建议。(不过是新应用还是移植的）：
+关于如何构建你的启动过程，使得其尽可能异步执行，这里有些建议。（不论是新应用还是移植的）：
 
 - 启动时，在需要异步执行的脚本标签上使用 {{ htmlattrxref("defer") }} 或 {{ htmlattrxref("async") }} 属性 。这会允许 HTML 解析器更高效地处理文档。 [Async scripts for asm.js](/zh-CN/docs/Games/Techniques/Async_scripts) 中有更多关于这方面的信息。
 - 如果你需要解码资源文件（比如，解码 JPEG 文件并将其转换为原始纹理数据，以便随后在 WebGL 中使用），最好在 workers 里做这件事。

@@ -9,7 +9,9 @@ translation_of: Web/API/Selection/toString
 
 ## Syntax
 
-    str = sel.toString()
+```js
+str = sel.toString()
+```
 
 ### Return value
 

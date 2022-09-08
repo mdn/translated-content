@@ -13,9 +13,9 @@ translation_of: Web/CSS/text-overflow
 
 <p>O corte acontece na borda da caixa; para cortar no limite de caracteres de uma string personalizada, pode-se usar (<code>''</code>).</p>
 
-<p>Essa propriedade afeta apenas o conteúdo que está ultrapassando o bloco ou a div no sentido da linha horizontal (não corta o texto na parte de baixo de um bloco ou div, por exemplo). O texto pode ultrapassar ou transbordar quando utilizado <span style="line-height: inherit;">‘</span><code class="css" style="font-size: 14px; line-height: inherit;"><code style="font-size: 14px;">white-space:nowrap</code></code><span style="line-height: inherit;">’ ou quando uma palavra for muito grande.</span></p>
+<p>Essa propriedade afeta apenas o conteúdo que está ultrapassando o bloco ou a div no sentido da linha horizontal (não corta o texto na parte de baixo de um bloco ou div, por exemplo). O texto pode ultrapassar ou transbordar quando utilizado ‘<code>white-space:nowrap</code>’ ou quando uma palavra for muito grande.</p>
 
-<p>Essa propriedade do CSS não força um estouro para que ele ocorra. Para que isso aconteça, é necessário que o autor utilize algumas propriedades adicionais no elemento, como setar a propriedade overflow para <span style="font-family: courier new,andale mono,monospace;">hidden</span>.</p>
+<p>Essa propriedade do CSS não força um estouro para que ele ocorra. Para que isso aconteça, é necessário que o autor utilize algumas propriedades adicionais no elemento, como setar a propriedade overflow para hidden.</p>
 
 <p>{{cssinfo}}</p>
 
@@ -77,11 +77,11 @@ text-overflow: inherit</pre>
    <td><em>visible overflow</em></td>
    <td style="font-family: monospace;">1234567890</td>
    <td style="direction: ltr;">
-    <div style="float: left; font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: visible;"><span style="direction: ltr; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="float: left; font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: visible;">1234567890</div>
    </td>
    <td style="font-family: monospace;">0987654321</td>
    <td>
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: visible;"><span style="direction: rtl; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: visible;">1234567890</div>
    </td>
   </tr>
   <tr>
@@ -92,7 +92,7 @@ text-overflow: inherit</pre>
    </td>
    <td style="padding: 1px; font-family: monospace;"><img alt="t-o_clip_rtl.png" class="default internal" src="/@api/deki/files/6057/=t-o_clip_rtl.png"></td>
    <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip;"><span style="direction: rtl; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip;">1234567890</div>
    </td>
   </tr>
   <tr>
@@ -103,128 +103,128 @@ text-overflow: inherit</pre>
    </td>
    <td style="font-family: monospace;">54321</td>
    <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: '';"><span style="direction: rtl; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: '';">1234567890</div>
    </td>
   </tr>
   <tr>
    <td><code>text-overflow: ellipsis</code></td>
    <td style="font-family: monospace;">1234…</td>
    <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis;"><span style="direction: ltr; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis;">1234567890</div>
    </td>
    <td style="font-family: monospace;">…4321</td>
    <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis;"><span style="direction: rtl; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis;">1234567890</div>
    </td>
   </tr>
   <tr>
    <td><code>text-overflow: '.'</code></td>
    <td style="font-family: monospace;">1234.</td>
    <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: '.';"><span style="direction: ltr; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: '.';">1234567890</div>
    </td>
    <td style="font-family: monospace;">.4321</td>
    <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: '.';"><span style="direction: rtl; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: '.';">1234567890</div>
    </td>
   </tr>
   <tr>
    <td><code>text-overflow: clip clip</code></td>
    <td style="font-family: monospace;">123456</td>
    <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip clip;"><span style="direction: ltr; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip clip;">1234567890</div>
    </td>
    <td style="font-family: monospace;">654321</td>
    <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip clip;"><span style="direction: rtl; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip clip;">1234567890</div>
    </td>
   </tr>
   <tr>
    <td><code>text-overflow: clip ellipsis</code></td>
    <td style="font-family: monospace;">1234…</td>
    <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip ellipsis;"><span style="direction: ltr; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip ellipsis;">1234567890</div>
    </td>
    <td style="font-family: monospace;">6543…</td>
    <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip ellipsis;"><span style="direction: rtl; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip ellipsis;">1234567890</div>
    </td>
   </tr>
   <tr>
    <td><code>text-overflow: clip '.'</code></td>
    <td style="font-family: monospace;">1234.</td>
    <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip '.';"><span style="direction: ltr; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip '.';">1234567890</div>
    </td>
    <td style="font-family: monospace;">6543.</td>
    <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip '.';"><span style="direction: rtl; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip '.';">1234567890</div>
    </td>
   </tr>
   <tr>
    <td><code>text-overflow: ellipsis clip</code></td>
    <td style="font-family: monospace;">…3456</td>
    <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis clip;"><span style="direction: ltr; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis clip;">1234567890</div>
    </td>
    <td style="font-family: monospace;">…4321</td>
    <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis clip;"><span style="direction: rtl; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis clip;">1234567890</div>
    </td>
   </tr>
   <tr>
    <td><code>text-overflow: ellipsis ellipsis</code></td>
    <td style="font-family: monospace;">…34…</td>
    <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis ellipsis;"><span style="direction: ltr; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis ellipsis;">1234567890</div>
    </td>
    <td style="font-family: monospace;">…43…</td>
    <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis ellipsis;"><span style="direction: rtl; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis ellipsis;">1234567890</div>
    </td>
   </tr>
   <tr>
    <td><code>text-overflow: ellipsis '.'</code></td>
    <td style="font-family: monospace;">…34.</td>
    <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis '.';"><span style="direction: ltr; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis '.';">1234567890</div>
    </td>
    <td style="font-family: monospace;">…43.</td>
    <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis '.';"><span style="direction: rtl; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis '.';">1234567890</div>
    </td>
   </tr>
   <tr>
    <td><code>text-overflow: ',' clip</code></td>
    <td style="font-family: monospace;">,3456</td>
    <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ',' clip;"><span style="direction: ltr; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ',' clip;">1234567890</div>
    </td>
    <td style="font-family: monospace;">,4321</td>
    <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ',' clip;"><span style="direction: rtl; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ',' clip;">1234567890</div>
    </td>
   </tr>
   <tr>
    <td><code>text-overflow: ',' ellipsis</code></td>
    <td style="font-family: monospace;">,34…</td>
    <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ','ellipsis;"><span style="direction: ltr; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ','ellipsis;">1234567890</div>
    </td>
    <td style="font-family: monospace;">,43…</td>
    <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ','ellipsis;"><span style="direction: rtl; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ','ellipsis;">1234567890</div>
    </td>
   </tr>
   <tr>
    <td><code>text-overflow: ',' '.'</code></td>
    <td style="font-family: monospace;">,34.</td>
    <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ',' '.';"><span style="direction: ltr; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ',' '.';">1234567890</div>
    </td>
    <td style="font-family: monospace;">,53.</td>
    <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ',' '.';"><span style="direction: rtl; margin: 0 -2px; unicode-bidi: bidi-override;">1234567890</span></div>
+    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ',' '.';">1234567890</div>
    </td>
   </tr>
  </tbody>

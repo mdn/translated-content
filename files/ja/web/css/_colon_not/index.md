@@ -1,17 +1,6 @@
 ---
 title: ':not()'
 slug: Web/CSS/:not
-tags:
-  - ':not()'
-  - CSS
-  - レイアウト
-  - 否定
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.not
-translation_of: Web/CSS/:not
 ---
 {{CSSRef}}
 

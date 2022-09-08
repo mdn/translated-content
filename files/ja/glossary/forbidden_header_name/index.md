@@ -4,7 +4,7 @@ slug: Glossary/Forbidden_header_name
 ---
 **禁止ヘッダー名**はプログラムから変更することができない [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)の名前、特に、 HTTP **リクエスト**ヘッダーの名前です (反対に、{{Glossary("Forbidden response header name", "禁止レスポンスヘッダー名")}}もあります)。
 
-このようなヘッダーを変更することは禁止されています。なぜなら、ユーザーエージェントがヘッダーを完全に制御できるからです。\``Sec-`\` で始まる名前は、{{domxref("XMLHttpRequest")}} のような、開発者にヘッダーの制御を許可する [Fetch](/ja/docs/Web/API/Fetch_API) を使った {{glossary("API")}} から安全に新しいヘッダーを作成するために予約されています。
+このようなヘッダーを変更することは禁止されています。なぜなら、ユーザーエージェントがヘッダーを完全に制御できるからです。`Sec-` で始まる名前は、{{domxref("XMLHttpRequest")}} のような、開発者にヘッダーの制御を許可する [Fetch](/ja/docs/Web/API/Fetch_API) を使った {{glossary("API")}} から安全に新しいヘッダーを作成するために予約されています。
 
 禁止ヘッダー名は `Proxy-` や `Sec-` で始まるもの、または以下の名前の 1 つです。
 

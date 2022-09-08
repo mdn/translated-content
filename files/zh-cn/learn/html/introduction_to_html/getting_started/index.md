@@ -41,7 +41,7 @@ My cat is very grumpy
 <p>My cat is very grumpy</p>
 ```
 
-> **备注：** HTML 标签不区分大小写。也就是说，输入标签时既可以使用大写字母也可以使用小写字母。例如，标签 {{htmlelement("title")}} 写作` <title>、``<TITLE> `、`<Title>`、`<TiTlE>`，等等都可以正常工作。不过，从一致性、可读性来说，最好仅使用小写字母。
+> **备注：** HTML 标签不区分大小写。也就是说，输入标签时既可以使用大写字母也可以使用小写字母。例如，标签 {{htmlelement("title")}} 写作 `<title>`、`<TITLE>`、`<Title>`、`<TiTlE>`，等等都可以正常工作。不过，从一致性、可读性来说，最好仅使用小写字母。
 
 ## 剖析一个 HTML 元素
 
@@ -200,7 +200,7 @@ My cat is very grumpy
 
 > **备注：** 在这篇文章中提到的“块”和“内联”，不应该与 [CSS 盒子的类型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#块级盒子（block_box）_和_内联盒子（inline_box）)中的同名术语相混淆。尽管它们默认是相关的，但改变 CSS 显示类型并不会改变元素的分类，也不会影响它可以包含和被包含于哪些元素。防止这种混淆也是 HTML5 摒弃这些术语的原因之一。
 
-> **备注：** 你可以查阅包含了块级元素和内联元素列表的参考页面—see [Block-level elements](/en-US/docs/Web/HTML/Block-level_elements) and [Inline elements](/en-US/docs/Web/HTML/Inline_elements).
+> **备注：** 你可以查阅包含了块级元素和内联元素列表的参考页面—see [Block-level elements](/zh-CN/docs/Web/HTML/Block-level_elements) and [Inline elements](/zh-CN/docs/Web/HTML/Inline_elements).
 
 ### 空元素
 

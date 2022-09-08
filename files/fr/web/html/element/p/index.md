@@ -132,15 +132,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires                                                                                                    |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-p-element', '&lt;p&gt;')}}         | {{Spec2('HTML WHATWG')}} | Aucune modification depuis la dernière dérivation depuis la spécification W3C {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-p-element', '&lt;p&gt;')}} | {{Spec2('HTML5 W3C')}}     | Obsolescence de l'attribut `align`.                                                                             |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.1', '&lt;p&gt;')}}                 | {{Spec2('HTML4.01')}}     | Définition intiale.                                                                                             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.p")}}
+{{Compat}}
 
 ## Voir aussi
 

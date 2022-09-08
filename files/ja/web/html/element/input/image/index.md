@@ -88,12 +88,12 @@ translation_of: Web/HTML/Element/input/image
 
 ### formenctype
 
-文字列で、フォームのデータをサーバーーに送信する際に使われるエンコーディング方法を識別します。許されている値は 3 つです。
+文字列で、フォームのデータをサーバーに送信する際に使われるエンコーディング方法を識別します。許されている値は 3 つです。
 
 - `application/x-www-form-urlencoded`
   - : これは既定値で、フォームのデータを {{jsxref("encodeURI", "encodeURI()")}} などのアルゴリズムを使って URL エンコーディングした後で送信します。
 - `multipart/form-data`
-  - : データを管理するために {{domxref("FormData")}} API を使用し、複数のファイルをサーバーーに送信することができます。フォームに {{HTMLElement("input")}} 要素の {{htmlattrxref("type", "input")}} が `file` のもの ([`<input type="file">`](/ja/docs/Web/HTML/Element/input/file)) が含まれている場合は、このエンコーディング型を*使わなければなりません*。
+  - : データを管理するために {{domxref("FormData")}} API を使用し、複数のファイルをサーバーに送信することができます。フォームに {{HTMLElement("input")}} 要素の {{htmlattrxref("type", "input")}} が `file` のもの ([`<input type="file">`](/ja/docs/Web/HTML/Element/input/file)) が含まれている場合は、このエンコーディング型を*使わなければなりません*。
 - `text/plain`
   - : プレーンテキストです。ほとんどデバッグでしか役に立ちませんが、送信されたデータを簡単に見ることができます。
 
@@ -106,7 +106,7 @@ translation_of: Web/HTML/Element/input/image
 文字列で、フォームのデータを送信するときに使用する HTTP メソッドを示します。この値は所有者であるフォームの {{htmlattrxref("method", "form")}} を上書きします。許されている値は次の通りです。
 
 - `get`
-  - : URL は `formaction` または {{htmlattrxref("action", "form")}} 属性で与えられた URL で始まり、クエスチョンマーク ("?") 文字を付加し、次に `formenctype` またはフォームの {{htmlattrxref("enctype", "form")}} 属性の記述に従ってコード化したフォームデータを付加して作成されます。この URL は、 HTTP の {{HTTPMethod("get")}} リクエストでサーバーーに送信されます。この方法は、ASCII 文字のみを含み、副作用のない単純なフォームに対してよく機能します。これは既定値です。
+  - : URL は `formaction` または {{htmlattrxref("action", "form")}} 属性で与えられた URL で始まり、クエスチョンマーク ("?") 文字を付加し、次に `formenctype` またはフォームの {{htmlattrxref("enctype", "form")}} 属性の記述に従ってコード化したフォームデータを付加して作成されます。この URL は、 HTTP の {{HTTPMethod("get")}} リクエストでサーバーに送信されます。この方法は、ASCII 文字のみを含み、副作用のない単純なフォームに対してよく機能します。これは既定値です。
 - `post`
   - : フォームのデータは `formaction` または {{htmlattrxref("action", "form")}} 属性で指定された URL に HTTP の {{HTTPMethod("post")}} リクエストで送信される本文に含まれます。このメソッドは、複雑なデータやファイルの添付に対応しています。
 - `dialog`
@@ -116,7 +116,7 @@ translation_of: Web/HTML/Element/input/image
 
 ### formnovalidate
 
-論理属性で、これがある場合は、サーバーーに送信する前にフォームの検証を行わないことを指定します。これは、その要素の所有するフォームの {{htmlattrxref("novalidate", "form")}} 属性の値より優先されます。
+論理属性で、これがある場合は、サーバーに送信する前にフォームの検証を行わないことを指定します。これは、その要素の所有するフォームの {{htmlattrxref("novalidate", "form")}} 属性の値より優先されます。
 
 この属性は [`<input type="submit">`](/ja/docs/Web/HTML/Element/input/submit) および {{HTMLElement("button")}} 要素でも使用できます。
 
@@ -184,7 +184,7 @@ translation_of: Web/HTML/Element/input/image
   - : input 要素から送信された情報を処理するプログラムの URI。要素のフォームオーナーの {{htmlattrxref("action", "form")}} 属性を上書きします。
 - {{htmlattrdef("formenctype")}}
 
-  - : サーバーーにフォームを送信する際に使用するコンテンツの種類を指定します。指定可能な値は以下のとおりです。
+  - : サーバーにフォームを送信する際に使用するコンテンツの種類を指定します。指定可能な値は以下のとおりです。
 
     - `application/x-www-form-urlencoded`: 属性が指定されていない場合の既定値。
     - `text/plain`.
@@ -195,8 +195,8 @@ translation_of: Web/HTML/Element/input/image
 
   - : ブラウザーがフォームを送信するために使用する HTTP メソッドを指定します。指定可能な値は以下のとおりです。
 
-    - `post`: フォームのデータは、フォームの本文に含まれ、サーバーーに送信されます。
-    - `get`: フォームからのデータは、 '?' を区切り文字として **`form`** 属性の URI に追加され、結果の URI がサーバーーに送信されます。このメソッドは、フォームに副作用がなく、 ASCII 文字のみを含む場合に使用してください。
+    - `post`: フォームのデータは、フォームの本文に含まれ、サーバーに送信されます。
+    - `get`: フォームからのデータは、 '?' を区切り文字として **`form`** 属性の URI に追加され、結果の URI がサーバーに送信されます。このメソッドは、フォームに副作用がなく、 ASCII 文字のみを含む場合に使用してください。
 
     指定された場合、この属性は要素のフォームオーナーの {{htmlattrxref("method", "form")}} 属性を上書きします。
 

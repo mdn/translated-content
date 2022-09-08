@@ -4,7 +4,7 @@ slug: Web/API/Document/execCommand
 ---
 {{ApiRef("DOM")}}{{deprecated_header}}
 
-當 HTML 文件（document）被切換到 [`designMode`](/en-US/docs/Web/API/Document/designMode) 時，它的 `document` 物件就會對外暴露 **`execCommand`** 方法作為操控目前可編輯區域的指令，譬如 [form inputs](/zh-TW/docs/Web/HTML/Element/input) 或 [`contentEditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) 元素。
+當 HTML 文件（document）被切換到 [`designMode`](/zh-TW/docs/Web/API/Document/designMode) 時，它的 `document` 物件就會對外暴露 **`execCommand`** 方法作為操控目前可編輯區域的指令，譬如 [form inputs](/zh-TW/docs/Web/HTML/Element/input) 或 [`contentEditable`](/zh-TW/docs/Web/HTML/Global_attributes/contenteditable) 元素。
 
 多數的指令會作用在文件的[選取](/zh-TW/docs/Web/API/Selection) （粗體、斜體等），而其他則像是插入新的元素（新增一個連結）或是影響一整列的文字（縮排）。當使用 `contentEditable` 時， `execCommand()` 會作用在目前活躍的可編輯元素上。
 

@@ -124,8 +124,8 @@ Customize Toolbar ウィンドウ (\<tt>chrome://global/content/customizeToolbar
 Firefox/Thunderbird 1.5 向けの拡張機能では代わりに以下のような [chrome.manifest](ja/Chrome.manifest) を使用すべきです：
 
 ```
-skin	myextension	classic/1.0	chrome/skin/
-style	chrome://global/content/customizeToolbar.xul	chrome://myextension/skin/toolbar-button.css
+skin  myextension  classic/1.0  chrome/skin/
+style chrome://global/content/customizeToolbar.xul chrome://myextension/skin/toolbar-button.css
 ```
 
 ### よくある間違い

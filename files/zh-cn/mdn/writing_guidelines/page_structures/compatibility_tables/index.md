@@ -149,9 +149,9 @@ git checkout name-of-branch
 
 在 `status` 成员中，你需要包含三个子成员：
 
-- `experimental`：如果这个特性是[实验性](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)的，取值为 `true` ，否则为 `false` 。
+- `experimental`：如果这个特性是[实验性](/zh-CN/docs/MDN/Guidelines/Conventions_definitions#experimental)的，取值为 `true` ，否则为 `false` 。
 - `standard_track`：如果这个特性是个在某些规范里的标准的属性（最常见的是 W3C/WHATWG，但有其它规范如 Khronos 或 TC39 等），取值为`true` ，否则为 `false` 。
-- `deprecated`：如果这个特性已经[废弃](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)，取值为 `true`，否则为 `false`。
+- `deprecated`：如果这个特性已经[废弃](/zh-CN/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)，取值为 `true`，否则为 `false`。
 
 作为例子，以下是 [border-width](/zh-CN/docs/Web/CSS/border-width#浏览器兼容性) 特性的数据（参见 [border-width.json](https://github.com/mdn/browser-compat-data/blob/main/css/properties/border-width.json)）：
 

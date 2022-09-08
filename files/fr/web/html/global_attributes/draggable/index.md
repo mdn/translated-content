@@ -34,15 +34,11 @@ Par défaut, seules les sélections de texte, les images et les liens peuvent ê
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires                                                                          |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "interaction.html#the-draggable-attribute", "draggable")}} | {{Spec2("HTML WHATWG")}} | Aucune modification depuis la dernière dérivation de {{SpecName('HTML5.1')}} |
-| {{SpecName("HTML5.2", "interaction.html#the-draggable-attribute", "draggable")}}     | {{Spec2("HTML5.2")}}     | Aucune modification                                                                   |
-| {{SpecName("HTML5.1", "editing.html#the-draggable-attribute", "draggable")}}             | {{Spec2("HTML5.1")}}     | Dérivation de {{SpecName('HTML WHATWG')}}, définition initiale.              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.draggable")}}
+{{Compat}}
 
 ## Voir aussi
 

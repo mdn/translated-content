@@ -19,7 +19,9 @@ translation_of: Web/API/MediaStreamTrack/muted
 
 ## 구문
 
-    const mutedFlag = track.muted
+```js
+const mutedFlag = track.muted
+```
 
 ### 값
 

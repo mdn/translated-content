@@ -110,14 +110,11 @@ Cet élément implémente l'interface {{domxref("SVGFEColorMatrixElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('Filters 1.0', '#feColorMatrixElement', '&lt;feColorMatrix&gt;')}}         | {{Spec2('Filters 1.0')}} | Aucun changement    |
-| {{SpecName('SVG1.1', 'filters.html#feColorMatrixElement', '&lt;feColorMatrix&gt;')}} | {{Spec2('SVG1.1')}}         | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.feColorMatrix")}}
+{{Compat}}
 
 ## Voir aussi
 

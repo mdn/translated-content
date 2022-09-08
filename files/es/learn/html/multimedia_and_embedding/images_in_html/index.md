@@ -169,7 +169,7 @@ Esto nos da una etiqueta de ayuda (`tooltip`) como las de los enlaces:
 
 ![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum ](https://mdn.mozillademos.org/files/12708/image-with-title.png)
 
-Sin embargo, no se recomienda incluir esta propiedad en las imágenes. `title` presenta algunos problemas de accesibilidad, principalmente porque los lectores de pantalla (_screen readers_) tienen un comportamiento imprevisible y la mayoría de navegadores no la mostrarán a menos que pases el ratón por encima de la imagen (y por tanto es inútil para quien usa teclado). Si estás interesado en esta cuestión, puedes leer el artículo [The Trials and Tribulations of the Title Attribute](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/) de Scott O’Hara.
+Sin embargo, no se recomienda incluir esta propiedad en las imágenes. `title` presenta algunos problemas de accesibilidad, principalmente porque los lectores de pantalla (_screen readers_) tienen un comportamiento imprevisible y la mayoría de navegadores no la mostrarán a menos que pases el ratón por encima de la imagen (y por tanto es inútil para quien usa teclado). Si estás interesado en esta cuestión, puedes leer el artículo [The Trials and Tribulations of the Title Attribute](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/) de Scott O'Hara.
 
 Lo mejor es incluir dicha información en el texto principal del artículo, en lugar de adjuntarla en la imagen.
 
@@ -177,7 +177,9 @@ Lo mejor es incluir dicha información en el texto principal del artículo, en l
 
 ¡Ahora te toca jugar a ti! Esta sección de aprendizaje activo te mantendrá activo con un ejercicio sencillo de incrustado. Te proporcionamos una etiqueta básica {{htmlelement ("img")}} y nos gustaría que incrustes la imagen ubicada en la URL siguiente:
 
-https\://raw\.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
+https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
 
 Ya hemos dicho que nunca se apuntará a imágenes de otros servidores (hotlink), pero esto es solo con fines de aprendizaje, por lo que te lo vamos a dejar hacer por esta vez.
 
@@ -332,14 +334,16 @@ Esto está bien. Incluye el contenido que se necesita y es muy personalizable co
 
 Una solución mejor es utilizar los elementos HTML5 {{htmlelement("figure")}} y {{htmlelement("figcaption")}}. Estos se crearon exactamente para este propósito: proporcionar un contenedor semántico para las figuras y vincular claramente la figura con el pie. Nuestro ejemplo anterior, podría reescribirse así:
 
-    <figure>
-      <img src="images/dinosaur.jpg"
-           alt="La cabeza y el torso de un esqueleto de dinosaurio;
-               tiene una cabeza grande con dientes largos y afilados" width="400"
-           height="341">
+```html
+<figure>
+  <img src="images/dinosaur.jpg"
+        alt="La cabeza y el torso de un esqueleto de dinosaurio;
+            tiene una cabeza grande con dientes largos y afilados" width="400"
+        height="341">
 
-      <figcaption>Exposición de un T-Rex en el museo de la Universidad de Manchester.</figcaption>
-    </figure>
+  <figcaption>Exposición de un T-Rex en el museo de la Universidad de Manchester.</figcaption>
+</figure>
+```
 
 El elemento {{htmlelement("figcaption")}} dice al navegador, o a alguna tecnología de apoyo, que el texto que contiene describe la imagen que está contenida en el elemento {{htmlelement("figure")}}.
 

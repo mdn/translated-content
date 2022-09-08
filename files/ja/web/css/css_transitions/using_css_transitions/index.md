@@ -1,13 +1,6 @@
 ---
 title: CSS トランジションの使用
 slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
-tags:
-  - 上級者
-  - CSS
-  - CSS トランジション
-  - CSS3 トランジション
-  - Guide
-translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 ---
 {{CSSref}}
 

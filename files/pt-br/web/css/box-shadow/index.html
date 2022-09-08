@@ -5,9 +5,11 @@ translation_of: Web/CSS/box-shadow
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">O <strong><code>box-shadow</code></strong> é uma propriedade do CSS, é utilizado para adicionar efeitos de sombra em volta de um elemento. Você pode especificar mais de um efeito, os separando com virgulas.</span> Uma box-shadow é descrita pelo deslocamentos (offset) X e Y em relação ao elemento, desfoco e propagação do raio e cor.</p>
+<p>O <strong><code>box-shadow</code></strong> é uma propriedade do CSS, é utilizado para adicionar efeitos de sombra em volta de um elemento. Você pode especificar mais de um efeito, os separando com virgulas.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* offset-x | offset-y | color */
+<p>Uma box-shadow é descrita pelo deslocamentos (offset) X e Y em relação ao elemento, desfoco e propagação do raio e cor.</p>
+
+<pre class="brush: css">/* offset-x | offset-y | color */
 box-shadow: 60px -16px teal;
 
 /* offset-x | offset-y | blur-radius | color */
@@ -28,19 +30,19 @@ box-shadow: initial;
 box-shadow: unset;
 </pre>
 
-<pre class="brush: css no-line-numbers notranslate" style="box-shadow: 60px -16px teal; float: left; margin: 1em;">box-shadow: 60px -16px teal;</pre>
+<pre class="brush: css" style="box-shadow: 60px -16px teal; float: left; margin: 1em;">box-shadow: 60px -16px teal;</pre>
 
-<pre class="brush: css no-line-numbers notranslate" style="box-shadow: 10px 5px 5px black; float: left; margin: 1em;">box-shadow: 10px 5px 5px black;</pre>
+<pre class="brush: css" style="box-shadow: 10px 5px 5px black; float: left; margin: 1em;">box-shadow: 10px 5px 5px black;</pre>
 
-<pre class="brush: css no-line-numbers notranslate" style="box-shadow: 3px 3px red, -1em 0 0.4em olive; float: left; margin: 1em;">box-shadow: 3px 3px red, -1em 0 0.4em olive;</pre>
+<pre class="brush: css" style="box-shadow: 3px 3px red, -1em 0 0.4em olive; float: left; margin: 1em;">box-shadow: 3px 3px red, -1em 0 0.4em olive;</pre>
 
-<pre class="brush: css no-line-numbers notranslate" style="box-shadow: inset 5em 1em gold; float: left; margin: 1em;">box-shadow: inset 5em 1em gold;</pre>
+<pre class="brush: css" style="box-shadow: inset 5em 1em gold; float: left; margin: 1em;">box-shadow: inset 5em 1em gold;</pre>
 
-<pre class="brush: css no-line-numbers notranslate" style="box-shadow: 0 0 1em gold; float: left; margin: 1em;">box-shadow: 0 0 1em gold;</pre>
+<pre class="brush: css" style="box-shadow: 0 0 1em gold; float: left; margin: 1em;">box-shadow: 0 0 1em gold;</pre>
 
-<pre class="brush: css no-line-numbers notranslate" style="box-shadow: inset 0 0 1em gold; float: left; margin: 1em;">box-shadow: inset 0 0 1em gold;</pre>
+<pre class="brush: css" style="box-shadow: inset 0 0 1em gold; float: left; margin: 1em;">box-shadow: inset 0 0 1em gold;</pre>
 
-<pre class="brush: css no-line-numbers notranslate" style="box-shadow: inset 0 0 1em gold, 0 0 1em red; float: left; margin: 1em;">box-shadow: inset 0 0 1em gold, 0 0 1em red;</pre>
+<pre class="brush: css" style="box-shadow: inset 0 0 1em gold, 0 0 1em red; float: left; margin: 1em;">box-shadow: inset 0 0 1em gold, 0 0 1em red;</pre>
 
 <div class="cleared"></div>
 
@@ -76,16 +78,15 @@ box-shadow: unset;
  <dd>Se não for especificado, a sombra ganha o efeito de como se a caixa fosse aumentada acima do conteúdo).<br>
  A presença da palavra-chave <code>inset</code> muda a sombra para dentro da moldura (como se o conteúdo estivesse pressionado dentro da caixa). As sombras de inserção são desenhadas dentro da borda (mesmo as transparentes), acima do plano de fundo, mas abaixo do conteúdo.</dd>
  <dt><a id="&lt;offset-x> &lt;offset-y>" name="&lt;offset-x> &lt;offset-y>"><code>&lt;offset-x&gt;</code> <code>&lt;offset-y&gt;</code></a></dt>
- <dd>Existem dois valores {{cssxref("&lt;length&gt;")}}  para configurar o desvio (offset) da sombra:</dd>
- <dd><code>&lt;offset-x&gt;</code> especifica a distância horizontal. Valores negativos colocarão a sombra à esquerda do elemento.</dd>
- <dd><code>&lt;offset-y&gt;</code> especifca a distância vertical. Valores negativos colocam a sombra acima do elemento.</dd>
- <dd>Consulte {{cssxref("&lt;length&gt;")}} para as unidades disponíveis.</dd>
- <dd>Se ambos os valores forem <code>0</code>, a sombra será posicionada atrás do elemento (e poderá gerar um efeito de desfocagem caso <code>&lt;blur-radius&gt;</code> e/ou <code>&lt;spread-radius&gt;</code> estiverem configurados).</dd>
+ <dd><p>Existem dois valores {{cssxref("&lt;length&gt;")}}  para configurar o desvio (offset) da sombra:</p>
+ <ul><li><code>&lt;offset-x&gt;</code> especifica a distância horizontal. Valores negativos colocarão a sombra à esquerda do elemento.</li>
+ <li><code>&lt;offset-y&gt;</code> especifca a distância vertical. Valores negativos colocam a sombra acima do elemento.</li>
+</ul>
+ <p>Consulte {{cssxref("&lt;length&gt;")}} para as unidades disponíveis.</p>
+ <p>Se ambos os valores forem <code>0</code>, a sombra será posicionada atrás do elemento (e poderá gerar um efeito de desfocagem caso <code>&lt;blur-radius&gt;</code> e/ou <code>&lt;spread-radius&gt;</code> estiverem configurados).</p></dd>
  <dt><a id="&lt;blur-radius>" name="&lt;blur-radius>"><code>&lt;blur-radius&gt;</code></a></dt>
- <dd>Este é um terceiro valor para {{cssxref("&lt;length&gt;")}}. Quanto maior for este valor, maior o efeito de desfocagem, desta forma a sombra se tornará maior e mais clara. Valores negativos não são permitidos. Se não for especificado, o valor padrão é <code>0</code> (os limites da sombra serão retos). A especificação não inclui um algoritmo exato de como o raio de esmaecimento deve ser calculado, no entanto, descreve o seguinte:</dd>
- <dd>
- <blockquote>...para uma sombra com bordas longas e retas, deverá ser criada uma transição de cor do comprimento da distância de desfocagem que é perpendicular e centralizada com as bordas da sombra, e isto deve variar da cor total da sombra do seu ponto central até totalmente transparente no ponto final fora dela.</blockquote>
- </dd>
+ <dd><p>Este é um terceiro valor para {{cssxref("&lt;length&gt;")}}. Quanto maior for este valor, maior o efeito de desfocagem, desta forma a sombra se tornará maior e mais clara. Valores negativos não são permitidos. Se não for especificado, o valor padrão é <code>0</code> (os limites da sombra serão retos). A especificação não inclui um algoritmo exato de como o raio de esmaecimento deve ser calculado, no entanto, descreve o seguinte:</p>
+ <blockquote>...para uma sombra com bordas longas e retas, deverá ser criada uma transição de cor do comprimento da distância de desfocagem que é perpendicular e centralizada com as bordas da sombra, e isto deve variar da cor total da sombra do seu ponto central até totalmente transparente no ponto final fora dela.</blockquote></dd>
  <dt><a id="&lt;spread-radius>" name="&lt;spread-radius>"><code>&lt;spread-radius&gt;</code></a></dt>
  <dd>Este é um quarto valor de {{cssxref("&lt;length&gt;")}}. Valores positivos farão com que a sombra expanda e cresça maior, valores negativos farão com que a sombra encolha. Se não for especificado, o valor padrão é <code>0</code> (a sombra terá o mesmo tamanho do elemento)</dd>
  <dt><a id="&lt;color>" name="&lt;color>"><code>&lt;color&gt;</code></a></dt>

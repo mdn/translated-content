@@ -1,11 +1,6 @@
 ---
 title: padding-inline
 slug: Web/CSS/padding-inline
-tags:
-  - CSS
-  - recipe:css-shorthand-property
-browser-compat: css.properties.padding-inline
-translation_of: Web/CSS/padding-inline
 ---
 {{CSSRef}}
 

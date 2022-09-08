@@ -29,4 +29,4 @@ slug: Web/API/WebGL_API/WebGL_best_practices
 
 ## 参照
 
-- [WebGL](/ja/WebGL "WebGL")
+- [WebGL](/ja/WebGL)

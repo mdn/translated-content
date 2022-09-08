@@ -1,14 +1,6 @@
 ---
 title: 論理積代入 (&&=)
 slug: Web/JavaScript/Reference/Operators/Logical_AND_assignment
-tags:
-  - JavaScript
-  - 言語機能
-  - 論理代入
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.logical_and_assignment
-translation_of: Web/JavaScript/Reference/Operators/Logical_AND_assignment
 ---
 {{jsSidebar("Operators")}}
 

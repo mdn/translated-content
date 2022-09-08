@@ -162,10 +162,4 @@ html,body,svg { height:100% }
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                   | Commentaire                                 |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------- |
-| {{SpecName("SVG2", "geometry.html#CY", "cy")}}                                             | {{Spec2("SVG2")}} | Définition comme propriété de géométrie     |
-| {{SpecName("SVG2", "pservers.html#RadialGradientElementCYAttribute", "cy")}}     | {{Spec2("SVG2")}} | Définition pour SVG2                        |
-| {{SpecName("SVG1.1", "pservers.html#RadialGradientElementCYAttribute", "cy")}} | {{Spec2("SVG1.1")}} | Définition initiale pour `<radialGradient>` |
-| {{SpecName("SVG1.1", "shapes.html#EllipseElementCYAttribute", "cy")}}             | {{Spec2("SVG1.1")}} | Définition initiale pour `<ellipse>`        |
-| {{SpecName("SVG1.1", "shapes.html#CircleElementCYAttribute", "cy")}}             | {{Spec2("SVG1.1")}} | Définition initiale pour `<circle>`         |
+{{Specifications}}

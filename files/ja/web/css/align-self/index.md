@@ -1,15 +1,6 @@
 ---
 title: align-self
 slug: Web/CSS/align-self
-tags:
-  - CSS
-  - CSS ボックス配置
-  - CSS フレックスボックス
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.align-self
-translation_of: Web/CSS/align-self
 ---
 {{CSSRef}}
 

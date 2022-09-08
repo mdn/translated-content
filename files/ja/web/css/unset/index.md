@@ -1,17 +1,6 @@
 ---
 title: unset
 slug: Web/CSS/unset
-tags:
-  - CSS
-  - CSS カスケード
-  - CSS 値
-  - キーワード
-  - レイアウト
-  - リファレンス
-  - スタイル
-  - unset
-browser-compat: css.types.global_keywords.unset
-translation_of: Web/CSS/unset
 ---
 {{CSSRef}}
 

@@ -1,15 +1,6 @@
 ---
 title: mask-origin
 slug: Web/CSS/mask-origin
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS マスク
-  - Experimental
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.mask-origin
-translation_of: Web/CSS/mask-origin
 ---
 {{CSSRef}}
 

@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/enable-background
 ---
 {{SVGRef}} {{deprecated_header("SVG 2")}}
 
-该**`enable-background`**属性指定如何管理背景图像的累积。
+该 **`enable-background`** 属性指定如何管理背景图像的累积。
 
 **注意：**作为演示文稿属性，`enable-background`可以用作 CSS 属性。
 

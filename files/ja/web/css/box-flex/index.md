@@ -1,15 +1,6 @@
 ---
 title: box-flex
 slug: Web/CSS/box-flex
-tags:
-  - CSS
-  - CSS プロパティ
-  - 標準外
-  - リファレンス
-  - box-flex
-  - recipe:css-property
-browser-compat: css.properties.box-flex
-translation_of: Web/CSS/box-flex
 ---
 {{CSSRef}}{{Non-standard_Header}}
 

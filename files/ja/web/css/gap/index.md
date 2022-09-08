@@ -1,17 +1,6 @@
 ---
 title: gap (grid-gap)
 slug: Web/CSS/gap
-tags:
-  - CSS
-  - CSS フレックスボックス
-  - CSS グリッド
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - リファレンス
-  - gap
-  - recipe:css-property
-browser-compat: css.properties.gap
-translation_of: Web/CSS/gap
 ---
 {{CSSRef}}
 

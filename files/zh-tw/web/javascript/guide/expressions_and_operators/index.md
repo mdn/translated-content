@@ -288,7 +288,7 @@ for (var i = 0, j = 9; i <= j; i++, j--)
 
 #### `delete`
 
-[`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) 運算子會刪除物件，物件的性質，或是陣列中指定 index 的物件。 語法是:
+[`delete`](/zh-TW/docs/Web/JavaScript/Reference/Operators/delete) 運算子會刪除物件，物件的性質，或是陣列中指定 index 的物件。 語法是:
 
 ```js
 delete 物件名稱;
@@ -299,7 +299,7 @@ delete 性質; // 只有在 with 陳述句中可以使用
 
 `物件名稱` 是物件的名稱， 性質 是物件中的一個特性， 索引 是用來表示物件在陣列中位置的一個整數。
 
-第四種形式只有在 [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) 陳述句中可用， 用來刪除物件中的一個特性。
+第四種形式只有在 [`with`](/zh-TW/docs/Web/JavaScript/Reference/Statements/with) 陳述句中可用， 用來刪除物件中的一個特性。
 
 你可以用 `delete` 運算子來刪除隱式宣告的變數， 但不適用於使用 var 宣告的變數。
 

@@ -265,7 +265,7 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
 
 4. Add `'js'` as an item inside the array in the `default` task.
 
-Here we grab our `main.js` file, run `jshint` on it and output the results to the terminal using `jshint.reporter`; we then pass the file to babel, which converts it to old style syntax and outputs the result into the `build` directory. Our original code included a [fat arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), which babel has modified into an old style function.
+Here we grab our `main.js` file, run `jshint` on it and output the results to the terminal using `jshint.reporter`; we then pass the file to babel, which converts it to old style syntax and outputs the result into the `build` directory. Our original code included a [fat arrow function](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions), which babel has modified into an old style function.
 
 #### Further ideas
 

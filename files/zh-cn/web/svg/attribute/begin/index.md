@@ -23,7 +23,7 @@ slug: Web/SVG/Attribute/begin
 - \<syncbase-value>
   - : 描述一个*syncbase*以及一个可选的来自于*syncbase*的时偏移。元素的动画开始时间被定义为相对于另一个动画的开头或者激活结束。一个 ID 及其后面跟着的 .begin 或 .end 构成了一个 syncbase，ID 引用到另一个动画元素，.begin 或 .end 用来确定到底是与引用的动画元素的动画开头同步、还是与引用的动画元素的动画激活结束同步。
 - \<event-value>
-  - : 描述了一个事件以及一个可选的时偏移，用来确定动画开始的时点。触发指定事件的时点，被定义为动画开始的时点。一个元素 ID 及其后面跟着的一个点及其后面跟着事件名构成了一个合法的 event-value 值。事件名必须是元素支持的事件名。全部合法的事件（不一定是所有元素都支持的事件）包括这些：focusin、focusout、`activate`、`click`、`mousedown`、`mouseup`、`mouseover`、`mousemove`、`mouseout`、`DOMSubtreeModified`、`DOMNodeInserted`、`DOMNodeRemoved`、`DOMNodeRemovedFromDocument`、`DOMNodeInsertedIntoDocument`、`DOMAttrModified`、`DOMCharacterDataModified`、`SVGLoad`、`SVGUnload`、`SVGAbort`、`SVGError`、`SVGResize`、`SVGScroll`、`SVGZoom`、`beginEvent`、`endEvent`和`repeatEvent。`
+  - : 描述了一个事件以及一个可选的时偏移，用来确定动画开始的时点。触发指定事件的时点，被定义为动画开始的时点。一个元素 ID 及其后面跟着的一个点及其后面跟着事件名构成了一个合法的 event-value 值。事件名必须是元素支持的事件名。全部合法的事件（不一定是所有元素都支持的事件）包括这些：focusin、focusout、`activate`、`click`、`mousedown`、`mouseup`、`mouseover`、`mousemove`、`mouseout`、`DOMSubtreeModified`、`DOMNodeInserted`、`DOMNodeRemoved`、`DOMNodeRemovedFromDocument`、`DOMNodeInsertedIntoDocument`、`DOMAttrModified`、`DOMCharacterDataModified`、`SVGLoad`、`SVGUnload`、`SVGAbort`、`SVGError`、`SVGResize`、`SVGScroll`、`SVGZoom`、`beginEvent`、`endEvent` 和 `repeatEvent`。
 - \<repeat-value>
   - : 描述了一个符合条件重复事件。repeat 事件发生了指定次数的时间点，被定义为元素动画的开始时间点。
 - \<accessKey-value>

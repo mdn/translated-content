@@ -14,12 +14,12 @@ Using z-index appears extremely easy: a single property, assigned a single integ
 
 This article will try to explain those rules, with some simplification and several examples.
 
-1. [Stacking without z-index](/en/CSS/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
-2. [Stacking and float](/en/CSS/Understanding_z-index/Stacking_and_float) : How floating elements are handled
-3. [Adding z-index](/en/CSS/Understanding_z-index/Adding_z-index) : Using z-index to change default stacking
-4. [The stacking context](/en/CSS/Understanding_z-index/The_stacking_context) : Notes on the stacking context
-5. [Stacking context example 1](/en/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
-6. [Stacking context example 2](/en/CSS/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarchy, z-index on all levels
-7. [Stacking context example 3](/en/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
+1. [Stacking without z-index](/zh-TW/CSS/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
+2. [Stacking and float](/zh-TW/CSS/Understanding_z-index/Stacking_and_float) : How floating elements are handled
+3. [Adding z-index](/zh-TW/CSS/Understanding_z-index/Adding_z-index) : Using z-index to change default stacking
+4. [The stacking context](/zh-TW/CSS/Understanding_z-index/The_stacking_context) : Notes on the stacking context
+5. [Stacking context example 1](/zh-TW/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
+6. [Stacking context example 2](/zh-TW/CSS/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarchy, z-index on all levels
+7. [Stacking context example 3](/zh-TW/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
 
 _Note of the author: Thanks to Wladimir Palant and Rod Whiteley for the review\._

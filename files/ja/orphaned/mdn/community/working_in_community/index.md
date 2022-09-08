@@ -86,7 +86,7 @@ MDN 文書作成コミュニティのメンバーとして、開発者と管理�
 
 文書作成やのコミュニティは大規模です。きわめて頻繁に、あるいは大規模に貢献する方は比較的少数ですが、ときどき貢献する人々は数十人から数百人います。幸い、この方々は全体的にウェブ、Mozilla、文書化が純粋に好きなすばらしい人たちであり、交流することはほぼ容易です。
 
-MDN コミュニティについて詳しくは、[MDN コミュニティに参加する](/ja/docs/MDN/Community "Project:MDN/Contributing/Join_the_community") の記事をご覧ください。
+MDN コミュニティについて詳しくは、[MDN コミュニティに参加する](/ja/docs/MDN/Community) の記事をご覧ください。
 
 他の執筆者と直接対話する機会が最も多い場所は [Discourse フォーラム](https://discourse.mozilla.org/c/mdn)です。
 

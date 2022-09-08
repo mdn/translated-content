@@ -742,8 +742,9 @@
 /ko/docs/Web/JavaScript/Reference/Operators/연산자_우선순위	/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
 /ko/docs/Web/JavaScript/Reference/Properties_Index	/ko/docs/Web/JavaScript/Reference
 /ko/docs/Web/JavaScript/Reference/Reserved_Words	/ko/docs/Web/JavaScript/Reference/Lexical_grammar#키워드
+/ko/docs/Web/JavaScript/Shells	/ko/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
 /ko/docs/Web/JavaScript/Tutorials	/ko/docs/Web/JavaScript
-/ko/docs/Web/JavaScript/쉘	/ko/docs/Web/JavaScript/Shells
+/ko/docs/Web/JavaScript/쉘	/ko/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
 /ko/docs/Web/JavaScript/언어_리소스	/ko/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /ko/docs/Web/Media/Formats/비디오코덱	/ko/docs/Web/Media/Formats/Video_codecs
 /ko/docs/Web/Media/Formats/컨테이너	/ko/docs/Web/Media/Formats/Containers

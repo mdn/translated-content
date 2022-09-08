@@ -339,7 +339,7 @@ Beaucoup de sujets ont été abordés dans ce chapitre, c'est l'occasion de les 
 
 Beaucoup de sujets ont été abordés dans ce chapitre... Vous avez acquis les base du site d'administration et à créer un suoper-utilisateur, voius avez aussi navigué dans le site d'admlinistration et vous avez appris à modifier les formulaires de saisie et comment ajouter, modifier ou supprimer des données.
 
-## A voir aussi
+## Voir aussi
 
 - [Ecrire sa première application Dajngo, 2ème partie](https://docs.djangoproject.com/fr/2.2/intro/tutorial02/#introducing-the-django-admin)  (Django docs)
 - [Le site d'administration de Django](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/) (Django Docs)

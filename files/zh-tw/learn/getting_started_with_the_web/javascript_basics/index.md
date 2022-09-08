@@ -51,7 +51,7 @@ JavaScript 本身非常的簡潔，卻也充滿彈性，開發者們已經以 Ja
 
 之後，我們將變數 `myHeading` 中 {{domxref("Element.innerHTML", "innerHTML")}} 特性的值設為「Hello world!」。
 
-> **備註：** Both of the features you used above are parts of the [Document Object Model (DOM) API](/en-US/docs/Web/API/Document_Object_Model), which allows you to manipulate documents.
+> **備註：** Both of the features you used above are parts of the [Document Object Model (DOM) API](/zh-TW/docs/Web/API/Document_Object_Model), which allows you to manipulate documents.
 
 ## 語言基礎速成
 

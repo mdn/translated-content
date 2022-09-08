@@ -7,7 +7,7 @@ translation_of: 'Web/CSS/:read-write'
 
 <p>A <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>:read-write</code></strong> representa um elemento (como o <code>input</code> ou <code>textarea</code>) que é editável pelo usuário.</p>
 
-<pre class="brush: css no-line-numbers notranslate">input:read-write, textarea:read-write {
+<pre class="brush: css">input:read-write, textarea:read-write {
   background-color: #bbf;
 }
 
@@ -28,7 +28,7 @@ p:read-write {
 
 <p>A pseudo-classe <code>:read-only</code> <em>(:somente-leitura)</em> é usada para remover todo o estilo que faz com que as entradas pareçam campos clicáveis, fazendo com que pareçam outro parágrafo <em>somente-leitura</em>. A pseudo-classe <code>:read-write</code> <em>(:leitura-escrita) </em>por outro lado, é usado para fornecer um estilo mais agradável para a <code>&lt;textarea&gt;</code>.</p>
 
-<pre class="brush: css notranslate">input:-moz-read-only, textarea:-moz-read-only,
+<pre class="brush: css">input:-moz-read-only, textarea:-moz-read-only,
 input:read-only, textarea:read-only {
   border: 0;
   box-shadow: none;
@@ -49,11 +49,11 @@ textarea:read-write {
 
 <p>Este seletor não seleciona apenas {{htmlElement("input")}}/{{htmlElement("textarea")}}  elementos - ele selecionará qualquer elemento que possa ser editado pelo usuário, como um {{htmlelement("p")}} elemento com {{htmlattrxref("contenteditable")}} definido sobre ele.</p>
 
-<pre class="brush: html notranslate">&lt;p contenteditable&gt;Este parágrafo é editável; é read-write.&lt;/p&gt;
+<pre class="brush: html">&lt;p contenteditable&gt;Este parágrafo é editável; é read-write.&lt;/p&gt;
 
 &lt;p&gt;Este parágrafo não é editável; é read-only.&lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   font-size: 150%;
   padding: 5px;
   border-radius: 5px;

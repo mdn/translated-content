@@ -234,7 +234,7 @@ greeting: function() {
 }
 ```
 
-你也许想知道"this"是什么，关键字"this"指向了当前代码运行时的对象 ( 原文：the current object the code is being written inside )——这里即指 person 对象，为什么不直接写 person 呢？当你学到下一篇[Object-oriented JavaScript for beginners](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS)文章时，我们开始使用构造器 (constructor) 时，"this"是非常有用的——它保证了当代码的上下文 (context) 改变时变量的值的正确性（比如：不同的 person 对象拥有不同的 name 这个属性，很明显 greeting 这个方法需要使用的是它们自己的 name）。
+你也许想知道"this"是什么，关键字"this"指向了当前代码运行时的对象 ( 原文：the current object the code is being written inside )——这里即指 person 对象，为什么不直接写 person 呢？当你学到下一篇[Object-oriented JavaScript for beginners](/zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_JS)文章时，我们开始使用构造器 (constructor) 时，"this"是非常有用的——它保证了当代码的上下文 (context) 改变时变量的值的正确性（比如：不同的 person 对象拥有不同的 name 这个属性，很明显 greeting 这个方法需要使用的是它们自己的 name）。
 
 让我们以两个简单的 person 对象来说明：
 
@@ -266,7 +266,7 @@ var person2 = {
 myString.split(',');
 ```
 
-你正在使用一个字符串实例上可用的方法，你随时都可以在代码里使用字面量创建一个字符串，字符串会自动的被创建为字符串 ([`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)) 的实例，因此会有一些常见的方法和属性可用。
+你正在使用一个字符串实例上可用的方法，你随时都可以在代码里使用字面量创建一个字符串，字符串会自动的被创建为字符串 ([`String`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)) 的实例，因此会有一些常见的方法和属性可用。
 
 当你这样访问 document 对象时：
 
@@ -275,11 +275,11 @@ var myDiv = document.createElement('div');
 var myVideo = document.querySelector('video');
 ```
 
-你正在使用[`Document`](/en-US/docs/Web/API/Document)实例上可用的方法。每个页面在加载完毕后，会有一个 Document 的实例被创建，叫做 document，它代表了整个页面的结构，内容和一些功能，比如页面的 URL。同样的，这意味 document 有一些可用的方法和属性。
+你正在使用[`Document`](/zh-CN/docs/Web/API/Document)实例上可用的方法。每个页面在加载完毕后，会有一个 Document 的实例被创建，叫做 document，它代表了整个页面的结构，内容和一些功能，比如页面的 URL。同样的，这意味 document 有一些可用的方法和属性。
 
-这同样适用许多其他内建的对象或 API，你使用过有—— [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)，[`Math`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)，等。
+这同样适用许多其他内建的对象或 API，你使用过有—— [`Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)，[`Math`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math)，等。
 
-请注意内建的对象或 API 不会总是自动地创建对象的实例，举例来说，这个 [Notifications API](/en-US/docs/Web/API/Notifications_API)——允许浏览器发起系统通知，需要你为每一个你想发起的通知都使用构造器进行实例化。尝试在 JavaScript 终端里输入以下代码
+请注意内建的对象或 API 不会总是自动地创建对象的实例，举例来说，这个 [Notifications API](/zh-CN/docs/Web/API/Notifications_API)——允许浏览器发起系统通知，需要你为每一个你想发起的通知都使用构造器进行实例化。尝试在 JavaScript 终端里输入以下代码
 
 ```js
 var myNotification = new Notification('Hello!');

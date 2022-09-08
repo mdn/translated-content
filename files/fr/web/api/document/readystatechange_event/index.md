@@ -53,8 +53,8 @@ Cet événement a longtemps été soutenue par Internet Explorer et peut être u
 
 ## Les événements liés
 
-- {{event("DOMContentLoaded")}}
-- {{event("readystatechange")}}
-- {{event("load")}}
-- {{event("beforeunload")}}
-- {{event("unload")}}
+- [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event)
+- [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event)
+- [`load`](/fr//docs/Web/API/Window/load_event)
+- [`beforeunload`](/fr/docs/Web/API/Window/beforeunload_event)
+- [`unload`](/fr/docs/Web/API/Window/unload_event)

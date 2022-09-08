@@ -18,7 +18,7 @@ original_slug: XHTML
 ### 工具
 
 - [Markup validation service (W3C)](http://validator.w3.org/)
-- [Standards-Compliant Authoring Tools](/en/Standards-Compliant_Authoring_Tools)
+- [Standards-Compliant Authoring Tools](/zh-TW/Standards-Compliant_Authoring_Tools)
 
 ### 參閱
 

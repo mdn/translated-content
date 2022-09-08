@@ -1,15 +1,6 @@
 ---
 title: outline
 slug: Web/CSS/outline
-tags:
-  - CSS
-  - CSS 輪郭線
-  - CSS プロパティ
-  - レイアウト
-  - Reference
-  - recipe:css-shorthand-property
-browser-compat: css.properties.outline
-translation_of: Web/CSS/outline
 ---
 {{CSSRef}}
 

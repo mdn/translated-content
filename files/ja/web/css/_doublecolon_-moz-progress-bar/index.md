@@ -1,15 +1,6 @@
 ---
 title: '::-moz-progress-bar'
 slug: Web/CSS/::-moz-progress-bar
-tags:
-  - CSS
-  - CSS:Mozilla 拡張
-  - NeedsCompatTable
-  - 標準外
-  - 擬似要素
-  - リファレンス
-  - セレクター
-translation_of: Web/CSS/::-moz-progress-bar
 ---
 {{CSSRef}}{{Non-standard_header}}
 

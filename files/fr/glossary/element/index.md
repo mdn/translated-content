@@ -12,7 +12,7 @@ Un élément est une partie d'une page web. En {{glossary("XML")}} et {{glossary
 
 Les éléments et les balises _ne_ sont _pas_ la même chose. Les balises commencent ou clôturent un élément dans le code source, alors que les éléments font partie du {{glossary("DOM")}}, le document qui sert de modèle pour afficher la page dans le {{glossary("browser","navigateur")}}.
 
-## En savoir plus
+## Voir aussi
 
 - L'interface {{domxref("Element")}}, qui représente l'élément dans le DOM.
 - [Plus d'informations à propos des éléments.](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started)

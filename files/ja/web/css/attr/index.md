@@ -1,17 +1,7 @@
 ---
 title: attr()
 slug: Web/CSS/attr
-tags:
-  - CSS
-  - CSS 関数
-  - 関数
-  - レイアウト
-  - リファレンス
-  - ウェブ
-  - attr
-translation_of: Web/CSS/attr()
 original_slug: Web/CSS/attr()
-browser-compat: css.types.attr
 ---
 {{CSSRef}}
 

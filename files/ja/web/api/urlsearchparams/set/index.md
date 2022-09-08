@@ -49,44 +49,44 @@ params.set('baz', 3);
 'use strict'
 
 function genURL(rExp, aText, bDebug=false){
-	let theURL
+  let theURL
 
-	theURL= new URL('https://regexr.com')
-	theURL.searchParams.set( 'expression', rExp.toString() )
-	theURL.searchParams.set( 'tool', 'replace' )
-	theURL.searchParams.set( 'input', '\u2911\u20dc' )// ⤑⃜
-	theURL.searchParams.set( 'text', aText.join('\n') )
-	if( bDebug ){
-		// キー/値のペアを表示
-		for(var pair of theURL.searchParams.entries()) {
-			console.debug(pair[0] + ' = \'' + pair[1] + '\'');
-		}
-		console.debug(theURL)
-	}
-	return theURL
+  theURL= new URL('https://regexr.com')
+  theURL.searchParams.set( 'expression', rExp.toString() )
+  theURL.searchParams.set( 'tool', 'replace' )
+  theURL.searchParams.set( 'input', '\u2911\u20dc' )// ⤑⃜
+  theURL.searchParams.set( 'text', aText.join('\n') )
+  if( bDebug ){
+    // キー/値のペアを表示
+    for(var pair of theURL.searchParams.entries()) {
+      console.debug(pair[0] + ' = \'' + pair[1] + '\'');
+    }
+    console.debug(theURL)
+  }
+  return theURL
 }
 var url = genURL(
-	/(^\s*\/\/|\s*[^:]\/\/).*\s*$|\s*\/\*(.|\n)+?\*\/\s*$/gm	// 単一行/複数行のコメント
-	// /(^\s*\/\/.*|\s*[^:]\/\/.*)/g								// 単一行のコメント
-	,[
-		"これらは動作します:",
-		"",
-		"// eslint-disable-next-line no-unused-vars",
-		"lockPref(	'keyword.URL',\t\t'https://duckduckgo.com/html/?q=!+'	)\t//      test",
-		"/*",
-		"	* bla bla    ",
-		"*/",
-		"",
-		"/* bla bla */",
-		"",
-		"// bla bla ",
-		"",
-		"これらは動作しません:",
-		"console.log(\"http://foo.co.uk/\")",
-		"var url = \"http://regexr.com/foo.html?q=bar\"",
-		"alert(\"https://mediatemple.net\")",
-	]
-	, true
+  /(^\s*\/\/|\s*[^:]\/\/).*\s*$|\s*\/\*(.|\n)+?\*\/\s*$/gm  // 単一行/複数行のコメント
+  // /(^\s*\/\/.*|\s*[^:]\/\/.*)/g                // 単一行のコメント
+  ,[
+    "これらは動作します:",
+    "",
+    "// eslint-disable-next-line no-unused-vars",
+    "lockPref(  'keyword.URL',\t\t'https://duckduckgo.com/html/?q=!+'  )\t//      test",
+    "/*",
+    "  * bla bla    ",
+    "*/",
+    "",
+    "/* bla bla */",
+    "",
+    "// bla bla ",
+    "",
+    "これらは動作しません:",
+    "console.log(\"http://foo.co.uk/\")",
+    "var url = \"http://regexr.com/foo.html?q=bar\"",
+    "alert(\"https://mediatemple.net\")",
+  ]
+  , true
 )
 console.info( url, url.toString() )
 // window.open( url, 'regex_site' )

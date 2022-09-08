@@ -1,15 +1,6 @@
 ---
 title: border-inline-color
 slug: Web/CSS/border-inline-color
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-inline-color
-translation_of: Web/CSS/border-inline-color
 ---
 {{CSSRef}}
 

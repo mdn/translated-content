@@ -1,14 +1,6 @@
 ---
 title: '::first-letter (:first-letter)'
 slug: Web/CSS/::first-letter
-tags:
-  - CSS
-  - レイアウト
-  - 擬似要素
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.first-letter
-translation_of: Web/CSS/::first-letter
 ---
 {{CSSRef}}
 

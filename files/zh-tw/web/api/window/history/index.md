@@ -28,7 +28,7 @@ For top-level pages you can see the list of pages in the session history, access
 
 For security reasons the `History` object doesn't allow the non-privileged code to access the URLs of other pages in the session history, but it does allow it to navigate the session history.
 
-There is no way to clear the session history or to disable the back/forward navigation from unprivileged code. The closest available solution is the [`location.replace()`](/en/DOM/window.location#replace) method, which replaces the current item of the session history with the provided URL.
+There is no way to clear the session history or to disable the back/forward navigation from unprivileged code. The closest available solution is the [`location.replace()`](/zh-TW/DOM/window.location#replace) method, which replaces the current item of the session history with the provided URL.
 
 ## 規範
 

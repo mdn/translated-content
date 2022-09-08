@@ -16,11 +16,11 @@ Web Audio API は音声操作を**オーディオコンテキスト**内の操�
 
 簡潔で通常の Web Audio の使い方は次のようになります:
 
-1.  オーディオコンテキストを作成する
-2.  コンテキストの中で、`<audio>`,オシレーター,ストリームなどの音源を作成する
-3.  リバーブ・フィルター・パンナー・コンプレッサーなどのエフェクトノードを作成する
-4.  最終的な音声の到達先を選ぶ(例えばスピーカー)
-5.  音源をエフェクトに繋げ、エフェクトを到達先(destination)に繋げる
+1. オーディオコンテキストを作成する
+2. コンテキストの中で、`<audio>`,オシレーター,ストリームなどの音源を作成する
+3. リバーブ・フィルター・パンナー・コンプレッサーなどのエフェクトノードを作成する
+4. 最終的な音声の到達先を選ぶ(例えばスピーカー)
+5. 音源をエフェクトに繋げ、エフェクトを到達先(destination)に繋げる
 
 ![オーディオコンテキストと書かれた外側のボックスと、音源、エフェクト、デスティネーションと書かれた3つのボックスからなるシンプルなボックスダイアグラムです。3つのボックスの間には矢印があり、オーディオ情報の流れを示しています。](audio-context_.png)
 
@@ -176,7 +176,7 @@ Web Audio API 内で利用できる音源は以下の通りです。
 以下のようにすると、バックグラウンドでオーディオグラフを非常に高速に処理/レンダリングし、端末のスピーカーではなく {{domxref("AudioBuffer")}} にレンダリングすることができます。
 
 - {{domxref("OfflineAudioContext")}}
-  - : **`OfflineAudioContext`** は {{domxref("AudioContext")}} の一種で、{{domxref("AudioNode")}} を組み合わせて、音声処理を行うグラフを表現しています。通常の `AudioContext `と異なり` 、``OfflineAudioContext ` は音声を出力せず、バッファ内で高速に処理を行います。
+  - : **`OfflineAudioContext`** は {{domxref("AudioContext")}} の一種で、{{domxref("AudioNode")}} を組み合わせて、音声処理を行うグラフを表現しています。通常の `AudioContext`と異なり`、`OfflineAudioContext` は音声を出力せず、バッファ内で高速に処理を行います。
 - {{event("complete")}} (event)
   - : `complete` イベントは {{domxref("OfflineAudioContext")}} の処理が終了した時に発火します。
 - {{domxref("OfflineAudioCompletionEvent")}}
@@ -225,7 +225,7 @@ GitHub の [webaudio-example](https://github.com/mdn/webaudio-examples/) に多�
 - [Controlling multiple parameters with ConstantSourceNode](/ja/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [Mixing Positional Audio and WebGL](http://www.html5rocks.com/tutorials/webaudio/positional_audio/)
 - [Developing Game Audio with the Web Audio API](http://www.html5rocks.com/tutorials/webaudio/games/)
-- [Porting webkitAudioContext code to standards based AudioContext](/ja/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext "/ja/docs/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext")
+- [Porting webkitAudioContext code to standards based AudioContext](/ja/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext)
 
 ### ライブラリ
 
