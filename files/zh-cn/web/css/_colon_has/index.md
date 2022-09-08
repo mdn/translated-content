@@ -1,42 +1,56 @@
 ---
-title: ':has'
+title: ':has()'
 slug: Web/CSS/:has
+tags:
+  - ':has'
+  - CSS
+  - Pseudo-class
+  - Reference
+  - Selector
+  - Selectors
+browser-compat: css.selectors.has
 ---
 {{CSSRef}}
 
-**`:has()`** CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)代表一个元素，其给定的选择器参数（相对于该元素的 {{cssxref(":scope")}}）至少匹配一个元素。
+The **`:has()`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element if any of the selectors passed as parameters (relative to the {{cssxref(":scope")}} of the given element) match at least one element.
 
-`:has()` 伪类接受一个选择器组作为参数。在当前规范中 `:has` 并未列为[实时选择器配置](https://drafts.csswg.org/selectors/#live-profile)的一部分，意味着其不能用于样式表中，只能用于如 {{domxref("document.querySelector()")}} 的函数中。
-
-```
-/* 选择任何直接包含 <img> 子元素的 <a>  */
-/* 注意，目前还没有任何浏览器支持此方法 */
-/* 此伪类也未计划投入样式表中使用 */
-var test = document.querySelector('a:has(> img)');
-```
-
-## 语法
-
-{{CSSSyntax}}
-
-## 示例
-
-下面的选择器只会匹配直接包含 {{HTMLElement("img")}} 子元素的 {{HTMLElement("a")}} 元素：
+## Syntax
 
 ```
+:has( <forgiving-relative-selector-list> )
+```
+
+## Description
+
+The `:has()` pseudo-class takes a relative selector list as an argument.
+
+## Examples
+
+### Matching \<a> elements that directly contain an \<img>
+
+The following selector matches only {{HTMLElement("a")}} elements that directly contain an {{HTMLElement("img")}} child:
+
+```css
 a:has(> img)
 ```
 
-下面的选择器只会匹配其后紧跟着 {{htmlelement("p")}} 元素的 {{HTMLElement("h1")}} 元素：
+### Matching \<h1> elements that are followed by a \<p>
 
-```
+The following selector matches {{HTMLElement("h1")}} elements only if they have a {{htmlelement("p")}} element directly following them:
+
+```css
 h1:has(+ p)
 ```
 
-## 规范
+## Specifications
 
 {{Specifications}}
 
-## 浏览器兼容性
+## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [`:scope`](/en-US/docs/Web/CSS/:scope)
