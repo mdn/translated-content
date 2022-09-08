@@ -15,7 +15,7 @@ Les valeurs de `"slow-2g"`, `"2g"`, `"3g"` et `"4g"` sont déterminées en utili
 | `3g`      | 270ms                                                       | 700 Kbps         | Le réseau est adapté aux transferts de ressources volumineuses telles que des images en haute résolution, de l'audio et de la vidéo SD. |
 | `4g`      | 0ms                                                         | ∞                | Le réseau est adapté à la vidéo HD, à la vidéo en temps réel, etc.                                    |
 
-[effectiveType](/en-US/docs/Web/API/NetworkInformation/effectiveType) est une propriété de l'[API d'informations réseau](/fr/docs/Web/API/Network_Information_API), visible sur JavaScript via l'objet [navigator.connection](/en-US/docs/Web/API/Navigator/connection). Pour voir votre type de connexion réel, ouvrez la console des outils de développement d'un navigateur compatible et saisissez ce qui suit :
+[`effectiveType`](/fr/docs/Web/API/NetworkInformation/effectiveType) est une propriété de l'[API d'informations réseau](/fr/docs/Web/API/Network_Information_API), visible sur JavaScript via l'objet [`navigator.connection`](/fr/docs/Web/API/Navigator/connection). Pour voir votre type de connexion réel, ouvrez la console des outils de développement d'un navigateur compatible et saisissez ce qui suit&nbsp;:
 
 ```js
 navigator.connection.effectiveType;
