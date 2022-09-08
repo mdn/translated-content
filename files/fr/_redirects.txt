@@ -2882,7 +2882,7 @@
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/À_propos	/fr/docs/Web/JavaScript/About_JavaScript
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/À_propos/Conventions_d'écriture	/fr/docs/Web/JavaScript
 /fr/docs/JavaScript/Same_origin_policy_for_JavaScript	/fr/docs/Web/Security/Same-origin_policy
-/fr/docs/JavaScript/Shells	/fr/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
+/fr/docs/JavaScript/Shells	/fr/docs/Web/JavaScript/JavaScript_technologies_overview
 /fr/docs/JavaScript/Structures_de_données	/fr/docs/Web/JavaScript/Data_structures
 /fr/docs/JavaScript/Tableaux_typés	/fr/docs/Web/JavaScript/Typed_arrays
 /fr/docs/JavaScript/Une_réintroduction_à_JavaScript	/fr/docs/Web/JavaScript/Language_Overview
@@ -5793,7 +5793,7 @@
 /fr/docs/Web/JavaScript/Reference/Virgules_finales	/fr/docs/Web/JavaScript/Reference/Trailing_commas
 /fr/docs/Web/JavaScript/Reference/fonctions_fléchées	/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/fr/docs/Web/Security/Same-origin_policy
-/fr/docs/Web/JavaScript/Shells	/fr/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
+/fr/docs/Web/JavaScript/Shells	/fr/docs/Web/JavaScript/JavaScript_technologies_overview
 /fr/docs/Web/JavaScript/Structures_de_données	/fr/docs/Web/JavaScript/Data_structures
 /fr/docs/Web/JavaScript/Tableaux_typés	/fr/docs/Web/JavaScript/Typed_arrays
 /fr/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
@@ -6396,6 +6396,7 @@
 /fr/docs/conflicting/Web/JavaScript/Guide/Introduction_6f341ba6db4b060ccbd8dce4a0d5214b	/fr/docs/Web/JavaScript/Guide/Introduction
 /fr/docs/conflicting/Web/JavaScript/Guide/Regular_Expressions/Assertions	/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions
 /fr/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain	/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
+/fr/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview	/fr/docs/Web/JavaScript/JavaScript_technologies_overview
 /fr/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features	/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /fr/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type	/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_type
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects	/fr/docs/Web/JavaScript/Reference/Global_Objects
