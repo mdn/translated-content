@@ -1,7 +1,8 @@
 ---
 title: Explication des données d'orientation et de mouvement
-slug: Web/Events/Orientation_and_motion_data_explained
+slug: Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 translation_of: Web/Events/Orientation_and_motion_data_explained
+original_slug: Web/Events/Orientation_and_motion_data_explained
 ---
 {{DefaultAPISidebar("Device Orientation Events")}}
 

@@ -297,8 +297,8 @@ Las citas se escriben en cursiva de forma predeterminada.
 
 Las fuentes de citación que necesitas son:
 
-- http\://www\.brainyquote.com/quotes/authors/c/confucius.html para la citas de Confucio
-- http\://www\.affirmationsforpositivethinking.com para "La necesidad de eliminar el diálogo interno negativo".
+- `http://www.brainyquote.com/quotes/authors/c/confucius.html` para la citas de Confucio
+- `http://www.affirmationsforpositivethinking.com` para "La necesidad de eliminar el diálogo interno negativo".
 
 Si cometes un error, siempre puedes restablecer el código anterior pulsando el botón _Restablecer_. Si te quedas realmente encallado, pulsa el botón _Mostrar solución_ para ver una buena propuesta.
 

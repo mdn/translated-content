@@ -1,6 +1,7 @@
 ---
 title: JavaScript shells
-slug: Web/JavaScript/Shells
+slug: conflicting/Web/JavaScript/JavaScript_technologies_overview
+original_slug: Web/JavaScript/Shells
 ---
 {{JsSidebar}}
 

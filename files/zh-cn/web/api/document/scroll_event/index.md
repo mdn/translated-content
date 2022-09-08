@@ -2,7 +2,7 @@
 title: 'Document: scroll event'
 slug: Web/API/Document/scroll_event
 ---
-文档视图或者一个元素在滚动时，会触发元素的**`scroll`**事件。
+文档视图或者一个元素在滚动时，会触发元素的 **`scroll`** 事件。
 
 <table class="properties">
   <thead></thead>

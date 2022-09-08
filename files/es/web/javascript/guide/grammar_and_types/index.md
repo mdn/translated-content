@@ -304,13 +304,13 @@ El último estándar ECMAScript define ocho tipos de datos:
 
 - Siete tipos de datos que son {{Glossary("Primitive", "primitivos")}}:
 
-  1.  {{Glossary("Boolean", "Booleano")}}. `true` y `false`.
-  2.  {{Glossary("null")}}. Una palabra clave especial que denota un valor nulo. (Dado que JavaScript distingue entre mayúsculas y minúsculas, `null` no es lo mismo que `Null`, `NULL` o cualquier otra variante).
-  3.  {{Glossary("undefined")}}. Una propiedad de alto nivel cuyo valor no está definido.
-  4.  {{Glossary("Number")}}. Un número entero o un número con coma flotante. Por ejemplo: `42` o `3.14159`.
-  5.  {{Glossary("BigInt")}}. Un número entero con precisión arbitraria. Por ejemplo: `9007199254740992n`.
-  6.  {{Glossary("String")}}. Una secuencia de caracteres que representan un valor de texto. Por ejemplo: "Hola"
-  7.  {{Glossary("Symbol")}} (nuevo en ECMAScript 2015). Un tipo de dato cuyas instancias son únicas e inmutables
+  1. {{Glossary("Boolean", "Booleano")}}. `true` y `false`.
+  2. {{Glossary("null")}}. Una palabra clave especial que denota un valor nulo. (Dado que JavaScript distingue entre mayúsculas y minúsculas, `null` no es lo mismo que `Null`, `NULL` o cualquier otra variante).
+  3. {{Glossary("undefined")}}. Una propiedad de alto nivel cuyo valor no está definido.
+  4. {{Glossary("Number")}}. Un número entero o un número con coma flotante. Por ejemplo: `42` o `3.14159`.
+  5. {{Glossary("BigInt")}}. Un número entero con precisión arbitraria. Por ejemplo: `9007199254740992n`.
+  6. {{Glossary("String")}}. Una secuencia de caracteres que representan un valor de texto. Por ejemplo: "Hola"
+  7. {{Glossary("Symbol")}} (nuevo en ECMAScript 2015). Un tipo de dato cuyas instancias son únicas e inmutables
 
 - y {{Glossary("Object")}}
 
@@ -458,10 +458,12 @@ Los tipos {{JSxRef("Number")}} y {{JSxRef("BigInt")}} se pueden escribir en deci
 
 Aquí tienes algunos ejemplos de literales numéricos:
 
-    0, 117, -345, 123456789123456789n             (decimal, base 10)
-    015, 0001, -0o77, 0o777777777777n             (octal, base 8)
-    0x1123, 0x00111, -0xF1A7, 0x123456789ABCDEFn  (hexadecimal, "hex" o base 16)
-    0b11, 0b0011, -0b11, 0b11101001010101010101n  (binario, base 2)
+```
+0, 117, -345, 123456789123456789n             (decimal, base 10)
+015, 0001, -0o77, 0o777777777777n             (octal, base 8)
+0x1123, 0x00111, -0xF1A7, 0x123456789ABCDEFn  (hexadecimal, "hex" o base 16)
+0b11, 0b0011, -0b11, 0b11101001010101010101n  (binario, base 2)
+```
 
 Para obtener más información, consulta {{JSxRef("Gramatica_lexica", "Literales numéricos en la referencia gramatical léxica", "#Literales_numericos")}}.
 
@@ -478,14 +480,18 @@ La parte del exponente es una "`e`" o "`E`" seguida de un número entero, que pu
 
 Específicamente, la sintaxis es:
 
-    [(+|-)][dígitos].[dígitos][(E|e)[(+|-)]dígitos]
+```
+[(+|-)][dígitos].[dígitos][(E|e)[(+|-)]dígitos]
+```
 
 Por ejemplo:
 
-    3.1415926
-    -.123456789
-    -3.1E+12
-    .1e-23
+```
+3.1415926
+-.123456789
+-3.1E+12
+.1e-23
+```
 
 ### Objetos literales
 
@@ -659,7 +665,9 @@ console.log(quote);
 
 El resultado de esto sería:
 
-    El leyó "La cremación de Sam McGee" de R.W. Service.
+```
+El leyó "La cremación de Sam McGee" de R.W. Service.
+```
 
 Para incluir una barra invertida literal dentro de una cadena, debes escapar el caracter de barra invertida. Por ejemplo, para asignar la ruta del archivo `c:\temp` a una cadena, usa lo siguiente:
 
