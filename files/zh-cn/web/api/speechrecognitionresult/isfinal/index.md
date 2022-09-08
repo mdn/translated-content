@@ -4,7 +4,7 @@ slug: Web/API/SpeechRecognitionResult/isFinal
 ---
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
-{{domxref("SpeechRecognitionResult")}} 接口的**`isFinal`**只读属性是一个布尔值，如果值是`true`, 则表示这是最后一次返回的结果 (语音识别结束)。如果为`false`, 表示识别尚未结束，这只是一个临时的数据，有可能会在稍后更新。
+{{domxref("SpeechRecognitionResult")}} 接口的 **`isFinal`** 只读属性是一个布尔值，如果值是`true`, 则表示这是最后一次返回的结果 (语音识别结束)。如果为`false`, 表示识别尚未结束，这只是一个临时的数据，有可能会在稍后更新。
 
 ## 语法
 

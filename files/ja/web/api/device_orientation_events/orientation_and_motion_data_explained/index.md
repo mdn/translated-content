@@ -1,7 +1,7 @@
 ---
 title: 方向および動きとして示されるデータ
-slug: Web/Events/Orientation_and_motion_data_explained
-original_slug: Web/Guide/Events/Orientation_and_motion_data_explained
+slug: Web/API/Device_orientation_events/Orientation_and_motion_data_explained
+original_slug: Web/Events/Orientation_and_motion_data_explained
 ---
 ## 概要
 

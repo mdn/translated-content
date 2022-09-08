@@ -10312,10 +10312,6 @@
     "modified": "2020-11-24T03:08:45.215Z",
     "contributors": ["bckim9489", "EatChangmyeong", "samee"]
   },
-  "Web/JavaScript/Shells": {
-    "modified": "2020-03-12T19:44:13.687Z",
-    "contributors": ["limkukhyun", "hoony"]
-  },
   "Web/JavaScript/Typed_arrays": {
     "modified": "2020-03-12T19:44:00.798Z",
     "contributors": ["Netaras"]
@@ -11283,6 +11279,10 @@
   "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
     "modified": "2020-03-12T19:39:22.531Z",
     "contributors": ["ahnzaz", "KSH-code", "Netaras", "teoli", "NFM"]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d": {
+    "modified": "2020-03-12T19:44:13.687Z",
+    "contributors": ["limkukhyun", "hoony"]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects": {
     "modified": "2020-10-15T21:52:46.647Z",

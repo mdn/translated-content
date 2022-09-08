@@ -130,6 +130,7 @@ CSS define cinco nombres genéricos para los tipos de letra `serif`, `sans-serif
 
 Los cinco nombres se definen de la manera siguiente:
 
+<!-- markdownlint-disable MD033 -->
 <table class="standard-table">
  <thead>
   <tr>

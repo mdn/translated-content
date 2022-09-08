@@ -37,7 +37,7 @@ El uso de módulos JavaScript nativos depende de las declaraciones {{jsxref("Sta
 
 ## Introducción — un ejemplo
 
-Para demostrar el uso de módulos, hemos creado un [sencillo conjunto de ejemplos](https://github.com/mdn/js-examples/tree/master/module-examples) que puedes encontrar en GitHub. Estos ejemplos demuestran un sencillo conjunto de módulos que crean un elemento [`<canvas>`](/es/docs/Web/HTML/Element/canvas "Usa el elemento ↑<canvas>↓ de HTML con el scripting de la API de canvas o la API WebGL para dibujar gráficos y animaciones.") en una página web, y luego dibujan (y reportan información sobre) diferentes formas en el lienzo.
+Para demostrar el uso de módulos, hemos creado un [sencillo conjunto de ejemplos](https://github.com/mdn/js-examples/tree/master/module-examples) que puedes encontrar en GitHub. Estos ejemplos demuestran un sencillo conjunto de módulos que crean un elemento [`<canvas>`](/es/docs/Web/HTML/Element/canvas) en una página web, y luego dibujan (y reportan información sobre) diferentes formas en el lienzo.
 
 Estos son bastante triviales, pero se han mantenido deliberadamente simples para demostrar los módulos con claridad.
 
@@ -47,11 +47,13 @@ Estos son bastante triviales, pero se han mantenido deliberadamente simples para
 
 En nuestro primer ejemplo (ve [basic-modules](https://github.com/mdn/js-examples/tree/master/module-examples/basic-modules)) tenemos la siguiente estructura de archivos:
 
-    index.html
-    main.js
-    modules/
-        canvas.js
-        square.js
+```
+index.html
+main.js
+modules/
+    canvas.js
+    square.js
+```
 
 > **Nota:** Todos los ejemplos de esta guía básicamente tienen la misma estructura; lo anterior debería empezar a resultarte bastante familiar.
 
@@ -133,11 +135,15 @@ Sin embargo, hemos escrito la ruta de manera un poco diferente — estamos usand
 
 Así por ejemplo:
 
-    /js-examples/modules/basic-modules/modules/square.js
+```
+/js-examples/modules/basic-modules/modules/square.js
+```
 
 se convierte en
 
-    ./modules/square.js
+```
+./modules/square.js
+```
 
 Puedes ver estas líneas en acción en [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js).
 
@@ -160,7 +166,7 @@ reportPerimeter(square1.length, reportList);
 
 Ahora solo necesitamos aplicar el módulo `main.js` a nuestra página HTML. Esto es muy similar a cómo aplicamos un script normal a una página, con algunas diferencias notables.
 
-En primer lugar, debes incluir `type="module"` en el elemento [`<script>`](/es/docs/Web/HTML/Element/script "El elemento ↑<script>↓ de HTML se utiliza para incrustar o hacer referencia al código ejecutable; esto se usa normalmente para incrustar o hacer referencia a código JavaScript."), para declarar este script como un módulo. Para importar el script `main.js`, usamos esto:
+En primer lugar, debes incluir `type="module"` en el elemento [`<script>`](/es/docs/Web/HTML/Element/script), para declarar este script como un módulo. Para importar el script `main.js`, usamos esto:
 
 ```html
 <script type="module" src="main.js"></script>
@@ -182,7 +188,7 @@ Solo puede usar instrucciones `import` y `export` dentro de los módulos, no en 
 
 - Debes prestar atención a las pruebas locales — si intentas cargar el archivo HTML localmente (es decir, con una URL `file:///`), te encontrarás con errores de CORS debido a los requisitos de seguridad del módulo JavaScript. Necesitas hacer tus pruebas a través de un servidor.
 - Además, ten en cuenta que puedes obtener un comportamiento diferente de las secciones del script definidas dentro de los módulos en comparación con los scripts estándar. Esto se debe a que los módulos automáticamente usan {{jsxref("Strict_mode", "strict mode", "", 1)}}.
-- No es necesario utilizar el atributo `defer` (ve [atributos de `<script>`](/es/docs/Web/HTML/Element/script#Attributes "El elemento ↑<script>↓ de HTML se utiliza para incrustar o hacer referencia al código ejecutable; esto se usa normalmente para incrustar o hacer referencia a código JavaScript.")) al cargar un script de módulo; los módulos se difieren automáticamente.
+- No es necesario utilizar el atributo `defer` (ve [atributos de `<script>`](/es/docs/Web/HTML/Element/script#Attributes)) al cargar un script de módulo; los módulos se difieren automáticamente.
 - Los módulos solo se ejecutan una vez, incluso si se les ha hecho referencia en varias etiquetas `<script>`.
 - Por último, pero no menos importante, dejemos esto en claro — las características del módulo se importan al alcance de un solo script — no están disponibles en el alcance global. Por lo tanto, solo podrás acceder a las funciones importadas en el script en el que se importan y no podrás acceder a ellas desde la consola de JavaScript, por ejemplo. Seguirás recibiendo errores de sintaxis en DevTools, pero no podrás utilizar algunas de las técnicas de depuración que esperabas utilizar.
 
@@ -402,13 +408,15 @@ export { name } from 'x.js'
 
 Para ver un ejemplo, ve nuestro directorio [module-aggregation](https://github.com/mdn/js-examples/tree/master/module-examples/module-aggregation). En este ejemplo (basado en nuestro ejemplo de clases anterior) tenemos un módulo adicional llamado `shapes.js`, que reúne toda la funcionalidad de `circle.js`, `square.js` y `triangle.js`. También hemos movido nuestros submódulos dentro de un subdirectorio dentro del directorio `modules` llamado `shapes`. Entonces, la estructura del módulo en este ejemplo es:
 
-    modules/
-      canvas.js
-      shapes.js
-      shapes/
-        circle.js
-        square.js
-        triangle.js
+```
+modules/
+  canvas.js
+  shapes.js
+  shapes/
+    circle.js
+    square.js
+    triangle.js
+```
 
 En cada uno de los submódulos, la exportación es de la misma forma, p. ej.
 

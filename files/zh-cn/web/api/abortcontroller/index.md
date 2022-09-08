@@ -2,7 +2,7 @@
 title: AbortController
 slug: Web/API/AbortController
 ---
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
 **`AbortController`** 接口表示一个控制器对象，允许你根据需要中止一个或多个 Web 请求。
 
@@ -24,6 +24,8 @@ slug: Web/API/AbortController
   - : 中止一个尚未完成的 Web（网络）请求。这能够中止 [fetch](/zh-CN/docs/Web/API/fetch) 请求及任何响应体的消费和流。
 
 ## 示例
+
+> **备注：** {{domxref("AbortSignal")}} 中还有其他额外的示例。
 
 在下面的代码片段中，我们想通过 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 下载一段视频。
 

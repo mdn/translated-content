@@ -183,7 +183,7 @@ original_slug: Web/JavaScript/Language_Resources
     </tr>
     <tr>
       <td>
-        ECMA-262 7<sup>a</sup><span style="font-size: 13.3333px"> </span>Edición
+        ECMA-262 7<sup>a</sup> Edición
       </td>
       <td>
         <a href="http://www.ecma-international.org/ecma-262/7.0/">HTML</a>
