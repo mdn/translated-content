@@ -2077,6 +2077,8 @@
 /zh-CN/docs/Web/Events/DOMContentLoaded	/zh-CN/docs/Web/API/Window/DOMContentLoaded_event
 /zh-CN/docs/Web/Events/DOMContentLoaded_(event)	/zh-CN/docs/Web/API/Window/DOMContentLoaded_event
 /zh-CN/docs/Web/Events/DOMMouseScroll	/zh-CN/docs/Web/API/Element/DOMMouseScroll_event
+/zh-CN/docs/Web/Events/Detecting_device_orientation	/zh-CN/docs/Web/API/Device_orientation_events/Detecting_device_orientation
+/zh-CN/docs/Web/Events/Orientation_and_motion_data_explained	/zh-CN/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /zh-CN/docs/Web/Events/afterprint	/zh-CN/docs/Web/API/Window/afterprint_event
 /zh-CN/docs/Web/Events/afterscriptexecute	/zh-CN/docs/Web/API/Element/afterscriptexecute_event
 /zh-CN/docs/Web/Events/animationend	/zh-CN/docs/Web/API/Element/animationend_event
@@ -2480,6 +2482,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/template_strings	/zh-CN/docs/Web/JavaScript/Reference/Template_literals
 /zh-CN/docs/Web/JavaScript/Reference/关于	/zh-CN/docs/Web/JavaScript/Reference/About
 /zh-CN/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/zh-CN/docs/Web/Security/Same-origin_policy
+/zh-CN/docs/Web/JavaScript/Shells	/zh-CN/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /zh-CN/docs/Web/JavaScript/Strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
 /zh-CN/docs/Web/JavaScript/Strict_mode/Transitioning_to_strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
 /zh-CN/docs/Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf

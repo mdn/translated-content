@@ -15702,17 +15702,6 @@
     "modified": "2020-10-15T22:22:53.977Z",
     "contributors": ["leshkin", "ekirpichyov"]
   },
-  "Web/JavaScript/Shells": {
-    "modified": "2020-05-02T11:17:13.805Z",
-    "contributors": [
-      "RenJeka",
-      "helenasilkina",
-      "fscholz",
-      "Alex_Howlett",
-      "teoli",
-      "Millionnaire"
-    ]
-  },
   "Web/JavaScript/Typed_arrays": {
     "modified": "2020-03-12T19:45:54.627Z",
     "contributors": [
@@ -16989,6 +16978,17 @@
   "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
     "modified": "2020-03-12T19:37:58.256Z",
     "contributors": ["nnragmailcom", "fscholz", "teoli", "uleming"]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d": {
+    "modified": "2020-05-02T11:17:13.805Z",
+    "contributors": [
+      "RenJeka",
+      "helenasilkina",
+      "fscholz",
+      "Alex_Howlett",
+      "teoli",
+      "Millionnaire"
+    ]
   },
   "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
     "modified": "2019-03-23T22:45:00.856Z",

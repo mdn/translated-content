@@ -32318,17 +32318,6 @@
     "modified": "2020-10-15T21:52:12.920Z",
     "contributors": ["RainSlide", "zhangchen", "wizardforcel"]
   },
-  "Web/JavaScript/Shells": {
-    "modified": "2020-09-04T03:12:55.502Z",
-    "contributors": [
-      "a1157116165",
-      "StorytellerF",
-      "pluwen",
-      "sonymoon",
-      "pelligit",
-      "maicss"
-    ]
-  },
   "Web/JavaScript/Typed_arrays": {
     "modified": "2020-10-15T21:26:17.964Z",
     "contributors": [
@@ -33903,5 +33892,16 @@
   "conflicting/Web/API/HTMLElement/drop_event": {
     "modified": "2020-07-25T06:39:24.729Z",
     "contributors": ["wiki", "鑫花", "wbamberg", "fscholz", "fanyer", "Ende93"]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
+    "modified": "2020-09-04T03:12:55.502Z",
+    "contributors": [
+      "a1157116165",
+      "StorytellerF",
+      "pluwen",
+      "sonymoon",
+      "pelligit",
+      "maicss"
+    ]
   }
 }

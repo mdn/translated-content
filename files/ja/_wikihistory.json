@@ -29507,19 +29507,6 @@
     "modified": "2020-11-07T07:57:15.597Z",
     "contributors": ["mpcjazz", "YuichiNukiyama"]
   },
-  "Web/JavaScript/Shells": {
-    "modified": "2020-11-22T14:52:43.660Z",
-    "contributors": [
-      "mfuji09",
-      "ethertank",
-      "ziyunfei",
-      "shirayuki",
-      "Potappo",
-      "Mgjbot",
-      "Taken",
-      "electrolysis"
-    ]
-  },
   "Web/JavaScript/Typed_arrays": {
     "modified": "2020-10-22T11:51:55.103Z",
     "contributors": [
@@ -31668,6 +31655,19 @@
       "Taken",
       "Mgjbot",
       "Shimono"
+    ]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d": {
+    "modified": "2020-11-22T14:52:43.660Z",
+    "contributors": [
+      "mfuji09",
+      "ethertank",
+      "ziyunfei",
+      "shirayuki",
+      "Potappo",
+      "Mgjbot",
+      "Taken",
+      "electrolysis"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features": {

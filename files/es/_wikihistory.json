@@ -13772,10 +13772,6 @@
       "orasio"
     ]
   },
-  "Web/JavaScript/Shells": {
-    "modified": "2020-03-12T19:44:40.392Z",
-    "contributors": ["davidenriq11", "mamptecnocrata"]
-  },
   "Web/JavaScript/Typed_arrays": {
     "modified": "2020-10-15T21:37:33.978Z",
     "contributors": ["Nachec", "LeoE"]
@@ -14950,6 +14946,10 @@
   "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
     "modified": "2020-03-12T19:47:17.832Z",
     "contributors": ["lajaso", "jpmontoya182"]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d": {
+    "modified": "2020-03-12T19:44:40.392Z",
+    "contributors": ["davidenriq11", "mamptecnocrata"]
   },
   "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
     "modified": "2020-10-15T22:13:14.699Z",

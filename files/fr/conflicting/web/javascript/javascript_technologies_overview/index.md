@@ -1,11 +1,12 @@
 ---
 title: Shells JavaScript
-slug: Web/JavaScript/Shells
+slug: conflicting/Web/JavaScript/JavaScript_technologies_overview
 tags:
   - Extension
   - JavaScript
   - Tools
 translation_of: Web/JavaScript/Shells
+original_slug: Web/JavaScript/Shells
 ---
 {{JsSidebar}}
 

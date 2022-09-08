@@ -1213,7 +1213,7 @@
 /ja/docs/DOM/NodeIterator	/ja/docs/Web/API/NodeIterator
 /ja/docs/DOM/NodeList	/ja/docs/Web/API/NodeList
 /ja/docs/DOM/NodeList.item	/ja/docs/Web/API/NodeList/item
-/ja/docs/DOM/Orientation_and_motion_data_explained	/ja/docs/Web/Events/Orientation_and_motion_data_explained
+/ja/docs/DOM/Orientation_and_motion_data_explained	/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /ja/docs/DOM/Plugin	/ja/docs/Web/API/Plugin
 /ja/docs/DOM/PluginArray	/ja/docs/Web/API/PluginArray
 /ja/docs/DOM/SVGFontElement	/ja/docs/Web/API/SVGFontElement
@@ -1788,7 +1788,7 @@
 /ja/docs/DOM_Levels	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/DOM_improvements_in_Firefox_3	/ja/docs/Mozilla/Firefox/Releases/3/DOM_improvements
 /ja/docs/Deer_Park	/ja/docs/Mozilla/Firefox/Releases/1.5
-/ja/docs/Detecting_device_orientation	/ja/docs/Web/Events/Detecting_device_orientation
+/ja/docs/Detecting_device_orientation	/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation
 /ja/docs/Determining_the_dimensions_of_elements	/ja/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 /ja/docs/DragDrop	/ja/docs/Web/API/HTML_Drag_and_Drop_API
 /ja/docs/DragDrop/DataTransfer	/ja/docs/Web/API/DataTransfer
@@ -2189,7 +2189,7 @@
 /ja/docs/JavaScript/Guide/Writing_a_Regular_Expression_Pattern	/ja/docs/orphaned/Web/JavaScript/Guide/Writing_a_Regular_Expression_Pattern
 /ja/docs/JavaScript/Guide/Writing_a_Regular_Expression_Pattern-redirect-1	/ja/docs/orphaned/Web/JavaScript/Guide/Writing_a_Regular_Expression_Pattern
 /ja/docs/JavaScript/Introduction_to_Object-Oriented_JavaScript	/ja/docs/Learn/JavaScript/Objects
-/ja/docs/JavaScript/JavaScript_shells	/ja/docs/Web/JavaScript/Shells
+/ja/docs/JavaScript/JavaScript_shells	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
 /ja/docs/JavaScript/JavaScript_technologies_overview	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
 /ja/docs/JavaScript/Language_Resources	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /ja/docs/JavaScript/Language_Resources-redirect-1	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
@@ -2592,8 +2592,8 @@
 /ja/docs/JavaScript/Reference/文	/ja/docs/Web/JavaScript/Reference/Statements
 /ja/docs/JavaScript/Reference/文/for...of	/ja/docs/Web/JavaScript/Reference/Statements/for...of
 /ja/docs/JavaScript/Same_origin_policy_for_JavaScript	/ja/docs/Web/Security/Same-origin_policy
-/ja/docs/JavaScript/Shells	/ja/docs/Web/JavaScript/Shells
-/ja/docs/JavaScript/Shells1	/ja/docs/Web/JavaScript/Shells
+/ja/docs/JavaScript/Shells	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
+/ja/docs/JavaScript/Shells1	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
 /ja/docs/JavaScript/Strict_mode	/ja/docs/Web/JavaScript/Reference/Strict_mode
 /ja/docs/JavaScript/Typed_arrays	/ja/docs/Web/JavaScript/Typed_arrays
 /ja/docs/JavaScript/Typed_arrays/ArrayBuffer	/ja/docs/Web/JavaScript/Reference/Global_objects/ArrayBuffer
@@ -2609,7 +2609,7 @@
 /ja/docs/JavaScript/Typed_arrays/Uint8Array	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint8Array
 /ja/docs/JavaScriptReference/Statements/let	/ja/docs/Web/JavaScript/Reference/Statements/let
 /ja/docs/JavaScript_Language_Resources	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
-/ja/docs/JavaScript_shells	/ja/docs/Web/JavaScript/Shells
+/ja/docs/JavaScript_shells	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
 /ja/docs/JavaScript_technologies_overview	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
 /ja/docs/JavaScript_typed_arrays	/ja/docs/Web/JavaScript/Typed_arrays
 /ja/docs/JavaScript_技術の概要	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
@@ -4222,6 +4222,8 @@
 /ja/docs/Web/Compatibility_FAQ/Underline_Color_Diffrence.html	/ja/docs/orphaned/Web/Compatibility_FAQ/Underline_Color_Diffrence.html
 /ja/docs/Web/Events/Activate	/ja/docs/Web/API/Element/DOMActivate_event
 /ja/docs/Web/Events/DOMContentLoaded	/ja/docs/Web/API/Window/DOMContentLoaded_event
+/ja/docs/Web/Events/Detecting_device_orientation	/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation
+/ja/docs/Web/Events/Orientation_and_motion_data_explained	/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /ja/docs/Web/Events/abort	/ja/docs/Web/API/HTMLMediaElement/abort_event
 /ja/docs/Web/Events/abort_(ProgressEvent)	/ja/docs/Web/API/XMLHttpRequest/abort_event
 /ja/docs/Web/Events/audiostart	/ja/docs/Web/API/SpeechRecognition/audiostart_event
@@ -4320,7 +4322,7 @@
 /ja/docs/Web/Guide/DOM/Using_full_screen_mode	/ja/docs/Web/API/Fullscreen_API
 /ja/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/ja/docs/Web/API/Document_Object_Model/Whitespace
 /ja/docs/Web/Guide/Events/Event_handlers	/ja/docs/Web/Events/Event_handlers
-/ja/docs/Web/Guide/Events/Orientation_and_motion_data_explained	/ja/docs/Web/Events/Orientation_and_motion_data_explained
+/ja/docs/Web/Guide/Events/Orientation_and_motion_data_explained	/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /ja/docs/Web/Guide/Graphics/Drawing_graphics_with_canvas	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Web/Guide/HTML	/ja/docs/Learn/HTML
 /ja/docs/Web/Guide/HTML/Canvas_tutorial	/ja/docs/Web/API/Canvas_API/Tutorial
@@ -4566,7 +4568,7 @@
 /ja/docs/Web/JavaScript/Guide/Writing_a_Regular_Expression_Pattern	/ja/docs/orphaned/Web/JavaScript/Guide/Writing_a_Regular_Expression_Pattern
 /ja/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript	/ja/docs/Learn/JavaScript/Objects
 /ja/docs/Web/JavaScript/Introduction_to_using_XPath_in_JavaScript	/ja/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
-/ja/docs/Web/JavaScript/JavaScript_shells	/ja/docs/Web/JavaScript/Shells
+/ja/docs/Web/JavaScript/JavaScript_shells	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
 /ja/docs/Web/JavaScript/Language_Resources	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /ja/docs/Web/JavaScript/Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/Web/JavaScript/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
@@ -4760,6 +4762,7 @@
 /ja/docs/Web/JavaScript/Reference/arrow_functions	/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /ja/docs/Web/JavaScript/Reference/template_strings	/ja/docs/Web/JavaScript/Reference/Template_literals
 /ja/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/ja/docs/Web/Security/Same-origin_policy
+/ja/docs/Web/JavaScript/Shells	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
 /ja/docs/Web/JavaScript/Strict_mode	/ja/docs/Web/JavaScript/Reference/Strict_mode
 /ja/docs/Web/JavaScript/Strict_mode/Transitioning_to_strict_mode	/ja/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
 /ja/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf

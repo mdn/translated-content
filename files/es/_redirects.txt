@@ -2635,6 +2635,7 @@
 /es/docs/Web/JavaScript/Referencia/Sentencias/var	/es/docs/Web/JavaScript/Reference/Statements/var
 /es/docs/Web/JavaScript/Referencia/Sentencias/while	/es/docs/Web/JavaScript/Reference/Statements/while
 /es/docs/Web/JavaScript/Referencia/template_strings	/es/docs/Web/JavaScript/Reference/Template_literals
+/es/docs/Web/JavaScript/Shells	/es/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
 /es/docs/Web/JavaScript/Una_nueva_introducción_a_JavaScript	/es/docs/Web/JavaScript/Language_Overview
 /es/docs/Web/JavaScript/Una_re-introducción_a_JavaScript	/es/docs/Web/JavaScript/Language_Overview
 /es/docs/Web/JavaScript/Vectores_tipados	/es/docs/Web/JavaScript/Typed_arrays

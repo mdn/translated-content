@@ -1,6 +1,6 @@
 ---
 title: 端末の方向の検出
-slug: Web/Events/Detecting_device_orientation
+slug: Web/API/Device_orientation_events/Detecting_device_orientation
 tags:
   - API
   - 端末の方向
