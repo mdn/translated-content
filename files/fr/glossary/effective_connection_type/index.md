@@ -8,7 +8,7 @@ Le **type de connexion réel**, ou "effective connection type" en anglais (ECT),
 
 Les valeurs de `"slow-2g"`, `"2g"`, `"3g"` et `"4g"` sont déterminées en utilisant le temps d'aller-retour de la requête et des valeurs de liaison descendante.
 
-| ECT         | Minimum [RTT](</en-US/docs/Glossary/Round_Trip_Time_(RTT)>) | Liaison descendante maximale | Explication                                                                                             |
+| ECT         | Durée minimale d'[aller-retour](</fr/docs/Glossary/Round_Trip_Time_(RTT)>) | Liaison descendante maximale | Explication                                                                                             |
 | ----------- | ----------------------------------------------------------- | ---------------- | -------------------------------------------------------------------------------------------------------- |
 | `slow-2g` | 2000ms                                                      | 50 Kbps          | Le réseau convient uniquement aux petits transferts tels que les pages composées uniquement de texte.                                  |
 | `2g`      | 1400ms                                                      | 70 Kbps          | Le réseau est adapté aux transferts de petites images.                                    |
