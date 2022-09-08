@@ -10,8 +10,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/entries
 
 ## 语法
 
-```plain
-arr.entries()
+```js
+entries()
 ```
 
 ### 返回值

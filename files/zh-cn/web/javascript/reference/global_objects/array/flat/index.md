@@ -11,7 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/flat
 ## 语法
 
 ```js
-var newArray = arr.flat([depth])
+flat()
+flat(depth)
 ```
 
 ### 参数

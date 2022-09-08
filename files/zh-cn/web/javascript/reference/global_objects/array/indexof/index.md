@@ -12,8 +12,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 
 ## 语法
 
-```plain
-arr.indexOf(searchElement[, fromIndex])
+```js
+indexOf(searchElement)
+indexOf(searchElement, fromIndex)
 ```
 
 ### 参数

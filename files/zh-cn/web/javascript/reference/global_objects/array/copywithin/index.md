@@ -6,8 +6,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 
 ## 语法
 
-```plain
-arr.copyWithin(target[, start[, end]])
+```js
+copyWithin(target)
+copyWithin(target, start)
+copyWithin(target, start, end)
 ```
 
 ### 参数

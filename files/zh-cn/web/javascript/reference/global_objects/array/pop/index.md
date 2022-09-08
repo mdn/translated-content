@@ -10,8 +10,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/pop
 
 ## 语法
 
-```plain
-arr.pop()
+```js
+pop()
 ```
 
 ### 返回值

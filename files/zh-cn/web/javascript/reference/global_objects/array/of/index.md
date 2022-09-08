@@ -9,10 +9,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/of
 **`Array.of()`** 和 **`Array`** 构造函数之间的区别在于处理整数参数：**`Array.of(7)`** 创建一个具有单个元素 **7** 的数组，而 **`Array(7)`** 创建一个长度为 7 的空数组（**注意**：这是指一个有 7 个空位 (empty) 的数组，而不是由 7 个`undefined`组成的数组）。
 
 ```js
-Array.of(7);       // [7]
-Array.of(1, 2, 3); // [1, 2, 3]
+Array.of(7); // [7]
+Array(7); // array of 7 empty slots
 
-Array(7);          // [ , , , , , , ]
+Array.of(1, 2, 3); // [1, 2, 3]
 Array(1, 2, 3);    // [1, 2, 3]
 ```
 

@@ -10,8 +10,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 
 ## 语法
 
-```plain
-arr.includes(valueToFind[, fromIndex])
+```js
+includes(searchElement)
+includes(searchElement, fromIndex)
 ```
 
 ### 参数

@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
 
 ## 语法
 
-```plain
+```js
 Array[Symbol.species]
 ```
 

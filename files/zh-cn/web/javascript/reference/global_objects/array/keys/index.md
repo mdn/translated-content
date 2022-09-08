@@ -10,8 +10,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/keys
 
 ## 语法
 
-```plain
-arr.keys()
+```js
+keys()
 ```
 
 ### 返回值

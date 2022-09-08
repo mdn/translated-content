@@ -10,8 +10,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/push
 
 ## 语法
 
-```plain
-arr.push(element1, ..., elementN)
+```js
+push(element0)
+push(element0, element1)
+push(element0, element1, /* … ,*/ elementN)
 ```
 
 ### 参数

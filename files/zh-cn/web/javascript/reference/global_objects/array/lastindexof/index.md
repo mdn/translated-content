@@ -12,8 +12,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 
 ## 语法
 
-```plain
-arr.lastIndexOf(searchElement[, fromIndex])
+```js
+lastIndexOf(searchElement)
+lastIndexOf(searchElement, fromIndex)
 ```
 
 ### 参数

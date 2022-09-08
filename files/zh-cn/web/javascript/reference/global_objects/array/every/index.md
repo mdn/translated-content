@@ -27,7 +27,6 @@ every(function(element) { /* … */ })
 every(function(element, index) { /* … */ })
 every(function(element, index, array){ /* … */ })
 every(function(element, index, array) { /* … */ }, thisArg)
-
 ```
 
 ### 参数
