@@ -24,6 +24,6 @@ navigator.connection.effectiveType;
 ## Voir aussi
 
 - [API d'informations réseau](/fr/docs/Web/API/Network_Information_API)
-- {{domxref('NetworkInformation')}}
-- {{domxref('NetworkInformation.effectiveType')}}
-- {{HTTPHeader("ECT")}}
+- [`NetworkInformation`](/fr/docs/Web/API/NetworkInformation)
+- [`NetworkInformation.effectiveType`](/fr/docs/Web/API/NetworkInformation/effectiveType)
+- [`ECT`](/fr/docs/Web/HTTP/Headers/ECT)
