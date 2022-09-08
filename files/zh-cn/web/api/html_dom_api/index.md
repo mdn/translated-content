@@ -161,7 +161,7 @@ These interfaces offer access to the browser window and document that contain th
 - [`Navigator`](/zh-CN/docs/Web/API/Navigator)
 - [`Plugin`](/zh-CN/docs/Web/API/Plugin) {{Deprecated_Inline}}
 - [`PluginArray`](/zh-CN/docs/Web/API/PluginArray) {{Deprecated_Inline}}
-- [`Window`](/en-US/docs/Web/API/Window)
+- [`Window`](/zh-CN/docs/Web/API/Window)
 
 ### Form support interfaces
 

@@ -20,9 +20,9 @@ slug: Web/API/Gamepad_API
 - {{domxref("GamepadHapticActuator")}}
   - : 表示控制器中的硬件，用于向用户提供触觉反馈（如果可用）最常见的是振动硬件。
 - {{domxref("GamepadPose")}}
-  - : 表示控制器的位置方向（例如，在 3D 空间中的位置和方向）于 [WebVR](/en-US/docs/Web/API/WebVR_API) 控制器中。
+  - : 表示控制器的位置方向（例如，在 3D 空间中的位置和方向）于 [WebVR](/zh-CN/docs/Web/API/WebVR_API) 控制器中。
 
-另请参阅 [Gamepad 接口扩展](/en-US/docs/Web/API/Gamepad#Experimental_extensions_to_Gamepad)，来获取上方的功能的相关信息。
+另请参阅 [Gamepad 接口扩展](/zh-CN/docs/Web/API/Gamepad#Experimental_extensions_to_Gamepad)，来获取上方的功能的相关信息。
 
 ### 其他接口扩展
 
@@ -40,8 +40,8 @@ slug: Web/API/Gamepad_API
 
 ## 教程与指南
 
-- [使用 Gamepad API](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
-- [使用 Gamepad API 实现控制](/en-US/docs/Games/Techniques/Controls_Gamepad_API)
+- [使用 Gamepad API](/zh-CN/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+- [使用 Gamepad API 实现控制](/zh-CN/docs/Games/Techniques/Controls_Gamepad_API)
 
 ## 规范
 

@@ -56,5 +56,5 @@ function hide(e) {
 
 ## 相关链接
 
-- [Comparison of Event Targets](/en/DOM/event/Comparison_of_Event_Targets)
+- [Comparison of Event Targets](/zh-CN/DOM/event/Comparison_of_Event_Targets)
 - {{domxref("Event.currentTarget")}}
