@@ -26558,17 +26558,6 @@
     "modified": "2020-10-15T21:51:41.115Z",
     "contributors": ["SphinxKnight"]
   },
-  "Web/JavaScript/Shells": {
-    "modified": "2020-03-12T19:35:39.467Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "Goofy",
-      "wakka27",
-      "ziyunfei",
-      "julienw"
-    ]
-  },
   "Web/JavaScript/Typed_arrays": {
     "modified": "2020-10-15T21:27:32.382Z",
     "contributors": ["SphinxKnight", "rockshappy", "rouflak", "teoli"]
@@ -28131,26 +28120,6 @@
       "si0ls",
       "dattaz"
     ]
-  },
-  "conflicting/Web/API/Blob": {
-    "modified": "2020-10-15T22:05:47.307Z",
-    "contributors": ["velkro", "jgroc-de"]
-  },
-  "conflicting/Web/API/Document": {
-    "modified": "2019-03-18T21:40:14.903Z",
-    "contributors": ["loella16"]
-  },
-  "conflicting/Web/API/Element/clientHeight": {
-    "modified": "2019-03-23T22:35:36.713Z",
-    "contributors": ["Beaver"]
-  },
-  "conflicting/Web/API/Element/clientWidth": {
-    "modified": "2019-03-23T22:07:26.300Z",
-    "contributors": ["ap369"]
-  },
-  "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
-    "modified": "2020-10-15T21:30:46.863Z",
-    "contributors": ["SphinxKnight"]
   },
   "orphaned/Glossary/DHTML": {
     "modified": "2019-03-24T00:02:32.004Z",

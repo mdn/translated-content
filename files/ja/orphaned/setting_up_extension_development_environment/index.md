@@ -47,21 +47,21 @@ start "" "%ProgramFiles%\Mozilla Firefox\firefox.exe" -no-remote -P dev
 
 変更を加えるたびに拡張機能を何度も再インストールしたり、アンインストールの際に誤ってソースファイルを削除してしまうのを防ぐために、ソースファイルをプロファイルの外の任意の場所に置く事が出来ます。
 
-1.  拡張機能に含まれる install.rdf から拡張機能の ID を見つける
-2.  プロファイルディレクトリ/extensions/ に、ファイル名をその ID にしたファイルを作成する (例: \`your_profile_directory/extensions/{46D1B3C0-DB7A-4b1a-863A-6EE6F77ECB58}\`) (<http://kb.mozillazine.org/Profile_folder> プロファイルディレクトリの場所])
-3.  そのファイルの内容に install.rdf ファイルを格納するフォルダへのパスを書き込む (例: \`/full/path/to/yourExtension\` Windows ユーザはスラッシュではなくバックスラッシュを使ってください。 例: \`\full\path\to\yourExtension\`)
-4.  ファイルをプロファイルの extensions フォルダに置いて、アプリケーションを再起動する
+1. 拡張機能に含まれる install.rdf から拡張機能の ID を見つける
+2. プロファイルディレクトリ/extensions/ に、ファイル名をその ID にしたファイルを作成する (例: \`your_profile_directory/extensions/{46D1B3C0-DB7A-4b1a-863A-6EE6F77ECB58}\`) (<http://kb.mozillazine.org/Profile_folder> プロファイルディレクトリの場所])
+3. そのファイルの内容に install.rdf ファイルを格納するフォルダへのパスを書き込む (例: \`/full/path/to/yourExtension\` Windows ユーザはスラッシュではなくバックスラッシュを使ってください。 例: \`\full\path\to\yourExtension\`)
+4. ファイルをプロファイルの extensions フォルダに置いて、アプリケーションを再起動する
 
 ### JAR ファイルの代わりにディレクトリを使用
 
 拡張機能の chrome を JAR ファイルとディレクトリのどちらにパッケージングするかは自由ですが、ディレクトリを使った方が開発は簡単です。リリースする時のために JAR 構造を選んだとしても、chrome.manifest ファイルを編集すればディレクトリ構造で開発することが出来ます。例えばこうなっているのを
 
 ```
-content	myExtension	jar:chrome/myExtension.jar!/content/
+content myExtension jar:chrome/myExtension.jar!/content/
 ```
 
 こうします。
 
 ```
-content	myExtension	chrome/content/
+content myExtension chrome/content/
 ```

@@ -36,7 +36,7 @@ _Aucun gestionnaire d'événements spécifique; hérite des gestionnairs d'évé
 - {{domxref("WindowEventHandlers.onbeforeprint")}}
   - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("beforeprint")}} est déclenché.
 - {{domxref("WindowEventHandlers.onbeforeunload")}}
-  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("beforeunload")}} est déclenché.
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement [`beforeunload`](/fr/docs/Web/API/Window/beforeunload_event) est déclenché.
 - {{domxref("WindowEventHandlers.onhashchange")}}
   - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("hashchange")}} est déclenché.
 - {{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}
@@ -58,7 +58,7 @@ _Aucun gestionnaire d'événements spécifique; hérite des gestionnairs d'évé
 - {{domxref("WindowEventHandlers.onstorage")}}
   - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("storage")}} est déclenché.
 - {{domxref("WindowEventHandlers.onunload")}}
-  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("unload")}} est déclenché.
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement [`unload`](/fr/docs/Web/API/Window/unload_event) est déclenché.
 
 ## Spécifications
 

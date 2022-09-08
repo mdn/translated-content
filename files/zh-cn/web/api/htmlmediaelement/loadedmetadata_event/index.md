@@ -4,7 +4,7 @@ slug: Web/API/HTMLMediaElement/loadedmetadata_event
 ---
 {{ ApiRef("HTML DOM") }}
 
-{{domxref("GlobalEventHandlers")}} mixin 的**`onloadedmetadata`**属性是处理{{event("loadedmetadata")}}事件的{{event("Event_handlers", "event handler")}}。
+{{domxref("GlobalEventHandlers")}} mixin 的 **`onloadedmetadata`** 属性是处理{{event("loadedmetadata")}}事件的{{event("Event_handlers", "event handler")}}。
 
 `loadedmetadata`事件在元数据（metadata）被加载完成后触发。
 

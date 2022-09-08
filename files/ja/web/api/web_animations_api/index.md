@@ -35,12 +35,11 @@ Web Animation API によって {{domxref("document")}} 及び {{domxref("element
   - : 既定の文書タイムラインを表す `DocumentTimeline` オブジェクトです。
 - {{domxref("document.getAnimations()")}}
   - : `document` 内で要素に対して現在有効な {{domxref("Animation")}} オブジェクトの配列を返します。
-- ### `Element` インターフェイスの拡張
 
-  {{domxref("Element.animate()")}}
+### `Element` インターフェイスの拡張
 
+- {{domxref("Element.animate()")}}
   - : 要素のアニメーションを作成して再生するショートカットメソッドです。作成された {{domxref("Animation")}} オブジェクトのインスタンスを返します。
-
 - {{domxref("Element.getAnimations()")}}
   - : {{domxref("Animation")}} オブジェクトの配列で、現在その要素に関連し、将来の実行が予定されているものを返します。
 

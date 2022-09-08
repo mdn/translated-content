@@ -7,7 +7,7 @@ translation_of: Web/HTML/Element/area
 
 <p>O <em>HTML <code>&lt;area&gt;</code> elemento</em> define uma região hot-spot em uma imagem, e, opcionalmente, associa-lo com um {{Glossary ("Hyperlink", "link de hipertexto")}}. Este elemento é usado somente dentro de um {{HTMLElement ("map")}} elemento.</p>
 
-<ul class="htmlelt">
+<ul>
  <li><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML / Content_categories">As categorias de conteúdo</a></dfn> <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="Categorias HTML / conteúdo # content Fluxo"> de conteúdo de fluxo</a> , <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="Categorias HTML / conteúdo # content Phrasing">conteúdo fraseado</a> .</li>
  <li><dfn>Permitida conteúdo</dfn> vazio; este é um elemento vazio.</li>
  <li><dfn>Tag omissão</dfn> {{no_tag_omission}}</li>
@@ -58,27 +58,17 @@ translation_of: Web/HTML/Element/area
 
 <dl>
  <dt>{{Htmlattrdef ("nohref")}} {{HTMLVersionInline ("4")}} só, {{obsolete_inline ("5.0")}}</dt>
- <dd>Indica que não existe hyperlink para a área associada. Ou este atributo ou a <strong>href</strong> atributo deve estar presente no elemento.</dd>
- <dd>
+ <dd><p>Indica que não existe hyperlink para a área associada. Ou este atributo ou a <strong>href</strong> atributo deve estar presente no elemento.</p>
  <div class="note">
  <p><strong>Nota de Uso:</strong> Este atributo é obsoleto em HTML5, em vez omitindo o atributo <strong>href</strong> é suficiente.</p>
  </div>
  </dd>
-</dl>
-
-<dl>
  <dt>{{Htmlattrdef ("rel")}} {{HTMLVersionInline ("5")}}</dt>
  <dd>Para âncoras contendo o <strong>href</strong> atributo, este atributo especifica a relação do objeto de destino para o objeto link. O valor é uma lista de valores de relacionamento, separados por vírgulas. Os valores e sua semântica será registrado por alguma autoridade que poderia ter significado para o autor do documento. A relação padrão, se nenhum outro é dado, é nula. Utilize este atributo somente se a <strong>href</strong> atributo está presente.</dd>
  <dt>{{Htmlattrdef ("shape")}}</dt>
  <dd>A forma do ponto de acesso associado. As especificações para colar 5 e HTML 4 definem os valores <code>rect</code> , que define uma região rectangular; <code>círculo</code> , o qual define uma região circular; <code>poli</code> , que define um polígono; e <code>padrão</code> , o que indica toda a região além de quaisquer formas definidas. Muitos navegadores, principalmente o Internet Explorer 4 e superior, apoio <code>circ</code> , <code>polígono</code> , e <code>retângulo</code> como valores válidos para <strong>forma</strong> ; estes valores são {{Non-standard_inline}}.</dd>
-</dl>
-
-<dl>
  <dt>{{Htmlattrdef ("tabindex")}} {{HTMLVersionInline ("4")}} só, {{obsolete_inline ("5.0")}}</dt>
  <dd>Um valor numérico que especifica a posição da área definida na ordem de tabulação browser. Este atributo é global em HTML5.</dd>
-</dl>
-
-<dl>
  <dt>{{Htmlattrdef ("target")}}</dt>
  <dd>Este atributo especifica onde exibir o recurso ligado. Em HTML4, este é o nome de, ou uma palavra-chave para um quadro. Em HTML5, que é um nome ou palavra-chave para um <em>contexto de navegação</em> (por exemplo, aba, janela ou quadro embutido). As seguintes palavras-chave têm significados especiais:
  <ul>

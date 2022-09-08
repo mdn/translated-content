@@ -37,7 +37,7 @@ L'évènement **`mouseleave`** est déclenché à partir d'un {{domxref("Element
   </tbody>
 </table>
 
-`mouseleave` et {{event('mouseout')}} se ressemblent mais `mouseleave` ne remonte pas dans le DOM tandis que `mouseout` remonte. `mouseleave` est donc déclenché lorsque le pointeur a quitté l'élément et tout ses descendants tandis que `mouseout` est déclenché lorsque le pointeur quitte l'élément ou l'un des descendants (quand bien même il serait toujours sur le parent).
+`mouseleave` et [`mouseout`](/fr/docs/Web/API/Element/mouseout_event) se ressemblent mais `mouseleave` ne remonte pas dans le DOM tandis que `mouseout` remonte. `mouseleave` est donc déclenché lorsque le pointeur a quitté l'élément et tout ses descendants tandis que `mouseout` est déclenché lorsque le pointeur quitte l'élément ou l'un des descendants (quand bien même il serait toujours sur le parent).
 
 ![](mouseleave.png)
 

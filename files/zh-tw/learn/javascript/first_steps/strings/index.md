@@ -29,7 +29,7 @@ slug: Learn/JavaScript/First_steps/Strings
 
 ## 字串 — 基礎
 
-剛開始你會覺得字串與數字的處理方式很類似，但當你越深入就會了解到一些明顯的差異。讓我們從在 console 裡輸入一些基本的程式行來熟悉它吧！在下方，我們提供一個 Console （你也可以另開一個頁籤或視窗[使用他](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) ，或者使用瀏覽器的[開發者工具](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)）。
+剛開始你會覺得字串與數字的處理方式很類似，但當你越深入就會了解到一些明顯的差異。讓我們從在 console 裡輸入一些基本的程式行來熟悉它吧！在下方，我們提供一個 Console （你也可以另開一個頁籤或視窗[使用他](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) ，或者使用瀏覽器的[開發者工具](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools)）。
 
 ```html hidden
 <!DOCTYPE html>
@@ -214,7 +214,7 @@ let bigmouth = 'I\'ve got no right to take my place...';
 bigmouth;
 ```
 
-這是可行的！你可以用一樣的方法跳脫其他字元，例如 `\"`。除此之外，還有一些特殊方法。更詳細的部分，請參閱[跳脫符號](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation) 。
+這是可行的！你可以用一樣的方法跳脫其他字元，例如 `\"`。除此之外，還有一些特殊方法。更詳細的部分，請參閱[跳脫符號](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation) 。
 
 ## 連接字串（Concatenating strings）
 
@@ -293,7 +293,7 @@ button.onclick = function() {
       typeof myNum;
       ```
 
-    - 另一方面，也有 [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) 方法能夠讓數字轉換為相等的字串。試試看：
+    - 另一方面，也有 [`toString()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) 方法能夠讓數字轉換為相等的字串。試試看：
 
       ```js
       let myNum = 123;
@@ -367,12 +367,12 @@ I gave it a score of ${ score/highestScore * 100 }%.`;
 我們建議你盡可能習慣使用模版字符串。現今流行的瀏覽器都能完好的支援它，只有一個地方你能發現它並不支援外: Internet Explorer。
 我們有許多的例子仍然使用目前標準的字串語法，但我們未來將會加入更多模版字符串的應用。
 
-來我們的[Template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals) 相關頁面看看更多的範例與進階的特色細節。
+來我們的[Template literals](/zh-TW/docs/Web/JavaScript/Reference/Template_literals) 相關頁面看看更多的範例與進階的特色細節。
 
 ## 測試您的技能！
 
 你已到達文章的結尾了，但你能記得最重要的資訊嗎?
-在繼續學習之前，你可以找些難一點的測驗，來檢測你有記得這些知識 — [Test your skills: Strings](/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings). 記住，接下來的文章也需要這些知識，所以你可能想先看看。
+在繼續學習之前，你可以找些難一點的測驗，來檢測你有記得這些知識 — [Test your skills: Strings](/zh-TW/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings). 記住，接下來的文章也需要這些知識，所以你可能想先看看。
 
 ## 結語
 

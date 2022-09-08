@@ -81,4 +81,4 @@ If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 - {{HTTPHeader("If-Unmodified-since")}}
 - {{HTTPHeader("If-Match")}}
 - {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("304")}}` Not Modified`
+- {{HTTPStatus("304")}} `Not Modified`

@@ -38,7 +38,7 @@ border-top-left-radius: inherit;
 ### 取值
 
 - `<length>`
-  - [: `<length>`](/zh-CN/docs/Web/CSS/length) 定义圆形半径或椭圆的半长轴，半短轴。不能用负值。
+  - : [`<length>`](/zh-CN/docs/Web/CSS/length) 定义圆形半径或椭圆的半长轴，半短轴。不能用负值。
 - `<percentage>`
   - : 使用百分数定义圆形半径或椭圆的半长轴，半短轴。水平半轴相对于盒模型的宽度；垂直半轴相对于盒模型的高度。不能用负值。
 

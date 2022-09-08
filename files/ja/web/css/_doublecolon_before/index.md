@@ -1,15 +1,6 @@
 ---
 title: '::before (:before)'
 slug: Web/CSS/::before
-tags:
-  - CSS
-  - レイアウト
-  - 擬似要素
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.before
-translation_of: 'Web/CSS/::before'
 ---
 {{CSSRef}}
 

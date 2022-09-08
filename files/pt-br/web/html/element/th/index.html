@@ -9,8 +9,6 @@ translation_of: Web/HTML/Element/th
 
 <div>{{EmbedInteractiveExample("pages/tabbed/th.html","tabbed-taller")}}</div>
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</p>
-
 <table class="properties">
  <tbody>
   <tr>
@@ -52,13 +50,11 @@ translation_of: Web/HTML/Element/th
  <dd>Este atributo contém um valor inteiro não negativo que indica quantas colunas a célula ocupará. Valor padrão <code>1</code>. Valores acima de 1000 são considerados incorretos e serão modificados para o valor padrão <code>1</code>.</dd>
  <dt>{{htmlattrdef("headers")}}</dt>
  <dd>Este atributo contém uma lista de palavras separadas por espaço, cada uma correspondendo ao atributo <strong>id</strong> dos elementos {{HTMLElement("th")}} que se aplicam a este elemento.</dd>
- <dd></dd>
  <dt>{{htmlattrdef("rowspan")}}</dt>
  <dd>Este atributo contém um valor inteiro não negativo que indica quantas linhas a célula estende. Valor padrão <code>1</code>. Se seu valor é definido como <code>0</code>, ele se estende até o final da tabela ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, mesmo que implicitamente definido), que a célula pertence. Não é possível colocar valores superiores a 65534.</dd>
  <dt>{{htmlattrdef("scope")}}</dt>
- <dd>Este atributo define as células a que o cabeçalho (definido no elemento {{HTMLElement("th")}}) se relaciona.<br>
- Possíveis valores:</dd>
- <dd>
+ <dd><p>Este atributo define as células a que o cabeçalho (definido no elemento {{HTMLElement("th")}}) se relaciona.<br>
+ Possíveis valores:</p>
  <ul>
   <li><code>row</code>: O cabeçalho se relaciona com todas as células da linha a que pertence.</li>
   <li><code>col</code>: O cabeçalho se relaciona com todas as células da coluna a que pertence.</li>
@@ -66,16 +62,16 @@ translation_of: Web/HTML/Element/th
   <li><code>colgroup</code>: O cabeçalho pertence a um grupo de colgroup e se relaciona com todas as suas células.</li>
   <li><code>auto</code></li>
  </ul>
-
  <p>O valor padrão quando este atributo não é especificado é <code>auto</code>.</p>
+</dd>
+</dl>
 
- <h3 id="Atributos_depreciados">Atributos depreciados</h3>
+<h3 id="Atributos_depreciados">Atributos depreciados</h3>
 
-
- </dd>
+<dl>
  <dt>{{htmlattrdef("align")}} {{obsolete_inline("html5")}}</dt>
- <dd>Este atributo especifica como o alinhamento horizontal do conteúdo da célula será tratado.</dd>
- <dd>Possíveis valores:
+ <dd><p>Este atributo especifica como o alinhamento horizontal do conteúdo da célula será tratado.</p>
+ <p>Possíveis valores:</p>
  <ul>
   <li><code>left</code>: O conteúdo é alinhado a esquerda da célula.</li>
   <li><code>center</code>: O conteúdo é centralizado da célula.</li>
@@ -85,10 +81,6 @@ translation_of: Web/HTML/Element/th
  </ul>
 
  <p>O valor padrão quando não especificado é <code>left</code>.</p>
- </dd>
- <dd>
-
-
  <div class="note"><strong>Note: </strong>Não use esse atributo, pois ele está obsoleto no padrão mais recente.
 
  <ul>
@@ -96,8 +88,6 @@ translation_of: Web/HTML/Element/th
   <li>Para alcançar o mesmo efeito que os valor <code>char</code>, atribue a {{cssxref("text-align")}}  o mesmo valor que você usaria para {{htmlattrxref("char", "th")}}. {{unimplemented_inline}} no CSS3.</li>
  </ul>
  </div>
-
-
  </dd>
  <dt>{{htmlattrdef("axis")}} {{obsolete_inline("html5")}}</dt>
  <dd>Este atributo contém uma lista de palavras separadas por espaço. Cada palavra é o <code>id</code> de um grupo de células às quais este cabeçalho se aplica.
@@ -160,9 +150,6 @@ translation_of: Web/HTML/Element/th
 
  <div class="note"><strong>Note:</strong> Não use esse atributo como padrão pois não é implementado em algumas versões do Microsoft Internet Explorer: O elemento {{HTMLElement("th")}} deve ser estilizado usando <a href="/en-US/docs/Web/CSS">CSS</a>. Para criar um efeito semelhante, use a propriedade {{cssxref("background-color")}} do <a href="/en-US/docs/Web/CSS">CSS</a>.</div>
  </dd>
-</dl>
-
-<dl>
  <dt>{{htmlattrdef("char")}} {{obsolete_inline("html5")}}</dt>
  <dd>O conteúdo da célula está alinhado a um caractere. Os valores típicos incluem um ponto (.) para alinhar números ou valores monetários. Se {{htmlattrxref("align", "th")}} não está definido no <code>char</code>, o atributo é ignorado.
  <div class="note"><strong>Note:</strong> Não use esse atributo, pois ele está obsoleto no padrão mais recente. Para obter o mesmo efeito, você pode especificar o caractere como o primeiro valor da propriedade {{cssxref("text-align")}}, {{unimplemented_inline}} no CSS3.</div>
@@ -176,8 +163,8 @@ translation_of: Web/HTML/Element/th
  <div class="note"><strong>Note: </strong>Não use esse atributo, pois ele está obsoleto no padrão mais recente: use a propriedade CSS {{cssxref("height")}}.</div>
  </dd>
  <dt>{{htmlattrdef("valign")}} {{obsolete_inline("html5")}}</dt>
- <dd>Esse atributo especifica como o texto é alinhado verticalmente na célula.</dd>
- <dd>Possíveis valores:
+ <dd><p>Esse atributo especifica como o texto é alinhado verticalmente na célula.</p>
+ <p>Possíveis valores:</p>
  <ul>
   <li><code>baseline</code>: Posiciona o texto próximo à parte inferior da célula e o alinha ao <a href="https://en.wikipedia.org/wiki/Baseline_%28typography%29">roda pé</a>. Se os caracteres não descerem abaixo da linha de base, o valor da linha de base alcançará o mesmo efeito que <code>bottom</code>.</li>
   <li><code>bottom</code>: Posiciona o texto próximo à parte inferior da célula.</li>

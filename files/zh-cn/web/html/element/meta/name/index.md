@@ -63,7 +63,7 @@ CSS 颜色调整规范（CSS Color Adjustment specification）定义了以下元
 CSS 设备适配规范（CSS Device Adaptation specification）定义了以下元数据名称：
 
 - `viewport`: 为{{glossary("viewport")}}（视口）的初始大小提供指示（hint）。目前仅用于移动设备。
-- | 值              | 可能的附加值                           | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+  | 值              | 可能的附加值                           | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
   | --------------- | -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
   | `width`         | 一个正整数，或者字符串 `device-width`  | 定义 viewport 的宽度，如果值为正整数，则单位为像素。                                                                                                                                                                                                                                                                                                                                                                                                                  |
   | `height`        | 一个正整数，或者字符串 `device-height` | 定义 viewport 的高度。未被任何浏览器使用。                                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -78,14 +78,14 @@ CSS 设备适配规范（CSS Device Adaptation specification）定义了以下�
   > - 不同设备和浏览器的默认值可能有不同。
   > - 若想了解 Firefox 移动版对此声明的支持和处理，请参考[这篇文章](/zh-CN/docs/Mobile/Viewport_meta_tag)。
 
-  ##### 关于 viewport 缩放的无障碍考量
+##### 关于 viewport 缩放的无障碍考量
 
-  将 `user-scalable` 设置为 `no` 会阻止一切意义上的缩放，视力不好的人可能会因此无法阅读和理解页面内容。
+将 `user-scalable` 设置为 `no` 会阻止一切意义上的缩放，视力不好的人可能会因此无法阅读和理解页面内容。
 
-  - [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-  - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-  ##### 参见
+##### 参见
 
   [`@viewport`](/zh-CN/docs/Web/CSS/@viewport) CSS @ 规则。
 

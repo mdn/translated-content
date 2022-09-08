@@ -95,7 +95,7 @@ document.getElementById("expirationWarning").className = "";
 
 - 要素でのアラートロールの使用は要素が `aria-live="assertive"` を持っていることを意味します。
 - アラートロールは静的な文章のためにのみ使用されるべきです。アラートロールが使用された要素はフォーカスを受け取ることができず、スクリーンリーダーはキーボードフォーカスが現在位置している場所にかかわらずに自動的にアラートをアナウンスするかもしれません。
-- もしアラートが双方向のコントロール (ユーザが問題を修正できるフォームコントロールや、アラートを破棄する "OK" ボタンなど) を提供する場合、[アラートダイアログ](/ja/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role "Using the alert role")ロールを代わりに使用するべきです。
+- もしアラートが双方向のコントロール (ユーザが問題を修正できるフォームコントロールや、アラートを破棄する "OK" ボタンなど) を提供する場合、[アラートダイアログ](/ja/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)ロールを代わりに使用するべきです。
 
 ### 使用される ARIA 属性
 
@@ -103,8 +103,8 @@ document.getElementById("expirationWarning").className = "";
 
 ### 関連 ARIA 技術
 
-- [Using the alertdialog role](/ja/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role "en/ARIA/ARIA_Techniques/Using_the_alertdialog_role")
-- [Using the aria-invalid property](/ja/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_property "Using the aria-invalid property")
+- [Using the alertdialog role](/ja/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
+- [Using the aria-invalid property](/ja/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_property)
 
 ### 互換性
 

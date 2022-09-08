@@ -28,7 +28,7 @@ window.onpaint = funcRef;
 
 `onpaint` ne fonctionne pas actuellement, et il est douteux que cet événement fonctionne du tout, voir {{ Bug(239074) }}.
 
-L'événement `paint` est déclenché lorsque la fenêtre est rendue. Cet événement se produit après l'événement {{Event ("load")}} pour une fenêtre, et se reproduit chaque fois que la fenêtre doit être restituée, par exemple lorsqu'une autre fenêtre l'obscurcit et est ensuite effacée.
+L'événement `paint` est déclenché lorsque la fenêtre est rendue. Cet événement se produit après l'événement [`load`](/fr//docs/Web/API/Window/load_event) pour une fenêtre, et se reproduit chaque fois que la fenêtre doit être restituée, par exemple lorsqu'une autre fenêtre l'obscurcit et est ensuite effacée.
 
 ## Spécification
 

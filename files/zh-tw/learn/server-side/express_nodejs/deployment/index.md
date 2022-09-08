@@ -36,7 +36,7 @@ slug: Learn/Server-side/Express_Nodejs/deployment
 
 本教程提供了，有關選擇託管站點的選項的一些指導，簡要概述了為使您的 Express 應用程序準備好生產，所需執行的操作，以及一個工作示例，演示如何將 LocalLibrary 網站安裝到 [Heroku](https://www.heroku.com/) 雲託管上的服務。
 
-請記住，您不必使用 Heroku - 還有其他託管服務可用。我們還提供了一個單獨的教程，以展示如何在 [PWS/Cloud Foundry](/en-US/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry) 上安裝 LocalLibrary。
+請記住，您不必使用 Heroku - 還有其他託管服務可用。我們還提供了一個單獨的教程，以展示如何在 [PWS/Cloud Foundry](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry) 上安裝 LocalLibrary。
 
 ## 什麼是生產環境？
 
@@ -78,7 +78,7 @@ slug: Learn/Server-side/Express_Nodejs/deployment
 - 額外的好處。一些提供商將提供免費域名和 SSL 證書支持，否則您將不得不為此另外支付費用。
 - 您所依賴的“免費”等級，是否會隨著時間的推移而過期，以及遷移到更昂貴等級的成本，是否意味著您最好在一開始就使用其他服務！
 
-當你剛開始時，好消息是有很多網站提供“免費”的計算環境，儘管有一些條件。例如， [Heroku](https://www.heroku.com/) “永遠” 提供免費但資源有限的 PaaS 環境，而 [Amazon Web Services](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/) 和開源選項 [PWS/Cloud Foundry](/en-US/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry) 在您第一次加入時，提供免費信用額度。
+當你剛開始時，好消息是有很多網站提供“免費”的計算環境，儘管有一些條件。例如， [Heroku](https://www.heroku.com/) “永遠” 提供免費但資源有限的 PaaS 環境，而 [Amazon Web Services](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/) 和開源選項 [PWS/Cloud Foundry](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry) 在您第一次加入時，提供免費信用額度。
 
 許多提供商還擁有“基本”層，可提供更多有用的計算能力，和更少的限制。舉例來說， [Digital Ocean](https://www.digitalocean.com/) 是一個流行的託管服務提供商，它提供了一個相對便宜的基本計算層（在本教程寫作時，是每月 5 美元的較低範圍）。
 
@@ -498,12 +498,12 @@ heroku ps   #Display dyno status
 
 ## 本教學鏈接
 
-- [Express/Node introduction](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)
+- [Express/Node introduction](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
+- [Setting up a Node (Express) development environment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)
+- [Express Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
+- [Express Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
+- [Express Tutorial Part 3: Using a Database (with Mongoose)](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose)
+- [Express Tutorial Part 4: Routes and controllers](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)
+- [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms)
+- [Express Tutorial Part 7: Deploying to production](/zh-TW/docs/Learn/Server-side/Express_Nodejs/deployment)

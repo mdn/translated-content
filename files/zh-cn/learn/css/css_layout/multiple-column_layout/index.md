@@ -259,7 +259,7 @@ body {
 
 ### 设置 break-inside
 
-我们可以使用 [CSS Fragmentation](/en-US/docs/Web/CSS/CSS_Fragmentation) 中声明的属性控制这一特性。 这份规范提供了一些属性来控制 multicol 和多页媒体中的内容拆分、折断。比如，在规则 `.card` 上添加属性{{cssxref("break-inside")}}，并设值 `avoid` 。`.card` 是标题和文本的容器，我们不想拆开这个盒子。
+我们可以使用 [CSS Fragmentation](/zh-CN/docs/Web/CSS/CSS_Fragmentation) 中声明的属性控制这一特性。 这份规范提供了一些属性来控制 multicol 和多页媒体中的内容拆分、折断。比如，在规则 `.card` 上添加属性{{cssxref("break-inside")}}，并设值 `avoid` 。`.card` 是标题和文本的容器，我们不想拆开这个盒子。
 
 现阶段，增加旧属性 `page-break-inside: avoid` 能够获得更好的浏览器支持。
 
@@ -360,20 +360,20 @@ body {
 
 ## 参考
 
-- [CSS Fragmentation](/en-US/docs/Web/CSS/CSS_Fragmentation)
-- [Using multi-column layouts](/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)
+- [CSS Fragmentation](/zh-CN/docs/Web/CSS/CSS_Fragmentation)
+- [Using multi-column layouts](/zh-CN/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}
 
 ## In this module
 
-- [CSS 介绍](/en-US/docs/Learn/CSS/CSS_layout/Introduction)
-- [正常布局流（Normal Flow）](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [弹性盒子（Flexbox）](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-- [网格（Grid）](/en-US/docs/Learn/CSS/CSS_layout/Grids)
-- [浮动（Floats）](/en-US/docs/Learn/CSS/CSS_layout/Floats)
-- [定位（Positioning）](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
-- [多列布局（Multiple-column Layout）](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [传统的布局实现（Legacy Layout Methods）](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [支持旧有浏览器（Supporting older browsers）](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental Layout Comprehension Assessment](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
+- [CSS 介绍](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
+- [正常布局流（Normal Flow）](/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow)
+- [弹性盒子（Flexbox）](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
+- [网格（Grid）](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)
+- [浮动（Floats）](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
+- [定位（Positioning）](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
+- [多列布局（Multiple-column Layout）](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [传统的布局实现（Legacy Layout Methods）](/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
+- [支持旧有浏览器（Supporting older browsers）](/zh-CN/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
+- [Fundamental Layout Comprehension Assessment](/zh-CN/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

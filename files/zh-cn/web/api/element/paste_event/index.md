@@ -4,7 +4,7 @@ slug: Web/API/Element/paste_event
 ---
 {{APIRef}}
 
-当用户在浏览器用户界面发起“粘贴”操作时，会触发**`paste`**事件。
+当用户在浏览器用户界面发起“粘贴”操作时，会触发 **`paste`** 事件。
 
 ```
 冒泡                 是

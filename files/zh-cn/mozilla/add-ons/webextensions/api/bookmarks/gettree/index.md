@@ -22,7 +22,7 @@ var gettingTree = browser.bookmarks.getTree()
 
 ### 返回值
 
-` Promise对象，该对象未来会得到一个填充代表根节点的``bookmarks.BookmarkTreeNode对象的数组。 `
+`Promise` 对象，该对象未来会得到一个填充代表根节点的 `bookmarks.BookmarkTreeNode` 对象的数组。
 
 ## 浏览器兼容性
 

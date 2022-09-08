@@ -6,7 +6,7 @@ slug: Mozilla/Add-ons/WebExtensions/Match_patterns
 
 匹配模式是一种指定网址组的方法：: 一个匹配模式匹配特定的一组 URL。 它们由 WebExtensions 在几个地方使用，最明显的是指定要将[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)加载到哪些文档中，并指定要向其中添加 [webRequest](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) 侦听器的 URL。
 
-使用匹配模板的 API 通常接收一个匹配模板的列表，当 URL 匹配任何模式时会恰当的运行。看个例子 在 manifest.json 中的 [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 关键字。
+使用匹配模板的 API 通常接收一个匹配模板的列表，当 URL 匹配任何模式时会恰当的运行。看个例子 在 manifest.json 中的 [`content_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 关键字。
 
 ## 匹配模式结构
 
@@ -309,7 +309,7 @@ Cu.import("resource://gre/modules/BrowserUtils.jsm");
 这做了两件事：
 
 - 导入 "MatchPattern.jsm": 这是实现了匹配模板的系统模块，特别的，这个模块包含了 `MatchPattern` 对象. `MatchPattern` 对象定义了一个 `matches()` 方法，他需要一个 URL 然后返回 `true` 或者 `false`.
-- 导入 "BrowserUtils.jsm": 包含了一个方法 `makeURI()`, 他转换一个字符串为一个 [`nsIURI`](/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI) 对象。`nsIURI` 是 `matches()` 方法需要接受的一个参数。
+- 导入 "BrowserUtils.jsm": 包含了一个方法 `makeURI()`, 他转换一个字符串为一个 [`nsIURI`](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI) 对象。`nsIURI` 是 `matches()` 方法需要接受的一个参数。
 
 现在你可以构造 MatchPattern 对象，构造 URIs，并检查 URIs 是否匹配：
 

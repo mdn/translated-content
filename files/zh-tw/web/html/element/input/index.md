@@ -96,35 +96,35 @@ How an `<input>` works varies considerably depending on the value of its `type` 
 
 The available types are as follows:
 
-- [`button`](/en-US/docs/Web/HTML/Element/input/button): A push button with no default behavior.
-- [`checkbox`](/en-US/docs/Web/HTML/Element/input/checkbox): A check box allowing single values to be selected/deselected.
-- [`color`](/en-US/docs/Web/HTML/Element/input/color): A control for specifying a color. A color picker's UI has no required features other than accepting simple colors as text ([more info](<https://www.w3.org/TR/html5/forms.html#color-state-(type=color)>)).
-- [`date`](/en-US/docs/Web/HTML/Element/input/date): A control for entering a date (year, month, and day, with no time).
-- [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local): A control for entering a date and time, with no time zone.
-- [`email`](/en-US/docs/Web/HTML/Element/input/email): A field for editing an e-mail address.
-- [`file`](/en-US/docs/Web/HTML/Element/input/file): A control that lets the user select a file. Use the **accept** attribute to define the types of files that the control can select.
-- [`hidden`](/en-US/docs/Web/HTML/Element/input/hidden): A control that is not displayed but whose value is submitted to the server.
-- [`image`](/en-US/docs/Web/HTML/Element/input/image): A graphical submit button. You must use the **src** attribute to define the source of the image and the **alt** attribute to define alternative text. You can use the **height** and **width** attributes to define the size of the image in pixels.
-- [`month`](/en-US/docs/Web/HTML/Element/input/month): A control for entering a month and year, with no time zone.
-- [`number`](/en-US/docs/Web/HTML/Element/input/number): A control for entering a number.
-- [`password`](/en-US/docs/Web/HTML/Element/input/password): A single-line text field whose value is obscured. Use the **maxlength** attribute to specify the maximum length of the value that can be entered.
+- [`button`](/zh-TW/docs/Web/HTML/Element/input/button): A push button with no default behavior.
+- [`checkbox`](/zh-TW/docs/Web/HTML/Element/input/checkbox): A check box allowing single values to be selected/deselected.
+- [`color`](/zh-TW/docs/Web/HTML/Element/input/color): A control for specifying a color. A color picker's UI has no required features other than accepting simple colors as text ([more info](<https://www.w3.org/TR/html5/forms.html#color-state-(type=color)>)).
+- [`date`](/zh-TW/docs/Web/HTML/Element/input/date): A control for entering a date (year, month, and day, with no time).
+- [`datetime-local`](/zh-TW/docs/Web/HTML/Element/input/datetime-local): A control for entering a date and time, with no time zone.
+- [`email`](/zh-TW/docs/Web/HTML/Element/input/email): A field for editing an e-mail address.
+- [`file`](/zh-TW/docs/Web/HTML/Element/input/file): A control that lets the user select a file. Use the **accept** attribute to define the types of files that the control can select.
+- [`hidden`](/zh-TW/docs/Web/HTML/Element/input/hidden): A control that is not displayed but whose value is submitted to the server.
+- [`image`](/zh-TW/docs/Web/HTML/Element/input/image): A graphical submit button. You must use the **src** attribute to define the source of the image and the **alt** attribute to define alternative text. You can use the **height** and **width** attributes to define the size of the image in pixels.
+- [`month`](/zh-TW/docs/Web/HTML/Element/input/month): A control for entering a month and year, with no time zone.
+- [`number`](/zh-TW/docs/Web/HTML/Element/input/number): A control for entering a number.
+- [`password`](/zh-TW/docs/Web/HTML/Element/input/password): A single-line text field whose value is obscured. Use the **maxlength** attribute to specify the maximum length of the value that can be entered.
 
   > **備註：** Any forms involving sensitive information like passwords (e.g. login forms) should be served over HTTPS; Firefox now implements multiple mechanisms to warn against insecure login forms — see [Insecure passwords](/zh-TW/docs/Web/Security/Insecure_passwords). Other browsers are also implementing similar mechanisms.
 
-- [`radio`](/en-US/docs/Web/HTML/Element/input/radio): A radio button, allowing a single value to be selected out of multiple choices.
-- [`range`](/en-US/docs/Web/HTML/Element/input/range): A control for entering a number whose exact value is not important.
-- [`reset`](/en-US/docs/Web/HTML/Element/input/reset): A button that resets the contents of the form to default values.
-- [`search`](/en-US/docs/Web/HTML/Element/input/search): A single-line text field for entering search strings. Line-breaks are automatically removed from the input value.
-- [`submit`](/en-US/docs/Web/HTML/Element/input/submit): A button that submits the form.
-- [`tel`](/en-US/docs/Web/HTML/Element/input/tel): A control for entering a telephone number. Line-breaks are automatically removed from the input value, but no other syntax is enforced. You can use attributes such as **pattern** and **maxlength** to restrict values entered in the control. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are applied as appropriate.
-- [`text`](/en-US/docs/Web/HTML/Element/input/text): A single-line text field. Line-breaks are automatically removed from the input value.
-- [`time`](/en-US/docs/Web/HTML/Element/input/time): A control for entering a time value with no time zone.
-- [`url`](/en-US/docs/Web/HTML/Element/input/url): A field for editing a URL. The input value is validated to contain either the empty string or a valid absolute URL before submitting. You can use attributes such as **pattern** and **maxlength** to restrict values entered in the control. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are applied as appropriate.
-- [`week`](/en-US/docs/Web/HTML/Element/input/week): A control for entering a date consisting of a week-year number and a week number with no time zone.
+- [`radio`](/zh-TW/docs/Web/HTML/Element/input/radio): A radio button, allowing a single value to be selected out of multiple choices.
+- [`range`](/zh-TW/docs/Web/HTML/Element/input/range): A control for entering a number whose exact value is not important.
+- [`reset`](/zh-TW/docs/Web/HTML/Element/input/reset): A button that resets the contents of the form to default values.
+- [`search`](/zh-TW/docs/Web/HTML/Element/input/search): A single-line text field for entering search strings. Line-breaks are automatically removed from the input value.
+- [`submit`](/zh-TW/docs/Web/HTML/Element/input/submit): A button that submits the form.
+- [`tel`](/zh-TW/docs/Web/HTML/Element/input/tel): A control for entering a telephone number. Line-breaks are automatically removed from the input value, but no other syntax is enforced. You can use attributes such as **pattern** and **maxlength** to restrict values entered in the control. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are applied as appropriate.
+- [`text`](/zh-TW/docs/Web/HTML/Element/input/text): A single-line text field. Line-breaks are automatically removed from the input value.
+- [`time`](/zh-TW/docs/Web/HTML/Element/input/time): A control for entering a time value with no time zone.
+- [`url`](/zh-TW/docs/Web/HTML/Element/input/url): A field for editing a URL. The input value is validated to contain either the empty string or a valid absolute URL before submitting. You can use attributes such as **pattern** and **maxlength** to restrict values entered in the control. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are applied as appropriate.
+- [`week`](/zh-TW/docs/Web/HTML/Element/input/week): A control for entering a date consisting of a week-year number and a week number with no time zone.
 
 Some input types are now obsolete:
 
-- [`datetime`](/en-US/docs/Web/HTML/Element/input/datetime): {{deprecated_inline}} A control for entering a date and time (hour, minute, second, and fraction of a second) based on UTC time zone. **This feature has been [removed from WHATWG HTML.](https://github.com/whatwg/html/issues/336)**
+- [`datetime`](/zh-TW/docs/Web/HTML/Element/input/datetime): {{deprecated_inline}} A control for entering a date and time (hour, minute, second, and fraction of a second) based on UTC time zone. **This feature has been [removed from WHATWG HTML.](https://github.com/whatwg/html/issues/336)**
 
 ## Attributes
 

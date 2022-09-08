@@ -103,7 +103,7 @@ s.opacity = 1;
 
 #### 函数调用中的`this`
 
-在普通的函数调用`f() 中`,`this`的值会指向全局对象。在严格模式中，`this`的值会指向`undefined`.当函数通过[call](/zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function/call)和[apply](/zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function/apply)调用时，如果传入的`thisvalue`参数是一个`null`和`undefined`除外的原始值 (字符串，数字，布尔值),则`this 的值会成为那个原始值对应的包装对象`,如果`thisvalue`参数的值是`undefined`或`null`,则`this 的值会指向全局对象`.在严格模式中，` this 的值就是``thisvalue `参数的值，没有任何类型转换。
+在普通的函数调用`f() 中`,`this`的值会指向全局对象。在严格模式中，`this`的值会指向`undefined`.当函数通过[call](/zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function/call)和[apply](/zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function/apply)调用时，如果传入的`thisvalue`参数是一个`null`和`undefined`除外的原始值 (字符串，数字，布尔值),则`this 的值会成为那个原始值对应的包装对象`,如果`thisvalue`参数的值是`undefined`或`null`,则`this 的值会指向全局对象`.在严格模式中，`this` 的值就是 `thisvalue` 参数的值，没有任何类型转换。
 
 #### `arguments`对象属性不与对应的形参变量同步更新
 

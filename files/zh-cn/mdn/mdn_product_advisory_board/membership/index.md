@@ -103,5 +103,5 @@ c. Costs for participant travel and living expenses or other involvement are to 
 
 ## 参见
 
-- [Product Advisory Board members](/en-US/docs/MDN/MDN_Product_Advisory_Board/Members)
+- [Product Advisory Board members](/zh-CN/docs/MDN/MDN_Product_Advisory_Board/Members)
 - Membership application

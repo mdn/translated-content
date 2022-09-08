@@ -79,20 +79,20 @@ Ya hemos visto el elemento {{htmlelement("title")}} en acción — se puede usar
 
 ### Aprendizaje activo: Análisis de un ejemplo sencillo
 
-1.  Para comenzar este aprendizaje activo, te proponemos ir a nuestro repositorio de GitHub y descargues una copia de nuestra página [title-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html). Lo puedes hacer de las siguientes maneras:
+1. Para comenzar este aprendizaje activo, te proponemos ir a nuestro repositorio de GitHub y descargues una copia de nuestra página [title-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html). Lo puedes hacer de las siguientes maneras:
 
-    1.  Copia y pega el código de la página en un archivo de texto nuevo en tu editor de código, luego guárdalo en un lugar conveniente.
-    2.  Presiona el botón "Raw" en la página de GitHub, lo cual hace que aparezca el código sin procesar (posiblemente en una nueva pestaña del navegador). A continuación, en el menú de tu navegador elige _Archivo → Guardar página como..._ y selecciona un lugar adecuado para guardar el archivo.
+    1. Copia y pega el código de la página en un archivo de texto nuevo en tu editor de código, luego guárdalo en un lugar conveniente.
+    2. Presiona el botón "Raw" en la página de GitHub, lo cual hace que aparezca el código sin procesar (posiblemente en una nueva pestaña del navegador). A continuación, en el menú de tu navegador elige _Archivo → Guardar página como..._ y selecciona un lugar adecuado para guardar el archivo.
 
-2.  Ahora abre el archivo en tu navegador. Deberías ver algo como esto:
+2. Ahora abre el archivo en tu navegador. Deberías ver algo como esto:
 
-    ![Una sencilla página web con el título configurado a <title> element, y el <h1> configurado a <h1> element.](https://mdn.mozillademos.org/files/12323/title-example.png)Ahora debería quedar claro dónde aparece el contenido de `<h1>` y dónde aparece el contenido de `<title>`.
+    ![Una sencilla página web con el título configurado a \<title> element, y el \<h1> configurado a \<h1> element.](https://mdn.mozillademos.org/files/12323/title-example.png)Ahora debería quedar claro dónde aparece el contenido de `<h1>` y dónde aparece el contenido de `<title>`.
 
-3.  También podrías probar a abrir el código en tu editor de código, editar el contenido de estos elementos y luego actualizar la página en tu navegador. Juega un poco con ello.
+3. También podrías probar a abrir el código en tu editor de código, editar el contenido de estos elementos y luego actualizar la página en tu navegador. Juega un poco con ello.
 
 El contenido del elemento `<title>` también se usa de otras formas. Por ejemplo, si intentas marcar la página como favorita (**Marcadores → Marcar esta página**, o el icono en forma de estrella de Firefox), verás que el nombre que se sugiere para el marcado es el contenido del elemento `<title>`.
 
-![Se está marcando una página web en Firefox; el nombre del marcador se ha completado automáticamente con el contenido del elemento <title>](https://mdn.mozillademos.org/files/12337/bookmark-example.png)
+![Se está marcando una página web en Firefox; el nombre del marcador se ha completado automáticamente con el contenido del elemento \<title>](https://mdn.mozillademos.org/files/12337/bookmark-example.png)
 
 El contenido de `<title>` también se usa en el resultado de las búsquedas, como verás a continuación.
 
@@ -148,14 +148,14 @@ Especificar una descripción que incluya palabras clave relacionadas con el cont
 
 La descripción también se usa en las páginas de resultados del motor de búsqueda. Repasemos un ejercicio para explorar esto:
 
-1.  Ve a la página de inicio de [Mozilla Developer Network](https://developer.mozilla.org/es/).
-2.  Observa el código fuente de la página (
+1. Ve a la página de inicio de [Mozilla Developer Network](https://developer.mozilla.org/es/).
+2. Observa el código fuente de la página (
 
     <kbd>Ctrl</kbd>
 
     \+clic o clic con el botón derecho en la página y selecciona la opción del menú **Ver código fuente de la página**).
 
-3.  Encuentra la etiqueta del metadato **description**. Se verá más o menos así (aunque puede cambiar con el tiempo):
+3. Encuentra la etiqueta del metadato **description**. Se verá más o menos así (aunque puede cambiar con el tiempo):
 
     ```html
     <meta name="description" content="The Mozilla Developer
@@ -164,7 +164,7 @@ La descripción también se usa en las páginas de resultados del motor de búsq
       También documenta productos Mozilla como el sistema operativo Firefox.">
     ```
 
-4.  Ahora busca "Mozilla Developer Network" en tu motor de búsqueda favorito (nosotros hemos utilizado Google). Observarás que efectivamente merece la pena que tener el contenido de la descripción `<meta>` y el elemento `<title>` que se utiliza en la búsqueda.
+4. Ahora busca "Mozilla Developer Network" en tu motor de búsqueda favorito (nosotros hemos utilizado Google). Observarás que efectivamente merece la pena que tener el contenido de la descripción `<meta>` y el elemento `<title>` que se utiliza en la búsqueda.
 
     ![Resultado de búsqueda en Yahoo para "Mozilla Developer Network"](https://mdn.mozillademos.org/files/16074/mdn-search-result.png)
 
@@ -204,8 +204,8 @@ El humilde `favicon` ha existido durante muchos años. Es el primer icono de est
 
 Para añadir un `favicon` a tu página:
 
-1.  Guárdalo en el mismo directorio que la página **index** de tu sitio, en formato `.ico` (la mayoría de los buscadores admiten `favicon` en los formatos más comunes como `.gif` o `.png`, pero usar el formato _ICO_ garantiza que funcionará hasta en Internet Explorer 6.)
-2.  Añade la siguiente línea de referencia en el {{HTMLElement("head")}} de tu HTML:
+1. Guárdalo en el mismo directorio que la página **index** de tu sitio, en formato `.ico` (la mayoría de los buscadores admiten `favicon` en los formatos más comunes como `.gif` o `.png`, pero usar el formato _ICO_ garantiza que funcionará hasta en Internet Explorer 6.)
+2. Añade la siguiente línea de referencia en el {{HTMLElement("head")}} de tu HTML:
 
     ```html
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -256,9 +256,9 @@ Prácticamente todos los sitios web usan {{Glossary("CSS")}} para darles un buen
 
 ### Aprendizaje activo: aplicar CSS y JavaScript a una página
 
-1.  Para iniciar este aprendizaje activo, haz una copia de nuestros archivos [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/script.js) y [style.css](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/style.css), y guárdalos en un mismo directorio de tu ordenador. Asegúrate de que se guardan con los nombres y extensiones correctas.
-2.  Abre el archivo HTML tanto en tu navegador como en tu editor de texto.
-3.  Sigue la información facilitada anteriormente y añade los elementos `<link>` y `<script>` a tu HTML para aplicarle CSS y JavaScript.
+1. Para iniciar este aprendizaje activo, haz una copia de nuestros archivos [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/script.js) y [style.css](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/style.css), y guárdalos en un mismo directorio de tu ordenador. Asegúrate de que se guardan con los nombres y extensiones correctas.
+2. Abre el archivo HTML tanto en tu navegador como en tu editor de texto.
+3. Sigue la información facilitada anteriormente y añade los elementos `<link>` y `<script>` a tu HTML para aplicarle CSS y JavaScript.
 
 Si lo has hecho correctamente, al guardar tu HTML y actualizar tu navegador, deberías poder ver que las cosas han cambiado:
 

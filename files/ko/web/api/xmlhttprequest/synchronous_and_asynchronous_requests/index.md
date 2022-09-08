@@ -182,7 +182,9 @@ One of the few cases in which a synchronous request does not usually block execu
 
 **`myFile.txt`** (the target of the synchronous [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) invocation):
 
-    Hello World!!
+```
+Hello World!!
+```
 
 **`myTask.js`** (the [`Worker`](/en-US/docs/Web/API/Worker)):
 

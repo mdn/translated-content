@@ -1,14 +1,6 @@
 ---
 title: font
 slug: Web/CSS/font
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.font
-translation_of: Web/CSS/font
 ---
 {{CSSRef}}
 

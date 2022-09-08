@@ -1,15 +1,6 @@
 ---
 title: 置換要素
 slug: Web/CSS/Replaced_element
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Reference
-  - css layout
-  - rendering
-  - replaced element
-translation_of: Web/CSS/Replaced_element
 ---
 {{CSSRef}}
 

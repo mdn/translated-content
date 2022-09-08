@@ -6,7 +6,7 @@ slug: WebAssembly/Understanding_the_text_format
 
 WebAssembly を人間が読んだり編集したりできるようにするため、 wasm バイナリー形式にはテキスト表現が存在します。これはテキストエディター、ブラウザーの開発者ツールなどで見せるために設計された中間表現です。この記事では、テキスト形式のしくみ、生の構文、および元のバイトコードの表現との関係 (と JavaScript で wasm を表現したラッパーオブジェクト) について説明します。
 
-> **Note:** この記事は、あなたがウェブ開発者で wasm モジュールをページに読み込んでコード内で使用するだけなら過剰なものかもしれません ([WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)を参照)。しかし、例えば、パフォーマンスを最適化するために wasm モジュールを書きたいときや、あなた自身で WebAssembly コンパイラを作るときには役に立ちます。
+> **Note:** この記事は、あなたがウェブ開発者で wasm モジュールをページに読み込んでコード内で使用するだけなら過剰なものかもしれません ([WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)を参照)。しかし、例えば、パフォーマンスを最適化するために wasm モジュールを書きたいときや、あなた自身で WebAssembly コンパイラーを作るときには役に立ちます。
 
 ## S 式
 

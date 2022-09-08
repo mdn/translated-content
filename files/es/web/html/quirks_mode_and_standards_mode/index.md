@@ -40,7 +40,7 @@ Más información y detalles en [cuándo eligen los navegadores entre los difere
 
 ### XHTML
 
-Si sirves la página como [XHTML](/es/docs/XHTML "XHTML") usando el MIME `application/xhtml+xml` en el `Content-Type` de la cabecera HTTP, no necesitas especificar un DOCTYPE para habilitar el modo estándar, porque esos documentos siempre usan el modo estándar completo. Aunque hay que aclarar que servir páginas como `application/xhtml+xml` hará que Internet Explorer 8 [muestre el diálogo de descarga](/es/docs/XHTML#Support "XHTML") para contenido desconocido en lugar de mostrar la página, porque la primera versión de Internet Explorer que soporta XHTML es IE9.
+Si sirves la página como [XHTML](/es/docs/XHTML) usando el MIME `application/xhtml+xml` en el `Content-Type` de la cabecera HTTP, no necesitas especificar un DOCTYPE para habilitar el modo estándar, porque esos documentos siempre usan el modo estándar completo. Aunque hay que aclarar que servir páginas como `application/xhtml+xml` hará que Internet Explorer 8 [muestre el diálogo de descarga](/es/docs/XHTML#Support) para contenido desconocido en lugar de mostrar la página, porque la primera versión de Internet Explorer que soporta XHTML es IE9.
 
 Si sirves contenido XHTML usando el MIME `text/html`, los navegadores lo leeran como HTML, y necesitarás poner un DOCTYPE para que usen el modo estándar.
 
@@ -52,4 +52,4 @@ En Internet Explorer, pulsa _F12_, y buscar _Modo de Documento_ (Document Mode)
 
 ## ¿Cuáles son las diferencias entre los modos?
 
-Lee la [lista de quirks](/es/docs/Mozilla_Quirks_Mode_Behavior "Mozilla_Quirks_Mode_Behavior") y [modo casi estándar](/es/docs/Gecko's_"Almost_Standards"_Mode "Gecko%27s_%22Almost_Standards%22_Mode") para ver las diferencias entre los modos.
+Lee la [lista de quirks](/es/docs/Mozilla_Quirks_Mode_Behavior) y [modo casi estándar](/es/docs/Gecko's_"Almost_Standards"_Mode "Gecko%27s_%22Almost_Standards%22_Mode") para ver las diferencias entre los modos.

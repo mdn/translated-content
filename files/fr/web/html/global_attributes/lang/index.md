@@ -36,16 +36,11 @@ La sous-balise de script doit précéder la sous-balise régionale si les deux s
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "dom.html#the-lang-and-xml:lang-attributes", "lang")}} | {{Spec2('HTML WHATWG')}} | Aucun changement depuis la dernière dérivation, {{SpecName('HTML5.1')}}                                                                                                                                                                                                                                                                                  |
-| {{SpecName('HTML5.1', "dom.html#the-lang-and-xmllang-attributes", "lang")}}         | {{Spec2('HTML5.1')}}     | Dérivée de {{SpecName('HTML WHATWG')}}, aucun changement de {{SpecName('HTML5 W3C')}}                                                                                                                                                                                                                                                             |
-| {{SpecName('HTML5 W3C', "dom.html#the-lang-and-xmllang-attributes", "lang")}}     | {{Spec2('HTML5 W3C')}}     | Dérivée de {{SpecName('HTML WHATWG')}}. Définition du comportement de l'attribut **xml:lang** et de l'algorithme à utiliser pour déterminer la langue utilisée. Cet attribut devient également un attribut global à part entière.                                                                                                                        |
-| {{SpecName('HTML4.01', 'struct/dirlang.html#h-8.1', 'lang')}}                             | {{Spec2('HTML4.01')}}     | Attribut supporté pour tous les éléments {{HTMLElement("applet")}}, {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("br")}}, {{HTMLElement("frame")}}, {{HTMLElement("frameset")}}, {{HTMLElement("iframe")}}, {{HTMLElement("param")}}, et {{HTMLElement("script")}}. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.lang")}}
+{{Compat}}
 
 ## Voir aussi
 

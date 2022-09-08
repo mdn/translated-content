@@ -1,12 +1,6 @@
 ---
 title: 機能クエリーの使用
 slug: Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries
-tags:
-  - CSS
-  - 条件付き CSS
-  - ガイド
-  - 機能クエリー
-  - プログレッシブエンハンスメント
 ---
 {{CSSRef}}
 

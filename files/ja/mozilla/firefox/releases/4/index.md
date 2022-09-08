@@ -273,7 +273,7 @@ Firefox 4 向けに既存の拡張を更新する上で役立つ Tips は、[Upd
 
 #### リモート XUL サポートの削除
 
-リモート XUL [がサポートされなくなりました](https://bugzilla.mozilla.org/show_bug.cgi?id=546857)。 これは HTTP を経由して供給される XUL ドキュメントにのみ影響します。 また、` dom.``allow_XUL_XBL_for_file ` の設定を作成して、その値を ` true に設定しない限り、``file:// ` URL 形式を用いた XUL 文書の読み込みも行えなくなります。しかしながら、ホワイトリスト機能を用いることで、特定ドメインのリモート XUL を読み込むことを許可できます。[Remote XUL Manager 拡張](https://addons.mozilla.org/en-US/firefox/addon/235281/) を用いると、このホワイトリストを管理できます。
+リモート XUL [がサポートされなくなりました](https://bugzilla.mozilla.org/show_bug.cgi?id=546857)。 これは HTTP を経由して供給される XUL ドキュメントにのみ影響します。 また、`dom.allow_XUL_XBL_for_file` の設定を作成して、その値を `true` に設定しない限り、`file://` URL 形式を用いた XUL 文書の読み込みも行えなくなります。しかしながら、ホワイトリスト機能を用いることで、特定ドメインのリモート XUL を読み込むことを許可できます。[Remote XUL Manager 拡張](https://addons.mozilla.org/en-US/firefox/addon/235281/) を用いると、このホワイトリストを管理できます。
 
 #### 小さな XUL の変更
 

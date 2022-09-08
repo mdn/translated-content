@@ -10,7 +10,9 @@ El método **`toSource()`** devuelve un string representando el código fuente d
 
 ## Sintaxis
 
-    arr.toSource()
+```js
+arr.toSource()
+```
 
 ### Valor devuelto
 

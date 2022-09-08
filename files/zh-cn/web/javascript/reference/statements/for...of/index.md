@@ -269,7 +269,7 @@ for (let i in iterable) {
 }
 ```
 
-此循环仅以原始插入顺序记录`iterable` 对象的[可枚举属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。它不记录数组**元素**`3`, `5`, `7` 或`hello`，因为这些**不是**枚举属性。但是它记录了数组**索引**以及`arrCustom`和`objCustom`。如果你不知道为什么这些属性被迭代，{{jsxref("Statements/for...in", "array iteration and for...in", "#Array_iteration_and_for...in")}}中有更多解释。
+此循环仅以原始插入顺序记录`iterable` 对象的[可枚举属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。它不记录数组**元素** `3`, `5`, `7` 或`hello`，因为这些**不是**枚举属性。但是它记录了数组**索引**以及`arrCustom`和`objCustom`。如果你不知道为什么这些属性被迭代，{{jsxref("Statements/for...in", "array iteration and for...in", "#Array_iteration_and_for...in")}}中有更多解释。
 
 ```js
 for (let i in iterable) {

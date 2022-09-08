@@ -1,7 +1,6 @@
 ---
 title: 일반적인 CSS 문제 해결하기
 slug: Learn/CSS/Howto
-translation_of: Learn/CSS/Howto
 ---
 {{LearnSidebar}}
 

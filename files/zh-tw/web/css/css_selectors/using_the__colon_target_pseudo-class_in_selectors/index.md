@@ -2,7 +2,7 @@
 title: 使用 :target
 slug: Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
 ---
-When a URL points at a specific piece of a document, it can be difficult to ascertain. Find out how you can use some simple CSS to draw attention to the target of a URL and improve the user's experience. As an aid to identifying the destination of a link that points to a specific portion of a document, [CSS3 Selectors](http://www.w3.org/TR/css3-selectors/#target-pseudo) introduces the` {{ Cssxref(":target") }} `[pseudo-class](/en/CSS/Pseudo-classes). Netscape 7.1 introduced support for this pseudo-class into the Netscape family, giving authors a new way to assist users keep oriented within large documents.
+When a URL points at a specific piece of a document, it can be difficult to ascertain. Find out how you can use some simple CSS to draw attention to the target of a URL and improve the user's experience. As an aid to identifying the destination of a link that points to a specific portion of a document, [CSS3 Selectors](http://www.w3.org/TR/css3-selectors/#target-pseudo) introduces the` {{ Cssxref(":target") }} `[pseudo-class](/zh-TW/CSS/Pseudo-classes). Netscape 7.1 introduced support for this pseudo-class into the Netscape family, giving authors a new way to assist users keep oriented within large documents.
 
 ### 挑選目標
 

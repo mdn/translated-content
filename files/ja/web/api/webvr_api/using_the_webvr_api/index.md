@@ -80,7 +80,7 @@ var body = document.querySelector('body');
 body.appendChild(myCanvas);
 ```
 
-次に、新しい [image](/ja/docs/Web/API/HTMLImageElement) を作成し、アプリの [main loop](/ja/docs/Games/Anatomy#Building_a_main_loop_in_JavaScript) である`draw()を実行する前に `image が `ロードされているかをチェックするために` {{event("load")}} イベントを使います:
+次に、新しい [image](/ja/docs/Web/API/HTMLImageElement) を作成し、アプリの [main loop](/ja/docs/Games/Anatomy#Building_a_main_loop_in_JavaScript) である`draw()` を実行する前に `image` が ロードされているかをチェックするために` {{event("load")}} イベントを使います:
 
 ```js
 var image = new Image();
@@ -182,7 +182,7 @@ HMD のスイッチが OFF にされたり位置センサを向いていなか�
 
 ### シーンの更新
 
-`setView()` で取得された `xPos`、`yPos`、`zPos`、`xOrient`、`yOrient`、`zOrient` の値は、`drawImages() `で行われるシーン病がの更新のための変更値として使用されます。どうやっているかを見ていきますが、左目のビューの描画コードだけをウォークスルーしていきます。右目については、右にオーバーシフトしている以外はほぼ同じです:
+`setView()` で取得された `xPos`、`yPos`、`zPos`、`xOrient`、`yOrient`、`zOrient` の値は、`drawImages()` で行われるシーン病がの更新のための変更値として使用されます。どうやっているかを見ていきますが、左目のビューの描画コードだけをウォークスルーしていきます。右目については、右にオーバーシフトしている以外はほぼ同じです:
 
 ```js
 function drawImages() {
@@ -225,7 +225,7 @@ canvas を {{domxref("CanvasRenderingContext2D.clip","clip()")}} します。`re
 
 - `image`: 描画する画像
 - `-(WIDTH/4)+lCtrOffset-((image.width)/(2*(1/zPos)))+xPos-yOrient`: 画像原点の水平座標。前に行った平行移動を打ち消すために `WIDTH/4` を引きます．そして中心に戻すために左中心オフセットを加えて，画像幅を `zPos` の逆数の 2 倍で割ったものを引きます— 描画する画像が小さい（大きい）ほど減算値が小さい（大きい）くなり，画像中心が保持されます．最後に，HMD の水平方向の動きや回転にあわせて画像位置を更新するために `xPos` を加えて，`yOrient` を引きます（y 軸周りの回転が画像を水平方向に移動します)。
-- `-((image.height)/(2*(1/zPos)))+yPos+xOrient`: 画像原点の垂直方向の座標です。これは In this case the "HEIGHT/2 の減算"と"右中心オフセットの追加"は、ちょうどお互いにキャンセルされるので、計算式から取り除きます。計算式の残りは上と同じように、zPos の逆数の 2 倍で画像幅を割ったものを減算することによる画像中心を保持と、`yPos` と `xOrient `による描画位置の修正です。
+- `-((image.height)/(2*(1/zPos)))+yPos+xOrient`: 画像原点の垂直方向の座標です。これは In this case the "HEIGHT/2 の減算"と"右中心オフセットの追加"は、ちょうどお互いにキャンセルされるので、計算式から取り除きます。計算式の残りは上と同じように、zPos の逆数の 2 倍で画像幅を割ったものを減算することによる画像中心を保持と、`yPos` と `xOrient` による描画位置の修正です。
 - `image.width*zPos`: 画像を描画する幅; 近いものほど大きく描画されるように `zPos` で修正します。
 - `image.height*zPos`: 画像を描画する高さ; 近いものほど大きく描画されるように `zPos` で修正します。
 
@@ -281,7 +281,7 @@ function fullScreen() {
 
 現在のデモではあまり考えませんでしたが，商用アプリでは，ユーザが持っている VR ハードウェアを正しく動作させるためにユーザキャリブレーションをする必要があるでしょう．WebVR API はそれを手助けする多くの機能があります。
 
-HMD の位置と姿勢をリセットするために {{domxref("PositionSensorVRDevice.resetSensor")}} メソッドを利用できます。実行すると、現在のヘッドセットの位置/向きが 0 にセットされます。実行前に，ヘッドセットが検知可能な位置にあることを保証する必要があります。positionsensorvrdevice demo\*\*\* では、\[Reset Sensor] ボタンでそれを実行することができます:
+HMD の位置と姿勢をリセットするために {{domxref("PositionSensorVRDevice.resetSensor")}} メソッドを利用できます。実行すると、現在のヘッドセットの位置/向きが 0 にセットされます。実行前に，ヘッドセットが検知可能な位置にあることを保証する必要があります。positionsensorvrdevice demo では、\[Reset Sensor] ボタンでそれを実行することができます:
 
 ```html
 <button>Reset Sensor</button>

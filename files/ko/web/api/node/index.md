@@ -144,18 +144,20 @@ function DOMComb (oParent, oCallback) {
 
 #### Syntax
 
-    DOMComb(parentNode, callbackFunction);
+```js
+DOMComb(parentNode, callbackFunction);
+```
 
 #### Description
 
-Recursively cycle all child nodes of `parentNode` and `parentNode` itself and execute the `callbackFunction` upon them as [`this`](/ko/docs/JavaScript/Reference/Operators/this "en-US/docs/JavaScript/Reference/Operators/this") objects.
+Recursively cycle all child nodes of `parentNode` and `parentNode` itself and execute the `callbackFunction` upon them as [`this`](/ko/docs/JavaScript/Reference/Operators/this) objects.
 
 #### Parameters
 
 - `parentNode`
   - : The parent node (`Node Object`).
 - `callbackFunction`
-  - : The callback function ([`Function`](/ko/docs/JavaScript/Reference/Global_Objects/Function "en-US/docs/JavaScript/Reference/Global_Objects/Function")).
+  - : The callback function ([`Function`](/ko/docs/JavaScript/Reference/Global_Objects/Function)).
 
 #### Sample usage
 

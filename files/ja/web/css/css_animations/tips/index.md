@@ -1,13 +1,6 @@
 ---
 title: CSS アニメーションのヒントとコツ
 slug: Web/CSS/CSS_Animations/Tips
-tags:
-  - CSS
-  - CSS アニメーション
-  - 例
-  - ガイド
-  - リファレンス
-translation_of: Web/CSS/CSS_Animations/Tips
 ---
 {{CSSRef}}
 

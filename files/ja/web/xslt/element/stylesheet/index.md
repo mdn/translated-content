@@ -1,13 +1,6 @@
 ---
 title: <xsl:stylesheet>
 slug: Web/XSLT/Element/stylesheet
-tags:
-  - Reference
-  - StyleSheet
-  - XSLT
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/stylesheet
 ---
 {{XSLTRef}}{{QuickLinksWithSubpages("/ja/docs/Web/XSLT")}}
 

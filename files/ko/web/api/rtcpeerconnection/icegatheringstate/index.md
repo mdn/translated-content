@@ -11,7 +11,9 @@ translation_of: Web/API/RTCPeerConnection/iceGatheringState
 
 ## Syntax
 
-     var state = RTCPeerConnection.iceGatheringState;
+```js
+var state = RTCPeerConnection.iceGatheringState;
+```
 
 ### 값
 
@@ -19,7 +21,7 @@ translation_of: Web/API/RTCPeerConnection/iceGatheringState
 
 ### RTCIceGatheringState enum[섹션](/ko/docs/Web/API/RTCPeerConnection#RTCIceGatheringState_enum)
 
-[`RTCPeerConnection.iceGatheringState`](/ko/docs/Web/API/RTCPeerConnection/iceGatheringState "읽기 속성인 RTCPeerConnection.iceGatheringState는 연결 인터페이스의 ICE 수집 상태를 알려주는 RTCIceGatheringState타입의 Enum을 반환합니다. 이 속성을 활용하면, ICE candidate 수집 과정이 언제 종료되는지 감지 할 수 있습니다.") 속성을 사용하게되면 반환되는 `RTCIceGatheringState` enum은 현재의 ICE 수집 상태를 반영하여 알려주는 문자열 상수입니다. [`icegatheringstatechange`](https://developer.mozilla.org/ko/docs/Web/Reference/Events/icegatheringstatechange "/ko/docs/Web/Reference/Events/icegatheringstatechange") 타입의 이벤트를 감시해서 이 값이 언제 변하는지 확인 할 수 있습니다.
+[`RTCPeerConnection.iceGatheringState`](/ko/docs/Web/API/RTCPeerConnection/iceGatheringState) 속성을 사용하게되면 반환되는 `RTCIceGatheringState` enum은 현재의 ICE 수집 상태를 반영하여 알려주는 문자열 상수입니다. [`icegatheringstatechange`](https://developer.mozilla.org/ko/docs/Web/Reference/Events/icegatheringstatechange "/ko/docs/Web/Reference/Events/icegatheringstatechange") 타입의 이벤트를 감시해서 이 값이 언제 변하는지 확인 할 수 있습니다.
 
 | 상수명        | 설명                                                                                                                                                                                                         |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -29,8 +31,10 @@ translation_of: Web/API/RTCPeerConnection/iceGatheringState
 
 ## <br>예시
 
-    var pc = new RTCPeerConnection();
-    var state = pc.iceGatheringState;
+```js
+var pc = new RTCPeerConnection();
+var state = pc.iceGatheringState;
+```
 
 ## 명세
 

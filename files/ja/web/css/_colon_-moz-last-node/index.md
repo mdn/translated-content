@@ -1,14 +1,6 @@
 ---
 title: ':-moz-last-node'
 slug: Web/CSS/:-moz-last-node
-tags:
-  - CSS
-  - CSS:Mozilla 拡張
-  - NeedsCompatTable
-  - 標準外
-  - 擬似クラス
-  - セレクター
-translation_of: Web/CSS/:-moz-last-node
 ---
 {{Non-standard_header}}{{CSSRef}}
 

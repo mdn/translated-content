@@ -1,16 +1,6 @@
 ---
 title: row-gap (grid-row-gap)
 slug: Web/CSS/row-gap
-tags:
-  - CSS
-  - CSS フレックスボックス
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-  - row-gap
-browser-compat: css.properties.row-gap
-translation_of: Web/CSS/row-gap
 ---
 {{CSSRef}}
 

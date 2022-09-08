@@ -4,7 +4,7 @@ slug: Web/HTTP/Headers
 ---
 {{ HTTPSidebar }}
 
-**HTTP 消息头**允许客户端和服务器通过 **request**和 **response**传递附加信息。一个请求头由名称（不区分大小写）后跟一个冒号 (\`:\`)，冒号后跟具体的值（不带换行符）组成。该值前面的引导空白会被忽略。
+**HTTP 消息头**允许客户端和服务器通过 **request**和 **response**传递附加信息。一个请求头由名称（不区分大小写）后跟一个冒号 (`:`)，冒号后跟具体的值（不带换行符）组成。该值前面的引导空白会被忽略。
 
 自定专用消息头可通过'X-' 前缀来添加；但是这种用法被 IETF 在 2012 年 6 月发布的 [RFC6648](https://tools.ietf.org/html/rfc6648) 中明确弃用，原因是其会在非标准字段成为标准时造成不便；其他的消息头在 [IANA 注册表](http://www.iana.org/assignments/message-headers/perm-headers.html) 中列出，其原始内容在 [RFC 4229](http://tools.ietf.org/html/rfc4229) 中定义。 此外，IANA 还维护着[被提议的新 HTTP 消息头注册表](http://www.iana.org/assignments/message-headers/prov-headers.html).
 

@@ -1,15 +1,6 @@
 ---
 title: 'Django 튜토리얼 파트 11: Django 웹사이트 공개하기'
 slug: Learn/Server-side/Django/Deployment
-tags:
-  - Django deployment
-  - django
-  - heroku
-  - whitenoise
-  - 웹 서버
-  - 장고
-  - 장고 배포
-translation_of: Learn/Server-side/Django/Deployment
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 

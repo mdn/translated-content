@@ -1,14 +1,6 @@
 ---
 title: animation-fill-mode
 slug: Web/CSS/animation-fill-mode
-tags:
-  - CSS
-  - CSS アニメーション
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.animation-fill-mode
-translation_of: Web/CSS/animation-fill-mode
 ---
 {{CSSRef}}
 

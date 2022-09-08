@@ -1,13 +1,6 @@
 ---
 title: box-flex-group
 slug: Web/CSS/box-flex-group
-tags:
-  - CSS
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/box-flex-group
 ---
 {{CSSRef}}{{Non-standard_Header}}
 
