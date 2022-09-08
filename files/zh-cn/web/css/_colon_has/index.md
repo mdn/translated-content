@@ -1,56 +1,48 @@
 ---
 title: ':has()'
 slug: Web/CSS/:has
-tags:
-  - ':has'
-  - CSS
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Selectors
-browser-compat: css.selectors.has
 ---
 {{CSSRef}}
 
-The **`:has()`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element if any of the selectors passed as parameters (relative to the {{cssxref(":scope")}} of the given element) match at least one element.
+**`:has()`** CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)代表一个元素，其给定的选择器参数（相对于该元素的 {{cssxref(":scope")}}）至少匹配一个元素。
 
-## Syntax
+## 语法
 
 ```
-:has( <forgiving-relative-selector-list> )
+:has( <相对选择器列表> )
 ```
 
-## Description
+## 描述
 
-The `:has()` pseudo-class takes a relative selector list as an argument.
+`:has()` 伪类使用相对选择器列表作为参数。
 
-## Examples
+## 示例
 
-### Matching \<a> elements that directly contain an \<img>
+### 匹配直接包含 \<img> 元素的 \<a> 元素
 
-The following selector matches only {{HTMLElement("a")}} elements that directly contain an {{HTMLElement("img")}} child:
+下面的选择器只会匹配直接包含 {{HTMLElement("img")}} 子元素的 {{HTMLElement("a")}} 元素：
 
 ```css
 a:has(> img)
 ```
 
-### Matching \<h1> elements that are followed by a \<p>
+### 匹配其后紧跟着 \<p> 元素的 \<h1> 元素
 
-The following selector matches {{HTMLElement("h1")}} elements only if they have a {{htmlelement("p")}} element directly following them:
+下面的选择器只会匹配其后紧跟着 {{HTMLElement("p")}} 元素的 {{HTMLElement("h1")}} 元素：
 
 ```css
 h1:has(+ p)
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
-- [`:scope`](/en-US/docs/Web/CSS/:scope)
+- [使用选择器定位 DOM 元素](/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [`:scope`](/zh-CN/docs/Web/CSS/:scope)
