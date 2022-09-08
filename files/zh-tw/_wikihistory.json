@@ -4978,10 +4978,6 @@
     "modified": "2020-10-15T21:53:17.228Z",
     "contributors": ["jackblackevo", "xsfishxs"]
   },
-  "Web/JavaScript/Shells": {
-    "modified": "2020-03-12T19:45:29.748Z",
-    "contributors": ["JianHuaHe"]
-  },
   "Web/JavaScript/Typed_arrays": {
     "modified": "2020-03-12T19:36:15.816Z",
     "contributors": [
@@ -5140,5 +5136,9 @@
   "conflicting/Web/Accessibility/ARIA": {
     "modified": "2019-03-23T22:50:58.911Z",
     "contributors": ["PatrickTaiwan", "Shiyou", "alk03073135"]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
+    "modified": "2020-03-12T19:45:29.748Z",
+    "contributors": ["JianHuaHe"]
   }
 }

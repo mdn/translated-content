@@ -32318,17 +32318,6 @@
     "modified": "2020-10-15T21:52:12.920Z",
     "contributors": ["RainSlide", "zhangchen", "wizardforcel"]
   },
-  "Web/JavaScript/Shells": {
-    "modified": "2020-09-04T03:12:55.502Z",
-    "contributors": [
-      "a1157116165",
-      "StorytellerF",
-      "pluwen",
-      "sonymoon",
-      "pelligit",
-      "maicss"
-    ]
-  },
   "Web/JavaScript/Typed_arrays": {
     "modified": "2020-10-15T21:26:17.964Z",
     "contributors": [
@@ -33899,5 +33888,16 @@
   "conflicting/Web/API/Element/touchstart_event": {
     "modified": "2020-10-15T22:30:05.652Z",
     "contributors": ["Carllllo"]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
+    "modified": "2020-09-04T03:12:55.502Z",
+    "contributors": [
+      "a1157116165",
+      "StorytellerF",
+      "pluwen",
+      "sonymoon",
+      "pelligit",
+      "maicss"
+    ]
   }
 }

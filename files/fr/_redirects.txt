@@ -2882,7 +2882,7 @@
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/À_propos	/fr/docs/Web/JavaScript/About_JavaScript
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/À_propos/Conventions_d'écriture	/fr/docs/Web/JavaScript
 /fr/docs/JavaScript/Same_origin_policy_for_JavaScript	/fr/docs/Web/Security/Same-origin_policy
-/fr/docs/JavaScript/Shells	/fr/docs/Web/JavaScript/Shells
+/fr/docs/JavaScript/Shells	/fr/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /fr/docs/JavaScript/Structures_de_données	/fr/docs/Web/JavaScript/Data_structures
 /fr/docs/JavaScript/Tableaux_typés	/fr/docs/Web/JavaScript/Typed_arrays
 /fr/docs/JavaScript/Une_réintroduction_à_JavaScript	/fr/docs/Web/JavaScript/Language_Overview
@@ -4573,6 +4573,7 @@
 /fr/docs/Web/Demos_of_open_web_technologies	/fr/docs/Web/Demos
 /fr/docs/Web/Démos_de_technologies_open_web	/fr/docs/Web/Demos
 /fr/docs/Web/Events/DOMContentLoaded	/fr/docs/Web/API/Window/DOMContentLoaded_event
+/fr/docs/Web/Events/Orientation_and_motion_data_explained	/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /fr/docs/Web/Events/abort	/fr/docs/Web/API/HTMLMediaElement/abort_event
 /fr/docs/Web/Events/abort_(ProgressEvent)	/fr/docs/Web/API/XMLHttpRequest/abort_event
 /fr/docs/Web/Events/abort_indexedDB	/fr/docs/Web/API/IDBTransaction/abort_event
@@ -4650,7 +4651,7 @@
 /fr/docs/Web/Guide/DOM	/fr/docs/Web/API/Document_Object_Model
 /fr/docs/Web/Guide/DOM/Events	/fr/docs/Web/Events
 /fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events	/fr/docs/Web/Events/Creating_and_triggering_events
-/fr/docs/Web/Guide/DOM/Events/Les_données_d_orientation_et_de_mouvement_expliquées	/fr/docs/Web/Events/Orientation_and_motion_data_explained
+/fr/docs/Web/Guide/DOM/Events/Les_données_d_orientation_et_de_mouvement_expliquées	/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /fr/docs/Web/Guide/DOM/Events/Touch_events	/fr/docs/Web/API/Touch_events
 /fr/docs/Web/Guide/DOM/Events/Touch_events/Gérer_à_la_fois_événement_tactile_et_événement_de_la_souris	/fr/docs/Web/API/Pointer_events
 /fr/docs/Web/Guide/DOM/Manipuler l'historique du navigateur	/fr/docs/Web/API/History_API
@@ -4660,7 +4661,7 @@
 /fr/docs/Web/Guide/DOM/Using_full_screen_mode	/fr/docs/Web/API/Fullscreen_API
 /fr/docs/Web/Guide/Events	/fr/docs/Web/Events
 /fr/docs/Web/Guide/Events/Creating_and_triggering_events	/fr/docs/Web/Events/Creating_and_triggering_events
-/fr/docs/Web/Guide/Events/Orientation_and_motion_data_explained	/fr/docs/Web/Events/Orientation_and_motion_data_explained
+/fr/docs/Web/Guide/Events/Orientation_and_motion_data_explained	/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /fr/docs/Web/Guide/Graphics/Dessiner_avec_canvas	/fr/docs/Web/API/Canvas_API/Tutorial
 /fr/docs/Web/Guide/HTML	/fr/docs/Learn/HTML
 /fr/docs/Web/Guide/HTML/Astuces_de_création_de_pages_HTML_à_affichage_rapide	/fr/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
@@ -5792,6 +5793,7 @@
 /fr/docs/Web/JavaScript/Reference/Virgules_finales	/fr/docs/Web/JavaScript/Reference/Trailing_commas
 /fr/docs/Web/JavaScript/Reference/fonctions_fléchées	/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/fr/docs/Web/Security/Same-origin_policy
+/fr/docs/Web/JavaScript/Shells	/fr/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /fr/docs/Web/JavaScript/Structures_de_données	/fr/docs/Web/JavaScript/Data_structures
 /fr/docs/Web/JavaScript/Tableaux_typés	/fr/docs/Web/JavaScript/Typed_arrays
 /fr/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
@@ -6394,7 +6396,6 @@
 /fr/docs/conflicting/Web/JavaScript/Guide/Introduction_6f341ba6db4b060ccbd8dce4a0d5214b	/fr/docs/Web/JavaScript/Guide/Introduction
 /fr/docs/conflicting/Web/JavaScript/Guide/Regular_Expressions/Assertions	/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions
 /fr/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain	/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
-/fr/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview	/fr/docs/Web/JavaScript/JavaScript_technologies_overview
 /fr/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features	/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /fr/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type	/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_type
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects	/fr/docs/Web/JavaScript/Reference/Global_Objects
@@ -6518,7 +6519,7 @@
 /fr/docs/orphaned/Web/Guide/Events	/fr/docs/Web/Events
 /fr/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events	/fr/docs/Web/Events/Creating_and_triggering_events
 /fr/docs/orphaned/Web/Guide/Events/Media_events	/fr/docs/Web/Events#media
-/fr/docs/orphaned/Web/Guide/Events/Orientation_and_motion_data_explained	/fr/docs/Web/Events/Orientation_and_motion_data_explained
+/fr/docs/orphaned/Web/Guide/Events/Orientation_and_motion_data_explained	/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /fr/docs/orphaned/Web/Guide/HTML/HTML5	/fr/docs/Glossary/HTML5
 /fr/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/fr/docs/Learn/HTML
 /fr/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines	/fr/docs/Web/HTML/Element/Heading_Elements

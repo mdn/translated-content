@@ -1,8 +1,9 @@
 ---
 title: JavaScript 쉘
-slug: Web/JavaScript/Shells
+slug: >-
+  conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
 translation_of: Web/JavaScript/Shells
-original_slug: Web/JavaScript/쉘
+original_slug: Web/JavaScript/Shells
 ---
 {{JsSidebar}}
 
