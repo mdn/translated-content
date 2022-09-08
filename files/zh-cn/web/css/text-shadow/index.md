@@ -4,7 +4,7 @@ slug: Web/CSS/text-shadow
 ---
 {{CSSRef}}
 
-**`text-shadow`** 为文字添加阴影。可以为文字与 [`decorations`](/docs/zh-cn/translation-guide.md/docs/Web/CSS/text-decoration) 添加多个阴影，阴影值之间用逗号隔开。每个阴影值由元素在 X 和 Y 方向的偏移量、模糊半径和颜色值组成。
+**`text-shadow`** 为文字添加阴影。可以为文字与 [`decorations`](/zh-CN/docs/Web/CSS/text-decoration) 添加多个阴影，阴影值之间用逗号隔开。每个阴影值由元素在 X 和 Y 方向的偏移量、模糊半径和颜色值组成。
 
 {{EmbedInteractiveExample("pages/css/text-shadow.html")}}
 
