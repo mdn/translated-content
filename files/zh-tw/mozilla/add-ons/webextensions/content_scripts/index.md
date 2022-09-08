@@ -167,14 +167,14 @@ window.confirm("Are you sure?"); // 呼叫原本的 window.confirm()
       <th scope="row">傳訊息</th>
       <td>
         <code
-          ><a href="/en-US/Add-ons/WebExtensions/API/runtime/sendMessage"
+          ><a href="/zh-TW/Add-ons/WebExtensions/API/runtime/sendMessage"
             >browser.runtime.sendMessage()</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/en-US/Add-ons/WebExtensions/API/Tabs/sendMessage"
+          ><a href="/zh-TW/Add-ons/WebExtensions/API/Tabs/sendMessage"
             >browser.tabs.sendMessage()</a
           ></code
         >
@@ -184,14 +184,14 @@ window.confirm("Are you sure?"); // 呼叫原本的 window.confirm()
       <th scope="row">收訊息</th>
       <td>
         <code
-          ><a href="/en-US/Add-ons/WebExtensions/API/runtime/onMessage"
+          ><a href="/zh-TW/Add-ons/WebExtensions/API/runtime/onMessage"
             >browser.runtime.onMessage</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/en-US/Add-ons/WebExtensions/API/runtime/onMessage"
+          ><a href="/zh-TW/Add-ons/WebExtensions/API/runtime/onMessage"
             >browser.runtime.onMessage</a
           ></code
         >

@@ -12,11 +12,11 @@ There are many other elements in HTML for formatting text, which we didn't get t
       <th scope="row">Prerequisites:</th>
       <td>
         Basic HTML familiarity, as covered in
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >Getting started with HTML</a
         >. HTML text formatting, as covered in
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
           >HTML text fundamentals</a
         >.
       </td>

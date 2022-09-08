@@ -12,10 +12,10 @@ slug: Learn/HTML/Introduction_to_HTML/Getting_started
       <th scope="row">需求:</th>
       <td>
         基礎電腦能力、已安裝<a
-          href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-TW/Learn/Getting_started_with_the_web/Installing_basic_software"
           >需要的基本軟體</a
         >、並知道如何<a
-          href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-TW/Learn/Getting_started_with_the_web/Dealing_with_files"
           >操作檔案</a
         >。
       </td>

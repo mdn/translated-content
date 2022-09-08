@@ -16,13 +16,13 @@ To get an idea of how different the various `<input>` types look, try editing th
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/HTML/Content_categories">Content categories</a>
+        <a href="/zh-TW/docs/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+        <a href="/zh-TW/docs/HTML/Content_categories#Flow_content"
           >Flow content</a
         >, listed, submittable, resettable, form-associated element,
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/zh-TW/docs/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >. If the {{htmlattrxref("type", "input")}} is not
         <code>hidden</code>, then labellable element, palpable content.
@@ -40,7 +40,7 @@ To get an idea of how different the various `<input>` types look, try editing th
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/zh-TW/docs/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >.
       </td>
