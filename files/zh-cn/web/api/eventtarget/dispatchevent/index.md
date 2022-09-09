@@ -4,7 +4,7 @@ slug: Web/API/EventTarget/dispatchEvent
 ---
 {{APIRef("DOM")}}
 
-{{domxref("EventTarget")}} 的 **`dispatchEvent()`** 方法会向一个指定的事件目标派发一个 {{domxref("Event")}}，并以合适的顺序（同步地）调用所有受影响的 {{domxref("EventListener")}}。标准事件处理规则 (包括事件捕获和可选的冒泡过程) 同样适用于通过手动使用 `dispatchEvent()` 方法派发的事件。
+{{domxref("EventTarget")}} 的 **`dispatchEvent()`** 方法会向一个指定的事件目标派发一个 {{domxref("Event")}}，并以合适的顺序（同步地）调用所有受影响的 {{domxref("EventListener")}}。标准事件处理规则（包括事件捕获和可选的冒泡过程）同样适用于通过手动使用 `dispatchEvent()` 方法派发的事件。
 
 调用 `dispatchEvent()` 是*触发一个事件*的最后一步。被触发的事件应事先通过 {{domxref("Event/Event", "Event()")}} 构造函数创建并初始化完毕。
 

@@ -4,7 +4,7 @@ slug: Web/API/EventTarget
 ---
 {{ApiRef("DOM")}}
 
-`EventTarget` 是一个 DOM 接口，由可以接收事件、并且可以创建侦听器的对象实现。换句话说，任何事件目标都会实现与该接口有关的这三个方法。
+`EventTarget` 接口由可以接收事件、并且可以创建侦听器的对象实现。换句话说，任何事件目标都会实现与该接口有关的这三个方法。
 
 {{domxref("Element")}} 及其子项、{{domxref("document")}} 和 {{domxref("window")}} 是最常见的事件目标，但其他对象也可以是事件目标。比如 {{domxref("XMLHttpRequest")}}、{{domxref("AudioNode")}} 和 {{domxref("AudioContext")}} 等等。
 
@@ -36,6 +36,6 @@ slug: Web/API/EventTarget
 
 ## 参见
 
-- [Events](/zh-CN/docs/Web/Reference/Events)（常用事件列表）
+- [事件参考](/zh-CN/docs/Web/Events)——站点中列出的事件
 - [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
 - {{domxref("Event")}} 接口

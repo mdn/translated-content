@@ -22,7 +22,7 @@ new EventTarget();
 
 一个 {{domxref("EventTarget")}} 实例。
 
-## 例子
+## 示例
 
 ```js
 class MyEventTarget extends EventTarget {
