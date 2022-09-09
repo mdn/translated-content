@@ -48,7 +48,7 @@ main(); //开始循环
 
 ## 在 Javascript 中构建一个更好的主循环
 
-在前面的主循环中有两个明显的问题：`main()`污染了 ` window``对象 `（所有全局变量存储的对象），并且示例代码没有给我们留下一个停止循环的方法，除非整个浏览器选项卡被关闭或刷新。对于第一个问题，如果您希望主循环只运行，并且不需要被简单（直接）访问它，您可以将它作为一个立即调用的函数表达式（IIFE）创建。
+在前面的主循环中有两个明显的问题：`main()` 污染了 `window` 对象 （所有全局变量存储的对象），并且示例代码没有给我们留下一个停止循环的方法，除非整个浏览器选项卡被关闭或刷新。对于第一个问题，如果您希望主循环只运行，并且不需要被简单（直接）访问它，您可以将它作为一个立即调用的函数表达式（IIFE）创建。
 
 ```js
 /*
@@ -98,7 +98,7 @@ window.cancelAnimationFrame(MyGame.stopMain);
 
 ## 用 JavaScript 构建一个更优化的主循环
 
-基本上，在 JavaScript 的中，浏览器有它自己的主循环，而你的代码存在于循环某些阶段。上面描述的主循环，试图避免脱离浏览器的控制。这种主循环附着于`window.requestAnimationFrame()`方法，该方法将在浏览器的下一帧中执行，具体取决于浏览器如何与将其自己的主循环关联起来。[W3C 规范](/en-US/docs/Games/Anatomy)并没有真正定义什么时候浏览器必须执行 requestAnimationFrame 回调。这有一个好处，浏览器厂商可以自由地实现他们认为最好的解决方案，并随着时间的推移进行调整。
+基本上，在 JavaScript 的中，浏览器有它自己的主循环，而你的代码存在于循环某些阶段。上面描述的主循环，试图避免脱离浏览器的控制。这种主循环附着于`window.requestAnimationFrame()`方法，该方法将在浏览器的下一帧中执行，具体取决于浏览器如何与将其自己的主循环关联起来。[W3C 规范](/zh-CN/docs/Games/Anatomy)并没有真正定义什么时候浏览器必须执行 requestAnimationFrame 回调。这有一个好处，浏览器厂商可以自由地实现他们认为最好的解决方案，并随着时间的推移进行调整。
 
 现代版的 Firefox 和 Google Chrome（可能还有其他版本）试图在框架的时间片的开始时将请求 AnimationFrame 回调与它们的主线程进行连接。因此，浏览器的主线程看起来就像下面这样：
 
@@ -196,7 +196,7 @@ var tNow = window.performance.now();
 
   - 即使在未聚焦或最小化的情况下，使用处理器时间，也可能是主线程，并且可能是传统游戏循环的工件（但是很简单）。
 
-- 绘制`requestAnimationFrame`和更新一个`setInterval`或`setTimeout`一个[Web 工作者](/en-US/docs/Web/Guide/Performance/Using_web_workers)。
+- 绘制`requestAnimationFrame`和更新一个`setInterval`或`setTimeout`一个[Web 工作者](/zh-CN/docs/Web/Guide/Performance/Using_web_workers)。
 
   - 这与上述相同，除了更新不会使主线程（主线程也没有）。这是一个更复杂的解决方案，并且对于简单更新可能会有太多的开销。
 

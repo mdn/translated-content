@@ -4,7 +4,7 @@ slug: Web/CSS/box-shadow
 ---
 {{CSSRef}}
 
-`box-shadow` 屬性為一個逗號分隔的列表描述一個或多個的陰影效果. 這使的你能夠從幾乎任何元素的框架放入陰影. 如果一個標記了 {{cssxref("border-radius")}} 的元素也標記了 box shadow, 這將使得他們有相同的圓邊. 多重 box shadows 的 z-index 排序跟多重 [text shadows](/en-US/CSS/text-shadow) 一樣(第一個備標記的陰影在最上面).
+`box-shadow` 屬性為一個逗號分隔的列表描述一個或多個的陰影效果. 這使的你能夠從幾乎任何元素的框架放入陰影. 如果一個標記了 {{cssxref("border-radius")}} 的元素也標記了 box shadow, 這將使得他們有相同的圓邊. 多重 box shadows 的 z-index 排序跟多重 [text shadows](/zh-TW/CSS/text-shadow) 一樣(第一個備標記的陰影在最上面).
 
 {{cssinfo}}
 

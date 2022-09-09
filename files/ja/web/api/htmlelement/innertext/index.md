@@ -1,14 +1,6 @@
 ---
 title: HTMLElement.innerText
 slug: Web/API/HTMLElement/innerText
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLElement.innerText
-translation_of: Web/API/HTMLElement/innerText
 ---
 {{APIRef("HTML DOM")}}
 

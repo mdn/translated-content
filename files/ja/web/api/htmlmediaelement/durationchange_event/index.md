@@ -1,15 +1,6 @@
 ---
 title: 'HTMLMediaElement: durationchange イベント'
 slug: Web/API/HTMLMediaElement/durationchange_event
-page-type: web-api-event
-tags:
-  - Audio
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Video
-browser-compat: api.HTMLMediaElement.durationchange_event
-translation_of: Web/API/HTMLMediaElement/durationchange_event
 ---
 {{APIRef("HTMLMediaElement")}}
 

@@ -621,7 +621,7 @@ La méthode `attachEvent()` peut être couplée avec l'évènement `onresize` po
 
 ### Prothèse d'émulation (_polyfill_)
 
-Vous pouvez contourner le fait que `addEventListener()`, `removeEventListener()`, {{domxref("Event.preventDefault()")}} et {{domxref("Event.stopPropagation()")}} ne sont pas pris en charge par IE 8 en utilisant le code suivant au début de votre script. Le code prend en charge l'utilisation de `handleEvent()`, et aussi l'évènement {{event("DOMContentLoaded")}}.
+Vous pouvez contourner le fait que `addEventListener()`, `removeEventListener()`, {{domxref("Event.preventDefault()")}} et {{domxref("Event.stopPropagation()")}} ne sont pas pris en charge par IE 8 en utilisant le code suivant au début de votre script. Le code prend en charge l'utilisation de `handleEvent()`, et aussi l'évènement [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event).
 
 > **Note :** `useCapture` n'est pas pris en charge, du fait qu'IE 8 n'a aucune méthode alternative. Le code suivant ajoute seulement la prise en charge d'IE 8. Cette émulation pour IE 8 fonctionne uniquement en mode standard : une déclaration `doctype` est requise.
 

@@ -121,13 +121,13 @@ console.log(runCodeWithDateFunction(
 
 由于三重嵌套函数，上面的代码似乎效率低下，但让我们分析一下上述有效方法的好处：
 
-1\. 它使得传递给`runCodeWithDateFunction`的字符串中的代码更少；
+1. 它使得传递给`runCodeWithDateFunction`的字符串中的代码更少；
 
-2\. 函数调用开销很小，使得代码尺寸小得多，值得获益；
+2. 函数调用开销很小，使得代码尺寸小得多，值得获益；
 
-3\. `Function()`更容易让你的代码利用特性修饰 `"use strict"`；
+3. `Function()`更容易让你的代码利用特性修饰 `"use strict"`；
 
-4\. 代码不使用 `eval()`，使其比其他方式快几个数量级。
+4. 代码不使用 `eval()`，使其比其他方式快几个数量级。
 
 最后，我们来看看简化版。使用如上所示的`Function()`，您可以更有效地缩小传递给`runCodeWithDateFunction`的代码字符串，因为函数参数名称也可以缩小，如下面的缩小代码所示。
 

@@ -1,14 +1,6 @@
 ---
 title: Gecko
 slug: Glossary/Gecko
-tags:
-  - Firefox OS
-  - Gecko
-  - Glossary
-  - Infrastructure
-  - Intro
-  - Mozilla
-translation_of: Glossary/Gecko
 ---
 **Gecko** は Mozilla プロジェクトによって開発された レイアウトエンジンであり、{{glossary("Mozilla Firefox","Firefox")}} や {{glossary("Firefox OS")}} を含む多くのアプリ / デバイスで使用されています。
 

@@ -28,11 +28,11 @@ tags:
 
 문자열 값을 사용하여 "immutableString" 을 추가하면 다음 이벤트가 발생합니다.:
 
-1.  기존 값 "immutableString"이 검색되었습니다.
-2.  "World"가 "immutableString"의 기존 값에 추가됩니다.
-3.  결과 값이 새 메모리 블록에 할당됩니다.
-4.  "immutableString" 객체는 새로 만든 메모리 공간을 가리킵니다.
-5.  기존에 생성한 메모리 공간은 Garbage collection이 가능해 집니다.
+1. 기존 값 "immutableString"이 검색되었습니다.
+2. "World"가 "immutableString"의 기존 값에 추가됩니다.
+3. 결과 값이 새 메모리 블록에 할당됩니다.
+4. "immutableString" 객체는 새로 만든 메모리 공간을 가리킵니다.
+5. 기존에 생성한 메모리 공간은 Garbage collection이 가능해 집니다.
 
 ## 더 알아보기
 

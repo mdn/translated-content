@@ -47,4 +47,4 @@ document.body.addEventListener('click', hide, false);
 
 ## 参考
 
-- [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [Comparison of Event Targets](/zh-CN/docs/Web/API/Event/Comparison_of_Event_Targets)

@@ -1,11 +1,6 @@
 ---
 title: CSS JSON DB を更新するには
 slug: MDN/Contribute/Howto/Update_the_CSS_JSON_DB
-tags:
-  - Guide
-  - Howto
-  - MDN Meta
-translation_of: MDN/Contribute/Howto/Update_the_CSS_JSON_DB
 ---
 {{MDNSidebar}}
 

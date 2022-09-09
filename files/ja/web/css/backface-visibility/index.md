@@ -1,14 +1,6 @@
 ---
 title: backface-visibility
 slug: Web/CSS/backface-visibility
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 座標変換
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.backface-visibility
-translation_of: Web/CSS/backface-visibility
 ---
 {{CSSRef}}
 

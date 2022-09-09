@@ -1,12 +1,6 @@
 ---
 title: 段組みの基本概念
 slug: Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - ガイド
-  - レイアウト
-translation_of: Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
 ---
 {{CSSRef}}
 

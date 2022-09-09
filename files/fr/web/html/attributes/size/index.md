@@ -44,14 +44,11 @@ En ajoutant `size` sur certains types d'entrée, la largeur de l'entrée peut ê
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-size', 'size attribute')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5.1', 'input.html#attr-size-accept', 'size attribute')}}     | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attribute.size")}}
+{{Compat}}
 
 ## Voir aussi
 

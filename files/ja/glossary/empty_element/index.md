@@ -1,11 +1,6 @@
 ---
 title: Empty element (空要素)
 slug: Glossary/Empty_element
-tags:
-  - CodingScripting
-  - Glossary
-  - Intermediate
-translation_of: Glossary/Empty_element
 ---
 **空要素** とは HTML、SVG、MathML における {{Glossary("element", "要素")}} のうち、子ノード (子要素およびテキストノード) を**持つことができない**ものを指します。
 

@@ -1,14 +1,6 @@
 ---
 title: z-index の使用
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
-tags:
-  - 上級者
-  - CSS
-  - ガイド
-  - リファレンス
-  - Understanding_CSS_z-index
-  - z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 ---
 {{CSSRef}}
 

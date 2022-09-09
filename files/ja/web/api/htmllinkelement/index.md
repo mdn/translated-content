@@ -1,15 +1,6 @@
 ---
 title: HTMLLinkElement
 slug: Web/API/HTMLLinkElement
-page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTMLLinkElement
-  - インターフェイス
-  - リファレンス
-browser-compat: api.HTMLLinkElement
-translation_of: Web/API/HTMLLinkElement
 ---
 {{ APIRef("HTML DOM") }}
 

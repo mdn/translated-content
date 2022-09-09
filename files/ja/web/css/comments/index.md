@@ -1,11 +1,6 @@
 ---
 title: コメント
 slug: Web/CSS/Comments
-tags:
-  - CSS
-  - Guide
-  - Reference
-translation_of: Web/CSS/Comments
 ---
 {{CSSRef}}
 

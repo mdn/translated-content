@@ -1,16 +1,6 @@
 ---
 title: CSS カスタムプロパティ (変数) の使用
 slug: Web/CSS/Using_CSS_custom_properties
-tags:
-  - CSS
-  - CSS Variables
-  - CSS 変数
-  - Guide
-  - Web
-  - ウェブ
-  - カスケード変数
-  - カスタムプロパティ
-translation_of: Web/CSS/Using_CSS_custom_properties
 ---
 {{cssref}}
 
@@ -246,8 +236,8 @@ p { color: var(--text-color); }
 
 期待通りに、ブラウザーは `var(--text-color)` の場所を `--text-color` の値で置き換えようとしますが、 `16px` は {{cssxref("color")}} に妥当なプロパティ値ではありません。置き換え後、プロパティは意味をなさなくなります。ブラウザーはこの状況を二段階で扱います。
 
-1.  color プロパティが継承可能であるかを確認します。可能ですが、 `<p>` には color プロパティを持つ親がありません。よって次の段階に進みます。
-2.  値を**既定の初期値**、つまり、黒に設定します。
+1. color プロパティが継承可能であるかを確認します。可能ですが、 `<p>` には color プロパティを持つ親がありません。よって次の段階に進みます。
+2. 値を**既定の初期値**、つまり、黒に設定します。
 
 ### 結果
 

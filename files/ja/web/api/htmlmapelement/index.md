@@ -1,12 +1,6 @@
 ---
 title: HTMLMapElement
 slug: Web/API/HTMLMapElement
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - リファレンス
-translation_of: Web/API/HTMLMapElement
 ---
 {{ APIRef("HTML DOM") }}
 

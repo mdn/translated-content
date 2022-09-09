@@ -1,14 +1,6 @@
 ---
 title: minification
 slug: Glossary/minification
-tags:
-- Glossary
-- Performance
-- Reference
-- Web Performance
-- 用語集
-- 性能
-- ウェブの性能
 ---
 **minification** とは、ブラウザーによるリソースの処理に影響を与えることなく、不要なデータや冗長なデータを削除する処理です。
 

@@ -141,7 +141,7 @@ someString + "";                              // "hi"
 
 ### 内置可迭代对象
 
-目前所有的内置可迭代对象如下：{{jsxref("String")}}、{{jsxref("Array")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}} 和 {{jsxref("Set")}}，它们的原型对象都实现了 ` @@``iterator ` 方法。
+目前所有的内置可迭代对象如下：{{jsxref("String")}}、{{jsxref("Array")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}} 和 {{jsxref("Set")}}，它们的原型对象都实现了 `@@iterator` 方法。
 
 ### 自定义可迭代对象
 

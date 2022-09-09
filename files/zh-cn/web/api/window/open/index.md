@@ -516,7 +516,7 @@ Always provide a meaningful name to your target attribute and try to reuse such 
 
 ## 规范
 
-HTML5. See http\://www\.w3.org/TR/html5/browsers.html#dom-open for details.
+HTML5. See <https://www.w3.org/TR/html5/browsers.html#dom-open> for details.
 
 ## 注意
 

@@ -1,12 +1,6 @@
 ---
 title: 関数宣言
 slug: Web/JavaScript/Reference/Statements/function
-tags:
-  - Function
-  - JavaScript
-  - Language feature
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/function
 ---
 {{jsSidebar("Statements")}}
 

@@ -1,15 +1,6 @@
 ---
 title: AudioBuffer.numberOfChannels
 slug: Web/API/AudioBuffer/numberOfChannels
-tags:
-  - API
-  - AudioBuffer
-  - プロパティ
-  - リファレンス
-  - ウェブ音声 API
-  - numberOfChannels
-browser-compat: api.AudioBuffer.numberOfChannels
-translation_of: Web/API/AudioBuffer/numberOfChannels
 ---
 {{ APIRef("Web Audio API") }}
 

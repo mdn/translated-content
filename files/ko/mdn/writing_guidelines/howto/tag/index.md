@@ -48,15 +48,15 @@ MDN은 태그를 여러가지 방법으로 사용합니다.
 
 다음과 같은 카테고리 명을 표준 태그로 사용하고 있습니다.
 
-- `{{Tag("Intro")}}`
+- `Intro`
   - : 이 문서는 주제에 관한 입문 자료를 제공합니다. 이상적으로는 각 기술 영역에 하나의 인트로만 존재해야 합니다.
-- `{{Tag("Reference")}}`
+- `Reference`
   - : 이 문서는 API, 요소(Element), 속성 등에 관한 참조 자료가 포함되어 있습니다.
-- `{{Tag("Landing")}}`
+- `Landing`
   - : 이 문서는 랜딩 페이지입니다.
-- `{{Tag("Guide")}}`
+- `Guide`
   - : 이 문서는 방법 일람이나 가이드입니다.
-- `{{Tag("Example")}}`
+- `Example`
   - : 이 문서는 코드 샘플 페이지거나, 코드 샘플(한 줄짜리 구문 예제가 아닌 실제로 유용한 코드 조각)을 포함하고 있습니다.
 
 ### 주제
@@ -65,20 +65,20 @@ MDN은 태그를 여러가지 방법으로 사용합니다.
 
 새로운 항목이 생길 수 있어 유연성을 위한 여지가 있긴 하지만, 되도록 API나 기술의 이름으로 제한하려고 합니다. 자주 쓰이는 예시입니다.
 
-- `{{Tag("HTML")}}`
-- `{{Tag("CSS")}}`
-- `{{Tag("JavaScript")}}` (대문자 S)
-- `{{Tag("Document")}}`
-- `{{Tag("DOM")}}`
-- `{{Tag("API")}}` API의 각 개요, 인터페이브, 메서드, 속성마다.
-- `{{Tag("Method")}}` API의 각 메서드마다.
-- `{{Tag("Property")}}` API의 각 속성마다.
-- `{{Tag("Graphics")}}`
-- `{{Tag("SVG")}}`
-- `{{Tag("WebGL")}}`
-- `{{Tag("Tools")}}`
-- `{{Tag("Web")}}`
-- `{{Tag("Element")}}`
+- `HTML`
+- `CSS`
+- `JavaScript` (대문자 S)
+- `Document`
+- `DOM`
+- `API` API의 각 개요, 인터페이브, 메서드, 속성마다.
+- `Method` API의 각 메서드마다.
+- `Property` API의 각 속성마다.
+- `Graphics`
+- `SVG`
+- `WebGL`
+- `Tools`
+- `Web`
+- `Element`
 
 대체로, your topic identification tag should be the name of an interface with a number of related pages (like [Node](/ko/docs/Web/API/Node), which has many pages for its various properties and methods), or the name of an overall technology type. You might tag a page about WebGL with `Graphics` and `WebGL`, for example, but a page about {{HTMLElement("canvas")}} with `HTML`, `Element`, `Canvas`, and `Graphics`.
 
@@ -86,24 +86,24 @@ MDN은 태그를 여러가지 방법으로 사용합니다.
 
 아래 태그는 모질라 관련 콘텐츠에만 사용합니다.
 
-- `{{Tag("Mozilla")}}`
-- `{{Tag("Firefox")}}`
-- `{{Tag("Firefox OS")}}`
-- `{{Tag("Gecko")}}`
-- `{{Tag("XUL")}}`
-- `{{Tag("XPCOM")}}`
+- `Mozilla`
+- `Firefox`
+- `Firefox OS`
+- `Gecko`
+- `XUL`
+- `XPCOM`
 
 ### API 식별
 
 API 참조 내에서 각 문서는 API에서 다루는 부분을 식별해야합니다.
 
-- {{tag("Interface")}}
+- Interface
   - : The main article for an interface should have this tag. For example, {{domxref("RTCPeerConnection")}}.
-- {{tag("Constructor")}}
+- Constructor"
   - : Each interface may have up to one page tagged "Constructor"; this is the interface's constructor. The page should have the same name as the interface, like {{domxref("RTCPeerConnection.RTCPeerConnection()")}}.
-- {{tag("Property")}}
+- Property
   - : Every article describing a particular property within an interface needs this tag. See {{domxref("RTCPeerConnection.connectionState")}}, for example.
-- {{tag("Method")}}
+- Method
   - : Each article documenting an interface method needs this tag. See {{domxref("RTCPeerConnection.createOffer()")}} for example.
 
 In addition, the reference pages need to include interface, property, and method names among their tags. Some examples:
@@ -121,19 +121,19 @@ To help the reader understand how viable a technology is, we use tags to label p
 
 다음 태그와 가능한 값은 다음과 같습니다:
 
-- `{{Tag("Read-only")}}`
+- `Read-only`
   - : Apply this tag to reference pages which describe a property or attribute which is read-only.
-- `{{Tag("Non-standard")}}`
-  - : Indicates that the technology or API described on the page is not part of a standard, whether it's stable or not in any browsers which implement it (if it's not stable, it should also be {{Tag("Experimental")}}). If you don't use this tag, your readers will assume the technology is standard. The compatibility table on the page should clarify which browser(s) support this technology or API.
-- `{{Tag("Deprecated")}}`
+- `Non-standard`
+  - : Indicates that the technology or API described on the page is not part of a standard, whether it's stable or not in any browsers which implement it (if it's not stable, it should also be Experimental")}}). If you don't use this tag, your readers will assume the technology is standard. The compatibility table on the page should clarify which browser(s) support this technology or API.
+- `Deprecated`
   - : The technology or API covered on the page is marked as deprecated in the specification, and is likely to eventually be removed, but is generally still available in current versions of browsers.
-- `{{Tag("Obsolete")}}`
+- `Obsolete`
   - : The technology or API has been deemed obsolete and has been removed (or is actively being removed) from all or most current browsers.
-- `{{Tag("Experimental")}}`
-  - : The technology is not standardized, and is an experimental technology or API that may or may not ever become part of a standard. It is also subject to change in the browser engine (typically only one) that implements it. If the technology isn't part of any specification (even in draft form), it should also have the {{tag("Non-standard")}} tag.
-- `{{Tag("Needs Privileges")}}`
+- `Experimental`
+  - : The technology is not standardized, and is an experimental technology or API that may or may not ever become part of a standard. It is also subject to change in the browser engine (typically only one) that implements it. If the technology isn't part of any specification (even in draft form), it should also have the Non-standard")}} tag.
+- `Needs Privileges`
   - : The API requires privileged access to the device on which the code is running.
-- `{{Tag("Certified Only")}}`
+- `Certified Only`
   - : The API only works in certified code.
 
 These tags are no excuse to leave out the [compatibility table](/ko/docs/Project:Compatibility_tables) in your article! That should always be present.
@@ -142,30 +142,30 @@ These tags are no excuse to leave out the [compatibility table](/ko/docs/Project
 
 Use the skill-level tag type only for guides and tutorials (that is, pages tagged `Guide`) to help users choose tutorials based on how familiar they are with a technology. There are three values for this:
 
-- `{{Tag("Beginner")}}`
+- `Beginner`
   - : Articles designed to introduce the reader to a technology they've never used or have only a passing familiarity with.
-- `{{Tag("Intermediate")}}`
+- `Intermediate`
   - : Articles for users who have gotten started with the technology but aren't experts.
-- `{{Tag("Advanced")}}`
+- `Advanced`
   - : Articles about stretching the capabilities of a technology and of the reader.
 
 ### 문서 메타데이터
 
 글쓰기 커뮤니티는 태그를 사용하여 문서에 특정 유형의 작업이 필요하다고 표시합니다. 우리가 가장 많이 사용하는 목록은 다음과 같습니다:
 
-- `{{Tag("Draft")}}`
+- `Draft`
   - : The article is not complete, and is at least in theory still actively being updated (although it's also possible it's been forgotten about). Try to check with the most recent contributors before making changes, in order to avoid potential content collisions.
-- `{{Tag("NeedsContent")}}`
+- `NeedsContent`
   - : The article is a stub, or is otherwise lacking information. This tag means that someone should review the content and add more details and/or finish writing the article.
-- `{{Tag("NeedsExample")}}`
+- `NeedsExample`
   - : The article needs one or more examples created to help illustrate the article's point. These examples should use the [live sample system](/ko/docs/Project:MDN/Contributing/How_to_help/Code_samples).
-- `{{Tag("NeedsLiveSamples")}}`
+- `NeedsLiveSamples`
   - : The article has one or more examples that need to be updated to use the [live sample system](/ko/docs/Project:MDN/Contributing/How_to_help/Code_samples).
-- `{{Tag("NeedsUpdate")}}`
+- `NeedsUpdate`
   - : The content is out of date and needs to be updated.
-- `{{Tag("l10n:exclude")}}`
+- `l10n:exclude`
   - : The content is not really worth localizing and will not appear on localization status pages.
-- `{{Tag("l10n:priority")}}`
+- `l10n:priority`
   - : The content is important and should be marked as a priority for MDN translators. Shows up in an extra priority table on localization status pages.
 
 ## 조합하기
@@ -187,33 +187,33 @@ MDN 페이지에 올바르게 태그를 지정하지 않으면 검색 필터가 
 
 | 필터 그룹 | 검색명                | 태그명                                                                                                                |
 | --------- | --------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| 주제      | Open Web Apps         | {{Tag("Apps")}}                                                                                                  |
-|           | HTML                  | {{Tag("HTML")}}                                                                                                  |
-|           | CSS                   | {{Tag("CSS")}}                                                                                                  |
-|           | JavaScript            | {{Tag("JavaScript")}}                                                                                          |
-|           | APIs and DOM          | {{Tag("API")}}                                                                                                  |
-|           | Canvas                | {{Tag("Canvas")}}                                                                                              |
-|           | SVG                   | {{Tag("SVG")}}                                                                                                  |
-|           | MathML                | {{Tag("MathML")}}                                                                                              |
-|           | WebGL                 | {{Tag("WebGL")}}                                                                                                  |
-|           | XUL                   | {{Tag("XUL")}}                                                                                                  |
-|           | Marketplace           | {{Tag("Marketplace")}}                                                                                          |
-|           | Firefox               | {{Tag("Firefox")}}                                                                                              |
-|           | 안드로이드 용 Firefox | {{Tag("Firefox Mobile")}}                                                                                      |
-|           | 데스크탑 용Firefox    | {{Tag("Firefox Desktop")}}                                                                                  |
-|           | Firefox 운영체제      | {{Tag("Firefox OS")}}                                                                                          |
-|           | 모바일                | {{Tag("Mobile")}}                                                                                              |
-|           | 웹 개발               | {{Tag("Web Development")}}                                                                                  |
-|           | 애드온 & 확장프로그램 | {{Tag("Add-ons ")}}\|\| {{Tag("Extensions")}} \|\| {{Tag("Plugins")}} \|\| {{Tag("Themes")}} |
-|           | 게임                  | {{Tag("Games")}}                                                                                                  |
-| 기술 수준 | 전문가                | {{Tag("Advanced")}}                                                                                              |
-|           | 중급자                | {{Tag("Intermediate")}}                                                                                      |
-|           | 초급자                | {{Tag("Beginner")}}                                                                                              |
+| 주제      | Open Web Apps         | Apps                                                                                                  |
+|           | HTML                  | HTML                                                                                                  |
+|           | CSS                   | CSS                                                                                                  |
+|           | JavaScript            | JavaScript                                                                                          |
+|           | APIs and DOM          | API                                                                                                  |
+|           | Canvas                | Canvas                                                                                              |
+|           | SVG                   | SVG                                                                                                  |
+|           | MathML                | MathML                                                                                              |
+|           | WebGL                 | WebGL                                                                                                  |
+|           | XUL                   | XUL                                                                                                  |
+|           | Marketplace           | Marketplace                                                                                          |
+|           | Firefox               | Firefox                                                                                              |
+|           | 안드로이드 용 Firefox | Firefox Mobile                                                                                      |
+|           | 데스크탑 용Firefox    | Firefox Desktop                                                                                  |
+|           | Firefox 운영체제      | Firefox OS                                                                                          |
+|           | 모바일                | Mobile                                                                                              |
+|           | 웹 개발               | Web Development                                                                                  |
+|           | 애드온 & 확장프로그램 | Add-ons \|\| Extensions \|\| Plugins \|\| Themes |
+|           | 게임                  | Games                                                                                                  |
+| 기술 수준 | 전문가                | Advanced                                                                                              |
+|           | 중급자                | Intermediate                                                                                      |
+|           | 초급자                | Beginner                                                                                              |
 | 문서 형식 | 문서                  | _This restricts the search to docs content, leaving out Hacks and other MDN content._                                 |
 |           | 체험판                | _This includes Demo Studio content in the search results._                                                            |
-|           | 도구                  | {{Tag("Tools")}}                                                                                                  |
-|           | 코드 샘플             | {{Tag("Example")}}                                                                                              |
-|           | 튜토리얼              | {{Tag("Guide")}}                                                                                                  |
+|           | 도구                  | Tools                                                                                                  |
+|           | 코드 샘플             | Example                                                                                              |
+|           | 튜토리얼              | Guide                                                                                                  |
 |           | 개발자 프로필         | _This includes developer profiles from the MDN site in the search results._                                           |
 |           | 외부 리소스           | _The dev team is still figuring this out..._                                                                          |
 

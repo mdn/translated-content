@@ -1,12 +1,6 @@
 ---
 title: <xsl:output>
 slug: Web/XSLT/Element/output
-tags:
-  - XSLT
-  - output
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/output
 ---
 {{ XsltRef() }}
 
@@ -16,16 +10,16 @@ translation_of: Web/XSLT/Element/output
 
 ```
 <xsl:output
-	method="xml" | "html" | "text"
-	version=STRING
-	encoding=STRING
-	omit-xml-declaration="yes" | "no"
-	standalone="yes" | "no"
-	doctype-public=STRING
-	doctype-system=STRING
-	cdata-section-elements=LIST-OF-NAMES
-	indent="yes" | "no"
-	media-type=STRING  />
+  method="xml" | "html" | "text"
+  version=STRING
+  encoding=STRING
+  omit-xml-declaration="yes" | "no"
+  standalone="yes" | "no"
+  doctype-public=STRING
+  doctype-system=STRING
+  cdata-section-elements=LIST-OF-NAMES
+  indent="yes" | "no"
+  media-type=STRING  />
 ```
 
 ### 必須属性

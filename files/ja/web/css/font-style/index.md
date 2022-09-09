@@ -1,16 +1,6 @@
 ---
 title: font-style
 slug: Web/CSS/font-style
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - ウェブ
-  - font
-  - recipe:css-property
-browser-compat: css.properties.font-style
-translation_of: Web/CSS/font-style
 ---
 {{CSSRef}}
 

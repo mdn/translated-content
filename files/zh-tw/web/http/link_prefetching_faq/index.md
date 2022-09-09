@@ -12,7 +12,7 @@ slug: Web/HTTP/Link_prefetching_FAQ
 
 ### 如何告訴瀏覽器預先取回資源 ?
 
-透過 HTML {{ HTMLElement("link") }} 或 [HTTP](/en/HTTP) `Link:` 標頭 (header) 便可以告訴瀏覽器哪些資源可以預先取回，範例如下：
+透過 HTML {{ HTMLElement("link") }} 或 [HTTP](/zh-TW/HTTP) `Link:` 標頭 (header) 便可以告訴瀏覽器哪些資源可以預先取回，範例如下：
 
 利用 Link 元素
 

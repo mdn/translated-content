@@ -1,14 +1,6 @@
 ---
 title: Window.outerWidth
 slug: Web/API/Window/outerWidth
-tags:
-  - API
-  - CSSOM View
-  - NeedsContent
-  - Property
-  - Reference
-  - outerWidth
-translation_of: Web/API/Window/outerWidth
 ---
 {{APIRef}}
 

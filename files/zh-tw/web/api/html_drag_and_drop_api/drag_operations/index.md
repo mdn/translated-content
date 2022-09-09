@@ -93,7 +93,7 @@ event.dataTransfer.clearData("text/uri-list");
 
 ## 設定拖曳圖片
 
-當拖曳進行中，以拖曳元素為基礎，一個半透明的圖片會自動產生出來，並且跟著滑鼠移動。如果想要，我們也可以呼叫[`setDragImage()來指定我們自己的拖曳使用圖片。`](/en-US/docs/DragDrop/DataTransfer#setDragImage.28.29)
+當拖曳進行中，以拖曳元素為基礎，一個半透明的圖片會自動產生出來，並且跟著滑鼠移動。如果想要，我們也可以呼叫[`setDragImage()來指定我們自己的拖曳使用圖片。`](/zh-TW/docs/DragDrop/DataTransfer#setDragImage.28.29)
 
 ```js
 event.dataTransfer.setDragImage(image, xOffset, yOffset);
@@ -326,7 +326,7 @@ function doDrop(event)
 
 ## 完成拖曳
 
-拖曳作業完成後，不論成功或取消於否，被拖曳元素的[`dragend`](/en-US/docs/Web/Reference/Events/dragend)事件都會觸發，如果想要判別作業是否完成，可以檢查 dropEffect 屬性，若是 dropEffect 為 none，代表拖曳作業被取消，否則 dropEffect 的值代表所完成的作業類型。
+拖曳作業完成後，不論成功或取消於否，被拖曳元素的[`dragend`](/zh-TW/docs/Web/Reference/Events/dragend)事件都會觸發，如果想要判別作業是否完成，可以檢查 dropEffect 屬性，若是 dropEffect 為 none，代表拖曳作業被取消，否則 dropEffect 的值代表所完成的作業類型。
 
 有一個 Gecko 專屬的[mozUserCancelled](/zh-TW/docs/DragDrop/DataTransfer#mozUserCancelled.28.29)屬性，當使用者按 ESC 鍵取消拖曳後，這個屬性會為 true，但若是因其他理由被取消或成功，則為 false
 

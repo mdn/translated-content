@@ -1,21 +1,6 @@
 ---
 title: WebXR の形状と参照空間
 slug: Web/API/WebXR_Device_API/Geometry
-page-type: guide
-tags:
-  - API
-  - Geometry
-  - Guide
-  - Math
-  - Orientation
-  - Placement
-  - Position
-  - Reference Spaces
-  - Spaces
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-translation_of: Web/API/WebXR_Device_API/Geometry
 ---
 {{DefaultAPISidebar("WebXR Device API")}}
 

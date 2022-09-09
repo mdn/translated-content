@@ -1,16 +1,6 @@
 ---
 title: Latency(レイテンシー)
 slug: Glossary/Latency
-tags:
-  - Audio
-  - Glossary
-  - Media
-  - Networking
-  - Reference
-  - Video
-  - Web Performance
-  - latency
-translation_of: Glossary/Latency
 ---
 **レイテンシー (遅延時間)** とは要求されたリソースが目的地に到達するまでにかかるネットワーク時間のことです。低レイテンシーとは良好な状態で、遅延時間がほとんどないか、またはまったくないことを意味します。高レイテンシーは悪い状態で、要求されたリソースが目的地に到達するまでに長い時間がかかることを意味します。
 

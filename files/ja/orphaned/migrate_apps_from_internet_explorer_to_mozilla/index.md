@@ -561,7 +561,7 @@ Mozilla uses almost standards mode for the following conditions:
 - For any "loose" doctype (for example, `<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">`, `<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">`)
 - For the IBM doctype (`<!DOCTYPE html SYSTEM "http://www.ibm.com/data/dtd/v11/ibmxhtml1-transitional.dtd">`)
 
-You can read more about the [image gap issue](/en/Images,_Tables,_and_Mysterious_Gaps "en/Images,_Tables,_and_Mysterious_Gaps").
+You can read more about the [image gap issue](/en/Images,_Tables,_and_Mysterious_Gaps).
 
 #### Quirks mode
 
@@ -572,7 +572,7 @@ Mozilla uses quirks mode for the following conditions:
 - When no doctype is specified
 - For doctypes without a system identifier (for example, `<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">`)
 
-For further reading, check out: [Mozilla Quirks Mode Behavior](/en/Mozilla_Quirks_Mode_Behavior "en/Mozilla_Quirks_Mode_Behavior") and [Mozilla's DOCTYPE sniffing](/en/Mozilla's_DOCTYPE_sniffing "en/Mozilla's_DOCTYPE_sniffing").
+For further reading, check out: [Mozilla Quirks Mode Behavior](/en/Mozilla_Quirks_Mode_Behavior) and [Mozilla's DOCTYPE sniffing](/en/Mozilla's_DOCTYPE_sniffing).
 
 ### Event differences
 
@@ -651,7 +651,7 @@ Mozilla fully supports the W3C standard way of attaching listeners to DOM nodes.
 
 One advantage of `addEventListener()` and `removeEventListener()` over setting properties is that you can have multiple event listeners for the same event, each calling another function. Thus, to remove an event listener requires all three parameters be the same as the ones you use when adding the listener.
 
-Mozilla does not support Internet Explorer's method of converting \<script> tags into event handlers, which extends \<script> with `for` and `event` attributes (see Table 5). It also does not support the `attachEvent` and `detachEvent` methods. Instead, you should use the `addEventListener` and `removeEventListener` methods. Internet Explorer does not support the W3C events specification. However, IE can be [remediated to support addEventListener and removeEventListener.](/en/RemediateIE "en/RemediateIE")
+Mozilla does not support Internet Explorer's method of converting \<script> tags into event handlers, which extends \<script> with `for` and `event` attributes (see Table 5). It also does not support the `attachEvent` and `detachEvent` methods. Instead, you should use the `addEventListener` and `removeEventListener` methods. Internet Explorer does not support the W3C events specification. However, IE can be [remediated to support addEventListener and removeEventListener.](/en/RemediateIE)
 
 | Internet Explorer Method                    | Mozilla Method                                                   | Description                                 |
 | ------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------- |
@@ -660,9 +660,9 @@ Mozilla does not support Internet Explorer's method of converting \<script> tags
 
 ### Rich text editing
 
-While Mozilla prides itself with being the most W3C web standards compliant browser, it does support nonstandard functionality, such as `innerHTML` and [rich text editing](/en/Midas "en/Midas"), if no W3C equivalent exists.
+While Mozilla prides itself with being the most W3C web standards compliant browser, it does support nonstandard functionality, such as `innerHTML` and [rich text editing](/en/Midas), if no W3C equivalent exists.
 
-Mozilla 1.3 introduced an implementation of Internet Explorer's [designMode](/en/Rich-Text_Editing_in_Mozilla/Class_xbDesignMode "en/Rich-Text_Editing_in_Mozilla/Class_xbDesignMode") feature, which turns an HTML document into a rich text editor field. Once turned into the editor, commands can run on the document through the `execCommand` command. Mozilla also supports Internet Explorer's `contentEditable` attribute for making any widget editable. Alternatively, you could use an iframe to add a rich text editor.
+Mozilla 1.3 introduced an implementation of Internet Explorer's [designMode](/en/Rich-Text_Editing_in_Mozilla/Class_xbDesignMode) feature, which turns an HTML document into a rich text editor field. Once turned into the editor, commands can run on the document through the `execCommand` command. Mozilla also supports Internet Explorer's `contentEditable` attribute for making any widget editable. Alternatively, you could use an iframe to add a rich text editor.
 
 #### Rich text differences
 
@@ -729,15 +729,15 @@ Below is a list of commands that execCommand in Mozilla supports:
 | unlink               | Removes all link information from the selection.                    | ---                                       |
 | useCSS               | Toggles the usage of CSS in the generated markup.                   | Boolean value                             |
 
-For more information, visit [Rich-Text Editing in Mozilla](/en/Rich-Text_Editing_in_Mozilla "en/Rich-Text_Editing_in_Mozilla").
+For more information, visit [Rich-Text Editing in Mozilla](/en/Rich-Text_Editing_in_Mozilla).
 
 ### XML differences
 
-Mozilla has strong support for XML and XML-related technologies, such as [XSLT](/en/XSLT "en/XSLT") and Web services. It also supports some non-standard Internet Explorer extensions, such as [`XMLHttpRequest`](/en/XMLHttpRequest "en/XMLHttpRequest").
+Mozilla has strong support for XML and XML-related technologies, such as [XSLT](/en/XSLT) and Web services. It also supports some non-standard Internet Explorer extensions, such as [`XMLHttpRequest`](/en/XMLHttpRequest).
 
 #### How to handle XML
 
-As with standard HTML, Mozilla supports the W3C XML DOM specification, which allows you to manipulate almost any aspect of an XML document. Differences between Internet Explorer's XML DOM and Mozilla are usually caused by Internet Explorer's nonstandard behaviors. Probably the most common difference is how they handle white space text nodes. Often when XML generates, it contains white spaces between XML nodes. Internet Explorer, when using [`Node.childNodes`](/En/DOM/Node.childNodes "en/DOM/element.childNodes"), will not contain these white space nodes. In Mozilla, those nodes will be in the array.
+As with standard HTML, Mozilla supports the W3C XML DOM specification, which allows you to manipulate almost any aspect of an XML document. Differences between Internet Explorer's XML DOM and Mozilla are usually caused by Internet Explorer's nonstandard behaviors. Probably the most common difference is how they handle white space text nodes. Often when XML generates, it contains white spaces between XML nodes. Internet Explorer, when using [`Node.childNodes`](/En/DOM/Node.childNodes), will not contain these white space nodes. In Mozilla, those nodes will be in the array.
 
 ```
 XML:
@@ -751,9 +751,9 @@ JavaScript:
   alert(myXMLDoc.childNodes.length);
 ```
 
-The first line of JavaScript loads the XML document and accesses the root element (`myXMLDoc`) by retrieving the [`documentElement`](/en/DOM/document.documentElement "en/DOM/document.documentElement"). The second line simply alerts the number of child nodes. Per the W3C specification, the white spaces and new lines merge into one text node if they follow each other. For Mozilla, the `myXMLdoc` node has three children: a text node containing a new line and two spaces; the `myns:foo` node; and another text node with a new line. Internet Explorer, however, does not abide by this and will return "1" for the above code, namely only the `myns:foo` node. Therefore, to walk the child nodes and disregard text nodes, you must distinguish such nodes.
+The first line of JavaScript loads the XML document and accesses the root element (`myXMLDoc`) by retrieving the [`documentElement`](/en/DOM/document.documentElement). The second line simply alerts the number of child nodes. Per the W3C specification, the white spaces and new lines merge into one text node if they follow each other. For Mozilla, the `myXMLdoc` node has three children: a text node containing a new line and two spaces; the `myns:foo` node; and another text node with a new line. Internet Explorer, however, does not abide by this and will return "1" for the above code, namely only the `myns:foo` node. Therefore, to walk the child nodes and disregard text nodes, you must distinguish such nodes.
 
-As mentioned earlier, every node has a [`nodeType`](/En/DOM/Node.nodeType "en/DOM/element.nodeType") property representing the node type. For example, an element node has type 1, while a document node has type 9. To disregard text nodes, you must check for types 3 (text node) and 8 (comment node).
+As mentioned earlier, every node has a [`nodeType`](/En/DOM/Node.nodeType) property representing the node type. For example, an element node has type 1, while a document node has type 9. To disregard text nodes, you must check for types 3 (text node) and 8 (comment node).
 
 ```
 XML:
@@ -774,7 +774,7 @@ JavaScript:
   };
 ```
 
-See [Whitespace in the DOM](/en/Whitespace_in_the_DOM "en/Whitespace_in_the_DOM") for more detailed discussion and a possible solution.
+See [Whitespace in the DOM](/en/Whitespace_in_the_DOM) for more detailed discussion and a possible solution.
 
 #### XML data islands
 
@@ -788,7 +788,7 @@ IE XML data island:
 </xml>
 ```
 
-One cross-browser solution is to use DOM parsers, which parse a string that contains a serialized XML document and generates the document for the parsed XML. Mozilla uses the [`DOMParser`](/en/DOMParser "en/DOMParser") object, which takes the serialized string and creates an XML document out of it. In Internet Explorer, you can achieve the same functionality using ActiveX. The object created using `new ActiveXObject("Microsoft.XMLDOM")` has a `loadXML` method that can take in a string and generate a document from it. The following code shows you how:
+One cross-browser solution is to use DOM parsers, which parse a string that contains a serialized XML document and generates the document for the parsed XML. Mozilla uses the [`DOMParser`](/en/DOMParser) object, which takes the serialized string and creates an XML document out of it. In Internet Explorer, you can achieve the same functionality using ActiveX. The object created using `new ActiveXObject("Microsoft.XMLDOM")` has a `loadXML` method that can take in a string and generate a document from it. The following code shows you how:
 
 ```
 var xmlString = "<xml id=\"xmldataisland\"><foo>bar</foo></xml>";
@@ -810,11 +810,11 @@ if (window.DOMParser) {
 }
 ```
 
-See [Using XML Data Islands in Mozilla](/en/Using_XML_Data_Islands_in_Mozilla "en/Using_XML_Data_Islands_in_Mozilla") for an alternative approach.
+See [Using XML Data Islands in Mozilla](/en/Using_XML_Data_Islands_in_Mozilla) for an alternative approach.
 
 #### XMLHttpRequest
 
-Internet Explorer allows you to send and retrieve XML files using MSXML's `XMLHTTP` class, which is instantiated through ActiveX using `new ActiveXObject("Msxml2.XMLHTTP")` or `new ActiveXObject("Microsoft.XMLHTTP")`. Since there is no standard method of doing this, Mozilla provides the same functionality in the global JavaScript [`XMLHttpRequest`](/en/XMLHttpRequest "en/XMLHttpRequest") object. Since version 7 IE also supports the "native" `XMLHttpRequest` object.
+Internet Explorer allows you to send and retrieve XML files using MSXML's `XMLHTTP` class, which is instantiated through ActiveX using `new ActiveXObject("Msxml2.XMLHTTP")` or `new ActiveXObject("Microsoft.XMLHTTP")`. Since there is no standard method of doing this, Mozilla provides the same functionality in the global JavaScript [`XMLHttpRequest`](/en/XMLHttpRequest) object. Since version 7 IE also supports the "native" `XMLHttpRequest` object.
 
 After instantiating the object using `new XMLHttpRequest()`, you can use the `open` method to specify what type of request (GET or POST) you use, which file you load, and if it is asynchronous or not. If the call is asynchronous, then give the `onload` member a function reference, which is called once the request has completed.
 
@@ -846,7 +846,7 @@ function loadXML(){
 }
 ```
 
-Table 7 features a list of available methods and properties for Mozilla's [`XMLHttpRequest`](/en/XMLHttpRequest "en/XMLHttpRequest").
+Table 7 features a list of available methods and properties for Mozilla's [`XMLHttpRequest`](/en/XMLHttpRequest).
 
 <table class="standard-table">
   <caption>
@@ -970,7 +970,7 @@ Table 7 features a list of available methods and properties for Mozilla's [`XMLH
 
 #### XSLT differences
 
-Mozilla supports XSL Transformations ([XSLT](/en/XSLT "en/XSLT")) 1.0. It also allows JavaScript to perform XSLT transformations and allows running [XPath](/en/XPath "en/XPath") on a document.
+Mozilla supports XSL Transformations ([XSLT](/en/XSLT)) 1.0. It also allows JavaScript to perform XSLT transformations and allows running [XPath](/en/XPath) on a document.
 
 Mozilla requires that you send the XML and XSLT files with an XML mimetype (`text/xml` or `application/xml`). This is the most common reason why XSLT won't run in Mozilla but will in Internet Explorer. Mozilla is strict in that way.
 
@@ -987,11 +987,11 @@ If XSLT requires you to distinguish the browser, you can query the "xsl:vendor" 
 </xsl:if>
 ```
 
-Mozilla also provides JavaScript interfaces for XSLT, allowing a Web site to complete XSLT transformations in memory. You can do this using the global [`XSLTProcessor`](/en/XSLTProcessor "en/XSLTProcessor") JavaScript object. `XSLTProcessor` requires you to load the XML and XSLT files, because it needs their DOM documents. The XSLT document, imported by the `XSLTProcessor`, allows you to manipulate XSLT parameters.
+Mozilla also provides JavaScript interfaces for XSLT, allowing a Web site to complete XSLT transformations in memory. You can do this using the global [`XSLTProcessor`](/en/XSLTProcessor) JavaScript object. `XSLTProcessor` requires you to load the XML and XSLT files, because it needs their DOM documents. The XSLT document, imported by the `XSLTProcessor`, allows you to manipulate XSLT parameters.
 
 `XSLTProcessor` can generate a standalone document using `transformToDocument()`, or it can create a document fragment using `transformToFragment()`, which you can easily append into another DOM document. Below is an example:
 
-```
+```js
 var xslStylesheet;
 var xsltProcessor = new XSLTProcessor();
 

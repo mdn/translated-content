@@ -24,7 +24,7 @@ W3C 的长期目标是使不同类型的 XML 基本内容可以混合在同一�
 </svg>
 ```
 
-命名空间声明是通过 xmlns attribute 提供的。xmlns 属性意味着这个 \<svg> 标签和它的子节点都属于 'http\://www\.w3.org/2000/svg' 这个 SVG 命名空间。注意，这个命名空间声明只需要在根节点上声明一次。这个声明定义了默认的命名空间，所以用户代理知道所有的 \<svg> 标签的子标签也属于相同的命名空间。用户代理如果能识别这个命名空间就决定他们如何处理这个标记。
+命名空间声明是通过 xmlns attribute 提供的。xmlns 属性意味着这个 \<svg> 标签和它的子节点都属于 `http://www\.w3.org/2000/svg` 这个 SVG 命名空间。注意，这个命名空间声明只需要在根节点上声明一次。这个声明定义了默认的命名空间，所以用户代理知道所有的 \<svg> 标签的子标签也属于相同的命名空间。用户代理如果能识别这个命名空间就决定他们如何处理这个标记。
 
 请注意，命名空间仅仅只是一些字符串，所以 SVG 上那些看起来像 URI 的命名空间并不重要。因为 URIs 的唯一性从而被广泛使用，它的本意并不是要 “链接” 到某个地址。（实际上 URIs 被如此频繁地使用是 “命名空间 URI"普遍使用而不是” 命名空间的名字“被使用。）
 
@@ -102,7 +102,7 @@ The [DOM Level 1](http://www.w3.org/TR/REC-DOM-Level-1/) recommendation was crea
 | [setAttributeNode](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttributeNode)         | [setAttributeNodeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAtNodeNS)                                                                                         |
 | [setNamedItem](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setNamedItem)                 | [setNamedItemNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-setNamedItemNS)                                                                                            |
 
-The first argument for all the DOM2 namespace aware methods must be the namespace name (also known as the namespace URI) of the element or attribute in question. For SVG **elements** this is 'http\://www\.w3.org/2000/svg'. However, note carefully: the [Namespaces in XML 1.1](http://www.w3.org/TR/xml-names11/#defaulting) recommendation states that the namespace name for attributes without a prefix does not have a value. In other words, although the attributes belong to the namespace of the tag, you do not use the tag's namespace name. Instead, **you must use null as the namespace name for unqualified (prefixless) attributes**. So, to create an SVG `rect` _element_ using `document.createElementNS()`, you must write:
+The first argument for all the DOM2 namespace aware methods must be the namespace name (also known as the namespace URI) of the element or attribute in question. For SVG **elements** this is `http://www.w3.org/2000/svg`. However, note carefully: the [Namespaces in XML 1.1](http://www.w3.org/TR/xml-names11/#defaulting) recommendation states that the namespace name for attributes without a prefix does not have a value. In other words, although the attributes belong to the namespace of the tag, you do not use the tag's namespace name. Instead, **you must use null as the namespace name for unqualified (prefixless) attributes**. So, to create an SVG `rect` _element_ using `document.createElementNS()`, you must write:
 
 ```plain
 document.createElementNS('http://www.w3.org/2000/svg', 'rect');
@@ -114,7 +114,7 @@ But to retrieve the value of the `x` _attribute_ on an SVG `rect` element, you m
 rect.getAttributeNS(null, 'x');
 ```
 
-Note that this isn't the case for attributes _with_ a namespace prefix (attributes that don't belong to the same XML dialect as the tag). Attributes such as the `xlink:href` attribute require the namespace name that was assigned to that prefix (http\://www\.w3.org/1999/xlink for XLink). Hence to get the value of the `xlink:href` attribute of an `<a>` element in SVG you would write:
+Note that this isn't the case for attributes _with_ a namespace prefix (attributes that don't belong to the same XML dialect as the tag). Attributes such as the `xlink:href` attribute require the namespace name that was assigned to that prefix (`http://www.w3.org/1999/xlink` for XLink). Hence to get the value of the `xlink:href` attribute of an `<a>` element in SVG you would write:
 
 ```plain
 elt.getAttributeNS('http://www.w3.org/1999/xlink', 'href');

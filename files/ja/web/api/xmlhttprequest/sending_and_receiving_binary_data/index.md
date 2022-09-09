@@ -66,11 +66,11 @@ var abyte = filestream.charCodeAt(x) & 0xff; // throw away high-order byte (f7)
 
 上記のサンプルでは、ロードしたバイナリデータ内のオフセット `x` のバイトを取得します。 `x` の有効範囲は 0 から `filestream.length-1` です。
 
-詳細な説明は [downloading binary streams with XMLHttpRequest](http://mgran.blogspot.com/2006/08/downloading-binary-streams-with.html) を見て下さい。また [downloading files](/ja/docs/Code_snippets/Downloading_Files "Code_snippets/Downloading_Files") も見て下さい。
+詳細な説明は [downloading binary streams with XMLHttpRequest](http://mgran.blogspot.com/2006/08/downloading-binary-streams-with.html) を見て下さい。また [downloading files](/ja/docs/Code_snippets/Downloading_Files) も見て下さい。
 
 ## バイナリデータの送信
 
-XMLHttpRequest の `send` メソッドが拡張され、 [`ArrayBuffer`](/ja/docs/JavaScript_typed_arrays/ArrayBuffer "ArrayBuffer"), {{domxref("Blob")}}, または {{domxref("File")}} オブジェクトを受け付ける事でバイナリデータの送信が容易になりました.
+XMLHttpRequest の `send` メソッドが拡張され、 [`ArrayBuffer`](/ja/docs/JavaScript_typed_arrays/ArrayBuffer), {{domxref("Blob")}}, または {{domxref("File")}} オブジェクトを受け付ける事でバイナリデータの送信が容易になりました.
 
 続くサンプルはその場で作ったテキストファイルを `POST` メソッドで "file" をサーバーに送信します。このサンプルはプレインテキストを使っていますが、代わりにデータがバイナリファイルだとイメージする事も出来ます。
 
@@ -106,11 +106,11 @@ xhr.send(myArray);
 
 これは 8 ビット整数の 512 バイトの配列を構築して送信します。勿論、好きな任意のバイナリデータで使えます。
 
-> **Note:** **メモ:** XMLHttpRequest を使った [`ArrayBuffer`](/ja/docs/JavaScript_typed_arrays/ArrayBuffer "ArrayBuffer") オブジェクトの送信サポートは Gecko 9.0 {{geckoRelease("9.0")}}で追加されました。**他のブラウザーのサポート情報をここに追記して下さい。**
+> **Note:** **メモ:** XMLHttpRequest を使った [`ArrayBuffer`](/ja/docs/JavaScript_typed_arrays/ArrayBuffer) オブジェクトの送信サポートは Gecko 9.0 {{geckoRelease("9.0")}}で追加されました。**他のブラウザーのサポート情報をここに追記して下さい。**
 
 ## フォーム送信とファイルアップロード
 
-[この節](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files "DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files")をお読み下さい。
+[この節](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files)をお読み下さい。
 
 ## Firefox 独自のサンプル
 

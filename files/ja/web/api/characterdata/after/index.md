@@ -1,11 +1,6 @@
 ---
 title: CharacterData.after()
 slug: Web/API/CharacterData/after
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.CharacterData.after
-translation_of: Web/API/CharacterData/after
 ---
 {{APIRef("DOM")}}
 

@@ -47,9 +47,9 @@ p_list = doc.getElementsByTagName("para");
 
 在使用 DOM 时，您不需要做任何其他特殊的操作。不同的浏览器都有对 DOM 不同的实现， 这些实现对当前的 DOM 标准而言，都会呈现出不同程度的一致性，每个 web 浏览器都会使用一些文档对象模型，从而使页面可以被脚本语言访问。
 
-当您在创建一个脚本时 - 无论是使用内嵌 `<script>`元素或者使用在 web 页面脚本加载的方法— 您都可以使用 [`document`](/en-US/docs/DOM/document)或 [`window`](/en-US/docs/DOM/window) 元素的 API 来操作文档本身或获取文档的子类（web 页面中的各种元素）。
+当您在创建一个脚本时 - 无论是使用内嵌 `<script>`元素或者使用在 web 页面脚本加载的方法— 您都可以使用 [`document`](/zh-CN/docs/DOM/document)或 [`window`](/zh-CN/docs/DOM/window) 元素的 API 来操作文档本身或获取文档的子类（web 页面中的各种元素）。
 
-您的 DOM 编程代码可能会像下面例子一样非常简单，如使用 [`window`](/en-US/docs/DOM/window)对象的[`alert()`](/en-US/docs/DOM/window.alert)函数显示一个警告信息，或者使用比较复杂的方法来创建一个新的内容，如下面内容较长的实例所示。
+您的 DOM 编程代码可能会像下面例子一样非常简单，如使用 [`window`](/zh-CN/docs/DOM/window)对象的[`alert()`](/zh-CN/docs/DOM/window.alert)函数显示一个警告信息，或者使用比较复杂的方法来创建一个新的内容，如下面内容较长的实例所示。
 
 ```
 <body onload="window.alert('welcome to my home page!');">
@@ -192,8 +192,8 @@ table.summary = "note: increased border";
 - `element.setAttribute()`
 - `element.getAttribute()`
 - `element.addEventListener()`
-- [`window.content`](/en-US/docs/DOM/window.content)
-- [`window.onload`](/en-US/docs/DOM/window.onload)
+- [`window.content`](/zh-CN/docs/DOM/window.content)
+- [`window.onload`](/zh-CN/docs/DOM/window.onload)
 - `window.dump()`
 - `window.scrollTo()`
 

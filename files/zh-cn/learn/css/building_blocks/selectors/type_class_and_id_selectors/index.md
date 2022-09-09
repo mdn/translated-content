@@ -51,7 +51,7 @@ slug: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
 
 ### 使用全局选择器，让选择器更易读
 
-全局选择器的一种用法是让选择器更易读，更明显地表明它们的作用。例如，如果我想选中任何`<article>`元素的第一子元素，不论它是什么元素，都给它加粗，我可以将{{cssxref(":first-child")}}选择器（我们将会在[伪类和伪元素](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)课中进一步了解）用作`<article>`元素选择器的一个后代选择器：
+全局选择器的一种用法是让选择器更易读，更明显地表明它们的作用。例如，如果我想选中任何`<article>`元素的第一子元素，不论它是什么元素，都给它加粗，我可以将{{cssxref(":first-child")}}选择器（我们将会在[伪类和伪元素](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)课中进一步了解）用作`<article>`元素选择器的一个后代选择器：
 
 ```css
 article :first-child {

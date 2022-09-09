@@ -106,4 +106,4 @@ flex-grow: unset;
 - [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
 - CSS Flexbox 指南：[弹性盒子的基本概念](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
 - CSS Flexbox 指南：[控制 Flex 子元素在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)
-- [\`flex-grow\` is weird. Or is it?](https://css-tricks.com/flex-grow-is-weird/) Manuel Matuzovic 在 CSS-Tricks 上的文章，说明了 flex-grow 的工作原理
+- [`flex-grow` is weird. Or is it?](https://css-tricks.com/flex-grow-is-weird/) Manuel Matuzovic 在 CSS-Tricks 上的文章，说明了 flex-grow 的工作原理

@@ -1,7 +1,6 @@
 ---
 title: AnalyserNode
 slug: Web/API/AnalyserNode
-translation_of: Web/API/AnalyserNode
 ---
 {{APIRef("Web Audio API")}}
 

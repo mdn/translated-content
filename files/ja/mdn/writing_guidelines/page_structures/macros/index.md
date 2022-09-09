@@ -1,11 +1,6 @@
 ---
 title: マクロの使用
 slug: MDN/Writing_guidelines/Page_structures/Macros
-page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
-translation_of: MDN/Writing_guidelines/Page_structures/Macros
 original_slug: MDN/Structures/Macros
 l10n:
   sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7

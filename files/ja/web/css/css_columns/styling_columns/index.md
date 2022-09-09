@@ -1,13 +1,6 @@
 ---
 title: 段のスタイル付け
 slug: Web/CSS/CSS_Columns/Styling_Columns
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - ガイド
-  - レイアウト
-  - 日本語処理
-translation_of: Web/CSS/CSS_Columns/Styling_Columns
 ---
 {{CSSRef}}
 

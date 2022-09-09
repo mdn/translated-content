@@ -52,7 +52,7 @@ const args = Array.from(arguments);
 > var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
 > ```
 
-You can use the `arguments` object if you call a function with more arguments than it is formally declared to accept. This technique is useful for functions that can be passed a variable number of arguments. Use [`arguments.length`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length) to determine the number of arguments passed to the function, and then process each argument by using the `arguments` object. To determine the number of parameters in the function [signature](/en-US/docs/Glossary/Signature/Function), use the [`Function.length`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/length) property.
+You can use the `arguments` object if you call a function with more arguments than it is formally declared to accept. This technique is useful for functions that can be passed a variable number of arguments. Use [`arguments.length`](/zh-TW/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length) to determine the number of arguments passed to the function, and then process each argument by using the `arguments` object. To determine the number of parameters in the function [signature](/zh-TW/docs/Glossary/Signature/Function), use the [`Function.length`](/zh-TW/docs/JavaScript/Reference/Global_Objects/Function/length) property.
 
 ### Using `typeof` with Arguments
 
@@ -70,7 +70,7 @@ console.log(typeof arguments[0]); //this will return the typeof individual argum
 
 ### Using the Spread Syntax with Arguments
 
-You can also use the {{jsxref("Array.from()")}} method or the [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator) to convert arguments to a real Array:
+You can also use the {{jsxref("Array.from()")}} method or the [spread operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_operator) to convert arguments to a real Array:
 
 ```js
 var args = Array.from(arguments);
@@ -79,11 +79,11 @@ var args = [...arguments];
 
 ## 屬性
 
-- [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
+- [`arguments.callee`](/zh-TW/docs/Web/JavaScript/Reference/Functions/arguments/callee)
   - : Reference to the currently executing function.
-- [`arguments.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/caller) {{Deprecated_Inline}}
+- [`arguments.caller`](/zh-TW/docs/Web/JavaScript/Reference/Functions/arguments/caller) {{Deprecated_Inline}}
   - : Reference to the function that invoked the currently executing function.
-- [`arguments.length`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/length)
+- [`arguments.length`](/zh-TW/docs/Web/JavaScript/Reference/Functions/arguments/length)
   - : Reference to the number of arguments passed to the function.
 - [`arguments[@@iterator]`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
   - : Returns a new Array Iterator object that contains the values for each index in the arguments.
@@ -143,7 +143,7 @@ var listHTML = list('u', 'One', 'Two', 'Three');
 
 ### Rest, default, and destructured parameters
 
-The `arguments` object can be used in conjunction with [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), and [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameters.
+The `arguments` object can be used in conjunction with [rest](/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/zh-TW/docs/Web/JavaScript/Reference/Functions/Default_parameters), and [destructured](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameters.
 
 ```js
 function foo(...args) {
@@ -152,9 +152,9 @@ function foo(...args) {
 foo(1, 2, 3); // [1,2,3]
 ```
 
-While the presence of [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameters does not alter the [behavior of the `arguments` object in strict mode code](/en-US/docs/Web/JavaScript/Reference/Strict_mode#Making_eval_and_arguments_simpler), there is a subtle difference for non-strict code.
+While the presence of [rest](/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/zh-TW/docs/Web/JavaScript/Reference/Functions/Default_parameters), or [destructured](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameters does not alter the [behavior of the `arguments` object in strict mode code](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode#Making_eval_and_arguments_simpler), there is a subtle difference for non-strict code.
 
-When a non-strict function **does not** contain [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameters, then the values in the `arguments` object **do** track the values of the arguments (and vice versa). See the code below:
+When a non-strict function **does not** contain [rest](/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/zh-TW/docs/Web/JavaScript/Reference/Functions/Default_parameters), or [destructured](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameters, then the values in the `arguments` object **do** track the values of the arguments (and vice versa). See the code below:
 
 ```js
 function func(a) {
@@ -174,7 +174,7 @@ function func(a) {
 func(10); // 99
 ```
 
-When a non-strict function **does** contain [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameters, then the values in the `arguments` object **do not** track the values of the arguments (and vice versa). Instead, they reflect the arguments provided at the time of invocation:
+When a non-strict function **does** contain [rest](/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/zh-TW/docs/Web/JavaScript/Reference/Functions/Default_parameters), or [destructured](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameters, then the values in the `arguments` object **do not** track the values of the arguments (and vice versa). Instead, they reflect the arguments provided at the time of invocation:
 
 ```js
 function func(a = 55) {

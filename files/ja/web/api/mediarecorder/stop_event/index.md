@@ -1,17 +1,6 @@
 ---
 title: MediaRecorder.onstop
 slug: Web/API/MediaRecorder/stop_event
-tags:
-  - API
-  - Audio
-  - Media Capture
-  - Media Recorder API
-  - MediaRecorder
-  - Property
-  - Reference
-  - Video
-  - onstop
-translation_of: Web/API/MediaRecorder/onstop
 original_slug: Web/API/MediaRecorder/onstop
 ---
 {{APIRef("Media Recorder API")}}

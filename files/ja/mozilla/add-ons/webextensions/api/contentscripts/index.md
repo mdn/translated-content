@@ -1,16 +1,6 @@
 ---
 title: contentScripts
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts
-tags:
-  - API
-  - Extensions
-  - Interface
-  - WebExtensions
-  - contentScripts
-  - インタフェース
-  - コンテントスクリプト
-  - 拡張機能
-translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts
 ---
 {{AddonSidebar}}
 

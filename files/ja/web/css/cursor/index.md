@@ -1,19 +1,6 @@
 ---
 title: cursor
 slug: Web/CSS/cursor
-tags:
-  - Arrow
-  - CSS
-  - CSS プロパティ
-  - カーソル
-  - カスタムカーソル
-  - Reference
-  - UI
-  - マウス
-  - ポインター
-  - recipe:css-property
-browser-compat: css.properties.cursor
-translation_of: Web/CSS/cursor
 ---
 {{CSSRef}}
 

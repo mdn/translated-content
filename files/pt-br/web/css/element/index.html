@@ -21,7 +21,7 @@ original_slug: Web/CSS/element()
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
-<pre class="syntaxbox notranslate">element( <em>id</em> )</pre>
+<pre class="syntaxbox">element( <em>id</em> )</pre>
 
 <p>Onde:</p>
 
@@ -38,7 +38,7 @@ original_slug: Web/CSS/element()
 
 <p>Esse exemplo usa uma {{HTMLElement("div")}} escondida como <em>background</em>. O elemento de <em>background</em> tem um gradiente, mas tambem um texto que é usado como parte do <em>background</em>.</p>
 
-<pre class="notranslate"><code>&lt;div style="width:400px; height:400px; background:-moz-element(#myBackground1) no-repeat;"&gt;
+<pre class="brush: html">&lt;div style="width:400px; height:400px; background:-moz-element(#myBackground1) no-repeat;"&gt;
   &lt;p&gt;This box uses the element with the #myBackground1 ID as its background!&lt;/p&gt;
 &lt;/div&gt;
 
@@ -46,7 +46,7 @@ original_slug: Web/CSS/element()
   &lt;div id="myBackground1" style="width:1024px; height:1024px; background-image: linear-gradient(to right, red, orange, yellow, white);"&gt;
   &lt;p style="transform-origin:0 0; transform: rotate(45deg); color:white;"&gt;This text is part of the background. Cool, huh?&lt;/p&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
 
 <p>A {{HTMLElement("div")}} com ID "myBackground1" é usada como <em>background</em>, mantendo o paragrafo "This box uses the element with the #myBackground1 ID as its background!".</p>
 
@@ -56,7 +56,7 @@ original_slug: Web/CSS/element()
 
 <p>Esse exemplo usa um elemento {{HTMLElement("button")}} se repetindo como <em>background</em>. Isso mostra que você pode usar qualquer elemento como background, mas não mostra necessariamente boas praticas de design.</p>
 
-<pre class="brush: html notranslate">&lt;div style="width:400px; height:100px; background:-moz-element(#myBackground2);"&gt;
+<pre class="brush: html">&lt;div style="width:400px; height:100px; background:-moz-element(#myBackground2);"&gt;
 &lt;/div&gt;
 
 &lt;div style="overflow:hidden; height:0;"&gt;

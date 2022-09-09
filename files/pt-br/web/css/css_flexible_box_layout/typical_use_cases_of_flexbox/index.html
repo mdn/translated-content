@@ -81,14 +81,14 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 
 <p>To prevent the image growing too large, add a {{cssxref("max-width")}} to the image. As that side of the media object is using the initial values of flexbox it can shrink but not grow, and uses a <code>flex-basis</code> of auto. Any {{cssxref("width")}} or max-width applied to the image will become the <code>flex-basis</code>.</p>
 
-<pre class="brush: css notranslate">.image img {
+<pre class="brush: css">.image img {
   max-width: 100px;
 }
 </pre>
 
 <p>You could also allow both sides to grow and shrink in proportion. If you set both sides to <code>flex: 1</code>, they will grow and shrink from a {{cssxref("flex-basis")}} of 0, so you will end up with two equal-sized columns. You could either take the content as a guide and set both to <code>flex: auto</code>, in which case they would grow and shrink from the size of the content or any size applied directly to the flex items such as a width on the image.</p>
 
-<pre class="brush: css notranslate">.media .content {
+<pre class="brush: css">.media .content {
   flex: 1;
   padding: 10px;
 }
@@ -99,7 +99,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 
 <p>You could also give each side different {{cssxref("flex-grow")}} factors, for example setting the side with the image to <code>flex: 1</code> and the content side to <code>flex: 3</code>. This will mean they use a <code>flex-basis</code> of <code>0</code> but distribute that space at different rates according to the <code>flex-grow</code> factor you have assigned. The flex properties we use to do this are described in detail in the guide <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Controlling ratios of flex items along the main axis</a>.</p>
 
-<pre class="brush: css notranslate">.media .content {
+<pre class="brush: css">.media .content {
   flex: 3;
   padding: 10px;
 }

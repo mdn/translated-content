@@ -1,14 +1,6 @@
 ---
 title: Client.url
 slug: Web/API/Client/url
-tags:
-  - API
-  - Client
-  - Property
-  - Reference
-  - Service Workers
-  - URL
-translation_of: Web/API/Client/url
 ---
 {{APIRef("Service Workers API")}}
 

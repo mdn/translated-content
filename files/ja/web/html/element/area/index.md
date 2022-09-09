@@ -102,7 +102,7 @@ translation_of: Web/HTML/Element/area
 - {{htmlattrdef("href")}}
   - : この領域のハイパーリンクの宛先です。この値は有効な URL です。この属性は省略可能です。その場合、その `<area>` 要素はハイパーリンクを提供しません。
 - {{htmlattrdef("hreflang")}}
-  - : リンク先のリソースの言語を示します。許容される値は [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt "Tags for Identifying Languages") で定めています。この属性は、 {{htmlattrxref("href", "area")}} 属性を与える場合にのみ使用してください。
+  - : リンク先のリソースの言語を示します。許容される値は [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt) で定めています。この属性は、 {{htmlattrxref("href", "area")}} 属性を与える場合にのみ使用してください。
 - {{htmlattrdef("ping")}}
   - : ハイパーリンクがフォローされたときに、ブラウザーから {{HTTPMethod("POST")}} リクエストが本文を `PING` として (バックグラウンドで) 送信する URL を空白で区切ったリストで記述します。ふつうはトラッキング用に使用します。
 - {{htmlattrdef("referrerpolicy")}} {{experimental_inline}}

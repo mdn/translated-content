@@ -1,15 +1,7 @@
 ---
 title: sepia()
 slug: Web/CSS/filter-function/sepia
-tags:
-  - CSS
-  - CSS 関数
-  - フィルター効果
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/filter-function/sepia()
 original_slug: Web/CSS/filter-function/sepia()
-browser-compat: css.types.filter-function.sepia
 ---
 {{CSSRef}}
 

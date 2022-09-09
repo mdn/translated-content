@@ -70,7 +70,7 @@ id = navigator.geolocation.watchPosition(success, error, options);
 ## 請參考
 
 - [geolocation wake lock](</en-US/docs/Web/API/Geolocation/navigator.requestWakeLock()>)
-- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
 - 這個介面屬於{{domxref("Geolocation")}}. 並且存取他的方式為{{domxref("NavigatorGeolocation.geolocation")}}.
 - 相反的操作: {{domxref("Geolocation.clearWatch()")}}
 - 類似的方法: {{domxref("Geolocation.getCurrentPosition()")}}

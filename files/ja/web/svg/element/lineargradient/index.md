@@ -19,7 +19,7 @@ translation_of: Web/SVG/Element/linearGradient
 
 ## 例
 
-» [linearGradient.svg](linearGradient.svg "https://developer.mozilla.orglinearGradient.svg")
+» [linearGradient.svg](linearGradient.svg)
 
 ## 属性
 
@@ -45,7 +45,7 @@ translation_of: Web/SVG/Element/linearGradient
 
 ## DOM インターフェース
 
-この要素は [`SVGLinearGradientElement`](/ja/DOM/SVGLinearGradientElement "en/DOM/SVGLinearGradientElement") インターフェースを提供します。
+この要素は [`SVGLinearGradientElement`](/ja/DOM/SVGLinearGradientElement) インターフェースを提供します。
 
 ## 仕様
 

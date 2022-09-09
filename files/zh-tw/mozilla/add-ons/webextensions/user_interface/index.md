@@ -6,7 +6,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
 
 套件 APIs 提供了幾種介面來完成對用戶的功能。下方是那些介面的概述，每種用戶介面都有更詳細的資訊可以查閱。
 
-> **備註：** 爲了使用這些 UI 元件在套件裡提供優秀的用戶體驗，建議閱讀[用戶體驗最佳實踐](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices)文章。
+> **備註：** 爲了使用這些 UI 元件在套件裡提供優秀的用戶體驗，建議閱讀[用戶體驗最佳實踐](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices)文章。
 
 <table class="standard-table">
   <thead>
@@ -199,6 +199,6 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
 
 下面是一些關於建立這些用戶介面的詳細教學：
 
-- [在工具列加入一個按鈕](/en-US/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
-- [建立設定頁面](/en-US/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)
-- [擴充開發者工具](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
+- [在工具列加入一個按鈕](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
+- [建立設定頁面](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)
+- [擴充開發者工具](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)

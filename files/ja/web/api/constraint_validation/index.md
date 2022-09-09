@@ -1,11 +1,6 @@
 ---
 title: 制約検証 API
 slug: Web/API/Constraint_validation
-tags:
-  - API
-  - Constraint validation
-  - Landing
-  - Reference
 ---
 {{apiref()}}
 

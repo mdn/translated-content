@@ -1,17 +1,6 @@
 ---
 title: runtime.openOptionsPage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - openOptionsPage
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage
 ---
 {{AddonSidebar()}}拡張機能に[オプションページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)が定義されている場合、このメソッドはそれを開きます。
 

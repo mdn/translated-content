@@ -288,7 +288,6 @@ const taskList = props.tasks.map((task) => (
 
 现在 React 正在将我们的任务从一个数组中渲染出来，它必须跟踪谁是谁，以便正确的渲染它们。React 通过自行猜测来保持对每一项的追踪，不过我们通过给 `<Todo />` 传递一个 `key` prop 来帮助 React 保持追踪。`key` 是一个被 React 管理的特殊的 prop，你不能将其用于其他目的。
 
-
 因为每个 key 必须是不同的，我们复用每个任务对象的 `id` 属性来作为它的 key。像这样更新你的 `taskList` 常量：
 
 ```js

@@ -1,13 +1,6 @@
 ---
 title: UTF-8
 slug: Glossary/UTF-8
-tags:
-  - CodingScripting
-  - Glossary
-  - HTML
-  - JavaScript
-  - Utf-8
-translation_of: Glossary/UTF-8
 ---
 UTF-8 (UCS Transformation Format 8) は World Wide Web において最も一般的な{{Glossary("Character encoding", "文字エンコーディング")}}です。 1 文字あたり 1 ～ 4 バイトで表します。UTF-8 は {{Glossary("ASCII")}} に対して後方互換性を持っており、すべての標準 Unicode 文字を表現することができます。
 

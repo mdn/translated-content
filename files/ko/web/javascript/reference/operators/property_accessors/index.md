@@ -64,7 +64,7 @@ get = object[property_name];
 object[property_name] = set;
 ```
 
-괄호 표기법에서는 `property_name`으로 문자열이나 {{jsxref("Symbol")}}을 사용할 수 있습니다. 문자열은 유효한 식별자가 아니어도 괜찮습니다. "`1foo`", "`!bar!`", 심지어 "` `"(공백)도 가능합니다.
+괄호 표기법에서는 `property_name` 으로 문자열이나 {{jsxref("Symbol")}}을 사용할 수 있습니다. 문자열은 유효한 식별자가 아니어도 괜찮습니다. "`1foo`", "`!bar!`", 심지어 " "(공백)도 가능합니다.
 
 ```js
 document['createElement']('pre');

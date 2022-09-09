@@ -1,21 +1,6 @@
 ---
 title: MediaTrackSupportedConstraints.frameRate
 slug: Web/API/MediaTrackSupportedConstraints/frameRate
-page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - Web
-  - WebRTC
-  - frameRate
-browser-compat: api.MediaTrackSupportedConstraints.frameRate
-translation_of: Web/API/MediaTrackSupportedConstraints/frameRate
 ---
 {{DefaultAPISidebar("Media Capture and Streams")}}
 

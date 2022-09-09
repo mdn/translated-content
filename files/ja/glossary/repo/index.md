@@ -1,13 +1,6 @@
 ---
 title: Repo (リポジトリ)
 slug: Glossary/Repo
-tags:
-  - Glossary
-  - Infrastructure
-  - Intro
-  - Repo
-  - Repository
-translation_of: Glossary/Repo
 ---
 {{QuickLinksWithSubpages("/ja/docs/Glossary")}}
 

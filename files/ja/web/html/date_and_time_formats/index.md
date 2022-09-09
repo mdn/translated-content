@@ -253,13 +253,13 @@ When you set the {{htmlattrxref("value", "input")}} of a `datetime-local` input,
 | `1986-01-28 11:38:00.010` | `1986-01-28T11:38:00.01`[1](#datetime-local-footnote1) | January 28, 1986 at 11:38:00.01 AM |
 | `0170-07-31T22:00:00`     | `0170-07-31T22:00`[2](#datetime-local-footnote2)       | July 31, 170 at 10:00 PM           |
 
-1.  Notice that&#x20;
+1. Notice that&#x20;
 
     after normalization
 
     , this is the same string as the previous `datetime-local` string. The space has been replaced with the "`T`" character and the trailing zero in the fraction of a second has been removed to make the string as short as possible.
 
-2.  Note that the&#x20;
+2. Note that the&#x20;
 
     normalized form
 
@@ -278,10 +278,10 @@ A time zone offset string specifies the offset in either a positive or a negativ
 
 The time zone string is appended immediately following the time in the date and time string. You can specify simply "`Z`" as the time zone offset string to indicate that the time is specified in UTC. Otherwise, the time zone string is constructed as follows:
 
-1.  A character indicating the sign of the offset: the plus character ("`+`", or U+002B) for time zones to the east of the prime meridian or the minus character ("`-`", or U+002D) for time zones to the west of the prime meridian.
-2.  A two-digit number of hours that the time zone is offset from the prime meridian. This value must be between `00` and `23`.
-3.  An optional colon ("`:`") character.
-4.  A two-digit number of minutes past the hour; this value must be between `00` and `59`.
+1. A character indicating the sign of the offset: the plus character ("`+`", or U+002B) for time zones to the east of the prime meridian or the minus character ("`-`", or U+002D) for time zones to the west of the prime meridian.
+2. A two-digit number of hours that the time zone is offset from the prime meridian. This value must be between `00` and `23`.
+3. An optional colon ("`:`") character.
+4. A two-digit number of minutes past the hour; this value must be between `00` and `59`.
 
 While this format allows for time zones between -23:59 and +23:59, the current range of time zone offsets is -12:00 to +14:00, and no time zones are currently offset from the hour by anything other than `00`, `30`, or `45` minutes. This may change at more or less anytime, since countries are free to tamper with their time zones at any time and in any way they wish to do so.
 

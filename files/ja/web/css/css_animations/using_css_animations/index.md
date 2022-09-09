@@ -1,13 +1,6 @@
 ---
 title: CSS アニメーションの使用
 slug: Web/CSS/CSS_Animations/Using_CSS_animations
-tags:
-  - 上級者
-  - CSS
-  - CSS アニメーション
-  - 例
-  - ガイド
-translation_of: Web/CSS/CSS_Animations/Using_CSS_animations
 ---
 {{CSSRef}}
 

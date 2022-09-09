@@ -1,13 +1,6 @@
 ---
 title: 単項プラス (+)
 slug: Web/JavaScript/Reference/Operators/Unary_plus
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.unary_plus
-translation_of: Web/JavaScript/Reference/Operators/Unary_plus
 ---
 {{jsSidebar("Operators")}}
 

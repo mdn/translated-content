@@ -1,13 +1,6 @@
 ---
 title: 隣接兄弟結合子
 slug: Web/CSS/Adjacent_sibling_combinator
-tags:
-  - CSS
-  - NeedsMobileBrowserCompatibility
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.adjacent_sibling
-translation_of: Web/CSS/Adjacent_sibling_combinator
 ---
 {{CSSRef("Selectors")}}
 

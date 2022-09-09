@@ -51,8 +51,6 @@ See also the [DOM Interfaces](/en-US/docs/DOM/DOM_Reference).
   - : 返回 console 对象的引用，该对象提供了对浏览器调试控制台的访问。
 - {{domxref("Window.content")}} 和 `Window._content` {{Non-standard_inline}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : 返回当前 window 的 content 元素的引用。通过带下划线的过时变种方法不再可以获得 Web content。
-- {{domxref("Window.controllers")}} {{non-standard_inline}} {{ReadOnlyInline}}
-  - : 返回当前 chrome window 的 XUL 控制器对象。
 - {{domxref("Window.customElements")}} {{ReadOnlyInline}}
   - : returns a reference to the {{domxref("CustomElementRegistry")}} object, which can be used to register new [custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) and get information about previously registered custom elements.
 - {{domxref("Window.crypto")}} {{readOnlyInline}}
@@ -61,10 +59,6 @@ See also the [DOM Interfaces](/en-US/docs/DOM/DOM_Reference).
   - : 获取或设置指定窗口的状态栏文本。
 - {{domxref("Window.devicePixelRatio")}} {{non-standard_inline}} {{ReadOnlyInline}}
   - : 返回当前显示器的物理像素和设备独立像素的比例。
-- {{domxref("Window.dialogArguments")}} {{ReadOnlyInline}}
-  - : 获取在调用 {{domxref("window.showModalDialog()")}} 时传递给窗口的参数（如果它是一个对话框）。这是一个 `nsIArray`。
-- {{domxref("Window.directories")}} {{Deprecated_Inline}}
-  - : {{domxref("window.personalbar")}} 的另一种形式。
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
   - : 返回对当前窗口所包含文档的引用。
 - {{domxref("Window.DOMMatrix")}} {{readOnlyInline}} {{experimental_inline}}
@@ -288,8 +282,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : 按指定页数滚动当前文档。
 - {{domxref("Window.scrollTo()")}}
   - : 滚动到文档中的特定坐标集。
-- {{domxref("Window.setCursor()")}} {{Non-standard_inline}} (top-level XUL windows only)
-  - : 更改当前窗口的光标。
 - {{domxref("Window.setImmediate()")}}
   - : 在浏览器完成其他繁重任务后执行一个函数。
 - {{domxref("Window.setResizable()")}} {{Non-standard_inline}}
@@ -355,8 +347,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Represents an event handler that will run when a gamepad is connected (when the {{event('gamepadconnected')}} event fires).
 - {{domxref("Window.ongamepaddisconnected")}}
   - : Represents an event handler that will run when a gamepad is disconnected (when the {{event('gamepaddisconnected')}} event fires).
-- {{domxref("Window.onmozbeforepaint")}}
-  - : An event handler property for the `MozBeforePaint` event, which is sent before repainting the window if the event has been requested by a call to the {{domxref("Window.mozRequestAnimationFrame()")}} method.
 - {{domxref("Window.onpaint")}}
   - : An event handler property for paint events on the window.
 - {{domxref("Window.onrejectionhandled")}} {{experimental_inline}}

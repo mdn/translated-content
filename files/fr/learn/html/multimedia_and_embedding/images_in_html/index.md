@@ -172,7 +172,9 @@ Il n'est pas essentiel d'inclure des informations dans les images. Il est souven
 
 À vous de jouer maintenant ! Cette section dédiée à l'apprentissage interactif va vous tenir en haleine avec un simple exercice d'intégration d'image. Vous allez un peu travailler l'anglais aussi. Il vous est fourni une étiquette basique {{htmlelement("img")}} ; Il va vous falloir incorporer l'image située à l'URL suivante :
 
-https\://raw\.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
+https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
 
 Nous avons dit plus tôt de ne jamais faire de "hotlinking" sur d'autres serveurs mais c'est ici dans un but d'apprentissage, donc on oublie ça pour cette fois.
 

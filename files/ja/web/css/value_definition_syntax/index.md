@@ -1,13 +1,6 @@
 ---
 title: 値の定義構文
 slug: Web/CSS/Value_definition_syntax
-tags:
-  - CSS
-  - Guide
-  - Reference
-  - Syntax
-spec-urls: https://drafts.csswg.org/css-values/#value-defs
-translation_of: Web/CSS/Value_definition_syntax
 ---
 {{CSSRef}}
 

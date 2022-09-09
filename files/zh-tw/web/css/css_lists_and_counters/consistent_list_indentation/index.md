@@ -2,7 +2,7 @@
 title: 調整列表縮排
 slug: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 ---
-原文 : [Consistent List Indentation](/en/Consistent_List_Indentation)
+原文 : [Consistent List Indentation](/zh-TW/Consistent_List_Indentation)
 
 使用 CSS 來協助縮排列表看來簡單實則卻否，原因很簡單 - 各大瀏覽器其實作方式不盡相同。一個很大的原因來自於對距離的掌握，但這很讓人喪志，因為瀏覽器沒有一致的排版方式。舉例來說，倘若你宣告一個 list 沒有 left margin，在 IE 中他可以被移動，但在 Gecko-based 的瀏覽器中他們將很固執的固定在那。
 

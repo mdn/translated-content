@@ -28,7 +28,7 @@ slug: Web/API/EventTarget
 
 ### Mozilla chrome 代码的其他方法
 
-Mozilla 扩展，供 JS 实现的事件目标使用以 实现 on\* 属性。另见 [WebIDL bindings](/en-US/docs/Mozilla/WebIDL_bindings) 绑定。
+Mozilla 扩展，供 JS 实现的事件目标使用以 实现 on\* 属性。另见 [WebIDL bindings](/zh-CN/docs/Mozilla/WebIDL_bindings) 绑定。
 
 - void **setEventHandler**(DOMString type, EventHandler handler) {{non-standard_inline}}
 - EventHandler **getEventHandler**(DOMString type) {{non-standard_inline}}
@@ -85,6 +85,6 @@ EventTarget.prototype.dispatchEvent = function(event) {
 
 ## 相关链接
 
-- [Event reference](/en-US/docs/Web/Reference/Events) - the events available in the platform.
-- [Event developer guide](/en-US/docs/Web/Guide/DOM/Events)
+- [Event reference](/zh-CN/docs/Web/Reference/Events) - the events available in the platform.
+- [Event developer guide](/zh-CN/docs/Web/Guide/DOM/Events)
 - {{domxref("Event")}} interface

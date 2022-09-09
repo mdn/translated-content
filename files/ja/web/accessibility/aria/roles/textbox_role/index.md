@@ -1,11 +1,6 @@
 ---
 title: 'ARIA: textbox ロール'
 slug: Web/Accessibility/ARIA/Roles/textbox_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/textbox_role
 ---
 \\{{ariaref}}`textbox` ロールは、自由形式テキストの入力を可能にする要素を識別するために使用されます。 可能であれば、このロールを使用するのではなく、単一行入力の場合は [`type="text"`](/ja/docs/Web/HTML/Element/input/text) の {{HTMLElement("input")}} 要素を使用し、複数行入力の場合は {{HTMLElement("textarea")}} 要素を使用してください。
 
@@ -52,7 +47,7 @@ translation_of: Web/Accessibility/ARIA/Roles/textbox_role
     - `both`: 予測されたテキストは、値の集まりとして提示され、補完に必要なテキストの 1 つの値がキャレットの後に挿入されます。
     - `none`（デフォルト）: 予測されたテキストは提供されません。
 
-    `list` または `both` が設定されている場合は、`aria-controls` 属性と` aria-haspopup` 属性も含める必要があります。 `aria-controls` の値は、提案値のリストを含む要素の ID です。 さらに、テキストボックスまたは `combobox` ロールを含む包含要素のいずれかに、提案値のリストを含む要素のロールに一致する `aria-haspopup` の値を持ちます。
+    `list` または `both` が設定されている場合は、`aria-controls` 属性と `aria-haspopup` 属性も含める必要があります。 `aria-controls` の値は、提案値のリストを含む要素の ID です。 さらに、テキストボックスまたは `combobox` ロールを含む包含要素のいずれかに、提案値のリストを含む要素のロールに一致する `aria-haspopup` の値を持ちます。
 
 - `aria-multiline` 属性
 

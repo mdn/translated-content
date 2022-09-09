@@ -373,7 +373,7 @@ Le squelette du site web est entièrement construit à ce stade. Désormais, vou
 
 Maintenant que ceci est fait, [le site web Local Library](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website) est opérationnel et nous allons passer à la partie codage et développement pour que le site produise ce qu'il est censé faire.
 
-## A voir aussi...
+## Voir aussi
 
 - [Écriture de votre première application Django, 1ère partie](https://docs.djangoproject.com/fr/2.2/intro/tutorial01/)  (Django docs)
 - [Applications](https://docs.djangoproject.com/fr/2.2/ref/applications/#configuring-applications) (Django Docs). Contains information on configuring applications.

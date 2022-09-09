@@ -1,14 +1,6 @@
 ---
 title: MediaDevices.enumerateDevices()
 slug: Web/API/MediaDevices/enumerateDevices
-tags:
-  - API
-  - MediaDevices
-  - メソッド
-  - リファレンス
-  - WebRTC
-browser-compat: api.MediaDevices.enumerateDevices
-translation_of: Web/API/MediaDevices/enumerateDevices
 ---
 {{APIRef("WebRTC")}}
 

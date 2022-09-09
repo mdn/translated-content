@@ -1,15 +1,6 @@
 ---
 title: '-webkit-tap-highlight-color'
 slug: Web/CSS/-webkit-tap-highlight-color
-tags:
-  - CSS
-  - CSS プロパティ
-  - リファレンス
-  - 標準外
-  - WebKit
-  - recipe:css-property
-browser-compat: css.properties.-webkit-tap-highlight-color
-translation_of: Web/CSS/-webkit-tap-highlight-color
 ---
 {{ CSSRef() }}
 

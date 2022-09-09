@@ -1,16 +1,6 @@
 ---
 title: HTMLMediaElement.volume
 slug: Web/API/HTMLMediaElement/volume
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Reference
-  - Volume
-browser-compat: api.HTMLMediaElement.volume
-translation_of: Web/API/HTMLMediaElement/volume
 ---
 {{APIRef("HTML DOM")}}
 

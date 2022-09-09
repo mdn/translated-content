@@ -1,7 +1,6 @@
 ---
 title: VRDisplayCapabilities.hasPosition
 slug: Web/API/VRDisplayCapabilities/hasPosition
-translation_of: Web/API/VRDisplayCapabilities/hasPosition
 ---
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 

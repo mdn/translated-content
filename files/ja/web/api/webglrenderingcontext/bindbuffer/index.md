@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.bindBuffer()
 slug: Web/API/WebGLRenderingContext/bindBuffer
-translation_of: Web/API/WebGLRenderingContext/bindBuffer
 ---
 {{APIRef("WebGL")}}
 

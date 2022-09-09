@@ -15,12 +15,12 @@ CSS の基本と目的、簡単なスタイルシートの書き方を学んで�
 
 ブラウザーがドキュメントを表示するとき、ブラウザーはそのコンテンツをスタイル情報と結合する必要があります。以下にリストしたいくつかの段階でドキュメントが処理されます。これはブラウザーがウェブページを読み込むときに起こることを単純化したものであり、各ブラウザーで処理は異なるものの、おおよそ何が起こるかを示しています。
 
-1.  ブラウザーが HTML をロードします（ネットワークから受信するなど）。
-2.  {{Glossary("HTML")}} が {{Glossary("DOM")}} (_Document Object Model_) に変換されます。DOM はコンピューターのメモリー内のドキュメントです。次のセクションで詳述します。
-3.  その後ブラウザーは埋め込まれた画像やビデオなどの HTML ドキュメントにリンクされているリソースと CSS を取得します。JavaScript はもう少し後に処理されるため、ここでは簡略化のため説明しません。
-4.  ブラウザーは取得した CSS を解析し、要素、クラス、ID などセレクタの種類ごとに分類します。見つけたセレクターに基づいて、DOM のどのノードにどのルールを適用するかを決定し、スタイルを適用します（この中間ステップはレンダーツリーと呼ばれます）。
-5.  レンダーツリーは、ルール適用後の構造にレイアウトされます。
-6.  ページが画面に表示されます（この段階はペイントと呼ばれます）。
+1. ブラウザーが HTML をロードします（ネットワークから受信するなど）。
+2. {{Glossary("HTML")}} が {{Glossary("DOM")}} (_Document Object Model_) に変換されます。DOM はコンピューターのメモリー内のドキュメントです。次のセクションで詳述します。
+3. その後ブラウザーは埋め込まれた画像やビデオなどの HTML ドキュメントにリンクされているリソースと CSS を取得します。JavaScript はもう少し後に処理されるため、ここでは簡略化のため説明しません。
+4. ブラウザーは取得した CSS を解析し、要素、クラス、ID などセレクタの種類ごとに分類します。見つけたセレクターに基づいて、DOM のどのノードにどのルールを適用するかを決定し、スタイルを適用します（この中間ステップはレンダーツリーと呼ばれます）。
+5. レンダーツリーは、ルール適用後の構造にレイアウトされます。
+6. ページが画面に表示されます（この段階はペイントと呼ばれます）。
 
 簡単に図に表すと次のとおりです。
 
@@ -146,8 +146,8 @@ p {
 
 ## このモジュール内
 
-1.  [CSS とは何か？](/ja/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)
-3.  [CSS の構造化](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [CSS はどう働くか？](/ja/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [新しい知識を使う](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [CSS とは何か？](/ja/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)
+3. [CSS の構造化](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [CSS はどう働くか？](/ja/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [新しい知識を使う](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

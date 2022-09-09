@@ -1,11 +1,6 @@
 ---
 title: MDN のツール
 slug: MDN/Tools
-tags:
-  - Landing
-  - MDN Meta
-  - Tools
-translation_of: MDN/Tools
 ---
 {{MDNSidebar}}
 

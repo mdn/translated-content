@@ -79,7 +79,7 @@ dt.setData("text/plain", "Hello there, stranger");
 
 ## 拖动文件
 
-A local file is dragged using the `application/x-moz-file` type with a data value that is an [nsIFile](/en/XPCOM_Interface_Reference/nsIFile) object. Non-privileged web pages are not able to retrieve or modify data of this type. Because a file is not a string, you must use the {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method to assign the data. Similarly, when retrieving the data, you must use the {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} method.
+A local file is dragged using the `application/x-moz-file` type with a data value that is an [nsIFile](/zh-CN/XPCOM_Interface_Reference/nsIFile) object. Non-privileged web pages are not able to retrieve or modify data of this type. Because a file is not a string, you must use the {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method to assign the data. Similarly, when retrieving the data, you must use the {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} method.
 
 ```
 event.dataTransfer.mozSetDataAt("application/x-moz-file", file, 0);
@@ -129,11 +129,11 @@ You could always use some feature detection to determine which method is support
 
 ## 拖动图像
 
-Direct image dragging is not commonly done. In fact, Mozilla does not support direct image dragging on Mac or Linux platforms. Instead, images are usually dragged only by their URLs. To do this, use the `text/uri-list` type as with other URL links. The data should be the URL of the image or a data URL if the image is not stored on a web site or disk. For more information about data URLs, see [the data URL scheme](/en/data_URIs).
+Direct image dragging is not commonly done. In fact, Mozilla does not support direct image dragging on Mac or Linux platforms. Instead, images are usually dragged only by their URLs. To do this, use the `text/uri-list` type as with other URL links. The data should be the URL of the image or a data URL if the image is not stored on a web site or disk. For more information about data URLs, see [the data URL scheme](/zh-CN/data_URIs).
 
 As with other links, the data for the `text/plain` type should also contain the URL. However, a data URL is not usually as useful in a text context, so you may wish to exclude the `text/plain` data in this situation.
 
-In chrome or other privileged code, you may also use the `image/jpeg`, `image/png` or `image/gif` types, depending on the type of image. The data should be an object which implements the [nsIInputStream](/en/XPCOM_Interface_Reference/nsIInputStream) interface. When this stream is read, it should provide the data bits for the image, as if the image was a file of that type.
+In chrome or other privileged code, you may also use the `image/jpeg`, `image/png` or `image/gif` types, depending on the type of image. The data should be an object which implements the [nsIInputStream](/zh-CN/XPCOM_Interface_Reference/nsIInputStream) interface. When this stream is read, it should provide the data bits for the image, as if the image was a file of that type.
 
 You should also include the `application/x-moz-file` type if the image is located on disk. In fact, this a common way in which image files are dragged.
 

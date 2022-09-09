@@ -1,13 +1,6 @@
 ---
 title: CookieStore.set()
 slug: Web/API/CookieStore/set
-tags:
-  - API
-  - Method
-  - Reference
-  - set()
-  - CookieStore
-browser-compat: api.CookieStore.set
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
 

@@ -1,13 +1,6 @@
 ---
 title: window.scrollTo
 slug: Web/API/Window/scrollTo
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - NeedsMarkupWork
-  - Reference
-translation_of: Web/API/Window/scrollTo
 ---
 {{APIRef}}
 

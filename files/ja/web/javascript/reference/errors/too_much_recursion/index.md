@@ -1,12 +1,6 @@
 ---
 title: 'InternalError: too much recursion'
 slug: Web/JavaScript/Reference/Errors/Too_much_recursion
-tags:
-  - Error
-  - Errors
-  - InternalError
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Errors/Too_much_recursion
 ---
 {{jsSidebar("Errors")}}
 
@@ -76,10 +70,10 @@ loop(0);
 
 ```js example-bad
 class Person{
-	constructor(){}
-	set name(name){
-		this.name = name; // 再帰呼び出し
-	}
+  constructor(){}
+  set name(name){
+    this.name = name; // 再帰呼び出し
+  }
 }
 
 const tony = new Person();
@@ -90,7 +84,7 @@ tony.name = "Tonisha"; // InternalError: too much recursion
 
 ```js example-bad
 set name(name){
-	this.name = name; // 再帰呼び出し
+  this.name = name; // 再帰呼び出し
 }
 ```
 
@@ -100,7 +94,7 @@ set name(name){
 
 ```js example-bad
 get name(){
-	return this.name; // 再帰呼び出し
+  return this.name; // 再帰呼び出し
 }
 ```
 
@@ -108,13 +102,13 @@ get name(){
 
 ```js
 class Person{
-	constructor(){}
-	set name(name){
-		this._name = name;
-	}
-	get name(){
-		return this._name;
-	}
+  constructor(){}
+  set name(name){
+    this._name = name;
+  }
+  get name(){
+    return this._name;
+  }
 }
 const tony = new Person();
 tony.name = "Tonisha";

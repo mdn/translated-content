@@ -22,7 +22,7 @@ translation_of: Web/CSS/flex
 </ul>
 
 <div id="flex">
-<pre class="hidden brush: html notranslate">&lt;div class="flex-container"&gt;
+<pre class="hidden brush: html">&lt;div class="flex-container"&gt;
   &lt;div class="item auto"&gt;auto&lt;/div&gt;
   &lt;div class="item auto"&gt;auto&lt;/div&gt;
   &lt;div class="item auto"&gt;auto&lt;/div&gt;
@@ -53,7 +53,7 @@ translation_of: Web/CSS/flex
 &lt;/div&gt;
 </pre>
 
-<pre class="hidden brush: css notranslate">* {
+<pre class="hidden brush: css">* {
   box-sizing: border-box;
 }
 
@@ -108,7 +108,7 @@ translation_of: Web/CSS/flex
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Propriedades principais */
+<pre class="brush:css">/* Propriedades principais */
 flex: auto;
 flex: initial;
 flex: none;
@@ -184,7 +184,7 @@ flex: unset;
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: css notranslate">#flex-container {
+<pre class="brush: css">#flex-container {
   display: flex;
   flex-direction: row;
 }
@@ -198,21 +198,21 @@ flex: unset;
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div id="flex-container"&gt;
+<pre class="brush: html">&lt;div id="flex-container"&gt;
   &lt;div class="flex-item" id="flex"&gt;Flex box (click to toggle raw box)&lt;/div&gt;
   &lt;div class="raw-item" id="raw"&gt;Raw box&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <div class="hidden">
-<pre class="brush: js notranslate">var flex = document.getElementById("flex");
+<pre class="brush: js">var flex = document.getElementById("flex");
 var raw = document.getElementById("raw");
 flex.addEventListener("click", function() {
   raw.style.display = raw.style.display == "none" ? "block" : "none";
 });
 </pre>
 
-<pre class="brush: css notranslate">#flex-container {
+<pre class="brush: css">#flex-container {
   width: 100%;
   font-family: Consolas, Arial, sans-serif;
 }

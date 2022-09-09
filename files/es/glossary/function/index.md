@@ -88,5 +88,5 @@ Si desea obtener más información sobre las IIFE, consulte la siguiente página
 
 ### Referencias técnicas
 
-- [Funciones](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions "en-US/docs/Web/JavaScript/Guide/Functions")
+- [Funciones](/en-US/docs/Web/JavaScript/Guide/Functions)
 - [Funciones de flecha](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)

@@ -40,27 +40,20 @@ translation_of: Web/HTML/Element/script
 
 <dl>
  <dt>{{htmlattrdef("async")}} {{HTMLVersionInline(5)}}</dt>
- <dd>Um atributo booleano indicando que o navegador deve, se possível, executar o script assíncronamente.</dd>
- <dd>
+ <dd><p>Um atributo booleano indicando que o navegador deve, se possível, executar o script assíncronamente.</p>
  <div class="blockIndicator warning">
  <p>Esse atributo não deve ser utilizado se o atributo <code>src</code> estiver ausente (ex. scripts embutidos). Se incluído, nesse caso, ele não terá nenhum efeito.</p>
  </div>
- </dd>
- <dd>
  <p>Scripts inseridos dinamicamente (usando <code>document.createElement</code>) são executados assincronamente por padrão, então para torná-lo uma execução síncrona (ex. executar scripts na ordem que eles foram carregados) atribua <code>async=false</code>.</p>
- </dd>
- <dd>Veja <a href="#browser_compatibility">Browser compatibility</a> para notas no suporte do navegador. Veja também  <a href="/en-US/docs/Games/Techniques/Async_scripts">Scripts assíncronos para asm.js</a>.</dd>
+ <p>Veja <a href="#browser_compatibility">Browser compatibility</a> para notas no suporte do navegador. Veja também  <a href="/en-US/docs/Games/Techniques/Async_scripts">Scripts assíncronos para asm.js</a>.</p></dd>
  <dt>{{htmlattrdef("crossorigin")}}</dt>
  <dd>Elementos <code>script</code> passam o mínimo de informação para  {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} em scripts que não passem na checagem do <a href="https://developer.mozilla.org/en-US/docs/HTTP_access_control">CORS</a>. Para permitir logs de erro para sites que usam domínios diferentes para arquivos estáticos, use esse atributo. Veja <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes">CORS settings attributes</a> para uma explicação mais detalhada dos argumentos válidos.</dd>
  <dt>{{htmlattrdef("defer")}}</dt>
- <dd>Esse atributo Boleano é usado para indicar ao navegador que o script deve ser executado depois que o documento tenha sido parseado, mas antes de disparar o evento {{event("DOMContentLoaded")}}</dd>
- <dd>Scripts com o atributo <code>defer</code> vão impedir que o evento DOMContentLoaded seja disparado até que o script seja carregado e tenha terminado de ser <em>avaliado</em>.</dd>
- <dd>
+ <dd><p>Esse atributo Boleano é usado para indicar ao navegador que o script deve ser executado depois que o documento tenha sido parseado, mas antes de disparar o evento {{event("DOMContentLoaded")}}</p>
+ <p>Scripts com o atributo <code>defer</code> vão impedir que o evento DOMContentLoaded seja disparado até que o script seja carregado e tenha terminado de ser <em>avaliado</em>.</p>
  <div class="blockIndicator warning">
  <p>Esse atributo não deve ser usado se o atibuto <code>src</code> estiver ausente (ex. scripts inline), nesse caso ele não vai ter efeito.</p>
  </div>
- </dd>
- <dd>
  <p>Para conseguir um efeito similar para scripts inseridos dinamicamente use <code>async=false</code>. Scripts com o atributo <code>defer</code> vão ser executados na ordem em que aparecem no <code>document</code>.</p>
  </dd>
  <dt>{{htmlattrdef("integrity")}}</dt>
@@ -85,10 +78,12 @@ translation_of: Web/HTML/Element/script
 
  <p>For how to include <em>exotic programming languages</em>, read about <a href="https://developer.mozilla.org/en-US/Add-ons/Code_snippets/Rosetta">Rosetta</a>.</p>
  </dd>
- <dt>
- <h3 id="Atributos_obsoletos">Atributos obsoletos</h3>
- </dt>
- <dt>{{htmlattrdef("charset")}} {{Deprecated_inline}}</dt>
+</dl> 
+
+<h3 id="Atributos_obsoletos">Atributos obsoletos</h3>
+
+<dl>
+<dt>{{htmlattrdef("charset")}} {{Deprecated_inline}}</dt>
  <dd>If present, its value must be an ASCII case-insensitive match for "<code>utf-8</code>". Both it’s unnecessary to specify the <code>charset</code> attribute, because documents must use UTF-8, and the <code>script</code> element inherits its character encoding from the document.</dd>
  <dt>{{htmlattrdef("language")}} {{Deprecated_inline}}</dt>
  <dd>Like the <code>type</code> attribute, this attribute identifies the scripting language in use. Unlike the <code>type</code> attribute, however, this attribute’s possible values were never standardized. The <code>type</code> attribute should be used instead.</dd>

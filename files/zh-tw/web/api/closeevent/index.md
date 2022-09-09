@@ -9,7 +9,7 @@ original_slug: WebSockets/WebSockets_reference/CloseEvent
 
 | 屬性       | 形態                                 | 描述                                                             |
 | ---------- | ------------------------------------ | ---------------------------------------------------------------- |
-| `code`     | [`unsigned long`](/en/unsigned_long) | WebSocket 伺服器給予的連線關閉代碼。「狀態代碼」列有所有可能值。 |
+| `code`     | [`unsigned long`](/zh-TW/unsigned_long) | WebSocket 伺服器給予的連線關閉代碼。「狀態代碼」列有所有可能值。 |
 | `reason`   | {{ domxref("DOMString") }} | 表示伺服器關閉連線的原因，這因不同的伺服器與子協定而定。         |
 | `wasClean` | `boolean`                            | 表示連線關閉情況是否乾淨。                                       |
 

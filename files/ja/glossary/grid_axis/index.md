@@ -1,10 +1,6 @@
 ---
 title: Grid Axis (グリッド軸)
 slug: Glossary/Grid_Axis
-tags:
-  - CSS
-  - CSS Grids
-translation_of: Glossary/Grid_Axis
 l10n:
   sourceCommit: 4a9f9d2e9c1811ce3519a7061e906db9200a5e97
 ---
