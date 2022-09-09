@@ -37,7 +37,7 @@ dispatchEvent(event)
 
 ## 示例
 
-请参考 [创建和触发 events](/zh-CN/docs/Web/Events/Creating_and_triggering_events)。
+请参考[创建和触发事件](/zh-CN/docs/Web/Events/Creating_and_triggering_events)。
 
 ## 规范
 
