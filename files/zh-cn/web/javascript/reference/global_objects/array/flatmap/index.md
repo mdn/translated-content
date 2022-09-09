@@ -10,10 +10,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 
 ## 语法
 
-```plain
-var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
-    // return element for new_array
-}[, thisArg])
+```js
+// 箭头函数
+flatMap((currentValue) => { /* … */ } )
+flatMap((currentValue, index) => { /* … */ } )
+flatMap((currentValue, index, array) => { /* … */ } )
+
+// 回调函数
+flatMap(callbackFn)
+flatMap(callbackFn, thisArg)
+
+// 行内回调函数
+flatMap(function(currentValue) { /* … */ })
+flatMap(function(currentValue, index) { /* … */ })
+flatMap(function(currentValue, index, array){ /* … */ })
+flatMap(function(currentValue, index, array) { /* … */ }, thisArg)
 ```
 
 ### 参数

@@ -12,8 +12,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 
 ## 语法
 
-```plain
-arr.findIndex(callback[, thisArg])
+```js
+// 箭头函数
+findIndex((element) => { /* … */ } )
+findIndex((element, index) => { /* … */ } )
+findIndex((element, index, array) => { /* … */ } )
+
+// 回调函数
+findIndex(callbackFn)
+findIndex(callbackFn, thisArg)
+
+// 内联回调函数
+findIndex(function(element) { /* … */ })
+findIndex(function(element, index) { /* … */ })
+findIndex(function(element, index, array){ /* … */ })
+findIndex(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### 参数

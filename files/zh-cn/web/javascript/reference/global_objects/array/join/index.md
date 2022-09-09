@@ -10,8 +10,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/join
 
 ## 语法
 
-```plain
-arr.join([separator])
+```js
+join()
+join(separator)
 ```
 
 ### 参数

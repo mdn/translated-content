@@ -10,8 +10,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 ## 语法
 
-```plain
-arr.slice([begin[, end]])
+```js
+slice()
+slice(start)
+slice(start, end)
 ```
 
 ## 参数

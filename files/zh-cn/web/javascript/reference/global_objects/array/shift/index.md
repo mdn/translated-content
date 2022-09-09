@@ -10,8 +10,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/shift
 
 ## 语法
 
-```plain
-arr.shift()
+```js
+shift()
 ```
 
 ### 返回值

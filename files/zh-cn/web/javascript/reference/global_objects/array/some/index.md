@@ -12,8 +12,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/some
 
 ## 语法
 
-```plain
-arr.some(callback(element[, index[, array]])[, thisArg])
+```js
+// 箭头函数
+some((element) => { /* … */ } )
+some((element, index) => { /* … */ } )
+some((element, index, array) => { /* … */ } )
+
+// 回调函数
+some(callbackFn)
+some(callbackFn, thisArg)
+
+// 内联回调函数
+some(function(element) { /* … */ })
+some(function(element, index) { /* … */ })
+some(function(element, index, array){ /* … */ })
+some(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### 参数

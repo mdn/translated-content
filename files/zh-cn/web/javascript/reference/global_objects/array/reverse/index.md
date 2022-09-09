@@ -10,8 +10,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
 
 ## 语法
 
-```plain
- arr.reverse()
+```js
+reverse()
 ```
 
 ### 返回值

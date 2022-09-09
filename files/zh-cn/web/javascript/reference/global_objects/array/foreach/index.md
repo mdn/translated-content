@@ -10,8 +10,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 ## 语法
 
-```plain
-arr.forEach(callback(currentValue [, index [, array]])[, thisArg])
+```js
+// 箭头函数
+forEach((element) => { /* … */ })
+forEach((element, index) => { /* … */ })
+forEach((element, index, array) => { /* … */ })
+
+// 回调函数
+forEach(callbackFn)
+forEach(callbackFn, thisArg)
+
+// 内联回调函数
+forEach(function(element) { /* … */ })
+forEach(function(element, index) { /* … */ })
+forEach(function(element, index, array){ /* … */ })
+forEach(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### 参数
