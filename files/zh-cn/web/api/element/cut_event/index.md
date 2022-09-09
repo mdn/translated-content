@@ -11,7 +11,7 @@ slug: Web/API/Element/cut_event
 ## 基本信息
 
 - 规范
-  - [: Clipboard](http://www.w3.org/TR/clipboard-apis/#cut-event)
+  - : [Clipboard](http://www.w3.org/TR/clipboard-apis/#cut-event)
 - 接口
   - : {{domxref("ClipboardEvent")}}
 - 是否冒泡

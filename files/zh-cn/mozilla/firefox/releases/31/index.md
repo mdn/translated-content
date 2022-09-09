@@ -57,7 +57,7 @@ _No change._
 
 ## See also
 
-- [Site Compatibility for Firefox 31](/en-US/docs/Mozilla/Firefox/Releases/31/Site_Compatibility)
+- [Site Compatibility for Firefox 31](/zh-CN/docs/Mozilla/Firefox/Releases/31/Site_Compatibility)
 
 ### Older versions
 

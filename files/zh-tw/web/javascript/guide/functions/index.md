@@ -22,7 +22,7 @@ function square(number) {
 }
 ```
 
-函式 square 有一個參數，叫作 number。這個函式只有一行程式碼，它會回傳 number 自乘的結果。函式的 [`return`](/en-US/docs/JavaScript/Reference/Statements/return) 語法描述函式的返回值。
+函式 square 有一個參數，叫作 number。這個函式只有一行程式碼，它會回傳 number 自乘的結果。函式的 [`return`](/zh-TW/docs/JavaScript/Reference/Statements/return) 語法描述函式的返回值。
 
 ```js
 return number * number;
@@ -30,7 +30,7 @@ return number * number;
 
 原始參數（例如一個數字）被作為值傳遞給函式，如果呼叫的函式改變了這個參數的值，不會影響到函式外部的原始變數。
 
-如果傳遞一個物件（例如 [`Array`](/en-US/docs/JavaScript/Reference/Global_Objects/Array) 或自定義的其它物件）作為參數，而函式改變了這個物件的屬性，這樣的改變對函式外部是有作用的(因為是傳遞物件的位址)，如下面的例子所示：
+如果傳遞一個物件（例如 [`Array`](/zh-TW/docs/JavaScript/Reference/Global_Objects/Array) 或自定義的其它物件）作為參數，而函式改變了這個物件的屬性，這樣的改變對函式外部是有作用的(因為是傳遞物件的位址)，如下面的例子所示：
 
 ```js
 function myFunc(theObject) {
@@ -99,7 +99,7 @@ map(function(x) {return x * x * x}, [0, 1, 2, 5, 10]);
 // 結果會回傳 [0, 1, 8, 125, 1000]
 ```
 
-除了上述的定義方式以外，我們也可以透過 [`Function` constructor](/en-US/docs/JavaScript/Guide/Predefined_Core_Objects#Function_Object) 來定義, 類似 [`eval()`](/en-US/docs/JavaScript/Guide/Functions#eval_Function).
+除了上述的定義方式以外，我們也可以透過 [`Function` constructor](/zh-TW/docs/JavaScript/Guide/Predefined_Core_Objects#Function_Object) 來定義, 類似 [`eval()`](/zh-TW/docs/JavaScript/Guide/Functions#eval_Function).
 
 ## 呼叫函式
 
@@ -128,7 +128,7 @@ square = function (n) {
 }
 ```
 
-The arguments of a function are not limited to strings and numbers. You can pass whole objects to a function, too. The `show_props` function (defined in [Working with Objects](/en-US/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties)) is an example of a function that takes an object as an argument.
+The arguments of a function are not limited to strings and numbers. You can pass whole objects to a function, too. The `show_props` function (defined in [Working with Objects](/zh-TW/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties)) is an example of a function that takes an object as an argument.
 
 A function can be recursive; that is, it can call itself. For example, here is a function that computes factorials recursively:
 
@@ -152,7 +152,7 @@ d = factorial(4); // d gets the value 24
 e = factorial(5); // e gets the value 120
 ```
 
-There are other ways to call functions. There are often cases where a function needs to be called dynamically, or the number of arguments to a function vary, or in which the context of the function call needs to be set to a specific object determined at runtime. It turns out that functions are, themselves, objects, and these objects in turn have methods (see the [`Function` object](/en-US/docs/JavaScript/Guide/Obsolete_Pages/Predefined_Core_Objects/Function_Object)). One of these, the [`apply()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/apply) method, can be used to achieve this goal.
+There are other ways to call functions. There are often cases where a function needs to be called dynamically, or the number of arguments to a function vary, or in which the context of the function call needs to be set to a specific object determined at runtime. It turns out that functions are, themselves, objects, and these objects in turn have methods (see the [`Function` object](/zh-TW/docs/JavaScript/Guide/Obsolete_Pages/Predefined_Core_Objects/Function_Object)). One of these, the [`apply()`](/zh-TW/docs/JavaScript/Reference/Global_Objects/Function/apply) method, can be used to achieve this goal.
 
 ## Function scope
 
@@ -308,7 +308,7 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 
 Please note that the `arguments` variable is "array-like", but not an array. It is array-like in that is has a numbered index and a `length` property. However, it does not possess all of the array-manipulation methods.
 
-See the [`Function` object](/en-US/docs/JavaScript/Reference/Global_Objects/Function) in the JavaScript Reference for more information.
+See the [`Function` object](/zh-TW/docs/JavaScript/Reference/Global_Objects/Function) in the JavaScript Reference for more information.
 
 ## Predefined functions
 
@@ -321,7 +321,7 @@ JavaScript has several top-level predefined functions:
 - [Number and String](#Number_and_String_functions)
 - [encodeURI, decodeURI, encodeURIComponent, and decodeURIComponent](#escape_and_unescape_functions) (all available with Javascript 1.5 and later).
 
-The following sections introduce these functions. See the [JavaScript Reference](/en-US/docs/JavaScript/Reference) for detailed information on all of these functions.
+The following sections introduce these functions. See the [JavaScript Reference](/zh-TW/docs/JavaScript/Reference) for detailed information on all of these functions.
 
 ### eval Function
 
@@ -413,7 +413,7 @@ objRef = String(objRef);
 
 `objRef 是物件的參照`。 Number uses the valueOf() method of the object; String uses the toString() method of the object.
 
-下列範例將 [`日期`](/en-US/docs/JavaScript/Reference/Global_Objects/Date) 物件轉換為可讀字串。
+下列範例將 [`日期`](/zh-TW/docs/JavaScript/Reference/Global_Objects/Date) 物件轉換為可讀字串。
 
 ```js
 var D = new Date(430054663215),
@@ -421,7 +421,7 @@ var D = new Date(430054663215),
 x = String(D); // x 等於 "星期二 八月 18 04:37:43 GMT-0700  1983"
 ```
 
-下列範例將 [`字串`](/en-US/docs/JavaScript/Reference/Global_Objects/String) 物件轉換為 [`數字`](/en-US/docs/JavaScript/Reference/Global_Objects/Number) 物件。
+下列範例將 [`字串`](/zh-TW/docs/JavaScript/Reference/Global_Objects/String) 物件轉換為 [`數字`](/zh-TW/docs/JavaScript/Reference/Global_Objects/Number) 物件。
 
 ```js
 var str = "12",
@@ -442,7 +442,7 @@ document.write(typeof num);
 
 ### escape 與 unescape 函式(JavaScript 1.5 後去除)
 
-`escape` 與 `unescape` 對於非 ASCII 字元無法處理。 在 JavaScript 1.5 之後改用 [`encodeURI`](/en-US/docs/JavaScript/Reference/Global_Objects/encodeURI), [`decodeURI`](/en-US/docs/JavaScript/Reference/Global_Objects/decodeURI), [`encodeURIComponent`](/en-US/docs/JavaScript/Reference/Global_Objects/encodeURIComponent), 與 [`decodeURIComponent`](/en-US/docs/JavaScript/Reference/Global_Objects/decodeURIComponent).
+`escape` 與 `unescape` 對於非 ASCII 字元無法處理。 在 JavaScript 1.5 之後改用 [`encodeURI`](/zh-TW/docs/JavaScript/Reference/Global_Objects/encodeURI), [`decodeURI`](/zh-TW/docs/JavaScript/Reference/Global_Objects/decodeURI), [`encodeURIComponent`](/zh-TW/docs/JavaScript/Reference/Global_Objects/encodeURIComponent), 與 [`decodeURIComponent`](/zh-TW/docs/JavaScript/Reference/Global_Objects/decodeURIComponent).
 
 `escape` 與 `unescape` 用於編碼與解碼字串。 `escape` 函式回傳十六進位編碼。 `unescape` 函式會將十六進位的編碼轉換回 ASCII 字串。
 

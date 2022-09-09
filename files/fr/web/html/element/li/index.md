@@ -149,15 +149,11 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire                       |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-li-element', '&lt;li&gt;')}}     | {{Spec2('HTML WHATWG')}} |                                   |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-li-element', '&lt;li&gt;')}} | {{Spec2('HTML5 W3C')}}     |                                   |
-| {{SpecName('HTML4.01', 'struct/lists.html#h-10.2', '&lt;li&gt;')}}                 | {{Spec2('HTML4.01')}}     | L'attribut `type` a été déprécié. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.li")}}
+{{Compat}}
 
 ## Voir aussi
 

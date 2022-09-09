@@ -1,15 +1,6 @@
 ---
 title: '-moz-orient'
 slug: Web/CSS/-moz-orient
-tags:
-  - CSS
-  - CSS プロパティ
-  - Mozilla 拡張
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.-moz-orient
-translation_of: Web/CSS/-moz-orient
 ---
 {{CSSRef}}{{Non-standard_header}}
 

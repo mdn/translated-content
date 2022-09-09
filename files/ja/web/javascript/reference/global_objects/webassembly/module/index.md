@@ -1,14 +1,6 @@
 ---
 title: WebAssembly.Module
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
-tags:
-  - Class
-  - JavaScript
-  - Module
-  - Reference
-  - WebAssembly
-browser-compat: javascript.builtins.WebAssembly.Module
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 ---
 {{JSRef}}
 

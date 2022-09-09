@@ -1,14 +1,6 @@
 ---
 title: border-top-left-radius
 slug: Web/CSS/border-top-left-radius
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-top-left-radius
-translation_of: Web/CSS/border-top-left-radius
 ---
 {{CSSRef}}
 

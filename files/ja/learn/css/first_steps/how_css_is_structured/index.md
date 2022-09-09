@@ -245,11 +245,11 @@ CSS プロパティを特定の値に設定することが、文書のレイア�
 
 **以下に挙げたプロパティの様々な値を調べてみてください。それぞれの HTML 要素にスタイルを適用する CSS 規則を書いてみてください。**
 
-- **{{cssxref("font-size")}}**
-- **{{cssxref("width")}}**
-- **{{cssxref("background-color")}}**
-- **{{cssxref("color")}}**
-- **{{cssxref("border")}}**
+- {{cssxref("font-size")}}
+- {{cssxref("width")}}
+- {{cssxref("background-color")}}
+- {{cssxref("color")}}
+- {{cssxref("border")}}
 
 > **Warning:** **重要**: プロパティが不明だった場合、または指定されたプロパティの値が妥当ではなかった場合は、宣言が*無効*なものとして扱われます。ブラウザーの CSS エンジンはこれを完全に無視します。
 
@@ -302,11 +302,11 @@ CSS プロパティを特定の値に設定することが、文書のレイア�
 
 {{EmbedLiveSample('transform_example', '100%', 200)}}
 
-**以下に挙げたプロパティのそれぞれの値を調べてみましょう。ぞれぞれの HTML 要素にスタイルを適用する CSS 規則を記述してみましょう。**
+以下に挙げたプロパティのそれぞれの値を調べてみましょう。ぞれぞれの HTML 要素にスタイルを適用する CSS 規則を記述してみましょう。
 
-- **{{cssxref("transform")}}**
-- **{{cssxref("background-image")}}、特に gradient の値**
-- **{{cssxref("color")}}、特に rgb/rgba/hsl/hsla の値**
+- {{cssxref("transform")}}
+- {{cssxref("background-image")}}、特に gradient の値
+- {{cssxref("color")}}、特に rgb/rgba/hsl/hsla の値
 
 ## アット規則
 
@@ -513,7 +513,7 @@ padding- left: 10px;
 
 **CSS のプロパティに対する複数の値どうしを区別するためには、最低でも 1 個以上の空白をあいだにおく必要があります。また、プロパティの名称や値のひとつひとつは、その一部分だけを切り離したりせず続けて書かなければなりません。**
 
-\***\*自分の CSS のなかで空白をさまざまに入れてみて、どうすれば CSS が正しく機能して、どうすれば機能しなくなるかたしかめてみましょう。\*\***
+**自分の CSS のなかで空白をさまざまに入れてみて、どうすれば CSS が正しく機能して、どうすれば機能しなくなるかたしかめてみましょう。**
 
 ## 次のステップ
 
@@ -523,8 +523,8 @@ padding- left: 10px;
 
 ## このモジュール内
 
-1. **[CSS とは何か？](/ja/docs/Learn/CSS/First_steps/What_is_CSS)**
-2. **[CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)**
-3. **[CSS の全体像](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)**
-4. **[CSS はどう働くか？](/ja/docs/Learn/CSS/First_steps/How_CSS_works)**
-5. **[新しい知識を使う](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)**
+1. [CSS とは何か？](/ja/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)
+3. [CSS の全体像](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [CSS はどう働くか？](/ja/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [新しい知識を使う](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

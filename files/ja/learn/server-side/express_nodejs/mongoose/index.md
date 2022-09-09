@@ -203,7 +203,7 @@ var schema = new Schema(
 
 このコードはフィールドを宣言する 2 つのやり方も示しています:
 
-- フィールドの*name* と *type*を key-value ペアのように書く (例えば`name`, ` binary ,``living `のように）.
+- フィールドの*name* と *type*を key-value ペアのように書く (例えば `name`, `binary`, `living` のように）.
 - `type`定義するオブジェクトが続くフィールド名、およびフィールドの他のオプション。オプションには次のようなものがあります:
 
   - 初期値.

@@ -32,7 +32,7 @@ browser.windows.getCurrent({populate: true}).then((windowInfo) => {
 
 ## 声明侧边栏
 
-声明侧边栏，只需在 manifest.json 中指 定关键字 [`sidebar_action`](/en-US/Add-ons/WebExtensions/manifest.json/sidebar_action) 并同时指定 title 和 icon:
+声明侧边栏，只需在 manifest.json 中指 定关键字 [`sidebar_action`](/zh-CN/Add-ons/WebExtensions/manifest.json/sidebar_action) 并同时指定 title 和 icon:
 
 ```json
 "sidebar_action": {

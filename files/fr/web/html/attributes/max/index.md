@@ -135,18 +135,11 @@ Fournissez des instructions pour aider les utilisateurs à comprendre comment re
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'input.html#the-min-and-max-attributes', 'max attribute')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', 'input.html#the-min-and-max-attributes', 'max attribute')}} | {{Spec2('HTML5 W3C')}}     |
-| {{SpecName('HTML WHATWG', 'forms.html#the-progress-element', 'progress element')}}     | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', 'forms.html#the-progress-element', 'progress element')}}     | {{Spec2('HTML5 W3C')}}     |
-| {{SpecName('HTML WHATWG', 'forms.html#the-meter-element', 'meter element')}}             | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', 'forms.html#the-meter-element', 'meter element')}}             | {{Spec2('HTML5 W3C')}}     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attributes.max")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -8,14 +8,14 @@ El elemento `audio` se usa para insertar contenido de audio en un documento HTML
 
 > **Nota:** actualmente Gecko admite solamente Vorbis, en contenedores Ogg, así como formato WAV. Asimismo, el servidor debe servir el archivo mediante el tipo MIME correcto con el fin de que Gecko lo reproduzca correctamente.
 
-Puedes usar las características API de audio mejoradas - que son específicas de Gecko - para generar y manipular directamente secuencias de audio a partir de código JavaScript. Consulta [Manipular sonido a través de la API de audio mejorada](/en/Manipulating_audio_using_the_enhanced_audio_API "en/Manipulating audio using the enhanced audio API") para tener más detalles.
+Puedes usar las características API de audio mejoradas - que son específicas de Gecko - para generar y manipular directamente secuencias de audio a partir de código JavaScript. Consulta [Manipular sonido a través de la API de audio mejorada](/en/Manipulating_audio_using_the_enhanced_audio_API) para tener más detalles.
 
 ## Contexto de uso
 
-| Contenido permitido            | [Contenido transparente](/en/HTML/Content_categories#transparent_content "en/HTML/Content categories#transparent content"), que contiene bien un atributo **src**, bien uno o más elementos {{ HTMLElement("source") }}, seguido de [contenido dinámico](/en/HTML/Content_categories#flow_content "en/HTML/Content categories#flow content") o [contenido estático](/en/HTML/Content_categories#phrasing_content "en/HTML/Content categories#phrasing content") , sin ningún elemento de {{ HTMLElement("video") }} o `<audio>`. |
+| Contenido permitido            | [Contenido transparente](/en/HTML/Content_categories#transparent_content), que contiene bien un atributo **src**, bien uno o más elementos {{ HTMLElement("source") }}, seguido de [contenido dinámico](/en/HTML/Content_categories#flow_content) o [contenido estático](/en/HTML/Content_categories#phrasing_content) , sin ningún elemento de {{ HTMLElement("video") }} o `<audio>`. |
 | ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Omisión de etiquetas           | Ninguna, deben estar presentes tanto las etiquetas de inicio como las de cierre.                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Elementos primarios permitidos | Cualquier elemento que acepte [contenido dinámico](../../../../en/HTML/Content_categories#flow_content) o cualquier elemento que acepte [contenido estático](../../../../en/HTML/Content_categories#phrasing_content).                                                                                                                                                                                                                                                                                                                              |
+| Elementos primarios permitidos | Cualquier elemento que acepte [contenido dinámico](/en/HTML/Content_categories#flow_content) o cualquier elemento que acepte [contenido estático](/en/HTML/Content_categories#phrasing_content).                                                                                                                                                                                                                                                                                                                              |
 | Documento normativo            | [HTML5, sección 4.8.7](http://www.w3.org/TR/html5/video.html#audio)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 ## Atributos
@@ -41,12 +41,13 @@ Puedes usar las características API de audio mejoradas - que son específicas d
 
 Si no está configurado, su valor predeterminado está definido por el navegador (es decir, cada navegador puede elegir su propio valor predeterminado), aunque la especificación aconseje que se establezca a `metadatos`.
 
-> **Nota:** **Observaciones sobre uso:** 
+> **Nota:** **Observaciones sobre uso:**
+>
 > - El atributo **autoplay** tiene prioridad sobre éste puesto que si se desea reproducir automáticamente un video, el navegador obviamente tendrá que descargarlo. La especificación permite establecer los atributos **autoplay** y **preload**.
 > - La especificación no fuerza al navegador a seguir el valor de este atributo; es tan sólo una sugerencia.
 
 - src
-  - : La URL del audio que se va a insertar. Está sujeta a los [Controles de acceso HTTP](/En/HTTP_access_control "En/HTTP access control"). Es opcional; en su lugar puedes usar el elemento [`source`](/en/HTML/Element/Source "En/HTML/Element/Source") dentro del bloque de audio para especificar el audio que se va a insertar.
+  - : La URL del audio que se va a insertar. Está sujeta a los [Controles de acceso HTTP](/En/HTTP_access_control). Es opcional; en su lugar puedes usar el elemento [`source`](/en/HTML/Element/Source) dentro del bloque de audio para especificar el audio que se va a insertar.
 
 Las compensaciones de tiempo se especifican como valores float que indican el número de segundos que se va a compensar.
 
@@ -65,14 +66,14 @@ Reproduce el fichero de audio adjunto a este artículo.
 
 ## Interfaz DOM
 
-- [HTMLAudioElement](/en/DOM/HTMLAudioElement "en/DOM/HTMLAudioElement")
+- [HTMLAudioElement](/en/DOM/HTMLAudioElement)
 
 ## Consulta también
 
-- [**Formatos multimedia admitidos por los elementos de audio y video**](/es/Formatos_multimedia_admitidos_por_los_elementos_de_video_y_audio "es/Formatos multimedia admitidos por los elementos de video y audio")
-- [Manipulating audio using the enhanced audio API](/en/Manipulating_audio_using_the_enhanced_audio_API "en/Manipulating audio using the enhanced audio API")
-- [`HTMLAudioElement`](/en/DOM/HTMLAudioElement "en/DOM/HTMLAudioElement")
-- [`nsIDOMHTMLMediaElement`](/En/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement "En/NsIDOMHTMLMediaElement")
-- [`video`](/en/HTML/Element/Video "En/HTML/Element/Video")
-- [Usar audio y video en Firefox](/es/Using_audio_and_video_in_Firefox "Es/Usar audio y video en Firefox")
+- [**Formatos multimedia admitidos por los elementos de audio y video**](/es/Formatos_multimedia_admitidos_por_los_elementos_de_video_y_audio)
+- [Manipulating audio using the enhanced audio API](/en/Manipulating_audio_using_the_enhanced_audio_API)
+- [`HTMLAudioElement`](/en/DOM/HTMLAudioElement)
+- [`nsIDOMHTMLMediaElement`](/En/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement)
+- [`video`](/en/HTML/Element/Video)
+- [Usar audio y video en Firefox](/es/Using_audio_and_video_in_Firefox)
 - [The `audio` element](http://www.whatwg.org/specs/web-apps/current-work/#audio) (HTML 5 specification)

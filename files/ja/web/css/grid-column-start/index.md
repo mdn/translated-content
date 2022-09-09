@@ -1,14 +1,6 @@
 ---
 title: grid-column-start
 slug: Web/CSS/grid-column-start
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.grid-column-start
-translation_of: Web/CSS/grid-column-start
 ---
 {{CSSRef}}
 

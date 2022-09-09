@@ -35,7 +35,7 @@ touch-action: unset;
 
 touch-action 属性可以被指定为：
 
-- 任何一个关键字 ` auto、``none、``manipulation，或 `
+- 任何一个关键字 `auto`、`none`、`manipulation`，或
 - 零或任何一个关键字 `pan-x`、`pan-left`、`pan-right`，加 零或任何一个关键字 `pan-y`、`pan-up`、`pan-down`，加可选关键字 [`pinch-zoom`](/zh-CN/docs/Web/CSS/touch-action#pinch-zoom).
 
 ### 值

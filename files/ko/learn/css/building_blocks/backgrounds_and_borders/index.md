@@ -1,7 +1,6 @@
 ---
 title: 배경 및 테두리
 slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
-translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
 

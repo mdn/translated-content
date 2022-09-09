@@ -1,7 +1,6 @@
 ---
 title: <mspace>
 slug: Web/MathML/Element/mspace
-translation_of: Web/MathML/Element/mspace
 ---
 {{MathMLRef()}}
 

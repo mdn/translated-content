@@ -10,8 +10,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
 
 ## 语法
 
-```plain
- arr.reverse()
+```js
+reverse()
 ```
 
 ### 返回值
@@ -64,7 +64,7 @@ console.log(a); // {0: 3, 1: 2, 2: 1, length: 3}
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Array.prototype.join()")}}
 - {{jsxref("Array.prototype.sort()")}}

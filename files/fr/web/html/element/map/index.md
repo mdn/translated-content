@@ -106,15 +106,11 @@ _Pour le lien `right.html`&nbsp;:_
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#the-map-element', '&lt;map&gt;')}} | {{Spec2('HTML WHATWG')}} |                      |
-| {{SpecName('HTML5 W3C', 'embedded-content-0.html#the-map-element', '&lt;map&gt;')}} | {{Spec2('HTML5 W3C')}}     |                      |
-| {{SpecName('HTML4.01', 'struct/objects.html#h-13.6.1', '&lt;map&gt;')}}                 | {{Spec2('HTML4.01')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.map")}}
+{{Compat}}
 
 ## Voir aussi
 

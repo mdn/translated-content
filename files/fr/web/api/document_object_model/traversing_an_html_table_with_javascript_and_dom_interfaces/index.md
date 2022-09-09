@@ -376,6 +376,6 @@ Une fois que vous avez l'objet dans une variable JavaScript, vous pouvez défini
 - Author(s)
   - : Marcio Galli
 - Migrated from
-  - : http\://web.archive.org/web/20000815054125/http\://mozilla.org/docs/dom/technote/tn-dom-table/
+  - : <http://web.archive.org/web/20000815054125/http://mozilla.org/docs/dom/technote/tn-dom-table/>
 
 Interwik

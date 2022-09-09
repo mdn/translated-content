@@ -33,11 +33,11 @@ CSS 中使用的每个属性都允许拥有一个或一组值，查看 MDN 上�
 
 ## 什么是 CSS 的值？
 
-在 CSS 规范和 MDN 的属性页上，您将能够发现值的存在，因为它们将被尖括号包围，如`<color>`或`<length>`。当您看到值`<color>`对特定属性有效时，这意味着您可以使用任何有效的颜色作为该属性的值，如 [`<color>`](/en-US/docs/Web/CSS/color_value)参考页面所列。
+在 CSS 规范和 MDN 的属性页上，您将能够发现值的存在，因为它们将被尖括号包围，如`<color>`或`<length>`。当您看到值`<color>`对特定属性有效时，这意味着您可以使用任何有效的颜色作为该属性的值，如 [`<color>`](/zh-CN/docs/Web/CSS/color_value)参考页面所列。
 
 > **备注：** 您还将看到被称为数据类型的 CSS 值。这些术语基本上是可以互换的——当你在 CSS 中看到一些被称为数据类型的东西时，它实际上只是一种表示值的奇特方式。
 
-> **备注：** 是的，CSS 值倾向于使用尖括号表示，以区别于 CSS 属性 (例如{{cssxref("color")}}属性和 [\<color>](/en-US/docs/Web/CSS/color_value) 数据类型)。您可能还会混淆 CSS 数据类型和 HTML 元素，因为它们都使用尖括号，但这不太可能——它们在完全不一样的上下文中使用。
+> **备注：** 是的，CSS 值倾向于使用尖括号表示，以区别于 CSS 属性 (例如{{cssxref("color")}}属性和 [\<color>](/zh-CN/docs/Web/CSS/color_value) 数据类型)。您可能还会混淆 CSS 数据类型和 HTML 元素，因为它们都使用尖括号，但这不太可能——它们在完全不一样的上下文中使用。
 
 在下面的例子中，我们使用关键字设置标题的颜色，使用`rgb()`函数设置背景：
 
@@ -48,7 +48,7 @@ h1 {
 }
 ```
 
-CSS 中的值是一种定义允许子值集合的方法。这意味着如果您看到`<color>`是有效的，那么您就不需要考虑可以使用哪些不同类型的颜色值—关键字、十六进制值、`rgb()`函数等等。假设浏览器支持这些可用的`<color>`值，则可以使用它们任意一个。MDN 上针对每个值的页面将提供有关浏览器支持的信息。例如，如果您查看 [`<color>`](/en-US/docs/Web/CSS/color_value)的页面，您将看到浏览器兼容性部分列出了不同类型的颜色值以及对它们的支持。
+CSS 中的值是一种定义允许子值集合的方法。这意味着如果您看到`<color>`是有效的，那么您就不需要考虑可以使用哪些不同类型的颜色值—关键字、十六进制值、`rgb()`函数等等。假设浏览器支持这些可用的`<color>`值，则可以使用它们任意一个。MDN 上针对每个值的页面将提供有关浏览器支持的信息。例如，如果您查看 [`<color>`](/zh-CN/docs/Web/CSS/color_value)的页面，您将看到浏览器兼容性部分列出了不同类型的颜色值以及对它们的支持。
 
 让我们来看看您可能经常遇到的一些值和单位类型，并提供一些示例，以便您尝试使用各种值的可能性。
 
@@ -58,10 +58,10 @@ CSS 中的值是一种定义允许子值集合的方法。这意味着如果您�
 
 | 数值类型                                         | 描述                                                                                                                                                              |
 | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`<integer>`](/en-US/docs/Web/CSS/integer)       | [`<integer>`](/en-US/docs/Web/CSS/integer)是一个整数，比如 1024 或 -55。                                                                                          |
-| [`<number>`](/en-US/docs/Web/CSS/number)         | [`<number>`](/en-US/docs/Web/CSS/number)表示一个小数——它可能有小数点后面的部分，也可能没有，例如 0.255、128 或 -1.2。                                             |
+| [`<integer>`](/zh-CN/docs/Web/CSS/integer)       | [`<integer>`](/zh-CN/docs/Web/CSS/integer)是一个整数，比如 1024 或 -55。                                                                                          |
+| [`<number>`](/zh-CN/docs/Web/CSS/number)         | [`<number>`](/zh-CN/docs/Web/CSS/number)表示一个小数——它可能有小数点后面的部分，也可能没有，例如 0.255、128 或 -1.2。                                             |
 | `<dimension>`                                    | `<dimension>`是一个`<number>`，它有一个附加的单位，例如 45deg、5s 或 10px。`<dimension>`是一个伞形类别，包括`<length>`、`<angle>`、`<time>`和`<resolution>`类型。 |
-| [`<percentage>`](/en-US/docs/Web/CSS/percentage) | [`<percentage>`](/en-US/docs/Web/CSS/percentage)表示一些其他值的一部分，例如 50%。百分比值总是相对于另一个量，例如，一个元素的长度相对于其父元素的长度。          |
+| [`<percentage>`](/zh-CN/docs/Web/CSS/percentage) | [`<percentage>`](/zh-CN/docs/Web/CSS/percentage)表示一些其他值的一部分，例如 50%。百分比值总是相对于另一个量，例如，一个元素的长度相对于其父元素的长度。          |
 
 ### 长度
 
@@ -165,7 +165,7 @@ HTML 是一组嵌套的列表—我们总共有三个列表，并且两个示例
 
 ### 颜色关键词
 
-在这学习示例或 MDN 上的其他示例中，您经常会看到使用的颜色关键字，因为它们是一种指定颜色的简单易懂的方式。有一些关键词，其中一些有相当有趣的名字！您可以在页面上看到 [`<color>`](/en-US/docs/Web/CSS/color_value)值的完整列表。
+在这学习示例或 MDN 上的其他示例中，您经常会看到使用的颜色关键字，因为它们是一种指定颜色的简单易懂的方式。有一些关键词，其中一些有相当有趣的名字！您可以在页面上看到 [`<color>`](/zh-CN/docs/Web/CSS/color_value)值的完整列表。
 
 **在下面的示例中尝试使用不同的颜色值，以了解它们是如何工作的。**
 
@@ -219,7 +219,7 @@ HTML 是一组嵌套的列表—我们总共有三个列表，并且两个示例
 
 ## 图片
 
-[`<image>`](/en-US/docs/Web/CSS/image) 数据类型用于图像为有效值的任何地方。它可以是一个通过 `url()`函数指向的实际图像文件，也可以是一个渐变。
+[`<image>`](/zh-CN/docs/Web/CSS/image) 数据类型用于图像为有效值的任何地方。它可以是一个通过 `url()`函数指向的实际图像文件，也可以是一个渐变。
 
 在下面的例子中，我们演示了一个图像和一个渐变作为 CSS `background-image`属性的值。
 
@@ -229,7 +229,7 @@ HTML 是一组嵌套的列表—我们总共有三个列表，并且两个示例
 
 ## 位置
 
-[`<position>`](/en-US/docs/Web/CSS/position_value) 数据类型表示一组 2D 坐标，用于定位一个元素，如背景图像 (通过 [`background-position`](/en-US/docs/Web/CSS/background-position))。它可以使用关键字 (如 `top`, `left`, `bottom`, `right`, 以及`center` ) 将元素与 2D 框的特定边界对齐，以及表示框的顶部和左侧边缘偏移量的长度。
+[`<position>`](/zh-CN/docs/Web/CSS/position_value) 数据类型表示一组 2D 坐标，用于定位一个元素，如背景图像 (通过 [`background-position`](/zh-CN/docs/Web/CSS/background-position))。它可以使用关键字 (如 `top`, `left`, `bottom`, `right`, 以及`center` ) 将元素与 2D 框的特定边界对齐，以及表示框的顶部和左侧边缘偏移量的长度。
 
 一个典型的位置值由两个值组成——第一个值水平地设置位置，第二个值垂直地设置位置。如果只指定一个轴的值，另一个轴将默认为 `center`。
 
@@ -243,7 +243,7 @@ HTML 是一组嵌套的列表—我们总共有三个列表，并且两个示例
 
 在上面的示例中，我们看到关键字被用作值的地方 (例如`<color>`关键字，如 `red`, `black`, `rebeccapurple`, and `goldenrod`)。这些关键字被更准确地描述为标识符，一个 CSS 可以理解的特殊值。因此它们没有使用引号括起来——它们不被当作字符串。
 
-在某些地方可以使用 CSS 中的字符串，例如 [在指定生成的内容时](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#Generating_content_with_before_and_after)。在本例中，引用该值以证明它是一个字符串。在下面的示例中，我们使用非引号括起来的颜色关键字和引号括起来的内容字符串。
+在某些地方可以使用 CSS 中的字符串，例如 [在指定生成的内容时](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#Generating_content_with_before_and_after)。在本例中，引用该值以证明它是一个字符串。在下面的示例中，我们使用非引号括起来的颜色关键字和引号括起来的内容字符串。
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 550)}}
 
@@ -259,11 +259,11 @@ HTML 是一组嵌套的列表—我们总共有三个列表，并且两个示例
 
 ## 总结
 
-本文简要介绍了您可能会遇到的最常见的值和单位类型。你可以看看所有不同类型的 [CSS 的值和单位](/en-US/docs/Web/CSS/CSS_Values_and_Units) 参考页面；当你学习这些课程时，你将会遇到很多这样的情况。
+本文简要介绍了您可能会遇到的最常见的值和单位类型。你可以看看所有不同类型的 [CSS 的值和单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units) 参考页面；当你学习这些课程时，你将会遇到很多这样的情况。
 
 需要记住的关键一点是，每个属性都有一个已定义的允许值列表，每个值都有一个定义来解释子值是什么。然后您可以在 MDN 上查看详细信息。
 
-例如，理解 [`<image>`](/en-US/docs/Web/CSS/image)还允许您创建一个颜色渐变有意义的，但也许这个章节并不会提供太多明显的相关知识！
+例如，理解 [`<image>`](/zh-CN/docs/Web/CSS/image)还允许您创建一个颜色渐变有意义的，但也许这个章节并不会提供太多明显的相关知识！
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
 

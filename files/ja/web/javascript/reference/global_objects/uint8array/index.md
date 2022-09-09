@@ -1,14 +1,6 @@
 ---
 title: Uint8Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array
-tags:
-  - クラス
-  - JavaScript
-  - TypedArray
-  - 型付き配列
-  - ポリフィル
-browser-compat: javascript.builtins.Uint8Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint8Array
 ---
 {{JSRef}}
 

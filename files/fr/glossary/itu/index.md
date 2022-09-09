@@ -19,6 +19,6 @@ L'Union Internationale des Télécommunications (ITU) est l'organisation autoris
 
 - [Site Web de l'UIT](https://www.itu.int/)
 
-### En savoir plus
+### Voir aussi
 
 - [Portail d'histoire de l'UIT](https://www.itu.int/en/history/Pages/ITUsHistory.aspx)

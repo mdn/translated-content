@@ -40,7 +40,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 
 ### 它们植根于第三方服务器
 
-浏览器 API 在浏览器构建之初就存在 — 用 JavaScript 就可以立即访问它们。例如，例子中所使用的 [Geolocation API](/en-US/docs/Web/API/Geolocation/Using_geolocation) 就是通过使用 [`Navigator`](/en-US/docs/Web/API/Navigator) 对象的属性 geolocation 来访问的，它返回一个名为 [`Geolocation`](/en-US/docs/Web/API/Geolocation) 的对象。 这个例子使用了这个对象的方法 [`getCurrentPosition()`](/en-US/docs/Web/API/Geolocation/getCurrentPosition) 来请求当前设备所处的地点：
+浏览器 API 在浏览器构建之初就存在 — 用 JavaScript 就可以立即访问它们。例如，例子中所使用的 [Geolocation API](/zh-CN/docs/Web/API/Geolocation/Using_geolocation) 就是通过使用 [`Navigator`](/zh-CN/docs/Web/API/Navigator) 对象的属性 geolocation 来访问的，它返回一个名为 [`Geolocation`](/zh-CN/docs/Web/API/Geolocation) 的对象。 这个例子使用了这个对象的方法 [`getCurrentPosition()`](/zh-CN/docs/Web/API/Geolocation/getCurrentPosition) 来请求当前设备所处的地点：
 
 ```js
 navigator.geolocation.getCurrentPosition(function(position) { ... });
@@ -92,7 +92,7 @@ URL 末尾提供的 URL 参数是一个开发人员密钥—应用程序的开�
 
 现在我们已经检验了 Google Maps API 示例以及它的运作方式，让我们添加一些更多的功能来展示如何使用 API 的其他特性。
 
-1. 要开始这个部分，确保你已经在一个新的目录复制 [Google Maps 启动文件](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/google-maps/maps_start.html)。 如果你已经 [克隆了示例存储库](/en-US/docs/Learn#Getting_our_code_examples)，那么你已经拥有了一个这个文件的拷贝，你可以在*javascript/apis/third-party-apis/google-maps 目录中找到该文件。*
+1. 要开始这个部分，确保你已经在一个新的目录复制 [Google Maps 启动文件](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/google-maps/maps_start.html)。 如果你已经 [克隆了示例存储库](/zh-CN/docs/Learn#Getting_our_code_examples)，那么你已经拥有了一个这个文件的拷贝，你可以在*javascript/apis/third-party-apis/google-maps 目录中找到该文件。*
 2. 接下来，用以下步骤获取你自己的开发者密钥：
 
     1. 跳转到 [Google Cloud Platform API Manager dashboard](https://console.cloud.google.com/apis/dashboard).
@@ -103,7 +103,7 @@ URL 末尾提供的 URL 参数是一个开发人员密钥—应用程序的开�
     6. 单击创建凭据，然后选择 API 密钥。
     7. 复制你的 API 密钥并将示例中的第一个{{htmlelement("script")}}元素中的现有密钥替换为你自己的密钥。（位于`?key=`和属性结束引号标记 (`"`) 之间的位置。)
 
-    > **备注：** 获取 Google 相关 API 密钥可能会有一点困难——Google Cloud Platform API Manager 有许多不同的屏幕，并且工作流程可能因您是否设置账户而变得细微的不同。如果您在执行此步骤时遇到了困难，我们将很乐意为您提供帮助——[联系我们](/en-US/docs/Learn#Contact_us)。
+    > **备注：** 获取 Google 相关 API 密钥可能会有一点困难——Google Cloud Platform API Manager 有许多不同的屏幕，并且工作流程可能因您是否设置账户而变得细微的不同。如果您在执行此步骤时遇到了困难，我们将很乐意为您提供帮助——[联系我们](/zh-CN/docs/Learn#Contact_us)。
 
 3. 打开你的 Google Maps 起始文件，找到`INSERT-YOUR-API-KEY-HERE`字符串，然后将其替换为你从 Google Cloud Platform API Manager dashboard 获取的实际 API 密钥。
 
@@ -214,7 +214,7 @@ Google 地图的另一个常见用例是在点击其名称或标记时显示有�
 
 1. 申请 "Article Search API" 的 API key ——新建一个应用，选择这个 API，(填写名称和描述，打开 "Article Search API" 下面的开关，然后点击“创建 (Create)”)
 2. 从结果页面获取 API。
-3. 现在开始构建这个应用，下载 [nytimes_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html) 和 [nytimes.css](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css) 到一个新的本地目录。如果已经克隆过这个仓库 [cloned the examples repository](/en-US/docs/Learn#Getting_our_code_examples), 里面就已经有这 2 个文件了，它们存放在 _javascript/apis/third-party-apis/nytimes_ 目录下。HTML 文件里的 `<script>` 标签下已经包含了构建这个应用需要用到的变量；下面我们来填写函数。
+3. 现在开始构建这个应用，下载 [nytimes_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html) 和 [nytimes.css](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css) 到一个新的本地目录。如果已经克隆过这个仓库 [cloned the examples repository](/zh-CN/docs/Learn#Getting_our_code_examples), 里面就已经有这 2 个文件了，它们存放在 _javascript/apis/third-party-apis/nytimes_ 目录下。HTML 文件里的 `<script>` 标签下已经包含了构建这个应用需要用到的变量；下面我们来填写函数。
 
 下面是这个应用最终的样子，可以在搜索框里填写条目、起始日期和结束日期，作为参数向 Article Search API 接口发起查询，然后显示查询结果。
 
@@ -264,14 +264,14 @@ Google 地图的另一个常见用例是在点击其名称或标记时显示有�
     }
     ```
 
-`submitSearch()` 设置起始页码为 0，然后调用 `fetchResults()` 函数。其中，先调用事件对象的 [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) 函数，阻止实际的表单提交事件 (会破坏应用，至于为什么可以自己试一试)。然后，处理字符串，构建完整的请求 URL。以下是几个必要的步骤：
+`submitSearch()` 设置起始页码为 0，然后调用 `fetchResults()` 函数。其中，先调用事件对象的 [`preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault) 函数，阻止实际的表单提交事件 (会破坏应用，至于为什么可以自己试一试)。然后，处理字符串，构建完整的请求 URL。以下是几个必要的步骤：
 
 - 基本的 URL ( `baseURL` 变量).
 - API key，需要放到 `api-key` URL 参数里面去 ( `key` 变量).
 - 页码，需要放到 `page` URL 参数里面去 ( `pageNumber` 变量).
 - 搜索项，需要放到 `q` URL 参数里面去 ( `searchTerm` 输入框的文字 {{htmlelement("input")}}).
 
-然后，用几个 [`if()`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) 代码块检测 `startDate` 和 `endDate` `<input>` 输入框里面是否有文字内容。如果有，再把输入框里的内容分别填写到 `begin_date` 和 `end_date` URL 参数里面去。
+然后，用几个 [`if()`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 代码块检测 `startDate` 和 `endDate` `<input>` 输入框里面是否有文字内容。如果有，再把输入框里的内容分别填写到 `begin_date` 和 `end_date` URL 参数里面去。
 
 最后，完整的 URL 如下所示：
 
@@ -282,7 +282,7 @@ https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=4f3c267e125943d
 
 > **备注：** 更多 URL 参数的说明参考 [NYTimes developer docs](https://developer.nytimes.com/).
 
-> **备注：** 示例包含了基本的表单数据验证操作 — 表项提交之前必须有内容 (用 `required` 属性实现)，此外，日期字段有确定的 `pattern` 属性，它们的值必须由 8 个数字组成 (`pattern="[0-9]{8}"`)，否则不能提交。更多细节参考 [Form data validation](/en-US/docs/Learn/HTML/Forms/Form_validation)
+> **备注：** 示例包含了基本的表单数据验证操作 — 表项提交之前必须有内容 (用 `required` 属性实现)，此外，日期字段有确定的 `pattern` 属性，它们的值必须由 8 个数字组成 (`pattern="[0-9]{8}"`)，否则不能提交。更多细节参考 [Form data validation](/zh-CN/docs/Learn/HTML/Forms/Form_validation)
 
 ### 从 api 请求数据
 
@@ -299,7 +299,7 @@ fetch(url).then(function(result) {
 });
 ```
 
-这段代码用于发起请求，把变量 `url` 作为 [`fetch()`](/en-US/docs/Web/API/fetch) 函数的参数，用 [`json()`](/en-US/docs/Web/API/Body/json) 函数把响应的结果转换为 JSON 格式，然后把 JSON 数据传递给 `displayResults()` 函数，数据就可以在 UI 中显示出来了。
+这段代码用于发起请求，把变量 `url` 作为 [`fetch()`](/zh-CN/docs/Web/API/fetch) 函数的参数，用 [`json()`](/zh-CN/docs/Web/API/Body/json) 函数把响应的结果转换为 JSON 格式，然后把 JSON 数据传递给 `displayResults()` 函数，数据就可以在 UI 中显示出来了。
 
 ### 显示数据
 
@@ -367,13 +367,13 @@ function displayResults(json) {
 
 这一段有好多代码；下面一一解释：
 
-- 第一个 [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) 循环是通用的操作，用于删除 DOM 结点里面的所有内容，在本例中是 {{htmlelement("section")}} 元素。不断查询 `<section>` 结点是否有子节点，如果有，就删除。当 `<section>` 没有子节点时退出循环。
+- 第一个 [`while`](/zh-CN/docs/Web/JavaScript/Reference/Statements/while) 循环是通用的操作，用于删除 DOM 结点里面的所有内容，在本例中是 {{htmlelement("section")}} 元素。不断查询 `<section>` 结点是否有子节点，如果有，就删除。当 `<section>` 没有子节点时退出循环。
 - 然后，把 `articles` 变量赋值为 `json.response.docs` — 它来自查询结果，是所有文章对象构成的数组。单独写出这一行来，下面的代码会清晰一些。
-- 第一个 [`if()`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) 检测查询到的文章数量是否是 10 (该 API 一次最多返回 10 篇文章) 如果是，就把 {{htmlelement("nav")}} 显示出来，里面包含有 _前 10/后 10(Previous 10/Next 10)_ 翻页按钮。如果返回的文章数量不足 10，就直接显示在 1 页里，不需要显示翻页按钮。在下一节中将展示翻页功能的实现。
+- 第一个 [`if()`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 检测查询到的文章数量是否是 10 (该 API 一次最多返回 10 篇文章) 如果是，就把 {{htmlelement("nav")}} 显示出来，里面包含有 _前 10/后 10(Previous 10/Next 10)_ 翻页按钮。如果返回的文章数量不足 10，就直接显示在 1 页里，不需要显示翻页按钮。在下一节中将展示翻页功能的实现。
 - 下一个 `if()` 检测是否没有文章返回。如果是，就什么都不显示 — 创建一个 {{htmlelement("p")}} 结点，填写提示 "无结果。" 然后把该结点插入到 `<section>` 结点中。
 - 如果有一些文章返回，第一步，创建所有用于展示新闻信息的结点，依次填写对应的文章内容，再把这些结点插入到合适的 DOM 结点下。至于文章对象里面的哪个属性包含需要展示的信息，查询 [Article Search API reference](https://developer.nytimes.com/article_search_v2.json). 大部分操作都很简单，但是个别需要提示一下：
 
-  - 使用 [for loop](/en-US/docs/Web/JavaScript/Reference/Statements/for) (`for(var j = 0; j < current.keywords.length; j++) { ... }` ) 遍历每篇文章关联的关键字，再把它们插入到各自的 {{htmlelement("span")}} 标签，在 `<p>` 标签里面，这样做可以方便样式表的编辑。
+  - 使用 [for loop](/zh-CN/docs/Web/JavaScript/Reference/Statements/for) (`for(var j = 0; j < current.keywords.length; j++) { ... }` ) 遍历每篇文章关联的关键字，再把它们插入到各自的 {{htmlelement("span")}} 标签，在 `<p>` 标签里面，这样做可以方便样式表的编辑。
   - 使用 `if()` 代码块 (`if(current.multimedia.length > 0) { ... }`) 检测每篇文章是否有对应的图片 (有些没有) 。只有当检测到有时，显示首张图片 (否则抛出异常)。
   - 把 \<div> 结点设置一个 class 属性 "clearfix"，这样清理操作 (apply clearing to it) 就很容易了。
 
@@ -383,7 +383,7 @@ function displayResults(json) {
 
 根据这个特性就可以轻松实现一个简单的翻页函数。
 
-1. 下面的代码中，在 [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) 函数中添加这 2 个新事件，即把 `nextPage()` 和 `previousPage()` 函数链接到相应的按键点击事件上：
+1. 下面的代码中，在 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 函数中添加这 2 个新事件，即把 `nextPage()` 和 `previousPage()` 函数链接到相应的按键点击事件上：
 
     ```js
     nextBtn.addEventListener('click', nextPage);
@@ -410,7 +410,7 @@ function displayResults(json) {
 
     第一个函数很简单 — 增加 `pageNumber` 变量，然后再次运行 `fetchResults()` 函数 展示下一页的结果。
 
-    第二个函数基本上执行相反的操作，不过有个额外的步骤是检测 `pageNumber` 在 -1 之前是否已经是 0 — 如果 fetch 请求的 `page` URL 参数是负数，会导致错误。如果 `pageNumber` 已经是 0，则直接执行 [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) 退出函数，避免多余的计算。 (如果当前页面已经是首页，就不需要重新加载)。
+    第二个函数基本上执行相反的操作，不过有个额外的步骤是检测 `pageNumber` 在 -1 之前是否已经是 0 — 如果 fetch 请求的 `page` URL 参数是负数，会导致错误。如果 `pageNumber` 已经是 0，则直接执行 [`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 退出函数，避免多余的计算。 (如果当前页面已经是首页，就不需要重新加载)。
 
 > **备注：** 完整代码参考 [finished nytimes API example code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/index.html) (实例参考 [see it running live here](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/)).
 
@@ -441,10 +441,10 @@ function displayResults(json) {
 
 ## 本章目录
 
-- [Introduction to web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)
+- [Introduction to web APIs](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
+- [Manipulating documents](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
+- [Fetching data from the server](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [Third party APIs](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
+- [Drawing graphics](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
+- [Video and audio APIs](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
+- [Client-side storage](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

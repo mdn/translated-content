@@ -222,8 +222,8 @@ function drawImageActualSize() {
 - 从 {{geckoRelease("5.0")}} 开始，`drawImage()` 按照规范处理负参数，沿着合适的轴翻转矩形。
 - 从{{geckoRelease("5.0")}}开始，当 drawImage() 调用 `null` 或者 `undefined` 图像时，会抛出 `TYPE_MISMATCH_ERR` 异常。
 - 在 Gecko 7.0 {{ geckoRelease("7.0") }}之前， 如果坐标值是非规定值或者是 0，Firefox 会抛出一个异常。按照规范描述，这种情况不会再发生。
-- Gecko 9.0 {{ geckoRelease("9.0") }}现在完全支持 CORS 跨域绘制图像，不需要[污染的 canvas](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
-- Gecko 11.0 {{ geckoRelease("11.0") }} 现在允许 SVG 作为图像被绘制到 canvas，不需要 [污染的 canvas](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
+- Gecko 9.0 {{ geckoRelease("9.0") }}现在完全支持 CORS 跨域绘制图像，不需要[污染的 canvas](/zh-CN/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
+- Gecko 11.0 {{ geckoRelease("11.0") }} 现在允许 SVG 作为图像被绘制到 canvas，不需要 [污染的 canvas](/zh-CN/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
 
 ## Notes
 

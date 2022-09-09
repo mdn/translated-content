@@ -8,7 +8,7 @@ slug: Web/CSS/transform-origin
 
 {{EmbedInteractiveExample("pages/css/transform-origin.html")}}
 
-變化原點指的是應用變化的點。舉例來說， [`rotate()`](/en-US/docs/Web/CSS/transform-function/rotate)函數的原點為旋轉中心。 (This property is applied by first translating the element by the negated value of the property, then applying the element's transform, then translating by the property value.)
+變化原點指的是應用變化的點。舉例來說， [`rotate()`](/zh-TW/docs/Web/CSS/transform-function/rotate)函數的原點為旋轉中心。 (This property is applied by first translating the element by the negated value of the property, then applying the element's transform, then translating by the property value.)
 
 ## 語法
 

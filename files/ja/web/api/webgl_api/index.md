@@ -6,7 +6,7 @@ slug: Web/API/WebGL_API
 
 WebGL (Web Graphics Library) は、互換性があるウェブブラウザーでプラグインを使用せずにインタラクティブな 3D グラフィックスや 2D グラフィックスをレンダリングするための JavaScript API です。HTML5 {{HTMLElement("canvas")}} 要素へ OpenGL ES 2.0 に密接に従った API を導入することにより、WebGL を実現します。これにより、ユーザーの端末が提供するハードウェアのグラフィックアクセラレーションを API で利用することが可能になります。
 
-WebGL は [Firefox](/ja/Firefox "Firefox 4 for developers") 4 以降、[Google Chrome](https://www.google.com/chrome/) 9 以降、[Opera](https://www.opera.com/) 12 以降、[Safari](https://www.apple.com/jp/safari/) 5.1 以降、[Internet Explorer](http://windows.microsoft.com/ja-jp/internet-explorer/browser-ie) 11 以降、[Microsoft Edge](https://www.microsoft.com/ja-jp/edge) build 10240 以降でサポートしていますが、ユーザーの端末がこの機能をサポートするハードウェアであることも必要です。
+WebGL は [Firefox](/ja/Firefox) 4 以降、[Google Chrome](https://www.google.com/chrome/) 9 以降、[Opera](https://www.opera.com/) 12 以降、[Safari](https://www.apple.com/jp/safari/) 5.1 以降、[Internet Explorer](http://windows.microsoft.com/ja-jp/internet-explorer/browser-ie) 11 以降、[Microsoft Edge](https://www.microsoft.com/ja-jp/edge) build 10240 以降でサポートしていますが、ユーザーの端末がこの機能をサポートするハードウェアであることも必要です。
 
 {{HTMLElement("canvas")}} 要素は、ウェブページで 2D グラフィックスを表示する [Canvas 2D](/ja/docs/Web/API/Canvas_API) でも使用します。
 

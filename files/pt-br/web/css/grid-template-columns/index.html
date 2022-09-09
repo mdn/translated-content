@@ -8,7 +8,7 @@ translation_of: Web/CSS/grid-template-columns
 ---
 <p>A propriedade <code>grid-template-columns</code> do CSS define os nomes das linhas e funções de dimensionamento (track sizing) do {{glossary("grid column", "grid columns")}}.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* valores padrão */
+<pre class="brush: css">/* valores padrão */
 grid-template-columns: none;
 
 /* exemplos de &lt;track-list&gt; */
@@ -60,8 +60,7 @@ grid-template-columns: unset;
  <dt><code>{{cssxref("minmax", "minmax(min, max)")}}</code></dt>
  <dd>Is a functional notation that defines a size range greater than or equal to <em>min</em> and less than or equal to <em>max</em>. If <em>max</em> is smaller than <em>min</em>, then <em>max</em> is ignored and the function is treated as <em>min</em>. As a maximum, a <code>&lt;flex&gt;</code> value sets the track’s flex factor. It is invalid as a minimum.</dd>
  <dt id="auto"><code>auto</code></dt>
- <dd>Is a keyword that is identical to maximal content if it's a maximum. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.</dd>
- <dd>
+ <dd><p>Is a keyword that is identical to maximal content if it's a maximum. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.</p>
  <p class="note">Note: <code>auto</code> track sizes (and only <code>auto</code> track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties.</p>
  </dd>
  <dt id="fit-content()"><code>{{cssxref("fit-content", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}</code></dt>
@@ -78,7 +77,7 @@ grid-template-columns: unset;
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush:css notranslate">#grid {
+<pre class="brush:css">#grid {
   display: grid;
   width: 100%;
   grid-template-columns: 50px 1fr;
@@ -94,7 +93,7 @@ grid-template-columns: unset;
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;div id="grid"&gt;
+<pre class="brush: html">&lt;div id="grid"&gt;
   &lt;div id="areaA"&gt;A&lt;/div&gt;
   &lt;div id="areaB"&gt;B&lt;/div&gt;
 &lt;/div&gt;</pre>

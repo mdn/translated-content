@@ -36,19 +36,8 @@ Voir des exemples d'utilisation sur les pages des éléments pour [`<label>`](/f
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#attr-label-for', 'for as used with label')}}                     | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML WHATWG', 'form-elements.html#attr-output-for', 'for as used with output')}}     | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', 'sec-forms.html#element-attrdef-label-for', 'for as used with label')}} | {{Spec2('HTML5 W3C')}}     |
-| {{SpecName('HTML5 W3C', 'sec-forms.html#element-attrdef-output-for', 'for as used with output')}} | {{Spec2('HTML5 W3C')}}     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Prise en charge pour label
-
-{{Compat("html.elements.label.for")}}
-
-### Prise en charge pour output
-
-{{Compat("html.elements.output.for")}}
+{{Compat}}

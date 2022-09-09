@@ -42,7 +42,7 @@ JavaScript 相較於 [HTML](/zh-TW/docs/Learn/HTML) 和 [CSS](/zh-TW/docs/Learn/
 
 ## 參考資源
 
-- [JavaScript on MDN](/en-US/docs/Web/JavaScript)
+- [JavaScript on MDN](/zh-TW/docs/Web/JavaScript)
   - : MDN 上連結到各篇 JavaScript 核心文件的主要，在這裡你可以找到關於 JavaScript 程式語言各方面廣泛的參考文件，還有一些進階的指引幫助你成為熟練的 JavaScript 使用者。
 - [Learn JavaScript](https://learnjavascript.online/)
   - : 對於想成為網站開發者一個很好的資源，以互動的方式學習 JavaScript ，包含短課程、互動測驗，自動評估狀況給予指引。前 40 堂課是免費，完整的課程可以在一次付費買下。

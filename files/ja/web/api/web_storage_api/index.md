@@ -27,7 +27,7 @@ Web Storage には、以下の 2 種類の仕組みがあります:
 
 > **Note:** **注記**: ユーザーが[サードパーティのクッキーを禁止している](https://support.mozilla.org/kb/disable-third-party-cookies)（英語）場合は、サードパーティの iframe から Web Storage にアクセスできません ([Firefox 43](/ja/docs/Mozilla/Firefox/Releases/43) から、この動作を実装しています)。
 
-> **Note:** **注記:** Web Storage は、[mozStorage](/ja/docs/Storage "Storage") (SQLite 用の、Mozilla の XPCOM インターフェイス) や [Session store API](/ja/docs/Session_store_API "Session_store_API") (拡張機能で使用するための、[XPCOM](/ja/docs/XPCOM "XPCOM") ストレージユーティリティ) とは異なります。
+> **Note:** **注記:** Web Storage は、[mozStorage](/ja/docs/Storage) (SQLite 用の、Mozilla の XPCOM インターフェイス) や [Session store API](/ja/docs/Session_store_API) (拡張機能で使用するための、[XPCOM](/ja/docs/XPCOM) ストレージユーティリティ) とは異なります。
 
 ## Web Storage インターフェイス
 
@@ -40,7 +40,7 @@ Web Storage には、以下の 2 種類の仕組みがあります:
 
 ## 例
 
-Web Storage の典型的な使用法を示すため、想像力豊かに [Web Storage Demo](https://github.com/mdn/dom-examples/tree/master/web-storage) と名づけたシンプルな例を作成しました。[ ランディングページ](https://mdn.github.io/dom-examples/web-storage/)には、色、フォント、装飾画像をカスタマイズするためのコントロールがあります。 別の選択肢を選ぶと、即座にページが更新されます。 さらに、選択内容を `localStorage` に保存しますので、別のページに移動した後に再びこのページを読み込むと、選択内容が維持されています。
+Web Storage の典型的な使用法を示すため、想像力豊かに [Web Storage Demo](https://github.com/mdn/dom-examples/tree/master/web-storage) と名づけたシンプルな例を作成しました。[ランディングページ](https://mdn.github.io/dom-examples/web-storage/)には、色、フォント、装飾画像をカスタマイズするためのコントロールがあります。 別の選択肢を選ぶと、即座にページが更新されます。 さらに、選択内容を `localStorage` に保存しますので、別のページに移動した後に再びこのページを読み込むと、選択内容が維持されています。
 
 また、[event output ページ](https://mdn.github.io/dom-examples/web-storage/event.html)も提供します。 このページを別のタブで開くと、ランディングページで選択肢を変更したときに {{domxref("StorageEvent")}} が発生するのに応じて、更新されたストレージの情報が出力されるのを確認できます。
 

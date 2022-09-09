@@ -1,7 +1,6 @@
 ---
 title: What is accessibility?
 slug: Learn/Accessibility/What_is_accessibility
-translation_of: Learn/Accessibility/What_is_accessibility
 original_slug: Learn/접근성/What_is_accessibility
 ---
 {{LearnSidebar}}

@@ -34,8 +34,7 @@ objRef = window.menubar
 
 | 仕様書                                                                                                                   | 状態                             | 備考 |
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-window-menubar',
-        'Window.menubar')}} | {{Spec2('HTML WHATWG')}} |      |
+| {{SpecName('HTML WHATWG', 'browsers.html#dom-window-menubar', 'Window.menubar')}} | {{Spec2('HTML WHATWG')}} |      |
 | {{SpecName('HTML5 W3C', 'browsers.html#dom-window-menubar', 'Window.menubar')}}                 | {{Spec2('HTML5 W3C')}}     |      |
 
 ## ブラウザーの互換性

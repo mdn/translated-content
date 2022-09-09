@@ -13,7 +13,9 @@ translation_of: Web/API/IdleDeadline/didTimeout
 
 ## Syntax
 
-    var timedOut = IdleDeadline.didTimeout;
+```js
+var timedOut = IdleDeadline.didTimeout;
+```
 
 ### Value
 

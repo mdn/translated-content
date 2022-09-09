@@ -43,8 +43,8 @@ var FileSystemEntry = window.FileSystemEntry || window.Entry;
   - {{HTMLElement("input")}}元素，使用{{domxref("HTMLInputElement.webkitEntries")}}属性访问{{domxref("FileSystemEntry")}}对象数组，这些对象描述可以读取的文件系统条目。
   - 通过调用{{domxref("DataTransferItem.getAsEntry()")}}方法来使用拖放操作，该方法允许为拖放区域中的文件获取{{domxref("FileSystemFileEntry")}}或{{domxref("FileSystemDirectoryEntry")}}。
 
-- 你不能用 [`LocalFileSystem.requestFileSystem()`](/en-US/docs/Web/API/LocalFileSystem#requestFileSystem) 方法来访问指定的本地文件系统。
-- 没有实现 [`LocalFileSystem.resolveLocalFileSystemURL()`](/en-US/docs/Web/API/LocalFileSystem#resolveLocalFileSystemURL) 方法。
+- 你不能用 [`LocalFileSystem.requestFileSystem()`](/zh-CN/docs/Web/API/LocalFileSystem#requestFileSystem) 方法来访问指定的本地文件系统。
+- 没有实现 [`LocalFileSystem.resolveLocalFileSystemURL()`](/zh-CN/docs/Web/API/LocalFileSystem#resolveLocalFileSystemURL) 方法。
 - 只实现接口的异步版本。任何名称以 "`Sync"` 结尾的接口都不可用。
 - Firefox 只支持从文件系统中的文件读取。你不能用他们写入。特别是，用来创建{{domxref("FileSystemFileEntry.createWriter()")}}来处理文件写入的{{domxref("FileWriter")}}方法没有实现，只会返回一个错误。
 - Firefox 不支持 `"filesystem:"` URL 方案。

@@ -4,7 +4,7 @@ slug: Web/API/SpeechSynthesis/paused
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-{{domxref("SpeechSynthesis")}} 接口的只读属性 **`paused`** 是一个 {{domxref("Boolean")}} 值，当`SpeechSynthesis`对象处于暂停状态时，返回`true` ，否则返回 `false。`
+{{domxref("SpeechSynthesis")}} 接口的只读属性 **`paused`** 是一个 {{domxref("Boolean")}} 值，当`SpeechSynthesis`对象处于暂停状态时，返回`true` ，否则返回 `false`。
 
 它能被设置为 {{domxref("SpeechSynthesis.pause()", "暂停状态")}} 即使当前并没有语音在播放队列中。如果{{domxref("SpeechSynthesisUtterance","utterances")}} 被添加到语音播放队列，队列中的语音并不会播放直到使用 {{domxref("SpeechSynthesis.resume()")}}使`SpeechSynthesis`对象处于非暂停状态。
 

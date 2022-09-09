@@ -85,7 +85,7 @@ var types = event.dataTransfer.mozTypesAt(1);
 
 ## 拖拽非字符串的数据
 
-上述方法不仅限于字符串类型的数据；你可以为数据指定任意类型。例如，文件数据使用 [application/x-moz-file](/En/DragDrop/Recommended_Drag_Types#file) 类型，存储为 [nsIFile](/en/XPCOM_Interface_Reference/nsIFile) 对象。但是因为 {{domxref("DataTransfer.setData","setData()")}} 方法只支持字符串，所以在这种情况下不能用来指定文件。应该使用的是 {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} 方法。
+上述方法不仅限于字符串类型的数据；你可以为数据指定任意类型。例如，文件数据使用 [application/x-moz-file](/En/DragDrop/Recommended_Drag_Types#file) 类型，存储为 [nsIFile](/zh-CN/XPCOM_Interface_Reference/nsIFile) 对象。但是因为 {{domxref("DataTransfer.setData","setData()")}} 方法只支持字符串，所以在这种情况下不能用来指定文件。应该使用的是 {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} 方法。
 
 ```
 dt.mozSetDataAt("application/x-moz-file", file, 0);

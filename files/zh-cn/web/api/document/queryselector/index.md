@@ -4,7 +4,7 @@ slug: Web/API/Document/querySelector
 ---
 {{ ApiRef("DOM") }}
 
-文档对象模型{{domxref("Document")}}引用的**`querySelector()`**方法返回文档中与指定选择器或选择器组匹配的第一个 {{domxref("Element")}}对象。 如果找不到匹配项，则返回`null`。
+文档对象模型{{domxref("Document")}}引用的 **`querySelector()`** 方法返回文档中与指定选择器或选择器组匹配的第一个 {{domxref("Element")}}对象。 如果找不到匹配项，则返回`null`。
 
 > **备注：** 匹配是使用深度优先先序遍历，从文档标记中的第一个元素开始，并按子节点的顺序依次遍历。
 

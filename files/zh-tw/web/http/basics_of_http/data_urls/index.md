@@ -48,11 +48,11 @@ The `data` URI will use the encoded data after the initial header line.
 
 ### JavaScript
 
-請先閱讀文章《 [Base64 encoding and decoding](/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding). 》。
+請先閱讀文章《 [Base64 encoding and decoding](/zh-TW/docs/Web/JavaScript/Base64_encoding_and_decoding). 》。
 
 ## 轉換 nsIFile 至 data URI
 
-This function returns a base 64-encoded data URI from the passed [nsIFile](/en/XPCOM_Interface_Reference/nsIFile).
+This function returns a base 64-encoded data URI from the passed [nsIFile](/zh-TW/XPCOM_Interface_Reference/nsIFile).
 
 ```js
 function generateDataURI(file) {
@@ -108,11 +108,11 @@ The `data` scheme is supported by Opera 7.20 and above, as well as Safari and Ko
 
 ## 參見
 
-- [Base64 encoding and decoding](/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding)
+- [Base64 encoding and decoding](/zh-TW/docs/Web/JavaScript/Base64_encoding_and_decoding)
 - {{domxref("WindowBase64.atob","atob()")}}
 - {{domxref("WindowBase64.btoa","btoa()")}}
-- [CSS `url()`](/en-US/docs/Web/CSS/uri)
-- [URI](/en-US/docs/URI)
+- [CSS `url()`](/zh-TW/docs/Web/CSS/uri)
+- [URI](/zh-TW/docs/URI)
 
 ## 資源
 

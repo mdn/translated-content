@@ -19,20 +19,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 ## 语法
 
 ```js
-// Arrow function
-findLast((element) => { /* ... */ } )
-findLast((element, index) => { /* ... */ } )
-findLast((element, index, array) => { /* ... */ } )
+// 箭头函数
+findLast((element) => { /* … */ } )
+findLast((element, index) => { /* … */ } )
+findLast((element, index, array) => { /* … */ } )
 
-// Callback function
+// 回调函数
 findLast(callbackFn)
 findLast(callbackFn, thisArg)
 
-// Inline callback function
-findLast(function(element) { /* ... */ })
-findLast(function(element, index) { /* ... */ })
-findLast(function(element, index, array){ /* ... */ })
-findLast(function(element, index, array) { /* ... */ }, thisArg)
+// 内联回调函数
+findLast(function(element) { /* … */ })
+findLast(function(element, index) { /* … */ })
+findLast(function(element, index, array){ /* … */ })
+findLast(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### 参数

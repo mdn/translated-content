@@ -90,7 +90,7 @@ L'accessibilité est un enjeu majeur du développement logiciel. JavaScript peut
   - Si vous souhaitez mettre en place des effets visuels, CSS vous permettra d'y parvenir plus intuitivement.
   - _Puisque tout le monde, ou presque, a JavaScript activé, `<noscript>` ne représente donc pas une excuse pour écrire des scripts inaccessibles._
 
-## En savoir plus
+## Voir aussi
 
 - {{htmlelement("script")}}
 - {{htmlelement("noscript")}}

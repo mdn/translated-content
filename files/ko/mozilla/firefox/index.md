@@ -1,13 +1,6 @@
 ---
 title: Firefox
 slug: Mozilla/Firefox
-tags:
-  - Firefox
-  - Landing
-  - Mozilla
-  - 모질라
-  - 파이어폭스
-translation_of: Mozilla/Firefox
 ---
 {{FirefoxSidebar}}
 

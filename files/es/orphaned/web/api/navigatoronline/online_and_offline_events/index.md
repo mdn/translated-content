@@ -15,14 +15,16 @@ original_slug: Web/API/NavigatorOnLine/Online_and_offline_events
 
 Para poder construir una aplicación web offline-funcional, necesitas conocer cuándo está tu aplicación realmente offline. Además, también necesitas conocer cuándo vuelve la aplicación al estado 'online' nuevamente. A efectos prácticos, los requisitos son los siguientes:
 
-1.  Necesitas conocer cuándo el usuario vuelve a estar online, para que puedas re-sincronizar con el servidor.
-2.  Necesitas conocer cuándo el usuario está offline, para así estar seguro de poner en cola las peticiones al servidor para más tarde.
+1. Necesitas conocer cuándo el usuario vuelve a estar online, para que puedas re-sincronizar con el servidor.
+2. Necesitas conocer cuándo el usuario está offline, para así estar seguro de poner en cola las peticiones al servidor para más tarde.
 
 Es este proceso el que los eventos online/offline ayudan a trivializar.
 
 Tu aplicación web quizás necesite establecer que ciertos documentos se mantengan en la caché de recursos offline. Para hacerlo, incluye elementos `LINK` en tu sección `HEAD` de la siguiente manera:
 
-    <link rel="offline-resource" href="mi_recurso>
+```html
+<link rel="offline-resource" href="mi_recurso>
+```
 
 Cuando Firefox 3 o superiores procesan el HTML, esto causará que el recurso referenciado se mantenga en caché para su uso offline en un recurso especial de la caché.
 
@@ -54,40 +56,42 @@ Puedes registrar _listeners_ para estos eventos de varias maneras habituales:
 
 Hay una [prueba sencilla](https://bugzilla.mozilla.org/attachment.cgi?id=220609) que puedes ejecutar para verificar que los eventos están funcionando.
 
-     <!doctype html>
-     <html>
-     <head>
-       <script>
-         function updateOnlineStatus(msg) {
-           var status = document.getElementById("status");
-           var condition = navigator.onLine ? "ONLINE" : "OFFLINE";
-           status.setAttribute("class", condition);
-           var state = document.getElementById("state");
-           state.innerHTML = condition;
-           var log = document.getElementById("log");
-           log.appendChild(document.createTextNode("Event: " + msg + "; status=" + condition + "\n"));
-         }
-         function loaded() {
-           updateOnlineStatus("load");
-           document.body.addEventListener("offline", function () {
-             updateOnlineStatus("offline")
-           }, false);
-           document.body.addEventListener("online", function () {
-             updateOnlineStatus("online")
-           }, false);
-         }
-       </script>
-       <style>...</style>
-     </head>
-     <body onload="loaded()">
-       <div id="status"><p id="state"></p></div>
-       <div id="log"></div>
-     </body>
-     </html>
+```html
+<!doctype html>
+<html>
+<head>
+  <script>
+    function updateOnlineStatus(msg) {
+      var status = document.getElementById("status");
+      var condition = navigator.onLine ? "ONLINE" : "OFFLINE";
+      status.setAttribute("class", condition);
+      var state = document.getElementById("state");
+      state.innerHTML = condition;
+      var log = document.getElementById("log");
+      log.appendChild(document.createTextNode("Event: " + msg + "; status=" + condition + "\n"));
+    }
+    function loaded() {
+      updateOnlineStatus("load");
+      document.body.addEventListener("offline", function () {
+        updateOnlineStatus("offline")
+      }, false);
+      document.body.addEventListener("online", function () {
+        updateOnlineStatus("online")
+      }, false);
+    }
+  </script>
+  <style>...</style>
+</head>
+<body onload="loaded()">
+  <div id="status"><p id="state"></p></div>
+  <div id="log"></div>
+</body>
+</html>
+```
 
 ### Referencias
 
 - [Sección 'Eventos Online/Offline ' de la especificación WHATWG Web Applications 1.0](http://www.whatwg.org/specs/web-apps/current-work/#offline)
-- [El bug que documenta la implementación de los eventos online/offline en Firefox ](https://bugzilla.mozilla.org/show_bug.cgi?id=336359)y un enlace [con una modificación posterior](https://bugzilla.mozilla.org/show_bug.cgi?id=336682)
+- [El bug que documenta la implementación de los eventos online/offline en Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=336359) y un enlace [con una modificación posterior](https://bugzilla.mozilla.org/show_bug.cgi?id=336682)
 - [Un ejemplo sencillo](https://bugzilla.mozilla.org/attachment.cgi?id=220609)
-- [Una explicación de los eventos Online/Offline](http://ejohn.org/blog/offline-events/) 
+- [Una explicación de los eventos Online/Offline](http://ejohn.org/blog/offline-events/)

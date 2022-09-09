@@ -4,7 +4,7 @@ slug: Web/API/DataTransferItem/getAsFile
 ---
 {{APIRef("HTML Drag and Drop API")}}
 
-如果**`DataTransferItem`**是一个文件，那 **`DataTransferItem.getAsFile()`** 方法将返回拖拽项数据的 {{domxref("File")}} 对象。如果拖拽项的数据不是一个文件，则返回 `null`.
+如果 **`DataTransferItem`** 是一个文件，那 **`DataTransferItem.getAsFile()`** 方法将返回拖拽项数据的 {{domxref("File")}} 对象。如果拖拽项的数据不是一个文件，则返回 `null`.
 
 ## 语法
 

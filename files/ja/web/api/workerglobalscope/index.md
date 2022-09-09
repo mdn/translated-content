@@ -48,9 +48,9 @@ _このインターフェースは、{{domxref("EventTarget")}} インターフ�
 - {{domxref("WorkerGlobalScope.onclose")}} {{non-standard_inline}}
   - : {{event("close")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}}。
 - {{domxref("WorkerGlobalScope.onrejectionhandled")}} {{non-standard_inline}}
-  - : [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future.") の rejection イベントを制御するためのイベントハンドラ。
+  - : [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) の rejection イベントを制御するためのイベントハンドラ。
 - {{domxref("WorkerGlobalScope.onunhandledrejection")}} {{non-standard_inline}}
-  - : 制御されていない [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future.") の rejection イベントのためのイベントハンドラ。
+  - : 制御されていない [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) の rejection イベントのためのイベントハンドラ。
 
 ## メソッド
 
@@ -61,7 +61,7 @@ _このインターフェースは、{{domxref("EventTarget")}} インターフ�
 - {{domxref("WorkerGlobalScope.close()")}}
   - : 効果的に特定のスコープを閉じ、 `WorkerGlobalScope` のイベントループにキューされているタスクを破棄する。
 - {{domxref("WorkerGlobalScope.importScripts()")}}
-  - : worker のスコープに 1 つ以上のスクリプトをインポートする。カンマ区切りで任意の数を指定できる。例：` importScripts('foo.js', 'bar.js');`
+  - : worker のスコープに 1 つ以上のスクリプトをインポートする。カンマ区切りで任意の数を指定できる。例：`importScripts('foo.js', 'bar.js');`
 
 ### 非標準メソッド
 

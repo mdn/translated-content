@@ -64,11 +64,8 @@ Cet élément implémente l'interface [`SVGAnimateTransformElement`](/fr/docs/DO
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                                   | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{SpecName("SVG Animations 2", "#AnimateTransformElement", "&lt;animateTransform&gt;")}}     | {{Spec2("SVG Animations 2")}} | Aucun changement    |
-| {{SpecName('SVG1.1', 'animate.html#AnimateTransformElement', '&lt;animateTransform&gt;')}} | {{Spec2('SVG1.1')}}                 | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.animateTransform")}}
+{{Compat}}

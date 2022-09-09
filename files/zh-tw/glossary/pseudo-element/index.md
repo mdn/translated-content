@@ -8,4 +8,4 @@ CSS 中的偽元素選擇器可被應用在當 HTML 內沒有特定元素可以�
 
 ### 技術參考
 
-- [Pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
+- [Pseudo-elements](/zh-TW/docs/Web/CSS/Pseudo-elements)

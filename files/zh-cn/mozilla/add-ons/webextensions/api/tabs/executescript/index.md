@@ -6,7 +6,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 
 将 JavaScript 代码注入页面。
 
-You can inject code into pages whose URL can be expressed using a [match pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns): meaning, its scheme must be one of "http", "https", "file", "ftp". To do this you must have the permission for the page's URL, either explicitly as a [host permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions), or via the [activeTab permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission).
+You can inject code into pages whose URL can be expressed using a [match pattern](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns): meaning, its scheme must be one of "http", "https", "file", "ftp". To do this you must have the permission for the page's URL, either explicitly as a [host permission](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions), or via the [activeTab permission](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission).
 
 You can also inject code into pages packaged with your own extension:
 
@@ -22,9 +22,9 @@ You don't need any special permissions to do this.
 
 You _can't_ inject code into any of the browser's built-in pages, such as about:debugging, about:addons, or the page that opens when you open a new empty tab.
 
-The scripts you inject are called content scripts. [Learn more about content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts).
+The scripts you inject are called content scripts. [Learn more about content scripts](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts).
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+This is an asynchronous function that returns a [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
@@ -58,15 +58,15 @@ var executing = browser.tabs.executeScript(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of objects, representing the result of the script in every injected frame.
+A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of objects, representing the result of the script in every injected frame.
 
-The result of the script is the last evaluated statement, which is similar to what would be output (the results, not any `console.log()` output) if you executed the script in the [Web Console](/en-US/docs/Tools/Web_Console). For example, consider a script like this:
+The result of the script is the last evaluated statement, which is similar to what would be output (the results, not any `console.log()` output) if you executed the script in the [Web Console](/zh-CN/docs/Tools/Web_Console). For example, consider a script like this:
 
 ```js
 var foo='my result';foo;
 ```
 
-Here the results array will contain the the string "`my result`" as an element. The result values must be [structured clonable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+Here the results array will contain the the string "`my result`" as an element. The result values must be [structured clonable](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
 If any error occurs the promise will be rejected with an error message.
 

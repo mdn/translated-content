@@ -8,7 +8,7 @@ The **`read()`** method of the {{domxref("Clipboard")}} interface requests a cop
 
 To read from the clipboard, you must first have the `"clipboard-read"` permission.
 
-> **备注：** The asynchronous Clipboard and [Permissions APIs](/en-US/docs/Web/API/Permissions_API) are still in the process of being integrated into most browsers, so they often deviate from the official rules for permissions and the like. Be sure to review the [compatibility table](#浏览器兼容性) before using these methods.
+> **备注：** The asynchronous Clipboard and [Permissions APIs](/zh-CN/docs/Web/API/Permissions_API) are still in the process of being integrated into most browsers, so they often deviate from the official rules for permissions and the like. Be sure to review the [compatibility table](#浏览器兼容性) before using these methods.
 
 ## 语法
 
@@ -50,7 +50,7 @@ navigator.permissions.query({name: "clipboard-read"}).then(result => {
 });
 ```
 
-> **备注：** At this time, while Firefox does implement `read()`, it does not recognize the `"clipboard-read"` permission, so attempting to use the [Permissions API](/en-US/docs/Web/API/Permissions_API) to manage access to the API will not work.
+> **备注：** At this time, while Firefox does implement `read()`, it does not recognize the `"clipboard-read"` permission, so attempting to use the [Permissions API](/zh-CN/docs/Web/API/Permissions_API) to manage access to the API will not work.
 
 ## 规范
 

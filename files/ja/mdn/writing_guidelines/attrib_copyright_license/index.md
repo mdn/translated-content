@@ -17,8 +17,8 @@ MDN Web Docs のコンテンツは無料で利用でき、様々なオープン�
 ここでのコンテンツの再利用は、元のコンテンツと同じライセンス、CC-BY-SA v2.5 またはそれ以降のバージョン、の下で公開する必要があります。 MDN Web Docs のコンテンツを再利用する場合、"Mozilla Contributors" だけでなく、元ののコンテンツにも帰属することを確認する必要があります。出典となるコンテンツの特定のページへのハイパーリンク（オンライン）または URL （印刷物）入れてください。例：この記事の帰属表示を提供するには、次のように書きます。
 
 > [帰属表示と著作権使用許諾](/ja/docs/MDN/Writing_guidelines/Attrib_copyright_license)は [Mozilla Contributors](/ja/docs/MDN/About/contributors.txt) によって [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) の元でライセンスされています。
-
-    この例では、"Mozilla Contributors" が引用ページの履歴にリンクしていることに注意してください。詳しい説明は[帰属表示のベストプラクティス](https://wiki.creativecommons.org/wiki/Marking/Users)を参照してください。
+>
+> この例では、"Mozilla Contributors" が引用ページの履歴にリンクしていることに注意してください。詳しい説明は[帰属表示のベストプラクティス](https://wiki.creativecommons.org/wiki/Marking/Users)を参照してください。
 
 ### コード例
 

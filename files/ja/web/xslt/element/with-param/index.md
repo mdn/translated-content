@@ -1,12 +1,6 @@
 ---
 title: <xsl:with-param>
 slug: Web/XSLT/Element/with-param
-tags:
-  - XSLT
-  - with-param
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/with-param
 ---
 {{ XsltRef() }}
 

@@ -26,5 +26,5 @@ A {{domxref("DOMTimeStamp")}} object instance.
 
 ## See also
 
-- [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using)
+- [Using the Geolocation API](/zh-CN/docs/Web/API/Geolocation_API/Using)
 - {{domxref("GeolocationPosition")}}

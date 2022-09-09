@@ -43,7 +43,7 @@ CSS 中的书写模式是指文本的排列方向是横向还是纵向的。{{cs
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/simple-vertical.html", '100%', 800)}}
 
-[`writing-mode`](/en-US/docs/Web/CSS/writing-mode)的三个值分别是：
+[`writing-mode`](/zh-CN/docs/Web/CSS/writing-mode)的三个值分别是：
 
 - `horizontal-tb`: 块流向从上至下。对应的文本方向是横向的。
 - `vertical-rl`: 块流向从右向左。对应的文本方向是纵向的。
@@ -53,7 +53,7 @@ CSS 中的书写模式是指文本的排列方向是横向还是纵向的。{{cs
 
 ## 书写模式、块级布局和内联布局
 
-我们已经讨论了块级布局和内联布局（[block and inline layout](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#Block_and_inline_boxes)），也知道外部显示类型元素分为块级元素和内联元素。如上所述，块级显示和内联显示与文本的书写模式（而非屏幕的物理显示）密切相关。如果你使用书写模式的显示是横向的，如英文，那么块在页面上的显示就是从上到下的。
+我们已经讨论了块级布局和内联布局（[block and inline layout](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#Block_and_inline_boxes)），也知道外部显示类型元素分为块级元素和内联元素。如上所述，块级显示和内联显示与文本的书写模式（而非屏幕的物理显示）密切相关。如果你使用书写模式的显示是横向的，如英文，那么块在页面上的显示就是从上到下的。
 
 用一个例子可以更清楚地说明这一点。下一个例子中有两个盒子，分别包含一个标题和一个段落。第一个盒子应用的是`writing-mode: horizontal-tb`，这是一个从上到下的横向的书写模式。第二个盒子应用的是`writing-mode: vertical-rl`，这是一个从右到左的纵向的书写模式。
 
@@ -107,7 +107,7 @@ CSS 中的书写模式是指文本的排列方向是横向还是纵向的。{{cs
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}
 
-对于每一个普通边距，都有许多属性可以参考，你可以在 MDN 页面（[Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)）查看所有映射属性。
+对于每一个普通边距，都有许多属性可以参考，你可以在 MDN 页面（[Logical Properties and Values](/zh-CN/docs/Web/CSS/CSS_Logical_Properties)）查看所有映射属性。
 
 ### 逻辑值
 

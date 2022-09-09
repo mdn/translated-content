@@ -58,7 +58,7 @@ The two methods `blur()` and `focus()` are inherited from {{domxref("HTMLElement
 
 ## 事件
 
-Listen to these events using [`addEventListener()`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface:
+Listen to these events using [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface:
 
 - [`input` event](/zh-CN/docs/Web/API/HTMLElement/input_event)
   - : Fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
@@ -168,7 +168,7 @@ function checkRows(oField, oKeyEvent) {
 }
 ```
 
-In the HTML we just need to hook our function to the \`onkeypress\` event and specify that our textarea does not accept pasting:
+In the HTML we just need to hook our function to the `onkeypress` event and specify that our textarea does not accept pasting:
 
 ```html
 <form>

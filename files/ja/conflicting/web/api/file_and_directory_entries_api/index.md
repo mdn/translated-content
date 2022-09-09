@@ -5,7 +5,7 @@ original_slug: Web/API/File_Handle_API
 ---
 {{non-standard_header}}
 
-FileHandle API は、ファイルの作成や内容の変更など、ファイルを操作するための API です ([File API](/ja/docs/DOM/File "DOM/File") とは異なります)。この API を通じたファイル操作は、デバイス上に物理的に格納でき、部分的な編集には、競合問題を避けるためにターンベースのロック機構が使用されています。
+FileHandle API は、ファイルの作成や内容の変更など、ファイルを操作するための API です ([File API](/ja/docs/DOM/File) とは異なります)。この API を通じたファイル操作は、デバイス上に物理的に格納でき、部分的な編集には、競合問題を避けるためにターンベースのロック機構が使用されています。
 
 ## API 概観
 
@@ -22,7 +22,7 @@ FileHandle API は、ファイルの作成や内容の変更など、ファイ�
 
 ### FileHandle インスタンスの作成
 
-このインテントは IndexedDB を通じてファイルを保存しているため、{{domxref("FileHandle")}} インスタンスを作成するのに [IndexedDB Database](/ja/docs/IndexedDB/IDBFactory#open "IndexedDB/IDBFactory#open") が必要です。
+このインテントは IndexedDB を通じてファイルを保存しているため、{{domxref("FileHandle")}} インスタンスを作成するのに [IndexedDB Database](/ja/docs/IndexedDB/IDBFactory#open) が必要です。
 
 ```js
 var IDBReq = indexedDB.open("myFileStorageDataBase");

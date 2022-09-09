@@ -1,16 +1,6 @@
 ---
 title: if...else
 slug: Web/JavaScript/Reference/Statements/if...else
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-  - else
-  - if
-  - 文
-  - 言語機能
-translation_of: Web/JavaScript/Reference/Statements/if...else
 ---
 {{jsSidebar("Statements")}}
 

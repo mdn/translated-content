@@ -1,16 +1,7 @@
 ---
 title: image()
 slug: Web/CSS/image/image
-tags:
-  - CSS
-  - CSS 関数
-  - CSS 画像
-  - 関数
-  - Reference
-  - ウェブ
-translation_of: Web/CSS/image/image()
 original_slug: Web/CSS/image/image()
-browser-compat: css.types.image.image
 ---
 {{CSSRef}}
 

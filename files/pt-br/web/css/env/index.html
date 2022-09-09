@@ -17,7 +17,7 @@ original_slug: Web/CSS/env()
 
 <p>A função <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>env()</code></strong> pode ser usada para inserir o valor de uma variável de ambiente definida pelo agente do usuário em seu CSS, de uma maneira semelhante à função {{cssxref("var")}} e <a href="/pt-BR/docs/Web/CSS/--*">propriedades personalizadas</a>. A diferença é que, além de serem definidas pelo agente do usuário em vez de serem definidas pelo usuário, as variáveis de ambiente têm escopo global para um documento, enquanto as propriedades personalizadas têm um escopo para o(s) elemento(s) no(s) qual(is) é/são declarado(s).</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   padding:
     env(safe-area-inset-top, 20px)
     env(safe-area-inset-right, 20px)
@@ -31,7 +31,7 @@ original_slug: Web/CSS/env()
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
-<pre class="brush: css notranslate">/* Usando os quatro valores de inserção <em>safe area</em> sem valores de <em>fallback </em>*/
+<pre class="brush: css">/* Usando os quatro valores de inserção <em>safe area</em> sem valores de <em>fallback </em>*/
 env(safe-area-inset-top);
 env(safe-area-inset-right);
 env(safe-area-inset-bottom);
@@ -63,7 +63,7 @@ env(safe-area-inset-left, 1.4rem);
 
 <p>O exemplo abaixo faz uso do segundo parâmetro opcional de <code>env()</code>, que permite fornecer um valor de <em>fallback </em>caso a variável de ambiente não esteja disponível.</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
  Se a função &lt;code&gt;env()&lt;/code&gt; é suportada em seu navegador,
  o texto deste parágrafo deverá estar na borda &lt;i&gt;top&lt;/i&gt;, &lt;i&gt;right&lt;/i&gt; e &lt;i&gt;bottom&lt;/i&gt;,
  ter 50px de preenchimento entre a borda e o texto. O CSS é equivalente
@@ -73,7 +73,7 @@ env(safe-area-inset-left, 1.4rem);
  minúsculas.
 &lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   width: 300px;
   border: 2px solid red;
   padding:
@@ -87,7 +87,7 @@ env(safe-area-inset-left, 1.4rem);
 
 <h3 id="Exemplo_com_valores">Exemplo com valores</h3>
 
-<pre class="brush: css notranslate">padding: env(safe-area-inset-bottom, 50px); /* zero para todos agentes do usuário que são retangulares*/
+<pre class="brush: css">padding: env(safe-area-inset-bottom, 50px); /* zero para todos agentes do usuário que são retangulares*/
 padding: env(Safe-area-inset-bottom, 50px); /* 50px porque as propriedades do agente do usuário diferenciam maiúsculas de minúsculas */
 padding: env(x, 50px 20px); /* como se estivesse preenchendo: '50px 20px' que foram definidos, porque x não é uma variável de ambiente válida */
 padding: env(x, 50px, 20px); /* ignorado '50px, 20px' porque não é um valor de preenchimento válido e x não é uma variável de ambiente válida */

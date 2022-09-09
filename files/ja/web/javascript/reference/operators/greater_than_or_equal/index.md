@@ -1,13 +1,6 @@
 ---
 title: 大なりイコール (>=)
 slug: Web/JavaScript/Reference/Operators/Greater_than_or_equal
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.greater_than_or_equal
-translation_of: Web/JavaScript/Reference/Operators/Greater_than_or_equal
 ---
 {{jsSidebar("Operators")}}
 

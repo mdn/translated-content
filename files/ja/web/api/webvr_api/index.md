@@ -22,10 +22,10 @@ WebVR は，バーチャルリアリティデバイス — 例えば Oculus Rift
 
 典型的な (シンプルな) WebVR アプリは次のように動作します。
 
-1.  {{DOMxRef("Navigator.getVRDisplays()")}} を使用して VR ディスプレイの参照を取得します。
-2.  {{DOMxRef("VRDisplay.requestPresent()")}} を使用して VR ディスプレイの表示を開始します。
-3.  WebVR 専用の {{DOMxRef("VRDisplay.requestAnimationFrame()")}} メソッドを使用して、ディスプレイの正しいリフレッシュレートでアプリのレンダリングループを実行します。
-4.  レンダリングループ内では、現在のフレームを表示するために必要なデータを取得し ({{DOMxRef("VRDisplay.getFrameData()")}})、表示されたシーンを 2 回 — それぞれの目の画像を 1 回ずつ描画し、レンダリングされたビューをディスプレイに送信してユーザーに表示します ({{DOMxRef("VRDisplay.submitFrame()")}})。
+1. {{DOMxRef("Navigator.getVRDisplays()")}} を使用して VR ディスプレイの参照を取得します。
+2. {{DOMxRef("VRDisplay.requestPresent()")}} を使用して VR ディスプレイの表示を開始します。
+3. WebVR 専用の {{DOMxRef("VRDisplay.requestAnimationFrame()")}} メソッドを使用して、ディスプレイの正しいリフレッシュレートでアプリのレンダリングループを実行します。
+4. レンダリングループ内では、現在のフレームを表示するために必要なデータを取得し ({{DOMxRef("VRDisplay.getFrameData()")}})、表示されたシーンを 2 回 — それぞれの目の画像を 1 回ずつ描画し、レンダリングされたビューをディスプレイに送信してユーザーに表示します ({{DOMxRef("VRDisplay.submitFrame()")}})。
 
 また WebVR 1.1 では、 {{DOMxRef("Window")}} オブジェクトに多数のイベントが追加され、 JavaScript が表示状態の変化に対応できるようになっています。
 
