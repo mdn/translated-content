@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/find
 
 {{EmbedInteractiveExample("pages/js/array-find.html")}}
 
-- 如果需要在数组中找到对应元素的索引，可以使用 {{jsxref("Array.findIndex", "findIndex()")}}。
+- 如果需要在数组中找到对应元素的索引，请使用 {{jsxref("Array.findIndex", "findIndex()")}}。
 - 如果需要查找某个值的索引，请使用 {{jsxref("Array.prototype.indexOf()")}}。（它类似于 {{jsxref("Array.prototype.indexOf()")}}，但只是检查每个元素是否与值相等，而不是使用测试函数。）
 - 如果需要查找数组中是否存在值，请使用 {{jsxref("Array.prototype.includes()")}}。同样，它检查每个元素是否与值相等，而不是使用测试函数。
 - 如果需要查找是否有元素满足所提供的测试函数，请使用 {{jsxref("Array.prototype.some()")}}。
@@ -45,7 +45,7 @@ find(function(element, index, array) { /* … */ }, thisArg)
     - `array`
       - : 数组本身。
 
-    回调函数必须返回一个 [Truthy（真值）](/zh-CN/docs/Glossary/Truthy)来表示找到了匹配的元素。
+    回调函数必须返回一个[真值](/zh-CN/docs/Glossary/Truthy)来表示找到了匹配的元素。
 
 - `thisArg` {{Optional_inline}}
   - : 执行回调时用作 `this` 的对象。
@@ -165,7 +165,7 @@ array.find(function(value, index) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [Polyfill of `Array.prototype.find` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.findIndex()")}} – find and return an index
