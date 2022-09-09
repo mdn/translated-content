@@ -8,9 +8,9 @@ IndexedDB 是一种可以让你在用户的浏览器内持久化存储数据的�
 
 ## 关于本文档
 
-本篇教程将教会你如何使用 IndexedDB 的异步 API。如果你对 IndexedDB 还不熟悉，你应该首先阅读[有关 IndexedDB 的基本概念](https://developer.mozilla.org/en/IndexedDB/Basic_Concepts_Behind_IndexedDB)。
+本篇教程将教会你如何使用 IndexedDB 的异步 API。如果你对 IndexedDB 还不熟悉，你应该首先阅读[有关 IndexedDB 的基本概念](/zh-CN/IndexedDB/Basic_Concepts_Behind_IndexedDB)。
 
-有关 IndexedDB API 的参考手册，请参见 [IndexedDB](https://developer.mozilla.org/en/IndexedDB) 这篇文章及其子页面，包括 IndexedDB 使用的对象类型，以及异步 API（同步 API 已从规范中删除）。
+有关 IndexedDB API 的参考手册，请参见 [IndexedDB](/zh-CN/IndexedDB) 这篇文章及其子页面，包括 IndexedDB 使用的对象类型，以及异步 API（同步 API 已从规范中删除）。
 
 ## 基本模式
 
@@ -61,7 +61,7 @@ var request = window.indexedDB.open("MyTestDatabase");
 
 看到了吗？ 打开数据库就像任何其他操作一样 — 你必须进行 "request"。
 
-open 请求不会立即打开数据库或者开始一个事务。 对 `open()` 函数的调用会返回一个我们可以作为事件来处理的包含 result（成功的话）或者错误值的 [`IDBOpenDBRequest`](/zh-CN/docs/IndexedDB/IDBOpenDBRequest) 对象。在 IndexedDB 中的大部分异步方法做的都是同样的事情 - 返回一个包含 result 或错误的 [`IDBRequest`](/zh-CN/docs/IndexedDB/IDBRequest) 对象。open 函数的结果是一个 [`IDBDatabase`](/en-US/docs/IndexedDB/IDBDatabase) 对象的实例。
+open 请求不会立即打开数据库或者开始一个事务。 对 `open()` 函数的调用会返回一个我们可以作为事件来处理的包含 result（成功的话）或者错误值的 [`IDBOpenDBRequest`](/zh-CN/docs/IndexedDB/IDBOpenDBRequest) 对象。在 IndexedDB 中的大部分异步方法做的都是同样的事情 - 返回一个包含 result 或错误的 [`IDBRequest`](/zh-CN/docs/IndexedDB/IDBRequest) 对象。open 函数的结果是一个 [`IDBDatabase`](/zh-CN/docs/IndexedDB/IDBDatabase) 对象的实例。
 
 该 open 方法接受第二个参数，就是数据库的版本号。数据库的版本决定了数据库架构，即数据库的对象仓库（object store）和他的结构。如果数据库不存在，`open` 操作会创建该数据库，然后 `onupgradeneeded` 事件被触发，你需要在该事件的处理函数中创建数据库模式。如果数据库已经存在，但你指定了一个更高的数据库版本，会直接触发 `onupgradeneeded` 事件，允许你在处理函数中更新数据库模式。我们在后面的[更新数据库的版本号](#Updating_the_version_of_the_database)和 {{ domxref("IDBFactory.open") }} 中会提到更多有关这方面的内容。
 
@@ -86,7 +86,7 @@ request.onsuccess = function(event) {
 
 `onsuccess()` 和 `onerror()` 这两个函数哪个被调用呢？如果一切顺利的话，一个 success 事件（即一个 type 属性被设置成 `"success"` 的 DOM 事件）会被触发，`request` 会作为它的 `target`。 一旦它被触发的话，相关 `request` 的 `onsuccess()` 处理函数就会被触发，使用 success 事件作为它的参数。 否则，如果不是所有事情都成功的话，一个 error 事件（即 `type` 属性被设置成 `"error"` 的 DOM 事件）会在 request 上被触发。这将会触发使用 error 事件作为参数的 `onerror()` 方法。
 
-IndexedDB 的 API 被设计来尽可能地减少对错误处理的需求，所以你可能不会看到有很多的错误事件（起码，不会在你已经习惯了这些 API 之后！）。然而在打开数据库的情况下，还是有一些会产生错误事件的常见情况。最有可能出现的问题是用户决定不允许你的 web app 访问以创建一个数据库。IndexedDB 的主要设计目标之一就是允许大量数据可以被存储以供离线使用。（要了解关于针对每个浏览器你可以有多少存储空间的更多内容，请参见 [存储限制](/en/IndexedDB#Storage_limits)）。
+IndexedDB 的 API 被设计来尽可能地减少对错误处理的需求，所以你可能不会看到有很多的错误事件（起码，不会在你已经习惯了这些 API 之后！）。然而在打开数据库的情况下，还是有一些会产生错误事件的常见情况。最有可能出现的问题是用户决定不允许你的 web app 访问以创建一个数据库。IndexedDB 的主要设计目标之一就是允许大量数据可以被存储以供离线使用。（要了解关于针对每个浏览器你可以有多少存储空间的更多内容，请参见 [存储限制](/zh-CN/IndexedDB#Storage_limits)）。
 
 显然，浏览器不希望允许某些广告网络或恶意网站来污染你的计算机，所以浏览器会在任意给定的 web app 首次尝试打开一个 IndexedDB 存储时对用户进行提醒。用户可以选择允许访问或者拒绝访问。还有，IndexedDB 在浏览器的隐私模式（Firefox 的 Private Browsing 模式和 Chrome 的 Incognito 模式）下是被完全禁止的。 隐私浏览的全部要点在于不留下任何足迹，所以在这种模式下打开数据库的尝试就失败了。
 
@@ -144,7 +144,7 @@ WebKit/Blink 支持当前版本的规范，同时 Chrome 23+ 、Opera 17+ 以及
 
 ### 构建数据库
 
-现在来构建数据库。IndexedDB 使用对象存仓库而不是表，并且一个单独的数据库可以包含任意数量的对象存储空间。每当一个值被存储进一个对象存储空间时，它会被和一个键相关联。键的提供可以有几种不同的方法，这取决于对象存储空间是使用 [key path](/en/IndexedDB#gloss_key_path) 还是 [key generator](/en/IndexedDB#gloss_key_generator)。
+现在来构建数据库。IndexedDB 使用对象存仓库而不是表，并且一个单独的数据库可以包含任意数量的对象存储空间。每当一个值被存储进一个对象存储空间时，它会被和一个键相关联。键的提供可以有几种不同的方法，这取决于对象存储空间是使用 [key path](/zh-CN/IndexedDB#gloss_key_path) 还是 [key generator](/zh-CN/IndexedDB#gloss_key_generator)。
 
 下面的表格显示了几种不同的提供键的方法。
 
@@ -211,7 +211,7 @@ request.onupgradeneeded = function(event) {
 
 我们也请求了一个名为 “name” 的着眼于存储的对象的 `name` 属性的索引。如同 `createObjectStore()`，`createIndex()` 提供了一个可选地 `options` 对象，该对象细化了我们希望创建的索引类型。新增一个不带 `name` 属性的对象也会成功，但是这个对象不会出现在 "name" 索引中。
 
-我们现在可以使用存储的用户对象的 `ssn` 直接从对象存储空间中把它们提取出来，或者通过使用索引来使用他们的 name 进行提取。要了解这些是如何实现的，请参见 [使用索引](/en/IndexedDB/Using_IndexedDB#Using_an_index) 章节。
+我们现在可以使用存储的用户对象的 `ssn` 直接从对象存储空间中把它们提取出来，或者通过使用索引来使用他们的 name 进行提取。要了解这些是如何实现的，请参见 [使用索引](/zh-CN/IndexedDB/Using_IndexedDB#Using_an_index) 章节。
 
 ### 使用键生成器
 
@@ -1309,7 +1309,7 @@ input {
 
 ### 参考
 
-- [IndexedDB 接口参考](https://developer.mozilla.org/en/IndexedDB)
+- [IndexedDB 接口参考](/zh-CN/IndexedDB)
 - [Indexed Database 接口说明](http://www.w3.org/TR/IndexedDB/)
 - [在 Chrome 中使用 IndexedDB](/zh-CN/docs/IndexedDB/Using_IndexedDB_in_chrome)
 - [在 Firefox 中使用 JavaScript 生成器](/zh-CN/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox)
