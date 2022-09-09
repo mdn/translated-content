@@ -162,7 +162,9 @@ if (!Array.prototype.indexOf) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [Polyfill of `Array.prototype.indexOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.lastIndexOf()")}}
 - {{jsxref("TypedArray.prototype.indexOf()")}}
+- {{jsxref("String.prototype.indexOf()")}}

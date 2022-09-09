@@ -66,6 +66,6 @@ console.log(fruits[0]);     // "Apple"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Array")}} class

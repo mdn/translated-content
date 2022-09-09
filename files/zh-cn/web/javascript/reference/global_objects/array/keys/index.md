@@ -38,8 +38,10 @@ console.log(denseKeys);  // [0, 1, 2]
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [Polyfill of `Array.prototype.keys` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.values()")}}
 - {{jsxref("Array.prototype.entries()")}}
-- [Iteration protocols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)

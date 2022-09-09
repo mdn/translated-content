@@ -64,7 +64,7 @@ f(1, 'a', true);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("String.prototype.split()")}}
 - {{jsxref("Array.prototype.toString()")}}

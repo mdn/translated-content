@@ -105,7 +105,7 @@ sortArr(arr);
 */
 ```
 
-### 5、使用[for…of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) 循环
+### 5、使用 for…of 循环
 
 ```js
 var arr = ["a", "b", "c"];
@@ -129,11 +129,14 @@ for (let e of iterator) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [Polyfill of `Array.prototype.entries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.keys()")}}
+- {{jsxref("Array.prototype.values()")}}
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.every()")}}
 - {{jsxref("Array.prototype.some()")}}
-- [for...of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-- [Iteration protocols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [for...of](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)
+- [Iteration protocols](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)

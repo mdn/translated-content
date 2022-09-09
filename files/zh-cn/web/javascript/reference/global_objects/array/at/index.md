@@ -79,9 +79,9 @@ console.log(atWay); // 'green'
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- A polyfill of `Array.prototype.at` is available in [`core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
+- [Polyfill of `Array.prototype.at` in `core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
 - [A polyfill for the at() method](https://github.com/tc39/proposal-relative-indexing-method#polyfill).
 - {{jsxref("Array.prototype.find()")}} – 根据给定的测试返回一个值。
 - {{jsxref("Array.prototype.includes()")}} – 测试数组中是否存在某个值。

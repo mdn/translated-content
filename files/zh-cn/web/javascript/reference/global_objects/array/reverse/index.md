@@ -64,7 +64,7 @@ console.log(a); // {0: 3, 1: 2, 2: 1, length: 3}
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Array.prototype.join()")}}
 - {{jsxref("Array.prototype.sort()")}}

@@ -63,8 +63,12 @@ if (!Array.of) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [Polyfill of `Array.of` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
 - {{jsxref("Array")}}
 - {{jsxref("Array.from()")}}
 - {{jsxref("TypedArray.of()")}}
+- [`Array.of()` & `Array.from()` proposal](https://gist.github.com/rwaldron/1074126)
+- [`Array.of()` polyfill](https://gist.github.com/rwaldron/3186576)
