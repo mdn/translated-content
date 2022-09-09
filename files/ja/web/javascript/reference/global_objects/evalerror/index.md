@@ -1,13 +1,6 @@
 ---
 title: EvalError
 slug: Web/JavaScript/Reference/Global_Objects/EvalError
-tags:
-  - Class
-  - EvalError
-  - JavaScript
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/EvalError
 ---
 {{JSRef}}
 

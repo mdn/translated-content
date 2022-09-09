@@ -1,13 +1,6 @@
 ---
 title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
-tags:
-  - JavaScript
-  - 名前空間
-  - 共有メモリー
-  - Specifications
-browser-compat: javascript.builtins.Atomics
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 ---
 {{JSRef}}
 
