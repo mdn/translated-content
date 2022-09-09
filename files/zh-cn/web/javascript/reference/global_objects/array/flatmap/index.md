@@ -129,7 +129,9 @@ arr.reduce((acc, x) => acc.concat([x, x * 2]), []);
 
 ## 参见
 
+- [Polyfill of `Array.prototype.flatMap` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.flat()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("Array.prototype.concat()")}}
+- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)

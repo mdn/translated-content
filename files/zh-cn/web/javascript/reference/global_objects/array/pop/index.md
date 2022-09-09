@@ -50,7 +50,7 @@ console.log(popped); // 'sturgeon'
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.shift()")}}

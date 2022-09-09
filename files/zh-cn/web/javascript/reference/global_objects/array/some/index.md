@@ -180,9 +180,10 @@ if (!Array.prototype.some) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("Array.prototype.find()")}}
-- {{jsxref("Array.prototype.forEach()")}}
+- [Polyfill of `Array.prototype.some` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.find()")}}
 - {{jsxref("TypedArray.prototype.some()")}}
