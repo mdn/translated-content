@@ -105,7 +105,7 @@ sortArr(arr);
 */
 ```
 
-### 5、使用[for…of](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环
+### 5、使用 for…of 循环
 
 ```js
 var arr = ["a", "b", "c"];
