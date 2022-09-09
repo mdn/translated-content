@@ -313,7 +313,7 @@ On notera que la plupart des navigateurs principaux ne prennent pas en charge le
 
 ### `min-fresh`
 
-La directive de requête `min-fresh=N` indique que le client permet d'utiliser une réponse enregistée qui est [fraîche](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness) pendant au moins `N` secondes.
+La directive de requête `min-fresh=N` indique que le client permet d'utiliser une réponse enregistrée qui est [fraîche](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness) pendant au moins `N` secondes.
 
 ```http
 Cache-Control: min-fresh=600
@@ -390,7 +390,7 @@ Avec ce format, on peut ajouter une valeur élevée pour `max-age` et la directi
 Cache-Control: max-age=31536000, immutable
 ```
 
-Lorsqu'on met à jour la bibliothèque ou qu'on édite l'image, le nouveau contenu aura une nouvelle URL et les caches ne seront pas réutilisés. C'est ce qu'on appelle en anglais le «&nbsp;cache-busting&nbsp;», qu'on pourrait traduire en français, en étant taquin par&nbsp;: «&nbsp;casse-cache&nbsp;».
+Lorsqu'on met à jour la bibliothèque ou qu'on édite l'image, le nouveau contenu aura une nouvelle URL et les caches ne seront pas réutilisés. C'est ce qu'on appelle en anglais le «&nbsp;<i lang="en">cache-busting</i>&nbsp;», qu'on pourrait traduire en français, en étant taquin par&nbsp;: «&nbsp;casse-cache&nbsp;».
 
 On utilisera `no-cache` pour s'assurer que la réponse HTML elle-même n'est pas cachée sans revalidation. Cela permettra au client de recevoir correctement une nouvelle version du fichier HTML et les ressources correspondants.
 
@@ -441,8 +441,8 @@ Sinon, `Clear-Site-Data` peut nettoyer le cache du navigateur pour un site. Mais
 
 - [Mise en cache avec HTTP](/fr/docs/Web/HTTP/Caching)
 - [Tutoriel sur la mise en cache pour les équipes web](https://www.mnot.net/cache_docs/)
-- [Bonnes pratiques pour la mise en cache et pièges liés à `max-age`](https://jakearchibald.com/2016/caching-best-practices/)
+- [Bonnes pratiques pour la mise en cache et pièges liés à `max-age` (en anglais)](https://jakearchibald.com/2016/caching-best-practices/)
 - [`Cache-Control` pour les civils (en anglais)](https://csswizardry.com/2019/03/cache-control-for-civilians/)
-- [RFC 7234 – Hypertext Transfer Protocol (HTTP/1.1)&nbsp;: mise en cache (en anglais)](https://httpwg.org/specs/rfc7234.html)
-- [RFC 5861 – Extensions HTTP à `Cache-Control` pour le contenu périmé (en anglais)](https://httpwg.org/specs/rfc5861.html)
-- [RFC 8246 – Réponses HTTP immuables (en anglais)](https://httpwg.org/specs/rfc8246.html)
+- [RFC 7234 — Hypertext Transfer Protocol (HTTP/1.1)&nbsp;: mise en cache (en anglais)](https://httpwg.org/specs/rfc7234.html)
+- [RFC 5861 — Extensions HTTP à `Cache-Control` pour le contenu périmé (en anglais)](https://httpwg.org/specs/rfc5861.html)
+- [RFC 8246 — Réponses HTTP immuables (en anglais)](https://httpwg.org/specs/rfc8246.html)
