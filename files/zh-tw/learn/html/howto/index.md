@@ -49,8 +49,8 @@ HTML 只建立文件的基礎架構，可以透過 {{glossary("CSS")}} 或腳本
 
 ### 嵌入內容
 
-- [How to embed a webpage within another webpage](/zh-TW/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [How to add Flash content within a webpage](/en-US/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#The_%3Cembed%3E_and_%3Cobject%3E_elements)
+- [How to embed a webpage within another webpage](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
+- [How to add Flash content within a webpage](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#The_%3Cembed%3E_and_%3Cobject%3E_elements)
 
 ## 不常見或進階的問題
 

@@ -13,7 +13,7 @@ slug: Learn/Server-side/Django/Forms
       <td>
         完成先前所有的教程, 包含
         <a
-          href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions"
+          href="/zh-TW/docs/Learn/Server-side/Django/authentication_and_sessions"
           >Django Tutorial Part 8: User authentication and permissions</a
         >.
       </td>

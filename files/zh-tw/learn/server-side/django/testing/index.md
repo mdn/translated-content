@@ -12,7 +12,7 @@ slug: Learn/Server-side/Django/Testing
       <th scope="row">Prerequisites:</th>
       <td>
         Complete all previous tutorial topics, including
-        <a href="/en-US/docs/Learn/Server-side/Django/Forms"
+        <a href="/zh-TW/docs/Learn/Server-side/Django/Forms"
           >Django Tutorial Part 9: Working with forms</a
         >.
       </td>

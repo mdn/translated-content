@@ -12,7 +12,7 @@ slug: Learn/Server-side/Django/Authentication
       <th scope="row">前提:</th>
       <td>
         完成至
-        <a href="/en-US/docs/Learn/Server-side/Django/Sessions"
+        <a href="/zh-TW/docs/Learn/Server-side/Django/Sessions"
           >Django 線上教學 7: 會話(Sessions)框架</a
         >為止的所有主題。
       </td>
