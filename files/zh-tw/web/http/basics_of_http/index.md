@@ -32,7 +32,7 @@ HTTP is a pretty extensible protocol. It relies on a few basic concepts like the
   - : This fundamental article describes a typical HTTP session: what happens under the hood when you click on a link in your browser…
 - [HTTP Messages](/zh-TW/docs/Web/HTTP/Messages)
   - : HTTP Messages transmitted during requests or responses have a very clear structure; this introductory article describes this structure, its purpose and its possibilities.
-- [Frame and message structure in HTTP/2](</en-US/docs/Web/HTTP/Frame and message structure in HTTP_2>)
+- [Frame and message structure in HTTP/2](</zh-TW/docs/Web/HTTP/Frame and message structure in HTTP_2>)
   - : HTTP/2 encapsulates and represents HTTP/1.x messages in a binary frame. This article explains the frame structure, its purpose and the way it is encoded.
 - [Connection management in HTTP/1.x](/zh-TW/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
   - : HTTP/1.1 was the first version of HTTP to support persistent connection and pipelining. This article explains these two concepts.

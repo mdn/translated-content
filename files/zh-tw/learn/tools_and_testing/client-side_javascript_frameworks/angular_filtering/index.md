@@ -13,8 +13,8 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filterin
       <td>
         熟悉基礎的 <a href="/zh-TW/docs/Learn/HTML">HTML</a> ，
         <a href="/zh-TW/docs/Learn/CSS">CSS</a> 與
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 語言，以及<a
-          href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+        <a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a> 語言，以及<a
+          href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
           >終端機/命令列</a
         >的知識。
       </td>

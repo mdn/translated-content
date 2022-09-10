@@ -14,13 +14,13 @@ original_slug: Learn/HTML/Multimedia_and_embedding/其他_嵌入_技術
       <td>
         Basic computer literacy,
         <a
-          href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-TW/Learn/Getting_started_with_the_web/Installing_basic_software"
           >basic software installed</a
         >, basic knowledge of
-        <a href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+        <a href="/zh-TW/Learn/Getting_started_with_the_web/Dealing_with_files"
           >working with files</a
         >, familiarity with HTML fundamentals (as covered in
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >Getting started with HTML</a
         >) and the previous articles in this module.
       </td>

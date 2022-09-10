@@ -1,17 +1,6 @@
 ---
 title: Intl.PluralRules.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - ローカライズ
-  - メソッド
-  - PluralRules
-  - Prototype
-  - リファレンス
-browser-compat: javascript.builtins.Intl.PluralRules.resolvedOptions
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions
 ---
 {{JSRef}}
 

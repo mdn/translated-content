@@ -62,7 +62,7 @@ window.addEventListener('scroll', function(e) {
 });
 ```
 
-在 [`resize`](/en-US/docs/Web/API/Document/defaultView/resize_event) 事件页面中查看更多类似的例子。
+在 [`resize`](/zh-CN/docs/Web/API/Document/defaultView/resize_event) 事件页面中查看更多类似的例子。
 
 ## 规范
 

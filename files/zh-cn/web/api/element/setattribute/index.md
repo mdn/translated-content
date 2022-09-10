@@ -25,7 +25,7 @@ element.setAttribute(name, value);
 
 如果指定的属性已经存在，则其值变为传递的值。如果不存在，则创建指定的属性。
 
-尽管对于不存在的属性，[`getAttribute()`](/en-US/docs/DOM/element.getAttribute) 返回 `null`，你还是应该使用 [`removeAttribute()`](/en-US/docs/DOM/element.removeAttribute) 代替 `elt.setAttribute(attr, null)` 来删除属性。
+尽管对于不存在的属性，[`getAttribute()`](/zh-CN/docs/DOM/element.getAttribute) 返回 `null`，你还是应该使用 [`removeAttribute()`](/zh-CN/docs/DOM/element.removeAttribute) 代替 `elt.setAttribute(attr, null)` 来删除属性。
 
 布尔属性（原文是 Boolean attributes）只要出现在元素上就会被认为是 `true` ，无论它的值是什么; 一般来说，你应该将 `value` 设置为空字符串 (`""`) 。(一些人使用这个属性的名称作为值; 这不会出现什么问题，但这是不规范的). See the [example](#示例) below for a practical demonstration.
 

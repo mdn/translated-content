@@ -1,17 +1,6 @@
 ---
 title: String.fromCodePoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - リファレンス
-  - String
-  - UTF-32
-  - Unicode
-  - ポリフィル
-browser-compat: javascript.builtins.String.fromCodePoint
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 ---
 {{JSRef}}
 

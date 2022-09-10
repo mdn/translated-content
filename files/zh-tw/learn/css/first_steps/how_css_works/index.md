@@ -13,13 +13,13 @@ slug: Learn/CSS/First_steps/How_CSS_works
       <th scope="row">需求：</th>
       <td>
         基本電腦操作、<a
-          href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-TW/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >已安裝基本的軟體</a
         >、
-        <a href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+        <a href="/zh-TW/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >檔案處理的基本知識</a
         >、HTML 基礎 (請參閱
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>)。
+        <a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>)。
       </td>
     </tr>
     <tr>

@@ -1,13 +1,6 @@
 ---
 title: Intl.NumberFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
-tags:
-  - Internationalization
-  - JavaScript
-  - Method
-  - NumberFormat
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
 ---
 {{JSRef}}
 

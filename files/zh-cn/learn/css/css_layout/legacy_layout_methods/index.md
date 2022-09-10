@@ -315,7 +315,7 @@ body {
 
 ### 使用 calc() 函数的更简单计算
 
-你可以用 {{cssxref("calc()")}} 函数来在 CSS 里面做数学方面的计算——这允许你在 CSS 里插入简单的算式，来计算那些值。这个会很有用，特别当你有个复杂计算的时候，甚至你还可以在算式里用不同的单位，比如“我想要这个元素一直比它父元素少 50 像素”。看下[这个来自 MediaRecorder API 教程的示例](</en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()>)。
+你可以用 {{cssxref("calc()")}} 函数来在 CSS 里面做数学方面的计算——这允许你在 CSS 里插入简单的算式，来计算那些值。这个会很有用，特别当你有个复杂计算的时候，甚至你还可以在算式里用不同的单位，比如“我想要这个元素一直比它父元素少 50 像素”。看下[这个来自 MediaRecorder API 教程的示例](/zh-CN/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API#保持主界面对显示区域的约束，用_calc_来忽略设备的尺寸)。
 
 言归正传，来讲我们的网格！我们网格里跨越超过一列的列，它的总长是 6.45% 乘跨越的列数加 2.08333333%，乘间隔数（间隔数总等于行数减一）。`calc()` 函数允许我们就在宽度值里面这么计算，所以对跨越 4 列的列我们可以这么算：
 

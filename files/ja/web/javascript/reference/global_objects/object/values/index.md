@@ -1,14 +1,6 @@
 ---
 title: Object.values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
-tags:
-  - JavaScript
-  - メソッド
-  - Object
-  - リファレンス
-  - Polyfill
-browser-compat: javascript.builtins.Object.values
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 ---
 {{JSRef}}
 

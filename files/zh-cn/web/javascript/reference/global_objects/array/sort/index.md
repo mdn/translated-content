@@ -274,6 +274,9 @@ ES10（EcmaScript 2019）以前没有要求稳定性，意味着你可能会得�
 
 ## 参见
 
+- [Polyfill of `Array.prototype.sort` with modern behavior like stable sort in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.reverse()")}}
 - {{jsxref("String.prototype.localeCompare()")}}
-- [\[译\] V8 引擎中的排序](https://zhuanlan.zhihu.com/p/55338902)
+- [About the stability of the algorithm used by V8 engine](https://v8.dev/blog/array-sort)
+- - [\[译\] V8 引擎中的排序](https://zhuanlan.zhihu.com/p/55338902)
+- [Mathias Bynens' sort stability demo](https://mathiasbynens.be/demo/sort-stability)

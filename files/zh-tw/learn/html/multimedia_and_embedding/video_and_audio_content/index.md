@@ -13,16 +13,16 @@ Now that we are comfortable with adding simple images to a webpage, the next ste
       <td>
         Basic computer literacy,
         <a
-          href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-TW/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >basic software installed</a
         >, basic knowledge of
-        <a href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+        <a href="/zh-TW/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >working with files</a
         >, familiarity with HTML fundamentals (as covered in
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >Getting started with HTML</a
         >) and
-        <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+        <a href="/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
           >Images in HTML</a
         >.
       </td>
@@ -82,7 +82,7 @@ First, let's go through the terminology quickly. Formats like MP3, MP4 and WebM 
 
 A WebM file containing a movie which has a main video track and one alternate angle track, plus audio for both English and Spanish, in addition to audio for an English commentary track can be conceptualized as shown in the diagram below. Also included are text tracks containing closed captions for the feature film, Spanish subtitles for the film, and English captions for the commentary.
 
-[![Diagram conceptualizing the contents of a media file at the track level.](containersandtracks.png)](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/containersandtracks.png)
+[![Diagram conceptualizing the contents of a media file at the track level.](containersandtracks.png)](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/containersandtracks.png)
 
 The audio and video tracks within the container hold data in the appropriate format for the codec used to encode that media. Different formats are used for audio tracks versus video tracks. Each audio track is encoded using an [audio codec](/zh-TW/docs/Web/Media/Formats/Audio_codecs), while video tracks are encoded using (as you probably have guessed) [a video codec](/zh-TW/docs/Web/Media/Formats/Video_codecs). As we talked about before, different browsers support different video and audio formats, and different container formats (like MP3, MP4, and WebM, which in turn can contain different types of video and audio).
 
@@ -108,7 +108,7 @@ The codecs described in the previous section exist to compress video and audio i
 
 Things become slightly more complicated because not only does each browser support a different set of container file formats, they also each support a different selection of codecs. In order to maximize the likelihood that your web site or app will work on a user's browser, you may need to provide each media file you use in multiple formats. If your site and the user's browser don't share a media format in common, your media simply won't play.
 
-Due to the intricacies of ensuring your app's media is viewable across every combination of browsers, platforms, and devices you wish to reach, choosing the best combination of codecs and container can be a complicated task. See {{SectionOnPage("/en-US/docs/Web/Media/Formats/Containers", "Choosing the right container")}} for help selecting the container file format best suited for your needs; similarly, see {{SectionOnPage("/en-US/docs/Web/Media/Formats/Video_codecs", "Choosing a video codec")}} and {{SectionOnPage("/en-US/docs/Web/Media/Formats/Audio_codecs", "Choosing an audio codec")}} for help selecting the first media codecs to use for your content and your target audience.
+Due to the intricacies of ensuring your app's media is viewable across every combination of browsers, platforms, and devices you wish to reach, choosing the best combination of codecs and container can be a complicated task. See {{SectionOnPage("/zh-TW/docs/Web/Media/Formats/Containers", "Choosing the right container")}} for help selecting the container file format best suited for your needs; similarly, see {{SectionOnPage("/zh-TW/docs/Web/Media/Formats/Video_codecs", "Choosing a video codec")}} and {{SectionOnPage("/zh-TW/docs/Web/Media/Formats/Audio_codecs", "Choosing an audio codec")}} for help selecting the first media codecs to use for your content and your target audience.
 
 One additional thing to keep in mind: mobile browsers may support additional formats not supported by their desktop equivalents, just like they may not support all the same formats the desktop version does. On top of that, both desktop and mobile browsers _may_ be designed to offload handling of media playback (either for all media or only for specific types it can't handle internally). This means media support is partly dependent on what software the user has installed.
 

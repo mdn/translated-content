@@ -1,15 +1,6 @@
 ---
 title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
-tags:
-  - JavaScript
-  - メソッド
-  - プロトタイプ
-  - リファレンス
-  - 正規表現
-  - String
-browser-compat: javascript.builtins.String.match
-translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 ---
 {{JSRef}}
 

@@ -1,16 +1,6 @@
 ---
 title: WebAssembly.Table.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set
-tags:
-  - API
-  - JavaScript
-  - メソッド
-  - Reference
-  - WebAssembly
-  - set
-  - table
-browser-compat: javascript.builtins.WebAssembly.Table.set
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set
 ---
 {{JSRef}}
 

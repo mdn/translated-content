@@ -12,9 +12,9 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
     <tr>
       <th scope="row">課成需求:</th>
       <td>
-        基本的電腦操作, <a href="/en-US/docs/">安裝軟體的能力</a>,
-        <a href="/en-US/docs/">處理檔案的基本能力</a>, 熟悉最基本的HTML的 （<a
-          href="/en-US/docs/"
+        基本的電腦操作, <a href="/zh-TW/docs/">安裝軟體的能力</a>,
+        <a href="/zh-TW/docs/">處理檔案的基本能力</a>, 熟悉最基本的HTML的 （<a
+          href="/zh-TW/docs/"
           >如HTML入門中所述</a
         >）
       </td>
@@ -129,7 +129,7 @@ However, you shouldn't alter the size of your images using HTML attributes. If y
 
 ### 圖片標題
 
-As [with links](/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Adding_supporting_information_with_%3Ctitle%3E), you can also add `title` attributes to images, to provide further supporting information if needed. In our example, we could do this:
+As [with links](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Adding_supporting_information_with_%3Ctitle%3E), you can also add `title` attributes to images, to provide further supporting information if needed. In our example, we could do this:
 
 ```html
 <img src="images/dinosaur.jpg"

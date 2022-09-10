@@ -8,12 +8,12 @@ slug: Web/API/MessageEvent
 
 用来代表下列情况的消息
 
-- [Server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) (参见{{domxref("EventSource.onmessage")}}).
-- [Web sockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) (参见 [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket) 接口的 `onmessage` 属性).
+- [Server-sent events](/zh-CN/docs/Web/API/Server-sent_events) (参见{{domxref("EventSource.onmessage")}}).
+- [Web sockets](/zh-CN/docs/Web/API/WebSockets_API) (参见 [WebSocket](/zh-CN/docs/Web/API/WebSocket) 接口的 `onmessage` 属性).
 - Cross-document messaging (参见 {{domxref("Window.postMessage()")}} 和 {{domxref("Window.onmessage")}}).
-- [Channel messaging](https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API) (参见 {{domxref("MessagePort.postMessage()")}} 和{{domxref("MessagePort.onmessage")}}).
+- [Channel messaging](/zh-CN/docs/Web/API/Channel_Messaging_API) (参见 {{domxref("MessagePort.postMessage()")}} 和{{domxref("MessagePort.onmessage")}}).
 - Cross-worker/document messaging (参见上面两个入口，还有 {{domxref("Worker.postMessage()")}}, {{domxref("Worker.onmessage")}}, {{domxref("ServiceWorkerGlobalScope.onmessage")}}, 等等.)
-- [Broadcast channels](https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API) (参见 {{domxref("Broadcastchannel.postMessage()")}}) 和 {{domxref("BroadcastChannel.onmessage")}}).
+- [Broadcast channels](/zh-CN/docs/Web/API/Broadcast_Channel_API) (参见 {{domxref("Broadcastchannel.postMessage()")}}) 和 {{domxref("BroadcastChannel.onmessage")}}).
 - WebRTC data channels (参见 {{domxref("RTCDataChannel.onmessage")}}).
 
 通过这个事件触发的动作被定义为一个函数，该函数作为相关{{event("message")}}事件 (例如使用前文所列的`onmessage` 处理器) 的事件处理器。

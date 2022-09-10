@@ -12,7 +12,7 @@ slug: Learn/JavaScript/Building_blocks/conditionals
       <th scope="row">Prerequisites:</th>
       <td>
         Basic computer literacy, a basic understanding of HTML and CSS,
-        <a href="/en-US/docs/Learn/JavaScript/First_steps"
+        <a href="/zh-TW/docs/Learn/JavaScript/First_steps"
           >JavaScript first steps</a
         >.
       </td>

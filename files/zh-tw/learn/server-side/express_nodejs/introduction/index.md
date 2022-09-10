@@ -13,10 +13,10 @@ slug: Learn/Server-side/Express_Nodejs/Introduction
     <tr>
       <th scope="row">前置需求:</th>
       <td>
-        基本的電腦知識。 對<a href="/en-US/docs/Learn/Server-side/First_steps"
+        基本的電腦知識。 對<a href="/zh-TW/docs/Learn/Server-side/First_steps"
           >伺服器端網站程式設計</a
         >的基本了解，特別是網站中<a
-          href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview"
+          href="/zh-TW/docs/Learn/Server-side/First_steps/Client-Server_overview"
           >客戶端 - 伺服器交互的機制</a
         >。
       </td>
