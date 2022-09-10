@@ -9,7 +9,7 @@ L'**indice de vitesse**, ou <i lang="en">speed index (SI)</i> en anglais, est un
 
 ![Calcul de l'indice de vitesse](speedindex.png)
 
-Le calcul prend en compte quel pourcentage de la page est visuellement complet à chaque intervalle de 100 ms jusqu'à ce que la page soit visuellement complète. Le score global, la mesure au-dessus du pli, est une somme des intervalles individuels pris 10 fois par seconde du pourcentage de l'écran qui n'est pas visuellement complet**.**
+Le calcul prend en compte quel pourcentage de la page est visuellement complet à chaque intervalle de 100 ms jusqu'à ce que la page soit visuellement complète. Le score global, la mesure au-dessus du pli, est une somme des intervalles individuels pris 10 fois par seconde du pourcentage de l'écran qui n'est pas visuellement complet.
 
 ## See also
 
