@@ -33873,10 +33873,6 @@
     "modified": "2019-01-17T01:57:07.618Z",
     "contributors": ["wbamberg", "liminjun"]
   },
-  "conflicting/Web/API/CanvasRenderingContext2D/drawImage": {
-    "modified": "2020-11-07T01:40:12.260Z",
-    "contributors": ["liguorain", "ice-i-snow"]
-  },
   "conflicting/Web/API/Element/touchcancel_event": {
     "modified": "2020-10-15T22:29:23.086Z",
     "contributors": ["Carllllo", "anhaoan6"]
