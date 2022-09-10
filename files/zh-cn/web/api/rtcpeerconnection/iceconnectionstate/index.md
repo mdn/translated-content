@@ -41,4 +41,4 @@ var state = pc.iceConnectionState;
 
 ## 参考文档
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)
