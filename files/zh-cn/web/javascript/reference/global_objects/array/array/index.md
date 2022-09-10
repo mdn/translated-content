@@ -34,7 +34,7 @@ Array(arrayLength)
 
 ### 数组字面量
 
-可以通过使用 [数组字面量](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#array_literals) 创建数组：
+可以通过使用[数组字面量](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#数组字面量)创建数组：
 
 ```js
 const fruits = ['Apple', 'Banana'];
