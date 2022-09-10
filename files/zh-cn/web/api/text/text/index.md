@@ -29,4 +29,4 @@ text = new Text("Test");
 
 ## See also
 
-- [The DOM interfaces index.](/en-US/docs/DOM/DOM_Reference)
+- [The DOM interfaces index.](/zh-CN/docs/DOM/DOM_Reference)

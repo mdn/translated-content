@@ -4,7 +4,7 @@ slug: Web/API/ServiceWorkerGlobalScope
 ---
 {{APIRef("Service Workers API")}}
 
-[ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API) 的`ServiceWorkerGlobalScope` 接口，代表一个 service worker 的全局执行上下文。
+[ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API) 的`ServiceWorkerGlobalScope` 接口，代表一个 service worker 的全局执行上下文。
 
 开发者应该知道， ServiceWorker 的状态在结束/重启的循环中不是一直保持不变的，所以每个事件处理器应该设定一个默认的全局状态。
 
@@ -99,8 +99,8 @@ self.addEventListener('fetch', function(event) {
 
 ## See also
 
-- [Using Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web workers](/en-US/docs/Web/Guide/Performance/Using_web_workers)
+- [Using web workers](/zh-CN/docs/Web/Guide/Performance/Using_web_workers)

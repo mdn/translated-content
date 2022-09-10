@@ -8,7 +8,7 @@ slug: Web/API/RTCPeerConnection/addIceCandidate
 
 If the value of the specified object'`s` {{domxref("RTCIceCandidate.candidate", "candidate")}} is an empty string (`""`), it signals that all remote candidates have been delivered.
 
-During negotiation, your app will likely receive many candidates which you'll deliver to the ICE agent in this way, allowing it to build up a list of potential connection methods. This is covered in more detail in the articles [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity) and [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling).
+During negotiation, your app will likely receive many candidates which you'll deliver to the ICE agent in this way, allowing it to build up a list of potential connection methods. This is covered in more detail in the articles [WebRTC connectivity](/zh-CN/docs/Web/API/WebRTC_API/Connectivity) and [Signaling and video calling](/zh-CN/docs/Web/API/WebRTC_API/Signaling_and_video_calling).
 
 ## Syntax
 
@@ -77,8 +77,8 @@ pc.addIceCandidate(candidate).then(_=>{
 
 ## See also
 
-- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
-- [WebRTC architecture overview](/en-US/docs/Web/API/WebRTC_API/Architecture)
-- [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)
-- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)
+- [Signaling and video calling](/zh-CN/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
+- [WebRTC architecture overview](/zh-CN/docs/Web/API/WebRTC_API/Architecture)
+- [WebRTC connectivity](/zh-CN/docs/Web/API/WebRTC_API/Connectivity)
+- [Lifetime of a WebRTC session](/zh-CN/docs/Web/API/WebRTC_API/Session_lifetime)

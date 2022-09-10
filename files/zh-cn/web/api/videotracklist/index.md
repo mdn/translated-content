@@ -35,15 +35,15 @@ _This interface also inherits methods from its parent interface, {{domxref("Even
 
 ## Events
 
-- [`addtrack`](/en-US/docs/Web/API/VideoTrackList/addtrack_event)
+- [`addtrack`](/zh-CN/docs/Web/API/VideoTrackList/addtrack_event)
   - : Fired when a new video track has been added to the media element.
-    Also available via the [`onaddtrack`](/en-US/docs/Web/API/VideoTrackList/onaddtrack) property.
-- [`change`](/en-US/docs/Web/API/VideoTrackList/change_event)
+    Also available via the [`onaddtrack`](/zh-CN/docs/Web/API/VideoTrackList/onaddtrack) property.
+- [`change`](/zh-CN/docs/Web/API/VideoTrackList/change_event)
   - : Fired when a video track has been made active or inactive.
-    Also available via the [`onchange`](/en-US/docs/Web/API/VideoTrackList/onchange) property.
-- [`removetrack`](/en-US/docs/Web/API/VideoTrackList/removetrack_event)
+    Also available via the [`onchange`](/zh-CN/docs/Web/API/VideoTrackList/onchange) property.
+- [`removetrack`](/zh-CN/docs/Web/API/VideoTrackList/removetrack_event)
   - : Fired when a new video track has been removed from the media element.
-    Also available via the [`onremovetrack`](/en-US/docs/Web/API/VideoTrackList/onremovetrack) property.
+    Also available via the [`onremovetrack`](/zh-CN/docs/Web/API/VideoTrackList/onremovetrack) property.
 
 ## Usage notes
 
