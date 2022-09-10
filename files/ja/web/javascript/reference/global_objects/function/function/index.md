@@ -1,12 +1,6 @@
 ---
 title: Function() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Function/Function
-tags:
-  - Constructor
-  - Function
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/Function
 ---
 {{JSRef}}
 

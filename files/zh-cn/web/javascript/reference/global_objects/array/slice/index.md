@@ -195,7 +195,7 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Array.prototype.splice()")}}
 - {{jsxref("Function.prototype.call()")}}

@@ -47,5 +47,6 @@ class MyArray extends Array {
 
 ## 参见
 
+- [Polyfill of `Array[Symbol.species]` and support of `Symbol.species` in all affected `Array` methods in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array")}}
 - {{jsxref("Symbol.species")}}
