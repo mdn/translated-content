@@ -22,11 +22,11 @@ drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
   - : 绘制到上下文的元素。允许任何的画布图像源，例如：{{domxref("HTMLImageElement")}}、{{domxref("SVGImageElement")}}、{{domxref("HTMLVideoElement")}}、{{domxref("HTMLCanvasElement")}}、{{domxref("ImageBitmap")}}、{{domxref("OffscreenCanvas")}}
     或 {{domxref("VideoFrame")}}。
 - `sx` {{optional_inline}}
-  - : 需要绘制到目标上下文中的，`image` 的矩形（裁剪）选择框的左上角 X 轴坐标。可以使用三值或五值语法来省略这个参数。
+  - : 需要绘制到目标上下文中的，`image` 的矩形（裁剪）选择框的左上角 X 轴坐标。可以使用 3 参数或 5 参数语法来省略这个参数。
 - `sy` {{optional_inline}}
-  - : 需要绘制到目标上下文中的，`image` 的矩形（裁剪）选择框的左上角 Y 轴坐标。可以使用三值或五值语法来省略这个参数。
+  - : 需要绘制到目标上下文中的，`image` 的矩形（裁剪）选择框的左上角 Y 轴坐标。可以使用 3 参数或 5 参数语法来省略这个参数。
 - `sWidth` {{optional_inline}}
-  - : 需要绘制到目标上下文中的，`image` 的矩形（裁剪）选择框的宽度。如果不说明，整个矩形（裁剪）从坐标的 `sx` 和 `sy` 开始，到 `image` 的右下角结束。可以使用三值或五值语法来省略这个参数。使用负值将翻转这个图像。
+  - : 需要绘制到目标上下文中的，`image` 的矩形（裁剪）选择框的宽度。如果不说明，整个矩形（裁剪）从坐标的 `sx` 和 `sy` 开始，到 `image` 的右下角结束。可以使用 3 参数或 5 参数语法来省略这个参数。使用负值将翻转这个图像。
 - `sHeight` {{optional_inline}}
   - : 需要绘制到目标上下文中的，`image`的矩形（裁剪）选择框的高度。使用负值将翻转这个图像。
 - `dx`
@@ -34,9 +34,9 @@ drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
 - `dy`
   - : `image` 的左上角在目标画布上 Y 轴坐标。
 - `dWidth`
-  - : `image` 在目标画布上绘制的宽度。允许对绘制的 `image` 进行缩放。如果不说明，在绘制时 `image` 宽度不会缩放。注意，这个参数不包含在三值语法中。
+  - : `image` 在目标画布上绘制的宽度。允许对绘制的 `image` 进行缩放。如果不说明，在绘制时 `image` 宽度不会缩放。注意，这个参数不包含在 3 参数语法中。
 - `dHeight`
-  - : `image` 在目标画布上绘制的高度。允许对绘制的 `image` 进行缩放。如果不说明，在绘制时 `image` 高度不会缩放。注意，这个参数不包含在三值语法中。
+  - : `image` 在目标画布上绘制的高度。允许对绘制的 `image` 进行缩放。如果不说明，在绘制时 `image` 高度不会缩放。注意，这个参数不包含在 3 参数语法中。
 
 ### 返回值
 
@@ -53,7 +53,7 @@ drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
 
 ### 在画布上绘制图像
 
-该示例在画布中使用 `drawImage()` 方法绘制一张图像。
+此示例在画布中使用 `drawImage()` 方法绘制一张图像。
 
 #### HTML
 
@@ -68,7 +68,7 @@ drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
 
 #### JavaScript
 
-原图像从坐标 (33,71) 处截取一个宽度为 104 高度为 124 的图像。并将其绘制到画布的 (21, 20) 坐标处，并将其缩放为宽度是 87，高度是 104 的图像。
+原图像从坐标 (33,71) 处截取一个宽度为 104 高度为 124 的图像。并将其绘制到画布的 (21, 20) 坐标处，并将其缩放为宽 87、高 104 的图像。
 
 ```js
 const canvas = document.getElementById('canvas');
@@ -88,7 +88,7 @@ image.addEventListener('load', (e) => {
 
 `drawImage()` 方法在绘制时使用源元素的*固有尺寸*（以 CSS 像素为单位）。
 
-例如，如果加载图像并在其构造函数中指定可选的大小参数，则必须使用所创建实例的 `naturalWidth` 和 `naturalHeight` 属性来正确计算裁剪和缩放区域等内容，而不是 `element.width` 和 `element.height`。如果元素是 {{htmlelement("video")}} 元素，则 `videoWidth` 和 `videoHeight` 也是如此，依此类推。
+例如，如果加载图像并在其[构造函数](/zh-CN/docs/Web/API/HTMLImageElement/Image)中指定可选的大小参数，则必须使用所创建实例的 `naturalWidth` 和 `naturalHeight` 属性来正确计算裁剪和缩放区域等内容，而不是 `element.width` 和 `element.height`。如果元素是 {{htmlelement("video")}} 元素，则 `videoWidth` 和 `videoHeight` 也是如此，依此类推。
 
 #### HTML
 
@@ -144,4 +144,4 @@ function drawImageActualSize() {
 
 ## 参见
 
-- 定义该方法的接口：{{domxref("CanvasRenderingContext2D")}}。
+- 定义该方法的接口：{{domxref("CanvasRenderingContext2D")}}
