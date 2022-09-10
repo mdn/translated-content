@@ -19,11 +19,12 @@ JavaScript 的核心语言是 ECMAScript，是一门由 ECMA TC39 委员会标�
 除却一些其它元素，ECMAScript 定义了：
 
 - 语法（解析规则、关键词、流程控制、对象初始化，等等）
-- 错误处理机制（{{jsxref("Statements/throw", "throw")}}、{{jsxref("Statements/try...catch", "try...catch")}}，以及创建用户定义{{jsxref("Error", "错误")}}类型的能力）
+- 错误处理机制（{{jsxref("Statements/throw", "throw")}}、{{jsxref("Statements/try...catch", "try...catch")}}，以及创建用户自定义{{jsxref("Error", "错误", "", 1)}}类型的能力）
 - 类型（布尔值、数字、字符串、函数、对象，等等）
 - 基于原型的继承机制
 - 内置对象和函数（{{jsxref("JSON")}}、{{jsxref("Math")}}、[Array](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array) 方法、{{jsxref("parseInt")}}、{{jsxref("decodeURI")}}，等等）
 - [严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)
+- [模块系统](/zh-CN/docs/Web/JavaScript/Guide/Modules)
 - 基本内存模型
 
 ### 标准化流程
@@ -32,7 +33,7 @@ ECMAScript 版本由每年的 ECMA 大会批准并作为标准发布。所有的
 
 在 ECMAScript 第 6 版（称为 ES6）之前，规范是几年发布一次，通常用它们的主要版本号来指代（ES3、ES5 等）。在 ES6 之后，规范以发布年份命名（ES2017、ES2018 等）。ES6 是 ES2015 的代名词。_ESNext_ 是一个动态名称，指的是撰写本文时的下一个版本。ESNext 中的特性更准确地称为提案，因为根据定义，规范尚未最终确定。
 
-目前委员会批准的 ECMA-262 的快照有 [PDF 版本](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf) 和 [HTML 版本](https://262.ecma-international.org/13.0/)。ECMA-262 和 ECMA-402 正处于维护状态，仍在由规范编辑者更新；TC39 网站托管了最新版本的 [ECMA-262](https://tc39.es/ecma262/) 和 [ECMA-402](https://tc39.es/ecma402/)。
+目前委员会批准的 ECMA-262 的快照有 [PDF 版本](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf)和 [HTML 版本](https://262.ecma-international.org/13.0/)。ECMA-262 和 ECMA-402 正处于维护状态，仍在由规范编辑者更新；TC39 网站托管了最新版本的 [ECMA-262](https://tc39.es/ecma262/) 和 [ECMA-402](https://tc39.es/ecma402/)。
 
 新的语言特性，包括新的语法和 API 的引入以及现有行为的修订，都以提案的形式进行讨论。每个提案都需要经过 [4 个阶段的过程](https://tc39.es/process-document/)，通常在第 3 或 第 4 阶段时，JavaScript 引擎会实现这些提案，以供公众使用。
 
@@ -40,7 +41,7 @@ ECMAScript 版本由每年的 ECMA 大会批准并作为标准发布。所有的
 
 ## 国际化 API
 
-由 ECMA TC39 进行标准化的 [ECMAScript 国际化 API 规范](https://402.ecma-international.org/1.0/)是在 ECMAScript 语言规范之上额外增加的。国际化 API 为 JavaScript 提供了国际化的规则排序（字符串比较）、数字格式化、日期时间格式化等功能，能够让应用选择语言，并根据实际需要选用功能。本标准在 2012 年 12 月审批通过，可以在 {{jsxref("Intl")}} 对象页面查看各个浏览器对其的实现情况。如今，国际化规范也每年批准一次，浏览器不断改进其实施。
+由 ECMA TC39 进行标准化的 [ECMAScript 国际化 API 规范](https://402.ecma-international.org/1.0/)是在 ECMAScript 语言规范之上额外增加的。国际化 API 为 JavaScript 提供了国际化的规则排序（字符串比较）、数字格式化、日期时间格式化等功能，能够让应用选择语言，并根据实际需要选用功能。本标准在 2012 年 12 月审批通过，可以在 {{jsxref("Intl")}} 对象页面查看各个浏览器对其的实现情况。如今，国际化规范也每年批准一次，浏览器不断改进其实现。
 
 ### 相关资源
 
