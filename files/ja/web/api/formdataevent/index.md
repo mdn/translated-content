@@ -46,7 +46,7 @@ formElem.addEventListener('submit', (e) => {
 formElem.addEventListener('formdata', (e) => {
   console.log('formdata fired');
 
-  // イベントお武衛ジェクトからフォームデータを取得
+  // イベントオブジェクトからフォームデータを取得
   let data = e.formData;
   for (var value of data.values()) {
     console.log(value);
