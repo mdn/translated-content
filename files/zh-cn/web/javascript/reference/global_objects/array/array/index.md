@@ -16,7 +16,7 @@ Array(element0, element1, /* … ,*/ elementN)
 Array(arrayLength)
 ```
 
-> **备注:** `Array()` 可以调用或不调用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)。两者都创建一个新的 `Array` 实例。
+> **备注：** `Array()` 可以调用或不调用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)。两者都会创建一个新的 `Array` 实例。
 
 ### 参数
 
