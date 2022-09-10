@@ -62,15 +62,11 @@ DBOpenRequest.onsuccess = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName("IndexedDB", "#idl-def-IDBFactory", "IDBFactory")}} | {{Spec2("IndexedDB")}}     |              |
-| {{SpecName("IndexedDB 2", "#factory-interface", "IDBFactory")}} | {{Spec2("IndexedDB 2")}} |              |
-| {{SpecName("IndexedDB 3", "#factory-interface", "IDBFactory")}} | {{Spec2("IndexedDB 3")}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBFactory")}}
+{{Compat}}
 
 ## Voir aussi
 

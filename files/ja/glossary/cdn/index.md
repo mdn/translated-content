@@ -1,10 +1,6 @@
 ---
 title: CDN
 slug: Glossary/CDN
-tags:
-  - Glossary
-  - Infrastructure
-translation_of: Glossary/CDN
 ---
 **CDN** （Content Delivery Network、コンテンツ配信ネットワーク）は、様々な地域に分散されたサーバーの集まりです。これらのサーバーは同じ内容のデータのコピーを保有し、各ユーザーに最も近いサーバーからデータへの要求に応えることが可能になっています。 CDN は通信量の影響を受けにくい高速なサービスを実現します。
 

@@ -8,7 +8,7 @@ slug: Glossary/Accessibility
 
 ### 基本知識
 
-- [資源在 MDN](/en-US/docs/Web/Accessibility)
+- [資源在 MDN](/zh-TW/docs/Web/Accessibility)
 - 維基百科上的[Web accessibility](https://zh.wikipedia.org/wiki/Web_accessibility)
 
 ### 學習網頁無障礙化
@@ -17,6 +17,6 @@ slug: Glossary/Accessibility
 
 ### 技術參考
 
-- [The ARIA documentation on MDN](/en-US/docs/Web/Accessibility/ARIA)
+- [The ARIA documentation on MDN](/zh-TW/docs/Web/Accessibility/ARIA)
 - [The Web Accessibility Initiative homepage](http://www.w3.org/WAI/)
 - [The WAI-ARIA recommendation](http://www.w3.org/TR/wai-aria/)

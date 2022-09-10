@@ -27,13 +27,11 @@ instanceOfFileReader.readAsArrayBuffer(blob);
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                       | Commentaire          |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("File API", "#readAsArrayBuffer", "FileReader.readAsArrayBuffer")}} | {{Spec2("File API")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FileReader.readAsArrayBuffer")}}.
+{{Compat}}
 
 ## Voir aussi
 

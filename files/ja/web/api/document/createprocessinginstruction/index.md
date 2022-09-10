@@ -1,14 +1,6 @@
 ---
 title: Document.createProcessingInstruction()
 slug: Web/API/Document/createProcessingInstruction
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - createProcessInstruction
-translation_of: Web/API/Document/createProcessingInstruction
 ---
 {{APIRef("DOM")}}
 
@@ -61,4 +53,4 @@ console.log(new XMLSerializer().serializeToString(doc));
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.createProcessingInstruction")}}
+{{Compat}}

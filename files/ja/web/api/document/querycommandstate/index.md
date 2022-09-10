@@ -1,14 +1,6 @@
 ---
 title: Document.queryCommandState()
 slug: Web/API/Document/queryCommandState
-page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - リファレンス
-  - 非推奨
-browser-compat: api.Document.queryCommandState
-translation_of: Web/API/Document/queryCommandState
 ---
 {{ApiRef("DOM")}}{{deprecated_header}}
 

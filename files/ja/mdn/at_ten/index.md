@@ -1,11 +1,6 @@
 ---
 title: MDN は 10 周年を迎えました
 slug: MDN/At_ten
-tags:
-  - History
-  - Landing
-  - MDN Meta
-translation_of: MDN_at_ten
 original_slug: MDN_at_ten
 i10n:
   sourceCommit: 0160aac0e623dacdce4019205f32f7b3d3e58019

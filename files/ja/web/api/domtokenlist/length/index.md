@@ -1,12 +1,6 @@
 ---
 title: DOMTokenList.length
 slug: Web/API/DOMTokenList/length
-tags:
-- プロパティ
-- リファレンス
-- 読み取り専用
-browser-compat: api.DOMTokenList.length
-translation_of: Web/API/DOMTokenList/length
 ---
 {{APIRef("DOM")}}
 

@@ -1,14 +1,6 @@
 ---
 title: WebGLRenderingContext.drawElements()
 slug: Web/API/WebGLRenderingContext/drawElements
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - WebGL
-  - WebGLRenderingContext
-browser-compat: api.WebGLRenderingContext.drawElements
-translation_of: Web/API/WebGLRenderingContext/drawElements
 ---
 {{APIRef("WebGL")}}
 

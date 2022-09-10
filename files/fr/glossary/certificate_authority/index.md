@@ -12,6 +12,6 @@ Une autorité de certification (AC, ou CA en anglais) est une organisation qui {
 
 Les navigateurs Web intègrent une liste d'autorités de certification qui sont autorisées à émettre des certificats numériques.
 
-## Pour approfondir
+## Voir aussi
 
 - [Liste de certificats d'AC incluse par Mozilla](https://wiki.mozilla.org/CA:IncludedCAs)

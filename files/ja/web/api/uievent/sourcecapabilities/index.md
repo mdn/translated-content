@@ -1,13 +1,6 @@
 ---
 title: UIEvent.sourceCapabilities
 slug: Web/API/UIEvent/sourceCapabilities
-tags:
-  - API
-  - DOM
-  - プロパティ
-  - リファレンス
-  - UIEvent
-browser-compat: api.UIEvent.sourceCapabilities
 ---
 {{SeeCompatTable}}{{APIRef()}}
 

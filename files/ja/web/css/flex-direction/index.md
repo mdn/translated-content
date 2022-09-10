@@ -1,14 +1,6 @@
 ---
 title: flex-direction
 slug: Web/CSS/flex-direction
-tags:
-  - CSS
-  - CSS フレックスボックス
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.flex-direction
-translation_of: Web/CSS/flex-direction
 ---
 {{CSSRef}}
 

@@ -1,9 +1,6 @@
 ---
 title: 基本的な例
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
-tags:
-  - XSLT
-translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
 ---
 ## 基本的な例
 

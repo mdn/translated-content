@@ -49,4 +49,4 @@ The `CSSGroupingRule` derives from {{domxref("CSSRule")}} and inherits all metho
 
 ## 参见
 
-- [Using dynamic styling information](/en/DOM/Using_dynamic_styling_information)
+- [Using dynamic styling information](/zh-CN/DOM/Using_dynamic_styling_information)

@@ -1,14 +1,6 @@
 ---
 title: Document.body
 slug: Web/API/Document/body
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-  - プロパティ
-translation_of: Web/API/Document/body
 ---
 {{APIRef("DOM")}}
 
@@ -50,7 +42,7 @@ alert(document.body.id); // "newBodyElement"
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.body")}}
+{{Compat}}
 
 ## 関連情報
 

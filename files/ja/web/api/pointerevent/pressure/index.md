@@ -1,14 +1,6 @@
 ---
 title: PointerEvent.pressure
 slug: Web/API/PointerEvent/pressure
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
-translation_of: Web/API/PointerEvent/pressure
 ---
 {{ APIRef("Pointer Events") }}
 

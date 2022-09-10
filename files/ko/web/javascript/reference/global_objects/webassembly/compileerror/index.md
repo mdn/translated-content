@@ -9,7 +9,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError
 
 ## Syntax
 
-    new WebAssembly.CompileError(message, fileName, lineNumber)
+```js
+new WebAssembly.CompileError(message, fileName, lineNumber)
+```
 
 ### Parameters
 

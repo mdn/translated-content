@@ -1,7 +1,6 @@
 ---
 title: SVN
 slug: Glossary/SVN
-translation_of: Glossary/SVN
 ---
 Apache Subversion (**SVN**) は無償のソースコードマネジメント ({{Glossary("SCM")}}) システムです。 開発者はテキストファイルやソースコードの変更履歴を記録できます。SVN はバイナリファイルにも対応していますが、推奨はしていません。
 

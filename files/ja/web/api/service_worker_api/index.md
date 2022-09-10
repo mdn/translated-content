@@ -1,15 +1,6 @@
 ---
 title: サービスワーカー API
 slug: Web/API/Service_Worker_API
-tags:
-  - API
-  - ランディング
-  - オフライン
-  - 概要
-  - リファレンス
-  - サービスワーカー
-  - ワーカー
-translation_of: Web/API/Service_Worker_API
 ---
 {{ServiceWorkerSidebar}}
 

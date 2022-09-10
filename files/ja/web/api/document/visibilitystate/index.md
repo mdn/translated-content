@@ -1,15 +1,6 @@
 ---
 title: Document.visibilityState
 slug: Web/API/Document/visibilityState
-tags:
-  - DOM
-  - Document
-  - Page Visibility API
-  - Property
-  - Read-only
-  - Reference
-  - Web
-translation_of: Web/API/Document/visibilityState
 ---
 {{ ApiRef("DOM") }}
 
@@ -49,4 +40,4 @@ document.addEventListener("visibilitychange", function() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.visibilityState")}}
+{{Compat}}

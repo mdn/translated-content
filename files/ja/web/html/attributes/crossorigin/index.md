@@ -84,17 +84,7 @@ translation_of: Web/HTML/Attributes/crossorigin
 
 ## ブラウザーの互換性
 
-### script の crossorigin
-
-{{Compat("html.elements.script.crossorigin")}}
-
-### video の crossorigin
-
-{{Compat("html.elements.video.crossorigin")}}
-
-### link の crossorigin
-
-{{Compat("html.elements.link.crossorigin")}}
+{{Compat}}
 
 ## 関連情報
 

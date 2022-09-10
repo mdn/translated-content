@@ -1,16 +1,6 @@
 ---
 title: 'Element: touchmove イベント'
 slug: Web/API/Element/touchmove_event
-tags:
-  - Event
-  - Touch Events
-  - TouchEvent
-  - UI
-  - UI Events
-  - UX
-  - touch
-  - touchmove
-translation_of: Web/API/Element/touchmove_event
 ---
 {{APIRef}}
 
@@ -51,7 +41,7 @@ translation_of: Web/API/Element/touchmove_event
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.touchmove_event")}}
+{{Compat}}
 
 ## 関連情報
 

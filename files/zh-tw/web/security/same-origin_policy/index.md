@@ -50,7 +50,7 @@ document.domain = "company.com";
 - {{htmlelement("video")}}和{{htmlelement("audio")}}媒體檔案
 - [`<object>`](/zh-TW/docs/HTML/Element/object), [`<embed>`](/zh-TW/docs/HTML/Element/embed)和[`<applet>`](/zh-TW/docs/HTML/Element/applet)的外掛
 - [`@font-face`](/zh-TW/docs/CSS/@font-face) 的字型；有些瀏覽器允許跨來源字型，有些則不。
-- [`<frame>`](/zh-TW/docs/HTML/Element/frame)以及[`<iframe>`](/zh-TW/docs/HTML/Element/iframe)中的內容；如果一個網站想要避免跨來源載入互動，可以藉由[`X-Frame-Options`](/en-US/docs/HTTP/X-Frame-Options)標頭避免。
+- [`<frame>`](/zh-TW/docs/HTML/Element/frame)以及[`<iframe>`](/zh-TW/docs/HTML/Element/iframe)中的內容；如果一個網站想要避免跨來源載入互動，可以藉由[`X-Frame-Options`](/zh-TW/docs/HTTP/X-Frame-Options)標頭避免。
 
 ### 如何允許跨來源存取
 

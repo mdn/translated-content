@@ -32,14 +32,11 @@ Bien que le navigateur empêche généralement l'utilisateur de saisir plus de t
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-maxlength', 'maxlength attribute')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5.1', 'input.html#attr-maxlength-accept', 'maxlength attribute')}}     | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attribute.maxlength")}}
+{{Compat}}
 
 ## Voir aussi
 

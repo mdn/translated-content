@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/get
 
 ## 구문
 
-    Reflect.get(target, propertyKey[, receiver])
+```js
+Reflect.get(target, propertyKey[, receiver])
+```
 
 ### 매개변수
 

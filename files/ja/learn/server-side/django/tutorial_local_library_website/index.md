@@ -1,12 +1,6 @@
 ---
 title: 'Django チュートリアル: 地域図書館ウェブサイト'
 slug: Learn/Server-side/Django/Tutorial_local_library_website
-tags:
-  - Python
-  - django
-  - チュートリアル
-  - 初心者
-translation_of: Learn/Server-side/Django/Tutorial_local_library_website
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
 

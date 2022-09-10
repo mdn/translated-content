@@ -1,11 +1,6 @@
 ---
 title: デジタル証明書
 slug: Glossary/Digital_certificate
-tags:
-  - Cryptography
-  - Glossary
-  - Security
-translation_of: Glossary/Digital_certificate
 ---
 デジタル証明書は、公開{{Glossary("Key", "鍵")}}暗号を組織に結びつけるデータファイルです。デジタル証明書には、コモンネーム(例:mozilla.org)、組織単位(例:Mozilla Corporation)、場所(例:Mountain View)などの組織に関する情報が含まれています。デジタル証明書は、証明書の信頼性を証明する{{Glossary("certificate_authority", "認証局")}}によって最も一般的に署名されます。
 

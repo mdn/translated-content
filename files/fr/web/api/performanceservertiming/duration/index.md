@@ -23,13 +23,11 @@ serverTiming.duration;
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Server Timing','#dom-performanceservertiming-duration', 'duration')}} | {{Spec2('Server Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceServerTiming.duration")}}
+{{Compat}}
 
 ## Voir aussi
 

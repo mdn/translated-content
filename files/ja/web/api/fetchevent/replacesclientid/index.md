@@ -1,16 +1,6 @@
 ---
 title: FetchEvent.replacesClientId
 slug: Web/API/FetchEvent/replacesClientId
-tags:
-  - API
-  - DOM
-  - FetchEvent
-  - Property
-  - Reference
-  - Service Workers
-  - Workers
-  - replacesClientId
-translation_of: Web/API/FetchEvent/replacesClientId
 ---
 {{APIRef("Service Workers API")}}
 

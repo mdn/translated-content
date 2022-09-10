@@ -1,15 +1,6 @@
 ---
 title: 読み込みが速い HTML ページを作成するための豆知識
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
-tags:
-  - Advanced
-  - Guide
-  - HTML
-  - NeedsUpdate
-  - Performance
-  - Web
-  - Web Performance
-translation_of: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 ---
 これらの豆知識は、一般の知識や実験に基づくものです。
@@ -62,10 +53,10 @@ CDN は地理的に分散したサーバーネットワークで、ユーザー�
 
 詳細情報:
 
-1.  [HTTP Conditional Get for RSS Hackers](https://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
-2.  [HTTP 304: Not Modified](https://annevankesteren.nl/archives/2005/05/http-304)
-3.  [Wikipedia の HTTP ETag の記事](https://ja.wikipedia.org/wiki/HTTP_ETag)
-4.  [Caching in HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html)
+1. [HTTP Conditional Get for RSS Hackers](https://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
+2. [HTTP 304: Not Modified](https://annevankesteren.nl/archives/2005/05/http-304)
+3. [Wikipedia の HTTP ETag の記事](https://ja.wikipedia.org/wiki/HTTP_ETag)
+4. [Caching in HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html)
 
 ### ページのコンポーネントの最適な順序
 

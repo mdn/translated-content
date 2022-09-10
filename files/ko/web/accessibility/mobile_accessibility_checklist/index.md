@@ -36,7 +36,7 @@ translation_of: Web/Accessibility/Mobile_accessibility_checklist
 - 앱 내 모든 엄격하지 않은 현재 텍스트 요소에 대해 동일한 의미의 텍스트가 제공되어야 한다.
 
   - _alt 와_ _title 속성은 적절하게 사용되어야 한다._ ( 스티브 폴크너의 [Using the HTML title attribute](http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/) 위한 좋은 가이드 보기.)
-  - 위 속성을 사용하기 어려운 경우 `aria-label`, `aria-labelledby`, or `aria-describedby 등과 같은 `[ARIA Properties](http://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header) 를 사용하세요
+  - 위 속성을 사용하기 어려운 경우 `aria-label`, `aria-labelledby`, or `aria-describedby` 등과 같은 [ARIA Properties](http://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header) 를 사용하세요
 
 - 텍스트 이미지 사용은 가급적 자제 해야 한다.
 - 모든 form 콘트롤 요소는 스크린 리더 사용자를 위해 lable 요소를 가져야 한다.

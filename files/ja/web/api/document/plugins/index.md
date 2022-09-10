@@ -1,15 +1,6 @@
 ---
 title: Document.plugins
 slug: Web/API/Document/plugins
-tags:
-  - API
-  - Document
-  - Plugins
-  - Property
-  - Reference
-  - embed
-  - プロパティ
-translation_of: Web/API/Document/plugins
 ---
 {{APIRef("DOM")}}
 
@@ -35,7 +26,7 @@ embedArrayObj = document.plugins
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.plugins")}}
+{{Compat}}
 
 ## 関連情報
 

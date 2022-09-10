@@ -44,7 +44,7 @@ var stream = {
 s.serializeToStream(document, stream, "UTF-8");
 ```
 
-### Voir également
+### Voir aussi
 
 - [Reference (en)](http://www.xulplanet.com/references/objref/XMLSerializer.html) (XULPlanet)
 - [Parsing and serializing XML](fr/Parsing_and_serializing_XML)

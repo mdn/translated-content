@@ -108,7 +108,7 @@ cubic-bezier(-1.9, 0.3, -0.2, 2.1)
 
 ![](/files/3427/cubic-bezer,ease-out.png)
 
-此动画突然开始，然后逐渐减速直至结束。此关键词表示缓冲函数 ` cubic-bezier(``0.0, 0.0, 0.58, 1.0``) `。
+此动画突然开始，然后逐渐减速直至结束。此关键词表示缓冲函数 `cubic-bezier(0.0, 0.0, 0.58, 1.0)`。
 
 ### The `steps()` class of easing functions
 

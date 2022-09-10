@@ -1,15 +1,6 @@
 ---
 title: 'Document: fullscreenerror イベント'
 slug: Web/API/Document/fullscreenerror_event
-tags:
-  - API
-  - Error
-  - Event
-  - Fullscreen API
-  - Reference
-  - fullscreen
-  - fullscreenerror
-translation_of: Web/API/Document/fullscreenerror_event
 ---
 {{APIRef}}
 
@@ -63,7 +54,7 @@ requestor.requestFullscreen();
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.fullscreenerror_event")}}
+{{Compat}}
 
 ## 関連情報
 

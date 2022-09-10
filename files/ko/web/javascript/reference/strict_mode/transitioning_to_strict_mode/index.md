@@ -115,13 +115,13 @@ s.opacity = 1;
 
 A potential "downside" of moving strict code to strict mode is that the semantics may be different in legacy browsers which do not implement strict mode. In some rare occasions (like bad concatenation or minification), your code also may not run in the mode you wrote and tested it in. Here are the rules to make your code strictness-neutral:
 
-1.  코드를 엄격하게 작성하고 (위의 "New runtime errors" 섹션의) 엄격한 오류가 발생하지 않았는지 확인하십시오.
-2.  semantic 차이점으로 부터 멀리하라
+1. 코드를 엄격하게 작성하고 (위의 "New runtime errors" 섹션의) 엄격한 오류가 발생하지 않았는지 확인하십시오.
+2. semantic 차이점으로 부터 멀리하라
 
-    1.  `eval`: 당신이 하는 일을 안다면, 그것을 사용해라
-    2.  `arguments`: 함수의 첫 번째 줄로 이름을 통해 항상 함수 인수에 액세스하거나 인수 객체의 복사본을 수행합니다 :
+    1. `eval`: 당신이 하는 일을 안다면, 그것을 사용해라
+    2. `arguments`: 함수의 첫 번째 줄로 이름을 통해 항상 함수 인수에 액세스하거나 인수 객체의 복사본을 수행합니다 :
         `var args = Array.prototype.slice.call(arguments)`
-    3.  `this`: `this` 당신이 만든 대상을 가리킬 때 사용해라
+    3. `this`: `this` 당신이 만든 대상을 가리킬 때 사용해라
 
 ## See also
 

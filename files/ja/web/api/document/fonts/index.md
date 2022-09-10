@@ -1,15 +1,6 @@
 ---
 title: Document.fonts
 slug: Web/API/Document/fonts
-tags:
-  - API
-  - DOM
-  - Font Loading API
-  - FontFace
-  - FontFaceSet
-  - Fonts
-  - フォント
-translation_of: Web/API/Document/fonts
 ---
 {{APIRef("DOM")}}
 
@@ -44,7 +35,7 @@ document.fonts.ready.then(function() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.fonts")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -1,15 +1,6 @@
 ---
 title: Intl.Locale() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
-tags:
-  - コンストラクター
-  - 国際化
-  - Intl
-  - JavaScript
-  - ロケール
-  - リファレンス
-browser-compat: javascript.builtins.Intl.Locale.Locale
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
 ---
 {{JSRef}}
 

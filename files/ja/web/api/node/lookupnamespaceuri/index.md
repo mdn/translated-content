@@ -1,10 +1,6 @@
 ---
 title: Node.lookupNamespaceURI()
 slug: Web/API/Node/lookupNamespaceURI
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Node.lookupNamespaceURI
 ---
 {{APIRef("DOM")}}
 

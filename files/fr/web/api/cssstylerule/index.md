@@ -25,13 +25,10 @@ interface CSSStyleRule : CSSRule {
 - {{domxref("CSSStyleRule.style")}}
   - : Retourne l'objet {{domxref("CSSStyleDeclaration")}} pour cette règle.
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                | Status                           | Comment           |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
-| {{ SpecName('CSSOM', '#the-cssstylerule-interface', 'CSSStyleRule') }} | {{ Spec2('CSSOM') }}     | pas de changement |
-| {{ SpecName('DOM2 Style', 'css.html#CSS-CSSStyleRule', 'CSSRule') }} | {{ Spec2('DOM2 Style') }} |                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CSSStyleRule")}}
+{{Compat}}

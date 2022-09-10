@@ -40,10 +40,10 @@ _该接口会从它的父级 {{domxref("EventTarget")}} 继承方法。_
 
 ## 事件
 
-- [`message`](/en-US/docs/Web/API/BroadcastChannel/message_event)
+- [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event)
   - : 当频道收到一条消息时触发。
     也可以使用 [`onmessage`](/zh-CN/docs/Web/API/BroadcastChannel/onmessage) 属性访问。
-- [`messageerror`](/en-US/docs/Web/API/BroadcastChannel/messageerror_event)
+- [`messageerror`](/zh-CN/docs/Web/API/BroadcastChannel/messageerror_event)
   - : 当频道收到一条无法反序列化的消息时触发。
     也可以使用 [`onmessageerror`](/zh-CN/docs/Web/API/BroadcastChannel/onmessageerror) 属性访问。
 

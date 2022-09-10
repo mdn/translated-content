@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.createShader()
 slug: Web/API/WebGLRenderingContext/createShader
-translation_of: Web/API/WebGLRenderingContext/createShader
 ---
 {{APIRef("WebGL")}}
 

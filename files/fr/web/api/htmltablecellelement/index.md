@@ -49,16 +49,11 @@ _Aucune méthode spécifique ; hérite des méthodes de son parent, {{domxref("H
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                           | Commentaire                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "tabular-data.html#htmltablecellelement", "HTMLTableCellElement")}} | {{Spec2('HTML WHATWG')}} | Aucune modification depuis {{SpecName("HTML5 W3C")}}.                                                                                                                                                                                                                                                                                                                                                                              |
-| {{SpecName('HTML5 W3C', "tabular-data.html#htmltablecellelement", "HTMLTableCellElement")}}     | {{Spec2('HTML5 W3C')}}     | Les propriétés suivantes sont devenues obsolètes : `align`, `axis`, `bgColor`, `height`, `width`, `ch`, `chOff`, `noWrap`, `et vAlign`. La propriété `headers` est maintenant en lecture seule et renvoie un objet {{domxref("DOMSettableTokenList")}} au lieu d'une simple chaîne {{domxref("DOMString")}}. Les propriétés `colspan` et `rowspan` renvoient maintenant des entiers long positifs (`unsigned long)`. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-82915075', 'HTMLTableCellElement')}}                         | {{Spec2('DOM2 HTML')}}     | La propriété `cellIndex` est maintenant accessible en lecture seule.                                                                                                                                                                                                                                                                                                                                                                      |
-| {{SpecName('DOM1', 'level-one-html.html#ID-82915075', 'HTMLTableCellElement')}}                     | {{Spec2('DOM1')}}         | Définition initiale.                                                                                                                                                                                                                                                                                                                                                                                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLTableCellElement")}}
+{{Compat}}
 
 ## Voir aussi
 

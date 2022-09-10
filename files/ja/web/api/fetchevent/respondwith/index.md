@@ -1,17 +1,6 @@
 ---
 title: FetchEvent.respondWith()
 slug: Web/API/FetchEvent/respondWith
-tags:
-  - API
-  - Experimental
-  - FetchEvent
-  - Method
-  - Offline
-  - Reference
-  - Service Worker
-  - Worker
-  - respondWith
-translation_of: Web/API/FetchEvent/respondWith
 ---
 {{APIRef("Service Workers API")}}
 

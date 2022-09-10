@@ -1,12 +1,6 @@
 ---
 title: Node.baseURI
 slug: Web/API/Node/baseURI
-tags:
-  - Node
-  - プロパティ
-  - 読み取り専用
-browser-compat: api.Node.baseURI
-translation_of: Web/API/Node/baseURI
 ---
 {{APIRef("DOM")}}
 

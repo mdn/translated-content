@@ -1,14 +1,6 @@
 ---
 title: WeakRef
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef
-tags:
-  - Class
-  - JavaScript
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - WeakRef
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef
 ---
 {{JSRef}}
 

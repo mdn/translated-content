@@ -1,12 +1,6 @@
 ---
 title: Document.createComment()
 slug: Web/API/Document/createComment
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-translation_of: Web/API/Document/createComment
 ---
 {{APIRef("DOM")}}
 
@@ -43,4 +37,4 @@ alert(new XMLSerializer().serializeToString(docu));
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.createComment")}}
+{{Compat}}

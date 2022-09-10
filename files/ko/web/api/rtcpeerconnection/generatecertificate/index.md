@@ -9,7 +9,9 @@ translation_of: Web/API/RTCPeerConnection/generateCertificate
 
 ## Syntax
 
-    var cert = RTCPeerConnection.generateCertificate(keygenAlgorithm)
+```js
+var cert = RTCPeerConnection.generateCertificate(keygenAlgorithm)
+```
 
 ### 매개변수
 

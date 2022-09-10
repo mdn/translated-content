@@ -151,7 +151,7 @@ _pas de changement._
 
 _pas de changement._
 
-## See also
+## Voir aussi
 
 - [Site Compatibility for Firefox 41](/fr/docs/Mozilla/Firefox/Releases/41/Site_Compatibility)
 

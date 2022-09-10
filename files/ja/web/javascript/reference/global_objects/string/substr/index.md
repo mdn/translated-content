@@ -1,16 +1,6 @@
 ---
 title: String.prototype.substr()
 slug: Web/JavaScript/Reference/Global_Objects/String/substr
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
-browser-compat: javascript.builtins.String.substr
-translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 ---
 {{JSRef}} {{deprecated_header}}
 

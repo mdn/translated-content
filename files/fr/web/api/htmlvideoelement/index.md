@@ -76,13 +76,11 @@ _Hérite des méthodes de son parent {{domxref("HTMLMediaElement")}} et de son a
 
 ## Spécifications
 
-| Spécification                                                                                | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', "#htmlvideoelement", "HTMLVideoElement")}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLVideoElement")}}
+{{Compat}}
 
 ## Voir aussi
 

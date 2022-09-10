@@ -1,14 +1,6 @@
 ---
 title: column-rule
 slug: Web/CSS/column-rule
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.column-rule
-translation_of: Web/CSS/column-rule
 ---
 {{CSSRef}}
 

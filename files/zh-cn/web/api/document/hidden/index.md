@@ -12,7 +12,7 @@ slug: Web/API/Document/hidden
 var string = document.hidden
 ```
 
-## 例子
+## 示例
 
 ```js
 document.addEventListener("visibilitychange", function() {

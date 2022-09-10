@@ -94,7 +94,7 @@ var var2 = 4;
 
 | 运算符                                                                                                                                      | 描述                                                                                                                                                            | 返回 true 的示例                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| [等于 Equal](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality) (`==`)                                           | 如果两边操作数相等时返回 true。                                                                                                                                 | ` 3 == var1``"3" == var1``3 == '3' ` |
+| [等于 Equal](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality) (`==`)                                           | 如果两边操作数相等时返回 true。                                                                                                                                 | `3 == var1` `"3" == var1` `3 == '3'` |
 | [不等于 Not equal](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Inequality) (`!=`)                                   | 如果两边操作数不相等时返回 true                                                                                                                                 | `var1 != 4 var2 != "3"`              |
 | [全等 Strict equal](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity) (`===`)                                   | 两边操作数相等且类型相同时返回 true。 参见 {{jsxref("Object.is")}} and [sameness in JS](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness). | `3 === var1`                         |
 | [不全等 Strict not equal](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Nonidentity) (`!==`)                          | 两边操作数不相等或类型不同时返回 true。                                                                                                                         | `var1 !== "3" 3 !== '3'`             |
@@ -119,10 +119,10 @@ var var2 = 4;
 | Operator          | Description                                                                                                                                    | Example                                                                                                        |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
 | 求余 (`%`)        | 二元运算符。返回相除之后的余数。                                                                                                               | 12 % 5 返回 2。                                                                                                |
-| 自增 (`++`)       | 一元运算符。将操作数的值加一. 如果放在操作数前面 (`++x`), 则返回加一后的值; 如果放在操作数后面 (`x++`), 则返回操作数原值，然后再将操作数加一。 | ` var x=3;``console.log(++x); //4``console.log(x); //4``var y=3;``console.log(y++); //3``console.log(y); //4 ` |
+| 自增 (`++`)       | 一元运算符。将操作数的值加一. 如果放在操作数前面 (`++x`), 则返回加一后的值; 如果放在操作数后面 (`x++`), 则返回操作数原值，然后再将操作数加一。 | `var x=3;` `console.log(++x); //4` `console.log(x); //4` `var y=3;` `console.log(y++); //3` `console.log(y); //4` |
 | 自减 (`--`)       | 一元运算符。将操作数的值减一. 前后缀两种用法的返回值类似自增运算符。                                                                           | var x=3; console.log(--x); //输入 2,x=2var y=3;console.log(y--);//输出 3,x=2;                                  |
 | 一元负值符 (`-`)  | 一元运算符，返回操作数的负值。                                                                                                                 | var x=3; console.log(-x); //输入-3                                                                             |
-| 一元正值符 (+)    | 一元运算符，如果操作数在之前不是 number，试图将其转换为 number                                                                                 | ` console.log( +'3' ); // 3``console.log( '3' ); // '3' `console.log(+true); // 1                              |
+| 一元正值符 (+)    | 一元运算符，如果操作数在之前不是 number，试图将其转换为 number                                                                                 | `console.log( +'3' ); // 3` `console.log( '3' ); // '3'` `console.log(+true); // 1`                              |
 | 指数运算符 (\*\*) | 计算 `base(底数)` 的 `exponent(`指数`) 次方`, 表示为`base^exponent`                                                                            | `2 ** 3` returns `8`. `10 ** -1` returns `0.1`.                                                                |
 |                   |                                                                                                                                                |                                                                                                                |
 
@@ -325,9 +325,9 @@ delete myobj;   // returns true (can delete if declared implicitly)
 
 ##### 删除数组元素
 
-删除数组中的元素时，数组的长度是不变的，例如删除`a[3]`, `a[4]`，` a[4]``和 a[3] ` 仍然存在变成了`undefined`。
+删除数组中的元素时，数组的长度是不变的，例如删除 `a[3]`, `a[4]`，`a[4]` 和 `a[3]` 仍然存在变成了 `undefined`。
 
-`delete` 删除数组中的一个元素，这个元素就不在数组中了。例如，`trees[3]`被删除，`trees[3]` 仍然可寻址并返回`undefined`。
+`delete` 删除数组中的一个元素，这个元素就不在数组中了。例如，`trees[3]`被删除，`trees[3]` 仍然可寻址并返回 `undefined`。
 
 ```js
 var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
@@ -384,7 +384,7 @@ typeof true; // returns "boolean"
 typeof null; // returns "object"
 ```
 
-对于一个数值或字符串``， `typeof` 操作符将会返回如下结果：
+对于一个数值或字符串， `typeof` 操作符将会返回如下结果：
 
 ```js
 typeof 62;            // returns "number"

@@ -1,12 +1,6 @@
 ---
 title: Symbol.unscopables
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 ---
 {{JSRef}}
 

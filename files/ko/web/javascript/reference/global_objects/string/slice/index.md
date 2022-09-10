@@ -16,7 +16,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 
 ## 문법
 
-    str.slice(beginIndex[, endIndex])
+```js
+str.slice(beginIndex[, endIndex])
+```
 
 ### 매개변수
 

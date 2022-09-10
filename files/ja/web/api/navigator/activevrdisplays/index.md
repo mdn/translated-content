@@ -1,20 +1,6 @@
 ---
 title: Navigator.activeVRDisplays
 slug: Web/API/Navigator/activeVRDisplays
-page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Navigator
-  - Property
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
-  - activeVRDisplays
-browser-compat: api.Navigator.activeVRDisplays
-translation_of: Web/API/Navigator/activeVRDisplays
 ---
 {{securecontext_header}}{{DefaultAPISidebar("WebVR API")}}{{deprecated_header}}
 

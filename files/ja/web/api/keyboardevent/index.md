@@ -1,23 +1,6 @@
 ---
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
-page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Event
-  - Input
-  - Interface
-  - Key Events
-  - Keyboard Events
-  - KeyboardEvent
-  - MakeBrowserAgnostic
-  - Reference
-  - UI Events
-  - keyboard
-  - user input
-browser-compat: api.KeyboardEvent
-translation_of: Web/API/KeyboardEvent
 ---
 {{APIRef("UI Events")}}
 

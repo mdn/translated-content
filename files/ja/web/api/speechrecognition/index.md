@@ -1,16 +1,6 @@
 ---
 title: SpeechRecognition
 slug: Web/API/SpeechRecognition
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognition
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 

@@ -79,11 +79,9 @@ arr1.flatMap(x =&gt; x.split(" "));
 <pre class="brush: js">var arr1 = [1, 2, 3, 4];
 arr1.flatMap(x =&gt; [x * 2]);
 // é equivalente a
-arr1.reduce((acc, x) =&gt; acc.concat([x * 2]), []);
-
+arr1.reduce((acc, x) =&gt; acc.concat([x * 2]<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>), []);</span></span></span></span></span>
+// [ 2, 4, 6, 8 ]
 </pre>
-
-<div class="line">//=&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]</div>
 
 <h2 id="Especificações">Especificações</h2>
 

@@ -1,12 +1,6 @@
 ---
 title: Navigator.wakeLock
 slug: Web/API/Navigator/wakeLock
-tags:
-  - API
-  - リファレンス
-  - 画面起動ロック API
-browser-compat: api.Navigator.wakeLock
-translation_of: Web/API/Navigator/wakeLock
 ---
 {{ApiRef("Screen Wake Lock API")}}{{SeeCompatTable}}{{securecontext_header}}
 

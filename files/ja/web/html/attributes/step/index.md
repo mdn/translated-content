@@ -117,6 +117,10 @@ input:invalid {
 
 {{Specifications}}
 
+## ブラウザーの互換性
+
+{{Compat}}
+
 ## 関連情報
 
 - [`max`](/ja/docs/Web/HTML/Attributes/max)

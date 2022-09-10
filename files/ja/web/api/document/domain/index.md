@@ -1,13 +1,6 @@
 ---
 title: Document.domain
 slug: Web/API/Document/domain
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-translation_of: Web/API/Document/domain
 ---
 {{ApiRef}}
 
@@ -69,7 +62,7 @@ if (document.domain === badDomain) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.domain")}}
+{{Compat}}
 
 ## 関連情報
 

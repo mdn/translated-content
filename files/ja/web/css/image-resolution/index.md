@@ -1,15 +1,6 @@
 ---
 title: image-resolution
 slug: Web/CSS/image-resolution
-tags:
-  - CSS
-  - CSS 画像
-  - CSS プロパティ
-  - 実験的
-  - Reference
-  - image-resolution
-browser-compat: css.properties.image-resolution
-translation_of: Web/CSS/image-resolution
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

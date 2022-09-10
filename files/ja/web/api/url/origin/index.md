@@ -1,15 +1,6 @@
 ---
 title: URL.origin
 slug: Web/API/URL/origin
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - URL
-  - URL API
-  - origin
-translation_of: Web/API/URL/origin
 ---
 {{APIRef("URL API")}}
 

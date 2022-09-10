@@ -36,9 +36,9 @@ L'événement `animationiteration` est déclenché lorsqu'une itération d'une a
 
 ## Evénements liés
 
-- {{Event("animationstart")}}
-- {{Event("animationend")}}
-- {{Event("animationiteration")}}
+- [`animationstart`](/fr/docs/Web/API/Element/animationstart_event)
+- [`animationend`](/fr/docs/Web/API/Element/animationend_event)
+- [`animationiteration`](/fr/docs/Web/API/Element/animationiteration_event)
 
 ## Voir aussi
 

@@ -1,17 +1,6 @@
 ---
 title: 'Document: transitionrun イベント'
 slug: Web/API/Element/transitionrun_event
-tags:
-  - Document
-  - Event
-  - Reference
-  - TransitionEvent
-  - Web
-  - transitionrun
-  - イベント
-  - ウェブ
-  - トランジション
-translation_of: Web/API/Document/transitionrun_event
 original_slug: Web/API/Document/transitionrun_event
 ---
 {{APIRef}}{{SeeCompatTable}}
@@ -71,7 +60,7 @@ document.ontransitionrun = () => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.transitionrun_event")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -1,16 +1,6 @@
 ---
 title: 'Document: pointerlockerror イベント'
 slug: Web/API/Document/pointerlockerror_event
-tags:
-  - Document
-  - Event
-  - Reference
-  - Web
-  - pointerlockerror
-  - イベント
-  - ウェブ
-  - ポインター
-translation_of: Web/API/Document/pointerlockerror_event
 ---
 {{APIRef}}
 
@@ -67,7 +57,7 @@ document.onpointerlockerror = (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.pointerlockerror_event")}}
+{{Compat}}
 
 ## 関連情報
 

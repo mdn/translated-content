@@ -8,7 +8,6 @@ tags:
   - HTML フォーム
   - 入力型
   - リファレンス
-browser-compat: html.elements.input.input-email
 translation_of: Web/HTML/Element/input/email
 ---
 

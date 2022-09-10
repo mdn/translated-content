@@ -1,11 +1,6 @@
 ---
 title: Node.cloneNode()
 slug: Web/API/Node/cloneNode
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Node.cloneNode
-translation_of: Web/API/Node/cloneNode
 ---
 {{APIRef("DOM")}}
 

@@ -56,13 +56,11 @@ Cette trace fournit la liste complète des objets disponibles dans le contexte d
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', '#dom-workerglobalscope-self', 'self')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WorkerGlobalScope.self")}}
+{{Compat}}
 
 ## Voir aussi
 

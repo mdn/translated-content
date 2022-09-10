@@ -7,7 +7,7 @@ Une **accentuation** est une couleur généralement vive qui contraste avec les 
 
 Sur le Web, une accentuation est parfois utilisée dans les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) pour la partie active du contrôle, par exemple l'arrière-plan d'une [case cochée](/fr/docs/Web/HTML/Element/Input/checkbox) (« _checkbox_ » en anglais).
 
-## En apprendre plus
+## Voir aussi
 
 ### CSS lié à l'accentuation
 

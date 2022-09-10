@@ -1,20 +1,6 @@
 ---
 title: GeolocationCoordinates.longitude
 slug: Web/API/GeolocationCoordinates/longitude
-tags:
-  - API
-  - GPS
-  - Geolocation
-  - 位置情報 API
-  - GeolocationCoordinates
-  - Global Positioning System
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - 安全なコンテキスト
-  - longitude
-browser-compat: api.GeolocationCoordinates.longitude
-translation_of: Web/API/GeolocationCoordinates/longitude
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 

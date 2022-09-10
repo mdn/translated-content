@@ -1,10 +1,6 @@
 ---
 title: 一般的な問題解決に HTML を使う
 slug: Learn/HTML/Howto
-tags:
-  - CodingScripting
-  - HTML
-translation_of: Learn/HTML/Howto
 ---
 {{LearnSidebar}}
 
@@ -53,7 +49,7 @@ HTML は文書の構造だけを解決します。表現の問題は {{glossary(
 ### 埋め込みコンテンツ
 
 - [Web ページに他の Web ページを埋め込む方法](/ja/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Web ページに Flash コンテンツを追加する方法](/ja/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#The_<embed>_and_<object>_elements)
+- [Web ページに Flash コンテンツを追加する方法](/ja/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#The_embed_and_object_elements)
 
 ## あまりない、または上級の問題
 

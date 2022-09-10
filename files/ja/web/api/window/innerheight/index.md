@@ -1,19 +1,6 @@
 ---
 title: Window.innerHeight
 slug: Web/API/Window/innerHeight
-tags:
-  - API
-  - CSSOM
-  - CSSOM View
-  - HTML DOM
-  - NeedsInteractiveExample
-  - Property
-  - Reference
-  - View
-  - Window
-  - height
-  - innerHeight
-translation_of: Web/API/Window/innerHeight
 ---
 {{APIRef}}
 

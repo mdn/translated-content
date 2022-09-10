@@ -1,14 +1,6 @@
 ---
 title: CSS フレックスボックスレイアウト
 slug: Web/CSS/CSS_Flexible_Box_Layout
-tags:
-  - CSS
-  - CSS フレックスボックス
-  - ガイド
-  - 概要
-  - リファレンス
-  - フレックスボックス
-translation_of: Web/CSS/CSS_Flexible_Box_Layout
 ---
 {{CSSRef}}
 

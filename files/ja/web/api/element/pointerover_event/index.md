@@ -1,15 +1,6 @@
 ---
 title: GlobalEventHandlers.onpointerover
 slug: Web/API/Element/pointerover_event
-tags:
-  - API
-  - Event Handler
-  - GlobalEventHandlers
-  - HTML DOM
-  - PointerEvent
-  - Property
-  - Reference
-translation_of: Web/API/GlobalEventHandlers/onpointerover
 original_slug: Web/API/GlobalEventHandlers/onpointerover
 ---
 {{ApiRef("HTML DOM")}}
@@ -61,7 +52,7 @@ function init() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.GlobalEventHandlers.onpointerover")}}
+{{Compat}}
 
 ## 関連情報
 

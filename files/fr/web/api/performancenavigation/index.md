@@ -52,13 +52,11 @@ _L'interface `Performance` n'hérite d'aucune méthode._
 
 ## Spécifications
 
-| Spécifications                                                                                                   | Statut                                   | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#performancenavigation', 'PerformanceNavigation')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceNavigation")}}
+{{Compat}}
 
 ## Voir aussi
 

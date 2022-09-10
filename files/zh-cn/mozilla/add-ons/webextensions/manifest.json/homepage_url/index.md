@@ -28,9 +28,9 @@ original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/主页地址
 
 该扩展的主页地址。
 
-如果 [developer](/en-US/Add-ons/WebExtensions/manifest.json/developer) 键存在且包含“url”属性，它将会覆盖 `homepage_url` 键。
+如果 [developer](/zh-CN/Add-ons/WebExtensions/manifest.json/developer) 键存在且包含“url”属性，它将会覆盖 `homepage_url` 键。
 
-这是一个 [localizable property](/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
+这是一个 [localizable property](/zh-CN/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
 
 ## 示例
 

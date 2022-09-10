@@ -1,12 +1,6 @@
 ---
 title: 重ね合わせコンテキストの例 2
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2
-tags:
-  - 上級者
-  - CSS
-  - ガイド
-  - Understanding_CSS_z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2
 ---
 {{CSSRef}}
 

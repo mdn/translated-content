@@ -1,17 +1,6 @@
 ---
 title: StylePropertyMapReadOnly.forEach()
 slug: Web/API/StylePropertyMapReadOnly/forEach
-tags:
-  - API
-  - CSS Typed Object Model API
-  - 実験的
-  - Houdini
-  - メソッド
-  - リファレンス
-  - StylePropertyMapReadOnly
-  - forEach()
-browser-compat: api.StylePropertyMapReadOnly.forEach
-translation_of: Web/API/StylePropertyMapReadOnly/forEach
 ---
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 

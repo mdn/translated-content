@@ -15,7 +15,9 @@ HTML 문서의 경우, {{domxref("Element.innerHTML")}} 속성과 {{domxref("Ele
 
 ## 문법
 
-    let domparser = new DOMParser()​​
+```js
+let domparser = new DOMParser()​​
+```
 
 ## 메소드
 
@@ -23,7 +25,9 @@ HTML 문서의 경우, {{domxref("Element.innerHTML")}} 속성과 {{domxref("Ele
 
 #### 문법
 
-    let doc = domparser.parseFromString(string, mimeType)
+```js
+let doc = domparser.parseFromString(string, mimeType)
+```
 
 #### 반환
 
@@ -66,15 +70,15 @@ let doc = parser.parseFromString(stringContainingXMLSource, "application/xml")
 </parsererror>
 ```
 
-또한 해석 오류를 [오류 콘솔](/ko/docs/Error_Console "Error Console")에서도 볼 수 있으며, 여기에 후술할(역주: geckoRelease) 문서 URI도 포함된다
+또한 해석 오류를 [오류 콘솔](/ko/docs/Error_Console)에서도 볼 수 있으며, 여기에 후술할(역주: geckoRelease) 문서 URI도 포함된다
 
 ### SVG 및 HTML 해석
 
 The `DOMParser` 객체는 {{geckoRelease("10.0")}} 규격에 맞는 SVG 문서도 해석할 수 있으며,{{geckoRelease("12.0")}} 규격에 맞는 HTML 문서를 해석할 수 있다. MIME 형식에 따라 아래와 같이 다른 객체가 반환될 수 있다.
 
-1.  IME 형식이 `text/xml`이면, `XMLDocument` 객체가 반환된다.
-2.  MIME 형식이 `image/svg+xml`이면, `SVGDocument` 객체가 반환된다.
-3.  MIME 형식이 `text/html`이면, `HTMLDocument` 객체가 반환된다.
+1. IME 형식이 `text/xml`이면, `XMLDocument` 객체가 반환된다.
+2. MIME 형식이 `image/svg+xml`이면, `SVGDocument` 객체가 반환된다.
+3. MIME 형식이 `text/html`이면, `HTMLDocument` 객체가 반환된다.
 
 ```js
 let parser = new DOMParser()
@@ -106,36 +110,36 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html")
 /*global document, DOMParser*/
 
 (function(DOMParser) {
-	"use strict";
+    "use strict";
 
-	var proto = DOMParser.prototype,
+    var proto = DOMParser.prototype,
         nativeParse = proto.parseFromString;
 
-	// Firefox/Opera/IE 에서 지원하지 않는 형식에 오류 발생
-	try {
-		// WebKit returns null on unsupported types
-		if ((new DOMParser()).parseFromString("", "text/html")) {
-			// text/html parsing is natively supported
-			return;
-		}
-	} catch (ex) {}
+    // Firefox/Opera/IE 에서 지원하지 않는 형식에 오류 발생
+    try {
+        // WebKit returns null on unsupported types
+        if ((new DOMParser()).parseFromString("", "text/html")) {
+            // text/html parsing is natively supported
+            return;
+        }
+    } catch (ex) {}
 
-	proto.parseFromString = function(markup, type) {
-		if (/^\s*text\/html\s*(?:;|$)/i.test(type)) {
-			var
-			  doc = document.implementation.createHTMLDocument("")
-			;
-	      		if (markup.toLowerCase().indexOf('<!doctype') > -1) {
-        			doc.documentElement.innerHTML = markup;
-      			}
-      			else {
-        			doc.body.innerHTML = markup;
-      			}
-			return doc;
-		} else {
-			return nativeParse.apply(this, arguments);
-		}
-	};
+    proto.parseFromString = function(markup, type) {
+        if (/^\s*text\/html\s*(?:;|$)/i.test(type)) {
+            var
+              doc = document.implementation.createHTMLDocument("")
+            ;
+                  if (markup.toLowerCase().indexOf('<!doctype') > -1) {
+                    doc.documentElement.innerHTML = markup;
+                  }
+                  else {
+                    doc.body.innerHTML = markup;
+                  }
+            return doc;
+        } else {
+            return nativeParse.apply(this, arguments);
+        }
+    };
 }(DOMParser));
 ```
 
@@ -151,7 +155,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html")
 
 ## 같이 보기
 
-- [XML 문서 직렬화와 해석](/ko/docs/Parsing_and_serializing_XML "Parsing_and_serializing_XML")
+- [XML 문서 직렬화와 해석](/ko/docs/Parsing_and_serializing_XML)
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("XMLSerializer")}}
 - {{jsxref("JSON.parse()")}} - {{jsxref("JSON")}} 문서에 대해 같은 역할을 제공한다.

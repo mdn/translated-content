@@ -38,13 +38,15 @@ visibility: unset;
   - : 요소가 보임.
 - `hidden`
   - : 요소가 숨겨짐(그려지지 않음). 레이아웃에는 숨겨지지 않았을 때와 동일한 영향을 줍니다. `visibility`를 `visible`로 설정한 자손은 화면에 보입니다. 숨겨진 요소는 포커스([탭 인덱스](/ko/docs/Web/HTML/Global_attributes/tabindex)로 탐색 등)를 받을 수 없습니다.
-- ## `collapse`
 
-      :
-      -   {{HTMLElement("table")}}의 행, 열, 행 그룹과 열 그룹에 적용하면 {{cssxref("display")}}를 `none`으로 설정한 것과 동일하게 요소를 숨기고 차지하던 공간도 제거합니다. 그러나 다른 행(열)의 크기는 `collapse`를 적용한 행(열)이 보이는 것 처럼 취급해 계산합니다. 따라서 표의 너비나 높이의 재계산 없이 빠르게 행이나 열을 제거할 수 있습니다.
-      -   플렉스 아이템에 적용하면 요소를 숨기고 차지하던 공간도 제거합니다.
-      -   [XUL](/ko/docs/Mozilla/Tech/XUL) 요소에 적용하면 다른 스타일과 관계 없이 크기의 계산값으로 항상 0을 사용합니다. 그러나 {{cssxref("margin")}}은 바뀌지 않습니다.
-      -   다른 요소에서는 `hidden`과 동일합니다.
+- `collapse`
+
+  - : The `collapse` keyword has different effects for different elements:
+
+    - {{HTMLElement("table")}}의 행, 열, 행 그룹과 열 그룹에 적용하면 {{cssxref("display")}}를 `none`으로 설정한 것과 동일하게 요소를 숨기고 차지하던 공간도 제거합니다. 그러나 다른 행(열)의 크기는 `collapse`를 적용한 행(열)이 보이는 것 처럼 취급해 계산합니다. 따라서 표의 너비나 높이의 재계산 없이 빠르게 행이나 열을 제거할 수 있습니다.
+    - 플렉스 아이템에 적용하면 요소를 숨기고 차지하던 공간도 제거합니다.
+    - [XUL](/ko/docs/Mozilla/Tech/XUL) 요소에 적용하면 다른 스타일과 관계 없이 크기의 계산값으로 항상 0을 사용합니다. 그러나 {{cssxref("margin")}}은 바뀌지 않습니다.
+    - 다른 요소에서는 `hidden`과 동일합니다.
 
 ### 형식 구문
 

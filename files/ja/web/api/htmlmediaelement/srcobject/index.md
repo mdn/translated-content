@@ -1,18 +1,6 @@
 ---
 title: HTMLMediaElement.srcObject
 slug: Web/API/HTMLMediaElement/srcObject
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Property
-  - Reference
-  - srcObject
-browser-compat: api.HTMLMediaElement.srcObject
-translation_of: Web/API/HTMLMediaElement/srcObject
 ---
 {{APIRef("HTML DOM")}}
 

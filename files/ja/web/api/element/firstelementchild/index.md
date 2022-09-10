@@ -1,13 +1,6 @@
 ---
 title: Element.firstElementChild
 slug: Web/API/Element/firstElementChild
-tags:
-  - API
-  - DOM
-  - Element
-  - プロパティ
-browser-compat: api.Element.firstElementChild
-translation_of: Web/API/Element/firstElementChild
 ---
 {{ APIRef("DOM") }}
 

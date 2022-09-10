@@ -14,7 +14,9 @@ translation_of: Web/API/Document/open
 
 ## 문법
 
-    document.open();
+```js
+document.open();
+```
 
 ### 인자
 
@@ -46,7 +48,7 @@ Firefox 및 Internet Explorer 에서는 기존까지 모든 요소 뿐 만 아�
 
 Starting with Gecko 1.9, this method is subject to the same same-origin policy as other properties, and does not work if doing so would change the document's origin.
 
-Starting with Gecko 1.9.2, `document.open()` uses the [principal](/docs/Security_check_basics) of the document whose URI it uses, instead of fetching the principal off the stack. As a result, you can no longer call {{domxref("document.write()")}} into an untrusted document from chrome, even using [`wrappedJSObject`](/en/wrappedJSObject). See [Security check basics](/en/Security_check_basics "en/Security check basics") for more about principals.
+Starting with Gecko 1.9.2, `document.open()` uses the [principal](/ko/docs/Security_check_basics) of the document whose URI it uses, instead of fetching the principal off the stack. As a result, you can no longer call {{domxref("document.write()")}} into an untrusted document from chrome, even using [`wrappedJSObject`](/en/wrappedJSObject). See [Security check basics](/en/Security_check_basics) for more about principals.
 
 ## document.open()의 인자 3개
 

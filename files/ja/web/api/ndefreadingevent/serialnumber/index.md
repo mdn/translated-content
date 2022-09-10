@@ -1,14 +1,6 @@
 ---
 title: NDEFReadingEvent.serialNumber
 slug: Web/API/NDEFReadingEvent/serialNumber
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - serialNumber
-  - NDEFReadingEvent
-browser-compat: api.NDEFReadingEvent.serialNumber
-tranlation_of: Web/API/NDEFReadingEvent/serialNumber
 ---
 {{securecontext_header}}{{APIRef()}}
 

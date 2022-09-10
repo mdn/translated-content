@@ -15,14 +15,14 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 
 <p>Declaração de variável:</p>
 
-<pre class="brush: css notranslate">elemento {
+<pre class="brush: css">elemento {
   --cor-bg-principal: brown;
 }
 </pre>
 
 <p>Utilizando a variável:</p>
 
-<pre class="brush:css; highlight:[2]   notranslate">elemento {
+<pre class="brush:css; highlight:[2]  ">elemento {
   background-color: var(--cor-bg-principal);
 }
 </pre>
@@ -31,7 +31,7 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 
 <p>Vamos começar com este simples CSS que colore elementos de diferentes classes com a mesma cor:</p>
 
-<pre class="brush:css; highlight:[3,20,26,32] line-numbers   notranslate">.um {
+<pre class="brush:css; highlight:[3,20,26,32] line-numbers  ">.um {
   color: white;
   background-color: brown;
   margin: 10px;
@@ -67,7 +67,7 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 
 <p>Nos aplicaremos isto ao HTML:</p>
 
-<pre class="brush:html line-numbers   notranslate">&lt;div&gt;
+<pre class="brush:html line-numbers  ">&lt;div&gt;
   &lt;div class="one"&gt;1:&lt;/div&gt;
   &lt;div class="two"&gt;2: Text &lt;span class="five"&gt;5 - more text&lt;/span&gt;&lt;/div&gt;
   &lt;input class="three"&gt;
@@ -80,7 +80,7 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 
 <p>Note a repetição no CSS. O <em>bacgkround-color</em> (cor de fundo) foi definida como <code>brown</code> em diversos lugares. Para algumas declarações CSS, é possível declarar isso no topo e deixar a herança CSS resolver esse problema naturalmente. Para projetos não triviais, isto nem sempre é possível. Ao declarar uma variável na pseudo-classe :root, um desenvolvedor pode interromper algumas das repetições usando variavel.</p>
 
-<pre class="brush:css; highlight:[2, 7, 24,30,36] line-numbers   notranslate"><code class="">:root {
+<pre class="brush:css">:root {
   --main-bg-color: brown;
 }
 
@@ -116,7 +116,7 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 
 .cinco {
   background-color: var(--main-bg-color);
-}</code></pre>
+}</pre>
 
 <p>Isso leva ao mesmo resultado do exemplo anterior e permite uma declaração canônica da propriedade desejada.</p>
 
@@ -124,14 +124,14 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 
 <p>Propriedades personalizadas herdam. O que significa que, se algum valor for definido para uma propriedade customizada, o valor de seu pai será usado:</p>
 
-<pre class="brush: html line-numbers   notranslate"><code class="">&lt;div class="one"&gt;
+<pre class="brush: html line-numbers  "><code class="">&lt;div class="one"&gt;
   &lt;div class="two"&gt;
     &lt;div class="three"&gt;&lt;/div&gt;
     &lt;div class="four"&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-<pre class="brush: css line-numbers   notranslate"><code class="">.two {
+<pre class="brush: css line-numbers  "><code class="">.two {
   --test: 10px;
 }
 
@@ -190,7 +190,7 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 <p>Vamos começar com este simples CSS que colore elementos de diferentes classes com a mesma cor:</p>
 
 <div id="sample1">
-<pre class="brush:css; highlight:[3,20,26,32] notranslate">.one {
+<pre class="brush:css; highlight:[3,20,26,32]">.one {
   color: white;
   background-color: brown;
   margin: 10px;
@@ -228,7 +228,7 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 
 <p>Aplicaremos neste HTML:</p>
 
-<pre class="brush:html notranslate">&lt;div&gt;
+<pre class="brush:html">&lt;div&gt;
     &lt;div class="one"&gt;&lt;/div&gt;
     &lt;div class="two"&gt;Texto &lt;span class="five"&gt;- mais texto&lt;/span&gt;&lt;/div&gt;
     &lt;input class="three"&gt;
@@ -244,7 +244,7 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 <p>Perceba a repetição no CSS. A cor do background foi definida como marrom em diversos lugares. Para algumas declarações CSS é possível declarar isto em um elemento superior na cascata e deixar a propriedade ser herdada para resolver o problema. Porém em alguns projetos, isto nem sempre é possível. Ao declarar uma variável na pseudo-classe :root, o autor do CSS pode eliminar algumas repetições utilizando uma variável.</p>
 
 <div id="sample2">
-<pre class="brush:css; highlight:[2, 7, 24,30,36] notranslate">:root {
+<pre class="brush:css">:root {
   --main-bg-color: brown;
 }
 
@@ -285,7 +285,7 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 </pre>
 
 <div class="hidden">
-<pre class="brush:html notranslate">&lt;div&gt;
+<pre class="brush:html">&lt;div&gt;
     &lt;div class="one"&gt;&lt;/div&gt;
     &lt;div class="two"&gt;Text &lt;span class="five"&gt;- more text&lt;/span&gt;&lt;/div&gt;
     &lt;input class="three"&gt;
@@ -300,7 +300,7 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 
 <p>Propriedades customizadas herdam os valores. Isto significa que, se nenhum valor for declarado para uma propriedade customizada em um dado elemento, o valor do elemento pai é usado:</p>
 
-<pre class="brush: html notranslate">&lt;div class="one"&gt;
+<pre class="brush: html">&lt;div class="one"&gt;
   &lt;div class="two"&gt;
     &lt;div class="three"&gt;
     &lt;/div&gt;
@@ -312,7 +312,7 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 
 <p>com o seguinte CSS:</p>
 
-<pre class="brush: css notranslate">.two { --test: 10px; }
+<pre class="brush: css">.two { --test: 10px; }
 .three { --test: 2em; }
 </pre>
 

@@ -28,13 +28,11 @@ window.addEventListener("gamepadconnected", function(e) {
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                       | Commentaire          |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('Gamepad', '', 'The Gamepad API specification')}} | {{Spec2('Gamepad')}} | Première définition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Navigator.getGamepads")}}
+{{Compat}}
 
 ## Voir aussi
 

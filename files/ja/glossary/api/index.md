@@ -1,11 +1,6 @@
 ---
 title: API
 slug: Glossary/API
-tags:
-  - CodingScripting
-  - Glossary
-  - Infrastructure
-translation_of: Glossary/API
 ---
 API (Application Programming Interface) とは、あるソフトウェアプログラム(アプリケーション)が、他のソフトウェアやハードウェア等、外部とやりとりをするために備えている機能や規則の集まりです - 人間のユーザーインターフェイスと比較されます。API は、それを提供するアプリケーションと、第 3 者のソフトウェアやハードウェアといった他の項目との間の、単純な契約(インターフェイス)です。
 

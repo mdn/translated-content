@@ -1,16 +1,6 @@
 ---
 title: RegExp.prototype[@@matchAll]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-  - メソッド
-  - 正規表現
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
 ---
 {{JSRef}}
 

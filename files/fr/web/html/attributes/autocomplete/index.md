@@ -232,13 +232,11 @@ Une adresse au Japon est généralement **écrite sur une ligne**, dans un ordre
 
 ## Spécifications
 
-| Spécification                                                                                |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#attr-fe-autocomplete", "autocomplete")}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.autocomplete")}}
+{{Compat}}
 
 ## Voir aussi
 

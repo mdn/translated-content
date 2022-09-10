@@ -31,7 +31,7 @@ dateObj.setUTCMinutes(minutesValue[, secondsValue[, msValue]])
 
 如果你没有传入后两个参数（**`minutesValue`**和**`msValue`**），这两个参数会分别使用{{jsxref("Date.prototype.getUTCSeconds()", "getUTCSeconds()")}}和{{jsxref("Date.prototype.getUTCMilliseconds()", "getUTCMilliseconds()")}}这两个方法返回的值。
 
-如果你传入的参数值在上文所述范围之外的话，**`setUTCMinutes()`**方法会尝试修改日期对象中的其他信息，比如说你为**`secondsValue`**这个参数传入了 100（译者注：规定范围是 \[0, 59]），那么第一个参数（**`minutesValue`**）就会被加 1，而秒数则变成了 40。
+如果你传入的参数值在上文所述范围之外的话，**`setUTCMinutes()`**方法会尝试修改日期对象中的其他信息，比如说你为 **`secondsValue`** 这个参数传入了 100（译者注：规定范围是 \[0, 59]），那么第一个参数（**`minutesValue`**）就会被加 1，而秒数则变成了 40。
 
 ## 例子
 

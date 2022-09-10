@@ -1,17 +1,6 @@
 ---
 title: DocumentOrShadowRoot.pointerLockElement
 slug: Web/API/Document/pointerLockElement
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Reference
-  - ShadowRoot
-  - mouse lock
-  - プロパティ
-  - マウスロック
-translation_of: Web/API/DocumentOrShadowRoot/pointerLockElement
 original_slug: Web/API/DocumentOrShadowRoot/pointerLockElement
 ---
 {{APIRef("DOM")}}
@@ -36,7 +25,7 @@ var element = document.pointerLockElement;
 
 ## ブラウザーの互換性
 
-{{Compat("api.DocumentOrShadowRoot.pointerLockElement")}}
+{{Compat}}
 
 ## 関連情報
 

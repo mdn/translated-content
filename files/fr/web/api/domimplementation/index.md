@@ -31,16 +31,11 @@ _Pas de méthode héritée._
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire                                                                                                                                                                                               |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#domimplementation', 'DOMImplementation')}}             | {{Spec2('DOM WHATWG')}} | Supprime la méthode `getFeature()`. Ajoute la méthode `createHTMLDocument()`. Modifie le type de retour de `createDocument()` de {{domxref("Document")}} à {{domxref("XMLDocument")}}. |
-| {{SpecName('DOM3 Core', 'core.html#ID-102161490', 'DOMImplementation')}}         | {{Spec2('DOM3 Core')}}     | Ajoute la méthode `getFeature()` (jamais implémentée par un agent utilisateur).                                                                                                                           |
-| {{SpecName('DOM2 Core', 'core.html#ID-102161490', 'DOMImplementation')}}         | {{Spec2('DOM2 Core')}}     | Ajoute les méthodes `createDocument()` et `createDocumentType()`.                                                                                                                                         |
-| {{SpecName('DOM1', 'level-one-core.html#ID-102161490', 'DOMImplementation')}} | {{Spec2('DOM1')}}         | Définition initial.                                                                                                                                                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMImplementation")}}
+{{Compat}}
 
 ## Voir aussi
 

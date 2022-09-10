@@ -83,13 +83,11 @@ _L'interface `PerformanceTiming` n'hérite d'aucune méthode._
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                                   | Commentaire          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#performancetiming', 'PerformanceTiming')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceTiming")}}
+{{Compat}}
 
 ## Voir aussi
 

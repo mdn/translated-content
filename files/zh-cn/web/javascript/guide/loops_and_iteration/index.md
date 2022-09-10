@@ -413,15 +413,14 @@ let arr = [3, 5, 7];
 arr.foo = "hello";
 
 for (let i in arr) {
-   console.log(i); // 输出 "0", "1", "2", "foo"
+  console.log(i); // 输出 "0", "1", "2", "foo"
 }
 
 for (let i of arr) {
-   console.log(i); // 输出 "3", "5", "7"
+  console.log(i); // 输出 "3", "5", "7"
 }
 
 // 注意 for...of 的输出没有出现 "hello"
-// 译者：官方文档不知为何在此使用三个空格来缩进…
 ```
 
 {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}

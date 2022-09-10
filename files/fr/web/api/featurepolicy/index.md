@@ -33,15 +33,13 @@ L'interface `FeaturePolicy` de l'[API Feature Policy](/fr/docs/Web/HTTP/Feature_
 - {{DOMxRef("FeaturePolicy.getAllowlistForFeature")}}
   - : Retourne la liste de permissions pour la fonctionnalité spécifiée.
 
-## Spécification
+## Spécifications
 
-| Spécification                            | Statut                               | Commentaire          |
-| ---------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("Feature Policy")}} | {{Spec2("Feature Policy")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FeaturePolicy")}}
+{{Compat}}
 
 ## Voir aussi
 

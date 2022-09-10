@@ -93,13 +93,11 @@ inputForm.onsubmit = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                               | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Speech API', '#utterance-attributes', 'SpeechSynthesisUtterance')}} | {{Spec2('Web Speech API')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.SpeechSynthesisUtterance")}}
+{{Compat}}
 
 ## Voir aussi
 

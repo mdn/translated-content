@@ -1,12 +1,6 @@
 ---
 title: FileReaderSync.readAsBinaryString()
 slug: Web/API/FileReaderSync/readAsBinaryString
-page-type: web-api-instance-method
-tags:
-  - Reference
-  - Deprecated
-browser-compat: api.FileReaderSync.readAsBinaryString
-translation_of: Web/API/FileReaderSync/readAsBinaryString
 ---
 {{APIRef("File API")}}{{deprecated_header}}
 

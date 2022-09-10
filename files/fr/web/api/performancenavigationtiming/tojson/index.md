@@ -44,10 +44,8 @@ console.log("PerformanceNavigationTiming.toJSON() = " + s);
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                                               | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing Level 2', '#dom-performancenavigationtiming-tojson', 'toJSON()')}} | {{Spec2('Navigation Timing Level 2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceNavigationTiming.toJSON")}}
+{{Compat}}

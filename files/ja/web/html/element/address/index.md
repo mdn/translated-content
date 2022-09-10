@@ -102,7 +102,7 @@ translation_of: Web/HTML/Element/address
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes "HTML/Global attributes")のみがあります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
 ## 使用上の注意
 
@@ -149,4 +149,4 @@ translation_of: Web/HTML/Element/address
 ## 関連情報
 
 - 他のセクション関連要素: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("header")}}
-- [HTML5 文書のセクションとアウトライン](/ja/docs/Sections_and_outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document")
+- [HTML5 文書のセクションとアウトライン](/ja/docs/Sections_and_outlines_of_an_HTML5_document)

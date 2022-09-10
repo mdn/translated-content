@@ -17,7 +17,7 @@ original_slug: Web/CSS/attr()
 
 <p>A função <strong><code>attr()</code></strong> do <a href="/en-US/docs/Web/CSS">CSS</a>  é utilizada para se obter o valor de um determinado atributo do elemento selecionado e usá-lo na folha de estilo. Também pode ser utilizado em <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elementos</a>, nesse caso o valor do atributo no pseudo-elemento do elemento original é retornado.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Uso Simples */
+<pre class="brush: css">/* Uso Simples */
 attr(data-count);
 attr(title);
 
@@ -67,7 +67,7 @@ attr(data-something, 'default');
     <td>{{cssxref("&lt;color&gt;")}}</td>
     <td>O valor do atributo é analisado como hash (3- ou 6-valores hash) ou a palavra-chave. Precisa ser um valor {{cssxref("&lt;string&gt;")}} CSS válido.<br>
      Os espaços do lead e trail são retirados.</td>
-    <td><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">corAtual</span></font></td>
+    <td>corAtual</td>
    </tr>
    <tr>
     <td><code>url</code> {{experimental_inline}}</td>
@@ -171,12 +171,12 @@ attr(data-something, 'default');
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;p data-foo="hello"&gt;world&lt;/p&gt;
+<pre class="brush: html">&lt;p data-foo="hello"&gt;world&lt;/p&gt;
 </pre>
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css notranslate">p::before {
+<pre class="brush: css">p::before {
   content: attr(data-foo) " ";
 }
 </pre>

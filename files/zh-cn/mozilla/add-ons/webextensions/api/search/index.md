@@ -6,7 +6,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/search
 
 Retrieves search engines and executes a search with a specific search engine.
 
-To use this API you need to have the `"search"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+To use this API you need to have the `"search"` [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
 ## Functions
 

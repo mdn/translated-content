@@ -1,15 +1,6 @@
 ---
 title: GeolocationPosition.coords
 slug: Web/API/GeolocationPosition/coords
-tags:
-  - API
-  - 位置情報 API
-  - GeolocationPosition
-  - プロパティ
-  - 安全なコンテキスト
-  - coords
-browser-compat: api.GeolocationPosition.coords
-translation_of: Web/API/GeolocationPosition/coords
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 

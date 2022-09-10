@@ -11,7 +11,7 @@ En {{Glossary ("ECMAScript")}} 5 et plus tard, les scripts optent pour un nouvea
 
 Le mode normal, non-strict de JavaScript est parfois appelé **sloppy mode** (_mode bâclé_). Ce n'est pas une désignation officielle, mais vous risquez de la rencontrer si vous passez du temps à faire du code JavaScript.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

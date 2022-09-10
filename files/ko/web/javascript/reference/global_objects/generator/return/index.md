@@ -118,6 +118,7 @@ g2.next(); // { value: 'early return', done: true }
 // 제너레이터가 완료된 상태입니다.
 g2.return('not so early return'); // { value: 'not so early return', done: true }
 ```
+
 ## 명세서
 
 {{Specifications}}

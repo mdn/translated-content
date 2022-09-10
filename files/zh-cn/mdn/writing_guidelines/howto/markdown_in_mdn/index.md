@@ -1,11 +1,10 @@
 ---
-title: MDN 的 Markdown
+title: 如何使用 markdown 来撰写文档
 slug: MDN/Writing_guidelines/Howto/Markdown_in_MDN
-original_slug: MDN/Contribute/Markdown_in_MDN
 ---
 {{MDNSidebar}}
 
-本文介绍了如何使用 Markdown 来编写 MDN 上的文档。我们以 GitHub 风格的 Markdown（GFM）为基础，并添加了一些扩展来支持一些我们在 MDN 上需要而 GFM 仍不支持的东西。
+本文介绍了如何使用 Markdown 来编写 MDN Web 文档项目中的文档。我们以 GitHub 风格的 Markdown（GFM）为基础，并添加了一些扩展来支持一些我们在 MDN 上需要而 GFM 仍不支持的东西。
 
 ## 基础：Github 风格的 Markdown
 
@@ -50,20 +49,51 @@ GFM 规范定义了两种基础的链接类型：
 
 在 MDN，你可以使用围栏代码块展现示例代码块。且必须使用信息字符串的第一个单词指定示例代码的语言，这将用于提供代码块的语法高亮。MDN 支持以下的语言词：
 
-- `bash`
-- `batch`
-- `cpp`（对于 C/C++）
-- `css`
-- `html`
-- `java`
-- `js`（对于 JavaScript）
-- `json`
-- `php`
-- `python`
-- `sql`
-- `svg`
-- `xml`
-- `wasm`（对于 WebAssembly 文本格式）
+- 编程语言
+  - JavaScript
+    - `js`——JavaScript
+    - `ts`——TypeScript
+    - `jsx`——React JSX
+    - `tsx`——React TSX
+  - C-like
+    - `c`——C 语言
+    - `cpp`——C++
+    - `cs`——C#
+    - `java`——Java
+    - `clike`——类 C 语言（对于任何未定义的类 C 语言）
+  - Other
+    - `python`——Python
+    - `php`——PHP
+    - `rust`——Rust
+    - `glsl`——GLSL（OpenGL 着色器）
+    - `wasm` - WebAssembly
+- 样式
+  - `css`——CSS
+  - `scss`——Sass（SCSS）
+  - `less`——Less
+- 标记语言
+  - `html`——HTML
+  - `svg`——SVG
+  - `xml`——XML
+  - `mathml`——MathML
+  - `md`——Markdown
+- 命令提示符
+  - `sh`——Bash/Shell
+  - `batch`——Batch（Windows Shell）
+  - `ps`——PowerShell
+- 配置或数据文件
+  - `json`——JSON
+  - `ini`——INI
+  - `yaml`——YAML
+  - `toml`——TOML
+  - `sql`——SQL 数据库
+  - `diff`——Diff 文件
+  - `ignore`——Gitignore 文件
+- 其它
+  - `http`——HTTP 标头
+  - `pug`——[Pug 模板](https://pugjs.org/zh-cn/api/getting-started.html)（被 [Express](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer) 所使用)
+  - `regex`——正则表达式
+  - `uri`——URI 和 URL
 
 例如：
 
@@ -72,6 +102,8 @@ GFM 规范定义了两种基础的链接类型：
 const greeting = "I will get syntax highlighting";
 ```
 ````
+
+如果你希望高亮显示的语言未在上方列出，请使用 `plain` 标记代码块。也可以按照[这里提出的流程](https://github.com/orgs/mdn/discussions/170#discussioncomment-3404366)请求其它语言的高亮支持。
 
 你可以使用以下提供的任意一个附加词，但它必须跟在语言词之后：
 

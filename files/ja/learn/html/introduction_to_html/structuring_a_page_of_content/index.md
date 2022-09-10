@@ -1,17 +1,6 @@
 ---
 title: コンテンツページを構造化する
 slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
-tags:
-  - Beginner
-  - CodingScripting
-  - HTML
-  - セマンティクス
-  - デザイン
-  - レイアウト
-  - 学習
-  - 構造
-  - 評価
-translation_of: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
 

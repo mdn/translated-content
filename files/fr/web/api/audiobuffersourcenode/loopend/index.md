@@ -80,13 +80,11 @@ loopendControl.oninput = function() {
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                               | Commentaires |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------ |
-| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-loopEnd', 'loopEnd')}} | {{Spec2('Web Audio API')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.AudioBufferSourceNode.loopEnd")}}
+{{Compat}}
 
 ## Voir aussi
 

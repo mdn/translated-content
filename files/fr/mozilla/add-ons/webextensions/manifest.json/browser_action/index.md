@@ -365,7 +365,7 @@ Pour une extension simple, mais complète, qui utilise une action de navigateur,
 
 {{Compat("webextensions.manifest.browser_action", 10)}}
 
-## See also
+## Voir aussi
 
 - [`page_action`](/fr/Add-ons/WebExtensions/manifest.json/page_action)
 - [`sidebar_action`](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action)

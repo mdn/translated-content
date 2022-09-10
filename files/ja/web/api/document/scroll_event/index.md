@@ -1,15 +1,6 @@
 ---
 title: 'Document: scroll event'
 slug: Web/API/Document/scroll_event
-tags:
-  - API
-  - DOM
-  - Document
-  - Event
-  - Reference
-  - Scroll
-  - UIEvent
-translation_of: Web/API/Document/scroll_event
 ---
 {{APIRef}}
 
@@ -83,7 +74,7 @@ window.addEventListener('scroll', function(e) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.scroll_event")}}
+{{Compat}}
 
 ## 関連情報
 

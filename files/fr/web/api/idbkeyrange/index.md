@@ -107,14 +107,11 @@ function displayData() {
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires           |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ---------------------- |
-| {{SpecName('IndexedDB', '#idl-def-IDBKeyRange', 'IDBKeyRange')}} | {{Spec2('IndexedDB')}} | Définition initiale.   |
-| {{SpecName('IndexedDB 2', '#keyrange', 'IDBKeyRange')}}             | {{Spec2('IndexedDB')}} | Ajout de `includes()`. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBKeyRange")}}
+{{Compat}}
 
 ## Voir aussi
 

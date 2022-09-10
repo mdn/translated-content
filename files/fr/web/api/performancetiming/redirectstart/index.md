@@ -28,13 +28,11 @@ let time = performanceTiming.redirectStart;
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | Statut                                   | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-redirectstart', 'PerformanceTiming.redirectStart')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceTiming.redirectStart")}}
+{{Compat}}
 
 ## Voir aussi
 

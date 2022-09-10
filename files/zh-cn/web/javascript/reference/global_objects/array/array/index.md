@@ -9,14 +9,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/Array
 ## 语法
 
 ```js
-// literal constructor
-[element0, element1, ..., elementN]
-
-// construct from elements
-new Array(element0, element1, ..., elementN)
-
-// construct from array length
+new Array(element0, element1, /* … ,*/ elementN)
 new Array(arrayLength)
+
+Array(element0, element1, /* … ,*/ elementN)
+Array(arrayLength)
 ```
 
 ### 参数
@@ -69,6 +66,6 @@ console.log(fruits[0]);     // "Apple"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Array")}} class

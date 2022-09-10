@@ -37,13 +37,11 @@ ctx.canvas // HTMLCanvasElement
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-canvas", "CanvasRenderingContext2D.canvas")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.canvas")}}
+{{Compat}}
 
 ## Voir aussi
 

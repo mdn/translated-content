@@ -78,7 +78,7 @@ Content-Type: image/jpeg
 
 ## 参见
 
-- [Help Your Users \`Save-Data\` - CSS Tricks](https://css-tricks.com/help-users-save-data/)
+- [Help Your Users `Save-Data` - CSS Tricks](https://css-tricks.com/help-users-save-data/)
 - [Delivering Fast and Light Applications with Save-Data - Google Developers](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/save-data/)
 - [Network Information API - WICG](https://wicg.github.io/netinfo/#save-data-request-header-field)
 - Header to indicate that the content served varies by `Save-Data`: {{HTTPHeader("Vary")}}

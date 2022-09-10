@@ -13,7 +13,7 @@ Les cookies servent à personnaliser l'expérience web d'un utilisateur vis-à-v
 
 Les cookies peuvent être définis et modifiés au niveau serveur par l'[en-tête HTTP](/fr/docs/HTTP/Cookies) `Set-Cookie` ou en JavaScript avec [`document.cookie`](/fr/docs/Web/API/Document/cookie).
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

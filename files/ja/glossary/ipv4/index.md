@@ -1,13 +1,6 @@
 ---
 title: IPv4
 slug: Glossary/IPv4
-tags:
-  - Glossary
-  - IPv4
-  - Infrastructure
-  - Internet Protocol
-  - Protocol
-translation_of: Glossary/IPv4
 ---
 IPv4 は、{{glossary("Internet","インターネット")}}の基礎となる通信{{Glossary("protocol","プロトコル")}}の第 4 のバージョンで、広範囲に展開された最初のバージョンです。
 

@@ -129,7 +129,7 @@ This renders like so:
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attributes.pattern")}}
+{{Compat}}
 
 ## 関連情報
 

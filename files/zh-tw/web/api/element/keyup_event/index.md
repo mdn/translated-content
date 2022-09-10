@@ -10,7 +10,7 @@ original_slug: Web/API/Document/keyup_event
 - 詳述
   - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-keyup)
 - 介面
-  - : [KeyboardEvent](/en-US/docs/DOM/KeyboardEvent)
+  - : [KeyboardEvent](/zh-TW/docs/DOM/KeyboardEvent)
 - Bubbles
   - : Yes
 - Cancelable

@@ -1,19 +1,10 @@
 ---
 title: Element.insertAdjacentElement()
 slug: Web/API/Element/insertAdjacentElement
-tags:
-  - API
-  - DOM
-  - Element
-  - Gecko
-  - メソッド
-  - リファレンス
-  - insertAdjacentElement
-browser-compat: api.Element.insertAdjacentElement
 ---
 {{APIRef("DOM")}}
 
-**`insertAdjacentElement()`** は {{domxref("Element")}} インターフェイスのメソッドで、、呼び出された要素から相対的に指定された位置に、指定された要素ノードを挿入します。
+**`insertAdjacentElement()`** は {{domxref("Element")}} インターフェイスのメソッドで、呼び出された要素から相対的に指定された位置に、指定された要素ノードを挿入します。
 
 ## 構文
 

@@ -19,7 +19,7 @@ browser.tabs.onActivated.hasListener(listener)
 - `removeListener(listener)`
   - : 停止监听此事件。 `listener` 参数是将要移除的监听。
 - `hasListener(listener)`
-  - : 检查 `listener` 是否在此事件中注册。如果正在监听返回 `true` ，否则 `false。`
+  - : 检查 `listener` 是否在此事件中注册。如果正在监听返回 `true` ，否则 `false`。
 
 ## addListener 语法
 
@@ -64,7 +64,8 @@ browser.tabs.onActivated.addListener(handleActivated);
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -91,4 +92,4 @@ browser.tabs.onActivated.addListener(handleActivated);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,19 +1,6 @@
 ---
 title: フレックスコンテナー内のアイテムの配置
 slug: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
-tags:
-  - 配置
-  - CSS
-  - Flex
-  - ガイド
-  - align-content
-  - align-items
-  - align-self
-  - alignment
-  - フレックスボックス
-  - justify
-  - justify-content
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 ---
 {{CSSRef}}
 

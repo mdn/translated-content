@@ -1,13 +1,6 @@
 ---
 title: Document()
 slug: Web/API/Document/Document
-tags:
-  - API
-  - DOM
-  - Document
-  - Reference
-  - コンストラクター
-translation_of: Web/API/Document/Document
 ---
 {{APIRef}}
 
@@ -27,4 +20,4 @@ new Document();
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.Document")}}
+{{Compat}}

@@ -1,17 +1,6 @@
 ---
 title: 交差オブザーバー API
 slug: Web/API/Intersection_Observer_API
-tags:
-  - API
-  - Clipping
-  - 交差
-  - 交差オブザーバー API
-  - IntersectionObserver
-  - 概要
-  - パフォーマンス
-  - リファレンス
-  - ウェブ
-translation_of: Web/API/Intersection_Observer_API
 ---
 {{DefaultAPISidebar("Intersection Observer API")}}
 

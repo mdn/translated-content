@@ -1,17 +1,6 @@
 ---
 title: Document.getElementById()
 slug: Web/API/Document/getElementById
-tags:
-  - API
-  - DOM
-  - Document
-  - Elements
-  - Method
-  - Reference
-  - Web
-  - getElementById
-  - id
-translation_of: Web/API/Document/getElementById
 ---
 {{ ApiRef("DOM") }}
 
@@ -119,7 +108,7 @@ var el = document.getElementById('testqq'); // el は null になります
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.getElementById")}}
+{{Compat}}
 
 ## 関連情報
 

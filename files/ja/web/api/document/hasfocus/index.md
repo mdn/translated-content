@@ -1,15 +1,6 @@
 ---
 title: document.hasFocus()
 slug: Web/API/Document/hasFocus
-tags:
-  - API
-  - DOM
-  - Focus
-  - Method
-  - Reference
-  - フォーカス
-  - メソッド
-translation_of: Web/API/Document/hasFocus
 ---
 {{APIRef}}
 
@@ -75,7 +66,7 @@ setInterval(checkPageFocus, 300);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.hasFocus")}}
+{{Compat}}
 
 ## 関連情報
 

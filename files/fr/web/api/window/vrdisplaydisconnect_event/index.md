@@ -62,15 +62,13 @@ window.onvrdisplaydisconnect = function() {
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                       | Commentair          |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('WebVR 1.1', '#dom-window-onvrdisplaydisconnect', 'vrdisplaydisconnect')}} | {{Spec2('WebVR 1.1')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.vrdisplaydisconnect_event")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [WebVR API homepage](/fr/docs/Web/API/WebVR_API)
 - [MozVr.com](http://mozvr.com/) — démos, téléchargements et autres ressources de l'équipe Mozilla VR.

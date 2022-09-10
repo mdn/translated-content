@@ -39,7 +39,7 @@ gl.activeTexture(gl.TEXTURE1);
 gl.getParameter(gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS);
 ```
 
-想要获取激活的纹理，可以查询常量 ` ACTIVE_TEXTURE``。 `
+想要获取激活的纹理，可以查询常量 `ACTIVE_TEXTURE`。
 
 ```js
 gl.activeTexture(gl.TEXTURE0);

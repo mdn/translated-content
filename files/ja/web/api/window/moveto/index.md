@@ -1,14 +1,6 @@
 ---
 title: Window.moveTo()
 slug: Web/API/Window/moveTo
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - Reference
-  - Window
-browser-compat: api.Window.moveTo
-translation_of: Web/API/Window/moveTo
 ---
 {{APIRef}}
 

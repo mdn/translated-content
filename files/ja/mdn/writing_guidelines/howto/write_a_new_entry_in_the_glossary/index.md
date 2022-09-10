@@ -1,18 +1,6 @@
 ---
 title: 用語集の項目を書いたり参照したりするには
 slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
-tags:
-  - 協力
-  - 定義
-  - 項目
-  - Glossary
-  - ガイド
-  - Howto
-  - MDN メタ
-  - 用語
-  - Word
-  - define
-translation_of: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 original_slug: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 ---
 {{MDNSidebar}}

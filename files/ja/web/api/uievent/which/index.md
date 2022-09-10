@@ -1,15 +1,6 @@
 ---
 title: UIEvent.which
 slug: Web/API/UIEvent/which
-tags:
-  - API
-  - DOM
-  - UIEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.UIEvent.which
-translation_of: Web/API/UIEvent/which
 original_slug: Web/API/MouseEvent/which
 ---
 {{ APIRef("DOM Events") }} {{Non-standard_header}}

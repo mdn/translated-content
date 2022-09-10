@@ -58,7 +58,7 @@ HTML prend en charge différents fichiers multimédias pour les images, les fich
 
 En plus du contenu multimédia, un document HTML peut embarquer d'autres contenus (bien que les interactions soient plutôt limitées).
 
-{{HTMLRefTable("multimedia")}}
+{{HTMLRefTable({"include":["HTML embedded content"], "exclude":["multimedia"]})}}
 
 ## SVG et MathML
 

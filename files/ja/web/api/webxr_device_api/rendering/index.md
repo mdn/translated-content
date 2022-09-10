@@ -1,28 +1,6 @@
 ---
 title: レンダリングと WebXR フレームアニメーションコールバック
 slug: Web/API/WebXR_Device_API/Rendering
-tags:
-  - API
-  - AR
-  - Animation
-  - Drawing
-  - Frames
-  - Games
-  - Guide
-  - Intermediate
-  - Reality
-  - Scene
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - augmented
-  - display
-  - rendering
-  - requestAnimationFrame
-translation_of: Web/API/WebXR_Device_API/Rendering
 ---
 {{DefaultAPISidebar("WebXR Device API")}}
 

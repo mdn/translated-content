@@ -1,16 +1,6 @@
 ---
 title: ServiceWorkerContainer.onerror
 slug: Web/API/ServiceWorkerContainer/error_event
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - ServiceWorkerContainer
-  - onerror
-translation_of: Web/API/ServiceWorkerContainer/onerror
 original_slug: Web/API/ServiceWorkerContainer/onerror
 ---
 {{APIRef("Service Workers API")}}{{ SeeCompatTable() }}

@@ -516,11 +516,11 @@ padding- left: 10px;
 
 “0auto”不被识别为边距属性的有效值 (“0”和“AUTO”是两个独立的值)，而浏览器会将“padding- ”识别为有效属性。因此，您应该始终确保通过至少一个空格将不同的值分隔开来，但将属性名称和属性值作为单个未中断的字符串放在一起。
 
-试着在 CSS 中使用空格，看看什么情况下破坏了东西，什么时候没有破坏**。**
+试着在 CSS 中使用空格，看看什么情况下破坏了东西，什么时候没有破坏。
 
 ## 接下来是什么？
 
-了解一下浏览器如何将 HTML 和 CSS 转换成网页是很有用的，所以在下一篇文章 — [CSS 是如何工作的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works) — 我们将看看这个过程。
+了解一下浏览器如何将 HTML 和 CSS 转换成网页是很有用的，所以在下一篇文章——[CSS 是如何工作的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)——我们将看看这个过程。
 
 {{PreviousMenuNext("Learn/CSS/First_steps/开始", "Learn/CSS/First_steps/CSS 如何运行", "Learn/CSS/First_steps")}}
 

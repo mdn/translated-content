@@ -51,13 +51,11 @@ cancelAnimationFrame(myReq);
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{spec("https://www.w3.org/TR/html51/webappapis.html#animation-frames", "Timing control for script-based animations: cancelAnimationFrame", "WD")}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.cancelAnimationFrame")}}
+{{Compat}}
 
 ## Voir aussi
 

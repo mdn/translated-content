@@ -1,12 +1,6 @@
 ---
 title: WeakMap() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
 ---
 {{JSRef}}
 

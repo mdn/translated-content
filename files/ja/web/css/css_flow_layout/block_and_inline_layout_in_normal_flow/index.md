@@ -1,20 +1,6 @@
 ---
 title: 通常フローでのブロック及びインラインレイアウト
 slug: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
-tags:
-  - CSS
-  - CSS Flow Layout
-  - CSS フローレイアウト
-  - Guide
-  - Intermediate
-  - Layout
-  - Margins
-  - flow
-  - ガイド
-  - マージン
-  - レイアウト
-  - 中級者
-translation_of: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
 ---
 {{CSSRef}}
 

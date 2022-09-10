@@ -21,13 +21,11 @@ L'élément HTML **`<nobr>`** évite qu'un texte soit coupé par un retour à la
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires                                                         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "obsolete.html#nobr", "&lt;nobr&gt;")}} | {{Spec2("HTML WHATWG")}} | Rendu obsolète et remplacé par {{CSSxRef("white-space")}}. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.nobr")}}
+{{Compat}}
 
 ## Voir aussi
 

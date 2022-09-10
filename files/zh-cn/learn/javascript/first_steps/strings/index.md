@@ -30,7 +30,7 @@ slug: Learn/JavaScript/First_steps/Strings
 ## 字符串 — 基本知识
 
 字符串与数字的处理方式第一眼看上去十分相似，但是当您深入挖掘时，您将会看到一些显著的差异。让我们首先在一个控制台输入一些基本的行来熟悉一下。
-我们在下面提供了一个 (您也可以在一个单独的选项卡或窗口中[打开这个控制台](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html)，或者如果您愿意使用[浏览器开发人员控制台](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools))。
+我们在下面提供了一个 (您也可以在一个单独的选项卡或窗口中[打开这个控制台](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html)，或者如果您愿意使用[浏览器开发人员控制台](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools))。
 
 ```html hidden
 <!DOCTYPE html>

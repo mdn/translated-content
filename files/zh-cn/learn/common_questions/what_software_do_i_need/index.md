@@ -144,7 +144,7 @@ _现在还没有自主学习活动。请[考虑投稿](/zh-CN/docs/MDN/Getting_s
 
 ### 上传文件到网络
 
-当你的网站已经为公众浏览做好准备，你会需要上传你的网页到你的网络服务器。你可以从不同的供应者（查看 在网络上做某些东西要花费多少 \[[How much does it cost to do something on the web?](/en-US/docs/Learn/How_much_does_it_cost)]）处购买服务器的空间。一旦你选择好供应者，供应者会通过电子邮件给你发送 FTP（文件传输协议 \[file transfer protocol]）访问信息。上传文件到一个网络服务器是创建一个网站的重要一环，所以我们会在一篇独立的文章 \[[a separate article](/en-US/docs/Learn/Upload_files_to_a_web_server)] 中介绍它。就目前而言，这里有一小列免费的基本 FTP 客户端：
+当你的网站已经为公众浏览做好准备，你会需要上传你的网页到你的网络服务器。你可以从不同的供应者（查看 在网络上做某些东西要花费多少 \[[How much does it cost to do something on the web?](/zh-CN/docs/Learn/How_much_does_it_cost)]）处购买服务器的空间。一旦你选择好供应者，供应者会通过电子邮件给你发送 FTP（文件传输协议 \[file transfer protocol]）访问信息。上传文件到一个网络服务器是创建一个网站的重要一环，所以我们会在一篇独立的文章 \[[a separate article](/zh-CN/docs/Learn/Upload_files_to_a_web_server)] 中介绍它。就目前而言，这里有一小列免费的基本 FTP 客户端：
 
 <table>
   <thead>
@@ -198,6 +198,6 @@ _现在还没有自主学习活动。请[考虑投稿](/zh-CN/docs/MDN/Getting_s
 
 ## 下一步
 
-- 这里的一些软件是免费的，但不是所有都是。探寻在网络上做一些事情需要花费多少 \[[Find out how much it costs to do something on the web](/en-US/docs/Learn/Common_questions/How_much_does_it_cost)]。
-- 如果你想要了解更多关于文本编辑器的知识，阅读我们关于如何选择并安装一个文件浏览器 \[[how to choose and install a text editor](/en-US/docs/Learn/Choose,_Install_and_set_up_a_text_editor)] 的文章。
-- 如果你寻思如何在网络上发布你的网站，查阅“如何上传文件到一个网络服务器 \[[How to upload files to a web server](/en-US/docs/Learn/Upload_files_to_a_web_server)]”。
+- 这里的一些软件是免费的，但不是所有都是。探寻在网络上做一些事情需要花费多少 \[[Find out how much it costs to do something on the web](/zh-CN/docs/Learn/Common_questions/How_much_does_it_cost)]。
+- 如果你想要了解更多关于文本编辑器的知识，阅读我们关于如何选择并安装一个文件浏览器 \[[how to choose and install a text editor](/zh-CN/docs/Learn/Choose,_Install_and_set_up_a_text_editor)] 的文章。
+- 如果你寻思如何在网络上发布你的网站，查阅“如何上传文件到一个网络服务器 \[[How to upload files to a web server](/zh-CN/docs/Learn/Upload_files_to_a_web_server)]”。

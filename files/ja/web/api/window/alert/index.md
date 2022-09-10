@@ -1,15 +1,6 @@
 ---
 title: window.alert
 slug: Web/API/Window/alert
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Method
-  - Reference
-  - Window
-  - alert
-translation_of: Web/API/Window/alert
 ---
 {{ApiRef}}
 

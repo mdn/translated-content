@@ -1,11 +1,6 @@
 ---
 title: MathML の編集
 slug: Web/MathML/Authoring
-tags:
-  - Beginner
-  - MathML
-  - MathML Project
-translation_of: Web/MathML/Authoring
 ---
 本稿では MathML を用いて数式を表現する方法を説明します。 HTML と同じように、 MathML はタグと属性によって記述されます。文書中に箇条書きや表のような高度な構造がある場合 HTML は煩雑になってしまいますが、幸いなことに単純な記法で表を生成することができるツールや、 WYSIWYG な編集ができるツール、その他さまざまなコンテンツ管理システムであったりと，ウェブページを書き下ろすのに助けになるものはたくさんあります。
 

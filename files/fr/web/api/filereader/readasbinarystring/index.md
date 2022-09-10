@@ -54,14 +54,12 @@ canvas.toBlob(function (blob) {
 
 ## Spécifications
 
-| Specification                                                                            | Status                       | Comment |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------- |
-| {{SpecName('File API','#readAsBinaryString','readAsBinaryString')}} | {{Spec2('File API')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FileReader.readAsBinaryString")}}
+{{Compat}}
 
-## See also
+## Voir aussi
 
 - {{domxref("FileReader")}}

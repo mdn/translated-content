@@ -1,12 +1,6 @@
 ---
 title: window.top
 slug: Web/API/Window/top
-tags:
-  - API
-  - DOM
-  - HTML
-  - Window
-translation_of: Web/API/Window/top
 ---
 {{APIRef}}
 

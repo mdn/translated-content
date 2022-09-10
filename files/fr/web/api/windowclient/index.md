@@ -59,13 +59,11 @@ self.addEventListener('notificationclick', function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                 | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#window-client-interface', 'WindowClient')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowClient")}}
+{{Compat}}
 
 ## Voir aussi
 

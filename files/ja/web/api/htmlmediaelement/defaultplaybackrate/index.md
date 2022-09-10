@@ -1,15 +1,6 @@
 ---
 title: HTMLMediaElement.defaultPlaybackRate
 slug: Web/API/HTMLMediaElement/defaultPlaybackRate
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Web
-browser-compat: api.HTMLMediaElement.defaultPlaybackRate
-translation_of: Web/API/HTMLMediaElement/defaultPlaybackRate
 ---
 {{APIRef("HTML DOM")}}
 
@@ -17,7 +8,7 @@ translation_of: Web/API/HTMLMediaElement/defaultPlaybackRate
 
 ## 値
 
-`double` 型です。。 `1.0` が「標準速度」で、 `1.0` より小さい値はメディアの再生速度が標準より遅くなり、値を大きくすると再生速度が速くなります。
+`double` 型です。 `1.0` が「標準速度」で、 `1.0` より小さい値はメディアの再生速度が標準より遅くなり、値を大きくすると再生速度が速くなります。
 
 ### 例外
 

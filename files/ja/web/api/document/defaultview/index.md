@@ -1,14 +1,6 @@
 ---
 title: Document.defaultView
 slug: Web/API/Document/defaultView
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-translation_of: Web/API/Document/defaultView
-browser-compat: api.Document.defaultView
 ---
 {{ApiRef}}
 

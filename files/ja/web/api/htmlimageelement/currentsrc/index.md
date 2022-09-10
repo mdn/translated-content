@@ -1,18 +1,6 @@
 ---
 title: HTMLImageElement.currentSrc
 slug: Web/API/HTMLImageElement/currentSrc
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLImageElement
-  - 画像
-  - プロパティ
-  - リファレンス
-  - URL
-  - currentSrc
-  - source
-browser-compat: api.HTMLImageElement.currentSrc
-translation_of: Web/API/HTMLImageElement/currentSrc
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,14 +1,6 @@
 ---
 title: Document.createDocumentFragment()
 slug: Web/API/Document/createDocumentFragment
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - createDocumentFragment
-translation_of: Web/API/Document/createDocumentFragment
 ---
 {{APIRef("DOM WHATWG")}}
 
@@ -76,7 +68,7 @@ element.appendChild(fragment);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.createDocumentFragment")}}
+{{Compat}}
 
 ## 関連情報
 

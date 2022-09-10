@@ -1,13 +1,6 @@
 ---
 title: Document.compatMode
 slug: Web/API/Document/compatMode
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Reference
-translation_of: Web/API/Document/compatMode
 ---
 {{ ApiRef("DOM") }}
 
@@ -44,4 +37,4 @@ if (document.compatMode == "BackCompat") {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.compatMode")}}
+{{Compat}}

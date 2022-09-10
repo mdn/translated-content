@@ -48,10 +48,8 @@ clients.matchAll(options).then(function(clientList) {
 
 ## Spécifications
 
-| Spécification                                                            | Statut                               | Commentaire         |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#clients', 'Clients')}} | {{Spec2('Service Workers')}} | Définition initial. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Clients.matchAll")}}
+{{Compat}}

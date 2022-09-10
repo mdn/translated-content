@@ -1,14 +1,6 @@
 ---
 title: text-align
 slug: Web/CSS/text-align
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.text-align
-translation_of: Web/CSS/text-align
 ---
 {{CSSRef}}
 
