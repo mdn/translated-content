@@ -6,7 +6,7 @@ slug: Web/CSS/animation-delay
 
 ## 概述
 
-`animation-delay` [CSS](/en-US/docs/CSS)属性定义动画于何时开始，即从动画应用在元素上到动画开始的这段时间的长度。
+`animation-delay` [CSS](/zh-CN/docs/CSS)属性定义动画于何时开始，即从动画应用在元素上到动画开始的这段时间的长度。
 
 `0s`是该属性的默认值，代表动画在应用到元素上后立即开始执行。否则，该属性的值代表动画样式应用到元素上后到开始执行前的时间长度；
 
@@ -36,7 +36,7 @@ animation-delay: 2s, 4ms;
 
 ## 示例
 
-参见[CSS animations](/en-US/docs/CSS/CSS_animations)
+参见[CSS animations](/zh-CN/docs/CSS/CSS_animations)
 
 ## 规范
 
@@ -48,5 +48,5 @@ animation-delay: 2s, 4ms;
 
 ## 参见
 
-- [Using CSS animations](/en-US/docs/CSS/Tutorials/Using_CSS_animations)
+- [Using CSS animations](/zh-CN/docs/CSS/Tutorials/Using_CSS_animations)
 - {{domxref("AnimationEvent", "AnimationEvent")}}
