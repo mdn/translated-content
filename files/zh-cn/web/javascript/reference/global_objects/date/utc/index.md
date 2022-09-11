@@ -30,7 +30,7 @@ Date.UTC(year, month, day, hour, minute, second, millisecond)
   - : `0`（一月）到 `11`（十二月）之间的一个整数，表示月份。从 ECMAScript 2017 开始，如果忽略该值，则默认为 `0`。_（直到 ECMAScript 2016，`month` 都是必须的参数。而从 ES2017 开始，它不再是必须的。）_
 - `date` {{optional_inline}}
   - : `1` 到 `31` 之间的一个整数，表示某月当中的第几天。如果忽略该值，则默认为 `1`。
-- `hour`
+- `hour` {{optional_inline}}
   - : `0` 到 `23` 之间的一个整数，表示小时。如果忽略该值，则默认为 `0`。
 - `minute` {{optional_inline}}
   - : `0` 到 `59` 之间的一个整数，表示分钟。如果忽略该值，则默认为 `0`。
