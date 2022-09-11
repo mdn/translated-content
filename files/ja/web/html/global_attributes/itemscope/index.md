@@ -76,7 +76,7 @@ translation_of: Web/HTML/Global_attributes/itemscope
 
 ### レシピの構造化データの表現
 
-以下の例には 4 つの `itemscope` 属性があります。それぞれの `itemscope` 属性は、対応する `itemtype` 属性のスコープを設定しています。以下の例にある `Recipe`, `AggregateRating`, `NutritionInformation` の `itemtype` は、レシピのための [schema.org](www.schema.org) 構造化データの一部であり、最初の `itemtype`, http\://schema.org/Recipe として定義されています。
+以下の例には 4 つの `itemscope` 属性があります。それぞれの `itemscope` 属性は、対応する `itemtype` 属性のスコープを設定しています。以下の例にある `Recipe`, `AggregateRating`, `NutritionInformation` の `itemtype` は、レシピのための [schema.org](www.schema.org) 構造化データの一部であり、最初の `itemtype`, `http://schema.org/Recipe` として定義されています。
 
 <table class="standard-table">
   <tbody>

@@ -136,7 +136,9 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 今度はあなたの番です! この能動的学習セクションでは、あなたに簡単な埋め込み練習をさせていただきます。基本的な {{htmlelement("img")}} タグが提供されています。次の URL の画像を埋め込むようにしてください。
 
-https\://raw\.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
+https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
 
 以前は他のサーバ上の画像に絶対にホットリンクしないように言っていましたが、これは単なる学習目的のためのものです。
 

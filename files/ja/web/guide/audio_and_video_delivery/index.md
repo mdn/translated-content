@@ -342,13 +342,13 @@ The time can be specified as a number of seconds (as a floating-point value) or 
 
 A few examples:
 
-- http\://example.com/video.ogv#t=10,20
+- `http://example.com/video.ogv#t=10,20`
   - : Specifies that the video should play the range 10 seconds through 20 seconds.
-- http\://example.com/video.ogv#t=,10.5
+- `http://example.com/video.ogv#t=,10.5`
   - : Specifies that the video should play from the beginning through 10.5 seconds.
-- http\://example.com/video.ogv#t=,02:00:00
+- `http://example.com/video.ogv#t=,02:00:00`
   - : Specifies that the video should play from the beginning through two hours.
-- http\://example.com/video.ogv#t=60
+- `http://example.com/video.ogv#t=60`
   - : Specifies that the video should start playing at 60 seconds and play through the end of the video.
 
 > **Note:** The playback range portion of the media element URI specification was added to Gecko 9.0 {{ geckoRelease("9.0") }}. At this time, this is the only part of the [Media Fragments URI specification](http://www.w3.org/TR/media-frags/) implemented by Gecko, and it can only be used when specifying the source for media elements, and not in the address bar.

@@ -22,22 +22,29 @@ numberFormat.resolvedOptions()
 
 返されるオブジェクトには以下のプロパティがあります。
 
-<dl><dt><code>locale</code></dt><dd>実際に使用したロケールの BCP 47 言語タグ。このロケールにつながる入力 BCP 47 言語タグに Unicode 拡張値が要求された場合、要求されたキーと値のペアのうち、このロケールで対応しているものが <code>locale</code> に含まれます。</dd><dt><code>numberingSystem</code></dt><dd>もし存在すれば、 <code>options</code> 引数でこのプロパティに指定された値、または Unicode 拡張キーの <code>"nu"</code> を使って要求された値、または既定として設定される値です。</dd><dt><code>notation</code></dt><dd><code>options</code> 引数でこのプロパティに指定された値、または既定として設定される <code>standard</code> です。</dd><dt><code>compactDisplay</code></dt><dd><code>options</code> 引数でこのプロパティに指定された値、または既定として設定される <code>short</code> です。</dd><dd>このプロパティは <code>notation</code> が "compact" に設定されている場合のみ存在します。</dd><dt><code>signDisplay</code></dt><dd><code>options</code> 引数でこのプロパティに指定された値、または既定として設定される <code>auto</code> です。</dd><dt><code>useGrouping</code></dt><dd><code>options</code> 引数でこのプロパティに指定された値、または既定として設定される値。</dd><dt><code>currency</code></dt><dt><code>currencyDisplay</code></dt><dd><code>options</code> 引数でこのプロパティに指定された値、または既定として設定される値。<code>style</code>が<code>"currency"</code>の場合のみ、これらのプロパティは存在しています。</dd></dl>
+- `locale`
+  - : 実際に使用したロケールの BCP 47 言語タグ。このロケールにつながる入力 BCP 47 言語タグに Unicode 拡張値が要求された場合、要求されたキーと値のペアのうち、このロケールで対応しているものが `locale` に含まれます。
+- `numberingSystem`
+  - : もし存在すれば、 `options` 引数でこのプロパティに指定された値、または Unicode 拡張キーの `"nu"` を使って要求された値、または既定として設定される値です。
+- `notation`
+  - : `options` 引数でこのプロパティに指定された値、または既定として設定される `standard` です。
+- `compactDisplay`
+  - : `options` 引数でこのプロパティに指定された値、または既定として設定される `short` です。
+
+    このプロパティは `notation` が "compact" に設定されている場合のみ存在します。
+- `signDisplay`
+  - : `options` 引数でこのプロパティに指定された値、または既定として設定される `auto` です。
+- `useGrouping`
+  - : `options` 引数でこのプロパティに指定された値、または既定として設定される値。
+- `currency`, `currencyDisplay`
+  - : `options` 引数でこのプロパティに指定された値、または既定として設定される値。`style`が`"currency"`の場合のみ、これらのプロパティは存在しています。
 
 次の２つのプロパティのグループのうちどちらかのみが含まれています。:
 
-- `minimumIntegerDigits`
-
-  `minimumFractionDigits`
-
-  `maximumFractionDigits`
-
+- `minimumIntegerDigits`, `minimumFractionDigits`, `maximumFractionDigits`
   - : `options` 引数でプロパティに対して提供されるか既定で設定される値。 `minimumSignificantDigits` または `maximumSignificantDigits` が `options` 引数で提供されなかった場合のみ、これらのプロパティは存在しています。
 
-- `minimumSignificantDigits`
-
-  `maximumSignificantDigits`
-
+- `minimumSignificantDigits`, `maximumSignificantDigits`
   - : `options`引数でプロパティに対して提供されるかデフォルトとして設定される値。 これらのプロパティのうち少なくとも１つが`options`引数で提供された場合のみ、これらのプロパティは存在しています。
 
 ## 例

@@ -257,8 +257,8 @@ for short quotations that don't require paragraph breaks.</q> -- <a href="https:
 
 必要な引用元は以下のとおりです。
 
-- Confucius の引用については http\://www\.brainyquote.com/quotes/authors/c/confucius.html
-- http\://www\.affirmationsforpositivethinking.com/index.htm「The Need To Eliminate Negative Self Talk」用
+- Confucius の引用については `http://www.brainyquote.com/quotes/authors/c/confucius.html`
+- `http://www.affirmationsforpositivethinking.com/index.htm`「The Need To Eliminate Negative Self Talk」用
 
 間違えた場合は、リセットボタンを使用していつでもリセットできます。本当に動けなくなったら、_Show solution_ ボタンを押して答えを見てください。
 
