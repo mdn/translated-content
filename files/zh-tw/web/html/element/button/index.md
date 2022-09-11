@@ -1,7 +1,6 @@
 ---
 title: <button>
 slug: Web/HTML/Element/button
-translation_of: Web/HTML/Element/button
 ---
 **HTML `<button>` 元素代表一個可點擊的按鈕。**
 

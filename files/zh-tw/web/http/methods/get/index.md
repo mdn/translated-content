@@ -1,7 +1,6 @@
 ---
 title: GET
 slug: Web/HTTP/Methods/GET
-translation_of: Web/HTTP/Methods/GET
 ---
 {{HTTPSidebar}}
 

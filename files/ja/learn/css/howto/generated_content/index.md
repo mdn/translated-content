@@ -1,16 +1,6 @@
 ---
 title: CSS 生成コンテンツの使用
 slug: Learn/CSS/Howto/Generated_content
-tags:
-  - 基本
-  - 初心者
-  - CSS
-  - CSS:Getting_Started
-  - グラフィック
-  - ガイド
-  - NeedsUpdate
-  - ウェブ
-translation_of: Learn/CSS/Howto/Generated_content
 ---
 {{LearnSidebar}}
 

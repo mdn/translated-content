@@ -14,7 +14,9 @@ original_slug: Web/API/GlobalEventHandlers/ontouchstart
 
 ## 문법
 
-    var startHandler = someElement.ontouchstart;
+```js
+var startHandler = someElement.ontouchstart;
+```
 
 ### 반환 값
 

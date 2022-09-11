@@ -55,7 +55,7 @@ translation_of: Web/CSS/@keyframes
 }
 ```
 
-여기 {{ cssxref("top") }} 속성은 `0%`, `30%`, `100% 키 프레임을 이용하여 애니메이션 됩니다. `{{ cssxref("left") }} 속성은 `0%`, `68%`, `100% 키 프레임을 사용합니다.`
+여기 {{ cssxref("top") }} 속성은 `0%`, `30%`, `100%` 키 프레임을 이용하여 애니메이션 됩니다. {{ cssxref("left") }} 속성은 `0%`, `68%`, `100%` 키 프레임을 사용합니다.
 
 `0%` 와 `100%` 키 프레임 모두에 정의된 속성들만 애니메이션 동작을 합니다. 이 둘 중 아무것도 포함되지 않은 속성은 애니메이션 연속을 지속하기 위한 시작 값으로 사용됩니다.
 
@@ -114,7 +114,7 @@ translation_of: Web/CSS/@keyframes
 
 ## Examples
 
-See [CSS animations](/en/CSS/CSS_animations "en/CSS/CSS_animations") for examples.
+See [CSS animations](/en/CSS/CSS_animations) for examples.
 
 ## Specifications
 
@@ -126,9 +126,9 @@ See [CSS animations](/en/CSS/CSS_animations "en/CSS/CSS_animations") for example
 
 ## Notes
 
-1.  @keyframes not supported in an inline or scoped stylesheet in Firefox ({{bug(830056)}}).
+1. @keyframes not supported in an inline or scoped stylesheet in Firefox ({{bug(830056)}}).
 
 ## See also
 
-- [Using CSS animations](/ko/docs/CSS/Tutorials/Using_CSS_animations "Tutorial about CSS animations")
+- [Using CSS animations](/ko/docs/CSS/Tutorials/Using_CSS_animations)
 - {{domxref("AnimationEvent")}}

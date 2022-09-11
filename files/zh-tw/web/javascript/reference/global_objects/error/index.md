@@ -1,13 +1,6 @@
 ---
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
-tags:
-  - Error
-  - JavaScript
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Global_Objects/Error
 ---
 {{JSRef}}
 
@@ -36,7 +29,7 @@ This page documents the use of the `Error` object itself and its use as a constr
 
 ### 錯誤類型
 
-Besides the generic `Error` constructor, there are six other core error constructors in JavaScript. For client-side exceptions, see [Exception Handling Statements](/en-US/docs/Web/JavaScript/Guide/Statements#Exception_Handling_Statements).
+Besides the generic `Error` constructor, there are six other core error constructors in JavaScript. For client-side exceptions, see [Exception Handling Statements](/zh-TW/docs/Web/JavaScript/Guide/Statements#Exception_Handling_Statements).
 
 - {{jsxref("EvalError")}}
   - : Creates an instance representing an error that occurs regarding the global function {{jsxref("Global_Objects/eval", "eval()")}}.

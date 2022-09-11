@@ -146,10 +146,8 @@ _Cette interface n'hérite d'aucune méthode mais implémente celles définies p
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaires |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', '#the-navigator-object', 'the Navigator object')}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Navigator")}}
+{{Compat}}

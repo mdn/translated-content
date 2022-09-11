@@ -1,19 +1,6 @@
 ---
 title: ResizeObserverEntry.contentRect
 slug: Web/API/ResizeObserverEntry/contentRect
-page-type: web-api-instance-property
-tags:
-  - API
-  - バウンディングボックス
-  - プロパティ
-  - リファレンス
-  - リサイズオブザーバー API
-  - ResizeObserver
-  - ResizeObserverEntry
-  - コンテンツボックス
-  - observers
-browser-compat: api.ResizeObserverEntry.contentRect
-translation_of: Web/API/ResizeObserverEntry/contentRect
 ---
 {{APIRef("Resize Observer API")}}
 

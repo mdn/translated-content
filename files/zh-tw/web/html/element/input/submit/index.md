@@ -1,7 +1,6 @@
 ---
 title: <input type="submit">
 slug: Web/HTML/Element/input/submit
-translation_of: Web/HTML/Element/input/submit
 ---
 {{HTMLRef}}
 

@@ -68,15 +68,13 @@ Lorsque vous insérez du code HTML dans une page en utilisant insertAdjacentHTML
 
 Il est recommandé de ne pas utiliser `insertAdjacentHTML` lors de l'insertion de texte brut; à la place, utilisez la propriété `node.textContent` ou la méthode `node.insertAdjacentText()`. Cela n'interprète pas le contenu transmis au format HTML, mais l'insère à la place sous forme de texte brut.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                                                                                        | Statut                               | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('DOM Parsing', '#widl-Element-insertAdjacentHTML-void-DOMString-position-DOMString-text', 'Element.insertAdjacentHTML()')}} | {{ Spec2('DOM Parsing') }} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.insertAdjacentHTML")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -54,7 +54,7 @@ slug: Learn/CSS/Building_blocks/Debugging_CSS
 
 ![The example page for this tutorial with DevTools open.](inspecting1.png)
 
-如果查看 HTML 右边的 [Rules view](/en-US/docs/Tools/Page_Inspector/UI_Tour#Rules_view) 栏，你应该能看到该元素的 CSS 属性与值。你能看到直接应用到 `box1` 类上的规则，还有其继承了祖先的 CSS（该例中指 `<body>`）。这在一种情况下就很有帮助——你看到有些 CSS 并非在计划之内（或许它们继承自某个父元素然而你没有覆盖它们）。
+如果查看 HTML 右边的 [Rules view](/zh-CN/docs/Tools/Page_Inspector/UI_Tour#Rules_view) 栏，你应该能看到该元素的 CSS 属性与值。你能看到直接应用到 `box1` 类上的规则，还有其继承了祖先的 CSS（该例中指 `<body>`）。这在一种情况下就很有帮助——你看到有些 CSS 并非在计划之内（或许它们继承自某个父元素然而你没有覆盖它们）。
 
 另一个有用的功能是将简写属性展开的功能。在我们的示例里面使用了 `margin` 的简写。
 
@@ -80,13 +80,13 @@ slug: Learn/CSS/Building_blocks/Debugging_CSS
 
 ![The DevTools Panel, adding a new property to the rules, with the autocomplete for font- open](inspecting3-font-size.png)
 
-> **备注：** 在 Rules view 里面还有其他有用的功能，例如带有无效值的声明会被划掉。你可以在[检查并编辑 CSS](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS)里了解更多。
+> **备注：** 在 Rules view 里面还有其他有用的功能，例如带有无效值的声明会被划掉。你可以在[检查并编辑 CSS](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS)里了解更多。
 
 ## 理解盒模型
 
 在之前的课程里我们已经讨论了[盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)，介绍了替代盒模型，它改变了元素根据给定大小计算自身尺寸的方式，再在这个计算值上加上内边距和边框。开发者工具可以确实帮助你理解元素尺寸的计算方式。
 
-[Layout view](/en-US/docs/Tools/Page_Inspector/UI_Tour#Layout_view) 给你展示了一张选定元素的盒模型示意图，还有对能改变元素展示方式的属性和值的描述。你可能原本没有精确地使用元素的属性，只设定了初始值，盒模型也可能包含对于这些属性的描述。
+[Layout view](/zh-CN/docs/Tools/Page_Inspector/UI_Tour#Layout_view) 给你展示了一张选定元素的盒模型示意图，还有对能改变元素展示方式的属性和值的描述。你可能原本没有精确地使用元素的属性，只设定了初始值，盒模型也可能包含对于这些属性的描述。
 
 在这一面板上，被详细说明的属性之一为 `box-sizing` 属性，它控制了元素使用的盒模型种类。
 
@@ -96,7 +96,7 @@ slug: Learn/CSS/Building_blocks/Debugging_CSS
 
 ![The Layout section of the DevTools](inspecting4-box-model.png)
 
-> **备注：** 在[仔细检查盒模型](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model)里了解更多。
+> **备注：** 在[仔细检查盒模型](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model)里了解更多。
 
 ## 解决优先级问题
 
@@ -127,7 +127,7 @@ em {
 
 ## 进一步了解火狐开发者工具
 
-在 MDN 这里有很多关于火狐调试工具的信息，看下主要的[开发者工具段落](/zh-CN/docs/Tools)，欲了解在本节课中我们简要介绍的事情的细节，请看下[这篇教程](/en-US/docs/Tools/Page_Inspector#How_to)。
+在 MDN 这里有很多关于火狐调试工具的信息，看下主要的[开发者工具段落](/zh-CN/docs/Tools)，欲了解在本节课中我们简要介绍的事情的细节，请看下[这篇教程](/zh-CN/docs/Tools/Page_Inspector#How_to)。
 
 ## 在 CSS 中调试问题
 

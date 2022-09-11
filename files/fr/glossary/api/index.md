@@ -22,7 +22,7 @@ L'[API Twitter](https://dev.twitter.com/overview/api) peut être utilisée pour 
 
 L'[API Web Animations](/fr/docs/Web/API/Web_Animations_API) peut être utilisée pour animer des parties d'une page web, par exemple pour faire bouger ou pivoter des images.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

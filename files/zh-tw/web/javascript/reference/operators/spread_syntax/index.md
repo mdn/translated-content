@@ -1,7 +1,6 @@
 ---
 title: Spread syntax (...)
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
-translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
 ---
 {{jsSidebar("Operators")}}
 
@@ -227,7 +226,7 @@ In the above example, the spread syntax does not work as one might expect: it sp
 
 Objects themselves are not iterable, but they become iterable when used in an Array, or with iterating functions such as `map()`, `reduce()`, and `assign()`. When merging 2 objects together with the spread operator, it is assumed another iterating function is used when the merging occurs.
 
-Spread syntax (other than in the case of spread properties) can be applied only to [iterable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) objects:
+Spread syntax (other than in the case of spread properties) can be applied only to [iterable](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) objects:
 
 ```js
 const obj = {'key1': 'value1'};

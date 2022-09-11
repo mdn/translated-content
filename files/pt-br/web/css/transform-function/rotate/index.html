@@ -6,33 +6,33 @@ original_slug: Web/CSS/transform-function/rotate()
 ---
 <p>{{CSSRef}}</p>
 
-<p>A função <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>rotate()</code></strong> <span class="short_text" id="result_box" lang="pt"><span>define uma transformação que</span></span> gira um elemento <span class="short_text" id="result_box" lang="pt"><span>em torno de um ponto fixo no plano 2D</span></span>, <span class="short_text" id="result_box" lang="pt"><span>sem deformá-lo</span></span>. O resultado é um tipo de dados {{cssxref("&lt;transform-function&gt;")}}.</p>
+<p>A função <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>rotate()</code></strong> define uma transformação que gira um elemento em torno de um ponto fixo no plano 2D, sem deformá-lo. O resultado é um tipo de dados {{cssxref("&lt;transform-function&gt;")}}.</p>
 
 <p><img src="https://mdn.mozillademos.org/files/12113/rotate.png" style="height: 175px; width: 258px;"></p>
 
-<p><span class="short_text" id="result_box" lang="pt"><span>O eixo de rotação passa por uma origem,</span></span> definido pela propriedade CSS {{ cssxref("transform-origin") }}.</p>
+<p>O eixo de rotação passa por uma origem, definido pela propriedade CSS {{ cssxref("transform-origin") }}.</p>
 
-<h2 id="Sintaxe"><span class="short_text" id="result_box" lang="pt"><span>Sintaxe</span></span></h2>
+<h2 id="Sintaxe">Sintaxe</h2>
 
-<p><span class="short_text" id="result_box" lang="pt"><span>A quantidade de rotação criada por </span></span><code>rotate()</code> <span class="short_text" id="result_box" lang="pt"><span>é especificado por um</span></span> {{cssxref("&lt;angle&gt;")}}. <span class="short_text" id="result_box" lang="pt"><span>Se positivo, o movimento será no sentido horário</span></span>; Se negativo, <span class="short_text" id="result_box" lang="pt"><span>ela será no sentido anti-horário. </span></span> <span id="result_box" lang="pt"><span>Uma rotação de 180° é chamada de </span></span><em>point reflection (</em><span lang="pt"><span>reflexão do ponto).</span></span></p>
+<p>A quantidade de rotação criada por <code>rotate()</code> é especificado por um {{cssxref("&lt;angle&gt;")}}. Se positivo, o movimento será no sentido horário; Se negativo, ela será no sentido anti-horário.  Uma rotação de 180° é chamada de <em>point reflection (</em>reflexão do ponto).</p>
 
-<pre class="syntaxbox notranslate">rotate(<em>a</em>)
+<pre class="syntaxbox">rotate(<em>a</em>)
 </pre>
 
 <h3 id="Valores">Valores</h3>
 
 <dl>
  <dt><code>a</code></dt>
- <dd>É um {{ cssxref("&lt;angle&gt;") }} <span class="short_text" id="result_box" lang="pt"><span>representando o ângulo da rotação.</span></span> <span id="result_box" lang="pt"><span>Um ângulo positivo indica uma rotação no sentido horário, </span></span><span class="short_text" id="result_box" lang="pt"><span>um ângulo negativo no sentido anti-horário.</span></span></dd>
+ <dd>É um {{ cssxref("&lt;angle&gt;") }} representando o ângulo da rotação. Um ângulo positivo indica uma rotação no sentido horário, um ângulo negativo no sentido anti-horário.</dd>
 </dl>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th scope="col"><span class="short_text" id="result_box" lang="pt"><span>Coordenadas cartesianas em</span></span> ℝ<sup>2</sup></th>
-   <th scope="col"><span class="short_text" id="result_box" lang="pt"><span>Coordenadas homogêneas em</span></span> ℝℙ<sup>2</sup></th>
-   <th scope="col"><span class="short_text" id="result_box" lang="pt"><span>Coordenadas cartesianas em</span></span> ℝ<sup>3</sup></th>
-   <th scope="col"><span class="short_text" id="result_box" lang="pt"><span>Coordenadas homogêneas em</span></span> ℝℙ<sup>3</sup></th>
+   <th scope="col">Coordenadas cartesianas em ℝ<sup>2</sup></th>
+   <th scope="col">Coordenadas homogêneas em ℝℙ<sup>2</sup></th>
+   <th scope="col">Coordenadas cartesianas em ℝ<sup>3</sup></th>
+   <th scope="col">Coordenadas homogêneas em ℝℙ<sup>3</sup></th>
   </tr>
  </thead>
  <tbody>
@@ -52,12 +52,12 @@ original_slug: Web/CSS/transform-function/rotate()
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;div&gt;Normal&lt;/div&gt;
+<pre class="brush: html">&lt;div&gt;Normal&lt;/div&gt;
 &lt;div class="rotated"&gt;Rotated&lt;/div&gt;</pre>
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   width: 80px;
   height: 80px;
   background-color: skyblue;
@@ -73,9 +73,9 @@ original_slug: Web/CSS/transform-function/rotate()
 
 <p>{{EmbedLiveSample("Examples", "auto", 180)}}</p>
 
-<h2 id="Compatibilidade_do_navegador"><span class="short_text" id="result_box" lang="pt"><span>Compatibilidade do navegador</span></span></h2>
+<h2 id="Compatibilidade_do_navegador">Compatibilidade do navegador</h2>
 
-<p>Por favor, veja o tipo de dados <code><a href="/en-US/docs/Web/CSS/transform-function#Browser_compatibility">&lt;transform-function&gt;</a></code> para informações de <span id="result_box" lang="pt"><span>compatibilidade</span></span>.</p>
+<p>Por favor, veja o tipo de dados <code><a href="/en-US/docs/Web/CSS/transform-function#Browser_compatibility">&lt;transform-function&gt;</a></code> para informações de compatibilidade.</p>
 
 <h2 id="Veja_também">Veja também</h2>
 

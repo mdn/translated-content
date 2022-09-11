@@ -12,7 +12,7 @@ Un curseur (_"caret"_ parfois appelé "curseur de texte") est un indicateur affi
 
 Sur le web, un curseur "_caret_" est utilisé pour représenter le point d'insertion dans les éléments {{HTMLElement("input")}} et {{HTMLElement("textarea")}}, ainsi que tous les éléments dont l'attribut {{htmlattrxref("contenteditable")}} est défini, permettant ainsi au contenu de l'élément d'être édité par l'utilisateur.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

@@ -64,9 +64,9 @@ p.para2 {
 }
 ```
 
-#### Result
+#### 结果
 
-{{ EmbedLiveSample('Using_Danish_glyphs', '600', '', '', 'Web/CSS/font-language-override') }}
+{{ EmbedLiveSample('使用丹麦文字形', '600') }}
 
 ## 规范
 

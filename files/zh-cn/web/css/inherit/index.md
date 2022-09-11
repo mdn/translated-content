@@ -36,7 +36,7 @@ div#current { color: blue; }
 
 ## See also
 
-- [Inheritance](/en-US/docs/CSS/inheritance)
+- [Inheritance](/zh-CN/docs/CSS/inheritance)
 - Use {{cssxref("initial")}} to set a property to its initial value.
 - Use {{cssxref("unset")}} to set a property to its inherited value if it inherits, or to its initial value if not.
 - Use {{cssxref("revert")}} to reset a property to the value established by the user-agent stylesheet (or by user styles, if any exist).

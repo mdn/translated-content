@@ -29,13 +29,11 @@ _L'interface `GeolocationPosition` n'hérite d'aucune propriété._
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire            |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------- |
-| {{SpecName('Geolocation', '#position_interface', 'GeolocationPosition')}} | {{Spec2('Geolocation')}} | Spécification initale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.GeolocationPosition")}}
+{{Compat}}
 
 ## Voir aussi
 

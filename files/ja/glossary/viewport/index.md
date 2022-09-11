@@ -1,11 +1,6 @@
 ---
 title: Viewport (ビューポート)
 slug: Glossary/Viewport
-tags:
-  - CodingScripting
-  - Glossary
-  - viewport
-translation_of: Glossary/Viewport
 ---
 ビューポートは、現在表示されているコンピューター画像の中の、多角形 (通常は長方形) の領域を表します。ウェブブラウザーの用語としては、閲覧中の文書のうち、ウィンドウ (または、文書が全画面モードで表示されている場合は画面) の中で現在見えている部分を指します。ビューポートの外にあるコンテンツは、スクロールによってビューの中に移動するまで画面上では見えません。
 

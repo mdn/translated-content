@@ -1,20 +1,6 @@
 ---
 title: border-color
 slug: Web/CSS/border-color
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - CSS スタイル
-  - HTML 色
-  - リファレンス
-  - Styling HTML
-  - border-color
-  - 境界
-  - 色
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border-color
-translation_of: Web/CSS/border-color
 ---
 {{CSSRef}}
 

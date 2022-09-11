@@ -1,16 +1,8 @@
 ---
 title: CSS 轉場
 slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
-tags:
-  - CSS animation
-  - CSS transition
-  - CSS 轉場
-  - CSS 過渡
-translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 ---
-###
-
-原文 : [https://developer.mozilla.org/en/CSS/CSS_transitions](/en/CSS/CSS_transitions)
+原文 : [https://developer.mozilla.org/en/CSS/CSS_transitions](/zh-TW/CSS/CSS_transitions)
 
 {{ SeeCompatTable() }}
 

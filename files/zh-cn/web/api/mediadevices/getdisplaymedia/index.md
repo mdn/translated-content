@@ -4,9 +4,9 @@ slug: Web/API/MediaDevices/getDisplayMedia
 ---
 {{DefaultAPISidebar("Screen Capture API")}}
 
-这个 {{domxref("MediaDevices")}} 接口的 **`getDisplayMedia() 方法提示用户去选择和授权捕获展示的内容或部分内容（如一个窗口）在一个`** {{domxref("MediaStream")}} 里. 然后，这个媒体流可以通过使用 [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) 被记录或者作为[WebRTC](/en-US/docs/Web/API/WebRTC_API) 会话的一部分被传输。
+这个 {{domxref("MediaDevices")}} 接口的 **`getDisplayMedia() 方法提示用户去选择和授权捕获展示的内容或部分内容（如一个窗口）在一个`** {{domxref("MediaStream")}} 里. 然后，这个媒体流可以通过使用 [MediaStream Recording API](/zh-CN/docs/Web/API/MediaStream_Recording_API) 被记录或者作为[WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 会话的一部分被传输。
 
-去 [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) 查找更多详情和例子。
+去 [Using the Screen Capture API](/zh-CN/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) 查找更多详情和例子。
 
 ## 语法
 
@@ -73,8 +73,8 @@ async function startCapture(displayMediaOptions) {
 
 ## 参考
 
-- [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
-- [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Screen Capture API](/zh-CN/docs/Web/API/Screen_Capture_API)
+- [Using the Screen Capture API](/zh-CN/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- [Media Capture and Streams API](/zh-CN/docs/Web/API/Media_Streams_API)
+- [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)
 - {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}: Capturing media from a camera and/or microphone

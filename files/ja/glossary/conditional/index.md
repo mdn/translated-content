@@ -1,11 +1,6 @@
 ---
 title: Conditional (条件式)
 slug: Glossary/Conditional
-tags:
-  - Beginner
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/Conditional
 ---
 **条件** とは、条件式が満たされるか否かによって、通常のコード実行を強制停止したり、変更したりする、一連のルールです。
 

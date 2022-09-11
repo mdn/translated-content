@@ -40,14 +40,11 @@ Voir l'exemple dans : [Utilisation de l'API _User Timing_](/fr/docs/Web/API/User
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('User Timing Level 2', '#dom-performance-measure', 'PerformanceMeasure')}} | {{Spec2('User Timing Level 2')}} |                      |
-| {{SpecName('User Timing', '#performancemeasure', 'PerformanceMeasure')}}                 | {{Spec2('User Timing')}}             | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceMeasure")}}
+{{Compat}}
 
 ## Voir aussi
 

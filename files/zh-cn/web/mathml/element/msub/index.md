@@ -4,7 +4,7 @@ slug: Web/MathML/Element/msub
 ---
 {{MathMLRef}}
 
-MathML**`<msub>`**元素用来为表达式加下标，语法如下：**`<msub> base subscript </msub>`**。
+MathML **`<msub>`** 元素用来为表达式加下标，语法如下：**`<msub> base subscript </msub>`**。
 
 ## 属性
 
@@ -13,9 +13,9 @@ MathML**`<msub>`**元素用来为表达式加下标，语法如下：**`<msub> b
 - href
   - : 用来设置标签点击后跳转的链接。
 - mathbackground
-  - : 用来设置标签的背景色，可以使用**`#rgb`**、**`#rrggbb`**或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
+  - : 用来设置标签的背景色，可以使用 **`#rgb`**、**`#rrggbb`** 或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
 - mathcolor
-  - : 用来设置标签文字的颜色，同样可以使用**`#rgb`**、**`#rrggbb`**或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
+  - : 用来设置标签文字的颜色，同样可以使用 **`#rgb`**、**`#rrggbb`** 或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
 - subscriptshift
   - : 用来设置下标相对于表达式的基线的最小距离，它是一个[长度值](/zh-CN/docs/MathML/Attributes/Values#Lengths)。
 

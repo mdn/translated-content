@@ -1,11 +1,6 @@
 ---
 title: Text.assignedSlot
 slug: Web/API/Text/assignedSlot
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Text.assignedSlot
 ---
 {{APIRef("DOM")}}
 

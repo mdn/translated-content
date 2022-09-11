@@ -25,13 +25,13 @@ translation_of: Web/CSS/angle
 
 ### 단위
 
-- [`deg`]()
+- `deg`
   - : 각도를 [도 단위](<https://ko.wikipedia.org/wiki/%EB%8F%84_(%EA%B0%81%EB%8F%84)>)로 나타냅니다. 1회전은 `360deg`입니다. 예: `0deg`, `90deg`, `14.23deg`
-- [`grad`]()
+- `grad`
   - : 각도를 [그레이드](https://ko.wikipedia.org/wiki/%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C)로 나타냅니다. 1회전은 `400grad`입니다. 예: `0grad`, `100grad`, `38.8grad`
-- [`rad`]()
+- `rad`
   - : 각도를 [라디안](https://ko.wikipedia.org/wiki/%EB%9D%BC%EB%94%94%EC%95%88)으로 나타냅니다. 1회전은 2π 라디안으로 약 `6.2832rad`입니다. `1rad`는 180/π`deg`입니다. 예: `0rad`, `1.0708rad`, `6.2832rad`
-- [`turn`]()
+- `turn`
   - : 각도를 회전의 수로 나타냅니다. 1회전은 `1turn`입니다. 예: `0turn`, `0.25turn`, `1.2turn`
 
 ## 예제

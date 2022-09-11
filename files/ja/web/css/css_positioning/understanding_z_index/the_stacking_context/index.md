@@ -1,13 +1,6 @@
 ---
 title: 重ね合わせコンテキスト
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
-tags:
-  - 上級者
-  - CSS
-  - ガイド
-  - リファレンス
-  - z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 ---
 {{CSSRef}}
 

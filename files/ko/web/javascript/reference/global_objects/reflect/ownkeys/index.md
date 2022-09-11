@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
 
 ## 구문
 
-    Reflect.ownKeys(target)
+```js
+Reflect.ownKeys(target)
+```
 
 ### 매개변수
 

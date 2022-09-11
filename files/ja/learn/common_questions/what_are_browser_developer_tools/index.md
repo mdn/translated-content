@@ -1,16 +1,6 @@
 ---
 title: ブラウザーの開発者ツールとは？
 slug: Learn/Common_questions/What_are_browser_developer_tools
-tags:
-  - Beginner
-  - Browser
-  - CSS
-  - CodingScripting
-  - Dev Tools
-  - HTML
-  - JavaScript
-  - Learn
-translation_of: Learn/Common_questions/What_are_browser_developer_tools
 ---
 近頃のブラウザーにはパワフルな開発者ツールが入っています。開発者ツールでは、現在の HTML や CSS、JavaScript の状態を検証したり、ページがどういった資産にアクセスし、どれだけ時間がかかったかといった多様なことができます。この記事ではブラウザーの開発者ツールの使い方について説明します。
 
@@ -167,7 +157,7 @@ JavaScript コンソールは、期待通りに使用されていない JavaScri
 
 開発者ツールがすでに開いている場合は、「コンソール」タブをクリックまたは押します。
 
-そうでない場合、Firefox では、<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> またはメニューコマンドを使用して、コンソールを直接開くことができます。メニュー ![](2014-01-10-13-08-08-f52b8c.png) _➤ ウェブ開発者 ➤ ウェブコンソール、または _ ツール ➤ ウェブコンソール_ 他のブラウザでは、開発者ツールを開き、コンソールタブをクリックしてください。
+そうでない場合、Firefox では、<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> またはメニューコマンドを使用して、コンソールを直接開くことができます。メニュー ![](2014-01-10-13-08-08-f52b8c.png) _➤ ウェブ開発者 ➤ ウェブコンソール、または _ ツール ➤ ウェブコンソール_ 他のブラウザーでは、開発者ツールを開き、コンソールタブをクリックしてください。
 
 すると、次のようなウィンドウが表示されます。
 

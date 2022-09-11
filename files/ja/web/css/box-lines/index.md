@@ -1,14 +1,6 @@
 ---
 title: box-lines
 slug: Web/CSS/box-lines
-tags:
-  - CSS
-  - CSS プロパティ
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.box-lines
-translation_of: Web/CSS/box-lines
 ---
 {{CSSRef}}{{Non-standard_header}}
 

@@ -1,11 +1,6 @@
 ---
 title: Grid Areas (グリッド領域)
 slug: Glossary/Grid_Areas
-tags:
-  - CSS
-  - CSS Grids
-  - Reference
-translation_of: Glossary/Grid_Areas
 l10n:
   sourceCommit: 4a9f9d2e9c1811ce3519a7061e906db9200a5e97
 ---

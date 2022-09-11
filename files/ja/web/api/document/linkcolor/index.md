@@ -1,15 +1,6 @@
 ---
 title: Document.linkColor
 slug: Web/API/Document/linkColor
-tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-  - プロパティ
-translation_of: Web/API/Document/linkColor
 ---
 {{APIRef("DOM")}} {{Deprecated_header}}
 
@@ -42,7 +33,7 @@ HTML5
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.linkColor")}}
+{{Compat}}
 
 Mozilla Firefox におけるこのプロパティの既定値は、青 (16 進数で `#0000ee`) です。
 

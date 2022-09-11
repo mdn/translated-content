@@ -47,15 +47,13 @@ self.addEventListener('activate', function(event) {
 
 ## Spécifications
 
-| Spécification                                                            | Statut                               | Commentaire                                                                                                                                                                                                    |
-| ------------------------------------------------------------------------ | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Service Workers', '#clients', 'Clients')}} | {{Spec2('Service Workers')}} | Définition initiale. Toujours en cours de développement (voir [ticket 414](https://github.com/slightlyoff/ServiceWorker/issues/414) et [ticket 423](https://github.com/slightlyoff/ServiceWorker/issues/423)). |
+{{Specifications}}
 
-## Compatibilité de navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.Clients.claim")}}
+{{Compat}}
 
-## À voir aussi
+## Voir aussi
 
 - [Utiliser les Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Example simple de service workers](https://github.com/mdn/sw-test)

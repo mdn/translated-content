@@ -1,14 +1,6 @@
 ---
 title: Window.outerHeight
 slug: Web/API/Window/outerHeight
-tags:
-  - API
-  - CSSOM View
-  - NeedsContent
-  - Property
-  - Reference
-  - outerHeight
-translation_of: Web/API/Window/outerHeight
 ---
 {{APIRef}}
 

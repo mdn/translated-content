@@ -1,16 +1,6 @@
 ---
 title: MouseEvent.relatedTarget
 slug: Web/API/MouseEvent/relatedTarget
-tags:
-  - API
-  - DOM
-  - DOM イベント
-  - MouseEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.MouseEvent.relatedTarget
-translation_of: Web/API/MouseEvent/relatedTarget
 ---
 {{APIRef("DOM Events")}}
 

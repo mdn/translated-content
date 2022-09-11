@@ -4,7 +4,7 @@ slug: Web/API/Web_Audio_API
 ---
 {{SeeCompatTable}}
 
-![Show the ability of AudioNodes to connect via their inputs and outputs and the channels inside these inputs/outputs.](https://mdn.mozillademos.org/files/5183/WebAudioGenerics.png)**Web Audio API** 可於 Web App 或網頁上操作並播放音訊檔案。
+**Web Audio API** 可於 Web App 或網頁上操作並播放音訊檔案。
 
 Web Audio API 是根據模組化路由 (Modular routing) 的概念所設計。所謂的模組化路由，即是以「**音訊節點** **(Audio nodes)**」**執行基本的音訊作業**，節點又互相連接而構成「音訊路由圖 (Audio routing graphs)」。在同一環境 (Audio context) 內，又可支援數個音源與多樣的聲道配置。此模組化設計可提供更高的靈活度，並能建立複雜的音訊函式與動態效果。
 

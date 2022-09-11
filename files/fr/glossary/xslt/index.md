@@ -13,7 +13,7 @@ _eXtensible Stylesheet Language Transformations_ (**XSLT**) est un langage décl
 
 XSLT possède son propre processeur qui accepte du XML en entrée, ou tout autre format qui peut être converti en XDM (XQuery and XPath Data Model). Le processeur XSLT génère un nouveau document basé sur le document XML et sur une feuille de styles XSLT, mais n'apporte aucune modification aux fichiers originaux pendant le processus.
 
-## Pour approfondir
+## Voir aussi
 
 ### Référence technique
 

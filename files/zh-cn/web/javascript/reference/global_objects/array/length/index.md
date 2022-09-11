@@ -91,6 +91,7 @@ console.log(numbers.length); // 3
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Array")}}
+- [RangeError: invalid array length](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

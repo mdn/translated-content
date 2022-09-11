@@ -33,15 +33,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/encodeURI
 
 `encodeURI()` 함수는 URI에서 특별한 뜻을 가진 문자(예약 문자)는 인코딩 하지 않습니다. 아래 예제는 "URI 도식"이 포함할 수 있는 모든 부분을 담고 있습니다. 일부 문자가 어떤 방식으로 특별한 의미를 주입하고 있는지 잘 살펴보세요.
 
-    http://username:password@www.example.com:80/path/to/file.php?foo=316&bar=this+has+spaces#anchor
+```
+http://username:password@www.example.com:80/path/to/file.php?foo=316&bar=this+has+spaces#anchor
+```
 
 따라서 `encodeURI()`는 완전한 URI를 형성하는데 필요한 문자는 인코딩 **하지 않습니다**. 또한, 예약된 목적을 가지지는 않지만 URI가 그대로 포함할 수 있는 몇 가지 문자("비예약 표식")도 인코딩 **하지 않습니다**. ([RFC 2396](https://www.ietf.org/rfc/rfc2396.txt)을 참고하세요)
 
 `encodeURI()` 는 다음 문자를 **제외**한 문자를 이스케이프 합니다.
 
-    이스케이프 하지 않는 문자:
+```
+이스케이프 하지 않는 문자:
 
-        A-Z a-z 0-9 ; , / ? : @ & = + $ - _ . ! ~ * ' ( ) #
+    A-Z a-z 0-9 ; , / ? : @ & = + $ - _ . ! ~ * ' ( ) #
+```
 
 `encodeURI()`와 {{jsxref("encodeURIComponent", "encodeURIComponent()")}}의 차이는 다음과 같습니다.
 

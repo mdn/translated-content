@@ -31,7 +31,7 @@ a=rtpmap:32 MPV/90000
 
 SDP n'est jamais employé seul, mais des protocoles comme {{Glossary("RTP")}} et {{Glossary("RTSP")}} l'utilisent. SDP est également un composant de {{Glossary("WebRTC")}}, ce dernier se servant de SDP pour décrire une session.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

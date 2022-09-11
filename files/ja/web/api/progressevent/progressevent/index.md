@@ -1,13 +1,6 @@
 ---
 title: ProgressEvent()
 slug: Web/API/ProgressEvent/ProgressEvent
-tags:
-  - API
-  - コンストラクター
-  - DOM イベント
-  - ProgressEvent
-browser-compat: api.ProgressEvent.ProgressEvent
-translation_of: Web/API/ProgressEvent/ProgressEvent
 ---
 {{APIRef("DOM Events")}}
 

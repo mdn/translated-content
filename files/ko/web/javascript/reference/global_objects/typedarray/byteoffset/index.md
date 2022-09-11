@@ -14,7 +14,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/byteOffset
 
 ## 구문
 
-    typedarray.byteOffset
+```js
+typedarray.byteOffset
+```
 
 ## 설명
 

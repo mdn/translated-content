@@ -32,10 +32,8 @@ elem.onclick = function(e) {
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', '#dom-event-cancelbubble', 'cancelBubble')}} | {{Spec2('DOM WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.cancelBubble")}}
+{{Compat}}

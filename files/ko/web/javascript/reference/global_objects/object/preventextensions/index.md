@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 
 ## 구문
 
-    Object.preventExtensions(obj)
+```js
+Object.preventExtensions(obj)
+```
 
 ### 매개변수
 

@@ -45,12 +45,10 @@ function setClipboard(text) {
 
 Le code commence par la creation d'un nouveau objet {{domxref("DataTransfer")}} dans lequel le texte est placé pour être envoyé au presse-papier. {{domxref("DataTransferItemList.add()")}} est appelé pour ajouté le texte à`DataTransfer`, ensuite `write()` est appelé, en spécifiant une function d'accomplissement et une fonction d'erreur.
 
-## Specifications
+## Spécifications
 
-| Specification                                                                            | Status                               | Comment             |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Clipboard API','#h-clipboard-write-data','write()')}} | {{Spec2('Clipboard API')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Clipboard.write")}}
+{{Compat}}

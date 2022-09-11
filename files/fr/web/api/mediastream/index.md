@@ -41,13 +41,11 @@ L'interface `MediaStream` représente le contenu d'un flux de média. Un flux es
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Media Capture', '#mediastream', 'MediaStream')}} | {{Spec2('Media Capture')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.MediaStream")}}
+{{Compat}}
 
 ## Voir aussi
 

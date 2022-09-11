@@ -1,11 +1,6 @@
 ---
 title: Parent object (親オブジェクト)
 slug: Glossary/Parent_object
-tags:
-  - CodingScripting
-  - Glossary
-  - NeedsContent
-translation_of: Glossary/Parent_object
 ---
 指定された {{glossary("property", "プロパティ")}} や {{glossary("method", "メソッド")}} が所属している {{glossary("object", "オブジェクト")}}。
 

@@ -1,16 +1,6 @@
 ---
 title: MediaStream.getTracks()
 slug: Web/API/MediaStream/getTracks
-tags:
-  - API
-  - Experimental
-  - Media Streams API
-  - MediaStream
-  - MediaStreamTrack
-  - Method
-  - リファレンス
-  - getTracks
-browser-compat: api.MediaStream.getTracks
 ---
 {{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 

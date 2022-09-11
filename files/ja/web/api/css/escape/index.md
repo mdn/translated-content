@@ -1,16 +1,6 @@
 ---
 title: CSS.escape()
 slug: Web/API/CSS/escape
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - メソッド
-  - リファレンス
-  - Static
-  - escape()
-browser-compat: api.CSS.escape
-translation_of: Web/API/CSS/escape
 ---
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 

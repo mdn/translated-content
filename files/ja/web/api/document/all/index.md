@@ -1,15 +1,6 @@
 ---
 title: Document.all
 slug: Web/API/Document/all
-tags:
-  - API
-  - DOM
-  - Document
-  - HTMLAllCollection
-  - Property
-  - Reference
-  - all
-translation_of: Web/API/Document/all
 ---
 {{APIRef("DOM")}}{{Deprecated_Header("HTML5")}}
 
@@ -37,4 +28,4 @@ var htmlAllCollection = document.all;
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.all")}}
+{{Compat}}

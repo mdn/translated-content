@@ -12,7 +12,7 @@ original_slug: Web/HTML/Canvas
 ---
 {{CanvasSidebar}}
 
-**Canvas API**는 [JavaScript](/ko/docs/Web/JavaScript)와 [HTML ](/ko/docs/Web/HTML){{HtmlElement("canvas")}} 엘리먼트를 통해 그래픽을 그리기위한 수단을 제공합니다. 무엇보다도 애니메이션, 게임 그래픽, 데이터 시각화, 사진 조작 및 실시간 비디오 처리를 위해 사용됩니다.
+**Canvas API**는 [JavaScript](/ko/docs/Web/JavaScript)와 [HTML](/ko/docs/Web/HTML) {{HtmlElement("canvas")}} 엘리먼트를 통해 그래픽을 그리기위한 수단을 제공합니다. 무엇보다도 애니메이션, 게임 그래픽, 데이터 시각화, 사진 조작 및 실시간 비디오 처리를 위해 사용됩니다.
 
 Canvas API는 주로 2D 그래픽에 중점을 두고 있습니다. [WebGL API](/ko/docs/Web/WebGL) 또한 `<canvas>` 엘리먼트를 사용하며, 하드웨어 가속 2D 및 3D 그래픽을 그립니다.
 
@@ -59,7 +59,7 @@ ctx.fillRect(10, 10, 150, 100);
 - {{domxref("Path2D")}} {{experimental_inline}}
 - {{domxref("ImageBitmapRenderingContext")}} {{experimental_inline}}
 
-> **참고:** **노트:** `WebGLRenderingContext`에 관련된 인터페이스는 [WebGL](/ko/docs/Web/WebGL "/en-US/docs/Web/WebGL") 하위에 참조되어있습니다.
+> **참고:** **노트:** `WebGLRenderingContext`에 관련된 인터페이스는 [WebGL](/ko/docs/Web/WebGL) 하위에 참조되어있습니다.
 
 {{domxref("CanvasCaptureMediaStream")}}은 관련된 인터페이스입니다.
 
@@ -94,7 +94,7 @@ Canvas API는 굉장히 강력하지만, 사용하는 것이 항상 간단하지
 - [Scrawl-canvas](http://scrawl.rikweb.org.uk/)는 2D 캔버스 엘리먼트를 생성하고 조작하기위한 오픈소스 JavaScript 라이브러리입니다.
 - [ZIM](http://zimjs.com) 프레임워크는 canvas에서의 창의적인 코딩을 위한 편의성, 컴포넌트 및 컨트롤을 제공하는 프레임워크입니다. 접근성 및 다채로운 튜토리얼을 포함합니다.
 
-> **참고:** **노트:** WebGL을 사용하는 2D 및 3D를 위한 [WebGL API](/ko/docs/Web/WebGL "/en-US/docs/Web/WebGL")를 확인하세요.
+> **참고:** **노트:** WebGL을 사용하는 2D 및 3D를 위한 [WebGL API](/ko/docs/Web/WebGL)를 확인하세요.
 
 ## 명세
 

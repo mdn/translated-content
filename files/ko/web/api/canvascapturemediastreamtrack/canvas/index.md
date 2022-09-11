@@ -12,7 +12,9 @@ The {{domxref("CanvasCaptureMediaStreamTrack")}} **`canvas`**읽기 전용 속�
 
 ## 구문
 
-    var elt = stream.canvas;
+```js
+var elt = stream.canvas;
+```
 
 ### 값
 

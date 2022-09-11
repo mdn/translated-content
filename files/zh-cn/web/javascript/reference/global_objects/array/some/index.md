@@ -12,8 +12,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/some
 
 ## 语法
 
-```plain
-arr.some(callback(element[, index[, array]])[, thisArg])
+```js
+// 箭头函数
+some((element) => { /* … */ } )
+some((element, index) => { /* … */ } )
+some((element, index, array) => { /* … */ } )
+
+// 回调函数
+some(callbackFn)
+some(callbackFn, thisArg)
+
+// 内联回调函数
+some(function(element) { /* … */ })
+some(function(element, index) { /* … */ })
+some(function(element, index, array){ /* … */ })
+some(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### 参数
@@ -167,9 +180,10 @@ if (!Array.prototype.some) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("Array.prototype.find()")}}
-- {{jsxref("Array.prototype.forEach()")}}
+- [Polyfill of `Array.prototype.some` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.find()")}}
 - {{jsxref("TypedArray.prototype.some()")}}

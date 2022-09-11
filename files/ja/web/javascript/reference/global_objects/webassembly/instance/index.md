@@ -1,13 +1,6 @@
 ---
 title: WebAssembly.Instance
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
-tags:
-  - クラス
-  - JavaScript
-  - リファレンス
-  - WebAssembly
-browser-compat: javascript.builtins.WebAssembly.Instance
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
 ---
 {{JSRef}}
 

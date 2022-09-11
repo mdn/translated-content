@@ -92,11 +92,8 @@ function check_PerformanceEntry(obj) {
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                                                   | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | -------------------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceentry-starttime', 'startTime')}} | {{Spec2('Performance Timeline Level 2')}} |                      |
-| {{SpecName('Performance Timeline', '#dom-performanceentry-starttime', 'startTime')}}         | {{Spec2('Performance Timeline')}}             | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceEntry.startTime")}}
+{{Compat}}

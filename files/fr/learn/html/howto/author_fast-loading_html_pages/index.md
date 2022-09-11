@@ -106,4 +106,4 @@ Notez, cependant, que beaucoup de conseils énumérés dans cette page sont des 
 
 **Document d'information d'origine**
 
-- https\://developer.mozilla.org/en/Tips_for_Authoring_Fast-loading_HTML_Pages
+- <https://developer.mozilla.org/en/Tips_for_Authoring_Fast-loading_HTML_Pages>

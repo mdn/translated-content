@@ -9,7 +9,7 @@ slug: Web/API/Element/mousedown_event
 ## 常规信息
 
 - 规范
-  - [: DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-mousedown)
+  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-mousedown)
 - 接口
   - : {{domxref("MouseEvent")}}
 - 是否冒泡

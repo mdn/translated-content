@@ -1,16 +1,6 @@
 ---
 title: CSSNumericValue
 slug: Web/API/CSSNumericValue
-tags:
-  - API
-  - CSS 型付きオブジェクトモデル API
-  - CSSNumericValue
-  - 実験的
-  - Houdini
-  - インターフェイス
-  - リファレンス
-browser-compat: api.CSSNumericValue
-translation_of: Web/API/CSSNumericValue
 ---
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 

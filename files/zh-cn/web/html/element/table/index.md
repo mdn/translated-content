@@ -160,7 +160,7 @@ slug: Web/HTML/Element/table
 </table>
 ```
 
-{{EmbedLiveSample('简单的表格', '100%', '100', '', 'Web/HTML/Element/table')}}
+{{EmbedLiveSample('简单的表格', '100%', '100')}}
 
 ### 更多例子
 
@@ -266,7 +266,7 @@ border: 1px solid black;
 }
 ```
 
-{{EmbedLiveSample('更多例子', '100%', '700', '', 'Web/HTML/Element/table')}}
+{{EmbedLiveSample('更多例子', '100%', '700')}}
 
 ## Accessibility concerns
 

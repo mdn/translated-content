@@ -1,15 +1,6 @@
 ---
 title: Array.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - メソッド
-  - プロトタイプ
-  - ポリフィル
-browser-compat: javascript.builtins.Array.reduceRight
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 ---
 {{JSRef}}
 

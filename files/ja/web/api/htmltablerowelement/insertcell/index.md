@@ -1,14 +1,6 @@
 ---
 title: HTMLTableRowElement.insertCell()
 slug: Web/API/HTMLTableRowElement/insertCell
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableRowElement
-  - メソッド
-  - リファレンス
-browser-compat: api.HTMLTableRowElement.insertCell
-translation_of: Web/API/HTMLTableRowElement/insertCell
 ---
 {{APIRef("HTML DOM")}}
 

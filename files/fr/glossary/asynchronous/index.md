@@ -14,7 +14,7 @@ Il peut être utilisé pour décrire un environnement de communication humain co
 
 Il peut également être utilisé pour décrire un environnement de communication informatique, par exemple {{domxref("Ajax")}} est un mécanisme asynchrone pour demander de petits bits de données sur HTTP ; le résultat est renvoyé lorsque la réponse est complète, pas immédiatement.
 
-## En apprendre plus
+## Voir aussi
 
 ### Référence technique
 

@@ -1,14 +1,6 @@
 ---
 title: border-bottom-color
 slug: Web/CSS/border-bottom-color
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-bottom-color
-translation_of: Web/CSS/border-bottom-color
 ---
 {{CSSRef}}
 

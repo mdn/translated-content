@@ -10,7 +10,9 @@ The **`endsWith()`** 메서드를 사용하여 어떤 문자열에서 특정 문
 
 ## 문법
 
-    str.endsWith(searchString[, length])
+```js
+str.endsWith(searchString[, length])
+```
 
 ### 파라미터들
 

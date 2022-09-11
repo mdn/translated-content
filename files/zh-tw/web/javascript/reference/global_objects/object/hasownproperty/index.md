@@ -1,9 +1,6 @@
 ---
 title: Object.prototype.hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 ---
 {{JSRef}}
 
@@ -108,8 +105,8 @@ Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
 
 ## 參見
 
-- [Enumerability and ownership of properties](/en-US/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/zh-TW/docs/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Operators/in", "in")}}
-- [JavaScript Guide: Inheritance revisited](/en-US/docs/Web/JavaScript/Guide/Inheritance_Revisited)
+- [JavaScript Guide: Inheritance revisited](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_Revisited)

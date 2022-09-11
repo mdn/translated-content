@@ -122,6 +122,6 @@ Mozilla travaille sur l'intégration des ses propres outils de développement We
 
 - Le composant d'édition (appelé [Midas](/fr/docs/Midas)) [n'accepte désormais que les évènements](/fr/docs/Using_the_Editor_from_XUL#Editor_event_handling) provenant du code privilégié.
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('11')}}

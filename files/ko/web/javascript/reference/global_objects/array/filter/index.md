@@ -25,10 +25,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
 ### 매개변수
 
 - `callback`
-  - : 각 요소를 시험할 함수. `true`를 반환하면 요소를 유지하고, `false`를 반환하면 버립니다. 
-    
+  - : 각 요소를 시험할 함수. `true`를 반환하면 요소를 유지하고, `false`를 반환하면 버립니다.
+
     다음 세 가지 매개변수를 받습니다.
-    
+
     - `element`
       - : 처리할 현재 요소.
     - `index` {{optional_inline}}
@@ -49,9 +49,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
 
 `callback`은 다음 세 인수와 함께 호출됩니다:
 
-1.  요소값
-2.  요소 인덱스
-3.  순회(traverse)되는 배열 객체
+1. 요소값
+2. 요소 인덱스
+3. 순회(traverse)되는 배열 객체
 
 `thisArg` 매개변수가 `filter`에 제공된 경우, 호출될 때 그 값은 `callback`의 `this` 값으로 전달됩니다. 그 이외에, `undefined`값도 `callback`의 `this` 값으로 쓰기 위해 전달됩니다. 결국 `callback`에 의해 관찰될 수 있는 `this` 값은 [`this`를 결정하는 함수의 평소 규칙](/ko/docs/Web/JavaScript/Reference/Operators/this)에 따라 결정됩니다.
 

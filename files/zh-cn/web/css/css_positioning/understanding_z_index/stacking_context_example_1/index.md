@@ -3,7 +3,7 @@ title: Stacking context example 1
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
 original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_context_example_1
 ---
-« [CSS](/en/CSS) « [Understanding CSS z-index](/en/CSS/Understanding_z-index)
+« [CSS](/zh-CN/CSS) « [Understanding CSS z-index](/zh-CN/CSS/Understanding_z-index)
 
 ### Stacking context 层叠上下文 例子 1
 
@@ -32,7 +32,7 @@ original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_context_example_1
 
 > **备注：** DIV #1 和 DIV #3 不是透明的。记住所有设置了 opacity 小于 1 的定位元素都会隐式地生成一个层叠上下文（和给元素增加一个 z-index 值的效果相同）。上述的例子是为了说明，当父元素没有生成一个层叠上下文环境的时候，各元素是怎么层叠的。
 
-## Example
+## 示例
 
 ### HTML
 
@@ -106,16 +106,16 @@ original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_context_example_1
 
 ### Result
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1') }}
+{{ EmbedLiveSample('示例') }}
 
 ### See also
 
-- [Stacking without z-index](/en/CSS/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
-- [Stacking and float](/en/CSS/Understanding_z-index/Stacking_and_float) : How floating elements are handled
-- [Adding z-index](/en/CSS/Understanding_z-index/Adding_z-index) : Using z-index to change default stacking
-- [The stacking context](/en/CSS/Understanding_z-index/The_stacking_context) : Notes on the stacking context
-- [Stacking context example 2](/en/CSS/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarchy, z-index on all levels
-- [Stacking context example 3](/en/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
+- [Stacking without z-index](/zh-CN/CSS/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
+- [Stacking and float](/zh-CN/CSS/Understanding_z-index/Stacking_and_float) : How floating elements are handled
+- [Adding z-index](/zh-CN/CSS/Understanding_z-index/Adding_z-index) : Using z-index to change default stacking
+- [The stacking context](/zh-CN/CSS/Understanding_z-index/The_stacking_context) : Notes on the stacking context
+- [Stacking context example 2](/zh-CN/CSS/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarchy, z-index on all levels
+- [Stacking context example 3](/zh-CN/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
 
 ### Original Document Information
 

@@ -251,15 +251,11 @@ document.addEventListener('keyup', (event) => {
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                       | Commentaire |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('UI Events', '#interface-keyboardevent', 'KeyboardEvent')}} | {{Spec2('UI Events')}} |             |
-
-La spécification d'interface `KeyboardEvent` est passée par de nombreuses versions préliminaires, d'abord sous DOM Events Level 2 où elle a été supprimée du fait qu'aucun consensus n'avait émergé, puis sous DOM Events Level 3. Cela conduit à l'implémentation de méthodes d'initialisation non standard, la version ancienne DOM Events Level 2, {{domxref("KeyboardEvent.initKeyEvent()")}} par les navigateurs Gecko et la version prémiminaire DOM Events Level 3, {{domxref("KeyboardEvent.initKeyboardEvent()")}} par d'autres navigateurs. Tous deux ont été remplacés par l'utilisation moderne d'un constructeur : {{domxref ("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.KeyboardEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

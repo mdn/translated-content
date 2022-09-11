@@ -17,13 +17,11 @@ valeur = window.devicePixelRatio;
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("CSSOM View", "#dom-window-devicepixelratio", "Window.devicePixelRatio")}} | {{Spec2("CSSOM View")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.devicePixelRatio")}}
+{{Compat}}
 
 ## Voir aussi
 

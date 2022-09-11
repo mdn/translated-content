@@ -1,11 +1,6 @@
 ---
 title: label
 slug: Web/JavaScript/Reference/Statements/label
-tags:
-  - JavaScript
-  - Statement
-  - 陳述式
-translation_of: Web/JavaScript/Reference/Statements/label
 ---
 {{jsSidebar("Statements")}}
 

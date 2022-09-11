@@ -5,12 +5,12 @@ translation_of: 'Web/CSS/::after'
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">Em CSS, <strong><code>::after</code></strong> cria um <a href="/pt-BR/docs/Web/CSS/Pseudo-elementos">pseudo-elemento</a> que é o último filho do elemento selecionado. Muitas vezes é usado para adicionar e melhorar o conteúdo de um elemento como a propriedade {{cssxref("content")}}.</span> É inline por padrão.</p>
+<p>Em CSS, <strong><code>::after</code></strong> cria um <a href="/pt-BR/docs/Web/CSS/Pseudo-elementos">pseudo-elemento</a> que é o último filho do elemento selecionado. Muitas vezes é usado para adicionar e melhorar o conteúdo de um elemento como a propriedade {{cssxref("content")}}. É inline por padrão.</p>
 
-<pre class="brush: css no-line-numbers  language-css"><code class="language-css"><span class="comment token">/* Adiciona uma seta após os links */</span>
-<span class="selector token">a<span class="pseudo-class token">::after</span> </span><span class="punctuation token">{</span>
-  <span class="property token">content: "</span></code>→<code class="language-css"><span class="property token">";</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: css">/* Adiciona uma seta após os links */
+a::after {
+  content: "→";
+}</pre>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 

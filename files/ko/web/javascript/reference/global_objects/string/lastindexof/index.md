@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 
 ## 구문
 
-    str.lastIndexOf(searchValue[, fromIndex])
+```js
+str.lastIndexOf(searchValue[, fromIndex])
+```
 
 ### 매개변수
 

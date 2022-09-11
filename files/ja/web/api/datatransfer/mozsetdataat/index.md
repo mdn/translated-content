@@ -1,16 +1,6 @@
 ---
 title: DataTransfer.mozSetDataAt()
 slug: Web/API/DataTransfer/mozSetDataAt
-page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Non-standard
-  - Reference
-  - drag and drop
-  - Deprecated
-browser-compat: api.DataTransfer.mozSetDataAt
-translation_of: Web/API/DataTransfer/mozSetDataAt
 ---
 {{APIRef("HTML Drag and Drop API")}}
 

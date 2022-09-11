@@ -1,15 +1,6 @@
 ---
 title: ':defined'
 slug: Web/CSS/:defined
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.defined
-translation_of: Web/CSS/:defined
 ---
 {{ CSSRef }}
 

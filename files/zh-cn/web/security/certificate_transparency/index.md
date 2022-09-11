@@ -28,7 +28,7 @@ Public-Key-Pins: pin-sha256="base64=="; max-age=expireTime [; includeSubDomains]
 - `report-uri` {{optional_inline}}
   - : 如果指定了此可选参数，则会将引脚验证失败报告给给定的 URL。
 
-> **备注：** 当前规范要求包含第二个用于备份密钥的引脚，该引脚尚未在生产中使用。 这允许更改服务器的公钥，而不会破坏已经记下引脚的客户端的可访问性。 例如，当前一个密钥被泄露时，这很重要。
+> **备注：** 当前规范要求包含第二个用于备份密钥的引脚，该引脚尚未在生产中使用。 这允许更改服务器的公钥，而不会破坏已经记下引脚的客户端的无障碍。 例如，当前一个密钥被泄露时，这很重要。
 
 ### 提取 Base64 编码的公钥信息
 
@@ -70,7 +70,7 @@ Public-Key-Pins:
   report-uri="https://www.example.org/hpkp-report"
 ```
 
-在此示例中，pin-sha256 =“cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2 + soZS7sWs =”固定服务器在生产中使用的公钥。 第二个引脚声明引脚-sha256 =“M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE =”也固定备份密钥。 max-age = 5184000 告诉客户端将此信息存储两个月，根据 IETF RFC，这是一个合理的时间限制。 此密钥固定也适用于所有子域，includeSubDomains 声明告知。 最后，report-uri =“https\://www\.example.net/hpkp-report”解释了报告引脚验证失败的位置。
+在此示例中，`pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="` 固定服务器在生产中使用的公钥。 第二个引脚声明引脚- `sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE="` 也固定备份密钥。 `max-age=5184000` 告诉客户端将此信息存储两个月，根据 IETF RFC，这是一个合理的时间限制。 此密钥固定也适用于所有子域，includeSubDomains 声明告知。 最后，`report-uri="https://www.example.net/hpkp-report"` 解释了报告引脚验证失败的位置。
 
 ### Report-Only header
 

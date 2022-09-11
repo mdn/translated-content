@@ -1,18 +1,6 @@
 ---
 title: Array.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
-tags:
-  - Array
-  - 配列メソッド
-  - ECMAScript 5
-  - JavaScript
-  - メソッド
-  - プロトタイプ
-  - Reduce
-  - リファレンス
-  - ポリフィル
-browser-compat: javascript.builtins.Array.reduce
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/reduce
 ---
 {{JSRef}}
 

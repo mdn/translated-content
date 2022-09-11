@@ -16,31 +16,30 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/length
 
 形参的数量不包括剩余参数个数，仅包括第一个具有默认值之前的参数个数。
 
-与之对比的是， {{jsxref("Functions_and_function_scope/arguments/length", "arguments.length")}} 是函数被调用时实际传参的个数。
+与之对比的是，{{jsxref("Functions_and_function_scope/arguments/length", "arguments.length")}} 是函数被调用时实际传参的个数。
 
 ### `Function` 构造器的属性
 
-{{jsxref("Function")}} 构造器本身也是个[Function](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)。他的 `length` 属性值为 1 。该属性 Writable: `false`, Enumerable: `false`, Configurable: `true`.
+{{jsxref("Function")}} 构造器本身也是个 [Function](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)。它的 `length` 属性值为 1。
 
 ### `Function`.prototype 对象的属性
 
-{{jsxref("Function.prototype")}} 对象的 length 属性值为 0 。
+{{jsxref("Function.prototype")}} 对象的 `length` 属性值为 0 。
 
 ## 示例
 
 ```js
-console.log(Function.length); /* 1 */
+console.log(Function.length); // 1
 
-console.log((function()        {}).length); /* 0 */
-console.log((function(a)       {}).length); /* 1 */
-console.log((function(a, b)    {}).length); /* 2 etc. */
+console.log((() => {}).length); // 0
+console.log(((a) => {}).length); // 1
+console.log(((a, b) => {}).length); // 2 etc.
 
-console.log((function(...args) {}).length);
-// 0, rest parameter is not counted
+console.log(((...args) => {}).length);
+// 0, 剩余参数不计算在内
 
-console.log((function(a, b = 1, c) {}).length);
-// 1, only parameters before the first one with
-// a default value is counted
+console.log(((a, b = 1, c) => {}).length);
+// 1, 只有第一个具有默认值的参数之前的参数才会被计算
 ```
 
 ## 规范

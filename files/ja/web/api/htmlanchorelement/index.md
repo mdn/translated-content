@@ -1,14 +1,6 @@
 ---
 title: HTMLAnchorElement
 slug: Web/API/HTMLAnchorElement
-page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.HTMLAnchorElement
-translation_of: Web/API/HTMLAnchorElement
 ---
 {{APIRef("HTML DOM")}}
 
@@ -39,7 +31,7 @@ _親である {{domxref("HTMLElement")}} からプロパティを継承してい
 - {{domxref("HTMLAnchorElement.password")}}
   - : ドメイン名の前に指定されたパスワードを含む文字列を返します。
 - {{domxref("HTMLAnchorElement.pathname")}}
-  - : 最初の `'/'` に続き、クエリー文字列やフラグメントを含まない URL のパスを含む文字列です。。
+  - : 最初の `'/'` に続き、クエリー文字列やフラグメントを含まない URL のパスを含む文字列です。
 - {{domxref("HTMLAnchorElement.port")}}
   - : 文字列で、参照する URL のポート番号部分がある場合は、それを表します。
 - {{domxref("HTMLAnchorElement.protocol")}}

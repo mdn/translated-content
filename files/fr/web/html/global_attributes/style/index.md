@@ -45,17 +45,11 @@ L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`style`** conti
 
 ## Spécifications
 
-| Spécification                                                                                | État                             | Commentaires                                                                                                                                                                                                                                                                                                                                                                                    |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "dom.html#the-style-attribute", "style")}} | {{Spec2('HTML WHATWG')}} | Aucune modification depuis la dernière dérivation de {{SpecName('HTML5.1')}}                                                                                                                                                                                                                                                                                                           |
-| {{SpecName('HTML5.1', "dom.html#the-style-attribute", "style")}}         | {{Spec2('HTML5.1')}}     | Dérivée de {{SpecName('HTML WHATWG')}}, aucune modification depuis {{SpecName('HTML5 W3C')}}                                                                                                                                                                                                                                                                                    |
-| {{SpecName('HTML5 W3C', "dom.html#the-style-attribute", "style")}}     | {{Spec2('HTML5 W3C')}}     | Dérivée de {{SpecName('HTML WHATWG')}}. Depuis {{SpecName("HTML4.01")}}, cet attribut est désormais un attribut universel.                                                                                                                                                                                                                                                     |
-| {{SpecName('HTML4.01', 'present/styles.html#h-14.2.2', 'style')}}     | {{Spec2('HTML4.01')}}     | Cet attribut est pris en charge par tous les éléments à l'exception de {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, et {{HTMLElement("title")}}. |
-| {{SpecName("CSS3 Style", "", "")}}                                                 | {{Spec2("CSS3 Style")}} | Définition du contenu pour l'attribut `style`.                                                                                                                                                                                                                                                                                                                                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.style")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,11 +1,6 @@
 ---
 title: Attribute (属性)
 slug: Glossary/Attribute
-tags:
-  - CodingScripting
-  - Glossary
-  - HTML
-translation_of: Glossary/Attribute
 ---
 **属性** (attribute) 属性は{{Glossary("element", "要素")}}を拡張し、動作を変更したりメタデータを提供したりします。
 

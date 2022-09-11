@@ -1,15 +1,6 @@
 ---
 title: FocusEvent.relatedTarget
 slug: Web/API/FocusEvent/relatedTarget
-tags:
-  - API
-  - イベント
-  - 実験的
-  - FocusEvent
-  - プロパティ
-  - リファレンス
-browser-compat: api.FocusEvent.relatedTarget
-translation_of: Web/API/FocusEvent/relatedTarget
 ---
 {{ apiref("DOM Events") }}
 

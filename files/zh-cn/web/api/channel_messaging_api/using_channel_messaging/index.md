@@ -128,17 +128,11 @@ function onMessage(e) {
 
 ## 规范
 
-{{Specifications("api.MessageChannel")}}
+{{Specifications}}
 
 ## 浏览器兼容性
 
-### `MessageChannel`
-
-{{Compat("api.MessageChannel", 0)}}
-
-### `MessagePort`
-
-{{Compat("api.MessagePort", 0)}}
+{{Compat}}
 
 ## 参见
 

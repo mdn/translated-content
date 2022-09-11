@@ -1,16 +1,6 @@
 ---
 title: ':first'
 slug: Web/CSS/:first
-tags:
-  - '@page'
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - Reference
-  - セレクター
-  - Web
-browser-compat: css.selectors.first
-translation_of: Web/CSS/:first
 ---
 {{CSSRef}}
 

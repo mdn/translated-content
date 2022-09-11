@@ -1,29 +1,6 @@
 ---
 title: Element.getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
-tags:
-  - API
-  - 境界
-  - Bounding
-  - Bounds
-  - CSSOM View
-  - Client
-  - Containing
-  - DOM
-  - Element
-  - Enclosing
-  - メソッド
-  - Minimum
-  - 長方形
-  - リファレンス
-  - Smallest
-  - clientHeight
-  - getBoundingClientRect
-  - getClientRects
-  - offsetHeight
-  - scrollHeight
-browser-compat: api.Element.getBoundingClientRect
-translation_of: Web/API/Element/getBoundingClientRect
 ---
 {{APIRef("DOM")}}
 

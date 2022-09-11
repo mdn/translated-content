@@ -1,7 +1,6 @@
 ---
 title: Object.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 ---
 {{JSRef}}
 
@@ -108,7 +107,7 @@ Object.defineProperty(obj, 'key', withValue('static'));
 
 ## 範例
 
-If you want to see how to use the `Object.defineProperty` method with a _binary-flags-like_ syntax, see [additional examples](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples).
+If you want to see how to use the `Object.defineProperty` method with a _binary-flags-like_ syntax, see [additional examples](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples).
 
 ### 建立屬性
 

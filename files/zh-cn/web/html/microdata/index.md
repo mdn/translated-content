@@ -137,7 +137,7 @@ slug: Web/HTML/Microdata
 
 ### Result
 
-{{ EmbedLiveSample('HTML', '', '100', '', 'Web/HTML/Microdata') }}
+{{ EmbedLiveSample('示例', '', '100') }}
 
 > **备注：** 从 HTML 中提取微数据结构的便捷工具是 Google 的[Structured Data Testing Tool](<https://developers.google.com/structured-data/testing-tool/ Structured Data Testing Tool>)。在上面显示的 HTML 上尝试一下。
 

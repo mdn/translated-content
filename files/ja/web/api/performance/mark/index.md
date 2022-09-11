@@ -1,13 +1,6 @@
 ---
 title: performance.mark()
 slug: Web/API/Performance/mark
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - ウェブパフォーマンス
-browser-compat: api.Performance.mark
-translation_of: Web/API/Performance/mark
 ---
 {{APIRef("User Timing API")}}
 
@@ -37,7 +30,7 @@ performance.mark(measureName, markOptions)
     - `detail`
       - : マークに含める任意のメタデータです。
     - `startTime`
-      - : マークの時刻として使用する {{domxref("DOMHighResTimeStamp")}} desu.
+      - : マークの時刻として使用する {{domxref("DOMHighResTimeStamp")}} です。
 
 ### 返値
 

@@ -1,7 +1,6 @@
 ---
 title: Promise.race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
 ---
 {{JSRef}}
 
@@ -96,7 +95,7 @@ setTimeout(function(){
 // Promise { <state>: "fulfilled", <value>: "non-Promise value" }
 ```
 
-### 使用 `Promise.race` – 及 [`setTimeout`](/en-US/docs/Web/API/setTimeout) 的範例
+### 使用 `Promise.race` – 及 [`setTimeout`](/zh-TW/docs/Web/API/setTimeout) 的範例
 
 ```js
 var p1 = new Promise(function(resolve, reject) {

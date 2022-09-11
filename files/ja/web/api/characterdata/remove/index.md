@@ -1,11 +1,6 @@
 ---
 title: CharacterData.remove()
 slug: Web/API/CharacterData/remove
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.CharacterData.remove
-translation_of: Web/API/CharacterData/remove
 ---
 {{APIRef("DOM")}}
 

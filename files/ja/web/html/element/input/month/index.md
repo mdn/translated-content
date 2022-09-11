@@ -1,22 +1,6 @@
 ---
 title: <input type="month">
 slug: Web/HTML/Element/input/month
-tags:
-  - Date picker
-  - 要素
-  - Form input
-  - フォーム
-  - HTML
-  - HTML フォーム
-  - HTML input
-  - Input
-  - 入力要素
-  - 入力型
-  - Number
-  - リファレンス
-  - month
-browser-compat: html.elements.input.input-month
-translation_of: Web/HTML/Element/input/month
 ---
 
 {{HTMLRef("Input_types")}}
@@ -273,7 +257,7 @@ input:valid+span:after {
 > HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。
 > サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ (または大きすぎるデータ、誤った種類のデータなど) が送信された場合に障害が発生するおそれがあります。
 
-## ブラウザーの対応の扱い
+## ブラウザーの互換性の扱い
 
 前述のように、現時点で日付入力を書く上で一番の問題は、多くの主要なブラウザーがまだすべてを実装している訳ではないということです。デスクトップでは Chrome/Opera と Edge のみが対応しており、モバイルでは多くの最新のブラウザーが対応しています。
 例えば、 `month` の選択画面は Android 版 Chrome ではこのように表示されます。

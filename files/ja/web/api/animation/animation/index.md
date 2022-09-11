@@ -1,15 +1,6 @@
 ---
 title: Animation()
 slug: Web/API/Animation/Animation
-tags:
-  - API
-  - Animation
-  - アニメーション
-  - コンストラクター
-  - リファレンス
-  - ウェブアニメーション API
-browser-compat: api.Animation.Animation
-translation_of: Web/API/Animation/Animation
 ---
 {{ APIRef("Web Animations API") }}
 

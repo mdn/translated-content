@@ -18,7 +18,7 @@ slug: Web/API/Channel_Messaging_API
 
 当你想要停止通过信道发送消息时，你可以调用来关闭 {{domxref("MessagePort.close")}} 端口。
 
-更多使用这个 API 的资料参见：[Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging) 。
+更多使用这个 API 的资料参见：[Using channel messaging](/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging) 。
 
 ## Channel 通信接口
 
@@ -34,22 +34,16 @@ slug: Web/API/Channel_Messaging_API
 - 我们在 Github 上发布了 [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic)，在[这里](http://mdn.github.io/dom-examples/channel-messaging-basic/)直接尝试。这个例子展示了一次页面和嵌入 {{htmlelement("iframe")}} 间的真实而简易的消息传递。
 - 你也可以参考 [多个消息 demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-multimessage) ([在线演示](http://mdn.github.io/dom-examples/channel-messaging-multimessage/))。这个例子展示了稍微复杂些的设置，可以在主页面和 IFrame 之间传递多条消息。
 
-## 规格
+## 规范
 
-{{Specifications("api.MessageChannel")}}
+{{Specifications}}
 
 ## 浏览器兼容性
 
-### `MessageChannel`
-
-{{Compat("api.MessageChannel", 0)}}
-
-### `MessagePort`
-
-{{Compat("api.MessagePort", 0)}}
+{{Compat}}
 
 ## 参见
 
-- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
-- [Web Workers API](/en-US/docs/Web/API/Web_Workers_API)
-- [Broadcast Channel API](/en-US/docs/Web/API/Broadcast_Channel_API)
+- [Using channel messaging](/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Web Workers API](/zh-CN/docs/Web/API/Web_Workers_API)
+- [Broadcast Channel API](/zh-CN/docs/Web/API/Broadcast_Channel_API)

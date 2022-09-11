@@ -10,7 +10,7 @@ original_slug: Web/CSS/Modelo_Visual
 ---
 <p>{{CSSRef}}</p>
 
-<p class="summary"><span class="seoSummary">The CSS <em>visual formatting model</em> is an algorithm that processes a document and displays it on visual media. This model is a basic concept of CSS. </span></p>
+<p class="summary">The CSS <em>visual formatting model</em> is an algorithm that processes a document and displays it on visual media. This model is a basic concept of CSS. </p>
 
 <p>The visual formatting model transforms each element of the document and generates zero, one, or several boxes that conform to the CSS box model. The layout of each box is defined by:</p>
 
@@ -107,7 +107,7 @@ followed by more inline text.
 <div class="note"><strong>Note:</strong> Initially, atomic inline-level boxes were called atomic inline boxes. This was unfortunate, as they are <strong>not</strong> inline boxes. This was corrected in an erratum to the spec. Nevertheless, you can harmlessly read atomic inline-level box each time you meet atomic inline box in the literature, as this is only a name change.</div>
 
 <div class="note">Atomic inline boxes cannot be split into several lines in an inline formatting context.
-<div style="-moz-column-width: 30em;">
+
 <pre>&lt;style&gt;
   span {
     display:inline; /* default value*/
@@ -121,7 +121,7 @@ followed by more inline text.
 
 <p>which leads to:</p>
 
-<div style="width: 20em;">The text in the span <span>can be split into several lines as it</span> is an inline box.</div>
+<div style="width: 20em;">The text in the span can be split into several lines as it is an inline box.</div>
 
 <pre>&lt;style&gt;
   span {
@@ -136,8 +136,7 @@ followed by more inline text.
 
 <p>which leads to:</p>
 
-<div style="width: 20em;">The text in the span <span style="display: inline-block;">cannot be split into several lines as it</span> is an inline-block box.</div>
-</div>
+<div style="width: 20em;">The text in the span cannot be split into several lines as it is an inline-block box.</div>
 </div>
 
 <h4 id="Anonymous_inline_boxes">Anonymous inline boxes</h4>
@@ -162,7 +161,7 @@ followed by more inline text.
 
 <div class="note"><strong>Note:</strong> Run-in boxes were removed from the CSS 2.1 standard, as they were insufficiently specified to allow for interoperable implementation. They may reappear in CSS3, but meanwhile, are considered <em>experimental</em>. They should not be used in production.</div>
 
-<h4 class="note" id="Model-induced_boxes">Model-induced boxes</h4>
+<h4 id="Model-induced_boxes">Model-induced boxes</h4>
 
 <p>Besides the inline and block formatting contexts, CSS specifies several additional <em>content models</em> that may be applied to elements. These additional models, used to describe specific layouts, may define additional box types:</p>
 
@@ -199,9 +198,9 @@ When in the normal flow, in an inline formatting context, boxes are laid horizon
 <p class="note">There are two sub-cases of the normal flow: static positioning and relative positioning:</p>
 
 <ul>
- <li class="note">In <em>static positioning</em>, triggered by the value <code>static</code> of the {{ cssxref("position") }} property, the boxes are drawn at the exact position defined by the normal flow layout.<br>
+ <li>In <em>static positioning</em>, triggered by the value <code>static</code> of the {{ cssxref("position") }} property, the boxes are drawn at the exact position defined by the normal flow layout.<br>
   [image]</li>
- <li class="note">In <em>relative</em><em> positioning</em>, triggered by the value <code>relative</code> of the {{ cssxref("position") }} property, the boxes are drawn with an offset defined by the {{ cssxref("top") }}, {{ cssxref("bottom") }}, {{ cssxref("left") }} and {{ cssxref("right") }} CSS properties.</li>
+ <li>In <em>relative</em><em> positioning</em>, triggered by the value <code>relative</code> of the {{ cssxref("position") }} property, the boxes are drawn with an offset defined by the {{ cssxref("top") }}, {{ cssxref("bottom") }}, {{ cssxref("left") }} and {{ cssxref("right") }} CSS properties.</li>
 </ul>
 
 <h3 id="Floats">Floats</h3>

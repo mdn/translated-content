@@ -76,19 +76,11 @@ Le [Web Speech API repo](https://github.com/mdn/web-speech-api/) sur GitHub cont
 
 ## Spécifications
 
-| Spécification                            | État                                 | Commentaire         |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Web Speech API')}} | {{Spec2('Web Speech API')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### <i lang="en"><code>SpeechRecognition</code></i>
-
-{{Compat("api.SpeechRecognition", 0)}}
-
-### <i lang="en"><code>SpeechSynthesis</code></i>
-
-{{Compat("api.SpeechSynthesis", 0)}}
+{{Compat}}
 
 ## Voir aussi
 

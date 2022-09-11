@@ -1,14 +1,6 @@
 ---
 title: 데이터 속성 사용하기
 slug: Learn/HTML/Howto/Use_data_attributes
-tags:
-  - HTML
-  - HTML5
-  - 가이드
-  - 예제
-  - 웹
-  - 전용 데이터 속성
-translation_of: Learn/HTML/Howto/Use_data_attributes
 original_slug: Learn/HTML/Howto/데이터_속성_사용하기
 ---
 {{LearnSidebar}}

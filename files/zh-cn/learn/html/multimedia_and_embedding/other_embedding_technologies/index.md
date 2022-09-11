@@ -52,7 +52,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 
 一小段时间之后（20 世纪 90 年代末，21 世纪初），插件技术变得非常受欢迎，例如 [Java Applet](/zh-CN/docs/Glossary/Java) 和
 [Flash](/zh-CN/docs/Glossary/Adobe_Flash)——这些技术允许网络开发者将丰富的内容嵌入到网页中，例如视频和动画等，这些内容不能通过 HTML
-单独实现。嵌入这些技术是通过诸如 [`<object>`](/zh-CN/docs/Web/HTML/Element/object) 和较少使用的 [`<embed>`](/zh-CN/docs/Web/HTML/Element/embed) 元素来实现的，当时它们非常有用。由于许多问题，包括可访问性、安全性、文件大小等，它们已经过时了; 如今，大多数移动设备不再支持这些插件，桌面端也逐渐不再支持。
+单独实现。嵌入这些技术是通过诸如 [`<object>`](/zh-CN/docs/Web/HTML/Element/object) 和较少使用的 [`<embed>`](/zh-CN/docs/Web/HTML/Element/embed) 元素来实现的，当时它们非常有用。由于许多问题，包括无障碍、安全性、文件大小等，它们已经过时了; 如今，大多数移动设备不再支持这些插件，桌面端也逐渐不再支持。
 
 最后，[`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe) 元素出现了（连同其他嵌入内容的方式，如
 [`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas)、[`<video>`](/zh-CN/docs/Web/HTML/Element/video) 等），它提供了一种将整个 web
@@ -139,7 +139,7 @@ Youtube 如何让我们通过[`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe)�
 
 一个快速的例子——尝试在浏览器中加载上面的例子——你也可以[在
 Github 上找到它](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)（[参见源代码](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)）。你将不会看到任何内容，但如果你点击[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)中的*控制台*，你会看到一条消息，告诉你为什么没有显示内容。在
-Firefox 中，你会*被告知：“X-Frame-Options 拒绝加载 https\://developer.mozilla.org/zh-CN/docs/Glossary”*。这是因为构建 MDN
+Firefox 中，你会*被告知：“X-Frame-Options 拒绝加载 `https\://developer.mozilla.org/zh-CN/docs/Glossary`*。这是因为构建 MDN
 的开发人员已经在网站页面的服务器上设置了一个不允许被嵌入到`<iframe>`的设置（请参阅[配置 CSP 指令](#配置_csp_指令)）这是有必要的——整个
 MDN 页面被嵌入在其它页面中没有多大意义，除非你想要将其嵌入到你的网站上并将其声称为自己的内容，或尝试通过单击劫持来窃取数据，这都是非常糟糕的事情。此外，如果每个人都这样做，所有额外的带宽将花费 Mozilla
 很多资金。
@@ -237,7 +237,7 @@ Flash 影片的示例（请参阅此处的[Github](https://mdn.github.io/learnin
 </object>
 ```
 
-PDF 是纸与数据之间重要的阶梯，但它们[在可访问性上有些问题](https://webaim.org/techniques/acrobat/acrobat)[，](https://webaim.org/techniques/acrobat/acrobat)并且可能难以在小屏幕上阅读。它们在一些圈子中仍然受欢迎，我们最好是用链接指向它们，而不是将其嵌入到网页中，以便它们可以在单独的页面上被下载或被阅读。
+PDF 是纸与数据之间重要的阶梯，但它们[在无障碍上有些问题](https://webaim.org/techniques/acrobat/acrobat)[，](https://webaim.org/techniques/acrobat/acrobat)并且可能难以在小屏幕上阅读。它们在一些圈子中仍然受欢迎，我们最好是用链接指向它们，而不是将其嵌入到网页中，以便它们可以在单独的页面上被下载或被阅读。
 
 ### 针对插件的情况
 
@@ -245,7 +245,7 @@ PDF 是纸与数据之间重要的阶梯，但它们[在可访问性上有些问
 技术已经变得更加强大，那些日子已经结束了。对于大多数应用程序，现在是停止依赖插件传播内容，开始利用 Web 技术的时候了。
 
 - **扩大你对大家的影响力**。每个人都有一个浏览器，但插件越来越少，特别是在移动用户中。由于 Web 在很大程度上不需要依赖插件而运行，所以人们宁愿只是去竞争对手的网站而不是安装插件。
-- **从 Flash 和其他插件附带的[额外的可访问性问题](https://webaim.org/techniques/flash/)中摆脱**。
+- **从 Flash 和其他插件附带的[额外的无障碍问题](https://webaim.org/techniques/flash/)中摆脱**。
 - **避免额外的安全隐患**。即使经过无数次补丁[，](http://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53) Adobe Flash 也是[非常不安全的](http://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53)。2015
   年，Facebook 的首席安全官 Alex Stamos 甚至[要求 Adobe 停止
   Flash。](http://www.theverge.com/2015/7/13/8948459/adobe-flash-insecure-says-facebook-cso)

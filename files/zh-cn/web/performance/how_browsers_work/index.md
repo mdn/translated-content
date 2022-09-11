@@ -146,7 +146,7 @@ CSSOM 树包括来自用户代理样式表的样式。浏览器从适用于节�
 
 #### 构建辅助功能树
 
-浏览器还构建辅助设备用于分析和解释内容的辅助功能（[accessibility](/zh-CN/docs/Learn/Accessibility)）树。可访问性对象模型（AOM）类似于 DOM 的语义版本。当 DOM 更新时，浏览器会更新辅助功能树。辅助技术本身无法修改可访问性树。
+浏览器还构建辅助设备用于分析和解释内容的辅助功能（[accessibility](/zh-CN/docs/Learn/Accessibility)）树。无障碍对象模型（AOM）类似于 DOM 的语义版本。当 DOM 更新时，浏览器会更新辅助功能树。辅助技术本身无法修改无障碍树。
 
 在构建 AOM 之前，屏幕阅读器（[screen readers](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide)）无法访问内容。
 

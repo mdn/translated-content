@@ -13,7 +13,7 @@ ECMAScript 2015 (ES6)에는 새로운 문법이나 built-in 뿐만이 아니라,
 
 **iterable** protocol 은 JavaScript 객체들이, 예를 들어 {{jsxref("Statements/for...of", "for..of")}} 구조에서 어떠한 value 들이 loop 되는 것과 같은 iteration 동작을 정의하거나 사용자 정의하는 것을 허용합니다. 다른 type 들({{jsxref("Object")}} 와 같은)이 그렇지 않은 반면에, 어떤 built-in type 들은 {{jsxref("Array")}} 또는 {{jsxref("Map")}} 과 같은 default iteration 동작으로 [built-in iterables](#Builtin_iterables) 입니다.
 
-**iterable** 하기 위해서 object는 **@@iterator** 메소드를 구현해야 합니다. 이것은 object (또는 [prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) 의 오브젝트 중 하나) 가 `{{jsxref("Symbol.iterator")}} `key 의 속성을 가져야 한다는 것을 의미합니다 :
+**iterable** 하기 위해서 object는 **@@iterator** 메소드를 구현해야 합니다. 이것은 object (또는 [prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) 의 오브젝트 중 하나) 가 {{jsxref("Symbol.iterator")}} `key` 의 속성을 가져야 한다는 것을 의미합니다 :
 
 | Property            | Value                                                                                                                                                                      |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

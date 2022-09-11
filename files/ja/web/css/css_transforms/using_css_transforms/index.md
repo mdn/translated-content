@@ -1,19 +1,6 @@
 ---
 title: CSS 座標変換の使用
 slug: Web/CSS/CSS_Transforms/Using_CSS_transforms
-tags:
-  - 3D
-  - Advanced
-  - CSS
-  - CSS 座標変換
-  - グラフィック
-  - ガイド
-  - 回転
-  - 拡大縮小
-  - Scaling
-  - perspective
-  - rotation
-translation_of: Web/CSS/CSS_Transforms/Using_CSS_transforms
 ---
 {{CSSRef}}
 

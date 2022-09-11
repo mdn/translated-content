@@ -1,13 +1,6 @@
 ---
 title: NDEFReadingEvent.NDEFReadingEvent()
 slug: Web/API/NDEFReadingEvent/NDEFReadingEvent
-tags:
-  - API
-  - コンストラクター
-  - リファレンス
-  - NDEFReadingEvent
-browser-compat: api.NDEFReadingEvent.NDEFReadingEvent
-translation_of: Web/API/NDEFReadingEvent/NDEFReadingEvent
 ---
 {{securecontext_header}}{{APIRef()}}
 
@@ -45,7 +38,7 @@ new NDEFReadingEvent(type, options);
           - : 有効な [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)です。
         - `recordType`
 
-          - : `data` に格納されているデータの種類を示す文字列です。。以下の値のいずれかでなければなりません。
+          - : `data` に格納されているデータの種類を示す文字列です。以下の値のいずれかでなければなりません。
 
             - `"absolute-url"`
 

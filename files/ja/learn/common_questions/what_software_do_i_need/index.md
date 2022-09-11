@@ -1,11 +1,6 @@
 ---
 title: ウェブサイトを作るのにどんなソフトウェアが必要？
 slug: Learn/Common_questions/What_software_do_I_need
-tags:
-  - Beginner
-  - NeedsActiveLearning
-  - WebMechanics
-translation_of: Learn/Common_questions/What_software_do_I_need
 ---
 <div class="summary">
 この記事では、ウェブサイトを編集、アップロード、または閲覧するときに必要なソフトウェアについて説明します。
@@ -248,7 +243,7 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 ### ウェブサイトの閲覧
 
-ご存知の通り、ウェブサイトを閲覧するためにはウェブブラウザーが必要です。 私用でブラウザー使う時には、[たくさんのブラウザー](https://ja.wikipedia.org/wiki/ウェブブラウザの一覧)の選択肢がありますが、あなたがウェブサイトを開発している時には、あなたのウェブサイトがほとんどの人々のために働くことを確認するために、少なくとも以下のブラウザーで動作確認、テストをする必要があります。
+ご存知の通り、ウェブサイトを閲覧するためにはウェブブラウザーが必要です。 私用でブラウザー使う時には、[たくさんのブラウザー](https://ja.wikipedia.org/wiki/ウェブブラウザーの一覧)の選択肢がありますが、あなたがウェブサイトを開発している時には、あなたのウェブサイトがほとんどの人々のために働くことを確認するために、少なくとも以下のブラウザーで動作確認、テストをする必要があります。
 
 - [Mozilla Firefox](https://www.mozilla.org/ja/firefox/new/)
 - [Google Chrome](https://www.google.com/chrome/)

@@ -1,14 +1,6 @@
 ---
 title: UIEvent.initUIEvent()
 slug: Web/API/UIEvent/initUIEvent
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - Event
-  - Method
-  - UIEvent
-browser-compat: api.UIEvent.initUIEvent
 ---
 {{APIRef("DOM Events")}} {{deprecated_header}}
 

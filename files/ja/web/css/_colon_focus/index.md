@@ -1,16 +1,6 @@
 ---
 title: ':focus'
-slug: 'Web/CSS/:focus'
-tags:
-  - ':focus'
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.focus
-translation_of: 'Web/CSS/:focus'
+slug: Web/CSS/:focus
 ---
 {{CSSRef}}
 

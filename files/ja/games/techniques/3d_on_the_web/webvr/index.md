@@ -1,12 +1,6 @@
 ---
 title: WebVR — ウェブによる仮想現実
 slug: Games/Techniques/3D_on_the_web/WebVR
-tags:
-  - 3D
-  - Games
-  - WebGL
-  - WebVR
-translation_of: Games/Techniques/3D_on_the_web/WebVR
 ---
 {{GamesSidebar}}
 

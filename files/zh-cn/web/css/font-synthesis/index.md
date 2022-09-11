@@ -33,7 +33,7 @@ slug: Web/CSS/font-synthesis
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -59,7 +59,7 @@ em {
 
 ### 结果
 
-{{ EmbedLiveSample('Examples', '', '50', '', 'Web/CSS/font-synthesis') }}
+{{ EmbedLiveSample('示例', '', '50') }}
 
 ## 规范
 

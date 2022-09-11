@@ -139,30 +139,11 @@ Aucune fonctionnalité de vérification native côté client n'est implémentée
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td>Spécification</td>
-      <td>État</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'forms.html#reset-button-state-(type=reset)', '&lt;input type="reset"&gt;')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5 W3C', 'forms.html#reset-button-state-(type=reset)', '&lt;input type="reset"&gt;')}}
-      </td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.input.input-reset")}}
+{{Compat}}
 
 ## Voir aussi
 

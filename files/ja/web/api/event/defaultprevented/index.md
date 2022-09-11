@@ -1,12 +1,6 @@
 ---
 title: Event.defaultPrevented
 slug: Web/API/Event/defaultPrevented
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - 読み取り専用
-browser-compat: api.Event.defaultPrevented
-translation_of: Web/API/Event/defaultPrevented
 ---
 {{ APIRef("DOM") }}
 

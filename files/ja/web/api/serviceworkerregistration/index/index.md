@@ -1,17 +1,6 @@
 ---
 title: ServiceWorkerRegistration.index
 slug: Web/API/ServiceWorkerRegistration/index
-tags:
-  - Content
-  - Content Index API
-  - Index
-  - PWA
-  - プロパティ
-  - ServiceWorker
-  - ServiceWorkerRegistration
-  - content index
-  - content indexing
-browser-compat: api.ServiceWorkerRegistration.index
 ---
 {{APIRef("Service Workers API")}}
 

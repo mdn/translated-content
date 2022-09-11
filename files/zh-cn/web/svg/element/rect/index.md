@@ -12,36 +12,21 @@ slug: Web/SVG/Element/rect
 
 ## 示例
 
-### 简单矩形
+```css hidden
+html,body,svg { height:100% }
+```
 
-```xml
-<?xml version="1.0"?>
-<svg width="120" height="120"
-     viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg">
+```html
+<svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simple rectangle -->
+  <rect width="100" height="100" />
 
-  <rect x="10" y="10" width="100" height="100"/>
+  <!-- Rounded corner rectangle -->
+  <rect x="120" width="100" height="100" rx="15" />
 </svg>
 ```
 
-» [rect-1.svg](https://mdn.mozillademos.org/files/8893/rect-1.svg)
-
-### 圆角矩形
-
-```xml
-<?xml version="1.0"?>
-<svg width="120" height="120"
-     viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg">
-
-  <rect x="10" y="10"
-        width="100" height="100"
-        rx="15" ry="15"/>
-
-</svg>
-```
-
-» [rect-2.svg](https://mdn.mozillademos.org/files/8897/rect-2.svg)
+{{EmbedLiveSample('示例', 100, '100%')}}
 
 ## 属性
 

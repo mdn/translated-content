@@ -1,15 +1,6 @@
 ---
 title: Performance.timeOrigin
 slug: Web/API/Performance/timeOrigin
-tags:
-  - API
-  - 実験的
-  - 高解像度時間 API
-  - パフォーマンス
-  - プロパティ
-  - リファレンス
-  - timeOrigin
-translation_of: Web/API/Performance/timeOrigin
 ---
 {{SeeCompatTable}}{{APIRef("High Resolution Time")}}
 

@@ -16,7 +16,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 
 ## 구문
 
-    Object.fromEntries(iterable);
+```js
+Object.fromEntries(iterable);
+```
 
 ### 매개변수
 

@@ -72,25 +72,25 @@ Todo el código de los ejemplos propuestos en el área de aprendizaje se encuent
 
 Si prefieres copiar el código de una forma más flexible que te permita actualizaciones automáticas, puedes seguir estas instrucciones más complejas:
 
-1.  [Instala Git](https://git-scm.com/downloads) en tu máquina. Este es el sistema de control de versiones de software con el que trabaja GitHub principalmente.
-2.  Abre tu [consola de comandos](https://www.lifewire.com/how-to-open-command-prompt-2618089) (Windows) o terminal ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [MacOS X](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line))
-3.  Para copiar el repositorio del área de aprendizaje a un directorio llamado `learning-area` en la ubicación actual, en la ventana de tu Terminal o en la línea de comandos, debes usar el siguiente comando.
+1. [Instala Git](https://git-scm.com/downloads) en tu máquina. Este es el sistema de control de versiones de software con el que trabaja GitHub principalmente.
+2. Abre tu [consola de comandos](https://www.lifewire.com/how-to-open-command-prompt-2618089) (Windows) o terminal ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [MacOS X](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line))
+3. Para copiar el repositorio del área de aprendizaje a un directorio llamado `learning-area` en la ubicación actual, en la ventana de tu Terminal o en la línea de comandos, debes usar el siguiente comando.
 
     ```bash
     git clone https://github.com/mdn/learning-area
     ```
 
-4.  Ahora puedes entrar en el directorio y encontrar todos los archivos que descargaste (posiblemente con el explorador de archivos o el [comando `cd`](https://es.wikipedia.org/wiki/Chdir)).
+4. Ahora puedes entrar en el directorio y encontrar todos los archivos que descargaste (posiblemente con el explorador de archivos o el [comando `cd`](https://es.wikipedia.org/wiki/Chdir)).
 
 Puedes actualizar el repositorio `learning-area` con los últimos cambios que se hayan hecho a la versión principal en GitHub con los siguientes pasos:
 
-1.  En tu intérprete de comandos/terminal, ve dentro del directorio `learning-area` usando `cd`. Por ejemplo, si estuvieras en el directorio padre:
+1. En tu intérprete de comandos/terminal, ve dentro del directorio `learning-area` usando `cd`. Por ejemplo, si estuvieras en el directorio padre:
 
     ```bash
     cd learning-area
     ```
 
-2.  Puedes realizar actualizaciones al repositorio usando el siguiente comando:
+2. Puedes realizar actualizaciones al repositorio usando el siguiente comando:
 
     ```bash
     git pull

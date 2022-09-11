@@ -1,19 +1,6 @@
 ---
 title: Document.lastStyleSheetSet
 slug: Web/API/Document/lastStyleSheetSet
-page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - DOM
-  - Document
-  - プロパティ
-  - リファレンス
-  - スタイルシート
-  - lastStyleSheetSet
-  - 非推奨
-browser-compat: api.Document.lastStyleSheetSet
-translation_of: Web/API/Document/lastStyleSheetSet
 ---
 {{APIRef("DOM")}}{{deprecated_header}}
 

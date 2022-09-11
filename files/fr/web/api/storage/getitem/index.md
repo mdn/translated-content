@@ -50,13 +50,11 @@ function setStyles() {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-getitem', 'Storage.getItem')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Storage.getItem")}}
+{{Compat}}
 
 ## Voir aussi
 

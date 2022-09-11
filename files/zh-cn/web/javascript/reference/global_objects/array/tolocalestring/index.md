@@ -10,8 +10,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 
 ## 语法
 
-```plain
-arr.toLocaleString([locales[,options]]);
+```js
+toLocaleString();
+toLocaleString(locales);
+toLocaleString(locales, options);
 ```
 
 ### 参数

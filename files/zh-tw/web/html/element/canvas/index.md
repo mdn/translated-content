@@ -1,7 +1,6 @@
 ---
 title: <canvas>
 slug: Web/HTML/Element/canvas
-translation_of: Web/HTML/Element/canvas
 ---
 這個 **HTML `<canvas>` 元素** 可以被使用於對腳本程式(JaveScript) 繪圖 .舉例來說, 它能用來畫圖,組合照片,甚至作動畫. 你也許(應該) 在\<canvas>區段內提供替代方案的內容 .這內容將能被一些不支援\<canvas>以及無法使用 Javescript 功能的瀏覽器所渲染 .
 
@@ -10,7 +9,7 @@ translation_of: Web/HTML/Element/canvas
 | [Content 分類](/zh-TW/docs/HTML/Content_categories) | [流程式 content](/zh-TW/docs/HTML/Content_categories#Flow_content), [段落式 content](/zh-TW/docs/HTML/Content_categories#Phrasing_content), [強調式 content](/zh-TW/docs/HTML/Content_categories#Embedded_content), 可見式 content. |
 | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 被允許通過的內容                                    | 除了子元素不是 \<a>的元素、 \<button>的元素、\<input>的元素屬性是`checkbox`, `radio`, 或 `button` 之外且是透明內容模型但不是[互動式 content](/zh-TW/docs/HTML/Content_categories#Interactive_content)                               |
-| Tag 省略                                            | 不能省略標籤<canvas> </canvas>                                                                                                                                                                                                      |
+| Tag 省略                                            | 不能省略標籤\<canvas></canvas>                                                                                                                                                                                                      |
 | 被允許通過的父親元素                                | 任何[強調式 content](/zh-TW/docs/HTML/Content_categories#Phrasing_content)的元素皆可通過                                                                                                                                            |
 | DOM 介面                                            | HTMLCanvasElement                                                                                                                                                                                                                   |
 
@@ -66,7 +65,7 @@ canvas 的大小設置可透過樣式表（stylesheet）被改變。可經由樣
 - [MDN canvas portal](/zh-TW/docs/Web/API/Canvas_API)
 - [Canvas tutorial](/zh-TW/docs/Web/API/Canvas_API/Tutorial)
 - [Canvas cheat sheet](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
-- [Canvas-related demos](/en-US/demos/tag/tech:canvas)
+- [Canvas-related demos](/zh-TW/demos/tag/tech:canvas)
 - [Canvas introduction by Apple](https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html)
 
 {{HTMLRef}}

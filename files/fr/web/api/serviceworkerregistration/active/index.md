@@ -23,13 +23,11 @@ Un objet {{domxref("ServiceWorker")}}, si le _worker_ est actuellement dans un �
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | Statut                               | Commentaire            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------- |
-| {{SpecName('Service Workers', '#service-worker-registration-active-attribute', 'ServiceWorkerRegistration.active')}} | {{Spec2('Service Workers')}} | Définition initiale.   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ServiceWorkerRegistration.active")}}
+{{Compat}}
 
 ## Voir aussi
 

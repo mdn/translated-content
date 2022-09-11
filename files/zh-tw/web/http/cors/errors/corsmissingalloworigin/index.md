@@ -1,7 +1,6 @@
 ---
 title: 原因：缺少 CORS 標頭 'Access-Control-Allow-Origin'
 slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
-translation_of: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 ---
 {{HTTPSidebar}}
 
@@ -45,6 +44,6 @@ add_header 'Access-Control-Allow-Origin' 'origin-list'
 
 ## 參見
 
-- [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)
+- [CORS errors](/zh-TW/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
-- [CORS introduction](/en-US/docs/Web/HTTP/CORS)
+- [CORS introduction](/zh-TW/docs/Web/HTTP/CORS)

@@ -1,12 +1,6 @@
 ---
 title: Rendering engine (レンダリングエンジン)
 slug: Glossary/Rendering_engine
-tags:
-  - Glossary
-  - Infrastructure
-  - Rendering engine
-  - Web browser engine
-translation_of: Glossary/Rendering_engine
 ---
 **レンダリングエンジン**は画面にテキストと画像を描画するソフトウェアです。このエンジンは構造化文書 (たいてい {{glossary("HTML")}}) を描画して、所与のスタイル定義 (たいてい {{glossary("CSS")}} にて与えられる) に基づいて整形します。レイアウトエンジンの例としては、 {{glossary("Blink")}}, {{glossary("Gecko")}}, EdgeHTML, {{glossary("WebKit")}} があります。
 

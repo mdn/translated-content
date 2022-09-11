@@ -12,24 +12,26 @@ slug: Web/SVG/Element/linearGradient
 
 ## 示例
 
+```css hidden
+html,body,svg { height:100% }
+```
+
 ```html
-<svg width="120" height="120"  viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg" version="1.1"
-     xmlns:xlink="http://www.w3.org/1999/xlink" >
+<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="myGradient" gradientTransform="rotate(90)">
+      <stop offset="5%"  stop-color="gold" />
+      <stop offset="95%" stop-color="red" />
+    </linearGradient>
+  </defs>
 
-    <defs>
-        <linearGradient id="MyGradient">
-            <stop offset="5%"  stop-color="green"/>
-            <stop offset="95%" stop-color="gold"/>
-        </linearGradient>
-    </defs>
-
-    <rect fill="url(#MyGradient)"
-          x="10" y="10" width="100" height="100"/>
+  <!-- using my linear gradient -->
+  <circle cx="5" cy="5" r="4" fill="url('#myGradient')" />
 </svg>
 ```
 
-{{EmbedLiveSample("Example", 120, 120, "https://mdn.mozillademos.org/files/10061/svg-lineargradient.png")}}
+{{EmbedLiveSample('示例', 150, '100%')}}
 
 ## 属性
 

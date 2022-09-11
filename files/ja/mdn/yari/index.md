@@ -1,11 +1,6 @@
 ---
 title: 'Yari: MDN のレンダリングプラットフォーム'
 slug: MDN/Yari
-tags:
-  - Yari
-  - Landing
-  - MDN Meta
-translation_of: MDN/Yari
 ---
 {{MDNSidebar}}
 

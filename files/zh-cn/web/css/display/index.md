@@ -116,24 +116,24 @@ display: unset;
 - [CSS Flexible 布局](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)
 - [CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout) (初学者学习模块)
 
-## 可访问性相关
+## 无障碍相关
 
 ### `display: none;`
 
-将 `display` 设置为 `none` 会将元素从 [可访问性树 _accessibility tree_](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs) 中移除。这会导致该元素及其所有子代元素不再被屏幕阅读技术 _screen reading technology_ 访问。
+将 `display` 设置为 `none` 会将元素从 [无障碍树 _accessibility tree_](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs) 中移除。这会导致该元素及其所有子代元素不再被屏幕阅读技术 _screen reading technology_ 访问。
 
-如果你只是想从视觉上隐藏这个元素，对可访问性更加友好的做法是使用 [属性组合](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) 来将其从屏幕上隐藏，但仍可以被屏幕阅读器 _screen readers_ 等辅助技术解析。
+如果你只是想从视觉上隐藏这个元素，对无障碍更加友好的做法是使用 [属性组合](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) 来将其从屏幕上隐藏，但仍可以被屏幕阅读器 _screen readers_ 等辅助技术解析。
 
 ### `display: contents;`
 
-当前大多数浏览器对 `display: contents;` 的实现是：将设置了该值的元素从 [可访问性树 _accessibility tree_](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs) 中移除，但保留其子代元素。这会导致该元素自身不再被屏幕阅读技术 _screen reading technology_ 访问。这在 [CSS 规范](https://drafts.csswg.org/css-display/#valdef-display-contents) 中被视为不正确的行为。
+当前大多数浏览器对 `display: contents;` 的实现是：将设置了该值的元素从 [无障碍树 _accessibility tree_](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs) 中移除，但保留其子代元素。这会导致该元素自身不再被屏幕阅读技术 _screen reading technology_ 访问。这在 [CSS 规范](https://drafts.csswg.org/css-display/#valdef-display-contents) 中被视为不正确的行为。
 
 - [More accessible markup with display: contents | Hidde de Vries](https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents)
 - [Display: Contents Is Not a CSS Reset | Adrian Roselli](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
 
 ### Tables
 
-将 {{HTMLElement("table")}} 元素的 `display` 值修改为 `block`, `grid`, 或 `flex` 会修改其在 [可访问性树 _accessibility tree_](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs) 中的表现，这会使得 table 元素不能被屏幕阅读技术正常处理。
+将 {{HTMLElement("table")}} 元素的 `display` 值修改为 `block`, `grid`, 或 `flex` 会修改其在 [无障碍树 _accessibility tree_](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs) 中的表现，这会使得 table 元素不能被屏幕阅读技术正常处理。
 
 - [Short note on what CSS display properties do to table semantics — The Paciello Group](https://developer.paciellogroup.com/blog/2018/03/short-note-on-what-css-display-properties-do-to-table-semantics/)
 - [Hidden content for better a11y | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)

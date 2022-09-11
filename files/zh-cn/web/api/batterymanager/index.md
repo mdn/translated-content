@@ -6,7 +6,7 @@ slug: Web/API/BatteryManager
 
 BatteryManager 接口提供方法获取系统电量。
 
-{{domxref("navigator.getBattery")}} 方法返回一个 promise 对象，该 promise 将提供一个 BatteryManager 接口，你可以从[Battery Status API](/en-US/docs/Web/API/Battery_Status_API) 查询到相关信息。
+{{domxref("navigator.getBattery")}} 方法返回一个 promise 对象，该 promise 将提供一个 BatteryManager 接口，你可以从[Battery Status API](/zh-CN/docs/Web/API/Battery_Status_API) 查询到相关信息。
 
 ## 属性
 
@@ -32,9 +32,7 @@ BatteryManager 接口提供方法获取系统电量。
 
 ## 方法
 
-继承自{{domxref("EventTarget")}}:
-
-{{page("/zh-CN/docs/Web/API/EventTarget","Methods")}}
+_方法继承自其父接口_：{{domxref("EventTarget")}}。
 
 ## 规范
 
@@ -44,7 +42,7 @@ BatteryManager 接口提供方法获取系统电量。
 
 {{Compat("api.BatteryManager")}}
 
-## 其他
+## 参见
 
-- The [电池状态 API](/zh-CN/docs/Web/API/Battery_Status_API)
+- [电池状态 API](/zh-CN/docs/Web/API/Battery_Status_API)
 - {{domxref("navigator.getBattery")}}

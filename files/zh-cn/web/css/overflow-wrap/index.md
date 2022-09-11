@@ -7,7 +7,7 @@ original_slug: Web/CSS/word-wrap
 
 {{EmbedInteractiveExample("pages/css/overflow-wrap.html")}}
 
-[CSS](/en/CSS) 属性 **`overflow-wrap`** 是用来说明当一个不能被分开的字符串太长而不能填充其包裹盒时，为防止其溢出，浏览器是否允许这样的单词中断换行。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`overflow-wrap`** 是用来说明当一个不能被分开的字符串太长而不能填充其包裹盒时，为防止其溢出，浏览器是否允许这样的单词中断换行。
 
 > **备注：** 与{{cssxref("word-break")}}相比，`overflow-wrap`仅在无法将整个单词放在自己的行而不会溢出的情况下才会产生中断。
 
@@ -47,7 +47,7 @@ overflow-wrap: unset;
 
 #### HTML
 
-```
+```html
 <p>They say the fishing is excellent at
   Lake <em class="normal">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
   though I've never been there myself. (<code>normal</code>)</p>
@@ -73,7 +73,7 @@ overflow-wrap: unset;
 
 #### CSS
 
-```
+```css
 p {
    width: 13em;
    margin: 2px;
@@ -99,7 +99,7 @@ p {
 
 #### 结果
 
-{{ EmbedLiveSample('Comparing_overflow-wrap_word-break_and_hyphens', '100%', 260) }}
+{{ EmbedLiveSample('比较 overflow-wrap、word-break 和 hyphens', '100%', 260) }}
 
 ## 规范
 
@@ -111,7 +111,7 @@ p {
 
 {{Compat}}
 
-## 另参见
+## 参见
 
 - {{cssxref("word-break")}}
 - {{cssxref("hyphens")}}

@@ -11,8 +11,8 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Map/entries
 
 ## 语法
 
-```plain
-myMap.entries()
+```js
+entries()
 ```
 
 ### 返回值
@@ -24,12 +24,12 @@ myMap.entries()
 ### `entries()`的使用
 
 ```js
-var myMap = new Map();
+const myMap = new Map();
 myMap.set("0", "foo");
 myMap.set(1, "bar");
 myMap.set({}, "baz");
 
-var mapIter = myMap.entries();
+const mapIter = myMap.entries();
 
 console.log(mapIter.next().value); // ["0", "foo"]
 console.log(mapIter.next().value); // [1, "bar"]

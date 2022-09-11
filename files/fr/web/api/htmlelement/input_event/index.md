@@ -38,14 +38,11 @@ De plus, l'évènement  `input` se déclenche sur les éditeurs [`contenteditabl
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', "forms.html#event-input-input", "input event")}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('DOM3 Events', "#event-type-input", "input event")}}                 | {{Spec2('DOM3 Events')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLElement.input_event")}}
+{{Compat}}
 
 ## Voir aussi
 

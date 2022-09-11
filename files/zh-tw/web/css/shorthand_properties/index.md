@@ -1,7 +1,6 @@
 ---
 title: 特性簡寫
 slug: Web/CSS/Shorthand_properties
-translation_of: Web/CSS/Shorthand_properties
 ---
 ## 定義
 

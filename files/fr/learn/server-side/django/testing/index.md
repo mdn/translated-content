@@ -937,7 +937,7 @@ Dans ce tutoriel, nous vous avons montré comment écrire et lancer des tests po
 
 Le prochain (et dernier) tutoriel montre comment vous pouvez déployer votre merveilleux (et entièrement testé !) site web Django.
 
-## À voir également
+## Voir aussi
 
 - [Writing and running tests](https://docs.djangoproject.com/en/2.1/topics/testing/overview/) (Django docs)
 - [Writing your first Django app, part 5 > Introducing automated testing](https://docs.djangoproject.com/en/2.1/intro/tutorial05/) (Django docs)

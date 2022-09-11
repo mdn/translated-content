@@ -14,7 +14,7 @@ tags:
   - 캔버스
 translation_of: Games/Tutorials
 ---
-{{GamesSidebar}}{{IncludeSubnav("/ko/docs/Games")}}
+{{GamesSidebar}}
 
 이 페이지에는 다양한 형태의 웹 게임을 효과적으로 만들기 위해 중요한 여러가지 튜토리얼들을 포함하고 있습니다.
 

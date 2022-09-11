@@ -1,13 +1,6 @@
 ---
 title: 製品諮問委員会憲章および会員資格
 slug: MDN/MDN_Product_Advisory_Board/Membership
-tags:
-  - MDN
-  - Membership
-  - PAB
-  - Product advisory board
-  - Terms and conditions
-translation_of: MDN/MDN_Product_Advisory_Board/Membership
 ---
 {{MDNSidebar}}
 

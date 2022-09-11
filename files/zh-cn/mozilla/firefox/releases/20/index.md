@@ -31,7 +31,7 @@ Firefox 20 正式版发布于 2013 年 4 月 2 日。
 - CSSOM: 实现了新的{{domxref("CSSGroupingRule")}}和{{domxref("CSSConditionRule")}} ({{bug("814907")}}).
 - CSSOM:{{domxref("CSSRule")}}上的常量 CSSRule.MOZ_KEYFRAME_RULE 和 CSSRule.MOZ_KEYFRAMES_RULE 去掉前缀成为了 CSSRule.KEYFRAME_RULE 和 CSSRule.KEYFRAMES_RULE.带前缀的版本仍暂时保留让开发者过度他们的代码{{bug("816431")}}).
 - CSSOM: 现在可以设置{{domxref("CSSMediaRule")}}上的`conditionText属性的值` ({{bug("815021")}}).
-- {{domxref("DOMParser")}}上的 ` parseFromStream和``parseFromBuffer `方法在 web 页面上被禁用.({{bug('816410')}}).
+- {{domxref("DOMParser")}}上的 `parseFromStream` 和 `parseFromBuffer` 方法在 web 页面上被禁用.({{bug('816410')}}).
 - [`XMLSerializer`](/zh-CN/docs/XMLSerializer)上的`serializeToStream`方法在 web 页面上被禁用.({{bug('816410')}}).
 - `TextDecoder`和`TextEncoder`接口可以在 Worker 中使用 ({{bug('795542')}}).
 - 实现了`CSS.supports()方法`({{bug("779917")}}).

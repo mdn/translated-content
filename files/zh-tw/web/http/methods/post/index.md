@@ -1,7 +1,6 @@
 ---
 title: POST
 slug: Web/HTTP/Methods/POST
-translation_of: Web/HTTP/Methods/POST
 ---
 {{HTTPSidebar}}
 

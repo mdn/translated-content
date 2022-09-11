@@ -30,12 +30,10 @@ if (e.defaultPrevented) {
 }
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', '#dom-event-defaultprevented', 'Event.defaultPrevented()')}} | {{ Spec2('DOM WHATWG') }} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.defaultPrevented")}}
+{{Compat}}

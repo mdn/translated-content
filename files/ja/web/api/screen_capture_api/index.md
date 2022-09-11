@@ -1,17 +1,6 @@
 ---
 title: 画面キャプチャ API
 slug: Web/API/Screen_Capture_API
-tags:
-  - API
-  - MediaDevices
-  - MediaStream
-  - 概要
-  - リファレンス
-  - 画面キャプチャ
-  - 画面キャプチャ API
-  - 画面共有
-  - getDisplayMedia
-translation_of: Web/API/Screen_Capture_API
 ---
 {{DefaultAPISidebar("Screen Capture API")}}
 
@@ -78,7 +67,7 @@ captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions
 - `CursorCaptureConstraint`
   - : 列挙文字列型で、設定と制約の `cursor` プロパティの値を提供するために使用されます。指定できる値は `always`、`motion`、`never` です。
 - `DisplayCaptureSurfaceType`
-  - : 列挙文字列型で、キャプチャするディスプレイ表面の種類を識別するために使用されます。。この型は、制約と設定オブジェクトの `displaySurface` プロパティに使用され、`application`, `browser`, `monitor`, `window` という値を持つことが可能です。
+  - : 列挙文字列型で、キャプチャするディスプレイ表面の種類を識別するために使用されます。この型は、制約と設定オブジェクトの `displaySurface` プロパティに使用され、`application`, `browser`, `monitor`, `window` という値を持つことが可能です。
 
 ## 機能ポリシーの検証
 

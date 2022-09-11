@@ -19,7 +19,7 @@ WCAG utilise trois niveaux d'accessibilité :
 - Priorité 2 : Les développeurs web **devraient** satisfaire ces conditions, sinon certains groupes éprouveront des difficultés à accéder au contenu du web. Atteindre ce niveau est désigné par AA ou double A.
 - Priorité 3 : Les développeurs web **peuvent** satisfaire ces conditions dans le but de faciliter l'accès au web pour certains groupes. Atteindre ce niveau est désigné par AAA ou triple A.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

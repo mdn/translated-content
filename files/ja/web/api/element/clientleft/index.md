@@ -1,15 +1,6 @@
 ---
 title: Element.clientLeft
 slug: Web/API/Element/clientLeft
-tags:
-  - API
-  - CSSOM View
-  - NeedsAgnostify
-  - NeedsMarkupWork
-  - プロパティ
-  - リファレンス
-browser-compat: api.Element.clientLeft
-translation_of: Web/API/Element/clientLeft
 ---
 {{ APIRef("DOM") }}
 

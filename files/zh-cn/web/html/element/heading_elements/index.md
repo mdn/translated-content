@@ -91,7 +91,7 @@ slug: Web/HTML/Element/Heading_Elements
 
 {{ EmbedLiveSample('Example_page', '280', '480', '') }}
 
-## 可访问性问题
+## 无障碍问题
 
 ### 导航
 

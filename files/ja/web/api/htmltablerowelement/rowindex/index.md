@@ -1,14 +1,6 @@
 ---
 title: HTMLTableRowElement.rowIndex
 slug: Web/API/HTMLTableRowElement/rowIndex
-tags:
-  - API
-  - HTML DOM
-  - NeedsSpecTable
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLTableRowElement.rowIndex
-translation_of: Web/API/HTMLTableRowElement/rowIndex
 ---
 {{ APIRef("HTML DOM") }}
 

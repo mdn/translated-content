@@ -49,7 +49,7 @@ slug: Web/HTML/Element/map
 
 ### 结果
 
-{{ EmbedLiveSample('Examples', '350', '166', '', 'Web/HTML/Element/map') }}
+{{ EmbedLiveSample('示例', '350', '166') }}
 
 ### Expected live example output
 

@@ -74,19 +74,11 @@ On pourra écouter ces événements en utilisant `addEventListener()` ou en assi
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | Statut                                                   | Commentaires                                                                                                                         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('Highres Time Level 2', '#sec-performance', 'Performance')}}                                                         | {{Spec2('Highres Time Level 2')}}             | Définition de la méthode `toJson()`.                                                                                                 |
-| {{SpecName('Highres Time', '#performance', 'Performance')}}                                                                         | {{Spec2('Highres Time')}}                         | Définition de la méthode `now()`.                                                                                                    |
-| {{SpecName('Performance Timeline Level 2', '#extensions-to-the-performance-interface',  'Performance extensions')}} | {{Spec2('Performance Timeline Level 2')}} | Changements sur l'interface `getEntries()`.                                                                                          |
-| {{SpecName('Performance Timeline', '#extensions-to-the-performance-interface', 'Performance extensions')}}             | {{Spec2('Performance Timeline')}}             | Définition des méthodes `getEntries()`, `getEntriesByType()` et `getEntriesByName()`.                                                |
-| {{SpecName('Resource Timing', '#extensions-performance-interface', 'Performance extensions')}}                             | {{Spec2('Resource Timing')}}                     | Définition des méthodes `clearResourceTimings()` et `setResourceTimingBufferSize()` et de la propriété `onresourcetimingbufferfull`. |
-| {{SpecName('User Timing Level 2', '#extensions-performance-interface', 'Performance extensions')}}                     | {{Spec2('User Timing Level 2')}}             | Clarifications des méthodes `mark()`, `clearMark()`, `measure()` et `clearMeasure()`.                                                |
-| {{SpecName('User Timing', '#extensions-performance-interface', 'Performance extensions')}}                                 | {{Spec2('User Timing')}}                         | Définition des méthodes `mark()`, `clearMark()`, `measure()` et `clearMeasure()`.                                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Performance")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -12,7 +12,7 @@ slug: Web/HTML/Element/br
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td>无，这是一个{{Glossary("空元素")}}.</td>
+   <td>无，这是一个{{Glossary("empty element","空元素")}}.</td>
   </tr>
   <tr>
    <th scope="row">标签略写</th>
@@ -44,7 +44,7 @@ slug: Web/HTML/Element/br
 
 不要用 `<br>` 来增加文本之间的行间隔；应使用 [CSS](/zh-CN/docs/CSS) {{cssxref('margin')}} 属性或{{HTMLElement("p")}} 元素。
 
-## 例子
+## 示例
 
 ```html
 Mozilla Foundation<br>
@@ -56,11 +56,7 @@ USA
 
 The HTML above outputs:
 
-Mozilla Foundation
-1981 Landings Drive
-Building K
-Mountain View, CA 94043-0801
-USA
+{{ EmbedLiveSample('示例', '100%', '90') }}
 
 ## 规范
 
@@ -68,7 +64,7 @@ USA
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.br")}}
+{{Compat}}
 
 ## 参见
 

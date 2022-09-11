@@ -1,16 +1,6 @@
 ---
 title: Document.fgColor
 slug: Web/API/Document/fgColor
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - Document
-  - HTML DOM
-  - Reference
-  - fgColor
-  - プロパティ
-translation_of: Web/API/Document/fgColor
 ---
 {{ApiRef}}{{Deprecated_header}}
 
@@ -44,4 +34,4 @@ Mozilla Firefox ではこのプロパティの既定値は黒 (16 進数で `#00
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.fgColor")}}
+{{Compat}}

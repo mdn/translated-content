@@ -28,13 +28,11 @@ Aucun.
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#groupend", "console.groupEnd()")}} | {{Spec2("Console API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.groupEnd")}}
+{{Compat}}
 
 ## Voir aussi
 

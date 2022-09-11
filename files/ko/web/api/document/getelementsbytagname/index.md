@@ -13,7 +13,9 @@ translation_of: Web/API/Document/getElementsByTagName
 
 ## 구문
 
-    var elements = document.getElementsByTagName(name);
+```js
+var elements = document.getElementsByTagName(name);
+```
 
 - _elements_ 는 트리에 나타난 순서대로 발견된 살아있는 {{domxref("HTMLCollection")}} 입니다(하지만 아래 노트를 보세요).
 - _name_ 은 엘리먼트의 이름을 나타내는 문자열입니다. 특수 문자 "\*" 은 모든 엘리먼트를 나타냅니다.

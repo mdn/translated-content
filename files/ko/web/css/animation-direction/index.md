@@ -9,7 +9,7 @@ browser-compat: css.properties.animation-direction
 ---
 {{CSSRef}}
 
-**`animation-direction`** [CSS](/ko/docs/CSS "CSS") 속성은 애니메이션이 앞으로, 뒤로 또는 앞뒤로 번갈아 재생되어야하는지 여부를 지정합니다.
+**`animation-direction`** [CSS](/ko/docs/CSS) 속성은 애니메이션이 앞으로, 뒤로 또는 앞뒤로 번갈아 재생되어야하는지 여부를 지정합니다.
 
 ```css
 /* Single animation */
@@ -53,7 +53,7 @@ animation-direction: unset;
 
 ## 예제(Examples)
 
-[CSS animations](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations "CSS/CSS_animations")를 보십시오.
+[CSS animations](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations)를 보십시오.
 
 ## 명세
 
@@ -65,5 +65,5 @@ animation-direction: unset;
 
 ## 같이 보기(See also)
 
-- [Using CSS animations](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- [Using CSS animations](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API

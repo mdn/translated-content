@@ -92,6 +92,6 @@ Les interfaces suivantes ont été supprimées.
 
 - `nsIGlobalHistory`
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('14')}}

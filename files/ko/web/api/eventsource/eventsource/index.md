@@ -15,7 +15,9 @@ translation_of: Web/API/EventSource/EventSource
 
 ## 구문
 
-    eventSource = new EventSource(url, configuration);
+```js
+eventSource = new EventSource(url, configuration);
+```
 
 ### 파라미터
 

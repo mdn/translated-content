@@ -1,13 +1,6 @@
 ---
 title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - 原型
-  - 方法
-  - 集合
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
 {{JSRef}}
 
@@ -30,7 +23,7 @@ mySet.has(value);
 
 回傳 `true` 如果給定值存在在 `Set` 物件中；反之回傳 `false` 。
 
-> **備註：** 技術上來說，`has()` 使用了 [`sameValueZero`](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality) 算法來判斷給定元素的存在與否。
+> **備註：** 技術上來說，`has()` 使用了 [`sameValueZero`](/zh-TW/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality) 算法來判斷給定元素的存在與否。
 
 ## 範例
 

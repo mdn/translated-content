@@ -17,8 +17,8 @@ myMap.get(key);
 
 ### 参数
 
-- key
-  - : 必须参数，也是它唯一的参数，要从目标 `Map` 对象中获取的元素的键。
+- `key`
+  - : 要从目标 `Map` 对象中获取的元素的键。
 
 ### 返回值
 
@@ -26,14 +26,14 @@ myMap.get(key);
 
 ## 示例
 
-### 使用 `get` 方法
+### 使用 get()
 
 ```js
-var myMap = new Map();
-myMap.set("bar", "foo");
+const myMap = new Map();
+myMap.set('bar', 'foo');
 
-myMap.get("bar");  // 返回 "foo"
-myMap.get("baz");  // 返回 undefined
+console.log(myMap.get('bar'));   // 返回 "foo"
+console.log(myMap.get('baz'));   // 返回 undefined
 ```
 
 ## 规范

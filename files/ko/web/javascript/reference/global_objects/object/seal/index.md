@@ -18,7 +18,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/seal
 
 ## 구문
 
-    Object.seal(obj)
+```js
+Object.seal(obj)
+```
 
 ### 매개변수
 

@@ -1,12 +1,6 @@
 ---
 title: IDL (インターフェイス記述言語)
 slug: Glossary/IDL
-tags:
-  - CodingScripting
-  - Glossary
-  - IDL
-  - Interface description language
-translation_of: Glossary/IDL
 l10n:
   sourceCommit: a4d73f3e2a41b98e26f8f39af143338ad4900bd5
 ---

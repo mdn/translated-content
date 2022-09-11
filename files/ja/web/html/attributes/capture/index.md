@@ -1,15 +1,6 @@
 ---
 title: 'HTML 属性: capture'
 slug: Web/HTML/Attributes/capture
-tags:
-  - API
-  - 属性
-  - Attributes
-  - Capture
-  - 制約検証
-  - HTML
-spec-urls: https://w3c.github.io/html-media-capture/#the-capture-attribute
-translation_of: Web/HTML/Attributes/capture
 ---
 
 {{HTMLSidebar}}
@@ -56,7 +47,7 @@ translation_of: Web/HTML/Attributes/capture
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attribute.capture")}}
+{{Compat}}
 
 ## 関連情報
 

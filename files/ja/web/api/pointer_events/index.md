@@ -1,15 +1,6 @@
 ---
 title: ポインターイベント
 slug: Web/API/Pointer_events
-tags:
-  - API
-  - インターフェイス
-  - Landing
-  - 概要
-  - ポインターイベント
-  - ウェブ
-  - イベント
-translation_of: Web/API/Pointer_events
 ---
 {{DefaultAPISidebar("Pointer Events")}}
 

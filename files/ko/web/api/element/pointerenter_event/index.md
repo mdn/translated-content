@@ -10,9 +10,11 @@ original_slug: Web/API/GlobalEventHandlers/onpointerenter
 
 ## Syntax
 
-    targetElement.onpointerenter = enterHandler;
+```js
+targetElement.onpointerenter = enterHandler;
 
-    var enterHandler = targetElement.onpointerenter;
+var enterHandler = targetElement.onpointerenter;
+```
 
 ### Value
 

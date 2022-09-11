@@ -1,13 +1,6 @@
 ---
 title: DocumentFragment.querySelector()
 slug: Web/API/DocumentFragment/querySelector
-tags:
-  - API
-  - DOM
-  - DocumentFragment
-  - メソッド
-browser-compat: api.DocumentFragment.querySelector
-translation_of: Web/API/DocumentFragment/querySelector
 ---
 {{ApiRef("DOM")}}
 
