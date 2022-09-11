@@ -1,5 +1,5 @@
 ---
-title: Intl.Segmenter() constructor
+title: Intl.Segmenter() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
 l10n:
   sourceCommit: a3dd560fabb1fe4051f6273f41b337a5b1245a6e
