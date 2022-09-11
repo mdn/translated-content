@@ -31004,10 +31004,6 @@
     "modified": "2020-07-17T23:22:13.809Z",
     "contributors": ["papparapa", "silverskyvicto"]
   },
-  "conflicting/Glossary/Plugin": {
-    "modified": "2019-03-18T21:35:38.258Z",
-    "contributors": ["momdo"]
-  },
   "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-12-06T14:17:48.495Z",
     "contributors": [
@@ -31020,10 +31016,6 @@
       "kenji-yamasaki",
       "sii"
     ]
-  },
-  "conflicting/MDN/Community/Issues_508862bdb961f07f5a8b2e723cede961": {
-    "modified": "2020-01-07T12:20:24.363Z",
-    "contributors": ["peterbe", "mfuji09", "wbamberg", "Uemmra3", "hamasaki"]
   },
   "conflicting/MDN/MDN_Product_Advisory_Board": {
     "modified": "2020-03-14T06:36:03.749Z",

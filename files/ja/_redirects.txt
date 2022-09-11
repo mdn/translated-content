@@ -2726,7 +2726,7 @@
 /ja/docs/MDN/Contribute/Howto/Document_an_HTTP_header	/ja/docs/MDN/Writing_guidelines/Howto/Document_an_HTTP_header
 /ja/docs/MDN/Contribute/Howto/Document_web_errors	/ja/docs/MDN/Writing_guidelines/Howto/Document_web_errors
 /ja/docs/MDN/Contribute/Howto/Migrate_external_content_to_MDN	/ja/docs/MDN/Community/Issues/Content_suggestions_feature_proposals
-/ja/docs/MDN/Contribute/Howto/Report_a_problem	/ja/docs/conflicting/MDN/Community/Issues_508862bdb961f07f5a8b2e723cede961
+/ja/docs/MDN/Contribute/Howto/Report_a_problem	/ja/docs/MDN/Community/Issues
 /ja/docs/MDN/Contribute/Howto/Tag	/ja/docs/MDN/Writing_guidelines/Howto/Tag
 /ja/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/ja/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 /ja/docs/MDN/Contribute/Howto/Write_an_API_reference	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference
@@ -2849,7 +2849,6 @@
 /ja/docs/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /ja/docs/Parsing_and_serializing_XML	/ja/docs/Web/Guide/Parsing_and_serializing_XML
 /ja/docs/Plugins/Guide/Constants	/ja/docs/Glossary/Plugin
-/ja/docs/Plugins/Roadmap	/ja/docs/conflicting/Glossary/Plugin
 /ja/docs/Property_compatibility_table_for_form_widgets	/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls
 /ja/docs/Quirks_Mode_and_Standards_Mode	/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /ja/docs/Rich-Text_Editing_in_Mozilla	/ja/docs/orphaned/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
