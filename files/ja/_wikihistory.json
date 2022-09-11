@@ -31112,10 +31112,6 @@
     "modified": "2020-09-30T15:30:24.568Z",
     "contributors": ["chrisdavidmills", "dvincent"]
   },
-  "conflicting/Web/API/Blob": {
-    "modified": "2020-10-15T22:03:45.714Z",
-    "contributors": ["silverskyvicto", "s-onuma"]
-  },
   "conflicting/Web/API/CredentialsContainer/create": {
     "modified": "2020-10-15T22:26:49.264Z",
     "contributors": ["mfuji09"]
