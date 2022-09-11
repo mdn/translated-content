@@ -3173,7 +3173,7 @@
 /ja/docs/Web/API/AudioTrackList/onchange	/ja/docs/Web/API/AudioTrackList/change_event
 /ja/docs/Web/API/AudioTrackList/onremovetrack	/ja/docs/Web/API/AudioTrackList/removetrack_event
 /ja/docs/Web/API/BaseAudioContext/onstatechange	/ja/docs/Web/API/BaseAudioContext/statechange_event
-/ja/docs/Web/API/BlobBuilder	/ja/docs/conflicting/Web/API/Blob
+/ja/docs/Web/API/BlobBuilder	/ja/docs/Web/API/Blob
 /ja/docs/Web/API/Boolean	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ja/docs/Web/API/BroadcastChannel/onmessage	/ja/docs/Web/API/BroadcastChannel/message_event
 /ja/docs/Web/API/BroadcastChannel/onmessageerror	/ja/docs/Web/API/BroadcastChannel/messageerror_event
@@ -3190,7 +3190,7 @@
 /ja/docs/Web/API/Console.error	/ja/docs/Web/API/Console/error
 /ja/docs/Web/API/Coordinates	/ja/docs/Web/API/GeolocationCoordinates
 /ja/docs/Web/API/DOMString	/ja/docs/Glossary/String
-/ja/docs/Web/API/DOMString/Binary	/ja/docs/conflicting/Web/API/btoa
+/ja/docs/Web/API/DOMString/Binary	/ja/docs/Web/API/btoa
 /ja/docs/Web/API/DeviceAcceleration	/ja/docs/Web/API/DeviceMotionEventAcceleration
 /ja/docs/Web/API/Document.domConfig	/ja/docs/Web/API/Document
 /ja/docs/Web/API/Document/animationcancel_event	/ja/docs/Web/API/Element/animationcancel_event
@@ -4778,9 +4778,9 @@
 /ja/docs/Web/JavaScript/Typed_arrays/Uint16Array	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint16Array
 /ja/docs/Web/JavaScript/Typed_arrays/Uint32Array	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint32Array
 /ja/docs/Web/JavaScript/Typed_arrays/Uint8Array	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint8Array
-/ja/docs/Web/Manifest/dir	/ja/docs/conflicting/Web/Manifest
-/ja/docs/Web/Manifest/iarc_rating_id	/ja/docs/conflicting/Web/Manifest_e8c4835b067e177a000dc29c18483205
-/ja/docs/Web/Manifest/lang	/ja/docs/conflicting/Web/Manifest_7ec32c6987e59d5f1cb08f8c9d900a4c
+/ja/docs/Web/Manifest/dir	/ja/docs/Web/Manifest
+/ja/docs/Web/Manifest/iarc_rating_id	/ja/docs/Web/Manifest
+/ja/docs/Web/Manifest/lang	/ja/docs/Web/Manifest
 /ja/docs/Web/MathML/Index	/ja/docs/Web/MathML
 /ja/docs/Web/Progressive_web_apps/Advantages	/ja/docs/Web/Progressive_web_apps/Introduction
 /ja/docs/Web/Progressive_web_apps/Responsive	/ja/docs/Web/Progressive_web_apps
