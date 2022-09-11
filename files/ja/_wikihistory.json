@@ -31297,10 +31297,6 @@
     "modified": "2020-12-08T09:23:22.538Z",
     "contributors": ["Wind1808"]
   },
-  "conflicting/Web/API/btoa": {
-    "modified": "2019-12-06T22:37:36.253Z",
-    "contributors": ["daisuke-f"]
-  },
   "conflicting/Web/API/caches": {
     "modified": "2020-10-15T22:29:46.631Z",
     "contributors": ["Wind1808"]
