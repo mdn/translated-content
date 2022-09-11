@@ -4,60 +4,107 @@ slug: Web/CSS/transform-function/rotate
 translation_of: Web/CSS/transform-function/rotate()
 original_slug: Web/CSS/transform-function/rotate()
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>A função <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>rotate()</code></strong> define uma transformação que gira um elemento em torno de um ponto fixo no plano 2D, sem deformá-lo. O resultado é um tipo de dados {{cssxref("&lt;transform-function&gt;")}}.</p>
+A função [CSS](/pt-BR/docs/Web/CSS) **`rotate()`** define uma transformação que gira um elemento em torno de um ponto fixo no plano 2D, sem deformá-lo. O resultado é um tipo de dados {{cssxref("&lt;transform-function&gt;")}}.
 
-<p><img src="https://mdn.mozillademos.org/files/12113/rotate.png" style="height: 175px; width: 258px;"></p>
+![](https://mdn.mozillademos.org/files/12113/rotate.png)
 
-<p>O eixo de rotação passa por uma origem, definido pela propriedade CSS {{ cssxref("transform-origin") }}.</p>
+O eixo de rotação passa por uma origem, definido pela propriedade CSS {{ cssxref("transform-origin") }}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<p>A quantidade de rotação criada por <code>rotate()</code> é especificado por um {{cssxref("&lt;angle&gt;")}}. Se positivo, o movimento será no sentido horário; Se negativo, ela será no sentido anti-horário.  Uma rotação de 180° é chamada de <em>point reflection (</em>reflexão do ponto).</p>
+A quantidade de rotação criada por `rotate()` é especificado por um {{cssxref("&lt;angle&gt;")}}. Se positivo, o movimento será no sentido horário; Se negativo, ela será no sentido anti-horário. Uma rotação de 180° é chamada de \_point reflection (\_reflexão do ponto).
 
-<pre class="syntaxbox">rotate(<em>a</em>)
-</pre>
+```
+rotate(a)
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>a</code></dt>
- <dd>É um {{ cssxref("&lt;angle&gt;") }} representando o ângulo da rotação. Um ângulo positivo indica uma rotação no sentido horário, um ângulo negativo no sentido anti-horário.</dd>
-</dl>
+- `a`
+  - : É um {{ cssxref("&lt;angle&gt;") }} representando o ângulo da rotação. Um ângulo positivo indica uma rotação no sentido horário, um ângulo negativo no sentido anti-horário.
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Coordenadas cartesianas em ℝ<sup>2</sup></th>
-   <th scope="col">Coordenadas homogêneas em ℝℙ<sup>2</sup></th>
-   <th scope="col">Coordenadas cartesianas em ℝ<sup>3</sup></th>
-   <th scope="col">Coordenadas homogêneas em ℝℙ<sup>3</sup></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="1" rowspan="2"><math> <mfenced> <mtable> <mtr><mtd>cos(a)</mtd><mtd>-sin(a)</mtd></mtr> <mtr><mtd>sin(a)</mtd><mtd>cos(a)</mtd></mtr></mtable></mfenced></math></td>
-   <td><math> <mfenced><mtable><mtr><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd></mtr><mtr><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd></mtr><mtr><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
-  <tr>
-   <td><code>[cos(a) sin(a) -sin(a) cos(a) 0 0]</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Coordenadas cartesianas em ℝ<sup>2</sup></th>
+      <th scope="col">Coordenadas homogêneas em ℝℙ<sup>2</sup></th>
+      <th scope="col">Coordenadas cartesianas em ℝ<sup>3</sup></th>
+      <th scope="col">Coordenadas homogêneas em ℝℙ<sup>3</sup></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr><mtd>cos(a)</mtd><mtd>-sin(a)</mtd></mtr>
+              <mtr><mtd>sin(a)</mtd><mtd>cos(a)</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd
+                ><mtd>0</mtd></mtr
+              ><mtr
+                ><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
+              ><mtr
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+    <tr>
+      <td><code>[cos(a) sin(a) -sin(a) cos(a) 0 0]</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;Normal&lt;/div&gt;
-&lt;div class="rotated"&gt;Rotated&lt;/div&gt;</pre>
+```html
+<div>Normal</div>
+<div class="rotated">Rotated</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 80px;
   height: 80px;
   background-color: skyblue;
@@ -67,20 +114,18 @@ original_slug: Web/CSS/transform-function/rotate()
   transform: rotate(45deg); /* Equal to rotateZ(45deg) */
   background-color: pink;
 }
-</pre>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample("Examples", "auto", 180)}}</p>
+{{EmbedLiveSample("Examples", "auto", 180)}}
 
-<h2 id="Compatibilidade_do_navegador">Compatibilidade do navegador</h2>
+## Compatibilidade do navegador
 
-<p>Por favor, veja o tipo de dados <code><a href="/en-US/docs/Web/CSS/transform-function#Browser_compatibility">&lt;transform-function&gt;</a></code> para informações de compatibilidade.</p>
+Por favor, veja o tipo de dados [`<transform-function>`](/en-US/docs/Web/CSS/transform-function#Browser_compatibility) para informações de compatibilidade.
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
- <li><code><a href="/en-US/docs/Web/CSS/transform-function/rotate3d">rotate3d()</a></code></li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}
+- [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d)

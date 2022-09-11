@@ -7,57 +7,39 @@ tags:
   - pagina
 translation_of: Web/CSS/@page
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>A regra CSS <code>@page</code> é utilizada para modificar algumas propriedades CSS quando o documento for impresso.<strong> </strong>Você não pode mudar todas as propriedades CSS com @page. Você poderá somente mudar as margens, orphans, widows, e page breaks do documento. Na tentativa de mudar outra propriedade CSS, elas serão ignoradas.</p>
+A regra CSS `@page` é utilizada para modificar algumas propriedades CSS quando o documento for impresso.\*\* \*\*Você não pode mudar todas as propriedades CSS com @page. Você poderá somente mudar as margens, orphans, widows, e page breaks do documento. Na tentativa de mudar outra propriedade CSS, elas serão ignoradas.
 
-<p>A regra CSS <code>@page</code> pode ser acessada via interface do modelo de objeto {{domxref("CSSPageRule")}}.</p>
+A regra CSS `@page` pode ser acessada via interface do modelo de objeto {{domxref("CSSPageRule")}}.
 
-<div class="note"><strong>Nota:</strong> A W3C está analisando como lidar com unidades viewport-related {{cssxref("&lt;length&gt;")}}, <code>vh</code>, <code>vw</code>, <code>vmin</code>, and <code>vmax</code>. Enquanto isso, não use eles junto com a regra @page.</div>
+> **Note:** **Nota:** A W3C está analisando como lidar com unidades viewport-related {{cssxref("&lt;length&gt;")}}, `vh`, `vw`, `vmin`, and `vmax`. Enquanto isso, não use eles junto com a regra @page.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">@page :pseudo-class {
+```
+@page :pseudo-class {
   margin:2in;
 }
-</pre>
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Podemos fazer referência a vários <a href="/en-US/docs/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-classes</a> de <code>@page</code> por exemplo.</p>
+Podemos fazer referência a vários [pseudo-classes](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes") de `@page` por exemplo.
 
-<ul>
- <li>{{Cssxref(":first")}}</li>
- <li>{{Cssxref(":left")}}</li>
- <li>{{Cssxref(":right")}}</li>
-</ul>
+- {{Cssxref(":first")}}
+- {{Cssxref(":left")}}
+- {{Cssxref(":right")}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Paged Media', '#at-page-rule', '@page')}}</td>
-   <td>{{Spec2('CSS3 Paged Media')}}</td>
-   <td>Sem mudanças para {{SpecName('CSS2.1')}}, though more CSS at-rules can be used inside a <code>@page</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'page.html#page-selectors', '@page')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                                   | Comment                                                                                                |
+| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| {{SpecName('CSS3 Paged Media', '#at-page-rule', '@page')}}     | {{Spec2('CSS3 Paged Media')}} | Sem mudanças para {{SpecName('CSS2.1')}}, though more CSS at-rules can be used inside a `@page`. |
+| {{SpecName('CSS2.1', 'page.html#page-selectors', '@page')}} | {{Spec2('CSS2.1')}}                 |                                                                                                        |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.at-rules.page")}}

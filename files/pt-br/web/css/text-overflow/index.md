@@ -3,27 +3,30 @@ title: text-overflow
 slug: Web/CSS/text-overflow
 translation_of: Web/CSS/text-overflow
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>A propriedade <code>text-overflow</code> do <a href="/en/CSS" title="CSS">CSS</a> determina como o conteúdo que ultrapassou a sua div e que não é mostrado ao usuário deve ser exibido. Ele pode ser cortado, mostrar reticências ou até mesmo exibir qualquer string definida pelo autor.</p>
+A propriedade `text-overflow` do [CSS](/en/CSS "CSS") determina como o conteúdo que ultrapassou a sua div e que não é mostrado ao usuário deve ser exibido. Ele pode ser cortado, mostrar reticências ou até mesmo exibir qualquer string definida pelo autor.
 
-<p><img alt="text-overflow.png" class="default internal" src="/@api/deki/files/5846/=text-overflow.png"></p>
+![text-overflow.png](/@api/deki/files/5846/=text-overflow.png)
 
-<p>O corte acontece na borda da caixa; para cortar no limite de caracteres de uma string personalizada, pode-se usar (<code>''</code>).</p>
+O corte acontece na borda da caixa; para cortar no limite de caracteres de uma string personalizada, pode-se usar (`''`).
 
-<p>Essa propriedade afeta apenas o conteúdo que está ultrapassando o bloco ou a div no sentido da linha horizontal (não corta o texto na parte de baixo de um bloco ou div, por exemplo). O texto pode ultrapassar ou transbordar quando utilizado ‘<code>white-space:nowrap</code>’ ou quando uma palavra for muito grande.</p>
+Essa propriedade afeta apenas o conteúdo que está ultrapassando o bloco ou a div no sentido da linha horizontal (não corta o texto na parte de baixo de um bloco ou div, por exemplo). O texto pode ultrapassar ou transbordar quando utilizado ‘`white-space:nowrap`’ ou quando uma palavra for muito grande.
 
-<p>Essa propriedade do CSS não força um estouro para que ele ocorra. Para que isso aconteça, é necessário que o autor utilize algumas propriedades adicionais no elemento, como setar a propriedade overflow para hidden.</p>
+Essa propriedade do CSS não força um estouro para que ele ocorra. Para que isso aconteça, é necessário que o autor utilize algumas propriedades adicionais no elemento, como setar a propriedade overflow para hidden.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax" title="CSS/Value_definition_syntax">Formal syntax</a>: {{csssyntax("text-overflow")}}</pre>
+```
+Formal syntax: {{csssyntax("text-overflow")}}
+```
 
-<pre>/* One-value syntax: the value describe the overflow performed at the end of the line (right end if ltr, left end if rtl) */
+```
+/* One-value syntax: the value describe the overflow performed at the end of the line (right end if ltr, left end if rtl) */
 text-overflow: clip
 text-overflow: ellipsis
 text-overflow: "…"
@@ -34,250 +37,492 @@ text-overflow: "…"
 text-overflow: clip ellipsis
 text-overflow: "…" "…"
 
-text-overflow: inherit</pre>
+text-overflow: inherit
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>clip</code></dt>
- <dd>This keyword value indicates to truncate the text at the limit of the <a href="/en/CSS/box_model" title="en/CSS/Box_model">content area</a>, therefore the truncation can happen in the middle of a character. To truncate at the transition between two characters, the empty string value (<code>''</code>) must be used. The value <code>clip</code> is the default for this property.</dd>
- <dt><code>ellipsis</code></dt>
- <dd>This keyword value indicates to display ellipses (<code>'…'</code>, <code style="text-transform: uppercase;">U+2026 Horizontal Ellipsis</code>) to represent clipped text. The ellipsis is displayed inside the <a href="/en/CSS/box_model" title="en/CSS/Box_model">content area</a>, shortening more the size of the displayed text. If there is not enough place to display ellipsis, they are clipped.</dd>
- <dt><code>&lt;string&gt;</code> {{ experimental_inline() }}</dt>
- <dd>The {{cssxref("&lt;string&gt;")}} to be used to represent clipped text. The string is displayed inside the <a href="/en/CSS/box_model" title="en/CSS/Box_model">content area</a>, shortening more the size of the displayed text. If there is not enough place to display the string itself, it is clipped.</dd>
-</dl>
+- `clip`
+  - : This keyword value indicates to truncate the text at the limit of the [content area](/en/CSS/box_model "en/CSS/Box_model"), therefore the truncation can happen in the middle of a character. To truncate at the transition between two characters, the empty string value (`''`) must be used. The value `clip` is the default for this property.
+- `ellipsis`
+  - : This keyword value indicates to display ellipses (`'…'`, `U+2026 Horizontal Ellipsis`) to represent clipped text. The ellipsis is displayed inside the [content area](/en/CSS/box_model "en/CSS/Box_model"), shortening more the size of the displayed text. If there is not enough place to display ellipsis, they are clipped.
+- `<string>` {{ experimental_inline() }}
+  - : The {{cssxref("&lt;string&gt;")}} to be used to represent clipped text. The string is displayed inside the [content area](/en/CSS/box_model "en/CSS/Box_model"), shortening more the size of the displayed text. If there is not enough place to display the string itself, it is clipped.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: css">p {
+```css
+p {
   white-space: nowrap;
   width: 100%;
   overflow: hidden;              /* "overflow" value must be different from "visible" */
 
   text-overflow:    ellipsis;
 }
-</pre>
+```
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th colspan="1" rowspan="2" scope="col">CSS value</th>
-   <th colspan="2" rowspan="1" scope="col" style="text-align: center;"><code>direction: ltr</code></th>
-   <th colspan="2" rowspan="1" scope="col" style="text-align: center;"><code>direction: rtl</code></th>
-  </tr>
-  <tr>
-   <th scope="col">Expected Result</th>
-   <th scope="col">Live result</th>
-   <th scope="col">Expected Result</th>
-   <th scope="col">Live result</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><em>visible overflow</em></td>
-   <td style="font-family: monospace;">1234567890</td>
-   <td style="direction: ltr;">
-    <div style="float: left; font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: visible;">1234567890</div>
-   </td>
-   <td style="font-family: monospace;">0987654321</td>
-   <td>
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: visible;">1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: clip</code></td>
-   <td style="padding: 1px; font-family: monospace;"><img alt="t-o_clip.png" class="default internal" src="/@api/deki/files/6056/=t-o_clip.png"></td>
-   <td style="direction: ltr;">
-    <div style="float: left; font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip;">123456</div>
-   </td>
-   <td style="padding: 1px; font-family: monospace;"><img alt="t-o_clip_rtl.png" class="default internal" src="/@api/deki/files/6057/=t-o_clip_rtl.png"></td>
-   <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip;">1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: ''</code></td>
-   <td style="font-family: monospace;">12345</td>
-   <td style="direction: ltr;">
-    <div style="float: left; font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: '';">123456</div>
-   </td>
-   <td style="font-family: monospace;">54321</td>
-   <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: '';">1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: ellipsis</code></td>
-   <td style="font-family: monospace;">1234…</td>
-   <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis;">1234567890</div>
-   </td>
-   <td style="font-family: monospace;">…4321</td>
-   <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis;">1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: '.'</code></td>
-   <td style="font-family: monospace;">1234.</td>
-   <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: '.';">1234567890</div>
-   </td>
-   <td style="font-family: monospace;">.4321</td>
-   <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: '.';">1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: clip clip</code></td>
-   <td style="font-family: monospace;">123456</td>
-   <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip clip;">1234567890</div>
-   </td>
-   <td style="font-family: monospace;">654321</td>
-   <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip clip;">1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: clip ellipsis</code></td>
-   <td style="font-family: monospace;">1234…</td>
-   <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip ellipsis;">1234567890</div>
-   </td>
-   <td style="font-family: monospace;">6543…</td>
-   <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip ellipsis;">1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: clip '.'</code></td>
-   <td style="font-family: monospace;">1234.</td>
-   <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip '.';">1234567890</div>
-   </td>
-   <td style="font-family: monospace;">6543.</td>
-   <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip '.';">1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: ellipsis clip</code></td>
-   <td style="font-family: monospace;">…3456</td>
-   <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis clip;">1234567890</div>
-   </td>
-   <td style="font-family: monospace;">…4321</td>
-   <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis clip;">1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: ellipsis ellipsis</code></td>
-   <td style="font-family: monospace;">…34…</td>
-   <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis ellipsis;">1234567890</div>
-   </td>
-   <td style="font-family: monospace;">…43…</td>
-   <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis ellipsis;">1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: ellipsis '.'</code></td>
-   <td style="font-family: monospace;">…34.</td>
-   <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis '.';">1234567890</div>
-   </td>
-   <td style="font-family: monospace;">…43.</td>
-   <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis '.';">1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: ',' clip</code></td>
-   <td style="font-family: monospace;">,3456</td>
-   <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ',' clip;">1234567890</div>
-   </td>
-   <td style="font-family: monospace;">,4321</td>
-   <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ',' clip;">1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: ',' ellipsis</code></td>
-   <td style="font-family: monospace;">,34…</td>
-   <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ','ellipsis;">1234567890</div>
-   </td>
-   <td style="font-family: monospace;">,43…</td>
-   <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ','ellipsis;">1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: ',' '.'</code></td>
-   <td style="font-family: monospace;">,34.</td>
-   <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ',' '.';">1234567890</div>
-   </td>
-   <td style="font-family: monospace;">,53.</td>
-   <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ',' '.';">1234567890</div>
-   </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th colspan="1" rowspan="2" scope="col">CSS value</th>
+      <th colspan="2" rowspan="1" scope="col" style="text-align: center">
+        <code>direction: ltr</code>
+      </th>
+      <th colspan="2" rowspan="1" scope="col" style="text-align: center">
+        <code>direction: rtl</code>
+      </th>
+    </tr>
+    <tr>
+      <th scope="col">Expected Result</th>
+      <th scope="col">Live result</th>
+      <th scope="col">Expected Result</th>
+      <th scope="col">Live result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>visible overflow</em></td>
+      <td style="font-family: monospace">1234567890</td>
+      <td style="direction: ltr">
+        <div
+          style="
+            float: left;
+            font-family: monospace;
+            white-space: nowrap;
+            max-width: 3.35em;
+            overflow: visible;
+          "
+        >
+          1234567890
+        </div>
+      </td>
+      <td style="font-family: monospace">0987654321</td>
+      <td>
+        <div
+          style="
+            font-family: monospace;
+            white-space: nowrap;
+            max-width: 3.35em;
+            overflow: visible;
+          "
+        >
+          1234567890
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><code>text-overflow: clip</code></td>
+      <td style="padding: 1px; font-family: monospace">
+        <img
+          alt="t-o_clip.png"
+          class="default internal"
+          src="/@api/deki/files/6056/=t-o_clip.png"
+        />
+      </td>
+      <td style="direction: ltr">
+        <div
+          style="
+            float: left;
+            font-family: monospace;
+            white-space: nowrap;
+            max-width: 3.35em;
+            overflow: hidden;
+            text-overflow: clip;
+          "
+        >
+          123456
+        </div>
+      </td>
+      <td style="padding: 1px; font-family: monospace">
+        <img
+          alt="t-o_clip_rtl.png"
+          class="default internal"
+          src="/@api/deki/files/6057/=t-o_clip_rtl.png"
+        />
+      </td>
+      <td style="direction: rtl">
+        <div
+          style="
+            font-family: monospace;
+            white-space: nowrap;
+            max-width: 3.35em;
+            overflow: hidden;
+            text-overflow: clip;
+          "
+        >
+          1234567890
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><code>text-overflow: ''</code></td>
+      <td style="font-family: monospace">12345</td>
+      <td style="direction: ltr">
+        <div
+          style="float: left; font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: &#x27;&#x27;;"
+        >
+          123456
+        </div>
+      </td>
+      <td style="font-family: monospace">54321</td>
+      <td style="direction: rtl">
+        <div
+          style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: &#x27;&#x27;;"
+        >
+          1234567890
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><code>text-overflow: ellipsis</code></td>
+      <td style="font-family: monospace">1234…</td>
+      <td style="direction: ltr">
+        <div
+          style="
+            font-family: monospace;
+            white-space: nowrap;
+            max-width: 3.35em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          "
+        >
+          1234567890
+        </div>
+      </td>
+      <td style="font-family: monospace">…4321</td>
+      <td style="direction: rtl">
+        <div
+          style="
+            font-family: monospace;
+            white-space: nowrap;
+            max-width: 3.35em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          "
+        >
+          1234567890
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><code>text-overflow: '.'</code></td>
+      <td style="font-family: monospace">1234.</td>
+      <td style="direction: ltr">
+        <div
+          style="
+            font-family: monospace;
+            white-space: nowrap;
+            max-width: 3.35em;
+            overflow: hidden;
+            text-overflow: &#x27;
+            .&#x27; ;
+          "
+        >
+          1234567890
+        </div>
+      </td>
+      <td style="font-family: monospace">.4321</td>
+      <td style="direction: rtl">
+        <div
+          style="
+            font-family: monospace;
+            white-space: nowrap;
+            max-width: 3.35em;
+            overflow: hidden;
+            text-overflow: &#x27;
+            .&#x27; ;
+          "
+        >
+          1234567890
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><code>text-overflow: clip clip</code></td>
+      <td style="font-family: monospace">123456</td>
+      <td style="direction: ltr">
+        <div
+          style="
+            font-family: monospace;
+            white-space: nowrap;
+            max-width: 3.35em;
+            overflow: hidden;
+            text-overflow: clip clip;
+          "
+        >
+          1234567890
+        </div>
+      </td>
+      <td style="font-family: monospace">654321</td>
+      <td style="direction: rtl">
+        <div
+          style="
+            font-family: monospace;
+            white-space: nowrap;
+            max-width: 3.35em;
+            overflow: hidden;
+            text-overflow: clip clip;
+          "
+        >
+          1234567890
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><code>text-overflow: clip ellipsis</code></td>
+      <td style="font-family: monospace">1234…</td>
+      <td style="direction: ltr">
+        <div
+          style="
+            font-family: monospace;
+            white-space: nowrap;
+            max-width: 3.35em;
+            overflow: hidden;
+            text-overflow: clip ellipsis;
+          "
+        >
+          1234567890
+        </div>
+      </td>
+      <td style="font-family: monospace">6543…</td>
+      <td style="direction: rtl">
+        <div
+          style="
+            font-family: monospace;
+            white-space: nowrap;
+            max-width: 3.35em;
+            overflow: hidden;
+            text-overflow: clip ellipsis;
+          "
+        >
+          1234567890
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><code>text-overflow: clip '.'</code></td>
+      <td style="font-family: monospace">1234.</td>
+      <td style="direction: ltr">
+        <div
+          style="
+            font-family: monospace;
+            white-space: nowrap;
+            max-width: 3.35em;
+            overflow: hidden;
+            text-overflow: clip &#x27;
+            .&#x27; ;
+          "
+        >
+          1234567890
+        </div>
+      </td>
+      <td style="font-family: monospace">6543.</td>
+      <td style="direction: rtl">
+        <div
+          style="
+            font-family: monospace;
+            white-space: nowrap;
+            max-width: 3.35em;
+            overflow: hidden;
+            text-overflow: clip &#x27;
+            .&#x27; ;
+          "
+        >
+          1234567890
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><code>text-overflow: ellipsis clip</code></td>
+      <td style="font-family: monospace">…3456</td>
+      <td style="direction: ltr">
+        <div
+          style="
+            font-family: monospace;
+            white-space: nowrap;
+            max-width: 3.35em;
+            overflow: hidden;
+            text-overflow: ellipsis clip;
+          "
+        >
+          1234567890
+        </div>
+      </td>
+      <td style="font-family: monospace">…4321</td>
+      <td style="direction: rtl">
+        <div
+          style="
+            font-family: monospace;
+            white-space: nowrap;
+            max-width: 3.35em;
+            overflow: hidden;
+            text-overflow: ellipsis clip;
+          "
+        >
+          1234567890
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><code>text-overflow: ellipsis ellipsis</code></td>
+      <td style="font-family: monospace">…34…</td>
+      <td style="direction: ltr">
+        <div
+          style="
+            font-family: monospace;
+            white-space: nowrap;
+            max-width: 3.35em;
+            overflow: hidden;
+            text-overflow: ellipsis ellipsis;
+          "
+        >
+          1234567890
+        </div>
+      </td>
+      <td style="font-family: monospace">…43…</td>
+      <td style="direction: rtl">
+        <div
+          style="
+            font-family: monospace;
+            white-space: nowrap;
+            max-width: 3.35em;
+            overflow: hidden;
+            text-overflow: ellipsis ellipsis;
+          "
+        >
+          1234567890
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><code>text-overflow: ellipsis '.'</code></td>
+      <td style="font-family: monospace">…34.</td>
+      <td style="direction: ltr">
+        <div
+          style="
+            font-family: monospace;
+            white-space: nowrap;
+            max-width: 3.35em;
+            overflow: hidden;
+            text-overflow: ellipsis &#x27;
+            .&#x27; ;
+          "
+        >
+          1234567890
+        </div>
+      </td>
+      <td style="font-family: monospace">…43.</td>
+      <td style="direction: rtl">
+        <div
+          style="
+            font-family: monospace;
+            white-space: nowrap;
+            max-width: 3.35em;
+            overflow: hidden;
+            text-overflow: ellipsis &#x27;
+            .&#x27; ;
+          "
+        >
+          1234567890
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><code>text-overflow: ',' clip</code></td>
+      <td style="font-family: monospace">,3456</td>
+      <td style="direction: ltr">
+        <div
+          style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: &#x27;,&#x27; clip;"
+        >
+          1234567890
+        </div>
+      </td>
+      <td style="font-family: monospace">,4321</td>
+      <td style="direction: rtl">
+        <div
+          style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: &#x27;,&#x27; clip;"
+        >
+          1234567890
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><code>text-overflow: ',' ellipsis</code></td>
+      <td style="font-family: monospace">,34…</td>
+      <td style="direction: ltr">
+        <div
+          style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: &#x27;,&#x27;ellipsis;"
+        >
+          1234567890
+        </div>
+      </td>
+      <td style="font-family: monospace">,43…</td>
+      <td style="direction: rtl">
+        <div
+          style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: &#x27;,&#x27;ellipsis;"
+        >
+          1234567890
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><code>text-overflow: ',' '.'</code></td>
+      <td style="font-family: monospace">,34.</td>
+      <td style="direction: ltr">
+        <div
+          style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: &#x27;,&#x27; &#x27;.&#x27;;"
+        >
+          1234567890
+        </div>
+      </td>
+      <td style="font-family: monospace">,53.</td>
+      <td style="direction: rtl">
+        <div
+          style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: &#x27;,&#x27; &#x27;.&#x27;;"
+        >
+          1234567890
+        </div>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Using_the_abbr_tag_of_HTML5_along_with_text-overflow"><br>
- Using the abbr tag of HTML5 along with text-overflow</h3>
+### <br>Using the abbr tag of HTML5 along with text-overflow
 
-<p>We have the example of the use of abbr tag inside a div with width 250px;</p>
+We have the example of the use of abbr tag inside a div with width 250px;
 
-<pre class="brush: css">div {
+```css
+div {
     width: 250px;
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     direction: ltr;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;div&gt;
-    &lt;abbr title="https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-overflow"&gt;https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-overflow&lt;/abbr&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+    <abbr title="https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-overflow">https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-overflow</abbr>
+</div>
+```
 
-<p>The full path of the URL will be displayed over the mouse, and the screen will be printed as follows: https://developer.mozilla.org/pt-BR/...</p>
+The full path of the URL will be displayed over the mouse, and the screen will be printed as follows: https\://developer.mozilla.org/pt-BR/...
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 UI', '#text-overflow', 'text-overflow') }}</td>
-   <td>{{ Spec2('CSS3 UI') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                       | Comment |
+| -------------------------------------------------------------------------------- | ---------------------------- | ------- |
+| {{ SpecName('CSS3 UI', '#text-overflow', 'text-overflow') }} | {{ Spec2('CSS3 UI') }} |         |
 
-<p>A previous version of this interface reached the <em>Candidate Recommendation</em> status. As some not-listed-at-risk features needed to be removed, the spec was demoted to the <em>Working Draft</em> level, explaining why browsers implemented this property unprefixed, though not at the CR state.</p>
+A previous version of this interface reached the _Candidate Recommendation_ status. As some not-listed-at-risk features needed to be removed, the spec was demoted to the _Working Draft_ level, explaining why browsers implemented this property unprefixed, though not at the CR state.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.properties.text-overflow")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en/CSS/CSS_Reference" title="CSS Reference">CSS Reference</a> index</li>
- <li>Related CSS properties: {{ cssxref("overflow") }}, {{ cssxref("white-space") }}</li>
-</ul>
+- [CSS Reference](/en/CSS/CSS_Reference "CSS Reference") index
+- Related CSS properties: {{ cssxref("overflow") }}, {{ cssxref("white-space") }}

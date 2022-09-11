@@ -3,136 +3,136 @@ title: Usando CSS transforms
 slug: Web/CSS/CSS_Transforms/Using_CSS_transforms
 translation_of: Web/CSS/CSS_Transforms/Using_CSS_transforms
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Mudando coordenadas no espaço da tela o <strong>CSS transforms </strong>permite que a posição do conteúdo afetado seja alterada sem afetar o fluxo de informação da página. Elas são implementadas usando um conjunto de propriedades CSS que permitem alterações lineares em elementos HTML. Essas alterações incluem rotação, inclinações, alteração da escala e tradução tanto em 2D quanto em 3D.</p>
+Mudando coordenadas no espaço da tela o **CSS transforms** permite que a posição do conteúdo afetado seja alterada sem afetar o fluxo de informação da página. Elas são implementadas usando um conjunto de propriedades CSS que permitem alterações lineares em elementos HTML. Essas alterações incluem rotação, inclinações, alteração da escala e tradução tanto em 2D quanto em 3D.
 
-<h2 id="Propriedades_de_CSS_transforms">Propriedades de CSS transforms</h2>
+## Propriedades de CSS transforms
 
-<p>Duas propriedades principais são usadas para definir o CSS transforms: {{ cssxref("transform") }} and {{ cssxref("transform-origin") }}</p>
+Duas propriedades principais são usadas para definir o CSS transforms: {{ cssxref("transform") }} and {{ cssxref("transform-origin") }}
 
-<dl>
- <dt>{{ cssxref("transform-origin") }}</dt>
- <dd>Define a posição de origem do elemento. Por padrão esta posição é o canto superior esquerdo do elemento e pode ser movido. É utilizado para muitas alterações, como rotação, alteração de escala e inclinação, que precisam de um ponto especifico como parâmetro.</dd>
- <dt>{{ cssxref("transform") }}</dt>
- <dd>Define qual alteração será feita no elemento. Pode-se usar mais de um efeito separado-os por um espaço. Tais efeitos serão aplicados um após o outro, na ordem determinada no código.</dd>
-</dl>
+- {{ cssxref("transform-origin") }}
+  - : Define a posição de origem do elemento. Por padrão esta posição é o canto superior esquerdo do elemento e pode ser movido. É utilizado para muitas alterações, como rotação, alteração de escala e inclinação, que precisam de um ponto especifico como parâmetro.
+- {{ cssxref("transform") }}
+  - : Define qual alteração será feita no elemento. Pode-se usar mais de um efeito separado-os por um espaço. Tais efeitos serão aplicados um após o outro, na ordem determinada no código.
 
-<h3 id="Exemplo_Rotação">Exemplo: Rotação</h3>
+### Exemplo: Rotação
 
-<p>Este exemplo cria um iframe que permite que a página inicial do Google seja utilizada com uma rotação de 90 graus a partir do canto inferior esquerdo</p>
+Este exemplo cria um iframe que permite que a página inicial do Google seja utilizada com uma rotação de 90 graus a partir do canto inferior esquerdo
 
-<p><a class="internal" href="/@api/deki/files/2921/=rotated-google-sample.html" title="/@api/deki/files/2921/=rotated-google-sample.html">Veja um exemplo funcionando</a><br>
- <a class="internal" href="/@api/deki/files/2920/=google-rotated.png" title="/@api/deki/files/2920/=google-rotated.png">Veja uma foto do exemplo</a></p>
+[Veja um exemplo funcionando](/@api/deki/files/2921/=rotated-google-sample.html)
+[Veja uma foto do exemplo](/@api/deki/files/2920/=google-rotated.png)
 
-<pre class="brush: html">&lt;div style="transform: rotate(90deg); transform-origin: bottom left;"&gt;
-  &lt;iframe src="http://www.google.com/" width="500" height="600"&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div style="transform: rotate(90deg); transform-origin: bottom left;">
+  <iframe src="http://www.google.com/" width="500" height="600"></iframe>
+</div>
+```
 
-<h3 id="Example_Inclinando_e_Movendo">Example: Inclinando e Movendo</h3>
+### Example: Inclinando e Movendo
 
-<p>Este exemplo cria um iframe que permite que você use a página inicial do Google inclinada em 10 graus no eixo X.</p>
+Este exemplo cria um iframe que permite que você use a página inicial do Google inclinada em 10 graus no eixo X.
 
-<p><a class="external" href="/@api/deki/files/2922/=skewed-google-sample.html" title="http://developer.mozilla.org/editor/fckeditor/core/editor/@api/deki/files/2922/=skewed-google-sample.html">Veja um exemplo funcionando</a><br>
- <a class="internal" href="/@api/deki/files/2923/=skewed-google.png" title="/@api/deki/files/2923/=skewed-google.png">View uma foto do exemplo</a></p>
+[Veja um exemplo funcionando](/@api/deki/files/2922/=skewed-google-sample.html "http://developer.mozilla.org/editor/fckeditor/core/editor/@api/deki/files/2922/=skewed-google-sample.html")
+[View uma foto do exemplo](/@api/deki/files/2923/=skewed-google.png)
 
-<pre class="brush: html">&lt;div style="transform: skewx(10deg) translatex(150px);
-            transform-origin: bottom left;"&gt;
-  &lt;iframe src="http://www.google.com/" width="600" height="500"&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div style="transform: skewx(10deg) translatex(150px);
+            transform-origin: bottom left;">
+  <iframe src="http://www.google.com/" width="600" height="500"></iframe>
+</div>
+```
 
-<h2 id="Propriedades_especificas_3D_do_CSS">Propriedades especificas 3D do CSS</h2>
+## Propriedades especificas 3D do CSS
 
-<p>Trabalhar com propriedades CSS em 3D é um pouco mais difícil. Você tem que começar configurando o espaço 3D dando perspectiva a ele, então você tem que configurar como os elementos 2D irão se comportar no espaço.</p>
+Trabalhar com propriedades CSS em 3D é um pouco mais difícil. Você tem que começar configurando o espaço 3D dando perspectiva a ele, então você tem que configurar como os elementos 2D irão se comportar no espaço.
 
-<h3 id="Configurando_uma_perspectiva">Configurando uma perspectiva</h3>
+### Configurando uma perspectiva
 
-<p>O primeiro elemento a ser configurado é a perspectiva. É ela a responsável pela sensação de 3D. Quanto mais longe o objeto estiver do usuário, menor ele é.</p>
+O primeiro elemento a ser configurado é a perspectiva. É ela a responsável pela sensação de 3D. Quanto mais longe o objeto estiver do usuário, menor ele é.
 
-<p>Quanto será a sensação de encolhimento é definida pela propriedade {{ cssxref("perspective") }}. Quanto menor o valor, mais profundidade terá o objeto.</p>
+Quanto será a sensação de encolhimento é definida pela propriedade {{ cssxref("perspective") }}. Quanto menor o valor, mais profundidade terá o objeto.
 
-<h5>HTML</h5>
+##### HTML
 
-<p>O HTML abaixo cria quatro cópias da mesma caixa, com a perspectiva definida em valores diferentes.</p>
+O HTML abaixo cria quatro cópias da mesma caixa, com a perspectiva definida em valores diferentes.
 
-<pre class="brush:html">
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;th&gt;&lt;code&gt;perspective: 250px;&lt;/code&gt;
-      &lt;/th&gt;
-      &lt;th&gt;&lt;code&gt;perspective: 350px;&lt;/code&gt;
-      &lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;
-        &lt;div class="container"&gt;
-          &lt;div class="cube pers250"&gt;
-            &lt;div class="face front"&gt;1&lt;/div&gt;
-            &lt;div class="face back"&gt;2&lt;/div&gt;
-            &lt;div class="face right"&gt;3&lt;/div&gt;
-            &lt;div class="face left"&gt;4&lt;/div&gt;
-            &lt;div class="face top"&gt;5&lt;/div&gt;
-            &lt;div class="face bottom"&gt;6&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class="container"&gt;
-          &lt;div class="cube pers350"&gt;
-            &lt;div class="face front"&gt;1&lt;/div&gt;
-            &lt;div class="face back"&gt;2&lt;/div&gt;
-            &lt;div class="face right"&gt;3&lt;/div&gt;
-            &lt;div class="face left"&gt;4&lt;/div&gt;
-            &lt;div class="face top"&gt;5&lt;/div&gt;
-            &lt;div class="face bottom"&gt;6&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;&lt;code&gt;perspective: 500px;&lt;/code&gt;
-      &lt;/th&gt;
-      &lt;th&gt;&lt;code&gt;perspective: 650px;&lt;/code&gt;
-      &lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;
-        &lt;div class="container"&gt;
-          &lt;div class="cube pers500"&gt;
-            &lt;div class="face front"&gt;1&lt;/div&gt;
-            &lt;div class="face back"&gt;2&lt;/div&gt;
-            &lt;div class="face right"&gt;3&lt;/div&gt;
-            &lt;div class="face left"&gt;4&lt;/div&gt;
-            &lt;div class="face top"&gt;5&lt;/div&gt;
-            &lt;div class="face bottom"&gt;6&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class="container"&gt;
-          &lt;div class="cube pers650"&gt;
-            &lt;div class="face front"&gt;1&lt;/div&gt;
-            &lt;div class="face back"&gt;2&lt;/div&gt;
-            &lt;div class="face right"&gt;3&lt;/div&gt;
-            &lt;div class="face left"&gt;4&lt;/div&gt;
-            &lt;div class="face top"&gt;5&lt;/div&gt;
-            &lt;div class="face bottom"&gt;6&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</pre>
+```html
+<table>
+  <tbody>
+    <tr>
+      <th><code>perspective: 250px;</code>
+      </th>
+      <th><code>perspective: 350px;</code>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <div class="container">
+          <div class="cube pers250">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="container">
+          <div class="cube pers350">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><code>perspective: 500px;</code>
+      </th>
+      <th><code>perspective: 650px;</code>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <div class="container">
+          <div class="cube pers500">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="container">
+          <div class="cube pers650">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+```
 
-<h5>CSS</h5>
+##### CSS
 
-<p>O CSS estabelece classes que podem ser usadas para definir a perspectiva a diferentes distâncias. Ele também inclui classes para a caixa do recipiente e o próprio cubo, bem como cada uma de suas faces.</p>
+O CSS estabelece classes que podem ser usadas para definir a perspectiva a diferentes distâncias. Ele também inclui classes para a caixa do recipiente e o próprio cubo, bem como cada uma de suas faces.
 
-<pre class="brush: css">
+```css
 /* Shorthand classes for different perspective values */
 .pers250 {
   perspective: 250px;
@@ -205,197 +205,197 @@ th, p, td {
   font-family: sans-serif;
   text-align: left;
 }
-</pre>
+```
 
-<h5>Resultado</h5>
+##### Resultado
 
 {{EmbedLiveSample('', 660, 700)}}
 
-<p>O segundo elemento a ser configurado é a posição do espectador, com a propriedade {{cssxref("perspective-origin")}}}. Por padrão, a perspectiva está centrada no telespectador, o que nem sempre é adequado.</p>
+O segundo elemento a ser configurado é a posição do espectador, com a propriedade {{cssxref("perspective-origin")}}}. Por padrão, a perspectiva está centrada no telespectador, o que nem sempre é adequado.
 
-<h4>Mudando a origem da perspectiva</h4>
+#### Mudando a origem da perspectiva
 
-<p>Este exemplo mostra cubos com valores populares do <code>perspective-origin</code>.</p>
+Este exemplo mostra cubos com valores populares do `perspective-origin`.
 
-<h5>HTML</h5>
+##### HTML
 
-<pre class="brush:html">
-&lt;section&gt;
+```html
+<section>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: top left;&lt;/code&gt;&lt;/figcaption&gt;
-    &lt;div class="container"&gt;
-     &lt;div class="cube potl"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-     &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: top left;</code></figcaption>
+    <div class="container">
+     <div class="cube potl">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+     </div>
+    </div>
+</figure>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: top;&lt;/code&gt;&lt;/figcaption&gt;
-   &lt;div class="container"&gt;
-    &lt;div class="cube potm"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: top;</code></figcaption>
+   <div class="container">
+    <div class="cube potm">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+    </div>
+  </div>
+</figure>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: top right;&lt;/code&gt;&lt;/figcaption&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="cube potr"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: top right;</code></figcaption>
+  <div class="container">
+    <div class="cube potr">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+    </div>
+  </div>
+</figure>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: left;&lt;/code&gt;&lt;/figcaption&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="cube poml"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: left;</code></figcaption>
+  <div class="container">
+    <div class="cube poml">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+    </div>
+  </div>
+</figure>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: 50% 50%;&lt;/code&gt;&lt;/figcaption&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="cube pomm"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: 50% 50%;</code></figcaption>
+  <div class="container">
+    <div class="cube pomm">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+    </div>
+  </div>
+</figure>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: right;&lt;/code&gt;&lt;/figcaption&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="cube pomr"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: right;</code></figcaption>
+  <div class="container">
+    <div class="cube pomr">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+    </div>
+  </div>
+</figure>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: bottom left;&lt;/code&gt;&lt;/figcaption&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="cube pobl"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: bottom left;</code></figcaption>
+  <div class="container">
+    <div class="cube pobl">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+    </div>
+  </div>
+</figure>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: bottom;&lt;/code&gt;&lt;/figcaption&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="cube pobm"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: bottom;</code></figcaption>
+  <div class="container">
+    <div class="cube pobm">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+    </div>
+  </div>
+</figure>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: bottom right;&lt;/code&gt;&lt;/figcaption&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="cube pobr"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: bottom right;</code></figcaption>
+  <div class="container">
+    <div class="cube pobr">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+    </div>
+  </div>
+</figure>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: -200% -200%;&lt;/code&gt;&lt;/figcaption&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="cube po200200neg"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: -200% -200%;</code></figcaption>
+  <div class="container">
+    <div class="cube po200200neg">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+    </div>
+  </div>
+</figure>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: 200% 200%;&lt;/code&gt;&lt;/figcaption&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="cube po200200pos"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: 200% 200%;</code></figcaption>
+  <div class="container">
+    <div class="cube po200200pos">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+    </div>
+  </div>
+</figure>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: 200% -200%;&lt;/code&gt;&lt;/figcaption&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="cube po200200"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: 200% -200%;</code></figcaption>
+  <div class="container">
+    <div class="cube po200200">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+    </div>
+  </div>
+</figure>
 
-&lt;/section&gt;
-</pre>
+</section>
+```
 
-<h5>CSS</h5>
+##### CSS
 
-<pre class="brush: css">
+```css
 /* perspective-origin values (unique per example) */
 .potl {
   perspective-origin: top left;
@@ -494,18 +494,16 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-</pre>
+```
 
-<h5>Resultado</h5>
+##### Resultado
 
 {{EmbedLiveSample('', '100%', 700)}}
 
-<p>Feito isso, você pode trabalhar com elementos 3D.</p>
+Feito isso, você pode trabalhar com elementos 3D.
 
-<h3 id="Elementos_2D_em_espaço_3D">Elementos 2D em espaço 3D</h3>
+### Elementos 2D em espaço 3D
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en/Using_Deviceorientation_In_3D_Transforms" title="Using Deviceorientation In 3D Transforms">Usando deviceorientation com 3D Transforms</a></li>
-</ul>
+- [Usando deviceorientation com 3D Transforms](/en/Using_Deviceorientation_In_3D_Transforms "Using Deviceorientation In 3D Transforms")

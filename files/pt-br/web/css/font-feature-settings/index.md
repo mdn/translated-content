@@ -8,23 +8,24 @@ tags:
   - Referencia
 translation_of: Web/CSS/font-feature-settings
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>A propriedade <strong><code>font-feature-settings</code></strong> do CSS te dá controle sobre tipografia avançada nas fontes do tipo OpenType.</p>
+A propriedade **`font-feature-settings`** do CSS te dá controle sobre tipografia avançada nas fontes do tipo OpenType.
 
-<div class="note"><strong>Nota:</strong> Sempre que possível, deve usar o {{cssxref("font-variant")}} propriedade abreviada ou uma propriedade extensa associada, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-numeric")}} ou {{cssxref("font-variant-position")}}.<br>
-<br>
-Esta propriedade é um recurso de baixo nível projetado para lidar com casos especiais onde não existe outra maneira de habilitar ou acessar um recurso de fonte OpenType.<br>
-<br>
-Em particular, esta propriedade CSS não deve ser usada para habilitar small caps.</div>
+> **Note:** **Nota:** Sempre que possível, deve usar o {{cssxref("font-variant")}} propriedade abreviada ou uma propriedade extensa associada, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-numeric")}} ou {{cssxref("font-variant-position")}}.
+>
+> Esta propriedade é um recurso de baixo nível projetado para lidar com casos especiais onde não existe outra maneira de habilitar ou acessar um recurso de fonte OpenType.
+>
+> Em particular, esta propriedade CSS não deve ser usada para habilitar small caps.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush:css">/* Use the default settings */
+```css
+/* Use the default settings */
 font-feature-settings: normal;
 
 /* Set values for OpenType feature tags */
@@ -37,25 +38,24 @@ font-feature-settings: "smcp", "swsh" 2;
 font-feature-settings: inherit;
 font-feature-settings: initial;
 font-feature-settings: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Text is laid out using default settings.</dd>
- <dt><code>&lt;feature-tag-value&gt;</code></dt>
- <dd>Ao renderizar texto, a lista de características OpenType é passada para o mecanismo de layout de texto para ativar ou desativar recursos do tipo de letra. A tag é sempre uma {{cssxref("&lt;string&gt;")}} de 4 caracteres ASCII. Se possuir mais ou menos caracteres ou conter caracteres fora da faixa U+20 - U+7E, toda a propriedade é invalida.<br>
- O valor é um inteiro positivo. As duas palavras-chaves <code>on</code> e <code>off</code> são sinônimos de <code>1</code> e <code>0</code> respectivamente. Se nenhum valor é definido, o padrão é <code>1</code>. Para características OpenType não-booleanas (ex. <a href="http://www.microsoft.com/typography/otspec/features_pt.htm#salt">stylistic alternates</a>), o valor implica em um glifo particular para ser selecionado; para valores booleanos, é um interruptor.</dd>
-</dl>
+- `normal`
+  - : Text is laid out using default settings.
+- `<feature-tag-value>`
+  - : Ao renderizar texto, a lista de características OpenType é passada para o mecanismo de layout de texto para ativar ou desativar recursos do tipo de letra. A tag é sempre uma {{cssxref("&lt;string&gt;")}} de 4 caracteres ASCII. Se possuir mais ou menos caracteres ou conter caracteres fora da faixa U+20 - U+7E, toda a propriedade é invalida.
+    O valor é um inteiro positivo. As duas palavras-chaves `on` e `off` são sinônimos de `1` e `0` respectivamente. Se nenhum valor é definido, o padrão é `1`. Para características OpenType não-booleanas (ex. [stylistic alternates](http://www.microsoft.com/typography/otspec/features_pt.htm#salt)), o valor implica em um glifo particular para ser selecionado; para valores booleanos, é um interruptor.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush:css">/* use small-cap alternate glyphs */
+```css
+/* use small-cap alternate glyphs */
 .smallcaps { font-feature-settings: "smcp" on; }
 
 /* convert both upper and lowercase to small caps (affects punctuation also) */
@@ -81,35 +81,20 @@ td.tabular { font-feature-settings: "tnum"; }
   font-family: Gabriola; /* available on Windows 7, and on Mac OS */
   font-feature-settings: "ss07";
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificacão</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#propdef-font-feature-settings', 'font-feature-settings')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Especificacão                                                                                                    | Estado                           | Comment            |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('CSS3 Fonts', '#propdef-font-feature-settings', 'font-feature-settings')}} | {{Spec2('CSS3 Fonts')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.properties.font-feature-settings")}}
 
-<h2 id="Veja_Também">Veja Também</h2>
+## Veja Também
 
-<ul>
- <li><a href="https://www.fontfont.com/staticcontent/downloads/FF_OT_User_Guide.pdf">FontFont OpenType User Guide (pdf)</a></li>
- <li><a href="http://www.microsoft.com/typography/otspec/featurelist.htm">OpenType Feature Tags</a> list</li>
- <li><a href="http://blogs.msdn.com/b/ie/archive/2012/01/09/css-corner-using-the-whole-font.aspx">Using the whole font</a> (The -moz syntax is the old one. On Gecko, use the -ms syntax but with -moz).</li>
-</ul>
+- [FontFont OpenType User Guide (pdf)](https://www.fontfont.com/staticcontent/downloads/FF_OT_User_Guide.pdf)
+- [OpenType Feature Tags](http://www.microsoft.com/typography/otspec/featurelist.htm) list
+- [Using the whole font](http://blogs.msdn.com/b/ie/archive/2012/01/09/css-corner-using-the-whole-font.aspx) (The -moz syntax is the old one. On Gecko, use the -ms syntax but with -moz).

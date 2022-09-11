@@ -8,17 +8,18 @@ tags:
   - Texto CSS
 translation_of: Web/CSS/text-align
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>A propriedade CSS <strong><code>text-align</code></strong> descreve como conteúdo inline, como texto, é alinhado no elemento pai em bloco. <code>text-align</code> não controla o alinhamento de elementos em bloco, apenas o seu conteúdo inline.</p>
+A propriedade CSS **`text-align`** descreve como conteúdo inline, como texto, é alinhado no elemento pai em bloco. `text-align` não controla o alinhamento de elementos em bloco, apenas o seu conteúdo inline.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 text-align: left;
 text-align: right;
 text-align: center;
@@ -36,161 +37,147 @@ text-align: -webkit-center;
 text-align: inherit;
 text-align: initial;
 text-align: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>start</code> {{experimental_inline}}</dt>
- <dd>Igual <code>left</code> se a direção é esquerda-para-direita e <code>right</code> se a direção é direita-para-esquerda.</dd>
- <dt><code>end</code> {{experimental_inline}}</dt>
- <dd>Igual <code>right</code> se a direção é esquerda-para-direita e <code>left</code> se a direção é direita-para-esquerda.</dd>
- <dt><code>left</code></dt>
- <dd>O conteúdo é alinhado na borda esquerda do box.</dd>
- <dt><code>right</code></dt>
- <dd>O conteúdo é alinhado na borda direita do box.</dd>
- <dt><code>center</code></dt>
- <dd>Os conteúdos inline são centralizados entre a linha da caixa.</dd>
- <dt><code>justify</code></dt>
- <dd>Os conteúdos inline são justificados. Text should be spaced to line up its left and right edges to the left and right edges of the line box, except for the last line.</dd>
- <dt><code>justify-all</code></dt>
- <dd>Semelhante a <code>justify</code>, porém força a última linha a ser justificada.</dd>
- <dt><code>match-parent</code> {{experimental_inline}}</dt>
- <dd>Similar to <code>inherit</code>, but the values <code>start</code> and <code>end</code> are calculated according the parent's {{cssxref("direction")}} and are replaced by the adequate <code>left</code> or <code>right</code> value.</dd>
-</dl>
+- `start` {{experimental_inline}}
+  - : Igual `left` se a direção é esquerda-para-direita e `right` se a direção é direita-para-esquerda.
+- `end` {{experimental_inline}}
+  - : Igual `right` se a direção é esquerda-para-direita e `left` se a direção é direita-para-esquerda.
+- `left`
+  - : O conteúdo é alinhado na borda esquerda do box.
+- `right`
+  - : O conteúdo é alinhado na borda direita do box.
+- `center`
+  - : Os conteúdos inline são centralizados entre a linha da caixa.
+- `justify`
+  - : Os conteúdos inline são justificados. Text should be spaced to line up its left and right edges to the left and right edges of the line box, except for the last line.
+- `justify-all`
+  - : Semelhante a `justify`, porém força a última linha a ser justificada.
+- `match-parent` {{experimental_inline}}
+  - : Similar to `inherit`, but the values `start` and `end` are calculated according the parent's {{cssxref("direction")}} and are replaced by the adequate `left` or `right` value.
 
-<h3 id="Sintaxe_Formal">Sintaxe Formal</h3>
+### Sintaxe Formal
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Alinhamento_Esquerdo">Alinhamento Esquerdo</h3>
+### Alinhamento Esquerdo
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="example"&gt;
+```html
+<p class="example">
   Integer elementum massa at nulla placerat varius.
   Suspendisse in libero risus, in interdum massa.
   Vestibulum ac leo vitae metus faucibus gravida ac in neque.
   Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight:[2]">.example {
+```css
+.example {
   text-align: left;
   border: solid;
-}</pre>
+}
+```
 
-<h4 id="Resultado">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample("Left_alignment","100%","100%")}}</p>
+{{EmbedLiveSample("Left_alignment","100%","100%")}}
 
-<h3 id="Texto_centralizado">Texto centralizado</h3>
+### Texto centralizado
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="example"&gt;
+```html
+<p class="example">
   Integer elementum massa at nulla placerat varius.
   Suspendisse in libero risus, in interdum massa.
   Vestibulum ac leo vitae metus faucibus gravida ac in neque.
   Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight:[2]">.example {
+```css
+.example {
   text-align: center;
   border: solid;
-}</pre>
+}
+```
 
-<h4 id="Resultado_2">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample("Centered_text","100%","100%")}}</p>
+{{EmbedLiveSample("Centered_text","100%","100%")}}
 
-<h3 id="Justificado">Justificado</h3>
+### Justificado
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="example"&gt;
+```html
+<p class="example">
   Integer elementum massa at nulla placerat varius.
   Suspendisse in libero risus, in interdum massa.
   Vestibulum ac leo vitae metus faucibus gravida ac in neque.
   Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight:[2]">.example {
+```css
+.example {
   text-align: justify;
   border: solid;
-}</pre>
+}
+```
 
-<h4 id="Resultado_3">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample("Justify","100%","100%")}}</p>
+{{EmbedLiveSample("Justify","100%","100%")}}
 
-<h3 id="Notas">Notas</h3>
+### Notas
 
-<p>O modo compátivel-padrão de centralizar um bloco em si sem centralizar seu conteúdo inline é setando a {{cssxref("margin")}} left e right para <code>auto</code>, e.g.:</p>
+O modo compátivel-padrão de centralizar um bloco em si sem centralizar seu conteúdo inline é setando a {{cssxref("margin")}} left e right para `auto`, e.g.:
 
-<pre class="brush: css">.something {
+```css
+.something {
   margin: auto;
 }
-</pre>
+```
 
-<pre class="brush: css">.something {
+```css
+.something {
   margin: 0 auto;
 }
-</pre>
+```
 
-<pre class="brush: css">.something {
+```css
+.something {
   margin-left: auto;
   margin-right: auto;
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Logical Properties', '#text-align', 'text-align')}}</td>
-   <td>{{Spec2('CSS Logical Properties')}}</td>
-   <td>Sem mudanças</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Text', '#text-align-property', 'text-align')}}</td>
-   <td>{{Spec2('CSS3 Text')}}</td>
-   <td>Added the <code>start</code>, <code>end</code>, and <code>match-parent</code> values. Changed the unnamed initial value to <code>start</code> (which it was).</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'text.html#alignment-prop', 'text-align')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Sem mudanças</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#text-align', 'text-align')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Definição iniciaç</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                            | Status                                           | Comentário                                                                                                        |
+| ---------------------------------------------------------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS Logical Properties', '#text-align', 'text-align')}} | {{Spec2('CSS Logical Properties')}} | Sem mudanças                                                                                                      |
+| {{SpecName('CSS3 Text', '#text-align-property', 'text-align')}}     | {{Spec2('CSS3 Text')}}                     | Added the `start`, `end`, and `match-parent` values. Changed the unnamed initial value to `start` (which it was). |
+| {{SpecName('CSS2.1', 'text.html#alignment-prop', 'text-align')}}     | {{Spec2('CSS2.1')}}                         | Sem mudanças                                                                                                      |
+| {{SpecName('CSS1', '#text-align', 'text-align')}}                         | {{Spec2('CSS1')}}                         | Definição iniciaç                                                                                                 |
 
-<h2 id="Browser_compatibilidade">Browser compatibilidade</h2>
+## Browser compatibilidade
 
 {{Compat("css.properties.text-align")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{Cssxref("margin","margin:auto")}}, {{Cssxref("margin-left","margin-left:auto")}}, {{Cssxref("vertical-align")}}</li>
-</ul>
+- {{Cssxref("margin","margin:auto")}}, {{Cssxref("margin-left","margin-left:auto")}}, {{Cssxref("vertical-align")}}

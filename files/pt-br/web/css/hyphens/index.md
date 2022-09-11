@@ -4,13 +4,10 @@ slug: Web/CSS/hyphens
 translation_of: Web/CSS/hyphens
 original_slug: Web/CSS/hifens
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}A propriedade [CSS](/pt-BR/docs/) **`hyphens`** especifica como palavras devem ser hifenizadas quando o há quebra de texto em múltiplas linhas. Você pode prevenir a hifenização completamente, especificar pontos manualmente, ou permitir que o navegador insira automaticamente quando apropriado.
 
-<div>A propriedade <a href="/en-US/docs/">CSS</a>  <strong><code>hyphens</code></strong> especifica como palavras devem ser hifenizadas quando o há quebra de texto em múltiplas linhas. Você pode prevenir a hifenização completamente, especificar pontos manualmente, ou permitir que o navegador insira automaticamente quando apropriado.</div>
-
-<div> </div>
-
-<pre class="brush:css no-line-numbers">hyphens: none;
+```css
+hyphens: none;
 hyphens: manual;
 hyphens: auto;
 
@@ -18,68 +15,62 @@ hyphens: auto;
 hyphens: inherit;
 hyphens: initial;
 hyphens: unset;
-</pre>
+```
 
-<p>Regras de hifenização são específicas para cada idioma. Em HTML, o idioma é determinado pelo atributo <code><a href="/pt-BR/docs/Web/HTML/Global_attributes/lang">lang</a>,</code> e os navegadores irão utilizar hífen apenas caso este atributo esteja presente e se houver um dicionário de hifenização disponível. Em XML, deve ser usado o atributo <code><a href="/en-US/docs/Web/SVG/Attribute/xml:lang">xml:lang</a>.</code></p>
+Regras de hifenização são específicas para cada idioma. Em HTML, o idioma é determinado pelo atributo `lang,` e os navegadores irão utilizar hífen apenas caso este atributo esteja presente e se houver um dicionário de hifenização disponível. Em XML, deve ser usado o atributo `xml:lang.`
 
-<div class="note">
-<p><strong>Nota:</strong> As regras que definem como a hifenização é realizada não são explicitamente definidas pela especificação, então a hifenização exata pode variar de navegador para navegador.</p>
-</div>
+> **Note:** **Nota:** As regras que definem como a hifenização é realizada não são explicitamente definidas pela especificação, então a hifenização exata pode variar de navegador para navegador.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<p>A propriedade <code>hyphens</code> é especificada como uma única palavra-chave escolhida da lista abaixo.</p>
+A propriedade `hyphens` é especificada como uma única palavra-chave escolhida da lista abaixo.
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Palavras não são separadas em quebras de linha, mesmo se seus caracteres sugiram pontos de quebra de linha. Linhas são quebradas apenas em espaços em branco.</dd>
- <dt><code>manual</code></dt>
- <dd>Palavras são separadas apenas onde caracteres dentro de uma palavras sugiram oportunidades de quebra de linha. Veja abaixo <a href="#suggesting_line_break_opportunities">Oportunidades sugeridas de quebra de linha</a> para mais detalhes.</dd>
- <dt><code>auto</code></dt>
- <dd>O navegador é livre para quebrar palavras automaticamente nos pontos apropriados de hifenização, seguindo quaisquer regras que ele escolher. Entretanto, oportunidades sugeridas de quebras de linha (veja <a href="#suggesting_line_break_opportunities">Oportunidades sugeridas de quebra de linha</a> abaixo) irão sobrepor a seleção automática de pontos de quebra quando presentes.</dd>
-</dl>
+- `none`
+  - : Palavras não são separadas em quebras de linha, mesmo se seus caracteres sugiram pontos de quebra de linha. Linhas são quebradas apenas em espaços em branco.
+- `manual`
+  - : Palavras são separadas apenas onde caracteres dentro de uma palavras sugiram oportunidades de quebra de linha. Veja abaixo [Oportunidades sugeridas de quebra de linha](#suggesting_line_break_opportunities) para mais detalhes.
+- `auto`
+  - : O navegador é livre para quebrar palavras automaticamente nos pontos apropriados de hifenização, seguindo quaisquer regras que ele escolher. Entretanto, oportunidades sugeridas de quebras de linha (veja [Oportunidades sugeridas de quebra de linha](#suggesting_line_break_opportunities) abaixo) irão sobrepor a seleção automática de pontos de quebra quando presentes.
 
-<div class="note">
-<p><strong>Nota:</strong> O comportamento da configuração <code>auto</code> requer que a propriedade idioma seja indicada corretamente para que as regras de hifenização sejam selecionadas. Você deve especificar o idioma utilizando o atributo HTML <code>lang</code> para garantir que a hifenização automática seja aplicada na linguagem de sua escolha.</p>
-</div>
+> **Note:** **Nota:** O comportamento da configuração `auto` requer que a propriedade idioma seja indicada corretamente para que as regras de hifenização sejam selecionadas. Você deve especificar o idioma utilizando o atributo HTML `lang` para garantir que a hifenização automática seja aplicada na linguagem de sua escolha.
 
-<h2 id="Oportunidades_sugeridas_de_quebra_de_linha">Oportunidades sugeridas de quebra de linha</h2>
+## Oportunidades sugeridas de quebra de linha
 
-<p>Existem dois caracteres Unicode que podem ser utilizados para especificar manualmente potenciais pontos de quebra de linha no texto:</p>
+Existem dois caracteres Unicode que podem ser utilizados para especificar manualmente potenciais pontos de quebra de linha no texto:
 
-<dl>
- <dt>U+2010 (HYPHEN)</dt>
- <dd>O caractere hífen "duro" indica uma oportunidade de quebra de linha visível. Mesmo que não haja quebra de linha naquele ponto, o hífen ainda será renderizado.</dd>
- <dt>U+00AD (SHY)</dt>
- <dd>Um hífen invisivel, "suave". Este caractere não é renderizado visivelmente; ao invés, ele marca um local onde o browser deve quebrar a palavra se um hífen for necessário. Em HTML você pode usar <code>&amp;shy;</code> para inserir um hífen suave.</dd>
-</dl>
+- U+2010 (HYPHEN)
+  - : O caractere hífen "duro" indica uma oportunidade de quebra de linha visível. Mesmo que não haja quebra de linha naquele ponto, o hífen ainda será renderizado.
+- U+00AD (SHY)
+  - : Um hífen invisivel, "suave". Este caractere não é renderizado visivelmente; ao invés, ele marca um local onde o browser deve quebrar a palavra se um hífen for necessário. Em HTML você pode usar `&shy;` para inserir um hífen suave.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>Este exemplo usa três classes, uma para cada configuração possível da propriedade <code>hyphens</code>.</p>
+Este exemplo usa três classes, uma para cada configuração possível da propriedade `hyphens`.
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;none&lt;/code&gt;: sem hífen; transbordar se necessário
-    &lt;p lang="en" class="none"&gt;An extreme&amp;shy;ly long English word&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;manual&lt;/code&gt;: hífen apenas em &amp;amp;hyphen; ou &amp;amp;shy; (se necessário)
-    &lt;p lang="en" class="manual"&gt;An extreme&amp;shy;ly long English word&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;auto&lt;/code&gt;: hífen onde o algorítmo decidir (se necessário)
-    &lt;p lang="en" class="auto"&gt;An extreme&amp;shy;ly long English word&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html
+<ul>
+  <li><code>none</code>: sem hífen; transbordar se necessário
+    <p lang="en" class="none">An extreme&shy;ly long English word</p>
+  </li>
+  <li><code>manual</code>: hífen apenas em &amp;hyphen; ou &amp;shy; (se necessário)
+    <p lang="en" class="manual">An extreme&shy;ly long English word</p>
+  </li>
+  <li><code>auto</code>: hífen onde o algorítmo decidir (se necessário)
+    <p lang="en" class="auto">An extreme&shy;ly long English word</p>
+  </li>
+</ul>
+```
 
-<pre class="brush: css">p {
+```css
+p {
   width: 55px;
   border: 1px solid black;
  }
@@ -98,37 +89,20 @@ p.auto {
   -ms-hyphens: auto;
   hyphens: auto;
 }
-</pre>
+```
 
-<figure>
-<p>{{EmbedLiveSample("Example", "100%", "470'")}}</p>
-</figure>
+{{EmbedLiveSample("Example", "100%", "470'")}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Condição</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Text", "#hyphens-property", "hyphens")}}</td>
-   <td>{{Spec2("CSS3 Text")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                | Condição                     | Comentário         |
+| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName("CSS3 Text", "#hyphens-property", "hyphens")}} | {{Spec2("CSS3 Text")}} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.properties.hyphens")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{Cssxref("content")}}</li>
-</ul>
+- {{Cssxref("content")}}

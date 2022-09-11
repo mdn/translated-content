@@ -1,44 +1,48 @@
 ---
 title: ':out-of-range'
-slug: 'Web/CSS/:out-of-range'
-translation_of: 'Web/CSS/:out-of-range'
+slug: Web/CSS/:out-of-range
+translation_of: Web/CSS/:out-of-range
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A <a href="/en-US/docs/CSS/Pseudo-classes" title="Pseudo-classes">pseudo classe</a> de <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>:out-of-range</code></strong> representa um elemento de {{htmlelement("entrada")}} cujo valor atual esta fora dos limites especificados pelo {{htmlattrxref("min", "entrada")}} e {{htmlattrxref("max","entrada")}} atributos</p>
+A [pseudo classe](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes") de [CSS](/pt-BR/docs/Web/CSS) **`:out-of-range`** representa um elemento de {{htmlelement("entrada")}} cujo valor atual esta fora dos limites especificados pelo {{htmlattrxref("min", "entrada")}} e {{htmlattrxref("max","entrada")}} atributos
 
-<pre class="brush: css no-line-numbers">/* Selecione qualquer &lt;entrada&gt;, mas somente quando estiver dentros dos
+```css
+/* Selecione qualquer <entrada>, mas somente quando estiver dentros dos
  limites especificados, e quando este valor estiver fora deste limite */
 input:out-of-range {
   background-color: rgba(255, 0, 0, 0.25);
-}</pre>
+}
+```
 
-<p>Essa pseudo classe é muito útil por dar ao usuario uma indicacão visual de que o valor atual esta fora dos limites permitidos</p>
+Essa pseudo classe é muito útil por dar ao usuario uma indicacão visual de que o valor atual esta fora dos limites permitidos
 
-<div class="note"><strong>Nota:</strong> Esta pseudo classe se aplica somente a elementos que tem (ou podem ter) uma limitacao. Na falta dessa de algo como essa limitacao, o elemento nao tera como ficar "in-range"(dentro dos limites) ou "out-of-range" (fora dos limites).</div>
+> **Note:** **Nota:** Esta pseudo classe se aplica somente a elementos que tem (ou podem ter) uma limitacao. Na falta dessa de algo como essa limitacao, o elemento nao tera como ficar "in-range"(dentro dos limites) ou "out-of-range" (fora dos limites).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<div id="example">
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;form action="" id="form1"&gt;
- &lt;p&gt;Valores entre 1 e 10 são validos.&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;
-      &lt;input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12"&gt;
-      &lt;label for="value1"&gt;Seu valor está &lt;/label&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/form&gt;</pre>
+```html
+<form action="" id="form1">
+ <p>Valores entre 1 e 10 são validos.</p>
+  <ul>
+    <li>
+      <input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12">
+      <label for="value1">Seu valor está </label>
+    </li>
+  </ul>
+</form>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css;">li {
+```css
+li {
   list-style: none;
   margin-bottom: 1em;
 }
@@ -62,50 +66,25 @@ input:in-range + label::after {
 
 input:out-of-range + label::after {
   content: 'Fora dos limites!';
-}</pre>
+}
+```
 
-<h3 id="Resultado">Resultado</h3>
-</div>
+### Resultado
 
-<div>{{EmbedLiveSample('Example', 600, 140)}}</div>
+{{EmbedLiveSample('Example', 600, 140)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'scripting.html#selector-out-of-range', ':out-of-range')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Define quando <code>:out-of-range</code> se iguala aos elementos em HTML.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#out-of-range-pseudo', ':out-of-range')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Definicao inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                               | Comment                                                        |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'scripting.html#selector-out-of-range', ':out-of-range')}} | {{Spec2('HTML WHATWG')}}     | Define quando `:out-of-range` se iguala aos elementos em HTML. |
+| {{SpecName('CSS4 Selectors', '#out-of-range-pseudo', ':out-of-range')}}                 | {{Spec2('CSS4 Selectors')}} | Definicao inicial.                                             |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
-<div>
+{{Compat("css.selectors.out-of-range")}}
 
+## See also
 
-<p>{{Compat("css.selectors.out-of-range")}}</p>
-</div>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{cssxref(":in-range")}}</li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a></li>
-</ul>
+- {{cssxref(":in-range")}}
+- [Form data validation](/pt-BR/docs/Learn/HTML/Forms/Form_validation)

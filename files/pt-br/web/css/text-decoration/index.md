@@ -9,23 +9,22 @@ tags:
   - Texto CSS
 translation_of: Web/CSS/text-decoration
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>A propriedade <strong><code>text-decoration</code></strong> do CSS é usada para definir a formatação de  <code>underline</code>, <code>overline</code>, <code>line-through</code> ou <code>blink</code>. As decorações underline e overline são posicionadas abaixo e acima do texto (respectivamente), e line-through cortando-o.</p>
+A propriedade **`text-decoration`** do CSS é usada para definir a formatação de `underline`, `overline`, `line-through` ou `blink`. As decorações underline e overline são posicionadas abaixo e acima do texto (respectivamente), e line-through cortando-o.
 
-<p>A propriedade text-decoration desenha em elementos descendentes. Isso significa que não é possivel desabilitar em um descendente uma decoração que foi especificada em um de seus antecessores. Por exemplo, no markup <code>&lt;p&gt;Esse texto tem &lt;em&gt;alguns elementos enfatizados&lt;/em&gt; nele.&lt;/p&gt;</code>, a regra de estilo <code>p { text-decoration: underline; }</code> faria com que todo o parágrafo fosse sublinhado. A regra <code>em { text-decoration: none; }</code> não causaria qualquer mudanca; o parágrafo inteiro ainda estaria sublinhado. Entretanto, a regra <code>em { text-decoration: overline; }</code> iria decorar o trecho "alguns elementos enfatizados".</p>
+A propriedade text-decoration desenha em elementos descendentes. Isso significa que não é possivel desabilitar em um descendente uma decoração que foi especificada em um de seus antecessores. Por exemplo, no markup `<p>Esse texto tem <em>alguns elementos enfatizados</em> nele.</p>`, a regra de estilo `p { text-decoration: underline; }` faria com que todo o parágrafo fosse sublinhado. A regra `em { text-decoration: none; }` não causaria qualquer mudanca; o parágrafo inteiro ainda estaria sublinhado. Entretanto, a regra `em { text-decoration: overline; }` iria decorar o trecho "alguns elementos enfatizados".
 
-<div class="note style-wrap">
-<p><strong>Nota: </strong>CSS 3 transformou a propriedade Text-Decoration para forma reduzida, usando as seguintes propriedades: {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, e {{cssxref("text-decoration-style")}}. Como em outras propriedades reduzidas, isso significa que ele reseta o valor de cada uma para padrão se não for explicitamente especificada na forma reduzida.</p>
-</div>
+> **Note:** **Nota:** CSS 3 transformou a propriedade Text-Decoration para forma reduzida, usando as seguintes propriedades: {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, e {{cssxref("text-decoration-style")}}. Como em outras propriedades reduzidas, isso significa que ele reseta o valor de cada uma para padrão se não for explicitamente especificada na forma reduzida.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush: css">/* Valores Chave */
+```css
+/* Valores Chave */
 text-decoration: none;                 /* Sem decoração */
 text-decoration: underline red;        /* Sublinhado vermelho */
 text-decoration: underline wavy red;   /* Sublinhado ondulado vermelho */
@@ -34,19 +33,20 @@ text-decoration: underline wavy red;   /* Sublinhado ondulado vermelho */
 text-decoration: inherit;
 text-decoration: initial;
 text-decoration: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<p>A propriedade <code>text-decoration</code> é escrita de forma reduzida e pode usar os valores de cada uma das propriedades: {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, e {{cssxref("text-decoration-style")}}</p>
+A propriedade `text-decoration` é escrita de forma reduzida e pode usar os valores de cada uma das propriedades: {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, e {{cssxref("text-decoration-style")}}
 
-<h3 id="Sintaxe_Formal">Sintaxe Formal</h3>
+### Sintaxe Formal
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: css">h1.under {
+```css
+h1.under {
     text-decoration: underline;
 }
 h1.over {
@@ -64,53 +64,31 @@ a.none {
 p.underover {
     text-decoration: underline overline;
 }
-</pre>
+```
 
-<pre class="brush: html" style="display: none;">&lt;h1 class="under"&gt;Underlined Header&lt;/h1&gt;
-&lt;p class="line"&gt;If you want to strike out text, use line-through.&lt;/p&gt;
-&lt;p class="blink"&gt;This text might blink for you - if you use Explorer, it will not.&lt;/p&gt;
-&lt;h1 class="over"&gt;and now an overlined header.&lt;/h1&gt;
-&lt;p&gt;This &lt;a class="none" href="textdecoration.html"&gt;link will not be underlined&lt;/a&gt;, as most links are by default. Be careful with removing the text decoration on links since most users depend on the underline to signify a hyperlink.&lt;/p&gt;
-&lt;p class="underover"&gt;This text has both underline and overline.&lt;/p&gt;
-</pre>
+```html
+<h1 class="under">Underlined Header</h1>
+<p class="line">If you want to strike out text, use line-through.</p>
+<p class="blink">This text might blink for you - if you use Explorer, it will not.</p>
+<h1 class="over">and now an overlined header.</h1>
+<p>This <a class="none" href="textdecoration.html">link will not be underlined</a>, as most links are by default. Be careful with removing the text decoration on links since most users depend on the underline to signify a hyperlink.</p>
+<p class="underover">This text has both underline and overline.</p>
+```
 
-<p>{{EmbedLiveSample('Examples','100%','310')}}</p>
+{{EmbedLiveSample('Examples','100%','310')}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text Decoration', '#text-decoration-property', 'text-decoration')}}</td>
-   <td>{{Spec2('CSS3 Text Decoration')}}</td>
-   <td>Transformado em uma propriedade reduzida. Adicionado suporte para o valor {{cssxref('text-decoration-style')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'text.html#lining-striking-props', 'text-decoration')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Sem mudanças significantes.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#text-decoration', 'text-decoration')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                    | Status                                       | Comentários                                                                                                                 |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Text Decoration', '#text-decoration-property', 'text-decoration')}} | {{Spec2('CSS3 Text Decoration')}} | Transformado em uma propriedade reduzida. Adicionado suporte para o valor {{cssxref('text-decoration-style')}}. |
+| {{SpecName('CSS2.1', 'text.html#lining-striking-props', 'text-decoration')}}             | {{Spec2('CSS2.1')}}                     | Sem mudanças significantes.                                                                                                 |
+| {{SpecName('CSS1', '#text-decoration', 'text-decoration')}}                                 | {{Spec2('CSS1')}}                     | Definição inicial.                                                                                                          |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.properties.text-decoration")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>O atributo {{cssxref("list-style")}} controla a aparência dos itens em listas {{HTMLElement("ol")}} e {{HTMLElement("ul")}} no HTML.</li>
-</ul>
+- O atributo {{cssxref("list-style")}} controla a aparência dos itens em listas {{HTMLElement("ol")}} e {{HTMLElement("ul")}} no HTML.

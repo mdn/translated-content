@@ -1,42 +1,47 @@
 ---
 title: ':focus-within'
-slug: 'Web/CSS/:focus-within'
-translation_of: 'Web/CSS/:focus-within'
+slug: Web/CSS/:focus-within
+translation_of: Web/CSS/:focus-within
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>:focus-within</code></strong> representa um elemento que recebeu o foco ou contém um elemento que recebeu o foco. Em outras palavras, isto representa um elemento que é correspondido por si só pela pseudo-classe {{cssxref(":focus")}} ou tem um descendente que é correspondido por <code>:focus</code>. (Isto inclui descendentes em <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">shadow trees</a>.)</p>
+A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:focus-within`** representa um elemento que recebeu o foco ou contém um elemento que recebeu o foco. Em outras palavras, isto representa um elemento que é correspondido por si só pela pseudo-classe {{cssxref(":focus")}} ou tem um descendente que é correspondido por `:focus`. (Isto inclui descendentes em [shadow trees](/pt-BR/docs/Web/Web_Components/Shadow_DOM).)
 
-<pre class="brush: css no-line-numbers">/* Seleciona uma &lt;div&gt; quando um de seus descendentes é focado */
+```css
+/* Seleciona uma <div> quando um de seus descendentes é focado */
 div:focus-within {
   background: cyan;
-}</pre>
+}
+```
 
-<p>Este seletor é útil, pegando um exemplo comum, para destacar um todo {{htmlElement("form")}} container quando o usuário focar em um de seus campos {{htmlElement("input")}}.</p>
+Este seletor é útil, pegando um exemplo comum, para destacar um todo {{htmlElement("form")}} container quando o usuário focar em um de seus campos {{htmlElement("input")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
 {{csssyntax}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>Neste exemplo, o formulário receberá estilos de coloração especiais quando o input de texto recebe o foco</p>
+Neste exemplo, o formulário receberá estilos de coloração especiais quando o input de texto recebe o foco
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Tente digitar neste formulário.&lt;/p&gt;
+```html
+<p>Tente digitar neste formulário.</p>
 
-&lt;form&gt;
-  &lt;label for="given_name"&gt;Given Name:&lt;/label&gt;
-  &lt;input id="given_name" type="text"&gt;
-  &lt;br&gt;
-  &lt;label for="family_name"&gt;Family Name:&lt;/label&gt;
-  &lt;input id="family_name" type="text"&gt;
-&lt;/form&gt;</pre>
+<form>
+  <label for="given_name">Given Name:</label>
+  <input id="given_name" type="text">
+  <br>
+  <label for="family_name">Family Name:</label>
+  <input id="family_name" type="text">
+</form>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">form {
+```css
+form {
   border: 1px solid;
   color: gray;
   padding: 4px;
@@ -50,37 +55,22 @@ form:focus-within {
 input {
   margin: 4px;
 }
-</pre>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample("Exemplo", 500, 150)}}</p>
+{{EmbedLiveSample("Exemplo", 500, 150)}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#the-focus-within-pseudo", ":focus-within")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                        | Status                               | Comentário          |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName("CSS4 Selectors", "#the-focus-within-pseudo", ":focus-within")}} | {{Spec2("CSS4 Selectors")}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("css.selectors.focus-within")}}</p>
+{{Compat("css.selectors.focus-within")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{cssxref(":focus")}}</li>
-</ul>
+- {{cssxref(":focus")}}

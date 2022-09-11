@@ -11,28 +11,30 @@ tags:
   - pt-br
 translation_of: Web/CSS/@media/aspect-ratio
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p>A  <a href="/pt-BR/docs/Web/Guide/CSS/CSS_Media_queries#Caracter%C3%ADsticas_de_m%C3%ADdia">característica de mídia</a> <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS">CSS</a> <strong><code>aspect-ratio</code></strong> pode ser utilizada para testar a taxa de aspecto de sua {{glossary("viewport")}}.</p>
+A [característica de mídia](/pt-BR/docs/Web/Guide/CSS/CSS_Media_queries#Caracter%C3%ADsticas_de_m%C3%ADdia) [CSS](/pt-BR/docs/Web/CSS) **`aspect-ratio`** pode ser utilizada para testar a taxa de aspecto de sua {{glossary("viewport")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<p>A característica de <code>aspect-ratio</code> é especificada como um valor de {{cssxref("&lt;ratio&gt;")}} representando a relação de largura-para-altura em aspecto à sua viewport. É uma característica de diferencial, o que significa que você pode fazer uso de variações pré-fixadas de <strong><code>min-aspect-ratio</code></strong> e <code><strong>max-aspect-ratio</strong></code> para definir os os seus valores mínimos e máximos, respectivamente.</p>
+A característica de `aspect-ratio` é especificada como um valor de {{cssxref("&lt;ratio&gt;")}} representando a relação de largura-para-altura em aspecto à sua viewport. É uma característica de diferencial, o que significa que você pode fazer uso de variações pré-fixadas de **`min-aspect-ratio`** e **`max-aspect-ratio`** para definir os os seus valores mínimos e máximos, respectivamente.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>O exemplo abaixo está contido em um {{htmlElement("iframe")}}, que cria o seu próprio viewport. Redimensione o <code>&lt;iframe&gt;</code> para ver o  <code>aspect-ratio</code> em ação !</p>
+O exemplo abaixo está contido em um {{htmlElement("iframe")}}, que cria o seu próprio viewport. Redimensione o `<iframe>` para ver o `aspect-ratio` em ação !
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id='inner'&gt;
-  Observe este elemento, conforme voc&amp;ecirc; altera a largura e a altura da sua viewport.
-&lt;/div&gt;
-</pre>
+```html
+<div id='inner'>
+  Observe este elemento, conforme voc&ecirc; altera a largura e a altura da sua viewport.
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">/* Taxa de aspecto mínima */
+```css
+/* Taxa de aspecto mínima */
 @media (min-aspect-ratio: 8/5) {
   div {
     background: #9af; /* azul */
@@ -52,26 +54,27 @@ translation_of: Web/CSS/@media/aspect-ratio
     background: #f9a; /* vermelho */
   }
 }
-</pre>
+```
 
-<div class="hidden">
-<h3 id="HTML_2">HTML</h3>
+```html hidden
+<label id="wf" for="w">width:165</label>
+<input id="w" name="w" type="range" min="100" max="250" step="5" value="165">
+<label id="hf" for="w">height:165</label>
+<input id="h" name="h" type="range" min="100" max="250" step="5" value="165">
 
-<pre class="brush: html">&lt;label id="wf" for="w"&gt;width:165&lt;/label&gt;
-&lt;input id="w" name="w" type="range" min="100" max="250" step="5" value="165"&gt;
-&lt;label id="hf" for="w"&gt;height:165&lt;/label&gt;
-&lt;input id="h" name="h" type="range" min="100" max="250" step="5" value="165"&gt;
+<iframe id="outer" src="data:text/html,<style> @media (min-aspect-ratio: 8/5) { div { background: %239af; } } @media (max-aspect-ratio: 3/2) { div { background: %239ff; } } @media (aspect-ratio: 1/1) { div { background: %23f9a; } }</style><div id='inner'> Observe este elemento, conforme voc&ecirc; altera a largura e a altura da sua viewport.</div>">
 
-&lt;iframe id="outer" src="data:text/html,&lt;style&gt; @media (min-aspect-ratio: 8/5) { div { background: %239af; } } @media (max-aspect-ratio: 3/2) { div { background: %239ff; } } @media (aspect-ratio: 1/1) { div { background: %23f9a; } }&lt;/style&gt;&lt;div id='inner'&gt; Observe este elemento, conforme voc&amp;ecirc; altera a largura e a altura da sua viewport.&lt;/div&gt;"&gt;
+</iframe>
+```
 
-&lt;/iframe&gt;
-</pre>
-
-<pre class="brush: css">iframe{
+```css hidden
+iframe{
   display:block;
-}</pre>
+}
+```
 
-<pre class="brush: js">outer.style.width=outer.style.height="165px"
+```js hidden
+outer.style.width=outer.style.height="165px"
 
 w.onchange=w.oninput=function(){
   outer.style.width=w.value+"px"
@@ -80,41 +83,20 @@ w.onchange=w.oninput=function(){
 h.onchange=h.oninput=function(){
   outer.style.height=h.value+"px"
   hf.textContent="height:"+h.value
-}</pre>
-</div>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<div style="overflow: auto;">
-<p>{{ EmbedLiveSample('_Exemplo', '300px', '400px') }}</p>
-</div>
+{{ EmbedLiveSample('_Exemplo', '300px', '400px') }}
 
-<h2 id="Specificações">Specificações</h2>
+## Specificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Media Queries', '#aspect-ratio', 'aspect-ratio')}}</td>
-   <td>{{Spec2('CSS4 Media Queries')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Media Queries', '#aspect-ratio', 'aspect-ratio')}}</td>
-   <td>{{Spec2('CSS3 Media Queries')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                                   | Comment             |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
+| {{SpecName('CSS4 Media Queries', '#aspect-ratio', 'aspect-ratio')}} | {{Spec2('CSS4 Media Queries')}} | No change.          |
+| {{SpecName('CSS3 Media Queries', '#aspect-ratio', 'aspect-ratio')}} | {{Spec2('CSS3 Media Queries')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-
-
-<p>{{Compat("css.at-rules.media.aspect-ratio")}}</p>
+{{Compat("css.at-rules.media.aspect-ratio")}}

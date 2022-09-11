@@ -10,31 +10,35 @@ tags:
   - Web
 translation_of: Web/CSS/font-family
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>A propriedade <code>font-family do</code> CSS permite que se faça uma lista de prioridades de familias de fontes e/ou nomes genéricos de famílias a serem especificados para um elemento selecionado. Ao contrário da maioria das demais propriedades CSS, os valores são separados por vírgula para indicar quais são as alternativas. O Browser irá utilizar a primeira fonte da lista que for encontrada no computador, ou poderá fazer o dowload utilizando a informação contida na regra {{cssxref("@font-face")}}.</p>
+A propriedade `font-family do` CSS permite que se faça uma lista de prioridades de familias de fontes e/ou nomes genéricos de famílias a serem especificados para um elemento selecionado. Ao contrário da maioria das demais propriedades CSS, os valores são separados por vírgula para indicar quais são as alternativas. O Browser irá utilizar a primeira fonte da lista que for encontrada no computador, ou poderá fazer o dowload utilizando a informação contida na regra {{cssxref("@font-face")}}.
 
-<p>Programadores WEB devem sempre adicionar pelo menos uma família genérica para a lista de <code>font-family</code>, já que não há garantia que aquela fonte específica está instalada no computador, ou possa ser baixada pela regra {{cssxref("@font-face")}}. A família genérica permite o browser selecionar uma fonte aceita pelo computador, quando necessário.</p>
+Programadores WEB devem sempre adicionar pelo menos uma família genérica para a lista de `font-family`, já que não há garantia que aquela fonte específica está instalada no computador, ou possa ser baixada pela regra {{cssxref("@font-face")}}. A família genérica permite o browser selecionar uma fonte aceita pelo computador, quando necessário.
 
-<p>É também conveniente usar de antemão a propriedade {{cssxref("font")}} para definir a <code>font-size</code> e outras propriedades relacionadas a fonte todas de uma só vez.</p>
+É também conveniente usar de antemão a propriedade {{cssxref("font")}} para definir a `font-size` e outras propriedades relacionadas a fonte todas de uma só vez.
 
-<div class="note"><strong>Nota:</strong> A propriedade <code>font-family</code> especifica a lista de fontes, da prioridade mais alta para a mais baixa.
+> **Note:** **Nota:** A propriedade `font-family` especifica a lista de fontes, da prioridade mais alta para a mais baixa.```
+> A seleção de fontes não para simplesmente na primeira fonte nomeada na lista que está no sistema do usuário. Em vez disso, a seleção de fontes é feita um caractere de cada vez, para que, se uma fonte disponível não tiver um glifo que possa exibir um caracter necessário, as fontes disponíveis mais tarde sejam tentadas. No entanto, isso não funciona no Internet Explorer 6 ou anterior.
+>
+> Quando uma fonte está disponível apenas em alguns estilos, variantes ou tamanhos, essas propriedades também podem influenciar qual família de fontes é escolhida.
+>
+> ```
+>
+> ```
 
-<pre dir="ltr" id="tw-target-text">A seleção de fontes não para simplesmente na primeira fonte nomeada na lista que está no sistema do usuário. Em vez disso, a seleção de fontes é feita um caractere de cada vez, para que, se uma fonte disponível não tiver um glifo que possa exibir um caracter necessário, as fontes disponíveis mais tarde sejam tentadas. No entanto, isso não funciona no Internet Explorer 6 ou anterior.
+{{cssinfo}}
 
-Quando uma fonte está disponível apenas em alguns estilos, variantes ou tamanhos, essas propriedades também podem influenciar qual família de fontes é escolhida.</pre>
-</div>
+## Syntax
 
-<p>{{cssinfo}}</p>
+```
+Formal syntax: {{csssyntax("font-family")}}
+```
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax" title="CSS/Value_definition_syntax">Formal syntax</a>: {{csssyntax("font-family")}}
-</pre>
-
-<pre>font-family: Gill Sans Extrabold, sans-serif
+```
+font-family: Gill Sans Extrabold, sans-serif
 font-family: "Goudy Bookletter 1911", sans-serif
 
 font-family: sans-serif
@@ -44,76 +48,113 @@ font-family: cursive
 font-family: monospace
 
 font-family: inherit
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>&lt;family-name&gt;</code></td>
-   <td>O nome de uma fonte. Por exemplo, "Times" e "Helvetica" são font families. Nomes de fonte-família contém espaços em branco para serem citados..</td>
-  </tr>
-  <tr>
-   <td><code>&lt;generic-name&gt;</code></td>
-   <td>
-    <p>Generic font families are a fallback mechanism, a means of preserving some of the style sheet author's intent in case when none of the specified fonts are available. Generic family names are keywords and must not be quoted. A generic font family should be the a last alternative in the list of font family names.</p>
-
-    <dl>
-     <dt><code>serif</code></dt>
-     <dd style='font-family: Palatino,"Palatino Linotype",Palladio,"URW Palladio",serif;'>Glyphs have finishing strokes, flared or tapering ends, or have actual serifed endings.<br>
-     E.g.  Palatino, "Palatino Linotype", Palladio, "URW Palladio", serif</dd>
-     <dt><code>sans-serif</code></dt>
-     <dd style='font-family: "Trebuchet MS","Liberation Sans","Nimbus Sans L",sans-serif;'>Glyphs have stroke endings that are plain.<br>
-     E.g. 'Trebuchet MS', 'Liberation Sans', 'Nimbus Sans L', sans-serif</dd>
-     <dt><code>monospace</code></dt>
-     <dd style='font-family: "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace;'>All glyphs have the same fixed width.<br>
-     E.g. "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace</dd>
-     <dt><code>cursive</code></dt>
-     <dd>Glyphs in cursive fonts generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letterwork.</dd>
-     <dt><code>fantasy</code></dt>
-     <dd>Fantasy fonts are primarily decorative fonts that contain playful representations of characters.</dd>
-    </dl>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><code>&#x3C;family-name></code></td>
+      <td>
+        O nome de uma fonte. Por exemplo, "Times" e "Helvetica" são font
+        families. Nomes de fonte-família contém espaços em branco para serem
+        citados..
+      </td>
+    </tr>
+    <tr>
+      <td><code>&#x3C;generic-name></code></td>
+      <td>
+        <p>
+          Generic font families are a fallback mechanism, a means of preserving
+          some of the style sheet author's intent in case when none of the
+          specified fonts are available. Generic family names are keywords and
+          must not be quoted. A generic font family should be the a last
+          alternative in the list of font family names.
+        </p>
+        <dl>
+          <dt><code>serif</code></dt>
+          <dd
+            style="font-family: Palatino,&#x22;Palatino Linotype&#x22;,Palladio,&#x22;URW Palladio&#x22;,serif;"
+          >
+            Glyphs have finishing strokes, flared or tapering ends, or have
+            actual serifed endings.<br />E.g. Palatino, "Palatino Linotype",
+            Palladio, "URW Palladio", serif
+          </dd>
+          <dt><code>sans-serif</code></dt>
+          <dd
+            style="font-family: &#x22;Trebuchet MS&#x22;,&#x22;Liberation Sans&#x22;,&#x22;Nimbus Sans L&#x22;,sans-serif;"
+          >
+            Glyphs have stroke endings that are plain.<br />E.g. 'Trebuchet MS',
+            'Liberation Sans', 'Nimbus Sans L', sans-serif
+          </dd>
+          <dt><code>monospace</code></dt>
+          <dd
+            style="font-family: &#x22;DejaVu Sans Mono&#x22;, Menlo, Consolas, &#x22;Liberation Mono&#x22;, Monaco, &#x22;Lucida Console&#x22;, monospace;"
+          >
+            All glyphs have the same fixed width.<br />E.g. "DejaVu Sans Mono",
+            Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console",
+            monospace
+          </dd>
+          <dt><code>cursive</code></dt>
+          <dd>
+            Glyphs in cursive fonts generally have either joining strokes or
+            other cursive characteristics beyond those of italic typefaces. The
+            glyphs are partially or completely connected, and the result looks
+            more like handwritten pen or brush writing than printed letterwork.
+          </dd>
+          <dt><code>fantasy</code></dt>
+          <dd>
+            Fantasy fonts are primarily decorative fonts that contain playful
+            representations of characters.
+          </dd>
+        </dl>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Valid_family_names">Valid family names</h3>
+### Valid family names
 
-<p>Font family names must either be given quoted as strings, or unquoted as a sequence of one or more identifiers. This means that punctuation characters and digits at the start of each token must be escaped in unquoted font family names.</p>
+Font family names must either be given quoted as strings, or unquoted as a sequence of one or more identifiers. This means that punctuation characters and digits at the start of each token must be escaped in unquoted font family names.
 
-<p>For example, the following declarations are valid:</p>
+For example, the following declarations are valid:
 
-<pre>font-family: Gill Sans Extrabold, sans-serif;
-font-family: "Goudy Bookletter 1911", sans-serif;</pre>
+```
+font-family: Gill Sans Extrabold, sans-serif;
+font-family: "Goudy Bookletter 1911", sans-serif;
+```
 
-<p>The following declarations are <strong>invalid</strong>:</p>
+The following declarations are **invalid**:
 
-<pre>font-family: Goudy Bookletter 1911, sans-serif;
+```
+font-family: Goudy Bookletter 1911, sans-serif;
 font-family: Red/Black, sans-serif;
 font-family: "Lucida" Grande, sans-serif;
 font-family: Ahem!, sans-serif;
 font-family: test@foo, sans-serif;
 font-family: #POUND, sans-serif;
-font-family: Hawaii 5-0, sans-serif;</pre>
+font-family: Hawaii 5-0, sans-serif;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Example_1">Example 1</h3>
+### Example 1
 
-<pre class="brush: css">body {
+```css
+body {
   font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
 }
 
 .receipt {
   font-family: Courier, "Lucida Console", monospace;
 }
-</pre>
+```
 
-<h3 id="Example_2">Example 2</h3>
+### Example 2
 
-<pre class="brush: css">.exampleserif {
+```css
+.exampleserif {
     font-family: Times, "Times New Roman", Georgia, serif;
 }
 
@@ -132,61 +173,42 @@ font-family: Hawaii 5-0, sans-serif;</pre>
 .examplefantasy {
     font-family: fantasy;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="exampleserif"&gt;
+```html
+<div class="exampleserif">
 This is an example of a serif font.
-&lt;/div&gt;
+</div>
 
-&lt;div class="examplesansserif"&gt;
+<div class="examplesansserif">
 This is an example of a sans-serif font.
-&lt;/div&gt;
+</div>
 
-&lt;div class="examplemonospace"&gt;
+<div class="examplemonospace">
 This is an example of a monospace font.
-&lt;/div&gt;
+</div>
 
-&lt;div class="examplecursive"&gt;
+<div class="examplecursive">
 This is an example of a cursive font.
-&lt;/div&gt;
+</div>
 
-&lt;div class="examplefantasy"&gt;
+<div class="examplefantasy">
 This is an example of a fantasy font.
-&lt;/div&gt;</pre>
+</div>
+```
 
-<h4 id="Live_Sample">Live Sample</h4>
+#### Live Sample
 
-<p>{{ EmbedLiveSample('Example_2','600','120') }}</p>
+{{ EmbedLiveSample('Example_2','600','120') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#font-family-prop', 'font-family')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>No significant change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'fonts.html#propdef-font-family', 'font-family')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>No significant change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#font-family', 'font-familiy')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                           | Comment               |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------- |
+| {{SpecName('CSS3 Fonts', '#font-family-prop', 'font-family')}}             | {{Spec2('CSS3 Fonts')}} | No significant change |
+| {{SpecName('CSS2.1', 'fonts.html#propdef-font-family', 'font-family')}} | {{Spec2('CSS2.1')}}         | No significant change |
+| {{SpecName('CSS1', '#font-family', 'font-familiy')}}                             | {{Spec2('CSS1')}}         | Initial definition    |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.properties.font-family")}}

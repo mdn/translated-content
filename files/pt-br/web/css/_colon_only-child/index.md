@@ -1,125 +1,112 @@
 ---
 title: ':only-child'
-slug: 'Web/CSS/:only-child'
+slug: Web/CSS/:only-child
 tags:
   - Pseudo-classe
   - Referencia
-translation_of: 'Web/CSS/:only-child'
+translation_of: Web/CSS/:only-child
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A <a href="/en-US/docs/CSS/Pseudo-classes" title="Pseudo classes">pseudo-classe</a> de CSS <strong><code>:only-child</code></strong> representa um elemento sem nenhum elemento-irmão. É o mesmo que <code>:first-child:last-child</code> ou <code>:nth-child(1):nth-last-child(1)</code>, mas com uma especificidade mais baixa.</p>
+A [pseudo-classe](/pt-BR/docs/CSS/Pseudo-classes "Pseudo classes") de CSS **`:only-child`** representa um elemento sem nenhum elemento-irmão. É o mesmo que `:first-child:last-child` ou `:nth-child(1):nth-last-child(1)`, mas com uma especificidade mais baixa.
 
-<pre class="brush: css no-line-numbers">/* Seleciona cada &lt;p&gt;, mas apenas se for o */
+```css
+/* Seleciona cada <p>, mas apenas se for o */
 /* único filho de seu elemento-pai */
 p:only-child {
   background-color: lime;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Nota</strong>: Originalmente, foi definido que o elemento selecionado deveria ter um elemento-pai. A partir de Selectors Level 4, isso não é mais necessário.</p>
-</div>
+> **Note:** **Nota**: Originalmente, foi definido que o elemento selecionado deveria ter um elemento-pai. A partir de Selectors Level 4, isso não é mais necessário.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Exemplo_básico">Exemplo básico</h3>
+### Exemplo básico
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;main&gt;
-  &lt;div&gt;
-    &lt;i&gt;Eu sou um filho único solitário.&lt;/i&gt;
-  &lt;/div&gt;
+```html
+<main>
+  <div>
+    <i>Eu sou um filho único solitário.</i>
+  </div>
 
-  &lt;div&gt;
-    &lt;i&gt;Eu tenho irmãos.&lt;/i&gt;&lt;br&gt;
-    &lt;b&gt;Eu também!&lt;/b&gt;&lt;br&gt;
-    &lt;span&gt;Eu também tenho irmãos, &lt;span&gt;mas este é um filho único.&lt;/span&gt;&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/main&gt;</pre>
+  <div>
+    <i>Eu tenho irmãos.</i><br>
+    <b>Eu também!</b><br>
+    <span>Eu também tenho irmãos, <span>mas este é um filho único.</span></span>
+  </div>
+</main>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">main :only-child {
+```css
+main :only-child {
   color: red;
 }
-</pre>
+```
 
-<h4 id="Resultado">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample('Basic_example','100%',180)}}</p>
+{{EmbedLiveSample('Basic_example','100%',180)}}
 
-<h3 id="Exemplo_de_lista">Exemplo de lista</h3>
+### Exemplo de lista
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ol&gt;
-  &lt;li&gt;Primeiro
-    &lt;ul&gt;
-      &lt;li&gt;Essa lista tem apenas um elemento.
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Segundo
-    &lt;ul&gt;
-      &lt;li&gt;Essa lista tem três elementos.
-      &lt;li&gt;Essa lista tem três elementos.
-      &lt;li&gt;Essa lista tem três elementos.
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;ol&gt;
-</pre>
+```html
+<ol>
+  <li>Primeiro
+    <ul>
+      <li>Essa lista tem apenas um elemento.
+    </ul>
+  </li>
+  <li>Segundo
+    <ul>
+      <li>Essa lista tem três elementos.
+      <li>Essa lista tem três elementos.
+      <li>Essa lista tem três elementos.
+    </ul>
+  </li>
+<ol>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">li li {
+```css
+li li {
   list-style-type: disc;
 }
 li:only-child {
   color: red;
   list-style-type: square;
-}</pre>
+}
+```
 
-<h4 id="Resultado_2">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample('A_list_example', '100%', 210)}}</p>
+{{EmbedLiveSample('A_list_example', '100%', 210)}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#only-child-pseudo', ':only-child')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Não é necessário que os elementos selecionados tenham um elemento-pai.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#only-child-pseudo', ':only-child')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                            | Status                               | Comentário                                                             |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------- |
+| {{SpecName('CSS4 Selectors', '#only-child-pseudo', ':only-child')}} | {{Spec2('CSS4 Selectors')}} | Não é necessário que os elementos selecionados tenham um elemento-pai. |
+| {{SpecName('CSS3 Selectors', '#only-child-pseudo', ':only-child')}} | {{Spec2('CSS3 Selectors')}} | Definição inicial.                                                     |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.selectors.only-child")}}
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li>{{Cssxref(":only-of-type")}}</li>
- <li>{{Cssxref(":first-child")}}</li>
- <li>{{Cssxref(":last-child")}}</li>
- <li>{{Cssxref(":nth-child")}}</li>
-</ul>
+- {{Cssxref(":only-of-type")}}
+- {{Cssxref(":first-child")}}
+- {{Cssxref(":last-child")}}
+- {{Cssxref(":nth-child")}}

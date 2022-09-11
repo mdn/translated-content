@@ -3,81 +3,63 @@ title: outline
 slug: Web/CSS/outline
 translation_of: Web/CSS/outline
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>A propriedade <a href="/en-US/docs/CSS">CSS</a> <strong><code>outline</code></strong> é uma propriedade abreviada para configurar uma ou mais das propriedades de contorno {{cssxref("outline-style")}}, {{cssxref("outline-width")}} e {{cssxref("outline-color")}} em uma única declaração. Na maioria dos casos o uso abreviado é preferível e mais conveniente.</p>
+A propriedade [CSS](/pt-BR/docs/CSS) **`outline`** é uma propriedade abreviada para configurar uma ou mais das propriedades de contorno {{cssxref("outline-style")}}, {{cssxref("outline-width")}} e {{cssxref("outline-color")}} em uma única declaração. Na maioria dos casos o uso abreviado é preferível e mais conveniente.
 
-<p>Contornos se diferenciam de bordas das seguintes maneiras:</p>
+Contornos se diferenciam de bordas das seguintes maneiras:
 
-<ul>
- <li>Contornos não ocupam espaços, eles são desenhados acima do conteúdo.</li>
- <li>Contornos podem não ser retangulares. Eles são retangulares no Gecko/Firefox. Mas por exemplo, Opera desenha uma forma não retangular em torno de uma construção como este:<br>
-  <strong style="color: orange;">TEXTTEXTTEXT</strong></li>
-</ul>
+- Contornos não ocupam espaços, eles são desenhados acima do conteúdo.
+- Contornos podem não ser retangulares. Eles são retangulares no Gecko/Firefox. Mas por exemplo, Opera desenha uma forma não retangular em torno de uma construção como este:
+  **TEXTTEXTTEXT**
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush: css">/* largura | estilo | cor */
+```css
+/* largura | estilo | cor */
 outline: 1px solid white;
 
 /* Valores globais */
 outline: inherit;
 outline: initial;
 outline: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<p>Um, dois ou três valores, dada em ordem arbitrária:</p>
+Um, dois ou três valores, dada em ordem arbitrária:
 
-<dl>
- <dt><code>&lt;'outline-width'&gt;</code></dt>
- <dd>Veja {{Cssxref("outline-width")}}.</dd>
- <dt><code>&lt;'outline-style'&gt;</code></dt>
- <dd>Veja {{Cssxref("outline-style")}}.</dd>
- <dt><code>&lt;'outline-color'&gt;</code></dt>
- <dd>Desde Gecko 1.9 (Firefox 3), o valor da propriedade {{Cssxref("color")}}  (cor de primeiro plano) é usado. Veja {{Cssxref("outline-color")}}.</dd>
-</dl>
+- `<'outline-width'>`
+  - : Veja {{Cssxref("outline-width")}}.
+- `<'outline-style'>`
+  - : Veja {{Cssxref("outline-style")}}.
+- `<'outline-color'>`
+  - : Desde Gecko 1.9 (Firefox 3), o valor da propriedade {{Cssxref("color")}} (cor de primeiro plano) é usado. Veja {{Cssxref("outline-color")}}.
 
-<h3 id="Sintaxe_completa">Sintaxe completa</h3>
+### Sintaxe completa
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: css">/* duas declarações identicas */
+```css
+/* duas declarações identicas */
 
 :link:hover { outline: 1px solid #000; }
-:link:hover { outline: solid black 1px; }</pre>
+:link:hover { outline: solid black 1px; }
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Basic UI', '#outline', 'outline')}}</td>
-   <td>{{Spec2('CSS3 Basic UI')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'ui.html#propdef-outline', 'outline')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                    | Estado                               | Comentário         |
+| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName('CSS3 Basic UI', '#outline', 'outline')}}             | {{Spec2('CSS3 Basic UI')}} | No change          |
+| {{SpecName('CSS2.1', 'ui.html#propdef-outline', 'outline')}} | {{Spec2('CSS2.1')}}             | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.properties.outline")}}

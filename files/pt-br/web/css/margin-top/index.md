@@ -3,19 +3,20 @@ title: margin-top
 slug: Web/CSS/margin-top
 translation_of: Web/CSS/margin-top
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p><img alt="The effect of the CSS margin-top property on the element box" src="/files/4101/margin-top.svg" style="border-style: solid; border-width: 1px; float: left; margin-bottom: 2em; margin-right: 1em;">A propriedade CSS <strong><code>margin-top</code></strong> de um elemento indica o espaço acima do elemento. Valores negativos são aceitos.</p>
+![The effect of the CSS margin-top property on the element box](/files/4101/margin-top.svg)A propriedade CSS **`margin-top`** de um elemento indica o espaço acima do elemento. Valores negativos são aceitos.
 
-<p>Essa propriedade não tem efeito em <em>elementos non-replaced</em> inline elements, como {{HTMLElement("tt")}} ou {{HTMLElement("span")}}.</p>
+Essa propriedade não tem efeito em _elementos non-replaced_ inline elements, como {{HTMLElement("tt")}} ou {{HTMLElement("span")}}.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush:css">/* Valores &lt;length&gt; */
+```css
+/* Valores <length> */
 margin-top: 10px;        /* An absolute length */
 margin-top: 1em;         /* A length relative to the text size */
 margin-top: 5%;          /* A margin relative to the nearest block container's width */
@@ -27,65 +28,39 @@ margin-top: auto;
 margin-top: inherit;
 margin-top: initial;
 margin-top: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Especifica um tamanho fixo. Veja {{cssxref("&lt;length&gt;")}} para possíveis valores.</dd>
- <dt><code>&lt;porcentagem&gt;</code></dt>
- <dd>Um {{cssxref("&lt;percentage&gt;")}} sempre relativo ao <strong>width</strong> do bloco.</dd>
- <dt><code>auto</code></dt>
- <dd>Veja {{cssxref("margin")}}.</dd>
-</dl>
+- `<length>`
+  - : Especifica um tamanho fixo. Veja {{cssxref("&lt;length&gt;")}} para possíveis valores.
+- `<porcentagem>`
+  - : Um {{cssxref("&lt;percentage&gt;")}} sempre relativo ao **width** do bloco.
+- `auto`
+  - : Veja {{cssxref("margin")}}.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<pre class="brush:css;">.content { margin-top:   5%; }
+```css
+.content { margin-top:   5%; }
 .sidebox { margin-top: 10px; }
 .logo    { margin-top: -5px; }
 #footer  { margin-top:  1em; }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Box', '#the-margin', 'margin-top')}}</td>
-   <td>{{Spec2('CSS3 Box')}}</td>
-   <td>Sem mudança significativa.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'margin-top')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Define <code>margin-top</code> como animável.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-top')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Remove esse efeito em elementos inline.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#margin-top', 'margin-top')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                            | Status                                   | Comentário                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------- |
+| {{SpecName('CSS3 Box', '#the-margin', 'margin-top')}}                 | {{Spec2('CSS3 Box')}}             | Sem mudança significativa.              |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'margin-top')}} | {{Spec2('CSS3 Transitions')}} | Define `margin-top` como animável.      |
+| {{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-top')}} | {{Spec2('CSS2.1')}}                 | Remove esse efeito em elementos inline. |
+| {{SpecName('CSS1', '#margin-top', 'margin-top')}}                         | {{Spec2('CSS1')}}                 | Definição inicial.                      |
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidade de navegadores</h2>
+## Compatibilidade de navegadores
 
 {{Compat("css.properties.margin-top")}}

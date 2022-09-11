@@ -8,17 +8,18 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/ruby-align
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>A propriedade <code><strong>ruby-align</strong></code> do CSS define a distribuição dos direfentes elementos do ruby sobre a base.</p>
+A propriedade **`ruby-align`** do CSS define a distribuição dos direfentes elementos do ruby sobre a base.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush:css">/* Valores chave */
+```css
+/* Valores chave */
 ruby-align: start;
 ruby-align: center;
 ruby-align: space-between;
@@ -28,125 +29,121 @@ ruby-align: space-around;
 ruby-align: inherit;
 ruby-align: initial;
 ruby-align: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>start</code></dt>
- <dd>É uma palavra-chave indicando que o ruby será alinhado com o início do texto base.</dd>
- <dt><code>center</code></dt>
- <dd>É uma palavra-chave indicando que o ruby será alinhado no meio do texto base.</dd>
- <dt><code>space-between</code></dt>
- <dd>É uma palavra-chave indicando que o espaço extra será distruibuído entre os elementos do ruby.</dd>
- <dt><code>space-around</code></dt>
- <dd>É uma palavra-chave indicando que o espaço extra será distruibuído entre os elementos do ruby e em torno deles.</dd>
-</dl>
+- `start`
+  - : É uma palavra-chave indicando que o ruby será alinhado com o início do texto base.
+- `center`
+  - : É uma palavra-chave indicando que o ruby será alinhado no meio do texto base.
+- `space-between`
+  - : É uma palavra-chave indicando que o espaço extra será distruibuído entre os elementos do ruby.
+- `space-around`
+  - : É uma palavra-chave indicando que o espaço extra será distruibuído entre os elementos do ruby e em torno deles.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Esse HTML irá renderizar diferentemente com cada valor do <code>ruby-align</code>:</p>
+Esse HTML irá renderizar diferentemente com cada valor do `ruby-align`:
 
-<pre class="brush: html">&lt;ruby&gt;
-  &lt;rb&gt;Esse é um grande texto para verificar&lt;/rb&gt;
-  &lt;rp&gt;（&lt;/rp&gt;&lt;rt&gt;ruby curto&lt;/rt&gt;&lt;rp&gt;）&lt;/rp&gt;
-&lt;/ruby&gt;
-</pre>
+```html
+<ruby>
+  <rb>Esse é um grande texto para verificar</rb>
+  <rp>（</rp><rt>ruby curto</rt><rp>）</rp>
+</ruby>
+```
 
-<h3 id="Ruby_alinhado_no_ínicio_do_texto_base">Ruby alinhado no ínicio do texto base</h3>
+### Ruby alinhado no ínicio do texto base
 
-<pre class="brush: html" style="display: none;">&lt;ruby&gt;
-  &lt;rb&gt;This is a long text to check&lt;/rb&gt;
-  &lt;rp&gt;（&lt;/rp&gt;&lt;rt&gt;short ruby&lt;/rt&gt;&lt;rp&gt;）&lt;/rp&gt;
-&lt;/ruby&gt;
-</pre>
+```html
+<ruby>
+  <rb>This is a long text to check</rb>
+  <rp>（</rp><rt>short ruby</rt><rp>）</rp>
+</ruby>
+```
 
-<pre class="brush: css">ruby {
+```css
+ruby {
   ruby-align:start;
-}</pre>
+}
+```
 
-<p>Isso dará o seguinte resultado:</p>
+Isso dará o seguinte resultado:
 
-<p>{{EmbedLiveSample("Ruby_aligned_at_the_start_of_the_base_text", 180, 40)}}</p>
+{{EmbedLiveSample("Ruby_aligned_at_the_start_of_the_base_text", 180, 40)}}
 
-<h3 id="Ruby_alinhado_no_centro_do_texto_base">Ruby alinhado no centro do texto base</h3>
+### Ruby alinhado no centro do texto base
 
-<pre class="brush: html" style="display: none;">&lt;ruby&gt;
-  &lt;rb&gt;This is a long text to check&lt;/rb&gt;
-  &lt;rp&gt;（&lt;/rp&gt;&lt;rt&gt;short ruby&lt;/rt&gt;&lt;rp&gt;）&lt;/rp&gt;
-&lt;/ruby&gt;
-</pre>
+```html
+<ruby>
+  <rb>This is a long text to check</rb>
+  <rp>（</rp><rt>short ruby</rt><rp>）</rp>
+</ruby>
+```
 
-<pre class="brush: css">ruby {
+```css
+ruby {
   ruby-align:center;
-}</pre>
+}
+```
 
-<p>Isso dará o seguinte resultado:</p>
+Isso dará o seguinte resultado:
 
-<p>{{EmbedLiveSample("Ruby_aligned_at_the_center_of_the_base_text", 180, 40)}}</p>
+{{EmbedLiveSample("Ruby_aligned_at_the_center_of_the_base_text", 180, 40)}}
 
-<h3 id="Espaço_extra_distribuído_entre_os_elementos_do_ruby">Espaço extra distribuído entre os elementos do ruby</h3>
+### Espaço extra distribuído entre os elementos do ruby
 
-<pre class="brush: html" style="display: none;">&lt;ruby&gt;
-  &lt;rb&gt;This is a long text to check&lt;/rb&gt;
-  &lt;rp&gt;（&lt;/rp&gt;&lt;rt&gt;short ruby&lt;/rt&gt;&lt;rp&gt;）&lt;/rp&gt;
-&lt;/ruby&gt;
-</pre>
+```html
+<ruby>
+  <rb>This is a long text to check</rb>
+  <rp>（</rp><rt>short ruby</rt><rp>）</rp>
+</ruby>
+```
 
-<pre class="brush: css">ruby {
+```css
+ruby {
   ruby-align:space-between;
-}</pre>
+}
+```
 
-<p>Isso dará o seguinte resultado:</p>
+Isso dará o seguinte resultado:
 
-<p>{{EmbedLiveSample("Extra_space_distributed_between_ruby_elements", 180, 40)}}</p>
+{{EmbedLiveSample("Extra_space_distributed_between_ruby_elements", 180, 40)}}
 
-<h3 id="Espaço_extra_distribuído_entre_os_elementos_do_ruby_e_em_torno_deles">Espaço extra distribuído entre os elementos do ruby e em torno deles</h3>
+### Espaço extra distribuído entre os elementos do ruby e em torno deles
 
-<pre class="brush: html" style="display: none;">&lt;ruby&gt;
-  &lt;rb&gt;This is a long text to check&lt;/rb&gt;
-  &lt;rp&gt;（&lt;/rp&gt;&lt;rt&gt;short ruby&lt;/rt&gt;&lt;rp&gt;）&lt;/rp&gt;
-&lt;/ruby&gt;
-</pre>
+```html
+<ruby>
+  <rb>This is a long text to check</rb>
+  <rp>（</rp><rt>short ruby</rt><rp>）</rp>
+</ruby>
+```
 
-<pre class="brush: css">ruby {
+```css
+ruby {
   ruby-align:space-around;
-}</pre>
+}
+```
 
-<p>Isso dará o seguinte resultado:</p>
+Isso dará o seguinte resultado:
 
-<p>{{EmbedLiveSample("Extra_space_distributed_between_and_around_ruby_elements", 180, 40)}}</p>
+{{EmbedLiveSample("Extra_space_distributed_between_and_around_ruby_elements", 180, 40)}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Ruby', '#ruby-align-property', 'ruby-align')}}</td>
-   <td>{{Spec2('CSS3 Ruby')}}</td>
-   <td>Definição inicital</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Status                       | Comentário         |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
+| {{SpecName('CSS3 Ruby', '#ruby-align-property', 'ruby-align')}} | {{Spec2('CSS3 Ruby')}} | Definição inicital |
 
-<h2 id="Compatilibade_de_Navegador">Compatilibade de Navegador</h2>
+## Compatilibade de Navegador
 
 {{Compat("css.properties.ruby-align")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Elementos Ruby do HTML: {{HTMLElement("ruby")}}, {{HTMLElement("rt")}}, {{HTMLElement("rp")}}, and {{HTMLElement("rtc")}}.</li>
- <li>Propriedades Ruby do CSS: {{cssxref("ruby-position")}}, {{cssxref("ruby-merge")}}.</li>
-</ul>
+- Elementos Ruby do HTML: {{HTMLElement("ruby")}}, {{HTMLElement("rt")}}, {{HTMLElement("rp")}}, and {{HTMLElement("rtc")}}.
+- Propriedades Ruby do CSS: {{cssxref("ruby-position")}}, {{cssxref("ruby-merge")}}.

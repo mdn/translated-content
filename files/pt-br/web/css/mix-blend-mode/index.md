@@ -6,17 +6,18 @@ tags:
   - Propriedade CSS
 translation_of: Web/CSS/mix-blend-mode
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>A propriedade <strong><code>mix-blend-mode</code></strong> descreve como um elemento de conteúdo deve ser mesclado com os elementos abaixo dele no background.</p>
+A propriedade **`mix-blend-mode`** descreve como um elemento de conteúdo deve ser mesclado com os elementos abaixo dele no background.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush:css">/* Valores para esta propriedade */
+```css
+/* Valores para esta propriedade */
 mix-blend-mode: normal;
 mix-blend-mode: multiply;
 mix-blend-mode: screen;
@@ -38,61 +39,48 @@ mix-blend-mode: luminosity;
 mix-blend-mode: initial;
 mix-blend-mode: inherit;
 mix-blend-mode: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>&lt;blend-mode&gt;</code></dt>
- <dd>É uma {{cssxref("&lt;blend-mode&gt;")}} que descreve qual mesclagem deve ser aplicada. Podem ser descritos vários valores, separados por vírgula.</dd>
-</dl>
+- `<blend-mode>`
+  - : É uma {{cssxref("&lt;blend-mode&gt;")}} que descreve qual mesclagem deve ser aplicada. Podem ser descritos vários valores, separados por vírgula.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: html">&lt;svg&gt;
-  &lt;circle cx="40" cy="40" r="40" fill="red"/&gt;
-  &lt;circle cx="80" cy="40" r="40" fill="lightgreen"/&gt;
-  &lt;circle cx="60" cy="80" r="40" fill="blue"/&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg>
+  <circle cx="40" cy="40" r="40" fill="red"/>
+  <circle cx="80" cy="40" r="40" fill="lightgreen"/>
+  <circle cx="60" cy="80" r="40" fill="blue"/>
+</svg>
+```
 
-<pre class="brush:css">circle { mix-blend-mode: screen; }</pre>
+```css
+circle { mix-blend-mode: screen; }
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample("Examples", "100%", "180")}}</p>
+{{EmbedLiveSample("Examples", "100%", "180")}}
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Compositing', '#mix-blend-mode', 'mix-blend-mode') }}</td>
-   <td>{{ Spec2('Compositing') }}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                               | Comment                |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
+| {{ SpecName('Compositing', '#mix-blend-mode', 'mix-blend-mode') }} | {{ Spec2('Compositing') }} | Initial specification. |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade de navegadores</h2>
+## Compatibilidade de navegadores
 
 {{Compat("css.properties.mix-blend-mode")}}
 
-<h2 id="See_also" name="See_also"> </h2>
+##
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{cssxref("&lt;blend-mode&gt;")}}</li>
- <li>{{cssxref("background-blend-mode")}}</li>
-</ul>
+- {{cssxref("&lt;blend-mode&gt;")}}
+- {{cssxref("background-blend-mode")}}

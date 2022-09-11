@@ -15,45 +15,41 @@ tags:
   - Referência CSS(3)
 translation_of: Web/CSS/-webkit-overflow-scrolling
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>A propriedade CSS <code>-webkit-overflow-scrolling</code> controla quando dispositivos com a funcionalidade de toque na tela usam uma rolagem baseada no "momentum" de um dado elemento.</p>
+A propriedade CSS `-webkit-overflow-scrolling` controla quando dispositivos com a funcionalidade de toque na tela usam uma rolagem baseada no "momentum" de um dado elemento.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Valores">Valores</h2>
+## Valores
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Usa a rolagem "regular", onde o conteúdo imediatamente cessa a rolagem quando você remove o dedo da tela que reconhece os toques.</dd>
- <dt><code>touch</code></dt>
- <dd>Usa a rolagem baseada em "momentos", onde o conteúdo continua a rolar por um momento depois do gesto de rolagem ter sido finalizado quando o usuário deixar de tocar com o dedo na tela. A velocidade e duração da rolagem contínua é proporcional ao quão vigoroso a rolagem. Também cria um novo contexto estagnado.</dd>
-</dl>
+- `auto`
+  - : Usa a rolagem "regular", onde o conteúdo imediatamente cessa a rolagem quando você remove o dedo da tela que reconhece os toques.
+- `touch`
+  - : Usa a rolagem baseada em "momentos", onde o conteúdo continua a rolar por um momento depois do gesto de rolagem ter sido finalizado quando o usuário deixar de tocar com o dedo na tela. A velocidade e duração da rolagem contínua é proporcional ao quão vigoroso a rolagem. Também cria um novo contexto estagnado.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: css">-webkit-overflow-scrolling: touch; /* deixa a rolagem suave */
+```css
+-webkit-overflow-scrolling: touch; /* deixa a rolagem suave */
 
--webkit-overflow-scrolling: auto; /* pare de rolar imediatamente */</pre>
+-webkit-overflow-scrolling: auto; /* pare de rolar imediatamente */
+```
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Especificações</h2>
+## Especificações
 
-<p>Não faz parte de nenhuma especificação. A Apple tem <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/css/property/-webkit-overflow-scrolling">uma descrição na referência de CSS do Safari</a>.</p>
+Não faz parte de nenhuma especificação. A Apple tem [uma descrição na referência de CSS do Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/css/property/-webkit-overflow-scrolling).
 
-<p> </p>
-
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidade do navegador</h2>
+## Compatibilidade do navegador
 
 {{Compat("css.properties.-webkit-overflow-scrolling")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="http://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/">Artigo do CSS-Tricks com demo </a></li>
-</ul>
+- [Artigo do CSS-Tricks com demo](http://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/)

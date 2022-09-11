@@ -10,73 +10,54 @@ tags:
   - estado padrão
 translation_of: Web/CSS/initial
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A palavra-chave CSS <strong><code>initial</code></strong> CSS se aplica ao <a href="/pt-BR/docs/Web/CSS/initial_value">valor inicial (ou padrão)</a> de uma propriedade para um elemento. Este valor inicial é definido pelo navegador. Este valor pode ser aplicado em qualquer propriedade CSS.</p>
+A palavra-chave CSS **`initial`** CSS se aplica ao [valor inicial (ou padrão)](/pt-BR/docs/Web/CSS/initial_value) de uma propriedade para um elemento. Este valor inicial é definido pelo navegador. Este valor pode ser aplicado em qualquer propriedade CSS.
 
-<p>Isto inclui também o atalho CSS {{cssxref("all")}}, no qual o <code>initial</code> pode ser utilizado para restaurar todas as propriedades CSS para o seu estado inicial.</p>
+Isto inclui também o atalho CSS {{cssxref("all")}}, no qual o `initial` pode ser utilizado para restaurar todas as propriedades CSS para o seu estado inicial.
 
-<div class="note">
-<p><strong>Nota:</strong> Em <a href="/pt-BR/docs/Web/CSS/inheritance#propriedades_herdadas">propriedades herdadas</a>, O valor inicial pode ser inesperado. Neste caso, considere o uso dos termos {cssxref("inherit")}}, {{cssxref("unset")}}, ou {{cssxref("revert")}}.</p>
-</div>
+> **Note:** **Nota:** Em [propriedades herdadas](/pt-BR/docs/Web/CSS/inheritance#propriedades_herdadas), O valor inicial pode ser inesperado. Neste caso, considere o uso dos termos {cssxref("inherit")}}, {{cssxref("unset")}}, ou {{cssxref("revert")}}.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;
-  &lt;span&gt;Este texto é vermelho.&lt;/span&gt;
-  &lt;em&gt;Este texto está em sua cor inicial (normalmente preto).&lt;/em&gt;
-  &lt;span&gt;Este texto está em vermelho de novo :) &lt;/span&gt;
-&lt;/p&gt;</pre>
+```html
+<p>
+  <span>Este texto é vermelho.</span>
+  <em>Este texto está em sua cor inicial (normalmente preto).</em>
+  <span>Este texto está em vermelho de novo :) </span>
+</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   color: red;
 }
 
 em {
   color: initial;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Exemplo')}}</p>
+{{EmbedLiveSample('Exemplo')}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS4 Cascade', '#initial', 'initial') }}</td>
-   <td>{{Spec2('CSS4 Cascade')}}</td>
-   <td>No changes from Level 3.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Cascade', '#initial', 'initial') }}</td>
-   <td>{{Spec2('CSS3 Cascade')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                            | Status                           | Comment                  |
+| ------------------------------------------------------------------------ | -------------------------------- | ------------------------ |
+| {{ SpecName('CSS4 Cascade', '#initial', 'initial') }} | {{Spec2('CSS4 Cascade')}} | No changes from Level 3. |
+| {{ SpecName('CSS3 Cascade', '#initial', 'initial') }} | {{Spec2('CSS3 Cascade')}} | Initial definition.      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade de navegadores</h2>
+## Compatibilidade de navegadores
 
+{{Compat("css.types.global_keywords.initial")}}
 
+## Veja também
 
-<p>{{Compat("css.types.global_keywords.initial")}}</p>
-
-<h2 id="See_also" name="See_also">Veja também</h2>
-
-<ul>
- <li>Utilize {{cssxref("unset")}} para definir uma propriedade para o seu valor herdado caso haja herança, ou para o seu valor inicial, caso não haja..</li>
- <li>Utilize {{cssxref("revert")}} para redefinir uma propriedade ao valor estabelecido pela folha de estilo <a href="/en-US/docs/Web/HTTP/Headers/User-Agent">user-agent</a>  (ou por seus estilos de usuário, se existir algum).</li>
- <li>Utilize {{cssxref("inherit")}} para fazer uma propriedade de elemento a mesma de seu elemento pai.</li>
- <li>A propriedade {{cssxref("all")}} permite que você redefina todas as propriedades para os seus estados initial, inherited, reverted, or unset de uma vez.</li>
-</ul>
+- Utilize {{cssxref("unset")}} para definir uma propriedade para o seu valor herdado caso haja herança, ou para o seu valor inicial, caso não haja..
+- Utilize {{cssxref("revert")}} para redefinir uma propriedade ao valor estabelecido pela folha de estilo [user-agent](/pt-BR/docs/Web/HTTP/Headers/User-Agent) (ou por seus estilos de usuário, se existir algum).
+- Utilize {{cssxref("inherit")}} para fazer uma propriedade de elemento a mesma de seu elemento pai.
+- A propriedade {{cssxref("all")}} permite que você redefina todas as propriedades para os seus estados initial, inherited, reverted, or unset de uma vez.

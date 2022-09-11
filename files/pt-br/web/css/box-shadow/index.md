@@ -3,13 +3,14 @@ title: box-shadow
 slug: Web/CSS/box-shadow
 translation_of: Web/CSS/box-shadow
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>O <strong><code>box-shadow</code></strong> é uma propriedade do CSS, é utilizado para adicionar efeitos de sombra em volta de um elemento. Você pode especificar mais de um efeito, os separando com virgulas.</p>
+O **`box-shadow`** é uma propriedade do CSS, é utilizado para adicionar efeitos de sombra em volta de um elemento. Você pode especificar mais de um efeito, os separando com virgulas.
 
-<p>Uma box-shadow é descrita pelo deslocamentos (offset) X e Y em relação ao elemento, desfoco e propagação do raio e cor.</p>
+Uma box-shadow é descrita pelo deslocamentos (offset) X e Y em relação ao elemento, desfoco e propagação do raio e cor.
 
-<pre class="brush: css">/* offset-x | offset-y | color */
+```css
+/* offset-x | offset-y | color */
 box-shadow: 60px -16px teal;
 
 /* offset-x | offset-y | blur-radius | color */
@@ -28,114 +29,110 @@ box-shadow: 3px 3px red, -1em 0 0.4em olive;
 box-shadow: inherit;
 box-shadow: initial;
 box-shadow: unset;
-</pre>
+```
 
-<pre class="brush: css" style="box-shadow: 60px -16px teal; float: left; margin: 1em;">box-shadow: 60px -16px teal;</pre>
+```css
+box-shadow: 60px -16px teal;
+```
 
-<pre class="brush: css" style="box-shadow: 10px 5px 5px black; float: left; margin: 1em;">box-shadow: 10px 5px 5px black;</pre>
+```css
+box-shadow: 10px 5px 5px black;
+```
 
-<pre class="brush: css" style="box-shadow: 3px 3px red, -1em 0 0.4em olive; float: left; margin: 1em;">box-shadow: 3px 3px red, -1em 0 0.4em olive;</pre>
+```css
+box-shadow: 3px 3px red, -1em 0 0.4em olive;
+```
 
-<pre class="brush: css" style="box-shadow: inset 5em 1em gold; float: left; margin: 1em;">box-shadow: inset 5em 1em gold;</pre>
+```css
+box-shadow: inset 5em 1em gold;
+```
 
-<pre class="brush: css" style="box-shadow: 0 0 1em gold; float: left; margin: 1em;">box-shadow: 0 0 1em gold;</pre>
+```css
+box-shadow: 0 0 1em gold;
+```
 
-<pre class="brush: css" style="box-shadow: inset 0 0 1em gold; float: left; margin: 1em;">box-shadow: inset 0 0 1em gold;</pre>
+```css
+box-shadow: inset 0 0 1em gold;
+```
 
-<pre class="brush: css" style="box-shadow: inset 0 0 1em gold, 0 0 1em red; float: left; margin: 1em;">box-shadow: inset 0 0 1em gold, 0 0 1em red;</pre>
+```css
+box-shadow: inset 0 0 1em gold, 0 0 1em red;
+```
 
-<div class="cleared"></div>
+A propriedade box-shadow permite que você adicione uma sombra em quase qualquer elemento. Se um {{cssxref ("border-radius")}} for especificado no elemento com uma box-shadow, a sombra assume os mesmos cantos arredondados. O comando z-ordering de múltiplas box-shadows é o mesmo que múltiplas [text shadows](/en-US/CSS/text-shadow) (a primeira sombra especificada está na parte superior).
 
-<p>A propriedade box-shadow permite que você adicione uma sombra em quase qualquer elemento. Se um {{cssxref ("border-radius")}} for especificado no elemento com uma box-shadow, a sombra assume os mesmos cantos arredondados. O comando z-ordering de múltiplas box-shadows é o mesmo que múltiplas <a href="/en-US/CSS/text-shadow">text shadows</a> (a primeira sombra especificada está na parte superior).</p>
+[Box-shadow generator](/pt-BR/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator) é uma ferrament interativa qu permite a criação de `box-shadow`.
 
-<p><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator">Box-shadow generator</a> é uma ferrament interativa qu permite a criação de <code>box-shadow</code>.</p>
+{{cssinfo}}
 
-<p>{{cssinfo}}</p>
+## Sintaxe
 
-<h2 id="Sintaxe">Sintaxe</h2>
+Especificando uma única box-shadow usando:
 
-<p>Especificando uma única box-shadow usando:</p>
+- Dois, três ou quatro valores para [`<length>`](/en-US/docs/Web/CSS/length).
 
-<ul>
- <li>Dois, três ou quatro valores para <code><a href="/en-US/docs/Web/CSS/length">&lt;length&gt;</a></code>.
+  - Se apenas dois valores forem definidos, eles serão interpretados como valores de [`<offset-x><offset-y>`](<#\<offset-x\> \<offset-y\>>).
+  - Se o terceiro valor for dados, é interpretado como [`<blur-radius>`](#<blur-radius>).
+  - Se o quarto valor for dados, é interpretado como [`<spread-radius>`](#<spread-radius>).
 
-  <ul>
-   <li>Se apenas dois valores forem definidos, eles serão interpretados como valores de <code><a href="#&lt;offset-x> &lt;offset-y>">&lt;offset-x&gt;&lt;offset-y&gt;</a></code>.</li>
-   <li>Se o terceiro valor for dados, é interpretado como <code><a href="#&lt;blur-radius>">&lt;blur-radius&gt;</a></code>.</li>
-   <li>Se o quarto valor for dados, é interpretado como <code><a href="#&lt;spread-radius>">&lt;spread-radius&gt;</a></code>.</li>
-  </ul>
- </li>
- <li>Opcionalmente, o atributo <code><a href="#inset">inset</a></code>.</li>
- <li>Opcionalmente, o valor <code><a href="#&lt;color>">&lt;color&gt;</a></code>.</li>
-</ul>
+- Opcionalmente, o atributo [`inset`](#inset).
+- Opcionalmente, o valor [`<color>`](#<color>).
 
-<p>Para especificar mais de uma sombra, separe-as com virgula.</p>
+Para especificar mais de uma sombra, separe-as com virgula.
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><a id="inset" name="inset"><code>inset</code></a></dt>
- <dd>Se não for especificado, a sombra ganha o efeito de como se a caixa fosse aumentada acima do conteúdo).<br>
- A presença da palavra-chave <code>inset</code> muda a sombra para dentro da moldura (como se o conteúdo estivesse pressionado dentro da caixa). As sombras de inserção são desenhadas dentro da borda (mesmo as transparentes), acima do plano de fundo, mas abaixo do conteúdo.</dd>
- <dt><a id="&lt;offset-x> &lt;offset-y>" name="&lt;offset-x> &lt;offset-y>"><code>&lt;offset-x&gt;</code> <code>&lt;offset-y&gt;</code></a></dt>
- <dd><p>Existem dois valores {{cssxref("&lt;length&gt;")}}  para configurar o desvio (offset) da sombra:</p>
- <ul><li><code>&lt;offset-x&gt;</code> especifica a distância horizontal. Valores negativos colocarão a sombra à esquerda do elemento.</li>
- <li><code>&lt;offset-y&gt;</code> especifca a distância vertical. Valores negativos colocam a sombra acima do elemento.</li>
-</ul>
- <p>Consulte {{cssxref("&lt;length&gt;")}} para as unidades disponíveis.</p>
- <p>Se ambos os valores forem <code>0</code>, a sombra será posicionada atrás do elemento (e poderá gerar um efeito de desfocagem caso <code>&lt;blur-radius&gt;</code> e/ou <code>&lt;spread-radius&gt;</code> estiverem configurados).</p></dd>
- <dt><a id="&lt;blur-radius>" name="&lt;blur-radius>"><code>&lt;blur-radius&gt;</code></a></dt>
- <dd><p>Este é um terceiro valor para {{cssxref("&lt;length&gt;")}}. Quanto maior for este valor, maior o efeito de desfocagem, desta forma a sombra se tornará maior e mais clara. Valores negativos não são permitidos. Se não for especificado, o valor padrão é <code>0</code> (os limites da sombra serão retos). A especificação não inclui um algoritmo exato de como o raio de esmaecimento deve ser calculado, no entanto, descreve o seguinte:</p>
- <blockquote>...para uma sombra com bordas longas e retas, deverá ser criada uma transição de cor do comprimento da distância de desfocagem que é perpendicular e centralizada com as bordas da sombra, e isto deve variar da cor total da sombra do seu ponto central até totalmente transparente no ponto final fora dela.</blockquote></dd>
- <dt><a id="&lt;spread-radius>" name="&lt;spread-radius>"><code>&lt;spread-radius&gt;</code></a></dt>
- <dd>Este é um quarto valor de {{cssxref("&lt;length&gt;")}}. Valores positivos farão com que a sombra expanda e cresça maior, valores negativos farão com que a sombra encolha. Se não for especificado, o valor padrão é <code>0</code> (a sombra terá o mesmo tamanho do elemento)</dd>
- <dt><a id="&lt;color>" name="&lt;color>"><code>&lt;color&gt;</code></a></dt>
- <dd>Consulte {{cssxref("&lt;color&gt;")}} para possiveis palavras-chave e notações. Se não for especificada, a cor que será utilizada vai depender do navegador - geralmente é o valor da propriedade {{cssxref("color")}}, mas tenha em mente que o Safari atualmente imprime uma sombra transparente neste caso.</dd>
-</dl>
+- `inset`
+  - : Se não for especificado, a sombra ganha o efeito de como se a caixa fosse aumentada acima do conteúdo).
+    A presença da palavra-chave `inset` muda a sombra para dentro da moldura (como se o conteúdo estivesse pressionado dentro da caixa). As sombras de inserção são desenhadas dentro da borda (mesmo as transparentes), acima do plano de fundo, mas abaixo do conteúdo.
+- `<offset-x>` `<offset-y>`
 
-<h3 id="Interpolação">Interpolação</h3>
+  - : Existem dois valores {{cssxref("&lt;length&gt;")}} para configurar o desvio (offset) da sombra:
 
-<p>Each shadow in the list (treating <code>none</code> as a 0-length list) is interpolated via the color (as color) component, and x, y, blur, and (when appropriate) spread (as length) components. For each shadow, if both input shadows are or are not <code>inset</code>, then the interpolated shadow must match the input shadows in that regard. If any pair of input shadows has one <code>inset</code> and the other not <code>inset</code>, the entire shadow list is uninterpolable. If the lists of shadows have different lengths, then the shorter list is padded at the end with shadows whose color is <code>transparent</code>, all lengths are <code>0</code>, and whose <code>inset</code> (or not) matches the longer list.</p>
+    - `<offset-x>` especifica a distância horizontal. Valores negativos colocarão a sombra à esquerda do elemento.
+    - `<offset-y>` especifca a distância vertical. Valores negativos colocam a sombra acima do elemento.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+    Consulte {{cssxref("&lt;length&gt;")}} para as unidades disponíveis.
+
+    Se ambos os valores forem `0`, a sombra será posicionada atrás do elemento (e poderá gerar um efeito de desfocagem caso `<blur-radius>` e/ou `<spread-radius>` estiverem configurados).
+
+- `<blur-radius>`
+
+  - : Este é um terceiro valor para {{cssxref("&lt;length&gt;")}}. Quanto maior for este valor, maior o efeito de desfocagem, desta forma a sombra se tornará maior e mais clara. Valores negativos não são permitidos. Se não for especificado, o valor padrão é `0` (os limites da sombra serão retos). A especificação não inclui um algoritmo exato de como o raio de esmaecimento deve ser calculado, no entanto, descreve o seguinte:
+
+    > ...para uma sombra com bordas longas e retas, deverá ser criada uma transição de cor do comprimento da distância de desfocagem que é perpendicular e centralizada com as bordas da sombra, e isto deve variar da cor total da sombra do seu ponto central até totalmente transparente no ponto final fora dela.
+
+- `<spread-radius>`
+  - : Este é um quarto valor de {{cssxref("&lt;length&gt;")}}. Valores positivos farão com que a sombra expanda e cresça maior, valores negativos farão com que a sombra encolha. Se não for especificado, o valor padrão é `0` (a sombra terá o mesmo tamanho do elemento)
+- `<color>`
+  - : Consulte {{cssxref("&lt;color&gt;")}} para possiveis palavras-chave e notações. Se não for especificada, a cor que será utilizada vai depender do navegador - geralmente é o valor da propriedade {{cssxref("color")}}, mas tenha em mente que o Safari atualmente imprime uma sombra transparente neste caso.
+
+### Interpolação
+
+Each shadow in the list (treating `none` as a 0-length list) is interpolated via the color (as color) component, and x, y, blur, and (when appropriate) spread (as length) components. For each shadow, if both input shadows are or are not `inset`, then the interpolated shadow must match the input shadows in that regard. If any pair of input shadows has one `inset` and the other not `inset`, the entire shadow list is uninterpolable. If the lists of shadows have different lengths, then the shorter list is padded at the end with shadows whose color is `transparent`, all lengths are `0`, and whose `inset` (or not) matches the longer list.
+
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Live_examples">Live examples</h2>
+## Live examples
 
-<ul>
- <li><a href="http://www.elektronotdienst-nuernberg.de/bugs/box-shadow_inset.html">box-shadow test</a></li>
- <li><a href="http://markusstange.wordpress.com/2009/02/15/fun-with-box-shadows/">box-shadow tutorial and examples</a></li>
- <li><a href="https://cssgenerator.org/box-shadow-css-generator.html">Box Shadow CSS Generator</a></li>
-</ul>
+- [box-shadow test](http://www.elektronotdienst-nuernberg.de/bugs/box-shadow_inset.html)
+- [box-shadow tutorial and examples](http://markusstange.wordpress.com/2009/02/15/fun-with-box-shadows/)
+- [Box Shadow CSS Generator](https://cssgenerator.org/box-shadow-css-generator.html)
 
-<h2 class="cleared" id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#box-shadow', 'box-shadow')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                                   | Comment            |
+| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
+| {{SpecName('CSS3 Backgrounds', '#box-shadow', 'box-shadow')}} | {{Spec2('CSS3 Backgrounds')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.properties.box-shadow")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{cssxref("&lt;color&gt;")}} data type</li>
- <li>Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}</li>
- <li><a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a></li>
-</ul>
+- The {{cssxref("&lt;color&gt;")}} data type
+- Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
+- [Applying color to HTML elements using CSS](/pt-BR/docs/Web/HTML/Applying_color)

@@ -3,187 +3,148 @@ title: '@font-face'
 slug: Web/CSS/@font-face
 translation_of: Web/CSS/@font-face
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>O <strong><code>@font-face</code></strong> <a href="/en-US/docs/CSS">CSS</a> <a href="/en-US/docs/CSS/At-rule">at-rule</a> especifica uma fonte customizada com a qual exibe o texto; a fonte pode ser carregada de um servidor remoto ou de uma fonte instalada localmente no computador do usuário.</p>
+O **`@font-face`** [CSS](/pt-BR/docs/CSS) [at-rule](/pt-BR/docs/CSS/At-rule) especifica uma fonte customizada com a qual exibe o texto; a fonte pode ser carregada de um servidor remoto ou de uma fonte instalada localmente no computador do usuário.
 
-<p>Se a função <code>local()</code> for fornecida, a especificação do nome da fonte a ser procurada no computador do usuário, e a {{Glossary("user agent")}} encontrar uma correspondência, essa fonte local será usada. Caso contrário, o recurso de fonte especificado usando a função <code>url()</code> é baixado e usado.</p>
+Se a função `local()` for fornecida, a especificação do nome da fonte a ser procurada no computador do usuário, e a {{Glossary("user agent")}} encontrar uma correspondência, essa fonte local será usada. Caso contrário, o recurso de fonte especificado usando a função `url()` é baixado e usado.
 
-<p>Ao permitir que os autores forneçam suas próprias fontes, <code>@font-face</code> torna possível projetar conteúdo sem se limitar às chamadas fontes "seguras para a web" (ou seja, as fontes que são tão comuns que são consideradas como universalmente disponível). A capacidade de especificar o nome de uma fonte instalada localmente a ser procurada e usada permite personalizar a fonte além do básico, ao mesmo tempo em que é possível fazê-lo sem depender de uma conexão com a Internet.</p>
+Ao permitir que os autores forneçam suas próprias fontes, `@font-face` torna possível projetar conteúdo sem se limitar às chamadas fontes "seguras para a web" (ou seja, as fontes que são tão comuns que são consideradas como universalmente disponível). A capacidade de especificar o nome de uma fonte instalada localmente a ser procurada e usada permite personalizar a fonte além do básico, ao mesmo tempo em que é possível fazê-lo sem depender de uma conexão com a Internet.
 
-<p>É comum usar <code>url()</code> e <code>local()</code> juntos, para que a cópia instalada da fonte do usuário seja usada, se disponível, voltando ao download de uma cópia da fonte, caso ela não seja encontrada no dispositivo do usuário.</p>
+É comum usar `url()` e `local()` juntos, para que a cópia instalada da fonte do usuário seja usada, se disponível, voltando ao download de uma cópia da fonte, caso ela não seja encontrada no dispositivo do usuário.
 
-<p>A regra de CSS <code>@font-face</code> pode ser usada não apenas no nível superior de um CSS, mas também dentro de qualquer <a href="/en-US/docs/Web/CSS/At-rule#Conditional_group_rules">CSS conditional-group at-rule</a>.</p>
+A regra de CSS `@font-face` pode ser usada não apenas no nível superior de um CSS, mas também dentro de qualquer [CSS conditional-group at-rule](/pt-BR/docs/Web/CSS/At-rule#Conditional_group_rules).
 
-<pre class="brush: css no-line-numbers">@font-face {
+```css
+@font-face {
   font-family: "Open Sans";
   src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
        url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
-}</pre>
+}
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<h3 id="Descritores">Descritores</h3>
+### Descritores
 
-<dl>
- <dt>{{cssxref("@font-face/font-display", "font-display")}}</dt>
- <dd>Determina como uma fonte é exibida, com base em se e quando é baixada e pronta para uso.</dd>
- <dt>{{cssxref("@font-face/font-family", "font-family")}}</dt>
- <dd>Especifica um nome que será usado como o valor nominal da fonte para as propriedades da fonte.</dd>
- <dt>{{cssxref("@font-face/font-stretch", "font-stretch")}}</dt>
- <dd>Um valor {{cssxref ("font-stretch")}}. Desde o Firefox 61 (e em outros navegadores modernos), isso também aceita dois valores para especificar um intervalo suportado por uma fonte, por exemplo, extensão de fonte: <code>font-stretch: 50% 200%;</code></dd>
- <dt>{{cssxref("@font-face/font-style", "font-style")}}</dt>
- <dd>Um valor {{cssxref ("font-style")}}. Desde o Firefox 61 (e em outros navegadores modernos), isso também aceita dois valores para especificar um intervalo suportado por uma fonte, por exemplo <code>font-style: oblique 20deg 50deg;</code></dd>
- <dt>{{cssxref("@font-face/font-weight", "font-weight")}}</dt>
- <dd>Um valor de {{cssxref ("font-weight")}}. Desde o Firefox 61 (e em outros navegadores modernos), isso também aceita dois valores para especificar um intervalo suportado por uma fonte, por exemplo <code>font-weight: 100 400;</code></dd>
- <dt>{{cssxref("@font-face/font-variant", "font-variant")}}</dt>
- <dd>Um valor {{cssxref("font-variant")}}.</dd>
- <dt>{{cssxref("font-feature-settings", "font-feature-settings")}}</dt>
- <dd>Permite o controle sobre recursos tipográficos avançados em fontes OpenType.</dd>
- <dt>{{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}</dt>
- <dd>Permite o controle de baixo nível sobre as variações de fonte OpenType ou TrueType, especificando os nomes dos quatro eixos das letras dos recursos para variar, juntamente com seus valores de variação.</dd>
- <dt>{{cssxref("@font-face/src", "src")}}</dt>
- <dd>
- <p>Especifica o recurso que contém os dados da fonte. Pode ser um URL para um local de arquivo de fonte remota ou o nome de uma fonte no computador do usuário.</p>
+- {{cssxref("@font-face/font-display", "font-display")}}
+  - : Determina como uma fonte é exibida, com base em se e quando é baixada e pronta para uso.
+- {{cssxref("@font-face/font-family", "font-family")}}
+  - : Especifica um nome que será usado como o valor nominal da fonte para as propriedades da fonte.
+- {{cssxref("@font-face/font-stretch", "font-stretch")}}
+  - : Um valor {{cssxref ("font-stretch")}}. Desde o Firefox 61 (e em outros navegadores modernos), isso também aceita dois valores para especificar um intervalo suportado por uma fonte, por exemplo, extensão de fonte: `font-stretch: 50% 200%;`
+- {{cssxref("@font-face/font-style", "font-style")}}
+  - : Um valor {{cssxref ("font-style")}}. Desde o Firefox 61 (e em outros navegadores modernos), isso também aceita dois valores para especificar um intervalo suportado por uma fonte, por exemplo `font-style: oblique 20deg 50deg;`
+- {{cssxref("@font-face/font-weight", "font-weight")}}
+  - : Um valor de {{cssxref ("font-weight")}}. Desde o Firefox 61 (e em outros navegadores modernos), isso também aceita dois valores para especificar um intervalo suportado por uma fonte, por exemplo `font-weight: 100 400;`
+- {{cssxref("@font-face/font-variant", "font-variant")}}
+  - : Um valor {{cssxref("font-variant")}}.
+- {{cssxref("font-feature-settings", "font-feature-settings")}}
+  - : Permite o controle sobre recursos tipográficos avançados em fontes OpenType.
+- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
+  - : Permite o controle de baixo nível sobre as variações de fonte OpenType ou TrueType, especificando os nomes dos quatro eixos das letras dos recursos para variar, juntamente com seus valores de variação.
+- {{cssxref("@font-face/src", "src")}}
 
- <p>Para fornecer ao navegador uma dica sobre o formato de um recurso de fonte - para que ele possa selecionar um adequado - é possível incluir um tipo de formato dentro de uma função <code>format()</code>:</p>
+  - : Especifica o recurso que contém os dados da fonte. Pode ser um URL para um local de arquivo de fonte remota ou o nome de uma fonte no computador do usuário.
 
- <pre class="brush: css">src: url(ideal-sans-serif.woff) <strong>format("woff")</strong>,
-     url(basic-sans-serif.ttf) <strong>format("truetype")</strong>;</pre>
+    Para fornecer ao navegador uma dica sobre o formato de um recurso de fonte - para que ele possa selecionar um adequado - é possível incluir um tipo de formato dentro de uma função `format()`:
 
- <p>Os tipos disponíveis são: <code>"woff"</code>, <code>"woff2"</code>, <code>"truetype"</code>, <code>"opentype"</code>, <code>"embedded-opentype"</code>, e <code>"svg"</code>.</p>
- </dd>
- <dt>{{cssxref("@font-face/unicode-range", "unicode-range")}}</dt>
- <dd>O intervalo de pontos de código Unicode a serem usados na fonte.</dd>
-</dl>
+    ```css
+    src: url(ideal-sans-serif.woff) format("woff"),
+         url(basic-sans-serif.ttf) format("truetype");
+    ```
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+    Os tipos disponíveis são: `"woff"`, `"woff2"`, `"truetype"`, `"opentype"`, `"embedded-opentype"`, e `"svg"`.
+
+- {{cssxref("@font-face/unicode-range", "unicode-range")}}
+  - : O intervalo de pontos de código Unicode a serem usados na fonte.
+
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Este exemplo simplesmente especifica uma fonte para download a ser usada, aplicando-a a todo o corpo do documento:</p>
+Este exemplo simplesmente especifica uma fonte para download a ser usada, aplicando-a a todo o corpo do documento:
 
-<p><a href="https://mdn.mozillademos.org/files/7775/webfont-sample.html">Veja este exemplo</a></p>
+[Veja este exemplo](https://mdn.mozillademos.org/files/7775/webfont-sample.html)
 
-<pre class="brush: html">&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Web Font Sample&lt;/title&gt;
-  &lt;style type="text/css" media="screen, print"&gt;
+```html
+<html>
+<head>
+  <title>Web Font Sample</title>
+  <style type="text/css" media="screen, print">
     @font-face {
       font-family: "Bitstream Vera Serif Bold";
       src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
     }
 
     body { font-family: "Bitstream Vera Serif Bold", serif }
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
+  </style>
+</head>
+<body>
   This is Bitstream Vera Serif Bold.
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<p>Neste exemplo, a cópia local do usuário "Helvetica Neue Bold" é usada; se o usuário não tiver essa fonte instalada (dois nomes diferentes são tentados), a fonte para download denominada "MgOpenModernaBold.ttf" será usada:</p>
+Neste exemplo, a cópia local do usuário "Helvetica Neue Bold" é usada; se o usuário não tiver essa fonte instalada (dois nomes diferentes são tentados), a fonte para download denominada "MgOpenModernaBold.ttf" será usada:
 
-<pre class="brush: css">@font-face {
+```css
+@font-face {
   font-family: MyHelvetica;
   src: local("Helvetica Neue Bold"),
        local("HelveticaNeue-Bold"),
        url(MgOpenModernaBold.ttf);
   font-weight: bold;
 }
-</pre>
+```
 
-<h2 id="Font_MIME_Types">Font MIME Types</h2>
+## Font MIME Types
 
-<table>
- <thead>
-  <tr>
-   <th>Formato</th>
-   <th>MIME type</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>TrueType</td>
-   <td><code>font/ttf</code></td>
-  </tr>
-  <tr>
-   <td>OpenType</td>
-   <td><code>font/otf</code></td>
-  </tr>
-  <tr>
-   <td>Web Open File Format</td>
-   <td><code>font/woff</code></td>
-  </tr>
-  <tr>
-   <td>Web Open File Format 2</td>
-   <td><code>font/woff2</code></td>
-  </tr>
- </tbody>
-</table>
+| Formato                | MIME type    |
+| ---------------------- | ------------ |
+| TrueType               | `font/ttf`   |
+| OpenType               | `font/otf`   |
+| Web Open File Format   | `font/woff`  |
+| Web Open File Format 2 | `font/woff2` |
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<ul>
- <li>As fontes da Web estão sujeitas à mesma restrição de domínio (os arquivos de fonte devem estar no mesmo domínio da página que os utiliza), a menos que os <a href="/en-US/docs/HTTP_access_control">Controles de Acessos HTTP</a> sejam usados para relaxar essa restrição.</li>
- <li><code>@font-face</code> não pode ser declarado dentro de um seletor CSS. Por exemplo, o seguinte não funcionará:
-  <pre class="brush: css; example-bad">.className {
-  @font-face {
-    font-family: MyHelvetica;
-    src: local("Helvetica Neue Bold"),
-         local("HelveticaNeue-Bold"),
-         url(MgOpenModernaBold.ttf);
-    font-weight: bold;
+- As fontes da Web estão sujeitas à mesma restrição de domínio (os arquivos de fonte devem estar no mesmo domínio da página que os utiliza), a menos que os [Controles de Acessos HTTP](/pt-BR/docs/HTTP_access_control) sejam usados para relaxar essa restrição.
+- `@font-face` não pode ser declarado dentro de um seletor CSS. Por exemplo, o seguinte não funcionará:
+
+  ```css example-bad
+  .className {
+    @font-face {
+      font-family: MyHelvetica;
+      src: local("Helvetica Neue Bold"),
+           local("HelveticaNeue-Bold"),
+           url(MgOpenModernaBold.ttf);
+      font-weight: bold;
+    }
   }
-}</pre>
- </li>
-</ul>
+  ```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WOFF2.0', '', 'WOFF2 font format')}}</td>
-   <td>{{Spec2('WOFF2.0')}}</td>
-   <td>Especificação de formato de fonte com novo algoritmo de compactação.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('WOFF1.0', '', 'WOFF font format')}}</td>
-   <td>{{Spec2('WOFF1.0')}}</td>
-   <td>Especificação de formato</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#font-face-rule', '@font-face')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Definição Inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                    | Status                           | Comentário                                                           |
+| -------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------- |
+| {{SpecName('WOFF2.0', '', 'WOFF2 font format')}}                 | {{Spec2('WOFF2.0')}}     | Especificação de formato de fonte com novo algoritmo de compactação. |
+| {{SpecName('WOFF1.0', '', 'WOFF font format')}}                 | {{Spec2('WOFF1.0')}}     | Especificação de formato                                             |
+| {{SpecName('CSS3 Fonts', '#font-face-rule', '@font-face')}} | {{Spec2('CSS3 Fonts')}} | Definição Inicial                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("css.at-rules.font-face")}}</p>
+{{Compat("css.at-rules.font-face")}}
 
-<h2 id="Veja_Também">Veja Também</h2>
+## Veja Também
 
-<ul>
- <li><a href="/en-US/docs/WOFF">About WOFF</a></li>
- <li><a href="https://everythingfonts.com/font-face">Everythingfonts font-face generator</a></li>
- <li><a class="external" href="http://www.fontsquirrel.com/fontface/generator">FontSquirrel @font-face generator</a></li>
- <li><a class="external" href="http://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/">Beautiful fonts with @font-face</a></li>
- <li><a class="external" href="http://openfontlibrary.org/">Open Font Library</a></li>
- <li><a class="external" href="http://caniuse.com/woff">When can I use WOFF?</a></li>
- <li><a class="external" href="http://caniuse.com/svg-fonts">When can I use SVG Fonts?</a></li>
- <li><a href="https://coolfont.org">Free Fancy Cool Fonts</a></li>
-</ul>
+- [About WOFF](/pt-BR/docs/WOFF)
+- [Everythingfonts font-face generator](https://everythingfonts.com/font-face)
+- [FontSquirrel @font-face generator](http://www.fontsquirrel.com/fontface/generator)
+- [Beautiful fonts with @font-face](http://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
+- [Open Font Library](http://openfontlibrary.org/)
+- [When can I use WOFF?](http://caniuse.com/woff)
+- [When can I use SVG Fonts?](http://caniuse.com/svg-fonts)
+- [Free Fancy Cool Fonts](https://coolfont.org)

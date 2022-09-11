@@ -3,79 +3,80 @@ title: height
 slug: Web/CSS/height
 translation_of: Web/CSS/height
 ---
-<div>{{CSSRef()}}</div>
+{{CSSRef()}}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>A propriedade <code>height</code> do CSS determina a altura da área do conteúdo de um elemento. A <a href="/en-US/docs/CSS/box_model#content" title="CSS/Box_model#content">área de conteúdo</a> consiste no <code>padding</code>, <code>margin</code> e <code>border </code>do elemento.</p>
+A propriedade `height` do CSS determina a altura da área do conteúdo de um elemento. A [área de conteúdo](/pt-BR/docs/CSS/box_model#content "CSS/Box_model#content") consiste no `padding`, `margin` e `border `do elemento.
 
-<p>As propriedades {{Cssxref("min-height")}} e {{Cssxref("max-height")}} sobrepõem a {{Cssxref("height")}}.</p>
+As propriedades {{Cssxref("min-height")}} e {{Cssxref("max-height")}} sobrepõem a {{Cssxref("height")}}.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax" title="CSS/Value_definition_syntax">Sintaxe formal</a>: <code class="language-html">[&lt;length&gt; | &lt;percentage&gt;] &amp;&amp; [border-box | content-box]? | available | min-content | max-content | fit-content | complex | auto</code>
-</pre>
+```html
+Sintaxe formal: [<length> | <percentage>] && [border-box | content-box]? | available | min-content | max-content | fit-content | complex | auto
+```
 
-<pre>height: auto     /* auto keyword */
+```
+height: auto     /* auto keyword */
 
-height: 120px    /* &lt;length&gt; values */
+height: 120px    /* <length> values */
 height: 10em
 
-height: 75%      /* &lt;percentage&gt; values */
+height: 75%      /* <percentage> values */
 
 height: inherit
-</pre>
+```
 
-<h3 id="Values" name="Values">Valores</h3>
+### Valores
 
-<dl>
- <dt><code style="font-size: 14px;">&lt;length&gt;</code></dt>
- <dd>Veja {{cssxref("&lt;length&gt;")}} para unidades disponíveis.</dd>
- <dt><code style="font-size: 14px;">&lt;percentage&gt;</code></dt>
- <dd>Especificada como uma {{cssxref("&lt;percentage&gt;")}} da altura do conteúdo do bloco.</dd>
- <dt><code style="font-size: 14px;">border-box </code>{{ experimental_inline }}</dt>
- <dd>Se presente, o último {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} é aplicado a  caixa de borda do elemento.</dd>
- <dt><code style="font-size: 14px;">content-box</code> {{ experimental_inline }}</dt>
- <dd>Se presente, o último {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} é aplicado a caixa de conteúdo do elemento.</dd>
- <dt><code style="font-size: 14px;">auto</code></dt>
- <dd>O navegador calculará a altura do conteúdo especificado.</dd>
- <dt><code style="font-size: 14px;">max-content</code> {{ experimental_inline }}</dt>
- <dd>A altura máxima intrínseca.</dd>
- <dt><code style="font-size: 14px;">min-content</code> {{ experimental_inline }}</dt>
- <dd>A altura mínima intrínseca.</dd>
- <dt><code style="font-size: 14px;">available</code> {{ experimental_inline }}</dt>
- <dd>Altura da caixa menos margem vertical, borda e padding.</dd>
- <dt><code style="font-size: 14px;">fit-content</code> {{ experimental_inline }}</dt>
- <dd>O maior de:
- <ul>
-  <li>a altura mínima intrínseca</li>
-  <li>a menor entre a altura intrínseca preferida e a altura disponível</li>
- </ul>
- </dd>
-</dl>
+- `<length>`
+  - : Veja {{cssxref("&lt;length&gt;")}} para unidades disponíveis.
+- `<percentage>`
+  - : Especificada como uma {{cssxref("&lt;percentage&gt;")}} da altura do conteúdo do bloco.
+- `border-box `{{ experimental_inline }}
+  - : Se presente, o último {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} é aplicado a caixa de borda do elemento.
+- `content-box` {{ experimental_inline }}
+  - : Se presente, o último {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} é aplicado a caixa de conteúdo do elemento.
+- `auto`
+  - : O navegador calculará a altura do conteúdo especificado.
+- `max-content` {{ experimental_inline }}
+  - : A altura máxima intrínseca.
+- `min-content` {{ experimental_inline }}
+  - : A altura mínima intrínseca.
+- `available` {{ experimental_inline }}
+  - : Altura da caixa menos margem vertical, borda e padding.
+- `fit-content` {{ experimental_inline }}
 
-<h2 id="Exemplos">Exemplos</h2>
+  - : O maior de:
 
-<h3 id="HTML">HTML</h3>
+    - a altura mínima intrínseca
+    - a menor entre a altura intrínseca preferida e a altura disponível
 
-<pre class="brush: html">&lt;div id="red"&gt;
-  &lt;span&gt;I'm 50 pixels tall.&lt;/span&gt;
-&lt;/div&gt;
-&lt;div id="green"&gt;
-  &lt;span&gt;I'm 25 pixels tall.&lt;/span&gt;
-&lt;/div&gt;
-&lt;div id="parent"&gt;
-  &lt;div id="child"&gt;
-    &lt;span&gt;I'm half the height of my parent.&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+## Exemplos
 
-<h3 id="CSS">CSS</h3>
+### HTML
 
-<pre class="brush: css">div {
+```html
+<div id="red">
+  <span>I'm 50 pixels tall.</span>
+</div>
+<div id="green">
+  <span>I'm 25 pixels tall.</span>
+</div>
+<div id="parent">
+  <div id="child">
+    <span>I'm half the height of my parent.</span>
+  </div>
+</div>
+```
+
+### CSS
+
+```css
+div {
   width: 250px;
   margin-bottom: 5px;
   border: 3px solid #999999;
@@ -97,50 +98,23 @@ height: inherit
   height: 50%;
   width: 75%;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Exemplos')}}</p>
+{{EmbedLiveSample('Exemplos')}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Box', '#the-width-and-height-properties', 'height')}}</td>
-   <td>{{Spec2('CSS3 Box')}}</td>
-   <td>Added the <code>max-content</code>, <code>min-content</code>, <code>available</code>, <code>fit-content</code>, <code>border-box</code>, <code>content-box</code> keywords.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'height')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Lists <code>height</code> as animatable.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visudet.html#the-height-property', 'height')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Adds support for the {{cssxref("&lt;length&gt;")}} values and precises on which element it applies to.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#height', 'height')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                                   | Comment                                                                                                           |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Box', '#the-width-and-height-properties', 'height')}} | {{Spec2('CSS3 Box')}}             | Added the `max-content`, `min-content`, `available`, `fit-content`, `border-box`, `content-box` keywords.         |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'height')}}             | {{Spec2('CSS3 Transitions')}} | Lists `height` as animatable.                                                                                     |
+| {{SpecName('CSS2.1', 'visudet.html#the-height-property', 'height')}} | {{Spec2('CSS2.1')}}                 | Adds support for the {{cssxref("&lt;length&gt;")}} values and precises on which element it applies to. |
+| {{SpecName('CSS1', '#height', 'height')}}                                     | {{Spec2('CSS1')}}                 | Initial specification.                                                                                            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.properties.height")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/CSS/box_model" title="CSS/box_model">box model</a>, {{Cssxref("width")}}, {{Cssxref("box-sizing")}}, {{Cssxref("min-height")}}, {{Cssxref("max-height")}}</li>
-</ul>
+- [box model](/pt-BR/docs/CSS/box_model "CSS/box_model"), {{Cssxref("width")}}, {{Cssxref("box-sizing")}}, {{Cssxref("min-height")}}, {{Cssxref("max-height")}}

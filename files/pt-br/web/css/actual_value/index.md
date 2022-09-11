@@ -4,32 +4,17 @@ slug: Web/CSS/actual_value
 translation_of: Web/CSS/actual_value
 original_slug: Web/CSS/Valor_atual
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong>actual value</strong> of a CSS property is the <a href="/en-US/docs/Web/CSS/used_value">used value</a> of that property after any necessary approximations have been applied. For example, a user agent that can only render borders with a whole-number pixel width may round the thickness of the border to the nearest integer.</p>
+The **actual value** of a CSS property is the [used value](/pt-BR/docs/Web/CSS/used_value) of that property after any necessary approximations have been applied. For example, a user agent that can only render borders with a whole-number pixel width may round the thickness of the border to the nearest integer.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'cascade.html#actual-value', 'actual value')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                           | Status                   | Comentario        |
+| ---------------------------------------------------------------------------------------- | ------------------------ | ----------------- |
+| {{SpecName('CSS2.1', 'cascade.html#actual-value', 'actual value')}} | {{Spec2('CSS2.1')}} | Definição inicial |
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Reference">CSS Reference</a></li>
- <li>{{CSS_key_concepts}}</li>
-</ul>
+- [CSS Reference](/pt-BR/docs/Web/CSS/Reference)
+- {{CSS_key_concepts}}

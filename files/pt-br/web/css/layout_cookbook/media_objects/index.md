@@ -3,76 +3,68 @@ title: 'Recipe: Media objects'
 slug: Web/CSS/Layout_cookbook/Media_objects
 translation_of: Web/CSS/Layout_cookbook/Media_objects
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p class="summary">O <em>Media Object</em> (Objeto de Mídia) é um padrão que vemos em toda web. <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">Nomeado por Nicole Sullivan</a> refere-se a uma caixa de duas colunas com uma imagem de um lado e texto descritivo do outro, por ex. uma postagem no facebook ou tweet.</p>
+O _Media Object_ (Objeto de Mídia) é um padrão que vemos em toda web. [Nomeado por Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) refere-se a uma caixa de duas colunas com uma imagem de um lado e texto descritivo do outro, por ex. uma postagem no facebook ou tweet.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16112/media-object.png"></p>
+![](https://mdn.mozillademos.org/files/16112/media-object.png)
 
-<h2 id="Exigências">Exigências</h2>
+## Exigências
 
-<p>O Padrão Media Object precisa de algumas ou todas as seguintes características:</p>
+O Padrão Media Object precisa de algumas ou todas as seguintes características:
 
-<ul>
- <li>Empilhados no Celular, duas colunas no Computador.</li>
- <li>A imagem pode estar à esquerda ou à direita.</li>
- <li>A imagem pode ser pequena ou grande.</li>
- <li>Media Objects (Objetos de Mídia) podem ser aninhados.</li>
- <li>O Media Object deve limpar o conteúdo, não importando o tamanho.</li>
-</ul>
+- Empilhados no Celular, duas colunas no Computador.
+- A imagem pode estar à esquerda ou à direita.
+- A imagem pode ser pequena ou grande.
+- Media Objects (Objetos de Mídia) podem ser aninhados.
+- O Media Object deve limpar o conteúdo, não importando o tamanho.
 
-<h2 id="A_receita">A receita</h2>
+## A receita
 
-<p>{{EmbedGHLiveSample("css-examples/css-cookbook/media-objects.html", '100%', 1200)}}</p>
+{{EmbedGHLiveSample("css-examples/css-cookbook/media-objects.html", '100%', 1200)}}
 
-<div class="note">
-<p><a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects--download.html">Download this example</a></p>
-</div>
+> **Note:** [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects--download.html)
 
-<h2 id="Escolhas_feitas">Escolhas feitas</h2>
+## Escolhas feitas
 
-<p>Eu escolhi usar o <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">Layout de Grade </a>para o Media Object (Objeto de Layout), pois ele permite controlar o layout em duas dimensões quando preciso. Isso significa que, quando temos um rodapé, com conteúdo curto acima, o rodapé pode ser empurrado para a parte inferior do Media Object (Objeto de Layout).</p>
+Eu escolhi usar o [Layout de Grade ](/pt-BR/docs/Web/CSS/CSS_Grid_Layout)para o Media Object (Objeto de Layout), pois ele permite controlar o layout em duas dimensões quando preciso. Isso significa que, quando temos um rodapé, com conteúdo curto acima, o rodapé pode ser empurrado para a parte inferior do Media Object (Objeto de Layout).
 
-<p>Outro motivo para usar o Layout de Gride é para que eu possa usar {{cssxref("fit-content")}} para o tamanho da faixa de imagem. Usando <code>fit-content</code> com um tamanho máximo de 200 pixels, quando temos uma imagem pequena como o ícone, a faixa fica tão grande quanto o tamanho dessa imagem — o tamanho <code>max-content</code>. Se a imagem for maior, a faixa para de crescer em 200 pixels e, como a imagem possui {{cssxref("max-width ")}} de 100% aplicado, ele diminui para que continue a caber dentro da coluna.</p>
+Outro motivo para usar o Layout de Gride é para que eu possa usar {{cssxref("fit-content")}} para o tamanho da faixa de imagem. Usando `fit-content` com um tamanho máximo de 200 pixels, quando temos uma imagem pequena como o ícone, a faixa fica tão grande quanto o tamanho dessa imagem — o tamanho `max-content`. Se a imagem for maior, a faixa para de crescer em 200 pixels e, como a imagem possui {{cssxref("max-width ")}} de 100% aplicado, ele diminui para que continue a caber dentro da coluna.
 
-<p>Usando {{cssxref("grid-template-areas")}} para alcançar o layout, eu posso ver o padrão no CSS. Eu defino minha grade quando tivermos uma largura máxima de 500 pixels, em dispositivos menores o Media Object empilha.</p>
+Usando {{cssxref("grid-template-areas")}} para alcançar o layout, eu posso ver o padrão no CSS. Eu defino minha grade quando tivermos uma largura máxima de 500 pixels, em dispositivos menores o Media Object empilha.
 
-<p>Uma opção para o padrão é girá-lo para mudar a imagem para o outro lado — isso é feito adicionando a classe <code>media-flip</code>, que define um modelo de grade invertida, fazendo com que o layout seja espelhado.</p>
+Uma opção para o padrão é girá-lo para mudar a imagem para o outro lado — isso é feito adicionando a classe `media-flip`, que define um modelo de grade invertida, fazendo com que o layout seja espelhado.
 
-<p>Quando aninhamos um media object (Objeto de Layout) dentro do outro, precisamons colocá-lo na segunda faixa no layout regular, e na primeira faixa quando invertida.</p>
+Quando aninhamos um media object (Objeto de Layout) dentro do outro, precisamons colocá-lo na segunda faixa no layout regular, e na primeira faixa quando invertida.
 
-<h2 id="Fallbacks_Alternativas_Plano_B">Fallbacks (Alternativas, Plano B)</h2>
+## Fallbacks (Alternativas, Plano B)
 
-<p>Existem várias alternativas possíveis para esse padrão, dependendo dos navegadores que você deseja oferecer suporte. Um bom exemplo seria flutuar a imagem para a esquerda e adicionar uma correção clara à caixa para garantir que ela contivesse as flutuações.</p>
+Existem várias alternativas possíveis para esse padrão, dependendo dos navegadores que você deseja oferecer suporte. Um bom exemplo seria flutuar a imagem para a esquerda e adicionar uma correção clara à caixa para garantir que ela contivesse as flutuações.
 
-<p>{{EmbedGHLiveSample("css-examples/css-cookbook/media-objects-fallback.html", '100%', 1200)}}</p>
+{{EmbedGHLiveSample("css-examples/css-cookbook/media-objects-fallback.html", '100%', 1200)}}
 
-<div class="note">
-<p><a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects-fallback--download.html">Baixe este exemplo</a></p>
-</div>
+> **Note:** [Baixe este exemplo](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects-fallback--download.html)
 
-<p>Depois que os elementos flutuantes se tornam itens da grade, o flutuador não se aplica mais; portanto, você não precisa fazer nada de especial para limpá-lo.</p>
+Depois que os elementos flutuantes se tornam itens da grade, o flutuador não se aplica mais; portanto, você não precisa fazer nada de especial para limpá-lo.
 
-<p>O que você precisará fazer é remover as margens aplicadas ao item e as larguras que não precisamos em um contexto de grade (nós temos o {{cssxref("gap")}} propriedade para controlá-lo em grades, e a faixa assume o controle do dimensionamento).</p>
+O que você precisará fazer é remover as margens aplicadas ao item e as larguras que não precisamos em um contexto de grade (nós temos o {{cssxref("gap")}} propriedade para controlá-lo em grades, e a faixa assume o controle do dimensionamento).
 
-<h2 id="Recursos_relevantes_no_MDN">Recursos relevantes no MDN</h2>
+## Recursos relevantes no MDN
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">Layout Grade CSS </a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">Aprimoramento progressivo e Layout de Grid</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Usando áreas de modelo de Grade</a></li>
- <li><a href="/en-US/docs/Web/CSS/fit-content">Conteúdo Adequado</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Áreas de Modelo de Grade</a></li>
-</ul>
+- [Layout Grade CSS](/pt-BR/docs/Web/CSS/CSS_Grid_Layout)
+- [Aprimoramento progressivo e Layout de Grid](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+- [Usando áreas de modelo de Grade](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+- [Conteúdo Adequado](/pt-BR/docs/Web/CSS/fit-content)
+- [Áreas de Modelo de Grade](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>Os vários métodos de layout tem suporte diferente para os navegadores. Veja os gráficos abaixo para obter detalhes sobre o suporte básico para as propriedades usadas.</p>
+Os vários métodos de layout tem suporte diferente para os navegadores. Veja os gráficos abaixo para obter detalhes sobre o suporte básico para as propriedades usadas.
 
-<h4 id="Áreas_de_Modelo_de_Grade">Áreas de Modelo de Grade</h4>
+#### Áreas de Modelo de Grade
 
-<p>{{Compat("css.properties.grid-template-areas")}}</p>
+{{Compat("css.properties.grid-template-areas")}}
 
-<h4 id="Flutuador">Flutuador</h4>
+#### Flutuador
 
-<p>{{Compat("css.properties.float")}}</p>
+{{Compat("css.properties.float")}}

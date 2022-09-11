@@ -11,19 +11,18 @@ tags:
   - Referencia
 translation_of: Web/CSS/offset
 ---
-<div>{{SeeCompatTable}}{{CSSRef}}</div>
+{{SeeCompatTable}}{{CSSRef}}
 
-<p>A propriedade CSS <strong><code>offset</code></strong> é uma propriedade abreviada para animar um elemento ao longo de um caminho definido.</p>
+A propriedade CSS **`offset`** é uma propriedade abreviada para animar um elemento ao longo de um caminho definido.
 
-<div class="note">
-<p>As primeiras versões da especificação chamam essa propriedade de <code>motion</code>.</p>
-</div>
+> **Note:** As primeiras versões da especificação chamam essa propriedade de `motion`.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush: css">/* Posição do offset */
+```css
+/* Posição do offset */
 offset: auto
 offset: 10px 30px;
 offset: none;
@@ -43,22 +42,24 @@ offset: url(circle.svg) 50px 20deg;
 offset: ray(45deg closest-side) / 40px 20px;
 offset: url(arc.svg) 2cm / 0.5cm 3cm;
 offset: url(arc.svg) 30deg / 50px 100px;
-</pre>
+```
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="offsetElement"&gt;&lt;/div&gt;
-</pre>
+```html
+<div id="offsetElement"></div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">@keyframes move {
+```css
+@keyframes move {
   from {
     offset-distance: 0%;
   }
@@ -75,29 +76,18 @@ offset: url(arc.svg) 30deg / 50px 100px;
   offset: path("M 100 100 L 300 100 L 200 300 z") auto;
   animation: move 3s linear infinite;
 }
-</pre>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample("Example", 350, 350)}}</p>
+{{EmbedLiveSample("Example", 350, 350)}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Especificação</th>
-   <th>Status</th>
-   <th>Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Motion Path Level 1', '#offset-shorthand', 'offset')}}</td>
-   <td>{{Spec2('Motion Path Level 1')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                            | Status                                       | Comentário        |
+| ---------------------------------------------------------------------------------------- | -------------------------------------------- | ----------------- |
+| {{SpecName('Motion Path Level 1', '#offset-shorthand', 'offset')}} | {{Spec2('Motion Path Level 1')}} | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.properties.offset")}}

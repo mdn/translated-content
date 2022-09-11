@@ -13,67 +13,69 @@ tags:
 translation_of: Web/CSS/env()
 original_slug: Web/CSS/env()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A função <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>env()</code></strong> pode ser usada para inserir o valor de uma variável de ambiente definida pelo agente do usuário em seu CSS, de uma maneira semelhante à função {{cssxref("var")}} e <a href="/pt-BR/docs/Web/CSS/--*">propriedades personalizadas</a>. A diferença é que, além de serem definidas pelo agente do usuário em vez de serem definidas pelo usuário, as variáveis de ambiente têm escopo global para um documento, enquanto as propriedades personalizadas têm um escopo para o(s) elemento(s) no(s) qual(is) é/são declarado(s).</p>
+A função [CSS](/pt-BR/docs/Web/CSS) **`env()`** pode ser usada para inserir o valor de uma variável de ambiente definida pelo agente do usuário em seu CSS, de uma maneira semelhante à função {{cssxref("var")}} e [propriedades personalizadas](/pt-BR/docs/Web/CSS/--*). A diferença é que, além de serem definidas pelo agente do usuário em vez de serem definidas pelo usuário, as variáveis de ambiente têm escopo global para um documento, enquanto as propriedades personalizadas têm um escopo para o(s) elemento(s) no(s) qual(is) é/são declarado(s).
 
-<pre class="brush: css">body {
+```css
+body {
   padding:
     env(safe-area-inset-top, 20px)
     env(safe-area-inset-right, 20px)
     env(safe-area-inset-bottom, 20px)
     env(safe-area-inset-left, 20px);
-}</pre>
+}
+```
 
-<p>Além disso, ao contrário das propriedades personalizadas, que não podem ser usadas fora do escopo das declarações, a função <code>env()</code> pode ser usada em qualquer parte do valor de uma propriedade ou em qualquer parte de um <em>descriptor</em> (por exemplo, regras <a href="/pt-BR/docs/Web/CSS/@media">Media</a>). À medida que a especificação evolui, essa também pode ser usada em outros lugares, como em seletores.</p>
+Além disso, ao contrário das propriedades personalizadas, que não podem ser usadas fora do escopo das declarações, a função `env()` pode ser usada em qualquer parte do valor de uma propriedade ou em qualquer parte de um _descriptor_ (por exemplo, regras [Media](/pt-BR/docs/Web/CSS/@media)). À medida que a especificação evolui, essa também pode ser usada em outros lugares, como em seletores.
 
-<p>Originalmente fornecido pelo navegador iOS para permitir que os desenvolvedores coloquem seu conteúdo em uma <em>safe area</em> (área segura) na janela de visualização, os valores de <code>safe-area-inset-*</code> definidos na especificação podem ser usados para ajudar a garantir que o conteúdo seja visível até mesmo para usuários que usam uma tela não retangular.</p>
+Originalmente fornecido pelo navegador iOS para permitir que os desenvolvedores coloquem seu conteúdo em uma _safe area_ (área segura) na janela de visualização, os valores de `safe-area-inset-*` definidos na especificação podem ser usados para ajudar a garantir que o conteúdo seja visível até mesmo para usuários que usam uma tela não retangular.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush: css">/* Usando os quatro valores de inserção <em>safe area</em> sem valores de <em>fallback </em>*/
+```css
+/* Usando os quatro valores de inserção safe area sem valores de fallback */
 env(safe-area-inset-top);
 env(safe-area-inset-right);
 env(safe-area-inset-bottom);
 env(safe-area-inset-left);
 
-/* Usando-os com valores de <em>fallback</em> */
+/* Usando-os com valores de fallback */
 env(safe-area-inset-top, 20px);
 env(safe-area-inset-right, 1em);
 env(safe-area-inset-bottom, 0.5vh);
 env(safe-area-inset-left, 1.4rem);
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code id="safe-area-inset-top" style="white-space: nowrap;">safe-area-inset-top</code>, <code id="safe-area-inset-right" style="white-space: nowrap;">safe-area-inset-right</code>, <code id="safe-area-inset-bottom" style="white-space: nowrap;">safe-area-inset-bottom</code>, <code id="safe-area-inset-left" style="white-space: nowrap;">safe-area-inset-left</code></dt>
- <dd>As variáveis <code>safe-area-inset-*</code> são quatro variáveis de ambiente que definem um retângulo por seus valores de inserção: <em>top, right, bottom</em> e <em>left </em>a partir da borda da janela de visualização, no qual é seguro colocar o conteúdo sem o risco de ser cortado pela forma de um visor não retangular. Para janelas de visualização retangulares, como o monitor de um laptop comum, seu valor é igual a zero. Para telas não retangulares - como um visor de um relógio redondo - os quatro valores definidos pelo agente do usuário formam um retângulo de modo que todo o conteúdo dentro do retângulo seja visível.</dd>
-</dl>
+- `safe-area-inset-top`, `safe-area-inset-right`, `safe-area-inset-bottom`, `safe-area-inset-left`
+  - : As variáveis `safe-area-inset-*` são quatro variáveis de ambiente que definem um retângulo por seus valores de inserção: _top, right, bottom_ e _left_ a partir da borda da janela de visualização, no qual é seguro colocar o conteúdo sem o risco de ser cortado pela forma de um visor não retangular. Para janelas de visualização retangulares, como o monitor de um laptop comum, seu valor é igual a zero. Para telas não retangulares - como um visor de um relógio redondo - os quatro valores definidos pelo agente do usuário formam um retângulo de modo que todo o conteúdo dentro do retângulo seja visível.
 
-<div class="blockIndicator note">
-<p><strong>Nota</strong>: Ao contrário de outras propriedades CSS, os nomes de propriedades definidos pelo agente do usuário fazem distinção entre maiúsculas e minúsculas.</p>
-</div>
+> **Note:** **Nota**: Ao contrário de outras propriedades CSS, os nomes de propriedades definidos pelo agente do usuário fazem distinção entre maiúsculas e minúsculas.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+### Sintaxe formal
 
 {{cssSyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>O exemplo abaixo faz uso do segundo parâmetro opcional de <code>env()</code>, que permite fornecer um valor de <em>fallback </em>caso a variável de ambiente não esteja disponível.</p>
+O exemplo abaixo faz uso do segundo parâmetro opcional de `env()`, que permite fornecer um valor de _fallback_ caso a variável de ambiente não esteja disponível.
 
-<pre class="brush: html">&lt;p&gt;
- Se a função &lt;code&gt;env()&lt;/code&gt; é suportada em seu navegador,
- o texto deste parágrafo deverá estar na borda &lt;i&gt;top&lt;/i&gt;, &lt;i&gt;right&lt;/i&gt; e &lt;i&gt;bottom&lt;/i&gt;,
+```html
+<p>
+ Se a função <code>env()</code> é suportada em seu navegador,
+ o texto deste parágrafo deverá estar na borda <i>top</i>, <i>right</i> e <i>bottom</i>,
  ter 50px de preenchimento entre a borda e o texto. O CSS é equivalente
- ao preenchimento: &lt;code&gt;padding: 0 0 0 50px&lt;/code&gt;,
+ ao preenchimento: <code>padding: 0 0 0 50px</code>,
  porque, ao contrário de outras propriedades CSS, os nomes de
  propriedades do agente do usuário diferenciam letras maiúsculas de
  minúsculas.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<pre class="brush: css">p {
+```css
+p {
   width: 300px;
   border: 2px solid red;
   padding:
@@ -81,53 +83,38 @@ env(safe-area-inset-left, 1.4rem);
     env(safe-area-inset-right, 50px)
     env(safe-area-inset-bottom, 50px)
     env(SAFE-AREA-INSET-LEFT, 50px);
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Exemplos")}}</p>
+{{EmbedLiveSample("Exemplos")}}
 
-<h3 id="Exemplo_com_valores">Exemplo com valores</h3>
+### Exemplo com valores
 
-<pre class="brush: css">padding: env(safe-area-inset-bottom, 50px); /* zero para todos agentes do usuário que são retangulares*/
+```css
+padding: env(safe-area-inset-bottom, 50px); /* zero para todos agentes do usuário que são retangulares*/
 padding: env(Safe-area-inset-bottom, 50px); /* 50px porque as propriedades do agente do usuário diferenciam maiúsculas de minúsculas */
 padding: env(x, 50px 20px); /* como se estivesse preenchendo: '50px 20px' que foram definidos, porque x não é uma variável de ambiente válida */
 padding: env(x, 50px, 20px); /* ignorado '50px, 20px' porque não é um valor de preenchimento válido e x não é uma variável de ambiente válida */
-</pre>
+```
 
-<p>A sintaxe <em>fallback</em>, como de propriedades customizadas, permite vírgulas. Mas se o valor da propriedade não suportar vírgulas, o valor não é válido.</p>
+A sintaxe _fallback_, como de propriedades customizadas, permite vírgulas. Mas se o valor da propriedade não suportar vírgulas, o valor não é válido.
 
-<div class="blockIndicator note">
-<p><strong>Nota</strong>: As propriedades do agente do usuário não são redefinidas pela propriedade <a href="/en-US/docs/Web/CSS/all">all</a>.</p>
-</div>
+> **Note:** **Nota**: As propriedades do agente do usuário não são redefinidas pela propriedade [all](/pt-BR/docs/Web/CSS/all).
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Environment Variables", "#env-function", "env()")}}</td>
-   <td>{{Spec2("CSS3 Environment Variables")}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Status                                               | Comentário         |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ------------------ |
+| {{SpecName("CSS3 Environment Variables", "#env-function", "env()")}} | {{Spec2("CSS3 Environment Variables")}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("css.properties.custom-property.env")}}</p>
+{{Compat("css.properties.custom-property.env")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{CSSxRef("var", "var(…)")}}</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Variables">CSS Custom Properties for Cascading Variables</a></li>
- <li><a href="/en-US/docs/Web/CSS/--*">Custom Properties (--*)</a></li>
- <li><a href="/en-US/docs/Web/CSS/Using_CSS_variables">Using CSS custom properties (variables)</a></li>
- <li>{{CSSxRef("@viewport/viewport-fit", "viewport-fit (@viewport)")}}</li>
-</ul>
+- {{CSSxRef("var", "var(…)")}}
+- [CSS Custom Properties for Cascading Variables](/pt-BR/docs/Web/CSS/CSS_Variables)
+- [Custom Properties (--\*)](/pt-BR/docs/Web/CSS/--*)
+- [Using CSS custom properties (variables)](/pt-BR/docs/Web/CSS/Using_CSS_variables)
+- {{CSSxRef("@viewport/viewport-fit", "viewport-fit (@viewport)")}}

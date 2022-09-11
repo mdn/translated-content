@@ -1,108 +1,90 @@
 ---
 title: ':hover'
-slug: 'Web/CSS/:hover'
-translation_of: 'Web/CSS/:hover'
+slug: Web/CSS/:hover
+translation_of: Web/CSS/:hover
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>A <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <code>:hover</code> corresponde quando o usuário designa um elemento com um dispositivo apontador, mas não necessariamente o ativa. Este estilo pode ser substituído por qualquer outra pseudo-classe de  link-relacionados, isto é  {{ cssxref(":link") }}, {{ cssxref(":visited") }}, e {{ cssxref(":active") }}, aparecendo em regras subsequentes. Na ordem para estilizar apropriadamente links, você precisa colocar a regra<code> :hover </code>depois das regras <code>:link</code> e <code>:visited</code> mas antes da regra <code>:active</code>, como definido pela ordem <em>LVHA</em>: <code> :link — :visited — :hover — :active.</code></p>
+A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) `:hover` corresponde quando o usuário designa um elemento com um dispositivo apontador, mas não necessariamente o ativa. Este estilo pode ser substituído por qualquer outra pseudo-classe de link-relacionados, isto é {{ cssxref(":link") }}, {{ cssxref(":visited") }}, e {{ cssxref(":active") }}, aparecendo em regras subsequentes. Na ordem para estilizar apropriadamente links, você precisa colocar a regra` :hover `depois das regras `:link` e `:visited` mas antes da regra `:active`, como definido pela ordem _LVHA_: `:link — :visited — :hover — :active.`
 
-<p>A pseudo-class <code>:hover</code> pode ser aplicada a qualquer <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elemento.</a> {{experimental_inline}}.</p>
+A pseudo-class `:hover` pode ser aplicada a qualquer [pseudo-elemento.](/pt-BR/docs/Web/CSS/Pseudo-elements) {{experimental_inline}}.
 
-<p>User agents visuais como Firefox, Internet Explorer, Safari, Opera ou Chrome, aplicam o estilo associado quando o cursor(mouse pointer) passa sobre um elemento.</p>
+User agents visuais como Firefox, Internet Explorer, Safari, Opera ou Chrome, aplicam o estilo associado quando o cursor(mouse pointer) passa sobre um elemento.
 
-<div class="note"><strong>Nota de uso: </strong>em telas de toque (touch screens) :hover é impossível ou problemático. Dependendo do navegador a pseudo-classe :hover pode nunca funcionar, ou funcionar apenas por um curto momento depois de “tocar” um elemento, ou podem continuar a funcionar mesmo depois que o usuário pare de “tocar” o elemento até que o usuário toque outro elemento. Como dispositivos touchscreen são comuns, é importante para desenvolvedores web não terem conteúdos acessíveis apenas quando passamos sobre ele, uma vez que esse conteúdo é mais complicado ou impossível de acessar para usuários desses dispositivos.</div>
+> **Note:** **Nota de uso:** em telas de toque (touch screens) :hover é impossível ou problemático. Dependendo do navegador a pseudo-classe :hover pode nunca funcionar, ou funcionar apenas por um curto momento depois de “tocar” um elemento, ou podem continuar a funcionar mesmo depois que o usuário pare de “tocar” o elemento até que o usuário toque outro elemento. Como dispositivos touchscreen são comuns, é importante para desenvolvedores web não terem conteúdos acessíveis apenas quando passamos sobre ele, uma vez que esse conteúdo é mais complicado ou impossível de acessar para usuários desses dispositivos.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: css">:link:hover { outline: dotted red; }
+```css
+:link:hover { outline: dotted red; }
 
 .foo:hover { background: gold; }
-</pre>
+```
 
-<h3 id="Menu_dropdown">Menu dropdown</h3>
+### Menu dropdown
 
-<p>Com a pseudo-classe<code> :hover </code>você pode criar algoritmos complexos de cascata. Esta é uma técnica comumente usada, por exemplo, para criar <strong>menus dropdown com CSS</strong> puro (apenas utilizando CSS, sem usar <a href="/pt-Br/JavaScript">JavaScript</a>). A essência desta técnica é criação de uma regra como a seguinte:</p>
+Com a pseudo-classe` :hover `você pode criar algoritmos complexos de cascata. Esta é uma técnica comumente usada, por exemplo, para criar **menus dropdown com CSS** puro (apenas utilizando CSS, sem usar [JavaScript](/pt-Br/JavaScript)). A essência desta técnica é criação de uma regra como a seguinte:
 
-<pre class="brush: css">div.menu-bar ul ul {
+```css
+div.menu-bar ul ul {
   display: none;
 }
 
-div.menu-bar li:hover &gt; ul {
+div.menu-bar li:hover > ul {
   display: block;
 }
-</pre>
+```
 
-<p>para ser aplicada a uma estrutura HTML como a seguinte:</p>
+para ser aplicada a uma estrutura HTML como a seguinte:
 
-<pre class="brush: html">&lt;div class="menu-bar"&gt;
-  &lt;ul&gt;
-    &lt;li&gt;
-      &lt;a href="example.html"&gt;Menu&lt;/a&gt;
-      &lt;ul&gt;
-        &lt;li&gt;
-          &lt;a href="example.html"&gt;Link&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;a class="menu-nav" href="example.html"&gt;Submenu&lt;/a&gt;
-          &lt;ul&gt;
-            &lt;li&gt;
-              &lt;a class="menu-nav" href="example.html"&gt;Submenu&lt;/a&gt;
-              &lt;ul&gt;
-                &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
-              &lt;/ul&gt;
-            &lt;/li&gt;
-            &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="menu-bar">
+  <ul>
+    <li>
+      <a href="example.html">Menu</a>
+      <ul>
+        <li>
+          <a href="example.html">Link</a>
+        </li>
+        <li>
+          <a class="menu-nav" href="example.html">Submenu</a>
+          <ul>
+            <li>
+              <a class="menu-nav" href="example.html">Submenu</a>
+              <ul>
+                <li><a href="example.html">Link</a></li>
+                <li><a href="example.html">Link</a></li>
+                <li><a href="example.html">Link</a></li>
+                <li><a href="example.html">Link</a></li>
+              </ul>
+            </li>
+            <li><a href="example.html">Link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+```
 
-<p>Veja nosso <a href="/@api/deki/files/6238/=css_dropdown_menu.html">exemplo de menu dropdown baseado em CSS</a> para entender melhor.</p>
+Veja nosso [exemplo de menu dropdown baseado em CSS](/@api/deki/files/6238/=css_dropdown_menu.html) para entender melhor.
 
-<h3 id="Galeria_com_imagens_full-size_e_previews">Galeria com imagens full-size e previews</h3>
+### Galeria com imagens full-size e previews
 
-<p>Você pode usar a pseudo-classe <code>:hover</code> para construir uma galeria de imagem, exibindo imagens full-size apenas quando o mouse passa sobre as imagens. Veja <a href="/@api/deki/files/6247/=css-gallery.zip">esse exemplo</a> para uma possível dica.</p>
+Você pode usar a pseudo-classe `:hover` para construir uma galeria de imagem, exibindo imagens full-size apenas quando o mouse passa sobre as imagens. Veja [esse exemplo](/@api/deki/files/6247/=css-gallery.zip) para uma possível dica.
 
-<div class="note"><strong>Note: </strong>Para efeitos análogos, mas baseado na pseudo-classe <code><a href="/en/CSS/%3Achecked">:checked</a></code> (aplicada para esconder radioboxes), veja <a href="/@api/deki/files/6268/=css-checked-gallery.zip">esse demo</a>, tirado desta página <a href="/en/CSS/%3Achecked">En/CSS/:checked.</a></div>
+> **Note:**Para efeitos análogos, mas baseado na pseudo-classe [`:checked`](/en/CSS/%3Achecked) (aplicada para esconder radioboxes), veja [esse demo](/@api/deki/files/6268/=css-checked-gallery.zip), tirado desta página [En/CSS/:checked.](/en/CSS/%3Achecked)
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS4 Selectors', '#hover', ':hover') }}</td>
-   <td>{{ Spec2('CSS4 Selectors') }}</td>
-   <td>Pode ser aplicado a qualquer pseudo-elemento.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Selectors', '#the-user-action-pseudo-classes-hover-act', ':hover') }}</td>
-   <td>{{ Spec2('CSS3 Selectors') }}</td>
-   <td>Sem mudança significativa.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':hover') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td>definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                        | Status                                   | Comentário                                    |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------- |
+| {{ SpecName('CSS4 Selectors', '#hover', ':hover') }}                                                 | {{ Spec2('CSS4 Selectors') }} | Pode ser aplicado a qualquer pseudo-elemento. |
+| {{ SpecName('CSS3 Selectors', '#the-user-action-pseudo-classes-hover-act', ':hover') }} | {{ Spec2('CSS3 Selectors') }} | Sem mudança significativa.                    |
+| {{ SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':hover') }}                 | {{ Spec2('CSS2.1') }}             | definição inicial.                            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.selectors.hover")}}

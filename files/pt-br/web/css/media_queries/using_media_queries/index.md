@@ -8,18 +8,19 @@ tags:
 translation_of: Web/CSS/Media_Queries/Using_media_queries
 original_slug: Web/Guide/CSS/CSS_Media_queries
 ---
-<p>Uma <strong>media query</strong> consiste de um <em>media type </em>e pelo menos uma expressão que limita o escopo das folhas de estilo usando <em>media features</em>, tal como largura, altura e cor. <em>Media queries</em>, adicionadas no <a href="/en-US/docs/CSS/CSS3" title="/en-US/docs/CSS/CSS3">CSS3</a>, deixam a apresentação do conteúdo adaptado a uma gama especifica de dispositivos não precisando mudar o conteúdo em si.</p>
+Uma **media query** consiste de um _media type_ e pelo menos uma expressão que limita o escopo das folhas de estilo usando _media features_, tal como largura, altura e cor. _Media queries_, adicionadas no [CSS3](/pt-BR/docs/CSS/CSS3), deixam a apresentação do conteúdo adaptado a uma gama especifica de dispositivos não precisando mudar o conteúdo em si.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<p><em>Media queries</em> consistem de um <em><a href="en-US/docs/Web/CSS/@media">media type</a></em> e podem, a partir de uma especificação CSS3, contendo uma ou mais expressões, expressa em <em>media features</em>, que determinam ou verdadeiro ou falso. Os resultados da <em>query</em> são verdadeiros se o <em>media type</em> especificado na <em>media query</em> corresponde ao tipo do documento exibido no dispositivo e todas as expressões na <em>media query</em> são verdadeiras.</p>
+_Media queries_ consistem de um _[media type](en-US/docs/Web/CSS/@media)_ e podem, a partir de uma especificação CSS3, contendo uma ou mais expressões, expressa em _media features_, que determinam ou verdadeiro ou falso. Os resultados da _query_ são verdadeiros se o _media type_ especificado na _media query_ corresponde ao tipo do documento exibido no dispositivo e todas as expressões na _media query_ são verdadeiras.
 
-<pre class="brush: html">&lt;!-- CSS media query em um elemento de link --&gt;
-&lt;link rel="stylesheet" media="(max-width: 800px)" href="example.css" /&gt;
+```html
+<!-- CSS media query em um elemento de link -->
+<link rel="stylesheet" media="(max-width: 800px)" href="example.css" />
 
-&lt;!-- CSS media query dentro de um stylesheet --&gt;
+<!-- CSS media query dentro de um stylesheet -->
 
-&lt;style&gt;
+<style>
 @media (max-width: 600px)
 {
   .facet_sidebar
@@ -27,82 +28,100 @@ original_slug: Web/Guide/CSS/CSS_Media_queries
     display: none;
    }
 }
-&lt;/style&gt;</pre>
+</style>
+```
 
-<p>Quando uma <em>media query</em> é verdadeira, a camada de estilo ou as regras de estilos correspondentes são aplicadas, seguindo o padrão de regras de cascatas. Camadas de estilos com <em>media queries</em> ligadas a tag &lt;link&gt; <a href="http://scottjehl.github.com/CSS-Download-Tests/">vão fazer download</a> mesmo se suas <em>medias queries</em> retornarem falso (eles não se aplicam, no entanto).</p>
+Quando uma _media query_ é verdadeira, a camada de estilo ou as regras de estilos correspondentes são aplicadas, seguindo o padrão de regras de cascatas. Camadas de estilos com _media queries_ ligadas a tag \<link> [vão fazer download](http://scottjehl.github.com/CSS-Download-Tests/) mesmo se suas _medias queries_ retornarem falso (eles não se aplicam, no entanto).
 
-<p>A menos que você use os operadores <code>not</code> ou <code>only</code>, o <em>media type</em> é opcional e o tipo <code>all</code> será implícito.</p>
+A menos que você use os operadores `not` ou `only`, o _media type_ é opcional e o tipo `all` será implícito.
 
-<h3 id="Operadores_lógicos">Operadores lógicos</h3>
+### Operadores lógicos
 
-<p>Você pode compor <em>media queries</em> complexos usando operadores lógicos, incluindo <code>not</code>, <code>and</code>, e <code>only</code>. O operador <code>and</code> é usado para combinar múltiplas <em><a href="https://developer.mozilla.org/pt-BR/docs/Web/Guide/CSS/CSS_Media_queries$edit#Media_features">media features</a></em> em uma mesma <em>media query</em>, requerendo que cada sequência de características, retorne verdadeiro na ordem para que a <em>query</em> seja verdadeiro. O operador <code>not</code> é usado para negar uma <em>media query</em> inteira. O operador <code>only</code> é usado para aplicar um estilo apenas se a <em>query</em> inteira for igual, útil para previnir que navegadores antigos apliquem os estilos selecionados. Se você usar os operadores <code>not</code> ou <code>only</code>, você tem que especificar um tipo de <em>media</em> explícito.</p>
+Você pode compor _media queries_ complexos usando operadores lógicos, incluindo `not`, `and`, e `only`. O operador `and` é usado para combinar múltiplas _[media features](/pt-BR/docs/Web/Guide/CSS/CSS_Media_queries$edit#Media_features)_ em uma mesma _media query_, requerendo que cada sequência de características, retorne verdadeiro na ordem para que a _query_ seja verdadeiro. O operador `not` é usado para negar uma _media query_ inteira. O operador `only` é usado para aplicar um estilo apenas se a _query_ inteira for igual, útil para previnir que navegadores antigos apliquem os estilos selecionados. Se você usar os operadores `not` ou `only`, você tem que especificar um tipo de _media_ explícito.
 
-<p>Você também pode combinar múltiplas <em>medias queries</em> em uma  lista separadas por vírgulas, se qualquer uma das <em>media queries</em> na lista é verdadeira, toda a instrução retorna verdadeira. Isto é equivalente a um operador <code>or</code>.</p>
+Você também pode combinar múltiplas _medias queries_ em uma lista separadas por vírgulas, se qualquer uma das _media queries_ na lista é verdadeira, toda a instrução retorna verdadeira. Isto é equivalente a um operador `or`.
 
-<h4 id="and"><strong>and</strong></h4>
+#### and
 
-<p>A palavra-chave <code>and</code> é usada para combinar múltiplas <em>media features</em>, bem como combinar <em>media features</em> com <em>media types</em>. Uma <em>media query</em> básica, uma<em> media feature</em> simples com a <em>media type</em> <code>all</code>, pode parecer com isso:</p>
+A palavra-chave `and` é usada para combinar múltiplas _media features_, bem como combinar _media features_ com _media types_. Uma _media query_ básica, uma _media feature_ simples com a _media type_ `all`, pode parecer com isso:
 
-<pre class="brush: css">@media (min-width: 700px) { ... }</pre>
+```css
+@media (min-width: 700px) { ... }
+```
 
-<p>Se, no entanto, você desejar que isso se aplique apenas para telas em landscape, você pode usar o operador <code>and</code> para deixar todas as <em>media features</em> juntas.</p>
+Se, no entanto, você desejar que isso se aplique apenas para telas em landscape, você pode usar o operador `and` para deixar todas as _media features_ juntas.
 
-<pre class="brush: css">@media (min-width: 700px) and (orientation: landscape) { ... }</pre>
+```css
+@media (min-width: 700px) and (orientation: landscape) { ... }
+```
 
-<p>Agora, a <em>media query</em> acima vai apenas retorna verdadeira se o viewport for 700px, <em>wide</em> ou <em>wider</em> e a tela estiver em <em>landscape</em>. Se, no entanto, você deseja apenas que isso seja aplicado se a tela em questão for <em>media type</em> TV, você pode encadear essas <em>features</em> com a <em>media type</em> usando o operador <code>and</code>.</p>
+Agora, a _media query_ acima vai apenas retorna verdadeira se o viewport for 700px, _wide_ ou _wider_ e a tela estiver em _landscape_. Se, no entanto, você deseja apenas que isso seja aplicado se a tela em questão for _media type_ TV, você pode encadear essas _features_ com a _media type_ usando o operador `and`.
 
-<pre class="brush: css">@media tv and (min-width: 700px) and (orientation: landscape) { ... }</pre>
+```css
+@media tv and (min-width: 700px) and (orientation: landscape) { ... }
+```
 
-<p>Agora, a <em>media query</em> acima vai ser aplicada apenas se a <em>media type</em> for TV, o <em>viewport</em> for 700px <em>wide</em> ou <em>wider</em>, e a tela estiver em paisagem.</p>
+Agora, a _media query_ acima vai ser aplicada apenas se a _media type_ for TV, o _viewport_ for 700px _wide_ ou _wider_, e a tela estiver em paisagem.
 
-<h4 id="Listas_separadas_por_vírgula">Listas separadas por vírgula</h4>
+#### Listas separadas por vírgula
 
-<p>Listas separadas por vírgulas comportam-se como o operador <code>or</code> quando utilizadas em <em>media queries</em>. Quando utilizamos <em>media queries</em> com uma lista separada por vírgulas, se qualquer <em>media queries</em> retornar verdadeiro, os estilos ou folhas de estilos serão aplicadas. Cada <em>media query</em> em um lista separa por vírgulas é tratada como uma <em>query</em> individual, e qualquer operador aplica em uma <em>media query</em> não afeta os outros. Isto significa que <em>media queries</em> separadas por vírgulas podem ter objetivos diferentes de <em>media</em> <em>features</em>, <em>types</em> e <em>states</em>.</p>
+Listas separadas por vírgulas comportam-se como o operador `or` quando utilizadas em _media queries_. Quando utilizamos _media queries_ com uma lista separada por vírgulas, se qualquer _media queries_ retornar verdadeiro, os estilos ou folhas de estilos serão aplicadas. Cada _media query_ em um lista separa por vírgulas é tratada como uma _query_ individual, e qualquer operador aplica em uma _media query_ não afeta os outros. Isto significa que _media queries_ separadas por vírgulas podem ter objetivos diferentes de _media_ _features_, _types_ e _states_.
 
-<p>Por exemplo, se você quiser aplicar um conjunto de estilos se o dispositivo de visualização tiver um largura mínima de 700px ou estiver sendo segurando em paisagem, você pode escrever o seguinte:</p>
+Por exemplo, se você quiser aplicar um conjunto de estilos se o dispositivo de visualização tiver um largura mínima de 700px ou estiver sendo segurando em paisagem, você pode escrever o seguinte:
 
-<pre class="brush: css">@media (min-width: 700px), handheld and (orientation: landscape) { ... }</pre>
+```css
+@media (min-width: 700px), handheld and (orientation: landscape) { ... }
+```
 
-<p>Acima, se eu estivesse em um dispositivo <code>screen</code> com um <em>viewport</em> largura de 800px, a afirmação retorna verdadeiro por que a primeira parte, interpretada como <code>@media all and (min-width: 700px)</code> será aplicada no meu dispositivo e portanto retorna verdadeiro, apesar do fato que meu dispositivo <code>screen</code> iria falhar no <em>media type</em> <code>handheld</code> na segunda <em>media query</em>. Do mesmo modo, se eu estivesse segurando um dispositivo em paisagem com um <em>viewport</em> de largura de 500px, enquanto a primeira media query falha devido a largura do <em>viewport</em>, a segunda <em>media query</em> teria sucesso e assim o <em>media statement</em> retorna verdadeiro.</p>
+Acima, se eu estivesse em um dispositivo `screen` com um _viewport_ largura de 800px, a afirmação retorna verdadeiro por que a primeira parte, interpretada como `@media all and (min-width: 700px)` será aplicada no meu dispositivo e portanto retorna verdadeiro, apesar do fato que meu dispositivo `screen` iria falhar no _media type_ `handheld` na segunda _media query_. Do mesmo modo, se eu estivesse segurando um dispositivo em paisagem com um _viewport_ de largura de 500px, enquanto a primeira media query falha devido a largura do _viewport_, a segunda _media query_ teria sucesso e assim o _media statement_ retorna verdadeiro.
 
-<h4 id="not">not</h4>
+#### not
 
-<p>A palavra chave <code>not</code> se aplica em toda a <em>media query</em> e retorna verdadeiro, caso contrário retorna falso (tal como monochrome como cor de tela ou uma tela de largura de 600px com um <code>min-width: 700px</code> recurso consultado). Um not vai apenas negar a <em>media query</em> que é aplicada, de modo não toda a <em>media query</em> que apresente uma <em>media querie</em> com uma lista separada por vírgulas. A palavra chave <code>not</code> não pode ser usada para negar uma característica individual da <em>query</em>, apenas uma <em>media query</em> inteira. Por exemplo, o <code>not</code> é avaliado por último na <em>query</em> seguinte:</p>
+A palavra chave `not` se aplica em toda a _media query_ e retorna verdadeiro, caso contrário retorna falso (tal como monochrome como cor de tela ou uma tela de largura de 600px com um `min-width: 700px` recurso consultado). Um not vai apenas negar a _media query_ que é aplicada, de modo não toda a _media query_ que apresente uma _media querie_ com uma lista separada por vírgulas. A palavra chave `not` não pode ser usada para negar uma característica individual da _query_, apenas uma _media query_ inteira. Por exemplo, o `not` é avaliado por último na _query_ seguinte:
 
-<pre class="brush: css" style="font-size: 14px;">@media not all and (monochrome) { ... }
-</pre>
+```css
+@media not all and (monochrome) { ... }
+```
 
-<p>Isto significa que a <em>query</em> é avaliada assim:</p>
+Isto significa que a _query_ é avaliada assim:
 
-<pre class="brush: css" style="font-size: 14px;">@media not (all and (monochrome)) { ... }
-</pre>
+```css
+@media not (all and (monochrome)) { ... }
+```
 
-<p>... em vez disso:</p>
+... em vez disso:
 
-<pre class="brush: css" style="font-size: 14px;">@media (not all) and (monochrome) { ... }</pre>
+```css
+@media (not all) and (monochrome) { ... }
+```
 
-<p>Um outro exemplo, veja a <em>media query</em> seguinte:</p>
+Um outro exemplo, veja a _media query_ seguinte:
 
-<pre class="brush: css" style="font-size: 14px;">@media not screen and (color), print and (color)
-</pre>
+```css
+@media not screen and (color), print and (color)
+```
 
-<p>É avalida desta forma:</p>
+É avalida desta forma:
 
-<pre class="brush: css" style="font-size: 14px;">@media (not (screen and (color))), print and (color)</pre>
+```css
+@media (not (screen and (color))), print and (color)
+```
 
-<h4 id="only">only</h4>
+#### only
 
-<p>A palavra chave <em><code style="font-size: 14px;">only</code></em> previne que navegadores antigos que não suportam media queries com media features de aplicar os estilos dados:</p>
+A palavra chave _`only`_ previne que navegadores antigos que não suportam media queries com media features de aplicar os estilos dados:
 
-<pre class="brush: html">&lt;link rel="stylesheet" media="only screen and (color)" href="example.css" /&gt;
-</pre>
+```html
+<link rel="stylesheet" media="only screen and (color)" href="example.css" />
+```
 
-<h3 id="Pseudo-BNF">Pseudo-BNF</h3>
+### Pseudo-BNF
 
-<pre>media_query_list: &lt;media_query&gt; [, &lt;media_query&gt; ]*
-media_query: [[only | not]? &lt;media_type&gt; [ and &lt;expression&gt; ]*]
-  | &lt;expression&gt; [ and &lt;expression&gt; ]*
-expression: ( &lt;media_feature&gt; [: &lt;value&gt;]? )
+```
+media_query_list: <media_query> [, <media_query> ]*
+media_query: [[only | not]? <media_type> [ and <expression> ]*]
+  | <expression> [ and <expression> ]*
+expression: ( <media_feature> [: <value>]? )
 media_type: all | aural | braille | handheld | print |
   projection | screen | tty | tv | embossed
 media_feature: width | min-width | max-width
@@ -115,451 +134,469 @@ media_feature: width | min-width | max-width
   | color-index | min-color-index | max-color-index
   | monochrome | min-monochrome | max-monochrome
   | resolution | min-resolution | max-resolution
-  | scan | grid</pre>
+  | scan | grid
+```
 
-<p><em>Media queries</em> são <em>case insensitive</em>.  <em>Media queries</em> envolvidas em <em>media types</em> desconhecidos serão sempre falsas.</p>
+_Media queries_ são _case insensitive_. _Media queries_ envolvidas em _media types_ desconhecidos serão sempre falsas.
 
-<div class="note"><strong>Nota:</strong> Parenteses são obrigatórios em volta de expressões; a falta deles é um erro.</div>
+> **Note:** **Nota:** Parenteses são obrigatórios em volta de expressões; a falta deles é um erro.
 
-<h2 id="Características_de_mídia">Características de mídia</h2>
+## Características de mídia
 
-<p>A maioria das <em>media features</em> podem ter prefixo “min-” ou “max-“ para expressar as restrições “maior ou igual” ou “menor ou igual”. Isto evita o uso dos símbolos  “&lt;” e “&gt;” , que entrem em conflito com HTML e XML. Se você usar uma <em>media feature</em> sem especificar um valor, a expressão retorna verdadeiro, se o valor da <em>feature</em> for diferente de zero.</p>
+A maioria das _media features_ podem ter prefixo “min-” ou “max-“ para expressar as restrições “maior ou igual” ou “menor ou igual”. Isto evita o uso dos símbolos “<” e “>” , que entrem em conflito com HTML e XML. Se você usar uma _media feature_ sem especificar um valor, a expressão retorna verdadeiro, se o valor da _feature_ for diferente de zero.
 
-<div class="note"><strong>Nota:</strong> Se uma media feature não se aplicar ao dispositivo onde o navegador esta sendo executado, as expressões que envolvem essa media feature são sempre falsas. Por exemplo, consultar um aspecto de um dispositivo sonoro, sempre resulta em falso.</div>
+> **Note:** **Nota:** Se uma media feature não se aplicar ao dispositivo onde o navegador esta sendo executado, as expressões que envolvem essa media feature são sempre falsas. Por exemplo, consultar um aspecto de um dispositivo sonoro, sempre resulta em falso.
 
-<h3 id="cor">cor</h3>
+### cor
 
-<p><strong>Valor:</strong> {{cssxref("&lt;color&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}<br>
- <strong>Aceita prefixos min/max:</strong> sim</p>
+**Valor:** {{cssxref("&lt;color&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:\*\* sim
 
-<p>Indica o número de bits por componente de cor no dispositivo de saída. Se o dispositivo não é um dispositivo de cor, o valor é zero.</p>
+Indica o número de bits por componente de cor no dispositivo de saída. Se o dispositivo não é um dispositivo de cor, o valor é zero.
 
-<div class="note"><strong>Nota:</strong> Se os componentes de cor têm diferentes números de bits por componente de cor, o menor valor é utilizado. Por exemplo, se o display usa 5 bits para azul e vermelho e 6 bits para verde, então o dispositivo considera 5 bits por componente de cor. Se o dispositivo usar cores indexadas, o menor número de bits por componente de cor na tabela de cores é usado.</div>
+> **Note:** **Nota:** Se os componentes de cor têm diferentes números de bits por componente de cor, o menor valor é utilizado. Por exemplo, se o display usa 5 bits para azul e vermelho e 6 bits para verde, então o dispositivo considera 5 bits por componente de cor. Se o dispositivo usar cores indexadas, o menor número de bits por componente de cor na tabela de cores é usado.
 
-<h4 id="Exemplos">Exemplos</h4>
+#### Exemplos
 
-<p>Aplicar uma folha de estilo a todos dispositivos:</p>
+Aplicar uma folha de estilo a todos dispositivos:
 
-<pre class="brush: css">@media all and (color) { ... }
-</pre>
+```css
+@media all and (color) { ... }
+```
 
-<p>Aplicar uma folha de estilo a todos dispositivos com no mínimo 4 bits de color componente:</p>
+Aplicar uma folha de estilo a todos dispositivos com no mínimo 4 bits de color componente:
 
-<pre class="brush: css">@media all and (min-color: 4) { ... }
-</pre>
+```css
+@media all and (min-color: 4) { ... }
+```
 
-<h3 id="color-index">color-index</h3>
+### color-index
 
-<p><strong>Valor:</strong> {{cssxref("&lt;integer&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}<br>
- <strong>Aceita prefixos min/max:</strong> Sim</p>
+**Valor:** {{cssxref("&lt;integer&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:\*\* Sim
 
-<p>Indica o número de entradas na tabela de consulta de cores para o dispositivo de saída.</p>
+Indica o número de entradas na tabela de consulta de cores para o dispositivo de saída.
 
-<h4 id="Exemplos_2">Exemplos</h4>
+#### Exemplos
 
-<p>Para indicar que uma folha de estilo deve ser aplicada para todos os dispositivos que usam cores indexadas, você pode fazer:</p>
+Para indicar que uma folha de estilo deve ser aplicada para todos os dispositivos que usam cores indexadas, você pode fazer:
 
-<pre class="brush: css">@media all and (color-index) { ... }
-</pre>
+```css
+@media all and (color-index) { ... }
+```
 
-<p>Para aplicar uma folha de estilo em um dispositivo com cores indexadas menor que 256 cores:</p>
+Para aplicar uma folha de estilo em um dispositivo com cores indexadas menor que 256 cores:
 
-<pre class="brush: html">&lt;link rel="stylesheet" media="all and (min-color-index: 256)" href="http://foo.bar.com/stylesheet.css" /&gt;
-</pre>
+```html
+<link rel="stylesheet" media="all and (min-color-index: 256)" href="http://foo.bar.com/stylesheet.css" />
+```
 
-<h3 id="aspect-ratio">aspect-ratio</h3>
+### aspect-ratio
 
-<p><strong>Valor:</strong> {{cssxref("&lt;ratio&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}<br>
- <strong>Aceita prefixos min/max:</strong> sim</p>
+**Valor:** {{cssxref("&lt;ratio&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
+**Aceita prefixos min/max:\*\* sim
 
-<p>Descreve o aspecto da relação da área do display do dispositivo de saída. Este valor consiste de dois inteiros positivos separados por um caractere barra (“/”). Isto representa a relação entre pixels horizontais (primeiro termo) para pixels verticais (segundo termo).</p>
+Descreve o aspecto da relação da área do display do dispositivo de saída. Este valor consiste de dois inteiros positivos separados por um caractere barra (“/”). Isto representa a relação entre pixels horizontais (primeiro termo) para pixels verticais (segundo termo).
 
-<h4 id="Exemplo">Exemplo</h4>
+#### Exemplo
 
-<p>A seguir selecionamos uma folha de estilo especial para usarmos quando a área do display é pelo menos mais larga do que alta.</p>
+A seguir selecionamos uma folha de estilo especial para usarmos quando a área do display é pelo menos mais larga do que alta.
 
-<pre class="brush: css">@media screen and (min-aspect-ratio: 1/1) { ... }</pre>
+```css
+@media screen and (min-aspect-ratio: 1/1) { ... }
+```
 
-<p>Isto seleciona o estilo quando a relação de aspecto seja 1:1 ou maior. Em outras palavras, estes estilos serão aplicados apenas quando a área de visualização for quadrada ou paisagem.</p>
+Isto seleciona o estilo quando a relação de aspecto seja 1:1 ou maior. Em outras palavras, estes estilos serão aplicados apenas quando a área de visualização for quadrada ou paisagem.
 
-<h3 id="device-aspect-ratio">device-aspect-ratio</h3>
+### device-aspect-ratio
 
-<p><strong>Valor:</strong> {{cssxref("&lt;ratio&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}<br>
- <strong>Aceita prefixos min/max:</strong> sim</p>
+**Valor:** {{cssxref("&lt;ratio&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
+**Aceita prefixos min/max:\*\* sim
 
-<p>Descreve a relação de aspecto do dispositivo de saída. Este valor consiste de dois inteiros positivos separados pelo carácter barra (“/”). Isto representa a relação de pixels horizontais (primeiro termo) por pixels verticais (segundo termo).</p>
+Descreve a relação de aspecto do dispositivo de saída. Este valor consiste de dois inteiros positivos separados pelo carácter barra (“/”). Isto representa a relação de pixels horizontais (primeiro termo) por pixels verticais (segundo termo).
 
-<h4 id="Exemplo_2">Exemplo</h4>
+#### Exemplo
 
-<p>A seguir, selecionamos uma folha de estilo especial para usar em telas widescreen.</p>
+A seguir, selecionamos uma folha de estilo especial para usar em telas widescreen.
 
-<pre class="brush: css">@media screen and (device-aspect-ratio: 16/9), screen and (device-aspect-ratio: 16/10) { ... }</pre>
+```css
+@media screen and (device-aspect-ratio: 16/9), screen and (device-aspect-ratio: 16/10) { ... }
+```
 
-<p>Isso seleciona o estilo quando a relação de aspecto é 16:9 ou 16:10.</p>
+Isso seleciona o estilo quando a relação de aspecto é 16:9 ou 16:10.
 
-<h3 id="device-height">device-height</h3>
+### device-height
 
-<p><strong>Valor:</strong> {{cssxref("&lt;length&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}<br>
- <strong>Aceita prefixos min/max:</strong> sim</p>
+**Valor:** {{cssxref("&lt;length&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
+**Aceita prefixos min/max:\*\* sim
 
-<p>Descreve a altura do dispositivo de saída( ou seja, toda a tela ou página, em vez de apenas a área de renderização, tal como a janela do documento).</p>
+Descreve a altura do dispositivo de saída( ou seja, toda a tela ou página, em vez de apenas a área de renderização, tal como a janela do documento).
 
-<h4 id="Exemplo_3">Exemplo</h4>
+#### Exemplo
 
-<p>Para aplicar uma folha de estilo a um documento quando exibido em uma tela menor que 800 pixels de altura, você pode usar isso:</p>
+Para aplicar uma folha de estilo a um documento quando exibido em uma tela menor que 800 pixels de altura, você pode usar isso:
 
-<pre class="brush: html">&lt;link rel="stylesheet" media="screen and (max-device-height: 799px)" /&gt;
-</pre>
+```html
+<link rel="stylesheet" media="screen and (max-device-height: 799px)" />
+```
 
-<h3 id="device-width">device-width</h3>
+### device-width
 
-<p><strong>Valor:</strong> {{cssxref("&lt;length&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}<br>
- <strong>Aceita prefixos min/max:</strong> sim</p>
+**Valor:** {{cssxref("&lt;length&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
+**Aceita prefixos min/max:\*\* sim
 
-<p>Descreve a largura do dispositivo e saída (ou seja, toda a tela ou página, em vez de apenas a área de renderização, tal como a janela do documento).</p>
+Descreve a largura do dispositivo e saída (ou seja, toda a tela ou página, em vez de apenas a área de renderização, tal como a janela do documento).
 
-<h4 id="Exemplo_4">Exemplo</h4>
+#### Exemplo
 
-<p>Para aplicar uma folha de estilo a um documento quando exibido em uma tela menor que 800px de largura, você pode usar isso:</p>
+Para aplicar uma folha de estilo a um documento quando exibido em uma tela menor que 800px de largura, você pode usar isso:
 
-<pre class="brush: html" style="font-size: 14px;">&lt;link rel="stylesheet" media="screen and (max-device-width: 799px)" /&gt;</pre>
+```html
+<link rel="stylesheet" media="screen and (max-device-width: 799px)" />
+```
 
-<h3 id="grid">grid</h3>
+### grid
 
-<p><strong>Valor:</strong> {{cssxref("&lt;integer&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> todas<br>
- <strong>Aceita prefixos min/max:</strong> não</p>
+**Valor:** {{cssxref("&lt;integer&gt;")}}
+**Mídia\*\***:** todas
+**Aceita prefixos min/max:\*\* não
 
-<p>Determina se o dispositivo de saída é um dispositivo grade ou um dispositivo bitmap. Se o dispositivo é baseado em grade(tal como um terminal TTY ou uma tela de telefone com apenas um tipo de letra), o valor é 1. De outro modo é zero.</p>
+Determina se o dispositivo de saída é um dispositivo grade ou um dispositivo bitmap. Se o dispositivo é baseado em grade(tal como um terminal TTY ou uma tela de telefone com apenas um tipo de letra), o valor é 1. De outro modo é zero.
 
-<h4 id="Exemplo_5">Exemplo</h4>
+#### Exemplo
 
-<p>Para aplicar um estilo a dispositivos postáteis com 15-carácteres ou uma tela mais estreita:</p>
+Para aplicar um estilo a dispositivos postáteis com 15-carácteres ou uma tela mais estreita:
 
-<pre class="brush: css">@media handheld and (grid) and (max-width: 15em) { ... }
-</pre>
+```css
+@media handheld and (grid) and (max-width: 15em) { ... }
+```
 
-<div class="note"><strong>Nota:</strong>  A unidade "em" tem um significado especial para dispositivos de grade, uma vez que a exata largura de um "em" não pode ser determinada, 1em é assumido para ser a largura de uma célula da grade horizontalmente, e a altura de uma célula verticalmente.</div>
+> **Note:** **Nota:** A unidade "em" tem um significado especial para dispositivos de grade, uma vez que a exata largura de um "em" não pode ser determinada, 1em é assumido para ser a largura de uma célula da grade horizontalmente, e a altura de uma célula verticalmente.
 
-<h3 id="height">height</h3>
+### height
 
-<p><strong>Valor:</strong> {{cssxref("&lt;length&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}<br>
- <strong>Aceita prefixos min/max:</strong> yes</p>
+**Valor:** {{cssxref("&lt;length&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
+**Aceita prefixos min/max:\*\* yes
 
-<p>A característica <code>height</code> descreve a altura da superfície de renderização do dispositivo de saída (tal como a altura do viewport ou da caixa de página em uma impressora).</p>
+A característica `height` descreve a altura da superfície de renderização do dispositivo de saída (tal como a altura do viewport ou da caixa de página em uma impressora).
 
-<div class="note"><strong>Nota:</strong> Como o usuário redimensiona a janela, o Firefox muda as folhas de estilo como apropriado, com base nas media queries, usando as media features <code>width</code> e <code>height</code>.</div>
+> **Note:** **Nota:** Como o usuário redimensiona a janela, o Firefox muda as folhas de estilo como apropriado, com base nas media queries, usando as media features `width` e `height`.
 
-<h3 id="monochrome">monochrome</h3>
+### monochrome
 
-<p><strong>Valor:</strong> {{cssxref("&lt;integer&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}<br>
- <strong>Aceita prefixos min/max:</strong> sim</p>
+**Valor:** {{cssxref("&lt;integer&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:\*\* sim
 
-<p>Indica o número de bits por pixel em um dispositivo monocromático (greyscale). Se o dispositivo não for monocromático, o valor é 0.</p>
+Indica o número de bits por pixel em um dispositivo monocromático (greyscale). Se o dispositivo não for monocromático, o valor é 0.
 
-<h4 id="Exemplos_3">Exemplos</h4>
+#### Exemplos
 
-<p>Para aplicar uma folha de estilo em todos os dispositivos monocromáticos:</p>
+Para aplicar uma folha de estilo em todos os dispositivos monocromáticos:
 
-<pre class="brush: css">@media all and (monochrome) { ... }
-</pre>
+```css
+@media all and (monochrome) { ... }
+```
 
-<p>Para aplicar uma folha de estilo em dispositivos monocromáticos com pelo menos 8 bits por pixel:</p>
+Para aplicar uma folha de estilo em dispositivos monocromáticos com pelo menos 8 bits por pixel:
 
-<pre class="brush: css">@media all and (min-monochrome: 8) { ... }
-</pre>
+```css
+@media all and (min-monochrome: 8) { ... }
+```
 
-<h3 id="orientation">orientation</h3>
+### orientation
 
-<p><strong>Valor:</strong> <code>landscape</code> | <code>portrait</code><br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}<br>
- <strong>Aceita prefixos min/max:</strong> não</p>
+**Valor:** `landscape` | `portrait`
+**Mídia\*\***:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:\*\* não
 
-<p>Indica se o <em>viewport</em> é modo <em>landscape</em> (o visor é mais largo do que mais alto) ou <em>portrait</em> (o visor é mais alto do que mais largo).</p>
+Indica se o _viewport_ é modo _landscape_ (o visor é mais largo do que mais alto) ou _portrait_ (o visor é mais alto do que mais largo).
 
-<h4 id="Exemplo_6">Exemplo</h4>
+#### Exemplo
 
-<p>Para aplicar a folha de estilo apenas em orientação <em>portrait</em>:</p>
+Para aplicar a folha de estilo apenas em orientação _portrait_:
 
-<pre class="brush: css">@media all and (orientation: portrait) { ... }</pre>
+```css
+@media all and (orientation: portrait) { ... }
+```
 
-<div class="note"><strong>Nota: </strong>Este valor não corresponde com a orientação real do dispositivo. Abrindo o teclado virtual na maioria dos dispositivos na orientação retrato fará com que o viewport torne-se mais largo do que alto, fazendo assim que o navegador use estilos de paisagem em vez de retrato.</div>
+> **Note:** **Nota:** Este valor não corresponde com a orientação real do dispositivo. Abrindo o teclado virtual na maioria dos dispositivos na orientação retrato fará com que o viewport torne-se mais largo do que alto, fazendo assim que o navegador use estilos de paisagem em vez de retrato.
 
-<h3 id="resolution">resolution</h3>
+### resolution
 
-<p><strong>Valor:</strong> {{cssxref("&lt;resolution&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Bitmap", "bitmap")}}<br>
- <strong>Aceita prefixos min/max:</strong> sim</p>
+**Valor:** {{cssxref("&lt;resolution&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Bitmap", "bitmap")}}
+**Aceita prefixos min/max:\*\* sim
 
-<p>Indica a resolução (densidade de pixel) da saída do dispositivo. A resolução pode ser especificada em pontos por inch(dpi) ou pontos por centímetro(dpcm).</p>
+Indica a resolução (densidade de pixel) da saída do dispositivo. A resolução pode ser especificada em pontos por inch(dpi) ou pontos por centímetro(dpcm).
 
-<h4 id="Exemplos_4">Exemplos</h4>
+#### Exemplos
 
-<p>Para aplicar a folha de estilo em dispositivos com resolução de pelo menos 300 pontos por inch:</p>
+Para aplicar a folha de estilo em dispositivos com resolução de pelo menos 300 pontos por inch:
 
-<pre class="brush: css">@media print and (min-resolution: 300dpi) { ... }
-</pre>
+```css
+@media print and (min-resolution: 300dpi) { ... }
+```
 
-<p>Para substituir a antiga sintaxe (min-device-pixel-ratio: 2):</p>
+Para substituir a antiga sintaxe (min-device-pixel-ratio: 2):
 
-<pre class="brush: css">@media screen and (min-resolution: 2dppx) { ... }</pre>
+```css
+@media screen and (min-resolution: 2dppx) { ... }
+```
 
-<h3 id="scan">scan</h3>
+### scan
 
-<p><strong>Valor:</strong> <code>progressive</code> | <code>interlace</code><br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/TV")}}<br>
- <strong>Aceita prefixos min/max:</strong> não</p>
+**Valor:** `progressive` | `interlace`
+**Mídia\*\***:** {{cssxref("Media/TV")}}
+**Aceita prefixos min/max:\*\* não
 
-<p>Descreve o processo de digitalização de dispositivos saída de televisão.</p>
+Descreve o processo de digitalização de dispositivos saída de televisão.
 
-<h4 id="Exemplo_7">Exemplo</h4>
+#### Exemplo
 
-<p>Para aplicar uma folha de estilo apenas para televisores de varredura progressiva:</p>
+Para aplicar uma folha de estilo apenas para televisores de varredura progressiva:
 
-<pre class="brush: css">@media tv and (scan: progressive) { ... }
-</pre>
+```css
+@media tv and (scan: progressive) { ... }
+```
 
-<h3 id="width">width</h3>
+### width
 
-<p><strong>Valor:</strong> {{cssxref("&lt;length&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}<br>
- <strong>Aceita prefixos min/max:</strong> sim</p>
+**Valor:** {{cssxref("&lt;length&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
+**Aceita prefixos min/max:\*\* sim
 
-<p>A <em>media feature</em> <code>width </code>descreve a largura da superficie de renderização do dispositivo de saída (tal como a largura da janela do documento, ou a largura da caixa de página em uma impressora).</p>
+A _media feature_ `width `descreve a largura da superficie de renderização do dispositivo de saída (tal como a largura da janela do documento, ou a largura da caixa de página em uma impressora).
 
-<p><strong>Nota:</strong><br>
- Como o usuário redimensiona a janela, o Firefox muda as folhas de estilos como apropriado baseado em <em>media queries </em>usando media features <code>width</code> e <code>height</code>.</p>
+**Nota:**
+Como o usuário redimensiona a janela, o Firefox muda as folhas de estilos como apropriado baseado em _media queries_ usando media features `width` e `height`.
 
-<h4 id="Exemplos_5">Exemplos</h4>
+#### Exemplos
 
-<p>Se você quiser especificar uma folha de estilo para dispositivos portáteis, ou dispositivos screen com uma largura maior que 20em, você pode usar essa <em>query</em>:</p>
+Se você quiser especificar uma folha de estilo para dispositivos portáteis, ou dispositivos screen com uma largura maior que 20em, você pode usar essa _query_:
 
-<pre class="brush: css">@media handheld and (min-width: 20em), screen and (min-width: 20em) { ... }
-</pre>
+```css
+@media handheld and (min-width: 20em), screen and (min-width: 20em) { ... }
+```
 
-<p>Essa <em>media query </em>especifica uma folha de estilo que aplica-se para mídias impressas maiores que 8.5 inches.</p>
+Essa _media query_ especifica uma folha de estilo que aplica-se para mídias impressas maiores que 8.5 inches.
 
-<pre class="brush: html">&lt;link rel="stylesheet" media="print and (min-width: 8.5in)"
-    href="http://foo.com/mystyle.css" /&gt;
-</pre>
+```html
+<link rel="stylesheet" media="print and (min-width: 8.5in)"
+    href="http://foo.com/mystyle.css" />
+```
 
-<p>Essa <em>query </em>especifica uma folha de estilo que é usada quano o viewport está entre 500 e 800 pixels de largura:</p>
+Essa _query_ especifica uma folha de estilo que é usada quano o viewport está entre 500 e 800 pixels de largura:
 
-<pre class="brush: css">@media screen and (min-width: 500px) and (max-width: 800px) { ... }
-</pre>
+```css
+@media screen and (min-width: 500px) and (max-width: 800px) { ... }
+```
 
-<h2 id="Especificação_da_Mozilla_para_mídias_características">Especificação da Mozilla para mídias características</h2>
+## Especificação da Mozilla para mídias características
 
-<p>Mozilla oferece várias <em>media features</em> para específicos <em>Gecko</em> . Algumas dessas podem ser sugeridas como <em>media features</em> oficiais.</p>
+Mozilla oferece várias _media features_ para específicos _Gecko_ . Algumas dessas podem ser sugeridas como _media features_ oficiais.
 
-<h3>-moz-images-in-menus</h3>
+### -moz-images-in-menus
 
-<p><strong>Valor:</strong> {{cssxref("&lt;integer&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}<br>
- <strong>Aceita prefixos min/max:</strong> não</p>
+**Valor:** {{cssxref("&lt;integer&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:\*\* não
 
-<p>Se o dispositivo permite aparecer imagens nos menus, o valor é 1; caso contrário, o valor é 0. Isto corresponde ao {{ cssxref(":-moz-system-metric(images-in-menus)") }} CSS <a href="/en-US/docs/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-class</a>.</p>
+Se o dispositivo permite aparecer imagens nos menus, o valor é 1; caso contrário, o valor é 0. Isto corresponde ao {{ cssxref(":-moz-system-metric(images-in-menus)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
 
-<h3>-moz-mac-graphite-theme</h3>
+### -moz-mac-graphite-theme
 
-<p><strong>Valor:</strong> {{cssxref("&lt;integer&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}<br>
- <strong>Aceita prefixos min/max:</strong>no</p>
+**Valor:** {{cssxref("&lt;integer&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:\*\*no
 
-<p>Se o usuário tenha configurado seu dispositivo para usar a aparência <em>"Graphite"</em> no <em>Mac OS X</em>, o valor é 1. Se o usuário está usando a aparência padrão <em>blue</em>, ou não está num <em>Mac OS X</em>, o valor é 0.</p>
+Se o usuário tenha configurado seu dispositivo para usar a aparência _"Graphite"_ no _Mac OS X_, o valor é 1. Se o usuário está usando a aparência padrão _blue_, ou não está num _Mac OS X_, o valor é 0.
 
-<p>Isto corresponde ao {{ cssxref(":-moz-system-metric(mac-graphite-theme)") }} CSS <a href="/en-US/docs/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-class</a>.</p>
+Isto corresponde ao {{ cssxref(":-moz-system-metric(mac-graphite-theme)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
 
-<h3>-moz-maemo-classic</h3>
+### -moz-maemo-classic
 
-<p><strong>Valor:</strong> {{cssxref("&lt;integer&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}<br>
- <strong>Aceita prefixos min/max:</strong> não</p>
+**Valor:** {{cssxref("&lt;integer&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:\*\* não
 
-<p>Se o usuário está usando <em>Maemo </em>com o tema original, o valor é 1; Se está usando o mais novo tema <em>Fremantle</em>, o valor é 0.</p>
+Se o usuário está usando _Maemo_ com o tema original, o valor é 1; Se está usando o mais novo tema _Fremantle_, o valor é 0.
 
-<p>Isto corresponde ao {{ cssxref(":-moz-system-metric(maemo-classic)") }} CSS <a href="/en-US/docs/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-class</a>.</p>
+Isto corresponde ao {{ cssxref(":-moz-system-metric(maemo-classic)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
 
-<h3>-moz-device-pixel-ratio</h3>
+### -moz-device-pixel-ratio
 
-<p><strong>Valor:</strong> {{cssxref("&lt;number&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}<br>
- <strong>Aceita prefixos min/max:</strong> sim</p>
+**Valor:** {{cssxref("&lt;number&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:\*\* sim
 
-<p>Dar o número de pixels do dispositivo por pixels do CSS.</p>
+Dar o número de pixels do dispositivo por pixels do CSS.
 
-<p><strong>Não use este recurso. </strong></p>
+**Não use este recurso.**
 
-<p>Em vez disso, use o recurso <em><code>resolution</code></em> com a unidade <code>dppx</code>.<br>
- <br>
- <code>-moz-device-pixel-ratio</code> pode ser usada para compatibilidade com Firefox mais velho que a versão 16 e <code>-webkit-device-pixel-ratio</code> com navegadores baseados no WebKit que não suportam <code>dppx</code>.</p>
+Em vez disso, use o recurso _`resolution`_ com a unidade `dppx`.
 
-<p>Exemplo:</p>
+`-moz-device-pixel-ratio` pode ser usada para compatibilidade com Firefox mais velho que a versão 16 e `-webkit-device-pixel-ratio` com navegadores baseados no WebKit que não suportam `dppx`.
 
-<pre>@media (-webkit-min-device-pixel-ratio: 2), /* Navegadores baseados no Webkit */
+Exemplo:
+
+```
+@media (-webkit-min-device-pixel-ratio: 2), /* Navegadores baseados no Webkit */
        (min--moz-device-pixel-ratio: 2),    /* Navegadores mais antigos do Firefox (antes do Firefox 16) */
        (min-resolution: 2dppx),             /* Forma padrão */
-       (min-resolution: 192dpi)             /* dppx fallback */ </pre>
+       (min-resolution: 192dpi)             /* dppx fallback */
+```
 
-<p>Veja este artigo <a href="http://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/">CSSWG</a> para ccompatibilidade de boas práticas em relação a <em><code>resolution</code></em> e <em><code>dppx</code></em>.</p>
+Veja este artigo [CSSWG](http://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/) para ccompatibilidade de boas práticas em relação a _`resolution`_ e _`dppx`_.
 
-<div class="note"><strong>Nota</strong>: Esta <em>media feature</em> é também implementada pelo Webkit e pelo <a href="https://msdn.microsoft.com/en-us/library/ie/dn760733(v=vs.85).aspx">IE 11 para Windows Phone 8.1</a>como -webkit-device-pixel-ratio. Os prefixos min e max implementados pelo Gecko são nomeados min--moz-device-pixel-ratio e max--moz-device-pixel-ratio; mas os mesmos prefixos implementados pelo Webkit são chamados -webkit-min-device-pixel-ratio e -webkit-max-device-pixel-ratio.</div>
+> **Note:** **Nota**: Esta _media feature_ é também implementada pelo Webkit e pelo [IE 11 para Windows Phone 8.1](<https://msdn.microsoft.com/en-us/library/ie/dn760733(v=vs.85).aspx>)como -webkit-device-pixel-ratio. Os prefixos min e max implementados pelo Gecko são nomeados min--moz-device-pixel-ratio e max--moz-device-pixel-ratio; mas os mesmos prefixos implementados pelo Webkit são chamados -webkit-min-device-pixel-ratio e -webkit-max-device-pixel-ratio.
 
-<h3>-moz-os-version</h3>
+### -moz-os-version
 
-<p><strong>Valor:</strong> <code>windows-xp</code> | <code>windows-vista</code> | <code>windows-win7</code> | <code>windows-win8</code><br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}<br>
- <strong>Aceita prefixos min/max:</strong> não</p>
+**Valor:** `windows-xp` | `windows-vista` | `windows-win7` | `windows-win8`
+**Mídia\*\***:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:\*\* não
 
-<p>Indica qual versão do sistema operacional está sendo usado atualmente. Atualmente apenas implementada no Windows. Possíveis valores são:</p>
+Indica qual versão do sistema operacional está sendo usado atualmente. Atualmente apenas implementada no Windows. Possíveis valores são:
 
-<ul>
- <li><code>windows-xp</code></li>
- <li><code>windows-vista</code></li>
- <li><code>windows-win7</code></li>
- <li><code>windows-win8</code></li>
-</ul>
+- `windows-xp`
+- `windows-vista`
+- `windows-win7`
+- `windows-win8`
 
-<p>Isto é fornecido pelas <em>skins das aplicações</em> e outros códigos do chrome para serem capazes de se adaptar para funcionar bem com a versão atual do sistema operacional.</p>
+Isto é fornecido pelas _skins das aplicações_ e outros códigos do chrome para serem capazes de se adaptar para funcionar bem com a versão atual do sistema operacional.
 
-<h3>-moz-scrollbar-end-backward</h3>
+### -moz-scrollbar-end-backward
 
-<p><strong>Valor:</strong> {{cssxref("&lt;integer&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}<br>
- <strong>Aceita prefixos min/max:</strong> não</p>
+**Valor:** {{cssxref("&lt;integer&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:\*\* não
 
-<p>Se a interface do usuário do dispositivo exibe uma seta para trás no final da barra de rolagem, o valor é 1. Caso contrário, é 0.</p>
+Se a interface do usuário do dispositivo exibe uma seta para trás no final da barra de rolagem, o valor é 1. Caso contrário, é 0.
 
-<p>Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-end-backward)") }} CSS <a href="/en-US/docs/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-class</a>.</p>
+Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-end-backward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
 
-<h3>-moz-scrollbar-end-forward</h3>
+### -moz-scrollbar-end-forward
 
-<p><strong>Valor:</strong> {{cssxref("&lt;integer&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}<br>
- <strong>Aceita prefixos min/max:</strong> não</p>
+**Valor:** {{cssxref("&lt;integer&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:\*\* não
 
-<p>Se a interface do usuário do dispositivo a forward arrow button at the end of scrollbars, this is 1. Otherwise it's 0.</p>
+Se a interface do usuário do dispositivo a forward arrow button at the end of scrollbars, this is 1. Otherwise it's 0.
 
-<p>Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-end-forward)") }} CSS <a href="/en-US/docs/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-class</a>.</p>
+Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-end-forward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
 
-<h3>-moz-scrollbar-start-backward</h3>
+### -moz-scrollbar-start-backward
 
-<p><strong>Valor:</strong> {{cssxref("&lt;integer&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}<br>
- <strong>Aceita prefixos min/max:</strong> não</p>
+**Valor:** {{cssxref("&lt;integer&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:\*\* não
 
-<p>Se a interface do usuário do dispositivo a backward arrow button at the beginning of scrollbars, this is 1. Otherwise it's 0.</p>
+Se a interface do usuário do dispositivo a backward arrow button at the beginning of scrollbars, this is 1. Otherwise it's 0.
 
-<p>Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-start-backward)") }} CSS <a href="/en-US/docs/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-class</a>.</p>
+Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-start-backward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
 
-<h3>-moz-scrollbar-start-forward</h3>
+### -moz-scrollbar-start-forward
 
-<p><strong>Valor:</strong> {{cssxref("&lt;integer&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}<br>
- <strong>Aceita prefixos min/max:</strong> não</p>
+**Valor:** {{cssxref("&lt;integer&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:\*\* não
 
-<p>Se a interface do usuário do dispositivo a forward arrow button at the beginning of scrollbars, this is 1. Otherwise it's 0.</p>
+Se a interface do usuário do dispositivo a forward arrow button at the beginning of scrollbars, this is 1. Otherwise it's 0.
 
-<p>Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-start-forward)") }} CSS <a href="/en-US/docs/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-class</a>.</p>
+Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-start-forward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
 
-<h3>-moz-scrollbar-thumb-proportional</h3>
+### -moz-scrollbar-thumb-proportional
 
-<p><strong>Valor:</strong> {{cssxref("&lt;integer&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}<br>
- <strong>Aceita prefixos min/max:</strong> não</p>
+**Valor:** {{cssxref("&lt;integer&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:\*\* não
 
-<p>Se a interface do usuário do dispositivo the thumb of scrollbars proportionally (that is, sized based on the percentage of the document that is visible), this is 1. Otherwise it's 0.</p>
+Se a interface do usuário do dispositivo the thumb of scrollbars proportionally (that is, sized based on the percentage of the document that is visible), this is 1. Otherwise it's 0.
 
-<p>Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-thumb-proportional)") }} CSS <a href="/en-US/docs/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-class</a>.</p>
+Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-thumb-proportional)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
 
-<h3>-moz-touch-enabled</h3>
+### -moz-touch-enabled
 
-<p><strong>Valor:</strong> {{cssxref("&lt;integer&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}<br>
- <strong>Aceita prefixos min/max:</strong> não</p>
+**Valor:** {{cssxref("&lt;integer&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:\*\* não
 
-<p>If the device supports touch events (for a touch screen), this is 1. Otherwise it's 0.</p>
+If the device supports touch events (for a touch screen), this is 1. Otherwise it's 0.
 
-<p>Isto corresponde ao {{ cssxref(":-moz-system-metric(touch-enabled)") }} CSS <a href="/en-US/docs/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-class</a>.</p>
+Isto corresponde ao {{ cssxref(":-moz-system-metric(touch-enabled)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
 
-<h4 id="Exemplo_8">Exemplo</h4>
+#### Exemplo
 
-<p>You might use this to render your buttons slightly larger, for example, if the user is on a touch-screen device, to make them more finger-friendly.</p>
+You might use this to render your buttons slightly larger, for example, if the user is on a touch-screen device, to make them more finger-friendly.
 
-<h3>-moz-windows-classic</h3>
+### -moz-windows-classic
 
-<p><strong>Valor:</strong> {{cssxref("&lt;integer&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}<br>
- <strong>Aceita prefixos min/max:</strong> não</p>
+**Valor:** {{cssxref("&lt;integer&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:\*\* não
 
-<p>If the user is using Windows unthemed (in classic mode instead of using uxtheme), this is 1; otherwise it's 0.</p>
+If the user is using Windows unthemed (in classic mode instead of using uxtheme), this is 1; otherwise it's 0.
 
-<p>Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-classic)") }} CSS <a href="/en-US/docs/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-class</a>.</p>
+Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-classic)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
 
-<h3>-moz-windows-compositor</h3>
+### -moz-windows-compositor
 
-<p><strong>Valor:</strong> {{cssxref("&lt;integer&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}<br>
- <strong>Aceita prefixos min/max:</strong> não</p>
+**Valor:** {{cssxref("&lt;integer&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:\*\* não
 
-<p>If the user is using Windows with the DWM compositor, this is 1; otherwise it's 0.</p>
+If the user is using Windows with the DWM compositor, this is 1; otherwise it's 0.
 
-<p>Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-compositor)") }} CSS <a href="/en-US/docs/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-class</a>.</p>
+Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-compositor)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
 
-<h3>-moz-windows-default-theme</h3>
+### -moz-windows-default-theme
 
-<p><strong>Valor:</strong> {{cssxref("&lt;integer&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}<br>
- <strong>Aceita prefixos min/max:</strong> não</p>
+**Valor:** {{cssxref("&lt;integer&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:\*\* não
 
-<p>If the user is currently using one of the default Windows themes (Luna, Royale, Zune, or Aero (including Vista Basic, Vista Advanced, and Aero Glass), this is 1. Otherwise it's 0.</p>
+If the user is currently using one of the default Windows themes (Luna, Royale, Zune, or Aero (including Vista Basic, Vista Advanced, and Aero Glass), this is 1. Otherwise it's 0.
 
-<p>Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-default-theme)") }} CSS <a href="/en-US/docs/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-class</a>.</p>
+Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-default-theme)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
 
-<h3>-moz-windows-glass</h3>
+### -moz-windows-glass
 
-<p><strong>Valor:</strong> {{cssxref("&lt;integer&gt;")}}<br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}<br>
- <strong>Aceita prefixos min/max:</strong> não</p>
+**Valor:** {{cssxref("&lt;integer&gt;")}}
+**Mídia\*\***:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:\*\* não
 
-<p>If the user is using Windows Glass theme, this is 1; otherwise it's 0. Note that this only exists for Windows 7 and earlier.</p>
+If the user is using Windows Glass theme, this is 1; otherwise it's 0. Note that this only exists for Windows 7 and earlier.
 
-<h3>-moz-windows-theme</h3>
+### -moz-windows-theme
 
-<p><strong>Valor:</strong> <code>aero</code> | <code>luna-blue</code> | <code>luna-olive</code> | <code>luna-silver</code> | <code>royale</code> | <code>generic</code> | <code>zune</code><br>
- <strong style="font-weight: bold;">Mídia</strong><strong>:</strong> {{cssxref("Media/Visual")}}<br>
- <strong>Aceita prefixos min/max:</strong> não</p>
+**Valor:** `aero` | `luna-blue` | `luna-olive` | `luna-silver` | `royale` | `generic` | `zune`
+**Mídia\*\***:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:\*\* não
 
-<p>Indicates which Windows theme is currently being used. Only available on Windows. Possible values are:</p>
+Indicates which Windows theme is currently being used. Only available on Windows. Possible values are:
 
-<ul>
- <li><code>aero</code></li>
- <li><code>luna-blue</code></li>
- <li><code>luna-olive</code></li>
- <li><code>luna-silver</code></li>
- <li><code>royale</code></li>
- <li><code>generic</code></li>
- <li><code>zune</code></li>
-</ul>
+- `aero`
+- `luna-blue`
+- `luna-olive`
+- `luna-silver`
+- `royale`
+- `generic`
+- `zune`
 
-<p>Isto é previsto para <em>skins</em> de aplicativo e outro código de aplicações de chrome a ser capaz de se adaptar a funcionar bem com o actual tema do Windows.</p>
+Isto é previsto para _skins_ de aplicativo e outro código de aplicações de chrome a ser capaz de se adaptar a funcionar bem com o actual tema do Windows.
 
+## See also
 
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/css3-mediaqueries/">CSS 3 media query specification</a></li>
- <li><a class="internal" href="/en-US/docs/CSS/@media" title="En/CSS/@media">Media types</a></li>
- <li><a href="/en-US/docs/CSS/Using_media_queries_from_code" title="en/CSS/Using media queries from code">Using media queries from code</a></li>
- <li><a href="http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/">List of mobile and tablet viewport sizes with pixel ratios and physical sizes</a></li>
- <li><a href="http://davidwalsh.name/animate-media-queries">CSS Animations Between Media Queries</a> by David Walsh</li>
-</ul>
+- [CSS 3 media query specification](http://www.w3.org/TR/css3-mediaqueries/)
+- [Media types](/pt-BR/docs/CSS/@media "En/CSS/@media")
+- [Using media queries from code](/pt-BR/docs/CSS/Using_media_queries_from_code "en/CSS/Using media queries from code")
+- [List of mobile and tablet viewport sizes with pixel ratios and physical sizes](http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/)
+- [CSS Animations Between Media Queries](http://davidwalsh.name/animate-media-queries) by David Walsh

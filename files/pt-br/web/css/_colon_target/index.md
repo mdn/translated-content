@@ -1,55 +1,63 @@
 ---
 title: ':target'
-slug: 'Web/CSS/:target'
-translation_of: 'Web/CSS/:target'
+slug: Web/CSS/:target
+translation_of: Web/CSS/:target
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes">pseudo-classe CSS</a> <strong><code>:target</code></strong> representa um único elemento (o elemento alvo) com uma {{htmlattrxref("id")}} correspondente ao fragmento da URL.</p>
+A [pseudo-classe CSS](/pt-BR/docs/Web/CSS/Pseudo-classes) **`:target`** representa um único elemento (o elemento alvo) com uma {{htmlattrxref("id")}} correspondente ao fragmento da URL.
 
-<pre class="brush: css">/* Seleciona um elemento com a ID correspondente ao fragmento da URL */
+```css
+/* Seleciona um elemento com a ID correspondente ao fragmento da URL */
 :target {
   border: 2px solid black;
-}</pre>
+}
+```
 
-<p>Por exemplo, a seguinte URL tem um fragmento (denotado pelo sinal de <em>#</em>) que aponta para o elemento chamado <code>section2</code>:</p>
+Por exemplo, a seguinte URL tem um fragmento (denotado pelo sinal de _#_) que aponta para o elemento chamado `section2`:
 
-<pre>http://www.example.com/index.html#section2</pre>
+```
+http://www.example.com/index.html#section2
+```
 
-<p>O seguinte elemento será selecionado pelo seletor <code>:target</code> quando a URL for igual acima:</p>
+O seguinte elemento será selecionado pelo seletor `:target` quando a URL for igual acima:
 
-<pre class="brush: html">&lt;section id="section2"&gt;Exemplo&lt;/section&gt;</pre>
+```html
+<section id="section2">Exemplo</section>
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Índice">Índice</h3>
+### Índice
 
-<p>A pseudo-classe <code>:target</code> pode ser usada para destacar uma parte da página que foi vinculada a partir de um índice.</p>
+A pseudo-classe `:target` pode ser usada para destacar uma parte da página que foi vinculada a partir de um índice.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h3&gt;Índice&lt;/h3&gt;
-&lt;ol&gt;
- &lt;li&gt;&lt;a href="#p1"&gt;Ir para o primeiro parágrafo!&lt;/a&gt;&lt;/li&gt;
- &lt;li&gt;&lt;a href="#p2"&gt;Ir para o segundo parágrafo!&lt;/a&gt;&lt;/li&gt;
- &lt;li&gt;&lt;a href="#vazio"&gt;Esse link não vai pra lugar nenhum,
-   pois, o alvo não existe&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
+```html
+<h3>Índice</h3>
+<ol>
+ <li><a href="#p1">Ir para o primeiro parágrafo!</a></li>
+ <li><a href="#p2">Ir para o segundo parágrafo!</a></li>
+ <li><a href="#vazio">Esse link não vai pra lugar nenhum,
+   pois, o alvo não existe</a></li>
+</ol>
 
-&lt;h3&gt;Meu artigo divertido&lt;/h3&gt;
-&lt;p id="p1"&gt;Você pode definir &lt;i&gt;este parágrafo&lt;/i&gt; como alvo
-   usando um fragmento de URL. Clique no link acima para experimentar!&lt;/p&gt;
-&lt;p id="p2"&gt;Esse é &lt;i&gt;outro parágrafo&lt;/i&gt;, também acessável
-   pelos links acima. Não é incrível?&lt;/p&gt;
-</pre>
+<h3>Meu artigo divertido</h3>
+<p id="p1">Você pode definir <i>este parágrafo</i> como alvo
+   usando um fragmento de URL. Clique no link acima para experimentar!</p>
+<p id="p2">Esse é <i>outro parágrafo</i>, também acessável
+   pelos links acima. Não é incrível?</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p:target {
+```css
+p:target {
   background-color: gold;
 }
 
@@ -64,45 +72,49 @@ p:target::before {
 /* Estilize nos elementos em itálico dentro do elemento alvo  */
 p:target i {
   color: red;
-}</pre>
+}
+```
 
-<h4 id="Resultado">Resultado</h4>
+#### Resultado
 
-<div>{{EmbedLiveSample('A_table_of_contents', 500, 300)}}</div>
+{{EmbedLiveSample('A_table_of_contents', 500, 300)}}
 
-<h3 id="Lightbox_com_CSS_puro">Lightbox com CSS puro</h3>
+### Lightbox com CSS puro
 
-<p>Você pode usar a pseudo-classe <code>:target</code> para criar uma lightbox sem usar JavaScript. Essa técnica requer que os links apontem para os elementos que inicialmente estavam escondidas na página. Uma vez designado, o CSS muda o <code>display</code> então, assim o conteúdo pode ser mostrado.</p>
+Você pode usar a pseudo-classe `:target` para criar uma lightbox sem usar JavaScript. Essa técnica requer que os links apontem para os elementos que inicialmente estavam escondidas na página. Uma vez designado, o CSS muda o `display` então, assim o conteúdo pode ser mostrado.
 
-<div class="note"><strong>Nota:</strong> Uma lightbox com CSS puro mais completo usando a pseudo-classe <code>:target</code> <a href="https://github.com/madmurphy/takefive.css/">está disponível no GitHub</a> (<a href="https://madmurphy.github.io/takefive.css/">demo</a>).</div>
+> **Note:** **Nota:** Uma lightbox com CSS puro mais completo usando a pseudo-classe `:target` [está disponível no GitHub](https://github.com/madmurphy/takefive.css/) ([demo](https://madmurphy.github.io/takefive.css/)).
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;&lt;a href="#example1"&gt;Abrir exemplo #1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#example2"&gt;Abrir exemplo #2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+```html
+<ul>
+  <li><a href="#example1">Abrir exemplo #1</a></li>
+  <li><a href="#example2">Abrir exemplo #2</a></li>
+</ul>
 
-&lt;div class="lightbox" id="example1"&gt;
-  &lt;figure&gt;
-    &lt;a href="#" class="close"&gt;&lt;/a&gt;
-    &lt;figcaption&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Donec felis enim, placerat id eleifend eu, semper vel sem.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
+<div class="lightbox" id="example1">
+  <figure>
+    <a href="#" class="close"></a>
+    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Donec felis enim, placerat id eleifend eu, semper vel sem.</figcaption>
+  </figure>
+</div>
 
-&lt;div class="lightbox" id="example2"&gt;
-  &lt;figure&gt;
-    &lt;a href="#" class="close"&gt;&lt;/a&gt;
-    &lt;figcaption&gt;Cras risus odio, pharetra nec ultricies et,
+<div class="lightbox" id="example2">
+  <figure>
+    <a href="#" class="close"></a>
+    <figcaption>Cras risus odio, pharetra nec ultricies et,
       mollis ac augue. Nunc et diam quis sapien dignissim auctor.
-      Quisque quis neque arcu, nec gravida magna.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;</pre>
+      Quisque quis neque arcu, nec gravida magna.</figcaption>
+  </figure>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* Lightbox fechado */
+```css
+/* Lightbox fechado */
 .lightbox {
   display: none;
 }
@@ -160,49 +172,25 @@ p:target i {
   background-color: rgba(0,0,0,.7);
   content: "";
   cursor: default;
-}</pre>
+}
+```
 
-<h4 id="Resultado_2">Resultado</h4>
+#### Resultado
 
-<div>{{EmbedLiveSample('Pure-CSS_lightbox', 500, 220)}}</div>
+{{EmbedLiveSample('Pure-CSS_lightbox', 500, 220)}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "browsers.html#selector-target", ":target")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Define semântica específica do HTML.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#the-target-pseudo", ":target")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>Não há mudanças.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Selectors", "#target-pseudo", ":target")}}</td>
-   <td>{{Spec2("CSS3 Selectors")}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                                   | Status                               | Comentário                           |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------ |
+| {{SpecName("HTML WHATWG", "browsers.html#selector-target", ":target")}} | {{Spec2("HTML WHATWG")}}     | Define semântica específica do HTML. |
+| {{SpecName("CSS4 Selectors", "#the-target-pseudo", ":target")}}             | {{Spec2("CSS4 Selectors")}} | Não há mudanças.                     |
+| {{SpecName("CSS3 Selectors", "#target-pseudo", ":target")}}                 | {{Spec2("CSS3 Selectors")}} | Definição inicial.                   |
 
-<h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
+## Navegadores compatíveis
 
+{{Compat("css.selectors.target")}}
 
+## Veja também
 
-<div>{{Compat("css.selectors.target")}}</div>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors/Using_the_%3Atarget_pseudo-class_in_selectors">Usando a pseudo-classe :target em seletores.</a></li>
-</ul>
+- [Usando a pseudo-classe :target em seletores.](/pt-BR/docs/Web/CSS/CSS_Selectors/Using_the_%3Atarget_pseudo-class_in_selectors)

@@ -3,35 +3,38 @@ title: Utilizando variáveis CSS
 slug: Web/CSS/Using_CSS_custom_properties
 translation_of: Web/CSS/Using_CSS_custom_properties
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p><strong>Variáveis CSS</strong> são entidades definidas por desenvolvedores, contendo valores específicos para serem reutilizados ao longo do documento. São configuradas usando esta notação (ex: <strong><code>--cor-principal: black;</code></strong> ) e são acessadas usando a funcão {{cssxref("var", "var()")}} (ex: <code>color: <strong>var(--cor-principal)</strong>;</code> )</p>
+**Variáveis CSS** são entidades definidas por desenvolvedores, contendo valores específicos para serem reutilizados ao longo do documento. São configuradas usando esta notação (ex: **`--cor-principal: black;`** ) e são acessadas usando a funcão {{cssxref("var", "var()")}} (ex: `color: var(--cor-principal);` )
 
-<p>Websites complexos tem uma quantidade muito grande de CSS, com uma quantidade de repetição de valores muito frequente. Por exemplo, a mesma cor pode ser usada em centenas de lugares diferentes, requerindo uma pesquisa global e substituição caso esta cor necessite ser trocada. Variáveis CSS permite um valor ser guardado em um lugar, então ser referenciado em muitos outros lugares. Um benefício adicional é a semântica dos identificadores. Por exemplo <code>--cor-principal-texto</code> é mais facil de ser entendido do que <code>#00ff00</code>, especialmente se esta cor também é usada em outro contexto.</p>
+Websites complexos tem uma quantidade muito grande de CSS, com uma quantidade de repetição de valores muito frequente. Por exemplo, a mesma cor pode ser usada em centenas de lugares diferentes, requerindo uma pesquisa global e substituição caso esta cor necessite ser trocada. Variáveis CSS permite um valor ser guardado em um lugar, então ser referenciado em muitos outros lugares. Um benefício adicional é a semântica dos identificadores. Por exemplo `--cor-principal-texto` é mais facil de ser entendido do que `#00ff00`, especialmente se esta cor também é usada em outro contexto.
 
-<p>Variáveis CSS estão sujeitas ao efeito cascata do css e herdam seus valores de seus pais.</p>
+Variáveis CSS estão sujeitas ao efeito cascata do css e herdam seus valores de seus pais.
 
-<h2 id="Uso_básico">Uso básico</h2>
+## Uso básico
 
-<p>Declaração de variável:</p>
+Declaração de variável:
 
-<pre class="brush: css">elemento {
+```css
+elemento {
   --cor-bg-principal: brown;
 }
-</pre>
+```
 
-<p>Utilizando a variável:</p>
+Utilizando a variável:
 
-<pre class="brush:css; highlight:[2]  ">elemento {
+```css
+elemento {
   background-color: var(--cor-bg-principal);
 }
-</pre>
+```
 
-<h2 id="Primeiros_Passos_com_Variáveis_CSS">Primeiros Passos com Variáveis CSS</h2>
+## Primeiros Passos com Variáveis CSS
 
-<p>Vamos começar com este simples CSS que colore elementos de diferentes classes com a mesma cor:</p>
+Vamos começar com este simples CSS que colore elementos de diferentes classes com a mesma cor:
 
-<pre class="brush:css; highlight:[3,20,26,32] line-numbers  ">.um {
+```css
+.um {
   color: white;
   background-color: brown;
   margin: 10px;
@@ -63,24 +66,28 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 
 .cinco {
   background-color: brown;
-}</pre>
+}
+```
 
-<p>Nos aplicaremos isto ao HTML:</p>
+Nos aplicaremos isto ao HTML:
 
-<pre class="brush:html line-numbers  ">&lt;div&gt;
-  &lt;div class="one"&gt;1:&lt;/div&gt;
-  &lt;div class="two"&gt;2: Text &lt;span class="five"&gt;5 - more text&lt;/span&gt;&lt;/div&gt;
-  &lt;input class="three"&gt;
-  &lt;textarea class="four"&gt;4: Lorem Ipsum&lt;/textarea&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <div class="one">1:</div>
+  <div class="two">2: Text <span class="five">5 - more text</span></div>
+  <input class="three">
+  <textarea class="four">4: Lorem Ipsum</textarea>
+</div>
+```
 
-<p>Que nos leva a isto:</p>
+Que nos leva a isto:
 
-<p>{{EmbedLiveSample("sample1",600,180)}}</p>
+{{EmbedLiveSample("sample1",600,180)}}
 
-<p>Note a repetição no CSS. O <em>bacgkround-color</em> (cor de fundo) foi definida como <code>brown</code> em diversos lugares. Para algumas declarações CSS, é possível declarar isso no topo e deixar a herança CSS resolver esse problema naturalmente. Para projetos não triviais, isto nem sempre é possível. Ao declarar uma variável na pseudo-classe :root, um desenvolvedor pode interromper algumas das repetições usando variavel.</p>
+Note a repetição no CSS. O _bacgkround-color_ (cor de fundo) foi definida como `brown` em diversos lugares. Para algumas declarações CSS, é possível declarar isso no topo e deixar a herança CSS resolver esse problema naturalmente. Para projetos não triviais, isto nem sempre é possível. Ao declarar uma variável na pseudo-classe :root, um desenvolvedor pode interromper algumas das repetições usando variavel.
 
-<pre class="brush:css">:root {
+```css
+:root {
   --main-bg-color: brown;
 }
 
@@ -116,81 +123,82 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 
 .cinco {
   background-color: var(--main-bg-color);
-}</pre>
+}
+```
 
-<p>Isso leva ao mesmo resultado do exemplo anterior e permite uma declaração canônica da propriedade desejada.</p>
+Isso leva ao mesmo resultado do exemplo anterior e permite uma declaração canônica da propriedade desejada.
 
-<h2 id="Herançamento_de_Variáveis_CSS">Herançamento de Variáveis CSS</h2>
+## Herançamento de Variáveis CSS
 
-<p>Propriedades personalizadas herdam. O que significa que, se algum valor for definido para uma propriedade customizada, o valor de seu pai será usado:</p>
+Propriedades personalizadas herdam. O que significa que, se algum valor for definido para uma propriedade customizada, o valor de seu pai será usado:
 
-<pre class="brush: html line-numbers  "><code class="">&lt;div class="one"&gt;
-  &lt;div class="two"&gt;
-    &lt;div class="three"&gt;&lt;/div&gt;
-    &lt;div class="four"&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+```html
+<div class="one">
+  <div class="two">
+    <div class="three"></div>
+    <div class="four"></div>
+  </div>
+</div>
+```
 
-<pre class="brush: css line-numbers  "><code class="">.two {
+```css
+.two {
   --test: 10px;
 }
 
 .three {
   --test: 2em;
-}</code></pre>
+}
+```
 
-<p>Neste caso, o resultado de <code>var(--test)</code> são:</p>
+Neste caso, o resultado de `var(--test)` são:
 
-<ul>
- <li>Para <code>class="two"</code> <code>10px</code></li>
- <li>Para <code>class="three"</code> <code>2em</code></li>
- <li>Para <code>class="four"</code> <code>10px</code> (herdado de seu pai)</li>
- <li>Para <code>class="one"</code> <em>invalid value </em>(valor invalido), que é o valor padrão de qualquer propriedade customizada.</li>
-</ul>
+- Para `class="two"` `10px`
+- Para `class="three"` `2em`
+- Para `class="four"` `10px` (herdado de seu pai)
+- Para `class="one"` _invalid value_ (valor invalido), que é o valor padrão de qualquer propriedade customizada.
 
-<p>Tenha em mente que estas são propriedades customizadas, não são variáveis CSS reais. O valor é computado onde é necessário, não guardado para usar em outras regras. Por exemplo, você não pode definir uma propriedade á um elemento e esperar recuperar na regra de um <em>irmão descendente</em>. A propriedade é definida somente para o seletor correspondente e seus descendentes, como qualquer CSS normal.</p>
+Tenha em mente que estas são propriedades customizadas, não são variáveis CSS reais. O valor é computado onde é necessário, não guardado para usar em outras regras. Por exemplo, você não pode definir uma propriedade á um elemento e esperar recuperar na regra de um _irmão descendente_. A propriedade é definida somente para o seletor correspondente e seus descendentes, como qualquer CSS normal.
 
-<h2 id="Valores_de_Fallback_da_propriedade_customizada">Valores de Fallback da propriedade customizada</h2>
+## Valores de Fallback da propriedade customizada
 
-<p>Usando {{cssxref("var", "var()")}} você pode definir multiplos valores de fallback (quando um falha) quando a variável dada não foi definida ainda, isto pode ser útil quando trabalhar com elementos customizados e Shadow DOM.</p>
+Usando {{cssxref("var", "var()")}} você pode definir multiplos valores de fallback (quando um falha) quando a variável dada não foi definida ainda, isto pode ser útil quando trabalhar com elementos customizados e Shadow DOM.
 
-<p>O primeiro argumento para a função é o nome da propriedade customizada para ser subistituida.</p>
+O primeiro argumento para a função é o nome da propriedade customizada para ser subistituida.
 
-<h2 id="Problemas_a_serem_resolvidos">Problemas a serem resolvidos</h2>
+## Problemas a serem resolvidos
 
-<p>Ao construir sites de grande porte, geralmente os autores têm problemas relacionados à manutenção do CSS. Nestes sites o tamanho do CSS costuma ser consideravel e muitas informações podem ser repetidas em vários lugares. Por exemplo, manter um esquema de cor coerente em um documento requer a reutilização de algumas cores em inúmeras posições nos arquivos CSS. Destas forma modificar o esquema de cores se torna uma tarefa complexa pois nem sempre um simples "Buscar e substituir" é o suficiente.</p>
+Ao construir sites de grande porte, geralmente os autores têm problemas relacionados à manutenção do CSS. Nestes sites o tamanho do CSS costuma ser consideravel e muitas informações podem ser repetidas em vários lugares. Por exemplo, manter um esquema de cor coerente em um documento requer a reutilização de algumas cores em inúmeras posições nos arquivos CSS. Destas forma modificar o esquema de cores se torna uma tarefa complexa pois nem sempre um simples "Buscar e substituir" é o suficiente.
 
-<p>A situação se agrava com <a href="http://pt.wikipedia.org/wiki/Frameworks_CSS">Frameworks CSS</a>, onde uma pequena mudança de cores requer a edição do framework em si. Pré-processadores como LESS e SASS são muito úteis nestas situações, mas podem aumentar a complexidade do projeto, pois adiciona um passo extra de processamento. Variáveis CSS ajudam ao agregar alguns benefícios de um pré-processador, sem a necessidade de compilação.</p>
+A situação se agrava com [Frameworks CSS](http://pt.wikipedia.org/wiki/Frameworks_CSS), onde uma pequena mudança de cores requer a edição do framework em si. Pré-processadores como LESS e SASS são muito úteis nestas situações, mas podem aumentar a complexidade do projeto, pois adiciona um passo extra de processamento. Variáveis CSS ajudam ao agregar alguns benefícios de um pré-processador, sem a necessidade de compilação.
 
-<p>Uma segunda vantagem destas variáveis é a informação semântica que elas carregam em seu nome. Os arquivos CSS se tornam mais fáceis de serem lidos e compreendidos: <code>cor-principal-texto</code> é de mais fácil entendimento e re-uso que #00ff00, especialmente se a mesma cor for usada em outro contexto.</p>
+Uma segunda vantagem destas variáveis é a informação semântica que elas carregam em seu nome. Os arquivos CSS se tornam mais fáceis de serem lidos e compreendidos: `cor-principal-texto` é de mais fácil entendimento e re-uso que #00ff00, especialmente se a mesma cor for usada em outro contexto.
 
-<h2 id="Como_Variáveis_CSS_podem_ajudar">Como Variáveis CSS podem ajudar</h2>
+## Como Variáveis CSS podem ajudar
 
-<p>Em linguagens de programação imperativas, como Java, C++ ou mesmo JavaScript, o estado pode ser [do programa] rastreado através da noção de variáveis. Variáveis são nomes simbólicos que guardam um valor atribuído que pode variar com o tempo.</p>
+Em linguagens de programação imperativas, como Java, C++ ou mesmo JavaScript, o estado pode ser \[do programa] rastreado através da noção de variáveis. Variáveis são nomes simbólicos que guardam um valor atribuído que pode variar com o tempo.
 
-<p>Em linguagens declarativas como CSS, valores que mudam com o tempo não são comuns e o conceito de variáveis também.</p>
+Em linguagens declarativas como CSS, valores que mudam com o tempo não são comuns e o conceito de variáveis também.
 
-<p>Porém, o CSS introduz a noção de "variáveis em cascata" para ajudar a solucionar o desafio da manutenção do código. Isto permite a referência simbólica a um valor em toda a árvore do CSS.</p>
+Porém, o CSS introduz a noção de "variáveis em cascata" para ajudar a solucionar o desafio da manutenção do código. Isto permite a referência simbólica a um valor em toda a árvore do CSS.
 
-<h2 id="O_que_são_Variáveis_CSS">O que são Variáveis CSS</h2>
+## O que são Variáveis CSS
 
-<p>Variáveis CSS atualmente têm duas formas:</p>
+Variáveis CSS atualmente têm duas formas:
 
-<ul>
- <li>variáveis, que são uma associação entre um indentificador e um valor que pode ser usado em substituição a valores comuns, usando a notação funcional <code>var(): var(--variavel-exemplo) </code>retorna o valor de <code>--variavel-exemplo</code>.</li>
- <li>propriedades customizadas, que são propriedades especiais na forma de <code>--* </code>onde * representa o nome da variável. Estas variáveis são usadas para definir os valores de uma certa variável: <code>--variavel-exemplo: 20px;</code> é uma declaração CSS, usando a propriedade customizada <code>--*</code> para definir o valor da variável CSS <code>--variavel-exemplo</code> para <code>20px</code>.</li>
-</ul>
+- variáveis, que são uma associação entre um indentificador e um valor que pode ser usado em substituição a valores comuns, usando a notação funcional `var(): var(--variavel-exemplo) `retorna o valor de `--variavel-exemplo`.
+- propriedades customizadas, que são propriedades especiais na forma de `--* `onde \* representa o nome da variável. Estas variáveis são usadas para definir os valores de uma certa variável: `--variavel-exemplo: 20px;` é uma declaração CSS, usando a propriedade customizada `--*` para definir o valor da variável CSS `--variavel-exemplo` para `20px`.
 
-<div class="note"><strong>Nota:</strong> O prefixo de propriedade customizada era <code>var-</code> na especificação anterior, porém mudou posteriormente para <code>--</code>. O Firefox 31 e superior seguem a nova especificação. ({{ bug(985838) }})</div>
+> **Note:** **Nota:** O prefixo de propriedade customizada era `var-` na especificação anterior, porém mudou posteriormente para `--`. O Firefox 31 e superior seguem a nova especificação. ({{ bug(985838) }})
 
-<p>Propriedades customizadas são similares a propriedades comuns: elas estão sujeitas ao "efeito cascata" e herdam seu valor da propriedade pai se não forem redefinidas.</p>
+Propriedades customizadas são similares a propriedades comuns: elas estão sujeitas ao "efeito cascata" e herdam seu valor da propriedade pai se não forem redefinidas.
 
-<h2 id="Primeiros_passos_com_Variáveis_CSS">Primeiros passos com Variáveis CSS</h2>
+## Primeiros passos com Variáveis CSS
 
-<p>Vamos começar com este simples CSS que colore elementos de diferentes classes com a mesma cor:</p>
+Vamos começar com este simples CSS que colore elementos de diferentes classes com a mesma cor:
 
-<div id="sample1">
-<pre class="brush:css; highlight:[3,20,26,32]">.one {
+```css
+.one {
   color: white;
   background-color: brown;
   margin: 10px;
@@ -223,28 +231,27 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 .five {
   background-color: brown;
 }
+```
 
-</pre>
+Aplicaremos neste HTML:
 
-<p>Aplicaremos neste HTML:</p>
-
-<pre class="brush:html">&lt;div&gt;
-    &lt;div class="one"&gt;&lt;/div&gt;
-    &lt;div class="two"&gt;Texto &lt;span class="five"&gt;- mais texto&lt;/span&gt;&lt;/div&gt;
-    &lt;input class="three"&gt;
-    &lt;textarea class="four"&gt;Lorem Ipsum&lt;/textarea&gt;
-&lt;/div&gt;
-</pre>
-
-<p>que resultará em:</p>
-
-<p>{{EmbedLiveSample("sample1",600,180)}}</p>
+```html
+<div>
+    <div class="one"></div>
+    <div class="two">Texto <span class="five">- mais texto</span></div>
+    <input class="three">
+    <textarea class="four">Lorem Ipsum</textarea>
 </div>
+```
 
-<p>Perceba a repetição no CSS. A cor do background foi definida como marrom em diversos lugares. Para algumas declarações CSS é possível declarar isto em um elemento superior na cascata e deixar a propriedade ser herdada para resolver o problema. Porém em alguns projetos, isto nem sempre é possível. Ao declarar uma variável na pseudo-classe :root, o autor do CSS pode eliminar algumas repetições utilizando uma variável.</p>
+que resultará em:
 
-<div id="sample2">
-<pre class="brush:css">:root {
+{{EmbedLiveSample("sample1",600,180)}}
+
+Perceba a repetição no CSS. A cor do background foi definida como marrom em diversos lugares. Para algumas declarações CSS é possível declarar isto em um elemento superior na cascata e deixar a propriedade ser herdada para resolver o problema. Porém em alguns projetos, isto nem sempre é possível. Ao declarar uma variável na pseudo-classe :root, o autor do CSS pode eliminar algumas repetições utilizando uma variável.
+
+```css
+:root {
   --main-bg-color: brown;
 }
 
@@ -281,66 +288,60 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 .five {
   background-color:  var(--main-bg-color);
 }
+```
 
-</pre>
-
-<div class="hidden">
-<pre class="brush:html">&lt;div&gt;
-    &lt;div class="one"&gt;&lt;/div&gt;
-    &lt;div class="two"&gt;Text &lt;span class="five"&gt;- more text&lt;/span&gt;&lt;/div&gt;
-    &lt;input class="three"&gt;
-    &lt;textarea class="four"&gt;Lorem Ipsum&lt;/textarea&gt;
-&lt;/div&gt;
-</pre>
+```html hidden
+<div>
+    <div class="one"></div>
+    <div class="two">Text <span class="five">- more text</span></div>
+    <input class="three">
+    <textarea class="four">Lorem Ipsum</textarea>
 </div>
+```
 
-<p>Isto leva ao mesmo resultado dos exemplos anteriores e ainda permite a declaração da propriedade em um só lugar.</p>
+Isto leva ao mesmo resultado dos exemplos anteriores e ainda permite a declaração da propriedade em um só lugar.
 
-<h2 id="Hierarquia_das_Variáveis_CSS">Hierarquia das Variáveis CSS</h2>
+## Hierarquia das Variáveis CSS
 
-<p>Propriedades customizadas herdam os valores. Isto significa que, se nenhum valor for declarado para uma propriedade customizada em um dado elemento, o valor do elemento pai é usado:</p>
+Propriedades customizadas herdam os valores. Isto significa que, se nenhum valor for declarado para uma propriedade customizada em um dado elemento, o valor do elemento pai é usado:
 
-<pre class="brush: html">&lt;div class="one"&gt;
-  &lt;div class="two"&gt;
-    &lt;div class="three"&gt;
-    &lt;/div&gt;
-    &lt;div class="four"&gt;
-    &lt;/div&gt;
-  &lt;div&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="one">
+  <div class="two">
+    <div class="three">
+    </div>
+    <div class="four">
+    </div>
+  <div>
 </div>
+```
 
-<p>com o seguinte CSS:</p>
+com o seguinte CSS:
 
-<pre class="brush: css">.two { --test: 10px; }
+```css
+.two { --test: 10px; }
 .three { --test: 2em; }
-</pre>
+```
 
-<p>Neste caso o valor de <code>var(--test)</code> são:</p>
+Neste caso o valor de `var(--test)` são:
 
-<ul>
- <li>para o elemento <code>class="two"</code>: <code>10px</code></li>
- <li>para o elemento <code>class="three"</code>: <code>2em</code></li>
- <li>para o elemento <code>class="four"</code>: <code>10px</code> (herdado do elemento pai)</li>
- <li>para o elemento <code>class="one"</code>: <em>valor inválido</em>, que é o valor padrão de qualquer propriedade customizada.</li>
-</ul>
+- para o elemento `class="two"`: `10px`
+- para o elemento `class="three"`: `2em`
+- para o elemento `class="four"`: `10px` (herdado do elemento pai)
+- para o elemento `class="one"`: _valor inválido_, que é o valor padrão de qualquer propriedade customizada.
 
-<h2 id="Validade_e_valores">Validade e valores</h2>
+## Validade e valores
 
-<p>O conceito clássico de validade, ligado a cada propriedade, não é muito útil em relação a propriedades customizadas. Quando os valores das propriedades customizadas são analizados, o <em>browser </em>não sabe onde a mesma será usada, logo, deve considerar quase todos os valores como <em>válidos</em>.</p>
+O conceito clássico de validade, ligado a cada propriedade, não é muito útil em relação a propriedades customizadas. Quando os valores das propriedades customizadas são analizados, o _browser_ não sabe onde a mesma será usada, logo, deve considerar quase todos os valores como _válidos_.
 
-<p>Infelizmente estes valores podem ser usados, via a notação funcional <code>var(),</code> em um contexto em que não façam sentido. Propriedades e variáveis customizadas podem levar a declações CSS inválidas, criando um novo conceito de <em>válido no momento da computação</em>.<em> </em></p>
+Infelizmente estes valores podem ser usados, via a notação funcional `var(),` em um contexto em que não façam sentido. Propriedades e variáveis customizadas podem levar a declações CSS inválidas, criando um novo conceito de _válido no momento da computação_.\_\_
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("css.properties.custom-property")}}</p>
+{{Compat("css.properties.custom-property")}}
 
-<div class="note">
-<p><strong>Note:</strong> The custom property prefix was <code>var-</code> in the earlier spec, but later changed to <code>--</code>. Firefox 31 and above follow the new spec. ({{bug(985838)}})</p>
-</div>
+> **Note:** The custom property prefix was `var-` in the earlier spec, but later changed to `--`. Firefox 31 and above follow the new spec. ({{bug(985838)}})
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("--*", "Custom properties")}}</li>
-</ul>
+- {{cssxref("--*", "Custom properties")}}

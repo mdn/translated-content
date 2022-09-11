@@ -8,17 +8,16 @@ tags:
   - Referencia
 translation_of: Web/CSS/align-items
 ---
-<p>A propriedade <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>align-items</code></strong> estabelece o valor {{cssxref("align-self")}} em todos filhos diretos como um grupo. A propriedade align-self estabelece o alinhamento de um certo item dentro do bloco que o contém. Em Flexbox ele controla o alinhamento dos itens em {{glossary("Cross Axis")}}, enquanto que no Grid Layout, controla o alinhamento dos itens no Eixo de Bloco dentro de sua  <a href="/en-US/docs/Glossary/Grid_Areas">grid area</a>.</p>
+A propriedade [CSS](/pt-BR/docs/Web/CSS) **`align-items`** estabelece o valor {{cssxref("align-self")}} em todos filhos diretos como um grupo. A propriedade align-self estabelece o alinhamento de um certo item dentro do bloco que o contém. Em Flexbox ele controla o alinhamento dos itens em {{glossary("Cross Axis")}}, enquanto que no Grid Layout, controla o alinhamento dos itens no Eixo de Bloco dentro de sua [grid area](/pt-BR/docs/Glossary/Grid_Areas).
 
-<p>O exemplo interativo abaixo demonstra alguns dos valores para <code>align-items</code> usando grid layout.</p>
+O exemplo interativo abaixo demonstra alguns dos valores para `align-items` usando grid layout.
 
-<div>{{EmbedInteractiveExample("pages/css/align-items.html")}}</div>
+{{EmbedInteractiveExample("pages/css/align-items.html")}}
 
+## Sintaxe
 
-
-<h2 id="Sintaxe">Sintaxe</h2>
-
-<pre class="brush:css no-line-numbers">/* Palavras-chave básicas */
+```css
+/* Palavras-chave básicas */
 align-items: normal;
 align-items: stretch;
 
@@ -43,59 +42,62 @@ align-items: unsafe center;
 align-items: inherit;
 align-items: initial;
 align-items: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>O efeito desta palavra-chave depende do modo de layout em que nos encontramos:
- <ul>
-  <li>Em layouts absolutamente posicionados, a palavra-chave se comporta como <code>start</code> em <em>replaced</em> de caixas absolutamente posicionadas, e como <code>stretch</code> em <em>all others</em> de caixas absolutamente posicionadas.</li>
-  <li>Em posição estática de layouts absolutamente posicionados, a palavra-chave se comporta como <code>stretch</code>.</li>
-  <li>Para itens-flex, a palavra chave se comporto como <code>stretch</code>.</li>
-  <li>Para itens-grid, esta palavra-chave leva a um comportamento similiar ao <code>stretch</code>, exceto para caixas com um aspect ratio ou tamanhos intrínsecos, onde se comporta como <code>start</code>.</li>
-  <li>A propriedade não se aplica para caixas block-level, e para células de tabela.</li>
- </ul>
- </dd>
- <dt><code>flex-start</code></dt>
- <dd>As bordas da margem superior dos itens-flex são juntados com a borda superior da linha.</dd>
- <dt><code>flex-end</code></dt>
- <dd>As bordas da margem inferior dos itens flex são juntados com a borda inferior da linha.</dd>
- <dt><code>center</code></dt>
- <dd>As caixas de margem dos itens flex são centralizados ao longo da linha do eixo. Caso o tamanho de um item seja superior ao container flex, irá transbordar de maneira igual em ambas direções.</dd>
- <dt><code>start</code></dt>
- <dd>Os itens são posicionados, para cada um, em direção a borda início do container de alinhamento no eixo apropriado. </dd>
- <dt><code>end</code></dt>
- <dd>Os itens são posicionados, para cada um, em direção a borda fim do container de alinhamento no eixo apropriado.</dd>
- <dt><code>self-start</code></dt>
- <dd>Os itens são posicionados para a borda do container de alinhamento do lado inicial do item, no eixo apropriado.</dd>
- <dt><code>self-end</code></dt>
- <dd>Os itens são posicionados para a borda do container de alinhamento do lado final do item, no eixo apropriado.</dd>
-</dl>
+- `normal`
 
-<dl>
- <dt><code>baseline</code></dt>
- <dt><code>first baseline</code></dt>
- <dt><code>last baseline</code></dt>
- <dd>Todos itens-flex são alinhados de tal forma que suas  <a href="https://drafts.csswg.org/css-flexbox-1/#flex-baselines" rel="external">baselines de container flex</a> estejam alinhados. O item com a maior distância entre o eixo de início de sua margem e sua baseline é juntado com eixo de início da linha.</dd>
- <dt><code>stretch</code></dt>
- <dd>Itens-flex são esticados de tal maneira que o tamanho da caixa de margem do item seja o mesmo da linha, respeitando as restrições de comprimento e altura.</dd>
- <dt><code>safe</code></dt>
- <dd>Usado em conjunto com uma palavra-chave de alinhamento. Se a palavra-chave escolhida signifique que o item transborde o alinhamento do container, causando assim perda de dados, o item é alinhado como estivesse no modo <code>start</code>.</dd>
- <dt><code>unsafe</code></dt>
- <dd>Usado em conjunto com uma palavra-chave de alinhamento. Independente dos tamanhos relativos do item, do alinhamento do container e caso overflow possa causar perda de dados, o valor de alinhamento estabelecido é mantido.</dd>
-</dl>
+  - : O efeito desta palavra-chave depende do modo de layout em que nos encontramos:
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+    - Em layouts absolutamente posicionados, a palavra-chave se comporta como `start` em _replaced_ de caixas absolutamente posicionadas, e como `stretch` em _all others_ de caixas absolutamente posicionadas.
+    - Em posição estática de layouts absolutamente posicionados, a palavra-chave se comporta como `stretch`.
+    - Para itens-flex, a palavra chave se comporto como `stretch`.
+    - Para itens-grid, esta palavra-chave leva a um comportamento similiar ao `stretch`, exceto para caixas com um aspect ratio ou tamanhos intrínsecos, onde se comporta como `start`.
+    - A propriedade não se aplica para caixas block-level, e para células de tabela.
+
+- `flex-start`
+  - : As bordas da margem superior dos itens-flex são juntados com a borda superior da linha.
+- `flex-end`
+  - : As bordas da margem inferior dos itens flex são juntados com a borda inferior da linha.
+- `center`
+  - : As caixas de margem dos itens flex são centralizados ao longo da linha do eixo. Caso o tamanho de um item seja superior ao container flex, irá transbordar de maneira igual em ambas direções.
+- `start`
+  - : Os itens são posicionados, para cada um, em direção a borda início do container de alinhamento no eixo apropriado.
+- `end`
+  - : Os itens são posicionados, para cada um, em direção a borda fim do container de alinhamento no eixo apropriado.
+- `self-start`
+  - : Os itens são posicionados para a borda do container de alinhamento do lado inicial do item, no eixo apropriado.
+- `self-end`
+  - : Os itens são posicionados para a borda do container de alinhamento do lado final do item, no eixo apropriado.
+
+<!---->
+
+- `baseline`
+
+  `first baseline`
+
+  `last baseline`
+
+  - : Todos itens-flex são alinhados de tal forma que suas [baselines de container flex](https://drafts.csswg.org/css-flexbox-1/#flex-baselines) estejam alinhados. O item com a maior distância entre o eixo de início de sua margem e sua baseline é juntado com eixo de início da linha.
+
+- `stretch`
+  - : Itens-flex são esticados de tal maneira que o tamanho da caixa de margem do item seja o mesmo da linha, respeitando as restrições de comprimento e altura.
+- `safe`
+  - : Usado em conjunto com uma palavra-chave de alinhamento. Se a palavra-chave escolhida signifique que o item transborde o alinhamento do container, causando assim perda de dados, o item é alinhado como estivesse no modo `start`.
+- `unsafe`
+  - : Usado em conjunto com uma palavra-chave de alinhamento. Independente dos tamanhos relativos do item, do alinhamento do container e caso overflow possa causar perda de dados, o valor de alinhamento estabelecido é mantido.
+
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight[4]">#container {
+```css
+#container {
   height:200px;
   width: 240px;
   align-items: center; /* Pode ser mudado na amostra ao vivo */
@@ -112,7 +114,7 @@ align-items: unset;
   grid-template-columns: repeat(auto-fill, 50px);
 }
 
-div &gt; div {
+div > div {
   box-sizing: border-box;
   border: 2px solid #8c8c8c;
   width: 50px;
@@ -158,65 +160,65 @@ select {
 
 .row {
   margin-top: 10px;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="container" class="flex"&gt;
-  &lt;div id="item1"&gt;1&lt;/div&gt;
-  &lt;div id="item2"&gt;2&lt;/div&gt;
-  &lt;div id="item3"&gt;3&lt;/div&gt;
-  &lt;div id="item4"&gt;4&lt;/div&gt;
-  &lt;div id="item5"&gt;5&lt;/div&gt;
-  &lt;div id="item6"&gt;6&lt;/div&gt;
-&lt;/div&gt;
+```html
+<div id="container" class="flex">
+  <div id="item1">1</div>
+  <div id="item2">2</div>
+  <div id="item3">3</div>
+  <div id="item4">4</div>
+  <div id="item5">5</div>
+  <div id="item6">6</div>
+</div>
 
-&lt;div class="row"&gt;
-  &lt;label for="display"&gt;display: &lt;/label&gt;
-  &lt;select id="display"&gt;
-    &lt;option value="flex"&gt;flex&lt;/option&gt;
-    &lt;option value="grid"&gt;grid&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;
+<div class="row">
+  <label for="display">display: </label>
+  <select id="display">
+    <option value="flex">flex</option>
+    <option value="grid">grid</option>
+  </select>
+</div>
 
-&lt;div class="row"&gt;
-  &lt;label for="values"&gt;align-items: &lt;/label&gt;
-  &lt;select id="values"&gt;
-    &lt;option value="normal"&gt;normal&lt;/option&gt;
-    &lt;option value="flex-start"&gt;flex-start&lt;/option&gt;
-    &lt;option value="flex-end"&gt;flex-end&lt;/option&gt;
-    &lt;option value="center" selected&gt;center&lt;/option&gt;
-    &lt;option value="baseline"&gt;baseline&lt;/option&gt;
-    &lt;option value="stretch"&gt;stretch&lt;/option&gt;
+<div class="row">
+  <label for="values">align-items: </label>
+  <select id="values">
+    <option value="normal">normal</option>
+    <option value="flex-start">flex-start</option>
+    <option value="flex-end">flex-end</option>
+    <option value="center" selected>center</option>
+    <option value="baseline">baseline</option>
+    <option value="stretch">stretch</option>
 
-    &lt;option value="start"&gt;start&lt;/option&gt;
-    &lt;option value="end"&gt;end&lt;/option&gt;
-    &lt;option value="self-start"&gt;self-start&lt;/option&gt;
-    &lt;option value="self-end"&gt;self-end&lt;/option&gt;
-    &lt;option value="left"&gt;left&lt;/option&gt;
-    &lt;option value="right"&gt;right&lt;/option&gt;
+    <option value="start">start</option>
+    <option value="end">end</option>
+    <option value="self-start">self-start</option>
+    <option value="self-end">self-end</option>
+    <option value="left">left</option>
+    <option value="right">right</option>
 
-    &lt;option value="first baseline"&gt;first baseline&lt;/option&gt;
-    &lt;option value="last baseline"&gt;last baseline&lt;/option&gt;
+    <option value="first baseline">first baseline</option>
+    <option value="last baseline">last baseline</option>
 
-    &lt;option value="safe center"&gt;safe center&lt;/option&gt;
-    &lt;option value="unsafe center"&gt;unsafe center&lt;/option&gt;
-    &lt;option value="safe right"&gt;safe right&lt;/option&gt;
-    &lt;option value="unsafe right"&gt;unsafe right&lt;/option&gt;
-    &lt;option value="safe end"&gt;safe end&lt;/option&gt;
-    &lt;option value="unsafe end"&gt;unsafe end&lt;/option&gt;
-    &lt;option value="safe self-end"&gt;safe self-end&lt;/option&gt;
-    &lt;option value="unsafe self-end"&gt;unsafe self-end&lt;/option&gt;
-    &lt;option value="safe flex-end"&gt;safe flex-end&lt;/option&gt;
-    &lt;option value="unsafe flex-end"&gt;unsafe flex-end&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;
-</pre>
+    <option value="safe center">safe center</option>
+    <option value="unsafe center">unsafe center</option>
+    <option value="safe right">safe right</option>
+    <option value="unsafe right">unsafe right</option>
+    <option value="safe end">safe end</option>
+    <option value="unsafe end">unsafe end</option>
+    <option value="safe self-end">safe self-end</option>
+    <option value="unsafe self-end">unsafe self-end</option>
+    <option value="safe flex-end">safe flex-end</option>
+    <option value="unsafe flex-end">unsafe flex-end</option>
+  </select>
+</div>
+```
 
-<div class="hidden">
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js">var values = document.getElementById('values');
+```js hidden
+var values = document.getElementById('values');
 var display = document.getElementById('display');
 var container = document.getElementById('container');
 
@@ -227,59 +229,37 @@ values.addEventListener('change', function (evt) {
 display.addEventListener('change', function (evt) {
   container.className = evt.target.value;
 });
-</pre>
-</div>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample("Example", "260px", "290px")}}</p>
+{{EmbedLiveSample("Example", "260px", "290px")}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Box Alignment", "#propdef-align-items", "align-items")}}</td>
-   <td>{{Spec2("CSS3 Box Alignment")}}</td>
-   <td>Atualização para últimas definições de sintaxe.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#propdef-align-items', 'align-items')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                    | Status                                   | Comentário                                      |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------- |
+| {{SpecName("CSS3 Box Alignment", "#propdef-align-items", "align-items")}} | {{Spec2("CSS3 Box Alignment")}} | Atualização para últimas definições de sintaxe. |
+| {{SpecName('CSS3 Flexbox', '#propdef-align-items', 'align-items')}}         | {{Spec2('CSS3 Flexbox')}}         | Definição inicial                               |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+### Support in Flex layout
 
+{{Compat("css.properties.align-items.flex_context")}}
 
-<h3 id="Support_in_Flex_layout">Support in Flex layout</h3>
+### Support in Grid layout
 
-<p>{{Compat("css.properties.align-items.flex_context")}}</p>
+{{Compat("css.properties.align-items.grid_context")}}
 
-<h3 id="Support_in_Grid_layout">Support in Grid layout</h3>
+## Veja também
 
-<p>{{Compat("css.properties.align-items.grid_context")}}</p>
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Aligning items in a flex container](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- [CSS Box Alignment](/pt-BR/docs/Web/CSS/CSS_Box_Alignment)
+- The {{cssxref("align-self")}} property
 
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning items in a flex container</a></em></li>
- <li>CSS Grid Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in CSS Grid layouts</a></em></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">CSS Box Alignment</a></li>
- <li>The {{cssxref("align-self")}} property</li>
-</ul>
-
-<div>{{CSSRef}}</div>
+{{CSSRef}}

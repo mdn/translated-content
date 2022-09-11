@@ -3,115 +3,85 @@ title: scrollbar-color
 slug: Web/CSS/scrollbar-color
 translation_of: Web/CSS/scrollbar-color
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>A propriedade <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>scrollbar-color</code></strong> define as cores da barra de rolagem do navegador.</p>
+A propriedade [CSS](/pt-BR/docs/Web/CSS) **`scrollbar-color`** define as cores da barra de rolagem do navegador.
 
-<p><strong>Track</strong> refere-se ao fundo da barra de rolagem, que normalmente é fixa, independente da posição da página.</p>
+**Track** refere-se ao fundo da barra de rolagem, que normalmente é fixa, independente da posição da página.
 
-<p><strong>Thumb</strong> refere-se a parte móvel da barra de rolagem, um botão auxiliar que flutua acima da <strong>Track</strong>.</p>
+**Thumb** refere-se a parte móvel da barra de rolagem, um botão auxiliar que flutua acima da **Track**.
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush: css">/* Palavras reservadas */
+```css
+/* Palavras reservadas */
 scrollbar-color: auto;
 scrollbar-color: dark;
 scrollbar-color: light;
 
-/* Nomes de &lt;color&gt; */
+/* Nomes de <color> */
 scrollbar-color: rebeccapurple green;   /* Duas cores válidas.
-O primeiro valor aplica-se ao <strong>Thumb</strong>, o segundo ao <strong>Track </strong>*/
+O primeiro valor aplica-se ao Thumb, o segundo ao Track */
 
 /* Valores globais */
 scrollbar-color: inherit;
 scrollbar-color: initial;
 scrollbar-color: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>&lt;scrollbar-color&gt;</code></dt>
- <dd>Define a cor da scrollbar.
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td><code>auto</code></td>
-    <td>
-     <p>Valor padrão de renderização do background da scrollbar (Track), caso não sejam definidos outros valores.</p>
-    </td>
-   </tr>
-   <tr>
-    <td><code>dark</code></td>
-    <td>
-     <p>Mostra uma scrollbar mais escura, podendo ser um estilo padrão definido pelo navegador, ou personalizado com cores escuras.</p>
-    </td>
-   </tr>
-   <tr>
-    <td><code>light</code></td>
-    <td>Mostra uma scrollbar mais clara, podendo ser um estilo padrão definido pelo navegador, ou personalizado com cores escuras.</td>
-   </tr>
-   <tr>
-    <td><code>&lt;color&gt; &lt;color&gt;</code></td>
-    <td>A primeira cor é aplicada à <strong>thumb</strong>, a segunda cor ao <strong>track</strong></td>
-   </tr>
-  </tbody>
- </table>
+- `<scrollbar-color>`
 
- <div class="note">
- <p><strong>Note</strong>: User Agents must apply any <code>scrollbar-color</code> value set on the root element to the viewport.</p>
- </div>
- </dd>
-</dl>
+  - : Define a cor da scrollbar.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+    | `auto`            | Valor padrão de renderização do background da scrollbar (Track), caso não sejam definidos outros valores.                   |
+    | ----------------- | --------------------------------------------------------------------------------------------------------------------------- |
+    | `dark`            | Mostra uma scrollbar mais escura, podendo ser um estilo padrão definido pelo navegador, ou personalizado com cores escuras. |
+    | `light`           | Mostra uma scrollbar mais clara, podendo ser um estilo padrão definido pelo navegador, ou personalizado com cores escuras.  |
+    | `<color> <color>` | A primeira cor é aplicada à **thumb**, a segunda cor ao **track**                                                           |
+
+    > **Note:** User Agents must apply any `scrollbar-color` value set on the root element to the viewport.
+
+### Sintaxe formal
 
 {{CSSSyntax}}
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">.scroller {
+```css
+.scroller {
   width: 300px;
   height: 100px;
   overflow-y: scroll;
   scrollbar-color: rebeccapurple green;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="scroller"&gt;Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.&lt;/div&gt;</pre>
+```html
+<div class="scroller">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</div>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<div>{{EmbedLiveSample("Example")}}</div>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Cuidados_de_acessibilidade">Cuidados de acessibilidade</h2>
+## Cuidados de acessibilidade
 
-<p>When using <code>scrollbar-color</code> property with specific color values, authors should ensure the specified colors have enough contrast between them. For keyword values, UAs should ensure the colors they use have enough contrast. See <a href="https://www.w3.org/TR/WCAG20-TECHS/G183.html">Techniques for WCAG 2.0: G183: Using a contrast ratio of 3:1</a>.</p>
+When using `scrollbar-color` property with specific color values, authors should ensure the specified colors have enough contrast between them. For keyword values, UAs should ensure the colors they use have enough contrast. See [Techniques for WCAG 2.0: G183: Using a contrast ratio of 3:1](https://www.w3.org/TR/WCAG20-TECHS/G183.html).
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Scrollbars", "#scrollbar-color", "scrollbar-color")}}</td>
-   <td>{{Spec2("CSS Scrollbars")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                               | Comment             |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName("CSS Scrollbars", "#scrollbar-color", "scrollbar-color")}} | {{Spec2("CSS Scrollbars")}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>{{Compat("css.properties.scrollbar-color")}}</div>
+{{Compat("css.properties.scrollbar-color")}}

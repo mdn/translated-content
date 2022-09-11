@@ -11,15 +11,16 @@ browser-compat: css.properties.backdrop-filter
 ---
 {{CSSRef}}
 
-<p>A propriedade <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>backdrop-filter</code></strong> permite que você aplique efeitos gráficos, como desfoque ou mudança de cores, na área ao fundo de um elemento. Como ela se aplica a tudo que fica <em>atrás</em> do elemento, é preciso deixá-lo (ou o seu plando de fundo) ao menos parcialmente transparente para poder ver o efeito em ação.</p>
+A propriedade [CSS](/pt-BR/docs/Web/CSS) **`backdrop-filter`** permite que você aplique efeitos gráficos, como desfoque ou mudança de cores, na área ao fundo de um elemento. Como ela se aplica a tudo que fica _atrás_ do elemento, é preciso deixá-lo (ou o seu plando de fundo) ao menos parcialmente transparente para poder ver o efeito em ação.
 
-<pre class="brush: css no-line-numbers">/* Valor de palavra-chave */
+```css
+/* Valor de palavra-chave */
 backdrop-filter: none;
 
 /* Filtro com URL para SVG */
 backdrop-filter: url(commonfilters.svg#filter);
 
-/* Valores &lt;filter-function&gt; */
+/* Valores <filter-function> */
 backdrop-filter: blur(2px);
 backdrop-filter: brightness(60%);
 backdrop-filter: contrast(40%);
@@ -38,33 +39,31 @@ backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%);
 backdrop-filter: inherit;
 backdrop-filter: initial;
 backdrop-filter: unset;
-</pre>
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Nenhum filtro é aplicado ao plano de fundo.</dd>
- <dt><code>&lt;filter-function-list&gt;</code></dt>
- <dd>Uma lista de {{cssxref("&lt;filter-function&gt;")}}s separadas por espaços ou um <a href="/en-US/docs/Web/SVG/Element/filter">filtro SVG</a> que será aplicado ao plano de fundo.</dd>
-</dl>
+- `none`
+  - : Nenhum filtro é aplicado ao plano de fundo.
+- `<filter-function-list>`
+  - : Uma lista de {{cssxref("&lt;filter-function&gt;")}}s separadas por espaços ou um [filtro SVG](/pt-BR/docs/Web/SVG/Element/filter) que será aplicado ao plano de fundo.
 
+## Definição formal
 
-<h2>Definição formal</h2>
+{{cssinfo}}
 
-<p>{{cssinfo}}</p>
-
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.box {
+```css
+.box {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
   font-family: sans-serif;
@@ -96,33 +95,31 @@ body {
   justify-content: center;
   height: 100%;
   width: 100%;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="container"&gt;
-  &lt;div class="box"&gt;
-    &lt;p&gt;backdrop-filter: blur(10px)&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="container">
+  <div class="box">
+    <p>backdrop-filter: blur(10px)</p>
+  </div>
+</div>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample("Example", 600, 400)}}</p>
+{{EmbedLiveSample("Example", 600, 400)}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat}}
 
+## Veja também
 
-<p>{{Compat}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{cssxref("filter")}}</li>
-</ul>
+- {{cssxref("filter")}}

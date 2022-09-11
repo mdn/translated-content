@@ -4,38 +4,42 @@ slug: Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 translation_of: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>Contadores CSS são em essência, as variáveis mantidas pelo CSS cujos valores podem ser incrementado por regras do CSS para controlar quantas vezes eles são usados.Isso permite ajustar a aparência do conteúdo com base na sua colocação no documento. contadores CSS são uma implementação de <a class="external" href="http://www.w3.org/TR/CSS21/generate.html#counters">Contadores automáticos e numeração </a>em CSS 2.1.</p>
+Contadores CSS são em essência, as variáveis mantidas pelo CSS cujos valores podem ser incrementado por regras do CSS para controlar quantas vezes eles são usados.Isso permite ajustar a aparência do conteúdo com base na sua colocação no documento. contadores CSS são uma implementação de [Contadores automáticos e numeração ](http://www.w3.org/TR/CSS21/generate.html#counters)em CSS 2.1.
 
-<p>O valor de um contador é manipulado através da utilização de  {{cssxref("counter-reset")}}. {{cssxref("counter-increment")}} pode ser exibido em uma página usando o <code>counter()</code> ou <code>counters()</code> função da propriedade de <code><a href="/en-US/docs/CSS/content" title="CSS/content">conteúdo</a></code>.</p>
+O valor de um contador é manipulado através da utilização de {{cssxref("counter-reset")}}. {{cssxref("counter-increment")}} pode ser exibido em uma página usando o `counter()` ou `counters()` função da propriedade de [`conteúdo`](/en-US/docs/CSS/content "CSS/content").
 
-<h2 id="Using_counters" name="Using_counters">Usando contadores</h2>
+## Usando contadores
 
-<p>Para usar um contador, tem quer definir um valor para ele (ele é 0 default). Para adicionar o valor do contador em um elemento, use a função <code>counter()</code>. O CSS abaixo adiciona "Section [o valor do contador]:" no início de cada elemento h3.</p>
+Para usar um contador, tem quer definir um valor para ele (ele é 0 default). Para adicionar o valor do contador em um elemento, use a função `counter()`. O CSS abaixo adiciona "Section \[o valor do contador]:" no início de cada elemento h3.
 
-<pre class="brush: css">body {
+```css
+body {
   counter-reset: section;                   /* Set the section counter to 0 */
 }
 h3::before {
   counter-increment: section;               /* Increment the section counter*/
   content: "Section" counter(section) ": "; /* Display the counter */
 }
-</pre>
+```
 
-<p>Exemplo:</p>
+Exemplo:
 
-<pre class="brush: html">&lt;h3&gt;Introduction&lt;/h3&gt;
-&lt;h3&gt;Body&lt;/h3&gt;
-&lt;h3&gt;Conclusion&lt;/h3&gt;</pre>
+```html
+<h3>Introduction</h3>
+<h3>Body</h3>
+<h3>Conclusion</h3>
+```
 
-<p>{{ EmbedLiveSample('Using_counters', 300,200) }}</p>
+{{ EmbedLiveSample('Using_counters', 300,200) }}
 
-<h2 id="Nesting_counters" name="Nesting_counters">Nesting counters</h2>
+## Nesting counters
 
-<p>Um contador CSS pode ser especialmente útil para fazer listas descritas porque uma nova instância de um contador CSS é criado automaticamente em elementos filho . Usando a função <code>counters()</code>, uma corda pode ser inserido entre diferentes níveis de contadores aninhados. Por exemplo, esta CSS :</p>
+Um contador CSS pode ser especialmente útil para fazer listas descritas porque uma nova instância de um contador CSS é criado automaticamente em elementos filho . Usando a função `counters()`, uma corda pode ser inserido entre diferentes níveis de contadores aninhados. Por exemplo, esta CSS :
 
-<pre class="brush: css">ol {
+```css
+ol {
   counter-reset: section;                /* Creates a new instance of the
                                             section counter with each ol
                                             element */
@@ -47,70 +51,57 @@ li::before {
   content: counters(section,".") " ";    /* Adds the value of all instances
                                             of the section counter separated
                                             by a ".". */
-                                         /* if you need to support &lt; IE8 then
+                                         /* if you need to support < IE8 then
                                             make sure there is no space after
                                             the ',' */
 }
-</pre>
+```
 
-<p>Combinado com o seguinte HTML:</p>
+Combinado com o seguinte HTML:
 
-<pre class="brush: html">&lt;ol&gt;
-  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 1     --&gt;
-  &lt;li&gt;item               &lt;!-- 2     --&gt;
-    &lt;ol&gt;
-      &lt;li&gt;item&lt;/li&gt;      &lt;!-- 2.1   --&gt;
-      &lt;li&gt;item&lt;/li&gt;      &lt;!-- 2.2   --&gt;
-      &lt;li&gt;item           &lt;!-- 2.3   --&gt;
-        &lt;ol&gt;
-          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.1 --&gt;
-          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.2 --&gt;
-        &lt;/ol&gt;
-        &lt;ol&gt;
-          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.1 --&gt;
-          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.2 --&gt;
-          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.3 --&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-      &lt;li&gt;item&lt;/li&gt;      &lt;!-- 2.4   --&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 3     --&gt;
-  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 4     --&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 1     --&gt;
-  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 2     --&gt;
-&lt;/ol&gt;</pre>
+```html
+<ol>
+  <li>item</li>          <!-- 1     -->
+  <li>item               <!-- 2     -->
+    <ol>
+      <li>item</li>      <!-- 2.1   -->
+      <li>item</li>      <!-- 2.2   -->
+      <li>item           <!-- 2.3   -->
+        <ol>
+          <li>item</li>  <!-- 2.3.1 -->
+          <li>item</li>  <!-- 2.3.2 -->
+        </ol>
+        <ol>
+          <li>item</li>  <!-- 2.3.1 -->
+          <li>item</li>  <!-- 2.3.2 -->
+          <li>item</li>  <!-- 2.3.3 -->
+        </ol>
+      </li>
+      <li>item</li>      <!-- 2.4   -->
+    </ol>
+  </li>
+  <li>item</li>          <!-- 3     -->
+  <li>item</li>          <!-- 4     -->
+</ol>
+<ol>
+  <li>item</li>          <!-- 1     -->
+  <li>item</li>          <!-- 2     -->
+</ol>
+```
 
-<p>Produz este resultado:</p>
+Produz este resultado:
 
-<p>{{ EmbedLiveSample('Nesting_counters',400,'100%') }}</p>
+{{ EmbedLiveSample('Nesting_counters',400,'100%') }}
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'generate.html#generate.html#counters', 'counter-reset')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                            | Status                   | Comment |
+| -------------------------------------------------------------------------------------------------------- | ------------------------ | ------- |
+| {{SpecName('CSS2.1', 'generate.html#generate.html#counters', 'counter-reset')}} | {{Spec2('CSS2.1')}} |         |
 
-<h2 id="See_also" name="See_also">Veja mais</h2>
+## Veja mais
 
-<ul>
- <li><a href="/en-US/docs/CSS/counter-reset" title="CSS/counter-reset">counter-reset</a></li>
- <li><a href="/en-US/docs/CSS/counter-increment" title="CSS/counter-increment">counter-increment</a></li>
-</ul>
+- [counter-reset](/pt-BR/docs/CSS/counter-reset "CSS/counter-reset")
+- [counter-increment](/pt-BR/docs/CSS/counter-increment "CSS/counter-increment")
 
-<p><em>There is an additional example available at <a class="external" href="http://www.mezzoblue.com/archives/2006/11/01/counter_intu/" rel="freelink">http://www.mezzoblue.com/archives/20.../counter_intu/</a>. This blog entry was posted on November 01, 2006, but appears to be accurate.</em></p>
+_There is an additional example available at [http://www.mezzoblue.com/archives/20.../counter_intu/](http://www.mezzoblue.com/archives/2006/11/01/counter_intu/). This blog entry was posted on November 01, 2006, but appears to be accurate._

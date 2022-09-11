@@ -8,38 +8,44 @@ tags:
   - Seletores
 translation_of: Web/CSS/Class_selectors
 ---
-<p>O <strong>seletor de classes</strong> <a href="/en-US/docs/CSS">CSS</a> corresponde aos elementos com base no conteúdo de seus atributos <code><a href="/pt-BR/docs/Web/HTML/Global_attributes#attr-class">class</a>.</code></p>
+O **seletor de classes** [CSS](/pt-BR/docs/CSS) corresponde aos elementos com base no conteúdo de seus atributos `class.`
 
-<pre class="brush: css">/* Todos os elementos com class="espaçoso" */
+```css
+/* Todos os elementos com class="espaçoso" */
 .espaçoso {
   margin: 2em;
 }
 
-/* Todos os elementos &lt;li&gt; com class="espaçoso" */
+/* Todos os elementos <li> com class="espaçoso" */
 li.espaçoso {
   margin: 2em;
 }
 
-/* Todos os elementos &lt;li&gt; cujo conteúdo do atributo class possua "espaçoso" e "elegante" */
+/* Todos os elementos <li> cujo conteúdo do atributo class possua "espaçoso" e "elegante" */
 /* Por exemplo, class="elegante antigo espaçoso" */
 li.espaçoso.elegante {
   margin: 2em;
 }
-</pre>
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">.classe_nome { <em>propriedades de estilo</em> }</pre>
+```
+.classe_nome { propriedades de estilo }
+```
 
-<p>Observe que isso é o mesmo que <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">seletor de atributo</a></code>:</p>
+Observe que isso é o mesmo que [`seletor de atributo`](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors):
 
-<pre class="syntaxbox">[classe~=classe_nome] { <em>propriedades de estilo</em>  }</pre>
+```
+[classe~=classe_nome] { propriedades de estilo  }
+```
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.vermelho {
+```css
+.vermelho {
   color: #f33;
 }
 
@@ -51,54 +57,30 @@ li.espaçoso.elegante {
   font-weight: bold;
   text-shadow: 4px 4px 3px #77f;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="vermelho"&gt;Este parágrafo tem o texto vermelho.&lt;/p&gt;
-&lt;p class="vermelho amarelo-bg"&gt;Este parágrafo possui texto em vermelho e fundo amarelo.&lt;/p&gt;
-&lt;p class="vermelho elegante"&gt;Este parágrafo possui texto em vermelho e uma propriedade de estilo "elegante".&lt;/p&gt;
-&lt;p&gt;Este é um parágrafo comum.&lt;/p&gt;
-</pre>
+```html
+<p class="vermelho">Este parágrafo tem o texto vermelho.</p>
+<p class="vermelho amarelo-bg">Este parágrafo possui texto em vermelho e fundo amarelo.</p>
+<p class="vermelho elegante">Este parágrafo possui texto em vermelho e uma propriedade de estilo "elegante".</p>
+<p>Este é um parágrafo comum.</p>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#class-html', 'class selectors')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Sem mudança</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#class-html', 'class selectors')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'selector.html#class-html', 'child selectors')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#class-as-selector', 'child selectors')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Status                               | Comentário        |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------- |
+| {{SpecName('CSS4 Selectors', '#class-html', 'class selectors')}}         | {{Spec2('CSS4 Selectors')}} | Sem mudança       |
+| {{SpecName('CSS3 Selectors', '#class-html', 'class selectors')}}         | {{Spec2('CSS3 Selectors')}} |                   |
+| {{SpecName('CSS2.1', 'selector.html#class-html', 'child selectors')}} | {{Spec2('CSS2.1')}}             |                   |
+| {{SpecName('CSS1', '#class-as-selector', 'child selectors')}}             | {{Spec2('CSS1')}}             | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("css.selectors.class")}}</p>
+{{Compat("css.selectors.class")}}

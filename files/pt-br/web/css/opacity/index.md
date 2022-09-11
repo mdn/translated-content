@@ -3,25 +3,28 @@ title: opacity
 slug: Web/CSS/opacity
 translation_of: Web/CSS/opacity
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>A propriedade CSS <strong>opacity</strong> especifica a transparência de um elemento, isto é, o grau no qual o background atrás do elemento é sobreposto.</p>
+A propriedade CSS **opacity** especifica a transparência de um elemento, isto é, o grau no qual o background atrás do elemento é sobreposto.
 
-<p>O valor aplica-se ao elemento como um todo, incluindo seu conteúdo, apesar de o valor não ser herdado por elementos filhos. Assim, um elemento e seus elementos filhos têm todos a mesma opacidade relativa ao background do elemento, mesmo se o elemento e seus elementos filhos tiverem opacidades diferentes entre si.</p>
+O valor aplica-se ao elemento como um todo, incluindo seu conteúdo, apesar de o valor não ser herdado por elementos filhos. Assim, um elemento e seus elementos filhos têm todos a mesma opacidade relativa ao background do elemento, mesmo se o elemento e seus elementos filhos tiverem opacidades diferentes entre si.
 
-<p>Se você <a href="http://stackoverflow.com/questions/13508877/resetting-the-opacity-of-a-child-elements-maple-browser-samsung-tv-app">não quer aplicar a opacidade ao elemento filho</a> - use isto:</p>
+Se você [não quer aplicar a opacidade ao elemento filho](http://stackoverflow.com/questions/13508877/resetting-the-opacity-of-a-child-elements-maple-browser-samsung-tv-app) - use isto:
 
-<pre class="brush:css">background: rgba(0, 0, 0, 0.4);</pre>
+```css
+background: rgba(0, 0, 0, 0.4);
+```
 
-<p>Usando essa propriedade com um valor diferente de 1, o elemento é colocado em um novo <a href="https://developer.mozilla.org/pt-BR/docs/Web/Guide/CSS/Understanding_z_index/O_contexto_de_empilhamento">contexto de empilhamento</a>.</p>
+Usando essa propriedade com um valor diferente de 1, o elemento é colocado em um novo [contexto de empilhamento](/pt-BR/docs/Web/Guide/CSS/Understanding_z_index/O_contexto_de_empilhamento).
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush:css">/* Totalmente opaco */
+```css
+/* Totalmente opaco */
 opacity: 1;
 opacity: 1.0;
 
@@ -36,45 +39,30 @@ opacity: 0;
 opacity: inherit;
 opacity: initial;
 opacity: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>&lt;number&gt;</code></dt>
- <dd><p>É um {{cssxref("number")}} no intervalo de 0.0 a 1.0, sendo estes incluídos, representando a opacidade do canal, que é o valor de seu canal alfa. Qualquer valor fora do intervalo, apesar de válido, é aproximado ao valor mais próximo dentro do intervalo.</p>
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <th>Valor</th>
-    <th>Significado</th>
-   </tr>
-   <tr>
-    <td><code>0</code></td>
-    <td>O elemento é totalmente transparente (isto é, invisível).</td>
-   </tr>
-   <tr>
-    <td>Qualquer {{cssxref("number")}} entre 0 e 1</td>
-    <td>O elemento é translúcido (isto é, o background é visível).</td>
-   </tr>
-   <tr>
-    <td><code>1</code></td>
-    <td>O elemento é totalmente opaco (sólido).</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
-</dl>
+- `<number>`
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+  - : É um {{cssxref("number")}} no intervalo de 0.0 a 1.0, sendo estes incluídos, representando a opacidade do canal, que é o valor de seu canal alfa. Qualquer valor fora do intervalo, apesar de válido, é aproximado ao valor mais próximo dentro do intervalo.
+
+    | Valor                                             | Significado                                                |
+    | ------------------------------------------------- | ---------------------------------------------------------- |
+    | `0`                                               | O elemento é totalmente transparente (isto é, invisível).  |
+    | Qualquer {{cssxref("number")}} entre 0 e 1 | O elemento é translúcido (isto é, o background é visível). |
+    | `1`                                               | O elemento é totalmente opaco (sólido).                    |
+
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Exemplo_básico">Exemplo básico</h3>
+### Exemplo básico
 
-<pre class="brush: css">div { background-color: yellow; }
+```css
+div { background-color: yellow; }
 .light {
   opacity: 0.2; /* Mal consegue ver o texto acima do background */
 }
@@ -84,18 +72,20 @@ opacity: unset;
 .heavy {
   opacity: 0.9; /* Vê o texto muito claramente acima do background */
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="light"&gt;Você mal vê isso.&lt;/div&gt;
-&lt;div class="medium"&gt;Isso é mais fácil de ver.&lt;/div&gt;
-&lt;div class="heavy"&gt;Isso é muito fácil de ver.&lt;/div&gt;
-</pre>
+```html
+<div class="light">Você mal vê isso.</div>
+<div class="medium">Isso é mais fácil de ver.</div>
+<div class="heavy">Isso é muito fácil de ver.</div>
+```
 
-<p>{{EmbedLiveSample('Basic_example', '640', '64')}}</p>
+{{EmbedLiveSample('Basic_example', '640', '64')}}
 
-<h3 id="Opacidade_diferente_com_hover">Opacidade diferente com <code>:hover</code></h3>
+### Opacidade diferente com `:hover`
 
-<pre class="brush: css">img.opacity {
+```css
+img.opacity {
   opacity: 1;
   filter: alpha(opacity=100); /* IE8 e anteriores */
   zoom: 1; /* Ativa "hasLayout" no IE 7 e anteriores */
@@ -105,46 +95,28 @@ img.opacity:hover {
   opacity: 0.5;
   filter: alpha(opacity=50);
   zoom: 1;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;img src="//developer.mozilla.org/media/img/mdn-logo.png"
+```html
+<img src="//developer.mozilla.org/media/img/mdn-logo.png"
      alt="MDN logo" width="128" height="146"
-     class="opacity"&gt;
+     class="opacity">
+```
 
-</pre>
+{{EmbedLiveSample('Different_opacity_with_hover', '150', '175')}}
 
-<p>{{EmbedLiveSample('Different_opacity_with_hover', '150', '175')}}</p>
+## Especificações
 
-<h2 id="Especificações">Especificações</h2>
+| Especificação                                                                        | Status                                   | Comentário                    |
+| ------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------- |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'opacity')}} | {{Spec2('CSS3 Transitions')}} | Define opacity como animável. |
+| {{SpecName('CSS3 Colors', '#opacity', 'opacity')}}                 | {{Spec2('CSS3 Colors')}}         | Definição inicial.            |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'opacity')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Define opacity como animável.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Colors', '#opacity', 'opacity')}}</td>
-   <td>{{Spec2('CSS3 Colors')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.properties.opacity")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="http://msdn.microsoft.com/en-us/library/ms532910%28VS.85%29.aspx">MSDN Microsoft's filter:alpha(opacity=xx)</a></li>
-</ul>
+- [MSDN Microsoft's filter:alpha(opacity=xx)](http://msdn.microsoft.com/en-us/library/ms532910%28VS.85%29.aspx)

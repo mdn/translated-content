@@ -13,17 +13,18 @@ tags:
 translation_of: Web/CSS/mask
 original_slug: mask
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>A propriedade máscara no CSS permite aos usuários alterarem a visibilidade de um item parcialmente ou totalmente escondendo o item. Isso é obtido por qualquer mascaramento ou cortes na imagem em pontos específicos.</p>
+A propriedade máscara no CSS permite aos usuários alterarem a visibilidade de um item parcialmente ou totalmente escondendo o item. Isso é obtido por qualquer mascaramento ou cortes na imagem em pontos específicos.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush:css">/* Palavra-Chave */
+```css
+/* Palavra-Chave */
 mask: none;
 
 /* Valor das Imagens */
@@ -42,54 +43,35 @@ mask: url(masks.svg#star) exclude;         /* Elemento dentro do SVG usado como 
 mask: inherit;
 mask: initial;
 mask: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<p>Se o valor é um valor URI, o elemento apontado pelo URI é usado como uma máscara SVG.</p>
+Se o valor é um valor URI, o elemento apontado pelo URI é usado como uma máscara SVG.
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: css">.target { mask: url(#c1); }
+```css
+.target { mask: url(#c1); }
 
 .anothertarget { mask: url(resources.svg#c1); }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Masks", "#the-mask", 'mask')}}</td>
-   <td>{{Spec2("CSS Masks")}}</td>
-   <td>Estende-se a sua utilização para elementos HTML.<br>
-    Estende sua sintaxe, tornando-a uma simplificação para as novas propriedades da <code>mask-*</code> definidos nessa especificação.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'masking.html#MaskProperty', 'mask')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                    | Estado                       | Comentário                                                                                                                                                               |
+| -------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName("CSS Masks", "#the-mask", 'mask')}}                     | {{Spec2("CSS Masks")}} | Estende-se a sua utilização para elementos HTML. Estende sua sintaxe, tornando-a uma simplificação para as novas propriedades da `mask-*` definidos nessa especificação. |
+| {{SpecName('SVG1.1', 'masking.html#MaskProperty', 'mask')}} | {{Spec2('SVG1.1')}}     | Definição inicial.                                                                                                                                                       |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.properties.mask")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{Cssxref("clip-path")}}, {{Cssxref("filter")}}</li>
- <li><a href="/en-US/docs/Applying_SVG_effects_to_HTML_content">Aplicanto efeitos SVG no conteúdo HTML</a></li>
- <li><a href="/en-US/docs/SVG">SVG</a></li>
-</ul>
+- {{Cssxref("clip-path")}}, {{Cssxref("filter")}}
+- [Aplicanto efeitos SVG no conteúdo HTML](/pt-BR/docs/Applying_SVG_effects_to_HTML_content)
+- [SVG](/pt-BR/docs/SVG)

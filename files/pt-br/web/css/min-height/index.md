@@ -3,21 +3,23 @@ title: min-height
 slug: Web/CSS/min-height
 translation_of: Web/CSS/min-height
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>A propriedade <code>min-height</code> do CSS é usado para definir a altura mínima de um determinado elemento. Ele impede que o valor usado da propriedade {{ Cssxref("height") }} se torne menor que o valor especificado para min-height.<br>
- O valor de  {{ Cssxref("min-height") }} substitui os dois {{ Cssxref("max-height") }} e {{ Cssxref("height") }}.</p>
+A propriedade `min-height` do CSS é usado para definir a altura mínima de um determinado elemento. Ele impede que o valor usado da propriedade {{ Cssxref("height") }} se torne menor que o valor especificado para min-height.
+O valor de {{ Cssxref("min-height") }} substitui os dois {{ Cssxref("max-height") }} e {{ Cssxref("height") }}.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax" title="CSS/Value_definition_syntax">sintaxe forma</a>: {{csssyntax("min-height")}}
-</pre>
+```
+sintaxe forma: {{csssyntax("min-height")}}
+```
 
-<pre>min-height: 3.5em
+```
+min-height: 3.5em
 min-height: 10%
 min-height: max-content
 min-height: min-content
@@ -25,72 +27,45 @@ min-height: fit-content
 min-height: fill-available
 
 min-height: inherit
-</pre>
+```
 
-<h3 id="Values" name="Values">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>O valor fixo mínimo da altura. Veja {{cssxref("&lt;length&gt;")}} para possíveis unidades. Valores negativos fazem da declaração inválida.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>O valor fixo mínimo da altura expressado como uma {{cssxref("&lt;percentage&gt;")}} do conteúdo da altura do bloco. Valores negativos fazem da declaração inválida.</dd>
- <dt><code>max-content</code> {{ experimental_inline() }}</dt>
- <dd>The intrinsic preferred height.</dd>
- <dt><code>min-content</code> {{ experimental_inline() }}</dt>
- <dd>The intrinsic minimum height.</dd>
- <dt><code>fill-available</code>{{ experimental_inline() }}</dt>
- <dd>The containing block height minus horizontal margin, border and padding. Some browsers implement an ancient name for this keyword, <code>available</code>.</dd>
- <dt><code>fit-content</code> {{ experimental_inline() }}</dt>
- <dd>According CSS3 Box, this is a synonym of <code>min-content.</code> CSS3 Sizing defines a more complex algorithm, but no browser implements it, even in an experimental way.</dd>
-</dl>
+- `<length>`
+  - : O valor fixo mínimo da altura. Veja {{cssxref("&lt;length&gt;")}} para possíveis unidades. Valores negativos fazem da declaração inválida.
+- `<percentage>`
+  - : O valor fixo mínimo da altura expressado como uma {{cssxref("&lt;percentage&gt;")}} do conteúdo da altura do bloco. Valores negativos fazem da declaração inválida.
+- `max-content` {{ experimental_inline() }}
+  - : The intrinsic preferred height.
+- `min-content` {{ experimental_inline() }}
+  - : The intrinsic minimum height.
+- `fill-available`{{ experimental_inline() }}
+  - : The containing block height minus horizontal margin, border and padding. Some browsers implement an ancient name for this keyword, `available`.
+- `fit-content` {{ experimental_inline() }}
+  - : According CSS3 Box, this is a synonym of `min-content.` CSS3 Sizing defines a more complex algorithm, but no browser implements it, even in an experimental way.
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: css">table { min-height: 75%; }
+```css
+table { min-height: 75%; }
 
 form { min-height: 0; }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Sizing', '#width-height-keywords', 'min-height') }}</td>
-   <td>{{ Spec2('CSS3 Sizing') }}</td>
-   <td>Adds the <code>max-content</code>, <code>min-content</code>, <code>fit-content</code>, and <code>fill-available</code> keywords.<br>
-    <em>Both CSS3 Box and CSS3 Writing Modes drafts defined at some point these keywords. These drafts are superseded by this spec.</em></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Flexbox', '#min-auto', 'min-height') }}</td>
-   <td>{{ Spec2('CSS3 Flexbox') }}</td>
-   <td>An <a href="http://www.w3.org/TR/2012/CR-css3-flexbox-20120918/">earlier revision of the spec</a> added the <code>auto</code> keyword and used it as the initial value. The CSSWG subsequently resolved to revert this change, however. As of March 29, 2013, the latest <a href="http://dev.w3.org/csswg/css-flexbox/">Editor's Draft</a> doesn't modify the <code>min-width</code> property anymore (i.e. it no longer introduces the <code>auto</code> value).</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Transitions', '#animatable-css', 'min-height') }}</td>
-   <td>{{ Spec2('CSS3 Transitions') }}</td>
-   <td>Defines <code>min-height</code> as animatable.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'visudet.html#min-max-heights', 'min-height') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Status                                   | Comentário                                                                                                                                                                                                                                                                                                                                                                                                 |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{ SpecName('CSS3 Sizing', '#width-height-keywords', 'min-height') }} | {{ Spec2('CSS3 Sizing') }}     | Adds the `max-content`, `min-content`, `fit-content`, and `fill-available` keywords. _Both CSS3 Box and CSS3 Writing Modes drafts defined at some point these keywords. These drafts are superseded by this spec._                                                                                                                                                                                         |
+| {{ SpecName('CSS3 Flexbox', '#min-auto', 'min-height') }}                 | {{ Spec2('CSS3 Flexbox') }}     | An [earlier revision of the spec](http://www.w3.org/TR/2012/CR-css3-flexbox-20120918/) added the `auto` keyword and used it as the initial value. The CSSWG subsequently resolved to revert this change, however. As of March 29, 2013, the latest [Editor's Draft](http://dev.w3.org/csswg/css-flexbox/) doesn't modify the `min-width` property anymore (i.e. it no longer introduces the `auto` value). |
+| {{ SpecName('CSS3 Transitions', '#animatable-css', 'min-height') }}     | {{ Spec2('CSS3 Transitions') }} | Defines `min-height` as animatable.                                                                                                                                                                                                                                                                                                                                                                        |
+| {{ SpecName('CSS2.1', 'visudet.html#min-max-heights', 'min-height') }} | {{ Spec2('CSS2.1') }}             | Initial definition.                                                                                                                                                                                                                                                                                                                                                                                        |
 
-<h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
+## Navegadores compatíveis
 
 {{Compat("css.properties.min-height")}}
 
-<h2 id="See_also" name="See_also">Ver também</h2>
+## Ver também
 
-<ul>
- <li>{{ Cssxref("width") }}, {{ Cssxref("height") }}, {{ Cssxref("max-height") }}</li>
- <li>The <a href="/en-US/docs/CSS/box_model" title="en/CSS/box_model">box model</a>, {{ Cssxref("min-width") }}, {{ Cssxref("box-sizing") }}, {{ Cssxref("height") }}, {{ Cssxref("max-height") }}</li>
-</ul>
+- {{ Cssxref("width") }}, {{ Cssxref("height") }}, {{ Cssxref("max-height") }}
+- The [box model](/pt-BR/docs/CSS/box_model "en/CSS/box_model"), {{ Cssxref("min-width") }}, {{ Cssxref("box-sizing") }}, {{ Cssxref("height") }}, {{ Cssxref("max-height") }}

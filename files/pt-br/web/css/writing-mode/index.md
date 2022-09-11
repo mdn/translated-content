@@ -8,11 +8,12 @@ tags:
   - Referencia
 translation_of: Web/CSS/writing-mode
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A propriedade CSS <strong><code>writing-mode</code></strong> define se as linhas do texto são dispostas horizontalmente ou verticalmente e a direção que os blocos seguem</p>
+A propriedade CSS **`writing-mode`** define se as linhas do texto são dispostas horizontalmente ou verticalmente e a direção que os blocos seguem
 
-<pre class="brush:css">/* Valores das palavras-chave */
+```css
+/* Valores das palavras-chave */
 writing-mode: horizontal-tb;
 writing-mode: vertical-rl;
 writing-mode: vertical-lr;
@@ -20,98 +21,98 @@ writing-mode: vertical-lr;
 /* Valores globais */
 writing-mode: inherit;
 writing-mode: initial;
-writing-mode: unset;</pre>
+writing-mode: unset;
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<p>A propriedade especifica o <em>comportamento de fluxo do bloco, </em>que é a maneira em que os containers são empilhados ou distribuídos, e a direção em que o conteudo é alinhado ou disposto dentro dos containers. Assim a propriedade <code>writing-mode</code> também determina a distribuição do conteúdo no nível de bloco</p>
+A propriedade especifica o _comportamento de fluxo do bloco,_ que é a maneira em que os containers são empilhados ou distribuídos, e a direção em que o conteudo é alinhado ou disposto dentro dos containers. Assim a propriedade `writing-mode` também determina a distribuição do conteúdo no nível de bloco
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>horizontal-tb</code></dt>
- <dd>Conteúdo é disposto horizontalmente da esquerda para a direita, verticalmente de cima para baixo. A próxima linha horizontal é posicionada abaixo da linha anterior.</dd>
- <dt><code>vertical-rl</code></dt>
- <dd>Conteúdo é disposto verticalmente de cima para baixo, horizontalmente da direita para a esquerda. A proxima linha vertical é posicionada à esquerda da linha anterior.</dd>
- <dt><code>vertical-lr</code></dt>
- <dd>Conteúdo é disposto verticalmente de cima para baixo, horizontalmente da esquerda para a direita. A proxima linha vertical é posicionada à direita da linha anterior.</dd>
- <dt><code>sideways-rl</code>{{experimental_inline}}</dt>
- <dd>Conteúdo é disposto verticalmente de cima para baixo e todos os glifos, até mesmo os que estão em uma escrita vertical, são colocados lado a lado para a direita.</dd>
-</dl>
+- `horizontal-tb`
+  - : Conteúdo é disposto horizontalmente da esquerda para a direita, verticalmente de cima para baixo. A próxima linha horizontal é posicionada abaixo da linha anterior.
+- `vertical-rl`
+  - : Conteúdo é disposto verticalmente de cima para baixo, horizontalmente da direita para a esquerda. A proxima linha vertical é posicionada à esquerda da linha anterior.
+- `vertical-lr`
+  - : Conteúdo é disposto verticalmente de cima para baixo, horizontalmente da esquerda para a direita. A proxima linha vertical é posicionada à direita da linha anterior.
+- `sideways-rl`{{experimental_inline}}
+  - : Conteúdo é disposto verticalmente de cima para baixo e todos os glifos, até mesmo os que estão em uma escrita vertical, são colocados lado a lado para a direita.
 
-<dl>
- <dt><code>sideways-lr</code>{{experimental_inline}}</dt>
- <dd>Conteúdo é disposto verticalmente de cima para baixo e todos os glifos, até mesmo os que estão em uma escrita vertical, são colocados lado a lado para a esquerda.</dd>
- <dt><code>lr</code> {{deprecated_inline}}</dt>
- <dd>Descontinuado exceto para docmentos SVG1. Para CSS, use  <code>horizontal-tb</code>.</dd>
- <dt><code>lr-tb</code> {{deprecated_inline}}</dt>
- <dd>Descontinuado exceto para docmentos SVG1. Para CSS, use <code>horizontal-tb</code>.</dd>
- <dt><code>rl</code> {{deprecated_inline}}</dt>
- <dd>Descontinuado exceto para docmentos SVG1. Para CSS, use <code>horizontal-tb</code>.</dd>
- <dt><code>tb</code> {{deprecated_inline}}</dt>
- <dd>Descontinuado exceto para docmentos SVG1. Para CSS, use <code>vertical-lr</code>.</dd>
- <dt><code>tb-rl</code> {{deprecated_inline}}</dt>
- <dd>Descontinuado exceto para docmentos SVG1. Para CSS, use <code>vertical-rl</code>.</dd>
-</dl>
+<!---->
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+- `sideways-lr`{{experimental_inline}}
+  - : Conteúdo é disposto verticalmente de cima para baixo e todos os glifos, até mesmo os que estão em uma escrita vertical, são colocados lado a lado para a esquerda.
+- `lr` {{deprecated_inline}}
+  - : Descontinuado exceto para docmentos SVG1. Para CSS, use `horizontal-tb`.
+- `lr-tb` {{deprecated_inline}}
+  - : Descontinuado exceto para docmentos SVG1. Para CSS, use `horizontal-tb`.
+- `rl` {{deprecated_inline}}
+  - : Descontinuado exceto para docmentos SVG1. Para CSS, use `horizontal-tb`.
+- `tb` {{deprecated_inline}}
+  - : Descontinuado exceto para docmentos SVG1. Para CSS, use `vertical-lr`.
+- `tb-rl` {{deprecated_inline}}
+  - : Descontinuado exceto para docmentos SVG1. Para CSS, use `vertical-rl`.
+
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>Esse exemplo demonstra todos os modos de escrita, mostrando cada um com texto e várias línguas.</p>
+Esse exemplo demonstra todos os modos de escrita, mostrando cada um com texto e várias línguas.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>O HTML é simplesmente um {{HTMLElement("table")}} com cada modo de escrita em uma linha com uma coluna mostrando texto em diversos scripts usando esse modo de escrita.</p>
+O HTML é simplesmente um {{HTMLElement("table")}} com cada modo de escrita em uma linha com uma coluna mostrando texto em diversos scripts usando esse modo de escrita.
 
-<pre class="brush: html">&lt;table&gt;
-    &lt;tr&gt;
-        &lt;th&gt;value&lt;/th&gt;
-        &lt;th&gt;Vertical script&lt;/th&gt;
-        &lt;th&gt;Horizontal script&lt;/th&gt;
-        &lt;th&gt;Mixed script&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;horizontal-tb&lt;/td&gt;
-        &lt;td class="example Text1"&gt;&lt;span&gt;我家没有电脑。&lt;/span&gt;&lt;/td&gt;
-        &lt;td class="example Text1"&gt;&lt;span&gt;Example text&lt;/span&gt;&lt;/td&gt;
-        &lt;td class="example Text1"&gt;&lt;span&gt;1994年に至っては&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;vertical-lr&lt;/td&gt;
-        &lt;td class="example Text2"&gt;&lt;span&gt;我家没有电脑。&lt;/span&gt;&lt;/td&gt;
-        &lt;td class="example Text2"&gt;&lt;span&gt;Example text&lt;/span&gt;&lt;/td&gt;
-        &lt;td class="example Text2"&gt;&lt;span&gt;1994年に至っては&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;vertical-rl&lt;/td&gt;
-        &lt;td class="example Text3"&gt;&lt;span&gt;我家没有电脑。&lt;/span&gt;&lt;/td&gt;
-        &lt;td class="example Text3"&gt;&lt;span&gt;Example text&lt;/span&gt;&lt;/td&gt;
-        &lt;td class="example Text3"&gt;&lt;span&gt;1994年に至っては&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;sideways-lr&lt;/td&gt;
-        &lt;td class="example Text4"&gt;&lt;span&gt;我家没有电脑。&lt;/span&gt;&lt;/td&gt;
-        &lt;td class="example Text4"&gt;&lt;span&gt;Example text&lt;/span&gt;&lt;/td&gt;
-        &lt;td class="example Text4"&gt;&lt;span&gt;1994年に至っては&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;sideways-rl&lt;/td&gt;
-        &lt;td class="example Text5"&gt;&lt;span&gt;我家没有电脑。&lt;/span&gt;&lt;/td&gt;
-        &lt;td class="example Text5"&gt;&lt;span&gt;Example text&lt;/span&gt;&lt;/td&gt;
-        &lt;td class="example Text5"&gt;&lt;span&gt;1994年に至っては&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/table&gt;
-</pre>
+```html
+<table>
+    <tr>
+        <th>value</th>
+        <th>Vertical script</th>
+        <th>Horizontal script</th>
+        <th>Mixed script</th>
+    </tr>
+    <tr>
+        <td>horizontal-tb</td>
+        <td class="example Text1"><span>我家没有电脑。</span></td>
+        <td class="example Text1"><span>Example text</span></td>
+        <td class="example Text1"><span>1994年に至っては</span></td>
+    </tr>
+    <tr>
+        <td>vertical-lr</td>
+        <td class="example Text2"><span>我家没有电脑。</span></td>
+        <td class="example Text2"><span>Example text</span></td>
+        <td class="example Text2"><span>1994年に至っては</span></td>
+    </tr>
+    <tr>
+        <td>vertical-rl</td>
+        <td class="example Text3"><span>我家没有电脑。</span></td>
+        <td class="example Text3"><span>Example text</span></td>
+        <td class="example Text3"><span>1994年に至っては</span></td>
+    </tr>
+    <tr>
+        <td>sideways-lr</td>
+        <td class="example Text4"><span>我家没有电脑。</span></td>
+        <td class="example Text4"><span>Example text</span></td>
+        <td class="example Text4"><span>1994年に至っては</span></td>
+    </tr>
+    <tr>
+        <td>sideways-rl</td>
+        <td class="example Text5"><span>我家没有电脑。</span></td>
+        <td class="example Text5"><span>Example text</span></td>
+        <td class="example Text5"><span>1994年に至っては</span></td>
+    </tr>
+</table>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<div class="hidden">
-<pre class="brush: css">table {
+```css hidden
+table {
   border-collapse:collapse;
 }
 td, th {
@@ -123,12 +124,13 @@ th {
 .example {
   height:75px;
   width:75px;
-}</pre>
-</div>
+}
+```
 
-<p>O CSS que ajusta a direcionalidade do conteúdo é algo como esse:</p>
+O CSS que ajusta a direcionalidade do conteúdo é algo como esse:
 
-<pre class="brush:css;">.example.Text1 span, .example.Text1 {
+```css
+.example.Text1 span, .example.Text1 {
   writing-mode: horizontal-tb;
   -webkit-writing-mode: horizontal-tb;
   -ms-writing-mode: horizontal-tb;
@@ -157,50 +159,31 @@ th {
   -webkit-writing-mode: sideways-rl;
   -ms-writing-mode: sideways-rl;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("Example", 400, 500)}}</p>
+{{EmbedLiveSample("Example", 400, 500)}}
 
-<h3 id="Resultado_atual">Resultado atual</h3>
+### Resultado atual
 
-<p>Essa é uma imagem mostrando o que o resultado deve parecer, no caso do suporte do seu navegador para <code>writing-mode</code> estiver incompleto.</p>
+Essa é uma imagem mostrando o que o resultado deve parecer, no caso do suporte do seu navegador para `writing-mode` estiver incompleto.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12201/writing-mode-actual-result.png" style="height: 430px; width: 351px;"></p>
+![](https://mdn.mozillademos.org/files/12201/writing-mode-actual-result.png)
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Writing Modes", "#block-flow", "writing-mode")}}</td>
-   <td>{{Spec2("CSS3 Writing Modes")}}</td>
-   <td>Definição inicial</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS4 Writing Modes", "#block-flow", "writing-mode")}}</td>
-   <td>{{Spec2("CSS4 Writing Modes")}}</td>
-   <td>Adicionar <code>sideways-lr</code> e <code>sideways-rl</code></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                            | Status                                   | Comentário                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------- |
+| {{SpecName("CSS3 Writing Modes", "#block-flow", "writing-mode")}} | {{Spec2("CSS3 Writing Modes")}} | Definição inicial                       |
+| {{SpecName("CSS4 Writing Modes", "#block-flow", "writing-mode")}} | {{Spec2("CSS4 Writing Modes")}} | Adicionar `sideways-lr` e `sideways-rl` |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.properties.writing-mode")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>SVG <code><a href="/en-US/docs/Web/SVG/Attribute/writing-mode">writing-mode</a></code> attribute</li>
- <li>{{Cssxref("direction")}}</li>
- <li>{{Cssxref("unicode-bidi")}}</li>
- <li>{{Cssxref("text-orientation")}}</li>
- <li>{{Cssxref("text-combine-upright")}}</li>
-</ul>
+- SVG [`writing-mode`](/en-US/docs/Web/SVG/Attribute/writing-mode) attribute
+- {{Cssxref("direction")}}
+- {{Cssxref("unicode-bidi")}}
+- {{Cssxref("text-orientation")}}
+- {{Cssxref("text-combine-upright")}}

@@ -1,56 +1,63 @@
 ---
 title: '::before (:before)'
-slug: 'Web/CSS/::before'
-translation_of: 'Web/CSS/::before'
+slug: Web/CSS/::before
+translation_of: Web/CSS/::before
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p><code>::before</code> cria um <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elemento</a> que é o primeiro filho do elemento atingido. É frequentemente utilizado para adicionar conteúdo decorativo à um element utilizando a propriedade {{cssxref("content")}}. Este elemento é inline por padrão.</p>
+`::before` cria um [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elements) que é o primeiro filho do elemento atingido. É frequentemente utilizado para adicionar conteúdo decorativo à um element utilizando a propriedade {{cssxref("content")}}. Este elemento é inline por padrão.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
 {{csssyntax}}
 
-<p>A notação <code>::before</code> (com dois dois-pontos) foi introduzida no CSS3 afim de diferenciar <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classes</a> de <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elementos</a>. Navegadores também aceitam a notação <code>:before</code> introduzida no CSS 2.</p>
+A notação `::before` (com dois dois-pontos) foi introduzida no CSS3 afim de diferenciar [pseudo-classes](/pt-BR/docs/Web/CSS/Pseudo-classes) de [pseudo-elementos](/pt-BR/docs/Web/CSS/Pseudo-elements). Navegadores também aceitam a notação `:before` introduzida no CSS 2.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Adicionando_aspas">Adicionando aspas</h3>
+### Adicionando aspas
 
-<p>Um exemplo simples do uso de pseudo-elementos <code>::before</code> pseudo-elementos é a exibição de aspas. Aqui usamos <code>::before e </code><code>{{Cssxref("::after")}}</code> para inserir caracteres de aspas.</p>
+Um exemplo simples do uso de pseudo-elementos `::before` pseudo-elementos é a exibição de aspas. Aqui usamos ` ::before e ``{{Cssxref("::after")}} ` para inserir caracteres de aspas.
 
-<h4 id="Conteúdo_HTML">Conteúdo HTML</h4>
+#### Conteúdo HTML
 
-<pre class="brush:html">&lt;q&gt;Algumas citações&lt;/q&gt;, ele disse, &lt;q&gt;são melhor do que nenhuma.&lt;/q&gt;</pre>
+```html
+<q>Algumas citações</q>, ele disse, <q>são melhor do que nenhuma.</q>
+```
 
-<h4 id="Conteúdo_CSS">Conteúdo CSS</h4>
+#### Conteúdo CSS
 
-<pre class="brush:css">q::before {
+```css
+q::before {
   content: "«";
   color: blue;
 }
 q::after {
   content: "»";
   color: red;
-}</pre>
+}
+```
 
-<h4 id="Saída">Saída</h4>
+#### Saída
 
-<p>{{EmbedLiveSample('Adding_quotation_marks', '500', '50', '')}}</p>
+{{EmbedLiveSample('Adding_quotation_marks', '500', '50', '')}}
 
-<h3 id="Exemplo_decorativo">Exemplo decorativo</h3>
+### Exemplo decorativo
 
-<p>Podemos estilizar textos e imagens na propriedade {{cssxref("content")}} praticamente da forma que desejarmos.</p>
+Podemos estilizar textos e imagens na propriedade {{cssxref("content")}} praticamente da forma que desejarmos.
 
-<h4 id="Conteúdo_HTML_2">Conteúdo HTML</h4>
+#### Conteúdo HTML
 
-<pre class="brush: html">&lt;span class="ribbon"&gt;Observe onde a caixa laranja está.&lt;/span&gt;</pre>
+```html
+<span class="ribbon">Observe onde a caixa laranja está.</span>
+```
 
-<h4 id="Conteúdo_CSS_2">Conteúdo CSS</h4>
+#### Conteúdo CSS
 
-<pre class="brush: css">.ribbon {
+```css
+.ribbon {
   background-color: #5BC8F7;
 }
 
@@ -59,31 +66,34 @@ q::after {
   background-color: #FFBA10;
   border-color: black;
   border-style: dotted;
-}</pre>
+}
+```
 
-<h4 id="Saída_2">Saída</h4>
+#### Saída
 
-<p>{{EmbedLiveSample('Decorative_example', 450, 60)}}</p>
+{{EmbedLiveSample('Decorative_example', 450, 60)}}
 
-<h3 id="Lista_To-do">Lista To-do</h3>
+### Lista To-do
 
-<p>Neste exemplo vamos criar uma simples lista de tarefas, usando pseudo-elementos. Este método pode frequentemente ser utilizado para dar pequenos toques à UI (User Interface) e melhorar a experiência do usuário.</p>
+Neste exemplo vamos criar uma simples lista de tarefas, usando pseudo-elementos. Este método pode frequentemente ser utilizado para dar pequenos toques à UI (User Interface) e melhorar a experiência do usuário.
 
-<h4 id="Conteúdo_HTML_3">Conteúdo HTML</h4>
+#### Conteúdo HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;Comprar Leite&lt;/li&gt;
-  &lt;li&gt;Levar o cachorro para passear&lt;/li&gt;
-  &lt;li&gt;Exercitar-se&lt;/li&gt;
-  &lt;li&gt;Escrever codigo&lt;/li&gt;
-  &lt;li&gt;Tocar musica&lt;/li&gt;
-  &lt;li&gt;Relaxar&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html
+<ul>
+  <li>Comprar Leite</li>
+  <li>Levar o cachorro para passear</li>
+  <li>Exercitar-se</li>
+  <li>Escrever codigo</li>
+  <li>Tocar musica</li>
+  <li>Relaxar</li>
+</ul>
+```
 
-<h4 id="Conteúdo_CSS_3">Conteúdo CSS</h4>
+#### Conteúdo CSS
 
-<pre class="brush: css">li {
+```css
+li {
   list-style-type: none;
   position: relative;
   margin: 2px;
@@ -108,40 +118,45 @@ li.done::before {
   margin-top: -1em;
   transform: rotate(45deg);
   width: 0.5em;
-}</pre>
+}
+```
 
-<h4 id="Conteúdo_JavaScript">Conteúdo JavaScript</h4>
+#### Conteúdo JavaScript
 
-<pre class="brush: js">var list = document.querySelector('ul');
+```js
+var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if( ev.target.tagName === 'LI') {
      ev.target.classList.toggle('done');
   }
 }, false);
-</pre>
+```
 
-<p>Aqui está rodando o código acima. Perceba que nenhum ícone é utilizado e o check-mark é o <code>::before</code> que foi estilizado no CSS.</p>
+Aqui está rodando o código acima. Perceba que nenhum ícone é utilizado e o check-mark é o `::before` que foi estilizado no CSS.
 
-<h4 id="Saída_3">Saída</h4>
+#### Saída
 
-<p>{{EmbedLiveSample('To-do_list', 400, 300)}}</p>
+{{EmbedLiveSample('To-do_list', 400, 300)}}
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>Embora as correções posicionadas e fixadas no Firefox 3.5 não permitam que o conteúdo seja gerado como um irmão anterior ao elemento (conforme a especificação para o CSS indicam "Os Pseudo-elementos :before e :after interagem com outros elementos como se fosse elementos reais inseridos dentro do elemento associado."), eles podem ser usados para proporcionar uma ligeira melhora em layouts sem tables (por exemplo, para alcançar a centralização), a medida que o conteúdo a ser centrado está envolvido com um elemento filho adicional, uma coluna antes e depois do conteúdo pode ser introduzida sem adicionar elementos filhos reais (isto é, talvez mais semanticamente correto para adicionar uma pequena distância, do que seria adicionar um div vazio antes e / ou depois). (E sempre lembre-se de adicionar uma largura a um flutuador, pois, de outra forma, não flutuará!)</p>
+Embora as correções posicionadas e fixadas no Firefox 3.5 não permitam que o conteúdo seja gerado como um irmão anterior ao elemento (conforme a especificação para o CSS indicam "Os Pseudo-elementos :before e :after interagem com outros elementos como se fosse elementos reais inseridos dentro do elemento associado."), eles podem ser usados para proporcionar uma ligeira melhora em layouts sem tables (por exemplo, para alcançar a centralização), a medida que o conteúdo a ser centrado está envolvido com um elemento filho adicional, uma coluna antes e depois do conteúdo pode ser introduzida sem adicionar elementos filhos reais (isto é, talvez mais semanticamente correto para adicionar uma pequena distância, do que seria adicionar um div vazio antes e / ou depois). (E sempre lembre-se de adicionar uma largura a um flutuador, pois, de outra forma, não flutuará!)
 
-<h4 id="HTML_content">HTML content</h4>
+#### HTML content
 
-<pre class="brush: html">&lt;div class="example"&gt;
-&lt;span id="floatme"&gt;"Floated Before" should be generated on the left of the
+```html
+<div class="example">
+<span id="floatme">"Floated Before" should be generated on the left of the
 viewport and not allow overflow in this line to flow under it. Likewise
 should "Floated After" appear on the right of the viewport and not allow this
-line to flow under it.&lt;/span&gt;
-&lt;/div&gt;</pre>
+line to flow under it.</span>
+</div>
+```
 
-<h4 id="CSS_content">CSS content</h4>
+#### CSS content
 
-<pre class="brush: css">#floatme { float: left; width: 50%; }
+```css
+#floatme { float: left; width: 50%; }
 
 /* To get an empty column, just indicate a hex code for a non-breaking space: \a0 as the content (use \0000a0 when following such a space with other characters) */
 .example::before {
@@ -159,57 +174,27 @@ line to flow under it.&lt;/span&gt;
 .example::before, .example::after, .first {
   background: yellow;
   color: red;
-}</pre>
+}
+```
 
-<h4 id="Output">Output</h4>
+#### Output
 
-<p>{{EmbedLiveSample("Notes")}}</p>
+{{EmbedLiveSample("Notes")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Pseudo-Elements', '#selectordef-before', '::before')}}</td>
-   <td>{{Spec2('CSS4 Pseudo-Elements')}}</td>
-   <td>No significant changes to the previous specification.</td>
-  </tr>
-  <tr>
-   <td>{{Specname("CSS3 Transitions", "#animatable-properties", "")}}</td>
-   <td>{{Spec2("CSS3 Transitions")}}</td>
-   <td>Allows transitions on properties defined on pseudo-elements.</td>
-  </tr>
-  <tr>
-   <td>{{Specname("CSS3 Animations", "", "")}}</td>
-   <td>{{Spec2("CSS3 Animations")}}</td>
-   <td>Allows animations on properties defined on pseudo-elements.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#gen-content', '::before')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Introduces the two-colon syntax.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'generate.html#before-after-content', '::before')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition, using the one-colon syntax</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                                       | Comment                                                      |
+| ------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------------------------------------------------ |
+| {{SpecName('CSS4 Pseudo-Elements', '#selectordef-before', '::before')}} | {{Spec2('CSS4 Pseudo-Elements')}} | No significant changes to the previous specification.        |
+| {{Specname("CSS3 Transitions", "#animatable-properties", "")}}             | {{Spec2("CSS3 Transitions")}}     | Allows transitions on properties defined on pseudo-elements. |
+| {{Specname("CSS3 Animations", "", "")}}                                             | {{Spec2("CSS3 Animations")}}         | Allows animations on properties defined on pseudo-elements.  |
+| {{SpecName('CSS3 Selectors', '#gen-content', '::before')}}                     | {{Spec2('CSS3 Selectors')}}         | Introduces the two-colon syntax.                             |
+| {{SpecName('CSS2.1', 'generate.html#before-after-content', '::before')}} | {{Spec2('CSS2.1')}}                     | Initial definition, using the one-colon syntax               |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.selectors.before")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref("::after")}}, {{cssxref("content")}}</li>
-</ul>
+- {{Cssxref("::after")}}, {{cssxref("content")}}

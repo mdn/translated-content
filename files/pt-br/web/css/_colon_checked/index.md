@@ -1,6 +1,6 @@
 ---
 title: ':checked'
-slug: 'Web/CSS/:checked'
+slug: Web/CSS/:checked
 tags:
   - ':checked'
   - CSS
@@ -8,29 +8,33 @@ tags:
   - Layout
   - Referencia
   - Web
-translation_of: 'Web/CSS/:checked'
+translation_of: Web/CSS/:checked
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A <a href="/pt-BR/docs/Web/CSS/Pseudo-classes">pseudo-classe </a><strong><code>:checked</code></strong> de um seletor CSS representa um elemento <strong>radio </strong>(<code>&lt;input type="radio"&gt;</code>), <strong>checkbox </strong>(<code>&lt;input type="checkbox"&gt;</code>) ou <strong>option</strong> ({{ HTMLElement("option") }} em um {{ HTMLElement("select") }})  que está marcada ou alternado para um estado ligado. O usuário pode mudar seu estado clicando no elemento, ou selecionando um valor diferente, nesse caso a pseudo-classe <strong>:checked</strong> não se aplica a esse elemento, mas vai para um elemento relevante.</p>
+A [pseudo-classe ](/pt-BR/docs/Web/CSS/Pseudo-classes)**`:checked`** de um seletor CSS representa um elemento **radio** (`<input type="radio">`), **checkbox** (`<input type="checkbox">`) ou **option** ({{ HTMLElement("option") }} em um {{ HTMLElement("select") }}) que está marcada ou alternado para um estado ligado. O usuário pode mudar seu estado clicando no elemento, ou selecionando um valor diferente, nesse caso a pseudo-classe **:checked** não se aplica a esse elemento, mas vai para um elemento relevante.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush: css">input:checked {
+```css
+input:checked {
   margin-left: 25px;
   border: 1px solid blue;
 }
-</pre>
+```
 
-<h3 id="Examples" name="Examples">Sintaxe formal</h3>
+### Sintaxe formal
 
-<pre class="syntaxbox">elemento:checked { estilos de propriedades }</pre>
+```
+elemento:checked { estilos de propriedades }
+```
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<h3 id="Example_selectors" name="Example_selectors">Exemplo de seletores</h3>
+### Exemplo de seletores
 
-<pre class="brush: css">/* qualquer elemento "checkable" */
+```css
+/* qualquer elemento "checkable" */
 :checked {
   width: 50px;
   height: 50px;
@@ -50,31 +54,30 @@ input[type="checkbox"]:checked {
 option:checked {
   color: red;
 }
-</pre>
+```
 
-<dl>
- <dt><code>input[type="radio"]:checked</code></dt>
- <dd>Representa todos os botões de rádio na página que estão ativos</dd>
-</dl>
+- `input[type="radio"]:checked`
+  - : Representa todos os botões de rádio na página que estão ativos
 
-<dl>
- <dt><code>input[type="checkbox"]:checked</code></dt>
- <dd>Representa todos os checkboxes na página que estão ativos</dd>
- <dt><code>option:checked</code></dt>
- <dd>Representa todos os selects na página que estão selecionados</dd>
-</dl>
+<!---->
 
-<h3 id="Usando_checkboxes_escodindos_para_amarzenar_algum_valor_booleano.">Usando checkboxes escodindos para amarzenar algum valor booleano.</h3>
+- `input[type="checkbox"]:checked`
+  - : Representa todos os checkboxes na página que estão ativos
+- `option:checked`
+  - : Representa todos os selects na página que estão selecionados
 
-<p>A pseudo-classe <code>:checked </code>aplicada em checkboxes escondidos, adicionado ao início de sua página pode<br>
- ser aplicada de forma a armazenar algum booleano dinâmico para ser usado por uma regra CSS. O exemplo a seguir mostra como exibir/esconder um elemento expansível com um simples clique em um botão (<a class="internal" href="/@api/deki/files/6246/=expandable-elements.html" title="Expandable elements through the :checked pseudoclass">download esse demo</a>).</p>
+### Usando checkboxes escodindos para amarzenar algum valor booleano.
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
-&lt;title&gt;Elementos expansíveis&lt;/title&gt;
-&lt;style type="text/css"&gt;
+A pseudo-classe `:checked `aplicada em checkboxes escondidos, adicionado ao início de sua página pode
+ser aplicada de forma a armazenar algum booleano dinâmico para ser usado por uma regra CSS. O exemplo a seguir mostra como exibir/esconder um elemento expansível com um simples clique em um botão ([download esse demo](/@api/deki/files/6246/=expandable-elements.html "Expandable elements through the :checked pseudoclass")).
+
+```html
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Elementos expansíveis</title>
+<style type="text/css">
 #expand-btn {
     margin: 0 3px;
     display: inline-block;
@@ -113,81 +116,52 @@ option:checked {
     display: block;
     background: #cccccc;
 }
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
+</style>
+</head>
+<body>
 
-&lt;input type="checkbox" id="isexpanded" /&gt;
+<input type="checkbox" id="isexpanded" />
 
-&lt;h1&gt;Elementos expansíveis&lt;/h1&gt;
-&lt;table&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;&lt;th&gt;Coluna #1&lt;/th&gt;&lt;th&gt;Coluna #2&lt;/th&gt;&lt;th&gt;Coluna #3&lt;/th&gt;&lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr class="expandable"&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr class="expandable"&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr class="expandable"&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;[some sample text]&lt;/p&gt;
-&lt;p&gt;&lt;label for="isexpanded" id="expand-btn"&gt;Mostra ou esconder elementos&lt;/label&gt;&lt;/p&gt;
-&lt;p class="expandable"&gt;[outra amostra de texto]&lt;/p&gt;
-&lt;p&gt;[alguma amostra de texto]&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-
-<p>{{ EmbedLiveSample('Usando_checkboxes_escodindos_para_amarzenar_algum_valor_booleano', '', '', '', 'Web/CSS/:checked') }}</p>
-
-<h3 id="Using_hidden_radioboxes_in_order_to_store_some_CSS_boolean_values" name="Using_hidden_radioboxes_in_order_to_store_some_CSS_boolean_values">Usando radioboxes escondidos para armazenar algum valor CSS booleano</h3>
-
-<p>Você também pode usar a pseudo-classe <code>:checked </code>aplicada a um radioboxe escondido afim de construir, por exemplo, uma <strong>galeria de imagem onde as imagens apenas sejam exibidas no tamanho cheio com o clique do mouse em visualizar. </strong>Veja <a href="/@api/deki/files/6268/=css-checked-gallery.zip">essa demonstração</a> como uma dica.</p>
-
-<div class="note"><strong>Nota: </strong>Para um efeito análogo, mas baseada na pseudo-classe <a class="internal" href="/pt-BR/docs/Web/CSS/%3Ahover" title="CSS/:hover"><code>:hover</code></a><code> </code>sem radioboxes escondidos, veja <a href="/@api/deki/files/6247/=css-gallery.zip">essa demostração</a>, tomadas a partir de uma página <a class="internal" href="/pt-BR/docs/Web/CSS/%3Ahover" title="CSS/:hover"><code>:hover</code></a><code>.</code></div>
-
-<h2 id="Specifications" name="Specifications">Especificações</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentários</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', '#selector-checked', ':checked') }}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td>Sem mudanças.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5 W3C', '#selector-checked', ':checked') }}</td>
-   <td>{{ Spec2('HTML5 W3C') }}</td>
-   <td>Define a semântica sobre o HTML.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS4 Selectors', '#checked', ':checked') }}</td>
-   <td>{{ Spec2('CSS4 Selectors') }}</td>
-   <td>Sem mudanças.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Basic UI', '#pseudo-checked', ':checked') }}</td>
-   <td>{{ Spec2('CSS3 Basic UI') }}</td>
-   <td>Link para Seletores nível 3</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Selectors', '#checked', ':checked') }}</td>
-   <td>{{ Spec2('CSS3 Selectors') }}</td>
-   <td>Define a pseudo-classe, mas não associação semântica</td>
-  </tr>
- </tbody>
+<h1>Elementos expansíveis</h1>
+<table>
+    <thead>
+        <tr><th>Coluna #1</th><th>Coluna #2</th><th>Coluna #3</th></tr>
+    </thead>
+    <tbody>
+        <tr class="expandable"><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
+        <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
+        <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
+        <tr class="expandable"><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
+        <tr class="expandable"><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
+    </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade de navegadores</h2>
+<p>[some sample text]</p>
+<p><label for="isexpanded" id="expand-btn">Mostra ou esconder elementos</label></p>
+<p class="expandable">[outra amostra de texto]</p>
+<p>[alguma amostra de texto]</p>
+</body>
+</html>
+```
+
+{{ EmbedLiveSample('Usando_checkboxes_escodindos_para_amarzenar_algum_valor_booleano', '', '', '', 'Web/CSS/:checked') }}
+
+### Usando radioboxes escondidos para armazenar algum valor CSS booleano
+
+Você também pode usar a pseudo-classe `:checked `aplicada a um radioboxe escondido afim de construir, por exemplo, uma **galeria de imagem onde as imagens apenas sejam exibidas no tamanho cheio com o clique do mouse em visualizar.** Veja [essa demonstração](/@api/deki/files/6268/=css-checked-gallery.zip) como uma dica.
+
+> **Note:** **Nota:** Para um efeito análogo, mas baseada na pseudo-classe [`:hover`](/pt-BR/docs/Web/CSS/%3Ahover "CSS/:hover")` `sem radioboxes escondidos, veja [essa demostração](/@api/deki/files/6247/=css-gallery.zip), tomadas a partir de uma página [`:hover`](/pt-BR/docs/Web/CSS/%3Ahover "CSS/:hover")`.`
+
+## Especificações
+
+| Especificação                                                                        | Estatus                                  | Comentários                                          |
+| ------------------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------------------------------- |
+| {{ SpecName('HTML WHATWG', '#selector-checked', ':checked') }} | {{ Spec2('HTML WHATWG') }}     | Sem mudanças.                                        |
+| {{ SpecName('HTML5 W3C', '#selector-checked', ':checked') }}     | {{ Spec2('HTML5 W3C') }}         | Define a semântica sobre o HTML.                     |
+| {{ SpecName('CSS4 Selectors', '#checked', ':checked') }}         | {{ Spec2('CSS4 Selectors') }} | Sem mudanças.                                        |
+| {{ SpecName('CSS3 Basic UI', '#pseudo-checked', ':checked') }} | {{ Spec2('CSS3 Basic UI') }}     | Link para Seletores nível 3                          |
+| {{ SpecName('CSS3 Selectors', '#checked', ':checked') }}         | {{ Spec2('CSS3 Selectors') }} | Define a pseudo-classe, mas não associação semântica |
+
+## Compatibilidade de navegadores
 
 {{Compat("css.selectors.checked")}}

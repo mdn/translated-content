@@ -1,58 +1,56 @@
 ---
 title: ':visited'
-slug: 'Web/CSS/:visited'
+slug: Web/CSS/:visited
 tags:
   - CSS
   - Layout
   - Pseudo-classes
   - Web
-translation_of: 'Web/CSS/:visited'
+translation_of: Web/CSS/:visited
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<p>O <strong><code>:visited</code></strong> é uma <a href="/pt-BR/docs/Web/CSS/Pseudo-classes">Pseudo-classe</a> do <a href="/en-US/docs/Web/CSS">CSS</a> para indicar se o link em questão já foi visitado pelo usuário. Por questões de privacidade, os styles que podem ser modificados usando este seletor são muito limitados.</p>
+O **`:visited`** é uma [Pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) do [CSS](/pt-BR/docs/Web/CSS) para indicar se o link em questão já foi visitado pelo usuário. Por questões de privacidade, os styles que podem ser modificados usando este seletor são muito limitados.
 
-<pre class="brush: css no-line-numbers">/* Seleciona qualquer &lt;a&gt; que poderá ser visitado */
+```css
+/* Seleciona qualquer <a> que poderá ser visitado */
 a:visited {
   color: green;
-}</pre>
+}
+```
 
-<p>Styles definidos pela pseudo-classe <code>:visited</code> vão ser substituidos por qualquer pseudo-classe relacionada ao link subsequente ({{cssxref(":link")}}, {{cssxref(":hover")}}, ou {{cssxref(":active")}}) que tenha ao menos uma especificação igual. Para estilizar links apropriadamente, garantindo assim seu funcionamento adequado, ponha a regra <code>:visited</code> depois da regra <code>:link</code> mas antes das regras <code>:hover</code> e <code>:active</code> , Pode-se definir pela ordem <em>LVHA</em>: <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code>.</p>
+Styles definidos pela pseudo-classe `:visited` vão ser substituidos por qualquer pseudo-classe relacionada ao link subsequente ({{cssxref(":link")}}, {{cssxref(":hover")}}, ou {{cssxref(":active")}}) que tenha ao menos uma especificação igual. Para estilizar links apropriadamente, garantindo assim seu funcionamento adequado, ponha a regra `:visited` depois da regra `:link` mas antes das regras `:hover` e `:active` , Pode-se definir pela ordem _LVHA_: `:link` — `:visited` — `:hover` — `:active`.
 
-<h2 id="Restrições_de_Estilo">Restrições de Estilo</h2>
+## Restrições de Estilo
 
-<p>Por razões de privacidade, navegadores limitam estritamente quais estilos você pode aplicar usando esta pseudo-class, como elas podem ser usadas:</p>
+Por razões de privacidade, navegadores limitam estritamente quais estilos você pode aplicar usando esta pseudo-class, como elas podem ser usadas:
 
-<ul>
- <li>Propriedades admicíveis no CSS são:
-  <ul>
-   <li>{{ cssxref("color") }}; </li>
-   <li>{{ cssxref("background-color") }};</li>
-   <li>{{ cssxref("border-color") }};</li>
-   <li>{{ cssxref("border-bottom-color") }};</li>
-   <li>{{ cssxref("border-left-color") }};</li>
-   <li> {{ cssxref("border-right-color") }};</li>
-   <li> {{ cssxref("border-top-color") }};</li>
-   <li> {{ cssxref("column-rule-color") }};</li>
-   <li> {{ cssxref("outline-color") }}.</li>
-  </ul>
- </li>
- <li>Atributos <a href="/pt-BR/docs/Web/SVG">SVG</a> admissíveis são {{SVGAttr("fill")}} e {{SVGAttr("stroke")}}.</li>
- <li>Os componentes alpha permitidos de estilos seram ignorados. Ao invés disso,  o componente alpha do elemento de estado non-<code>:visited</code>  será usado, exceto quando o componente é <code>0</code>, no qual o estilo definido em <code>:visited</code> será inteiramente ignorado.</li>
- <li>Embora esses estilos podem mudar como as cores serão mostradas ao usuário,  o método {{domxref("window.getComputedStyle")}} vai mentir e sempre retornar o valor da cor em non-<code>:visited.</code> </li>
-</ul>
+- Propriedades admicíveis no CSS são:
 
-<div class="note">
-<p><strong>Nota:</strong> Para mais informações quanto a essas limitações e as razões por trás delas, veja <a href="/en-US/docs/CSS/Privacy_and_the_:visited_selector" title="/en-US/docs/CSS/Privacy_and_the_:visited_selector">Privacy and the :visited selector</a>. Obs: No momento estará apenas disponível em inglês.</p>
-</div>
+  - {{ cssxref("color") }};
+  - {{ cssxref("background-color") }};
+  - {{ cssxref("border-color") }};
+  - {{ cssxref("border-bottom-color") }};
+  - {{ cssxref("border-left-color") }};
+  - {{ cssxref("border-right-color") }};
+  - {{ cssxref("border-top-color") }};
+  - {{ cssxref("column-rule-color") }};
+  - {{ cssxref("outline-color") }}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+- Atributos [SVG](/pt-BR/docs/Web/SVG) admissíveis são {{SVGAttr("fill")}} e {{SVGAttr("stroke")}}.
+- Os componentes alpha permitidos de estilos seram ignorados. Ao invés disso, o componente alpha do elemento de estado non-`:visited` será usado, exceto quando o componente é `0`, no qual o estilo definido em `:visited` será inteiramente ignorado.
+- Embora esses estilos podem mudar como as cores serão mostradas ao usuário, o método {{domxref("window.getComputedStyle")}} vai mentir e sempre retornar o valor da cor em non-`:visited.`
 
-<pre class="syntaxbox">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;Exemplo de uso do seletor :visited&lt;/title&gt;
-    &lt;style type="text/css"&gt;
+> **Note:** **Nota:** Para mais informações quanto a essas limitações e as razões por trás delas, veja [Privacy and the :visited selector](/pt-BR/docs/CSS/Privacy_and_the_:visited_selector). Obs: No momento estará apenas disponível em inglês.
+
+## Syntaxe
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de uso do seletor :visited</title>
+    <style type="text/css">
         a {
             background-color: white;
             border: 1px solid white; }
@@ -60,27 +58,31 @@ a:visited {
             background-color: lightblue;
             border-color: cyan;
             color: darkblue; }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;a href=""&gt;Você já visitou este link?&lt;/a&gt;&lt;br&gt;
-    &lt;a href=""&gt;Você já visitou este link.&lt;/a&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+    </style>
+</head>
+<body>
+    <a href="">Você já visitou este link?</a><br>
+    <a href="">Você já visitou este link.</a>
+</body>
+</html>
+```
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>Propriedades que de alguma forma não tenha cor ("color") definida, ou seja transparente, não podem ser modificadas como o <code>:visited</code>. Das  propriedades que podem ser definidas por essa pseudo-classe, seu navegador provavelmente terá por padão valores para <code>color</code> e <code>column-rule-color</code> somente. Portanto, se você quiser modificar outras propriedades, você necessitará pré-definir os valores fora do seletor <code>:visited</code>.</p>
+Propriedades que de alguma forma não tenha cor ("color") definida, ou seja transparente, não podem ser modificadas como o `:visited`. Das propriedades que podem ser definidas por essa pseudo-classe, seu navegador provavelmente terá por padão valores para `color` e `column-rule-color` somente. Portanto, se você quiser modificar outras propriedades, você necessitará pré-definir os valores fora do seletor `:visited`.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;a href="#"&gt;Você já visitou este link?&lt;/a&gt;
-&lt;br&gt;
-&lt;a href=""&gt;Você já visitou este link.&lt;/a&gt;</pre>
+```html
+<a href="#">Você já visitou este link?</a>
+<br>
+<a href="">Você já visitou este link.</a>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">a {
+```css
+a {
   /* Specifica non-transparent por padrão para algumas
      propriedades, permitindo-os a serem estilizados pelo
      estado :visited */
@@ -93,58 +95,27 @@ a:visited {
   border-color: hotpink;
   color: hotpink;
 }
-</pre>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<div>{{EmbedLiveSample("Exemplo")}}</div>
+{{EmbedLiveSample("Exemplo")}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', 'scripting.html#selector-visited', ':visited') }}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS4 Selectors', '#link', ':visited') }}</td>
-   <td>{{ Spec2('CSS4 Selectors') }}</td>
-   <td>Sem mudança.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Selectors', '#link', ':visited') }}</td>
-   <td>{{ Spec2('CSS3 Selectors') }}</td>
-   <td>Sem mudança.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'selector.html#link-pseudo-classes', ':visited') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td>Eleva a restrição para aplicar apenas :visited ao elemento {{HTMLElement ("a")}}. Permite que os navegadores restrinjam seu comportamento por motivos de privacidade.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS1', '#anchor-pseudo-classes', ':visited') }}</td>
-   <td>{{ Spec2('CSS1') }}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                                       | Status                                   | Comentário                                                                                                                                                                   |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{ SpecName('HTML WHATWG', 'scripting.html#selector-visited', ':visited') }} | {{ Spec2('HTML WHATWG') }}     |                                                                                                                                                                              |
+| {{ SpecName('CSS4 Selectors', '#link', ':visited') }}                             | {{ Spec2('CSS4 Selectors') }} | Sem mudança.                                                                                                                                                                 |
+| {{ SpecName('CSS3 Selectors', '#link', ':visited') }}                             | {{ Spec2('CSS3 Selectors') }} | Sem mudança.                                                                                                                                                                 |
+| {{ SpecName('CSS2.1', 'selector.html#link-pseudo-classes', ':visited') }}     | {{ Spec2('CSS2.1') }}             | Eleva a restrição para aplicar apenas :visited ao elemento {{HTMLElement ("a")}}. Permite que os navegadores restrinjam seu comportamento por motivos de privacidade. |
+| {{ SpecName('CSS1', '#anchor-pseudo-classes', ':visited') }}                     | {{ Spec2('CSS1') }}                 | Definição inicial.                                                                                                                                                           |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("css.selectors.visited")}}</p>
+{{Compat("css.selectors.visited")}}
 
-<h2 id="Veja_também_(inglês)">Veja também (inglês)</h2>
+## Veja também (inglês)
 
-<ul>
- <li><a href="/en-US/docs/CSS/Privacy_and_the_:visited_selector" title="/en-US/docs/CSS/Privacy_and_the_:visited_selector">Privacy and the :visited selector</a></li>
- <li>Link-related pseudo-classes: {{cssxref(":link")}}, {{cssxref(":active")}}, {{cssxref(":hover")}}</li>
-</ul>
+- [Privacy and the :visited selector](/pt-BR/docs/CSS/Privacy_and_the_:visited_selector)
+- Link-related pseudo-classes: {{cssxref(":link")}}, {{cssxref(":active")}}, {{cssxref(":hover")}}

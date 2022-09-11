@@ -8,136 +8,86 @@ tags:
   - Seletores
 translation_of: Web/CSS/Pseudo-classes
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<p>Uma <em><strong>pseudo-classe</strong></em> CSS é uma palavra-chave adicionada a seletores que especifica um estado especial do elemento selecionado. Por exemplo, {{Cssxref(":hover")}} pode ser usado para alterar a cor de um botão quando o usuário passar o cursor sobre ele.</p>
+Uma _**pseudo-classe**_ CSS é uma palavra-chave adicionada a seletores que especifica um estado especial do elemento selecionado. Por exemplo, {{Cssxref(":hover")}} pode ser usado para alterar a cor de um botão quando o usuário passar o cursor sobre ele.
 
-<pre class="brush: css">/*Qualquer botão sobre o qual o ponteiro do usuário esteja passando sobre*/
+```css
+/*Qualquer botão sobre o qual o ponteiro do usuário esteja passando sobre*/
 button:hover {
   color: blue;
-}</pre>
+}
+```
 
-<p>Pseudo-classes permitem que você aplique um estilo a um elemento não apenas em relação ao conteúdo da árvore do documento, mas também em relação a fatores externos como o histórico de navegação ({{CSSxRef(":visited")}}, por exemplo), o status do seu conteúdo (como {{ CSSxRef(":checked")}} em certos elementos de um formulário), ou a posição do mouse (como {{CSSxRef(":hover")}}, que permite saber se o mouse está sobre um elemento ou não).</p>
+Pseudo-classes permitem que você aplique um estilo a um elemento não apenas em relação ao conteúdo da árvore do documento, mas também em relação a fatores externos como o histórico de navegação ({{CSSxRef(":visited")}}, por exemplo), o status do seu conteúdo (como {{ CSSxRef(":checked")}} em certos elementos de um formulário), ou a posição do mouse (como {{CSSxRef(":hover")}}, que permite saber se o mouse está sobre um elemento ou não).
 
-<div class="note">
-<p><strong>Observação:</strong> Diferentemente das pseudo-classes, <a href="/pt-BR/docs/Web/CSS/Pseudo-elementos">pseudo-elementos</a> podem ser usados para estilizar uma <em>parte específica</em> de um elemento.</p>
-</div>
+> **Note:** **Observação:** Diferentemente das pseudo-classes, [pseudo-elementos](/pt-BR/docs/Web/CSS/Pseudo-elementos) podem ser usados para estilizar uma _parte específica_ de um elemento.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">seletor:pseudo-classe {
+```
+seletor:pseudo-classe {
   propriedade: valor;
 }
-</pre>
+```
 
-<p>Assim como nas classes regulares, você pode encadear juntas quantas pseudo-classes você desejar em um seletor.</p>
+Assim como nas classes regulares, você pode encadear juntas quantas pseudo-classes você desejar em um seletor.
 
-<h2 id="Índice_de_pseudo-classes_padrão">Índice de pseudo-classes padrão</h2>
+## Índice de pseudo-classes padrão
 
-<div class="index">
-<ul>
- <li>{{ Cssxref(":active") }}</li>
- <li>{{ Cssxref(":checked") }}</li>
- <li>{{ Cssxref(":default") }}</li>
- <li>{{ Cssxref(":dir", ":dir()")}}</li>
- <li>{{ Cssxref(":disabled") }}</li>
- <li>{{ Cssxref(":empty") }}</li>
- <li>{{ Cssxref(":enabled") }}</li>
- <li>{{ Cssxref(":first") }}</li>
- <li>{{ Cssxref(":first-child") }}</li>
- <li>{{ Cssxref(":first-of-type") }}</li>
- <li>{{ Cssxref(":fullscreen") }}</li>
- <li>{{ Cssxref(":focus") }}</li>
- <li>{{ Cssxref(":hover") }}</li>
- <li>{{ Cssxref(":indeterminate") }}</li>
- <li>{{ Cssxref(":in-range") }}</li>
- <li>{{ Cssxref(":invalid") }}</li>
- <li>{{ Cssxref(":lang", ":lang()") }}</li>
- <li>{{ Cssxref(":last-child") }}</li>
- <li>{{ Cssxref(":last-of-type") }}</li>
- <li>{{ Cssxref(":left") }}</li>
- <li>{{ Cssxref(":link") }}</li>
- <li>{{ Cssxref(":not", ":not()") }}</li>
- <li>{{ Cssxref(":nth-child", ":nth-child()") }}</li>
- <li>{{ Cssxref(":nth-last-child", ":nth-last-child()") }}</li>
- <li>{{ Cssxref(":nth-last-of-type", ":nth-last-of-type()") }}</li>
- <li>{{ Cssxref(":nth-of-type", ":nth-of-type()") }}</li>
- <li>{{ Cssxref(":only-child") }}</li>
- <li>{{ Cssxref(":only-of-type") }}</li>
- <li>{{ Cssxref(":optional") }}</li>
- <li>{{ Cssxref(":out-of-range") }}</li>
- <li>{{ Cssxref(":read-only") }}</li>
- <li>{{ Cssxref(":read-write") }}</li>
- <li>{{ Cssxref(":required") }}</li>
- <li>{{ Cssxref(":right") }}</li>
- <li>{{ Cssxref(":root") }}</li>
- <li>{{ Cssxref(":scope") }}</li>
- <li>{{ Cssxref(":target") }}</li>
- <li>{{ Cssxref(":valid") }}</li>
- <li>{{ Cssxref(":visited") }}</li>
-</ul>
-</div>
+- {{ Cssxref(":active") }}
+- {{ Cssxref(":checked") }}
+- {{ Cssxref(":default") }}
+- {{ Cssxref(":dir", ":dir()")}}
+- {{ Cssxref(":disabled") }}
+- {{ Cssxref(":empty") }}
+- {{ Cssxref(":enabled") }}
+- {{ Cssxref(":first") }}
+- {{ Cssxref(":first-child") }}
+- {{ Cssxref(":first-of-type") }}
+- {{ Cssxref(":fullscreen") }}
+- {{ Cssxref(":focus") }}
+- {{ Cssxref(":hover") }}
+- {{ Cssxref(":indeterminate") }}
+- {{ Cssxref(":in-range") }}
+- {{ Cssxref(":invalid") }}
+- {{ Cssxref(":lang", ":lang()") }}
+- {{ Cssxref(":last-child") }}
+- {{ Cssxref(":last-of-type") }}
+- {{ Cssxref(":left") }}
+- {{ Cssxref(":link") }}
+- {{ Cssxref(":not", ":not()") }}
+- {{ Cssxref(":nth-child", ":nth-child()") }}
+- {{ Cssxref(":nth-last-child", ":nth-last-child()") }}
+- {{ Cssxref(":nth-last-of-type", ":nth-last-of-type()") }}
+- {{ Cssxref(":nth-of-type", ":nth-of-type()") }}
+- {{ Cssxref(":only-child") }}
+- {{ Cssxref(":only-of-type") }}
+- {{ Cssxref(":optional") }}
+- {{ Cssxref(":out-of-range") }}
+- {{ Cssxref(":read-only") }}
+- {{ Cssxref(":read-write") }}
+- {{ Cssxref(":required") }}
+- {{ Cssxref(":right") }}
+- {{ Cssxref(":root") }}
+- {{ Cssxref(":scope") }}
+- {{ Cssxref(":target") }}
+- {{ Cssxref(":valid") }}
+- {{ Cssxref(":visited") }}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Fullscreen') }}</td>
-   <td>{{ Spec2('Fullscreen') }}</td>
-   <td>Define <code>:fullscreen</code>.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG') }}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td>Nenhuma mudança de  {{ SpecName('HTML5 W3C') }}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Define <code>:any-link</code>, <code>:local-link</code>, <code>:scope</code>, <code>:active-drop-target</code>, <code>:valid-drop-target</code>, <code>:invalid-drop-target</code>, <code>:current</code>, <code>:past</code>, <code>:future</code>, <code>:placeholder-shown</code>, <code>:user-error</code>, <code>:blank</code>, <code>:nth-match()</code>, <code>:nth-last-match()</code>, <code>:nth-column()</code>, <code>:nth-last-column()</code>, e <code>:matches()</code>.<br>
-    Nenhuma mudança significante das pseudo-classes definidas em {{SpecName('CSS3 Selectors')}} e {{SpecName('HTML5 W3C')}} (embora o significado semântico que não foram retomadas).</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5 W3C') }}</td>
-   <td>{{ Spec2('HTML5 W3C') }}</td>
-   <td>Define o siginificado semântico no contexto do HTML <code>:link</code>, <code>:visited</code>, <code>:active</code>, <code>:enabled</code>, <code>:disabled</code>, <code>:checked</code>, e <code>:indeterminate</code>.<br>
-    Define <code>:default</code>, <code>:valid</code>, <code>:invalid</code>, <code>:in-range</code>, <code>:out-of-range</code>, <code>:required</code>, <code>:optional</code>, <code>:read-only</code>, <code>:read-write</code>, e <code>:dir()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Basic UI') }}</td>
-   <td>{{ Spec2('CSS3 Basic UI') }}</td>
-   <td>Define <code>:default</code>, <code>:valid</code>, <code>:invalid</code>, <code>:in-range</code>, <code>:out-of-range</code>, <code>:required</code>, <code>:optional</code>, <code>:read-only</code>, e <code>:read-write</code>, mas sem associar significado semântico.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Define <code>:target</code>, <code>:root</code>, <code>:nth-child()</code>, <code>:nth-last-of-child()</code>, <code>:nth-of-type()</code>, <code>:nth-last-of-type()</code>, <code>:last-child</code>, <code>:first-of-type</code>, <code>:last-of-type</code>, <code>:only-child</code>, <code>:only-of-type</code>, <code>:empty</code>, e <code>:not()</code>.<br>
-    Denife a sintaxe de <code>:enabled</code>, <code>:disabled</code>, <code>:checked</code>, e <code>:indeterminate</code>, mas sem o significado semântico associado. Nenhuma mudança significativa, para as pseudo-classes definidas em {{SpecName('CSS2.1')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Define <code>:lang()</code>, <code>:first-child</code>, <code>:hover</code>, e <code>:focus</code>.<br>
-    Nenhuma mudança significativa, para as pseudo-classes definidas em{{SpecName('CSS1')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Define <code>:link</code>, <code>:visited</code>, e <code>:active</code>, mas sem o significado semântico associado.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                            | Status                               | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ---------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{ SpecName('Fullscreen') }}     | {{ Spec2('Fullscreen') }}     | Define `:fullscreen`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| {{ SpecName('HTML WHATWG') }} | {{ Spec2('HTML WHATWG') }} | Nenhuma mudança de {{ SpecName('HTML5 W3C') }}.                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| {{SpecName('CSS4 Selectors')}} | {{Spec2('CSS4 Selectors')}} | Define `:any-link`, `:local-link`, `:scope`, `:active-drop-target`, `:valid-drop-target`, `:invalid-drop-target`, `:current`, `:past`, `:future`, `:placeholder-shown`, `:user-error`, `:blank`, `:nth-match()`, `:nth-last-match()`, `:nth-column()`, `:nth-last-column()`, e `:matches()`. Nenhuma mudança significante das pseudo-classes definidas em {{SpecName('CSS3 Selectors')}} e {{SpecName('HTML5 W3C')}} (embora o significado semântico que não foram retomadas). |
+| {{ SpecName('HTML5 W3C') }}     | {{ Spec2('HTML5 W3C') }}     | Define o siginificado semântico no contexto do HTML `:link`, `:visited`, `:active`, `:enabled`, `:disabled`, `:checked`, e `:indeterminate`. Define `:default`, `:valid`, `:invalid`, `:in-range`, `:out-of-range`, `:required`, `:optional`, `:read-only`, `:read-write`, e `:dir()`.                                                                                                                                                                                                          |
+| {{ SpecName('CSS3 Basic UI') }} | {{ Spec2('CSS3 Basic UI') }} | Define `:default`, `:valid`, `:invalid`, `:in-range`, `:out-of-range`, `:required`, `:optional`, `:read-only`, e `:read-write`, mas sem associar significado semântico.                                                                                                                                                                                                                                                                                                                         |
+| {{SpecName('CSS3 Selectors')}} | {{Spec2('CSS3 Selectors')}} | Define `:target`, `:root`, `:nth-child()`, `:nth-last-of-child()`, `:nth-of-type()`, `:nth-last-of-type()`, `:last-child`, `:first-of-type`, `:last-of-type`, `:only-child`, `:only-of-type`, `:empty`, e `:not()`. Denife a sintaxe de `:enabled`, `:disabled`, `:checked`, e `:indeterminate`, mas sem o significado semântico associado. Nenhuma mudança significativa, para as pseudo-classes definidas em {{SpecName('CSS2.1')}}.                                                    |
+| {{SpecName('CSS2.1')}}             | {{Spec2('CSS2.1')}}             | Define `:lang()`, `:first-child`, `:hover`, e `:focus`. Nenhuma mudança significativa, para as pseudo-classes definidas em{{SpecName('CSS1')}}.                                                                                                                                                                                                                                                                                                                                         |
+| {{SpecName('CSS1')}}             | {{Spec2('CSS1')}}             | Define `:link`, `:visited`, e `:active`, mas sem o significado semântico associado.                                                                                                                                                                                                                                                                                                                                                                                                             |
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ Cssxref("pseudo-elements") }}</li>
-</ul>
+- {{ Cssxref("pseudo-elements") }}

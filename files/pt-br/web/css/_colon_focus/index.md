@@ -1,6 +1,6 @@
 ---
 title: ':focus'
-slug: 'Web/CSS/:focus'
+slug: Web/CSS/:focus
 tags:
   - Acessibilidade
   - CSS
@@ -10,69 +10,50 @@ tags:
   - Pseudo classe CSS
   - Referencia
   - Web
-translation_of: 'Web/CSS/:focus'
+translation_of: Web/CSS/:focus
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>A <a href="/en-US/docs/Web/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-classe</a> <code>:focus</code> do CSS é aplicada quando um elemento recebe foco, o que pode ocorrer quando o usuário seleciona o elemento utilizando o teclado ou ativando o mesmo com o mouse (ex: um campo de um formulário).</p>
+A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes "Pseudo-classes") `:focus` do CSS é aplicada quando um elemento recebe foco, o que pode ocorrer quando o usuário seleciona o elemento utilizando o teclado ou ativando o mesmo com o mouse (ex: um campo de um formulário).
 
-<p>A pseudo classe é aplicada apenas ao elemento focado, e não aos seus elementos ascendentes, como ocorre com {{ Cssxref(":checked") }} e {{ Cssxref(":enabled") }} e diferentemente de {{ Cssxref(":active") }} ou {{ Cssxref(":hover") }}.</p>
+A pseudo classe é aplicada apenas ao elemento focado, e não aos seus elementos ascendentes, como ocorre com {{ Cssxref(":checked") }} e {{ Cssxref(":enabled") }} e diferentemente de {{ Cssxref(":active") }} ou {{ Cssxref(":hover") }}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><var>elemento</var>:focus { ... }</pre>
+```
+elemento:focus { ... }
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: css">.nome:focus {
+```css
+.nome:focus {
   color: red;
 }
 
 .sobrenome:focus {
   color: lime;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;input class="nome" value="Esse elemento ficará vermelho quando focado"&gt;
-&lt;input class="sobrenome" value="Esse elemento ficará verde-limão quando focado"&gt;</pre>
+```html
+<input class="nome" value="Esse elemento ficará vermelho quando focado">
+<input class="sobrenome" value="Esse elemento ficará verde-limão quando focado">
+```
 
-<p>{{ EmbedLiveSample('Exemplos', '', '', '', 'Web/CSS/:focus') }}</p>
+{{ EmbedLiveSample('Exemplos', '', '', '', 'Web/CSS/:focus') }}
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'scripting.html#selector-focus', ':focus')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Define a semântica no HTML.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#focus-pseudo', ':focus')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Nenhuma modificação.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#the-user-action-pseudo-classes-hover-act', ':focus')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Nenhuma modificação.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':focus')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                    | Estado                               | Comentário                  |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------- |
+| {{SpecName('HTML WHATWG', 'scripting.html#selector-focus', ':focus')}}                     | {{Spec2('HTML WHATWG')}}     | Define a semântica no HTML. |
+| {{SpecName('CSS4 Selectors', '#focus-pseudo', ':focus')}}                                     | {{Spec2('CSS4 Selectors')}} | Nenhuma modificação.        |
+| {{SpecName('CSS3 Selectors', '#the-user-action-pseudo-classes-hover-act', ':focus')}} | {{Spec2('CSS3 Selectors')}} | Nenhuma modificação.        |
+| {{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':focus')}}                 | {{Spec2('CSS2.1')}}             | Definição inicial.          |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.selectors.focus")}}

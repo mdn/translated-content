@@ -8,34 +8,32 @@ tags:
 translation_of: Web/CSS/filter-function/opacity()
 original_slug: Web/CSS/filter-function/opacity()
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p>A função <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>opacity()</code></strong> aplica transparência às amostras na imagem inputada. Seu resultado é uma {{cssxref("&lt;filter-function&gt;")}}.</p>
+A função [CSS](/pt-BR/docs/Web/CSS) **`opacity()`** aplica transparência às amostras na imagem inputada. Seu resultado é uma {{cssxref("&lt;filter-function&gt;")}}.
 
-<div class="note">
-<p><strong>Nota:</strong> Essa função é similar à propriedade {{Cssxref("opacity")}} mais estabelecida. A diferença é que com filtros, alguns browsers fornecem aceleração de hardware para uma melhor performance.</p>
-</div>
+> **Note:** **Nota:** Essa função é similar à propriedade {{Cssxref("opacity")}} mais estabelecida. A diferença é que com filtros, alguns browsers fornecem aceleração de hardware para uma melhor performance.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">opacity(<em>amount</em>)</pre>
+```
+opacity(amount)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>amount</code></dt>
- <dd>A quantidade de conversão, especificada com um {{cssxref("&lt;number&gt;")}} ou uma {{cssxref("&lt;percentage&gt;")}}. Um valor de <code>0%</code> é completamente transparente, enquanto que um valor de <code>100%</code> mantém o input inalterado. Valores entre <code>0%</code> e <code>100%</code> são multiplicadores lineares do efeito. O valor de lacuna para interpolação é <code>1</code>.</dd>
-</dl>
+- `amount`
+  - : A quantidade de conversão, especificada com um {{cssxref("&lt;number&gt;")}} ou uma {{cssxref("&lt;percentage&gt;")}}. Um valor de `0%` é completamente transparente, enquanto que um valor de `100%` mantém o input inalterado. Valores entre `0%` e `100%` são multiplicadores lineares do efeito. O valor de lacuna para interpolação é `1`.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: css">opacity(0%)   /* Completamente transparente */
+```css
+opacity(0%)   /* Completamente transparente */
 opacity(50%)  /* 50% transparente */
-opacity(1)    /* Nenhum efeito */</pre>
+opacity(1)    /* Nenhum efeito */
+```
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
- <li>Propriedade CSS {{cssxref("opacity")}}</li>
-</ul>
+- {{cssxref("&lt;filter-function&gt;")}}
+- Propriedade CSS {{cssxref("opacity")}}

@@ -3,17 +3,18 @@ title: font-weight
 slug: Web/CSS/font-weight
 translation_of: Web/CSS/font-weight
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>A propriedade <a href="/en-US/docs/CSS" title="CSS">CSS </a><code>font-weight</code> especifica o peso ou a intensidade da fonte (ex.: negrito). Algumas fontes oferecem apenas as opções <code>normal</code> e negrito.</p>
+A propriedade [CSS ](/pt-BR/docs/CSS "CSS")`font-weight` especifica o peso ou a intensidade da fonte (ex.: negrito). Algumas fontes oferecem apenas as opções `normal` e negrito.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush:css">font-weight: normal;
+```css
+font-weight: normal;
 font-weight: bold;
 
 /* Relativo ao elemento pai */
@@ -34,151 +35,101 @@ font-weight: 900;
 font-weight: inherit;
 font-weight: initial;
 font-weight: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Peso normal. O mesmo que <code>400</code>.</dd>
- <dt><code>bold</code></dt>
- <dd>Peso negrito. O mesmo que <code>700</code>.</dd>
- <dt><code>lighter</code></dt>
- <dd>Um peso de fonte mais claro que o elemento pai (dentre os pesos disponíveis da fonte).</dd>
- <dt><code>bolder</code></dt>
- <dd>Um peso de fonte mais escuro que o elemento pai (dentre os pesos disponíveis da fonte).</dd>
- <dt><code>100</code>, <code>200</code>, <code>300</code>, <code>400</code>, <code>500</code>, <code>600</code>, <code>700</code>, <code>800</code>, <code>900</code></dt>
- <dd>Pesos numéricos para fontes que oferecem mais que normal e negrito.</dd>
-</dl>
+- `normal`
+  - : Peso normal. O mesmo que `400`.
+- `bold`
+  - : Peso negrito. O mesmo que `700`.
+- `lighter`
+  - : Um peso de fonte mais claro que o elemento pai (dentre os pesos disponíveis da fonte).
+- `bolder`
+  - : Um peso de fonte mais escuro que o elemento pai (dentre os pesos disponíveis da fonte).
+- `100`, `200`, `300`, `400`, `500`, `600`, `700`, `800`, `900`
+  - : Pesos numéricos para fontes que oferecem mais que normal e negrito.
 
-<h3 id="Contingência">Contingência</h3>
+### Contingência
 
-<p>Caso o dado peso solicitado não esteja disponível, a seguinte heurística é usada para determinar o peso efetivo a ser usado:</p>
+Caso o dado peso solicitado não esteja disponível, a seguinte heurística é usada para determinar o peso efetivo a ser usado:
 
-<ul>
- <li>Se solicitado um peso maior que <code>500</code>, usa-se o próximo peso mais escuro (ou, se não houver, usa-se o próximo mais claro).</li>
- <li>Se solicitado um peso menor que <code>400</code>, usa-se o próximo peso mais claro  (ou, se não houver, usa-se o próximo mais escuro).</li>
- <li>Se solicitado o peso <code>400</code>, usa-se o peso <code>500</code>. Se <code>500</code> não estiver disponível, usa-se a heurística para peso menor do que 500.</li>
- <li>Se solicitado o peso <code>500</code>, usa-se o peso <code>400</code>. Se <code>400</code> não estiver disponível, usa-se a heurística para peso menor do que 400.</li>
-</ul>
+- Se solicitado um peso maior que `500`, usa-se o próximo peso mais escuro (ou, se não houver, usa-se o próximo mais claro).
+- Se solicitado um peso menor que `400`, usa-se o próximo peso mais claro (ou, se não houver, usa-se o próximo mais escuro).
+- Se solicitado o peso `400`, usa-se o peso `500`. Se `500` não estiver disponível, usa-se a heurística para peso menor do que 500.
+- Se solicitado o peso `500`, usa-se o peso `400`. Se `400` não estiver disponível, usa-se a heurística para peso menor do que 400.
 
-<p>Isto significa que para fontes que oferecem apenas <code style="font-style: normal;">normal</code> e negrito, <code style="font-style: normal;">100</code>-<code>500</code> significa normal, e <code style="font-style: normal;">600</code>-<code style="font-style: normal;">900</code> significa negrito.</p>
+Isto significa que para fontes que oferecem apenas `normal` e negrito, `100`-`500` significa normal, e `600`-`900` significa negrito.
 
-<h3 id="Significado_de_pesos_relativos">Significado de pesos relativos</h3>
+### Significado de pesos relativos
 
-<p>Quando for solicitado <code>lighter</code> ou <code>bolder</code>, a seguinte tabela é usada para calcular o peso absoluto do elemento:</p>
+Quando for solicitado `lighter` ou `bolder`, a seguinte tabela é usada para calcular o peso absoluto do elemento:
 
-<table>
- <thead>
-  <tr>
-   <th>Valor herdado</th>
-   <th><code>bolder</code></th>
-   <th><code>lighter</code></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th>100</th>
-   <td>400</td>
-   <td>100</td>
-  </tr>
-  <tr>
-   <th>200</th>
-   <td>400</td>
-   <td>100</td>
-  </tr>
-  <tr>
-   <th>300</th>
-   <td>400</td>
-   <td>100</td>
-  </tr>
-  <tr>
-   <th>400</th>
-   <td>700</td>
-   <td>100</td>
-  </tr>
-  <tr>
-   <th>500</th>
-   <td>700</td>
-   <td>100</td>
-  </tr>
-  <tr>
-   <th>600</th>
-   <td>900</td>
-   <td>400</td>
-  </tr>
-  <tr>
-   <th>700</th>
-   <td>900</td>
-   <td>400</td>
-  </tr>
-  <tr>
-   <th>800</th>
-   <td>900</td>
-   <td>700</td>
-  </tr>
-  <tr>
-   <th>900</th>
-   <td>900</td>
-   <td>700</td>
-  </tr>
- </tbody>
-</table>
+| Valor herdado | `bolder` | `lighter` |
+| ------------- | -------- | --------- |
+| 100           | 400      | 100       |
+| 200           | 400      | 100       |
+| 300           | 400      | 100       |
+| 400           | 700      | 100       |
+| 500           | 700      | 100       |
+| 600           | 900      | 400       |
+| 700           | 900      | 400       |
+| 800           | 900      | 700       |
+| 900           | 900      | 700       |
 
-<h3 id="Mapeamento_de_nomes_comuns_de_pesos">Mapeamento de nomes comuns de pesos</h3>
+### Mapeamento de nomes comuns de pesos
 
-<p>Os valores de 100 a 900 correspondem grosseiramente aos seguintes nomes comuns de pesos:</p>
+Os valores de 100 a 900 correspondem grosseiramente aos seguintes nomes comuns de pesos:
 
-<dl>
- <dt><code>100</code></dt>
- <dd>Thin (Hairline)</dd>
- <dt><code>200</code></dt>
- <dd>Extra Light (Ultra Light, Ultra Fino)</dd>
- <dt><code>300</code></dt>
- <dd>Light (Fino)</dd>
- <dt><code>400</code></dt>
- <dd>Normal</dd>
- <dt><code>500</code></dt>
- <dd>Medium (Médio)</dd>
- <dt><code>600</code></dt>
- <dd>Semi Bold (Demi Bold, Semi Negrito)</dd>
- <dt><code>700</code></dt>
- <dd>Bold (Negrito)</dd>
- <dt><code>800</code></dt>
- <dd>Extra Bold (Ultra Bold, Super Negrito)</dd>
- <dt><code>900</code></dt>
- <dd>Black (Heavy)</dd>
-</dl>
+- `100`
+  - : Thin (Hairline)
+- `200`
+  - : Extra Light (Ultra Light, Ultra Fino)
+- `300`
+  - : Light (Fino)
+- `400`
+  - : Normal
+- `500`
+  - : Medium (Médio)
+- `600`
+  - : Semi Bold (Demi Bold, Semi Negrito)
+- `700`
+  - : Bold (Negrito)
+- `800`
+  - : Extra Bold (Ultra Bold, Super Negrito)
+- `900`
+  - : Black (Heavy)
 
-<h3 id="Interpolação">Interpolação</h3>
+### Interpolação
 
-<p>Um valor de <code>font-weight</code> é interpolado com passos discretos (múltiplos de 100). A interpolação acontece no espaço de números reais e depois é feita uma conversão para números inteiros por arredondamento para o múltiplo de 100 mais próximo. Valores exatamente entre dois múltiplos de 100 são arredondados para mais.</p>
+Um valor de `font-weight` é interpolado com passos discretos (múltiplos de 100). A interpolação acontece no espaço de números reais e depois é feita uma conversão para números inteiros por arredondamento para o múltiplo de 100 mais próximo. Valores exatamente entre dois múltiplos de 100 são arredondados para mais.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+### Sintaxe formal
 
 {{csssyntax}}
 
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
+### HTML
 
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   Alice was beginning to get very tired of sitting by her sister on the
   bank, and of having nothing to do: once or twice she had peeped into the
   book her sister was reading, but it had no pictures or conversations in
   it, 'and what is the use of a book,' thought Alice 'without pictures or
   conversations?'
-&lt;/p&gt;
+</p>
 
-&lt;div&gt;I'm heavy&lt;br/&gt;
-  &lt;span&gt;I'm lighter&lt;/span&gt;
-&lt;/div&gt;
-</pre>
+<div>I'm heavy<br/>
+  <span>I'm lighter</span>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">/* Set paragraph text to be bold. */
+```css
+/* Set paragraph text to be bold. */
 p {
   font-weight: bold;
 }
@@ -193,46 +144,22 @@ div {
    to be one step lighter than the parent. */
 span {
   font-weight: lighter;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Exemplos","400","300")}}</p>
+{{EmbedLiveSample("Exemplos","400","300")}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#font-weight-prop', 'font-weight')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Sem alterações.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'font-weight')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Permite animação do atributo <code>font-weight</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'fonts.html#propdef-font-weight', 'font-weight')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Sem alterações.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#font-weight', 'font-weight')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                                   | Status                                   | Comentário                                  |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------- |
+| {{SpecName('CSS3 Fonts', '#font-weight-prop', 'font-weight')}}             | {{Spec2('CSS3 Fonts')}}         | Sem alterações.                             |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'font-weight')}}         | {{Spec2('CSS3 Transitions')}} | Permite animação do atributo `font-weight`. |
+| {{SpecName('CSS2.1', 'fonts.html#propdef-font-weight', 'font-weight')}} | {{Spec2('CSS2.1')}}                 | Sem alterações.                             |
+| {{SpecName('CSS1', '#font-weight', 'font-weight')}}                             | {{Spec2('CSS1')}}                 |                                             |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.properties.font-weight")}}

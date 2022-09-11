@@ -3,75 +3,77 @@ title: object-fit
 slug: Web/CSS/object-fit
 translation_of: Web/CSS/object-fit
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>A propriedade CSS <code>object-fit</code> especifica como o conteúdo de um elemento substituído deve ser ajustado à caixa estabelecida pela altura e largura usadas.</p>
+A propriedade CSS `object-fit` especifica como o conteúdo de um elemento substituído deve ser ajustado à caixa estabelecida pela altura e largura usadas.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<pre><code>object-fit: fill</code>
-<code>object-fit: contain</code>
-<code>object-fit: cover</code>
-<code>object-fit: none</code>
-<code>object-fit: scale-down</code>
-</pre>
+```
+object-fit: fill
+object-fit: contain
+object-fit: cover
+object-fit: none
+object-fit: scale-down
+```
 
-<h3 id="Values" name="Values">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>fill</code></dt>
- <dd>O conteúdo substituído é dimensionado para preencher a caixa de conteúdo do elemento: o tamanho concreto do objeto é a largura e a altura usadas do elemento.</dd>
- <dt><code>contain</code></dt>
- <dd>O conteúdo substituído é dimensionado para manter sua proporção enquanto se encaixa na caixa de conteúdo do elemento: seu tamanho de objeto concreto é resolvido como uma restrição de restrição em relação à largura e altura usadas do elemento.</dd>
- <dt><code>cover</code></dt>
- <dd>O conteúdo substituído é dimensionado para manter sua proporção e preencher toda a caixa de conteúdo do elemento: seu tamanho de objeto concreto é resolvido como uma restrição de capa contra a largura e a altura usadas do elemento.</dd>
- <dt><code>none</code></dt>
- <dd>O conteúdo substituído não é redimensionado para caber dentro da caixa de conteúdo do elemento: o tamanho do objeto concreto do objeto é determinado usando o algoritmo de tamanho padrão sem tamanho especificado e um tamanho de objeto padrão igual à largura e altura usadas do elemento substituído.</dd>
- <dt><code>scale-down</code></dt>
- <dd>O conteúdo é dimensionado se <code>none</code> ou <code>contain</code> for especificado, o que resultaria em um tamanho menor de objeto concreto.</dd>
-</dl>
+- `fill`
+  - : O conteúdo substituído é dimensionado para preencher a caixa de conteúdo do elemento: o tamanho concreto do objeto é a largura e a altura usadas do elemento.
+- `contain`
+  - : O conteúdo substituído é dimensionado para manter sua proporção enquanto se encaixa na caixa de conteúdo do elemento: seu tamanho de objeto concreto é resolvido como uma restrição de restrição em relação à largura e altura usadas do elemento.
+- `cover`
+  - : O conteúdo substituído é dimensionado para manter sua proporção e preencher toda a caixa de conteúdo do elemento: seu tamanho de objeto concreto é resolvido como uma restrição de capa contra a largura e a altura usadas do elemento.
+- `none`
+  - : O conteúdo substituído não é redimensionado para caber dentro da caixa de conteúdo do elemento: o tamanho do objeto concreto do objeto é determinado usando o algoritmo de tamanho padrão sem tamanho especificado e um tamanho de objeto padrão igual à largura e altura usadas do elemento substituído.
+- `scale-down`
+  - : O conteúdo é dimensionado se `none` ou `contain` for especificado, o que resultaria em um tamanho menor de objeto concreto.
 
-<h2 id="Example" name="Example">Exemplos</h2>
+## Exemplos
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;h2&gt;object-fit: fill&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill"/&gt;
+```html
+<div>
+  <h2>object-fit: fill</h2>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill"/>
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill narrow"/&gt;
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill narrow"/>
 
-  &lt;h2&gt;object-fit: contain&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain"/&gt;
+  <h2>object-fit: contain</h2>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain"/>
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain narrow"/&gt;
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain narrow"/>
 
-  &lt;h2&gt;object-fit: cover&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover"/&gt;
+  <h2>object-fit: cover</h2>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover"/>
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover narrow"/&gt;
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover narrow"/>
 
-  &lt;h2&gt;object-fit: none&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none"/&gt;
+  <h2>object-fit: none</h2>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none"/>
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none narrow"/&gt;
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none narrow"/>
 
-  &lt;h2&gt;object-fit: scale-down&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down"/&gt;
+  <h2>object-fit: scale-down</h2>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down"/>
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down narrow"/&gt;
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down narrow"/>
 
-&lt;/div&gt;</pre>
+</div>
+```
 
-<h3 id="CSS_Content">CSS Content</h3>
+### CSS Content
 
-<pre class="brush: css">h2 {
+```css
+h2 {
   font-family: Courier New, monospace;
   font-size: 1em;
   margin: 1em 0 0.3em;
@@ -116,43 +118,24 @@ img {
 .scale-down {
   object-fit: scale-down;
 }
-</pre>
+```
 
-<h3 id="Output">Output</h3>
+### Output
 
-<p>{{ EmbedLiveSample('Example', 500, 450) }}</p>
+{{ EmbedLiveSample('Example', 500, 450) }}
 
-<h2 id="Specifications" name="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Images', '#the-object-fit', 'object-fit')}}</td>
-   <td>{{Spec2('CSS4 Images')}}</td>
-   <td>The <code>from-image</code> and <code>flip</code> keywords have been added.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Images', '#the-object-fit', 'object-fit')}}</td>
-   <td>{{Spec2('CSS3 Images')}}</td>
-   <td>Initial specification</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                           | Comment                                               |
+| -------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------- |
+| {{SpecName('CSS4 Images', '#the-object-fit', 'object-fit')}} | {{Spec2('CSS4 Images')}} | The `from-image` and `flip` keywords have been added. |
+| {{SpecName('CSS3 Images', '#the-object-fit', 'object-fit')}} | {{Spec2('CSS3 Images')}} | Initial specification                                 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.properties.object-fit")}}
 
-<h2 id="See_also" name="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Other image-related CSS properties: {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.</li>
- <li>An <a href="https://github.com/anselmh/object-fit">object-fit polyfill</a> for browsers not supporting it.</li>
-</ul>
+- Other image-related CSS properties: {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.
+- An [object-fit polyfill](https://github.com/anselmh/object-fit) for browsers not supporting it.

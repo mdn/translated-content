@@ -3,13 +3,14 @@ title: font-kerning
 slug: Web/CSS/font-kerning
 translation_of: Web/CSS/font-kerning
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A propriedade CSS <strong><code>font-kerning</code></strong> controla o o uso da informação de kerning, que é, o controle de como as letras serão espaçadas. A informação de kerning é armazenada na fonte, e se a fonte é <em>well-kerned</em>, essa caracteristica permite que o espaçamento entre caracteres seja muito parecido, independente dos caracteres.</p>
+A propriedade CSS **`font-kerning`** controla o o uso da informação de kerning, que é, o controle de como as letras serão espaçadas. A informação de kerning é armazenada na fonte, e se a fonte é _well-kerned_, essa caracteristica permite que o espaçamento entre caracteres seja muito parecido, independente dos caracteres.
 
-<p><img alt="Example of font-kerning" src="https://mdn.mozillademos.org/files/8455/font-kerning.png" style="display: block; height: 84px; margin: auto; width: 180px;"></p>
+![Example of font-kerning](https://mdn.mozillademos.org/files/8455/font-kerning.png)
 
-<pre class="brush:css no-line-numbers">font-kerning: auto;
+```css
+font-kerning: auto;
 font-kerning: normal;
 font-kerning: none;
 
@@ -17,67 +18,57 @@ font-kerning: none;
 font-kerning: inherit;
 font-kerning: initial;
 font-kerning: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>This keyword defers to the browser regarding whether to use kerning. When the font size is small, font kerning may look strange and browsers will disable it. This is the default value.</dd>
- <dt><code>normal</code></dt>
- <dd>This keyword requires kerning to be applied.</dd>
- <dt><code>none</code></dt>
- <dd>This keyword prevents the browser from using the kerning information stored in the font.</dd>
-</dl>
+- `auto`
+  - : This keyword defers to the browser regarding whether to use kerning. When the font size is small, font kerning may look strange and browsers will disable it. This is the default value.
+- `normal`
+  - : This keyword requires kerning to be applied.
+- `none`
+  - : This keyword prevents the browser from using the kerning information stored in the font.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush:css">p {
+```css
+p {
   font-kerning: none;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#propdef-font-kerning', 'font-kerning')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                           | Comment            |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('CSS3 Fonts', '#propdef-font-kerning', 'font-kerning')}} | {{Spec2('CSS3 Fonts')}} | Initial definition |
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Browser Compatibility</h2>
+## Browser Compatibility
 
 {{Compat("css.properties.font-kerning")}}
 
-<h2 id="Kerning_Demo" name="Kerning_Demo">Kerning Demo</h2>
+## Kerning Demo
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;div id="kern"&gt;&lt;/div&gt;
-&lt;div id="nokern"&gt;&lt;/div&gt;
-&lt;textarea id="input"&gt;AV T. ij&lt;/textarea&gt;</pre>
+```html
+<div id="kern"></div>
+<div id="nokern"></div>
+<textarea id="input">AV T. ij</textarea>
+```
 
-<h3 id="CSS_Content">CSS Content</h3>
+### CSS Content
 
-<pre class="brush: css">#nokern, #kern {
+```css
+#nokern, #kern {
   font-size: 2rem;
   font-family: serif;
 }
@@ -86,11 +77,13 @@ font-kerning: unset;
 }
 #kern {
   font-kerning: normal;
-}</pre>
+}
+```
 
-<h3 id="JS_Content">JS Content</h3>
+### JS Content
 
-<pre class="brush: js">var input  = document.getElementById('input'),
+```js
+var input  = document.getElementById('input'),
     kern   = document.getElementById('kern'),
     nokern = document.getElementById('nokern');
 input.addEventListener('keyup', function() {
@@ -99,12 +92,10 @@ input.addEventListener('keyup', function() {
 });
 kern.textContent = input.value; /* Initialize content */
 nokern.textContent = input.value;
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Kerning_Demo') }}</p>
+{{ EmbedLiveSample('Kerning_Demo') }}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("font-variant")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-synthesis")}}, {{cssxref("letter-spacing")}}.</li>
-</ul>
+- {{cssxref("font-variant")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-synthesis")}}, {{cssxref("letter-spacing")}}.

@@ -4,47 +4,49 @@ slug: Web/CSS/used_value
 translation_of: Web/CSS/used_value
 original_slug: Web/CSS/Valor_usado
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p>O <strong>valor usado</strong> de uma propriedade CSS é o valor final dessa propriedade depois de todos os cálculos terem sido executados.</p>
+O **valor usado** de uma propriedade CSS é o valor final dessa propriedade depois de todos os cálculos terem sido executados.
 
-<p>After the user agent has finished its calculations, every CSS property has a used value. The used values of dimensions (e.g., <code>width</code>, <code>line-height</code>) are in pixels. The used values of shorthand properties (e.g., background) are consistent with those of their component properties (e.g., <code>background-color</code>, <code>display)</code> and with <code>position</code> and <code>float</code>.</p>
+After the user agent has finished its calculations, every CSS property has a used value. The used values of dimensions (e.g., `width`, `line-height`) are in pixels. The used values of shorthand properties (e.g., background) are consistent with those of their component properties (e.g., `background-color`, `display)` and with `position` and `float`.
 
-<p>For some properties, JavaScript can retrieve the used value through the <a href="/en-US/docs/DOM/window.getComputedStyle" style="text-decoration: none; color: rgb(4, 137, 183) !important; cursor: default;" title="en/DOM/window.getComputedStyle">window.getComputedStyle</a> method.</p>
+For some properties, JavaScript can retrieve the used value through the [window.getComputedStyle](/pt-BR/docs/DOM/window.getComputedStyle "en/DOM/window.getComputedStyle") method.
 
-<h2 id="Detalhes">Detalhes</h2>
+## Detalhes
 
-<p>There are four steps to calculating any CSS property's final value. First, the <a href="/en-US/docs/CSS/specified_value" title="https://developer.mozilla.org/en/CSS/specified_value">specified value</a> is the result of cascading (choosing the most specific stylesheet rule that changes the property), <a href="/en-US/docs/CSS/inheritance" title="en/CSS/inheritance">inheritance</a> (using the same computed value as a parent if the property is inheritable), or using the default. Then, the <a href="/en-US/docs/CSS/computed_value" title="en/CSS/computed value">computed value</a> is calculated according to the specification (for example, a <code>span</code> with <code>position: absolute</code> will have its computed <code>display</code> changed to <code>block</code>). Then, layout is calculated (dimensions that are <code>auto</code> or percentages relative to a parent are replaced with pixel values), and the result is the <strong>used value</strong>.</p>
+There are four steps to calculating any CSS property's final value. First, the [specified value](/pt-BR/docs/CSS/specified_value "https://developer.mozilla.org/en/CSS/specified_value") is the result of cascading (choosing the most specific stylesheet rule that changes the property), [inheritance](/pt-BR/docs/CSS/inheritance "en/CSS/inheritance") (using the same computed value as a parent if the property is inheritable), or using the default. Then, the [computed value](/pt-BR/docs/CSS/computed_value "en/CSS/computed value") is calculated according to the specification (for example, a `span` with `position: absolute` will have its computed `display` changed to `block`). Then, layout is calculated (dimensions that are `auto` or percentages relative to a parent are replaced with pixel values), and the result is the **used value**.
 
-<p>Finally, transformed according to the limitations of the local environment, the result is <a href="/en-US/docs/Web/CSS/actual_value">actual value</a>. The actual value is the used value after any approximations have been applied. For example, a user agent may only be able to render borders with integer pixel widths, and therefore have to approximate the computed width, or the user agent may be forced to use only black and white shades, instead of full color. These steps are calculated internally.</p>
+Finally, transformed according to the limitations of the local environment, the result is [actual value](/pt-BR/docs/Web/CSS/actual_value). The actual value is the used value after any approximations have been applied. For example, a user agent may only be able to render borders with integer pixel widths, and therefore have to approximate the computed width, or the user agent may be forced to use only black and white shades, instead of full color. These steps are calculated internally.
 
-<p>JavaScript can read only the final used values with <a href="/en-US/docs/DOM/window.getComputedStyle" style="text-decoration: none; color: rgb(4, 137, 183) !important; cursor: default;" title="en/DOM/window.getComputedStyle">window.getComputedStyle</a>. This method may instead return computed values, depending on the property. The values it returns are generically called {{cssxref("resolved_value", "resolved values")}}).</p>
+JavaScript can read only the final used values with [window.getComputedStyle](/pt-BR/docs/DOM/window.getComputedStyle "en/DOM/window.getComputedStyle"). This method may instead return computed values, depending on the property. The values it returns are generically called {{cssxref("resolved_value", "resolved values")}}).
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>Compute and show the used width of three elements (updates on resize):</p>
+Compute and show the used width of three elements (updates on resize):
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="no-width"&gt;
-  &lt;p&gt;No explicit width.&lt;/p&gt;
-  &lt;p class="show-used-width"&gt;..&lt;/p&gt;
+```html
+<div id="no-width">
+  <p>No explicit width.</p>
+  <p class="show-used-width">..</p>
 
-  &lt;div id="width-50"&gt;
-    &lt;p&gt;Explicit width: 50%.&lt;/p&gt;
-    &lt;p class="show-used-width"&gt;..&lt;/p&gt;
+  <div id="width-50">
+    <p>Explicit width: 50%.</p>
+    <p class="show-used-width">..</p>
 
-    &lt;div id="width-inherit"&gt;
-      &lt;p&gt;Explicit width: inherit.&lt;/p&gt;
-      &lt;p class="show-used-width"&gt;..&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+    <div id="width-inherit">
+      <p>Explicit width: inherit.</p>
+      <p class="show-used-width">..</p>
+    </div>
+  </div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#no-width {
+```css
+#no-width {
   width: auto;
 }
 
@@ -60,11 +62,13 @@ original_slug: Web/CSS/Valor_usado
 div {
   border: 1px solid red;
   padding: 8px;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function updateUsedWidth(id) {
+```js
+function updateUsedWidth(id) {
   var div = document.getElementById(id);
   var par = document.querySelector(`#${id} .show-used-width`);
   var wid = window.getComputedStyle(div)["width"];
@@ -79,37 +83,30 @@ function updateAllUsedWidths() {
 
 updateAllUsedWidths();
 window.addEventListener('resize', updateAllUsedWidths);
+```
 
-</pre>
+### Resultado
 
-<h3 id="Resultado">Resultado</h3>
+{{ EmbedLiveSample('Example', '80%', '372px') }}
 
-<p>{{ EmbedLiveSample('Example', '80%', '372px') }}</p>
+## Diferentes valores computados
 
-<p> </p>
+CSS 2.0 defined only [computed value](/pt-BR/docs/CSS/computed_value "en/CSS/computed value") as the last step in a property's calculation. Then, CSS 2.1 introduced the distinct definition of used value. An element could then explicitly inherit a width/height of a parent, whose computed value is a percentage. For CSS properties that don't depend on layout (e.g., display, font-size, line-height), the computed values and used values are the same. These are the CSS 2.1 properties that do depend on layout, so they have a different computed value and used value: (taken from [CSS 2.1 Changes: Specified, computed, and actual values](http://www.w3.org/TR/CSS2/changes.html#q36)):
 
-<h2 id="Diferentes_valores_computados">Diferentes valores computados</h2>
+- background-position
+- bottom, left, right, top
+- height, width
+- margin-bottom, margin-left, margin-right, margin-top,
+- min-height, min-width
+- padding-bottom, padding-left, padding-right, padding-top
+- text-indent
 
-<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.7em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">CSS 2.0 defined only <a href="/en-US/docs/CSS/computed_value" style="text-decoration: none; color: rgb(4, 137, 183) !important; cursor: default;" title="en/CSS/computed value">computed value</a> as the last step in a property's calculation. Then, CSS 2.1 introduced the distinct definition of used value. An element could then explicitly inherit a width/height of a parent, whose computed value is a percentage. For CSS properties that don't depend on layout (e.g., display, font-size, line-height), the computed values and used values are the same. These are the CSS 2.1 properties that do depend on layout, so they have a different computed value and used value: (taken from <a class="external" href="http://www.w3.org/TR/CSS2/changes.html#q36">CSS 2.1 Changes: Specified, computed, and actual values</a>):</p>
+## Especificações
 
-<ul style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.7em; margin-left: 25px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">
- <li style="margin-bottom: 0.25em;">background-position</li>
- <li style="margin-bottom: 0.25em;">bottom, left, right, top</li>
- <li style="margin-bottom: 0.25em;">height, width</li>
- <li style="margin-bottom: 0.25em;">margin-bottom, margin-left, margin-right, margin-top,</li>
- <li style="margin-bottom: 0.25em;">min-height, min-width</li>
- <li style="margin-bottom: 0.25em;">padding-bottom, padding-left, padding-right, padding-top</li>
- <li style="margin-bottom: 0.25em;">text-indent</li>
-</ul>
+[CSS Level 2: Used Values](http://www.w3.org/TR/CSS2/cascade.html#used-value)
 
-<h2 id="Especificações">Especificações</h2>
+## Veja também
 
-<p><a class="external" href="http://www.w3.org/TR/CSS2/cascade.html#used-value">CSS Level 2: Used Values</a></p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="/en-US/docs/CSS_Reference" title="CSS Reference">CSS Reference</a></li>
- <li>{{ CSS_key_concepts() }}</li>
- <li><a href="/en-US/docs/DOM/window.getComputedStyle" title="en/DOM/window.getComputedStyle">window.getComputedStyle</a></li>
-</ul>
+- [CSS Reference](/pt-BR/docs/CSS_Reference "CSS Reference")
+- {{ CSS_key_concepts() }}
+- [window.getComputedStyle](/pt-BR/docs/DOM/window.getComputedStyle "en/DOM/window.getComputedStyle")

@@ -8,220 +8,204 @@ tags:
 translation_of: Web/CSS/Visual_formatting_model
 original_slug: Web/CSS/Modelo_Visual
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p class="summary">The CSS <em>visual formatting model</em> is an algorithm that processes a document and displays it on visual media. This model is a basic concept of CSS. </p>
+The CSS _visual formatting model_ is an algorithm that processes a document and displays it on visual media. This model is a basic concept of CSS.
 
-<p>The visual formatting model transforms each element of the document and generates zero, one, or several boxes that conform to the CSS box model. The layout of each box is defined by:</p>
+The visual formatting model transforms each element of the document and generates zero, one, or several boxes that conform to the CSS box model. The layout of each box is defined by:
 
-<ul>
- <li>The dimensions of the box: precisely defined or constrained, or not.</li>
- <li>The type of box: inline, inline-level, atomic inline-level, block.</li>
- <li>The <a href="/en-US/docs/CSS/Box_positioning_scheme" title="CSS/Box positioning scheme">positioning scheme</a>: in the normal flow, a float, or absolute positioning.</li>
- <li>The other elements in the tree: its children and neighbors.</li>
- <li>The {{glossary("viewport")}} size and position.</li>
- <li>Intrinsic dimensions of contained images.</li>
- <li>Other external information.</li>
-</ul>
+- The dimensions of the box: precisely defined or constrained, or not.
+- The type of box: inline, inline-level, atomic inline-level, block.
+- The [positioning scheme](/pt-BR/docs/CSS/Box_positioning_scheme "CSS/Box positioning scheme"): in the normal flow, a float, or absolute positioning.
+- The other elements in the tree: its children and neighbors.
+- The {{glossary("viewport")}} size and position.
+- Intrinsic dimensions of contained images.
+- Other external information.
 
-<p>The model renders a box, in relation to the edge of its <em>containing block</em>. Usually, a box establishes the containing block for its descendants. However, a box is not constrained by its containing block; when a box's layout goes outside the containing block, it is said to <em>overflow</em>.</p>
+The model renders a box, in relation to the edge of its _containing block_. Usually, a box establishes the containing block for its descendants. However, a box is not constrained by its containing block; when a box's layout goes outside the containing block, it is said to _overflow_.
 
-<h2 id="Gerando_um_Box"> Gerando um Box</h2>
+## Gerando um Box
 
-<p>Box generation is the part of the CSS visual formatting model that creates boxes from the document's elements. Generated boxes are of different types, which affect how the visual formatting is done. The type of the box generated depends on the value of the {{ cssxref("display") }} CSS property.</p>
+Box generation is the part of the CSS visual formatting model that creates boxes from the document's elements. Generated boxes are of different types, which affect how the visual formatting is done. The type of the box generated depends on the value of the {{ cssxref("display") }} CSS property.
 
-<h3 id="Block-level_elements_and_block_boxes">Block-level elements and block boxes</h3>
+### Block-level elements and block boxes
 
-<p>An element is said to be <em>block-level</em> when the calculated value of its {{ cssxref("display") }} CSS property is: <code>block</code>, <code>list-item</code>, or <code>table</code>. A block-level element is visually formatted as a block (e.g., paragraph), intended to be vertically stacked.</p>
+An element is said to be _block-level_ when the calculated value of its {{ cssxref("display") }} CSS property is: `block`, `list-item`, or `table`. A block-level element is visually formatted as a block (e.g., paragraph), intended to be vertically stacked.
 
-<p>Each block-level box participates in a <a href="/en-US/docs/CSS/block_formatting_context" title="block formatting context">block formatting context</a>. Each block-level element generates at least one block-level box, called the <em>principal block-level</em><em> box</em>. Some elements, like a list-item element, generating further boxes to handle bullets and other typographic elements introducing the list item, may generate more boxes. Most generate only the principal, block-level box.</p>
+Each block-level box participates in a [block formatting context](/pt-BR/docs/CSS/block_formatting_context "block formatting context"). Each block-level element generates at least one block-level box, called the _principal block-level_ _box_. Some elements, like a list-item element, generating further boxes to handle bullets and other typographic elements introducing the list item, may generate more boxes. Most generate only the principal, block-level box.
 
-<p>The principal block-level box contains descendant-generated boxes and generated content. It is also the box involved in the <a href="/en-US/docs/CSS/Positioning_scheme" title="CSS/Positioning scheme">positioning scheme</a>.</p>
+The principal block-level box contains descendant-generated boxes and generated content. It is also the box involved in the [positioning scheme](/pt-BR/docs/CSS/Positioning_scheme "CSS/Positioning scheme").
 
-<p><img alt="venn_blocks.png" class="internal lwrap" src="/@api/deki/files/5995/=venn_blocks.png" style="float: left;">A block-level box may also be a block container box. A <em>block container box</em> is a box that contains only other block-level boxes, or creates an <a href="/en-US/docs/CSS/Inline_formatting_context" title="CSS/Inline formatting context">inline formatting context</a>, thus containing only inline boxes.</p>
+![venn_blocks.png](/@api/deki/files/5995/=venn_blocks.png)A block-level box may also be a block container box. A _block container box_ is a box that contains only other block-level boxes, or creates an [inline formatting context](/pt-BR/docs/CSS/Inline_formatting_context "CSS/Inline formatting context"), thus containing only inline boxes.
 
-<p>It is important to note that the notions of a block-level box and block container box are disjoined. The first, describes how the box behaves with its parents and sibling. The second, how it interacts with its descendants. Some block-level boxes, like tables, aren't block container boxes. Reciprocally, some block container boxes, like non-replaced inline blocks and non-replaced table cells, aren't block-level boxes.</p>
+It is important to note that the notions of a block-level box and block container box are disjoined. The first, describes how the box behaves with its parents and sibling. The second, how it interacts with its descendants. Some block-level boxes, like tables, aren't block container boxes. Reciprocally, some block container boxes, like non-replaced inline blocks and non-replaced table cells, aren't block-level boxes.
 
-<p>Block-level boxes that also are block container boxes are called <em>block boxes</em>.</p>
+Block-level boxes that also are block container boxes are called _block boxes_.
 
-<h4 id="Anonymous_block_boxes">Anonymous block boxes</h4>
+#### Anonymous block boxes
 
-<p>In some cases, the visual formatting algorithm needs to add supplementary boxes. Because CSS selectors cannot style or name these boxes, they are called <em>anonymous boxes</em>.</p>
+In some cases, the visual formatting algorithm needs to add supplementary boxes. Because CSS selectors cannot style or name these boxes, they are called _anonymous boxes_.
 
-<p>Because selectors do not work with anonymous boxes, they cannot be styled via a stylesheet. This means that all inheritable CSS properties have the <code>inherit</code> value, and all non-inheritable CSS properties, have the <code>initial</code> value.</p>
+Because selectors do not work with anonymous boxes, they cannot be styled via a stylesheet. This means that all inheritable CSS properties have the `inherit` value, and all non-inheritable CSS properties, have the `initial` value.
 
-<p>Block containing boxes contain only inline-level boxes, or only block-level boxes. But often the document contains a mix of both. In that case, anonymous block boxes are created around adjacent inline-level boxes.</p>
+Block containing boxes contain only inline-level boxes, or only block-level boxes. But often the document contains a mix of both. In that case, anonymous block boxes are created around adjacent inline-level boxes.
 
-<h3 id="Exemplo">Exemplo</h3>
+### Exemplo
 
-<p>If we take the following HTML code (with default styling applied to it, that is {{ HTMLElement("div") }} and {{ HTMLElement("p") }} elements have <code>display:block</code> :</p>
+If we take the following HTML code (with default styling applied to it, that is {{ HTMLElement("div") }} and {{ HTMLElement("p") }} elements have `display:block` :
 
-<pre class="syntaxbox"><code>&lt;div&gt;Some inline text &lt;p&gt;followed by a paragraph&lt;/p&gt; followed by more inline text.&lt;/div&gt;</code></pre>
+```
+<div>Some inline text <p>followed by a paragraph</p> followed by more inline text.</div>
+```
 
-<p>Two anonymous block boxes are created: one for the text before the paragraph (<code>Some inline text</code>), and another for the text after it (<code>followed by more inline text</code>). This builds the following block structure:</p>
+Two anonymous block boxes are created: one for the text before the paragraph (`Some inline text`), and another for the text after it (`followed by more inline text`). This builds the following block structure:
 
-<p style="text-align: center;"><img alt="anonymous_block-level_boxes.png" class="default internal" src="/@api/deki/files/5996/=anonymous_block-level_boxes.png"></p>
+![anonymous_block-level_boxes.png](/@api/deki/files/5996/=anonymous_block-level_boxes.png)
 
-<p>Leading to:</p>
+Leading to:
 
-<pre>Some inline text
+```
+Some inline text
 followed by a paragraph
 followed by more inline text.
-</pre>
+```
 
-<p>Unlike the {{ HTMLElement("p") }} element's box, Web developers cannot control the style of the two anonymous boxes. Inheritable properties take the value from the {{ HTMLElement("div") }}'s property value, like {{ cssxref("color") }} to define the color of the text, and set the others to the <code>initial</code> value. For example, they won't have a specific {{ cssxref("background-color") }}, it is always transparent, the<code> initial</code> value for that property, and thus the background of the <code>&lt;div&gt;</code> is visible. A specific background color can be applied to the <code>&lt;p&gt;</code> box. Similarly, the two anonymous boxes always use the same color for their text.</p>
+Unlike the {{ HTMLElement("p") }} element's box, Web developers cannot control the style of the two anonymous boxes. Inheritable properties take the value from the {{ HTMLElement("div") }}'s property value, like {{ cssxref("color") }} to define the color of the text, and set the others to the `initial` value. For example, they won't have a specific {{ cssxref("background-color") }}, it is always transparent, the` initial` value for that property, and thus the background of the `<div>` is visible. A specific background color can be applied to the `<p>` box. Similarly, the two anonymous boxes always use the same color for their text.
 
-<p>Another case that leads to the creation of anonymous block boxes, is an inline box that contains one or several block boxes. In that case, the box containing the block box is split into two inline boxes: one before, and one after the block box. All the inline boxes before the block box are then enclosed into an <em>anonymous block box</em>, so are the inline boxes following the block box. Therefore, the block box becomes the sibling of the two anonymous block boxes containing the inline elements.</p>
+Another case that leads to the creation of anonymous block boxes, is an inline box that contains one or several block boxes. In that case, the box containing the block box is split into two inline boxes: one before, and one after the block box. All the inline boxes before the block box are then enclosed into an _anonymous block box_, so are the inline boxes following the block box. Therefore, the block box becomes the sibling of the two anonymous block boxes containing the inline elements.
 
-<p>If there are several block boxes, without inline content in-between, the anonymous block boxes are created before, and after the set of boxes.</p>
+If there are several block boxes, without inline content in-between, the anonymous block boxes are created before, and after the set of boxes.
 
-<h3 id="Exemplo_2">Exemplo</h3>
+### Exemplo
 
-<p>If we take the following HTML code, with {{ HTMLElement("p") }} have <code>display:inline</code> and {{ HTMLElement("span") }} have <code>display:block</code> :</p>
+If we take the following HTML code, with {{ HTMLElement("p") }} have `display:inline` and {{ HTMLElement("span") }} have `display:block` :
 
-<pre class="syntaxbox"><code>&lt;p&gt;Some &lt;em&gt;inline&lt;/em&gt; text &lt;span&gt;followed by a paragraph&lt;/span&gt; followed by more inline text.&lt;/p&gt;</code></pre>
+```
+<p>Some <em>inline</em> text <span>followed by a paragraph</span> followed by more inline text.</p>
+```
 
-<p>Two anonymous block boxes are created, one for the text before the span Element (<code>Some <em>inline</em> text</code>) and one for the text after it (<code>followed by more inline text</code>), which gives the following block structure:</p>
+Two anonymous block boxes are created, one for the text before the span Element (`Some inline text`) and one for the text after it (`followed by more inline text`), which gives the following block structure:
 
-<p style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/13625/anonymous_block_box_break.png" style="height: 137px; width: 597px;"></p>
+![](https://mdn.mozillademos.org/files/13625/anonymous_block_box_break.png)
 
-<p>Which leads to:</p>
+Which leads to:
 
-<pre>Some inline text
+```
+Some inline text
 followed by a paragraph
 followed by more inline text.
-</pre>
+```
 
-<h3 id="Inline-level_elements_and_inline_boxes">Inline-level elements and inline boxes</h3>
+### Inline-level elements and inline boxes
 
-<p>An element is said to be <em>inline-level</em> when the calculated value of its {{ cssxref("display") }} CSS property is: <code>inline</code>, <code>inline-block</code> or <code>inline-table</code>. Visually, it doesn't constitute blocks of contents, but is distributed in lines with other inline-level content. Typically, the content of a paragraph with different formatting, like emphasis or images, is made from inline-level elements.</p>
+An element is said to be _inline-level_ when the calculated value of its {{ cssxref("display") }} CSS property is: `inline`, `inline-block` or `inline-table`. Visually, it doesn't constitute blocks of contents, but is distributed in lines with other inline-level content. Typically, the content of a paragraph with different formatting, like emphasis or images, is made from inline-level elements.
 
-<p><img alt="venn_inlines.png" class="internal lwrap" src="/@api/deki/files/6008/=venn_inlines.png" style="float: left;"></p>
+![venn_inlines.png](/@api/deki/files/6008/=venn_inlines.png)
 
-<div class="warning">
-<p>This diagram uses outdated terminology; see note below. Besides that, it is incorrect because the yellow ellipsis on the right side is per definition either identical to the one on the left side, or bigger than that (it could be a mathematical superset), because the spec says "Inline-level elements generate inline-level boxes, which are boxes that participate in an inline formatting context", see CSS 2.2, chapter 9.2.2</p>
-</div>
+> **Warning:** This diagram uses outdated terminology; see note below. Besides that, it is incorrect because the yellow ellipsis on the right side is per definition either identical to the one on the left side, or bigger than that (it could be a mathematical superset), because the spec says "Inline-level elements generate inline-level boxes, which are boxes that participate in an inline formatting context", see CSS 2.2, chapter 9.2.2
 
-<p>Inline-level elements generate <em>inline-level boxes</em> that are defined as boxes participating to an <a href="/en-US/docs/CSS/Inline_formatting_context" title="CSS/Inline formatting context">inline formatting context</a>. <em>Inline boxes</em> are both inline-level boxes and boxes, whose contents participate in their container's inline formatting context. This is the case, for example, for all non-replaced boxes with <code>display:inline</code>. Inline-level boxes, whose contents do not participate in an inline formatting context, are called <em>atomic inline-level boxes</em>. These boxes, generated by replaced inline-level elements or by elements with a calculated {{ cssxref("display") }} value of <code>inline-block</code> or <code>inline-table</code>, are never split into several boxes, as is possible with inline boxes.</p>
+Inline-level elements generate _inline-level boxes_ that are defined as boxes participating to an [inline formatting context](/pt-BR/docs/CSS/Inline_formatting_context "CSS/Inline formatting context"). _Inline boxes_ are both inline-level boxes and boxes, whose contents participate in their container's inline formatting context. This is the case, for example, for all non-replaced boxes with `display:inline`. Inline-level boxes, whose contents do not participate in an inline formatting context, are called _atomic inline-level boxes_. These boxes, generated by replaced inline-level elements or by elements with a calculated {{ cssxref("display") }} value of `inline-block` or `inline-table`, are never split into several boxes, as is possible with inline boxes.
 
-<div class="note"><strong>Note:</strong> Initially, atomic inline-level boxes were called atomic inline boxes. This was unfortunate, as they are <strong>not</strong> inline boxes. This was corrected in an erratum to the spec. Nevertheless, you can harmlessly read atomic inline-level box each time you meet atomic inline box in the literature, as this is only a name change.</div>
+> **Note:** Initially, atomic inline-level boxes were called atomic inline boxes. This was unfortunate, as they are **not** inline boxes. This was corrected in an erratum to the spec. Nevertheless, you can harmlessly read atomic inline-level box each time you meet atomic inline box in the literature, as this is only a name change.
 
-<div class="note">Atomic inline boxes cannot be split into several lines in an inline formatting context.
+> **Note:** Atomic inline boxes cannot be split into several lines in an inline formatting context.```
+>
+> <style>
+>   span {
+>     display:inline; /* default value*/
+>   }
+> </style>
+> <div style="width:20em;">
+>    The text in the span <span>can be split in several
+>    lines as it</span> is an inline box.
+> </div>
+> ```which leads to:The text in the span can be split into several lines as it is an inline box.```
+> <style>
+>   span {
+>     display:inline-block;
+>   }
+> </style>
+> <div style="width:20em;">
+>    The text in the span <span>cannot be split in several
+>    lines as it</span> is an inline-block box.
+> </div>
+> ```which leads to:The text in the span cannot be split into several lines as it is an inline-block box.
 
-<pre>&lt;style&gt;
-  span {
-    display:inline; /* default value*/
-  }
-&lt;/style&gt;
-&lt;div style="width:20em;"&gt;
-   The text in the span &lt;span&gt;can be split in several
-   lines as it&lt;/span&gt; is an inline box.
-&lt;/div&gt;
-</pre>
+#### Anonymous inline boxes
 
-<p>which leads to:</p>
+As for block boxes, there are a few cases where inline boxes are created automatically by the CSS engine. These inline boxes are also anonymous as they cannot be named by selectors; they inherit the value of all inheritable properties, setting it to `initial` for all others.
 
-<div style="width: 20em;">The text in the span can be split into several lines as it is an inline box.</div>
+The most common case where an anonymous inline box is created, is when some text is found as a direct child of a block box creating an inline formatting context. In that case, this text is included in the largest possible anonymous inline box. Also, space content, which would be removed by the behavior set in the {{ cssxref("white-space") }} CSS property, does not generate anonymous inline boxes because they would end empty.
 
-<pre>&lt;style&gt;
-  span {
-    display:inline-block;
-  }
-&lt;/style&gt;
-&lt;div style="width:20em;"&gt;
-   The text in the span &lt;span&gt;cannot be split in several
-   lines as it&lt;/span&gt; is an inline-block box.
-&lt;/div&gt;
-</pre>
+> **Note:** Example TBD
 
-<p>which leads to:</p>
+### Outros tipos de boxes
 
-<div style="width: 20em;">The text in the span cannot be split into several lines as it is an inline-block box.</div>
-</div>
+#### Line boxes
 
-<h4 id="Anonymous_inline_boxes">Anonymous inline boxes</h4>
+_Line boxes_ are generated by the [inline formatting context](/pt-BR/docs/CSS/Inline_formatting_context "block formatting context") to represent a line of text. Inside a block box, a line box extends from one border of the box to the other. When there are [floats](/pt-BR/docs/CSS/float "float"), the line box starts at the rightmost border of the left floats and ends at the leftmost border of the right floats.
 
-<p>As for block boxes, there are a few cases where inline boxes are created automatically by the CSS engine. These inline boxes are also anonymous as they cannot be named by selectors; they inherit the value of all inheritable properties, setting it to <code>initial</code> for all others.</p>
+These boxes are technical, and Web authors do not usually have to bother with them.
 
-<p>The most common case where an anonymous inline box is created, is when some text is found as a direct child of a block box creating an inline formatting context. In that case, this text is included in the largest possible anonymous inline box. Also, space content, which would be removed by the behavior set in the {{ cssxref("white-space") }} CSS property, does not generate anonymous inline boxes because they would end empty.</p>
+#### Run-in boxes
 
-<div class="note">Example TBD</div>
+_Run-in boxes_, defined using `display:run-in`, are boxes that are either block boxes or inline boxes, depending on the type of the following box. They can be used to create a title that runs inside its first paragraph when possible.
 
-<h3 id="Outros_tipos_de_boxes">Outros tipos de boxes</h3>
+> **Note:** Run-in boxes were removed from the CSS 2.1 standard, as they were insufficiently specified to allow for interoperable implementation. They may reappear in CSS3, but meanwhile, are considered _experimental_. They should not be used in production.
 
-<h4 id="Line_boxes">Line boxes</h4>
+#### Model-induced boxes
 
-<p><em>Line boxes</em> are generated by the <a href="/en-US/docs/CSS/Inline_formatting_context" title="block formatting context">inline formatting context</a> to represent a line of text. Inside a block box, a line box extends from one border of the box to the other. When there are <a href="/en-US/docs/CSS/float" title="float">floats</a>, the line box starts at the rightmost border of the left floats and ends at the leftmost border of the right floats.</p>
+Besides the inline and block formatting contexts, CSS specifies several additional _content models_ that may be applied to elements. These additional models, used to describe specific layouts, may define additional box types:
 
-<p>These boxes are technical, and Web authors do not usually have to bother with them.</p>
+- The [table content model](/pt-BR/docs/CSS/table-layout "table-layout") may create a _table wrapper box_ and a _table box_, but also specific boxes like _caption boxes_.
+- The [multi-column content model](/pt-BR/docs/CSS/Using_CSS_multi-column_layouts "Using CSS multi-column layouts") may create _column boxes_ between the container box and the content*.*
+- The experimental grid, or flex-box content models, also create additional types of boxes.
 
-<h4 id="Run-in_boxes">Run-in boxes</h4>
+#### Positioning schemes
 
-<p><em>Run-in boxes</em>, defined using <code>display:run-in</code>, are boxes that are either block boxes or inline boxes, depending on the type of the following box. They can be used to create a title that runs inside its first paragraph when possible.</p>
+Once boxes are generated, the CSS engine needs to position them on the layout. To do that, it uses one of the following algorithms:
 
-<div class="note"><strong>Note:</strong> Run-in boxes were removed from the CSS 2.1 standard, as they were insufficiently specified to allow for interoperable implementation. They may reappear in CSS3, but meanwhile, are considered <em>experimental</em>. They should not be used in production.</div>
+- The _normal flow_ - positions each box one after the other.
+- The _floats_ algorithm - extracts the box from the normal flow and put it to the side of the containing box.
+- The _absolute positioning_ scheme - positions a box within an absolute coordinate system that is established by its containing element. An absolutely positioned element can cover other elements.
 
-<h4 id="Model-induced_boxes">Model-induced boxes</h4>
+### Normal flow
 
-<p>Besides the inline and block formatting contexts, CSS specifies several additional <em>content models</em> that may be applied to elements. These additional models, used to describe specific layouts, may define additional box types:</p>
+In the _normal flow_, boxes are laid out one after the other. In a block formatting context, they are laid out vertically; in an inline formatting context, they are laid out horizontally. The normal flow is triggered when the CSS {{ cssxref("position") }} is set to the value `static` or `relative`, and if the CSS {{ cssxref("float") }} is set to the value `none`.
 
-<ul>
- <li>The <a href="/en-US/docs/CSS/table-layout" title="table-layout">table content model</a> may create a <em>table wrapper box</em> and a <em>table box</em>, but also specific boxes like <em>caption boxes</em>.</li>
- <li>The <a href="/en-US/docs/CSS/Using_CSS_multi-column_layouts" title="Using CSS multi-column layouts">multi-column content model</a> may create <em>column boxes</em> between the container box and the content<em>.</em></li>
- <li>The experimental grid, or flex-box content models, also create additional types of boxes.</li>
-</ul>
+### Exemplo
 
-<h4 id="Positioning_schemes">Positioning schemes</h4>
+> **Note:** When in the normal flow, in a block formatting context, boxes are laid vertically one after the other out:
+>
+> \[image]
+>
+> When in the normal flow, in an inline formatting context, boxes are laid horizontally one after the other out:
+>
+> \[image]
 
-<p>Once boxes are generated, the CSS engine needs to position them on the layout. To do that, it uses one of the following algorithms:</p>
+> **Note:** There are two sub-cases of the normal flow: static positioning and relative positioning:
 
-<ul>
- <li>The <em>normal flow</em> - positions each box one after the other.</li>
- <li>The <em>floats</em> algorithm - extracts the box from the normal flow and put it to the side of the containing box.</li>
- <li>The <em>absolute positioning</em> scheme - positions a box within an absolute coordinate system that is established by its containing element. An absolutely positioned element can cover other elements.</li>
-</ul>
+- In _static positioning_, triggered by the value `static` of the {{ cssxref("position") }} property, the boxes are drawn at the exact position defined by the normal flow layout.
+  \[image]
+- In _relative_ _positioning_, triggered by the value `relative` of the {{ cssxref("position") }} property, the boxes are drawn with an offset defined by the {{ cssxref("top") }}, {{ cssxref("bottom") }}, {{ cssxref("left") }} and {{ cssxref("right") }} CSS properties.
 
-<h3 id="Normal_flow">Normal flow</h3>
+### Floats
 
-<p>In the <em>normal flow</em>, boxes are laid out one after the other. In a block formatting context, they are laid out vertically; in an inline formatting context, they are laid out horizontally. The normal flow is triggered when the CSS {{ cssxref("position") }} is set to the value <code>static</code> or <code>relative</code>, and if the CSS {{ cssxref("float") }} is set to the value <code>none</code>.</p>
+In the _float positioning scheme_, specific boxes (called _floating boxes_ or simply _floats)_ are positioned at the beginning, or end of the current line. This leads to the property that text (and more generally anything within the normal flow) flows along the edge of the floating boxes, except if told differently by the {{ cssxref("clear") }} CSS property.
 
-<h3 id="Exemplo_3">Exemplo</h3>
+The float positioning scheme for a box is selected, by setting the {{ cssxref("float") }} CSS property on that box to a value different than `none` and {{ cssxref("position") }} to `static` or `relative`. If {{ cssxref("float") }} is set to `left`, the float is positioned at the beginning of the line box. If set to `right`, the float is positioned at the end of the line box. In either case, the line box is shrunk to fit alongside the float.
 
-<div class="note">When in the normal flow, in a block formatting context, boxes are laid vertically one after the other out:<br>
-<br>
-[image]<br>
-<br>
-When in the normal flow, in an inline formatting context, boxes are laid horizontally one after the other out:<br>
-<br>
-[image]</div>
+\[image]
 
-<p class="note">There are two sub-cases of the normal flow: static positioning and relative positioning:</p>
+### Absolute positioning
 
-<ul>
- <li>In <em>static positioning</em>, triggered by the value <code>static</code> of the {{ cssxref("position") }} property, the boxes are drawn at the exact position defined by the normal flow layout.<br>
-  [image]</li>
- <li>In <em>relative</em><em> positioning</em>, triggered by the value <code>relative</code> of the {{ cssxref("position") }} property, the boxes are drawn with an offset defined by the {{ cssxref("top") }}, {{ cssxref("bottom") }}, {{ cssxref("left") }} and {{ cssxref("right") }} CSS properties.</li>
-</ul>
+In the _absolute positioning scheme_, boxes are entirely removed from the flow and don't interact with it at all. They are positioned relative to their [containing block](/pt-BR/docs/Web/CSS/All_About_The_Containing_Block "CSS/Containing block") using the {{ cssxref("top") }}, {{ cssxref("bottom") }}, {{ cssxref("left") }} and {{ cssxref("right") }} CSS properties.
 
-<h3 id="Floats">Floats</h3>
+An element is absolutely positioned if the {{ cssxref("position") }} is set to `absolute` or `fixed`.
 
-<p>In the <em>float positioning scheme</em>, specific boxes (called <em>floating boxes</em> or simply <em>floats)</em> are positioned at the beginning, or end of the current line. This leads to the property that text (and more generally anything within the normal flow) flows along the edge of the floating boxes, except if told differently by the {{ cssxref("clear") }} CSS property.</p>
+With a _fixed positioned element_, the containing block is the viewport. The position of the element is absolute within the viewport. Scrolling does not change the position of the element.
 
-<p>The float positioning scheme for a box is selected, by setting the {{ cssxref("float") }} CSS property on that box to a value different than <code>none</code> and {{ cssxref("position") }} to <code>static</code> or <code>relative</code>. If {{ cssxref("float") }} is set to <code>left</code>, the float is positioned at the beginning of the line box. If set to <code>right</code>, the float is positioned at the end of the line box. In either case, the line box is shrunk to fit alongside the float.</p>
+## Veja Também
 
-<p>[image]</p>
-
-<h3 id="Absolute_positioning">Absolute positioning</h3>
-
-<p>In the <em>absolute positioning scheme</em>, boxes are entirely removed from the flow and don't interact with it at all. They are positioned relative to their <a href="/en-US/docs/Web/CSS/All_About_The_Containing_Block" title="CSS/Containing block">containing block</a> using the {{ cssxref("top") }}, {{ cssxref("bottom") }}, {{ cssxref("left") }} and {{ cssxref("right") }} CSS properties.</p>
-
-<p>An element is absolutely positioned if the {{ cssxref("position") }} is set to <code>absolute</code> or <code>fixed</code>.</p>
-
-<p>With a <em>fixed positioned element</em>, the containing block is the viewport. The position of the element is absolute within the viewport. Scrolling does not change the position of the element.</p>
-
-<h2 id="Veja_Também">Veja Também</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Reference">CSS Reference</a></li>
- <li>{{css_key_concepts}}</li>
-</ul>
+- [CSS Reference](/pt-BR/docs/Web/CSS/CSS_Reference)
+- {{css_key_concepts}}

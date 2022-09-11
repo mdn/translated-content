@@ -3,17 +3,16 @@ title: border-left-color
 slug: Web/CSS/border-left-color
 translation_of: Web/CSS/border-left-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-left-color</code></strong> CSS property sets the color of an element's left <a href="/en-US/docs/Web/CSS/border">border</a>. It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-left")}}.</p>
+The **`border-left-color`** CSS property sets the color of an element's left [border](/pt-BR/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-left")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/border-left-color.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-left-color.html")}}
 
+## Syntax
 
-
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: css no-line-numbers  language-css">/* &lt;color&gt; values */
+```css
+/* <color> values */
 border-left-color: red;
 border-left-color: #ffbb00;
 border-left-color: rgb(255, 0, 0);
@@ -25,36 +24,37 @@ border-left-color: transparent;
 border-left-color: inherit;
 border-left-color: initial;
 border-left-color: unset;
-</pre>
+```
 
-<p>The <code>border-left-color</code> property is specified as a single value.</p>
+The `border-left-color` property is specified as a single value.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>The color of the left border.</dd>
-</dl>
+- {{cssxref("&lt;color&gt;")}}
+  - : The color of the left border.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="A_simple_div_with_a_border">A simple div with a border</h3>
+### A simple div with a border
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="mybox"&gt;
-  &lt;p&gt;This is a box with a border around it.
+```html
+<div class="mybox">
+  <p>This is a box with a border around it.
      Note which side of the box is
-     &lt;span class="redtext"&gt;red&lt;/span&gt;.&lt;/p&gt;
-&lt;/div&gt;</pre>
+     <span class="redtext">red</span>.</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.mybox {
+```css
+.mybox {
     border: solid 0.3em gold;
     border-left-color: red;
     width: auto;
@@ -62,48 +62,28 @@ border-left-color: unset;
 
 .redtext {
     color: red;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('A_simple_div_with_a_border')}}</p>
+{{EmbedLiveSample('A_simple_div_with_a_border')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#propdef-border-left-color', 'border-left-color')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>No significant changes, though the <code>transparent</code> keyword, now included in {{cssxref("&lt;color&gt;")}} which has been extended, has been formally removed.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#propdef-border-left-color', 'border-left-color')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                                   | Comment                                                                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('CSS3 Backgrounds', '#propdef-border-left-color', 'border-left-color')}} | {{Spec2('CSS3 Backgrounds')}} | No significant changes, though the `transparent` keyword, now included in {{cssxref("&lt;color&gt;")}} which has been extended, has been formally removed. |
+| {{SpecName('CSS2.1', 'box.html#propdef-border-left-color', 'border-left-color')}}     | {{Spec2('CSS2.1')}}                 | Initial definition                                                                                                                                                 |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("css.properties.border-left-color")}}
 
+## See also
 
-<p>{{Compat("css.properties.border-left-color")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>The border-related CSS shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-left")}}, and {{Cssxref("border-color")}}.</li>
- <li>The color-related CSS properties for the other borders: {{Cssxref("border-right-color")}}, {{Cssxref("border-bottom-color")}}, and {{Cssxref("border-top-color")}}.</li>
- <li>The other border-related CSS properties applying to the same border: {{cssxref("border-left-style")}} and {{cssxref("border-left-width")}}.</li>
-</ul>
+- The border-related CSS shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-left")}}, and {{Cssxref("border-color")}}.
+- The color-related CSS properties for the other borders: {{Cssxref("border-right-color")}}, {{Cssxref("border-bottom-color")}}, and {{Cssxref("border-top-color")}}.
+- The other border-related CSS properties applying to the same border: {{cssxref("border-left-style")}} and {{cssxref("border-left-width")}}.

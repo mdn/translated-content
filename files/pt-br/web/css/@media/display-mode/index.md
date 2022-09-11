@@ -14,84 +14,40 @@ tags:
   - manifesto das aplicações web
 translation_of: Web/CSS/@media/display-mode
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p>O recurso de mídia CSS {{cssxref("@media")}} do modo de exibição pode ser usado para aplicar estilos com base no modo de exibição de um aplicativo. Você pode usar para prover uma consistente experiência de usuário entre abrir um site a partir de uma URL e um ícone desktop.</p>
+O recurso de mídia CSS {{cssxref("@media")}} do modo de exibição pode ser usado para aplicar estilos com base no modo de exibição de um aplicativo. Você pode usar para prover uma consistente experiência de usuário entre abrir um site a partir de uma URL e um ícone desktop.
 
-<p>Esse recurso corresponde ao membro da exibição do manifesto do aplicativo da Web. Ambos aplicam-se ao contexto de navegação de nível superior e a qualquer contexto afilhado de navegação. O recurso de consulta aplica-se independentemente de onde um manifesto de aplicativo web está presente.</p>
+Esse recurso corresponde ao membro da exibição do manifesto do aplicativo da Web. Ambos aplicam-se ao contexto de navegação de nível superior e a qualquer contexto afilhado de navegação. O recurso de consulta aplica-se independentemente de onde um manifesto de aplicativo web está presente.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<p>O recurso <code>display-mode</code> é especificado como um valor de uma palavra chave escolhido da lista abaixo.</p>
+O recurso `display-mode` é especificado como um valor de uma palavra chave escolhido da lista abaixo.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Modo de exibição</th>
-   <th scope="col">Descrição</th>
-   <th scope="col">Modo de exibição secundário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>fullscreen</code></td>
-   <td>
-    <p>Toda a área disponível da tela será usada e nada do agente-usuário (navegador) {{glossary("chrome")}} é mostrado.</p>
-   </td>
-   <td><code>standalone</code></td>
-  </tr>
-  <tr>
-   <td><code>standalone</code></td>
-   <td>
-    <p>A aplicação irá parecer uma aplicação independente. Isso pode incluir a aplicação ter uma janela diferente, seu próprio ícone no menu de aplicações, etc. Neste modo, o navegador não irá mostrar os controles de navegação (como barra de endereço, botão voltar, botão página inicial, etc), mas pode incluir outros elementos gráficos como a barra de status.</p>
-   </td>
-   <td><code>minimal-ui</code></td>
-  </tr>
-  <tr>
-   <td><code>minimal-ui</code></td>
-   <td>
-    <p>A aplicação irá parecer uma aplicação independente, mas terá um conjunto mínimo de elementos gráficos (UI) para controlar a navegação. Esses elementos podem variar de acordo com o navegador.</p>
-   </td>
-   <td><code>browser</code></td>
-  </tr>
-  <tr>
-   <td><code>browser</code></td>
-   <td>
-    <p>A aplicação abre numa aba ou nova janela convencional do navegador, dependendo do navegador e da plataforma.</p>
-   </td>
-   <td>(nenhum)</td>
-  </tr>
- </tbody>
-</table>
+| Modo de exibição | Descrição                                                                                                                                                                                                                                                                                                                                                         | Modo de exibição secundário |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| `fullscreen`     | Toda a área disponível da tela será usada e nada do agente-usuário (navegador) {{glossary("chrome")}} é mostrado.                                                                                                                                                                                                                                           | `standalone`                |
+| `standalone`     | A aplicação irá parecer uma aplicação independente. Isso pode incluir a aplicação ter uma janela diferente, seu próprio ícone no menu de aplicações, etc. Neste modo, o navegador não irá mostrar os controles de navegação (como barra de endereço, botão voltar, botão página inicial, etc), mas pode incluir outros elementos gráficos como a barra de status. | `minimal-ui`                |
+| `minimal-ui`     | A aplicação irá parecer uma aplicação independente, mas terá um conjunto mínimo de elementos gráficos (UI) para controlar a navegação. Esses elementos podem variar de acordo com o navegador.                                                                                                                                                                    | `browser`                   |
+| `browser`        | A aplicação abre numa aba ou nova janela convencional do navegador, dependendo do navegador e da plataforma.                                                                                                                                                                                                                                                      | (nenhum)                    |
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: css">@media all and (display-mode: fullscreen) {
+```css
+@media all and (display-mode: fullscreen) {
   body {
     margin: 0;
     border: 5px solid black;
   }
-}</pre>
+}
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Manifest', '#the-display-mode-media-feature', 'display-mode')}}</td>
-   <td>{{Spec2('Manifest')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                       | Comment            |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('Manifest', '#the-display-mode-media-feature', 'display-mode')}} | {{Spec2('Manifest')}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.at-rules.media.display-mode")}}

@@ -8,19 +8,18 @@ tags:
   - Referencia
 translation_of: Web/CSS/flex-wrap
 ---
-<div>{{ CSSRef}}</div>
+{{ CSSRef}}
 
-<p>A propriedade <a href="/en-US/docs/CSS">CSS</a> <strong><code>flex-wrap</code></strong> define se os itens flexíveis são forçados a ficarem na mesma linha ou se podem ser quebradas em varias linhas. Se o argumento for valido, ele define a direção em que as linhas são empilhadas.</p>
+A propriedade [CSS](/pt-BR/docs/CSS) **`flex-wrap`** define se os itens flexíveis são forçados a ficarem na mesma linha ou se podem ser quebradas em varias linhas. Se o argumento for valido, ele define a direção em que as linhas são empilhadas.
 
-<p>{{EmbedInteractiveExample("pages/css/flex-wrap.html")}}</p>
+{{EmbedInteractiveExample("pages/css/flex-wrap.html")}}
 
+Veja [Using CSS flexible boxes](/en/CSS/Using_CSS_flexible_boxes) para mais propriedades e informação.
 
+## Syntax
 
-<p>Veja <a href="/en/CSS/Using_CSS_flexible_boxes" title="/en/CSS/Using_CSS_flexible_boxes">Using CSS flexible boxes</a> para mais propriedades e informação.</p>
-
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:css">flex-wrap: nowrap; /* Default value */
+```css
+flex-wrap: nowrap; /* Default value */
 flex-wrap: wrap;
 flex-wrap: wrap-reverse;
 
@@ -28,61 +27,60 @@ flex-wrap: wrap-reverse;
 flex-wrap: inherit;
 flex-wrap: initial;
 flex-wrap: unset;
-</pre>
+```
 
-<p>A propriedade <code>flex-wrap</code> é especificada como uma unica palavra-chave escolhida na lista de valores abaixo.</p>
+A propriedade `flex-wrap` é especificada como uma unica palavra-chave escolhida na lista de valores abaixo.
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<p>Os seguintes valores são aceitos :</p>
+Os seguintes valores são aceitos :
 
-<dl>
- <dt><code>nowrap</code></dt>
- <dd>Os itens flexíveis são agrupados em uma unica linha, o que pode fazer com que o flex container transborde. O <strong>cross-start</strong>  é equivalente ao <strong>início </strong>ou <strong>antes</strong>, dependendo do valor da  {{cssxref("flex-direction")}}. Este é o valor padrão.</dd>
- <dt><code>wrap</code></dt>
- <dd>Os itens flexíveis são quebrados em multiplas linhas. O <strong>cross-start </strong> é equivalente a iniciar ou antes dependendo do valor do <code>flex-direction</code> e <strong>cross-end</strong> é o oposto do especificado <strong>cross-start</strong>.</dd>
- <dt><code>wrap-reverse</code></dt>
- <dd>Se comporta da mesma maneira que o <code>wrap</code> mas a de linha ocorre na direção contrária, ou seja, para a linha acima.</dd>
-</dl>
+- `nowrap`
+  - : Os itens flexíveis são agrupados em uma unica linha, o que pode fazer com que o flex container transborde. O **cross-start** é equivalente ao **início** ou **antes**, dependendo do valor da {{cssxref("flex-direction")}}. Este é o valor padrão.
+- `wrap`
+  - : Os itens flexíveis são quebrados em multiplas linhas. O **cross-start** é equivalente a iniciar ou antes dependendo do valor do `flex-direction` e **cross-end** é o oposto do especificado **cross-start**.
+- `wrap-reverse`
+  - : Se comporta da mesma maneira que o `wrap` mas a de linha ocorre na direção contrária, ou seja, para a linha acima.
 
-<h2 id="Formal_definição">Formal definição</h2>
+## Formal definição
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Definindo_valores_em_um_flex_container_wrap">Definindo valores em um flex container wrap</h3>
+### Definindo valores em um flex container wrap
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<div id="Live_Sample">
-<pre class="brush: html">&lt;h4&gt;This is an example for flex-wrap:wrap &lt;/h4&gt;
-&lt;div class="content"&gt;
-  &lt;div class="red"&gt;1&lt;/div&gt;
-  &lt;div class="green"&gt;2&lt;/div&gt;
-  &lt;div class="blue"&gt;3&lt;/div&gt;
-&lt;/div&gt;
-&lt;h4&gt;This is an example for flex-wrap:nowrap &lt;/h4&gt;
-&lt;div class="content1"&gt;
-  &lt;div class="red"&gt;1&lt;/div&gt;
-  &lt;div class="green"&gt;2&lt;/div&gt;
-  &lt;div class="blue"&gt;3&lt;/div&gt;
-&lt;/div&gt;
-&lt;h4&gt;This is an example for flex-wrap:wrap-reverse &lt;/h4&gt;
-&lt;div class="content2"&gt;
-  &lt;div class="red"&gt;1&lt;/div&gt;
-  &lt;div class="green"&gt;2&lt;/div&gt;
-  &lt;div class="blue"&gt;3&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<h4>This is an example for flex-wrap:wrap </h4>
+<div class="content">
+  <div class="red">1</div>
+  <div class="green">2</div>
+  <div class="blue">3</div>
+</div>
+<h4>This is an example for flex-wrap:nowrap </h4>
+<div class="content1">
+  <div class="red">1</div>
+  <div class="green">2</div>
+  <div class="blue">3</div>
+</div>
+<h4>This is an example for flex-wrap:wrap-reverse </h4>
+<div class="content2">
+  <div class="red">1</div>
+  <div class="green">2</div>
+  <div class="blue">3</div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* Common Styles */
+```css
+/* Common Styles */
 .content,
 .content1,
 .content2 {
@@ -121,40 +119,23 @@ flex-wrap: unset;
     display: flex;
     flex-wrap: wrap-reverse;
 }
+```
 
-</pre>
-</div>
+#### Resultados
 
-<h4 id="Resultados">Resultados</h4>
+{{ EmbedLiveSample('Setting_flex_container_wrap_values', '700px', '700px', '', 'Web/CSS/flex-wrap') }}
 
-<p>{{ EmbedLiveSample('Setting_flex_container_wrap_values', '700px', '700px', '', 'Web/CSS/flex-wrap') }}</p>
+## Especificação
 
-<h2 id="Especificação">Especificação</h2>
+| Especificação                                                                            | Status                               | Comentário |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | ---------- |
+| {{ SpecName('CSS3 Flexbox', '#flex-wrap-property', 'flex-wrap') }} | {{ Spec2('CSS3 Flexbox') }} |            |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Especificação</th>
-   <th>Status</th>
-   <th>Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Flexbox', '#flex-wrap-property', 'flex-wrap') }}</td>
-   <td>{{ Spec2('CSS3 Flexbox') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+## Compatibilidade com navegadores
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+{{Compat("css.properties.flex-wrap")}}
 
-<p>{{Compat("css.properties.flex-wrap")}}</p>
+## Veja também
 
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>Guia CSS Flexbox: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>Guia CSS Flexbox: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items">Mastering wrapping of flex items</a></em></li>
-</ul>
+- Guia CSS Flexbox: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- Guia CSS Flexbox: _[Mastering wrapping of flex items](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_

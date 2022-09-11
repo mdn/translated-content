@@ -3,70 +3,69 @@ title: <display-outside>
 slug: Web/CSS/display-outside
 translation_of: Web/CSS/display-outside
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p class="summary">O <code>&lt;display-outside&gt;</code> as palavras-chave especificam a parte externa do elemento {{CSSxRef("display")}} type, que é essencialmente seu papel no layout de fluxo. Essas palavras-chave são usadas como valores do <code>display</code> e pode ser usada para fins legados como uma única palavra-chave ou conforme definido na especificação do Nível 3, juntamente com um valor do {{CSSxRef("&lt;display-inside&gt;")}} palavras-chave.</p>
+O `<display-outside>` as palavras-chave especificam a parte externa do elemento {{CSSxRef("display")}} type, que é essencialmente seu papel no layout de fluxo. Essas palavras-chave são usadas como valores do `display` e pode ser usada para fins legados como uma única palavra-chave ou conforme definido na especificação do Nível 3, juntamente com um valor do {{CSSxRef("&lt;display-inside&gt;")}} palavras-chave.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<p>O <code>&lt;display-outside&gt;</code> O valor é definido usando uma palavra-chave da lista abaixo:</p>
+O `<display-outside>` O valor é definido usando uma palavra-chave da lista abaixo:
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<dl>
- <dt><code>block</code></dt>
- <dd>O elemento gera uma caixa de elemento de bloco, gerando quebras de linha antes e depois do elemento, quando no fluxo normal.</dd>
- <dt><code>inline</code></dt>
- <dd>O elemento gera uma ou mais caixas de elementos embutidos que não geram quebras de linha antes ou depois de si mesmas. No fluxo normal, o próximo elemento estará na mesma linha se houver espaço</dd>
- <dt><code>run-in</code> {{Experimental_Inline}}</dt>
- <dd><p>O elemento gera uma caixa de introdução. Se o irmão adjacente do elemento definido como<code>display: run-in</code> box é uma caixa de bloco, o <code>run-in</code> box se torna a primeira caixa embutida da caixa de bloco a seguir.</p>
- <p>Os elementos de entrada funcionam como linhas ou blocos, dependendo dos elementos circundantes. Ou seja: Se a caixa de introdução contém uma caixa de bloco, o mesmo que bloco. Se uma caixa de bloco segue a caixa de introdução, a caixa de introdução torna-se a primeira caixa embutida da caixa de bloco. Se uma caixa embutida se seguir, a caixa de introdução se tornará uma caixa de bloco.</p></dd>
-</dl>
+- `block`
+  - : O elemento gera uma caixa de elemento de bloco, gerando quebras de linha antes e depois do elemento, quando no fluxo normal.
+- `inline`
+  - : O elemento gera uma ou mais caixas de elementos embutidos que não geram quebras de linha antes ou depois de si mesmas. No fluxo normal, o próximo elemento estará na mesma linha se houver espaço
+- `run-in` {{Experimental_Inline}}
 
-<div class="note">
-<p><strong>Nota: Navegadores que suportam a sintaxe de dois valores, encontrando apenas o valor externo, como quando</strong><code>display: block</code> ou <code>display: inline</code> especificado, definirá o valor interno como<code>flow</code>. Isso resultará no comportamento esperado; por exemplo, se você especificar um elemento a ser bloco, seria de esperar que os filhos desse elemento participassem do layout de fluxo normal em bloco e em linha.</p>
-</div>
+  - : O elemento gera uma caixa de introdução. Se o irmão adjacente do elemento definido como`display: run-in` box é uma caixa de bloco, o `run-in` box se torna a primeira caixa embutida da caixa de bloco a seguir.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+    Os elementos de entrada funcionam como linhas ou blocos, dependendo dos elementos circundantes. Ou seja: Se a caixa de introdução contém uma caixa de bloco, o mesmo que bloco. Se uma caixa de bloco segue a caixa de introdução, a caixa de introdução torna-se a primeira caixa embutida da caixa de bloco. Se uma caixa embutida se seguir, a caixa de introdução se tornará uma caixa de bloco.
+
+> **Note:** **Nota: Navegadores que suportam a sintaxe de dois valores, encontrando apenas o valor externo, como quando**`display: block` ou `display: inline` especificado, definirá o valor interno como`flow`. Isso resultará no comportamento esperado; por exemplo, se você especificar um elemento a ser bloco, seria de esperar que os filhos desse elemento participassem do layout de fluxo normal em bloco e em linha.
+
+### Sintaxe formal
 
 {{CSSSyntax}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>No exemplo a seguir, os elementos de extensão (normalmente exibidos como elementos embutidos) são definidos como <code>display: block</code> e, assim, divida em novas linhas e expanda para preencher seu contêiner na dimensão embutida.</p>
+No exemplo a seguir, os elementos de extensão (normalmente exibidos como elementos embutidos) são definidos como `display: block` e, assim, divida em novas linhas e expanda para preencher seu contêiner na dimensão embutida.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;span&gt;span 1&lt;/span&gt;
-&lt;span&gt;span 2&lt;/span&gt;</pre>
+```html
+<span>span 1</span>
+<span>span 2</span>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">span {
+```css
+span {
     display: block;
     border: 1px solid rebeccapurple;
-}</pre>
+}
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample("Example", 300, 60)}}</p>
+{{EmbedLiveSample("Example", 300, 60)}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("css.properties.display.display-outside", 10)}}</p>
+{{Compat("css.properties.display.display-outside", 10)}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{CSSxRef("display")}}
-  <ul>
-   <li>{{CSSxRef("&lt;display-inside&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-listitem&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-internal&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-box&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-legacy&gt;")}}</li>
-  </ul>
- </li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow">Layout de bloco e embutido no fluxo normal</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained">Contextos de formatação explicados</a></li>
-</ul>
+- {{CSSxRef("display")}}
+
+  - {{CSSxRef("&lt;display-inside&gt;")}}
+  - {{CSSxRef("&lt;display-listitem&gt;")}}
+  - {{CSSxRef("&lt;display-internal&gt;")}}
+  - {{CSSxRef("&lt;display-box&gt;")}}
+  - {{CSSxRef("&lt;display-legacy&gt;")}}
+
+- [Layout de bloco e embutido no fluxo normal](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
+- [Contextos de formatação explicados](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained)

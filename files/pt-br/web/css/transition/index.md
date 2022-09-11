@@ -3,17 +3,18 @@ title: transition
 slug: Web/CSS/transition
 translation_of: Web/CSS/transition
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>A propriedade de <a href="/en/CSS" title="CSS">CSS  </a><strong>transition</strong> é uma <a href="/en-US/docs/Web/CSS/Shorthand_properties" title="/en-US/docs/CSS/Shorthand_properties">propriedade abreviada</a> para {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }} e {{ cssxref("transition-delay") }}. Ela permite definir a transição entre dois estados de um elemento. Estados diferentes podem ser definidos usando <a href="/en-US/docs/Web/CSS/Pseudo-classes" title="/en-US/docs/CSS/Pseudo-classes">pseudo-classes</a> tais como {{cssxref(":hover")}} ou {{cssxref(":active")}}; ou dinamicamente, usando javascript.</p>
+A propriedade de [CSS ](/en/CSS "CSS")**transition** é uma [propriedade abreviada](/pt-BR/docs/Web/CSS/Shorthand_properties "/en-US/docs/CSS/Shorthand_properties") para {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }} e {{ cssxref("transition-delay") }}. Ela permite definir a transição entre dois estados de um elemento. Estados diferentes podem ser definidos usando [pseudo-classes](/pt-BR/docs/Web/CSS/Pseudo-classes "/en-US/docs/CSS/Pseudo-classes") tais como {{cssxref(":hover")}} ou {{cssxref(":active")}}; ou dinamicamente, usando javascript.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css">/* Apply to 1 property */
+```css
+/* Apply to 1 property */
 /* property name | duration */
 transition: margin-left 4s;
 
@@ -33,46 +34,31 @@ transition: all 0.5s ease-out;
 transition: inherit;
 transition: initial;
 transition: unset;
-</pre>
+```
 
-<p>Observe que a ordem é importante dentro dos itens nesta propriedade: o primeiro valor que pode ser analisado como tempo é atribuído ao {{cssxref("transition-duration")}}, duration e o segundo valor que pode ser analisado como tempo é atribuído ao {{cssxref("transition-delay")}}.</p>
+Observe que a ordem é importante dentro dos itens nesta propriedade: o primeiro valor que pode ser analisado como tempo é atribuído ao {{cssxref("transition-duration")}}, duration e o segundo valor que pode ser analisado como tempo é atribuído ao {{cssxref("transition-delay")}}.
 
-<p>Veja <a href="/pt-BR/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#Quando_os_tamanhos_dos_valores_das_listas_das_propriedades_s%C3%A3o_de_tamanhos_diferentes">como as coisas são manipuladas</a> quando as listas de valores de propriedades não têm o mesmo comprimento. Em resumo, descrições de transição extras além do número de propriedades realmente sendo animadas são ignoradas.</p>
+Veja [como as coisas são manipuladas](/pt-BR/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#Quando_os_tamanhos_dos_valores_das_listas_das_propriedades_s%C3%A3o_de_tamanhos_diferentes) quando as listas de valores de propriedades não têm o mesmo comprimento. Em resumo, descrições de transição extras além do número de propriedades realmente sendo animadas são ignoradas.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Existem vários outros exemplos de transições CSS incluídas no artigo principal sobre <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions" title="en/CSS/CSS transitions">CSS transitions</a>.</p>
+Existem vários outros exemplos de transições CSS incluídas no artigo principal sobre [CSS transitions](/pt-BR/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions "en/CSS/CSS transitions").
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Transitions', '#transition-shorthand-property', 'transition') }}</td>
-   <td>{{ Spec2('CSS3 Transitions') }}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | Status                                   | Comment            |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
+| {{ SpecName('CSS3 Transitions', '#transition-shorthand-property', 'transition') }} | {{ Spec2('CSS3 Transitions') }} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.properties.transition")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_transitions" title="en/CSS/CSS transitions">Using CSS transitions</a></li>
- <li>{{ domxref("TransitionEvent") }}</li>
-</ul>
+- [Using CSS transitions](/pt-BR/docs/CSS/Using_CSS_transitions "en/CSS/CSS transitions")
+- {{ domxref("TransitionEvent") }}

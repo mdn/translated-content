@@ -3,25 +3,26 @@ title: background-position
 slug: Web/CSS/background-position
 translation_of: Web/CSS/background-position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A propriedade <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>background-position</code></strong> define a posição inicial, relativa a posição de fundo na camada definido por {{cssxref("background-origin")}}, para cada background image definido.</p>
+A propriedade [CSS](/pt-BR/docs/Web/CSS) **`background-position`** define a posição inicial, relativa a posição de fundo na camada definido por {{cssxref("background-origin")}}, para cada background image definido.
 
-<div>{{EmbedInteractiveExample("pages/css/background-position.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-position.html")}}
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush: css no-line-numbers">/* Valores chave */
+```css
+/* Valores chave */
 background-position: top;
 background-position: bottom;
 background-position: left;
 background-position: right;
 background-position: center;
 
-/* Valores &lt;percentuais&gt; */
+/* Valores <percentuais> */
 background-position: 25% 75%;
 
-/* valores &lt;espessura&gt; */
+/* valores <espessura> */
 background-position: 0 0;
 background-position: 1cm 2cm;
 background-position: 10ch 8em;
@@ -39,58 +40,54 @@ background-position: top right 10px;
 background-position: inherit;
 background-position: initial;
 background-position: unset;
-</pre>
+```
 
-<p>A propriedade <code>background-position</code> é especificada como um determinado numero de valores de <code><a href="#&lt;position>">&lt;position&gt;</a></code> , separados por espaços.</p>
+A propriedade `background-position` é especificada como um determinado numero de valores de [`<position>`](#<position>) , separados por espaços.
 
-<h3 id="Values" name="Values">Values</h3>
+### Values
 
-<dl>
- <dt><a id="&lt;position>" name="&lt;position>"><code>&lt;position&gt;</code></a></dt>
- <dd><p>A {{cssxref("&lt;position&gt;")}}. A position defines an x/y coordinate, to place an item relative to the edges of an element's box. It can be defined using one or two values. If two values are used, the first value represents the horizontal position and the second represents the vertical position. If only one value is specified, the second value is assumed to be <code>center</code>.</p>
- <p><strong>1-value syntax:</strong> the value may be:</p>
+- `<position>`
 
- <ul>
-  <li>The keyword value <code>center</code>, which centers the image.</li>
-  <li>One of the keyword values <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>. This specifies an edge against which to place the item. The other dimension is then set to 50%, so the item is placed in the middle of the edge specified.</li>
-  <li>A {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}}. This specifies the X coordinate relative to the left edge, with the Y coordinate set to 50%.</li>
- </ul>
+  - : A {{cssxref("&lt;position&gt;")}}. A position defines an x/y coordinate, to place an item relative to the edges of an element's box. It can be defined using one or two values. If two values are used, the first value represents the horizontal position and the second represents the vertical position. If only one value is specified, the second value is assumed to be `center`.
 
- <p><strong>2-value syntax:</strong> one value defines X and the other defines Y. Each value may be:</p>
+    **1-value syntax:** the value may be:
 
- <ul>
-  <li>One of the keyword values <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>. If <code>left</code> or <code>right</code> are given here, then this defines X and the other given value defines Y. If <code>top</code> or <code>bottom</code> are given, then this defines Y and the other value defines X.</li>
-  <li>A {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}}. If the other value is <code>left</code> or <code>right</code>, then this value defines Y, relative to the top edge. If the other value is <code>top</code> or <code>bottom</code>, then this value defines X, relative to the left edge. If both values are <code>&lt;length&gt;</code> or <code>&lt;percentage&gt;</code> values, then the first defines X and the second Y.</li>
- </ul>
+    - The keyword value `center`, which centers the image.
+    - One of the keyword values `top`, `left`, `bottom`, `right`. This specifies an edge against which to place the item. The other dimension is then set to 50%, so the item is placed in the middle of the edge specified.
+    - A {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}}. This specifies the X coordinate relative to the left edge, with the Y coordinate set to 50%.
 
- <p>Note that:</p>
+    **2-value syntax:** one value defines X and the other defines Y. Each value may be:
 
- <ul>
-  <li>If one value is <code>top</code> or <code>bottom</code>, then the other value may not be <code>top</code> or <code>bottom</code>.</li>
-  <li>If one value is <code>left</code> or <code>right</code>, then the other value may not be <code>left</code> or <code>right</code>.</li>
- </ul>
+    - One of the keyword values `top`, `left`, `bottom`, `right`. If `left` or `right` are given here, then this defines X and the other given value defines Y. If `top` or `bottom` are given, then this defines Y and the other value defines X.
+    - A {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}}. If the other value is `left` or `right`, then this value defines Y, relative to the top edge. If the other value is `top` or `bottom`, then this value defines X, relative to the left edge. If both values are `<length>` or `<percentage>` values, then the first defines X and the second Y.
 
- <p>This means, e.g., that <code>top top</code> and <code>left right</code> are not valid.</p>
- </dd>
-</dl>
+    Note that:
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+    - If one value is `top` or `bottom`, then the other value may not be `top` or `bottom`.
+    - If one value is `left` or `right`, then the other value may not be `left` or `right`.
+
+    This means, e.g., that `top top` and `left right` are not valid.
+
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">Examples</h2>
+## Examples
 
-<p>Each of these three examples uses the {{cssxref("background")}} property to create a yellow, rectangular element containing a star image. In each example, the star is in a different position. The third example illustrates how to specify positions for two different background images within one element.</p>
+Each of these three examples uses the {{cssxref("background")}} property to create a yellow, rectangular element containing a star image. In each example, the star is in a different position. The third example illustrates how to specify positions for two different background images within one element.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="exampleone"&gt;Example One&lt;/div&gt;
-&lt;div class="exampletwo"&gt;Example Two&lt;/div&gt;
-&lt;div class="examplethree"&gt;Example Three&lt;/div&gt;</pre>
+```html
+<div class="exampleone">Example One</div>
+<div class="exampletwo">Example Two</div>
+<div class="examplethree">Example Three</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">/* Shared among all &lt;div&gt;s */
+```css
+/* Shared among all <div>s */
 div {
   background-color: #FFEE99;
   background-repeat: no-repeat;
@@ -114,60 +111,36 @@ div {
                        url("https://mdn.mozillademos.org/files/7693/catfront.png");
   background-position: 0px 0px,
                        center;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Examples', 420, 200)}}</p>
+{{EmbedLiveSample('Examples', 420, 200)}}
 
-<h2 id="Specifications" name="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#background-position', 'background-position')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Adds support for multiple backgrounds and the four-value syntax. Modifies the percentage definition to match implementations.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'colors.html#propdef-background-position', 'background-position')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Allows for keyword values and {{cssxref("&lt;length&gt;")}} and {{cssxref("&lt;percentage&gt;")}} values to be mixed.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#background-position', 'background-position')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                        | Status                                   | Comment                                                                                                                                     |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Backgrounds', '#background-position', 'background-position')}}             | {{Spec2('CSS3 Backgrounds')}} | Adds support for multiple backgrounds and the four-value syntax. Modifies the percentage definition to match implementations.               |
+| {{SpecName('CSS2.1', 'colors.html#propdef-background-position', 'background-position')}} | {{Spec2('CSS2.1')}}                 | Allows for keyword values and {{cssxref("&lt;length&gt;")}} and {{cssxref("&lt;percentage&gt;")}} values to be mixed. |
+| {{SpecName('CSS1', '#background-position', 'background-position')}}                             | {{Spec2('CSS1')}}                 | Initial definition.                                                                                                                         |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("css.properties.background-position")}}</p>
+{{Compat("css.properties.background-position")}}
 
-<h3 id="Quantum_CSS_notes">Quantum CSS notes</h3>
+### Quantum CSS notes
 
-<ul>
- <li>Gecko has a bug meaning that <code>background-position</code> can't be {{cssxref("transition","transitioned")}} between two values containing different numbers of {{cssxref("&lt;position&gt;")}} values, for example <code>background-position: 10px 10px;</code> and <code>background-position: 20px 20px, 30px 30px;</code> (see {{bug(1390446)}}). Firefox's new parallel CSS engine (also known as <a href="https://wiki.mozilla.org/Quantum">Quantum CSS</a> or <a href="https://wiki.mozilla.org/Quantum/Stylo">Stylo</a>, planned for release in Firefox 57) fixes this.</li>
-</ul>
+- Gecko has a bug meaning that `background-position` can't be {{cssxref("transition","transitioned")}} between two values containing different numbers of {{cssxref("&lt;position&gt;")}} values, for example `background-position: 10px 10px;` and `background-position: 20px 20px, 30px 30px;` (see {{bug(1390446)}}). Firefox's new parallel CSS engine (also known as [Quantum CSS](https://wiki.mozilla.org/Quantum) or [Stylo](https://wiki.mozilla.org/Quantum/Stylo), planned for release in Firefox 57) fixes this.
 
-<h2 id="See_also" name="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("background-position-x")}}</li>
- <li>{{cssxref("background-position-y")}}</li>
- <li>{{cssxref("background-position-inline")}}</li>
- <li>{{cssxref("background-position-block")}}</li>
- <li><a href="/en-US/docs/CSS/Multiple_backgrounds" title="CSS/Multiple backgrounds">Using multiple backgrounds</a></li>
- <li>{{cssxref("transform-origin")}}</li>
-</ul>
+- {{cssxref("background-position-x")}}
+- {{cssxref("background-position-y")}}
+- {{cssxref("background-position-inline")}}
+- {{cssxref("background-position-block")}}
+- [Using multiple backgrounds](/pt-BR/docs/CSS/Multiple_backgrounds "CSS/Multiple backgrounds")
+- {{cssxref("transform-origin")}}

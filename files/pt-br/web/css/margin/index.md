@@ -8,15 +8,16 @@ tags:
 translation_of: Web/CSS/margin
 translation_of_original: Web/CSS/margin-new
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A propriedade <strong><code>margin</code></strong> do <a href="/pt-BR/docs/Web/CSS" title="CSS">CSS</a> define a <a href="/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">área de margem</a> nos quatro lados do elemento. É uma abreviação que define todas as margens individuais de uma só vez: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, e {{cssxref("margin-left")}}.</p>
+A propriedade **`margin`** do [CSS](/pt-BR/docs/Web/CSS "CSS") define a [área de margem](/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) nos quatro lados do elemento. É uma abreviação que define todas as margens individuais de uma só vez: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, e {{cssxref("margin-left")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/margin.html")}}</div>
+{{EmbedInteractiveExample("pages/css/margin.html")}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush:css no-line-numbers">/* Aplica para todos os quatro lados */
+```css
+/* Aplica para todos os quatro lados */
 margin: 1em;
 
 /* vertical | horizontal */
@@ -32,45 +33,44 @@ margin: 2px 1em 0 auto;
 margin: inherit;
 margin: initial;
 margin: unset;
-</pre>
+```
 
-<p>A propriedade <code>margin</code> pode ser especificada usando um, dois, três ou quatro valores. Cada valor deve ser um <code><a href="#&lt;length>">&lt;length&gt;</a></code>, uma <code><a href="#&lt;percentage>">&lt;percentage&gt;</a></code>, ou a palavra-chave <code><a href="#auto">auto</a></code>. Cada valor pode ser positivo, zero ou negativo.</p>
+A propriedade `margin` pode ser especificada usando um, dois, três ou quatro valores. Cada valor deve ser um [`<length>`](#<length>), uma [`<percentage>`](#<percentage>), ou a palavra-chave [`auto`](#auto). Cada valor pode ser positivo, zero ou negativo.
 
-<ul>
- <li>Quando <strong>um</strong> valor é especificado, a mesma margem é aplicada para <strong>todos os quatro lados</strong>.</li>
- <li>Quando <strong>dois</strong> valores são especificados, a primeira margem é aplicada aos <strong>lados</strong> <strong>superior e inferior,</strong> e a segunda aos <strong>lados</strong> <strong>esquerdo e direito</strong>.</li>
- <li>Quando <strong>três</strong> valores são especificados, a primeira margem é apliacada ao <strong>topo</strong>, a segunda aos <strong>lados</strong> <strong>esquerdo e direito</strong>, e a terceira ao <strong>lado</strong> <strong>inferior</strong>.</li>
- <li>Quando <strong>quatro</strong> valores são especificados, as margens são aplicadas aos lados <strong>superior</strong>, <strong>direito</strong>, <strong>inferior</strong> e <strong>esquerdo</strong>, nesta ordem (sentido horário).</li>
-</ul>
+- Quando **um** valor é especificado, a mesma margem é aplicada para **todos os quatro lados**.
+- Quando **dois** valores são especificados, a primeira margem é aplicada aos **lados** **superior e inferior,** e a segunda aos **lados** **esquerdo e direito**.
+- Quando **três** valores são especificados, a primeira margem é apliacada ao **topo**, a segunda aos **lados** **esquerdo e direito**, e a terceira ao **lado** **inferior**.
+- Quando **quatro** valores são especificados, as margens são aplicadas aos lados **superior**, **direito**, **inferior** e **esquerdo**, nesta ordem (sentido horário).
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><strong>{{cssxref("length")}}</strong></dt>
- <dd>O tamanho da margem como um valor fixo.</dd>
- <dt>{{cssxref("percentage")}}</dt>
- <dd>O tamanho da margem como um percetual, relativo à <em>largura</em> do bloco em que o elemento está contido.</dd>
- <dt><code>auto</code></dt>
- <dd>O navegador seleciona uma margem adequada para utilizar. Por exemplo, em alguns casos este valor pode ser utilizado para centralizar o elemento.</dd>
-</dl>
+- **{{cssxref("length")}}**
+  - : O tamanho da margem como um valor fixo.
+- {{cssxref("percentage")}}
+  - : O tamanho da margem como um percetual, relativo à _largura_ do bloco em que o elemento está contido.
+- `auto`
+  - : O navegador seleciona uma margem adequada para utilizar. Por exemplo, em alguns casos este valor pode ser utilizado para centralizar o elemento.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Exemplo_simples">Exemplo simples</h3>
+### Exemplo simples
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="center"&gt;Este elemento está centralizado.&lt;/div&gt;
+```html
+<div class="center">Este elemento está centralizado.</div>
 
-&lt;div class="outside"&gt;Este elemento está posicionado fora de seu bloco recipiente.&lt;/div&gt;</pre>
+<div class="outside">Este elemento está posicionado fora de seu bloco recipiente.</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight:[2,8]">.center {
+```css
+.center {
   margin: auto;
   background: lime;
   width: 66%;
@@ -80,13 +80,15 @@ margin: unset;
   margin: 3rem 0 0 -3rem;
   background: cyan;
   width: 66%;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Simple_example','100%',120) }}</p>
+{{ EmbedLiveSample('Simple_example','100%',120) }}
 
-<h3 id="Mais_exemplos">Mais exemplos</h3>
+### Mais exemplos
 
-<pre class="brush: css">margin: 5%;                 /* todos os lados: margem de 5% */
+```css
+margin: 5%;                 /* todos os lados: margem de 5% */
 
 margin: 10px;               /* todos os lados: margem de 10px */
 
@@ -107,63 +109,36 @@ margin: 2em auto;           /* topo e inferior: margem de 2em          */
 
 margin: auto;               /* topo e inferior: margem de 0            */
                             /* caixa está horizontalmente centralizada */
-</pre>
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<h3 id="Centralização_horizontal">Centralização horizontal</h3>
+### Centralização horizontal
 
-<p>Para centralizar algo horizontalmente em navegadores modernos, você pode utilizar <code><a href="/en-US/docs/Web/CSS/display">display</a>: flex; <a href="/en-US/docs/Web/CSS/justify-content">justify-content</a>: center;</code></p>
+Para centralizar algo horizontalmente em navegadores modernos, você pode utilizar `display: flex; justify-content: center;`
 
-<p>Contudo, em navegadores antigos, como IE8-9 que não suporta layout flexbox, estes não estão disponíveis. Para centralizar um elemento dentro de seu pai, use <code>margin: 0 auto;</code> .</p>
+Contudo, em navegadores antigos, como IE8-9 que não suporta layout flexbox, estes não estão disponíveis. Para centralizar um elemento dentro de seu pai, use `margin: 0 auto;` .
 
-<h3 id="Colapso_de_margens">Colapso de margens</h3>
+### Colapso de margens
 
-<p>Às vezes, as margens superior e inferior de elementos são colapsadas em uma única margem que é igual à maior das duas margens. Veja <a href="/pt-BR/docs/Web/CSS/CSS_Box_Model/margin_collapsing">Dominando margin collapsing</a> para mais informações.</p>
+Às vezes, as margens superior e inferior de elementos são colapsadas em uma única margem que é igual à maior das duas margens. Veja [Dominando margin collapsing](/pt-BR/docs/Web/CSS/CSS_Box_Model/margin_collapsing) para mais informações.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Box', '#margin', 'margin') }}</td>
-   <td>{{ Spec2('CSS3 Box') }}</td>
-   <td>Nenhuma mudança significativa.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Transitions', '#animatable-css', 'margin') }}</td>
-   <td>{{ Spec2('CSS3 Transitions') }}</td>
-   <td>Define <code>margin</code> como animável.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'box.html#margin-properties', 'margin') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td>Remove seu efeito em elementos <em>inline</em>.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS1', '#margin', 'margin') }}</td>
-   <td>{{ Spec2('CSS1') }}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Status                                   | Comentário                               |
+| ------------------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------------------- |
+| {{ SpecName('CSS3 Box', '#margin', 'margin') }}                     | {{ Spec2('CSS3 Box') }}         | Nenhuma mudança significativa.           |
+| {{ SpecName('CSS3 Transitions', '#animatable-css', 'margin') }} | {{ Spec2('CSS3 Transitions') }} | Define `margin` como animável.           |
+| {{ SpecName('CSS2.1', 'box.html#margin-properties', 'margin') }} | {{ Spec2('CSS2.1') }}             | Remove seu efeito em elementos _inline_. |
+| {{ SpecName('CSS1', '#margin', 'margin') }}                             | {{ Spec2('CSS1') }}                 | Definição inicial.                       |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("css.properties.margin")}}</p>
+{{Compat("css.properties.margin")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a class="internal" href="/en/CSS/box_model" title="en/CSS/box model">CSS Box Model</a></li>
- <li><a class="internal" href="/en/CSS/margin_collapsing" title="en/CSS/margin collapsing">Margin collapsing</a></li>
-</ul>
+- [CSS Box Model](/en/CSS/box_model "en/CSS/box model")
+- [Margin collapsing](/en/CSS/margin_collapsing "en/CSS/margin collapsing")

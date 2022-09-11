@@ -9,13 +9,14 @@ tags:
   - REFERENCIA DE SCROLL
 translation_of: Web/CSS/scroll-behavior
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<p>A propriedade css <strong><code>scroll-behavior</code></strong> especifica o comportamento de rolagem para uma caixa de scrolling, quando a rolagem acontece devido às APIs do CSSOM. Qualquer outro scroll, aqueles que são executados pelo usuário, não são afetados por esta propriedade. Quando esta propriedade é especificada no elemento raiz, ela se aplica à viewport.</p>
+A propriedade css **`scroll-behavior`** especifica o comportamento de rolagem para uma caixa de scrolling, quando a rolagem acontece devido às APIs do CSSOM. Qualquer outro scroll, aqueles que são executados pelo usuário, não são afetados por esta propriedade. Quando esta propriedade é especificada no elemento raiz, ela se aplica à viewport.
 
-<p>User agents podem ignorar essa propriedade.</p>
+User agents podem ignorar essa propriedade.
 
-<pre class="brush:css no-line-numbers">/* Valores das palavras-chave */
+```css
+/* Valores das palavras-chave */
 scroll-behavior: auto;
 scroll-behavior: smooth;
 
@@ -23,49 +24,50 @@ scroll-behavior: smooth;
 scroll-behavior: inherit;
 scroll-behavior: initial;
 scroll-behavior: unset;
-</pre>
+```
 
-<p>Note que qualquer outro scroll, tem essa tal performace para o usuario, essa propriedade não é afetada. Quando esta propriedade é especificada na raiz do elemento então aplicamos na instancia do viewport. </p>
+Note que qualquer outro scroll, tem essa tal performace para o usuario, essa propriedade não é afetada. Quando esta propriedade é especificada na raiz do elemento então aplicamos na instancia do viewport.
 
-<p>Os usuarios que agem com está propriedade pode ignora-lá.</p>
+Os usuarios que agem com está propriedade pode ignora-lá.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<p>O <code>scroll-behavior</code> é uma propriedade específica, com um valor de uma palavra-chave listada abaixo.</p>
+O `scroll-behavior` é uma propriedade específica, com um valor de uma palavra-chave listada abaixo.
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>A caixa de rolagem rola instantaneamente.</dd>
- <dt><code>smooth</code></dt>
- <dd>A caixa de scroll rola de forma suave usando uma função de temporização definida pelo usuário em um período de tempo. Os agentes do usuário devem seguir as convenções da plataforma, se houver.</dd>
-</dl>
+- `auto`
+  - : A caixa de rolagem rola instantaneamente.
+- `smooth`
+  - : A caixa de scroll rola de forma suave usando uma função de temporização definida pelo usuário em um período de tempo. Os agentes do usuário devem seguir as convenções da plataforma, se houver.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;nav&gt;
-  &lt;a href="#page-1"&gt;1&lt;/a&gt;
-  &lt;a href="#page-2"&gt;2&lt;/a&gt;
-  &lt;a href="#page-3"&gt;3&lt;/a&gt;
-&lt;/nav&gt;
-&lt;scroll-container&gt;
-  &lt;scroll-page id="page-1"&gt;1&lt;/scroll-page&gt;
-  &lt;scroll-page id="page-2"&gt;2&lt;/scroll-page&gt;
-  &lt;scroll-page id="page-3"&gt;3&lt;/scroll-page&gt;
-&lt;/scroll-container&gt;</pre>
+```html
+<nav>
+  <a href="#page-1">1</a>
+  <a href="#page-2">2</a>
+  <a href="#page-3">3</a>
+</nav>
+<scroll-container>
+  <scroll-page id="page-1">1</scroll-page>
+  <scroll-page id="page-2">2</scroll-page>
+  <scroll-page id="page-3">3</scroll-page>
+</scroll-container>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">a {
+```css
+a {
   display: inline-block;
   width: 50px;
   text-decoration: none;
@@ -94,31 +96,18 @@ scroll-page {
   height: 100%;
   font-size: 5em;
 }
-</pre>
+```
 
-<h3 id="Saída">Saída</h3>
+### Saída
 
-<p>{{ EmbedLiveSample('Example', "100%", 250) }}</p>
+{{ EmbedLiveSample('Example', "100%", 250) }}
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM View', "#propdef-scroll-behavior", 'scroll-behavior')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Especificações inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                                   | Status                           | Comentário             |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------- |
+| {{SpecName('CSSOM View', "#propdef-scroll-behavior", 'scroll-behavior')}} | {{Spec2('CSSOM View')}} | Especificações inicial |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade com navegador</h2>
+## Compatibilidade com navegador
 
 {{Compat("css.properties.scroll-behavior")}}

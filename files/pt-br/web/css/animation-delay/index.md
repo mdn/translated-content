@@ -5,73 +5,57 @@ tags:
   - Animação
 translation_of: Web/CSS/animation-delay
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A propriedade CSS <strong><code>animation-delay</code></strong> especifíca quando uma animação deve começar.  Você pode começar a animação no futuro, imediatamente ou desde o  início, ou imediatamente e parcialmente através do ciclo de animação.</p>
+A propriedade CSS **`animation-delay`** especifíca quando uma animação deve começar. Você pode começar a animação no futuro, imediatamente ou desde o início, ou imediatamente e parcialmente através do ciclo de animação.
 
-<pre class="brush:css no-line-numbers">/* Uma animação */
+```css
+/* Uma animação */
 animation-delay: 3s;
 animation-delay: 0s;
 animation-delay: -1500ms;
 
 /* Várias animações */
 animation-delay: 2.1s, 480ms;
-</pre>
+```
 
-<p>Muitas vezes é conveniente usar a propriedade abreviada {{cssxref("animation")}} para definir todas as propriedades de animação de uma só vez. </p>
+Muitas vezes é conveniente usar a propriedade abreviada {{cssxref("animation")}} para definir todas as propriedades de animação de uma só vez.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>{{cssxref("&lt;time&gt;")}}</code></dt>
- <dd><p>O deslocamento do tempo, a partir do momento em que a animação é aplicada ao elemento, no qual a animação deve começar. Isso pode ser especificado em segundos (<code>s</code>) ou milesegundos or milliseconds (<code>ms</code>). A unidade é necessaria.</p>
- <p>Um valor positivo indica que a animação deve começar após o período de especificação ter decorrido.  O valor de <code>0s</code>,  que é o padrão, incida que a animação deve começar desde que foi aplicada.</p>
- <p>Um valor negativo faz com que a animação comece imediatamente, mas parcialmente através do seu ciclo. Por exemplo, se você específicar <code>-1s</code> como tempo da animation-delay , a animação vai começar imediatamente, mas começará 1 segundo na sequência de animação. Se você específicar um valor negativo para a animation-delay, mas o valor inicial é implícito, o valor inicial é retirado do momento em que a animação é aplicada ao elemento.</p>
- </dd>
-</dl>
+- `{{cssxref("&lt;time&gt;")}}`
 
-<div class="note">
-<p><strong>Note</strong>: Quando você especifica vários valores separados por vírgula em uma propriedade <code>animation-*</code> ,  eles serão atribuídos às animações especificadas na propriedade {{cssxref("animation-name")}} em diferentes modos,  dependendo de quantos existam. Para mais informações veja <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values">Setting multiple animation property values</a>.</p>
-</div>
+  - : O deslocamento do tempo, a partir do momento em que a animação é aplicada ao elemento, no qual a animação deve começar. Isso pode ser especificado em segundos (`s`) ou milesegundos or milliseconds (`ms`). A unidade é necessaria.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+    Um valor positivo indica que a animação deve começar após o período de especificação ter decorrido. O valor de `0s`, que é o padrão, incida que a animação deve começar desde que foi aplicada.
+
+    Um valor negativo faz com que a animação comece imediatamente, mas parcialmente através do seu ciclo. Por exemplo, se você específicar `-1s` como tempo da animation-delay , a animação vai começar imediatamente, mas começará 1 segundo na sequência de animação. Se você específicar um valor negativo para a animation-delay, mas o valor inicial é implícito, o valor inicial é retirado do momento em que a animação é aplicada ao elemento.
+
+> **Note:** Quando você especifica vários valores separados por vírgula em uma propriedade `animation-*` , eles serão atribuídos às animações especificadas na propriedade {{cssxref("animation-name")}} em diferentes modos, dependendo de quantos existam. Para mais informações veja [Setting multiple animation property values](/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values).
+
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Veja <a href="/en-US/docs/CSS/CSS_animations" title="CSS/CSS_animations">CSS animations</a> para exemplos.</p>
+Veja [CSS animations](/pt-BR/docs/CSS/CSS_animations "CSS/CSS_animations") para exemplos.
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Animations', '#animation-delay', 'animation-delay')}}</td>
-   <td>{{Spec2('CSS3 Animations')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Status                               | Comentário         |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName('CSS3 Animations', '#animation-delay', 'animation-delay')}} | {{Spec2('CSS3 Animations')}} | Definição inicial. |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade com os browsers</h2>
+## Compatibilidade com os browsers
 
 {{Compat("css.properties.animation-delay")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/CSS/Tutorials/Using_CSS_animations" title="Tutorial about CSS animations">Using CSS animations</a></li>
- <li>JavaScript {{domxref("AnimationEvent")}} API</li>
-</ul>
+- [Using CSS animations](/pt-BR/docs/CSS/Tutorials/Using_CSS_animations "Tutorial about CSS animations")
+- JavaScript {{domxref("AnimationEvent")}} API

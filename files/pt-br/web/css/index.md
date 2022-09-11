@@ -10,82 +10,73 @@ tags:
   - Referencia
 translation_of: Web/CSS
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p class="summary"><strong>CSS</strong> (<strong><em>Cascading Style Sheets</em> ou Folhas de Estilo em Cascata)</strong> é uma linguagem de <a href="/pt-BR/docs/Web/API/StyleSheet">estilo</a> usada para descrever a apresentação de um documento escrito em<a href="/pt-BR/HTML" title="HTML"> HTML</a> ou em <a href="/pt-BR/docs/Glossary/XML" title="XML">XML</a> (incluindo várias linguagens em XML como <a href="/pt-BR/SVG" title="SVG">SVG</a>, <a href="/pt-BR/docs/Web/MathML">MathML</a> ou <a href="/pt-BR/XHTML">XHTML</a>). O CSS descreve como elementos são mostrados na tela, no papel, na fala ou em outras mídias.</p>
+**CSS** (**_Cascading Style Sheets_ ou Folhas de Estilo em Cascata)** é uma linguagem de [estilo](/pt-BR/docs/Web/API/StyleSheet) usada para descrever a apresentação de um documento escrito em[ HTML](/pt-BR/HTML "HTML") ou em [XML](/pt-BR/docs/Glossary/XML "XML") (incluindo várias linguagens em XML como [SVG](/pt-BR/SVG "SVG"), [MathML](/pt-BR/docs/Web/MathML) ou [XHTML](/pt-BR/XHTML)). O CSS descreve como elementos são mostrados na tela, no papel, na fala ou em outras mídias.
 
-<p>CSS é uma das principais linguagens da <strong>open web</strong> e é padronizada em navagadores web de acordo com as <a class="external" href="http://w3.org/Style/CSS/#specs">especificação da W3C</a>. Desenvolvido em níveis, o CSS1 está atualmente obsoleto, o CSS2.1 é uma recomendação e o <a href="/pt-BR/docs/Web/CSS/CSS3" title="CSS3">CSS3</a>, agora dividido em pequenos módulos, está progredindo para a sua padronização.</p>
+CSS é uma das principais linguagens da **open web** e é padronizada em navagadores web de acordo com as [especificação da W3C](http://w3.org/Style/CSS/#specs). Desenvolvido em níveis, o CSS1 está atualmente obsoleto, o CSS2.1 é uma recomendação e o [CSS3](/pt-BR/docs/Web/CSS/CSS3 "CSS3"), agora dividido em pequenos módulos, está progredindo para a sua padronização.
 
-<ul>
- <li>Introdução CSS
+- Introdução CSS
 
-  <p>Se você é novo no desenvolvimento web, certifique-se de ler nosso artigo <a href="/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico">CSS básico</a> para aprender o que é CSS e como usá-lo.</p>
- </li>
- <li>Tutoriais CSS
-  <p>Nossa <a href="/pt-BR/docs/Aprender/CSS">área de aprendizado CSS</a> contém diversos tutoriais para levá-lo do nível iniciante ao avançado, cobrindo todos os fundamentos.</p>
- </li>
- <li>Referências CSS
-  <p>Nossa <a href="/pt-BR/docs/Web/CSS/CSS_Reference">extensa referência CSS</a> para desenvolvedores web experientes descreve todas as propriedades e conceitos do CSS.</p>
- </li>
-</ul>
+  Se você é novo no desenvolvimento web, certifique-se de ler nosso artigo [CSS básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico) para aprender o que é CSS e como usá-lo.
 
-<h2 id="Tutoriais">Tutoriais</h2>
+- Tutoriais CSS
 
-<p>Nossa <a href="/pt-BR/docs/Learn/CSS">área de aprendizado CSS</a> contempla múltiplos módulos que ensinam CSS desde o início — não é necessário conhecimento prévio.</p>
+  Nossa [área de aprendizado CSS](/pt-BR/docs/Aprender/CSS) contém diversos tutoriais para levá-lo do nível iniciante ao avançado, cobrindo todos os fundamentos.
 
-<p><strong><a href="/pt-BR/docs/Learn/CSS/First_steps">Introdução ao CSS</a></strong></p>
+- Referências CSS
 
-<p>Esse módulo inicia com o funcionamento básico do CSS, incluindo seletores e propriedades, escrever regras CSS, aplicar CSS ao HTML, como especificar comprimento, cor, e outras unidades em CSS, cascata e herança, o básico do modelo de caixas, e depuração de CSS.</p>
+  Nossa [extensa referência CSS](/pt-BR/docs/Web/CSS/CSS_Reference) para desenvolvedores web experientes descreve todas as propriedades e conceitos do CSS.
 
-<p><strong><a href="/pt-BR/docs/Learn/CSS/Styling_text">Estilização do texto</a></strong></p>
+## Tutoriais
 
-<p>Esse módulo discute os fundamentos da estilização de textos, incluindo a definição de fontes, negritos, itálicos, linhas e espaçamentos de letras, sombras e outras propriedades de textos.</p>
+Nossa [área de aprendizado CSS](/pt-BR/docs/Learn/CSS) contempla múltiplos módulos que ensinam CSS desde o início — não é necessário conhecimento prévio.
 
-<p><strong><a href="/pt-BR/docs/Learn/CSS/Building_blocks">Estilização de caixas</a></strong></p>
+**[Introdução ao CSS](/pt-BR/docs/Learn/CSS/First_steps)**
 
-<p>Esse módulo foca na estilização de caixas, um dos passos fundamentais para o layout de uma página web. Nesse módulo nós recapitulamos o modelo de caixas, então abordamos o controle do layout das caixas definindo margens, bordas e preenchimento, cores de fundo customizadas, imagens e outras características extravagantes como sombras e filtros em caixas.</p>
+Esse módulo inicia com o funcionamento básico do CSS, incluindo seletores e propriedades, escrever regras CSS, aplicar CSS ao HTML, como especificar comprimento, cor, e outras unidades em CSS, cascata e herança, o básico do modelo de caixas, e depuração de CSS.
 
-<p><strong><a href="/pt-BR/docs/Learn/CSS/CSS_layout">Layout CSS</a></strong></p>
+**[Estilização do texto](/pt-BR/docs/Learn/CSS/Styling_text)**
 
-<p>Neste ponto nós já vimos os fundamentos do CSS, como estilizar texto e estilizar e manipular caixas que contém seu conteúdo. Agora veremos como posicionar suas caixas no lugar certo em relação à janela de exibição e um ao outro. Nós cobrimos os pré-requisitos necessários e agora você pode se aprofundar no layout do CSS com diferentes configurações de exibição, métodos tradicionais de layout envolvendo float e posicionamento, e modernas ferramentas para layout como flexbox.</p>
+Esse módulo discute os fundamentos da estilização de textos, incluindo a definição de fontes, negritos, itálicos, linhas e espaçamentos de letras, sombras e outras propriedades de textos.
 
-<h2 id="Referências">Referências</h2>
+**[Estilização de caixas](/pt-BR/docs/Learn/CSS/Building_blocks)**
 
-<ul>
- <li><a href="/pt-BR/docs/Web/CSS/CSS_Reference">Referências CSS</a>: Essa extensa referência para desenvolvedores web experientes descreve todas as propriedades e conceitos do CSS.</li>
- <li>Conceitos chave do CSS:
-  <ul>
-   <li>A <a href="/pt-BR/docs/Web/CSS/sintaxe">sintaxe e formas da linguagem</a></li>
-   <li><a href="/pt-BR/docs/Web/CSS/Specificity">Especificidade</a>, <a href="/pt-BR/docs/Web/CSS/inheritance">herança</a> e <a href="/en-US/docs/Web/CSS/Cascade">cascata</a></li>
-   <li><a href="/pt-BR/docs/Web/CSS/box_model">Box model</a> e <a href="/pt-BR/docs/Web/CSS/CSS_Box_Model/margin_collapsing">colapso de margem</a></li>
-   <li>O <a href="/en-US/docs/Web/CSS/Containing_block">containing block</a></li>
-   <li><a href="/pt-BR/docs/Web/Guide/CSS/Understanding_z_index/O_contexto_de_empilhamento">Empilhamento</a> e <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block-formatting context</a></li>
-   <li>Valores <a href="/pt-BR/docs/Web/CSS/valor_inicial">iniciais</a>, <a href="/pt-BR/docs/Web/CSS/valor_computado">computados</a>, <a href="/pt-BR/docs/Web/CSS/Valor_usado">usados</a> e <a href="/pt-BR/docs/Web/CSS/Valor_atual">reais</a></li>
-   <li><a href="/pt-BR/docs/Web/CSS/Shorthand_properties">Propriedades abreviadas do CSS</a></li>
-   <li><a href="/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout">CSS Flexible Box Layout</a></li>
-   <li><a href="/pt-BR/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
-   <li><a href="/pt-BR/docs/Web/CSS/Media_Queries">Media queries</a></li>
-  </ul>
- </li>
-</ul>
+Esse módulo foca na estilização de caixas, um dos passos fundamentais para o layout de uma página web. Nesse módulo nós recapitulamos o modelo de caixas, então abordamos o controle do layout das caixas definindo margens, bordas e preenchimento, cores de fundo customizadas, imagens e outras características extravagantes como sombras e filtros em caixas.
 
-<h2 id="Livro_de_receitas">Livro de receitas</h2>
+**[Layout CSS](/pt-BR/docs/Learn/CSS/CSS_layout)**
 
-<p>O <a href="/pt-BR/docs/Web/CSS/Layout_cookbook">livro de receitas de layout CSS</a> tem como objetivo juntar receitas para padrões comuns de layout, coisas que você pode precisar para implementar em seus sites. Além de prover código você pode usá-lo como ponto de partida em seus projetos, essas receitas destacam as diferentes formas de utilização das especificações de layout e as escolhas que você pode fazer como desenvolvedor.</p>
+Neste ponto nós já vimos os fundamentos do CSS, como estilizar texto e estilizar e manipular caixas que contém seu conteúdo. Agora veremos como posicionar suas caixas no lugar certo em relação à janela de exibição e um ao outro. Nós cobrimos os pré-requisitos necessários e agora você pode se aprofundar no layout do CSS com diferentes configurações de exibição, métodos tradicionais de layout envolvendo float e posicionamento, e modernas ferramentas para layout como flexbox.
 
-<h2 id="Ferramentas_para_desenvolvimento_de_CSS">Ferramentas para desenvolvimento de CSS</h2>
+## Referências
 
-<ul>
- <li>Você pode usar o <a class="external" href="http://jigsaw.w3.org/css-validator/">W3C CSS Validation Service</a> para verificar se o seu CSS é válido. Essa é uma ferramenta indispensável de depuração.</li>
- <li><a href="/pt-BR/docs/Tools">As Ferramentas do Firefox para desenvolvedores</a> permitem ver e editar o CSS de uma página ao vivo usando as ferramentas de <a href="/pt-BR/docs/Tools/Page_Inspector">Inspeção</a> e <a href="/pt-BR/docs/Tools/Style_Editor">Editor de Estilo</a>.</li>
- <li><a class="link-https" href="https://addons.mozilla.org/pt-BR/firefox/addon/60">O complemento Web Developer</a> para Firefox também permite a observação e edição de CSS ao vivo dos sites visualizados.</li>
- <li>A comunidade web criou várias outras<a href="/pt-BR/docs/Web/CSS/Tools"> pequenas ferramentas CSS</a> para você usar.</li>
-</ul>
+- [Referências CSS](/pt-BR/docs/Web/CSS/CSS_Reference): Essa extensa referência para desenvolvedores web experientes descreve todas as propriedades e conceitos do CSS.
+- Conceitos chave do CSS:
 
-<h2 id="Veja_também">Veja também</h2>
+  - A [sintaxe e formas da linguagem](/pt-BR/docs/Web/CSS/sintaxe)
+  - [Especificidade](/pt-BR/docs/Web/CSS/Specificity), [herança](/pt-BR/docs/Web/CSS/inheritance) e [cascata](/pt-BR/docs/Web/CSS/Cascade)
+  - [Box model](/pt-BR/docs/Web/CSS/box_model) e [colapso de margem](/pt-BR/docs/Web/CSS/CSS_Box_Model/margin_collapsing)
+  - O [containing block](/pt-BR/docs/Web/CSS/Containing_block)
+  - [Empilhamento](/pt-BR/docs/Web/Guide/CSS/Understanding_z_index/O_contexto_de_empilhamento) e [block-formatting context](/pt-BR/docs/Web/Guide/CSS/Block_formatting_context)
+  - Valores [iniciais](/pt-BR/docs/Web/CSS/valor_inicial), [computados](/pt-BR/docs/Web/CSS/valor_computado), [usados](/pt-BR/docs/Web/CSS/Valor_usado) e [reais](/pt-BR/docs/Web/CSS/Valor_atual)
+  - [Propriedades abreviadas do CSS](/pt-BR/docs/Web/CSS/Shorthand_properties)
+  - [CSS Flexible Box Layout](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout)
+  - [CSS Grid Layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout)
+  - [Media queries](/pt-BR/docs/Web/CSS/Media_Queries)
 
-<ul>
- <li><a href="/pt-BR/docs/Web/Demos_of_open_web_technologies">CSS demos</a>: Inspire-se explorando criativos exemplos das mais recentes tecnologias CSS em ação.</li>
- <li>Linguagens web nas quais o CSS é frequentemente aplicado: <a href="/pt-BR/docs/Web/HTML">HTML</a>, <a href="/pt-BR/docs/Web/SVG">SVG</a>, <a href="/pt-BR/docs/Web/MathML">MathML</a>, <a href="/pt-BR/docs/Web/XHTML">XHTML</a> e <a href="/pt-BR/docs/Glossary/XML">XML</a>.</li>
- <li>Tecnologias Mozilla que usam extensivamente o CSS: <a href="/pt-BR/docs/XUL">XUL</a>, <a href="/pt-BR/docs/Extensions">complementos</a> e <a href="/pt-BR/Add-ons/Themes">temas</a> do <a href="/pt-BR/Firefox">Firefox</a> e <a href="/pt-BR/docs/Mozilla/Thunderbird">Thunderbird.</a></li>
-</ul>
+## Livro de receitas
+
+O [livro de receitas de layout CSS](/pt-BR/docs/Web/CSS/Layout_cookbook) tem como objetivo juntar receitas para padrões comuns de layout, coisas que você pode precisar para implementar em seus sites. Além de prover código você pode usá-lo como ponto de partida em seus projetos, essas receitas destacam as diferentes formas de utilização das especificações de layout e as escolhas que você pode fazer como desenvolvedor.
+
+## Ferramentas para desenvolvimento de CSS
+
+- Você pode usar o [W3C CSS Validation Service](http://jigsaw.w3.org/css-validator/) para verificar se o seu CSS é válido. Essa é uma ferramenta indispensável de depuração.
+- [As Ferramentas do Firefox para desenvolvedores](/pt-BR/docs/Tools) permitem ver e editar o CSS de uma página ao vivo usando as ferramentas de [Inspeção](/pt-BR/docs/Tools/Page_Inspector) e [Editor de Estilo](/pt-BR/docs/Tools/Style_Editor).
+- [O complemento Web Developer](https://addons.mozilla.org/pt-BR/firefox/addon/60) para Firefox também permite a observação e edição de CSS ao vivo dos sites visualizados.
+- A comunidade web criou várias outras[ pequenas ferramentas CSS](/pt-BR/docs/Web/CSS/Tools) para você usar.
+
+## Veja também
+
+- [CSS demos](/pt-BR/docs/Web/Demos_of_open_web_technologies): Inspire-se explorando criativos exemplos das mais recentes tecnologias CSS em ação.
+- Linguagens web nas quais o CSS é frequentemente aplicado: [HTML](/pt-BR/docs/Web/HTML), [SVG](/pt-BR/docs/Web/SVG), [MathML](/pt-BR/docs/Web/MathML), [XHTML](/pt-BR/docs/Web/XHTML) e [XML](/pt-BR/docs/Glossary/XML).
+- Tecnologias Mozilla que usam extensivamente o CSS: [XUL](/pt-BR/docs/XUL), [complementos](/pt-BR/docs/Extensions) e [temas](/pt-BR/Add-ons/Themes) do [Firefox](/pt-BR/Firefox) e [Thunderbird.](/pt-BR/docs/Mozilla/Thunderbird)

@@ -1,6 +1,6 @@
 ---
 title: ':blank'
-slug: 'Web/CSS/:blank'
+slug: Web/CSS/:blank
 tags:
   - ':blank'
   - CSS
@@ -8,48 +8,31 @@ tags:
   - Necessita de Exemplos
   - Pseudo-classe
   - Seletores CSS
-translation_of: 'Web/CSS/:blank'
+translation_of: Web/CSS/:blank
 ---
-<p>{{CSSRef}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{SeeCompatTable}}
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> The <code>:blank</code> selector is considered at risk, as the CSSWG keeps changing it.</p>
+> **Note:** The `:blank` selector is considered at risk, as the CSSWG keeps changing it.
+>
+> See [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967 "[selectors] decide on :blank").
 
-<p>See <a href="https://github.com/w3c/csswg-drafts/issues/1967" title="[selectors] decide on :blank">CSSWG issue #1967</a>.</p>
-</div>
+A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:blank`** seleciona elementos de entrada do usuário vazios (ex. {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}).
 
-<p>A <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>:blank</code></strong> seleciona elementos de entrada do usuário vazios (ex. {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}).</p>
-
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
 {{CSSSyntax}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#blank-pseudo", ":blank")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                | Status                               | Comment            |
+| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName("CSS4 Selectors", "#blank-pseudo", ":blank")}} | {{Spec2("CSS4 Selectors")}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("css.selectors.blank")}}</p>
+{{Compat("css.selectors.blank")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{CSSxRef(":empty")}}</li>
- <li>{{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}} - Definição anterior de <code>:blank</code>.</li>
-</ul>
+- {{CSSxRef(":empty")}}
+- {{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}} - Definição anterior de `:blank`.

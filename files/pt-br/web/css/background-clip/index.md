@@ -6,21 +6,20 @@ tags:
   - cor de fundo
 translation_of: Web/CSS/background-clip
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A propriedade CSS<strong><code> background-clip</code></strong> especifica se o fundo de um elemento, seja cor ou imagem, se extende debaixo de sua área de borda, preenchimento ou conteúdo.</p>
+A propriedade CSS**` background-clip`** especifica se o fundo de um elemento, seja cor ou imagem, se extende debaixo de sua área de borda, preenchimento ou conteúdo.
 
-<p>{{EmbedInteractiveExample("pages/css/background-clip.html")}}</p>
+{{EmbedInteractiveExample("pages/css/background-clip.html")}}
 
+Se o elemento não possuir as propriedades {{cssxref("background-image")}} ou {{cssxref("background-color")}} definidas, esta propriedade só terá um efeito visual quando a borda tiver regiões transparentes ou regiões parcialmente opacas (devido ao {{cssxref("border-style")}} ou {{cssxref("border-image")}}); caso contrário a borda encobrirá a diferença.
 
+{{cssinfo}}
 
-<p>Se o elemento não possuir as propriedades {{cssxref("background-image")}} ou {{cssxref("background-color")}} definidas, esta propriedade só terá um efeito visual quando a borda tiver regiões transparentes ou regiões parcialmente opacas (devido ao {{cssxref("border-style")}} ou {{cssxref("border-image")}}); caso contrário a borda encobrirá a diferença.</p>
+## Sintaxe
 
-<p>{{cssinfo}}</p>
-
-<h2 id="Sintaxe">Sintaxe</h2>
-
-<pre class="brush:css no-line-numbers language-css"><code class="language-css">/* Valores de palavra-chave */
+```css
+/* Valores de palavra-chave */
 background-clip: border-box;
 background-clip: padding-box;
 background-clip: content-box;
@@ -29,36 +28,38 @@ background-clip: text;
 /* Valores globais */
 background-clip: inherit;
 background-clip: initial;
-background-clip: unset;</code></pre>
+background-clip: unset;
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>border-box</code></dt>
- <dd>O fundo se extende até fora da fronteira da borda (mas por baixo da borda na ordenação-z).</dd>
- <dt><code>padding-box</code></dt>
- <dd>Nenhum fundo é desenhado abaixo da borda (o fundo se extende até a borda externa do preenchimento).</dd>
- <dt><code>content-box</code></dt>
- <dd>O fundo é desenhado dentro (cortado) a caixa de conteúdo.</dd>
- <dt><code id="text">text</code> {{experimental_inline}}</dt>
- <dd>O fundo é desenhado dentro (cortado) do texto aparente.</dd>
-</dl>
+- `border-box`
+  - : O fundo se extende até fora da fronteira da borda (mas por baixo da borda na ordenação-z).
+- `padding-box`
+  - : Nenhum fundo é desenhado abaixo da borda (o fundo se extende até a borda externa do preenchimento).
+- `content-box`
+  - : O fundo é desenhado dentro (cortado) a caixa de conteúdo.
+- `text` {{experimental_inline}}
+  - : O fundo é desenhado dentro (cortado) do texto aparente.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Using_border-box" name="Using_border-box">Usando <code>border-box</code></h3>
+### Usando `border-box`
 
-<h4 id="Conteúdo_HTML">Conteúdo HTML</h4>
+#### Conteúdo HTML
 
-<pre class="brush: html">&lt;p&gt;O fundo se extende atrás da borda.&lt;/p&gt;</pre>
+```html
+<p>O fundo se extende atrás da borda.</p>
+```
 
-<h4 id="Conteúdo_CSS">Conteúdo CSS</h4>
+#### Conteúdo CSS
 
-<pre class="brush: css">p {
+```css
+p {
 
   border: .8em darkviolet;
   border-style: dotted double;
@@ -68,21 +69,25 @@ background-clip: unset;</code></pre>
   font: 900 1.2em sans-serif;
   text-decoration: underline;
   background-clip: border-box;
-}</pre>
+}
+```
 
-<h4 id="Resultado">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample('Using_border-box', 540, 200)}}</p>
+{{EmbedLiveSample('Using_border-box', 540, 200)}}
 
-<h3 id="Using_padding-box" name="Using_padding-box">Usando <code>padding-box</code></h3>
+### Usando `padding-box`
 
-<h4 id="Conteúdo_HTML_2">Conteúdo HTML</h4>
+#### Conteúdo HTML
 
-<pre class="brush: html">&lt;p&gt;O fundo se extende até dentro da fronteira da borda.&lt;/p&gt;</pre>
+```html
+<p>O fundo se extende até dentro da fronteira da borda.</p>
+```
 
-<h4 id="Conteúdo_CSS_2">Conteúdo CSS</h4>
+#### Conteúdo CSS
 
-<pre class="brush: css">p {
+```css
+p {
 
   border: .8em darkviolet;
   border-style: dotted double;
@@ -92,21 +97,25 @@ background-clip: unset;</code></pre>
   font: 900 1.2em sans-serif;
   text-decoration: underline;
   background-clip: padding-box;
-}</pre>
+}
+```
 
-<h4 id="Resultado_2">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample('Using_padding-box', 540, 200)}}</p>
+{{EmbedLiveSample('Using_padding-box', 540, 200)}}
 
-<h3 id="Using_content-box" name="Using_content-box">Usando <code>content-box</code></h3>
+### Usando `content-box`
 
-<h4 id="Conteúdo_HTML_3">Conteúdo HTML</h4>
+#### Conteúdo HTML
 
-<pre class="brush: html">&lt;p&gt;O fundo se extende somente até o limite da caixa de conteúdo.&lt;/p&gt;</pre>
+```html
+<p>O fundo se extende somente até o limite da caixa de conteúdo.</p>
+```
 
-<h4 id="Conteúdo_CSS_3">Conteúdo CSS</h4>
+#### Conteúdo CSS
 
-<pre class="brush: css">p {
+```css
+p {
   border: .8em darkviolet;
   border-style: dotted double;
   margin: 1em 0;
@@ -115,21 +124,25 @@ background-clip: unset;</code></pre>
   font: 900 1.2em sans-serif;
   text-decoration: underline;
   background-clip: content-box;
-}</pre>
+}
+```
 
-<h4 id="Resultado_3">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample('Using_content-box', 540, 200)}}</p>
+{{EmbedLiveSample('Using_content-box', 540, 200)}}
 
-<h3 id="Using_text" name="Using_text">Usando <code>text</code></h3>
+### Usando `text`
 
-<h4 id="Conteúdo_HTML_4">Conteúdo HTML</h4>
+#### Conteúdo HTML
 
-<pre class="brush: html">&lt;p&gt;O fundo se extende dentro do texto.&lt;/p&gt;</pre>
+```html
+<p>O fundo se extende dentro do texto.</p>
+```
 
-<h4 id="Conteúdo_CSS_4">Conteúdo CSS</h4>
+#### Conteúdo CSS
 
-<pre class="brush: css">p {
+```css
+p {
   border: .8em darkviolet;
   border-style: dotted double;
   margin: 1em 0;
@@ -142,38 +155,24 @@ background-clip: unset;</code></pre>
   background-clip: text;
   -webkit-background-clip: text;
   color: rgba(0,0,0,.2);
-}</pre>
+}
+```
 
-<h4 id="Resultado_4">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample('Using_text', 540, 200)}}</p>
+{{EmbedLiveSample('Using_text', 540, 200)}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-background-clip', 'background-clip')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                        | Estado                                   | Comentário |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
+| {{SpecName('CSS3 Backgrounds', '#the-background-clip', 'background-clip')}} | {{Spec2('CSS3 Backgrounds')}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.properties.background-clip")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{cssxref("clip")}}</li>
- <li><a href="/en-US/docs/Web/CSS/box_model">CSS Box Model</a></li>
-</ul>
+- {{cssxref("clip")}}
+- [CSS Box Model](/pt-BR/docs/Web/CSS/box_model)

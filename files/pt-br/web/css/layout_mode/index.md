@@ -4,23 +4,17 @@ slug: Web/CSS/Layout_mode
 translation_of: Web/CSS/Layout_mode
 original_slug: Web/CSS/Modelo_layout
 ---
-<p>O modelo de layout <a href="/en-US/docs/Web/CSS">CSS</a>, às vezes abreviado por <em>layout</em>, é um algoritimo que determina a posição e tamanho dos boxes baseado em como estes interagem com os boxes filhos e boxe ancestral. Há vários layouts:</p>
+O modelo de layout [CSS](/pt-BR/docs/Web/CSS), às vezes abreviado por _layout_, é um algoritimo que determina a posição e tamanho dos boxes baseado em como estes interagem com os boxes filhos e boxe ancestral. Há vários layouts:
 
-<ul>
- <li><em>Block layout</em>, designed for laying out documents. The block layout contains document-centric features, like the ability to <a href="/en-US/docs/Web/CSS/float"><em>float</em></a> elements or to lay them out over <a href="/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts"><em>multiple columns</em></a>.</li>
- <li><em>Inline layout</em>, designed for laying out text.</li>
- <li><a href="/pt-BR/docs/Web/CSS/CSS_Table"><em>Table layout</em></a>, designed for laying out tables.</li>
- <li><a href="/pt-BR/docs/Web/CSS/CSS_Positioning"><em>Positioned layout</em></a>, designed for positioning elements without much interaction with other elements.</li>
- <li><a href="/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout"><em>Flexible box layout</em></a>, designed for laying out complex pages that can be resized smoothly.</li>
- <li><a href="/pt-BR/docs/Web/CSS/CSS_Grid_Layout"><em>Grid layout</em></a>, designed for laying out elements relative to a fixed grid.</li>
-</ul>
+- _Block layout_, designed for laying out documents. The block layout contains document-centric features, like the ability to [_float_](/pt-BR/docs/Web/CSS/float) elements or to lay them out over [_multiple columns_](/pt-BR/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts).
+- _Inline layout_, designed for laying out text.
+- [_Table layout_](/pt-BR/docs/Web/CSS/CSS_Table), designed for laying out tables.
+- [_Positioned layout_](/pt-BR/docs/Web/CSS/CSS_Positioning), designed for positioning elements without much interaction with other elements.
+- [_Flexible box layout_](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout), designed for laying out complex pages that can be resized smoothly.
+- [_Grid layout_](/pt-BR/docs/Web/CSS/CSS_Grid_Layout), designed for laying out elements relative to a fixed grid.
 
-<div class="note">
-<p><strong>Note:</strong> Not all <a href="/en-US/docs/Web/CSS/Reference">CSS properties</a> apply to all <em>layout modes</em>. Most of them apply to one or two of them and have no effect if they are set on an element participating in another layout mode.</p>
-</div>
+> **Note:** Not all [CSS properties](/pt-BR/docs/Web/CSS/Reference) apply to all _layout modes_. Most of them apply to one or two of them and have no effect if they are set on an element participating in another layout mode.
 
-<h2 id="Veja_Também">Veja Também</h2>
+## Veja Também
 
-<ul>
- <li>{{CSS_key_concepts}}</li>
-</ul>
+- {{CSS_key_concepts}}

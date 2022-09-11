@@ -3,47 +3,50 @@ title: '-webkit-text-security'
 slug: Web/CSS/-webkit-text-security
 translation_of: Web/CSS/-webkit-text-security
 ---
-<div>{{ CSSRef() }} {{ Non-standard_header() }}</div>
+{{ CSSRef() }} {{ Non-standard_header() }}
 
-<p><code><strong>-webkit-text-security</strong></code> é uma propriedade CSS não padronizada que ofusca caracteres em um campo {{HtmlElement ("form")}} (como {{HtmlElement ("input")}}} ou {{HtmlElement ("textarea")}}) substituindo eles com uma forma. Afeta apenas campos que não são <code>type=password</code>.</p>
+**`-webkit-text-security`** é uma propriedade CSS não padronizada que ofusca caracteres em um campo {{HtmlElement ("form")}} (como {{HtmlElement ("input")}}} ou {{HtmlElement ("textarea")}}) substituindo eles com uma forma. Afeta apenas campos que não são `type=password`.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush: css">-webkit-text-security: circle;
+```css
+-webkit-text-security: circle;
 -webkit-text-security: disc;
 -webkit-text-security: square;
 -webkit-text-security: none;
-</pre>
+```
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>Tente digitar no campo abaixo. Se o seu navegador suportar essa propriedade, os caracteres deverão ser visualmente substituídos por quadrados.</p>
+Tente digitar no campo abaixo. Se o seu navegador suportar essa propriedade, os caracteres deverão ser visualmente substituídos por quadrados.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;label for="name"&gt;Name:&lt;/label&gt;
-&lt;input type="text" name="name" id="name" /&gt;</pre>
+```html
+<label for="name">Name:</label>
+<input type="text" name="name" id="name" />
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">input {
+```css
+input {
   -webkit-text-security: square;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<p><em>Não faz parte de nenhuma especificação.</em></p>
+_Não faz parte de nenhuma especificação._
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>Suportado em navegadores baseados no WebKit e Blink.</p>
+Suportado em navegadores baseados no WebKit e Blink.
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/WebKit_Extensions">WebKit CSS extensions</a></li>
-</ul>
+- [WebKit CSS extensions](/pt-BR/docs/Web/CSS/WebKit_Extensions)

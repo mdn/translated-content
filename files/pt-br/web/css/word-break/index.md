@@ -7,21 +7,18 @@ tags:
   - Referencia
 translation_of: Web/CSS/word-break
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A propriedade CSS <strong><code>word-break</code></strong> é usada para especificar se o navegador deve inserir ou não quebras de linha onde, normalmente, o texto vazaria de seu container.</p>
+A propriedade CSS **`word-break`** é usada para especificar se o navegador deve inserir ou não quebras de linha onde, normalmente, o texto vazaria de seu container.
 
-<div>{{EmbedInteractiveExample("pages/css/word-break.html")}}</div>
+{{EmbedInteractiveExample("pages/css/word-break.html")}}
 
-<div> </div>
+> **Note:** **Nota:** comparando com {{cssxref("overflow-wrap")}}, `word-break` criará uma quebra de linha no ponto exato em que o texto vazaria, mesmo que uma palavra pudesse ser colocada por completo em uma nova linha sem a necessidade de quebra da palavra.
 
-<div class="note">
-<p><strong>Nota: </strong>comparando com {{cssxref("overflow-wrap")}}, <code>word-break</code> criará uma quebra de linha no ponto exato em que o texto vazaria, mesmo que uma palavra pudesse ser colocada por completo em uma nova linha sem a necessidade de quebra da palavra.</p>
-</div>
+## Sintaxe
 
-<h2 id="Sintaxe">Sintaxe</h2>
-
-<pre class="brush:css">/* Valores específicos */
+```css
+/* Valores específicos */
 word-break: normal;
 word-break: break-all;
 word-break: keep-all;
@@ -30,52 +27,53 @@ word-break: keep-all;
 word-break: inherit;
 word-break: initial;
 word-break: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Usa a regra de quebra de linha padrão.</dd>
- <dt><code>break-all</code></dt>
- <dd>Quebras de linha podem ser inseridas entre quaisquer caracteres de texto não-CJC (Chinês/Japonês/Coreano).</dd>
- <dt><code>keep-all</code></dt>
- <dd>Não permite quebra de linha para texto CJC. Texto não-CJC se comporta como <code>normal</code>.</dd>
- <dt><code>break-word</code></dt>
- <dd>Para evitar o vazamento, palavras que normalmente não seriam quebradas podem ser quebradas em pontos arbitrários se não houver pontos de quebra válidos na linha.</dd>
-</dl>
+- `normal`
+  - : Usa a regra de quebra de linha padrão.
+- `break-all`
+  - : Quebras de linha podem ser inseridas entre quaisquer caracteres de texto não-CJC (Chinês/Japonês/Coreano).
+- `keep-all`
+  - : Não permite quebra de linha para texto CJC. Texto não-CJC se comporta como `normal`.
+- `break-word`
+  - : Para evitar o vazamento, palavras que normalmente não seriam quebradas podem ser quebradas em pontos arbitrários se não houver pontos de quebra válidos na linha.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<h3 id="Conteúdo_HTML">Conteúdo HTML</h3>
+### Conteúdo HTML
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;p&gt;1. &lt;code&gt;word-break: normal&lt;/code&gt;&lt;/p&gt;
-&lt;p class="normal narrow"&gt;This is a long and
+```html
+<p>1. <code>word-break: normal</code></p>
+<p class="normal narrow">This is a long and
  Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- 次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉&lt;/p&gt;
+ 次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉</p>
 
-&lt;p&gt;2. &lt;code&gt;word-break: break-all&lt;/code&gt;&lt;/p&gt;
-&lt;p class="breakAll narrow"&gt;This is a long and
+<p>2. <code>word-break: break-all</code></p>
+<p class="breakAll narrow">This is a long and
  Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- 次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉&lt;/p&gt;
+ 次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉</p>
 
-&lt;p&gt;3. &lt;code&gt;word-break: keep-all&lt;/code&gt;&lt;/p&gt;
-&lt;p class="keepAll narrow"&gt;This is a long and
+<p>3. <code>word-break: keep-all</code></p>
+<p class="keepAll narrow">This is a long and
  Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- 次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉&lt;/p&gt;
+ 次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉</p>
 
-&lt;p&gt;4. &lt;code&gt;word-break: break-word&lt;/code&gt;&lt;/p&gt;
-&lt;p class="breakWord narrow"&gt;This is a long and
+<p>4. <code>word-break: break-word</code></p>
+<p class="breakWord narrow">This is a long and
   Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
-  次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉&lt;/p&gt;</code></pre>
+  次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉</p>
+```
 
-<h3 id="Conteúdo_CSS">Conteúdo CSS</h3>
+### Conteúdo CSS
 
-<pre class="brush: css">.narrow {
+```css
+.narrow {
     padding: 5px;
     border: 1px solid;
     display: table;
@@ -96,37 +94,21 @@ word-break: unset;
 
 .breakWord {
     word-break: break-word;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Examples', '100%', 600) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 600) }}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Commentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text', '#word-break-property', 'word-break')}}</td>
-   <td>{{Spec2('CSS3 Text')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Status                       | Commentário       |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ----------------- |
+| {{SpecName('CSS3 Text', '#word-break-property', 'word-break')}} | {{Spec2('CSS3 Text')}} | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>{{Compat("css.properties.word-break")}}</div>
+{{Compat("css.properties.word-break")}}
 
-<p> </p>
+## Veja também
 
-<h2 id="See_also" name="See_also">Veja também</h2>
-
-<ul>
- <li>{{cssxref("word-wrap")}}</li>
-</ul>
+- {{cssxref("word-wrap")}}
