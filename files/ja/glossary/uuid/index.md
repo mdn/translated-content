@@ -22,4 +22,4 @@ UUID は 128 ビットの値で、標準的には  `123e4567-e89b-12d3-a456-4266
 ## 関連項目
 
 - [UUID](https://ja.wikipedia.org/wiki/UUID) - Wikipedia
-- [`Crypto.randomUUID()`](/en-US/docs/Web/API/Crypto/randomUUID)
+- [`Crypto.randomUUID()`](/ja/docs/Web/API/Crypto/randomUUID)
