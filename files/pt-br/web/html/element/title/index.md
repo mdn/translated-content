@@ -15,75 +15,57 @@ tags:
   - título
 translation_of: Web/HTML/Element/title
 ---
-<p>O <strong>elemento HTML </strong><code>&lt;title&gt;</code> (<em>Elemento HTML Título</em>) define o título do documento, mostrado na barra de título de um navegador ou na aba da página. Pode conter somente texto e quaisquer marcações contidas no texto não são interpretadas.</p>
+O **elemento HTML** `<title>` (_Elemento HTML Título_) define o título do documento, mostrado na barra de título de um navegador ou na aba da página. Pode conter somente texto e quaisquer marcações contidas no texto não são interpretadas.
 
-<ul>
- <li><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Categorias de conteúdo</a></dfn><a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#Metadata_content">Conteúdo de metadados</a>.</li>
- <li><dfn>Conteúdo permitido</dfn> Texto que não seja whitespace entre elementos.</li>
- <li><dfn>Omissão de marcação</dfn>Todas as marcações são necessárias. Perceba que suprimir <code>&lt;/title&gt;</code> fará o navegador ignorar o resto da página.</li>
- <li><dfn>Elementos pais permitidos</dfn>Um elemento {{ HTMLElement("head") }} que não contenha outro elemento {{ HTMLElement("title") }}.</li>
- <li><dfn>Funções ARIA permitidas</dfn> Nenhuma.</li>
- <li><dfn>Interface DOM</dfn> {{domxref("HTMLTitleElement")}}</li>
-</ul>
+- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_[Conteúdo de metadados](/pt-BR/docs/Web/Guide/HTML/Content_categories#Metadata_content).
+- _Conteúdo permitido_ Texto que não seja whitespace entre elementos.
+- \_Omissão de marcação_Todas as marcações são necessárias. Perceba que suprimir `</title>` fará o navegador ignorar o resto da página.
+- \_Elementos pais permitidos_Um elemento {{ HTMLElement("head") }} que não contenha outro elemento {{ HTMLElement("title") }}.
+- _Funções ARIA permitidas_ Nenhuma.
+- _Interface DOM_ {{domxref("HTMLTitleElement")}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p><span style="line-height: 21px;">Este elemento inclui somente os </span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">atributos globais</a><span style="line-height: 21px;">.</span></p>
+Este elemento inclui somente os [atributos globais](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
 
-<h2 id="Notas_de_uso">Notas de uso</h2>
+## Notas de uso
 
-<p>O elemento <code>&lt;title&gt;</code> é sempre usado dentro da {{HTMLElement("head")}} da página.</p>
+O elemento `<title>` é sempre usado dentro da {{HTMLElement("head")}} da página.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: html">&lt;title&gt;Título incrível&lt;/title&gt;
-</pre>
+```html
+<title>Título incrível</title>
+```
 
-<h2 id="Specifications" name="Specifications">Preocupações de acessibilidade</h2>
+## Preocupações de acessibilidade
 
-<p>É importante informar um valor para o <code>title</code> que descreva o propósito da página.</p>
+É importante informar um valor para o `title` que descreva o propósito da página.
 
-<p>Uma técnica comum de navegação para usuários de tecnologias assistivas é ler o título da página a fim de deduzir o que ela contém. Isso ocorre porque navegar pela página para determinar o conteúdo dela pode ser confuso e consumir muito tempo.</p>
+Uma técnica comum de navegação para usuários de tecnologias assistivas é ler o título da página a fim de deduzir o que ela contém. Isso ocorre porque navegar pela página para determinar o conteúdo dela pode ser confuso e consumir muito tempo.
 
-<h4 id="Exemplo_2">Exemplo</h4>
+#### Exemplo
 
-<pre class="brush: html">&lt;title&gt;Menu - Casa Azul Comida Chinesa - FoodYum: Faça seu pedido online!&lt;/title&gt;</pre>
+```html
+<title>Menu - Casa Azul Comida Chinesa - FoodYum: Faça seu pedido online!</title>
+```
 
-<p>Para ajudar o usuário, atualize o valor do <code>title</code> para refletir mudanças significativas no estado da página (como problemas de validação em formulários).</p>
+Para ajudar o usuário, atualize o valor do `title` para refletir mudanças significativas no estado da página (como problemas de validação em formulários).
 
-<h4 id="Exemplo_3">Exemplo</h4>
+#### Exemplo
 
-<pre>&lt;title&gt;2 erros - Seu pedido - Casa Azul Comida Chinesa - FoodYum: Faça seu pedido online!&lt;/title&gt;</pre>
+```
+<title>2 erros - Seu pedido - Casa Azul Comida Chinesa - FoodYum: Faça seu pedido online!</title>
+```
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-title-element', '&lt;title&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'document-metadata.html#the-title-element', '&lt;title&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/global.html#h-7.4.2', '&lt;title&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                        | Status                           | Comentário |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-title-element', '&lt;title&gt;')}}         | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'document-metadata.html#the-title-element', '&lt;title&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
+| {{SpecName('HTML4.01', 'struct/global.html#h-7.4.2', '&lt;title&gt;')}}                     | {{Spec2('HTML4.01')}}     |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p> {{Compat("html.elements.title")}}</p>
+{{Compat("html.elements.title")}}

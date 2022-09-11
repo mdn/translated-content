@@ -15,73 +15,51 @@ tags:
   - nav
 translation_of: Web/HTML/Element/nav
 ---
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O <em>Elemento </em><em>HTML </em><em>de Navegação</em> (<code>&lt;nav&gt;</code>) representa uma seção de uma página que aponta para outras páginas ou para outras áreas da página, ou seja, uma seção com links de navegação.</p>
+O _Elemento_ _HTML_ _de Navegação_ (`<nav>`) representa uma seção de uma página que aponta para outras páginas ou para outras áreas da página, ou seja, uma seção com links de navegação.
 
-<div class="note">
-<p><em>Notas de utilização:</em></p>
+> **Note:** _Notas de utilização:_
+>
+> - Nem todos os links de um documento devem estar dentro de um elemento `<nav>`, o qual é destinado apenas para grupos importantes de links de navegação; tipicamente o elemento {{ HTMLElement("footer") }} contém uma lista de links que não precisam estar em um elemento {{ HTMLElement("nav") }}.
+> - Um documento pode ter vários elementos {{ HTMLElement("nav") }}, por exemplo, um para navegação no site e outro para navegação dentro da página.
+> - Agentes de usuário, como leitores de tela para usuários deficientes, podem utilizar este elemento para determinar se a renderização inicial do conteúdo do mesmo deve ser omitida.
 
-<ul>
- <li>Nem todos os links de um documento devem estar dentro de um elemento <code>&lt;nav&gt;</code>, o qual é destinado apenas para grupos importantes de links de navegação; tipicamente o elemento {{ HTMLElement("footer") }} contém uma lista de links que não precisam estar em um elemento {{ HTMLElement("nav") }}.</li>
- <li>Um documento pode ter vários elementos {{ HTMLElement("nav") }}, por exemplo, um para navegação no site e outro para navegação dentro da página.</li>
- <li>Agentes de usuário, como leitores de tela para usuários deficientes, podem utilizar este elemento para determinar se a renderização inicial do conteúdo do mesmo deve ser omitida.</li>
-</ul>
-</div>
+## Contexto de uso
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+| Conteúdo permitido       | [Conteúdo de fluxo](/en/HTML/Content_categories#flow_content "en/HTML/Content categories#flow content")                                                  |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omissão de tag           | Nenhuma, tanto a tag de início quanto a de fim são obrigatórias                                                                                          |
+| Elementos-pai permitidos | Quaisquer elementos que permitam conteúdo de fluxo. Note que um elemento `<nav>` não deve descender de um elemento {{ HTMLElement("address") }}. |
+| Documento normativo      | [HTML5, seção 4.4.3](http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-nav-element)                                          |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>Conteúdo permitido</td>
-   <td><a href="/en/HTML/Content_categories#flow_content" title="en/HTML/Content categories#flow content">Conteúdo de fluxo</a></td>
-  </tr>
-  <tr>
-   <td>Omissão de tag</td>
-   <td>Nenhuma, tanto a tag de início quanto a de fim são obrigatórias</td>
-  </tr>
-  <tr>
-   <td>Elementos-pai permitidos</td>
-   <td>Quaisquer elementos que permitam conteúdo de fluxo. Note que um elemento <code>&lt;nav&gt;</code> não deve descender de um elemento {{ HTMLElement("address") }}.</td>
-  </tr>
-  <tr>
-   <td>Documento normativo</td>
-   <td><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-nav-element" rel="external nofollow">HTML5, seção 4.4.3</a></td>
-  </tr>
- </tbody>
-</table>
+## Atributos
 
-<h2 id="Atributos">Atributos</h2>
+Este elemento não possui outros atributos além dos [atributos globais](/en/HTML/Global_attributes), comuns a todos os elementos.
 
-<p>Este elemento não possui outros atributos além dos <a href="/en/HTML/Global_attributes" rel="internal">atributos globais</a>, comuns a todos os elementos.</p>
+## Interface DOM
 
-<h2 class="editable" id="Interface_DOM">Interface DOM</h2>
+Este elemento implementa a interface [`HTMLElement`](/en/DOM/element "en/DOM/element").
 
-<p>Este elemento implementa a interface <code><a href="/en/DOM/element" title="en/DOM/element">HTMLElement</a></code>.</p>
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
+```html
+<nav>
+  <ul>
+    <li><a href="#">Página inicial</a></li>
+    <li><a href="#">Sobre</a></li>
+    <li><a href="#">Contato</a></li>
+  </ul>
+</nav>
+```
 
-<pre class="brush: html">&lt;nav&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href="#"&gt;Página inicial&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#"&gt;Contato&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-</pre>
-
-<h2 id="Compatibilidade">Compatibilidade</h2>
+## Compatibilidade
 
 {{Compat("html.elements.nav")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Outros elementos relacionados à seções: {{ HTMLElement("body") }}, {{ HTMLElement("article") }}, {{ HTMLElement("section") }}, {{ HTMLElement("aside") }}, {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}, {{ HTMLElement("hgroup") }}, {{ HTMLElement("header") }}, {{ HTMLElement("footer") }}, {{ HTMLElement("address") }};</li>
- <li class="last"><a href="/pt-BR/docs/Seções_e_estrutura_HTML5" title="/pt-BR/docs/Seções_e_estrutura_HTML5">Seções e esboços de um documento HTML5</a></li>
-</ul>
+- Outros elementos relacionados à seções: {{ HTMLElement("body") }}, {{ HTMLElement("article") }}, {{ HTMLElement("section") }}, {{ HTMLElement("aside") }}, {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}, {{ HTMLElement("hgroup") }}, {{ HTMLElement("header") }}, {{ HTMLElement("footer") }}, {{ HTMLElement("address") }};
+- [Seções e esboços de um documento HTML5](/pt-BR/docs/Seções_e_estrutura_HTML5)
 
-<div>{{HTMLRef}}</div>
-
-<div>{{languages({ "ja": "ja/HTML/Element/nav" })}}</div>
+{{HTMLRef}}{{languages({ "ja": "ja/HTML/Element/nav" })}}

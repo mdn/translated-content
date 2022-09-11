@@ -11,83 +11,57 @@ tags:
   - Web
 translation_of: Web/HTML/Element/html
 ---
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O elemento <strong>HTML <span style="font-family: Courier New;">&lt;html&gt;</span> </strong>(ou <em>HTML root element</em>) representa a raiz de um HTML ou XHTML documento. Todos os outros elementos devem ser descendentes desse elemento.</p>
+O elemento **HTML \<html> **(ou _HTML root element_) representa a raiz de um HTML ou XHTML documento. Todos os outros elementos devem ser descendentes desse elemento.
 
-<ul>
- <li><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Categorias de conteúdo</a></dfn> Nenhuma.</li>
- <li><dfn>Conteúdo permitido</dfn> Um elemento {{HTMLElement("head")}}, seguido por um elemento {{HTMLElement("body")}}.</li>
- <li><dfn>Omissão de tag</dfn>A tag inicial pode ser omitida se a primeira coisa dentro do elemento <code>&lt;html&gt;</code> não for um comentário.<br>
-  A tag final pode ser omitida se o elemento <code>&lt;html&gt;</code> não for imediatamente seguido por um comentário, e conter um elemento {{HTMLElement("body")}} ou  que não está vazio, ou cuja tag inicial está presente.</li>
- <li><dfn>Elementos pais permitidos</dfn>Como o elemento raiz do documento, ou qualquer fragmento de subdocumento é permitido em um documento composto.</li>
- <li><dfn>DOM interface</dfn> {{domxref("HTMLhtmlElement")}}</li>
-</ul>
+- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ Nenhuma.
+- _Conteúdo permitido_ Um elemento {{HTMLElement("head")}}, seguido por um elemento {{HTMLElement("body")}}.
+- \_Omissão de tag_A tag inicial pode ser omitida se a primeira coisa dentro do elemento `<html>` não for um comentário.
+  A tag final pode ser omitida se o elemento `<html>` não for imediatamente seguido por um comentário, e conter um elemento {{HTMLElement("body")}} ou que não está vazio, ou cuja tag inicial está presente.
+- \_Elementos pais permitidos_Como o elemento raiz do documento, ou qualquer fragmento de subdocumento é permitido em um documento composto.
+- _DOM interface_ {{domxref("HTMLhtmlElement")}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p><span style="line-height: 21px;">Esse elemento inclui os </span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">atributos globais</a><span style="line-height: 21px;">.</span></p>
+Esse elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
 
-<dl>
- <dt>{{htmlattrdef("manifest")}} {{HTMLVersionInline(5)}} {{Gecko_minversion_inline(1.9)}}</dt>
- <dd>Especifica a URI de um recurso manifest indicando os recursos que devem ser carregados na memória local. Veja <a href="/en-US/docs/HTML/Using_the_application_cache" title="Offline_resources_in_Firefox">Recursos offline em Firefox</a> para detalhes.</dd>
- <dt>{{htmlattrdef("version")}} {{deprecatedGeneric('inline','HTML4.01')}} {{obsoleteGeneric('inline','HTML5')}}</dt>
- <dd>Especifica a versão da definição de tipo de documento HTML que governa o documento atual. Esse atributo não é necessário, porque é redundante com a informação de versão na declaração de tipo  de documento.</dd>
-</dl>
+- {{htmlattrdef("manifest")}} {{HTMLVersionInline(5)}} {{Gecko_minversion_inline(1.9)}}
+  - : Especifica a URI de um recurso manifest indicando os recursos que devem ser carregados na memória local. Veja [Recursos offline em Firefox](/pt-BR/docs/HTML/Using_the_application_cache "Offline_resources_in_Firefox") para detalhes.
+- {{htmlattrdef("version")}} {{deprecatedGeneric('inline','HTML4.01')}} {{obsoleteGeneric('inline','HTML5')}}
+  - : Especifica a versão da definição de tipo de documento HTML que governa o documento atual. Esse atributo não é necessário, porque é redundante com a informação de versão na declaração de tipo de documento.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>O DOCTYPE usado no exemplo seguinte indica HTML5.</p>
+O DOCTYPE usado no exemplo seguinte indica HTML5.
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;...&lt;/head&gt;
-  &lt;body&gt;...&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```html
+<!DOCTYPE html>
+<html>
+  <head>...</head>
+  <body>...</body>
+</html>
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>Desde que o elemento <code>&lt;html&gt;</code> seja o primeiro em documento outro que comenta, esse é chamado o elemento raiz. Embora essa tag possa ser implícita, ou não requerida, com <a href="/en-US/docs/HTML" title="HTML">HTML</a>,  essa é requerida para ser aberta e fechada em <a href="/en-US/docs/XHTML" title="XHTML">XHTML</a>.</p>
+Desde que o elemento `<html>` seja o primeiro em documento outro que comenta, esse é chamado o elemento raiz. Embora essa tag possa ser implícita, ou não requerida, com [HTML](/pt-BR/docs/HTML "HTML"), essa é requerida para ser aberta e fechada em [XHTML](/pt-BR/docs/XHTML "XHTML").
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-html-element', '&lt;html&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'the-html-element.html#the-html-element', '&lt;html&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'global.html#h-7.3', '&lt;html&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                    | Status                           | Comentário |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-html-element', '&lt;html&gt;')}}         | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'the-html-element.html#the-html-element', '&lt;html&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
+| {{SpecName('HTML4.01', 'global.html#h-7.3', '&lt;html&gt;')}}                                 | {{Spec2('HTML4.01')}}     |            |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade dos navegadores</h2>
+## Compatibilidade dos navegadores
 
 {{Compat("html.elements.html")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Elemento de alto nível MathML: {{MathMLElement("math")}}</li>
- <li>Elemento de alto nível SVG: {{SVGElement("svg")}}</li>
-</ul>
+- Elemento de alto nível MathML: {{MathMLElement("math")}}
+- Elemento de alto nível SVG: {{SVGElement("svg")}}
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

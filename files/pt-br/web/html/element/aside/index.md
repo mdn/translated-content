@@ -12,70 +12,46 @@ tags:
   - Web
 translation_of: Web/HTML/Element/aside
 ---
-<h2 id="Sumario">Sumario</h2>
+## Sumario
 
-<p>O elemento <em>HTML <code>&lt;aside&gt;</code> </em>representa uma seção de uma página que consiste de conteúdo que é tangencialmente relacionado ao conteúdo do seu entorno, que poderia ser considerado separado do conteúdo. Essas seções são, muitas vezes, representadas como barras laterais. Elas muitas vezes contem explicações laterais, como a definição de um glossário; conteúdo vagamente relacionado, como avisos; a biografia do autor; ou, em aplicações web, informações de perfil ou links de blogs relacionados.</p>
+O elemento \_HTML `<aside>` \_representa uma seção de uma página que consiste de conteúdo que é tangencialmente relacionado ao conteúdo do seu entorno, que poderia ser considerado separado do conteúdo. Essas seções são, muitas vezes, representadas como barras laterais. Elas muitas vezes contem explicações laterais, como a definição de um glossário; conteúdo vagamente relacionado, como avisos; a biografia do autor; ou, em aplicações web, informações de perfil ou links de blogs relacionados.
 
-<div class="note">
-<p><em>Notas de uso:</em></p>
+> **Note:** _Notas de uso:_
+>
+> - **Não use** o elemento `<aside>` para texto entre parenteses, pois este tipo de texto é considerado parte do fluxo principal.
 
-<ul>
- <li><strong>Não use</strong> o elemento <code>&lt;aside&gt;</code> para texto entre parenteses, pois este tipo de texto é considerado parte do fluxo principal.</li>
-</ul>
-</div>
+- _[Categoria de conteudo](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ [Conteudo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), conteudo de secionamento, conteudo palpavel.
+- _Conteudo permitido_[Conteudo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content").
+- _Omissao de tag_ Nenhuma, ambas as tags de início e fim são obrigatórias.
+- \_Elementos pai permitidos_Qualquer elemento que aceita [conteudo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content_categories#Flow_content"). Note que um elemento `<aside>` nao deve ser descendente de um elemento {{HTMLElement("address")}}.
+- _Interface DOM_ {{domxref("HTMLElement")}}
 
-<ul>
- <li><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Categoria de conteudo</a></dfn> <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">Conteudo de fluxo</a>, conteudo de secionamento, conteudo palpavel.</li>
- <li><dfn>Conteudo permitido</dfn><a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">Conteudo de fluxo</a>.</li>
- <li><dfn>Omissao de tag</dfn> Nenhuma, ambas as tags de início e fim são obrigatórias.</li>
- <li><dfn>Elementos pai permitidos</dfn>Qualquer elemento que aceita <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content_categories#Flow_content">conteudo de fluxo</a>. Note que um elemento <code>&lt;aside&gt;</code> nao deve ser descendente de um elemento {{HTMLElement("address")}}.</li>
- <li><dfn>Interface DOM</dfn> {{domxref("HTMLElement")}}</li>
-</ul>
+## Atributos
 
-<h2 id="Atributos">Atributos</h2>
+Este elemento inclui apenas os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-<p><span style="line-height: 21px;">Este elemento inclui apenas os <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" title="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">atributos globais</a></span><span style="line-height: 21px;">.</span></p>
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
+```html
+<aside>
+  <p>Algum conteudo relacionado a um &lt;article&gt;</p>
+</aside>
+```
 
-<pre class="brush: html">&lt;aside&gt;
-  &lt;p&gt;Algum conteudo relacionado a um &amp;lt;article&amp;gt;&lt;/p&gt;
-&lt;/aside&gt;
-</pre>
+## Especificações
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+| Especificaçao                                                                                                                                     | Status                           | Comentario |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'sections.html#the-aside-element', '&lt;aside&gt;')}}                                          | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'the-aside-element.html#the-aside-element', '&lt;aside&gt;')}} {{todo("brokenLink")}} | {{Spec2('HTML5 W3C')}}     |            |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificaçao</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'sections.html#the-aside-element', '&lt;aside&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'the-aside-element.html#the-aside-element', '&lt;aside&gt;')}} {{todo("brokenLink")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("html.elements.aside")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Outros elementos de seçao relacionados: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};</li>
- <li><a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document" title="Sections and Outlines of an HTML5 document">Seçoes e outlines de um documento HTML5</a>.</li>
-</ul>
+- Outros elementos de seçao relacionados: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
+- [Seçoes e outlines de um documento HTML5](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document").
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

@@ -3,121 +3,119 @@ title: <link>
 slug: Web/HTML/Element/link
 translation_of: Web/HTML/Element/link
 ---
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>O <strong>Elemento HTML <em>&lt;link&gt;</em></strong> especifica as relações entre o documento atual e um recurso externo. Possíveis usos para este elemento incluem a definição de uma estrutura relacional para navegação. Este elemento é mais usado para vincular as folhas de estilo.</p>
+O **Elemento HTML _\<link>_** especifica as relações entre o documento atual e um recurso externo. Possíveis usos para este elemento incluem a definição de uma estrutura relacional para navegação. Este elemento é mais usado para vincular as folhas de estilo.
 
-<ul>
- <li><dfn><a href="/en-US/docs/Web/HTML/Content_categories">Categorias de conteúdo</a></dfn> Metadata content. If {{htmlattrxref("itemprop", "link")}} is present: <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a><a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"> phrasing content</a></li>
- <li><dfn>Conteúdo permitido</dfn> None, it is an {{Glossary("empty element")}}.</li>
- <li><dfn>Omissão de tag</dfn> As it is a void element, the <span title="syntax-start-tag">start tag</span> must be present and the <span title="syntax-end-tag">end tag</span> must not be present</li>
- <li><dfn>Elementos pai permitidos</dfn> Any element that accepts metadata elements. If {{htmlattrxref("itemprop", "link")}} is present: any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</li>
- <li><dfn>Interface de DOM</dfn> {{domxref("HTMLLinkElement")}}</li>
-</ul>
+- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ Metadata content. If {{htmlattrxref("itemprop", "link")}} is present: [flow content](/pt-BR/docs/Web/HTML/Content_categories#Flow_content)[ phrasing content](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content)
+- _Conteúdo permitido_ None, it is an {{Glossary("empty element")}}.
+- _Omissão de tag_ As it is a void element, the start tag must be present and the end tag must not be present
+- _Elementos pai permitidos_ Any element that accepts metadata elements. If {{htmlattrxref("itemprop", "link")}} is present: any element that accepts [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content).
+- _Interface de DOM_ {{domxref("HTMLLinkElement")}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Este elemento inclui os <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a>.</p>
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("as")}}</dt>
- <dd>Esse atributo é usado apenas quando <code>rel="preload"</code> foi enviado no elemento <code>&lt;link&gt;</code>. Especifica o tipo de conteúdo carregado pelo <code>&lt;link&gt;</code>,  que é necessário para a priorização do conteúdo, solicitação de correspondência, aplicação de <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">política de segurança de conteúdo</a> correta, e configuração do cabeçalho de pedido {{httpheader("Accept")}} correta.</dd>
-</dl>
+- {{htmlattrdef("as")}}
+  - : Esse atributo é usado apenas quando `rel="preload"` foi enviado no elemento `<link>`. Especifica o tipo de conteúdo carregado pelo `<link>`, que é necessário para a priorização do conteúdo, solicitação de correspondência, aplicação de [política de segurança de conteúdo](/pt-BR/docs/Web/HTTP/CSP) correta, e configuração do cabeçalho de pedido {{httpheader("Accept")}} correta.
 
-<dl>
- <dt>{{htmlattrdef("charset")}}{{obsolete_inline}}</dt>
- <dd>Este atributo define a codificação de caracteres do recurso vinculado. O valor é umespaço e/ou lista delimitada por vírgulas de conjuntos de caracteres, conformedefinido na RFC 2045. O valor padrão é ISO-8859-1.
- <div class="note"><strong>Nota:</strong> Este atributo é obsoleto em HTML5 e <strong>não deve ser usada por autores</strong>. Para atingir seu efeito, use o cabeçalho HTTP <span style="font-family: courier new;">Content-Type</span> sobre o recurso vinculado.</div>
- </dd>
- <dt>{{htmlattrdef("crossorigin")}} {{HTMLVersionInline(5)}}</dt>
- <dd>Este atributo enumerado indica se a busca da imagem relacionada deve ser feita usando CORS ou não. I-magens de CORS habilitado podem ser reutilizadas no elemento {{HTMLElement("canvas")}} sem ser conta-minado. Os valores permitidos são:
- <dl>
-  <dt>"anonymous"</dt>
-  <dd>A cross-origin request (i.e. with <code>Origin:</code> HTTP header) is performed. But no credential is sent (i.e. no cookie, no X.509 certificate and no HTTP Basic authentication is sent). If the server does not give credentials to the origin site (by not setting the <code>Access-Control-Allow-Origin:</code> HTTP header), the image will be <em>tainted</em> and its usage restricted.</dd>
-  <dt>use-credentials</dt>
-  <dd>A cross-origin request (i.e. with <code>Origin:</code> HTTP header) is performed with credential is sent (i.e. a cookie, a certificate and HTTP Basic authentication is performed). If the server does not give credentials to the origin site (through <code>Access-Control-Allow-Credentials:</code> HTTP header), the image will be <em>tainted</em> and its usage restricted.</dd>
- </dl>
- When not present, the resource is fetched without a CORS request (i.e. without sending the <code>Origin:</code> HTTP header), preventing its non-tainted used in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword <strong>anonymous</strong> was used. See <a href="/en-US/docs/Web/HTML/CORS_settings_attributes">CORS settings attributes</a> for additional information.</dd>
- <dt>{{htmlattrdef("disabled")}} {{Non-standard_inline}}</dt>
- <dd>Este atributo é usado para desativa uma relação com o link. Em conjunto com o script, esse atributo poderia ser usado para ligar e desligar várias relações com stylesheets.
- <div class="note">
- <p><strong>Nota: </strong>Embora, não haja nenhum atributo desativado no padrão HTML, há um atributo desabilitado no <code>HTMLLinkElement</code> DOM object.</p>
+<!---->
 
- <p>The use of <code>disabled</code> as an HTML attribute is non-standard and only used by some browsers (<a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=27677">W3 #27677</a>). <strong style="font-weight: bold;">Do not use it</strong>. To achieve a similar effect, use one of the following techniques:</p>
+- {{htmlattrdef("charset")}}{{obsolete_inline}}
 
- <ul>
-  <li>If the <code>disabled</code> attribute has been added directly to the element on the page, do not include the {{HTMLElement("link")}} element instead;</li>
-  <li>Set the <code>disabled</code> <strong>property</strong> of the <code>StyleSheet</code> DOM object via scripting.</li>
- </ul>
- </div>
- </dd>
- <dt>{{htmlattrdef("href")}}</dt>
- <dd>Esse atributo especifica a <a href="/en-US/docs/URIs_and_URLs">URL</a> do recurso vinculado. Uma URL pode ser absolute or relative.</dd>
- <dt>{{htmlattrdef("hreflang")}}</dt>
- <dd>Esse atributo indica o idioma do recurso vinculado. É meramente consultivo. Os valores permitidos são determindaos por <a href="http://www.ietf.org/rfc/bcp/bcp47.txt">BCP47</a> para HTML5 e por <a href="http://www.ietf.org/rfc/rfc1766.txt">RFC1766</a> para HTML 4. Use esse atributo se apenas os atributos {{htmlattrxref("href", "a")}} estiverem presentes.</dd>
- <dt>{{htmlattrdef("media")}}</dt>
- <dd>This attribute specifies the media which the linked resource applies to. Its value must be a <a href="/en-US/docs/CSS/Media_queries">media query</a>. This attribute is mainly useful when linking to external stylesheets by allowing the user agent to pick the best adapted one for the device it runs on.
- <div class="note"><strong>Usage note: </strong>
- <ul>
-  <li>In HTML 4, this can only be a simple white-space-separated list of media description literals, i.e., <a href="/en-US/docs/CSS/@media">media types and groups</a>, where defined and allowed as values for this attribute, such as <code>print</code>, <code>screen</code>, <code>aural</code>, <code>braille</code>. HTML5 extended this to any kind of <a href="/en-US/docs/CSS/Media_queries">media queries</a>, which are a superset of the allowed values of HTML 4.</li>
-  <li>Browsers not supporting the <a href="/en-US/docs/CSS/Media_queries">CSS3 Media Queries</a> won't necessarily recognize the adequate link; do not forget to set fallback links, the restricted set of media queries defined in HTML 4.</li>
- </ul>
- </div>
- </dd>
- <dt>{{htmlattrdef("methods")}} {{Non-standard_inline}}</dt>
- <dd>The value of this attribute provides information about the functions that might be performed on an object. The values generally are given by the HTTP protocol when it is used, but it might (for similar reasons as for the <strong>title</strong> attribute) be useful to include advisory information in advance in the link. For example, the browser might choose a different rendering of a link as a function of the methods specified; something that is searchable might get a different icon, or an outside link might render with an indication of leaving the current site. This attribute is not well understood nor supported, even by the defining browser, Internet Explorer 4. See <a href="http://msdn.microsoft.com/en-us/library/ms534168%28VS.85%29.aspx" rel="external nofollow">Methods Property (MSDN)</a>.</dd>
- <dt>{{htmlattrdef("rel")}}</dt>
- <dd>This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of the <a href="/en-US/docs/Web/HTML/Link_types">link types values</a>. The most common use of this attribute is to specify a link to an external style sheet: the <strong>rel</strong> attribute is set to <code>stylesheet</code>, and the <strong>href</strong> attribute is set to the URL of an external style sheet to format the page. WebTV also supports the use of the value <code>next</code> for <strong>rel</strong> to preload the next page in a document series.</dd>
- <dt>{{htmlattrdef("rev")}}{{obsolete_inline}}</dt>
- <dd>The value of this attribute shows the relationship of the current document to the linked document, as defined by the {{htmlattrxref("href", "link")}} attribute. The attribute thus defines the reverse relationship compared to the value of the <strong>rel</strong> attribute. <a href="/en-US/docs/Web/HTML/Link_types">Link types values</a> for the attribute are similar to the possible values for {{htmlattrxref("rel", "link")}}.
- <div class="note"><strong>Usage note: </strong>This attribute is obsolete in HTML5. <strong>Do not use it</strong>. To achieve its effect, use the {{htmlattrxref("rel", "link")}} attribute with the opposite <a href="/en-US/docs/Web/HTML/Link_types">link types values</a>, e.g. <span style="font-family: courier new;">made</span> should be replaced by <span style="font-family: courier new;">author</span>. Also this attribute doesn't mean <em>revision</em> and must not be used with a version number, which is unfortunately the case on numerous sites.</div>
- </dd>
- <dt>{{htmlattrdef("sizes")}} {{HTMLVersionInline(5)}}</dt>
- <dd>This attribute defines the sizes of the icons for visual media contained in the resource. It must be present only if the {{htmlattrxref("rel","link")}} contains the <span style="font-family: courier new;">icon</span> <a href="/en-US/docs/Web/HTML/Link_types">link types value</a>. It may have the following values:
- <ul>
-  <li><code>any</code>, meaning that the icon can be scaled to any size as it is in a vectorial format, like <code>image/svg+xml</code>.</li>
-  <li>a white-space separated list of sizes, each in the format <span style="font-family: courier new;"><em>&lt;width in pixels&gt;</em>x<em>&lt;height in pixels&gt;</em></span> or <span style="font-family: courier new;"><em>&lt;width in pixels&gt;</em>X<em>&lt;height in pixels&gt;</em></span>. Each of these sizes must be contained in the resource.</li>
- </ul>
+  - : Este atributo define a codificação de caracteres do recurso vinculado. O valor é umespaço e/ou lista delimitada por vírgulas de conjuntos de caracteres, conformedefinido na RFC 2045. O valor padrão é ISO-8859-1.
 
- <div class="note"><strong>Usage note: </strong>
+    > **Note:** **Nota:** Este atributo é obsoleto em HTML5 e **não deve ser usada por autores**. Para atingir seu efeito, use o cabeçalho HTTP Content-Type sobre o recurso vinculado.
 
- <ul>
-  <li>Most icon format are only able to store one single icon; therefore most of the time the {{htmlattrxref("sizes")}} contains only one entry. Among the major browsers, only the Apple's ICNS format allows the storage of multiple icons, and this format is only supported in WebKit.</li>
-  <li>Apple's iOS does not support this attribute, hence Apple's iPhone and iPad use special, non-standard <a href="/en-US/docs/Web/HTML/Link_types">link types values</a> to define icon to be used as Web Clip or start-up placeholder: <span style="font-family: courier new;">apple-touch-icon</span> and <span style="font-family: courier new;">apple-touch-startup-icon</span>.</li>
- </ul>
- </div>
- </dd>
- <dt>{{htmlattrdef("target")}}{{Non-standard_inline}}</dt>
- <dd>Defines the frame or window name that has the defined linking relationship or that will show the rendering of any linked resource.</dd>
- <dt>{{htmlattrdef("type")}}</dt>
- <dd>This attribute is used to define the type of the content linked to. The value of the attribute should be a MIME type such as <strong>text/html</strong>, <strong>text/css</strong>, and so on. The common use of this attribute is to define the type of style sheet linked and the most common current value is <strong>text/css</strong>, which indicates a Cascading Style Sheet format.</dd>
-</dl>
+- {{htmlattrdef("crossorigin")}} {{HTMLVersionInline(5)}}
 
-<h2 id="Exemplos">Exemplos</h2>
+  - : Este atributo enumerado indica se a busca da imagem relacionada deve ser feita usando CORS ou não. I-magens de CORS habilitado podem ser reutilizadas no elemento {{HTMLElement("canvas")}} sem ser conta-minado. Os valores permitidos são:
 
-<h3 id="Incluindo_um_stylesheet">Incluindo um stylesheet</h3>
+    - "anonymous"
+      - : A cross-origin request (i.e. with `Origin:` HTTP header) is performed. But no credential is sent (i.e. no cookie, no X.509 certificate and no HTTP Basic authentication is sent). If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the image will be _tainted_ and its usage restricted.
+    - use-credentials
+      - : A cross-origin request (i.e. with `Origin:` HTTP header) is performed with credential is sent (i.e. a cookie, a certificate and HTTP Basic authentication is performed). If the server does not give credentials to the origin site (through `Access-Control-Allow-Credentials:` HTTP header), the image will be _tainted_ and its usage restricted.
 
-<p>Para incluir um stylesheet em uma página, use a seguinte syntax:</p>
+    When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted used in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword **anonymous** was used. See [CORS settings attributes](/pt-BR/docs/Web/HTML/CORS_settings_attributes) for additional information.
 
-<pre class="brush: html">&lt;link href="style.css" rel="stylesheet"&gt;
-</pre>
+- {{htmlattrdef("disabled")}} {{Non-standard_inline}}
 
-<h3 id="Fornecimento_de_stylesheets_alternativas">Fornecimento de stylesheets alternativas</h3>
+  - : Este atributo é usado para desativa uma relação com o link. Em conjunto com o script, esse atributo poderia ser usado para ligar e desligar várias relações com stylesheets.
 
-<p>Você também pode especificar <a href="/en-US/docs/Web/CSS/Alternative_style_sheets">stylesheet alternativas</a>.</p>
+    > **Note:** **Nota:** Embora, não haja nenhum atributo desativado no padrão HTML, há um atributo desabilitado no `HTMLLinkElement` DOM object.
+    >
+    > The use of `disabled` as an HTML attribute is non-standard and only used by some browsers ([W3 #27677](https://www.w3.org/Bugs/Public/show_bug.cgi?id=27677)). **Do not use it**. To achieve a similar effect, use one of the following techniques:
+    >
+    > - If the `disabled` attribute has been added directly to the element on the page, do not include the {{HTMLElement("link")}} element instead;
+    > - Set the `disabled` **property** of the `StyleSheet` DOM object via scripting.
 
-<p>O usuário pode escolher qual stylesheet usar, escolhendo no View&gt;Page Style menu. Isso fornece uma maneira para os usuários verem várias versões de uma página.</p>
+- {{htmlattrdef("href")}}
+  - : Esse atributo especifica a [URL](/pt-BR/docs/URIs_and_URLs) do recurso vinculado. Uma URL pode ser absolute or relative.
+- {{htmlattrdef("hreflang")}}
+  - : Esse atributo indica o idioma do recurso vinculado. É meramente consultivo. Os valores permitidos são determindaos por [BCP47](http://www.ietf.org/rfc/bcp/bcp47.txt) para HTML5 e por [RFC1766](http://www.ietf.org/rfc/rfc1766.txt) para HTML 4. Use esse atributo se apenas os atributos {{htmlattrxref("href", "a")}} estiverem presentes.
+- {{htmlattrdef("media")}}
 
-<pre class="brush: html">&lt;link href="default.css" rel="stylesheet" title="Default Style"&gt;
-&lt;link href="fancy.css" rel="alternate stylesheet" title="Fancy"&gt;
-&lt;link href="basic.css" rel="alternate stylesheet" title="Basic"&gt;
-</pre>
+  - : This attribute specifies the media which the linked resource applies to. Its value must be a [media query](/pt-BR/docs/CSS/Media_queries). This attribute is mainly useful when linking to external stylesheets by allowing the user agent to pick the best adapted one for the device it runs on.
 
-<h3 id="Stylesheet_eventos_carregados">Stylesheet eventos carregados</h3>
+    > **Note:** **Usage note:**- In HTML 4, this can only be a simple white-space-separated list of media description literals, i.e., [media types and groups](/pt-BR/docs/CSS/@media), where defined and allowed as values for this attribute, such as `print`, `screen`, `aural`, `braille`. HTML5 extended this to any kind of [media queries](/pt-BR/docs/CSS/Media_queries), which are a superset of the allowed values of HTML 4.
+    >
+    > - Browsers not supporting the [CSS3 Media Queries](/pt-BR/docs/CSS/Media_queries) won't necessarily recognize the adequate link; do not forget to set fallback links, the restricted set of media queries defined in HTML 4.
 
-<p>Você pode determinar quando um stylesheet foi carregado observando um <code>load</code> event em ação; Da mesma forma, você pode detectar se ocorreu algum erro ao processar uma stylesheet, observando um <code>error</code> event:</p>
+- {{htmlattrdef("methods")}} {{Non-standard_inline}}
+  - : The value of this attribute provides information about the functions that might be performed on an object. The values generally are given by the HTTP protocol when it is used, but it might (for similar reasons as for the **title** attribute) be useful to include advisory information in advance in the link. For example, the browser might choose a different rendering of a link as a function of the methods specified; something that is searchable might get a different icon, or an outside link might render with an indication of leaving the current site. This attribute is not well understood nor supported, even by the defining browser, Internet Explorer 4. See [Methods Property (MSDN)](http://msdn.microsoft.com/en-us/library/ms534168%28VS.85%29.aspx).
+- {{htmlattrdef("rel")}}
+  - : This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of the [link types values](/pt-BR/docs/Web/HTML/Link_types). The most common use of this attribute is to specify a link to an external style sheet: the **rel** attribute is set to `stylesheet`, and the **href** attribute is set to the URL of an external style sheet to format the page. WebTV also supports the use of the value `next` for **rel** to preload the next page in a document series.
+- {{htmlattrdef("rev")}}{{obsolete_inline}}
 
-<pre class="brush: html">&lt;script&gt;
+  - : The value of this attribute shows the relationship of the current document to the linked document, as defined by the {{htmlattrxref("href", "link")}} attribute. The attribute thus defines the reverse relationship compared to the value of the **rel** attribute. [Link types values](/pt-BR/docs/Web/HTML/Link_types) for the attribute are similar to the possible values for {{htmlattrxref("rel", "link")}}.
+
+    > **Note:** **Usage note:** This attribute is obsolete in HTML5. **Do not use it**. To achieve its effect, use the {{htmlattrxref("rel", "link")}} attribute with the opposite [link types values](/pt-BR/docs/Web/HTML/Link_types), e.g. made should be replaced by author. Also this attribute doesn't mean _revision_ and must not be used with a version number, which is unfortunately the case on numerous sites.
+
+- {{htmlattrdef("sizes")}} {{HTMLVersionInline(5)}}
+
+  - : This attribute defines the sizes of the icons for visual media contained in the resource. It must be present only if the {{htmlattrxref("rel","link")}} contains the icon [link types value](/pt-BR/docs/Web/HTML/Link_types). It may have the following values:
+
+    - `any`, meaning that the icon can be scaled to any size as it is in a vectorial format, like `image/svg+xml`.
+    - a white-space separated list of sizes, each in the format _\<width in pixels>\_x_\<height in pixels>_ or _\<width in pixels>_X_\<height in pixels>\_. Each of these sizes must be contained in the resource.
+
+    > **Note:** **Usage note:**- Most icon format are only able to store one single icon; therefore most of the time the {{htmlattrxref("sizes")}} contains only one entry. Among the major browsers, only the Apple's ICNS format allows the storage of multiple icons, and this format is only supported in WebKit.
+    >
+    > - Apple's iOS does not support this attribute, hence Apple's iPhone and iPad use special, non-standard [link types values](/pt-BR/docs/Web/HTML/Link_types) to define icon to be used as Web Clip or start-up placeholder: apple-touch-icon and apple-touch-startup-icon.
+
+- {{htmlattrdef("target")}}{{Non-standard_inline}}
+  - : Defines the frame or window name that has the defined linking relationship or that will show the rendering of any linked resource.
+- {{htmlattrdef("type")}}
+  - : This attribute is used to define the type of the content linked to. The value of the attribute should be a MIME type such as **text/html**, **text/css**, and so on. The common use of this attribute is to define the type of style sheet linked and the most common current value is **text/css**, which indicates a Cascading Style Sheet format.
+
+## Exemplos
+
+### Incluindo um stylesheet
+
+Para incluir um stylesheet em uma página, use a seguinte syntax:
+
+```html
+<link href="style.css" rel="stylesheet">
+```
+
+### Fornecimento de stylesheets alternativas
+
+Você também pode especificar [stylesheet alternativas](/pt-BR/docs/Web/CSS/Alternative_style_sheets).
+
+O usuário pode escolher qual stylesheet usar, escolhendo no View>Page Style menu. Isso fornece uma maneira para os usuários verem várias versões de uma página.
+
+```html
+<link href="default.css" rel="stylesheet" title="Default Style">
+<link href="fancy.css" rel="alternate stylesheet" title="Fancy">
+<link href="basic.css" rel="alternate stylesheet" title="Basic">
+```
+
+### Stylesheet eventos carregados
+
+Você pode determinar quando um stylesheet foi carregado observando um `load` event em ação; Da mesma forma, você pode detectar se ocorreu algum erro ao processar uma stylesheet, observando um `error` event:
+
+```html
+<script>
 function sheetLoaded() {
   // Do something interesting; the sheet has been loaded
 }
@@ -125,60 +123,35 @@ function sheetLoaded() {
 function sheetError() {
   alert("An error occurred loading the stylesheet!");
 }
-&lt;/script&gt;
+</script>
 
-&lt;link rel="stylesheet" href="mystylesheet.css" onload="sheetLoaded()" onerror="sheetError()"&gt;
-</pre>
+<link rel="stylesheet" href="mystylesheet.css" onload="sheetLoaded()" onerror="sheetError()">
+```
 
-<div class="note"><strong>Nota:</strong> O <code>load</code> event é carregado quando a stylesheet e quando todo o conteúdo importado foi carregado e analisado, e imediatamente antes que styles comecem a ser aplicados ao conteúdo.</div>
+> **Note:** **Nota:** O `load` event é carregado quando a stylesheet e quando todo o conteúdo importado foi carregado e analisado, e imediatamente antes que styles comecem a ser aplicados ao conteúdo.
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<ul>
- <li>Uma tag <code>&lt;link&gt;</code> pode ocorrer apenas no elemento head; No entanto, pode haver várias ocorrências de <code>&lt;link&gt;</code>.</li>
- <li>HTML 3.2 define apenas os atributos <strong>href</strong>, <strong>rel</strong>, <strong>rev</strong>, e <strong>title</strong> para o elemento link.</li>
- <li>HTML 2 define os atributos <strong>href</strong>, <strong>methods</strong>, <strong>rel</strong>, <strong>rev</strong>, <strong>title</strong>, e <strong>urn</strong> para o elemento <code>&lt;link&gt;</code>. O <strong>methods</strong> e <strong>urn</strong> foram atributos posteriormente removidos das especificações.</li>
- <li>As especificações HTML e XHTML definem manipulações de eventos para o elemento <code>&lt;link&gt;</code>, mas não está claro como eles seriam usados.</li>
- <li>Sob XHTML 1.0, elementos vazios como <code>&lt;link&gt;</code> requerem uma barra diagonal: <code>&lt;link /&gt;</code>.</li>
-</ul>
+- Uma tag `<link>` pode ocorrer apenas no elemento head; No entanto, pode haver várias ocorrências de `<link>`.
+- HTML 3.2 define apenas os atributos **href**, **rel**, **rev**, e **title** para o elemento link.
+- HTML 2 define os atributos **href**, **methods**, **rel**, **rev**, **title**, e **urn** para o elemento `<link>`. O **methods** e **urn** foram atributos posteriormente removidos das especificações.
+- As especificações HTML e XHTML definem manipulações de eventos para o elemento `<link>`, mas não está claro como eles seriam usados.
+- Sob XHTML 1.0, elementos vazios como `<link>` requerem uma barra diagonal: `<link />`.
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-link-element', '&lt;link&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'document-metadata.html#the-link-element', '&lt;link&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/links.html#h-12.3', '&lt;link&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                           | Comment |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-link-element', '&lt;link&gt;')}}         | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML5 W3C', 'document-metadata.html#the-link-element', '&lt;link&gt;')}} | {{Spec2('HTML5 W3C')}}     |         |
+| {{SpecName('HTML4.01', 'struct/links.html#h-12.3', '&lt;link&gt;')}}                     | {{Spec2('HTML4.01')}}     |         |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("html.elements.link")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="http://pieisgood.org/test/script-link-events/">Ryan Grove's &lt;script&gt; and &lt;link&gt; node event compatibility chart</a></li>
-</ul>
+- [Ryan Grove's \<script> and \<link> node event compatibility chart](http://pieisgood.org/test/script-link-events/)
 
-<p id=".7B.7BHTMLRef.7D.7D">{{HTMLRef}}</p>
+{{HTMLRef}}

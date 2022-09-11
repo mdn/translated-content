@@ -10,90 +10,51 @@ tags:
   - Web
 translation_of: Web/HTML/Element/span
 ---
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>O elemento <strong>HTML <code>&lt;span&gt;</code> é um conteiner generico em linha para conteúdo fraseado </strong>, que não representa nada por natureza. Ele pode ser usado para agrupar elementos para fins de estilo (usando os atributos <code>class</code> ou <code>id</code> ), ou para compartilhar valores de atributos como <code>lang</code>. Ele deve ser usado somente quando nenhum outro elemento semântico for apropriado. <code>&lt;span&gt;</code> é muito parecido com o elemento {{HTMLElement("div")}} , entretando  {{HTMLElement("div")}} é um elemento de nível de bloco enquanto <code>&lt;span&gt;</code> é um elemento em linha.</p>
+O elemento **HTML `<span>` é um conteiner generico em linha para conteúdo fraseado** , que não representa nada por natureza. Ele pode ser usado para agrupar elementos para fins de estilo (usando os atributos `class` ou `id` ), ou para compartilhar valores de atributos como `lang`. Ele deve ser usado somente quando nenhum outro elemento semântico for apropriado. `<span>` é muito parecido com o elemento {{HTMLElement("div")}} , entretando {{HTMLElement("div")}} é um elemento de nível de bloco enquanto `<span>` é um elemento em linha.
 
-<h2 id="Usage_context" name="Usage_context">Contexto de Uso</h2>
+## Contexto de Uso
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>Categorias de conteúdo</td>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">Flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content categories#Phrasing content">phrasing content</a></td>
-  </tr>
-  <tr>
-   <td>Conteúdo permitido</td>
-   <td><a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content categories#Phrasing content">Phrasing content</a></td>
-  </tr>
-  <tr>
-   <td>Omissão de Tag </td>
-   <td>Nenhum, deve ter tanto tag de início quanto tag final.</td>
-  </tr>
-  <tr>
-   <td>Elementos pai permitidos</td>
-   <td>Qualquer elemento que aceite <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, ou <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Flow_content">flow content</a>.</td>
-  </tr>
-  <tr>
-   <td>Padrões de documento</td>
-   <td><a class="external" href="http://www.w3.org/TR/html5/text-level-semantics.html#the-span-element" title='http://www.w3.org/TR/html5/text-level-semantics.html#the-span-element"'>HTML5, section 4.6.24</a>; <a class="external" href="http://www.w3.org/TR/html401/struct/global.html#edef-SPAN">HTML 4.01, section 7.5.4</a></td>
-  </tr>
- </tbody>
-</table>
+| Categorias de conteúdo   | [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content categories#Phrasing content")                                                                                                                    |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Conteúdo permitido       | [Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content categories#Phrasing content")                                                                                                                                                                                                                             |
+| Omissão de Tag           | Nenhum, deve ter tanto tag de início quanto tag final.                                                                                                                                                                                                                                                                                          |
+| Elementos pai permitidos | Qualquer elemento que aceite [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Phrasing_content"), ou [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Flow_content"). |
+| Padrões de documento     | [HTML5, section 4.6.24](http://www.w3.org/TR/html5/text-level-semantics.html#the-span-element 'http://www.w3.org/TR/html5/text-level-semantics.html#the-span-element"'); [HTML 4.01, section 7.5.4](http://www.w3.org/TR/html401/struct/global.html#edef-SPAN)                                                                                  |
 
-<h2 id="Attributes" name="Attributes">Atributos</h2>
+## Atributos
 
-<p><span style="line-height: 21px;">Esse elemento inclui apenas os </span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">a</a><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" title="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">tributos globais</a><span style="line-height: 21px;">.</span></p>
+Esse elemento inclui apenas os [a](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes")[tributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-<h2 id="DOM_interface" name="DOM_interface">DOM interface</h2>
+## DOM interface
 
-<p>Este elemento implementa a interface <code><a href="/en-US/docs/HTMLSpanElement" title="HTMLSpanElement">HTMLSpanElement</a></code>.</p>
+Este elemento implementa a interface [`HTMLSpanElement`](/en-US/docs/HTMLSpanElement "HTMLSpanElement").
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<pre class="brush:html">&lt;p&gt;&lt;span&gt;Some text&lt;/span&gt;&lt;/p&gt;</pre>
-
-<h3 id="Result" name="Result">Resultado</h3>
-
+```html
 <p><span>Some text</span></p>
+```
 
-<h2 id="Especificações">Especificações</h2>
+### Resultado
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-span-element', '&lt;span&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'text-level-semantics.html#the-span-element', '&lt;span&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>A interface com o DOM agora é {{domxref("HTMLSpanElement")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/global.html#edef-SPAN', '&lt;span&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+Some text
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Especificações
+
+| Specification                                                                                                        | Status                           | Comment                                                                 |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-span-element', '&lt;span&gt;')}}             | {{Spec2('HTML WHATWG')}} |                                                                         |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-span-element', '&lt;span&gt;')}} | {{Spec2('HTML5 W3C')}}     | A interface com o DOM agora é {{domxref("HTMLSpanElement")}}. |
+| {{SpecName('HTML4.01', 'struct/global.html#edef-SPAN', '&lt;span&gt;')}}                     | {{Spec2('HTML4.01')}}     |                                                                         |
+
+## Compatibilidade com navegadores
 
 {{Compat("html.elements.span")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Elemento HTML {{HTMLElement("div")}}</li>
-</ul>
+- Elemento HTML {{HTMLElement("div")}}
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

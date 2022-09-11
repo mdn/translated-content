@@ -9,34 +9,35 @@ tags:
 translation_of: Web/HTML/CORS_enabled_image
 original_slug: Web/HTML/CORS_imagens_habilitadas
 ---
-<p><span class="seoSummary">The HTML specification introduces a {{ htmlattrxref("crossorigin", "img") }} attribute for images that, in combination with an appropriate {{Glossary("CORS")}} header, allows images defined by the {{ HTMLElement("img") }} element that are loaded from foreign origins to be used in canvas as if they were being loaded from the current origin.</span></p>
+The HTML specification introduces a {{ htmlattrxref("crossorigin", "img") }} attribute for images that, in combination with an appropriate {{Glossary("CORS")}} header, allows images defined by the {{ HTMLElement("img") }} element that are loaded from foreign origins to be used in canvas as if they were being loaded from the current origin.
 
-<p>See <a href="/en/HTML/CORS_settings_attributes" title="CORS settings attributes">CORS settings attributes</a> for details on how the <code>crossorigin</code> attribute is used.</p>
+See [CORS settings attributes](/en/HTML/CORS_settings_attributes "CORS settings attributes") for details on how the `crossorigin` attribute is used.
 
-<h2 id="O_que_é_um_contaminado_canvas">O que é um "contaminado" canvas?</h2>
+## O que é um "contaminado" canvas?
 
-<p>Embora você possa usar imagens sem aprovação do CORS em seu canvas, criando contaminação ao canvas. Uma vez o canvas tenhya sido "contaminado" você não pode mais "puxar" informações do canvas.Por exemplo, você pode não mais usar os métodos canvas toBlob(), toDataURL(), ou getImageData(), fazendo isto você irá lançar um erro de sergurança.</p>
+Embora você possa usar imagens sem aprovação do CORS em seu canvas, criando contaminação ao canvas. Uma vez o canvas tenhya sido "contaminado" você não pode mais "puxar" informações do canvas.Por exemplo, você pode não mais usar os métodos canvas toBlob(), toDataURL(), ou getImageData(), fazendo isto você irá lançar um erro de sergurança.
 
-<p>Esta proteção de usuário tem tido dados expostos por uso de informações de imagens de site web remoto sem permissão.</p>
+Esta proteção de usuário tem tido dados expostos por uso de informações de imagens de site web remoto sem permissão.
 
-<h2 id="Exemplo_Armazenando_uma_imagem_de_uma_origem_estrangeira">Exemplo: Armazenando uma imagem de uma origem estrangeira</h2>
+## Exemplo: Armazenando uma imagem de uma origem estrangeira
 
-<p> </p>
+Você precisa ter um servidor hospedando as imagenscom o apropriado Access-Control-Allow-Origin cabeçalho. Adicionando atributos crossOrigin faz uma requisição ao cabeçalho. Você pode usar este exemplo das [Configurações Apache Server HTML5 Boilerplate](https://github.com/h5bp/server-configs-apache/blob/fc379c45f52a09dd41279dbf4e60ae281110a5b0/src/.htaccess#L36-L53) para aproximadamente responder com este cabeçalho de resposta.
 
-<p>Você precisa ter um servidor hospedando as imagenscom o apropriado Access-Control-Allow-Origin cabeçalho. Adicionando atributos crossOrigin faz uma requisição ao cabeçalho. Você pode usar este exemplo das <a href="https://github.com/h5bp/server-configs-apache/blob/fc379c45f52a09dd41279dbf4e60ae281110a5b0/src/.htaccess#L36-L53">Configurações Apache Server HTML5 Boilerplate</a> para aproximadamente responder com este cabeçalho de resposta.</p>
-
-<pre class="brush:xml">&lt;IfModule mod_setenvif.c&gt;
-    &lt;IfModule mod_headers.c&gt;
-        <span class="nt">&lt;FilesMatch</span> <span class="s">"\.(cur|gif|ico|jpe?g|png|svgz?|webp)$"</span><span class="nt">&gt;</span>
+```xml
+<IfModule mod_setenvif.c>
+    <IfModule mod_headers.c>
+        <FilesMatch "\.(cur|gif|ico|jpe?g|png|svgz?|webp)$">
             SetEnvIf Origin ":" IS_CORS
             Header set Access-Control-Allow-Origin "*" env=IS_CORS
-        &lt;/FilesMatch&gt;
-    &lt;/IfModule&gt;
-&lt;/IfModule&gt;</pre>
+        </FilesMatch>
+    </IfModule>
+</IfModule>
+```
 
-<p>Dado que está tudo classificado, você permiti salvar àquelas imagens no <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage">Armazenamento DOM</a></p>
+Dado que está tudo classificado, você permiti salvar àquelas imagens no [Armazenamento DOM](/pt-BR/docs/Web/Guide/API/DOM/Storage)
 
-<pre class="brush: js">var img = new Image,
+```js
+var img = new Image,
     canvas = document.createElement("canvas"),
     ctx = canvas.getContext("2d"),
     src = "http://example.com/image"; // insert image url here
@@ -54,13 +55,10 @@ img.src = src;
 if ( img.complete || img.complete === undefined ) {
     img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
     img.src = src;
-}</pre>
+}
+```
 
+## Veja também
 
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="http://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html">Usando imagens de Cross-domínio em WebGL e Chrome 13</a></li>
- <li><a href="http://whatwg.org/html#attr-img-crossorigin">Especificações HTML - o atributo crossorigin</a></li>
-</ul>
+- [Usando imagens de Cross-domínio em WebGL e Chrome 13](http://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
+- [Especificações HTML - o atributo crossorigin](http://whatwg.org/html#attr-img-crossorigin)

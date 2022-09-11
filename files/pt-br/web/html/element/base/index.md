@@ -3,90 +3,58 @@ title: <base>
 slug: Web/HTML/Element/base
 translation_of: Web/HTML/Element/base
 ---
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>O <em>elemento HTML Base</em> (<strong>&lt;base&gt;</strong>) especifica o endereço (URL) utilizada por todos os endereços relativos contidos dentro de um documento. Há um número máximo de 1 (um) elemento <em>Base </em>&lt;base&gt; do documento.</p>
+O _elemento HTML Base_ (**\<base>**) especifica o endereço (URL) utilizada por todos os endereços relativos contidos dentro de um documento. Há um número máximo de 1 (um) elemento _Base_ \<base> do documento.
 
-<div class="note"><strong>Nota de uso:</strong> Se multiplos elementos <code>&lt;base&gt;</code> forem especificados, apenas o primeiro valor de <strong>href</strong> e <strong>target</strong> serão utilizados, os demais serão ignorados.</div>
+> **Note:** **Nota de uso:** Se multiplos elementos `<base>` forem especificados, apenas o primeiro valor de **href** e **target** serão utilizados, os demais serão ignorados.
 
-<ul>
- <li><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Content categories</a></dfn> Metadata content.</li>
- <li><dfn>Permitted content</dfn> None, it is an {{Glossary("empty element")}}.</li>
- <li><dfn>Tag omission</dfn> There must be no closing tag.</li>
- <li><dfn>Permitted parent elements</dfn> Any {{HTMLElement("head")}} that doesn't contain any other {{HTMLElement("base")}} element</li>
- <li><dfn>DOM interface</dfn> {{domxref("HTMLBaseElement")}}</li>
-</ul>
+- _[Content categories](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ Metadata content.
+- _Permitted content_ None, it is an {{Glossary("empty element")}}.
+- _Tag omission_ There must be no closing tag.
+- _Permitted parent elements_ Any {{HTMLElement("head")}} that doesn't contain any other {{HTMLElement("base")}} element
+- _DOM interface_ {{domxref("HTMLBaseElement")}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p><span style="line-height: 21px;">Este elemento inclui os </span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">atributos globais</a><span style="line-height: 21px;">.</span></p>
+Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
 
-<dl>
- <dt>{{htmlattrdef("href")}}</dt>
- <dd>
- <div>O URL de base para ser usado em todo o documento para endereços URL relativos.</div>
+- {{htmlattrdef("href")}}
+  - : O URL de base para ser usado em todo o documento para endereços URL relativos.Se este atributo for especificado, este elemento deve vir antes de quaisquer outros elementos com atributos cujos valores são URLs.Endereços (URLs) absolutos e relativos são permitidos (mas ver seção nota abaixo).
+- {{htmlattrdef("target")}}
+  - : Esse elemento é uma palavra-chave que indica o local padrão para exibir o resultado quando os hiperlinks causarem navegações, por elementos que não têm referência alvo explícita. Em HTML5, é um nome ou palavra-chave para um contexto de navegação. (por exemplo, guia, janela, ou frame incorporada). As seguintes formas têm significados específicos:
 
- <div>Se este atributo for especificado, este elemento deve vir antes de quaisquer outros elementos com atributos cujos valores são URLs. </div>
+<!---->
 
- <div>Endereços (URLs) absolutos e relativos são permitidos (mas ver seção nota abaixo).</div>
- </dd>
- <dt>{{htmlattrdef("target")}}</dt>
- <dd>Esse elemento é uma palavra-chave que indica o local padrão para exibir o resultado quando os hiperlinks causarem navegações, por elementos que não têm referência alvo explícita. Em HTML5, é um nome ou palavra-chave para um contexto de navegação. (por exemplo, guia, janela, ou frame incorporada). As seguintes formas têm significados específicos:</dd>
-</dl>
+- \_self: Coloca i resultado no mesmo quadro HTML4 ou contexto de navegação, caso HTML5, como o atual. Este valor é o padrão se o atributo não for especificado.
+- \_blank: Coloca o resultado em uma nova janela HTML4 ou janela no contexto de navegação HTML5.
+- \_parent: Coloca o resultado no conjunto de quadros pai do quadro atual no caso de HTML4 ou contexto de navegação pai no atual HTML5. Se não houver nenhum pai, esta opção se comporta como a forma \_self.
+- \_top: Em HTML4: Coloca o resultado na janela completa, original, cancelando todos os outros quadros. Em HTML5: Coloca o resultado no contexto de navegação de nível superior (ou seja, o contexto de navegação em que é um antepassado do atual, e não o pai). Se não houver nenhum pai, este opção se comporta da mesma forma que \_self.
 
-<ul>
- <li>_self: Coloca i resultado no mesmo quadro HTML4 ou contexto de navegação, caso HTML5, como o atual. Este valor é o padrão se o atributo não for especificado.</li>
- <li>_blank: Coloca o resultado em uma nova janela HTML4 ou janela no contexto de navegação HTML5.</li>
- <li>_parent: Coloca o resultado no conjunto de quadros pai do quadro atual no caso de HTML4 ou contexto de navegação pai no atual HTML5. Se não houver nenhum pai, esta opção se comporta como a forma _self.</li>
- <li>_top: Em HTML4: Coloca o resultado na janela completa, original, cancelando todos os outros quadros. Em HTML5: Coloca o resultado no contexto de navegação de nível superior (ou seja, o contexto de navegação em que é um antepassado do atual, e não o pai). Se não houver nenhum pai, este opção se comporta da mesma forma que _self.</li>
-</ul>
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
+```html
+<base href="http://www.example.com/">
+<base target="_blank" href="http://www.example.com/">
+```
 
-<pre class="brush: html">&lt;base href="http://www.example.com/"&gt;
-&lt;base target="_blank" href="http://www.example.com/"&gt;
-</pre>
+## Especificações
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+| Especificações                                                                                           | Estado                           | Comentários |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-base-element', '&lt;base&gt;')}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML5 W3C', 'document-metadata#the-base-element', '&lt;base&gt;')}} | {{Spec2('HTML5 W3C')}}     |             |
+| {{SpecName('HTML4.01', 'struct/links.html#h-12.4', '&lt;base&gt;')}}             | {{Spec2('HTML4.01')}}     |             |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentários</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-base-element', '&lt;base&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'document-metadata#the-base-element', '&lt;base&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/links.html#h-12.4', '&lt;base&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Navegadores_Compatíveis">Navegadores Compatíveis</h2>
+## Navegadores Compatíveis
 
 {{Compat("html.elements.base")}}
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<ul>
- <li>A URL base de um documento pode ser consultada utilizando o seguinte script {{domxref('document.baseURI')}}.</li>
- <li>Support of relative URIs for <code>href</code> was added in Gecko 2.0 (Firefox 4.0)</li>
- <li>HTML 2.0 and 3.2 define only the <code>href</code> attribute</li>
- <li>XHTML requires a trailing slash: <code>&lt;base /&gt;</code></li>
-</ul>
+- A URL base de um documento pode ser consultada utilizando o seguinte script {{domxref('document.baseURI')}}.
+- Support of relative URIs for `href` was added in Gecko 2.0 (Firefox 4.0)
+- HTML 2.0 and 3.2 define only the `href` attribute
+- XHTML requires a trailing slash: `<base />`
 
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}

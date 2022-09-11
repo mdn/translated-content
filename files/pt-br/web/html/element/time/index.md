@@ -3,97 +3,76 @@ title: <time>
 slug: Web/HTML/Element/time
 translation_of: Web/HTML/Element/time
 ---
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>O elemento HTML <em>time</em> <span style="line-height: inherit;">(</span><code style="font-size: 14px; line-height: inherit;">&lt;time&gt;</code><span style="line-height: inherit;">) representa o tempo tanto no formato de 24 horas ou como uma data precisa no calendário Gregoriano (com informações </span><span style="line-height: inherit;">opcionais </span><span style="line-height: inherit;">de tempo e fuso horário)</span></p>
+O elemento HTML _time_ (`<time>`) representa o tempo tanto no formato de 24 horas ou como uma data precisa no calendário Gregoriano (com informações opcionais de tempo e fuso horário)
 
-<p>Este elemento é destinado a apresentar datas e horas no dispositivo em um formato legível<span style="line-height: inherit;">. Isto pode ser útil aos agentes do usuário em oferecer qualquer programação de eventos ao calendário do utilizador.</span></p>
+Este elemento é destinado a apresentar datas e horas no dispositivo em um formato legível. Isto pode ser útil aos agentes do usuário em oferecer qualquer programação de eventos ao calendário do utilizador.
 
-<div class="note"><strong>Notas de uso:</strong> Este elemento não é adequado por exemplo, quando uma data específica não pode ser calculada, e nem deveria ser utilizado em datas anteriores ao calendário Gregoriano (devido as complicações com os cálculos dessas datas).</div>
+> **Note:** **Notas de uso:** Este elemento não é adequado por exemplo, quando uma data específica não pode ser calculada, e nem deveria ser utilizado em datas anteriores ao calendário Gregoriano (devido as complicações com os cálculos dessas datas).
 
-<div class="note"><strong>Nota de estatus:</strong> Este elemento foi concebido e está em discussão desde 2011 (<a class="external" href="http://blog.whatwg.org/weekly-time-data">http://blog.whatwg.org/weekly-time-data</a><span style="line-height: 1.5em;">)</span></div>
+> **Note:** **Nota de estatus:** Este elemento foi concebido e está em discussão desde 2011 (<http://blog.whatwg.org/weekly-time-data>)
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content categories">Categorias de conteúdo</a></td>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content categories#Phrasing content">phrasing content</a></td>
-  </tr>
-  <tr>
-   <td>Permitted content</td>
-   <td><a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content categories#Phrasing content">Phrasing content</a>, but no descendant <code>time</code> elements.</td>
-  </tr>
-  <tr>
-   <td>Tag omission</td>
-   <td>None, both the start tag and the end tag are mandatory.</td>
-  </tr>
-  <tr>
-   <td>Permitted parent elements</td>
-   <td>Any element that accepts phrasing content.</td>
-  </tr>
-  <tr>
-   <td>Normative document</td>
-   <td><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-time-element" rel="external nofollow">HTML5, section 4.6.10</a></td>
-  </tr>
- </tbody>
-</table>
+| [Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories "HTML/Content categories") | [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content categories#Phrasing content") |
+| --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Permitted content                                                                       | [Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content categories#Phrasing content"), but no descendant `time` elements.                                                                      |
+| Tag omission                                                                            | None, both the start tag and the end tag are mandatory.                                                                                                                                                                      |
+| Permitted parent elements                                                               | Any element that accepts phrasing content.                                                                                                                                                                                   |
+| Normative document                                                                      | [HTML5, section 4.6.10](http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-time-element)                                                                                              |
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Como todo outro elemento HTML, este elemento suporta os <a href="/en-US/docs/HTML/Global_attributes">atributos globais</a>.</p>
+Como todo outro elemento HTML, este elemento suporta os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("datetime")}}</dt>
- <dd>Esse atributo indica a hora e a data do elemento e deve ser uma data válida com uma string de tempo opcional. Se o valor não puder ser analisado como uma data com uma string de tempo opcional, o elemento não possui um timestamp associado.</dd>
- <dt>{{htmlattrdef("pubdate")}}</dt>
- <dd>(This feature is still being discussed by the WHATWG and the W3C HTML5 Working Group.) This Boolean attribute specifies that the date and time given by the element is the publication date of a document. The document it applies to is either the nearest ancestor article element or the document as a whole (if there is no ancestor <a href="/en-US/docs/HTML/Element/article" title="HTML/Element/Article">article</a> element). If true, the <code>time</code> element must have a corresponding date. Additionally, each <code>time</code> element indicating a publication date must be the only <code>time</code> element that does so for that document.</dd>
-</dl>
+- {{htmlattrdef("datetime")}}
+  - : Esse atributo indica a hora e a data do elemento e deve ser uma data válida com uma string de tempo opcional. Se o valor não puder ser analisado como uma data com uma string de tempo opcional, o elemento não possui um timestamp associado.
+- {{htmlattrdef("pubdate")}}
+  - : (This feature is still being discussed by the WHATWG and the W3C HTML5 Working Group.) This Boolean attribute specifies that the date and time given by the element is the publication date of a document. The document it applies to is either the nearest ancestor article element or the document as a whole (if there is no ancestor [article](/pt-BR/docs/HTML/Element/article "HTML/Element/Article") element). If true, the `time` element must have a corresponding date. Additionally, each `time` element indicating a publication date must be the only `time` element that does so for that document.
 
-<h2 id="DOM_interface">DOM interface</h2>
+## DOM interface
 
-<p>This element implements the <code><a href="/en-US/docs/DOM/HTMLTimeElement" title="DOM/HTMLTimeElement">HTMLTimeElement</a></code> interface.</p>
+This element implements the [`HTMLTimeElement`](/en-US/docs/DOM/HTMLTimeElement "DOM/HTMLTimeElement") interface.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Simple_example" name="Simple_example">Simple example</h3>
+### Simple example
 
-<pre class="brush: html">&lt;p&gt;The concert starts at &lt;time&gt;20:00&lt;/time&gt;.&lt;/p&gt;
-</pre>
+```html
+<p>The concert starts at <time>20:00</time>.</p>
+```
 
-<p>Above HTML will output:</p>
+Above HTML will output:
 
-<p>The concert starts at 20:00.</p>
+The concert starts at 20:00.
 
-<h3 id="Pubdate_example" name="Pubdate_example"><code>pubdate</code> example</h3>
+### `pubdate` example
 
-<pre class="brush: html">&lt;article&gt;
-  &lt;p&gt;This article was created on &lt;time pubdate&gt;2011-01-28&lt;/time&gt;.&lt;/p&gt;
-&lt;/article&gt;
-</pre>
+```html
+<article>
+  <p>This article was created on <time pubdate>2011-01-28</time>.</p>
+</article>
+```
 
-<p>Above HTML will output:</p>
+Above HTML will output:
 
-<p>This article was created on 2011-01-28.</p>
+This article was created on 2011-01-28.
 
-<h3 id="Datetime_example" name="Datetime_example"><code>datetime</code> example</h3>
+### `datetime` example
 
-<pre class="brush: html">&lt;p&gt;The concert took place on &lt;time datetime="2001-05-15 19:00"&gt;May 15&lt;/time&gt;.&lt;/p&gt;
-</pre>
+```html
+<p>The concert took place on <time datetime="2001-05-15 19:00">May 15</time>.</p>
+```
 
-<p>Above HTML will output:</p>
+Above HTML will output:
 
-<p>The concert took place on May 15.</p>
+The concert took place on May 15.
 
-<h2 id="Compatibilidade">Compatibilidade</h2>
+## Compatibilidade
 
 {{Compat("html.elements.time")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#the-time-element">The <code>time</code> element</a> (HTML5 specification)</li>
-</ul>
-
-<p> </p>
+- [The `time` element](http://www.whatwg.org/specs/web-apps/current-work/#the-time-element) (HTML5 specification)

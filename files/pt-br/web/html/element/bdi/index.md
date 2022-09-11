@@ -3,65 +3,44 @@ title: <bdi>
 slug: Web/HTML/Element/bdi
 translation_of: Web/HTML/Element/bdi
 ---
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<div>O HTML &lt;bdi&gt;elemento (ou elemento de isolamento de Bi-direcional) isola um trechode texto que pode ser formatado em uma direção diferente de outro texto fora dela.</div>
+O HTML \<bdi>elemento (ou elemento de isolamento de Bi-direcional) isola um trechode texto que pode ser formatado em uma direção diferente de outro texto fora dela.
 
+Este elemento é útil ao incorporar o texto com uma direção desconhecida, de um banco de dados por exemplo, no interior do texto com uma direção fixa.
 
-<p>Este elemento é útil ao incorporar o texto com uma direção desconhecida, de um banco de dados por exemplo, no interior do texto com uma direção fixa.</p>
+Apesar do mesmo efeito visual pode ser alcançado usando a regra de CSS{{cssxref("unicode-bidi")}}: isolar um {{HTMLElement("span")}} ou outro elemento de formatação de texto, o significado semântico só é transportado pelo elemento de\<bdi>. Especialmente, os navegadores podem ignorar estilos CSS. Nesse caso, o texto seria ainda corretamente exibido usando o elemento HTML, mas se tornará lixo quando usando o estilo CSS para transmitir semântica.
 
-<p>Apesar do mesmo efeito visual pode ser alcançado usando a regra de CSS{{cssxref("unicode-bidi")}}: isolar um {{HTMLElement("span")}} ou outro elemento de formatação de  texto, o significado semântico só é transportado pelo elemento de&lt;bdi&gt;. Especialmente, os navegadores podem ignorar estilos CSS. Nesse caso, o texto seria ainda corretamente exibido usando o elemento HTML, mas se tornará lixo quando usando o estilo CSS para transmitir semântica.</p>
+- _[Content categories](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content"), palpable content.
+- _Permitted content_[Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Flow_content").
+- _Tag omission_ {{no_tag_omission}}
+- _Permitted parent elements_ Any element that accepts [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Flow_content").
+- _DOM interface_ {{domxref("HTMLElement")}}
 
-<ul>
- <li><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Content categories</a></dfn> <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">Flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content_categories#Phrasing_content">phrasing content</a>, palpable content.</li>
- <li><dfn>Permitted content</dfn><a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content_categories#Flow_content">Phrasing content</a>.</li>
- <li><dfn>Tag omission</dfn> {{no_tag_omission}}</li>
- <li><dfn>Permitted parent elements</dfn> Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content_categories#Flow_content">phrasing content</a>.</li>
- <li><dfn>DOM interface</dfn> {{domxref("HTMLElement")}}</li>
-</ul>
+## Atributos
 
-<h2 id="Atributos">Atributos</h2>
+Como todos os outros elementos do HTML, este elemento tem os atributos globais, com uma pequena diferença de semântica: o atributo dir não é herdado. Se não definido, o valor padrão é o auto que deixa o navegador decidir a direção com base no conteúdo do elemento.
 
-<p>Como todos os outros elementos do HTML, este elemento tem os atributos globais,  com uma pequena diferença de semântica: o atributo dir não é herdado. Se não definido, o   valor padrão é o auto que deixa o navegador decidir a direção com base no conteúdo do elemento.</p>
+## Exemplo
 
-<h2 id="Exemplo">Exemplo</h2>
+```html
+<p dir="ltr">Esta palavra arábica <bdi>ARABIC_PLACEHOLDER</bdi> é automaticamente voltada da direita</p>
+```
 
-<pre class="brush: html">&lt;p dir="ltr"&gt;Esta palavra arábica &lt;bdi&gt;ARABIC_PLACEHOLDER&lt;/bdi&gt; é automaticamente voltada da direita&lt;/p&gt;
-</pre>
+## Especificações
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+| Specification                                                                                                        | Status                           | Comment |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-bdi-element', '&lt;bdi&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML5 W3C', 'the-bdi-element.html#the-bdi-element', '&lt;bdi&gt;')}}         | {{Spec2('HTML5 W3C')}}     |         |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'text-level-semantics.html#the-bdi-element', '&lt;bdi&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'the-bdi-element.html#the-bdi-element', '&lt;bdi&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("html.elements.bdi")}}
 
-<h2 dir="ltr" id="Veja_Também">Veja Também:</h2>
+## Veja Também:
 
-<ul>
- <li>Related HTML element: {{HTMLElement("bdo")}}</li>
- <li>Related HTML properties: {{cssxref("direction")}}, {{cssxref("unicode-bidi")}}</li>
-</ul>
+- Related HTML element: {{HTMLElement("bdo")}}
+- Related HTML properties: {{cssxref("direction")}}, {{cssxref("unicode-bidi")}}
 
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}

@@ -13,55 +13,54 @@ tags:
   - center
 translation_of: Web/HTML/Element/center
 ---
-<div>{{obsolete_header()}}</div>
+{{obsolete_header()}}
 
-<p><span class="seoSummary">O elemento <strong>Center do HTML</strong> (<strong><code>&lt;center&gt;</code></strong>) se tornou obsoleto, é um <a href="/pt-BR/docs/Web/HTML/Elementos_block-level" title="HTML/Block-level_elements">elemento de nível de bloco</a> que exibe o conteúdo em nível de bloco ou em linha centralizado horizontalmente dentro do elemento que o contém.</span> O contêiner {{HTMLElement ("body")}} geralmente está presente, mas não é necessário. Essa tag foi descontinuada no HTML 4 (e XHTML 1) em favor da propriedade CSS {{Cssxref ("text-align")}}, que pode ser aplicada ao elemento {{HTMLElement ("div")}} ou à um paragráfo indivídual {{HTMLElement ("p")}}. Para blocos de centralização, use outras propriedades CSS como {{Cssxref ("margin-left")}} e {{Cssxref ("margin-right")}} e defina-as como <code>auto</code> (ou defina {{Cssxref ("margin") }} para <code>0 auto</code>).</p>
+O elemento **Center do HTML** (**`<center>`**) se tornou obsoleto, é um [elemento de nível de bloco](/pt-BR/docs/Web/HTML/Elementos_block-level "HTML/Block-level_elements") que exibe o conteúdo em nível de bloco ou em linha centralizado horizontalmente dentro do elemento que o contém. O contêiner {{HTMLElement ("body")}} geralmente está presente, mas não é necessário. Essa tag foi descontinuada no HTML 4 (e XHTML 1) em favor da propriedade CSS {{Cssxref ("text-align")}}, que pode ser aplicada ao elemento {{HTMLElement ("div")}} ou à um paragráfo indivídual {{HTMLElement ("p")}}. Para blocos de centralização, use outras propriedades CSS como {{Cssxref ("margin-left")}} e {{Cssxref ("margin-right")}} e defina-as como `auto` (ou defina {{Cssxref ("margin") }} para `0 auto`).
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface {{domxref("HTMLElement")}}.</p>
+Este elemento implementa a interface {{domxref("HTMLElement")}}.
 
-<div class="note">
-<p><strong>Nota de implementação:</strong> até o Gecko 1.9.2 inclusive, o Firefox implementa a interface {{domxref("HTMLSpanElement")}} para este elemento.</p>
-</div>
+> **Note:** **Nota de implementação:** até o Gecko 1.9.2 inclusive, o Firefox implementa a interface {{domxref("HTMLSpanElement")}} para este elemento.
 
-<h2 id="Example_1" name="Example_1">Exemplo 1</h2>
+## Exemplo 1
 
-<pre class="brush: html notranslate">&lt;center&gt;Esse texto vai ficar centralizado.
-&lt;p&gt;Este parágrafo também.&lt;/p&gt;&lt;/center&gt;
-</pre>
+```html
+<center>Esse texto vai ficar centralizado.
+<p>Este parágrafo também.</p></center>
+```
 
-<p>O efeito da centralização vai acontecer até onde o elemento <code>center</code> for fechado.</p>
+O efeito da centralização vai acontecer até onde o elemento `center` for fechado.
 
-<h2 id="Example_2" name="Example_2">Exemplo 2 (Alternativa CSS)</h2>
+## Exemplo 2 (Alternativa CSS)
 
-<pre class="brush: html notranslate">&lt;div style="text-align:center"&gt;Esse texto vai ficar centralizado.
-&lt;p&gt;Este parágrafo também.&lt;/p&gt;&lt;/div&gt;
-</pre>
+```html
+<div style="text-align:center">Esse texto vai ficar centralizado.
+<p>Este parágrafo também.</p></div>
+```
 
-<p>Isso acontece por os textos que sofreram as alterações estão dentro dos elementos que foi aplicado a propriedade.</p>
+Isso acontece por os textos que sofreram as alterações estão dentro dos elementos que foi aplicado a propriedade.
 
-<h2 id="Example_3" name="Example_3">Exemplo 3 (Alternativa CSS)</h2>
+## Exemplo 3 (Alternativa CSS)
 
-<pre class="brush: html notranslate">&lt;p style="text-align:center"&gt;Essa linha vai ficar centralizada.&lt;br&gt;
-E esta linha também.&lt;/p&gt;
-</pre>
+```html
+<p style="text-align:center">Essa linha vai ficar centralizada.<br>
+E esta linha também.</p>
+```
 
-<h2 id="Notes" name="Notes">Nota</h2>
+## Nota
 
-<p>Aplicar {{Cssxref("text-align")}}<code>:center</code> a um elemento {{HTMLElement("div")}} ou {{HTMLElement("p")}} centraliza o <em>conteúdo</em> desses elementos, deixando suas dimensões gerais inalteradas.</p>
+Aplicar {{Cssxref("text-align")}}`:center` a um elemento {{HTMLElement("div")}} ou {{HTMLElement("p")}} centraliza o _conteúdo_ desses elementos, deixando suas dimensões gerais inalteradas.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("html.elements.center")}}</p>
+{{Compat("html.elements.center")}}
 
-<p>Apesar de obsoleto, o elemento é aceito em todos os navegadores do mercado.</p>
+Apesar de obsoleto, o elemento é aceito em todos os navegadores do mercado.
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{Cssxref("text-align")}}</li>
- <li>{{Cssxref("display")}}</li>
-</ul>
+- {{Cssxref("text-align")}}
+- {{Cssxref("display")}}
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

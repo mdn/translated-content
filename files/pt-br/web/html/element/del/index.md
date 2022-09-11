@@ -3,65 +3,49 @@ title: <del>
 slug: Web/HTML/Element/del
 translation_of: Web/HTML/Element/del
 ---
-<h2 id="Sumário">Sumário</h2>
-<p>O <strong style="line-height: 1.5;">elemento </strong><strong style="line-height: 1.5;">HTML <code>&lt;del&gt;</code></strong><span style="line-height: 1.5;"> (ou </span><em>Elemento </em><em>HTML </em><em>de Texto Excluído</em><span style="line-height: 1.5;">) representa uma parte do texto que foi excluída de um documento. Este elemento é (não necessariamente) renderizado pelos navegadores com uma linha entre o texto.</span></p>
-<ul>
- <li><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Content categories</a></dfn><a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content categories#Phrasing content">Phrasing content</a> or <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">flow content</a>.</li>
- <li><dfn>Permitted content</dfn> <a href="/en-US/docs/HTML/Content_categories#Transparent" title="HTML/Content categories#Transparent">Transparent</a>.</li>
- <li><dfn>Tag omission</dfn> {{no_tag_omission}}</li>
- <li><dfn>Permitted parent elements</dfn> Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content_categories#Phrasing_content">phrasing content</a>.</li>
- <li><dfn>DOM interface</dfn> {{domxref("HTMLModElement")}}</li>
-</ul>
-<h2 id="Attributes">Attributes</h2>
-<p><span style="line-height: 21px;">This element includes the </span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">global attributes</a><span style="line-height: 21px;">.</span></p>
-<dl>
- <dt>
-  {{htmlattrdef("cite")}}</dt>
- <dd>
-  A URI for a resource that explains the change (for example, meeting minutes).</dd>
- <dt>
-  {{htmlattrdef("datetime")}}</dt>
- <dd>
-  This attribute indicates the time and date of the change and must be a <a class="external" href="http://www.w3.org/TR/html5/common-microsyntaxes.html#valid-date-string-with-optional-time">valid date with an optional time string</a>. If the value cannot be parsed as a date with an optional time string, the element does not have an associated time stamp.</dd>
-</dl>
-<h2 id="Examples">Examples</h2>
-<pre class="brush: html">&lt;p&gt;&lt;del&gt;This text has been deleted&lt;/del&gt;&lt;/p&gt;</pre>
-<h3 id="Result">Result</h3>
-<div>
- <del>This text has been deleted</del></div>
-<h2 id="Specifications" name="Specifications">Specifications</h2>
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'edits.html#the-del-element', '&lt;del&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'edits.html#the-del-element', '&lt;del&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/text.html#h-9.4', '&lt;del&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Sumário
+
+O **elemento** **HTML `<del>`** (ou _Elemento_ _HTML_ _de Texto Excluído_) representa uma parte do texto que foi excluída de um documento. Este elemento é (não necessariamente) renderizado pelos navegadores com uma linha entre o texto.
+
+- _[Content categories](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_[Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content categories#Phrasing content") or [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content").
+- _Permitted content_ [Transparent](/pt-BR/docs/HTML/Content_categories#Transparent "HTML/Content categories#Transparent").
+- _Tag omission_ {{no_tag_omission}}
+- _Permitted parent elements_ Any element that accepts [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content").
+- _DOM interface_ {{domxref("HTMLModElement")}}
+
+## Attributes
+
+This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
+
+- {{htmlattrdef("cite")}}
+  - : A URI for a resource that explains the change (for example, meeting minutes).
+- {{htmlattrdef("datetime")}}
+  - : This attribute indicates the time and date of the change and must be a [valid date with an optional time string](http://www.w3.org/TR/html5/common-microsyntaxes.html#valid-date-string-with-optional-time). If the value cannot be parsed as a date with an optional time string, the element does not have an associated time stamp.
+
+## Examples
+
+```html
+<p><del>This text has been deleted</del></p>
+```
+
+### Result
+
+~~This text has been deleted~~
+
+## Specifications
+
+| Specification                                                                                    | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', 'edits.html#the-del-element', '&lt;del&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML5 W3C', 'edits.html#the-del-element', '&lt;del&gt;')}}     | {{Spec2('HTML5 W3C')}}     |         |
+| {{SpecName('HTML4.01', 'struct/text.html#h-9.4', '&lt;del&gt;')}}         | {{Spec2('HTML4.01')}}     |         |
+
+## Compatibilidade com navegadores
+
 {{Compat("html.elements.del")}}
 
-<h2 id="See_also">See also</h2>
-<ul>
- <li>{{HTMLElement("ins")}} element for insertions into a text</li>
-</ul>
-<div>
- {{HTMLRef}}</div>
+## See also
+
+- {{HTMLElement("ins")}} element for insertions into a text
+
+{{HTMLRef}}

@@ -3,71 +3,48 @@ title: header (cabeçalho)
 slug: Web/HTML/Element/header
 translation_of: Web/HTML/Element/header
 ---
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O <strong>elemento HTML</strong> <strong><code>&lt;header&gt;</code> </strong>representa um grupo de suporte introdutório ou navegacional. Pode conter alguns elementos de cabeçalho mas também outros elementos como um logo, seções de cabeçalho, formulário de pesquisa, e outros.</p>
+O **elemento HTML** **`<header>` **representa um grupo de suporte introdutório ou navegacional. Pode conter alguns elementos de cabeçalho mas também outros elementos como um logo, seções de cabeçalho, formulário de pesquisa, e outros.
 
-<div class="note">
-<p><strong>Notas de utilização:</strong></p>
+> **Note:** **Notas de utilização:**
+>
+> - O elemento `<header>` não é separador de conteúdo (sectioning content), portanto, não introduz uma nova seção no [outline](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document").
 
-<ul>
- <li>O elemento <code>&lt;header&gt;</code> não é separador de conteúdo (sectioning content), portanto, não introduz uma nova seção no <a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document" title="Sections and Outlines of an HTML5 document">outline</a>.</li>
-</ul>
-</div>
+- _[Categoria de conteúdo](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), conteúdo palpável.
+- _Conteúdo permitido_[Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), mas não com descendentes de {{HTMLElement("header")}} ou {{HTMLElement("footer")}}
+- \_Omissão da tag_Nenhuma, as tags de abertura e fechamento são obrigatórias.
+- \_Elementos-pai permitidos_Qualquer elemento que aceite [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"). Note que o elemento {{HTMLElement("header")}} não deve ser descendente de {{HTMLElement("address")}}, {{HTMLElement("footer")}} ou outro elemento {{HTMLElement("header")}} .
+- _Interface DOM_ {{domxref("HTMLElement")}}
 
-<ul>
- <li><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Categoria de conteúdo</a></dfn> <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">Flow content</a>, conteúdo palpável.</li>
- <li><dfn>Conteúdo permitido</dfn><a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">Flow content</a>, mas não com descendentes de {{HTMLElement("header")}} ou {{HTMLElement("footer")}} </li>
- <li><dfn>Omissão da tag</dfn>Nenhuma, as tags de abertura e fechamento são obrigatórias.</li>
- <li><dfn>Elementos-pai permitidos</dfn>Qualquer elemento que aceite <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">flow content</a>. Note que o elemento {{HTMLElement("header")}} não deve ser descendente de  {{HTMLElement("address")}}, {{HTMLElement("footer")}} ou outro elemento {{HTMLElement("header")}} .</li>
- <li><dfn>Interface DOM</dfn> {{domxref("HTMLElement")}}</li>
-</ul>
+## Atributos
 
-<h2 id="Atributos">Atributos</h2>
+Este elemento não possui outros atributos além dos [atributos globais](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes"), comuns a todos os elementos.
 
-<p><span style="line-height: 21px;">Este elemento não possui outros atributos além dos </span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">atributos globais</a><span style="line-height: 21px;">, comuns a todos os elementos.</span></p>
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
+```
+<header>
+  <h1>Título da Página Principal</h1>
+  <img src="mdn-logo-sm.png" alt="MDN logo">
+</header>
+```
 
-<pre><code>&lt;header&gt;
-  &lt;h1&gt;Título da Página Principal&lt;/h1&gt;
-  &lt;img src="mdn-logo-sm.png" alt="MDN logo"&gt;
-&lt;/header&gt;</code></pre>
+## Especificações
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+| Especificação                                                                                                | Status                           | Comentário |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'sections.html#the-header-element', '&lt;header&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'sections.html#the-header-element', '&lt;header&gt;')}}     | {{Spec2('HTML5 W3C')}}     |            |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'sections.html#the-header-element', '&lt;header&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sections.html#the-header-element', '&lt;header&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("html.elements.header")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Uma descrição mais detalhada: <a class="external" href="http://html5doctor.com/the-header-element/" title="The header element | HTML5 Doctor">O elemento header | HTML5 Doctor</a></li>
- <li>Outros elementos relacionados a seção: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}};</li>
- <li class="last"><a class="deki-ns current" href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document" title="Sections and Outlines of an HTML5 document">Seções e outlines de um documento HTML5</a>.</li>
-</ul>
+- Uma descrição mais detalhada: [O elemento header | HTML5 Doctor](http://html5doctor.com/the-header-element/ "The header element | HTML5 Doctor")
+- Outros elementos relacionados a seção: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}};
+- [Seções e outlines de um documento HTML5](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document").
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

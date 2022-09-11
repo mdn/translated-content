@@ -9,44 +9,41 @@ tags:
   - Web
 translation_of: Web/HTML/Element/blink
 ---
-<div>{{Deprecated_header}} {{Non-standard_header}}</div>
+{{Deprecated_header}} {{Non-standard_header}}
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O elemento HTML Blink (<code>&lt;blink&gt;</code>) é um elemento não-padrão que faz com que o texto pisque lentamente.</p>
+O elemento HTML Blink (`<blink>`) é um elemento não-padrão que faz com que o texto pisque lentamente.
 
-<div class="warning">
-<p class="note"><strong>Aviso:</strong> Não use este elemento pois, além de não ser padrão, é <strong>obsoleto</strong>. Texto piscante é desaprovado por vários padrões de acessibilidade, e a especificação CSS permite que navegadores ignorem o valor "blink".</p>
-</div>
+> **Warning:** **Aviso:** Não use este elemento pois, além de não ser padrão, é **obsoleto**. Texto piscante é desaprovado por vários padrões de acessibilidade, e a especificação CSS permite que navegadores ignorem o valor "blink".
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento não é suportado, e portanto implementa a interface {{domxref("HTMLUnknownElement")}}.</p>
+Este elemento não é suportado, e portanto implementa a interface {{domxref("HTMLUnknownElement")}}.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush:html">&lt;blink&gt;Why would somebody use this?&lt;/blink&gt;
-</pre>
+```html
+<blink>Why would somebody use this?</blink>
+```
 
-<h3 id="Resultado_(atenuado!)">Resultado (atenuado!)</h3>
+### Resultado (atenuado!)
 
-<p><img alt="Image:HTMLBlinkElement.gif" src="/@api/deki/files/247/=HTMLBlinkElement.gif"></p>
+![Image:HTMLBlinkElement.gif](/@api/deki/files/247/=HTMLBlinkElement.gif)
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<p>Este elemento não é padrão e não faz parte de nenhuma especificação. Se você não acredita em nós,<a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#non-conforming-features"> veja por si mesmo na especificação HTML</a>.</p>
+Este elemento não é padrão e não faz parte de nenhuma especificação. Se você não acredita em nós,[ veja por si mesmo na especificação HTML](http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#non-conforming-features).
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("html.elements.blink")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="http://www.montulli.org/theoriginofthe%3Cblink%3Etag">History of the creation of the HTML <code>&lt;blink&gt;</code> element</a>.</li>
- <li>{{cssxref("text-decoration")}}, onde existe um valor "blink", embora os navegadores não sejam obrigados a fazê-lo piscar.</li>
- <li>{{htmlelement("marquee")}}, outro elemento não-padrão semelhante.</li>
- <li><a href="/en-US/docs/Web/Guide/CSS/Using_CSS_animations" title="/en-US/docs/Web/Guide/CSS/Using_CSS_animations">CSS animations</a> são o caminho correto para obter este efeito.</li>
-</ul>
+- [History of the creation of the HTML `<blink>` element](http://www.montulli.org/theoriginofthe%3Cblink%3Etag).
+- {{cssxref("text-decoration")}}, onde existe um valor "blink", embora os navegadores não sejam obrigados a fazê-lo piscar.
+- {{htmlelement("marquee")}}, outro elemento não-padrão semelhante.
+- [CSS animations](/pt-BR/docs/Web/Guide/CSS/Using_CSS_animations) são o caminho correto para obter este efeito.
 
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}

@@ -3,59 +3,49 @@ title: <data>
 slug: Web/HTML/Element/data
 translation_of: Web/HTML/Element/data
 ---
-<h2 id="Summary">Summary</h2>
-<p>The <strong>HTML <code>&lt;data&gt;</code> Element</strong> links a given content with a machine-readable translation. If the content is time- or date-related, the {{HTMLElement("time")}} must be used.</p>
+## Summary
+
+The **HTML `<data>` Element** links a given content with a machine-readable translation. If the content is time- or date-related, the {{HTMLElement("time")}} must be used.
+
+- _[Content categories](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content categories#Phrasing content"), palpable content.
+- _Permitted content_[Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content categories#Phrasing content").
+- _Tag omission_ {{no_tag_omission}}
+- _Permitted parent elements_ Any element that accepts [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content").
+- _DOM interface_ {{domxref("HTMLDataElement")}}
+
+## Attributes
+
+This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
+
+- {{htmlattrdef("value")}}
+  - : This attribute specifies the machine-readable translation of the content of the element.
+
+## Example
+
+The following example displays product names but also associates each name with its UPC code.
+
+```html
+<p>New Products</p>
 <ul>
- <li><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Content categories</a></dfn> <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">Flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content categories#Phrasing content">phrasing content</a>, palpable content.</li>
- <li><dfn>Permitted content</dfn><a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content categories#Phrasing content">Phrasing content</a>.</li>
- <li><dfn>Tag omission</dfn> {{no_tag_omission}}</li>
- <li><dfn>Permitted parent elements</dfn> Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content_categories#Phrasing_content">phrasing content</a>.</li>
- <li><dfn>DOM interface</dfn> {{domxref("HTMLDataElement")}}</li>
+ <li><data value="3967381398">Mini Ketchup</data></li>
+ <li><data value="3967381399">Jumbo Ketchup</data></li>
+ <li><data value="3967381400">Mega Jumbo Ketchup</data></li>
 </ul>
-<h2 id="Attributes">Attributes</h2>
-<p><span style="line-height: 21px;">This element includes the </span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">global attributes</a><span style="line-height: 21px;">.</span></p>
-<dl>
- <dt>
-  {{htmlattrdef("value")}}</dt>
- <dd>
-  This attribute specifies the machine-readable translation of the content of the element.</dd>
-</dl>
-<h2 id="Example">Example</h2>
-<p>The following example displays product names but also associates each name with its UPC code.</p>
-<pre class="brush: html">&lt;p&gt;New Products&lt;/p&gt;
-&lt;ul&gt;
- &lt;li&gt;&lt;data value="3967381398"&gt;Mini Ketchup&lt;/data&gt;&lt;/li&gt;
- &lt;li&gt;&lt;data value="3967381399"&gt;Jumbo Ketchup&lt;/data&gt;&lt;/li&gt;
- &lt;li&gt;&lt;data value="3967381400"&gt;Mega Jumbo Ketchup&lt;/data&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-<h2 id="Specifications" name="Specifications">Specifications</h2>
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'text-level-semantics.html#the-data-element', '&lt;data&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from {{Spec2('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'text-level-semantics.html#the-data-element', '&lt;data&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+```
+
+## Specifications
+
+| Specification                                                                                                            | Status                           | Comment                                     |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-data-element', '&lt;data&gt;')}} | {{Spec2('HTML WHATWG')}} | No change from {{Spec2('HTML5 W3C')}} |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-data-element', '&lt;data&gt;')}}     | {{Spec2('HTML5 W3C')}}     | Initial definition.                         |
+
+## Compatibilidade com navegadores
+
 {{Compat("html.elements.data")}}
 
-<h2 id="See_also">See also</h2>
-<ul>
- <li>The HTML {{HTMLElement("time")}} element.</li>
-</ul>
-<p>{{HTMLRef}}</p>
+## See also
+
+- The HTML {{HTMLElement("time")}} element.
+
+{{HTMLRef}}

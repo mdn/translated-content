@@ -10,106 +10,112 @@ tags:
   - font-style
 translation_of: Web/HTML/Element/em
 ---
-<p>O <strong>elemento</strong> <strong>HTML</strong> <code><strong>&lt;em&gt;</strong></code><strong> </strong>marca o texto que tem ênfase. O elemento &lt;em&gt; pode ser aninhado, com cada nível de aninhamento indicando um grau maior de ênfase.</p>
+O **elemento** **HTML** **`<em>`\*\*** \*\*marca o texto que tem ênfase. O elemento \<em> pode ser aninhado, com cada nível de aninhamento indicando um grau maior de ênfase.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Categorias de conteúdo</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Conteúdo fluído</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Content_categories#Phrasing_content">conteúdo de frase</a>, conteúdo palpável</td>
-  </tr>
-  <tr>
-   <th scope="row">Conteúdo permitido</th>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Content_categories#Phrasing_content">Conteúdo de frase</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omissão de tag</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Pais permitidos</th>
-   <td>Qualquer elemento que aceita <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Content_categories#Phrasing_content">conteúdo de frase</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Funções de ARIA permitidas</th>
-   <td>Qualquer uma</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface DOM</th>
-   <td>{{domxref("HTMLElement")}} Até o Gecko 1.9.2 (Firefox 4) incluso, o Firefox implementa a interface{{domxref("HTMLSpanElement")}} para este elemento.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Categorias de conteúdo</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+          >Conteúdo fluído</a
+        >,
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+          >conteúdo de frase</a
+        >, conteúdo palpável
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Conteúdo permitido</th>
+      <td>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+          >Conteúdo de frase</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omissão de tag</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Pais permitidos</th>
+      <td>
+        Qualquer elemento que aceita
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+          >conteúdo de frase</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Funções de ARIA permitidas</th>
+      <td>Qualquer uma</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>
+        {{domxref("HTMLElement")}} Até o Gecko 1.9.2 (Firefox 4)
+        incluso, o Firefox implementa a
+        interface{{domxref("HTMLSpanElement")}} para este elemento.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Este elemento inclui somente os <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a>.</p>
+Este elemento inclui somente os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-<h2 id="Notas_de_uso">Notas de uso</h2>
+## Notas de uso
 
-<p>Este elemento geralmente é mostrado no tipo itálico. Contudo, não deve ser usado simplesmente para aplicar estilo itálico; use o estilo CSS para esse propósito. Use o elemento {{HTMLElement("cite")}} para marcar o título de um trabalho (book, play, song, etc.); também é geralmente estilizado com tipo itálico, mas possui significado diferente. Use o elemento {{HTMLElement("strong")}} para marcar o texto que tem importância maior do que o texto que está em volta.</p>
+Este elemento geralmente é mostrado no tipo itálico. Contudo, não deve ser usado simplesmente para aplicar estilo itálico; use o estilo CSS para esse propósito. Use o elemento {{HTMLElement("cite")}} para marcar o título de um trabalho (book, play, song, etc.); também é geralmente estilizado com tipo itálico, mas possui significado diferente. Use o elemento {{HTMLElement("strong")}} para marcar o texto que tem importância maior do que o texto que está em volta.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>O elemento <code>&lt;em&gt;</code> é frequentemente usado para indicar um contraste implícito ou explícito.</p>
+O elemento `<em>` é frequentemente usado para indicar um contraste implícito ou explícito.
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>
+```html
+<p>
   Em HTML 5, o que anteriormente era chamado de conteúdo
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span>block-level<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span> agora é chamado de conteúdo
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span>flow<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span> .
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span></code></pre>
+  <em>block-level</em> agora é chamado de conteúdo
+  <em>flow</em> .
+</p>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>Em HTML5, o que anteriormente era chamado de conteúdo block-level (nível de bloco) agora é chamado de <em>flow</em> content (conteúdo fluído).</p>
+Em HTML5, o que anteriormente era chamado de conteúdo block-level (nível de bloco) agora é chamado de _flow_ content (conteúdo fluído).
 
-<h2 id="&lt;i>_vs_&lt;em>">&lt;i&gt; vs &lt;em&gt;</h2>
+## \<i> vs \<em>
 
-<p>É frequentemente confuso para novos desenvolvedores porque há vários elementos para expressar a ênfase em algum texto. <code>&lt;i&gt;</code> e <code>&lt;em&gt;</code> são talvez uns dos mais comuns. Por que usar <code>&lt;em&gt;&lt;/em&gt;</code> vs <code>&lt;i&gt;&lt;/i&gt;</code>? Eles produzem o mesmo resultado, certo?</p>
+É frequentemente confuso para novos desenvolvedores porque há vários elementos para expressar a ênfase em algum texto. `<i>` e `<em>` são talvez uns dos mais comuns. Por que usar `<em></em>` vs `<i></i>`? Eles produzem o mesmo resultado, certo?
 
-<p>Não exatamente. O resultado visual é, por padrão, o mesmo - ambas as tags renderizam seu conteúdo em itálicos. Mas o significado semântico é diferente. A tag <code>&lt;em&gt;</code> representa ênfase importante de seus conteúdos, enquanto que a tag <code>&lt;i&gt;</code> representa o texto que é iniciado de uma prosa, como uma palavra estrangeira, pensamentos de um personagem ficcional, ou quando o texto se refere á definição de uma palavra em vez de representar seu significado semântico. (O título de um trabalho, tal como o nome de um livro ou filme, deve usar <code>&lt;cite&gt;</code>.)</p>
+Não exatamente. O resultado visual é, por padrão, o mesmo - ambas as tags renderizam seu conteúdo em itálicos. Mas o significado semântico é diferente. A tag `<em>` representa ênfase importante de seus conteúdos, enquanto que a tag `<i>` representa o texto que é iniciado de uma prosa, como uma palavra estrangeira, pensamentos de um personagem ficcional, ou quando o texto se refere á definição de uma palavra em vez de representar seu significado semântico. (O título de um trabalho, tal como o nome de um livro ou filme, deve usar `<cite>`.)
 
-<p>Um exemplo para <code>&lt;em&gt;</code> poderia ser: "Apenas já faça isso!", ou: "Nós temos que fazer algo acerca disso". Uma pessoa ou software lendo o texto pronunciaria as palavras em itálico com uma ênfase.</p>
+Um exemplo para `<em>` poderia ser: "Apenas já faça isso!", ou: "Nós temos que fazer algo acerca disso". Uma pessoa ou software lendo o texto pronunciaria as palavras em itálico com uma ênfase.
 
-<p>Um exemplo para <code>&lt;i&gt;</code> poderia ser: "A <em>Rainha Mary </em>velejou na noite passada". Aqui, não é adicionada ênfase ou importância na palavra "Rainha Mary". É meramente indicado que o objeto em questão não é uma rainha chamada Mary, mas um navio chamado <em>Rainha Mary</em>. Outro exemplo para <code>&lt;i&gt;</code> poderia ser: "A palavra <em>o</em> é um artigo".</p>
+Um exemplo para `<i>` poderia ser: "A _Rainha Mary_ velejou na noite passada". Aqui, não é adicionada ênfase ou importância na palavra "Rainha Mary". É meramente indicado que o objeto em questão não é uma rainha chamada Mary, mas um navio chamado _Rainha Mary_. Outro exemplo para `<i>` poderia ser: "A palavra _o_ é um artigo".
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'text-level-semantics.html#the-em-element', '&lt;em&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-em-element', '&lt;em&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;em&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                    | Status                           | Comentário |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-em-element', '&lt;em&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-em-element', '&lt;em&gt;')}}     | {{Spec2('HTML5 W3C')}}     |            |
+| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;em&gt;')}}                         | {{Spec2('HTML4.01')}}     |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("html.elements.em")}}</p>
+{{Compat("html.elements.em")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTMLElement("i")}}</li>
-</ul>
+- {{HTMLElement("i")}}
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

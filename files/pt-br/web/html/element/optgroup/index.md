@@ -11,78 +11,64 @@ tags:
   - Web
 translation_of: Web/HTML/Element/optgroup
 ---
-<h2 id="Sumário">Sumário</h2>
-<p>Em um Formulário Web, o elemento HTML <code>&lt;optgroup&gt;</code> cria um agrupamento de opções dentro do elemento {{HTMLElement("select")}}.</p>
-<ul>
- <li><dfn><a href="/pt-BR/docs/HTML/Content_categories" title="HTML/Content_categories">Categorias de conteúdo</a></dfn> Nenhuma.</li>
- <li><dfn>Conteúdo permitido</dfn>Nenhum ou mais elementos do tipo  {{HTMLElement("option")}}.</li>
- <li><dfn>Omissão da tag</dfn>A abertura da tag é obrigatória. O fechamento da tag é opcional se o elemento é imediatamente seguido de de outro elemento &lt;optgroup&gt;, ou se o elemento pai não tiver nenhum conteúdo.</li>
- <li><dfn>Elemento pai permitido</dfn>Um elemento {{HTMLElement("select")}}.</li>
- <li><dfn>Interface DOM</dfn> {{domxref("HTMLOptGroupElement")}}</li>
-</ul>
-<p>{{Note("Elementos do tipo <strong>optgroup</strong> não podem ser aninhados.")}}</p>
-<h2 id="Atributos">Atributos</h2>
-<p>Este elemento inclui os<a href="/pt-BR/docs/HTML/Global_attributes"> atributos globais</a>.</p>
-<dl>
- <dt>
-  {{htmlattrdef("disabled")}}</dt>
- <dd>
-  Se este atributo booleano for definido, nenhum dos itens neste <strong>optgroup</strong> poderá ser selecionado. Muitos navegadores marcam como cinza e não permitem que o elemento receba nenhum evento de navegação, como cliques do mouse ou foco.</dd>
- <dt>
-  {{htmlattrdef("label")}}</dt>
- <dd>
-  É o nome do optgroup, é o que os navegadores irão exibir como rótulo. Este atributo é obrigatório se o elemento for usado.</dd>
-</dl>
-<h2 id="Exemplo">Exemplo</h2>
-<pre class="brush: html">&lt;select&gt;
-  &lt;optgroup label="Grupo 1"&gt;
-    &lt;option&gt;Opção 1.1&lt;/option&gt;
-  &lt;/optgroup&gt;
-  &lt;optgroup label="Grupo 2"&gt;
-    &lt;option&gt;Opção 2.1&lt;/option&gt;
-    &lt;option&gt;Opção 2.2&lt;/option&gt;
-  &lt;/optgroup&gt;
-  &lt;optgroup label="Grupo 3" disabled&gt;
-    &lt;option&gt;Opção 3.1&lt;/option&gt;
-    &lt;option&gt;Opção 3.2&lt;/option&gt;
-    &lt;option&gt;Opção 3.3&lt;/option&gt;
-  &lt;/optgroup&gt;
-&lt;/select&gt;
-</pre>
-<h3 id="Resultado">Resultado</h3>
-<p>{{EmbedLiveSample("Exemplo")}}</p>
-<h2 id="Especificações">Especificações</h2>
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'the-button-element.html#the-optgroup-element', '&lt;optgroup&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#the-optgroup-element', '&lt;optgroup&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;optgroup&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Sumário
+
+Em um Formulário Web, o elemento HTML `<optgroup>` cria um agrupamento de opções dentro do elemento {{HTMLElement("select")}}.
+
+- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ Nenhuma.
+- \_Conteúdo permitido_Nenhum ou mais elementos do tipo {{HTMLElement("option")}}.
+- \_Omissão da tag_A abertura da tag é obrigatória. O fechamento da tag é opcional se o elemento é imediatamente seguido de de outro elemento \<optgroup>, ou se o elemento pai não tiver nenhum conteúdo.
+- \_Elemento pai permitido_Um elemento {{HTMLElement("select")}}.
+- _Interface DOM_ {{domxref("HTMLOptGroupElement")}}
+
+{{Note("Elementos do tipo <strong>optgroup</strong> não podem ser aninhados.")}}
+
+## Atributos
+
+Este elemento inclui os[ atributos globais](/pt-BR/docs/HTML/Global_attributes).
+
+- {{htmlattrdef("disabled")}}
+  - : Se este atributo booleano for definido, nenhum dos itens neste **optgroup** poderá ser selecionado. Muitos navegadores marcam como cinza e não permitem que o elemento receba nenhum evento de navegação, como cliques do mouse ou foco.
+- {{htmlattrdef("label")}}
+  - : É o nome do optgroup, é o que os navegadores irão exibir como rótulo. Este atributo é obrigatório se o elemento for usado.
+
+## Exemplo
+
+```html
+<select>
+  <optgroup label="Grupo 1">
+    <option>Opção 1.1</option>
+  </optgroup>
+  <optgroup label="Grupo 2">
+    <option>Opção 2.1</option>
+    <option>Opção 2.2</option>
+  </optgroup>
+  <optgroup label="Grupo 3" disabled>
+    <option>Opção 3.1</option>
+    <option>Opção 3.2</option>
+    <option>Opção 3.3</option>
+  </optgroup>
+</select>
+```
+
+### Resultado
+
+{{EmbedLiveSample("Exemplo")}}
+
+## Especificações
+
+| Especificação                                                                                                                    | Status                           | Comentário |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'the-button-element.html#the-optgroup-element', '&lt;optgroup&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'forms.html#the-optgroup-element', '&lt;optgroup&gt;')}}                     | {{Spec2('HTML5 W3C')}}     |            |
+| {{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;optgroup&gt;')}}                             | {{Spec2('HTML4.01')}}     |            |
+
+## Compatibilidade com navegadores
+
 {{Compat("html.elements.optgroup")}}
 
-<h2 id="Veja_também">Veja também</h2>
-<ul>
- <li>Outros elementos de formularios relacionados: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.</li>
-</ul>
-<p>{{HTMLRef}}</p>
+## Veja também
+
+- Outros elementos de formularios relacionados: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.
+
+{{HTMLRef}}

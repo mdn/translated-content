@@ -3,66 +3,44 @@ title: data-*
 slug: Web/HTML/Global_attributes/data-*
 translation_of: Web/HTML/Global_attributes/data-*
 ---
-<p class="note">{{HTMLSidebar("Global_attributes")}}</p>
+> **Note:** {{HTMLSidebar("Global_attributes")}}
 
-<p>Os <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a> <strong>data-*</strong> formam uma classe de atributos conhecida como <strong>custom data attributes</strong>, a qual permite que informações proprietárias sejam trocadas via script entre o <a href="/en-US/docs/Web/HTML" title="en/HTML">HTML</a> e sua representação <a href="/en-US/docs/DOM" title="en/DOM">DOM</a> . Todos esses dados personalizados estão disponíveis através da interface {{domxref("HTMLElement")}} do elemento, onde o atributo está definido. A propriedade {{domxref("HTMLElement.dataset")}} concede acesso a estes atributos .<br>
- O <code>*</code> pode ser substituído por qualquer nome, desde que siga <a class="external" href="http://www.w3.org/TR/REC-xml/#NT-Name">a regra de criação de nomes xml</a> com as seguintes restrições:</p>
+Os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes) **data-\*** formam uma classe de atributos conhecida como **custom data attributes**, a qual permite que informações proprietárias sejam trocadas via script entre o [HTML](/pt-BR/docs/Web/HTML "en/HTML") e sua representação [DOM](/pt-BR/docs/DOM "en/DOM") . Todos esses dados personalizados estão disponíveis através da interface {{domxref("HTMLElement")}} do elemento, onde o atributo está definido. A propriedade {{domxref("HTMLElement.dataset")}} concede acesso a estes atributos .
+O `*` pode ser substituído por qualquer nome, desde que siga [a regra de criação de nomes xml](http://www.w3.org/TR/REC-xml/#NT-Name) com as seguintes restrições:
 
-<ul>
- <li>O nome não deve começar com xml, independente da caixa destas letras (Ex: XML, xml, XMl, XmL, ...);</li>
- <li>O nome não deve conter ponto e vírgula (<code>U+003A</code>);</li>
- <li>O nome não deve conter letras maiúsculas.</li>
-</ul>
+- O nome não deve começar com xml, independente da caixa destas letras (Ex: XML, xml, XMl, XmL, ...);
+- O nome não deve conter ponto e vírgula (`U+003A`);
+- O nome não deve conter letras maiúsculas.
 
-<p>Observe que a propriedade {{domxref("HTMLElement.dataset")}} é uma {{domxref("DOMStringMap")}}, e o nome da custom data attribute <em> data-test-value</em> será acessível através do <code>HTMLElement.dataset.testValue </code>( ou<code> HTMLElement.dataset["<em>testValue</em>"] </code>) e todo o traço (<code>U+002D</code>) será substituído pela capitalização(tornar maiúscula) da letra subsequente, deixando o nome no formato camelcase.</p>
+Observe que a propriedade {{domxref("HTMLElement.dataset")}} é uma {{domxref("DOMStringMap")}}, e o nome da custom data attribute _data-test-value_ será acessível através do `HTMLElement.dataset.testValue `( ou` HTMLElement.dataset["testValue"] `) e todo o traço (`U+002D`) será substituído pela capitalização(tornar maiúscula) da letra subsequente, deixando o nome no formato camelcase.
 
-<h3 id="Uso">Uso</h3>
+### Uso
 
-<p>Para adicionar atributos <strong>data-* </strong>, mesmo os elementos HTML mais comuns podem tornar-se mais complexos e poderosos objetos programáveis.  Por exemplo, um "<a href="https://en.wikipedia.org/wiki/Sprite_(computer_graphics)">sprite</a><em>"</em> de uma nave espacial em um jogo pode ser um simples elemento {{HTMLElement("img")}} com um atributo <a href="/pt-BR/docs/Web/HTML/Global_attributes/class">class</a> e diversos atributos data-*:</p>
+Para adicionar atributos **data-\*** , mesmo os elementos HTML mais comuns podem tornar-se mais complexos e poderosos objetos programáveis. Por exemplo, um "[sprite](<https://en.wikipedia.org/wiki/Sprite_(computer_graphics)>)_"_ de uma nave espacial em um jogo pode ser um simples elemento {{HTMLElement("img")}} com um atributo [class](/pt-BR/docs/Web/HTML/Global_attributes/class) e diversos atributos data-\*:
 
-<pre>&lt;img class="spaceship cruiserX3" src="shipX3.png"
+```
+<img class="spaceship cruiserX3" src="shipX3.png"
   data-navio-id="324"   data-armas="laserI laserII"   data-escudos="72%"
   data-x="414354" data-y="85160" data-z="31940"
   onclick="navesespaciais[this.dataset.shipId].explodida()"
-&lt;/img&gt;
-</pre>
+</img>
+```
 
-<p id="Specifications">(Veja mais <em><a href="https://html.spec.whatwg.org/multipage/dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes">aqui</a>)</em></p>
+(Veja mais _[aqui](https://html.spec.whatwg.org/multipage/dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes))_
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes", "data-*")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from latest snapshot, {{SpecName('HTML5.1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes", "data-*")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Snapshot of {{SpecName('HTML WHATWG')}}, no change from {{SpecName('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes", "data-*")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Snapshot of  {{SpecName('HTML WHATWG')}}, initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                        | Status                           | Comment                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes", "data-*")}} | {{Spec2('HTML WHATWG')}} | No change from latest snapshot, {{SpecName('HTML5.1')}}                                  |
+| {{SpecName('HTML5.1', "dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes", "data-*")}}         | {{Spec2('HTML5.1')}}     | Snapshot of {{SpecName('HTML WHATWG')}}, no change from {{SpecName('HTML5 W3C')}} |
+| {{SpecName('HTML5 W3C', "dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes", "data-*")}}     | {{Spec2('HTML5 W3C')}}     | Snapshot of {{SpecName('HTML WHATWG')}}, initial definition.                             |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("html.global_attributes.data_attributes")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>All <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</li>
- <li>The {{domxref("HTMLElement.dataset")}} property that allows to access and modify these values.</li>
-</ul>
+- All [global attributes](/pt-BR/docs/Web/HTML/Global_attributes).
+- The {{domxref("HTMLElement.dataset")}} property that allows to access and modify these values.

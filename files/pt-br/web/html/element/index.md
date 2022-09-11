@@ -12,94 +12,92 @@ tags:
   - básico
 translation_of: Web/HTML/Element
 ---
-<div>{{HTMLSidebar("Elements")}}</div>
+{{HTMLSidebar("Elements")}}
 
-<p><span class="seoSummary">Esta página lista todos os {{Glossary("Element","elementos")}} {{Glossary("HTML")}}.</span> Eles são agrupados por função para ajuda-lo a achar o que quer fácilmente. Apesar deste guia ser escrito para aqueles mais inexperientes com a programação, nós esperamos que seja útil para todos.</p>
+Esta página lista todos os {{Glossary("Element","elementos")}} {{Glossary("HTML")}}. Eles são agrupados por função para ajuda-lo a achar o que quer fácilmente. Apesar deste guia ser escrito para aqueles mais inexperientes com a programação, nós esperamos que seja útil para todos.
 
-<h2 id="Elementos_básicos">Elementos básicos</h2>
+## Elementos básicos
 
-<p>Elementos básicos são o que constituem a base de todo documento HTML. Se vê esses elementos no código fonte de todas as páginas da web, logo em seguida da declaração de doctype, que está na primeira linha da página. O doctype específica qual a versão de (X)HTML que a página está usando. Os elementos que formam o conteúdo da página são postos entre a tag de abertura {{HTMLElement("html")}} e a tag de fechamento <code>&lt;/html&gt;</code>. O elemento {{HTMLElement("html")}} é também conhecido como o elemento raiz.</p>
+Elementos básicos são o que constituem a base de todo documento HTML. Se vê esses elementos no código fonte de todas as páginas da web, logo em seguida da declaração de doctype, que está na primeira linha da página. O doctype específica qual a versão de (X)HTML que a página está usando. Os elementos que formam o conteúdo da página são postos entre a tag de abertura {{HTMLElement("html")}} e a tag de fechamento `</html>`. O elemento {{HTMLElement("html")}} é também conhecido como o elemento raiz.
 
-<p>{{HTMLRefTable("HTML Root Element")}}</p>
+{{HTMLRefTable("HTML Root Element")}}
 
-<h2 id="Metadados_do_documento">Metadados do documento</h2>
+## Metadados do documento
 
-<p>Os metadados são onde se guardam várias informações sobre a página, incluindo informações sobre estilos, scripts e dados para auxiliar software ({{Glossary("search engine", "ferramentas de pesquisa")}}, {{Glossary("Browser", "navegadores")}}, etc) usar e renderizar a página. Os metadados de estilos e scripts podem ser definidos dentro da própria página ou escritos em um arquivo externo que é referênciado pela mesma.</p>
+Os metadados são onde se guardam várias informações sobre a página, incluindo informações sobre estilos, scripts e dados para auxiliar software ({{Glossary("search engine", "ferramentas de pesquisa")}}, {{Glossary("Browser", "navegadores")}}, etc) usar e renderizar a página. Os metadados de estilos e scripts podem ser definidos dentro da própria página ou escritos em um arquivo externo que é referênciado pela mesma.
 
-<p>{{HTMLRefTable("HTML Document Metadata")}}</p>
+{{HTMLRefTable("HTML Document Metadata")}}
 
-<h2 id="Separação_de_conteúdo">Separação de conteúdo</h2>
+## Separação de conteúdo
 
-<p>Elementos de separação de conteúdo permitem organizar o conteúdo do documento em partes lógicas. Use elementos de separação para criar um esboço do conteúdo da página, incluindo navegação por cabeçalho e rodapé, e elementos de cabeçalho para identificar seções de conteúdo.</p>
+Elementos de separação de conteúdo permitem organizar o conteúdo do documento em partes lógicas. Use elementos de separação para criar um esboço do conteúdo da página, incluindo navegação por cabeçalho e rodapé, e elementos de cabeçalho para identificar seções de conteúdo.
 
-<p>{{HTMLRefTable("HTML Sections")}}</p>
+{{HTMLRefTable("HTML Sections")}}
 
-<h2 id="Conteúdo_textual">Conteúdo textual</h2>
+## Conteúdo textual
 
-<p>Usam-se elementos HTML de conteúdo textual para se organizar blocos ou seções de conteúdo postos entre as tags de abertura {{HTMLElement("body")}} e fechamento <code>&lt;/body&gt;</code>. Importantes para {{Glossary("accessibility","accessibilidade")}} e {{Glossary("SEO")}}, esses elementos identificam o propósito ou estrutura do conteúdo.</p>
+Usam-se elementos HTML de conteúdo textual para se organizar blocos ou seções de conteúdo postos entre as tags de abertura {{HTMLElement("body")}} e fechamento `</body>`. Importantes para {{Glossary("accessibility","accessibilidade")}} e {{Glossary("SEO")}}, esses elementos identificam o propósito ou estrutura do conteúdo.
 
-<p>{{HTMLRefTable("HTML Grouping Content")}}</p>
+{{HTMLRefTable("HTML Grouping Content")}}
 
-<h2 id="Semânticas_textuais_inline">Semânticas textuais inline</h2>
+## Semânticas textuais inline
 
-<p>Usa-se a semântica textual inline para definir o significado, estrutura, ou estilo de uma palavra, linha, ou de qualquer outro tipo de texto.</p>
+Usa-se a semântica textual inline para definir o significado, estrutura, ou estilo de uma palavra, linha, ou de qualquer outro tipo de texto.
 
-<p>{{HTMLRefTable("HTML Text-Level Semantics")}}</p>
+{{HTMLRefTable("HTML Text-Level Semantics")}}
 
-<h2 id="Imagem_e_multimídia">Imagem e multimídia</h2>
+## Imagem e multimídia
 
-<p>HTML suporta vários recursos multimídia como imagens, audio, e video.</p>
+HTML suporta vários recursos multimídia como imagens, audio, e video.
 
-<p>{{HTMLRefTable("multimedia")}}</p>
+{{HTMLRefTable("multimedia")}}
 
-<h2 id="Conteúdo_integrado">Conteúdo integrado</h2>
+## Conteúdo integrado
 
-<p>Além do conteúdo normal de multimídia, HTML pode incluir uma variedade de outros conteúdos, apesar de nem todos serem possuírem fácilidade de interação.</p>
+Além do conteúdo normal de multimídia, HTML pode incluir uma variedade de outros conteúdos, apesar de nem todos serem possuírem fácilidade de interação.
 
-<p>{{HTMLRefTable({"include":["HTML embedded content"], "exclude":["multimedia"]})}}</p>
+{{HTMLRefTable({"include":\["HTML embedded content"], "exclude":\["multimedia"]})}}
 
-<h2 id="Scripting">Scripting</h2>
+## Scripting
 
-<p>Com o intuito de permitir a criação de conteúdo dinâmico e aplicações Web, HTML foi projetado com suporte a linguagens de scripting, a mais prominiente sendo JavaScript. Certos elementos suportam essa capacidade.</p>
+Com o intuito de permitir a criação de conteúdo dinâmico e aplicações Web, HTML foi projetado com suporte a linguagens de scripting, a mais prominiente sendo JavaScript. Certos elementos suportam essa capacidade.
 
-<p>{{HTMLRefTable("HTML Scripting")}}</p>
+{{HTMLRefTable("HTML Scripting")}}
 
-<h2 id="Demarcando_edições">Demarcando edições</h2>
+## Demarcando edições
 
-<p>Estes elementos permitem prover indicações que partes específicas de um texto foram alteradas.</p>
+Estes elementos permitem prover indicações que partes específicas de um texto foram alteradas.
 
-<p>{{HTMLRefTable("HTML Edits")}}</p>
+{{HTMLRefTable("HTML Edits")}}
 
-<h2 id="Conteúdo_tabulado">Conteúdo tabulado</h2>
+## Conteúdo tabulado
 
-<p>Estes elementos são usados para se criar e manipular dados em tabelas.</p>
+Estes elementos são usados para se criar e manipular dados em tabelas.
 
-<p>{{HTMLRefTable("HTML tabular data")}}</p>
+{{HTMLRefTable("HTML tabular data")}}
 
-<h2 id="Formulários">Formulários</h2>
+## Formulários
 
-<p>HTML provê de vários elementos que podem ser usados juntos para criar formulários que o usuário pode preencher e mandar para o website ou aplicativo. Há muito mais informação no <a href="/pt-BR/docs/Web/Guide/HTML/Forms">guia de formulários HTML</a>.</p>
+HTML provê de vários elementos que podem ser usados juntos para criar formulários que o usuário pode preencher e mandar para o website ou aplicativo. Há muito mais informação no [guia de formulários HTML](/pt-BR/docs/Web/Guide/HTML/Forms).
 
-<p>{{HTMLRefTable({"include": ["HTML forms"], "exclude":["Deprecated"]})}}</p>
+{{HTMLRefTable({"include": \["HTML forms"], "exclude":\["Deprecated"]})}}
 
-<h2 id="Elementos_interativos">Elementos interativos</h2>
+## Elementos interativos
 
-<p>HTML oferece uma seleção de elementos que auxiliam na criação de objetos interativos de interface para usuários.</p>
+HTML oferece uma seleção de elementos que auxiliam na criação de objetos interativos de interface para usuários.
 
-<p>{{HTMLRefTable("HTML interactive elements")}}</p>
+{{HTMLRefTable("HTML interactive elements")}}
 
-<h2 id="Componentes_Web">Componentes Web</h2>
+## Componentes Web
 
-<p>Componentes Web são uma tecnologia relacionada a HTML que faz possível, essencialmente, a criação e customização de elementos como se fossem parte normal do HTML. Além disso, se pode criar versões customizadas de elementos padrão do HTML.</p>
+Componentes Web são uma tecnologia relacionada a HTML que faz possível, essencialmente, a criação e customização de elementos como se fossem parte normal do HTML. Além disso, se pode criar versões customizadas de elementos padrão do HTML.
 
-<div class="note"><strong>Observação: </strong>Os elementos pertencentes aos Componentes Web são definidos na <a href="https://www.w3.org/TR/components-intro/">coleção de especificações dos Componentes Web</a> da {{Glossary("W3C","World Wide Web Consortium")}} (W3C) em vez da específicação do HTML. Além disso, a especificação dos Componentes Web ainda não foi finalizada e está sujeita a mudanças.</div>
+> **Note:** **Observação:** Os elementos pertencentes aos Componentes Web são definidos na [coleção de especificações dos Componentes Web](https://www.w3.org/TR/components-intro/) da {{Glossary("W3C","World Wide Web Consortium")}} (W3C) em vez da específicação do HTML. Além disso, a especificação dos Componentes Web ainda não foi finalizada e está sujeita a mudanças.
 
-<p>{{HTMLRefTable({"include":["Web Components"],"elements":["shadow"]})}}</p>
+{{HTMLRefTable({"include":\["Web Components"],"elements":\["shadow"]})}}
 
-<h2 id="Elementos_obsoletos">Elementos obsoletos</h2>
+## Elementos obsoletos
 
-<div class="warning">
-<p><strong>Aviso:</strong> Estes elementos HTML antigos são obsoletos e não devem mais ser usados.<strong> Você deve sempre evitar usa-los em novos projetos, e deve substitui-los assim que possível.</strong> Eles estão listados apenas por motivos educacionais.</p>
-</div>
+> **Warning:** **Aviso:** Estes elementos HTML antigos são obsoletos e não devem mais ser usados. **Você deve sempre evitar usa-los em novos projetos, e deve substitui-los assim que possível.** Eles estão listados apenas por motivos educacionais.
 
-<p>{{HTMLRefTable({"include":["Deprecated","Obsolete"]})}}</p>
+{{HTMLRefTable({"include":\["Deprecated","Obsolete"]})}}

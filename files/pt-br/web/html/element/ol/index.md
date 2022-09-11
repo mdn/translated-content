@@ -5,187 +5,155 @@ tags:
   - Agrupamento de conteúdo HTML
   - Elemento
   - Guía
-  - 'HTML:Conteúdo flutuante'
+  - HTML:Conteúdo flutuante
   - Listagem <ol>
   - Referencia
 translation_of: Web/HTML/Element/ol
 ---
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O <strong>Elemento HTML &lt;ol&gt;</strong> (ou<em> Elemento HTML de lista ordenada</em>) representa uma lista de itens ordenados. De forma característica esses itens ordenados em uma lista são mostrados com uma contagem que os precede, que pode ser de qualquer tipo, como numerais, letras, algarismos romanos, ou simples símbolos. Esse modelo numerado não é definido na descrição html da página, mas na folha de estilos CSS associada, pela propriedade<code> </code>{{cssxref("list-style-type")}}. </p>
+O **Elemento HTML \<ol>** (ou _Elemento HTML de lista ordenada_) representa uma lista de itens ordenados. De forma característica esses itens ordenados em uma lista são mostrados com uma contagem que os precede, que pode ser de qualquer tipo, como numerais, letras, algarismos romanos, ou simples símbolos. Esse modelo numerado não é definido na descrição html da página, mas na folha de estilos CSS associada, pela propriedade` `{{cssxref("list-style-type")}}.
 
-<p>Não há limitação para a profundidade e a imbricação das listas definidas com os elementos<code> </code>{{HTMLElement("ol")}}<code> </code>e<code> </code>{{HTMLElement("ul")}}.</p>
+Não há limitação para a profundidade e a imbricação das listas definidas com os elementos` `{{HTMLElement("ol")}}` `e` `{{HTMLElement("ul")}}.
 
-<div class="note"><strong>Nota de uso: </strong>Ambos os elementos<code> </code>{{HTMLElement("ol")}}<code> </code>e<code> </code>{{HTMLElement("ul")}}, representam uma lista de itens. Diferem porque, com o elemento<code> </code>{{HTMLElement("ol")}},<code> </code>a ordem é significativa. Como regra de ouro para determinar qual deles usar, tente mudar a ordem dos itens da lista; se a significação for alterada, o elemento<code> </code>{{HTMLElement("ol")}}<code> </code>deve ser utilizado, senão o elemento<code> </code>{{HTMLElement("ul")}}<code> </code>é adequado.</div>
+> **Note:** **Nota de uso:** Ambos os elementos` `{{HTMLElement("ol")}}` `e` `{{HTMLElement("ul")}}, representam uma lista de itens. Diferem porque, com o elemento` `{{HTMLElement("ol")}},` `a ordem é significativa. Como regra de ouro para determinar qual deles usar, tente mudar a ordem dos itens da lista; se a significação for alterada, o elemento` `{{HTMLElement("ol")}}` `deve ser utilizado, senão o elemento` `{{HTMLElement("ul")}}` `é adequado.
 
-<ul>
- <li><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Categorias de conteúdo</a></dfn><a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content_categories#Phrasing_content">Flutuante</a> e no caso dos elementos filhos de<code> &lt;ol&gt; </code>incluirem pelo menos um elemento de conteúdo {{HTMLElement("li")}} evidente.</li>
- <li><dfn>Conteúdo permitido</dfn> Zero ou mais elementos {{HTMLElement("li")}}</li>
- <li><dfn>Omissão de etiqueta (<em>Tag</em>)</dfn> {{no_tag_omission}}</li>
- <li><dfn>Elementos pai permitidos </dfn> Qualquer elemento que aceite <a href="/en-US/docs/HTML/Content_categories#flow_content" title="HTML/Content categories#flow content">conteúdo flutuante</a>.</li>
- <li><dfn>Interface DOM</dfn> {{domxref("HTMLOListElement")}}</li>
-</ul>
+- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_[Flutuante](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content_categories#Phrasing_content") e no caso dos elementos filhos de` <ol> `incluirem pelo menos um elemento de conteúdo {{HTMLElement("li")}} evidente.
+- _Conteúdo permitido_ Zero ou mais elementos {{HTMLElement("li")}}
+- _Omissão de etiqueta (\_Tag_)\_ {{no_tag_omission}}
+- \_Elementos pai permitidos \_Qualquer elemento que aceite [conteúdo flutuante](/pt-BR/docs/HTML/Content_categories#flow_content "HTML/Content categories#flow content").
+- _Interface DOM_ {{domxref("HTMLOListElement")}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p><span style="line-height: 21px;">Este elemento inclui os </span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">atributos globais</a>.</p>
+Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
 
-<dl>
- <dt>{{htmlattrdef("compact")}} {{Deprecated_inline}}</dt>
- <dd>Este atributo boleano sugere que a lista deve ser renderizada em um estilo compacto. A interpretação deste atributo depende do perfil de navegação (<em>user agent</em>) e não funciona em todos os navegadores. {{noteStart}} Não utilize este atributo, pois ele se tornou obsoleto. O elemento<code> </code>{{HTMLElement("ol")}}<code> </code>deve ser estilizado usando <a href="/en-US/docs/CSS" title="CSS">CSS</a>. Para dar um efeito semelhante ao do atributo compacto, a propriedade <a href="/en-US/docs/CSS" title="CSS">CSS</a><code> </code>{{cssxref("line-height")}}<code> </code>pode ser utilizada com o valor de 80%.{{noteEnd}}</dd>
- <dt>{{htmlattrdef("reversed")}} {{HTMLVersionInline(5)}}</dt>
- <dd>Este atributo boleano especifica que as partes desta lista serão especificadas em ordem reversa, isto é, a menos importante será listada primeiro.</dd>
- <dt>{{htmlattrdef("start")}}{{HTMLVersionInline(5)}}</dt>
- <dd>Este atributo inteiro especifica o valor inicial para a numeração dos itens da lista. Embora o tipo de ordenação dos elementos possa ser com algarismos romanos, tal como XXXI, ou letras, o valor inicial sempre é representado como um inteiro. Para iniciar a contagem a partir da letra "C", utilize<code> </code>&lt;ol start="3"&gt;.
- <div class="note"><strong>Nota</strong>: Este atributo, obsoleto na HTML4, foi reintroduzido na HTML5.</div>
- </dd>
- <dt>{{htmlattrdef("type")}}</dt>
- <dd>Indica o tipo de numeração:
- <ul>
-  <li><code>'a'</code> indica letras minúsculas,</li>
-  <li><code>'A'</code> indica letras maiúsculas,</li>
-  <li><code>'i'</code> indica algarismos romanos minúsculos,</li>
-  <li><code>'I'</code> indica algarismos romanos maiúsculos,</li>
-  <li>e <code>'1'</code> indica números (padrão).</li>
- </ul>
+- {{htmlattrdef("compact")}} {{Deprecated_inline}}
+  - : Este atributo boleano sugere que a lista deve ser renderizada em um estilo compacto. A interpretação deste atributo depende do perfil de navegação (_user agent_) e não funciona em todos os navegadores. {{noteStart}} Não utilize este atributo, pois ele se tornou obsoleto. O elemento` `{{HTMLElement("ol")}}` `deve ser estilizado usando [CSS](/pt-BR/docs/CSS "CSS"). Para dar um efeito semelhante ao do atributo compacto, a propriedade [CSS](/pt-BR/docs/CSS "CSS")` `{{cssxref("line-height")}}` `pode ser utilizada com o valor de 80%.{{noteEnd}}
+- {{htmlattrdef("reversed")}} {{HTMLVersionInline(5)}}
+  - : Este atributo boleano especifica que as partes desta lista serão especificadas em ordem reversa, isto é, a menos importante será listada primeiro.
+- {{htmlattrdef("start")}}{{HTMLVersionInline(5)}}
 
- <p>O tipo de marcação é usado na lista inteira, a menos que um atributo<code> </code>{{htmlattrxref("type", "li")}}<code> </code>diferente seja utilizado dentro do elemento <code> </code>{{HTMLElement("li")}}.</p>
+  - : Este atributo inteiro especifica o valor inicial para a numeração dos itens da lista. Embora o tipo de ordenação dos elementos possa ser com algarismos romanos, tal como XXXI, ou letras, o valor inicial sempre é representado como um inteiro. Para iniciar a contagem a partir da letra "C", utilize` `\<ol start="3">.
 
- <div class="note"><strong>Nota: </strong>Este atributo, obsoleto na HTML4, foi reintroduzido na HTML5. A menos que o valor do número na lista seja importante, a propriedade CSS<code> </code>{{cssxref("list-style-type")}}<code> </code>deve ser usada em seu lugar.</div>
- </dd>
-</dl>
+    > **Note:** **Nota**: Este atributo, obsoleto na HTML4, foi reintroduzido na HTML5.
 
-<h2 id="Exemplos">Exemplos</h2>
+- {{htmlattrdef("type")}}
 
-<h3 id="Simple_example" name="Simple_example">Exemplo simples</h3>
+  - : Indica o tipo de numeração:
 
-<pre class="brush: html">&lt;ol&gt;
-  &lt;li&gt;primeiro item&lt;/li&gt;
-  &lt;li&gt;segundo item&lt;/li&gt;
-  &lt;li&gt;terceiro item&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
+    - `'a'` indica letras minúsculas,
+    - `'A'` indica letras maiúsculas,
+    - `'i'` indica algarismos romanos minúsculos,
+    - `'I'` indica algarismos romanos maiúsculos,
+    - e `'1'` indica números (padrão).
 
-<p>A saída HTML acima será:</p>
+    O tipo de marcação é usado na lista inteira, a menos que um atributo` `{{htmlattrxref("type", "li")}}` `diferente seja utilizado dentro do elemento ``{{HTMLElement("li")}}.
 
+    > **Note:** **Nota:** Este atributo, obsoleto na HTML4, foi reintroduzido na HTML5. A menos que o valor do número na lista seja importante, a propriedade CSS` `{{cssxref("list-style-type")}}` `deve ser usada em seu lugar.
+
+## Exemplos
+
+### Exemplo simples
+
+```html
 <ol>
- <li>primeiro item</li>
- <li>segundo item</li>
- <li>terceiro item</li>
+  <li>primeiro item</li>
+  <li>segundo item</li>
+  <li>terceiro item</li>
 </ol>
+```
 
-<h3 id="Usando_o_atributo_start">Usando o atributo <em>start</em></h3>
+A saída HTML acima será:
 
-<pre class="brush: html">&lt;ol start="7"&gt;
-  &lt;li&gt;primeiro item&lt;/li&gt;
-  &lt;li&gt;segundo item&lt;/li&gt;
-  &lt;li&gt;terceiro item&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
+1.  primeiro item
+2.  segundo item
+3.  terceiro item
 
-<h3 id="Listas_aninhadas">Listas aninhadas</h3>
+### Usando o atributo _start_
 
-<pre class="brush: html">&lt;ol&gt;
-  &lt;li&gt;primeiro item&lt;/li&gt;
-  &lt;li&gt;segundo item      &lt;!-- Veja que a <em>tag</em> de fechamento &lt;/li&gt; não é colocada aqui! --&gt;
-    &lt;ol&gt;
-      &lt;li&gt;segundo item primeiro subitem&lt;/li&gt;
-      &lt;li&gt;segundo item segundo subitem&lt;/li&gt;
-      &lt;li&gt;segundo item terceiro subitem&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;                &lt;!-- Aqui está a <em>tag</em> de fechamento &lt;/li&gt; --&gt;
-  &lt;li&gt;terceiro item&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
+```html
+<ol start="7">
+  <li>primeiro item</li>
+  <li>segundo item</li>
+  <li>terceiro item</li>
+</ol>
+```
 
-<p>A saída HTML acima será:</p>
+### Listas aninhadas
 
+```html
 <ol>
- <li>primeiro item</li>
- <li>segundo item
-  <ol>
-   <li>segundo item primeiro subitem</li>
-   <li>segundo item segundo subitem</li>
-   <li>segundo item terceiro subitem</li>
-  </ol>
- </li>
- <li>terceiro item</li>
+  <li>primeiro item</li>
+  <li>segundo item      <!-- Veja que a tag de fechamento </li> não é colocada aqui! -->
+    <ol>
+      <li>segundo item primeiro subitem</li>
+      <li>segundo item segundo subitem</li>
+      <li>segundo item terceiro subitem</li>
+    </ol>
+  </li>                <!-- Aqui está a tag de fechamento </li> -->
+  <li>terceiro item</li>
 </ol>
+```
 
-<h3 id="&lt;ol>_e_&lt;ul>_aninhados">&lt;ol&gt; e &lt;ul&gt; aninhados</h3>
+A saída HTML acima será:
 
-<pre class="brush: html">&lt;ol&gt;
-  &lt;li&gt;primeiro item&lt;/li&gt;
-  &lt;li&gt;segundo item      &lt;!-- Observe que a <em>tag</em> de fechamento &lt;/li&gt; não é colocada aqui! --&gt;
-    &lt;ul&gt;
-      &lt;li&gt;segundo item primeiro subitem&lt;/li&gt;
-      &lt;li&gt;segundo item segundo subitem&lt;/li&gt;
-      &lt;li&gt;segundo item terceiro subitem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;                &lt;!-- Aqui está a <em>tag</em> de fechamento &lt;/li&gt; --&gt;
-  &lt;li&gt;terceiro item&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
+1.  primeiro item
+2.  segundo item
 
-<p>A saída HTML acima será:</p>
+    1.  segundo item primeiro subitem
+    2.  segundo item segundo subitem
+    3.  segundo item terceiro subitem
 
+3.  terceiro item
+
+### \<ol> e \<ul> aninhados
+
+```html
 <ol>
- <li>primeiro item</li>
- <li>segundo item
-  <ul>
-   <li style="list-style-type: square;">segundo item primeiro subitem</li>
-   <li style="list-style-type: square;">segundo item segundo subitem</li>
-   <li style="list-style-type: square;">segundo item terceiro subitem</li>
-  </ul>
- </li>
- <li>terceiro item</li>
+  <li>primeiro item</li>
+  <li>segundo item      <!-- Observe que a tag de fechamento </li> não é colocada aqui! -->
+    <ul>
+      <li>segundo item primeiro subitem</li>
+      <li>segundo item segundo subitem</li>
+      <li>segundo item terceiro subitem</li>
+    </ul>
+  </li>                <!-- Aqui está a tag de fechamento </li> -->
+  <li>terceiro item</li>
 </ol>
+```
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+A saída HTML acima será:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Situação</th>
-   <th scope="col">Observação</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'grouping-content.html#the-ol-element', '&lt;ol&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "grouping-content.html#the-ol-element", "HTMLOListElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/lists.html#h-10.2', '&lt;ol&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+1.  primeiro item
+2.  segundo item
 
-<h2 id="Compatibilidede_em_navegadores">Compatibilidede em navegadores</h2>
+    - segundo item primeiro subitem
+    - segundo item segundo subitem
+    - segundo item terceiro subitem
+
+3.  terceiro item
+
+## Especificações
+
+| Especificação                                                                                                    | Situação                         | Observação |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'grouping-content.html#the-ol-element', '&lt;ol&gt;')}}     | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', "grouping-content.html#the-ol-element", "HTMLOListElement")}} | {{Spec2('HTML5 W3C')}}     |            |
+| {{SpecName('HTML4.01', 'struct/lists.html#h-10.2', '&lt;ol&gt;')}}                         | {{Spec2('HTML4.01')}}     |            |
+
+## Compatibilidede em navegadores
 
 {{Compat("html.elements.ol")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Outros elementos HTML relacionados à lista:<code> </code>{{HTMLElement("ul")}}, {{HTMLElement("li")}},<code> </code>{{HTMLElement("menu")}}<code> </code>e o obsoleto<code> </code>{{HTMLElement("dir")}};</li>
- <li>Propriedades CSS que podem ser especialmente úteis para determinar o modelo do elemento<code> &lt;ol&gt;</code>:
-  <ul>
-   <li>a propriedade<code> </code>{{cssxref("list-style")}},<code> </code><span class="st">conveniente</span> para escolher a forma como os ordinais são exibidos,</li>
-   <li><a href="/en-US/docs/CSS_Counters" title="CSS_Counters">contadores CSS</a>, útil para gerenciar listas complexas aninhadas,</li>
-   <li>a propriedade<code> </code>{{cssxref("line-height")}},<code> </code><span class="st">proficiente</span> para simular o atributo obsoleto<code> </code>{{htmlattrxref("compact", "ol")}},</li>
-   <li>a propriedade<code> </code>{{cssxref("margin")}},<code> </code><span class="st">aplicável</span> para controlar a indentação da lista.</li>
-  </ul>
- </li>
-</ul>
+- Outros elementos HTML relacionados à lista:` `{{HTMLElement("ul")}}, {{HTMLElement("li")}},` `{{HTMLElement("menu")}}` `e o obsoleto` `{{HTMLElement("dir")}};
+- Propriedades CSS que podem ser especialmente úteis para determinar o modelo do elemento` <ol>`:
 
-<div>{{HTMLRef}}</div>
+  - a propriedade` `{{cssxref("list-style")}},` `conveniente para escolher a forma como os ordinais são exibidos,
+  - [contadores CSS](/pt-BR/docs/CSS_Counters "CSS_Counters"), útil para gerenciar listas complexas aninhadas,
+  - a propriedade` `{{cssxref("line-height")}},` `proficiente para simular o atributo obsoleto` `{{htmlattrxref("compact", "ol")}},
+  - a propriedade` `{{cssxref("margin")}},` `aplicável para controlar a indentação da lista.
+
+{{HTMLRef}}

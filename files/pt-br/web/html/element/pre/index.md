@@ -3,88 +3,63 @@ title: <pre>
 slug: Web/HTML/Element/pre
 translation_of: Web/HTML/Element/pre
 ---
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p><em>HTML texto preformatado</em> (<strong>&lt;pre&gt;</strong>) é a tag utilizada para representar texto pré-formatado. Um texto dentro desse elemento é tipicamente exibido em uma fonte não proporcional da mesma maneira em que o texto original foi disposto no arquivo. Espaços em branco são mantidos no texto da mesma forma em que este foi digitado.  </p>
+_HTML texto preformatado_ (**\<pre>**) é a tag utilizada para representar texto pré-formatado. Um texto dentro desse elemento é tipicamente exibido em uma fonte não proporcional da mesma maneira em que o texto original foi disposto no arquivo. Espaços em branco são mantidos no texto da mesma forma em que este foi digitado.
 
-<p><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Content categories</a></dfn> <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content_categories#Phrasing_content">Flow content</a>, palpable content.</p>
+_[Content categories](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content_categories#Phrasing_content"), palpable content.
 
-<ul>
- <li><dfn>Conteúdo permitido</dfn> <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="/en-US/docs/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</li>
- <li><dfn>Tag omission</dfn> {{no_tag_omission}}</li>
- <li><dfn>Elementos pai permitidos</dfn> Any element that accepts <a href="/en-US/docs/HTML/Content_categories#flow_content" title="HTML/Content categories#flow content">flow content</a>.</li>
- <li><dfn>interface DOM</dfn> {{domxref("HTMLPreElement")}}</li>
-</ul>
+- _Conteúdo permitido_ [Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
+- _Tag omission_ {{no_tag_omission}}
+- _Elementos pai permitidos_ Any element that accepts [flow content](/pt-BR/docs/HTML/Content_categories#flow_content "HTML/Content categories#flow content").
+- _interface DOM_ {{domxref("HTMLPreElement")}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Esse elemento apenas inclui atributos globais.</p>
+Esse elemento apenas inclui atributos globais.
 
-<p>This element only includes the <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" title="HTML/Global attributes">global attributes</a>.</p>
+This element only includes the [global attributes](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
 
-<dl>
- <dt>{{htmlattrdef("cols")}} {{non-standard_inline}}{{obsolete_inline}}</dt>
- <dd>Contains the <em>preferred</em> count of characters that a line should have. It was a non-standard synonym of {{htmlattrxref("width", "pre")}}. To achieve such an effect, use CSS styling instead.</dd>
- <dt>{{htmlattrdef("width")}} {{obsolete_inline}}</dt>
- <dd>Contains the <em>preferred</em> count of characters that a line should have. Though technically still implemented, this attribute has no visual effect; to achieve such an effect, use CSS styling instead.</dd>
- <dt>{{htmlattrdef("wrap")}} {{non-standard_inline}}</dt>
- <dd>Is a <em>hint</em> indicating how the overflow must happen. In modern browser this hint is ignored and no visual effect results in its present; to achieve such an effect, use CSS styling instead.</dd>
-</dl>
+- {{htmlattrdef("cols")}} {{non-standard_inline}}{{obsolete_inline}}
+  - : Contains the _preferred_ count of characters that a line should have. It was a non-standard synonym of {{htmlattrxref("width", "pre")}}. To achieve such an effect, use CSS styling instead.
+- {{htmlattrdef("width")}} {{obsolete_inline}}
+  - : Contains the _preferred_ count of characters that a line should have. Though technically still implemented, this attribute has no visual effect; to achieve such an effect, use CSS styling instead.
+- {{htmlattrdef("wrap")}} {{non-standard_inline}}
+  - : Is a _hint_ indicating how the overflow must happen. In modern browser this hint is ignored and no visual effect results in its present; to achieve such an effect, use CSS styling instead.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: html">&lt;!-- Um exemplo de código css --&gt;
-&lt;pre&gt;
+```html
+<!-- Um exemplo de código css -->
+<pre>
 body {
   color:red;
 }
-&lt;/pre&gt;
 </pre>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<pre>body {
+```
+body {
   color:red;
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'grouping-content.html#the-pre-element', '&lt;pre&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Nenhuma mudança significante na {{SpecName("HTML WHATWG")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-pre-element', '&lt;pre&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Nenhuma mudança significante na {{SpecName("HTML4.01")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/text.html#h-9.3.4', '&lt;dl&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td><code>Atributto cols</code> obsoleto</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                    | Status                           | Comentário                                                           |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'grouping-content.html#the-pre-element', '&lt;pre&gt;')}} | {{Spec2('HTML WHATWG')}} | Nenhuma mudança significante na {{SpecName("HTML WHATWG")}} |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-pre-element', '&lt;pre&gt;')}}     | {{Spec2('HTML5 W3C')}}     | Nenhuma mudança significante na {{SpecName("HTML4.01")}}     |
+| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.4', '&lt;dl&gt;')}}                         | {{Spec2('HTML4.01')}}     | `Atributto cols` obsoleto                                            |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade de navegador</h2>
+## Compatibilidade de navegador
 
 {{Compat("html.elements.pre")}}
 
-<h2 id="Veja_mais">Veja mais</h2>
+## Veja mais
 
-<ul>
- <li>CSS: {{ Cssxref('white-space') }}, {{ Cssxref('word-break') }}</li>
-</ul>
+- CSS: {{ Cssxref('white-space') }}, {{ Cssxref('word-break') }}
 
-<div>{{ HTMLRef }}</div>
+{{ HTMLRef }}

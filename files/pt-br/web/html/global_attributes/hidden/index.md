@@ -7,57 +7,34 @@ tags:
   - Referência(2)
 translation_of: Web/HTML/Global_attributes/hidden
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p><span class="seoSummary">O <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributo global</a> <strong><code>hidden</code></strong> é um atributo booleano que indica se um elemento é ou não <em>relevante</em>. Por exemplo, ele pode ser usado para esconder elementos de página que não podem ser usados até que o processo de login seja completo.</span> Os navegadores não renderizarão elementos com o atributo <code>hidden</code> setado.</p>
+O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **`hidden`** é um atributo booleano que indica se um elemento é ou não _relevante_. Por exemplo, ele pode ser usado para esconder elementos de página que não podem ser usados até que o processo de login seja completo. Os navegadores não renderizarão elementos com o atributo `hidden` setado.
 
-<p>O atributo <code>hidden</code> não deve ser utilizado para esconder conteúdo que poderia legitimamente ser mostrado em outra apresentação, por exemplo, não é correto usar  <code>hidden</code> para esconder abas de formulários em paineis, porque interfaces separadas por abas são meramente um tipo de apresentação em fluxo — o que pode ser igualmente mostrado em forma vertical com barra de rolagem. É similarmente incorreto usar este atributo para esconder conteúdo de apenas uma apresentação — se algo está marcado como <code>hidden</code>, ele está escondido de todas as apresentações incluindo, por exemplo, leitores de tela.</p>
+O atributo `hidden` não deve ser utilizado para esconder conteúdo que poderia legitimamente ser mostrado em outra apresentação, por exemplo, não é correto usar `hidden` para esconder abas de formulários em paineis, porque interfaces separadas por abas são meramente um tipo de apresentação em fluxo — o que pode ser igualmente mostrado em forma vertical com barra de rolagem. É similarmente incorreto usar este atributo para esconder conteúdo de apenas uma apresentação — se algo está marcado como `hidden`, ele está escondido de todas as apresentações incluindo, por exemplo, leitores de tela.
 
-<p>Elementos com <code>hidden</code> não devem estar ligados a outros elementos sem <code>hidden</code>. Elementos filhos de um elemento com o atributo <code>hidden</code> ainda estão ativos, ou seja, é possível executar a ação <code>submit</code> de um formulário ou uma tag <code>script</code> pode ser executada se em ambos os casos estes elementos forem filhos de um elemento com o atributo <code>hidden</code>.</p>
+Elementos com `hidden` não devem estar ligados a outros elementos sem `hidden`. Elementos filhos de um elemento com o atributo `hidden` ainda estão ativos, ou seja, é possível executar a ação `submit` de um formulário ou uma tag `script` pode ser executada se em ambos os casos estes elementos forem filhos de um elemento com o atributo `hidden`.
 
-<p>Por exemplo, é incorreto o uso do atributo <code>href</code> referenciando a uma sessão marcada com o atributo <code>hidden</code>. Se o conteúdo não é aplicável ou relevante, não faz sentido fazer a referência.</p>
+Por exemplo, é incorreto o uso do atributo `href` referenciando a uma sessão marcada com o atributo `hidden`. Se o conteúdo não é aplicável ou relevante, não faz sentido fazer a referência.
 
-<p>Pode ser correto, entretanto, usar o atributo ARIA <code>aria-describedby</code>para referenciar descrições que estejam, elas mesmas, escondidas. Esconder as descrições implica que elas não são úteis por si só. Mas elas podem ser escritas de forma que sejam úteis no contexto específico do elemento que descrevem</p>
+Pode ser correto, entretanto, usar o atributo ARIA `aria-describedby`para referenciar descrições que estejam, elas mesmas, escondidas. Esconder as descrições implica que elas não são úteis por si só. Mas elas podem ser escritas de forma que sejam úteis no contexto específico do elemento que descrevem
 
-<p>Similarmente, um elemento canvas com atributo <code>hidden</code> poderia ser usado como buffer por um script de gráficos, e um controle de formulário, usando seu atributo form, poderia referir-se a um elemento <code>form</code> com atributo <code>hidden</code>.</p>
+Similarmente, um elemento canvas com atributo `hidden` poderia ser usado como buffer por um script de gráficos, e um controle de formulário, usando seu atributo form, poderia referir-se a um elemento `form` com atributo `hidden`.
 
-<div class="note">
-<p><strong>Nota:</strong> Mudar o valor da propriedade {{cssxref("display")}} no CSS de um elemento com o atributo <code>hidden</code> sobrescreve o comportamento. Por exemplo, elementos com o estilo <code>display: flex;</code> serão mostrados independente da presença do atributo <code>hidden</code>.</p>
-</div>
+> **Note:** **Nota:** Mudar o valor da propriedade {{cssxref("display")}} no CSS de um elemento com o atributo `hidden` sobrescreve o comportamento. Por exemplo, elementos com o estilo `display: flex;` serão mostrados independente da presença do atributo `hidden`.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "interaction.html#the-hidden-attribute", "hidden")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Sem mudanças desde o último snapshot, {{SpecName('HTML5.1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "rendering.html#hiddenCSS", "Hidden elements")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td><span id="result_box" lang="pt"><span>Define</span> <span>o processamento padrão</span> <span>sugerido d</span><span>o atributo hidden</span> <span>usando </span></span>CSS</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "editing.html#the-hidden-attribute", "hidden")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Definição inicial do snapshot de {{SpecName('HTML WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                            | Status                           | Comment                                                                |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "interaction.html#the-hidden-attribute", "hidden")}} | {{Spec2('HTML WHATWG')}} | Sem mudanças desde o último snapshot, {{SpecName('HTML5.1')}} |
+| {{SpecName('HTML WHATWG', "rendering.html#hiddenCSS", "Hidden elements")}}     | {{Spec2('HTML WHATWG')}} | Define o processamento padrão sugerido do atributo hidden usando CSS   |
+| {{SpecName('HTML5.1', "editing.html#the-hidden-attribute", "hidden")}}             | {{Spec2('HTML5.1')}}     | Definição inicial do snapshot de {{SpecName('HTML WHATWG')}}  |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("html.global_attributes.hidden")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Todos os <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a>.</li>
-</ul>
+- Todos os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).

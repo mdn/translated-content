@@ -3,121 +3,121 @@ title: <hgroup>
 slug: Web/HTML/Element/hgroup
 translation_of: Web/HTML/Element/hgroup
 ---
-<div>{{HTMLRef}}{{seeCompatTable}}</div>
+{{HTMLRef}}{{seeCompatTable}}
 
-<p>O <strong>elemento HTML <code>&lt;hgroup&gt;</code> </strong>destina-se a agrupar cabeçalhos de diferentes níveis para uma seção do documento. Ele agrupa (é um container para) um conjunto de elementos <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code>.</p>
+O **elemento HTML `<hgroup>` **destina-se a agrupar cabeçalhos de diferentes níveis para uma seção do documento. Ele agrupa (é um container para) um conjunto de elementos [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Categorias de conteudo</th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">Flow content</a>, heading content, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Conteúdo permitido</th>
-   <td>One or more {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, and/or {{HTMLElement("h6")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omissão de tag</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row"><br>
-    Elementos-pai permitidos</th>
-   <td>Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Categorias de conteudo</th>
+      <td>
+        <a
+          href="/en-US/docs/HTML/Content_categories#Flow_content"
+          title="HTML/Content categories#Flow content"
+          >Flow content</a
+        >, heading content, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Conteúdo permitido</th>
+      <td>
+        One or more {{HTMLElement("h1")}}, {{HTMLElement("h2")}},
+        {{HTMLElement("h3")}}, {{HTMLElement("h4")}},
+        {{HTMLElement("h5")}}, and/or {{HTMLElement("h6")}}.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omissão de tag</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row"><br />Elementos-pai permitidos</th>
+      <td>
+        Any element that accepts
+        <a
+          href="/en-US/docs/HTML/Content_categories#Flow_content"
+          title="HTML/Content categories#Flow content"
+          >flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="atributos">atributos</h2>
+## atributos
 
-<p>Esse elemento admite apenas os <a href="/en-US/docs/HTML/Global_attributes">global attributes</a> (atributos globais)</p>
+Esse elemento admite apenas os [global attributes](/pt-BR/docs/HTML/Global_attributes) (atributos globais)
 
-<h2 id="Notas_sobre_o_uso">Notas sobre o uso</h2>
+## Notas sobre o uso
 
-<div class="note">
-<p>O elemento <code>&lt;hgroup&gt;</code> foi removido da especificação do W3C para a HTML5, mas ainda se encontra na especificação HTML do WHATWG. Foi parcialmente implementado na maioria dos navegadores, contudo é pouco provável que seja incluído na especificação.<br>
- Considerando que a finalidade do elemento <code>&lt;hgroup&gt;</code> é a de definir a maneira como os títulos serão mostrados pelo <a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#The_HTML5_outline_algorithm">outline algorithm definido na especificação da HTML</a> e considerando ainda que o <strong>outline algorithm da HTML não está implementado em nenhum navegador</strong>, conclui-se que, na prática, a semântica do elemento <code>&lt;hgroup&gt;</code> é meramente teórica.<br>
- A especificação do W3C para a HTML5 fornece algumas sugestões para a marcação de <a href="https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements">Subheadings, subtitles, alternative titles and taglines</a> sem que se use o elemento <code>&lt;hgroup&gt;</code>.</p>
-</div>
+> **Note:** O elemento `<hgroup>` foi removido da especificação do W3C para a HTML5, mas ainda se encontra na especificação HTML do WHATWG. Foi parcialmente implementado na maioria dos navegadores, contudo é pouco provável que seja incluído na especificação.
+> Considerando que a finalidade do elemento `<hgroup>` é a de definir a maneira como os títulos serão mostrados pelo [outline algorithm definido na especificação da HTML](/pt-BR/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#The_HTML5_outline_algorithm) e considerando ainda que o **outline algorithm da HTML não está implementado em nenhum navegador**, conclui-se que, na prática, a semântica do elemento `<hgroup>` é meramente teórica.
+> A especificação do W3C para a HTML5 fornece algumas sugestões para a marcação de [Subheadings, subtitles, alternative titles and taglines](https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements) sem que se use o elemento `<hgroup>`.
 
-<p><code>O elemento &lt;hgroup&gt; permite que o cabeçalho principal de uma seção de documento seja agrupado com quaisquer cabeçalhos secundarios-como subtitulos ou titulos alternativos-para formatar um cabeçalho de varios niveis.</code></p>
+`O elemento <hgroup> permite que o cabeçalho principal de uma seção de documento seja agrupado com quaisquer cabeçalhos secundarios-como subtitulos ou titulos alternativos-para formatar um cabeçalho de varios niveis.`
 
-<p><font face="consolas, Liberation Mono, courier, monospace"><span style="">Em outras palavras o elemento &lt;hgroup&gt; impede que qualquer um dos seus filhos secundarios &lt;h1&gt;-&lt;h6&gt; crie seçoes separadas propias no esboço-como esses elementos &lt;h1&gt;-&lt;h6&gt; normalmene seriam se não fossem filhos de nenhum &lt;hgroup&gt; </span></font></p>
+Em outras palavras o elemento \<hgroup> impede que qualquer um dos seus filhos secundarios \<h1>-\<h6> crie seçoes separadas propias no esboço-como esses elementos \<h1>-\<h6> normalmene seriam se não fossem filhos de nenhum \<hgroup>
 
-<p>Então, no esboço abstrato produzida pelo algortimo abstrato do HTML definido na especificação HTML, o &lt;hgroup&gt; como um todo forma uma posição lógica simples, com todo o conjunto de filhos &lt;h1&gt;-&lt;h6&gt; do &lt;hgroup&gt; entrando no esquema como uma unidade multinível, para compreender esse cabeçalho lógico único no resumo abstrato.</p>
+Então, no esboço abstrato produzida pelo algortimo abstrato do HTML definido na especificação HTML, o \<hgroup> como um todo forma uma posição lógica simples, com todo o conjunto de filhos \<h1>-\<h6> do \<hgroup> entrando no esquema como uma unidade multinível, para compreender esse cabeçalho lógico único no resumo abstrato.
 
-<p>Para produzir alguma (não-abstrato) visualização não renderizada como um esboço, alguma escolhe deve ser feita no design para renderizar ferramentas sobre como renderizar &lt;hgroup&gt; cabeçalhos como um jeito para transmitir sua natureza multi-nível. Há uma varidade de jeitos que &lt;hgroup&gt; pode ser mostrado em um esboço renderizado; por exemplo:</p>
+Para produzir alguma (não-abstrato) visualização não renderizada como um esboço, alguma escolhe deve ser feita no design para renderizar ferramentas sobre como renderizar \<hgroup> cabeçalhos como um jeito para transmitir sua natureza multi-nível. Há uma varidade de jeitos que \<hgroup> pode ser mostrado em um esboço renderizado; por exemplo:
 
-<ul>
- <li>um &lt;hgroup&gt; pode ser mostrado em um esboço renderizado com dois pontos e espaço (": ") ou outra pontuação após o cabeçalho principal e antes do primeiro cabeçalho secundário (e como a mesma pontuaçã, ou parecida, antes de qualquer cabeçalho secundário).</li>
- <li>um &lt;hgroup&gt; pode ser mostrado em um esboço renderizado com o primeiro cabeçalho seguido de parênteses ao redor do segundo cabeçalho (s).</li>
-</ul>
+- um \<hgroup> pode ser mostrado em um esboço renderizado com dois pontos e espaço (": ") ou outra pontuação após o cabeçalho principal e antes do primeiro cabeçalho secundário (e como a mesma pontuaçã, ou parecida, antes de qualquer cabeçalho secundário).
+- um \<hgroup> pode ser mostrado em um esboço renderizado com o primeiro cabeçalho seguido de parênteses ao redor do segundo cabeçalho (s).
 
-<p>Considere o documento HTML a seguir:</p>
+Considere o documento HTML a seguir:
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;title&gt;HTML Standard&lt;/title&gt;
-&lt;body&gt;
-  &lt;hgroup id="document-title"&gt;
-    &lt;h1&gt;HTML&lt;/h1&gt;
-    &lt;h2&gt;Living Standard — Last Updated 12 August 2016&lt;/h2&gt;
-  &lt;/hgroup&gt;
-  &lt;p&gt;Some intro to the document.&lt;/p&gt;
-  &lt;h2&gt;Table of contents&lt;/h2&gt;
-  &lt;ol id=toc&gt;...&lt;/ol&gt;
-  &lt;h2&gt;First section&lt;/h2&gt;
-  &lt;p&gt;Some intro to the first section.&lt;/p&gt;
-&lt;/body&gt;</pre>
+```html
+<!DOCTYPE html>
+<title>HTML Standard</title>
+<body>
+  <hgroup id="document-title">
+    <h1>HTML</h1>
+    <h2>Living Standard — Last Updated 12 August 2016</h2>
+  </hgroup>
+  <p>Some intro to the document.</p>
+  <h2>Table of contents</h2>
+  <ol id=toc>...</ol>
+  <h2>First section</h2>
+  <p>Some intro to the first section.</p>
+</body>
+```
 
-<p>Um esboço renderizado para esse documento seria como:</p>
+Um esboço renderizado para esse documento seria como:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14599/outline-colon.png" style="height: 99px; width: 450px;"></p>
+![](https://mdn.mozillademos.org/files/14599/outline-colon.png)
 
-<p>Isso é, o esboço renderizado deve ser o título primário, HTML, seguido por dois pontos e espaço, seguido pelo título secundário, Living Standard - Last Update 12 August 2016.</p>
+Isso é, o esboço renderizado deve ser o título primário, HTML, seguido por dois pontos e espaço, seguido pelo título secundário, Living Standard - Last Update 12 August 2016.
 
-<p>Ou, o esboço renderizado para aquele documento poderia ser como:</p>
+Ou, o esboço renderizado para aquele documento poderia ser como:
 
-<p><img alt="Rendered outline that includes an &lt;hgroup> element, with parens around the secondary heading" src="https://mdn.mozillademos.org/files/14601/outline-paren.png" style="height: 106px; width: 450px;"></p>
+![Rendered outline that includes an <hgroup> element, with parens around the secondary heading](https://mdn.mozillademos.org/files/14601/outline-paren.png)
 
-<p>Isso é, o esboço renderizado deve mostrar o título primário, HTML, seguido pelo título secundário mostrado entre parênteses: (Living Standard - Last Updated 12 August 2016).</p>
+Isso é, o esboço renderizado deve mostrar o título primário, HTML, seguido pelo título secundário mostrado entre parênteses: (Living Standard - Last Updated 12 August 2016).
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: html notranslate">&lt;hgroup id="document-title"&gt;
-  &lt;h1&gt;HTML&lt;/h1&gt;
-  &lt;h2&gt;Living Standard — Last Updated 12 August 2016&lt;/h2&gt;
-&lt;/hgroup&gt;
-</pre>
+```html
+<hgroup id="document-title">
+  <h1>HTML</h1>
+  <h2>Living Standard — Last Updated 12 August 2016</h2>
+</hgroup>
+```
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-hgroup-element', '&lt;hgroup&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-hgroup-element', '&lt;hgroup&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("html.elements.hgroup")}}</p>
+{{Compat("html.elements.hgroup")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};</li>
- <li><a class="deki-ns current" href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document" title="Sections and Outlines of an HTML5 document">Sections and outlines of an HTML5 document</a>.</li>
-</ul>
+- Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
+- [Sections and outlines of an HTML5 document](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document").

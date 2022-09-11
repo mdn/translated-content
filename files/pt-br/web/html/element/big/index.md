@@ -3,78 +3,76 @@ title: '<big>: Elemento para deixar o texto maio'
 slug: Web/HTML/Element/big
 translation_of: Web/HTML/Element/big
 ---
-<div>{{obsolete_header}}</div>
+{{obsolete_header}}
 
-<p><span class="seoSummary">The obsolete <strong>HTML Big Element</strong> (<strong><code>&lt;big&gt;</code></strong>) renders the enclosed text at a font size one level larger than the surrounding text (<code>medium</code> becomes <code>large</code>, for example).</span> The size is capped at the browser's maximum permitted font size.</p>
+The obsolete **HTML Big Element** (**`<big>`**) renders the enclosed text at a font size one level larger than the surrounding text (`medium` becomes `large`, for example). The size is capped at the browser's maximum permitted font size.
 
-<div class="note">
-<p><strong>Usage note: </strong>As it was purely presentational, this element has been removed in <a href="/en-US/docs/Web/Guide/HTML/HTML5" title="/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a> and shouldn't be used anymore. Instead web developers should use the CSS {{cssxref("font-size")}} property to adjust the font size.</p>
-</div>
+> **Note:** **Usage note:** As it was purely presentational, this element has been removed in [HTML5](/pt-BR/docs/Web/Guide/HTML/HTML5) and shouldn't be used anymore. Instead web developers should use the CSS {{cssxref("font-size")}} property to adjust the font size.
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>This element has no other attributes than the <a href="/en-US/docs/HTML/global_attributes" title="HTML/global attributes">global attributes</a>, common to all elements.</p>
+This element has no other attributes than the [global attributes](/pt-BR/docs/HTML/global_attributes "HTML/global attributes"), common to all elements.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Here we see examples showing the use of <code>&lt;big&gt;</code> followed by an example showing how to accomplish the same results using modern CSS syntax instead.</p>
+Here we see examples showing the use of `<big>` followed by an example showing how to accomplish the same results using modern CSS syntax instead.
 
-<h3 id="Usando_&lt;big>">Usando <code>&lt;big&gt;</code></h3>
+### Usando `<big>`
 
-<div id="Using_big">
-<p>Este elemento usa o comando <code>&lt;big&gt;</code> para aumentar o tamanho do texto. O elemento é obsoleto, porém aceitável em todos os navegadores.</p>
+Este elemento usa o comando `<big>` para aumentar o tamanho do texto. O elemento é obsoleto, porém aceitável em todos os navegadores.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;
-  Este é o primeiro texto. &lt;big&gt;Este texto usa big
-para ficar com a aparência maior.&lt;/big&gt;
-&lt;/p&gt;</pre>
-</div>
+```html
+<p>
+  Este é o primeiro texto. <big>Este texto usa big
+para ficar com a aparência maior.</big>
+</p>
+```
 
-<h4 id="Resultado">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample("Using_big", 640, 60)}}</p>
+{{EmbedLiveSample("Using_big", 640, 60)}}
 
-<h3 id="Using_CSS_font-size">Using CSS <code>font-size</code></h3>
+### Using CSS `font-size`
 
-<p>This example uses the CSS {{cssxref("font-size")}} property to increase the font size by one level.</p>
+This example uses the CSS {{cssxref("font-size")}} property to increase the font size by one level.
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.bigger {
+```css
+.bigger {
   font-size: larger;
-}</pre>
+}
+```
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;
-  This is the first sentence. &lt;span class="bigger"&gt;This whole
-  sentence is in bigger letters.&lt;/span&gt;
-&lt;/p&gt;</pre>
+```html
+<p>
+  This is the first sentence. <span class="bigger">This whole
+  sentence is in bigger letters.</span>
+</p>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Using_CSS_font-size", 640, 60)}}</p>
+{{EmbedLiveSample("Using_CSS_font-size", 640, 60)}}
 
-<h2 id="DOM_interface">DOM interface</h2>
+## DOM interface
 
-<p>This element implements the {{domxref('HTMLElement')}} interface.</p>
+This element implements the {{domxref('HTMLElement')}} interface.
 
-<div class="note"><strong>Implementation note: </strong>Up to Gecko 1.9.2 inclusive, Firefox implements the {{domxref('HTMLSpanElement')}} interface for this element.</div>
+> **Note:** **Implementation note:** Up to Gecko 1.9.2 inclusive, Firefox implements the {{domxref('HTMLSpanElement')}} interface for this element.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("html.elements.big")}}
 
+## See also
 
-<p>{{Compat("html.elements.big")}}</p>
+- CSS: {{cssxref("font-size")}}, {{cssxref("font")}}
+- HTML: {{htmlelement("small")}}, {{htmlelement("font")}}, {{htmlelement("style")}}
+- HTML 4.01 Specification: [Font Styles](http://www.w3.org/TR/html4/present/graphics.html#h-15.2)
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>CSS: {{cssxref("font-size")}}, {{cssxref("font")}}</li>
- <li>HTML: {{htmlelement("small")}}, {{htmlelement("font")}}, {{htmlelement("style")}}</li>
- <li>HTML 4.01 Specification: <a class="external" href="http://www.w3.org/TR/html4/present/graphics.html#h-15.2">Font Styles</a></li>
-</ul>
-
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

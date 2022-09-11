@@ -8,19 +8,19 @@ tags:
   - Referencia
 translation_of: Web/HTML/Element/nobr
 ---
-<div>{{non-standard_header}}</div>
+{{non-standard_header}}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p><span class="seoSummary"><code><font face="Open Sans, sans-serif">O elemento HTML </font>&lt;nobr&gt;</code> previne que um texto quebre em uma nova linha automaticamente, de forma que ele seja exibido em uma única grande linha, podendo tornar o <em>scroll</em> (horizontal) necessário. Esta tag não é padrão HTML e não deve ser usada.</span> Como alternativa, use a propriedade CSS {{Cssxref("white-space")}} como segue:</p>
+`O elemento HTML <nobr>` previne que um texto quebre em uma nova linha automaticamente, de forma que ele seja exibido em uma única grande linha, podendo tornar o _scroll_ (horizontal) necessário. Esta tag não é padrão HTML e não deve ser usada. Como alternativa, use a propriedade CSS {{Cssxref("white-space")}} como segue:
 
-<pre class="brush:css">&lt;span style="white-space: nowrap"&gt;Texto longo sem quebras de linha&lt;/span&gt;</pre>
+```css
+<span style="white-space: nowrap">Texto longo sem quebras de linha</span>
+```
 
-<h2 id="See_also" name="See_also">Ver também</h2>
+## Ver também
 
-<ul>
- <li>{{Cssxref("white-space")}}</li>
- <li>{{Cssxref("overflow")}}</li>
-</ul>
+- {{Cssxref("white-space")}}
+- {{Cssxref("overflow")}}
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

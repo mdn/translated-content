@@ -3,66 +3,44 @@ title: footer (rodapé)
 slug: Web/HTML/Element/footer
 translation_of: Web/HTML/Element/footer
 ---
-<h3 id="Resumo"><strong>Resumo</strong></h3>
+### Resumo
 
-<p>O elemento HTML de Rodapé (&lt;footer&gt;) representa um rodapé para o seu sectioning content (conteúdo de seção) mais próximo ou <a href="https://developer.mozilla.org/en-US/docs/Sections_and_Outlines_of_an_HTML5_document#sectioning_root" title="Sections and Outlines of an HTML5 document#sectioning root">sectioning root</a> elemento (ou seja, seu parente mais próximo {{HTMLElement ("article")}}, {{HTMLElement ("aside")}}, {{HTMLElement ("nav")}}, {{HTMLElement ("section")}}, {{HTMLElement ("blockquote")}}, {{HTMLElement ("body")}}, {{HTMLElement ("details" )}}, {{HTMLElement ("fieldset")}}, {{HTMLElement ("figure")}}, {{HTMLElement ("td")}}). Normalmente um rodapé contém informações sobre o autor da seção de dados, direitos autorais ou links para documentos relacionados.</p>
+O elemento HTML de Rodapé (\<footer>) representa um rodapé para o seu sectioning content (conteúdo de seção) mais próximo ou [sectioning root](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document#sectioning_root "Sections and Outlines of an HTML5 document#sectioning root") elemento (ou seja, seu parente mais próximo {{HTMLElement ("article")}}, {{HTMLElement ("aside")}}, {{HTMLElement ("nav")}}, {{HTMLElement ("section")}}, {{HTMLElement ("blockquote")}}, {{HTMLElement ("body")}}, {{HTMLElement ("details" )}}, {{HTMLElement ("fieldset")}}, {{HTMLElement ("figure")}}, {{HTMLElement ("td")}}). Normalmente um rodapé contém informações sobre o autor da seção de dados, direitos autorais ou links para documentos relacionados.
 
-<div class="note">
-<p><strong>Notas de Uso:</strong></p>
+> **Note:** **Notas de Uso:**
+>
+> - Coloque informações sobre o autor em um elemento {{HTMLElement("address")}} que pode ser incluído no elemento `<footer>`.
+> - O elemento `<footer>` não é sectioning content portanto, não introduz uma nova seção no [outline](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document").
 
-<ul>
- <li>Coloque informações sobre o autor em um elemento {{HTMLElement("address")}} que pode ser incluído no elemento <code>&lt;footer&gt;</code>.</li>
- <li>O elemento <code>&lt;footer&gt;</code> não é sectioning content portanto, não introduz uma nova seção no <a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document" title="Sections and Outlines of an HTML5 document">outline</a>.</li>
-</ul>
-</div>
+## Contexto de uso:
 
-<h2 id="Contexto_de_uso">Contexto de uso:</h2>
+| Conteúdo permitido         | [Flow content](/pt-BR/docs/HTML/Content_categories#flow_content "HTML/Content categories#flow content"), mas não o `<footer>` ou {{HTMLElement("header")}} descendentes.                                                                                                                                |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omissão de tag             | Nenhuma, ambas as tags de início e fim são obrigatórias.                                                                                                                                                                                                                                                       |
+| Parent Elements permitidos | Qualquer elemento que aceite [flow content](/pt-BR/docs/HTML/Content_categories#flow_content "HTML/Content categories#flow content"). Note-se que um elemento \<footer> não deve ser um descendente de um {{HTMLElement("address")}}, {{HTMLElement("header")}} ou outro elemento `<footer>`. |
+| Documento normativo        | [HTML5, section 4.4.9](http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-footer-element)                                                                                                                                                                                           |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>Conteúdo permitido</td>
-   <td><a href="/en-US/docs/HTML/Content_categories#flow_content" title="HTML/Content categories#flow content">Flow content</a>, mas não o <code>&lt;footer&gt;</code> ou {{HTMLElement("header")}} descendentes.</td>
-  </tr>
-  <tr>
-   <td>Omissão  de tag</td>
-   <td>Nenhuma, ambas as tags de início e fim são obrigatórias.</td>
-  </tr>
-  <tr>
-   <td>Parent Elements permitidos</td>
-   <td>
-    <p>Qualquer elemento que aceite <a href="/en-US/docs/HTML/Content_categories#flow_content" title="HTML/Content categories#flow content">flow content</a>. Note-se que um elemento &lt;footer&gt; não deve ser um descendente de um {{HTMLElement("address")}}, {{HTMLElement("header")}} ou outro elemento <code>&lt;footer&gt;</code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>Documento normativo</td>
-   <td><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-footer-element" rel="external nofollow">HTML5, section 4.4.9</a></td>
-  </tr>
- </tbody>
-</table>
+## Atributos
 
-<h2 id="Atributos">Atributos</h2>
+Este elemento não tem outros atributos que os [global attributes](/pt-BR/docs/HTML/Global_attributes), comuns a todos os elementos.
 
-<p>Este elemento não tem outros atributos que os <a href="/en-US/docs/HTML/Global_attributes" rel="internal">global attributes</a>, comuns a todos os elementos.</p>
+## DOM Interface
 
-<h2 class="editable" id="DOM_Interface">DOM Interface</h2>
+Este elemento implementa a interface [`HTMLElement`](/en-US/docs/DOM/element "DOM/element").
 
-<p>Este elemento implementa a interface <code><a href="/en-US/docs/DOM/element" title="DOM/element">HTMLElement</a></code>.</p>
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
+```html
+<footer>
+  Algumas informações de copyright ou talvez alguma informação do autor de um <article>?
+</footer>
+```
 
-<pre class="brush: html">&lt;footer&gt;
-  Algumas informações de copyright ou talvez alguma informação do autor de um &lt;article&gt;?
-&lt;/footer&gt;
-</pre>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("html.elements.footer")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Outros elementos de seção relacionados {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}};</li>
- <li class="last"><a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document" title="Sections and Outlines of an HTML5 document">Sections and outlines of an HTML5 document</a>.</li>
-</ul>
+- Outros elementos de seção relacionados {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}};
+- [Sections and outlines of an HTML5 document](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document").

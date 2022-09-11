@@ -3,197 +3,146 @@ title: '<tfoot>: Elemento para o rodapé da tabela'
 slug: Web/HTML/Element/tfoot
 translation_of: Web/HTML/Element/tfoot
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p id="Summary">O <strong><code>&lt;tfoot&gt;</code> </strong>é um <strong>elemento HTML </strong> que define um conjunto de linhas as quais farão parte do rodapé de uma tabela HTML</p>
+O **`<tfoot>` **é um **elemento HTML** que define um conjunto de linhas as quais farão parte do rodapé de uma tabela HTML
 
-<div>{{EmbedInteractiveExample("pages/tabbed/tfoot.html","tabbed-taller")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/tfoot.html","tabbed-taller")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Categorias de conteúdo</a></th>
-   <td>Nenhum.</td>
-  </tr>
-  <tr>
-   <th scope="row">Conteúdo permitido</th>
-   <td>Zero ou mais {{HTMLElement("tr")}} elementos.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omitir Tag</th>
-   <td>Iniciar a tag é obrigatório. O fechamento da tag pode ser omitida caso não exista mais conteúdo no elemento pai {{HTMLElement("table")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Pais permitidos</th>
-   <td>O elemento {{HTMLElement("table")}}. O {{HTMLElement("tfoot")}} deve aparecer depois de qualquer {{HTMLElement("caption")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, ou elementos {{HTMLElement("tr")}}. Note que isso é requerido no HTML5.<br>
-    {{HTMLVersionInline("4")}} O elemento {{HTMLElement("tfoot")}} não pode ser colocado depois de qualquer {{HTMLElement("tbody")}} e o elemento {{HTMLElement("tr")}}. Note que isso contradiz diretamento com as normas do HTML5.</td>
-  </tr>
-  <tr>
-   <th scope="row">Papeis de ARIA permitidos</th>
-   <td>Qualquer um</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface DOM</th>
-   <td>{{domxref("HTMLTableSectionElement")}}</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Atributos">Atributos</h2>
-
-<p>Este elemento inclui os <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a>.</p>
-
-<dl>
- <dt>{{htmlattrdef("align")}} {{Deprecated_inline}} no {{HTMLVersionInline("4")}}, {{obsolete_inline}} no {{HTMLVersionInline("5")}}</dt>
- <dd>Estes atributos especificam como será o alinhamento horizontal de cada conteúdo da célula. Os possíveis valores são:
- <ul>
-  <li><code>left</code>, alinha o conteúdo do elemento a esquerda da célula</li>
-  <li><code>center</code>, centraliza o conteúdo ao centro da célula</li>
-  <li><code>right</code>, alinha o conteúdo do elemento a direita da célula</li>
-  <li><code>justify</code>, insere espaços ao texto para que o mesmo fique centralizado na célula</li>
-  <li><code>char</code>, alinha o texto em um alinhamento especial com um deslocamento mínimo definido pelos atributos {{htmlattrxref("char", "tbody")}} e {{htmlattrxref("charoff", "tbody")}} atributos {{unimplemented_inline("2212")}}.</li>
- </ul>
-
- <p>Se nenhum atributo for definido o valor <code>left</code> é passado por padrão</p>
-
- <div class="note"><strong>Note: </strong>Não use esse atributo o mesmo está obsoleto (não suportado) no último padrão.
-
- <ul>
-  <li>Para obter os mesmo efeitos <code>left</code>, <code>center</code>, <code>right</code> ou <code>justify</code>, use a propriedade {{cssxref("text-align")}} do CSS.</li>
-  <li>Para obter o mesmo efeito no CSS3, você pode usar os valores {{htmlattrxref("char", "tfoot")}} com o valor de {{cssxref("text-align")}} propriedade {{unimplemented_inline}}.</li>
- </ul>
- </div>
- </dd>
-</dl>
-
-<dl>
- <dt>{{htmlattrdef("bgcolor")}} {{Non-standard_inline}}</dt>
- <dd>Este atributo define uma cor de fundo para cada célula da coluna. Cada um dos 6 dígitos define um código hexadecimal no <a class="external" href="https://www.w3.org/Graphics/Color/sRGB">sRGB</a>, prefixado pelo '#'. Um desses nomes de cores predefinidos também podem ser usado:
- <table style="width: 80%;">
   <tbody>
-   <tr>
-    <td style="background-color: black; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>black</code> = "#000000"</td>
-    <td style="background-color: green; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>green</code> = "#008000"</td>
-   </tr>
-   <tr>
-    <td style="background-color: silver; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>silver</code> = "#C0C0C0"</td>
-    <td style="background-color: lime; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>lime</code> = "#00FF00"</td>
-   </tr>
-   <tr>
-    <td style="background-color: gray; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>gray</code> = "#808080"</td>
-    <td style="background-color: olive; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>olive</code> = "#808000"</td>
-   </tr>
-   <tr>
-    <td style="background-color: white; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>white</code> = "#FFFFFF"</td>
-    <td style="background-color: yellow; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>yellow</code> = "#FFFF00"</td>
-   </tr>
-   <tr>
-    <td style="background-color: maroon; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>maroon</code> = "#800000"</td>
-    <td style="background-color: navy; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>navy</code> = "#000080"</td>
-   </tr>
-   <tr>
-    <td style="background-color: red; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>red</code> = "#FF0000"</td>
-    <td style="background-color: blue; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>blue</code> = "#0000FF"</td>
-   </tr>
-   <tr>
-    <td style="background-color: purple; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>purple</code> = "#800080"</td>
-    <td style="background-color: teal; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>teal</code> = "#008080"</td>
-   </tr>
-   <tr>
-    <td style="background-color: fuchsia; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>fuchsia</code> = "#FF00FF"</td>
-    <td style="background-color: aqua; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"></td>
-    <td><code>aqua</code> = "#00FFFF"</td>
-   </tr>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Categorias de conteúdo</a
+        >
+      </th>
+      <td>Nenhum.</td>
+    </tr>
+    <tr>
+      <th scope="row">Conteúdo permitido</th>
+      <td>Zero ou mais {{HTMLElement("tr")}} elementos.</td>
+    </tr>
+    <tr>
+      <th scope="row">Omitir Tag</th>
+      <td>
+        Iniciar a tag é obrigatório. O fechamento da tag pode ser omitida caso
+        não exista mais conteúdo no elemento pai
+        {{HTMLElement("table")}}.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Pais permitidos</th>
+      <td>
+        O elemento {{HTMLElement("table")}}. O
+        {{HTMLElement("tfoot")}} deve aparecer depois de qualquer
+        {{HTMLElement("caption")}},
+        {{HTMLElement("colgroup")}}, {{HTMLElement("thead")}},
+        {{HTMLElement("tbody")}}, ou elementos
+        {{HTMLElement("tr")}}. Note que isso é requerido no HTML5.<br />{{HTMLVersionInline("4")}}
+        O elemento {{HTMLElement("tfoot")}} não pode ser colocado depois
+        de qualquer {{HTMLElement("tbody")}} e o elemento
+        {{HTMLElement("tr")}}. Note que isso contradiz diretamento com as
+        normas do HTML5.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Papeis de ARIA permitidos</th>
+      <td>Qualquer um</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>{{domxref("HTMLTableSectionElement")}}</td>
+    </tr>
   </tbody>
- </table>
-
- <div class="note"><strong>Nota de uso:</strong> Não use este atributo, como não é mais padrão ele não foi implementado em algumas versões do Microsoft Internet Explorer: o elemento {{HTMLElement("tfoot")}} pode ser estilizando com <a href="/en-US/docs/Web/CSS">CSS</a>. Para conseguir simular efeitos do atributo <strong>bgcolor</strong> use a propriedade {{cssxref("background-color")}} do <a href="/en-US/docs/Web/CSS">CSS</a> , nos elementos {{HTMLElement("td")}} ou {{HTMLElement("th")}}.</div>
- </dd>
-</dl>
-
-<dl>
- <dt>{{htmlattrdef("char")}} {{Deprecated_inline}} no {{HTMLVersionInline("4")}}, {{obsolete_inline}} no {{HTMLVersionInline("5")}}</dt>
- <dd>O elemento é usado para alinhar as células em uma columa. Valores típicos para isso inclui  o periódico (.) quando se alinha valores monetários. Se {{htmlattrxref("align", "tfoot")}} não é definido para <code>char</code>, este atributo é ignorado
- <div class="note"><strong>Nota: </strong>Não use esté atributo, ele é obsoleto (e não é mais suportado) desde da última versão padrão. Em vez disso use {{htmlattrxref("char", "tfoot")}} no CSS3, você pode usar o atributo {{htmlattrxref("char", "tfoot")}} com a propriedade {{cssxref("text-align")}}.</div>
- </dd>
-</dl>
-
-<dl>
- <dt>{{htmlattrdef("charoff")}} {{Deprecated_inline}} no {{HTMLVersionInline("4")}}, {{obsolete_inline}} no {{HTMLVersionInline("5")}}</dt>
- <dd>O atributo é usado para indicar um número de caracteres para compensar os dados da coluna dos caracteres de alinhamento especificados pelo atributo <strong>char</strong>.
- <div class="note"><strong>Nota: </strong>Não use esse atributo o mesmo está obsoleto (e não é mais suportado) na última versão padrão.</div>
- </dd>
-</dl>
-
-<dl>
- <dt>{{htmlattrdef("valign")}} {{Deprecated_inline}} no {{HTMLVersionInline("4")}}, {{obsolete_inline}} no {{HTMLVersionInline("5")}}</dt>
- <dd>O atributo específico para o alinhamento do texto dentro de cada linha da célula do cabeçalho de uma tabela. Possíveis valores para esse atributo são:
- <ul>
-  <li><code>baseline</code>, coloca o texto o mais próximo possível da parte de baixo da célula, mas o alinha a <a class="external" href="https://en.wikipedia.org/wiki/Baseline_%28typography%29">baseline</a> dos caracteres em vez do <strong>bottom</strong> deles. Caso os caracteres tenham todos os mesmo tamanho, eles terão o mesmo efeito que <code>bottom</code>.</li>
-  <li><code>bottom</code>, coloca o texto o mais próximo possível da parte de baixo da célula;</li>
-  <li><code>middle</code>, centraliza o texto na célula;</li>
-  <li>e <code>top</code>, coloca o texto o mais próximo possível do topo da célula.</li>
- </ul>
-
- <div class="note"><strong>Nota:</strong> Não use este atributo eles está obsoleto (e não é suportado) no último padrão: em vez disso use a propriedade {{cssxref("vertical-align")}} do CSS.</div>
- </dd>
-</dl>
-
-<h2 id="Exemplos">Exemplos</h2>
-
-<p>Por favor veja a página {{HTMLElement("table")}} para exemplos sobre <code>&lt;tfoot&gt;</code>.</p>
-
-<h2 id="Especificações">Especificações</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','tables.html#the-tfoot-element','tfoot element')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C','tabular-data.html#the-tfoot-element','tfoot element')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Atributos
 
-<p>{{Compat("html.elements.tfoot")}}</p>
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-<h2 id="Veja_também">Veja também</h2>
+- {{htmlattrdef("align")}} {{Deprecated_inline}} no {{HTMLVersionInline("4")}}, {{obsolete_inline}} no {{HTMLVersionInline("5")}}
 
-<ul>
- <li>Outros elemento HTML relacionados a tabela: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};</li>
- <li>Propriedades CSS e pseudo-classes são especialmente úteis para estilizar elementos  <code>&lt;tfoot&gt;</code>:
-  <ul>
-   <li>a pseudo-class {{cssxref(":nth-child")}} para definir o alinhamento nas células de uma coluna;</li>
-   <li>a propriedade {{cssxref("text-align")}} para alinar as células do conteúdo que tenham um memso caractere como '.'.</li>
-  </ul>
- </li>
-</ul>
+  - : Estes atributos especificam como será o alinhamento horizontal de cada conteúdo da célula. Os possíveis valores são:
+
+    - `left`, alinha o conteúdo do elemento a esquerda da célula
+    - `center`, centraliza o conteúdo ao centro da célula
+    - `right`, alinha o conteúdo do elemento a direita da célula
+    - `justify`, insere espaços ao texto para que o mesmo fique centralizado na célula
+    - `char`, alinha o texto em um alinhamento especial com um deslocamento mínimo definido pelos atributos {{htmlattrxref("char", "tbody")}} e {{htmlattrxref("charoff", "tbody")}} atributos {{unimplemented_inline("2212")}}.
+
+    Se nenhum atributo for definido o valor `left` é passado por padrão
+
+    > **Note:**Não use esse atributo o mesmo está obsoleto (não suportado) no último padrão.- Para obter os mesmo efeitos `left`, `center`, `right` ou `justify`, use a propriedade {{cssxref("text-align")}} do CSS.
+    >
+    > - Para obter o mesmo efeito no CSS3, você pode usar os valores {{htmlattrxref("char", "tfoot")}} com o valor de {{cssxref("text-align")}} propriedade {{unimplemented_inline}}.
+
+<!---->
+
+- {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
+
+  - : Este atributo define uma cor de fundo para cada célula da coluna. Cada um dos 6 dígitos define um código hexadecimal no [sRGB](https://www.w3.org/Graphics/Color/sRGB), prefixado pelo '#'. Um desses nomes de cores predefinidos também podem ser usado:
+
+    |     | `black` = "#000000"   |     | `green` = "#008000"  |
+    | --- | --------------------- | --- | -------------------- |
+    |     | `silver` = "#C0C0C0"  |     | `lime` = "#00FF00"   |
+    |     | `gray` = "#808080"    |     | `olive` = "#808000"  |
+    |     | `white` = "#FFFFFF"   |     | `yellow` = "#FFFF00" |
+    |     | `maroon` = "#800000"  |     | `navy` = "#000080"   |
+    |     | `red` = "#FF0000"     |     | `blue` = "#0000FF"   |
+    |     | `purple` = "#800080"  |     | `teal` = "#008080"   |
+    |     | `fuchsia` = "#FF00FF" |     | `aqua` = "#00FFFF"   |
+
+    > **Note:** **Nota de uso:** Não use este atributo, como não é mais padrão ele não foi implementado em algumas versões do Microsoft Internet Explorer: o elemento {{HTMLElement("tfoot")}} pode ser estilizando com [CSS](/pt-BR/docs/Web/CSS). Para conseguir simular efeitos do atributo **bgcolor** use a propriedade {{cssxref("background-color")}} do [CSS](/pt-BR/docs/Web/CSS) , nos elementos {{HTMLElement("td")}} ou {{HTMLElement("th")}}.
+
+<!---->
+
+- {{htmlattrdef("char")}} {{Deprecated_inline}} no {{HTMLVersionInline("4")}}, {{obsolete_inline}} no {{HTMLVersionInline("5")}}
+
+  - : O elemento é usado para alinhar as células em uma columa. Valores típicos para isso inclui o periódico (.) quando se alinha valores monetários. Se {{htmlattrxref("align", "tfoot")}} não é definido para `char`, este atributo é ignorado
+
+    > **Note:** **Nota:** Não use esté atributo, ele é obsoleto (e não é mais suportado) desde da última versão padrão. Em vez disso use {{htmlattrxref("char", "tfoot")}} no CSS3, você pode usar o atributo {{htmlattrxref("char", "tfoot")}} com a propriedade {{cssxref("text-align")}}.
+
+<!---->
+
+- {{htmlattrdef("charoff")}} {{Deprecated_inline}} no {{HTMLVersionInline("4")}}, {{obsolete_inline}} no {{HTMLVersionInline("5")}}
+
+  - : O atributo é usado para indicar um número de caracteres para compensar os dados da coluna dos caracteres de alinhamento especificados pelo atributo **char**.
+
+    > **Note:** **Nota:** Não use esse atributo o mesmo está obsoleto (e não é mais suportado) na última versão padrão.
+
+<!---->
+
+- {{htmlattrdef("valign")}} {{Deprecated_inline}} no {{HTMLVersionInline("4")}}, {{obsolete_inline}} no {{HTMLVersionInline("5")}}
+
+  - : O atributo específico para o alinhamento do texto dentro de cada linha da célula do cabeçalho de uma tabela. Possíveis valores para esse atributo são:
+
+    - `baseline`, coloca o texto o mais próximo possível da parte de baixo da célula, mas o alinha a [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29) dos caracteres em vez do **bottom** deles. Caso os caracteres tenham todos os mesmo tamanho, eles terão o mesmo efeito que `bottom`.
+    - `bottom`, coloca o texto o mais próximo possível da parte de baixo da célula;
+    - `middle`, centraliza o texto na célula;
+    - e `top`, coloca o texto o mais próximo possível do topo da célula.
+
+    > **Note:** **Nota:** Não use este atributo eles está obsoleto (e não é suportado) no último padrão: em vez disso use a propriedade {{cssxref("vertical-align")}} do CSS.
+
+## Exemplos
+
+Por favor veja a página {{HTMLElement("table")}} para exemplos sobre `<tfoot>`.
+
+## Especificações
+
+| Especificações                                                                                           | Status                           | Comentários |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG','tables.html#the-tfoot-element','tfoot element')}}     | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML5 W3C','tabular-data.html#the-tfoot-element','tfoot element')}} | {{Spec2('HTML5 W3C')}}     |             |
+
+## Compatibilidade com navegadores
+
+{{Compat("html.elements.tfoot")}}
+
+## Veja também
+
+- Outros elemento HTML relacionados a tabela: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};
+- Propriedades CSS e pseudo-classes são especialmente úteis para estilizar elementos `<tfoot>`:
+
+  - a pseudo-class {{cssxref(":nth-child")}} para definir o alinhamento nas células de uma coluna;
+  - a propriedade {{cssxref("text-align")}} para alinar as células do conteúdo que tenham um memso caractere como '.'.

@@ -10,123 +10,101 @@ tags:
   - Web
 translation_of: Web/HTML/Element/dl
 ---
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>O elemento HTML <em>Definition List</em><span style="line-height: 21px;"> (</span><code style="color: rgb(51, 51, 51); font-size: 14px; line-height: 21px;">&lt;dl&gt;</code><span style="line-height: 21px;">)</span> engloba uma lista de pares de termos e descrições. Um uso comum para este elemento é para implementar um glossário ou exibir metadados(uma lista de pares chave e valor).</p>
+O elemento HTML _Definition List_ (`<dl>`) engloba uma lista de pares de termos e descrições. Um uso comum para este elemento é para implementar um glossário ou exibir metadados(uma lista de pares chave e valor).
 
-<h2 id="Contexto_de_Uso">Contexto de Uso</h2>
+## Contexto de Uso
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>Conteúdo permitido</td>
-   <td>Zero ou mais elementos {{ HTMLElement("dt") }}, cada um seguido de um ou mais elementos {{ HTMLElement("dd") }}</td>
-  </tr>
-  <tr>
-   <td>Omissão de Tag</td>
-   <td>Nenhum, este é um {{Glossary("elemento vazio")}}.</td>
-  </tr>
-  <tr>
-   <td>Permite elementos pai</td>
-   <td>Qualquer elemento que aceite <a href="/en/HTML/Content_categories#flow_content" title="en/HTML/Content categories#flow content">conteúdo de fluxo</a>.</td>
-  </tr>
-  <tr>
-   <td>Documentação normativa</td>
-   <td><a class="external" href="http://www.w3.org/TR/html5/grouping-content.html#the-dl-element">HTML5, section 4.5.8</a>; <a class="external" href="http://www.w3.org/TR/html401/struct/lists.html#h-10.3">HTML 4.01, section 10.3</a></td>
-  </tr>
- </tbody>
-</table>
+| Conteúdo permitido     | Zero ou mais elementos {{ HTMLElement("dt") }}, cada um seguido de um ou mais elementos {{ HTMLElement("dd") }}                                         |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omissão de Tag         | Nenhum, este é um {{Glossary("elemento vazio")}}.                                                                                                               |
+| Permite elementos pai  | Qualquer elemento que aceite [conteúdo de fluxo](/en/HTML/Content_categories#flow_content "en/HTML/Content categories#flow content").                                     |
+| Documentação normativa | [HTML5, section 4.5.8](http://www.w3.org/TR/html5/grouping-content.html#the-dl-element); [HTML 4.01, section 10.3](http://www.w3.org/TR/html401/struct/lists.html#h-10.3) |
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Como todo elemento HTML, ele fornece os <a href="/en/HTML/Global_attributes" title="en/HTML/Global attributes">attributos globais</a>.</p>
+Como todo elemento HTML, ele fornece os [attributos globais](/en/HTML/Global_attributes "en/HTML/Global attributes").
 
+- {{ htmlattrdef("compact") }} {{ Non-standard_inline() }}
+  - : Obriga a definição da descrição aparecer na mesma linha que a definição do termo. Funciona apenas no Internet Explorer.
+
+## Exemplos
+
+### Termo e definição única
+
+```html
 <dl>
- <dt>{{ htmlattrdef("compact") }} {{ Non-standard_inline() }}</dt>
- <dd>Obriga a definição da descrição aparecer na mesma linha que a definição do termo. Funciona apenas no Internet Explorer.</dd>
+  <dt>Firefox</dt>
+  <dd>A free, open source, cross-platform, graphical web browser
+      developed by the Mozilla Corporation and hundreds of volunteers.</dd>
+
+  <!-- other terms and definitions -->
 </dl>
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+Output:
 
-<h3 id="Termo_e_definição_única">Termo e definição única</h3>
+![Image:HTML-dl1.png](/@api/deki/files/241/=HTML-dl1.png)
 
-<pre class="brush: html">&lt;dl&gt;
-  &lt;dt&gt;Firefox&lt;/dt&gt;
-  &lt;dd&gt;A free, open source, cross-platform, graphical web browser
-      developed by the Mozilla Corporation and hundreds of volunteers.&lt;/dd&gt;
+### Múltiplos termos, definição única
 
-  &lt;!-- other terms and definitions --&gt;
-&lt;/dl&gt;
-</pre>
+```html
+<dl>
+  <dt>Firefox</dt>
+  <dt>Mozilla Firefox</dt>
+  <dt>Fx</dt>
+  <dd>A free, open source, cross-platform, graphical web browser
+      developed by the Mozilla Corporation and hundreds of volunteers.</dd>
 
-<p>Output:</p>
+  <!-- other terms and definitions -->
+</dl>
+```
 
-<p><img alt="Image:HTML-dl1.png" class="internal" src="/@api/deki/files/241/=HTML-dl1.png"></p>
+Saída:
 
-<h3 id="Múltiplos_termos_definição_única">Múltiplos termos, definição única</h3>
+![Image:HTML-dl2.png](/@api/deki/files/242/=HTML-dl2.png)
 
-<pre class="brush: html">&lt;dl&gt;
-  &lt;dt&gt;Firefox&lt;/dt&gt;
-  &lt;dt&gt;Mozilla Firefox&lt;/dt&gt;
-  &lt;dt&gt;Fx&lt;/dt&gt;
-  &lt;dd&gt;A free, open source, cross-platform, graphical web browser
-      developed by the Mozilla Corporation and hundreds of volunteers.&lt;/dd&gt;
+### Termo único, múltiplas definições
 
-  &lt;!-- other terms and definitions --&gt;
-&lt;/dl&gt;
-</pre>
-
-<p>Saída:</p>
-
-<p><img alt="Image:HTML-dl2.png" class="internal" src="/@api/deki/files/242/=HTML-dl2.png"></p>
-
-<h3 id="Termo_único_múltiplas_definições">Termo único, múltiplas definições</h3>
-
-<pre class="brush: html">&lt;dl&gt;
-  &lt;dt&gt;Firefox&lt;/dt&gt;
-  &lt;dd&gt;A free, open source, cross-platform, graphical web browser
-      developed by the Mozilla Corporation and hundreds of volunteers.&lt;/dd&gt;
-  &lt;dd&gt;The Red Panda also known as the Lesser Panda, Wah, Bear Cat or Firefox,
+```html
+<dl>
+  <dt>Firefox</dt>
+  <dd>A free, open source, cross-platform, graphical web browser
+      developed by the Mozilla Corporation and hundreds of volunteers.</dd>
+  <dd>The Red Panda also known as the Lesser Panda, Wah, Bear Cat or Firefox,
       is a mostly herbivorous mammal, slightly larger than a domestic cat
-      (60 cm long).&lt;/dd&gt;
+      (60 cm long).</dd>
 
-  &lt;!-- other terms and definitions --&gt;
-&lt;/dl&gt;
-</pre>
+  <!-- other terms and definitions -->
+</dl>
+```
 
-<p>Saída:</p>
+Saída:
 
-<p><img alt="Image:HTML-dl3.png" class="internal" src="/@api/deki/files/243/=HTML-dl3.png"></p>
+![Image:HTML-dl3.png](/@api/deki/files/243/=HTML-dl3.png)
 
-<h3 id="Múltiplos_termos_e_definições">Múltiplos termos e definições</h3>
+### Múltiplos termos e definições
 
-<p>Também é possível definir vários termos com as definições múltiplas correspondentes, combinando com os exemplos acima.</p>
+Também é possível definir vários termos com as definições múltiplas correspondentes, combinando com os exemplos acima.
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<ul>
- <li><a href="/en/DOM/HTMLDListElement" title="en/DOM/HTMLDListElement">HTMLDListElement</a></li>
-</ul>
+- [HTMLDListElement](/en/DOM/HTMLDListElement "en/DOM/HTMLDListElement")
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>Não use este elemento,  (nor {{ HTMLElement("ul") }} elements), para criar meramente um recuo em uma página. Embora ele funcione, está é uma má prática e obscurece o significado da lista de definição.</p>
+Não use este elemento, (nor {{ HTMLElement("ul") }} elements), para criar meramente um recuo em uma página. Embora ele funcione, está é uma má prática e obscurece o significado da lista de definição.
 
-<p>Para mudar a indentação de um termo, use a propriedade <a href="/en/CSS" title="en/CSS">CSS</a> <a href="/en/CSS/margin" title="en/CSS/margin">margin</a>.</p>
+Para mudar a indentação de um termo, use a propriedade [CSS](/en/CSS "en/CSS") [margin](/en/CSS/margin "en/CSS/margin").
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidade de navegadores</h2>
+## Compatibilidade de navegadores
 
 {{Compat("html.elements.dl")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Elemento {{ HTMLElement("dt") }}</li>
- <li>Elemento {{ HTMLElement("dd") }}</li>
-</ul>
+- Elemento {{ HTMLElement("dt") }}
+- Elemento {{ HTMLElement("dd") }}
 
-<div>{{HTMLRef}}</div>
-
-<div> </div>
-
-<div>{{languages({ "en": "en/HTML/Element/dl", "pl": "pl/HTML/Element/dl", "ja": "ja/HTML/Element/dl"})}}</div>
+{{HTMLRef}}{{languages({ "en": "en/HTML/Element/dl", "pl": "pl/HTML/Element/dl", "ja": "ja/HTML/Element/dl"})}}

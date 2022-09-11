@@ -3,136 +3,114 @@ title: <area>
 slug: Web/HTML/Element/area
 translation_of: Web/HTML/Element/area
 ---
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>O <em>HTML <code>&lt;area&gt;</code> elemento</em> define uma região hot-spot em uma imagem, e, opcionalmente, associa-lo com um {{Glossary ("Hyperlink", "link de hipertexto")}}. Este elemento é usado somente dentro de um {{HTMLElement ("map")}} elemento.</p>
+O _HTML `<area>` elemento_ define uma região hot-spot em uma imagem, e, opcionalmente, associa-lo com um {{Glossary ("Hyperlink", "link de hipertexto")}}. Este elemento é usado somente dentro de um {{HTMLElement ("map")}} elemento.
 
-<ul>
- <li><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML / Content_categories">As categorias de conteúdo</a></dfn> <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="Categorias HTML / conteúdo # content Fluxo"> de conteúdo de fluxo</a> , <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="Categorias HTML / conteúdo # content Phrasing">conteúdo fraseado</a> .</li>
- <li><dfn>Permitida conteúdo</dfn> vazio; este é um elemento vazio.</li>
- <li><dfn>Tag omissão</dfn> {{no_tag_omission}}</li>
- <li><dfn>Permitida elementos pai</dfn> Qualquer elemento que aceita <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="Categorias HTML / conteúdo # content Phrasing">conteúdo fraseado</a> . O <code>&lt;area&gt;</code> elemento deve ter um ancestral {{HTMLElement ("mapa")}}, mas ele não precisa ser um pai direta.</li>
- <li><dfn>Interface DOM</dfn> {{domxref ("HTMLAreaElement")}}</li>
-</ul>
+- _[As categorias de conteúdo](/pt-BR/docs/HTML/Content_categories "HTML / Content_categories")_ [de conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content "Categorias HTML / conteúdo # content Fluxo") , [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content "Categorias HTML / conteúdo # content Phrasing") .
+- _Permitida conteúdo_ vazio; este é um elemento vazio.
+- _Tag omissão_ {{no_tag_omission}}
+- _Permitida elementos pai_ Qualquer elemento que aceita [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content "Categorias HTML / conteúdo # content Phrasing") . O `<area>` elemento deve ter um ancestral {{HTMLElement ("mapa")}}, mas ele não precisa ser um pai direta.
+- _Interface DOM_ {{domxref ("HTMLAreaElement")}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p><span style="line-height: 21px;">Este elemento inclui os  </span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML / atributos globais">atributos globais </a><span style="line-height: 21px;">.</span></p>
+Este elemento inclui os [atributos globais ](/pt-BR/docs/HTML/Global_attributes "HTML / atributos globais").
 
-<dl>
- <dt>{{Htmlattrdef ("accesskey")}} {{HTMLVersionInline ("4")}} só, {{obsolete_inline ("5.0")}}</dt>
- <dd>Especifica um acelerador de navegação pelo teclado para o elemento. Pressionando ALT ou uma chave semelhante, em associação com o caractere especificado seleciona a forma de controle correlacionada com a seqüência de teclas. Os projetistas de página são avisados ​​para evitar sequências de teclas já vinculados aos navegadores. Este atributo é global desde HTML5.</dd>
-</dl>
+- {{Htmlattrdef ("accesskey")}} {{HTMLVersionInline ("4")}} só, {{obsolete_inline ("5.0")}}
+  - : Especifica um acelerador de navegação pelo teclado para o elemento. Pressionando ALT ou uma chave semelhante, em associação com o caractere especificado seleciona a forma de controle correlacionada com a seqüência de teclas. Os projetistas de página são avisados ​​para evitar sequências de teclas já vinculados aos navegadores. Este atributo é global desde HTML5.
 
-<dl>
- <dt>{{Htmlattrdef ("alt")}}</dt>
- <dd>Uma alternativa seqüência de texto para exibir em navegadores que não exibem imagens. O texto deve ser formulada de modo a que apresenta o usuário com o mesmo tipo de escolha como a imagem iria oferecer quando exibido sem o texto alternativo. Em HTML4, este atributo é necessário, mas pode ser uma string vazia (""). Em HTML5, este atributo é necessário apenas se o <strong>href</strong> atributo é usado.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{Htmlattrdef ("coords")}}</dt>
- <dd>Um conjunto de valores que especificam as coordenadas da região de hot-spot. O número e o significado dos valores dependem do valor especificado para a <strong>forma</strong> de atributo. Para um <code>rect</code> forma ou retângulo, o <strong>coords</strong> valor é de dois pares x, y: left, top, right, e bottom. Para um <code>círculo</code> forma, o valor é <code>x, y, r</code> onde <code>x, y</code> é um par especificando o centro do círculo e <code>r</code> é um valor para o raio. Para um <code>poli</code> ou polígono &lt;forma, o valor é um conjunto de pares x, y de cada ponto no polígono: <code>X1, Y1, X2, Y2, x3, y3,</code> e assim por diante. Em HTML4, os valores são números de pixels ou porcentagens, se um sinal de porcentagem (%) é anexado; em HTML5, os valores são números de pixels CSS.</dd>
- <dt>{{Htmlattrdef ("download")}} {{HTMLVersionInline ("5")}}</dt>
- <dd>Este atributo, se presente, indica que o autor tem a intenção que o hiperlink seja usado para o download de um recurso. Consulte {{HTMLElement ("a")}} para uma descrição completa da {{htmlattrxref ("download", "a")}} atributo.</dd>
-</dl>
+- {{Htmlattrdef ("alt")}}
+  - : Uma alternativa seqüência de texto para exibir em navegadores que não exibem imagens. O texto deve ser formulada de modo a que apresenta o usuário com o mesmo tipo de escolha como a imagem iria oferecer quando exibido sem o texto alternativo. Em HTML4, este atributo é necessário, mas pode ser uma string vazia (""). Em HTML5, este atributo é necessário apenas se o **href** atributo é usado.
 
-<dl>
- <dt>{{Htmlattrdef ("href")}}</dt>
- <dd>A meta de hyperlink para a área. Seu valor é uma URL válida. Em HTML4, quer este atributo ou o <strong>nohref</strong> atributo deve estar presente no elemento. Em HTML5, este atributo pode ser omitido; em caso afirmativo, o elemento de área não representa um hiperlink.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{Htmlattrdef ("hreflang")}} {{HTMLVersionInline ("5")}}</dt>
- <dd>Indica o idioma do recurso ligado. Os valores permitidos são determinados por <a class="external" href="http://www.ietf.org/rfc/bcp/bcp47.txt">BCP47</a> . Utilize este atributo somente se a <strong>href</strong> atributo está presente.</dd>
-</dl>
+- {{Htmlattrdef ("coords")}}
+  - : Um conjunto de valores que especificam as coordenadas da região de hot-spot. O número e o significado dos valores dependem do valor especificado para a **forma** de atributo. Para um `rect` forma ou retângulo, o **coords** valor é de dois pares x, y: left, top, right, e bottom. Para um `círculo` forma, o valor é `x, y, r` onde `x, y` é um par especificando o centro do círculo e `r` é um valor para o raio. Para um `poli` ou polígono \<forma, o valor é um conjunto de pares x, y de cada ponto no polígono: `X1, Y1, X2, Y2, x3, y3,` e assim por diante. Em HTML4, os valores são números de pixels ou porcentagens, se um sinal de porcentagem (%) é anexado; em HTML5, os valores são números de pixels CSS.
+- {{Htmlattrdef ("download")}} {{HTMLVersionInline ("5")}}
+  - : Este atributo, se presente, indica que o autor tem a intenção que o hiperlink seja usado para o download de um recurso. Consulte {{HTMLElement ("a")}} para uma descrição completa da {{htmlattrxref ("download", "a")}} atributo.
 
-<dl>
- <dt>{{Htmlattrdef ("name")}} {{HTMLVersionInline ("4")}} só, {{obsolete_inline ("5.0")}}</dt>
- <dd>Defina um nome para a área clicável de modo que possa ser programado por navegadores mais antigos.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{Htmlattrdef ("media")}} {{HTMLVersionInline ("5")}}</dt>
- <dd>Uma dica da mídia para o qual o recurso ligado foi projetado, por exemplo <code>impressão e tela</code> . Se omitido, o padrão é <code>tudo</code> . Utilize este atributo somente se a <strong>href</strong> atributo está presente.</dd>
-</dl>
+- {{Htmlattrdef ("href")}}
+  - : A meta de hyperlink para a área. Seu valor é uma URL válida. Em HTML4, quer este atributo ou o **nohref** atributo deve estar presente no elemento. Em HTML5, este atributo pode ser omitido; em caso afirmativo, o elemento de área não representa um hiperlink.
 
-<dl>
- <dt>{{Htmlattrdef ("nohref")}} {{HTMLVersionInline ("4")}} só, {{obsolete_inline ("5.0")}}</dt>
- <dd><p>Indica que não existe hyperlink para a área associada. Ou este atributo ou a <strong>href</strong> atributo deve estar presente no elemento.</p>
- <div class="note">
- <p><strong>Nota de Uso:</strong> Este atributo é obsoleto em HTML5, em vez omitindo o atributo <strong>href</strong> é suficiente.</p>
- </div>
- </dd>
- <dt>{{Htmlattrdef ("rel")}} {{HTMLVersionInline ("5")}}</dt>
- <dd>Para âncoras contendo o <strong>href</strong> atributo, este atributo especifica a relação do objeto de destino para o objeto link. O valor é uma lista de valores de relacionamento, separados por vírgulas. Os valores e sua semântica será registrado por alguma autoridade que poderia ter significado para o autor do documento. A relação padrão, se nenhum outro é dado, é nula. Utilize este atributo somente se a <strong>href</strong> atributo está presente.</dd>
- <dt>{{Htmlattrdef ("shape")}}</dt>
- <dd>A forma do ponto de acesso associado. As especificações para colar 5 e HTML 4 definem os valores <code>rect</code> , que define uma região rectangular; <code>círculo</code> , o qual define uma região circular; <code>poli</code> , que define um polígono; e <code>padrão</code> , o que indica toda a região além de quaisquer formas definidas. Muitos navegadores, principalmente o Internet Explorer 4 e superior, apoio <code>circ</code> , <code>polígono</code> , e <code>retângulo</code> como valores válidos para <strong>forma</strong> ; estes valores são {{Non-standard_inline}}.</dd>
- <dt>{{Htmlattrdef ("tabindex")}} {{HTMLVersionInline ("4")}} só, {{obsolete_inline ("5.0")}}</dt>
- <dd>Um valor numérico que especifica a posição da área definida na ordem de tabulação browser. Este atributo é global em HTML5.</dd>
- <dt>{{Htmlattrdef ("target")}}</dt>
- <dd>Este atributo especifica onde exibir o recurso ligado. Em HTML4, este é o nome de, ou uma palavra-chave para um quadro. Em HTML5, que é um nome ou palavra-chave para um <em>contexto de navegação</em> (por exemplo, aba, janela ou quadro embutido). As seguintes palavras-chave têm significados especiais:
- <ul>
-  <li><code>_self</code> : Carregar a resposta no mesmo quadro HTML4 (ou contexto de navegação HTML5), como o atual. Este valor é o padrão se o atributo não é especificado.</li>
-  <li><code>_blank</code> : Coloque a resposta em uma nova janela sem nome HTML4 ou contexto de navegação HTML5.</li>
-  <li><code>_parent</code> : Carregar a resposta para o pai HMTL4 conjunto de quadros do quadro atual ou HTML5 pai contexto de navegação do atual. Se não houver nenhum pai, esta opção se comporta da mesma maneira que <code>_self</code> .</li>
-  <li><code>_top</code> : Em HTML4: Carregar a resposta para a janela completa, originais, cancelando todos os outros quadros. Em HTML5: Carregar a resposta para o contexto de navegação de nível superior (ou seja, o contexto de navegação que é um ancestral do atual, e não tem pai). Se não houver nenhum pai, esta opção se comporta da mesma maneira que <code>_self</code> .</li>
- </ul>
- Utilize este atributo somente se a <strong>href</strong> atributo está presente.</dd>
- <dt>{{Htmlattrdef ("type")}}</dt>
- <dd>Este atributo especifica o tipo de mídia na forma de um tipo MIME para o destino do link. Geralmente, este é fornecido informações estritamente como consultivo; no entanto, no futuro, um navegador pode adicionar um pequeno ícone para os tipos de multimédia. Por exemplo, um navegador pode adicionar um pequeno ícone de alto-falante quando o tipo está definido para áudio / wav. Para obter uma lista completa de tipos MIME reconhecidos, consulte <a class="linkification-ext external" href="http://www.w3.org/TR/html4/references.html#ref-MIMETYPES">http://www.w3.org/TR/html4/references.html # REF-MIMETYPES</a> . Utilize este atributo somente se a <strong>href</strong> atributo está presente.</dd>
-</dl>
+<!---->
 
-<h2 id="Exemplo">Exemplo</h2>
+- {{Htmlattrdef ("hreflang")}} {{HTMLVersionInline ("5")}}
+  - : Indica o idioma do recurso ligado. Os valores permitidos são determinados por [BCP47](http://www.ietf.org/rfc/bcp/bcp47.txt) . Utilize este atributo somente se a **href** atributo está presente.
 
-<pre class="brush: html">&lt;mapa name="primary"&gt;
-  &lt;area shape="circle" coords="200,250,25" href="another.htm" /&gt;
-  &lt;area shape="default" nohref /&gt;
-&lt;/map&gt;
-</pre>
+<!---->
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+- {{Htmlattrdef ("name")}} {{HTMLVersionInline ("4")}} só, {{obsolete_inline ("5.0")}}
+  - : Defina um nome para a área clicável de modo que possa ser programado por navegadores mais antigos.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName ('HTML WHATWG', 'a-map-element.html # da-area-elemento', '&lt;area&gt;')}}</td>
-   <td>{{Spec2 ('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName ('HTML5 W3C', 'incorporado-content-0.html # da-area-elemento', '&lt;area&gt;')}}</td>
-   <td>{{Spec2 ('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName ('HTML4.01', 'struct / objects.html # h-13.6.1', '&lt;area&gt;')}}</td>
-   <td>{{Spec2 ('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+<!---->
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+- {{Htmlattrdef ("media")}} {{HTMLVersionInline ("5")}}
+  - : Uma dica da mídia para o qual o recurso ligado foi projetado, por exemplo `impressão e tela` . Se omitido, o padrão é `tudo` . Utilize este atributo somente se a **href** atributo está presente.
+
+<!---->
+
+- {{Htmlattrdef ("nohref")}} {{HTMLVersionInline ("4")}} só, {{obsolete_inline ("5.0")}}
+
+  - : Indica que não existe hyperlink para a área associada. Ou este atributo ou a **href** atributo deve estar presente no elemento.
+
+    > **Note:** **Nota de Uso:** Este atributo é obsoleto em HTML5, em vez omitindo o atributo **href** é suficiente.
+
+- {{Htmlattrdef ("rel")}} {{HTMLVersionInline ("5")}}
+  - : Para âncoras contendo o **href** atributo, este atributo especifica a relação do objeto de destino para o objeto link. O valor é uma lista de valores de relacionamento, separados por vírgulas. Os valores e sua semântica será registrado por alguma autoridade que poderia ter significado para o autor do documento. A relação padrão, se nenhum outro é dado, é nula. Utilize este atributo somente se a **href** atributo está presente.
+- {{Htmlattrdef ("shape")}}
+  - : A forma do ponto de acesso associado. As especificações para colar 5 e HTML 4 definem os valores `rect` , que define uma região rectangular; `círculo` , o qual define uma região circular; `poli` , que define um polígono; e `padrão` , o que indica toda a região além de quaisquer formas definidas. Muitos navegadores, principalmente o Internet Explorer 4 e superior, apoio `circ` , `polígono` , e `retângulo` como valores válidos para **forma** ; estes valores são {{Non-standard_inline}}.
+- {{Htmlattrdef ("tabindex")}} {{HTMLVersionInline ("4")}} só, {{obsolete_inline ("5.0")}}
+  - : Um valor numérico que especifica a posição da área definida na ordem de tabulação browser. Este atributo é global em HTML5.
+- {{Htmlattrdef ("target")}}
+
+  - : Este atributo especifica onde exibir o recurso ligado. Em HTML4, este é o nome de, ou uma palavra-chave para um quadro. Em HTML5, que é um nome ou palavra-chave para um _contexto de navegação_ (por exemplo, aba, janela ou quadro embutido). As seguintes palavras-chave têm significados especiais:
+
+    - `_self` : Carregar a resposta no mesmo quadro HTML4 (ou contexto de navegação HTML5), como o atual. Este valor é o padrão se o atributo não é especificado.
+    - `_blank` : Coloque a resposta em uma nova janela sem nome HTML4 ou contexto de navegação HTML5.
+    - `_parent` : Carregar a resposta para o pai HMTL4 conjunto de quadros do quadro atual ou HTML5 pai contexto de navegação do atual. Se não houver nenhum pai, esta opção se comporta da mesma maneira que `_self` .
+    - `_top` : Em HTML4: Carregar a resposta para a janela completa, originais, cancelando todos os outros quadros. Em HTML5: Carregar a resposta para o contexto de navegação de nível superior (ou seja, o contexto de navegação que é um ancestral do atual, e não tem pai). Se não houver nenhum pai, esta opção se comporta da mesma maneira que `_self` .
+
+    Utilize este atributo somente se a **href** atributo está presente.
+
+- {{Htmlattrdef ("type")}}
+  - : Este atributo especifica o tipo de mídia na forma de um tipo MIME para o destino do link. Geralmente, este é fornecido informações estritamente como consultivo; no entanto, no futuro, um navegador pode adicionar um pequeno ícone para os tipos de multimédia. Por exemplo, um navegador pode adicionar um pequeno ícone de alto-falante quando o tipo está definido para áudio / wav. Para obter uma lista completa de tipos MIME reconhecidos, consulte [http://www.w3.org/TR/html4/references.html # REF-MIMETYPES](http://www.w3.org/TR/html4/references.html#ref-MIMETYPES) . Utilize este atributo somente se a **href** atributo está presente.
+
+## Exemplo
+
+```html
+<mapa name="primary">
+  <area shape="circle" coords="200,250,25" href="another.htm" />
+  <area shape="default" nohref />
+</map>
+```
+
+## Especificações
+
+| Especificação                                                                                                            | Estado                           | Comentário |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName ('HTML WHATWG', 'a-map-element.html # da-area-elemento', '&lt;area&gt;')}}         | {{Spec2 ('HTML WHATWG')}} |            |
+| {{SpecName ('HTML5 W3C', 'incorporado-content-0.html # da-area-elemento', '&lt;area&gt;')}} | {{Spec2 ('HTML5 W3C')}} |            |
+| {{SpecName ('HTML4.01', 'struct / objects.html # h-13.6.1', '&lt;area&gt;')}}                 | {{Spec2 ('HTML4.01')}}     |            |
+
+## Compatibilidade com navegadores
 
 {{Compat("html.elements.area")}}
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>De acordo com o HTML 3.2, 4.0 e 5 especificações, a tag de fechamento <code>&lt;/ área&gt;</code> é proibido.</p>
+De acordo com o HTML 3.2, 4.0 e 5 especificações, a tag de fechamento `</ área>` é proibido.
 
-<p>A especificação XHTML 1.0 requer uma barra: <code>&lt;area /&gt;</code> .</p>
+A especificação XHTML 1.0 requer uma barra: `<area />` .
 
-<p>Os <strong>ID</strong> , <strong>classe</strong> e <strong>estilo</strong> atributos têm o mesmo significado que os atributos essenciais definidas na especificação HTML 4, mas somente Netscape e Microsoft defini-los.</p>
+Os **ID** , **classe** e **estilo** atributos têm o mesmo significado que os atributos essenciais definidas na especificação HTML 4, mas somente Netscape e Microsoft defini-los.
 
-<p>Netscape 1 de nível não entendem o <strong>alvo</strong> atributo que se refere aos quadros.</p>
+Netscape 1 de nível não entendem o **alvo** atributo que se refere aos quadros.
 
-<p>HTML 3.2 define apenas <strong>alt</strong> , <strong>coords</strong> , <strong>href</strong> , <strong>nohref</strong> e shape .</p>
+HTML 3.2 define apenas **alt** , **coords** , **href** , **nohref** e shape .
 
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}

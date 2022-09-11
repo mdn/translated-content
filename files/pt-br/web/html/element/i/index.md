@@ -5,102 +5,102 @@ tags:
   - i
 translation_of: Web/HTML/Element/i
 ---
-<p>O <strong>elemento HTML <code>&lt;i&gt;</code> </strong> representa uma parte do texto que é destacada do restante por algum motivo, por exemplo, termos técnicos, expressões de outros idiomas ou pensamentos de personagens fictícios. Normalmente, é apresentado com o uso do tipo "itálico".</p>
+O **elemento HTML `<i>` **representa uma parte do texto que é destacada do restante por algum motivo, por exemplo, termos técnicos, expressões de outros idiomas ou pensamentos de personagens fictícios. Normalmente, é apresentado com o uso do tipo "itálico".
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Categorias de conteúdo</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Conteúdo de fluxo (flow content)</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">conteúdo com texto (phrasing content)</a>, conteúdo palpável (palpable content).</td>
-  </tr>
-  <tr>
-   <th scope="row">Conteúdo permitido</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">Conteúdo com texto (phrasing content)</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omissão de tag</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Pais permitidos</th>
-   <td>Qualquer elemento que aceite <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">conteúdo com texto (phrasing content)</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">ARIA roles permitidos</th>
-   <td>Qualquer um.</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface DOM</th>
-   <td>{{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the {{domxref("HTMLSpanElement")}} interface for this element.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Categorias de conteúdo</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+          >Conteúdo de fluxo (flow content)</a
+        >,
+        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+          >conteúdo com texto (phrasing content)</a
+        >, conteúdo palpável (palpable content).
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Conteúdo permitido</th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+          >Conteúdo com texto (phrasing content)</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omissão de tag</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Pais permitidos</th>
+      <td>
+        Qualquer elemento que aceite
+        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+          >conteúdo com texto (phrasing content)</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">ARIA roles permitidos</th>
+      <td>Qualquer um.</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>
+        {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4)
+        inclusive, Firefox implements the
+        {{domxref("HTMLSpanElement")}} interface for this element.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Esse elemento inclui apenas <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a>.</p>
+Esse elemento inclui apenas [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: html">&lt;p&gt;A expressão em latim &lt;i class="latin"&gt;Veni, vidi, vici&lt;/i&gt; é frequentemente
-mencionada na música, na arte e na literatura.&lt;/p&gt;
-</pre>
+```html
+<p>A expressão em latim <i class="latin">Veni, vidi, vici</i> é frequentemente
+mencionada na música, na arte e na literatura.</p>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>A expressão em latim <em>Veni, vidi, vici</em> é frequentemente mencionada na música, na arte e na literatura.</p>
+A expressão em latim _Veni, vidi, vici_ é frequentemente mencionada na música, na arte e na literatura.
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>Nas primeiras versões das especificações HTML, a tag <code>&lt;i&gt;</code> era usada apenas para apresentar textos em itálico, assim como a tag <code>&lt;b&gt;</code> tag era usada para mostrar textos em negrito. Isso não é mais verdade, já que, atualmente, essas tags definem a semântica, e não mais aparência tipográfica.<code> A tag &lt;i&gt;</code> pode representar uma parte do texto com uma diferença semântica, na qual a representação tipográfica padrão é no tipo itálico.  Isso significa que os navegadores continuarão a apresentar o conteúdo em itálico, mas, de acordo com o que é definido, isso não é mais requerido.</p>
+Nas primeiras versões das especificações HTML, a tag `<i>` era usada apenas para apresentar textos em itálico, assim como a tag `<b>` tag era usada para mostrar textos em negrito. Isso não é mais verdade, já que, atualmente, essas tags definem a semântica, e não mais aparência tipográfica.` A tag <i>` pode representar uma parte do texto com uma diferença semântica, na qual a representação tipográfica padrão é no tipo itálico. Isso significa que os navegadores continuarão a apresentar o conteúdo em itálico, mas, de acordo com o que é definido, isso não é mais requerido.
 
-<p>Use esse elemento somente quando não existir mais nenhum outro elemento com semântica apropriada. Por exemplo:</p>
+Use esse elemento somente quando não existir mais nenhum outro elemento com semântica apropriada. Por exemplo:
 
-<ul>
- <li>Use {{HTMLElement("em")}} para indicar ênfase ou estresse.</li>
- <li>Use {{HTMLElement("strong")}} para indicar importância.</li>
- <li>Use {{HTMLElement("mark")}} para indicar relevância.</li>
- <li>Use {{HTMLElement("cite")}} para citar o nome de um trabalho, tal como um livro, jogo ou música.</li>
- <li>Use {{HTMLElement("dfn")}} para m<span class="short_text" id="result_box" lang="pt"><span>arcar a instância de definição de um termo</span></span> .</li>
-</ul>
+- Use {{HTMLElement("em")}} para indicar ênfase ou estresse.
+- Use {{HTMLElement("strong")}} para indicar importância.
+- Use {{HTMLElement("mark")}} para indicar relevância.
+- Use {{HTMLElement("cite")}} para citar o nome de um trabalho, tal como um livro, jogo ou música.
+- Use {{HTMLElement("dfn")}} para marcar a instância de definição de um termo .
 
-<p>Uma boa ideia é usar o atributo <strong>class</strong> para identificar porque esse elemento está sendo usado. Com isso, caso a apresentação precise ser alterada com o tempo, isso pode ser feito de forma seletiva utilizando as folhas de estilo.</p>
+Uma boa ideia é usar o atributo **class** para identificar porque esse elemento está sendo usado. Com isso, caso a apresentação precise ser alterada com o tempo, isso pode ser feito de forma seletiva utilizando as folhas de estilo.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-i-element', '&lt;i&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'text-level-semantics.html#the-i-element', '&lt;i&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'present/graphics.html#h-15.2.1', '&lt;b&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                | Status                           | Comentário |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-i-element', '&lt;i&gt;')}}             | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-i-element', '&lt;i&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
+| {{SpecName('HTML4.01', 'present/graphics.html#h-15.2.1', '&lt;b&gt;')}}             | {{Spec2('HTML4.01')}}     |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("html.elements.i")}}
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li>{{HTMLElement("em")}}</li>
-</ul>
+- {{HTMLElement("em")}}

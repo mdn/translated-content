@@ -14,47 +14,38 @@ tags:
   - listas
 translation_of: Web/HTML/Element/dir
 ---
-<div>{{Obsolete_header()}}</div>
+{{Obsolete_header()}}
 
-<p>O elemento de diretório HTML obsoleto (<span class="seoSummary"><strong><code>&lt;dir&gt;</code></strong>) é usado como um contêiner para um diretório de arquivos e/ou pastas, potencialmente com estilos e ícones aplicados pelo {{Glossary("user agent")}}.</span> Não use este elemento obsoleto; em vez disso, você deve usar o {{HTMLElement("ul")}} elemento para listas, incluindo listas de arquivos.</p>
+O elemento de diretório HTML obsoleto (**`<dir>`**) é usado como um contêiner para um diretório de arquivos e/ou pastas, potencialmente com estilos e ícones aplicados pelo {{Glossary("user agent")}}. Não use este elemento obsoleto; em vez disso, você deve usar o {{HTMLElement("ul")}} elemento para listas, incluindo listas de arquivos.
 
-<div class="note">Nota de uso: não use este elemento. Embora presente nas primeiras especificações do HTML, foi descontinuado no HTML 4 e, desde então, foi totalmente removido. Nenhum dos principais navegadores suporta esse elemento.</div>
+> **Note:** Nota de uso: não use este elemento. Embora presente nas primeiras especificações do HTML, foi descontinuado no HTML 4 e, desde então, foi totalmente removido. Nenhum dos principais navegadores suporta esse elemento.
 
-<h2 id="DOM_interface">DOM interface</h2>
+## DOM interface
 
-<p> </p>
+Este elemento implementa a interface {{domxref("HTMLDirectoryElement")}}.
 
-<p>Este elemento implementa a interface {{domxref("HTMLDirectoryElement")}}.</p>
+## Atributos
 
-<h2 id="Atributos">Atributos</h2>
+Como todos os outros elementos HTML, este elemento suporta os [global attributes](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
 
-<p>Como todos os outros elementos HTML, este elemento suporta os <a href="/en-US/docs/HTML/Global_attributes" title="HTML/Global attributes">global attributes</a>.</p>
+- {{htmlattrdef("compact")}}
 
-<dl>
- <dt>{{htmlattrdef("compact")}}</dt>
- <dd>Este atributo booleano indica que a lista deve ser renderizada em um estilo compacto. A interpretação deste atributo depende do agente do usuário e não funciona em todos os navegadores.
- <div class="note">Nota de uso: não use este atributo, pois ele foi descontinuado: o {{HTMLElement("dir")}} elemento deve ser estilizado usando  <a href="/en-US/docs/CSS" title="CSS">CSS</a>. Para dar um efeito semelhante ao alcançado com o  atributo <code>compact</code>, a propriedade <a href="/en-US/docs/CSS" title="CSS">CSS</a> {{cssxref("line-height")}} pode ser usado com um valor de <code>80%</code>.</div>
- </dd>
-</dl>
+  - : Este atributo booleano indica que a lista deve ser renderizada em um estilo compacto. A interpretação deste atributo depende do agente do usuário e não funciona em todos os navegadores.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+    > **Note:** Nota de uso: não use este atributo, pois ele foi descontinuado: o {{HTMLElement("dir")}} elemento deve ser estilizado usando [CSS](/pt-BR/docs/CSS "CSS"). Para dar um efeito semelhante ao alcançado com o atributo `compact`, a propriedade [CSS](/pt-BR/docs/CSS "CSS") {{cssxref("line-height")}} pode ser usado com um valor de `80%`.
 
-<p>{{Compat("html.elements.dir")}}</p>
+## Compatibilidade com navegadores
 
-<h2 id="Veja_também">Veja também</h2>
+{{Compat("html.elements.dir")}}
 
-<ul>
- <li>Outros relacionados a lista de elementos HTML: {{HTMLElement("ol")}}, {{HTMLElement("ul")}}, {{HTMLElement("li")}}, e {{HTMLElement("menu")}};</li>
- <li>Propriedades CSS que podem ser especialmente úteis para estilizar o <span style="font-size: 1rem; letter-spacing: -0.00278rem;">elemento </span><code style="font-size: 1rem; letter-spacing: -0.00278rem;">&lt;dir&gt;</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> :</span>
-  <ul>
-   <li>A propriedade {{cssxref('list-style')}}, útil para escolher a maneira como o ordinal é exibido.</li>
-   <li><a href="https://developer.mozilla.org/en-US/docs/CSS_Counters" title="CSS_Counters">CSS counters</a>, útil para lidar com listas aninhadas complexas.</li>
-   <li>A propriedade {{Cssxref('line-height')}}, útil para simular o atributo obsoleto {{htmlattrxref("compact", "dir")}}.</li>
-   <li>A propriedade {{cssxref('margin')}}, útil para controlar o recuo da lista.</li>
-  </ul>
- </li>
-</ul>
+## Veja também
 
-<div>
-<p>{{HTMLRef}}</p>
-</div>
+- Outros relacionados a lista de elementos HTML: {{HTMLElement("ol")}}, {{HTMLElement("ul")}}, {{HTMLElement("li")}}, e {{HTMLElement("menu")}};
+- Propriedades CSS que podem ser especialmente úteis para estilizar o elemento `<dir>` :
+
+  - A propriedade {{cssxref('list-style')}}, útil para escolher a maneira como o ordinal é exibido.
+  - [CSS counters](/pt-BR/docs/CSS_Counters "CSS_Counters"), útil para lidar com listas aninhadas complexas.
+  - A propriedade {{Cssxref('line-height')}}, útil para simular o atributo obsoleto {{htmlattrxref("compact", "dir")}}.
+  - A propriedade {{cssxref('margin')}}, útil para controlar o recuo da lista.
+
+{{HTMLRef}}

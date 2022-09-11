@@ -7,79 +7,38 @@ tags:
   - lang
 translation_of: Web/HTML/Global_attributes/lang
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>O <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributo global</a> <strong><code>lang</code></strong> ajuda a definir o idioma de um elemento: a língua em que elementos não-editáveis são escritos, ou a língua em que elementos editáveis devem ser escritos pelo usuário. O atributo contém uma uma única “tag de idioma” em um formato definido em <a class="external" href="https://www.ietf.org/rfc/bcp/bcp47.txt"><em>Tags para identificar linguagens(BCP47)</em></a>.</p>
+O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **`lang`** ajuda a definir o idioma de um elemento: a língua em que elementos não-editáveis são escritos, ou a língua em que elementos editáveis devem ser escritos pelo usuário. O atributo contém uma uma única “tag de idioma” em um formato definido em [_Tags para identificar linguagens(BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt).
 
-<div>{{EmbedInteractiveExample("pages/tabbed/attribute-lang.html","tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/attribute-lang.html","tabbed-shorter")}}
 
-<p>Se o valor do atributo é uma <em>string vazia</em> (<code>lang=""</code>), o idioma é definido como <em>unknown (desconhecido)</em>; se a tag de idioma não é válida conforme o BCP47, ela é definida como<em> invalid (invalida)</em>.</p>
+Se o valor do atributo é uma _string vazia_ (`lang=""`), o idioma é definido como _unknown (desconhecido)_; se a tag de idioma não é válida conforme o BCP47, ela é definida como _invalid (invalida)_.
 
-<div class="note">
-<h2 id="Sintaxe_da_tag_de_idioma">Sintaxe da tag de idioma</h2>
+> **Note:** ## Sintaxe da tag de idiomaA sintaxe completa do BCP47 é profunda o suficente para caracterizar dialetos de linguagem extremamente expecíficos, mas a maioria dos usos são bem mais simples.Uma tag de idioma é feita de _subtags de idioma_ separadas por hífen, onde cada subtag indica uma certa propriedade da língua. As três subtags mais comuns são:- Subtag de idioma - : Necessária. Um código de 2 ou 3 caracteres que define o idioma base, tipicamente escrita em letras minúsculas. Por exemplo, o código para Inglês é `en` e o código para Português é `pt`.
+>
+> - Subtag de script
+>   - : Opcional. Essa subtag define o sistema de escrita usado para a linguagem, e sempre tem 4 caracteres, com a primeira letra maiúscula. Por exemplo, Francês em Braile é `fr-Brai` e `ja-Kana` é Japonês escrito no alfabeto Katakana. Se a língua é escrita em uma maneira tipicamente comum, como Inglês no alfabeto Latino, não é necessário o uso da subtag.
+> - Subtag de região
+>   - : Opcional. Essa subtag define um dialeto do idioma base em uma localização particular e tem um código de duas letras maiúsculas referentes ao país, ou um código de três números referentes à uma área fora do país. Por exemplo, `es-ES` é para espanhol falado na Espanha, e `es-013` é o espanhol falado na America Central. “Espanhol Internacional” seria `es`.A subtag de script precede a região da subtag quando ambos estão presentes— `ru-Cyrl-BY` é Russo, escrito no alfabeto Cyrillic, falado em Belarus.Para encontrar os códigos corretos para uma subtag de idioma, acesse [Language Subtag Lookup](https://r12a.github.io/app-subtags/).
 
-<p>A sintaxe completa do BCP47 é profunda o suficente para caracterizar dialetos de linguagem extremamente expecíficos, mas a maioria dos usos são bem mais simples.</p>
+Mesmo que o atributo **lang** esteja bem definido ele ainda pode ser ignorado, pois o atributo [**xml:lang**](/pt-BR/docs/Web/HTML/Global_attributes/xml:lang) tem prioridade.
 
-<p>Uma tag de idioma é feita de <em>subtags de idioma </em>separadas por hífen, onde cada subtag indica uma certa propriedade da língua. As três subtags mais comuns são:</p>
+Para as pseudo-classes CSS {{cssxref(":lang")}}, dois nomes de idiomas inválidos são diferentes se seus nomes forem diferentes. Por tanto, enquanto `:lang(es)` corresponde a ambos `lang="es-ES"` e `lang="es-419"`, `:lang(xyzzy)` não corresponde a `lang="xyzzy-Zorp!"`.
 
-<dl>
- <dt>Subtag de idioma</dt>
- <dd>Necessária. Um código de  2 ou 3 caracteres que define o idioma base, tipicamente escrita em letras minúsculas. Por exemplo, o código para Inglês é <code>en</code> e o código para Português é <code>pt</code>.</dd>
- <dt>Subtag de script</dt>
- <dd>Opcional. Essa subtag define o sistema de escrita usado para a linguagem, e sempre tem 4 caracteres, com a primeira letra maiúscula. Por exemplo, Francês em Braile é <code>fr-Brai</code> e <code>ja-Kana</code> é Japonês escrito no alfabeto Katakana. Se a língua é escrita em uma maneira tipicamente comum, como Inglês no alfabeto Latino, não é necessário o uso da subtag.</dd>
- <dt>Subtag de região</dt>
- <dd>Opcional. Essa subtag define um dialeto do idioma base em uma localização particular e tem um código de duas letras maiúsculas referentes ao país, ou um código de três números  referentes à uma área fora do país. Por exemplo, <code>es-ES</code> é para espanhol falado na Espanha, e <code>es-013</code> é o espanhol falado na America Central. “Espanhol Internacional” seria <code>es</code>.</dd>
-</dl>
+## Especificações
 
-<p>A subtag de script precede a região da subtag quando ambos estão presentes— <code>ru-Cyrl-BY</code> é Russo, escrito no alfabeto Cyrillic, falado em Belarus.</p>
+| Specification                                                                                                | Status                           | Comment                                                                                                                                                                                                                                                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "dom.html#the-lang-and-xml:lang-attributes", "lang")}} | {{Spec2('HTML WHATWG')}} | Sem mudança até o último registro, {{SpecName('HTML5.1')}}                                                                                                                                                                                                                                                                                         |
+| {{SpecName('HTML5.1', "dom.html#the-lang-and-xml:lang-attributes", "lang")}}         | {{Spec2('HTML5.1')}}     | Registro de {{SpecName('HTML WHATWG')}}, sem mudança para {{SpecName('HTML5 W3C')}}                                                                                                                                                                                                                                                         |
+| {{SpecName('HTML5 W3C', "dom.html#the-lang-and-xml:lang-attributes", "lang")}}     | {{Spec2('HTML5 W3C')}}     | Registro de {{SpecName('HTML WHATWG')}}, comportamento com `xml:lang` e algoritmo de determinação definido. Ele também é um atributo global.                                                                                                                                                                                                       |
+| {{SpecName('HTML4.01', 'struct/dirlang.html#h-8.1', 'lang')}}                             | {{Spec2('HTML4.01')}}     | Suportado em todos os elementos, mas {{HTMLElement("applet")}}, {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("br")}}, {{HTMLElement("frame")}}, {{HTMLElement("frameset")}}, {{HTMLElement("iframe")}}, {{HTMLElement("param")}} e {{HTMLElement("script")}}. |
 
-<p>Para encontrar os códigos corretos para uma subtag de idioma, acesse <a href="https://r12a.github.io/app-subtags/" rel="external">Language Subtag Lookup</a>.</p>
-</div>
+## Compatibilidade com navegadores
 
-<p>Mesmo que o atributo <strong>lang</strong> esteja bem definido ele ainda pode ser ignorado, pois o atributo <a href="/en-US/docs/Web/HTML/Global_attributes/xml:lang"><strong>xml:lang</strong></a> tem prioridade.</p>
+{{Compat("html.global_attributes.lang")}}
 
-<p>Para as pseudo-classes CSS {{cssxref(":lang")}}, dois nomes de idiomas inválidos são diferentes se seus nomes forem diferentes. Por tanto, enquanto <code>:lang(es)</code> corresponde a ambos <code>lang="es-ES"</code> e <code>lang="es-419"</code>, <code>:lang(xyzzy)</code> não corresponde a <code>lang="xyzzy-Zorp!"</code>.</p>
+## Veja também
 
-<h2 id="Especificações">Especificações</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "dom.html#the-lang-and-xml:lang-attributes", "lang")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Sem mudança até o último registro, {{SpecName('HTML5.1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "dom.html#the-lang-and-xml:lang-attributes", "lang")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Registro de {{SpecName('HTML WHATWG')}}, sem mudança para {{SpecName('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "dom.html#the-lang-and-xml:lang-attributes", "lang")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Registro de {{SpecName('HTML WHATWG')}}, comportamento com <code>xml:lang</code> e algoritmo de determinação definido. Ele também é um atributo global.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/dirlang.html#h-8.1', 'lang')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>Suportado em todos os elementos, mas {{HTMLElement("applet")}}, {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("br")}}, {{HTMLElement("frame")}}, {{HTMLElement("frameset")}}, {{HTMLElement("iframe")}}, {{HTMLElement("param")}} e {{HTMLElement("script")}}.</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
-
-<p>{{Compat("html.global_attributes.lang")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>Todos <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a>.</li>
-</ul>
+- Todos [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).

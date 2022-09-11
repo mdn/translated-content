@@ -3,155 +3,131 @@ title: video
 slug: Web/HTML/Element/Video
 translation_of: Web/HTML/Element/video
 ---
-<p> </p>
+## Sumário
 
-<h2 id="Sumário">Sumário</h2>
+O elemento HTML `<video>` é utilizado para incorporar conteúdo de vídeo em um documento HTML ou XHTML.
 
-<p>O elemento HTML  <code>&lt;video&gt;</code> é utilizado para incorporar conteúdo de vídeo em um documento HTML ou XHTML.</p>
+Para uma lista de formatos suportados veja [Media formats supported by the audio and video elements](/En/Media_formats_supported_by_the_audio_and_video_elements "En/Media formats supported by the audio and video elements").
 
-<p>Para uma lista de formatos suportados veja <a href="/En/Media_formats_supported_by_the_audio_and_video_elements" title="En/Media formats supported by the audio and video elements">Media formats supported by the audio and video elements</a>.</p>
+## Contexto de uso
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+| Conteúdo permitido          | [Transparent content](/en/HTML/Content_categories#transparent_content "en/HTML/Content categories#transparent content"), contendo ou um atributo **src** ou um ou mais elementos {{ HTMLElement("source") }}, seguido por [flow content](/en/HTML/Content_categories#flow_content "en/HTML/Content categories#flow content") ou [phrasing content](/en/HTML/Content_categories#phrasing_content "en/HTML/Content categories#phrasing content") , sem `<video>` ou elementos {{ HTMLElement("audio") }}. |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omissão de tag              | Nenhuma, tanto as tags iniciais quanto as finais devem estar presentes.                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Permissão de elementos pais | Qualquer elemento que aceite [flow content](/en/HTML/Content_categories#flow_content "en/HTML/Content categories#flow content"), ou qualquer outro elemento que aceite [phrasing content](/en/HTML/Content_categories#phrasing_content "en/HTML/Content categories#phrasing content").                                                                                                                                                                                                                                     |
+| Documento normativo         | [HTML 5, section 4.8.6](http://www.w3.org/TR/html5/video.html#video)                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>Conteúdo permitido</td>
-   <td><a href="/en/HTML/Content_categories#transparent_content" title="en/HTML/Content categories#transparent content">Transparent content</a>, contendo ou um atributo <strong>src</strong> ou um ou mais elementos {{ HTMLElement("source") }}, seguido por <a href="/en/HTML/Content_categories#flow_content" title="en/HTML/Content categories#flow content">flow content</a> ou <a href="/en/HTML/Content_categories#phrasing_content" title="en/HTML/Content categories#phrasing content">phrasing content</a> , sem <code>&lt;video&gt;</code> ou elementos {{ HTMLElement("audio") }}.</td>
-  </tr>
-  <tr>
-   <td>Omissão de tag</td>
-   <td>Nenhuma, tanto as tags iniciais quanto as finais devem estar presentes.</td>
-  </tr>
-  <tr>
-   <td>Permissão de elementos pais</td>
-   <td>Qualquer elemento que aceite <a href="/en/HTML/Content_categories#flow_content" title="en/HTML/Content categories#flow content">flow content</a>, ou qualquer outro elemento que aceite <a href="/en/HTML/Content_categories#phrasing_content" title="en/HTML/Content categories#phrasing content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <td>Documento normativo</td>
-   <td><a class="external" href="http://www.w3.org/TR/html5/video.html#video">HTML 5, section 4.8.6</a></td>
-  </tr>
- </tbody>
-</table>
+## Atributos
 
-<h2 id="Atributos">Atributos</h2>
+Como qualquer elemento HTML, este elemento suporta os [global attributes](/en/HTML/Global_attributes "en/HTML/Global attributes").
 
-<p>Como qualquer elemento HTML, este elemento suporta os <a href="/en/HTML/Global_attributes" title="en/HTML/Global attributes">global attributes</a>.</p>
+- {{ htmlattrdef("autoplay") }}
+  - : Um atributo Booleano; se especificado, o video vai ser executado assim que possível sem precisar de carregar todo o arquivo.
 
-<dl>
- <dt>{{ htmlattrdef("autoplay") }}</dt>
- <dd>Um atributo Booleano; se especificado, o video vai ser executado assim que possível sem precisar de carregar todo o arquivo.</dd>
-</dl>
+> **Note:** Nota: Algumas versões do Chrome aceitam somente o `autostart` e não o autoplay
 
-<div class="note">
-<p>Nota: Algumas versões do Chrome aceitam somente o <code>autostart</code> e não o autoplay</p>
-</div>
+- {{ htmlattrdef("autobuffer") }} {{ Non-standard_inline() }} {{ obsolete_inline() }}
 
-<dl>
- <dt>{{ htmlattrdef("autobuffer") }} {{ Non-standard_inline() }} {{ obsolete_inline() }}</dt>
- <dd><p>Um atributo Booleano; se especificado, o video vai começar a carregar automaticamente mesmo que não especificado para tocar automaticamente. Isso deve ser usado em casos que é esperado que o vídeo seja reproduzido (por exemplo, se o usuário acessa a página para assistir o vídeo, mas não se o vídeo estiver incorporado à pagina junto a outro conteúdo). O vídeo é carregado até que o cache de mídia.</p>
- <div class="note"><strong>Nota de implementação:</strong> embora parte dos primeiros rascunhos das especificações do HTML5, o atributo<code> autobuffer</code> foi removido das últimas versões. Ele foi removido do Gecko 2.0 e outros navegadores, e nunca implementado em outros. A especificação define um novo atributo enumerado, <code>preload</code>, para substituir o atributo <code>autobuffer</code>, com sintaxe diferente. {{ bug(548523) }}</div>
- </dd>
- <dt>{{ htmlattrdef("buffered") }}</dt>
- <dd>Um atributo que pode ser lido para determinar os intervalos do vídeo que já foram carregados. Este atributo contém um objeto {{ domxref("TimeRanges") }}.</dd>
- <dt>{{ htmlattrdef("controls") }}</dt>
- <dd>Se esse atributo estiver presente, o Gecko oferecerá controles para permitir o usuário controlar a reprodução do vídeo, incluindo volume, navegação, e pausa/continuação da reprodução.</dd>
- <dt>{{ htmlattrdef("height") }}</dt>
- <dd>A altura da área de exibição do vídeo, em pixels de CSS.</dd>
- <dt>{{ htmlattrdef("loop") }}</dt>
- <dd>Um atributo Booleano; se especificado, ao chegar no fim do vídeo, ele voltará automaticamente para o começo.</dd>
- <dt>{{ htmlattrdef("muted") }}</dt>
- <dd>Um atributo Booleano que indica a configuração padrão do áudio contido no vídeo. Se definido, o áudio vai começar mudo. Seu valor padrão é falso, significando que o áudio será reproduzido juntamente com o vídeo.</dd>
- <dt>{{ htmlattrdef("played") }}</dt>
- <dd>Um objeto {{ domxref("TimeRanges") }} indicando que todo o vídeo foi reproduzido.</dd>
- <dt>{{ htmlattrdef("preload") }}</dt>
- <dd>Esse atributo enumerado pretende dar uma sugestão ao navegador sobre o que o autor pensa que proporcionará uma melhor experiência do usuário. Ele pode ter os seguintes valores:
- <ul>
-  <li><span style="font-family: Courier New;">none: </span>indica que o usuário não necessitará consultar o vídeo ou que o servidor quer minimizar seu tráfego; em outros termos indica que o vídeo não deve ser pré-carregado.</li>
-  <li><span style="font-family: Courier New;">metadata</span>: indica que embora o usuário não necessitará consultar o vídeo, pegar os meta-dados (ex: comprimento) é interessante.</li>
-  <li><span style="font-family: Courier New;">auto</span>: indica que o usuário necessita ter prioridade; em outros termos isso indicou que, se necessário, o vídeo inteiro pode ser baixado, mesmo que não seja esperado a execução.</li>
-  <li>a <em>string vazia</em>: é um sinônimo do valor <span style="font-family: Courier New;">auto</span>.</li>
- </ul>
+  - : Um atributo Booleano; se especificado, o video vai começar a carregar automaticamente mesmo que não especificado para tocar automaticamente. Isso deve ser usado em casos que é esperado que o vídeo seja reproduzido (por exemplo, se o usuário acessa a página para assistir o vídeo, mas não se o vídeo estiver incorporado à pagina junto a outro conteúdo). O vídeo é carregado até que o cache de mídia.
 
- <p>Se não definido, seu valor padrão será definido pelo navegador (isto é, cada navegador pode escolher seu valor padrão), embora a especificação recomenda que seja definido para o <span style="font-family: Courier New;">metadata</span>.</p>
+    > **Note:** **Nota de implementação:** embora parte dos primeiros rascunhos das especificações do HTML5, o atributo` autobuffer` foi removido das últimas versões. Ele foi removido do Gecko 2.0 e outros navegadores, e nunca implementado em outros. A especificação define um novo atributo enumerado, `preload`, para substituir o atributo `autobuffer`, com sintaxe diferente. {{ bug(548523) }}
 
- <div class="note"><strong>Notas de uso:</strong>
+- {{ htmlattrdef("buffered") }}
+  - : Um atributo que pode ser lido para determinar os intervalos do vídeo que já foram carregados. Este atributo contém um objeto {{ domxref("TimeRanges") }}.
+- {{ htmlattrdef("controls") }}
+  - : Se esse atributo estiver presente, o Gecko oferecerá controles para permitir o usuário controlar a reprodução do vídeo, incluindo volume, navegação, e pausa/continuação da reprodução.
+- {{ htmlattrdef("height") }}
+  - : A altura da área de exibição do vídeo, em pixels de CSS.
+- {{ htmlattrdef("loop") }}
+  - : Um atributo Booleano; se especificado, ao chegar no fim do vídeo, ele voltará automaticamente para o começo.
+- {{ htmlattrdef("muted") }}
+  - : Um atributo Booleano que indica a configuração padrão do áudio contido no vídeo. Se definido, o áudio vai começar mudo. Seu valor padrão é falso, significando que o áudio será reproduzido juntamente com o vídeo.
+- {{ htmlattrdef("played") }}
+  - : Um objeto {{ domxref("TimeRanges") }} indicando que todo o vídeo foi reproduzido.
+- {{ htmlattrdef("preload") }}
 
- <ul>
-  <li>O atributo <code>autoplay</code> tem precedência sobre o <code>preload,</code>pois se é necessário executar o vídeo automaticamente, o navegador obviamente o baixará. Definindo ambos <code>autoplay</code> e <code>preload</code> é permitido pela especificação.</li>
-  <li>O navegador não é forçado pela especifição a seguir o valor desse atributo; é apenas uma sugestão.</li>
- </ul>
- </div>
- </dd>
- <dt>{{ htmlattrdef("poster") }}</dt>
- <dd>Uma URL indicando uma imagem de prévia do vídeo até o usuário reproduzir ou navegar por ele. Se este atributo não estiver especificado, nada será mostrado até que o primeiro quadro esteja disponível; então o primeiro quadro será exibido como imagem de prévia.</dd>
- <dt>{{ htmlattrdef("src") }}</dt>
- <dd>A URL do vídeo a ser incorporado. Isto é opcional; ao invés disso você pode usar o elemento {{ HTMLElement("source") }} dentro do bloco do vídeo para especificar o vídeo a ser incorporado .</dd>
- <dt>{{ htmlattrdef("width") }}</dt>
- <dd>A largura da área de exibição do vídeo, em pixels de CSS.</dd>
-</dl>
+  - : Esse atributo enumerado pretende dar uma sugestão ao navegador sobre o que o autor pensa que proporcionará uma melhor experiência do usuário. Ele pode ter os seguintes valores:
 
-<p>O tempo de compensação (time offset) entre o áudio e o vídeo está especificado como um valor de ponto flutuante (float) representando o número de segundos da compensação.</p>
+    - none: indica que o usuário não necessitará consultar o vídeo ou que o servidor quer minimizar seu tráfego; em outros termos indica que o vídeo não deve ser pré-carregado.
+    - metadata: indica que embora o usuário não necessitará consultar o vídeo, pegar os meta-dados (ex: comprimento) é interessante.
+    - auto: indica que o usuário necessita ter prioridade; em outros termos isso indicou que, se necessário, o vídeo inteiro pode ser baixado, mesmo que não seja esperado a execução.
+    - a _string vazia_: é um sinônimo do valor auto.
 
-<div class="note"><strong>Nota:</strong> A definição de valor de tempo de compensação ainda não foi completada na especificação do HTML 5 e está sujeita a mudança.</div>
+    Se não definido, seu valor padrão será definido pelo navegador (isto é, cada navegador pode escolher seu valor padrão), embora a especificação recomenda que seja definido para o metadata.
 
-<h2 id="Exemplos">Exemplos</h2>
+    > **Note:** **Notas de uso:**- O atributo `autoplay` tem precedência sobre o `preload,`pois se é necessário executar o vídeo automaticamente, o navegador obviamente o baixará. Definindo ambos `autoplay` e `preload` é permitido pela especificação.
+    >
+    > - O navegador não é forçado pela especifição a seguir o valor desse atributo; é apenas uma sugestão.
 
-<pre class="brush: html">&lt;!-- Exemplo simples de vídeo --&gt;
-&lt;video src="arquivovideo.ogg" autoplay poster="imagemprevia.jpg"&gt;
+- {{ htmlattrdef("poster") }}
+  - : Uma URL indicando uma imagem de prévia do vídeo até o usuário reproduzir ou navegar por ele. Se este atributo não estiver especificado, nada será mostrado até que o primeiro quadro esteja disponível; então o primeiro quadro será exibido como imagem de prévia.
+- {{ htmlattrdef("src") }}
+  - : A URL do vídeo a ser incorporado. Isto é opcional; ao invés disso você pode usar o elemento {{ HTMLElement("source") }} dentro do bloco do vídeo para especificar o vídeo a ser incorporado .
+- {{ htmlattrdef("width") }}
+  - : A largura da área de exibição do vídeo, em pixels de CSS.
+
+O tempo de compensação (time offset) entre o áudio e o vídeo está especificado como um valor de ponto flutuante (float) representando o número de segundos da compensação.
+
+> **Note:** **Nota:** A definição de valor de tempo de compensação ainda não foi completada na especificação do HTML 5 e está sujeita a mudança.
+
+## Exemplos
+
+```html
+<!-- Exemplo simples de vídeo -->
+<video src="arquivovideo.ogg" autoplay poster="imagemprevia.jpg">
   Desculpa, o seu navegador não suporta vídeos incorporados,
-  mas você pode &lt;a href="videofile.ogg"&gt;baixá-lo&lt;/a&gt;
+  mas você pode <a href="videofile.ogg">baixá-lo</a>
   e assistir pelo seu reprodutor de mídia favorito!
-&lt;/video&gt;
+</video>
 
-&lt;!-- Vídeo com legendas --&gt;
-&lt;video src="foo.ogg"&gt;
-  &lt;track kind="subtitles" src="foo.en.vtt" srclang="en" label="English"&gt;
-  &lt;track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska"&gt;
-&lt;/video&gt;
-</pre>
+<!-- Vídeo com legendas -->
+<video src="foo.ogg">
+  <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English">
+  <track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska">
+</video>
+```
 
-<p>O primeiro exemplo reproduz um vídeo, começando a reprodução assim que o vídeo for recebido para permitir a execução sem parar a execução para baixar mais. Até que o vídeo comece a reproduzir, a imagem "imagemprevia.jpg" será mostrada em seu lugar.</p>
+O primeiro exemplo reproduz um vídeo, começando a reprodução assim que o vídeo for recebido para permitir a execução sem parar a execução para baixar mais. Até que o vídeo comece a reproduzir, a imagem "imagemprevia.jpg" será mostrada em seu lugar.
 
-<p>O segundo exemplo permite o usuário escolher entre diferentes legendas.</p>
+O segundo exemplo permite o usuário escolher entre diferentes legendas.
 
-<h2 id="Suporte_ao_Servidor">Suporte ao Servidor</h2>
+## Suporte ao Servidor
 
-<p>Se o tipo MIME do vídeo não estiver definido corretamente no servidor, o vídeo poderá não ser mostrado ou uma caixa cinza contendo um X (se o JavaScript estiver habilitado) será exibida em seu lugar.</p>
+Se o tipo MIME do vídeo não estiver definido corretamente no servidor, o vídeo poderá não ser mostrado ou uma caixa cinza contendo um X (se o JavaScript estiver habilitado) será exibida em seu lugar.
 
-<p>Se você disponibiliza seu vídeos como Ogg Theora, você pode corrigir esse problema para o servidor web Apache adicionando a extensão utilizada por seu arquivos de vídeo (".ogm", ".ogv", e ".ogg" são as mais comuns) para o tipo MIME "video/ogg" através do arquivo "mime.types" localizado em "/etc/apache" ou através da configuração de diretiva "AddType" no httpd.conf.</p>
+Se você disponibiliza seu vídeos como Ogg Theora, você pode corrigir esse problema para o servidor web Apache adicionando a extensão utilizada por seu arquivos de vídeo (".ogm", ".ogv", e ".ogg" são as mais comuns) para o tipo MIME "video/ogg" através do arquivo "mime.types" localizado em "/etc/apache" ou através da configuração de diretiva "AddType" no httpd.conf.
 
-<pre>AddType video/ogg .ogm
+```
+AddType video/ogg .ogm
 AddType video/ogg .ogv
 AddType video/ogg .ogg
-</pre>
+```
 
-<p>Se você disponibilizar seu vídeos como WebM, você pode corrigir esse problema para o servidor web Apache adicionando a extensão usada por seu arquivos de vídeo (".webm" é a mais comum) para o tipo MIME "video/webm" através do arquivo "mime.types" localizado em "/etc/apache" ou através da configuração de diretiva "AddType" no httpd.conf.</p>
+Se você disponibilizar seu vídeos como WebM, você pode corrigir esse problema para o servidor web Apache adicionando a extensão usada por seu arquivos de vídeo (".webm" é a mais comum) para o tipo MIME "video/webm" através do arquivo "mime.types" localizado em "/etc/apache" ou através da configuração de diretiva "AddType" no httpd.conf.
 
-<pre>AddType video/webm .webm
-</pre>
+```
+AddType video/webm .webm
+```
 
-<p>Seu serviço de hospedagem talvez forneça uma interface simples para mudar a configuração dos tipos MIME para as novas tecnologias até que uma atualização global ocorra naturalmente.</p>
+Seu serviço de hospedagem talvez forneça uma interface simples para mudar a configuração dos tipos MIME para as novas tecnologias até que uma atualização global ocorra naturalmente.
 
-<h2 id="Interface_do_DOM">Interface do DOM</h2>
+## Interface do DOM
 
-<p>Esse elemento implementa a interface <code><a href="/en/DOM/HTMLVideoElement" title="en/DOM/HTMLVideoElementInterface">HTMLVideoElement</a></code>.</p>
+Esse elemento implementa a interface [`HTMLVideoElement`](/en/DOM/HTMLVideoElement "en/DOM/HTMLVideoElementInterface").
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("html.elements.video")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a class="internal" href="/En/Media_formats_supported_by_the_audio_and_video_elements" title="En/Media formats supported by the audio and video elements">Media formats supported by the audio and video elements</a></li>
- <li><a class="internal" href="http://developer-new.mozilla.org/pt-BR/docs/HTML/Element/audio" title="pt-BR/HTML/Element/Audio"><code>audio</code></a></li>
- <li><a class="internal" href="/en/Using_HTML5_audio_and_video" title="En/Using audio and video in Firefox">Using HTML5 audio and video</a></li>
- <li><a class="internal" href="/En/Manipulating_video_using_canvas" title="En/Manipulating video using canvas">Manipulating video using canvas</a></li>
- <li><a class="internal" href="/En/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement" title="En/NsIDOMHTMLMediaElement"><code>nsIDOMHTMLMediaElement</code></a></li>
- <li><a class="external" href="http://tinyvid.tv/">TinyVid</a> - exemplos utilizando arquivos ogg em HTML5.</li>
- <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#video">The <code>video</code> element</a> (Especificação HTML 5)</li>
- <li><a class="internal" href="/en/Configuring_servers_for_Ogg_media" title="en/Configuring servers for Ogg media">Configuring servers for Ogg media</a></li>
-</ul>
+- [Media formats supported by the audio and video elements](/En/Media_formats_supported_by_the_audio_and_video_elements "En/Media formats supported by the audio and video elements")
+- [`audio`](http://developer-new.mozilla.org/pt-BR/docs/HTML/Element/audio "pt-BR/HTML/Element/Audio")
+- [Using HTML5 audio and video](/en/Using_HTML5_audio_and_video "En/Using audio and video in Firefox")
+- [Manipulating video using canvas](/En/Manipulating_video_using_canvas "En/Manipulating video using canvas")
+- [`nsIDOMHTMLMediaElement`](/En/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement "En/NsIDOMHTMLMediaElement")
+- [TinyVid](http://tinyvid.tv/) - exemplos utilizando arquivos ogg em HTML5.
+- [The `video` element](http://www.whatwg.org/specs/web-apps/current-work/#video) (Especificação HTML 5)
+- [Configuring servers for Ogg media](/en/Configuring_servers_for_Ogg_media "en/Configuring servers for Ogg media")
 
-<p>{{ languages( { "fr": "fr/HTML/Element/video","es": "es/HTML/Elemento/video" } ) }}</p>
+{{ languages( { "fr": "fr/HTML/Element/video","es": "es/HTML/Elemento/video" } ) }}
