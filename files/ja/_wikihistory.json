@@ -31399,18 +31399,6 @@
     "modified": "2020-03-12T19:48:11.857Z",
     "contributors": ["YuichiNukiyama"]
   },
-  "conflicting/Web/Manifest": {
-    "modified": "2020-10-15T22:29:07.713Z",
-    "contributors": ["mfuji09"]
-  },
-  "conflicting/Web/Manifest_7ec32c6987e59d5f1cb08f8c9d900a4c": {
-    "modified": "2020-10-15T22:29:08.894Z",
-    "contributors": ["mfuji09"]
-  },
-  "conflicting/Web/Manifest_e8c4835b067e177a000dc29c18483205": {
-    "modified": "2020-10-15T22:29:07.852Z",
-    "contributors": ["mfuji09"]
-  },
   "conflicting/Web/SVG/Element/animate": {
     "modified": "2020-10-15T21:27:02.463Z",
     "contributors": ["takenspc", "wbamberg", "Sebastianz", "teoli", "manzyun"]
