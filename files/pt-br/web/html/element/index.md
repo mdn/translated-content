@@ -56,7 +56,7 @@ HTML suporta vários recursos multimídia como imagens, audio, e video.
 
 Além do conteúdo normal de multimídia, HTML pode incluir uma variedade de outros conteúdos, apesar de nem todos serem possuírem fácilidade de interação.
 
-{{HTMLRefTable({"include":\["HTML embedded content"], "exclude":\["multimedia"]})}}
+{{HTMLRefTable({"include":["HTML embedded content"], "exclude":["multimedia"]})}}
 
 ## Scripting
 
@@ -80,7 +80,7 @@ Estes elementos são usados para se criar e manipular dados em tabelas.
 
 HTML provê de vários elementos que podem ser usados juntos para criar formulários que o usuário pode preencher e mandar para o website ou aplicativo. Há muito mais informação no [guia de formulários HTML](/pt-BR/docs/Web/Guide/HTML/Forms).
 
-{{HTMLRefTable({"include": \["HTML forms"], "exclude":\["Deprecated"]})}}
+{{HTMLRefTable({"include": ["HTML forms"], "exclude":["Deprecated"]})}}
 
 ## Elementos interativos
 
@@ -94,10 +94,10 @@ Componentes Web são uma tecnologia relacionada a HTML que faz possível, essenc
 
 > **Note:** **Observação:** Os elementos pertencentes aos Componentes Web são definidos na [coleção de especificações dos Componentes Web](https://www.w3.org/TR/components-intro/) da {{Glossary("W3C","World Wide Web Consortium")}} (W3C) em vez da específicação do HTML. Além disso, a especificação dos Componentes Web ainda não foi finalizada e está sujeita a mudanças.
 
-{{HTMLRefTable({"include":\["Web Components"],"elements":\["shadow"]})}}
+{{HTMLRefTable({"include":["Web Components"],"elements":["shadow"]})}}
 
 ## Elementos obsoletos
 
 > **Warning:** **Aviso:** Estes elementos HTML antigos são obsoletos e não devem mais ser usados. **Você deve sempre evitar usa-los em novos projetos, e deve substitui-los assim que possível.** Eles estão listados apenas por motivos educacionais.
 
-{{HTMLRefTable({"include":\["Deprecated","Obsolete"]})}}
+{{HTMLRefTable({"include":["Deprecated","Obsolete"]})}}
