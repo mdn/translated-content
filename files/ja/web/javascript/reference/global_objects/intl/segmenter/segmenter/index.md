@@ -5,7 +5,7 @@ l10n:
   sourceCommit: a3dd560fabb1fe4051f6273f41b337a5b1245a6e
 ---
 
-**`Intl.Segmenter()`** コンストラクタは、ロケールに依存したテキスト分割を可能にする [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトを生成します。
+**`Intl.Segmenter()`** コンストラクターは、ロケールに依存したテキスト分割を可能にする [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトを生成します。
 
 {{EmbedInteractiveExample("pages/js/intl-segmenter.html")}}
 
@@ -28,7 +28,7 @@ new Intl.Segmenter(locales, options)
     - `granularity` {{ optional_inline }}
       - : 文字列。使用可能な値は以下の通り。
         - `"grapheme"` (default)
-          - : ロケールに応じた書記素クラスタ（ユーザーが認識する文字）の境界で、入力を分割します。
+          - : ロケールに応じた書記素クラスター（ユーザーが認識する文字）の境界で、入力を分割します。
         - `"word"`
           - : ロケールに応じた単語の境界で、入力を分割します。
         - `"sentence"`
