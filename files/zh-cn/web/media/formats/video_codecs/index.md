@@ -1,28 +1,8 @@
 ---
 title: 网页视频编码指南
 slug: Web/Media/Formats/Video_codecs
-tags:
-  - AV1
-  - Codecs
-  - 编码器
-  - 编码
-  - 指南
-  - H.264
-  - MPEG
-  - 多媒体
-  - Theora
-  - VP8
-  - VP9
-  - 视频
-  - 压缩
-  - 数据
-  - 解码
-  - h.263
-  - h.265
-  - mp4
-  - streaming
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 
 本文介绍了你在网络中最常遇见的视频编码，总结了这些编码方式的能力、兼容性以及使用时需要考虑的事项，并且提供了一些为你的项目的视频选择编码的建议。
 
@@ -57,42 +37,42 @@ tags:
       <th scope="row"><a href="#av1">AV1</a></th>
       <td>AOMedia Video 1</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
     <tr>
       <th scope="row"><a href="#avc_h.264">AVC (H.264)</a></th>
       <td>Advanced Video Coding（高级视频编码器）</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
       <th scope="row"><a href="#h.263">H.263</a></th>
       <td>H.263 Video</td>
-      <td><a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a></td>
+      <td><a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a></td>
     </tr>
     <tr>
       <th scope="row"><a href="#hevc_h.265">HEVC (H.265)</a></th>
       <td>High Efficiency Video Coding（高效视频编码）</td>
-      <td><a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a></td>
+      <td><a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a></td>
     </tr>
     <tr>
       <th scope="row"><a href="#mp4v-es">MP4V-ES</a></th>
       <td>MPEG-4 Video Elemental Stream（MPEG-4 视频元素流）</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
       <th scope="row"><a href="#mpeg-1_part_2_video">MPEG-1</a></th>
       <td>MPEG-1 Part 2 Visual</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime"
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#quicktime"
           >QuickTime</a
         >
       </td>
@@ -101,9 +81,9 @@ tags:
       <th scope="row"><a href="#mpeg-2_part_2_video">MPEG-2</a></th>
       <td>MPEG-2 Part 2 Visual</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime"
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#quicktime"
           >QuickTime</a
         >
       </td>
@@ -111,24 +91,24 @@ tags:
     <tr>
       <th scope="row"><a href="#theora">Theora</a></th>
       <td>Theora</td>
-      <td><a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a></td>
+      <td><a href="/zh-CN/docs/Web/Media/Formats/Containers#ogg">Ogg</a></td>
     </tr>
     <tr>
       <th scope="row"><a href="#vp8">VP8</a></th>
       <td>Video Processor 8</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
     <tr>
       <th scope="row"><a href="#vp9">VP9</a></th>
       <td>Video Processor 9（视频处理器 9）</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
   </tbody>
@@ -544,11 +524,11 @@ AV1 目前提供三种配置文件：**main**、**high** 和 **professional**，
     <tr>
       <th scope="row">容器支持</th>
       <td>
-        <a href="https://en.wikipedia.org/wiki/ISO/IEC_base_media_file_format">ISOBMFF</a>, MPEG-TS, <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a>
+        <a href="https://en.wikipedia.org/wiki/ISO/IEC_base_media_file_format">ISOBMFF</a>, MPEG-TS, <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>, <a href="/zh-CN/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
     <tr>
-      <th scope="row"> {{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible </th>
+      <th scope="row"> {{Glossary("RTP")}} / <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a> compatible </th>
       <td>支持</td>
     </tr>
     <tr>
@@ -703,14 +683,14 @@ WebRTC 的非 Web 浏览器实现（任何不包括 JavaScript API 的实现）�
     <tr>
       <th scope="row">容器支持</th>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("RTP")}} /
-        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>兼容
+        <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a>兼容
       </th>
       <td>支持</td>
     </tr>
@@ -815,14 +795,14 @@ H.263 是一种专有格式，[专利](https://www.itu.int/ITU-T/recommendations
     <tr>
       <th scope="row">容器支持</th>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a>
       </td>
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>兼容
+        {{Glossary("RTP")}} / <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a>兼容
       </th>
       <td>不支持</td>
     </tr>
@@ -978,12 +958,12 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
     </tr>
     <tr>
       <th scope="row">容器支持</th>
-      <td><a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a></td>
+      <td><a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a></td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("RTP")}} /
-        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>兼容
+        <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a>兼容
       </th>
       <td>不支持</td>
     </tr>
@@ -1015,7 +995,7 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
 
 **MPEG-4 Video Elemental Stream** (**MP4V-ES**) 格式是 MPEG-4 Part 2 视觉标准的一部分。虽然一般来说，MPEG-4 第 2 部分视频没有被任何人使用，因为它缺乏与其他编解码器相关的引人注目的价值，但 MP4V-ES 在移动设备上确实有一些用途。 MP4V 本质上是 MPEG-4 容器中的 H.263 编码。
 
-它的主要目的是用于通过 {{Glossary("RTP")}} 会话流式传输 MPEG-4 音频和视频。但是，MP4V-ES 也用于使用 [3GP](/en-US/docs/Web/Media/Formats/Containers#3gp) 通过移动连接传输 MPEG-4 音频和视频。
+它的主要目的是用于通过 {{Glossary("RTP")}} 会话流式传输 MPEG-4 音频和视频。但是，MP4V-ES 也用于使用 [3GP](/zh-CN/docs/Web/Media/Formats/Containers#3gp) 通过移动连接传输 MPEG-4 音频和视频。
 
 您几乎肯定不想使用这种格式，因为任何主流浏览器都不以有意义的方式支持它，而且已经过时了。这种类型的文件应该有扩展名“.mp4v”，但有时被错误地标记为“.mp4”。
 
@@ -1077,7 +1057,7 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
           </tbody>
         </table>
         <p>
-          Firefox 仅在<a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>容器中支持 MP4V-ES。
+          Firefox 仅在<a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a>容器中支持 MP4V-ES。
         </p>
         <p>Chrome 不支持 MP4V-ES；但是，Chrome OS 可以。</p>
       </td>
@@ -1085,13 +1065,13 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
     <tr>
       <th scope="row">容器支持</th>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>兼容
+        {{Glossary("RTP")}} / <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a>兼容
       </th>
       <td>不支持</td>
     </tr>
@@ -1184,7 +1164,7 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>兼容
+        {{Glossary("RTP")}} / <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a>兼容
       </th>
       <td>不支持</td>
     </tr>
@@ -1343,15 +1323,15 @@ MPEG-2 有几个具有不同功能的配置文件。然后每个配置文件有�
     <tr>
       <th scope="row">容器支持</th>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>,
         MPEG-TS（MPEG传输流），
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a>
       </td>
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>兼容
+        {{Glossary("RTP")}} / <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a>兼容
       </th>
       <td>不支持</td>
     </tr>
@@ -1464,11 +1444,11 @@ Theora 的一个缺点是它仅支持每个颜色分量 8 位，无法选择使�
     </tr>
     <tr>
       <th scope="row">容器支持</th>
-      <td><a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a></td>
+      <td><a href="/zh-CN/docs/Web/Media/Formats/Containers#ogg">Ogg</a></td>
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>兼容
+        {{Glossary("RTP")}} / <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a>兼容
       </th>
       <td>不支持</td>
     </tr>
@@ -1495,7 +1475,7 @@ Theora 的一个缺点是它仅支持每个颜色分量 8 位，无法选择使�
 
 如果浏览器支持，VP8 允许带有 Alpha 通道的视频，允许视频播放的背景可以通过视频看到，达到每个像素的 Alpha 分量指定的程度。
 
-HTML 内容中的 VP8 有很好的浏览器支持，尤其是在 [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) 文件中。这使得 VP8 成为您的内容的理想候选者，尽管如果您可以使用 VP9，它是一个更好的选择。 Web 浏览器是_需要_支持 WebRTC 的 VP8，但并非所有这样做的浏览器都支持 HTML 音频和视频元素。
+HTML 内容中的 VP8 有很好的浏览器支持，尤其是在 [WebM](/zh-CN/docs/Web/Media/Formats/Containers#webm) 文件中。这使得 VP8 成为您的内容的理想候选者，尽管如果您可以使用 VP9，它是一个更好的选择。 Web 浏览器是_需要_支持 WebRTC 的 VP8，但并非所有这样做的浏览器都支持 HTML 音频和视频元素。
 
 <table class="standard-table">
   <tbody>
@@ -1572,14 +1552,14 @@ HTML 内容中的 VP8 有很好的浏览器支持，尤其是在 [WebM](/en-US/d
     <tr>
       <th scope="row">容器支持</th>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>兼容</th>
+        {{Glossary("RTP")}} / <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a>兼容</th>
       <td>支持; VP8 是 WebRTC 规范要求的编解码器之一</td>
     </tr>
     <tr>
@@ -1603,7 +1583,7 @@ HTML 内容中的 VP8 有很好的浏览器支持，尤其是在 [WebM](/en-US/d
 
 VP9 的主要配置文件仅支持 4:2:0 色度子采样级别的 8 位色深，但其配置文件包括对更深颜色的支持和全范围的色度子采样模式。它支持多种 HDR 实现，并在选择帧速率、纵横比和帧大小方面提供了很大的自由度。
 
-VP9 被浏览器广泛支持，并且编解码器的硬件实现相当普遍。 VP9 是 [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) 规定的两个视频编解码器之一（另一个是 [VP8](#vp8)）。但请注意，Safari 对 WebM 和 VP9 的支持仅在 14.1 版中引入，因此如果您选择使用 VP9，请考虑为 iPhone、iPad 和 Mac 用户提供备用格式，例如 AVC 或 HEVC。
+VP9 被浏览器广泛支持，并且编解码器的硬件实现相当普遍。 VP9 是 [WebM](/zh-CN/docs/Web/Media/Formats/Containers#webm) 规定的两个视频编解码器之一（另一个是 [VP8](#vp8)）。但请注意，Safari 对 WebM 和 VP9 的支持仅在 14.1 版中引入，因此如果您选择使用 VP9，请考虑为 iPhone、iPad 和 Mac 用户提供备用格式，例如 AVC 或 HEVC。
 
 如果您能够使用 WebM 容器（并且可以在需要时提供后备视频），VP9 是一个不错的选择。如果您希望使用开放编解码器而不是专有编解码器，则尤其如此。
 
@@ -1721,23 +1701,23 @@ VP9 被浏览器广泛支持，并且编解码器的硬件实现相当普遍。 
         </p>
         <ul>
           <li>Safari 14：（macOS、iOS）在 WebM 中支持 VP9 for WebRTC。</li>
-          <li>Safari 14：(macOS) 从 MacOS 11.3 开始支持<a href="/en-US/docs/Web/API/Media_Source_Extensions_API">MSE</a>中的 VP9。</li>
+          <li>Safari 14：(macOS) 从 MacOS 11.3 开始支持<a href="/zh-CN/docs/Web/API/Media_Source_Extensions_API">MSE</a>中的 VP9。</li>
           <li>Safari 14.1：（macOS）支持“无处不在”包含 VP9 视频轨道的 WebM 文件。</li>
-          <li>Safari 15：（macOS）在<a href="/en-US/docs/Web/API/Media_Source_Extensions_API">MSE</a>的 WebM 中支持 VP9。</li>
+          <li>Safari 15：（macOS）在<a href="/zh-CN/docs/Web/API/Media_Source_Extensions_API">MSE</a>的 WebM 中支持 VP9。</li>
         </ul>
       </td>
     </tr>
     <tr>
       <th scope="row">容器支持</th>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>兼容
+        {{Glossary("RTP")}} / <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a>兼容
       </th>
       <td>支持</td>
     </tr>
@@ -1774,13 +1754,13 @@ VP9 被浏览器广泛支持，并且编解码器的硬件实现相当普遍。 
 
 首先，让我们看看在典型网站上展示的视频的最佳选择，例如博客、信息网站、使用视频来展示产品的小型企业网站（但不是视频本身就是产品的地方）等等.
 
-1. 一个 **[WebM](/en-US/docs/Web/Media/Formats/Containers#webm)** 容器，使用 **[VP9](#vp9)** 视频编解码器和 **[ Opus](/en-US/docs/Web/Media/Formats/Audio_codecs#opus)** 音频编解码器。这些都是开放的、免版税的格式，通常都得到很好的支持，尽管只是在最近的浏览器中，这就是为什么需要准备一个备用视频。
+1. 一个 **[WebM](/zh-CN/docs/Web/Media/Formats/Containers#webm)** 容器，使用 **[VP9](#vp9)** 视频编解码器和 **[ Opus](/zh-CN/docs/Web/Media/Formats/Audio_codecs#opus)** 音频编解码器。这些都是开放的、免版税的格式，通常都得到很好的支持，尽管只是在最近的浏览器中，这就是为什么需要准备一个备用视频。
 
     ```html
     <video controls src="filename.webm"></video>
     ```
 
-2. 一个 **[MP4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4)** 容器和 **[AVC](#avc_h.264)** (**H .264**) 视频编解码器，最好使用 **[AAC](/en-US/docs/Web/Media/Formats/Audio_codecs#aac)** 作为您的音频编解码器。这是因为带有 AVC 和 AAC 编解码器的 MP4 容器是一种广泛支持的组合——事实上，每个主流浏览器都支持它——而且质量通常对大多数用例都很好。但是，请确保验证您是否符合许可证要求。
+2. 一个 **[MP4](/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4)** 容器和 **[AVC](#avc_h.264)** (**H .264**) 视频编解码器，最好使用 **[AAC](/zh-CN/docs/Web/Media/Formats/Audio_codecs#aac)** 作为您的音频编解码器。这是因为带有 AVC 和 AAC 编解码器的 MP4 容器是一种广泛支持的组合——事实上，每个主流浏览器都支持它——而且质量通常对大多数用例都很好。但是，请确保验证您是否符合许可证要求。
 
     ```html
     <video controls>
@@ -1830,7 +1810,7 @@ While other codecs may have better best-case quality levels when compressing the
 
 #### 录制视频
 
-考虑到您可以获得多接近无损的限制，您可以考虑使用 [AVC](#avc_h.264) 或 [AV1](#av1)。例如，如果您使用 [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) 录制视频，则在创建 {{domxref("MediaRecorder") 时可能会使用如下代码}} 目的：
+考虑到您可以获得多接近无损的限制，您可以考虑使用 [AVC](#avc_h.264) 或 [AV1](#av1)。例如，如果您使用 [MediaStream Recording API](/zh-CN/docs/Web/API/MediaStream_Recording_API) 录制视频，则在创建 {{domxref("MediaRecorder") 时可能会使用如下代码}} 目的：
 
 ```js
 const kbps = 1024;
@@ -1844,7 +1824,7 @@ const options = {
 let recorder = new MediaRecorder(sourceStream, options);
 ```
 
-此示例创建一个 `MediaRecorder`，配置为使用 BT.2100 HDR 以 4:4:4 色度二次采样和 [FLAC](/en-US/docs/Web/) 以 12 位颜色录制 [AV1](#av1) 视频Media/Formats/Audio_codecs#flac) 用于无损音频。生成的文件将使用视频和音频轨道之间共享的不超过 800 Mbps 的比特率。您可能需要根据硬件性能、您的要求以及您选择使用的特定编解码器来调整这些值。这个比特率对于网络传输显然是不现实的，很可能只在本地使用。
+此示例创建一个 `MediaRecorder`，配置为使用 BT.2100 HDR 以 4:4:4 色度二次采样和 [FLAC](/zh-CN/docs/Web/) 以 12 位颜色录制 [AV1](#av1) 视频Media/Formats/Audio_codecs#flac) 用于无损音频。生成的文件将使用视频和音频轨道之间共享的不超过 800 Mbps 的比特率。您可能需要根据硬件性能、您的要求以及您选择使用的特定编解码器来调整这些值。这个比特率对于网络传输显然是不现实的，很可能只在本地使用。
 
 将 `codecs` 参数的值分解为其点描述的属性，我们看到以下内容：
 
@@ -1865,15 +1845,15 @@ let recorder = new MediaRecorder(sourceStream, options);
 
 ## 相关资料
 
-- [Web audio codec guide](/en-US/docs/Web/Media/Formats/Audio_codecs)
-- [Media container formats (file types)](/en-US/docs/Web/Media/Formats/Containers)
-- [Handling media support issues in web content](/en-US/docs/Web/Media/Formats/Support_issues)
-- [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs)
+- [Web audio codec guide](/zh-CN/docs/Web/Media/Formats/Audio_codecs)
+- [Media container formats (file types)](/zh-CN/docs/Web/Media/Formats/Containers)
+- [Handling media support issues in web content](/zh-CN/docs/Web/Media/Formats/Support_issues)
+- [Codecs used by WebRTC](/zh-CN/docs/Web/Media/Formats/WebRTC_codecs)
 - {{RFC(6381)}}: The "Codecs" and "Profiles" parameters for "Bucket" media types
 - {{RFC(5334)}}: Ogg Media Types
 - {{RFC(3839)}}: MIME Type Registrations for 3GPP Multimedia Files
 - {{RFC(4381)}}: MIME Type Registrations for 3GPP2 Multimedia Files
 - {{RFC(4337)}}: MIME Type Registrations for MPEG-4
 - [Video codecs in Opera](https://dev.opera.com/articles/introduction-html5-video/#codecs--the-fly-in-the-ointment)
-- [Video](/en-US/docs/Web/API/HTMLVideoElement) and [audio](/en-US/docs/Web/HTML/Element/audio) codecs in Internet Explorer
+- [Video](/zh-CN/docs/Web/API/HTMLVideoElement) and [audio](/zh-CN/docs/Web/HTML/Element/audio) codecs in Internet Explorer
 - [Video and audio codecs in Chrome](https://www.chromium.org/audio-video/)
