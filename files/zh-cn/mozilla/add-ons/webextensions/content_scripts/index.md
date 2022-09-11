@@ -108,19 +108,19 @@ window.confirm("Are you sure?"); // calls the original window.confirm()
 
 除了 standard DOM APIS，content script 还能使用以下 WebExtension APIS:
 
-From [`extension`](/zh-CN/Add-ons/WebExtensions/API/extension):
+From [`extension`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/extension):
 
-- [`getURL()`](</en-US/Add-ons/WebExtensions/API/extension#getURL()>)
-- [`inIncognitoContext`](/zh-CN/Add-ons/WebExtensions/API/extension#inIncognitoContext)
+- [`getURL()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL)
+- [`inIncognitoContext`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/extension/inIncognitoContext)
 
-From [`runtime`](/zh-CN/Add-ons/WebExtensions/API/runtime):
+From [`runtime`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime):
 
-- [`connect()`](</en-US/Add-ons/WebExtensions/API/runtime#connect()>)
-- [`getManifest()`](</en-US/Add-ons/WebExtensions/API/runtime#getManifest()>)
-- [`getURL()`](</en-US/Add-ons/WebExtensions/API/runtime#getURL()>)
-- [`onConnect`](/zh-CN/Add-ons/WebExtensions/API/runtime#onConnect)
-- [`onMessage`](/zh-CN/Add-ons/WebExtensions/API/runtime#onMessage)
-- [`sendMessage()`](</en-US/Add-ons/WebExtensions/API/runtime#sendMessage()>)
+- [`connect()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect)
+- [`getManifest()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getManifest)
+- [`getURL()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL)
+- [`onConnect`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect)
+- [`onMessage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
+- [`sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage)
 
 From [`i18n`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/i18n):
 
@@ -143,7 +143,7 @@ content scripts 拥有与扩展剩余部分一致的权限：所以如果这个�
 
 ### 一次性消息
 
-为了发送一个带有可选回复选项的一次性消息，你能使用以下 APIS:
+为了发送一个带有可选回复选项的一次性消息，你能使用以下 API:
 
 <table class="fullwidth-table standard-table">
   <thead>
@@ -158,14 +158,14 @@ content scripts 拥有与扩展剩余部分一致的权限：所以如果这个�
       <th scope="row">Send a message</th>
       <td>
         <code
-          ><a href="/en-US/Add-ons/WebExtensions/API/runtime#sendMessage()"
+          ><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage"
             >browser.runtime.sendMessage()</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/en-US/Add-ons/WebExtensions/API/Tabs/sendMessage"
+          ><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage"
             >browser.tabs.sendMessage()</a
           ></code
         >
@@ -175,14 +175,14 @@ content scripts 拥有与扩展剩余部分一致的权限：所以如果这个�
       <th scope="row">Receive a message</th>
       <td>
         <code
-          ><a href="/en-US/Add-ons/WebExtensions/API/runtime/onMessage"
+          ><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage"
             >browser.runtime.onMessage</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/en-US/Add-ons/WebExtensions/API/runtime#onMessage"
+          ><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage"
             >browser.runtime.onMessage</a
           ></code
         >

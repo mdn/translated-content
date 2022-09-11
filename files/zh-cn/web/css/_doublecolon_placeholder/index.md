@@ -4,7 +4,7 @@ slug: Web/CSS/::placeholder
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-[伪元素](/en-US/docs/Web/CSS/Pseudo-elements)**`::placeholder`**可以选择一个表单元素的[占位文本](/en-US/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute)，它允许开发者和设计师自定义[占位文本](/en-US/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute)的样式。
+[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)**`::placeholder`**可以选择一个表单元素的[占位文本](/zh-CN/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute)，它允许开发者和设计师自定义[占位文本](/zh-CN/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute)的样式。
 
 ```css
 ::placeholder {
@@ -80,6 +80,6 @@ input::placeholder {
   - {{cssxref("::-moz-placeholder")}}
   - {{cssxref(":-ms-input-placeholder")}}
 
-- [Forms in HTML](/en-US/docs/Web/HTML/Forms_in_HTML)
+- [Forms in HTML](/zh-CN/docs/Web/HTML/Forms_in_HTML)
 - {{HTMLElement("input")}}
 - {{HTMLElement("textarea")}}

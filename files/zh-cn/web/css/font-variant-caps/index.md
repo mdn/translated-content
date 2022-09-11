@@ -4,7 +4,7 @@ slug: Web/CSS/font-variant-caps
 ---
 {{CSSRef}}
 
-[CSS](/en-US/docs/Web/CSS)属性 **`font-variant-caps`** 使您可以控制大写字母特殊字符的使用。
+[CSS](/zh-CN/docs/Web/CSS)属性 **`font-variant-caps`** 使您可以控制大写字母特殊字符的使用。
 
 {{EmbedInteractiveExample("pages/css/font-variant-caps.html")}}
 
@@ -91,7 +91,7 @@ font-variant-caps: unset;
 
 当大量文本信息的`font-variant`属性被设置为`all-small-caps`或`all-petite-caps`，将会为认知障碍者（如读写障碍）的阅读带来困难。
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
 ## 规范
