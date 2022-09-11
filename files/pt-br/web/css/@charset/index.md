@@ -3,63 +3,48 @@ title: '@charset'
 slug: Web/CSS/@charset
 translation_of: Web/CSS/@charset
 ---
-<div>{{cssxref("&lt;string&gt;")}}{{ CSSRef() }}</div>
+{{cssxref("&lt;string&gt;")}}{{ CSSRef() }}
 
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>A regra <code>@charset</code> especifica a codificação de caracteres utilizada na folha de estilo. Deve ser o primeiro elemento na folha de estilo e não ser precedida de qualquer caráter; uma vez que não é uma declaração aninhada, ele não pode ser usado dentro de um grupo condicional de regras. Se vários <code>@charset</code> são definidos, apenas o primeiro é usado, e não pode ser usado dentro de um atributo de estilo em um elemento HTML ou dentro do elemento {{ HTMLElement("style") }}, onde o conjunto de caracteres da página HTML é relevante.</p>
+A regra `@charset` especifica a codificação de caracteres utilizada na folha de estilo. Deve ser o primeiro elemento na folha de estilo e não ser precedida de qualquer caráter; uma vez que não é uma declaração aninhada, ele não pode ser usado dentro de um grupo condicional de regras. Se vários `@charset` são definidos, apenas o primeiro é usado, e não pode ser usado dentro de um atributo de estilo em um elemento HTML ou dentro do elemento {{ HTMLElement("style") }}, onde o conjunto de caracteres da página HTML é relevante.
 
-<p>Esta regra at (<a href="/pt-BR/CSS/At-rule" title="At-rule">at-rule</a>) é útil quando se usa caracteres não ASCII em algumas propriedades CSS, como conteúdo.</p>
+Esta regra at ([at-rule](/pt-BR/CSS/At-rule "At-rule")) é útil quando se usa caracteres não ASCII em algumas propriedades CSS, como conteúdo.
 
-<p>Como existem várias maneiras de definir a codificação de caracteres em uma folha de estilo, o navegador vai tentar os seguintes métodos na seguinte ordem (e parar assim que um produzir um resultado):</p>
+Como existem várias maneiras de definir a codificação de caracteres em uma folha de estilo, o navegador vai tentar os seguintes métodos na seguinte ordem (e parar assim que um produzir um resultado):
 
-<ol>
- <li>O valor do carácter de ordem de <a href="http://pt.wikipedia.org/wiki/Marca_de_ordem_de_byte">byte Unicode</a> colocado no início do arquivo.</li>
- <li>O valor dado pelo atributo <code>charset</code> do <code>Content-Type:</code> cabeçalho HTTP ou o equivalente no protocolo usado para servir a folha de estilo.</li>
- <li>O <code>@charset</code> CSS.</li>
- <li>Use a codificação de caracteres definidos pelo documento referente: o atributo charset do elemento {{ HTMLElement("link") }}. Este método é obsoleto em HTML5 e não deve ser utilizado.</li>
- <li>Assume que o documento é UTF-8.</li>
-</ol>
+1.  O valor do carácter de ordem de [byte Unicode](http://pt.wikipedia.org/wiki/Marca_de_ordem_de_byte) colocado no início do arquivo.
+2.  O valor dado pelo atributo `charset` do `Content-Type:` cabeçalho HTTP ou o equivalente no protocolo usado para servir a folha de estilo.
+3.  O `@charset` CSS.
+4.  Use a codificação de caracteres definidos pelo documento referente: o atributo charset do elemento {{ HTMLElement("link") }}. Este método é obsoleto em HTML5 e não deve ser utilizado.
+5.  Assume que o documento é UTF-8.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">  @charset <em>charset</em>;
-</pre>
+```
+  @charset charset;
+```
 
-<p>onde :</p>
+onde :
 
-<dl>
- <dt style="margin: 0 40px;"><em>charset</em></dt>
- <dd style="margin: 0 40px;">É uma {{cssxref("&lt;string&gt;")}} denotando a codificação de caracteres a ser usado. Ele deve ser o nome de uma codificação de caracteres segura para a Web definido no <a href="http://www.iana.org/assignments/character-sets">registro IANA</a>. Se vários nomes estão associados com uma codificação, apenas um é marcado como <em>preferido</em> e assim ser utilizado.</dd>
-</dl>
+- _charset_
+  - : É uma {{cssxref("&lt;string&gt;")}} denotando a codificação de caracteres a ser usado. Ele deve ser o nome de uma codificação de caracteres segura para a Web definido no [registro IANA](http://www.iana.org/assignments/character-sets). Se vários nomes estão associados com uma codificação, apenas um é marcado como _preferido_ e assim ser utilizado.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: css">@charset "UTF-8";       /* Define a codificação da folha de estilo para Unicode UTF-8 */
+```css
+@charset "UTF-8";       /* Define a codificação da folha de estilo para Unicode UTF-8 */
 @charset 'iso-8859-15'; /* Define a codificação da folha de estilo para Latin-9 (línguas da Europa Ocidental, com sinal de euro) */
  @charset "UTF-8";      /* Inválido, há um caracter (espaço) antes da regra */
 @charset UTF-8;         /*  Inválido, sem ‘ ou ", o conjunto de caracteres não é uma {{cssxref("&lt;string&gt;")}} CSS */
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'syndata.html#x57', '@charset') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                | Status                       | Comentário |
+| ---------------------------------------------------------------------------- | ---------------------------- | ---------- |
+| {{ SpecName('CSS2.1', 'syndata.html#x57', '@charset') }} | {{ Spec2('CSS2.1') }} |            |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade de navegadores</h2>
+## Compatibilidade de navegadores
 
 {{Compat("css.at-rules.charset")}}

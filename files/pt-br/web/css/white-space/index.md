@@ -13,128 +13,79 @@ tags:
   - Web
 translation_of: Web/CSS/white-space
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>A propriedade CSS white-space é usada para descrever como os espaços em branco dentro dos elementos são manipulados.</p>
+A propriedade CSS white-space é usada para descrever como os espaços em branco dentro dos elementos são manipulados.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax" title="CSS/Value_definition_syntax">Formal syntax</a>: {{csssyntax("white-space")}}</pre>
+```
+Formal syntax: {{csssyntax("white-space")}}
+```
 
-<pre>white-space: normal
+```
+white-space: normal
 white-space: nowrap
 white-space: pre
 white-space: pre-wrap
 white-space: pre-line
 
 white-space: inherit
-</pre>
+```
 
-<h3 id="Values" name="Values">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Sequências de espaços em branco são recolhidas. Caracteres de nova linha no código são tratados como outros espaços em branco. As linhas quebram conforme a necessidade para preencher as linhas das caixas (boxes).</dd>
- <dt><code>nowrap</code></dt>
- <dd>Recolhe os espaços em branco como no normal, mas suprime as quebras de linha (quebra de texto) no texto.</dd>
- <dt><code>pre</code></dt>
- <dd>Sequências de espaço em branco são preservadas, linhas são quebradas apenas em carateres de nova linha no código e em elementos {{HTMLElement("br")}}.</dd>
- <dt><code>pre-wrap</code></dt>
- <dd>Sequências de espaço em branco são preservadas. Linhas são quebradas em caracteres de nova linha, em {{HTMLElement("br")}} e quando necessário para preencher as linhas das caixas  (boxes).</dd>
- <dt><code>pre-line</code></dt>
- <dd>Sequências de espaços em branco são recolhidas. Linhas são quebradas em caracteres de nova linha, em {{HTMLElement("br")}} e quando necessário para preencher as linhas das caixas  (boxes).</dd>
-</dl>
+- `normal`
+  - : Sequências de espaços em branco são recolhidas. Caracteres de nova linha no código são tratados como outros espaços em branco. As linhas quebram conforme a necessidade para preencher as linhas das caixas (boxes).
+- `nowrap`
+  - : Recolhe os espaços em branco como no normal, mas suprime as quebras de linha (quebra de texto) no texto.
+- `pre`
+  - : Sequências de espaço em branco são preservadas, linhas são quebradas apenas em carateres de nova linha no código e em elementos {{HTMLElement("br")}}.
+- `pre-wrap`
+  - : Sequências de espaço em branco são preservadas. Linhas são quebradas em caracteres de nova linha, em {{HTMLElement("br")}} e quando necessário para preencher as linhas das caixas (boxes).
+- `pre-line`
+  - : Sequências de espaços em branco são recolhidas. Linhas são quebradas em caracteres de nova linha, em {{HTMLElement("br")}} e quando necessário para preencher as linhas das caixas (boxes).
 
-<p>A tabela a seguir resume o comportamento dos valores para white-space:</p>
+A tabela a seguir resume o comportamento dos valores para white-space:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th> </th>
-   <th>Novas linhas</th>
-   <th>Espaços e Tabulações (tabs)</th>
-   <th>Quebra de texto </th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th><code>normal</code></th>
-   <td>Recolhido</td>
-   <td>Recolhido</td>
-   <td>Quebra</td>
-  </tr>
-  <tr>
-   <th><code>nowrap</code></th>
-   <td>Recolhido</td>
-   <td>Recolhido</td>
-   <td>Sem quebra</td>
-  </tr>
-  <tr>
-   <th><code>pre</code></th>
-   <td>Preservado</td>
-   <td>Preservado</td>
-   <td>Sem quebra</td>
-  </tr>
-  <tr>
-   <th><code>pre-wrap</code></th>
-   <td>Preservado</td>
-   <td>Preservado</td>
-   <td>Quebra</td>
-  </tr>
-  <tr>
-   <th><code>pre-line</code></th>
-   <td>Preservado</td>
-   <td>Recolhido</td>
-   <td>Quebra</td>
-  </tr>
- </tbody>
-</table>
+|            | Novas linhas | Espaços e Tabulações (tabs) | Quebra de texto |
+| ---------- | ------------ | --------------------------- | --------------- |
+| `normal`   | Recolhido    | Recolhido                   | Quebra          |
+| `nowrap`   | Recolhido    | Recolhido                   | Sem quebra      |
+| `pre`      | Preservado   | Preservado                  | Sem quebra      |
+| `pre-wrap` | Preservado   | Preservado                  | Quebra          |
+| `pre-line` | Preservado   | Recolhido                   | Quebra          |
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: css">code {
+```css
+code {
   white-space: pre;
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text', '#propdef-white-space', 'white-space')}}</td>
-   <td>{{Spec2('CSS3 Text')}}</td>
-   <td>Aumenta a precisão dos algoritmos de quebra.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'text.html#white-space-prop', 'white-space')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Especificação inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                            | Estado                       | Comentário                                   |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------- |
+| {{SpecName('CSS3 Text', '#propdef-white-space', 'white-space')}}     | {{Spec2('CSS3 Text')}} | Aumenta a precisão dos algoritmos de quebra. |
+| {{SpecName('CSS2.1', 'text.html#white-space-prop', 'white-space')}} | {{Spec2('CSS2.1')}}     | Especificação inicial.                       |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade de Navegadores</h2>
+## Compatibilidade de Navegadores
 
-<p>{{Compat("css.properties.white-space")}}</p>
+{{Compat("css.properties.white-space")}}
 
-<div id="compat-mobile"> </div>
+\[1] Internet Explorer 5.5+ suporta {{Cssxref("word-wrap")}}`: break-word;`
+O código a seguir permite quebras de linhas dentro de elementos pre:
 
-<p>[1] Internet Explorer 5.5+ suporta {{Cssxref("word-wrap")}}<code>: break-word;</code><br>
- O código a seguir permite quebras de linhas dentro de elementos pre:</p>
-
-<pre class="brush: css">pre {
+```css
+pre {
   word-wrap: break-word;      /* IE 5.5-7 */
   white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
   white-space: pre-wrap;      /* current browsers */
-}</pre>
+}
+```

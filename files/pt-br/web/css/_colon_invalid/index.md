@@ -1,46 +1,51 @@
 ---
 title: ':invalid'
-slug: 'Web/CSS/:invalid'
+slug: Web/CSS/:invalid
 tags:
   - CSS
   - Formulário
   - Pseudo-class
   - Validações
-translation_of: 'Web/CSS/:invalid'
+translation_of: Web/CSS/:invalid
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classe CSS</a> <strong><code>:invalid</code></strong> representa qualquer elemento {{HTMLElement("input")}} ou {{HTMLElement("form")}} cujo conteúdo não esteja <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">válido</a>.</p>
+A [pseudo-classe CSS](/pt-BR/docs/Web/CSS/Pseudo-classes) **`:invalid`** representa qualquer elemento {{HTMLElement("input")}} ou {{HTMLElement("form")}} cujo conteúdo não esteja [válido](/pt-BR/docs/Web/Guide/HTML/HTML5/Constraint_validation).
 
-<pre class="brush: css no-line-numbers">/* Seleciona todos os inputs inválidos */
+```css
+/* Seleciona todos os inputs inválidos */
 input:invalid {
   background-color: pink;
-}</pre>
+}
+```
 
-<p>Essa pseudo-classe é útil para usuário identificar quais campos foram preenchidos incorretamente.</p>
+Essa pseudo-classe é útil para usuário identificar quais campos foram preenchidos incorretamente.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
 {{csssyntax}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>Esse exemplo apresenta um simples formulário onde a cor verde realça um input válido e a cor vermelha realça um input inválido.</p>
+Esse exemplo apresenta um simples formulário onde a cor verde realça um input válido e a cor vermelha realça um input inválido.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;label for="url_input"&gt;Adicione uma URL:&lt;/label&gt;
-  &lt;input type="url" id="url_input" /&gt;
-  &lt;br /&gt;
-  &lt;br /&gt;
-  &lt;label for="email_input"&gt;Adicione um endereço de email:&lt;/label&gt;
-  &lt;input type="email" id="email_input" required/&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <label for="url_input">Adicione uma URL:</label>
+  <input type="url" id="url_input" />
+  <br />
+  <br />
+  <label for="email_input">Adicione um endereço de email:</label>
+  <input type="email" id="email_input" required/>
+</form>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">input:invalid {
+```css
+input:invalid {
   background-color: #ffdddd;
 }
 
@@ -63,25 +68,27 @@ input:required {
 
 input:required:invalid {
   border-color: #C00000;
-}</pre>
+}
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample('Exemplo', 600, 120)}}</p>
+{{EmbedLiveSample('Exemplo', 600, 120)}}
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<h3 id="Radio_buttons">Radio buttons</h3>
+### Radio buttons
 
-<p>Se algum radio button de um grupo possuir o atributo <code>required</code>, a pseudo-classe <code>:invalid</code> é aplicada a todos se nenhum deles for selecionado. (Radio buttons agrupados compartilham o mesmo valor pelo atributo <code>name</code>.)</p>
+Se algum radio button de um grupo possuir o atributo `required`, a pseudo-classe `:invalid` é aplicada a todos se nenhum deles for selecionado. (Radio buttons agrupados compartilham o mesmo valor pelo atributo `name`.)
 
-<h3 id="Gecko_defaults">Gecko defaults</h3>
+### Gecko defaults
 
-<p>Por padrão, Gecko não aplica o estilo para a pseudo-classe <code>:invalid</code>. Entretanto, pode-se aplicar um estilo (um "brilho" vermelho usando a propriedade {{Cssxref("box-shadow")}}) à pseudo-classe {{cssxref(":-moz-ui-invalid")}}, que são um conjunto que se aplicam como o <code>:invalid</code>.</p>
+Por padrão, Gecko não aplica o estilo para a pseudo-classe `:invalid`. Entretanto, pode-se aplicar um estilo (um "brilho" vermelho usando a propriedade {{Cssxref("box-shadow")}}) à pseudo-classe {{cssxref(":-moz-ui-invalid")}}, que são um conjunto que se aplicam como o `:invalid`.
 
-<p>Você pode desabilitar o "brilho" usando o CSS a seguir, ou substituir completamente para alterar a aparência dos campos inválidos: </p>
+Você pode desabilitar o "brilho" usando o CSS a seguir, ou substituir completamente para alterar a aparência dos campos inválidos:
 
-<pre class="brush: css">:invalid {
+```css
+:invalid {
   box-shadow: none;
 }
 
@@ -91,49 +98,23 @@ input:required:invalid {
 
 :-moz-ui-invalid {
   box-shadow: none;
-}</pre>
+}
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#selector-invalid', ':invalid')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Nenhuma alteração.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', '#selector-invalid', ':invalid')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Define a semântica do HTML e validação de restrições.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#validity-pseudos', ':invalid')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Status                               | Comentário                                            |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------- |
+| {{SpecName('HTML WHATWG', '#selector-invalid', ':invalid')}}     | {{Spec2('HTML WHATWG')}}     | Nenhuma alteração.                                    |
+| {{SpecName('HTML5 W3C', '#selector-invalid', ':invalid')}}         | {{Spec2('HTML5 W3C')}}         | Define a semântica do HTML e validação de restrições. |
+| {{SpecName('CSS4 Selectors', '#validity-pseudos', ':invalid')}} | {{Spec2('CSS4 Selectors')}} | Definição inicial.                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
+{{Compat("css.selectors.invalid")}}
 
+## Veja também
 
-<p>{{Compat("css.selectors.invalid")}}</p>
-</div>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>Outras pseudo-classes relacionadas com validações: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":valid") }}</li>
- <li>Mozilla pseudo-classes relacionadas: {{cssxref(":-moz-ui-invalid")}}, {{cssxref(":-moz-submit-invalid")}}</li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a></li>
-</ul>
+- Outras pseudo-classes relacionadas com validações: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":valid") }}
+- Mozilla pseudo-classes relacionadas: {{cssxref(":-moz-ui-invalid")}}, {{cssxref(":-moz-submit-invalid")}}
+- [Form data validation](/pt-BR/docs/Learn/HTML/Forms/Form_validation)

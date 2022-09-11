@@ -12,65 +12,46 @@ tags:
   - Seletores
 translation_of: Web/CSS/ID_selectors
 ---
-<div>{{CSSRef("Selectors")}}</div>
+{{CSSRef("Selectors")}}
 
-<p>Em um documento HTML, os seletores de ID do CSS selecionam um elemento baseado no conteúdo de seu atributo {{htmlattrxref("ID")}},  o qual deve ser exatamente igual ao valor dado ao seletor.</p>
+Em um documento HTML, os seletores de ID do CSS selecionam um elemento baseado no conteúdo de seu atributo {{htmlattrxref("ID")}}, o qual deve ser exatamente igual ao valor dado ao seletor.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">#valor_id { <em>propriedades de estilo</em> }</pre>
+```
+#valor_id { propriedades de estilo }
+```
 
-<p>Note que isso é equivalente aos seguintes {{Cssxref("Attribute_selectors", "seletores de atributo")}}:</p>
+Note que isso é equivalente aos seguintes {{Cssxref("Attribute_selectors", "seletores de atributo")}}:
 
-<pre class="syntaxbox">[id=valor_id] { <em>propriedades de estilo</em> }</pre>
+```
+[id=valor_id] { propriedades de estilo }
+```
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: css">span#identificado {
+```css
+span#identificado {
   background-color: DodgerBlue;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;span id="identificado"&gt;Aqui um span com um pouco de texto.&lt;/span&gt;
-&lt;span&gt;Aqui outro.&lt;/span&gt;
-</pre>
+```html
+<span id="identificado">Aqui um span com um pouco de texto.</span>
+<span>Aqui outro.</span>
+```
 
-<p>{{EmbedLiveSample("Exemplo", 200, 50)}}</p>
+{{EmbedLiveSample("Exemplo", 200, 50)}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#id-selectors", "ID selectors")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Selectors", "#id-selectors", "ID selectors")}}</td>
-   <td>{{Spec2("CSS3 Selectors")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "selector.html#id-selectors", "ID selectors")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS1", "#id-as-selector", "ID selectors")}}</td>
-   <td>{{Spec2("CSS1")}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Status                               | Comentário        |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------- |
+| {{SpecName("CSS4 Selectors", "#id-selectors", "ID selectors")}}         | {{Spec2("CSS4 Selectors")}} |                   |
+| {{SpecName("CSS3 Selectors", "#id-selectors", "ID selectors")}}         | {{Spec2("CSS3 Selectors")}} |                   |
+| {{SpecName("CSS2.1", "selector.html#id-selectors", "ID selectors")}} | {{Spec2("CSS2.1")}}             |                   |
+| {{SpecName("CSS1", "#id-as-selector", "ID selectors")}}                     | {{Spec2("CSS1")}}             | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.selectors.id")}}

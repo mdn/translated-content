@@ -3,11 +3,12 @@ title: background-size
 slug: Web/CSS/background-size
 translation_of: Web/CSS/background-size
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A propriedade <strong><code>background-size</code></strong> do <a href="/en-US/docs/CSS" title="CSS">CSS</a> especifica o tamanho das imagens de fundo. O tamanho da imagem pode ser totalmente ou apenas parcialmente comprimido com o objetivo de preservar sua proporção.</p>
+A propriedade **`background-size`** do [CSS](/pt-BR/docs/CSS "CSS") especifica o tamanho das imagens de fundo. O tamanho da imagem pode ser totalmente ou apenas parcialmente comprimido com o objetivo de preservar sua proporção.
 
-<pre class="brush: css no-line-numbers">/* Sintaxe */
+```css
+/* Sintaxe */
 background-size: cover;
 background-size: contain;
 
@@ -35,18 +36,19 @@ background-size: 6px, auto, contain;
 background-size: inherit;
 background-size: initial;
 background-size: unset;
-</pre>
+```
 
-<div class="hidden" id="background-size">
-<pre class="brush: html">&lt;div id="container"&gt;
-  &lt;div class="subcontainer contain"&gt;contain&lt;/div&gt;
-  &lt;div class="subcontainer cover"&gt;cover&lt;/div&gt;
-  &lt;div class="subcontainer width"&gt;120px&lt;/div&gt;
-  &lt;div class="subcontainer width-height"&gt;120px 200px&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html hidden
+<div id="container">
+  <div class="subcontainer contain">contain</div>
+  <div class="subcontainer cover">cover</div>
+  <div class="subcontainer width">120px</div>
+  <div class="subcontainer width-height">120px 200px</div>
+</div>
+```
 
-<pre class="brush: css">#container {
+```css hidden
+#container {
    width: 100%;
    display:flex;
    justify-content: space-around;
@@ -82,102 +84,97 @@ background-size: unset;
 .width-height {
   background-size: 120px 200px;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample("background-size", "100%", 300, "", "", "example-outcome-frame")}}</p>
+{{EmbedLiveSample("background-size", "100%", 300, "", "", "example-outcome-frame")}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<p>O tamanho de uma única imagem de fundo pode ser especificado de três maneiras diferentes:</p>
+O tamanho de uma única imagem de fundo pode ser especificado de três maneiras diferentes:
 
-<ul>
- <li>usando a palavra-chave <code><a href="#contain">contain</a></code></li>
- <li>usando a palavra-chave <code><a href="#cover">cover</a></code></li>
- <li>usando valores para <em>width</em> e <em>height</em></li>
-</ul>
+- usando a palavra-chave [`contain`](#contain)
+- usando a palavra-chave [`cover`](#cover)
+- usando valores para _width_ e _height_
 
-<p>Para especificar usando <em>width</em> e <em>height</em>, você pode fornecer um ou dois valores:</p>
+Para especificar usando _width_ e _height_, você pode fornecer um ou dois valores:
 
-<ul>
- <li>se apenas um valor for fornecido, ele valerá para a <em>width</em> e height será<code><a href="#auto">auto</a></code>.</li>
- <li>Se dois valores forem fornecidos, o primeiro corresponde a <em>width</em> e o segundo a <em>height</em>.</li>
-</ul>
+- se apenas um valor for fornecido, ele valerá para a _width_ e height será[`auto`](#auto).
+- Se dois valores forem fornecidos, o primeiro corresponde a _width_ e o segundo a _height_.
 
-<p>Cada valor pode ser um <code><a href="#length">&lt;length&gt;</a></code>, uma <code><a href="#&lt;percentage>">&lt;percentage&gt;</a></code>, ou <code><a href="#auto">auto</a></code>.<br>
- <br>
- Por exemplo:</p>
+Cada valor pode ser um [`<length>`](#length), uma [`<percentage>`](#<percentage>), ou [`auto`](#auto).
 
-<pre class="brush: css">background-size: contain;
+Por exemplo:
+
+```css
+background-size: contain;
 
 background-size: 50%;
 background-size: 3em;
 
 background-size: auto 1em;
-background-size: 50% 25%;</pre>
+background-size: 50% 25%;
+```
 
-<p><br>
- Para especificar o tamanho de fundo para mais de uma imagem, forneça múltiplos tamanhos separados por vírgula:</p>
+Para especificar o tamanho de fundo para mais de uma imagem, forneça múltiplos tamanhos separados por vírgula:
 
-<pre class="brush: css">background-size: 50% 25%, contain, 3em;</pre>
+```css
+background-size: 50% 25%, contain, 3em;
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><a id="length" name="length"><code>&lt;length&gt;</code></a></dt>
- <dd>Um valor <code>{{cssxref("&lt;length&gt;")}}</code> que ajusta a imagem de fundo para o comprimento especificado na dimensão correspondente. Comprimentos negativos não são permitidos.</dd>
- <dt><a id="&lt;percentage>" name="&lt;percentage>"><code>&lt;percentage&gt;</code></a></dt>
- <dd>Um valor {{cssxref("&lt;percentage&gt;")}} que ajusta a imagem de fundo na dimensão correspondente com a porcentagem especificada para a área do elemento pai, que é determinado pelo valor {{cssxref("background-origin")}}. A área correspondente ao elemento pai é, por padrão, a área que engloba o conteúdo da caixa e seu respectivo padding; a área pode também ser alterada para englobar apenas o conteúdo ou para a área contendo as bordas, o padding e o conteúdo. Se o {{cssxref("background-attachment","attachment")}} está <code>fixed</code>, a área do elemento pai é a área inteira do janela do navegador, não incluindo a área coberta pelas barras de rolagem (se estiverem presentes). Valores negativos de porcentagem não são permitidos.</dd>
- <dt><a id="auto" name="auto"><code>auto</code></a></dt>
- <dd>Uma palavra-chave que ajusta a imagem de fundo para tal direção de modo que mantenha a proporção da imagem inalterada.</dd>
- <dt><a id="contain" name="contain"><code>contain</code></a></dt>
- <dd>Uma palavra-chave que aumenta o máximo possível a imagem mantendo a sua proporção (a imagem não fica esticada). A imagem tenta ocupar o espaço inteiro do container. Quando a imagem e o container tem diferentes dimensões, as áreas não preenchidas (tanto top/bottom ou left/right) são preenchidas com a cor de fundo.</dd>
- <dt><a id="cover" name="cover"><code>cover</code></a></dt>
- <dd>Uma palavra-chave que é o inverso de <code>contain</code>. Ajusta a imagem o mais largamente possível e mantém sua proporção (a imagem não fica esticada). A imagem "cobre" o container inteiro, tanto em altura como em largura. Quando a imagem e o container têm diferentes dimensões,<em>a imagem ultrapassa os limites do container</em> em qualquer direção, para continuar mantendo a proporção.</dd>
-</dl>
+- `<length>`
+  - : Um valor `{{cssxref("&lt;length&gt;")}}` que ajusta a imagem de fundo para o comprimento especificado na dimensão correspondente. Comprimentos negativos não são permitidos.
+- `<percentage>`
+  - : Um valor {{cssxref("&lt;percentage&gt;")}} que ajusta a imagem de fundo na dimensão correspondente com a porcentagem especificada para a área do elemento pai, que é determinado pelo valor {{cssxref("background-origin")}}. A área correspondente ao elemento pai é, por padrão, a área que engloba o conteúdo da caixa e seu respectivo padding; a área pode também ser alterada para englobar apenas o conteúdo ou para a área contendo as bordas, o padding e o conteúdo. Se o {{cssxref("background-attachment","attachment")}} está `fixed`, a área do elemento pai é a área inteira do janela do navegador, não incluindo a área coberta pelas barras de rolagem (se estiverem presentes). Valores negativos de porcentagem não são permitidos.
+- `auto`
+  - : Uma palavra-chave que ajusta a imagem de fundo para tal direção de modo que mantenha a proporção da imagem inalterada.
+- `contain`
+  - : Uma palavra-chave que aumenta o máximo possível a imagem mantendo a sua proporção (a imagem não fica esticada). A imagem tenta ocupar o espaço inteiro do container. Quando a imagem e o container tem diferentes dimensões, as áreas não preenchidas (tanto top/bottom ou left/right) são preenchidas com a cor de fundo.
+- `cover`
+  - : Uma palavra-chave que é o inverso de `contain`. Ajusta a imagem o mais largamente possível e mantém sua proporção (a imagem não fica esticada). A imagem "cobre" o container inteiro, tanto em altura como em largura. Quando a imagem e o container têm diferentes dimensões,_a imagem ultrapassa os limites do container_ em qualquer direção, para continuar mantendo a proporção.
 
-<p>A interpretação dos possíveis valores depende das dimensões intrínsecas da imagem (largura e altura) e da proporção intrínseca (proporção da largura e altura).  Um imagem bitmap sempre tem dimensões intrínsecas e uma proporção intrínseca.  Uma imagem pode conter ambas as dimensões intrínsecas (e portanto deve ter uma proporção intrínseca).  Poderá contar também uma ou nenhuma dimensão intrínseca, e portanto pode ou não pode conter uma proporção intrínseca.  Gradients são tratados como imagens sem dimensões ou proporções intrínsecas.</p>
+A interpretação dos possíveis valores depende das dimensões intrínsecas da imagem (largura e altura) e da proporção intrínseca (proporção da largura e altura). Um imagem bitmap sempre tem dimensões intrínsecas e uma proporção intrínseca. Uma imagem pode conter ambas as dimensões intrínsecas (e portanto deve ter uma proporção intrínseca). Poderá contar também uma ou nenhuma dimensão intrínseca, e portanto pode ou não pode conter uma proporção intrínseca. Gradients são tratados como imagens sem dimensões ou proporções intrínsecas.
 
-<div class="note">
-<p><strong>Nota: </strong>Esse comportamento mudou no Gecko 8.0 {{geckoRelease("8.0")}}. Antes disso, gradients eram tratados como imagens sem dimensões intrínsecas, porém com uma proporção intrínseca idêntica a da área do elemento pai.</p>
-</div>
+> **Note:** **Nota:** Esse comportamento mudou no Gecko 8.0 {{geckoRelease("8.0")}}. Antes disso, gradients eram tratados como imagens sem dimensões intrínsecas, porém com uma proporção intrínseca idêntica a da área do elemento pai.
 
-<p>Imagens geradas por elementos usando {{cssxref("-moz-element")}} (que na realidade casa com um elemento) são atualmente tratadas como imagens com as dimensões do elemento, ou da área de posicionamento de fundo se o elemento é SVG, com a proporção intrínseca correspondente.</p>
+Imagens geradas por elementos usando {{cssxref("-moz-element")}} (que na realidade casa com um elemento) são atualmente tratadas como imagens com as dimensões do elemento, ou da área de posicionamento de fundo se o elemento é SVG, com a proporção intrínseca correspondente.
 
-<div class="note"><strong>Nota:</strong> Este não é o comportamento atualmente especificado, que é que as dimensões intrínsecas e a proporção devem ser as do elemento em todos os casos.</div>
+> **Note:** **Nota:** Este não é o comportamento atualmente especificado, que é que as dimensões intrínsecas e a proporção devem ser as do elemento em todos os casos.
 
-<p>O tamanho renderizado da imagem de fundo é então computado da seguinte forma:</p>
+O tamanho renderizado da imagem de fundo é então computado da seguinte forma:
 
-<dl>
- <dt>Se ambos os componentes do <code>background-size</code> são especificados e não há <code>auto</code></dt>
- <dd>A imagem de fundo é renderizada no tamanho especificado.</dd>
- <dt>Se o <code>background-size</code> é <code>contain</code> ou <code>cover</code>:</dt>
- <dd>A imagem é renderizada, preservando sua proporção intrínseca, com o maior tamanho contido, ou cobrindo a área do elemento pai. Se a imagem não tiver uma proporção intrínseca, então ela é renderizada no tamanho da área do elemento pai.</dd>
- <dt>Se o <code>background-size</code> é <code>auto</code> ou <code>auto auto</code>:</dt>
- <dd>Se a imagem tiver duas dimensões intrínsecas, ela é renderizada nesse tamanho. Se não tiver dimensões intrínsecas e nenhuma proporção intrínseca, ela é renderizada ao tamanho da área do elemento pai. Se não tiver dimensões, mas tiver uma proporção, é processado como se <code>contain</code> tivesse sido especificado. Se a imagem tiver uma dimensão intrínseca e uma proporção, ela é renderizada no tamanho determinado por essa dimensão e a proporção. Se a imagem tiver uma dimensão intrínseca mas nenhuma proporção, ela é processada usando a dimensão intrínseca e a dimensão correspondente da área do elemento pai.
- <div class="note"><strong>Nota:</strong> imagens SVG tem um atributo <a href="/en-US/docs/Web/SVG/Attribute/preserveAspectRatio">preserveAspectRatio</a> que é equivalente ao 'contain'. No Firefox 43, ao contrário do Chrome 52, um background-size especificado explicitamente faz com que <a href="/en-US/docs/Web/SVG/Attribute/preserveAspectRatio">preserveAspectRatio</a> seja ignorado.</div>
- </dd>
- <dt>Se o background-size tem um componente <code>auto</code> e um componente não <code>auto</code>:</dt>
- <dd>Se a imagem tiver uma proporção intrínseca, então use a dimensão especificada. Se a imagem não tiver uma proporção intrínseca, use a dimensão especificada para essa dimensão. Para a outra dimensão, use a dimensão intrínseca correspondente da imagem se houver uma. Se não existe essa dimensão intrínseca, use a dimensão correspondente da área do elemento pai.</dd>
-</dl>
+- Se ambos os componentes do `background-size` são especificados e não há `auto`
+  - : A imagem de fundo é renderizada no tamanho especificado.
+- Se o `background-size` é `contain` ou `cover`:
+  - : A imagem é renderizada, preservando sua proporção intrínseca, com o maior tamanho contido, ou cobrindo a área do elemento pai. Se a imagem não tiver uma proporção intrínseca, então ela é renderizada no tamanho da área do elemento pai.
+- Se o `background-size` é `auto` ou `auto auto`:
 
-<p>Observe que o dimensionamento de fundo para vectors que não possuem dimensões ou proporções intrínsecas ainda não está totalmente implementado em todos os navegadores. Tenha cuidado ao confiar no comportamento descrito acima e teste em vários navegadores (especificamente incluindo versões do Firefox 7 ou anteriores e Firefox 8 ou superior) para ter certeza de que diferentes renderizações são aceitáveis.</p>
+  - : Se a imagem tiver duas dimensões intrínsecas, ela é renderizada nesse tamanho. Se não tiver dimensões intrínsecas e nenhuma proporção intrínseca, ela é renderizada ao tamanho da área do elemento pai. Se não tiver dimensões, mas tiver uma proporção, é processado como se `contain` tivesse sido especificado. Se a imagem tiver uma dimensão intrínseca e uma proporção, ela é renderizada no tamanho determinado por essa dimensão e a proporção. Se a imagem tiver uma dimensão intrínseca mas nenhuma proporção, ela é processada usando a dimensão intrínseca e a dimensão correspondente da área do elemento pai.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+    > **Note:** **Nota:** imagens SVG tem um atributo [preserveAspectRatio](/pt-BR/docs/Web/SVG/Attribute/preserveAspectRatio) que é equivalente ao 'contain'. No Firefox 43, ao contrário do Chrome 52, um background-size especificado explicitamente faz com que [preserveAspectRatio](/pt-BR/docs/Web/SVG/Attribute/preserveAspectRatio) seja ignorado.
+
+- Se o background-size tem um componente `auto` e um componente não `auto`:
+  - : Se a imagem tiver uma proporção intrínseca, então use a dimensão especificada. Se a imagem não tiver uma proporção intrínseca, use a dimensão especificada para essa dimensão. Para a outra dimensão, use a dimensão intrínseca correspondente da imagem se houver uma. Se não existe essa dimensão intrínseca, use a dimensão correspondente da área do elemento pai.
+
+Observe que o dimensionamento de fundo para vectors que não possuem dimensões ou proporções intrínsecas ainda não está totalmente implementado em todos os navegadores. Tenha cuidado ao confiar no comportamento descrito acima e teste em vários navegadores (especificamente incluindo versões do Firefox 7 ou anteriores e Firefox 8 ou superior) para ter certeza de que diferentes renderizações são aceitáveis.
+
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p><a href="http://whereswalden.com/files/mozilla/background-size/page-cover.html">Essa demonstração do <code>background-size: cover</code></a> e <a href="http://whereswalden.com/files/mozilla/background-size/page-contain.html">essa demonstração do <code>background-size: contain</code></a> foram feitas para você abrir em uma nova aba para ver como <code>contain</code> e <code>cover</code> se comportam quando as dimensões da área do elemento pai varia. <a href="http://whereswalden.com/files/mozilla/background-size/more-examples.html">Essa séria de demonstrações de como <code>background-size</code> funciona e interage com outras propriedades <code>background-*</code> </a>devem ser suficientes para entender como usar <code>background-size</code> sozinho e em conjunto com outras propriedades.</p>
+[Essa demonstração do `background-size: cover`](http://whereswalden.com/files/mozilla/background-size/page-cover.html) e [essa demonstração do `background-size: contain`](http://whereswalden.com/files/mozilla/background-size/page-contain.html) foram feitas para você abrir em uma nova aba para ver como `contain` e `cover` se comportam quando as dimensões da área do elemento pai varia. [Essa séria de demonstrações de como `background-size` funciona e interage com outras propriedades `background-*` ](http://whereswalden.com/files/mozilla/background-size/more-examples.html)devem ser suficientes para entender como usar `background-size` sozinho e em conjunto com outras propriedades.
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>Se você estiver especificando um gradient como plano de fundo e tiver especificado um <code>background-size</code> junto, é melhor não especificar um tamanho que use um único componente setado como auto ou seja especificado usando apenas um valor de largura (por exemplo, <code>background-size: 50%</code>).  A renderização de gradients em tais casos mudou no Firefox 8 e, no momento, geralmente é inconsistente em todos os navegadores, pois nem todos implementam a renderização em total conformidade com a especificação <a href="http://www.w3.org/TR/css3-background/#the-background-size"><code>background-size</code> </a>do CSS3 e com a <a href="http://dev.w3.org/csswg/css3-images/#gradients">especificação do CSS3 para valores d</a><a href="http://dev.w3.org/csswg/css3-images/#gradients">e gradient</a>.</p>
+Se você estiver especificando um gradient como plano de fundo e tiver especificado um `background-size` junto, é melhor não especificar um tamanho que use um único componente setado como auto ou seja especificado usando apenas um valor de largura (por exemplo, `background-size: 50%`). A renderização de gradients em tais casos mudou no Firefox 8 e, no momento, geralmente é inconsistente em todos os navegadores, pois nem todos implementam a renderização em total conformidade com a especificação [`background-size` ](http://www.w3.org/TR/css3-background/#the-background-size)do CSS3 e com a [especificação do CSS3 para valores d](http://dev.w3.org/csswg/css3-images/#gradients)[e gradient](http://dev.w3.org/csswg/css3-images/#gradients).
 
-<pre class="brush: css">.bar {
+```css
+.bar {
        width: 50px; height: 100px;
        background-image: gradient(...);
 
@@ -191,48 +188,38 @@ background-size: 50% 25%;</pre>
        background-size: 25px 50px;
        background-size: 50% 50%;
 }
-</pre>
+```
 
-<p>Observe que, em particular, não é recomendável usar uma dimensão de pixel e uma dimensões <code>auto</code> com um gradient, porque é impossível replicar a renderização nas versões do Firefox antes de 8 e nos navegadores que não implementam a renderização do Firefox 8, sem saber o tamanho exato do elemento cujo plano de fundo está sendo especificado.</p>
+Observe que, em particular, não é recomendável usar uma dimensão de pixel e uma dimensões `auto` com um gradient, porque é impossível replicar a renderização nas versões do Firefox antes de 8 e nos navegadores que não implementam a renderização do Firefox 8, sem saber o tamanho exato do elemento cujo plano de fundo está sendo especificado.
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-background-size', 'background-size')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                        | Status                                   | Comentário         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
+| {{SpecName('CSS3 Backgrounds', '#the-background-size', 'background-size')}} | {{Spec2('CSS3 Backgrounds')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("css.properties.background-size")}}</p>
+{{Compat("css.properties.background-size")}}
 
-<h2 id="Soluções_alternativas">Soluções alternativas</h2>
+## Soluções alternativas
 
-<h3 id="Para_Internet_Explorer_anterior_ao_IE8">Para Internet Explorer anterior ao IE8</h3>
+### Para Internet Explorer anterior ao IE8
 
-<p>Como o Internet Explorer 8 não suporta a propriedade <code>background-size</code>, é possível emular algumas de suas funcionalidades usando a propriedade não padrão <code>-ms-filter</code>:</p>
+Como o Internet Explorer 8 não suporta a propriedade `background-size`, é possível emular algumas de suas funcionalidades usando a propriedade não padrão `-ms-filter`:
 
-<pre class="brush:css">-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='path_relative_to_the_HTML_file', sizingMethod='scale')";</pre>
+```css
+-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='path_relative_to_the_HTML_file', sizingMethod='scale')";
+```
 
-<p>Isso simula o valor <code>cover</code>.</p>
+Isso simula o valor `cover`.
 
-<h3 id="No_Firefox_3.5">No Firefox 3.5</h3>
+### No Firefox 3.5
 
-<p>Enquanto essa propriedade foi adicionada no Firefox 3.6, é possível esticar totalmente a imagem no Firefox 3.5 usando {{cssxref("-moz-border-image")}}.</p>
+Enquanto essa propriedade foi adicionada no Firefox 3.6, é possível esticar totalmente a imagem no Firefox 3.5 usando {{cssxref("-moz-border-image")}}.
 
-<pre class="brush:css">.foo {
+```css
+.foo {
   background-image: url(bg-image.png);
 
   -webkit-background-size: 100% 100%;           /* Safari 3.0 */
@@ -241,12 +228,11 @@ background-size: 50% 25%;</pre>
           background-size: 100% 100%;           /* Gecko 2.0 (Firefox 4.0) and other CSS3-compliant browsers */
 
   -moz-border-image: url(bg-image.png) 0;    /* Gecko 1.9.1 (Firefox 3.5) */
-}</pre>
+}
+```
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/CSS/CSS_Reference" title="CSS Reference">CSS Reference</a></li>
- <li><a href="/en-US/docs/CSS/Multiple_backgrounds" title="CSS/Multiple backgrounds">Multiple backgrounds</a></li>
- <li><a href="/en-US/docs/CSS/Scaling_background_images" title="CSS/Scaling_background_images">Scaling background images</a></li>
-</ul>
+- [CSS Reference](/pt-BR/docs/CSS/CSS_Reference "CSS Reference")
+- [Multiple backgrounds](/pt-BR/docs/CSS/Multiple_backgrounds "CSS/Multiple backgrounds")
+- [Scaling background images](/pt-BR/docs/CSS/Scaling_background_images "CSS/Scaling_background_images")

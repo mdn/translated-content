@@ -1,80 +1,65 @@
 ---
 title: ':last-of-type'
-slug: 'Web/CSS/:last-of-type'
-translation_of: 'Web/CSS/:last-of-type'
+slug: Web/CSS/:last-of-type
+translation_of: Web/CSS/:last-of-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>A <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> <code>:last-of-type</code> representa o último irmão com o nome de elemento dado na lista de filhos de seu elemento pai.</p>
+A [CSS](/pt-BR/docs/Web/CSS) [pseudo-class](/pt-BR/docs/Web/CSS/Pseudo-classes) `:last-of-type` representa o último irmão com o nome de elemento dado na lista de filhos de seu elemento pai.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">element:last-of-type { <em>style properties</em> }
-</pre>
+```
+element:last-of-type { style properties }
+```
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>Para selecionar o último elemento <em>em</em> dentro de um elemento {{HTMLElement("p")}}, você pode usar o seguinte:</p>
+Para selecionar o último elemento _em_ dentro de um elemento {{HTMLElement("p")}}, você pode usar o seguinte:
 
-<pre class="brush: css">p em:last-of-type {
+```css
+p em:last-of-type {
   color: lime;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;p&gt;
-  &lt;em&gt;I'm not lime :(&lt;/em&gt;
-  &lt;strong&gt;I'm not lime :(&lt;/strong&gt;
-  &lt;em&gt;I'm lime :D&lt;/em&gt;
-  &lt;strong&gt;I'm also not lime :(&lt;/strong&gt;
-&lt;/p&gt;
+```html
+<p>
+  <em>I'm not lime :(</em>
+  <strong>I'm not lime :(</strong>
+  <em>I'm lime :D</em>
+  <strong>I'm also not lime :(</strong>
+</p>
 
-&lt;p&gt;
-  &lt;em&gt;I'm not lime :(&lt;/em&gt;
-  &lt;span&gt;&lt;em&gt;I am lime!&lt;/em&gt;&lt;/span&gt;
-  &lt;strong&gt;I'm not lime :(&lt;/strong&gt;
-  &lt;em&gt;I'm lime :D&lt;/em&gt;
-  &lt;span&gt;&lt;em&gt;I am also lime!&lt;/em&gt; &lt;strike&gt; I'm not lime &lt;/strike&gt;&lt;/span&gt;
-  &lt;strong&gt;I'm also not lime :(&lt;/strong&gt;
-&lt;/p&gt;</pre>
+<p>
+  <em>I'm not lime :(</em>
+  <span><em>I am lime!</em></span>
+  <strong>I'm not lime :(</strong>
+  <em>I'm lime :D</em>
+  <span><em>I am also lime!</em> <strike> I'm not lime </strike></span>
+  <strong>I'm also not lime :(</strong>
+</p>
+```
 
-<p id="...will_result_in.3A">...irá resultar em:</p>
+...irá resultar em:
 
-<div>{{EmbedLiveSample('Example','100%', '120')}}</div>
+{{EmbedLiveSample('Example','100%', '120')}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#last-of-type-pseudo', ':last-of-type')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#last-of-type-pseudo', ':last-of-type')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                               | Comment            |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
+| {{SpecName('CSS4 Selectors', '#last-of-type-pseudo', ':last-of-type')}} | {{Spec2('CSS4 Selectors')}} | No change          |
+| {{SpecName('CSS3 Selectors', '#last-of-type-pseudo', ':last-of-type')}} | {{Spec2('CSS3 Selectors')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.selectors.last-of-type")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref(":nth-last-of-type")}}</li>
- <li>{{Cssxref(":first-of-type")}}</li>
- <li>{{Cssxref(":nth-of-type")}}</li>
-</ul>
+- {{Cssxref(":nth-last-of-type")}}
+- {{Cssxref(":first-of-type")}}
+- {{Cssxref(":nth-of-type")}}

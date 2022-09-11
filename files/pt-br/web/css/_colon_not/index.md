@@ -1,6 +1,6 @@
 ---
 title: ':not()'
-slug: 'Web/CSS/:not'
+slug: Web/CSS/:not
 tags:
   - CSS
   - Composição
@@ -8,68 +8,52 @@ tags:
   - Pseudo-classe CSS
   - Referencia
   - Web
-translation_of: 'Web/CSS/:not'
+translation_of: Web/CSS/:not
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>A <a href="/pt-BR/docs/Web/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-classe CSS</a> de <strong>negação</strong>, <code>:not(X)</code>, é uma notação funcional que recebe um seletor simples X como argumento. Ela seleciona um elemento que não é representado por seu argumento. <var>X</var> não pode conter outro seletor de negação.</p>
+A [pseudo-classe CSS](/pt-BR/docs/Web/CSS/Pseudo-classes "Pseudo-classes") de **negação**, `:not(X)`, é uma notação funcional que recebe um seletor simples X como argumento. Ela seleciona um elemento que não é representado por seu argumento. _X_ não pode conter outro seletor de negação.
 
-<div class="note"><strong>Observações:</strong>
+> **Note:** **Observações:**- Seletores inúteis podem ser escritos usando esta pseudo-classe. Por exemplo, `:not(*)` seleciona qualquer elemento que não é algum elemento, então a regra nunca é aplicada.
+>
+> - É possível sobreescrever outras regras. E.g. `foo:not(bar)` vai selecionar os mesmos elementos do que o mais simples foo. No entanto a [especificação](/pt-BR/docs/Web/CSS/Specificity "Especificação") é maior no exemplo com `:not`.
+> - `:not(foo){} vai selecionar tudo que não for foo`, **incluindo os elementos {{HTMLElement("html")}} e {{HTMLElement("body")}}.**
+> - Este seletor apenas se aplica a um elemento; não se pode usa-lo para excluir todos os seus ancestores. Por exemplo, `body :not(table) a` ainda vai ser aplicado a links dentro de tabelas, já que {{HTMLElement("tr")}} vai ser selecionado pelo `:not()` do seletor.
 
-<ul>
- <li>Seletores inúteis podem ser escritos usando esta pseudo-classe. Por exemplo, <code>:not(*)</code> seleciona qualquer elemento que não é algum elemento, então a regra nunca é aplicada.</li>
- <li>É possível sobreescrever outras regras. E.g. <code>foo:not(bar)</code> vai selecionar os mesmos elementos do que o mais simples foo. No entanto a <a href="/pt-BR/docs/Web/CSS/Specificity" title="Especificação">especificação</a> é maior no exemplo com <code>:not</code>.</li>
- <li><code>:not(foo){} vai selecionar tudo que não for foo</code>, <strong>incluindo os elementos {{HTMLElement("html")}} e {{HTMLElement("body")}}.</strong></li>
- <li>Este seletor apenas se aplica a um elemento; não se pode usa-lo para excluir todos os seus ancestores. Por exemplo, <code>body :not(table) a</code> ainda vai ser aplicado a links dentro de tabelas, já que {{HTMLElement("tr")}} vai ser selecionado pelo <code>:not()</code> do seletor.</li>
-</ul>
-</div>
+## Sintaxe
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+```
+:not(selector) { style properties }
+```
 
-<pre class="syntaxbox">:not(selector) { <em>style properties</em> }</pre>
+## Exemplos
 
-<h2 id="Exemplos" name="Exemplos">Exemplos</h2>
+```css
+p:not(.classico) { color: red; }
+body *:not(p) { color: green; }
+```
 
-<pre class="brush: css">p:not(.classico) { color: red; }
-body *:not(p) { color: green; }</pre>
+Dado o CSS acima e o HTML abaixo...
 
-<p>Dado o CSS acima e o HTML abaixo...</p>
+```html
+<p>Um pouco de texto.</p>
+<p class="classico">Um pouco mais de texto.</p>
+<span>Mais um texto<span>
+```
 
-<pre class="brush: html">&lt;p&gt;Um pouco de texto.&lt;/p&gt;
-&lt;p class="classico"&gt;Um pouco mais de texto.&lt;/p&gt;
-&lt;span&gt;Mais um texto&lt;span&gt;
-</pre>
+Se obtém resultados como este:
 
-<p>Se obtém resultados como este:</p>
+{{ EmbedLiveSample('Exemplos', '', '', '', 'Web/CSS/:not') }}
 
-<p>{{ EmbedLiveSample('Exemplos', '', '', '', 'Web/CSS/:not') }}</p>
+## Especificações
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+| Especificação                                                            | Status                                   | Comentário                                                   |
+| ------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------ |
+| {{ SpecName('CSS4 Selectors', '#negation', ':not()') }} | {{ Spec2('CSS4 Selectors') }} | Extende seus argumentos para permitir seletores não-simples. |
+| {{ SpecName('CSS3 Selectors', '#negation', ':not()') }} | {{ Spec2('CSS3 Selectors') }} | Definição inicial.                                           |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS4 Selectors', '#negation', ':not()') }}</td>
-   <td>{{ Spec2('CSS4 Selectors') }}</td>
-   <td>Extende seus argumentos para permitir seletores não-simples.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Selectors', '#negation', ':not()') }}</td>
-   <td>{{ Spec2('CSS3 Selectors') }}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+## Compatibilidade em Navegadores
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade em Navegadores</h2>
-
-<p>{{Compat("css.selectors.not")}}</p>
+{{Compat("css.selectors.not")}}

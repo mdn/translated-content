@@ -1,34 +1,36 @@
 ---
 title: ':read-write'
-slug: 'Web/CSS/:read-write'
-translation_of: 'Web/CSS/:read-write'
+slug: Web/CSS/:read-write
+translation_of: Web/CSS/:read-write
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>:read-write</code></strong> representa um elemento (como o <code>input</code> ou <code>textarea</code>) que é editável pelo usuário.</p>
+A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:read-write`** representa um elemento (como o `input` ou `textarea`) que é editável pelo usuário.
 
-<pre class="brush: css">input:read-write, textarea:read-write {
+```css
+input:read-write, textarea:read-write {
   background-color: #bbf;
 }
 
 p:read-write {
   background-color: #bbf;
 }
-</pre>
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">Exemplos</h2>
+## Exemplos
 
-<h3 id="Confirmando_informações_do_formulário_em_controles_read-onlyread-write.">Confirmando informações do formulário em controles read-only/read-write.</h3>
+### Confirmando informações do formulário em controles read-only/read-write.
 
-<p>Ao utilizar os controles de formulário <code>readonly</code> permite que o usuário verifique e verifique as informações que eles podem ter inserido em um formulário anterior (por exemplo: Detalhes de envio), enquanto ainda pode enviar as informações junto com o resto do formulário. Nós fazemos exatamente isso no exemplo abaixo.</p>
+Ao utilizar os controles de formulário `readonly` permite que o usuário verifique e verifique as informações que eles podem ter inserido em um formulário anterior (por exemplo: Detalhes de envio), enquanto ainda pode enviar as informações junto com o resto do formulário. Nós fazemos exatamente isso no exemplo abaixo.
 
-<p>A pseudo-classe <code>:read-only</code> <em>(:somente-leitura)</em> é usada para remover todo o estilo que faz com que as entradas pareçam campos clicáveis, fazendo com que pareçam outro parágrafo <em>somente-leitura</em>. A pseudo-classe <code>:read-write</code> <em>(:leitura-escrita) </em>por outro lado, é usado para fornecer um estilo mais agradável para a <code>&lt;textarea&gt;</code>.</p>
+A pseudo-classe `:read-only` _(:somente-leitura)_ é usada para remover todo o estilo que faz com que as entradas pareçam campos clicáveis, fazendo com que pareçam outro parágrafo _somente-leitura_. A pseudo-classe `:read-write` _(:leitura-escrita)_ por outro lado, é usado para fornecer um estilo mais agradável para a `<textarea>`.
 
-<pre class="brush: css">input:-moz-read-only, textarea:-moz-read-only,
+```css
+input:-moz-read-only, textarea:-moz-read-only,
 input:read-only, textarea:read-only {
   border: 0;
   box-shadow: none;
@@ -39,21 +41,25 @@ textarea:-moz-read-write,
 textarea:read-write {
   box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;
-}</pre>
+}
+```
 
-<p>Você pode encontrar o código fonte completo em <a class="external external-icon" href="https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/readonly-confirmation.html" rel="noopener">readonly-confirmation.html</a> (disponível em inglês); isso torna assim:</p>
+Você pode encontrar o código fonte completo em [readonly-confirmation.html](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/readonly-confirmation.html) (disponível em inglês); isso torna assim:
 
-<p>{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/readonly-confirmation.html", '100%', 660)}}</p>
+{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/readonly-confirmation.html", '100%', 660)}}
 
-<h3 id="Estilizar_controle_não_formal_de_read-write.">Estilizar controle não formal de read-write.</h3>
+### Estilizar controle não formal de read-write.
 
-<p>Este seletor não seleciona apenas {{htmlElement("input")}}/{{htmlElement("textarea")}}  elementos - ele selecionará qualquer elemento que possa ser editado pelo usuário, como um {{htmlelement("p")}} elemento com {{htmlattrxref("contenteditable")}} definido sobre ele.</p>
+Este seletor não seleciona apenas {{htmlElement("input")}}/{{htmlElement("textarea")}} elementos - ele selecionará qualquer elemento que possa ser editado pelo usuário, como um {{htmlelement("p")}} elemento com {{htmlattrxref("contenteditable")}} definido sobre ele.
 
-<pre class="brush: html">&lt;p contenteditable&gt;Este parágrafo é editável; é read-write.&lt;/p&gt;
+```html
+<p contenteditable>Este parágrafo é editável; é read-write.</p>
 
-&lt;p&gt;Este parágrafo não é editável; é read-only.&lt;/p&gt;</pre>
+<p>Este parágrafo não é editável; é read-only.</p>
+```
 
-<pre class="brush: css">p {
+```css
+p {
   font-size: 150%;
   padding: 5px;
   border-radius: 5px;
@@ -66,46 +72,24 @@ p:read-only {
 
 p:read-write {
   background-color: lime;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Estilizar_controle_não_formal_de_read-write.', '100%', 400)}}</p>
+{{EmbedLiveSample('Estilizar_controle_não_formal_de_read-write.', '100%', 400)}}
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', '#selector-read-write', ':read-write') }}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td>Nenhuma mudança.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5 W3C', '#selector-read-write', ':read-write') }}</td>
-   <td>{{ Spec2('HTML5 W3C') }}</td>
-   <td>Define a semântica em relação à validação de HTML e restrição.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS4 Selectors', '#rw-pseudos', ':read-write') }}</td>
-   <td>{{ Spec2('CSS4 Selectors') }}</td>
-   <td>Define a pseudo-classe, mas não a semântica associada.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Status                                   | Comentário                                                     |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------- |
+| {{ SpecName('HTML WHATWG', '#selector-read-write', ':read-write') }} | {{ Spec2('HTML WHATWG') }}     | Nenhuma mudança.                                               |
+| {{ SpecName('HTML5 W3C', '#selector-read-write', ':read-write') }}     | {{ Spec2('HTML5 W3C') }}         | Define a semântica em relação à validação de HTML e restrição. |
+| {{ SpecName('CSS4 Selectors', '#rw-pseudos', ':read-write') }}         | {{ Spec2('CSS4 Selectors') }} | Define a pseudo-classe, mas não a semântica associada.         |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("css.selectors.read-write")}}</p>
+{{Compat("css.selectors.read-write")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{cssxref(":read-only")}}</li>
- <li>Atributo HTML {{htmlattrxref("contenteditable")}}.</li>
-</ul>
+- {{cssxref(":read-only")}}
+- Atributo HTML {{htmlattrxref("contenteditable")}}.

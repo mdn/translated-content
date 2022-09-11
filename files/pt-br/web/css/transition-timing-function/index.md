@@ -3,13 +3,14 @@ title: transition-timing-function
 slug: Web/CSS/transition-timing-function
 translation_of: Web/CSS/transition-timing-function
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A propriedade CSS <strong><code>transition-timing-function</code></strong> é usada para descrever como os valores intermediários das propriedades CSS sendo afetados por um efeito de transição são calculados. Em essência isso permite você estabelecer uma curva de aceleração, para que então a velocidade da transição possa variar durante sua duração.</p>
+A propriedade CSS **`transition-timing-function`** é usada para descrever como os valores intermediários das propriedades CSS sendo afetados por um efeito de transição são calculados. Em essência isso permite você estabelecer uma curva de aceleração, para que então a velocidade da transição possa variar durante sua duração.
 
-<p>Essa curva de aceleração é definida usando {{cssxref("&lt;timing-function&gt;")}} para cada propriedade a ser transicionada.</p>
+Essa curva de aceleração é definida usando {{cssxref("&lt;timing-function&gt;")}} para cada propriedade a ser transicionada.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 transition-timing-function: ease;
 transition-timing-function: ease-in;
 transition-timing-function: ease-out;
@@ -30,38 +31,36 @@ transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
 transition-timing-function: inherit;
 transition-timing-function: initial;
 transition-timing-function: unset;
-</pre>
+```
 
-<p>You may specify multiple timing functions; each one will be applied to the corresponding property as specified by the {{ cssxref("transition-property") }} property, which acts as a master list. If there are fewer functions specified than in the master list, missing values are set to the initial value (<code>ease</code>). If there are more timing functions, the list is simply truncated to the right size. In both case the CSS declaration stays valid.</p>
+You may specify multiple timing functions; each one will be applied to the corresponding property as specified by the {{ cssxref("transition-property") }} property, which acts as a master list. If there are fewer functions specified than in the master list, missing values are set to the initial value (`ease`). If there are more timing functions, the list is simply truncated to the right size. In both case the CSS declaration stays valid.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;timing-function&gt;</code></dt>
- <dd>Each {{cssxref("&lt;timing-function&gt;")}} represents the timing function to link to the corresponding property to transition, as defined in {{ cssxref("transition-property") }}.</dd>
-</dl>
+- `<timing-function>`
+  - : Each {{cssxref("&lt;timing-function&gt;")}} represents the timing function to link to the corresponding property to transition, as defined in {{ cssxref("transition-property") }}.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<div>
-<div id="ttf_ease" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-timing-function: ease</code></p>
+`transition-timing-function: ease`
 
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
+</div>
 
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```
+
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -93,9 +92,10 @@ transition-timing-function: unset;
     transition-duration:2s;
     transition-timing-function: ease;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -109,22 +109,21 @@ transition-timing-function: unset;
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("ttf_ease",275,150)}}
+
+`transition-timing-function: ease-in`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("ttf_ease",275,150)}}</div>
-</div>
+```
 
-<div id="ttf_easein" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-timing-function: ease-in</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -156,9 +155,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-duration:2s;
     transition-timing-function: ease-in;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -172,22 +172,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("ttf_easein",275,150)}}
+
+`transition-timing-function: ease-out`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("ttf_easein",275,150)}}</div>
-</div>
+```
 
-<div id="ttf_easeout" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-timing-function: ease-out</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -219,9 +218,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-duration:2s;
     transition-timing-function: ease-out;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -235,22 +235,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("ttf_easeout",275,150)}}
+
+`transition-timing-function: ease-in-out`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("ttf_easeout",275,150)}}</div>
-</div>
+```
 
-<div id="ttf_easeinout" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-timing-function: ease-in-out</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -282,9 +281,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-duration:2s;
     transition-timing-function: ease-in-out;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -298,23 +298,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("ttf_easeinout",275,150)}}
+
+`transition-timing-function: linear`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("ttf_easeinout",275,150)}}</div>
-</div>
-</div>
+```
 
-<div id="ttf_linear" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-timing-function: linear</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -346,9 +344,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-duration:2s;
     transition-timing-function: linear;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -362,22 +361,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("ttf_linear",275,150)}}
+
+`transition-timing-function: step-start`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("ttf_linear",275,150)}}</div>
-</div>
+```
 
-<div id="ttf_stepstart" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-timing-function: step-start</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -409,9 +407,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-duration:2s;
     transition-timing-function: step-start;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -425,22 +424,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("ttf_stepstart",275,150)}}
+
+`transition-timing-function: step-end`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("ttf_stepstart",275,150)}}</div>
-</div>
+```
 
-<div id="ttf_stepend" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-timing-function: step-end</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -472,9 +470,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-duration:2s;
     transition-timing-function: step-end;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -488,22 +487,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("ttf_stepend",275,150)}}
+
+`transition-timing-function: steps(4, end)`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("ttf_stepend",275,150)}}</div>
-</div>
+```
 
-<div id="ttf_step4end" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-timing-function: steps(4, end)</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -535,9 +533,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-duration:2s;
     transition-timing-function: steps(4, end);
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -551,38 +550,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
-</div>
+```
 
-<div>{{EmbedLiveSample("ttf_step4end",275,150)}}</div>
-</div>
+{{EmbedLiveSample("ttf_step4end",275,150)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Transitions', '#transition-timing-function-property', 'transition-timing-function') }}</td>
-   <td>{{ Spec2('CSS3 Transitions') }}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                | Status                                   | Comment            |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
+| {{ SpecName('CSS3 Transitions', '#transition-timing-function-property', 'transition-timing-function') }} | {{ Spec2('CSS3 Transitions') }} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.properties.transition-timing-function")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_transitions" title="en/CSS/CSS transitions">Using CSS transitions</a></li>
- <li>{{ domxref("TransitionEvent") }}</li>
-</ul>
+- [Using CSS transitions](/pt-BR/docs/CSS/Using_CSS_transitions "en/CSS/CSS transitions")
+- {{ domxref("TransitionEvent") }}

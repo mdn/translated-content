@@ -3,98 +3,99 @@ title: <display-legacy>
 slug: Web/CSS/display-legacy
 translation_of: Web/CSS/display-legacy
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p class="summary">O CSS 2 usou uma sintaxe de palavra-chave única para o <code>display</code> , exigindo palavras-chave separadas para variantes em nível de bloco e em linha do mesmo modo de layout. Esta página detalha esses valores.</p>
+O CSS 2 usou uma sintaxe de palavra-chave única para o `display` , exigindo palavras-chave separadas para variantes em nível de bloco e em linha do mesmo modo de layout. Esta página detalha esses valores.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<dl>
- <dt><code>inline-block</code></dt>
- <dd>
- <p>O elemento gera uma caixa de elemento de bloco que fluirá com o conteúdo circundante, como se fosse uma única caixa embutida (se comportando como um elemento substituído).</p>
+- `inline-block`
 
- <p>É equivalente a <code style="font-size: 1rem; letter-spacing: -0.00278rem;">inline flow-root</code>.</p>
- </dd>
- <dt><code>inline-table</code></dt>
- <dd>O <code>inline-table</code> O valor não possui um mapeamento direto em HTML. Ele se comporta como um HTML{{HTMLElement("table")}} elemento, mas como uma caixa embutida, em vez de uma caixa no nível do bloco. Dentro da caixa da tabela há um contexto em nível de bloco.<br>
- <br>
- É equivalente a <code>inline table</code>.</dd>
- <dt><code>inline-flex</code></dt>
- <dd>O elemento se comporta como um elemento embutido e apresenta seu conteúdo de acordo com o modelo flexbox.<br>
- <br>
- É equivalente a <code>inline flex</code>.</dd>
- <dt><code>inline-grid</code></dt>
- <dd>O elemento se comporta como um elemento embutido e apresenta seu conteúdo de acordo com o modelo de grade.<br>
- <br>
- É equivalente a <code>inline grid</code>.</dd>
-</dl>
+  - : O elemento gera uma caixa de elemento de bloco que fluirá com o conteúdo circundante, como se fosse uma única caixa embutida (se comportando como um elemento substituído).
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+    É equivalente a `inline flow-root`.
+
+- `inline-table`
+
+  - : O `inline-table` O valor não possui um mapeamento direto em HTML. Ele se comporta como um HTML{{HTMLElement("table")}} elemento, mas como uma caixa embutida, em vez de uma caixa no nível do bloco. Dentro da caixa da tabela há um contexto em nível de bloco.
+
+    É equivalente a `inline table`.
+
+- `inline-flex`
+
+  - : O elemento se comporta como um elemento embutido e apresenta seu conteúdo de acordo com o modelo flexbox.
+
+    É equivalente a `inline flex`.
+
+- `inline-grid`
+
+  - : O elemento se comporta como um elemento embutido e apresenta seu conteúdo de acordo com o modelo de grade.
+
+    É equivalente a `inline grid`.
+
+### Sintaxe formal
 
 {{CSSSyntax}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>No exemplo abaixo, estamos criando um contêiner flex inline com a palavra-chave herdada inline-flex.</p>
+No exemplo abaixo, estamos criando um contêiner flex inline com a palavra-chave herdada inline-flex.
 
-<div id="Example">
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="container"&gt;
-  &lt;div&gt;Flex Item&lt;/div&gt;
-  &lt;div&gt;Flex Item&lt;/div&gt;
-&lt;/div&gt;
-
-Not a flex item
-</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">.container {
-  display: inline-flex;
-}
-</pre>
-
-<h3 id="Result">Result</h3>
-
-<p>{{EmbedLiveSample("Example", 300, 150)}}</p>
+```html
+<div class="container">
+  <div>Flex Item</div>
+  <div>Flex Item</div>
 </div>
 
-<p>Na nova sintaxe, o contêiner flex inline seria criado usando dois valores, inline para o tipo de exibição externo e flex para o tipo de exibição interno.</p>
+Not a flex item
+```
 
-<pre class="brush: css">.container {
+### CSS
+
+```css
+.container {
+  display: inline-flex;
+}
+```
+
+### Result
+
+{{EmbedLiveSample("Example", 300, 150)}}
+
+Na nova sintaxe, o contêiner flex inline seria criado usando dois valores, inline para o tipo de exibição externo e flex para o tipo de exibição interno.
+
+```css
+.container {
   display: inline flex;
-}</pre>
+}
+```
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<h3 id="Suporte_deinline-block">Suporte de<code>inline-block</code></h3>
+### Suporte de`inline-block`
 
-<p>{{Compat("css.properties.display.inline-block", 10)}}</p>
+{{Compat("css.properties.display.inline-block", 10)}}
 
-<h3 id="Suporte_deinline-table">Suporte de<code>inline-table</code></h3>
+### Suporte de`inline-table`
 
-<p>{{Compat("css.properties.display.inline-table", 10)}}</p>
+{{Compat("css.properties.display.inline-table", 10)}}
 
-<h3 id="Suporte_deinline-flex">Suporte de<code>inline-flex</code></h3>
+### Suporte de`inline-flex`
 
-<p>{{Compat("css.properties.display.inline-flex", 10)}}</p>
+{{Compat("css.properties.display.inline-flex", 10)}}
 
-<h3 id="Suporte_deinline-grid">Suporte de<code>inline-grid</code></h3>
+### Suporte de`inline-grid`
 
-<p>{{Compat("css.properties.display.inline-grid", 10)}}</p>
+{{Compat("css.properties.display.inline-grid", 10)}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{CSSxRef("display")}}
-  <ul>
-   <li>{{CSSxRef("&lt;display-outside&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-inside&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-listitem&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-internal&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-box&gt;")}}</li>
-  </ul>
- </li>
-</ul>
+- {{CSSxRef("display")}}
+
+  - {{CSSxRef("&lt;display-outside&gt;")}}
+  - {{CSSxRef("&lt;display-inside&gt;")}}
+  - {{CSSxRef("&lt;display-listitem&gt;")}}
+  - {{CSSxRef("&lt;display-internal&gt;")}}
+  - {{CSSxRef("&lt;display-box&gt;")}}

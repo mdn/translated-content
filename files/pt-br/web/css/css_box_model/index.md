@@ -12,111 +12,67 @@ tags:
   - TopicStub
 translation_of: Web/CSS/CSS_Box_Model
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Box Model (Modelo de Caixa CSS)</strong> é um módulo de CSS que define caixas retangulares, incluindo preenchimento (padding) e margem (margin), que são gerados por elementos e dispostos de acordo com o <a href="/en-US/docs/Web/CSS/Visual_formatting_model">modelo de formato visual</a>.</p>
+**CSS Box Model (Modelo de Caixa CSS)** é um módulo de CSS que define caixas retangulares, incluindo preenchimento (padding) e margem (margin), que são gerados por elementos e dispostos de acordo com o [modelo de formato visual](/pt-BR/docs/Web/CSS/Visual_formatting_model).
 
-<h2 id="Referência">Referência</h2>
+## Referência
 
-<h3 id="Propriedades">Propriedades</h3>
+### Propriedades
 
-<h4 id="Propriedades_que_controlam_o_fluxo_de_conteúdo_em_uma_caixa">Propriedades que controlam o fluxo de conteúdo em uma caixa</h4>
+#### Propriedades que controlam o fluxo de conteúdo em uma caixa
 
-<div class="index">
-<ul>
- <li>{{cssxref("box-decoration-break")}}</li>
- <li>{{cssxref("box-sizing")}}</li>
- <li>{{cssxref("overflow")}}</li>
- <li>{{cssxref("overflow-x")}}</li>
- <li>{{cssxref("overflow-y")}}</li>
-</ul>
-</div>
+- {{cssxref("box-decoration-break")}}
+- {{cssxref("box-sizing")}}
+- {{cssxref("overflow")}}
+- {{cssxref("overflow-x")}}
+- {{cssxref("overflow-y")}}
 
-<h4 id="Propriedades_que_controlam_o_tamanho_de_uma_caixa">Propriedades que controlam o tamanho de uma caixa</h4>
+#### Propriedades que controlam o tamanho de uma caixa
 
-<div class="index">
-<ul>
- <li>{{cssxref("height")}}</li>
- <li>{{cssxref("width")}}</li>
- <li>{{cssxref("max-height")}}</li>
- <li>{{cssxref("max-width")}}</li>
- <li>{{cssxref("min-height")}}</li>
- <li>{{cssxref("min-width")}}</li>
-</ul>
-</div>
+- {{cssxref("height")}}
+- {{cssxref("width")}}
+- {{cssxref("max-height")}}
+- {{cssxref("max-width")}}
+- {{cssxref("min-height")}}
+- {{cssxref("min-width")}}
 
-<h4 id="Propriedades_que_controlam_as_margens_de_uma_caixa">Propriedades que controlam as margens de uma caixa</h4>
+#### Propriedades que controlam as margens de uma caixa
 
-<div class="index">
-<ul>
- <li>{{cssxref("margin")}}</li>
- <li>{{cssxref("margin-bottom")}}</li>
- <li>{{cssxref("margin-left")}}</li>
- <li>{{cssxref("margin-right")}}</li>
- <li>{{cssxref("margin-top")}}</li>
-</ul>
-</div>
+- {{cssxref("margin")}}
+- {{cssxref("margin-bottom")}}
+- {{cssxref("margin-left")}}
+- {{cssxref("margin-right")}}
+- {{cssxref("margin-top")}}
 
-<h4 id="Propriedades_que_controlam_o_preenchimento_padding_de_uma_caixa">Propriedades que controlam o preenchimento (padding) de uma caixa</h4>
+#### Propriedades que controlam o preenchimento (padding) de uma caixa
 
-<div class="index">
-<ul>
- <li>{{cssxref("padding")}}</li>
- <li>{{cssxref("padding-bottom")}}</li>
- <li>{{cssxref("padding-left")}}</li>
- <li>{{cssxref("padding-right")}}</li>
- <li>{{cssxref("padding-top")}}</li>
-</ul>
-</div>
+- {{cssxref("padding")}}
+- {{cssxref("padding-bottom")}}
+- {{cssxref("padding-left")}}
+- {{cssxref("padding-right")}}
+- {{cssxref("padding-top")}}
 
-<h4 id="Outras_propriedades">Outras propriedades</h4>
+#### Outras propriedades
 
-<div class="index">
-<ul>
- <li>{{cssxref("box-shadow")}}</li>
- <li>{{cssxref("visibility")}}</li>
-</ul>
-</div>
+- {{cssxref("box-shadow")}}
+- {{cssxref("visibility")}}
 
-<h2 id="Guias_e_ferramentas">Guias e ferramentas</h2>
+## Guias e ferramentas
 
-<dl>
- <dt></dt>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">Introdução ao modelo de caixa CSS</a></dt>
- <dd>Explicações de uma concepção fundamental no CSS, o modelo de caixa: descreve o sentido de margem, preenchimento, tambem como as diferentes áreas da caixa.</dd>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">Dominando o colapso da margem</a></dt>
- <dd>Na maioria dos casos, duas margens adjacentes são colapsadas em uma. Este artigo descreve quando isso acontecwe e como controlar isso.</dd>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator">Gerador de sombra de caixa</a></dt>
- <dd>Uma ferramenta interativa que permite criar sombras visualmente e gerar a sintaxe necessária para a propriedade {{cssxref("box-shadow")}}.</dd>
-</dl>
+- [Introdução ao modelo de caixa CSS](/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
 
-<h2 id="Especificações">Especificações</h2>
+  - : Explicações de uma concepção fundamental no CSS, o modelo de caixa: descreve o sentido de margem, preenchimento, tambem como as diferentes áreas da caixa.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Situação</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Box")}}</td>
-   <td>{{Spec2("CSS3 Box")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "box.html")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS1")}}</td>
-   <td>{{Spec2("CSS1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+- [Dominando o colapso da margem](/pt-BR/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - : Na maioria dos casos, duas margens adjacentes são colapsadas em uma. Este artigo descreve quando isso acontecwe e como controlar isso.
+- [Gerador de sombra de caixa](/pt-BR/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator)
+  - : Uma ferramenta interativa que permite criar sombras visualmente e gerar a sintaxe necessária para a propriedade {{cssxref("box-shadow")}}.
 
+## Especificações
 
+| Especificação                                | Situação                     | Comentário         |
+| -------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName("CSS3 Box")}}             | {{Spec2("CSS3 Box")}} |                    |
+| {{SpecName("CSS2.1", "box.html")}} | {{Spec2("CSS2.1")}}     |                    |
+| {{SpecName("CSS1")}}                 | {{Spec2("CSS1")}}     | Initial definition |

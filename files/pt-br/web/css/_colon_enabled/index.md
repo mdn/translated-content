@@ -1,103 +1,71 @@
 ---
 title: ':enabled'
-slug: 'Web/CSS/:enabled'
-translation_of: 'Web/CSS/:enabled'
+slug: Web/CSS/:enabled
+translation_of: Web/CSS/:enabled
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classe </a><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>  <strong><code>:enabled</code></strong> representa qualquer elemento ativado. Um elemento é ativado se puder ser ativado (selecionado, clicado, digitado etc.) ou aceitar o foco. O elemento também possui um estado desativado, no qual não pode ser ativado nem aceitar foco.</p>
+A [pseudo-classe ](/pt-BR/docs/Web/CSS/Pseudo-classes)[CSS](/pt-BR/docs/Web/CSS) **`:enabled`** representa qualquer elemento ativado. Um elemento é ativado se puder ser ativado (selecionado, clicado, digitado etc.) ou aceitar o foco. O elemento também possui um estado desativado, no qual não pode ser ativado nem aceitar foco.
 
-<pre class="brush: css no-line-numbers">/* Seleciona qualquer &lt;input&gt; ativado */
+```css
+/* Seleciona qualquer <input> ativado */
 input:enabled {
   color: blue;
-}</pre>
+}
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
 {{csssyntax}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>O exemplo a seguir torna a cor do texto e do botão <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" title="O elemento HTML &lt;input> é usado para criar controles interativos para formulários baseados na web, a fim de aceitar dados do usuário;  uma ampla variedade de tipos de dados de entrada e widgets de controle estão disponíveis, dependendo do dispositivo e do agente do usuário.">&lt;input&gt;</a> </code>verde quando ativada e cinza quando desativada. Isso ajuda o usuário a entender quais elementos podem ser interagidos..</p>
+O exemplo a seguir torna a cor do texto e do botão `<input> `verde quando ativada e cinza quando desativada. Isso ajuda o usuário a entender quais elementos podem ser interagidos..
 
-<div id="Enabled_Disabled_Inputs_Example">
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;form action="url_of_form"&gt;
-  &lt;label for="FirstField"&gt;First field (enabled):&lt;/label&gt;
-  &lt;input type="text" id="FirstField" value="Lorem"&gt;&lt;br&gt;
+```html
+<form action="url_of_form">
+  <label for="FirstField">First field (enabled):</label>
+  <input type="text" id="FirstField" value="Lorem"><br>
 
-  &lt;label for="SecondField"&gt;Second field (disabled):&lt;/label&gt;
-  &lt;input type="text" id="SecondField" value="Ipsum" disabled="disabled"&gt;&lt;br&gt;
+  <label for="SecondField">Second field (disabled):</label>
+  <input type="text" id="SecondField" value="Ipsum" disabled="disabled"><br>
 
-  &lt;input type="button" value="Submit"&gt;
-&lt;/form&gt;</pre>
+  <input type="button" value="Submit">
+</form>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css;">input:enabled {
+```css
+input:enabled {
   color: #2b2;
 }
 
 input:disabled {
   color: #aaa;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 550, 95)}}</p>
+{{EmbedLiveSample("Example", 550, 95)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#selector-enabled', ':enabled')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', '#selector-enabled', ':enabled')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Defines the semantics for HTML and forms.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#enableddisabled', ':enabled')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Basic UI', '#pseudo-classes', ':enabled')}}</td>
-   <td>{{Spec2('CSS3 Basic UI')}}</td>
-   <td>Links to Selectors Level 3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#enableddisabled', ':enabled')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Defines the pseudo-class, but not the associated semantics.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                        | Status                               | Comment                                                     |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', '#selector-enabled', ':enabled')}}     | {{Spec2('HTML WHATWG')}}     | No change.                                                  |
+| {{SpecName('HTML5 W3C', '#selector-enabled', ':enabled')}}         | {{Spec2('HTML5 W3C')}}         | Defines the semantics for HTML and forms.                   |
+| {{SpecName('CSS4 Selectors', '#enableddisabled', ':enabled')}} | {{Spec2('CSS4 Selectors')}} | No change.                                                  |
+| {{SpecName('CSS3 Basic UI', '#pseudo-classes', ':enabled')}}     | {{Spec2('CSS3 Basic UI')}} | Links to Selectors Level 3.                                 |
+| {{SpecName('CSS3 Selectors', '#enableddisabled', ':enabled')}} | {{Spec2('CSS3 Selectors')}} | Defines the pseudo-class, but not the associated semantics. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
+{{Compat("css.selectors.enabled")}}
 
+## See also
 
-<p>{{Compat("css.selectors.enabled")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{Cssxref(":disabled")}}</li>
-</ul>
-</div>
+- {{Cssxref(":disabled")}}

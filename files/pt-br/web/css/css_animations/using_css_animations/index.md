@@ -11,62 +11,59 @@ tags:
 translation_of: Web/CSS/CSS_Animations/Using_CSS_animations
 original_slug: Web/CSS/CSS_Animations/Usando_animações_CSS
 ---
-<p>{{SeeCompatTable}}{{CSSRef}}</p>
+{{SeeCompatTable}}{{CSSRef}}
 
-<p>Animações CSS tornam possível animar transições de um estilo CSS para outro. Animações se consistem de dois componentes: um estilo descrevendo a animação e um set de keyframes que indicam o estado final e inicial do estilo CSS da animação, bem como possíveis waypoints intermediários ao longo do caminho.</p>
+Animações CSS tornam possível animar transições de um estilo CSS para outro. Animações se consistem de dois componentes: um estilo descrevendo a animação e um set de keyframes que indicam o estado final e inicial do estilo CSS da animação, bem como possíveis waypoints intermediários ao longo do caminho.
 
-<p>Existem três vantagens chave para animações CSS além das técnicas tradicionais de animação dirigidas por script:</p>
+Existem três vantagens chave para animações CSS além das técnicas tradicionais de animação dirigidas por script:
 
-<ol>
- <li>São de fácil utilização para animações simples; você pode criá-las sem mesmo ter que conhecer JavaScript.</li>
- <li>As animações executam bem, mesmo sobre moderada carga do sistema. Animações simples podem normalmente ser executadas precariamente em JavaScript (a não ser que sejam bem feitas). A ferramenta de renderização pode usar frame-skipping e outras técnicas para manter a performance o mais estável possível.</li>
- <li>Deixando o navegador controlar a sequência de animação permite ao navegador otimizar a performance e eficiência em, por exemplo, reduzir a frequência de update de animações correndo em abas que não estão visíveis no momento.</li>
-</ol>
+1.  São de fácil utilização para animações simples; você pode criá-las sem mesmo ter que conhecer JavaScript.
+2.  As animações executam bem, mesmo sobre moderada carga do sistema. Animações simples podem normalmente ser executadas precariamente em JavaScript (a não ser que sejam bem feitas). A ferramenta de renderização pode usar frame-skipping e outras técnicas para manter a performance o mais estável possível.
+3.  Deixando o navegador controlar a sequência de animação permite ao navegador otimizar a performance e eficiência em, por exemplo, reduzir a frequência de update de animações correndo em abas que não estão visíveis no momento.
 
-<h2 id="Configurando_a_animação">Configurando a animação</h2>
+## Configurando a animação
 
-<p>Para criar uma sequência de animação CSS, você estiliza o elemento que deseja animar com a propriedade {{ cssxref("animation") }} ou suas sub-propriedades. Isso permite que você configure a sincronização da animação, bem como outros detalhes de como a de como a sequência de animação deveria progredir. Isso <strong>não</strong> configura a aparência atual da animação, que é feita usando a regra com parênteses (at-rule) {{ cssxref("@keyframes") }} como descrito em <a href="#defining_the_animation_sequence_using_keyframes">Defining the animation sequence using keyframes</a> abaixo.</p>
+Para criar uma sequência de animação CSS, você estiliza o elemento que deseja animar com a propriedade {{ cssxref("animation") }} ou suas sub-propriedades. Isso permite que você configure a sincronização da animação, bem como outros detalhes de como a de como a sequência de animação deveria progredir. Isso **não** configura a aparência atual da animação, que é feita usando a regra com parênteses (at-rule) {{ cssxref("@keyframes") }} como descrito em [Defining the animation sequence using keyframes](#defining_the_animation_sequence_using_keyframes) abaixo.
 
-<p>As sub-propriedades da propriedade {{cssxref("animation")}} são:</p>
+As sub-propriedades da propriedade {{cssxref("animation")}} são:
 
-<dl>
- <dt>{{ cssxref("animation-delay") }}</dt>
- <dd>Configura o delay entre o tempo em que o elemento é carregado e o inicio da sequência de animação.</dd>
- <dt>{{ cssxref("animation-direction") }}</dt>
- <dd>Configura se a animação deve ou nao alternar a direção em cada execução durante a sequência ou voltar ao ponto inicial e se repetir.</dd>
- <dt>{{ cssxref("animation-duration") }}</dt>
- <dd>Configura o tempo que uma animação deveria levar para completar um ciclo.</dd>
- <dt>{{ cssxref("animation-iteration-count") }}</dt>
- <dd>Configura o numero de vezes que uma animação deveria se repetir; você pode especificar infinito para repetir a animação indefinidamente.</dd>
- <dt>{{ cssxref("animation-name") }}</dt>
- <dd>Especifica o nome da regra com parênteses (at-rule) {{ cssxref("@keyframes") }} at-rule descrevendo os keyframes da animação.</dd>
- <dt>{{ cssxref("animation-play-state") }}</dt>
- <dd>Permite voce pausar e resumir a sequência da animação.</dd>
- <dt>{{ cssxref("animation-timing-function") }}</dt>
- <dd>Configura a sincronização da animação; que é, como a animação transita por keyframes, por estabilizar curvas de aceleração.</dd>
- <dt>{{ cssxref("animation-fill-mode") }}</dt>
- <dd>Configura que valores são aplicados pela animação antes e depois de se executar.</dd>
-</dl>
+- {{ cssxref("animation-delay") }}
+  - : Configura o delay entre o tempo em que o elemento é carregado e o inicio da sequência de animação.
+- {{ cssxref("animation-direction") }}
+  - : Configura se a animação deve ou nao alternar a direção em cada execução durante a sequência ou voltar ao ponto inicial e se repetir.
+- {{ cssxref("animation-duration") }}
+  - : Configura o tempo que uma animação deveria levar para completar um ciclo.
+- {{ cssxref("animation-iteration-count") }}
+  - : Configura o numero de vezes que uma animação deveria se repetir; você pode especificar infinito para repetir a animação indefinidamente.
+- {{ cssxref("animation-name") }}
+  - : Especifica o nome da regra com parênteses (at-rule) {{ cssxref("@keyframes") }} at-rule descrevendo os keyframes da animação.
+- {{ cssxref("animation-play-state") }}
+  - : Permite voce pausar e resumir a sequência da animação.
+- {{ cssxref("animation-timing-function") }}
+  - : Configura a sincronização da animação; que é, como a animação transita por keyframes, por estabilizar curvas de aceleração.
+- {{ cssxref("animation-fill-mode") }}
+  - : Configura que valores são aplicados pela animação antes e depois de se executar.
 
-<h2 id="Definindo_a_sequência_de_animação_usando_keyframes">Definindo a sequência de animação usando keyframes</h2>
+## Definindo a sequência de animação usando keyframes
 
-<p>Uma vez que você configurou a sincronização da animação, você precisa definir a aparência da animação. Isso é feito por estabelecer duas ou mais keyframes usando a regra com parênteses (at-rule) {{cssxref("@keyframes")}}. Cada keyframe descreve como o elemento animado deveria se renderizar a um tempo dado durante a sequência de animação.</p>
+Uma vez que você configurou a sincronização da animação, você precisa definir a aparência da animação. Isso é feito por estabelecer duas ou mais keyframes usando a regra com parênteses (at-rule) {{cssxref("@keyframes")}}. Cada keyframe descreve como o elemento animado deveria se renderizar a um tempo dado durante a sequência de animação.
 
-<p>Como a sincronização da animação é definida por um estilo CSS que configura a animação, keyframes usam uma {{cssxref("percentage")}} para indicar o tempo durante a sequência de animação que eles fazem parte. 0% indica o primeiro momento da sequência de animação, enquanto 100% indica o estado final da animação. Esses dois tempos devem ser especificados para que o navegador então saiba onde a animação deve começar e parar; por serem tão importantes, esses dois tempos tem expressões equivalentes especiais: from e to.</p>
+Como a sincronização da animação é definida por um estilo CSS que configura a animação, keyframes usam uma {{cssxref("percentage")}} para indicar o tempo durante a sequência de animação que eles fazem parte. 0% indica o primeiro momento da sequência de animação, enquanto 100% indica o estado final da animação. Esses dois tempos devem ser especificados para que o navegador então saiba onde a animação deve começar e parar; por serem tão importantes, esses dois tempos tem expressões equivalentes especiais: from e to.
 
-<p>Você pode opcionalmente incluir keyframes adicionais que descrevem passos intermediários ao longo do caminho do ponto inicial ao ponto final da animação.</p>
+Você pode opcionalmente incluir keyframes adicionais que descrevem passos intermediários ao longo do caminho do ponto inicial ao ponto final da animação.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<div class="note"><strong>Nota </strong>Os exemplos aqui não usam nenhum prefixo nas propriedades de animação CSS. Navegadores mais antigos podem precisar de prefixos; os exemplos ao vivo que você pode clicar pra ver em seu navegadores também incluem as versões prefixadas -webkit.</div>
+> **Note:** **Nota** Os exemplos aqui não usam nenhum prefixo nas propriedades de animação CSS. Navegadores mais antigos podem precisar de prefixos; os exemplos ao vivo que você pode clicar pra ver em seu navegadores também incluem as versões prefixadas -webkit.
 
-<h3 id="Fazendo_o_texto_deslizar_através_da_janela_do_navegador">Fazendo o texto deslizar através da janela do navegador</h3>
+### Fazendo o texto deslizar através da janela do navegador
 
-<p>Esse exemplo simples estiliza o elemento {{HTMLElement("p")}} onde o elemento então desliza para dentro vindo de fora da lateral direita da janela do navegador.</p>
+Esse exemplo simples estiliza o elemento {{HTMLElement("p")}} onde o elemento então desliza para dentro vindo de fora da lateral direita da janela do navegador.
 
-<p>Perceba que animações como essa podem fazer com que a página se torne mais larga que a janela do navegador. Para evitar esse problema coloque o elemento a ser animado dentro de um container, e atribua {{cssxref("overflow")}}<code>:hidden</code> ao container.</p>
+Perceba que animações como essa podem fazer com que a página se torne mais larga que a janela do navegador. Para evitar esse problema coloque o elemento a ser animado dentro de um container, e atribua {{cssxref("overflow")}}`:hidden` ao container.
 
-<pre class="brush: css">p {
+```css
+p {
   animation-duration: 3s;
   animation-name: slidein;
 }
@@ -82,34 +79,38 @@ original_slug: Web/CSS/CSS_Animations/Usando_animações_CSS
     width: 100%;
   }
 }
-</pre>
+```
 
-<p>O estilo para o elemento {{ HTMLElement("p") }} aqui especifica que a animação deveria levar 3 segundos para executar do início ao fim, usando a propriedade {{cssxref("animation-duration")}}, e que o nome da regra com parênteses (at-rule){{cssxref("@keyframes")}} definindo os keyframes para a sequência de animação é nomeado por "slidein".</p>
+O estilo para o elemento {{ HTMLElement("p") }} aqui especifica que a animação deveria levar 3 segundos para executar do início ao fim, usando a propriedade {{cssxref("animation-duration")}}, e que o nome da regra com parênteses (at-rule){{cssxref("@keyframes")}} definindo os keyframes para a sequência de animação é nomeado por "slidein".
 
-<p>Se quiséssemos quaisquer estilização customizada no elemento {{ HTMLElement("p") }} para aparecer em navegadores que não suportam animações CSS, incluiríamos aqui também; no entanto, nesse caso não queremos nenhuma estilização customizada a não ser o efeito da animação.</p>
+Se quiséssemos quaisquer estilização customizada no elemento {{ HTMLElement("p") }} para aparecer em navegadores que não suportam animações CSS, incluiríamos aqui também; no entanto, nesse caso não queremos nenhuma estilização customizada a não ser o efeito da animação.
 
-<p>Os keyframes são definidos utilizando-se as regras{{cssxref("@keyframes") }}. Neste caso, utilizamos apenas dois keyframes. O primeiro ocorre no progresso de 0% (ou seja, o primeiro keyframe da animação, através do pseudônimo from). Nesta etapa, configuramos a margem esquerda do elemento para ser 100% - quer dizer, como a margem está à esquerda e com valor 100%, o elemento irá se deslocar para o seu limite, ou seja, para a parte direita – e sua largura será de 300%, ou seja, 3 vezes a largura do seu tamanho original. Isto faz com que o elemento, em seu primeiro frame da animação, seja “empurrado” para fora do limite da parte direita da janela do navegador.</p>
+Os keyframes são definidos utilizando-se as regras{{cssxref("@keyframes") }}. Neste caso, utilizamos apenas dois keyframes. O primeiro ocorre no progresso de 0% (ou seja, o primeiro keyframe da animação, através do pseudônimo from). Nesta etapa, configuramos a margem esquerda do elemento para ser 100% - quer dizer, como a margem está à esquerda e com valor 100%, o elemento irá se deslocar para o seu limite, ou seja, para a parte direita – e sua largura será de 300%, ou seja, 3 vezes a largura do seu tamanho original. Isto faz com que o elemento, em seu primeiro frame da animação, seja “empurrado” para fora do limite da parte direita da janela do navegador.
 
-<p>O segundo (e último) keyframe ocorre na etapa 100% do progresso (ou seja, o último keyframe da animação, através do pseudônimo to). A margem esquerda está com valor de 0% e a largura do elemento está com valor de 100%. Isto resulta na animação do elemento {{ HTMLElement("p") }}, que entra gradativamente na área de conteúdo até atingir uma margem esquerda de 0%.</p>
+O segundo (e último) keyframe ocorre na etapa 100% do progresso (ou seja, o último keyframe da animação, através do pseudônimo to). A margem esquerda está com valor de 0% e a largura do elemento está com valor de 100%. Isto resulta na animação do elemento {{ HTMLElement("p") }}, que entra gradativamente na área de conteúdo até atingir uma margem esquerda de 0%.
 
-<pre class="brush: html"> </pre>
+```html
 
-<p>A Caterpillar e a Alice se olharam por algum tempo em silêncio: Finalmente, a Caterpillar tirou o narguilé da boca e dirigiu-se Ela com uma voz lenta e sonolenta.</p>
+```
 
-<p>{{EmbedLiveSample("Making_text_slide_across_the_browser_window","100%","250")}}</p>
+A Caterpillar e a Alice se olharam por algum tempo em silêncio: Finalmente, a Caterpillar tirou o narguilé da boca e dirigiu-se Ela com uma voz lenta e sonolenta.
 
-<h3 id="Adicionando_outro_keyframe">Adicionando outro keyframe</h3>
+{{EmbedLiveSample("Making_text_slide_across_the_browser_window","100%","250")}}
 
-<p>Vamos adicionar outro keyframe à animação do exemplo anterior. Digamos que nós queremos que o tamanho da fonte aumente durante o movimento da direita para a esquerda por um determinado momento, e que depois ele reduzisse ao seu tamanho original. Você precisaria simplesmente adicionar este keyframe:</p>
+### Adicionando outro keyframe
 
-<pre class="brush: css">75% {
+Vamos adicionar outro keyframe à animação do exemplo anterior. Digamos que nós queremos que o tamanho da fonte aumente durante o movimento da direita para a esquerda por um determinado momento, e que depois ele reduzisse ao seu tamanho original. Você precisaria simplesmente adicionar este keyframe:
+
+```css
+75% {
   font-size: 300%;
   margin-left: 25%;
   width: 150%;
 }
-</pre>
+```
 
-<pre class="brush: css hidden">p {
+```css hidden
+p {
   animation-duration: 3s;
   animation-name: slidein;
 }
@@ -125,28 +126,32 @@ original_slug: Web/CSS/CSS_Animations/Usando_animações_CSS
     width: 100%;
   }
 }
-</pre>
+```
 
-<pre class="brush: html hidden"> </pre>
+```html hidden
 
-<p>A Caterpillar e a Alice se olharam por algum tempo em silêncio: Finalmente, a Caterpillar tirou o narguilé da boca e dirigiu-se Ela com uma voz lenta e sonolenta.</p>
+```
 
-<p>Isso indica ao navegador que até atingir a etapa 75% do progresso da sequência da animação o elemento deve ter 25% no valor da sua margem esquerda e sua largura deve ser de 150%.</p>
+A Caterpillar e a Alice se olharam por algum tempo em silêncio: Finalmente, a Caterpillar tirou o narguilé da boca e dirigiu-se Ela com uma voz lenta e sonolenta.
 
-<p>{{EmbedLiveSample("Adicionando_outro_keyframe","100%","250")}}</p>
+Isso indica ao navegador que até atingir a etapa 75% do progresso da sequência da animação o elemento deve ter 25% no valor da sua margem esquerda e sua largura deve ser de 150%.
 
-<h3 id="Faça_repetir-se">Faça repetir-se</h3>
+{{EmbedLiveSample("Adicionando_outro_keyframe","100%","250")}}
 
-<p>Para fazer a animação se repetir, simplesmente use a propriedade{{ cssxref("animation-iteration-count") }} para indicar a quantidade de vezes que a animação deve se repetir. Neste caso, vamos usar <code>infinite</code> para que a animação se repita indefinidamente:</p>
+### Faça repetir-se
 
-<pre class="brush: css">p {
+Para fazer a animação se repetir, simplesmente use a propriedade{{ cssxref("animation-iteration-count") }} para indicar a quantidade de vezes que a animação deve se repetir. Neste caso, vamos usar `infinite` para que a animação se repita indefinidamente:
+
+```css
+p {
   animation-duration: 3s;
   animation-name: slidein;
   animation-iteration-count: infinite;
 }
-</pre>
+```
 
-<pre class="brush: css hidden">@keyframes slidein {
+```css hidden
+@keyframes slidein {
   from {
     margin-left: 100%;
     width: 300%;
@@ -157,27 +162,31 @@ original_slug: Web/CSS/CSS_Animations/Usando_animações_CSS
     width: 100%;
   }
 }
-</pre>
+```
 
-<pre class="brush: html hidden"> </pre>
+```html hidden
 
-<p>A Caterpillar e a Alice se olharam por algum tempo em silêncio: Finalmente, a Caterpillar tirou o narguilé da boca e dirigiu-se Ela com uma voz linda e sonolenta.</p>
+```
 
-<p>{{EmbedLiveSample("Faça_repetir-se","100%","250")}}</p>
+A Caterpillar e a Alice se olharam por algum tempo em silêncio: Finalmente, a Caterpillar tirou o narguilé da boca e dirigiu-se Ela com uma voz linda e sonolenta.
 
-<h3 id="Fazendo_a_animação_se_mover_para_trás_e_para_frente">Fazendo a animação se mover para trás e para frente</h3>
+{{EmbedLiveSample("Faça_repetir-se","100%","250")}}
 
-<p>Com o exemplo anterior, fizemos a animação se repetir, mas é muito estranho tê-la pulando lá do início toda vez que a animação inicia. O que nós realmente queremos é que a animação se mova para trás e para frente por toda tela. Isso é facilmente realizado se adicionarmos o valor alternate à propriedade {{cssxref("animation-direction")}}:</p>
+### Fazendo a animação se mover para trás e para frente
 
-<pre class="brush: css">p {
+Com o exemplo anterior, fizemos a animação se repetir, mas é muito estranho tê-la pulando lá do início toda vez que a animação inicia. O que nós realmente queremos é que a animação se mova para trás e para frente por toda tela. Isso é facilmente realizado se adicionarmos o valor alternate à propriedade {{cssxref("animation-direction")}}:
+
+```css
+p {
   animation-duration: 3s;
   animation-name: slidein;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-</pre>
+```
 
-<pre class="brush: css hidden">@keyframes slidein {
+```css hidden
+@keyframes slidein {
   from {
     margin-left: 100%;
     width: 300%;
@@ -188,25 +197,28 @@ original_slug: Web/CSS/CSS_Animations/Usando_animações_CSS
     width: 100%;
   }
 }
-</pre>
+```
 
-<pre><code>&lt;p&gt; A Lagarta e Alice olharam-se por algum tempo em silêncio:
+```
+<p> A Lagarta e Alice olharam-se por algum tempo em silêncio:
 finalmente, a Lagarta tirou o narguilé da boca e dirigiu-se a
-ela com uma voz lânguida e sonolenta.&lt;/p&gt;</code></pre>
+ela com uma voz lânguida e sonolenta.</p>
+```
 
-<p>{{EmbedLiveSample("Fazendo_a_animação_se_mover_para_trás_e_para_frente","100%","250")}}</p>
+{{EmbedLiveSample("Fazendo_a_animação_se_mover_para_trás_e_para_frente","100%","250")}}
 
-<h3 id="Usando_eventos_de_animação">Usando eventos de animação</h3>
+### Usando eventos de animação
 
-<p>Você pode ter controle adicional sobre animações -- como também informações úteis sobre elas -- através do uso de eventos de animação. Esses eventos, representados pelo objeto {{ domxref("event/AnimationEvent", "AnimationEvent") }} , podem ser usados para detectar quando animações iniciam, terminam, e começam uma nova iteração. Cada evento inclui o tempo no qual ele ocorreu como também o nome da animação que lançou o evento.</p>
+Você pode ter controle adicional sobre animações -- como também informações úteis sobre elas -- através do uso de eventos de animação. Esses eventos, representados pelo objeto {{ domxref("event/AnimationEvent", "AnimationEvent") }} , podem ser usados para detectar quando animações iniciam, terminam, e começam uma nova iteração. Cada evento inclui o tempo no qual ele ocorreu como também o nome da animação que lançou o evento.
 
-<p>Nós vamos modificar o exemplo de deslizamento de texto para gerar alguma informação sobre cada evento de animação quando ele ocorrer, para que possamos perceber como eles funcionam.</p>
+Nós vamos modificar o exemplo de deslizamento de texto para gerar alguma informação sobre cada evento de animação quando ele ocorrer, para que possamos perceber como eles funcionam.
 
-<h4 id="Adicionando_o_CSS">Adicionando o CSS</h4>
+#### Adicionando o CSS
 
-<p>Nós começamos criando o CSS para a animação. Essa animação vai durar por 3 segundos, se chamar "slidein", repetir 3 vezes, e alternar a direção cada vez. No {{ cssxref("@keyframes") }}, a largura (width) e a margem esquerda (margin-left) são manipulados para fazer o elemento deslizar na tela.</p>
+Nós começamos criando o CSS para a animação. Essa animação vai durar por 3 segundos, se chamar "slidein", repetir 3 vezes, e alternar a direção cada vez. No {{ cssxref("@keyframes") }}, a largura (width) e a margem esquerda (margin-left) são manipulados para fazer o elemento deslizar na tela.
 
-<pre class="brush: css">.slidein {
+```css
+.slidein {
   -moz-animation-duration: 3s;
   -webkit-animation-duration: 3s;
   animation-duration: 3s;
@@ -255,30 +267,32 @@ ela com uma voz lânguida e sonolenta.&lt;/p&gt;</code></pre>
    margin-left:0%;
    width:100%;
  }
-}</pre>
+}
+```
 
-<h4 id="Adicionando_animação_a_lista_de_eventos">Adicionando animação a lista de eventos</h4>
+#### Adicionando animação a lista de eventos
 
-<p>Nós vamos usar o código JavaScript para escutar todos três possíveis eventos de animação. Esse código configura nossos escutadores de evento; nós o chamamos quando o documento é primeiramente carregado para configurar as coisas.</p>
+Nós vamos usar o código JavaScript para escutar todos três possíveis eventos de animação. Esse código configura nossos escutadores de evento; nós o chamamos quando o documento é primeiramente carregado para configurar as coisas.
 
-<pre class="brush: js">var e = document.getElementById("watchme");
+```js
+var e = document.getElementById("watchme");
 e.addEventListener("animationstart", listener, false);
 e.addEventListener("animationend", listener, false);
 e.addEventListener("animationiteration", listener, false);
 
 e.className = "slidein";
+```
 
-</pre>
+Isso é simplesmente código padrão; você pode ter detalhes sobre como ele funciona na documentação para {{ domxref("element.addEventListener()") }}. A última coisa que este código faz é atribuir a classe no elemento o qual estaremos animando para "deslizar" (slidein); nós fazemos isso para iniciar a animação.
 
-<p>Isso é simplesmente código padrão; você pode ter detalhes sobre como ele funciona na documentação para {{ domxref("element.addEventListener()") }}. A última coisa que este código faz é atribuir a classe no elemento o qual estaremos animando para "deslizar" (slidein); nós fazemos isso para iniciar a animação.</p>
+Por que? Porque o evento `animationstart` dispara assim que a animação começa, e no nosso caso, isso acontece antes do nosso código rodar. Então nós mesmos vamos iniciar a animação através de atribuição da classe do elemento para o estilo que é animado depois do ocorrido.
 
-<p>Por que? Porque o evento <code>animationstart</code> dispara assim que a animação começa, e no nosso caso, isso acontece antes do nosso código rodar. Então nós mesmos vamos iniciar a animação através de atribuição da classe do elemento para o estilo que é animado depois do ocorrido.</p>
+#### Recebendo os eventos
 
-<h4 id="Recebendo_os_eventos">Recebendo os eventos</h4>
+Os eventos são entregues à função `listener()`, a qual é mostrada abaixo.
 
-<p>Os eventos são entregues à função <code>listener()</code>, a qual é mostrada abaixo.</p>
-
-<pre class="brush: js">function listener(e) {
+```js
+function listener(e) {
   var l = document.createElement("li");
   switch(e.type) {
     case "animationstart":
@@ -293,41 +307,36 @@ e.className = "slidein";
   }
   document.getElementById("output").appendChild(l);
 }
-</pre>
+```
 
-<p>Esse código também é bem simples. Ele simplemente olha no {{ domxref("event.type") }} para determinar qual tipo de evento de animação ocorreu, então adiciona uma nota apropriada no {{ HTMLElement("ul") }} (lista não ordenada) que estamos usando para logar esses eventos.</p>
+Esse código também é bem simples. Ele simplemente olha no {{ domxref("event.type") }} para determinar qual tipo de evento de animação ocorreu, então adiciona uma nota apropriada no {{ HTMLElement("ul") }} (lista não ordenada) que estamos usando para logar esses eventos.
 
-<p>A saída, quando tudo foi dito e feito, parece com algo assim:</p>
+A saída, quando tudo foi dito e feito, parece com algo assim:
 
-<ul>
- <li>Started: elapsed time is 0</li>
- <li>New loop started at time 3.01200008392334</li>
- <li>New loop started at time 6.00600004196167</li>
- <li>Ended: elapsed time is 9.234000205993652</li>
-</ul>
+- Started: elapsed time is 0
+- New loop started at time 3.01200008392334
+- New loop started at time 6.00600004196167
+- Ended: elapsed time is 9.234000205993652
 
-<p>Perceba que os tempos são bem próximos, mas não exatamente iguais, àqueles esperados dado o tempo estabelecido quando a animação foi configurada. Perceba também que após a ultima iteração da animação, o evento <code>animationiteration</code> não é enviado; ao invés disso, o evento <code>animationend</code> é enviado.</p>
+Perceba que os tempos são bem próximos, mas não exatamente iguais, àqueles esperados dado o tempo estabelecido quando a animação foi configurada. Perceba também que após a ultima iteração da animação, o evento `animationiteration` não é enviado; ao invés disso, o evento `animationend` é enviado.
 
-<h4 id="O_HTML">O HTML</h4>
+#### O HTML
 
-<p>Apenas por questão de completude, aqui está o HTML que exibe o conteúdo da pagina, incluindo a lista na qual o script insere informação sobre os eventos recebidos:</p>
+Apenas por questão de completude, aqui está o HTML que exibe o conteúdo da pagina, incluindo a lista na qual o script insere informação sobre os eventos recebidos:
 
-<pre class="brush: html"> </pre>
+```html
 
-<h1 id="Veja-me_mover">Veja-me mover</h1>
+```
 
-<p>Este exemplo mostra como usar animações CSS para fazer o elemento <code> H1 </code> se mover pela página.</p>
+# Veja-me mover
 
-<p>Além disso, emitimos algum texto sempre que um evento de animação dispara, para que você possa vê-los em ação.</p>
+Este exemplo mostra como usar animações CSS para fazer o elemento `H1 `se mover pela página.
 
-<ul id="output">
-</ul>
+Além disso, emitimos algum texto sempre que um evento de animação dispara, para que você possa vê-los em ação.
 
-<p>{{EmbedLiveSample('Using_animation_events', '600', '300')}}</p>
+{{EmbedLiveSample('Using_animation_events', '600', '300')}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ domxref("AnimationEvent", "AnimationEvent") }}</li>
- <li><a href="/en/CSS/CSS_animations/Detecting_CSS_animation_support" title="en/CSS/CSS animations/Detecting CSS animation support">Detectando suporte de animação CSS</a></li>
-</ul>
+- {{ domxref("AnimationEvent", "AnimationEvent") }}
+- [Detectando suporte de animação CSS](/en/CSS/CSS_animations/Detecting_CSS_animation_support "en/CSS/CSS animations/Detecting CSS animation support")

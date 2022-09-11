@@ -10,31 +10,29 @@ tags:
 translation_of: Web/CSS/filter-function/grayscale()
 original_slug: Web/CSS/filter-function/grayscale()
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p>O <code><strong>grayscale()</strong></code> é uma função do <a href="/en-US/docs/Web/CSS">CSS</a> que modifica a imagem adicionada para as cores branco e preto . Esse resultado é um efeito "filtro". {{cssxref("&lt;filter-function&gt;")}}.</p>
+O **`grayscale()`** é uma função do [CSS](/pt-BR/docs/Web/CSS) que modifica a imagem adicionada para as cores branco e preto . Esse resultado é um efeito "filtro". {{cssxref("&lt;filter-function&gt;")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/function-grayscale.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-grayscale.html")}}
 
+## Sintaxe
 
+```
+grayscale(quantidade)
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Parâmetros
 
-<pre class="syntaxbox">grayscale(<em>quantidade</em>)</pre>
+- `quantidade`
+  - : A quantia da conversão é especificada em {{cssxref ("&lt;number&gt;")}} (número) ou {{cssxref ("&lt;percentage&gt;")}} (porcentagem). Um valor de `100%` indica que a cor está compeltamente dentro da escala de cinza. Um valor de `0%` não altera as cores da imagem, que permanecerá igual a original. Valores entre `0%` e `100%` são multiplicadores lineares no efeito cinza, modificando a escala de cores conforme a quantidade determinada. A quantia em número é equivalente a em porcentagem.
 
-<h3 id="Parâmetros">Parâmetros</h3>
+```css
+grayscale(0)     /* Não afeta a imagem */
+grayscale(.7)    /* .7 => 70% de branco&preto */
+grayscale(100%)  /* Completamente em branco&preto */
+```
 
-<dl>
- <dt><code>quantidade</code></dt>
- <dd>A quantia da conversão é especificada em {{cssxref ("&lt;number&gt;")}} (número) ou {{cssxref ("&lt;percentage&gt;")}} (porcentagem). Um valor de <code>100%</code> indica que a cor está compeltamente dentro da escala de cinza. Um valor de <code>0%</code> não altera as cores da imagem, que permanecerá igual a original. Valores entre <code>0%</code> e <code>100%</code> são multiplicadores lineares no efeito cinza, modificando a escala de cores conforme a quantidade determinada. A quantia em número é equivalente a em porcentagem.</dd>
-</dl>
+## Veja também
 
-<pre class="brush: css">grayscale(0)     /* Não afeta a imagem */
-grayscale(.7)    /* .7 =&gt; 70% de branco&amp;preto */
-grayscale(100%)  /* Completamente em branco&amp;preto */</pre>
-
-<h2 id="Veja_também">Veja também </h2>
-
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;filter-function&gt;")}}

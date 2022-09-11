@@ -1,105 +1,93 @@
 ---
 title: ':first-of-type'
-slug: 'Web/CSS/:first-of-type'
+slug: Web/CSS/:first-of-type
 tags:
   - CSS Pseudo-classe
-translation_of: 'Web/CSS/:first-of-type'
+translation_of: Web/CSS/:first-of-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:first-of-type</code></strong> representa o primeiro elemento de seu tipo entre os filhos de seu elemento pai.</p>
+A [CSS](/pt-BR/docs/Web/CSS) [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) **`:first-of-type`** representa o primeiro elemento de seu tipo entre os filhos de seu elemento pai.
 
-<pre class="brush: css no-line-numbers">/* Seleciona qualquer &lt;p&gt; que seja o primeiro elemento
+```css
+/* Seleciona qualquer <p> que seja o primeiro elemento
    desse tipo entre seus irmãos */
 p:first-of-type {
   color: red;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Nota</strong>: Originalmente definido, o elemento selecionado tinha que ter um pai. Desde o Seletores Nível 4, isso não é mais necessário.</p>
-</div>
+> **Note:** **Nota**: Originalmente definido, o elemento selecionado tinha que ter um pai. Desde o Seletores Nível 4, isso não é mais necessário.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Estilizando_o_primeiro_parágrafo">Estilizando o primeiro parágrafo</h3>
+### Estilizando o primeiro parágrafo
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h2&gt;Título&lt;/h2&gt;
-&lt;p&gt;Parágrafo 1&lt;/p&gt;
-&lt;p&gt;Parágrafo 2&lt;/p&gt;</pre>
+```html
+<h2>Título</h2>
+<p>Parágrafo 1</p>
+<p>Parágrafo 2</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p:first-of-type {
+```css
+p:first-of-type {
   color: red;
   font-style: italic;
-}</pre>
+}
+```
 
-<h4 id="Resultado">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample('Styling_the_first_paragraph')}}</p>
+{{EmbedLiveSample('Styling_the_first_paragraph')}}
 
-<h3 id="Elementos_aninhados">Elementos aninhados</h3>
+### Elementos aninhados
 
-<p>Este exemplo mostra como os elementos aninhados também podem ser estilizados. Note que o <a href="/en-US/docs/Web/CSS/Universal_selectors">seletor universal</a> (<code>*</code>) está implícito quando nenhum seletor simples está escrito.</p>
+Este exemplo mostra como os elementos aninhados também podem ser estilizados. Note que o [seletor universal](/pt-BR/docs/Web/CSS/Universal_selectors) (`*`) está implícito quando nenhum seletor simples está escrito.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;article&gt;
-  &lt;div&gt;Esta `div` é a primeira!&lt;/div&gt;
-  &lt;div&gt;Esta &lt;span&gt;`span` aninhada é a primeira&lt;/span&gt;!&lt;/div&gt;
-  &lt;div&gt;Este &lt;em&gt;`em` aninhado é o primeiro&lt;/em&gt;, mas este &lt;em&gt;`em` aninhado é o último&lt;/em&gt;!&lt;/div&gt;
-  &lt;div&gt;Este &lt;span&gt;`span` aninhado pegou o estilo&lt;/span&gt;!&lt;/div&gt;
-  &lt;b&gt;Este `b` qualifica!&lt;/b&gt;
-  &lt;div&gt;Esta é a `div` final.&lt;/div&gt;
-&lt;/article&gt;
-</pre>
+```html
+<article>
+  <div>Esta `div` é a primeira!</div>
+  <div>Esta <span>`span` aninhada é a primeira</span>!</div>
+  <div>Este <em>`em` aninhado é o primeiro</em>, mas este <em>`em` aninhado é o último</em>!</div>
+  <div>Este <span>`span` aninhado pegou o estilo</span>!</div>
+  <b>Este `b` qualifica!</b>
+  <div>Esta é a `div` final.</div>
+</article>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">article :first-of-type {
+```css
+article :first-of-type {
   background-color: pink;
-}</pre>
+}
+```
 
-<h4 id="Resultado_2">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample('Nested_elements', 500)}}</p>
+{{EmbedLiveSample('Nested_elements', 500)}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#first-of-type-pseudo', ':first-of-type')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Os elementos correspondentes não são necessários para ter um pai.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#first-of-type-pseudo', ':first-of-type')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                               | Comment                                                           |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------------------- |
+| {{SpecName('CSS4 Selectors', '#first-of-type-pseudo', ':first-of-type')}} | {{Spec2('CSS4 Selectors')}} | Os elementos correspondentes não são necessários para ter um pai. |
+| {{SpecName('CSS3 Selectors', '#first-of-type-pseudo', ':first-of-type')}} | {{Spec2('CSS3 Selectors')}} | Definição inicial.                                                |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.selectors.first-of-type")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{Cssxref(":first-child")}}, {{Cssxref(":last-of-type")}}, {{Cssxref(":nth-of-type")}}</li>
-</ul>
+- {{Cssxref(":first-child")}}, {{Cssxref(":last-of-type")}}, {{Cssxref(":nth-of-type")}}

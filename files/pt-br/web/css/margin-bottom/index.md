@@ -3,19 +3,20 @@ title: margin-bottom
 slug: Web/CSS/margin-bottom
 translation_of: Web/CSS/margin-bottom
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A propriedade <a href="/en-US/docs/Web/CSS">CSS</a>  <strong><code>margin-bottom</code></strong>  define a <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">margin area</a> na parte inferior de um elemento. Um valor positivo coloca o valor mais longe de outros elementos vizinhos, enquanto um valor negativo, aproxima.</p>
+A propriedade [CSS](/pt-BR/docs/Web/CSS) **`margin-bottom`** define a [margin area](/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) na parte inferior de um elemento. Um valor positivo coloca o valor mais longe de outros elementos vizinhos, enquanto um valor negativo, aproxima.
 
-<div>{{EmbedInteractiveExample("pages/css/margin-bottom.html")}}</div>
+{{EmbedInteractiveExample("pages/css/margin-bottom.html")}}
 
-<p><img alt="The effect of the CSS margin-bottom property on the element box" src="/files/4045/margin-bottom.svg" style="border: 1px solid; display: block; height: 130px; margin-left: auto; margin-right: auto; width: 400px;"></p>
+![The effect of the CSS margin-bottom property on the element box](/files/4045/margin-bottom.svg)
 
-<p>A propriedade não tem efeito em non-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element">replaced</a> elementos inline, como {{HTMLElement("span")}} ou {{HTMLElement("code")}}.</p>
+A propriedade não tem efeito em non-[replaced](/pt-BR/docs/Web/CSS/Replaced_element) elementos inline, como {{HTMLElement("span")}} ou {{HTMLElement("code")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 margin-bottom: 10px;  /* Um tamanho absoluto */
 margin-bottom: 1em;   /* relativo ao tamanho do texto */
 margin-bottom: 5%;    /* relativo à largura do container do bloco mais próximo */
@@ -27,40 +28,41 @@ margin-bottom: auto;
 margin-bottom: inherit;
 margin-bottom: initial;
 margin-bottom: unset;
-</pre>
+```
 
-<p>A propriedade <code>margin-bottom</code> é especificada como a palavra chave <code>auto</code>, ou a <code>&lt;length&gt;</code>, ou a<code>&lt;percentage&gt;</code>. Esse valor pode ser positivo, zero ou negativo</p>
+A propriedade `margin-bottom` é especificada como a palavra chave `auto`, ou a `<length>`, ou a`<percentage>`. Esse valor pode ser positivo, zero ou negativo
 
-<h3 id="Values" name="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>O tamanho de uma margin com um valor fixo</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>O tamanho de uma margin como porcentagem, é relativa com o <em>tamanho</em> do bloco pai.</dd>
- <dt><code>auto</code></dt>
- <dd>O navegador seleciona um valor adequado para usar. Veja {{cssxref("margin")}}.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : O tamanho de uma margin com um valor fixo
+- {{cssxref("&lt;percentage&gt;")}}
+  - : O tamanho de uma margin como porcentagem, é relativa com o _tamanho_ do bloco pai.
+- `auto`
+  - : O navegador seleciona um valor adequado para usar. Veja {{cssxref("margin")}}.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="container"&gt;
-&lt;div class="box0"&gt;Box 0&lt;/div&gt;
-&lt;div class="box1"&gt;Box 1&lt;/div&gt;
-&lt;div class="box2"&gt;Box one's negative margin pulls me up&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="container">
+<div class="box0">Box 0</div>
+<div class="box1">Box 1</div>
+<div class="box2">Box one's negative margin pulls me up</div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p>CSS para definir margin-bottom e height</p>
+CSS para definir margin-bottom e height
 
-<pre class="brush: css">.box0 {
+```css
+.box0 {
     margin-bottom:1em;
     height:3em;
 }
@@ -73,12 +75,12 @@ margin-bottom: unset;
     border-width:1px 0;
     margin-bottom:2em;
 }
+```
 
-</pre>
+Algumas definições para container e divs, para que o os efeitos de margin possam ser vistos com mais clareza
 
-<p>Algumas definições para container e divs, para que o os efeitos de margin possam ser vistos com mais clareza</p>
-
-<pre class="brush: css">.container {
+```css
+.container {
     background-color:orange;
     width:320px;
     border:1px solid black;
@@ -86,46 +88,22 @@ margin-bottom: unset;
 div {
     width:320px;
     background-color:gold;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Example',350,200) }}</p>
+{{ EmbedLiveSample('Example',350,200) }}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Box', '#margin-bottom', 'margin-bottom')}}</td>
-   <td>{{Spec2('CSS3 Box')}}</td>
-   <td>Nenhuma mudança significativa</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'margin-bottom')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Definir o <code>margin-bottom</code> como "animavel"</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-bottom')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Remove seu efeito nos elementos in-line.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#margin-bottom', 'margin-bottom')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Status                                   | Comentário                                |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------- |
+| {{SpecName('CSS3 Box', '#margin-bottom', 'margin-bottom')}}             | {{Spec2('CSS3 Box')}}             | Nenhuma mudança significativa             |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'margin-bottom')}} | {{Spec2('CSS3 Transitions')}} | Definir o `margin-bottom` como "animavel" |
+| {{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-bottom')}} | {{Spec2('CSS2.1')}}                 | Remove seu efeito nos elementos in-line.  |
+| {{SpecName('CSS1', '#margin-bottom', 'margin-bottom')}}                     | {{Spec2('CSS1')}}                 | Definição inicial                         |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("css.properties.margin-bottom")}}</p>
+{{Compat("css.properties.margin-bottom")}}

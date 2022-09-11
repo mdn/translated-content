@@ -3,57 +3,54 @@ title: flex
 slug: Web/CSS/flex
 translation_of: Web/CSS/flex
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A propriedade flex do CSS, define como um ítem será posicionado para no espaço disponível dentro de seu container.</p>
+A propriedade flex do CSS, define como um ítem será posicionado para no espaço disponível dentro de seu container.
 
-<div>{{EmbedInteractiveExample("pages/css/flex.html")}}</div>
+{{EmbedInteractiveExample("pages/css/flex.html")}}
 
+## Propriedades
 
+Esta propriedade é uma abreviação das seguintes propriedades CSS:
 
-<h2 id="Propriedades">Propriedades</h2>
+- {{cssxref("flex-grow")}}
+- {{cssxref("flex-shrink")}}
+- {{cssxref("flex-basis")}}
 
-<p>Esta propriedade é uma abreviação das seguintes propriedades CSS:</p>
+```html hidden
+<div class="flex-container">
+  <div class="item auto">auto</div>
+  <div class="item auto">auto</div>
+  <div class="item auto">auto</div>
+</div>
 
-<ul>
- <li>{{cssxref("flex-grow")}}</li>
- <li>{{cssxref("flex-shrink")}}</li>
- <li>{{cssxref("flex-basis")}}</li>
-</ul>
+<div class="flex-container">
+  <div class="item auto">auto</div>
+  <div class="item initial">initial</div>
+  <div class="item initial">initial</div>
+</div>
 
-<div id="flex">
-<pre class="hidden brush: html">&lt;div class="flex-container"&gt;
-  &lt;div class="item auto"&gt;auto&lt;/div&gt;
-  &lt;div class="item auto"&gt;auto&lt;/div&gt;
-  &lt;div class="item auto"&gt;auto&lt;/div&gt;
-&lt;/div&gt;
+<div class="flex-container">
+  <div class="item auto">auto</div>
+  <div class="item auto">auto</div>
+  <div class="item none">none</div>
+</div>
 
-&lt;div class="flex-container"&gt;
-  &lt;div class="item auto"&gt;auto&lt;/div&gt;
-  &lt;div class="item initial"&gt;initial&lt;/div&gt;
-  &lt;div class="item initial"&gt;initial&lt;/div&gt;
-&lt;/div&gt;
+<div class="flex-container">
+  <div class="item initial">initial</div>
+  <div class="item none">none</div>
+  <div class="item none">none</div>
+</div>
 
-&lt;div class="flex-container"&gt;
-  &lt;div class="item auto"&gt;auto&lt;/div&gt;
-  &lt;div class="item auto"&gt;auto&lt;/div&gt;
-  &lt;div class="item none"&gt;none&lt;/div&gt;
-&lt;/div&gt;
+<div class="flex-container">
+  <div class="item four">4</div>
+  <div class="item two">2</div>
+  <div class="item one">1</div>
+</div>
+```
 
-&lt;div class="flex-container"&gt;
-  &lt;div class="item initial"&gt;initial&lt;/div&gt;
-  &lt;div class="item none"&gt;none&lt;/div&gt;
-  &lt;div class="item none"&gt;none&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="flex-container"&gt;
-  &lt;div class="item four"&gt;4&lt;/div&gt;
-  &lt;div class="item two"&gt;2&lt;/div&gt;
-  &lt;div class="item one"&gt;1&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="hidden brush: css">* {
+```css hidden
+* {
   box-sizing: border-box;
 }
 
@@ -99,16 +96,16 @@ translation_of: Web/CSS/flex
 .one {
   flex: 1;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("flex", 1200, 370, "", "", "example-outcome-frame")}}</p>
+{{EmbedLiveSample("flex", 1200, 370, "", "", "example-outcome-frame")}}
 
-<p>By default flex items don't shrink below their minimum content size. To change this, set the item's {{cssxref("min-width")}} or {{cssxref("min-height")}}.</p>
-</div>
+By default flex items don't shrink below their minimum content size. To change this, set the item's {{cssxref("min-width")}} or {{cssxref("min-height")}}.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush:css">/* Propriedades principais */
+```css
+/* Propriedades principais */
 flex: auto;
 flex: initial;
 flex: none;
@@ -134,132 +131,110 @@ flex: 2 2 10%;
 flex: inherit;
 flex: initial;
 flex: unset;
-</pre>
+```
 
-<p>The <code>flex</code> property may be specified using one, two, or three values.</p>
+The `flex` property may be specified using one, two, or three values.
 
-<ul>
- <li><strong>One-value syntax</strong>: the value must be one of:
+- **One-value syntax**: the value must be one of:
 
-  <ul>
-   <li>a <code>&lt;number&gt;</code>: In this case it is interpreted as <code>flex: &lt;number&gt; 1 0</code>; the <code><a href="#&lt;'flex-shrink'>">&lt;flex-shrink&gt;</a></code> value is assumed to be 1 and the <code><a href="#&lt;'flex-basis'>">&lt;flex-basis&gt;</a></code> value is assumed to be <code>0</code>.</li>
-   <li>one of the keywords: <code><a href="#none">none</a></code>, <code><a href="#auto">auto</a></code>, or <code>initial</code>.</li>
-  </ul>
- </li>
- <li><strong>Two-value syntax</strong>: the first value must be a {{cssxref("&lt;number&gt;")}} and it is interpreted as <code><a href="#&lt;'flex-grow'>">&lt;flex-grow&gt;</a></code>. The second value must be one of:
-  <ul>
-   <li>a {{cssxref("&lt;number&gt;")}}: then it is interpreted as <code><a href="#&lt;'flex-shrink'>">&lt;flex-shrink&gt;</a></code>.</li>
-   <li>a valid value for {{cssxref("width")}}: then it is interpreted as <code><a href="#&lt;'flex-basis'>">&lt;flex-basis&gt;</a></code>.</li>
-  </ul>
- </li>
- <li><strong>Three-value syntax:</strong> the values must be in the following order:
-  <ol>
-   <li>a {{cssxref("&lt;number&gt;")}} for <code><a href="#&lt;'flex-grow'>">&lt;flex-grow&gt;</a></code>.</li>
-   <li>a {{cssxref("&lt;number&gt;")}} for <code><a href="#&lt;'flex-grow'>">&lt;flex-shrink&gt;</a></code>.</li>
-   <li>a valid value for {{cssxref("width")}} for <code><a href="#&lt;'flex-basis'>">&lt;flex-basis&gt;</a></code>.</li>
-  </ol>
- </li>
-</ul>
+  - a `<number>`: In this case it is interpreted as `flex: <number> 1 0`; the [`<flex-shrink>`](#<'flex-shrink'>) value is assumed to be 1 and the [`<flex-basis>`](#<'flex-basis'>) value is assumed to be `0`.
+  - one of the keywords: [`none`](#none), [`auto`](#auto), or `initial`.
 
-<h3 id="Values" name="Values">Values</h3>
+- **Two-value syntax**: the first value must be a {{cssxref("&lt;number&gt;")}} and it is interpreted as [`<flex-grow>`](#<'flex-grow'>). The second value must be one of:
 
-<dl>
- <dt><code>initial</code></dt>
- <dd>The item is sized according to its <code>width</code> and <code>height</code> properties. It shrinks to its minimum size to fit the container, but does not grow to absorb any extra free space in the flex container. This is equivalent to setting "<code>flex: 0 1 auto</code>".</dd>
- <dt><a id="auto" name="auto"><code>auto</code></a></dt>
- <dd>The item is sized according to its <code>width</code> and <code>height</code> properties, but grows to absorb any extra free space in the flex container, and shrinks to its minimum size to fit the container. This is equivalent to setting "<code>flex: 1 1 auto</code>".</dd>
- <dt><a id="none" name="none"><code>none</code></a></dt>
- <dd>The item is sized according to its <code>width</code> and <code>height</code> properties. It is fully inflexible: it neither shrinks nor grows in relation to the flex container. This is equivalent to setting "<code>flex: 0 0 auto</code>".</dd>
- <dt><a id="&lt;'flex-grow'>" name="&lt;'flex-grow'>"><code>&lt;'flex-grow'&gt;</code></a></dt>
- <dd>Defines the {{cssxref("flex-grow")}} of the flex item. Negative values are considered invalid. Defaults to <code>1</code> when omitted.</dd>
- <dt><a id="&lt;'flex-shrink'>" name="&lt;'flex-shrink'>"><code id="&lt;'flex-shrink'>">&lt;'flex-shrink'&gt;</code></a></dt>
- <dd>Defines the {{cssxref("flex-shrink")}} of the flex item. Negative values are considered invalid. Defaults to <code>1</code> when omitted.</dd>
- <dt><a id="&lt;'flex-basis'>" name="&lt;'flex-basis'>"><code id="&lt;'flex-basis'>">&lt;'flex-basis'&gt;</code></a></dt>
- <dd>Defines the {{cssxref("flex-basis")}} of the flex item. A preferred size of <code>0</code> must have a unit to avoid being interpreted as a flexibility. Defaults to <code>0</code> when omitted.</dd>
-</dl>
+  - a {{cssxref("&lt;number&gt;")}}: then it is interpreted as [`<flex-shrink>`](#<'flex-shrink'>).
+  - a valid value for {{cssxref("width")}}: then it is interpreted as [`<flex-basis>`](#<'flex-basis'>).
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+- **Three-value syntax:** the values must be in the following order:
+
+  1.  a {{cssxref("&lt;number&gt;")}} for [`<flex-grow>`](#<'flex-grow'>).
+  2.  a {{cssxref("&lt;number&gt;")}} for [`<flex-shrink>`](#<'flex-grow'>).
+  3.  a valid value for {{cssxref("width")}} for [`<flex-basis>`](#<'flex-basis'>).
+
+### Values
+
+- `initial`
+  - : The item is sized according to its `width` and `height` properties. It shrinks to its minimum size to fit the container, but does not grow to absorb any extra free space in the flex container. This is equivalent to setting "`flex: 0 1 auto`".
+- `auto`
+  - : The item is sized according to its `width` and `height` properties, but grows to absorb any extra free space in the flex container, and shrinks to its minimum size to fit the container. This is equivalent to setting "`flex: 1 1 auto`".
+- `none`
+  - : The item is sized according to its `width` and `height` properties. It is fully inflexible: it neither shrinks nor grows in relation to the flex container. This is equivalent to setting "`flex: 0 0 auto`".
+- `<'flex-grow'>`
+  - : Defines the {{cssxref("flex-grow")}} of the flex item. Negative values are considered invalid. Defaults to `1` when omitted.
+- `<'flex-shrink'>`
+  - : Defines the {{cssxref("flex-shrink")}} of the flex item. Negative values are considered invalid. Defaults to `1` when omitted.
+- `<'flex-basis'>`
+  - : Defines the {{cssxref("flex-basis")}} of the flex item. A preferred size of `0` must have a unit to avoid being interpreted as a flexibility. Defaults to `0` when omitted.
+
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: css">#flex-container {
+```css
+#flex-container {
   display: flex;
   flex-direction: row;
 }
 
-#flex-container &gt; .flex-item {
+#flex-container > .flex-item {
   flex: auto;
 }
 
-#flex-container &gt; .raw-item {
+#flex-container > .raw-item {
   width: 5rem;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div id="flex-container"&gt;
-  &lt;div class="flex-item" id="flex"&gt;Flex box (click to toggle raw box)&lt;/div&gt;
-  &lt;div class="raw-item" id="raw"&gt;Raw box&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="flex-container">
+  <div class="flex-item" id="flex">Flex box (click to toggle raw box)</div>
+  <div class="raw-item" id="raw">Raw box</div>
+</div>
+```
 
-<div class="hidden">
-<pre class="brush: js">var flex = document.getElementById("flex");
+```js hidden
+var flex = document.getElementById("flex");
 var raw = document.getElementById("raw");
 flex.addEventListener("click", function() {
   raw.style.display = raw.style.display == "none" ? "block" : "none";
 });
-</pre>
+```
 
-<pre class="brush: css">#flex-container {
+```css hidden
+#flex-container {
   width: 100%;
   font-family: Consolas, Arial, sans-serif;
 }
 
-#flex-container &gt; div {
+#flex-container > div {
   border: 1px solid #f00;
   padding: 1rem;
 }
 
-#flex-container &gt; .raw-item {
+#flex-container > .raw-item {
   border: 1px solid #000;
 }
-</pre>
-</div>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example','100%','60')}}</p>
+{{EmbedLiveSample('Example','100%','60')}}
 
-<h2 id="Specifications" name="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#flex-property', 'flex')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                            | Status                           | Comment            |
+| ------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName('CSS3 Flexbox', '#flex-property', 'flex')}} | {{Spec2('CSS3 Flexbox')}} | Initial definition |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("css.properties.flex")}}</p>
+{{Compat("css.properties.flex")}}
 
-<h2 id="See_also" name="See_also">See also</h2>
+## See also
 
-<ul>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Controlling Ratios of flex items along the main axis</a></em></li>
-</ul>
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_

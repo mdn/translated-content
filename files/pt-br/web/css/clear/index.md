@@ -8,32 +8,32 @@ tags:
   - Reference
 translation_of: Web/CSS/clear
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A propriedade <strong><code>clear do</code></strong> <a href="/en-US/docs/CSS" title="CSS">CSS</a> especifica se um elemento pode ter elementos <a href="/en-US/docs/CSS/float">flutuantes</a> ao seu lado ou se devem ser movidos para abaixo dele (clear). Essa propriedade se aplica à elementos flutuantes ou não flutuantes. </p>
+A propriedade **`clear do`** [CSS](/pt-BR/docs/CSS "CSS") especifica se um elemento pode ter elementos [flutuantes](/pt-BR/docs/CSS/float) ao seu lado ou se devem ser movidos para abaixo dele (clear). Essa propriedade se aplica à elementos flutuantes ou não flutuantes.
 
-<div>{{EmbedInteractiveExample("pages/css/clear.html")}}</div>
+{{EmbedInteractiveExample("pages/css/clear.html")}}
 
-<p>Quando essa propriedade é aplicada em elementos não flutuantes, ele move a borda (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">border edge</a>) desse elemento para a borda da margem (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">margin edge</a>) de todos os elementos flutuantes relevantes. Ocorre um colapso das margens verticais dos elementos não flutuantes.</p>
+Quando essa propriedade é aplicada em elementos não flutuantes, ele move a borda ([border edge](/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)) desse elemento para a borda da margem ([margin edge](/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)) de todos os elementos flutuantes relevantes. Ocorre um colapso das margens verticais dos elementos não flutuantes.
 
-<p>As margens verticais entre dois elementos flutuantes não irão sofrer esse colapso. Quando aplicada a elementos flutuantes, a borda de margem (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">margin edge</a>) do elemento inferior é movida abaixo da borda de margem (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">border edge</a>) de todos os elementos flutuantes relevantes. Isso afeta a posição dos elementos flutuantes posteriores, sendo que os elementos flutuantes posteriores não podem ser posicionados acima dos anteriores.</p>
+As margens verticais entre dois elementos flutuantes não irão sofrer esse colapso. Quando aplicada a elementos flutuantes, a borda de margem ([margin edge](/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)) do elemento inferior é movida abaixo da borda de margem ([border edge](/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)) de todos os elementos flutuantes relevantes. Isso afeta a posição dos elementos flutuantes posteriores, sendo que os elementos flutuantes posteriores não podem ser posicionados acima dos anteriores.
 
-<p>Os elementos flutuantes que devem ser limpos (clear) são os elementos anteriores dentro do mesmo contexto de bloco (<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a>).</p>
+Os elementos flutuantes que devem ser limpos (clear) são os elementos anteriores dentro do mesmo contexto de bloco ([block formatting context](/pt-BR/docs/Web/Guide/CSS/Block_formatting_context)).
 
-<div class="note">
-<p><strong>Nota:</strong> se um elemento possuir apenas elementos flutuantes, sua altura é zerada. Se você quiser que o mesmo seja redimensionado, de modo que contenha elementos flutuantes dentro dele, você precisa limpar(clear) seus filhos automaticamente. Isso é chamado clearfix, e uma maneira de fazê-lo é adicionando um {{cssxref("::after")}} pseudo-elemento com a propriedade <code>clear.</code></p>
+> **Note:** **Nota:** se um elemento possuir apenas elementos flutuantes, sua altura é zerada. Se você quiser que o mesmo seja redimensionado, de modo que contenha elementos flutuantes dentro dele, você precisa limpar(clear) seus filhos automaticamente. Isso é chamado clearfix, e uma maneira de fazê-lo é adicionando um {{cssxref("::after")}} pseudo-elemento com a propriedade `clear.`
+>
+> ```css
+> #container::after {
+>   content: "";
+>   display: block;
+>   clear: both;
+> }
+> ```
 
-<pre class="brush: css">#container::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-</pre>
-</div>
+## Sintaxe
 
-<h2 id="Sintaxe">Sintaxe</h2>
-
-<pre class="brush: css no-line-numbers">/* Valores chaves */
+```css
+/* Valores chaves */
 clear: none;
 clear: left;
 clear: right;
@@ -45,45 +45,45 @@ clear: inline-end;
 clear: inherit;
 clear: initial;
 clear: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>none</code></dt>
- <dd>É uma palavra-chave que indica que o elemento não foi movido para baixo para limpar os elementos flutuantes anteriores.</dd>
- <dt><code>left</code></dt>
- <dd>É uma palavra-chave que indica que o elemento foi movido para baixo para limpar os últimos flutuantes da esquerda.</dd>
- <dt><code>right</code></dt>
- <dd>É uma palavra-chave que indica que o elemento foi movido para baixo para liberar os últimos elementos flutuantes.</dd>
- <dt><code>both</code></dt>
- <dd>É uma palavra-chave que indica que o elemento será movido para baixo para limpar os elementos flutuantes do lado esquerdo e direito.</dd>
- <dt><code>inline-start</code></dt>
- <dd>É uma palavra-chave que indica que o elemento será movido para baixo para limpar os elementos flutuantes no lado inicial de seu bloco, ou seja, os da esquerda flutuam nos scripts de ltr e os da direita nos scripts de rtl.</dd>
- <dt><code>inline-end</code></dt>
- <dd>É uma palavra-chave que indica que o elemento será movido para baixo para limpar os flutuantes no final de seu bloco, os da direita nos scripts de ltr e os flutuantes da esquerda nos scripts de rtl.</dd>
-</dl>
+- `none`
+  - : É uma palavra-chave que indica que o elemento não foi movido para baixo para limpar os elementos flutuantes anteriores.
+- `left`
+  - : É uma palavra-chave que indica que o elemento foi movido para baixo para limpar os últimos flutuantes da esquerda.
+- `right`
+  - : É uma palavra-chave que indica que o elemento foi movido para baixo para liberar os últimos elementos flutuantes.
+- `both`
+  - : É uma palavra-chave que indica que o elemento será movido para baixo para limpar os elementos flutuantes do lado esquerdo e direito.
+- `inline-start`
+  - : É uma palavra-chave que indica que o elemento será movido para baixo para limpar os elementos flutuantes no lado inicial de seu bloco, ou seja, os da esquerda flutuam nos scripts de ltr e os da direita nos scripts de rtl.
+- `inline-end`
+  - : É uma palavra-chave que indica que o elemento será movido para baixo para limpar os flutuantes no final de seu bloco, os da direita nos scripts de ltr e os flutuantes da esquerda nos scripts de rtl.
 
-<h3 id="Sintaxe_2">Sintaxe</h3>
+### Sintaxe
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<h3 id="clear:_left" name="clear:_left">clear: left</h3>
+### clear: left
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;p class="black"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.&lt;/p&gt;
-  &lt;p class="red"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
-  &lt;p class="left"&gt;This paragraph clears left.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  <p class="left">This paragraph clears left.</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.wrapper{
+```css
+.wrapper{
   border:1px solid black;
   padding:10px;
 }
@@ -107,24 +107,26 @@ clear: unset;
 p {
   width: 50%;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('clear:_left','100%','250') }}</p>
+{{ EmbedLiveSample('clear:_left','100%','250') }}
 
-<h3 id="clear:_right" name="clear:_right">clear: right</h3>
+### clear: right
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;p class="black"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.&lt;/p&gt;
-  &lt;p class="red"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
-  &lt;p class="right"&gt;This paragraph clears right.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  <p class="right">This paragraph clears right.</p>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.wrapper{
+```css
+.wrapper{
   border:1px solid black;
   padding:10px;
 }
@@ -147,24 +149,27 @@ p {
 }
 p {
   width: 50%;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('clear:_right','100%','250') }}</p>
+{{ EmbedLiveSample('clear:_right','100%','250') }}
 
-<h3 id="clear:_both" name="clear:_both">clear: both</h3>
+### clear: both
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;p class="black"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus ac dui.&lt;/p&gt;
-  &lt;p class="red"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.&lt;/p&gt;
-  &lt;p class="both"&gt;This paragraph clears both.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus ac dui.</p>
+  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="both">This paragraph clears both.</p>
+</div>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.wrapper{
+```css
+.wrapper{
   border:1px solid black;
   padding:10px;
 }
@@ -187,51 +192,25 @@ p {
 }
 p {
   width: 45%;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('clear:_both','100%','300') }}</p>
+{{ EmbedLiveSample('clear:_both','100%','300') }}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Logical Properties', '#float-clear', 'float and clear')}}</td>
-   <td>{{Spec2('CSS Logical Properties')}}</td>
-   <td>Adds the values <code>inline-start</code> and <code>inline-end</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visuren.html#flow-control', 'clear')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>No significant changes, though details are clarified.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#clear', 'clear')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                                           | Comment                                               |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ----------------------------------------------------- |
+| {{SpecName('CSS Logical Properties', '#float-clear', 'float and clear')}} | {{Spec2('CSS Logical Properties')}} | Adds the values `inline-start` and `inline-end`       |
+| {{SpecName('CSS2.1', 'visuren.html#flow-control', 'clear')}}                 | {{Spec2('CSS2.1')}}                         | No significant changes, though details are clarified. |
+| {{SpecName('CSS1', '#clear', 'clear')}}                                             | {{Spec2('CSS1')}}                         | Initial definition                                    |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade dos browsers</h2>
+## Compatibilidade dos browsers
 
+{{Compat("css.properties.clear")}}
 
+## Veja também
 
-<p>{{Compat("css.properties.clear")}}</p>
-
-<div> </div>
-
-<h2 id="See_also" name="See_also">Veja também</h2>
-
-<ul>
- <li><a href="/en-US/docs/CSS/box_model" title="CSS/box_model">Box model</a></li>
-</ul>
+- [Box model](/pt-BR/docs/CSS/box_model "CSS/box_model")

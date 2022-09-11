@@ -1,91 +1,81 @@
 ---
 title: ':first-child'
-slug: 'Web/CSS/:first-child'
+slug: Web/CSS/:first-child
 tags:
   - Referencia
-translation_of: 'Web/CSS/:first-child'
+translation_of: Web/CSS/:first-child
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>A <a href="/en/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-classe</a> de <a href="/en/CSS" title="CSS">CSS</a> <strong><code>:first-child</code></strong> representa qualquer elemento que seja o primeiro filho de seus pais.</p>
+A [pseudo-classe](/en/CSS/Pseudo-classes "Pseudo-classes") de [CSS](/en/CSS "CSS") **`:first-child`** representa qualquer elemento que seja o primeiro filho de seus pais.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="eval">elemento:first-child { estilos }
-</pre>
+```
+elemento:first-child { estilos }
+```
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<h3 id="Exemplo_1">Exemplo 1</h3>
+### Exemplo 1
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;span&gt;Este span é verde limão!&lt;/span&gt;
-  &lt;span&gt;Este span não é verde limão. :(&lt;/span&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <span>Este span é verde limão!</span>
+  <span>Este span não é verde limão. :(</span>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">span:first-child {
+```css
+span:first-child {
     background-color: lime;
 }
-</pre>
+```
 
-<p>... resultado ...</p>
+... resultado ...
 
-<p>{{EmbedLiveSample('Exemplo_1',300,50)}}</p>
+{{EmbedLiveSample('Exemplo_1',300,50)}}
 
-<h3 id="Example_2_-_Using_UL" name="Example_2_-_Using_UL">Exemplo 2 - Usando UL</h3>
+### Exemplo 2 - Usando UL
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;Elemento de Lista 1&lt;/li&gt;
-  &lt;li&gt;Elemento de Lista 2&lt;/li&gt;
-  &lt;li&gt;Elemento de Lista 3&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+  <li>Elemento de Lista 1</li>
+  <li>Elemento de Lista 2</li>
+  <li>Elemento de Lista 3</li>
+</ul>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">li{
+```css
+li{
   color:red;
 }
 li:first-child{
   color:green;
-}</pre>
+}
+```
 
-<p>... resultado ...</p>
+... resultado ...
 
-<p>{{EmbedLiveSample('Example_2_-_Using_UL',300,150)}}</p>
+{{EmbedLiveSample('Example_2_-_Using_UL',300,150)}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS4 Selectors', '#first-child-pseudo', ':first-child') }}</td>
-   <td>{{ Spec2('CSS4 Selectors') }}</td>
-   <td>Sem mudança.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Selectors', '#first-child-pseudo', ':first-child') }}</td>
-   <td>{{ Spec2('CSS3 Selectors') }}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                    | Status                                   | Comentário         |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
+| {{ SpecName('CSS4 Selectors', '#first-child-pseudo', ':first-child') }} | {{ Spec2('CSS4 Selectors') }} | Sem mudança.       |
+| {{ SpecName('CSS3 Selectors', '#first-child-pseudo', ':first-child') }} | {{ Spec2('CSS3 Selectors') }} | Definição inicial. |
 
-<h2 id="Browsers_compatíveis">Browsers compatíveis</h2>
+## Browsers compatíveis
 
 {{Compat("css.selectors.first-child")}}

@@ -11,23 +11,24 @@ tags:
   - Web
 translation_of: Web/CSS/number
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>O <a href="/en-US/docs/Web/CSS/CSS_Types">tipo de dado CSS</a> <strong><code>&lt;number&gt;</code></strong> representa um número, sendo esse ou um inteiro ou um componente fracional.</p>
+O [tipo de dado CSS](/pt-BR/docs/Web/CSS/CSS_Types) **`<number>`** representa um número, sendo esse ou um inteiro ou um componente fracional.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<p>A sintaxe de <code>&lt;number&gt;</code> estende a sintaxe de {{CSSxRef("&lt;integer&gt;")}}. Um valor fracional é representado por um <strong><code>.</code></strong> seguido de um ou mais dígitos decimais e pode ser anexado a número inteiro. Não existe uma unidade associada aos números.</p>
+A sintaxe de `<number>` estende a sintaxe de {{CSSxRef("&lt;integer&gt;")}}. Um valor fracional é representado por um **`.`** seguido de um ou mais dígitos decimais e pode ser anexado a número inteiro. Não existe uma unidade associada aos números.
 
-<h2 id="Interpolação">Interpolação</h2>
+## Interpolação
 
-<p>Quando animado, os valores de <code>&lt;number&gt;</code> são interpolados como números reais e de ponto flutuante. A velocidade da interpolação é determinada pelo<a href="/en-US/docs/Web/CSS/timing-function"> tempo da função</a> associada à animação.</p>
+Quando animado, os valores de `<number>` são interpolados como números reais e de ponto flutuante. A velocidade da interpolação é determinada pelo[ tempo da função](/pt-BR/docs/Web/CSS/timing-function) associada à animação.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Números_Válidos">Números Válidos</h3>
+### Números Válidos
 
-<pre class="brush: css; example-good">12          Um &lt;integer&gt; puro é também um &lt;number&gt;.
+```css example-good
+12          Um <integer> puro é também um <number>.
 4.01        Fração positiva
 -456.8      Fração negativa
 0.0         Zero
@@ -36,55 +37,29 @@ translation_of: Web/CSS/number
 .60         Um número fracional sem ser iniciado por zero
 10e3        Notação científica
 -3.4e-2     Notação científica complexa
-</pre>
+```
 
-<h3 id="Números_Inválidos">Números Inválidos</h3>
+### Números Inválidos
 
-<pre class="brush:css; example-bad">12.         Números decimais devem ser seguidos por pelo menos um dígito.
+```css example-bad
+12.         Números decimais devem ser seguidos por pelo menos um dígito.
 +-12.2      Só um sinal +/- é permitido.
 12.1.1      Só um ponto decimal é permitido.
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Values", "#numbers", "&lt;number&gt;")}}</td>
-   <td>{{Spec2("CSS4 Values")}}</td>
-   <td>Nenhuma mudança significante.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Values", "#numbers", "&lt;number&gt;")}}</td>
-   <td>{{Spec2("CSS3 Values")}}</td>
-   <td>Nenhuma mudança significante.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "syndata.html#numbers", "&lt;number&gt;")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>Definição explícita.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS1", "", "&lt;number&gt;")}}</td>
-   <td>{{Spec2("CSS1")}}</td>
-   <td>Definição implícita..</td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                       | Status                           | Comentário                    |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------- |
+| {{SpecName("CSS4 Values", "#numbers", "&lt;number&gt;")}}         | {{Spec2("CSS4 Values")}} | Nenhuma mudança significante. |
+| {{SpecName("CSS3 Values", "#numbers", "&lt;number&gt;")}}         | {{Spec2("CSS3 Values")}} | Nenhuma mudança significante. |
+| {{SpecName("CSS2.1", "syndata.html#numbers", "&lt;number&gt;")}} | {{Spec2("CSS2.1")}}         | Definição explícita.          |
+| {{SpecName("CSS1", "", "&lt;number&gt;")}}                             | {{Spec2("CSS1")}}         | Definição implícita..         |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("css.types.number")}}</p>
+{{Compat("css.types.number")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{CSSxRef("&lt;integer&gt;")}}</li>
-</ul>
+- {{CSSxRef("&lt;integer&gt;")}}

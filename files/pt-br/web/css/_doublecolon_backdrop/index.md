@@ -1,6 +1,6 @@
 ---
 title: '::backdrop'
-slug: 'Web/CSS/::backdrop'
+slug: Web/CSS/::backdrop
 tags:
   - CSS
   - Layout
@@ -8,42 +8,27 @@ tags:
   - Pseudo-elemento
   - Referencia
   - Web
-translation_of: 'Web/CSS/::backdrop'
+translation_of: Web/CSS/::backdrop
 ---
-<div>{{CSSRef}} {{SeeCompatTable}}</div>
+{{CSSRef}} {{SeeCompatTable}}
 
-<p>Cada elemento na <a href="https://fullscreen.spec.whatwg.org/#top-layer">camada superior</a> de uma pilha de elementos possui um {{Cssxref("pseudo-elementos", "pseudo-elemento")}} <dfn><code>::backdrop</code></dfn>. Esse pseudo-elemento é uma caixa renderizada imediatamente abaixo do elemento superior (e acima do elemento logo abaixo desse elemento, caso exista algum), dentro da camada superior.</p>
+Cada elemento na [camada superior](https://fullscreen.spec.whatwg.org/#top-layer) de uma pilha de elementos possui um {{Cssxref("pseudo-elementos", "pseudo-elemento")}} _`::backdrop`_. Esse pseudo-elemento é uma caixa renderizada imediatamente abaixo do elemento superior (e acima do elemento logo abaixo desse elemento, caso exista algum), dentro da camada superior.
 
-<p class="note">O pseudo-elemento <code>::backdrop</code> pode ser utilizado para criar um pano de fundo que esconde o conteúdo por trás de um elemento posicionado no topo de uma pilha de elementos. Por exemplo, para o elemento que é mostrado em tela cheia conforme descrito nessa especificação.</p>
+> **Note:** O pseudo-elemento `::backdrop` pode ser utilizado para criar um pano de fundo que esconde o conteúdo por trás de um elemento posicionado no topo de uma pilha de elementos. Por exemplo, para o elemento que é mostrado em tela cheia conforme descrito nessa especificação.
 
-<p>Ele não herda de nenhum elemento e também não é herdado. Não há restrição de propriedades que podem ser aplicadas a esse pseudo-elemento. </p>
+Ele não herda de nenhum elemento e também não é herdado. Não há restrição de propriedades que podem ser aplicadas a esse pseudo-elemento.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Fullscreen', '#::backdrop-pseudo-element', '::backdrop')}}</td>
-   <td>{{Spec2('Fullscreen')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Status                           | Comentário        |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
+| {{SpecName('Fullscreen', '#::backdrop-pseudo-element', '::backdrop')}} | {{Spec2('Fullscreen')}} | Definição inicial |
 
-<h2 id="Copatibilidade_com_navegadores">Copatibilidade com navegadores</h2>
+## Copatibilidade com navegadores
 
 {{Compat("css.selectors.backdrop")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{cssxref(":fullscreen")}}</li>
- <li>{{HTMLElement("dialog")}}</li>
-</ul>
+- {{cssxref(":fullscreen")}}
+- {{HTMLElement("dialog")}}

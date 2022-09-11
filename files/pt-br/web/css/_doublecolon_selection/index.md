@@ -1,54 +1,55 @@
 ---
 title: '::selection'
-slug: 'Web/CSS/::selection'
-translation_of: 'Web/CSS/::selection'
+slug: Web/CSS/::selection
+translation_of: Web/CSS/::selection
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>O <a href="pt-BR/docs/Web/CSS/Pseudo-elementos">pseudo-elemento</a> CSS <strong><code>::selection</code></strong> aplica estilos para partes do documento que foram selecionadas pelo usuário (tal como clicar e arrastar o ponteiro do mouse através de um texto.</p>
+O [pseudo-elemento](pt-BR/docs/Web/CSS/Pseudo-elementos) CSS **`::selection`** aplica estilos para partes do documento que foram selecionadas pelo usuário (tal como clicar e arrastar o ponteiro do mouse através de um texto.
 
-<pre class="brush: css">::selection {
+```css
+::selection {
   background-color: cyan;
-}</pre>
+}
+```
 
-<h2 id="Propriedades_permitidas">Propriedades permitidas</h2>
+## Propriedades permitidas
 
-<p>Apenas certas propriedades podem ser usadas com o <code>::selection</code>:</p>
+Apenas certas propriedades podem ser usadas com o `::selection`:
 
-<ul>
- <li>{{CSSxRef("color")}}</li>
- <li>{{CSSxRef("background-color")}}</li>
- <li>{{CSSxRef("cursor")}}</li>
- <li>{{CSSxRef("caret-color")}}</li>
- <li>{{CSSxRef("outline")}} and its longhands</li>
- <li>{{CSSxRef("text-decoration")}} and its associated properties</li>
- <li>{{CSSxRef("text-emphasis-color")}}</li>
- <li>{{CSSxRef("text-shadow")}}</li>
-</ul>
+- {{CSSxRef("color")}}
+- {{CSSxRef("background-color")}}
+- {{CSSxRef("cursor")}}
+- {{CSSxRef("caret-color")}}
+- {{CSSxRef("outline")}} and its longhands
+- {{CSSxRef("text-decoration")}} and its associated properties
+- {{CSSxRef("text-emphasis-color")}}
+- {{CSSxRef("text-shadow")}}
 
-<div class="warning">
-<p>Em particular, {{CSSxRef("background-image")}} é ignorada.</p>
-</div>
+> **Warning:** Em particular, {{CSSxRef("background-image")}} é ignorada.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">/* Sintaxe legado do Firefox (até a versão 61) */
+```
+/* Sintaxe legado do Firefox (até a versão 61) */
 ::-moz-selection
 
 {{CSSSyntax}}
-</pre>
+```
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">Esse texto tem estilos especiais quando selecionado.
-&lt;p&gt;Tente selecionando também o texto nesse parágrafo.&lt;/p&gt;</pre>
+```html
+Esse texto tem estilos especiais quando selecionado.
+<p>Tente selecionando também o texto nesse parágrafo.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<div class="hidden">
-<pre class="brush: css">::-moz-selection {
+```css hidden
+::-moz-selection {
   color: gold;
   background-color: red;
 }
@@ -56,10 +57,11 @@ translation_of: 'Web/CSS/::selection'
 p::-moz-selection {
   color: white;
   background-color: blue;
-}</pre>
-</div>
+}
+```
 
-<pre class="brush: css">/* Texto selecionado dourado com o fundo vermelho */
+```css
+/* Texto selecionado dourado com o fundo vermelho */
 ::selection {
   color: gold;
   background-color: red;
@@ -69,59 +71,39 @@ p::-moz-selection {
 p::selection {
   color: white;
   background-color: blue;
-}</pre>
+}
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample('Exemplo')}}</p>
+{{EmbedLiveSample('Exemplo')}}
 
-<h2 id="Preocupações_com_acessibilidade">Preocupações com acessibilidade</h2>
+## Preocupações com acessibilidade
 
-<p><strong>Não substitua os estilos de texto selecionados por razões puramente estéticas</strong> — os usuários podem personalizá-los para atender às suas necessidades. Para pessoas com problemas cognitivos ou com menos conhecimento tecnológico, alterações inesperadas nos estilos de seleção podem prejudicar sua compreensão da funcionalidade.</p>
+**Não substitua os estilos de texto selecionados por razões puramente estéticas** — os usuários podem personalizá-los para atender às suas necessidades. Para pessoas com problemas cognitivos ou com menos conhecimento tecnológico, alterações inesperadas nos estilos de seleção podem prejudicar sua compreensão da funcionalidade.
 
-<p>Se substituído, é importante garantir que a <strong>taxa de contraste</strong> entre o texto e as cores de plano de fundo da seleção seja alta o suficiente para que pessoas com condições de baixa visão possam lê-lo.</p>
+Se substituído, é importante garantir que a **taxa de contraste** entre o texto e as cores de plano de fundo da seleção seja alta o suficiente para que pessoas com condições de baixa visão possam lê-lo.
 
-<p>A taxa de contraste da cor é encontrada comparando a luminosidade do texto selecionado e as cores de fundo do texto selecionado. Para atender às atuais <a href="https://www.w3.org/WAI/intro/wcag">Diretrizes de acessibilidade de conteúdo da Web (WCAG)</a>, o conteúdo de texto deve ter uma taxa de contraste de 4.5:1 ou 3:1 para texto maior, como títulos. (WCAG define texto grande entre 18,66 px e 24 px e negrito, ou 24 px ou maior.)</p>
+A taxa de contraste da cor é encontrada comparando a luminosidade do texto selecionado e as cores de fundo do texto selecionado. Para atender às atuais [Diretrizes de acessibilidade de conteúdo da Web (WCAG)](https://www.w3.org/WAI/intro/wcag), o conteúdo de texto deve ter uma taxa de contraste de 4.5:1 ou 3:1 para texto maior, como títulos. (WCAG define texto grande entre 18,66 px e 24 px e negrito, ou 24 px ou maior.)
 
-<p>Facilite para os usuários ver e ouvir o conteúdo, incluindo a separação do primeiro plano do segundo plano</p>
+Facilite para os usuários ver e ouvir o conteúdo, incluindo a separação do primeiro plano do segundo plano
 
-<ul>
- <li><a href="https://webaim.org/resources/contrastchecker/">WebAIM: Verificador de Constraste de Cor</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG,1.4: Facilite para os usuários vizualizarem o conteúdo, incluindo a separação do primeiro plano do segundo plano (em inglês).</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [WebAIM: Verificador de Constraste de Cor](https://webaim.org/resources/contrastchecker/)
+- [MDN Understanding WCAG,1.4: Facilite para os usuários vizualizarem o conteúdo, incluindo a separação do primeiro plano do segundo plano (em inglês).](/pt-BR/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Pseudo-Elements', '#selectordef-selection', '::selection')}}</td>
-   <td>{{Spec2('CSS4 Pseudo-Elements')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                                           | Status                                       | Comentário         |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------ |
+| {{SpecName('CSS4 Pseudo-Elements', '#selectordef-selection', '::selection')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Definição inicial. |
 
-<div class="note">
-<p><strong>Nota:</strong> <code>::selection</code> estava nos rascunhos do Nível 3 dos Seletores de CSS, mas foi removido na fase Recomendação do Candidato porque estava subespecificado (especialmente com elementos aninhados) e a interoperabilidade não foi alcançada (<a href="http://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html">com base na lista de discussão de estilos W3C</a>). Ele retornou no <a href="http://dev.w3.org/csswg/css-pseudo-4/">Nível 4 dos Pseudo-Elementos</a>.</p>
-</div>
+> **Note:** **Nota:** `::selection` estava nos rascunhos do Nível 3 dos Seletores de CSS, mas foi removido na fase Recomendação do Candidato porque estava subespecificado (especialmente com elementos aninhados) e a interoperabilidade não foi alcançada ([com base na lista de discussão de estilos W3C](http://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html)). Ele retornou no [Nível 4 dos Pseudo-Elementos](http://dev.w3.org/csswg/css-pseudo-4/).
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("css.selectors.selection")}}</p>
+{{Compat("css.selectors.selection")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>
-  <p>{{cssxref("pointer-events")}} - permite autores controlarem sob qualquer circustancia(se houver) um elemento gráfico particular podendo ser o alvo do evento do mouse.</p>
- </li>
-</ul>
+- {{cssxref("pointer-events")}} - permite autores controlarem sob qualquer circustancia(se houver) um elemento gráfico particular podendo ser o alvo do evento do mouse.

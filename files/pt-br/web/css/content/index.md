@@ -6,22 +6,23 @@ tags:
   - Referencia
 translation_of: Web/CSS/content
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A propriedade CSS <strong><code>content</code></strong> é usada com os pseudoelementos {{cssxref("::before")}} e {{cssxref("::after")}} para gerar conteúdo em um elemento. Objetos inseridos usando a propriedade <code>content</code> são <em><a href="/pt-BRS/docs/CSS/Replaced_element" title="CSS/Replaced_element">elementos substituídos</a> anônimos</em>.</p>
+A propriedade CSS **`content`** é usada com os pseudoelementos {{cssxref("::before")}} e {{cssxref("::after")}} para gerar conteúdo em um elemento. Objetos inseridos usando a propriedade `content` são _[elementos substituídos](/pt-BR/docs/CSS/Replaced_element "CSS/Replaced_element") anônimos_.
 
-<pre class="brush: css no-line-numbers">/* Palavras-chave que não podem ser combinadas com outros valores */
+```css
+/* Palavras-chave que não podem ser combinadas com outros valores */
 content: normal;
 content: none;
 
-/* Valores &lt;string&gt; com caracteres especiais devem ser escritos */
-/* com escape Unicode, por exemplo \00A0 para &amp;nbsp; */
+/* Valores <string> com caracteres especiais devem ser escritos */
+/* com escape Unicode, por exemplo \00A0 para &nbsp; */
 content: "prefixo";
 
-/* Valores &lt;url&gt; */
+/* Valores <url> */
 content: url("http://www.example.com/test.png");
 
-/* Valores &lt;counter&gt; */
+/* Valores <counter> */
 content: counter(contador_capitulo);
 content: counters(contador_secao, ".");
 
@@ -42,70 +43,73 @@ content: open-quote chapter_counter;
 content: inherit;
 content: initial;
 content: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>none</code></dt>
- <dd>O pseudoelemento não será gerado.</dd>
- <dt><code>normal</code></dt>
- <dd>Equivalente a <code>none</code> para os pseudoelementos <code>::before</code> e <code>::after</code>.</dd>
- <dt>{{cssxref("&lt;string&gt;")}}</dt>
- <dd>Um ou mais caracteres de texto.</dd>
- <dt>{{cssxref("&lt;url&gt;")}}</dt>
- <dd>Uma URL que designa um recurso externo (como uma imagem). Se o recurso não puder ser exibido, ele será ignorado ou um <em lang="en">placeholder</em> será exibido no seu lugar.</dd>
- <dt>{{cssxref("&lt;counter&gt;")}}</dt>
- <dd><p>O valor de um contador CSS, geralmente um número. Ele pode ser exibido usando a função <a class="new" href="https://developer.mozilla.org/en-US/docs/Web/CSS/counter%28%29" title="A documentação sobre este tópico ainda não foi escrita; por favor, considere dar a sua contribuição nela!"><code>counter()</code></a> ou <a class="new" href="https://developer.mozilla.org/en-US/docs/Web/CSS/counters%28%29" title="A documentação sobre este tópico ainda não foi escrita; por favor, considere dar a sua contribuição nela!"><code>counters()</code></a>.</p>
- <p>A função <code>counter()</code> tem duas formas: 'counter(<var>nome</var>)' ou 'counter(<var>nome</var>, <var>estilo</var>)'. O texto gerado será o valor do contador mais próximo do nome fornecido no pseudoelemento. Ele será formatado com o estilo especificado (o padrão é <code>decimal</code>).</p>
+- `none`
+  - : O pseudoelemento não será gerado.
+- `normal`
+  - : Equivalente a `none` para os pseudoelementos `::before` e `::after`.
+- {{cssxref("&lt;string&gt;")}}
+  - : Um ou mais caracteres de texto.
+- {{cssxref("&lt;url&gt;")}}
+  - : Uma URL que designa um recurso externo (como uma imagem). Se o recurso não puder ser exibido, ele será ignorado ou um _placeholder_ será exibido no seu lugar.
+- {{cssxref("&lt;counter&gt;")}}
 
- <p>A função <code>counters()</code> também tem duas formas: 'counters(<var>nome</var>, <var>string</var>)' ou 'counters(<var>nome</var>, <var>separador</var>, <var>estilo</var>)'. O texto gerado será o valor de todos os contadores com o mesmo nome no escopo do pseudoelemento, do mais afastado ao mais próximo, separados pelo separador especificado. Os contadores serão exibidos no estilo indicado (o padrão é <code>decimal</code>).</p>
- </dd>
- <dt><code>attr(x)</code></dt>
- <dd>O valor do atributo <code>x</code> do elemento. Se não houver um atributo <code>x</code>, uma <em lang="en">string</em> vazia será retornada. A diferenciação de maiúsculas e minúsculas dependerá da linguagem do documento.</dd>
- <dt><code>open-quote</code> | <code>close-quote</code></dt>
- <dd>Esses valores serão substituídos pela <em lang="en">string</em> apropriada da propriedade {{cssxref("quotes")}}.</dd>
- <dt><code>no-open-quote</code> | <code>no-close-quote</code></dt>
- <dd>Não introduzem nenhum conteúdo, mas aumentam (ou diminuem) o nível de aninhamento de aspas.</dd>
-</dl>
+  - : O valor de um contador CSS, geralmente um número. Ele pode ser exibido usando a função [`counter()`](/pt-BR/docs/Web/CSS/counter%28%29 "A documentação sobre este tópico ainda não foi escrita; por favor, considere dar a sua contribuição nela!") ou [`counters()`](/pt-BR/docs/Web/CSS/counters%28%29 "A documentação sobre este tópico ainda não foi escrita; por favor, considere dar a sua contribuição nela!").
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+    A função `counter()` tem duas formas: 'counter(_nome_)' ou 'counter(_nome_, _estilo_)'. O texto gerado será o valor do contador mais próximo do nome fornecido no pseudoelemento. Ele será formatado com o estilo especificado (o padrão é `decimal`).
+
+    A função `counters()` também tem duas formas: 'counters(_nome_, _string_)' ou 'counters(_nome_, _separador_, _estilo_)'. O texto gerado será o valor de todos os contadores com o mesmo nome no escopo do pseudoelemento, do mais afastado ao mais próximo, separados pelo separador especificado. Os contadores serão exibidos no estilo indicado (o padrão é `decimal`).
+
+- `attr(x)`
+  - : O valor do atributo `x` do elemento. Se não houver um atributo `x`, uma _string_ vazia será retornada. A diferenciação de maiúsculas e minúsculas dependerá da linguagem do documento.
+- `open-quote` | `close-quote`
+  - : Esses valores serão substituídos pela _string_ apropriada da propriedade {{cssxref("quotes")}}.
+- `no-open-quote` | `no-close-quote`
+  - : Não introduzem nenhum conteúdo, mas aumentam (ou diminuem) o nível de aninhamento de aspas.
+
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Cabeçalhos_e_citações">Cabeçalhos e citações</h3>
+### Cabeçalhos e citações
 
-<p>Este exemplo insere aspas ao redor de citações e adiciona a palavra "Capítulo" antes dos cabeçalhos.</p>
+Este exemplo insere aspas ao redor de citações e adiciona a palavra "Capítulo" antes dos cabeçalhos.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h1&gt;5&lt;/h1&gt;
-&lt;p&gt;De acordo com o Sr. Tim Berners-Lee,
-  &lt;q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet"&gt;I was
+```html
+<h1>5</h1>
+<p>De acordo com o Sr. Tim Berners-Lee,
+  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">I was
     lucky enough to invent the Web at the time when the Internet
-    already existed - and had for a decade and a half.&lt;/q&gt;
+    already existed - and had for a decade and a half.</q>
   Devemos entender que não há nada fundamentalmente errado em criar
   algo com base nas contribuições de outras pessoas.
-&lt;/p&gt;
+</p>
 
-&lt;h1&gt;6&lt;/h1&gt;
-&lt;p&gt;De acordo com o Manifesto Mozilla,
-  &lt;q cite="https://www.mozilla.org/about/manifesto/"&gt;As pessoas
+<h1>6</h1>
+<p>De acordo com o Manifesto Mozilla,
+  <q cite="https://www.mozilla.org/about/manifesto/">As pessoas
     precisam ter a capacidade de moldar a Internet e suas
-    experiências com ela.&lt;/q&gt;
+    experiências com ela.</q>
   Portanto, podemos concluir que contribuir para a Web aberta pode
   proteger nossas próprias experiências individuais nela.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">q {
+```css
+q {
   color: blue;
 }
 
@@ -121,75 +125,87 @@ h1::before  {
   content: "Cap\00EDtulo ";  /* O espaço no final cria uma separação
                                 entre o conteúdo adicionado e o
                                 resto do conteúdo */
-}</pre>
+}
+```
 
-<h4 id="Resultado">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample('Headings_and_quotes', '100%', 200)}}</p>
+{{EmbedLiveSample('Headings_and_quotes', '100%', 200)}}
 
-<h3 id="Imagem_combinada_com_texto">Imagem combinada com texto</h3>
+### Imagem combinada com texto
 
-<p>Este exemplo insere uma imagem antes do <em lang="en">link</em>. Se a imagem não for encontrada, o texto será exibido no seu lugar.</p>
+Este exemplo insere uma imagem antes do _link_. Se a imagem não for encontrada, o texto será exibido no seu lugar.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;a href="https://www.mozilla.org/"&gt;Mozilla Home Page&lt;/a&gt;</pre>
+```html
+<a href="https://www.mozilla.org/">Mozilla Home Page</a>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">a::before {
+```css
+a::before {
   content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") " MOZILLA: ";
   font: x-small Arial, sans-serif;
   color: gray;
-}</pre>
+}
+```
 
-<h4 id="Resultado_2">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample('Image_combined_with_text', '100%', 60)}}</p>
+{{EmbedLiveSample('Image_combined_with_text', '100%', 60)}}
 
-<h3 id="Alterando_classes_específicas">Alterando classes específicas</h3>
+### Alterando classes específicas
 
-<p>Este exemplo insere texto adicional no final de itens especiais em uma lista.</p>
+Este exemplo insere texto adicional no final de itens especiais em uma lista.
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h2&gt;Categoriass mais vendidas&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;Suspenses políticos&lt;/li&gt;
-  &lt;li class="new-entry"&gt;Histórias de terror&lt;/li&gt;
-  &lt;li&gt;Biografias&lt;/li&gt;
-  &lt;li class="new-entry"&gt;Romances de Vampiros&lt;/li&gt;
-&lt;/ol&gt;</pre>
+```html
+<h2>Categoriass mais vendidas</h2>
+<ol>
+  <li>Suspenses políticos</li>
+  <li class="new-entry">Histórias de terror</li>
+  <li>Biografias</li>
+  <li class="new-entry">Romances de Vampiros</li>
+</ol>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.new-entry::after {
+```css
+.new-entry::after {
   content: " Novo!";  /* O espaço no final cria uma separação
                          entre o conteúdo adicionado e o
                          resto do conteúdo */
   color: red;
-}</pre>
+}
+```
 
-<h4 id="Resultado_3">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample('Targeting_classes', '100%', 160)}}</p>
+{{EmbedLiveSample('Targeting_classes', '100%', 160)}}
 
-<h3 id="Imagens_e_atributos_de_elementos">Imagens e atributos de elementos</h3>
+### Imagens e atributos de elementos
 
-<p>Este exemplo insere uma imagem antes de cada <em lang="en">link</em> e adiciona o conteúdo do seu atributo <code>id</code> depois.</p>
+Este exemplo insere uma imagem antes de cada _link_ e adiciona o conteúdo do seu atributo `id` depois.
 
-<h4 id="HTML_4">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;&lt;a id="moz" href="http://www.mozilla.org/"&gt;
-    Mozilla Home Page&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a id="mdn" href="https://developer.mozilla.org/"&gt;
-    Mozilla Developer Network&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+  <li><a id="moz" href="http://www.mozilla.org/">
+    Mozilla Home Page</a></li>
+  <li><a id="mdn" href="https://developer.mozilla.org/">
+    Mozilla Developer Network</a></li>
+</ul>
+```
 
-<h4 id="CSS_4">CSS</h4>
+#### CSS
 
-<pre class="brush: css">a {
+```css
+a {
   text-decoration: none;
   border-bottom: 3px dotted navy;
 }
@@ -209,44 +225,25 @@ a::after {
 li {
   margin: 1em;
 }
-</pre>
+```
 
-<h4 id="Resultado_4">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample('Images_and_element_attributes', '100%', 160)}}</p>
+{{EmbedLiveSample('Images_and_element_attributes', '100%', 160)}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Content", "#content-property", "content")}}</td>
-   <td>{{Spec2("CSS3 Content")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "generate.html#content", "content")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                    | Status                           | Comentário        |
+| -------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
+| {{SpecName("CSS3 Content", "#content-property", "content")}} | {{Spec2("CSS3 Content")}} |                   |
+| {{SpecName("CSS2.1", "generate.html#content", "content")}}     | {{Spec2("CSS2.1")}}         | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.properties.content")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{Cssxref("::after")}}</li>
- <li>{{Cssxref("::before")}}</li>
- <li>{{Cssxref("quotes")}}</li>
-</ul>
+- {{Cssxref("::after")}}
+- {{Cssxref("::before")}}
+- {{Cssxref("quotes")}}

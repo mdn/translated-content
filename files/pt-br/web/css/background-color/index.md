@@ -3,17 +3,16 @@ title: background-color
 slug: Web/CSS/background-color
 translation_of: Web/CSS/background-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A propriedade <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>background-color</code></strong> define a cor de fundo de um elemento.</p>
+A propriedade [CSS](/pt-BR/docs/Web/CSS) **`background-color`** define a cor de fundo de um elemento.
 
-<div>{{EmbedInteractiveExample("pages/css/background-color.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-color.html")}}
 
+## Sintaxe
 
-
-<h2 id="Sintaxe">Sintaxe</h2>
-
-<pre class="brush: css">/* Valores em chaves */
+```css
+/* Valores em chaves */
 background-color: red;
 background-color: indigo;
 
@@ -40,56 +39,56 @@ background-color: transparent;
 /* Valores globais */
 background-color: inherit;
 background-color: initial;
-background-color: unset;</pre>
+background-color: unset;
+```
 
-<p>A propriedade <code>background-color</code> recebe um único valor <code><a href="#&lt;color>">&lt;color&gt;</a></code>.</p>
+A propriedade `background-color` recebe um único valor [`<color>`](#<color>).
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><a id="&lt;color>"></a>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>A cor uniforme de fundo. É renderizado atrás de qualquer {{cssxref("background-image")}} especificado, embora a cora ainda continue visible através de qualquer transparência da imagem.</dd>
-</dl>
+- {{cssxref("&lt;color&gt;")}}
+  - : A cor uniforme de fundo. É renderizado atrás de qualquer {{cssxref("background-image")}} especificado, embora a cora ainda continue visible através de qualquer transparência da imagem.
 
-<h2 id="Acessibilidade">Acessibilidade</h2>
+## Acessibilidade
 
-<p>É importante assegurar que o contraste entre a cor de fundo e a cor do texto colocado sobre ele é alta o suficiente para pessoas com condições de baixa visão possam ler o conteúdo da página.</p>
+É importante assegurar que o contraste entre a cor de fundo e a cor do texto colocado sobre ele é alta o suficiente para pessoas com condições de baixa visão possam ler o conteúdo da página.
 
-<p>A cor do contrast é determinada comparando a luminância da cor do texto e da cor de fundo.  Para atender às atuais <a href="https://www.w3.org/WAI/intro/wcag">Diretrizes de Acessibilidade de Conteúdo da Web (WCAG)</a>, uma proporção de 4.5:1 é necessária para conteúdo de texto e 3:1 para textos maiores como títulos. Texto grande é definido como 18.66px e negrito ou maior, ou 24px ou maior.</p>
+A cor do contrast é determinada comparando a luminância da cor do texto e da cor de fundo. Para atender às atuais [Diretrizes de Acessibilidade de Conteúdo da Web (WCAG)](https://www.w3.org/WAI/intro/wcag), uma proporção de 4.5:1 é necessária para conteúdo de texto e 3:1 para textos maiores como títulos. Texto grande é definido como 18.66px e negrito ou maior, ou 24px ou maior.
 
-<ul>
- <li><a href="https://webaim.org/resources/contrastchecker/">WebAIM: Color Contrast Checker</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">Understanding Success Criterion 1.4.3  | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/pt-BR/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
-<h2 id="Definição_formal">Definição formal</h2>
+## Definição formal
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxe_formal">Sintaxe formal</h2>
+## Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="exampleone"&gt;
+```html
+<div class="exampleone">
   Lorem ipsum dolor sit amet, consectetuer
-&lt;/div&gt;
+</div>
 
-&lt;div class="exampletwo"&gt;
+<div class="exampletwo">
   Lorem ipsum dolor sit amet, consectetuer
-&lt;/div&gt;
+</div>
 
-&lt;div class="exemplothree"&gt;
+<div class="exemplothree">
   Lorem ipsum dolor sit amet, consectetuer
-&lt;/div&gt;</pre>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.exampleone {
+```css
+.exampleone {
   background-color: teal;
   color: white;
 }
@@ -103,53 +102,27 @@ background-color: unset;</pre>
   background-color: #777799;
   color: #FFFFFF;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", 200, 150)}}</p>
+{{EmbedLiveSample("Examples", 200, 150)}}
 
-<ul>
-</ul>
+## Especificações
 
-<h2 id="Especificações">Especificações</h2>
+| Specification                                                                                                | Comment                                                                                                                                                        | Feedback                                                                                          |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Backgrounds', '#background-color', 'background-color')}}             | Though technically removing the `transparent` keyword, this doesn't change anything as it has been incorporated as a true {{cssxref("&lt;color&gt;")}} | [Backgrounds Level 3 GitHub issues](https://github.com/w3c/csswg-drafts/labels/css-backgrounds-3) |
+| {{SpecName('CSS2.1', 'colors.html#propdef-background-color', 'background-color')}} |                                                                                                                                                                |                                                                                                   |
+| {{SpecName('CSS1', '#background-color', 'background-color')}}                             | Initial definition                                                                                                                                             |                                                                                                   |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Comment</th>
-   <th scope="col">Feedback</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#background-color', 'background-color')}}</td>
-   <td>Though technically removing the <code>transparent</code> keyword, this doesn't change anything as it has been incorporated as a true {{cssxref("&lt;color&gt;")}}</td>
-   <td><a href="https://github.com/w3c/csswg-drafts/labels/css-backgrounds-3">Backgrounds Level 3 GitHub issues</a></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'colors.html#propdef-background-color', 'background-color')}}</td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#background-color', 'background-color')}}</td>
-   <td>Initial definition</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+## Compatibilidade com navegadores
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+{{Compat("css.properties.background-color")}}
 
-<p>{{Compat("css.properties.background-color")}}</p>
+## Veja também
 
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds">Multiple backgrounds</a></li>
- <li>The {{cssxref("&lt;color&gt;")}} data type</li>
- <li>Other color-related properties: {{cssxref("color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}</li>
- <li><a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a></li>
-</ul>
+- [Multiple backgrounds](/pt-BR/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds)
+- The {{cssxref("&lt;color&gt;")}} data type
+- Other color-related properties: {{cssxref("color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
+- [Applying color to HTML elements using CSS](/pt-BR/docs/Web/HTML/Applying_color)

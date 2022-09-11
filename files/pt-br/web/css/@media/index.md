@@ -10,13 +10,14 @@ tags:
   - TopicStub
 translation_of: Web/CSS/@media
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>@media</code></strong> <a href="/en/CSS" title="CSS">CSS</a> <a href="/en/CSS/At-rule" title="en/CSS/At-rule">at-rule </a> pode ser usada para aplicar estilos com base no resultado de uma ou mais consultas de mídia, que testam o tipo, as características específicas e o ambiente de um dispositivo.</p>
+The **`@media`** [CSS](/en/CSS "CSS") [at-rule ](/en/CSS/At-rule "en/CSS/At-rule")pode ser usada para aplicar estilos com base no resultado de uma ou mais consultas de mídia, que testam o tipo, as características específicas e o ambiente de um dispositivo.
 
-<p>No CSS, a regra <code>@media</code> deve ser posta na parte superior do seu código ou aninhada dentro de algum outro <a href="/en/CSS/At-rule#Conditional_Group_Rules" title="en/CSS/At-rule#Conditional_Group_Rules">conditional group at-rule</a>.</p>
+No CSS, a regra `@media` deve ser posta na parte superior do seu código ou aninhada dentro de algum outro [conditional group at-rule](/en/CSS/At-rule#Conditional_Group_Rules "en/CSS/At-rule#Conditional_Group_Rules").
 
-<pre class="brush: css no-line-numbers">/* Media query */
+```css
+/* Media query */
 @media screen and (min-width: 900px) {
   article {
     padding: 1rem 3rem;
@@ -31,239 +32,107 @@ translation_of: Web/CSS/@media
     }
   }
 }
-</pre>
+```
 
-<p>Besides its use in the <code>@media</code> rule, a media query may also be applied to an HTML {{HTMLElement("link")}} element to restrict an entire style sheet to certain media.</p>
+Besides its use in the `@media` rule, a media query may also be applied to an HTML {{HTMLElement("link")}} element to restrict an entire style sheet to certain media.
 
-<pre class="brush: html no-line-numbers">&lt;!-- Media-dependent style sheet included in HTML --&gt;
-&lt;link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen-styles.css" /&gt;</pre>
+```html
+<!-- Media-dependent style sheet included in HTML -->
+<link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen-styles.css" />
+```
 
-<p>In JavaScript, <code>@media</code> can be accessed via the {{domxref("CSSMediaRule")}} CSS object model interface.</p>
+In JavaScript, `@media` can be accessed via the {{domxref("CSSMediaRule")}} CSS object model interface.
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>@media</code> at-rule is composed of one or more media queries, each of which consists of an optional <a href="#Media_types">media type</a> and any number of <a href="#Media_features">media feature</a> expressions. Multiple queries can be combined in various ways by using <a href="#Logical_operators">logical operators</a>, and are case-insensitive.</p>
+The `@media` at-rule is composed of one or more media queries, each of which consists of an optional [media type](#Media_types) and any number of [media feature](#Media_features) expressions. Multiple queries can be combined in various ways by using [logical operators](#Logical_operators), and are case-insensitive.
 
-<p>Corresponding styles are applied only if a media query computes to true, i.e., when the specified media type matches the type of device the document is being displayed on <em>and</em> all media feature expressions compute as true. Queries involving unknown media types are always false.</p>
+Corresponding styles are applied only if a media query computes to true, i.e., when the specified media type matches the type of device the document is being displayed on _and_ all media feature expressions compute as true. Queries involving unknown media types are always false.
 
-<div class="note">
-<p><strong>Note:</strong> A style sheet with a media query attached to its {{HTMLElement("link")}} tag <a href="http://scottjehl.github.com/CSS-Download-Tests/">will still download</a> even if the query returns false. Nevertheless, its contents will not apply unless and until the result of the query changes to true.</p>
-</div>
+> **Note:** A style sheet with a media query attached to its {{HTMLElement("link")}} tag [will still download](http://scottjehl.github.com/CSS-Download-Tests/) even if the query returns false. Nevertheless, its contents will not apply unless and until the result of the query changes to true.
 
-<h3 id="Media_types" name="Media_types">Media types</h3>
+### Media types
 
-<p><em>Media types</em> describe the general category of a device. Unless you use the <code>not</code> or <code>only</code> logical operators, the media type is optional and the <code>all</code> type will be implied.</p>
+_Media types_ describe the general category of a device. Unless you use the `not` or `only` logical operators, the media type is optional and the `all` type will be implied.
 
-<dl>
- <dt><code>all</code></dt>
- <dd>Suitable for all devices.</dd>
- <dt><code>print</code></dt>
- <dd>Intended for paged material and for documents viewed on screen in print preview mode. Please consult the section on <a href="/en/CSS/Paged_Media" title="https://developer.mozilla.org/en/CSS/Paged_Media">paged media</a>, and the <a href="/en/CSS/Getting_Started/Media" title="https://developer.mozilla.org/en/CSS/Getting_Started/Media">media section of the Getting Started tutorial</a> for information about formatting issues that are specific to paged media.</dd>
- <dt><code>screen</code></dt>
- <dd>Intended primarily for color computer screens.</dd>
- <dt><code>speech</code></dt>
- <dd>Intended for speech synthesizers.</dd>
-</dl>
+- `all`
+  - : Suitable for all devices.
+- `print`
+  - : Intended for paged material and for documents viewed on screen in print preview mode. Please consult the section on [paged media](/en/CSS/Paged_Media "https://developer.mozilla.org/en/CSS/Paged_Media"), and the [media section of the Getting Started tutorial](/en/CSS/Getting_Started/Media "https://developer.mozilla.org/en/CSS/Getting_Started/Media") for information about formatting issues that are specific to paged media.
+- `screen`
+  - : Intended primarily for color computer screens.
+- `speech`
+  - : Intended for speech synthesizers.
 
-<div class="note"><strong>Deprecated media types:</strong> CSS2.1 and <a href="https://drafts.csswg.org/mediaqueries-3/#background">Media Queries 3</a> defined several additional media types (<code>tty</code>, <code>tv</code>, <code>projection</code>, <code>handheld</code>, <code>braille</code>, <code>embossed</code>, and <code>aural</code>), but they were deprecated in <a href="http://dev.w3.org/csswg/mediaqueries/#media-types">Media Queries 4</a> and shouldn't be used. The <code>aural</code> type has been replaced by <code>speech</code>, which is similar.</div>
+> **Note:** **Deprecated media types:** CSS2.1 and [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) defined several additional media types (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, and `aural`), but they were deprecated in [Media Queries 4](http://dev.w3.org/csswg/mediaqueries/#media-types) and shouldn't be used. The `aural` type has been replaced by `speech`, which is similar.
 
-<h3 id="Media_features" name="Media_features">Media features</h3>
+### Media features
 
-<p><em>Media feature expressions</em> test for specific characteristics of the {{glossary("user agent")}}, output device, or environment. They are entirely optional. Each media feature expression must be surrounded by parentheses.</p>
+_Media feature expressions_ test for specific characteristics of the {{glossary("user agent")}}, output device, or environment. They are entirely optional. Each media feature expression must be surrounded by parentheses.
 
-<table>
- <thead>
-  <tr>
-   <th>Name</th>
-   <th>Summary</th>
-   <th>Notes</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/width"><code>width</code></a></td>
-   <td>Width of the viewport</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/height"><code>height</code></a></td>
-   <td>Height of the viewport</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/aspect-ratio"><code>aspect-ratio</code></a></td>
-   <td>Width-to-height aspect ratio of the viewport</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/orientation"><code>orientation</code></a></td>
-   <td>Orientation of the viewport</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/resolution"><code>resolution</code></a></td>
-   <td>Pixel density of the output device</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/scan"><code>scan</code></a></td>
-   <td>Scanning process of the output device</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/grid"><code>grid</code></a></td>
-   <td>Does the device use a grid or bitmap screen?</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/update-frequency"><code>update</code></a></td>
-   <td>How frequently the output device can modify the appearance of content</td>
-   <td>Added in Media Queries Level 4.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/overflow-block"><code>overflow-block</code></a></td>
-   <td>How does the output device handle content that overflows the viewport along the block axis?</td>
-   <td>Added in Media Queries Level 4.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/overflow-inline"><code>overflow-inline</code></a></td>
-   <td>Can content that overflows the viewport along the inline axis be scrolled?</td>
-   <td>Added in Media Queries Level 4.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/color"><code>color</code></a></td>
-   <td>Number of bits per color component of the output device, or zero if the device isn't color</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code><a href="/en-US/docs/Web/CSS/@media/color-gamut">color-gamut</a></code></td>
-   <td>Approximate range of colors that are supported by the user agent and output device</td>
-   <td>Added in Media Queries Level 4.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/color-index"><code>color-index</code></a></td>
-   <td>Number of entries in the output device's color lookup table, or zero if the device does not use such a table</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code><a href="/en-US/docs/Web/CSS/@media/display-mode">display-mode</a></code></td>
-   <td>The display mode of the application, as specified in the web app manifest's <a href="/en-US/docs/Web/Manifest#display"><code>display</code></a> member</td>
-   <td>Defined in the <a href="http://w3c.github.io/manifest/#the-display-mode-media-feature">Web App Manifest spec</a>.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/monochrome"><code>monochrome</code></a></td>
-   <td>Bits per pixel in the output device's monochrome frame buffer, or zero if the device isn't monochrome</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/inverted-colors"><code>inverted-colors</code></a></td>
-   <td>Is the user agent or underlying OS inverting colors?</td>
-   <td>Deferred to Media Queries Level 5.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/pointer"><code>pointer</code></a></td>
-   <td>Is the primary input mechanism a pointing device, and if so, how accurate is it?</td>
-   <td>Added in Media Queries Level 4.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/hover"><code>hover</code></a></td>
-   <td>Does the primary input mechanism allow the user to hover over elements?</td>
-   <td>Added in Media Queries Level 4.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/any-pointer"><code>any-pointer</code></a></td>
-   <td>Is any available input mechanism a pointing device, and if so, how accurate is it?</td>
-   <td>Added in Media Queries Level 4.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/any-hover"><code>any-hover</code></a></td>
-   <td>Does any available input mechanism allow the user to hover over elements?</td>
-   <td>Added in Media Queries Level 4.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/light-level"><code>light-level</code></a></td>
-   <td>Light level of the environment</td>
-   <td>Deferred to Media Queries Level 5.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/scripting"><code>scripting</code></a></td>
-   <td>Is scripting (e.g., JavaScript) available?</td>
-   <td>Deferred to Media Queries Level 5.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/device-width"><code>device-width</code></a> {{obsolete_inline}}</td>
-   <td>Width of the rendering surface of the output device</td>
-   <td>Deprecated in Media Queries Level 4.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/device-height"><code>device-height</code></a> {{obsolete_inline}}</td>
-   <td>Height of the rendering surface of the output device</td>
-   <td>Deprecated in Media Queries Level 4.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/device-aspect-ratio"><code>device-aspect-ratio</code></a> {{obsolete_inline}}</td>
-   <td>Width-to-height aspect ratio of the output device</td>
-   <td>Deprecated in Media Queries Level 4.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/-webkit-device-pixel-ratio"><code>-webkit-device-pixel-ratio</code></a> {{non-standard_inline}}</td>
-   <td>Number of physical device pixels per CSS pixel</td>
-   <td>Nonstandard; WebKit/Blink-specific. If possible, use the <a href="/en-US/docs/Web/CSS/@media/resolution"><code>resolution</code></a> media feature instead.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/-webkit-transform-3d"><code>-webkit-transform-3d</code></a> {{non-standard_inline}}</td>
-   <td>Are CSS 3D {{cssxref("transform")}}s supported?</td>
-   <td>Nonstandard; WebKit/Blink-specific. If possible, use {{cssxref("@supports")}} instead.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/-webkit-transform-2d"><code>-webkit-transform-2d</code></a> {{non-standard_inline}}</td>
-   <td>Are CSS 2D {{cssxref("transform")}}s supported?</td>
-   <td>Nonstandard; WebKit-specific. If possible, use {{cssxref("@supports")}} instead.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/-webkit-transition"><code>-webkit-transition</code></a> {{non-standard_inline}}</td>
-   <td>Are CSS {{cssxref("transition")}}s supported?</td>
-   <td>Nonstandard; WebKit-specific. If possible, use {{cssxref("@supports")}} instead.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/@media/-webkit-animation"><code>-webkit-animation</code></a> {{non-standard_inline}}</td>
-   <td>Are CSS {{cssxref("animation")}}s supported?</td>
-   <td>Nonstandard; WebKit-specific. If possible, use {{cssxref("@supports")}} instead.</td>
-  </tr>
- </tbody>
-</table>
+| Name                                                                                                                   | Summary                                                                                                                          | Notes                                                                                                                                 |
+| ---------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| [`width`](/pt-BR/docs/Web/CSS/@media/width)                                                                            | Width of the viewport                                                                                                            |                                                                                                                                       |
+| [`height`](/pt-BR/docs/Web/CSS/@media/height)                                                                          | Height of the viewport                                                                                                           |                                                                                                                                       |
+| [`aspect-ratio`](/pt-BR/docs/Web/CSS/@media/aspect-ratio)                                                              | Width-to-height aspect ratio of the viewport                                                                                     |                                                                                                                                       |
+| [`orientation`](/pt-BR/docs/Web/CSS/@media/orientation)                                                                | Orientation of the viewport                                                                                                      |                                                                                                                                       |
+| [`resolution`](/pt-BR/docs/Web/CSS/@media/resolution)                                                                  | Pixel density of the output device                                                                                               |                                                                                                                                       |
+| [`scan`](/pt-BR/docs/Web/CSS/@media/scan)                                                                              | Scanning process of the output device                                                                                            |                                                                                                                                       |
+| [`grid`](/pt-BR/docs/Web/CSS/@media/grid)                                                                              | Does the device use a grid or bitmap screen?                                                                                     |                                                                                                                                       |
+| [`update`](/pt-BR/docs/Web/CSS/@media/update-frequency)                                                                | How frequently the output device can modify the appearance of content                                                            | Added in Media Queries Level 4.                                                                                                       |
+| [`overflow-block`](/pt-BR/docs/Web/CSS/@media/overflow-block)                                                          | How does the output device handle content that overflows the viewport along the block axis?                                      | Added in Media Queries Level 4.                                                                                                       |
+| [`overflow-inline`](/pt-BR/docs/Web/CSS/@media/overflow-inline)                                                        | Can content that overflows the viewport along the inline axis be scrolled?                                                       | Added in Media Queries Level 4.                                                                                                       |
+| [`color`](/pt-BR/docs/Web/CSS/@media/color)                                                                            | Number of bits per color component of the output device, or zero if the device isn't color                                       |                                                                                                                                       |
+| [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut)                                                                | Approximate range of colors that are supported by the user agent and output device                                               | Added in Media Queries Level 4.                                                                                                       |
+| [`color-index`](/pt-BR/docs/Web/CSS/@media/color-index)                                                                | Number of entries in the output device's color lookup table, or zero if the device does not use such a table                     |                                                                                                                                       |
+| [`display-mode`](/en-US/docs/Web/CSS/@media/display-mode)                                                              | The display mode of the application, as specified in the web app manifest's [`display`](/pt-BR/docs/Web/Manifest#display) member | Defined in the [Web App Manifest spec](http://w3c.github.io/manifest/#the-display-mode-media-feature).                                |
+| [`monochrome`](/pt-BR/docs/Web/CSS/@media/monochrome)                                                                  | Bits per pixel in the output device's monochrome frame buffer, or zero if the device isn't monochrome                            |                                                                                                                                       |
+| [`inverted-colors`](/pt-BR/docs/Web/CSS/@media/inverted-colors)                                                        | Is the user agent or underlying OS inverting colors?                                                                             | Deferred to Media Queries Level 5.                                                                                                    |
+| [`pointer`](/pt-BR/docs/Web/CSS/@media/pointer)                                                                        | Is the primary input mechanism a pointing device, and if so, how accurate is it?                                                 | Added in Media Queries Level 4.                                                                                                       |
+| [`hover`](/pt-BR/docs/Web/CSS/@media/hover)                                                                            | Does the primary input mechanism allow the user to hover over elements?                                                          | Added in Media Queries Level 4.                                                                                                       |
+| [`any-pointer`](/pt-BR/docs/Web/CSS/@media/any-pointer)                                                                | Is any available input mechanism a pointing device, and if so, how accurate is it?                                               | Added in Media Queries Level 4.                                                                                                       |
+| [`any-hover`](/pt-BR/docs/Web/CSS/@media/any-hover)                                                                    | Does any available input mechanism allow the user to hover over elements?                                                        | Added in Media Queries Level 4.                                                                                                       |
+| [`light-level`](/pt-BR/docs/Web/CSS/@media/light-level)                                                                | Light level of the environment                                                                                                   | Deferred to Media Queries Level 5.                                                                                                    |
+| [`scripting`](/pt-BR/docs/Web/CSS/@media/scripting)                                                                    | Is scripting (e.g., JavaScript) available?                                                                                       | Deferred to Media Queries Level 5.                                                                                                    |
+| [`device-width`](/pt-BR/docs/Web/CSS/@media/device-width) {{obsolete_inline}}                                     | Width of the rendering surface of the output device                                                                              | Deprecated in Media Queries Level 4.                                                                                                  |
+| [`device-height`](/pt-BR/docs/Web/CSS/@media/device-height) {{obsolete_inline}}                                   | Height of the rendering surface of the output device                                                                             | Deprecated in Media Queries Level 4.                                                                                                  |
+| [`device-aspect-ratio`](/pt-BR/docs/Web/CSS/@media/device-aspect-ratio) {{obsolete_inline}}                       | Width-to-height aspect ratio of the output device                                                                                | Deprecated in Media Queries Level 4.                                                                                                  |
+| [`-webkit-device-pixel-ratio`](/pt-BR/docs/Web/CSS/@media/-webkit-device-pixel-ratio) {{non-standard_inline}} | Number of physical device pixels per CSS pixel                                                                                   | Nonstandard; WebKit/Blink-specific. If possible, use the [`resolution`](/pt-BR/docs/Web/CSS/@media/resolution) media feature instead. |
+| [`-webkit-transform-3d`](/pt-BR/docs/Web/CSS/@media/-webkit-transform-3d) {{non-standard_inline}}             | Are CSS 3D {{cssxref("transform")}}s supported?                                                                          | Nonstandard; WebKit/Blink-specific. If possible, use {{cssxref("@supports")}} instead.                                        |
+| [`-webkit-transform-2d`](/pt-BR/docs/Web/CSS/@media/-webkit-transform-2d) {{non-standard_inline}}             | Are CSS 2D {{cssxref("transform")}}s supported?                                                                          | Nonstandard; WebKit-specific. If possible, use {{cssxref("@supports")}} instead.                                              |
+| [`-webkit-transition`](/pt-BR/docs/Web/CSS/@media/-webkit-transition) {{non-standard_inline}}                 | Are CSS {{cssxref("transition")}}s supported?                                                                             | Nonstandard; WebKit-specific. If possible, use {{cssxref("@supports")}} instead.                                              |
+| [`-webkit-animation`](/pt-BR/docs/Web/CSS/@media/-webkit-animation) {{non-standard_inline}}                   | Are CSS {{cssxref("animation")}}s supported?                                                                             | Nonstandard; WebKit-specific. If possible, use {{cssxref("@supports")}} instead.                                              |
 
-<h3 id="Logical_operators">Logical operators</h3>
+### Logical operators
 
-<p>The <em>logical operators</em> <code>not</code>, <code>and</code>, and <code>only</code> can be used to compose a complex media query. You can also combine multiple media queries into a single rule using a comma-separated list.</p>
+The _logical operators_ `not`, `and`, and `only` can be used to compose a complex media query. You can also combine multiple media queries into a single rule using a comma-separated list.
 
-<h4 id="and"><code>and</code></h4>
+#### `and`
 
-<p>The <code>and</code> operator is used for combining multiple media features together into a single media query, requiring each chained feature to return true in order for the query to be true. It is also used for joining media features with media types.</p>
+The `and` operator is used for combining multiple media features together into a single media query, requiring each chained feature to return true in order for the query to be true. It is also used for joining media features with media types.
 
-<h4 id="not"><code>not</code></h4>
+#### `not`
 
-<p>The <code>not</code> operator is used to negate a media query, returning true if the query would otherwise return false. If present in a comma-separated list, it will only negate the specific query to which it is applied. If you use the <code>not</code> operator, you <em>must</em> specify an explicit media type.</p>
+The `not` operator is used to negate a media query, returning true if the query would otherwise return false. If present in a comma-separated list, it will only negate the specific query to which it is applied. If you use the `not` operator, you _must_ specify an explicit media type.
 
-<div class="note">
-<p><strong>Note:</strong> The <code>not</code> keyword can't be used to negate an individual feature expression, only an entire media query.</p>
-</div>
+> **Note:** The `not` keyword can't be used to negate an individual feature expression, only an entire media query.
 
-<h4 id="only"><code>only</code></h4>
+#### `only`
 
-<p>The <code>only</code> operator is used to apply a style only if an entire query matches, and is useful for preventing older browsers from applying selected styles. If you use the <code>only</code> operator, you <em>must</em> specify an explicit media type.</p>
+The `only` operator is used to apply a style only if an entire query matches, and is useful for preventing older browsers from applying selected styles. If you use the `only` operator, you _must_ specify an explicit media type.
 
-<h4 id="comma-separated_lists">comma-separated lists</h4>
+#### comma-separated lists
 
-<p>Each query in a comma-separated media query list is treated separately from the others. If any of the queries in a list is true, the entire media statement returns true. In other words, lists behave like the logical operator <code>or</code>.</p>
+Each query in a comma-separated media query list is treated separately from the others. If any of the queries in a list is true, the entire media statement returns true. In other words, lists behave like the logical operator `or`.
 
-<h3 id="Examples" name="Examples">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: css">@media print {
+```css
+@media print {
   body { font-size: 10pt; }
 }
 
@@ -281,60 +150,25 @@ translation_of: Web/CSS/@media
   and (-webkit-min-device-pixel-ratio: 2) {
     body { line-height: 1.4; }
 }
-</pre>
+```
 
-<p>For more media feature examples, please see the reference page for each specific feature. For more logical operator examples, please see <a class="internal" href="/en/CSS/Media_queries" title="En/CSS/Media queries">Using media queries</a>.</p>
+For more media feature examples, please see the reference page for each specific feature. For more logical operator examples, please see [Using media queries](/en/CSS/Media_queries "En/CSS/Media queries").
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Compat', '#css-media-queries', 'CSS Media Queries')}}</td>
-   <td>{{Spec2('Compat')}}</td>
-   <td>Standardizes the <code>-webkit-device-pixel-ratio</code> and <code>-webkit-transform-3d</code> media features.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Conditional', '#at-media', '@media')}}</td>
-   <td>{{Spec2('CSS3 Conditional')}}</td>
-   <td>Defines the basic syntax of the <code>@media</code> rule.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Media Queries', '#media', '@media')}}</td>
-   <td>{{Spec2('CSS4 Media Queries')}}</td>
-   <td>
-    <p>Adds <code>scripting</code>, <code>pointer</code>, <code>hover</code>, <code>light-level</code>, <code>update-frequency</code>, <code>overflow-block</code>, and <code>overflow-inline</code> media features.<br>
-     Deprecates all media types except for <code>screen</code>, <code>print</code>, <code>speech</code>, and <code>all</code>.<br>
-     Makes the syntax more flexible by adding, among other things, the <code>or</code> keyword.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Media Queries', '#media0', '@media')}}</td>
-   <td>{{Spec2('CSS3 Media Queries')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'media.html#at-media-rule', '@media')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                                   | Comment                                                                                                                                                                                                                                                                                        |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('Compat', '#css-media-queries', 'CSS Media Queries')}} | {{Spec2('Compat')}}                 | Standardizes the `-webkit-device-pixel-ratio` and `-webkit-transform-3d` media features.                                                                                                                                                                                                       |
+| {{SpecName('CSS3 Conditional', '#at-media', '@media')}}                 | {{Spec2('CSS3 Conditional')}} | Defines the basic syntax of the `@media` rule.                                                                                                                                                                                                                                                 |
+| {{SpecName('CSS4 Media Queries', '#media', '@media')}}                 | {{Spec2('CSS4 Media Queries')}} | Adds `scripting`, `pointer`, `hover`, `light-level`, `update-frequency`, `overflow-block`, and `overflow-inline` media features. Deprecates all media types except for `screen`, `print`, `speech`, and `all`. Makes the syntax more flexible by adding, among other things, the `or` keyword. |
+| {{SpecName('CSS3 Media Queries', '#media0', '@media')}}                 | {{Spec2('CSS3 Media Queries')}} | No change.                                                                                                                                                                                                                                                                                     |
+| {{SpecName('CSS2.1', 'media.html#at-media-rule', '@media')}}         | {{Spec2('CSS2.1')}}                 | Initial definition.                                                                                                                                                                                                                                                                            |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.at-rules.media")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a class="internal" href="/en/CSS/Media_queries" title="En/CSS/Media queries">Using media queries</a></li>
- <li>In JavaScript, <code>@media</code> can be accessed via the CSS object model interface {{domxref("CSSMediaRule")}}.</li>
-</ul>
+- [Using media queries](/en/CSS/Media_queries "En/CSS/Media queries")
+- In JavaScript, `@media` can be accessed via the CSS object model interface {{domxref("CSSMediaRule")}}.

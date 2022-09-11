@@ -10,60 +10,40 @@ tags:
 translation_of: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 original_slug: Web/CSS/CSS_Box_Model/margin_collapsing
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}As margens [superior](/pt-BR/docs/Web/CSS/margin-top) e [inferior](/pt-BR/docs/Web/CSS/margin-bottom) dos blocos às vezes são combinadas(colapsadas/reduzidas) para uma única margem cujo o tamanho é a maior das margens (se os elementos tiverem a mesma margem, uma delas não será somada), combinado a ele, um comportamento conhecido como **margin collapsing**. Note que as margens de[ elementos flutuantes](/pt-BR/docs/Web/CSS/float) e [posicionados de forma absoluta](/pt-BR/docs/Web/CSS/position#Absolute_positioning) nunca colapsam.
 
-<div>As margens <a href="/pt-BR/docs/Web/CSS/margin-top">superior</a> e <a href="/en-US/docs/Web/CSS/margin-bottom">inferior</a> dos blocos às vezes são combinadas(colapsadas/reduzidas) para uma única margem cujo o tamanho é a maior das margens (se os elementos tiverem a mesma margem, uma delas não será somada), combinado a ele, um comportamento conhecido como <strong>margin collapsing</strong>. Note que as margens de<a href="/pt-BR/docs/Web/CSS/float"> elementos flutuantes</a> e <a href="/pt-BR/docs/Web/CSS/position#Absolute_positioning">posicionados de forma absoluta</a> nunca colapsam.</div>
+Margin collapsing ocorre em três casos básicos:
 
-<div> </div>
+- Irmãos adjacentes
 
-<p>Margin collapsing ocorre em três casos básicos:</p>
+  - : As margens de irmãos adjacentes são colapsadas (execeto quando o último irmão precisar ser [limpado](/pt-BR/docs/Web/CSS/clear) devido ao uso de floats em elementos anteriores ). Por exemplo:
 
-<dl>
- <dt>Irmãos adjacentes</dt>
- <dd><p>As margens de irmãos adjacentes são colapsadas (execeto quando  o último irmão precisar ser <a href="/en-US/docs/Web/CSS/clear">limpado</a> devido ao uso de floats  em elementos anteriores ). Por exemplo:</p>
- <pre class="brush: html"> &lt;p&gt;A margem inferior deste parágrafo é colapsada...&lt;/p&gt;
- &lt;p&gt;... com margem superior deste parágrafo.&lt;/p&gt;
-</pre>
- </dd>
- <dt>Pai e primeiro/último filho</dt>
- <dd>Se não houver border, padding, parte inline, <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">contexto de formatação de bloco</a> criado ou <a href="/en-US/docs/Web/CSS/clear">livre</a> para separar o {{cssxref("margin-top")}} de um bloco do {{cssxref("margin-top")}} do seu primeiro bloco filho, ou nenhum border, padding, conteúdo inline, {{cssxref("height")}}, {{cssxref("min-height")}}, ou {{cssxref("max-height")}} para separar o  {{cssxref("margin-bottom")}} de um bloco do {{cssxref("margin-bottom")}} do seu último filho, então essas margens colapsam. A margem colapsada acaba fora do pai.</dd>
- <dt>Blocos vázios</dt>
- <dd>Se não houver border, padding, conteúdo inline, {{cssxref("height")}}, ou  {{cssxref("min-height")}} para separar um bloco {{cssxref("margin-top")}} de sua {{cssxref("margin-bottom")}}, então as margens superior e inferior são colapsadas.</dd>
-</dl>
+    ```html
+     <p>A margem inferior deste parágrafo é colapsada...</p>
+     <p>... com margem superior deste parágrafo.</p>
+    ```
 
-<p>Algumas coisas podem ser observadas:</p>
+- Pai e primeiro/último filho
+  - : Se não houver border, padding, parte inline, [contexto de formatação de bloco](/pt-BR/docs/Web/Guide/CSS/Block_formatting_context) criado ou [livre](/pt-BR/docs/Web/CSS/clear) para separar o {{cssxref("margin-top")}} de um bloco do {{cssxref("margin-top")}} do seu primeiro bloco filho, ou nenhum border, padding, conteúdo inline, {{cssxref("height")}}, {{cssxref("min-height")}}, ou {{cssxref("max-height")}} para separar o {{cssxref("margin-bottom")}} de um bloco do {{cssxref("margin-bottom")}} do seu último filho, então essas margens colapsam. A margem colapsada acaba fora do pai.
+- Blocos vázios
+  - : Se não houver border, padding, conteúdo inline, {{cssxref("height")}}, ou {{cssxref("min-height")}} para separar um bloco {{cssxref("margin-top")}} de sua {{cssxref("margin-bottom")}}, então as margens superior e inferior são colapsadas.
 
-<ul>
- <li>Margin collapsing mais complexo (de mais de duas margens) ocorrem quando esses casos são combinados.</li>
- <li>Essas regras se aplicam até mesmo a margens que são zero, portanto a margem e um primeiro/último filho termina fora de seu pai(de acordo com as regras acima) sendo a margem do pai zero ou não.</li>
- <li>Quando margens negativas são envolvidas, o tamanho da margem colapsada é a soma da maior margem positiva e da menor margem negativa(a mais negativa).</li>
- <li>Se ambos são negativos, o valor negativo maior será usado. Essa definição se aplica a elementos adjacentes e a elementos aninhados. </li>
-</ul>
+Algumas coisas podem ser observadas:
 
-<p>Margens de <a href="/pt-BR/docs/Web/CSS/float">elementos flutuantes</a> e <a href="/pt-BR/docs/Web/CSS/position#Absolute_positioning">posicionados de forma absoluta</a> nunca colapsam.</p>
+- Margin collapsing mais complexo (de mais de duas margens) ocorrem quando esses casos são combinados.
+- Essas regras se aplicam até mesmo a margens que são zero, portanto a margem e um primeiro/último filho termina fora de seu pai(de acordo com as regras acima) sendo a margem do pai zero ou não.
+- Quando margens negativas são envolvidas, o tamanho da margem colapsada é a soma da maior margem positiva e da menor margem negativa(a mais negativa).
+- Se ambos são negativos, o valor negativo maior será usado. Essa definição se aplica a elementos adjacentes e a elementos aninhados.
 
-<h2 id="Especificações">Especificações</h2>
+Margens de [elementos flutuantes](/pt-BR/docs/Web/CSS/float) e [posicionados de forma absoluta](/pt-BR/docs/Web/CSS/position#Absolute_positioning) nunca colapsam.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Espeficicações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS2.1", "box.html#collapsing-margins", "margin collapsing")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+## Especificações
 
-<h2 id="Veja_Também">Veja Também</h2>
+| Espeficicações                                                                                       | Status                   | Comentário        |
+| ---------------------------------------------------------------------------------------------------- | ------------------------ | ----------------- |
+| {{SpecName("CSS2.1", "box.html#collapsing-margins", "margin collapsing")}} | {{Spec2("CSS2.1")}} | Definição inicial |
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Reference">CSS Reference</a></li>
- <li>{{css_key_concepts}}</li>
-</ul>
+## Veja Também
+
+- [CSS Reference](/pt-BR/docs/Web/CSS/CSS_Reference)
+- {{css_key_concepts}}

@@ -11,81 +11,70 @@ tags:
   - otimização de css
 translation_of: Web/CSS/will-change
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>A propriedade <strong><code>will-change</code></strong> do <a href="/en-US/docs/Web/CSS">CSS</a> fornece um modo dos autores dizerem aos navegadores sobre que tipo de mudanças devem ser esperadas no elemento, então o navegador pode fazer as otimizações apropriadas  com antecedência, antes do elemento ser efetivamente modificado.</p>
+A propriedade **`will-change`** do [CSS](/pt-BR/docs/Web/CSS) fornece um modo dos autores dizerem aos navegadores sobre que tipo de mudanças devem ser esperadas no elemento, então o navegador pode fazer as otimizações apropriadas com antecedência, antes do elemento ser efetivamente modificado.
 
-<p>Esses tipos de otimizações podem aumentar a capacidade de resposta de uma página, fazendo o trabalho potencialmente caro antes do tempo antes que eles são realmente necessários.</p>
+Esses tipos de otimizações podem aumentar a capacidade de resposta de uma página, fazendo o trabalho potencialmente caro antes do tempo antes que eles são realmente necessários.
 
-<p>O uso adequado dessa propriedade pode ser um pouco complicado:</p>
+O uso adequado dessa propriedade pode ser um pouco complicado:
 
-<ul>
- <li>
-  <p id="Don't_apply_will-change_to_too_many_elements"><em>Não aplique will-change em muitos elementos.</em> O navegador já tenta ao máximo otimizar tudo. Algumas das otimizações mais fortes que podem utilizar o <code>will-change</code> acabam usando muitos recursos da máquina, e quando utilizados em demasia como neste caso, pode fazer a página para retardar o carregamento ou consumir uma grande quantidade de recursos.</p>
- </li>
- <li>
-  <p><em>Use com moderação.</em> O comportamento normal do navegador para otimizações é fazê-las e depois voltar ao normal. Mas adicionando <code>will-change</code> diretamente no estilo, implica que o elemento alvo está sempre alguns momentos antes da mudança, e o navegador irá manter as otimizações por muito mais tempo do que teria de outra forma. Então é uma boa prática colocar e retirar o  <code>will-change</code> usando script antes e depois da mudança ocorrer.</p>
- </li>
- <li>
-  <p><em>Não aplicar will-change em elementos para realizar a otimização prematura.</em> Se sua página está performando bem, não adicione a propriedade <code>will-change</code> nos elementos apenas para trazer mais velocidade. <code>will-change</code> é entendido como algo para ser usado como último recurso, com o intuito de tentar solucionar problemas de performance . Ele não deve ser usado para antecipar esses possíveis problemas. O uso excessivo do <code>will-change</code> poderá resultar em excessivo uso de memória e causar uma renderização mais complexa enquanto o browser tenta se preparar para uma possível mudança. Isso levará a um pior desempenho.</p>
- </li>
- <li>
-  <p id="Give_it_sufficient_time_to_work"><em>Dê tempo suficiente para trabalhar</em>. Essa propriedade destina-se como um método para os autores dizerem ao agente do browser sobre como mudarão as properiedades antes disso acontecer. Então o navegador pode escolher como aplicar qualquer otimização requisitada na propriedade antes do tempo da ação acontecer. Isso é importante para dar ao navegador algum tempo para fazer as otimizações. Identifique um jeito de prever as mudanças, e use a proiedade <code>will-change</code> pra isso.</p>
- </li>
-</ul>
+- _Não aplique will-change em muitos elementos._ O navegador já tenta ao máximo otimizar tudo. Algumas das otimizações mais fortes que podem utilizar o `will-change` acabam usando muitos recursos da máquina, e quando utilizados em demasia como neste caso, pode fazer a página para retardar o carregamento ou consumir uma grande quantidade de recursos.
+- _Use com moderação._ O comportamento normal do navegador para otimizações é fazê-las e depois voltar ao normal. Mas adicionando `will-change` diretamente no estilo, implica que o elemento alvo está sempre alguns momentos antes da mudança, e o navegador irá manter as otimizações por muito mais tempo do que teria de outra forma. Então é uma boa prática colocar e retirar o `will-change` usando script antes e depois da mudança ocorrer.
+- _Não aplicar will-change em elementos para realizar a otimização prematura._ Se sua página está performando bem, não adicione a propriedade `will-change` nos elementos apenas para trazer mais velocidade. `will-change` é entendido como algo para ser usado como último recurso, com o intuito de tentar solucionar problemas de performance . Ele não deve ser usado para antecipar esses possíveis problemas. O uso excessivo do `will-change` poderá resultar em excessivo uso de memória e causar uma renderização mais complexa enquanto o browser tenta se preparar para uma possível mudança. Isso levará a um pior desempenho.
+- _Dê tempo suficiente para trabalhar_. Essa propriedade destina-se como um método para os autores dizerem ao agente do browser sobre como mudarão as properiedades antes disso acontecer. Então o navegador pode escolher como aplicar qualquer otimização requisitada na propriedade antes do tempo da ação acontecer. Isso é importante para dar ao navegador algum tempo para fazer as otimizações. Identifique um jeito de prever as mudanças, e use a proiedade `will-change` pra isso.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush:css">/* Valores chave */
+```css
+/* Valores chave */
 will-change: auto;
 will-change: scroll-position;
 will-change: contents;
-will-change: transform;        /* Exemplo de &lt;custom-ident&gt; */
-will-change: opacity;          /* Exemplo de &lt;custom-ident&gt; */
-will-change: left, top;        /* Exemplo de dois &lt;animateable-feature&gt; */
+will-change: transform;        /* Exemplo de <custom-ident> */
+will-change: opacity;          /* Exemplo de <custom-ident> */
+will-change: left, top;        /* Exemplo de dois <animateable-feature> */
 
 /* Valores globais */
 will-change: inherit;
 will-change: initial;
 will-change: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Essa palavra chave não expressa nenhuma intenção em particular; o <em>user agent</em> deve aplicar qualquer otimização como normalmente ocorre.</dd>
-</dl>
+- `auto`
+  - : Essa palavra chave não expressa nenhuma intenção em particular; o _user agent_ deve aplicar qualquer otimização como normalmente ocorre.
 
-<p>O <code>&lt;animateable-feature&gt;</code> pode ser um dos seguintes valores:</p>
+O `<animateable-feature>` pode ser um dos seguintes valores:
 
-<dl>
- <dt><code>scroll-position</code></dt>
- <dd>Indica que o autor espera que haja uma animação ou mudança na posição do scroll do elemento no futuro.</dd>
- <dt><code>contents</code></dt>
- <dd>Indica que o autor espera que haja uma animação ou mudança no conteúdo do elemento no futuro.</dd>
- <dt>{{cssxref("custom-ident", "&lt;custom-ident&gt;")}}</dt>
- <dd>Indica que o autor espera que haja uma animação ou mudança na propriedade com o nome dado no elemento no futuro. Isso não pode ser um dos seguintes valores: <code>unset</code>, <code>initial</code>, <code>inherit</code>, <code>will-change</code>, <code>auto</code>, <code>scroll-position</code>, or <code>contents</code>. A especificação não define o comportamento de um valor em particular, mas é comum pro <code>transform</code> ser uma camada de composição. O <a href="https://github.com/operasoftware/devopera/pull/330">Chrome atualmente toma duas ações</a>, dadas as propriedades particulares do CSS: estabelece uma nova camada de composição ou um novo {{Glossary("stacking context")}}.</dd>
-</dl>
+- `scroll-position`
+  - : Indica que o autor espera que haja uma animação ou mudança na posição do scroll do elemento no futuro.
+- `contents`
+  - : Indica que o autor espera que haja uma animação ou mudança no conteúdo do elemento no futuro.
+- {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
+  - : Indica que o autor espera que haja uma animação ou mudança na propriedade com o nome dado no elemento no futuro. Isso não pode ser um dos seguintes valores: `unset`, `initial`, `inherit`, `will-change`, `auto`, `scroll-position`, or `contents`. A especificação não define o comportamento de um valor em particular, mas é comum pro `transform` ser uma camada de composição. O [Chrome atualmente toma duas ações](https://github.com/operasoftware/devopera/pull/330), dadas as propriedades particulares do CSS: estabelece uma nova camada de composição ou um novo {{Glossary("stacking context")}}.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: css">.sidebar {
+```css
+.sidebar {
   will-change: transform;
 }
-</pre>
+```
 
-<p>O exemplo acima adiciona a propriedade <code>will-change</code> diretamente no estilo, o que irá fazer com que o navegador mantenha a otimização em memória por muito mais tempo que o necessário e nós já vimos que isso deve ser evitado. Abaixo outro exemplo mostrando como aplicar o <code>will-change</code> através de script, o que provavelmente é o que você deve fazer na maioria dos casos.</p>
+O exemplo acima adiciona a propriedade `will-change` diretamente no estilo, o que irá fazer com que o navegador mantenha a otimização em memória por muito mais tempo que o necessário e nós já vimos que isso deve ser evitado. Abaixo outro exemplo mostrando como aplicar o `will-change` através de script, o que provavelmente é o que você deve fazer na maioria dos casos.
 
-<pre class="brush: js">var el = document.getElementById('element');
+```js
+var el = document.getElementById('element');
 
 // Set will-change quando ocorre hover no elemento
 el.addEventListener('mouseenter', hintBrowser);
@@ -98,33 +87,23 @@ function hintBrowser() {
 
 function removeHint() {
   this.style.willChange = 'auto';
-}</pre>
+}
+```
 
-<p>Entretanto pode ser apropriado incluir <code>will-change</code> no seu estilo css para uma aplicação que faz <em>page flips </em>quando uma tecla é pressionada como um álbum ou uma apresentação de slides, onde a página é grande e complexa. Isso irá dizer ao navegador para preparar a transição à frente do tempo e aceitar transições entre as páginas assim que a tecla for pressionada.</p>
+Entretanto pode ser apropriado incluir `will-change` no seu estilo css para uma aplicação que faz _page flips_ quando uma tecla é pressionada como um álbum ou uma apresentação de slides, onde a página é grande e complexa. Isso irá dizer ao navegador para preparar a transição à frente do tempo e aceitar transições entre as páginas assim que a tecla for pressionada.
 
-<pre class="brush: css">.slide {
+```css
+.slide {
   will-change: transform;
-}</pre>
+}
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Will Change', '#will-change', 'will-change')}}</td>
-   <td>{{Spec2('CSS Will Change')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Estado                               | Comentário         |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
+| {{SpecName('CSS Will Change', '#will-change', 'will-change')}} | {{Spec2('CSS Will Change')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.properties.will-change")}}

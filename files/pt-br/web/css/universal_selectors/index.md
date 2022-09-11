@@ -8,34 +8,37 @@ tags:
 translation_of: Web/CSS/Universal_selectors
 original_slug: Web/CSS/Seletor_universal
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>O <strong>seletor universal</strong> do CSS (<code>*</code>) aplica estilos a elementos de qualquer tipo.</p>
+O **seletor universal** do CSS (`*`) aplica estilos a elementos de qualquer tipo.
 
-<pre class="brush: css no-line-numbers">/* Seleciona todos os elementos */
+```css
+/* Seleciona todos os elementos */
 * {
   color: green;
-}</pre>
+}
+```
 
-<p>A partir do CSS3, o asterisco pode ser combinado com {{cssxref("CSS_Namespaces", "namespaces")}}:</p>
+A partir do CSS3, o asterisco pode ser combinado com {{cssxref("CSS_Namespaces", "namespaces")}}:
 
-<ul>
- <li><code>ns|*</code> - aplica a todos os elementos no namespace <em>ns</em></li>
- <li><code>*|*</code> - aplica a todos elementos</li>
- <li><code>|*</code> - aplica a todos os elementos que não tem namespaces declarados</li>
-</ul>
+- `ns|*` - aplica a todos os elementos no namespace _ns_
+- `*|*` - aplica a todos elementos
+- `|*` - aplica a todos os elementos que não tem namespaces declarados
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">* { <em>propriedades de estilo</em> }</pre>
+```
+* { propriedades de estilo }
+```
 
-<p>O asterisco é opcional para seletores simples. Por exemplo, <code>*.atencao</code> e <code>.atencao</code> são equivalentes.</p>
+O asterisco é opcional para seletores simples. Por exemplo, `*.atencao` e `.atencao` são equivalentes.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">* [lang^=pt] {
+```css
+* [lang^=pt] {
   color: green;
 }
 
@@ -55,50 +58,31 @@ original_slug: Web/CSS/Seletor_universal
 .flutuando + * {
   clear: left;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="atencao"&gt;
-  &lt;span lang="pt-br"&gt;Um span verde&lt;/span&gt; em um parágrafo vermelho.
-&lt;/p&gt;
-&lt;p id="conteudoprincipal" lang="pt-pt"&gt;
-  &lt;span class="atencao"&gt;Um span vermelho&lt;/span&gt; em um parágrafo verde.
-&lt;/p&gt;</pre>
+```html
+<p class="atencao">
+  <span lang="pt-br">Um span verde</span> em um parágrafo vermelho.
+</p>
+<p id="conteudoprincipal" lang="pt-pt">
+  <span class="atencao">Um span vermelho</span> em um parágrafo verde.
+</p>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample('Exemplos')}}</p>
+{{EmbedLiveSample('Exemplos')}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#the-universal-selector', 'Seletor universal')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Sem mudanças</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#universal-selector', 'Seletor universal')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Define o comportamente de acordo com os namespaces e adiciona uma sugestão de que é possivel omitir o seletor em pseudo-elementos</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'selector.html#universal-selector', 'Seletor universal')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                            | Status                               | Comentário                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS4 Selectors', '#the-universal-selector', 'Seletor universal')}} | {{Spec2('CSS4 Selectors')}} | Sem mudanças                                                                                                                      |
+| {{SpecName('CSS3 Selectors', '#universal-selector', 'Seletor universal')}}     | {{Spec2('CSS3 Selectors')}} | Define o comportamente de acordo com os namespaces e adiciona uma sugestão de que é possivel omitir o seletor em pseudo-elementos |
+| {{SpecName('CSS2.1', 'selector.html#universal-selector', 'Seletor universal')}} | {{Spec2('CSS2.1')}}             | Definição inicial                                                                                                                 |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("css.selectors.universal")}}</p>
+{{Compat("css.selectors.universal")}}

@@ -11,92 +11,74 @@ tags:
 translation_of: Web/CSS/element()
 original_slug: Web/CSS/element()
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>A função <a href="/en-US/docs/CSS" title="CSS">CSS</a> <strong><code>element()</code></strong> define uma {{cssxref("&lt;image&gt;")}} gerada de um elemento HTML qualquer. Essa imagem é <strong><em>dinamica</em></strong>, significando que se o elemento HTML for mudado, a propriedade CSS usando este valor será atualizada automaticamente.</p>
+A função [CSS](/pt-BR/docs/CSS "CSS") **`element()`** define uma {{cssxref("&lt;image&gt;")}} gerada de um elemento HTML qualquer. Essa imagem é **_dinamica_**, significando que se o elemento HTML for mudado, a propriedade CSS usando este valor será atualizada automaticamente.
 
-<p>Um cenario particularmente util para usar esta função seria colocar uma imagem em um elemento {{HTMLElement("canvas")}}, e então usar-lo como um <em>background</em>.</p>
+Um cenario particularmente util para usar esta função seria colocar uma imagem em um elemento {{HTMLElement("canvas")}}, e então usar-lo como um _background_.
 
-<p>Em navegadores Gecko, você pode usar o metodo não padronizado {{domxref("document.mozSetImageElement()")}} para mudar o elemento sendo usado como <em>background</em> por um elemento de <em>background </em>selecionado por CSS.</p>
+Em navegadores Gecko, você pode usar o metodo não padronizado {{domxref("document.mozSetImageElement()")}} para mudar o elemento sendo usado como _background_ por um elemento de _background_ selecionado por CSS.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">element( <em>id</em> )</pre>
+```
+element( id )
+```
 
-<p>Onde:</p>
+Onde:
 
-<dl>
- <dt><code>id</code></dt>
- <dd>É o ID de um elemento para usar como background, especificado usando o atributo HTML #<em>id</em> no elemento.</dd>
-</dl>
+- `id`
+  - : É o ID de um elemento para usar como background, especificado usando o atributo HTML #_id_ no elemento.
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<p>Esses exemplos podem ser <a href="/samples/cssref/moz-element.html" title="https://developer.mozilla.org/samples/cssref/moz-element.html">vistos em tempo real</a> em versões do Firefox que suportam <code>-moz-element()</code>.</p>
+Esses exemplos podem ser [vistos em tempo real](/samples/cssref/moz-element.html "https://developer.mozilla.org/samples/cssref/moz-element.html") em versões do Firefox que suportam `-moz-element()`.
 
-<h3 id="Um_exemplo_de_alguma_maneira_real">Um exemplo de alguma maneira real</h3>
+### Um exemplo de alguma maneira real
 
-<p>Esse exemplo usa uma {{HTMLElement("div")}} escondida como <em>background</em>. O elemento de <em>background</em> tem um gradiente, mas tambem um texto que é usado como parte do <em>background</em>.</p>
+Esse exemplo usa uma {{HTMLElement("div")}} escondida como _background_. O elemento de _background_ tem um gradiente, mas tambem um texto que é usado como parte do _background_.
 
-<pre class="brush: html">&lt;div style="width:400px; height:400px; background:-moz-element(#myBackground1) no-repeat;"&gt;
-  &lt;p&gt;This box uses the element with the #myBackground1 ID as its background!&lt;/p&gt;
-&lt;/div&gt;
+```html
+<div style="width:400px; height:400px; background:-moz-element(#myBackground1) no-repeat;">
+  <p>This box uses the element with the #myBackground1 ID as its background!</p>
+</div>
 
-&lt;div style="overflow:hidden; height:0;"&gt;
-  &lt;div id="myBackground1" style="width:1024px; height:1024px; background-image: linear-gradient(to right, red, orange, yellow, white);"&gt;
-  &lt;p style="transform-origin:0 0; transform: rotate(45deg); color:white;"&gt;This text is part of the background. Cool, huh?&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+<div style="overflow:hidden; height:0;">
+  <div id="myBackground1" style="width:1024px; height:1024px; background-image: linear-gradient(to right, red, orange, yellow, white);">
+  <p style="transform-origin:0 0; transform: rotate(45deg); color:white;">This text is part of the background. Cool, huh?</p>
+  </div>
+</div>
+```
 
-<p>A {{HTMLElement("div")}} com ID "myBackground1" é usada como <em>background</em>, mantendo o paragrafo "This box uses the element with the #myBackground1 ID as its background!".</p>
+A {{HTMLElement("div")}} com ID "myBackground1" é usada como _background_, mantendo o paragrafo "This box uses the element with the #myBackground1 ID as its background!".
 
-<p><img alt="example1.png" class="default internal" src="/@api/deki/files/4624/=example1.png"></p>
+![example1.png](/@api/deki/files/4624/=example1.png)
 
-<h3 id="Um_exemplo_ainda_mais_bizarro">Um exemplo ainda mais bizarro</h3>
+### Um exemplo ainda mais bizarro
 
-<p>Esse exemplo usa um elemento {{HTMLElement("button")}} se repetindo como <em>background</em>. Isso mostra que você pode usar qualquer elemento como background, mas não mostra necessariamente boas praticas de design.</p>
+Esse exemplo usa um elemento {{HTMLElement("button")}} se repetindo como _background_. Isso mostra que você pode usar qualquer elemento como background, mas não mostra necessariamente boas praticas de design.
 
-<pre class="brush: html">&lt;div style="width:400px; height:100px; background:-moz-element(#myBackground2);"&gt;
-&lt;/div&gt;
+```html
+<div style="width:400px; height:100px; background:-moz-element(#myBackground2);">
+</div>
 
-&lt;div style="overflow:hidden; height:0;"&gt;
-  &lt;button id="myBackground2" type="button"&gt;Evil button!&lt;/button&gt;
-&lt;/div&gt;
-</pre>
+<div style="overflow:hidden; height:0;">
+  <button id="myBackground2" type="button">Evil button!</button>
+</div>
+```
 
-<p><img alt="example2.png" class="default internal" src="/@api/deki/files/4625/=example2.png"></p>
+![example2.png](/@api/deki/files/4625/=example2.png)
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Especificação</th>
-   <th>Estatus</th>
-   <th>Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Images', '#element-notation', 'Using Elements as Images: the element() notation')}}</td>
-   <td>{{Spec2('CSS4 Images')}}</td>
-   <td>Actualmente adiado para o CSS4.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                        | Estatus                          | Comentário                      |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------- |
+| {{SpecName('CSS4 Images', '#element-notation', 'Using Elements as Images: the element() notation')}} | {{Spec2('CSS4 Images')}} | Actualmente adiado para o CSS4. |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade dos navegadores</h2>
+## Compatibilidade dos navegadores
 
-<p> </p>
+{{Compat("css.types.image.element")}}
 
+## Veja tambem
 
-
-<p>{{Compat("css.types.image.element")}}</p>
-
-<p> </p>
-
-<h2 id="See_also" name="See_also">Veja tambem</h2>
-
-<ul>
- <li>{{domxref("document.mozSetImageElement()")}}</li>
-</ul>
+- {{domxref("document.mozSetImageElement()")}}

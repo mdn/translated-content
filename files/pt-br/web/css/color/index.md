@@ -9,17 +9,18 @@ tags:
   - color
 translation_of: Web/CSS/color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A propriedade <strong><code>color</code></strong> do CSS definine o valor da cor de um elemento com seu conteúdo em texto e seus decorações (estilos). Também define o valorer da {{cssxref("currentcolor")}}, no qual pode ser usado um valor indireto de outra propriedade, e tem como padrão as cores de outras propriedades (enquanto não definida), tal como a propriedade {{cssxref("border-color")}}.</p>
+A propriedade **`color`** do CSS definine o valor da cor de um elemento com seu conteúdo em texto e seus decorações (estilos). Também define o valorer da {{cssxref("currentcolor")}}, no qual pode ser usado um valor indireto de outra propriedade, e tem como padrão as cores de outras propriedades (enquanto não definida), tal como a propriedade {{cssxref("border-color")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/color.html")}}</div>
+{{EmbedInteractiveExample("pages/css/color.html")}}
 
-<p>Para uma visão geral de como usar a propriedade color e semelhantes no HTML, veja <a href="/en-US/docs/Web/CSS/Como_começar/Cor">Cor - CSS, como começar</a>.</p>
+Para uma visão geral de como usar a propriedade color e semelhantes no HTML, veja [Cor - CSS, como começar](/pt-BR/docs/Web/CSS/Como_começar/Cor).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Valores com Palavras-chave */
+```css
+/* Valores com Palavras-chave */
 color: white; /* Aqui será definida a cor atual*/
 
 /* Valores com Palavras-chave */
@@ -57,7 +58,7 @@ color: rgb(34.0 12 64 / 60%);
 color: rgba(34.6 12 64 / 30%);
 
 /* Valores "hsl()", sendo
-hsl(<em>num da cor"1-369"</em>, <em>saturação"0-100"</em>, <em>luminosidade"<em>0-100")</em></em>*/
+hsl(num da cor"1-369", saturação"0-100", luminosidade"0-100")*/
 color: hsl(30, 100%, 50%, 0.6);
 color: hsla(30, 100%, 50%, 0.6);
 color: hsl(30 100% 50% / 0.6);
@@ -66,32 +67,33 @@ color: hsl(30.0 100% 50% / 60%);
 color: hsla(30.2 100% 50% / 60%);
 
 /* Valores globais, pega algun valor já definido,
-para todo o &lt;body&gt;, por exemplo. */
+para todo o <body>, por exemplo. */
 color: inherit;
 color: initial;
 color: unset;
-</pre>
+```
 
-<p>A propriedade <code>color</code> é especificada somente com o valor {{cssxref("&lt;color&gt;")}} .</p>
+A propriedade `color` é especificada somente com o valor {{cssxref("&lt;color&gt;")}} .
 
-<p>Note que o valor sempre será uniforme para {{cssxref("color")}}. Não podendo ter  {{cssxref("&lt;gradient&gt;")}}(gradiente), que é atualmente um tipo para {{cssxref("&lt;image&gt;")}}.</p>
+Note que o valor sempre será uniforme para {{cssxref("color")}}. Não podendo ter {{cssxref("&lt;gradient&gt;")}}(gradiente), que é atualmente um tipo para {{cssxref("&lt;image&gt;")}}.
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd> Define a cor dos caracteres presentes no elemento a ser estilizado.</dd>
-</dl>
+- {{cssxref("&lt;color&gt;")}}
+  - : Define a cor dos caracteres presentes no elemento a ser estilizado.
 
-<h3 id="Syntaxe_formal">Syntaxe formal</h3>
+### Syntaxe formal
 
-<pre class="syntaxbox">p { color: gray; }</pre>
+```
+p { color: gray; }
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>A seguir, você verá várias maneira de tornar a cor de um texto num parágrafo vermelha:</p>
+A seguir, você verá várias maneira de tornar a cor de um texto num parágrafo vermelha:
 
-<pre class="brush: css">p { color: red; }
+```css
+p { color: red; }
 p { color: #f00; }
 p { color: #ff0000; }
 p { color: rgb(255,0,0); }
@@ -101,62 +103,28 @@ p { color: hsl(0, 100%, 50%); }
 /* 50% translúcido(transparênte) */
 p { color: rgba(255, 0, 0, 0.5); }
 p { color: hsla(0, 100%, 50%, 0.5); }
-</pre>
+```
 
-<h2 id="Preocupações_com_acessibilidade">Preocupações com acessibilidade</h2>
+## Preocupações com acessibilidade
 
-<p>É extremamente crucial que todo site, contenha um contraste de cores adequado, para que pessoas com níveis baixos de visão tenha um aboa experiência ao utilizar o site.</p>
+É extremamente crucial que todo site, contenha um contraste de cores adequado, para que pessoas com níveis baixos de visão tenha um aboa experiência ao utilizar o site.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Colors', '#the-color-property', 'color')}}</td>
-   <td>{{Spec2('CSS4 Colors')}}</td>
-   <td>Adiciona syntaxes sem emendas para as funções <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code> e <code>hsla()</code> . Permite valores alpha em <code>rgb()</code> e <code>hsl()</code>, dirando <code>rgba()</code> e <code>hsla()</code> em (descontinuada).<br>
-    Adiciona a palavra-chave <code>rebeccapurple</code>.<br>
-    Adiciona valores de cores hexa-decimais de 4 à 8 dígitos, where the last digit(s) represents the alpha value.<br>
-    Adiona as funcões <code>hwb()</code>, <code>device-cmyk()</code> e <code>color()</code> .</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'color')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Define <code>color</code> como animável.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Colors', '#color', 'color')}}</td>
-   <td>{{Spec2('CSS3 Colors')}}</td>
-   <td>Deprecia as cores do Sistema. Adiciona cores <a href="/en-US/docs/Web/SVG">SVG</a>. Adicionando as funções <code>rgba()</code>, <code>hsl()</code>, and <code>hsla()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'colors.html#colors', 'color')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Adiciona a cor laranja <code>orange</code> color e o Sistema de Cores.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#color', 'color')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Definição Inicial</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                                   | Comment                                                                                                                                                                                                                                                                                                                                                                                            |
+| -------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS4 Colors', '#the-color-property', 'color')}} | {{Spec2('CSS4 Colors')}}         | Adiciona syntaxes sem emendas para as funções `rgb()`, `rgba()`, `hsl()` e `hsla()` . Permite valores alpha em `rgb()` e `hsl()`, dirando `rgba()` e `hsla()` em (descontinuada). Adiciona a palavra-chave `rebeccapurple`. Adiciona valores de cores hexa-decimais de 4 à 8 dígitos, where the last digit(s) represents the alpha value. Adiona as funcões `hwb()`, `device-cmyk()` e `color()` . |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'color')}} | {{Spec2('CSS3 Transitions')}} | Define `color` como animável.                                                                                                                                                                                                                                                                                                                                                                      |
+| {{SpecName('CSS3 Colors', '#color', 'color')}}                     | {{Spec2('CSS3 Colors')}}         | Deprecia as cores do Sistema. Adiciona cores [SVG](/pt-BR/docs/Web/SVG). Adicionando as funções `rgba()`, `hsl()`, and `hsla()`.                                                                                                                                                                                                                                                                   |
+| {{SpecName('CSS2.1', 'colors.html#colors', 'color')}}         | {{Spec2('CSS2.1')}}                 | Adiciona a cor laranja `orange` color e o Sistema de Cores.                                                                                                                                                                                                                                                                                                                                        |
+| {{SpecName('CSS1', '#color', 'color')}}                             | {{Spec2('CSS1')}}                 | Definição Inicial                                                                                                                                                                                                                                                                                                                                                                                  |
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("css.properties.color")}}</p>
+{{Compat("css.properties.color")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/color_value">Tipo de dado &lt;color&gt; no CSS.</a></li>
-</ul>
+- [Tipo de dado \<color> no CSS.](/pt-BR/docs/Web/CSS/color_value)

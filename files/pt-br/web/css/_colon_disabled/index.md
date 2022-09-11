@@ -1,57 +1,62 @@
 ---
 title: ':disabled'
-slug: 'Web/CSS/:disabled'
-translation_of: 'Web/CSS/:disabled'
+slug: Web/CSS/:disabled
+translation_of: Web/CSS/:disabled
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classe </a><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>  <strong><code>:disabled</code></strong> representa qualquer elemento desativado. Um elemento é desativado se não puder ser ativado (selecionado, clicado, digitado etc.) ou aceitar o foco. O elemento também possui um estado habilitado, no qual ele pode ser ativado ou aceitar o foco.</p>
+A [pseudo-classe ](/pt-BR/docs/Web/CSS/Pseudo-classes)[CSS](/pt-BR/docs/Web/CSS) **`:disabled`** representa qualquer elemento desativado. Um elemento é desativado se não puder ser ativado (selecionado, clicado, digitado etc.) ou aceitar o foco. O elemento também possui um estado habilitado, no qual ele pode ser ativado ou aceitar o foco.
 
-<pre class="brush: css no-line-numbers">/* Selects any disabled &lt;input&gt; */
+```css
+/* Selects any disabled <input> */
 input:disabled {
   background: #ccc;
-}</pre>
+}
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
 {{csssyntax}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>Este exemplo mostra um formulário básico de envio. Ele usa o evento <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a> <code><a href="https://developer.mozilla.org/en-US/docs/Web/Events/change" title="/en-US/docs/Web/Events/change">change</a></code> para permitir que o usuário ative / desative os campos de faturamento.</p>
+Este exemplo mostra um formulário básico de envio. Ele usa o evento [JavaScript](/pt-BR/docs/Web/JavaScript) [`change`](https://developer.mozilla.org/en-US/docs/Web/Events/change "/en-US/docs/Web/Events/change") para permitir que o usuário ative / desative os campos de faturamento.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;form action="#"&gt;
-  &lt;fieldset id="shipping"&gt;
-    &lt;legend&gt;Shipping address&lt;/legend&gt;
-    &lt;input type="text" placeholder="Name"&gt;
-    &lt;input type="text" placeholder="Address"&gt;
-    &lt;input type="text" placeholder="Zip Code"&gt;
-  &lt;/fieldset&gt;
-  &lt;br&gt;
-  &lt;fieldset id="billing"&gt;
-    &lt;legend&gt;Billing address&lt;/legend&gt;
-    &lt;label for="billing-checkbox"&gt;Same as shipping address:&lt;/label&gt;
-    &lt;input type="checkbox" id="billing-checkbox" checked&gt;
-    &lt;br&gt;
-    &lt;input type="text" placeholder="Name" disabled&gt;
-    &lt;input type="text" placeholder="Address" disabled&gt;
-    &lt;input type="text" placeholder="Zip Code" disabled&gt;
-  &lt;/fieldset&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form action="#">
+  <fieldset id="shipping">
+    <legend>Shipping address</legend>
+    <input type="text" placeholder="Name">
+    <input type="text" placeholder="Address">
+    <input type="text" placeholder="Zip Code">
+  </fieldset>
+  <br>
+  <fieldset id="billing">
+    <legend>Billing address</legend>
+    <label for="billing-checkbox">Same as shipping address:</label>
+    <input type="checkbox" id="billing-checkbox" checked>
+    <br>
+    <input type="text" placeholder="Name" disabled>
+    <input type="text" placeholder="Address" disabled>
+    <input type="text" placeholder="Zip Code" disabled>
+  </fieldset>
+</form>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">input[type="text"]:disabled {
+```css
+input[type="text"]:disabled {
   background: #ccc;
 }
-</pre>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">// Wait for the page to finish loading
+```js
+// Wait for the page to finish loading
 document.addEventListener('DOMContentLoaded', function () {
   // Attach `change` event listener to checkbox
   document.getElementById('billing-checkbox').onchange = toggleBilling;
@@ -62,67 +67,30 @@ function toggleBilling() {
   var billingItems = document.querySelectorAll('#billing input[type="text"]');
 
   // Toggle the billing text fields
-  for (var i = 0; i &lt; billingItems.length; i++) {
+  for (var i = 0; i < billingItems.length; i++) {
     billingItems[i].disabled = !billingItems[i].disabled;
   }
 }
-</pre>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample('Example', 300, 250)}}</p>
+{{EmbedLiveSample('Example', 300, 250)}}
 
-<h2 id="Expecificações">Expecificações</h2>
+## Expecificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#selector-disabled', ':disabled')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', '#selector-disabled', ':disabled')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Defines the semantics of HTML and forms.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#enableddisabled', ':disabled')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Basic UI', '#pseudo-classes', ':disabled')}}</td>
-   <td>{{Spec2('CSS3 Basic UI')}}</td>
-   <td>Links to Selectors Level 3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#enableddisabled', ':disabled')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Defines the pseudo-class, but not the associated semantics.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                        | Status                               | Comment                                                     |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', '#selector-disabled', ':disabled')}} | {{Spec2('HTML WHATWG')}}     | No change.                                                  |
+| {{SpecName('HTML5 W3C', '#selector-disabled', ':disabled')}}     | {{Spec2('HTML5 W3C')}}         | Defines the semantics of HTML and forms.                    |
+| {{SpecName('CSS4 Selectors', '#enableddisabled', ':disabled')}} | {{Spec2('CSS4 Selectors')}} | No change.                                                  |
+| {{SpecName('CSS3 Basic UI', '#pseudo-classes', ':disabled')}}     | {{Spec2('CSS3 Basic UI')}} | Links to Selectors Level 3.                                 |
+| {{SpecName('CSS3 Selectors', '#enableddisabled', ':disabled')}} | {{Spec2('CSS3 Selectors')}} | Defines the pseudo-class, but not the associated semantics. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
+{{Compat("css.selectors.disabled")}}
 
+## Veja também
 
-<p>{{Compat("css.selectors.disabled")}}</p>
-</div>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>
-  <p>{{Cssxref(":enabled")}}</p>
- </li>
-</ul>
+- {{Cssxref(":enabled")}}

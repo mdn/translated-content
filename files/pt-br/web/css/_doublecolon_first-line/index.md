@@ -1,113 +1,80 @@
 ---
 title: '::first-line (:first-line)'
-slug: 'Web/CSS/::first-line'
-translation_of: 'Web/CSS/::first-line'
+slug: Web/CSS/::first-line
+translation_of: Web/CSS/::first-line
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>O pseudoelemento <strong><code>::first-line</code></strong> aplica estilos à primeira linha de um elemento no nível do bloco. Observe que o comprimento da primeira linha depende de muitos fatores, incluindo a largura do elemento, a largura do documento e o tamanho da fonte do texto.</p>
+O pseudoelemento **`::first-line`** aplica estilos à primeira linha de um elemento no nível do bloco. Observe que o comprimento da primeira linha depende de muitos fatores, incluindo a largura do elemento, a largura do documento e o tamanho da fonte do texto.
 
-<pre class="brush: css">/* Seleciona a primeira linha dentro da tag &lt;p&gt; */
+```css
+/* Seleciona a primeira linha dentro da tag <p> */
 p::first-line {
   color: red;
-}</pre>
+}
+```
 
-<div class="note">
-<p>O CSS3 introduziu a notação <code>::first-line</code>(com dois pontos) para distinguir pseudo-classes de pseudo-elementos. Os navegadores também aceitam  <code>:first-line</code> introduzida no CSS2.</p>
-</div>
+> **Note:** O CSS3 introduziu a notação `::first-line`(com dois pontos) para distinguir pseudo-classes de pseudo-elementos. Os navegadores também aceitam `:first-line` introduzida no CSS2.
 
-<h2 id="Propriedades_permitidas">Propriedades permitidas</h2>
+## Propriedades permitidas
 
-<p>Somente um pequeno subconjunto de propriedades CSS pode ser usado com o<code>::first-line</code> pseudo-elemento:</p>
+Somente um pequeno subconjunto de propriedades CSS pode ser usado com o`::first-line` pseudo-elemento:
 
-<ul>
- <li>Todas as propriedades relacionadas à fonte: {{Cssxref("font")}}, {{cssxref("font-kerning")}}, {{Cssxref("font-style")}}, {{Cssxref("font-variant")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-feature-settings")}}, {{cssxref("font-language-override")}}, {{Cssxref("font-weight")}}, {{Cssxref("font-size")}}, {{cssxref("font-size-adjust")}}, {{cssxref("font-stretch")}}, e {{Cssxref("font-family")}}</li>
- <li>Todas as propriedades relacionadas ao background: {{Cssxref("background-color")}}, {{cssxref("background-clip")}}, {{Cssxref("background-image")}}, {{cssxref("background-origin")}}, {{Cssxref("background-position")}}, {{Cssxref("background-repeat")}}, {{cssxref("background-size")}},  {{Cssxref("background-attachment")}}, e {{cssxref("background-blend-mode")}}</li>
- <li>A propriedade {{cssxref("color")}} </li>
- <li>{{cssxref("word-spacing")}}, {{cssxref("letter-spacing")}}, {{cssxref("text-decoration")}}, {{cssxref("text-transform")}}, e {{cssxref("line-height")}}</li>
- <li>{{cssxref("text-shadow")}}, {{cssxref("text-decoration")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, e {{cssxref("vertical-align")}}.</li>
-</ul>
+- Todas as propriedades relacionadas à fonte: {{Cssxref("font")}}, {{cssxref("font-kerning")}}, {{Cssxref("font-style")}}, {{Cssxref("font-variant")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-feature-settings")}}, {{cssxref("font-language-override")}}, {{Cssxref("font-weight")}}, {{Cssxref("font-size")}}, {{cssxref("font-size-adjust")}}, {{cssxref("font-stretch")}}, e {{Cssxref("font-family")}}
+- Todas as propriedades relacionadas ao background: {{Cssxref("background-color")}}, {{cssxref("background-clip")}}, {{Cssxref("background-image")}}, {{cssxref("background-origin")}}, {{Cssxref("background-position")}}, {{Cssxref("background-repeat")}}, {{cssxref("background-size")}}, {{Cssxref("background-attachment")}}, e {{cssxref("background-blend-mode")}}
+- A propriedade {{cssxref("color")}}
+- {{cssxref("word-spacing")}}, {{cssxref("letter-spacing")}}, {{cssxref("text-decoration")}}, {{cssxref("text-transform")}}, e {{cssxref("line-height")}}
+- {{cssxref("text-shadow")}}, {{cssxref("text-decoration")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, e {{cssxref("vertical-align")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Os estilos serão aplicados apenas à primeira linha deste parágrafo.
-Depois disso, todo o texto será estilizado normalmente. Entendeu o que eu quis dizer?&lt;/p&gt;
+```html
+<p>Os estilos serão aplicados apenas à primeira linha deste parágrafo.
+Depois disso, todo o texto será estilizado normalmente. Entendeu o que eu quis dizer?</p>
 
-&lt;span&gt;A primeira linha deste texto não receberá um estilo especial
-porque não é um elemento no nível do bloco.&lt;/span&gt;</pre>
+<span>A primeira linha deste texto não receberá um estilo especial
+porque não é um elemento no nível do bloco.</span>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">::first-line {
+```css
+::first-line {
   color: blue;
   text-transform: uppercase;
 
 
   /* AVISO: NÃO UTILIZE: */
-  /* Muitas propriedades são inválidas em pseudo-elementos <code>::first-line</code> */
+  /* Muitas propriedades são inválidas em pseudo-elementos ::first-line */
   margin-left: 20px;
   text-indent: 20px;
-}</pre>
+}
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample('Examples', 350, 160)}}</p>
+{{EmbedLiveSample('Examples', 350, 160)}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Pseudo-Elements', '#first-line-pseudo', '::first-line')}}</td>
-   <td>{{Spec2('CSS4 Pseudo-Elements')}}</td>
-   <td>Define mais estritamente onde <code>::first-letter</code> pode ocorrer.<br>
-    Generaliza propriedades permitidas para tipografia, decoração de texto e propriedades de layout embutido e {{cssxref("opacity")}}.<br>
-    Define a herança de<code>::first-letter</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Text Decoration', '#text-shadow-property', 'text-shadow with ::first-line')}}</td>
-   <td>{{Spec2('CSS3 Text Decoration')}}</td>
-   <td>Permite o uso de {{cssxref("text-shadow")}} com <code>::first-letter</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#first-line', '::first-line')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Introdução da sintaxe de dois-pontos.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'selector.html#first-line-pseudo', '::first-line')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Nenhuma mudança.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#the-first-line-pseudo-element', '::first-line')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Definição inicial, usando a sintaxe de dois pontos.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                | Status                                       | Comentário                                                                                                                                                                                                                                 |
+| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('CSS4 Pseudo-Elements', '#first-line-pseudo', '::first-line')}}                         | {{Spec2('CSS4 Pseudo-Elements')}} | Define mais estritamente onde `::first-letter` pode ocorrer. Generaliza propriedades permitidas para tipografia, decoração de texto e propriedades de layout embutido e {{cssxref("opacity")}}. Define a herança de`::first-letter`. |
+| {{SpecName('CSS3 Text Decoration', '#text-shadow-property', 'text-shadow with ::first-line')}} | {{Spec2('CSS3 Text Decoration')}} | Permite o uso de {{cssxref("text-shadow")}} com `::first-letter`.                                                                                                                                                                |
+| {{SpecName('CSS3 Selectors', '#first-line', '::first-line')}}                                             | {{Spec2('CSS3 Selectors')}}         | Introdução da sintaxe de dois-pontos.                                                                                                                                                                                                      |
+| {{SpecName('CSS2.1', 'selector.html#first-line-pseudo', '::first-line')}}                             | {{Spec2('CSS2.1')}}                     | Nenhuma mudança.                                                                                                                                                                                                                           |
+| {{SpecName('CSS1', '#the-first-line-pseudo-element', '::first-line')}}                                 | {{Spec2('CSS1')}}                     | Definição inicial, usando a sintaxe de dois pontos.                                                                                                                                                                                        |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
-  <p>{{Compat("css.selectors.first-line")}}</p>
-</div>
+{{Compat("css.selectors.first-line")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{cssxref("::first-letter")}}</li>
-</ul>
+- {{cssxref("::first-letter")}}

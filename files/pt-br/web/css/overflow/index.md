@@ -3,110 +3,91 @@ title: overflow
 slug: Web/CSS/overflow
 translation_of: Web/CSS/overflow
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>A propriedade <code>overflow</code> especifica quando o conteúdo de um elemento de nível de bloco deve ser cortado, exibido com barras de rolagem ou se transborda do elemento.</p>
+A propriedade `overflow` especifica quando o conteúdo de um elemento de nível de bloco deve ser cortado, exibido com barras de rolagem ou se transborda do elemento.
 
-<p>O uso da propriedade <code>overflow</code> com valor diferente de <code>visible</code> (seu valor padrão), criará um novo <a href="/en-US/docs/CSS/block_formatting_context" title="CSS/block_formatting_context">contexto de formatação de bloco</a>. Isto é tecnicamente necessário para evitar que um conteúdo flutuante que entre em contato com o objeto dentro da área de rolamento e quebre as linhas do conteúdo para ajustar a disposição do texto. A quebra das linhas ocorre sempre que a barra de rolagem é utilizada, tornando a experiência de rolagem lenta.</p>
+O uso da propriedade `overflow` com valor diferente de `visible` (seu valor padrão), criará um novo [contexto de formatação de bloco](/pt-BR/docs/CSS/block_formatting_context "CSS/block_formatting_context"). Isto é tecnicamente necessário para evitar que um conteúdo flutuante que entre em contato com o objeto dentro da área de rolamento e quebre as linhas do conteúdo para ajustar a disposição do texto. A quebra das linhas ocorre sempre que a barra de rolagem é utilizada, tornando a experiência de rolagem lenta.
 
-<div class="note">
-<p><strong>Nota</strong>: Ao definir a propredade <code>scrollTop</code> para o <code>elemento</code> HTML relevante, mesmo que o valor de <code>overflow </code>seja <code>hidden,</code> o conteúdo ainda pode precisar rolar.</p>
-</div>
+> **Note:** **Nota**: Ao definir a propredade `scrollTop` para o `elemento` HTML relevante, mesmo que o valor de `overflow `seja `hidden,` o conteúdo ainda pode precisar rolar.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">overflow:  visible | hidden | scroll | {{ cssxref("auto") }} | {{ cssxref("inherit") }}</pre>
+```
+overflow:  visible | hidden | scroll | {{ cssxref("auto") }} | {{ cssxref("inherit") }}
+```
 
-<h3 id="Values" name="Values">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>visible</code></dt>
- <dd>Valor padrão. O conteúdo não é cortado e pode ser renderizado para fora da caixa de conteúdo.</dd>
- <dt><code>hidden</code></dt>
- <dd>O conteúdo é cortado e nenhuma barra de rolagem é exibida.</dd>
- <dt><code>scroll</code></dt>
- <dd>O conteúdo é acessível através de barras de rolagem que são exibidas mesmo que o conteúdo não precise. Isso evita o problema de barras de rolagem aparecendo e desaparecendo quando o conteúdo é dinâmico. Impressoras podem imprimir o conteúdo vazado.</dd>
- <dt><code>auto</code></dt>
- <dd>Depende do navegador utilizado. Navegadores desktop como o Firefox geralmente exibem barras de rolagem apenas quando necessário.</dd>
-</dl>
+- `visible`
+  - : Valor padrão. O conteúdo não é cortado e pode ser renderizado para fora da caixa de conteúdo.
+- `hidden`
+  - : O conteúdo é cortado e nenhuma barra de rolagem é exibida.
+- `scroll`
+  - : O conteúdo é acessível através de barras de rolagem que são exibidas mesmo que o conteúdo não precise. Isso evita o problema de barras de rolagem aparecendo e desaparecendo quando o conteúdo é dinâmico. Impressoras podem imprimir o conteúdo vazado.
+- `auto`
+  - : Depende do navegador utilizado. Navegadores desktop como o Firefox geralmente exibem barras de rolagem apenas quando necessário.
 
-<h4 id="Mozilla_Extensions" name="Mozilla_Extensions">Extensões da Mozilla</h4>
+#### Extensões da Mozilla
 
-<dl>
- <dt><code>-moz-scrollbars-none </code>{{ obsolete_inline() }}</dt>
- <dd>Use <code>overflow:hidden</code> no lugar.</dd>
- <dt><code>-moz-scrollbars-horizontal </code>{{ Deprecated_inline() }}</dt>
- <dd>O uso de {{ Cssxref("overflow-x") }} e {{ Cssxref("overflow-y") }} é preferido.</dd>
- <dt><code>-moz-scrollbars-vertical </code>{{ Deprecated_inline() }}</dt>
- <dd>O uso de {{ Cssxref("overflow-x") }} e {{ Cssxref("overflow-y") }} é preferido.</dd>
- <dt>-moz-hidden-unscrollable {{ non-standard_inline() }}</dt>
- <dd>É mantido principalmente para uso interno e por temas. Desabilita o rolamento de elementos raiz de XML e <code>&lt;html&gt;</code>, <code> &lt;body&gt;</code> mediante o uso das setas do teclado ou scroll do mouse.</dd>
-</dl>
+- `-moz-scrollbars-none `{{ obsolete_inline() }}
+  - : Use `overflow:hidden` no lugar.
+- `-moz-scrollbars-horizontal `{{ Deprecated_inline() }}
+  - : O uso de {{ Cssxref("overflow-x") }} e {{ Cssxref("overflow-y") }} é preferido.
+- `-moz-scrollbars-vertical `{{ Deprecated_inline() }}
+  - : O uso de {{ Cssxref("overflow-x") }} e {{ Cssxref("overflow-y") }} é preferido.
+- \-moz-hidden-unscrollable {{ non-standard_inline() }}
+  - : É mantido principalmente para uso interno e por temas. Desabilita o rolamento de elementos raiz de XML e `<html>`, `<body>` mediante o uso das setas do teclado ou scroll do mouse.
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: css">p {
+```css
+p {
      width: 12em;
      border: dotted;
      overflow: visible;   /* Exibe o conteúdo de forma vazada, fora da caixa de conteúdo */
 }
-</pre>
+```
 
-<p style="overflow: visible; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>visible</code> (default)<br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+`visible` (default)
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
-<pre>p { overflow: hidden; /* Esconde o conteúdo excedente */ }
-</pre>
+```
+p { overflow: hidden; /* Esconde o conteúdo excedente */ }
+```
 
-<p style="overflow: hidden; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: hidden</code><br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+`overflow: hidden`
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
-<pre>p { overflow: scroll; /* Sempre exibe barras de rolagem */ }
-</pre>
+```
+p { overflow: scroll; /* Sempre exibe barras de rolagem */ }
+```
 
-<p style="overflow: scroll; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: scroll</code><br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+`overflow: scroll`
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
-<pre>p { overflow: auto; /* Exibe barras de rolagem apenas se necessário */ }
-</pre>
+```
+p { overflow: auto; /* Exibe barras de rolagem apenas se necessário */ }
+```
 
-<p style="overflow: auto; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: auto</code><br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+`overflow: auto`
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Box', '#overflow1', 'overflow') }}</td>
-   <td>{{ Spec2('CSS3 Box') }}</td>
-   <td>Sem alteração.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'visufx.html#overflow', 'overflow') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                    | Status                           | Comment        |
+| -------------------------------------------------------------------------------- | -------------------------------- | -------------- |
+| {{ SpecName('CSS3 Box', '#overflow1', 'overflow') }}             | {{ Spec2('CSS3 Box') }} | Sem alteração. |
+| {{ SpecName('CSS2.1', 'visufx.html#overflow', 'overflow') }} | {{ Spec2('CSS2.1') }}     |                |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.properties.overflow")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Propriedades CSS relacionadas: {{ cssxref("text-overflow") }}, {{ cssxref("white-space") }}, {{ Cssxref("overflow-x") }}, {{ Cssxref("overflow-y") }}, {{ Cssxref("clip") }}, {{ Cssxref("display") }}</li>
-</ul>
+- Propriedades CSS relacionadas: {{ cssxref("text-overflow") }}, {{ cssxref("white-space") }}, {{ Cssxref("overflow-x") }}, {{ Cssxref("overflow-y") }}, {{ Cssxref("clip") }}, {{ Cssxref("display") }}

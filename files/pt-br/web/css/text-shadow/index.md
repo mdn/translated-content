@@ -3,23 +3,24 @@ title: text-shadow
 slug: Web/CSS/text-shadow
 translation_of: Web/CSS/text-shadow
 ---
-<div>{{ Cssref }}</div>
+{{ Cssref }}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>A propriedade <code>text-shadow</code> acrescenta sombras ao texto. Ela aceita uma lista de sombras separadas por vírgula que serão aplicados ao texto e ao {{ cssxref("text-decoration","text-decorations") }} do elemento.</p>
+A propriedade `text-shadow` acrescenta sombras ao texto. Ela aceita uma lista de sombras separadas por vírgula que serão aplicados ao texto e ao {{ cssxref("text-decoration","text-decorations") }} do elemento.
 
-<p>Cada sombra é especificada como um deslocamento do texto, juntamente com valores opcionais de cor e raio de desfoque.</p>
+Cada sombra é especificada como um deslocamento do texto, juntamente com valores opcionais de cor e raio de desfoque.
 
-<p>Multiplas sombras são aplicadas de frente-para-trás, com a primeira sombra especificada no topo.</p>
+Multiplas sombras são aplicadas de frente-para-trás, com a primeira sombra especificada no topo.
 
-<p>Esta propriedade se aplica a ambos {{cssxref("::first-line")}} e {{cssxref("::first-letter")}} <a href="/en-US/docs/Web/CSS/Pseudo-elements" title="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>.</p>
+Esta propriedade se aplica a ambos {{cssxref("::first-line")}} e {{cssxref("::first-letter")}} [pseudo-elements](/pt-BR/docs/Web/CSS/Pseudo-elements).
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush: css">/* deslocamento-x | deslocamento-y | raio-de-desfoque | cor */
+```css
+/* deslocamento-x | deslocamento-y | raio-de-desfoque | cor */
 text-shadow: 1px 1px 2px black;
 
 /* cor | deslocamento-x | deslocamento-y | raio-de-desfoque */
@@ -39,101 +40,86 @@ text-shadow: 5px 10px;
 text-shadow: inherit;
 text-shadow: initial;
 text-shadow: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">Valores</h3>
+### Valores
 
-<dl>
- <dt>&lt;cor&gt;</dt>
- <dd>Opcional. Pode ser especificado tanto antes quanto depois dos valores de deslocamento. Se a cor não é especificada, uma cor UA-chosen será usada.  {{ note("Se voce quer garantir a consistência entre os navegadores, especifique explicitamente uma cor.") }}</dd>
- <dt>&lt;offset-x&gt; &lt;offset-y&gt;</dt>
- <dd>Obrigatório. These <code>&lt;length&gt;</code> values specify the shadow's offset from the text. <code>&lt;offset-x&gt;</code> specifies the horizontal distance; a negative value places the shadow to the left of the text. <code>&lt;offset-y&gt;</code> specifies the vertical distance; a negative value places the shadow above the text. If both values are <code>0</code>, then the shadow is placed behind the text (and may generate a blur effect when <code>&lt;blur-radius&gt;</code> is set).<br>
- To find out what units you can use, see {{ cssxref("&lt;length&gt;") }}.</dd>
- <dt>&lt;blur-radius&gt;</dt>
- <dd>Opcional. This is a {{ cssxref("&lt;length&gt;") }} value. If not specified, it defaults to <code>0</code>. The higher this value, the bigger the blur; the shadow becomes wider and lighter.</dd>
-</dl>
+- \<cor>
+  - : Opcional. Pode ser especificado tanto antes quanto depois dos valores de deslocamento. Se a cor não é especificada, uma cor UA-chosen será usada. {{ note("Se voce quer garantir a consistência entre os navegadores, especifique explicitamente uma cor.") }}
+- \<offset-x> \<offset-y>
+  - : Obrigatório. These `<length>` values specify the shadow's offset from the text. `<offset-x>` specifies the horizontal distance; a negative value places the shadow to the left of the text. `<offset-y>` specifies the vertical distance; a negative value places the shadow above the text. If both values are `0`, then the shadow is placed behind the text (and may generate a blur effect when `<blur-radius>` is set).
+    To find out what units you can use, see {{ cssxref("&lt;length&gt;") }}.
+- \<blur-radius>
+  - : Opcional. This is a {{ cssxref("&lt;length&gt;") }} value. If not specified, it defaults to `0`. The higher this value, the bigger the blur; the shadow becomes wider and lighter.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<div id="Example1">
-<pre class="brush: css">.red-text-shadow {
+```css
+.red-text-shadow {
    text-shadow: red 0 -2px;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;p class="red-text-shadow"&gt;
+```html
+<p class="red-text-shadow">
    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
    inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-&lt;/p&gt;</pre>
-</div>
+</p>
+```
 
-<p>{{EmbedLiveSample('Example1', '689px', '90px')}}</p>
+{{EmbedLiveSample('Example1', '689px', '90px')}}
 
-<div id="Example2">
-<pre class="brush:css">.white-with-blue-shadow {
+```css
+.white-with-blue-shadow {
    text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
    color: white;
    font: 1.5em Georgia, "Bitstream Charter", "URW Bookman L", "Century Schoolbook L", serif;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;p class="white-with-blue-shadow"&gt;
+```html
+<p class="white-with-blue-shadow">
    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
    veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-&lt;/p&gt;</pre>
-</div>
+</p>
+```
 
-<p>{{EmbedLiveSample('Example2', '689px', '180px')}}</p>
+{{EmbedLiveSample('Example2', '689px', '180px')}}
 
-<div id="Example3">
-<pre class="brush:css">.gold-on-gold {
+```css
+.gold-on-gold {
    text-shadow: rgba(0,0,0,0.1) -1px 0, rgba(0,0,0,0.1) 0 -1px,
    rgba(255,255,255,0.1) 1px 0, rgba(255,255,255,0.1) 0 1px,
    rgba(0,0,0,0.1) -1px -1px, rgba(255,255,255,0.1) 1px 1px;
    color: gold;
    background: gold;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;p class="gold-on-gold"&gt;
+```html
+<p class="gold-on-gold">
    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
    veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-&lt;/p&gt;</pre>
-</div>
+</p>
+```
 
-<p>{{EmbedLiveSample('Example3', '689px', '90px')}}</p>
+{{EmbedLiveSample('Example3', '689px', '90px')}}
 
-<p><strong style="font-size: 2.142857142857143rem; font-weight: 700; letter-spacing: -1px; line-height: 30px;">Especificações</strong></p>
+**Especificações**
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Transitions', '#animatable-css', 'text-shadow') }}</td>
-   <td>{{ Spec2('CSS3 Transitions') }}</td>
-   <td>Lists <code>text-shadow</code> as animatable.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Text Decoration', '#text-shadow', 'text-shadow') }}</td>
-   <td>{{ Spec2('CSS3 Text Decoration') }}</td>
-   <td>The CSS property <code>text-shadow</code> was <a class="external" href="http://www.w3.org/TR/2008/REC-CSS2-20080411/text.html#text-shadow-props">improperly defined in CSS2</a> and dropped in CSS2 (Level 1). The<em> CSS Text Module Level 3 </em>spec improved and precised the syntax. Later it was moved to new working draft <em><a href="http://www.w3.org/TR/2012/WD-css-text-decor-3-20121113/">CSS Text Decoration Module Level 3</a></em>.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Status                                           | Comentário                                                                                                                                                                                                                                                                                                                                                                            |
+| -------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{ SpecName('CSS3 Transitions', '#animatable-css', 'text-shadow') }} | {{ Spec2('CSS3 Transitions') }}         | Lists `text-shadow` as animatable.                                                                                                                                                                                                                                                                                                                                                    |
+| {{ SpecName('CSS3 Text Decoration', '#text-shadow', 'text-shadow') }} | {{ Spec2('CSS3 Text Decoration') }} | The CSS property `text-shadow` was [improperly defined in CSS2](http://www.w3.org/TR/2008/REC-CSS2-20080411/text.html#text-shadow-props) and dropped in CSS2 (Level 1). The _CSS Text Module Level 3_ spec improved and precised the syntax. Later it was moved to new working draft _[CSS Text Decoration Module Level 3](http://www.w3.org/TR/2012/WD-css-text-decor-3-20121113/)_. |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade do navegador</h2>
+## Compatibilidade do navegador
 
 {{Compat("css.properties.text-shadow")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ cssxref("box-shadow") }}</li>
-</ul>
+- {{ cssxref("box-shadow") }}

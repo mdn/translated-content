@@ -1,101 +1,97 @@
 ---
 title: ':nth-last-child()'
-slug: 'Web/CSS/:nth-last-child'
+slug: Web/CSS/:nth-last-child
 tags:
   - Pseudo-classe
   - Referencia
-translation_of: 'Web/CSS/:nth-last-child'
+translation_of: Web/CSS/:nth-last-child
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>:nth-last-child()</code></strong> seleciona um ou mais elementos com base em sua posição entre um grupo de elementos-irmãos, contando a partir do último.</p>
+A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:nth-last-child()`** seleciona um ou mais elementos com base em sua posição entre um grupo de elementos-irmãos, contando a partir do último.
 
-<pre class="brush: css no-line-numbers">/* Seleciona todo quarto elemento
+```css
+/* Seleciona todo quarto elemento
    em qualquer grupo de irmãos,
    contando do último para o primeiro */
 :nth-last-child(4n) {
   color: lime;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Nota:</strong> Essa pseudo-classe é essencialmente o mesmo que usar {{Cssxref(":nth-child")}}, porém conta os itens de trás para a frente, e não do início para o final.</p>
-</div>
+> **Note:** **Nota:** Essa pseudo-classe é essencialmente o mesmo que usar {{Cssxref(":nth-child")}}, porém conta os itens de trás para a frente, e não do início para o final.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<p>A pseudo-classe <code>nth-last-child</code> é especificada com um único argumento, que representa o padrão para elementos correspondentes, contando do final.</p>
+A pseudo-classe `nth-last-child` é especificada com um único argumento, que representa o padrão para elementos correspondentes, contando do final.
 
-<h3 id="Valores_chave">Valores chave</h3>
+### Valores chave
 
-<dl>
- <dt><code>odd</code></dt>
- <dd>Representa elementos cuja posição numérica em uma série de irmãos é ímpar: 1, 3, 5, etc., contando do final. </dd>
- <dt><code>even</code></dt>
- <dd>Representa elementos cuja posição numérica em uma série de irmãos é par: 2, 4, 6, etc., contando do final.</dd>
-</dl>
+- `odd`
+  - : Representa elementos cuja posição numérica em uma série de irmãos é ímpar: 1, 3, 5, etc., contando do final.
+- `even`
+  - : Representa elementos cuja posição numérica em uma série de irmãos é par: 2, 4, 6, etc., contando do final.
 
-<h3 id="Notação_funcional">Notação funcional</h3>
+### Notação funcional
 
-<dl>
- <dt><code>&lt;An+B&gt;</code></dt>
- <dd>Representa elementos cuja posição numérica em uma série de irmãos corresponde ao padrão <code>An+B</code>, para cada valor de <code>n</code> que seja um número inteiro positivo ou zero. O índice do primeiro elemento, contando do final, é <code>1</code>.  Os valores <code>A</code> e <code>B</code> devem ambos ser {{cssxref("&lt;integer&gt;")}}s (inteiros).</dd>
-</dl>
+- `<An+B>`
+  - : Representa elementos cuja posição numérica em uma série de irmãos corresponde ao padrão `An+B`, para cada valor de `n` que seja um número inteiro positivo ou zero. O índice do primeiro elemento, contando do final, é `1`. Os valores `A` e `B` devem ambos ser {{cssxref("&lt;integer&gt;")}}s (inteiros).
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Example_selectors" name="Example_selectors">Seletores de exemplo</h3>
+### Seletores de exemplo
 
-<dl>
- <dt><code>tr:nth-last-child(odd)</code> ou <code>tr:nth-last-child(2n+1)</code></dt>
- <dd>Representa as linhas ímpares de uma tabela HTML: 1, 3, 5, etc., contando do final.</dd>
- <dt><code>tr:nth-last-child(even)</code> ou <code>tr:nth-last-child(2n)</code></dt>
- <dd>Representa as linhas pares de uma tabela HTML: 2, 4, 6, etc., contando do final.</dd>
- <dt><code>:nth-last-child(7)</code></dt>
- <dd>Representa o sétimo elemento, contando do final.</dd>
- <dt><code>:nth-last-child(5n)</code></dt>
- <dd>Representa elementos 5, 10, 15, etc., contando do final.</dd>
- <dt><code>:nth-last-child(3n+4)</code></dt>
- <dd>Representa elementos 4, 7, 10, 13, etc., contando do final.</dd>
- <dt><code>:nth-last-child(-n+3)</code></dt>
- <dd>Representa os últimos três elementos em um grupo de irmãos.</dd>
- <dt><code>p:nth-last-child(n)</code></dt>
- <dd>Representa cada elemento <code>&lt;p&gt;</code> em um grupo de irmãos. Isso é o mesmo que um simples seletor <code>p</code>.</dd>
- <dt><code>p:nth-last-child(1)</code> ou <code>p:nth-last-child(0n+1)</code></dt>
- <dd>Representa cada <code>&lt;p&gt;</code> que seja o primeiro elemento em um grupo de irmãos, contando do final. Isso é o mesmo que o seletor {{cssxref(":last-child")}}.</dd>
-</dl>
+- `tr:nth-last-child(odd)` ou `tr:nth-last-child(2n+1)`
+  - : Representa as linhas ímpares de uma tabela HTML: 1, 3, 5, etc., contando do final.
+- `tr:nth-last-child(even)` ou `tr:nth-last-child(2n)`
+  - : Representa as linhas pares de uma tabela HTML: 2, 4, 6, etc., contando do final.
+- `:nth-last-child(7)`
+  - : Representa o sétimo elemento, contando do final.
+- `:nth-last-child(5n)`
+  - : Representa elementos 5, 10, 15, etc., contando do final.
+- `:nth-last-child(3n+4)`
+  - : Representa elementos 4, 7, 10, 13, etc., contando do final.
+- `:nth-last-child(-n+3)`
+  - : Representa os últimos três elementos em um grupo de irmãos.
+- `p:nth-last-child(n)`
+  - : Representa cada elemento `<p>` em um grupo de irmãos. Isso é o mesmo que um simples seletor `p`.
+- `p:nth-last-child(1)` ou `p:nth-last-child(0n+1)`
+  - : Representa cada `<p>` que seja o primeiro elemento em um grupo de irmãos, contando do final. Isso é o mesmo que o seletor {{cssxref(":last-child")}}.
 
-<h3 id="Exemplo_de_tabela">Exemplo de tabela</h3>
+### Exemplo de tabela
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Primeira linha&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Segunda linha&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Terceira linha&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Quarta linha&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Quinta linha&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</pre>
+```html
+<table>
+  <tbody>
+    <tr>
+      <td>Primeira linha</td>
+    </tr>
+    <tr>
+      <td>Segunda linha</td>
+    </tr>
+    <tr>
+      <td>Terceira linha</td>
+    </tr>
+    <tr>
+      <td>Quarta linha</td>
+    </tr>
+    <tr>
+      <td>Quinta linha</td>
+    </tr>
+  </tbody>
+</table>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">table {
+```css
+table {
   border: 1px solid blue;
 }
 
@@ -103,42 +99,23 @@ translation_of: 'Web/CSS/:nth-last-child'
 tr:nth-last-child(-n+3) {
   background-color: pink;
 }
-</pre>
+```
 
-<h4 id="Resultado">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample('Table_example', 300, 150)}}</p>
+{{EmbedLiveSample('Table_example', 300, 150)}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#nth-last-child-pseudo', ':nth-last-child')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Elementos correspondentes não precisam ter um elemento-pai.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#nth-last-child-pseudo', ':nth-last-child')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                        | Status                               | Comentário                                                  |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------- |
+| {{SpecName('CSS4 Selectors', '#nth-last-child-pseudo', ':nth-last-child')}} | {{Spec2('CSS4 Selectors')}} | Elementos correspondentes não precisam ter um elemento-pai. |
+| {{SpecName('CSS3 Selectors', '#nth-last-child-pseudo', ':nth-last-child')}} | {{Spec2('CSS3 Selectors')}} | Definição inicial.                                          |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.selectors.nth-last-child")}}
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li>{{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}</li>
-</ul>
+- {{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}

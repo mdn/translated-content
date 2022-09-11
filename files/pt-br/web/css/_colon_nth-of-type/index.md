@@ -1,46 +1,51 @@
 ---
 title: ':nth-of-type()'
-slug: 'Web/CSS/:nth-of-type'
-translation_of: 'Web/CSS/:nth-of-type'
+slug: Web/CSS/:nth-of-type
+translation_of: Web/CSS/:nth-of-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>:nth-of-type()</code> </strong>corresponde a um ou mais elementos de um dado tipo, baseado em sua posição entre um grupo de irmãos.</p>
+A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:nth-of-type()` **corresponde a um ou mais elementos de um dado tipo, baseado em sua posição entre um grupo de irmãos.
 
-<pre class="brush: css no-line-numbers  language-css">/* Seleciona cada quarto elemento &lt;p&gt;
+```css
+/* Seleciona cada quarto elemento <p>
    entre qualquer grupo de irmãos */
 p:nth-of-type(4n) {
   color: lime;
-}</pre>
+}
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<p>A pseudo-classe <code>nth-of-type</code> é especificada com um único argumento, o qual representa o padrão para a correspondência dos elementos. </p>
+A pseudo-classe `nth-of-type` é especificada com um único argumento, o qual representa o padrão para a correspondência dos elementos.
 
-<p>Veja {{Cssxref(":nth-child")}} para uma explicação mais detalhada de sua sintaxe.</p>
+Veja {{Cssxref(":nth-child")}} para uma explicação mais detalhada de sua sintaxe.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Exemplo_básico">Exemplo básico</h3>
+### Exemplo básico
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;div&gt;Este elemento não é contado.&lt;/div&gt;
-  &lt;p&gt;1º parágrafo.&lt;/p&gt;
-  &lt;p&gt;2º parágrafo.&lt;/p&gt;
-  &lt;div&gt;Este elemento não é contado.&lt;/div&gt;
-  &lt;p&gt;3º parágrafo.&lt;/p&gt;
-  &lt;p&gt;4º parágrafo.&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <div>Este elemento não é contado.</div>
+  <p>1º parágrafo.</p>
+  <p>2º parágrafo.</p>
+  <div>Este elemento não é contado.</div>
+  <p>3º parágrafo.</p>
+  <p>4º parágrafo.</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* Parágrafos ímpares */
+```css
+/* Parágrafos ímpares */
 p:nth-of-type(2n+1) {
   color: red;
 }
@@ -54,42 +59,23 @@ p:nth-of-type(2n) {
 p:nth-of-type(1) {
   font-weight: bold;
 }
-</pre>
+```
 
-<h4 id="Resultado">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample('Basic_example', 250, 200)}}</p>
+{{EmbedLiveSample('Basic_example', 250, 200)}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Sitação</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#nth-of-type-pseudo', ':nth-of-type')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Não é necessário que os elementos correspondentes tenham um pai.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#nth-of-type-pseudo', ':nth-of-type')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Sitação                              | Comentário                                                       |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------------------------- |
+| {{SpecName('CSS4 Selectors', '#nth-of-type-pseudo', ':nth-of-type')}} | {{Spec2('CSS4 Selectors')}} | Não é necessário que os elementos correspondentes tenham um pai. |
+| {{SpecName('CSS3 Selectors', '#nth-of-type-pseudo', ':nth-of-type')}} | {{Spec2('CSS3 Selectors')}} | Definição inicial.                                               |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.selectors.nth-of-type")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}</li>
-</ul>
+- {{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}

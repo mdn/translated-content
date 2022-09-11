@@ -8,70 +8,114 @@ tags:
 translation_of: Web/CSS/transform-function/scale()
 original_slug: Web/CSS/transform-function/scale()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A função <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>scale()</code></strong> define uma transformação que redimensiona um elemento no plano 2D. Como o redimensionamento é definido por um vetor, ele pode transformar as dimensões verticais e horizontais em escalas diferentes. Seu resultado é um dado do tipo {{cssxref("&lt;transform-function&gt;")}}.</p>
+A função [CSS](/pt-BR/docs/Web/CSS) **`scale()`** define uma transformação que redimensiona um elemento no plano 2D. Como o redimensionamento é definido por um vetor, ele pode transformar as dimensões verticais e horizontais em escalas diferentes. Seu resultado é um dado do tipo {{cssxref("&lt;transform-function&gt;")}}.
 
-<p><img src="https://mdn.mozillademos.org/files/12115/scale.png" style="height: 325px; width: 392px;"></p>
+![](https://mdn.mozillademos.org/files/12115/scale.png)
 
-<p>Essa transformação de redimensionamento é caracterizada por um vetor bidimensional. Suas coordenadas definem o quanto cada direção deve ser redimensionada. Se as duas coordenadas forem iguais, o redimensionamento é uniforme (<em>isotrópico</em>) e a proporção do elemento é preservada (isto é uma <a href="https://en.wikipedia.org/wiki/Homothetic_transformation">transformação homotética</a>).</p>
+Essa transformação de redimensionamento é caracterizada por um vetor bidimensional. Suas coordenadas definem o quanto cada direção deve ser redimensionada. Se as duas coordenadas forem iguais, o redimensionamento é uniforme (_isotrópico_) e a proporção do elemento é preservada (isto é uma [transformação homotética](https://en.wikipedia.org/wiki/Homothetic_transformation)).
 
-<p>Quando o valor de uma coordenada está fora do alcance [-1, 1], o elemento cresce ao longo daquela dimensão; quando está dentro, ele encolhe. Se for negativo, o resultado é um<a href="https://en.wikipedia.org/wiki/Point_reflection"> ponto de reflexão</a> naquela dimensão. O valor 1 não tem efeito.</p>
+Quando o valor de uma coordenada está fora do alcance \[-1, 1], o elemento cresce ao longo daquela dimensão; quando está dentro, ele encolhe. Se for negativo, o resultado é um[ ponto de reflexão](https://en.wikipedia.org/wiki/Point_reflection) naquela dimensão. O valor 1 não tem efeito.
 
-<div class="note"><strong>Nota:</strong> A função <code>scale()</code> apenas redimensiona em 2D Para redimensionar em 3D, use <code><a href="/en-US/docs/Web/CSS/transform-function/scale3d">scale3d()</a></code> ao invés.</div>
+> **Note:** **Nota:** A função `scale()` apenas redimensiona em 2D Para redimensionar em 3D, use [`scale3d()`](/en-US/docs/Web/CSS/transform-function/scale3d) ao invés.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<p>A função <code>scale()</code> é especificada com um ou dois valores, que representam a quantidade de redimensionamento a ser aplicada em cada direção.</p>
+A função `scale()` é especificada com um ou dois valores, que representam a quantidade de redimensionamento a ser aplicada em cada direção.
 
-<pre class="syntaxbox">scale(<em>sx</em>)
+```
+scale(sx)
 
-scale(<em>sx</em>, <em>sy</em>)
-</pre>
+scale(sx, sy)
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>sx</code></dt>
- <dd>Um {{cssxref("&lt;number&gt;")}} representando a abscissa do vetor de redimensionamento.</dd>
- <dt><code>sy</code></dt>
- <dd>Um {{cssxref("&lt;number&gt;")}} representando a ordenada do vetor de redimensionamento. Se não for definida, seu valor padrão é<code>sx</code>, resultando em um redimensionamento uniforme que preserva a proporção do elemento.</dd>
-</dl>
+- `sx`
+  - : Um {{cssxref("&lt;number&gt;")}} representando a abscissa do vetor de redimensionamento.
+- `sy`
+  - : Um {{cssxref("&lt;number&gt;")}} representando a ordenada do vetor de redimensionamento. Se não for definida, seu valor padrão é`sx`, resultando em um redimensionamento uniforme que preserva a proporção do elemento.
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Coordenadas cartesianas em ℝ<sup>2</sup></th>
-   <th scope="col">Coordenadas homogêneas em ℝℙ<sup>2</sup></th>
-   <th scope="col">Coordenadas cartesianas em ℝ<sup>3</sup></th>
-   <th scope="col">Coordenadas homogêneas em ℝℙ<sup>3</sup></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="1" rowspan="2"><math> <mfenced> <mtable> <mtr><mtd>sx</mtd><mtd>0</mtd></mtr> <mtr><mtd>0</mtd><mtd>sy</mtd></mtr> </mtable> </mfenced> </math></td>
-   <td><math> <mfenced><mtable><mtr>sx<mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>sy</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>sx<mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>sy</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>sx<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>sy</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
-  <tr>
-   <td><code>[sx 0 0 sy 0 0]</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Coordenadas cartesianas em ℝ<sup>2</sup></th>
+      <th scope="col">Coordenadas homogêneas em ℝℙ<sup>2</sup></th>
+      <th scope="col">Coordenadas cartesianas em ℝ<sup>3</sup></th>
+      <th scope="col">Coordenadas homogêneas em ℝℙ<sup>3</sup></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr><mtd>sx</mtd><mtd>0</mtd></mtr>
+              <mtr><mtd>0</mtd><mtd>sy</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>sx<mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr>0<mtd>sy</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>sx<mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr>0<mtd>sy</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>sx<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>sy</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
+              ><mtr
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+    <tr>
+      <td><code>[sx 0 0 sy 0 0]</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Redimensionando_as_dimensões_X_e_Y_juntas">Redimensionando as dimensões X e Y juntas</h3>
+### Redimensionando as dimensões X e Y juntas
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;Normal&lt;/div&gt;
-&lt;div class="scaled"&gt;Redimensionado&lt;/div&gt;</pre>
+```html
+<div>Normal</div>
+<div class="scaled">Redimensionado</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 80px;
   height: 80px;
   background-color: skyblue;
@@ -81,22 +125,25 @@ scale(<em>sx</em>, <em>sy</em>)
   transform: scale(0.7); /* Equal to scaleX(0.7) scaleY(0.7) */
   background-color: pink;
 }
-</pre>
+```
 
-<h4 id="Resultado">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample("Scaling_the_X_and_Y_dimensions_together", "200", "200")}}</p>
+{{EmbedLiveSample("Scaling_the_X_and_Y_dimensions_together", "200", "200")}}
 
-<h3 id="Redimensionando_dimensões_X_e_Y_separadamente_e_transladando_a_origem">Redimensionando dimensões X e Y separadamente e transladando a origem</h3>
+### Redimensionando dimensões X e Y separadamente e transladando a origem
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;Normal&lt;/div&gt;
-&lt;div class="scaled"&gt;Redimensionado&lt;/div&gt;</pre>
+```html
+<div>Normal</div>
+<div class="scaled">Redimensionado</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 80px;
   height: 80px;
   background-color: skyblue;
@@ -107,20 +154,18 @@ scale(<em>sx</em>, <em>sy</em>)
   transform-origin: left;
   background-color: pink;
 }
-</pre>
+```
 
-<h4 id="Resultado_2">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample("Scaling_X_and_Y_dimensions_separately_and_translating_the_origin", "200", "200")}}</p>
+{{EmbedLiveSample("Scaling_X_and_Y_dimensions_separately_and_translating_the_origin", "200", "200")}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>Veja o dado do tipo <code><a href="/en-US/docs/Web/CSS/transform-function#Browser_compatibility">&lt;transform-function&gt;</a></code> para informações de compatibilidade.</p>
+Veja o dado do tipo [`<transform-function>`](/en-US/docs/Web/CSS/transform-function#Browser_compatibility) para informações de compatibilidade.
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
- <li><code><a href="/en-US/docs/Web/CSS/transform-function/scale3d">scale3d()</a></code></li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}
+- [`scale3d()`](/en-US/docs/Web/CSS/transform-function/scale3d)

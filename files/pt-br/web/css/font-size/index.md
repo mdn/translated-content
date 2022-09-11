@@ -3,17 +3,18 @@ title: font-size
 slug: Web/CSS/font-size
 translation_of: Web/CSS/font-size
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A propriedade <strong><code>font-size</code></strong> no <a href="/en-US/docs/Web/CSS">CSS</a> estabelece o tamanho da fonte.</p>
+A propriedade **`font-size`** no [CSS](/pt-BR/docs/Web/CSS) estabelece o tamanho da fonte.
 
-<p>Esta propriedade também é usada para computaro tamanho de <code>em</code>, <code>ex</code>, e outras unidades {{cssxref("&lt;length&gt;")}} relativas.</p>
+Esta propriedade também é usada para computaro tamanho de `em`, `ex`, e outras unidades {{cssxref("&lt;length&gt;")}} relativas.
 
-<div>{{EmbedInteractiveExample("pages/css/font-size.html")}}</div>
+{{EmbedInteractiveExample("pages/css/font-size.html")}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush:css no-line-numbers">/* &lt;absolute-size&gt; values */
+```css
+/* <absolute-size> values */
 font-size: xx-small;
 font-size: x-small;
 font-size: small;
@@ -22,147 +23,149 @@ font-size: large;
 font-size: x-large;
 font-size: xx-large;
 
-/* &lt;relative-size&gt; values */
+/* <relative-size> values */
 font-size: smaller;
 font-size: larger;
 
-/* &lt;length&gt; values */
+/* <length> values */
 font-size: 12px;
 font-size: 0.8em;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 font-size: 80%;
 
 /* Global values */
 font-size: inherit;
 font-size: initial;
 font-size: unset;
-</pre>
+```
 
-<p>The <code>font-size</code> property is specified in one of the following ways:</p>
+The `font-size` property is specified in one of the following ways:
 
-<ul>
- <li>As one of the <a href="#absolute-size">absolute-size</a> or <a href="#relative-size">relative-size</a> keywords</li>
- <li>As a <code>&lt;length&gt;</code> or a <code>&lt;percentage&gt;</code>, relative to the parent element's font size</li>
-</ul>
+- As one of the [absolute-size](#absolute-size) or [relative-size](#relative-size) keywords
+- As a `<length>` or a `<percentage>`, relative to the parent element's font size
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt id="absolute-size"><code>xx-small</code>, <code>x-small</code>, <code>small</code>, <code>medium</code>, <code>large</code>, <code>x-large</code>, <code>xx-large</code></dt>
- <dd>Absolute-size keywords, based on the user's default font size (which is <code>medium</code>).</dd>
- <dt id="relative-size"><code>larger</code>, <code>smaller</code></dt>
- <dd>Relative-size keywords. The font will be larger or smaller relative to the parent element's font size, roughly by the ratio used to separate the absolute-size keywords above.</dd>
- <dt id="&lt;length>">{{cssxref("&lt;length&gt;")}}</dt>
- <dd>
- <p>A positive {{cssxref("&lt;length&gt;")}} value. For most font-relative units (such as <code>em</code> and <code>ex</code>), the font size is relative to the parent element's font size.</p>
+- `xx-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`
+  - : Absolute-size keywords, based on the user's default font size (which is `medium`).
+- `larger`, `smaller`
+  - : Relative-size keywords. The font will be larger or smaller relative to the parent element's font size, roughly by the ratio used to separate the absolute-size keywords above.
+- {{cssxref("&lt;length&gt;")}}
 
- <p>For font-relative units that are root-based (such as <code>rem</code>), the font size is relative to the size of the font used by the {{HTMLElement("html")}} (root) element.</p>
- </dd>
- <dt id="&lt;percentage>">{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>
- <p>A positive {{cssxref("&lt;percentage&gt;")}} value, relative to the parent element's font size.</p>
- </dd>
-</dl>
+  - : A positive {{cssxref("&lt;length&gt;")}} value. For most font-relative units (such as `em` and `ex`), the font size is relative to the parent element's font size.
 
-<div class="note">
-<p><strong>Note:</strong> To maximize accessibility, it is generally best to use values that are relative to the user's default font size.</p>
-</div>
+    For font-relative units that are root-based (such as `rem`), the font size is relative to the size of the font used by the {{HTMLElement("html")}} (root) element.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+- {{cssxref("&lt;percentage&gt;")}}
+  - : A positive {{cssxref("&lt;percentage&gt;")}} value, relative to the parent element's font size.
+
+> **Note:** To maximize accessibility, it is generally best to use values that are relative to the user's default font size.
+
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Possible_approaches">Possible approaches</h2>
+## Possible approaches
 
-<p>There are several ways to specify the font size, including with keywords or numerical values for pixels or ems. Choose the appropriate method based on the needs for the particular web page.</p>
+There are several ways to specify the font size, including with keywords or numerical values for pixels or ems. Choose the appropriate method based on the needs for the particular web page.
 
-<h3 id="Keywords">Keywords</h3>
+### Keywords
 
-<p>Keywords are a good way to set the size of fonts on the web. By setting a keyword font size on the {{HTMLElement("body")}} element, you can set relative font-sizing everywhere else on the page, giving you the ability to easily scale the font up or down on the entire page accordingly.</p>
+Keywords are a good way to set the size of fonts on the web. By setting a keyword font size on the {{HTMLElement("body")}} element, you can set relative font-sizing everywhere else on the page, giving you the ability to easily scale the font up or down on the entire page accordingly.
 
-<h3 id="Pixels">Pixels</h3>
+### Pixels
 
-<p>Setting the font size in pixel values (<code>px</code>) is a good choice when you need pixel accuracy. A px value is static. This is an OS-independent and cross-browser way of literally telling the browsers to render the letters at exactly the number of pixels in height that you specified. The results may vary slightly across browsers, as they may use different algorithms to achieve a similar effect.</p>
+Setting the font size in pixel values (`px`) is a good choice when you need pixel accuracy. A px value is static. This is an OS-independent and cross-browser way of literally telling the browsers to render the letters at exactly the number of pixels in height that you specified. The results may vary slightly across browsers, as they may use different algorithms to achieve a similar effect.
 
-<p>Font sizing settings can also be used in combination. For example, if a parent element is set to <code>16px</code> and its child element is set to <code>larger</code>, the child element displays larger than the parent element in the page.</p>
+Font sizing settings can also be used in combination. For example, if a parent element is set to `16px` and its child element is set to `larger`, the child element displays larger than the parent element in the page.
 
-<div class="note"><strong>Note:</strong> Defining font sizes in <code>px</code> is <em><a href="https://en.wikipedia.org/wiki/Web_accessibility">not accessible</a></em>, because the user cannot change the font size from the browser. For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer. Avoid using them for font sizes if you wish to create an inclusive design.</div>
+> **Note:** Defining font sizes in `px` is _[not accessible](https://en.wikipedia.org/wiki/Web_accessibility)_, because the user cannot change the font size from the browser. For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer. Avoid using them for font sizes if you wish to create an inclusive design.
 
-<h3 id="Ems">Ems</h3>
+### Ems
 
-<p>Another way of setting the font size is with <code>em</code> values. The size of an <code>em</code> value is dynamic. When defining the <code>font-size</code> property, an em is equal to the size of the font that applies to the parent of the element in question. If you haven't set the font size anywhere on the page, then it is the browser default, which is often 16px. So, by default 1em = 16px, and 2em = 32px. If you set a <code>font-size</code> of 20px on the body element, then 1em = 20px and 2em = 40px. Note that the value 2 is essentially a multiplier of the current em size.</p>
+Another way of setting the font size is with `em` values. The size of an `em` value is dynamic. When defining the `font-size` property, an em is equal to the size of the font that applies to the parent of the element in question. If you haven't set the font size anywhere on the page, then it is the browser default, which is often 16px. So, by default 1em = 16px, and 2em = 32px. If you set a `font-size` of 20px on the body element, then 1em = 20px and 2em = 40px. Note that the value 2 is essentially a multiplier of the current em size.
 
-<p>In order to calculate the em equivalent for any pixel value required, you can use this formula:</p>
+In order to calculate the em equivalent for any pixel value required, you can use this formula:
 
-<pre class="brush: plain">em = desired element pixel value / parent element font-size in pixels</pre>
+```plain
+em = desired element pixel value / parent element font-size in pixels
+```
 
-<p>For example, suppose the font-size of the body of the page is set to 16px. If the font-size you want is 12px, then you should specify 0.75em (because 12/16 = 0.75). Similarly, if you want a font size of 10px, then specify 0.625em (10/16 = 0.625); for 22px, specify 1.375em (22/16).</p>
+For example, suppose the font-size of the body of the page is set to 16px. If the font-size you want is 12px, then you should specify 0.75em (because 12/16 = 0.75). Similarly, if you want a font size of 10px, then specify 0.625em (10/16 = 0.625); for 22px, specify 1.375em (22/16).
 
-<p>The em is a very useful unit in CSS, since it automatically adapts its length relative to the font that the reader chooses to use.</p>
+The em is a very useful unit in CSS, since it automatically adapts its length relative to the font that the reader chooses to use.
 
-<p>One important fact to keep in mind: em values compound. Take the following HTML and CSS:</p>
+One important fact to keep in mind: em values compound. Take the following HTML and CSS:
 
-<pre class="brush: css">html {
+```css
+html {
   font-size: 62.5%; /* font-size 1em = 10px on default browser settings */
 }
 span {
   font-size: 1.6em;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;div&gt;
-&lt;span&gt;Outer &lt;span&gt;inner&lt;/span&gt; outer&lt;/span&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+<span>Outer <span>inner</span> outer</span>
+</div>
+```
 
-<p>The result is:</p>
+The result is:
 
-<p>{{EmbedLiveSample("Ems", 400, 40)}}</p>
+{{EmbedLiveSample("Ems", 400, 40)}}
 
-<p>Assuming that the browser's default <code>font-size</code> is 16px, the words “outer” would be rendered at 16px, but the word “inner” would be rendered at 25.6px. This is because the inner {{HTMLElement("span")}}'s <code>font-size</code> is 1.6em which is relative to its parent's <code>font-size</code>, which is in turn relative to its parent's <code>font-size</code>. This is often called <strong>compounding</strong>.</p>
+Assuming that the browser's default `font-size` is 16px, the words “outer” would be rendered at 16px, but the word “inner” would be rendered at 25.6px. This is because the inner {{HTMLElement("span")}}'s `font-size` is 1.6em which is relative to its parent's `font-size`, which is in turn relative to its parent's `font-size`. This is often called **compounding**.
 
-<h3 id="Rems">Rems</h3>
+### Rems
 
-<p><code>rem</code> values were invented in order to sidestep the compounding problem. <code>rem</code> values are relative to the root <code>html</code> element, not the parent element. In other words, it lets you specify a font size in a relative fashion without being affected by the size of the parent, thereby eliminating compounding.</p>
+`rem` values were invented in order to sidestep the compounding problem. `rem` values are relative to the root `html` element, not the parent element. In other words, it lets you specify a font size in a relative fashion without being affected by the size of the parent, thereby eliminating compounding.
 
-<p>The CSS below is nearly identical to the previous example. The only exception is that the unit has been changed to <code>rem</code>.</p>
+The CSS below is nearly identical to the previous example. The only exception is that the unit has been changed to `rem`.
 
-<pre class="brush: css">html {
+```css
+html {
   font-size: 62.5%; /* font-size 1em = 10px on default browser settings */
 }
 span {
   font-size: 1.6rem;
 }
-</pre>
+```
 
-<p>Then we apply this CSS to the same HTML, which looks like this:</p>
+Then we apply this CSS to the same HTML, which looks like this:
 
-<pre class="brush: html">&lt;span&gt;Outer &lt;span&gt;inner&lt;/span&gt; outer&lt;/span&gt;</pre>
+```html
+<span>Outer <span>inner</span> outer</span>
+```
 
-<p>{{EmbedLiveSample("Rems", 400, 40)}}</p>
+{{EmbedLiveSample("Rems", 400, 40)}}
 
-<p>In this example, the words “outer inner outer” are all displayed at 16px (assuming that the browser's <code>font-size</code> has been left at the default value of 16px).</p>
+In this example, the words “outer inner outer” are all displayed at 16px (assuming that the browser's `font-size` has been left at the default value of 16px).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Example_1">Example 1</h3>
+### Example 1
 
-<pre class="brush: css">/* Sets paragraph text to be very large */
+```css
+/* Sets paragraph text to be very large */
 p { font-size: xx-large; }
 
-/* Sets &lt;h1&gt; text to be 2.5 times the size
+/* Sets <h1> text to be 2.5 times the size
    of the text around it */
 h1 { font-size: 250%; }
 
 /* Sets text enclosed within span tag to be 16px */
 span { font-size: 16px; }
-</pre>
+```
 
-<h3 id="Example_2">Example 2</h3>
+### Example 2
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.small {
+```css
+.small {
   font-size: xx-small;
 }
 .larger {
@@ -174,59 +177,36 @@ span { font-size: 16px; }
 .percent {
   font-size: 200%;
 }
-</pre>
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h1 class="small"&gt;Small H1&lt;/h1&gt;
-&lt;h1 class="larger"&gt;Larger H1&lt;/h1&gt;
-&lt;h1 class="point"&gt;24 point H1&lt;/h1&gt;
-&lt;h1 class="percent"&gt;200% H1&lt;/h1&gt;</pre>
+```html
+<h1 class="small">Small H1</h1>
+<h1 class="larger">Larger H1</h1>
+<h1 class="point">24 point H1</h1>
+<h1 class="percent">200% H1</h1>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Example_2','600','200')}}</p>
+{{EmbedLiveSample('Example_2','600','200')}}
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p><code>em</code> and <code>ex</code> units on the {{cssxref("font-size")}} property are relative to the parent element's font size (unlike all other properties, where they're relative to the font size on the element). This means <code>em</code> units and percentages do the same thing for {{cssxref("font-size")}}.</p>
+`em` and `ex` units on the {{cssxref("font-size")}} property are relative to the parent element's font size (unlike all other properties, where they're relative to the font size on the element). This means `em` units and percentages do the same thing for {{cssxref("font-size")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#font-size-prop', 'font-size')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'font-size')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Defines <code>font-size</code> as animatable.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'fonts.html#propdef-font-size', 'font-size')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#font-size', 'font-size')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                                   | Comment                            |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------- |
+| {{SpecName('CSS3 Fonts', '#font-size-prop', 'font-size')}}             | {{Spec2('CSS3 Fonts')}}         | No change.                         |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'font-size')}}     | {{Spec2('CSS3 Transitions')}} | Defines `font-size` as animatable. |
+| {{SpecName('CSS2.1', 'fonts.html#propdef-font-size', 'font-size')}} | {{Spec2('CSS2.1')}}                 | No change.                         |
+| {{SpecName('CSS1', '#font-size', 'font-size')}}                         | {{Spec2('CSS1')}}                 | Initial definition.                |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("css.properties.font-size")}}</p>
+{{Compat("css.properties.font-size")}}

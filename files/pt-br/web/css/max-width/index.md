@@ -11,24 +11,21 @@ tags:
   - Referencia
   - largura
   - max-width
-  - 'receita:propriedade-css'
+  - receita:propriedade-css
   - tamanho
 translation_of: Web/CSS/max-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}A propriedade **`max-width`** do [CSS](/pt-BR/docs/CSS) estabelece a largura máxima de um elemento. Ele evita que o [valor usado](/pt-BR/docs/Web/CSS/used_value) da propriedade {{ cssxref("width") }} se torne maior que o valor especificado por `max-width`.{{EmbedInteractiveExample("pages/css/max-width.html")}}
 
-<div>A propriedade <strong><code>max-width</code></strong> do <a href="/en-US/docs/CSS">CSS</a> estabelece a largura máxima de um elemento. Ele evita que o <a href="/en-US/docs/Web/CSS/used_value">valor usado</a> da propriedade {{ cssxref("width") }} se torne maior que o valor especificado por <code>max-width</code>.</div>
+`max-width` substitui {{cssxref("width")}}, mas {{cssxref("min-width")}} substitui `max-width`.
 
-<div>{{EmbedInteractiveExample("pages/css/max-width.html")}}</div>
+## Sintaxe
 
-<p><code>max-width</code> substitui {{cssxref("width")}}, mas {{cssxref("min-width")}} substitui <code>max-width</code>.</p>
-
-<h2 id="Sintaxe">Sintaxe</h2>
-
-<pre class="brush:css">/* &lt;length&gt; valor */
+```css
+/* <length> valor */
 max-width: 3.5em;
 
-/* &lt;porcentagem&gt; valor */
+/* <porcentagem> valor */
 max-width: 75%;
 
 /* Valores de keyword */
@@ -42,60 +39,55 @@ max-width: fill-available;
 max-width: inherit;
 max-width: initial;
 max-width: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Define a <code>max-width</code> como um valor absoluto.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Define a <code>max-width</code> como uma porcentagem da largura do bloco que o contém.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : Define a `max-width` como um valor absoluto.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Define a `max-width` como uma porcentagem da largura do bloco que o contém.
 
-<h4 id="Valores_Keyword">Valores Keyword</h4>
+#### Valores Keyword
 
-<dl>
- <dt><code>none</code></dt>
- <dd>A largura não possui valor máximo. (padrão)</dd>
- <dt><code>max-content</code>{{experimental_inline()}}</dt>
- <dd>A <code>max-width</code> intrínseca preferida.</dd>
- <dt><code>min-content</code>{{experimental_inline()}}</dt>
- <dd>O mínimo <code>max-width</code> intrínseco.</dd>
- <dt><code>fit-content({{cssxref("&lt;length-percentage&gt;")}})</code></dt>
- <dd>Use a fórmula <code>fit-content</code> com o espaço disponível substituído pelo argumento especificado, i.e. <code>min(max-content, max(min-content, <em>argumento</em>)).</code></dd>
-</dl>
+- `none`
+  - : A largura não possui valor máximo. (padrão)
+- `max-content`{{experimental_inline()}}
+  - : A `max-width` intrínseca preferida.
+- `min-content`{{experimental_inline()}}
+  - : O mínimo `max-width` intrínseco.
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+  - : Use a fórmula `fit-content` com o espaço disponível substituído pelo argumento especificado, i.e. `min(max-content, max(min-content, argumento)).`
 
-<h4 id="Preocupações_de_Acessibilidade">Preocupações de Acessibilidade</h4>
+#### Preocupações de Acessibilidade
 
-<p>Certifique-se que os elementos definidos com <code>max-width</code> não sejam truncados e/ou não obscureçam outros conteúdos quando a página for ampliada para aumentar o tamanho do texto.</p>
+Certifique-se que os elementos definidos com `max-width` não sejam truncados e/ou não obscureçam outros conteúdos quando a página for ampliada para aumentar o tamanho do texto.
 
-<dl>
- <dt><code>fill-available</code>{{experimental_inline()}}</dt>
- <dd>A largura contida do bloco sem o margin, border e padding horizontal. (Note que alguns navegadores implementaram um nome antigo para essa keyword, <code>available</code>.)</dd>
- <dt><code>fit-content</code>{{experimental_inline()}}</dt>
- <dd>O mesmo que <code>max-content.</code></dd>
-</dl>
+- `fill-available`{{experimental_inline()}}
+  - : A largura contida do bloco sem o margin, border e padding horizontal. (Note que alguns navegadores implementaram um nome antigo para essa keyword, `available`.)
+- `fit-content`{{experimental_inline()}}
+  - : O mesmo que `max-content.`
 
-<h4 id="Sintaxe_formal">Sintaxe formal</h4>
+#### Sintaxe formal
 
 {{csssyntax}}
 
-<h4 id="Exemplos">Exemplos</h4>
+#### Exemplos
 
-<h3 id="Definindo_a_largura_máxima_em_pixels">Definindo a largura máxima em pixels</h3>
+### Definindo a largura máxima em pixels
 
-<p>Neste exemplo, o "filho" terá 150 pixels de largura ou a largura do "pai", o que for menor:</p>
+Neste exemplo, o "filho" terá 150 pixels de largura ou a largura do "pai", o que for menor:
 
-<div id="basic-max-width-demo">
-<pre class="brush: html">&lt;div id="pai"&gt;
-  &lt;div id="filho"&gt;
+```html
+<div id="pai">
+  <div id="filho">
     Fusce pulvinar vestibulum eros, sed luctus ex lobortis quis.
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+  </div>
+</div>
+```
 
-<pre class="brush: css">#pai {
+```css
+#pai {
   background: lightblue;
   width: 300px;
 }
@@ -105,30 +97,24 @@ max-width: unset;
   width: 100%;
   max-width: 150px;
 }
-</pre>
-</div>
+```
 
-<h4 id="Resultado">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample("<code>Setting_max_width_in_pixels</code>", 350, 100)}}</p>
+{{EmbedLiveSample("<code>Setting_max_width_in_pixels</code>", 350, 100)}}
 
+O valor de `fit-content` pode ser usado para atribuir o comprimento de um elemento no tamanho intrínseco necessário pelo seu conteúdo:
 
-
-
-
-
-
-<p>O valor de <code>fit-content</code> pode ser usado para atribuir o comprimento de um elemento no tamanho intrínseco necessário pelo seu conteúdo:</p>
-
-<div id="fit-content-demo">
-<pre class="brush: html" style="display: none;">&lt;div id="parent"&gt;
-    &lt;div id="child"&gt;
+```html
+<div id="parent">
+    <div id="child">
         Child Text
-    &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+    </div>
+</div>
+```
 
-<pre class="brush: css">#parent {
+```css
+#parent {
   background: lightblue;
   width: 300px;
 }
@@ -139,58 +125,32 @@ max-width: unset;
   max-width: -moz-fit-content;
   max-width: -webkit-fit-content;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample("fit-content-demo", 400, 100)}}</p>
+{{EmbedLiveSample("fit-content-demo", 400, 100)}}
 
-<h2 id="Preocupações_de_acessibilidade">Preocupações de acessibilidade</h2>
+## Preocupações de acessibilidade
 
-<p>Garantir que os elementos atribuidos com <code>max-width</code> não estejam cortados e/ou não obscureça outro conteúdo quando a página é ampliada para aumentar o tamanho do texto. </p>
+Garantir que os elementos atribuidos com `max-width` não estejam cortados e/ou não obscureça outro conteúdo quando a página é ampliada para aumentar o tamanho do texto.
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html" rel="noopener">Understanding Success Criterion 1.4.4  | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/pt-BR/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Sizing', '#width-height-keywords', 'max-width') }}</td>
-   <td>{{ Spec2('CSS3 Sizing') }}</td>
-   <td>Adiciona o <code>max-content</code>, <code>min-content</code>, <code>fit-content</code>, e <code>fill-available</code> keywords.<em> </em>(Ambos CSS3 Box e CSS3 Writing Modes são rascunhos usados para definir essas keywords, mas foram substituídas por essa especificação.<em>)</em></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Transitions', '#animatable-css', 'max-width') }}</td>
-   <td>{{ Spec2('CSS3 Transitions') }}</td>
-   <td>Define <code>max-width</code> como animável.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'visudet.html#min-max-widths', 'max-width') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Status                                   | Comentário                                                                                                                                                                                                                        |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{ SpecName('CSS3 Sizing', '#width-height-keywords', 'max-width') }} | {{ Spec2('CSS3 Sizing') }}     | Adiciona o `max-content`, `min-content`, `fit-content`, e `fill-available` keywords.\_ _(Ambos CSS3 Box e CSS3 Writing Modes são rascunhos usados para definir essas keywords, mas foram substituídas por essa especificação._)\_ |
+| {{ SpecName('CSS3 Transitions', '#animatable-css', 'max-width') }}     | {{ Spec2('CSS3 Transitions') }} | Define `max-width` como animável.                                                                                                                                                                                                 |
+| {{ SpecName('CSS2.1', 'visudet.html#min-max-widths', 'max-width') }} | {{ Spec2('CSS2.1') }}             | Definição inicial.                                                                                                                                                                                                                |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("css.properties.max-width")}}</p>
+{{Compat("css.properties.max-width")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ Cssxref("width") }}, {{ Cssxref("min-width") }}, {{ Cssxref("max-height") }}</li>
- <li><a href="/en/CSS/box_model" title="en/CSS/box_model">The box model</a>, {{ Cssxref("box-sizing") }}</li>
-</ul>
+- {{ Cssxref("width") }}, {{ Cssxref("min-width") }}, {{ Cssxref("max-height") }}
+- [The box model](/en/CSS/box_model "en/CSS/box_model"), {{ Cssxref("box-sizing") }}

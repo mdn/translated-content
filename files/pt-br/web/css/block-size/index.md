@@ -8,19 +8,20 @@ tags:
   - block-size
 translation_of: Web/CSS/block-size
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>A propriedade <a href="/en-US/docs/Web/CSS" title="CSS">CSS </a><strong><code>block-size</code></strong> define o tamanho horizontal ou vertical de um elemento bloco. Corresponde à propriedade {{cssxref("width")}} ou {{cssxref("height")}}, dependendo do valor do {{cssxref("writing-mode")}}.</p>
+A propriedade [CSS ](/pt-BR/docs/Web/CSS "CSS")**`block-size`** define o tamanho horizontal ou vertical de um elemento bloco. Corresponde à propriedade {{cssxref("width")}} ou {{cssxref("height")}}, dependendo do valor do {{cssxref("writing-mode")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/block-size.html")}} </div>
+{{EmbedInteractiveExample("pages/css/block-size.html")}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush:css no-line-numbers">/* valores &lt;length&gt; */
+```css
+/* valores <length> */
 block-size: 300px;
 block-size: 25em;
 
-/* valores &lt;percentage&gt; */
+/* valores <percentage> */
 block-size: 75%;
 
 /* valores de Keyword */
@@ -36,65 +37,53 @@ block-size: auto;
 block-size: inherit;
 block-size: initial;
 block-size: unset;
-</pre>
+```
 
-<p>Se o modo de escrita está orientado verticalmente, o valor do <code>block-size</code> refere-se à largura do elemento; senão, refere-se à altura do elemento. Uma propriedade relacionada é {{cssxref("inline-size")}}, que define as outras dimensões do elemento.</p>
+Se o modo de escrita está orientado verticalmente, o valor do `block-size` refere-se à largura do elemento; senão, refere-se à altura do elemento. Uma propriedade relacionada é {{cssxref("inline-size")}}, que define as outras dimensões do elemento.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxe_2">Sintaxe</h2>
+## Sintaxe
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<p>A propriedade <code>block-size</code> leva os mesmos valores que as propriedades {{cssxref("width")}} e {{cssxref("height")}}.</p>
+A propriedade `block-size` leva os mesmos valores que as propriedades {{cssxref("width")}} e {{cssxref("height")}}.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-</pre>
+```html
+<p class="exampleText">Example text</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.exampleText {
+```css
+.exampleText {
   writing-mode: vertical-rl;
   background-color: yellow;
   block-size: 200px;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#logical-dimension-properties", "block-size")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                                           | Comment           |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ----------------- |
+| {{SpecName("CSS Logical Properties", "#logical-dimension-properties", "block-size")}} | {{Spec2("CSS Logical Properties")}} | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("css.properties.block-size")}}</p>
+{{Compat("css.properties.block-size")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>As propriedades: {{cssxref("width")}} and {{cssxref("height")}}</li>
- <li>{{cssxref("writing-mode")}}</li>
-</ul>
+- As propriedades: {{cssxref("width")}} and {{cssxref("height")}}
+- {{cssxref("writing-mode")}}

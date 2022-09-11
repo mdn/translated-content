@@ -9,23 +9,17 @@ tags:
 translation_of: Web/CSS/initial_value
 original_slug: Web/CSS/valor_inicial
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p>O <strong>Valor inicial</strong> de uma propriedade <a href="/pt-BR/docs/Web/CSS">CSS</a> é o seu valor padrão, como listado em sua tabela de definição. O uso do valor inicial varia caso a propriedade seja herdada ou não.</p>
+O **Valor inicial** de uma propriedade [CSS](/pt-BR/docs/Web/CSS) é o seu valor padrão, como listado em sua tabela de definição. O uso do valor inicial varia caso a propriedade seja herdada ou não.
 
-<ul>
- <li>Para <a href="/pt-BR/docs/Web/CSS/inheritance#Propriedades_herdadas">propriedades herdadas</a>, o valor inicial é usado apenas em seu elemento raíz, desde que nenhum <a href="/pt-BR/docs/Web/CSS/valor_espeficifco">valor especificado</a> seja fornecido.</li>
- <li>Para <a href="/pt-BR/docs/Web/CSS/inheritance#Propriedades_nao_herdadas">propriedades não-herdadas</a>, o valor inicial é usado em todos os elementos, enquanto nenhum <a href="/pt-BR/docs/Web/CSS/valor_espeficifco">valor especificado</a> é fornecido</li>
-</ul>
+- Para [propriedades herdadas](/pt-BR/docs/Web/CSS/inheritance#Propriedades_herdadas), o valor inicial é usado apenas em seu elemento raíz, desde que nenhum [valor especificado](/pt-BR/docs/Web/CSS/valor_espeficifco) seja fornecido.
+- Para [propriedades não-herdadas](/pt-BR/docs/Web/CSS/inheritance#Propriedades_nao_herdadas), o valor inicial é usado em todos os elementos, enquanto nenhum [valor especificado](/pt-BR/docs/Web/CSS/valor_espeficifco) é fornecido
 
-<div class="blockIndicator note">
-<p><strong>Nota</strong>: Você pode especificar explicitamente um valor inicial, utilizando a palavra-chave {{cssxref("initial")}}</p>
-</div>
+> **Note:** **Nota**: Você pode especificar explicitamente um valor inicial, utilizando a palavra-chave {{cssxref("initial")}}
 
-<h2 id="Veja_Também">Veja Também</h2>
+## Veja Também
 
-<ul>
- <li><a href="/pt-BR/docs/Web/CSS/CSS_Reference" title="CSS Reference">Refercia CSS</a></li>
- <li>{{ CSS_key_concepts() }}</li>
- <li><code><a href="/pt-BR/docs/CSS/initial" title="en/CSS/initial">initial</a></code></li>
-</ul>
+- [Refercia CSS](/pt-BR/docs/Web/CSS/CSS_Reference "CSS Reference")
+- {{ CSS_key_concepts() }}
+- [`initial`](/pt-BR/docs/CSS/initial "en/CSS/initial")

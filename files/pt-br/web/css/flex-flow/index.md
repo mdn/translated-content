@@ -5,28 +5,27 @@ tags:
   - flex-box
 translation_of: Web/CSS/flex-flow
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A propriedade <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>flex-flow</code></strong> é uma <a href="/en-US/docs/Web/CSS/Shorthand_properties">junção</a> das propriedades {{cssxref("flex-direction")}} e {{cssxref("flex-wrap")}}.</p>
+A propriedade [CSS](/pt-BR/docs/Web/CSS) **`flex-flow`** é uma [junção](/pt-BR/docs/Web/CSS/Shorthand_properties) das propriedades {{cssxref("flex-direction")}} e {{cssxref("flex-wrap")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/flex-flow.html")}}</div>
+{{EmbedInteractiveExample("pages/css/flex-flow.html")}}
 
+## Sintaxe
 
-
-<h2 id="Sintaxe">Sintaxe</h2>
-
-<pre class="brush:css no-line-numbers">/* flex-flow: &lt;'flex-direction'&gt; */
+```css
+/* flex-flow: <'flex-direction'> */
 flex-flow: row;
 flex-flow: row-reverse;
 flex-flow: column;
 flex-flow: column-reverse;
 
-/* flex-flow: &lt;'flex-wrap'&gt; */
+/* flex-flow: <'flex-wrap'> */
 flex-flow: nowrap;
 flex-flow: wrap;
 flex-flow: wrap-reverse;
 
-/* flex-flow: &lt;'flex-direction'&gt; and &lt;'flex-wrap'&gt; */
+/* flex-flow: <'flex-direction'> and <'flex-wrap'> */
 flex-flow: row nowrap;
 flex-flow: column wrap;
 flex-flow: column-reverse wrap-reverse;
@@ -35,55 +34,39 @@ flex-flow: column-reverse wrap-reverse;
 flex-flow: inherit;
 flex-flow: initial;
 flex-flow: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<p>Consulte {{cssxref("flex-direction")}} e {{cssxref("flex-wrap")}} para ver os detalhes sobre os valores.</p>
+Consulte {{cssxref("flex-direction")}} e {{cssxref("flex-wrap")}} para ver os detalhes sobre os valores.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush:css">elemento {
+```css
+elemento {
   /* O eixo principal é a direção do bloco com main-start e main-end invertidos.
    * Os itens flex estão dispostos em múltiplas linhas */
   flex-flow: column-reverse wrap;
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Flexbox','#flex-flow-property','flex-flow') }}</td>
-   <td>{{ Spec2('CSS3 Flexbox') }}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Status                               | Comentário        |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------------- |
+| {{ SpecName('CSS3 Flexbox','#flex-flow-property','flex-flow') }} | {{ Spec2('CSS3 Flexbox') }} | Definição inicial |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("css.properties.flex-flow")}}
 
+## Veja também
 
-<p>{{Compat("css.properties.flex-flow")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>Guia de Flexbox CSS: <em><a href="/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Conceitos_Basicos_do_Flexbox">Conceitos básicos de flexbox</a></em></li>
- <li>Guia de Flexbox CSS: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items">Ordenando itens flex</a></em></li>
-</ul>
+- Guia de Flexbox CSS: _[Conceitos básicos de flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Conceitos_Basicos_do_Flexbox)_
+- Guia de Flexbox CSS: _[Ordenando itens flex](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_

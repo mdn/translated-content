@@ -3,43 +3,45 @@ title: Propriedades personalizadas (--*)
 slug: Web/CSS/--*
 translation_of: Web/CSS/--*
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p class="summary">Nomes de propriedades com o prefixo <code>--</code>, como <code>--example-name</code>, representam <em>Propriedade personalizadas</em> que contém um valor que pode ser reutilizado por todo o documento usando a função ({{cssxref("var")}}).</p>
+Nomes de propriedades com o prefixo `--`, como `--example-name`, representam _Propriedade personalizadas_ que contém um valor que pode ser reutilizado por todo o documento usando a função ({{cssxref("var")}}).
 
-<p>Propriedades personalizadas participam na cascata: cada uma delas pode aparecer várias vezes e o valor da variável corresponderá ao valor definido na propriedade personalizada, decidido pelo algoritmo de cascata.</p>
+Propriedades personalizadas participam na cascata: cada uma delas pode aparecer várias vezes e o valor da variável corresponderá ao valor definido na propriedade personalizada, decidido pelo algoritmo de cascata.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush: css">--somekeyword: left;
+```css
+--somekeyword: left;
 --somecolor: #0000ff;
 --somecomplexvalue: 3px 6px rgb(20, 32, 54);
-</pre>
+```
 
-<dl>
- <dt><code>&lt;declaration-value&gt;</code></dt>
- <dd>Este valor corresponde a qualquer sequência de um ou mais tokens, desde que a sequência não contenha tokens não permitidos. Representa a totalidade do que uma declaração válida pode ter como valor.</dd>
-</dl>
+- `<declaration-value>`
+  - : Este valor corresponde a qualquer sequência de um ou mais tokens, desde que a sequência não contenha tokens não permitidos. Representa a totalidade do que uma declaração válida pode ter como valor.
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="firstParagraph"&gt;Este parágrafo deve ter um fundo azul e um texto amarelo.&lt;/p&gt;
-&lt;p id="secondParagraph"&gt;Este parágrafo deve ter um fundo amarelo e um texto azul.&lt;/p&gt;
-&lt;div id="container"&gt;
-  &lt;p id="thirdParagraph"&gt;Este parágrafo deve ter um fundo verde e um texto amarelo.&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<p id="firstParagraph">Este parágrafo deve ter um fundo azul e um texto amarelo.</p>
+<p id="secondParagraph">Este parágrafo deve ter um fundo amarelo e um texto azul.</p>
+<div id="container">
+  <p id="thirdParagraph">Este parágrafo deve ter um fundo verde e um texto amarelo.</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight[2,3]">:root {
+```css
+:root {
   --first-color: #488cff;
   --second-color: #ffff8c;
 }
@@ -62,38 +64,22 @@ translation_of: Web/CSS/--*
   background-color: var(--first-color);
   color: var(--second-color);
 }
+```
 
-</pre>
+### Resultado
 
-<h3 id="Resultado">Resultado</h3>
+{{EmbedLiveSample('Example', 500, 130)}}
 
-<p>{{EmbedLiveSample('Example', 500, 130)}}</p>
+## Especificações
 
-<h2 id="Especificações">Especificações</h2>
+| Specification                                                                    | Status                               | Comment            |
+| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName("CSS3 Variables", "#defining-variables", "--*")}} | {{Spec2("CSS3 Variables")}} | Initial definition |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Variables", "#defining-variables", "--*")}}</td>
-   <td>{{Spec2("CSS3 Variables")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.properties.custom-property")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/pt-BR/docs/Web/CSS/Using_CSS_variables">Utilizando variáveis CSS</a></li>
-</ul>
+- [Utilizando variáveis CSS](/pt-BR/docs/Web/CSS/Using_CSS_variables)

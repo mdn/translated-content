@@ -9,17 +9,16 @@ tags:
   - Referencia
 translation_of: Web/CSS/align-self
 ---
-<p>A propriedade <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>align-self</code></strong> alinha itens-flex da linha flex alvo, sobreescrevendo o valor {{cssxref("align-items")}}. Se alguma dos eixos das margens do dado item está estabelecido como <code>auto</code>, então <code>align-self</code> é ignorado.</p>
+A propriedade [CSS](/pt-BR/docs/Web/CSS) **`align-self`** alinha itens-flex da linha flex alvo, sobreescrevendo o valor {{cssxref("align-items")}}. Se alguma dos eixos das margens do dado item está estabelecido como `auto`, então `align-self` é ignorado.
 
-<div>{{EmbedInteractiveExample("pages/css/align-self.html")}}</div>
+{{EmbedInteractiveExample("pages/css/align-self.html")}}
 
+A propriedade não se aplica a caixas _block-level_, ou células de tabela.
 
+## Sintaxe
 
-<p>A propriedade não se aplica a caixas <em>block-level</em>, ou células de tabela.</p>
-
-<h2 id="Sintaxe">Sintaxe</h2>
-
-<pre class="brush: css no-line-numbers">/* valores de palavras-chave */
+```css
+/* valores de palavras-chave */
 align-self: auto;
 align-self: normal;
 
@@ -46,63 +45,64 @@ align-self: unsafe center;
 /* Valores globais */
 align-self: inherit;
 align-self: initial;
-align-self: unset;</pre>
+align-self: unset;
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>O valor {{cssxref("align-items")}} é originado do valor de seu pai.</dd>
- <dt><code>normal</code></dt>
- <dd>O efeito dessa palavra-chave depende do modo de layout em que nos encontramos:
- <ul>
-  <li>Em layouts absolutamente posicionados, a palavra-chave se comporta como <code>start</code> em caixas absolutamente posicionadas <em>replaced</em>, e como <code>stretch</code> em caixas absolutamente posicionadas <em>all other</em>.</li>
-  <li>Em posição estática de layouts absolutamente posicionados, a palavra-chave se comporta como <code>stretch</code>.</li>
-  <li>Para itens-flex, a palavra-chave se comporta como <code>stretch</code>.</li>
-  <li>Para itens-grid, essa palavra-chave leva ao comportamento similar ao de <code>stretch</code>, com exceção de caixas com aspect ratio ou tamanhos intrínsecos onde se comportam como <code>start</code>.</li>
-  <li>A propriedade não se aplica para caixas <em>block-level</em>, e para células de tabela.</li>
- </ul>
- </dd>
- <dt><code>self-start</code></dt>
- <dd>Alinha os itens de maneira a mesclar a borda do alinhamento do container correspondente com o lado inicial do item no eixo.</dd>
- <dt><code>self-end</code></dt>
- <dd>Alinha os itens de maneira a mesclar a borda do alinhamento do container correspondente com o lado final do item no eixo.</dd>
- <dt><code>flex-start</code></dt>
- <dd>A borda da margem inicial do item flex é mesclada com a borda inicial da linha.</dd>
- <dt><code>flex-end</code></dt>
- <dd>A borda da margem fim do item flex é mesclada com a borda fim da linha.</dd>
- <dt><code>center</code></dt>
- <dd>A caixa-margem do item flex é centralizada ao longo da linha no eixo transversal. Se o tamanho do item é superior to container flex, então ele irá transbordar de maneira equivalente em ambas direções.</dd>
- <dt><code>baseline<br>
- first baseline</code><br>
- <code>last baseline</code></dt>
- <dd>Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.<br>
- The fallback alignment for <code>first baseline</code> is <code>start</code>, the one for <code>last baseline</code> is <code>end</code>.</dd>
- <dt><code>stretch</code></dt>
- <dd>Caso o tamanho combinado dos itens ao longo do eixo transversal seja menor do que o tamanho do container de alinhamento, e caso o tamanho do item segue o estilo <code>auto</code>, seu tamanho cresce igualmente (mas não proporcionalmente), enquanto que ainda respeitando as restrições impostas por {{cssxref("max-height")}}/{{cssxref("max-width")}} (ou a funcionalidade equivalente), de maneira que o tamanho combinado de todos itens tamanho-<code>auto</code> preencha exatamente o container de alinhamento ao longo do eixo transversal.</dd>
- <dt><code>safe</code></dt>
- <dd>Caso o tamanho do item supere o alinhamento do container, o item é alinhado como se o modo de alinhamento fosse <code>start</code>.</dd>
- <dt><code>unsafe</code></dt>
- <dd>Independente dos tamanhos relativos do item e do alinhamento do container, o valor do alinhmento dado é mantido.</dd>
-</dl>
+- `auto`
+  - : O valor {{cssxref("align-items")}} é originado do valor de seu pai.
+- `normal`
 
-<h3 id="Sintaxe_formal">Sintaxe formal</h3>
+  - : O efeito dessa palavra-chave depende do modo de layout em que nos encontramos:
+
+    - Em layouts absolutamente posicionados, a palavra-chave se comporta como `start` em caixas absolutamente posicionadas _replaced_, e como `stretch` em caixas absolutamente posicionadas _all other_.
+    - Em posição estática de layouts absolutamente posicionados, a palavra-chave se comporta como `stretch`.
+    - Para itens-flex, a palavra-chave se comporta como `stretch`.
+    - Para itens-grid, essa palavra-chave leva ao comportamento similar ao de `stretch`, com exceção de caixas com aspect ratio ou tamanhos intrínsecos onde se comportam como `start`.
+    - A propriedade não se aplica para caixas _block-level_, e para células de tabela.
+
+- `self-start`
+  - : Alinha os itens de maneira a mesclar a borda do alinhamento do container correspondente com o lado inicial do item no eixo.
+- `self-end`
+  - : Alinha os itens de maneira a mesclar a borda do alinhamento do container correspondente com o lado final do item no eixo.
+- `flex-start`
+  - : A borda da margem inicial do item flex é mesclada com a borda inicial da linha.
+- `flex-end`
+  - : A borda da margem fim do item flex é mesclada com a borda fim da linha.
+- `center`
+  - : A caixa-margem do item flex é centralizada ao longo da linha no eixo transversal. Se o tamanho do item é superior to container flex, então ele irá transbordar de maneira equivalente em ambas direções.
+- `baseline first baseline`
+  `last baseline`
+  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
+    The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
+- `stretch`
+  - : Caso o tamanho combinado dos itens ao longo do eixo transversal seja menor do que o tamanho do container de alinhamento, e caso o tamanho do item segue o estilo `auto`, seu tamanho cresce igualmente (mas não proporcionalmente), enquanto que ainda respeitando as restrições impostas por {{cssxref("max-height")}}/{{cssxref("max-width")}} (ou a funcionalidade equivalente), de maneira que o tamanho combinado de todos itens tamanho-`auto` preencha exatamente o container de alinhamento ao longo do eixo transversal.
+- `safe`
+  - : Caso o tamanho do item supere o alinhamento do container, o item é alinhado como se o modo de alinhamento fosse `start`.
+- `unsafe`
+  - : Independente dos tamanhos relativos do item e do alinhamento do container, o valor do alinhmento dado é mantido.
+
+### Sintaxe formal
 
 {{csssyntax}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;section&gt;
-  &lt;div&gt;Item #1&lt;/div&gt;
-  &lt;div&gt;Item #2&lt;/div&gt;
-  &lt;div&gt;Item #3&lt;/div&gt;
-&lt;/section&gt;</pre>
+```html
+<section>
+  <div>Item #1</div>
+  <div>Item #2</div>
+  <div>Item #3</div>
+</section>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">section {
+```css
+section {
   display: flex;
   align-items: center;
   height: 120px;
@@ -118,58 +118,38 @@ div {
 div:nth-child(3) {
   align-self: flex-end;
   background: pink;
-}</pre>
+}
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Box Alignment", "#propdef-align-self", "align-self")}}</td>
-   <td>{{Spec2("CSS3 Box Alignment")}}</td>
-   <td>Atualiza para últimas definições de sintaxe.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Flexbox", "#propdef-align-self", "align-self")}}</td>
-   <td>{{Spec2("CSS3 Flexbox")}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                    | Status                                   | Comentário                                   |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------------------------------- |
+| {{SpecName("CSS3 Box Alignment", "#propdef-align-self", "align-self")}} | {{Spec2("CSS3 Box Alignment")}} | Atualiza para últimas definições de sintaxe. |
+| {{SpecName("CSS3 Flexbox", "#propdef-align-self", "align-self")}}         | {{Spec2("CSS3 Flexbox")}}         | Definição inicial.                           |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+### Suporte em Flex layout
 
+{{Compat("css.properties.align-self.flex_context")}}
 
-<h3 id="Suporte_em_Flex_layout">Suporte em Flex layout</h3>
+### Suporte em Grid layout
 
-<p>{{Compat("css.properties.align-self.flex_context")}}</p>
+{{Compat("css.properties.align-self.grid_context")}}
 
-<h3 id="Suporte_em_Grid_layout">Suporte em Grid layout</h3>
+## Veja também
 
-<p>{{Compat("css.properties.align-self.grid_context")}}</p>
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Aligning items in a flex container](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- [CSS Box Alignment](/pt-BR/docs/Web/CSS/CSS_Box_Alignment)
+- The {{cssxref("align-items")}} property
 
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning items in a flex container</a></em></li>
- <li>CSS Grid Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in CSS Grid layouts</a></em></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">CSS Box Alignment</a></li>
- <li>The {{cssxref("align-items")}} property</li>
-</ul>
-
-<div>{{CSSRef}}</div>
+{{CSSRef}}

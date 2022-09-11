@@ -3,78 +3,83 @@ title: background-attachment
 slug: Web/CSS/background-attachment
 translation_of: Web/CSS/background-attachment
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>Se um {{cssxref("background-image")}} é especificado, a propriedade <a href="/en-US/docs/CSS" title="CSS">CSS</a> <strong><code>background-attachment</code></strong> determina se aquela posição da imagem é fixa com o viewport, ou se irá rolar juntamente com o seu bloco.</p>
+Se um {{cssxref("background-image")}} é especificado, a propriedade [CSS](/pt-BR/docs/CSS "CSS") **`background-attachment`** determina se aquela posição da imagem é fixa com o viewport, ou se irá rolar juntamente com o seu bloco.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush: css">background-attachment: scroll;
+```css
+background-attachment: scroll;
 background-attachment: fixed;
 background-attachment: local;
 
 background-attachment: inherit;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>fixed</code></dt>
- <dd>Essa chave significa que o background é fixo em relação ao viewport. Mesmo que um elemento tenha um mecanismo de rolar, o  background ‘fixed’ não movimenta com o elemento.</dd>
- <dt><code>local</code></dt>
- <dd>Essa chave significa que o background é fixo em relação ao conteúdo do elemento: ise ele tem um mecanismo de rolar, o background rola com o conteúdo do elemento, e a área pintada e o posicionamento do background são relativos à área de rolagem do elemento ao invés da borda de fronteira deles.</dd>
- <dt><code>scroll</code></dt>
- <dd>Essa chave significa que o background é fixo em relação ao elemento em si e não rola com seu conteúdo. (É efetivamente ligado à borda do elemento.)</dd>
-</dl>
+- `fixed`
+  - : Essa chave significa que o background é fixo em relação ao viewport. Mesmo que um elemento tenha um mecanismo de rolar, o background ‘fixed’ não movimenta com o elemento.
+- `local`
+  - : Essa chave significa que o background é fixo em relação ao conteúdo do elemento: ise ele tem um mecanismo de rolar, o background rola com o conteúdo do elemento, e a área pintada e o posicionamento do background são relativos à área de rolagem do elemento ao invés da borda de fronteira deles.
+- `scroll`
+  - : Essa chave significa que o background é fixo em relação ao elemento em si e não rola com seu conteúdo. (É efetivamente ligado à borda do elemento.)
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<h3 id="Exemplo_simpes">Exemplo simpes</h3>
+### Exemplo simpes
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css; highlight:[3];">p {
+```css
+p {
   background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif");
   background-attachment: fixed;
 }
-</pre>
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   There were doors all round the hall, but they were all locked; and when
   Alice had been all the way down one side and up the other, trying every
   door, she walked sadly down the middle, wondering how she was ever to
   get out again.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="Resultado">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample("Simple_example")}}</p>
+{{EmbedLiveSample("Simple_example")}}
 
-<h3 id="Suporte_de_múltiplas_imagem_de_background">Suporte de múltiplas imagem de background</h3>
+### Suporte de múltiplas imagem de background
 
-<p>Essa propriedade suporta múltiplas imagens de background. Você pode especificar <code>&lt;attachment&gt;</code> para cada background, separado por vírgulas. Cada imagem é combinada com o correspondente tipo de anexo, do primeiro especificado ao último.</p>
+Essa propriedade suporta múltiplas imagens de background. Você pode especificar `<attachment>` para cada background, separado por vírgulas. Cada imagem é combinada com o correspondente tipo de anexo, do primeiro especificado ao último.
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush:css; highlight:[3];">p {
+```css
+p {
   background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif"), url("https://mdn.mozillademos.org/files/12059/startransparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
-}</pre>
+}
+```
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   There were doors all round the hall, but they were all locked; and when
   Alice had been all the way down one side and up the other, trying every
   door, she walked sadly down the middle, wondering how she was ever to
@@ -88,47 +93,25 @@ background-attachment: inherit;
   time round, she came upon a low curtain she had not noticed before, and
   behind it was a little door about fifteen inches high: she tried the
   little golden key in the lock, and to her great delight it fitted!
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="Resultado_2">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample("Multiple_background_image_support")}}</p>
+{{EmbedLiveSample("Multiple_background_image_support")}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-background-attachment', 'background-attachment')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>The shorthand property has been extended to support multiple backgrounds and the <code>local</code> value.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'colors.html#propdef-background-attachment', 'background-attachment')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Mudança não significativa.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#background-attachment', 'background-attachment')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Mudança não significativa</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                | Status                                   | Comentário                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Backgrounds', '#the-background-attachment', 'background-attachment')}}         | {{Spec2('CSS3 Backgrounds')}} | The shorthand property has been extended to support multiple backgrounds and the `local` value. |
+| {{SpecName('CSS2.1', 'colors.html#propdef-background-attachment', 'background-attachment')}} | {{Spec2('CSS2.1')}}                 | Mudança não significativa.                                                                      |
+| {{SpecName('CSS1', '#background-attachment', 'background-attachment')}}                             | {{Spec2('CSS1')}}                 | Mudança não significativa                                                                       |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.properties.background-attachment")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/CSS/Multiple_backgrounds" title="CSS/Multiple backgrounds">Multiple backgrounds</a></li>
-</ul>
+- [Multiple backgrounds](/pt-BR/docs/CSS/Multiple_backgrounds "CSS/Multiple backgrounds")

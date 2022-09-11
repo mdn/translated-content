@@ -4,45 +4,45 @@ slug: Web/CSS/var
 translation_of: Web/CSS/var()
 original_slug: Web/CSS/var()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A função <a href="/pt-BR/docs/Web/CSS">CSS</a>  <strong><code>var()</code></strong> pode ser usada para inserir o valor de uma <a href="/pt-BR/docs/Web/CSS/--*">custom property</a> (propriedade personalizada) substituindo qualquer parte do valor de outra propriedade.</p>
+A função [CSS](/pt-BR/docs/Web/CSS) **`var()`** pode ser usada para inserir o valor de uma [custom property](/pt-BR/docs/Web/CSS/--*) (propriedade personalizada) substituindo qualquer parte do valor de outra propriedade.
 
-<pre class="brush: css">var(--header-color, blue);</pre>
+```css
+var(--header-color, blue);
+```
 
-<p>A função <code>var()</code> não pode ser usada em nomes de propriedades, seletores ou qualquer outra coisa além de valores de propriedades. (Isso geralmente produz sintaxe inválida, ou então um valor cujo significado não tem conexão com a variável.)</p>
+A função `var()` não pode ser usada em nomes de propriedades, seletores ou qualquer outra coisa além de valores de propriedades. (Isso geralmente produz sintaxe inválida, ou então um valor cujo significado não tem conexão com a variável.)
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<p>O primeiro argumento da função é o nome da propriedade personalizada a ser substituída. O segundo argumento opcional da função serve como valor alternativo. Se a propriedade personalizada referenciada pelo primeiro argumento for inválida, a função usará o segundo valor.</p>
+O primeiro argumento da função é o nome da propriedade personalizada a ser substituída. O segundo argumento opcional da função serve como valor alternativo. Se a propriedade personalizada referenciada pelo primeiro argumento for inválida, a função usará o segundo valor.
 
 {{csssyntax}}
 
-<div class="note">
-<p>Nota: A sintaxe do argumento alternativo, assim como as propriedades personalizadas, permite o uso de vírgulas. Por exemplo, <code>var(--foo, red, blue)</code> define como argumento alternativo <code>red, blue</code>; isto é, qualquer coisa entre a primeira vírgula e o fim da função é considerado como valor do como argumento alternativo.</p>
-</div>
+> **Note:** Nota: A sintaxe do argumento alternativo, assim como as propriedades personalizadas, permite o uso de vírgulas. Por exemplo, `var(--foo, red, blue)` define como argumento alternativo `red, blue`; isto é, qualquer coisa entre a primeira vírgula e o fim da função é considerado como valor do como argumento alternativo.
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt>&lt;custom-property-name&gt;</dt>
- <dd>O nome da propriedade personalizada referenciada é representada por um identificador que começa com dois traços. As propriedades personalizadas são exclusivamente para uso por autores e usuários; O CSS nunca lhes dará um significado além do que é apresentado aqui.</dd>
- <dt>&lt;declaration-value&gt;</dt>
- <dd>O valor do argumento alternativo é usado caso a propriedade personalizada seja inválida no contexto utilizado. Este valor pode conter qualquer caractere, exceto alguns caracteres com significado especial como novas linhas, colchetes de fechamento perdidos, ex.<code>)</code>, <code>]</code>, ou <code>}</code>, ponto e vírgula de primeiro nível, ou sinais de exclamação.</dd>
-</dl>
+- \<custom-property-name>
+  - : O nome da propriedade personalizada referenciada é representada por um identificador que começa com dois traços. As propriedades personalizadas são exclusivamente para uso por autores e usuários; O CSS nunca lhes dará um significado além do que é apresentado aqui.
+- \<declaration-value>
+  - : O valor do argumento alternativo é usado caso a propriedade personalizada seja inválida no contexto utilizado. Este valor pode conter qualquer caractere, exceto alguns caracteres com significado especial como novas linhas, colchetes de fechamento perdidos, ex.`)`, `]`, ou `}`, ponto e vírgula de primeiro nível, ou sinais de exclamação.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: css">:root {
+```css
+:root {
   --main-bg-color: pink;
 }
 
 body {
   background-color: var(--main-bg-color);
 }
-</pre>
+```
 
-<pre class="brush: css">/* Argumento alternativo */
+```css
+/* Argumento alternativo */
 /* No estilo de componente: */
 .component .header {
   color: var(--header-color, blue);
@@ -56,33 +56,18 @@ body {
 .component {
   --text-color: #080; /* header-color não está definido e, desse modo, permanece azul, o valor do argumento alternativo */
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Variables', '#using-variables', 'var()')}}</td>
-   <td>{{Spec2('CSS3 Variables')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                    | Status                               | Comentário        |
+| -------------------------------------------------------------------------------- | ------------------------------------ | ----------------- |
+| {{SpecName('CSS3 Variables', '#using-variables', 'var()')}} | {{Spec2('CSS3 Variables')}} | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.properties.custom-property.var")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/pt-BR/docs/Web/CSS/Using_CSS_variables">Utilizando variáveis CSS</a></li>
-</ul>
+- [Utilizando variáveis CSS](/pt-BR/docs/Web/CSS/Using_CSS_variables)

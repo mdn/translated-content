@@ -8,66 +8,87 @@ tags:
 translation_of: Web/CSS/transform-function/perspective()
 original_slug: Web/CSS/transform-function/perspective()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A função <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>perspective()</code></strong> define uma transformação que configura a distância entre o usuário e o plano z=0. Seu resultado é um dado do tipo {{cssxref("&lt;transform-function&gt;")}}.</p>
+A função [CSS](/pt-BR/docs/Web/CSS) **`perspective()`** define uma transformação que configura a distância entre o usuário e o plano z=0. Seu resultado é um dado do tipo {{cssxref("&lt;transform-function&gt;")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<p>A distância de perspectiva usada por<code>perspective()</code> é especificada por um valor {{cssxref("&lt;length&gt;")}}, que representa a distância entre o usuário e o plano z=0. Um valor positivo faz o elemento parecer mais perto do usuário, e um valor negativo o faz parecer mais longe.</p>
+A distância de perspectiva usada por`perspective()` é especificada por um valor {{cssxref("&lt;length&gt;")}}, que representa a distância entre o usuário e o plano z=0. Um valor positivo faz o elemento parecer mais perto do usuário, e um valor negativo o faz parecer mais longe.
 
-<pre class="syntaxbox">perspective(d)
-</pre>
+```
+perspective(d)
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><em>d</em></dt>
- <dd>É um {{cssxref("&lt;length&gt;")}} representando a distância do usuário até o plano z=0. Se for 0 ou um valor negativo, nenhuma transformação de perspectiva é aplicada.</dd>
-</dl>
+- _d_
+  - : É um {{cssxref("&lt;length&gt;")}} representando a distância do usuário até o plano z=0. Se for 0 ou um valor negativo, nenhuma transformação de perspectiva é aplicada.
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Coordenadas cartesianas em ℝ<sup>2</sup></th>
-   <th scope="col">Coordenadas homogêneas em ℝℙ<sup>2</sup></th>
-   <th scope="col">Coordenadas cartesianas em ℝ<sup>3</sup></th>
-   <th scope="col">Coordenadas homogêneas em ℝℙ<sup>3</sup></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="2" rowspan="2">
-    <p>Essa transformação se aplica ao espaço 3D e não pode ser representada no plano.</p>
-   </td>
-   <td colspan="1" rowspan="2">Essa não é uma transformação linear em ℝ<sup>3</sup>, e não pode ser representada usando uma matriz de coordenadas cartesianas.</td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd><mo>−</mo>1<mo>/</mo>d</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Coordenadas cartesianas em ℝ<sup>2</sup></th>
+      <th scope="col">Coordenadas homogêneas em ℝℙ<sup>2</sup></th>
+      <th scope="col">Coordenadas cartesianas em ℝ<sup>3</sup></th>
+      <th scope="col">Coordenadas homogêneas em ℝℙ<sup>3</sup></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2" rowspan="2">
+        <p>
+          Essa transformação se aplica ao espaço 3D e não pode ser representada
+          no plano.
+        </p>
+      </td>
+      <td colspan="1" rowspan="2">
+        Essa não é uma transformação linear em ℝ<sup>3</sup>, e não pode ser
+        representada usando uma matriz de coordenadas cartesianas.
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
+              ><mtr
+                ><mtd>0</mtd><mtd>0</mtd><mtd><mo>−</mo>1<mo>/</mo>d</mtd
+                ><mtd>1</mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Sem perspectiva:&lt;/p&gt;
-&lt;div class="no-perspective-box"&gt;
-  &lt;div class="face front"&gt;A&lt;/div&gt;
-  &lt;div class="face top"&gt;B&lt;/div&gt;
-  &lt;div class="face left"&gt;C&lt;/div&gt;
-&lt;/div&gt;
+```html
+<p>Sem perspectiva:</p>
+<div class="no-perspective-box">
+  <div class="face front">A</div>
+  <div class="face top">B</div>
+  <div class="face left">C</div>
+</div>
 
-&lt;p&gt;Com perspectiva (7.5cm):&lt;/p&gt;
-&lt;div class="perspective-box"&gt;
-  &lt;div class="face front"&gt;A&lt;/div&gt;
-  &lt;div class="face top"&gt;B&lt;/div&gt;
-  &lt;div class="face left"&gt;C&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+<p>Com perspectiva (7.5cm):</p>
+<div class="perspective-box">
+  <div class="face front">A</div>
+  <div class="face top">B</div>
+  <div class="face left">C</div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.face {
+```css
+.face {
   position: absolute;
   width: 100px;
   height: 100px;
@@ -106,19 +127,17 @@ original_slug: Web/CSS/transform-function/perspective()
   background-color: limegreen;
   transform: translate3d(0, 0, 50px);
 }
-</pre>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{ EmbedLiveSample('Examples', '250', '350') }}</p>
+{{ EmbedLiveSample('Examples', '250', '350') }}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>Veja o tipo de dado <code><a href="/en-US/docs/Web/CSS/transform-function#Browser_compatibility">&lt;transform-function&gt;</a></code> para informações de compatibilidade.</p>
+Veja o tipo de dado [`<transform-function>`](/en-US/docs/Web/CSS/transform-function#Browser_compatibility) para informações de compatibilidade.
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}

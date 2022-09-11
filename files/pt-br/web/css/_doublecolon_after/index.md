@@ -1,57 +1,64 @@
 ---
 title: '::after (:after)'
-slug: 'Web/CSS/::after'
-translation_of: 'Web/CSS/::after'
+slug: Web/CSS/::after
+translation_of: Web/CSS/::after
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Em CSS, <strong><code>::after</code></strong> cria um <a href="/pt-BR/docs/Web/CSS/Pseudo-elementos">pseudo-elemento</a> que é o último filho do elemento selecionado. Muitas vezes é usado para adicionar e melhorar o conteúdo de um elemento como a propriedade {{cssxref("content")}}. É inline por padrão.</p>
+Em CSS, **`::after`** cria um [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elementos) que é o último filho do elemento selecionado. Muitas vezes é usado para adicionar e melhorar o conteúdo de um elemento como a propriedade {{cssxref("content")}}. É inline por padrão.
 
-<pre class="brush: css">/* Adiciona uma seta após os links */
+```css
+/* Adiciona uma seta após os links */
 a::after {
   content: "→";
-}</pre>
+}
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
 {{csssyntax}}
 
-<div class="note">
-<p>O CSS3 introduziu a notação <code>::after</code> (com dois sinais de dois pontos) para distinguir <a href="/pt-BR/docs/Web/CSS/Pseudo-classes">pseudo-classes</a> dos <a href="/pt-BR/docs/Web/CSS/Pseudo-elements">pseudo-elementos</a>. Os navegadores também aceitam <code>:after</code>, introduzido no CSS2.</p>
-</div>
+> **Note:** O CSS3 introduziu a notação `::after` (com dois sinais de dois pontos) para distinguir [pseudo-classes](/pt-BR/docs/Web/CSS/Pseudo-classes) dos [pseudo-elementos](/pt-BR/docs/Web/CSS/Pseudo-elements). Os navegadores também aceitam `:after`, introduzido no CSS2.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Uso_simples">Uso simples</h3>
+### Uso simples
 
-<p>Vamos criar duas classes: uma para parágrafos tediosos e uma para parágrafos excitantes. Podemos então marcar cada parágrafo adicionando um pseudo-elemento ao final dele.</p>
+Vamos criar duas classes: uma para parágrafos tediosos e uma para parágrafos excitantes. Podemos então marcar cada parágrafo adicionando um pseudo-elemento ao final dele.
 
-<pre class="brush: html">&lt;p class="boring-text"&gt;Here is some plain old boring text.&lt;/p&gt;
-&lt;p&gt;Here is some normal text that is neither boring nor exciting.&lt;/p&gt;
-&lt;p class="exciting-text"&gt;Contributing to MDN is easy and fun.
-Just hit the edit button to add new live samples, or improve existing samples.&lt;/p&gt;</pre>
+```html
+<p class="boring-text">Here is some plain old boring text.</p>
+<p>Here is some normal text that is neither boring nor exciting.</p>
+<p class="exciting-text">Contributing to MDN is easy and fun.
+Just hit the edit button to add new live samples, or improve existing samples.</p>
+```
 
-<pre class="brush: css">.exciting-text::after {
-  content: "&lt;- now this *is* exciting!";
+```css
+.exciting-text::after {
+  content: "<- now this *is* exciting!";
   color: green;
 }
 
 .boring-text::after {
-   content: "&lt;- BORING!";
+   content: "<- BORING!";
    color: red;
-}</pre>
+}
+```
 
-<h4 id="Visualização">Visualização</h4>
+#### Visualização
 
-<p>{{EmbedLiveSample('Uso_simples', 500, 150)}}</p>
+{{EmbedLiveSample('Uso_simples', 500, 150)}}
 
-<h3 id="Exemplos_decorativos">Exemplos decorativos</h3>
+### Exemplos decorativos
 
-<p>Podemos estilizar textos ou imagens na propriedade {{cssxref("content")}} praticamente de qualquer forma que quisermos.</p>
+Podemos estilizar textos ou imagens na propriedade {{cssxref("content")}} praticamente de qualquer forma que quisermos.
 
-<pre class="brush: html">&lt;span class="ribbon"&gt;Observe onde a caixa de laranja está.&lt;/span&gt;</pre>
+```html
+<span class="ribbon">Observe onde a caixa de laranja está.</span>
+```
 
-<pre class="brush: css">.ribbon {
+```css
+.ribbon {
   background-color: #5BC8F7;
 }
 
@@ -60,24 +67,27 @@ Just hit the edit button to add new live samples, or improve existing samples.&l
   background-color: #FFBA10;
   border-color: black;
   border-style: dotted;
-}</pre>
+}
+```
 
-<h4 id="Visualização_2">Visualização</h4>
+#### Visualização
 
-<p>{{EmbedLiveSample('Exemplos_decorativos', 450, 20)}}</p>
+{{EmbedLiveSample('Exemplos_decorativos', 450, 20)}}
 
-<h3 id="Dicas">Dicas</h3>
+### Dicas
 
-<p>O exemplo a seguir mostra o uso do <code>::after</code> <a href="/pt-BR/docs/Web/CSS/Pseudo-elementos">pseudo-elemento</a> em conjunto com a expressão CSS <a href="/pt-BR/docs/Web/CSS/attr"><code>attr()</code></a> e um <a href="/pt-BR/docs/Web/HTML/Global_attributes#attr-dataset">atributo data personalizado</a> <code>data-descr</code> para criar uma <em>dica </em>em forma de glossário feito em CSS puro. Verifique a visualização abaixo, ou veja este exemplo em <a href="https://developer.mozilla.org/files/4591/css-only_tooltips.html">página separada.</a></p>
+O exemplo a seguir mostra o uso do `::after` [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elementos) em conjunto com a expressão CSS [`attr()`](/pt-BR/docs/Web/CSS/attr) e um [atributo data personalizado](/pt-BR/docs/Web/HTML/Global_attributes#attr-dataset) `data-descr` para criar uma _dica_ em forma de glossário feito em CSS puro. Verifique a visualização abaixo, ou veja este exemplo em [página separada.](https://developer.mozilla.org/files/4591/css-only_tooltips.html)
 
-<pre class="brush: html">&lt;p&gt;Aqui está o exemplo ao vivo do código acima.&lt;br /&gt;
-  Temos um pouco de &lt;span data-descr="collection of words and punctuation"&gt;texto&lt;/span&gt; aqui com algumas
-  &lt;span data-descr="small popups which also hide again"&gt;dicas&lt;/span&gt;.&lt;br /&gt;
-  Não seja tímido, passe o mouse por cima para dar uma &lt;span data-descr="not to be taken literally"&gt;olhada&lt;/span&gt;.
-&lt;/p&gt;
-</pre>
+```html
+<p>Aqui está o exemplo ao vivo do código acima.<br />
+  Temos um pouco de <span data-descr="collection of words and punctuation">texto</span> aqui com algumas
+  <span data-descr="small popups which also hide again">dicas</span>.<br />
+  Não seja tímido, passe o mouse por cima para dar uma <span data-descr="not to be taken literally">olhada</span>.
+</p>
+```
 
-<pre class="brush: css">span[data-descr] {
+```css
+span[data-descr] {
   position: relative;
   text-decoration: underline;
   color: #00F;
@@ -97,57 +107,27 @@ span[data-descr]:hover::after {
   color: #000000;
   font-size: 14px;
   z-index: 1;
-}</pre>
+}
+```
 
-<h4 id="Visualização_3">Visualização</h4>
+#### Visualização
 
-<p>{{EmbedLiveSample('Dicas', 450, 120)}}</p>
+{{EmbedLiveSample('Dicas', 450, 120)}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Pseudo-Elements', '#selectordef-after', '::after')}}</td>
-   <td>{{Spec2('CSS4 Pseudo-Elements')}}</td>
-   <td>Sem mudanças significativas em relação à especificação anterior.</td>
-  </tr>
-  <tr>
-   <td>{{Specname("CSS3 Transitions", "#animatable-properties", "transitions on pseudo-element properties")}}</td>
-   <td>{{Spec2("CSS3 Transitions")}}</td>
-   <td>Permite transições em propriedades definidas em pseudo-elementos.</td>
-  </tr>
-  <tr>
-   <td>{{Specname("CSS3 Animations", "", "animations on pseudo-element properties")}}</td>
-   <td>{{Spec2("CSS3 Animations")}}</td>
-   <td>Permite animações em propriedades definidas em pseudo-elementos.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#gen-content', '::after')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Introduz a sintaxe de dois sinais de dois pontos.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'generate.html#before-after-content', '::after')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Definição inicial, usando a sintaxe de um sinal de dois pontos.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                            | Status                                       | Comentário                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------------------------------- |
+| {{SpecName('CSS4 Pseudo-Elements', '#selectordef-after', '::after')}}                                             | {{Spec2('CSS4 Pseudo-Elements')}} | Sem mudanças significativas em relação à especificação anterior.  |
+| {{Specname("CSS3 Transitions", "#animatable-properties", "transitions on pseudo-element properties")}} | {{Spec2("CSS3 Transitions")}}     | Permite transições em propriedades definidas em pseudo-elementos. |
+| {{Specname("CSS3 Animations", "", "animations on pseudo-element properties")}}                                 | {{Spec2("CSS3 Animations")}}         | Permite animações em propriedades definidas em pseudo-elementos.  |
+| {{SpecName('CSS3 Selectors', '#gen-content', '::after')}}                                                             | {{Spec2('CSS3 Selectors')}}         | Introduz a sintaxe de dois sinais de dois pontos.                 |
+| {{SpecName('CSS2.1', 'generate.html#before-after-content', '::after')}}                                         | {{Spec2('CSS2.1')}}                     | Definição inicial, usando a sintaxe de um sinal de dois pontos.   |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("css.selectors.after")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{Cssxref("::before")}}, {{cssxref("content")}}</li>
-</ul>
+- {{Cssxref("::before")}}, {{cssxref("content")}}
