@@ -46,9 +46,7 @@ Como qualquer outro elemento HTML, este também tem [global attributes](/en/HTML
 
 ## Veja também
 
-- [MDN canvas portal](/en/HTML/Canvas "https://developer.mozilla.org/en/HTML/Canvas")
-- Um [canvas tutorial](/en/Canvas_tutorial "Canvas tutorial")
+- [MDN canvas portal](/en/HTML/Canvas)
+- Um [canvas tutorial](/en/Canvas_tutorial)
 - [Canvas cheat sheet](http://blog.nihilogic.dk/2009/02/html5-canvas-cheat-sheet.html)
-- [Canvas-related demos](/en-US/demos/tag/tech:canvas "https://developer.mozilla.org/en-US/demos/tag/tech:canvas/")
-
-{{ languages( { "de": "de/HTML/Element/canvas", "en": "en/HTML/Element/canvas", "es": "es/HTML/Elemento/canvas", "ja": "ja/HTML/Element/canvas", "ko": "ko/HTML/Element/canvas", "nl": "nl/HTML/HTML\_Tags/canvas", "pl": "pl/HTML/Element/canvas", "ru": "Ru/HTML/Element/canvas", "zh-cn": "cn/HTML/Element/canvas", "fr": "fr/HTML/Element/canvas" } ) }}
+- [Canvas-related demos](/en-US/demos/tag/tech:canvas)
