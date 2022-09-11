@@ -533,8 +533,8 @@ bundle.js?v=YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 ```
 36 cache-control max-age=0
-37 cache-control max-age=2592000
-38 cache-control max-age=604800
+37 cache-control max-age=604800
+38 cache-control max-age=2592000
 39 cache-control no-cache
 40 cache-control no-store
 41 cache-control public, max-age=31536000
@@ -542,7 +542,7 @@ bundle.js?v=YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 如果你选择其中一个编号选项，则可以在通过 HTTP3 传输时将值压缩为 1 个字节。
 
-数字 “37”、“38” 和 “41” 分别代表一个月、一周和一年。
+数字 “37”、“38” 和 “41” 分别代表一周、一个月和一年。
 
 因为缓存会在保存新条目时删除旧条目，所以一周后存储的响应仍然存在的可能性并不高——即使 `max-age` 设置为 1 周。因此，在实践中，你选择哪一种并没有太大的区别。
 
@@ -552,7 +552,7 @@ bundle.js?v=YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 > **备注：** 只有在设置了 `Authorization` 标头时需要存储响应时才应使用 `public` 指令。否则不需要，因为只要给出了 `max-age`，响应就会存储在共享缓存中。
 
-因此，如果响应是使用基本身份验证进行个性化的，`public` 的存在可能会导致问题。如果您对此感到担忧，您可以选择第二长的值 “37”（1 个月）。
+因此，如果响应是使用基本身份验证进行个性化的，`public` 的存在可能会导致问题。如果您对此感到担忧，您可以选择第二长的值 “38”（1 个月）。
 
 ```http
 # response for bundle.v123.js
