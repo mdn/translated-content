@@ -19,17 +19,17 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
 - `"fullscreen"`
   - : ウィンドウはフルスクリーンアプリケーションとして稼働しているか、タブの内容が[Fullscreen API](/ja/docs/Web/API/Fullscreen_API)を利用している(全画面)。
 - `"docked"`
-  - : A docked window occupies a fixed position relative to other windows owned by the same application.
+  - : ドックされたウィンドウは、同じアプリケーションで所有されている他のウィンドウとの相対的な位置が固定されます。
 
-macOS compatibility: Beginning in macOS 10.10, the default maximizing behavior for windows changed to run applications as full screen applications instead of "zoomed" windows. `fullscreen` refers to both the browser running as a full screen application and when content in a tab uses the Fullscreen API.
+macOSとの互換性: macOS 10.10 から、ウィンドウのデフォルトの最大化動作が変更され、アプリケーションを「ズーム」ウィンドウではなくフルスクリーンアプリケーションとして実行するようになりました。 「フルスクリーン」は、フルスクリーンアプリケーションとして実行されているブラウザと、タブ内のコンテンツがフルスクリーン API を使用する場合の両方を指します。
 
-## Browser compatibility
+## ブラウザの互換性
 
 {{Compat("webextensions.api.windows.WindowState")}}
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows#type-WindowState) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **ノート:** この API は、Chromium の [`chrome.windows`](https://developer.chrome.com/extensions/windows#type-WindowState) API に基づいています。このドキュメントは、Chromium コードの [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) から派生したものです。Microsoft Edge互換性データは Microsoft Corporation によって提供され、Creative Commons Attribution 3.0 United States License に基づいてここに含まれています。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
