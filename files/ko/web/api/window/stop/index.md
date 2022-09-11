@@ -11,7 +11,9 @@ Window\.stop()메서드는 window 객체의 로딩을 취소하는 메서드입�
 
 ## 문법
 
-    window.stop()
+```js
+window.stop()
+```
 
 ## 예시
 

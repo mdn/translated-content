@@ -25,7 +25,7 @@ slug: Learn/Tools_and_testing/GitHub
 >
 > 我們準備了一系列的課程當中包括核心的資訊，讓你往你的目標(成為一位前端網頁程式開發者)邁進。
 >
-> [**開始學習**](/en-US/docs/Learn/Front-end_web_developer)
+> [**開始學習**](/zh-TW/docs/Learn/Front-end_web_developer)
 
 ## 事前準備
 

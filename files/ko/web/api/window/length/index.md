@@ -9,7 +9,9 @@ window의 frame 개수를 반환합니다. ({{HTMLElement("frame")}} 또는 {{HT
 
 ## 신텍스
 
-    framesCount = window.length;
+```js
+framesCount = window.length;
+```
 
 - `framesCount` 는 frame의 개수이다.
 

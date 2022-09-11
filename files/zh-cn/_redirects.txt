@@ -1364,7 +1364,7 @@
 /zh-CN/docs/Web/API/Document/dragleave_event	/zh-CN/docs/Web/API/HTMLElement/dragleave_event
 /zh-CN/docs/Web/API/Document/dragover_event	/zh-CN/docs/Web/API/HTMLElement/dragover_event
 /zh-CN/docs/Web/API/Document/dragstart_event	/zh-CN/docs/Web/API/HTMLElement/dragstart_event
-/zh-CN/docs/Web/API/Document/drop_event	/zh-CN/docs/conflicting/Web/API/HTMLElement/drop_event
+/zh-CN/docs/Web/API/Document/drop_event	/zh-CN/docs/Web/API/HTMLElement/drop_event
 /zh-CN/docs/Web/API/Document/height	/zh-CN/docs/Web/API/Element/clientHeight
 /zh-CN/docs/Web/API/Document/keypress_event	/zh-CN/docs/Web/API/Element/keypress_event
 /zh-CN/docs/Web/API/Document/mozFullScreen	/zh-CN/docs/Web/API/Document/fullscreen
@@ -2105,7 +2105,7 @@
 /zh-CN/docs/Web/Events/dragleave	/zh-CN/docs/Web/API/HTMLElement/dragleave_event
 /zh-CN/docs/Web/Events/dragover	/zh-CN/docs/Web/API/HTMLElement/dragover_event
 /zh-CN/docs/Web/Events/dragstart	/zh-CN/docs/Web/API/HTMLElement/dragstart_event
-/zh-CN/docs/Web/Events/drop	/zh-CN/docs/conflicting/Web/API/HTMLElement/drop_event
+/zh-CN/docs/Web/Events/drop	/zh-CN/docs/Web/API/HTMLElement/drop_event
 /zh-CN/docs/Web/Events/ended	/zh-CN/docs/Web/API/HTMLMediaElement/ended_event
 /zh-CN/docs/Web/Events/error	/zh-CN/docs/Web/API/Element/error_event
 /zh-CN/docs/Web/Events/focus	/zh-CN/docs/Web/API/Element/focus_event
@@ -2482,7 +2482,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/template_strings	/zh-CN/docs/Web/JavaScript/Reference/Template_literals
 /zh-CN/docs/Web/JavaScript/Reference/关于	/zh-CN/docs/Web/JavaScript/Reference/About
 /zh-CN/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/zh-CN/docs/Web/Security/Same-origin_policy
-/zh-CN/docs/Web/JavaScript/Shells	/zh-CN/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
+/zh-CN/docs/Web/JavaScript/Shells	/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview
 /zh-CN/docs/Web/JavaScript/Strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
 /zh-CN/docs/Web/JavaScript/Strict_mode/Transitioning_to_strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
 /zh-CN/docs/Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf

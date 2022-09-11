@@ -1,14 +1,6 @@
 ---
 title: Symbol.asyncIterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
-tags:
-  - ECMAScript 2018
-  - JavaScript
-  - Property
-  - Reference
-  - Symbol
-  - asynchronous
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
 ---
 {{JSRef}}
 

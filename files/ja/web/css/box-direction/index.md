@@ -1,13 +1,6 @@
 ---
 title: box-direction
 slug: Web/CSS/box-direction
-tags:
-  - CSS
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.box-direction
-translation_of: Web/CSS/box-direction
 ---
 {{CSSRef}}{{Non-standard_header}}
 

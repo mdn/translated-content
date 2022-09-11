@@ -10,8 +10,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/shift
 
 ## 语法
 
-```plain
-arr.shift()
+```js
+shift()
 ```
 
 ### 返回值
@@ -83,8 +83,9 @@ while( (i = names.shift()) !== undefined ) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.pop()")}}
 - {{jsxref("Array.prototype.unshift()")}}
+- {{jsxref("Array.prototype.concat()")}}

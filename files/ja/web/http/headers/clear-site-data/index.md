@@ -55,7 +55,7 @@ Clear-Site-Data: "*"
 - `"cache"`
   - : サーバーが、レスポンス URL のオリジンに関するローカルにキャッシュされたデータ (つまり、ブラウザーキャッシュ、[HTTP キャッシュ](/ja/docs/Web/HTTP/Caching)を参照) の消去を望んでいることを示します。ブラウザーによっては、予備レンダリングページ、スクリプトキャッシュ、 WebGL シェーダーキャッシュ、アドレスバーのサジェスト等のようなものも消去します。
 - `"cookies"`
-  - : サーバーが、レスポンス URL のオリジンに関するすべてのクッキーの消去を望んでいることを示します。これは登録されたドメインにサブドメインを含め影響します。ですから、 https\://example.com と同様に https\://stage.example.com のクッキーも消去されます。
+  - : サーバーが、レスポンス URL のオリジンに関するすべてのクッキーの消去を望んでいることを示します。これは登録されたドメインにサブドメインを含め影響します。ですから、 `https://example.com` と同様に `https://stage.example.com` のクッキーも消去されます。
 - `"storage"`
 
   - : サーバーが、レスポンス URL のオリジンに関するすべての DOM ストレージの消去を望んでいることを示します。これは以下のようなストレージ機構を含みます。
@@ -78,7 +78,7 @@ Clear-Site-Data: "*"
 
 ### ウェブサイトのログアウト
 
-ユーザーがウェブサイトやサービスからログアウトした場合、ローカルに保存されているデータを削除したい場合があります。サイトからのログアウトが正常に完了したことを確認するページ (https\://example.com/logout など)を送信する際に `Clear-Site-Data` ヘッダーを追加することで、これを実現することができます。
+ユーザーがウェブサイトやサービスからログアウトした場合、ローカルに保存されているデータを削除したい場合があります。サイトからのログアウトが正常に完了したことを確認するページ (`https://example.com/logout` など)を送信する際に `Clear-Site-Data` ヘッダーを追加することで、これを実現することができます。
 
 ```
 Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"
@@ -86,7 +86,7 @@ Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"
 
 ### クッキーの消去
 
-以下のヘッダーが https\://example.com/clear-cookies のレスポンスで配信された場合、同じドメイン https\://example.com 及びあらゆるサブドメイン (https\://stage.example.com など) が消去されます。
+以下のヘッダーが `https://example.com/clear-cookies` のレスポンスで配信された場合、同じドメイン `https://example.com` 及びあらゆるサブドメイン (`https://stage.example.com` など) が消去されます。
 
 ```
 Clear-Site-Data: "cookies"

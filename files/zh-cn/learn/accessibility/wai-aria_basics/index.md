@@ -61,7 +61,7 @@ slug: Learn/Accessibility/WAI-ARIA_basics
 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 是 W3C 编写的规范，定义了一组可用于其他元素的 HTML 特性，用于提供额外的语义化以及改善缺乏的无障碍。以下是规范中三个主要的特性：
 
 - **角色** — 这定义了元素是干什么的。许多「标志性的角色」，其实重复了 HTML5 的结构元素的语义价值。例如 `role="navigation"` ({{htmlelement("nav")}}) 或者 `role="complementary"` ({{htmlelement("aside")}})，这也有一些描述其他页面结构的（角色），例如 `role="banner"`, `role="search"`, `role="tabgroup"`, `role="tab"` 等等。我们通常能从 UI 层面找到它们。
-- **属性** — 我们能通过定义一些属性给元素，让他们具备更多的语义。例如： `aria-required="true"` 意味着元素在表单上是必填的。然而 `aria-labelledby="label"` 允许你在元素上设置一个 ID，用于[`labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)引用作为屏幕阅读器指定的 label 内容 ，多个也可以。当然，下面这个代码是不行的： `<label for="input">` 。举个例子：你可以用 `aria-labelledby` 指定包含在 a 标签中的 key 描述{{htmlelement("div")}} 是多个 table 表格的 label，或者将它指定为 img 标签的 alt 内容 — 而无需重复在每一个 img 里头定义。如果迷糊了，你可以在这里看到例子： [Text alternatives](/en-US/docs/Learn/Accessibility/HTML?document_saved=true#Text_alternatives).
+- **属性** — 我们能通过定义一些属性给元素，让他们具备更多的语义。例如： `aria-required="true"` 意味着元素在表单上是必填的。然而 `aria-labelledby="label"` 允许你在元素上设置一个 ID，用于[`labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)引用作为屏幕阅读器指定的 label 内容 ，多个也可以。当然，下面这个代码是不行的： `<label for="input">` 。举个例子：你可以用 `aria-labelledby` 指定包含在 a 标签中的 key 描述{{htmlelement("div")}} 是多个 table 表格的 label，或者将它指定为 img 标签的 alt 内容 — 而无需重复在每一个 img 里头定义。如果迷糊了，你可以在这里看到例子： [Text alternatives](/zh-CN/docs/Learn/Accessibility/HTML?document_saved=true#Text_alternatives).
 - **状态** —用于表达元素当前的条件的特殊属性，例如 `aria-disabled="true"`，屏幕阅读器就会这个表单禁止输入。状态和属性的差异之处就是：属性在应用的生命周期中不会改变，而状态可以，通常我们用编程的方法改变它，例如 Javascript。
 
 关于 WAI-ARIA 属性重要的一点是它不会对 web 页面有任何影响，除了让更多的信息从浏览器暴露给 accessibility APIs (无障碍 API)，这也是屏幕阅读器这一类软件的信息源。WAI-ARIA 不会影响网页的结构，以及 DOM 等等，尽管这些属性可用于作为 css 选择器。
@@ -93,7 +93,7 @@ slug: Learn/Accessibility/WAI-ARIA_basics
 我们过去讨论了一些促使 WAI-ARIA 诞生的问题。但基本上是以下四个主要领域：
 
 1. **路标/地标**（**Signposts/Landmarks**）**：** ARIA 的 `角色` 属性值可以作为地标来复制 HTML5 元素的语义化（例如 nav tag）。或者超越 HTML5 的语义，给不同的功能块提供「路标」，例如 `search`, `tabgroup`, `tab`, `listbox` 等等 。
-2. **动态的内容更新：** 屏幕阅读器往往难以报告一直变化的内容，用无障碍特性我们能使用 `aria-live` 来通知屏幕阅读器某一部分的内容更新了。例如[XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) 或者 [DOM APIs](/en-US/docs/Web/API/Document_Object_Model)。
+2. **动态的内容更新：** 屏幕阅读器往往难以报告一直变化的内容，用无障碍特性我们能使用 `aria-live` 来通知屏幕阅读器某一部分的内容更新了。例如[XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest) 或者 [DOM APIs](/zh-CN/docs/Web/API/Document_Object_Model)。
 3. **优化键盘的无障碍操作**: 默认的 HTML 元素是具有自带的键盘辅助功能的。当其他元素与 JavaScript 一起进行交互时，键盘的辅助功能和屏幕阅读器的报告会因此收到影响（例如你将会难以用 tab 到达理想的位置）。这是无法避免的，WAI-ARIA 提供了提供了一种允许其他元素获得焦点的方法（使用 `tabindex`）。
 4. **非语义控件的无障碍**：当一系列嵌套的 `<div>` 与 CSS / JavaScript 一起用于创建复杂的 UI 功能，或者通过 JavaScript 大大地增强或者更改原生的控件，无障碍将会变得极其困难——屏幕阅读器将会难以找到语义内容线索。在这种情况下，AIRA 可以帮助提供缺少了的功能，例如 `button`, `listbox`，或者 `tabgroup`，另外和 aria-required 或 aria-posinset 这样的属性可以提供有关功能的更多线索。
 
@@ -107,7 +107,7 @@ slug: Learn/Accessibility/WAI-ARIA_basics
 
 在下一节中，我们将更详细地研究这四个方，并提供一些实例。继续之前你最好安装一个屏幕阅读器，以便你测试接下来的用例。（接下来的屏幕阅读器默认为 Mac 的 VoiceOver，Windows 用户可以尝试 JAWS 或者 Window Eyes ）
 
-查看我们的 [testing screenreaders](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders) 得到更多关于屏幕阅读器的信息。
+查看我们的 [testing screenreaders](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders) 得到更多关于屏幕阅读器的信息。
 
 ### 路牌/地标（**Signposts/Landmarks**）
 
@@ -187,7 +187,7 @@ WAI-ARIA 给浏览器增加了 [`role`](https://www.w3.org/TR/wai-aria-1.1/#role
 
 使用屏幕阅读器可以轻松访问读取到 DOM 中的内容，从文本内容到附加到图像的 alt 文本。所以具有大量文本内容的传统静态网站易于为视碍人士提供信息。
 
-问题在于现代 Web 应用程序通常不仅仅是静态文本——它们往往有很多动态更新内容，即通过 [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest)，[Fetch](/en-US/docs/Web/API/Fetch_API) 或[DOM API](/en-US/docs/Web/API/Document_Object_Model) 等机制重新加载整个页面的内容。这些有时被称为**实时区域**。
+问题在于现代 Web 应用程序通常不仅仅是静态文本——它们往往有很多动态更新内容，即通过 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)，[Fetch](/zh-CN/docs/Web/API/Fetch_API) 或[DOM API](/zh-CN/docs/Web/API/Document_Object_Model) 等机制重新加载整个页面的内容。这些有时被称为**实时区域**。
 
 我们来看一个小例子—— [aria-no-live.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-no-live.html) ([在线 demo](http://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html))。在这个例子我们哟一个小的随机引用块：
 
@@ -200,7 +200,7 @@ WAI-ARIA 给浏览器增加了 [`role`](https://www.w3.org/TR/wai-aria-1.1/#role
 </section>
 ```
 
-我们的 JavaScript 从 [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) 加载一个 JSON 文件里头包含了一系列的名人名言，一旦完成我们就开始用一个 [`setInterval()`](/en-US/docs/Web/API/WindowTimers/setInterval) 循环以十秒一次的频率显示出来。
+我们的 JavaScript 从 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 加载一个 JSON 文件里头包含了一系列的名人名言，一旦完成我们就开始用一个 [`setInterval()`](/zh-CN/docs/Web/API/WindowTimers/setInterval) 循环以十秒一次的频率显示出来。
 
 ```js
 var intervalID = window.setInterval(showQuote, 10000);
@@ -225,7 +225,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 这会让你的屏幕阅读器在更新时可以读取内容。
 
-> **备注：** 当你用`file://`协议头来发 `XMLHttpRequest` 大部分浏览器会抛出 security exception。所以你可能要设置一个 web 服务器来作为请求源，例如 用 Github: [using GitHub](/en-US/docs/Learn/Common_questions/Using_Github_pages)，或者设置一个本地服务器 [Python's SimpleHTTPServer](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)。
+> **备注：** 当你用`file://`协议头来发 `XMLHttpRequest` 大部分浏览器会抛出 security exception。所以你可能要设置一个 web 服务器来作为请求源，例如 用 Github: [using GitHub](/zh-CN/docs/Learn/Common_questions/Using_Github_pages)，或者设置一个本地服务器 [Python's SimpleHTTPServer](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)。
 
 这里有一个附加的考虑—— 只读取更新的文本位。如果我们总是读出标题可能会很好，这样用户就可以记住正在读出的内容。为了能做到这个，我们增加了 [`aria-atomic`](https://www.w3.org/TR/wai-aria-1.1/#aria-atomic) 给 section。再次更新 `<section>` ，像这样：
 
@@ -251,7 +251,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 - `tabindex="-1"` — 这允许通常不可列表的元素以编程方式来接收 focus。例如用：JavaScript，或者作为链接的目标。
 
 我们更详细地讨论了这一点，并在 HTML 辅助功能文章中显示了一个典型的实现
-——请看 [Building keyboard accessibility back in](/en-US/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in).
+——请看 [Building keyboard accessibility back in](/zh-CN/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in).
 
 ### 非语义控件的无障碍
 
@@ -259,7 +259,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 #### 表单验证和错误显示
 
-首先，让我们在此访问之前的文章（重读 [Keeping it unobtrusive](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Keeping_it_unobtrusive)）。 在本节的最后，我们展示了当您尝试提交表单时，如果存在验证错误，我们在错误消息框中包含了一些 ARIA 属性：
+首先，让我们在此访问之前的文章（重读 [Keeping it unobtrusive](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#Keeping_it_unobtrusive)）。 在本节的最后，我们展示了当您尝试提交表单时，如果存在验证错误，我们在错误消息框中包含了一些 ARIA 属性：
 
 ```html
 <div class="errors" role="alert" aria-relevant="all">
@@ -268,7 +268,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 </div>
 ```
 
-- [`role="alert"`](https://www.w3.org/TR/wai-aria-1.1/#alert) 自动将其转变为实时区域，所以它一变化就会念出来。也语义化地说明了这是一个 alert 信息（重要的 时间/上下文 敏感信息），而且展现了一种更好，更加易于读取的警告用户的方式（模态警告例如 [`alert()`](/en-US/docs/Web/API/Window/alert) 的调用会导致一系列的无障碍问题，详情请看[Popup Windows](http://webaim.org/techniques/javascript/other#popups) ）。
+- [`role="alert"`](https://www.w3.org/TR/wai-aria-1.1/#alert) 自动将其转变为实时区域，所以它一变化就会念出来。也语义化地说明了这是一个 alert 信息（重要的 时间/上下文 敏感信息），而且展现了一种更好，更加易于读取的警告用户的方式（模态警告例如 [`alert()`](/zh-CN/docs/Web/API/Window/alert) 的调用会导致一系列的无障碍问题，详情请看[Popup Windows](http://webaim.org/techniques/javascript/other#popups) ）。
 - 一个 [`aria-relevant`](https://www.w3.org/TR/wai-aria-1.1/#aria-relevant) 的值为 `all` 会指示屏幕阅读器在对其进行任何更改时读出错误列表的内容 — 即为错误的增加或者消失。这是很有用的，因为用户需要知道具体哪个错误的出现或者消失，不仅仅是表单错误列表出现了增加或者删除。
 
 我们可以在 ARIA 的应用上更进一步，并提供更多验证上的帮助。例如支出某个字段是否必填，或者是要填的年龄的区间该是多少？
@@ -330,7 +330,7 @@ function toggleMusician(bool) {
 
 #### 描述非语义的 button 是个 button
 
-在本课程中已经有几次，我们已经提到了原生的无障碍（以及使用其他元素伪造导致的无障碍问题）按钮，链接或表单元素（请参阅 HTML 辅助功能文章中的[UI 控件](/en-US/docs/Learn/Accessibility/HTML#UI_controls) ，以及[优化键盘的无障碍操作](#优化键盘的无障碍操作)，上面）。基本上，利用 tabindex 和一些 JavaScript 的话，大部分情况下添加键盘辅助功能不会有多少麻烦。
+在本课程中已经有几次，我们已经提到了原生的无障碍（以及使用其他元素伪造导致的无障碍问题）按钮，链接或表单元素（请参阅 HTML 辅助功能文章中的[UI 控件](/zh-CN/docs/Learn/Accessibility/HTML#UI_controls) ，以及[优化键盘的无障碍操作](#优化键盘的无障碍操作)，上面）。基本上，利用 tabindex 和一些 JavaScript 的话，大部分情况下添加键盘辅助功能不会有多少麻烦。
 
 但是屏幕阅读器呢？他们还是看着这个元素并不是一个 button，如果你用屏幕阅读器测试我们的 [fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) 例子，你会听到一段短语描述这个按钮，内容大概是 "Click me!, group"，显然这会让人疑惑。
 
@@ -348,7 +348,7 @@ function toggleMusician(bool) {
 
 还有许多其他 [roles](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) 可以将非语义元素结构识别为常见的 UI 功能，这些功能超出了标准 HTML 中可用的功能，例如 [`combobox`](https://www.w3.org/TR/wai-aria-1.1/#combobox), [`slider`](https://www.w3.org/TR/wai-aria-1.1/#slider), [`tabpanel`](https://www.w3.org/TR/wai-aria-1.1/#tabpanel), [`tree`](https://www.w3.org/TR/wai-aria-1.1/#tree).。你可以在 [Deque university code library](https://dequeuniversity.com/library/) 中看到许多有用的示例，以便了解如何使这些控件做到无障碍的。
 
-让我们来看看我们自己的一个例子。我们将返回到我们简单的绝对定位选项卡界面（请参阅我们的 CSS 和 JavaScript 无障碍的文章的 [Hiding things](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Hiding_things) 段落），你可以在 [Tabbed info box example](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)中找到它（[源码地址](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)）。
+让我们来看看我们自己的一个例子。我们将返回到我们简单的绝对定位选项卡界面（请参阅我们的 CSS 和 JavaScript 无障碍的文章的 [Hiding things](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#Hiding_things) 段落），你可以在 [Tabbed info box example](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)中找到它（[源码地址](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)）。
 
 这个例子在键盘无障碍方面运行良好 —— 你可以愉快地在不同选项卡之间进行 tab 并选择它们然后显示选项卡内容。它也是相当容易访问的 —— 你可以滚动浏览内容并使用标题进行导航，即使你无法看到屏幕上发生的事情。然而，内容并不明显 —— 屏幕阅读器目前将内容报告为链接列表，以及一些内容包含三个标题。它不会让你知道内容之间的关系。为用户提供有关内容结构的更多线索总是好的。
 
@@ -404,10 +404,10 @@ function toggleMusician(bool) {
 
 ## 在这个模块：
 
-- [What is accessibility?](/en-US/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/en-US/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/en-US/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting)
+- [What is accessibility?](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
+- [HTML: A good basis for accessibility](/zh-CN/docs/Learn/Accessibility/HTML)
+- [CSS and JavaScript accessibility best practices](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
+- [WAI-ARIA basics](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
+- [Accessible multimedia](/zh-CN/docs/Learn/Accessibility/Multimedia)
+- [Mobile accessibility](/zh-CN/docs/Learn/Accessibility/Mobile)
+- [Accessibility troubleshooting](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)

@@ -16,7 +16,7 @@ original_slug: Web/CSS/calc()
 
 <p>A função  <strong><code>calc()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> permite você executar cálculos quando especificar os valores de propriedades no CSS. Pode ser utilizada em qualquer lugar , como  {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, e {{cssxref("&lt;integer&gt;")}} é permitido.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* propriedade: calc(expressão) */
+<pre class="brush: css">/* propriedade: calc(expressão) */
 width: calc(100% - 80px);
 </pre>
 
@@ -57,7 +57,7 @@ width: calc(100% - 80px);
 
 <p><code>calc()</code> torna mais fácil posicionar um objeto com uma margem definida. Nesse exemplo, o CSS cria um banner que se estende pela janela, com um espaço de 40px entre os dois lados do banner e das bordas da janela:</p>
 
-<pre class="brush: css notranslate">.banner {
+<pre class="brush: css">.banner {
   position: absolute;
   left: 40px;
   width: calc(100% - 80px);
@@ -70,7 +70,7 @@ width: calc(100% - 80px);
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="banner"&gt;This is a banner!&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div class="banner"&gt;This is a banner!&lt;/div&gt;</pre>
 
 <p>{{EmbedLiveSample('Positioning_an_object_on_screen_with_a_margin', 'auto', '60')}}</p>
 
@@ -80,7 +80,7 @@ width: calc(100% - 80px);
 
 <p>Veja-mos no CSS:</p>
 
-<pre class="brush: css notranslate">input {
+<pre class="brush: css">input {
   padding: 2px;
   display: block;
   width: calc(100% - 1em);
@@ -95,7 +95,7 @@ width: calc(100% - 80px);
 
 <p>Aqui, o próprio formulário é estabelecido para utilizar 1/6 da largura da janela disponível. Então, para garantir que os campos de entrada mantenham um tamanho apropriado, utilizamos <code>calc()</code> novamente para estabelecer que eles devem ter a largura de seu contêiner menos 1em. Então, o seguinte HTML utiliza este CSS:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div id="formbox"&gt;
   &lt;label&gt;Type something:&lt;/label&gt;
   &lt;input type="text"&gt;
@@ -109,7 +109,7 @@ width: calc(100% - 80px);
 
 <p>Você também pode utilizar <code>calc()</code> com <a href="/en-US/docs/Web/CSS/CSS_Variables">variáveis de CSS</a>. Considere o seguinte código:</p>
 
-<pre class="brush: css notranslate">.foo {
+<pre class="brush: css">.foo {
   --widthA: 100px;
   --widthB: calc(var(--widthA) / 2);
   --widthC: calc(var(--widthB) / 2);
@@ -122,7 +122,7 @@ width: calc(100% - 80px);
 
 <p>Quando <code>calc()</code> é usado para controlar o tamanho do texto, certifique-se de que um dos valores inclui uma <a href="/en-US/docs/Web/CSS/length#Relative_length_units">unidade de comprimento relativo</a>, por exemplo:</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   font-size: calc(1.5rem + 3vw);
 }</pre>
 

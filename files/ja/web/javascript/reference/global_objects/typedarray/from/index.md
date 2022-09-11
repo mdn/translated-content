@@ -1,14 +1,6 @@
 ---
 title: TypedArray.from()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/from
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - TypedArray
-  - TypedArrays
-  - from
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/from
 ---
 {{JSRef}}
 

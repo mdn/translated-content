@@ -200,7 +200,7 @@ console.log("Hello world");
 - `transient`
 - `volatile`
 
-另外，直接量`null`、`true`和`false`同样不能被当成标识使用。
+另外，字面量 `null`、`true`和`false`同样不能被当成标识使用。
 
 ### 保留字的使用
 
@@ -218,9 +218,9 @@ a = { import: "test" }.
 function import() {} // Illegal.
 ```
 
-## 直接量
+## 字面量
 
-### 空直接量
+### 空字面量
 
 `更多信息可以参考null`
 
@@ -228,7 +228,7 @@ function import() {} // Illegal.
 null
 ```
 
-### 布尔直接量
+### 布尔字面量
 
 更多信息可以参考[`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
 
@@ -237,7 +237,7 @@ true
 false
 ```
 
-### 数值直接量
+### 数值字面量
 
 #### 十进制
 
@@ -250,7 +250,7 @@ false
 0777 // 转换为八进制 777，十进制 511
 ```
 
-请注意，十进制数值直接量可以以 0 开头，但是如果 0 以后的最高位比 8 小，数值将会被认为是八进制而不会报错。更多信息可以参考 {{bug(957513)}} 和 [`parseInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix)。
+请注意，十进制数值字面量可以以 0 开头，但是如果 0 以后的最高位比 8 小，数值将会被认为是八进制而不会报错。更多信息可以参考 {{bug(957513)}} 和 [`parseInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix)。
 
 #### 二进制
 
@@ -285,7 +285,7 @@ var m = 0o644; // 420
 0XA                 // 10
 ```
 
-### 对象直接量
+### 对象字面量
 
 更多信息可以参考 {{jsxref("Object")}} 和[对象初始化器](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)。
 
@@ -299,7 +299,7 @@ var o = {a, b, c};
 var o = { a: a, b: b, c: c };
 ```
 
-### 数组直接量
+### 数组字面量
 
 更多信息可以参考 {{jsxref("Array")}}。
 
@@ -307,7 +307,7 @@ var o = { a: a, b: b, c: c };
 [1954, 1974, 1990, 2014]
 ```
 
-### 字符串直接量
+### 字符串字面量
 
 ```js
 'foo'
@@ -341,20 +341,20 @@ ECMAScript 6 新增特性。使用 Unicode 编码转义，任何字符都可以�
 '\uD87E\uDC04'
 ```
 
-### 正则表达式直接量
+### 正则表达式字面量
 
 更多信息可以参考 [`RegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。
 
 ```js
 /ab+c/g
 
-// 一个空的正则表达式直接量
+// 一个空的正则表达式字面量
 // 必须有一个空的非捕获分组
 // 以避免被当成是行注释符号
 /(?:)/
 ```
 
-### 模板直接量
+### 模板字面量
 
 更多信息可以参考[template strings](/en-US/docs/Web/JavaScript/Reference/template_strings)。
 
@@ -383,48 +383,48 @@ tag `string text ${expression} string text`
 
 ECMAScript 规格提到[自动分号补全的三个规则](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-rules-of-automatic-semicolon-insertion)。
 
-1\. 当出现一个不允许的[行终止符](#Line_terminators)或“}”时，会在其之前插入一个分号。
+1. 当出现一个不允许的[行终止符](#Line_terminators)或“}”时，会在其之前插入一个分号。
 
-```js
-{ 1 2 } 3
+    ```js
+    { 1 2 } 3
 
-// 将会被 ASI 转换为
+    // 将会被 ASI 转换为
 
-{ 1 2 ;} 3;
-```
+    { 1 2 ;} 3;
+    ```
 
-2\. 当捕获到标识符输入流的结尾，并且无法将单个输入流转换为一个完整的程序时，将在结尾插入一个分号。
+2. 当捕获到标识符输入流的结尾，并且无法将单个输入流转换为一个完整的程序时，将在结尾插入一个分号。
 
-在下面这段中，由于在 `b` 和 `++` 之间出现了一个行终止符，所以 `++` 未被当成变量 `b` 的[后置运算符](/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment)。
+    在下面这段中，由于在 `b` 和 `++` 之间出现了一个行终止符，所以 `++` 未被当成变量 `b` 的[后置运算符](/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment)。
 
-```js
-a = b
-++c
+    ```js
+    a = b
+    ++c
 
-// 将被 ASI 转换为
+    // 将被 ASI 转换为
 
-a = b;
-++c;
-```
+    a = b;
+    ++c;
+    ```
 
-3\. 当语句中包含语法中的限制产品后跟一个行终止符的时候，将会在结尾插入一个分号。带“这里没有行终止符”规则的语句有：
+3. 当语句中包含语法中的限制产品后跟一个行终止符的时候，将会在结尾插入一个分号。带“这里没有行终止符”规则的语句有：
 
-- 后置运算符（`++` 和 `--`）
-- `continue`
-- `break`
-- `return`
-- `yield`、`yield*`
-- `module`
+    - 后置运算符（`++` 和 `--`）
+    - `continue`
+    - `break`
+    - `return`
+    - `yield`、`yield*`
+    - `module`
 
-```js
-return
-a + b
+    ```js
+    return
+    a + b
 
-// 将被 ASI 转换为
+    // 将被 ASI 转换为
 
-return;
-a + b;
-```
+    return;
+    a + b;
+    ```
 
 ## 浏览器兼容性
 

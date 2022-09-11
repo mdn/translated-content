@@ -30,7 +30,7 @@ original_slug: learn/Performance/感知性能
   </tbody>
 </table>
 
-性能是关于用户视角的。 How fast a website feels like it's loading and rendering has a greater impact on user experience than how fast the website actually loads and renders. Even if an operation is going to take a long time (because of latency or or inavailability of the [main thread](/en-US/docs/Glossary/Main_thread)), it is possible to keep the user engaged while they wait by showing a loading spinner, or a series of useful hints and tips (or jokes, or whatever else you think might be appropriate). Such an approach is much better than just showing nothing, which will make it feel like it is taking a lot longer and possibly lead to your users thinking it is broken and giving up.
+性能是关于用户视角的。 How fast a website feels like it's loading and rendering has a greater impact on user experience than how fast the website actually loads and renders. Even if an operation is going to take a long time (because of latency or or inavailability of the [main thread](/zh-CN/docs/Glossary/Main_thread)), it is possible to keep the user engaged while they wait by showing a loading spinner, or a series of useful hints and tips (or jokes, or whatever else you think might be appropriate). Such an approach is much better than just showing nothing, which will make it feel like it is taking a lot longer and possibly lead to your users thinking it is broken and giving up.
 
 ## 感知性能
 
@@ -38,11 +38,11 @@ The perception of how fast your site loads and how responsive feels to user inte
 
 There is no unicorn metric that can measure what the user feels, but metrics are useful in guaging improvements (and regressions). Relevant measurements include first meaningful paint (FMP), largest contentful paint (LCP), time to interactive (TTI), render start, DOM interactive, and speed index.
 
-**[First paint](/en-US/docs/Glossary/First_paint)** is reported by the browser and provides the time, in ms, of when the page starts changing; but this change can be a simple background color update or something even less noticable. It doesn’t indicate completeness and may report a time when nothing visible is painted. **[First Contentful Paint](/en-US/docs/Glossary/First_contentful_paint) (FCP)** reports the time when the browser first rendered anything of signifigance, be that text, foreground or background image, or a canvas or SVG; capturing the very beginning of the loading experience. But, just because there's content, doesn't mean it's useful content or that the user has content to consume. The **[First Meaningful Paint](/en-US/docs/Glossary/first_meaningful_paint)**, or FMP, is the when content appears on the screen that is actually meaningful; which is a better metric for user-perceived loading experience, but still not ideal. **Largest contentful paint (LCP)** metric, definited in the [Largest Contentful Paint API](https://wicg.github.io/largest-contentful-paint/), reports the render time of the largest content element visible in the viewport.
+**[First paint](/zh-CN/docs/Glossary/First_paint)** is reported by the browser and provides the time, in ms, of when the page starts changing; but this change can be a simple background color update or something even less noticable. It doesn’t indicate completeness and may report a time when nothing visible is painted. **[First Contentful Paint](/zh-CN/docs/Glossary/First_contentful_paint) (FCP)** reports the time when the browser first rendered anything of signifigance, be that text, foreground or background image, or a canvas or SVG; capturing the very beginning of the loading experience. But, just because there's content, doesn't mean it's useful content or that the user has content to consume. The **[First Meaningful Paint](/zh-CN/docs/Glossary/first_meaningful_paint)**, or FMP, is the when content appears on the screen that is actually meaningful; which is a better metric for user-perceived loading experience, but still not ideal. **Largest contentful paint (LCP)** metric, definited in the [Largest Contentful Paint API](https://wicg.github.io/largest-contentful-paint/), reports the render time of the largest content element visible in the viewport.
 
-**[Speed index](/en-US/docs/Glossary/Speed_index)** is also used to approximate perceived performance: it measures the average time for pixels on the visible screen to be painted. It doesn't account for jitter, nor does it weight which content important to a user more highly, so it's not a perfect metric.
+**[Speed index](/zh-CN/docs/Glossary/Speed_index)** is also used to approximate perceived performance: it measures the average time for pixels on the visible screen to be painted. It doesn't account for jitter, nor does it weight which content important to a user more highly, so it's not a perfect metric.
 
-These metrics have to do with initial load and render. It is also important to ensure the site feels fast once the user begins interacting with it. For this, **[time to interactive](/en-US/docs/Glossary/Time_to_interactive)**, is a good metric; it is the moment when the last [long task](/en-US/docs/Glossary/Long_task) of the load process finishes and the UI is available for user interaction with delay.
+These metrics have to do with initial load and render. It is also important to ensure the site feels fast once the user begins interacting with it. For this, **[time to interactive](/zh-CN/docs/Glossary/Time_to_interactive)**, is a good metric; it is the moment when the last [long task](/zh-CN/docs/Glossary/Long_task) of the load process finishes and the UI is available for user interaction with delay.
 
 UI lack or responsiveness and jank both harm perceived performance. Even though a task may take a long time, though, there are ways to make it seem faster. There are several tips to improving perceived performance.
 
@@ -96,15 +96,15 @@ By turning as much of the download, render and wait time into active phases and 
 
 ## In this module
 
-- [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
-- [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)
-- [How do users perceive performance?](/en-US/docs/Learn/Performance/Perceived_performance)
-- [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
-- [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
-- [Multimedia: video](/en-US/docs/Learn/Performance/video)
-- [JavaScript performance best practices](/en-US/docs/Learn/Performance/JavaScript).
-- [HTML performance features](/en-US/docs/Learn/Performance/HTML)
-- [CSS performance features](/en-US/docs/Learn/Performance/CSS)
-- [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)
-- [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
-- [Focusing on performance](/en-US/docs/Learn/Performance/business_case_for_performance)
+- [The "why" of web performance](/zh-CN/docs/Learn/Performance/why_web_performance)
+- [What is web performance?](/zh-CN/docs/Learn/Performance/What_is_web_performance)
+- [How do users perceive performance?](/zh-CN/docs/Learn/Performance/Perceived_performance)
+- [Measuring performance](/zh-CN/docs/Learn/Performance/Measuring_performance)
+- [Multimedia: images](/zh-CN/docs/Learn/Performance/Multimedia)
+- [Multimedia: video](/zh-CN/docs/Learn/Performance/video)
+- [JavaScript performance best practices](/zh-CN/docs/Learn/Performance/JavaScript).
+- [HTML performance features](/zh-CN/docs/Learn/Performance/HTML)
+- [CSS performance features](/zh-CN/docs/Learn/Performance/CSS)
+- [Fonts and performance](/zh-CN/docs/Learn/Performance/Fonts)
+- [Mobile performance](/zh-CN/docs/Learn/Performance/Mobile)
+- [Focusing on performance](/zh-CN/docs/Learn/Performance/business_case_for_performance)

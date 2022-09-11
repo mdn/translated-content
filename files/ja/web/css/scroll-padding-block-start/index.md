@@ -1,16 +1,6 @@
 ---
 title: scroll-padding-block-start
 slug: Web/CSS/scroll-padding-block-start
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - Web
-  - recipe:css-property
-  - scroll-padding-block
-  - scroll-padding-block-start
-browser-compat: css.properties.scroll-padding-block-start
-translation_of: Web/CSS/scroll-padding-block-start
 ---
 {{CSSRef}}
 

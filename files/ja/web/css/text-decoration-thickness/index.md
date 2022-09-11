@@ -1,16 +1,6 @@
 ---
 title: text-decoration-thickness
 slug: Web/CSS/text-decoration-thickness
-tags:
-  - CSS
-  - CSS テキスト装飾
-  - プロパティ
-  - Reference
-  - recipe:css-property
-  - text-decoration
-  - text-decoration-thickness
-browser-compat: css.properties.text-decoration-thickness
-translation_of: Web/CSS/text-decoration-thickness
 ---
 {{CSSRef}}
 

@@ -1,16 +1,6 @@
 ---
 title: ':is() (:matches(), :any())'
 slug: Web/CSS/:is
-tags:
-  - ':is'
-  - CSS
-  - 実験的
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.is
-translation_of: Web/CSS/:is
 ---
 {{CSSRef}}
 

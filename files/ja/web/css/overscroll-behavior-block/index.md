@@ -1,16 +1,6 @@
 ---
 title: overscroll-behavior-block
 slug: Web/CSS/overscroll-behavior-block
-tags:
-  - CSS
-  - CSS ボックスモデル
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - リファレンス
-  - overscroll-behavior-block
-  - recipe:css-property
-browser-compat: css.properties.overscroll-behavior-block
-translation_of: Web/CSS/overscroll-behavior-block
 ---
 {{CSSRef}}
 

@@ -4,7 +4,7 @@ slug: Web/API/Window/message_event
 ---
 {{APIRef("HTML DOM")}}{{ SeeCompatTable() }}
 
-{{domxref("WindowEventHandlers")}}的**`onmessage`** **属性是当对象接收到**{{event("message")}} **事件时被调用的**{{event("Event_handlers", "event handler")}} **.**
+**`message`** 事件是在窗口接受到消息（例如，从另一个浏览器上下文中调用 [`Window.postMessage()`](/zh-CN/docs/Web/API/Window/postMessage)）时，在 {{domxref('Window')}} 对象上触发的事件。
 
 ## 语法
 

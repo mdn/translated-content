@@ -41,4 +41,4 @@ range.insertNode(newNode);
 
 ## See also
 
-- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)
+- [The DOM interfaces index](/zh-CN/docs/Web/API/Document_Object_Model)

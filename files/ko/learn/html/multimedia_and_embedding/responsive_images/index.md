@@ -1,7 +1,6 @@
 ---
 title: 반응형 이미지
 slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
-translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
 

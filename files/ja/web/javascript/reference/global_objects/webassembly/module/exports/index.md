@@ -1,17 +1,6 @@
 ---
 title: WebAssembly.Module.exports()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/exports
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Module
-  - Object
-  - Reference
-  - WebAssembly
-  - exports
-browser-compat: javascript.builtins.WebAssembly.Module.exports
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/exports
 ---
 {{JSRef}}
 

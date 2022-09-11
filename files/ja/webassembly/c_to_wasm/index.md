@@ -138,7 +138,6 @@ C で定義された関数があって、それを JavaScript から呼び出し
 5. JavaScript から新しい `myFunction()` 関数を呼び出す必要があります。まずは、 hello3.html ファイルをテキストエディターで開いてください。
 6. 以下のような {{HTMLElement("button")}} を最初の `<script type='text/javascript'>` タグの上に加えましょう。
 
-
     ```html
     <button id="mybutton">Run myFunction</button>
     ```

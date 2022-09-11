@@ -13,4 +13,4 @@ Apache Subversion (**SVN**) 是免費的資源控制管理({{Glossary("SCM")}}) 
 
 ### 學習使用
 
-- [MDN 上的本地化的 SVN 指引](/en-US/docs/Mozilla/Localization/SVN_guide_for_localizers)
+- [MDN 上的本地化的 SVN 指引](/zh-TW/docs/Mozilla/Localization/SVN_guide_for_localizers)

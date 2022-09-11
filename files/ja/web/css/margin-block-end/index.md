@@ -1,18 +1,6 @@
 ---
 title: margin-block-end
 slug: Web/CSS/margin-block-end
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - NeedsContent
-  - リファレンス
-  - margin-block
-  - margin-block-end
-  - recipe:css-property
-browser-compat: css.properties.margin-block-end
-translation_of: Web/CSS/margin-block-end
 ---
 {{CSSRef}}
 

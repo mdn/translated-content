@@ -18,7 +18,7 @@ var Früh = "foobar";
 
 但變數 früh 並不等於 Früh，因為大小寫對 JavaScript 是有區別的。
 
-在 JavaScript 中，每行指令被稱為 {{Glossary("Statement", "Statements")}}，並用分號（;）分隔。空格、Tab 與換行符號皆被視為空白。JavaScript 的文件會從左到右進行掃描，並轉換成一系列的元素，像是令牌（Token）、控制字符（Control characters）、換行器（line terminators）、註解（Comments）或是空白（Withespace），ECMAScript 也定義了特定的保留字和字面值，並在每個沒有加分號的 Statement 自動加上分號。然而，推薦的作法還是在每個 Statement 的結尾自行加上分號，以防止一些潛在的副作用，如果需要更多資訊，可以參考[這篇](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)。
+在 JavaScript 中，每行指令被稱為 {{Glossary("Statement", "Statements")}}，並用分號（;）分隔。空格、Tab 與換行符號皆被視為空白。JavaScript 的文件會從左到右進行掃描，並轉換成一系列的元素，像是令牌（Token）、控制字符（Control characters）、換行器（line terminators）、註解（Comments）或是空白（Withespace），ECMAScript 也定義了特定的保留字和字面值，並在每個沒有加分號的 Statement 自動加上分號。然而，推薦的作法還是在每個 Statement 的結尾自行加上分號，以防止一些潛在的副作用，如果需要更多資訊，可以參考[這篇](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar)。
 
 ## 註解（Comments）
 
@@ -51,7 +51,7 @@ JavaScript 有三種宣告方式
 
 在 JavaScript 中，變數必須使用字母（letter）、下底線（\_）、錢號（$）作為開頭；後面的字員組成可以包含數字（0-9）。JavaScript 是區分大小寫（case sensitive）的，大寫字母（'A' \~ 'Z'）和小寫字母（'a' \~ 'z'）皆可使用且不相等。
 
-You can use most of ISO 8859-1 or Unicode letters such as å and ü in identifiers (for more details see [this blog post](https://mathiasbynens.be/notes/javascript-identifiers-es6)). You can also use the [Unicode escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals) as characters in identifiers.
+You can use most of ISO 8859-1 or Unicode letters such as å and ü in identifiers (for more details see [this blog post](https://mathiasbynens.be/notes/javascript-identifiers-es6)). You can also use the [Unicode escape sequences](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals) as characters in identifiers.
 
 Some examples of legal names are `Number_hits`, `temp99`, `$credit`, and `_name`.
 
@@ -61,7 +61,7 @@ Some examples of legal names are `Number_hits`, `temp99`, `$credit`, and `_name`
 
 - 透過保留字 {{jsxref("Statements/var", "var")}} 來定義變數，舉例來說： `var x = 42`，這種方式可以用來定義區域以及全域變數。
 - 直接指定一個值給該變數，例如：`x = 42`，這種方式只能定義全域變數，如果在方法外面使用該方法定義變數，嚴格模式裡會產生警告，該定義方式應該盡可能避免。
-- 透過保留字 {{jsxref("Statements/let", "let")}}，舉例來說：`let y = 13`，{{jsxref("Statements/let", "let")}} 可以用來定義區塊裡的區域變數。想瞭解更多，可以參考[變數區域](/en-US/docs/Web/JavaScript/Reference/Statements/const)的章節。
+- 透過保留字 {{jsxref("Statements/let", "let")}}，舉例來說：`let y = 13`，{{jsxref("Statements/let", "let")}} 可以用來定義區塊裡的區域變數。想瞭解更多，可以參考[變數區域](/zh-TW/docs/Web/JavaScript/Reference/Statements/const)的章節。
 
 ### 變數取值
 
@@ -119,7 +119,7 @@ console.log(n * 32); // Will log 0 to the console
 
 當我們在函式外宣告一個變數時，這個變數會是一個全域變數 (global variable), 因為在這份程式文件裡面的所有程式碼都可以使用到這個變數。但當我們只在函式內宣告變數時，這變數是區域變數 (local variable)，因為變數只會在函式內被使用到。
 
-**請注意!!** 在 ECMAScript 2015 以前的 JavaScript 版本裡，並沒有定義區塊描述 ([block statement](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Block_statement)) 的變數有效範圍。更精確的說，之前版本所定義的變數，其特性相當於全域變數；不只在宣告的區塊或函數裡面有效 ，其變數值還會超出宣告區塊而影響到全部的描述碼。
+**請注意!!** 在 ECMAScript 2015 以前的 JavaScript 版本裡，並沒有定義區塊描述 ([block statement](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Block_statement)) 的變數有效範圍。更精確的說，之前版本所定義的變數，其特性相當於全域變數；不只在宣告的區塊或函數裡面有效 ，其變數值還會超出宣告區塊而影響到全部的描述碼。
 
 從下面例子來看，其輸出結果會是 5。雖然 x 是在 if { } 區塊裡面被宣告的，但卻因為有全域變數的特性，因此溢出大括號而成為後續描述碼的變數值。
 
@@ -277,7 +277,7 @@ MY_OBJECT.key = 'otherValue';
 
 儘管這些變數關聯性很小, 他們可以讓你在你的應用程式中, 產生出有意義的函數.
 
-[物件](/en-US/docs/JavaScript/Reference/Global_Objects/Object)與 [函數](/en-US/docs/JavaScript/Reference/Global_Objects/Function) 在語言中是其它的基本元素. 你可以把物件想成是一個被命名過且用來裝數值的容器,以及函數則為你的應用程式所執行的步驟.
+[物件](/zh-TW/docs/JavaScript/Reference/Global_Objects/Object)與 [函數](/zh-TW/docs/JavaScript/Reference/Global_Objects/Function) 在語言中是其它的基本元素. 你可以把物件想成是一個被命名過且用來裝數值的容器,以及函數則為你的應用程式所執行的步驟.
 
 ### 資料型別轉換
 
@@ -348,11 +348,11 @@ y = 42 + " is the answer" // "42 is the answer"
 var coffees = ['French Roast', 'Colombian', 'Kona'];
 ```
 
-> **備註：** An array literal is a type of object initializer. See [Using Object Initializers](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers).
+> **備註：** An array literal is a type of object initializer. See [Using Object Initializers](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers).
 
 If an array is created using a literal in a top-level script, JavaScript interprets the array each time it evaluates the expression containing the array literal. In addition, a literal used in a function is created each time the function is called.
 
-Array literals are also `Array` objects. See {{jsxref("Array")}} and [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) for details on `Array` objects.
+Array literals are also `Array` objects. See {{jsxref("Array")}} and [Indexed collections](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections) for details on `Array` objects.
 
 #### Extra commas in array literals
 
@@ -410,7 +410,7 @@ Do not confuse the primitive Boolean values `true` and `false` with the true and
 0b11, 0b0011 and -0b11 (binary, base 2)
 ```
 
-更多資訊請參閱 [Numeric literals in the Lexical grammar reference](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Numeric_literals).
+更多資訊請參閱 [Numeric literals in the Lexical grammar reference](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#Numeric_literals).
 
 ### 浮點數字面值 (Floating-point literals)
 
@@ -599,7 +599,7 @@ You should use string literals unless you specifically need to use a String obje
 |             |                                                                                                                                                                                                                                                    |
 | `\xXX`      | The character with the Latin-1 encoding specified by the two hexadecimal digits _XX_ between 00 and FF. For example, \xA9 is the hexadecimal sequence for the copyright symbol.                                                                    |
 |             |                                                                                                                                                                                                                                                    |
-| `\uXXXX`    | The Unicode character specified by the four hexadecimal digits _XXXX_. For example, \u00A9 is the Unicode sequence for the copyright symbol. See [Unicode escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals). |
+| `\uXXXX`    | The Unicode character specified by the four hexadecimal digits _XXXX_. For example, \u00A9 is the Unicode sequence for the copyright symbol. See [Unicode escape sequences](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals). |
 | `\u{XXXXX}` | Unicode code point escapes. For example, \u{2F804} is the same as the simple Unicode escapes \uD87E\uDC04.                                                                                                                                         |
 
 #### Escaping characters
@@ -645,7 +645,7 @@ Sugar is sweet,\n\
 and so is foo.'
 ```
 
-ECMAScript 2015 introduces a new type of literal, namely [**template literals**](/en-US/docs/Web/JavaScript/Reference/template_strings). This allows for many new features including multiline strings!
+ECMAScript 2015 introduces a new type of literal, namely [**template literals**](/zh-TW/docs/Web/JavaScript/Reference/template_strings). This allows for many new features including multiline strings!
 
 ```js
 var poem =
@@ -659,10 +659,10 @@ and so is foo.`
 
 This chapter focuses on basic syntax for declarations and types. To learn more about JavaScript's language constructs, see also the following chapters in this guide:
 
-- [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
-- [Loops and iteration](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
-- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [Control flow and error handling](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- [Loops and iteration](/zh-TW/docs/Web/JavaScript/Guide/Loops_and_iteration)
+- [Functions](/zh-TW/docs/Web/JavaScript/Guide/Functions)
+- [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators)
 
 In the next chapter, we will have a look at control flow constructs and error handling.
 

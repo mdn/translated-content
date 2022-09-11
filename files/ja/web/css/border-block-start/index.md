@@ -1,20 +1,6 @@
 ---
 title: border-block-start
 slug: Web/CSS/border-block-start
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - border-block
-  - border-block-start
-  - border-block-start-color
-  - border-block-start-style
-  - border-block-start-width
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border-block-start
-translation_of: Web/CSS/border-block-start
 ---
 {{CSSRef}}
 

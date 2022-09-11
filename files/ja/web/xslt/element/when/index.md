@@ -1,12 +1,6 @@
 ---
 title: <xsl:when>
 slug: Web/XSLT/Element/when
-tags:
-  - XSLT
-  - when
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/when
 ---
 {{ XsltRef() }}
 

@@ -1,9 +1,6 @@
 ---
 title: JavaScript 기본
 slug: Learn/Getting_started_with_the_web/JavaScript_basics
-tags:
-  - 자바스크립트
-translation_of: Learn/Getting_started_with_the_web/JavaScript_basics
 ---
 {{LearnSidebar}}
 

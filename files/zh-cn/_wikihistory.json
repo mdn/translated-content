@@ -33888,20 +33888,5 @@
   "conflicting/Web/API/Element/touchstart_event": {
     "modified": "2020-10-15T22:30:05.652Z",
     "contributors": ["Carllllo"]
-  },
-  "conflicting/Web/API/HTMLElement/drop_event": {
-    "modified": "2020-07-25T06:39:24.729Z",
-    "contributors": ["wiki", "鑫花", "wbamberg", "fscholz", "fanyer", "Ende93"]
-  },
-  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
-    "modified": "2020-09-04T03:12:55.502Z",
-    "contributors": [
-      "a1157116165",
-      "StorytellerF",
-      "pluwen",
-      "sonymoon",
-      "pelligit",
-      "maicss"
-    ]
   }
 }

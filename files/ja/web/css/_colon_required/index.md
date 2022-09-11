@@ -1,15 +1,6 @@
 ---
 title: ':required'
 slug: Web/CSS/:required
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.required
-translation_of: Web/CSS/:required
 ---
 {{ CSSRef }}
 

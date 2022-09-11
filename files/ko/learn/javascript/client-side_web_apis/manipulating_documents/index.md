@@ -1,10 +1,6 @@
 ---
 title: JavaScript
 slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
-tags:
-  - CSS:Getting_Started
-translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
-translation_of_original: Web/Guide/CSS/Getting_started/JavaScript
 original_slug: Web/CSS/Getting_Started/JavaScript
 ---
 이 페이지는 입문서의 II 부입니다. II 부는 모질라에서의 CSS의 범위(scope)를 보여주는 예제들을 포함하고 있습니다.

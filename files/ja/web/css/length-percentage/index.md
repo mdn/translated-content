@@ -1,16 +1,6 @@
 ---
 title: <length-percentage>
 slug: Web/CSS/length-percentage
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - リファレンス
-  - length-percentage
-  - 単位
-  - 値
-browser-compat: css.types.length-percentage
-translation_of: Web/CSS/length-percentage
 ---
 {{CSSRef}}
 

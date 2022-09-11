@@ -37,7 +37,7 @@ The **`result`** event of the [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_AP
 
 This code is excerpted from our [Speech color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) example.
 
-You can use the `result` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
+You can use the `result` event in an [`addEventListener`](/zh-CN/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
 var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
@@ -49,7 +49,7 @@ recognition.addEventListener('result', function(event) {
 });
 ```
 
-Or use the [`onresult`](/en-US/docs/Web/API/SpeechRecognition/onresult) event handler property:
+Or use the [`onresult`](/zh-CN/docs/Web/API/SpeechRecognition/onresult) event handler property:
 
 ```js
 recognition.onresult = function(event) {

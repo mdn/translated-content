@@ -1,14 +1,6 @@
 ---
 title: text-emphasis-position
 slug: Web/CSS/text-emphasis-position
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト装飾
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.text-emphasis-position
-translation_of: Web/CSS/text-emphasis-position
 ---
 {{CSSRef}}
 

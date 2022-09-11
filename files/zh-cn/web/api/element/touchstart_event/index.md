@@ -31,7 +31,7 @@ slug: Web/API/Element/touchstart_event
 
 ## 示例
 
-这些时间的代码样例可在这个专用页面查看：[Touch events](/en-US/DOM/Touch_events).
+这些时间的代码样例可在这个专用页面查看：[Touch events](/zh-CN/DOM/Touch_events).
 
 ## 规范
 
@@ -44,4 +44,4 @@ slug: Web/API/Element/touchstart_event
 ## 参见
 
 - [Touch events](/zh-CN/docs/Web/API/Touch_events)
-- 以 [`Document`](/en-US/docs/Web/API/Document) 为目标的相同事件：[`touchstart`](/en-US/docs/Web/API/Document/touchstart_event)
+- 以 [`Document`](/zh-CN/docs/Web/API/Document) 为目标的相同事件：[`touchstart`](/zh-CN/docs/Web/API/Document/touchstart_event)

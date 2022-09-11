@@ -24,7 +24,7 @@ history.replaceState(stateObj, unused, url)
 
 ## 例
 
-https\://www\.mozilla.org/foo.html が以下の JavaScript を実行したとします。
+`https://www.mozilla.org/foo.html` が以下の JavaScript を実行したとします。
 
 ```js
 const stateObj = { foo: 'bar' };
@@ -39,7 +39,7 @@ history.replaceState(stateObj, '', 'bar2.html');
 
 これにより、URL バーに `https://www.mozilla.org/bar2.html` が表示されるようになりますが、ブラウザーが `bar2.html` を読み込んだり、`bar2.html` が存在するかどうかを確認したりすることはありません。
 
-ユーザーが `https://www.microsoft.com` に移動し、戻るボタンをクリックしたとします。この時点で、URL バーには `https://www.mozilla.org/bar2.html` が表示されます。ユーザーがもう一度「戻る」ボタンをクリックすると、URL バーには https\://www\.mozilla.org/foo.html が表示され、 bar.html は完全にバイパスされます。
+ユーザーが `https://www.microsoft.com` に移動し、戻るボタンをクリックしたとします。この時点で、URL バーには `https://www.mozilla.org/bar2.html` が表示されます。ユーザーがもう一度「戻る」ボタンをクリックすると、URL バーには `https://www.mozilla.org/foo.html` が表示され、 bar.html は完全にバイパスされます。
 
 ## 仕様書
 

@@ -4,7 +4,7 @@ slug: Web/API/Worker/Worker
 ---
 {{APIRef("Web Workers API")}}
 
-**`Worker()`** 构造函数创建一个 {{domxref("Worker")}} 对象，该对象执行指定的 URL 脚本。这个脚本必须遵守 [同源策略](/en/Same_origin_policy_for_JavaScript) 。
+**`Worker()`** 构造函数创建一个 {{domxref("Worker")}} 对象，该对象执行指定的 URL 脚本。这个脚本必须遵守 [同源策略](/zh-CN/Same_origin_policy_for_JavaScript) 。
 
 如果 此 URL 有一个无效的语句，或者违反同源策略，一个 `SECURITY_ERR` 类型的{{domxref("DOMException")}}被抛出。
 

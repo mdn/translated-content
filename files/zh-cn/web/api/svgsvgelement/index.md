@@ -4,7 +4,7 @@ slug: Web/API/SVGSVGElement
 ---
 {{APIRef("SVG")}}
 
-该**`SVGSVGElement`**接口提供对{{SVGElement("svg")}}元素的属性的访问，以及操作它们的方法。此接口还包含各种常用的实用方法，例如矩阵操作和控制可视渲染设备上重绘时间的功能。
+该 **`SVGSVGElement`** 接口提供对{{SVGElement("svg")}}元素的属性的访问，以及操作它们的方法。此接口还包含各种常用的实用方法，例如矩阵操作和控制可视渲染设备上重绘时间的功能。
 
 {{InheritanceDiagram(600,140)}}
 

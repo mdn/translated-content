@@ -17,7 +17,7 @@ original_slug: Web/HTML/microformatos
 <p>Um autor de uma página web pode adicionar microformatos no seu HTML. Por exemplo se ele quer se identificar ele podem utilizar um <a href="http://microformats.org/wiki/h-card">h-card</a> como:</p>
 
 <div dir="ltr" style="text-align: left;">
-<pre class="source-html4strict">&lt;a class="h-card" href="http://example.com"&gt;Joe Bloggs&lt;/a&gt;</pre>
+<pre class="brush: html">&lt;a class="h-card" href="http://example.com"&gt;Joe Bloggs&lt;/a&gt;</pre>
 
 <p>Quando um analisador encontra  esse dado, ele saberá que nessa página contém um "card" que descreve uma pessoa ou uma organização chamada <code>Joe Blogger</code> com uma URL de <code>http://example.com/</code>. O analisador disponibiliza esses dados por meio de APIs que podem ser usadas por diferentes aplicativos.</p>
 
@@ -69,7 +69,7 @@ original_slug: Web/HTML/microformatos
 <h4 id="Exemplo_de_h-card">Exemplo de h-card</h4>
 
 <div dir="ltr" style="text-align: left;">
-<pre class="source-html4strict">&lt;p class="h-card"&gt;
+<pre class="brush: html">&lt;p class="h-card"&gt;
   &lt;img class="u-photo" src="http://example.org/photo.png" alt="" /&gt;
   &lt;a class="p-name u-url" href="http://example.org"&gt;Joe Bloggs&lt;/a&gt;
   &lt;a class="u-email" href="mailto:joebloggs@example.com"&gt;joebloggs@example.com&lt;/a&gt;,
@@ -122,8 +122,7 @@ original_slug: Web/HTML/microformatos
 
 <h4 id="Exemplo_de_h-card_aninhado">Exemplo de h-card aninhado</h4>
 
-<div dir="ltr" style="text-align: left;">
-<pre class="source-html4strict">&lt;div class="h-card"&gt;
+<pre class="brush: html">&lt;div class="h-card"&gt;
   &lt;a class="p-name u-url"
    href="http://blog.lizardwrangler.com/"
   &gt;Mitchell Baker&lt;/a&gt;
@@ -131,12 +130,10 @@ original_slug: Web/HTML/microformatos
     href="http://mozilla.org/"
    &gt;Mozilla Foundation&lt;/a&gt;)
 &lt;/div&gt;</pre>
-</div>
 
 <p>JSON analisado:</p>
 
-<div dir="ltr" style="text-align: left;">
-<pre class="source-javascript">{
+<pre class="brush: js">{
   "items": [{
   "type": ["h-card"],
   "properties": {
@@ -153,7 +150,6 @@ original_slug: Web/HTML/microformatos
   }
   }]
 }</pre>
-</div>
 
 <p>Nota: o h-card aninhado implica nas propriedades 'name' e 'url', assim como qualquer outro h-card apenas com nome de classe raiz em um <code>&lt;a href&gt;</code>.</p>
 
@@ -163,8 +159,7 @@ original_slug: Web/HTML/microformatos
 
 <p>Exemplo de h-entry como uma postagem em blog:</p>
 
-<div dir="ltr" style="text-align: left;">
-<pre class="source-html4strict">&lt;article class="h-entry"&gt;
+<pre class="brush: html">&lt;article class="h-entry"&gt;
   &lt;h1 class="p-name"&gt;Microformats are amazing&lt;/h1&gt;
   &lt;p&gt;Published by &lt;a class="p-author h-card" href="http://example.com"&gt;W. Developer&lt;/a&gt;
    on &lt;time class="dt-published" datetime="2013-06-13 12:00:00"&gt;13&lt;sup&gt;th&lt;/sup&gt; June 2013&lt;/time&gt;&lt;/p&gt;
@@ -177,7 +172,6 @@ original_slug: Web/HTML/microformatos
 &lt;/article&gt;</pre>
 
 <h4 id="Propriedades">Propriedades</h4>
-</div>
 
 <table class="standard-table">
  <tbody>
@@ -223,8 +217,7 @@ original_slug: Web/HTML/microformatos
    datetime="<a class="attribute-value">2019-05-31T14:19:09+0000</a>"&gt;31 May 2019&lt;/time&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;</pre>
 
-<div class="panelContent">
-<pre class="data">{
+<pre>{
   "items": [
     {
       "type": [ "h-entry" ],
@@ -255,7 +248,6 @@ original_slug: Web/HTML/microformatos
       },
       "lang": "en"
     }</pre>
-</div>
 
 <h3 id="h-feed">h-feed</h3>
 
@@ -263,8 +255,7 @@ original_slug: Web/HTML/microformatos
 
 <h4 id="Exemplo_h-feed">Exemplo h-feed</h4>
 
-<div dir="ltr" style="text-align: left;">
-<pre class="source-html4strict">&lt;div class="h-feed"&gt;
+<pre class="brush: html">&lt;div class="h-feed"&gt;
   &lt;h1 class="p-name"&gt;Microformats Blogs&lt;/h1&gt;
   &lt;article class="h-entry"&gt;
   &lt;h2 class="p-name"&gt;Microformats are amazing&lt;/h2&gt;
@@ -275,7 +266,6 @@ original_slug: Web/HTML/microformatos
   &lt;div class="e-content"&gt; &lt;p&gt;Blah blah blah&lt;/p&gt; &lt;/div&gt;
   &lt;/article&gt;
 &lt;/div&gt;</pre>
-</div>
 
 <h4 id="Propriedades_2">Propriedades</h4>
 
@@ -315,8 +305,7 @@ original_slug: Web/HTML/microformatos
 
 <p>O <code>h-event</code> é para evento na web. <span class="tlid-translation translation" lang="pt"><span title="">O h-event é frequentemente usado com listagens de eventos e páginas de eventos individuais.</span></span></p>
 
-<div dir="ltr" style="text-align: left;">
-<pre class="source-html4strict">&lt;div class="h-event"&gt;
+<pre class="brush: html">&lt;div class="h-event"&gt;
   &lt;h1 class="p-name"&gt;Microformats Meetup&lt;/h1&gt;
   &lt;p&gt;From
   &lt;time class="dt-start" datetime="2013-06-30 12:00"&gt;30&lt;sup&gt;th&lt;/sup&gt; June 2013, 12:00&lt;/time&gt;
@@ -324,7 +313,6 @@ original_slug: Web/HTML/microformatos
   at &lt;span class="p-location"&gt;Some bar in SF&lt;/span&gt;&lt;/p&gt;
   &lt;p class="p-summary"&gt;Get together and discuss all things microformats-related.&lt;/p&gt;
 &lt;/div&gt;</pre>
-</div>
 
 <h4 id="Propriedades_3">Propriedades</h4>
 
@@ -359,7 +347,6 @@ original_slug: Web/HTML/microformatos
 
 <h4 id="Exemplo_de_h-event_analisado">Exemplo de h-event analisado</h4>
 
-<div dir="ltr" style="text-align: left;">
 <pre>&lt;div class="h-event"&gt;
   &lt;h2 class="p-name"&gt;IndieWeb Summit&lt;/h2&gt;
   &lt;time class="dt-start" datetime="2019-06-29T09:00:00-07:00"&gt;June 29, 2019 at 9:00am  (-0700)&lt;/time&gt;&lt;br&gt;through &lt;time class="dt-end" datetime="2019-06-30T18:00:00-07:00"&gt;June 30, 2019 at 6:00pm (-0700)&lt;/time&gt;&lt;br&gt;
@@ -383,8 +370,7 @@ original_slug: Web/HTML/microformatos
     &lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<div class="panelContent">
-<pre class="data">{
+<pre>{
   "items": [
     {
       "type": [ "h-event" ],
@@ -432,8 +418,6 @@ original_slug: Web/HTML/microformatos
       "lang": "en"
     }
   ],</pre>
-</div>
-</div>
 
 <p>See also</p>
 

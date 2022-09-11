@@ -1,11 +1,6 @@
 ---
 title: イベントの扱い (概要)
 slug: Web/Events/Event_handlers
-tags:
-  - Beginner
-  - DOM
-  - DOM Beginner
-translation_of: Web/Events/Event_handlers
 ---
 イベントとは、ブラウザーや OS の環境の変化を知らせる信号で、ブラウザーのウィンドウ内で発行されます。プログラマーは、イベントが発行されたときに実行される*イベントハンドラー*のコードを作成することで、ウェブページが変化に適切に対応できるようになります。
 

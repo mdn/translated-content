@@ -1,14 +1,6 @@
 ---
 title: columns
 slug: Web/CSS/columns
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.columns
-translation_of: Web/CSS/columns
 ---
 {{CSSRef}}
 

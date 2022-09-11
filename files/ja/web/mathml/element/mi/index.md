@@ -1,7 +1,6 @@
 ---
 title: <mi>
 slug: Web/MathML/Element/mi
-translation_of: Web/MathML/Element/mi
 ---
 {{MathMLRef}}
 

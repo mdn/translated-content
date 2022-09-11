@@ -115,7 +115,7 @@ Source: <https://github.com/anonyco/FastestSmallestTextEncoderDecoder>
 ## 参见
 
 - The {{DOMxRef("TextDecoder")}} interface describing the inverse operation.
-- [`StringView`](/en-US/Add-ons/Code_snippets/StringView) – a C-like representation of strings based on typed arrays
+- [`StringView`](/zh-CN/Add-ons/Code_snippets/StringView) – a C-like representation of strings based on typed arrays
 - A [shim](https://github.com/inexorabletash/text-encoding) allowing to use this interface in browsers that don't support it.
-- [`Components.utils.importGlobalProperties`](/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.importGlobalProperties)
+- [`Components.utils.importGlobalProperties`](/zh-CN/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.importGlobalProperties)
 - [Node.js supports global export from v11.0.0](https://nodejs.org/api/util.html#util_class_util_textencoder)

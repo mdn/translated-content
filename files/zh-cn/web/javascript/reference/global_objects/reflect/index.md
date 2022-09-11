@@ -41,7 +41,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect
 - {{jsxref("Reflect.set()", "Reflect.set(<var>target</var>, <var>propertyKey</var>, <var>value</var>[, <var>receiver</var>])")}}
   - : 将值分配给属性的函数。返回一个{{jsxref("Boolean")}}，如果更新成功，则返回`true`。
 - {{jsxref("Reflect.setPrototypeOf()", "Reflect.setPrototypeOf(<var>target</var>, <var>prototype</var>)")}}
-  - : 设置对象原型的函数。返回一个 {{jsxref("Boolean")}}， 如果更新成功，则返回`true。`
+  - : 设置对象原型的函数。返回一个 {{jsxref("Boolean")}}， 如果更新成功，则返回 `true`。
 
 ## Examples
 

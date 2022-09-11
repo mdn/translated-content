@@ -1,13 +1,6 @@
 ---
 title: CSS シェイプの概要
 slug: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
-tags:
-  - CSS
-  - CSS シェイプ
-  - ガイド
-  - 概要
-  - シェイプ
-translation_of: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
 ---
 {{CSSRef}}
 
