@@ -45,26 +45,14 @@ Por razões de privacidade, navegadores limitam estritamente quais estilos você
 
 ## Syntaxe
 
-```
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Exemplo de uso do seletor :visited</title>
-    <style type="text/css">
-        a {
-            background-color: white;
-            border: 1px solid white; }
-        a:visited {
-            background-color: lightblue;
-            border-color: cyan;
-            color: darkblue; }
-    </style>
-</head>
-<body>
-    <a href="">Você já visitou este link?</a><br>
-    <a href="">Você já visitou este link.</a>
-</body>
-</html>
+```css
+a {
+    background-color: white;
+    border: 1px solid white; }
+a:visited {
+    background-color: lightblue;
+    border-color: cyan;
+    color: darkblue; }
 ```
 
 ## Exemplo

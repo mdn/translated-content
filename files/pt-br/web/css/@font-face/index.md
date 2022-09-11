@@ -69,23 +69,17 @@ Este exemplo simplesmente especifica uma fonte para download a ser usada, aplica
 
 [Veja este exemplo](https://mdn.mozillademos.org/files/7775/webfont-sample.html)
 
-```html
-<html>
-<head>
-  <title>Web Font Sample</title>
-  <style type="text/css" media="screen, print">
-    @font-face {
-      font-family: "Bitstream Vera Serif Bold";
-      src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
-    }
+```css
+@font-face {
+  font-family: "Bitstream Vera Serif Bold";
+  src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
+}
 
-    body { font-family: "Bitstream Vera Serif Bold", serif }
-  </style>
-</head>
-<body>
-  This is Bitstream Vera Serif Bold.
-</body>
-</html>
+p { font-family: "Bitstream Vera Serif Bold", serif }
+```
+
+```html
+<p>This is Bitstream Vera Serif Bold.</p>
 ```
 
 Neste exemplo, a cópia local do usuário "Helvetica Neue Bold" é usada; se o usuário não tiver essa fonte instalada (dois nomes diferentes são tentados), a fonte para download denominada "MgOpenModernaBold.ttf" será usada:

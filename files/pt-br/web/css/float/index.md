@@ -70,14 +70,15 @@ float: unset;
 
 ## Exemplos
 
+### CSS
+
+```css
+div { border: solid red;  max-width: 70ex; }
+h4  { float: left;  margin: 0; }
+```
 ### HTML
 
 ```html
-<style type="text/css">
-  div { border: solid red;  max-width: 70ex; }
-  h4  { float: left;  margin: 0; }
-</style>
-
 <div>
   <h4>HELLO!</h4>
   This is some text. This is some text. This is some text.

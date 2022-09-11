@@ -71,13 +71,7 @@ option:checked {
 A pseudo-classe `:checked `aplicada em checkboxes escondidos, adicionado ao início de sua página pode
 ser aplicada de forma a armazenar algum booleano dinâmico para ser usado por uma regra CSS. O exemplo a seguir mostra como exibir/esconder um elemento expansível com um simples clique em um botão ([download esse demo](/@api/deki/files/6246/=expandable-elements.html "Expandable elements through the :checked pseudoclass")).
 
-```html
-<!doctype html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Elementos expansíveis</title>
-<style type="text/css">
+```css
 #expand-btn {
     margin: 0 3px;
     display: inline-block;
@@ -116,10 +110,9 @@ ser aplicada de forma a armazenar algum booleano dinâmico para ser usado por um
     display: block;
     background: #cccccc;
 }
-</style>
-</head>
-<body>
+```
 
+```html
 <input type="checkbox" id="isexpanded" />
 
 <h1>Elementos expansíveis</h1>

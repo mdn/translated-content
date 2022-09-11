@@ -17,10 +17,10 @@ _Media queries_ consistem de um _[media type](en-US/docs/Web/CSS/@media)_ e pode
 ```html
 <!-- CSS media query em um elemento de link -->
 <link rel="stylesheet" media="(max-width: 800px)" href="example.css" />
+```
 
+```css
 <!-- CSS media query dentro de um stylesheet -->
-
-<style>
 @media (max-width: 600px)
 {
   .facet_sidebar
@@ -28,7 +28,6 @@ _Media queries_ consistem de um _[media type](en-US/docs/Web/CSS/@media)_ e pode
     display: none;
    }
 }
-</style>
 ```
 
 Quando uma _media query_ é verdadeira, a camada de estilo ou as regras de estilos correspondentes são aplicadas, seguindo o padrão de regras de cascatas. Camadas de estilos com _media queries_ ligadas a tag \<link> [vão fazer download](http://scottjehl.github.com/CSS-Download-Tests/) mesmo se suas _medias queries_ retornarem falso (eles não se aplicam, no entanto).

@@ -108,23 +108,26 @@ Inline-level elements generate _inline-level boxes_ that are defined as boxes pa
 
 > **Note:** Initially, atomic inline-level boxes were called atomic inline boxes. This was unfortunate, as they are **not** inline boxes. This was corrected in an erratum to the spec. Nevertheless, you can harmlessly read atomic inline-level box each time you meet atomic inline box in the literature, as this is only a name change.
 
-> **Note:** Atomic inline boxes cannot be split into several lines in an inline formatting context.```
+> **Note:** Atomic inline boxes cannot be split into several lines in an inline formatting context.
 >
-> <style>
+> ```css
 >   span {
 >     display:inline; /* default value*/
 >   }
-> </style>
+> ```
+> ```html
 > <div style="width:20em;">
 >    The text in the span <span>can be split in several
 >    lines as it</span> is an inline box.
 > </div>
-> ```which leads to:The text in the span can be split into several lines as it is an inline box.```
-> <style>
+> ```which leads to:The text in the span can be split into several lines as it is an inline box.
+>
+> ```css
 >   span {
 >     display:inline-block;
 >   }
-> </style>
+> ```
+> ```html
 > <div style="width:20em;">
 >    The text in the span <span>cannot be split in several
 >    lines as it</span> is an inline-block box.
