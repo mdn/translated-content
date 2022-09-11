@@ -102,12 +102,13 @@ arraySparse.forEach((element) => {
 
 console.log({ numCallbackRuns });
 
-// 1
-// 3
-// 7
-// numCallbackRuns: 3
-// 注释：如你所见，3 到 7 之间的 empty 值没有调用回调函数。
+// { element: 1 }
+// { element: 3 }
+// { element: 7 }
+// { numCallbackRuns: 3 }
 ```
+
+如你所见，3 到 7 之间的缺失值没有调用回调函数。
 
 ### 将 for 循环转换为 forEach
 
@@ -133,7 +134,7 @@ items.forEach((item) => {
 下面的代码会为每一个数组元素输出一行记录：
 
 ```js
-const logArrayElements = (element, index, array) => {
+const logArrayElements = (element, index /*, array */) => {
   console.log(`a[${index}] = ${element}`);
 };
 
@@ -220,11 +221,11 @@ console.log(words); // ['two', 'three', 'four']
 ```js
 const flatten = (arr) => {
   const result = [];
-  arr.forEach((i) => {
-    if (Array.isArray(i)) {
-      result.push(...flatten(i));
+  arr.forEach((item) => {
+    if (Array.isArray(item)) {
+      result.push(...flatten(item));
     } else {
-      result.push(i);
+      result.push(item);
     }
   });
   return result;
