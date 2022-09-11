@@ -19,40 +19,40 @@ Os valores devem ser inteiros maiores que zero. O valor padrão para essa propri
 
 ## Exemplos
 
+```css
+#Flexbox {
+  display: -ms-box;
+  display: -moz-box;
+  display: -webkit-box;
+}
+
+#text1 {
+  background: red;
+  -ms-box-ordinal-group: 4;
+  -moz-box-ordinal-group: 4;
+  -webkit-box-ordinal-group: 4;
+}
+
+#text2 {
+  background: green;
+  -ms-box-ordinal-group: 3;
+  -moz-box-ordinal-group: 3;
+  -webkit-box-ordinal-group: 3;
+}
+
+#text3 {
+  background: blue;
+  -ms-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  -webkit-box-ordinal-group: 2;
+}
+
+#text4 {
+  background: orange;
+}
+```
+
 ```html
-<style type="text/css">
-  #Flexbox {
-    display: -ms-box;
-    display: -moz-box;
-    display: -webkit-box;
-  }
-
-  #text1 {
-    background: red;
-    -ms-box-ordinal-group: 4;
-    -moz-box-ordinal-group: 4;
-    -webkit-box-ordinal-group: 4;
-  }
-
-  #text2 {
-    background: green;
-    -ms-box-ordinal-group: 3;
-    -moz-box-ordinal-group: 3;
-    -webkit-box-ordinal-group: 3;
-  }
-
-  #text3 {
-    background: blue;
-    -ms-box-ordinal-group: 2;
-    -moz-box-ordinal-group: 2;
-    -webkit-box-ordinal-group: 2;
-  }
-
-  #text4 {
-    background: orange;
-  }
-</style>
-
 <div id="Flexbox">
   <div id="text1">text 1</div>
   <div id="text2">text 2</div>
