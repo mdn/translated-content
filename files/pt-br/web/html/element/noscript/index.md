@@ -9,74 +9,52 @@ tags:
   - script HTML
 translation_of: Web/HTML/Element/noscript
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>O <strong>Elemento HTML <code>&lt;noscript&gt;</code></strong> define uma seção de html a ser inserida se um tipo de script não é suportado pela página ou se o script está desativado no navegador.</p>
+O **Elemento HTML `<noscript>`** define uma seção de html a ser inserida se um tipo de script não é suportado pela página ou se o script está desativado no navegador.
 
-<ul>
- <li><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Categorias de conteúdo</a></dfn> <a href="/en-US/docs/HTML/Content_categories#Metadata_content" title="HTML/Content_categories#Metadata_content">Metadata content</a>, <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content categories#Phrasing content">phrasing content</a>.</li>
- <li><dfn>Conteúdo permitido</dfn> Quando scripting está desabilitado e quando este é um descendente do elemento {{HTMLElement("head")}} : em qualquer ordem, de zero ou mais elementos {{HTMLElement("link")}}, zero ou mais elementos {{HTMLElement("style")}}, e zero ou mais elementos {{HTMLElement("meta")}}.<br>
-  Quando o script está desativado e quando não é descendente do elemento {{HTMLElement("head")}} : qualquer conteúdo transparente, mas nenhum elemento <code>&lt;noscript&gt;</code> entre seus descendentes.<br>
-  Nos outros casos: conteúdo de fluxo ou conteúdo de texto.</li>
- <li><dfn>Omissão da tag</dfn>Tags inicial e final obrigatórias.</li>
- <li><dfn>Elemento pai permitidos</dfn> Qualquer elemento que aceite '<a href="/en-US/docs/HTML/Content_categories#Phrasing_content">contúdo de texto</a>' (<a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content_categories#Phrasing_content">phrasing content</a>), se não há um elemento <code>&lt;noscript&gt;</code> anterior ou em um elemento {{HTMLElement("head")}} (mas somente em um documento HTML), e também se não existe elemento <code>&lt;noscript&gt;</code> anterior.</li>
- <li><dfn>Interface DOM</dfn> {{domxref("HTMLElement")}}</li>
-</ul>
+- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ [Metadata content](/pt-BR/docs/HTML/Content_categories#Metadata_content "HTML/Content_categories#Metadata_content"), [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content categories#Phrasing content").
+- _Conteúdo permitido_ Quando scripting está desabilitado e quando este é um descendente do elemento {{HTMLElement("head")}} : em qualquer ordem, de zero ou mais elementos {{HTMLElement("link")}}, zero ou mais elementos {{HTMLElement("style")}}, e zero ou mais elementos {{HTMLElement("meta")}}.
+  Quando o script está desativado e quando não é descendente do elemento {{HTMLElement("head")}} : qualquer conteúdo transparente, mas nenhum elemento `<noscript>` entre seus descendentes.
+  Nos outros casos: conteúdo de fluxo ou conteúdo de texto.
+- \_Omissão da tag_Tags inicial e final obrigatórias.
+- _Elemento pai permitidos_ Qualquer elemento que aceite '[contúdo de texto](/pt-BR/docs/HTML/Content_categories#Phrasing_content)' ([phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content")), se não há um elemento `<noscript>` anterior ou em um elemento {{HTMLElement("head")}} (mas somente em um documento HTML), e também se não existe elemento `<noscript>` anterior.
+- _Interface DOM_ {{domxref("HTMLElement")}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p><span style="line-height: 21px;">Este elemento só inclui os </span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">atributos globais</a><span style="line-height: 21px;">.</span></p>
+Este elemento só inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: html">&lt;noscript&gt;
-  &lt;!-- referência a arquivo externo --&gt;
-  &lt;a href="http://www.mozilla.com/"&gt;Link Externo&lt;/a&gt;
-&lt;/noscript&gt;
-&lt;p&gt;Rocks!&lt;/p&gt;
-</pre>
-
-<h3 id="Resultado_com_o_script_ativado">Resultado com o script ativado</h3>
-
+```html
+<noscript>
+  <!-- referência a arquivo externo -->
+  <a href="http://www.mozilla.com/">Link Externo</a>
+</noscript>
 <p>Rocks!</p>
+```
 
-<h3 id="Resultado_com_o_script_desativado">Resultado com o script desativado</h3>
+### Resultado com o script ativado
 
-<p><a class="external" href="http://www.mozilla.com/">Link Externo</a></p>
+Rocks!
 
-<p>Rocks!</p>
+### Resultado com o script desativado
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+[Link Externo](http://www.mozilla.com/)
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'scripting-1.html#the-noscript-element', '&lt;noscript&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'scripting-1.html#the-noscript-element', '&lt;noscript&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'interact/scripts.html#h-18.3.1', '&lt;noscript&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+Rocks!
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Especificações
+
+| Specification                                                                                                        | Status                           | Comment |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', 'scripting-1.html#the-noscript-element', '&lt;noscript&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML5 W3C', 'scripting-1.html#the-noscript-element', '&lt;noscript&gt;')}} | {{Spec2('HTML5 W3C')}}     |         |
+| {{SpecName('HTML4.01', 'interact/scripts.html#h-18.3.1', '&lt;noscript&gt;')}}             | {{Spec2('HTML4.01')}}     |         |
+
+## Compatibilidade com navegadores
 
 {{Compat("html.elements.noscript")}}

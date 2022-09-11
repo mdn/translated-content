@@ -6,77 +6,58 @@ tags:
   - HTML
 translation_of: Web/HTML/Element/figcaption
 ---
-<div>{{HTMLRef}}</div>
-
-<div>O <strong>Elemento HTML Figcaption </strong>(<code>&lt;figcaption&gt;</code>) representa uma legenda ou uma legenda associada com uma figura ou ilustração descrita pelo resto dos dados do elemento {{ HTMLElement("figure") }} que seu elemento pai.</div>
-
-<div>{{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}</div>
+{{HTMLRef}}O **Elemento HTML Figcaption** (`<figcaption>`) representa uma legenda ou uma legenda associada com uma figura ou ilustração descrita pelo resto dos dados do elemento {{ HTMLElement("figure") }} que seu elemento pai.{{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Categorias de conteúdo</a></th>
-   <td>Nenhuma.</td>
-  </tr>
-  <tr>
-   <th scope="row">Conteúdo permitido</th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omissão de Tag</th>
-   <td>Nenhuma, tanto a tag de início quanto a de fim são obrigatórias.</td>
-  </tr>
-  <tr>
-   <th scope="row">Elemento Pai Permitido</th>
-   <td>Um Elemento {{HTMLElement("figure")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface DOM</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/HTML/Content_categories">Categorias de conteúdo</a>
+      </th>
+      <td>Nenhuma.</td>
+    </tr>
+    <tr>
+      <th scope="row">Conteúdo permitido</th>
+      <td>
+        <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+          >Flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omissão de Tag</th>
+      <td>Nenhuma, tanto a tag de início quanto a de fim são obrigatórias.</td>
+    </tr>
+    <tr>
+      <th scope="row">Elemento Pai Permitido</th>
+      <td>Um Elemento {{HTMLElement("figure")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Esse elemento possui somente os  <a href="/en-US/docs/HTML/Global_attributes">atributos globais</a>.</p>
+Esse elemento possui somente os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Por favor, consulte a página {{HTMLElement("figure")}} para visualizar o exemplos do elemento <code>&lt;figcaption&gt;</code>.</p>
+Por favor, consulte a página {{HTMLElement("figure")}} para visualizar o exemplos do elemento `<figcaption>`.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-figcaption-element', '&lt;figcaption&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-figcaption-element', '&lt;figcaption&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                    | Status                           | Comentário |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-figcaption-element', '&lt;figcaption&gt;')}}         | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-figcaption-element', '&lt;figcaption&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("html.elements.figcaption")}}
 
+## Veja também:
 
-<p>{{Compat("html.elements.figcaption")}}</p>
-
-<h2 id="Veja_também">Veja também:</h2>
-
-<ul>
- <li>O elemento {{HTMLElement("figure")}}.</li>
-</ul>
+- O elemento {{HTMLElement("figure")}}.

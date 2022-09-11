@@ -3,114 +3,76 @@ title: <select>
 slug: Web/HTML/Element/select
 translation_of: Web/HTML/Element/select
 ---
-<h2 id="Sumário">Sumário</h2>
-<p>O elemento HTML <em>select</em> (&lt;select&gt;) representa um controle que apresenta um menu de opções. As opções dentro do menu são representadas pelo elemento <span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: 1.5;">{{HTMLElement("option")}}</span>, que podem ser agrupados por elementos<span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">{{HTMLElement("optgroup")}}</code><span style="line-height: 1.5;">. As opções podem ser pré-selecionadas para o usuário.</span></p>
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><a href="/pt-BR/docs/HTML/Categorias_de_conteúdo" title="HTML/Categorias de conteúdo">Categorias de conteúdo</a></td>
-   <td><a href="/pt-BR/docs/HTML/Categorias_de_conteúdo#Conteúdo_fluido" title="HTML/Categorias de conteúdo#Conteúdo fluido">conteúdo fluido</a>, <a href="/pt-BR/docs/HTML/Categorias_de_conteúdo#Conteúdo_fraseado" title="HTML/Categorias de conteúdo#Conteúdo fraseado">conteúdo fraseado</a>, <a href="/pt-BR/docs/HTML/Categorias_de_conteúdo#Conteúdo_interativo" title="HTML/Categorias de conteúdo#Conteúdo interativo">conteúdo interativo</a>, <a href="/pt-BR/docs/HTML/Categorias_de_conteúdo#Listado_em_formulários" title="HTML/Categorias de conteúdo#Listado em formulários">listado</a>, <a href="/pt-BR/docs/HTML/Categorias_de_conteúdo#Rotulável_em_formulários" title="HTML/Categorias de conteúdo#Rotulável em formulários">rotulável</a>, <a href="/pt-BR/docs/HTML/Categorias_de_conteúdo#Resetável_em_formulários" title="HTML/Categorias de conteúdo#Resetável em formulários">resetável</a>, e <a href="/pt-BR/docs/HTML/Categorias_de_conteúdo#Enviável_em_formulários" title="HTML/Categorias de conteudo#Enviável em formulários">enviável</a> <a href="/pt-BR/docs/HTML/Categorias_de_conteúdo#Associado_a_formulários" title="HTML/Categorias de conteúdo#Associado a formulários">associado a formulários</a></td>
-  </tr>
-  <tr>
-   <td>Conteúdo permitido</td>
-   <td>Zero ou mais elementos {{HTMLElement("option")}} ou {{HTMLElement("optgroup")}}.</td>
-  </tr>
-  <tr>
-   <td>Omissão de tag</td>
-   <td>Nenhuma, tanto tag de início quanto de fim são obrigatórias</td>
-  </tr>
-  <tr>
-   <td>Elementos pai permitidos</td>
-   <td>qualquer elemento que aceite conteúdo fraseado</td>
-  </tr>
- </tbody>
-</table>
-<h2 id="Atributos">Atributos</h2>
-<p><span style="line-height: 21px;">Este elemento inclui os </span><a href="/pt-BR/docs/Web/HTML/Atributos_globais" style="line-height: 21px;" title="HTML/Atributos globais">atributos globais</a><span style="line-height: 21px;">.</span></p>
-<dl>
- <dt>
-  {{htmlattrdef("autofocus")}} {{HTMLVersionInline("5")}}</dt>
- <dd>
-  Este atributo permite especificar que um controle de formulário deve ter foco de entrada quando a página é carregada, a não ser que o usuário o substitua, por exemplo digitando em um controle diferente. Somente um elemento de formulário em um documento pode ter o atributo <code style="font-style: normal; line-height: 1.5;">autofocus</code><span style="line-height: 1.5;">, que é booleano.</span></dd>
- <dt>
-  {{htmlattrdef("disabled")}}</dt>
- <dd>
-  Este atributo booleano indica que o usuário não pode interagir com o controle. Caso esse atributo não seja especificado, o controle herda a configuração do elemento que o contém, por exemplo o elemento <code style="font-style: normal;">fieldset</code>; se não há nenhum elemento que o contém com o atributo <code style="font-style: normal; line-height: 1.5;">disabled,</code><span style="line-height: 1.5;"> então o controle está habilitado.</span></dd>
- <dt>
-  {{htmlattrdef("form")}} {{HTMLVersionInline("5")}}</dt>
- <dd>
-  O elemento form ao qual o elemento select é associado (algo como "formulário dono" do select). Se este atributo for especificado, seu valor deve ser o ID de um elemento form no mesmo documento. Isso permite que você coloque elementos select em qualquer lugar dentro do documento, e não apenas como descendentes de elementos form.</dd>
- <dt>
-  {{htmlattrdef("multiple")}}</dt>
- <dd>
-  Este atributo booleano indica que várias opções podem ser selecionadas na lista. Se não for especificado, apenas uma opção poderá ser selecionada de cada vez.</dd>
- <dt>
-  {{htmlattrdef("name")}}</dt>
- <dd>
-  O nome do controle</dd>
- <dt>
-  {{htmlattrdef("required")}} {{HTMLVersionInline("5")}}</dt>
- <dd>
-  Um atributo booleano que indica que uma opção com um valor de string que não esteja vazia deve ser selecionada.</dd>
- <dt>
-  {{htmlattrdef("size")}}</dt>
- <dd>
-  Se o controle é apresentado como uma list box com scroll, este atributo representa o número de linhas na list box que devem estar visíveis num determinado momento. Os navegadores não são obrigados a apresentar elementos select com uma list box scroll. O valor padrão é 0.</dd>
-</dl>
-<div class="note">
- <strong>Nota sobre o Firefox:</strong> De acordo com a especificação HTML5, o valor padrão para o size deveria ser 1; no entanto, na prática, notou-se que isso quebrava alguns sites, e nenhum outro navegador faz isso no momento, então a Mozilla escolheu por continuar devolvendo 0 por enquanto no Firefox.</div>
-<dl>
-</dl>
-<h2 id="Interface_DOM">Interface DOM</h2>
-<p>Este elemento implementa a interface <code><a href="/pt-BR/docs/DOM/HTMLSelectElement" title="DOM/select">HTMLSelectElement</a></code>.</p>
-<h2 id="Exemplos">Exemplos</h2>
-<pre class="brush: html">&lt;!-- O segundo valor estará selecionado inicialmente --&gt;
-&lt;select name="select"&gt;
-  &lt;option value="valor1"&gt;Valor 1&lt;/option&gt;
-  &lt;option value="valor2" selected&gt;Valor 2&lt;/option&gt;
-  &lt;option value="valor3"&gt;Valor 3&lt;/option&gt;
-&lt;/select&gt;
-</pre>
+## Sumário
 
-<h3 id="Notas">Notas</h3>
-<p>O conteúdo deste elemento é estático e não <a href="/pt-BR/docs/HTML/Content_Editable" title="HTML/Content_Editable">editável</a>.</p>
-<p>A seguir um exemplo de como simular uma lista de seleção com opções editáveis, <strong>mas esteja ciente </strong>de que leitores de tela e dispositivos de acessibilidade <em>não </em>interpretarão o formulário corretamente; este exemplo seria HTML inválido se os elementos corretos fossem usados:</p>
-<p><a href="/files/4563/editable_select.html" style="line-height: 1.5;" title="Simulando um select editável com um fieldset de botões de escolha e caixas de texto">Este é um exemplo</a> de um select editável usando um<span style="line-height: 1.5;"> {{HTMLElement("fieldset")}} de </span><a href="/pt-BR/docs/HTML/Element/Input" style="line-height: 1.5;" title="HTML/Element/Input">botões de opção</a><span style="line-height: 1.5;"> e </span><a href="/en-US/docs/HTML/Element/Input" style="line-height: 1.5;" title="HTML/Element/Input">caixas de texto</a><span style="line-height: 1.5;"> (</span><strong style="line-height: 1.5;">escrito somente com CSS</strong><span style="line-height: 1.5;">, sem JavaScript), </span></p>
-<h2 id="Especificações">Especificações</h2>
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentários</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#the-select-element', '&lt;select&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;select&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <th scope="col"> </th>
-   <th scope="col"> </th>
-   <th scope="col"> </th>
-  </tr>
- </tbody>
-</table>
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
-<div>
+O elemento HTML _select_ (\<select>) representa um controle que apresenta um menu de opções. As opções dentro do menu são representadas pelo elemento {{HTMLElement("option")}}, que podem ser agrupados por elementos `{{HTMLElement("optgroup")}}`. As opções podem ser pré-selecionadas para o usuário.
+
+## Contexto de uso
+
+| [Categorias de conteúdo](/pt-BR/docs/HTML/Categorias_de_conteúdo "HTML/Categorias de conteúdo") | [conteúdo fluido](/pt-BR/docs/HTML/Categorias_de_conteúdo#Conteúdo_fluido "HTML/Categorias de conteúdo#Conteúdo fluido"), [conteúdo fraseado](/pt-BR/docs/HTML/Categorias_de_conteúdo#Conteúdo_fraseado "HTML/Categorias de conteúdo#Conteúdo fraseado"), [conteúdo interativo](/pt-BR/docs/HTML/Categorias_de_conteúdo#Conteúdo_interativo "HTML/Categorias de conteúdo#Conteúdo interativo"), [listado](/pt-BR/docs/HTML/Categorias_de_conteúdo#Listado_em_formulários "HTML/Categorias de conteúdo#Listado em formulários"), [rotulável](/pt-BR/docs/HTML/Categorias_de_conteúdo#Rotulável_em_formulários "HTML/Categorias de conteúdo#Rotulável em formulários"), [resetável](/pt-BR/docs/HTML/Categorias_de_conteúdo#Resetável_em_formulários "HTML/Categorias de conteúdo#Resetável em formulários"), e [enviável](/pt-BR/docs/HTML/Categorias_de_conteúdo#Enviável_em_formulários "HTML/Categorias de conteudo#Enviável em formulários") [associado a formulários](/pt-BR/docs/HTML/Categorias_de_conteúdo#Associado_a_formulários "HTML/Categorias de conteúdo#Associado a formulários") |
+| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Conteúdo permitido                                                                              | Zero ou mais elementos {{HTMLElement("option")}} ou {{HTMLElement("optgroup")}}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Omissão de tag                                                                                  | Nenhuma, tanto tag de início quanto de fim são obrigatórias                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Elementos pai permitidos                                                                        | qualquer elemento que aceite conteúdo fraseado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+
+## Atributos
+
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Atributos_globais "HTML/Atributos globais").
+
+- {{htmlattrdef("autofocus")}} {{HTMLVersionInline("5")}}
+  - : Este atributo permite especificar que um controle de formulário deve ter foco de entrada quando a página é carregada, a não ser que o usuário o substitua, por exemplo digitando em um controle diferente. Somente um elemento de formulário em um documento pode ter o atributo `autofocus`, que é booleano.
+- {{htmlattrdef("disabled")}}
+  - : Este atributo booleano indica que o usuário não pode interagir com o controle. Caso esse atributo não seja especificado, o controle herda a configuração do elemento que o contém, por exemplo o elemento `fieldset`; se não há nenhum elemento que o contém com o atributo `disabled,` então o controle está habilitado.
+- {{htmlattrdef("form")}} {{HTMLVersionInline("5")}}
+  - : O elemento form ao qual o elemento select é associado (algo como "formulário dono" do select). Se este atributo for especificado, seu valor deve ser o ID de um elemento form no mesmo documento. Isso permite que você coloque elementos select em qualquer lugar dentro do documento, e não apenas como descendentes de elementos form.
+- {{htmlattrdef("multiple")}}
+  - : Este atributo booleano indica que várias opções podem ser selecionadas na lista. Se não for especificado, apenas uma opção poderá ser selecionada de cada vez.
+- {{htmlattrdef("name")}}
+  - : O nome do controle
+- {{htmlattrdef("required")}} {{HTMLVersionInline("5")}}
+  - : Um atributo booleano que indica que uma opção com um valor de string que não esteja vazia deve ser selecionada.
+- {{htmlattrdef("size")}}
+  - : Se o controle é apresentado como uma list box com scroll, este atributo representa o número de linhas na list box que devem estar visíveis num determinado momento. Os navegadores não são obrigados a apresentar elementos select com uma list box scroll. O valor padrão é 0.
+
+> **Note:** **Nota sobre o Firefox:** De acordo com a especificação HTML5, o valor padrão para o size deveria ser 1; no entanto, na prática, notou-se que isso quebrava alguns sites, e nenhum outro navegador faz isso no momento, então a Mozilla escolheu por continuar devolvendo 0 por enquanto no Firefox.
+
+## Interface DOM
+
+Este elemento implementa a interface [`HTMLSelectElement`](/pt-BR/docs/DOM/HTMLSelectElement "DOM/select").
+
+## Exemplos
+
+```html
+<!-- O segundo valor estará selecionado inicialmente -->
+<select name="select">
+  <option value="valor1">Valor 1</option>
+  <option value="valor2" selected>Valor 2</option>
+  <option value="valor3">Valor 3</option>
+</select>
+```
+
+### Notas
+
+O conteúdo deste elemento é estático e não [editável](/pt-BR/docs/HTML/Content_Editable "HTML/Content_Editable").
+
+A seguir um exemplo de como simular uma lista de seleção com opções editáveis, **mas esteja ciente** de que leitores de tela e dispositivos de acessibilidade _não_ interpretarão o formulário corretamente; este exemplo seria HTML inválido se os elementos corretos fossem usados:
+
+[Este é um exemplo](/files/4563/editable_select.html "Simulando um select editável com um fieldset de botões de escolha e caixas de texto") de um select editável usando um {{HTMLElement("fieldset")}} de [botões de opção](/pt-BR/docs/HTML/Element/Input "HTML/Element/Input") e [caixas de texto](/pt-BR/docs/HTML/Element/Input "HTML/Element/Input") (**escrito somente com CSS**, sem JavaScript),
+
+## Especificações
+
+| Especificação                                                                                        | Estado                       | Comentários |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
+| {{SpecName('HTML5 W3C', 'forms.html#the-select-element', '&lt;select&gt;')}} | {{Spec2('HTML5 W3C')}} |             |
+| {{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;select&gt;')}}     | {{Spec2('HTML4.01')}} |             |
+|                                                                                                      |                              |             |
+
+## Compatibilidade com navegadores
+
 {{Compat("html.elements.select")}}
 
-<h2 id="Veja_também">Veja também</h2>
-<ul>
- <li>Outros elementos relacionados a formulários: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("option")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.</li>
-</ul>
-<div>
- {{HTMLRef}}</div>
+## Veja também
+
+- Outros elementos relacionados a formulários: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("option")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.
+
+{{HTMLRef}}

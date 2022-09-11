@@ -3,71 +3,42 @@ title: contenteditable
 slug: Web/HTML/Global_attributes/contenteditable
 translation_of: Web/HTML/Global_attributes/contenteditable
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>O <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes">atributo global</a><span style="color: #3d7e9a;"> </span><strong><code>contenteditable</code></strong> é um atributo enumerado indicando se o elemento deve ser editável pelo usuário. Se assim for, o navegador modifica seu widget para permitir a edição.</p>
+O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **`contenteditable`** é um atributo enumerado indicando se o elemento deve ser editável pelo usuário. Se assim for, o navegador modifica seu widget para permitir a edição.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/attribute-contenteditable.html","tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/attribute-contenteditable.html","tabbed-shorter")}}
 
-<p>O atributo deve ter um dos seguintes valores:</p>
+O atributo deve ter um dos seguintes valores:
 
-<ul>
- <li><code>true</code> ou uma <a href="https://developer.mozilla.org/pt-BR/docs/Glossario/String">string</a> vazia, o que indica que o elemento é editável.</li>
- <li><code>false</code>, o que indica que o elemento não é editável.</li>
-</ul>
+- `true` ou uma [string](/pt-BR/docs/Glossario/String) vazia, o que indica que o elemento é editável.
+- `false`, o que indica que o elemento não é editável.
 
-<p>Se o atributo for aplicado sem um valor, como <code>&lt;label contenteditable&gt;Rótulo de Exemplo&lt;/label&gt;</code>, seu valor é tratado como uma <em>string</em> vazia.</p>
+Se o atributo for aplicado sem um valor, como `<label contenteditable>Rótulo de Exemplo</label>`, seu valor é tratado como uma _string_ vazia.
 
-<p>Se esse atributo estiver faltando ou seu valor for inválido, seu valor é herdado de seu elemento pai: para que o elemento seja editável se seu pai for editável.</p>
+Se esse atributo estiver faltando ou seu valor for inválido, seu valor é herdado de seu elemento pai: para que o elemento seja editável se seu pai for editável.
 
-<p>Observe que, embora seus valores permitidos incluam <em>true</em> e <em>false</em>, este atributo é um enumerado e não um <em><a href="https://developer.mozilla.org/pt-BR/docs/Glossario/Booleano">Booleano</a></em>.</p>
+Observe que, embora seus valores permitidos incluam _true_ e _false_, este atributo é um enumerado e não um _[Booleano](/pt-BR/docs/Glossario/Booleano)_.
 
-<p>Você pode definir a cor usada para desenhar a inserção de texto {{Glossary("caret")}} com a propriedade {{cssxref("caret-color")}} do CSS.</p>
+Você pode definir a cor usada para desenhar a inserção de texto {{Glossary("caret")}} com a propriedade {{cssxref("caret-color")}} do CSS.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "editing.html#attr-contenteditable", "contenteditable")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Nenhuma mudança na última instância, {{SpecName("HTML5.2")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.2", "editing.html#making-document-regions-editable-the-contenteditable-content-attribute", "contenteditable")}}</td>
-   <td>{{Spec2("HTML5.2")}}</td>
-   <td>Instância de {{SpecName("HTML WHATWG")}}, sem mudanças para {{SpecName("HTML5.1")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "editing.html#making-document-regions-editable-the-contenteditable-content-attribute", "contenteditable")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td>Instância de {{SpecName("HTML WHATWG")}}, sem mudanças para {{SpecName("HTML5 W3C")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "editing.html#attr-contenteditable", "contenteditable")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>Instância de {{SpecName("HTML WHATWG")}}, definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                                                                | Status                           | Comentário                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| {{SpecName("HTML WHATWG", "editing.html#attr-contenteditable", "contenteditable")}}                                                             | {{Spec2("HTML WHATWG")}} | Nenhuma mudança na última instância, {{SpecName("HTML5.2")}}                                 |
+| {{SpecName("HTML5.2", "editing.html#making-document-regions-editable-the-contenteditable-content-attribute", "contenteditable")}} | {{Spec2("HTML5.2")}}     | Instância de {{SpecName("HTML WHATWG")}}, sem mudanças para {{SpecName("HTML5.1")}} |
+| {{SpecName("HTML5.1", "editing.html#making-document-regions-editable-the-contenteditable-content-attribute", "contenteditable")}} | {{Spec2("HTML5.1")}}     | Instância de {{SpecName("HTML WHATWG")}}, sem mudanças para {{SpecName("HTML5 W3C")}} |
+| {{SpecName("HTML5 W3C", "editing.html#attr-contenteditable", "contenteditable")}}                                                                 | {{Spec2("HTML5 W3C")}}     | Instância de {{SpecName("HTML WHATWG")}}, definição inicial.                                 |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("html.global_attributes.contenteditable")}}</p>
+{{Compat("html.global_attributes.contenteditable")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/Editable_content">Tornando o conteúdo editável</a></li>
- <li>Todos os <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a></li>
- <li>{{domxref("HTMLElement.contentEditable")}} e {{domxref("HTMLElement.isContentEditable")}}</li>
- <li>A propriedade {{cssxref("caret-color")}} do CSS.</li>
- <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/Events/input">Evento de <code>input</code> - <code>HTMLElement</code></a></li>
-</ul>
+- [Tornando o conteúdo editável](/pt-BR/docs/Web/Guide/HTML/Editable_content)
+- Todos os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes)
+- {{domxref("HTMLElement.contentEditable")}} e {{domxref("HTMLElement.isContentEditable")}}
+- A propriedade {{cssxref("caret-color")}} do CSS.
+- [Evento de `input` - `HTMLElement`](/pt-BR/docs/Web/Events/input)

@@ -3,120 +3,134 @@ title: <section>
 slug: Web/HTML/Element/section
 translation_of: Web/HTML/Element/section
 ---
-<p>O <strong>elemento HTML <code>&lt;section&gt;</code></strong> representa uma seção genérica contida em um documento HTML, geralmente com um título, quando não existir um elemento semântico mais específico para representá-lo.</p>
+O **elemento HTML `<section>`** representa uma seção genérica contida em um documento HTML, geralmente com um título, quando não existir um elemento semântico mais específico para representá-lo.
 
-<p>Por exemplo, um menu de navegação deve estar dentro um elemento {{htmlelement ("nav")}}, mas uma lista de resultados de pesquisa ou a exibição de um mapa e seus controles não possuem elementos específicos, e podem ser colocados dentro de uma &lt;section&gt;.</p>
+Por exemplo, um menu de navegação deve estar dentro um elemento {{htmlelement ("nav")}}, mas uma lista de resultados de pesquisa ou a exibição de um mapa e seus controles não possuem elementos específicos, e podem ser colocados dentro de uma \<section>.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Categorias de conteúdo</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Conteúdo de fluxo</a> , <a href="/en-US/docs/Web/HTML/Content_categories#Sectioning_content">conteúdo de seção</a>, conteúdo palpável.</td>
-  </tr>
-  <tr>
-   <th scope="row">Conteúdo permitido</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Conteúdo de fluxo</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omissão de tags</th>
-   <td>Sem omissão de tags</td>
-  </tr>
-  <tr>
-   <th scope="row">Tags-pai permitidas</th>
-   <td>Qualquer elemento que aceite <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">conteúdo de fluxo</a>. Note que um elemento {{HTMLElement("section")}} não deve ser um descendente de um elemento {{HTMLElement("address")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Regras ARIA permitidas</th>
-   <td>{{ARIARole("alert")}}, {{ARIARole("alertdialog")}}, {{ARIARole("application")}}, {{ARIARole("banner")}}, {{ARIARole("complementary")}}, {{ARIARole("contentinfo")}}, {{ARIARole("dialog")}}, {{ARIARole("document")}}, {{ARIARole("feed")}}, {{ARIARole("log")}}, {{ARIARole("main")}}, {{ARIARole("marquee")}}, {{ARIARole("navigation")}}, {{ARIARole("search")}}, {{ARIARole("status")}}, {{ARIARole("tabpanel")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface DOM</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Categorias de conteúdo</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+          >Conteúdo de fluxo</a
+        >
+        ,
+        <a href="/en-US/docs/Web/HTML/Content_categories#Sectioning_content"
+          >conteúdo de seção</a
+        >, conteúdo palpável.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Conteúdo permitido</th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+          >Conteúdo de fluxo</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omissão de tags</th>
+      <td>Sem omissão de tags</td>
+    </tr>
+    <tr>
+      <th scope="row">Tags-pai permitidas</th>
+      <td>
+        Qualquer elemento que aceite
+        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+          >conteúdo de fluxo</a
+        >. Note que um elemento {{HTMLElement("section")}} não deve
+        ser um descendente de um elemento {{HTMLElement("address")}}.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Regras ARIA permitidas</th>
+      <td>
+        {{ARIARole("alert")}}, {{ARIARole("alertdialog")}},
+        {{ARIARole("application")}}, {{ARIARole("banner")}},
+        {{ARIARole("complementary")}},
+        {{ARIARole("contentinfo")}}, {{ARIARole("dialog")}},
+        {{ARIARole("document")}}, {{ARIARole("feed")}},
+        {{ARIARole("log")}}, {{ARIARole("main")}},
+        {{ARIARole("marquee")}}, {{ARIARole("navigation")}},
+        {{ARIARole("search")}}, {{ARIARole("status")}},
+        {{ARIARole("tabpanel")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Este elemento inclui apenas os <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a>.</p>
+Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-<h2 id="Notas_de_uso">Notas de uso</h2>
+## Notas de uso
 
-<ul>
- <li>Cada <code>&lt;section&gt;</code> deve ser identificado, geralmente incluindo um cabeçalho (elemento {{HTMLElement('h1')}}-{{HTMLElement('h6')}}) como um filho do elemento <code>&lt;section&gt;</code>.</li>
- <li>Se faz sentido distribuir separadamente o conteúdo de um elemento {{HTMLElement("section")}}, use um elemento {{HTMLElement("article")}} em seu lugar.</li>
- <li>Não use o elemento {{HTMLElement("section")}} como um container genérico; para isso que a {{HTMLElement("div")}} serve, especialmente quando a seção é apenas com propósito de estilização. Uma regra de ouro é ,"usar quando uma seção deve aparecer logicamente na estrutura de um documento".</li>
-</ul>
+- Cada `<section>` deve ser identificado, geralmente incluindo um cabeçalho (elemento {{HTMLElement('h1')}}-{{HTMLElement('h6')}}) como um filho do elemento `<section>`.
+- Se faz sentido distribuir separadamente o conteúdo de um elemento {{HTMLElement("section")}}, use um elemento {{HTMLElement("article")}} em seu lugar.
+- Não use o elemento {{HTMLElement("section")}} como um container genérico; para isso que a {{HTMLElement("div")}} serve, especialmente quando a seção é apenas com propósito de estilização. Uma regra de ouro é ,"usar quando uma seção deve aparecer logicamente na estrutura de um documento".
 
-<h2 id="Exemplo_1">Exemplo 1</h2>
+## Exemplo 1
 
-<h3 id="Antes">Antes</h3>
+### Antes
 
-<pre class="brush: html"><code>&lt;div&gt;
-  &lt;h1&gt;Cabeçalho&lt;/h1&gt;
-  &lt;p&gt;Um monte de conteúdo incrível&lt;/p&gt;
-&lt;/div&gt;</code></pre>
+```html
+<div>
+  <h1>Cabeçalho</h1>
+  <p>Um monte de conteúdo incrível</p>
+</div>
+```
 
-<h3 id="Depois">Depois</h3>
+### Depois
 
-<pre class="brush: html"><code>&lt;section&gt;
-  &lt;h1&gt;Cabeçalho&lt;/h1&gt;
-  &lt;p&gt;Um monte de conteúdo incrível&lt;/p&gt;
-&lt;/section&gt;</code></pre>
+```html
+<section>
+  <h1>Cabeçalho</h1>
+  <p>Um monte de conteúdo incrível</p>
+</section>
+```
 
-<h2 id="Exemplo_2">Exemplo 2</h2>
+## Exemplo 2
 
-<h3 id="Antes_2">Antes</h3>
+### Antes
 
-<pre class="brush: html"><code>&lt;div&gt;
-  &lt;h2&gt;Cabeçalho&lt;/h2&gt;
-  &lt;img src="passaro.jpg" alt="pássaro"&gt;
-&lt;/div&gt;</code></pre>
+```html
+<div>
+  <h2>Cabeçalho</h2>
+  <img src="passaro.jpg" alt="pássaro">
+</div>
+```
 
-<h3 id="Depois_2">Depois</h3>
+### Depois
 
-<pre class="brush: html"><code>&lt;section&gt;
-  &lt;h2&gt;Cabeçalho&lt;/h2&gt;
-  &lt;img src="passaro.jpg" alt="pássaro"&gt;
-&lt;/section&gt;</code>​​​​​
-</pre>
+```html
+<section>
+  <h2>Cabeçalho</h2>
+  <img src="passaro.jpg" alt="pássaro">
+</section>​​​​​
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'sections.html#the-section-element', '&lt;section&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'sections.html#the-section-element', '&lt;section&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sections.html#the-section-element', '&lt;section&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                    | Status                           | Comentários |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', 'sections.html#the-section-element', '&lt;section&gt;')}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML5.1', 'sections.html#the-section-element', '&lt;section&gt;')}}         | {{Spec2('HTML5.1')}}     |             |
+| {{SpecName('HTML5 W3C', 'sections.html#the-section-element', '&lt;section&gt;')}}     | {{Spec2('HTML5 W3C')}}     |             |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("html.elements.section")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Outros elemtnos relacionados: {{ HTMLElement("body") }}, {{ HTMLElement("nav") }}, {{ HTMLElement("article") }}, {{ HTMLElement("aside") }}, {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}, {{ HTMLElement("hgroup") }}, {{ HTMLElement("header") }}, {{ HTMLElement("footer") }}, {{ HTMLElement("address") }};</li>
- <li class="last"><a class="deki-ns current" href="/en/Sections_and_Outlines_of_an_HTML5_document" title="en/Sections and Outlines of an HTML5 document">Seções e estrurura do um documento HTML5</a>.</li>
-</ul>
+- Outros elemtnos relacionados: {{ HTMLElement("body") }}, {{ HTMLElement("nav") }}, {{ HTMLElement("article") }}, {{ HTMLElement("aside") }}, {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}, {{ HTMLElement("hgroup") }}, {{ HTMLElement("header") }}, {{ HTMLElement("footer") }}, {{ HTMLElement("address") }};
+- [Seções e estrurura do um documento HTML5](/en/Sections_and_Outlines_of_an_HTML5_document "en/Sections and Outlines of an HTML5 document").

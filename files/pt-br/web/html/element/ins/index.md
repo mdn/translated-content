@@ -3,64 +3,45 @@ title: <ins>
 slug: Web/HTML/Element/ins
 translation_of: Web/HTML/Element/ins
 ---
-<h2 id="Summary">Summary</h2>
-<p>The <strong>HTML <code>&lt;ins&gt;</code> Element</strong> (or <em>HTML Inserted Text</em>) HTML represents a range of text that has been added to a document.</p>
-<ul>
- <li><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Content categories</a></dfn><a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content categories#Phrasing content">Phrasing content</a> or <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">flow content</a>.</li>
- <li><dfn>Permitted content</dfn> <a href="/en-US/docs/HTML/Content_categories#Transparent" title="HTML/Content categories#Transparent">Transparent</a>.</li>
- <li><dfn>Tag omission</dfn> {{no_tag_omission}}</li>
- <li><dfn>Permitted parent elements</dfn> Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content_categories#Phrasing_content">phrasing content</a>.</li>
- <li><dfn>DOM interface</dfn> {{domxref("HTMLModElement")}}</li>
-</ul>
-<h2 id="Attributes">Attributes</h2>
-<p><span style="line-height: 21px;">This element includes the </span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">global attributes</a><span style="line-height: 21px;">.</span></p>
-<dl>
- <dt>
-  {{htmlattrdef("cite")}}</dt>
- <dd>
-  This attribute defines the URI of a resource that explains the change, like a link to some meeting minutes or a ticket in a troubleshooting sytem.</dd>
- <dt>
-  {{htmlattrdef("datetime")}}</dt>
- <dd>
-  This attribute indicates the time and date of the change and must be a <a class="external" href="http://www.w3.org/TR/2011/WD-html5-20110525/common-microsyntaxes.html#valid-date-string-with-optional-time">valid date with an optional time string</a>. If the value cannot be parsed as a date with an optional time string, the element does not have an associated time stamp.</dd>
-</dl>
-<h2 id="Examples">Examples</h2>
+## Summary
 
-<pre class="brush: html">&lt;ins&gt;This text has been inserted&lt;/ins&gt;</pre>
+The **HTML `<ins>` Element** (or _HTML Inserted Text_) HTML represents a range of text that has been added to a document.
 
-<h2 id="Specifications" name="Specifications">Specifications</h2>
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'edits.html#the-ins-element', '&lt;ins&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'edits.html#the-ins-element', '&lt;ins&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/text.html#h-9.4', '&lt;ins&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+- _[Content categories](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_[Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content categories#Phrasing content") or [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content").
+- _Permitted content_ [Transparent](/pt-BR/docs/HTML/Content_categories#Transparent "HTML/Content categories#Transparent").
+- _Tag omission_ {{no_tag_omission}}
+- _Permitted parent elements_ Any element that accepts [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content").
+- _DOM interface_ {{domxref("HTMLModElement")}}
+
+## Attributes
+
+This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
+
+- {{htmlattrdef("cite")}}
+  - : This attribute defines the URI of a resource that explains the change, like a link to some meeting minutes or a ticket in a troubleshooting sytem.
+- {{htmlattrdef("datetime")}}
+  - : This attribute indicates the time and date of the change and must be a [valid date with an optional time string](http://www.w3.org/TR/2011/WD-html5-20110525/common-microsyntaxes.html#valid-date-string-with-optional-time). If the value cannot be parsed as a date with an optional time string, the element does not have an associated time stamp.
+
+## Examples
+
+```html
+<ins>This text has been inserted</ins>
+```
+
+## Specifications
+
+| Specification                                                                                    | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', 'edits.html#the-ins-element', '&lt;ins&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML5 W3C', 'edits.html#the-ins-element', '&lt;ins&gt;')}}     | {{Spec2('HTML5 W3C')}}     |         |
+| {{SpecName('HTML4.01', 'struct/text.html#h-9.4', '&lt;ins&gt;')}}         | {{Spec2('HTML4.01')}}     |         |
+
+## Compatibilidade com navegadores
+
 {{Compat("html.elements.ins")}}
 
-<h2 id="See_also">See also</h2>
-<ul>
- <li>{{HTMLElement("del")}} element for marking deletion into a document</li>
-</ul>
-<div>
- {{HTMLRef}}</div>
+## See also
+
+- {{HTMLElement("del")}} element for marking deletion into a document
+
+{{HTMLRef}}

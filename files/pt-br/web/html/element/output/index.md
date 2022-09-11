@@ -12,64 +12,46 @@ tags:
   - Web
 translation_of: Web/HTML/Element/output
 ---
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O elemento de saída (&lt;output&gt;) é um elemento no qual um site ou aplicativo pode injetar os resultados de um cálculo ou o resultado de uma ação do usuário.</p>
+O elemento de saída (\<output>) é um elemento no qual um site ou aplicativo pode injetar os resultados de um cálculo ou o resultado de uma ação do usuário.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>Categorias de conteúdo</td>
-   <td><a href="/en/HTML/Content_categories#Flow_content" title="en/HTML/Content categories#Flow content">Flow content</a>, <a href="/en/HTML/Content_categories#Phrasing_content" title="en/HTML/Content categories#Phrasing content">phrasing content</a>, <a href="/en/HTML/Content_categories#form_listed" title="en/HTML/Content categories#form listed">listed</a>, <a href="/en/HTML/Content_categories#form_labelable" title="en/HTML/Content categories#form labelable">labelable</a>, <a href="/en/HTML/Content_categories#form_resettable" title="en/HTML/Content categories#form resettable">resettable</a> <a href="/en/HTML/Content_categories#Form-associated_content" title="en/HTML/Content categories#Form-associated content">form-associated element</a>.</td>
-  </tr>
-  <tr>
-   <td>Conteúdo permitido</td>
-   <td><a href="/en/HTML/Content_categories#Phrasing_content" title="en/HTML/Content categories#Phrasing content">Phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <td>Omissão de tag</td>
-   <td>Precisa ter ambas as tags de início e fim.</td>
-  </tr>
-  <tr>
-   <td>Documento normativo</td>
-   <td><a class="external" href="http://www.w3.org/TR/html5/the-button-element.html#the-output-element">HTML5, section 4.10.15</a></td>
-  </tr>
- </tbody>
-</table>
+| Categorias de conteúdo | [Flow content](/en/HTML/Content_categories#Flow_content "en/HTML/Content categories#Flow content"), [phrasing content](/en/HTML/Content_categories#Phrasing_content "en/HTML/Content categories#Phrasing content"), [listed](/en/HTML/Content_categories#form_listed "en/HTML/Content categories#form listed"), [labelable](/en/HTML/Content_categories#form_labelable "en/HTML/Content categories#form labelable"), [resettable](/en/HTML/Content_categories#form_resettable "en/HTML/Content categories#form resettable") [form-associated element](/en/HTML/Content_categories#Form-associated_content "en/HTML/Content categories#Form-associated content"). |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Conteúdo permitido     | [Phrasing content](/en/HTML/Content_categories#Phrasing_content "en/HTML/Content categories#Phrasing content").                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Omissão de tag         | Precisa ter ambas as tags de início e fim.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Documento normativo    | [HTML5, section 4.10.15](http://www.w3.org/TR/html5/the-button-element.html#the-output-element)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Como qualquer elemento HTML, este elemento suporta os <a href="/en/HTML/Global_attributes" title="en/HTML/Global attributes">global attributes</a>.</p>
+Como qualquer elemento HTML, este elemento suporta os [global attributes](/en/HTML/Global_attributes "en/HTML/Global attributes").
 
-<dl>
- <dt>{{ htmlattrdef("for") }}</dt>
- <dd>Uma lista de IDs de outros elementos, indicando que estes elementos contribuiram com valores de entrada (input) para o cálculo (ou outros afetados).</dd>
- <dt>{{ htmlattrdef("form") }}</dt>
- <dd>O elemento form ao qual este elemento está associado (seu "proprietário do formulário"). O valor do atributo deve ser um ID de um elemento form no mesmo documento. Se este atributo não está especificado, o elemento output deve ser descendente de um elemento form. Este atributo permite que você coloque elementos output em qualquer lugar em um documento, não apenas como descendentes de seus elementos form.</dd>
- <dt>{{ htmlattrdef("name") }}</dt>
- <dd>O nome do elemento.</dd>
-</dl>
+- {{ htmlattrdef("for") }}
+  - : Uma lista de IDs de outros elementos, indicando que estes elementos contribuiram com valores de entrada (input) para o cálculo (ou outros afetados).
+- {{ htmlattrdef("form") }}
+  - : O elemento form ao qual este elemento está associado (seu "proprietário do formulário"). O valor do atributo deve ser um ID de um elemento form no mesmo documento. Se este atributo não está especificado, o elemento output deve ser descendente de um elemento form. Este atributo permite que você coloque elementos output em qualquer lugar em um documento, não apenas como descendentes de seus elementos form.
+- {{ htmlattrdef("name") }}
+  - : O nome do elemento.
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>O elemento implementa a interface <a href="/en/DOM/HTMLOutputElement" title="en/DOM/HTMLOutputElement">HTMLOutputElement</a> .</p>
+O elemento implementa a interface [HTMLOutputElement](/en/DOM/HTMLOutputElement "en/DOM/HTMLOutputElement") .
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre>&lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)"&gt;
-0&lt;input type="range" name="b" value="50" /&gt;100 +&lt;input type="number" name="a" value="10" /&gt; =
-&lt;output name="result"&gt;&lt;/output&gt;
-&lt;/form&gt;
-</pre>
+```
+<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+0<input type="range" name="b" value="50" />100 +<input type="number" name="a" value="10" /> =
+<output name="result"></output>
+</form>
+```
 
-<h2 id="Compatibilidade">Compatibilidade</h2>
+## Compatibilidade
 
 {{Compat("html.elements.output")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<p>Outros elementos relacionados ao form: {{ HTMLElement("form") }}, {{ HTMLElement("input") }}, {{ HTMLElement("button") }}, {{ HTMLElement("datalist") }}, {{ HTMLElement("legend") }}, {{ HTMLElement("label") }}, {{ HTMLElement("select") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("textarea") }}, {{ HTMLElement("keygen") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("progress") }} and {{ HTMLElement("meter") }}.</p>
+Outros elementos relacionados ao form: {{ HTMLElement("form") }}, {{ HTMLElement("input") }}, {{ HTMLElement("button") }}, {{ HTMLElement("datalist") }}, {{ HTMLElement("legend") }}, {{ HTMLElement("label") }}, {{ HTMLElement("select") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("textarea") }}, {{ HTMLElement("keygen") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("progress") }} and {{ HTMLElement("meter") }}.
 
-<div>{{ HTMLRef }}</div>
-
-<div>{{ languages({"en":"en/HTML/Element/output", "fr":"fr/HTML/Element/output", "ja":"ja/HTML/Element/output" }) }}</div>
+{{ HTMLRef }}{{ languages({"en":"en/HTML/Element/output", "fr":"fr/HTML/Element/output", "ja":"ja/HTML/Element/output" }) }}

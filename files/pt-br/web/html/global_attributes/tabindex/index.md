@@ -7,71 +7,40 @@ tags:
   - Referencia
 translation_of: Web/HTML/Global_attributes/tabindex
 ---
-<p>{{HTMLSidebar("Global_attributes")}}</p>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>O <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributo global</a> <strong>tabindex</strong> indica se um elemento pode receber foco de entrada (se ele é <em>focável</em>), se e em qual posição ele deve fazer parte da navegação sequencial do teclado (geralmente com a tecla <kbd>Tab</kbd>, daí seu nome).</p>
+O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **tabindex** indica se um elemento pode receber foco de entrada (se ele é _focável_), se e em qual posição ele deve fazer parte da navegação sequencial do teclado (geralmente com a tecla <kbd>Tab</kbd>, daí seu nome).
 
-<div>{{EmbedInteractiveExample("pages/tabbed/attribute-tabindex.html","tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/attribute-tabindex.html","tabbed-standard")}}
 
-<p>Ele aceita valores inteiros, com diferentes resultados dependendo do valor desse inteiro:</p>
+Ele aceita valores inteiros, com diferentes resultados dependendo do valor desse inteiro:
 
-<ul>
- <li>um <em>valor negativo</em> (geralmente <code>tabindex="-1"</code>) significa que o elemento não deve ser localizado pela navegação sequencial do teclado, mas pode ser focável visualmente ou com JavaScript. Isso é mais útil para criar widgets accessíveis com JavaScript.
+- um _valor negativo_ (geralmente `tabindex="-1"`) significa que o elemento não deve ser localizado pela navegação sequencial do teclado, mas pode ser focável visualmente ou com JavaScript. Isso é mais útil para criar widgets accessíveis com JavaScript.
 
-  <div class="note">
-  <p>Um valor negativo é útil quando você tem conteúdo fora da tela que aparece com um evento específico. O usuário não poder focar em nenhum elemento com um <code>tabindex</code> negativo utilizando o teclado, porém um script pode o fazer utilizando o <a href="/en-US/docs/Web/API/HTMLElement/focus">método</a> <code>focus()</code>.</p>
-  </div>
- </li>
- <li><code>tabindex="0"</code> significa que o elemento deve ser focável e que pode ser localizado pela navegação sequencial do teclado, mas a sua posição será definida pela ordem no código-fonte do documento;</li>
- <li>um <em>valor positivo</em> significa que o elemento deve ser focável e que pode ser localizado pela navegação sequencial do teclado, e a sua posição definida pelo valor do número. Sendo assim, <code>tabindex="4"</code> seria focado antes de <code>tabindex="5"</code>, mas depois de <code>tabindex="3"</code>. Se vários elementos possuírem o mesmo valor positivo de <code>tabindex</code>, a sua posição na ordenação será definida pela sua posição no código-fonte do documento. O valor máximo do <code>tabindex</code> é 32767. Se não especificado, assume o valor padrão 0.
-  <div class="warning">
-  <p>Evite usar valores do <code>tabindex</code> maiores que 0. Ao fazer isso dificulta para pessoas que dependem de tecnologias assistivas para navegar e operar o conteúdo da página. Ao invés disso, escreva o documento com os elementos em uma sequência lógica.</p>
-  </div>
- </li>
-</ul>
+  > **Note:** Um valor negativo é útil quando você tem conteúdo fora da tela que aparece com um evento específico. O usuário não poder focar em nenhum elemento com um `tabindex` negativo utilizando o teclado, porém um script pode o fazer utilizando o [método](/pt-BR/docs/Web/API/HTMLElement/focus) `focus()`.
 
-<p>Se o atributo <code>tabindex</code> for definido em um elemento div {{htmlelement("div")}}, seu conteúdo filho (interno) não poderá ser rolado utilizando as teclas direcionais a menos que seja definido <code>tabindex</code> no conteúdo também.<a href="https://jsfiddle.net/jainakshay/0b2q4Lgv/"> Veja este fiddle para entender melhor os efeitos de rolagem do tabindex</a>.</p>
+- `tabindex="0"` significa que o elemento deve ser focável e que pode ser localizado pela navegação sequencial do teclado, mas a sua posição será definida pela ordem no código-fonte do documento;
+- um _valor positivo_ significa que o elemento deve ser focável e que pode ser localizado pela navegação sequencial do teclado, e a sua posição definida pelo valor do número. Sendo assim, `tabindex="4"` seria focado antes de `tabindex="5"`, mas depois de `tabindex="3"`. Se vários elementos possuírem o mesmo valor positivo de `tabindex`, a sua posição na ordenação será definida pela sua posição no código-fonte do documento. O valor máximo do `tabindex` é 32767. Se não especificado, assume o valor padrão 0.
 
-<h2 id="Especificações">Especificações</h2>
+  > **Warning:** Evite usar valores do `tabindex` maiores que 0. Ao fazer isso dificulta para pessoas que dependem de tecnologias assistivas para navegar e operar o conteúdo da página. Ao invés disso, escreva o documento com os elementos em uma sequência lógica.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "editing.html#attr-tabindex", "tabindex")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Nenhuma mudança desde o mais recente snapshot, {{SpecName('HTML5.1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "editing.html#attr-tabindex", "tabindex")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Snapshot de {{SpecName('HTML WHATWG')}}, nenhuma mudança desde {{SpecName('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "editing.html#attr-tabindex", "tabindex")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Snapshot de {{SpecName('HTML WHATWG')}}. Desde {{SpecName("HTML4.01")}}, o atributo agora é suportado em todos os elementos (atributos globais).</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'interact/forms.html#adef-tabindex', 'tabindex')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>Suportado apenas em {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("button")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, e {{HTMLElement("textarea")}}.</td>
-  </tr>
- </tbody>
-</table>
+Se o atributo `tabindex` for definido em um elemento div {{htmlelement("div")}}, seu conteúdo filho (interno) não poderá ser rolado utilizando as teclas direcionais a menos que seja definido `tabindex` no conteúdo também.[ Veja este fiddle para entender melhor os efeitos de rolagem do tabindex](https://jsfiddle.net/jainakshay/0b2q4Lgv/).
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Especificações
+
+| Especificação                                                                                    | Status                           | Comentário                                                                                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "editing.html#attr-tabindex", "tabindex")}}     | {{Spec2('HTML WHATWG')}} | Nenhuma mudança desde o mais recente snapshot, {{SpecName('HTML5.1')}}                                                                                                                                                   |
+| {{SpecName('HTML5.1', "editing.html#attr-tabindex", "tabindex")}}         | {{Spec2('HTML5.1')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, nenhuma mudança desde {{SpecName('HTML5 W3C')}}                                                                                                                          |
+| {{SpecName('HTML5 W3C', "editing.html#attr-tabindex", "tabindex")}}         | {{Spec2('HTML5 W3C')}}     | Snapshot de {{SpecName('HTML WHATWG')}}. Desde {{SpecName("HTML4.01")}}, o atributo agora é suportado em todos os elementos (atributos globais).                                                                 |
+| {{SpecName('HTML4.01', 'interact/forms.html#adef-tabindex', 'tabindex')}} | {{Spec2('HTML4.01')}}     | Suportado apenas em {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("button")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, e {{HTMLElement("textarea")}}. |
+
+## Compatibilidade com navegadores
 
 {{Compat("html.global_attributes.tabindex")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Todos os <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a>.</li>
- <li>{{domxref("HTMLElement.tabIndex")}} que reflete este atributo.</li>
- <li>Problemas de acessibilidade com tabindex: veja <a href="http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html" id="id-22" style="font-size: inherit; line-height: inherit;" title="Don’t Use Tabindex Greater than 0 | Adrian Roselli">Don’t Use Tabindex Greater than 0 | Adrian Roselli</a> (em inglês).</li>
-</ul>
+- Todos os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+- {{domxref("HTMLElement.tabIndex")}} que reflete este atributo.
+- Problemas de acessibilidade com tabindex: veja [Don’t Use Tabindex Greater than 0 | Adrian Roselli](http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html "Don’t Use Tabindex Greater than 0 | Adrian Roselli") (em inglês).

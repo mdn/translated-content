@@ -12,92 +12,61 @@ tags:
   - tag
 translation_of: Web/HTML/Element/blockquote
 ---
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O Elemento HTML &lt;blockquote&gt; (ou Elemento HTML de citação de bloco) indica que o texto incluído é uma longa citação. Normalmente, este é processado visualmente pelo recuo (ver <a href="https://developer.mozilla.org/en-US/docs/HTML/Element/blockquote#Notes">Notas</a> sobre como mudá-lo). A URL para a fonte da citação pode ser dada usando o atributo <strong>cite</strong>, enquanto uma representação de texto da fonte pode ser dada usando o {{HTMLElement("cite")}} elemento.</p>
+O Elemento HTML \<blockquote> (ou Elemento HTML de citação de bloco) indica que o texto incluído é uma longa citação. Normalmente, este é processado visualmente pelo recuo (ver [Notas](/pt-BR/docs/HTML/Element/blockquote#Notes) sobre como mudá-lo). A URL para a fonte da citação pode ser dada usando o atributo **cite**, enquanto uma representação de texto da fonte pode ser dada usando o {{HTMLElement("cite")}} elemento.
 
-<ul>
- <li> </li>
- <li><dfn><a href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Categorias de conteúdo</a></dfn> <a href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">Fluxo de conteúdo</a>, raiz selecionamento, conteúdo palpável.</li>
- <li><dfn>Conteúdo permitido</dfn> <a href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content_categories#Phrasing_content">Fluxo de conteúdo</a>.</li>
- <li><dfn>Tag Omissão</dfn> {{no_tag_omission}}</li>
- <li><dfn>Elementos permitidos</dfn>
-  <div id="gt-src-tools">
-  <div id="tts_button">Qualquer elemento que aceita o <a href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Flow_content">fluxo de conteúdo.</a></div>
-  </div>
- </li>
- <li><dfn>Papéis ARIA permitidos</dfn>Qualquer</li>
- <li><dfn>Interface DOM</dfn> {{domxref("HTMLQuoteElement")}}</li>
-</ul>
+-
+- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ [Fluxo de conteúdo](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), raiz selecionamento, conteúdo palpável.
+- _Conteúdo permitido_ [Fluxo de conteúdo](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content_categories#Phrasing_content").
+- _Tag Omissão_ {{no_tag_omission}}
+- \_Elementos permitidos_Qualquer elemento que aceita o [fluxo de conteúdo.](/pt-BR/docs/HTML/Content_categories#Flow_content)
+- \_Papéis ARIA permitidos_Qualquer
+- _Interface DOM_ {{domxref("HTMLQuoteElement")}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Este elemento inclui os <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">atributos globais</a>.</p>
+Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("cite")}}</dt>
- <dd>Uma URL que designa um documento de origem ou mensagem para a informação citada. Este atributo destina-se a apontar para informações explicando o contexto ou a referência para a cotação.</dd>
-</dl>
+- {{htmlattrdef("cite")}}
+  - : Uma URL que designa um documento de origem ou mensagem para a informação citada. Este atributo destina-se a apontar para informações explicando o contexto ou a referência para a cotação.
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>Para alterar o recuo de <code>&lt;blockquote&gt;</code>, use a propriedade <a href="https://developer.mozilla.org/en-US/docs/CSS">CSS</a> {{cssxref("margin")}}.</p>
+Para alterar o recuo de `<blockquote>`, use a propriedade [CSS](/pt-BR/docs/CSS) {{cssxref("margin")}}.
 
-<p>Para citações curtas, use o elemento {{HTMLElement("q")}}.
+Para citações curtas, use o elemento {{HTMLElement("q")}}.
 
-  <h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: html  language-html"><code class="language-html"><span class="punctuation token">&lt;blockquote cite="http://developer.mozilla.org"&gt;</span>
-  <span class="punctuation token">&lt;p&gt;</span>Esta é uma citação tirada da
-  Mozilla Developer Center.<span class="punctuation token">&lt;/p&gt;</span>
-<span class="punctuation token">&lt;/blockquote&gt;</span></code></pre>
-
-<p>O código HTML acima vai resultar em:</p>
-
+```html
 <blockquote cite="http://developer.mozilla.org">
-<p>Esta é uma citação tirada da Mozilla Developer Center.</p>
+  <p>Esta é uma citação tirada da
+  Mozilla Developer Center.</p>
 </blockquote>
+```
 
-<h2 id="Specifications" name="Specifications">Especificação</h2>
+O código HTML acima vai resultar em:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-blockquote-element', '&lt;blockquote&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-blockquote-element', '&lt;blockquote&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/text.html#h-9.2.2', '&lt;blockquote&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+> Esta é uma citação tirada da Mozilla Developer Center.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Especificação
+
+| Especificação                                                                                                                    | Status                           | Comentário |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-blockquote-element', '&lt;blockquote&gt;')}}         | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-blockquote-element', '&lt;blockquote&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
+| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.2', '&lt;blockquote&gt;')}}                             | {{Spec2('HTML4.01')}}     |            |
+
+## Compatibilidade com navegadores
 
 {{Compat("html.elements.blockquote")}}
 
-<h2 id="sect1"> </h2>
+##
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>O elemento {{HTMLElement("q")}} para citações em linha.</li>
- <li>O elemento {{HTMLElement("q")}} para citações de origem.</li>
-</ul>
+- O elemento {{HTMLElement("q")}} para citações em linha.
+- O elemento {{HTMLElement("q")}} para citações de origem.
 
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}

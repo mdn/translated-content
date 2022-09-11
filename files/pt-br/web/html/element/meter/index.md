@@ -3,90 +3,68 @@ title: meter
 slug: Web/HTML/Element/meter
 translation_of: Web/HTML/Element/meter
 ---
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O elemento HTML <em>meter</em> (<code>&lt;meter&gt;</code>) pode representar um valor escalar dentro de um intervalo conhecido ou um valor fracionário.</p>
+O elemento HTML _meter_ (`<meter>`) pode representar um valor escalar dentro de um intervalo conhecido ou um valor fracionário.
 
-<div class="note"><strong>Nota de uso: </strong>A não ser que o atributo <strong>value</strong> esteja entre 0 e 1(inclusive), o atributo <strong>min</strong> e o atributo <strong>max</strong> devem definir o intervalo de modo que o valor do atributo<strong> value</strong> esteja dentro dele.</div>
+> **Note:** **Nota de uso:** A não ser que o atributo **value** esteja entre 0 e 1(inclusive), o atributo **min** e o atributo **max** devem definir o intervalo de modo que o valor do atributo **value** esteja dentro dele.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><a href="/en/HTML/Content_categories" title="en/HTML/Content categories">Content categories</a></td>
-   <td><a href="/en/HTML/Content_categories#flow_content" title="en/HTML/Content categories#flow content">flow content</a>, <a href="/en/HTML/Content_categories#phrasing_content" title="en/HTML/Content categories#phrasing content">phrasing content</a>, <a href="/en/HTML/Content_categories#form-labelable" title="en/HTML/Content categories#form labelable">Labelable</a> <a href="/en/HTML/Content_categories#form-associated" title="en/HTML/Content categories#form associated">Form-associated content</a></td>
-  </tr>
-  <tr>
-   <td>Conteúdo permitido</td>
-   <td><a href="/en/HTML/Content_categories#Phrasing_content" title="en/HTML/Content categories#Phrasing content">Phrasing content</a>, mas nenhum elemento <code>meter</code> descendente.</td>
-  </tr>
-  <tr>
-   <td>Tag omission</td>
-   <td>Nenhuma, ambas as tags iniciais e finais são obrigatórias.</td>
-  </tr>
-  <tr>
-   <td>Elementos pais permitidos</td>
-   <td>Qualquer elemento que aceite phrasing content.</td>
-  </tr>
-  <tr>
-   <td>Documento normativo</td>
-   <td><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-meter-element" rel="external nofollow">HTML5, section 4.10.8</a></td>
-  </tr>
- </tbody>
-</table>
+| [Content categories](/en/HTML/Content_categories "en/HTML/Content categories") | [flow content](/en/HTML/Content_categories#flow_content "en/HTML/Content categories#flow content"), [phrasing content](/en/HTML/Content_categories#phrasing_content "en/HTML/Content categories#phrasing content"), [Labelable](/en/HTML/Content_categories#form-labelable "en/HTML/Content categories#form labelable") [Form-associated content](/en/HTML/Content_categories#form-associated "en/HTML/Content categories#form associated") |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Conteúdo permitido                                                             | [Phrasing content](/en/HTML/Content_categories#Phrasing_content "en/HTML/Content categories#Phrasing content"), mas nenhum elemento `meter` descendente.                                                                                                                                                                                                                                                                                    |
+| Tag omission                                                                   | Nenhuma, ambas as tags iniciais e finais são obrigatórias.                                                                                                                                                                                                                                                                                                                                                                                  |
+| Elementos pais permitidos                                                      | Qualquer elemento que aceite phrasing content.                                                                                                                                                                                                                                                                                                                                                                                              |
+| Documento normativo                                                            | [HTML5, section 4.10.8](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-meter-element)                                                                                                                                                                                                                                                                                                              |
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Como todos os elementos HTML, esse elemento suporta<a href="/en/HTML/Global_attributes" title="en/HTML/Global attributes"> attributes</a>.</p>
+Como todos os elementos HTML, esse elemento suporta[ attributes](/en/HTML/Global_attributes "en/HTML/Global attributes").
 
-<dl>
- <dt>{{ htmlattrdef("value") }}</dt>
- <dd>O valor numérico atual. Ele deve estar entre os valores mínimos e máximo (o atributo<strong> min</strong> e o atributo <strong>max</strong>) se eles estiverem especificados. Se não especificado ou mal formatado, o valor é 0. Se especificado, mas fora do intervalo dado pelos atributos <strong>min</strong> e <strong>max</strong>, o valor é igual ao extremo do intervalo mais próximo.</dd>
- <dt>{{ htmlattrdef("min") }}</dt>
- <dd>O limite numérico mínimo do intervalo medido. Deve ser menor que o valor máximo (o atributo <strong>max</strong>), se especificado. Se não especificado, o valor mínimo é 0.</dd>
- <dt>{{ htmlattrdef("max") }}</dt>
- <dd>O limite numérico máximo do intervalo medido. Deve ser maior que o valor mínimo (o atributo <strong>min</strong>), se especificado. Se não especificado, o valor máximo é 1.</dd>
- <dt>{{ htmlattrdef("low") }}</dt>
- <dd>O limite numérico máximo da parte inferior do intervalo medido. Deve ser maior que o valor mínimo (o atibuto <strong>min</strong>), e também ser menor que o valor alto e o valor máximo (os atributos <strong>high</strong> e <strong>max</strong>, respectivamente), se estiver especificado. Se não especificado, ou se for menor que o valor mínimo, o valor de <strong>low</strong> é igual ao valor mínimo.</dd>
- <dt>{{ htmlattrdef("high") }}</dt>
- <dd>O limite numérico mínimo da parte superior do intervalo medido. Deve ser menor que o valor máximo (o atibuto <strong>max</strong>), e também ser maior que o valor baixo e o valor mínimo (os atributos <strong>low</strong> e <strong>min</strong>, respectivamente), se estiver especificado. Se não especificado, ou se for maior que o valor máximo, o valor de <strong>high</strong> é igual ao valor máximo.</dd>
- <dt>{{ htmlattrdef("optimum") }}</dt>
- <dd>Esse atributo indica o valor numérico ótimo. Deve estar dentro do intervalo (definido pelos atributos <strong>min</strong> e <strong>max</strong>). Quando com os atributos <strong>low</strong> e <strong>high</strong>, ele indica a região do intervalo qu é considerada preferível. Por exemplo, se estiver entre os atributos <strong>min</strong> e <strong>low</strong>, então a parte inferior do intervalo é considerada como ótima.</dd>
- <dt>{{ htmlattrdef("form") }}</dt>
- <dd>Esse atributo associa o elemento com um elemento<code> form</code> que é dono de um elemento <code>meter</code>. Por exemplo, um elemento <code>meter</code> pode estar mostrando um intervalo correspondente a um elemento <code>input</code> do <strong>type</strong>(tipo) <em>number</em>. Esse atributo só é utilizado se o elemento <code>meter</code> está sendo utilizado como um elemento associado a um formulário; mesmo assim, ele pode se romitido se o elemento for um descendente de um elemento <code>form</code>.</dd>
-</dl>
+- {{ htmlattrdef("value") }}
+  - : O valor numérico atual. Ele deve estar entre os valores mínimos e máximo (o atributo **min** e o atributo **max**) se eles estiverem especificados. Se não especificado ou mal formatado, o valor é 0. Se especificado, mas fora do intervalo dado pelos atributos **min** e **max**, o valor é igual ao extremo do intervalo mais próximo.
+- {{ htmlattrdef("min") }}
+  - : O limite numérico mínimo do intervalo medido. Deve ser menor que o valor máximo (o atributo **max**), se especificado. Se não especificado, o valor mínimo é 0.
+- {{ htmlattrdef("max") }}
+  - : O limite numérico máximo do intervalo medido. Deve ser maior que o valor mínimo (o atributo **min**), se especificado. Se não especificado, o valor máximo é 1.
+- {{ htmlattrdef("low") }}
+  - : O limite numérico máximo da parte inferior do intervalo medido. Deve ser maior que o valor mínimo (o atibuto **min**), e também ser menor que o valor alto e o valor máximo (os atributos **high** e **max**, respectivamente), se estiver especificado. Se não especificado, ou se for menor que o valor mínimo, o valor de **low** é igual ao valor mínimo.
+- {{ htmlattrdef("high") }}
+  - : O limite numérico mínimo da parte superior do intervalo medido. Deve ser menor que o valor máximo (o atibuto **max**), e também ser maior que o valor baixo e o valor mínimo (os atributos **low** e **min**, respectivamente), se estiver especificado. Se não especificado, ou se for maior que o valor máximo, o valor de **high** é igual ao valor máximo.
+- {{ htmlattrdef("optimum") }}
+  - : Esse atributo indica o valor numérico ótimo. Deve estar dentro do intervalo (definido pelos atributos **min** e **max**). Quando com os atributos **low** e **high**, ele indica a região do intervalo qu é considerada preferível. Por exemplo, se estiver entre os atributos **min** e **low**, então a parte inferior do intervalo é considerada como ótima.
+- {{ htmlattrdef("form") }}
+  - : Esse atributo associa o elemento com um elemento` form` que é dono de um elemento `meter`. Por exemplo, um elemento `meter` pode estar mostrando um intervalo correspondente a um elemento `input` do **type**(tipo) _number_. Esse atributo só é utilizado se o elemento `meter` está sendo utilizado como um elemento associado a um formulário; mesmo assim, ele pode se romitido se o elemento for um descendente de um elemento `form`.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Simple_example" name="Simple_example">Exemplo simples</h3>
+### Exemplo simples
 
-<pre class="brush: html">&lt;p&gt;Aqueça o forno para &lt;meter min="200" max="500" value="350"&gt;350 graus&lt;/meter&gt;.&lt;/p&gt;
-</pre>
+```html
+<p>Aqueça o forno para <meter min="200" max="500" value="350">350 graus</meter>.</p>
+```
 
-<p>No Google Chrome, o medidor aparece como:</p>
+No Google Chrome, o medidor aparece como:
 
-<p><img alt="meter1.png" class="default internal" src="/@api/deki/files/4940/=meter1.png"></p>
+![meter1.png](/@api/deki/files/4940/=meter1.png)
 
-<h3 id="Hilo_Range_example" name="Hilo_Range_example">Exemplos de intervalos com High e Low</h3>
+### Exemplos de intervalos com High e Low
 
-<p>Note que nesse exemplo o atributo <strong>min</strong> foi omitido; isso é permitido, pois ele irá ser, por padrão, 0.</p>
+Note que nesse exemplo o atributo **min** foi omitido; isso é permitido, pois ele irá ser, por padrão, 0.
 
-<pre class="brush: html">&lt;p&gt;Ele recebeu &lt;meter low="69" high="80" max="100" value="84"&gt;B&lt;/meter&gt; no exame.&lt;/p&gt;
-</pre>
+```html
+<p>Ele recebeu <meter low="69" high="80" max="100" value="84">B</meter> no exame.</p>
+```
 
-<p>No Google Chrome, o medidor aparece como:</p>
+No Google Chrome, o medidor aparece como:
 
-<p><img alt="meter2.png" class="default internal" src="/@api/deki/files/4941/=meter2.png"></p>
+![meter2.png](/@api/deki/files/4941/=meter2.png)
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("html.elements.meter")}}
 
+## Veja também
 
-<p>{{Compat("html.elements.meter")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{ HTMLElement("progress") }}</li>
-</ul>
+- {{ HTMLElement("progress") }}

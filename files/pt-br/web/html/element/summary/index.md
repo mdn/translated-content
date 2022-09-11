@@ -8,55 +8,38 @@ tags:
   - Web
 translation_of: Web/HTML/Element/summary
 ---
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O elemento HTML <em>summary</em> (<code>&lt;summary&gt;</code>) é utilizado como um sumário ou legenda para o conteúdo de um elemento {{ HTMLElement("details") }}.</p>
+O elemento HTML _summary_ (`<summary>`) é utilizado como um sumário ou legenda para o conteúdo de um elemento {{ HTMLElement("details") }}.
 
-<div class="note"><strong>Nota:</strong> Se o elemento <code>&lt;summary&gt;</code> for omitido, o cabeçalho "details" será utilizado.</div>
+> **Note:** **Nota:** Se o elemento `<summary>` for omitido, o cabeçalho "details" será utilizado.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>Conteúdo permitido</td>
-   <td><a href="/en/HTML/Content_categories#Phrasing_content" title="en/HTML/Content categories#Phrasing content">Phrasing content</a></td>
-  </tr>
-  <tr>
-   <td>Omissão de tag</td>
-   <td>Nenhuma, tanto as tags iniciais quanto as finais devem estar presentes.</td>
-  </tr>
-  <tr>
-   <td>Elementos pai permitidos</td>
-   <td>O elemento {{ HTMLElement("details") }}.</td>
-  </tr>
-  <tr>
-   <td>Documentos normativos</td>
-   <td><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#the-summary-element" rel="external nofollow">HTML5, section 4.11.2</a></td>
-  </tr>
- </tbody>
-</table>
+| Conteúdo permitido       | [Phrasing content](/en/HTML/Content_categories#Phrasing_content "en/HTML/Content categories#Phrasing content")                     |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Omissão de tag           | Nenhuma, tanto as tags iniciais quanto as finais devem estar presentes.                                                            |
+| Elementos pai permitidos | O elemento {{ HTMLElement("details") }}.                                                                                   |
+| Documentos normativos    | [HTML5, section 4.11.2](http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#the-summary-element) |
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Como todos os outros elementos HTML, esse elemento possui os <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a>.</p>
+Como todos os outros elementos HTML, esse elemento possui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-<h2 id="Interface_do_DOM">Interface do DOM</h2>
+## Interface do DOM
 
-<p>Esse elemento implementa a interface <code><a href="/en/DOM/element" title="en/DOM/element">HTMLElement</a></code>.</p>
+Esse elemento implementa a interface [`HTMLElement`](/en/DOM/element "en/DOM/element").
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Veja a página {{ HTMLElement("details") }} para ver exemplos com <code>&lt;summary&gt;</code>.</p>
+Veja a página {{ HTMLElement("details") }} para ver exemplos com `<summary>`.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("html.elements.summary")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ HTMLElement("details") }}</li>
-</ul>
+- {{ HTMLElement("details") }}
 
-<div class="noinclude">{{ languages({ "en": "en/HTML/Element/summary", "ja": "ja/HTML/Element/summary" }) }}</div>
+{{ languages({ "en": "en/HTML/Element/summary", "ja": "ja/HTML/Element/summary" }) }}

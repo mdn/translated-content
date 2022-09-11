@@ -11,121 +11,91 @@ tags:
   - menu+HTML
 translation_of: Web/HTML/Element/li
 ---
-<h2 id="Resumo"><span style="font-size: 1.628em;">Resumo</span></h2>
+## Resumo
 
-<p>O <strong><em>elemento</em></strong> <strong><em>HTML</em> <code style="font-style: normal;">&lt;li&gt;</code></strong>  (ou a Lista dos Itens de um elemento HTML) é usado para representar um item que faz parte de uma lista. Este item deve estar contido em um elemento pai: uma lista ordenada<code> </code>({{HTMLElement("ol")}}),<code> </code>uma lista desordenada<code> </code>({{HTMLElement("ul")}})<code>, </code>ou um menu<code> </code>({{HTMLElement("menu")}})<code> </code>e representa uma única entidade dessa lista. Em menus e listas desordenadas a relação de itens é exibida, normalmente, usando pontos de marcação (as bolinhas). Em listas ordenadas eles são, comumente, mostrados com algum <span class="short_text" id="result_box" lang="pt"><span>contador</span> <span>ascendente - como um número, ou letra - à sua esquerda.</span></span></p>
+O **_elemento_** **_HTML_ `<li>`** (ou a Lista dos Itens de um elemento HTML) é usado para representar um item que faz parte de uma lista. Este item deve estar contido em um elemento pai: uma lista ordenada` `({{HTMLElement("ol")}}),` `uma lista desordenada` `({{HTMLElement("ul")}})`, `ou um menu` `({{HTMLElement("menu")}})` `e representa uma única entidade dessa lista. Em menus e listas desordenadas a relação de itens é exibida, normalmente, usando pontos de marcação (as bolinhas). Em listas ordenadas eles são, comumente, mostrados com algum contador ascendente - como um número, ou letra - à sua esquerda.
 
-<ul>
- <li><dfn><a href="/en-US/docs/Web/HTML/Content_categories">Categorias de conteúdo </a></dfn><span class="short_text" id="result_box" lang="pt"><span>Nenhuma</span></span>.</li>
- <li><dfn>Conteúdo permitido</dfn> <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flutuantes</a>.</li>
- <li><dfn>Omissão de etiquetas (<em>tags</em>)</dfn> <span id="result_box" lang="pt"><span>A</span> <span>etiqueta de fim</span> <span>pode</span> <span>ser</span> <span>omitida se esta for </span><span>imediatamente</span></span><span lang="pt"> <span>seguida</span> <span>por um outro</span> <span>elemento</span></span><code> </code>{{HTMLElement("li")}}<code>, </code>ou se <span class="short_text" id="result_box" lang="pt"><span>não houver</span> <span>mais conteúdo</span> <span>no seu</span> <span>elemento pai.</span></span></li>
- <li><dfn>Elementos pai permitidos</dfn> Um elemento<code> </code>{{HTMLElement("ul")}},<code> </code>{{HTMLElement("ol")}}<code>, </code>ou<code> </code>{{HTMLElement("menu")}}. Embora seja um uso incomum, o obsoleto<code> </code>{{HTMLElement("dir")}}<code> pode</code> <code>ser</code> <code>pai, </code>também.</li>
- <li><dfn>Interface DOM</dfn> {{domxref("HTMLLIElement")}}</li>
-</ul>
+- \_[Categorias de conteúdo ](/pt-BR/docs/Web/HTML/Content_categories)\_Nenhuma.
+- _Conteúdo permitido_ [Flutuantes](/pt-BR/docs/Web/HTML/Content_categories#Flow_content).
+- _Omissão de etiquetas (\_tags_)\_ A etiqueta de fim pode ser omitida se esta for imediatamente seguida por um outro elemento` `{{HTMLElement("li")}}`, `ou se não houver mais conteúdo no seu elemento pai.
+- _Elementos pai permitidos_ Um elemento` `{{HTMLElement("ul")}},` `{{HTMLElement("ol")}}`, `ou` `{{HTMLElement("menu")}}. Embora seja um uso incomum, o obsoleto` `{{HTMLElement("dir")}}` pode` `ser` `pai, `também.
+- _Interface DOM_ {{domxref("HTMLLIElement")}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Este elemento inclui os <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a>.</p>
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("value")}}</dt>
- <dd><span id="result_box" lang="pt"><span>Este atributo de</span></span><span lang="pt"><span> número inteiro</span> <span>indica o valor</span> <span>ordinal</span> <span>atual</span></span> do item na lista, definido pelo elemento<code> </code>{{HTMLElement("ol")}}.<code> </code>O único valor possível para este atributo é um número, ainda que a lista seja exibida com algarismos romanos, ou letras. A lista de itens que virá em seguida continuará a ser numerada a partir desta posição. O atributo <strong>value</strong> não tem significado para listas desordenadas<code> </code>({{HTMLElement("ul")}}),<code> </code>nem para menus<code> </code>({{HTMLElement("menu")}}).
- <div class="note"><strong>Nota</strong>: Este atributo, abandonado na HTML4, foi reintroduzido na HTML5.</div>
+- {{htmlattrdef("value")}}
 
- <div class="note">
- <p><strong>Nota:</strong> Antes de<code> </code>{{Gecko("9.0")}},<code> </code>os valores negativos eram, incorretamente, convertidos a 0. A partir de<code> </code>{{Gecko("9.0")}}<code> </code>todos os valores inteiros são analisados corretamente.</p>
- </div>
- </dd>
- <dt>{{htmlattrdef("type")}} {{Deprecated_inline}}</dt>
- <dd><span id="result_box" lang="pt"><span>A característica deste</span> <span>atributo é</span> <span>indicar o tipo</span> <span>de numeração</span></span>:
- <ul>
-  <li><code>a</code>: letras minúsculas</li>
-  <li><code>A</code>: letras maiúsculas</li>
-  <li><code>i</code>: algarismos romanos minúsculos</li>
-  <li><code>I</code>: algarismos romanos maiúsculos</li>
-  <li><code>1</code>: números</li>
- </ul>
- <span id="result_box" lang="pt"><span>Este tipo</span> <span>substitui</span> <span>o utilizado pelo</span> <span>seu elemento pai</span></span><code> </code>{{HTMLElement("ol")}},<code> </code>qualquer que seja.
+  - : Este atributo de número inteiro indica o valor ordinal atual do item na lista, definido pelo elemento` `{{HTMLElement("ol")}}.` `O único valor possível para este atributo é um número, ainda que a lista seja exibida com algarismos romanos, ou letras. A lista de itens que virá em seguida continuará a ser numerada a partir desta posição. O atributo **value** não tem significado para listas desordenadas` `({{HTMLElement("ul")}}),` `nem para menus` `({{HTMLElement("menu")}}).
 
- <div class="note"><strong>Nota de utilização:</strong> Este atributo <span class="short_text" id="result_box" lang="pt"><span>foi preterido. Em seu lugar</span></span><span class="short_text" lang="pt"><span> use a propriedade </span></span>CSS<code> </code>{{cssxref("list-style-type")}}.</div>
- </dd>
-</dl>
+    > **Note:** **Nota**: Este atributo, abandonado na HTML4, foi reintroduzido na HTML5.
 
-<h2 id="Exemplos">Exemplos</h2>
+    > **Note:** **Nota:** Antes de` `{{Gecko("9.0")}},` `os valores negativos eram, incorretamente, convertidos a 0. A partir de` `{{Gecko("9.0")}}` `todos os valores inteiros são analisados corretamente.
 
-<pre class="brush: html">&lt;ol&gt;
-    &lt;li&gt;primeiro item&lt;/li&gt;
-    &lt;li&gt;segundo item&lt;/li&gt;
-    &lt;li&gt;terceiro item&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
+- {{htmlattrdef("type")}} {{Deprecated_inline}}
 
-<p>A saída HTML acima será:</p>
+  - : A característica deste atributo é indicar o tipo de numeração:
 
+    - `a`: letras minúsculas
+    - `A`: letras maiúsculas
+    - `i`: algarismos romanos minúsculos
+    - `I`: algarismos romanos maiúsculos
+    - `1`: números
+
+    Este tipo substitui o utilizado pelo seu elemento pai` `{{HTMLElement("ol")}},` `qualquer que seja.
+
+    > **Note:** **Nota de utilização:** Este atributo foi preterido. Em seu lugar use a propriedade CSS` `{{cssxref("list-style-type")}}.
+
+## Exemplos
+
+```html
 <ol>
- <li>primeiro item</li>
- <li>segundo item</li>
- <li>terceiro item</li>
+    <li>primeiro item</li>
+    <li>segundo item</li>
+    <li>terceiro item</li>
 </ol>
+```
 
-<pre class="brush: html">&lt;ul&gt;
-    &lt;li&gt;primeiro item&lt;/li&gt;
-    &lt;li&gt;segundo item&lt;/li&gt;
-    &lt;li&gt;terceiro item&lt;/li&gt;
-&lt;/ul&gt;</pre>
+A saída HTML acima será:
 
+1.  primeiro item
+2.  segundo item
+3.  terceiro item
+
+```html
 <ul>
- <li>primeiro item</li>
- <li>segundo item</li>
- <li>terceiro item</li>
+    <li>primeiro item</li>
+    <li>segundo item</li>
+    <li>terceiro item</li>
 </ul>
+```
 
-<p>Para exemplos mais detalhados veja as páginas<code> </code><a href="/en-US/docs/Web/HTML/Element/ol#Examples">&lt;ol&gt;</a><code> </code>e<code> </code><a href="/en-US/docs/Web/HTML/Element/ul#Examples">&lt;ul&gt;</a>.</p>
+- primeiro item
+- segundo item
+- terceiro item
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+Para exemplos mais detalhados veja as páginas` `[\<ol>](/pt-BR/docs/Web/HTML/Element/ol#Examples)` `e` `[\<ul>](/pt-BR/docs/Web/HTML/Element/ul#Examples).
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Observação</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'grouping-content.html#the-li-element', '&lt;li&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'the-li-element.html#the-li-element', '&lt;li&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'lists.html#h-10.2', '&lt;li&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Especificações
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+| Especificação                                                                                                | Estado                           | Observação |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'grouping-content.html#the-li-element', '&lt;li&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'the-li-element.html#the-li-element', '&lt;li&gt;')}}     | {{Spec2('HTML5 W3C')}}     |            |
+| {{SpecName('HTML4.01', 'lists.html#h-10.2', '&lt;li&gt;')}}                             | {{Spec2('HTML4.01')}}     |            |
+
+## Compatibilidade com navegadores
 
 {{Compat("html.elements.li")}}
 
-<h2 id="Veja_também">Veja também:</h2>
+## Veja também:
 
-<ul>
- <li>Outros elementos HTML parentes:<code> </code>{{HTMLElement("ul")}},<code> </code>{{HTMLElement("li")}},<code> </code>{{HTMLElement("menu")}}<code> </code>e o obsoleto<code> </code>{{HTMLElement("dir")}};</li>
- <li>Propriedades CSS que podem ser úteis, especialmente para dar um charme ao elemento<code> &lt;li&gt;</code>:
-  <ul>
-   <li>a propriedade<code> </code>{{cssxref("list-style")}},<code> </code><span class="short_text" id="result_box" lang="pt"><span>para escolher</span> <span>a maneira como os</span> posicionamentos <span>serão exibidos</span></span>,</li>
-   <li><a href="/Web/Guide/CSS/Counters">contadores CSS</a> <span class="short_text" id="result_box" lang="pt"><span>para controlar</span> <span>listas aninhadas</span> <span>complexas</span></span>,</li>
-   <li>a propriedade<code> </code>{{cssxref("margin")}},<code> </code>para controlar a indentação dos itens da lista.</li>
-  </ul>
- </li>
-</ul>
+- Outros elementos HTML parentes:` `{{HTMLElement("ul")}},` `{{HTMLElement("li")}},` `{{HTMLElement("menu")}}` `e o obsoleto` `{{HTMLElement("dir")}};
+- Propriedades CSS que podem ser úteis, especialmente para dar um charme ao elemento` <li>`:
 
-<div>{{HTMLRef}}</div>
+  - a propriedade` `{{cssxref("list-style")}},` `para escolher a maneira como os posicionamentos serão exibidos,
+  - [contadores CSS](/Web/Guide/CSS/Counters) para controlar listas aninhadas complexas,
+  - a propriedade` `{{cssxref("margin")}},` `para controlar a indentação dos itens da lista.
+
+{{HTMLRef}}

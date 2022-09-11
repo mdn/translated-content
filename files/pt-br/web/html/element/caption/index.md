@@ -8,88 +8,98 @@ tags:
   - título
 translation_of: Web/HTML/Element/caption
 ---
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O <strong>Elemento</strong> <strong>HTML <code>&lt;caption&gt;</code> (</strong>ou <em>Elemento HTML Subtitulo de Tabela</em>) representa o título de uma tabela. Embora ele seja sempre o primeiro filho de um {{HTMLElement("table")}}, seu estilo, usando CSS pode colocar ele em qualquer lugar relativo a tabela.</p>
+O **Elemento** **HTML `<caption>` (**ou _Elemento HTML Subtitulo de Tabela_) representa o título de uma tabela. Embora ele seja sempre o primeiro filho de um {{HTMLElement("table")}}, seu estilo, usando CSS pode colocar ele em qualquer lugar relativo a tabela.
 
-<div class="note"><strong>Nota de Uso</strong>: Quando o elemento {{HTMLElement("table")}} que é o pai deste {{HTMLElement("caption")}} é o único filho de um elemento {{HTMLElement("figure")}}, use o elemento {{HTMLElement("figcaption")}} no lugar.</div>
+> **Note:** **Nota de Uso**: Quando o elemento {{HTMLElement("table")}} que é o pai deste {{HTMLElement("caption")}} é o único filho de um elemento {{HTMLElement("figure")}}, use o elemento {{HTMLElement("figcaption")}} no lugar.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Categoria de conteúdo</a></th>
-   <td>Nenhuma.</td>
-  </tr>
-  <tr>
-   <th scope="row">Conteúdo permitido</th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">Flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omissão de tag</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Elementos pais permitidos</th>
-   <td>Um elemento {{HTMLElement("table")}}, como seu primeiro filho.</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface DOM</th>
-   <td>{{domxref("HTMLTableCaptionElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a
+          href="/en-US/docs/HTML/Content_categories"
+          title="HTML/Content_categories"
+          >Categoria de conteúdo</a
+        >
+      </th>
+      <td>Nenhuma.</td>
+    </tr>
+    <tr>
+      <th scope="row">Conteúdo permitido</th>
+      <td>
+        <a
+          href="/en-US/docs/HTML/Content_categories#Flow_content"
+          title="HTML/Content categories#Flow content"
+          >Flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omissão de tag</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Elementos pais permitidos</th>
+      <td>
+        Um elemento {{HTMLElement("table")}}, como seu primeiro filho.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>{{domxref("HTMLTableCaptionElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Este elemento inclui os <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" title="HTML/Global attributes">atributos globais</a>.</p>
+Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
 
-<p> </p>
+### Atributos obsoletos
 
-<h3 id="Atributos_obsoletos">Atributos obsoletos</h3>
+Os seguintes atributos são obsoletos e não devem ser usados. Estão documentados abaixo apenas como referência ao atualizar o código, e interesse histórico.
 
-<p>Os seguintes atributos são obsoletos e não devem ser usados. Estão documentados abaixo apenas como referência ao atualizar o código, e interesse histórico.</p>
+- {{htmlattrdef("align")}} {{deprecatedGeneric('inline','HTML4.01')}} {{obsoleteGeneric('inline','HTML5')}}
 
-<p> </p>
+  - : Esse atributo enumerado indica como o caption deve ser alinhado em relação a tabela. Ele pode ter os seguintes valores:
 
-<dl>
- <dt>{{htmlattrdef("align")}} {{deprecatedGeneric('inline','HTML4.01')}} {{obsoleteGeneric('inline','HTML5')}}</dt>
- <dd>Esse atributo enumerado indica como o caption deve ser alinhado em relação a tabela. Ele pode ter os seguintes valores:
- <ul>
-  <li><code>left</code>, exibido a esquerda da tabela</li>
-  <li><code>top</code>, exibido antes da tabela</li>
-  <li><code>right</code>, exibido a direita da tabela</li>
-  <li><code>bottom</code>, exibido abaixo da tabela</li>
- </ul>
+    - `left`, exibido a esquerda da tabela
+    - `top`, exibido antes da tabela
+    - `right`, exibido a direita da tabela
+    - `bottom`, exibido abaixo da tabela
 
- <div class="note"><strong>Nota de uso: </strong>Não use este atributo, como ele foi depreciado: o elemento {{HTMLElement("caption")}} deve ser estilizado usando <a href="/en-US/docs/CSS" title="CSS">CSS</a>. Para dar um efeito similar ao atributo <code>align</code>, use as propriedades <a href="/en-US/docs/CSS" title="CSS">CSS</a> {{cssxref("caption-side")}} e {{cssxref("text-align")}}.</div>
- </dd>
-</dl>
+    > **Note:** **Nota de uso:** Não use este atributo, como ele foi depreciado: o elemento {{HTMLElement("caption")}} deve ser estilizado usando [CSS](/pt-BR/docs/CSS "CSS"). Para dar um efeito similar ao atributo `align`, use as propriedades [CSS](/pt-BR/docs/CSS "CSS") {{cssxref("caption-side")}} e {{cssxref("text-align")}}.
 
-<h2 id="Notas_de_uso">Notas de uso</h2>
+## Notas de uso
 
-<p>Quando o elemento {{HTMLElement("table")}} que contém o &lt;caption&gt; é o único descendente de um elemento {{HTMLElement("figure")}}, você deve usar o {{HTMLElement("figcaption")}} elemento em vez de &lt;caption&gt;.</p>
+Quando o elemento {{HTMLElement("table")}} que contém o \<caption> é o único descendente de um elemento {{HTMLElement("figure")}}, você deve usar o {{HTMLElement("figcaption")}} elemento em vez de \<caption>.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>Esse exemplo mostra uma tabela que tem título.</p>
+Esse exemplo mostra uma tabela que tem título.
 
-<pre><code>&lt;table&gt;
-  &lt;caption&gt;Exemplo de título&lt;/caption&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Login&lt;/th&gt;
-    &lt;th&gt;Email&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;usuario1&lt;/td&gt;
-    &lt;td&gt;usuario1@dominio.com&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;usuario2&lt;/td&gt;
-    &lt;td&gt;usuario2@dominio.com&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</code></pre>
+```
+<table>
+  <caption>Exemplo de título</caption>
+  <tr>
+    <th>Login</th>
+    <th>Email</th>
+  </tr>
+  <tr>
+    <td>usuario1</td>
+    <td>usuario1@dominio.com</td>
+  </tr>
+  <tr>
+    <td>usuario2</td>
+    <td>usuario2@dominio.com</td>
+  </tr>
+</table>
+```
 
-<pre><code>caption {
+```
+caption {
   caption-side: top;
   align: right;
 }
@@ -99,52 +109,28 @@ table {
 }
 table, th, td {
   border: 1px solid black;
-}</code></pre>
+}
+```
 
-<p>{{EmbedLiveSample('Exemplo', 650, 100)}}</p>
+{{EmbedLiveSample('Exemplo', 650, 100)}}
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'tables.html#the-caption-element', '&lt;caption&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'tabular-data.html#the-caption-element', '&lt;caption&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/tables.html#h-11.2.2', '&lt;caption&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                    | Estado                           | Comentário |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'tables.html#the-caption-element', '&lt;caption&gt;')}}     | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'tabular-data.html#the-caption-element', '&lt;caption&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
+| {{SpecName('HTML4.01', 'struct/tables.html#h-11.2.2', '&lt;caption&gt;')}}             | {{Spec2('HTML4.01')}}     |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("html.elements.caption")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Outros elementos HTML relacionados ao elemento table: {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};</li>
- <li>Propriedades CSS que pode ser especialmente utéis para estilizar o elemento {{HTMLElement("caption")}}:
-  <ul>
-   <li>{{cssxref("text-align")}}, {{cssxref("caption-side")}}.</li>
-  </ul>
- </li>
-</ul>
+- Outros elementos HTML relacionados ao elemento table: {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};
+- Propriedades CSS que pode ser especialmente utéis para estilizar o elemento {{HTMLElement("caption")}}:
 
-<p>{{HTMLRef}}</p>
+  - {{cssxref("text-align")}}, {{cssxref("caption-side")}}.
+
+{{HTMLRef}}

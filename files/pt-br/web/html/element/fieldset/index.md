@@ -3,81 +3,103 @@ title: <fieldset>
 slug: Web/HTML/Element/fieldset
 translation_of: Web/HTML/Element/fieldset
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>O <strong>elemento</strong> <strong>HTML <code>&lt;fieldset&gt;</code></strong> é usado para agrupar elementos, assim como labels ({{HTMLElement("label")}}), dentro de um formulário web.</p>
+O **elemento** **HTML `<fieldset>`** é usado para agrupar elementos, assim como labels ({{HTMLElement("label")}}), dentro de um formulário web.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Categorias de Conteúdo</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Conteúdo de fluxo</a>, <a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document#sectioning_root">sectioning root</a>, <a href="/en-US/docs/HTML/Content_categories#form_listed">listed</a>, <a href="/en-US/docs/HTML/Content_categories#form-associated_content">form-associated</a> element, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Conteúdo permitido</th>
-   <td>Um elemento {{HTMLElement("legend")}} opcional, seguido por conteúdo de fluxo.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omissão deTag</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Elementos pai permitidos</th>
-   <td>Qualquer elemento que aceita <a href="/en-US/docs/HTML/Content_categories#Flow_content">conteúdo de fluxo</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface DOM</th>
-   <td>{{domxref("HTMLFieldSetElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/HTML/Content_categories">Categorias de Conteúdo</a>
+      </th>
+      <td>
+        <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+          >Conteúdo de fluxo</a
+        >,
+        <a
+          href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document#sectioning_root"
+          >sectioning root</a
+        >, <a href="/en-US/docs/HTML/Content_categories#form_listed">listed</a>,
+        <a href="/en-US/docs/HTML/Content_categories#form-associated_content"
+          >form-associated</a
+        >
+        element, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Conteúdo permitido</th>
+      <td>
+        Um elemento {{HTMLElement("legend")}} opcional, seguido por
+        conteúdo de fluxo.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omissão deTag</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Elementos pai permitidos</th>
+      <td>
+        Qualquer elemento que aceita
+        <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+          >conteúdo de fluxo</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>{{domxref("HTMLFieldSetElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-<p><strong>Note:</strong> diferente de quase todo outro elemento, a especificação do WHATWG HTML Rendering sugere <code>{{cssxref("min-width")}}: <a href="/en-US/docs/Web/CSS/width#Values">min-content</a></code> como parte do padrão de estilo para {{HTMLElement("fieldset")}}, e muitos navegadores implementam tal estilização (ou algo que se aproxima disto).</p>
-</div>
+> **Note:** diferente de quase todo outro elemento, a especificação do WHATWG HTML Rendering sugere `{{cssxref("min-width")}}: min-content` como parte do padrão de estilo para {{HTMLElement("fieldset")}}, e muitos navegadores implementam tal estilização (ou algo que se aproxima disto).
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Este elemento inclui os <a href="/en-US/docs/HTML/Global_attributes">atributos globais</a>.</p>
+Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("disabled")}} {{HTMLVersionInline(5)}}</dt>
- <dd>Se este atributo Booleano está definido, os controles de formulario que são seus descendentes, exceto os descendentes de seu primeiro elemento opcional {{HTMLElement("legend")}}, estarão desativados, i.e., não editável. Eles não receberão qualquer evento de navegação, como clique do mouse ou relacionado com focus. Frequentemente os navegadores mostram tais controles em cinza.</dd>
- <dt>{{htmlattrdef("form")}} {{HTMLVersionInline(5)}}</dt>
- <dd>Este atributo tem o valor do atributo <strong>id </strong>do elemento {{HTMLElement("form")}} com que se relaciona. Seu valor padrão é o <strong>id </strong> do elemento {{HTMLElement("form")}} mais próximo.</dd>
- <dt>{{htmlattrdef("name")}} {{HTMLVersionInline(5)}}</dt>
- <dd>O nome associado com o grupo.
- <div class="note"> O label para o fieldset é dado pelo primeiro elemento {{HTMLElement("legend")}} que é um filho do fieldset.</div>
- </dd>
-</dl>
+- {{htmlattrdef("disabled")}} {{HTMLVersionInline(5)}}
+  - : Se este atributo Booleano está definido, os controles de formulario que são seus descendentes, exceto os descendentes de seu primeiro elemento opcional {{HTMLElement("legend")}}, estarão desativados, i.e., não editável. Eles não receberão qualquer evento de navegação, como clique do mouse ou relacionado com focus. Frequentemente os navegadores mostram tais controles em cinza.
+- {{htmlattrdef("form")}} {{HTMLVersionInline(5)}}
+  - : Este atributo tem o valor do atributo **id** do elemento {{HTMLElement("form")}} com que se relaciona. Seu valor padrão é o **id** do elemento {{HTMLElement("form")}} mais próximo.
+- {{htmlattrdef("name")}} {{HTMLVersionInline(5)}}
 
-<h2 id="Exemplos">Exemplos</h2>
+  - : O nome associado com o grupo.
 
-<h3 id="Example_1_Formulário_com_fieldset_legend_e_label">Example #1: Formulário com fieldset, legend, e label</h3>
+    > **Note:** O label para o fieldset é dado pelo primeiro elemento {{HTMLElement("legend")}} que é um filho do fieldset.
 
-<pre class="brush: html">&lt;form action="test.php" method="post"&gt;
-  &lt;fieldset&gt;
-    &lt;legend&gt;Title&lt;/legend&gt;
-    &lt;input type="radio" id="radio"&gt; &lt;label for="radio"&gt;Click me&lt;/label&gt;
-  &lt;/fieldset&gt;
-&lt;/form&gt;</pre>
+## Exemplos
 
-<h3 id="Example_2_Simulando_um_editável_HTMLElement(select)_através_de_um_fieldset_de_radioboxes_e_textboxes*">Example #2: Simulando um editável {{HTMLElement("select")}} através de um <code>fieldset</code> de <a href="/en-US/docs/HTML/Element/Input">radioboxes</a> e <a href="/en-US/docs/HTML/Element/Input">textboxes</a>*</h3>
+### Example #1: Formulário com fieldset, legend, e label
 
-<p>O exemplo a seguinte é feito de puro HTML e CSS. Não contém javascript.</p>
+```html
+<form action="test.php" method="post">
+  <fieldset>
+    <legend>Title</legend>
+    <input type="radio" id="radio"> <label for="radio">Click me</label>
+  </fieldset>
+</form>
+```
 
-<p><strong>Esteja avisado </strong>que leitores de tela (utilizados por cegos) e dispositivos de assistência não interpretarão o seguinte formulário corretamente; este exemplo seria um html invalido se os corretos elementos fossem usados.</p>
+### Example #2: Simulando um editável {{HTMLElement("select")}} através de um `fieldset` de [radioboxes](/pt-BR/docs/HTML/Element/Input) e [textboxes](/pt-BR/docs/HTML/Element/Input)\*
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
-&lt;title&gt;Editable [pseudo]select&lt;/title&gt;
-&lt;style type="text/css"&gt;
+O exemplo a seguinte é feito de puro HTML e CSS. Não contém javascript.
+
+**Esteja avisado** que leitores de tela (utilizados por cegos) e dispositivos de assistência não interpretarão o seguinte formulário corretamente; este exemplo seria um html invalido se os corretos elementos fossem usados.
+
+```html
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Editable [pseudo]select</title>
+<style type="text/css">
 
 /* Generic form fields */
 
-fieldset.elist, input[type="text"], textarea, select, option, fieldset.elist ul, fieldset.elist &gt; legend, fieldset.elist input[type="text"], fieldset.elist &gt; legend:after {
+fieldset.elist, input[type="text"], textarea, select, option, fieldset.elist ul, fieldset.elist > legend, fieldset.elist input[type="text"], fieldset.elist > legend:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -93,18 +115,18 @@ textarea {
   padding: 20px;
 }
 
-textarea, input[type="text"], fieldset.elist ul, select, fieldset.elist &gt; legend {
+textarea, input[type="text"], fieldset.elist ul, select, fieldset.elist > legend {
   border: 2px #cccccc solid;
   border-radius: 10px;
 }
 
-input[type="text"], fieldset.elist, select, fieldset.elist &gt; legend {
+input[type="text"], fieldset.elist, select, fieldset.elist > legend {
   height: 32px;
   font-family: Tahoma;
   font-size: 14px;
 }
 
-input[type="text"]:hover, textarea:hover, select:hover, fieldset.elist:hover &gt; legend {
+input[type="text"]:hover, textarea:hover, select:hover, fieldset.elist:hover > legend {
   background-color: #ddddff;
 }
 
@@ -121,7 +143,7 @@ option:not(:checked), textarea:focus {
   background-color: #ffcccc;
 }
 
-fieldset.elist &gt; legend:after, fieldset.elist label {
+fieldset.elist > legend:after, fieldset.elist label {
   height: 28px;
 }
 
@@ -133,7 +155,7 @@ input[type="text"]:focus {
   background: #ffcccc url("data:image/gif;base64,R0lGODlhEAAQANU5APnoxuvr6+uxPdvb2+rq6ri4uO7qxunp6dPT06SHV+/rx8vLy+nezLO0sbe3t9Ksas+qaaCEV8rKyp2dnf39/QAAAK6ursifZHFxcc/Qzu3mxYyMjExCJnV1dc6maO7u7o+Pj2tXNoaGhtfDpKCDVu3lxM+tcaKEV9bW1qOFVWNjY8KrisTExNra2nBbObGxsby8vO/mu7Kyso9ZAuzs7MSgAIiKhf///8zMzP///wAAAAAAAAAAAAAAAAAAAAAAACH5BAEAADkALAAAAAAQABAAAAaXwJxwSCwOYzWkMpkkZmoAqDQaJdpqAqw2m53NRjlboAarFczomcE0C99o8DgNMVM8Tm3bbYDr9x11DwkzDG5yc2oQJIRCenx/MxoeETM2Q3pxATMlF4MYlo17OAsdLispMyAioIY0BzMcITMTKBasjgssFTMqGxItMjYUoTQBBAQHxgE0wZcfMtDRMi/QrA022NnaNg1CQQA7") no-repeat 2px center !important;
 }
 
-input[type="text"]:focus, textarea:focus, select:focus, fieldset.elist &gt; legend {
+input[type="text"]:focus, textarea:focus, select:focus, fieldset.elist > legend {
   border: 2px #ccaaaa solid;
 }
 
@@ -171,7 +193,7 @@ fieldset.elist:hover ul {
   overflow: auto;
 }
 
-fieldset.elist ul &gt; li {
+fieldset.elist ul > li {
   list-style-type: none;
   background-color: transparent;
 }
@@ -190,7 +212,7 @@ fieldset.elist input[type="text"] {
   border-radius: 0;
 }
 
-fieldset.elist &gt; legend {
+fieldset.elist > legend {
   display: block;
   margin: 0;
   padding: 0 0 0 5px;
@@ -202,12 +224,12 @@ fieldset.elist &gt; legend {
   font-style: italic;
 }
 
-fieldset.elist:hover &gt; legend {
+fieldset.elist:hover > legend {
   position: relative;
   overflow: hidden;
 }
 
-fieldset.elist &gt; legend:after {
+fieldset.elist > legend:after {
   width: 20px;
   content: "\2335";
   float: right;
@@ -217,7 +239,7 @@ fieldset.elist &gt; legend:after {
   cursor: default;
 }
 
-fieldset.elist:hover &gt; legend:after {
+fieldset.elist:hover > legend:after {
   background-color: #99ff99;
 }
 
@@ -248,96 +270,67 @@ fieldset.elist:hover input[type="radio"]:checked ~ label {
   background-color: #aaaaaa;
 }
 
-&lt;/style&gt;
+</style>
 
-&lt;/head&gt;
-&lt;body&gt;
+</head>
+<body>
 
-&lt;form method="get" action="test.php"&gt;
+<form method="get" action="test.php">
 
-&lt;fieldset&gt;
-    &lt;legend&gt;Order a T-Shirt&lt;/legend&gt;
-    &lt;p&gt;Write your name (simple textbox): &lt;input type="text" /&gt;&lt;/p&gt;
-    &lt;p&gt;Choose your size (simple select):
-    &lt;select&gt;
-        &lt;option value="s"&gt;Small&lt;/option&gt;
-        &lt;option value="m"&gt;Medium&lt;/option&gt;
-        &lt;option value="l"&gt;Large&lt;/option&gt;
-        &lt;option value="xl"&gt;Extra Large&lt;/option&gt;
-    &lt;/select&gt;&lt;/p&gt;
-    &lt;div&gt;What address do you want to use? (editable pseudoselect)
-    &lt;fieldset class="elist"&gt;
-        &lt;legend&gt;Address&amp;hellip;&lt;/legend&gt;
-        &lt;ul&gt;
-            &lt;li&gt;&lt;input type="radio" value="1" id="address-switch_1" checked /&gt;&lt;label for="address-switch_1"&gt;&lt;input type="text" value="19 Quaker Ridge Rd. Bethel CT 06801" /&gt;&lt;/label&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;input type="radio" value="2" id="address-switch_2" /&gt;&lt;label for="address-switch_2"&gt;&lt;input type="text" value="1000 Coney Island Ave. Brooklyn NY 11230" /&gt;&lt;/label&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;input type="radio" value="3" id="address-switch_3" /&gt;&lt;label for="address-switch_3"&gt;&lt;input type="text" value="2962 Dunedin Cv. Germantown TN 38138" /&gt;&lt;/label&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;input type="radio" value="4" id="address-switch_4" /&gt;&lt;label for="address-switch_4"&gt;&lt;input type="text" value="915 E 7th St. Apt 6L. Brooklyn NY 11230" /&gt;&lt;/label&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/fieldset&gt;
-    &lt;/div&gt;
-    &lt;p&gt;Write a comment:&lt;br /&gt;
-    &lt;textarea&gt;&lt;/textarea&gt;&lt;/p&gt;
-    &lt;p&gt;&lt;input type="reset" value="Reset" /&gt; &lt;input type="submit" value="Send!" /&gt;&lt;/p&gt;
-&lt;/fieldset&gt;
+<fieldset>
+    <legend>Order a T-Shirt</legend>
+    <p>Write your name (simple textbox): <input type="text" /></p>
+    <p>Choose your size (simple select):
+    <select>
+        <option value="s">Small</option>
+        <option value="m">Medium</option>
+        <option value="l">Large</option>
+        <option value="xl">Extra Large</option>
+    </select></p>
+    <div>What address do you want to use? (editable pseudoselect)
+    <fieldset class="elist">
+        <legend>Address&hellip;</legend>
+        <ul>
+            <li><input type="radio" value="1" id="address-switch_1" checked /><label for="address-switch_1"><input type="text" value="19 Quaker Ridge Rd. Bethel CT 06801" /></label></li>
+            <li><input type="radio" value="2" id="address-switch_2" /><label for="address-switch_2"><input type="text" value="1000 Coney Island Ave. Brooklyn NY 11230" /></label></li>
+            <li><input type="radio" value="3" id="address-switch_3" /><label for="address-switch_3"><input type="text" value="2962 Dunedin Cv. Germantown TN 38138" /></label></li>
+            <li><input type="radio" value="4" id="address-switch_4" /><label for="address-switch_4"><input type="text" value="915 E 7th St. Apt 6L. Brooklyn NY 11230" /></label></li>
+        </ul>
+    </fieldset>
+    </div>
+    <p>Write a comment:<br />
+    <textarea></textarea></p>
+    <p><input type="reset" value="Reset" /> <input type="submit" value="Send!" /></p>
+</fieldset>
 
-&lt;/form&gt;
+</form>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<p><a href="/files/4563/editable_select.html">Veja este exemplo em ação</a></p>
+[Veja este exemplo em ação](/files/4563/editable_select.html)
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#the-fieldset-element', '&lt;fieldset&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Definição do elemento fieldset</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'rendering.html#the-fieldset-and-legend-elements')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Padrão sugerido de renderização dos elementos fieldset e legend</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#the-fieldset-element', '&lt;fieldset&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'interact/forms.html#h-17.10', '&lt;fieldset&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                | Status                           | Comentário                                                      |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'forms.html#the-fieldset-element', '&lt;fieldset&gt;')}} | {{Spec2('HTML WHATWG')}} | Definição do elemento fieldset                                  |
+| {{SpecName('HTML WHATWG', 'rendering.html#the-fieldset-and-legend-elements')}}     | {{Spec2('HTML WHATWG')}} | Padrão sugerido de renderização dos elementos fieldset e legend |
+| {{SpecName('HTML5 W3C', 'forms.html#the-fieldset-element', '&lt;fieldset&gt;')}} | {{Spec2('HTML5 W3C')}}     |                                                                 |
+| {{SpecName('HTML4.01', 'interact/forms.html#h-17.10', '&lt;fieldset&gt;')}}         | {{Spec2('HTML4.01')}}     | Definição inicial                                               |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("html.elements.fieldset")}}
 
-<h2 id="Erros">Erros</h2>
+## Erros
 
-<ul>
- <li>{{Bug(504622)}} - Fieldsets nunca diminui abaixo de sua largura min-intrinsic</li>
- <li><a href="https://bugs.webkit.org/show_bug.cgi?id=123507">WebKit bug 123507</a> - <code>min-width: {{cssxref("-webkit-min-content")}}</code> sobre fieldset</li>
- <li><a href="http://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content">StackOverflow discussão com soluções alternativas para os bugs acima</a></li>
-</ul>
+- {{Bug(504622)}} - Fieldsets nunca diminui abaixo de sua largura min-intrinsic
+- [WebKit bug 123507](https://bugs.webkit.org/show_bug.cgi?id=123507) - `min-width: {{cssxref("-webkit-min-content")}}` sobre fieldset
+- [StackOverflow discussão com soluções alternativas para os bugs acima](http://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content)
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Outros elementos de formlários relacionados: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.</li>
- <li>Artigo de como usar o fieldset para <a href="https://blog.alura.com.br/formulario-com-form-validation-do-html5/">ajudar na validação do seu formulário html</a></li>
-</ul>
+- Outros elementos de formlários relacionados: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.
+- Artigo de como usar o fieldset para [ajudar na validação do seu formulário html](https://blog.alura.com.br/formulario-com-form-validation-do-html5/)

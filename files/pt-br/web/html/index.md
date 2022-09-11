@@ -6,106 +6,96 @@ tags:
   - HTML 5
   - Página de destino
   - Web
-  - 'l10n:prioridade'
+  - l10n:prioridade
 translation_of: Web/HTML
 ---
-<div>{{HTMLSidebar}}</div>
+{{HTMLSidebar}}
 
-<p class="summary"><span class="seoSummary"><strong>HTML</strong> (Linguagem de Marcação de HiperTexto) é o bloco de construção mais básico da web. Define o significado e a estrutura do conteúdo da web. Outras tecnologias além do HTML geralmente são usadas para descrever a aparência/apresentação (<a href="/pt-BR/docs/Web/CSS">CSS</a>) ou a funcionalidade/comportamento (<a href="/pt-BR/docs/Web/JavaScript">JavaScript</a>) de uma página da web.</span></p>
+**HTML** (Linguagem de Marcação de HiperTexto) é o bloco de construção mais básico da web. Define o significado e a estrutura do conteúdo da web. Outras tecnologias além do HTML geralmente são usadas para descrever a aparência/apresentação ([CSS](/pt-BR/docs/Web/CSS)) ou a funcionalidade/comportamento ([JavaScript](/pt-BR/docs/Web/JavaScript)) de uma página da web.
 
-<p>"Hipertexto" refere-se aos <em>links</em> que conectam páginas da Web entre si, seja dentro de um único site ou entre sites. Links são um aspecto fundamental da web. Ao carregar conteúdo na Internet e vinculá-lo a páginas criadas por outras pessoas, você se torna um participante ativo na world wide web.</p>
+"Hipertexto" refere-se aos _links_ que conectam páginas da Web entre si, seja dentro de um único site ou entre sites. Links são um aspecto fundamental da web. Ao carregar conteúdo na Internet e vinculá-lo a páginas criadas por outras pessoas, você se torna um participante ativo na world wide web.
 
-<p>O HTML usa "Marcação" para anotar texto, imagem e outros conteúdos para exibição em um navegador da Web. A marcação HTML inclui "elementos" especiais, como {{HTMLElement("head")}}, {{HTMLElement("title")}}, {{HTMLElement("body")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("p")}}, {{HTMLElement("div")}}, {{HTMLElement("span")}}, {{HTMLElement("img")}}, {{HTMLElement("aside")}}, {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("datalist")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("nav")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("video")}}, {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("li")}} e muitos outros.</p>
+O HTML usa "Marcação" para anotar texto, imagem e outros conteúdos para exibição em um navegador da Web. A marcação HTML inclui "elementos" especiais, como {{HTMLElement("head")}}, {{HTMLElement("title")}}, {{HTMLElement("body")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("p")}}, {{HTMLElement("div")}}, {{HTMLElement("span")}}, {{HTMLElement("img")}}, {{HTMLElement("aside")}}, {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("datalist")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("nav")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("video")}}, {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("li")}} e muitos outros.
 
-<p>Um elemento HTML é separado de outro texto em um documento por "tags", que consistem no nome do elemento entre "<code>&lt;</code>" e "<code>&gt;</code>". O nome de um elemento dentro de uma tag é insensível a maiúsculas e minúsculas. Isto é, pode ser escrito em maiúsculas, minúsculas ou um mistura. Por exemplo, a tag <code>&lt;title&gt;</code> pode ser escrita como <code>&lt;Title&gt;</code>, <code>&lt;TITLE&gt;</code> ou de qualquer outra forma.</p>
+Um elemento HTML é separado de outro texto em um documento por "tags", que consistem no nome do elemento entre "`<`" e "`>`". O nome de um elemento dentro de uma tag é insensível a maiúsculas e minúsculas. Isto é, pode ser escrito em maiúsculas, minúsculas ou um mistura. Por exemplo, a tag `<title>` pode ser escrita como `<Title>`, `<TITLE>` ou de qualquer outra forma.
 
-<p>Os artigos abaixo podem ajudá-lo a aprender mais sobre HTML.</p>
+Os artigos abaixo podem ajudá-lo a aprender mais sobre HTML.
 
-<ul>
- <li><span>Introdução ao HTML</span>
+- Introdução ao HTML
 
-  <p>Se você é novo no desenvolvimento web, não deixe de ler nosso artigo <a href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/HTML_basico">O Básico do HTML </a>para aprender o que é HTML e como usá-lo.</p>
- </li>
- <li><span>Tutoriais HTML </span>
-  <p>Para artigos sobre como usar o HTML, assim como tutoriais e exemplos completos, confira nossa <a href="https://developer.mozilla.org/pt-BR/docs/Aprender/HTML">Área de Aprendizado de HTML</a>.</p>
- </li>
- <li><span>Referência do HTML </span>
-  <p>Em nossa extensa seção de <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/ReferenciaHTML">Referência do HTML</a>, você encontrará os detalhes sobre cada elemento e atributo do HTML.</p>
- </li>
-</ul>
+  Se você é novo no desenvolvimento web, não deixe de ler nosso artigo [O Básico do HTML ](/pt-BR/docs/Aprender/Getting_started_with_the_web/HTML_basico)para aprender o que é HTML e como usá-lo.
 
-<h2>Tutoriais para iniciantes</h2>
+- Tutoriais HTML
 
-<p>Nossa <a href="https://developer.mozilla.org/pt-BR/docs/Aprender/HTML">Área de Aprendizado de HTML</a> apresenta vários módulos que ensinam HTML desde o início — sem necessidade de conhecimento prévio.</p>
+  Para artigos sobre como usar o HTML, assim como tutoriais e exemplos completos, confira nossa [Área de Aprendizado de HTML](/pt-BR/docs/Aprender/HTML).
 
-<dl>
- <dt><a href="https://developer.mozilla.org/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML">Introdução ao HTML</a></dt>
- <dd>Este módulo fornece uma base de conhecimento, permitindo que você acostume-se com os conceitos e sintaxes importantes, tais como aplicar HTML para texto, como criar <em>hyperlinks</em> e como usar HTML para estruturar uma página web.</dd>
- <dt><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding">Multimídia e como incorporá-la</a></dt>
- <dd>Este módulo explora como usar HTML para incluir multimídia em sua página web, incluindo as diferentes maneiras para incluir imagens, e como incorporar vídeos, áudios e até como colocar uma página inteira em outras páginas web.</dd>
- <dt><a href="/en-US/docs/Learn/HTML/Tables">Tabelas HTML</a></dt>
- <dd>Representar dados tabulares em uma página web de maneira entendível e acessível pode ser um desafio. Este módulo cobre marcação tabular básica, junto com outras funcionalidades mais complexas como legendas e sumários.</dd>
- <dt><a href="/en-US/docs/Learn/HTML/Forms">Formulários HTML</a></dt>
- <dd>Formulários são partes muito importantes na Web — proporcionam muitas das funcionalidades que você precisa para interagir em páginas web. Exemplos disso são registrar-se e conectar-se, enviar comentários, comprar produtos e muito mais.  Este módulo lhe permite começar a criar as partes visíveis dos formulários, ou seja, as partes que os usuários interagem.</dd>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto">Usando HTML para resolver problemas comuns</a></dt>
- <dd>Apresenta links para seções com conteúdo explicando como usar HTML para resolver problemas muito comuns, quando se cria uma página web: como trabalhar com títulos, agregar imagens ou vídeos, colocar ênfase em conteúdo, criar um formulário básico, etc.</dd>
-</dl>
+- Referência do HTML
 
-<h2 id="Tópicos_avançados">Tópicos avançados</h2>
+  Em nossa extensa seção de [Referência do HTML](/pt-BR/docs/Web/HTML/ReferenciaHTML), você encontrará os detalhes sobre cada elemento e atributo do HTML.
 
-<dl>
- <dt><a href="/en-US/docs/Web/HTML/CORS_enabled_image">Habilitando Imagem CORS </a></dt>
- <dd>O atributo <code><a href="/en-US/docs/Web/HTML/Element/img#attr-crossorigin">crossorigin</a></code>, em combinação com um  cabeçalho <a class="glossaryLink" href="/en-US/docs/Glossary/CORS">CORS</a> adequado, permite definir imagens pelo elemento {{HTMLElement("img")}}  para ser carregado de outras fontes em um elemento {{HTMLElement("canvas")}} como se estivessem sendo carregados da fonte atual.</dd>
- <dt><a href="/en-US/docs/Web/HTML/CORS_settings_attributes">Configuração de atributos CORS</a></dt>
- <dd>Alguns elementos em HTML que suportam <a href="/en-US/docs/HTTP/Access_control_CORS">CORS</a>, como por exemplo o {{HTMLElement("img")}} ou {{HTMLElement("video")}}, têm o atributo <code>crossorigin</code> (a propriedade <code>crossOrigin</code>), que permite configurar as requisições CORS para os dados recebidos pelo elemento.</dd>
- <dt><a href="/en-US/docs/Web/HTML/Focus_management_in_HTML">Gerenciamento de foco em HTML</a></dt>
- <dd>O atributo DOM <code><a href="/en-US/docs/Web/API/Document/activeElement">activeElement</a></code> e o método DOM <code><a href="/en-US/docs/Web/API/Document/hasFocus">hasFocus()</a></code> lhe ajudam a melhorar a interação entre o usuário e os elementos da página.</dd>
- <dt><a href="/en-US/docs/Web/HTML/Link_types">Tipos de conexões</a></dt>
- <dd>Em HTML, vários tipos de links podem ser utilizados para realizar conexões entre documentos, como por exemplo <a href="/en-US/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a>, <a href="/en-US/docs/Web/HTML/Element/area"><code>&lt;area&gt;</code></a> e <a href="/en-US/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a>.</dd>
- <dt><a href="/en-US/docs/Web/HTML/Supported_media_formats">Formatos de arquivos suportados pelos elementos de áudio e vídeo em HTML</a></dt>
- <dd>Os elementos <a href="/en-US/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a> e <a href="/en-US/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a> permitem que você reproduza áudios e vídeos no seu HTML. Estes elementos fornecem uma alternativa nativa de recursos do navegador, parecidos com a do Adobe Flash Player e outros plug-ins.</dd>
- <dt><a href="/en-US/docs/Web/HTML/Using_the_application_cache">Usando o cachê de aplicação</a></dt>
- <dd>O cachê de aplicação tem como o objetivo executar a aplicação offline. Você pode usar a interface <strong>Application Cache</strong> (<em>AppCache</em>) para escolher elementos que o browser possa guardar, deixando-os disponíveis para usuários desconectados. As aplicações que forem armazenadas em cache podem ser utilizadas sem nenhum problema, mesmo que o usuário clique no botão de atualizar a página enquanto estiver offline.</dd>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content">Pré-carregando conteúdo com rel="preload"</a></dt>
- <dd>O valor <code>preload</code> do atributo {{htmlattrxref("rel", "link")}} do elemento {{htmlelement("link")}} permite que você escreva solicitações de busca declarativas em seu elemento {{htmlelement("head")}} do HTML, especificando recursos que suas páginas vão utilizar logo após o carregamento. Você também pode necessitar que estes recursos sejam pré-carregados ao início do ciclo de execução da página e depois que o mecanismo de renderização do navegador comece a agir. Isso garante que estarão disponíveis mais cedo e que seja menos provável que sua página seja bloqueada do processo de renderizar. Isso aumenta a performance da página. Este artigo oferece um guia básico de como <code>preload</code> funciona.</dd>
-</dl>
+## Tutoriais para iniciantes
 
-<h2>Referências</h2>
+Nossa [Área de Aprendizado de HTML](/pt-BR/docs/Aprender/HTML) apresenta vários módulos que ensinam HTML desde o início — sem necessidade de conhecimento prévio.
 
-<dl>
- <dt><a href="/en-US/docs/Web/HTML/Reference">Referência do HTML </a></dt>
- <dd>HTML é formado de <strong>elementos</strong>, onde cada um deles pode ser modificado por alguns <strong>atributos</strong>. Documentos HTML são interconectados através de <a href="/en-US/docs/Web/HTML/Link_types">links</a>.</dd>
- <dt><a href="/en-US/docs/Web/HTML/Element">Referência dos Elementos HTML</a></dt>
- <dd>Navegue em uma lista com todos os elementos <a class="glossaryLink" href="/en-US/docs/Glossary/HTML">HTML</a>.</dd>
-</dl>
+- [Introdução ao HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML)
+  - : Este módulo fornece uma base de conhecimento, permitindo que você acostume-se com os conceitos e sintaxes importantes, tais como aplicar HTML para texto, como criar _hyperlinks_ e como usar HTML para estruturar uma página web.
+- [Multimídia e como incorporá-la](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding)
+  - : Este módulo explora como usar HTML para incluir multimídia em sua página web, incluindo as diferentes maneiras para incluir imagens, e como incorporar vídeos, áudios e até como colocar uma página inteira em outras páginas web.
+- [Tabelas HTML](/pt-BR/docs/Learn/HTML/Tables)
+  - : Representar dados tabulares em uma página web de maneira entendível e acessível pode ser um desafio. Este módulo cobre marcação tabular básica, junto com outras funcionalidades mais complexas como legendas e sumários.
+- [Formulários HTML](/pt-BR/docs/Learn/HTML/Forms)
+  - : Formulários são partes muito importantes na Web — proporcionam muitas das funcionalidades que você precisa para interagir em páginas web. Exemplos disso são registrar-se e conectar-se, enviar comentários, comprar produtos e muito mais. Este módulo lhe permite começar a criar as partes visíveis dos formulários, ou seja, as partes que os usuários interagem.
+- [Usando HTML para resolver problemas comuns](/pt-BR/docs/Learn/HTML/Howto)
+  - : Apresenta links para seções com conteúdo explicando como usar HTML para resolver problemas muito comuns, quando se cria uma página web: como trabalhar com títulos, agregar imagens ou vídeos, colocar ênfase em conteúdo, criar um formulário básico, etc.
 
-<dl>
- <dt><a href="/en-US/docs/Web/HTML/Attributes">Referência de atributos em HTML</a></dt>
- <dd>Elementos em HTML possuem atributos. Estes configuram ou ajustam o funcionamento e o comportamento dos seus elementos de muitas maneiras.</dd>
- <dt><a href="/pt-BR/docs/Web/HTML/Global_attributes">Atributos Globais</a></dt>
- <dd>Os atributos globais podem ser utilizados em todos os <a href="/en-US/docs/Web/HTML/Element">elementos HTML</a>, <em>mesmo aqueles que não são especificados como padrão</em>. Isso significa que qualquer elemento não padrão vai permitir estes atributos, mesmo que este retorne um documento HTML5 incompatível.</dd>
-</dl>
+## Tópicos avançados
 
-<dl>
- <dt><a href="/en-US/docs/Web/HTML/Inline_elements">Elementos em linha</a> e <a href="/en-US/docs/Web/HTML/Block-level_elements">Elementos em nível de bloco</a></dt>
- <dd>Elementos HTML são normalmente elementos <em>inline</em> (em linha) ou <em>block-level</em> (em nível de bloco). Um elemento em linha ocupa somente o espaço limitado pelas tags que o definem. Um elemento em nível de bloco ocupa o espaço inteiro do elemento pai (container), portanto criando um bloco.</dd>
-</dl>
+- [Habilitando Imagem CORS](/pt-BR/docs/Web/HTML/CORS_enabled_image)
+  - : O atributo [`crossorigin`](/en-US/docs/Web/HTML/Element/img#attr-crossorigin), em combinação com um cabeçalho [CORS](/pt-BR/docs/Glossary/CORS) adequado, permite definir imagens pelo elemento {{HTMLElement("img")}} para ser carregado de outras fontes em um elemento {{HTMLElement("canvas")}} como se estivessem sendo carregados da fonte atual.
+- [Configuração de atributos CORS](/pt-BR/docs/Web/HTML/CORS_settings_attributes)
+  - : Alguns elementos em HTML que suportam [CORS](/pt-BR/docs/HTTP/Access_control_CORS), como por exemplo o {{HTMLElement("img")}} ou {{HTMLElement("video")}}, têm o atributo `crossorigin` (a propriedade `crossOrigin`), que permite configurar as requisições CORS para os dados recebidos pelo elemento.
+- [Gerenciamento de foco em HTML](/pt-BR/docs/Web/HTML/Focus_management_in_HTML)
+  - : O atributo DOM [`activeElement`](/en-US/docs/Web/API/Document/activeElement) e o método DOM [`hasFocus()`](/en-US/docs/Web/API/Document/hasFocus) lhe ajudam a melhorar a interação entre o usuário e os elementos da página.
+- [Tipos de conexões](/pt-BR/docs/Web/HTML/Link_types)
+  - : Em HTML, vários tipos de links podem ser utilizados para realizar conexões entre documentos, como por exemplo [`<a>`](/pt-BR/docs/Web/HTML/Element/a), [`<area>`](/pt-BR/docs/Web/HTML/Element/area) e [`<link>`](/pt-BR/docs/Web/HTML/Element/link).
+- [Formatos de arquivos suportados pelos elementos de áudio e vídeo em HTML](/pt-BR/docs/Web/HTML/Supported_media_formats)
+  - : Os elementos [`<audio>`](/pt-BR/docs/Web/HTML/Element/audio) e [`<video>`](/pt-BR/docs/Web/HTML/Element/video) permitem que você reproduza áudios e vídeos no seu HTML. Estes elementos fornecem uma alternativa nativa de recursos do navegador, parecidos com a do Adobe Flash Player e outros plug-ins.
+- [Usando o cachê de aplicação](/pt-BR/docs/Web/HTML/Using_the_application_cache)
+  - : O cachê de aplicação tem como o objetivo executar a aplicação offline. Você pode usar a interface **Application Cache** (_AppCache_) para escolher elementos que o browser possa guardar, deixando-os disponíveis para usuários desconectados. As aplicações que forem armazenadas em cache podem ser utilizadas sem nenhum problema, mesmo que o usuário clique no botão de atualizar a página enquanto estiver offline.
+- [Pré-carregando conteúdo com rel="preload"](/pt-BR/docs/Web/HTML/Preloading_content)
+  - : O valor `preload` do atributo {{htmlattrxref("rel", "link")}} do elemento {{htmlelement("link")}} permite que você escreva solicitações de busca declarativas em seu elemento {{htmlelement("head")}} do HTML, especificando recursos que suas páginas vão utilizar logo após o carregamento. Você também pode necessitar que estes recursos sejam pré-carregados ao início do ciclo de execução da página e depois que o mecanismo de renderização do navegador comece a agir. Isso garante que estarão disponíveis mais cedo e que seja menos provável que sua página seja bloqueada do processo de renderizar. Isso aumenta a performance da página. Este artigo oferece um guia básico de como `preload` funciona.
 
-<dl>
- <dt><a href="/en-US/docs/Web/HTML/Link_types">Tipos de Links</a></dt>
- <dd>No HTML, vários tipos de links podem ser utilizados para estabelecer e definir o relacionamento entre dois documentos. Os tipos de elementos de link que podem ser incluídos são <a href="/en-US/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a>, <a href="/en-US/docs/Web/HTML/Element/area"><code>&lt;area&gt;</code></a> e <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code>.</dd>
- <dt><a href="/en-US/docs/Web/HTML/Supported_media_formats">Formatos de mídia suportados pelos elementos vídeo e áudio do HTML</a></dt>
- <dd>Os elementos <a href="/en-US/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a> e <a href="/en-US/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a> permitem que você reproduza mídias de áudio e vídeo. Estes elementos fornecem uma alternativa nativa para o navegador reproduzir recursos similares aos encontrados no Adobe Flash e outros plug-ins.</dd>
- <dt><a href="/en-US/docs/Web/HTML/Kinds_of_HTML_content">Tipos de conteúdo HTML</a></dt>
- <dd>O HTML é composto de uma grande diversidade de conteúdos, e cada um pode ser usado em certos contextos e não ser permitido em outros. Da mesma forma, cada um tem um conjunto de outras categorias de conteúdos que podem ou não serem usadas dentro deles. Este é um guia destas categorias.</dd>
- <dt><a href="/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode">Os Modos Quirks e o Modo Padrão  </a></dt>
- <dd>Informações sobre a história dos Modos <em>Quirks</em> e o Modo padrão.</dd>
-</dl>
+## Referências
 
-<h2>Tópicos relacionados</h2>
+- [Referência do HTML](/pt-BR/docs/Web/HTML/Reference)
+  - : HTML é formado de **elementos**, onde cada um deles pode ser modificado por alguns **atributos**. Documentos HTML são interconectados através de [links](/pt-BR/docs/Web/HTML/Link_types).
+- [Referência dos Elementos HTML](/pt-BR/docs/Web/HTML/Element)
+  - : Navegue em uma lista com todos os elementos [HTML](/pt-BR/docs/Glossary/HTML).
 
-<dl>
- <dt><a href="/en-US/docs/Web/HTML/Applying_color">Aplicando cores em elementos HTML usando CSS</a></dt>
- <dd>Este artigo mostra as principais formas de se usar CSS para adicionar cores ao seu conteúdo HTML, mostrando que partes dos documentos HTML podem ser coloridas e quais propriedades utilizar. Inclui exemplos e links para ferramentas de <em>palette-building</em>, entre outros.</dd>
-</dl>
+<!---->
 
+- [Referência de atributos em HTML](/pt-BR/docs/Web/HTML/Attributes)
+  - : Elementos em HTML possuem atributos. Estes configuram ou ajustam o funcionamento e o comportamento dos seus elementos de muitas maneiras.
+- [Atributos Globais](/pt-BR/docs/Web/HTML/Global_attributes)
+  - : Os atributos globais podem ser utilizados em todos os [elementos HTML](/pt-BR/docs/Web/HTML/Element), _mesmo aqueles que não são especificados como padrão_. Isso significa que qualquer elemento não padrão vai permitir estes atributos, mesmo que este retorne um documento HTML5 incompatível.
+
+<!---->
+
+- [Elementos em linha](/pt-BR/docs/Web/HTML/Inline_elements) e [Elementos em nível de bloco](/pt-BR/docs/Web/HTML/Block-level_elements)
+  - : Elementos HTML são normalmente elementos _inline_ (em linha) ou _block-level_ (em nível de bloco). Um elemento em linha ocupa somente o espaço limitado pelas tags que o definem. Um elemento em nível de bloco ocupa o espaço inteiro do elemento pai (container), portanto criando um bloco.
+
+<!---->
+
+- [Tipos de Links](/pt-BR/docs/Web/HTML/Link_types)
+  - : No HTML, vários tipos de links podem ser utilizados para estabelecer e definir o relacionamento entre dois documentos. Os tipos de elementos de link que podem ser incluídos são [`<a>`](/pt-BR/docs/Web/HTML/Element/a), [`<area>`](/pt-BR/docs/Web/HTML/Element/area) e [`<link>`](/en-US/docs/Web/HTML/Element/link).
+- [Formatos de mídia suportados pelos elementos vídeo e áudio do HTML](/pt-BR/docs/Web/HTML/Supported_media_formats)
+  - : Os elementos [`<audio>`](/pt-BR/docs/Web/HTML/Element/audio) e [`<video>`](/pt-BR/docs/Web/HTML/Element/video) permitem que você reproduza mídias de áudio e vídeo. Estes elementos fornecem uma alternativa nativa para o navegador reproduzir recursos similares aos encontrados no Adobe Flash e outros plug-ins.
+- [Tipos de conteúdo HTML](/pt-BR/docs/Web/HTML/Kinds_of_HTML_content)
+  - : O HTML é composto de uma grande diversidade de conteúdos, e cada um pode ser usado em certos contextos e não ser permitido em outros. Da mesma forma, cada um tem um conjunto de outras categorias de conteúdos que podem ou não serem usadas dentro deles. Este é um guia destas categorias.
+- [Os Modos Quirks e o Modo Padrão](/pt-BR/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
+  - : Informações sobre a história dos Modos _Quirks_ e o Modo padrão.
+
+## Tópicos relacionados
+
+- [Aplicando cores em elementos HTML usando CSS](/pt-BR/docs/Web/HTML/Applying_color)
+  - : Este artigo mostra as principais formas de se usar CSS para adicionar cores ao seu conteúdo HTML, mostrando que partes dos documentos HTML podem ser coloridas e quais propriedades utilizar. Inclui exemplos e links para ferramentas de _palette-building_, entre outros.

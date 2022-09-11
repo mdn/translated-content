@@ -3,76 +3,56 @@ title: article (artigo)
 slug: Web/HTML/Element/article
 translation_of: Web/HTML/Element/article
 ---
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>O <em>Elemento HTML Article</em> (<span style="font-family: Courier New;">&lt;article&gt;</span>) representa uma composição independente em um documento, página, aplicação, ou site, ou que é destinado a ser distribuido de forma independente ou reutilizável, por exemplo, em sindicação. Este poderia ser o post de um fórum, um artigo de revista ou jornal, um post de um blog, um comentário enviado por um usuário, um gadget ou widget interativos, ou qualquer outra forma de conteúdo independente.</p>
+O _Elemento HTML Article_ (\<article>) representa uma composição independente em um documento, página, aplicação, ou site, ou que é destinado a ser distribuido de forma independente ou reutilizável, por exemplo, em sindicação. Este poderia ser o post de um fórum, um artigo de revista ou jornal, um post de um blog, um comentário enviado por um usuário, um gadget ou widget interativos, ou qualquer outra forma de conteúdo independente.
 
-<div class="note">
-<p><em>Notas de uso:</em></p>
+> **Note:** _Notas de uso:_
+>
+> - Quando um elemento `<article>` está aninhado, o elemento interior representa um artigo relacionado com o elemento exterior. Por exemplo, os comentários do post de um blog podem ser elementos `<article>` aninhados em `<article>` representando o post do blog.
+> - Informações sobre o autor de um elemento `<article>` podem ser fornecidas através do elemento {{ HTMLElement("address") }} ,mas ele não se aplica aos elementos `<article>` aninhados.
+> - A data e hora de publicação de um elemento `<article>` pode ser descrita usando o atributo {{ htmlattrxref("pubdate", "time") }} de um elemento {{ HTMLElement("time") }}.
 
-<ul>
- <li>Quando um elemento <code>&lt;article&gt;</code> está aninhado, o elemento interior representa um artigo relacionado com o elemento exterior. Por exemplo, os comentários do post de um blog podem ser elementos <code>&lt;article&gt;</code> aninhados em <code>&lt;article&gt;</code> representando o post do blog.</li>
- <li>Informações sobre o autor de um elemento <code>&lt;article&gt;</code> podem ser fornecidas através do elemento {{ HTMLElement("address") }} ,mas ele não se aplica aos elementos <code>&lt;article&gt;</code> aninhados.</li>
- <li>A data e hora de publicação de um elemento <code>&lt;article&gt;</code> pode ser descrita usando o atributo {{ htmlattrxref("pubdate", "time") }} de um elemento {{ HTMLElement("time") }}.</li>
-</ul>
-</div>
+## Contexto de uso
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+| Conteúdo permitido       | [Flow content](</en/HTML/Content_categories#Flow content> "en/HTML/Content categories#Flow content")                                                                                                                                                                             |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omissão de tag           | Nenhuma, tanto tag de início quanto de fim são obrigatórias                                                                                                                                                                                                                      |
+| Elementos pai permitidos | Qualquer elemento que aceita [flow content](/en/HTML/Content_categories#flow_content "https://developer.mozilla.org/en/HTML/Content_categories#flow_content"). Note-se que um elemento `<article>` não pode ser descendente de um elemento {{ HTMLElement("address") }}. |
+| Documento normativo      | [HTML5, section 4.4.4](http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-article-element)                                                                                                                                                            |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>Conteúdo permitido</td>
-   <td><a href="/en/HTML/Content_categories#Flow content" title="en/HTML/Content categories#Flow content">Flow content</a></td>
-  </tr>
-  <tr>
-   <td>Omissão de tag</td>
-   <td>Nenhuma, tanto tag de início quanto de fim são obrigatórias</td>
-  </tr>
-  <tr>
-   <td>Elementos pai permitidos</td>
-   <td>
-    <p>Qualquer elemento que aceita <a href="/en/HTML/Content_categories#flow_content" title="https://developer.mozilla.org/en/HTML/Content_categories#flow_content">flow content</a>. Note-se que um elemento <code>&lt;article&gt;</code> não pode ser descendente de um elemento {{ HTMLElement("address") }}.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>Documento normativo</td>
-   <td><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-article-element" rel="external nofollow">HTML5, section 4.4.4</a></td>
-  </tr>
- </tbody>
-</table>
+## Atributos
 
-<h2 id="Atributos">Atributos</h2>
+Este elemento não possui outros elementos se não os [global attributes](/en/HTML/Global_attributes), comuns a todos os elementos.
 
-<p>Este elemento não possui outros elementos se não os <a href="/en/HTML/Global_attributes" rel="internal">global attributes</a>, comuns a todos os elementos.</p>
+## Interface DOM
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+Este elemento implementa a interface [`HTMLElement`](/en/DOM/element "en/DOM/element") .
 
-<p>Este elemento implementa a interface <code><a href="/en/DOM/element" title="en/DOM/element">HTMLElement</a></code> .</p>
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
+```html
+<article>
+  <h4>Um artigo realmente impressionante</h4>
+  <p>Lotes de texto incrível.</p>
+</article>
+```
 
-<pre class="brush: html">&lt;article&gt;
-  &lt;h4&gt;Um artigo realmente impressionante&lt;/h4&gt;
-  &lt;p&gt;Lotes de texto incrível.&lt;/p&gt;
-&lt;/article&gt;
-</pre>
+### Resultado
 
-<h3 id="Resultado">Resultado</h3>
+\<article>
 
-<div style="background-color: #F6F6F2;">&lt;article&gt;
-<h4 id="Um_artigo_realmente_impressionante">Um artigo realmente impressionante</h4>
+#### Um artigo realmente impressionante
 
-<p>Lotes de texto incrível.</p>
-&lt;/article&gt;</div>
+Lotes de texto incrível.
 
-<h3 id="Compatibilidade">Compatibilidade</h3>
+\</article>
+
+### Compatibilidade
 
 {{Compat("html.elements.article")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Outros elementos de seção relacionados: {{ HTMLElement("body") }}, {{ HTMLElement("nav") }}, {{ HTMLElement("section") }}, {{ HTMLElement("aside") }}, {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}, {{ HTMLElement("hgroup") }}, {{ HTMLElement("header") }}, {{ HTMLElement("footer") }}, {{ HTMLElement("address") }}</li>
- <li class="last"><a class="deki-ns current" href="/en/Sections_and_Outlines_of_an_HTML5_document" title="en/Sections and Outlines of an HTML5 document">Sections and outlines of an HTML5 document</a>.</li>
-</ul>
+- Outros elementos de seção relacionados: {{ HTMLElement("body") }}, {{ HTMLElement("nav") }}, {{ HTMLElement("section") }}, {{ HTMLElement("aside") }}, {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}, {{ HTMLElement("hgroup") }}, {{ HTMLElement("header") }}, {{ HTMLElement("footer") }}, {{ HTMLElement("address") }}
+- [Sections and outlines of an HTML5 document](/en/Sections_and_Outlines_of_an_HTML5_document "en/Sections and Outlines of an HTML5 document").

@@ -17,84 +17,58 @@ tags:
   - incorporar
 translation_of: Web/HTML/Element/embed
 ---
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O <strong>elemento HTML <code>&lt;embed&gt;</code> </strong>incorpora conteúdo externo no ponto especificado no documento. Este conteúdo é fornecido por um aplicativo externo ou outra fonte de conteúdo interativo, como um plug-in de navegador.</p>
+O **elemento HTML `<embed>` **incorpora conteúdo externo no ponto especificado no documento. Este conteúdo é fornecido por um aplicativo externo ou outra fonte de conteúdo interativo, como um plug-in de navegador.
 
-<p>{{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}</p>
+{{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
 
-<div class="note">
-<p><strong>Nota</strong>: Este tópico documenta apenas o elemento definido como parte do HTML5. Ele não trata da implementação anterior e não padronizada do elemento.</p>
-</div>
+> **Note:** **Nota**: Este tópico documenta apenas o elemento definido como parte do HTML5. Ele não trata da implementação anterior e não padronizada do elemento.
 
-<p>Lembre-se de que a maioria dos navegadores modernos descontinuou e removeu o suporte para plug-ins de navegador. Portanto, confiar no <code>&lt;embed&gt; </code>geralmente não é aconselhável se você deseja que seu site funcione no navegador do usuário comum. </p>
+Lembre-se de que a maioria dos navegadores modernos descontinuou e removeu o suporte para plug-ins de navegador. Portanto, confiar no `<embed> `geralmente não é aconselhável se você deseja que seu site funcione no navegador do usuário comum.
 
-<ul>
- <li><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Categoria de conteúdo</a></dfn> <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">Flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content categories#Phrasing content">phrasing content</a>, embedded content, interactive content, palpable content.</li>
- <li><dfn>Conteúdo permitido</dfn> Nenhum, é um {{Glossary("empty element")}}.</li>
- <li><dfn>Omissão de Tag</dfn>Deve iniciar com uma tag de início, mas não deve ter uma tag de fechamento.</li>
- <li><dfn>Elementos pai (ancestral)<br>
-  permitidos</dfn>Qualquer elemento que aceita incorporação de conteúdo.</li>
- <li><dfn>Interface DOM</dfn> {{domxref("HTMLEmbedElement")}}</li>
-</ul>
+- _[Categoria de conteúdo](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content categories#Phrasing content"), embedded content, interactive content, palpable content.
+- _Conteúdo permitido_ Nenhum, é um {{Glossary("empty element")}}.
+- \_Omissão de Tag_Deve iniciar com uma tag de início, mas não deve ter uma tag de fechamento.
+- \_Elementos pai (ancestral)
+  permitidos_Qualquer elemento que aceita incorporação de conteúdo.
+- _Interface DOM_ {{domxref("HTMLEmbedElement")}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p><span style="line-height: 21px;">Este elemento inclui os </span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">atributos globais</a><span style="line-height: 21px;">.</span></p>
+Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
 
-<dl>
- <dt>{{htmlattrdef("height")}}</dt>
- <dd>A altura apresentada do recurso, em <a href="https://drafts.csswg.org/css-values/#px">CSS pixels.</a> Este deve ser um valor absoluto; porcentagens <em>não </em>são permitidas.</dd>
- <dt>{{htmlattrdef("src")}}</dt>
- <dd>A URL do recurso que está sendo incorporado.</dd>
- <dt>{{htmlattrdef("type")}}</dt>
- <dd>O <a href="/en-US/docs/Glossary/MIME_type">tipo MIME</a> a ser usado para a seleção do <em>plug-in</em> de instanciação.</dd>
- <dt>{{htmlattrdef("width")}}</dt>
- <dd>A largura apresentada do recurso, em CSS pixels. Este deve ser um valor absoluto; porcentagens <em>não </em>são permitidas.</dd>
-</dl>
+- {{htmlattrdef("height")}}
+  - : A altura apresentada do recurso, em [CSS pixels.](https://drafts.csswg.org/css-values/#px) Este deve ser um valor absoluto; porcentagens _não_ são permitidas.
+- {{htmlattrdef("src")}}
+  - : A URL do recurso que está sendo incorporado.
+- {{htmlattrdef("type")}}
+  - : O [tipo MIME](/pt-BR/docs/Glossary/MIME_type) a ser usado para a seleção do _plug-in_ de instanciação.
+- {{htmlattrdef("width")}}
+  - : A largura apresentada do recurso, em CSS pixels. Este deve ser um valor absoluto; porcentagens _não_ são permitidas.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: html">&lt;embed type="video/quicktime" src="movie.mov" width="640" height="480"&gt;
-</pre>
+```html
+<embed type="video/quicktime" src="movie.mov" width="640" height="480">
+```
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'the-iframe-element.html#the-embed-element', '&lt;embed&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'embedded-content-0.html#the-embed-element', '&lt;embed&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                            | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', 'the-iframe-element.html#the-embed-element', '&lt;embed&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML5 W3C', 'embedded-content-0.html#the-embed-element', '&lt;embed&gt;')}}     | {{Spec2('HTML5 W3C')}}     |         |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div class="note">
-<p><strong>Nota</strong>: Atualmente existe uma diferença na implementação pelos navegadores. Enquanto carrega, no Chrome e no Opera, aparece o conteúdo do recurso em HTML, no Firefox, mostra uma mensagem genérica falando que o conteúdo precisa de um <em>plug-in   </em>(veja o {{Bug("730768")}}). É recomendado que se use os elementos {{HTMLElement("object")}} ou {{HTMLElement("iframe")}}.</p>
-</div>
+> **Note:** **Nota**: Atualmente existe uma diferença na implementação pelos navegadores. Enquanto carrega, no Chrome e no Opera, aparece o conteúdo do recurso em HTML, no Firefox, mostra uma mensagem genérica falando que o conteúdo precisa de um _plug-in_ (veja o {{Bug("730768")}}). É recomendado que se use os elementos {{HTMLElement("object")}} ou {{HTMLElement("iframe")}}.
 
 {{Compat("html.elements.embed")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Outros elementos usados para incorporar conteúdo de vários tipos, incluem: {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}}, and {{HTMLElement("video")}}.</li>
- <li>Posicionamento e dimensionamento de conteúdos incorporados dentro da janela de exibição: {{cssxref("object-position")}} and {{cssxref("object-fit")}}</li>
-</ul>
+- Outros elementos usados para incorporar conteúdo de vários tipos, incluem: {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}}, and {{HTMLElement("video")}}.
+- Posicionamento e dimensionamento de conteúdos incorporados dentro da janela de exibição: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
 
-<p>{{ HTMLRef }}</p>
+{{ HTMLRef }}

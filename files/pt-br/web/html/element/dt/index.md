@@ -3,63 +3,38 @@ title: <dt>
 slug: Web/HTML/Element/dt
 translation_of: Web/HTML/Element/dt
 ---
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O elemento <strong>HTML <code>&lt;dt&gt;</code></strong> (ou Elemento HTML de Definição de Termo) identifica um termo na lista de definição. Este elemento pode ocorrer somente em um elemento filho de {{HTMLElement("dl")}}. Geralmente seguido por um elemento {{HTMLElement("dd")}}; ou multiplos <code>&lt;dt&gt;</code> na mesma linha indicam vários termos  sendo definidos pelo próximo element {{HTMLElement("dd")}}.</p>
+O elemento **HTML `<dt>`** (ou Elemento HTML de Definição de Termo) identifica um termo na lista de definição. Este elemento pode ocorrer somente em um elemento filho de {{HTMLElement("dl")}}. Geralmente seguido por um elemento {{HTMLElement("dd")}}; ou multiplos `<dt>` na mesma linha indicam vários termos sendo definidos pelo próximo element {{HTMLElement("dd")}}.
 
-<ul>
- <li><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Content categories</a></dfn> Vazio.</li>
- <li><dfn>Permitted content</dfn>{{todo}} <a href="/en-US/docs/HTML/Content_categories#Flowing_content" title="HTML/Content_categories#Phrasing_content">Flow content</a>, but with no {{HTMLElement("header")}}, {{HTMLElement("footer")}}, sectioning content or heading content descendants.</li>
- <li><dfn>Tag omission</dfn> Must have a start tag. The end tag may be omitted if this element is immediately followed by another <code>&lt;dd&gt;</code> element, or if there is no more content in the parent element.</li>
- <li><dfn>Permitted parent elements</dfn> Before a {{HTMLElement("dt")}} or a {{HTMLElement("dd")}} element, inside a {{HTMLElement("dl")}}.</li>
- <li><dfn>DOM interface</dfn> {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the <a href="/en-US/docs/DOM/span" title="DOM/span"><span style="font-family: courier new;">HTMLSpanElement</span></a> interface for this element.</li>
-</ul>
+- _[Content categories](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ Vazio.
+- _Permitted content_{{todo}} [Flow content](/pt-BR/docs/HTML/Content_categories#Flowing_content "HTML/Content_categories#Phrasing_content"), but with no {{HTMLElement("header")}}, {{HTMLElement("footer")}}, sectioning content or heading content descendants.
+- _Tag omission_ Must have a start tag. The end tag may be omitted if this element is immediately followed by another `<dd>` element, or if there is no more content in the parent element.
+- _Permitted parent elements_ Before a {{HTMLElement("dt")}} or a {{HTMLElement("dd")}} element, inside a {{HTMLElement("dl")}}.
+- _DOM interface_ {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the [HTMLSpanElement](/pt-BR/docs/DOM/span "DOM/span") interface for this element.
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p><span style="line-height: 21px;">Este elemento inclui somente</span><span style="line-height: 21px;"> </span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">atributos globais</a><span style="line-height: 21px;">.</span></p>
+Este elemento inclui somente [atributos globais](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>Para exemplo veja <a href="/en-US/docs/HTML/Element/dl#Examples" title="HTML/Element/dl#Examples">definição de lista</a>.</p>
+Para exemplo veja [definição de lista](/pt-BR/docs/HTML/Element/dl#Examples "HTML/Element/dl#Examples").
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'grouping-content.html#the-dt-element', '&lt;dt&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-dt-element', '&lt;dt&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/lists.html#h-10.3', '&lt;dt&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', 'grouping-content.html#the-dt-element', '&lt;dt&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-dt-element', '&lt;dt&gt;')}}     | {{Spec2('HTML5 W3C')}}     |         |
+| {{SpecName('HTML4.01', 'struct/lists.html#h-10.3', '&lt;dt&gt;')}}                     | {{Spec2('HTML4.01')}}     |         |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Navegadores compatíveis</h2>
+## Navegadores compatíveis
 
 {{Compat("html.elements.dt")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTMLElement("dd")}}, {{HTMLElement("dl")}}</li>
-</ul>
+- {{HTMLElement("dd")}}, {{HTMLElement("dl")}}
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

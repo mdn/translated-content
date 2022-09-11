@@ -9,50 +9,25 @@ tags:
   - Referencia
 translation_of: Web/HTML/Global_attributes/class
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>O <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributo global</a> <strong>class</strong> é uma lista das classes de um elemento, separada por espaços. Classes permitem a CSS e Javascript selecionar e acessar elementos específicos através dos <a href="/pt-BR/docs/Web/CSS/Class_selectors">seletores de classe</a> ou funções como o método DOM {{domxref("document.getElementsByClassName")}}.</p>
+O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **class** é uma lista das classes de um elemento, separada por espaços. Classes permitem a CSS e Javascript selecionar e acessar elementos específicos através dos [seletores de classe](/pt-BR/docs/Web/CSS/Class_selectors) ou funções como o método DOM {{domxref("document.getElementsByClassName")}}.
 
-<p>Apesar da especificação não impor requesitos sobre os nomes de classes, é considerada boa prática usar nomes que descrevam o propósito semântico do elemento, em vez de sua representação (e.g. <em>atributo</em> para descrever um atributo em vez de <em>ítalico</em>, mesmo que um elemento desta classe possa ser representado por <em>ítalico)</em>. Nomes baseados em semântica permanecem coerentes mesmo se a representação da página mude.</p>
+Apesar da especificação não impor requesitos sobre os nomes de classes, é considerada boa prática usar nomes que descrevam o propósito semântico do elemento, em vez de sua representação (e.g. _atributo_ para descrever um atributo em vez de _ítalico_, mesmo que um elemento desta classe possa ser representado por _ítalico)_. Nomes baseados em semântica permanecem coerentes mesmo se a representação da página mude.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "elements.html#classes", "class")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Nenhuma mudança desde o mais recente snapshot, {{SpecName('HTML5.1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "elements.html#classes", "class")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Snapshot de {{SpecName('HTML WHATWG')}}, nenhuma mudança desde {{SpecName('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "elements.html#classes", "class")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Snapshot de {{SpecName('HTML WHATWG')}}. Apartir de {{SpecName('HTML4.01')}}, <code>class</code> é um atributo global verdadeiro.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', "struct/global.html#h-7.5.2", "class")}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>Suportado por todos os elementos menos {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, e {{HTMLElement("title")}}.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Status                           | Comentário                                                                                                                                                                                                                                                                                                                                                     |
+| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "elements.html#classes", "class")}}     | {{Spec2('HTML WHATWG')}} | Nenhuma mudança desde o mais recente snapshot, {{SpecName('HTML5.1')}}                                                                                                                                                                                                                                                                                |
+| {{SpecName('HTML5.1', "elements.html#classes", "class")}}         | {{Spec2('HTML5.1')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, nenhuma mudança desde {{SpecName('HTML5 W3C')}}                                                                                                                                                                                                                                                       |
+| {{SpecName('HTML5 W3C', "elements.html#classes", "class")}}     | {{Spec2('HTML5 W3C')}}     | Snapshot de {{SpecName('HTML WHATWG')}}. Apartir de {{SpecName('HTML4.01')}}, `class` é um atributo global verdadeiro.                                                                                                                                                                                                                        |
+| {{SpecName('HTML4.01', "struct/global.html#h-7.5.2", "class")}} | {{Spec2('HTML4.01')}}     | Suportado por todos os elementos menos {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, e {{HTMLElement("title")}}. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("html.global_attributes.class")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Todos os <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a>.</li>
-</ul>
+- Todos os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).

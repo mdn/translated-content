@@ -3,73 +3,47 @@ title: <map>
 slug: Web/HTML/Element/map
 translation_of: Web/HTML/Element/map
 ---
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>O <strong>elemento HTML <code>&lt;map&gt;</code></strong> é usado com os elementos {{HTMLElement ("area")}} para definir um mapa de imagem (a área clicável do link).</p>
+O **elemento HTML `<map>`** é usado com os elementos {{HTMLElement ("area")}} para definir um mapa de imagem (a área clicável do link).
 
-<ul>
- <li><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML / Content_categories">Categorias de conteúdo</a></dfn> <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="Categorias HTML / conteúdo # content Fluxo">Conteúdo de fluxo</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="Categorias HTML / conteúdo # content Phrasing">conteúdo fraseado</a>, conteúdo palpável.</li>
- <li><dfn>Conteúdo permitido</dfn>Qualquer elemento <a href="/en-US/docs/HTML/Content_categories#Transparent_content_model" title="https://developer.mozilla.org/en/HTML/Content_categories # Transparent_content_model">transparente</a>.</li>
- <li><dfn>Omissão da marcação</dfn>{{no_tag_omission}}</li>
- <li><dfn>Elementos pai permitidos</dfn> Qualquer elemento que aceita <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML / Content_categories # Phrasing_content">conteúdo fraseado</a>.</li>
- <li><dfn>Interface DOM</dfn> {{domxref ("HTMLMapElement")}}</li>
-</ul>
+- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories "HTML / Content_categories")_ [Conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content "Categorias HTML / conteúdo # content Fluxo"), [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content "Categorias HTML / conteúdo # content Phrasing"), conteúdo palpável.
+- \_Conteúdo permitido_Qualquer elemento [transparente](/pt-BR/docs/HTML/Content_categories#Transparent_content_model "https://developer.mozilla.org/en/HTML/Content_categories # Transparent_content_model").
+- _Omissão da marcação_{{no_tag_omission}}
+- _Elementos pai permitidos_ Qualquer elemento que aceita [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML / Content_categories # Phrasing_content").
+- _Interface DOM_ {{domxref ("HTMLMapElement")}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p><span style="line-height: 21px;">Este elemento inclui os </span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML / atributos globais">atributos globais</a><span style="line-height: 21px;">.</span></p>
+Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes "HTML / atributos globais").
 
-<dl>
- <dt>{{Htmlattrdef ("name")}}</dt>
- <dd>O atributo name dá ao mapa de um nome, de modo que ela possa ser referenciada. O atributo deve estar presente e ter um valor não vazio, sem caracteres de espaço. O valor do atributo name não deve corresponder (independente da caixa) a um valor do atributo name de outro elemento no mesmo documento. Se o id de atributo também for especificado, ambos os atributos devem ter o mesmo valor.</dd>
-</dl>
+- {{Htmlattrdef ("name")}}
+  - : O atributo name dá ao mapa de um nome, de modo que ela possa ser referenciada. O atributo deve estar presente e ter um valor não vazio, sem caracteres de espaço. O valor do atributo name não deve corresponder (independente da caixa) a um valor do atributo name de outro elemento no mesmo documento. Se o id de atributo também for especificado, ambos os atributos devem ter o mesmo valor.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: html">&lt;map&gt;
-  &lt;area shape="circle" coords="200,250,25" href="another.htm" /&gt;
-  &lt;area shape="default" /&gt;
-&lt;/map&gt;
-</pre>
+```html
+<map>
+  <area shape="circle" coords="200,250,25" href="another.htm" />
+  <area shape="default" />
+</map>
+```
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName ('HTML WHATWG', 'a-map-element.html # the-map-elemento', '&lt;map&gt;')}}</td>
-   <td>{{Spec2 ('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName ('HTML5 W3C', 'incorporado-content-0.html # the-map-elemento', '&lt;map&gt;')}}</td>
-   <td>{{Spec2 ('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName ('HTML4.01', 'struct / objects.html # h-13.6.1', '&lt;map&gt;')}}</td>
-   <td>{{Spec2 ('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                            | Estado                           | Comentário |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName ('HTML WHATWG', 'a-map-element.html # the-map-elemento', '&lt;map&gt;')}}         | {{Spec2 ('HTML WHATWG')}} |            |
+| {{SpecName ('HTML5 W3C', 'incorporado-content-0.html # the-map-elemento', '&lt;map&gt;')}} | {{Spec2 ('HTML5 W3C')}} |            |
+| {{SpecName ('HTML4.01', 'struct / objects.html # h-13.6.1', '&lt;map&gt;')}}                     | {{Spec2 ('HTML4.01')}}     |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("html.elements.map")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTMLElement ("a")}}</li>
- <li>{{HTMLElement ("area")}}</li>
-</ul>
+- {{HTMLElement ("a")}}
+- {{HTMLElement ("area")}}
 
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}

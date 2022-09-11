@@ -3,105 +3,107 @@ title: <br>
 slug: Web/HTML/Element/br
 translation_of: Web/HTML/Element/br
 ---
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>O elemento HTML <em>quebra-de-linha</em> &lt;br&gt; produz uma quebra de linha em um texto (carriage-return).É útil para escrever poemas ou um endereço, onde a divisão de linha é significante.</p>
+O elemento HTML _quebra-de-linha_ \<br> produz uma quebra de linha em um texto (carriage-return).É útil para escrever poemas ou um endereço, onde a divisão de linha é significante.
 
-<p>Não use &lt;br&gt; para aumentar o espaço entre as linhas de texto; para isso use a propiedade <a href="/en-US/docs/CSS" title="CSS">CSS</a> {{cssxref('margin')}} ou o elemento {{HTMLElement("p")}}.</p>
+Não use \<br> para aumentar o espaço entre as linhas de texto; para isso use a propiedade [CSS](/pt-BR/docs/CSS "CSS") {{cssxref('margin')}} ou o elemento {{HTMLElement("p")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Categorias de Conteúdo</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">Conteúdo de Fluxo</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content categories#Phrasing content">conteúdo fraseado</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Conteúdo permitido</th>
-   <td>Nenhum, é um {{Glossary("empty element")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omissão de tag</th>
-   <td>Deve ter uma tag de abertura, e não deve ter uma tag de fechamento. Em documentos XHTML , escreve esse elemento como  <code>&lt;br /&gt;</code>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Elementos pai permitidos</th>
-   <td>Qualquer elemento que aceita <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content_categories#Phrasing_content">conteúdo fraseado</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface DOM</th>
-   <td>{{domxref("HTMLBRElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a
+          href="/en-US/docs/HTML/Content_categories"
+          title="HTML/Content_categories"
+          >Categorias de Conteúdo</a
+        >
+      </th>
+      <td>
+        <a
+          href="/en-US/docs/HTML/Content_categories#Flow_content"
+          title="HTML/Content categories#Flow content"
+          >Conteúdo de Fluxo</a
+        >,
+        <a
+          href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+          title="HTML/Content categories#Phrasing content"
+          >conteúdo fraseado</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Conteúdo permitido</th>
+      <td>Nenhum, é um {{Glossary("empty element")}}.</td>
+    </tr>
+    <tr>
+      <th scope="row">Omissão de tag</th>
+      <td>
+        Deve ter uma tag de abertura, e não deve ter uma tag de fechamento. Em
+        documentos XHTML , escreve esse elemento como <code>&#x3C;br /></code>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Elementos pai permitidos</th>
+      <td>
+        Qualquer elemento que aceita
+        <a
+          href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+          title="HTML/Content_categories#Phrasing_content"
+          >conteúdo fraseado</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>{{domxref("HTMLBRElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">Atributos</h2>
+## Atributos
 
-<p>Este elemento inclue os <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">Atributos globais</a><span style="line-height: 21px;">.</span></p>
+Este elemento inclue os [Atributos globais](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
 
-<dl>
- <dt>{{htmlattrdef("clear")}} {{deprecatedGeneric('inline','HTML4.01')}} {{obsoleteGeneric('inline','HTML5')}}</dt>
- <dd>Indica onde começar a próxima linha depois da quebra.
- <div class="note">
- <p><strong>Nota de Uso: </strong>Este atributo está obsoleto em {{HTMLVersionInline(5)}} e <strong>Não deve ser usado por autores</strong>. Use a propiedade  CSS {{CSSxref('clear')}} em vez disso.</p>
- </div>
- </dd>
-</dl>
+- {{htmlattrdef("clear")}} {{deprecatedGeneric('inline','HTML4.01')}} {{obsoleteGeneric('inline','HTML5')}}
 
-<h2 id="Example" name="Example">Exemplo</h2>
+  - : Indica onde começar a próxima linha depois da quebra.
 
-<pre class="brush: html">Mozilla Foundation&lt;br&gt;
-1981 Landings Drive&lt;br&gt;
-Building K&lt;br&gt;
-Mountain View, CA 94043-0801&lt;br&gt;
+    > **Note:** **Nota de Uso:** Este atributo está obsoleto em {{HTMLVersionInline(5)}} e **Não deve ser usado por autores**. Use a propiedade CSS {{CSSxref('clear')}} em vez disso.
+
+## Exemplo
+
+```html
+Mozilla Foundation<br>
+1981 Landings Drive<br>
+Building K<br>
+Mountain View, CA 94043-0801<br>
 USA
-</pre>
+```
 
-<p>Saída do HTML acima:</p>
+Saída do HTML acima:
 
-<p>Mozilla Foundation<br>
- 1981 Landings Drive<br>
- Building K<br>
- Mountain View, CA 94043-0801<br>
- USA</p>
+Mozilla Foundation
+1981 Landings Drive
+Building K
+Mountain View, CA 94043-0801
+USA
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'text-level-semantics.html#the-br-element', '&lt;br&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'text-level-semantics.html#the-br-element', '&lt;br&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/text.html#h-9.3.2.1', '&lt;br&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                    | Status                           | Comentário |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-br-element', '&lt;br&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-br-element', '&lt;br&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
+| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.2.1', '&lt;br&gt;')}}                     | {{Spec2('HTML4.01')}}     |            |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade com o browser</h2>
+## Compatibilidade com o browser
 
 {{Compat("html.elements.br")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>O elemento {{HTMLElement("address")}}</li>
- <li>O elemento {{HTMLElement("p")}}</li>
-</ul>
+- O elemento {{HTMLElement("address")}}
+- O elemento {{HTMLElement("p")}}
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

@@ -3,63 +3,87 @@ title: <s>
 slug: Web/HTML/Element/s
 translation_of: Web/HTML/Element/s
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>O <strong>elemento HTML <code>&lt;s&gt;</code></strong> renderiza um texto tachado ou uma linha cortando o texto. Use o elemento <code>&lt;s&gt;</code> para representar texto que não sejam relevante ou que não estam corretos. Não é apropriado o uso do <code>&lt;s&gt;</code> indicar edições no texto; para indicar edições no texto utilize {{HTMLElement("del")}} e {{HTMLElement("ins")}}, que são elementos mais apropriados.</p>
+O **elemento HTML `<s>`** renderiza um texto tachado ou uma linha cortando o texto. Use o elemento `<s>` para representar texto que não sejam relevante ou que não estam corretos. Não é apropriado o uso do `<s>` indicar edições no texto; para indicar edições no texto utilize {{HTMLElement("del")}} e {{HTMLElement("ins")}}, que são elementos mais apropriados.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/s.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/s.html", "tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Categorias de conteúdo</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">Conteúdo fraseado</a> ou <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">conteúdo de fluxo</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Conteúdo permitido</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">Conteúdo freaseado</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omissão de Tag</th>
-   <td>Nenhuma, as tags de abertura e de fechamento são obrigatórias.</td>
-  </tr>
-  <tr>
-   <th scope="row">Pais permitidos</th>
-   <td>Qualquer elemento que aceite <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">conteúdo fraseado</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Funções ARIA permitidas</th>
-   <td>Todas</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Categorias de conteúdo</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+          >Conteúdo fraseado</a
+        >
+        ou
+        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+          >conteúdo de fluxo</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Conteúdo permitido</th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+          >Conteúdo freaseado</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omissão de Tag</th>
+      <td>Nenhuma, as tags de abertura e de fechamento são obrigatórias.</td>
+    </tr>
+    <tr>
+      <th scope="row">Pais permitidos</th>
+      <td>
+        Qualquer elemento que aceite
+        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+          >conteúdo fraseado</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Funções ARIA permitidas</th>
+      <td>Todas</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Esse atributo incluí <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a>.</p>
+Esse atributo incluí [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-<div class="note"><strong>Notas de implementação:</strong> Até Gecko 1.9.2 inclusive, Firefox implementa <a href="/en-US/docs/DOM/span"><code>HTMLSpanElement</code></a> para a interface deste elemento.</div>
+> **Note:** **Notas de implementação:** Até Gecko 1.9.2 inclusive, Firefox implementa [`HTMLSpanElement`](/pt-BR/docs/DOM/span) para a interface deste elemento.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush:xml">&lt;s&gt;Hoje é um dia especial: Salmon&lt;/s&gt; ESGOTADO&lt;br&gt;
-&lt;span style="text-decoration:line-through;"&gt;Hoje é um dia especial:
-  Salmon&lt;/span&gt; ESGOTADO</pre>
+```xml
+<s>Hoje é um dia especial: Salmon</s> ESGOTADO<br>
+<span style="text-decoration:line-through;">Hoje é um dia especial:
+  Salmon</span> ESGOTADO
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p><s>Hoje é um dia especial: Salmão</s> ESGOTADO<br>
- <s>Hoje é um dia especial: Salmão</s> ESGOTADO</p>
+~~Hoje é um dia especial: Salmão~~ ESGOTADO
+~~Hoje é um dia especial: Salmão~~ ESGOTADO
 
-<h2 id="Preocupações_com_acessibilidade">Preocupações com acessibilidade</h2>
+## Preocupações com acessibilidade
 
-<p>A presença do elemento s não é anunciada pela maioria das tecnologias de leitura de tela em sua configuração padrão. Isso pode ser anunciado usando a propriedade CSS {{cssxref("content")}}, junto com os pseudoelementos {{cssxref("::before")}} and {{cssxref("::after")}}.</p>
+A presença do elemento s não é anunciada pela maioria das tecnologias de leitura de tela em sua configuração padrão. Isso pode ser anunciado usando a propriedade CSS {{cssxref("content")}}, junto com os pseudoelementos {{cssxref("::before")}} and {{cssxref("::after")}}.
 
-<pre>s::before,
+```
+s::before,
 s::after {
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -77,47 +101,26 @@ s::before {
 s::after {
   content: " [fim do texto utilizado] ";
 }
-</pre>
+```
 
-<p>Algumas pessoas que usam leitores de tela que desativam deliberadamente o anúncio de conteúdo que criados com muita verbosidade. Por esse motivo, é importante não abusar dessa técnica e aplicá-la apenas nas situações em que o desconhecimento do conteúdo foi eliminado e que afetaria negativamente a compreensão.</p>
+Algumas pessoas que usam leitores de tela que desativam deliberadamente o anúncio de conteúdo que criados com muita verbosidade. Por esse motivo, é importante não abusar dessa técnica e aplicá-la apenas nas situações em que o desconhecimento do conteúdo foi eliminado e que afetaria negativamente a compreensão.
 
-<ul>
- <li><a href="https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/">Nota curta sobre como deixar sua marca (mais acessível) | O Grupo Paciello </a></li>
- <li><a href="http://adrianroselli.com/2017/12/tweaking-text-level-styles.html">Ajustando estilos de texto | Adrian Roselli</a></li>
-</ul>
+- [Nota curta sobre como deixar sua marca (mais acessível) | O Grupo Paciello](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
+- [Ajustando estilos de texto | Adrian Roselli](http://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','semantics.html#the-s-element','s element')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C','text-level-semantics.html#the-s-element','s element')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                            | Estado                           | Comentário |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG','semantics.html#the-s-element','s element')}}             | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C','text-level-semantics.html#the-s-element','s element')}} | {{Spec2('HTML5 W3C')}}     |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("html.elements.s")}}</p>
+{{Compat("html.elements.s")}}
 
-<h2 id="Veja_mais">Veja mais</h2>
+## Veja mais
 
-<ul>
- <li>O elemento {{HTMLElement("strike")}}, é o alter ego de {{HTMLElement("s")}} é obsoleto e não deve mais ser usado em sites.</li>
- <li>Elemento {{HTMLElement("del")}} deve ser usado quando o conteúdo for <em>deletado</em>.</li>
- <li>O CSS {{cssxref("text-decoration-line")}} propriedade deve ser usada para alcançar o antigo aspecto visual do elemento {{HTMLElement("s")}}.</li>
-</ul>
+- O elemento {{HTMLElement("strike")}}, é o alter ego de {{HTMLElement("s")}} é obsoleto e não deve mais ser usado em sites.
+- Elemento {{HTMLElement("del")}} deve ser usado quando o conteúdo for _deletado_.
+- O CSS {{cssxref("text-decoration-line")}} propriedade deve ser usada para alcançar o antigo aspecto visual do elemento {{HTMLElement("s")}}.

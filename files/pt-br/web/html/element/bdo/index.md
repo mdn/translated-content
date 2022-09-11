@@ -8,97 +8,101 @@ tags:
   - rtl
 translation_of: Web/HTML/Element/bdo
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>O <strong><em>elemento </em>HTML <code>&lt;bdo&gt;</code> </strong>(<em>bidirectional override</em>) é usado para substituir a direcionalidade atual do texto. Isso faz com que a direcionalidade dos personagens seja ignorada em favor da direcionalidade especificada.</p>
+O **_elemento_ HTML `<bdo>` **(_bidirectional override_) é usado para substituir a direcionalidade atual do texto. Isso faz com que a direcionalidade dos personagens seja ignorada em favor da direcionalidade especificada.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>Any</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the <code><a href="/en-US/docs/Web/API/HTMLSpanElement">HTMLSpanElement</a></code> interface for this element.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/HTML/Content_categories">Content categories</a>
+      </th>
+      <td>
+        <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+          >phrasing content</a
+        >, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+          >Phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>
+        {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4)
+        inclusive, Firefox implements the
+        <code
+          ><a href="/en-US/docs/Web/API/HTMLSpanElement"
+            >HTMLSpanElement</a
+          ></code
+        >
+        interface for this element.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Os atributos desse elemento incluem os <a href="/en-US/docs/HTML/Global_attributes">atributos globais</a>.</p>
+Os atributos desse elemento incluem os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("dir")}}</dt>
- <dd>Direção de texto neste elemento. Os valores possíveis são:
- <ul>
-  <li><code>ltr</code>: Indica que o texto ficará da <strong>Esquerda para a Direita</strong> (<strong>L</strong>eft-<strong>T</strong>o-<strong>R</strong>ight).</li>
-  <li><code>rtl</code>: Indica que o texto ficará da <strong>Direita</strong> <strong> para a Esquerda </strong>(<strong>R</strong>eft-<strong>T</strong>o-<strong>L</strong>ight).</li>
- </ul>
- </dd>
-</dl>
+- {{htmlattrdef("dir")}}
 
-<h2 id="Exemplos">Exemplos</h2>
+  - : Direção de texto neste elemento. Os valores possíveis são:
 
-<pre class="brush: html">&lt;!-- Muda a direção do texto --&gt;
-&lt;p&gt;Este texto ficará da esquerda para a direita.&lt;/p&gt;
-&lt;p&gt;&lt;bdo dir="rtl"&gt;Este texto ficará da direita para a esquerda.&lt;/bdo&gt;&lt;/p&gt;
-</pre>
+    - `ltr`: Indica que o texto ficará da **Esquerda para a Direita** (**L**eft-**T**o-**R**ight).
+    - `rtl`: Indica que o texto ficará da **Direita** **para a Esquerda** (**R**eft-**T**o-**L**ight).
 
-<h3 id="Resultado">Resultado</h3>
+## Exemplos
 
-<p>{{EmbedLiveSample('Exemplos')}}</p>
+```html
+<!-- Muda a direção do texto -->
+<p>Este texto ficará da esquerda para a direita.</p>
+<p><bdo dir="rtl">Este texto ficará da direita para a esquerda.</bdo></p>
+```
 
-<h2 id="Notas">Notas</h2>
+### Resultado
 
-<p>A especificação HTML 4 não especificam eventos para este elemento; eles foram adicionados no XHTML. Este é provavelmente um descuido.</p>
+{{EmbedLiveSample('Exemplos')}}
 
-<h2 id="Especificações">Especificações</h2>
+## Notas
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-bdo-element', '&lt;bdo&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-bdo-element', '&lt;bdo&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'dirlang.html#h-8.2.4', '&lt;bdo&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+A especificação HTML 4 não especificam eventos para este elemento; eles foram adicionados no XHTML. Este é provavelmente um descuido.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Especificações
 
-<p>{{Compat("html.elements.bdo")}}</p>
+| Especificação                                                                                                    | Status                           | Comentário |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-bdo-element', '&lt;bdo&gt;')}}             | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-bdo-element', '&lt;bdo&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
+| {{SpecName('HTML4.01', 'dirlang.html#h-8.2.4', '&lt;bdo&gt;')}}                             | {{Spec2('HTML4.01')}}     |            |
+
+## Compatibilidade com navegadores
+
+{{Compat("html.elements.bdo")}}

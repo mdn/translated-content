@@ -4,53 +4,49 @@ slug: Web/HTML/Element/figure
 translation_of: Web/HTML/Element/figure
 original_slug: Web/HTML/Element/figura
 ---
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>O <strong>Elemento HTML <code>&lt;figure&gt;</code> </strong>representa o conteúdo independente, frequentemente com uma legenda ({{HTMLElement("figcaption")}})<em><code>,</code></em> e é normalmente referido como uma única unidade. Enquanto ela está relacionada com o fluxo principal, sua posição é independente do fluxo principal.Normalmente, isso é uma imagem, uma ilustração, um diagrama, um trecho de código ou uma esquema que é referenciado no texto principal, mas que pode ser movido para outra página ou para um apêndice, sem afetar o fluxo principal.</p>
+O **Elemento HTML `<figure>` **representa o conteúdo independente, frequentemente com uma legenda ({{HTMLElement("figcaption")}})_`,`_ e é normalmente referido como uma única unidade. Enquanto ela está relacionada com o fluxo principal, sua posição é independente do fluxo principal.Normalmente, isso é uma imagem, uma ilustração, um diagrama, um trecho de código ou uma esquema que é referenciado no texto principal, mas que pode ser movido para outra página ou para um apêndice, sem afetar o fluxo principal.
 
-<div class="note">
-<p><em>Notas de uso: </em></p>
+> **Note:** _Notas de uso:_
+>
+> - Being a [sectioning root](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document#Sectioning_root "Sections and Outlines of an HTML5 document#Sectioning root"), the outline of the content of the \<figure> element is excluded from the main outline of the document.
+> - Uma legenda pode ser associada com o elemento `<figure>` inserindo o elemento {{HTMLElement("figcaption")}} dentro dele (no inicio ou no fim).
 
-<ul>
- <li>Being a <a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document#Sectioning_root" title="Sections and Outlines of an HTML5 document#Sectioning root">sectioning root</a>, the outline of the content of the <span style="font-family: courier new;">&lt;figure&gt; </span>element is excluded from the main outline of the document.</li>
- <li>Uma legenda pode ser associada com o elemento <code>&lt;figure&gt;</code> inserindo o elemento {{HTMLElement("figcaption")}}  dentro dele (no inicio ou no fim).</li>
-</ul>
-</div>
+- _[Content categories](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), [sectioning root](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document#Sectioning_root "Sections and Outlines of an HTML5 document#Sectioning root"), palpable content.
+- _Permite conteúdo\_\_A {{HTMLElement("figcaption")}} element, followed by [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"); or flow content followed by a {{HTMLElement("figcaption")}} element; or flow content_.
+- _Omissão de TAGs_ {{no_tag_omission}}
+- _Permitted parent elements_ Any element that accepts [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content").
+- _DOM interface_ {{domxref("HTMLElement")}}
 
-<ul>
- <li><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Content categories</a></dfn> <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">Flow content</a>, <a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document#Sectioning_root" title="Sections and Outlines of an HTML5 document#Sectioning root">sectioning root</a>, palpable content.</li>
- <li><dfn>Permite conteúdo</dfn><dfn>A {{HTMLElement("figcaption")}} element, followed by <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">flow content</a>; or flow content followed by a {{HTMLElement("figcaption")}} element; or flow content</dfn>.</li>
- <li><dfn>Omissão de TAGs</dfn> {{no_tag_omission}}</li>
- <li><dfn>Permitted parent elements</dfn> Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">Flow content</a>.</li>
- <li><dfn>DOM interface</dfn> {{domxref("HTMLElement")}}</li>
-</ul>
+## Atributos
 
-<h2 id="Atributos">Atributos</h2>
+Este elemento só inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
 
-<p><span style="line-height: 1.5;">Este elemento só inclui os</span><span style="line-height: 21px;"> </span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">atributos globais</a><span style="line-height: 21px;">.</span></p>
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
+### Exemplo 1
 
-<h3 id="Exemplo_1">Exemplo 1</h3>
+```html
+<!-- Apenas uma imagem-->
+<figure>
+	<img src="https://developer.mozilla.org/static/img/favicon144.png" alt="Uma imagem impressionante">
+</figure>
+<p></p>
+<!-- Imagem com legenda -->
+<figure>
+	<img src="https://developer.mozilla.org/static/img/favicon144.png" alt="Uma imagem impressionante">
+	<figcaption>Legenda para a imagem impressionante</figcaption>
+</figure>
+<p></p>
+```
 
-<pre class="brush: html">&lt;!-- Apenas uma imagem--&gt;
-&lt;figure&gt;
-	&lt;img src="https://developer.mozilla.org/static/img/favicon144.png" alt="Uma imagem impressionante"&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;!-- Imagem com legenda --&gt;
-&lt;figure&gt;
-	&lt;img src="https://developer.mozilla.org/static/img/favicon144.png" alt="Uma imagem impressionante"&gt;
-	&lt;figcaption&gt;Legenda para a imagem impressionante&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;/p&gt;
-</pre>
+### Example 2
 
-<h3 id="Example_2">Example 2</h3>
-
-<pre class="brush: html">    &lt;figure&gt;
-      &lt;figcaption&gt;Obtenha os detalhes do browser usando navigator&lt;/figcaption&gt;
-        &lt;pre&gt;
+```html
+    <figure>
+      <figcaption>Obtenha os detalhes do browser usando navigator</figcaption>
+        <pre>
           function NavigatorExample(){
           var txt;
           txt = "Browser CodeName: " + navigator.appCodeName;
@@ -60,51 +56,31 @@ original_slug: Web/HTML/Element/figura
           txt+= "Platform: " + navigator.platform;
           txt+= "User-agent header: " + navigator.userAgent;
           }
-        &lt;/pre&gt;
-</pre>
+        </pre>
+```
 
-<h3 id="Exemplo_3">Exemplo 3</h3>
+### Exemplo 3
 
-<pre class="brush: html">&lt;figure&gt;
-      &lt;figcaption&gt;&lt;cite&gt;Edsger Dijkstra :-&lt;/cite&gt;&lt;/figcaption&gt;
-      &lt;p&gt;"Se o debugging é o processo de remoção de bugs de software, &lt;br /&gt; então programação deve ser o processo de colocá-los"&lt;br /&gt;&lt;/p&gt;
-    &lt;/figure&gt;
+```html
+<figure>
+      <figcaption><cite>Edsger Dijkstra :-</cite></figcaption>
+      <p>"Se o debugging é o processo de remoção de bugs de software, <br /> então programação deve ser o processo de colocá-los"<br /></p>
+    </figure>
+```
 
+## Especificações
 
-</pre>
+| Especificação                                                                                                            | Status                           | Comentário |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'grouping-content.html#the-figure-element', '&lt;figure&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-figure-element', '&lt;figure&gt;')}}     | {{Spec2('HTML5 W3C')}}     |            |
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'grouping-content.html#the-figure-element', '&lt;figure&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-figure-element', '&lt;figure&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
+## Navegadores compatíveis
 
 {{Compat("html.elements.figure")}}
 
-<h2 id="Veja_Também">Veja Também</h2>
+## Veja Também
 
-<ul>
- <li>O {{HTMLElement("figcaption")}} elemento.</li>
-</ul>
+- O {{HTMLElement("figcaption")}} elemento.
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

@@ -6,130 +6,123 @@ tags:
   - Referências
 translation_of: Web/HTML/Global_attributes/accesskey
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>O <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributo global</a> <code><strong>accesskey</strong></code> fornece uma dica para gerar um atalho de teclado no elemento atual. O valor do atributo deve consistir em um único caracter imprimível (que inclui caracteres acentuados e outros caracteres que podem ser gerados pelo teclado).</p>
+O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **`accesskey`** fornece uma dica para gerar um atalho de teclado no elemento atual. O valor do atributo deve consistir em um único caracter imprimível (que inclui caracteres acentuados e outros caracteres que podem ser gerados pelo teclado).
 
-<div>{{EmbedInteractiveExample("pages/tabbed/attribute-accesskey.html","tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/attribute-accesskey.html","tabbed-shorter")}}
 
-<div class="note">
-<p><strong>Nota</strong>: Na especificação do WHATWG, diz que você pode especificar vários caracteres separados por espaço, e o navegador usará primeiro o que ele suportar. No entanto, isso não funciona na maioria dos browsers. O IE/Edge usa o primeiro que ele suporta sem problemas, desde que não haja conflitos com outros comandos.</p>
-</div>
+> **Note:** **Nota**: Na especificação do WHATWG, diz que você pode especificar vários caracteres separados por espaço, e o navegador usará primeiro o que ele suportar. No entanto, isso não funciona na maioria dos browsers. O IE/Edge usa o primeiro que ele suporta sem problemas, desde que não haja conflitos com outros comandos.
 
-<p>A maneira de ativar a tecla de acesso depende do navegador e de sua plataforma:</p>
+A maneira de ativar a tecla de acesso depende do navegador e de sua plataforma:
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th></th>
-   <th>Windows</th>
-   <th>Linux</th>
-   <th>Mac</th>
-  </tr>
-  <tr>
-   <th>Firefox</th>
-   <td colspan="2" rowspan="1" style="text-align: center;"><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd><em>key</em></kbd></td>
-   <td>No Firefox 57 ou mais recente: <kbd>Control</kbd> + <kbd>Option</kbd> + <kbd><em>key</em></kbd> or <kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd><br>
-    No Firefox 14 ou mais recente: <kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd><br>
-    No Firefox 13 ou mais antigo: <kbd>Control</kbd> + <kbd><em>key</em></kbd></td>
-  </tr>
-  <tr>
-   <th>Edge</th>
-   <td><kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
-   <td colspan="2" rowspan="1">N/A</td>
-  </tr>
-  <tr>
-   <th>Internet Explorer</th>
-   <td><kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
-   <td colspan="2" rowspan="1">N/A</td>
-  </tr>
-  <tr>
-   <th>Google Chrome</th>
-   <td colspan="2" rowspan="1" style="text-align: center;"><kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
-   <td><kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
-  </tr>
-  <tr>
-   <th>Safari</th>
-   <td><kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
-   <td>N/A</td>
-   <td><kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
-  </tr>
-  <tr>
-   <th>Opera 15+</th>
-   <td colspan="2" rowspan="1" style="text-align: center;"><kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
-   <td><kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
-  </tr>
-  <tr>
-   <th>Opera 12</th>
-   <td colspan="3" rowspan="1">
-    <p><kbd>Shift</kbd> + <kbd>Esc</kbd> abre uma lista de conteúdos acessíveis pela tecla de acesso e, em seguida, pode escolher um item pressionando <kbd><em>key</em></kbd></p>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th></th>
+      <th>Windows</th>
+      <th>Linux</th>
+      <th>Mac</th>
+    </tr>
+    <tr>
+      <th>Firefox</th>
+      <td colspan="2" rowspan="1" style="text-align: center">
+        <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd><em>key</em></kbd>
+      </td>
+      <td>
+        No Firefox 57 ou mais recente: <kbd>Control</kbd> + <kbd>Option</kbd> +
+        <kbd><em>key</em></kbd> or <kbd>Control</kbd> + <kbd>Alt</kbd> +
+        <kbd><em>key</em></kbd
+        ><br />No Firefox 14 ou mais recente: <kbd>Control</kbd> +
+        <kbd>Alt</kbd> + <kbd><em>key</em></kbd
+        ><br />No Firefox 13 ou mais antigo: <kbd>Control</kbd> +
+        <kbd><em>key</em></kbd>
+      </td>
+    </tr>
+    <tr>
+      <th>Edge</th>
+      <td>
+        <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
+      </td>
+      <td colspan="2" rowspan="1">N/A</td>
+    </tr>
+    <tr>
+      <th>Internet Explorer</th>
+      <td>
+        <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
+      </td>
+      <td colspan="2" rowspan="1">N/A</td>
+    </tr>
+    <tr>
+      <th>Google Chrome</th>
+      <td colspan="2" rowspan="1" style="text-align: center">
+        <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
+      </td>
+      <td>
+        <kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
+      </td>
+    </tr>
+    <tr>
+      <th>Safari</th>
+      <td>
+        <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
+      </td>
+      <td>N/A</td>
+      <td>
+        <kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
+      </td>
+    </tr>
+    <tr>
+      <th>Opera 15+</th>
+      <td colspan="2" rowspan="1" style="text-align: center">
+        <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
+      </td>
+      <td>
+        <kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
+      </td>
+    </tr>
+    <tr>
+      <th>Opera 12</th>
+      <td colspan="3" rowspan="1">
+        <p>
+          <kbd>Shift</kbd> + <kbd>Esc</kbd> abre uma lista de conteúdos
+          acessíveis pela tecla de acesso e, em seguida, pode escolher um item
+          pressionando <kbd><em>key</em></kbd>
+        </p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Preocupações_com_acessibilidade">Preocupações com acessibilidade</h2>
+## Preocupações com acessibilidade
 
-<p>Além do baixo suporte ao navegador, existem inúmeras preocupações com o atributo <code>accesskey</code>:</p>
+Além do baixo suporte ao navegador, existem inúmeras preocupações com o atributo `accesskey`:
 
-<ul>
- <li>Um valor de <code>accesskey</code> pode entrar em conflito com uma tecla de atalho do sistema ou do navegador, ou alguma funcionalidade de tecnologia assistida. O que pode funcionar para uma combinação de sistema operacional, tecnologia assistida e navegador pode não funcionar com outras combinações.</li>
- <li>Certos valores de <code>accesskey</code> podem não estar presentes em alguns teclados, especialmente quando a internacionalização é uma preocupação. Portanto, a adaptação a idiomas específicos pode causar problemas adicionais.</li>
- <li>Os valores de <code>accesskey</code> que dependem de números podem ser confusos para indivíduos com problemas cognitivos, onde o número não tem uma associação lógica com a funcionalidade que aciona.</li>
- <li>Informar o usuário que <code>accesskey</code> estão presentes, para que eles estejam cientes da funcionalidade. Se o sistema não tiver o método de o usuário dessa funcionalidade, ele poderá ativar acidentalmente as teclas de acesso (<code>accesskeys)</code>.</li>
-</ul>
+- Um valor de `accesskey` pode entrar em conflito com uma tecla de atalho do sistema ou do navegador, ou alguma funcionalidade de tecnologia assistida. O que pode funcionar para uma combinação de sistema operacional, tecnologia assistida e navegador pode não funcionar com outras combinações.
+- Certos valores de `accesskey` podem não estar presentes em alguns teclados, especialmente quando a internacionalização é uma preocupação. Portanto, a adaptação a idiomas específicos pode causar problemas adicionais.
+- Os valores de `accesskey` que dependem de números podem ser confusos para indivíduos com problemas cognitivos, onde o número não tem uma associação lógica com a funcionalidade que aciona.
+- Informar o usuário que `accesskey` estão presentes, para que eles estejam cientes da funcionalidade. Se o sistema não tiver o método de o usuário dessa funcionalidade, ele poderá ativar acidentalmente as teclas de acesso (`accesskeys)`.
 
-<p>Devido a esses problemas, geralmente não é aconselhável usar o <code>accesskey</code>s para a maioria dos sites e aplicativos da web.</p>
+Devido a esses problemas, geralmente não é aconselhável usar o `accesskey`s para a maioria dos sites e aplicativos da web.
 
-<p><a href="https://webaim.org/techniques/keyboard/accesskey#spec">WebAIM: Keyboard Accessibility - Accesskey</a></p>
+[WebAIM: Keyboard Accessibility - Accesskey](https://webaim.org/techniques/keyboard/accesskey#spec)
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML5.2', "editing.html#the-accesskey-attribute", "accesskey")}}</td>
-   <td>{{Spec2('HTML5.2')}}</td>
-   <td>Comportamento mais realista descrito para o que é implementado na realidade.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "interaction.html#the-accesskey-attribute", "accesskey")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Nenhuma alteração das últimas especificações do W3C {{SpecName('HTML5.1')}} .</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "editing.html#the-accesskey-attribute", "accesskey")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Nenhuma alteração em {{SpecName('HTML5 W3C')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "editing.html#the-accesskey-attribute", "accesskey")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>A partir da {{SpecName('HTML4.01')}}, vários caracteres podem ser definidios como teclas de atalho. Além disso, pode ser definido em qualquer elemento.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', "interact/forms.html#h-17.11.2", "accesskey")}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>Suportado apenas em {{ HTMLElement("a") }}, {{ HTMLElement("area") }}, {{ HTMLElement("button") }}, {{ HTMLElement("input") }}, {{ HTMLElement("label") }}, {{ HTMLElement("legend") }} e {{ HTMLElement("textarea") }}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                    | Status                           | Comentário                                                                                                                                                                                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML5.2', "editing.html#the-accesskey-attribute", "accesskey")}}             | {{Spec2('HTML5.2')}}     | Comportamento mais realista descrito para o que é implementado na realidade.                                                                                                                                                                                                          |
+| {{SpecName('HTML WHATWG', "interaction.html#the-accesskey-attribute", "accesskey")}} | {{Spec2('HTML WHATWG')}} | Nenhuma alteração das últimas especificações do W3C {{SpecName('HTML5.1')}} .                                                                                                                                                                                                |
+| {{SpecName('HTML5.1', "editing.html#the-accesskey-attribute", "accesskey")}}             | {{Spec2('HTML5.1')}}     | Nenhuma alteração em {{SpecName('HTML5 W3C')}}.                                                                                                                                                                                                                                |
+| {{SpecName('HTML5 W3C', "editing.html#the-accesskey-attribute", "accesskey")}}         | {{Spec2('HTML5 W3C')}}     | A partir da {{SpecName('HTML4.01')}}, vários caracteres podem ser definidios como teclas de atalho. Além disso, pode ser definido em qualquer elemento.                                                                                                                       |
+| {{SpecName('HTML4.01', "interact/forms.html#h-17.11.2", "accesskey")}}                     | {{Spec2('HTML4.01')}}     | Suportado apenas em {{ HTMLElement("a") }}, {{ HTMLElement("area") }}, {{ HTMLElement("button") }}, {{ HTMLElement("input") }}, {{ HTMLElement("label") }}, {{ HTMLElement("legend") }} e {{ HTMLElement("textarea") }} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("html.global_attributes.accesskey")}}</p>
+{{Compat("html.global_attributes.accesskey")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("Element.accessKey")}}</li>
- <li>{{domxref("HTMLElement.accessKeyLabel")}}</li>
- <li>Todos os <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a>.</li>
-</ul>
+- {{domxref("Element.accessKey")}}
+- {{domxref("HTMLElement.accessKeyLabel")}}
+- Todos os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).

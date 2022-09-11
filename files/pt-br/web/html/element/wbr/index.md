@@ -3,56 +3,42 @@ title: <wbr>
 slug: Web/HTML/Element/wbr
 translation_of: Web/HTML/Element/wbr
 ---
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>O elemento HTML <code>&lt;wbr&gt;</code> representa uma posição no texto onde o navegador pode, opcionalmente, quebrar uma linha, embora suas regras de quebra de linha de outra forma não criar uma ruptura naquele local.</p>
+O elemento HTML `<wbr>` representa uma posição no texto onde o navegador pode, opcionalmente, quebrar uma linha, embora suas regras de quebra de linha de outra forma não criar uma ruptura naquele local.
 
-<p>Em UTF-8 páginas codificadas, <code>&lt;wbr&gt;</code> se comporta como o <code>B L 200 </code><code>de tamanho zero ESPAÇO</code> ponto de código. Em particular, ele se comporta como um bidi Unicode BN ponto de código, o que significa que não tem efeito sobre bidi-encomenda: <code>&lt;div dir=rtl&gt; 123, &lt;wbr&gt; 456 &lt;/ div&gt;</code> exibe, quando não quebrado em duas linhas, <code>123.456</code> e Não <code>456,123</code> .</p>
+Em UTF-8 páginas codificadas, `<wbr>` se comporta como o ` B L 200 ``de tamanho zero ESPAÇO ` ponto de código. Em particular, ele se comporta como um bidi Unicode BN ponto de código, o que significa que não tem efeito sobre bidi-encomenda: `<div dir=rtl> 123, <wbr> 456 </ div>` exibe, quando não quebrado em duas linhas, `123.456` e Não `456,123` .
 
-<p>Pela mesma razão, o <code>&lt;wbr&gt;</code> elemento não introduzir um hífen no ponto de quebra de linha. Para fazer um hífen só aparecem no final de uma linha, use a entidade suave caractere hífen ( <code>&amp;shy;</code> ) em seu lugar.</p>
+Pela mesma razão, o `<wbr>` elemento não introduzir um hífen no ponto de quebra de linha. Para fazer um hífen só aparecem no final de uma linha, use a entidade suave caractere hífen ( `&shy;` ) em seu lugar.
 
-<p>Este elemento foi implementado pela primeira vez no Internet Explorer 5.5 e foi oficialmente definido no HTML5.</p>
+Este elemento foi implementado pela primeira vez no Internet Explorer 5.5 e foi oficialmente definido no HTML5.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>Permitida conteúdo</td>
-   <td>Vazio</td>
-  </tr>
-  <tr>
-   <td>Tag omissão</td>
-   <td>Este é um elemento vazio; ele deve ter uma marca de início, mas não deve ter uma tag de fechamento.</td>
-  </tr>
-  <tr>
-   <td>Elementos pai permitidas</td>
-   <td>Qualquer elemento que aceita <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">conteúdo fraseado</a> .</td>
-  </tr>
-  <tr>
-   <td>Documento normativo</td>
-   <td><a class="external" href="https://dev.w3.org/html5/spec/text-level-semantics.html#the-wbr-element">HTML 5, seção 4.6.24</a></td>
-  </tr>
- </tbody>
-</table>
+| Permitida conteúdo       | Vazio                                                                                                    |
+| ------------------------ | -------------------------------------------------------------------------------------------------------- |
+| Tag omissão              | Este é um elemento vazio; ele deve ter uma marca de início, mas não deve ter uma tag de fechamento.      |
+| Elementos pai permitidas | Qualquer elemento que aceita [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content) . |
+| Documento normativo      | [HTML 5, seção 4.6.24](https://dev.w3.org/html5/spec/text-level-semantics.html#the-wbr-element)          |
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Este elemento só inclui os  <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">atributos globais </a>.</p>
+Este elemento só inclui os [atributos globais ](/pt-BR/docs/HTML/Global_attributes).
 
-<h2 id="DOM_interface">DOM interface</h2>
+## DOM interface
 
-<p>Este elemento implementa o <a href="/en-US/docs/DOM/HTMLElement">HTMLElement</a> interface.</p>
+Este elemento implementa o [HTMLElement](/pt-BR/docs/DOM/HTMLElement) interface.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p><em><a class="external" href="https://styleguide.yahoo.com/">O Guia de Estilo Yahoo</a> </em> recomenda <a class="external" href="https://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses">quebrar uma URL <em>antes de</em> pontuação</a> , para não deixar uma marca de pontuação no final da linha, o que o leitor pode confundir com o fim da URL.</p>
+_[O Guia de Estilo Yahoo](https://styleguide.yahoo.com/) \_recomenda [quebrar uma URL \_antes de_ pontuação](https://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses) , para não deixar uma marca de pontuação no final da linha, o que o leitor pode confundir com o fim da URL.
 
-<pre class="brush: html">&lt;p&gt;https://this&lt;wbr&gt;.is&lt;wbr&gt;.a&lt;wbr&gt;.really&lt;wbr&gt;.long&lt;wbr&gt;.example&lt;wbr&gt;.com/With&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;/p&gt;
-</pre>
+```html
+<p>https://this<wbr>.is<wbr>.a<wbr>.really<wbr>.long<wbr>.example<wbr>.com/With<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages</p>
+```
 
-<p>{{EmbedLiveSample ("Exemplo")}}</p>
+{{EmbedLiveSample ("Exemplo")}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("html.elements.wbr")}}

@@ -7,59 +7,28 @@ tags:
   - Referência(2)
 translation_of: Web/HTML/Global_attributes/id
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **id** define um identificador exclusivo (ID) que deve ser único por todo o documento. Seu objetivo é identificar o elemento ao navegar por âncoras\_ \_(usando um identificador de fragmento), quando utilizar scripts ou estilizando (com CSS).
 
-<div>O <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributo global</a> <strong>id</strong> define um identificador exclusivo (ID) que deve ser único por todo o documento. Seu objetivo é identificar o elemento ao navegar por âncoras<em> </em>(usando um identificador de fragmento), quando utilizar scripts ou estilizando (com CSS).</div>
+O valor deste atributo é uma string opaca: isso significa que os desenvolvedores não devem utilizá-lo para transmitir nenhuma informação. Significados específicos como, por exemplo, significado semântico não devem ser provenientes desta string.
 
-<div> </div>
+O valor deste atributo não deve conter lacunas (espaços, tabulações etc.). Navegadores tratam IDs inadequadas que contenham lacunas como se as lacunas fossem parte do ID. Em contraste com o atributo **class**, que permite múltiplos valores separados por espaço, os elementos podem ter somente um único ID.
 
-<p>O valor deste atributo é uma string opaca: isso significa que os desenvolvedores não devem utilizá-lo para transmitir nenhuma informação. Significados específicos como, por exemplo, significado semântico não devem ser provenientes desta string.</p>
+> **Note:** **Nota:** Utilizar caracteres exceto letras e dígitos ASCII, `'_'`, `'-'` e `'.'` pode causar problemas de compatibilidade, já que eles não eram permitidos no HTML 4. Embora esta restrição fora suspensa no HTML 5, um ID deve iniciar com uma letra para fins de compatibilidade.
 
-<p>O valor deste atributo não deve conter lacunas (espaços, tabulações etc.). Navegadores tratam IDs inadequadas que contenham lacunas como se as lacunas fossem parte do ID. Em contraste com o atributo <strong>class</strong>, que permite múltiplos valores separados por espaço, os elementos podem ter somente um único ID.</p>
+## Especificações
 
-<div class="note">
-<p><strong>Nota:</strong> Utilizar caracteres exceto letras e dígitos ASCII, <code>'_'</code>, <code>'-'</code> e <code>'.'</code> pode causar problemas de compatibilidade, já que eles não eram permitidos no HTML 4. Embora esta restrição fora suspensa no HTML 5, um ID deve iniciar com uma letra para fins de compatibilidade.</p>
-</div>
+| Especificação                                                                        | Status                           | Comentário                                                                                                                                                                                                                                                                               |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "dom.html#the-id-attribute", "id")}} | {{Spec2('HTML WHATWG')}} | Nenhuma mudança desde o mais recente snapshot, {{SpecName('HTML5.1')}}                                                                                                                                                                                                          |
+| {{SpecName('HTML5.1', "dom.html#the-id-attribute", "id")}}         | {{Spec2('HTML5.1')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, nenhuma mudança desde {{SpecName('HTML5 W3C')}}                                                                                                                                                                                 |
+| {{SpecName('HTML5 W3C', "dom.html#the-id-attribute", "id")}}     | {{Spec2('HTML5 W3C')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, passa a aceitar `'_'`, `'-'` and `'.'` se não estiverem no começo do ID. Se torna um atributo global verdadeiro.                                                                                                                       |
+| {{SpecName('HTML4.01', 'struct/global.html#adef-id', 'id')}}     | {{Spec2('HTML4.01')}}     | Suportado por todos os elementos menos {{HTMLElement("base")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, and {{HTMLElement("title")}}. |
 
-<h2 id="Especificações">Especificações</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "dom.html#the-id-attribute", "id")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Nenhuma mudança desde o mais recente snapshot, {{SpecName('HTML5.1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "dom.html#the-id-attribute", "id")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Snapshot de {{SpecName('HTML WHATWG')}}, nenhuma mudança desde {{SpecName('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "dom.html#the-id-attribute", "id")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Snapshot de {{SpecName('HTML WHATWG')}}, passa a aceitar <code>'_'</code>, <code>'-'</code> and <code>'.'</code> se não estiverem no começo do ID. Se torna um atributo global verdadeiro.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/global.html#adef-id', 'id')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>Suportado por todos os elementos menos {{HTMLElement("base")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, and {{HTMLElement("title")}}.</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("html.global_attributes.id")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Todos os <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a>.</li>
- <li>{{domxref("Element.id")}} para explorar este atributo.</li>
-</ul>
+- Todos os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+- {{domxref("Element.id")}} para explorar este atributo.

@@ -3,66 +3,48 @@ title: details
 slug: Web/HTML/Element/details
 translation_of: Web/HTML/Element/details
 ---
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O elemento HTML <em>details</em> (<code>&lt;details&gt;</code>) é usado como uma ferramenta de onde o usuário irá obter informações adicionais.</p>
+O elemento HTML _details_ (`<details>`) é usado como uma ferramenta de onde o usuário irá obter informações adicionais.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>Conteúdo permitido</td>
-   <td>Um elemento {{ HTMLElement("summary") }} seguido por <a href="/en/HTML/Content_categories#Flow_content" title="en/HTML/Content categories#Flow content">flow content</a></td>
-  </tr>
-  <tr>
-   <td>Omissão de tag</td>
-   <td>Nenhuma, tanto as tas iniciais quanto as finais são obrigatórias.</td>
-  </tr>
-  <tr>
-   <td>Elementos pais permitidos</td>
-   <td>Qualquer elemento que aceite flow content.</td>
-  </tr>
-  <tr>
-   <td>Documento normativo</td>
-   <td><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#the-details-element" rel="external nofollow">HTML5, section 4.11.1</a></td>
-  </tr>
- </tbody>
-</table>
+| Conteúdo permitido        | Um elemento {{ HTMLElement("summary") }} seguido por [flow content](/en/HTML/Content_categories#Flow_content "en/HTML/Content categories#Flow content") |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omissão de tag            | Nenhuma, tanto as tas iniciais quanto as finais são obrigatórias.                                                                                               |
+| Elementos pais permitidos | Qualquer elemento que aceite flow content.                                                                                                                      |
+| Documento normativo       | [HTML5, section 4.11.1](http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#the-details-element)                              |
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Como todos os elementos HTML, esse elemento aceita os <a href="/en/HTML/Global_attributes" rel="internal">global attributes</a>.</p>
+Como todos os elementos HTML, esse elemento aceita os [global attributes](/en/HTML/Global_attributes).
 
-<dl>
- <dt>{{ htmlattrdef("open") }}</dt>
- <dd>Esse atributo Booleano indica se os detalhes serão mostrados para o usuário ao carregar a página. Se omitido os detalhes não serão mostrados.</dd>
-</dl>
+- {{ htmlattrdef("open") }}
+  - : Esse atributo Booleano indica se os detalhes serão mostrados para o usuário ao carregar a página. Se omitido os detalhes não serão mostrados.
 
-<h2 id="Interface_do_DOM">Interface do DOM</h2>
+## Interface do DOM
 
-<p>Esse elemento implemena a interface<code><a href="/en/DOM/HTMLDetailsElement" title="en/DOM/HTMLDetailsElement"> HTMLDetailsElement</a></code>.</p>
+Esse elemento implemena a interface[` HTMLDetailsElement`](/en/DOM/HTMLDetailsElement "en/DOM/HTMLDetailsElement").
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: html">&lt;details&gt;
-  &lt;summary&gt;Alguns detalhes&lt;/summary&gt;
-  &lt;p&gt;Mais informações sobre os detalhes.&lt;/p&gt;
-&lt;/details&gt;
-</pre>
+```html
+<details>
+  <summary>Alguns detalhes</summary>
+  <p>Mais informações sobre os detalhes.</p>
+</details>
+```
 
-<h3 id="Demonstração">Demonstração</h3>
+### Demonstração
 
-<p><a class="external" href="http://html5-demos.appspot.com/static/html5-whats-new/template/index.html#5">Demo</a></p>
+[Demo](http://html5-demos.appspot.com/static/html5-whats-new/template/index.html#5)
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("html.elements.details")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ HTMLElement("summary") }}</li>
-</ul>
+- {{ HTMLElement("summary") }}
 
-<div class="noinclude">{{ languages({ "en": "en/HTML/Element/details", "ja": "ja/HTML/Element/details" }) }}</div>
+{{ languages({ "en": "en/HTML/Element/details", "ja": "ja/HTML/Element/details" }) }}

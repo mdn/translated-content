@@ -3,73 +3,57 @@ title: datalist
 slug: Web/HTML/Element/datalist
 translation_of: Web/HTML/Element/datalist
 ---
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O elemento HTML <em>Datalist</em> (<span style="font-family: Courier New;">&lt;datalist&gt;</span>) contém um conjunto de elementos {{ HTMLElement("option") }} que representam as opções possíveis para o valor de outros controles.</p>
+O elemento HTML _Datalist_ (\<datalist>) contém um conjunto de elementos {{ HTMLElement("option") }} que representam as opções possíveis para o valor de outros controles.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>Conteúdo permitido</td>
-   <td><a href="/en/HTML/Content_categories#phrasing_content" title="en/HTML/Content categories#phrasing content">Phrasing content</a> ou qualquer quantidade de elementos {{ HTMLElement("option") }} (ou nenhum)</td>
-  </tr>
-  <tr>
-   <td>Omissão de tags</td>
-   <td>Nenhuma, ambas as tags inicial e final são obrigatórias</td>
-  </tr>
-  <tr>
-   <td>Elementos pais permitidos</td>
-   <td>Qualquer elemento que aceite <a href="/en/HTML/Content_categories#phrasing_content" title="en/HTML/Content categories#phrasing content">phrasing content</a></td>
-  </tr>
-  <tr>
-   <td>Documento normativo</td>
-   <td><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-datalist-element" rel="external nofollow">HTML5, section 4.10.10</a></td>
-  </tr>
- </tbody>
-</table>
+| Conteúdo permitido        | [Phrasing content](/en/HTML/Content_categories#phrasing_content "en/HTML/Content categories#phrasing content") ou qualquer quantidade de elementos {{ HTMLElement("option") }} (ou nenhum) |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omissão de tags           | Nenhuma, ambas as tags inicial e final são obrigatórias                                                                                                                                             |
+| Elementos pais permitidos | Qualquer elemento que aceite [phrasing content](/en/HTML/Content_categories#phrasing_content "en/HTML/Content categories#phrasing content")                                                         |
+| Documento normativo       | [HTML5, section 4.10.10](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-datalist-element)                                                                  |
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Esse elemento não tem nenhum atributo a não ser os <a href="/en/HTML/Global_attributes" title="en/HTML/Global attributes">global attributes</a>, comuns para todos os elementos.</p>
+Esse elemento não tem nenhum atributo a não ser os [global attributes](/en/HTML/Global_attributes "en/HTML/Global attributes"), comuns para todos os elementos.
 
-<h2 class="editable" id="Interface_do_DOM">Interface do DOM</h2>
+## Interface do DOM
 
-<p>Esse elemento implementa a interface <code><a href="/en/DOM/HTMLDataListElement" title="en/DOM/HTMLDataListElement">HTMLDataListElement</a></code>.</p>
+Esse elemento implementa a interface [`HTMLDataListElement`](/en/DOM/HTMLDataListElement "en/DOM/HTMLDataListElement").
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: html notranslate">&lt;input list="browsers" /&gt;
-&lt;datalist id="browsers"&gt;
-  &lt;option value="Chrome"&gt;
-  &lt;option value="Firefox"&gt;
-  &lt;option value="Internet Explorer"&gt;
-  &lt;option value="Opera"&gt;
-  &lt;option value="Safari"&gt;
-&lt;/datalist&gt;
-</pre>
+```html
+<input list="browsers" />
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Internet Explorer">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+```
 
-<p><a href="/samples/html/datalist.html">View Live Examples</a></p>
+[View Live Examples](/samples/html/datalist.html)
 
-<p>Esse código HTML é renderizado assim no Firefox 4:</p>
+Esse código HTML é renderizado assim no Firefox 4:
 
-<p><img alt="datalist.png" class="default internal" src="/@api/deki/files/4982/=datalist.png"></p>
+![datalist.png](/@api/deki/files/4982/=datalist.png)
 
-<h2 id="Compatibilidade">Compatibilidade</h2>
+## Compatibilidade
 
 {{Compat("html.elements.datalist")}}
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Inclua este polyfill para fornecer suporte para navegadores mais antigos e atualmente incompatíveis:<br>
- <a href="https://github.com/mfranzke/datalist-polyfill">datalist-polyfill</a></p>
+Inclua este polyfill para fornecer suporte para navegadores mais antigos e atualmente incompatíveis:
+[datalist-polyfill](https://github.com/mfranzke/datalist-polyfill)
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li class="last">O elemento {{ HTMLElement("input") }}, especialmente seu atributo {{ htmlattrxref("list", "input") }};</li>
- <li class="last">O elemento {{ HTMLElement("option") }}.</li>
-</ul>
+- O elemento {{ HTMLElement("input") }}, especialmente seu atributo {{ htmlattrxref("list", "input") }};
+- O elemento {{ HTMLElement("option") }}.
 
-<div>{{ languages({ "zh-cn": "zh-cn/HTML/Element/datalist", "ja": "ja/HTML/Element/datalist" }) }}</div>
+{{ languages({ "zh-cn": "zh-cn/HTML/Element/datalist", "ja": "ja/HTML/Element/datalist" }) }}

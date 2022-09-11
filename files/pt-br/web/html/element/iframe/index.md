@@ -3,176 +3,135 @@ title: <iframe>
 slug: Web/HTML/Element/iframe
 translation_of: Web/HTML/Element/iframe
 ---
-<p>O <strong>elemento</strong><strong> HTML </strong><strong>&lt;iframe&gt;</strong> (ou <em>elemento HTML </em><em>inline frame</em>) representa um contexto de navegação aninhado, efetivamente incorporando outra página HTML para a página atual. Em HTML 4.01, um documento pode conter uma cabeça e um corpo ou uma cabeça e um conjunto de quadros, mas não tanto um corpo e um conjunto de quadros. No entanto, um &lt;iframe&gt; pode ser usado dentro de um corpo de documento normal. Cada contexto de navegação tem sua própria história de sessão e o documento ativo. O contexto de navegação que contém o conteúdo incorporado é chamado o pai de contexto de navegação. O contexto de navegação de nível superior (que não tem um pai) normalmente é a janela do navegador.</p>
+O **elemento** **HTML** **\<iframe>** (ou _elemento HTML_ _inline frame_) representa um contexto de navegação aninhado, efetivamente incorporando outra página HTML para a página atual. Em HTML 4.01, um documento pode conter uma cabeça e um corpo ou uma cabeça e um conjunto de quadros, mas não tanto um corpo e um conjunto de quadros. No entanto, um \<iframe> pode ser usado dentro de um corpo de documento normal. Cada contexto de navegação tem sua própria história de sessão e o documento ativo. O contexto de navegação que contém o conteúdo incorporado é chamado o pai de contexto de navegação. O contexto de navegação de nível superior (que não tem um pai) normalmente é a janela do navegador.
 
-<div> </div>
+- _[Content categories](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content categories#Phrasing content"), embedded content, interactive content, palpable content.
+- \_Permitted content_Special, see prose
+- _Tag omission_ {{no_tag_omission}}
+- _Permitted parent elements_ Any element that accepts embedded content.
+- _DOM interface_ {{domxref("HTMLIFrameElement")}}
 
-<ul>
- <li><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Content categories</a></dfn> <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">Flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content categories#Phrasing content">phrasing content</a>, embedded content, interactive content, palpable content.</li>
- <li><dfn>Permitted content</dfn>Special, see prose</li>
- <li><dfn>Tag omission</dfn> {{no_tag_omission}}</li>
- <li><dfn>Permitted parent elements</dfn> Any element that accepts embedded content.</li>
- <li><dfn>DOM interface</dfn> {{domxref("HTMLIFrameElement")}}</li>
-</ul>
+## Atributos
 
-<h2 id="Atributos">Atributos</h2>
+Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
 
-<p>Este elemento inclui os <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">atributos globais</a>.</p>
+- {{htmlattrdef("align")}} {{deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
+  - : O alinhamento deste elemento em relação ao contexto.
+- {{htmlattrdef("allowfullscreen")}}
+  - : Esse atributo pode ser definido como true se o quadro é permitido para ser colocado em modo de tela cheia, chamando seu método de {{domxref("element.mozRequestFullScreen()")}}. Se isto não estiver definido, o elemento não pode ser colocado em modo de tela cheia.
+- {{htmlattrdef("frameborder")}} {{HTMLVersionInline(4)}} only
+  - : O valor 1 (o padrão) pede ao navegador para desenhar uma borda entre este quadro e todos os outros quadros. O valor 0 informa ao navegador para não traçar uma fronteira entre este quadro e outros quadros.
+- {{htmlattrdef("height")}}
+  - : Indica a altura do quadro {{HTMLVersionInline(5)}} em pixels CSS, ou {{HTMLVersionInline(4.01)}} em pixels ou porcentagem.
+- {{htmlattrdef("longdesc")}} {{HTMLVersionInline(4)}} only
+  - : Uma URI de uma longa descrição do quadro. Devido à má utilização generalizada, isto não é útil para navegadores não-visuais.
+- {{htmlattrdef("marginheight")}} {{HTMLVersionInline(4)}} only
+  - : A quantidade de espaço em pixels entre o conteúdo do quadro e suas margens superior e inferior.
+- {{htmlattrdef("marginwidth")}} {{HTMLVersionInline(4)}} only
+  - : A quantidade de espaço em pixels entre o conteúdo dos quadros e suas margens direita e esquerda.
+- {{htmlattrdef("mozallowfullscreen")}} {{non-standard_inline}} {{deprecated_inline}}
+  - : Use **`allowfullscreen`** ao invés. Em Gecko 9.0 or later, this attribute can be set to `true` if the frame is allowed to be placed into full screen mode by calling its {{domxref("element.mozRequestFullScreen()")}} method. If this isn't set, the element can't be placed into full screen mode.
+- {{htmlattrdef("webkitallowfullscreen")}} {{non-standard_inline}} {{deprecated_inline}}
+  - : Use **`allowfullscreen`** ao invés. No Chrome 17 ou mais novo (e talvez mais antigo), this attribute can be set to `true` if the frame is allowed to be placed into full screen mode by calling its {{domxref("element.webkitRequestFullScreen()")}} method. If this isn't set, the element can't be placed into full screen mode.
+- {{htmlattrdef("mozapp")}} {{non-standard_inline}}
+  - : For frames hosting an [open web app](/pt-BR/docs/Apps "OpenWebApps"), this specifies the URL of the [app manifest](/pt-BR/docs/Apps/Manifest "Apps/Manifest"). This ensures that the app is loaded with the right permissions. See [Using the Browser API](/pt-BR/docs/DOM/Using_the_Browser_API "DOM/Using_the_Browser_API") for details. Available in Gecko 13.0 and later.
+- {{htmlattrdef("mozbrowser")}} {{non-standard_inline}}
+  - : Indicates that the frame is to appear like a top-level browser window to the embedded content. This means that {{domxref("window.top")}}, {{domxref("window.parent")}}, {{domxref("window.frameElement")}}, etc. will _not_ reflect the frame hierarchy. This allows for a web browser UI to be implemented entirely with web technology, given the right permissions. See [Using the Browser API](/pt-BR/docs/DOM/Using_the_Browser_API "DOM/Using_the_Browser_API") for details. Available in Gecko 13.0 and later.
+- {{htmlattrdef("name")}}
+  - : A name for the embedded browsing context (or frame). This can be used as the value of the **`target`** attribute of an {{HTMLElement("a")}} or {{HTMLElement("form")}} element, or the formtarget attribute of an {{HTMLElement("input")}} or {{HTMLElement("button")}} element.
+- {{htmlattrdef("remote")}} {{non-standard_inline}}
+  - : Carrega a página do _frame_ em um processo separado.
+- {{htmlattrdef("scrolling")}} {{HTMLVersionInline(4)}} only
 
-<dl>
- <dt>{{htmlattrdef("align")}} {{deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}</dt>
- <dd>
- <div>O alinhamento deste elemento em relação ao contexto.</div>
- </dd>
- <dt>{{htmlattrdef("allowfullscreen")}}</dt>
- <dd>
- <div>Esse atributo pode ser definido como true se o quadro é permitido para ser colocado em modo de tela cheia, chamando seu método de {{domxref("element.mozRequestFullScreen()")}}. Se isto não estiver definido, o elemento não pode ser colocado em modo de tela cheia.</div>
- </dd>
- <dt>{{htmlattrdef("frameborder")}} {{HTMLVersionInline(4)}} only</dt>
- <dd>
- <div>O valor 1 (o padrão) pede ao navegador para desenhar uma borda entre este quadro e todos os outros quadros. O valor 0 informa ao navegador para não traçar uma fronteira entre este quadro e outros quadros.</div>
- </dd>
- <dt>{{htmlattrdef("height")}}</dt>
- <dd>Indica a altura do quadro {{HTMLVersionInline(5)}} em pixels CSS, ou {{HTMLVersionInline(4.01)}} em pixels ou porcentagem.</dd>
- <dt>{{htmlattrdef("longdesc")}} {{HTMLVersionInline(4)}} only</dt>
- <dd>Uma URI de uma longa descrição do quadro. Devido à má utilização generalizada, isto não é útil para navegadores não-visuais.</dd>
- <dt>{{htmlattrdef("marginheight")}} {{HTMLVersionInline(4)}} only</dt>
- <dd>
- <div>A quantidade de espaço em pixels entre o conteúdo do quadro e suas margens superior e inferior.</div>
- </dd>
- <dt>{{htmlattrdef("marginwidth")}} {{HTMLVersionInline(4)}} only</dt>
- <dd>A quantidade de espaço em pixels entre o conteúdo dos quadros e suas margens direita e esquerda.</dd>
- <dt>{{htmlattrdef("mozallowfullscreen")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Use <code><strong>allowfullscreen</strong></code> ao invés. Em Gecko 9.0 or later, this attribute can be set to <code>true</code> if the frame is allowed to be placed into full screen mode by calling its {{domxref("element.mozRequestFullScreen()")}} method. If this isn't set, the element can't be placed into full screen mode.</dd>
- <dt>{{htmlattrdef("webkitallowfullscreen")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Use <code><strong>allowfullscreen</strong></code> ao invés. No Chrome 17 ou mais novo (e talvez mais antigo), this attribute can be set to <code>true</code> if the frame is allowed to be placed into full screen mode by calling its {{domxref("element.webkitRequestFullScreen()")}} method. If this isn't set, the element can't be placed into full screen mode.</dd>
- <dt>{{htmlattrdef("mozapp")}} {{non-standard_inline}}</dt>
- <dd>For frames hosting an <a href="/en-US/docs/Apps" title="OpenWebApps">open web app</a>, this specifies the URL of the <a href="/en-US/docs/Apps/Manifest" title="Apps/Manifest">app manifest</a>. This ensures that the app is loaded with the right permissions. See <a href="/en-US/docs/DOM/Using_the_Browser_API" title="DOM/Using_the_Browser_API">Using the Browser API</a> for details. Available in Gecko 13.0 and later.</dd>
- <dt>{{htmlattrdef("mozbrowser")}} {{non-standard_inline}}</dt>
- <dd>Indicates that the frame is to appear like a top-level browser window to the embedded content. This means that {{domxref("window.top")}}, {{domxref("window.parent")}}, {{domxref("window.frameElement")}}, etc. will <em>not</em> reflect the frame hierarchy. This allows for a web browser UI to be implemented entirely with web technology, given the right permissions. See <a href="/en-US/docs/DOM/Using_the_Browser_API" title="DOM/Using_the_Browser_API">Using the Browser API</a> for details. Available in Gecko 13.0 and later.</dd>
- <dt id="name-attribute">{{htmlattrdef("name")}}</dt>
- <dd>A name for the embedded browsing context (or frame). This can be used as the value of the <code><strong>target</strong></code> attribute of an {{HTMLElement("a")}} or {{HTMLElement("form")}} element, or the formtarget attribute of an {{HTMLElement("input")}} or {{HTMLElement("button")}} element.</dd>
- <dt>{{htmlattrdef("remote")}} {{non-standard_inline}}</dt>
- <dd>Carrega a página do <em>frame</em> em um processo separado.</dd>
- <dt>{{htmlattrdef("scrolling")}} {{HTMLVersionInline(4)}} only</dt>
- <dd>Enumerated attribute indicating when the browser should provide a scroll bar (or other scrolling device) for the frame:
- <ul>
-  <li><code>auto</code>: Só quando necessário.</li>
-  <li><code>yes</code>: Sempre mostrar uma barra de rolagem.</li>
-  <li><code>no</code>: Nunca mostrar uma barra de rolagem.</li>
- </ul>
- </dd>
- <dt>{{htmlattrdef("sandbox")}} {{HTMLVersionInline(5)}} only</dt>
- <dd>If specified as an empty string, this attribute enables extra restrictions on the content that can appear in the inline frame. The value of the attribute can either be an empty string (all the restrictions are applied), or a space-separated list of tokens that lift particular restrictions. Valid tokens are:
- <ul>
-  <li><code>allow-same-origin</code>: Allows the content to be treated as being from its normal origin. If this keyword is not used, the embedded content is treated as being from a unique origin.</li>
-  <li><code>allow-top-navigation</code>: Allows the embedded browsing context to navigate (load) content to the top-level browsing context. If this keyword is not used, this operation is not allowed.</li>
-  <li><code>allow-forms</code>: Allows the embedded browsing context to submit forms. If this keyword is not used, this operation is not allowed.</li>
-  <li><code>allow-popups</code>: Allows popups (like from window.open).</li>
-  <li><code>allow-scripts</code>: Allows the embedded browsing context to run scripts (but not create pop-up windows). If this keyword is not used, this operation is not allowed.</li>
-  <li><code>allow-pointer-lock</code>: Allows the embedded browsing context to use the <a href="/en-US/docs/WebAPI/Pointer_Lock">Pointer Lock API</a>.</li>
- </ul>
+  - : Enumerated attribute indicating when the browser should provide a scroll bar (or other scrolling device) for the frame:
 
- <div class="note">
- <p><strong>Note:</strong></p>
+    - `auto`: Só quando necessário.
+    - `yes`: Sempre mostrar uma barra de rolagem.
+    - `no`: Nunca mostrar uma barra de rolagem.
 
- <ul>
-  <li>When the embedded document has the same origin as the main page, it is strongly discouraged to use both <code>allow-scripts</code> and <code>allow-same-origin</code> at the same time, as that allows the embedded document to programmatically remove the <code>sandbox</code> attribute. Although it is accepted, this case is no more secure than not using the <code>sandbox</code> attribute.</li>
-  <li>Sandboxing in general is only of minimal help if the attacker can arrange for the potentially hostile content to be displayed in the user's browser outside a sandboxed <code>iframe</code>. It is recommended that such content should be served from a <em>separate dedicated domain</em>, to limit the potential damage.</li>
-  <li>The <code>sandbox</code> attribute is not supported in Internet Explorer 9 and earlier versions, or in Opera.</li>
- </ul>
- </div>
- </dd>
- <dt>{{htmlattrdef("seamless")}} {{HTMLVersionInline(5)}} only</dt>
- <dd>This <strong>Boolean attribute</strong> indicates that the browser should render the inline frame in a way that makes it appear to be part of the containing document, for example by applying CSS styles that apply to the <code>&lt;iframe&gt;</code> to the contained document before styles specified in that document, and by opening links in the contained documents in the parent browsing context (unless another setting prevents this). In XHTML, attribute minimization is forbidden, and the seamless attribute must be defined as <code>&lt;iframe seamless="seamless"&gt;</code>.</dd>
- <dt>{{htmlattrdef("src")}}</dt>
- <dd>The URL of the page to embed.</dd>
- <dt>{{htmlattrdef("srcdoc")}} {{HTMLVersionInline(5)}} only</dt>
- <dd>The content of the page that the embedded context is to contain. This attribute is expected to be used together with the sandbox and seamless attributes. If a browser supports the <code>srcdoc</code> attribute, it will override the content specified in the <code>src</code> attribute (if present). If a browser does NOT support the <code>srcdoc</code> attribute, it will show the file specified in the <code>src</code> attribute instead (if present).</dd>
- <dt>{{htmlattrdef("width")}}</dt>
- <dd>Indicates the width of the frame {{HTMLVersionInline(5)}} in CSS pixels, or {{HTMLVersionInline(4.01)}} in pixels or as a percentage.</dd>
-</dl>
+- {{htmlattrdef("sandbox")}} {{HTMLVersionInline(5)}} only
 
-<h2 id="Scripting">Scripting</h2>
+  - : If specified as an empty string, this attribute enables extra restrictions on the content that can appear in the inline frame. The value of the attribute can either be an empty string (all the restrictions are applied), or a space-separated list of tokens that lift particular restrictions. Valid tokens are:
 
-<p>Inline frames, like {{HTMLElement("frame")}} elements, enter the {{domxref("window.frames")}} pseudo-array.</p>
+    - `allow-same-origin`: Allows the content to be treated as being from its normal origin. If this keyword is not used, the embedded content is treated as being from a unique origin.
+    - `allow-top-navigation`: Allows the embedded browsing context to navigate (load) content to the top-level browsing context. If this keyword is not used, this operation is not allowed.
+    - `allow-forms`: Allows the embedded browsing context to submit forms. If this keyword is not used, this operation is not allowed.
+    - `allow-popups`: Allows popups (like from window\.open).
+    - `allow-scripts`: Allows the embedded browsing context to run scripts (but not create pop-up windows). If this keyword is not used, this operation is not allowed.
+    - `allow-pointer-lock`: Allows the embedded browsing context to use the [Pointer Lock API](/pt-BR/docs/WebAPI/Pointer_Lock).
 
-<p>From the DOM <code>iframe</code> element, scripts can get access to the {{domxref("window")}} object of the included HTML page via the <code>contentWindow</code> property. The <code>contentDocument</code> property refers to the document element inside the <code>iframe</code> (this is equivalent to <code>contentWindow.document</code>), but is not supported by Internet Explorer versions before IE8.</p>
+    > **Note:**
+    >
+    > - When the embedded document has the same origin as the main page, it is strongly discouraged to use both `allow-scripts` and `allow-same-origin` at the same time, as that allows the embedded document to programmatically remove the `sandbox` attribute. Although it is accepted, this case is no more secure than not using the `sandbox` attribute.
+    > - Sandboxing in general is only of minimal help if the attacker can arrange for the potentially hostile content to be displayed in the user's browser outside a sandboxed `iframe`. It is recommended that such content should be served from a _separate dedicated domain_, to limit the potential damage.
+    > - The `sandbox` attribute is not supported in Internet Explorer 9 and earlier versions, or in Opera.
 
-<p>From the inside of a frame, a script can get a reference to the parent window via {{domxref("window.parent")}}.</p>
+- {{htmlattrdef("seamless")}} {{HTMLVersionInline(5)}} only
+  - : This **Boolean attribute** indicates that the browser should render the inline frame in a way that makes it appear to be part of the containing document, for example by applying CSS styles that apply to the `<iframe>` to the contained document before styles specified in that document, and by opening links in the contained documents in the parent browsing context (unless another setting prevents this). In XHTML, attribute minimization is forbidden, and the seamless attribute must be defined as `<iframe seamless="seamless">`.
+- {{htmlattrdef("src")}}
+  - : The URL of the page to embed.
+- {{htmlattrdef("srcdoc")}} {{HTMLVersionInline(5)}} only
+  - : The content of the page that the embedded context is to contain. This attribute is expected to be used together with the sandbox and seamless attributes. If a browser supports the `srcdoc` attribute, it will override the content specified in the `src` attribute (if present). If a browser does NOT support the `srcdoc` attribute, it will show the file specified in the `src` attribute instead (if present).
+- {{htmlattrdef("width")}}
+  - : Indicates the width of the frame {{HTMLVersionInline(5)}} in CSS pixels, or {{HTMLVersionInline(4.01)}} in pixels or as a percentage.
 
-<p>Scripts trying to access a frame's content are subject to the <a href="/en-US/docs/Same_origin_policy_for_JavaScript" title="Same origin policy for JavaScript">same-origin policy</a>, and cannot access most of the properties in the other window object if it was loaded from a different domain. This also applies to a script inside a frame trying to access its parent window. Cross-domain communication can still be achieved with {{domxref("window.postMessage")}}.</p>
+## Scripting
 
-<h2 id="Exemplo_1">Exemplo 1</h2>
+Inline frames, like {{HTMLElement("frame")}} elements, enter the {{domxref("window.frames")}} pseudo-array.
 
-<pre class="brush: html">&lt;script&gt;
+From the DOM `iframe` element, scripts can get access to the {{domxref("window")}} object of the included HTML page via the `contentWindow` property. The `contentDocument` property refers to the document element inside the `iframe` (this is equivalent to `contentWindow.document`), but is not supported by Internet Explorer versions before IE8.
+
+From the inside of a frame, a script can get a reference to the parent window via {{domxref("window.parent")}}.
+
+Scripts trying to access a frame's content are subject to the [same-origin policy](/pt-BR/docs/Same_origin_policy_for_JavaScript "Same origin policy for JavaScript"), and cannot access most of the properties in the other window object if it was loaded from a different domain. This also applies to a script inside a frame trying to access its parent window. Cross-domain communication can still be achieved with {{domxref("window.postMessage")}}.
+
+## Exemplo 1
+
+```html
+<script>
   var iframe = window.getElementsByTagName( "iframe" )[ 0 ];
   alert( "Frame title: " + iframe.contentWindow.title );
-&lt;/script&gt;
+</script>
 
 
-&lt;iframe src="page.html" width="300" height="300"&gt;
-  &lt;p&gt;Your browser does not support iframes.&lt;/p&gt;
-&lt;/iframe&gt;</pre>
+<iframe src="page.html" width="300" height="300">
+  <p>Your browser does not support iframes.</p>
+</iframe>
+```
 
-<h2 id="Exemplo_2_Open_link_inside_iframe_in_another_tab">Exemplo 2: Open link inside iframe in another tab</h2>
+## Exemplo 2: Open link inside iframe in another tab
 
-<div>
-<pre class="brush: html">&lt;base target="_blank" /&gt;
-&lt;iframe width="400" height="215" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-   src="https://maps.google.com/maps?f=q&amp;amp;source=s_q&amp;amp;hl=es-419&amp;amp;geocode=&amp;amp;q=buenos+aires&amp;amp;sll=37.0625,-95.677068&amp;amp;sspn=38.638819,80.859375&amp;amp;t=h&amp;amp;ie=UTF8&amp;amp;hq=&amp;amp;hnear=Buenos+Aires,+Argentina&amp;amp;z=11&amp;amp;ll=-34.603723,-58.381593&amp;amp;output=embed"&gt;
-&lt;/iframe&gt;&lt;br /&gt;
-&lt;small&gt;
-    &lt;a href="https://maps.google.com/maps?f=q&amp;amp;source=embed&amp;amp;hl=es-419&amp;amp;geocode=&amp;amp;q=buenos+aires&amp;amp;sll=37.0625,-95.677068&amp;amp;sspn=38.638819,80.859375&amp;amp;t=h&amp;amp;ie=UTF8&amp;amp;hq=&amp;amp;hnear=Buenos+Aires,+Argentina&amp;amp;z=11&amp;amp;ll=-34.603723,-58.381593"
-       style="color:#0000FF;text-align:left"&gt;
+```html
+<base target="_blank" />
+<iframe width="400" height="215" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+   src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=es-419&amp;geocode=&amp;q=buenos+aires&amp;sll=37.0625,-95.677068&amp;sspn=38.638819,80.859375&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Buenos+Aires,+Argentina&amp;z=11&amp;ll=-34.603723,-58.381593&amp;output=embed">
+</iframe><br />
+<small>
+    <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=es-419&amp;geocode=&amp;q=buenos+aires&amp;sll=37.0625,-95.677068&amp;sspn=38.638819,80.859375&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Buenos+Aires,+Argentina&amp;z=11&amp;ll=-34.603723,-58.381593"
+       style="color:#0000FF;text-align:left">
         See bigger map
-    &lt;/a&gt;
-&lt;/small&gt;</pre>
-</div>
+    </a>
+</small>
+```
 
-<h2 id="Resultado">Resultado</h2>
+## Resultado
 
-<p><a href="http://jsfiddle.net/pablofiumara/mCfAe/">Live example</a></p>
+[Live example](http://jsfiddle.net/pablofiumara/mCfAe/)
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<div class="note">
-<p><strong>Note:</strong> Starting in {{Gecko("6.0")}}, rendering of inline frames correctly respects the borders of their containing element when they're rounded using {{cssxref("border-radius")}}.</p>
-</div>
+> **Note:** Starting in {{Gecko("6.0")}}, rendering of inline frames correctly respects the borders of their containing element when they're rounded using {{cssxref("border-radius")}}.
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'the-iframe-element.html#the-iframe-element', '&lt;iframe&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'embedded-content-0.html#the-iframe-element', '&lt;iframe&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'present/frames.html#h-16.5', '&lt;iframe&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                            | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', 'the-iframe-element.html#the-iframe-element', '&lt;iframe&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML5 W3C', 'embedded-content-0.html#the-iframe-element', '&lt;iframe&gt;')}} | {{Spec2('HTML5 W3C')}}     |         |
+| {{SpecName('HTML4.01', 'present/frames.html#h-16.5', '&lt;iframe&gt;')}}                         | {{Spec2('HTML4.01')}}     |         |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade dos navegadores</h2>
+## Compatibilidade dos navegadores
 
+{{Compat("html.elements.iframe", 3)}}
 
-
-<p>{{Compat("html.elements.iframe", 3)}}</p>
-
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

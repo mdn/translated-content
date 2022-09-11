@@ -7,68 +7,42 @@ tags:
   - Referencia
 translation_of: Web/HTML/Global_attributes/title
 ---
-<p>{{HTMLSidebar("Global_attributes")}}</p>
+{{HTMLSidebar("Global_attributes")}}
 
-<p><span class="seoSummary">O <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributo global</a> <strong>title </strong>contém textos representando informações de orientação, relacionados ao elemento a que pertence. Geralmente, mas não obrigatoriamente, esta informação pode ser apresentada ao usuário como uma dica. Alguns usos comuns:</span></p>
+O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **title** contém textos representando informações de orientação, relacionados ao elemento a que pertence. Geralmente, mas não obrigatoriamente, esta informação pode ser apresentada ao usuário como uma dica. Alguns usos comuns:
 
-<ul>
- <li>Link: título ou descrição do documento vinculado</li>
- <li>Elemento de mídia como uma imagem: descrição ou créditos associados</li>
- <li>Parágrafo: nota de rodapé ou um comentário sobre ele</li>
- <li>Citação: informação sobre o autor, e assim por diante.</li>
-</ul>
+- Link: título ou descrição do documento vinculado
+- Elemento de mídia como uma imagem: descrição ou créditos associados
+- Parágrafo: nota de rodapé ou um comentário sobre ele
+- Citação: informação sobre o autor, e assim por diante.
 
-<p>Se este atributo for omitido, significa que o título do antecessor mais próximo desse elemento ainda é relevante (e poderá ser usado como dica para este elemento). Se este atributo estiver difinido como uma <em>string vazia</em>, significa explicitamente que o título do antecessor mais próximo não é relevante (e não deve ser usado como dica para este elemento).</p>
+Se este atributo for omitido, significa que o título do antecessor mais próximo desse elemento ainda é relevante (e poderá ser usado como dica para este elemento). Se este atributo estiver difinido como uma _string vazia_, significa explicitamente que o título do antecessor mais próximo não é relevante (e não deve ser usado como dica para este elemento).
 
-<p>Semânticas adicionais são anexadas aos atributos <strong>title</strong> dos elementos {{ HTMLElement("link") }}, {{ HTMLElement("abbr") }}, {{ HTMLElement("input") }} e {{ HTMLElement("menuitem") }}.</p>
+Semânticas adicionais são anexadas aos atributos **title** dos elementos {{ HTMLElement("link") }}, {{ HTMLElement("abbr") }}, {{ HTMLElement("input") }} e {{ HTMLElement("menuitem") }}.
 
-<p>O atributo <strong>title</strong> pode conter várias linhas. Cada <code>U+000A LINE FEED</code> (<code>LF</code>) inserida representa uma nova linha. Alguns cuidados devem ser tomados, como a seguir:</p>
+O atributo **title** pode conter várias linhas. Cada `U+000A LINE FEED` (`LF`) inserida representa uma nova linha. Alguns cuidados devem ser tomados, como a seguir:
 
-<pre class="brush: html">&lt;p&gt;Novas linhas em título devem ser levadas em conta, como este &lt;abbr title="Este é um
-título de multiplas linhas"&gt;exemplo&lt;/abbr&gt;.&lt;/p&gt;
-</pre>
+```html
+<p>Novas linhas em título devem ser levadas em conta, como este <abbr title="Este é um
+título de multiplas linhas">exemplo</abbr>.</p>
+```
 
-<p>Este exemplo define um título de duas linhas.</p>
+Este exemplo define um título de duas linhas.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "elements.html#the-title-attribute", "title")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from latest snapshot, {{SpecName('HTML5.1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "dom.html#the-title-attribute", "title")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Snapshot of {{SpecName('HTML WHATWG')}}, no change from {{SpecName('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "dom.html#the-title-attribute", "title")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Snapshot of {{SpecName('HTML WHATWG')}}. From {{SpecName("HTML4.01")}}, it is now a true global attribute.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/global.html#adef-title', 'title')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>Supported on all elements but {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, and {{HTMLElement("title")}}.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                           | Comment                                                                                                                                                                                                                                                                                                               |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "elements.html#the-title-attribute", "title")}} | {{Spec2('HTML WHATWG')}} | No change from latest snapshot, {{SpecName('HTML5.1')}}                                                                                                                                                                                                                                                      |
+| {{SpecName('HTML5.1', "dom.html#the-title-attribute", "title")}}             | {{Spec2('HTML5.1')}}     | Snapshot of {{SpecName('HTML WHATWG')}}, no change from {{SpecName('HTML5 W3C')}}                                                                                                                                                                                                                     |
+| {{SpecName('HTML5 W3C', "dom.html#the-title-attribute", "title")}}         | {{Spec2('HTML5 W3C')}}     | Snapshot of {{SpecName('HTML WHATWG')}}. From {{SpecName("HTML4.01")}}, it is now a true global attribute.                                                                                                                                                                                           |
+| {{SpecName('HTML4.01', 'struct/global.html#adef-title', 'title')}}         | {{Spec2('HTML4.01')}}     | Supported on all elements but {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, and {{HTMLElement("title")}}. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("html.global_attributes.title")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Todos os <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a>.</li>
- <li>{{domxref("HTMLElement.title")}} que reflete este atributo.</li>
-</ul>
+- Todos os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+- {{domxref("HTMLElement.title")}} que reflete este atributo.

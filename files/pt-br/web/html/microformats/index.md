@@ -4,136 +4,102 @@ slug: Web/HTML/microformats
 translation_of: Web/HTML/microformats
 original_slug: Web/HTML/microformatos
 ---
-<div>{{HTMLSidebar}}</div>
+{{HTMLSidebar}}
 
-<p><a href="http://microformats.org/"><dfn>Microformatos</dfn></a> (ás vezes abreviado como <strong>μF</strong>) são convenções utilizadas para incorporar convenções semânticas em HTML e providenciar uma API a ser usada por mecanismos de pesquisa, agregadores e outras ferramentas. Esses padrões mínimos de HTML são usados para marcar entidades que variam de informações fundamentais a específicas de domínio, como pessoas, organizações, eventos e locais.</p>
+[_Microformatos_](http://microformats.org/) (ás vezes abreviado como **μF**) são convenções utilizadas para incorporar convenções semânticas em HTML e providenciar uma API a ser usada por mecanismos de pesquisa, agregadores e outras ferramentas. Esses padrões mínimos de HTML são usados para marcar entidades que variam de informações fundamentais a específicas de domínio, como pessoas, organizações, eventos e locais.
 
-<p>Os microformatos são suportados pelos principais mecanismos de pesquisa. Os dados são transportados na propriedade de classe que pode ser adicionada a qualquer elemento HTML. Além de legíveis por máquina, seu formato é projetado para ser facilmente lido por humanos.</p>
+Os microformatos são suportados pelos principais mecanismos de pesquisa. Os dados são transportados na propriedade de classe que pode ser adicionada a qualquer elemento HTML. Além de legíveis por máquina, seu formato é projetado para ser facilmente lido por humanos.
 
-<p>Existem <a href="http://microformats.org/wiki/microformats2#Parsers">bibliotecas de análise para a maioria das linguagens</a> para microformatos2.</p>
+Existem [bibliotecas de análise para a maioria das linguagens](http://microformats.org/wiki/microformats2#Parsers) para microformatos2.
 
-<h3 id="Como_os_Microformatos_Funcionam">Como os Microformatos Funcionam?</h3>
+### Como os Microformatos Funcionam?
 
-<p>Um autor de uma página web pode adicionar microformatos no seu HTML. Por exemplo se ele quer se identificar ele podem utilizar um <a href="http://microformats.org/wiki/h-card">h-card</a> como:</p>
+Um autor de uma página web pode adicionar microformatos no seu HTML. Por exemplo se ele quer se identificar ele podem utilizar um [h-card](http://microformats.org/wiki/h-card) como:
 
-<div dir="ltr" style="text-align: left;">
-<pre class="brush: html">&lt;a class="h-card" href="http://example.com"&gt;Joe Bloggs&lt;/a&gt;</pre>
+```html
+<a class="h-card" href="http://example.com">Joe Bloggs</a>
+```
 
-<p>Quando um analisador encontra  esse dado, ele saberá que nessa página contém um "card" que descreve uma pessoa ou uma organização chamada <code>Joe Blogger</code> com uma URL de <code>http://example.com/</code>. O analisador disponibiliza esses dados por meio de APIs que podem ser usadas por diferentes aplicativos.</p>
+Quando um analisador encontra esse dado, ele saberá que nessa página contém um "card" que descreve uma pessoa ou uma organização chamada `Joe Blogger` com uma URL de `http://example.com/`. O analisador disponibiliza esses dados por meio de APIs que podem ser usadas por diferentes aplicativos.
 
-<p><span class="tlid-translation translation" lang="pt"><span title="">Como neste exemplo, alguns padrões de marcação requerem apenas um único nome de classe raiz de microformato, que os analisadores usam para encontrar algumas propriedades genéricas, como:</span></span> <code>name</code>, <code>url</code>, <code>photo</code>.</p>
-</div>
+Como neste exemplo, alguns padrões de marcação requerem apenas um único nome de classe raiz de microformato, que os analisadores usam para encontrar algumas propriedades genéricas, como: `name`, `url`, `photo`.
 
-<h2 id="Prefixos_de_Microformatos">Prefixos de Microformatos</h2>
+## Prefixos de Microformatos
 
-<p>Todos os microformatos consistem de uma raíz e uma coleção de propriedades. As propriedades são opcionais e potencilamente multivaloradas - aplicações que necessitam de um valor único devem utilizar a primeira instância de uma propriedade<span class="tlid-translation translation" lang="pt"><span title="">. Os dados hierárquicos são representados com microformatos aninhados, normalmente como valores de propriedade.</span></span></p>
+Todos os microformatos consistem de uma raíz e uma coleção de propriedades. As propriedades são opcionais e potencilamente multivaloradas - aplicações que necessitam de um valor único devem utilizar a primeira instância de uma propriedade. Os dados hierárquicos são representados com microformatos aninhados, normalmente como valores de propriedade.
 
-<p>Todas os nomes de classes de microformatos utilizam prefixos. Os prefixos são  <span class="tlid-translation translation" lang="pt"><span title="">Os prefixos são <strong>independentes da sintaxe dos vocabulários</strong>, os quais são desenvolvidos separadamente.</span></span></p>
+Todas os nomes de classes de microformatos utilizam prefixos. Os prefixos são Os prefixos são **independentes da sintaxe dos vocabulários**, os quais são desenvolvidos separadamente.
 
-<ul>
- <li><strong>"h-*" para nome de classes raíz</strong>, p.ex "h-card", "h-entry", "h-feed", e várias outras. Essas classes de alto nível normalmente indicam um tipo e o <span class="tlid-translation translation" lang="pt"><span title="">vocabulário esperado de propriedades correspondente.</span> <span title="">Por exemplo:</span></span>
+- **"h-\*" para nome de classes raíz**, p.ex "h-card", "h-entry", "h-feed", e várias outras. Essas classes de alto nível normalmente indicam um tipo e o vocabulário esperado de propriedades correspondente. Por exemplo:
 
-  <ul>
-   <li><a href="http://microformats.org/wiki/h-card">h-card</a> descreve uma pessoa ou uma organização.</li>
-   <li><a href="http://microformats.org/wiki/h-entry">h-entry</a> descreve conteúdo on-line em série ou com data marcada como uma postagem de blog.</li>
-   <li><a href="http://microformats.org/wiki/h-feed">h-feed</a> descreve um fluxo de dados ou um feed de postagens.</li>
-   <li>Você pode encontrar vários outros You can find many more <a href="http://microformats.org/wiki/microformats2#v2_vocabularies">vocabulários na wiki de microformatos2.</a></li>
-  </ul>
- </li>
- <li><strong>"p-*" para propriedades de texto simples,</strong> p.ex "p-name", "p-summary"
-  <ul>
-   <li><span class="tlid-translation translation" lang="pt"><span title="">Análise de texto simples, texto de elemento em geral.</span> <span title="">Em certos elementos HTML, use atributos especiais primeiro, por exemplo</span> <span title="">img / alt, abbr / título.</span></span></li>
-  </ul>
- </li>
- <li><strong>"u-*" para propriedades URL</strong>, p.ex "u-url", "u-photo", "u-logo"
-  <ul>
-   <li>Análise especial necessária: prefer a/href, img/src, object/data etc. atributos sobre o conteúdo do elemento.</li>
-  </ul>
- </li>
- <li><strong>"dt-*" para propriedades de data e hora</strong>, p.ex "dt-start", "dt-end", "dt-bday"
-  <ul>
-   <li>Análise especial necessária: <a href="http://microformats.org/wiki/value-class-pattern" title="value-class-pattern">value-class-pattern</a> and separate date time value parsing for readability.</li>
-  </ul>
- </li>
- <li><strong>"e-*" para propriedades da árvore de elementos </strong><span class="tlid-translation translation" lang="pt"><span title="">em que toda a hierarquia de elementos contidos é o valor,</span></span> p.ex "e-content". O prefixo "e-" também pode ser lembrado mnemonicamente como "árvore de elementos", "marcação incorporada", ou "marcação encapsulada".</li>
-</ul>
+  - [h-card](http://microformats.org/wiki/h-card) descreve uma pessoa ou uma organização.
+  - [h-entry](http://microformats.org/wiki/h-entry) descreve conteúdo on-line em série ou com data marcada como uma postagem de blog.
+  - [h-feed](http://microformats.org/wiki/h-feed) descreve um fluxo de dados ou um feed de postagens.
+  - Você pode encontrar vários outros You can find many more [vocabulários na wiki de microformatos2.](http://microformats.org/wiki/microformats2#v2_vocabularies)
 
-<h2 id="Alguns_exemplos_de_microformatos">Alguns exemplos de microformatos</h2>
+- **"p-\*" para propriedades de texto simples,** p.ex "p-name", "p-summary"
 
-<h3 id="h-card">h-card</h3>
+  - Análise de texto simples, texto de elemento em geral. Em certos elementos HTML, use atributos especiais primeiro, por exemplo img / alt, abbr / título.
 
-<p>O microformato <a href="http://microformats.org/wiki/h-card">h-card</a> representa uma pessoa ou uma organização.</p>
+- **"u-\*" para propriedades URL**, p.ex "u-url", "u-photo", "u-logo"
 
-<p>O valor de cada propriedade é definido no HTML utilizando a propriedade class, qualquer elemento pode receber.</p>
+  - Análise especial necessária: prefer a/href, img/src, object/data etc. atributos sobre o conteúdo do elemento.
 
-<h4 id="Exemplo_de_h-card">Exemplo de h-card</h4>
+- **"dt-\*" para propriedades de data e hora**, p.ex "dt-start", "dt-end", "dt-bday"
 
-<div dir="ltr" style="text-align: left;">
-<pre class="brush: html">&lt;p class="h-card"&gt;
-  &lt;img class="u-photo" src="http://example.org/photo.png" alt="" /&gt;
-  &lt;a class="p-name u-url" href="http://example.org"&gt;Joe Bloggs&lt;/a&gt;
-  &lt;a class="u-email" href="mailto:joebloggs@example.com"&gt;joebloggs@example.com&lt;/a&gt;,
-  &lt;span class="p-street-address"&gt;17 Austerstræti&lt;/span&gt;
-  &lt;span class="p-locality"&gt;Reykjavík&lt;/span&gt;
-  &lt;span class="p-country-name"&gt;Iceland&lt;/span&gt;
-&lt;/p&gt;</pre>
-</div>
+  - Análise especial necessária: [value-class-pattern](http://microformats.org/wiki/value-class-pattern "value-class-pattern") and separate date time value parsing for readability.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Propriedade</th>
-   <th>Descrição</th>
-  </tr>
-  <tr>
-   <td><strong><code>p-name</code></strong></td>
-   <td>O nome completo/formatado da pessoa ou organização</td>
-  </tr>
-  <tr>
-   <td><strong><code>u-email</code></strong></td>
-   <td>endereço de e-mail</td>
-  </tr>
-  <tr>
-   <td><strong><code>u-photo</code></strong></td>
-   <td>uma foto da</td>
-  </tr>
-  <tr>
-   <td><strong><code>u-url</code></strong></td>
-   <td>página na web ou outra URL representando a pessoa ou a organização</td>
-  </tr>
-  <tr>
-   <td><strong><code>u-uid</code></strong></td>
-   <td>identificador universal único, de preferência URL canônico</td>
-  </tr>
-  <tr>
-   <td><strong><code>p-street-address</code></strong></td>
-   <td>número da rua + enderço</td>
-  </tr>
-  <tr>
-   <td><strong><code>p-locality</code></strong></td>
-   <td>cidade ou vilarejo</td>
-  </tr>
-  <tr>
-   <td><strong><code>p-country-name</code></strong></td>
-   <td>nome do país</td>
-  </tr>
- </tbody>
-</table>
+- **"e-\*" para propriedades da árvore de elementos** em que toda a hierarquia de elementos contidos é o valor, p.ex "e-content". O prefixo "e-" também pode ser lembrado mnemonicamente como "árvore de elementos", "marcação incorporada", ou "marcação encapsulada".
 
-<h4 id="Exemplo_de_h-card_aninhado">Exemplo de h-card aninhado</h4>
+## Alguns exemplos de microformatos
 
-<pre class="brush: html">&lt;div class="h-card"&gt;
-  &lt;a class="p-name u-url"
+### h-card
+
+O microformato [h-card](http://microformats.org/wiki/h-card) representa uma pessoa ou uma organização.
+
+O valor de cada propriedade é definido no HTML utilizando a propriedade class, qualquer elemento pode receber.
+
+#### Exemplo de h-card
+
+```html
+<p class="h-card">
+  <img class="u-photo" src="http://example.org/photo.png" alt="" />
+  <a class="p-name u-url" href="http://example.org">Joe Bloggs</a>
+  <a class="u-email" href="mailto:joebloggs@example.com">joebloggs@example.com</a>,
+  <span class="p-street-address">17 Austerstræti</span>
+  <span class="p-locality">Reykjavík</span>
+  <span class="p-country-name">Iceland</span>
+</p>
+```
+
+| Propriedade            | Descrição                                                          |
+| ---------------------- | ------------------------------------------------------------------ |
+| **`p-name`**           | O nome completo/formatado da pessoa ou organização                 |
+| **`u-email`**          | endereço de e-mail                                                 |
+| **`u-photo`**          | uma foto da                                                        |
+| **`u-url`**            | página na web ou outra URL representando a pessoa ou a organização |
+| **`u-uid`**            | identificador universal único, de preferência URL canônico         |
+| **`p-street-address`** | número da rua + enderço                                            |
+| **`p-locality`**       | cidade ou vilarejo                                                 |
+| **`p-country-name`**   | nome do país                                                       |
+
+#### Exemplo de h-card aninhado
+
+```html
+<div class="h-card">
+  <a class="p-name u-url"
    href="http://blog.lizardwrangler.com/"
-  &gt;Mitchell Baker&lt;/a&gt;
-  (&lt;a class="p-org h-card"
+  >Mitchell Baker</a>
+  (<a class="p-org h-card"
     href="http://mozilla.org/"
-   &gt;Mozilla Foundation&lt;/a&gt;)
-&lt;/div&gt;</pre>
+   >Mozilla Foundation</a>)
+</div>
+```
 
-<p>JSON analisado:</p>
+JSON analisado:
 
-<pre class="brush: js">{
+```js
+{
   "items": [{
   "type": ["h-card"],
   "properties": {
@@ -149,75 +115,60 @@ original_slug: Web/HTML/microformatos
     }]
   }
   }]
-}</pre>
+}
+```
 
-<p>Nota: o h-card aninhado implica nas propriedades 'name' e 'url', assim como qualquer outro h-card apenas com nome de classe raiz em um <code>&lt;a href&gt;</code>.</p>
+Nota: o h-card aninhado implica nas propriedades 'name' e 'url', assim como qualquer outro h-card apenas com nome de classe raiz em um `<a href>`.
 
-<h3 id="h-entry">h-entry</h3>
+### h-entry
 
-<p>O microformato <a href="http://microformats.org/wiki/h-entry">h-entry</a> representa um conteúdo em série ou um conteúdo com data marcada na web. h-entry <span class="tlid-translation translation" lang="pt"><span title="">é frequentemente usado com conteúdo destinado a ser distribuído, p.ex</span> <span title="">postagens em blog.</span></span></p>
+O microformato [h-entry](http://microformats.org/wiki/h-entry) representa um conteúdo em série ou um conteúdo com data marcada na web. h-entry é frequentemente usado com conteúdo destinado a ser distribuído, p.ex postagens em blog.
 
-<p>Exemplo de h-entry como uma postagem em blog:</p>
+Exemplo de h-entry como uma postagem em blog:
 
-<pre class="brush: html">&lt;article class="h-entry"&gt;
-  &lt;h1 class="p-name"&gt;Microformats are amazing&lt;/h1&gt;
-  &lt;p&gt;Published by &lt;a class="p-author h-card" href="http://example.com"&gt;W. Developer&lt;/a&gt;
-   on &lt;time class="dt-published" datetime="2013-06-13 12:00:00"&gt;13&lt;sup&gt;th&lt;/sup&gt; June 2013&lt;/time&gt;&lt;/p&gt;
+```html
+<article class="h-entry">
+  <h1 class="p-name">Microformats are amazing</h1>
+  <p>Published by <a class="p-author h-card" href="http://example.com">W. Developer</a>
+   on <time class="dt-published" datetime="2013-06-13 12:00:00">13<sup>th</sup> June 2013</time></p>
 
-  &lt;p class="p-summary"&gt;In which I extoll the virtues of using microformats.&lt;/p&gt;
+  <p class="p-summary">In which I extoll the virtues of using microformats.</p>
 
-  &lt;div class="e-content"&gt;
-  &lt;p&gt;Blah blah blah&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/article&gt;</pre>
+  <div class="e-content">
+  <p>Blah blah blah</p>
+  </div>
+</article>
+```
 
-<h4 id="Propriedades">Propriedades</h4>
+#### Propriedades
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Propriedade</th>
-   <th>Descrição</th>
-  </tr>
-  <tr>
-   <td><strong><code>p-name</code></strong></td>
-   <td>nome/título da entrada</td>
-  </tr>
-  <tr>
-   <td><strong><code>p-author</code></strong></td>
-   <td>quem escreveu a entrada, h-card opcionalmente incorporado</td>
-  </tr>
-  <tr>
-   <td><strong><code>dt-published</code></strong></td>
-   <td>quando a entrada foi publicada</td>
-  </tr>
-  <tr>
-   <td><strong><code>p-summary</code></strong></td>
-   <td>breve resumo da entrada</td>
-  </tr>
-  <tr>
-   <td><strong><code>e-content</code></strong></td>
-   <td>conteúdo completo da entrada</td>
-  </tr>
- </tbody>
-</table>
+| Propriedade        | Descrição                                                 |
+| ------------------ | --------------------------------------------------------- |
+| **`p-name`**       | nome/título da entrada                                    |
+| **`p-author`**     | quem escreveu a entrada, h-card opcionalmente incorporado |
+| **`dt-published`** | quando a entrada foi publicada                            |
+| **`p-summary`**    | breve resumo da entrada                                   |
+| **`e-content`**    | conteúdo completo da entrada                              |
 
-<h4 id="Exemplo_de_h-entry_analisado">Exemplo de h-entry analisado</h4>
+#### Exemplo de h-entry analisado
 
-<pre id="line1">&lt;div class="<a class="attribute-value">h-entry</a>"&gt;
-  &lt;p&gt;&lt;span class="p-author h-card"&gt;
-    &lt;a href="<a class="attribute-value">https://quickthoughts.jgregorymcverry.com/profile/jgmac1106</a>" &gt;&lt;img class="<a class="attribute-value">u-photo</a>" src="<a class="attribute-value">https://quickthoughts.jgregorymcverry.com/file/2d6c9cfed7ac8e849f492b5bc7e6a630/thumb.jpg</a>"/&gt;&lt;/a&gt;
-    &lt;a class="<a class="attribute-value">p-name u-url</a>" href="<a class="attribute-value">https://quickthoughts.jgregorymcverry.com/profile/jgmac1106</a>"&gt;Greg McVerry&lt;/a&gt;&lt;/span&gt;
-     Replied to &lt;a class="<a class="attribute-value">u-in-reply-to</a>" href="<a class="attribute-value">https://developer.mozilla.org/en-US/docs/Web/HTML/microformats</a>"&gt;a post on
-   &lt;strong&gt;developer.mozilla.org&lt;/strong&gt; &lt;/a&gt;:
-  &lt;/p&gt;
-   &lt;p class="<a class="attribute-value">p-name e-content</a>"&gt;Hey thanks for making this microformats resource&lt;/p&gt;
-   &lt;p&gt; &lt;a href="<a class="attribute-value">https://quickthoughts.jgregorymcverry.com/profile/jgmac1106</a>"&gt;Greg McVerry&lt;/a&gt;
-  published this &lt;a class="<a class="attribute-value">u-url url</a>" href="<a class="attribute-value">https://quickthoughts.jgregorymcverry.com/2019/05/31/hey-thanks-for-making-this-microformats-resource</a>"&gt;&lt;time class="<a class="attribute-value">dt-published</a>"
-   datetime="<a class="attribute-value">2019-05-31T14:19:09+0000</a>"&gt;31 May 2019&lt;/time&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</pre>
+```
+<div class="h-entry">
+  <p><span class="p-author h-card">
+    <a href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106" ><img class="u-photo" src="https://quickthoughts.jgregorymcverry.com/file/2d6c9cfed7ac8e849f492b5bc7e6a630/thumb.jpg"/></a>
+    <a class="p-name u-url" href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106">Greg McVerry</a></span>
+     Replied to <a class="u-in-reply-to" href="https://developer.mozilla.org/en-US/docs/Web/HTML/microformats">a post on
+   <strong>developer.mozilla.org</strong> </a>:
+  </p>
+   <p class="p-name e-content">Hey thanks for making this microformats resource</p>
+   <p> <a href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106">Greg McVerry</a>
+  published this <a class="u-url url" href="https://quickthoughts.jgregorymcverry.com/2019/05/31/hey-thanks-for-making-this-microformats-resource"><time class="dt-published"
+   datetime="2019-05-31T14:19:09+0000">31 May 2019</time></a></p>
+</div>
+```
 
-<pre>{
+```
+{
   "items": [
     {
       "type": [ "h-entry" ],
@@ -247,130 +198,96 @@ original_slug: Web/HTML/microformatos
         ]
       },
       "lang": "en"
-    }</pre>
+    }
+```
 
-<h3 id="h-feed">h-feed</h3>
+### h-feed
 
-<p>O <a href="http://microformats.org/wiki/h-feed">h-feed</a> é um fluxo de dados ou um feed de posts de <a href="http://microformats.org/wiki/h-entry" title="h-entry">h-entry</a>, <span class="tlid-translation translation" lang="pt"><span title="">como postagens completas em uma página inicial ou em páginas de arquivo, sumários ou outras listagens de postagens</span></span></p>
+O [h-feed](http://microformats.org/wiki/h-feed) é um fluxo de dados ou um feed de posts de [h-entry](http://microformats.org/wiki/h-entry "h-entry"), como postagens completas em uma página inicial ou em páginas de arquivo, sumários ou outras listagens de postagens
 
-<h4 id="Exemplo_h-feed">Exemplo h-feed</h4>
+#### Exemplo h-feed
 
-<pre class="brush: html">&lt;div class="h-feed"&gt;
-  &lt;h1 class="p-name"&gt;Microformats Blogs&lt;/h1&gt;
-  &lt;article class="h-entry"&gt;
-  &lt;h2 class="p-name"&gt;Microformats are amazing&lt;/h2&gt;
-  &lt;p&gt;Published by &lt;a class="p-author h-card" href="http://example.com"&gt;W. Developer&lt;/a&gt;
-     on &lt;time class="dt-published" datetime="2013-06-13 12:00:00"&gt;13&lt;sup&gt;th&lt;/sup&gt; June 2013&lt;/time&gt;
-  &lt;/p&gt;
-  &lt;p class="p-summary"&gt;In which I extoll the virtues of using microformats.&lt;/p&gt;
-  &lt;div class="e-content"&gt; &lt;p&gt;Blah blah blah&lt;/p&gt; &lt;/div&gt;
-  &lt;/article&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="h-feed">
+  <h1 class="p-name">Microformats Blogs</h1>
+  <article class="h-entry">
+  <h2 class="p-name">Microformats are amazing</h2>
+  <p>Published by <a class="p-author h-card" href="http://example.com">W. Developer</a>
+     on <time class="dt-published" datetime="2013-06-13 12:00:00">13<sup>th</sup> June 2013</time>
+  </p>
+  <p class="p-summary">In which I extoll the virtues of using microformats.</p>
+  <div class="e-content"> <p>Blah blah blah</p> </div>
+  </article>
+</div>
+```
 
-<h4 id="Propriedades_2">Propriedades</h4>
+#### Propriedades
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Propriedades</th>
-   <th>Descrição</th>
-  </tr>
-  <tr>
-   <td><strong><code>p-name</code></strong></td>
-   <td>nome do feed</td>
-  </tr>
-  <tr>
-   <td><strong><code>p-author</code></strong></td>
-   <td>autor do feed, opcionalmente incorporado com um h-card</td>
-  </tr>
- </tbody>
-</table>
+| Propriedades   | Descrição                                              |
+| -------------- | ------------------------------------------------------ |
+| **`p-name`**   | nome do feed                                           |
+| **`p-author`** | autor do feed, opcionalmente incorporado com um h-card |
 
-<h4 id="Filhos">Filhos</h4>
+#### Filhos
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><strong>h-entry aninhado</strong></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>objetos representando os itens do feed</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| **h-entry aninhado**                   |     |
+| -------------------------------------- | --- |
+| objetos representando os itens do feed |     |
 
-<h3 id="h-event">h-event</h3>
+### h-event
 
-<p>O <code>h-event</code> é para evento na web. <span class="tlid-translation translation" lang="pt"><span title="">O h-event é frequentemente usado com listagens de eventos e páginas de eventos individuais.</span></span></p>
+O `h-event` é para evento na web. O h-event é frequentemente usado com listagens de eventos e páginas de eventos individuais.
 
-<pre class="brush: html">&lt;div class="h-event"&gt;
-  &lt;h1 class="p-name"&gt;Microformats Meetup&lt;/h1&gt;
-  &lt;p&gt;From
-  &lt;time class="dt-start" datetime="2013-06-30 12:00"&gt;30&lt;sup&gt;th&lt;/sup&gt; June 2013, 12:00&lt;/time&gt;
-  to &lt;time class="dt-end" datetime="2013-06-30 18:00"&gt;18:00&lt;/time&gt;
-  at &lt;span class="p-location"&gt;Some bar in SF&lt;/span&gt;&lt;/p&gt;
-  &lt;p class="p-summary"&gt;Get together and discuss all things microformats-related.&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="h-event">
+  <h1 class="p-name">Microformats Meetup</h1>
+  <p>From
+  <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
+  to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
+  at <span class="p-location">Some bar in SF</span></p>
+  <p class="p-summary">Get together and discuss all things microformats-related.</p>
+</div>
+```
 
-<h4 id="Propriedades_3">Propriedades</h4>
+#### Propriedades
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Propriedade</th>
-   <th>Descrição</th>
-  </tr>
-  <tr>
-   <td><strong><code>p-name</code></strong></td>
-   <td>nome do evento (ou título)</td>
-  </tr>
-  <tr>
-   <td><strong><code>p-summary</code></strong></td>
-   <td>breve sumário do evento</td>
-  </tr>
-  <tr>
-   <td><strong><code>dt-start</code></strong></td>
-   <td>data e hora de início do evento</td>
-  </tr>
-  <tr>
-   <td><strong><code>dt-end</code></strong></td>
-   <td>data e hora de termino do evento</td>
-  </tr>
-  <tr>
-   <td><strong><code>p-location</code></strong></td>
-   <td>local do evento, opcionalmente incorporado com um h-card</td>
-  </tr>
- </tbody>
-</table>
+| Propriedade      | Descrição                                                |
+| ---------------- | -------------------------------------------------------- |
+| **`p-name`**     | nome do evento (ou título)                               |
+| **`p-summary`**  | breve sumário do evento                                  |
+| **`dt-start`**   | data e hora de início do evento                          |
+| **`dt-end`**     | data e hora de termino do evento                         |
+| **`p-location`** | local do evento, opcionalmente incorporado com um h-card |
 
-<h4 id="Exemplo_de_h-event_analisado">Exemplo de h-event analisado</h4>
+#### Exemplo de h-event analisado
 
-<pre>&lt;div class="h-event"&gt;
-  &lt;h2 class="p-name"&gt;IndieWeb Summit&lt;/h2&gt;
-  &lt;time class="dt-start" datetime="2019-06-29T09:00:00-07:00"&gt;June 29, 2019 at 9:00am  (-0700)&lt;/time&gt;&lt;br&gt;through &lt;time class="dt-end" datetime="2019-06-30T18:00:00-07:00"&gt;June 30, 2019 at 6:00pm (-0700)&lt;/time&gt;&lt;br&gt;
-  &lt;div class="p-location h-card"&gt;
-    &lt;div&gt;
-    &lt;span class="p-name"&gt;Mozilla&lt;/span&gt;
-     &lt;/div&gt;
-     &lt;div&gt;
-      &lt;span class="p-street-address"&gt;1120 NW Couch St&lt;/span&gt;,
-      &lt;span class="p-locality"&gt;Portland&lt;/span&gt;,
-      &lt;span class="p-region"&gt;Oregon&lt;/span&gt;,
-      &lt;span class="p-country"&gt;US&lt;/span&gt;
-     &lt;/div&gt;
-       &lt;data class="p-latitude" value="45.52345"&gt;&lt;/data&gt;
-      &lt;data class="p-longitude" value="-122.682677"&gt;&lt;/data&gt;
-  &lt;/div&gt;
-    &lt;div class="e-content"&gt;Come join us
-     &lt;/div&gt;
-    &lt;div&gt;
-     &lt;span class="p-author h-card"&gt;&lt;a class="u-url p-name" href="https://aaronparecki.com"&gt;Aaron Parecki&lt;/a&gt;&lt;/span&gt; Published this &lt;a href="https://aaronparecki.com/2019/06/29/1/" class="u-url"&gt;event &lt;/a&gt;on &lt;time class="dt published" datetime="2019-05-25T18:00:00-07:00"&gt;May 5th, 2019&lt;/time&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
+```
+<div class="h-event">
+  <h2 class="p-name">IndieWeb Summit</h2>
+  <time class="dt-start" datetime="2019-06-29T09:00:00-07:00">June 29, 2019 at 9:00am  (-0700)</time><br>through <time class="dt-end" datetime="2019-06-30T18:00:00-07:00">June 30, 2019 at 6:00pm (-0700)</time><br>
+  <div class="p-location h-card">
+    <div>
+    <span class="p-name">Mozilla</span>
+     </div>
+     <div>
+      <span class="p-street-address">1120 NW Couch St</span>,
+      <span class="p-locality">Portland</span>,
+      <span class="p-region">Oregon</span>,
+      <span class="p-country">US</span>
+     </div>
+       <data class="p-latitude" value="45.52345"></data>
+      <data class="p-longitude" value="-122.682677"></data>
+  </div>
+    <div class="e-content">Come join us
+     </div>
+    <div>
+     <span class="p-author h-card"><a class="u-url p-name" href="https://aaronparecki.com">Aaron Parecki</a></span> Published this <a href="https://aaronparecki.com/2019/06/29/1/" class="u-url">event </a>on <time class="dt published" datetime="2019-05-25T18:00:00-07:00">May 5th, 2019</time>
+    </div>
+</div>
+```
 
-<pre>{
+```
+{
   "items": [
     {
       "type": [ "h-event" ],
@@ -417,13 +334,12 @@ original_slug: Web/HTML/microformatos
       },
       "lang": "en"
     }
-  ],</pre>
+  ],
+```
 
-<p>See also</p>
+See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Microformat")}} na Wikipedia</li>
- <li><a href="http://microformats.org/">Site oficial dos Microformatos</a></li>
- <li><a href="http://microformats.org/wiki/search_engines">Motores de busca suportados</a> no site oficial do Microformats</li>
- <li><a href="https://indiewebcamp.com/microformats">Microformatos no IndieWebCamp</a></li>
-</ul>
+- {{Interwiki("wikipedia", "Microformat")}} na Wikipedia
+- [Site oficial dos Microformatos](http://microformats.org/)
+- [Motores de busca suportados](http://microformats.org/wiki/search_engines) no site oficial do Microformats
+- [Microformatos no IndieWebCamp](https://indiewebcamp.com/microformats)

@@ -9,459 +9,455 @@ tags:
   - itemprop
 translation_of: Web/HTML/Global_attributes/itemprop
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>O atributo global  <code><strong>itemprop</strong></code> é usado para adicionar propriedades para um item. Todo elemento HTML pode ter um atributo <code>itemprop</code>  especificado, e um <code>itemprop</code> consiste em um par de nome e valor. Cada par de nome e valor é chamado de <strong>propriedade,</strong> e um grupo de uma ou mais propriedades forma um <strong>item</strong>. Os valores das propriedades são ou um texto ou uma URL e pode ser associada a uma grande variedade de elementos incluindo {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}} , {{HTMLElement("track")}}, and {{HTMLElement("video")}}.</p>
+O atributo global **`itemprop`** é usado para adicionar propriedades para um item. Todo elemento HTML pode ter um atributo `itemprop` especificado, e um `itemprop` consiste em um par de nome e valor. Cada par de nome e valor é chamado de **propriedade,** e um grupo de uma ou mais propriedades forma um **item**. Os valores das propriedades são ou um texto ou uma URL e pode ser associada a uma grande variedade de elementos incluindo {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}} , {{HTMLElement("track")}}, and {{HTMLElement("video")}}.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>The example below shows the source for a set of elements marked up with <code>itemprop</code> attributes, followed by a table showing the resulting structured data.</p>
+The example below shows the source for a set of elements marked up with `itemprop` attributes, followed by a table showing the resulting structured data.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div itemscope itemtype ="http://schema.org/Movie"&gt;
-  &lt;h1 <strong>itemprop="name"</strong>&gt;Avatar&lt;/h1&gt;
-  &lt;span&gt;Director:
-    &lt;span <strong>itemprop="director"</strong>&gt;James Cameron&lt;/span&gt;
-    (born August 16, 1954)&lt;/span&gt;
-  &lt;span <strong>itemprop="genre"</strong>&gt;Science fiction&lt;/span&gt;
-  &lt;a href="../movies/avatar-theatrical-trailer.html"
-    <strong>itemprop="trailer"</strong>&gt;Trailer&lt;/a&gt;
-&lt;/div&gt;</pre>
-
-<h3 id="Structured_data">Structured data</h3>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td colspan="1" rowspan="2"> </td>
-   <th colspan="2" rowspan="1"><strong>Item</strong></th>
-  </tr>
-  <tr>
-   <th><strong>itemprop name</strong></th>
-   <th><strong>itemprop value</strong></th>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>name</td>
-   <td>Avatar</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>director</td>
-   <td>James Cameron</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>genre</td>
-   <td>Science fiction</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>trailer</td>
-   <td>../movies/avatar-theatrical-trailer.html</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Properties">Properties</h2>
-
-<p>Properties have values that are either a string or a URL. When a string value is a URL, it is expressed using the {{HTMLElement("a")}} element and its {{htmlattrxref("href", "a")}} attribute, the {{HTMLElement("img")}} element and its {{htmlattrxref("src", "img")}} attribute, or other elements that link to or embed external resources.</p>
-
-<h3 id="Three_properties_with_values_that_are_strings">Three properties with values that are strings</h3>
-
-<pre class="brush: html">&lt;div itemscope&gt;
- &lt;p&gt;My name is
-   &lt;span itemprop="name"&gt;Neil&lt;/span&gt;.&lt;/p&gt;
- &lt;p&gt;My band is called
-   &lt;span itemprop="band"&gt;Four Parts Water&lt;/span&gt;.&lt;/p&gt;
- &lt;p&gt;I am
-   &lt;span itemprop="nationality"&gt;British&lt;/span&gt;.&lt;/p&gt;
-&lt;/div&gt;</pre>
-
-<h3 id="One_property_image_whose_value_is_a_URL">One property, "image", whose value is a URL</h3>
-
-<pre class="brush: html">&lt;div itemscope&gt;
- &lt;img itemprop="image"
-   src="google-logo.png" alt="Google"&gt;
-&lt;/div&gt;</pre>
-
-<p>When a string value can't be easily read and understood by a person (e.g., a long string of numbers and letters), it can be displayed using the value attribute of the data element, with the more easily-understood-by-a human-version given in the element's contents (which is not part of the structured data - see example below).</p>
-
-<h3 id="An_item_with_a_property_whose_value_is_a_product_ID">An item with a property whose value is a product ID</h3>
-
-<p>The ID is not human-friendly, so the product's name is used the human-visible text instead of the ID.</p>
-
-<pre class="brush: html">&lt;h1 itemscope&gt;
- &lt;data itemprop="product-id"
-   value="9678AOU879"&gt;The Instigator 2000&lt;/data&gt;
-&lt;/h1&gt;</pre>
-
-<p>For numeric data, the meter element and its value attribute can be used.</p>
-
-<h3 id="A_meter_element">A meter element</h3>
-
-<pre class="brush: html">&lt;div itemscope itemtype="http://schema.org/Product"&gt;
- &lt;span itemprop="name"&gt;Panasonic White
-   60L Refrigerator&lt;/span&gt;
- &lt;img src="panasonic-fridge-60l-white.jpg" alt=""&gt;
-  &lt;div itemprop="aggregateRating"
-       itemscope
-       itemtype="http://schema.org/AggregateRating"&gt;
-   &lt;meter itemprop="ratingValue"
-     min=0 value=3.5 max=5&gt;Rated 3.5/5&lt;/meter&gt;
-   (based on &lt;span
-     itemprop="reviewCount"&gt;11&lt;/span&gt;
-     customer reviews)
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
-
-<p>Similarly, for date- and time-related data, the time element and its datetime attribute can be used.</p>
-
-<h3 id="An_item_with_one_property_birthday_whose_value_is_a_date">An item with one property, "birthday", whose value is a date</h3>
-
-<pre class="brush: html">&lt;div itemscope&gt;
- I was born on &lt;time
-   itemprop="birthday"
-   datetime="2009-05-10"&gt;May 10th 2009&lt;/time&gt;.
-&lt;/div&gt;</pre>
-
-<p>Properties can also be groups of name-value pairs, by putting the itemscope attribute on the element that declares the property. Each value is either a string or a group of name-value pairs (i.e. an item).</p>
-
-<h3 id="An_outer_item_representing_a_person_and_an_inner_one_representing_a_band">An outer item representing a person, and an inner one representing a band</h3>
-
-<pre class="brush: html">&lt;div itemscope&gt;
- &lt;p&gt;Name:
-   &lt;span itemprop="name"&gt;Amanda&lt;/span&gt;&lt;/p&gt;
- &lt;p&gt;Band:
-   &lt;span itemprop="band" itemscope&gt;
-     &lt;span itemprop="name"&gt;Jazz Band&lt;/span&gt;
-     (&lt;span itemprop="size"&gt;12&lt;/span&gt;
-     players)&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;</pre>
-
-<p>The outer item above has two properties, "name" and "band". The "name" is "Amanda", and the "band" is an item in its own right, with two properties, "name" and "size". The "name" of the band is "Jazz Band", and the "size" is "12". The outer item in this example is a top-level microdata item. Items that are not part of others are called top-level microdata items.</p>
-
-<h3 id="All_the_properties_separated_from_their_items">All the properties separated from their items</h3>
-
-<p>This example is the same as the previous one, but all the properties are separated from their items</p>
-
-<pre class="brush: html">&lt;div itemscope id="amanda" itemref="a b"&gt;&lt;/div&gt;
-&lt;p id="a"&gt;Name:
-  &lt;span itemprop="name"&gt;Amanda&lt;/span&gt;&lt;/p&gt;
-&lt;div id="b"
-  itemprop="band"
-  itemscope itemref="c"&gt;&lt;/div&gt;
-&lt;div id="c"&gt;
- &lt;p&gt;Band:
-   &lt;span itemprop="name"&gt;Jazz Band&lt;/span&gt;&lt;/p&gt;
- &lt;p&gt;Size:
-   &lt;span itemprop="size"&gt;12&lt;/span&gt; players&lt;/p&gt;
-&lt;/div&gt;</pre>
-
-<p>This gives the same result as the previous example. The first item has two properties, "name", set to "Amanda", and "band", set to another item. That second item has two further properties, "name", set to "Jazz Band", and "size", set to "12".</p>
-
-<p>An item can have multiple properties with the same name and different values.</p>
-
-<h3 id="Ice_cream_with_two_flavors">Ice cream with two flavors</h3>
-
-<pre class="brush: html">&lt;div itemscope&gt;
- &lt;p&gt;Flavors in my favorite ice cream:&lt;/p&gt;
- &lt;ul&gt;
-  &lt;li itemprop="flavor"&gt;Lemon sorbet&lt;/li&gt;
-  &lt;li itemprop="flavor"&gt;Apricot sorbet&lt;/li&gt;
- &lt;/ul&gt;
-&lt;/div&gt;</pre>
-
-<p>This results in an item with two properties, both with the name "flavor" and having the values "Lemon sorbet" and "Apricot sorbet".</p>
-
-<p>An element introducing a property can also introduce multiple properties at once, to avoid duplication when some of the properties have the same value.</p>
-
-<h3 id="An_item_with_two_properties_favorite-color_and_favorite-fruit_both_set_to_the_value_orange">An item with two properties, "favorite-color" and "favorite-fruit", both set to the value "orange"</h3>
-
-<pre class="brush: html">&lt;div itemscope&gt;
- &lt;span
-  itemprop="favorite-color
-    favorite-fruit"&gt;orange&lt;/span&gt;
-&lt;/div&gt;</pre>
-
-<div class="note">
-<p>Note: There is no relationship between the microdata and the content of the document where the microdata is marked up.</p>
+```html
+<div itemscope itemtype ="http://schema.org/Movie">
+  <h1 itemprop="name">Avatar</h1>
+  <span>Director:
+    <span itemprop="director">James Cameron</span>
+    (born August 16, 1954)</span>
+  <span itemprop="genre">Science fiction</span>
+  <a href="../movies/avatar-theatrical-trailer.html"
+    itemprop="trailer">Trailer</a>
 </div>
+```
 
-<h3 id="Same_structured_data_marked_up_in_two_different_ways">Same structured data marked up in two different ways</h3>
+### Structured data
 
-<p id="There_is_no_semantic_difference_between_the_following_two_examples">There is no semantic difference between the following two examples</p>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="2"></td>
+      <th colspan="2" rowspan="1"><strong>Item</strong></th>
+    </tr>
+    <tr>
+      <th><strong>itemprop name</strong></th>
+      <th><strong>itemprop value</strong></th>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>name</td>
+      <td>Avatar</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>director</td>
+      <td>James Cameron</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>genre</td>
+      <td>Science fiction</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>trailer</td>
+      <td>../movies/avatar-theatrical-trailer.html</td>
+    </tr>
+  </tbody>
+</table>
 
-<pre class="brush: html">&lt;figure&gt;
- &lt;img src="castle.jpeg"&gt;
- &lt;figcaption&gt;&lt;span
-   itemscope&gt;&lt;span
-   itemprop="name"&gt;The Castle&lt;/span&gt;&lt;/span&gt;
-     (1986)&lt;/figcaption&gt;
-&lt;/figure&gt;</pre>
+## Properties
 
-<pre class="brush: html">&lt;span itemscope&gt;&lt;meta
+Properties have values that are either a string or a URL. When a string value is a URL, it is expressed using the {{HTMLElement("a")}} element and its {{htmlattrxref("href", "a")}} attribute, the {{HTMLElement("img")}} element and its {{htmlattrxref("src", "img")}} attribute, or other elements that link to or embed external resources.
+
+### Three properties with values that are strings
+
+```html
+<div itemscope>
+ <p>My name is
+   <span itemprop="name">Neil</span>.</p>
+ <p>My band is called
+   <span itemprop="band">Four Parts Water</span>.</p>
+ <p>I am
+   <span itemprop="nationality">British</span>.</p>
+</div>
+```
+
+### One property, "image", whose value is a URL
+
+```html
+<div itemscope>
+ <img itemprop="image"
+   src="google-logo.png" alt="Google">
+</div>
+```
+
+When a string value can't be easily read and understood by a person (e.g., a long string of numbers and letters), it can be displayed using the value attribute of the data element, with the more easily-understood-by-a human-version given in the element's contents (which is not part of the structured data - see example below).
+
+### An item with a property whose value is a product ID
+
+The ID is not human-friendly, so the product's name is used the human-visible text instead of the ID.
+
+```html
+<h1 itemscope>
+ <data itemprop="product-id"
+   value="9678AOU879">The Instigator 2000</data>
+</h1>
+```
+
+For numeric data, the meter element and its value attribute can be used.
+
+### A meter element
+
+```html
+<div itemscope itemtype="http://schema.org/Product">
+ <span itemprop="name">Panasonic White
+   60L Refrigerator</span>
+ <img src="panasonic-fridge-60l-white.jpg" alt="">
+  <div itemprop="aggregateRating"
+       itemscope
+       itemtype="http://schema.org/AggregateRating">
+   <meter itemprop="ratingValue"
+     min=0 value=3.5 max=5>Rated 3.5/5</meter>
+   (based on <span
+     itemprop="reviewCount">11</span>
+     customer reviews)
+  </div>
+</div>
+```
+
+Similarly, for date- and time-related data, the time element and its datetime attribute can be used.
+
+### An item with one property, "birthday", whose value is a date
+
+```html
+<div itemscope>
+ I was born on <time
+   itemprop="birthday"
+   datetime="2009-05-10">May 10th 2009</time>.
+</div>
+```
+
+Properties can also be groups of name-value pairs, by putting the itemscope attribute on the element that declares the property. Each value is either a string or a group of name-value pairs (i.e. an item).
+
+### An outer item representing a person, and an inner one representing a band
+
+```html
+<div itemscope>
+ <p>Name:
+   <span itemprop="name">Amanda</span></p>
+ <p>Band:
+   <span itemprop="band" itemscope>
+     <span itemprop="name">Jazz Band</span>
+     (<span itemprop="size">12</span>
+     players)</span></p>
+</div>
+```
+
+The outer item above has two properties, "name" and "band". The "name" is "Amanda", and the "band" is an item in its own right, with two properties, "name" and "size". The "name" of the band is "Jazz Band", and the "size" is "12". The outer item in this example is a top-level microdata item. Items that are not part of others are called top-level microdata items.
+
+### All the properties separated from their items
+
+This example is the same as the previous one, but all the properties are separated from their items
+
+```html
+<div itemscope id="amanda" itemref="a b"></div>
+<p id="a">Name:
+  <span itemprop="name">Amanda</span></p>
+<div id="b"
+  itemprop="band"
+  itemscope itemref="c"></div>
+<div id="c">
+ <p>Band:
+   <span itemprop="name">Jazz Band</span></p>
+ <p>Size:
+   <span itemprop="size">12</span> players</p>
+</div>
+```
+
+This gives the same result as the previous example. The first item has two properties, "name", set to "Amanda", and "band", set to another item. That second item has two further properties, "name", set to "Jazz Band", and "size", set to "12".
+
+An item can have multiple properties with the same name and different values.
+
+### Ice cream with two flavors
+
+```html
+<div itemscope>
+ <p>Flavors in my favorite ice cream:</p>
+ <ul>
+  <li itemprop="flavor">Lemon sorbet</li>
+  <li itemprop="flavor">Apricot sorbet</li>
+ </ul>
+</div>
+```
+
+This results in an item with two properties, both with the name "flavor" and having the values "Lemon sorbet" and "Apricot sorbet".
+
+An element introducing a property can also introduce multiple properties at once, to avoid duplication when some of the properties have the same value.
+
+### An item with two properties, "favorite-color" and "favorite-fruit", both set to the value "orange"
+
+```html
+<div itemscope>
+ <span
+  itemprop="favorite-color
+    favorite-fruit">orange</span>
+</div>
+```
+
+> **Note:** Note: There is no relationship between the microdata and the content of the document where the microdata is marked up.
+
+### Same structured data marked up in two different ways
+
+There is no semantic difference between the following two examples
+
+```html
+<figure>
+ <img src="castle.jpeg">
+ <figcaption><span
+   itemscope><span
+   itemprop="name">The Castle</span></span>
+     (1986)</figcaption>
+</figure>
+```
+
+```html
+<span itemscope><meta
   itemprop="name"
-  content="The Castle"&gt;&lt;/span&gt;
-&lt;figure&gt;
- &lt;img src="castle.jpeg"&gt;
- &lt;figcaption&gt;The Castle
-  (1986)&lt;/figcaption&gt;
-&lt;/figure&gt;</pre>
+  content="The Castle"></span>
+<figure>
+ <img src="castle.jpeg">
+ <figcaption>The Castle
+  (1986)</figcaption>
+</figure>
+```
 
-<p>Both have a figure with a caption, and both, completely unrelated to the figure, have an item with a name-value pair with the name "name" and the value "The Castle". The only difference is that if the user drags the figcaption out of the document, the item will be included in the drag-and-drop data. The image associated with the item won't be included.</p>
+Both have a figure with a caption, and both, completely unrelated to the figure, have an item with a name-value pair with the name "name" and the value "The Castle". The only difference is that if the user drags the figcaption out of the document, the item will be included in the drag-and-drop data. The image associated with the item won't be included.
 
-<h2 id="Names_and_values">Names and values</h2>
+## Names and values
 
-<p>A property is an unordered set of unique tokens that are case-sensitive and represent the name-value pairs. The property value must have at least one token. In the example below, each data cell is a token.</p>
+A property is an unordered set of unique tokens that are case-sensitive and represent the name-value pairs. The property value must have at least one token. In the example below, each data cell is a token.
 
-<h3 id="Names_examples">Names examples</h3>
+### Names examples
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th colspan="1" rowspan="2" scope="col"> </th>
-   <th colspan="2" rowspan="1" scope="col">Item</th>
-  </tr>
-  <tr>
-   <th scope="col">itemprop <strong>name</strong></th>
-   <th scope="col">itemprop <strong>value</strong></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th>itemprop</th>
-   <td>country</td>
-   <td>Ireland</td>
-  </tr>
-  <tr>
-   <th>itemprop</th>
-   <td>Option</td>
-   <td>2</td>
-  </tr>
-  <tr>
-   <th>itemprop</th>
-   <td>https://www.flickr.com/photos/nlireland/6992065114/</td>
-   <td>Ring of Kerry</td>
-  </tr>
-  <tr>
-   <th>itemprop</th>
-   <td>img</td>
-   <td>https://www.flickr.com/photos/nlireland/6992065114/</td>
-  </tr>
-  <tr>
-   <th>itemprop</th>
-   <td>website</td>
-   <td>flickr</td>
-  </tr>
-  <tr>
-   <th>itemprop</th>
-   <td>(token)</td>
-   <td>(token)</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th colspan="1" rowspan="2" scope="col"></th>
+      <th colspan="2" rowspan="1" scope="col">Item</th>
+    </tr>
+    <tr>
+      <th scope="col">itemprop <strong>name</strong></th>
+      <th scope="col">itemprop <strong>value</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>itemprop</th>
+      <td>country</td>
+      <td>Ireland</td>
+    </tr>
+    <tr>
+      <th>itemprop</th>
+      <td>Option</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>itemprop</th>
+      <td>https://www.flickr.com/photos/nlireland/6992065114/</td>
+      <td>Ring of Kerry</td>
+    </tr>
+    <tr>
+      <th>itemprop</th>
+      <td>img</td>
+      <td>https://www.flickr.com/photos/nlireland/6992065114/</td>
+    </tr>
+    <tr>
+      <th>itemprop</th>
+      <td>website</td>
+      <td>flickr</td>
+    </tr>
+    <tr>
+      <th>itemprop</th>
+      <td>(token)</td>
+      <td>(token)</td>
+    </tr>
+  </tbody>
 </table>
 
-<p><strong>Tokens </strong>are either strings or URL's. An item is called a <strong>typed item</strong> if it is a URL. Otherwise, it is a string. Strings cannot contain a period or a colon (see below).</p>
+**Tokens** are either strings or URL's. An item is called a **typed item** if it is a URL. Otherwise, it is a string. Strings cannot contain a period or a colon (see below).
 
-<ol>
- <li>If the item is a typed item it must be either:
-  <ol>
-   <li>A defined property name, or</li>
-   <li>A valid URL, which refers to the vocabulary definition, or</li>
-   <li>A valid URL that is used as a proprietary item property name (i.e. one not defined in a public specification), or</li>
-  </ol>
- </li>
- <li>If the item is not a typed item it must be:
-  <ol>
-   <li>A string that contains no "<strong>.</strong>" (U+002E FULL STOP) characters and no "<strong>:</strong>" characters (U+003A COLON) and is used as a proprietary item property name (again, one not defined in a public specification).</li>
-  </ol>
- </li>
-</ol>
+1.  If the item is a typed item it must be either:
 
-<p class="note"><strong>Note:</strong> the rules above disallow ":" characters in non-URL values because otherwise they could not be distinguished from URLs. Values with "." characters are reserved for future extensions. Space characters are disallowed because otherwise the values would be parsed as multiple tokens.</p>
+    1.  A defined property name, or
+    2.  A valid URL, which refers to the vocabulary definition, or
+    3.  A valid URL that is used as a proprietary item property name (i.e. one not defined in a public specification), or
 
-<h2 id="Values">Values</h2>
+2.  If the item is not a typed item it must be:
 
-<p>The property value of a name-value pair is as given for the first matching case in the following list:</p>
+    1.  A string that contains no "**.**" (U+002E FULL STOP) characters and no "**:**" characters (U+003A COLON) and is used as a proprietary item property name (again, one not defined in a public specification).
 
-<ul>
- <li>If the element has an <strong>itemscope </strong>attribute
+> **Note:** the rules above disallow ":" characters in non-URL values because otherwise they could not be distinguished from URLs. Values with "." characters are reserved for future extensions. Space characters are disallowed because otherwise the values would be parsed as multiple tokens.
 
-  <ul>
-   <li>The value is the <strong>item </strong>created by the element.</li>
-  </ul>
- </li>
- <li>If the element is a <strong>meta </strong>element
-  <ul>
-   <li>The value is the value of the element's <strong>content </strong>attribute</li>
-  </ul>
- </li>
- <li>If the element is an <strong>audio</strong>, <strong>embed</strong>, <strong>iframe</strong>, <strong>img</strong>, <strong>source</strong>, <strong>track</strong>, or <strong>video </strong>element
-  <ul>
-   <li>The value is the resulting URL string that results from parsing the value of the element's src attribute relative to the node document (part of the <a href="/en-US/docs/Web/API/Microdata_DOM_API">Microdata DOM API</a>) of the element at the time the attribute is set</li>
-  </ul>
- </li>
- <li>If the element is an <strong>a</strong>, <strong>area</strong>, or <strong>link </strong>element
-  <ul>
-   <li>The value is the resulting URL string that results from parsing the value of the element's href attribute relative to the node document of the element at the time the attribute is set</li>
-  </ul>
- </li>
- <li>If the element is an <strong>object </strong>element
-  <ul>
-   <li>The value is the resulting URL string that results from parsing the value of the element's data attribute relative to the node document of the element at the time the attribute is set</li>
-  </ul>
- </li>
- <li>If the element is a <strong>data </strong>element
-  <ul>
-   <li>The value is the value of the element's value attribute</li>
-  </ul>
- </li>
- <li>If the element is a <strong>meter </strong>element
-  <ul>
-   <li>The value is the value of the element's <strong>value </strong>attribute</li>
-  </ul>
- </li>
- <li>If the element is a <strong>time </strong>element
-  <ul>
-   <li>The value is the element's <strong>datetime </strong>value</li>
-  </ul>
- </li>
-</ul>
+## Values
 
-<p>Otherwise</p>
+The property value of a name-value pair is as given for the first matching case in the following list:
 
-<ul>
- <li>The value is the element's <strong>textContent</strong>.</li>
-</ul>
+- If the element has an **itemscope** attribute
 
-<p>If a property's value is a<strong> URL</strong>, the property must be specified using a URL property element. The URL property elements are the <strong>a</strong>, <strong>area</strong>, <strong>audio</strong>, <strong>embed</strong>, <strong>iframe</strong>, <strong>img</strong>, <strong>link</strong>, <strong>object</strong>, <strong>source</strong>, <strong>track</strong>, and <strong>video </strong>elements.</p>
+  - The value is the **item** created by the element.
 
-<h3 id="Name_order">Name order</h3>
+- If the element is a **meta** element
 
-<p>Names are unordered relative to each other, but if a particular name has multiple values, they do have a relative order.</p>
+  - The value is the value of the element's **content** attribute
 
-<h4 id="In_the_following_example_the_a_property_has_the_values_1_and_2_in_that_order_but_whether_the_a_property_comes_before_the_b_property_or_not_is_not_important">In the following example, the "a" property has the values "1" and "2", <em>in that order</em>, but whether the "a" property comes before the "b" property or not is not important</h4>
+- If the element is an **audio**, **embed**, **iframe**, **img**, **source**, **track**, or **video** element
 
-<pre class="brush: html">&lt;div itemscope&gt;
- &lt;p itemprop="a"&gt;1&lt;/p&gt;
- &lt;p itemprop="a"&gt;2&lt;/p&gt;
- &lt;p itemprop="b"&gt;test&lt;/p&gt;
-&lt;/div&gt;</pre>
+  - The value is the resulting URL string that results from parsing the value of the element's src attribute relative to the node document (part of the [Microdata DOM API](/pt-BR/docs/Web/API/Microdata_DOM_API)) of the element at the time the attribute is set
 
-<h4 id="The_following_is_equivalent">The following is equivalent</h4>
+- If the element is an **a**, **area**, or **link** element
 
-<pre class="brush: html">&lt;div itemscope&gt;
- &lt;p itemprop="b"&gt;test&lt;/p&gt;
- &lt;p itemprop="a"&gt;1&lt;/p&gt;
- &lt;p itemprop="a"&gt;2&lt;/p&gt;
-&lt;/div&gt;</pre>
+  - The value is the resulting URL string that results from parsing the value of the element's href attribute relative to the node document of the element at the time the attribute is set
 
-<h4 id="As_is_the_following">As is the following</h4>
+- If the element is an **object** element
 
-<pre class="brush: html">&lt;div itemscope&gt;
- &lt;p itemprop="a"&gt;1&lt;/p&gt;
- &lt;p itemprop="b"&gt;test&lt;/p&gt;
- &lt;p itemprop="a"&gt;2&lt;/p&gt;
-&lt;/div&gt;</pre>
+  - The value is the resulting URL string that results from parsing the value of the element's data attribute relative to the node document of the element at the time the attribute is set
 
-<h4 id="And_the_following">And the following</h4>
+- If the element is a **data** element
 
-<pre class="brush: html">&lt;div id="x"&gt;
- &lt;p itemprop="a"&gt;1&lt;/p&gt;
-&lt;/div&gt;
-&lt;div itemscope itemref="x"&gt;
- &lt;p itemprop="b"&gt;test&lt;/p&gt;
- &lt;p itemprop="a"&gt;2&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+  - The value is the value of the element's value attribute
 
-<h2 id="Other_examples">Other examples</h2>
+- If the element is a **meter** element
 
-<h3 id="HTML_2">HTML</h3>
+  - The value is the value of the element's **value** attribute
 
-<pre class="brush: html">&lt;dl itemscope
+- If the element is a **time** element
+
+  - The value is the element's **datetime** value
+
+Otherwise
+
+- The value is the element's **textContent**.
+
+If a property's value is a **URL**, the property must be specified using a URL property element. The URL property elements are the **a**, **area**, **audio**, **embed**, **iframe**, **img**, **link**, **object**, **source**, **track**, and **video** elements.
+
+### Name order
+
+Names are unordered relative to each other, but if a particular name has multiple values, they do have a relative order.
+
+#### In the following example, the "a" property has the values "1" and "2", _in that order_, but whether the "a" property comes before the "b" property or not is not important
+
+```html
+<div itemscope>
+ <p itemprop="a">1</p>
+ <p itemprop="a">2</p>
+ <p itemprop="b">test</p>
+</div>
+```
+
+#### The following is equivalent
+
+```html
+<div itemscope>
+ <p itemprop="b">test</p>
+ <p itemprop="a">1</p>
+ <p itemprop="a">2</p>
+</div>
+```
+
+#### As is the following
+
+```html
+<div itemscope>
+ <p itemprop="a">1</p>
+ <p itemprop="b">test</p>
+ <p itemprop="a">2</p>
+</div>
+```
+
+#### And the following
+
+```html
+<div id="x">
+ <p itemprop="a">1</p>
+</div>
+<div itemscope itemref="x">
+ <p itemprop="b">test</p>
+ <p itemprop="a">2</p>
+</div>
+```
+
+## Other examples
+
+### HTML
+
+```html
+<dl itemscope
   itemtype="http://vocab.example.net/book"
-  itemid="urn:isbn:0-330-34032-8"&gt;
- &lt;dt&gt;Title
-   &lt;dd
-    itemprop="title"&gt;The Reality Dysfunction
- &lt;dt&gt;Author
-   &lt;dd
-     itemprop="author"&gt;Peter F. Hamilton
- &lt;dt&gt;Publication date
- &lt;dd&gt;&lt;time
+  itemid="urn:isbn:0-330-34032-8">
+ <dt>Title
+   <dd
+    itemprop="title">The Reality Dysfunction
+ <dt>Author
+   <dd
+     itemprop="author">Peter F. Hamilton
+ <dt>Publication date
+ <dd><time
    itemprop="pubdate"
-   datetime="1996-01-26"&gt;26 January 1996&lt;/time&gt;
-&lt;/dl&gt;
-</pre>
+   datetime="1996-01-26">26 January 1996</time>
+</dl>
+```
 
-<h3 id="Structured_data_2">Structured data</h3>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td colspan="1" rowspan="14">itemscope</td>
-   <td>itemtype: itemid</td>
-   <td colspan="2" rowspan="1">http://vocab.example.net/book: urn:isbn:0-330-34032-8</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>title</td>
-   <td>The Reality Dysfunction</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>author</td>
-   <td>Peter F. Hamilton</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>pubdate</td>
-   <td>1996-01-26</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="Result">Result</h3>
-
-<p>{{EmbedLiveSample('HTML_2', '', '', '', 'Web/HTML/Global_attributes/itemprop')}}</p>
-
-<h2 id="Specifications">Specifications</h2>
+### Structured data
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td><code><a href="https://html.spec.whatwg.org/multipage/microdata.html#names:-the-itemprop-attribute:names:-the-itemprop-attribute">itemprop</a></code></td>
-   <td> </td>
-   <td>WG Note - No longer being actively developed</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="14">itemscope</td>
+      <td>itemtype: itemid</td>
+      <td colspan="2" rowspan="1">
+        http://vocab.example.net/book: urn:isbn:0-330-34032-8
+      </td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>title</td>
+      <td>The Reality Dysfunction</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>author</td>
+      <td>Peter F. Hamilton</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>pubdate</td>
+      <td>1996-01-26</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+### Result
+
+{{EmbedLiveSample('HTML_2', '', '', '', 'Web/HTML/Global_attributes/itemprop')}}
+
+## Specifications
+
+| Specification                                                                                                                   | Status | Comment                                      |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------ | -------------------------------------------- |
+| [`itemprop`](https://html.spec.whatwg.org/multipage/microdata.html#names:-the-itemprop-attribute:names:-the-itemprop-attribute) |        | WG Note - No longer being actively developed |
+
+## Compatibilidade com navegadores
 
 {{Compat("html.global_attributes.itemprop")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Global_attributes">Other different global attributes</a></li>
- <li>Other, microdata related, global attributes:
-  <ul>
-   <li>{{htmlattrxref("itemid")}}</li>
-   <li>{{htmlattrxref("itemprop")}}</li>
-   <li>{{htmlattrxref("itemref")}}</li>
-   <li>{{htmlattrxref("itemscope")}}</li>
-   <li>{{htmlattrxref("itemtype")}}</li>
-  </ul>
- </li>
-</ul>
-</div>
-</div>
+- [Other different global attributes](/pt-BR/docs/Web/HTML/Global_attributes)
+- Other, microdata related, global attributes:
+
+  - {{htmlattrxref("itemid")}}
+  - {{htmlattrxref("itemprop")}}
+  - {{htmlattrxref("itemref")}}
+  - {{htmlattrxref("itemscope")}}
+  - {{htmlattrxref("itemtype")}}

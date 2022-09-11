@@ -3,72 +3,52 @@ title: canvas
 slug: Web/HTML/Element/canvas
 translation_of: Web/HTML/Element/canvas
 ---
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O elemento HTML <em>Canvas</em> (<code>&lt;canvas&gt;</code>) pode ser utilizado para desenhar gráficos utilizando scripts (geralmente <a href="/en/JavaScript" title="en/JavaScript">JavaScript</a>). Por exemplo, além de desenhar gráficos, ele pode ser usado para fazer composições de fotos e também para animações. Você poderá colocar conteúdos alternativos dentro do bloco <code>&lt;canvas&gt;</code>. Este conteúdo será renderizado também em navegadores antigos e em navegadores com JavaScript desabilitado.</p>
+O elemento HTML _Canvas_ (`<canvas>`) pode ser utilizado para desenhar gráficos utilizando scripts (geralmente [JavaScript](/en/JavaScript "en/JavaScript")). Por exemplo, além de desenhar gráficos, ele pode ser usado para fazer composições de fotos e também para animações. Você poderá colocar conteúdos alternativos dentro do bloco `<canvas>`. Este conteúdo será renderizado também em navegadores antigos e em navegadores com JavaScript desabilitado.
 
-<p>Para mais artigos sobre canvas, veja <a href="/en/HTML/Canvas" title="en/HTML/Canvas">canvas topic page</a>.</p>
+Para mais artigos sobre canvas, veja [canvas topic page](/en/HTML/Canvas "en/HTML/Canvas").
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>Conteúdo permitido</td>
-   <td>Transparente, tanto <a href="/en/HTML/Content_categories#phrasing_content" title="en/HTML/Content categories#phrasing content">phrasing content</a> ou <a href="/en/HTML/Content_categories#flow_content" title="en/HTML/Content categories#flow content">flow content</a>.</td>
-  </tr>
-  <tr>
-   <td>Omissão de tags</td>
-   <td>Nenhuma, tanto a tag de início quanto a de fim devem ser incluídas.</td>
-  </tr>
-  <tr>
-   <td>Elementos "pai" permitidos</td>
-   <td>Qualquer elemento que aceite <a href="/en/HTML/Content_categories#phrasing_content" title="en/HTML/Content categories#phrasing content">phrasing content</a> ou <a href="/en/HTML/Content_categories#flow_content" title="en/HTML/Content categories#flow content">flow content</a>. </td>
-  </tr>
-  <tr>
-   <td>Documento normativo</td>
-   <td><a class="external" href="http://www.w3.org/TR/html5/the-canvas-element.html#the-canvas-element">HTML 5, section 4.8.10</a></td>
-  </tr>
- </tbody>
-</table>
+| Conteúdo permitido         | Transparente, tanto [phrasing content](/en/HTML/Content_categories#phrasing_content "en/HTML/Content categories#phrasing content") ou [flow content](/en/HTML/Content_categories#flow_content "en/HTML/Content categories#flow content").          |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omissão de tags            | Nenhuma, tanto a tag de início quanto a de fim devem ser incluídas.                                                                                                                                                                                |
+| Elementos "pai" permitidos | Qualquer elemento que aceite [phrasing content](/en/HTML/Content_categories#phrasing_content "en/HTML/Content categories#phrasing content") ou [flow content](/en/HTML/Content_categories#flow_content "en/HTML/Content categories#flow content"). |
+| Documento normativo        | [HTML 5, section 4.8.10](http://www.w3.org/TR/html5/the-canvas-element.html#the-canvas-element)                                                                                                                                                    |
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<p>Como qualquer outro elemento HTML, este também tem <a href="/en/HTML/Global_attributes" title="en/HTML/Global attributes">global attributes</a>.</p>
+Como qualquer outro elemento HTML, este também tem [global attributes](/en/HTML/Global_attributes "en/HTML/Global attributes").
 
-<dl>
- <dt>{{ htmlattrdef("width") }}</dt>
- <dd> A largura do espaço em pixels CSS. O padrão é 300.</dd>
- <dt>{{ htmlattrdef("height") }}</dt>
- <dd>A altura do espaço em pixels CSS. O padrão é 150.</dd>
-</dl>
+- {{ htmlattrdef("width") }}
+  - : A largura do espaço em pixels CSS. O padrão é 300.
+- {{ htmlattrdef("height") }}
+  - : A altura do espaço em pixels CSS. O padrão é 150.
 
-<p>{{ Note("The displayed size of the canvas can be changed using a stylesheet. The image is scaled during rendering to fit the styled size.") }}</p>
+{{ Note("The displayed size of the canvas can be changed using a stylesheet. The image is scaled during rendering to fit the styled size.") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<ul>
- <li><a href="/en/DOM/HTMLCanvasElement" title="en/DOM/HTMLCanvasElement">HTMLCanvasElement</a></li>
-</ul>
+- [HTMLCanvasElement](/en/DOM/HTMLCanvasElement "en/DOM/HTMLCanvasElement")
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: html">&lt;<span class="start-tag">canvas</span><span class="attribute-name"> id</span>=<span class="attribute-value">"canvas" </span><span class="attribute-name">width</span>=<span class="attribute-value">"300" </span><span class="attribute-name">height</span>=<span class="attribute-value">"300"</span>&gt;
-  Desculpe-me, seu navegador não suporta o elemento &amp;<span class="entity">lt;</span>canvas&amp;<span class="entity">gt;</span>.
-&lt;/<span class="end-tag">canvas</span>&gt;
-</pre>
+```html
+<canvas id="canvas" width="300" height="300">
+  Desculpe-me, seu navegador não suporta o elemento &lt;canvas&gt;.
+</canvas>
+```
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("html.elements.canvas")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en/HTML/Canvas" title="https://developer.mozilla.org/en/HTML/Canvas">MDN canvas portal</a></li>
- <li>Um <a href="/en/Canvas_tutorial" title="Canvas tutorial">canvas tutorial</a></li>
- <li><a class="external" href="http://blog.nihilogic.dk/2009/02/html5-canvas-cheat-sheet.html">Canvas cheat sheet</a></li>
- <li><a href="/en-US/demos/tag/tech:canvas" title="https://developer.mozilla.org/en-US/demos/tag/tech:canvas/">Canvas-related demos</a></li>
-</ul>
+- [MDN canvas portal](/en/HTML/Canvas "https://developer.mozilla.org/en/HTML/Canvas")
+- Um [canvas tutorial](/en/Canvas_tutorial "Canvas tutorial")
+- [Canvas cheat sheet](http://blog.nihilogic.dk/2009/02/html5-canvas-cheat-sheet.html)
+- [Canvas-related demos](/en-US/demos/tag/tech:canvas "https://developer.mozilla.org/en-US/demos/tag/tech:canvas/")
 
-<p>{{ languages( { "de": "de/HTML/Element/canvas", "en": "en/HTML/Element/canvas", "es": "es/HTML/Elemento/canvas", "ja": "ja/HTML/Element/canvas", "ko": "ko/HTML/Element/canvas", "nl": "nl/HTML/HTML_Tags/canvas", "pl": "pl/HTML/Element/canvas", "ru": "Ru/HTML/Element/canvas", "zh-cn": "cn/HTML/Element/canvas", "fr": "fr/HTML/Element/canvas" } ) }}</p>
+{{ languages( { "de": "de/HTML/Element/canvas", "en": "en/HTML/Element/canvas", "es": "es/HTML/Elemento/canvas", "ja": "ja/HTML/Element/canvas", "ko": "ko/HTML/Element/canvas", "nl": "nl/HTML/HTML\_Tags/canvas", "pl": "pl/HTML/Element/canvas", "ru": "Ru/HTML/Element/canvas", "zh-cn": "cn/HTML/Element/canvas", "fr": "fr/HTML/Element/canvas" } ) }}

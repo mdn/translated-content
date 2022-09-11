@@ -4,27 +4,24 @@ slug: Web/HTML/Inline_elements
 translation_of: Web/HTML/Inline_elements
 original_slug: Web/HTML/Inline_elemente
 ---
-<h3 id="Summary" name="Summary">Sumário</h3>
-<p>"Inline" é uma categorização dos elementos do HTML, em contraste com os <a href="/en-US/docs/HTML/Block-level_elements">"elementos de bloco"</a>. Os elementos inline podem ser exibidos em nível de bloco ou outros elementos inline. Eles ocupam somente a largura de seu conteúdo. A diferença entre elementos inline e bloco incluem:</p>
-<dl>
- <dt>
-  Modelo de conteúdo</dt>
- <dd>
-  Geralmente, elementos inline devem ter somente dados em outros elementos inline.</dd>
- <dt>
-  Formato</dt>
- <dd>
-  Por padrão, os elementos inline não começam em uma nova linha.</dd>
-</dl>
-<h3 id="Elements" name="Elements">Elementos</h3>
-<p>Listagem dos elementos que são "inline":</p>
-<ul>
- <li><a href="/en/HTML/Element/b" title="en/HTML/Element/b">b</a>, <a href="/en/HTML/Element/big" title="en/HTML/Element/big">big</a>, <a href="/en/HTML/Element/i" title="en/HTML/Element/i">i</a>, <a href="/en/HTML/Element/small" title="en/HTML/Element/small">small</a>, <a href="/en/HTML/Element/tt" title="en/HTML/Element/tt">tt</a></li>
- <li><a href="/en/HTML/Element/abbr" title="en/HTML/Element/abbr">abbr</a>, <a href="/en/HTML/Element/acronym" title="en/HTML/Element/acronym">acronym</a>, <a href="/en/HTML/Element/cite" title="en/HTML/Element/cite">cite</a>, <a href="/en/HTML/Element/code" title="en/HTML/Element/code">code</a>, <a href="/en/HTML/Element/dfn" title="en/HTML/Element/dfn">dfn</a>, <a href="/en/HTML/Element/em" title="en/HTML/Element/em">em</a>, <a href="/en/HTML/Element/kbd" title="en/HTML/Element/kbd">kbd</a>, <a href="/en/HTML/Element/strong" title="en/HTML/Element/strong">strong</a>, <a href="/en/HTML/Element/samp" title="en/HTML/Element/samp">samp</a>, <a href="/en/HTML/Element/var" title="en/HTML/Element/var">var</a></li>
- <li><a href="/en/HTML/Element/a" title="en/HTML/Element/a">a</a>, <a href="/en/HTML/Element/bdo" title="en/HTML/Element/bdo">bdo</a>, <a href="/en/HTML/Element/br" title="en/HTML/Element/br">br</a>, <a href="/En/HTML/Element/Img" title="En/HTML/Element/Img">img</a>, <a href="/en/HTML/Element/map" title="en/HTML/Element/map">map</a>, <a href="/en/HTML/Element/object" title="en/HTML/Element/object">object</a>, <a href="/en/HTML/Element/q" title="en/HTML/Element/q">q</a>, <a href="/En/HTML/Element/Script" title="En/HTML/Element/Script">script</a>, <a href="/en/HTML/Element/span" title="en/HTML/Element/span">span</a>, <a href="/en/HTML/Element/sub" title="en/HTML/Element/sub">sub</a>, <a href="/en/HTML/Element/sup" title="en/HTML/Element/sup">sup</a></li>
- <li><a href="/en/HTML/Element/button" title="en/HTML/Element/button">button</a>, <a href="/en/HTML/Element/Input" title="en/HTML/Element/Input">input</a>, <a href="/en/HTML/Element/label" title="en/HTML/Element/label">label</a>, <a href="/en/HTML/Element/select" title="en/HTML/Element/select">select</a>, <a href="/en/HTML/Element/textarea" title="en/HTML/Element/textarea">textarea</a></li>
-</ul>
-<h3 id="See_also" name="See_also">Ver também</h3>
-<ul>
- <li><a href="/en/HTML/Block-level_elements" title="en/HTML/Block-level_elements">Elementos de nível de bloco</a></li>
-</ul>
+### Sumário
+
+"Inline" é uma categorização dos elementos do HTML, em contraste com os ["elementos de bloco"](/pt-BR/docs/HTML/Block-level_elements). Os elementos inline podem ser exibidos em nível de bloco ou outros elementos inline. Eles ocupam somente a largura de seu conteúdo. A diferença entre elementos inline e bloco incluem:
+
+- Modelo de conteúdo
+  - : Geralmente, elementos inline devem ter somente dados em outros elementos inline.
+- Formato
+  - : Por padrão, os elementos inline não começam em uma nova linha.
+
+### Elementos
+
+Listagem dos elementos que são "inline":
+
+- [b](/en/HTML/Element/b "en/HTML/Element/b"), [big](/en/HTML/Element/big "en/HTML/Element/big"), [i](/en/HTML/Element/i "en/HTML/Element/i"), [small](/en/HTML/Element/small "en/HTML/Element/small"), [tt](/en/HTML/Element/tt "en/HTML/Element/tt")
+- [abbr](/en/HTML/Element/abbr "en/HTML/Element/abbr"), [acronym](/en/HTML/Element/acronym "en/HTML/Element/acronym"), [cite](/en/HTML/Element/cite "en/HTML/Element/cite"), [code](/en/HTML/Element/code "en/HTML/Element/code"), [dfn](/en/HTML/Element/dfn "en/HTML/Element/dfn"), [em](/en/HTML/Element/em "en/HTML/Element/em"), [kbd](/en/HTML/Element/kbd "en/HTML/Element/kbd"), [strong](/en/HTML/Element/strong "en/HTML/Element/strong"), [samp](/en/HTML/Element/samp "en/HTML/Element/samp"), [var](/en/HTML/Element/var "en/HTML/Element/var")
+- [a](/en/HTML/Element/a "en/HTML/Element/a"), [bdo](/en/HTML/Element/bdo "en/HTML/Element/bdo"), [br](/en/HTML/Element/br "en/HTML/Element/br"), [img](/En/HTML/Element/Img "En/HTML/Element/Img"), [map](/en/HTML/Element/map "en/HTML/Element/map"), [object](/en/HTML/Element/object "en/HTML/Element/object"), [q](/en/HTML/Element/q "en/HTML/Element/q"), [script](/En/HTML/Element/Script "En/HTML/Element/Script"), [span](/en/HTML/Element/span "en/HTML/Element/span"), [sub](/en/HTML/Element/sub "en/HTML/Element/sub"), [sup](/en/HTML/Element/sup "en/HTML/Element/sup")
+- [button](/en/HTML/Element/button "en/HTML/Element/button"), [input](/en/HTML/Element/Input "en/HTML/Element/Input"), [label](/en/HTML/Element/label "en/HTML/Element/label"), [select](/en/HTML/Element/select "en/HTML/Element/select"), [textarea](/en/HTML/Element/textarea "en/HTML/Element/textarea")
+
+### Ver também
+
+- [Elementos de nível de bloco](/en/HTML/Block-level_elements "en/HTML/Block-level_elements")
