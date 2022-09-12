@@ -45,7 +45,7 @@ JavaScript 代码只需将要匹配的媒体查询字符串传递到{{domxref("W
 
 ### HTML
 
-```
+```html
 <span class="mq-value"></span>
 ```
 

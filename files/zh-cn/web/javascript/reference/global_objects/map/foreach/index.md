@@ -60,7 +60,7 @@ forEach(function(value, key, map) { /* … */ }, thisArg)
 - 当前的 `key`
 - 正在被遍历的 **`Map` 对象**
 
-如果 `forEach` 中含有 `thisArg` 参数，那么每次 `callback` 被调用时，都会被用作 `this` 的值。否则，`undefined` 将会被用作 `this` 的值。按照[函数观察到 `this` 的常用规则](/en-US/docs/Web/JavaScript/Reference/Operators/this)，`callback` 函数最终可观察到 `this` 值。
+如果 `forEach` 中含有 `thisArg` 参数，那么每次 `callback` 被调用时，都会被用作 `this` 的值。否则，`undefined` 将会被用作 `this` 的值。按照[函数观察到 `this` 的常用规则](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)，`callback` 函数最终可观察到 `this` 值。
 
 每个值只被访问一次，除非它被删除了或者在 `forEach` 结束前被改变了。`callback` 不会对在被访问前就删除的元素执行。在 `forEach` 结束前被添加的元素将会被访问。
 

@@ -20,9 +20,9 @@ mutationObserver.observe(target[, options])
   - : DOM 树中的一个要观察变化的 DOM {{domxref("Node")}} (可能是一个 {{domxref("Element")}})，或者是被观察的子节点树的根节点。
 - `options`
   - : 此对象的配置项描述了 DOM 的哪些变化应该报告给 `MutationObserver` 的 `callback`。当调用 {{domxref("MutationObserver.observe", "observe()")}} 时， `childList`、`attributes` 和 `characterData` 中，必须有一个参数为 `true`。否则会抛出 `TypeError` 异常。
-  
+
     `options` 的属性如下：
-    
+
     - `subtree` {{optional_inline}}
       - : 当为 `true` 时，将会监听以 `target` 为根节点的整个子树。包括子树中所有节点的属性，而不仅仅是针对 `target`。默认值为 `false`。
     - `childList` {{optional_inline}}
