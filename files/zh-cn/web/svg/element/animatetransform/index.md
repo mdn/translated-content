@@ -32,7 +32,7 @@ slug: Web/SVG/Element/animateTransform
 
 **示例输出**
 
-{{ EmbedLiveSample('Example','120','120') }}
+{{ EmbedLiveSample('示例','120','120') }}
 
 ## 属性
 
