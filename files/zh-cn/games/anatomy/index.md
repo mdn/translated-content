@@ -105,17 +105,16 @@ main(); // 开始循环
 window.cancelAnimationFrame(MyGame.stopMain);
 ```
 
-
 在 JavaScript 的中编写主循环的关键在于，考虑到任何会驱动你行为的事件，并注意不同的系统是如何相互作用的。您可能拥有多个由多个不同类型的事件驱动的组件。这看起来像是不必要的复杂性，但它可能就是一个很好的优化（当然，不一定是这样的）。问题是，您并不是在编写一个典型的主循环。在 JavaScript 中，您使用的是浏览器的主循环，并且您正在尝试这样做。
 
 ## 用 JavaScript 构建一个更优化的主循环
 
-基本上，在 JavaScript 的中，浏览器有它自己的主循环，而你的代码存在于循环某些阶段。上面描述的主循环，试图避免脱离浏览器的控制。这种主循环附着于 `window.requestAnimationFrame()` 方法，该方法将在浏览器的下一帧中执行，具体取决于浏览器如何与将其自己的主循环关联起来。[W3C 规范中的 requestAnimationFrame](https://www.w3.org/TR/animation-timing/) 并没有真正定义什么时候浏览器必须执行 requestAnimationFrame 回调。这有一个好处，浏览器厂商可以自由地实现他们认为最好的解决方案，并随着时间的推移进行调整。
+基本上，在 JavaScript 的中，浏览器有它自己的主循环，而你的代码存在于循环某些阶段。上面描述的主循环，试图避免脱离浏览器的控制。这种主循环附着于 `window.requestAnimationFrame()` 方法，该方法将在浏览器的下一帧中执行，具体取决于浏览器如何与将其自己的主循环关联起来。[W3C 的 requestAnimationFrame 规范](https://www.w3.org/TR/animation-timing/)并没有真正定义什么时候浏览器必须执行 requestAnimationFrame 回调。这有一个好处，浏览器厂商可以自由地实现他们认为最好的解决方案，并随着时间的推移进行调整。
 
-现代版的 Firefox 和 Google Chrome（可能还有其他版本）试图在框架的时间片的开始时将请求 AnimationFrame 回调与它们的主线程进行连接。因此，浏览器的主线程看起来就像下面这样：
+现代版的 Firefox 和 Google Chrome（可能还有其他版本）试图在框架的时间片的开始时尝试将 `requestAnimationFrame` 回调与它们的主线程进行连接。因此，浏览器的主线程看起来就像下面这样：
 
 1. 启动一个新帧（而之前的帧由显示处理）。
-2. 遍历 requestAnimationFrame 回调并调用它们。
+2. 遍历 `requestAnimationFrame` 回调并调用它们。
 3. 当上面的回调停止控制主线程时，执行垃圾收集和其他帧任务。
 4. 睡眠（除非事件打断了浏览器的小睡），直到显示器准备好你的图像（[VSync](https://www.techopedia.com/definition/92/vertical-sync-vsync)）并重复。
 
@@ -123,7 +122,7 @@ window.cancelAnimationFrame(MyGame.stopMain);
 
 当我们讨论预算时，许多网络浏览器都有一个称为高分辨率时间的工具。{{jsxref("Date")}} 对象不再是计时事件的识别方法，因为它非常不精确，可以由系统时钟进行修改。另一方面，高分辨率的时间计算自 `navigationStart`（当上一个文档被卸载时）的毫秒数。这个值以小数的精度返回，精确到千分之一毫秒。它被称为{{ domxref("DOMHighResTimeStamp") }}，但是，无论出于什么目的和目的，都认为它是一个浮点数。
 
-> **备注：** 系统（硬件或软件）不能达到微秒精度，可以提供毫秒精度的最小值然而，如果他们能够做到这一点，他们就应该提供 0.001 的准确性。
+> **备注：** 系统（硬件或软件）不能达到微秒精度，可以提供毫秒精度的最小值然而，如果他们能够做到这一点，他们就应该提供 0.001 毫秒的准确性。
 
 这个值本身并不太有用，因为它与一个相当无趣的事件相关，但它可以从另一个时间戳中减去，以便准确准确地确定这两个点之间的时间间隔。要获得这些时间戳中的一个，您可以调用 `window.performance.now()` 并将结果存储为一个变量。
 
@@ -210,7 +209,7 @@ var tNow = window.performance.now();
 
   - 即使在未聚焦或最小化的情况下，使用处理器时间，也可能是主线程，并且可能是传统游戏循环的工件（但是很简单）。
 
-- 绘制 `requestAnimationFrame` 和更新一个 `setInterval` 或 `setTimeout` 一个 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)。
+- 绘制 `requestAnimationFrame` 并在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers) 的 `setInterval` 或 `setTimeout` 中对其进行更新。
 
   - 这与上述相同，除了更新不会使主线程（主线程也没有）。这是一个更复杂的解决方案，并且对于简单更新可能会有太多的开销。
 
@@ -299,7 +298,7 @@ var tNow = window.performance.now();
 
 另一个选择是简单地做一些事情不那么频繁。如果您的更新循环的一部分难以计算但对时间不敏感，则可以考虑缩小其频率，理想情况下，在延长的时间段内将其扩展成块。这是一个隐含的例子，在火炮博物馆的炮兵游戏中，他们[调整垃圾发生率](https://web.archive.org/web/20161021030645/http://blog.artillery.com/2012/10/browser-garbage-collection-and-framerate.html)来优化垃圾收集。显然，清理资源不是时间敏感的（特别是如果整理比垃圾本身更具破坏性）。
 
-这也可能适用于您自己的一些任务。那些是当可用资源成为关注点时的好候选人。
+这也可能适用于你自己的一些任务。那些是当可用资源成为关注点时的好候选人。
 
 ## 概要
 
