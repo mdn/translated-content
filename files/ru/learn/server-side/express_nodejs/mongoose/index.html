@@ -233,13 +233,13 @@ var SomeModel = mongoose.model('SomeModel', SomeModelSchema );</strong></pre>
 <ul>
  <li><code>ObjectId</code>: Представляет отдельный экземпляр модели в БД. Например, book может ссылаться на объект- автора. Поле будет содержать уникальный идентификатор (<code>_id</code>) отдельного объекта. При необходимости использования этой информации применяют метод <code>populate()</code>.</li>
  <li><a href="http://mongoosejs.com/docs/schematypes.html#mixed">Mixed</a>: Произвольный тип в схеме.</li>
- <li><font face="Consolas, Liberation Mono, Courier, monospace">[]</font>: Массив элементов. В таких моделях можно выполнять JavaScript-операции для массивов (push, pop, unshift, etc.).  Выше показан пример массивы объектов неопределённого типа и массив строк, но можно использовать массив объектов любого типа.</li>
+ <li><font face="Consolas, Liberation Mono, Courier, monospace">[]</font>: Массив элементов. В таких моделях можно выполнять JavaScript-операции для массивов (push, pop, unshift, etc.).  Выше показан пример массива объектов неопределённого типа и массив строк, но можно использовать массив объектов любого типа.</li>
 </ul>
 
 <p>Код содержит также два способа объявления полей:</p>
 
 <ul>
- <li><em>Имя</em>  и <em>тип</em>поля как пара "ключ-значение" (поля <code>name</code>, <code>binary и</code> <code>living</code>).</li>
+ <li><em>Имя</em>  и <em>тип</em> поля как пара "ключ-значение" (поля <code>name</code>, <code>binary и</code> <code>living</code>).</li>
  <li><em>Имя</em> поля, после которого указывается объект, определяющий <em>тип</em>  и  другие возможности  поля, такие как:
   <ul>
    <li>значения по умолчанию.</li>
