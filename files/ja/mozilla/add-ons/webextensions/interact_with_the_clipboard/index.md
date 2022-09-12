@@ -1,49 +1,37 @@
 ---
-title: Interact with the clipboard
+title: クリップボードとのやりとり
 slug: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
-tags:
-  - Add-ons
-  - Clip
-  - Clipboard
-  - Cut
-  - Editing
-  - Extensions
-  - Text
-  - WebExtensions
-  - copy
-  - paste
-browser-compat:
-  - api.Clipboard
-  - webextensions.api.clipboard
+l10n:
+  sourceCommit: 1ee49b729dc4cd02b862d910f279861f4b30e704
 ---
 
 {{AddonSidebar}}
 
-Working with the clipboard in extensions is transitioning from the Web API {{domxref("Document.execCommand()","document.execCommand")}} method (which is deprecated) to the {{domxref("Clipboard", "navigator.clipboard")}} method.
+拡張機能でクリップボードを扱うのは、Web API の {{domxref("Document.execCommand()","document.execCommand")}} メソッド（非推奨）から {{domxref("Clipboard", "navigator.clipboard")}} メソッドに移行しています。
 
-> **Note:** The {{domxref("Clipboard", "navigator.clipboard")}} API is a recent addition to the specification and may not be fully implemented in all browsers. This article describes some limitations, but be sure to review the compatibility tables for each method before using them to ensure that the API supports your needs.
+> **Note:** {{domxref("Clipboard", "navigator.clipboard")}} API は最近追加された仕様であり、すべてのブラウザーで完全に実装されているとは限りません。この記事ではいくつかの制限事項を説明しますが、API があなたのニーズをサポートしていることを確認するために、使用する前に必ず各メソッドの互換性テーブルを確認するようにしてください。
 
-The difference between the two APIs is that {{domxref("Document.execCommand()","document.execCommand")}} this is analogous to the keyboard copy, cut, and paste actions – exchanging data between a webpage and clipboard – whereas {{domxref("Clipboard", "navigator.clipboard")}} writes and reads arbitrary data to and from the clipboard.
+2 つの API の違いは、{{domxref("Document.execCommand()","document.execCommand")}} がキーボードのコピー、カット、ペーストの操作に似ていて、ウェブページとクリップボード間でデータを交換するのに対し、{{domxref("Clipboard", "navigator.clipboard")}} はクリップボードとの間で任意のデータの書き込みと読み出しを行うことです。
 
-{{domxref("Clipboard", "navigator.clipboard")}} provide separate methods to read or write:
+{{domxref("Clipboard", "navigator.clipboard")}} は、読み書きのためのメソッドを個別に提供しています。
 
-- text content, using {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} and {{domxref("Clipboard.writeText", "navigator.clipboard.writeText()")}}.
-- images, rich text, HTML, and other rich content, using {{domxref("Clipboard.read", "navigator.clipboard.read()")}} and {{domxref("Clipboard.write", "navigator.clipboard.write()")}}.
+- テキストを扱う場合は {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} と {{domxref("Clipboard.writeText", "navigator.clipboard.writeText()")}} が使えます。
+- 画像、リッチテキスト、HTML、その他のリッチコンテンツを扱う場合は {{domxref("Clipboard.read", "navigator.clipboard.read()")}} と {{domxref("Clipboard.write", "navigator.clipboard.write()")}} が使えます。
 
-However, while {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} and {{domxref("Clipboard.writeText", "navigator.clipboard.writeText()")}} work on all browsers, {{domxref("Clipboard.read", "navigator.clipboard.read()")}} and {{domxref("Clipboard.write", "navigator.clipboard.write()")}} do not. For example, on Firefox at the time of writing, {{domxref("Clipboard.read", "navigator.clipboard.read()")}} and {{domxref("Clipboard.write", "navigator.clipboard.write()")}} are not fully implemented, such that to:
+しかし、{{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} と {{domxref("Clipboard.writeText", "navigator.clipboard.writeText()")}} はすべてのブラウザーで動作しますが、{{domxref("Clipboard.read", "navigator.clipboard.read()")}} と {{domxref("Clipboard.write", "navigator.clipboard.write()")}} は動作するとは限りません。例えば、執筆時点の Firefox では、{{domxref("Clipboard.read", "navigator.clipboard.read()")}} と {{domxref("Clipboard.write", "navigator.clipboard.write()")}} は完全に実装されていないため、次のことを留意する必要があります。
 
-- work with images use {{WebExtAPIRef("clipboard.setImageData","browser.clipboard.setImageData()")}} to write images to the clipboard and {{domxref("Document.execCommand()","document.execCommand(&#34;paste&#34;)")}} to paste images to a webpage.
-- write rich content (such as, HTML, rich text including images, etc.) to the clipboard, use {{domxref("Document.execCommand()","document.execCommand(&#34;copy&#34;)")}} or {{domxref("Document.execCommand()","document.execCommand(&#34;cut&#34;)")}}. Then, either {{domxref("Clipboard.read","navigator.clipboard.read()")}} (recommended) or {{domxref("Document.execCommand()","document.execCommand(&#34;paste&#34;)")}} to read the content from the clipboard.
+- 画像を扱う場合は、クリップボードに画像を書き込むために {{WebExtAPIRef("clipboard.setImageData","browser.clipboard.setImageData()")}} を使い、ウェブページに画像を貼り付けるために {{domxref("Document.execCommand()","document.execCommand(&#34;paste&#34;)")}} を使います。
+- リッチコンテンツ（HTML、画像を含むリッチテキストなど）をクリップボードに書き込むには、{{domxref("Document.execCommand()","document.execCommand(&#34;copy&#34;)")}} か {{domxref("Document.execCommand()","document.execCommand(&#34;cut&#34;)")}} を使います。その後、{{domxref("Clipboard.read","navigator.clipboard.read()")}} （推奨）または {{domxref("Document.execCommand()","document.execCommand(&#34;paste&#34;)")}} を使ってクリップボードからコンテンツを読み取ります。
 
-## Writing to the clipboard
+## クリップボードへの書き込み
 
-This section describes the options for writing data to the clipboard.
+ここでは、クリップボードにデータを書き込むためのオプションについて説明します。
 
-### Using the Clipboard API
+### Clipboard API を使用する
 
-The Clipboard API writes arbitrary data to the clipboard from your extension. Using the API requires the permission `"clipboardRead"` or `"clipboardWrite"` in your `manifest.json` file. As the API is only available to [Secure Contexts](/en-US/docs/Web/Security/Secure_Contexts), it cannot be used from a content script running on `http:`-pages, only `https:`-pages.
+Clipboard API は、拡張機能から任意のデータをクリップボードに書き込むものです。この API を使用するには、`manifest.json` ファイルに `"clipboardRead"` または `"clipboardWrite"` というパーミッションを設定する必要があります。この API は[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ利用可能であるため、`http:` ページで動作するコンテンツスクリプトからは使用できず、`https:` ページでのみ使用できます。
 
-For page scripts, the `"clipboard-write"` permission needs to be requested using the Web API {{domxref("Permissions", "navigator.permissions")}}. You can check for that permission using {{domxref("Permissions.query", "navigator.permissions.query()")}}:
+ページスクリプトの場合、Web API の {{domxref("Permissions", "navigator.permissions")}} を使用して `"clipboard-write"` パーミッションを要求する必要があります。そのパーミッションは、{{domxref("Permissions.query", "navigator.permissions.query()")}} を使って確認することができます。
 
 ```js
 navigator.permissions.query({name: "clipboard-write"}).then((result) => {
@@ -53,9 +41,9 @@ navigator.permissions.query({name: "clipboard-write"}).then((result) => {
 });
 ```
 
-> **Note:** The `clipboard-write` permission name is not supported in Firefox, only Chromium browsers.
+> **Note:** `clipboard-write` のパーミッション名は Firefox ではサポートされておらず、Chromium ブラウザーでのみサポートされています。
 
-This function takes a string and writes it to the clipboard:
+この関数は、文字列を受け取り、それをクリップボードに書き込みます。
 
 ```js
 function updateClipboard(newClip) {
@@ -67,18 +55,18 @@ function updateClipboard(newClip) {
 }
 ```
 
-### Using execCommand()
+### execCommand() を使用する
 
-The `"cut"` and `"copy"` commands of the {{domxref("Document.execCommand", "document.execCommand()")}} method are used to replace the clipboard's content with the selected material. These commands can be used without any special permission in short-lived event handlers for a user action (for example, a click handler).
+{{domxref("Document.execCommand", "document.execCommand()")}} メソッドの `"cut"` と `"copy"` コマンドは、クリップボードの内容を選択した素材に置き換えるために使用されます。これらのコマンドは、ユーザーアクションに対する短時間のイベントハンドラー（例えば、クリックハンドラー）で特別な許可なしに使用することができます。
 
-For example, suppose you've got a popup that includes the following HTML:
+例えば、以下のような HTML を含むポップアップがあったとします。
 
 ```html
 <input id="input" type="text"/>
 <button id="copy">Copy</button>
 ```
 
-To make the `"copy"` button copy the contents of the {{HTMLElement("input")}} element, you can use code like this:
+`"copy"` ボタンで {{HTMLElement("input")}} 要素の内容をコピーさせるには、次のようなコードを使用します。
 
 ```js
 function copy() {
@@ -90,9 +78,9 @@ function copy() {
 document.querySelector("#copy").addEventListener("click", copy);
 ```
 
-Because the `execCommand()` call is inside a click event handler, you don't need any special permissions.
+`execCommand()` の呼び出しはクリックイベントハンドラーの中にあるので、特別な権限は必要ありません。
 
-However, let's say that instead you trigger the copy from an alarm:
+しかし、その代わりに、アラームからコピーを起動させたとしましょう。
 
 ```js
 function copy() {
@@ -108,55 +96,55 @@ browser.alarms.create({
 browser.alarms.onAlarm.addListener(copy);
 ```
 
-Depending on the browser, this may not work. On Firefox, it will not work, and you'll see a message like this in your console:
+ブラウザーによっては、うまく動作しないことがあります。Firefox では動作せず、コンソールに次のようなメッセージが表示されます。
 
 `document.execCommand('cut'/'copy') was denied because it was not called from inside a short running user-generated event handler.`
 
-To enable this use case, you need to ask for the `"clipboardWrite"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). So: `"clipboardWrite"` enables you to write to the clipboard outside a short-lived event handler for a user action.
+このユースケースを有効にするには、`"clipboardWrite"` [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)を要求する必要があります。つまり `"clipboardWrite"` は、ユーザーアクションのための短時間のイベントハンドラーの外側でクリップボードに書き込むことを可能にします。
 
-> **Note:**{{domxref("Document.execCommand", "document.execCommand()")}} does not work on input fields of `type="hidden"`, with the HTML5 attribute `"hidden"`, or any matching CSS rule using `"display: none;"`. So, to add a "copy to clipboard" button to a `span`, `div`, or `p` tag, you need to use a workaround, such as setting the input's position to absolute and moving it out of the viewport.
+> **Note:** {{domxref("Document.execCommand", "document.execCommand()")}} は、`type="hidden"` の入力フィールド、HTML5 属性の `"hidden"`、または `"display: none;"` を使った CSS ルールにマッチするものでは機能しません。したがって、`span`, `div`, `p` タグに「クリップボードにコピー」ボタンを追加するには、入力の位置を絶対座標に設定し、ビューポートの外に移動させるなどの回避策をとる必要があります。
 
-### Browser-specific considerations
+### 特定のブラウザーにおける留意事項
 
-The clipboard and other APIs involved here are evolving rapidly, so there are variations among browsers in how they work.
+クリップボードなどの API は日進月歩で進化しているため、ブラウザーによって動作にばらつきがあります。
 
-In Chrome:
+Chrome の場合:
 
-- You don't need `"clipboardWrite"`, even to write to the clipboard outside a user-generated event handler.
+- ユーザーが作成したイベントハンドラーの外でクリップボードに書き込む場合でも、`"clipboardWrite"` は必要ありません。
 
-In Firefox:
+Firefox の場合:
 
-- {{domxref("Clipboard.write", "navigator.clipboard.write()")}} is not supported.
+- {{domxref("Clipboard.write", "navigator.clipboard.write()")}} はサポートされていません。
 
-See the [browser compatibility tables](#browser_compatibility) for more information.
+詳細は[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
 
-## Reading from the clipboard
+## クリップボードからの読み込み
 
-This section describes the options for reading or pasting data from the clipboard.
+ここでは、クリップボードからデータを読み込んだり、貼り付けたりするためのオプションについて説明します。
 
-### Using the Clipboard API
+### Clipboard API を使用する
 
-The Clipboard API's {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} and {{domxref("Clipboard.read", "navigator.clipboard.read()")}} methods let you read arbitrary text or binary data from the clipboard in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts). This lets you access the data in the clipboard without pasting it into an editable element.
+Clipboard API の {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} と {{domxref("Clipboard.read", "navigator.clipboard.read()")}} メソッドを使うと、[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でクリップボードから任意のテキストまたはバイナリデータを読み取ることができます。これにより、編集可能な要素に貼り付けることなく、クリップボードのデータにアクセスすることができます。
 
-Once you have the `"clipboard-read"` permission from the [Permissions API](/en-US/docs/Web/API/Permissions_API), you can read from the clipboard easily. For example, this snippet of code fetches the text from the clipboard and replaces the contents of the element with the ID `"outbox"` with that text.
+一度 [Permissions API](/ja/docs/Web/API/Permissions_API) から `"clipboard-read"` パーミッションを取得すると、クリップボードから簡単に読み取ることができるようになります。例えば、このコードのスニペットはクリップボードからテキストを取得し、ID が `"outbox"` の要素の内容をそのテキストで置き換えます。
 
 ```js
 navigator.clipboard.readText().then((clipText) =>
   document.getElementById("outbox").innerText = clipText);
 ```
 
-### Using execCommand()
+### execCommand() を使用する
 
-To use {{domxref("Document.execCommand()","document.execCommand(&#34;paste&#34;)")}} your extension needs the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). This is the case even if you're using the `"paste"` command from within a user-generated event handler, such as {{domxref("Element/click_event", "click")}} or {{domxref("Element/keypress_event", "keypress")}}.
+{{domxref("Document.execCommand()","document.execCommand(&#34;paste&#34;)")}} を使用するには、拡張機能には `"clipboardRead"` [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)が必要です。これは、{{domxref("Element/click_event", "click")}} や {{domxref("Element/keypress_event", "keypress")}} などのユーザーが生成したイベントハンドラーから `"paste"` コマンドを使用する場合でも同様です。
 
-Consider HTML that includes something like this:
+このような内容を含む HTML を考えてみましょう。
 
 ```html
 <textarea id="output"></textarea>
 <button id="paste">Paste</button>
 ```
 
-To set the content of the {{HTMLElement("textarea")}} element with the ID `"output"` from the clipboard when the user clicks the `"paste"` {{HTMLElement("button")}}, you can use code like this:
+ユーザーが `"paste"` の {{HTMLElement("button")}} をクリックしたときに、クリップボードから ID が `"output"` の {{HTMLElement("textarea")}} 要素の内容を設定するには、次のようなコードを使用します。
 
 ```js
 function paste() {
@@ -169,17 +157,17 @@ function paste() {
 document.querySelector("#paste").addEventListener("click", paste);
 ```
 
-### Browser-specific considerations
+### 特定のブラウザーにおける留意事項
 
-Firefox supports the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) from version 54 but only supports pasting into elements in [content editable mode](/en-US/docs/Web/Guide/HTML/Editable_content), which for content scripts only works with a {{HTMLElement("textarea")}}. For background scripts, any element can be set to content editable mode.
+Firefox はバージョン 54 から `"clipboardRead"` [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)をサポートしていますが、[コンテンツ編集可能モード](/ja/docs/Web/Guide/HTML/Editable_content)の要素への貼り付けのみをサポートしており、コンテンツスクリプトの場合は {{HTMLElement("textarea")}} でのみ機能します。バックグラウンドスクリプトでは、どの要素もコンテンツ編集可能モードに設定できます。
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
-- [Permissions API](/en-US/docs/Web/API/Permissions_API)
-- [Making content editable](/en-US/docs/Web/Guide/HTML/Editable_content)
+- [Clipboard API](/ja/docs/Web/API/Clipboard_API)
+- [Permissions API](/ja/docs/Web/API/Permissions_API)
+- [コンテンツを編集可能にする](/ja/docs/Web/Guide/HTML/Editable_content)
 - {{htmlattrxref("contenteditable")}}
