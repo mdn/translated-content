@@ -57,10 +57,9 @@ function fetchVideo() {
       console.log('下载完成', response);
     })
     .catch((err) => {
-      console.error(`下载错误: ${err.message}`);
+      console.error(`下载错误：${err.message}`);
     });
 }
-
 ```
 
 > **备注：** 当 `abort()` 被调用时，这个 `fetch()` promise 将 `reject` 一个名为 `AbortError` 的 `DOMException`。
@@ -71,11 +70,11 @@ function fetchVideo() {
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 
 ## 参见
 
 - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
-- [Abortable Fetch](https://developers.google.com/web/updates/2017/09/abortable-fetch) by Jake Archibald
+- [Abortable Fetch](https://developer.chrome.com/blog/abortable-fetch/) by Jake Archibald
