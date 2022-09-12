@@ -73,4 +73,4 @@ var foo = 'bar';​<200b>
 
 ## 相关内容
 
-- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [Lexical grammar](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)
