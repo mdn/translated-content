@@ -35,8 +35,9 @@ all: revert;
 - `unset`
   - : Esta palabra clave indica que se cambien todas las propiedades aplicables al elemento, o a su elemento padre, a los valores de los elementos padres, si son heredadas, o a sus valores iniciales en caso contrario. Los valores de {{cssxref("unicode-bidi")}} y {{cssxref("direction")}} no son afectados.
 - `revert`
-  - : Si el valor en cascada de una propiedad es la palabra clave revert, el comportamiento dependerá del origen al que pertenece la declaración:_ user-agent origin
-    _ : Equivalente a `unset`.
+  - : Si el valor en cascada de una propiedad es la palabra clave revert, el comportamiento dependerá del origen al que pertenece la declaración:
+    - user-agent origin
+      - : Equivalente a `unset`.
     - user origin
       - : Revierte la cascada al nivel del agente usuario, para que el valor especificado sea calculado como si no se hubieran especificado reglas a nivel de autor o a nivel de usuario para esta propiedad.
     - author origin

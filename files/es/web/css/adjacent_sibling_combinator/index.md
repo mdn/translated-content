@@ -35,6 +35,8 @@ li:first-of-type + li {
 
 {{EmbedLiveSample('Example_1', 200, 100)}}
 
+## Ejemplo
+
 Otro caso podría ser dar estilos a un span que se use de pie de foto de los siguientes elementos {{HTMLElement("img")}} :
 
 ```css

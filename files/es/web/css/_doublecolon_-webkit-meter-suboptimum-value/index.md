@@ -34,7 +34,7 @@ meter::-webkit-meter-suboptimum-value {
 
 {{ EmbedLiveSample('Ejemplos', '100%', 50) }}
 
-> **Nota:** **Notae**: Sólo funciona en navegadores basados en Webkit/Blink
+> **Nota:** Sólo funciona en navegadores basados en Webkit/Blink
 
 ## Compatibilidad con los distintos navegadores
 

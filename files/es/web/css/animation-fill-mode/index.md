@@ -36,19 +36,21 @@ La propiedad [CSS](/en/CSS "CSS") `animation-fill-mode` especifica el modo en qu
 - `none`
   - : La animación no aplicará los estilos antes ni después de su ejecución.
 - `forwards`
-  - | : El objeto sobre el que se aplica la animación quedará con los valores y estilos que le aplique el último keyframe de la ejecución de la animación. El último valor dependerá del valor de {{ cssxref("animation-direction") }} y {{ cssxref("animation-iteration-count") }}: | `animation-direction` | `animation-iteration-count` | ultimo keyframe encontrado |
-    | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | --------------------------- | -------------------------- |
-    | `normal`                                                                                                                                                                                                                                                                                                 | even o odd            | `100%` or `to`              |
-    | `reverse`                                                                                                                                                                                                                                                                                                | even o odd            | `0%` or `from`              |
-    | `alternate`                                                                                                                                                                                                                                                                                              | even                  | `0%` or `from`              |
-    | `alternate`                                                                                                                                                                                                                                                                                              | odd                   | `100%` or `to`              |
-    | `alternate-reverse`                                                                                                                                                                                                                                                                                      | even                  | `100%` or `to`              |
-    | `alternate-reverse`                                                                                                                                                                                                                                                                                      | odd                   | `0%` or `from`              |
+  - : El objeto sobre el que se aplica la animación quedará con los valores y estilos que le aplique el último keyframe de la ejecución de la animación. El último valor dependerá del valor de {{ cssxref("animation-direction") }} y {{ cssxref("animation-iteration-count") }}:
+    | `animation-direction` | `animation-iteration-count` | ultimo keyframe encontrado |
+    | --------------------- | --------------------------- | -------------------------- |
+    | `normal`              | even o odd                  | `100%` or `to`              |
+    | `reverse`             | even o odd                  | `0%` or `from`              |
+    | `alternate`           | even                        | `0%` or `from`              |
+    | `alternate`           | odd                         | `100%` or `to`              |
+    | `alternate-reverse`   | even                        | `100%` or `to`              |
+    |  `alternate-reverse`  | odd                         | `0%` or `from`              |
 - `backwards`
-  - | : La animación aplicará los valores definidos en el primer [keyframe](/es/docs/CSS/@keyframes) tan pronto como se aplique al objeto, y los retendrá durante el tiempo de {{ cssxref("animation-delay") }}. El primer keyframe dependerá del valor de {{ cssxref("animation-direction") }}: | `animation-direction` | primer keyframe |
-    | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------- | --------------- |
-    | `normal` o `alternate`                                                                                                                                                                                                                                                                                             | `0%` or `from`        |
-    | `reverse` o `alternate-reverse`                                                                                                                                                                                                                                                                                    | `100%` or `to`        |
+  - : La animación aplicará los valores definidos en el primer [keyframe](/es/docs/CSS/@keyframes) tan pronto como se aplique al objeto, y los retendrá durante el tiempo de {{ cssxref("animation-delay") }}. El primer keyframe dependerá del valor de {{ cssxref("animation-direction") }}:
+    | `animation-direction`           | primer keyframe |
+    | ------------------------------- | --------------- |
+    | `normal` o `alternate`          | `0%` or `from`        |
+    | `reverse` o `alternate-reverse` | `100%` or `to`        |
 - `both`
   - : La animación seguirá las reglas de las opciones forwards y backwards, extendiendo las propiedades de la animación en ambas direcciones.
 
@@ -56,7 +58,7 @@ La propiedad [CSS](/en/CSS "CSS") `animation-fill-mode` especifica el modo en qu
 
 Puedes ver el efecto de animation-fill-mode en el siguiente ejemplo. Para animaciones que iteran de forma infinita, puede que quieras que al final de cada iteración queden en su estado final mejor que en el estado inicial.
 
-### HTML
+HTML
 
 ```html
 <p>Mueve el raton sobre la caja gris</p>
@@ -66,7 +68,7 @@ Puedes ver el efecto de animation-fill-mode en el siguiente ejemplo. Para animac
 </div>
 ```
 
-### CSS
+CSS
 
 ```css
 .demo {
