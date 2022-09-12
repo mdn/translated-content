@@ -32,7 +32,7 @@ new Proxy(target, {
 - `target`
   - : 대상 객체
 - `prototype`
-  - : 대상 객체의 새 프로토타입 또는 null
+  - : 대상 객체의 새 프로토타입 또는 `null`
 
 ### 반환 값
 
