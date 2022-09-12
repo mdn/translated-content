@@ -1843,7 +1843,7 @@ let recorder = new MediaRecorder(sourceStream, options);
 
 你选择编解码器的文档可能会提供你在构建 `codecs` 参数时将使用的信息。
 
-## 相关资料
+## 参见
 
 - [网页音频编码指南](/zh-CN/docs/Web/Media/Formats/Audio_codecs)
 - [媒体容器格式（文件类型）](/zh-CN/docs/Web/Media/Formats/Containers)
