@@ -1,13 +1,6 @@
 ---
 title: 101 Switching Protocols
 slug: Web/HTTP/Status/101
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - WebSocket
-  - リファレンス
-  - 情報
-translation_of: Web/HTTP/Status/101
 ---
 {{HTTPSidebar}}
 

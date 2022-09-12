@@ -14,7 +14,7 @@ slug: Web/API/SubmitEvent/submitter
 
 ## 示例
 
-完整示例代码参见 [`SubmitEvent`](/en-US/docs/Web/API/SubmitEvent#examples)。
+完整示例代码参见 [`SubmitEvent`](/zh-CN/docs/Web/API/SubmitEvent#examples)。
 
 ## 规范
 

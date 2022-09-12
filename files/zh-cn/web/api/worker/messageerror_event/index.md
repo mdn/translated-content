@@ -35,7 +35,7 @@ slug: Web/API/Worker/messageerror_event
 
 ## 例子
 
-创建一个 worker ，使用 [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) 监听 `message` 和 `messageerror` 事件：
+创建一个 worker ，使用 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 监听 `message` 和 `messageerror` 事件：
 
 ```js
 // inside main.js
@@ -77,5 +77,5 @@ worker.onmessageerror = (event) => {
 
 ## 另请参阅
 
-- [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage)
+- [`Worker.postMessage()`](/zh-CN/docs/Web/API/Worker/postMessage)
 - 相关事件：[`message`](/zh-CN/docs/Web/API/Worker/message_event).

@@ -1,13 +1,6 @@
 ---
 title: WebAssembly.LinkError() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError/LinkError
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - WebAssembly
-browser-compat: javascript.builtins.WebAssembly.LinkError.LinkError
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError/LinkError
 ---
 {{JSRef}}
 

@@ -1,14 +1,6 @@
 ---
 title: TimeRanges.end()
 slug: Web/API/TimeRanges/end
-tags:
-  - API
-  - HTML DOM
-  - Media
-  - Method
-  - Reference
-  - TimeRanges
-translation_of: Web/API/TimeRanges/end
 ---
 {{APIRef("DOM")}}
 

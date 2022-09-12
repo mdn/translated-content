@@ -25,9 +25,9 @@ En general, no es necesario utilizar macros para crear enlaces arbitrarios. Util
 
   Ejemplos:
 
-  1.  El nombre del término (tal como "HTML").
-  2.  El texto que se mostrará en el artículo en lugar del nombre del término (esto se debe usar con poca frecuencia).{{Optional_Inline}}
-  3.  Si se especifica este parámetro y no es cero, no se aplica el estilo personalizado que normalmente se aplica a los enlaces del glosario.{{Optional_Inline}}
+  1. El nombre del término (tal como "HTML").
+  2. El texto que se mostrará en el artículo en lugar del nombre del término (esto se debe usar con poca frecuencia).{{Optional_Inline}}
+  3. Si se especifica este parámetro y no es cero, no se aplica el estilo personalizado que normalmente se aplica a los enlaces del glosario.{{Optional_Inline}}
 
   - `\{{Glossary("HTML")}}` produce {{Glossary("HTML")}}
   - `\{{Glossary("CSS", "Hojas de estilo en cascada")}}` produce {{Glossary("CSS", "Hojas de estilo en cascada")}}

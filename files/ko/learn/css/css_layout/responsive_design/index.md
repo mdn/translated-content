@@ -1,16 +1,6 @@
 ---
 title: 반응형 디자인
 slug: Learn/CSS/CSS_layout/Responsive_Design
-tags:
-  - 가변상장
-  - 격자
-  - 다단
-  - 미디어 쿼리
-  - 반응형 웹 디자인
-  - 유동 격자
-  - 이미지
-  - 타이포크래피
-translation_of: Learn/CSS/CSS_layout/Responsive_Design
 original_slug: Learn/CSS/CSS_layout/반응형_디자인
 ---
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}

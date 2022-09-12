@@ -1,12 +1,6 @@
 ---
 title: プロキシー自動設定ファイル
 slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
-tags:
-  - Necko
-  - Networking
-  - PAC
-  - Proxy
-translation_of: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file
 original_slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file
 ---
 {{HTTPSidebar}}

@@ -1,13 +1,6 @@
 ---
 title: HTMLShadowElement
 slug: Web/API/HTMLShadowElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-  - Web Components
-translation_of: Web/API/HTMLShadowElement
 ---
 {{ APIRef("Web Components") }}
 

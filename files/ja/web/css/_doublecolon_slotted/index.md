@@ -1,16 +1,6 @@
 ---
 title: '::slotted()'
 slug: Web/CSS/::slotted
-tags:
-  - '::slotted'
-  - CSS
-  - レイアウト
-  - 擬似要素
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.slotted
-translation_of: Web/CSS/::slotted
 ---
 {{ CSSRef }}
 

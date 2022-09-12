@@ -1,18 +1,6 @@
 ---
 title: MediaSource.endOfStream()
 slug: Web/API/MediaSource/endOfStream
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Method
-  - Reference
-  - Video
-  - endOfStream
-translation_of: Web/API/MediaSource/endOfStream
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 

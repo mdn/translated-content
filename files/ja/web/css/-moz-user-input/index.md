@@ -1,14 +1,6 @@
 ---
 title: '-moz-user-input'
 slug: Web/CSS/-moz-user-input
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS:Mozilla 拡張
-  - 非推奨
-  - 標準外
-  - リファレンス
-translation_of: Web/CSS/-moz-user-input
 ---
 {{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 

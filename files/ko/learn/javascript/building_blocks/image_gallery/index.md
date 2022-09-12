@@ -1,17 +1,6 @@
 ---
 title: 이미지 갤러리
 slug: Learn/JavaScript/Building_blocks/Image_gallery
-tags:
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - Conditionals
-  - Event Handler
-  - JavaScript
-  - Learn
-  - Loops
-  - events
-  - l10n:priority
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 

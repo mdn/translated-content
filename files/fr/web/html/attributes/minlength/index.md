@@ -45,14 +45,11 @@ input:invalid:focus {
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-minlength', 'l\'attribut minlength')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5.1', 'input.html#attr-minlength-accept', 'l\'attribut minlength')}}     | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attribute.minlength")}}
+{{Compat}}
 
 ## Voir aussi
 

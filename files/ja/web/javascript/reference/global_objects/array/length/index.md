@@ -1,12 +1,6 @@
 ---
 title: Array.length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
-tags:
-  - Array
-  - JavaScript
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/length
 ---
 {{JSRef}}
 
@@ -50,7 +44,7 @@ arr.forEach(element => console.log(element));
 // 2
 ```
 
-ご覧の通り、`length` プロパティは必ずしも配列内で定義された値の数を示しているわけではありません。詳細は [`length` と数値プロパティとの関係](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#Relationship_between_length_and_numerical_properties "length と数値プロパティとの関係") をご覧ください。
+ご覧の通り、`length` プロパティは必ずしも配列内で定義された値の数を示しているわけではありません。詳細は [`length` と数値プロパティとの関係](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#Relationship_between_length_and_numerical_properties) をご覧ください。
 
 {{js_property_attributes(1, 0, 0)}}
 

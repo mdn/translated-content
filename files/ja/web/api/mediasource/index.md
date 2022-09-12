@@ -1,7 +1,6 @@
 ---
 title: MediaSource
 slug: Web/API/MediaSource
-translation_of: Web/API/MediaSource
 ---
 {{SeeCompatTable}}
 

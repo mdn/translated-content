@@ -1,14 +1,6 @@
 ---
 title: 'Window: languagechange イベント'
 slug: Web/API/Window/languagechange_event
-tags:
-  - Event
-  - Experimental
-  - HTML DOM
-  - Reference
-  - Window
-  - イベント
-translation_of: Web/API/Window/languagechange_event
 ---
 {{APIRef}}
 

@@ -1,12 +1,6 @@
 ---
 title: 解決値
 slug: Web/CSS/resolved_value
-tags:
-  - CSS
-  - Guide
-  - Reference
-spec-urls: https://drafts.csswg.org/cssom/#resolved-values
-translation_of: Web/CSS/resolved_value
 ---
 {{CSSRef}}
 

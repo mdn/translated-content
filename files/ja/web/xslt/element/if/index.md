@@ -1,12 +1,6 @@
 ---
 title: <xsl:if>
 slug: Web/XSLT/Element/if
-tags:
-  - XSLT
-  - if
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/if
 ---
 {{ XsltRef() }}
 
@@ -16,7 +10,7 @@ translation_of: Web/XSLT/Element/if
 
 ```
 <xsl:if test=EXPRESSION>
-	TEMPLATE
+  TEMPLATE
 </xsl:if>
 ```
 

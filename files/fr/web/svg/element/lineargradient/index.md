@@ -62,14 +62,11 @@ Cet élément implémente l'interface {{domxref("SVGLinearGradientElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                   | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('SVG2', 'pservers.html#LinearGradientElement', '&lt;linearGradient&gt;')}} | {{Spec2('SVG2')}} |                     |
-| {{SpecName('SVG1.1', 'pservers.html#LinearGradients', '&lt;linearGradient&gt;')}}     | {{Spec2('SVG1.1')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.linearGradient")}}
+{{Compat}}
 
 ## Voir aussi
 

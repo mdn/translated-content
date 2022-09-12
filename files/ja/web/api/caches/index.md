@@ -1,17 +1,6 @@
 ---
 title: WorkerGlobalScope.caches
 slug: Web/API/caches
-tags:
-  - API
-  - Experimental
-  - Property
-  - Read-only
-  - Reference
-  - Service Workers
-  - Web Workers
-  - Window
-  - WindowOrWorkerGlobalScope
-translation_of: Web/API/WindowOrWorkerGlobalScope/caches
 original_slug: Web/API/WindowOrWorkerGlobalScope/caches
 ---
 {{APIRef()}}{{SeeCompatTable}}

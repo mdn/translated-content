@@ -1,9 +1,6 @@
 ---
 title: クリップボードとのやりとり
 slug: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
 ---
 {{AddonSidebar}}
 

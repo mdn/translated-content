@@ -1,14 +1,6 @@
 ---
 title: Float32Array() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArrays
-  - コンストラクター
-  - 型付き配列
-translation_of: Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array
 ---
 {{JSRef}}
 
@@ -92,6 +84,6 @@ var dv = new Float32Array([1, 2, 3]);
 
 ## 関連情報
 
-- [JavaScript typed arrays](/ja/docs/Web/JavaScript/Typed_arrays "en/JavaScript typed arrays")
+- [JavaScript typed arrays](/ja/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

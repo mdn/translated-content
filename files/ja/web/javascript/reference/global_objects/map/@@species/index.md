@@ -1,12 +1,6 @@
 ---
 title: get Map[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Property
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/@@species
 ---
 {{JSRef}}
 

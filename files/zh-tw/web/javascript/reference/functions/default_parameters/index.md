@@ -175,7 +175,7 @@ f(2); // [2, undefined]
 
 ### Destructured parameter with default value assignment
 
-You can use default value assignment with the [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) notation:
+You can use default value assignment with the [destructuring assignment](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) notation:
 
 ```js
 function f([x, y] = [1, 2], {z: z} = {z: 3}) {

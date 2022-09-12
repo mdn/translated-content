@@ -1,14 +1,6 @@
 ---
 title: '-webkit-overflow-scrolling'
 slug: Web/CSS/-webkit-overflow-scrolling
-tags:
-  - CSS
-  - CSS プロパティ
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.-webkit-overflow-scrolling
-translation_of: Web/CSS/-webkit-overflow-scrolling
 ---
 {{CSSRef}} {{Non-standard_header}}
 

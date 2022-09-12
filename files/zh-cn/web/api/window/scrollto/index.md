@@ -40,7 +40,7 @@ window.scrollTo({
 
 ## 注意
 
-该函数实际上和 [window.scroll](/en-US/docs/DOM/Window.scroll)是一样的。 相对滚动可以参考 [window.scrollBy](/en-US/docs/DOM/Window.scrollBy)，[window.scrollByLines](/en-US/docs/DOM/Window.scrollByLines)，和 [window.scrollByPages](/en-US/docs/DOM/Window.scrollByPages)。
+该函数实际上和 [window.scroll](/zh-CN/docs/DOM/Window.scroll)是一样的。 相对滚动可以参考 [window.scrollBy](/zh-CN/docs/DOM/Window.scrollBy)，[window.scrollByLines](/zh-CN/docs/DOM/Window.scrollByLines)，和 [window.scrollByPages](/zh-CN/docs/DOM/Window.scrollByPages)。
 
 ## 规范
 

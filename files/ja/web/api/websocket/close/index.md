@@ -1,14 +1,6 @@
 ---
 title: WebSocket.close()
 slug: Web/API/WebSocket/close
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - Web API
-  - WebSocket
-browser-compat: api.WebSocket.close
-translation_of: Web/API/WebSocket/close
 ---
 {{APIRef("Web Sockets API")}}
 

@@ -1,15 +1,6 @@
 ---
 title: border-inline-width
 slug: Web/CSS/border-inline-width
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-inline-width
-translation_of: Web/CSS/border-inline-width
 ---
 {{CSSRef}}
 

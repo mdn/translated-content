@@ -9,7 +9,9 @@ translation_of: Web/API/Node/ownerDocument
 
 ## Syntax
 
-    document = element.ownerDocument
+```js
+document = element.ownerDocument
+```
 
 - `document` 는 element 의 부모 [`document`](/ko/docs/DOM/document) 객체입니다.
 

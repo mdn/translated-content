@@ -1,21 +1,6 @@
 ---
 title: 'Window: rejectionhandled イベント'
 slug: Web/API/Window/rejectionhandled_event
-tags:
-  - API
-  - Event
-  - HTML DOM
-  - JavaScript
-  - Promise
-  - Promises
-  - Reference
-  - Window
-  - Worker
-  - global
-  - onrejectionhandled
-  - rejectionhandled
-  - イベント
-translation_of: Web/API/Window/rejectionhandled_event
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,12 +1,6 @@
 ---
 title: TouchList.length
 slug: Web/API/TouchList/length
-tags:
-  - DOM
-  - Gecko DOM Reference
-  - Mobile
-  - touch
-translation_of: Web/API/TouchList/length
 ---
 {{ApiRef}}
 

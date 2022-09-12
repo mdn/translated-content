@@ -61,6 +61,6 @@ pc.addEventListener('icecandidate', e => {
 
 ## 相关阅读
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)
 - {{domxref("RTCPeerConnection.addIceCandidate()")}}
-- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- [Lifetime of a WebRTC session](/zh-CN/docs/Web/API/WebRTC_API/Session_lifetime)

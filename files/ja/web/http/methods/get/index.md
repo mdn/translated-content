@@ -1,12 +1,6 @@
 ---
 title: GET
 slug: Web/HTTP/Methods/GET
-tags:
-  - HTTP
-  - リファレンス
-  - リクエストメソッド
-browser-compat: http.methods.GET
-translation_of: Web/HTTP/Methods/GET
 ---
 {{HTTPSidebar}}
 

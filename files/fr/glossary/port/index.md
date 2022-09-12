@@ -14,8 +14,6 @@ Un **port** est le point d'entrée de communication de tout ordinateur connecté
 
 Par exemple, le port par défaut pour le protocole {{Glossary("HTTP")}} est 80 et le port par défaut pour le protocole HTTPS est 443. Un server web qui reçoit du traffic HTTP ou HTTPS écoutera donc des requêtes à partir de ces deux ports. Chaque protocole internet est associé à un port par défaut: {{Glossary("SMTP")}} (25), {{Glossary("POP3")}} (110), {{Glossary("IMAP")}} (143), {{Glossary("IRC")}} (194), et ainsi de suite.
 
-## En savoir plus
-
-### Connaissances générales
+## Voir aussi
 
 - [Port](https://fr.wikipedia.org/wiki/Port_(logiciel)) sur Wikipédia

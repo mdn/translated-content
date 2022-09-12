@@ -36,10 +36,10 @@ SVG では、後で再利用できるよう描画オブジェクトを定義し�
 
 ### グローバル属性
 
-- [条件的処理属性（コンディショナルプロセッシング属性）](/ja/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
-- [コア属性](/ja/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [描画イベント属性](/ja/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
-- [プレゼンテーション属性](/ja/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- [条件的処理属性（コンディショナルプロセッシング属性）](/ja/SVG/Attribute#ConditionalProccessing) »
+- [コア属性](/ja/SVG/Attribute#Core) »
+- [描画イベント属性](/ja/SVG/Attribute#GraphicalEvent) »
+- [プレゼンテーション属性](/ja/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -51,7 +51,7 @@ _スペシフィック属性はありません_
 
 ## DOM インタフェース
 
-この要素は [`SVGDefsElement`](/ja/DOM/SVGDefsElement "en/DOM/SVGDefsElement") インタフェースを実装しています。
+この要素は [`SVGDefsElement`](/ja/DOM/SVGDefsElement) インタフェースを実装しています。
 
 ## 仕様
 

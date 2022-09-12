@@ -1,7 +1,6 @@
 ---
 title: CSS 작동 방식
 slug: Learn/CSS/First_steps/How_CSS_works
-translation_of: Learn/CSS/First_steps/How_CSS_works
 ---
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}

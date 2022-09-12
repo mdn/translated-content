@@ -112,7 +112,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
   - `None`
     - : 这意味着浏览器会在跨站和同站请求中均发送 cookie。在设置这一属性值时，必须同时设置 `Secure` 属性，就像这样：`SameSite=None; Secure`。
 
-    > **备注：** 与 [SameSite Cookie](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) 相关的标准作了如下变动：
+    > **备注：** 与 [SameSite Cookie](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite) 相关的标准作了如下变动：
     >
     > 1. `SameSite` 属性未被指定时，其默认行为是 `SameSite=Lax`。在过去，若未指定，所有的 cookie 均会被发送。
     > 2. 现在，携带 `SameSite=None` 属性的 cookie 必须同时设置 `Secure` 属性（换句话说，其仅能用于安全上下文）

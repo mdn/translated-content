@@ -18,8 +18,8 @@ npm install moment
 
 ## Create the virtual property
 
-1.  Open **./models/bookinstance.js**.
-2.  At the top of the page, import _moment_.
+1. Open **./models/bookinstance.js**.
+2. At the top of the page, import _moment_.
 
     ```js
     var moment = require('moment');

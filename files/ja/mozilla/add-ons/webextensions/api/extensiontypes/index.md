@@ -1,16 +1,6 @@
 ---
 title: extensionTypes
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - extensionTypes
-translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes
 ---
 {{AddonSidebar}}
 

@@ -6,7 +6,7 @@ slug: Web/API/Location/search
 
 {{domxref("Location")}} 接口的 **`search`** 属性会返回一段 {{domxref("USVString")}}，其中包含一个 URL 标识中的 `'?'` 以及跟随其后的一串 URL 查询参数。
 
-现代浏览器提供 [`URLSearchParams`](/en-US/docs/Web/API/URLSearchParams/get#Examples) 和 [`URL.searchParams`](/en-US/docs/Web/API/URL/searchParams#Examples) 两个接口，使得从查询字符串中解析出查询参数变得更加容易。
+现代浏览器提供 [`URLSearchParams`](/zh-CN/docs/Web/API/URLSearchParams/get#Examples) 和 [`URL.searchParams`](/zh-CN/docs/Web/API/URL/searchParams#Examples) 两个接口，使得从查询字符串中解析出查询参数变得更加容易。
 
 ## Syntax
 

@@ -1,7 +1,6 @@
 ---
 title: HTMLTitleElement
 slug: Web/API/HTMLTitleElement
-translation_of: Web/API/HTMLTitleElement
 ---
 {{ApiRef}}
 

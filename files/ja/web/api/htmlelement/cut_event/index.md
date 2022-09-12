@@ -1,16 +1,6 @@
 ---
 title: 'HTMLElement: cut イベント'
 slug: Web/API/HTMLElement/cut_event
-tags:
-  - API
-  - クリップボード API
-  - HTMLElement
-  - イベント
-  - リファレンス
-  - ウェブ
-  - cut
-browser-compat: api.HTMLElement.cut_event
-translation_of: Web/API/HTMLElement/cut_event
 original_slug: Web/API/HTMLElement/oncut
 ---
 {{ APIRef("HTML DOM") }}

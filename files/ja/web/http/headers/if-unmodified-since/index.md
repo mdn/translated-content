@@ -1,13 +1,6 @@
 ---
 title: If-Unmodified-Since
 slug: Web/HTTP/Headers/If-Unmodified-Since
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - Reference
-  - リクエストヘッダー
-  - リファレンス
-translation_of: Web/HTTP/Headers/If-Unmodified-Since
 ---
 {{HTTPSidebar}}
 
@@ -83,4 +76,4 @@ If-Unmodified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 - {{HTTPHeader("If-Match")}}
 - {{HTTPHeader("If-None-Match")}}
 - {{HTTPHeader("If-Range")}}
-- {{HTTPStatus("412")}}` Precondition Failed`
+- {{HTTPStatus("412")}} `Precondition Failed`

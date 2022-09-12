@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Statements/import
 
 There is also a function-like dynamic **`import()`**, which does not require scripts of `type="module"`.
 
-Dynamic import is useful in situations where you wish to load a module conditionally, or on demand. The static form is preferable for loading initial dependencies, and can benefit more readily from static analysis tools and [tree shaking](/en-US/docs/Glossary/Tree_shaking).
+Dynamic import is useful in situations where you wish to load a module conditionally, or on demand. The static form is preferable for loading initial dependencies, and can benefit more readily from static analysis tools and [tree shaking](/zh-TW/docs/Glossary/Tree_shaking).
 
 ## 語法
 

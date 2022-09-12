@@ -1,7 +1,6 @@
 ---
 title: menus.create()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/create
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/create
 original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus/create
 ---
 {{AddonSidebar()}}

@@ -6,7 +6,7 @@ slug: Web/API/File_API/Using_files_from_web_applications
 
 通过使用在 HTML5 中加入到 DOM 的 File API，使在 web 内容中让用户选择本地文件然后读取这些文件的内容成为可能。用户可以通过 HTML 中的 {{HTMLElement("input/file", '&lt;input type="file"&gt;')}} 元素或者是通过拖拽来选择本地文件。
 
-如果你想通过扩展或者其它的 chrome 源码浏览器（browser chrome code）使用 DOM File API，是可行的；然而，需要注意有一些附加特性。详细请见 [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code)。
+如果你想通过扩展或者其它的 chrome 源码浏览器（browser chrome code）使用 DOM File API，是可行的；然而，需要注意有一些附加特性。详细请见 [Using the DOM File API in chrome code](/zh-CN/Extensions/Using_the_DOM_File_API_in_chrome_code)。
 
 ## 访问被选择的文件
 
@@ -524,4 +524,4 @@ window.URL.revokeObjectURL(obj_url);
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("URL")}}
 - {{DOMxRef("XMLHttpRequest")}}
-- [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/zh-CN/DOM/XMLHttpRequest/Using_XMLHttpRequest)

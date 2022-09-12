@@ -1,7 +1,6 @@
 ---
 title: 함수 만들기
 slug: Learn/JavaScript/Building_blocks/Build_your_own_function
-translation_of: Learn/JavaScript/Building_blocks/Build_your_own_function
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
 

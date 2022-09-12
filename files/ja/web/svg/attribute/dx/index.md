@@ -21,7 +21,7 @@ translation_of: Web/SVG/Attribute/dx
 
 一つの [\<length>](/ja/docs/Web/SVG/Content_type#Length) が与えられた場合、この値は、この要素またはその子孫のうちのいずれかの内部における最初の文字についての現在テキスト位置の新たな相対的 X 座標です。 現在テキスト位置は 、最初の文字が描画される前に、現在のユーザ座標系の x 軸に沿って、 [\<length>](/ja/docs/Web/SVG/Content_type#Length) だけずらされます。
 
-カンマまたはスペースで区切られた n 個の [\<length> ](/ja/docs/Web/SVG/Content_type#Length)のリストが与えられた場合、これらの値は、この要素またはその子孫のうちのいずれかの内部における最初の n 文字についての現在テキスト位置の、x 軸に沿ったインクリメンタルなずれを表します。よって、現在の {{SVGElement("text")}} 要素内部の文字を描いた結果として得られる現在テキスト位置が、現在のユーザ座標系の X 軸に沿って、 [\<length>](/ja/docs/Web/SVG/Content_type#Length) だけずらされます。
+カンマまたはスペースで区切られた n 個の [\<length>](/ja/docs/Web/SVG/Content_type#Length) のリストが与えられた場合、これらの値は、この要素またはその子孫のうちのいずれかの内部における最初の n 文字についての現在テキスト位置の、x 軸に沿ったインクリメンタルなずれを表します。よって、現在の {{SVGElement("text")}} 要素内部の文字を描いた結果として得られる現在テキスト位置が、現在のユーザ座標系の X 軸に沿って、 [\<length>](/ja/docs/Web/SVG/Content_type#Length) だけずらされます。
 
 [\<length>](/ja/docs/Web/SVG/Content_type#Length) よりも多数の文字が存在する場合は、これらの余分な文字の各々について、以下のようにします。
 

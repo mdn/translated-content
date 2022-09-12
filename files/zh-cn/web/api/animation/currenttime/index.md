@@ -47,4 +47,4 @@ animation.currentTime =
 
 - {{domxref("Animation")}} for other methods and properties you can use to control web page animation.
 - {{domxref("Animation.startTime")}} for the time an animation is scheduled to start.
-- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)

@@ -1,15 +1,6 @@
 ---
 title: X-Frame-Options
 slug: Web/HTTP/Headers/X-Frame-Options
-tags:
-  - Gecko
-  - HAProxy
-  - HTTP
-  - レスポンスヘッダー
-  - セキュリティ
-  - nginx
-browser-compat: http.headers.X-Frame-Options
-translation_of: Web/HTTP/Headers/X-Frame-Options
 ---
 {{HTTPSidebar}}
 

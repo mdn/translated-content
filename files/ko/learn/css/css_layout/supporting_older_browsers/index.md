@@ -1,18 +1,6 @@
 ---
 title: 이전 브라우저 지원
 slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
-tags:
-  - 가변상자
-  - 격자
-  - 기능 쿼리
-  - 레거시
-  - 부동체
-  - 씨에스에스
-  - 안내서
-  - 조판
-  - 초보자
-  - 학습
-translation_of: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 original_slug: Learn/CSS/CSS_layout/이전_브라우저_지원
 ---
 {{LearnSidebar}}

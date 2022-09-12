@@ -15,7 +15,7 @@ slug: Web/API/Window/languagechange_event
 - Cancelable
   - : No
 - Target
-  - : The default window scope, being {{domxref("Window")}} on Web pages and {{domxref("WorkerGlobalScope")}} in [Web Workers](/en-US/docs/Web/Guide/Performance/Using_web_workers).
+  - : The default window scope, being {{domxref("Window")}} on Web pages and {{domxref("WorkerGlobalScope")}} in [Web Workers](/zh-CN/docs/Web/Guide/Performance/Using_web_workers).
 - Default Action
   - : None
 

@@ -1,18 +1,6 @@
 ---
 title: 접근성
 slug: Learn/Accessibility
-tags:
-  - ARIA
-  - CSS
-  - HTML
-  - JavaScript
-  - 랜딩
-  - 모듈
-  - 문서
-  - 배우기
-  - 비기너
-  - 접근성
-translation_of: Learn/Accessibility
 original_slug: Learn/접근성
 ---
 {{LearnSidebar}}

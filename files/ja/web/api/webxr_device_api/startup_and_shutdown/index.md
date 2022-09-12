@@ -1,27 +1,6 @@
 ---
 title: WebXR セッションの起動と停止
 slug: Web/API/WebXR_Device_API/Startup_and_shutdown
-tags:
-  - 3D
-  - API
-  - AR
-  - Beginner
-  - Guide
-  - Initialization
-  - Mixed
-  - Preparation
-  - Reality
-  - Setup
-  - Shutdown
-  - Startup
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - augmented
-translation_of: Web/API/WebXR_Device_API/Startup_and_shutdown
 ---
 {{DefaultAPISidebar("WebXR Device API")}}{{SecureContext_header}}
 

@@ -1,16 +1,6 @@
 ---
 title: Window.postMessage()
 slug: Web/API/Window/postMessage
-tags:
-  - API
-  - オリジン間通信
-  - HTML DOM
-  - メソッド
-  - メソッド
-  - Window
-  - postMessage
-browser-compat: api.Window.postMessage
-translation_of: Web/API/Window/postMessage
 ---
 {{ApiRef("HTML DOM")}}
 

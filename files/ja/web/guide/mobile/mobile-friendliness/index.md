@@ -1,10 +1,6 @@
 ---
 title: モバイルの親しみやすさ
 slug: Web/Guide/Mobile/Mobile-friendliness
-tags:
-  - Mobile
-  - Web Development
-translation_of: Web/Guide/Mobile/Mobile-friendliness
 ---
 ## モバイルの親しみやすさとは？
 

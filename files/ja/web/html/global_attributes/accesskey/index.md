@@ -1,13 +1,6 @@
 ---
 title: accesskey
 slug: Web/HTML/Global_attributes/accesskey
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-  - accesskey
-  - グローバル属性
-translation_of: Web/HTML/Global_attributes/accesskey
 ---
 {{HTMLSidebar("Global_attributes")}}
 

@@ -1,14 +1,6 @@
 ---
 title: Window.resizeTo()
 slug: Web/API/Window/resizeTo
-tags:
-  - API
-  - CSSOM View
-  - メソッド
-  - リファレンス
-  - Window
-browser-compat: api.Window.resizeTo
-translation_of: Web/API/Window/resizeTo
 ---
 {{APIRef}}
 

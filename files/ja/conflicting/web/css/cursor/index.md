@@ -1,13 +1,6 @@
 ---
 title: cursor プロパティでの URL 値の使用
 slug: conflicting/Web/CSS/cursor
-tags:
-  - CSS
-  - Gecko
-  - ガイド
-  - NeedsUpdate
-  - Reference
-translation_of: Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
 original_slug: Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
 ---
 {{CSSRef}}

@@ -41,7 +41,7 @@ Internet Explorer 的同源策略有两个主要的差异点：
 
 满足某些限制条件的情况下，页面是可以修改它的源。脚本可以将 {{domxref("document.domain")}} 的值设置为其当前域或其当前域的父域。如果将其设置为其当前域的父域，则这个较短的父域将用于后续源检查。
 
-例如：假设 http\://store.company.com/dir/other.html 文档中的一个脚本执行以下语句：
+例如：假设 `http://store.company.com/dir/other.html` 文档中的一个脚本执行以下语句：
 
 ```plain
 document.domain = "company.com";

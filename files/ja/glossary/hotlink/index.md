@@ -6,10 +6,10 @@ slug: Glossary/Hotlink
 
 この行為は、リンク先のオブジェクトをホストしているウェブサイトの帯域幅を勝手に利用することになるため、多くの場合はひんしゅくを買う行為であり、また著作権上の懸念 — 許可なく行われた場合は窃盗とみなされます — を引き起こす可能性もあるためです。
 
-1.  一般知識
+1. 一般知識
 
-    1.  Wikipedia 上の {{Interwiki("wikipedia", "直リンク")}}
+    1. Wikipedia 上の {{Interwiki("wikipedia", "直リンク")}}
 
-2.  [MDN Web Docs 用語集](/ja/docs/Glossary)
+2. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1.  {{glossary("Hyperlink")}}
+    1. {{glossary("Hyperlink")}}

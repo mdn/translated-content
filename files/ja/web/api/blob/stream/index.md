@@ -1,17 +1,6 @@
 ---
 title: Blob.stream()
 slug: Web/API/Blob/stream
-tags:
-  - API
-  - Blob
-  - Change
-  - Convert
-  - File API
-  - Method
-  - ReadableStream
-  - Reference
-  - stream
-translation_of: Web/API/Blob/stream
 ---
 {{APIRef("File API")}}
 

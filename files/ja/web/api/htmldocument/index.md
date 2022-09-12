@@ -1,17 +1,6 @@
 ---
 title: HTMLDocument
 slug: Web/API/HTMLDocument
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - Document
-  - HTML
-  - HTML DOM
-  - HTMLDocument
-  - Interface
-  - Reference
-translation_of: Web/API/HTMLDocument
 ---
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 

@@ -1,26 +1,6 @@
 ---
 title: '<bdi>: 書字方向分離要素'
 slug: Web/HTML/Element/bdi
-tags:
-  - BiDi
-  - HTML
-  - HTML 文字レベルの意味付け
-  - HTML:フローコンテンツ
-  - HTML:知覚可能コンテンツ
-  - HTML:記述コンテンツ
-  - Reference
-  - i18n
-  - ltr
-  - rtl
-  - ウェブ
-  - テキスト
-  - リファレンス
-  - 右書き
-  - 国際化
-  - 左書き
-  - 書字方向
-  - 要素
-translation_of: Web/HTML/Element/bdi
 ---
 {{HTMLRef}}
 
@@ -112,7 +92,7 @@ EMBEDDED-TEXT - 1st place
 
 ## 属性
 
-この要素は、他のすべての HTML 要素と同様に[グローバル属性](/ja/docs/Web/HTML/Global_attributes "HTML/Global attributes")に対応していますが、 **dir** 属性の挙動が普通とは異なります。初期値は `auto` であり、親要素から値を継承しないことを示します。つまり、 `dir` に `rtl` または `ltr` のどちらかの値を指定しない限り、{{Glossary("user agent", "ユーザーエージェント")}}は `<bdi>` の内容に基づいて正しい方向を特定します。
+この要素は、他のすべての HTML 要素と同様に[グローバル属性](/ja/docs/Web/HTML/Global_attributes)に対応していますが、 **dir** 属性の挙動が普通とは異なります。初期値は `auto` であり、親要素から値を継承しないことを示します。つまり、 `dir` に `rtl` または `ltr` のどちらかの値を指定しない限り、{{Glossary("user agent", "ユーザーエージェント")}}は `<bdi>` の内容に基づいて正しい方向を特定します。
 
 ## 例
 

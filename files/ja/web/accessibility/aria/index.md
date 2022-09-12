@@ -1,11 +1,6 @@
 ---
 title: ARIA
 slug: Web/Accessibility/ARIA
-tags:
-  - ARIA
-  - Accessibility
-  - HTML
-translation_of: Web/Accessibility/ARIA
 ---
 Accessible Rich Internet Applications **(ARIA)** はウェブコンテンツやウェブアプリケーション (特に JavaScript で開発するもの) を、ハンディキャップを持つ人々にとってよりアクセシブルにする方法を定義します。
 
@@ -105,5 +100,5 @@ ARIA を理解するには、以下の講演が最適です。
 
 [Accessibility](/ja/docs/Web/Accessibility), [AJAX](/ja/docs/Web/Guide/AJAX), [JavaScript](/ja/docs/Web/JavaScript)
 
-1.  [ウェブ開発](/ja/docs/Web/Guide)
-2.  [アクセシビリティと Mozilla](/ja/docs/Mozilla/Accessibility)
+1. [ウェブ開発](/ja/docs/Web/Guide)
+2. [アクセシビリティと Mozilla](/ja/docs/Mozilla/Accessibility)

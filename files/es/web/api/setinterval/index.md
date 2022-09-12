@@ -8,13 +8,14 @@ page-type: web-api-global-function
 l10n:
   sourceCommit: 0717d1c0a7528b2dd44d065fe90d860e3bdc2e6a
 ---
-{{APIRef("HTML DOM")}} 
+{{APIRef("HTML DOM")}}
 
 El método **`setInterval()`** , ofrecido en las interfaces {{domxref("Window")}} y {{domxref("Worker")}} , llama a una función o ejecuta un fragmento de código de forma reiterada, con un retardo de tiempo fijo entre cada llamada.
 
 Este método devuelve un ID de intervalo que lo identifica de forma única, de ese modo, el intervalo puede ser eliminado más tarde llamando a {{domxref("clearInterval", "clearInterval()")}} .
 
 ## Sintaxis
+
 ```js
 setInterval(code);
 setInterval(code, delay);
@@ -24,18 +25,20 @@ setInterval(func, delay, arg0);
 setInterval(func, delay, arg0, arg1);
 setInterval(func, delay, arg0, arg1, /* ..., */ argN);
 ```
+
 ### Parámetros
+
 - `func`
-    - : Una función {{jsxref("function")}} que se ejecuta cada cierto tiempo. El tiempo lo determina `delay`, estando éste en milisegundos. La primera ejecución ocurre tras el tiempo determinado por `delay`.
+  - : Una función {{jsxref("function")}} que se ejecuta cada cierto tiempo. El tiempo lo determina `delay`, estando éste en milisegundos. La primera ejecución ocurre tras el tiempo determinado por `delay`.
 
 - `code`
-    - : Una sintaxis especial que permite incluir una cadena en lugar de una función, la cual es compilada y ejecutada cada `delay` milisegundos. Se recomienda no usar esta sintaxis, por la misma razón que hace que el uso de {{jsxref("Global_Objects/eval", "eval()")}} sea un riesgo de seguridad.
+  - : Una sintaxis especial que permite incluir una cadena en lugar de una función, la cual es compilada y ejecutada cada `delay` milisegundos. Se recomienda no usar esta sintaxis, por la misma razón que hace que el uso de {{jsxref("Global_Objects/eval", "eval()")}} sea un riesgo de seguridad.
 
 - `delay` {{optional_inline}}
-    - : El tiempo en milisegundos (milésimas de segundo) que el temporizador debe retrasar cada ejecución de la función o código especificado. Si no se especifica ninguno, por defecto es 0. Ver el apartado [Delay restrictions](#delay_restrictions) descrito más abajo para más detalles sobre el rango de valores de retardo (delay) permitido.
+  - : El tiempo en milisegundos (milésimas de segundo) que el temporizador debe retrasar cada ejecución de la función o código especificado. Si no se especifica ninguno, por defecto es 0. Ver el apartado [Delay restrictions](#delay_restrictions) descrito más abajo para más detalles sobre el rango de valores de retardo (delay) permitido.
 
 - `arg0, ..., argN` {{optional_inline}}
-    - : Argumentos adicionales que se pasan a la función especificada por _func_ una vez que el temporizador expira.
+  - : Argumentos adicionales que se pasan a la función especificada por _func_ una vez que el temporizador expira.
 
 ### Valor de retorno
 
@@ -60,7 +63,8 @@ function myCallback(a, b) {
     console.log(a);
     console.log(b);
 }
-``` 
+```
+
 ### Ejemplo 2: Alternando dos colores
 
 El siguiente ejemplo llama a la función `flashtext()` una vez por segundo hasta que el botón _Stop_ sea pulsado.
@@ -73,7 +77,7 @@ El siguiente ejemplo llama a la función `flashtext()` una vez por segundo hasta
 </div>
 <button id="start">Start</button>
 <button id="stop">Stop</button>
-``` 
+```
 
 #### CSS
 
@@ -84,7 +88,7 @@ El siguiente ejemplo llama a la función `flashtext()` una vez por segundo hasta
 .stop {
     color: red;
 }
-``` 
+```
 
 #### JavaScript
 
@@ -122,7 +126,6 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
 
 {{EmbedLiveSample("Example_2:_Alternating_two_colors")}}
 
-
 Véase también: [`clearInterval()`](/en-US/docs/Web/API/clearInterval).
 
 ## El problema con "this"
@@ -156,6 +159,7 @@ setTimeout.call(myArray, myArray.myMethod, 2000); // error:
 setTimeout.call(myArray, myArray.myMethod, 2500, 2); //mismo
 // error
 ```
+
 Como puede ver, no hay formas de pasar el objeto `this` a la función de devolución de llamada o callback en código  JavaScript legacy.
 
 ### Una posible solución

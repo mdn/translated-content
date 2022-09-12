@@ -6,4 +6,4 @@ slug: Glossary/Ligature
 
 {{cssxref("font-variant-ligatures")}} を使用してウェブページで合字を実装できます。
 
-1.  Wikipedia 上の {{Interwiki("wikipedia", "合字")}}
+1. Wikipedia 上の {{Interwiki("wikipedia", "合字")}}

@@ -1,16 +1,6 @@
 ---
 title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - メソッド
-  - 'Null'
-  - Object
-  - リファレンス
-  - ポリフィル
-browser-compat: javascript.builtins.Object.create
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 ---
 {{JSRef}}
 

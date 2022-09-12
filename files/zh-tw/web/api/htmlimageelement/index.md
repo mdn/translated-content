@@ -21,7 +21,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLImageElement.complete")}} {{readonlyInline}}
   - : Returns a {{domxref("Boolean")}} that is `true` if the browser has finished fetching the image, whether successful or not. It also shows true, if the image has no {{domxref("HTMLImageElement.src", "src")}} value.
 - {{domxref("HTMLImageElement.crossOrigin")}}
-  - : Is a {{domxref("DOMString")}} representing the CORS setting for this image element. See [CORS settings attributes](/en-US/docs/HTML/CORS_settings_attributes) for further details.
+  - : Is a {{domxref("DOMString")}} representing the CORS setting for this image element. See [CORS settings attributes](/zh-TW/docs/HTML/CORS_settings_attributes) for further details.
 - {{domxref("HTMLImageElement.currentSrc")}} {{readonlyInline}}{{experimental_inline}}
   - : Returns a {{domxref("DOMString")}} representing the URL to the currently displayed image (which may change, for example in response to media queries).
 - {{domxref("HTMLImageElement.height")}}

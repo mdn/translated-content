@@ -1,14 +1,6 @@
 ---
 title: contentScripts.register()
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/register
-tags:
-  - API
-  - Extensions
-  - Method
-  - Reference
-  - contentScripts
-  - register
-translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts/register
 ---
 {{AddonSidebar()}}
 

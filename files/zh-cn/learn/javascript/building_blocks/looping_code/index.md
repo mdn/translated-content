@@ -479,7 +479,7 @@ while (i < cats.length) {
 
 > **备注：** This still works just the same as expected — have a look at it [running live on GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html)).
 
-[do...while](/en-US/docs/Web/JavaScript/Reference/Statements/do...while)循环非常类似但在 while 后提供了终止条件：
+[do...while](/zh-CN/docs/Web/JavaScript/Reference/Statements/do...while)循环非常类似但在 while 后提供了终止条件：
 
 ```plain
 initializer
@@ -699,30 +699,30 @@ do {
 
 我们建议使用`for`，因为它可能是最简单地帮你记住一切 - 初始化程序，退出条件和最终表达式都必须整齐地放入括号，所以很容易看到他们在哪里并检查你没有丢失他们。
 
-> **备注：** 还有其他循环类型/特性，这些特性在 高级/专门 的情况下是有用的，超出了本文的范围。如果您想进一步了解循环学习，请阅读我们的高级[循环和迭代指南](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)。
+> **备注：** 还有其他循环类型/特性，这些特性在 高级/专门 的情况下是有用的，超出了本文的范围。如果您想进一步了解循环学习，请阅读我们的高级[循环和迭代指南](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration)。
 
 ## 结论
 
 本文向您展示了背后的基本概念，以及 JavaScript 中循环代码时可用的不同选项。你现在应该明白为什么循环是一个处理重复代码的好机制，并且在你自己的例子中使用它们！
 
-如果您有什么不明白的地方，可以再通读一遍，或者[联系我们](/en-US/Learn#Contact_us)寻求帮助。
+如果您有什么不明白的地方，可以再通读一遍，或者[联系我们](/zh-CN/Learn#Contact_us)寻求帮助。
 
 ## 相关链接
 
-- [Loops and iteration in detail](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
-- [for statement reference](/en-US/docs/Web/JavaScript/Reference/Statements/for)
-- [while](/en-US/docs/Web/JavaScript/Reference/Statements/while) and [do...while](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) references
-- [break](/en-US/docs/Web/JavaScript/Reference/Statements/break) and [continue](/en-US/docs/Web/JavaScript/Reference/Statements/continue) references
+- [Loops and iteration in detail](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration)
+- [for statement reference](/zh-CN/docs/Web/JavaScript/Reference/Statements/for)
+- [while](/zh-CN/docs/Web/JavaScript/Reference/Statements/while) and [do...while](/zh-CN/docs/Web/JavaScript/Reference/Statements/do...while) references
+- [break](/zh-CN/docs/Web/JavaScript/Reference/Statements/break) and [continue](/zh-CN/docs/Web/JavaScript/Reference/Statements/continue) references
 - [What's the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — some advanced loop best practices
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 
 ## 在本单元中
 
-- [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/en-US/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/en-US/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery)
+- [Making decisions in your code — conditionals](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Looping code](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)
+- [Functions — reusable blocks of code](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions)
+- [Build your own function](/zh-CN/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
+- [Function return values](/zh-CN/docs/Learn/JavaScript/Building_blocks/Return_values)
+- [Introduction to events](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
+- [Image gallery](/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery)

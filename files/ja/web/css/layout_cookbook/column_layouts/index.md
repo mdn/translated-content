@@ -1,16 +1,6 @@
 ---
 title: 欄レイアウト
 slug: Web/CSS/Layout_cookbook/Column_layouts
-tags:
-  - CSS
-  - ガイド
-  - レイアウト
-  - 段組み
-  - columns
-  - 料理帳
-  - フレックスボックス
-  - グリッド
-translation_of: Web/CSS/Layout_cookbook/Column_layouts
 ---
 {{CSSRef}}
 

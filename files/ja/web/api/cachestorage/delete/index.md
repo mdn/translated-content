@@ -1,16 +1,6 @@
 ---
 title: CacheStorage.delete()
 slug: Web/API/CacheStorage/delete
-tags:
-  - API
-  - CacheStorage
-  - Experimental
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - delete
-translation_of: Web/API/CacheStorage/delete
 ---
 {{APIRef("Service Workers API")}}
 
