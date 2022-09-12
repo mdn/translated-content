@@ -116,7 +116,7 @@ alert(date.toLocaleString("en-US", {hour12: false}));
 
 ## 性能
 
-当格式化大量日期时，最好创建一个 [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) 对象，然后使用该对象 [`format`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/format) 属性提供的方法。
+当格式化大量日期时，最好创建一个 [`Intl.DateTimeFormat`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) 对象，然后使用该对象 [`format`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/format) 属性提供的方法。
 
 ## 规范
 

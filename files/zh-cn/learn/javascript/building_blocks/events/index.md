@@ -136,7 +136,7 @@ btn.onclick = bgChange;
 
 一些事件非常通用，几乎在任何地方都可以用（比如 onclick 几乎可以用在几乎每一个元素上），然而另一些元素就只能在特定场景下使用，比如我们只能在 video 元素上使用 [onplay](/zh-CN/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay) 。
 
-### 行内事件处理器 - 请勿使用
+### 内联事件处理器——请勿使用
 
 你也许在你的代码中看到过这么一种写法：
 

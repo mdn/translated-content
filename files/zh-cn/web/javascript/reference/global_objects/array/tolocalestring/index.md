@@ -134,7 +134,7 @@ if (!Array.prototype.toLocaleString) {
 }
 ```
 
-如果你需要支持真正不支持[`Object.defineProperty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)的 JavaScript 引擎，最好不要对`Array.prototype`方法进行填充，因为你不能使它们不可枚举。
+如果你需要支持真正不支持[`Object.defineProperty`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)的 JavaScript 引擎，最好不要对`Array.prototype`方法进行填充，因为你不能使它们不可枚举。
 
 ## 规范
 

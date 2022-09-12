@@ -15,7 +15,7 @@ new Int16Array(object);
 new Int16Array(buffer [, byteOffset [, length]]);
 ```
 
-For more information about the constructor syntax and the parameters, see _[TypedArray](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
+For more information about the constructor syntax and the parameters, see _[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
 
 ## 属性
 
@@ -157,6 +157,6 @@ var dv = new Int16Array([1, 2, 3]);
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

@@ -18,7 +18,7 @@ original_slug: Web/HTTP/策略特征
 - 改变手机和第三方视频自动播放的默认行为。
 - 限制网站使用敏感的 api，如摄像头或麦克风。
 - 允许 iframes 使用全屏 API.
-- 阻止使用过时的 api，比如 [synchronous XHR](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) 和 {{domxref("document.write()")}}.
+- 阻止使用过时的 api，比如 [synchronous XHR](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) 和 {{domxref("document.write()")}}.
 - 确保图像的大小正确，对于视口来说不会太大。
 
 ## 概念和用法
@@ -40,7 +40,7 @@ original_slug: Web/HTTP/策略特征
 
 HTTP 标头和 allow 属性之间的主要区别在于 allow 属性仅控制 iframe 中的功能。标头控制响应中的功能以及页面内的任何嵌入式内容。
 
-点此链接查看更多详细信息 [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy).
+点此链接查看更多详细信息 [Using Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy).
 
 ## 策略控制功能的类型
 
