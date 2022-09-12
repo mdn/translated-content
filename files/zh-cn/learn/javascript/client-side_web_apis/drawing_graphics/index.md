@@ -594,7 +594,7 @@ loop();
       }
     ```
 
-    将整个功能块放置在 `if (posX % 13 === 0) { ... }` 内。用“模（`%`）运算符”（即 [求余运算符](</en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_()>)）来检测 `posX` 是否可以被 13 整除。如果整除，则通过增加 `sprite` 的值转至下一个精灵（到 5 号精灵时归零）。这实际上意味着每隔 13 帧才更新一次精灵，每秒大约更新 5 帧（`requestAnimationFrame()` 每秒最多调用 60 帧）。我们故意放慢了帧率，因为精灵图只有六个，且如果每秒显示 60 帧的话，这个角色就会快到起飞。
+    将整个功能块放置在 `if (posX % 13 === 0) { ... }` 内。用“模（`%`）运算符”（即 [求余运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)）来检测 `posX` 是否可以被 13 整除。如果整除，则通过增加 `sprite` 的值转至下一个精灵（到 5 号精灵时归零）。这实际上意味着每隔 13 帧才更新一次精灵，每秒大约更新 5 帧（`requestAnimationFrame()` 每秒最多调用 60 帧）。我们故意放慢了帧率，因为精灵图只有六个，且如果每秒显示 60 帧的话，这个角色就会快到起飞。
 
     外部程序块中用一个 [`if ... else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 语句来检测 `sprite` 的值是否为 5（精灵序号在 0 - 5 间循环，因此 5 代表最后一个精灵）。 如果最后一个精灵已经显示，就把 `sprite` 重置为 0，否则加 1。
 

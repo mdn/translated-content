@@ -1340,7 +1340,7 @@
 /zh-CN/docs/Web/API/CanvasRenderingContext2D.createLinearGradient	/zh-CN/docs/Web/API/CanvasRenderingContext2D/createLinearGradient
 /zh-CN/docs/Web/API/CanvasRenderingContext2D.createPattern	/zh-CN/docs/Web/API/CanvasRenderingContext2D/createPattern
 /zh-CN/docs/Web/API/CanvasRenderingContext2D/currentTransform	/zh-CN/docs/Web/API/CanvasRenderingContext2D
-/zh-CN/docs/Web/API/CanvasRenderingContext2D/drawWindow	/zh-CN/docs/conflicting/Web/API/CanvasRenderingContext2D/drawImage
+/zh-CN/docs/Web/API/CanvasRenderingContext2D/drawWindow	/zh-CN/docs/Web/API/CanvasRenderingContext2D/drawImage
 /zh-CN/docs/Web/API/Channel_Messaging_API/使用_channel_messaging	/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging
 /zh-CN/docs/Web/API/ChildNode.nextElementSibling	/zh-CN/docs/Web/API/Element/nextElementSibling
 /zh-CN/docs/Web/API/Childnode.previousElementSibling	/zh-CN/docs/Web/API/Element/previousElementSibling
@@ -2482,7 +2482,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/template_strings	/zh-CN/docs/Web/JavaScript/Reference/Template_literals
 /zh-CN/docs/Web/JavaScript/Reference/关于	/zh-CN/docs/Web/JavaScript/Reference/About
 /zh-CN/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/zh-CN/docs/Web/Security/Same-origin_policy
-/zh-CN/docs/Web/JavaScript/Shells	/zh-CN/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
+/zh-CN/docs/Web/JavaScript/Shells	/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview
 /zh-CN/docs/Web/JavaScript/Strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
 /zh-CN/docs/Web/JavaScript/Strict_mode/Transitioning_to_strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
 /zh-CN/docs/Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf

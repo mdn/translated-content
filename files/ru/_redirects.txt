@@ -87,6 +87,7 @@
 /ru/docs/Glossary/404	/ru/docs/conflicting/Web/HTTP/Status/404
 /ru/docs/Glossary/502	/ru/docs/conflicting/Web/HTTP/Status/502
 /ru/docs/Glossary/Block/Скриптинг	/ru/docs/Glossary/Block/Scripting
+/ru/docs/Glossary/Bootstrap	/ru/docs/orphaned/Glossary/Bootstrap
 /ru/docs/Glossary/Bézier_curve	/ru/docs/Glossary/Bezier_curve
 /ru/docs/Glossary/Dynamic_programming_language	/ru/docs/orphaned/Glossary/Dynamic_programming_language
 /ru/docs/Glossary/Symbol	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol
@@ -913,7 +914,7 @@
 /ru/docs/Словарь/BigInt	/ru/docs/Glossary/BigInt
 /ru/docs/Словарь/Blink	/ru/docs/Glossary/Blink
 /ru/docs/Словарь/Boolean	/ru/docs/Glossary/Boolean
-/ru/docs/Словарь/Bootstrap	/ru/docs/Glossary/Bootstrap
+/ru/docs/Словарь/Bootstrap	/ru/docs/orphaned/Glossary/Bootstrap
 /ru/docs/Словарь/Browser	/ru/docs/Glossary/Browser
 /ru/docs/Словарь/Browsing_context	/ru/docs/Glossary/Browsing_context
 /ru/docs/Словарь/Bézier_curve	/ru/docs/Glossary/Bezier_curve

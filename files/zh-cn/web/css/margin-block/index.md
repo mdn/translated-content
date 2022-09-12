@@ -4,7 +4,7 @@ slug: Web/CSS/margin-block
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-**`margin-block`**这个[CSS](/en-US/docs/Web/CSS)属性定义了一个元素的逻辑块开始和结束边距，根据元素的写入模式、方向性和文本方向映射到物理边界。
+**`margin-block`**这个[CSS](/zh-CN/docs/Web/CSS)属性定义了一个元素的逻辑块开始和结束边距，根据元素的写入模式、方向性和文本方向映射到物理边界。
 
 ```css
 /* 有长度的具体的值 */

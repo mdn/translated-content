@@ -306,7 +306,7 @@ python3 manage.py migrate
 
 在開發期間，你首先要使用開發網頁服務器，然後用你本機的瀏覽器觀看，來測試你的網站。
 
-> **備註：** 這個開發網頁服務器並不夠強大，不足以用於生產使用，但是它使你在開發期間，能非常容易獲得你的 Django 網站和運行它，以此來進行快速測試。默認情況下，服務器會開通（http\://127.0.0.1:8000/),但你也可以選擇其他端口。有關更多信息，查閱（[django-admin and manage.py: runserver](https://docs.djangoproject.com/en/1.10/ref/django-admin/#runserver)）(Django docs).
+> **備註：** 這個開發網頁服務器並不夠強大，不足以用於生產使用，但是它使你在開發期間，能非常容易獲得你的 Django 網站和運行它，以此來進行快速測試。默認情況下，服務器會開通（`http://127.0.0.1:8000/`），但你也可以選擇其他端口。有關更多信息，查閱（[django-admin and manage.py: runserver](https://docs.djangoproject.com/en/1.10/ref/django-admin/#runserver)）(Django docs).
 
 通過如下`runserver`命令，運行開發網頁服務器。（同樣的要在**manage.py**的目錄）
 

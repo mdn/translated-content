@@ -45,7 +45,7 @@ arr.forEach(element => console.log(element));
 // 2
 ```
 
-但是，`length` 属性不一定表示数组中定义值的个数。了解更多：[长度与数值下标属性之间的关系](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Relationship_between_length_and_numerical_properties)。
+但是，`length` 属性不一定表示数组中定义值的个数。了解更多：[长度与数值下标属性之间的关系](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#Relationship_between_length_and_numerical_properties)。
 
 {{js_property_attributes(1, 0, 0)}}
 
@@ -94,4 +94,4 @@ console.log(numbers.length); // 3
 ## 参见
 
 - {{jsxref("Array")}}
-- [RangeError: invalid array length](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)
+- [RangeError: invalid array length](/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

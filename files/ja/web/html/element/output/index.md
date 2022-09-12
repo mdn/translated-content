@@ -1,16 +1,6 @@
 ---
 title: '<output>: 出力要素'
 slug: Web/HTML/Element/output
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - HTML5
-  - HTML:Flow content
-  - HTML:フローコンテンツ
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/output
 ---
 {{HTMLRef}}
 

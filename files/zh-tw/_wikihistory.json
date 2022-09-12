@@ -146,10 +146,6 @@
     "modified": "2019-03-23T22:11:57.041Z",
     "contributors": ["jackblackevo", "vintif"]
   },
-  "Glossary/Bootstrap": {
-    "modified": "2020-05-23T17:07:57.268Z",
-    "contributors": ["iigmir"]
-  },
   "Glossary/Browser": {
     "modified": "2019-03-23T22:54:30.687Z",
     "contributors": ["iigmir", "irvinfly"]
@@ -5140,5 +5136,9 @@
   "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
     "modified": "2020-03-12T19:45:29.748Z",
     "contributors": ["JianHuaHe"]
+  },
+  "orphaned/Glossary/Bootstrap": {
+    "modified": "2020-05-23T17:07:57.268Z",
+    "contributors": ["iigmir"]
   }
 }

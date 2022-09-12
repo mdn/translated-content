@@ -16,7 +16,23 @@ typedarray.slice([begin[, end]])
 
 ### 引数
 
-<dl><dt><code><var>begin</var></code> {{optional_inline}}</dt><dd>抽出範囲の先頭の位置を示す 0 から始まる添字です。</dd><dd>負の添字を使って、配列の末尾からの相対位置を表すことができます。 <code>slice(-2)</code> は配列の最後から 2 番目の要素と最後の要素を抽出します。</dd><dd><code><var>begin</var></code> を省略した場合、 <code>slice</code> は <code>0</code> 番目の要素から開始します。</dd><dt><code><var>end</var></code> {{optional_inline}}</dt><dd>抽出範囲の末尾の<em>直前</em>の位置を示す 0 から始まる添字です。 <code>slice</code> は <code><var>end</var></code> 自体は含めず、その直前まで抽出します。</dd><dd><code>slice(1,4)</code> は 2 番目の要素から 4 番目の要素まで (添字が 1, 2, 3 の要素) を取り出します。</dd><dd>負の添字を使って、配列の末尾からの相対位置を表すことができます。 <code>slice(2,-1)</code> は配列の 3 番目の要素から、最後から 2 番目の要素まで取り出します。</dd><dd><code><var>end</var></code> が省略された場合、 <code>slice</code> は配列の最後 (<code>typedarray.length</code>) まで取り出します。</dd></dl>
+- `begin` {{optional_inline}}
+  - : 抽出範囲の先頭の位置を示す 0 から始まる添字です。
+
+    負の添字を使って、配列の末尾からの相対位置を表すことができます。
+
+    `slice(-2)` は配列の最後から 2 番目の要素と最後の要素を抽出します。
+
+    `begin` を省略した場合、 `slice` は `0` 番目の要素から開始します。
+- `end` {{optional_inline}}
+  - : 抽出範囲の末尾の _直前_ の位置を示す 0 から始まる添字です。 `slice` は
+    `end` 自体は含めず、その直前まで抽出します。
+
+    `slice(1,4)` は 2 番目の要素から 4 番目の要素まで (添字が 1, 2, 3 の要素) を取り出します。
+
+    負の添字を使って、配列の末尾からの相対位置を表すことができます。 `slice(2,-1)` は配列の 3 番目の要素から、最後から 2 番目の要素まで取り出します。
+
+    `end` が省略された場合、 `slice` は配列の最後 (`typedarray.length`) まで取り出します。
 
 ### 返値
 

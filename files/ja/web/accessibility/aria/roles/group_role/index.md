@@ -85,7 +85,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
 
 #### 動作する例
 
-- Unknown Title (http\://test.cita.illinois.edu/aria/tree/tree2.php) **\[broken link]**
+- Unknown Title (`http://test.cita.illinois.edu/aria/tree/tree2.php`) **\[broken link]**
 
 ### 注
 

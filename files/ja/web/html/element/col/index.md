@@ -1,14 +1,6 @@
 ---
 title: <col>
 slug: Web/HTML/Element/col
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Tables
-  - Web
-translation_of: Web/HTML/Element/col
 ---
 {{HTMLRef}}
 

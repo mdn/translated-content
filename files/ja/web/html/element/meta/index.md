@@ -1,19 +1,6 @@
 ---
 title: '<meta>: メタデータ要素'
 slug: Web/HTML/Element/meta
-tags:
-  - Document
-  - Element
-  - HTML
-  - HTML charset
-  - HTML document metadata
-  - Reference
-  - Web
-  - charset
-  - http-equiv
-  - metadata
-browser-compat: html.elements.meta
-translation_of: Web/HTML/Element/meta
 ---
 
 {{HTMLRef}}

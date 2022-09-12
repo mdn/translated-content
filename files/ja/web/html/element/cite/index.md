@@ -1,18 +1,6 @@
 ---
 title: '<cite>: 引用元要素'
 slug: Web/HTML/Element/cite
-tags:
-  - Attribution
-  - Citation
-  - Citing References
-  - Citing Works
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Quotations
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/cite
 ---
 {{HTMLRef}}
 

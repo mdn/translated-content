@@ -103,7 +103,7 @@ slug: Web/CSS/basic-shape
 
 ## 基础图形的插值
 
-`<basic-shape>` 值之间的动画变化将会遵循以下规则。图形函数的值会被放进一个插入的简易列表中。这些列表中的值将会尽可能地被当作 [`<length>`](/zh-CN/docs/Web/CSS/length)、[`<percentage>`](https://developer.mozilla.org/en-US/docs/Web/CSS/percentage)、 或 [`calc()`](/zh-CN/docs/Web/CSS/calc) 类型插入.。如果列表中的值不为上述三种类型中的一种，然而却是相同的（比如 `nonzero` 类型的值在多个列表的相同位置出现)，那么这些值将不会被作为插值。
+`<basic-shape>` 值之间的动画变化将会遵循以下规则。图形函数的值会被放进一个插入的简易列表中。这些列表中的值将会尽可能地被当作 [`<length>`](/zh-CN/docs/Web/CSS/length)、[`<percentage>`](/zh-CN/docs/Web/CSS/percentage)、 或 [`calc()`](/zh-CN/docs/Web/CSS/calc) 类型插入.。如果列表中的值不为上述三种类型中的一种，然而却是相同的（比如 `nonzero` 类型的值在多个列表的相同位置出现)，那么这些值将不会被作为插值。
 
 - 一对的图形需要使用一样的盒模型。
 - 如果一对图形是同一种类型，例如， `ellipse()` 或 `circle()`，并且没有任何半径使用了 `closest-side` 或 `farthest-side` 关键值，那么这些值将会成为相应的图形函数的插值。

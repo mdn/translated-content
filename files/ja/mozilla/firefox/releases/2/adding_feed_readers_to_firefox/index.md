@@ -18,9 +18,9 @@ Firefox 2 より、Firefox はフィードを読む際に使う RSS または At
 
 `number` は既に使われている数のうち最大のものよりもより 1 つ大きな数で置き換えてください。例えば "Easy Reader" という新しいフィードリーダを追加したい場合、かつ 0 から 4 までの数が指定されたコンテンツハンドラが既に定義されている場合、このように `number` には 5 を使用してください。
 
-- `browser.contentHandlers.types.5.title`: Easy Reader
-- `browser.contentHandlers.types.5.type`: application/vnd.mozilla.maybe.feed
-- `browser.contentHandlers.types.5.uri`: http\://www\.theeasyreaderurl.com?feed=%s
+- `browser.contentHandlers.types.5.title`: `Easy Reader`
+- `browser.contentHandlers.types.5.type`: `application/vnd.mozilla.maybe.feed`
+- `browser.contentHandlers.types.5.uri`: `http://www.theeasyreaderurl.com?feed=%s`
 
 `about:config` を使うことでこれらの設定項目を手動で追加できます。拡張機能で新しいフィードリーダをインストールしたいのであれば、プログラム側で行うこともできます。
 

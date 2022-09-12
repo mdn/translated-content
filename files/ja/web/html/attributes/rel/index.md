@@ -1,18 +1,6 @@
 ---
 title: 'HTML attribute: rel'
 slug: Web/HTML/Attributes/rel
-tags:
-  - 属性
-  - Attributes
-  - 制約検証
-  - Link
-  - form
-  - rel
-spec-urls:
-  - https://html.spec.whatwg.org/multipage/links.html#linkTypes
-  - https://w3c.github.io/preload/#x2.link-type-preload
-  - https://www.w3.org/TR/resource-hints/#dfn-preconnect
-translation_of: Web/HTML/Attributes/rel
 ---
 
 {{HTMLSidebar}}
