@@ -28,7 +28,7 @@ indexOf(searchElement, fromIndex)
 
 ## 描述
 
-`indexOf` 使用[全等运算符 (===) ](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality) (无论是 ===, 还是 triple-equals 操作符都基于同样的方法) 进行判断 `searchElement` 与数组中包含的元素之间的关系。
+`indexOf` 使用[全等运算](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)（与 `===`，或称为三等号运算符的方法相同）判断 `searchElement` 与数组中包含的元素之间的关系。
 
 ## 示例
 
