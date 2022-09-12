@@ -18,7 +18,7 @@ slug: Web/Security/Secure_Contexts
 
 例如，在 {{HTMLElement("iframe")}} 中的文档即使通过 TLS 进行传输，如果它有一个父节点没有通过 TLS 进行传输，其上下文也**不会**视为安全。
 
-然而，如果不安全上下文导致新窗口的建立（无论有无指定 [noopener](/zh-CN/docs/Web/API/Window/open) 属性），那么引起开启行为发生的目标不安全的事实不会影响新窗口的安全性。这是因为，确定一个特定的文档是否在安全上下文中，只基于在与之相关的顶层浏览上下文中考虑它——而不是在非安全上下文中碰巧创建了它。
+然而，需要引起注意的是，如果某个不安全上下文创建了新窗口（无论是否指定 [noopener](/zh-CN/docs/Web/API/Window/open) 参数），那么创建新窗口的文档不安全的事实不会影响新窗口的安全性。这是因为，确定一个特定的文档是否在安全上下文中，仅仅需要考虑与之相关的顶层浏览上下文，而与是否碰巧使用了非安全的上下文来创建它无关。
 
 本地传递的资源，如那些带有 `http://127.0.0.1`、`http://localhost` 和 `http://*.localhost` 网址（如 `http://dev.whatever.localhost/`）和 `file://` 网址的资源也是认为经过安全传递的。
 
@@ -35,7 +35,7 @@ slug: Web/Security/Secure_Contexts
 
 ```js
 if (window.isSecureContext) {
-  // 页面在安全上下文中，所以 service workers 也会可用
+  // 页面在安全上下文中，所以 service worker 可用
   navigator.serviceWorker.register("/offline-worker.js").then(() => {
     // …
   });
