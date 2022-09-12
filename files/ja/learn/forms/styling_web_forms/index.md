@@ -200,7 +200,7 @@ HTML は、[ガイドの最初の記事](/ja/docs/Learn/Forms/Your_first_form)�
 ここからがおもしろいところです! コードを書き始める前に、ここでは 3 つの追加要素が必要です。
 
 1. はがきの[背景](background.jpg) — この画像をダウンロードして作業している HTML ファイルと同じディレクトリーに保存します。
-2. タイプライター風フォント: [fontsquirrel.com の "Secret Typewriter" ](https://www.fontsquirrel.com/fonts/Secret-Typewriter)— TTF ファイルを上記と同じディレクトリーにダウンロードします。
+2. タイプライター風フォント: [fontsquirrel.com の "Secret Typewriter"](https://www.fontsquirrel.com/fonts/Secret-Typewriter) — TTF ファイルを上記と同じディレクトリーにダウンロードします。
 3. 手書き風フォント: [fontsquirrel.com の "Journal"](https://www.fontsquirrel.com/fonts/Journal) — TTF ファイルを上記と同じディレクトリーにダウンロードします。
 
 始める前にフォントの処理が必要です。
@@ -300,6 +300,7 @@ input, textarea {
 ```
 
 これらのフィールドのいずれかがフォーカスされると、ライトグレーの透明な背景でハイライトされます（ユーザビリティとキーボードアクセシビリティのために、フォーカススタイルを保有することは常に重要です）。
+
 ```css
 input:focus, textarea:focus {
   background   : rgba(0,0,0,.1);

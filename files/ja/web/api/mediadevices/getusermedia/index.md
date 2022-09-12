@@ -200,7 +200,7 @@ getUserMedia(constraints)
 Feature-Policy: camera 'self'
 ```
 
-これは、現在のオリジンと特定のオリジン https\://developer.mozilla.org のマイクへのアクセスを要求します。
+これは、現在のオリジンと特定のオリジン `https://developer.mozilla.org` のマイクへのアクセスを要求します。
 
 ```
 Feature-Policy: microphone 'self' https://developer.mozilla.org
