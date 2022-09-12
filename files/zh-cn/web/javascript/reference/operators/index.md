@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Operators
 
 ### 主要表达式
 
-JavaScript 中的基本关键字和通用表达式。
+JavaScript 中的基本关键字和常用表达式。
 
 - {{JSxRef("Operators/this", "this")}}
   - : `this` 关键字指向函数的执行上下文。
