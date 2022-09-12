@@ -177,7 +177,7 @@ JavaScript 中的基本关键字和通用表达式。
 ### 可选链运算符
 
 - {{JSxRef("Operators/Optional_chaining", "?.")}}
-  - 如果引用是 [nullish](/zh-CN/docs/Glossary/nullish) ([`null`](/en-US/docs/Web/JavaScript/reference/Operators/null) 或 [`undefined`](/zh-CN/docs/Web/JavaScript/reference/Global_Objects/undefined)），可选链运算符将返回 `undefined` 而不是导致错误。
+  - 如果引用是 [nullish](/zh-CN/docs/Glossary/nullish) ([`null`](/zh-CN/docs/Web/JavaScript/reference/Operators/null) 或 [`undefined`](/zh-CN/docs/Web/JavaScript/reference/Global_Objects/undefined)），可选链运算符将返回 `undefined` 而不是导致错误。
 
 ### 条件（三元）运算符
 
