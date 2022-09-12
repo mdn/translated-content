@@ -355,10 +355,6 @@
       "jaguardev"
     ]
   },
-  "Glossary/Bootstrap": {
-    "modified": "2020-10-30T10:23:10.825Z",
-    "contributors": ["ksam"]
-  },
   "Glossary/Browser": {
     "modified": "2019-03-23T22:40:32.512Z",
     "contributors": [
@@ -17262,6 +17258,10 @@
   "conflicting/Web/Web_Components": {
     "modified": "2019-03-18T21:40:10.986Z",
     "contributors": ["PaulineNemchak"]
+  },
+  "orphaned/Glossary/Bootstrap": {
+    "modified": "2020-10-30T10:23:10.825Z",
+    "contributors": ["ksam"]
   },
   "orphaned/Glossary/Dynamic_programming_language": {
     "modified": "2019-03-23T22:22:41.086Z",

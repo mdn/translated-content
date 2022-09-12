@@ -314,10 +314,6 @@
     "modified": "2019-03-18T21:32:14.290Z",
     "contributors": ["Uemmra3", "mk-sawa"]
   },
-  "Glossary/Bootstrap": {
-    "modified": "2020-05-30T13:35:38.772Z",
-    "contributors": ["mfuji09", "dskmori", "blackpeach7", "hamasaki"]
-  },
   "Glossary/Breadcrumb": {
     "modified": "2020-08-05T02:02:19.289Z",
     "contributors": ["mfuji09", "h-subaru"]
@@ -31462,6 +31458,10 @@
   "orphaned/Creating_toolbar_buttons": {
     "modified": "2019-03-23T23:41:54.024Z",
     "contributors": ["teoli", "electrolysis", "Akanemoto", "Taken Bot"]
+  },
+  "orphaned/Glossary/Bootstrap": {
+    "modified": "2020-05-30T13:35:38.772Z",
+    "contributors": ["mfuji09", "dskmori", "blackpeach7", "hamasaki"]
   },
   "orphaned/Glossary/DHTML": {
     "modified": "2019-03-23T23:49:44.167Z",

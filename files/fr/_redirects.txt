@@ -1319,7 +1319,7 @@
 /fr/docs/Glossaire/Block_cipher_mode_of_operation	/fr/docs/Glossary/Block_cipher_mode_of_operation
 /fr/docs/Glossaire/Boolean	/fr/docs/Glossary/Boolean
 /fr/docs/Glossaire/Boot2Gecko	/fr/docs/Glossary/Boot2Gecko
-/fr/docs/Glossaire/Bootstrap	/fr/docs/Glossary/Bootstrap
+/fr/docs/Glossaire/Bootstrap	/fr/docs/orphaned/Glossary/Bootstrap
 /fr/docs/Glossaire/Breadcrumb	/fr/docs/Glossary/Breadcrumb
 /fr/docs/Glossaire/Browsing_context	/fr/docs/Glossary/Browsing_context
 /fr/docs/Glossaire/Bézier_curve	/fr/docs/Glossary/Bezier_curve
@@ -1746,6 +1746,7 @@
 /fr/docs/Glossary/Accessibilité	/fr/docs/Glossary/Accessibility
 /fr/docs/Glossary/Attribut	/fr/docs/Glossary/Attribute
 /fr/docs/Glossary/Block/Block_(CSS)	/fr/docs/Glossary/Block/CSS
+/fr/docs/Glossary/Bootstrap	/fr/docs/orphaned/Glossary/Bootstrap
 /fr/docs/Glossary/Bézier_curve	/fr/docs/Glossary/Bezier_curve
 /fr/docs/Glossary/Client_hints	/fr/docs/Web/HTTP/Client_hints
 /fr/docs/Glossary/DHTML	/fr/docs/orphaned/Glossary/DHTML
