@@ -47,8 +47,7 @@ JavaScript 中的基本关键字和常用表达式。
 左边的值是赋值的目标。
 
 - {{JSxRef("Operators/Property_accessors", "属性访问符", "", 1)}}
-  - : 成员运算符提供了对对象的属性或方法的访问。
-    (`object.property` 和 `object["property"]`).
+  - : 成员运算符提供了对对象的属性或方法的访问（`object.property` 和 `object["property"]`）。
 - {{JSxRef("Operators/new", "new")}}
   - : `new` 运算符创建了构造函数实例。
 - {{JSxRef("Operators/new%2Etarget", "new.target")}}
@@ -96,7 +95,7 @@ JavaScript 中的基本关键字和常用表达式。
 
 算术运算符以二个数值（字面量或变量）作为操作数，并返回单个数值。
 
-- {{JSxRef("Operators/Addition", "+")}} (Plus)
+- {{JSxRef("Operators/Addition", "+")}}（加）
   - : 加法运算符。
 - {{JSxRef("Operators/Subtraction", "-")}}
   - : 减法运算符。
@@ -111,15 +110,15 @@ JavaScript 中的基本关键字和常用表达式。
 
 ### 关系运算符
 
-比较运算符比较两个操作数并返回基于比较结果的 boolean 值。
+比较运算符比较两个操作数并返回基于比较结果的布尔值。
 
 - {{JSxRef("Operators/in", "in")}}
   - : `in` 运算符用来判断对象是否拥有给定属性。
 - {{JSxRef("Operators/instanceof", "instanceof")}}
   - : `instanceof` 运算符判断一个对象是否是另一个对象的实例。
-- {{JSxRef("Operators/Less_than", "&lt;")}} (Less than)
+- {{JSxRef("Operators/Less_than", "&lt;")}}（小于）
   - : 小于运算符。
-- {{JSxRef("Operators/Greater_than", "&gt;")}} (Greater than)
+- {{JSxRef("Operators/Greater_than", "&gt;")}}（大于）
   - : 大于运算符。
 - {{JSxRef("Operators/Less_than_or_equal", "&lt;=")}}
   - : 小于等于运算符。
@@ -177,7 +176,7 @@ JavaScript 中的基本关键字和常用表达式。
 ### 可选链运算符
 
 - {{JSxRef("Operators/Optional_chaining", "?.")}}
-  - 如果引用是 [nullish](/zh-CN/docs/Glossary/nullish) ([`null`](/zh-CN/docs/Web/JavaScript/reference/Operators/null) 或 [`undefined`](/zh-CN/docs/Web/JavaScript/reference/Global_Objects/undefined)），可选链运算符将返回 `undefined` 而不是导致错误。
+  - 如果引用是[空值](/zh-CN/docs/Glossary/nullish)（[`null`](/zh-CN/docs/Web/JavaScript/reference/Operators/null) 或 [`undefined`](/zh-CN/docs/Web/JavaScript/reference/Global_Objects/undefined)），可选链运算符将返回 `undefined` 而不是导致错误。
 
 ### 条件（三元）运算符
 
