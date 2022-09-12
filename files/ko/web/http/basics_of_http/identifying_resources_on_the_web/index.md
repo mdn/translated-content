@@ -34,7 +34,7 @@ https://developer.mozilla.org/en-US/docs/Learn/
 https://developer.mozilla.org/en-US/search?q=URL
 ```
 
-이러한 URL을 브라우저의 주소 표시줄에 입력하여 URL과 연결되는 페이지(리소스)를 로드할 수 있습니다.
+이러한 URL 중 하나를 브라우저의 주소 표시줄에 입력하여 URL과 연결되는 페이지(리소스)를 로드할 수 있도록 지시할 수 있습니다.
 
 URL은 여러 부분으로 구성되는데, 일부는 필수 사항이고 나머지는 선택 사항입니다. 더 복잡한 예는 다음과 같습니다.
 
