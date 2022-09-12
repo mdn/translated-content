@@ -1,15 +1,6 @@
 ---
 title: <input type="search">
 slug: Web/HTML/Element/input/search
-tags:
-  - フォーム入力
-  - フォーム
-  - HTML
-  - HTML フォーム
-  - 入力型
-  - リファレンス
-  - Search
-translation_of: Web/HTML/Element/input/search
 ---
 
 {{HTMLRef("Input_types")}}

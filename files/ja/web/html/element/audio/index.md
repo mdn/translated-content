@@ -1,23 +1,6 @@
 ---
 title: '<audio>: 埋め込み音声要素'
 slug: Web/HTML/Element/audio
-tags:
-  - HTML
-  - HTML 埋め込みコンテンツ
-  - HTML5
-  - HTML:フローコンテンツ
-  - HTML:埋め込みコンテンツ
-  - HTML:対話型コンテンツ
-  - HTML:知覚可能コンテンツ
-  - HTML:記述コンテンツ
-  - Media
-  - Reference
-  - Web
-  - ウェブ
-  - マルチメディア
-  - メディア
-  - 要素
-translation_of: Web/HTML/Element/audio
 ---
 {{HTMLRef}}
 

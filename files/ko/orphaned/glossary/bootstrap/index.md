@@ -1,6 +1,6 @@
 ---
 title: 부트스트랩
-slug: Glossary/Bootstrap
+slug: orphaned/Glossary/Bootstrap
 tags:
   - 부트스트랩
   - bootstrap
@@ -8,6 +8,7 @@ tags:
   - framework
   - css
 translation_of: Glossary/Bootstrap
+original_slug: Glossary/Bootstrap
 ---
 Bootstrap은 반응형 웹사이트를 빠르게 만들기 위한 무료 오픈소스 {{Glossary("HTML")}}, CSS 및 {{Glossary("JavaScript")}} 의 프레임워크 입니다.
 

@@ -1,6 +1,6 @@
 ---
 title: Bootstrap
-slug: Glossary/Bootstrap
+slug: orphaned/Glossary/Bootstrap
 tags:
   - Bootstrap
   - CSS
@@ -8,7 +8,7 @@ tags:
   - Intro
   - framework
 translation_of: Glossary/Bootstrap
-original_slug: Glossaire/Bootstrap
+original_slug: Glossary/Bootstrap
 ---
 Bootstrap est un framework {{Glossary("HTML")}}, CSS, et {{Glossary("JavaScript")}} gratuit et open source pour créer rapidement des sites Web réactifs.
 

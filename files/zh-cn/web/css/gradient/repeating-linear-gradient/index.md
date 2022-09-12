@@ -133,5 +133,5 @@ div {
 
 ## 了解更多
 
-- [使用 CSS 渐变](/en/CSS/Using_CSS_gradients)
+- [使用 CSS 渐变](/zh-CN/CSS/Using_CSS_gradients)
 - 其他渐变方法：{{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, {{cssxref("repeating-radial-gradient")}}

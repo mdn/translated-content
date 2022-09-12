@@ -24,7 +24,7 @@ slug: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 
 **外边距区域 margin area** 由外边距边界限制，用空白区域扩展边框区域，以分开相邻的元素。它的尺寸为 _margin-box 宽度_ 和 _margin-box 高度_。
 
-外边距区域的大小由 {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}}、{{cssxref("margin-left")}}，和简写属性 {{cssxref("margin")}} 控制。在发生[外边距合并](/en/CSS/margin_collapsing)的情况下，由于盒之间共享外边距，外边距不容易弄清楚。
+外边距区域的大小由 {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}}、{{cssxref("margin-left")}}，和简写属性 {{cssxref("margin")}} 控制。在发生[外边距合并](/zh-CN/CSS/margin_collapsing)的情况下，由于盒之间共享外边距，外边距不容易弄清楚。
 
 最后，请注意，除[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)外，对于行内元素来说，尽管内容周围存在内边距与边框，但其占用空间（每一行文字的高度）则由 {{cssxref('line-height')}} 属性决定，即使边框和内边距仍会显示在内容周围。
 

@@ -1,16 +1,6 @@
 ---
 title: <input type="hidden">
 slug: Web/HTML/Element/input/hidden
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Input
-  - Input Types
-  - Reference
-  - hidden
-translation_of: Web/HTML/Element/input/hidden
 ---
 {{HTMLRef}}
 
