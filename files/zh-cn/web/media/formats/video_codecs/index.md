@@ -1810,7 +1810,7 @@ While other codecs may have better best-case quality levels when compressing the
 
 #### 录制视频
 
-考虑到你可以获得多接近无损的限制，你可以考虑使用 [AVC](#avc_h.264) 或 [AV1](#av1)。例如，如果你使用 [MediaStream Recording API](/zh-CN/docs/Web/API/MediaStream_Recording_API) 录制视频，则在创建 {{domxref("MediaRecorder")}} 时可能会使用如下代码}} 目的：
+考虑到你可以获得多接近无损的限制，你可以考虑使用 [AVC](#avc_h.264) 或 [AV1](#av1)。例如，如果你使用 [MediaStream Recording API](/zh-CN/docs/Web/API/MediaStream_Recording_API) 录制视频，则在创建 {{domxref("MediaRecorder")}} 时可能会使用如下代码目的：
 
 ```js
 const kbps = 1024;
