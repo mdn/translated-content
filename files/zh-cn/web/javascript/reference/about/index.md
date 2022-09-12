@@ -31,13 +31,13 @@ JavaScript 参考中你能发现如下的章节：
   - : JavaScript 函数的章节。
 - [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)
   - : 该章节介绍了 ECMAScript 6 中的类。
-- [错误](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors)
+- [错误](/zh-CN/docs/Web/JavaScript/Reference/Errors)
   - : 该章节描述了 JavaScript 运行时可能抛出的错误、异常和警告。
 - [JavaScript 更新](/zh-CN/docs/Web/JavaScript/New_in_JavaScript)
   - : JavaScript 版本历史的章节。
 
 ### 更多参考页面
 
-- [过期废弃的特性](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
-- [词法语法](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [数据类型和数据结构](/en-US/docs/Web/JavaScript/Data_structures)
+- [过期废弃的特性](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
+- [词法语法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)

@@ -204,10 +204,10 @@ new GeneratorFunction (arg1, arg2, ... argN, functionBody)
 
 你可以参阅在函数里使用`arguments`对象的函数参数。参见：[arguments](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)。
 
-- [`arguments`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments): 一个包含了传递给当前执行函数参数的类似于数组的对象。
-- [`arguments.callee`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee) {{Deprecated_Inline}}: 当前正在执行的函数。
-- [`arguments.caller`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller){{Deprecated_Inline}} : 调用当前执行函数的函数。
-- [`arguments.length`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length): 传给函数的参数的数目。
+- [`arguments`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments): 一个包含了传递给当前执行函数参数的类似于数组的对象。
+- [`arguments.callee`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee) {{Deprecated_Inline}}: 当前正在执行的函数。
+- [`arguments.caller`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller){{Deprecated_Inline}} : 调用当前执行函数的函数。
+- [`arguments.length`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length): 传给函数的参数的数目。
 
 ## 方法函数定义
 

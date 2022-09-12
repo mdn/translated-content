@@ -65,7 +65,7 @@ JavaScript 有三种声明方式。
 
 一个 JavaScript 标识符必须以字母、下划线（\_）或者美元符号（$）开头；后续的字符也可以是数字（0-9）。因为 JavaScript 语言是区分大小写的，所以字母可以是从“A”到“Z”的大写字母和从“a”到“z”的小写字母。
 
-你可以使用大部分 ISO 8859-1 或 Unicode 编码的字符作标识符，例如 å 和 ü（详情可查看[这篇博客文章](https://mathiasbynens.be/notes/javascript-identifiers-es6)）。你也可以使用 [Unicode 转义字符](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals) 作标识符。
+你可以使用大部分 ISO 8859-1 或 Unicode 编码的字符作标识符，例如 å 和 ü（详情可查看[这篇博客文章](https://mathiasbynens.be/notes/javascript-identifiers-es6)）。你也可以使用 [Unicode 转义字符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals) 作标识符。
 
 合法的标识符示例：`Number_hits`，`temp99`，`$credit` 和 `_name`。
 
@@ -637,7 +637,7 @@ POST`http://foo.org/bar?a=${a}&b=${b}
 | \\\\        | 反斜杠字符（\）                                                                                                                                                                                              |
 | \\_XXX_     | 由从 0 到 377 最多三位八进制数*XXX*表示的 Latin-1 字符。例如，\251 是版权符号的八进制序列。                                                                                                                  |
 | \x*XX*      | 由从 00 和 FF 的两位十六进制数字 XX 表示的 Latin-1 字符。例如，\ xA9 是版权符号的十六进制序列。                                                                                                              |
-| _\uXXXX_    | 由四位十六进制数字 XXXX 表示的 Unicode 字符。例如，\ u00A9 是版权符号的 Unicode 序列。见[Unicode escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals) (Unicode 转义字符). |
+| _\uXXXX_    | 由四位十六进制数字 XXXX 表示的 Unicode 字符。例如，\ u00A9 是版权符号的 Unicode 序列。见[Unicode escape sequences](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals) (Unicode 转义字符). |
 | \u*{XXXXX}* | Unicode 代码点 (code point) 转义字符。例如，\u{2F804} 相当于 Unicode 转义字符 \uD87E\uDC04 的简写。                                                                                                          |
 
 译注：严格模式下，不能使用八进制转义字符。
@@ -685,7 +685,7 @@ Sugar is sweet,\n\
 and so is foo."
 ```
 
-ECMAScript 2015 增加了一种新的字面量，叫做模板字面量 **[template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings)。**它包含一些新特征，包括了多行字符串！
+ECMAScript 2015 增加了一种新的字面量，叫做模板字面量 **[template literals](/zh-CN/docs/Web/JavaScript/Reference/template_strings)。**它包含一些新特征，包括了多行字符串！
 
 ```js
 var poem =
