@@ -144,6 +144,6 @@ display.call();  // sData value is Wisen
 
 ## 참조
 
-- ## {{jsxref("Function.prototype.bind()")}}
+- {{jsxref("Function.prototype.bind()")}}
 - {{jsxref("Function.prototype.apply()")}}
 - [객체 지향 JavaScript 소개](/ko/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)

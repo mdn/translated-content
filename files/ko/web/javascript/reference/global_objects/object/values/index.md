@@ -11,7 +11,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 
 ## Syntax
 
-    Object.values(obj)
+```js
+Object.values(obj)
+```
 
 ### Parameters
 

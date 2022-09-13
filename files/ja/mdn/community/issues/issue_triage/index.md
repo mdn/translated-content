@@ -1,15 +1,6 @@
 ---
 title: MDN コンテンツのバグのトリアージ手順
 slug: MDN/Community/Issues/Issue_triage
-tags:
-  - MDN
-  - MDN Meta
-  - Meta
-  - Meta Docs
-  - Content bugs
-  - Process
-  - Triage
-translation_of: MDN/Contribute/Processes/Content_bug_triage
 original_slug: MDN/Contribute/Processes/Content_bug_triage
 ---
 {{MDNSidebar}}

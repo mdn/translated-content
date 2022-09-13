@@ -1,15 +1,6 @@
 ---
 title: 'Element: show イベント'
 slug: Web/API/Element/show_event
-tags:
-  - API
-  - Deprecated
-  - Event
-  - Reference
-  - events
-  - show
-  - イベント
-translation_of: Web/API/Element/show_event
 ---
 {{APIRef}}{{deprecated_header}}
 
@@ -61,7 +52,7 @@ translation_of: Web/API/Element/show_event
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.show_event")}}
+{{Compat}}
 
 ## 関連情報
 

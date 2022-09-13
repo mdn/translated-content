@@ -41,7 +41,4 @@ Les versions les plus récentes de la spécification permettent de récupérer l
 
 ## Spécifications
 
-| Spécification                                    | État                                         | Commentaires         |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
-| {{SpecName('WebAuthn')}}                 | {{Spec2('WebAuthn')}}                 | Définition initiale. |
+{{Specifications}}

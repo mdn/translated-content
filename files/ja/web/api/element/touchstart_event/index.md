@@ -1,16 +1,6 @@
 ---
 title: 'Element: touchstart イベント'
 slug: Web/API/Element/touchstart_event
-tags:
-  - Event
-  - Touch Event
-  - TouchEvent
-  - UI
-  - UI Events
-  - UX
-  - touch
-  - touchstart
-translation_of: Web/API/Element/touchstart_event
 ---
 {{APIRef}}
 
@@ -51,7 +41,7 @@ translation_of: Web/API/Element/touchstart_event
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.touchstart_event")}}
+{{Compat}}
 
 ## 関連情報
 

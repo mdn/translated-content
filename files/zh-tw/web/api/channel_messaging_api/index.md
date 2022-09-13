@@ -16,7 +16,7 @@ Channel Messaging API 讓同屬一份文件不同瀏覽環境的兩份程式腳�
 
 如果想關閉訊息 channel，則呼叫 {{domxref("MessagePort.close")}}。
 
-更多 API 使用細節請見 [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)。
+更多 API 使用細節請見 [Using channel messaging](/zh-TW/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)。
 
 ## Channel 訊息介面
 
@@ -42,6 +42,6 @@ Channel Messaging API 讓同屬一份文件不同瀏覽環境的兩份程式腳�
 
 ## 延伸閱讀
 
-- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
-- [Web Workers API](/en-US/docs/Web/API/Web_Workers_API)
-- [Broadcast Channel API](/en-US/docs/Web/API/Broadcast_Channel_API)
+- [Using channel messaging](/zh-TW/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Web Workers API](/zh-TW/docs/Web/API/Web_Workers_API)
+- [Broadcast Channel API](/zh-TW/docs/Web/API/Broadcast_Channel_API)

@@ -1,17 +1,6 @@
 ---
 title: 'Document: transitioncancel イベント'
 slug: Web/API/Element/transitioncancel_event
-tags:
-  - Document
-  - Event
-  - Reference
-  - TransitionEvent
-  - Web
-  - transitioncancel
-  - イベント
-  - ウェブ
-  - トランジション
-translation_of: Web/API/Document/transitioncancel_event
 original_slug: Web/API/Document/transitioncancel_event
 ---
 {{APIRef}}{{SeeCompatTable}}
@@ -73,7 +62,7 @@ document.ontransitioncancel = () => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.transitioncancel_event")}}
+{{Compat}}
 
 ## 関連情報
 

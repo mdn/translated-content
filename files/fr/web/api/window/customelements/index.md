@@ -52,12 +52,10 @@ customElements.define('details-element',
 
 Voir notre repo [web-components-examples](https://github.com/mdn/web-components-examples/) pour davantage d'exemples d'utilisation.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                                            | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName("HTML WHATWG", "custom-elements.html#dom-window-customelements", "window.customElements")}} | {{Spec2("HTML WHATWG")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.customElements")}}
+{{Compat}}

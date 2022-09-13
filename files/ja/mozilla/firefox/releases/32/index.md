@@ -1,9 +1,6 @@
 ---
 title: Firefox 32 for developers
 slug: Mozilla/Firefox/Releases/32
-tags:
-  - Firefox
-translation_of: Mozilla/Firefox/Releases/32
 ---
 Gecko 32 を搭載した Firefox 32 は、米国時間 2014 年 9 月 2 日にリリースされました。このページでは、開発者に影響する Firefox 32 の変更点をまとめています。
 

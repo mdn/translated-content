@@ -116,13 +116,11 @@ L'[API Fetch](/fr/docs/Web/API/Fetch_API) exige que les en-têtes {{httpheader("
 
 ## Spécifications
 
-| Spécification                                                        | Statut                               | Commentaire          |
-| -------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#cache', 'Cache')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Cache")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -52,11 +52,11 @@ Se ha usado una mezcla de selectores, elementos de estilo como `<h1>` y `<h2>`, 
 
 Usa CSS para cambiar el aspecto de esta biografía, cambiando los valores de las propiedades iniciales.
 
-1.  Coloca en rosado el nivel `<h1>`, usando el color CSS `hotpink`.
-2.  Da al encabezado un {{cssxref("border-bottom")}} de 10px con puntos (`dotted`), que use el color CSS `purple`.
-3.  Coloca en cursiva el `<h2>`.
-4.  Al `ul` utilizado para los detalles de contacto un {{cssxref("background-color")}} `#eeeeee`, y un {{cssxref("border")}} de `5px solid purple`. Usa algo de {{cssxref("padding")}} para empujar el texto lejos del borde.
-5.  Cambia los enlaces a verde cuando pase el cursor sobre ellos.
+1. Coloca en rosado el nivel `<h1>`, usando el color CSS `hotpink`.
+2. Da al encabezado un {{cssxref("border-bottom")}} de 10px con puntos (`dotted`), que use el color CSS `purple`.
+3. Coloca en cursiva el `<h2>`.
+4. Al `ul` utilizado para los detalles de contacto un {{cssxref("background-color")}} `#eeeeee`, y un {{cssxref("border")}} de `5px solid purple`. Usa algo de {{cssxref("padding")}} para empujar el texto lejos del borde.
+5. Cambia los enlaces a verde cuando pase el cursor sobre ellos.
 
 Deberías conseguir algo parecido a esta página:
 
@@ -72,8 +72,8 @@ Recuerda que no existen respuestas equivocadas acá - En esta etapa en tu aprend
 
 Si deseas que tu trabajo sea evaluado, o estás atorado y quieres solicitar ayuda:
 
-1.  Pon tu trabajo en un editor en línea con capacidad de compartir como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/).
-2.  Escribe una publicación solicitando evaluacion y/o ayuda en el [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Tu publicación debería incluir:
+1. Pon tu trabajo en un editor en línea con capacidad de compartir como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/).
+2. Escribe una publicación solicitando evaluacion y/o ayuda en el [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Tu publicación debería incluir:
 
     - Un título descriptivo como "Requiero evaluacion para Primeros pasos en CSS".
     - Detalles de lo que ya has intentado, y que te gustaría que hiciéramos, por ejemplo, si estas atascado y necesitas ayuda, o quieres una evaluación.
@@ -88,8 +88,8 @@ Felicitaciones por completar este primer modulo!. Deberías tener un buen entend
 
 ## En este módulo
 
-1.  [¿Qué es CSS?](/es/docs/Web/CSS/Como_iniciar/Que_es_CSS)
-2.  [Empezando con CSS](/es/docs/Learn/CSS/First_steps/Comenzando_CSS)
-3.  [Cómo se estructura el CSS](/es/docs/Learn/CSS/First_steps/Como_se_estructura_CSS)
-4.  [Cómo funciona CSS](/es/docs/Learn/CSS/First_steps/Como_funciona_CSS)
-5.  [Usa tu nuevo conocimiento](/es/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [¿Qué es CSS?](/es/docs/Web/CSS/Como_iniciar/Que_es_CSS)
+2. [Empezando con CSS](/es/docs/Learn/CSS/First_steps/Comenzando_CSS)
+3. [Cómo se estructura el CSS](/es/docs/Learn/CSS/First_steps/Como_se_estructura_CSS)
+4. [Cómo funciona CSS](/es/docs/Learn/CSS/First_steps/Como_funciona_CSS)
+5. [Usa tu nuevo conocimiento](/es/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

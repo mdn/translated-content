@@ -1,10 +1,6 @@
 ---
 title: 'Element: compositionend イベント'
 slug: Web/API/Element/compositionend_event
-tags:
-  - Event
-  - Reference
-translation_of: Web/API/Element/compositionend_event
 ---
 {{APIRef}}
 
@@ -126,7 +122,7 @@ inputElement.addEventListener('compositionend', handleEvent);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.compositionend_event")}}
+{{Compat}}
 
 ## 関連情報
 

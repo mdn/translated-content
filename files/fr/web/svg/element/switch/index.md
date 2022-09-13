@@ -64,11 +64,8 @@ Cet exemple montre comment afficher un texte différent selon les paramètres de
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                   | Commentaire                                                                  |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------------------------------- |
-| {{SpecName('SVG2', 'struct.html#SwitchElement', '&lt;switch&gt;')}}     | {{Spec2('SVG2')}} | Clarifie l'évaluation de l'attribut {{SVGAttr("systemLanguage")}} |
-| {{SpecName('SVG1.1', 'struct.html#SwitchElement', '&lt;switch&gt;')}} | {{Spec2('SVG1.1')}} | Définition initiale                                                          |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.switch")}}
+{{Compat}}

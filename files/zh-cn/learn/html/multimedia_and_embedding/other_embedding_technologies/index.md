@@ -139,7 +139,7 @@ Youtube 如何让我们通过[`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe)�
 
 一个快速的例子——尝试在浏览器中加载上面的例子——你也可以[在
 Github 上找到它](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)（[参见源代码](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)）。你将不会看到任何内容，但如果你点击[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)中的*控制台*，你会看到一条消息，告诉你为什么没有显示内容。在
-Firefox 中，你会*被告知：“X-Frame-Options 拒绝加载 https\://developer.mozilla.org/zh-CN/docs/Glossary”*。这是因为构建 MDN
+Firefox 中，你会*被告知：“X-Frame-Options 拒绝加载 `https\://developer.mozilla.org/zh-CN/docs/Glossary`*。这是因为构建 MDN
 的开发人员已经在网站页面的服务器上设置了一个不允许被嵌入到`<iframe>`的设置（请参阅[配置 CSP 指令](#配置_csp_指令)）这是有必要的——整个
 MDN 页面被嵌入在其它页面中没有多大意义，除非你想要将其嵌入到你的网站上并将其声称为自己的内容，或尝试通过单击劫持来窃取数据，这都是非常糟糕的事情。此外，如果每个人都这样做，所有额外的带宽将花费 Mozilla
 很多资金。

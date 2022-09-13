@@ -67,13 +67,11 @@ self.addEventListener('push', function(event) {
 
 ## Spécifications
 
-| Spécification                                                            | Statut                       | Commentaire        |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('Push API','#the-push-event','PushEvent')}} | {{Spec2('Push API')}} | Définition intiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PushEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

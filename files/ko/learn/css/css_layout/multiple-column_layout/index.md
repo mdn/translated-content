@@ -1,14 +1,6 @@
 ---
 title: 다단 레이아웃
 slug: Learn/CSS/CSS_layout/Multiple-column_Layout
-tags:
-  - CSS 붕괴
-  - 다단
-  - 다단 레이아웃
-  - 안내서
-  - 초보자
-  - 학습
-translation_of: Learn/CSS/CSS_layout/Multiple-column_Layout
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}
 

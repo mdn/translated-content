@@ -1,22 +1,6 @@
 ---
 title: Alpha (アルファチャンネル)
 slug: Glossary/Alpha
-tags:
-  - Alpha
-  - Alpha Channel
-  - Drawing
-  - Glossary
-  - Graphics
-  - Translucency
-  - Translucent
-  - Transparency
-  - Transparent
-  - WebGL
-  - WebXR
-  - channel
-  - color
-  - pixel
-translation_of: Glossary/Alpha
 l10n:
   sourceCommit: 8d91a3db3ea9aa606ead1f5dbbef3000aba7bc72
 ---

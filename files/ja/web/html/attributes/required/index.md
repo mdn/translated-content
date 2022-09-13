@@ -1,13 +1,6 @@
 ---
 title: 'HTML 属性: required'
 slug: Web/HTML/Attributes/required
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - Forms
-  - required
-translation_of: Web/HTML/Attributes/required
 ---
 {{HTMLSidebar}}
 
@@ -73,7 +66,7 @@ translation_of: Web/HTML/Attributes/required
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attributes.required")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -69,4 +69,4 @@ request.onupgradeneeded = function(event) {
 - 检索与修改数据: {{domxref("IDBObjectStore")}}
 - 使用游标: {{domxref("IDBCursor")}}
 - 参考用例：[To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
-- [`versionchange`](/en-US/docs/Web/API/IDBDatabase/versionchange_event) 事件
+- [`versionchange`](/zh-CN/docs/Web/API/IDBDatabase/versionchange_event) 事件

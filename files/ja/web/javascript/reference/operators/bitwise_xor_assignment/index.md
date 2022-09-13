@@ -1,13 +1,6 @@
 ---
 title: ビット排他的論理和代入 (^=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment
-tags:
-  - 代入演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment
 ---
 {{jsSidebar("Operators")}}
 

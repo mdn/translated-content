@@ -1,14 +1,6 @@
 ---
 title: HTMLSelectElement.labels
 slug: Web/API/HTMLSelectElement/labels
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLSelectElement.labels
-translation_of: Web/API/HTMLSelectElement/labels
 ---
 {{APIRef("DOM")}}
 

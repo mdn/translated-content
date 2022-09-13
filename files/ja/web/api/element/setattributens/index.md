@@ -1,11 +1,6 @@
 ---
 title: element.setAttributeNS
 slug: Web/API/Element/setAttributeNS
-tags:
-  - DOM
-  - Gecko
-  - 翻訳中
-translation_of: Web/API/Element/setAttributeNS
 ---
 {{ ApiRef() }}
 

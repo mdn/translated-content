@@ -1,14 +1,6 @@
 ---
 title: ReadableStream.getReader()
 slug: Web/API/ReadableStream/getReader
-tags:
-  - API
-  - Method
-  - ReadableStream
-  - Reference
-  - Streams
-  - getReader
-translation_of: Web/API/ReadableStream/getReader
 ---
 {{APIRef("Streams")}}
 

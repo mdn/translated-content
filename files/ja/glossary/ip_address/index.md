@@ -1,12 +1,6 @@
 ---
 title: IP Address (IPアドレス)
 slug: Glossary/IP_Address
-tags:
-  - Beginner
-  - Glossary
-  - Infrastructure
-  - Web
-translation_of: Glossary/IP_Address
 ---
 IP アドレスはネットワークに接続された、インターネットプロトコル(IP) を使うすべての端末に割り当てられる番号です。
 

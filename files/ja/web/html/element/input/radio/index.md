@@ -1,24 +1,6 @@
 ---
 title: <input type="radio">
 slug: Web/HTML/Element/input/radio
-tags:
-  - Choosing Options
-  - Element
-  - Form Options
-  - HTML
-  - HTML Input Types
-  - HTML forms
-  - HTML input
-  - Input
-  - Input Types
-  - Options
-  - Radio Buttons
-  - Radio Groups
-  - Reference
-  - form
-  - radio
-  - radio button
-translation_of: Web/HTML/Element/input/radio
 ---
 {{HTMLRef("Input_types")}}
 
@@ -28,9 +10,9 @@ translation_of: Web/HTML/Element/input/radio
 
 ラジオボタンと呼ばれるのは、以下のように外見や操作方法が古い型のラジオのプッシュボタンに似ているからです。
 
-![古い時代のラジオボタンの外観を示します。](https://mdn.mozillademos.org/files/15610/old-radio.jpg "古い時代のラジオの写真")
+![古い時代のラジオボタンの外観を示します。](https://mdn.mozillademos.org/files/15610/old-radio.jpg)
 
-> **Note:** [**注**: ](https://github.com/mdn/interactive-examples)[チェックボックス](/ja/docs/Web/HTML/Element/input/checkbox)はラジオボタンに似ていますが、重要な違いがあります。ラジオボタンは一組の中で一つの値を選択するように設計されているのに対し、チェックボックスは個別に値をオンまたはオフに設定できます。複数のコントロールが存在するところでは、ラジオボタンは全体の中で一つを選択できますが、チェックボックスは複数の値を選択することができます。
+> **Note:** [**注**:](https://github.com/mdn/interactive-examples) [チェックボックス](/ja/docs/Web/HTML/Element/input/checkbox)はラジオボタンに似ていますが、重要な違いがあります。ラジオボタンは一組の中で一つの値を選択するように設計されているのに対し、チェックボックスは個別に値をオンまたはオフに設定できます。複数のコントロールが存在するところでは、ラジオボタンは全体の中で一つを選択できますが、チェックボックスは複数の値を選択することができます。
 
 <table class="properties">
   <tbody>
@@ -334,7 +316,7 @@ Notice that when clicking on a radio button, there's a nice, smooth fade out/in 
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.input.input-radio")}}
+{{Compat}}
 
 ## 関連情報
 

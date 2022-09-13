@@ -1,13 +1,6 @@
 ---
 title: Math.clz32()
 slug: Web/JavaScript/Reference/Global_Objects/Math/clz32
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/clz32
 ---
 {{JSRef}}
 

@@ -1,15 +1,6 @@
 ---
 title: 'Element: wheel イベント'
 slug: Web/API/Element/wheel_event
-tags:
-  - API
-  - DOM
-  - Element
-  - Event
-  - Reference
-  - WheelEvent
-  - wheel
-translation_of: Web/API/Element/wheel_event
 ---
 {{APIRef}}
 
@@ -105,7 +96,7 @@ el.addEventListener('wheel', zoom);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.wheel_event")}}
+{{Compat}}
 
 ## 関連情報
 

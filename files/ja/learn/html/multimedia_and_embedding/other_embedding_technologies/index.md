@@ -1,20 +1,6 @@
 ---
 title: object から iframe へ — その他の埋め込み技術
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Embedding
-  - Flash
-  - Guide
-  - HTML
-  - Learn
-  - Multimedia and embedding
-  - Object
-  - embed
-  - iframe
-translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
 
@@ -38,18 +24,18 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 
 この記事では、能動的学習セクションにまっすぐ飛び込んで、埋め込み技術が有用であるかどうかをすぐに知ることができます。オンラインの世界では [Youtube](https://www.youtube.com) はとてもよく知られていますが、多くの人は利用可能な共有施設については知らないのです。YouTube が {{htmlelement("iframe")}} を使って好きなページに動画を埋め込むことができる仕組みを見てみましょう。
 
-1.  まず、Youtube へ行き、あなたが好きな動画を見つけてください。
-2.  動画の下に \[共有] ボタンがあります。これを選択すると、共有オプションが表示されます。
-3.  \[埋め込む] ボタンを選択すると、`<iframe>` コードがいくつか表示されます。これをコピーします。
-4.  下の入力ボックスにそれを挿入し、結果が出力にあるかどうかを確認します。
+1. まず、Youtube へ行き、あなたが好きな動画を見つけてください。
+2. 動画の下に \[共有] ボタンがあります。これを選択すると、共有オプションが表示されます。
+3. \[埋め込む] ボタンを選択すると、`<iframe>` コードがいくつか表示されます。これをコピーします。
+4. 下の入力ボックスにそれを挿入し、結果が出力にあるかどうかを確認します。
 
 ボーナスポイントとして、例の中に [Google マップ](https://www.google.com/maps/)を埋め込むこともできます。
 
-1.  Google マップへ行き、好きな地図を見つけます。
-2.  UI の左上にあるハンバーガーメニュー(3 本の水平線)をクリックします。
-3.  \[地図を共有または埋め込む] オプションを選択します。
-4.  \[地図を埋め込む] オプションを選択します。これは、`<iframe>` コードをいくつか提供します。これをコピーします。
-5.  下の入力ボックスにそれを挿入し、結果が出力にあるかどうかを確認します。
+1. Google マップへ行き、好きな地図を見つけます。
+2. UI の左上にあるハンバーガーメニュー(3 本の水平線)をクリックします。
+3. \[地図を共有または埋め込む] オプションを選択します。
+4. \[地図を埋め込む] オプションを選択します。これは、`<iframe>` コードをいくつか提供します。これをコピーします。
+5. 下の入力ボックスにそれを挿入し、結果が出力にあるかどうかを確認します。
 
 間違えた場合は、\[Reset] ボタンを使用してリセットすることができます。あなたが本当に立ち往生したら、\[Show solution] ボタンを押して回答を見てください。
 
@@ -218,7 +204,7 @@ textarea.onkeyup = function(){
 
 > **Note:** {{interwiki('wikipedia','クリックジャッキング')}}は、ハッカーが目に見えない iframe をあなたの文書に埋め込んだり(あなたの文書を自分の悪意のあるウェブサイトに埋め込んだり)して、ユーザの操作を乗っ取るための一般的な iframe 攻撃の一種です。これは、ユーザを誤解させたり機密データを盗む一般的な方法です。
 
-簡単な例ですが、先ほど紹介した例をブラウザーに読み込んでみましょう。Github に[ライブ](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)が公開されています([ソースコード](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)も参照してください)。実際にページに何も表示されませんが、[ブラウザーの開発者ツール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)のコンソールに、理由を示すメッセージが表示されます。Firefox では、"Load denied by X-Frame-Options: https\://developer.mozilla.org/en-US/docs/Glossary does not permit framing." (X-Frame-Options によって読み込みが拒否されました: https\://developer.mozilla.org/en-US/docs/Glossary はフレーミングを許可していません。)というメッセージが表示されます。これは、MDN を作成した開発者が、`<iframe>` 内に埋め込まれないようにウェブサイトのページを提供する設定をサーバーに組み込んだためです(下記の [CSP ディレクティブの設定](#configure_csp_directives)を参照してください)。これは、理にかなっています — あなたのサイトにそれらを埋め込んであなた自身のものと主張するようなことをしない限り、MDN のページ全体が他のページに埋め込まれるのは本当に意味がありません — または、クリックジャッキングを介してデータを盗み出そうとする。どちらも本当に悪いことです。さらに、誰もがこれをやり始めたら、すべての追加の帯域幅が Mozilla に多額の費用をかけるようになります。
+簡単な例ですが、先ほど紹介した例をブラウザーに読み込んでみましょう。Github に[ライブ](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)が公開されています([ソースコード](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)も参照してください)。実際にページに何も表示されませんが、[ブラウザーの開発者ツール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)のコンソールに、理由を示すメッセージが表示されます。Firefox では、`Load denied by X-Frame-Options: https://developer.mozilla.org/en-US/docs/Glossary does not permit framing.` (X-Frame-Options によって読み込みが拒否されました: "https://developer.mozilla.org/en-US/docs/Glossary" はフレーミングを許可していません。)というメッセージが表示されます。これは、MDN を作成した開発者が、`<iframe>` 内に埋め込まれないようにウェブサイトのページを提供する設定をサーバーに組み込んだためです(下記の [CSP ディレクティブの設定](#configure_csp_directives)を参照してください)。これは、理にかなっています — あなたのサイトにそれらを埋め込んであなた自身のものと主張するようなことをしない限り、MDN のページ全体が他のページに埋め込まれるのは本当に意味がありません — または、クリックジャッキングを介してデータを盗み出そうとする。どちらも本当に悪いことです。さらに、誰もがこれをやり始めたら、すべての追加の帯域幅が Mozilla に多額の費用をかけるようになります。
 
 #### 必要なときにのみ埋め込みます
 
@@ -232,8 +218,8 @@ textarea.onkeyup = function(){
 
 {{Glossary("HTTPS")}} は {{Glossary("HTTP")}} の暗号化されたバージョンです。可能であれば、HTTPS を使用してウェブサイトを提供する必要があります。
 
-1.  HTTPS を使用すると、転送中にリモートコンテンツが改ざんされる可能性が減り、
-2.  HTTPS は、埋め込みコンテンツが親文書内のコンテンツにアクセスすることを防止し、逆も同様です。
+1. HTTPS を使用すると、転送中にリモートコンテンツが改ざんされる可能性が減り、
+2. HTTPS は、埋め込みコンテンツが親文書内のコンテンツにアクセスすることを防止し、逆も同様です。
 
 HTTPS を使用するには、高価なセキュリティ証明書が必要です(ただし、[Let's Encrypt](https://letsencrypt.org/) で簡単にできます) — 入手できない場合は、親文書を HTTP で配信できます。しかし、上記の HTTPS の 2 つ目の利点のため、コストにかかわらず、第三者のコンテンツを HTTP に埋め込むことは絶対にしないでください(最良の場合のシナリオでは、ユーザのウェブブラウザーは恐ろしい警告を表示します)。`<iframe>` を使用してコンテンツを埋め込むことができる評判の良い企業はすべて、HTTPS 経由で利用できるようになります — たとえば、Google マップや YouTube からコンテンツを埋め込む場合は、`<iframe>` の `src` 属性内の URL を調べます。
 

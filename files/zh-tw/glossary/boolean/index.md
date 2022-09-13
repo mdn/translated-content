@@ -36,4 +36,4 @@ for(var i=0; i<4; i++) {
 ### 技術參考
 
 - The JavaScript global object: {{jsxref("Boolean")}}
-- [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
+- [JavaScript data types and data structures](/zh-TW/docs/Web/JavaScript/Data_structures)

@@ -62,6 +62,6 @@ Les éléments suivants peuvent utiliser l'attribut `viewBox`
 - {{ SVGElement("pattern") }}
 - {{ SVGElement("view") }}
 
-## Voir également
+## Voir aussi
 
 - [Introduction au SVG : Positionnement](/fr/SVG/Tutoriel/Positionnement)

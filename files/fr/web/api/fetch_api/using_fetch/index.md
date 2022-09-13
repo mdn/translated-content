@@ -276,13 +276,11 @@ Les Requêtes et Réponses (et par extension la fonction `fetch()`), vont tenter
 
 ## Spécifications
 
-| Spécification                | Statut                   | Commentaire         |
-| ---------------------------- | ------------------------ | ------------------- |
-| {{SpecName('Fetch')}} | {{Spec2('Fetch')}} | Définition initiale |
+{{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.WindowOrWorkerGlobalScope.fetch")}}
+{{Compat}}
 
 ## Voir aussi
 

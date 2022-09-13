@@ -111,7 +111,7 @@ b {
 }
 ```
 
-## **Voir aussi**
+## Voir aussi
 
 - [L'empilement sans z-index](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index) : Règles d'empilement par défaut
 - [Ajouter z-index](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index) : Utiliser z-index pour modifier l'empilement par défaut

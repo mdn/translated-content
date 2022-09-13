@@ -1,19 +1,6 @@
 ---
 title: GlobalEventHandlers.onpointerdown
 slug: Web/API/Element/pointerdown_event
-tags:
-  - API
-  - Document
-  - Element
-  - GlobalEventHandlers
-  - HTML DOM
-  - Pointer Events
-  - Pointer Events API
-  - PointerEvent
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/GlobalEventHandlers/onpointerdown
 original_slug: Web/API/GlobalEventHandlers/onpointerdown
 ---
 {{APIRef("HTML DOM")}}
@@ -139,7 +126,7 @@ CSS は単にターゲットの外観を設定するだけで、その機能に�
 
 ## ブラウザーの互換性
 
-{{Compat("api.GlobalEventHandlers.onpointerdown")}}
+{{Compat}}
 
 ## 関連情報
 

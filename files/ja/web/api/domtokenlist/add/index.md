@@ -1,11 +1,6 @@
 ---
 title: DOMTokenList.add()
 slug: Web/API/DOMTokenList/add
-tags:
-- メソッド
-- リファレンス
-browser-compat: api.DOMTokenList.add
-translation_of: Web/API/DOMTokenList/add
 ---
 {{APIRef("DOM")}}
 

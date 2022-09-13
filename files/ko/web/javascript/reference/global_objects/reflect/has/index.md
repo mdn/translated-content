@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/has
 
 ## 구문
 
-    Reflect.has(target, propertyKey)
+```js
+Reflect.has(target, propertyKey)
+```
 
 ### 매개변수
 

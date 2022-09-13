@@ -1,13 +1,6 @@
 ---
 title: 'Document: DOMContentLoaded イベント'
 slug: Web/API/Document/DOMContentLoaded_event
-tags:
-  - API
-  - DOMContentLoaded
-  - Document
-  - Event
-  - Web
-translation_of: Web/API/Document/DOMContentLoaded_event
 ---
 {{APIRef}}
 
@@ -164,7 +157,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.DOMContentLoaded_event")}}
+{{Compat}}
 
 ## 関連情報
 

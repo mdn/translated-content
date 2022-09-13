@@ -28,15 +28,13 @@ console.time(label);
 - `label`
   - : Nom qui identifiera le nouveau "timer". Il faut utiliser le même nom pour {{ domxref("console.timeEnd()") }} pour arrêter le "timer" et afficher le temps dans la console.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                            | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#time", "console.time()")}} | {{Spec2("Console API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.time")}}
+{{Compat}}
 
 ## Voir aussi
 

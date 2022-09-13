@@ -1,15 +1,6 @@
 ---
 title: Document.hidden
 slug: Web/API/Document/hidden
-tags:
-  - DOM
-  - Document
-  - Page Visibility API
-  - Property
-  - Read-only
-  - Reference
-  - Web
-translation_of: Web/API/Document/hidden
 ---
 {{ ApiRef("DOM") }}
 
@@ -38,4 +29,4 @@ document.addEventListener("visibilitychange", function() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.hidden")}}
+{{Compat}}

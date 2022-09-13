@@ -1,16 +1,6 @@
 ---
 title: Promise.allSettled()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
-tags:
-  - JavaScript
-  - メソッド
-  - プロミス
-  - リファレンス
-  - allSettled
-  - 非同期
-  - ポリフィル
-browser-compat: javascript.builtins.Promise.allSettled
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 ---
 {{JSRef}}
 

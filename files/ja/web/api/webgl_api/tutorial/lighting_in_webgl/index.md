@@ -1,10 +1,6 @@
 ---
 title: WebGL でのライティング
 slug: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
-tags:
-  - Tutorial
-  - WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 ---
 {{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}
 

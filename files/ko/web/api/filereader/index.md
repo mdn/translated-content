@@ -15,7 +15,7 @@ translation_of: Web/API/FileReader
 
 **`FileReader`** 객체는 웹 애플리케이션이 비동기적으로 데이터를 읽기 위하여 읽을 파일을 가리키는{{ domxref("File") }} 혹은 {{ domxref("Blob") }} 객체를 이용해 파일의 내용을(혹은 raw data버퍼로) 읽고 사용자의 컴퓨터에 저장하는 것을 가능하게 해줍니다.
 
-File 객체는 {{ HTMLElement("input") }} 태그를 이용하여 유저가 선택한 파일들의 결과로 반환된 {{ domxref("FileList") }} 객체, 드래그 앤 드랍으로 반환된 [`DataTransfer`](/En/DragDrop/DataTransfer) 객체 혹은 {{ domxref("HTMLCanvasElement") }}의 `mozGetAsFile()` API로 부터 얻습니다.
+File 객체는 {{ HTMLElement("input") }} 태그를 이용하여 유저가 선택한 파일들의 결과로 반환된 {{ domxref("FileList") }} 객체, 드래그 앤 드랍으로 반환된 [`DataTransfer`](/ko/docs/DragDrop/DataTransfer) 객체 혹은 {{ domxref("HTMLCanvasElement") }}의 `mozGetAsFile()` API로 부터 얻습니다.
 
 ## 생성자
 
@@ -60,7 +60,7 @@ See [Using files from web applications](/ko/docs/Using_files_from_web_applicatio
 
 - {{domxref("FileReader.abort()")}}
   - : 읽기 요청을 중단시킵니다. 리턴이 되면 readyState 는 DONE이 됩니다.
-- {{domxref("FileReader.readAsArrayBuffer()")}} {{ gecko_minversion_inline("7.0") }}
+- {{domxref("FileReader.readAsArrayBuffer()")}}
   - : Starts reading the contents of the specified {{ domxref("Blob") }}, once finished, the `result` attribute contains an {{domxref("ArrayBuffer")}} representing the file's data.
 - {{domxref("FileReader.readAsBinaryString()")}}
   - : Starts reading the contents of the specified {{ domxref("Blob") }}, once finished, the `result` attribute contains the raw binary data from the file as a string.

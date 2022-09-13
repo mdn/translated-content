@@ -15,7 +15,9 @@ translation_of: Web/API/Element/removeAttribute
 
 ## 구문
 
-    element.removeAttribute(attrName);
+```js
+element.removeAttribute(attrName);
+```
 
 ### 매개변수
 

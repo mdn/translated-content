@@ -1,14 +1,6 @@
 ---
 title: FormData()
 slug: Web/API/FormData/FormData
-tags:
-  - API
-  - Constructor
-  - FormData
-  - Reference
-  - XHR
-  - XMLHttpRequest
-translation_of: Web/API/FormData/FormData
 ---
 {{APIRef("XMLHttpRequest")}}
 
@@ -24,7 +16,7 @@ var formData = new FormData(form)
 
 ### 引数
 
-- `form `{{optional_inline}}
+- `form` {{optional_inline}}
   - : HTML の {{HTMLElement("form")}} 要素です。これが指定されたとき、{{domxref("FormData")}} オブジェクトは、その各要素の name プロパティをキーに、それらの送信される値を値として使い、フォームの現在のキーと値が設定されます。ファイルからの入力内容は、エンコードもされます。
 
 ## 例
@@ -81,6 +73,6 @@ let formData = new FormData(myForm);
 ## 関連情報
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
-- [Using FormData objects](/ja/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- [Using XMLHttpRequest](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using FormData objects](/ja/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

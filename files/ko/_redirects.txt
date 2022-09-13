@@ -7,8 +7,8 @@
 /ko/docs/AJAX	/ko/docs/Web/Guide/AJAX
 /ko/docs/AJAX/Getting_Started	/ko/docs/Web/Guide/AJAX/Getting_Started
 /ko/docs/AJAX:Getting_Started	/ko/docs/Web/Guide/AJAX/Getting_Started
-/ko/docs/A_Basic_RayCaster	/ko/docs/Web/API/Canvas_API/A_basic_ray-caster
-/ko/docs/A_re-introduction_to_JavaScript	/ko/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+/ko/docs/A_Basic_RayCaster	/ko/docs/orphaned/Web/API/Canvas_API/A_basic_ray-caster
+/ko/docs/A_re-introduction_to_JavaScript	/ko/docs/Web/JavaScript/Language_Overview
 /ko/docs/About_JavaScript	/ko/docs/Web/JavaScript/About_JavaScript
 /ko/docs/About_the_Document_Object_Model	/ko/docs/Web/API/Document_Object_Model
 /ko/docs/Accessibility	/ko/docs/Web/Accessibility
@@ -196,12 +196,15 @@
 /ko/docs/Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Track_the_score_and_win	/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 /ko/docs/Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/공_움직이기	/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 /ko/docs/Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/캔버스_생성과_그리기	/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
+/ko/docs/Glossary/Bootstrap	/ko/docs/orphaned/Glossary/Bootstrap
 /ko/docs/Glossary/Client_hints	/ko/docs/Web/HTTP/Client_hints
+/ko/docs/Glossary/Dynamic_programming_language	/ko/docs/orphaned/Glossary/Dynamic_programming_language
 /ko/docs/Glossary/Header	/ko/docs/Glossary/HTTP_header
 /ko/docs/Glossary/Index	/ko/docs/Glossary
 /ko/docs/Glossary/Symbol	/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /ko/docs/Glossary/Transmission_Control_Protocol_(TCP)	/ko/docs/Glossary/TCP
-/ko/docs/Glossary/동적_프로그래밍_언어	/ko/docs/Glossary/Dynamic_programming_language
+/ko/docs/Glossary/jQuery	/ko/docs/orphaned/Glossary/jQuery
+/ko/docs/Glossary/동적_프로그래밍_언어	/ko/docs/orphaned/Glossary/Dynamic_programming_language
 /ko/docs/Glossary/배열	/ko/docs/Glossary/array
 /ko/docs/Glossary/불린	/ko/docs/Glossary/Boolean
 /ko/docs/Glossary/브라우저-컨텍스트	/ko/docs/Glossary/Browsing_context
@@ -407,7 +410,7 @@
 /ko/docs/SVG/Tutorial	/ko/docs/Web/SVG/Tutorial
 /ko/docs/SVG:Tutorial	/ko/docs/Web/SVG/Tutorial
 /ko/docs/SVG_In_HTML_Introduction	/ko/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction
-/ko/docs/SVG_in_Firefox	/ko/docs/Web/SVG/SVG_1.1_Support_in_Firefox
+/ko/docs/SVG_in_Firefox	/ko/docs/orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
 /ko/docs/The_Importance_of_Correct_HTML_Commenting	/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started#HTML_comments
 /ko/docs/The_XSLT_JavaScript_Interface_in_Gecko	/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko
 /ko/docs/The_XSLT_JavaScript_Interface_in_Gecko/Introduction	/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Introduction
@@ -446,11 +449,17 @@
 /ko/docs/Web/API/AudioWorkletNode/onprocessorerror	/ko/docs/Web/API/AudioWorkletNode/processorerror_event
 /ko/docs/Web/API/Boolean	/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ko/docs/Web/API/CSSOMString	/ko/docs/Web/JavaScript/Reference/Global_Objects/String
+/ko/docs/Web/API/Canvas_API/A_basic_ray-caster	/ko/docs/orphaned/Web/API/Canvas_API/A_basic_ray-caster
+/ko/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility	/ko/docs/orphaned/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
 /ko/docs/Web/API/Canvas_API/캔버스_튜토리얼	/ko/docs/Web/API/Canvas_API/Tutorial
+/ko/docs/Web/API/DOMObject	/ko/docs/orphaned/Web/API/DOMObject
 /ko/docs/Web/API/DOMString	/ko/docs/Web/JavaScript/Reference/Global_Objects/String
 /ko/docs/Web/API/Document/defaultView/popstate_event	/ko/docs/Web/API/Window/popstate_event
 /ko/docs/Web/API/Document/defaultView/resize_event	/ko/docs/Web/API/Window/resize_event
-/ko/docs/Web/API/Document/drag_이벤트	/ko/docs/Web/API/Document/drag_event
+/ko/docs/Web/API/Document/drag_event	/ko/docs/Web/API/HTMLElement/drag_event
+/ko/docs/Web/API/Document/drag_이벤트	/ko/docs/Web/API/HTMLElement/drag_event
+/ko/docs/Web/API/Document/dragend_event	/ko/docs/Web/API/HTMLElement/dragend_event
+/ko/docs/Web/API/Document/dragstart_event	/ko/docs/Web/API/HTMLElement/dragstart_event
 /ko/docs/Web/API/Document/keydown_event	/ko/docs/Web/API/Element/keydown_event
 /ko/docs/Web/API/Document/keyup_event	/ko/docs/Web/API/Element/keyup_event
 /ko/docs/Web/API/DocumentOrShadowRoot/activeElement	/ko/docs/Web/API/Document/activeElement
@@ -471,6 +480,7 @@
 /ko/docs/Web/API/File/Using_files_from_web_applications	/ko/docs/Web/API/File_API/Using_files_from_web_applications
 /ko/docs/Web/API/File/size	/ko/docs/Web/API/Blob/size
 /ko/docs/Web/API/FileReader.result	/ko/docs/Web/API/FileReader/result
+/ko/docs/Web/API/GlobalEventHandlers	/ko/docs/orphaned/Web/API/GlobalEventHandlers
 /ko/docs/Web/API/GlobalEventHandlers/onchange	/ko/docs/Web/API/HTMLElement/change_event
 /ko/docs/Web/API/GlobalEventHandlers/onclick	/ko/docs/conflicting/Web/API/Element/click_event
 /ko/docs/Web/API/GlobalEventHandlers/oncontextmenu	/ko/docs/Web/API/Element/contextmenu_event
@@ -533,6 +543,7 @@
 /ko/docs/Web/API/WebGL_API/Using_textures_in_WebGL	/ko/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 /ko/docs/Web/API/Web_Workers_API/basic_usage	/ko/docs/Web/API/Web_Workers_API/Using_web_workers
 /ko/docs/Web/API/Window/crypto	/ko/docs/Web/API/crypto_property
+/ko/docs/Web/API/WindowEventHandlers	/ko/docs/orphaned/Web/API/WindowEventHandlers
 /ko/docs/Web/API/WindowEventHandlers/onhashchange	/ko/docs/Web/API/Window/hashchange_event
 /ko/docs/Web/API/WindowEventHandlers/onpopstate	/ko/docs/Web/API/Window/popstate_event
 /ko/docs/Web/API/WindowEventHandlers/onstorage	/ko/docs/Web/API/Window/storage_event
@@ -547,6 +558,7 @@
 /ko/docs/Web/API/window.screen.onorientationchange	/ko/docs/Web/API/Screen/orientationchange_event
 /ko/docs/Web/API/window.screen.orientation	/ko/docs/Web/API/Screen/orientation
 /ko/docs/Web/API/window.screen.unlockOrientation	/ko/docs/Web/API/Screen/unlockOrientation
+/ko/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute	/ko/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
 /ko/docs/Web/CSS/All_About_The_Containing_Block	/ko/docs/Web/CSS/Containing_block
 /ko/docs/Web/CSS/CSS_Background_and_Borders	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders
 /ko/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
@@ -619,7 +631,7 @@
 /ko/docs/Web/Events/canplay	/ko/docs/Web/API/HTMLMediaElement/canplay_event
 /ko/docs/Web/Events/canplaythrough	/ko/docs/Web/API/HTMLMediaElement/canplaythrough_event
 /ko/docs/Web/Events/click	/ko/docs/Web/API/Element/click_event
-/ko/docs/Web/Events/dragstart	/ko/docs/Web/API/Document/dragstart_event
+/ko/docs/Web/Events/dragstart	/ko/docs/Web/API/HTMLElement/dragstart_event
 /ko/docs/Web/Events/keydown	/ko/docs/Web/API/Element/keydown_event
 /ko/docs/Web/Events/load	/ko/docs/Web/API/Window/load_event
 /ko/docs/Web/Events/message	/ko/docs/Web/API/BroadcastChannel/message_event
@@ -658,7 +670,7 @@
 /ko/docs/Web/HTML/Canvas/Tutorial/Compositing/Example	/ko/docs/Web/API/Canvas_API/Tutorial/Compositing/Example
 /ko/docs/Web/HTML/Canvas/Tutorial/Drawing_shapes	/ko/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /ko/docs/Web/HTML/Canvas/Tutorial/Finale	/ko/docs/Web/API/Canvas_API/Tutorial/Finale
-/ko/docs/Web/HTML/Canvas/Tutorial/Hit_regions_and_accessibility	/ko/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
+/ko/docs/Web/HTML/Canvas/Tutorial/Hit_regions_and_accessibility	/ko/docs/orphaned/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
 /ko/docs/Web/HTML/Canvas/Tutorial/Optimizing_canvas	/ko/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
 /ko/docs/Web/HTML/Canvas/Tutorial/Using_images	/ko/docs/Web/API/Canvas_API/Tutorial/Using_images
 /ko/docs/Web/HTML/Canvas/Tutorial/변형	/ko/docs/Web/API/Canvas_API/Tutorial/Transformations
@@ -685,6 +697,7 @@
 /ko/docs/Web/HTTP/Index	/ko/docs/Web/HTTP
 /ko/docs/Web/HTTP/User_agent를_이용한_브라우저_감지	/ko/docs/Web/HTTP/Browser_detection_using_the_user_agent
 /ko/docs/Web/HTTP/상태_코드	/ko/docs/Web/HTTP/Status
+/ko/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/ko/docs/Web/JavaScript/Language_Overview
 /ko/docs/Web/JavaScript/About	/ko/docs/Web/JavaScript/About_JavaScript
 /ko/docs/Web/JavaScript/Guide/About	/ko/docs/Web/JavaScript/Guide/Introduction
 /ko/docs/Web/JavaScript/Guide/Closures	/ko/docs/Web/JavaScript/Closures
@@ -731,8 +744,9 @@
 /ko/docs/Web/JavaScript/Reference/Operators/연산자_우선순위	/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
 /ko/docs/Web/JavaScript/Reference/Properties_Index	/ko/docs/Web/JavaScript/Reference
 /ko/docs/Web/JavaScript/Reference/Reserved_Words	/ko/docs/Web/JavaScript/Reference/Lexical_grammar#키워드
+/ko/docs/Web/JavaScript/Shells	/ko/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
 /ko/docs/Web/JavaScript/Tutorials	/ko/docs/Web/JavaScript
-/ko/docs/Web/JavaScript/쉘	/ko/docs/Web/JavaScript/Shells
+/ko/docs/Web/JavaScript/쉘	/ko/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
 /ko/docs/Web/JavaScript/언어_리소스	/ko/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /ko/docs/Web/Media/Formats/비디오코덱	/ko/docs/Web/Media/Formats/Video_codecs
 /ko/docs/Web/Media/Formats/컨테이너	/ko/docs/Web/Media/Formats/Containers
@@ -757,6 +771,7 @@
 /ko/docs/Web/Reference/Events/touchcancel	/ko/docs/Web/API/Element/touchcancel_event
 /ko/docs/Web/Reference/Events/visibilitychange	/ko/docs/Web/API/Document/visibilitychange_event
 /ko/docs/Web/SVG/Element/사각형	/ko/docs/Web/SVG/Element/rect
+/ko/docs/Web/SVG/SVG_1.1_Support_in_Firefox	/ko/docs/orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
 /ko/docs/Web/SVG/Tutorial/기본_도형	/ko/docs/Web/SVG/Tutorial/Basic_Shapes
 /ko/docs/Web/SVG/Tutorial/시작하기	/ko/docs/Web/SVG/Tutorial/Getting_Started
 /ko/docs/Web/SVG/Tutorial/위치	/ko/docs/Web/SVG/Tutorial/Positions

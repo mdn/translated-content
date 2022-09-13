@@ -18,7 +18,7 @@ Si l'axe principal est `column` ou `column-reverse`, l'axe transversal est donc 
 
 L'alignement des articles sur l'axe transversal est réalisé avec la propriété `align-items` sur le conteneur flexible ou la propriété `align-self` sur les éléments individuels. Dans le cas d'un conteneur flexible multi-lignes, avec un espace supplémentaire sur l'axe transversal, vous pouvez utiliser `align-content` pour contrôler l'espacement des lignes.
 
-## En apprendre plus
+## Voir aussi
 
 ### Références de la propriété
 

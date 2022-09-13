@@ -21,7 +21,7 @@ self.clients.get(id).then(function(client) {
 
 ### 返回
 
-一个 resolve 为 {{domxref("Client")}} 对象的 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+一个 resolve 为 {{domxref("Client")}} 对象的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## 示例
 

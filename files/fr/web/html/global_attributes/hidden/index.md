@@ -25,15 +25,11 @@ Par exemple, on peut utiliser l'attribut ARIA `aria-describedby` pour faire réf
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires                                                                        |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "interaction.html#the-hidden-attribute", "hidden")}} | {{Spec2('HTML WHATWG')}} | Aucune modification depuis {{SpecName('HTML5.1')}}                         |
-| {{SpecName('HTML WHATWG', "rendering.html#hiddenCSS", "Hidden elements")}}     | {{Spec2('HTML WHATWG')}} | Définit le rendu par défaut suggéré en CSS lorsque l'attribut `hidden` est utilisé. |
-| {{SpecName('HTML5.1', "editing.html#the-hidden-attribute", "hidden")}}             | {{Spec2('HTML5.1')}}     | Dérivée de {{SpecName('HTML WHATWG')}}. La définition initiale.            |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.hidden")}}
+{{Compat}}
 
 ## Voir aussi
 

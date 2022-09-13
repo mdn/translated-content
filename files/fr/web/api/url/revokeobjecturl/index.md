@@ -28,15 +28,13 @@ window.URL.revokeObjectURL(objectURL);
 
 Voir [Utilisation de l’objet URLs pour afficher des images](/fr/docs/Web/API/File/Using_files_from_web_applications#Exemple_Utilisation_de_l'objet_URLs_pour_afficher_des_images).
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                | Statut                       | Commentaire         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('File API', '#dfn-revokeObjectURL', 'revokeObjectURL()')}} | {{Spec2('File API')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.URL.revokeObjectURL")}}
+{{Compat}}
 
 ## Voir aussi
 

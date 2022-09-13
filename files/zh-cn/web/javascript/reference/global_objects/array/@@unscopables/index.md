@@ -6,12 +6,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 
 Symbol 属性 **`@@unscopable`** 包含了所有 ES2015 (ES6) 中新定义的、且并未被更早的 ECMAScript 标准收纳的属性名。这些属性被排除在由 [`with`](/zh-CN/docs/Web/JavaScript/Reference/Statements/with) 语句绑定的环境中。
 
-## 语法
-
-```js
-arr[Symbol.unscopables]
-```
-
 ## 描述
 
 `with` 绑定中未包含的数组默认属性有：

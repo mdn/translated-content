@@ -9,7 +9,7 @@ HTML `autocomplete` 属性可用于以文本或数字值作为输入的 {{HTMLEl
 
 建议值的来源通常取决于浏览器。 通常，值来自用户输入的过去值，但它们也可能来自预先配置的值。 例如，浏览器可能允许用户保存其姓名，地址，电话号码和电子邮件地址，以实现自动完成目的。 也许浏览器提供了保存加密的信用卡信息的功能，以便在身份验证过程后自动完成。
 
-如果 {{HTMLElement("input")}}, {{HTMLElement("select")}} 或{{HTMLElement("textarea")}} 元素 没有 `autocomplete` 属性，t 则该浏览器将使用该元素的表单的 `autocomplete` 属性所有者，它们可是元素的后代 {{HTMLElement("form")}} 元素 也可以是其 `id` 由元素{{htmlattrxref("form", "input")}} 属性指定的 `<form>`。
+如果 {{HTMLElement("input")}}, {{HTMLElement("select")}} 或{{HTMLElement("textarea")}} 元素 没有 `autocomplete` 属性，则该浏览器将使用该元素的表单的 `autocomplete` 属性所有者，它们可是元素的后代 {{HTMLElement("form")}} 元素 也可以是其 `id` 由元素{{htmlattrxref("form", "input")}} 属性指定的 `<form>`。
 
 有关更多信息，请参见 {{HTMLElement("form")}} 中的{{htmlattrxref("autocomplete", "form")}} 属性。
 

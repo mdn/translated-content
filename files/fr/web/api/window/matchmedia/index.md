@@ -31,13 +31,11 @@ Voir [Utiliser les media queries avec du code](/fr/docs/DOM/Using_media_queries_
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName("CSSOM View", "#dom-window-matchmedia", "Window.matchMedia()")}} | {{Spec2("CSSOM View")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.matchMedia")}}
+{{Compat}}
 
 ## Voir aussi
 

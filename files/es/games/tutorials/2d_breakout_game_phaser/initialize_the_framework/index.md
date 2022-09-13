@@ -41,10 +41,10 @@ La estructura del elemento HTML es bastante simple, ya que el juego va ser rende
 
 A continuación, necesitamos pasar por el proceso de descargar el código fuente de Phaser y aplicarlo a nuestro documento HTML.
 
-1.  Ir a la página de descarga del [Phaser download page](http://phaser.io/download/stable).
-2.  Elegir la opción que mas le convenga — Recomendaría la opción _min.js_ ya que mantiene el codigo más pequeño, y es poco probable que tenga que pasar por el código fuente de todos modos.
-3.  Guarde el código Phaser dentro de un directorio`/js` en la misma ubicación que su archivo `index.html`.
-4.  Actualice el valor `src` del primer elemento {{htmlelement("script")}} como se muestra arriba.
+1. Ir a la página de descarga del [Phaser download page](http://phaser.io/download/stable).
+2. Elegir la opción que mas le convenga — Recomendaría la opción _min.js_ ya que mantiene el codigo más pequeño, y es poco probable que tenga que pasar por el código fuente de todos modos.
+3. Guarde el código Phaser dentro de un directorio`/js` en la misma ubicación que su archivo `index.html`.
+4. Actualice el valor `src` del primer elemento {{htmlelement("script")}} como se muestra arriba.
 
 ## Caminando a través de lo que tenemos hasta ahora
 
@@ -69,6 +69,6 @@ Aquí está el código fuente completo de la primera lección, ejecutándose en 
 
 ## Pasos siguientes
 
-Ahora hemos configurado el HTML básico y aprendido un poco sobre la inicialización de Phaser, continuemos con la segunda lección y aprendamos sobre [scaling](https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Scaling).
+Ahora hemos configurado el HTML básico y aprendido un poco sobre la inicialización de Phaser, continuemos con la segunda lección y aprendamos sobre [scaling](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Scaling).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser", "Games/Workflows/2D_Breakout_game_Phaser/Scaling")}}

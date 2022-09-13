@@ -1,13 +1,7 @@
 ---
 title: lang
 slug: conflicting/Web/Manifest_7ec32c6987e59d5f1cb08f8c9d900a4c
-tags:
-  - マニフェスト
-  - ウェブ
-  - lang
-translation_of: Web/Manifest/lang
 original_slug: Web/Manifest/lang
-browser-compat: html.manifest.lang
 ---
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 

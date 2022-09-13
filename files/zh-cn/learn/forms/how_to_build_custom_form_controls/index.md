@@ -5,7 +5,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
 
-在许多情况下，[可用的 HTML 表单小组件](/en-US/docs/HTML/Forms/The_native_form_widgets)_是不够的_。如果要在某些小部件（例如 {{HTMLElement("select")}}元素）上执行[高级样式](/en-US/docs/Advanced_styling_for_HTML_forms)，或者如果要提供自定义表现，则别无选择，只能构建自己的小部件。
+在许多情况下，[可用的 HTML 表单小组件](/zh-CN/docs/HTML/Forms/The_native_form_widgets)_是不够的_。如果要在某些小部件（例如 {{HTMLElement("select")}}元素）上执行[高级样式](/zh-CN/docs/Advanced_styling_for_HTML_forms)，或者如果要提供自定义表现，则别无选择，只能构建自己的小部件。
 
 在本文中，我们会看到如何构建这样的组件。为此，我们将使用这样一个例子：重建 {{HTMLElement("select")}}元素。
 
@@ -416,10 +416,10 @@ window.addEventListener("load", function () {
 
 1. {{domxref("element.classList","classList")}}
 2. {{domxref("EventTarget.addEventListener","addEventListener")}}
-3. [`forEach`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach) (这不是 DOM 而是现代 JavaScript )
+3. [`forEach`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Array/forEach) (这不是 DOM 而是现代 JavaScript )
 4. {{domxref("element.querySelector","querySelector")}} 和 {{domxref("element.querySelectorAll","querySelectorAll")}}
 
-除了那些特定特性的的可用性以外，在开始之前，仍然存在一个问题。由函数{{domxref("element.querySelectorAll","querySelectorAll()")}} 返回的对象是一个{{domxref("NodeList")}} 而不是 [`Array`](/en-US/docs/JavaScript/Reference/Global_Objects/Array)。这一点非常重要，因为 `Array` 对象支持 [`forEach`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach) 函数，但是 {{domxref("NodeList")}} 不支持。由于 {{domxref("NodeList")}} 看起来实在是像一个 `Array` 并且因为 `forEach` 是这样的便于使用。我们可以轻易地添加对 {{domxref("NodeList")}}的支持，使我们的生活更轻松一些，像这样：
+除了那些特定特性的的可用性以外，在开始之前，仍然存在一个问题。由函数{{domxref("element.querySelectorAll","querySelectorAll()")}} 返回的对象是一个{{domxref("NodeList")}} 而不是 [`Array`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Array)。这一点非常重要，因为 `Array` 对象支持 [`forEach`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Array/forEach) 函数，但是 {{domxref("NodeList")}} 不支持。由于 {{domxref("NodeList")}} 看起来实在是像一个 `Array` 并且因为 `forEach` 是这样的便于使用。我们可以轻易地添加对 {{domxref("NodeList")}}的支持，使我们的生活更轻松一些，像这样：
 
 ```js
 NodeList.prototype.forEach = function (callback) {
@@ -668,7 +668,7 @@ window.addEventListener('load', function () {
 });
 ```
 
-在上面的代码里，值得注意的是 [`tabIndex`](/en-US/docs/Web/API/HTMLElement/tabIndex) 属性的使用。使用这个属性是很有必要的，这可以确保原生组件将永远不会获得焦点，而且还可以确保当用户用户使用键盘和鼠标时，我们的自定义组件能够获得焦点。
+在上面的代码里，值得注意的是 [`tabIndex`](/zh-CN/docs/Web/API/HTMLElement/tabIndex) 属性的使用。使用这个属性是很有必要的，这可以确保原生组件将永远不会获得焦点，而且还可以确保当用户用户使用键盘和鼠标时，我们的自定义组件能够获得焦点。
 
 做完上面这些后，我们就完成了！下面是结果：
 
@@ -701,15 +701,15 @@ window.addEventListener('load', function () {
 
 我们构建了一个能够生效的东西，尽管这离一个特性齐全的选择框还差得远，但是它效果不错。但是我们已经完成的事情只不过是摆弄 DOM。这个组件并没有真正的语义，即使它看起来像一个选择框，但是从浏览器的角度来看并不是，所以辅助技术并不能明白这是一个选择框。简单来说，这个全新的选择框并不具备无障碍！
 
-幸运的是，有一种解决方案叫做 [ARIA](/en-US/docs/Accessibility/ARIA)。ARIA 代表"无障碍富互联网应用"。这是一个专为我们现在做的事情设计的 [W3C 规范](http://www.w3.org/TR/wai-aria/)：使网络应用和自定义组件易于访问，它本质上是一组用来拓展 HTML 的属性集，以便我们能够更好的描述角色，状态和属性，就像我们刚才设计的元素是是它试图传递的原生元素一样。使用这些属性非常简单，所以让我们来试试看。
+幸运的是，有一种解决方案叫做 [ARIA](/zh-CN/docs/Accessibility/ARIA)。ARIA 代表"无障碍富互联网应用"。这是一个专为我们现在做的事情设计的 [W3C 规范](http://www.w3.org/TR/wai-aria/)：使网络应用和自定义组件易于访问，它本质上是一组用来拓展 HTML 的属性集，以便我们能够更好的描述角色，状态和属性，就像我们刚才设计的元素是是它试图传递的原生元素一样。使用这些属性非常简单，所以让我们来试试看。
 
 ### `role` 属性
 
-[ARIA](/en-US/docs/Accessibility/ARIA) 使用的关键属性是 [`role`](/en-US/docs/Accessibility/ARIA/ARIA_Techniques) 属性。[`role`](/en-US/docs/Accessibility/ARIA/ARIA_Techniques) 属性接受一个值，该值定义了一个元素的用途。每一个 role 定义了它自己的需求和行为。在我们的例子中，我们会使用 [`listbox`](/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role) 这一 role。这是一个 "合成角色"，表示具有该 role 的元素应该有子元素，每个子元素都有特定的角色。（在这个案例中，至少有一个具有`option` 角色的子元素）。
+[ARIA](/zh-CN/docs/Accessibility/ARIA) 使用的关键属性是 [`role`](/zh-CN/docs/Accessibility/ARIA/ARIA_Techniques) 属性。[`role`](/zh-CN/docs/Accessibility/ARIA/ARIA_Techniques) 属性接受一个值，该值定义了一个元素的用途。每一个 role 定义了它自己的需求和行为。在我们的例子中，我们会使用 [`listbox`](/zh-CN/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role) 这一 role。这是一个 "合成角色"，表示具有该 role 的元素应该有子元素，每个子元素都有特定的角色。（在这个案例中，至少有一个具有`option` 角色的子元素）。
 
 同样值得注意的是，ARIA 定义了默认应用于标准 HTML 标记的角色。例如，{{HTMLElement("table")}} 元素与角色 `grid` 相匹配，而 {{HTMLElement("ul")}} 元素与角色 `list` 相匹配。由于我们使用了一个 {{HTMLElement("ul")}} 元素，我们想要确保我们组件的 `listbox` 角色能替代 {{HTMLElement("ul")}} 元素的`list` 角色。为此，我们会使用角色 `presentation`。这个角色被设计成让我们来表示一个元素没有特殊的含义，并且仅仅用于提供信息。我们会将其应用到{{HTMLElement("ul")}} 元素上。
 
-为了支持 [`listbox`](/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role) 角色，我们只需要将我们 HTML 改成这样：
+为了支持 [`listbox`](/zh-CN/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role) 角色，我们只需要将我们 HTML 改成这样：
 
 ```html
 <!-- 我们把 role="listbox" 属性添加到我们的顶部元素 -->
@@ -727,11 +727,11 @@ window.addEventListener('load', function () {
 </div>
 ```
 
-> **备注：** 只有当你想要为不支持 [CSS 属性选择器的](/en-US/docs/CSS/Attribute_selectors)旧浏览器提供支持时，才有必要同时包含 `role` 属性和一个`class` 属性。
+> **备注：** 只有当你想要为不支持 [CSS 属性选择器的](/zh-CN/docs/CSS/Attribute_selectors)旧浏览器提供支持时，才有必要同时包含 `role` 属性和一个`class` 属性。
 
 ### `aria-selected` 属性
 
-仅仅使用 [`role`](/en-US/docs/Accessibility/ARIA/ARIA_Techniques) 属性是不够的。 [ARIA](/en-US/docs/Accessibility/ARIA) 还提供了许多状态和属性的内部特征。你能更好更充分的利用它们，你的组件就会能够被辅助技术更好的理解。在我们的例子中，我们会把使用限制在一个属性上：`aria-selected`。
+仅仅使用 [`role`](/zh-CN/docs/Accessibility/ARIA/ARIA_Techniques) 属性是不够的。 [ARIA](/zh-CN/docs/Accessibility/ARIA) 还提供了许多状态和属性的内部特征。你能更好更充分的利用它们，你的组件就会能够被辅助技术更好的理解。在我们的例子中，我们会把使用限制在一个属性上：`aria-selected`。
 
 `aria-selected` 属性被用来标记当前被选中的选项；这可以让辅助技术告知用户当前的选项是什么。我们会通过 JavaScript 动态地使用该属性，每当用户选择一个选项时标记选中的选项。为了达到这一目的，我们需要修正我们的 `updateValue()` 函数：
 
@@ -797,14 +797,14 @@ function updateValue(select, index) {
 
 ## 在本单元中
 
-- [Your first HTML form](/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [How to structure an HTML form](/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [The native form widgets](/en-US/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Sending form data](/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/en-US/docs/Learn/HTML/Forms/Form_validation)
-- [How to build custom form widgets](/en-US/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Sending forms through JavaScript](/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [HTML forms in legacy browsers](/en-US/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Advanced styling for HTML forms](/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Property compatibility table for form widgets](/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+- [Your first HTML form](/zh-CN/docs/Learn/HTML/Forms/Your_first_HTML_form)
+- [How to structure an HTML form](/zh-CN/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
+- [The native form widgets](/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets)
+- [Sending form data](/zh-CN/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
+- [Form data validation](/zh-CN/docs/Learn/HTML/Forms/Form_validation)
+- [How to build custom form widgets](/zh-CN/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
+- [Sending forms through JavaScript](/zh-CN/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
+- [HTML forms in legacy browsers](/zh-CN/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
+- [Styling HTML forms](/zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms)
+- [Advanced styling for HTML forms](/zh-CN/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
+- [Property compatibility table for form widgets](/zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

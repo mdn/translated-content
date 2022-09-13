@@ -13,7 +13,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 
 ## Syntax
 
-    Object.entries(obj)
+```js
+Object.entries(obj)
+```
 
 ### Parameters
 

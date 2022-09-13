@@ -1,15 +1,6 @@
 ---
 title: 'Feature-Policy: display-capture'
 slug: Web/HTTP/Headers/Feature-Policy/display-capture
-tags:
-  - ディレクティブ
-  - 機能ポリシー
-  - HTTP
-  - リファレンス
-  - display-capture
-  - 実験的
-browser-compat: http.headers.Feature-Policy.display-capture
-translation_of: Web/HTTP/Headers/Feature-Policy/display-capture
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 

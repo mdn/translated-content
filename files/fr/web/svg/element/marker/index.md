@@ -93,15 +93,11 @@ html,body,svg { height:100% }
 
 ## Spécifications
 
-| Sp"cification                                                                                    | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("SVG Markers", "#MarkerElement", "&lt;marker&gt;")}}             | {{Spec2("SVG Markers")}} |                     |
-| {{SpecName("SVG2", "painting.html#MarkerElement", "&lt;marker&gt;")}}     | {{Spec2("SVG2")}}         |                     |
-| {{SpecName("SVG1.1", "painting.html#MarkerElement", "&lt;marker&gt;")}} | {{Spec2("SVG1.1")}}         | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.marker")}}
+{{Compat}}
 
 ## Voir aussi
 

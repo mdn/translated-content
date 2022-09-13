@@ -1,12 +1,6 @@
 ---
 title: FileReader()
 slug: Web/API/FileReader/FileReader
-tags:
-  - API
-  - Constructor
-  - FileReader
-  - Reference
-translation_of: Web/API/FileReader/FileReader
 ---
 **`FileReader()`** コンストラクタは、新しい FileReader を作成します。
 

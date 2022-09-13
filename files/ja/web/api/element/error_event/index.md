@@ -1,22 +1,6 @@
 ---
 title: 'Element: error イベント'
 slug: Web/API/Element/error_event
-tags:
-  - Audio
-  - DOM
-  - Error Handling
-  - Errors
-  - Event
-  - Media
-  - Reference
-  - UI
-  - UI Events
-  - UIEvent
-  - Video
-  - Web
-  - events
-  - イベント
-translation_of: Web/API/Element/error_event
 ---
 {{APIRef}}
 
@@ -130,7 +114,7 @@ imgError.addEventListener('click', () => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.HTMLMediaElement.error_event")}}
+{{Compat}}
 
 ## 関連情報
 

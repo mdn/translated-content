@@ -15,7 +15,9 @@ translation_of: Web/API/Document/Document
 
 ## 구문
 
-    new Document()
+```js
+new Document()
+```
 
 ## 명세
 

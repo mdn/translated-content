@@ -1,15 +1,6 @@
 ---
 title: Document.getElementsByTagNameNS()
 slug: Web/API/Document/getElementsByTagNameNS
-tags:
-  - API
-  - DOM
-  - Method
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Reference
-  - getElementsByTagNameNS
-translation_of: Web/API/Document/getElementsByTagNameNS
 ---
 {{APIRef("DOM")}}
 
@@ -141,7 +132,7 @@ function getElementsByTagNameNSWrapper (ns, elName, doc, context) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.getElementsByTagNameNS")}}
+{{Compat}}
 
 ## 関連情報
 

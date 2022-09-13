@@ -1,7 +1,6 @@
 ---
 title: vrdisplaydisconnected
 slug: Web/API/Window/vrdisplaydisconnect_event
-translation_of: Web/API/Window/vrdisplaydisconnect_event
 ---
 {{APIRef}}{{SeeCompatTable}}
 

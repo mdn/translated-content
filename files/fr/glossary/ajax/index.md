@@ -1,15 +1,6 @@
 ---
 title: AJAX
 slug: Glossary/AJAX
-tags:
-  - AJAX
-  - CodingScripting
-  - Encodage
-  - Glossaire
-  - Infrastructure
-  - l10n:priority
-translation_of: Glossary/AJAX
-original_slug: Glossaire/AJAX
 ---
 Le {{Glossary("JavaScript")}} et {{Glossary("XML")}} asynchrone (AJAX) est une pratique de programmation qui consiste à construire des pages web plus complexes et plus dynamiques en utilisant une technologie connue sous le nom de {{Glossary("XHR_(XMLHttpRequest)", "XMLHttpRequest")}}.
 
@@ -19,13 +10,13 @@ Avec les sites web interactifs et les standards modernes du web, AJAX est progre
 
 ## Voir aussi
 
+- [AJAX](https://fr.wikipedia.org/wiki/Ajax_(informatique)) sur Wikipédia
+- [AJAX](/fr/docs/Web/Guide/AJAX)
+- [AJAX - Premiers pas](/fr/docs/Web/Guide/AJAX/Premiers_pas)
 - [Glossaire du MND](/fr/docs/Glossaire):
 
   - {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}
 
-- [AJAX](https://fr.wikipedia.org/wiki/Ajax_(informatique)) sur Wikipédia
-- [AJAX](/fr/docs/Web/Guide/AJAX)
-- [AJAX - Premiers pas](/fr/docs/Web/Guide/AJAX/Premiers_pas)
 - {{DOMxRef("XMLHttpRequest")}}
 - {{DOMxRef("Fetch API")}}
 - [Utilisation de l'API Fetch](/fr/docs/Web/API/Fetch_API/Using_Fetch)

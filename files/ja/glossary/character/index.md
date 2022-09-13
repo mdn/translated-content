@@ -1,14 +1,6 @@
 ---
 title: Character (文字)
 slug: Glossary/Character
-tags:
-  - CodingScripting
-  - Glossary
-  - strings
-  - コーディングスクリプト
-  - 文字列
-  - 用語集
-translation_of: Glossary/Character
 ---
 文字は、記号（文字、数字、句読点）または、表示されない制御文字（例えば、キャリッジリターンやソフトハイフン）のどちらかです。 {{glossary("UTF-8")}} は最も一般的な文字セットであり、最もポピュラーな自然言語の書記素を含みます。
 

@@ -1,14 +1,6 @@
 ---
 title: Firefox ユーザーエージェント文字列リファレンス
 slug: Web/HTTP/Headers/User-Agent/Firefox
-tags:
-  - Compatibility
-  - Firefox
-  - Firefox 4
-  - Gecko
-  - Gecko 2.0
-  - Guide
-translation_of: Web/HTTP/Headers/User-Agent/Firefox
 ---
 {{HTTPSidebar}}
 

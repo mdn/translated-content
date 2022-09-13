@@ -11,7 +11,7 @@ Un **PRNG** (_pseudorandom number generator_, ou générateur de nombres pseudo-
 
 En fonction de la qualité de l'algorithme et de l'entropie de l'ensemencement, les PRNG diffèrent en degré de sécurité et donc dans leurs applications.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

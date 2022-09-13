@@ -4,7 +4,7 @@ slug: Web/HTML/Element/Input/search
 ---
 {{HTMLRef}}
 
-`{{HTMLElement("input")}}` 元素的 **`search`** 类型是 专为用户输入搜索查询而设计的文本字段。功能上与 [`text`](/en-US/docs/Web/HTML/Element/input/text) 输入相同，但是可以通过 `{{Glossary("user agent")}}` 进行不同样式的设置。
+`{{HTMLElement("input")}}` 元素的 **`search`** 类型是 专为用户输入搜索查询而设计的文本字段。功能上与 [`text`](/zh-CN/docs/Web/HTML/Element/input/text) 输入相同，但是可以通过 `{{Glossary("user agent")}}` 进行不同样式的设置。
 
 {{EmbedInteractiveExample("pages/tabbed/input-search.html", "tabbed-standard")}}
 
@@ -389,5 +389,5 @@ input:valid ~ span:after {
 
 - [HTML 表单](/zh-CN/docs/Learn/HTML/Forms)
 - {{HTMLElement("input")}} 及其所基于的接口 {{domxref("HTMLInputElement")}}
-- [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text)
+- [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text)
 - [CSS 属性的兼容性](/zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

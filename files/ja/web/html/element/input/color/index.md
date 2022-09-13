@@ -1,16 +1,6 @@
 ---
 title: <input type="color">
 slug: Web/HTML/Element/input/color
-tags:
-  - Color Picker
-  - Element
-  - HTML
-  - HTML input
-  - HTML フォーム
-  - Reference
-  - color
-browser-compat: html.elements.input.type_color
-translation_of: Web/HTML/Element/input/color
 ---
 {{HTMLRef}}
 

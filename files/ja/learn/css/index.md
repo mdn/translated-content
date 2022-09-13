@@ -1,17 +1,6 @@
 ---
 title: CSS
 slug: Learn/CSS
-tags:
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Debugging
-  - Landing
-  - NeedsContent
-  - Topic
-  - length
-  - specificity
-translation_of: Learn/CSS
 ---
 {{LearnSidebar}}
 

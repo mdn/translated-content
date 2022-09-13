@@ -79,4 +79,4 @@ function updateValue(e) {
 
 ## 参见
 
-- 相关事件：[`input`](/en-US/docs/Web/API/HTMLElement/input_event)
+- 相关事件：[`input`](/zh-CN/docs/Web/API/HTMLElement/input_event)

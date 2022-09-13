@@ -1,16 +1,6 @@
 ---
 title: StereoPannerNode
 slug: Web/API/StereoPannerNode
-page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - Reference
-  - StereoPannerNode
-  - Web Audio API
-browser-compat: api.StereoPannerNode
-translation_of: Web/API/StereoPannerNode
 ---
 {{APIRef("Web Audio API")}}
 

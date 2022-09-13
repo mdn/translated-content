@@ -1,15 +1,6 @@
 ---
 title: 'Document: pointerlockchange イベント'
 slug: Web/API/Document/pointerlockchange_event
-tags:
-  - Document
-  - Event
-  - Reference
-  - Web
-  - pointerlockchange
-  - イベント
-  - ウェブ
-translation_of: Web/API/Document/pointerlockchange_event
 ---
 {{APIRef}}
 
@@ -64,7 +55,7 @@ document.onpointerlockchange = (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.pointerlockchange_event")}}
+{{Compat}}
 
 ## 関連情報
 

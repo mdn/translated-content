@@ -1,15 +1,6 @@
 ---
 title: Gamepad.hand
 slug: Web/API/Gamepad/hand
-tags:
-  - API
-  - Experimental
-  - Gamepad
-  - Gamepad API
-  - Property
-  - Reference
-  - hand
-translation_of: Web/API/Gamepad/hand
 ---
 {{APIRef("Gamepad")}}{{SeeCompatTable}}
 

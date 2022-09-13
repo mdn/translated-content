@@ -1,16 +1,6 @@
 ---
 title: Element.removeAttribute()
 slug: Web/API/Element/removeAttribute
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
-  - remove
-  - removeAttribute
-  - メソッド
-translation_of: Web/API/Element/removeAttribute
 ---
 {{ APIRef("DOM") }}
 
@@ -53,4 +43,4 @@ document.getElementById("div1").removeAttribute("align");
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.removeAttribute")}}
+{{Compat}}

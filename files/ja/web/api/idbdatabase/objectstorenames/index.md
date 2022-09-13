@@ -1,14 +1,6 @@
 ---
 title: IDBDatabase.objectStoreNames
 slug: Web/API/IDBDatabase/objectStoreNames
-tags:
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Property
-  - Storage
-  - objectStoreNames
-translation_of: Web/API/IDBDatabase/objectStoreNames
 ---
 {{ APIRef("IDBDatabase") }}
 

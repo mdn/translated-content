@@ -240,6 +240,7 @@ console.log(p.a, p.b) // 1, 42
           </dd>
           <dt>継承されたプロパティへのアクセス</dt>
           <dd>
+            <!-- markdownlint-disable MD011 -->
             <code>Object.create(<var>proxy</var>)[foo]</code
             ><br />{{jsxref("Reflect.get()")}}
           </dd>

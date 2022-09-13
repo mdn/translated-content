@@ -1,14 +1,6 @@
 ---
 title: ':in-range'
 slug: Web/CSS/:in-range
-tags:
-  - CSS
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.in-range
-translation_of: 'Web/CSS/:in-range'
 ---
 {{CSSRef}}
 

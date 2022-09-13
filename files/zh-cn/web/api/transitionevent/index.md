@@ -39,5 +39,5 @@ _同时也继承了父类 {{domxref("Event")}}_ 的属性.
 
 ## See also
 
-- [Using CSS transitions](/en-US/docs/Web/Guide/CSS/Using_CSS_transitions)
+- [Using CSS transitions](/zh-CN/docs/Web/Guide/CSS/Using_CSS_transitions)
 - CSS properties: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}.

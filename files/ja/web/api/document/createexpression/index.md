@@ -1,15 +1,6 @@
 ---
 title: Document.createExpression()
 slug: Web/API/Document/createExpression
-tags:
-  - API
-  - DOM
-  - Document
-  - Reference
-  - XPath
-  - createExpression
-  - メソッド
-translation_of: Web/API/Document/createExpression
 ---
 {{APIRef("DOM")}}
 
@@ -34,7 +25,7 @@ xpathExpr = document.createExpression(xpathText, namespaceURLMapper);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.createExpression")}}
+{{Compat}}
 
 ## 関連情報
 

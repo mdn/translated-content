@@ -58,15 +58,13 @@ self.addEventListener("message", function(e) {
 
 ## Spécifications
 
-| Spécification                                                        | État                                 | Commentaire         |
-| -------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#client', 'Client')}} | {{Spec2('Service Workers')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Client")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [Utiliser les Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Exemple simple de service workers](https://github.com/mdn/sw-test)

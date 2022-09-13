@@ -1,14 +1,6 @@
 ---
 title: arguments.callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
-tags:
-  - Deprecated
-  - 関数
-  - JavaScript
-  - プロパティ
-  - arguments
-browser-compat: javascript.functions.arguments.callee
-translation_of: Web/JavaScript/Reference/Functions/arguments/callee
 ---
 {{jsSidebar("Functions")}}
 

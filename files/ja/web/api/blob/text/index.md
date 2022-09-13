@@ -1,18 +1,6 @@
 ---
 title: Blob.text()
 slug: Web/API/Blob/text
-tags:
-  - API
-  - Blob
-  - File API
-  - Method
-  - Reference
-  - String
-  - Text
-  - Utf-8
-  - get
-  - read
-translation_of: Web/API/Blob/text
 ---
 {{APIRef("File API")}}
 

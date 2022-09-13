@@ -1,16 +1,6 @@
 ---
 title: 'Document: animationend イベント'
 slug: Web/API/Element/animationend_event
-tags:
-  - CSS Animations
-  - CSS アニメーション
-  - Document
-  - Event
-  - Reference
-  - Web
-  - animationend
-  - イベント
-translation_of: Web/API/Document/animationend_event
 original_slug: Web/API/Document/animationend_event
 ---
 {{APIRef}}
@@ -70,7 +60,7 @@ document.onanimationend = () => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.animationend_event")}}
+{{Compat}}
 
 ## 関連情報
 

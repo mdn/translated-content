@@ -11,7 +11,7 @@ original_slug: Glossaire/webm
 ---
 **WebM** est un format vidéo ouvert, destiné au web et libre de redevance. Il est supporté de manière native par Mozilla Firefox.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

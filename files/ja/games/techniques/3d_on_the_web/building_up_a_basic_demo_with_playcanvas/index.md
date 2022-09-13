@@ -1,19 +1,6 @@
 ---
 title: PlayCanvas を使った基本的なデモの作成
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas
-tags:
-  - 3D
-  - Animation
-  - Beginner
-  - Canvas
-  - Games
-  - PlayCanvas
-  - Tutorial
-  - WebGL
-  - camera
-  - lighting
-  - rendering
-translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas
 ---
 {{GamesSidebar}}
 

@@ -25,15 +25,13 @@ Notification.onerror = (even) => { ... }
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('Web Notifications','#dom-notification-onerror','onerror')}} | {{Spec2('Web Notifications')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification.onerror")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("Notification")}}
 - [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

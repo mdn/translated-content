@@ -1,17 +1,6 @@
 ---
 title: HTMLIFrameElement.contentWindow
 slug: Web/API/HTMLIFrameElement/contentWindow
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLIFrameElement
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - ウェブ
-browser-compat: api.HTMLIFrameElement.contentWindow
-translation_of: Web/API/HTMLIFrameElement/contentWindow
 ---
 {{APIRef("HTML DOM")}}
 

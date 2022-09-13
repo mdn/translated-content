@@ -72,13 +72,11 @@ Lors de l'utilisation du balisage html intégré (\<body onerror="alert('une err
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onerror','onerror')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.GlobalEventHandlers.onerror")}}
+{{Compat}}
 
 ## Voir aussi
 

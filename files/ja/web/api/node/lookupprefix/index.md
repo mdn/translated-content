@@ -1,11 +1,6 @@
 ---
 title: Node.lookupPrefix()
 slug: Web/API/Node/lookupPrefix
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Node.lookupPrefix
-translation_of: Web/API/Node/lookupPrefix
 ---
 {{APIRef("DOM")}}
 

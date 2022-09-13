@@ -1,12 +1,6 @@
 ---
 title: '당신의 기량을 시험해 보세요: 변수(variables)'
 slug: Learn/JavaScript/First_steps/Test_your_skills:_variables
-tags:
-  - Beginner
-  - JavaScript
-  - Learn
-  - Text your skills
-  - Variables
 ---
 {{learnsidebar}}
 

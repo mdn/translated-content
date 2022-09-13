@@ -1,7 +1,6 @@
 ---
 title: content_scripts
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 ---
 {{AddonSidebar}}
 

@@ -1,14 +1,6 @@
 ---
 title: 合成とクリッピング
 slug: Web/API/Canvas_API/Tutorial/Compositing
-tags:
-  - キャンバス
-  - グラフィック
-  - HTML
-  - HTML5
-  - 中級者
-  - チュートリアル
-translation_of: Web/API/Canvas_API/Tutorial/Compositing
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 

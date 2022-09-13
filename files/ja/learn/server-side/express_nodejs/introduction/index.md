@@ -1,17 +1,6 @@
 ---
 title: Express/Node のイントロダクション
 slug: Learn/Server-side/Express_Nodejs/Introduction
-tags:
-  - Beginner
-  - CodingScripting
-  - Express
-  - Learn
-  - Node
-  - nodejs
-  - server-side
-  - サーバーサイド
-  - 初心者
-translation_of: Learn/Server-side/Express_Nodejs/Introduction
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
 
@@ -40,14 +29,14 @@ Node HTTP パッケージを使用することで、Node.js で簡単な ウェ�
 
 次の例では、URL `http://127.0.0.1:8000/` にあるあらゆる種類の HTTP リクエストを待ち受ける ウェブサーバーを作成します。リクエストが受信されると、スクリプトは "Hello World" という文字列でレスポンスします。すでに Node をインストールしている場合は、次の手順に従ってこの例を試すことができます。
 
-1.  ターミナルを開きます (Windows ではコマンドラインユーティリティを開きます)。
-2.  プログラムを保存するフォルダ (たとえば "test-node") を作成し、端末に次のコマンドを入力して移動します。
+1. ターミナルを開きます (Windows ではコマンドラインユーティリティを開きます)。
+2. プログラムを保存するフォルダ (たとえば "test-node") を作成し、端末に次のコマンドを入力して移動します。
 
     ```html
     cd test-node
     ```
 
-3.  好きなテキストエディタを使って "hello.js" というファイルを作成し、次のコードを貼り付けます。
+3. 好きなテキストエディタを使って "hello.js" というファイルを作成し、次のコードを貼り付けます。
 
     ```js
     // HTTPモジュールの読み込み
@@ -67,8 +56,8 @@ Node HTTP パッケージを使用することで、Node.js で簡単な ウェ�
     console.log('Server running at http://127.0.0.1:8000/');
     ```
 
-4.  上記で作成したフォルダにファイルを保存します。
-5.  ターミナルに戻り、次のコマンドを入力します。
+4. 上記で作成したフォルダにファイルを保存します。
+5. ターミナルに戻り、次のコマンドを入力します。
 
 ```bash
 node "hello.js"
@@ -302,7 +291,7 @@ Cookie の操作、セッション、ユーザ認証、リクエスト `POST` �
 サードパーティのミドルウェアを使用するには、まず NPM を使用してそれをアプリにインストールする必要があります。たとえば、 [morgan](http://expressjs.com/en/resources/middleware/morgan.html) という HTTP リクエストロガーミドルウェアをインストールするには、次のようにします。
 
 ```bash
-$ npm install morgan
+npm install morgan
 ```
 
 次に、Express アプリケーションオブジェクトで `use()` を呼び出してミドルウェアをスタックに追加できます。
@@ -416,7 +405,7 @@ Express アプリケーションは、Node によってサポートされてい�
 これらを使用するには、まず NPM を使用してデータベースドライバをインストールする必要があります。たとえば、一般的な NoSQL MongoDB 用のドライバをインストールするには、次のコマンドを使用します。
 
 ```bash
-$ npm install mongodb
+npm install mongodb
 ```
 
 データベース自体はローカルにインストールすることも、クラウドサーバーにインストールすることもできます。Express コードではドライバが必要で、データベースへの接続から、作成、参照、更新、削除 (CRUD) 操作を実行します。以下の (Express ドキュメントからの) 例は、MongoDB を使ってどのように「哺乳類の」レコードを見つけることができるかを示しています。

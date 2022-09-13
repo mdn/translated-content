@@ -1,16 +1,6 @@
 ---
 title: XMLHttpRequest.statusText
 slug: Web/API/XMLHttpRequest/statusText
-tags:
-  - AJAX
-  - API
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - XMLHttpRequest
-  - XMLHttpRequest Status
-browser-compat: api.XMLHttpRequest.statusText
-translation_of: Web/API/XMLHttpRequest/statusText
 ---
 {{APIRef('XMLHttpRequest')}}
 

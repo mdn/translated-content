@@ -1,14 +1,6 @@
 ---
 title: PerformanceEntry.entryType
 slug: Web/API/PerformanceEntry/entryType
-tags:
-  - API
-  - PerformanceEntry
-  - Web パフォーマンス
-  - パフォーマンスタイムライン API
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/PerformanceEntry/entryType
 ---
 {{APIRef("Performance Timeline API")}}
 
@@ -54,7 +46,7 @@ function run_PerformanceEntry() {
 
   // Check the entryType of all the "begin" entries
   var entriesNamedBegin = performance.getEntriesByName("begin");
-	for (var i=0; i < entriesNamedBegin.length; i++) {
+  for (var i=0; i < entriesNamedBegin.length; i++) {
       var typeOfEntry = entriesNamedBegin[i].entryType;
       console.log("Entry is type: " + typeOfEntry);
   }

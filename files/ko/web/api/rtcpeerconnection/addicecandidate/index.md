@@ -15,14 +15,16 @@ translation_of: Web/API/RTCPeerConnection/addIceCandidate
 
 ## Syntax
 
-    aPromise = pc.addIceCandidate(candidate);
+```js
+aPromise = pc.addIceCandidate(candidate);
 
-    addIceCandidate(candidate, successCallback, failureCallback); {{deprecated_inline}}
+addIceCandidate(candidate, successCallback, failureCallback);
+```
 
 ### 매개변수
 
 - `candidate` {{optional_inline}}
-  - : {{domxref("RTCIceCandidateInit")}} 딕셔너리 혹은 {{domxref("RTCIceCandidate")}} 객체에 해당하는 객체입니다. 이 객체의 내용은 signaling 채널을 통해 수신 받은 메세지로 구성되어야합니다. 메세지는 이미 로컬 ICE 에이전트에 전달 될 준비가 된 새로 수신받은 ICE candidate를 설명합니다.`candidate `객체가 지정되어있지 않거나, `null`이라면, "candidate 종료" 신호가 `end-of-candidates` a-line을 사용해서 원격 유저에게 전달됩니다. a-line의 형식은 아래와 같습니다: a=end-of-candidates
+  - : {{domxref("RTCIceCandidateInit")}} 딕셔너리 혹은 {{domxref("RTCIceCandidate")}} 객체에 해당하는 객체입니다. 이 객체의 내용은 signaling 채널을 통해 수신 받은 메세지로 구성되어야합니다. 메세지는 이미 로컬 ICE 에이전트에 전달 될 준비가 된 새로 수신받은 ICE candidate를 설명합니다.`candidate` 객체가 지정되어있지 않거나, `null` 이라면, "candidate 종료" 신호가 `end-of-candidates` a-line을 사용해서 원격 유저에게 전달됩니다. a-line의 형식은 아래와 같습니다: a=end-of-candidates
 
 ### 더 이상 사용되지 않는 변수 (Deprecated)
 

@@ -1,14 +1,6 @@
 ---
 title: counter-set
 slug: Web/CSS/counter-set
-tags:
-  - CSS
-  - CSS カウンター
-  - CSS リスト
-  - CSS プロパティ
-  - recipe:css-property
-browser-compat: css.properties.counter-set
-translation_of: Web/CSS/counter-set
 ---
 {{CSSRef}}
 

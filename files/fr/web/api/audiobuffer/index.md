@@ -84,13 +84,11 @@ bouton.onclick = function() {
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                               | Commentaire         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Web Audio API', '#AudioBuffer-section', 'AudioBuffer')}} | {{Spec2('Web Audio API')}} | Définition initiale |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioBuffer")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,6 @@
 ---
 title: '<code>: 行内コード要素'
 slug: Web/HTML/Element/code
-tags:
-  - Code
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Inline Code
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/code
 ---
 {{HTMLRef}}
 

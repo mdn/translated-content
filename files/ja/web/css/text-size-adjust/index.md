@@ -1,16 +1,6 @@
 ---
 title: text-size-adjust
 slug: Web/CSS/text-size-adjust
-tags:
-  - CSS
-  - CSS Mobile Text Size Adjustment
-  - CSS プロパティ
-  - Experimental
-  - NeedsExample
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.text-size-adjust
-translation_of: Web/CSS/text-size-adjust
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

@@ -1,11 +1,6 @@
 ---
 title: Cryptographic hash function (暗号学的ハッシュ関数)
 slug: Glossary/Cryptographic_hash_function
-tags:
-  - Cryptography
-  - Glossary
-  - Security
-translation_of: Glossary/Cryptographic_hash_function
 ---
 暗号学的ハッシュ関数は、*ダイジェスト関数*とも呼ばれますが、任意のサイズのメッセージを{{glossary("digest","ダイジェスト")}}と呼ばれる固定サイズのメッセージに変換する{{glossary("cryptography", "暗号学的")}}プリミティブです。暗号学的ハッシュ関数は、認証、{{Glossary("digital signature", "デジタル署名")}}、および{{Glossary("HMAC", "メッセージ認証コード")}}に使用されます。
 

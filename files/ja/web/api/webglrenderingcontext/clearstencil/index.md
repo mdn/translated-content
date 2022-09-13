@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.clearStencil()
 slug: Web/API/WebGLRenderingContext/clearStencil
-translation_of: Web/API/WebGLRenderingContext/clearStencil
 ---
 {{APIRef("WebGL")}}
 

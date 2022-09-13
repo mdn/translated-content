@@ -1,13 +1,6 @@
 ---
 title: アドオンバー
 slug: Mozilla/Firefox/Releases/4/The_add-on_bar
-tags:
-  - Add-ons
-  - Extensions
-  - Firefox 4
-  - Toolbar
-  - 要更新
-translation_of: Mozilla/Firefox/Releases/4/The_add-on_bar
 original_slug: The_add-on_bar
 ---
 Firefox 4 よりウィンドウの下部に新しいツールバーを実装する為、ブラウザウィンドウの下部からステータスバーが削除されます。この新しいツールバーは ID "addon-bar" を持った、標準の XUL {{XULElem("toolbar")}} です。アドオンはこのバーにコンテンツを挿入することが可能であり、また、ユーザーはツールバーのカスタマイズ中にボタンをアドオンバーにドラッグすることができます。これがアドオンバーと旧ステータスバーの間の主な相違点です。標準のツールバーであるため、どの XUL 要素でもアドオンバーに配置することができます。

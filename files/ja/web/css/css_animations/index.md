@@ -1,13 +1,6 @@
 ---
 title: CSS アニメーション
 slug: Web/CSS/CSS_Animations
-tags:
-  - CSS
-  - CSS アニメーション
-  - ガイド
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Animations
 ---
 {{CSSRef}}
 

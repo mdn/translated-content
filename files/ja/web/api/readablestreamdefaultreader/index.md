@@ -1,14 +1,6 @@
 ---
 title: ReadableStreamDefaultReader
 slug: Web/API/ReadableStreamDefaultReader
-tags:
-  - API
-  - Fetch
-  - Interface
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
-translation_of: Web/API/ReadableStreamDefaultReader
 ---
 {{APIRef("Streams")}}
 

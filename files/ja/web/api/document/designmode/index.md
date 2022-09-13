@@ -1,17 +1,6 @@
 ---
 title: Document.designMode
 slug: Web/API/Document/designMode
-tags:
-  - API
-  - DOM
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-  - designmode
-  - editor
-  - エディター
-translation_of: Web/API/Document/designMode
 ---
 {{ApiRef()}}
 
@@ -44,7 +33,7 @@ iframeNode.contentDocument.designMode = "on";
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.designMode")}}
+{{Compat}}
 
 ## 関連情報
 

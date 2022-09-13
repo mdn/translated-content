@@ -16,7 +16,9 @@ translation_of: Web/API/MediaStreamTrack/readyState
 
 ## 구문
 
-    const state = track.readyState
+```js
+const state = track.readyState
+```
 
 ### 값
 

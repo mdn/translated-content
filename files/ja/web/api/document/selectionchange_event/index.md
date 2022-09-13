@@ -1,13 +1,6 @@
 ---
 title: 'Document: selectionchange イベント'
 slug: Web/API/Document/selectionchange_event
-tags:
-  - Event
-  - Reference
-  - Selection
-  - Selection API
-  - selectionchange
-translation_of: Web/API/Document/selectionchange_event
 ---
 {{APIRef}}
 
@@ -58,7 +51,7 @@ document.onselectionchange = () => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.selectionchange_event")}}
+{{Compat}}
 
 ## 関連情報
 

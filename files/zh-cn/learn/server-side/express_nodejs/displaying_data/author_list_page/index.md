@@ -1,6 +1,6 @@
 ---
 title: 作者清单面页、分类清单页面、与自我挑战
-slug: learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
+slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 ---
 作者列表页面，需要呈现数据库中所有作者的列表，有每位作者的名字，并连结到作者详细内容页面。出生与死亡日期应该在名字后面，并且在同一列。
 

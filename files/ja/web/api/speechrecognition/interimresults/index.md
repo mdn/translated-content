@@ -1,16 +1,6 @@
 ---
 title: SpeechRecognition.interimResults
 slug: Web/API/SpeechRecognition/interimResults
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - recognition
-  - speech
-translation_of: Web/API/SpeechRecognition/interimResults
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 

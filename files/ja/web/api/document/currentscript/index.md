@@ -1,14 +1,6 @@
 ---
 title: Document.currentScript
 slug: Web/API/Document/currentScript
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Reference
-  - プロパティ
-translation_of: Web/API/Document/currentScript
 ---
 {{APIRef("DOM")}}
 
@@ -44,7 +36,7 @@ if (document.currentScript.async) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.currentScript")}}
+{{Compat}}
 
 ## 関連情報
 

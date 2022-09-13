@@ -34,5 +34,5 @@ _일반적인 흐름 Normal Flow_, 또는 흐름 레이아웃 Flow Layout 은 �
 
 - {{Glossary("Block/CSS", "Block (CSS)")}}
 
-1.  [**CSS**](/ko/docs/Web/CSS)
-2.  [**CSS Reference**](/ko/docs/Web/CSS/Reference)
+1. [**CSS**](/ko/docs/Web/CSS)
+2. [**CSS Reference**](/ko/docs/Web/CSS/Reference)

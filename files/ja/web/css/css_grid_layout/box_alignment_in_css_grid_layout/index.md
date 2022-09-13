@@ -1,16 +1,6 @@
 ---
 title: CSS グリッドレイアウトのボックス配置
 slug: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
-tags:
-  - グリッドでの配置
-  - ボックス
-  - CSS
-  - CSS グリッド
-  - グリッド配置
-  - ガイド
-  - alignment
-  - ボックス配置
-translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 ---
 {{CSSRef}}
 

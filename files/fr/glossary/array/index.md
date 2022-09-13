@@ -25,7 +25,7 @@ var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
 //Des arrays en JavaScript peuvent contenir différents types de données, comme indiqué ci-dessus.
 ```
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

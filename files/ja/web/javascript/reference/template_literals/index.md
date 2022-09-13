@@ -1,18 +1,6 @@
 ---
 title: テンプレートリテラル (テンプレート文字列)
 slug: Web/JavaScript/Reference/Template_literals
-tags:
-  - ECMAScript 2015
-  - ガイド
-  - JavaScript
-  - React
-  - String
-  - テンプレート文字列
-  - テンプレートリテラル
-  - Template string
-  - 文字列
-browser-compat: javascript.grammar.template_literals
-translation_of: Web/JavaScript/Reference/Template_literals
 ---
 {{JsSidebar("More")}}
 

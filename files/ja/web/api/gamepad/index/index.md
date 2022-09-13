@@ -1,15 +1,6 @@
 ---
 title: Gamepad.index
 slug: Web/API/Gamepad/index
-tags:
-  - API
-  - Gamepad
-  - Gamepad API
-  - Index
-  - ゲーム
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/Gamepad/index
 ---
 {{APIRef("Gamepad API")}}
 

@@ -1,10 +1,6 @@
 ---
 title: Recursion (再帰)
 slug: Glossary/Recursion
-tags:
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/Recursion
 ---
 関数が自分自身を呼び出す動作、再帰は問題がより小さな小問題から成っている場合に解決するのに使われます。再帰関数は、ベースケース (再帰終了) と再帰ケース (再帰再開) の 2 種類の入力を受け取る可能性があります。
 

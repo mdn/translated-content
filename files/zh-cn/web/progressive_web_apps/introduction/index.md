@@ -2,7 +2,7 @@
 title: 渐进式 Web 应用介绍
 slug: Web/Progressive_web_apps/Introduction
 ---
-{{NextMenu("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive")}}
+{{NextMenu("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps")}}
 
 这篇文章将会为你介绍渐进式 Web 应用（PWA），讨论一下它们到底是什么；相比于常规的 Web 应用，它又带来了哪些优势。
 
@@ -80,6 +80,6 @@ PWA 所需的关键要素是 [Service Worker](/en-US/docs/Web/API/Service_Worker
 
 现在，让我们转到本系列的第二部分，我们来看看这个示例应用程序的结构。
 
-{{NextMenu("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive")}}
+{{NextMenu("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps")}}
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Apps/Progressive/")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Apps/Progressive/")}}

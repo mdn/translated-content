@@ -1,15 +1,6 @@
 ---
 title: '<head>: 文書メタデータ (ヘッダー) 要素'
 slug: Web/HTML/Element/head
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - HTML:Metadata content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/head
-browser-compat: html.elements.head
 ---
 {{HTMLRef}}
 

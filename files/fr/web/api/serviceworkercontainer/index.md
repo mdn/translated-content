@@ -63,13 +63,11 @@ if ('serviceWorker' in navigator) {
 
 ## Spécifications
 
-| Spécification                                                                                                        | Status                               | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#service-worker-container', 'ServiceWorkerContainer')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.ServiceWorkerContainer")}}
+{{Compat}}
 
 ## Voir aussi
 

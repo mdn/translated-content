@@ -1,15 +1,6 @@
 ---
 title: Element.scrollBy()
 slug: Web/API/Element/scrollBy
-tags:
-  - API
-  - CSSOM View
-  - Element
-  - Method
-  - Reference
-  - scrollBy
-  - メソッド
-translation_of: Web/API/Element/scrollBy
 ---
 {{APIRef}}
 
@@ -56,4 +47,4 @@ element.scrollBy({
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.scrollBy")}}
+{{Compat}}

@@ -1,16 +1,6 @@
 ---
 title: Element.scrollLeftMax
 slug: Web/API/Element/scrollLeftMax
-tags:
-  - API
-  - CSSOM View
-  - Element
-  - 標準外
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.Element.scrollLeftMax
-translation_of: Web/API/Element/scrollLeftMax
 ---
 {{APIRef("DOM")}}{{Non-standard_header}}
 

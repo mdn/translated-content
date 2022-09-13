@@ -1,19 +1,6 @@
 ---
 title: BlobEvent
 slug: Web/API/BlobEvent
-tags:
-  - API
-  - Audio
-  - Blob
-  - Interface
-  - Media
-  - MediaStream Recording
-  - MediaStream Recording API
-  - Recording Media
-  - Reference
-  - Video
-  - events
-translation_of: Web/API/BlobEvent
 ---
 {{APIRef("Media Capture and Streams")}}
 

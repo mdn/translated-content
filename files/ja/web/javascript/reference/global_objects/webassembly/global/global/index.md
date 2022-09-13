@@ -1,13 +1,6 @@
 ---
 title: WebAssembly.Global() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - WebAssembly
-browser-compat: javascript.builtins.WebAssembly.Global.Global
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global
 ---
 {{JSRef}}
 

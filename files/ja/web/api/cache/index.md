@@ -1,21 +1,6 @@
 ---
 title: Cache
 slug: Web/API/Cache
-tags:
-  - API
-  - Cache
-  - Experimental
-  - Fraft
-  - Interface
-  - Offline
-  - Reference
-  - Service Worker
-  - ServiceWorker
-  - Storage
-  - インターフェイス
-  - オフライン
-  - サービスワーカー
-translation_of: Web/API/Cache
 ---
 {{APIRef("Service Workers API")}}
 

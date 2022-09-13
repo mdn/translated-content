@@ -1,14 +1,6 @@
 ---
 title: Document.createNodeIterator()
 slug: Web/API/Document/createNodeIterator
-tags:
-  - API
-  - DOM
-  - Gecko
-  - MakeBrowserAgnostic
-  - Method
-  - メソッド
-translation_of: Web/API/Document/createNodeIterator
 ---
 {{APIRef("DOM")}}
 
@@ -75,4 +67,4 @@ while (currentNode = nodeIterator.nextNode()) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.createNodeIterator")}}
+{{Compat}}

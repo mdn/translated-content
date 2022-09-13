@@ -4,7 +4,7 @@ slug: Web/CSS/mask-border-repeat
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-**`mask-border-repeat`** [CSS](/en-US/docs/Web/CSS) 属性设置如何调整源图像的边缘区域以适应元素遮罩边框的尺寸。
+**`mask-border-repeat`** [CSS](/zh-CN/docs/Web/CSS) 属性设置如何调整源图像的边缘区域以适应元素遮罩边框的尺寸。
 
 ## 语法
 

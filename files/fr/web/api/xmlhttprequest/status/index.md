@@ -38,17 +38,15 @@ xhr.send();
  */
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                            | Statut                               | Comment                |
-| ------------------------------------------------------------------------ | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#the-status-attribute')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.XMLHttpRequest.status")}}
+{{Compat}}
 
-Voir aussi
+## Voir aussi
 
 - Liste des [HTTP response codes](/fr/docs/Web/HTTP/Response_codes)
 - [HTTP](/fr/docs/Web/HTTP)

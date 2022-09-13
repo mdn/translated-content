@@ -1,13 +1,6 @@
 ---
 title: ShadowRoot.styleSheets
 slug: Web/API/ShadowRoot/styleSheets
-tags:
-  - API
-  - ShadowRoot
-  - プロパティ
-  - リファレンス
-  - スタイルシート
-browser-compat: api.ShadowRoot.styleSheets
 ---
 {{APIRef("CSSOM")}}
 

@@ -191,12 +191,7 @@ L'interface [liste des entrées de l'observateur de performance](/fr/docs/Web/AP
 
 ## Spécifications
 
-Les interfaces décrites dans ce document sont définies dans la norme **Performance Timeline** qui comporte deux niveaux :
-
-| Spécification                                                                                                                                                | Statut                                                   | Commentaire                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| {{SpecName('Performance Timeline',  '#extensions-to-the-performance-interface', 'Performance   extensions')}}             | {{Spec2('Performance Timeline')}}             | Définition des méthodes `getEntries()`, `getEntriesByType()` et `getEntriesByName()`. |
-| {{SpecName('Performance Timeline Level 2',  '#extensions-to-the-performance-interface', 'Performance   extensions')}} | {{Spec2('Performance Timeline Level 2')}} | Modifications de l'interface `getEntries()`.                                          |
+{{Specifications}}
 
 ## Voir aussi
 

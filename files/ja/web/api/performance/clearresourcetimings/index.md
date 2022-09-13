@@ -1,13 +1,6 @@
 ---
 title: performance.clearResourceTimings()
 slug: Web/API/Performance/clearResourceTimings
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - ウェブパフォーマンス
-browser-compat: api.Performance.clearResourceTimings
-translation_of: Web/API/Performance/clearResourceTimings
 ---
 {{APIRef("Resource Timing API")}}
 

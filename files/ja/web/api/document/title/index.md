@@ -1,15 +1,6 @@
 ---
 title: Document.title
 slug: Web/API/Document/title
-tags:
-  - API
-  - Command API
-  - Document
-  - HTML DOM
-  - NeedsSpecTable
-  - Property
-  - Reference
-translation_of: Web/API/Document/title
 ---
 {{APIRef("DOM")}}
 
@@ -65,4 +56,4 @@ XUL では、文書の読み込みが完了する前に `document.title` にア�
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.title")}}
+{{Compat}}

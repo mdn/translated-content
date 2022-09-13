@@ -1,22 +1,6 @@
 ---
 title: ShadowRoot.getAnimations()
 slug: Web/API/ShadowRoot/getAnimations
-tags:
-  - API
-  - Animation
-  - CSS
-  - CSS アニメーション
-  - CSS トランジション
-  - ShadowRoot
-  - メソッド
-  - リファレンス
-  - トランジション
-  - ウェブアニメーション
-  - getAnimations
-  - waapi
-  - ウェブアニメーション API
-browser-compat: api.ShadowRoot.getAnimations
-translation_of: Web/API/ShadowRoot/getAnimations
 ---
 {{APIRef("Web Animations")}}
 

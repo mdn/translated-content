@@ -14,7 +14,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/reject
 
 ## 구문
 
-    Promise.reject(reason);
+```js
+Promise.reject(reason);
+```
 
 ### 매개변수
 

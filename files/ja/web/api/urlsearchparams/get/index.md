@@ -1,13 +1,6 @@
 ---
 title: URLSearchParams.get()
 slug: Web/API/URLSearchParams/get
-tags:
-  - API
-  - Method
-  - URL API
-  - URLSearchParams
-  - get
-translation_of: Web/API/URLSearchParams/get
 ---
 {{ApiRef("URL API")}}
 

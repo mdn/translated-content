@@ -1,23 +1,6 @@
 ---
 title: CSS レイアウト
 slug: Learn/CSS/CSS_layout
-tags:
-  - Beginner
-  - CSS
-  - Floating
-  - Grids
-  - Guide
-  - Landing
-  - Layout
-  - Learn
-  - Module
-  - Multiple column
-  - Positioning
-  - alignment
-  - flexbox
-  - float
-  - table
-translation_of: Learn/CSS/CSS_layout
 ---
 {{LearnSidebar}}
 
@@ -29,9 +12,9 @@ translation_of: Learn/CSS/CSS_layout
 
 このモジュールを始める前に、次のことを理解しているべきです。
 
-1.  [HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)で説明したように、HTML についての基本的な知識があること。
-2.  [CSS 入門](/ja/docs/Learn/CSS/First_steps)で説明したように、CSS の基本を容易にこなせること。
-3.  [ボックスの装飾](/ja/docs/Learn/CSS/Building_blocks)の方法を理解していること。
+1. [HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)で説明したように、HTML についての基本的な知識があること。
+2. [CSS 入門](/ja/docs/Learn/CSS/First_steps)で説明したように、CSS の基本を容易にこなせること。
+3. [ボックスの装飾](/ja/docs/Learn/CSS/Building_blocks)の方法を理解していること。
 
 > **Note:** 使用しているコンピューター/タブレット/その他のデバイスで自分のファイルを作成できない場合は、[JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) などのオンラインコーディングプログラムで (ほとんどの) コードサンプルを試すことができます。
 

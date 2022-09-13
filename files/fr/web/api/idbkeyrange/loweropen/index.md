@@ -58,13 +58,11 @@ function displayData() {
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBKeyRange-lowerOpen', 'lowerOpen')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBKeyRange.lowerOpen")}}
+{{Compat}}
 
 ## Voir aussi
 

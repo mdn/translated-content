@@ -13,7 +13,7 @@ translation_of: Web/API/BatteryManager/charging
     var charging = battery.charging
 ```
 
-`charging` 변수는 배터리가 충전 중인지의 여부를 가져옵니다. 충전중일경우` ``true`. 이외에는 `false `를 가리킵니다.
+`charging` 변수는 배터리가 충전 중인지의 여부를 가져옵니다. 충전중일경우 `true`. 이외에는 `false` 를 가리킵니다.
 
 ## 예제
 

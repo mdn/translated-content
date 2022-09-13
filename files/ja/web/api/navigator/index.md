@@ -1,16 +1,6 @@
 ---
 title: Navigator
 slug: Web/API/Navigator
-tags:
-  - API
-  - DOM
-  - Interface
-  - Navigator
-  - Reference
-  - Web
-  - Web Performance
-translation_of: Web/API/Navigator
-browser-compat: api.Navigator
 ---
 {{APIRef("DOM")}}
 

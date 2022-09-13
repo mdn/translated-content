@@ -1,15 +1,6 @@
 ---
 title: CSSOM View
 slug: Web/CSS/CSSOM_View
-tags:
-  - CSS
-  - CSSOM
-  - CSSOM View
-  - ガイド
-  - レイアウト
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSSOM_View
 ---
 {{CSSRef}}
 

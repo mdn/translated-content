@@ -4,7 +4,7 @@ slug: Web/API/WebGL2RenderingContext/createSampler
 ---
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 
-[WebGL 2 API](/en-US/docs/Web/API/WebGL_API) 定义的 **`WebGL2RenderingContext.createSampler()`** 方法用于创建并初始化 {{domxref("WebGLSampler")}} 对象。
+[WebGL 2 API](/zh-CN/docs/Web/API/WebGL_API) 定义的 **`WebGL2RenderingContext.createSampler()`** 方法用于创建并初始化 {{domxref("WebGLSampler")}} 对象。
 
 ## 句法
 

@@ -1,16 +1,6 @@
 ---
 title: 'Document: animationiteration イベント'
 slug: Web/API/Element/animationiteration_event
-tags:
-  - Animation
-  - AnimationEvent
-  - CSS Animations
-  - CSS アニメーション
-  - Event
-  - Reference
-  - animationiteration
-  - イベント
-translation_of: Web/API/Document/animationiteration_event
 original_slug: Web/API/Document/animationiteration_event
 ---
 {{APIRef}}
@@ -76,7 +66,7 @@ document.onanimationiteration = () => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.animationiteration_event")}}
+{{Compat}}
 
 ## 関連情報
 

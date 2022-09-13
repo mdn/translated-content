@@ -1,18 +1,6 @@
 ---
 title: JavaScript オブジェクト入門
 slug: Learn/JavaScript/Objects
-tags:
-  - Article
-  - Assesment
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Learn
-  - Objects
-  - Tutorial
-  - 学習
-translation_of: Learn/JavaScript/Objects
 ---
 {{LearnSidebar}}
 

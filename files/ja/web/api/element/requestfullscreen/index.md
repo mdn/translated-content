@@ -1,16 +1,6 @@
 ---
 title: Element.requestFullscreen()
 slug: Web/API/Element/requestFullScreen
-tags:
-  - API
-  - DOM
-  - Element
-  - Fullscreen API
-  - requestFullscreen
-  - メソッド
-  - リファレンス
-  - 全画面 API
-translation_of: Web/API/Element/requestFullScreen
 ---
 {{APIRef("Fullscreen API")}}
 
@@ -63,7 +53,7 @@ tbd
 
 ## ブラウザーの対応
 
-{{Compat("api.Element.requestFullscreen")}}
+{{Compat}}
 
 ## 関連情報
 

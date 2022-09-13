@@ -1,8 +1,6 @@
 ---
 title: HTMLElement.inert
 slug: Web/API/HTMLElement/inert
-browser-compat: api.HTMLElement.inert
-translation_of: Web/API/HTMLElement/inert
 ---
 {{ APIRef("HTML DOM") }}
 

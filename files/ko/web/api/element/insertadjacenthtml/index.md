@@ -9,7 +9,9 @@ translation_of: Web/API/Element/insertAdjacentHTML
 
 ## 구문
 
-    element.insertAdjacentHTML(position, text);
+```js
+element.insertAdjacentHTML(position, text);
+```
 
 position은 아래 있는 단어만 사용 가능하다.
 
@@ -26,13 +28,15 @@ position은 아래 있는 단어만 사용 가능하다.
 
 ### position 의 예시 그림
 
-    <!-- beforebegin -->
-    <p>
-    <!-- afterbegin -->
-    foo
-    <!-- beforeend -->
-    </p>
-    <!-- afterend -->
+```html
+<!-- beforebegin -->
+<p>
+<!-- afterbegin -->
+foo
+<!-- beforeend -->
+</p>
+<!-- afterend -->
+```
 
 > **참고:** `beforebegin` , `afterend position은 element의 부모가 존재해야 하고, node가 tree 안에 있어야 한다.`
 

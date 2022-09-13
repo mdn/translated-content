@@ -61,6 +61,6 @@ document.body.insertAdjacentHTML('afterbegin', inp_xmls);
 
 ## 参见
 
-- [Parsing and serializing XML](https://developer.mozilla.org/en-US/Parsing_and_serializing_XML)
+- [Parsing and serializing XML](/zh-CN/Parsing_and_serializing_XML)
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("DOMParser")}}

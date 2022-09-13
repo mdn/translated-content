@@ -51,5 +51,5 @@ Este tema contiene los siguientes módulos en el orden recomendado de aprendizaj
 
 ## Ver También
 
-- [CSS en MDN](/es/docs/Web/CSS) 
+- [CSS en MDN](/es/docs/Web/CSS)
   - : Principal entrada para la documentación de CSS en MDN, donde encontrarás documentación detallada de todas las funcionalidades del lenguaje CSS. ¿Quieres saber todos los valores posibles de una propiedad? Este es tu sitio.

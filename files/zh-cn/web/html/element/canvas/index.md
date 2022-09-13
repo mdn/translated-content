@@ -6,11 +6,9 @@ slug: Web/HTML/Element/canvas
 
 {{HTMLRef}}
 
-## **属性**
+## 属性
 
-本元素支持 [全局属性](https://developer.mozilla.org/en-
-
-US/docs/HTML/Global_attributes).
+本元素支持[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - {{htmlattrdef("height")}}
   - : 该元素占用空间的高度，以 CSS 像素（px）表示，默认为 150。
@@ -19,7 +17,7 @@ US/docs/HTML/Global_attributes).
 - {{htmlattrdef("width")}}
   - : 该元素占用空间的宽度，以 CSS 像素（px）表示，默认为 300。
 
-## **注意事项**
+## 注意事项
 
 ### 标签需要闭合
 
@@ -82,19 +80,15 @@ ctx.fillRect(10, 10, 100, 100);
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
-{{Compat("html.elements.canvas")}}
+{{Compat}}
 
-## 参阅
+## 参见
 
-- [MDN canvas portal](/en-US/docs/Web/API/Canvas_API)
-- [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
+- [MDN canvas portal](/zh-CN/docs/Web/API/Canvas_API)
+- [Canvas tutorial](/zh-CN/docs/Web/API/Canvas_API/Tutorial)
 - [Canvas cheat sheet](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
 
-- [Canvas-related demos](/en-US/demos/tag/tech:canvas)
-- [Canvas introduction by Apple](https://developer.apple.com/library/safari/documentation/AudioVi
-
-deo/Conceptual/HTML-canvas-
-
-guide/Introduction/Introduction.html)
+- [Canvas-related demos](/zh-CN/docs/Web/Demos#canvas)
+- [Canvas introduction by Apple](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html)

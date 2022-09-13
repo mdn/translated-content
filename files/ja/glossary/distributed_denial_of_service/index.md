@@ -1,14 +1,6 @@
 ---
 title: Distributed Denial of Service
 slug: Glossary/Distributed_Denial_of_Service
-tags:
-  - Attack
-  - DDoS
-  - Denial of Service
-  - Glossary
-  - Intro
-  - Security
-translation_of: Glossary/Distributed_Denial_of_Service
 ---
 **Distributed Denial-of-Service**（**DDoS**、分散型サービス拒否）は、サーバー資源を襲って正当なユーザーをブロックするために、多数の侵害されたシステムが単一のターゲットを攻撃する攻撃です。
 

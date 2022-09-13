@@ -1,11 +1,6 @@
 ---
 title: Vendor Prefix (ベンダー接頭辞)
 slug: Glossary/Vendor_Prefix
-tags:
-  - CodingScripting
-  - Glossary
-  - 用語集
-translation_of: Glossary/Vendor_Prefix
 ---
 ブラウザーベンダー (提供元) は、時に試験的または非標準な CSS プロパティおよび JavaScript API に接頭辞を追加することがあります。これにより、開発者は標準化プロセスの中で、理論上は、ウェブ開発者のコードを壊すことなく新しいアイデアを試すことができます。開発者は、ブラウザーの振る舞いが標準化されるまで、接頭辞を外したプロパティを導入するのを待つべきです。
 

@@ -1,15 +1,6 @@
 ---
 title: Response.headers
 slug: Web/API/Response/headers
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Headers
-  - Property
-  - Reference
-  - Response
-translation_of: Web/API/Response/headers
 ---
 {{APIRef("Fetch")}}
 

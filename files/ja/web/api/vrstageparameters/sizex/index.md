@@ -1,7 +1,6 @@
 ---
 title: VRStageParameters.sizeX
 slug: Web/API/VRStageParameters/sizeX
-translation_of: Web/API/VRStageParameters/sizeX
 ---
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 

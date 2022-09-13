@@ -41,13 +41,11 @@ De bons candidats pour les éléments que vous pourriez vouloir observer sont :
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                                   |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| {{SpecName('Element Timing API', '#sec-modifications-DOM', 'elementtiming')}} | {{Spec2('Element Timing API')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attribute.elementtiming")}}
+{{Compat}}
 
 ## Voir aussi
 

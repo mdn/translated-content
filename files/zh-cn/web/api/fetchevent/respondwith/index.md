@@ -2,60 +2,73 @@
 title: FetchEvent.respondWith()
 slug: Web/API/FetchEvent/respondWith
 ---
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{APIRef("Service Workers API")}}
 
-{{domxref("FetchEvent")}} 接口的 **`respondWith()`** 方法旨在包裹代码，这些代码为来自受控页面的 request 生成自定义的 response。这些代码通过返回一个 {{domxref("Response")}} 、 [network error](http://fetch.spec.whatwg.org/#concept-network-error) 或者 `Fetch的方式`resolve。
+{{domxref("FetchEvent")}} 接口的 **`respondWith()`** 方法阻止浏览器默认的 fetch 操作，并且允许由你自己为 {{domxref("Response")}} 提供一个 promise。
 
-有关跨域内容污染的渲染端安全检测与 {{domxref("Response")}} 体的透明度（或者不透明度）相关联，而不是 URL。如果 request 是一个顶级的导航，而返回值是一个类型属性不透明的 {{domxref("Response")}}（即不透明响应体），一个 [network error](https://fetch.spec.whatwg.org/#concept-network-error) 将被返回给 [`Fetch`](https://fetch.spec.whatwg.org/#concept-fetch)。所有成功（非网络错误）响应的最终 URL 是请求的 URL。
+在大多数情况下，你可以提供接收方理解的任何形式的响应。例如，如果是由 {{HTMLElement('img')}} 初始化的请求，起响应主体必须是图像数据。出于安全考虑，这里有一些全局的规则：
+
+- 只有当 {{domxref("fetchEvent.request")}} 对象的 {{domxref("request.mode", "mode")}} 是“`no-cors`”，你才能返回 {{domxref("Response.type", "type")}} 为“`opaque`”的 {{domxref("Response")}} 对象。
+- 只有当 {{domxref("fetchEvent.request")}} 对象的 {{domxref("request.mode", "mode")}} 是“`manual`”，你才能返回 {{domxref("Response.type","type")}} 为“`opaqueredirect`”的 {{domxref("Response")}} 对象。
+- 如果 {{domxref("fetchEvent.request")}} 对象的 {{domxref("request.mode", "mode")}} 是“`same-origin`”，你无法返回 {{domxref("Response.type","type")}} 为“`cors`”的 {{domxref("Response")}} 对象。
+
+### 指定资源的最终 URL
+
+从 Firefox 59 开始，在 service worker 中向 {{domxref("FetchEvent.respondWith()")}} 提供 {{domxref("Response")}} 时，{{domxref("Response.url")}} 的值将作为最终解析的 URL 传输给被拦截的网络请求。如果 {{domxref("Response.url")}} 值是空的字符串，那么 {{domxref("Request.url","FetchEvent.request.url")}} 将被用作最终的 URL。
+
+过去，在所有情况下，一直使用 {{domxref("Request.url","FetchEvent.request.url")}} 作为最终的 URL。提供的 {{domxref("Response.url")}} 实际上被忽略了。
+
+例如，这意味着，如果 service worker 拦截了一个样式表或者 worker 脚本，那么提供的 {{domxref("Response.url")}} 将会用于解决任何与 {{cssxref("@import")}} 或 {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} 相关的子资源加载（{{bug(1222008)}}）。
+
+对于大多数网络请求的类型，此变更是没有影响的，因为你不能察觉到最终的 URL。然而，在一些方面确实很重要：
+
+- 如果 {{domxref("fetch()")}} 被拦截，那么你可以在结果的 {{domxref("Response.url")}} 观察最终的结果。
+- 如果 [worker](/zh-CN/docs/Web/API/Web_Workers_API) 脚本被拦截，那么最终的 URL 将用于设置 [`self.location`](/zh-CN/docs/Web/API/WorkerGlobalScope/location) 并用作 worker 脚本相对 URL 的基本 URL。
+- 如果样式表被拦截，那么最终 URL 被用作解决相对 {{cssxref("@import")}} 加载的基本 URL。
+
+请注意 {{domxref("Window","Windows")}} 和 {{domxref("HTMLIFrameElement","iframes")}} 的导航请求不使用最终的 URL。HTML 规范处理导航重定向的方式是最终使用 {{domxref("Window.location")}} 生成的请求 URL。这意味着网站在离线时仍然可以提供一个“备用”的网页视图，而无需更改用户可见的 URL。
 
 ## 语法
 
 ```js
-FetchEvent.respondWith(
-  //Promise that resolves to a Response or a network error.
-​)
+respondWith(response)
 ```
-
-### 返回值
-
-Void.
 
 ### 参数
 
-任何自定义的响应生成代码。
+- `response`
+  - : 一个 {{domxref("Response")}} 或者 {{jsxref("Promise")}}（兑现为一个 `Response`）。否则，Fetch 返回一个网络错误。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
+
+### 异常
+
+- `NetworkError` {{domxref("DOMException")}}
+  - : 如果 {{domxref("Request.mode","FetchEvent.request.mode")}} 和 {{domxref("Response.type")}} 值的某些组合触发网络错误，正如上面提到的“全局规则”，则返回该错误。
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : 如果事件仍没有被派发或者 `respondWith()` 已经被调用，则返回该错误。
 
 ## 示例
 
-该代码片段来自 [service worker fetch sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) ([run the fetch sample live](https://googlechrome.github.io/samples/service-worker/prefetch/))。 {{domxref("ServiceWorkerGlobalScope.onfetch")}} 事件处理程序侦听 {{event("fetch")}} 事件。当触发时，{{domxref("FetchEvent.respondWith", "FetchEvent.respondWith(any value)")}} 返回一个 promise 给受控页面。该 promise 在 {{domxref("Cache")}} 对象中查询第一个匹配 URL 请求。如果没有发现匹配项，该代码将转而从网络获取响应。
-
-该代码也处理从 {{domxref("ServiceWorkerGlobalScope.fetch")}} 操作中抛出的异常。请注意，HTTP 错误响应（例如 404）不会触发异常。它将返回具有相应错误代码集的正常响应对象。
+这个 fetch 事件尝试从 cache API 返回一个响应，否则回落至网络请求。
 
 ```js
-self.addEventListener('fetch', function(event) {
-  console.log('Handling fetch event for', event.request.url);
-
-  event.respondWith(
-    caches.match(event.request).then(function(response) {
-      if (response) {
-        console.log('Found response in cache:', response);
-
-        return response;
-      }
-      console.log('No response found in cache. About to fetch from network...');
-
-      return fetch(event.request).then(function(response) {
-        console.log('Response from network is:', response);
-
-        return response;
-      }).catch(function(error) {
-        console.error('Fetching failed:', error);
-
-        throw error;
-      });
-    })
-  );
+addEventListener('fetch', (event) => {
+  // Prevent the default, and handle the request ourselves.
+  event.respondWith((async () => {
+    // Try to get the response from a cache.
+    const cachedResponse = await caches.match(event.request);
+    // Return it if we found one.
+    if (cachedResponse) return cachedResponse;
+    // If we didn't find a match in the cache, use the network.
+    return fetch(event.request);
+  })());
 });
 ```
+
+> **备注：** {{domxref("CacheStorage.match()", "caches.match()")}} 是一个语法糖。等效于在每个缓存上调用 {{domxref("cache.match()")}}（按照 {{domxref("CacheStorage.keys()", "caches.keys()")}} 的顺序）直到返回 {{domxref("Response")}}。
 
 ## 规范
 
@@ -63,13 +76,11 @@ self.addEventListener('fetch', function(event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.FetchEvent.respondWith")}}
+{{Compat}}
 
-## 请参见
+## 参见
 
-- [Using Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web workers](/en-US/docs/Web/Guide/Performance/Using_web_workers)
-- [Fetch API](/en-US/docs/Web/API/Fetch_API)
+- [Fetch API](/zh-CN/docs/Web/API/Fetch_API)

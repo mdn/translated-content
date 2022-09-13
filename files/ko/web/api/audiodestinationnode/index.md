@@ -7,11 +7,11 @@ translation_of: Web/API/AudioDestinationNode
 ---
 {{APIRef()}}
 
-` AudioDestinationNode 은 주어진 컨택스트의 음원의 종착점을 나타냅니다. 보통 스피커를 가리킵니다. 이는 또한 ``OfflineAudioContext를 사용해 데이터가 녹음되는 노드가 되기도 합니다.`
+`AudioDestinationNode` 은 주어진 컨택스트의 음원의 종착점을 나타냅니다. 보통 스피커를 가리킵니다. 이는 또한 `OfflineAudioContext` 를 사용해 데이터가 녹음되는 노드가 되기도 합니다.
 
 `AudioDestinationNode` has no output (as it _is_ the output, no more `AudioNode` can be linked after it in the audio graph) and one input. 입력받은 음원의 채널의 총 갯수는 반드시 0과 `maxChannelCount값의 사이에 있거나 예외(an exception is raised)가 발생한다.`
 
-주어진 ` AudioContext의 `` AudioDestinationNode는  `{{domxref("AudioContext.destination")}}프로퍼티를 통해 검색이 된다.
+주어진 `AudioContext` 의 `AudioDestinationNode` 는 {{domxref("AudioContext.destination")}}프로퍼티를 통해 검색이 된다.
 
 | Number of inputs       | `1`          |
 | ---------------------- | ------------ |

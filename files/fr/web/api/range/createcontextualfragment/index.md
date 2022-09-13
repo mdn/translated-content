@@ -27,15 +27,13 @@ var documentFragment = range.createContextualFragment(chaineHTML);
 document.body.appendChild(documentFragment);
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                                                                | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM Parsing', '#idl-def-range-createcontextualfragment(domstring)', 'Range.createContextualFragment()')}} | {{Spec2('DOM Parsing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Range.createContextualFragment")}}
+{{Compat}}
 
 ## Voir aussi
 

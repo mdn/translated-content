@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 
 ## 구문
 
-    Reflect.deleteProperty(target, propertyKey)
+```js
+Reflect.deleteProperty(target, propertyKey)
+```
 
 ### 매개변수
 

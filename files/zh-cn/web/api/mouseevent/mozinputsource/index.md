@@ -6,7 +6,7 @@ slug: Web/API/MouseEvent/mozInputSource
 
 {{ Non-standard_header() }}
 
-{{domxref("MouseEvent")}}中的**`MouseEvent.mozInputSource`**是只读属性，它提供触发事件的设备信息。例如，当一个鼠标事件发生时，你能根据**`MouseEvent.mozInputSource`**属性判断该事件是由鼠标还是由触屏设备触发的（这将影响到你对于事件发生坐标解释的精确度）。
+{{domxref("MouseEvent")}}中的 **`MouseEvent.mozInputSource`** 是只读属性，它提供触发事件的设备信息。例如，当一个鼠标事件发生时，你能根据 **`MouseEvent.mozInputSource`** 属性判断该事件是由鼠标还是由触屏设备触发的（这将影响到你对于事件发生坐标解释的精确度）。
 
 ## 语法
 

@@ -1,12 +1,6 @@
 ---
 title: Global object (グローバルオブジェクト)
 slug: Glossary/Global_object
-tags:
-  - CodingScripting
-  - Glossary
-  - NeedsContent
-  - 用語集
-translation_of: Glossary/Global_object
 ---
 グローバルオブジェクトは、{{glossary("global scope", "グローバルスコープ")}}上に常時存在する{{glossary("object", "オブジェクト")}}です。
 
@@ -27,7 +21,7 @@ var foo = "foobar";
 foo === window.foo; // true を返す
 ```
 
-グローバル変数 `foo` を定義した後、その値を `window` オブジェクトから、変数名である `foo` を使用し、グローバルオブジェクト ` window``.foo ` のプロパティ名として直接アクセスすることができます。
+グローバル変数 `foo` を定義した後、その値を `window` オブジェクトから、変数名である `foo` を使用し、グローバルオブジェクト `window.foo` のプロパティ名として直接アクセスすることができます。
 
 #### 解説:
 
