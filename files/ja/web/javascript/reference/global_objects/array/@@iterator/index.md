@@ -1,7 +1,10 @@
 ---
 title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
+l10n:
+  sourceCommit: 968e6f1f3b6f977a09e116a0ac552459b741eac3
 ---
+
 {{JSRef}}
 
 **`@@iterator`** メソッドは[反復プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)の一部であり、値の列を同期的に反復する方法を定義します。
@@ -35,9 +38,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 
 ```js
 const arr = ['a', 'b', 'c'];
-const eArr = arr[Symbol.iterator]();
+const arrIter = arr[Symbol.iterator]();
 const letterResult = document.getElementById('letterResult');
-for (const letter of eArr) {
+for (const letter of arrIter) {
   const li = document.createElement('li');
   li.textContent = letter;
   letterResult.appendChild(li);
@@ -53,12 +56,12 @@ for (const letter of eArr) {
 
 ```js
 const arr = ['a', 'b', 'c', 'd', 'e'];
-const eArr = arr[Symbol.iterator]();
-console.log(eArr.next().value); // a
-console.log(eArr.next().value); // b
-console.log(eArr.next().value); // c
-console.log(eArr.next().value); // d
-console.log(eArr.next().value); // e
+const arrIter = arr[Symbol.iterator]();
+console.log(arrIter.next().value); // a
+console.log(arrIter.next().value); // b
+console.log(arrIter.next().value); // c
+console.log(arrIter.next().value); // d
+console.log(arrIter.next().value); // e
 ```
 
 ### 括弧表記の使用法
