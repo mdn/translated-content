@@ -66,7 +66,7 @@ urn:ietf:rfc:7230
 | 스키마      | 설명                                                          |
 | ----------- | -------------------------------------------------------------------- |
 | data        | [Data URL](/ko/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)               |
-| file        | 사용자 지정 파일 이름                                                    |
+| file        | 호스트별 파일 이름                                                    |
 | ftp         | {{Glossary("FTP","File Transfer Protocol")}}         |
 | http/https  | [하이퍼 텍스트 전송 프로토콜 (보안)](/ko/docs/Glossary/HTTP)      |
 | javascript  | URL내 JavaScript 코드                                                 |
