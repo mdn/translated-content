@@ -10,7 +10,7 @@ translation_of: Web/CSS/:blank
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-> **Nota:** **Nota:** El selector `:blank` esta considerado en riesgo, puesto que la CSSWG sigue haciendo cambios.Ver [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967 "[selectors] decide on :blank").
+> **Nota:** El selector `:blank` esta considerado en riesgo, puesto que la CSSWG sigue haciendo cambios.Ver [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967 "[selectors] decide on :blank").
 
 La [pseudo-clase CSS](/es/docs/Web/CSS) **`:blank`** selecciona elementos de entrada vaciós (eg. {{HTMLElement("input")}} or {{HTMLElement("textarea")}}).
 
