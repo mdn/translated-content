@@ -116,13 +116,11 @@ L'attribut `type` d'un élément {{HTMLElement("source")}} permet d'indiquer le 
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#the-picture-element', '&lt;picture&gt;')}} | {{Spec2('HTML WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.picture")}}
+{{Compat}}
 
 ## Voir aussi
 

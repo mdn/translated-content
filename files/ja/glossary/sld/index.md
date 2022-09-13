@@ -10,13 +10,13 @@ SLD (Second Level Domain; セカンドレベルドメイン) は {{Glossary("TLD
 
 もう一つの例として、 `developer.mozilla.org` では、 `developer` サブドメインが、 Mozilla ウェブサイトの開発者向け (developer) の章を含むサブドメインを指定するのに使われています。
 
-1.  Wikipedia articles
+1. Wikipedia articles
 
-    1.  {{Interwiki("wikipedia", "セカンドレベルドメイン", "SLD")}}
+    1. {{Interwiki("wikipedia", "セカンドレベルドメイン", "SLD")}}
 
-2.  [用語集](/ja/docs/Glossary)
+2. [用語集](/ja/docs/Glossary)
 
-    1.  {{Glossary("DNS")}}
-    2.  {{Glossary("Domain", "ドメイン")}}
-    3.  {{Glossary("Domain name", "ドメイン名")}}
-    4.  {{Glossary("TLD")}}
+    1. {{Glossary("DNS")}}
+    2. {{Glossary("Domain", "ドメイン")}}
+    3. {{Glossary("Domain name", "ドメイン名")}}
+    4. {{Glossary("TLD")}}

@@ -1,20 +1,6 @@
 ---
 title: MediaRecorder.start()
 slug: Web/API/MediaRecorder/start
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture
-  - MediaRecorder
-  - MediaStream Recording
-  - MediaStream Recording API
-  - Method
-  - Recording Media
-  - Reference
-  - Video
-  - start
-translation_of: Web/API/MediaRecorder/start
 ---
 {{APIRef("MediaStream Recording")}}
 

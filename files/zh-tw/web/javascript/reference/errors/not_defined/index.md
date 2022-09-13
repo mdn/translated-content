@@ -37,7 +37,7 @@ foo.substring(1); // "ar"
 
 ### 作用域錯誤
 
-A variable need to be available in the current context of execution. Variables defined inside a [function](/en-US/docs/Web/JavaScript/Reference/Functions) cannot be accessed from anywhere outside the function, because the variable is defined only in the scope of the function
+A variable need to be available in the current context of execution. Variables defined inside a [function](/zh-TW/docs/Web/JavaScript/Reference/Functions) cannot be accessed from anywhere outside the function, because the variable is defined only in the scope of the function
 
 ```js example-bad
 function numbers () {

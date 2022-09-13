@@ -1,12 +1,6 @@
 ---
 title: CustomEvent
 slug: Web/API/CustomEvent
-page-type: web-api-interface
-tags:
-  - インターフェイス
-  - リファレンス
-browser-compat: api.CustomEvent
-translation_of: Web/API/CustomEvent
 ---
 {{APIRef("DOM")}}
 

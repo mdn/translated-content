@@ -1,11 +1,6 @@
 ---
 title: 'ARIA: main ロール'
 slug: Web/Accessibility/ARIA/Roles/Main_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Main_role
 ---
 メイン (`main`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、文書の主要なコンテンツを示すために使用します。 メインコンテンツ領域は、文書の中心的な話題やアプリケーションの中心的な機能と直接関連したり、それらを拡張するコンテンツで構成されます。
 
@@ -114,4 +109,4 @@ TBD
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [The main element | HTML5 Doctor](https://html5doctor.com/the-main-element/)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

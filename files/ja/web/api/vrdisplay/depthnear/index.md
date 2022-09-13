@@ -1,19 +1,6 @@
 ---
 title: VRDisplay.depthNear
 slug: Web/API/VRDisplay/depthNear
-page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - depthNear
-browser-compat: api.VRDisplay.depthNear
-translation_of: Web/API/VRDisplay/depthNear
 original_slug: Web/API/VRDevice/depthNear
 ---
 {{APIRef("WebVR API")}}{{Deprecated_Header}}

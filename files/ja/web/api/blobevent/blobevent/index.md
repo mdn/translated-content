@@ -1,16 +1,6 @@
 ---
 title: BlobEvent()
 slug: Web/API/BlobEvent/BlobEvent
-tags:
-  - API
-  - BlobEvent
-  - Constructor
-  - DOM
-  - DOM Reference
-  - Experimental
-  - Media Stream Encoding
-  - Reference
-translation_of: Web/API/BlobEvent/BlobEvent
 ---
 {{APIRef("Media Capture and Streams")}}{{seeCompatTable}}
 

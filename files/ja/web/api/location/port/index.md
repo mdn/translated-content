@@ -1,13 +1,6 @@
 ---
 title: location.port
 slug: Web/API/Location/port
-tags:
-  - API
-  - Location
-  - プロパティ
-  - リファレンス
-browser-compat: api.Location.port
-translation_of: Web/API/Location/port
 ---
 {{ApiRef("Location")}}
 

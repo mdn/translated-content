@@ -1,12 +1,6 @@
 ---
 title: 塗りつぶしとストローク
 slug: Web/SVG/Tutorial/Fills_and_Strokes
-tags:
-  - Beginner
-  - NeedLiveSamples
-  - SVG
-  - SVG:Tutorial
-translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}
 

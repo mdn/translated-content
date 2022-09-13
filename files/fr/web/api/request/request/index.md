@@ -50,7 +50,7 @@ var maRequete = new Request(entree[, init]);
 
 | **Type**    | **Description**                                                                                                                                                                                         |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `TypeError` | Depuis [Firefox 43](/fr/docs/Mozilla/Firefox/Releases/43), `Request()` déclenchera une TypeError si l'URL contient des informations d'authentification, comme dans http://user:password@example.com. |
+| `TypeError` | Depuis [Firefox 43](/fr/docs/Mozilla/Firefox/Releases/43), `Request()` déclenchera une TypeError si l'URL contient des informations d'authentification, comme dans `http://user:password@example.com`. |
 
 ## Exemple
 

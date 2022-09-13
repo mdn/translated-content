@@ -1,17 +1,6 @@
 ---
 title: CSSVariableReferenceValue.fallback
 slug: Web/API/CSSVariableReferenceValue/fallback
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSVariableReferenceValue
-  - Houdini
-  - NeedsExample
-  - Property
-  - Reference
-  - fallback
-  - プロパティ
-translation_of: Web/API/CSSVariableReferenceValue/fallback
 ---
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 

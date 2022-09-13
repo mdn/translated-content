@@ -1,13 +1,6 @@
 ---
 title: MessagePort.close()
 slug: Web/API/MessagePort/close
-tags:
-  - API
-  - Channel messaging
-  - MessagePort
-  - Method
-  - Reference
-translation_of: Web/API/MessagePort/close
 ---
 {{APIRef("HTML DOM")}}
 

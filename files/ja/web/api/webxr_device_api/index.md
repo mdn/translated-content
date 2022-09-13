@@ -1,19 +1,6 @@
 ---
 title: WebXR Device API
 slug: Web/API/WebXR_Device_API
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Graphics
-  - Overview
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-translation_of: Web/API/WebXR_Device_API
 ---
 {{DefaultAPISidebar("WebXR Device API")}}
 

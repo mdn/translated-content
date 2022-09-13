@@ -1,18 +1,6 @@
 ---
 title: Intl.PluralRules.selectRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - ローカライズ
-  - メソッド
-  - PluralRules
-  - Prototype
-  - リファレンス
-  - selectRange
-browser-compat: javascript.builtins.Intl.PluralRules.selectRange
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange
 ---
 {{JSRef}}
 

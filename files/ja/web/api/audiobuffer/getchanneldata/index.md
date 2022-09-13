@@ -1,14 +1,6 @@
 ---
 title: AudioBuffer.getChannelData()
 slug: Web/API/AudioBuffer/getChannelData
-tags:
-  - API
-  - AudioBuffer
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-browser-compat: api.AudioBuffer.getChannelData
-translation_of: Web/API/AudioBuffer/getChannelData
 ---
 {{ APIRef("Web Audio API") }}
 

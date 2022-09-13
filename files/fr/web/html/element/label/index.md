@@ -206,15 +206,11 @@ Un élément {{HTMLElement("input")}} avec `type="button"` et un attribut `value
 
 ## Spécifications
 
-| Spécification                                                                                        | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-label-element', '&lt;label&gt;')}} | {{Spec2('HTML WHATWG')}} |                      |
-| {{SpecName('HTML5 W3C', 'forms.html#the-label-element', '&lt;label&gt;')}} | {{Spec2('HTML5 W3C')}}     |                      |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.9.1', '&lt;label&gt;')}}     | {{Spec2('HTML4.01')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.label")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -21,7 +21,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 ### 最小化文件数量
 
-减少一个页面引用的文件数量可以降低在下载一个页面的过程中需要的[HTTP](/en-US/docs/HTTP)请求数量，从而减少这些请求的收发时间。
+减少一个页面引用的文件数量可以降低在下载一个页面的过程中需要的[HTTP](/zh-CN/docs/HTTP)请求数量，从而减少这些请求的收发时间。
 
 根据其缓存设置，浏览器可能会为每个所引用的文件发送一个带 [If-Modified-Since](/zh-CN/docs/Web/HTTP/Headers/If-Modified-Since) 的请求给网络服务器，以查询这些文件自上次加载后是否有被修改。查询引用文件上次修改时间会花费太多时间，导致网页首屏延迟，这是因为在渲染页面之前浏览器必须确认每个文件的修改时间。
 
@@ -122,7 +122,7 @@ Large images cause your page to take more time to load. Consider compressing you
 table-layout: fixed;
 ```
 
-用 [`<col>`](/en-US/docs/Web/HTML/Element/col) 和 [`<colgroup>`](/en-US/docs/Web/HTML/Element/colgroup) 元素来指定列宽。
+用 [`<col>`](/zh-CN/docs/Web/HTML/Element/col) 和 [`<colgroup>`](/zh-CN/docs/Web/HTML/Element/colgroup) 元素来指定列宽。
 
 ### 合理的选择 user-agent
 
@@ -134,7 +134,7 @@ table-layout: fixed;
 
 ### 尽可能使用 async 和 defer
 
-确保 JavaScript 脚本兼容 [async](/en-US/docs/HTML/Element/script#Attributes) 和 [defer](/en-US/docs/HTML/Element/script#Attributes)，任何时候都要尽可能使用 [async](/en-US/docs/HTML/Element/script#Attributes) ，特别是当你有较多的 script 标签时。
+确保 JavaScript 脚本兼容 [async](/zh-CN/docs/HTML/Element/script#Attributes) 和 [defer](/zh-CN/docs/HTML/Element/script#Attributes)，任何时候都要尽可能使用 [async](/zh-CN/docs/HTML/Element/script#Attributes) ，特别是当你有较多的 script 标签时。
 
 这样在加载 JavaScript 的过程中页面就不会重新绘制，否则，浏览器在不具有这些特性的 script 标签后就不会重绘任何东西。
 

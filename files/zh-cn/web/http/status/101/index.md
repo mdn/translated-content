@@ -17,7 +17,7 @@ HTTP **`101 Switching Protocol`**（协议切换）状态码表示服务器应�
 
 ## 示例
 
-在使用 [WebSockets](/en-US/docs/Web/API/WebSockets_API) 时会用到协议切换。
+在使用 [WebSockets](/zh-CN/docs/Web/API/WebSockets_API) 时会用到协议切换。
 
 ```plain
 HTTP/1.1 101 Switching Protocols
@@ -31,7 +31,7 @@ Connection: Upgrade
 
 ## 参见
 
-- [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism)
-- [WebSockets](/en-US/docs/Web/API/WebSockets_API)
+- [Protocol upgrade mechanism](/zh-CN/docs/Web/HTTP/Protocol_upgrade_mechanism)
+- [WebSockets](/zh-CN/docs/Web/API/WebSockets_API)
 - {{HTTPHeader("Upgrade")}}
 - {{HTTPStatus("426")}} `Upgrade Required`

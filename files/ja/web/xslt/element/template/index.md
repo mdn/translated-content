@@ -1,12 +1,6 @@
 ---
 title: <xsl:template>
 slug: Web/XSLT/Element/template
-tags:
-  - Template
-  - XSLT
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/template
 ---
 {{ XsltRef() }}
 
@@ -16,12 +10,12 @@ translation_of: Web/XSLT/Element/template
 
 ```
 <xsl:template
-	match=PATTERN
-	name=NAME
-	mode=NAME
-	priority=NUMBER>
-	<xsl:param> [optional]
-	TEMPLATE
+  match=PATTERN
+  name=NAME
+  mode=NAME
+  priority=NUMBER>
+  <xsl:param> [optional]
+  TEMPLATE
 </xsl:template>
 ```
 

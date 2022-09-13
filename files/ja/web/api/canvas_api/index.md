@@ -1,14 +1,6 @@
 ---
 title: キャンバス API
 slug: Web/API/Canvas_API
-tags:
-  - API
-  - キャンバス
-  - グラフィック
-  - JavaScript
-  - 概要
-  - リファレンス
-translation_of: Web/API/Canvas_API
 ---
 {{CanvasSidebar}}
 

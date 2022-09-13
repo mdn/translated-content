@@ -1,17 +1,7 @@
 ---
 title: element()
 slug: Web/CSS/element
-tags:
-  - CSS
-  - CSS 関数
-  - CSS4-images
-  - 関数
-  - レイアウト
-  - Reference
-  - ウェブ
-translation_of: Web/CSS/element()
 original_slug: Web/CSS/element()
-browser-compat: css.types.image.element
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

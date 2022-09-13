@@ -1,18 +1,6 @@
 ---
 title: MediaSource.duration
 slug: Web/API/MediaSource/duration
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Property
-  - Reference
-  - Video
-  - duration
-translation_of: Web/API/MediaSource/duration
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 

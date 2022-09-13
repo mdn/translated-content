@@ -23,7 +23,7 @@ Les textures sont caractérisées par des collections de Texel, comme la façon 
 
 - [Texel](https://fr.wikipedia.org/wiki/Texel_(infographie)) sur Wikipédia
 
-### En savoir plus
+### Voir aussi
 
 - [Utilisation de textures dans WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)
 - [Éclairage dans WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL)

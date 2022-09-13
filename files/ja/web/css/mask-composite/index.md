@@ -1,15 +1,6 @@
 ---
 title: mask-composite
 slug: Web/CSS/mask-composite
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - Experimental
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.mask-composite
-translation_of: Web/CSS/mask-composite
 ---
 {{CSSRef}}
 

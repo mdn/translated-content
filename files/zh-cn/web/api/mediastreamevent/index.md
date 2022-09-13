@@ -36,5 +36,5 @@ pc.onaddstream = function( ev ) {
 
 ## See also
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)
 - Its usual target: {{domxref("RTCPeerConnection")}}.

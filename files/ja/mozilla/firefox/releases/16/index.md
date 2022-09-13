@@ -1,10 +1,6 @@
 ---
 title: Firefox 16 for developers
 slug: Mozilla/Firefox/Releases/16
-tags:
-  - '2009'
-  - Firefox
-translation_of: Mozilla/Firefox/Releases/16
 ---
 Firefox 16 は、2012 年 10 月 9 日にリリースされました。この記事では、ウェブ開発者に知らせるだけでなく、Firefox や Gecko 開発者、アドオン開発者にも役立つ主な変更点のリストを掲載しています。
 

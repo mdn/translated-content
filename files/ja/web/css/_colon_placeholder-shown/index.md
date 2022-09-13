@@ -1,14 +1,6 @@
 ---
 title: ':placeholder-shown'
 slug: Web/CSS/:placeholder-shown
-tags:
-  - ':placeholder-shown'
-  - CSS
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.placeholder-shown
-translation_of: Web/CSS/:placeholder-shown
 ---
 {{CSSRef}}
 

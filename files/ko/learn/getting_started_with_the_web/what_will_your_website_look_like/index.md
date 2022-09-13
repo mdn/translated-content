@@ -1,11 +1,6 @@
 ---
 title: 웹사이트의 외관은 어떻게 할까요?
 slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
-tags:
-  - Beginner
-  - Learn
-  - l10n:priority
-translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 

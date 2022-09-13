@@ -1,17 +1,6 @@
 ---
 title: Intl.Locale.prototype.script
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/script
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - プロパティ
-  - Locale
-  - ローカライズ
-  - プロトタイプ
-  - リファレンス
-browser-compat: javascript.builtins.Intl.Locale.script
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/script
 ---
 {{JSRef}}
 

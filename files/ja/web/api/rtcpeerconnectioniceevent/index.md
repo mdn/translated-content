@@ -44,5 +44,5 @@ pc.onicecandidate = function( ev ) {
 
 ## その他の記事
 
-- [WebRTC](/ja/docs/Web/Guide/API/WebRTC "/en-US/docs/CSS/Using_CSS_animations")
+- [WebRTC](/ja/docs/Web/Guide/API/WebRTC)
 - このイベントの通常ターゲット: {{domxref("RTCPeerConnection")}}.

@@ -72,13 +72,13 @@ transform-origin: unset;
 - _x-offset_
   - : 定义变形中心距离盒模型的左侧的{{cssxref("&lt;length&gt;")}}或{{cssxref("&lt;percentage&gt;")}}偏移值。
 - _offset-keyword_
-  - : ` left，``right，``top，``bottom或``center中之一，定义相对应的变形中心偏移。 `
+  - : `left`，`right`，`top`，`bottom` 或 `center` 中之一，定义相对应的变形中心偏移。
 - _y-offset_
   - : 定义变形中心距离盒模型的顶的{{cssxref("&lt;length&gt;")}}或{{cssxref("&lt;percentage&gt;")}}偏移值。
 - _x-offset-keyword_
-  - : ` left，``right``或``center中之一，定义相对应的变形中心偏移。 `
+  - : `left`，`right` 或 `center` 中之一，定义相对应的变形中心偏移。
 - _y-offset-keyword_
-  - : ` top，``bottom或``center中之一，定义相对应的变形中心偏移。 `
+  - : `top`，`bottom` 或 `center` 中之一，定义相对应的变形中心偏移。
 - _z-offset_
   - : 定义变形中心距离用户视线（z=0 处）的{{cssxref("&lt;length&gt;")}}（不能是{{cssxref("&lt;percentage&gt;")}}）偏移值。
 

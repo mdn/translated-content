@@ -1,7 +1,6 @@
 ---
 title: <mphantom>
 slug: Web/MathML/Element/mphantom
-translation_of: Web/MathML/Element/mphantom
 ---
 {{MathMLRef}}
 

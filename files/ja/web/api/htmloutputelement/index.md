@@ -1,13 +1,6 @@
 ---
 title: HTMLOutputElement
 slug: Web/API/HTMLOutputElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-  - インターフェイス
-translation_of: Web/API/HTMLOutputElement
 ---
 {{APIRef("HTML DOM")}}
 

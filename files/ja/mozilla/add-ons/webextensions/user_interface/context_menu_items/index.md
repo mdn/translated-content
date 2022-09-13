@@ -1,9 +1,6 @@
 ---
 title: コンテキストメニュー項目
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 ---
 {{AddonSidebar}}
 

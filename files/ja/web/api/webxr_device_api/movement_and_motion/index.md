@@ -1,23 +1,6 @@
 ---
 title: '移動、向き、モーション: WebXR の例'
 slug: Web/API/WebXR_Device_API/Movement_and_motion
-tags:
-  - 3D
-  - API
-  - AR
-  - Example
-  - Guide
-  - Reality
-  - Tutorial
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - augmented
-  - rendering
-translation_of: Web/API/WebXR_Device_API/Movement_and_motion
 ---
 {{DefaultAPISidebar("WebXR Device API")}}
 

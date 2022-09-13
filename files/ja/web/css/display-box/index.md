@@ -1,14 +1,6 @@
 ---
 title: <display-box>
 slug: Web/CSS/display-box
-tags:
-  - CSS
-  - CSS データ型
-  - CSS 表示
-  - データ型
-  - リファレンス
-  - display-box
-translation_of: Web/CSS/display-box
 ---
 {{CSSRef}}
 

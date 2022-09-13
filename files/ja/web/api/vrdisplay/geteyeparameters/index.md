@@ -1,20 +1,6 @@
 ---
 title: VRDisplay.getEyeParameters()
 slug: Web/API/VRDisplay/getEyeParameters
-page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - getEyeParameters()
-browser-compat: api.VRDisplay.getEyeParameters
-translation_of: Web/API/VRDisplay/getEyeParameters
 original_slug: Web/API/VRDevice/getEyeParameters
 ---
 {{APIRef("WebVR API")}}{{Deprecated_Header}}

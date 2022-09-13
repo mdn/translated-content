@@ -1,14 +1,6 @@
 ---
 title: コンテンツカテゴリー
 slug: Web/Guide/HTML/Content_categories
-tags:
-  - Advanced
-  - Guide
-  - HTML
-  - HTML5
-  - NeedsUpdate
-  - Web
-translation_of: Web/Guide/HTML/Content_categories
 ---
 ほとんどの [HTML](/ja/docs/Web/HTML) 要素は 1 つ以上の**コンテンツカテゴリー**に属していて、カテゴリーごとに共通した特徴を持つ要素を分類しています。これは緩やかなグループ分けです（実際にはこれらのカテゴリーの要素間の関係を作成していません）。しかし、これらは、特にその複雑な詳細に遭遇したときに、カテゴリーの共有動作とその関連ルールを定義し記述するのに役立ちます。*どの*カテゴリーにも属さない要素も存在します。
 

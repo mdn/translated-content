@@ -1,12 +1,6 @@
 ---
 title: <xsl:decimal-format>
 slug: Web/XSLT/Element/decimal-format
-tags:
-  - XSLT
-  - decimal-format
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/decimal-format
 ---
 {{ XsltRef() }}
 
@@ -16,17 +10,17 @@ translation_of: Web/XSLT/Element/decimal-format
 
 ```
 <xsl:decimal-format
-	name=NAME
-	decimal-separator=CHARACTER
-	grouping-separator=CHARACTER
-	infinity=STRING
-	minus-sign=CHARACTER
-	NaN=STRING
-	percent=CHARACTER
-	per-mille=CHARATER
-	zero-digit=CHARACTER
-	digit=CHARACTER
-	pattern-separator=CHARACTER />
+  name=NAME
+  decimal-separator=CHARACTER
+  grouping-separator=CHARACTER
+  infinity=STRING
+  minus-sign=CHARACTER
+  NaN=STRING
+  percent=CHARACTER
+  per-mille=CHARATER
+  zero-digit=CHARACTER
+  digit=CHARACTER
+  pattern-separator=CHARACTER />
 ```
 
 ### 必須属性

@@ -24,11 +24,11 @@ immutableString = immutableString + "World";
 
 "immutableString" に文字列値を追加すると、次のイベントが発生します。
 
-1.  "immutableString" の既存の値が取得される。
-2.  "immutableString" の既存の値に "World" が追加される。
-3.  結果の値は、新しいメモリーブロックに割り当てられる。
-4.  "immutableString" オブジェクトは新たに作成されたメモリー空間を指すようになる。
-5.  以前に作成されたメモリー空間がガベージコレクション可能になる。
+1. "immutableString" の既存の値が取得される。
+2. "immutableString" の既存の値に "World" が追加される。
+3. 結果の値は、新しいメモリーブロックに割り当てられる。
+4. "immutableString" オブジェクトは新たに作成されたメモリー空間を指すようになる。
+5. 以前に作成されたメモリー空間がガベージコレクション可能になる。
 
 ## より詳しく知る
 

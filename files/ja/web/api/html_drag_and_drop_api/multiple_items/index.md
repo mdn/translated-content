@@ -1,12 +1,6 @@
 ---
 title: 複数のアイテムのドラッグ＆ドロップ
 slug: Web/API/HTML_Drag_and_Drop_API/Multiple_items
-tags:
-  - Gecko
-  - ガイド
-  - 標準外
-  - ドラッグ＆ドロップ
-translation_of: Web/API/HTML_Drag_and_Drop_API/Multiple_items
 original_slug: DragDrop/Dragging_and_Dropping_Multiple_Items
 ---
 {{DefaultAPISidebar("HTML Drag and Drop API")}}

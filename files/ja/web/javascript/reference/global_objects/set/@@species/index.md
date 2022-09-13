@@ -1,13 +1,6 @@
 ---
 title: get Set[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@species
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - プロパティ
-  - set
-browser-compat: javascript.builtins.Set.@@species
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@species
 ---
 {{JSRef}}
 

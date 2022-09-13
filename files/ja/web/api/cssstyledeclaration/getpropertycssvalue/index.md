@@ -1,14 +1,6 @@
 ---
 title: CSSStyleDeclaration.getPropertyCSSValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyCSSValue
-tags:
-  - API
-  - CSSOM
-  - Method
-  - Deprecated
-  - Reference
-translation_of: Web/API/CSSStyleDeclaration/getPropertyCSSValue
-browser-compat: api.CSSStyleDeclaration.getPropertyCSSValue
 ---
 {{ APIRef("CSSOM") }} {{deprecated_header}}
 

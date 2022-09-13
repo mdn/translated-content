@@ -1,15 +1,6 @@
 ---
 title: <angle-percentage>
 slug: Web/CSS/angle-percentage
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - リファレンス
-  - angle-percentage
-  - 単位
-  - 値
-translation_of: Web/CSS/angle-percentage
 ---
 {{CSSRef}}
 

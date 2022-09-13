@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Statements/throw
 ---
 {{jsSidebar("Statements")}}
 
-**`throw`语句**用来抛出一个用户自定义的异常。当前函数的执行将被停止（`throw`之后的语句将不会执行），并且控制将被传递到调用堆栈中的第一个[`catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch)块。如果调用者函数中没有`catch`块，程序将会终止。
+**`throw`** **语句**用来抛出一个用户自定义的异常。当前函数的执行将被停止（`throw` 之后的语句将不会执行），并且控制将被传递到调用堆栈中的第一个 [`catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 块。如果调用者函数中没有 `catch` 块，程序将会终止。
 
 {{EmbedInteractiveExample("pages/js/statement-throw.html")}}
 

@@ -1,13 +1,6 @@
 ---
 title: unescape()
 slug: Web/JavaScript/Reference/Global_Objects/unescape
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Polyfill
-browser-compat: javascript.builtins.unescape
-translation_of: Web/JavaScript/Reference/Global_Objects/unescape
 l10n:
   sourceCommit: 1931ea17c117b5eafa315c638e70429e500bdca9
 ---

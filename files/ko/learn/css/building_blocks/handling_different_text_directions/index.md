@@ -1,7 +1,6 @@
 ---
 title: 텍스트 표시 방향 제어하기
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
-translation_of: Learn/CSS/Building_blocks/Handling_different_text_directions
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
 

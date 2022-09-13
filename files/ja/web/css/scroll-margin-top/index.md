@@ -1,16 +1,6 @@
 ---
 title: scroll-margin-top
 slug: Web/CSS/scroll-margin-top
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - Web
-  - recipe:css-property
-  - scroll-margin
-  - scroll-margin-top
-browser-compat: css.properties.scroll-margin-top
-translation_of: Web/CSS/scroll-margin-top
 ---
 {{CSSRef}}
 

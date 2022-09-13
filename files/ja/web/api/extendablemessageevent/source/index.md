@@ -53,5 +53,5 @@ self.onmessage = function(e) {
 
 - [Service worker の使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [サービスワーカーの基本的なコード例](https://github.com/mdn/sw-test)（英語）
-- [ServiceWorker の準備はできていますか？ ](https://jakearchibald.github.io/isserviceworkerready/)（英語）
+- [ServiceWorker の準備はできていますか？](https://jakearchibald.github.io/isserviceworkerready/)（英語）
 - [Channel Messaging](/ja/docs/Web/API/Channel_Messaging_API)

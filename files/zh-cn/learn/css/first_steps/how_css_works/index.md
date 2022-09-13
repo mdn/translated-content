@@ -160,5 +160,5 @@ p {
 1. [什么是 CSS](/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS)
 2. [入门 CSS](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)
 3. [CSS 的结构](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS 如何运行](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
+4. [CSS 如何运行](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)
 5. [使用新知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)

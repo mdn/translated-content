@@ -1,14 +1,6 @@
 ---
 title: '<h1>–<h6>: HTML の見出し要素'
 slug: Web/HTML/Element/Heading_Elements
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - Web
-browser-compat: html.elements.h1
-translation_of: Web/HTML/Element/Heading_Elements
 ---
 
 {{HTMLRef}}

@@ -4,7 +4,7 @@ slug: Web/CSS/Syntax
 ---
 {{cssref}}
 
-层叠样式表（Cascading Stylesheet，简称[CSS](/en/CSS) ），其基本目标是让浏览器以指定的特性去绘制页面元素，比如颜色，定位，装饰。CSS 的语法反映了这个目标，由下面两个部分构建：
+层叠样式表（Cascading Stylesheet，简称[CSS](/zh-CN/CSS) ），其基本目标是让浏览器以指定的特性去绘制页面元素，比如颜色，定位，装饰。CSS 的语法反映了这个目标，由下面两个部分构建：
 
 - 属性（ **property）**是一个标识符，用可读的名称来表示其特性。
 - 值（**value）**则描述了浏览器引擎如何处理该特性。每个属性都包含一个有效值的集合，它有正式的语法和语义定义，被浏览器引擎实现。
@@ -17,7 +17,7 @@ CSS 的核心功能是将 CSS 属性设定为特定的值。一个属性与值�
 
 ![css syntax - declaration.png](/@api/deki/files/6164/=css_syntax_-_declaration.png)
 
-目前 CSS 中有 [100 多个属性](/en/CSS/CSS_Reference) ，并且几乎有无限多个不同的值。并非所有的属性与值的配对都是被允许的，每个属性都定义了它的合法值。如果值对给定的属性而言非法时，声明就会被视为无效的，整个声明就会被 CSS 引擎忽略。
+目前 CSS 中有 [100 多个属性](/zh-CN/CSS/CSS_Reference) ，并且几乎有无限多个不同的值。并非所有的属性与值的配对都是被允许的，每个属性都定义了它的合法值。如果值对给定的属性而言非法时，声明就会被视为无效的，整个声明就会被 CSS 引擎忽略。
 
 ## CSS 声明块
 
@@ -29,7 +29,7 @@ CSS 的核心功能是将 CSS 属性设定为特定的值。一个属性与值�
 
 ![css syntax - declarations block.png](/@api/deki/files/6166/=css_syntax_-_declarations_block.png)
 
-> **备注：** 声明块的内容—开始与结束大括号之间的声明，可以放在 HTML [`style`](/en/HTML/Global_attributes#attr-style) 特性里。
+> **备注：** 声明块的内容—开始与结束大括号之间的声明，可以放在 HTML [`style`](/zh-CN/HTML/Global_attributes#attr-style) 特性里。
 
 ## CSS 规则
 
@@ -39,7 +39,7 @@ CSS 的核心功能是将 CSS 属性设定为特定的值。一个属性与值�
 
 ![css syntax - ruleset.png](/@api/deki/files/6167/=css_syntax_-_ruleset.png)
 
-一个元素可能被多个选择器选中，因此会有多个规则，有可能以不同的值去设置同一属性。CSS 标准会规定哪个优先级最高并生效，称之为 [层叠（cascade)](/en/CSS/Getting_Started/Cascading_and_inheritance) 算法。
+一个元素可能被多个选择器选中，因此会有多个规则，有可能以不同的值去设置同一属性。CSS 标准会规定哪个优先级最高并生效，称之为 [层叠（cascade)](/zh-CN/CSS/Getting_Started/Cascading_and_inheritance) 算法。
 
 _有一点需要注意的是，尽管用一组选择器来定义的单个规则集，比用多个单一选择器来定义的多个规则集更加简洁，但这却不适用于规则集的有效性。_
 
@@ -56,12 +56,12 @@ _这会导致一个重要的后果：如果其中的一个选择器是无效的�
 语句类型：
 
 - 规则。如上，将一组 CSS 声明与用选择器定义的条件相关联。
-- at 规则（[at-rules](https://developer.mozilla.org/en/CSS/At-rule)）。以 @ (U+0040 COMMERCIAL AT) 开始，随后是标识符，一直到以分号或右大括号结束。每个 at 规则由其标识符定义，可能有它自己的语法。at 规则涵盖了 meta 信息（比如 @charset @import)，条件信息（比如 @media @document), 描述信息（比如 @font-face)。
+- at 规则（[at-rules](/zh-CN/CSS/At-rule)）。以 @ (U+0040 COMMERCIAL AT) 开始，随后是标识符，一直到以分号或右大括号结束。每个 at 规则由其标识符定义，可能有它自己的语法。at 规则涵盖了 meta 信息（比如 @charset @import)，条件信息（比如 @media @document), 描述信息（比如 @font-face)。
 
 不是上面类型的语句则是非法的，被忽略。
 
 条件规则组（conditional group rules）是特殊的 at 规则，可以嵌套语句。它里面的语句只有在特定条件下才生效。
-CSS1 与 CSS2.1 下，条件规则组里面只能用规则。CSS3 下还可以用一些但不是全部的 at 规则，见[_CSS Conditionals Level 3_](https://developer.mozilla.org/en/CSS/CSS3#Conditionals)。
+CSS1 与 CSS2.1 下，条件规则组里面只能用规则。CSS3 下还可以用一些但不是全部的 at 规则，见[_CSS Conditionals Level 3_](/zh-CN/CSS/CSS3#Conditionals)。
 
 ## 参见
 

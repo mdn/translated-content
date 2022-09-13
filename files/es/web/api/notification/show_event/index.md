@@ -12,7 +12,6 @@ El evento **`show`** de la interfaz de {{domxref("Notification")}} se activa cua
 
 Use el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}}, o establezca una propiedad de manejador de eventos.
 
-
 ```js
 addEventListener('show', event => { });
 

@@ -1,18 +1,6 @@
 ---
 title: '::cue'
 slug: Web/CSS/::cue
-tags:
-  - '::cue'
-  - CSS
-  - メディア
-  - 擬似要素
-  - リファレンス
-  - セレクター
-  - ウェブ動画テキストトラック
-  - WebVTT
-  - cue
-browser-compat: css.selectors.cue
-translation_of: Web/CSS/::cue
 ---
 {{CSSRef}}
 

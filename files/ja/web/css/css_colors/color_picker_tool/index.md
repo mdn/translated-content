@@ -1,19 +1,6 @@
 ---
 title: 色選択ツール
 slug: Web/CSS/CSS_Colors/Color_picker_tool
-tags:
-  - CSS
-  - CSS 色選択
-  - CSS 色選択ツール
-  - CSS 色
-  - 色選択
-  - HTML 色選択
-  - HTML 色選択ツール
-  - HTML 色
-  - ツール
-  - color
-  - colors
-translation_of: Web/CSS/CSS_Colors/Color_picker_tool
 ---
 {{CSSRef}}
 

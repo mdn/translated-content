@@ -1,19 +1,6 @@
 ---
 title: Image()
 slug: Web/API/HTMLImageElement/Image
-page-type: web-api-constructor
-tags:
-  - API
-  - コンストラクター
-  - DOM
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - 画像()
-  - リファレンス
-  - img
-browser-compat: api.HTMLImageElement.Image
-translation_of: Web/API/HTMLImageElement/Image
 ---
 {{APIRef("HTML DOM")}}
 

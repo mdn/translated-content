@@ -72,7 +72,7 @@ _`TextDecoder` 接口不继承任何方法_。
 ## 相关链接
 
 - {{DOMxRef("TextEncoder")}} 接口描述了逆操作。
-- [`StringView`](/en-US/Add-ons/Code_snippets/StringView) –基于类型数组的字符串的类似 C 的表示形式
+- [`StringView`](/zh-CN/Add-ons/Code_snippets/StringView) –基于类型数组的字符串的类似 C 的表示形式
 - 一个[垫片](http://code.google.com/p/stringencoding/)，允许在不支持它的浏览器使用这个接口。
-- [`Components.utils.importGlobalProperties`](/en-US/docs/Components.utils.importGlobalProperties)
+- [`Components.utils.importGlobalProperties`](/zh-CN/docs/Components.utils.importGlobalProperties)
 - [Node.js 支持从 v11.0.0 全局导出](https://nodejs.org/api/util.html#util_class_util_textdecoder)

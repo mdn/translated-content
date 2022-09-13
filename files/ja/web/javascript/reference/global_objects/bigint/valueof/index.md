@@ -1,14 +1,6 @@
 ---
 title: BigInt.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
-tags:
-  - BigInt
-  - JavaScript
-  - メソッド
-  - プロトタイプ
-  - valueOf()
-browser-compat: javascript.builtins.BigInt.valueOf
-translate_of: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
 ---
 {{JSRef}}
 

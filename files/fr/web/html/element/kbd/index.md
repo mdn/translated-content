@@ -212,15 +212,11 @@ On voit ici différentes imbrications. La description de l'option du menu est in
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-kbd-element', '&lt;kbd&gt;')}}             | {{Spec2('HTML WHATWG')}} |                                                                                                        |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-kbd-element', '&lt;kbd&gt;')}} | {{Spec2('HTML5 W3C')}}     | Extension de l'élément afin d'inclure tout type de saisie de l'utilisateur (vocale, tactile, clavier). |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;kbd&gt;')}}                         | {{Spec2('HTML4.01')}}     |                                                                                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.kbd")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,11 +1,6 @@
 ---
 title: CSS グリッドレイアウトとアクセシビリティ
 slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility
-tags:
-  - Accessibility
-  - CSS
-  - CSS グリッド
-  - ガイド
 ---
 {{CSSRef}}
 

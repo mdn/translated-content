@@ -4,7 +4,7 @@ slug: Web/API/Request/method
 ---
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 
-{{domxref("Request")}} インターフェースの **`method`** 読み取り専用プロパティには、リクエストメソッド（` GET、``POST など）を含みます。 `
+{{domxref("Request")}} インターフェースの **`method`** 読み取り専用プロパティには、リクエストメソッド（`GET`、`POST` など）を含みます。
 
 ## 構文
 

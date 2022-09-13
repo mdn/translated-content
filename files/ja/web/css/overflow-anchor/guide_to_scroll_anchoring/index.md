@@ -1,12 +1,6 @@
 ---
 title: スクロールアンカリングの紹介
 slug: Web/CSS/overflow-anchor/Guide_to_scroll_anchoring
-tags:
-  - CSS
-  - ガイド
-  - overflow-anchor
-  - スクロールアンカリング
-translation_of: Web/CSS/overflow-anchor/Guide_to_scroll_anchoring
 ---
 {{CSSRef}}
 

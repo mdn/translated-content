@@ -1,14 +1,6 @@
 ---
 title: Visualizations with Web Audio API
 slug: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
-tags:
-  - API
-  - Web Audio API
-  - analyser
-  - fft
-  - visualization
-  - waveform
-translation_of: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 ---
 Web Audio API の最も興味深い機能の 1 つは、オーディオソースから周波数、波形、その他のデータを抽出し、それを使用してビジュアライゼーションを作成する機能です。この記事では、方法について説明し、いくつかの基本的な使用例を示します。
 

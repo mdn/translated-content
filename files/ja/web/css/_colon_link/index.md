@@ -1,15 +1,6 @@
 ---
 title: ':link'
 slug: Web/CSS/:link
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.link
-translation_of: Web/CSS/:link
 ---
 {{ CSSRef }}
 

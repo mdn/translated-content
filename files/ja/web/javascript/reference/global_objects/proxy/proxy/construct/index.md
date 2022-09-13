@@ -1,12 +1,6 @@
 ---
 title: handler.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
 ---
 {{JSRef}}
 

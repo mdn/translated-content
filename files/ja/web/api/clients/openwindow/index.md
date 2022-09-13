@@ -1,15 +1,6 @@
 ---
 title: Clients.openWindow()
 slug: Web/API/Clients/openWindow
-tags:
-  - API
-  - Clients
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - openWindow
-translation_of: Web/API/Clients/openWindow
 ---
 {{APIRef("Service Workers API")}}
 

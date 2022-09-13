@@ -1,15 +1,6 @@
 ---
 title: HTMLVideoElement
 slug: Web/API/HTMLVideoElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLVideoElement
-  - インターフェイス
-  - リファレンス
-  - Video
-browser-compat: api.HTMLVideoElement
-translation_of: Web/API/HTMLVideoElement
 ---
 {{APIRef("HTML DOM")}}
 

@@ -14,4 +14,4 @@ Es el acto de una función llamándose a sí misma. La recursión es utilizada p
 ### Conocimiento general
 
 - [Recursión](<https://es.wikipedia.org/wiki/Recursión_(ciencias_de_computación)>) en Wikipedia
-- [Más detalles sobre recursión en Javascript](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Funciones#Recursion)
+- [Más detalles sobre recursión en Javascript](/es/docs/Web/JavaScript/Guide/Funciones#Recursion)

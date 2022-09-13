@@ -55,4 +55,4 @@ pc.setRemoteDescription( new RTCSessionDescription( offer ), function() {
 
 ## See also
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)

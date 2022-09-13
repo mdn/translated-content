@@ -18,7 +18,7 @@ slug: Web/HTTP
 - [HTTP Cookie](/zh-CN/docs/Web/HTTP/Cookies)
   - : [RFC 6265](https://tools.ietf.org/html/rfc6265) 定义了 cookie 的工作方式。在处理 HTTP 请求时，服务器可以在 HTTP 响应头中通过 HTTP Headers `Set-Cookie` 为客户端设置 cookie。然后，对于同一服务器发起的每一个请求，客户端都会在 HTTP 请求头中以字段 `Cookie` 的形式将 cookie 的值发送过去。也可以将 cookie 设置为在特定日期过期，或限制为特定的域和路径。
 - [跨域资源共享（CORS）](/zh-CN/docs/Web/HTTP/CORS)
-  - : **跨站点 HTTP 请求**就是从**另一个域名**，而不是资源所在的域名发起的 HTTP 请求。举例来说，在域名 A (`http://domaina.example/`) 的 HTML 页面上使用 `img` 元素 (`<img src="http://domainb.foo/image.jpg">`) 来请求域名 B (http\://domainb.foo/) 上的图片资源。这在当今的 Web 页面上是很常见的 —— 加载跨站点资源，包括 CSS 样式表，图片，脚本和其他资源。CORS 允许 Web 开发人员控制其站点对跨站点请求的反应。
+  - : **跨站点 HTTP 请求**就是从**另一个域名**，而不是资源所在的域名发起的 HTTP 请求。举例来说，在域名 A (`http://domaina.example/`) 的 HTML 页面上使用 `img` 元素 (`<img src="http://domainb.foo/image.jpg">`) 来请求域名 B (`http://domainb.foo/`) 上的图片资源。这在当今的 Web 页面上是很常见的 —— 加载跨站点资源，包括 CSS 样式表，图片，脚本和其他资源。CORS 允许 Web 开发人员控制其站点对跨站点请求的反应。
 - [HTTP 的演变](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
   - : 简单描述了从早期版本的 HTTP 到现代 HTTP/2，新兴的 HTTP/3 以及未来版本的 HTTP 这个过程中发生的变更。
 - [Mozilla Web 安全准则](https://wiki.mozilla.org/Security/Guidelines/Web_Security)

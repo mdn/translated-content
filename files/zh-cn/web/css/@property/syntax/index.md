@@ -4,7 +4,7 @@ slug: Web/CSS/@property/syntax
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-**`syntax`** [CSS](/en-US/docs/Web/CSS) 描述符在使用{{cssxref("@property")}} {{cssxref("at-rule")}}时是必需的，它描述了该属性所允许的语法结构。
+**`syntax`** [CSS](/zh-CN/docs/Web/CSS) 描述符在使用{{cssxref("@property")}} {{cssxref("at-rule")}}时是必需的，它描述了该属性所允许的语法结构。
 
 ## Syntax
 
@@ -22,7 +22,7 @@ syntax: '*'; /* 任何有效字符 */
 
 ## 取值
 
-规范定义的、受语法支持的字符串。支持的语法是[CSS types](/en-US/docs/Web/CSS/CSS_Types)的子集。 这些可以单独使用，一些类型也可以结合使用。
+规范定义的、受语法支持的字符串。支持的语法是[CSS types](/zh-CN/docs/Web/CSS/CSS_Types)的子集。 这些可以单独使用，一些类型也可以结合使用。
 
 - `"<length>"`
   - : 任何有效的 {{cssxref("&lt;length&gt;")}} 值。
@@ -67,7 +67,7 @@ syntax: '*'; /* 任何有效字符 */
 
 为 `--my-color` {{cssxref('--*', '自定义属性')}}添加颜色值类型检测、设置默认值并且设置属性值不允许被继承。
 
-使用 [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [规则](/en-US/docs/Web/CSS/At-rule):
+使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref('@property')}} [规则](/zh-CN/docs/Web/CSS/At-rule):
 
 ```css
 @property --my-color {
@@ -77,7 +77,7 @@ syntax: '*'; /* 任何有效字符 */
 }
 ```
 
-使用 [JavaScript 中的](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}函数：
+使用 [JavaScript 中的](/zh-CN/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}函数：
 
 ```js
 window.CSS.registerProperty({

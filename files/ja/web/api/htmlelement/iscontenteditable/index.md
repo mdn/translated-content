@@ -1,16 +1,6 @@
 ---
 title: HTMLElement.isContentEditable
 slug: Web/API/HTMLElement/isContentEditable
-tags:
-  - API
-  - 編集
-  - HTML DOM
-  - HTMLElement
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.HTMLElement.isContentEditable
-translation_of: Web/API/HTMLElement/isContentEditable
 ---
 {{ APIRef("HTML DOM") }}
 

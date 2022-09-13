@@ -402,7 +402,7 @@ Access-Control-Allow-Origin: <origin> | *
 
 `origin` 參數指定了一個可以存取資源的 URI。瀏覽器必定會執行此檢查。對一個**不帶有**身分驗證的請求，伺服器可以指定一個「\*」作為萬用字元（wildcard），從而允許任何來源存取資源。
 
-舉例來說，要允許 http\://mozilla.org 存取資源，你可以指定：
+舉例來說，要允許 `http://mozilla.org` 存取資源，你可以指定：
 
 ```plain
 Access-Control-Allow-Origin: http://mozilla.org

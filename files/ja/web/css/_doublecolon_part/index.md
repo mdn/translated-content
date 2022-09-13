@@ -1,18 +1,6 @@
 ---
 title: '::part()'
 slug: Web/CSS/::part
-tags:
-  - '::part'
-  - CSS
-  - Draft
-  - 実験的
-  - NeedsBrowserCompatibility
-  - NeedsExample
-  - 擬似要素
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.part
-translation_of: Web/CSS/::part
 ---
 {{CSSRef}}
 

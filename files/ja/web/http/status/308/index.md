@@ -1,12 +1,6 @@
 ---
 title: 308 Permanent Redirect
 slug: Web/HTTP/Status/308
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - Reference
-  - リダイレクト
-translation_of: Web/HTTP/Status/308
 ---
 {{HTTPSidebar}}
 
