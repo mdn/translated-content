@@ -1,13 +1,6 @@
 ---
 title: dx
 slug: Web/SVG/Attribute/dx
-tags:
-  - NeedsCompatTable
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/dx
 ---
 « [SVG Attribute reference home](/ja/docs/Web/SVG/Attribute)
 
