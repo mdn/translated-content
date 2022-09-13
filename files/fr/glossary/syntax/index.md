@@ -16,7 +16,7 @@ La syntaxe du code doit être correcte pour qu'il puisse être {{Glossary("Compi
 
 Les frameworks sont considérés comme ayant une syntaxe "propre" s'ils produisent des résultats simples, lisibles et concis. Si un codebase utilise "beaucoup de syntaxe", il nécessitera davantage de caractères pour arriver aux mêmes fonctionnalités.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

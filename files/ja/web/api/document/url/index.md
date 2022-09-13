@@ -1,15 +1,6 @@
 ---
 title: Document.URL
 slug: Web/API/Document/URL
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Reference
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/Document/URL
 ---
 {{APIRef("DOM")}}
 
@@ -50,7 +41,7 @@ document.getElementById("url").textContent = document.URL;
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.URL")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -1,13 +1,6 @@
 ---
 title: Error.prototype.stack
 slug: Web/JavaScript/Reference/Global_Objects/Error/Stack
-tags:
-  - Error
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/Stack
 ---
 {{JSRef}} {{non-standard_header}}
 
@@ -109,7 +102,7 @@ try {
 // @file:///C:/example.html:7:6
 ```
 
-`//# sourceURL` ディレクティブを使用して eval ソースに名前を付けることもできます。 [Debugger](/ja/docs/Tools/Debugger) ドキュメント内の [eval ソースのデバッグ](/ja/docs/Tools/Debugger/How_to/Debug_eval_sources) と [ブログ記事](http://fitzgeraldnick.com/weblog/59/ "Naming `eval` Scripts with the `//# sourceURL` Directive") も参照してください。
+`//# sourceURL` ディレクティブを使用して eval ソースに名前を付けることもできます。 [Debugger](/ja/docs/Tools/Debugger) ドキュメント内の [eval ソースのデバッグ](/ja/docs/Tools/Debugger/How_to/Debug_eval_sources) と [ブログ記事](http://fitzgeraldnick.com/weblog/59/) も参照してください。
 
 ## 仕様書
 

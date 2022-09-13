@@ -1,16 +1,6 @@
 ---
 title: 'HTMLInputElement: selectionchange イベント'
 slug: Web/API/HTMLInputElement/selectionchange_event
-tags:
-  - API
-  - Event
-  - リファレンス
-  - Selection
-  - 選択 API
-  - selectionchange
-  - 実験的
-browser-compat: api.HTMLInputElement.selectionchange_event
-translation_of: Web/API/HTMLInputElement/selectionchange_event
 ---
 {{APIRef}}{{SeeCompatTable}}
 

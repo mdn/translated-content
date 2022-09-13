@@ -14,14 +14,14 @@ This pages lists reusable content blocks.
 
 ## Grilla de tarjetas
 
-Permite tener un par de tarjetas cercanas entre sí para llamar a contenidos específicos o para llamar a una acción. La clase CSS es: `.card-grid `(L 751 - 824 in CustomCSS).
+Permite tener un par de tarjetas cercanas entre sí para llamar a contenidos específicos o para llamar a una acción. La clase CSS es: `.card-grid` (L 751 - 824 in CustomCSS).
 
 - Refetencia CSS
-  - Una [referencia exhaustiva](/es/docs/Web/CSS/Reference) para <u>desarrolladores Web expertos</u> describiendo cada propiedad y concepto de CSS.
+  - Una [referencia exhaustiva](/es/docs/Web/CSS/Reference) para _desarrolladores Web expertos_ describiendo cada propiedad y concepto de CSS.
 - Tutorial CSS
-  - Una [introduccion paso a paso](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps) para ayudar a los <u>principiantes</u>. Presenta todos los fundamentos necesarios.
+  - Una [introduccion paso a paso](/en-US/docs/Learn/CSS/First_steps) para ayudar a los _principiantes_. Presenta todos los fundamentos necesarios.
 - CSS3 Demos
-  - A [collection of demos](https://developer.mozilla.org/en-US/docs/Web/Demos) showing the <u>latest CSS technologies</u> in action: a boost for the creativity.
+  - A [collection of demos](/en-US/docs/Web/Demos) showing the _latest CSS technologies_ in action: a boost for the creativity.
 
 ## Dos columnas
 

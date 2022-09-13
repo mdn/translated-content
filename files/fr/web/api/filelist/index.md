@@ -123,14 +123,11 @@ document.querySelector("#myFiles").onchange = recupererFichiers;
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('File API', '#filelist-section', 'FileList')}}                                 | {{Spec2('File API')}}     |              |
-| {{SpecName('HTML WHATWG', '#concept-input-type-file-selected', 'selected files')}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FileList")}}
+{{Compat}}
 
 ## Voir aussi
 

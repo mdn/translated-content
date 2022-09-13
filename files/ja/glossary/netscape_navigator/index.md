@@ -1,13 +1,6 @@
 ---
 title: Netscape Navigator
 slug: Glossary/Netscape_Navigator
-tags:
-  - Browser
-  - Glossary
-  - Navigation
-  - Netscape
-  - Netscape Navigator
-translation_of: Glossary/Netscape_Navigator
 ---
 Netscape Navigator または、単に Netscape は、1990 年代の主要な{{glossary("browser", "ブラウザー")}}でした。Netscape は Mosaic をベースにして作られており、開発チームは、Mosaic のコードを書いていたプログラマーである Marc Andreessen によって率いられていました。
 

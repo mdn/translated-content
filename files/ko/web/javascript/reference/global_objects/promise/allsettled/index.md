@@ -16,7 +16,9 @@ browser-compat: html.elements.allSettled
 
 ## 문법
 
-    Promise.allSettled(iterable);
+```js
+Promise.allSettled(iterable);
+```
 
 ### 인자
 

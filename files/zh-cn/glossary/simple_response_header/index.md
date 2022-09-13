@@ -6,6 +6,7 @@ slug: Glossary/Simple_response_header
 
 - {{HTTPHeader("Cache-Control")}}
 - {{HTTPHeader("Content-Language")}}
+- {{HTTPHeader("Content-Length")}}
 - {{HTTPHeader("Content-Type")}}
 - {{HTTPHeader("Expires")}}
 - {{HTTPHeader("Last-Modified")}}

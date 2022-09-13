@@ -4,7 +4,7 @@ slug: Web/API/Web_Workers_API/Using_web_workers
 translation_of: Web/API/Web_Workers_API/Using_web_workers
 original_slug: Web/API/Web_Workers_API/basic_usage
 ---
-웹 워커는 웹 컨텐츠를 위해서 백그라운드 스레드에서 스크립트를 실행할 간편한 방법을 제공합니다. 워커 스레드는 사용자 인터페이스(UI)를 방해하지 않고 작업을 수행할 수 있습니다. 또한 워커는 ( `responseXML` 과 `channel`속성이 언제나 null이지만) [`XMLHttpRequest`](/en/nsIXMLHttpRequest "En/XMLHttpRequest") 를 사용하여 I/O작업을 수행할 수도 있습니다. 워커는 생성이 된 후에 생성자가 명시한 이벤트 핸들러로 메세지를 올려서 자신의 하위 작업(spawning task)에 메세지를 전달할 수 도 있습니다. 본 글에서 전용 워커와 공유 워커에 대하여 소개합니다.
+웹 워커는 웹 컨텐츠를 위해서 백그라운드 스레드에서 스크립트를 실행할 간편한 방법을 제공합니다. 워커 스레드는 사용자 인터페이스(UI)를 방해하지 않고 작업을 수행할 수 있습니다. 또한 워커는 ( `responseXML` 과 `channel`속성이 언제나 null이지만) [`XMLHttpRequest`](/en/nsIXMLHttpRequest) 를 사용하여 I/O작업을 수행할 수도 있습니다. 워커는 생성이 된 후에 생성자가 명시한 이벤트 핸들러로 메세지를 올려서 자신의 하위 작업(spawning task)에 메세지를 전달할 수 도 있습니다. 본 글에서 전용 워커와 공유 워커에 대하여 소개합니다.
 
 ## Web Workers API
 
@@ -114,7 +114,7 @@ close();
 
 When a runtime error occurs in the worker, its `onerror` event handler is called. It receives an event named `error` which implements the `ErrorEvent` interface.
 
-The event doesn't bubble and is cancelable; to prevent the default action from taking place, the worker can call the error event's [`preventDefault()` ](/ko/docs/Web/API/Event/preventDefault)method.
+The event doesn't bubble and is cancelable; to prevent the default action from taking place, the worker can call the error event's [`preventDefault()`](/ko/docs/Web/API/Event/preventDefault) method.
 
 The error event has the following three fields that are of interest:
 
@@ -164,7 +164,7 @@ var myWorker = new SharedWorker("worker.js");
 
 One big difference is that with a shared worker you have to communicate via a `port` object — an explicit port is opened that the scripts can use to communicate with the worker (this is done implicitly in the case of dedicated workers).
 
-The port connection needs to be started either implicitly by use of the `onmessage `event handler or explicitly with the `start()`method before any messages can be posted. Although the [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) and [worker.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/worker.js) files in the demo currently call the `start()`method, those calls are not necessary since the `onmessage` event handler is being used. Calling `start()` is only needed if the `message` event is wired up via the `addEventListener()` method.
+The port connection needs to be started either implicitly by use of the `onmessage` event handler or explicitly with the `start()`method before any messages can be posted. Although the [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) and [worker.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/worker.js) files in the demo currently call the `start()`method, those calls are not necessary since the `onmessage` event handler is being used. Calling `start()` is only needed if the `message` event is wired up via the `addEventListener()` method.
 
 When using the `start()` method to open the port connection, it needs to be called from both the parent thread and the worker thread if two-way communication is needed.
 
@@ -227,7 +227,9 @@ However, since web workers have carefully controlled communication points with o
 
 Workers are considered to have their own execution context, distinct from the document that created them. For this reasons they are, in general, not governed by the [content security policy](/ko/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) of the document (or parent worker) that created them. So for example, suppose a document is served with the following header:
 
-    Content-Security-Policy: script-src 'self'
+```
+Content-Security-Policy: script-src 'self'
+```
 
 Among other things, this will prevent any scripts it includes from using [`eval()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). However, if the script constructs a worker, code running in the worker's context _will_ be allowed to use `eval()`.
 

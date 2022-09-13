@@ -1,11 +1,6 @@
 ---
 title: Hypertext (ハイパーテキスト)
 slug: Glossary/Hypertext
-tags:
-  - Glossary
-  - Web
-  - WebMechanics
-translation_of: Glossary/Hypertext
 ---
 ハイパーテキストは、ほかのテキストへのリンクを含むテキストであり、小説のように単一で線形の流れのものとは対照的なものです。
 

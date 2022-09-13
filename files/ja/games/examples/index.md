@@ -1,12 +1,6 @@
 ---
 title: 例
 slug: Games/Examples
-tags:
-  - Demos
-  - Example
-  - Games
-  - Web
-translation_of: Games/Examples
 ---
 {{GamesSidebar}}
 

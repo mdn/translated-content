@@ -125,13 +125,11 @@ function positionPanner() {
 
 ## Spécifications
 
-| Specification                                                                                                    | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#dom-baseaudiocontext-createpanner', 'createPanner()')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.BaseAudioContext.createPanner")}}
+{{Compat}}
 
 ## Voir aussi
 

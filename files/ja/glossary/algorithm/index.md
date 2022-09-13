@@ -1,10 +1,6 @@
 ---
 title: Algorithm (アルゴリズム)
 slug: Glossary/Algorithm
-tags:
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/Algorithm
 ---
 アルゴリズムとは、ある機能を実行するための、独立した一連の命令です。
 

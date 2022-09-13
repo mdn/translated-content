@@ -1,15 +1,6 @@
 ---
 title: ':target'
 slug: Web/CSS/:target
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.target
-translation_of: Web/CSS/:target
 ---
 {{CSSRef}}
 

@@ -24,7 +24,7 @@ event.initMouseEvent(type, canBubble, cancelable, view,
 ### 形参
 
 - _`type`_
-  - : 设置事件类型{{domxref("Event.type", "type")}} 的字符串，包含以下几种鼠标事件：` click，``mousedown `，`mouseup`，`mouseover`，`mousemove`，`mouseout`。
+  - : 设置事件类型{{domxref("Event.type", "type")}} 的字符串，包含以下几种鼠标事件：`click`，`mousedown`，`mouseup`，`mouseover`，`mousemove`，`mouseout`。
 - _`canBubble`_
   - : 是否可以冒泡。取值集合见{{domxref("Event.bubbles")}}。
 - _`cancelable`_
@@ -76,7 +76,7 @@ event.initMouseEvent(type, canBubble, cancelable, view,
 - _`button`_
   - : 鼠标按键值 {{domxref("MouseEvent.button", "button")}}。
 - _`relatedTarget`_
-  - : 事件的[相关对象](/en/DOM/event.relatedTarget)。只在某些事件类型有用 (例如 `mouseover` ?和 `mouseout`)。其它的传 null。
+  - : 事件的[相关对象](/zh-CN/DOM/event.relatedTarget)。只在某些事件类型有用 (例如 `mouseover` ?和 `mouseout`)。其它的传 null。
 
 ## 示例
 

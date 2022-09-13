@@ -1,16 +1,6 @@
 ---
 title: Document.createTouch()
 slug: Web/API/Document/createTouch
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Method
-  - Mobile
-  - Reference
-  - createTouch
-  - touch
-translation_of: Web/API/Document/createTouch
 ---
 {{APIRef("DOM")}}{{Deprecated_Header}}
 
@@ -85,7 +75,7 @@ var touch2 = Document.createTouch(window, target, 2, 25, 30, 45, 50);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.createTouch")}}
+{{Compat}}
 
 ## 関連情報
 

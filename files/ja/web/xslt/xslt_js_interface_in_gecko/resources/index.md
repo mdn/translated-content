@@ -1,9 +1,6 @@
 ---
 title: リソース
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
-tags:
-  - XSLT
-translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
 ---
 ## リソース
 

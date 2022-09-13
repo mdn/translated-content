@@ -1,18 +1,6 @@
 ---
 title: 'HTML attribute: rel'
 slug: Web/HTML/Attributes/rel
-tags:
-  - 属性
-  - Attributes
-  - 制約検証
-  - Link
-  - form
-  - rel
-spec-urls:
-  - https://html.spec.whatwg.org/multipage/links.html#linkTypes
-  - https://w3c.github.io/preload/#x2.link-type-preload
-  - https://www.w3.org/TR/resource-hints/#dfn-preconnect
-translation_of: Web/HTML/Attributes/rel
 ---
 
 {{HTMLSidebar}}
@@ -191,17 +179,7 @@ translation_of: Web/HTML/Attributes/rel
 
 ## ブラウザーの互換性
 
-### `link` 要素の `rel` 属性
-
-{{Compat("html.elements.link.rel")}}
-
-### `a` 要素の `rel` 属性
-
-{{Compat("html.elements.a.rel")}}
-
-### `area` 要素の `rel` 属性
-
-{{Compat("html.elements.area.rel")}}
+{{Compat}}
 
 ## 関連情報
 

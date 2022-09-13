@@ -76,14 +76,12 @@ dessiner();
 
 ## Spécifications
 
-| Spécification                                                                                                                                                        | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AnalyserNode-getFloatFrequencyData-void-Float32Array-array', 'getFloatFrequencyData()')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AnalyserNode.getFloatFrequencyData")}}
+{{Compat}}
 
-## See also
+## Voir aussi
 
 - [Utiliser la Web Audio API](/fr/docs/Web_Audio_API/Using_Web_Audio_API)

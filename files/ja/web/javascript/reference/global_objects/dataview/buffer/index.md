@@ -1,13 +1,6 @@
 ---
 title: DataView.prototype.buffer
 slug: Web/JavaScript/Reference/Global_Objects/DataView/buffer
-tags:
-  - DataView
-  - JavaScript
-  - Property
-  - Prototype
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/buffer
 ---
 {{JSRef}}
 

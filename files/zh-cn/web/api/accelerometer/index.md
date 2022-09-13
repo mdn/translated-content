@@ -6,7 +6,7 @@ slug: Web/API/Accelerometer
 
 The **`Accelerometer`** interface of the [Sensor APIs](/zh-CN/docs/Web/API/Sensor_APIs) provides on each reading the acceleration applied to the device along all three axes.
 
-To use this sensor, the user must grant permission to the `'accelerometer'`, device sensor through the [`Permissions`](/en-US/docs/Web/API/Permissions) API.
+To use this sensor, the user must grant permission to the `'accelerometer'`, device sensor through the [`Permissions`](/zh-CN/docs/Web/API/Permissions) API.
 
 If a feature policy blocks the use of a feature, it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. See {{httpheader('Feature-Policy')}} for implementation instructions.
 

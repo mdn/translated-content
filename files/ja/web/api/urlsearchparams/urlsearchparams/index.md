@@ -1,13 +1,6 @@
 ---
 title: URLSearchParams()
 slug: Web/API/URLSearchParams/URLSearchParams
-tags:
-  - API
-  - Constructor
-  - Reference
-  - URL API
-  - URLSearchParams
-translation_of: Web/API/URLSearchParams/URLSearchParams
 ---
 {{ApiRef("URL API")}}
 

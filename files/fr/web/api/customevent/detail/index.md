@@ -44,13 +44,11 @@ let myDetail = event.detail;
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG','#dom-customeventinit-detail','detail')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CustomEvent.detail")}}
+{{Compat}}
 
 ## Voir aussi
 

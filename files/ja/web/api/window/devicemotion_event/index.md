@@ -1,12 +1,6 @@
 ---
 title: 'Window: devicemotion イベント'
 slug: Web/API/Window/devicemotion_event
-tags:
-  - API
-  - Device Orientation API
-  - Sensors
-  - events
-translation_of: Web/API/Window/devicemotion_event
 ---
 {{APIRef}}
 

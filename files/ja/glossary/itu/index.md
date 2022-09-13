@@ -1,11 +1,6 @@
 ---
 title: ITU (国際電気通信連合)
 slug: Glossary/ITU
-tags:
-  - Glossary
-  - ITU
-  - Standardization
-  - organization
 ---
 ITU (International Telecommunication Union、国際電気通信連合) は、国際連合に認可された組織であり、電信、無線通信、電話、そしてインターネットなどの遠距離通信に関する標準やルールを制定します。
 

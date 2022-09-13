@@ -1,10 +1,6 @@
 ---
 title: ウェブ NFC API
 slug: Web/API/Web_NFC_API
-tags:
-  - NDEF
-  - リファレンス
-  - ウェブ NFC
 ---
 {{DefaultAPISidebar("Web NFC API")}}{{SeeCompatTable}}
 

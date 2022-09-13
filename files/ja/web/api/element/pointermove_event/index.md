@@ -1,15 +1,6 @@
 ---
 title: GlobalEventHandlers.onpointermove
 slug: Web/API/Element/pointermove_event
-tags:
-  - API
-  - Event Handler
-  - GlobalEventHandlers
-  - HTML DOM
-  - PointerEvent
-  - Property
-  - Reference
-translation_of: Web/API/GlobalEventHandlers/onpointermove
 original_slug: Web/API/GlobalEventHandlers/onpointermove
 ---
 {{ApiRef("HTML DOM")}}
@@ -61,7 +52,7 @@ function init() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.GlobalEventHandlers.onpointermove")}}
+{{Compat}}
 
 ## 関連情報
 

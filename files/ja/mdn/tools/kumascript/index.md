@@ -1,14 +1,6 @@
 ---
 title: KumaScript
 slug: MDN/Tools/KumaScript
-tags:
-  - Guide
-  - Kuma
-  - KumaScript
-  - MDN Meta
-  - NeedsContent
-  - Site-wide
-translation_of: MDN/Tools/KumaScript
 ---
 {{MDNSidebar}}
 

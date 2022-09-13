@@ -1,17 +1,6 @@
 ---
 title: Gamepad.displayId
 slug: Web/API/Gamepad/displayId
-tags:
-  - API
-  - Experimental
-  - Gamepad
-  - Property
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
-  - displayId
-translation_of: Web/API/Gamepad/displayId
 ---
 {{DefaultAPISidebar("WebVR API")}}{{SeeCompatTable}}
 

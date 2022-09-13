@@ -68,7 +68,7 @@ If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 
 {{Compat("http.headers.If-Modified-Since")}}
 
-## À voir aussi
+## Voir aussi
 
 - {{HTTPHeader("ETag")}}
 - {{HTTPHeader("If-Unmodified-since")}}

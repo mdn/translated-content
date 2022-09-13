@@ -1,13 +1,6 @@
 ---
 title: CSSStyleDeclaration.setProperty()
 slug: Web/API/CSSStyleDeclaration/setProperty
-tags:
-  - API
-  - CSSOM
-  - Method
-  - Reference
-translation_of: Web/API/CSSStyleDeclaration/setProperty
-browser-compat: api.CSSStyleDeclaration.setProperty
 ---
 {{ APIRef("CSSOM") }}
 

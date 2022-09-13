@@ -42,7 +42,7 @@ var myRequest = new Request(input[, init]);
 
 | **Type**  | **Description**                                                                                                                                             |
 | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| TypeError | 自 [Firefox 43](/zh-CN/docs/Mozilla/Firefox/Releases/43)后，若 URL 有 credentials，`Request()` 会抛出 TypeError , 例如 http\://user:password\@example.com。 |
+| TypeError | 自 [Firefox 43](/zh-CN/docs/Mozilla/Firefox/Releases/43)后，若 URL 有 credentials，`Request()` 会抛出 TypeError , 例如 `http://user:password\@example.com`。 |
 
 ## Example
 

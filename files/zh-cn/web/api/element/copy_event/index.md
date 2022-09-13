@@ -7,7 +7,7 @@ slug: Web/API/Element/copy_event
 ## 基本信息
 
 - Specification
-  - [: Clipboard](https://www.w3.org/TR/clipboard-apis/#the-copy-action)
+  - : [Clipboard](https://www.w3.org/TR/clipboard-apis/#the-copy-action)
 - Interface
   - : {{domxref("ClipboardEvent")}}
 - Bubbles

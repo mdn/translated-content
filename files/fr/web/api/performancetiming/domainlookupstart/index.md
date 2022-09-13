@@ -28,13 +28,11 @@ let time = performanceTiming.domainLookupStart;
 
 ## Spécifications
 
-| Spécification                                                                                                                                                        | Statut                                   | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-domainlookupstart', 'PerformanceTiming.domainLookupStart')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceTiming.domainLookupStart")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,12 +1,6 @@
 ---
 title: ページ化メディア
 slug: Web/CSS/Paged_Media
-tags:
-  - CSS
-  - CSS ページ化メディア
-  - ページ区切り
-  - リファレンス
-translation_of: Web/CSS/Paged_Media
 ---
 {{CSSRef}}
 

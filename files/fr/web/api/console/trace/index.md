@@ -46,15 +46,13 @@ foo
 <anonymous>
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#trace", "console.trace()")}} | {{Spec2("Console API")}} | Définition Initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.trace")}}
+{{Compat}}
 
 ## Voir aussi
 

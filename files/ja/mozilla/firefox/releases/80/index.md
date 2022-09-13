@@ -1,7 +1,6 @@
 ---
 title: Firefox 80 for developers
 slug: Mozilla/Firefox/Releases/80
-translation_of: Mozilla/Firefox/Releases/80
 ---
 {{FirefoxSidebar}}
 

@@ -1,16 +1,6 @@
 ---
 title: Document.adoptNode()
 slug: Web/API/Document/adoptNode
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - NeedsExample
-  - NeedsSpecTable
-  - NeedsUpdate
-  - Reference
-translation_of: Web/API/Document/adoptNode
 ---
 {{ ApiRef("DOM") }}
 
@@ -66,7 +56,7 @@ iframeImages.forEach(function(imgEl) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.adoptNode")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -28,13 +28,11 @@ TBD.
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                   | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName('WebVR', '#interface-vrdisplaycapabilities', 'VRDisplayCapabilities')}} | {{Spec2('WebVR')}} | Définition initiale |
+{{Specifications}}
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.VRDisplayCapabilities")}}
+{{Compat}}
 
 ## Voir aussi
 

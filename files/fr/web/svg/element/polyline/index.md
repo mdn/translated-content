@@ -96,14 +96,11 @@ Cet élément implémente l'interface {{domxref("SVGPolylineElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                    | État                     | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | -------------------- |
-| {{SpecName('SVG2', 'shapes.html#PolylineElement', '&lt;polyline&gt;')}} | {{Spec2('SVG2')}} |                      |
-| {{SpecName('SVG1.1', 'shapes.html#PolylineElement', '&lt;polyline&gt;')}} | {{Spec2('SVG1.1')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.polyline")}}
+{{Compat}}
 
 ## Voir aussi
 

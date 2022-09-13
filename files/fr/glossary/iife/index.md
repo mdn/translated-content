@@ -37,7 +37,7 @@ var result = (function () {
 result; // "Barry"
 ```
 
-## Pour approfondir
+## Voir aussi
 
 ### Apprendre sur ce sujet
 

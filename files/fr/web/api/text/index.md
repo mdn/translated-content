@@ -46,16 +46,11 @@ _Hérite des méthodes de son parent {{domxref("CharacterData")}}._
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire                                                                                                                                                                     |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#text', 'Text')}}                                 | {{Spec2('DOM WHATWG')}} | Suppression de la propriété `isElementContentWhitespace`. Suppression de la méthode `replaceWholeText()`. Ajout du constructeur `Text()`. Ajout de la propriété `assignedSlot`. |
-| {{SpecName('DOM3 Core', 'core.html#ID-1312295772', 'Text')}}         | {{Spec2('DOM3 Core')}}     | Ajout des propriétés `isElementContentWhitespace` et `wholeText`. Ajout de la méthode `replaceWholeText()`.                                                                     |
-| {{SpecName('DOM2 Core', 'core.html#ID-1312295772', 'Text')}}         | {{Spec2('DOM2 Core')}}     | Pas de changement depuis {{SpecName('DOM1')}}.                                                                                                                          |
-| {{SpecName('DOM1', 'level-one-core.html#ID-1312295772', 'Text')}} | {{Spec2('DOM1')}}         | Définition initiale.                                                                                                                                                            |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Text")}}
+{{Compat}}
 
 ## Voir aussi
 

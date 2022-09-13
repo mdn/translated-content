@@ -10,4 +10,4 @@ slug: Glossary/Block/CSS
 
 ### 基礎知識
 
-- [視覺格式模型](/en-US/docs/Web/Guide/CSS/Visual_formatting_model)
+- [視覺格式模型](/zh-TW/docs/Web/Guide/CSS/Visual_formatting_model)

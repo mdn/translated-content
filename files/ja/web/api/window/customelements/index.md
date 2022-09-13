@@ -1,17 +1,6 @@
 ---
 title: Window.customElements
 slug: Web/API/Window/customElements
-tags:
-  - API
-  - CustomElementRegistry
-  - プロパティ
-  - リファレンス
-  - ウェブコンポーネント
-  - Window
-  - カスタム要素
-  - customElements
-browser-compat: api.Window.customElements
-translation_of: Web/API/Window/customElements
 ---
 {{APIRef}}
 

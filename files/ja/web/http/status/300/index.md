@@ -1,11 +1,6 @@
 ---
 title: 300 Multiple Choices
 slug: Web/HTTP/Status/300
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - リファレンス
-translation_of: Web/HTTP/Status/300
 ---
 {{HTTPSidebar}}
 

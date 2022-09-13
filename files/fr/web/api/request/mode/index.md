@@ -33,13 +33,11 @@ var myMode = myRequest.mode; // returns "cors" by default
 
 ## Spécifications
 
-| Spécification                                                    | État                     | Commentaires        |
-| ---------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('Fetch','#dom-request-mode', 'mode')}} | {{Spec2('Fetch')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Request.mode")}}
+{{Compat}}
 
 ## Voir aussi
 

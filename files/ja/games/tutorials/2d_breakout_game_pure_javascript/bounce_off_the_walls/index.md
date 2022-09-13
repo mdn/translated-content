@@ -1,17 +1,6 @@
 ---
 title: ボールを壁で跳ね返させる
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
-tags:
-  - Animation
-  - Beginner
-  - Canvas
-  - Example
-  - Games
-  - Graphics
-  - Tutorial
-  - collision
-  - detection
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 ---
 {{GamesSidebar}}

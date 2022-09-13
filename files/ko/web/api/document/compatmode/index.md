@@ -15,7 +15,9 @@ translation_of: Web/API/Document/compatMode
 
 ## 구문
 
-    const mode = document.compatMode
+```js
+const mode = document.compatMode
+```
 
 ### 값
 

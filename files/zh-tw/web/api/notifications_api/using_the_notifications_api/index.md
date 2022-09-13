@@ -212,7 +212,7 @@ window.addEventListener('load', function () {
 
 ## 瀏覽器相容性
 
-{{page("/en-US/Web/API/Notification","Browser compatibility")}}
+{{Compat}}
 
 ## 另可參閱
 

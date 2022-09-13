@@ -1,12 +1,6 @@
 ---
 title: document.links
 slug: Web/API/Document/links
-tags:
-  - DOM
-  - Document
-  - Gecko
-  - Gecko DOM Reference
-translation_of: Web/API/Document/links
 ---
 {{ApiRef}}
 

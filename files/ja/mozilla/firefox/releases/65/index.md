@@ -1,12 +1,6 @@
 ---
 title: Firefox 65 for developers
 slug: Mozilla/Firefox/Releases/65
-tags:
-  - '65'
-  - Firefox
-  - Mozilla
-  - Release
-translation_of: Mozilla/Firefox/Releases/65
 ---
 {{FirefoxSidebar}}
 
@@ -147,7 +141,7 @@ _変更なし_
 #### Media, Web Audio, および WebRTC
 
 - {{domxref("WebRTC API", "WebRTC", "", "1")}} の {{domxref("RTCIceCandidateStats")}} ディクショナリーを、最新の仕様に合わせて更新しました ({{bug(1324788)}}、{{bug(1489040)}})。
-- {{domxref("MediaRecorder")}} の `pause` および `resume` イベント (また、対応するイベントハンドラープロパティの {{domxref("MediaRecorder.onpause")}} および {{domxref("MediaRecorder.onresume")}}) は、ブラウザー実装状況では実装済みとしていましたが、以前は実装されていませんでした。これらを実装しました ({{bug(1458538)}}, {{bug(1514016)}})。
+- {{domxref("MediaRecorder")}} の `pause` および `resume` イベント (また、対応するイベントハンドラープロパティの {{domxref("MediaRecorder.onpause")}} および {{domxref("MediaRecorder.onresume")}}) は、ブラウザーの互換性では実装済みとしていましたが、以前は実装されていませんでした。これらを実装しました ({{bug(1458538)}}, {{bug(1514016)}})。
 
 #### Canvas と WebGL
 

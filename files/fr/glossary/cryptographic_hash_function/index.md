@@ -19,6 +19,6 @@ Pour être utilisable en cryptographie, une fonction de hachage doit disposer de
 
 Les fonctions de hachage cryptographiques comme MD5 et SHA-1 sont considérées cassées car des attaques permettant de réduire significativement leur résistance aux collisions ont été trouvées.
 
-## Pour approfondir
+## Voir aussi
 
 - [Fonction de hachage cryptographique](https://fr.wikipedia.org/wiki/Fonction_de_hachage_cryptographique) sur Wikipédia

@@ -63,15 +63,13 @@ function dessiner() {
 dessiner();
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                            | Statut                               | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AnalyserNode-frequencyBinCount', 'frequencyBinCount')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AnalyserNode.frequencyBinCount")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -62,14 +62,11 @@ _Ce type n'a pas de méthodes._
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                                       | Commentaire                                            |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------ |
-| {{SpecName('Highres Time Level 2', '#dom-domhighrestimestamp', 'DOMHighResTimeStamp')}} | {{Spec2('Highres Time Level 2')}} | Définitions plus strictes des interfaces et des types. |
-| {{SpecName('Highres Time', '#sec-DOMHighResTimeStamp', 'DOMHighResTimeStamp')}}             | {{Spec2('Highres Time')}}             | Définition initiale.                                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMHighResTimestamp")}}
+{{Compat}}
 
 ## Voir aussi
 

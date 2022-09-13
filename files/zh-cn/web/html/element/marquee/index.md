@@ -11,11 +11,11 @@ HTML marquee 元素（`<marquee>）` 用来插入一段滚动的文字。你可�
 ## 属性
 
 - {{htmlattrdef("behavior")}}
-  - : 设置文本在 marquee 元素内如何滚动。可选值有 ` scroll，``slide ` 和 `alternate。` 如果未指定值，默认值为 `scroll。`
+  - : 设置文本在 marquee 元素内如何滚动。可选值有 `scroll`，`slide` 和 `alternate`。如果未指定值，默认值为 `scroll`。
 - {{htmlattrdef("bgcolor")}}
   - : 通过颜色名称或十六进制值设置背景颜色。
 - {{htmlattrdef("direction")}}
-  - : 设置 marquee 内文本滚动的方向。可选值有 `left`, `right`, `up` and `down。`如果未指定值，默认值为 `left。`
+  - : 设置 marquee 内文本滚动的方向。可选值有 `left`, `right`, `up` and `down。`如果未指定值，默认值为 `left`。
 - {{htmlattrdef("height")}}
   - : 以像素或百分比值设置高度。
 - {{htmlattrdef("hspace")}}

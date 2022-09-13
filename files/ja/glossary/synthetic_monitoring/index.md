@@ -1,14 +1,6 @@
 ---
 title: Synthetic monitoring (合成モニタリング)
 slug: Glossary/Synthetic_monitoring
-tags:
-  - Glossary
-  - RUM
-  - Reference
-  - Synthetic monitoring
-  - Web Performance
-  - 用語集
-translation_of: Glossary/Synthetic_monitoring
 ---
 **合成モニタリング**は、可能な限り一貫性のある環境で、通常は自動化ツールを使用して、「実験室」環境でページの性能をモニタリングすることです。一貫性のあるベースラインがあれば、合成モニタリングはコード変更が性能に及ぼす影響を測定するのに適しています。しかし、必ずしもユーザーが体験していることを反映しているとは限りません。
 

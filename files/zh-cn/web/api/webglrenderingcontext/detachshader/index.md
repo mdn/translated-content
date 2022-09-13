@@ -4,7 +4,7 @@ slug: Web/API/WebGLRenderingContext/detachShader
 ---
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) 的**WebGLRenderingContext.detachShader()** 方法：从一个 {{domxref("WebGLProgram")}}中分离一个先前附加的片段或者顶点着色器（{{domxref("WebGLShader")}} ）.
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的**WebGLRenderingContext.detachShader()** 方法：从一个 {{domxref("WebGLProgram")}}中分离一个先前附加的片段或者顶点着色器（{{domxref("WebGLShader")}} ）.
 
 ## Syntax
 

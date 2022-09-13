@@ -85,7 +85,7 @@ Amélioration de notre implémentation des animations Web expérimentales, princ
 
 #### WebRTC
 
-- WebRTC: the {{event("negotiationneeded")}} event is now also sent for initial negotiations, not only for re-negotiations ({{bug(1149838)}}).
+- WebRTC: the [`negotiationneeded`](/fr/docs/Web/API/RTCPeerConnection/negotiationneeded_event) event is now also sent for initial negotiations, not only for re-negotiations ({{bug(1149838)}}).
 
 #### DOM & HTML DOM
 
@@ -153,7 +153,7 @@ _No change._
 
 - Places Keywords API has been deprecated and will be removed soon ({{bug(1140395)}}).
 
-## See also
+## Voir aussi
 
 - [Site Compatibility for Firefox 40](/fr/docs/Mozilla/Firefox/Releases/40/Site_Compatibility)
 

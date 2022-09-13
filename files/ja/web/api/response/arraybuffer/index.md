@@ -1,16 +1,7 @@
 ---
 title: Response.arrayBuffer()
 slug: Web/API/Response/arrayBuffer
-tags:
-  - API
-  - ArrayBuffer
-  - Fetch
-  - Method
-  - Reference
-  - Response
-translation_of: Web/API/Response/arrayBuffer
 original_slug: Web/API/Body/arrayBuffer
-browser-compat: api.Response.arrayBuffer
 ---
 {{APIRef("Fetch")}}
 

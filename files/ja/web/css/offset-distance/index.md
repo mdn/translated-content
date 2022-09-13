@@ -1,18 +1,6 @@
 ---
 title: offset-distance
 slug: Web/CSS/offset-distance
-tags:
-  - CSS
-  - CSS モーションパス
-  - CSS プロパティ
-  - 実験的
-  - モーションパス
-  - リファレンス
-  - motion-offset
-  - offset-distance
-  - recipe:css-property
-browser-compat: css.properties.offset-distance
-translation_of: Web/CSS/offset-distance
 ---
 {{CSSRef}}
 

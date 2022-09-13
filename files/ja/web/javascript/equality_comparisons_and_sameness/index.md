@@ -242,7 +242,7 @@ ES2015 より前は、二重等号と三重等号について、一方は他方�
 
 ## {{jsxref("Object.is")}} と三重等号の使いどころ
 
-一般的に、{{jsxref("Object.is")}} のゼロに対する特別な動作が関心の対象になりえると思われるのは、ある種のメタプログラミング方式に則る時、特にプロパティ記述子に関して {{jsxref("Object.defineProperty")}} の特徴の一部を再現したい時に限られます。このような要件が必要なければ、{{jsxref("Object.is")}} ではなく、代わりに [`===`](/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators "Web/JavaScript/Reference/Operators/Comparison_Operators") を使用してはいかがでしょう。2 つの {{jsxref("NaN")}} 値を比較した結果が `true` になることが必要な場合であっても、通常は、{{jsxref("NaN")}} をチェックして特別扱いする方が (前バージョンの ECMAScript からは {{jsxref("isNaN")}} メソッドを使えます) 、比較処理中に現れた全てのゼロについてその符号が周囲の処理からどう影響されるのか悩むよりも簡単です。
+一般的に、{{jsxref("Object.is")}} のゼロに対する特別な動作が関心の対象になりえると思われるのは、ある種のメタプログラミング方式に則る時、特にプロパティ記述子に関して {{jsxref("Object.defineProperty")}} の特徴の一部を再現したい時に限られます。このような要件が必要なければ、{{jsxref("Object.is")}} ではなく、代わりに [`===`](/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) を使用してはいかがでしょう。2 つの {{jsxref("NaN")}} 値を比較した結果が `true` になることが必要な場合であっても、通常は、{{jsxref("NaN")}} をチェックして特別扱いする方が (前バージョンの ECMAScript からは {{jsxref("isNaN")}} メソッドを使えます) 、比較処理中に現れた全てのゼロについてその符号が周囲の処理からどう影響されるのか悩むよりも簡単です。
 
 すべてを網羅してはいませんが、`-0` と `+0` の区別が発生する可能性がある内蔵メソッドや演算子を以下に示します。コード中ではこれらを考慮して下さい:
 

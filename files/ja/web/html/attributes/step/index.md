@@ -1,15 +1,6 @@
 ---
 title: 'HTML attribute: step'
 slug: Web/HTML/Attributes/step
-tags:
-  - 属性
-  - Attributes
-  - 制約検証
-  - HTML
-  - リファレンス
-  - step
-spec-urls: https://html.spec.whatwg.org/multipage/input.html#the-step-attribute
-translation_of: Web/HTML/Attributes/step
 ---
 
 {{HTMLSidebar}}
@@ -116,6 +107,10 @@ input:invalid {
 ## 仕様書
 
 {{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
 
 ## 関連情報
 

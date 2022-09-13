@@ -1,12 +1,6 @@
 ---
 title: PerformanceResourceTiming.redirectEnd
 slug: Web/API/PerformanceResourceTiming/redirectEnd
-tags:
-  - API
-  - Web パフォーマンス
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/PerformanceResourceTiming/redirectEnd
 ---
 {{APIRef("Resource Timing API")}}
 

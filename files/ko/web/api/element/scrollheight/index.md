@@ -18,7 +18,9 @@ translation_of: Web/API/Element/scrollHeight
 
 ## 구문
 
-    var intElemScrollHeight = element.scrollHeight;
+```js
+var intElemScrollHeight = element.scrollHeight;
+```
 
 *intElemScrollHeight*은 요소 `scrollHeight`의 픽셀 값을 저장하는 정수형 변수입니다.
 
@@ -55,7 +57,7 @@ window.getComputedStyle(element).overflowY !== 'hidden'
 
 ## 예제
 
-[`onscroll`](/en-US/docs/DOM/element.onscroll "en-US/docs/DOM/element.onscroll")이벤트를 함께 사용하여, 내용을 다 읽었는지 확인할 수 있습니다. ([`element.scrollTop`](/en-US/docs/DOM/element.scrollTop "en-US/docs/DOM/element.scrollTop") 과 [`element.clientHeight`](/en-US/docs/DOM/element.clientHeight "en-US/docs/DOM/element.clientHeight") 를 참조하세요).
+[`onscroll`](/en-US/docs/DOM/element.onscroll)이벤트를 함께 사용하여, 내용을 다 읽었는지 확인할 수 있습니다. ([`element.scrollTop`](/en-US/docs/DOM/element.scrollTop) 과 [`element.clientHeight`](/en-US/docs/DOM/element.clientHeight) 를 참조하세요).
 
 ### HTML
 
@@ -153,4 +155,4 @@ onload = function () {
 
 - {{domxref("Element.clientHeight")}}
 - {{domxref("Element.offsetHeight")}}
-- [Determining the dimensions of elements](/ko/docs/Determining_the_dimensions_of_elements "en/Determining_the_dimensions_of_elements")
+- [Determining the dimensions of elements](/ko/docs/Determining_the_dimensions_of_elements)

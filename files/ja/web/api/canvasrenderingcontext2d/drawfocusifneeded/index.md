@@ -1,15 +1,6 @@
 ---
 title: CanvasRenderingContext2D.drawFocusIfNeeded()
 slug: Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
-tags:
-  - API
-  - アクセシビリティ
-  - Canvas
-  - CanvasRenderingContext2D
-  - メソッド
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.drawFocusIfNeeded
-translation_of: Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
 ---
 {{APIRef}}
 

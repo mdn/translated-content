@@ -10,7 +10,7 @@ tags:
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/The_score
 original_slug: Games/Tutorials/2D_breakout_game_Phaser/득점
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Collision_detection", "Games/Workflows/2D_Breakout_game_Phaser/Win_the_game")}}
 

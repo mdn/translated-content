@@ -1,14 +1,6 @@
 ---
 title: Screen
 slug: Web/API/Screen
-page-type: web-api-interface
-tags:
-  - API
-  - CSSOM View
-  - Interface
-  - Reference
-browser-compat: api.Screen
-translation_of: Web/API/Screen
 ---
 {{APIRef("CSSOM")}}
 

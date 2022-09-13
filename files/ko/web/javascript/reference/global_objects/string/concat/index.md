@@ -18,7 +18,9 @@ browser-compat: javascript.builtins.String.concat
 
 ## 구문
 
-    str.concat(string2, string3[, ..., stringN])
+```js
+str.concat(string2, string3[, ..., stringN])
+```
 
 ### 매개변수
 
@@ -39,18 +41,20 @@ browser-compat: javascript.builtins.String.concat
 
 아래 예제에서는 문자열을 결합하여 새로운 문자열을 만듭니다.
 
-    var hello = 'Hello, ';
-    console.log(hello.concat('Kevin', '. Have a nice day.'));
-    /* Hello, Kevin. Have a nice day. */
+```js
+var hello = 'Hello, ';
+console.log(hello.concat('Kevin', '. Have a nice day.'));
+/* Hello, Kevin. Have a nice day. */
 
-    var greetList = ['Hello', ' ', 'Venkat', '!'];
-    "".concat(...greetList); // "Hello Venkat!"
+var greetList = ['Hello', ' ', 'Venkat', '!'];
+"".concat(...greetList); // "Hello Venkat!"
 
-    "".concat({}); // [object Object]
-    "".concat([]); // ""
-    "".concat(null); // "null"
-    "".concat(true); // "true"
-    "".concat(4, 5); // "45"
+"".concat({}); // [object Object]
+"".concat([]); // ""
+"".concat(null); // "null"
+"".concat(true); // "true"
+"".concat(4, 5); // "45"
+```
 
 ## 성능
 

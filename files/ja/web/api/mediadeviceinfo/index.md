@@ -1,10 +1,6 @@
 ---
 title: MediaDeviceInfo
 slug: Web/API/MediaDeviceInfo
-tags:
-  - API
-  - WebRTC
-translation_of: Web/API/MediaDeviceInfo
 ---
 {{APIRef("WebRTC")}}
 

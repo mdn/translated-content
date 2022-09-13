@@ -1,13 +1,6 @@
 ---
 title: image-orientation
 slug: Web/CSS/image-orientation
-tags:
-  - CSS
-  - リファレンス
-  - image-orientation
-  - recipe:css-property
-browser-compat: css.properties.image-orientation
-translation_of: Web/CSS/image-orientation
 ---
 **`image-orientation`** は [CSS](/ja/docs/Web/CSS) のプロパティで、画像の向きのレイアウトに依存しない修正を指定します。
 

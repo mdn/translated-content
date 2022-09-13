@@ -1,13 +1,6 @@
 ---
 title: Document.head
 slug: Web/API/Document/head
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Reference
-  - head
-translation_of: Web/API/Document/head
 ---
 {{APIRef("DOM")}}
 
@@ -54,7 +47,7 @@ var objRef = document.head;
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.head")}}
+{{Compat}}
 
 ## 関連情報
 

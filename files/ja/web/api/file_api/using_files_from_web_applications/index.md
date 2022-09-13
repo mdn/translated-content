@@ -1,14 +1,6 @@
 ---
 title: ウェブアプリケーションからのファイルの使用
 slug: Web/API/File_API/Using_files_from_web_applications
-tags:
-  - ファイル
-  - HTML5
-  - 中級者
-  - 要更新
-  - ajax アップロード
-  - アップロード
-translation_of: Web/API/File/Using_files_from_web_applications
 original_slug: Web/API/File/Using_files_from_web_applications
 ---
 {{APIRef("File API")}}
@@ -185,7 +177,7 @@ JavaScript コードを追加して `fileElem.click()` を呼び出す必要は�
 
 ユーザーがファイルをウェブアプリケーションにドラッグ＆ドロップすることもできます。
 
-最初のステップは、ドロップゾーンを確立することです。コンテンツのどの部分がドロップを受け入れるかは、アプリケーションの設計によって異なりますが、要素をドロップイベントを受け取るのは簡単です。
+最初のステップは、ドロップゾーンを確立することです。コンテンツのどの部分がドロップを受け入れるかは、アプリケーションの設計によって異なりますが、要素がドロップイベントを受け取れるようにするのは簡単です。
 
 ```js
 let dropbox;

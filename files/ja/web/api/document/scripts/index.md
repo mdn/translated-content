@@ -1,15 +1,6 @@
 ---
 title: Document.scripts
 slug: Web/API/Document/scripts
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-  - Script
-  - プロパティ
-translation_of: Web/API/Document/scripts
 ---
 {{APIRef("DOM")}}
 
@@ -45,4 +36,4 @@ if (scripts.length) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.scripts")}}
+{{Compat}}

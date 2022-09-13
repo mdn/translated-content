@@ -1,18 +1,6 @@
 ---
 title: DataTransfer
 slug: Web/API/DataTransfer
-page-type: web-api-interface
-tags:
-  - API
-  - DataTransfer
-  - HTML Drag and Drop API
-  - Interface
-  - NeedsMarkupWork
-  - Reference
-  - Web Development
-  - drag and drop
-browser-compat: api.DataTransfer
-translation_of: Web/API/DataTransfer
 ---
 {{APIRef("HTML Drag and Drop API")}}
 

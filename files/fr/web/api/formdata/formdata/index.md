@@ -70,13 +70,11 @@ formData = new FormData(myForm);
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                               | Commentaires         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata','FormData()')}} | {{Spec2('XMLHttpRequest')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FormData.FormData")}}
+{{Compat}}
 
 ## Voir aussi
 

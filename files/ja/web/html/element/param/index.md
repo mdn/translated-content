@@ -1,13 +1,6 @@
 ---
 title: '<param>: オブジェクト引数要素'
 slug: Web/HTML/Element/param
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/param
 ---
 {{HTMLRef}}
 

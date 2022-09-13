@@ -1,16 +1,6 @@
 ---
 title: Document.execCommand()
 slug: Web/API/Document/execCommand
-tags:
-  - API
-  - DOM
-  - メソッド
-  - NeedsExample
-  - リファレンス
-  - エディター
-  - 非推奨
-browser-compat: api.Document.execCommand
-translation_of: Web/API/Document/execCommand
 ---
 {{ApiRef("DOM")}}{{deprecated_header}}
 

@@ -1,15 +1,6 @@
 ---
 title: Angular をはじめる
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
-tags:
-  - Beginner
-  - Frameworks
-  - Installation
-  - JavaScript
-  - Learn
-  - client-side
-  - Angular
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -151,7 +142,7 @@ ng serve
 
 CLI が analytics についてプロンプトを表示したら、`no` と答えます。
 
-ブラウザーで、 ``http://localhost:4200/` に移動して、新しいスターターアプリケーションを表示します。
+ブラウザーで、 `http://localhost:4200/` に移動して、新しいスターターアプリケーションを表示します。
 ソースファイルのいずれかを変更すると、アプリケーションは自動的にリロードされます。
 
 `ng serve` の実行中に、コマンドを実行するために 2 番目のターミナルタブまたはウィンドウを開くことができます。
@@ -359,5 +350,5 @@ Angular の最初の紹介は以上です。 この時点で、Angular アプリ
   - [Angular todo リストアプリの事始め](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
   - [Angular アプリのスタイリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
   - [item コンポーネントの作成](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [To Do アイテムのフィルタリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
   - [Building Angular applications and further resources](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

@@ -1,12 +1,6 @@
 ---
 title: <xsl:param>
 slug: Web/XSLT/Element/param
-tags:
-  - XSLT
-  - param
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/param
 ---
 {{ XsltRef() }}
 
@@ -16,7 +10,7 @@ translation_of: Web/XSLT/Element/param
 
 ```
 <xsl:param name=NAME select=EXPRESSION>
-	TEMPLATE
+  TEMPLATE
 </xsl:param>
 ```
 

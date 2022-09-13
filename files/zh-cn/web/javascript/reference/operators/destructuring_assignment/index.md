@@ -364,7 +364,7 @@ console.log("userId: " + userId(user)); // "userId: 42"
 whois(user); // "jdoe is John"
 ```
 
-这段代码从 user 对象中提取并输出` id、``displayName ` 和 `firstName`。
+这段代码从 user 对象中提取并输出 `id`、`displayName` 和 `firstName`。
 
 ### 对象属性计算名和解构
 

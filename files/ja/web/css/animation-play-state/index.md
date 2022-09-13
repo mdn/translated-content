@@ -1,12 +1,6 @@
 ---
 title: animation-play-state
 slug: Web/CSS/animation-play-state
-tags:
-  - CSS
-  - CSS アニメーション
-  - CSS プロパティ
-  - リファレンス
-translation_of: Web/CSS/animation-play-state
 ---
 {{CSSRef}}
 

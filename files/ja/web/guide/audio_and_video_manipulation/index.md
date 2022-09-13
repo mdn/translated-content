@@ -1,18 +1,6 @@
 ---
 title: 音声と動画の加工
 slug: Web/Guide/Audio_and_video_manipulation
-tags:
-  - Audio
-  - Canvas
-  - Examples
-  - Guide
-  - HTML5
-  - Media
-  - Video
-  - Web Audio API
-  - WebGL
-  - developer recommendation
-translation_of: Web/Guide/Audio_and_video_manipulation
 ---
 ウェブのよいところは、複数の技術をまとめて新しいものを作ることができる点です。ネイティブの音声や動画をブラウザー上で利用できるということは、これらのデータストリームを {{htmlelement("canvas")}}、[WebGL](/ja/docs/Web/WebGL)、[Web Audio API](/ja/docs/Web/API/Web_Audio_API) を利用して操作することで、音声や動画に直接変更を加えることができることを意味します。例えば音声にリバーブやコンプレッション効果をかけたり、動画にグレイスケールやセピアのフィルターをかけたりすることができます。この記事では、必要なことを説明するためのリファレンスを提供します。
 
@@ -26,10 +14,10 @@ translation_of: Web/Guide/Audio_and_video_manipulation
 
 一般的なテクニックは次のようになります。
 
-1.  {{htmlelement("video")}} 要素からのフレームを中間の {{htmlelement("canvas")}} 要素に描画します。
-2.  中間の `<canvas>` 要素からデータを取得し、それを加工します。
-3.  加工したデータを「画面」の `<canvas>` を通じて描画します。
-4.  一時停止し、繰り返します。
+1. {{htmlelement("video")}} 要素からのフレームを中間の {{htmlelement("canvas")}} 要素に描画します。
+2. 中間の `<canvas>` 要素からデータを取得し、それを加工します。
+3. 加工したデータを「画面」の `<canvas>` を通じて描画します。
+4. 一時停止し、繰り返します。
 
 例えば、動画を処理してグレースケールで表示する場合を考えてみましょう。この場合、ソース動画と出力のグレースケールのフレームの両方を表示します。通常、「動画をグレースケールで再生」機能を実装する場合、 `display: none` を `<video>` 要素のスタイルに追加して、ソース動画が画面に描画されず、変更されたフレームのみが表示されるキャンバスが表示されるようにします。
 

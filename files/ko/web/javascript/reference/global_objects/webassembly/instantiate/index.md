@@ -16,7 +16,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 
 ### Primary overload — taking wasm binary code
 
-    Promise<ResultObject> WebAssembly.instantiate(bufferSource, importObject);
+```
+Promise<ResultObject> WebAssembly.instantiate(bufferSource, importObject);
+```
 
 #### Parameters
 
@@ -39,7 +41,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 
 ### Secondary overload — taking a module object instance
 
-    Promise<WebAssembly.Instance> WebAssembly.instantiate(module, importObject);
+```
+Promise<WebAssembly.Instance> WebAssembly.instantiate(module, importObject);
+```
 
 #### Parameters
 

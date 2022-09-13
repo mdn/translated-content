@@ -1,21 +1,6 @@
 ---
 title: MediaStream.getAudioTracks()
 slug: Web/API/MediaStream/getAudioTracks
-tags:
-  - API
-  - Audio
-  - 実験的
-  - Media
-  - メディアキャプチャとストリーム API
-  - メディアストリーム API
-  - MediaStream
-  - MediaStreamTrack
-  - メソッド
-  - リファレンス
-  - getAudioTracks
-  - トラック
-browser-compat: api.MediaStream.getAudioTracks
-translation_of: Web/API/MediaStream/getAudioTracks
 ---
 {{APIRef("Media Capture and Streams")}}
 

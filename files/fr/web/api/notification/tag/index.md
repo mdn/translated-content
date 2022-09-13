@@ -30,14 +30,12 @@ Une {{domxref("DOMString")}}.
 
 ## Spécifications
 
-| Spécification                                                                        | État                                     | Commentaire     |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | --------------- |
-| {{SpecName('Web Notifications','#dom-notification-tag','tag')}} | {{Spec2('Web Notifications')}} | Living standard |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification.tag")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

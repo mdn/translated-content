@@ -1,25 +1,6 @@
 ---
 title: XRInputSource.targetRayMode
 slug: Web/API/XRInputSource/targetRayMode
-tags:
-  - API
-  - AR
-  - Pointing
-  - Property
-  - Ray
-  - Read-only
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSource
-  - direction
-  - pointer
-  - target
-  - targetRayMode
-translation_of: Web/API/XRInputSource/targetRayMode
 ---
 {{APIRef("WebXR Device API")}}
 

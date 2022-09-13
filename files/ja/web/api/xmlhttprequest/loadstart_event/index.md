@@ -1,18 +1,6 @@
 ---
 title: 'XMLHttpRequest: loadstart イベント'
 slug: Web/API/XMLHttpRequest/loadstart_event
-tags:
-  - API
-  - イベント
-  - NeedsCompatTable
-  - NeedsSpecTable
-  - ProgressEvent
-  - ウェブ
-  - XMLHttpRequest
-  - イベント
-  - loadstart
-browser-compat: api.XMLHttpRequest.loadstart_event
-translation_of: Web/API/XMLHttpRequest/loadstart_event
 ---
 {{APIRef}}
 

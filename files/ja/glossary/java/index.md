@@ -1,12 +1,6 @@
 ---
 title: Java
 slug: Glossary/Java
-tags:
-  - CodingScripting
-  - Glossary
-  - Java
-  - プログラミング言語
-translation_of: Glossary/Java
 ---
 Java は、{{glossary("Compile", "コンパイラ言語")}}で、{{glossary("OOP", "オブジェクト指向")}}の高度にポータブルな{{Glossary("computer programming","プログラミング")}}言語です。
 

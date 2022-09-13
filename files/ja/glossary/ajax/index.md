@@ -1,13 +1,6 @@
 ---
 title: AJAX
 slug: Glossary/AJAX
-tags:
-  - AJAX
-  - CodingScripting
-  - 用語集
-  - インフラストラクチャ
-  - l10n:priority
-translation_of: Glossary/AJAX
 ---
 **AJAX** (Asynchronous {{Glossary("JavaScript")}} And {{Glossary("XML")}}) は、 {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}} として知られる技術を用いて、より複雑で動的なウェブページを構築するプログラミング手法のことです。
 

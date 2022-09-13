@@ -13,7 +13,7 @@ original_slug: Glossaire/mime
 
 Voir aussi [Type Mime](/fr/docs/Glossary/MIME_type)
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

@@ -1,13 +1,6 @@
 ---
 title: Event.composedPath()
 slug: Web/API/Event/composedPath
-page-type: web-api-instance-method
-tags:
-  - メソッド
-  - リファレンス
-  - ウェブコンポーネント
-browser-compat: api.Event.composedPath
-translation_of: Web/API/Event/composedPath
 ---
 {{APIRef("Shadow DOM")}}
 

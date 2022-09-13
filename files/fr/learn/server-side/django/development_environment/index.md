@@ -393,7 +393,7 @@ Vous avez maintenant un environnement de développement Django fonctionnel et op
 
 Dans la section test vous avez aussi vu comment créer un nouveau site web Django en utilisant `django-admin startproject`, et comment aller dessus depuis votre navigateur en utilisant le serveur de développement web (`python3 manage.py runserver`). Dans le prochain article nous détaillerons ce processus, et créant un application web simple mais complète.
 
-## See also
+## Voir aussi
 
 - [Quick Install Guide](https://docs.djangoproject.com/en/2.1/intro/install/) (Django docs)
 - [How to install Django — Complete guide](https://docs.djangoproject.com/en/2.1/topics/install/) (Django docs) - includes information on how to remove Django

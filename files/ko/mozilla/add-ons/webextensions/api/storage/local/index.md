@@ -1,11 +1,6 @@
 ---
 title: storage.local
 slug: Mozilla/Add-ons/WebExtensions/API/storage/local
-tags:
-  - 로칼
-  - 비표준
-  - 저장소
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage/local
 ---
 {{AddonSidebar()}}
 

@@ -1,13 +1,6 @@
 ---
 title: URL とは？
 slug: Learn/Common_questions/What_is_a_URL
-tags:
-  - Beginner
-  - Infrastructure
-  - URL
-  - resources
-  - urls
-translation_of: Learn/Common_questions/What_is_a_URL
 ---
 この記事では URL (Uniform Resource Locator) について説明し、その内容と構造を説明します。
 

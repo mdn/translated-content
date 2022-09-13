@@ -44,19 +44,11 @@ Pour illustrer une utilisation typique du stockage Web, nous avons créé un exe
 
 ## Spécifications
 
-| Spécification                                                                | État                             | Commentaires |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'webstorage.html#webstorage')}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### `Window.localStorage`
-
-{{Compat("api.Window.localStorage")}}
-
-### `Window.sessionStorage`
-
-{{Compat("api.Window.sessionStorage")}}
+{{Compat}}
 
 ## Navigation privée / Modes incognito
 

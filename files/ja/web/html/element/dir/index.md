@@ -1,18 +1,6 @@
 ---
 title: '<dir>: ディレクトリー要素'
 slug: Web/HTML/Element/dir
-tags:
-  - Directory
-  - 要素
-  - HTML
-  - HTML Lists
-  - 非推奨
-  - リファレンス
-  - ウェブ
-  - dir
-  - lists
-browser-compat: html.elements.dir
-translation_of: Web/HTML/Element/dir
 ---
 
 {{HTMLRef}}{{deprecated_header}}

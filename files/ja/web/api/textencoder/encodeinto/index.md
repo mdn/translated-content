@@ -1,15 +1,6 @@
 ---
 title: TextEncoder.encodeInto()
 slug: Web/API/TextEncoder/encodeInto
-tags:
-  - API
-  - 実験的
-  - メソッド
-  - リファレンス
-  - TextEncoder
-  - encodeInto
-browser-compat: api.TextEncoder.encodeInto
-translation_of: Web/API/TextEncoder/encodeInto
 ---
 {{APIRef("Encoding API")}}{{SeeCompatTable}}
 

@@ -1,13 +1,6 @@
 ---
 title: 'Element: scroll イベント'
 slug: Web/API/Element/scroll_event
-tags:
-  - API
-  - Element
-  - Event
-  - Reference
-  - Scroll
-translation_of: Web/API/Element/scroll_event
 ---
 {{APIRef}}
 
@@ -80,7 +73,7 @@ window.addEventListener('scroll', function(e) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.scroll_event")}}
+{{Compat}}
 
 ## 関連情報
 

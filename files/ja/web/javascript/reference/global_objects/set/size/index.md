@@ -1,14 +1,6 @@
 ---
 title: Set.prototype.size
 slug: Web/JavaScript/Reference/Global_Objects/Set/size
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - プロパティ
-  - プロトタイプ
-  - set
-browser-compat: javascript.builtins.Set.size
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/size
 ---
 {{JSRef}}
 

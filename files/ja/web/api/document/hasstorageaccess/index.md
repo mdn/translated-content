@@ -1,15 +1,6 @@
 ---
 title: Document.hasStorageAccess()
 slug: Web/API/Document/hasStorageAccess
-tags:
-  - API
-  - DOM
-  - Document
-  - Reference
-  - Storage Access API
-  - hasStorageAccess
-  - メソッド
-translation_of: Web/API/Document/hasStorageAccess
 ---
 {{APIRef}}{{seecompattable}}
 
@@ -52,7 +43,7 @@ document.hasStorageAccess().then(hasAccess => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.hasStorageAccess")}}
+{{Compat}}
 
 ## 関連情報
 

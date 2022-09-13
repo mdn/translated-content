@@ -1,19 +1,6 @@
 ---
 title: <input type="range">
 slug: Web/HTML/Element/input/range
-tags:
-  - 要素
-  - フォーム
-  - HTML
-  - HTML フォーム
-  - HTML input tag
-  - Input
-  - Range
-  - リファレンス
-  - ウェブ
-  - スライダー
-browser-compat: html.elements.input.input-range
-translation_of: Web/HTML/Element/input/range
 ---
 
 {{HTMLRef("Input_types")}}

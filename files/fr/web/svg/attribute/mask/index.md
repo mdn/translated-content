@@ -55,38 +55,10 @@ Depuis SVG2, l'attribut {{cssxref('mask')}} est défini comme une propriété CS
   </tbody>
 </table>
 
-## Compatibilité des navigateurs
-
-{{Compat("svg.attributes.presentation.mask")}}
-
 ## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("CSS Masks", "#the-mask", 'mask')}}</td>
-      <td>{{Spec2("CSS Masks")}}</td>
-      <td>
-        <p>
-          Étend cet usage pour les éléments HTML en créant un raccourci pour les
-          nouvelles propriétés <code>mask-*</code> défini dans cette
-          spécification.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('SVG1.1', 'masking.html#MaskProperty', 'mask')}}
-      </td>
-      <td>{{Spec2('SVG1.1')}}</td>
-      <td>Définition initiale</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

@@ -1,19 +1,6 @@
 ---
 title: オリジン間リソース共有 (CORS)
 slug: Web/HTTP/CORS
-tags:
-  - AJAX
-  - CORS
-  - オリジン間リソース共有
-  - Fetch
-  - Fetch API
-  - HTTP
-  - HTTP アクセス制御
-  - 同一オリジンポリシー
-  - セキュリティ
-  - XMLHttpRequest
-  - l10n:priority
-translation_of: Web/HTTP/CORS
 ---
 {{HTTPSidebar}}
 
@@ -468,7 +455,7 @@ origin は、リクエストを開始したサーバーを示す URL です。�
 Access-Control-Request-Method: <method>
 ```
 
-使用例は[前述のとおりです。](#preflighted_requests)。
+使用例は[前述のとおりです](#preflighted_requests)。
 
 <h3 id="Access-Control-Request-Headers">Access-Control-Request-Headers</h3>
 
@@ -478,7 +465,7 @@ Access-Control-Request-Method: <method>
 Access-Control-Request-Headers: <field-name>[, <field-name>]*
 ```
 
-使用例は[前述のとおりです。](#preflighted_requests)。
+使用例は[前述のとおりです](#preflighted_requests)。
 
 ## 仕様書
 

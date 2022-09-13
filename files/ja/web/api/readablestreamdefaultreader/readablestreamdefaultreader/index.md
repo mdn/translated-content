@@ -1,13 +1,6 @@
 ---
 title: ReadableStreamDefaultReader.ReadableStreamDefaultReader()
 slug: Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader
-tags:
-  - API
-  - Constructor
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
-translation_of: Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader
 ---
 {{APIRef("Streams")}}
 

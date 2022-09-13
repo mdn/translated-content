@@ -1,14 +1,6 @@
 ---
 title: HTMLAreaElement.pathname
 slug: Web/API/HTMLAreaElement/pathname
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAreaElement.pathname
-translation_of: Web/API/HTMLAreaElement/pathname
 original_slug: Web/API/HTMLHyperlinkElementUtils/pathname
 ---
 {{ApiRef("HTML DOM")}}

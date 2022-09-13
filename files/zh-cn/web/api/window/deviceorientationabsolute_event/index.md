@@ -28,4 +28,4 @@ This event handler is not currently part of any specification.
 - {{ event("deviceorientation") }}
 - {{ domxref("DeviceOrientationEvent") }}
 - {{domxref("Window.ondeviceorientation","ondeviceorientation")}}
-- [Detecting device orientation](/en/Detecting_device_orientation)
+- [Detecting device orientation](/zh-CN/Detecting_device_orientation)

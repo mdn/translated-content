@@ -14,4 +14,4 @@ slug: Glossary/Viewport
 - [What is viewport in HTML](https://stackoverflow.com/questions/2939693/what-is-viewport-in-html) on Stackoverflow
 - [Get viewport/window size (width and height) with javascript](https://andylangton.co.uk/blog/development/get-viewportwindow-size-width-and-height-javascript)
 - [A tale of two viewports](https://www.quirksmode.org/mobile/viewports.html) (Quirksmode)
-- [VisualViewport API](/en-US/docs/Web/API/Visual_Viewport_API)
+- [VisualViewport API](/zh-TW/docs/Web/API/Visual_Viewport_API)

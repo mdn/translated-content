@@ -61,14 +61,11 @@ DBDeleteRequest.onsuccess = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBFactory-deleteDatabase-IDBOpenDBRequest-DOMString-name', 'deleteDatabase()')}} | {{Spec2('IndexedDB')}}     |              |
-| {{SpecName("IndexedDB 2", "#dom-idbfactory-deletedatabase", "deleteDatabase()")}}                                         | {{Spec2("IndexedDB 2")}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBFactory.deleteDatabase")}}
+{{Compat}}
 
 ## Voir aussi
 

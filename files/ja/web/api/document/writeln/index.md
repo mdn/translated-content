@@ -1,13 +1,6 @@
 ---
 title: Document.writeln()
 slug: Web/API/Document/writeln
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-  - メソッド
-translation_of: Web/API/Document/writeln
 ---
 {{ ApiRef("DOM") }}
 
@@ -44,4 +37,4 @@ document.writeln("<p>パスワードを入力してください:</p>");
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.writeln")}}
+{{Compat}}

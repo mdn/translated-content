@@ -1,14 +1,6 @@
 ---
 title: typeof
 slug: Web/JavaScript/Reference/Operators/typeof
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - リファレンス
-  - 単項
-browser-compat: javascript.operators.typeof
-translation_of: Web/JavaScript/Reference/Operators/typeof
 ---
 {{JSSidebar("Operators")}}
 

@@ -315,15 +315,11 @@ De plus, la légende et le bouton d'envoi ont été mis en forme pour avoir un c
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-|                                                                                                                                          |                                  |              |
-| {{SpecName('HTML WHATWG', 'forms.html#radio-button-state-(type=radio)', '&lt;input type="radio"&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'forms.html#radio-button-state-(type=radio)', '&lt;input type="radio"&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.input.input-radio")}}
+{{Compat}}
 
 ## Voir aussi
 

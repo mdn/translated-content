@@ -51,13 +51,11 @@ caches.has('v1').then(function() {
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                               | Commentaire          |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#cache-storage-has', 'CacheStorage: has')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.CacheStorage.has")}}
+{{Compat}}
 
 ## Voir aussi
 

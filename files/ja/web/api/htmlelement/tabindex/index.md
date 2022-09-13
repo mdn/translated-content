@@ -1,15 +1,6 @@
 ---
 title: HTMLElement.tabIndex
 slug: Web/API/HTMLElement/tabIndex
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - プロパティ
-  - リファレンス
-  - tabIndex
-browser-compat: api.HTMLElement.tabIndex
-translation_of: Web/API/HTMLElement/tabIndex
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,16 +1,6 @@
 ---
 title: Document.vlinkColor
 slug: Web/API/Document/vlinkColor
-tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-  - プロパティ
-  - 非推奨
-translation_of: Web/API/Document/vlinkColor
 ---
 {{APIRef("DOM")}} {{ Deprecated_header() }}
 
@@ -37,4 +27,4 @@ document.vlinkColor = color
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.vlinkColor")}}
+{{Compat}}

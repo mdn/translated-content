@@ -13,7 +13,7 @@ translation_of: >-
   Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/캔버스_생성과_그리기
 ---
-{{GamesSidebar}}{{IncludeSubnav("/ko/docs/Games")}}
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임", "Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/공_움직이기")}}
 
@@ -32,8 +32,8 @@ HTML문서 구조는 꽤 간단합니다. 게임은 {{htmlelement("canvas")}} �
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
     <style>
-    	* { padding: 0; margin: 0; }
-    	canvas { background: #eee; display: block; margin: 0 auto; }
+      * { padding: 0; margin: 0; }
+      canvas { background: #eee; display: block; margin: 0 auto; }
     </style>
 </head>
 <body>
@@ -41,7 +41,7 @@ HTML문서 구조는 꽤 간단합니다. 게임은 {{htmlelement("canvas")}} �
 <canvas id="myCanvas" width="480" height="320"></canvas>
 
 <script>
-	// JavaScript 코드가 여기에 들어갈 것입니다.
+  // JavaScript 코드가 여기에 들어갈 것입니다.
 </script>
 
 </body>

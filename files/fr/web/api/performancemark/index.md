@@ -40,14 +40,11 @@ Voir l'exemple dans [Utilisation de l'API User Timing](/fr/docs/Web/API/User_Tim
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('User Timing Level 2', '#performancemark', 'PerformanceMark')}} | {{Spec2('User Timing Level 2')}} |                      |
-| {{SpecName('User Timing', '#performancemark', 'PerformanceMark')}}             | {{Spec2('User Timing')}}             | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceMark")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -9,7 +9,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 
 ## 구문
 
-    str.repeat(count);
+```js
+str.repeat(count);
+```
 
 ### 매개변수
 

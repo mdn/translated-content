@@ -1,14 +1,6 @@
 ---
 title: Number() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Number/Number
-tags:
-  - コンストラクター
-  - JavaScript
-  - Number
-  - リファレンス
-  - ポリフィル
-browser-compat: javascript.builtins.Number.Number
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/Number
 ---
 {{JSRef}}
 

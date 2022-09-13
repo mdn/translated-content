@@ -1,21 +1,6 @@
 ---
 title: AudioTrackList.getTrackById()
 slug: Web/API/AudioTrackList/getTrackById
-tags:
-  - API
-  - Audio
-  - AudioTrackList
-  - HTML DOM
-  - Media
-  - Method
-  - Reference
-  - Track ID
-  - Track List
-  - Tracks
-  - getTrackById
-  - id
-  - track
-translation_of: Web/API/AudioTrackList/getTrackById
 ---
 {{APIRef("HTML DOM")}}
 

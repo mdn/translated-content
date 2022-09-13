@@ -1,15 +1,6 @@
 ---
 title: Document.anchors
 slug: Web/API/Document/anchors
-tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-browser-compat: api.Document.anchors
-translation_of: Web/API/Document/anchors
 ---
 {{APIRef("DOM")}} {{Deprecated_Header}}
 

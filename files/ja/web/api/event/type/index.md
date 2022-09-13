@@ -1,13 +1,6 @@
 ---
 title: Event.type
 slug: Web/API/Event/type
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.Event.type
-translation_of: Web/API/Event/type
 ---
 {{APIRef}}
 

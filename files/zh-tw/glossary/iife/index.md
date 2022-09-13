@@ -65,7 +65,7 @@ Async function 版本，目前主要為了 top level await 而使用：
 
 ### 學習它
 
-- [Quick example](/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Functions) (在 "Functions" 部分的最後面,  "Custom objects" 的正前面)
+- [Quick example](/zh-TW/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Functions) (在 "Functions" 部分的最後面,  "Custom objects" 的正前面)
 
 ### 基本知識
 

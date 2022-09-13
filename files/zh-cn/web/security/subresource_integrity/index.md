@@ -7,7 +7,7 @@ original_slug: Web/Security/子资源完整性
 
 ## SRI 如何工作
 
-使用 {{Glossary("CDN", "内容分发网络 (CDNs)")}} 在多个站点之间共享脚本和样式表等文件可以提高站点性能并节省带宽。然而，使用 CDN 也存在风险，如果攻击者获得对 CDN 的控制权，则可以将任意恶意内容注入到 CDN 上的文件中（或完全替换掉文件)
+使用{{Glossary("CDN", "内容分发网络（CDN）")}}在多个站点之间共享脚本和样式表等文件可以提高站点性能并节省带宽。然而，使用 CDN 也存在风险，如果攻击者获得对 CDN 的控制权，则可以将任意恶意内容注入到 CDN 上的文件中（或完全替换掉文件）
 ），因此可能潜在地攻击所有从该 CDN 获取文件的站点。
 
 子资源完整性通过确保 Web 应用程序获得的文件未经第三方注入或其他任何形式的修改来降低这种攻击的风险。
@@ -72,7 +72,7 @@ Content-Security-Policy: require-sri-for style;
 
 ### 在 script 标签中增加 SRI
 
-你可以使用以下的 {{HTMLElement("script")}} 元素告诉浏览器在执行 https\://example.com/example-framework.js 中的内容之前，必须先比较该文件的哈希值是否和预期的一致，只有一致才能执行。
+你可以使用以下的 {{HTMLElement("script")}} 元素告诉浏览器在执行 `https://example.com/example-framework.js` 中的内容之前，必须先比较该文件的哈希值是否和预期的一致，只有一致才能执行。
 
 ```html
 <script src="https://example.com/example-framework.js"

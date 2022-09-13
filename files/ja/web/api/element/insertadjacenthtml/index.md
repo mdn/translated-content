@@ -1,14 +1,6 @@
 ---
 title: element.insertAdjacentHTML
 slug: Web/API/Element/insertAdjacentHTML
-tags:
-  - API
-  - DOM
-  - DOM Element Methods
-  - Gecko
-  - Method
-  - Reference
-translation_of: Web/API/Element/insertAdjacentHTML
 ---
 {{ApiRef("DOM")}}
 
@@ -68,7 +60,7 @@ d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
 
 ## ブラウザ実装状況
 
-{{Compat("api.Element.insertAdjacentHTML")}}
+{{Compat}}
 
 ## 関連情報
 

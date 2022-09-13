@@ -1,13 +1,6 @@
 ---
 title: 'HTML 属性: size'
 slug: Web/HTML/Attributes/size
-tags:
-  - Attribute
-  - HTML
-  - Input
-  - Reference
-  - Select
-translation_of: Web/HTML/Attributes/size
 ---
 {{HTMLSidebar}}
 
@@ -51,7 +44,7 @@ translation_of: Web/HTML/Attributes/size
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attribute.size")}}
+{{Compat}}
 
 ## 関連情報
 

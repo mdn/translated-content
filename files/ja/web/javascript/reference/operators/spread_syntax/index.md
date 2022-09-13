@@ -1,14 +1,6 @@
 ---
 title: スプレッド構文
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
-tags:
-  - ECMAScript 2015
-  - イテレーター
-  - JavaScript
-  - 言語機能
-  - Reference
-browser-compat: javascript.operators.spread
-translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
 ---
 {{jsSidebar("Operators")}}
 

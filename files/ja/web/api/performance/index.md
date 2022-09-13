@@ -1,14 +1,6 @@
 ---
 title: Performance
 slug: Web/API/Performance
-tags:
-  - API
-  - Web パフォーマンス
-  - インターフェイス
-  - ナビゲーションタイミング
-  - パフォーマンス
-  - リファレンス
-translation_of: Web/API/Performance
 ---
 {{APIRef("High Resolution Time")}}
 

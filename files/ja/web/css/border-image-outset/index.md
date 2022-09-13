@@ -1,14 +1,6 @@
 ---
 title: border-image-outset
 slug: Web/CSS/border-image-outset
-tags:
-  - CSS
-  - CSS 背景と境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-image-outset
-translation_of: Web/CSS/border-image-outset
 ---
 {{CSSRef}}
 

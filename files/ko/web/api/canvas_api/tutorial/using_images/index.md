@@ -16,8 +16,8 @@ original_slug: Web/HTML/Canvas/Tutorial/Using_images
 
 이미지를 캔버스로 불러오는것은 기본적으로 두 단계를 필요로 합니다:
 
-1.  {{domxref("HTMLImageElement")}} object를 참조하거나 다른 캔버스 요소를 소스로 사용합니다. 이는 URL을 가지고 이미지를 사용 할 수 있습니다.
-2.  `drawImage()` function을 사용하여 캔버스에 나타난 이미지 위에 그림을 그립니다.
+1. {{domxref("HTMLImageElement")}} object를 참조하거나 다른 캔버스 요소를 소스로 사용합니다. 이는 URL을 가지고 이미지를 사용 할 수 있습니다.
+2. `drawImage()` function을 사용하여 캔버스에 나타난 이미지 위에 그림을 그립니다.
 
 이 과정이 어떻게 되는지 봅시다.
 
@@ -81,7 +81,7 @@ If you're only using one external image this can be a good approach, but once yo
 
 ### 데이터를 사용하여 이미지 불러오기Embedding an image via data: URL
 
-Another possible way to include images is via the [data: url](/ko/docs/Web/HTTP/data_URIs "http://en.wikipedia.org/wiki/Data:_URL"). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
+Another possible way to include images is via the [data: url](/ko/docs/Web/HTTP/data_URIs). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
 
 ```js
 var img = new Image();   // Create new img element

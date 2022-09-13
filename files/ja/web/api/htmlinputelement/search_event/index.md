@@ -1,16 +1,6 @@
 ---
 title: 'HTMLInputElement: search イベント'
 slug: Web/API/HTMLInputElement/search_event
-tags:
-  - API
-  - Event
-  - HTMLInputElement
-  - 標準外
-  - リファレンス
-  - Search
-  - ウェブ
-browser-compat: api.HTMLInputElement.search_event
-translation_of: Web/API/HTMLInputElement/search_event
 ---
 {{APIRef}}{{non-standard_header}}
 

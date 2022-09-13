@@ -1,11 +1,6 @@
 ---
 title: 空文
 slug: Web/JavaScript/Reference/Statements/Empty
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/Empty
 ---
 {{jsSidebar("Statements")}}
 

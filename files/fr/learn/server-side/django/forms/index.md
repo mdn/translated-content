@@ -626,11 +626,11 @@ Ensuite, naviguez à la page de création d'auteur, _<http://127.0.0.1:8000/cata
 
 ![Exemple de formulaire&nbsp;: création d'un auteur](forms_example_create_author.png)
 
-Entrez des valeurs pour les champs et ensuite cliquez sur **Submit** pour sauvegarder l'enregistrement de cet auteur. Vous devriez maintenant être conduit à une vue "détail" pour votre nouvel auteur, avec une URL du genre _http\://127.0.0.1:8000/catalog/author/10_.
+Entrez des valeurs pour les champs et ensuite cliquez sur **Submit** pour sauvegarder l'enregistrement de cet auteur. Vous devriez maintenant être conduit à une vue "détail" pour votre nouvel auteur, avec une URL du genre `http://127.0.0.1:8000/catalog/author/10`.
 
-Vous pouvez tester l'édition d'un enregistrement en ajoutant */update/* à la fin de l'URL "détail" (par exemple, _http\://127.0.0.1:8000/catalog/author/10/update/_). Nous ne mettons pas de capture d'écran, car c'est à peu près la même chose que la page "create".
+Vous pouvez tester l'édition d'un enregistrement en ajoutant */update/* à la fin de l'URL "détail" (par exemple, `http://127.0.0.1:8000/catalog/author/10/update/`). Nous ne mettons pas de capture d'écran, car c'est à peu près la même chose que la page "create".
 
-Enfin, nous pouvons effacer l'enregistrement en ajoutant "delete" à la fin de l'URL de détail (par exemple, _http\://127.0.0.1:8000/catalog/author/10/delete/_). Django devrait vous afficher la page de suppression montrée ci-dessous. Cliquez sur "**Yes, delete**" pour supprimer l'enregistrement et être reconduit à la liste des auteurs.
+Enfin, nous pouvons effacer l'enregistrement en ajoutant "delete" à la fin de l'URL de détail (par exemple, `http://127.0.0.1:8000/catalog/author/10/delete/`). Django devrait vous afficher la page de suppression montrée ci-dessous. Cliquez sur "**Yes, delete**" pour supprimer l'enregistrement et être reconduit à la liste des auteurs.
 
 ![](forms_example_delete_author.png)
 

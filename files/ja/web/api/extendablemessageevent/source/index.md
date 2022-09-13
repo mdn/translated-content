@@ -1,14 +1,6 @@
 ---
 title: ExtendableMessageEvent.source
 slug: Web/API/ExtendableMessageEvent/source
-tags:
-  - API
-  - ExtendableMessageEvent
-  - Property
-  - Reference
-  - Service Workers
-  - source
-translation_of: Web/API/ExtendableMessageEvent/source
 ---
 {{APIRef("Service Workers API")}}
 
@@ -61,5 +53,5 @@ self.onmessage = function(e) {
 
 - [Service worker の使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [サービスワーカーの基本的なコード例](https://github.com/mdn/sw-test)（英語）
-- [ServiceWorker の準備はできていますか？ ](https://jakearchibald.github.io/isserviceworkerready/)（英語）
+- [ServiceWorker の準備はできていますか？](https://jakearchibald.github.io/isserviceworkerready/)（英語）
 - [Channel Messaging](/ja/docs/Web/API/Channel_Messaging_API)

@@ -24,5 +24,4 @@ if (document.createElement("foo").tagName == "FOO") {
 
 ## Spécifications
 
-- [http://www.w3.org/TR/DOM-Level-3-Cor...ument3-version](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Document3-version)
-- A été supprimée de {{ spec("http://www.w3.org/TR/domcore/","DOM Core Level 4","WD") }}
+{{Specifications}}

@@ -1,12 +1,6 @@
 ---
 title: Number
 slug: Glossary/Number
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
-  - 用語集
-translation_of: Glossary/Number
 ---
 {{Glossary("JavaScript")}} において、 **Number** は {{interwiki("wikipedia","倍精度浮動小数点数","倍精度64ビット浮動小数点形式 (IEEE 754)")}} を持つ数値データ型です。その他のプログラミング言語では、それ以外の数値型もあります。たとえば、 Integer、Float、Double、Bignum などです。
 

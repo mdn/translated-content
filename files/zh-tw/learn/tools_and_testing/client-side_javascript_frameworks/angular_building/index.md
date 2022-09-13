@@ -39,11 +39,10 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building
 在 `todo` 目錄底下，且在命令列執行以下的命令：
 
 ```bash
-ng build --prod
+ng build -c production
 ```
 
-命令列介面—— CLI（Command Line Interface），會將應用程式編譯並且輸出到新的目錄 `dist` 底下。
-這個 `--prod` 尾隨在 `ng build` 的參數，會移除在正式產品版本上不需要的東西。
+命令列介面——CLI（Command Line Interface），會將應用程式編譯並且輸出到新的目錄 `dist` 底下。這個 `--configuration production`/`-c production` 尾隨在 `ng build` 的參數，會移除在正式產品版本上不需要的東西。
 
 ## 部署你的應用程式
 

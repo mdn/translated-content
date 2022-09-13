@@ -10,7 +10,9 @@ original_slug: Web/API/RTCPeerConnection/onconnectionstatechange
 
 ## Syntax
 
-    RTCPeerConnection.onconnectionstatechange = eventHandler;
+```js
+RTCPeerConnection.onconnectionstatechange = eventHandler;
+```
 
 ### 값
 

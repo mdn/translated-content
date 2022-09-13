@@ -99,7 +99,7 @@ console.log(p.m()); // 13
 
 위에서 언급했듯이, 자바스크립트에서 함수는 속성을 가질 수 있다. 모든 함수에는 `prototype`이라는 특수한 속성이 있다. 아래의 예제 코드는 독립적이라는 것에 유의하자. (아래의 코드 이외에는 웹페이지에 다른 자바스크립트가 없다고 가정하는 것이 좋다.)
 
-최적의 실습을 위해서 콘솔을 열고 "Console" 탭으로 이동하여 아래의 JavaScript 코드를 복사하여 붙여넣은 다음 , 엔터키를 눌러 실행할 것을 적극 권한다. (콘솔은 대부분 웹 브라우저의 Developer Tools에 포함되어있다. 자세한 내용은 [Firefox Developer Tools](https://developer.mozilla.org/ko-KR/docs/Tools), [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/),[ Edge DevTools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide) 에서 확인할 수 있다. )
+최적의 실습을 위해서 콘솔을 열고 "Console" 탭으로 이동하여 아래의 JavaScript 코드를 복사하여 붙여넣은 다음 , 엔터키를 눌러 실행할 것을 적극 권한다. (콘솔은 대부분 웹 브라우저의 Developer Tools에 포함되어있다. 자세한 내용은 [Firefox Developer Tools](https://developer.mozilla.org/ko-KR/docs/Tools), [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/), [Edge DevTools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide) 에서 확인할 수 있다. )
 
 ```
     function doSomething(){}
@@ -114,29 +114,64 @@ console.log(p.m()); // 13
 위 내용을 토대로, 콘솔을 보면 `doSomething()` 은 기본 `prototype` 속성을 가진다. 코드를 실행한 뒤에 콘솔에서는 다음과 유사한 형태의 객체가 표시되어야한다.
 
 ```
-    {
-        constructor: ƒ doSomething(),
-        __proto__: {
-            constructor: ƒ Object(),
-            hasOwnProperty: ƒ hasOwnProperty(),
-            isPrototypeOf: ƒ isPrototypeOf(),
-            propertyIsEnumerable: ƒ propertyIsEnumerable(),
-            toLocaleString: ƒ toLocaleString(),
-            toString: ƒ toString(),
-            valueOf: ƒ valueOf()
-        }
+{
+    constructor: ƒ doSomething(),
+    __proto__: {
+        constructor: ƒ Object(),
+        hasOwnProperty: ƒ hasOwnProperty(),
+        isPrototypeOf: ƒ isPrototypeOf(),
+        propertyIsEnumerable: ƒ propertyIsEnumerable(),
+        toLocaleString: ƒ toLocaleString(),
+        toString: ƒ toString(),
+        valueOf: ƒ valueOf()
     }
+}
 ```
 
 우리는 아래에 보이는 것과 같이 `doSomething()` 프로토타입에 속성을 추가할 수 있다.
 
-    function doSomething(){}
-    doSomething.prototype.foo = "bar";
-    console.log( doSomething.prototype );
+```js
+function doSomething(){}
+doSomething.prototype.foo = "bar";
+console.log( doSomething.prototype );
+```
 
 결과:
+
 ```
-    {
+{
+    foo: "bar",
+    constructor: ƒ doSomething(),
+    __proto__: {
+        constructor: ƒ Object(),
+        hasOwnProperty: ƒ hasOwnProperty(),
+        isPrototypeOf: ƒ isPrototypeOf(),
+        propertyIsEnumerable: ƒ propertyIsEnumerable(),
+        toLocaleString: ƒ toLocaleString(),
+        toString: ƒ toString(),
+        valueOf: ƒ valueOf()
+    }
+}
+```
+
+이제 `new` 연산자를 사용해서 프로토타입 기반의 `doSomething()` 인스턴스를 생성할 수 있다. new 연산자를 사용하려면 함수 호출 형식에 `new` 접두사를 붙이기만하면 된다. `new` 연산자로 함수를 호출하면 해당 함수의 인스턴스 객체를 반환받는다. 그러면 속성들을 이 객체에 추가할 수 있다.
+
+다음의 코드를 실행해보자.
+
+```js
+function doSomething(){}
+doSomething.prototype.foo = "bar"; // add a property onto the prototype
+var doSomeInstancing = new doSomething();
+doSomeInstancing.prop = "some value"; // add a property onto the object
+console.log( doSomeInstancing );
+```
+
+실행하고나면 결과는 다음과 비슷할 것이다.
+
+```
+{
+    prop: "some value",
+    __proto__: {
         foo: "bar",
         constructor: ƒ doSomething(),
         __proto__: {
@@ -149,39 +184,7 @@ console.log(p.m()); // 13
             valueOf: ƒ valueOf()
         }
     }
-```
-
-이제 `new` 연산자를 사용해서 프로토타입 기반의 `doSomething()` 인스턴스를 생성할 수 있다. new 연산자를 사용하려면 함수 호출 형식에 `new` 접두사를 붙이기만하면 된다. `new` 연산자로 함수를 호출하면 해당 함수의 인스턴스 객체를 반환받는다. 그러면 속성들을 이 객체에 추가할 수 있다.
-
-다음의 코드를 실행해보자.
-
-```
-    function doSomething(){}
-    doSomething.prototype.foo = "bar"; // add a property onto the prototype
-    var doSomeInstancing = new doSomething();
-    doSomeInstancing.prop = "some value"; // add a property onto the object
-    console.log( doSomeInstancing );
-```
-
-실행하고나면 결과는 다음과 비슷할 것이다.
-
-```
-    {
-        prop: "some value",
-        __proto__: {
-            foo: "bar",
-            constructor: ƒ doSomething(),
-            __proto__: {
-                constructor: ƒ Object(),
-                hasOwnProperty: ƒ hasOwnProperty(),
-                isPrototypeOf: ƒ isPrototypeOf(),
-                propertyIsEnumerable: ƒ propertyIsEnumerable(),
-                toLocaleString: ƒ toLocaleString(),
-                toString: ƒ toString(),
-                valueOf: ƒ valueOf()
-            }
-        }
-    }
+}
 ```
 
 위에서 본 것과 같이, doSomeInstancing 객체의 `__proto__` 는 doSomething.prototype 이다.
@@ -201,28 +204,28 @@ doSomeInstancing의 `__proto__`의 `__proto__`의 `__proto__`는 존재할 수 �
 
 콘솔에 코드를 조금 더 추가해보자.
 
-```
-    function doSomething(){}
-    doSomething.prototype.foo = "bar";
-    var doSomeInstancing = new doSomething();
-    doSomeInstancing.prop = "some value";
-    console.log("doSomeInstancing.prop:      " + doSomeInstancing.prop);
-    console.log("doSomeInstancing.foo:       " + doSomeInstancing.foo);
-    console.log("doSomething.prop:           " + doSomething.prop);
-    console.log("doSomething.foo:            " + doSomething.foo);
-    console.log("doSomething.prototype.prop: " + doSomething.prototype.prop);
-    console.log("doSomething.prototype.foo:  " + doSomething.prototype.foo);
+```js
+function doSomething(){}
+doSomething.prototype.foo = "bar";
+var doSomeInstancing = new doSomething();
+doSomeInstancing.prop = "some value";
+console.log("doSomeInstancing.prop:      " + doSomeInstancing.prop);
+console.log("doSomeInstancing.foo:       " + doSomeInstancing.foo);
+console.log("doSomething.prop:           " + doSomething.prop);
+console.log("doSomething.foo:            " + doSomething.foo);
+console.log("doSomething.prototype.prop: " + doSomething.prototype.prop);
+console.log("doSomething.prototype.foo:  " + doSomething.prototype.foo);
 ```
 
 이 코드의 결과는 아래와 같다.
 
 ```
-    doSomeInstancing.prop:      some value
-    doSomeInstancing.foo:       bar
-    doSomething.prop:           undefined
-    doSomething.foo:            undefined
-    doSomething.prototype.prop: undefined
-    doSomething.prototype.foo:  bar
+doSomeInstancing.prop:      some value
+doSomeInstancing.foo:       bar
+doSomething.prop:           undefined
+doSomething.foo:            undefined
+doSomething.prototype.prop: undefined
+doSomething.prototype.foo:  bar
 ```
 
 ## 객체를 생성하는 여러 방법과 프로토타입 체인 결과

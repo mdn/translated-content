@@ -101,14 +101,11 @@ Cet élément ne possède que [les attributs universels](/fr/docs/Web/HTML/Globa
 
 ## Spécifications
 
-| Spécification                                                                                        | État                             | Commentaires                                       |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'sections.html#the-nav-element', '&lt;nav&gt;')}} | {{Spec2('HTML WHATWG')}} | Aucune modification depuis la dernière dérivation. |
-| {{SpecName('HTML5 W3C', 'sections.html#the-nav-element', '&lt;nav&gt;')}}     | {{Spec2('HTML5 W3C')}}     | Définition initiale.                               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.nav")}}
+{{Compat}}
 
 ## Voir aussi
 

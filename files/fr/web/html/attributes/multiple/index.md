@@ -168,10 +168,7 @@ Définir `size="1"` sur une sélection multiple peut la faire apparaître comme 
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-multiple', 'l\'attribut multiple')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', 'input.html#attr-input-multiple', 'l\'attribut multiple')}} | {{Spec2('HTML5 W3C')}}     |
+{{Specifications}}
 
 ## Voir aussi
 

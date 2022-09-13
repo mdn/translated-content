@@ -1,21 +1,6 @@
 ---
 title: Worklet.addModule()
 slug: Web/API/Worklet/addModule
-page-type: web-api-instance-method
-tags:
-  - API
-  - Background
-  - Experimental
-  - Houdini
-  - Method
-  - Multiprocessor
-  - Processes
-  - Reference
-  - Tasks
-  - Worklets
-  - addModule
-browser-compat: api.Worklet.addModule
-translation_of: Web/API/Worklet/addModule
 ---
 {{APIRef("Worklets")}}{{SeeCompatTable}}
 

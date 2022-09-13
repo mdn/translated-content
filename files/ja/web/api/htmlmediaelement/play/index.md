@@ -1,19 +1,6 @@
 ---
 title: HTMLMediaElement.play()
 slug: Web/API/HTMLMediaElement/play
-page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - HTMLMediaElement
-  - Interface
-  - Media
-  - Method
-  - Reference
-  - Video
-  - play
-browser-compat: api.HTMLMediaElement.play
-translation_of: Web/API/HTMLMediaElement/play
 ---
 {{APIRef("HTML DOM")}}
 
@@ -34,7 +21,7 @@ play()
 
 ### 返値
 
-再生が開始されたときに解決される、または何らかの理由で再生を開始できない場合は拒否されるプロミス ({{jsxref("Promise")}}) です。。
+再生が開始されたときに解決される、または何らかの理由で再生を開始できない場合は拒否されるプロミス ({{jsxref("Promise")}}) です。
 
 > **Note:** 古いブラウザーは `play()` から値を返さない可能性があります。
 

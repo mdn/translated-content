@@ -63,15 +63,11 @@ Fournissez une indication aux utilisateurs pour les informer que le contrôle de
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#attr-input-required', 'l\'attribut required')}}     | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', 'forms.html#attr-input-required', 'l\'attribut required')}}     | {{Spec2('HTML5 W3C')}}     |
-| {{SpecName('HTML5.1', 'sec-forms.html#the-required-attribute', 'l\'attribut required')}} | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attributes.required")}}
+{{Compat}}
 
 ## Voir aussi
 

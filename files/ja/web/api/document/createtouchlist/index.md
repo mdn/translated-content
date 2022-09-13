@@ -1,18 +1,6 @@
 ---
 title: Document.createTouchList()
 slug: Web/API/Document/createTouchList
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - Document
-  - Method
-  - Mobile
-  - createTouchList
-  - touch
-  - タッチパネル
-  - メソッド
-translation_of: Web/API/Document/createTouchList
 ---
 {{APIRef("DOM")}}{{Deprecated_Header}}
 
@@ -67,7 +55,7 @@ var list2 = document.createTouchList(touch1, touch2);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.createTouchList")}}
+{{Compat}}
 
 ## 関連情報
 

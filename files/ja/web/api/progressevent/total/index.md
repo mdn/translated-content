@@ -1,14 +1,6 @@
 ---
 title: ProgressEvent.total
 slug: Web/API/ProgressEvent/total
-tags:
-  - API
-  - 進捗イベント
-  - ProgressEvent
-  - プロパティ
-  - Reference
-browser-compat: api.ProgressEvent.total
-translation_of: Web/API/ProgressEvent/total
 ---
 {{APIRef("DOM Events")}}
 

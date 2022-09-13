@@ -3,7 +3,7 @@ title: Example 1
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
 original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_1
 ---
-这是第一个[如果构建自定义表单小部件](/en-US/docs/Web/Guide/HTML/Forms/How_to_build_custom_form_widgets)的代码解释事例。
+这是第一个[如果构建自定义表单小部件](/zh-CN/docs/Web/Guide/HTML/Forms/How_to_build_custom_form_widgets)的代码解释事例。
 
 ## 基本状态
 

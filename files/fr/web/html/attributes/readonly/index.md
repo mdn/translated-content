@@ -68,15 +68,11 @@ Si l'élément est en lecture seule, la valeur de l'élément ne peut pas être 
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#attr-input-readonly', 'l\'attribut readonly')}}     | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', 'forms.html#attr-input-readonly', 'l\'attribut readonly')}}     | {{Spec2('HTML5 W3C')}}     |
-| {{SpecName('HTML5.1', 'sec-forms.html#the-readonly-attribute', 'l\'attribut readonly')}} | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attributes.readonly")}}
+{{Compat}}
 
 ## Voir aussi
 

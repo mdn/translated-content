@@ -52,11 +52,8 @@ function addTextNode(text) {
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                       | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName("DOM3 Core", "core.html#ID-1975348127", "Document.createTextNode()")}} | {{Spec2("DOM3 Core")}} | Pas de changement   |
-| {{SpecName("DOM2 Core", "core.html#ID-1975348127", "Document.createTextNode()")}} | {{Spec2("DOM2 Core")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.createTextNode")}}
+{{Compat}}
