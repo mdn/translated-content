@@ -49,8 +49,7 @@ for (const letter of arrIter) {
 
 #### 結果
 
-{{EmbedLiveSample('Iteration_using_for...of_loop', '', '', '',
-  'Web/JavaScript/Reference/Global_Objects/Array/@@iterator')}}
+{{EmbedLiveSample('Iteration_using_for...of_loop')}}
 
 ### 他の反復方法
 
