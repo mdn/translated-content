@@ -115,7 +115,7 @@ JavaScript でコンストラクターを通じてクラスを作り、そこか
 
 コンストラクター関数は、 JavaScript 版のクラスです。それは関数に期待される全ての機能を持っていますが、何も返さないし、明示的にオブジェクトを生成しもしないという点に注意してください。基本的には、プロパティとメソッドを定義するだけです。加えて、 `this` キーワードが使われていることにも注意してください。基本、オブジェクトインスタンスの 1 つが作成されるときにはいつでも、オブジェクトの `name` プロパティはコンストラクター呼び出しに渡される name 値と等しくなり、 `greeting()` メソッドもコンストラクター呼び出しに渡される name 値を使用します。
 
-> **Note:** **メモ**: 通常、コンストラクター関数の名前は大文字で始まります。コードの中で、コンストラクター関数がより容易に認識されるようにするための慣習です。
+> **Note:**: 通常、コンストラクター関数の名前は大文字で始まります。コードの中で、コンストラクター関数がより容易に認識されるようにするための慣習です。
 
 では、オブジェクトを生成するために、どのようにコンストラクターを呼び出したらよいでしょうか？
 
@@ -214,7 +214,7 @@ person1.bio()
 // etc.
 ```
 
-> **Note:** **メモ**: もしこの工程で何らかのトラブルがあった場合は、あなたのコードを我々のバージョン ([oojs-class-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html)。[ライブサンプル](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html)も) と比べてみてください。
+> **Note:**: もしこの工程で何らかのトラブルがあった場合は、あなたのコードを我々のバージョン ([oojs-class-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html)。[ライブサンプル](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html)も) と比べてみてください。
 
 ### さらなる練習
 
