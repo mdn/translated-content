@@ -1,6 +1,7 @@
 ---
 title: jQuery
-slug: Glossary/jQuery
+slug: orphaned/Glossary/jQuery
+original_slug: Glossary/jQuery
 ---
 **jQuery** 是一个着重简化 {{Glossary("DOM")}} 操作，{{Glossary("AJAX")}} 调用和{{Glossary("Event", "事件")}}处理的 {{Glossary("JavaScript")}} {{Glossary("Library", "库")}}。一些前端 JavaScript 开发者经常会用到它。
 

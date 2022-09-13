@@ -1,6 +1,7 @@
 ---
 title: jQuery
-slug: Glossary/jQuery
+slug: orphaned/Glossary/jQuery
+original_slug: Glossary/jQuery
 ---
 jQuery 是專精於簡化 {{Glossary("DOM")}}、{{Glossary("AJAX")}}、與 {{Glossary("Event")}} 操作的 {{Glossary("JavaScript")}} {{Glossary("函式庫")}}。
 

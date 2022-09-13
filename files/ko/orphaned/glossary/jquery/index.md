@@ -1,10 +1,11 @@
 ---
 title: jQuery
-slug: Glossary/jQuery
+slug: orphaned/Glossary/jQuery
 tags:
   - 자바스크립트
   - 제이쿼리
 translation_of: Glossary/jQuery
+original_slug: Glossary/jQuery
 ---
 **jQuery**는 {{Glossary("DOM")}}조작의 단순화, {{Glossary("AJAX")}}호출, {{Glossary("Event")}}핸들링에 초점을 맞춘 {{Glossary("JavaScript")}} {{Glossary("Library")}}다. 자바스크립트 개발자가 자주 사용한다.
 

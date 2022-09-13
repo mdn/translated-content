@@ -1,11 +1,12 @@
 ---
 title: jQuery
-slug: Glossary/jQuery
+slug: orphaned/Glossary/jQuery
 tags:
   - Glosario
   - JQuery
   - JavaScript
 translation_of: Glossary/jQuery
+original_slug: Glossary/jQuery
 ---
 jQuery es una {{Glossary("JavaScript")}} {{Glossary("Library")}} que se enfoca en simplificar la manipulación del {{Glossary("DOM")}}, llamadas {{Glossary("AJAX")}} y manejo de {{Glossary("Event")}}. Es utilizado por desarrolladores JavaScript de manera frecuente.
 

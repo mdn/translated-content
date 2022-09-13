@@ -346,10 +346,6 @@
     "modified": "2019-03-23T22:58:43.329Z",
     "contributors": ["loella16", "Goofy", "htindon"]
   },
-  "Glossary/Boot2Gecko": {
-    "modified": "2019-03-23T22:44:37.220Z",
-    "contributors": ["loella16", "Bat"]
-  },
   "Glossary/Breadcrumb": {
     "modified": "2020-09-25T06:01:58.166Z",
     "contributors": ["Voulto"]
@@ -2050,10 +2046,6 @@
   "Glossary/https": {
     "modified": "2019-03-23T22:41:38.751Z",
     "contributors": ["SphinxKnight", "loella16", "Porkepix", "xdelatour"]
-  },
-  "Glossary/jQuery": {
-    "modified": "2019-03-18T21:44:06.026Z",
-    "contributors": ["loella16"]
   },
   "Glossary/jpeg": {
     "modified": "2019-03-23T22:42:05.422Z",
@@ -28116,6 +28108,14 @@
       "si0ls",
       "dattaz"
     ]
+  },
+  "conflicting/Glossary/Firefox_OS": {
+    "modified": "2019-03-23T22:44:37.220Z",
+    "contributors": ["loella16", "Bat"]
+  },
+  "orphaned/Glossary/jQuery": {
+    "modified": "2019-03-18T21:44:06.026Z",
+    "contributors": ["loella16"]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
     "modified": "2020-10-15T21:27:51.341Z",
