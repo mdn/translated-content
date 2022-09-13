@@ -1,14 +1,6 @@
 ---
 title: Upgrade
 slug: Web/HTTP/Headers/Upgrade
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - リクエストヘッダー
-  - レスポンスヘッダー
-  - Upgrade
-browser-compat: http.headers.Upgrade
-translation_of: Web/HTTP/Headers/Upgrade
 ---
 {{HTTPSidebar}}
 

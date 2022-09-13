@@ -203,6 +203,7 @@
 /ko/docs/Glossary/Index	/ko/docs/Glossary
 /ko/docs/Glossary/Symbol	/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /ko/docs/Glossary/Transmission_Control_Protocol_(TCP)	/ko/docs/Glossary/TCP
+/ko/docs/Glossary/jQuery	/ko/docs/orphaned/Glossary/jQuery
 /ko/docs/Glossary/동적_프로그래밍_언어	/ko/docs/orphaned/Glossary/Dynamic_programming_language
 /ko/docs/Glossary/배열	/ko/docs/Glossary/array
 /ko/docs/Glossary/불린	/ko/docs/Glossary/Boolean

@@ -1,16 +1,6 @@
 ---
 title: 'Feature-Policy: midi'
 slug: Web/HTTP/Headers/Feature-Policy/midi
-tags:
-  - ディレクティブ
-  - 機能ポリシー
-  - Feature-Policy
-  - HTTP
-  - MIDI
-  - リファレンス
-  - 実験的
-browser-compat: http.headers.Feature-Policy.midi
-translation_of: Web/HTTP/Headers/Feature-Policy/midi
 ---
 {{HTTPSidebar}}{{SeeCompatTable}}
 

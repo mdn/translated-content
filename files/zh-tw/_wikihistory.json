@@ -630,10 +630,6 @@
     "modified": "2019-03-18T21:42:32.887Z",
     "contributors": ["Rocker"]
   },
-  "Glossary/jQuery": {
-    "modified": "2020-05-23T15:08:04.982Z",
-    "contributors": ["iigmir"]
-  },
   "Glossary/jpeg": {
     "modified": "2019-03-18T21:44:36.385Z",
     "contributors": ["iigmir"]
@@ -5139,6 +5135,10 @@
   },
   "orphaned/Glossary/Bootstrap": {
     "modified": "2020-05-23T17:07:57.268Z",
+    "contributors": ["iigmir"]
+  },
+  "orphaned/Glossary/jQuery": {
+    "modified": "2020-05-23T15:08:04.982Z",
     "contributors": ["iigmir"]
   }
 }

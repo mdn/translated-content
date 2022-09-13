@@ -310,10 +310,6 @@
     "modified": "2019-09-30T18:01:56.924Z",
     "contributors": ["yuta0801", "mfuji09", "horichiyo", "x2357"]
   },
-  "Glossary/Boot2Gecko": {
-    "modified": "2019-03-18T21:32:14.290Z",
-    "contributors": ["Uemmra3", "mk-sawa"]
-  },
   "Glossary/Breadcrumb": {
     "modified": "2020-08-05T02:02:19.289Z",
     "contributors": ["mfuji09", "h-subaru"]
@@ -2042,10 +2038,6 @@
   "Glossary/https": {
     "modified": "2020-02-21T15:23:37.302Z",
     "contributors": ["mfuji09", "Uemmra3", "Wind1808", "heatflat"]
-  },
-  "Glossary/jQuery": {
-    "modified": "2020-08-24T03:29:50.663Z",
-    "contributors": ["mfuji09", "Uemmra3"]
   },
   "Glossary/jpeg": {
     "modified": "2020-07-22T13:59:29.827Z",
@@ -31000,6 +30992,10 @@
     "modified": "2020-07-17T23:22:13.809Z",
     "contributors": ["papparapa", "silverskyvicto"]
   },
+  "conflicting/Glossary/Firefox_OS": {
+    "modified": "2019-03-18T21:32:14.290Z",
+    "contributors": ["Uemmra3", "mk-sawa"]
+  },
   "conflicting/Glossary/Plugin": {
     "modified": "2019-03-18T21:35:38.258Z",
     "contributors": ["momdo"]
@@ -31474,6 +31470,10 @@
   "orphaned/Glossary/GIJ": {
     "modified": "2019-01-16T22:20:13.005Z",
     "contributors": ["dskmori", "kubota-aoi"]
+  },
+  "orphaned/Glossary/jQuery": {
+    "modified": "2020-08-24T03:29:50.663Z",
+    "contributors": ["mfuji09", "Uemmra3"]
   },
   "orphaned/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data": {
     "modified": "2020-03-07T07:55:37.025Z",

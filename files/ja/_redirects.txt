@@ -1869,6 +1869,7 @@
 /ja/docs/Glossary/404	/ja/docs/Web/HTTP/Status/404
 /ja/docs/Glossary/502	/ja/docs/Web/HTTP/Status/502
 /ja/docs/Glossary/AOM	/ja/docs/Glossary/Accessibility_tree
+/ja/docs/Glossary/Boot2Gecko	/ja/docs/conflicting/Glossary/Firefox_OS
 /ja/docs/Glossary/Bootstrap	/ja/docs/orphaned/Glossary/Bootstrap
 /ja/docs/Glossary/Bézier_curve	/ja/docs/Glossary/Bezier_curve
 /ja/docs/Glossary/Client_hints	/ja/docs/Web/HTTP/Client_hints
@@ -1887,6 +1888,7 @@
 /ja/docs/Glossary/Signature/関数	/ja/docs/Glossary/Signature/Function
 /ja/docs/Glossary/Symbol	/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /ja/docs/Glossary/XSS	/ja/docs/Glossary/Cross-site_scripting
+/ja/docs/Glossary/jQuery	/ja/docs/orphaned/Glossary/jQuery
 /ja/docs/Glossary/クロージャ	/ja/docs/Glossary/Closure
 /ja/docs/Glossary/スラグ	/ja/docs/Glossary/Slug
 /ja/docs/Glossary/ドメイン	/ja/docs/Glossary/Domain
