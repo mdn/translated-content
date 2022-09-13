@@ -33,7 +33,7 @@ delete object['property']
 - {{jsxref("TypeError")}}
     - : 如果属性是自身不可配置的属性且处于[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)中，则会抛出该异常。
 - {{jsxref("ReferenceError")}}
-    - : 当 `object` 是 [`super`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 时抛出。
+    - : 当 `object` 是父对象（[`super`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)）时抛出。
 
 ## 描述
 
