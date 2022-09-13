@@ -14,6 +14,6 @@ original_slug: Glossary/Bézier_curve
 
 ## 参见
 
-- 维基百科上的 [Bézier curve on Wikipedia](https://zh.wikipedia.org/wiki/贝塞尔曲线)
+- 维基百科上的[贝塞尔曲线词条](https://zh.wikipedia.org/wiki/贝塞尔曲线)
 - [CSS 中的贝塞尔时间函数](/zh-CN/docs/Web/CSS/easing-function#using_the_cubic-bezier_function)
 - {{SVGAttr("keySplines")}} SVG 属性
