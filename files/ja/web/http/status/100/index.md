@@ -1,11 +1,6 @@
 ---
 title: 100 Continue
 slug: Web/HTTP/Status/100
-tags:
-  - HTTP
-  - Informational
-  - ステータスコード
-translation_of: Web/HTTP/Status/100
 ---
 {{HTTPSidebar}}
 

@@ -91,6 +91,7 @@
 /ru/docs/Glossary/Bézier_curve	/ru/docs/Glossary/Bezier_curve
 /ru/docs/Glossary/Dynamic_programming_language	/ru/docs/orphaned/Glossary/Dynamic_programming_language
 /ru/docs/Glossary/Symbol	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol
+/ru/docs/Glossary/jQuery	/ru/docs/orphaned/Glossary/jQuery
 /ru/docs/Glossary/пустой_элемент	/ru/docs/Glossary/Empty_element
 /ru/docs/HTML	/ru/docs/Web/HTML
 /ru/docs/HTML/Canvas	/ru/docs/Web/API/Canvas_API
@@ -1060,7 +1061,7 @@
 /ru/docs/Словарь/first_meaningful_paint	/ru/docs/Glossary/first_meaningful_paint
 /ru/docs/Словарь/global_variable	/ru/docs/Glossary/Global_variable
 /ru/docs/Словарь/https	/ru/docs/Glossary/https
-/ru/docs/Словарь/jQuery	/ru/docs/Glossary/jQuery
+/ru/docs/Словарь/jQuery	/ru/docs/orphaned/Glossary/jQuery
 /ru/docs/Словарь/jpeg	/ru/docs/Glossary/jpeg
 /ru/docs/Словарь/loop	/ru/docs/Glossary/loop
 /ru/docs/Словарь/origin	/ru/docs/Glossary/Origin

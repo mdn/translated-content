@@ -1,12 +1,6 @@
 ---
 title: MDN에 참여하기
 slug: MDN/Contribute
-tags:
-  - MDN 메타
-  - 가이드
-  - 시작하기
-  - 참고문서
-translation_of: MDN/Contribute
 ---
 {{MDNSidebar}}
 

@@ -1,14 +1,6 @@
 ---
 title: If-Range
 slug: Web/HTTP/Headers/If-Range
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - リクエストヘッダー
-  - リファレンス
-  - レンジリクエスト
-  - 条件リクエスト
-translation_of: Web/HTTP/Headers/If-Range
 ---
 {{HTTPSidebar}}
 

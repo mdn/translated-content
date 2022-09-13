@@ -1061,10 +1061,6 @@
     "modified": "2019-03-18T21:20:16.521Z",
     "contributors": ["mikelmg", "BubuAnabelas"]
   },
-  "Glossary/jQuery": {
-    "modified": "2019-03-23T22:02:49.153Z",
-    "contributors": ["yancarq", "velizluisma"]
-  },
   "Glossary/jpeg": {
     "modified": "2019-03-23T22:15:35.380Z",
     "contributors": ["gparra989"]
@@ -15294,6 +15290,10 @@
   "orphaned/Glossary/elemento": {
     "modified": "2019-01-16T19:38:18.287Z",
     "contributors": ["BubuAnabelas", "HerberWest"]
+  },
+  "orphaned/Glossary/jQuery": {
+    "modified": "2019-03-23T22:02:49.153Z",
+    "contributors": ["yancarq", "velizluisma"]
   },
   "orphaned/Guía_para_el_desarrollador_de_agregados_para_Firefox": {
     "modified": "2019-01-16T14:29:03.747Z",

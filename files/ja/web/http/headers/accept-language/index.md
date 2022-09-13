@@ -1,14 +1,6 @@
 ---
 title: Accept-Language
 slug: Web/HTTP/Headers/Accept-Language
-tags:
-  - Accept-Language
-  - HTTP
-  - HTTP ヘッダー
-  - Reference
-  - コンテンツネゴシエーション
-  - リファレンス
-translation_of: Web/HTTP/Headers/Accept-Language
 ---
 {{HTTPSidebar}}
 
