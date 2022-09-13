@@ -1,5 +1,5 @@
 ---
-title: Bézier curve
+title: 贝塞尔曲线
 slug: Glossary/Bezier_curve
 original_slug: Glossary/Bézier_curve
 ---
