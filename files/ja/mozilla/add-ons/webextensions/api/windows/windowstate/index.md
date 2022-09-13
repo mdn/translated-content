@@ -23,13 +23,13 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
 
 macOSとの互換性: macOS 10.10 から、ウィンドウのデフォルトの最大化動作が変更され、アプリケーションを「ズーム」ウィンドウではなくフルスクリーンアプリケーションとして実行するようになりました。 「フルスクリーン」は、フルスクリーンアプリケーションとして実行されているブラウザと、タブ内のコンテンツがフルスクリーン API を使用する場合の両方を指します。
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
 {{Compat("webextensions.api.windows.WindowState")}}
 
 {{WebExtExamples}}
 
-> **ノート:** この API は、Chromium の [`chrome.windows`](https://developer.chrome.com/extensions/windows#type-WindowState) API に基づいています。このドキュメントは、Chromium コードの [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) から派生したものです。Microsoft Edge互換性データは Microsoft Corporation によって提供され、Creative Commons Attribution 3.0 United States License に基づいてここに含まれています。
+> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows#type-WindowState) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
