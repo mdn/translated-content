@@ -1,12 +1,6 @@
 ---
 title: フィルター効果
 slug: Web/SVG/Tutorial/Filter_effects
-tags:
-  - 上級者
-  - NeedsContent
-  - SVG
-  - SVG:チュートリアル
-translation_of: Web/SVG/Tutorial/Filter_effects
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Other_content_in_SVG", "Web/SVG/Tutorial/SVG_Fonts") }}
 
