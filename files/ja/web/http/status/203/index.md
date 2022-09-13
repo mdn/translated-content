@@ -1,14 +1,6 @@
 ---
 title: 203 Non-Authoritative Information
 slug: Web/HTTP/Status/203
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - Reference
-  - Status code
-  - ステータスコード
-  - 成功レスポンス
-translation_of: Web/HTTP/Status/203
 ---
 {{HTTPSidebar}}
 

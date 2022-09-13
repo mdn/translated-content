@@ -1,16 +1,6 @@
 ---
 title: HTTP ヘッダー
 slug: Web/HTTP/Headers
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - Networking
-  - Reference
-  - header
-  - ネットワーク
-  - ヘッダー
-  - リファレンス
-translation_of: Web/HTTP/Headers
 ---
 {{HTTPSidebar}}
 

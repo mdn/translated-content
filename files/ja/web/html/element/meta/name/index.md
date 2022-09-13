@@ -79,16 +79,16 @@ CSS Device Adaptation 仕様書は、以下のメタデータ名を定義して�
   > - 既定値は、端末やブラウザーによって異なる場合があります。
   > - Firefox for Mobile でのこの宣言については、[こちらの記事](/ja/docs/Mobile/Viewport_meta_tag)を参照してください。
 
-  ##### ビューポートの拡大縮小についてのアクセシビリティの考慮
+##### ビューポートの拡大縮小についてのアクセシビリティの考慮
 
-  `user-scalable` を `no` に設定して拡大縮小機能を無効にすると、弱視の人がページの内容を読んだり理解したりすることができなくなります。
+`user-scalable` を `no` に設定して拡大縮小機能を無効にすると、弱視の人がページの内容を読んだり理解したりすることができなくなります。
 
-  - [MDN WCAG を理解する、ガイドライン 1.4 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-  - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [MDN WCAG を理解する、ガイドライン 1.4 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-  ##### 関連情報
+##### 関連情報
 
-  CSS の [`@viewport`](/ja/docs/Web/CSS/@viewport) アット規則
+CSS の [`@viewport`](/ja/docs/Web/CSS/@viewport) アット規則
 
 ### その他のメタデータ名
 

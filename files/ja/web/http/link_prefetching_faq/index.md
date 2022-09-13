@@ -1,17 +1,6 @@
 ---
 title: リンク先読みの FAQ
 slug: Web/HTTP/Link_prefetching_FAQ
-tags:
-  - Gecko
-  - HTML
-  - HTTP
-  - Link
-  - Necko
-  - Performance
-  - Web Development
-  - 先読み
-  - 移行
-translation_of: Web/HTTP/Link_prefetching_FAQ
 ---
 ### リンクの先読みとは?
 

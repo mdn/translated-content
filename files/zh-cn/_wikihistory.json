@@ -1571,10 +1571,6 @@
     "modified": "2019-06-30T04:47:58.467Z",
     "contributors": ["ch4zzzzz", "micblo"]
   },
-  "Glossary/jQuery": {
-    "modified": "2020-05-09T23:15:26.173Z",
-    "contributors": ["RainSlide", "yshaojun", "iigmir"]
-  },
   "Glossary/jpeg": {
     "modified": "2020-07-21T12:13:23.651Z",
     "contributors": ["wr20060926", "zhangchen", "micblo"]
@@ -33884,5 +33880,9 @@
   "conflicting/Web/API/Element/touchstart_event": {
     "modified": "2020-10-15T22:30:05.652Z",
     "contributors": ["Carllllo"]
+  },
+  "orphaned/Glossary/jQuery": {
+    "modified": "2020-05-09T23:15:26.173Z",
+    "contributors": ["RainSlide", "yshaojun", "iigmir"]
   }
 }

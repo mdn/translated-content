@@ -140,6 +140,7 @@
 /zh-TW/docs/Glossary/404	/zh-TW/docs/Web/HTTP/Status/404
 /zh-TW/docs/Glossary/502	/zh-TW/docs/Web/HTTP/Status/502
 /zh-TW/docs/Glossary/Bootstrap	/zh-TW/docs/orphaned/Glossary/Bootstrap
+/zh-TW/docs/Glossary/jQuery	/zh-TW/docs/orphaned/Glossary/jQuery
 /zh-TW/docs/Glossary/偽元素	/zh-TW/docs/Glossary/Pseudo-element
 /zh-TW/docs/Glossary/字元	/zh-TW/docs/Glossary/Character
 /zh-TW/docs/Glossary/字元編碼	/zh-TW/docs/Glossary/character_encoding

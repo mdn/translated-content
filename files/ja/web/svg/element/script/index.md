@@ -1,11 +1,6 @@
 ---
 title: <script>
 slug: Web/SVG/Element/script
-tags:
-  - Element
-  - Reference
-  - SVG
-translation_of: Web/SVG/Element/script
 ---
 SVG `script` 要素は、HTML の [`script`](/ja/HTML/Element/Script) 要素と同じく、 スクリプト（例えば ECMAScript）を設置するための場所です。
 
