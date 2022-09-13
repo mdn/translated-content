@@ -16,7 +16,7 @@ new Uint32Array(object);
 new Uint32Array(buffer [, byteOffset [, length]]);
 ```
 
-更多的构造器语法和属性请参照 _[TypedArray](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)。_
+更多的构造器语法和属性请参照 _[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)。_
 
 ## 属性
 
@@ -149,6 +149,6 @@ var uint32 = new Uint32Array(iterable);
 
 ## 相关链接
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
