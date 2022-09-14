@@ -2,7 +2,7 @@
 title: ByteLengthQueuingStrategy
 slug: Web/API/ByteLengthQueuingStrategy
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
 [Streams API](/zh-CN/docs/Web/API/Streams_API) 的接口 **`ByteLengthQueuingStrategy`** 提供了一个队列策略，该队列策略提供了内置的字节长度并且可以在构造流的时候使用。
 
@@ -24,6 +24,7 @@ slug: Web/API/ByteLengthQueuingStrategy
 
 ```js
 const queueingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
+
 const readableStream = new ReadableStream({
   start(controller) {
     ...
@@ -35,7 +36,8 @@ const readableStream = new ReadableStream({
     console.log("stream error:", err);
   }
 }, queueingStrategy);
-var size = queueingStrategy.size(chunk);
+
+const size = queueingStrategy.size(chunk);
 ```
 
 ## 规范

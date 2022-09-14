@@ -2,7 +2,7 @@
 title: ByteLengthQueuingStrategy()
 slug: Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
 **`ByteLengthQueuingStrategy()`** 构造函数创建并返回一个 `ByteLengthQueuingStrategy` 对象实例。
 
@@ -42,7 +42,7 @@ const readableStream = new ReadableStream({
   }
 }, queuingStrategy);
 
-var size = queuingStrategy.size(chunk);
+const size = queuingStrategy.size(chunk);
 ```
 
 ## 规范
