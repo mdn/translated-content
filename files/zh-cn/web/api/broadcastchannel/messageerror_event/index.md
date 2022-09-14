@@ -24,7 +24,7 @@ slug: Web/API/BroadcastChannel/messageerror_event
       <th scope="row">Event handler property</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/API/BroadcastChannel/onmessageerror"
+          ><a href="/zh-CN/docs/Web/API/BroadcastChannel/onmessageerror"
             >onmessageerror</a
           ></code
         >

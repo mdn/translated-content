@@ -16,10 +16,10 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
       <th scope="row">强制性</th>
       <td>
         通常不做强制性要求（详细参见<a
-          href="/en-US/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID"
+          href="/zh-CN/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID"
           >When do you need an Add-on ID</a
         ><a
-          href="/en-US/Add-ons/WebExtensions/manifest.json/applications#When_do_I_need_the_applications_key"
+          href="/zh-CN/Add-ons/WebExtensions/manifest.json/applications#When_do_I_need_the_applications_key"
           >?</a
         >)。在 Firefox 48 版本之前为强制要求。
       </td>

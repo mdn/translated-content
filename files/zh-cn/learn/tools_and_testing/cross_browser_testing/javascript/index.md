@@ -11,10 +11,10 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
     <tr>
       <th scope="row">先决条件：</th>
       <td>
-        熟练使用 <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, 和
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言; 以及一些<a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+        熟练使用 <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
+        <a href="/zh-CN/docs/Learn/CSS">CSS</a>, 和
+        <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言; 以及一些<a
+          href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
           >跨浏览器测试的高级概念</a
         >.
       </td>
@@ -33,7 +33,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 
 Historically, JavaScript was plagued with cross-browser compatibility problems — back in the 1990s, the main browser choices back then (Internet Explorer and Netscape) had scripting implemented in different language flavours (Netscape had JavaScript, IE had JScript and also offered VBScript as an option), and while at least JavaScript and JScript were compatible to some degree (both based on the {{glossary("ECMAScript")}} specification), things were often implemented in conflicting, incompatible ways, causing developers many nightmares.
 
-Such incompatibility problems persisted well into the early 2000s, as old browsers were still being used and still needed supporting. This is one of the main reasons why libraries like [jQuery](http://jquery.com/) came into existence — to abstract away differences in browser implementations (e.g. see the code snippet in [How to make an HTTP request](/en-US/docs/AJAX/Getting_Started#Step_1_%E2%80%93_How_to_make_an_HTTP_request)) so developers only have to write one simple bit of code (see [`jQuery.ajax()`](http://api.jquery.com/jquery.ajax/)). jQuery (or whatever library you are using) will then handle the differences in the background, so you don't have to.
+Such incompatibility problems persisted well into the early 2000s, as old browsers were still being used and still needed supporting. This is one of the main reasons why libraries like [jQuery](http://jquery.com/) came into existence — to abstract away differences in browser implementations (e.g. see the code snippet in [How to make an HTTP request](/zh-CN/docs/Web/Guide/AJAX/Getting_Started#step_1_–_怎样发送_http_请求)) so developers only have to write one simple bit of code (see [`jQuery.ajax()`](https://api.jquery.com/jquery.ajax/)). jQuery (or whatever library you are using) will then handle the differences in the background, so you don't have to.
 
 Things have got much better since then; modern browsers do a good job of supporting "classic JavaScript features", and the requirement to use such code has diminished as the requirement to support older browsers has lessened (although bear in mind that they have not gone away altogether).
 
@@ -52,7 +52,7 @@ As we said in the [previous article](/zh-CN/docs/Learn/Tools_and_testing/Cross_b
 - Making sure variables, etc. are defined in the correct scope, and you are not running into conflicts between items declared in different places (see [Function scope and conflicts](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions#Function_scope_and_conflicts)).
 - Confusion about [this](/zh-CN/docs/Web/JavaScript/Reference/Operators/this), in terms of what scope it applies to, and therefore if its value is what you intended. You can read [What is "this"?](/zh-CN/docs/Learn/JavaScript/Objects/Basics#What_is_this) for a light introduction; you should also study examples like [this one](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143), which shows a typical pattern of saving a `this` scope to a separate variable, then using that variable in nested functions so you can be sure you are applying functionality to the correct `this` scope.
 - Incorrectly using functions inside loops — for example, in [bad-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/bad-for-loop.html) (see [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/bad-for-loop.html)), we loop through 10 iterations, each time creating a paragraph and adding an [onclick](/zh-CN/docs/Web/API/GlobalEventHandlers/onclick) event handler to it. When clicked, each one should alert a message containing its number (the value of `i` at the time it was created), however each one reports `i` as 11, because for loops do all their iterating before nested functions are invoked. If you want this to work correctly, you need to define a function to add the handler separately, calling it on each iteration and passing it the current value of `para` and `i` each time (or something similar). See [good-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/good-for-loop.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/good-for-loop.html) also) for a version that works.
-- Making sure asynchronous operations have returned before trying to use the values they return. For example, [this Ajax example](/en-US/docs/AJAX/Getting_Started#Step_3_%E2%80%93_A_Simple_Example) checks to make sure the request is complete and the response has been returned before trying to use the response for anything. This kind of operation has been made easier to handle by the introduction to [Promises](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) to the JavaScript language.
+- Making sure asynchronous operations have returned before trying to use the values they return. For example, [this Ajax example](/zh-CN/docs/Web/Guide/AJAX/Getting_Started#step_3_–_一个简单的例子) checks to make sure the request is complete and the response has been returned before trying to use the response for anything. This kind of operation has been made easier to handle by the introduction to [Promises](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) to the JavaScript language.
 
 > **备注：** [Buggy JavaScript Code: The 10 Most Common Mistakes JavaScript Developers Make](https://www.toptal.com/javascript/10-most-common-javascript-mistakes) has some nice discussions of these common mistakes and more.
 

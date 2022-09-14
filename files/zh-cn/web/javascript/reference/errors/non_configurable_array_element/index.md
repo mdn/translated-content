@@ -72,9 +72,9 @@ copy.length = 1;
 // arr.length == 3
 ```
 
-## 相关内容
+## 参见
 
-- [\[\[Configurable\]\]](/en-US/docs/Web/JavaScript/Data_structures#Properties)
+- [\[\[Configurable\]\]](/zh-CN/docs/Web/JavaScript/Data_structures#属性)
 - {{jsxref("Array.length")}}
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.seal()")}}

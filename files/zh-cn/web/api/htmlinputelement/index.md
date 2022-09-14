@@ -216,7 +216,7 @@ slug: Web/API/HTMLInputElement
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/API/HTMLInputElement/setSelectionRange"
+          ><a href="/zh-CN/docs/Web/API/HTMLInputElement/setSelectionRange"
             >setSelectionRange()</a
           ></code
         >
