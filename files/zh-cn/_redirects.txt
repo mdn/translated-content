@@ -1383,7 +1383,7 @@
 /zh-CN/docs/Web/API/Document/touchcancel_event	/zh-CN/docs/conflicting/Web/API/Element/touchcancel_event
 /zh-CN/docs/Web/API/Document/touchend_event	/zh-CN/docs/Web/API/Element/touchend_event
 /zh-CN/docs/Web/API/Document/touchmove_event	/zh-CN/docs/conflicting/Web/API/Element/touchmove_event
-/zh-CN/docs/Web/API/Document/touchstart_event	/zh-CN/docs/conflicting/Web/API/Element/touchstart_event
+/zh-CN/docs/Web/API/Document/touchstart_event	/zh-CN/docs/Web/API/Element/touchstart_event
 /zh-CN/docs/Web/API/Document/width	/zh-CN/docs/Web/API/Element/clientWidth
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/activeElement	/zh-CN/docs/Web/API/Document/activeElement
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/zh-CN/docs/Web/API/Document/elementFromPoint

@@ -33877,10 +33877,6 @@
     "modified": "2019-04-30T14:14:32.752Z",
     "contributors": ["wbamberg", "irenesmith", "fscholz", "zhaosource"]
   },
-  "conflicting/Web/API/Element/touchstart_event": {
-    "modified": "2020-10-15T22:30:05.652Z",
-    "contributors": ["Carllllo"]
-  },
   "orphaned/Glossary/jQuery": {
     "modified": "2020-05-09T23:15:26.173Z",
     "contributors": ["RainSlide", "yshaojun", "iigmir"]
