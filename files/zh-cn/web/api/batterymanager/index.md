@@ -23,16 +23,16 @@ slug: Web/API/BatteryManager
 
 _方法继承自其父接口_：{{domxref("EventTarget")}}。
 
-### 事件处理器
+### 事件
 
 - {{domxref("BatteryManager.chargingchange_event", "chargingchange")}}
-  - : 当电池充电状态（{{domxref("BatteryManager.charging", "charging")}} 属性）更新时被调用。
+  - : 当电池充电状态（{{domxref("BatteryManager.charging", "charging")}} 属性）更新时被触发。
 - {{domxref("BatteryManager.chargingtimechange_event", "chargingtimechange")}}
-  - : 当电池充电时间（{{domxref("BatteryManager.chargingTime", "chargingTime")}} 属性）更新时被调用。
+  - : 当电池充电时间（{{domxref("BatteryManager.chargingTime", "chargingTime")}} 属性）更新时被触发。
 - {{domxref("BatteryManager.dischargingtimechange_event", "dischargingtimechange")}}
-  - : 当电池断开充电时间（{{domxref("BatteryManager.dischargingTime", "dischargingTime")}} 属性）更新时被调用。
+  - : 当电池断开充电的时间（{{domxref("BatteryManager.dischargingTime", "dischargingTime")}} 属性）更新时被触发。
 - {{domxref("BatteryManager.levelchange_event", "levelchange")}}
-  - : 当电池电量（{{domxref("BatteryManager.level", "level")}} 属性）更新时被调用。
+  - : 当电池电量（{{domxref("BatteryManager.level", "level")}} 属性）更新时被触发。
 
 ## 规范
 
