@@ -3391,6 +3391,7 @@
 /ja/docs/Web/API/HTMLHyperlinkElementUtils/toString	/ja/docs/Web/API/HTMLAnchorElement/toString
 /ja/docs/Web/API/HTMLHyperlinkElementUtils/username	/ja/docs/Web/API/HTMLAnchorElement/username
 /ja/docs/Web/API/HTMLInputElement/mozGetFileNameArray	/ja/docs/conflicting/Web/API/HTMLInputElement
+/ja/docs/Web/API/HTMLMediaElement/onerror	/ja/docs/conflicting/Web/API/HTMLMediaElement/error_event
 /ja/docs/Web/API/HTMLOrForeignElement	/ja/docs/Web/API/HTMLElement
 /ja/docs/Web/API/HTMLTableElement.align	/ja/docs/Web/API/HTMLTableElement/align
 /ja/docs/Web/API/HTMLTableElement.bgColor	/ja/docs/Web/API/HTMLTableElement/bgColor

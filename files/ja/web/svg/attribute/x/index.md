@@ -1,19 +1,6 @@
 ---
 title: x
 slug: Web/SVG/Attribute/x
-tags:
-  - SVG
-  - SVG Attribute
-spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-x
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespotlight-x
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fepointlight-x
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-x
-  - https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-x
-  - https://svgwg.org/svg2-draft/geometry.html#X
-  - https://svgwg.org/svg2-draft/pservers.html#PatternElementXAttribute
-  - https://svgwg.org/svg2-draft/text.html#TextElementXAttribute
-translation_of: Web/SVG/Attribute/x
 ---
 {{SVGRef}}
 

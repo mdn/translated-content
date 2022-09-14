@@ -77,6 +77,6 @@ class Square extends Polygon {
 
 ## See also
 
-- [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
-- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
-- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
+- [`function` declaration](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)
+- [`class` expression](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)
+- [Classes](/zh-CN/docs/Web/JavaScript/Reference/Classes)
