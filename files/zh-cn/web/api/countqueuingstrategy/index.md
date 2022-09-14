@@ -2,7 +2,7 @@
 title: CountQueuingStrategy
 slug: Web/API/CountQueuingStrategy
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
 [Streams API](/zh-CN/docs/Web/API/Streams_API) 的 **`CountQueuingStrategy`** 接口提供了一个内置的、用于对分块进行计数的队列策略，可以在构造流的时候使用。
 
@@ -38,7 +38,7 @@ const writableStream = new WritableStream({
   }
 }, queueingStrategy);
 
-var size = queueingStrategy.size();
+const size = queueingStrategy.size();
 ```
 
 ## 规范

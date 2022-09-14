@@ -2,7 +2,7 @@
 title: CountQueuingStrategy.size()
 slug: Web/API/CountQueuingStrategy/size
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
 {{domxref("CountQueuingStrategy")}} 接口的 **`size()`** 方法始终返回 `1`，因此队列的总大小是队列中所有分块的数量。
 
@@ -38,7 +38,7 @@ const writableStream = new WritableStream({
   }
 }, queuingStrategy);
 
-var size = queuingStrategy.size();
+const size = queuingStrategy.size();
 ```
 
 ## 规范
