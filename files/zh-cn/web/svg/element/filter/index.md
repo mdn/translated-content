@@ -14,9 +14,9 @@ slug: Web/SVG/Element/filter
 
 ### 全局属性
 
-- [核心属性](/en-US/SVG/Attribute#Core) »
-- [外观属性](/en-US/SVG/Attribute#Presentation) »
-- [XLink 属性](/en-US/SVG/Attribute#XLink) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [XLink 属性](/zh-CN/SVG/Attribute#XLink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -83,4 +83,4 @@ slug: Web/SVG/Element/filter
 - {{ SVGElement("feSpecularLighting") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/en-US/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/SVG/Tutorial/Filter_effects)
