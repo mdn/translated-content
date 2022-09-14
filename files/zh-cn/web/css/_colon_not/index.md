@@ -98,9 +98,9 @@ h2 :not(span.foo) {
 
 ## 参见
 
-- [Pseudo-classes](/zh-CN/docs/Web/CSS/Pseudo-classes)
-- [Pseudo-classes and pseudo-elements](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-- Related CSS pseudo-classes:
+- [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)
+- [伪类和伪元素](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+- 相关的 CSS 伪类：
 
   - {{cssxref(":has", ":has()")}}
   - {{cssxref(":is", ":is()")}}
