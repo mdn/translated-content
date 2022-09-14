@@ -22,7 +22,7 @@ slug: Glossary/Primitive
 ## 参见
 
 - [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)
-- [基本类型](https://zh.wikipedia.org/wiki/Primitive_data_type) (Wikipedia)
+- [基本类型](https://zh.wikipedia.org/wiki/原始型別)（维基百科）
 - [术语表](/zh-CN/docs/Glossary)
 
   - {{Glossary("JavaScript")}}
