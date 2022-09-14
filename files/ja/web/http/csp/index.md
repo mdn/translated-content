@@ -1,16 +1,6 @@
 ---
 title: コンテンツセキュリティポリシー (CSP)
 slug: Web/HTTP/CSP
-tags:
-  - CSP
-  - Content Security Policy
-  - Example
-  - Guide
-  - access
-  - コンテンツセキュリティポリシー
-  - セキュリティ
-translation_of: Web/HTTP/CSP
-browser-compat: http.headers.csp
 ---
 {{HTTPSidebar}}
 
@@ -20,7 +10,7 @@ CSP は完全な後方互換性を保って設計されています (ただし�
 
 CSP を有効にするには、ウェブサーバーから {{HTTPHeader("Content-Security-Policy")}} HTTP ヘッダーを返すように設定する必要があります (`X-Content-Security-Policy` ヘッダーに関する記述が時々ありますが、これは古いバージョンのものであり、今日このヘッダーを指定する必要はありません)。
 
-他にも、 {{HTMLElement("meta")}} 要素を用いてポリシーを指定することも可能です。 例えば: 
+他にも、 {{HTMLElement("meta")}} 要素を用いてポリシーを指定することも可能です。 例えば:
 
 ```html
 <meta http-equiv="Content-Security-Policy"
@@ -214,4 +204,3 @@ Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-u
 - [プライバシー、許可、情報セキュリティ](/ja/docs/Web/Privacy)
 - [CSP Evaluator](https://github.com/google/csp-evaluator) - Evaluate your Content Security Policy
 - [CSP Scanner](https://cspscanner.com/) - Improve your Content Security Policy
-

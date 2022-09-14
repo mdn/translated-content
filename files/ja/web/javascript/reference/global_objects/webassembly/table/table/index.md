@@ -1,13 +1,6 @@
 ---
 title: WebAssembly.Table() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table
-tags:
-  - コンストラクター
-  - JavaScript
-  - Reference
-  - WebAssembly
-browser-compat: javascript.builtins.WebAssembly.Table.Table
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table
 ---
 {{JSRef}}
 

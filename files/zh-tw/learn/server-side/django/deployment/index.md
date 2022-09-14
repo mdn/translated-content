@@ -1,11 +1,10 @@
 ---
 title: 'Django Tutorial Part 11: Deploying Django to production'
 slug: Learn/Server-side/Django/Deployment
-translation_of: Learn/Server-side/Django/Deployment
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
-現在，您已經創建（並測試）了一個令人敬畏的 [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站，如果您希望將其安裝在公共 Web 服務器上，以便圖書館工作人員、和成員，可以通過 Internet 訪問它。本文概述如何找到主機來部署您的網站，以及您需要做什麼，才能讓您的網站準備好生產環境。
+現在，您已經創建（並測試）了一個令人敬畏的 [LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站，如果您希望將其安裝在公共 Web 服務器上，以便圖書館工作人員、和成員，可以通過 Internet 訪問它。本文概述如何找到主機來部署您的網站，以及您需要做什麼，才能讓您的網站準備好生產環境。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -13,7 +12,7 @@ translation_of: Learn/Server-side/Django/Deployment
       <th scope="row">Prerequisites:</th>
       <td>
         Complete all previous tutorial topics, including
-        <a href="/en-US/docs/Learn/Server-side/Django/Testing"
+        <a href="/zh-TW/docs/Learn/Server-side/Django/Testing"
           >Django Tutorial Part 10: Testing a Django web application</a
         >.
       </td>
@@ -87,7 +86,7 @@ Many providers also have a "basic" tier that provides more useful levels of comp
 
 ## Getting your website ready to publish
 
-The [Django skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website) created using the _django-admin_ and _manage.py_ tools are configured to make development easier. Many of the Django project settings (specified in **settings.py**) should be different for production, either for security or performance reasons.
+The [Django skeleton website](/zh-TW/docs/Learn/Server-side/Django/skeleton_website) created using the _django-admin_ and _manage.py_ tools are configured to make development easier. Many of the Django project settings (specified in **settings.py**) should be different for production, either for security or performance reasons.
 
 > **備註：** It is common to have a separate **settings.py** file for production, and to import sensitive settings from a separate file or an environment variable. This file should then be protected, even if the rest of the source code is available on a public repository.
 
@@ -96,15 +95,17 @@ The critical settings that you must check are:
 - `DEBUG`. This should be set as `False` in production (`DEBUG = False`). This stops the sensitive/confidential debug trace and variable information from being displayed.
 - `SECRET_KEY`. This is a large random value used for CSRF protection etc. It is important that the key used in production is not in source control or accessible outside the production server. The Django documents suggest that this might best be loaded from an environment variable or read from a serve-only file.
 
-      # Read SECRET_KEY from an environment variable
-      import os
-      SECRET_KEY = os.environ['SECRET_KEY']
+```python
+# Read SECRET_KEY from an environment variable
+import os
+SECRET_KEY = os.environ['SECRET_KEY']
 
-      #OR
+#OR
 
-      #Read secret key from a file
-      with open('/etc/secret_key.txt') as f:
-          SECRET_KEY = f.read().strip()
+#Read secret key from a file
+with open('/etc/secret_key.txt') as f:
+    SECRET_KEY = f.read().strip()
+```
 
 Let's change the _LocalLibrary_ application so that we read our `SECRET_KEY` and `DEBUG` variables from environment variables if they are defined, but otherwise use the default values in the configuration file.
 
@@ -189,23 +190,23 @@ Heroku is closely integrated with the **git** source code version control system
 
 There are a lot of ways of to work with git, but one of the easiest is to first set up an account on [Github](https://github.com/), create the repository there, and then sync to it locally:
 
-1.  Visit <https://github.com/> and create an account.
-2.  Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
-3.  Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
+1. Visit <https://github.com/> and create an account.
+2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
+3. Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
 
     - Enter a new repository name (e.g. _django_local_library_), and description (e.g. "Local Library website written in Django".
     - Choose **Python** in the _Add .gitignore_ selection list.
     - Choose your preferred license in the _Add license_ selection list.
     - Check **Initialize this repository with a README**.
 
-4.  Press **Create repository**.
-5.  Click the green "**Clone or download**" button on your new repo page.
-6.  Copy the URL value from the text field inside the dialog box that appears (it should be something like: **https\://github.com/_\<your_git_user_id>_/django_local_library.git**).
+4. Press **Create repository**.
+5. Click the green "**Clone or download**" button on your new repo page.
+6. Copy the URL value from the text field inside the dialog box that appears (it should be something like: `https://github.com/<your_git_user_id>/django_local_library.git`).
 
 Now the repository ("repo") is created we are going to want to clone it on our local computer:
 
-1.  Install _git_ for your local computer (you can find versions for different platforms [here](https://git-scm.com/downloads)).
-2.  Open a command prompt/terminal and clone your repository using the URL you copied above:
+1. Install _git_ for your local computer (you can find versions for different platforms [here](https://git-scm.com/downloads)).
+2. Open a command prompt/terminal and clone your repository using the URL you copied above:
 
     ```bash
     git clone https://github.com/<your_git_user_id>/django_local_library.git
@@ -213,7 +214,7 @@ Now the repository ("repo") is created we are going to want to clone it on our l
 
     This will create the repository below the current point.
 
-3.  Navigate into the new repo.
+3. Navigate into the new repo.
 
     ```bash
     cd django_local_library.git
@@ -221,45 +222,51 @@ Now the repository ("repo") is created we are going to want to clone it on our l
 
 The final step is to copy in your application and then add the files to your repo using git:
 
-1.  Copy your Django application into this folder (all the files at the same level as **manage.py** and below, **not** their containing locallibrary folder).
-2.  Open the **.gitignore** file, copy the following lines into the bottom of it, and then save (this file is used to identify files that should not be uploaded to git by default).
+1. Copy your Django application into this folder (all the files at the same level as **manage.py** and below, **not** their containing locallibrary folder).
+2. Open the **.gitignore** file, copy the following lines into the bottom of it, and then save (this file is used to identify files that should not be uploaded to git by default).
 
-        # Text backup files
-        *.bak
+    ```
+    # Text backup files
+    *.bak
 
-        #Database
-        *.sqlite3
+    #Database
+    *.sqlite3
+    ```
 
-3.  Open a command prompt/terminal and use the `add` command to add all files to git.
+3. Open a command prompt/terminal and use the `add` command to add all files to git.
 
     ```bash
     git add -A
     ```
 
-4.  Use the status command to check all files that you are about to add are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
+4. Use the status command to check all files that you are about to add are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
 
-        > git status
-        On branch master
-        Your branch is up-to-date with 'origin/master'.
-        Changes to be committed:
-          (use "git reset HEAD <file>..." to unstage)
+    ```
+    > git status
+    On branch master
+    Your branch is up-to-date with 'origin/master'.
+    Changes to be committed:
+      (use "git reset HEAD <file>..." to unstage)
 
-                modified:   .gitignore
-                new file:   catalog/__init__.py
-                ...
-                new file:   catalog/migrations/0001_initial.py
-                ...
-                new file:   templates/registration/password_reset_form.html
+            modified:   .gitignore
+            new file:   catalog/__init__.py
+            ...
+            new file:   catalog/migrations/0001_initial.py
+            ...
+            new file:   templates/registration/password_reset_form.html
+    ```
 
-5.  When you're satisfied commit the files to your local repository:
+5. When you're satisfied commit the files to your local repository:
 
     ```bash
     git commit -m "First version of application moved into github"
     ```
 
-6.  Then synchronise your local repository to the Github website, using the following:
+6. Then synchronise your local repository to the Github website, using the following:
 
-        git push origin master
+    ```bash
+    git push origin master
+    ```
 
 When this operation completes, you should be able to go back to the page on Github where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.
 
@@ -277,7 +284,9 @@ This section explains the changes you'll need to make to our _LocalLibrary_ appl
 
 Create the file `Procfile` (no extension) in the root of your GitHub repository to declare the application's process types and entry points. Copy the following text into it:
 
-    web: gunicorn locallibrary.wsgi --log-file -
+```
+web: gunicorn locallibrary.wsgi --log-file -
+```
 
 The "`web:`" tells Heroku that this is a web dyno and can be sent HTTP traffic. The process to start in this dyno is _gunicorn_, which is a popular web application server that Heroku recommends. We start Gunicorn using the configuration information in the module `locallibrary.wsgi` (created with our application skeleton: **/locallibrary/wsgi.py**).
 
@@ -287,7 +296,7 @@ The "`web:`" tells Heroku that this is a web dyno and can be sent HTTP traffic. 
 
 While we won't need _Gunicorn_ to serve our LocalLibrary application during development, we'll install it so that it becomes part of our [requirements](#requirements) for Heroku to set up on the remote server.
 
-Install _Gunicorn_ locally on the command line using _pip_ (which we installed when [setting up the development environment](/en-US/docs/Learn/Server-side/Django/development_environment)):
+Install _Gunicorn_ locally on the command line using _pip_ (which we installed when [setting up the development environment](/zh-TW/docs/Learn/Server-side/Django/development_environment)):
 
 ```bash
 pip3 install gunicorn
@@ -305,16 +314,20 @@ The database connection information is supplied to the web dyno using a configur
 
 Install _dj-database-url_ locally so that it becomes part of our [requirements](#requirements) for Heroku to set up on the remote server:
 
-    $ pip3 install dj-database-url
+```bash
+pip3 install dj-database-url
+```
 
 ##### settings.py
 
 Open **/locallibrary/settings.py** and copy the following configuration into the bottom of the file:
 
-    # Heroku: Update database configuration from $DATABASE_URL.
-    import dj_database_url
-    db_from_env = dj_database_url.config(conn_max_age=500)
-    DATABASES['default'].update(db_from_env)
+```python
+# Heroku: Update database configuration from $DATABASE_URL.
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+```
 
 > **備註：**
 >
@@ -346,7 +359,7 @@ To make it easy to host static files separately from the Django web application,
 
 The relevant setting variables are:
 
-- `STATIC_URL`: This is the base URL location from which static files will be served, for example on a CDN. This is used for the static template variable that is accessed in our base template (see [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)).
+- `STATIC_URL`: This is the base URL location from which static files will be served, for example on a CDN. This is used for the static template variable that is accessed in our base template (see [Django Tutorial Part 5: Creating our home page](/zh-TW/docs/Learn/Server-side/Django/Home_page)).
 - `STATIC_ROOT`: This is the absolute path to a directory where Django's "collectstatic" tool will gather any static files referenced in our templates. Once collected, these can then be uploaded as a group to wherever the files are to be hosted.
 - `STATICFILES_DIRS`: This lists additional directories that Django's collectstatic tool should search for static files.
 
@@ -354,14 +367,16 @@ The relevant setting variables are:
 
 Open **/locallibrary/settings.py** and copy the following configuration into the bottom of the file. The `BASE_DIR` should already have been defined in your file (the `STATIC_URL` may already have been defined within the file when it was created. While it will cause no harm, you might as well delete the duplicate previous reference).
 
-    # Static files (CSS, JavaScript, Images)
-    # https://docs.djangoproject.com/en/2.0/howto/static-files/
+```python
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-    # The absolute path to the directory where collectstatic will collect static files for deployment.
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# The absolute path to the directory where collectstatic will collect static files for deployment.
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-    # The URL to use when referring to static files (where they will be served from)
-    STATIC_URL = '/static/'
+# The URL to use when referring to static files (where they will be served from)
+STATIC_URL = '/static/'
+```
 
 We'll actually do the file serving using a library called [WhiteNoise](https://warehouse.python.org/project/whitenoise/), which we install and configure in the next section.
 
@@ -379,28 +394,34 @@ The steps to set up _WhiteNoise_ to use with the project are:
 
 Install whitenoise locally using the following command:
 
-    $ pip3 install whitenoise
+```bash
+pip3 install whitenoise
+```
 
 ##### settings.py
 
 To install _WhiteNoise_ into your Django application, open **/locallibrary/settings.py**, find the `MIDDLEWARE` setting and add the `WhiteNoiseMiddleware` near the top of the list, just below the `SecurityMiddleware`:
 
-    MIDDLEWARE = [
-        'django.middleware.security.SecurityMiddleware',
-        'whitenoise.middleware.WhiteNoiseMiddleware',
-        'django.contrib.sessions.middleware.SessionMiddleware',
-        'django.middleware.common.CommonMiddleware',
-        'django.middleware.csrf.CsrfViewMiddleware',
-        'django.contrib.auth.middleware.AuthenticationMiddleware',
-        'django.contrib.messages.middleware.MessageMiddleware',
-        'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    ]
+```python
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+```
 
 Optionally, you can reduce the size of the static files when they are served (this is more efficient). Just add the following to the bottom of **/locallibrary/settings.py**:
 
-    # Simplified static file serving.
-    # https://warehouse.python.org/project/whitenoise/
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+```python
+# Simplified static file serving.
+# https://warehouse.python.org/project/whitenoise/
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+```
 
 #### Requirements
 
@@ -412,11 +433,13 @@ pip3 freeze > requirements.txt
 
 After installing all the different dependencies above, your **requirements.txt** file should have _at least_ these items listed (though the version numbers may be different). Please delete any other dependencies not listed below, unless you've explicitly added them for this application.
 
-    dj-database-url==0.4.1
-    Django==2.0
-    gunicorn==19.6.0
-    psycopg2==2.6.2
-    whitenoise==3.2.2
+```
+dj-database-url==0.4.1
+Django==2.0
+gunicorn==19.6.0
+psycopg2==2.6.2
+whitenoise==3.2.2
+```
 
 > **備註：** Make sure that a **psycopg2** line like the one above is present! Even iIf you didn't install this locally then you should still add this to the **requirements.txt**.
 
@@ -424,7 +447,9 @@ After installing all the different dependencies above, your **requirements.txt**
 
 The **runtime.txt** file, if defined, tells Heroku which programming language to use. Create the file in the root of the repo and add the following text:
 
-    python-3.6.4
+```
+python-3.6.4
+```
 
 > **備註：** Heroku only supports a small number of [Python runtimes](https://devcenter.heroku.com/articles/python-support#supported-python-runtimes) (at time of writing, this includes the one above). Heroku will use a supported runtime irrespective of the value specified in this file.
 
@@ -626,18 +651,18 @@ The next step is to read our last few articles, and then complete the assessment
 
 ## In this module
 
-- [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/en-US/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/en-US/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)
+- [Django introduction](/zh-TW/docs/Learn/Server-side/Django/Introduction)
+- [Setting up a Django development environment](/zh-TW/docs/Learn/Server-side/Django/development_environment)
+- [Django Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+- [Django Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Django/skeleton_website)
+- [Django Tutorial Part 3: Using models](/zh-TW/docs/Learn/Server-side/Django/Models)
+- [Django Tutorial Part 4: Django admin site](/zh-TW/docs/Learn/Server-side/Django/Admin_site)
+- [Django Tutorial Part 5: Creating our home page](/zh-TW/docs/Learn/Server-side/Django/Home_page)
+- [Django Tutorial Part 6: Generic list and detail views](/zh-TW/docs/Learn/Server-side/Django/Generic_views)
+- [Django Tutorial Part 7: Sessions framework](/zh-TW/docs/Learn/Server-side/Django/Sessions)
+- [Django Tutorial Part 8: User authentication and permissions](/zh-TW/docs/Learn/Server-side/Django/Authentication)
+- [Django Tutorial Part 9: Working with forms](/zh-TW/docs/Learn/Server-side/Django/Forms)
+- [Django Tutorial Part 10: Testing a Django web application](/zh-TW/docs/Learn/Server-side/Django/Testing)
+- [Django Tutorial Part 11: Deploying Django to production](/zh-TW/docs/Learn/Server-side/Django/Deployment)
+- [Django web application security](/zh-TW/docs/Learn/Server-side/Django/web_application_security)
+- [DIY Django mini blog](/zh-TW/docs/Learn/Server-side/Django/django_assessment_blog)

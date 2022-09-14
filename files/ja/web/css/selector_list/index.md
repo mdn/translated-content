@@ -1,12 +1,6 @@
 ---
 title: セレクターリスト
 slug: Web/CSS/Selector_list
-tags:
-  - CSS
-  - セレクター
-  - セレクターリスト
-browser-compat: css.selectors.list
-translation_of: Web/CSS/Selector_list
 ---
 {{CSSRef}}
 

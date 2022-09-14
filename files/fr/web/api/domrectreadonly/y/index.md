@@ -27,13 +27,11 @@ Un double.
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                                       | Commentaire                                        |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------------- |
-| {{SpecName('Geometry Interfaces', '#dom-domrectreadonly-y', 'y')}} | {{Spec2('Geometry Interfaces')}} | La dernière version de la spécification est un ED. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMRectReadOnly.y")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,7 +1,6 @@
 ---
 title: Hypertext
 slug: Glossary/Hypertext
-translation_of: Glossary/Hypertext
 ---
 Hypertext 包含了指向其他文本的链接，而不是像小说中的单一线性流。
 

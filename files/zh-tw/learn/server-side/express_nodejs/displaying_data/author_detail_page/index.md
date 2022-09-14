@@ -1,9 +1,8 @@
 ---
 title: 作者詳情頁面
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page
 ---
-作者細節頁面，需要呈現指定作者 `Author `的信息，使用 `_id` 欄位的值（自動產生）識別，接著是這個作者 `Author `的所有書本物件 `Book `的列表。
+作者細節頁面，需要呈現指定作者 `Author` 的信息，使用 `_id` 欄位的值（自動產生）識別，接著是這個作者 `Author`的所有書本物件 `Book`的列表。
 
 ## Controller 控制器
 
@@ -45,7 +44,7 @@ exports.author_detail = function(req, res, next) {
 };
 ```
 
-此處的控制器方法使用` async.parallel()`，用平行的方式，查詢作者 `Author`和相應的書本實例，並附加上繪製本頁面的回調，如果 2 個要求都成功完成，就運行回調。這個方式，就跟前面的*種類細節頁面*所說明的完全相同。
+此處的控制器方法使用 `async.parallel()`，用平行的方式，查詢作者 `Author`和相應的書本實例，並附加上繪製本頁面的回調，如果 2 個要求都成功完成，就運行回調。這個方式，就跟前面的*種類細節頁面*所說明的完全相同。
 
 ## View 視圖
 
@@ -85,5 +84,5 @@ block content
 
 ## 下一步
 
-- 回到 [Express 教學 5: 呈現圖書館資料](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- 繼續教學 5 的最後一個部分: [書本實例詳情頁面與自我挑戰](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
+- 回到 [Express 教學 5: 呈現圖書館資料](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- 繼續教學 5 的最後一個部分: [書本實例詳情頁面與自我挑戰](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)

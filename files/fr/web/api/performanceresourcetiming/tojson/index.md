@@ -45,10 +45,8 @@ console.log("PerformanceEntry.toJSON = " + s);
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                                   | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------- |
-| {{SpecName('Resource Timing 2', '#dom-performanceresourcetiming-tojson', 'toJSON')}} | {{Spec2('Resource Timing 2')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceResourceTiming.toJSON")}}
+{{Compat}}

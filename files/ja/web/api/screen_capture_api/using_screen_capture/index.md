@@ -1,20 +1,6 @@
 ---
 title: 画面キャプチャ API の使用
 slug: Web/API/Screen_Capture_API/Using_Screen_Capture
-tags:
-  - API
-  - キャプチャ
-  - 会議
-  - ガイド
-  - メディア
-  - 画面キャプチャ
-  - 画面キャプチャ API
-  - 共有
-  - 動画
-  - WebRTC
-  - display
-  - getDisplayMedia
-  - screen
 ---
 {{DefaultAPISidebar("Screen Capture API")}}
 

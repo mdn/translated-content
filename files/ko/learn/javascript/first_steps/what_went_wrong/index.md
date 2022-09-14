@@ -1,19 +1,6 @@
 ---
 title: 뭐가 잘못됐을까요? JavaScript 문제 해결
 slug: Learn/JavaScript/First_steps/What_went_wrong
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Debugging
-  - Developer Tools
-  - Error
-  - JavaScript
-  - Learn
-  - Tutorial
-  - console.log
-  - l10n:priority
-translation_of: Learn/JavaScript/First_steps/What_went_wrong
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
 
@@ -110,7 +97,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
     > **참고:** [`console.log()`](/ko/docs/Web/API/console/log)는 콘솔에 값을 기록하는 엄청나게 유용한 디버깅 함수입니다. 따라서 이 코드는 48번째 줄에서 `lowOrHi`의 값을 설정하려고 시도한 직후에 그 결과를 콘솔에 기록합니다.
 
-7.  저장하고 새로고침하세요. `console.log()`가 콘솔에 기록한 결과를 볼 수 있을 겁니다. ![](console-log-output.png) `lowOrHi`의 값이 명백히 `null`이므로, 48번째 줄에 문제가 있는 게 틀림없습니다.
+7. 저장하고 새로고침하세요. `console.log()`가 콘솔에 기록한 결과를 볼 수 있을 겁니다. ![](console-log-output.png) `lowOrHi`의 값이 명백히 `null`이므로, 48번째 줄에 문제가 있는 게 틀림없습니다.
 8. 어떤 문제일지 생각해 봅시다. 48번째 줄은 [`document.querySelector()`](/ko/docs/Web/API/Document/querySelector) 메서드를 사용해, CSS 선택자로 선택한 요소의 참조를 가져옵니다. 우리 파일의 더 위쪽에서 우리가 찾으려는 문단을 볼 수 있습니다.
 
     ```html

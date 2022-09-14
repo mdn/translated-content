@@ -1,12 +1,6 @@
 ---
 title: ID セレクター
 slug: Web/CSS/ID_selectors
-tags:
-  - CSS
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.id
-translation_of: Web/CSS/ID_selectors
 ---
 {{CSSRef}}
 

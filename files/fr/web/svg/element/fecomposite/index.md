@@ -231,14 +231,11 @@ Cette image affine le résultat désiré.
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                           | Commentaire                                            |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------ |
-| {{SpecName('Filters 1.0', '#feCompositeElement', '&lt;feComposite&gt;')}}             | {{Spec2('Filters 1.0')}} | Ajoute la valeur `lighter` pour l'attribut `operator`. |
-| {{SpecName('SVG1.1', 'filters.html#feCompositeElement', '&lt;feComposite&gt;')}} | {{Spec2('SVG1.1')}}         | Définition initiale                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.feComposite")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -260,4 +257,4 @@ Cette image affine le résultat désiré.
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTile")}}
 - {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutoriel/filtres "en/SVG/Tutorial/Filter_effects")
+- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutoriel/filtres)

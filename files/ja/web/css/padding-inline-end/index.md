@@ -1,17 +1,6 @@
 ---
 title: padding-inline-end
 slug: Web/CSS/padding-inline-end
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - padding-inline
-  - padding-inline-end
-  - recipe:css-property
-browser-compat: css.properties.padding-inline-end
-translation_of: Web/CSS/padding-inline-end
 ---
 {{CSSRef}}
 

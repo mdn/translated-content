@@ -1,16 +1,6 @@
 ---
 title: '-moz-outline-radius-topleft'
 slug: Web/CSS/-moz-outline-radius-topleft
-tags:
-  - CSS
-  - CSS プロパティ
-  - NeedsCompatTable
-  - NeedsContent
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.-moz-outline-radius-topleft
-translation_of: Web/CSS/-moz-outline-radius-topleft
 ---
 {{CSSRef}}{{deprecated_header}}
 

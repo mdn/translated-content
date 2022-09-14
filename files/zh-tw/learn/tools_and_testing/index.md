@@ -1,7 +1,6 @@
 ---
 title: 工具與測試
 slug: Learn/Tools_and_testing
-translation_of: Learn/Tools_and_testing
 ---
 {{LearnSidebar}}
 

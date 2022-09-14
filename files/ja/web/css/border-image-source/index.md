@@ -1,14 +1,6 @@
 ---
 title: border-image-source
 slug: Web/CSS/border-image-source
-tags:
-  - CSS
-  - CSS 背景と境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-image-source
-translation_of: Web/CSS/border-image-source
 ---
 {{CSSRef}}
 
@@ -24,7 +16,7 @@ translation_of: Web/CSS/border-image-source
 /* キーワード値 */
 border-image-source: none;
 
-/* &lt;image&gt; 値 */
+/* <image> 値 */
 border-image-source: url(image.jpg);
 border-image-source: linear-gradient(to top, red, yellow);
 

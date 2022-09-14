@@ -1,18 +1,17 @@
 ---
 title: 'Django Tutorial Part 3: Using models'
 slug: Learn/Server-side/Django/Models
-translation_of: Learn/Server-side/Django/Models
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
 
-本文介紹如何為 [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站定義模型。它解釋了模型是什麼、聲明的方式以及一些主要字段類型。它還簡要展示了您可以訪問模型數據的幾個主要方法。
+本文介紹如何為 [LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站定義模型。它解釋了模型是什麼、聲明的方式以及一些主要字段類型。它還簡要展示了您可以訪問模型數據的幾個主要方法。
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
       <th scope="row">前提:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website"
+        <a href="/zh-TW/docs/Learn/Server-side/Django/skeleton_website"
           >Django 教學 2: 創建骨架網站。</a
         >
       </td>
@@ -28,7 +27,7 @@ translation_of: Learn/Server-side/Django/Models
 
 Django Web 應用程序通過被稱為模型的 Python 對象，訪問和管理數據。模型定義儲存數據的結構，包括欄位類型、以及可能還有最大大小，默認值，選擇列表選項，幫助文檔，表單的標籤文本等。模型的定義與底層數據庫無關 — 你可以選擇其中一個，作為項目設置的一部分。一旦你選擇了要使用的數據庫，你就不需要直接與之交談 — 只需編寫模型結構和其他代碼，Django 可以處理與數據庫通信的所有繁瑣工作。
 
-本教程將介紹如何定義和訪問 [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 範例網站的模型。
+本教程將介紹如何定義和訪問 [LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 範例網站的模型。
 
 ## 設計 LocalLibrary 模型
 
@@ -58,27 +57,29 @@ Django Web 應用程序通過被稱為模型的 Python 對象，訪問和管理�
 
 模型通常在 app 中的 **models.py** 檔案中定義。它們是繼承自 `django.db.models.Model`的子類， 可以包括屬性，方法和描述性資料(metadata)。下面區段為一個名為`MyModelName`的「典型」模型範例碼：
 
-    from django.db import models
+```python
+from django.db import models
 
-    class MyModelName(models.Model):
-        """A typical class defining a model, derived from the Model class."""
+class MyModelName(models.Model):
+    """A typical class defining a model, derived from the Model class."""
 
-        # Fields
-        my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
-        ...
+    # Fields
+    my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
+    ...
 
-        # Metadata
-        class Meta:
-            ordering = ['-my_field_name']
+    # Metadata
+    class Meta:
+        ordering = ['-my_field_name']
 
-        # Methods
-        def get_absolute_url(self):
-             """Returns the url to access a particular instance of MyModelName."""
-             return reverse('model-detail-view', args=[str(self.id)])
+    # Methods
+    def get_absolute_url(self):
+            """Returns the url to access a particular instance of MyModelName."""
+            return reverse('model-detail-view', args=[str(self.id)])
 
-        def __str__(self):
-            """String for representing the MyModelName object (in Admin site etc.)."""
-            return self.field_name
+    def __str__(self):
+        """String for representing the MyModelName object (in Admin site etc.)."""
+        return self.field_name
+```
 
 在下面章節中，我們將更詳細解釋模型的每個功能。
 
@@ -86,7 +87,9 @@ Django Web 應用程序通過被稱為模型的 Python 對象，訪問和管理�
 
 模型可以有任意數量的字段、任何類型的字段 — 每個字段都表示我們要存放在我們的一個資料庫中的一欄數據(a column of data)。每筆資料庫記錄（列 row）將由每個字段值之一組成。我們來看看上面看到的例子。
 
-    my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
+```python
+my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
+```
 
 在上面例子中，有個叫 `my_field_name` 的單一字段，其類型為 `models.CharField` — 這意味著這個字段將會包含字母、數字字符串。使用特定的類別分配字段類型，這些類別，決定了用於將數據存放在資料庫中的記錄的類型，以及從 HTML 表單接收到值（即構成有效值）時使用的驗證標準。字段類型還可以獲取參數，進一步指定字段如何存放或如何被使用。在這裡的情況下，我們給了字段兩個參數：
 
@@ -116,7 +119,7 @@ Django Web 應用程序通過被稱為模型的 Python 對象，訪問和管理�
 以下列表描述了一些更常用的字段類型。
 
 - [CharField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField) 是用來定義短到中等長度的字段字符串。你必須指定`max_length`要存儲的數據。
-- [TextField ](https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.TextField)用於大型任意長度的字符串。你可以`max_length`為該字段指定一個字段，但僅當該字段以表單顯示時才會使用（不會在數據庫級別強制執行）。
+- [TextField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.TextField) 用於大型任意長度的字符串。你可以`max_length`為該字段指定一個字段，但僅當該字段以表單顯示時才會使用（不會在數據庫級別強制執行）。
 - [IntegerField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.IntegerField) 是一個用於存儲整數（整數）值的字段，用於在表單中驗證輸入的值為整數。
 - [DateField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#datefield) 和[DateTimeField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#datetimefield) 用於存儲／表示日期和日期／時間信息（分別是`Python.datetime.date` 和 `datetime.datetime` 對象）。這些字段可以另外表明（互斥）參數 `auto_now=Ture` （在每次保存模型時將該字段設置為當前日期），`auto_now_add`（僅設置模型首次創建時的日期）和 `default`（設置默認日期，可以被用戶覆蓋）。
 - [EmailField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#emailfield) 用於存儲和驗證電子郵件地址。
@@ -402,8 +405,10 @@ class Author(models.Model):
 
 你的所有模型都建立好了，現在必須再次執行你的資料庫 migrations 指令來將這些修改內容更信到資料庫中。
 
-    python3 manage.py makemigrations
-    python3 manage.py migrate
+```bash
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
 
 ## 語言模型(Language model) — 挑戰
 
@@ -433,18 +438,18 @@ _再來我們要稍微撇開建立網站，先來看看 Django 的管理站(Djan
 
 ## In this module
 
-- [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/en-US/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/en-US/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)
+- [Django introduction](/zh-TW/docs/Learn/Server-side/Django/Introduction)
+- [Setting up a Django development environment](/zh-TW/docs/Learn/Server-side/Django/development_environment)
+- [Django Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+- [Django Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Django/skeleton_website)
+- [Django Tutorial Part 3: Using models](/zh-TW/docs/Learn/Server-side/Django/Models)
+- [Django Tutorial Part 4: Django admin site](/zh-TW/docs/Learn/Server-side/Django/Admin_site)
+- [Django Tutorial Part 5: Creating our home page](/zh-TW/docs/Learn/Server-side/Django/Home_page)
+- [Django Tutorial Part 6: Generic list and detail views](/zh-TW/docs/Learn/Server-side/Django/Generic_views)
+- [Django Tutorial Part 7: Sessions framework](/zh-TW/docs/Learn/Server-side/Django/Sessions)
+- [Django Tutorial Part 8: User authentication and permissions](/zh-TW/docs/Learn/Server-side/Django/Authentication)
+- [Django Tutorial Part 9: Working with forms](/zh-TW/docs/Learn/Server-side/Django/Forms)
+- [Django Tutorial Part 10: Testing a Django web application](/zh-TW/docs/Learn/Server-side/Django/Testing)
+- [Django Tutorial Part 11: Deploying Django to production](/zh-TW/docs/Learn/Server-side/Django/Deployment)
+- [Django web application security](/zh-TW/docs/Learn/Server-side/Django/web_application_security)
+- [DIY Django mini blog](/zh-TW/docs/Learn/Server-side/Django/django_assessment_blog)

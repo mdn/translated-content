@@ -1,7 +1,6 @@
 ---
 title: 新增消息來源閱讀工具
 slug: Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
-translation_of: Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 ---
 {{FirefoxSidebar}}
 
@@ -20,9 +19,9 @@ translation_of: Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 
 `number` 應該替換成尚未使用的最小自然數。舉例來說，如果要新增一個名為「Easy Reader」的閱讀工具、且目前 0 到 4 皆已使用，則應將 `number` 設定為 5，如下：
 
-- `browser.contentHandlers.types.5.title`: Easy Reader
-- `browser.contentHandlers.types.5.type`: application/vnd.mozilla.maybe.feed
-- `browser.contentHandlers.types.5.uri`: http\://www\.theeasyreaderurl.com?feed=%s
+- `browser.contentHandlers.types.5.title`: `Easy Reader`
+- `browser.contentHandlers.types.5.type`: `application/vnd.mozilla.maybe.feed`
+- `browser.contentHandlers.types.5.uri`: `http://www.theeasyreaderurl.com?feed=%s`
 
 你可以用 \<tt>about:config\</tt> 手動加入這些設定，如果擴充套件要新增閱讀工具則亦可寫程式修改之。
 
@@ -30,9 +29,11 @@ translation_of: Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 
 使用 JavaScript 也可輕易新增消息來源的閱讀工具，只要用 `navigator.registerContentHandler()` 函式即可，如下：
 
-    navigator.registerContentHandler("application/vnd.mozilla.maybe.feed",
-                                     "http://www.theeasyreaderurl.com?feed=%s",
-                                     "Easy Reader");
+```js
+navigator.registerContentHandler("application/vnd.mozilla.maybe.feed",
+                                  "http://www.theeasyreaderurl.com?feed=%s",
+                                  "Easy Reader");
+```
 
 ## 新增本機閱讀程式
 

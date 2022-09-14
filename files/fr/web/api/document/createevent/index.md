@@ -12,7 +12,7 @@ translation_of: Web/API/Document/createEvent
 
 {{ ApiRef("DOM") }}
 
-Crée un [event](/en-US/docs/DOM/event) du type spécifié. L'objet retourné doit être intialisé et peut être passé ensuite à [element.dispatchEvent](/en-US/docs/DOM/element.dispatchEvent).
+Crée un [event](/fr/docs/DOM/event) du type spécifié. L'objet retourné doit être intialisé et peut être passé ensuite à [element.dispatchEvent](/fr/docs/DOM/element.dispatchEvent).
 
 ## Syntaxe
 
@@ -20,7 +20,7 @@ Crée un [event](/en-US/docs/DOM/event) du type spécifié. L'objet retourné do
 var event = document.createEvent(type);
 ```
 
-- `event` est l'objet [Event](/en-US/docs/DOM/event) créé.
+- `event` est l'objet [Event](/fr/docs/DOM/event) créé.
 - `type` est une chaîne de caractères qui représente le type d'événement à créer. Les types possibles d'événement incluent `"UIEvents"`, `"MouseEvents"`, `"MutationEvents"` et `"HTMLEvents"`. Voir la section [Notes](#notes) pour plus de détails.
 
 ## Exemple

@@ -1,7 +1,6 @@
 ---
 title: 書本清單頁面
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page
 ---
 接下做我們將實作書本列表頁面。這個頁面需要呈現數據庫中所有書本的列表，包含每本書的作者、標題，標題將成為一個超連結，連到書本詳細內容頁面。
 
@@ -26,9 +25,9 @@ exports.book_list = function(req, res, next) {
 };
 ```
 
-該方法使用模型的`find()`函數，返回所有 `Book `對象，選擇僅返回標題 `title `和作者 `author`，因為我們不需要其他字段（它也會返回 `_id `和虛擬欄位字段）。這裡我們還調用 `Book `上的 `populate()`，指定作者 `author`欄位字段 — 這將用完整的作者信息，替換儲存的書本作者 id。
+該方法使用模型的`find()`函數，返回所有 `Book` 對象，選擇僅返回標題 `title` 和作者 `author`，因為我們不需要其他字段（它也會返回 `_id` 和虛擬欄位字段）。這裡我們還調用 `Book` 上的 `populate()`，指定作者 `author`欄位字段 — 這將用完整的作者信息，替換儲存的書本作者 id。
 
-成功時，傳遞給查詢的回調，將呈現 **book_list**(.pug) 模板，將標題 `title `和`book_list`（包含作者的書本列表）作為變量傳遞。
+成功時，傳遞給查詢的回調，將呈現 **book_list**(.pug) 模板，將標題 `title` 和`book_list`（包含作者的書本列表）作為變量傳遞。
 
 ## View 視圖
 
@@ -50,7 +49,7 @@ block content
       li There are no books.
 ```
 
-這個視圖擴展了 **layout.pug** 基本模板，並覆蓋了名為 '**content**' 的 `block `區塊 。它顯示我們從控制器傳入的標題 `title`（通過 `render()`方法），然後使用 `each`-`in`-`else `語法，遍歷 `book_list`變量。為每本圖書創建一個列表項，以顯示書名，並作為書的詳細信息頁面的鏈接，後面跟著作者姓名。如果 `book_list`中沒有書，則執行 `else` 子句，並顯示文字 “沒有書本” 'There are no books'。
+這個視圖擴展了 **layout.pug** 基本模板，並覆蓋了名為 '**content**' 的 `block` 區塊 。它顯示我們從控制器傳入的標題 `title`（通過 `render()`方法），然後使用 `each`-`in`-`else` 語法，遍歷 `book_list`變量。為每本圖書創建一個列表項，以顯示書名，並作為書的詳細信息頁面的鏈接，後面跟著作者姓名。如果 `book_list`中沒有書，則執行 `else` 子句，並顯示文字 “沒有書本” 'There are no books'。
 
 > **備註：** 我們使用 `book.url`，為每本書提供詳細記錄鏈接（我們已經實現了此路由，但尚未實現此頁面）。這是 `Book` 模型的一個虛擬屬性，它使用模型實例的 `_id` 字段，生成唯一的 URL 路徑。
 
@@ -64,5 +63,5 @@ block content
 
 ## 下一步
 
-- 回到 [Express 教學 5: 呈現圖書館資料](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- 繼續教學 5 下個部分: [書本實例清單頁面](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
+- 回到 [Express 教學 5: 呈現圖書館資料](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- 繼續教學 5 下個部分: [書本實例清單頁面](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)

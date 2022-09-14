@@ -1,12 +1,6 @@
 ---
 title: HTML
 slug: Glossary/HTML
-tags:
-  - CodingScripting
-  - Glossary
-  - HTML
-  - l10n:priority
-translation_of: Glossary/HTML
 ---
 {{QuickLinksWithSubpages("/en-US/docs/Glossary")}}
 

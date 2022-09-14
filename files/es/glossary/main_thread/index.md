@@ -13,10 +13,19 @@ El hilo principal es donde un navegador procesa eventos y pinturas del usuario. 
 
 A menos que use intencionalmente un trabajador web, como un trabajador de servicio, JavaScript se ejecuta en el hilo principal, por lo que es fácil que un script provoque retrasos en el procesamiento o la pintura de eventos. Cuanto menos trabajo se requiera del hilo principal, más puede responder ese hilo a los eventos del usuario, pintar y, en general, responder al usuario.
 
-## Aprende más
-
-- [Asynchronous JavaScript](/es/docs/Learn/JavaScript/Asynchronous)
-- [Web worker API](/es/docs/Web/API/Web_Workers_API)
-- [Service worker API](/es/docs/Web/API/Service_Worker_API)
-- [Glossary](/es/docs/Glossary)
-  - {{Glossary("Thread")}}
+<section id="Quick_links">
+  <ol>
+    <li>También ver
+     <ol>
+      <li><a href="/es/docs/Learn/JavaScript/Asynchronous">Asynchronous JavaScript</a></li>
+      <li><a href="/es/docs/Web/API/Web_Workers_API">Web worker API</a></li>
+      <li><a href="/es/docs/Web/API/Service_Worker_API">Service worker API</a></li>
+     </ol>
+    </li>
+    <li><a href="/es/docs/Glossary">Glossary</a>
+     <ol>
+      <li>{{Glossary("Thread")}}</li>
+     </ol>
+    </li>
+  </ol>
+</section>

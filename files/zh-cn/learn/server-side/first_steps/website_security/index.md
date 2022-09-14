@@ -1,10 +1,6 @@
 ---
 title: 站点安全
 slug: Learn/Server-side/First_steps/Website_security
-tags:
-  - 安全
-  - 站点安全
-translation_of: Learn/Server-side/First_steps/Website_security
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 
@@ -53,7 +49,7 @@ XSS 是一个术语，用来描述一类允许攻击者通过网站将客户端�
 
 - 反射型 XSS 攻击发生在当传递给服务器的用户数据被立即返回并在浏览器中原样显示的时候 -- 当新页面载入的时候原始用户数据中的任何脚本都会被执行！
 
-  举个例子，假如有个站点搜索函数，搜索项被当作 URL 参数进行编码，这些搜索项将随搜索结果一同显示。攻击者可以通过构造一个包含恶意脚本的搜索链接作为参数（例如 `http://mysite.com?q=beer<script%20src="http://evilsite.com/tricky.js"></script> `），然后把链接发送给另一个用户。如果目标用户点击了这个链接，当显示搜索结果时这个脚本就会被执行。正如上述讨论的，这促使攻击者获取了所有需要以目标用户进入站点的信息 -- 可能会购买物品或分享联系人信息。
+  举个例子，假如有个站点搜索函数，搜索项被当作 URL 参数进行编码，这些搜索项将随搜索结果一同显示。攻击者可以通过构造一个包含恶意脚本的搜索链接作为参数（例如 `http://mysite.com?q=beer<script%20src="http://evilsite.com/tricky.js"></script>`），然后把链接发送给另一个用户。如果目标用户点击了这个链接，当显示搜索结果时这个脚本就会被执行。正如上述讨论的，这促使攻击者获取了所有需要以目标用户进入站点的信息 -- 可能会购买物品或分享联系人信息。
 
 - 持久型 XSS 攻击：恶意脚本存储在站点中，然后再原样地返回给其他用户，在用户不知情的情况下执行。
 
@@ -61,7 +57,7 @@ XSS 是一个术语，用来描述一类允许攻击者通过网站将客户端�
 
   尽管 `POST` 和 `GET` 方式获取到的数据是 XSS 攻击最常见的攻击来源，任何来自浏览器的数据都可能包含漏洞（包括浏览器渲染过的 Cookie 数据以及用户上传和显示的文件等).
 
-防范 XSS 攻击的最好方式就是删除或禁用任何可能包含可运行代码指令的标记。对 HTML 来说，这些包括类似 `<script>`, `<object>`, `<embed>`,和 `<link> `的标签。
+防范 XSS 攻击的最好方式就是删除或禁用任何可能包含可运行代码指令的标记。对 HTML 来说，这些包括类似 `<script>`, `<object>`, `<embed>`,和 `<link>` 的标签。
 
 修改用户数据使其无法用于运行脚本或其它影响服务器代码执行的过程被称作输入过滤。许多 Web 框架默认情况下都会对来自 HTML 表单的用户数据进行过滤。
 
@@ -75,7 +71,7 @@ SQL 注入漏洞使得恶意用户能够通过在数据库上执行任意 SQL �
 statement = "SELECT * FROM users WHERE name = '" + userName + "';"
 ```
 
-如果用户输入了真实的名字，这段代码会如预想的运行。然而一个恶意用户可以完全将这个 SQL 语句的行为改变为下面的新语句的行为，只要通过将 `userName`指定为下列“**粗体**”的文本。修改后的代码创建了一个合法的 SQL 语句，该语句删除了整个` users` 表，然后从 `userinfo` 表中获取了所有数据（所有用户的信息都被暴露了）。这是有效的，因为注入的文本的第一部分 (`a';`) 结束了原来的语句 ( ' 在 SQL 语句中是用来描述字符串常量的) 。
+如果用户输入了真实的名字，这段代码会如预想的运行。然而一个恶意用户可以完全将这个 SQL 语句的行为改变为下面的新语句的行为，只要通过将 `userName`指定为下列“**粗体**”的文本。修改后的代码创建了一个合法的 SQL 语句，该语句删除了整个 `users` 表，然后从 `userinfo` 表中获取了所有数据（所有用户的信息都被暴露了）。这是有效的，因为注入的文本的第一部分 (`a';`) 结束了原来的语句 ( ' 在 SQL 语句中是用来描述字符串常量的) 。
 
 ```sql
 SELECT * FROM users WHERE name = 'a';DROP TABLE users; SELECT * FROM userinfo WHERE 't' = 't';
@@ -93,13 +89,13 @@ SELECT * FROM users WHERE name = 'a\';DROP TABLE users; SELECT * FROM userinfo W
 
 Web 框架通常会为你进行这种转义操作。例如 Django，可以确保任何传递给查询集合 (model 查询) 的用户数据都是已经转义过的。
 
-> **备注：** 本章节引用了大量来自 [Wikipedia ](https://en.wikipedia.org/wiki/SQL_injection)的内容。
+> **备注：** 本章节引用了大量来自 [Wikipedia](https://en.wikipedia.org/wiki/SQL_injection) 的内容。
 
 ### 跨站请求伪造 (CSRF)
 
 CSRF 攻击允许恶意用户在另一个用户不知情的情况下利用其身份信息执行操作。
 
-这种形式的攻击用实例来解释最好。John 是一个恶意用户，他知道某个网站允许已登陆用户使用包含了账户名和数额的 HTTP `POST`请求来转帐给指定的账户。John 构造了包含他的银行卡信息和某个数额做为隐藏表单项的表单，然后通过 Email 发送给了其它的站点用户（还有一个伪装成到“快速致富”网站的链接的提交按钮）.
+这种形式的攻击用实例来解释最好。John 是一个恶意用户，他知道某个网站允许已登陆用户使用包含了账户名和数额的 HTTP `POST` 请求来转帐给指定的账户。John 构造了包含他的银行卡信息和某个数额做为隐藏表单项的表单，然后通过 Email 发送给了其它的站点用户（还有一个伪装成到“快速致富”网站的链接的提交按钮）。
 
 如果某个用户点击了提交按钮，一个 HTTP `POST` 请求就会发送给服务器，该请求中包含了交易信息以及浏览器中与该站点关联的所有客户端 cookie（将相关联的站点 cookie 信息附加发送是正常的浏览器行为) 。服务器会检查这些 cookie，以判断对应的用户是否已登陆且有权限进行上述交易。
 
@@ -115,8 +111,8 @@ Web 框架通常都会包含一些类似的 CSRF 防范技巧。
 
 其它常见的攻击/漏洞利用方式包括：
 
-- [劫持 ](https://www.owasp.org/index.php/Clickjacking). 通过这种方式，恶意用户劫持了对可见上层站点的点击，然后将其转发给下层隐藏的页面。这种技术例如可以用来显示一个合法的银行网站，但是将登陆认证信息截获到由攻击者控制的隐藏的{{htmlelement("iframe")}}中。另外也可以用于促使用户点击可见网页的按钮，实际上却在不知情的情况点击了一个完全不同的按钮。作为防范手段，你的站点可以通过设置适当的 HTTP 头来防止其被嵌入到另一个站点的 iframe 中。
-- [拒绝服务](/en-US/docs/Glossary/Distributed_Denial_of_Service) (DoS). Dos 通常通过使用伪造的请求淹没站点，这样合法用户的访问就会被中断。这些请求可能仅仅是数量巨大或者是单独消耗了大量资源 (如 延缓读，上传大文件等) 。DoS 防护通常通过识别并堵塞“恶意”的网络数据来工作，同时允许合法信息通过。这些防护一般都是在 Web 服务器之前或服务器中进行 (它们并非 web 应用本身所为).
+- [劫持](https://www.owasp.org/index.php/Clickjacking). 通过这种方式，恶意用户劫持了对可见上层站点的点击，然后将其转发给下层隐藏的页面。这种技术例如可以用来显示一个合法的银行网站，但是将登陆认证信息截获到由攻击者控制的隐藏的{{htmlelement("iframe")}}中。另外也可以用于促使用户点击可见网页的按钮，实际上却在不知情的情况点击了一个完全不同的按钮。作为防范手段，你的站点可以通过设置适当的 HTTP 头来防止其被嵌入到另一个站点的 iframe 中。
+- [拒绝服务](/zh-CN/docs/Glossary/Distributed_Denial_of_Service) (DoS). Dos 通常通过使用伪造的请求淹没站点，这样合法用户的访问就会被中断。这些请求可能仅仅是数量巨大或者是单独消耗了大量资源 (如 延缓读，上传大文件等) 。DoS 防护通常通过识别并堵塞“恶意”的网络数据来工作，同时允许合法信息通过。这些防护一般都是在 Web 服务器之前或服务器中进行 (它们并非 web 应用本身所为).
 - [目录遍历](https://en.wikipedia.org/wiki/Directory_traversal_attack)(File and disclosure). 在这种攻击中，攻击者会尝试访问 Web 服务器文件系统中他们本不该访问的部分。这种漏洞会在用户可以传递包含文件系统导航字符的文件名时出现（比如 ../../ ）。解决方法就是在使用前对用户输入进行过滤。
 - [文件包含](https://en.wikipedia.org/wiki/File_inclusion_vulnerability). 在此攻击方式中，用户在传递给服务器的数据中指定一个“非故意”的文件来显示或执行。一旦载入成功，这个文件就可以在服务器或客户端（造成 XSS 攻击）执行。解决方式就是在使用前对输入进行过滤。
 - [命令行注入](https://www.owasp.org/index.php/Command_Injection). 命令行注入攻击允许恶意用户在主机操作系统中执行任意系统命令。解决方法就是在系统调用中使用前对用户输入进行过滤。
@@ -132,8 +128,8 @@ Web 框架通常都会包含一些类似的 CSRF 防范技巧。
 你可以采取一些简单的步骤：
 
 - 采取更加强大的密码管理措施。当密码频繁更换时鼓励更加健壮的密码。采取双因素认证，也就是说除了密码，用户还应该输入另一种认证码（通常是只有唯一一个用户拥有的通过一些物理硬件传输的，比如发送给用户手机的验证短信）。
-- 将你的服务器配制成 [HTTPS](/en-US/docs/Glossary/https) 和 [HTTP Strict Transport Security](/en-US/docs/Web/Security/HTTP_strict_transport_security) (HSTS)。HTTPS 会加密你的用户和服务器之间传输的信息。这使得登录认证、cookise、POST 数据及头信息不易被攻击者获得。
-- 持续追踪那些常见的网络攻击 (the [current OWASP list is here](/en-US/docs/))，先解决最脆弱的部分。
+- 将你的服务器配制成 [HTTPS](/zh-CN/docs/Glossary/https) 和 [HTTP Strict Transport Security](/zh-CN/docs/Web/Security/HTTP_strict_transport_security) (HSTS)。HTTPS 会加密你的用户和服务器之间传输的信息。这使得登录认证、cookise、POST 数据及头信息不易被攻击者获得。
+- 持续追踪那些常见的网络攻击 (the [current OWASP list is here](/zh-CN/docs/))，先解决最脆弱的部分。
 - 使用 [vulnerability scanning tools](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) 来对你的网站进行一些安全测试 (然后，你的非常受欢迎的网站还可以靠提供赏金来寻找 bug，就像 Mozilla 这样（[like Mozilla does here](https://www.mozilla.org/en-US/security/bug-bounty/faq-webapp/)）。
 - 只存储和展示你不得不需要的东西。比如，如果你的用户不得不存储一些敏感信息（如信用卡详明），只展示足以让用户识别卡号的几位数字即可，却不足以让黑客复制之后在另一个站点使用。现今最常见的是只展示信用卡卡号后 4 位数字。
 
@@ -143,6 +139,6 @@ web 框架可以帮助抵御很多常见的攻击。
 
 这篇文章介绍了有关网络安全的概念和你应该避免的一些常见的攻击。最重要的是，你应该明白一个 web 应用不可以相信任何来自网络服务器的数据！所有的用户数据在展示、使用 SQL 查询或者回应系统之前应该被过滤。
 
-这也是[这个模块](/en-US/docs/Learn/Server-side/First_steps)的结尾，涵盖了你之前在服务器端编程学到的知识。我们希望你非常享受这个学习基础概念的过程，并且你现在已经准备好选择一个 web 框架开始编程了。
+这也是[这个模块](/zh-CN/docs/Learn/Server-side/First_steps)的结尾，涵盖了你之前在服务器端编程学到的知识。我们希望你非常享受这个学习基础概念的过程，并且你现在已经准备好选择一个 web 框架开始编程了。
 
 {{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}

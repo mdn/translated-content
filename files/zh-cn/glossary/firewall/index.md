@@ -1,13 +1,6 @@
 ---
 title: firewall
 slug: Glossary/firewall
-tags:
-  - DDoS
-  - Firewall
-  - Glossary
-  - Security
-  - computer network
-translation_of: Glossary/firewall
 ---
 **防火墙（firewall）**是一个过滤网络流量的系统。它可以根据一些指定的规则，让网络流量的通过或被阻挡。例如，它可以阻止以特定端口为目标的传入连接或以特定 IP 地址为目标的传出连接。
 

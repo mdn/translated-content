@@ -2,14 +2,12 @@
 title: 创建、绘制画布
 slug: >-
   Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
-translation_of: >-
-  Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 ---
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
 
-本篇是 [Gamedev Canvas tutorial](/en-US/docs/Games/Workflows/Breakout_game_from_scratch) 10 节教程中的第一节。如果你完成了本篇教程之后，你可以从 [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html) 看到源码。
+本篇是 [Gamedev Canvas tutorial](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch) 10 节教程中的第一节。如果你完成了本篇教程之后，你可以从 [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html) 看到源码。
 
 在我们开始编写游戏功能之前，我们可以通过 HTML 的 canvas 标签创建支撑游戏的基本结构。
 
@@ -24,8 +22,8 @@ HTML 文档的结构是非常简单的，我们的游戏将完全呈现在这个
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
     <style>
-    	* { padding: 0; margin: 0; }
-    	canvas { background: #eee; display: block; margin: 0 auto; }
+     * { padding: 0; margin: 0; }
+     canvas { background: #eee; display: block; margin: 0 auto; }
     </style>
 </head>
 <body>
@@ -33,7 +31,7 @@ HTML 文档的结构是非常简单的，我们的游戏将完全呈现在这个
 <canvas id="myCanvas" width="480" height="320"></canvas>
 
 <script>
-	// JavaScript code goes here
+ // JavaScript code goes here
 </script>
 
 </body>
@@ -67,11 +65,13 @@ ctx.closePath();
 
 我们不局限于绘制矩形 — 下面这段代码会绘制出一个绿色的圆；尝试添加到 JavaScript 代码的底部，保存并刷新：
 
-    ctx.beginPath();
-    ctx.arc(240, 160, 20, 0, Math.PI*2, false);
-    ctx.fillStyle = "green";
-    ctx.fill();
-    ctx.closePath();
+```js
+ctx.beginPath();
+ctx.arc(240, 160, 20, 0, Math.PI*2, false);
+ctx.fillStyle = "green";
+ctx.fill();
+ctx.closePath();
+```
 
 正如你所见，我们再一次使用了 ctx.beginPath() 方法 和 ctx.closePath() 方法；在这两个方法中间，最重要的部分是 ctx.arc() 方法。它需要六个参数：
 
@@ -104,6 +104,6 @@ ctx.closePath();
 
 ## 下一节
 
-现在我们已经创建了基本的 HTML 和关于画布的基本知识。我们继续第二节，如何让球在游戏中动起来 — [让球动起来](/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Move_the_ball)。
+现在我们已经创建了基本的 HTML 和关于画布的基本知识。我们继续第二节，如何让球在游戏中动起来 — [让球动起来](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch/Move_the_ball)。
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}

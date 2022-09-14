@@ -1,7 +1,6 @@
 ---
 title: 前端框架簡介
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -30,7 +29,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introd
 
 ## 一段簡短的歷史
 
-在 JavaScript 誕生的 1996，它的作用就只有針對網頁，提供些許的互動和興奮。但之後網路漸漸從*拿來看*，變成*拿來用*了。JavaScript 慢慢地紅了起來，JavaScript 開發者也開始針對自己碰上的問題，寫出了能解決問題的工具、接著包成能複用的工具包。他們就能把這個被稱為**函式庫**（library）的東西，拿去與他人共享。共享的函式庫生態，也有助於塑造網路的增長趨勢。
+在 JavaScript 誕生的 1996 年，它的作用僅僅是為當時由靜態文檔組成的網頁，提供些許的互動和興奮感。而當網路漸漸從_閱讀_的媒介，成為_做事_的場所，JavaScript 也慢慢地紅了起來。JavaScript 開發者們撰寫了許多工具，來解決自己遭遇的問題，並打包成能重複使用的工具包，稱為**函式庫**（library），以便和他人共享自己的解決方案。這個共享函式庫的生態，也推進了網路的增長。
 
 目前 JavaScript 已經是網路的必需品了，[大約 95% 的網站都又在使用 JavaScript](https://w3techs.com/technologies/details/cp-javascript)，網路也成了當今生活的必須。使用者可以透過文字與影像，來寫論文、聽音樂、看電影、與人遠距離交流。曾經只能透過裝在電腦內的原生軟體所完成的事情，現在也能網路上做到。這種現代化、複雜度高、還有各種互動的網站，被稱為**網路應用程式**（web applications）。
 
@@ -240,9 +239,9 @@ web 最重要的功能之一，就是頁面之間的導航：畢竟它就是相�
 
 不同模塊的框架，會採用不同的方法。來開發 Web 應用程式。框架都會定期變化、也都有其優缺點。選擇哪個框架的過程，是與團隊及專案息息相關的。你需要透過研究，來找出合適的需求。換句話說，我們已經找出了一些能有效地研究出選擇的問題：
 
-1.  框架支援哪些瀏覽器？
-2.  框架使用哪個特定領域語言（domain-specific language）？
-3.  框架有夠大的社群與夠好的文件（或其他東西）支援嗎？
+1. 框架支援哪些瀏覽器？
+2. 框架使用哪個特定領域語言（domain-specific language）？
+3. 框架有夠大的社群與夠好的文件（或其他東西）支援嗎？
 
 接下來我們退提供一個表格，來展示各大框架的*瀏覽器支援*、還有能用的**特定領域語言**。
 

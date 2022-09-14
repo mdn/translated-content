@@ -87,14 +87,11 @@ test.addEventListener("mouseover", function( event ) {
 
 ## Spécifications
 
-| Spécification                                                                            | État                             |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('UI Events', '#event-type-mouseover', 'mouseover')}}     | {{Spec2('UI Events')}}     |
-| {{SpecName('DOM3 Events', '#event-type-mouseover', 'mouseover')}} | {{Spec2('DOM3 Events')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.mouseover_event")}}
+{{Compat}}
 
 ## Voir aussi
 

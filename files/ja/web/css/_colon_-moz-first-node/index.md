@@ -1,15 +1,6 @@
 ---
 title: ':-moz-first-node'
 slug: Web/CSS/:-moz-first-node
-tags:
-  - CSS
-  - CSS:Mozilla 拡張
-  - NeedsCompatTable
-  - 標準外
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-translation_of: Web/CSS/:-moz-first-node
 ---
 {{Non-standard_header}}{{CSSRef}}
 

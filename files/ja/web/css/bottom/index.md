@@ -1,14 +1,6 @@
 ---
 title: bottom
 slug: Web/CSS/bottom
-tags:
-  - CSS
-  - CSS 位置指定レイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.bottom
-translation_of: Web/CSS/bottom
 ---
 {{CSSRef}}
 

@@ -99,7 +99,7 @@ pc.setRemoteDescription(new RTCSessionDescription(offer), function() { }, error)
 
 Tout ce qui est en dessous de ce point est potentiellement obsolète. Il est toujours là en attente d'examen et d'intégration possible dans d'autres parties de la documentation où il serait encore valides.
 
-> **Note :** Ne pas utiliser les examples de cette page. Voir l'article [signalisation et appel vidéo](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) ,pour des example mis a jour sur l'utilisation des medias WebRTC.
+> **Note :** Ne pas utiliser les examples de cette page. Voir l'article [signalisation et appel vidéo](/fr/docs/Web/API/WebRTC_API/Signaling_and_video_calling) ,pour des example mis a jour sur l'utilisation des medias WebRTC.
 
 ## Note
 
@@ -140,7 +140,7 @@ var configuration = {
 }
 ```
 
-Google met à disposition un [serveur STUN public](https://code.google.com/p/natvpn/source/browse/trunk/stun_server_list) que nous pouvons utiliser. J'ai également créé un compte chez http\://numb.viagenie.ca/ pour un accès gratuit à un serveur TURN. Vous pouvez faire la même chose et les remplacer par vos propres informations d'identification.
+Google met à disposition un [serveur STUN public](https://code.google.com/p/natvpn/source/browse/trunk/stun_server_list) que nous pouvons utiliser. J'ai également créé un compte chez <http://numb.viagenie.ca/> pour un accès gratuit à un serveur TURN. Vous pouvez faire la même chose et les remplacer par vos propres informations d'identification.
 
 ### **`options`** (Cf. "Note" avant)
 

@@ -26,13 +26,11 @@ self.onerror = function() {
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#handler-workerglobalscope-onerror", "WorkerGlobalScope.onerror")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
-## Compatibilité des naviguateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.WorkerGlobalScope.onerror")}}
+{{Compat}}
 
 ## Voir aussi
 

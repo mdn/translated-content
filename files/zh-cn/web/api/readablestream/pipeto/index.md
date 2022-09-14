@@ -1,14 +1,6 @@
 ---
 title: ReadableStream.pipeTo()
 slug: Web/API/ReadableStream/pipeTo
-tags:
-  - API
-  - Method
-  - ReadableStream
-  - Reference
-  - Streams
-  - pipeTo
-translation_of: Web/API/ReadableStream/pipeTo
 ---
 {{APIRef("Streams")}}
 

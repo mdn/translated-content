@@ -1,15 +1,6 @@
 ---
 title: Element.slot
 slug: Web/API/Element/slot
-tags:
-  - API
-  - Element
-  - プロパティ
-  - リファレンス
-  - シャドウ DOM
-  - slot
-browser-compat: api.Element.slot
-translation_of: Web/API/Element/slot
 ---
 {{APIRef("Shadow DOM")}}
 

@@ -1,13 +1,6 @@
 ---
 title: CSS ルビレイアウト
 slug: Web/CSS/CSS_Ruby
-tags:
-  - CSS
-  - CSS ルビ
-  - ガイド
-  - 概要
-  - Reference
-translation_of: Web/CSS/CSS_Ruby
 ---
 {{CSSRef}}
 

@@ -19,7 +19,7 @@ Par exemple, en HTML, nous déclarons généralement l'usage du codage de caract
 
 Ceci nous permet de nous assurer que nous pouvons utiliser des caractères issus de presque toutes les langues humaines dans notre document HTML et que ces caractères seront affichés correctement.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

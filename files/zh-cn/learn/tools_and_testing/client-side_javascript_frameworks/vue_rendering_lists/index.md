@@ -1,9 +1,6 @@
 ---
 title: Rendering a list of Vue components
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists
-tags:
-  - vue 入门
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -15,12 +12,12 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_re
       <th scope="row">Prerequisites:</th>
       <td>
         <p>
-          Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages,
+          Familiarity with the core <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
+          <a href="/zh-CN/docs/Learn/CSS">CSS</a>, and
+          <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> languages,
           knowledge of the
           <a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/command line</a
           >.
         </p>
@@ -84,13 +81,13 @@ export default {
 
 我们可以使用`lodash.uniqueid()` ，像我们前一章节那样。
 
-1.  导入 `lodash.uniqueid` 到 `App` 组件。
+1. 导入 `lodash.uniqueid` 到 `App` 组件。
 
     ```js
      import uniqueId from 'lodash.uniqueid';
     ```
 
-2.  添加 `id` 字段到 `ToDoItems` 数组的每一个元素中，并且将他们赋值为 `uniqueId('todo-')。`
+2. 添加 `id` 字段到 `ToDoItems` 数组的每一个元素中，并且将他们赋值为 `uniqueId('todo-')。`
 
     `App.vue` `<script>` 元素内容如下：
 
@@ -116,7 +113,7 @@ export default {
     };
     ```
 
-3.  添加 `v-for` 指令和 `key` 属性到 `<li>` 元素：
+3. 添加 `v-for` 指令和 `key` 属性到 `<li>` 元素：
 
     ```html
     <ul>
@@ -128,8 +125,9 @@ export default {
 
     这样改后，`<cli>`标签中的 js 脚本就可以访问`item`了，这意味着我们可以使用`v-bind`来传递`item`对象的字段给`ToDoItem`组件了。这非常有用，我们想让列表中的待办事项的`label`值展示到它的 label 中，而不是显示一个静态的"My Todo Item"。此外，我们想让它们的 checked 状态反应它们的`done`字段，而不是默认的`done="false"`。
 
-4.  把 `label="My ToDo Item"` 改成 `:label="item.label"`, `:done="false"` 改成 `:done="item.done"` ：
-5.  ```html
+4. 把 `label="My ToDo Item"` 改成 `:label="item.label"`, `:done="false"` 改成 `:done="item.done"` ：
+
+    ```html
     <ul>
       <li v-for="item in ToDoItems" :key="item.id">
          <to-do-item :label="item.label" :done="item.done"></to-do-item>
@@ -145,9 +143,9 @@ export default {
 
 添加一个新的 prop `id` 到 `ToDoItem` 组件。
 
-1.  标记它为 required，类型是 `String` 。
-2.  为防止命名冲突，删除掉`data`属性中的`id`字段。
-3.  删除掉 `import uniqueId from 'lodash.uniqueid';` 这行。
+1. 标记它为 required，类型是 `String` 。
+2. 为防止命名冲突，删除掉`data`属性中的`id`字段。
+3. 删除掉 `import uniqueId from 'lodash.uniqueid';` 这行。
 
 `ToDoItem` 中的 `<script>` 如下所示：
 
@@ -193,46 +191,46 @@ export default {
 
 ## In this module
 
-- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- [Introduction to client-side frameworks](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [Framework main features](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
 - React
 
-  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+  - [Getting started with React](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Beginning our React todo list](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [Componentizing our React app](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [React interactivity: Events and state](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [React interactivity: Editing, filtering, conditional rendering](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [Accessibility in React](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React resources](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
 
 - Ember
 
-  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+  - [Getting started with Ember](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - [Ember app structure and componentization](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Ember interactivity: Events, classes and state](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Ember Interactivity: Footer functionality, conditional rendering](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Routing in Ember](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ember resources and troubleshooting](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
 
 - Vue
 
-  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+  - [Getting started with Vue](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [Creating our first Vue component](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - [Rendering a list of Vue components](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [Adding a new todo form: Vue events, methods, and models](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [Styling Vue components with CSS](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [Using Vue computed properties](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - [Vue conditional rendering: editing existing todos](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [Focus management with Vue refs](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - [Vue resources](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
 
 - Svelte
 
-  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+  - [Getting started with Svelte](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [Starting our Svelte Todo list app](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Dynamic behavior in Svelte: working with variables and props](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [Componentizing our Svelte app](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Working with Svelte stores](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [TypeScript support in Svelte](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [Deployment and next steps](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)

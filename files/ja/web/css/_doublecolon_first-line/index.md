@@ -1,14 +1,6 @@
 ---
 title: '::first-line (:first-line)'
 slug: Web/CSS/::first-line
-tags:
-  - CSS
-  - レイアウト
-  - 擬似要素
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.first-line
-translation_of: Web/CSS/::first-line
 ---
 {{CSSRef}}
 

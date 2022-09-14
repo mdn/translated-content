@@ -1,19 +1,6 @@
 ---
 title: perspective
 slug: Web/CSS/perspective
-tags:
-  - 3D
-  - CSS
-  - CSS プロパティ
-  - CSS 座標変換
-  - 距離
-  - グラフィック
-  - プロパティ
-  - Reference
-  - perspective
-  - recipe:css-property
-browser-compat: css.properties.perspective
-translation_of: Web/CSS/perspective
 ---
 {{CSSRef}}
 
@@ -42,7 +29,7 @@ perspective: unset;
 
 - `none`
   - : 立体的な座標変換を一切適用しないことを示すキーワードです。
-- `&lt;length&gt;`
+- `<length>`
   - : ユーザーと z=0 平面間の距離を表す {{cssxref("&lt;length&gt;")}} です。立体的な座標変換を要素とその内容に適用するときに使います。 `0` や負の値ならば、立体的な座標変換は適用されません。
 
 ## 解説

@@ -1,9 +1,6 @@
 ---
 title: Safe (安全) (HTTP メソッド)
 slug: Glossary/Safe/HTTP
-tags:
-  - 用語集
-  - WebMechanics
 ---
 HTTP メソッドが**安全**であるとは、その HTTP メソッドがサーバーの状態を変更しないということです。言い換えれば、読み取り専用操作につながる場合、メソッドは安全です。一般的な HTTP メソッドのうちでは {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("OPTIONS")}} が安全です。安全な HTTP メソッドはすべて{{glossary("idempotent", "べき等")}}でもあります。しかし、すべてのべき等なメソッドが安全とは限りません。例えば、 {{HTTPMethod("PUT")}} や {{HTTPMethod("DELETE")}} はべき等ですが、安全ではありません。
 

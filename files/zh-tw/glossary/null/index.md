@@ -1,10 +1,6 @@
 ---
 title: 'Null'
 slug: Glossary/Null
-tags:
-  - 'Null'
-  - 術語表
-translation_of: Glossary/Null
 ---
 在計算機科學裏，一個  **`null`**  值代表了一個參考，通常是指一個不存在的或無效的物件({{glossary("object")}})或地址。在語言實現中空值引用的含義各不相同。
 
@@ -18,5 +14,5 @@ translation_of: Glossary/Null
 
 ### 技術參考
 
-- [JavaScript 的數據類型和結構](/en-US/docs/Web/JavaScript/Data_structures)
+- [JavaScript 的數據類型和結構](/zh-TW/docs/Web/JavaScript/Data_structures)
 - JavaScript 全域物件: {{jsxref("null")}}

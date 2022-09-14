@@ -1,11 +1,6 @@
 ---
 title: 拡張機能ページ
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
-tags:
-  - 初心者
-  - ユーザーインターフェイス
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 ---
 {{AddonSidebar()}}
 

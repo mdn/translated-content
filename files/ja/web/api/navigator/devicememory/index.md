@@ -1,15 +1,6 @@
 ---
 title: Navigator.deviceMemory
 slug: Web/API/Navigator/deviceMemory
-tags:
-  - API
-  - 端末メモリー API
-  - Navigator
-  - プロパティ
-  - リファレンス
-  - deviceMemory
-  - メモリー
-translation_of: Web/API/Navigator/deviceMemory
 ---
 {{APIRef("Device Memory")}}{{securecontext_header}}{{SeeCompatTable}}
 

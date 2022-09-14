@@ -1,21 +1,6 @@
 ---
 title: HTMLImageElement.longDesc
 slug: Web/API/HTMLImageElement/longDesc
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Long description
-  - プロパティ
-  - リファレンス
-  - description
-  - img
-  - longDesc
-  - 非推奨
-browser-compat: api.HTMLImageElement.longDesc
-translation_of: Web/API/HTMLImageElement/longDesc
 ---
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
@@ -25,7 +10,7 @@ translation_of: Web/API/HTMLImageElement/longDesc
 
 空文字列（長い説明文がないことを示す）または、画像の内容の長い形式の説明文を含むファイルの URL のいずれかを指定します。
 
-例えば、画像がフローチャートの [PNG](/ja/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) であった場合、 
+例えば、画像がフローチャートの [PNG](/ja/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) であった場合、
 `longDesc` プロパティは、チャートで表現された制御の流れについて、テキストのみの説明を提供するために使用することができます。これは、読者が使用する説明としてだけでなく、視覚障碍者のための代替表現として使用することもできます。
 
 ## 使用上の注意

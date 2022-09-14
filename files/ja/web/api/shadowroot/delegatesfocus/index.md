@@ -1,16 +1,6 @@
 ---
 title: ShadowRoot.delegatesFocus
 slug: Web/API/ShadowRoot/delegatesFocus
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - ShadowRoot
-  - ウェブコンポーネント
-  - delegatesFocus
-  - シャドウ DOM
-browser-compat: api.ShadowRoot.delegatesFocus
-translation_of: Web/API/ShadowRoot/delegatesFocus
 ---
 {{APIRef("Shadow DOM")}}
 

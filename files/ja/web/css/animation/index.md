@@ -1,14 +1,6 @@
 ---
 title: animation
 slug: Web/CSS/animation
-tags:
-  - CSS
-  - CSS アニメーション
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.animation
-translation_of: Web/CSS/animation
 ---
 {{CSSRef}}
 

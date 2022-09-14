@@ -38,13 +38,11 @@ _Hérite des propriétés de son parent, {{domxref("Event")}}_.
 
 ## Spécifications
 
-| Spécification                                                                            | État                                         | Commentaires        |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
-| {{SpecName('MediaStream Recording', '#blob-event', 'BlobEvent')}} | {{Spec2('MediaStream Recording')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.BlobEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

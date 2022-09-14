@@ -1,15 +1,6 @@
 ---
 title: Request.arrayBuffer()
 slug: Web/API/Request/arrayBuffer
-page-type: web-api-instance-method
-tags:
-  - API
-  - ArrayBuffer
-  - Fetch
-  - Method
-  - Reference
-  - Request
-translation_of: Web/API/Request/arrayBuffer
 ---
 {{APIRef("Fetch")}}
 

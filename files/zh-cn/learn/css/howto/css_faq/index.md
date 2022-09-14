@@ -1,14 +1,6 @@
 ---
 title: CSS 常见问题
 slug: Learn/CSS/Howto/CSS_FAQ
-translation_of: Learn/CSS/Howto/CSS_FAQ
-tags:
-- CSS
-- Example
-- FAQ
-- Guide
-- Web
-- questions
 original_slug: Web/CSS/Common_CSS_Questions
 ---
 ## 为什么有效的 CSS 没有正确的渲染？

@@ -17,7 +17,7 @@ WebKit a commencé son existence comme un fork du moteur KHTML de KDE et des bib
 
 WebKit est une marque déposée par Apple, et le framework est distribué sous une licence de type BSD. Cependant, deux éléments importants sont placés sous {{Glossary("LGPL")}}: la bibliothèque de rendu **WebCore** et le moteur **JavaScriptCore**.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

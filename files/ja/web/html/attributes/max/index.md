@@ -1,18 +1,6 @@
 ---
 title: 'HTML 属性: max'
 slug: Web/HTML/Attributes/max
-tags:
-  - 属性
-  - Attributes
-  - 制約検証
-  - HTML
-  - max
-  - リファレンス
-spec-urls:
-  - https://html.spec.whatwg.org/multipage/input.html#the-min-and-max-attributes
-  - https://html.spec.whatwg.org/multipage/forms.html#the-progress-element
-  - https://html.spec.whatwg.org/multipage/forms.html#the-meter-element
-translation_of: Web/HTML/Attributes/max
 ---
 
 {{HTMLSidebar}}
@@ -134,7 +122,7 @@ translation_of: Web/HTML/Attributes/max
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attribute.capture")}}
+{{Compat}}
 
 ## 関連情報
 

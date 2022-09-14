@@ -1,11 +1,6 @@
 ---
 title: WebGL 拡張機能の使用
 slug: Web/API/WebGL_API/Using_Extensions
-page-type: guide
-tags:
-  - Advanced
-  - WebGL
-translation_of: Web/API/WebGL_API/Using_Extensions
 ---
 {{WebGLSidebar}}
 

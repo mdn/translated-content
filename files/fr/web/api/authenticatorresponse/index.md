@@ -11,7 +11,7 @@ translation_of: Web/API/AuthenticatorResponse
 ---
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-L'interface **`AuthenticatorResponse`**, rattachée à l'[API Web Authentication](/en-US/docs/Web/API/Web_Authentication_API), constitue l'interface de base pour les interfaces qui fournissent une racine cryptographique de confiance pour une paire de clés. Les interfaces filles contiennent des informations relatives au navigateur telles que l'origine du _challenge_ et qui peuvent être renvoyée par {{domxref("PublicKeyCredential.response")}}.
+L'interface **`AuthenticatorResponse`**, rattachée à l'[API Web Authentication](/fr/docs/Web/API/Web_Authentication_API), constitue l'interface de base pour les interfaces qui fournissent une racine cryptographique de confiance pour une paire de clés. Les interfaces filles contiennent des informations relatives au navigateur telles que l'origine du _challenge_ et qui peuvent être renvoyée par {{domxref("PublicKeyCredential.response")}}.
 
 ## Interfaces basées sur `AuthenticatorResponse`
 
@@ -31,10 +31,8 @@ Aucune.
 
 ## Spécifications
 
-| Spécification                    | État                         | Commentaires         |
-| -------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('WebAuthn')}} | {{Spec2('WebAuthn')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.AuthenticatorResponse")}}
+{{Compat}}

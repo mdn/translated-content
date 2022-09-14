@@ -1,7 +1,6 @@
 ---
 title: 在代碼中做出決定 - 條件
 slug: Learn/JavaScript/Building_blocks/conditionals
-translation_of: Learn/JavaScript/Building_blocks/conditionals
 ---
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
 
@@ -13,7 +12,7 @@ translation_of: Learn/JavaScript/Building_blocks/conditionals
       <th scope="row">Prerequisites:</th>
       <td>
         Basic computer literacy, a basic understanding of HTML and CSS,
-        <a href="/en-US/docs/Learn/JavaScript/First_steps"
+        <a href="/zh-TW/docs/Learn/JavaScript/First_steps"
           >JavaScript first steps</a
         >.
       </td>
@@ -35,7 +34,7 @@ translation_of: Learn/JavaScript/Building_blocks/conditionals
 
 ## if ... else 敘述句
 
-讓我們來看 Javascript 中最常見的條件敘述句 [`if ... else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)[ statement](/en-US/docs/Web/JavaScript/Reference/Statements/if...else).
+讓我們來看 Javascript 中最常見的條件敘述句 [`if ... else` statement](/zh-TW/docs/Web/JavaScript/Reference/Statements/if...else).
 
 ### 基本的 if ... else 語法
 
@@ -51,11 +50,11 @@ if (condition) {
 
 這邊我們可以得知基礎的架構：
 
-1.  關鍵字 `if` 和後頭的括號。
-2.  想測試的條件放在括號中（通常像是「這個值是否大於其他值」或是「這個值是否存在」等等）。這裡的條件會使用先前提過的 [比較運算子](/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators)（[comparison operators](/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators)），並且最後會回傳 `true` 或是 `false`。
-3.  第一組大括號，在大括號裡面有一些程式碼 — 內容可以是任何我們所需要執行的程式碼，並且只有在條件句回傳 `true` 才會執行。
-4.  關鍵字 `else`。
-5.  另一組大括號，在大括號中我們一樣是放置所需的程式碼，並只有在條件句回傳 `false` 才會執行。
+1. 關鍵字 `if` 和後頭的括號。
+2. 想測試的條件放在括號中（通常像是「這個值是否大於其他值」或是「這個值是否存在」等等）。這裡的條件會使用先前提過的 [比較運算子](/zh-TW/Learn/JavaScript/First_steps/Math#Comparison_operators)（[comparison operators](/zh-TW/Learn/JavaScript/First_steps/Math#Comparison_operators)），並且最後會回傳 `true` 或是 `false`。
+3. 第一組大括號，在大括號裡面有一些程式碼 — 內容可以是任何我們所需要執行的程式碼，並且只有在條件句回傳 `true` 才會執行。
+4. 關鍵字 `else`。
+5. 另一組大括號，在大括號中我們一樣是放置所需的程式碼，並只有在條件句回傳 `false` 才會執行。
 
 這個程式碼的架構很容易理解 — 「如果條件回傳 `true` ，則執行程式 A，否則執行程式 B」。
 
@@ -142,16 +141,16 @@ function setWeather() {
 
 {{ EmbedLiveSample('else_if', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
-1.  Here we've got an HTML {{htmlelement("select")}} element allowing us to make different weather choices, and a simple paragraph.
-2.  In the JavaScript, we are storing a reference to both the {{htmlelement("select")}} and {{htmlelement("p")}} elements, and adding an event listener to the `<select>` element so that when its value is changed, the `setWeather()` function is run.
-3.  When this function is run, we first set a variable called `choice` to the current value selected in the `<select>` element. We then use a conditional statement to show different text inside the paragraph depending on what the value of `choice` is. Notice how all the conditions are tested in `else if() {...}` blocks, except for the first one, which is tested in an `if() {...} block`.
-4.  The very last choice, inside the `else {...}` block, is basically a "last resort" option — the code inside it will be run if none of the conditions are `true`. In this case, it serves to empty the text out of the paragraph if nothing is selected, for example if a user decides to re-select the "--Make a choice--" placeholder option shown at the beginning.
+1. Here we've got an HTML {{htmlelement("select")}} element allowing us to make different weather choices, and a simple paragraph.
+2. In the JavaScript, we are storing a reference to both the {{htmlelement("select")}} and {{htmlelement("p")}} elements, and adding an event listener to the `<select>` element so that when its value is changed, the `setWeather()` function is run.
+3. When this function is run, we first set a variable called `choice` to the current value selected in the `<select>` element. We then use a conditional statement to show different text inside the paragraph depending on what the value of `choice` is. Notice how all the conditions are tested in `else if() {...}` blocks, except for the first one, which is tested in an `if() {...} block`.
+4. The very last choice, inside the `else {...}` block, is basically a "last resort" option — the code inside it will be run if none of the conditions are `true`. In this case, it serves to empty the text out of the paragraph if nothing is selected, for example if a user decides to re-select the "--Make a choice--" placeholder option shown at the beginning.
 
 > **備註：** You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) ([see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) on there also.)
 
 ### A note on comparison operators
 
-Comparison operators are used to test the conditions inside our conditional statements. We first looked at comparison operators back in our [Basic math in JavaScript — numbers and operators](/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators) article. Our choices are:
+Comparison operators are used to test the conditions inside our conditional statements. We first looked at comparison operators back in our [Basic math in JavaScript — numbers and operators](/zh-TW/Learn/JavaScript/First_steps/Math#Comparison_operators) article. Our choices are:
 
 - `===` and `!==` — test if one value is identical to, or not identical to, another.
 - `<` and `>` — test if one value is less than or greater than another.
@@ -201,7 +200,7 @@ Even though the code all works together, each `if...else` statement works comple
 
 ### Logical operators: AND, OR and NOT
 
-If you want to test multiple conditions without writing nested `if...else` statements, [logical operators](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators) can help you. When used in conditions, the first two do the following:
+If you want to test multiple conditions without writing nested `if...else` statements, [logical operators](/zh-TW/docs/Web/JavaScript/Reference/Operators/Logical_Operators) can help you. When used in conditions, the first two do the following:
 
 - `&&` — AND; allows you to chain together two or more expressions so that all of them have to individually evaluate to `true` for the whole expression to return `true`.
 - `||` — OR; allows you to chain together two or more expressions so that one or more of them have to individually evaluate to `true` for the whole expression to return `true`.
@@ -268,7 +267,7 @@ if (x === 5 || x === 7 || x === 10 ||x === 20) {
 
 `if...else` statements do the job of enabling conditional code well, but they are not without their downsides. They are mainly good for cases where you've got a couple of choices, and each one requires a reasonable amount of code to be run, and/or the conditions are complex (e.g. multiple logical operators). For cases where you just want to set a variable to a certain choice of value or print out a particular statement depending on a condition, the syntax can be a bit cumbersome, especially if you've got a large number of choices.
 
-[`switch` statements](/en-US/docs/Web/JavaScript/Reference/Statements/switch) are your friend here — they take a single expression/value as an input, and then look through a number of choices until they find one that matches that value, executing the corresponding code that goes along with it. Here's some more pseudocode, to give you an idea:
+[`switch` statements](/zh-TW/docs/Web/JavaScript/Reference/Statements/switch) are your friend here — they take a single expression/value as an input, and then look through a number of choices until they find one that matches that value, executing the corresponding code that goes along with it. Here's some more pseudocode, to give you an idea:
 
 ```plain
 switch (expression) {
@@ -289,13 +288,13 @@ switch (expression) {
 
 Here we've got:
 
-1.  The keyword `switch`, followed by a set of parentheses.
-2.  An expression or value inside the parentheses.
-3.  The keyword `case`, followed by a choice that the expression/value could be, followed by a colon.
-4.  Some code to run if the choice matches the expression.
-5.  A `break` statement, followed by a semi-colon. If the previous choice matches the expression/value, the browser stops executing the code block here, and moves on to any code that appears below the switch statement.
-6.  As many other cases (bullets 3–5) as you like.
-7.  The keyword `default`, followed by exactly the same code pattern as one of the cases (bullets 3–5), except that `default` does not have a choice after it, and you don't need to `break` statement as there is nothing to run after this in the block anyway. This is the default option that runs if none of the choices match.
+1. The keyword `switch`, followed by a set of parentheses.
+2. An expression or value inside the parentheses.
+3. The keyword `case`, followed by a choice that the expression/value could be, followed by a colon.
+4. Some code to run if the choice matches the expression.
+5. A `break` statement, followed by a semi-colon. If the previous choice matches the expression/value, the browser stops executing the code block here, and moves on to any code that appears below the switch statement.
+6. As many other cases (bullets 3–5) as you like.
+7. The keyword `default`, followed by exactly the same code pattern as one of the cases (bullets 3–5), except that `default` does not have a choice after it, and you don't need to `break` statement as there is nothing to run after this in the block anyway. This is the default option that runs if none of the choices match.
 
 > **備註：** You don't have to include the `default` section — you can safely omit it if there is no chance that the expression could end up equaling an unknown value. If there is a chance of this however, you need to include it to handle unknown cases.
 
@@ -351,7 +350,7 @@ function setWeather() {
 
 ## 三元運算符
 
-There is one final bit of syntax we want to introduce you to, before we get you to play with some examples. The [ternary or conditional operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) is a small bit of syntax that tests a condition and returns one value/expression if it is `true`, and another if it is `false` — this can be useful in some situations, and can take up a lot less code than an `if...else` block if you simply have two choices that are chosen between via a `true`/`false` condition. The pseudocode looks like this:
+There is one final bit of syntax we want to introduce you to, before we get you to play with some examples. The [ternary or conditional operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) is a small bit of syntax that tests a condition and returns one value/expression if it is `true`, and another if it is `false` — this can be useful in some situations, and can take up a lot less code than an `if...else` block if you simply have two choices that are chosen between via a `true`/`false` condition. The pseudocode looks like this:
 
 ```plain
 ( condition ) ? run this code : run this code instead
@@ -398,7 +397,7 @@ select.onchange = function() {
 
 Here we've got a {{htmlelement('select')}} element to choose a theme (black or white), plus a simple {{htmlelement('h1')}} to display a website title. We also have a function called `update()`, which takes two colors as parameters (inputs). The website's background color is set to the first provided color, and its text color is set to the second provided color.
 
-Finally, we've also got an [onchange](/en-US/docs/Web/API/GlobalEventHandlers/onchange) event listener that serves to run a function containing a ternary operator. It starts with a test condition — `select.value === 'black'`. If this returns `true`, we run the `update()` function with parameters of black and white, meaning that we end up with background color of black and text color of white. If it returns `false`, we run the `update()` function with parameters of white and black, meaning that the site color are inverted.
+Finally, we've also got an [onchange](/zh-TW/docs/Web/API/GlobalEventHandlers/onchange) event listener that serves to run a function containing a ternary operator. It starts with a test condition — `select.value === 'black'`. If this returns `true`, we run the `update()` function with parameters of black and white, meaning that we end up with background color of black and text color of white. If it returns `false`, we run the `update()` function with parameters of white and black, meaning that the site color are inverted.
 
 > **備註：** You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (see it [running live](http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html) on there also.)
 
@@ -412,8 +411,8 @@ In this example you are going to help us finish a simple calendar application. I
 
 We need you to write a conditional statement inside the `onchange` handler function, just below the `// ADD CONDITIONAL HERE` comment. It should:
 
-1.  Look at the selected month (stored in the `choice` variable. This will be the `<select>` element value after the value changes, so "January" for example.)
-2.  Set a variable called `days` to be equal to the number of days in the selected month. To do this you'll have to look up the number of days in each month of the year. You can ignore leap years for the purposes of this example.
+1. Look at the selected month (stored in the `choice` variable. This will be the `<select>` element value after the value changes, so "January" for example.)
+2. Set a variable called `days` to be equal to the number of days in the selected month. To do this you'll have to look up the number of days in each month of the year. You can ignore leap years for the purposes of this example.
 
 Hints:
 
@@ -757,23 +756,23 @@ textarea.onkeyup = function(){
 
 ## Conclusion
 
-And that's all you really need to know about conditional structures in JavaScript right now! I'm sure you'll have understood these concepts and worked through the examples with ease; if there is anything you didn't understand, feel free to read through the article again, or [contact us](/en-US/Learn#Contact_us) to ask for help.
+And that's all you really need to know about conditional structures in JavaScript right now! I'm sure you'll have understood these concepts and worked through the examples with ease; if there is anything you didn't understand, feel free to read through the article again, or [contact us](/zh-TW/Learn#Contact_us) to ask for help.
 
 ## See also
 
-- [Comparison operators](/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators)
-- [Conditional statements in detail](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Conditional_statements)
-- [if...else reference](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
-- [Conditional (ternary) operator reference](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+- [Comparison operators](/zh-TW/Learn/JavaScript/First_steps/Math#Comparison_operators)
+- [Conditional statements in detail](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Conditional_statements)
+- [if...else reference](/zh-TW/docs/Web/JavaScript/Reference/Statements/if...else)
+- [Conditional (ternary) operator reference](/zh-TW/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
 {{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
 
 ## In this module
 
-- [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/en-US/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/en-US/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery)
+- [Making decisions in your code — conditionals](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Looping code](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code)
+- [Functions — reusable blocks of code](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions)
+- [Build your own function](/zh-TW/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
+- [Function return values](/zh-TW/docs/Learn/JavaScript/Building_blocks/Return_values)
+- [Introduction to events](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events)
+- [Image gallery](/zh-TW/docs/Learn/JavaScript/Building_blocks/Image_gallery)

@@ -38,13 +38,11 @@ url.toString() // doit retourner l'URL en tant que chaîne
 
 ## Spécifications
 
-| Spécification                                                                            | Statut               | Commentaire          |
-| ---------------------------------------------------------------------------------------- | -------------------- | -------------------- |
-| {{SpecName('URL', '#URL-stringification-behavior', 'stringifier')}} | {{Spec2('URL')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.URL.toString")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -36,7 +36,7 @@ Access-Control-Max-Age: 86400
 
 À remarquer dans cet exemple que le serveur autorise les méthodes : POST ; GET ; OPTIONS et DELETE.
 
-## Voir également
+## Voir aussi
 
 - [CORS](/fr/docs/Glossary/CORS)
 - {{HTTPMethod("OPTIONS")}}

@@ -1,14 +1,6 @@
 ---
 title: 高阶文字排版
 slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
-tags:
-  - 上下标
-  - 代码
-  - 引文
-  - 引用
-  - 描述列表
-  - 缩略语
-translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/文件和网站结构", "Learn/HTML/Introduction_to_HTML")}}
 
@@ -42,12 +34,14 @@ HTML 中有许多其他元素可以用于格式化文本，我们没有在[HTML 
 
 在 HTML 基础部分，我们讨论了如何在 HTML 中[标记基本的列表](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#列表_Lists)，但是我们没有提到你偶尔会遇到的第三种类型的列表—**描述列表** (description list) **。**这种列表的目的是标记一组项目及其相关描述，例如术语和定义，或者是问题和答案等。让我们看一组术语和定义的示例：
 
-    内心独白
-    戏剧中，某个角色对自己的内心活动或感受进行念白表演，这些台词只面向观众，而其他角色不会听到。
-    语言独白
-    戏剧中，某个角色把自己的想法直接进行念白表演，观众和其他角色都可以听到。
-    旁白
-    戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。
+```
+内心独白
+戏剧中，某个角色对自己的内心活动或感受进行念白表演，这些台词只面向观众，而其他角色不会听到。
+语言独白
+戏剧中，某个角色把自己的想法直接进行念白表演，观众和其他角色都可以听到。
+旁白
+戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。
+```
 
 描述列表使用与其他列表类型不同的闭合标签— {{htmlelement("dl")}}; 此外，每一项都用 {{htmlelement("dt")}} (description term) 元素闭合。每个描述都用 {{htmlelement("dd")}} (description definition) 元素闭合。让我们来完成下面的标记例子：
 
@@ -264,14 +258,14 @@ for short quotations that don't require paragraph breaks.</q> -- <a href="https:
 
 到了主动学习的时间！在这个例子中我们想要你：
 
-1.  把中间的段落变成块引用，它要包含`cite`属性
-2.  把第三个段落的一部分变成行内引用，它要包含`cite`属性
-3.  每一个引用都要包含`<cite>`元素
+1. 把中间的段落变成块引用，它要包含`cite`属性
+2. 把第三个段落的一部分变成行内引用，它要包含`cite`属性
+3. 每一个引用都要包含`<cite>`元素
 
 你需要的引用源：
 
-- http\://www\.brainyquote.com/quotes/authors/c/confucius.html 对应 "孔子曰"。
-- http\://www\.affirmationsforpositivethinking.com/ 对应 "不要说泄气的话"。
+- `http://www.brainyquote.com/quotes/authors/c/confucius.html` 对应 "孔子曰"。
+- `http://www.affirmationsforpositivethinking.com/` 对应 "不要说泄气的话"。
 
 如果你做错了，你可以随时点击【重置】按钮。如果实在进行不下去，可以点击【显示答案】。
 

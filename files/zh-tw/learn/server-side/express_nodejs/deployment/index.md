@@ -1,7 +1,6 @@
 ---
 title: 'Express 教學 7: 佈署到生產環境'
 slug: Learn/Server-side/Express_Nodejs/deployment
-translation_of: Learn/Server-side/Express_Nodejs/deployment
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
@@ -13,7 +12,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
       <th scope="row">預備知識:</th>
       <td>
         完成前面所有的指南主題，包括
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms"
+        <a href="/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms"
           >Express Tutorial Part 6: Working with forms</a
         >.
       </td>
@@ -37,7 +36,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 
 本教程提供了，有關選擇託管站點的選項的一些指導，簡要概述了為使您的 Express 應用程序準備好生產，所需執行的操作，以及一個工作示例，演示如何將 LocalLibrary 網站安裝到 [Heroku](https://www.heroku.com/) 雲託管上的服務。
 
-請記住，您不必使用 Heroku - 還有其他託管服務可用。我們還提供了一個單獨的教程，以展示如何在 [PWS/Cloud Foundry ](/en-US/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry)上安裝 LocalLibrary。
+請記住，您不必使用 Heroku - 還有其他託管服務可用。我們還提供了一個單獨的教程，以展示如何在 [PWS/Cloud Foundry](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry) 上安裝 LocalLibrary。
 
 ## 什麼是生產環境？
 
@@ -59,7 +58,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 
 一些開發人員選擇 IaaS ，相對於 PaaS ，IaaS 提供更高靈活性，而其他開發人員偏好 PaaS 的降低維護開銷，和更輕鬆的擴展性。當您在一開始使用時，在 PaaS 系統上設置您的網站，要容易得多，因此我們將在本教程中使用 PaaS。
 
-> **備註：** 如果您選擇 Node/Express 友好的託管服務提供商，他們應該提供，有關如何使用 Web 服務器，應用程序服務器，反向代理等不同配置，來設置 Express 網站的說明。例如，在[ Digital Ocean](https://www.digitalocean.com/community/tutorials?q=node) 的 node 社區文檔中，有許多各種配置的手把手指南。
+> **備註：** 如果您選擇 Node/Express 友好的託管服務提供商，他們應該提供，有關如何使用 Web 服務器，應用程序服務器，反向代理等不同配置，來設置 Express 網站的說明。例如，在 [Digital Ocean](https://www.digitalocean.com/community/tutorials?q=node) 的 node 社區文檔中，有許多各種配置的手把手指南。
 
 ## 選擇一個主機供應商
 
@@ -79,7 +78,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 - 額外的好處。一些提供商將提供免費域名和 SSL 證書支持，否則您將不得不為此另外支付費用。
 - 您所依賴的“免費”等級，是否會隨著時間的推移而過期，以及遷移到更昂貴等級的成本，是否意味著您最好在一開始就使用其他服務！
 
-當你剛開始時，好消息是有很多網站提供“免費”的計算環境，儘管有一些條件。例如， [Heroku](https://www.heroku.com/) “永遠” 提供免費但資源有限的 PaaS 環境，而 [Amazon Web Services](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/) 和開源選項 [PWS/Cloud Foundry](/en-US/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry) 在您第一次加入時，提供免費信用額度。
+當你剛開始時，好消息是有很多網站提供“免費”的計算環境，儘管有一些條件。例如， [Heroku](https://www.heroku.com/) “永遠” 提供免費但資源有限的 PaaS 環境，而 [Amazon Web Services](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/) 和開源選項 [PWS/Cloud Foundry](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry) 在您第一次加入時，提供免費信用額度。
 
 許多提供商還擁有“基本”層，可提供更多有用的計算能力，和更少的限制。舉例來說， [Digital Ocean](https://www.digitalocean.com/) 是一個流行的託管服務提供商，它提供了一個相對便宜的基本計算層（在本教程寫作時，是每月 5 美元的較低範圍）。
 
@@ -105,7 +104,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 
 記錄呼叫會對高流量網站產生影響。在生產環境中，您可能需要記錄網站活動（例如，跟踪流量，或記錄 API 調用），但您應嘗試最小化為調試目的而添加的日誌記錄量。
 
-在生產環境中，最小化“調試”日誌記錄的一種方法，是使用類似調試 [debug ](https://www.npmjs.com/package/debug)的模塊，允許您通過設置環境變量，來控制執行的日誌記錄。例如，下面的代碼片段，顯示如何設置 “author” 日誌記錄。調試變量使用名稱 “author” 聲明，並且將自動顯示，來自此對象的所有日誌的前綴 “author”。
+在生產環境中，最小化“調試”日誌記錄的一種方法，是使用類似調試 [debug](https://www.npmjs.com/package/debug) 的模塊，允許您通過設置環境變量，來控制執行的日誌記錄。例如，下面的代碼片段，顯示如何設置 “author” 日誌記錄。調試變量使用名稱 “author” 聲明，並且將自動顯示，來自此對象的所有日誌的前綴 “author”。
 
 ```js
 var debug = require('debug')('author');
@@ -126,7 +125,7 @@ exports.author_update_get = function(req, res, next) {
 };
 ```
 
-然後，您可以通過在 `DEBUG `環境變量中，將它們指定為逗號分隔列表，來啟用特定日誌集。您可以設置顯示作者和書籍日誌的變量，如圖所示（也支持通配符）。
+然後，您可以通過在 `DEBUG` 環境變量中，將它們指定為逗號分隔列表，來啟用特定日誌集。您可以設置顯示作者和書籍日誌的變量，如圖所示（也支持通配符）。
 
 ```bash
 #Windows
@@ -136,7 +135,7 @@ set DEBUG=author,book
 export DEBUG="author,book"
 ```
 
-> **備註：** 調用`debug`可以替換您以前使用 `console.log()`或`console.error()`執行的日誌記錄。通過調試模塊 [debug ](https://www.npmjs.com/package/debug)進行日誌記錄，替換代碼中的所有`console.log()`調用。通過設置 DEBUG 變量，並在其中記錄對日誌記錄的影響，在開發環境中，打開和關閉日誌記錄。
+> **備註：** 調用`debug`可以替換您以前使用 `console.log()`或`console.error()`執行的日誌記錄。通過調試模塊 [debug](https://www.npmjs.com/package/debug) 進行日誌記錄，替換代碼中的所有`console.log()`調用。通過設置 DEBUG 變量，並在其中記錄對日誌記錄的影響，在開發環境中，打開和關閉日誌記錄。
 
 如果您需要記錄網站活動，可以使用 Winston 或 Bunyan 等日誌庫。有關此主題的更多信息，請參閱：[生產最佳實踐：性能和可靠性](https://expressjs.com/en/advanced/best-practice-performance.html)。
 
@@ -150,7 +149,7 @@ Web 服務器，通常可以壓縮發送回客戶端的 HTTP 響應，從而顯�
 npm install compression
 ```
 
-打開**./app.js**，並導入壓縮庫，如圖所示。使用` use()`方法，將壓縮庫添加到中間件鏈（這應該出現在您想要壓縮的任何路由之前 - 在本教程這種情況下，全部都是！）
+打開**./app.js**，並導入壓縮庫，如圖所示。使用 `use()`方法，將壓縮庫添加到中間件鏈（這應該出現在您想要壓縮的任何路由之前 - 在本教程這種情況下，全部都是！）
 
 ```js
 var catalogRouter = require('./routes/catalog'); //Import routes for "catalog" area of site
@@ -197,7 +196,7 @@ app.use(helmet());
 ...
 ```
 
-> **備註：** 上面的命令，添加了對大多數站點有意義的可用標頭子集。您可以按照 [npm ](https://www.npmjs.com/package/helmet)上的說明，根據需要添加/禁用特定標頭。
+> **備註：** 上面的命令，添加了對大多數站點有意義的可用標頭子集。您可以按照 [npm](https://www.npmjs.com/package/helmet) 上的說明，根據需要添加/禁用特定標頭。
 
 ## 例子：在 Heroku 上安裝本地圖書館
 
@@ -216,7 +215,7 @@ Heroku 是運行時間最長，且最受歡迎的基於雲的 PaaS 服務之一�
   - Heroku 只提供短期存儲，因此用戶上傳的文件無法安全地存儲在 Heroku 本身。
   - 如果半小時內沒有請求，免費套餐將使不活動的網絡應用程序進入睡眠。然後，該網站可能需要幾秒鐘才能被喚醒。
   - 免費套餐將您網站運行的時間，限制為每月一定的小時數（不包括網站“睡著”的時間）。這對於低使用/演示站點來說很好，但如果需要 100％的正常運行時間，則不適用。
-  - Heroku 官方文檔 [Limits ](https://devcenter.heroku.com/articles/limits)中列出的其他限制。
+  - Heroku 官方文檔 [Limits](https://devcenter.heroku.com/articles/limits) 中列出的其他限制。
 
 - 大多數情況下，它只是可以工作，如果你最終喜歡它，並希望升級，那麼擴展你的應用程序非常容易。
 
@@ -242,26 +241,26 @@ Heroku 與 **git** 源代碼版本控制系統緊密集成，使用它來上傳/
 
 > **備註：** 如果您習慣於遵循良好的軟件開發實踐，那麼您可能已經在使用 git 或其他一些 SCM 系統。如果您已有 git 儲存庫，則可以跳過此步驟。
 
-有很多方法可以使用 git，但最簡單的方法之一，是首先在 [GitHub ](https://github.com/)上建立一個帳戶，在那裡創建儲存庫，然後在本地同步它：
+有很多方法可以使用 git，但最簡單的方法之一，是首先在 [GitHub](https://github.com/) 上建立一個帳戶，在那裡創建儲存庫，然後在本地同步它：
 
-1.  訪問 <https://github.com/> 並創建一個帳戶。
-2.  登錄後，單擊頂部工具欄中的 + 號鏈接，然後選擇新建儲存庫 **New repository**。
-3.  填寫此表單上的所有字段。雖然這些不是強制性的，但強烈建議使用它們。
+1. 訪問 <https://github.com/> 並創建一個帳戶。
+2. 登錄後，單擊頂部工具欄中的 + 號鏈接，然後選擇新建儲存庫 **New repository**。
+3. 填寫此表單上的所有字段。雖然這些不是強制性的，但強烈建議使用它們。
 
     - 輸入新的存儲庫名稱（例如，express-locallibrary-tutorial）和描述（例如 “以 Express（node）編寫的本地圖書館網站”）。
     - 在 Add .gitignore 選擇列表中選擇 **Node**。
     - 在添加許可證 Add license 選擇列表中，選擇您偏好的許可證。
     - 點選 使用自述文件初始化此儲存庫 **Initialize this repository with a README**.
 
-4.  按 **Create repository**.
-5.  單擊新倉庫頁面上的綠色“克隆或下載”按鈕 "**Clone or download**" 。
-6.  從顯示的對話框的文本字段，複製 URL 值（它應該類似於：**https\://github.com/_\<your_git_user_id>_/express-locallibrary-tutorial.git**）。
+4. 按 **Create repository**.
+5. 單擊新倉庫頁面上的綠色“克隆或下載”按鈕 "**Clone or download**" 。
+6. 從顯示的對話框的文本字段，複製 URL 值（它應該類似於：`https://github.com/<your_git_user_id>/express-locallibrary-tutorial.git`）。
 
 現在創建了儲存庫（“repo”），我們將要在本地計算機上克隆它：
 
-1.  為您的本地計算機安裝 git（您可以在[此處找到不同平台的版本](https://git-scm.com/downloads)）。
+1. 為您的本地計算機安裝 git（您可以在[此處找到不同平台的版本](https://git-scm.com/downloads)）。
 
-2.  打開命令提示符/終端，並使用您在上面複製的 URL ，克隆儲存庫：
+2. 打開命令提示符/終端，並使用您在上面複製的 URL ，克隆儲存庫：
 
     ```bash
     git clone https://github.com/<your_git_user_id>/express-locallibrary-tutorial.git
@@ -269,7 +268,7 @@ Heroku 與 **git** 源代碼版本控制系統緊密集成，使用它來上傳/
 
     這將在當前時間點之後，創建儲存庫。
 
-3.  到新的儲存庫。
+3. 到新的儲存庫。
 
     ```bash
     cd express-locallibrary-tutorial
@@ -277,12 +276,14 @@ Heroku 與 **git** 源代碼版本控制系統緊密集成，使用它來上傳/
 
 最後一步，是複制你的應用程序，然後使用 git ，將文件添加到你的倉庫：
 
-1.  將 Express 應用程序，複製到此文件夾中（不包括 **/node_modules**，其中包含您應根據需要，從 NPM 獲取的依賴項文件）。
-2.  打開命令提示符/終端，並使用 `add `命令，將所有文件添加到 git。
-3.  ```bash
+1. 將 Express 應用程序，複製到此文件夾中（不包括 **/node_modules**，其中包含您應根據需要，從 NPM 獲取的依賴項文件）。
+2. 打開命令提示符/終端，並使用 `add` 命令，將所有文件添加到 git。
+
+3. ```bash
     git add -A
     ```
-4.  使用 status 命令，檢查要添加的所有文件是否正確（您希望包含源文件，而不是二進製文件，臨時文件等）。它應該看起來有點像下面的列表。
+
+4. 使用 status 命令，檢查要添加的所有文件是否正確（您希望包含源文件，而不是二進製文件，臨時文件等）。它應該看起來有點像下面的列表。
 
     ```plain
     > git status
@@ -294,13 +295,13 @@ Heroku 與 **git** 源代碼版本控制系統緊密集成，使用它來上傳/
             new file:   ...
     ```
 
-5.  如果您滿意，請將文件提交到本地儲存庫：
+5. 如果您滿意，請將文件提交到本地儲存庫：
 
     ```bash
     git commit -m "First version of application moved into github"
     ```
 
-6.  然後使用以下內容，將本地儲存庫同步到 Github 網站：
+6. 然後使用以下內容，將本地儲存庫同步到 Github 網站：
 
     ```plain
     git push origin master
@@ -352,7 +353,7 @@ v8.9.1
 var mongoDB = 'mongodb://your_user_id:your_password@ds119748.mlab.com:19748/local_library';
 ```
 
-使用以下代碼替換該行，該代碼使用 `process.env.MONGODB_URI `從名為 `MONGODB_URI `的環境變量中，獲取連接字符串（如果已設置）（使用您自己的數據庫 URL，而不是下面的佔位符。）
+使用以下代碼替換該行，該代碼使用 `process.env.MONGODB_URI` 從名為 `MONGODB_URI` 的環境變量中，獲取連接字符串（如果已設置）（使用您自己的數據庫 URL，而不是下面的佔位符。）
 
 ```js
 var mongoDB = process.env.MONGODB_URI || 'mongodb://your_user_id:your_password@ds119748.mlab.com:19748/local_library';
@@ -444,7 +445,7 @@ Setting MONGODB_URI and restarting limitless-tor-18923... done, v13
 MONGODB_URI: mongodb://your_user:your_password@ds139278.mlab.com:39278/local_library_production
 ```
 
-您可以使用 `heroku config `命令，隨時檢查配置變量 - 立即嘗試：
+您可以使用 `heroku config` 命令，隨時檢查配置變量 - 立即嘗試：
 
 ```bash
 >heroku config
@@ -471,7 +472,7 @@ heroku ps   #Display dyno status
 
 ## 總結
 
-本教程介紹在生產環境中，如何配置 Express 應用。是 Express 系列教程的最後一個。我們希望你覺得這些教程有用。你可以在 [Github ](https://github.com/mdn/express-locallibrary-tutorial)上取得完整的源碼。
+本教程介紹在生產環境中，如何配置 Express 應用。是 Express 系列教程的最後一個。我們希望你覺得這些教程有用。你可以在 [Github](https://github.com/mdn/express-locallibrary-tutorial) 上取得完整的源碼。
 
 ## 相關鏈接
 
@@ -497,12 +498,12 @@ heroku ps   #Display dyno status
 
 ## 本教學鏈接
 
-- [Express/Node introduction](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)
+- [Express/Node introduction](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
+- [Setting up a Node (Express) development environment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)
+- [Express Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
+- [Express Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
+- [Express Tutorial Part 3: Using a Database (with Mongoose)](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose)
+- [Express Tutorial Part 4: Routes and controllers](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)
+- [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms)
+- [Express Tutorial Part 7: Deploying to production](/zh-TW/docs/Learn/Server-side/Express_Nodejs/deployment)

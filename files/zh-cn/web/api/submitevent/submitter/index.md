@@ -1,19 +1,6 @@
 ---
 title: SubmitEvent.submitter
 slug: Web/API/SubmitEvent/submitter
-page-type: web-api-instance-property
-tags:
-  - API
-  - Forms
-  - HTML
-  - HTML DOM
-  - Property
-  - Read-only
-  - Reference
-  - SubmitEvent
-  - submission
-  - submitter
-translation_of: Web/api/SubmitEven/submitter
 ---
 {{APIRef("HTML DOM")}}
 
@@ -27,7 +14,7 @@ translation_of: Web/api/SubmitEven/submitter
 
 ## 示例
 
-完整示例代码参见 [`SubmitEvent`](/en-US/docs/Web/API/SubmitEvent#examples)。
+完整示例代码参见 [`SubmitEvent`](/zh-CN/docs/Web/API/SubmitEvent#examples)。
 
 ## 规范
 

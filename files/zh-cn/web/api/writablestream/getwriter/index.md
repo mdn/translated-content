@@ -1,15 +1,6 @@
 ---
 title: WritableStream.getWriter()
 slug: Web/API/WritableStream/getWriter
-page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Streams
-  - WritableStream
-  - getWriter
-translation_of: Web/API/WritableStream/getWriter
 ---
 {{APIRef("Streams")}}
 

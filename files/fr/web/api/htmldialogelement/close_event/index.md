@@ -92,14 +92,12 @@ closeButton.addEventListener('click', () => {
 
 ## Spécifications
 
-| Spécification                                                                            | État                             |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{ SpecName('HTML WHATWG', 'indices.html#event-close', 'close') }} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLDialogElement.close_event")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
-- Élément HTML [`<dialog>`](/en-US/docs/Web/HTML/Element/dialog)
+- Élément HTML [`<dialog>`](/fr/docs/Web/HTML/Element/dialog)

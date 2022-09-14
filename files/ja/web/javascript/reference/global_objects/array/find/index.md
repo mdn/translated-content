@@ -1,16 +1,6 @@
 ---
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - Prototype
-  - リファレンス
-  - ポリフィル
-browser-compat: javascript.builtins.Array.find
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
 ---
 {{JSRef}}
 

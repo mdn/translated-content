@@ -83,13 +83,11 @@ La sortie ressemble à ceci :
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("DOM WHATWG", "#interface-domtokenlist", "DOMTokenList")}} | {{Spec2("DOM WHATWG")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMTokenList")}}
+{{Compat}}
 
 ## Voir aussi
 

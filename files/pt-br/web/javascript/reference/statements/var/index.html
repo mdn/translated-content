@@ -107,7 +107,7 @@ var a, b = a = "A";
 console.log(x + y); // undefinedA
 </pre>
 
-<p>Então, <span style="font-family: consolas,monaco,andale mono,monospace;">x</span> e <span style="font-family: consolas,monaco,andale mono,monospace;">y</span> são declarados antes de qualquer código seja executado, a atribuição ocorre posteriormente. Quando "<span style="font-family: consolas,monaco,andale mono,monospace;">x = y</span>" for executado, y existe e nenhum exceção <span style="font-family: consolas,monaco,andale mono,monospace;">ReferenceError</span> é lançada, e o valor de y será considerado como '<code style="font-style: normal;">undefined</code>'. Por este motivo, este valor é atribuido a <span style="font-family: consolas,monaco,andale mono,monospace;">x</span>. Depois disso, o valor 'A' é atribuido a variável <span style="font-family: consolas,monaco,andale mono,monospace;">y</span>. Consequentemente, depois da primeira linha, <span style="font-family: consolas,monaco,andale mono,monospace;">x === undefined &amp;&amp; y === 'A'</span>, então o resultado.</p>
+<p>Então, x e y são declarados antes de qualquer código seja executado, a atribuição ocorre posteriormente. Quando "x = y" for executado, y existe e nenhum exceção ReferenceError é lançada, e o valor de y será considerado como '<code style="font-style: normal;">undefined</code>'. Por este motivo, este valor é atribuido a x. Depois disso, o valor 'A' é atribuido a variável y. Consequentemente, depois da primeira linha, x === undefined &amp;&amp; y === 'A', então o resultado.</p>
 
 <h3 id="Iniciando_diversas_variáveis">Iniciando diversas variáveis</h3>
 
@@ -179,55 +179,7 @@ console.log(typeof y); // indefinido já que y é uma variável local da funçã
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.statements.var")}}
 
 <h2 id="See_also" name="See_also">Veja também</h2>
 

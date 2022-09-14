@@ -68,6 +68,6 @@ La partie de Gecko sur la chaine de l'agent utilisateur a changée. La date de c
 - `nsIRefreshURI`
   - : La méthode `setupRefreshURIFromHeader()` a un paramètre `principal` en plus.
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('16')}}

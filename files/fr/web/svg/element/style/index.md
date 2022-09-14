@@ -54,16 +54,13 @@ Résultat en direct:
 
 Cet élément implemente l'interface [`SVGStyleElement`](/fr/DOM/SVGStyleElement).
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                | Status                   | Commentaire        |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('SVG2', 'styling.html#StyleElement', '&lt;style&gt;')}}     | {{Spec2('SVG2')}} |                    |
-| {{SpecName('SVG1.1', 'styling.html#StyleElement', '&lt;style&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.style")}}
+{{Compat}}
 
 ## Voir aussi
 

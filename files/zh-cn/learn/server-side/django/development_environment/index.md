@@ -1,10 +1,6 @@
 ---
 title: 设置 Django 开发环境
 slug: Learn/Server-side/Django/development_environment
-tags:
-  - Python
-  - django
-translation_of: Learn/Server-side/Django/development_environment
 original_slug: Learn/Server-side/Django/开发环境
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
@@ -37,7 +33,7 @@ Django 使你可以轻松配置自己的电脑，以便开始开发网络应用�
 
 Django 本身提供的主要工具是一组用于创建和使用 Django 项目的 Python 脚本，以及可在你电脑的 web 浏览器中测试本地 Django web 应用（在你的计算机，而不是在外部的 web 服务器）。
 
-还有其他外部工具，它们构成了开发环境的一部分，我们将不再赘述。这些包括 [文本编辑器](/en-US/docs/Learn/Common_questions/Available_text_editors) 或编辑代码的 IDE，以及像 [Git](https://git-scm.com/) 这样的源代码控制管理工具，用于安全地管理不同版本的代码。我们假设你已经安装了一个文本编辑器。
+还有其他外部工具，它们构成了开发环境的一部分，我们将不再赘述。这些包括 [文本编辑器](/zh-CN/docs/Learn/Common_questions/Available_text_editors) 或编辑代码的 IDE，以及像 [Git](https://git-scm.com/) 这样的源代码控制管理工具，用于安全地管理不同版本的代码。我们假设你已经安装了一个文本编辑器。
 
 ### 什么是 Django 设置选项？
 
@@ -130,14 +126,14 @@ python3 -V
  -bash: python3: command not found
 ```
 
-你可以轻松地从[ python.org](https://www.python.org/)安装 Python 3（以及 pip3 工具）:
+你可以轻松地从[python.org](https://www.python.org/) 安装 Python 3（以及 pip3 工具）:
 
-1.  下载所需的安装程序：
+1. 下载所需的安装程序：
 
-    1.  点击 <https://www.python.org/downloads/>
-    2.  选择 **Download Python 3.8.2** (具体的版本号可能不同)。
+    1. 点击 <https://www.python.org/downloads/>
+    2. 选择 **Download Python 3.8.2** (具体的版本号可能不同)。
 
-2.  使用 Finder 找到安装包，然后双击运行，并按照提示进行安装。
+2. 使用 Finder 找到安装包，然后双击运行，并按照提示进行安装。
 
 之后可以通过检查 Python3 版本确认是否安装成功，如下所示：
 
@@ -154,15 +150,15 @@ pip3 list
 
 ### Windows 10
 
-windows 默认不包含 Python, 但你可以从[ python.org](https://www.python.org/)轻松地安装它（以及 pip3 工具）：
+windows 默认不包含 Python, 但你可以从[python.org](https://www.python.org/) 轻松地安装它（以及 pip3 工具）：
 
-1.  下载所需版本：
+1. 下载所需版本：
 
-    1.  点击 <https://www.python.org/downloads/>
-    2.  选择 **Download Python 3.8.2** (具体的版本号可能不同)。
+    1. 点击 <https://www.python.org/downloads/>
+    2. 选择 **Download Python 3.8.2** (具体的版本号可能不同)。
 
-2.  双击现在的文件并按照提示安装 Python。
-3.  确保勾选了"Add Python to PATH"选项。
+2. 双击现在的文件并按照提示安装 Python。
+3. 确保勾选了"Add Python to PATH"选项。
 
 你可以在命令提示符中输入以下内容来验证是否安装了 Python:
 
@@ -181,7 +177,7 @@ pip3 list
 
 ## 在 Python 虚拟环境中使用 Django
 
-我们使用[virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html)（Linux 及 macOS）和 [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win)（WIndows）来创建 Python 虚拟环境，而它们又使用了[virtualenv](/en-US/docs/Python/Virtualenv)。封装工具创建了一个一致的接口来管理各个平台上的接口。
+我们使用[virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html)（Linux 及 macOS）和 [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win)（WIndows）来创建 Python 虚拟环境，而它们又使用了[virtualenv](/zh-CN/docs/Python/Virtualenv)。封装工具创建了一个一致的接口来管理各个平台上的接口。
 
 ### 安装虚拟环境软件
 

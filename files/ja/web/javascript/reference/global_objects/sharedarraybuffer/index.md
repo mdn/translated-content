@@ -1,14 +1,6 @@
 ---
 title: SharedArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
-tags:
-  - クラス
-  - JavaScript
-  - 共有メモリー
-  - SharedArrayBuffer
-  - 型付き配列
-browser-compat: javascript.builtins.SharedArrayBuffer
-translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 ---
 {{JSRef}}
 
@@ -33,9 +25,9 @@ worker.postMessage(sab);
 
 <h3 id="APIs_which_use_SharedArrayBuffer_objects">SharedArrayBuffer オブジェクトを使用する API</h3>
 
-- [`WebGLRenderingContext.bufferData()`](/ja/docs/Web/API/WebGLRenderingContext/bufferData "WebGL API WebGLRenderingContext.bufferData() メソッドは、バッファーオブジェクトのデータストアを初期化、作成します。")
-- [`WebGLRenderingContext.bufferSubData()`](/ja/docs/Web/API/WebGLRenderingContext/bufferSubData "The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.")
-- [`WebGL2RenderingContext.getBufferSubData()`](/ja/docs/Web/API/WebGL2RenderingContext/getBufferSubData "The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.")
+- [`WebGLRenderingContext.bufferData()`](/ja/docs/Web/API/WebGLRenderingContext/bufferData)
+- [`WebGLRenderingContext.bufferSubData()`](/ja/docs/Web/API/WebGLRenderingContext/bufferSubData)
+- [`WebGL2RenderingContext.getBufferSubData()`](/ja/docs/Web/API/WebGL2RenderingContext/getBufferSubData)
 
 ### セキュリティの要件
 

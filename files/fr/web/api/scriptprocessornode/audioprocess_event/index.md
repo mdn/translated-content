@@ -8,8 +8,6 @@ L'événement **audioprocess** est déclenché lorsqu'un tampon d'entrée d'une 
 
 ## Informations générales
 
-- Spécification
-  - : {{SpecName('Web Audio API', '#AudioProcessingEvent-section', 'AudioProcessingEvent')}}
 - Interface
   - : {{domxref("AudioProcessingEvent")}}
 - Propagation
@@ -97,13 +95,11 @@ L'événement **audioprocess** est déclenché lorsqu'un tampon d'entrée d'une 
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#AudioProcessingEvent-section', 'AudioProcessingEvent')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilités navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.ScriptProcessorNode.audioprocess_event")}}
+{{Compat}}
 
 ## Voir aussi
 

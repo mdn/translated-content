@@ -1,11 +1,6 @@
 ---
 title: 函数返回值
 slug: Learn/JavaScript/Building_blocks/Return_values
-tags:
-  - JavaScript
-  - 函数
-  - 返回值
-translation_of: Learn/JavaScript/Building_blocks/Return_values
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
@@ -18,9 +13,9 @@ translation_of: Learn/JavaScript/Building_blocks/Return_values
       <td>
         <p>
           基础的计算机知识，懂得基础的 HTML 和 CSS,
-          <a href="/en-US/docs/Learn/JavaScript/First_steps">JavaScript </a
+          <a href="/zh-CN/docs/Learn/JavaScript/First_steps">JavaScript </a
           >第一步学习，函数-<a
-            href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions"
+            href="/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions"
           >
           </a
           >可重用的代码块。
@@ -108,8 +103,8 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 让我们着手编写具有我们自己的返回值的函数。
 
-1.  首先，从 GitHub 的[function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html)文件复制一份本地副本。这是一个简单的 HTML 页面包含一个 {{htmlelement("input")}} 文本域和一个段落。还有一个 {{htmlelement("script")}} 元素，我们在两个变量中存储了对两个 HTML 元素的引用。这个小页面允许你在文本框中输入一个数字，并在下面的段落中显示不同的数字。
-2.  让我们添加一些有用的函数。在现有的两行 JavaScript 下面，添加以下函数定义：
+1. 首先，从 GitHub 的[function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html)文件复制一份本地副本。这是一个简单的 HTML 页面包含一个 {{htmlelement("input")}} 文本域和一个段落。还有一个 {{htmlelement("script")}} 元素，我们在两个变量中存储了对两个 HTML 元素的引用。这个小页面允许你在文本框中输入一个数字，并在下面的段落中显示不同的数字。
+2. 让我们添加一些有用的函数。在现有的两行 JavaScript 下面，添加以下函数定义：
 
     ```js
     function squared(num) {
@@ -132,7 +127,7 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
     `squared()` 和 `cubed()` 功能是相当明显的 - 他们的平方或立方的数作为一个参数返回。factorial() 函数返回给定数字的阶乘。
 
-3.  接下来，我们将包括一种打印输入到文本输入中的数字的信息的方法。在现有函数下面输入以下事件处理程序：
+3. 接下来，我们将包括一种打印输入到文本输入中的数字的信息的方法。在现有函数下面输入以下事件处理程序：
 
     ```js
     input.onchange = function() {
@@ -153,7 +148,7 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
     如果测试返回 false，则数值是一个数字，所以我们在段落元素中打印出一个句子，说明数字的平方、立方体和阶乘是什么。这句话叫 squared()，cubed()，和 factorial() 函数来获得所需的值。
 
-4.  保存您的代码，将其加载到浏览器中，然后尝试.
+4. 保存您的代码，将其加载到浏览器中，然后尝试.
 
 > **备注：** 如果你有麻烦让例子工作，对比[GitHub 的已完成版](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html)检查你的代码（或[看它在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)），或寻求我们的帮助。
 
@@ -168,21 +163,21 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 因此，我们让它 - 功能是有趣的，非常有用的，虽然有很多要谈论他们的语法和功能，相当容易理解的正确的文章学习。
 
-如果您有什么不明白的地方，可以再通读一遍，或者[联系我们](/en-US/Learn#Contact_us)寻求帮助。
+如果您有什么不明白的地方，可以再通读一遍，或者[联系我们](/zh-CN/Learn#Contact_us)寻求帮助。
 
 ## 参见
 
-- [Functions in-depth](/en-US/docs/Web/JavaScript/Reference/Functions) — 详细介绍更多高级功能相关信息的指南。
+- [Functions in-depth](/zh-CN/docs/Web/JavaScript/Reference/Functions) — 详细介绍更多高级功能相关信息的指南。
 - [Callback functions in JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — 一个常见的 JavaScript 模式是把一个函数传递给另一个函数作为参数，然后在第一个函数中调用它。这有点超出了这门课的范围，但值得学习很久。
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 ## 在本单元中
 
-- [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/en-US/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/en-US/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery)
+- [Making decisions in your code — conditionals](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Looping code](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)
+- [Functions — reusable blocks of code](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions)
+- [Build your own function](/zh-CN/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
+- [Function return values](/zh-CN/docs/Learn/JavaScript/Building_blocks/Return_values)
+- [Introduction to events](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
+- [Image gallery](/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery)

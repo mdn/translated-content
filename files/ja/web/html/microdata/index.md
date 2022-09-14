@@ -1,15 +1,6 @@
 ---
 title: マイクロデータ
 slug: Web/HTML/Microdata
-tags:
-  - Composing
-  - Example
-  - HTML
-  - Microdata
-  - Reference
-  - SEO
-  - Search
-translation_of: Web/HTML/Microdata
 ---
 
 マイクロデータは {{glossary("WHATWG")}} HTML 標準の一部であり、ウェブページ上の既存のコンテンツ内でメタデータをネストするために使用されます。検索エンジンやウェブクローラーは、ウェブページからマイクロデータを抽出して処理し、ユーザーへ高度な閲覧操作を提供するために使用することができます。検索エンジンは、ウェブページ上の情報を理解し、ユーザーにより関連性の高い結果を提供することを可能にするため、この構造化されたデータを直接利用できることから大きな利益を得ます。マイクロデータは、値をプロパティに割り当てるためにアイテムと名前と値の組み合わせを記述するためのサポート語彙を使用します。マイクロデータは、機械可読なタグとともに HTML 要素に注釈する試みで、古い RDFa やマイクロフォーマットの同様のアプローチよりも簡単な方法を提供します。
@@ -58,7 +49,7 @@ Google、Microsoft、Yahoo! のような主要な検索エンジンの管理者�
 
 [itemscope](/ja/docs/Web/HTML/Global_attributes/itemscope) – itemscope は、ブロックに含まれる HTML が特定のアイテムであることを記述するために [itemtype](/ja/docs/Web/HTML/Global_attributes/itemtype) と共に (通常) 動作します。 itemscope はアイテムを作成し、アイテムに関連付けられる itemtype の範囲を定義します。 itemtype は、アイテムとアイテムのプロパティのコンテキストを説明する [schema.org](https://schema.org/) のような) 語彙の妥当なURLとなります。
 
-[itemtype ](/ja/docs/Web/HTML/Global_attributes/itemtype)– データ構造で itemprop の語彙 (アイテムのプロパティ) を定義するために使用される語彙の URL を指定します。[itemscope ](/ja/docs/Web/HTML/Global_attributes/itemscope) は、 itemtype によって設定される語彙がアクティブとなるデータ構造の範囲を設定するために使用されます。
+[itemtype](/ja/docs/Web/HTML/Global_attributes/itemtype) – データ構造で itemprop の語彙 (アイテムのプロパティ) を定義するために使用される語彙の URL を指定します。[itemscope](/ja/docs/Web/HTML/Global_attributes/itemscope) – は、 itemtype によって設定される語彙がアクティブとなるデータ構造の範囲を設定するために使用されます。
 
 ## 例
 

@@ -25,7 +25,7 @@ Les arguments de ces fonctions varient selon la forme qu'on veut créer et nous 
 
 ## La boîte de référence
 
-La boîte de référence définit le système de coordonnées de chaque forme. Nous avons déjà abordé cette boîte [dans le guide sur la création de formes à partir des boîtes](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values) où nous avons directement utilisé la boîte de référence afin de créer une forme.
+La boîte de référence définit le système de coordonnées de chaque forme. Nous avons déjà abordé cette boîte [dans le guide sur la création de formes à partir des boîtes](/fr/docs/Web/CSS/CSS_Shapes/From_box_values) où nous avons directement utilisé la boîte de référence afin de créer une forme.
 
 L'inspecteur des formes CSS de Firefox affiche la boîte de référence lorsqu'on inspecte une forme. Dans la capture d'écran suivante, on a créé un cercle avec `shape-outside: circle(50%)`, l'élément flottant possède 20 pixels de remplissage avec la bordure et la marge. On voit que l'inspecteur affiche ces boîtes de référence. Lorsqu'on utilise une forme basique, la boîte de référence utilisée par défaut est la boîte des marges. Dans la capture d'écran, on voit que la forme est définie relativement aux boîtes du [modèle de boîtes](/fr/docs/Web/CSS/Mod%C3%A8le_de_bo%C3%AEte_CSS).
 

@@ -24,13 +24,11 @@ resource.serverTiming;
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                               | Commentaire         |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Server Timing','#servertiming-attribute', 'serverTiming')}} | {{Spec2('Server Timing')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceResourceTiming.serverTiming")}}
+{{Compat}}
 
 ## Voir aussi
 

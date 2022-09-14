@@ -22,8 +22,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
  <dt><code>obj</code></dt>
  <dd>O objeto no qual se cria ou modifica suas propriedades.</dd>
  <dt><code>props</code></dt>
- <dd>Um objeto do qual propriedades enumeráveis constitui descritores para as propriedades serem definidas ou modificadas. Descritores de propriedade presente nos objetos provém em dois principais tipos: descritores de dados e de acesso (veja {{jsxref("Object.defineProperty()")}} para mais detalhes). Descritores têm as seguintes chaves:</dd>
- <dd>
+ <dd><p>Um objeto do qual propriedades enumeráveis constitui descritores para as propriedades serem definidas ou modificadas. Descritores de propriedade presente nos objetos provém em dois principais tipos: descritores de dados e de acesso (veja {{jsxref("Object.defineProperty()")}} para mais detalhes). Descritores têm as seguintes chaves:</p>
  <dl>
   <dt><code>configurable</code></dt>
   <dd><code>true</code> se e somente se o tipo deste descritor de propriedades pode ser modificada e se a propriedade pode ser apagada do objeto correspondente.<br>
@@ -31,18 +30,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
   <dt><code>enumerable</code></dt>
   <dd><code>true</code> se e somente se este propriedade aparece durante enumeração das propriedade sobre o objeto correspondente.<br>
   <strong>Valor padrão é <code>false</code>.</strong></dd>
- </dl>
-
- <dl>
   <dt><code>value</code></dt>
   <dd>O valor associado com a propriedade. Pode ser qualquer valor válido em JavaScript value (número, objeto, função, etc).<br>
   <strong>Valor padrão é {{jsxref("undefined")}}.</strong></dd>
   <dt><code>writable</code></dt>
   <dd><code>true</code> se e somente se o valor associado com a propriedade pode ser modificada com um {{jsxref("Operators/Assignment_Operators", "assignment operator", "", 1)}}.<br>
   <strong>Valor padrão é <code>false</code>.</strong></dd>
- </dl>
-
- <dl>
   <dt><code>get</code></dt>
   <dd>Uma função a qual serve com um getter para a propriedade, ou {{jsxref("undefined")}} se não existe getter. A retorno da função será usado como o valor da propriedade.<br>
   <strong>Valor padrão é {{jsxref("undefined")}}.</strong></dd>
@@ -81,7 +74,7 @@ Object.defineProperties(obj, {
 
 <p>Assumindo uma execução intocada com todos os nomes e propriedades referindo para seus valores iniciais, <code>Object.defineProperties</code> é quase completamente equivalente (note o comentário em <code>isCallable</code>) para a seguinte reimplementação em JavaScript:</p>
 
-<pre class="brush: js;highlight:[8]">function defineProperties(obj, properties) {
+<pre class="brush: js">function defineProperties(obj, properties) {
   function convertToDescriptor(desc) {
     function hasProperty(obj, prop) {
       return Object.prototype.hasOwnProperty.call(obj, prop);
@@ -172,57 +165,7 @@ Object.defineProperties(obj, {
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatGeckoDesktop("2")}}</td>
-   <td>{{CompatChrome("5")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatIE("9")}}</td>
-   <td>{{CompatOpera("11.60")}}</td>
-   <td>{{CompatSafari("5")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatGeckoMobile("2")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOperaMobile("11.5")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Object.defineProperties")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

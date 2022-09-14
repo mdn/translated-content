@@ -85,15 +85,13 @@ function displayDataByIndex() {
 
 > **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                        | Ètat                         | Commentaires |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-get-IDBRequest-any-key', 'get()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.get")}}
+{{Compat}}
 
 ## Voir aussi
 

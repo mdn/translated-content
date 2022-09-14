@@ -34,7 +34,7 @@ translation_of: Web/API/Window/getSelection
 
 <p>No exemplo acima, <code>selObj.toString()</code> é chamado automaticamente quando é passado para {{domxref("window.alert()")}}. Contudo,  tentar usar propriedades ou métodos do objeto JavaScript <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" title="JS/String">String</a> como <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length" title="JS/String.length">length</a></code> ou <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr" title="JS/String.substr">substr</a> diretamente no objeto</code> {{domxref("Selection")}} resultará em erro se o objeto não possuir essa propriedade ou método e pode retornar valores inesperados mesmo se os tiver. Para usar um objecto <code>Selection</code> como uma string, faça a chamada do seu método <code>toString()</code> diretamente:</p>
 
-<pre class="brush:js;gutter:false;">var selectedText = selObj.toString();</pre>
+<pre class="brush:js">var selectedText = selObj.toString();</pre>
 
 <ul>
  <li><code>selObj</code> é um objeto <code>Selection</code>.</li>
@@ -70,53 +70,7 @@ translation_of: Web/API/Window/getSelection
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>9</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Window.getSelection")}}
 
 <h2 id="See_also" name="See_also">Veja também</h2>
 

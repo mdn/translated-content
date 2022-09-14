@@ -1,15 +1,6 @@
 ---
 title: CSS モーションパス
 slug: Web/CSS/CSS_Motion_Path
-tags:
-  - CSS
-  - CSS モーションパス
-  - 実験的
-  - ガイド
-  - モーションパス
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Motion_Path
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

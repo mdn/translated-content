@@ -133,14 +133,11 @@ Il est possible d'utiliser des titres au sein d'un résumé.
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', 'interactive-elements.html#the-summary-element', '&lt;summary&gt;')}} | {{Spec2('HTML WHATWG')}} |                      |
-| {{SpecName('HTML5.1', 'interactive-elements.html#the-summary-element', '&lt;summary&gt;')}}         | {{Spec2('HTML5.1')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.summary")}}
+{{Compat}}
 
 ## Voir aussi
 

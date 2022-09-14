@@ -39,7 +39,7 @@ p_prime = p.cloneNode(true);
 
 ## Notes
 
-Cloner un nœud copie tous ses attributs ainsi que leurs valeurs, y compris les auditeurs intrinsèques (en ligne). Il ne copie pas les auditeurs d'évènement ajoutés avec [`addEventListener()`](/en-US/docs/DOM/element.addEventListener) ou ceux assignés au propriétés d'éléments (par exemple `node.onclick = fn`). De plus, pour un élément {{HTMLElement("canvas")}} l'image peinte n'est pas copiée.
+Cloner un nœud copie tous ses attributs ainsi que leurs valeurs, y compris les auditeurs intrinsèques (en ligne). Il ne copie pas les auditeurs d'évènement ajoutés avec [`addEventListener()`](/fr/docs/DOM/element.addEventListener) ou ceux assignés au propriétés d'éléments (par exemple `node.onclick = fn`). De plus, pour un élément {{HTMLElement("canvas")}} l'image peinte n'est pas copiée.
 
 Le nœud dupliqué renvoyé par `cloneNode` ne fera pas partie du document tant qu'il n'y est pas ajouté via la méthode {{domxref("Node.appendChild()")}} ou une méthode similaire. De même, il n'a pas de parent tant qu'il n'a pas été ajouté à un autre nœud.
 
@@ -54,14 +54,10 @@ Si le noeud d'origine a un identifiant et que le clone doit être placé dans le
 
 Pour cloner un noeud à ajouter dans un document différent, utilisez  {{domxref("Document.importNode()")}} à la place.
 
-### Spécification
+## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("DOM WHATWG", "#dom-node-clonenode", "Node.cloneNode()")}} | {{Spec2("DOM WHATWG")}} |                     |
-| {{SpecName("DOM3 Core", "core.html#ID-3A0ED0A4", "Node.cloneNode()")}} | {{Spec2("DOM3 Core")}}     |                     |
-| {{SpecName("DOM2 Core", "core.html#ID-3A0ED0A4", "Node.cloneNode()")}} | {{Spec2("DOM2 Core")}}     | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.cloneNode")}}
+{{Compat}}

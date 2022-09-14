@@ -1,9 +1,6 @@
 ---
 title: Properly Configuring Server MIME Types
 slug: Learn/Server-side/Configuring_server_MIME_types
-tags:
-  - HTTP
-translation_of: Learn/Server-side/Configuring_server_MIME_types
 original_slug: Web/Security/Securing_your_site/Configuring_server_MIME_types
 ---
 ## Background
@@ -66,10 +63,10 @@ MIME 类型猜测导致 IE 浏览器的安全漏洞（通过利用 IE 能够将�
 
 这里有几种方法来确定文件的正确 MIME 类型
 
-1.  如果你的内容是通过供应商软件应用创建的，那么你可以阅读供应商文档确认不同媒体文件的 MIME 值
-2.  通过查看完整的 MIME 类型表 [IANA | MIME Media Types registry](http://www.iana.org/assignments/media-types/index.html)
-3.  如果使用插件 netscape gecko 显示媒体类型，请安装插件，然后查看“帮助”>“关于插件”菜单，以查看哪些 MIME 类型与媒体类型相关联。
-4.  搜索文件扩展名 [FILExt](http://filext.com/) 或者[File extensions reference](http://www.file-extensions.org/) ，确认扩展名和哪种类型的 MIME 相关联
+1. 如果你的内容是通过供应商软件应用创建的，那么你可以阅读供应商文档确认不同媒体文件的 MIME 值
+2. 通过查看完整的 MIME 类型表 [IANA | MIME Media Types registry](http://www.iana.org/assignments/media-types/index.html)
+3. 如果使用插件 netscape gecko 显示媒体类型，请安装插件，然后查看“帮助”>“关于插件”菜单，以查看哪些 MIME 类型与媒体类型相关联。
+4. 搜索文件扩展名 [FILExt](http://filext.com/) 或者[File extensions reference](http://www.file-extensions.org/) ，确认扩展名和哪种类型的 MIME 相关联
 
 ## 如何设置服务器以发送正确的 MIME 类型
 
@@ -86,7 +83,7 @@ MIME 类型猜测导致 IE 浏览器的安全漏洞（通过利用 IE 能够将�
 
 ### Related Links
 
-- [Incorrect MIME Type for CSS Files](/en/Incorrect_MIME_Type_for_CSS_Files)
+- [Incorrect MIME Type for CSS Files](/zh-CN/Incorrect_MIME_Type_for_CSS_Files)
 - [IANA | MIME Media Types](http://www.iana.org/assignments/media-types/index.html)
 - [Hypertext Transfer Protocol — HTTP/1.1](http://www.w3.org/Protocols/HTTP/1.1/spec.html)
 - [Microsoft - 293336 - INFO: WebCast: MIME Type Handling in Microsoft Internet Explorer](http://support.microsoft.com/default.aspx?sd=msdn&scid=kb;en-us;293336)

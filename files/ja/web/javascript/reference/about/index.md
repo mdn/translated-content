@@ -1,10 +1,6 @@
 ---
 title: JavaScript リファレンスについて
 slug: Web/JavaScript/Reference/About
-tags:
-  - ガイド
-  - JavaScript
-translation_of: Web/JavaScript/Reference/About
 ---
 {{JsSidebar}}
 

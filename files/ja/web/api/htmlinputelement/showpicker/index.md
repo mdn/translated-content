@@ -1,15 +1,6 @@
 ---
 title: HTMLInputElement.showPicker()
 slug: Web/API/HTMLInputElement/showPicker
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - メソッド
-  - NeedsCompatTable
-  - リファレンス
-browser-compat: api.HTMLInputElement.showPicker
-translation_of: Web/API/HTMLInputElement/showPicker
 ---
 {{ APIRef("HTML DOM") }}
 

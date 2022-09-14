@@ -21,7 +21,7 @@ Link: <uri-reference>; param1=value1; param2="value2"
 
 ### Paramètres
 
-L'en-tête `Link` contient des paramètres séparés par un `;` et sont équivalents aux attributs de l'élément [`<link>`](/fr/docs/Web/HTML/Element/link). 
+L'en-tête `Link` contient des paramètres séparés par un `;` et sont équivalents aux attributs de l'élément [`<link>`](/fr/docs/Web/HTML/Element/link).
 
 ## Exemples
 

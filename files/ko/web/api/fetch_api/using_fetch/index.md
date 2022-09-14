@@ -442,7 +442,7 @@ if (window.fetch) {
 
 ## 브라우저 호환성
 
-{{Compat("api.fetch")}}
+{{Compat}}
 
 ## 같이 보기
 

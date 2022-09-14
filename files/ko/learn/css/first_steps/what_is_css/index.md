@@ -1,20 +1,16 @@
 ---
 title: CSS 란 무엇인가?
 slug: Learn/CSS/First_steps/What_is_CSS
-translation_of: Learn/CSS/First_steps/What_is_CSS
 ---
 {{LearnSidebar}}
 
 {{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
 
-
 **{{Glossary("CSS")}}** (Cascading Style Sheets) 를 사용하면 멋진 웹 페이지를 만들 수 있지만, 어떻게 작동합니까? 이 기사에서는 간단한 구문 예제를 통해 CSS가 무엇인지 설명하고 CSS에 대한 몇 가지 주요 용어를 다룹니다.
-
 
 | 전제조건:|컴퓨터 기본 활용 능력, [기본 소프트웨어 설치](/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software), [파일 작업](/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files) 에 대한 기본 지식 및 HTML 기본 사항 ([HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML) 학습) |
 |--|--
 |**목적:** | CSS가 무엇인지 배우기.
-
 
 [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML)단원에서는 HTML 이 무엇인지, 그리고 문서를 마크 업하는 데 사용되는 방법에 대해 설명했습니다. 이 문서는 웹 브라우저에서 읽을 수 있습니다. 제목은 일반 텍스트보다 크게 보이며, 단락은 줄바꿈이 되고 공백이 있습니다. 링크는 텍스트의 나머지 부분과 구분하기 위해 색상과 밑줄이 표시됩니다. 현재 보고 있는 것은 브라우저의 기본 스타일입니다. 페이지 작성자가 명시적인 스타일을 지정하지 않은 경우에도 기본적으로 읽을 수 있도록 브라우저가 HTML에 적용하는 매우 기본적인 스타일입니다.
 
@@ -26,14 +22,11 @@ translation_of: Learn/CSS/First_steps/What_is_CSS
 
 앞에서 언급했듯이, CSS 는 사용자에게 문서를 표시하는 방법을 지정하는 언어입니다 — 스타일, 레이아웃 등.
 
-
 **문서**는 일반적으로 마크 업 언어를 사용하여 구성된 텍스트 파일입니다 — {{Glossary("HTML")}} 이 가장 일반적인 마크 업 언어이지만, {{Glossary("SVG")}} 또는 {{Glossary("XML")}} 과 같은 다른 마크 업 언어를 사용할 수도 있습니다.
 
 사용자에게 문서를 **제공 한다는 것**은 대상이 사용 할 수 있는 형식으로 문서를 변환하는 것을 의미합니다. {{Glossary("browser","Browsers")}}, {{Glossary("Mozilla Firefox","Firefox")}}, {{Glossary("Google Chrome","Chrome")}} 또는 {{Glossary("Microsoft Edge","Edge")}} 는 컴퓨터 화면, 프로젝터 또는 프린터 등의 문서를 시각적으로 표시하도록 설계되었습니다.
 
-
 > **참고**: 브라우저는 {{Glossary("User agent","user agent")}} 라고도 하며, 기본적으로 컴퓨터 시스템 내부의 개인을 나타내는 컴퓨터 프로그램을 의미합니다. 브라우저는 CSS 에 대해 이야기 할 때, 우리가 생각하는 주요 유형의 user agent 이지만, 유일한 user agent는 아닙니다. HTML 및 CSS 문서를 인쇄할 PDF로 변환하는 것과 같은 사용 가능한 다른 user agent 가 있습니다.
-
 
 CSS 는 매우 기본적인 텍스트 문서 스타일링에 사용될 수 있습니다 — 예를 들어, 제목 및 링크의 [색상](ko/docs/Web/CSS/color_value)과 [크기](/ko/docs/Web/CSS/font-size) 변경. 또한, 레이아웃을 만드는 데 사용 할 수 있습니다 — 예를 들어, [단일 텍스트 열을 변환](/ko/docs/Web/CSS/Layout_cookbook/Column_layouts) (기본 콘텐츠 영역과 관련 정보에 대한 사이드 바가 있는 레이아웃으로) 하는 등 레이아웃을 만드는 데 사용 할 수 있습니다. [애니메이션](/ko/docs/Web/CSS/CSS_Animations) 과 같은 효과에도 사용 할 수 있습니다. 구체적인 예는 이 단락의 링크를 살펴 보십시오.
 
@@ -71,7 +64,6 @@ p {
 
 일부 값은 빨리 배운다는 것을 알게 될 것이고, 반면에 다른 값은 여러분이 찾아야 할 것입니다. MDN 의 개별 속성 페이지는 잊었을 때 또는 값으로 사용 할 수 있는 다른 것을 알고자 할 때 속성과 해당 값을 빠르게 찾을 수 있는 방법을 제공합니다.
 
-
 > **참고**: MDN [CSS 참조](/ko/docs/Web/CSS/Reference) 에 나열된 모든 CSS 속성 페이지 (다른 CSS 기능과 함께) 에 대한 링크를 찾을 수 있습니다.  또는, CSS 기능에 대한 자세한 정보를 찾아야 할 때 마다, 자주 사용하는 검색 엔진에서 "mdn *css-feature-name*" 을 검색하는 데 익숙해야 합니다. 예를 들어, "mdn color" 및 "mdn font-size" 를 검색해 보십시오!
 
 ## CSS Modules
@@ -105,7 +97,6 @@ CSS 가 지정되면 하나 이상의 브라우저가 이를 구현한 경우에
 CSS 가 무엇인지 이해했으니, 이제 [CSS 시작하기](/ko/docs/Learn/CSS/First_steps/Getting_started) 로 넘어가서 CSS 를 직접 작성할 수 있습니다.
 
 {{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
-
 
 ## 이번 강의에서는
 

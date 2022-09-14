@@ -19,8 +19,8 @@ L'élément **`<mpath>`** se place dans un élément {{SVGElement("animateMotion
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base "en/SVG/Attribute#Core")
-- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#Attributs_XLink "en/SVG/Attribute#XLink")
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
+- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#Attributs_XLink)
 - {{SVGAttr("externalResourcesRequired")}}
 
 ### Attributs spécifiques
@@ -70,14 +70,11 @@ Cet élément implémente l'interface {{domxref("SVGMPathElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                                   | Commentaire         |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName("SVG Animations 2", "#MPathElement", "&lt;mpath&gt;")}}     | {{Spec2("SVG Animations 2")}} | Aucun changement    |
-| {{SpecName("SVG1.1", "animate.html#MPathElement", "&lt;mpath&gt;")}} | {{Spec2("SVG1.1")}}                 | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.mpath")}}
+{{Compat}}
 
 ## Voir aussi
 

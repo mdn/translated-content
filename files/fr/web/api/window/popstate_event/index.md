@@ -54,13 +54,11 @@ Notez que même si l'entrée d'historique originelle (pour `http://example.com/e
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           |
-| -------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'indices.html#event-popstate', 'popstate')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.popstate_event")}}
+{{Compat}}
 
 ## Voir aussi
 

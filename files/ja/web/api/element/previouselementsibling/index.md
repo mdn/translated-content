@@ -1,15 +1,6 @@
 ---
 title: Element.previousElementSibling
 slug: Web/API/Element/previousElementSibling
-tags:
-  - API
-  - DOM
-  - Element
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.Element.previousElementSibling
-translation_of: Web/API/Element/nextElementSibling
 ---
 {{APIRef("DOM")}}
 

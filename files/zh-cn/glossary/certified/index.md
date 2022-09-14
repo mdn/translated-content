@@ -1,7 +1,6 @@
 ---
 title: Certified
 slug: Glossary/Certified
-translation_of: Glossary/Certified
 ---
 **已认证标识**意味着一个程序、一项内容或一次数据传输已经成功经过了相关领域专家的认证，因此该项目被认为是完整的、安全的、可信的。
 

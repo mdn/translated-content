@@ -1,12 +1,6 @@
 ---
 title: 相除運算子 (/)
 slug: Web/JavaScript/Reference/Operators/Division
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.division
 ---
 {{jsSidebar("Operators")}}
 

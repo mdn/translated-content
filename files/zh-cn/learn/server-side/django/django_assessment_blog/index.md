@@ -1,11 +1,10 @@
 ---
 title: 评估：DIY Django 微博客
 slug: Learn/Server-side/Django/django_assessment_blog
-translation_of: Learn/Server-side/Django/django_assessment_blog
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
-在这个评估中，您将使用您在 [Django Web Framework (Python)](/en-US/docs/Learn/Server-side/Django) 模块中获得的知识，来创建一个非常基本的博客。
+在这个评估中，您将使用您在 [Django Web Framework (Python)](/zh-CN/docs/Learn/Server-side/Django) 模块中获得的知识，来创建一个非常基本的博客。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -158,7 +157,7 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
 此外，您应该编写一些基本测试来验证：
 
 - 所有模型字段都具有正确的标签和长度。
-- 所有模型都具有预期的对象名称（例如` __str__()` 返回预期值）。
+- 所有模型都具有预期的对象名称（例如 `__str__()` 返回预期值）。
 - 模型具有单个博客和评论记录的预期 URL（例如，`get_absolute_url()`返回预期的 URL）。
 - BlogListView（所有博客页面）可在预期位置访问（例如 /blog/blogs）
 - BlogListView（所有博客页面）可通过预期的命名网址访问（例如 'blogs'）
@@ -216,37 +215,37 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
 
 以下部分，描述了您需要执行的操作。
 
-1.  为站点创建骨架项目和 Web 应用程序（如[Django 教程 2：创建骨架网站](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)中所述）。您可以使用 'diyblog' 作为项目名称，使用 'blog' 作为应用程序名称。
-2.  为博客帖子，评论和所需的任何其他对象创建模型。在考虑您的设计时，请记住：
+1. 为站点创建骨架项目和 Web 应用程序（如[Django 教程 2：创建骨架网站](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)中所述）。您可以使用 'diyblog' 作为项目名称，使用 'blog' 作为应用程序名称。
+2. 为博客帖子，评论和所需的任何其他对象创建模型。在考虑您的设计时，请记住：
 
     - 每个评论只有一个博客，但博客可能有很多评论。
     - 博客帖子和评论，必须按发布日期排序。
     - 并非每个用户都必须是博客作者，尽管任何用户都可能是评论者。
     - 博客作者还必须包含个人信息。
 
-3.  为新模型运行迁移，并创建超级用户。
-4.  使用管理站点，创建一些示例博客帖子，和博客评论。
-5.  为博客帖子、和博客列表页面，创建视图、模板、和 URL 配置。
-6.  为博客帖子、和博客详细信息页面，创建视图、模板、和 URL 配置。
-7.  创建一个页面，其中包含用于添加新评论的表单（请记住，这仅适用于已登录的用户！）
+3. 为新模型运行迁移，并创建超级用户。
+4. 使用管理站点，创建一些示例博客帖子，和博客评论。
+5. 为博客帖子、和博客列表页面，创建视图、模板、和 URL 配置。
+6. 为博客帖子、和博客详细信息页面，创建视图、模板、和 URL 配置。
+7. 创建一个页面，其中包含用于添加新评论的表单（请记住，这仅适用于已登录的用户！）
 
 ## 提示和技巧
 
-该项目与 [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 教程非常相似。您将能够使用几乎所有相同的方法，包含设置框架，用户登录/注销行为，对静态文件，视图，URL，表单，基本模板和管理站点配置的支持。
+该项目与 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website) 教程非常相似。您将能够使用几乎所有相同的方法，包含设置框架，用户登录/注销行为，对静态文件，视图，URL，表单，基本模板和管理站点配置的支持。
 
 一些一般提示：
 
-1.  索引页面可以实现为基本功能视图和模板（就像 locallibrary 一样）。
-2.  T 可以使用[通用列表和详细信息视图](/zh-CN/docs/Learn/Server-side/Django/Generic_views)，以创建博客帖子和博主的列表视图，以及博客帖子的详细信息视图。
-3.  可以使用通用列表的博客列表视图，并对指定作者匹配的博客对象进行过滤，来创建特定作者的博客帖子列表。
+1. 索引页面可以实现为基本功能视图和模板（就像 locallibrary 一样）。
+2. T 可以使用[通用列表和详细信息视图](/zh-CN/docs/Learn/Server-side/Django/Generic_views)，以创建博客帖子和博主的列表视图，以及博客帖子的详细信息视图。
+3. 可以使用通用列表的博客列表视图，并对指定作者匹配的博客对象进行过滤，来创建特定作者的博客帖子列表。
 
     - 您将必须实现`get_queryset(self)`来进行过滤（很像我们的图书馆类`LoanedBooksAllListView`），并从 URL 获取作者信息。
     - 您还需要将作者的名称，传递给上下文中的页面。要在基于类的视图中执行此操作，您需要实现`get_context_data()`（在下面讨论）。
 
-4.  可以使用基于函数的视图（以及关联的模型和表单），或使用通用`CreateView`，以创建添加注释表单。如果您使用`CreateView`（推荐），那么：
+4. 可以使用基于函数的视图（以及关联的模型和表单），或使用通用`CreateView`，以创建添加注释表单。如果您使用`CreateView`（推荐），那么：
 
     - 您还需要将博客文章的名称，传递到上下文中的评论页面（实现`get_context_data()` ，如下所述）。
-    - 表单应仅显示用户输入的注释“description”（日期和相关的博客文章，不应该是可编辑的）。由于它们本身不在表单中，因此您的代码，需要在` form_valid()` 函数中，设置注释的作者，以便将其保存到模型中（[如此处所述](https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-editing/#models-and-request-user) - Django 文档）。在同一个功能中，我们设置了相关的博客。可能的实现如下所示（`pk`是从 URL / URL 配置传入的博客 ID）。
+    - 表单应仅显示用户输入的注释“description”（日期和相关的博客文章，不应该是可编辑的）。由于它们本身不在表单中，因此您的代码，需要在`form_valid()` 函数中，设置注释的作者，以便将其保存到模型中（[如此处所述](https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-editing/#models-and-request-user) - Django 文档）。在同一个功能中，我们设置了相关的博客。可能的实现如下所示（`pk`是从 URL / URL 配置传入的博客 ID）。
 
       ```python
           def form_valid(self, form):
@@ -287,18 +286,18 @@ class SomeView(generic.ListView):
 
 ## 本系列教程
 
-- [Django 介绍](/en-US/docs/Learn/Server-side/Django/Introduction)
-- [架设 Django 开发环境](/en-US/docs/Learn/Server-side/Django/development_environment)
-- [Django 教程：本地图书馆网站](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django 教程 2: 创建骨架网站](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django 教程 3: 使用模型](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django 教程 4: Django 管理站点](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django 教程 5: 创建主页](/en-US/docs/Learn/Server-side/Django/Home_page)
-- [Django 教程 6: 通用列表与详细视图](/en-US/docs/Learn/Server-side/Django/Generic_views)
-- [Django 教程 7: 会话框架](/en-US/docs/Learn/Server-side/Django/Sessions)
-- [Django 教程 8: 用户认证与授权](/en-US/docs/Learn/Server-side/Django/Authentication)
-- [Django 教程 9: 使用表单](/en-US/docs/Learn/Server-side/Django/Forms)
-- [Django 教程 10: 测试 Django 网页应用](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django 教程 11: 部署 Django 到生产环境](/en-US/docs/Learn/Server-side/Django/Deployment)
-- [Django 网页应用安全](/en-US/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django 微博客](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)
+- [Django 介绍](/zh-CN/docs/Learn/Server-side/Django/Introduction)
+- [架设 Django 开发环境](/zh-CN/docs/Learn/Server-side/Django/development_environment)
+- [Django 教程：本地图书馆网站](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+- [Django 教程 2: 创建骨架网站](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)
+- [Django 教程 3: 使用模型](/zh-CN/docs/Learn/Server-side/Django/Models)
+- [Django 教程 4: Django 管理站点](/zh-CN/docs/Learn/Server-side/Django/Admin_site)
+- [Django 教程 5: 创建主页](/zh-CN/docs/Learn/Server-side/Django/Home_page)
+- [Django 教程 6: 通用列表与详细视图](/zh-CN/docs/Learn/Server-side/Django/Generic_views)
+- [Django 教程 7: 会话框架](/zh-CN/docs/Learn/Server-side/Django/Sessions)
+- [Django 教程 8: 用户认证与授权](/zh-CN/docs/Learn/Server-side/Django/Authentication)
+- [Django 教程 9: 使用表单](/zh-CN/docs/Learn/Server-side/Django/Forms)
+- [Django 教程 10: 测试 Django 网页应用](/zh-CN/docs/Learn/Server-side/Django/Testing)
+- [Django 教程 11: 部署 Django 到生产环境](/zh-CN/docs/Learn/Server-side/Django/Deployment)
+- [Django 网页应用安全](/zh-CN/docs/Learn/Server-side/Django/web_application_security)
+- [DIY Django 微博客](/zh-CN/docs/Learn/Server-side/Django/django_assessment_blog)

@@ -1,23 +1,12 @@
 ---
 title: Animations and tweens
 slug: Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens
-tags:
-  - 2D
-  - Animation
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
-  - tween
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens
 ---
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Extra_lives", "Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}
 
-这是[Gamedev Phaser 教程](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 14 步**。您可以在[Gamedev-Phaser-Content-Kit / demos / lesson14.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson14.html)完成本课程后找到源代码。
+这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 14 步**。您可以在[Gamedev-Phaser-Content-Kit / demos / lesson14.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson14.html)完成本课程后找到源代码。
 
 为了使游戏看起来更加多汁和活泼，我们可以使用动画和补间。这将导致更好，更有趣的体验。让我们来探讨如何在游戏中实现 Phaser 动画和补间。
 
@@ -89,10 +78,10 @@ killTween.start();
 
 让我们来看看这里，看看这里发生了什么：
 
-1.  当定义一个新的补间时，你必须指定哪些属性将被补间 - 在我们的例子中，而不是在被球击中时立即隐藏砖块，我们将把它们的宽度和高度缩放到零，所以它们将很好地消失。最后，我们使用该`add.tween()`方法，指定`brick.scale`为参数，因为这是我们想要补间。
-2.  该`to()`方法定义补间结束时对象的状态。它需要一个包含所选参数的期望结束值的对象（比例取尺度值，1 为大小的 100％，0 为大小的 0％等），补间的时间（以毫秒为单位）以及使用的宽松类型补间。
-3.  我们还将添加可选的`onComplete`事件处理程序，该处理程序定义了在补间程序完成时要执行的函数。
-4.  最后一件事是立即开始补间`start()`。
+1. 当定义一个新的补间时，你必须指定哪些属性将被补间 - 在我们的例子中，而不是在被球击中时立即隐藏砖块，我们将把它们的宽度和高度缩放到零，所以它们将很好地消失。最后，我们使用该`add.tween()`方法，指定`brick.scale`为参数，因为这是我们想要补间。
+2. 该`to()`方法定义补间结束时对象的状态。它需要一个包含所选参数的期望结束值的对象（比例取尺度值，1 为大小的 100％，0 为大小的 0％等），补间的时间（以毫秒为单位）以及使用的宽松类型补间。
+3. 我们还将添加可选的`onComplete`事件处理程序，该处理程序定义了在补间程序完成时要执行的函数。
+4. 最后一件事是立即开始补间`start()`。
 
 这是补间定义的扩展版本，但是我们也可以使用速记语法：
 
@@ -110,6 +99,6 @@ game.add.tween(brick.scale).to({x:2,y:2}, 500, Phaser.Easing.Elastic.Out, true, 
 
 ## 下一步
 
-动画和 tweens 看起来很不错，但我们可以添加更多的我们的游戏 - 在下一节我们将看看处理[按钮](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Buttons)输入。
+动画和 tweens 看起来很不错，但我们可以添加更多的我们的游戏 - 在下一节我们将看看处理[按钮](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Buttons)输入。
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Extra_lives", "Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}

@@ -1,12 +1,6 @@
 ---
 title: 签名（安全）
 slug: Glossary/Signature/Security
-tags:
-  - Cryptography
-  - Glossary
-  - Privacy
-  - Security
-translation_of: Glossary/Signature/Security
 ---
 **签名**或*数字签名*是 {{glossary("protocol","协议")}}，表明消息是真实的。
 

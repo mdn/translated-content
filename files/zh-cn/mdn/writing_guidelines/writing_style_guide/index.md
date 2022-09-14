@@ -1,7 +1,6 @@
 ---
 title: 文档写作规范
 slug: MDN/Writing_guidelines/Writing_style_guide
-translation_of: MDN/Writing_guidelines/Writing_style_guide
 ---
 {{MDNSidebar}}
 
@@ -87,9 +86,9 @@ translation_of: MDN/Writing_guidelines/Writing_style_guide
 
 下面这个简介比前两个要好很多。
 
-> The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates. The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
+> The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/zh-CN/docs/Web/API/Canvas_API), strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates. The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
 >
-> For more details and further examples, see {{SectionOnPage("/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Text")}} in the Learning Area as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+> For more details and further examples, see {{SectionOnPage("/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Text")}} in the Learning Area as well as our main article on the subject, [Drawing text](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
 #### 多提供一些示例
 
@@ -147,9 +146,9 @@ translation_of: MDN/Writing_guidelines/Writing_style_guide
 
 为了创建一个好的有序列表，你需要：
 
-1.  以一个介绍性的标题开始，以引出后续的序列。我们可以在开始有序列表的序列之前提供这一内容。
-2.  开始创建各个序列，这些序列会用数字依次编号。这是有序列表的标准格式，能够很容易地被读者理解。有序列表中的某些条目内容可能会很多，因此正确使用标点是很重要的。
-3.  列表序列完成之后，应在后面再提供一段简短的总结。
+1. 以一个介绍性的标题开始，以引出后续的序列。我们可以在开始有序列表的序列之前提供这一内容。
+2. 开始创建各个序列，这些序列会用数字依次编号。这是有序列表的标准格式，能够很容易地被读者理解。有序列表中的某些条目内容可能会很多，因此正确使用标点是很重要的。
+3. 列表序列完成之后，应在后面再提供一段简短的总结。
 
 这段内容就是一个总结。我们已经创建了一个简短的有序列表，解释了创建良好格式的有序列表应遵循的步骤。
 

@@ -1,13 +1,6 @@
 ---
 title: grid-area
 slug: Web/CSS/grid-area
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.grid-area
 ---
 {{CSSRef}}
 

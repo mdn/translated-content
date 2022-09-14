@@ -35,7 +35,7 @@ La [règle @](/fr/docs/Web/CSS/At-rule) **`@font-feature-values`** permet aux au
 }
 ```
 
-La règle @ `@font-feature-values` peut être utilisée au plus haut niveau d'une feuille de style et aussi au sein [d'un groupe de règles conditionnelles](/fr/docs/Web/CSS/At-rule "CSS/At-rule#Conditional_Group_Rules").
+La règle @ `@font-feature-values` peut être utilisée au plus haut niveau d'une feuille de style et aussi au sein [d'un groupe de règles conditionnelles](/fr/docs/Web/CSS/At-rule).
 
 ## Syntaxe
 

@@ -1,18 +1,6 @@
 ---
 title: MouseEvent.movementY
 slug: Web/API/MouseEvent/movementY
-tags:
-  - API
-  - DOM
-  - DOM イベント
-  - MouseEvent
-  - MovementY
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - mouse lock
-  - pointer lock
-browser-compat: api.MouseEvent.movementY
 ---
 {{APIRef("DOM Events")}}
 

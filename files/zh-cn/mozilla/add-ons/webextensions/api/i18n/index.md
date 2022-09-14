@@ -1,7 +1,6 @@
 ---
 title: i18n
 slug: Mozilla/Add-ons/WebExtensions/API/i18n
-translation_of: Mozilla/Add-ons/WebExtensions/API/i18n
 ---
 {{AddonSidebar}}
 
@@ -10,7 +9,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/i18n
 有关对扩展使用 i18n 的详细信息，请参阅：
 
 - [Internationalization](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Internationalization)国际化：使用 WebExtension i18n 系统的指南
-- [Locale-Specific Message reference](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference): 扩展在 `messages.json`文件中提供特定于语言环境的字符串。 此网页介绍`messages.json`
+- [Locale-Specific Message reference](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference): 扩展在 `messages.json`文件中提供特定于语言环境的字符串。 此网页介绍`messages.json`
 
 ## 类型
 
@@ -20,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/i18n
 ## 方法
 
 - {{WebExtAPIRef("i18n.getAcceptLanguages()")}}
-  - : 得到浏览器 [支持的语言](/en-US/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header) 。这与浏览器使用的区域设置不同。要获得区域设置，请使用{{WebExtAPIRef('i18n.getUILanguage')}}.
+  - : 得到浏览器 [支持的语言](/zh-CN/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header) 。这与浏览器使用的区域设置不同。要获得区域设置，请使用{{WebExtAPIRef('i18n.getUILanguage')}}.
 - {{WebExtAPIRef("i18n.getMessage()")}}
   - : 获取指定消息的本地化字符串。
 - {{WebExtAPIRef("i18n.getUILanguage()")}}
@@ -38,7 +37,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/i18n
 >
 > 微软 Edge 的兼容性数据由微软公司提供，并在这里收录在《知识共享 3.0 美国许可证》中。
 
-<div class="hidden"><pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -65,4 +65,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/i18n
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

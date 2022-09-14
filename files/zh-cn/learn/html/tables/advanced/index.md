@@ -1,23 +1,10 @@
 ---
 title: HTML 表格高级特性和无障碍
 slug: Learn/HTML/Tables/Advanced
-tags:
-  - HTML
-  - scope
-  - table
-  - tbody
-  - tfoot
-  - thead
-  - 初学者
-  - 无障碍
-  - 学习
-  - 标题
-  - 高级
-translation_of: Learn/HTML/Tables/Advanced
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
 
-这个模块的第二篇文章中，我们来看一下 HTML 表格更高级的功能，比如像 表格的标题/摘要，以及将你表格中的各行分组成头部、正文、页脚部分，提高视力受损用户的可访问性。
+这个模块的第二篇文章中，我们来看一下 HTML 表格更高级的功能，比如像 表格的标题/摘要，以及将你表格中的各行分组成头部、正文、页脚部分，提高视力受损用户的无障碍。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -25,7 +12,7 @@ translation_of: Learn/HTML/Tables/Advanced
       <th scope="row">学习本章节的前提条件：</th>
       <td>
         HTML 的基础知识 (see
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >).
       </td>
@@ -59,9 +46,9 @@ translation_of: Learn/HTML/Tables/Advanced
 
 我们来试试看吧，回顾一下我们在之前的文章中第一次遇到的例子。.
 
-1.  打开你的语言老师的学校时间表，就是 [HTML Table Basics](/en-US/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col) 结尾中的例子，或者把 [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) 文件复制下面。
-2.  为表格添加一个合适的标题。
-3.  保存你的代码，然后用浏览器打开，看看你的表格是什么样的。
+1. 打开你的语言老师的学校时间表，就是 [HTML Table Basics](/zh-CN/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col) 结尾中的例子，或者把 [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) 文件复制下面。
+2. 为表格添加一个合适的标题。
+3. 保存你的代码，然后用浏览器打开，看看你的表格是什么样的。
 
 > **备注：** 你也可以在 GitHub 上找到我们的版本 [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
 
@@ -77,18 +64,18 @@ translation_of: Learn/HTML/Tables/Advanced
 - `<tfoot>` 需要嵌套在 table 元素中，放置在底部 (页脚) 的位置，一般是最后一行，往往是对前面所有行的总结，比如，你可以按照预想的方式将`<tfoot>`放在表格的底部，或者就放在 `<thead>` 的下面。(浏览器仍将它呈现在表格的底部)
 - `<tbody>` 需要嵌套在 table 元素中，放置在 `<thead>`的下面或者是 `<tfoot>` 的下面，这取决于你如何设计你的结构。(`<tfoot>`放在`<thead>`下面也可以生效.)
 
-> **备注：** `<tbody>` 总是包含在每个表中，如果你没有在代码中指定它，那就是隐式的。可以来验证一下，打开一个你之前没有包含 `<tbody>` 的例子，然后在你的 [browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) 中观察你的代码，你会看到浏览器为你添加了这个标签。你也许会想问，为什么你应该在所有表中都需要这个元素，因为它可以让你更好地控制表格结构和样式。
+> **备注：** `<tbody>` 总是包含在每个表中，如果你没有在代码中指定它，那就是隐式的。可以来验证一下，打开一个你之前没有包含 `<tbody>` 的例子，然后在你的 [browser developer tools](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools) 中观察你的代码，你会看到浏览器为你添加了这个标签。你也许会想问，为什么你应该在所有表中都需要这个元素，因为它可以让你更好地控制表格结构和样式。
 
 ### 动手练习：添加表格结构
 
 让我们动手使用这些新元素。
 
-1.  首先，把 [spending-record.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) 拷贝到你的本地环境。
-2.  尝试在浏览器中打开它，你会发现看起来不错，但是它可以被改善得更好。 "SUM" 行包含了已经使用的金额的总和，不过它出现在了错误的位置，以及代码中还遗失了一些细节。
-3.  将明显的标题行改为使用 `<thead>` 元素，"SUM" 行使用 `<tfoot>` 元素，剩余的内容使用 `<tbody>` 元素。
-4.  先保存，再刷新。你会看到，添加了 `<tfoot>` 元素后，导致 "SUM" 这行跑到了表格的底部。
-5.  接着，添加一个 {{htmlattrxref("colspan","td")}} 属性，使 "SUM" 单元格占 4 个单元格的位置，所以实际数字是显示在“Cost”列的底部。
-6.  让我们为表格添加一些简单的额外属性，能够让你理解这些属性是如何帮助更好地让表格应用 CSS 的。在你的 HTML 文件的 head 标签部分，你会看到一个空的 {{htmlelement("style")}} 元素。在 style 元素中添加下列 CSS 代码：
+1. 首先，把 [spending-record.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) 拷贝到你的本地环境。
+2. 尝试在浏览器中打开它，你会发现看起来不错，但是它可以被改善得更好。 "SUM" 行包含了已经使用的金额的总和，不过它出现在了错误的位置，以及代码中还遗失了一些细节。
+3. 将明显的标题行改为使用 `<thead>` 元素，"SUM" 行使用 `<tfoot>` 元素，剩余的内容使用 `<tbody>` 元素。
+4. 先保存，再刷新。你会看到，添加了 `<tfoot>` 元素后，导致 "SUM" 这行跑到了表格的底部。
+5. 接着，添加一个 {{htmlattrxref("colspan","td")}} 属性，使 "SUM" 单元格占 4 个单元格的位置，所以实际数字是显示在“Cost”列的底部。
+6. 让我们为表格添加一些简单的额外属性，能够让你理解这些属性是如何帮助更好地让表格应用 CSS 的。在你的 HTML 文件的 head 标签部分，你会看到一个空的 {{htmlelement("style")}} 元素。在 style 元素中添加下列 CSS 代码：
 
     ```css
     tbody {
@@ -101,7 +88,7 @@ translation_of: Learn/HTML/Tables/Advanced
     }
     ```
 
-7.  先保存，再刷新，然后观察一下结果。如果没有 `<tbody>` 和 `<tfoot>` 元素，你也许会写更加复杂的选择器来应用同样的样式。
+7. 先保存，再刷新，然后观察一下结果。如果没有 `<tbody>` 和 `<tfoot>` 元素，你也许会写更加复杂的选择器来应用同样的样式。
 
 > **备注：** 我们并不期望目前你可以理解所有 CSS 的内容。当你经过我们的 CSS 模块的时候，你应该会了解更多 ([Introduction to CSS](/zh_CN/docs/Learn/CSS/Introduction_to_CSS) 是一个好的起点；我们也有专门的文章 [styling tables](/zh_CN/docs/Learn/CSS/Styling_boxes/Styling_tables)).
 
@@ -221,7 +208,7 @@ translation_of: Learn/HTML/Tables/Advanced
 
 ## 嵌套表格
 
-在一个表格中嵌套另外一个表格是可能的，只要你包含完整的结构，包括 `<table>` 元素。这样通常是不建议的，因为这种做法会使标记看上去很难理解，对使用屏幕阅读的用户来说，可访问性也降低了。以及在很多情况下，也许你只需要插入额外的 单元格/行/列 到已有的表格中。然而有时候是必要的，比如你想要从其他资源中更简单地导入内容。
+在一个表格中嵌套另外一个表格是可能的，只要你包含完整的结构，包括 `<table>` 元素。这样通常是不建议的，因为这种做法会使标记看上去很难理解，对使用屏幕阅读的用户来说，无障碍也降低了。以及在很多情况下，也许你只需要插入额外的 单元格/行/列 到已有的表格中。然而有时候是必要的，比如你想要从其他资源中更简单地导入内容。
 
 下面的代码演示了一个简单的嵌套表格：
 
@@ -330,17 +317,17 @@ translation_of: Learn/HTML/Tables/Advanced
 
 > **备注：** 根据[世界卫生组织 2017 年的数据](http://www.who.int/zh/news-room/fact-sheets/detail/blindness-and-visual-impairment)，大约有 2.53 亿人患有视觉障碍。
 
-本篇文章提供了更一步的技术来使表格的可访问性尽可能地提高。
+本篇文章提供了更一步的技术来使表格的无障碍尽可能地提高。
 
 ### 使用列和行的标题
 
 屏幕阅读设备会识别所有的标题，然后在它们和它们所关联的单元格之间产生编程关联。列和行标题的组合将标识和解释每个单元格中的数据，以便屏幕阅读器用户可以类似于视力正常的用户的操作来理解表格。
 
-我们之前的文章就提到过这一点，可见 [Adding headers with \<th> elements](/en-US/docs/Learn/HTML/Tables/Basics#Adding_headers_with_%3Cth%3E_elements).
+我们之前的文章就提到过这一点，可见[使用 \<th> 元素添加标题](/zh-CN/docs/Learn/HTML/Tables/Basics#使用_th_元素添加标题)。
 
 ### scope 属性
 
-本篇文章的一个新话题是 {{htmlattrxref("scope","th")}} 属性，可以添加在`<th>` 元素中，用来帮助屏幕阅读设备更好地理解那些标题单元格，这个标题单元格到底是列标题呢，还是行标题。比如：回顾我们之前的支出记录示例，你可以明确地将列标题这样定义：
+本篇文章的一个新话题是 {{htmlattrxref("scope","th")}} 属性，可以添加在 `<th>` 元素中，用来帮助屏幕阅读设备更好地理解那些标题单元格，这个标题单元格到底是列标题呢，还是行标题。比如：回顾我们之前的支出记录示例，你可以明确地将列标题这样定义：
 
 ```html
 <thead>
@@ -374,8 +361,8 @@ translation_of: Learn/HTML/Tables/Advanced
 
 如果要替代 `scope` 属性，可以使用 {{htmlattrxref("id")}} 和 {{htmlattrxref("headers", "td")}} 属性来创造标题与单元格之间的联系。使用方法如下：
 
-1.  为每个`<th>` 元素添加一个唯一的 `id` 。
-2.  为每个 `<td>` 元素添加一个 `headers` 属性。每个单元格的`headers` 属性需要包含它从属于的所有标题的 id，之间用空格分隔开。
+1. 为每个`<th>` 元素添加一个唯一的 `id` 。
+2. 为每个 `<td>` 元素添加一个 `headers` 属性。每个单元格的`headers` 属性需要包含它从属于的所有标题的 id，之间用空格分隔开。
 
 这会给你的 HTML 表格中每个单元格的位置一个明确的定义。像一个电子表格一样，通过 headers 属性来定义属于哪些行或列。为了让它工作良好，表格同时需要列和行标题。
 
@@ -409,14 +396,14 @@ translation_of: Learn/HTML/Tables/Advanced
 
 ### 动手练习：使用 scope 和 headers
 
-1.  对于这个最后的练习，首先把 [items-sold.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css),拷贝到你的本地环境。
-2.  现在尝试添加适当的 `scope` 属性来让表格变得更加恰当。
-3.  最后，尝试把未添加 `scope` 属性的源文件再复制一份。这次使用 `id` 和 `headers` 属性让表格变得更加恰当。
+1. 对于这个最后的练习，首先把 [items-sold.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css),拷贝到你的本地环境。
+2. 现在尝试添加适当的 `scope` 属性来让表格变得更加恰当。
+3. 最后，尝试把未添加 `scope` 属性的源文件再复制一份。这次使用 `id` 和 `headers` 属性让表格变得更加恰当。
 
 > **备注：** 你可以根据我们完成的例子检查你的工作，请看 [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([also see this live](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) 和 [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([see this live too](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
 
 ## 总结
 
-关于 HTML 表格你还可以学习其他一些东西，但是我们目前已经把大部分你需要知道的内容都告诉你了。在此刻，如果你想学习关于 HTML 表格的样式，可以阅读 [Styling Tables](/en-US/docs/Learn/CSS/Styling_boxes/Styling_tables).
+关于 HTML 表格你还可以学习其他一些东西，但是我们目前已经把大部分你需要知道的内容都告诉你了。在此刻，如果你想学习关于 HTML 表格的样式，可以阅读 [Styling Tables](/zh-CN/docs/Learn/CSS/Styling_boxes/Styling_tables).
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}

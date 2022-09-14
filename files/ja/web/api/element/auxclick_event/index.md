@@ -1,16 +1,6 @@
 ---
 title: 'Element: auxclick イベント'
 slug: Web/API/Element/auxclick_event
-tags:
-  - Element
-  - イベント
-  - MouseEvent
-  - リファレンス
-  - UI
-  - auxclick
-  - マウス
-browser-compat: api.Element.auxclick_event
-translation_of: Web/API/Element/auxclick_event
 ---
 {{APIRef}}
 

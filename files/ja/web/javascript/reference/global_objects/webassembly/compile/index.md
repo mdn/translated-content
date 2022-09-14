@@ -1,16 +1,6 @@
 ---
 title: WebAssembly.compile()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - WebAssembly
-  - compile
-browser-compat: javascript.builtins.WebAssembly.compile
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 ---
 {{JSRef}}
 

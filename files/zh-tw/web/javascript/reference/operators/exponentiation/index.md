@@ -1,12 +1,6 @@
 ---
 title: 指數運算子 (**)
 slug: Web/JavaScript/Reference/Operators/Exponentiation
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.exponentiation
 ---
 {{jsSidebar("Operators")}}
 

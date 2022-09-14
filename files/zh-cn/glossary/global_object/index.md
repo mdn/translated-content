@@ -1,7 +1,6 @@
 ---
 title: 全局对象
 slug: Glossary/Global_object
-translation_of: Glossary/Global_object
 ---
 一个全局对象是一个永远存在于 {{glossary("global scope")}} 的 {{glossary("object")}}.
 
@@ -22,7 +21,7 @@ var foo = "foobar";
 foo === window.foo; // Returns: true
 ```
 
-在定义全局变量 `foo` 之后，我们可以通过 `window` 对象的属性来访问它。把变量名 `foo` 作为全局对象的 ` window``.foo ` 的属性名来使用。
+在定义全局变量 `foo` 之后，我们可以通过 `window` 对象的属性来访问它。把变量名 `foo` 作为全局对象的 `window.foo` 的属性名来使用。
 
 #### 解释：
 

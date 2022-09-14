@@ -1,14 +1,6 @@
 ---
 title: CanvasRenderingContext2D.save()
 slug: Web/API/CanvasRenderingContext2D/save
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - メソッド
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.save
-translation_of: Web/API/CanvasRenderingContext2D/save
 ---
 {{APIRef}}
 

@@ -1,17 +1,6 @@
 ---
 title: Notification.badge
 slug: Web/API/Notification/badge
-page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - badge
-browser-compat: api.Notification.badge
-translation_of: Web/API/Notification/badge
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 

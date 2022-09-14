@@ -1,18 +1,6 @@
 ---
 title: Document.preferredStyleSheetSet
 slug: Web/API/Document/preferredStyleSheetSet
-page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - DOM
-  - Document
-  - プロパティ
-  - リファレンス
-  - Stylesheets
-  - 非推奨
-browser-compat: api.Document.preferredStyleSheetSet
-translation_of: Web/API/Document/preferredStyleSheetSet
 ---
 {{APIRef("DOM")}}{{deprecated_header}}
 

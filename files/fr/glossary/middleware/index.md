@@ -11,7 +11,7 @@ Intergiciel (_Middleware_) est un terme (défini vaguement) pour tout logiciel o
 
 Dans les frameworks d'application web côté serveur, le terme est souvent plus spécifiquement utilisé pour désigner des composants logiciels préconstruits pouvant être ajoutés au pipeline de traitement des requêtes / réponses du framework, pour gérer des tâches telles que l'accès à la base de données.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

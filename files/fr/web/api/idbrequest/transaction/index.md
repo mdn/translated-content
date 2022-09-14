@@ -85,17 +85,15 @@ openRequest.onsuccess = function() {
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                       | Commentaire |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBRequest-transaction', 'transaction')}} | {{Spec2('IndexedDB')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBRequest.transaction")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- [Using IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Starting transactions: {{domxref("IDBDatabase")}}
 - Using transactions: {{domxref("IDBTransaction")}}
 - Setting a range of keys: {{domxref("IDBKeyRange")}}

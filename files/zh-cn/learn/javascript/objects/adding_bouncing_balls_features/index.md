@@ -1,13 +1,6 @@
 ---
 title: 为“弹球”示例添加新功能
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-tags:
-  - JavaScript
-  - 初学者
-  - 对象
-  - 测验
-  - 面向对象
-translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 original_slug: Learn/JavaScript/Objects/向“弹跳球”演示程序添加新功能
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
@@ -307,11 +300,11 @@ function loop() {
 
 首先，改变你现有的构造器 `Ball()` 使其成为构造器 `Shape()` 并添加一个新的构造器 `Ball()` ：
 
-1.  构造器 `Shape()` 应该像构造器 `Ball()` 那样的方式定义 `x`, `y`, `velX`, 和 `velY` 属性，但不包括 `color` 和 `size` 。
-2.  还应该定义一个叫 `exists` 的新属性，用来标记球是否存在于程序中（没有被恶魔圈吃掉）。这应该是一个布尔型（(`true`/`false`）。
-3.  构造器 `Ball()` 应该从构造器 `Shape()` 继承 `x`, `y`, `velX`, `velY`,和 `exists` 属性。
-4.  构造器 `Ball()` 还应该像最初的构造器 `Ball()` 那样定义一个 `color` 和一个`size` 属性。
-5.  请记得给构造器 `Ball()` 的`prototype` 和 `constructor` 属性设置适当的值。
+1. 构造器 `Shape()` 应该像构造器 `Ball()` 那样的方式定义 `x`, `y`, `velX`, 和 `velY` 属性，但不包括 `color` 和 `size` 。
+2. 还应该定义一个叫 `exists` 的新属性，用来标记球是否存在于程序中（没有被恶魔圈吃掉）。这应该是一个布尔型（(`true`/`false`）。
+3. 构造器 `Ball()` 应该从构造器 `Shape()` 继承 `x`, `y`, `velX`, `velY`,和 `exists` 属性。
+4. 构造器 `Ball()` 还应该像最初的构造器 `Ball()` 那样定义一个 `color` 和一个`size` 属性。
+5. 请记得给构造器 `Ball()` 的`prototype` 和 `constructor` 属性设置适当的值。
 
 `draw()`, `update()`, 和`collisionDetect()` 方法定义应保持不变。
 
@@ -342,8 +335,8 @@ function loop() {
 
 这个方法和 `Ball()`'s `draw()` 方法有着相同的目的：它们把都是对象的实例画在画布上（canvas） 。它们实现的方式差不多，所以你可以先复制 `Ball.prototype.draw` 的定义。然后你需要做下面的修改：
 
-- 我们不想让恶魔圈是实心的，而是一个圈或者说是环。你可以通过将 [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) 和 [`fill()`](/en-US/docs/Web/API/CanvasRenderingContext2D/fill) 修改为 [`strokeStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle) 和 [`stroke()`](/en-US/docs/Web/API/CanvasRenderingContext2D/stroke)而实现这个效果。
-- 我们还想让这个圈更厚一点， 从而使你能更好地辨认它。 可以在调用 [`beginPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath) 的后面给 [`lineWidth`](/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth) 赋值实现这个效果。（赋值为 3 就可以了）
+- 我们不想让恶魔圈是实心的，而是一个圈或者说是环。你可以通过将 [`fillStyle`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/fillStyle) 和 [`fill()`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/fill) 修改为 [`strokeStyle`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/strokeStyle) 和 [`stroke()`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/stroke)而实现这个效果。
+- 我们还想让这个圈更厚一点， 从而使你能更好地辨认它。 可以在调用 [`beginPath()`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/beginPath) 的后面给 [`lineWidth`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/lineWidth) 赋值实现这个效果。（赋值为 3 就可以了）
 
 #### `checkBounds()`
 
@@ -400,8 +393,8 @@ window.onkeydown = e => {
 
 为了计算得分，需按照以下步骤：
 
-1.  在你的 HTML 文件中添加一个{{HTMLElement("p")}} 元素到 {{HTMLElement("h1")}} 元素的下面，其中包含文本 "还剩多少个球"。
-2.  在你的 CSS 文件中，添加下面的代码到底部：
+1. 在你的 HTML 文件中添加一个{{HTMLElement("p")}} 元素到 {{HTMLElement("h1")}} 元素的下面，其中包含文本 "还剩多少个球"。
+2. 在你的 CSS 文件中，添加下面的代码到底部：
 
     ```css
     p {
@@ -413,7 +406,7 @@ window.onkeydown = e => {
     }
     ```
 
-3.  在你的 JavaScript 文件中，做下列的修改：
+3. 在你的 JavaScript 文件中，做下列的修改：
 
     - 创建一个变量存储段落的引用。
     - 以同样的方式在屏幕上显示小球的数量。

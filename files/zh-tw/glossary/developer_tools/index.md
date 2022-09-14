@@ -1,10 +1,6 @@
 ---
 title: 開發者工具
 slug: Glossary/Developer_Tools
-tags:
-  - 術語表
-  - 開發者工具
-translation_of: Glossary/Developer_Tools
 ---
 開發者工具 (或"開發工具"或簡稱 "DevTools")是程式准許開發者執行創建、測試和{{Glossary("debug")}}的軟體。
 
@@ -18,7 +14,7 @@ translation_of: Glossary/Developer_Tools
 
 ### 技術參考
 
-- MDN 上的[火狐開發者工具](/en-US/docs/Tools)
+- MDN 上的[火狐開發者工具](/zh-TW/docs/Tools)
 - [Firebug](https://getfirebug.com/) (Firefox 的前開發者工具)
 - 在 chrome.com 上的 [Chrome DevTools](https://developer.chrome.com/devtools)
 - 在 apple.com 上的[Safari Web Inspector](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007874-CH1-SW1)

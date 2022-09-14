@@ -242,17 +242,13 @@ L'affichage dans la console ressemblera à ceci :
 
 ![](api-trace2.png)
 
-## Spécification
+## Spécifications
 
-| Specification                        | Status                           | Comment              |
-| ------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('Console API')}} | {{Spec2('Console API')}} | Définition initiale. |
+{{Specifications}}
 
-## Notes
+## Compatibilité des navigateurs
 
-- Au moins dans Firefox, si une page définit un objet console, cet objet remplace celui créé dans Firefox.
-- Antérieur à {{Gecko ("12.0")}}, les méthodes de l'objet console ne fonctionnent que lorsque la console Web est ouverte. À partir de {{Gecko ("12.0")}}, la sortie est mise en cache jusqu'à ce que la console Web soit ouverte, puis affichée à ce moment-là.
-- Il est à noter que l'objet de console intégré de Firefox est compatible avec celui fourni par [Firebug](http://getfirebug.com/).
+{{Compat}}
 
 ## Voir aussi
 

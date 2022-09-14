@@ -1,12 +1,6 @@
 ---
 title: JavaScript 数据类型和数据结构
 slug: Web/JavaScript/Data_structures
-tags:
-  - JavaScript
-  - 初学者
-  - 数据结构
-  - 类型
-translation_of: Web/JavaScript/Data_structures
 ---
 {{jsSidebar("More")}}
 
@@ -225,7 +219,7 @@ JavaScript 的字符串类型用于表示文本数据。它是一组 16 位的�
 
 访问器属性有一个或两个访问器函数（`get` 和 `set`）来存取数值。
 
-> **备注：** 注意它是访问器**属性**，而非访问器**方法**。我们可以将函数作为值赋给 JavaScript 对象的访问器（使得对象表现得像一个类）——但这不会使对象变成类。
+> **备注：** 它是访问器**属性**，而非访问器**方法**。我们可以将函数作为值赋给 JavaScript 对象的访问器（使得对象表现得像一个类）——但这不会使对象变成类。
 
 访问器属性具有以下特性（attributes）：
 
@@ -252,7 +246,7 @@ JavaScript 的字符串类型用于表示文本数据。它是一组 16 位的�
 
 此外，数组对象还继承了 `Array.prototype` 的一些操作数组的便捷方法。例如，[`indexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)（搜索数组中的一个值）或 [`push()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push)（向数组中添加一个元素），等等。这使得数组是表示列表或集合的最优选择。
 
-[类型数组 (Typed Arrays)](/en-US/docs/Web/JavaScript/Typed_arrays) 是 ECMAScript 2015 中新定义的 JavaScript 内建对象，提供了一个基本的二进制数据缓冲区的类数组视图。下面的表格能帮助你找到对等的 C 语言数据类型：
+[类型数组 (Typed Arrays)](/zh-CN/docs/Web/JavaScript/Typed_arrays) 是 ECMAScript 2015 中新定义的 JavaScript 内建对象，提供了一个基本的二进制数据缓冲区的类数组视图。下面的表格能帮助你找到对等的 C 语言数据类型：
 
 | 类型                                         | 取值范围                                       | 占用字节数 | 描述                                                                                 | Web IDL 类型            | 对等的 C 语言类型                      |
 | --------------------------------- | --------------------------------- | ------------ | ----------------------------------------------------------- | ---------------------- | --------------------------------- |

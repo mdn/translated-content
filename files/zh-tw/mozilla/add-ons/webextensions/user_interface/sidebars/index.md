@@ -1,9 +1,6 @@
 ---
 title: 側邊欄
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
-tags:
-  - 擴充套件
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
 ---
 {{AddonSidebar}}
 
@@ -34,7 +31,7 @@ browser.windows.getCurrent({populate: true}).then((windowInfo) => {
 
 ## 指定側邊欄
 
-要指定側邊欄，在 manifest.json 裡透過 [`sidebar_action`](/en-US/Add-ons/WebExtensions/manifest.json/sidebar_action) 鍵定義文件、標題以及圖示：
+要指定側邊欄，在 manifest.json 裡透過 [`sidebar_action`](/zh-TW/Add-ons/WebExtensions/manifest.json/sidebar_action) 鍵定義文件、標題以及圖示：
 
 ```json
 "sidebar_action": {

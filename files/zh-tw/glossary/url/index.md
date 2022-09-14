@@ -1,12 +1,6 @@
 ---
 title: URL
 slug: Glossary/URL
-tags:
-  - URL
-  - l10n:priority
-  - 術語表
-  - 鏈接
-translation_of: Glossary/URL
 ---
 **統一資源定位器** (**URL**) 是一個在互聯網上查找指定資源(例如網頁，圖片或視頻)位置的文本字符串。
 
@@ -22,7 +16,7 @@ URLs 同樣可以用於文件傳輸({{Glossary("FTP")}}) , 郵件 ({{Glossary("S
 
 ### 學習其他
 
-- [Understanding URLs and their structure](/en-US/Learn/Understanding_URLs)
+- [Understanding URLs and their structure](/zh-TW/Learn/Understanding_URLs)
 
 ### Specification
 

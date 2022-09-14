@@ -1,7 +1,6 @@
 ---
 title: 'Express 教學 6: 使用表單'
 slug: Learn/Server-side/Express_Nodejs/forms
-translation_of: Learn/Server-side/Express_Nodejs/forms
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
 
@@ -66,15 +65,15 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 
 如上圖所示，構成處理代碼所需要做的主要是：
 
-1.  在用戶第一次請求時顯示默認表單。
+1. 在用戶第一次請求時顯示默認表單。
 
     - 表單可能包含空白字段（例如，如果您正在創建新記錄），或者可能預先填充了初始值（例如，如果您要更改記錄，或者俱有有用的默認初始值）。
 
-2.  接收用戶提交的數據，通常是在 HTTP `POST`請求中。
-3.  驗證並清理數據。
-4.  如果任何數據無效，請重新顯示表單 - 這次使用用戶填寫的任何值，和問題字段的錯誤消息。
-5.  如果所有數據都有效，請執行所需的操作（例如，將數據保存在數據庫中，發送通知電子郵件，返回搜索結果，上傳文件等）
-6.  完成所有操作之後，將用戶重定向到另一個頁面。
+2. 接收用戶提交的數據，通常是在 HTTP `POST`請求中。
+3. 驗證並清理數據。
+4. 如果任何數據無效，請重新顯示表單 - 這次使用用戶填寫的任何值，和問題字段的錯誤消息。
+5. 如果所有數據都有效，請執行所需的操作（例如，將數據保存在數據庫中，發送通知電子郵件，返回搜索結果，上傳文件等）
+6. 完成所有操作之後，將用戶重定向到另一個頁面。
 
 表格處理代碼，通常使用 `GET`路由，以實現表單的初始顯示，以及 `POST`路由到同一路徑，以處理表單數據的驗證和處理。這是將在本教程中使用的方法！
 
@@ -87,7 +86,7 @@ Express 本身不提供表單處理操作的任何特定支持，但它可以使
 - 驗證檢查輸入的值，適用於每個字段（範圍，格式等），並且已為所有必填字段提供了值。
 - 數據中的字符，可能用於將惡意內容送到服務器，為其進行清理刪除/替換。
 
-在本教程中，我們將使用流行的 [express-validator ](https://www.npmjs.com/package/express-validator)模塊，來執行表單數據的驗證和清理。
+在本教程中，我們將使用流行的 [express-validator](https://www.npmjs.com/package/express-validator) 模塊，來執行表單數據的驗證和清理。
 
 #### 安裝
 
@@ -135,7 +134,7 @@ const { sanitizeBody } = require('express-validator/filter');
   sanitizeBody('date').toDate(),
   ```
 
-- [`validationResult(req)`](https://github.com/ctavan/express-validator#validationresultreq): 運行驗證，以 `validation `驗證結果對象的形式，提供錯誤。這是在單獨的回調中調用的，如下所示：
+- [`validationResult(req)`](https://github.com/ctavan/express-validator#validationresultreq): 運行驗證，以 `validation` 驗證結果對象的形式，提供錯誤。這是在單獨的回調中調用的，如下所示：
 
   ```js
   (req, res, next) => {
@@ -164,7 +163,7 @@ const { sanitizeBody } = require('express-validator/filter');
 
 - 在其相關對象尚不存在時，創建對象（例如，尚未定義作者對象的書）。
 
-- 刪除另一個對象仍在使用的對象（例如，刪除仍有書本 `Book `使用的種類 `Genre`）。
+- 刪除另一個對象仍在使用的對象（例如，刪除仍有書本 `Book` 使用的種類 `Genre`）。
 
 在這個項目，我們為了簡化實作，將聲明表單只能：
 
@@ -193,12 +192,12 @@ router.post('/genre/create', genre_controller.genre_create_post);
 
 以下子文件，將帶我們完成向示例應用程序添加所需表單的過程。在進入下一個文件之前，您需要依次閱讀並解決每個問題。
 
-1.  [創建種類表單](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_genre_form) — 定義我們的頁面以創建種類對象 `Genre `。
-2.  [創建作者表單](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form) — 定義用於創建作者對象 `Author `的頁面。
-3.  [創建書本表單](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_book_form) — 定義頁面/表單以創建書本對象 `Book` 。
-4.  [創建書本實例表單](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form) — 定義頁面/表單以創建書本實例對象 `BookInstance` 。
-5.  [刪除作者表單 ](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form)— 定義要刪除作者對象 `Author `的頁面。
-6.  [更新書本表單](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form) — 定義頁面以更新書本對象 `Book` 。
+1. [創建種類表單](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Create_genre_form) — 定義我們的頁面以創建種類對象 `Genre`。
+2. [創建作者表單](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form) — 定義用於創建作者對象 `Author` 的頁面。
+3. [創建書本表單](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Create_book_form) — 定義頁面/表單以創建書本對象 `Book` 。
+4. [創建書本實例表單](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form) — 定義頁面/表單以創建書本實例對象 `BookInstance` 。
+5. [刪除作者表單](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form) — 定義要刪除作者對象 `Author`的頁面。
+6. [更新書本表單](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form) — 定義頁面以更新書本對象 `Book` 。
 
 ## 挑戰自我
 
@@ -235,12 +234,12 @@ Express, node, 與 NPM 上面的第三方套件，提供你需要的每樣東西
 
 ## 本教程連結
 
-- [Express/Node introduction](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)
+- [Express/Node introduction](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
+- [Setting up a Node (Express) development environment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)
+- [Express Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
+- [Express Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
+- [Express Tutorial Part 3: Using a Database (with Mongoose)](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose)
+- [Express Tutorial Part 4: Routes and controllers](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)
+- [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms)
+- [Express Tutorial Part 7: Deploying to production](/zh-TW/docs/Learn/Server-side/Express_Nodejs/deployment)

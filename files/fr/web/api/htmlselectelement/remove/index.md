@@ -46,16 +46,11 @@ sel.remove(1);
 
 ## Spécifications
 
-| Spécification                                                                                                        | Status                           | Comment                                                |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', '#dom-select-remove', 'HTMLSelectElement.remove()')}}             | {{Spec2('HTML WHATWG')}} |                                                        |
-| {{SpecName('HTML5 W3C', 'forms.html#dom-select-remove', 'HTMLSelectElement.remove()')}} | {{Spec2('HTML5 W3C')}}     | Is a snapshot of {{SpecName("HTML WHATWG")}}. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-33404570', 'HTMLSelectElement.remove()')}}         | {{Spec2('DOM2 HTML')}}     |                                                        |
-| {{SpecName('DOM1', 'level-one-html.html#ID-33404570', 'HTMLSelectElement.remove()')}}     | {{Spec2('DOM1')}}         | Initial definition.                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLSelectElement.remove")}}
+{{Compat}}
 
 ## Voir aussi
 

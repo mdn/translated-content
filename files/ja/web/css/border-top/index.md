@@ -1,14 +1,6 @@
 ---
 title: border-top
 slug: Web/CSS/border-top
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border-top
-translation_of: Web/CSS/border-top
 ---
 {{CSSRef}}
 

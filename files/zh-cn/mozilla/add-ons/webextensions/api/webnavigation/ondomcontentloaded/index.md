@@ -1,16 +1,10 @@
 ---
 title: webNavigation.onDOMContentLoaded
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onDOMContentLoaded
-tags:
-  - API
-  - onDOMContentLoaded
-  - webNavigation
-  - webNavigation.onDOMContentLoaded
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onDOMContentLoaded
 ---
 {{AddonSidebar()}}
 
-在页面中触发[DOMContentLoaded](/en-US/docs/Web/Events/DOMContentLoaded) 事件时触发。此时，文档被加载和解析，并且 DOM 被完全构造，但链接的资源（例如图像，样式表和子框架（subframes））可能尚未被加载。
+在页面中触发[DOMContentLoaded](/zh-CN/docs/Web/Events/DOMContentLoaded) 事件时触发。此时，文档被加载和解析，并且 DOM 被完全构造，但链接的资源（例如图像，样式表和子框架（subframes））可能尚未被加载。
 
 ## Syntax
 
@@ -57,7 +51,7 @@ browser.webNavigation.onDOMContentLoaded.hasListener(listener)
 - `processId`
   - : `integer`. The ID of the process in which this tab is being rendered.
 - `frameId`
-  - : `integer`. Frame in which the navigation is occurring. 0 indicates that navigation happens in the tab's top-level browsing context, not in a nested [iframe](/en-US/docs/Web/HTML/Element/iframe). A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.
+  - : `integer`. Frame in which the navigation is occurring. 0 indicates that navigation happens in the tab's top-level browsing context, not in a nested [iframe](/zh-CN/docs/Web/HTML/Element/iframe). A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.
 - `timeStamp`
   - : `number`. The time at which `DOMContentLoaded` was fired, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
 
@@ -91,7 +85,8 @@ browser.webNavigation.onDOMContentLoaded.addListener(logOnDOMContentLoaded, filt
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -118,4 +113,4 @@ browser.webNavigation.onDOMContentLoaded.addListener(logOnDOMContentLoaded, filt
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

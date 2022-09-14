@@ -363,10 +363,6 @@ Pour [`<view>`](/fr/docs/Web/SVG/Element/view), `preserveAspectRatio` indique si
   </tbody>
 </table>
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                                        | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("Filters 1.0", "#element-attrdef-feimage-preserveaspectratio", "preserveAspectRatio")}} | {{Spec2('Filters 1.0')}} |                     |
-| {{SpecName("SVG2", "coords.html#PreserveAspectRatioAttribute", "preserveAspectRatio")}}                 | {{Spec2("SVG2")}}         |                     |
-| {{SpecName("SVG1.1", "coords.html#PreserveAspectRatioAttribute", "preserveAspectRatio")}}             | {{Spec2("SVG1.1")}}         | Définition initiale |
+{{Specifications}}

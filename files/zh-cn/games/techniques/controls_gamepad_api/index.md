@@ -1,7 +1,6 @@
 ---
 title: 使用 Gamepad API 实现控制
 slug: Games/Techniques/Controls_Gamepad_API
-translation_of: Games/Techniques/Controls_Gamepad_API
 ---
 {{GamesSidebar}}
 
@@ -9,7 +8,7 @@ translation_of: Games/Techniques/Controls_Gamepad_API
 
 ## 网页游戏的控制
 
-在历史上，在连接主机 (console) 的电视上玩游戏和在电脑 (PC) 上玩游戏是两种完全不一样的体验，最大的区别就是它们的控制方式。后来，额外的驱动程序和插件让我们能够使用主机控制器来游玩电脑端的游戏--不论是本地游戏，还是运行在浏览器中的游戏。 到现在的 HTML5 时代，我们终于有了 [Gamepad API](/en-US/docs/Web/API/Gamepad_API) ，让我们能够在不安装任何插件的情况下，可以使用控制器来游玩基于浏览器的游戏。Gamepad API 通过提供一个接口公开按钮的按下和坐标的变化来实现这一点，在 JavaScript 中我们可以用这些变化来处理输入。这对于网页游戏来说是非常棒的特性。
+在历史上，在连接主机 (console) 的电视上玩游戏和在电脑 (PC) 上玩游戏是两种完全不一样的体验，最大的区别就是它们的控制方式。后来，额外的驱动程序和插件让我们能够使用主机控制器来游玩电脑端的游戏--不论是本地游戏，还是运行在浏览器中的游戏。 到现在的 HTML5 时代，我们终于有了 [Gamepad API](/zh-CN/docs/Web/API/Gamepad_API) ，让我们能够在不安装任何插件的情况下，可以使用控制器来游玩基于浏览器的游戏。Gamepad API 通过提供一个接口公开按钮的按下和坐标的变化来实现这一点，在 JavaScript 中我们可以用这些变化来处理输入。这对于网页游戏来说是非常棒的特性。
 
 ## API 状态与浏览器支持
 
@@ -203,10 +202,12 @@ if(gamepadAPI.turbo) {
 
 控制器放在一边不活动时轴值也可能有一定波动 (get dusty) ，这也就是说通过判断等于绝对的 -1 或 1 来可能是会有问题的。因此对此最好是给轴值设定一个阈值来触发生效。比如说，“冰箱坦克”仅会在 `X` 值大于 `0.5` 的时候向右转：
 
-    if(gamepadAPI.axesStatus[0].x > 0.5) {
-      this.player.angle += 3;
-      this.turret.angle += 3;
-    }
+```js
+if(gamepadAPI.axesStatus[0].x > 0.5) {
+  this.player.angle += 3;
+  this.turret.angle += 3;
+}
+```
 
 即使我们稍微误推摇杆或者摇杆没有弹回原始位置，“冰箱坦克”也不会意外转向。
 
@@ -222,10 +223,12 @@ if(gamepadAPI.turbo) {
 
 布局类型现在是一个可枚举的对象而不是字符串：
 
-    enum GamepadMappingType {
-        "",
-        "standard"
-    };
+```
+enum GamepadMappingType {
+    "",
+    "standard"
+};
+```
 
 此枚举中定义了已知的控制器映射集。目前只有 `standard` 布局可用，但是未来可能会有新的布局。如果布局未知，那么将会是空字符串。
 

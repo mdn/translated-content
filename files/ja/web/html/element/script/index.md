@@ -1,20 +1,6 @@
 ---
 title: '<script>: スクリプト要素'
 slug: Web/HTML/Element/script
-tags:
-  - 要素
-  - HTML
-  - HTML スクリプト
-  - HTML:フローコンテンツ
-  - HTML:メタデータコンテンツ
-  - HTML:スクリプト対応要素
-  - HTML:記述コンテンツ
-  - リファレンス
-  - Script
-  - ウェブ
-  - タグ
-browser-compat: html.elements.script
-translation_of: Web/HTML/Element/script
 ---
 
 {{HTMLRef}}

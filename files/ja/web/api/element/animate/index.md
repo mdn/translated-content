@@ -1,15 +1,6 @@
 ---
 title: Element.animate()
 slug: Web/API/Element/animate
-tags:
-  - API
-  - アニメーション
-  - Element
-  - メソッド
-  - リファレンス
-  - ウェブアニメーション
-browser-compat: api.Element.animate
-translation_of: Web/API/Element/animate
 ---
 {{APIRef('Web Animations')}}
 

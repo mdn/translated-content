@@ -1,14 +1,6 @@
 ---
 title: CSS 段組みレイアウト
 slug: Web/CSS/CSS_Columns
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - ガイド
-  - レイアウト
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Columns
 ---
 {{CSSRef("CSS3 Multicol")}}
 

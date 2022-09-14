@@ -1,14 +1,6 @@
 ---
 title: WeakMap() constructor
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - WeakMap
-  - Polyfill
-browser-compat: javascript.builtins.WeakMap.WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
 ---
 
 {{JSRef}}

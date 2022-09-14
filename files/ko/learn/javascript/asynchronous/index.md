@@ -1,21 +1,6 @@
 ---
 title: Asynchronous JavaScript
 slug: Learn/JavaScript/Asynchronous
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Landing
-  - Promises
-  - async
-  - asynchronous
-  - await
-  - callbacks
-  - requestAnimationFrame
-  - setInterval
-  - setTimeout
-translation_of: Learn/JavaScript/Asynchronous
 ---
 {{LearnSidebar}}
 
@@ -34,7 +19,6 @@ translation_of: Learn/JavaScript/Asynchronous
 Asynchronous Javascript는 상당히 고급 주제에 속하고, 시도해보기 전에 [JavaScript 첫걸음](/ko/docs/Learn/JavaScript/First_steps)과 [JavaScript 구성요소](/ko/docs/Learn/JavaScript/Building_blocks) 과정을 거치는것이 좋습니다.
 
 > **참고:** 만약 파일을 만들 수 없는 컴퓨터/테블릿/기타 장치를 사용하고 있다면, [JSBin](https://jsbin.com/)이나 [Glitch](https://glitch.com)와 같은 온라인 코딩 프로그램에서 (대부분의) 예제 코드를 사용해볼 수 있습니다.
-
 
 ## 가이드
 

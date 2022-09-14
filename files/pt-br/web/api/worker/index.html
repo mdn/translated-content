@@ -60,7 +60,6 @@ translation_of: Web/API/Worker
  Também é disponibilizado via <code><a href="/pt-BR/docs/Web/API/WindowEventHandlers/onrejectionhandled">onrejectionhandled</a>.</code></dd>
  <dt><code><a href="pt-BR/docs/Web/API/Window/unhandledrejection_event">unhandledrejection</a></code></dt>
  <dd>Dispara sempre que um {{jsxref ("Promise")}} rejeita, independentemente de haver ou não um manipulador para capturar a rejeição. Também disponível por meio da propriedade do manipulador de eventos <code><a href="/pt-BR/docs/Web/API/WindowEventHandlers/onunhandledrejection">onunhandledrejection</a>.</code></dd>
- <dd>.</dd>
 </dl>
 
 <h2 id="Exemplos">Exemplos</h2>
@@ -104,57 +103,7 @@ first.onchange = function() {
 
 <p>Support varies for different types of workers. See each worker type's page for specifics.</p>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4</td>
-   <td>3.5</td>
-   <td>10.0</td>
-   <td>10.6</td>
-   <td>4</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.4</td>
-   <td>3.5</td>
-   <td>1.0.1</td>
-   <td>10.0</td>
-   <td>11.5</td>
-   <td>5.1</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Worker")}}
 
 <h2 id="See_also">See also</h2>
 

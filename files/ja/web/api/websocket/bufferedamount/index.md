@@ -1,14 +1,6 @@
 ---
 title: WebSocket.bufferedAmount
 slug: Web/API/WebSocket/bufferedAmount
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - Web API
-  - WebSocket
-browser-compat: api.WebSocket.bufferedAmount
-translation_of: Web/API/WebSocket/bufferedAmount
 ---
 {{APIRef("Web Sockets API")}}
 

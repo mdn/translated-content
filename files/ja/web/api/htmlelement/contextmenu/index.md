@@ -1,17 +1,6 @@
 ---
 title: HTMLElement.contextMenu
 slug: Web/API/HTMLElement/contextMenu
-tags:
-  - API
-  - 非推奨
-  - Element
-  - HTML
-  - HTML DOM
-  - プロパティ
-  - リファレンス
-  - UX
-browser-compat: api.HTMLElement.contextMenu
-translation_of: Web/API/HTMLElement/contextMenu
 ---
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}
 

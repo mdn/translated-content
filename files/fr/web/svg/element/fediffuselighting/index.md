@@ -107,14 +107,11 @@ Rendu en direct:
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                           | Commentaire                            |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------- |
-| {{SpecName('Filters 1.0', '#feDiffuseLightingElement', '&lt;feDiffuseLighting&gt;')}}             | {{Spec2('Filters 1.0')}} | Déprécie l'attribut `kernelUnitLength` |
-| {{SpecName('SVG1.1', 'filters.html#feDiffuseLightingElement', '&lt;feDiffuseLighting&gt;')}} | {{Spec2('SVG1.1')}}         | Définition initiale                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.feDiffuseLighting")}}
+{{Compat}}
 
 ## Voir aussi
 

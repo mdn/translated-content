@@ -1,21 +1,6 @@
 ---
 title: HTMLImageElement.sizes
 slug: Web/API/HTMLImageElement/sizes
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - プロパティ
-  - リファレンス
-  - Responsive Design
-  - Responsive Images
-  - size
-  - sizes
-  - width
-browser-compat: api.HTMLImageElement.sizes
-translation_of: Web/API/HTMLImageElement/sizes
 ---
 {{APIRef("HTML DOM")}}
 

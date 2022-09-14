@@ -4,6 +4,7 @@ slug: Glossary/Grid_Lines
 translation_of: Glossary/Grid_Lines
 ---
 Las **Lineas de Cuadricula** se crean cuando defines las {{glossary("tracks", "Pistas de Cuadricula")}} esto sucede dentro de un contenedor que este usando [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout).
+
 En el siguiente ejemplo hay una cuadricula con tres pistas de columna y dos pistas de filas. Esto nos da **4 Lineas de Columnas** y **3 Lineas de Fila**.
 
 ```css hidden

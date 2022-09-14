@@ -1,7 +1,6 @@
 ---
 title: Delete Author form
 slug: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
-translation_of: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
 ---
 此子文檔展示，如何定義頁面以刪除 `Author`對象。
 
@@ -159,5 +158,5 @@ If the author does have books, then you'll be presented with a view like the fol
 
 ## Next steps
 
-- Return to [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms).
-- Proceed to the final subarticle of part 6: [Update Book form](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form).
+- Return to [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms).
+- Proceed to the final subarticle of part 6: [Update Book form](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form).

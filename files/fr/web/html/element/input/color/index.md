@@ -89,7 +89,7 @@ Le fragment de code HTML utilisé est relativement simple. On utilise quelques p
 
 ### JavaScript
 
-Tout d'abord, on établit certains variables : une pour la couleur du sélecteur et une autre couleur pour la couleur par défaut. On ajoute un gestionnaire {{event("load")}} afin de lancer les actions de démarrage lorsque la page est chargée.
+Tout d'abord, on établit certains variables : une pour la couleur du sélecteur et une autre couleur pour la couleur par défaut. On ajoute un gestionnaire [`load`](/fr//docs/Web/API/Window/load_event) afin de lancer les actions de démarrage lorsque la page est chargée.
 
 ```js
 var colorWell
@@ -184,12 +184,8 @@ Cela permet de modifier la couleur de chaque bloc {{HTMLElement("p")}} du docume
 
 ## Spécifications
 
-| Spécification                                                                | État                             | Commentaires         |
-| ---------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', '#color-state-(type=color)')}} | {{Spec2('HTML WHATWG')}} |                      |
-| {{SpecName('HTML5 W3C', 'forms.html#the-input-element')}} | {{Spec2('HTML5 W3C')}}     |                      |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.4')}}     | {{Spec2('HTML4.01')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.input.input-color")}}
+{{Compat}}

@@ -96,11 +96,11 @@ if (typeof document.addEventListener === "undefined" ||
 
 <h2 id="Visão_geral_das_propriedades">Visão geral das propriedades</h2>
 
-<h3 id="document.hidden_Somented_leitura"><code>document.hidden</code> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Somented leitura </span></h3>
+<h3 id="document.hidden_Somented_leitura"><code>document.hidden</code> Somented leitura</h3>
 
 <p>Retorna <code>true</code> se a página está escondida para o usuário, caso contrário, retorna <code>false</code>.</p>
 
-<h3 id="document.visibilityState_Somente_leitura"><code>document.visibilityState</code> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Somente leitura </span></h3>
+<h3 id="document.visibilityState_Somente_leitura"><code>document.visibilityState</code> Somente leitura</h3>
 
 <p>É a <code>cadeia de caracteres que denota a visibilidade do documento</code>. Possíveis valores:</p>
 
@@ -148,58 +148,7 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidade</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>13 {{property_prefix("webkit")}}<br>
-    33</td>
-   <td>{{CompatGeckoDesktop(10)}} {{property_prefix("moz")}}<br>
-    {{CompatGeckoDesktop(18)}}</td>
-   <td>10</td>
-   <td>12.10[1]</td>
-   <td>7</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidade</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>4.4 {{property_prefix("webkit")}}</td>
-   <td>{{CompatGeckoMobile(10)}} {{property_prefix("moz")}}<br>
-    {{CompatGeckoMobile(18)}}</td>
-   <td>10</td>
-   <td>12.10[1]</td>
-   <td>7</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Não ativa o evento <code><a href="/en-US/docs/Web/Events/visibilitychange">visibilitychange</a></code> quando a janela do navegador é minimizada, nem configura <code>hidden</code> como <code>true</code>.</p>
+{{Compat("api.Document.visibilityState")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

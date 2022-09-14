@@ -1,11 +1,6 @@
 ---
 title: Text.splitText()
 slug: Web/API/Text/splitText
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Text.splitText
-translation_of: Web/API/Text/splitText
 ---
 {{APIRef("DOM")}}
 

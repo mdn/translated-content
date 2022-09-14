@@ -1,14 +1,6 @@
 ---
 title: background-size
 slug: Web/CSS/background-size
-tags:
-  - CSS
-  - CSS 背景
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.background-size
-translation_of: Web/CSS/background-size
 ---
 {{CSSRef}}
 

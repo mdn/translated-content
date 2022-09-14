@@ -1,7 +1,6 @@
 ---
 title: 署名和版权许可协议
 slug: MDN/Writing_guidelines/Attrib_copyright_license
-translation_of: MDN/Writing_guidelines/Attrib_copyright_license
 ---
 {{MDNSidebar}}
 
@@ -17,13 +16,13 @@ MDN 的内容是免费的，并在开源协议下提供。
 
 你复用的内容是在与内容相同的许可协议（CC-BY-SA v2.5 及以上的版本）下发布的。在复用 MDN Web 文档的内容时，你需要确保对属于“Mozilla 贡献者”的内容进行署名。包括源文档的超链接（在线内容）或 URL（印刷内容）。以*本*文为例，你可以这样署名：
 
-> 归属于 [Mozilla 贡献者](/en-US/docs/MDN/About/contributors.txt)的[署名和版权许可协议](MDN/Writing_guidelines/Attrib_copyright_license)在[知识共享 署名-相同方式共享许可 2.5](https://creativecommons.org/licenses/by-sa/2.5/) 下提供。
+> 归属于 [Mozilla 贡献者](/zh-CN/docs/MDN/About/contributors.txt)的[署名和版权许可协议](MDN/Writing_guidelines/Attrib_copyright_license)在[知识共享 署名-相同方式共享许可 2.5](https://creativecommons.org/licenses/by-sa/2.5/) 下提供。
 
 注意在示例当中，“Mozilla 贡献者”链接了被引用页面的历史记录。参见[署名的最佳实践](https://wiki.creativecommons.org/wiki/Marking/Users)以获取更为详细的信息。
 
 ### 代码示例
 
-2010 年 8 月 20 日或之后添加的代码示例都属于[公有领域](https://creativecommons.org/publicdomain/zero/1.0/) （[CC0](https://creativecommons.org/publicdomain/zero/1.0/)）。不需要有意添加许可信息。如果你需要的话，可以使用：“版权属于公有领域：https://creativecommons.org/publicdomain/zero/1.0/”
+2010 年 8 月 20 日或之后添加的代码示例都属于[公有领域](https://creativecommons.org/publicdomain/zero/1.0/) （[CC0](https://creativecommons.org/publicdomain/zero/1.0/)）。不需要有意添加许可信息。如果你需要的话，可以使用：“版权属于公有领域：<https://creativecommons.org/publicdomain/zero/1.0/>”
 
 2010 年 8 月 20 日之前的代码示例基于 [MIT license](https://opensource.org/licenses/mit-license.php)，你应该在 MIT 模板中插入以下署名信息：“© \<date of last wiki page revision> \<name of person who put it in the wiki>”
 

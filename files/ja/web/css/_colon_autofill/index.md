@@ -1,13 +1,6 @@
 ---
 title: ':autofill'
 slug: Web/CSS/:autofill
-tags:
-  - CSS
-  - 標準外
-  - リファレンス
-  - 擬似クラス
-browser-compat: css.selectors.autofill
-translation_of: Web/CSS/:autofill
 original_slug: Web/CSS/:-webkit-autofill
 ---
 {{CSSRef}}

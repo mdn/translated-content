@@ -55,13 +55,11 @@ translation_of: Web/API/CSSValue
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('DOM2 Style', 'css.html#CSS-CSSValue', 'CSSValue')}} | {{Spec2('DOM2 Style')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CSSValue")}}
+{{Compat}}
 
 ## Voir aussi
 

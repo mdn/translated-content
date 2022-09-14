@@ -1,7 +1,6 @@
 ---
 title: 如何撰写和引用一个词汇表中的条目
 slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
-translation_of: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 original_slug: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 ---
 {{MDNSidebar}}
@@ -24,7 +23,7 @@ MDN [术语表](/zh-CN/docs/Glossary) 是一个定义所有被用于文档和编
 
 使用“链接到词汇表条目”工具可以方便读者直接看到词汇条目中的定义，不需要读者跳转到词汇条目的页面。（更多内容请浏览如何使用 \\{{Glossary}} 宏插入词汇表条目的链接。）
 
-如果需要的话，你可以添加少量额外的段落，但是这很容易导致你写了一整篇文章的情况发生。写一个完整的文章很棒，但是请不要把它们整个放在词汇表中。如果你不确定这里是否适合放你的文章，你就要随时[在这里讨论](/en-US/docs/MDN/Community#Join_our_mailing_lists)。
+如果需要的话，你可以添加少量额外的段落，但是这很容易导致你写了一整篇文章的情况发生。写一个完整的文章很棒，但是请不要把它们整个放在词汇表中。如果你不确定这里是否适合放你的文章，你就要随时[在这里讨论](/zh-CN/docs/MDN/Community#Join_our_mailing_lists)。
 
 ### 第二步：扩展链接
 
@@ -52,10 +51,10 @@ MDN [术语表](/zh-CN/docs/Glossary) 是一个定义所有被用于文档和编
 
 我们以一个例子来说明。_signature_ 条目在至少三种不同的语境中具有不同的含义： _安全_、_函数_ 和 _电子邮件_。
 
-1.  [Glossary/Signature](/zh-CN/docs/Glossary/Signature) 页面是使用了 [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs) 宏的消歧页面；
-2.  [Glossary/Signature/Security](/zh-CN/docs/Glossary/Signature/Security) 页面是定义安全上下文中签名的条目页面；
-3.  [Glossary/Signature/Function](/zh-CN/docs/Glossary/Signature/Function) 页面是定义函数签名的条目页面；
-4.  [Glossary/Signature/Email](/zh-CN/docs/Glossary/Signature/Email) 页面是定义电子邮件签名的条目页面。
+1. [Glossary/Signature](/zh-CN/docs/Glossary/Signature) 页面是使用了 [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs) 宏的消歧页面；
+2. [Glossary/Signature/Security](/zh-CN/docs/Glossary/Signature/Security) 页面是定义安全上下文中签名的条目页面；
+3. [Glossary/Signature/Function](/zh-CN/docs/Glossary/Signature/Function) 页面是定义函数签名的条目页面；
+4. [Glossary/Signature/Email](/zh-CN/docs/Glossary/Signature/Email) 页面是定义电子邮件签名的条目页面。
 
 ## 如何使用 \\{{Glossary}} 宏
 

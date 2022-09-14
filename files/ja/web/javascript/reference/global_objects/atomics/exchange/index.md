@@ -1,13 +1,6 @@
 ---
 title: Atomics.exchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
-tags:
-  - Atomics
-  - JavaScript
-  - メソッド
-  - 共有メモリー
-browser-compat: javascript.builtins.Atomics.exchange
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
 ---
 {{JSRef}}
 

@@ -1,14 +1,6 @@
 ---
 title: touch-action
 slug: Web/CSS/touch-action
-tags:
-  - CSS
-  - CSS プロパティ
-  - ポインターイベント
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.touch-action
-translation_of: Web/CSS/touch-action
 ---
 {{CSSRef}}
 
@@ -118,6 +110,6 @@ touch-action: unset;
 
 - {{cssxref("pointer-events","pointer-events")}}
 - {{domxref("Pointer_events", "ポインターイベント", "", 1)}}
-- WebKit Blog [More Responsive Tapping on iOS](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/ "Permanent Link: More Responsive Tapping on iOS")
+- WebKit Blog [More Responsive Tapping on iOS](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/)
 - Google Developers Blog [Making touch scrolling fast by default](https://developers.google.com/web/updates/2017/01/scrolling-intervention)
 - [スクロールスナップ](/ja/docs/Web/CSS/CSS_Scroll_Snap)

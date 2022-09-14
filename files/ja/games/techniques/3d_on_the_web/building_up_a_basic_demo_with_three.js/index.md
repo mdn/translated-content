@@ -1,19 +1,6 @@
 ---
 title: Three.js を使った基本的なデモの作成
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
-tags:
-  - 3D
-  - Animation
-  - Beginner
-  - Canvas
-  - Games
-  - Tutorial
-  - WebGL
-  - camera
-  - lighting
-  - rendering
-  - three.js
-translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
 ---
 {{GamesSidebar}}
 
@@ -50,7 +37,7 @@ Three.js で開発を始める上で、必要なものはあまりありませ�
 <script>
   const WIDTH = window.innerWidth;
   const HEIGHT = window.innerHeight;
-	/* すべての JavaScript コードをここに置きます */
+  /* すべての JavaScript コードをここに置きます */
 </script>
 </body>
 </html>
@@ -196,7 +183,7 @@ const torus = new THREE.Mesh(torusGeometry, phongMaterial);
 scene.add(torus);
 ```
 
-TorusGeometry()` メソッドの引数で定義します。引数は `radius`, `tube diameter`, `radial segment count`, `tubular segment count` です。フォンの素材は箱のシンプルな基本素材よりも光沢があるように見えますが、今のところトーラスはただの黒にしか見えません。
+`TorusGeometry()` メソッドの引数で定義します。引数は `radius`, `tube diameter`, `radial segment count`, `tubular segment count` です。フォンの素材は箱のシンプルな基本素材よりも光沢があるように見えますが、今のところトーラスはただの黒にしか見えません。
 
 もっと楽しい定義済み図形を選べます。もう少し遊んでみましょう。トーラスを定義している行の下に、次の行を追加してください。
 

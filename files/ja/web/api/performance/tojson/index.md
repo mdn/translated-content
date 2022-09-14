@@ -1,13 +1,6 @@
 ---
 title: performance.toJSON()
 slug: Web/API/Performance/toJSON
-tags:
-  - API
-  - メソッド
-  - パフォーマンス
-  - リファレンス
-browser-compat: api.Performance.toJSON
-translation_of: Web/API/Performance/toJSON
 ---
 {{APIRef("High Resolution Timing")}}
 

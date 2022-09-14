@@ -1,19 +1,6 @@
 ---
 title: HTMLImageElement.width
 slug: Web/API/HTMLImageElement/width
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - 画像
-  - プロパティ
-  - リファレンス
-  - size
-  - width
-browser-compat: api.HTMLImageElement.width
-translation_of: Web/API/HTMLImageElement/width
 ---
 {{APIRef("HTML DOM")}}
 

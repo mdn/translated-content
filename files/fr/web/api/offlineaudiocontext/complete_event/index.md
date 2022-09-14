@@ -8,8 +8,6 @@ L'événement **complete** est déclenché lorsque le rendu d'un {{domxref("Offl
 
 ## Informations générales
 
-- Spécification
-  - : {{SpecName('Web Audio API', '#OfflineAudioCompletionEvent-section', 'OfflineAudioCompletionEvent')}}
 - Interface
   - : {{domxref("OfflineAudioCompletionEvent")}}
 - Propagation
@@ -37,9 +35,7 @@ _Aucun_
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                               | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#OfflineAudioCompletionEvent-section', 'OfflineAudioCompletionEvent')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
 ## Voir aussi
 

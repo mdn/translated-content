@@ -1,16 +1,6 @@
 ---
 title: Command line crash course
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
-tags:
-  - CLI
-  - npm
-  - 命令行
-  - 学习
-  - 客户端
-  - 工具
-  - 开发者
-  - 终端
-translation_of: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
@@ -21,9 +11,9 @@ translation_of: Learn/Tools_and_testing/Understanding_client-side_tools/Command_
     <tr>
       <th scope="row">先决条件：</th>
       <td>
-        熟悉核心的 <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, 和
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言。
+        熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
+        <a href="/zh-CN/docs/Learn/CSS">CSS</a>, 和
+        <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言。
       </td>
     </tr>
     <tr>
@@ -213,7 +203,7 @@ ls -l
 
 在您创建的某个地方的测试目录中使用它们，这样您就不会意外地删除任何重要的内容，使用下面的示例命令作为指导
 
-- `mkdir` —这将在您所在的当前目录中创建一个新目录，名称是您在命令名之后提供的。例如` mkdir my-awesome-website将创建一个新目录叫``my-awesome-website `.
+- `mkdir` —这将在您所在的当前目录中创建一个新目录，名称是您在命令名之后提供的。例如 `mkdir my-awesome-website` 将创建一个新目录叫 `my-awesome-website`。
 - `rmdir` —删除指定目录，但仅当它为空时。例如`rmdir my-awesome-website`
 
   将删除我们在上面创建的目录。如果您希望删除一个非空的目录 (并删除其中包含的所有内容)，则可以使用`-r` 选项（递归），但这很危险。确保以后在目录中不需要任何内容 ​​，因为它将永远消失。
@@ -227,7 +217,7 @@ ls -l
   `cp mdn-example.txt mdn-example.txt.bak`创建一个副本`mdn-example.txt` 叫做 `mdn-example.txt.bak`（当然，如果你愿意，你也可以叫它别的名字)。
 - `rm` —删除指定的文件。例如，`rm mdn-example.txt` 删除单个文件叫做 `mdn-example.txt`.请注意，此删除是永久性的，不能通过桌面用户界面上的回收站撤消。
 
-> **备注：** 许多终端命令允许您使用星号作为“通配符”字符，意思是“任何字符序列”。这允许您一次对可能大量的文件运行操作，所有这些文件都匹配指定的模式。作为一个例子，`rm mdn-*` 将删除所有文件开头`mdn-`. `rm mdn-*.bak` 会删除所有文件的开头`mdn- `结束 `.bak`.
+> **备注：** 许多终端命令允许您使用星号作为“通配符”字符，意思是“任何字符序列”。这允许您一次对可能大量的文件运行操作，所有这些文件都匹配指定的模式。作为一个例子，`rm mdn-*` 将删除所有文件开头`mdn-`. `rm mdn-*.bak` 会删除所有文件的开头`mdn-` 结束 `.bak`.
 
 ## 考虑终端有害吗？
 
@@ -277,11 +267,11 @@ ls | wc -l
 
 ## 一个稍微复杂一点的例子
 
-让我们看一些更复杂的东西。我们将首先尝试获取 MDN 的“获取”页面的内容 `curl` 命令 (可用于从 url 请求内容)[https://developer.mozilla.org/en-US/docs/Web/API/fetch](/en-US/docs/Web/API/fetch).
+让我们看一些更复杂的东西。我们将首先尝试获取 MDN 的“获取”页面的内容 `curl` 命令 (可用于从 url 请求内容)[https://developer.mozilla.org/en-US/docs/Web/API/fetch](/zh-CN/docs/Web/API/fetch).
 
-但是，这个 URL 是页面的旧位置。如果您在一个新的浏览器标签中输入它，您将 (最终) 被重定向到[https://developer.mozilla.org/enUS/docs/Web/API/fetch](/en-US/docs/Web/API/fetch).
+但是，这个 URL 是页面的旧位置。如果您在一个新的浏览器标签中输入它，您将 (最终) 被重定向到[https://developer.mozilla.org/enUS/docs/Web/API/fetch](/zh-CN/docs/Web/API/fetch).
 
-因此，如果您使用 curl 请求 https\://developer.mozilla.org/docs/Web/API/fetch，则不会得到输出。现在就试试：
+因此，如果您使用 curl 请求 `https://developer.mozilla.org/docs/Web/API/fetch`，则不会得到输出。现在就试试：
 
 ```bash
 curl https://developer.mozilla.org/en-US/docs/Web/API/fetch
@@ -516,8 +506,8 @@ printMe(myObj);
 
 ## In this module
 
-- [Client-side tooling overview](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)
-- [Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)
-- [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)
-- [Introducing a complete toolchain](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain)
-- [Deploying our app](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment)
+- [Client-side tooling overview](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)
+- [Command line crash course](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)
+- [Package management basics](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)
+- [Introducing a complete toolchain](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain)
+- [Deploying our app](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment)

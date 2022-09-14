@@ -1,18 +1,6 @@
 ---
 title: ':fullscreen'
 slug: Web/CSS/:fullscreen
-tags:
-  - CSS
-  - 全画面
-  - 全画面 API
-  - フルスクリーン API
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - fullscreen
-  - 画面
-browser-compat: css.selectors.fullscreen
-translation_of: Web/CSS/:fullscreen
 ---
 {{CSSRef}}
 

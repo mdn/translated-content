@@ -1,13 +1,6 @@
 ---
 title: 什么是 JavaScript？
 slug: Learn/JavaScript/First_steps/What_is_JavaScript
-tags:
-  - API
-  - JavaScript
-  - 初学者
-  - 核心
-  - 浏览器
-translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 ---
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 
@@ -28,7 +21,7 @@ translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 
 ## 广义的定义
 
-JavaScript 是一种脚本，一门编程语言，它可以在网页上实现复杂的功能，网页展现给你的不再是简单的静态信息，而是实时的内容更新，交互式的地图，2D/3D 动画，滚动播放的视频等等。JavaScript 怎能缺席。它是标准 Web 技术蛋糕的第三层，其中 [HTML ](/en-US/docs/Learn/HTML)和 [CSS ](/en-US/docs/Learn/CSS)我们已经在学习中心的其他部分进行了详细的讲解。
+JavaScript 是一种脚本，一门编程语言，它可以在网页上实现复杂的功能，网页展现给你的不再是简单的静态信息，而是实时的内容更新，交互式的地图，2D/3D 动画，滚动播放的视频等等。JavaScript 怎能缺席。它是标准 Web 技术蛋糕的第三层，其中 [HTML](/zh-CN/docs/Learn/HTML) 和 [CSS](/zh-CN/docs/Learn/CSS) 我们已经在学习中心的其他部分进行了详细的讲解。
 
 ![](cake.png)
 
@@ -160,9 +153,9 @@ API 通常分为两类。
 - {{domxref("Document_Object_Model","文档对象模型 API（DOM（Document Object Model）API）")}} 能通过创建、移除和修改 HTML，为页面动态应用新样式等手段来操作 HTML 和 CSS。比如当某个页面出现了一个弹窗，或者显示了一些新内容（像上文小 demo 中看到那样），这就是 DOM 在运行。
 - {{domxref("Geolocation","地理位置 API（Geolocation API）")}} 获取地理信息。这就是为什么 [谷歌地图](https://www.google.cn/maps) 可以找到你的位置，而且标示在地图上。
 - {{domxref("Canvas_API","画布（Canvas）")}} 和 {{domxref("WebGL_API","WebGL")}} API 可以创建生动的 2D 和 3D 图像。人们正运用这些 web 技术制作令人惊叹的作品。参见 [Chrome Experiments](https://www.chromeexperiments.com/webgl) 以及 [webglsamples](http://webglsamples.org/)。
-- 诸如 {{domxref("HTMLMediaElement")}} 和 {{domxref("WebRTC API", "WebRTC")}} 等 [影音类 API](/en-US/Apps/Fundamentals/Audio_and_video_delivery) 让你可以利用多媒体做一些非常有趣的事，比如在网页中直接播放音乐和影片，或用自己的网络摄像头获取录像，然后在其他人的电脑上展示（试用简易版 [截图 demo](http://chrisdavidmills.github.io/snapshot/) 以理解这个概念）。
+- 诸如 {{domxref("HTMLMediaElement")}} 和 {{domxref("WebRTC API", "WebRTC")}} 等 [影音类 API](/zh-CN/Apps/Fundamentals/Audio_and_video_delivery) 让你可以利用多媒体做一些非常有趣的事，比如在网页中直接播放音乐和影片，或用自己的网络摄像头获取录像，然后在其他人的电脑上展示（试用简易版 [截图 demo](http://chrisdavidmills.github.io/snapshot/) 以理解这个概念）。
 
-> **备注：** 上述很多演示都不能在旧浏览器中运行。推荐你在测试代码时使用诸如 Firefox, Chrome, Edge 或者 Opera 等现代浏览器。当代码即将交付生产环境时（也就是真实的客户即将使用真实的代码时），你还需要深入考虑 [跨平台测试](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing)。
+> **备注：** 上述很多演示都不能在旧浏览器中运行。推荐你在测试代码时使用诸如 Firefox, Chrome, Edge 或者 Opera 等现代浏览器。当代码即将交付生产环境时（也就是真实的客户即将使用真实的代码时），你还需要深入考虑 [跨平台测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)。
 
 **第三方 API** 并没有默认嵌入浏览器中，一般要从网上取得它们的代码和信息。比如：
 
@@ -240,9 +233,9 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
 
 ### 内部 JavaScript
 
-1.  首先，下载示例文件 [apply-javascript.html](https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript.html)。放在一个好记的文件夹里。
-2.  分别在浏览器和文本编辑器中打开这个文件。你会看到这个 HTML 文件创建了一个简单的网页，其中有一个可点击按钮。
-3.  然后转到文本编辑器，在 `</head>` 标签结束前插入以下代码：
+1. 首先，下载示例文件 [apply-javascript.html](https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript.html)。放在一个好记的文件夹里。
+2. 分别在浏览器和文本编辑器中打开这个文件。你会看到这个 HTML 文件创建了一个简单的网页，其中有一个可点击按钮。
+3. 然后转到文本编辑器，在 `</head>` 标签结束前插入以下代码：
 
     ```html
     <script>
@@ -252,7 +245,7 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
     </script>
     ```
 
-4.  下面，在 {{htmlelement("script")}} 元素中添加一些 JavaScript 代码，这个页面就能做一些更有趣的事。在“/ /在此编写 JavaScript 代码”一行下方添加以下代码：
+4. 下面，在 {{htmlelement("script")}} 元素中添加一些 JavaScript 代码，这个页面就能做一些更有趣的事。在“/ /在此编写 JavaScript 代码”一行下方添加以下代码：
 
     ```js
     document.addEventListener("DOMContentLoaded", function() {
@@ -270,7 +263,7 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
     });
     ```
 
-5.  保存文件并刷新浏览器，然后你会发现，点击按钮文档下方将会添加一个新段落。
+5. 保存文件并刷新浏览器，然后你会发现，点击按钮文档下方将会添加一个新段落。
 
 > **备注：** 如果示例不能正常工作，请依次检查所有步骤，并保证没有纰漏。原始文件是否以 `.html` 为扩展名保存到本地了？`</body>` 标签前是否添加了 {{htmlelement("script")}} 元素？JavaScript 代码输入是否正确？ **JavaScript 是区分大小写的，而且非常精确，所以你需要准确无误地输入所示的句法，否则可能会出错。**
 
@@ -280,14 +273,14 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
 
 这很不错，但是能不能把 JavaScript 代码放置在一个外部文件中呢？现在我们来研究一下。
 
-1.  首先，在刚才的 HTML 文件所在的目录下创建一个名为 `script.js` 的新文件。请确保扩展名为 `.js`，只有这样才能被识别为 JavaScript 代码。
-2.  将 {{htmlelement("script")}} 元素替换为：
+1. 首先，在刚才的 HTML 文件所在的目录下创建一个名为 `script.js` 的新文件。请确保扩展名为 `.js`，只有这样才能被识别为 JavaScript 代码。
+2. 将 {{htmlelement("script")}} 元素替换为：
 
     ```html
     <script src="script.js" async></script>
     ```
 
-3.  在 `script.js` 文件中，添加下面的脚本：
+3. 在 `script.js` 文件中，添加下面的脚本：
 
     ```js
     function createParagraph() {
@@ -303,7 +296,7 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
     }
     ```
 
-4.  保存并刷新浏览器，你会发现二者完全一样。但是现在我们把 JavaScript 写进了一个外部文件。这样做一般会使代码更加有序，更易于复用，且没有了脚本的混合，HTML 也会更加易读，因此这是个好的习惯。
+4. 保存并刷新浏览器，你会发现二者完全一样。但是现在我们把 JavaScript 写进了一个外部文件。这样做一般会使代码更加有序，更易于复用，且没有了脚本的混合，HTML 也会更加易读，因此这是个好的习惯。
 
 > **备注：** 你可以在 GitHub 上查看这个版本 [apply-external.html](https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) 以及 [script.js](https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/script.js) ([也可在线查看](https://roy-tian.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)).
 
@@ -474,7 +467,7 @@ for (let i = 0; i < buttons.length; i++) {
 
 恭喜你，迈出了探索 JavaScript 世界的第一步。我们从理论开始，介绍为什么要使用 JavaScript，以及用它能做什么事情。过程中穿插了一些代码示例并讲解了 JavaScript 如何与网站中其他代码适配，等等。
 
-现在 JavaScript 或许还有些令人生畏，但不用担心。在课程中我们会循序渐进。下一节将[ 全力投入实战](/zh-CN/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash)，让你专注其中，并建立自己的 JavaScript 示例。
+现在 JavaScript 或许还有些令人生畏，但不用担心。在课程中我们会循序渐进。下一节将[全力投入实战](/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash)，让你专注其中，并建立自己的 JavaScript 示例。
 
 {{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 

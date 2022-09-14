@@ -1,7 +1,6 @@
 ---
 title: 'Django 教程 6: 通用列表和详细信息视图'
 slug: Learn/Server-side/Django/Generic_views
-translation_of: Learn/Server-side/Django/Generic_views
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
 
@@ -146,7 +145,7 @@ class BookListView(generic.ListView):
 {% endblock %}
 ```
 
-视图默认将上下文（书本列表）作为 `object_list `和 `book_list` 的别名传递；任何一个都会奏效。
+视图默认将上下文（书本列表）作为 `object_list` 和 `book_list` 的别名传递；任何一个都会奏效。
 
 #### 条件执行
 
@@ -160,7 +159,7 @@ class BookListView(generic.ListView):
 {% endif %}
 ```
 
-上述条件仅检查一种情况，但您可以使用 `elif `模板标记（例如`{% elif var2 %}` ）测试其他条件。有关条件运算符的更多信息，请参阅：[if](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#if)， [ifequal/ifnotequal](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#ifequal-and-ifnotequal)，以及[内置模板标记和过滤器](https://docs.djangoproject.com/en/2.0/ref/templates/builtins)（Django Docs）中的 [ifchanged](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#ifchanged) 。
+上述条件仅检查一种情况，但您可以使用 `elif` 模板标记（例如`{% elif var2 %}` ）测试其他条件。有关条件运算符的更多信息，请参阅：[if](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#if)， [ifequal/ifnotequal](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#ifequal-and-ifnotequal)，以及[内置模板标记和过滤器](https://docs.djangoproject.com/en/2.0/ref/templates/builtins)（Django Docs）中的 [ifchanged](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#ifchanged) 。
 
 #### For 循环/回圈
 
@@ -204,11 +203,11 @@ class BookListView(generic.ListView):
 
 ## 书本详细信息页面
 
-书本详细信息页面，将显示有关特定书本的信息，使用 URL `catalog/book/<id>`（其中 `<id> `是书本的主键）进行访问。除了`Book`模型中的字段（作者，摘要，ISBN，语言和种类）之外，我们还将列出可用副本（`BookInstances`）的详细信息，包括状态，预期返回日期，印记和 id。这将使我们的读者，不仅可以了解该书，还可以确认是否/何时可用。
+书本详细信息页面，将显示有关特定书本的信息，使用 URL `catalog/book/<id>`（其中 `<id>` 是书本的主键）进行访问。除了`Book`模型中的字段（作者，摘要，ISBN，语言和种类）之外，我们还将列出可用副本（`BookInstances`）的详细信息，包括状态，预期返回日期，印记和 id。这将使我们的读者，不仅可以了解该书，还可以确认是否/何时可用。
 
 ### URL 映射
 
-打开 **/catalog/urls.py** ，并添加下面粗体显示的 **“book-detail”** URL 映射器。这个` path()` 函数定义了一个模式，关联到基于通用类的详细信息视图和名称。
+打开 **/catalog/urls.py** ，并添加下面粗体显示的 **“book-detail”** URL 映射器。这个 `path()` 函数定义了一个模式，关联到基于通用类的详细信息视图和名称。
 
 ```python
 urlpatterns = [
@@ -220,7 +219,7 @@ urlpatterns = [
 
 对于书本详细信息路径，URL 模式使用特殊语法，来捕获我们想要查看的书本的特定 id。语法非常简单：尖括号定义要捕获的 URL 部分，包含视图可用于访问捕获数据的变量的名称。例如，<**something**> 将捕获标记的模式，并将值作为变量“something” ，传递给视图。您可以选择在变量名称前，加上一个定义数据类型的[转换器规范](https://docs.djangoproject.com/en/2.0/topics/http/urls/#path-converters)（int，str，slug，uuid，path）。
 
-在这里，我们使用 `'<int:pk>' `来捕获 book id，它必须是一个整数，并将其作为名为 `pk `的参数（主键的缩写）传递给视图。
+在这里，我们使用 `'<int:pk>'` 来捕获 book id，它必须是一个整数，并将其作为名为 `pk` 的参数（主键的缩写）传递给视图。
 
 > **备注：** 如前所述，我们匹配的 URL 实际上是 `catalog/book/<digits>`（因为我们在应用程序 **catalog** 中，假定使用`/catalog/`）。
 
@@ -399,7 +398,7 @@ class BookDetailView(generic.DetailView):
 
 #### 如果记录不存在会怎样？
 
-如果请求的记录不存在，那么基于类的通用详细信息视图，将自动为您引发 `Http404 `异常 - 在生产环境中，这将自动显示适当的“未找到资源”页面，您可以根据需要自定义该页面。
+如果请求的记录不存在，那么基于类的通用详细信息视图，将自动为您引发 `Http404` 异常 - 在生产环境中，这将自动显示适当的“未找到资源”页面，您可以根据需要自定义该页面。
 
 为了让您了解其工作原理，下面的代码片段，演示了如何在**不使用**基于类的详细信息视图的情况下，将基于类的视图实现为函数。
 
@@ -421,11 +420,11 @@ def book_detail_view(request,pk):
 
 视图首先尝试从模型中，获取特定的书本记录。如果失败，则视图应引发 `Http404`异常，以指示该书本“未找到”。然后，最后一步是使用模板名称，和上下文参数`context`中的书本数据（作为字典）调用`render()`。
 
-> **备注：** `get_object_or_404()`（如上所示）是一个方便的快捷方式，用于在未找到记录时，引发 `Http404 `异常。
+> **备注：** `get_object_or_404()`（如上所示）是一个方便的快捷方式，用于在未找到记录时，引发 `Http404` 异常。
 
 ### 创建详细信息视图模板
 
-创建 HTML 文件 **/locallibrary/catalog/templates/catalog/book_detail.html**，并为其提供以下内容。如上所述，这是基于类的通用详细信息视图，所期望的默认模板文件名（对于名为 `catalog `的应用程序中名为 `Book `的模型）。
+创建 HTML 文件 **/locallibrary/catalog/templates/catalog/book_detail.html**，并为其提供以下内容。如上所述，这是基于类的通用详细信息视图，所期望的默认模板文件名（对于名为 `catalog` 的应用程序中名为 `Book` 的模型）。
 
 ```html
 {% extends "base_generic.html" %}
@@ -455,16 +454,18 @@ def book_detail_view(request,pk):
 
 > **备注：** 上面模板中的作者链接，有一个空 URL，因为我们尚未创建作者详细信息页面。一旦创建了，您应该像这样更新 URL：
 >
->     <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
+> ```python
+> <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
+> ```
 
 虽然有点大，但此模板中的几乎所有内容，都已在前面描述过：
 
 - 我们扩展基本模板，并覆盖“内容”区块 content。
 - 我们使用条件处理，来确定是否显示特定内容。
-- 我们使用 `for `循环遍历对象列表。
+- 我们使用 `for` 循环遍历对象列表。
 - 我们使用 "点表示法" 访问上下文字段（因为我们使用了详细的通用视图，上下文被命名为`book`；我们也可以使用“`object`”）。
 
-我们以前没见过的一件有趣的事情是函数`book.bookinstance_set.all()`。此方法由 Django“自动”构造，以便返回与特定` Book` 相关联的 `BookInstance`记录集合。
+我们以前没见过的一件有趣的事情是函数`book.bookinstance_set.all()`。此方法由 Django“自动”构造，以便返回与特定 `Book` 相关联的 `BookInstance`记录集合。
 
 ```python
 {% for copy in book.bookinstance_set.all %}
@@ -472,40 +473,44 @@ def book_detail_view(request,pk):
 {% endfor %}
 ```
 
-需要此方法，是因为您仅在关系的“一”侧声明 `ForeignKey`（一对多）字段。由于您没有做任何事情，来声明其他（“多”）模型中的关系，因此它没有任何字段，来获取相关记录集。为了解决这个问题，Django 构造了一个适当命名的“反向查找”函数，您可以使用它。函数的名称，是通过对声明` ForeignKey` 的模型名称，转化为小写来构造的，然后是`_set`（即，在 `Book `中创建的函数是 `bookinstance_set()`）。
+需要此方法，是因为您仅在关系的“一”侧声明 `ForeignKey`（一对多）字段。由于您没有做任何事情，来声明其他（“多”）模型中的关系，因此它没有任何字段，来获取相关记录集。为了解决这个问题，Django 构造了一个适当命名的“反向查找”函数，您可以使用它。函数的名称，是通过对声明 `ForeignKey` 的模型名称，转化为小写来构造的，然后是`_set`（即，在 `Book`中创建的函数是 `bookinstance_set()`）。
 
 > **备注：** 这里我们使用`all()`来获取所有记录（默认值）。虽然您可以使用`filter()`方法获取代码中的记录子集，但您无法直接在模板中执行此操作，因为您无法指定函数的参数。
 >
 > 还要注意，如果您没有定义顺序（在基于类的视图或模型上），您还会看到开发服务器中的错误，如下所示：
 >
->     [29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
->     /foo/local_library/venv/lib/python3.5/site-packages/django/views/generic/list.py:99: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<Author: Ortiz, David>, <Author: H. McRaven, William>, <Author: Leigh, Melinda>]>
->       allow_empty_first_page=allow_empty_first_page, **kwargs)
+> ```
+> [29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
+> /foo/local_library/venv/lib/python3.5/site-packages/django/views/generic/list.py:99: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<Author: Ortiz, David>, <Author: H. McRaven, William>, <Author: Leigh, Melinda>]>
+>   allow_empty_first_page=allow_empty_first_page, **kwargs)
+> ```
 >
-> 发生这种情况，是因为 [paginator object ](https://docs.djangoproject.com/en/2.0/topics/pagination/#paginator-objects)对象希望在下划线数据库上看到一些 ORDER BY。没有它，它无法确定，返回的注册表实际上是否为正确顺序！
+> 发生这种情况，是因为 [paginator object](https://docs.djangoproject.com/en/2.0/topics/pagination/#paginator-objects) 对象希望在下划线数据库上看到一些 ORDER BY。没有它，它无法确定，返回的注册表实际上是否为正确顺序！
 >
 > 本教程还没有说明到 **Pagination**（还没，但很快），但由于你不能使用`sort_by()` 并传递一个参数（与上面描述的`filter()` 相同），你将不得不在下面三个选择当中，进行挑选：
 >
-> 1.  在模型的`class Meta`声明中，添加排序`ordering`。
-> 2.  Add a `queryset` attribute in your custom class-based view, specifying a `order_by()`.在自定义基于类的视图中添加 queryset 属性，指定 order_by（）。
-> 3.  Adding a `get_queryset` method to your custom class-based view and also specify the `order_by()`.将 get_queryset 方法添加到基于类的自定义视图中，并指定 order_by（）。
+> 1. 在模型的`class Meta`声明中，添加排序`ordering`。
+> 2. Add a `queryset` attribute in your custom class-based view, specifying a `order_by()`.在自定义基于类的视图中添加 queryset 属性，指定 order_by（）。
+> 3. Adding a `get_queryset` method to your custom class-based view and also specify the `order_by()`.将 get_queryset 方法添加到基于类的自定义视图中，并指定 order_by（）。
 >
-> 如果您决定使用`class Meta `作为作者模型`Author`（可能不像定制基于类的视图那样灵活，但很容易），您最终会得到这样的结果：
+> 如果您决定使用`class Meta` 作为作者模型`Author`（可能不像定制基于类的视图那样灵活，但很容易），您最终会得到这样的结果：
 >
->     class Author(models.Model):
->         first_name = models.CharField(max_length=100)
->         last_name = models.CharField(max_length=100)
->         date_of_birth = models.DateField(null=True, blank=True)
->         date_of_death = models.DateField('Died', null=True, blank=True)
+> ```python
+> class Author(models.Model):
+>     first_name = models.CharField(max_length=100)
+>     last_name = models.CharField(max_length=100)
+>     date_of_birth = models.DateField(null=True, blank=True)
+>     date_of_death = models.DateField('Died', null=True, blank=True)
 >
->         def get_absolute_url(self):
->             return reverse('author-detail', args=[str(self.id)])
+>     def get_absolute_url(self):
+>         return reverse('author-detail', args=[str(self.id)])
 >
->         def __str__(self):
->             return '%s, %s' % (self.last_name, self.first_name)
+>     def __str__(self):
+>         return '%s, %s' % (self.last_name, self.first_name)
 >
->         class Meta:
->             ordering = ['last_name']
+>     class Meta:
+>         ordering = ['last_name']
+> ```
 >
 > 当然，该字段不需要是`last_name`：它可以是任何其他字段。
 >
@@ -533,7 +538,7 @@ Django 在分页方面，拥有出色的内置支持。更好的是，它内置�
 
 ### 视图
 
-打开 **catalog/views.py**，然后添加下面粗体显示的`paginate_by `行。
+打开 **catalog/views.py**，然后添加下面粗体显示的`paginate_by` 行。
 
 ```python
 class BookListView(generic.ListView):
@@ -571,7 +576,7 @@ class BookListView(generic.ListView):
 {% endblock %}
 ```
 
-`page_obj `是一个 [Paginator](https://docs.djangoproject.com/en/2.0/topics/pagination/#paginator-objects) 对象，如果在当前页面上使用分页，它将存在。它允许您获取有关当前页面，之前页面，有多少页面等的所有信息。
+`page_obj` 是一个 [Paginator](https://docs.djangoproject.com/en/2.0/topics/pagination/#paginator-objects) 对象，如果在当前页面上使用分页，它将存在。它允许您获取有关当前页面，之前页面，有多少页面等的所有信息。
 
 我们使用 `\{{ request.path }}`，来获取用于创建分页链接的当前页面 URL。这很有用，因为它独立于我们正在分页的对象。
 
@@ -579,7 +584,7 @@ class BookListView(generic.ListView):
 
 ### 它看起来是什么样子的？
 
-下面的屏幕截图，显示了分页的样子 - 如果您没有在数据库中输入超过 10 个标题，那么您可以通过降低 **catalog/views.py** 文件中 `paginate_by `行指定的数量，来更轻松地测试它。为了得到以下结果，我们将其更改为 `paginate_by = 2`。
+下面的屏幕截图，显示了分页的样子 - 如果您没有在数据库中输入超过 10 个标题，那么您可以通过降低 **catalog/views.py** 文件中 `paginate_by` 行指定的数量，来更轻松地测试它。为了得到以下结果，我们将其更改为 `paginate_by = 2`。
 
 分页链接显示在底部，根据您所在的页面，显示下一个/上一个链接。
 
@@ -629,18 +634,18 @@ URL 映射器和视图所需的代码，应与我们上面创建的`Book`列表�
 
 ## 本教程
 
-- [Django 介绍](/en-US/docs/Learn/Server-side/Django/Introduction)
-- [架设 Django 开发环境](/en-US/docs/Learn/Server-side/Django/development_environment)
-- [Django 教程：本地图书馆网站](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django 教程 2: 创建骨架站点](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django 教程 3: 使用模型](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django 教程 4: Django 管理站点](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django 教程 5: 创建主页](/en-US/docs/Learn/Server-side/Django/Home_page)
-- [Django 教程 6: 通用列表与详细信息视图](/en-US/docs/Learn/Server-side/Django/Generic_views)
-- [Django 教程 7: 会话框架](/en-US/docs/Learn/Server-side/Django/Sessions)
-- [Django 教程 8: 用户认证与许可](/en-US/docs/Learn/Server-side/Django/Authentication)
-- [Django 教程 9: 使用表单](/en-US/docs/Learn/Server-side/Django/Forms)
-- [Django 教程 10: 测试 Django 网页应用](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django 教程 11: 部署 Django 到生产环境](/en-US/docs/Learn/Server-side/Django/Deployment)
-- [Django 网页应用安全](/en-US/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django 微博客](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)
+- [Django 介绍](/zh-CN/docs/Learn/Server-side/Django/Introduction)
+- [架设 Django 开发环境](/zh-CN/docs/Learn/Server-side/Django/development_environment)
+- [Django 教程：本地图书馆网站](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+- [Django 教程 2: 创建骨架站点](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)
+- [Django 教程 3: 使用模型](/zh-CN/docs/Learn/Server-side/Django/Models)
+- [Django 教程 4: Django 管理站点](/zh-CN/docs/Learn/Server-side/Django/Admin_site)
+- [Django 教程 5: 创建主页](/zh-CN/docs/Learn/Server-side/Django/Home_page)
+- [Django 教程 6: 通用列表与详细信息视图](/zh-CN/docs/Learn/Server-side/Django/Generic_views)
+- [Django 教程 7: 会话框架](/zh-CN/docs/Learn/Server-side/Django/Sessions)
+- [Django 教程 8: 用户认证与许可](/zh-CN/docs/Learn/Server-side/Django/Authentication)
+- [Django 教程 9: 使用表单](/zh-CN/docs/Learn/Server-side/Django/Forms)
+- [Django 教程 10: 测试 Django 网页应用](/zh-CN/docs/Learn/Server-side/Django/Testing)
+- [Django 教程 11: 部署 Django 到生产环境](/zh-CN/docs/Learn/Server-side/Django/Deployment)
+- [Django 网页应用安全](/zh-CN/docs/Learn/Server-side/Django/web_application_security)
+- [DIY Django 微博客](/zh-CN/docs/Learn/Server-side/Django/django_assessment_blog)

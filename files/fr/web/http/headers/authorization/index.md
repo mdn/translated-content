@@ -39,7 +39,7 @@ Authorization: <type> <credentials>
 
 - _\<type>_
 
-  - : [Le type d'authentification](/fr/docs/Web/HTTP/Authentication#Schéma_d'authentification). Le type [`"Basic"`](/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme) est souvent utilisé. Pour connaître les autres types :
+  - : [Le type d'authentification](/fr/docs/Web/HTTP/Authentication#Schéma_d'authentification). Le type [`"Basic"`](/fr/docs/Web/HTTP/Authentication#Basic_authentication_scheme) est souvent utilisé. Pour connaître les autres types :
 
     - [IANA registry of Authentication schemes](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
 

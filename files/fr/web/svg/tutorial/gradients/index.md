@@ -222,6 +222,6 @@ Il y a quelques subtilités concernant l'utilisation de `gradientUnits="objectBo
 
 ### gradientTransform
 
-Vous pouvez également appliquer une transformation au gradient en utilisant l'attribut `gradientTransform`, mais puisque nous n'avons pas encore introduit les [transformations](/fr/docs/Web/SVG/Tutoriel/Transformations_de_base "en-US/Web/SVG/Tutorial/Basic Transformations"), nous le laisserons de côté pour l'instant.
+Vous pouvez également appliquer une transformation au gradient en utilisant l'attribut `gradientTransform`, mais puisque nous n'avons pas encore introduit les [transformations](/fr/docs/Web/SVG/Tutoriel/Transformations_de_base), nous le laisserons de côté pour l'instant.
 
 {{ PreviousNext("Web/SVG/Tutoriel/Fills_and_Strokes", "Web/SVG/Tutoriel/Motifs") }}

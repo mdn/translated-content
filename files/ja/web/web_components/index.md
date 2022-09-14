@@ -1,20 +1,6 @@
 ---
 title: ウェブコンポーネント
 slug: Web/Web_Components
-tags:
-  - コンポーネント
-  - HTML インポート
-  - JavaScript
-  - ランディング
-  - 概要
-  - Template
-  - ウェブ記事
-  - ウェブコンポーネント
-  - ウェブ開発
-  - カスタム要素
-  - シャドウ DOM
-  - slot
-translation_of: Web/Web_Components
 ---
 {{DefaultAPISidebar("Web Components")}}
 

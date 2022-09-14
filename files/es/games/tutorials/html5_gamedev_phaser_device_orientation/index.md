@@ -15,8 +15,6 @@ original_slug: Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation
 ---
 {{GamesSidebar}}
 
-{{ draft() }}
-
 ## Introducción
 
 En este tutorial iremos a través del proceso de construcción de un juego en HTML5 para móviles que utilizará las _APIs_ de [Orientación para Dispositivos](/es/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) y [Vibración](/es/docs/Web/Guide/API/Vibration) para mejorar la jugabilidad y estará construido utilizando el _framework_ [Phaser](http://phaser.io/). Se recomienda tener conocimientos básicos de JavaScript para sacar mayor provecho a este tutorial.
@@ -87,7 +85,7 @@ Hasta ahora tenemos una simple página web `HTML` con el contenido básico en la
 
 ```js
 var game = new Phaser.Game(320, 480, Phaser.CANVAS, 'game');
-````
+```
 
 La linea de arriba inicializará la intancia de Phaser — los argumentos son el ancho del `<canvas>`, su altura, el método de renderizado (estamos utilizando `CANVAS` pero también existen disponibles las opciones `WEBGL` y `AUTO`) y el ID opcional del contenedor DOM en el que queremos poner el `<canvas>`. Si no hay nada especificado en el último argumento o el elemento no es encontrado, el `<canvas>` será añadido a la etiqueta `<body>`. Sin el _framework_ para añadir el elemento canvas hubieses tenido que escribir algo como esto dentro de la etiqueta `<body>`:
 
@@ -133,7 +131,7 @@ Ball.Boot.prototype = {
         this.game.state.start('Preloader');
     }
 };
-````
+```
 
 El objeto principal `Ball` es definido y estamos añadiendo dos variables llamadas `_WIDTH` y `_HEIGHT` esos seran el ancho y la altura del canvas de nuestro juego, respectivamente — nos ayudarán a posicionar los elementos en la pantalla. Estamos cargando dos imagenes primero que serán usadas después en el estado `Preload` para mostrar el progreso de la carga de los demás elementos. La función `create` contiene algunas de las configuraciones básicas: estamos configurando la escala y la alineación del canvas, y avanzando al estado `Preload` cuando todo este listo.
 
@@ -189,7 +187,7 @@ Ball.Howto.prototype = {
         this.game.state.start('Game');
     }
 };
-````
+```
 
 El estado `Howto` muesta las intrucciones de juego en la pantalla antes de comenzar el juego. Luego de clickear la pantalla el juego es lanzado.
 

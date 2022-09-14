@@ -1,13 +1,12 @@
 ---
 title: Build the brick field
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
 ---
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
 
-这是 [Gamedev Canvas tutorial](/en-US/docs/Games/Workflows/Breakout_game_from_scratch)教程 10 节的第 6 节。您可以在完成本课程后在这里[Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html)找到源代码。
+这是 [Gamedev Canvas tutorial](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch)教程 10 节的第 6 节。您可以在完成本课程后在这里[Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html)找到源代码。
 
 在修改游戏机制后，我们可以输了 — 这样这游戏看起来终于像是一个游戏了，这真是太好了。但是，如果你总是让球与墙、板碰撞的话，很快就会感到无聊的。 好游戏需要的是让球消灭砖，这就是我们即将要做的！
 
@@ -68,7 +67,7 @@ var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
 var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
 ```
 
-每个`brickX`位置是` brickWidth + brickPadding`，乘以列数`C`，再加上`brickOffsetLeft`；对于砖`brickY`的逻辑相同，除了名称不同，使用行数`R`，`brickHeight`，和`brickOffsetTop`。现在，每一块砖都可以放在正确的地方，排成一排，每一块砖之间都有填充物，从左上角和顶部的帆布边缘偏移。
+每个`brickX`位置是 `brickWidth + brickPadding`，乘以列数`C`，再加上`brickOffsetLeft`；对于砖`brickY`的逻辑相同，除了名称不同，使用行数`R`，`brickHeight`，和`brickOffsetTop`。现在，每一块砖都可以放在正确的地方，排成一排，每一块砖之间都有填充物，从左上角和顶部的帆布边缘偏移。
 
 在设置`brickX`和`brickY`作为对应砖的坐标之后，形成了 `drawBricks()`函数的最终版本。将以下代码加在`drawPaddle()`函数后面：
 
@@ -108,6 +107,6 @@ drawBricks();
 
 ## 下一节
 
-现在，我们有砖啦！但是球根本就没有和它们互动 —— 接下来的第七章我们将让球和砖产生碰撞：[碰撞检测](/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Collision_detection)。
+现在，我们有砖啦！但是球根本就没有和它们互动 —— 接下来的第七章我们将让球和砖产生碰撞：[碰撞检测](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch/Collision_detection)。
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection")}}

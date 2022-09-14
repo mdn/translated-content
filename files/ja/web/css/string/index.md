@@ -1,14 +1,6 @@
 ---
 title: <string>
 slug: Web/CSS/string
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - レイアウト
-  - リファレンス
-  - ウェブ
-translation_of: Web/CSS/string
 ---
 {{CSSRef}}
 

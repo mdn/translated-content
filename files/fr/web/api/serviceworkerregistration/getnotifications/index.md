@@ -52,10 +52,8 @@ navigator.serviceWorker.ready.then((registration) => {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                    | État                                     | Commentaire         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('Web Notifications', '#dom-serviceworkerregistration-getnotifications', 'ServiceWorkerRegistration.getNotifications()')}} | {{Spec2('Web Notifications')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ServiceWorkerRegistration.getNotifications")}}
+{{Compat}}

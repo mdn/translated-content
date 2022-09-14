@@ -1,16 +1,6 @@
 ---
 title: BigInt64Array
 slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt64Array
-tags:
-  - BigInt
-  - BigInt64Array
-  - Class
-  - JavaScript
-  - Reference
-  - TypedArray
-  - TypedArrays
-browser-compat: javascript.builtins.BigInt64Array
 ---
 {{JSRef}}
 
@@ -18,7 +8,7 @@ browser-compat: javascript.builtins.BigInt64Array
 
 ## 构造函数
 
-- [`BigInt64Array()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array/BigInt64Array)
+- [`BigInt64Array()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array/BigInt64Array)
   - : 创建一个新的 `BigInt64Array` 对象。
 
 ## 静态属性

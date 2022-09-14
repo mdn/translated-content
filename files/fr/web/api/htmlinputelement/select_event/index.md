@@ -25,11 +25,11 @@ L'évènement `select` est déclenché quand du texte est sélectionné. L'évè
 
 | Property                              | Type                                             | Description                                                                                   |
 | ------------------------------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | [`EventTarget`](/en-US/docs/Web/API/EventTarget) | The event target (the topmost target in the DOM tree).                                        |
-| `type` {{readonlyInline}}       | [`DOMString`](/en-US/docs/Web/API/DOMString)     | The type of event.                                                                            |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/en-US/docs/Web/API/Boolean)         | Whether the event normally bubbles or not.                                                    |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/en-US/docs/Web/API/Boolean)         | Whether the event is cancellable or not.                                                      |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/en-US/docs/Web/API/WindowProxy) | [`document.defaultView`](/en-US/docs/Web/API/Document/defaultView) (`window` of the document) |
+| `target` {{readonlyInline}}     | [`EventTarget`](/fr/docs/Web/API/EventTarget) | The event target (the topmost target in the DOM tree).                                        |
+| `type` {{readonlyInline}}       | [`DOMString`](/fr/docs/Web/API/DOMString)     | The type of event.                                                                            |
+| `bubbles` {{readonlyInline}}    | [`Boolean`](/fr/docs/Web/API/Boolean)         | Whether the event normally bubbles or not.                                                    |
+| `cancelable` {{readonlyInline}} | [`Boolean`](/fr/docs/Web/API/Boolean)         | Whether the event is cancellable or not.                                                      |
+| `view` {{readonlyInline}}       | [`WindowProxy`](/fr/docs/Web/API/WindowProxy) | [`document.defaultView`](/fr/docs/Web/API/Document/defaultView) (`window` of the document) |
 | `detail` {{readonlyInline}}     | `long` (`float`)                                 | 0.                                                                                            |
 
 ## Exemple

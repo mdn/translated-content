@@ -1,7 +1,6 @@
 ---
 title: Continuous Media
 slug: Glossary/Continuous_Media
-translation_of: Glossary/Continuous_Media
 ---
 CSS 可以被使用在多种不同的上下文环境（包括打印页面和一些 CSS 容器），尤其是被用来设置根据所处的上下文的不同而具有不同的布局行为。
 

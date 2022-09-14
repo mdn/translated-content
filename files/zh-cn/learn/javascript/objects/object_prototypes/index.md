@@ -1,12 +1,6 @@
 ---
 title: 对象原型
 slug: Learn/JavaScript/Objects/Object_prototypes
-tags:
-  - JavaScript
-  - 初学者
-  - 原型
-  - 对象
-translation_of: Learn/JavaScript/Objects/Object_prototypes
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
 
@@ -46,7 +40,7 @@ JavaScript 常被描述为一种**基于原型的语言 (prototype-based languag
 
 在传统的 OOP 中，首先定义“类”，此后创建对象实例时，类中定义的所有属性和方法都被复制到实例中。在 JavaScript 中并不如此复制——而是在对象实例和它的构造器之间建立一个链接（它是\_\_proto\_\_属性，是从构造函数的`prototype`属性派生的），之后通过上溯原型链，在构造器中找到这些属性和方法。
 
-> **备注：** 理解对象的原型（可以通过[`Object.getPrototypeOf(obj)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)或者已被弃用的[`__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)属性获得）与构造函数的`prototype`属性之间的区别是很重要的。前者是每个实例上都有的属性，后者是构造函数的属性。也就是说，`Object.getPrototypeOf(new Foobar())`和`Foobar.prototype`指向着同一个对象。
+> **备注：** 理解对象的原型（可以通过[`Object.getPrototypeOf(obj)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)或者已被弃用的[`__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)属性获得）与构造函数的`prototype`属性之间的区别是很重要的。前者是每个实例上都有的属性，后者是构造函数的属性。也就是说，`Object.getPrototypeOf(new Foobar())`和`Foobar.prototype`指向着同一个对象。
 
 以上描述很抽象；我们先看一个例子。
 
@@ -220,13 +214,13 @@ person1.valueOf()
 
 > **备注：** 这看起来很奇怪——构造器本身就是函数，你怎么可能在构造器这个函数中定义一个方法呢？其实函数也是一个对象类型，你可以查阅 [`Function()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function) 构造器的参考文档以确认这一点。
 
-1.  你可以检查已有的 `prototype` 属性。回到先前的例子，在 JavaScript 控制台输入：
+1. 你可以检查已有的 `prototype` 属性。回到先前的例子，在 JavaScript 控制台输入：
 
     ```js
     Person.prototype
     ```
 
-2.  输出并不多，毕竟我们没有为自定义构造器的原型定义任何成员。缺省状态下，构造器的 `prototype` 属性初始为空白。现在尝试：
+2. 输出并不多，毕竟我们没有为自定义构造器的原型定义任何成员。缺省状态下，构造器的 `prototype` 属性初始为空白。现在尝试：
 
     ```js
     Object.prototype
@@ -242,19 +236,19 @@ var myString = 'This is my string.';
 
 `myString` 立即具有了一些有用的方法，如 [`split()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split)、[`indexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)、[`replace()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 等。
 
-> **警告：** `prototype` 属性大概是 JavaScript 中最容易混淆的名称之一。你可能会认为，`this` 关键字指向当前对象的原型对象，其实不是（还记得么？原型对象是一个内部对象，应当使用` __proto__` 访问）。`prototype` 属性包含（指向）一个对象，你在这个对象中定义需要被继承的成员。
+> **警告：** `prototype` 属性大概是 JavaScript 中最容易混淆的名称之一。你可能会认为，`this` 关键字指向当前对象的原型对象，其实不是（还记得么？原型对象是一个内部对象，应当使用 `__proto__` 访问）。`prototype` 属性包含（指向）一个对象，你在这个对象中定义需要被继承的成员。
 
 **create()**
 
 我们曾经讲过如何用 [`Object.create()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create) 方法创建新的对象实例。
 
-1.  例如，在上个例子的 JavaScript 控制台中输入：
+1. 例如，在上个例子的 JavaScript 控制台中输入：
 
     ```js
     var person2 = Object.create(person1);
     ```
 
-2.  `create()` 实际做的是从指定原型对象创建一个新的对象。这里以 `person1` 为原型对象创建了 `person2` 对象。在控制台输入：
+2. `create()` 实际做的是从指定原型对象创建一个新的对象。这里以 `person1` 为原型对象创建了 `person2` 对象。在控制台输入：
 
     ```js
     person2.__proto__
@@ -266,7 +260,7 @@ var myString = 'This is my string.';
 
 每个实例对象都从原型中继承了一个 constructor 属性，该属性指向了用于构造此实例对象的构造函数。
 
-1.  例如，在控制台中尝试下面的指令：
+1. 例如，在控制台中尝试下面的指令：
 
     ```js
     person1.constructor
@@ -277,13 +271,13 @@ var myString = 'This is my string.';
 
     一个小技巧是，你可以在 `constructor` 属性的末尾添加一对圆括号（括号中包含所需的参数），从而用这个构造器创建另一个对象实例。毕竟构造器是一个函数，故可以通过圆括号调用；只需在前面添加 `new` 关键字，便能将此函数作为构造器使用。
 
-2.  在控制台中输入：
+2. 在控制台中输入：
 
     ```js
     var person3 = new person1.constructor('Karen', 'Stephenson', 26, 'female', ['playing drums', 'mountain climbing']);
     ```
 
-3.  现在尝试访问新建对象的属性，例如：
+3. 现在尝试访问新建对象的属性，例如：
 
     ```js
     person3.name.first
@@ -309,7 +303,7 @@ person1.constructor.name
 
 从我们从下面这个例子来看一下如何修改构造器的 `prototype` 属性。
 
-1.  回到 [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) 的例子，在本地为[源代码](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)创建一个副本。在已有的 JavaScript 的末尾添加如下代码，这段代码将为构造器的 `prototype` 属性添加一个新的方法：
+1. 回到 [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) 的例子，在本地为[源代码](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)创建一个副本。在已有的 JavaScript 的末尾添加如下代码，这段代码将为构造器的 `prototype` 属性添加一个新的方法：
 
     ```js
     Person.prototype.farewell = function() {
@@ -317,7 +311,7 @@ person1.constructor.name
     }
     ```
 
-2.  保存代码，在浏览器中加载页面，然后在控制台输入：
+2. 保存代码，在浏览器中加载页面，然后在控制台输入：
 
     ```js
     person1.farewell();

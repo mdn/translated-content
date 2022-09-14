@@ -1,14 +1,6 @@
 ---
 title: <font>
 slug: Web/HTML/Element/font
-tags:
-  - 要素
-  - HTML
-  - 非推奨
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.font
-translation_of: Web/HTML/Element/font
 ---
 
 {{deprecated_header}}

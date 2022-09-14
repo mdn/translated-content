@@ -1,7 +1,6 @@
 ---
 title: 运行实例
 slug: MDN/Writing_guidelines/Page_structures/Live_samples
-translation_of: MDN/Writing_guidelines/Page_structures/Live_samples
 ---
 {{MDNSidebar}}
 

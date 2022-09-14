@@ -1,14 +1,6 @@
 ---
 title: CSSRule.parentStyleSheet
 slug: Web/API/CSSRule/parentStyleSheet
-tags:
-  - API
-  - CSSOM
-  - CSSRule
-  - プロパティ
-  - リファレンス
-browser-compat: api.CSSRule.parentStyleSheet
-translation_of: Web/API/CSSRule/parentStyleSheet
 ---
 {{ APIRef("CSSOM") }}
 

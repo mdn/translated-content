@@ -51,13 +51,11 @@ key2, value2
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                               | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata','entries() (as iterator&lt;&gt;)')}} | {{Spec2('XMLHttpRequest')}} | Définition initiale |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.FormData.entries")}}
+{{Compat}}
 
 ## Voir aussi
 
