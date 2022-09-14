@@ -180,8 +180,8 @@ array.find((value, index) => {
 ## 関連情報
 
 - [`Array.prototype.find` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("Array.prototype.findIndex()")}} – インデックスを見つけて返す
+- {{jsxref("Array.prototype.findIndex()")}} – 要素を見つけて位置を返す
 - {{jsxref("Array.prototype.includes()")}} – 配列内に値が存在するかどうかをテストする
-- {{jsxref("Array.prototype.filter()")}} – マッチしない要素をすべて削除する
+- {{jsxref("Array.prototype.filter()")}} – 一致しない要素をすべて除外する
 - {{jsxref("Array.prototype.every()")}} – すべての要素をテストする
 - {{jsxref("Array.prototype.some()")}} – 1 つの要素が一致するまでテストする
