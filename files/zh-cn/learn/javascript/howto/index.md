@@ -192,7 +192,7 @@ const myObject = {
 - [什么是事件处理器，怎样使用它们？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#Event_handler_properties)
 - [什么是内联事件处理器？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#内联事件处理器——请勿使用)
 - [`addEventListener()` 函数的作用，如何使用它？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#使用_addeventlistener)
-- [我该使用什么样的机制将时间代码添加到我的网页上？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#What_mechanism_should_I_use)
+- [我该使用什么样的机制将事件代码添加到我的网页上？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#What_mechanism_should_I_use)
 - [什么是事件对象，如何使用它？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#Event_objects)
 - [如何防止默认事件行为？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#Preventing_default_behaviour)
 - [事件如何在嵌套元素中触发？（事件传递及其相关内容——事件冒泡及捕获）](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture)
