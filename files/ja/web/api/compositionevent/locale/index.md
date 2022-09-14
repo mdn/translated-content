@@ -1,15 +1,6 @@
 ---
 title: CompositionEvent.locale
 slug: Web/API/CompositionEvent/locale
-tags:
-  - API
-  - CompositionEvent
-  - Deprecated
-  - Locale
-  - Property
-  - Reference
-  - プロパティ
-translation_of: Web/API/CompositionEvent/locale
 ---
 {{deprecated_header}}{{APIRef("DOM Events")}}
 

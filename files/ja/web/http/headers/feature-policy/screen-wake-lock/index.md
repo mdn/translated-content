@@ -1,16 +1,6 @@
 ---
 title: 'Feature-Policy: screen-wake-lock'
 slug: Web/HTTP/Headers/Feature-Policy/screen-wake-lock
-tags:
-  - ディレクティブ
-  - 機能ポリシー
-  - Feature-Policy
-  - HTTP
-  - リファレンス
-  - screen-wake-lock
-  - 実験的
-browser-compat: http.headers.Feature-Policy.screen-wake-lock
-translation_of: Web/HTTP/Headers/Feature-Policy/screen-wake-lock
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 

@@ -1,19 +1,6 @@
 ---
 title: <input type="reset">
 slug: Web/HTML/Element/input/reset
-tags:
-  - Element
-  - Form Button
-  - Form input
-  - Forms
-  - HTML
-  - HTML forms
-  - Input
-  - Input Types
-  - Reference
-  - Reset Button
-  - reset
-translation_of: Web/HTML/Element/input/reset
 ---
 {{HTMLRef("Input_types")}}
 

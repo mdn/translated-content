@@ -1,15 +1,6 @@
 ---
 title: 座標変換
 slug: Web/API/Canvas_API/Tutorial/Transformations
-tags:
-  - キャンバス
-  - グラフィック
-  - ガイド
-  - HTML
-  - HTML5
-  - 中級者
-  - ウェブ
-translation_of: Web/API/Canvas_API/Tutorial/Transformations
 original_slug: Web/Guide/HTML/Canvas_tutorial/Transformations
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}

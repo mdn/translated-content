@@ -33,7 +33,7 @@ slug: Web/SVG/Element/switch
 
 ## DOM 接口
 
-该元素实现了[`SVGSwitchElement`](/en-US/docs/DOM/SVGSwitchElement) 接口。
+该元素实现了[`SVGSwitchElement`](/zh-CN/docs/DOM/SVGSwitchElement) 接口。
 
 ## 浏览器支持
 

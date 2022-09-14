@@ -1,14 +1,6 @@
 ---
 title: font-weight
 slug: Web/CSS/font-weight
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.font-weight
-translation_of: Web/CSS/font-weight
 ---
 {{CSSRef}}
 

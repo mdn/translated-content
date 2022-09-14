@@ -41,4 +41,4 @@ slug: Web/CSS/ratio
 
 ## 参见
 
-- [`aspect-ratio`](/en-US/docs/Web/CSS/@media/aspect-ratio) 媒体功能
+- [`aspect-ratio`](/zh-CN/docs/Web/CSS/@media/aspect-ratio) 媒体功能

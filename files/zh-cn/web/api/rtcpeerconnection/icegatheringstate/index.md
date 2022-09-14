@@ -6,7 +6,7 @@ slug: Web/API/RTCPeerConnection/iceGatheringState
 
 只读属性 **`RTCPeerConnection.iceGatheringState`** 返回一个描述连接的 ICE 收集状态的枚举值 `RTCIceGatheringState`。比如当 ICE 候选收集完成的时候，你可以通过该属性的变化侦测到。
 
-通过监听 [`icegatheringstatechange`](/en-US/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event) 类型的事件，你可以侦测到该属性的变化。
+通过监听 [`icegatheringstatechange`](/zh-CN/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event) 类型的事件，你可以侦测到该属性的变化。
 
 ## 语法
 
@@ -38,4 +38,4 @@ var state = pc.iceGatheringState;
 ## See also
 
 - {{event("icegatheringstatechange")}}
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)

@@ -13,7 +13,9 @@ Window\.outerWidth 는 브라우저 윈도우 바깥쪽의 폭을 얻어온다. 
 
 ## 문법
 
-    outWindowWidth = window.outerWidth;
+```js
+outWindowWidth = window.outerWidth;
+```
 
 반환이 끝나면 outWindowWidth는 윈도우의 바깥경계를 포함한 너비(폭)를 담고 있다.
 

@@ -1,8 +1,6 @@
 ---
 title: HTMLElement.accessKeyLabel
 slug: Web/API/HTMLElement/accessKeyLabel
-browser-compat: api.HTMLElement.accessKeyLabel
-translation_of: Web/API/HTMLElement/accessKeyLabel
 ---
 {{ APIRef("HTML DOM") }}
 

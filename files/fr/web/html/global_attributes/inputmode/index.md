@@ -34,13 +34,11 @@ Lorsque cet attribut n'est pas explicitement défini, sa valeur par défaut est 
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName("HTML WHATWG", "interaction.html#input-modalities:-the-inputmode-attribute", "inputmode")}} | {{Spec2("HTML WHATWG")}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.inputmode")}}
+{{Compat}}
 
 ## Voir aussi
 

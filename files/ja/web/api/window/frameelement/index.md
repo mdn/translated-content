@@ -1,13 +1,6 @@
 ---
 title: window.frameElement
 slug: Web/API/Window/frameElement
-tags:
-  - API
-  - DOM
-  - Gecko
-  - HTML DOM
-  - Window
-translation_of: Web/API/Window/frameElement
 ---
 {{ ApiRef }}
 

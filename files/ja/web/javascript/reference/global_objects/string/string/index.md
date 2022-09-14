@@ -1,12 +1,6 @@
 ---
 title: String() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/String/String
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/String
 ---
 {{JSRef}}
 

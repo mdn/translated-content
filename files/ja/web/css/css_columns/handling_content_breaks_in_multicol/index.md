@@ -1,12 +1,6 @@
 ---
 title: 段組みにおける内容物の分割の扱い
 slug: Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - Guide
-  - レイアウト
-translation_of: Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol
 ---
 {{CSSRef}}
 

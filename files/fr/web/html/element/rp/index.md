@@ -115,14 +115,11 @@ body {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-rp-element', '&lt;rp&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-rp-element', '&lt;rp&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.rp")}}
+{{Compat}}
 
 ## Voir aussi
 

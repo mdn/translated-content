@@ -1,13 +1,6 @@
 ---
 title: CSS를 이용한 HTML 스타일링 익히기
 slug: Learn/CSS
-tags:
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Landing
-  - Topic
-translation_of: Learn/CSS
 ---
 {{LearnSidebar}}
 

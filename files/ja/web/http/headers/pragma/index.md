@@ -1,13 +1,6 @@
 ---
 title: Pragma
 slug: Web/HTTP/Headers/Pragma
-tags:
-  - Caching
-  - Deprecated
-  - HTTP
-  - ヘッダー
-  - リクエスト
-translation_of: Web/HTTP/Headers/Pragma
 ---
 {{HTTPSidebar}}
 

@@ -1,15 +1,6 @@
 ---
 title: ':optional'
 slug: Web/CSS/:optional
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.optional
-translation_of: Web/CSS/:optional
 ---
 {{ CSSRef }}
 

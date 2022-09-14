@@ -1,18 +1,6 @@
 ---
 title: '<summary>: 概要明示要素'
 slug: Web/HTML/Element/summary
-tags:
-  - Disclosure Box
-  - Disclosure Control
-  - Disclosure Summary
-  - Element
-  - HTML
-  - HTML interactive elements
-  - Reference
-  - Summary
-  - Web
-browser-compat: html.elements.summary
-translation_of: Web/HTML/Element/summary
 ---
 
 {{HTMLRef}}

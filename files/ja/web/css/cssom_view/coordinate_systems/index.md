@@ -1,15 +1,6 @@
 ---
 title: 座標系
 slug: Web/CSS/CSSOM_View/Coordinate_systems
-tags:
-  - CSS
-  - CSSOM
-  - CSSOM View
-  - 座標系
-  - 座標
-  - ガイド
-  - レイアウト
-  - NeedsContent
 ---
 {{CSSRef}}
 

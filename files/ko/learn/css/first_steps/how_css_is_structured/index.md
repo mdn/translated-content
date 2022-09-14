@@ -1,7 +1,6 @@
 ---
 title: CSS 의 구조
 slug: Learn/CSS/First_steps/How_CSS_is_structured
-translation_of: Learn/CSS/First_steps/How_CSS_is_structured
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 

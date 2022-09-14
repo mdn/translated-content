@@ -1,16 +1,6 @@
 ---
 title: hanging-punctuation
 slug: Web/CSS/hanging-punctuation
-tags:
-  - CSS
-  - CSS Property
-  - CSS テキスト
-  - CSS テキスト
-  - CSS プロパティ
-  - Experimental
-  - Reference
-  - リファレンス
-translation_of: Web/CSS/hanging-punctuation
 ---
 {{CSSRef}}
 

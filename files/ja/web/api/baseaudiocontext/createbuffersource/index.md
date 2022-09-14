@@ -1,16 +1,6 @@
 ---
 title: BaseAudioContext.createBufferSource()
 slug: Web/API/BaseAudioContext/createBufferSource
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - createBufferSource
-browser-compat: api.BaseAudioContext.createBufferSource
-translation_of: Web/API/BaseAudioContext/createBufferSource
 original_slug: Web/API/AudioContext/createBufferSource
 ---
 {{ APIRef("Web Audio API") }}

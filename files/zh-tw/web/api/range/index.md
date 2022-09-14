@@ -97,4 +97,4 @@ _There are no inherited methods._
 
 ## 參見
 
-- [The DOM interfaces index](/en-US/docs/DOM/DOM_Reference)
+- [The DOM interfaces index](/zh-TW/docs/DOM/DOM_Reference)

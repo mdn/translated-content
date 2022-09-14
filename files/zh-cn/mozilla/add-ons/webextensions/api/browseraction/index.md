@@ -6,25 +6,25 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 
 添加按钮到浏览器的工具栏。
 
-您可以为该按钮指派一个弹出窗。弹出窗可采用 HTML、CSS 和 JavaScript 编写，就像是一个普通的网页。运行在该弹出窗中的 JavaScript 可以同您的后台脚本一样访问所有的 WebExtension API，但它的全局上下文是该弹出窗，而不是浏览器中的当前页面。要影响网页，您需要通过[消息](/en-US/Add-ons/WebExtensions/Modify_a_web_page#Messaging)通信。
+您可以为该按钮指派一个弹出窗。弹出窗可采用 HTML、CSS 和 JavaScript 编写，就像是一个普通的网页。运行在该弹出窗中的 JavaScript 可以同您的后台脚本一样访问所有的 WebExtension API，但它的全局上下文是该弹出窗，而不是浏览器中的当前页面。要影响网页，您需要通过[消息](/zh-CN/Add-ons/WebExtensions/Modify_a_web_page#Messaging)通信。
 
 如果您指定了弹出窗，它将显示——内容将在用户点击该图标时被加载。如果您没有指定一个弹出窗，用户单击该图标的事件将派发到您的扩展。
 
-您可以用 manifest.json 中的 [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 键值声明定义大多数浏览器动作属性。
+您可以用 manifest.json 中的 [`browser_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 键值声明定义大多数浏览器动作属性。
 
 使用 `browserAction` API，您可以：
 
 - 使用 {{WebExtAPIRef("browserAction.onClicked")}} 监听该图标的点击事件。
 - 获取和设置该图标的属性——图标、标题、弹出窗等。You can get and set these globally across all tabs, or for a specific tab by passing the tab ID as an additional argument.
 
-另见[用户界面组件](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_interface_components)中的浏览器动作章节。
+另见[用户界面组件](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/User_interface_components)中的浏览器动作章节。
 
 ## 类型
 
 - {{WebExtAPIRef("browserAction.ColorArray")}}
   - : 0-255 范围内的四个整数的数组，定义 RGBA 颜色。
 - {{WebExtAPIRef("browserAction.ImageDataType")}}
-  - : 一个图像的像素数据。必须为一个 [`ImageData`](/en-US/docs/Web/API/ImageData) 对象（例如，来自一个 {{htmlelement("canvas")}} 元素）。
+  - : 一个图像的像素数据。必须为一个 [`ImageData`](/zh-CN/docs/Web/API/ImageData) 对象（例如，来自一个 {{htmlelement("canvas")}} 元素）。
 
 ## 函数
 
@@ -60,9 +60,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 
 {{Compat("webextensions.api.browserAction")}}
 
-> **备注：** "Chrome 兼容性"是从 [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/en-US/Add-ons/WebExtensions/Chrome_incompatibilities) 包含，使用[WebExtChromeCompat](/en-US/docs/Template:WebExtChromeCompat)宏。
+> **备注：** "Chrome 兼容性"是从 [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) 包含，使用[WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat)宏。
 >
-> 如果你需要更新此章节，编辑 [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/en-US/Add-ons/WebExtensions/Chrome_incompatibilities)，然后刷新查看更改。
+> 如果你需要更新此章节，编辑 [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities)，然后刷新查看更改。
 
 {{WebExtExamples("h2")}}
 

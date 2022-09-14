@@ -1,15 +1,6 @@
 ---
 title: HTMLTableElement.insertRow()
 slug: Web/API/HTMLTableElement/insertRow
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - メソッド
-  - NeedsMobileBrowserCompatibility
-  - リファレンス
-browser-compat: api.HTMLTableElement.insertRow
-translation_of: Web/API/HTMLTableElement/insertRow
 ---
 {{APIRef("HTML DOM")}}
 

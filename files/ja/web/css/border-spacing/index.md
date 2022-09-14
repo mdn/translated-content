@@ -1,14 +1,6 @@
 ---
 title: border-spacing
 slug: Web/CSS/border-spacing
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 表
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-spacing
-translation_of: Web/CSS/border-spacing
 ---
 {{CSSRef}}
 

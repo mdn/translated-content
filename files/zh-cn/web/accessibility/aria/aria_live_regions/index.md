@@ -131,7 +131,7 @@ JAWS 10.0 版中已添加对实时区域的常规支持。 Windows Eyes 从 8.0 
 Paciello Group 有一些 [与活动区域支持状态有关的信息](https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/)(2014)，Paul J. Adam 特别研究了[对于 `Aria-Atomic` 与 `Aria-Relevant` 的支持](http://pauljadam.com/demos/aria-atomic-relevant.html)。
 
 1. **`aria-atomic`**: `aria-atomic=BOOLEAN` 被用来设置屏幕阅读器是否应该总是将活动区域整个播报，即使区域中只有一部分内容改变。可能的值为 `false` 或者 `true`。默认值为 `false`。
-2. [**`aria-relevant`**](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute)：`aria-relevant=[LIST_OF_CHANGES]` 被用来设置哪些类型的改变与活动区域有关。可能的值由以下的一个或者更多组成：`additions`, `removals`, `text`, `all` 。 默认值是 `additions text`。
+2. [**`aria-relevant`**](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute)：`aria-relevant=[LIST_OF_CHANGES]` 被用来设置哪些类型的改变与活动区域有关。可能的值由以下的一个或者更多组成：`additions`, `removals`, `text`, `all` 。 默认值是 `additions text`。
 3. **`aria-labelledby`** : `aria-labelledby=[IDLIST]` 被用来将一个区域与其标签关联起来，与 aria-control 类似，但将标签与区域关联。标签标识符间用空格隔开。
 4. **`aria-describedby`** : `aria-describedby=[IDLIST]` 被用来将一个区域与其描述关联起来，与 aria-control 类似，但将标签与描述关联。描述标识符间用空格隔开。
 
@@ -214,4 +214,4 @@ ARIA 活动属性的细分：
 
 ## 参考
 
-- [ARIA 角色](/en-US/docs/Web/Accessibility/ARIA/Roles)
+- [ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)

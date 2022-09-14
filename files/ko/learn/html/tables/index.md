@@ -1,13 +1,6 @@
 ---
 title: HTML tables
 slug: Learn/HTML/Tables
-tags:
-  - HTML
-  - 가이드
-  - 모듈
-  - 초보자
-  - 테이블
-translation_of: Learn/HTML/Tables
 ---
 {{LearnSidebar}}
 

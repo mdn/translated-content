@@ -1,13 +1,6 @@
 ---
 title: Window.isSecureContext
 slug: orphaned/Web/API/Window/isSecureContext
-tags:
-  - API
-  - Property
-  - Reference
-  - Security
-  - Window
-translation_of: Web/API/Window/isSecureContext
 original_slug: Web/API/Window/isSecureContext
 ---
 {{APIRef}}{{SeeCompatTable}}

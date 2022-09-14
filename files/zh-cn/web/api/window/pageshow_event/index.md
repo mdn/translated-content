@@ -9,7 +9,7 @@ slug: Web/API/Window/pageshow_event
 - 规范
   - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-pageshow)
 - 接口
-  - : [PageTransitionEvent](/en-US/docs/Web/API/PageTransitionEvent)
+  - : [PageTransitionEvent](/zh-CN/docs/Web/API/PageTransitionEvent)
 - 事件冒泡
   - : No
 - 事件取消
@@ -60,5 +60,5 @@ window.addEventListener('load', function() {
 
 ## 相关事件
 
-- [`pagehide`](/en-US/docs/Mozilla_event_reference/pagehide)
-- [Using Firefox 1.5 caching — pageshow event](/en-US/docs/Using_Firefox_1.5_caching#pageshow_event)
+- [`pagehide`](/zh-CN/docs/Mozilla_event_reference/pagehide)
+- [Using Firefox 1.5 caching — pageshow event](/zh-CN/docs/Using_Firefox_1.5_caching#pageshow_event)

@@ -1,19 +1,6 @@
 ---
 title: ':-moz-locale-dir(rtl)'
 slug: Web/CSS/:-moz-locale-dir(rtl)
-tags:
-  - ':-moz-locale-dir'
-  - CSS
-  - CSS:Mozilla 拡張
-  - ローカライズ
-  - NeedsCompatTable
-  - NeedsExample
-  - 標準外
-  - 擬似クラス
-  - リファレンス
-  - 右書き
-  - セレクター
-translation_of: Web/CSS/:-moz-locale-dir(rtl)
 ---
 {{CSSRef}}{{Non-standard_header}}
 

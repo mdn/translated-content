@@ -130,7 +130,7 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 
 - {{HTMLElement('main')}} 存放每个页面独有的内容。每个页面上只能用一次 `<main>`，且直接位于 {{HTMLElement('body')}} 中。最好不要把它嵌套进其它元素。
 - {{HTMLElement('article')}} 包围的内容即一篇文章，与页面其它部分无关（比如一篇博文）。
-- {{HTMLElement('section')}} 与 `<article>` 类似，但 `<section>` 更适用于组织页面使其按功能（比如迷你地图、一组文章标题和摘要）分块。一般的最佳用法是：以 [标题](/en-US/Learn/HTML/Howto/Set_up_a_proper_title_hierarchy) 作为开头；也可以把一篇 `<article>` 分成若干部分并分别置于不同的 `<section>` 中，也可以把一个区段 `<section>` 分成若干部分并分别置于不同的 `<article>` 中，取决于上下文。
+- {{HTMLElement('section')}} 与 `<article>` 类似，但 `<section>` 更适用于组织页面使其按功能（比如迷你地图、一组文章标题和摘要）分块。一般的最佳用法是：以 [标题](/zh-CN/Learn/HTML/Howto/Set_up_a_proper_title_hierarchy) 作为开头；也可以把一篇 `<article>` 分成若干部分并分别置于不同的 `<section>` 中，也可以把一个区段 `<section>` 分成若干部分并分别置于不同的 `<article>` 中，取决于上下文。
 - {{HTMLElement('aside')}} 包含一些间接信息（术语条目、作者简介、相关链接，等等）。
 - {{HTMLElement('header')}} 是简介形式的内容。如果它是 {{HTMLElement('body')}} 的子元素，那么就是网站的全局页眉。如果它是 {{HTMLElement('article')}} 或{{HTMLElement('section')}} 的子元素，那么它是这些部分特有的页眉（此 `<header>` 非彼 [标题](/zh-CN/docs/learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#增加一个标题)）。
 - {{HTMLElement('nav')}} 包含页面主导航功能。其中不应包含二级链接等内容。
@@ -226,7 +226,7 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 
 ## 另请参阅
 
-- [使用 HTML 区段和大纲](/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)：HTML5 语义元素和大纲算法进阶指南。
+- [使用 HTML 区段和大纲](/zh-CN/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)：HTML5 语义元素和大纲算法进阶指南。
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
 

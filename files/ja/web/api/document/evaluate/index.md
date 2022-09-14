@@ -2,7 +2,9 @@
 title: Document.evaluate()
 slug: Web/API/Document/evaluate
 ---
-{{ ApiRef("DOM") }}[XPath](/ja/docs/XPath "XPath") 式やその他与えられたパラメータに基づいて [`XPathResult`](/ja/docs/XPathResult "XPathResult") を返します。
+{{ ApiRef("DOM") }}
+
+[XPath](/ja/docs/XPath) 式やその他与えられたパラメータに基づいて [`XPathResult`](/ja/docs/XPathResult) を返します。
 
 ## 構文
 
@@ -47,7 +49,7 @@ document.evaluate(".//h2", document.body, null, XPathResult.ANY_TYPE, null);
 
 Notice in the above `document.body` has been used as the context instead of `document` so the XPath starts from the body element. (In this example, the `"."` is important to indicate that the querying should start from the context node, document.body. If the "." was left out (leaving `//h2`) the query would start from the root node (`html`) which would be more wasteful.)
 
-See [Introduction to using XPath in JavaScript](/ja/docs/Introduction_to_using_XPath_in_JavaScript "Introduction to using XPath in JavaScript") for more information.
+See [Introduction to using XPath in JavaScript](/ja/docs/Introduction_to_using_XPath_in_JavaScript) for more information.
 
 ## 注釈
 
@@ -56,7 +58,7 @@ See [Introduction to using XPath in JavaScript](/ja/docs/Introduction_to_using_X
 
 ## 戻り値の分類
 
-(Merge with [Template:XPathResultConstants](/Template:XPathResultConstants "Template:XPathResultConstants")?
+(Merge with [Template:XPathResultConstants](/Template:XPathResultConstants)?
 
 These are supported values for the `resultType` parameter of the `evaluate` method:
 
@@ -89,6 +91,6 @@ Results of `NODE_SNAPSHOT` types are snapshots, which are essentially lists of m
 
 ## 関連項目
 
-- [DOM:document.createExpression](/ja/docs/DOM/document.createExpression "DOM/document.createExpression")
-- [XPath Code Snippets](/ja/docs/Code_snippets/XPath "Code_snippets/XPath")
+- [DOM:document.createExpression](/ja/docs/DOM/document.createExpression)
+- [XPath Code Snippets](/ja/docs/Code_snippets/XPath)
 - [Check for browser support](http://codepen.io/johan/full/ckFgn)

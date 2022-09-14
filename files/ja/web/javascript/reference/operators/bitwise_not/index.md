@@ -1,14 +1,6 @@
 ---
 title: ビット否定 (~)
 slug: Web/JavaScript/Reference/Operators/Bitwise_NOT
-tags:
-  - ビット演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.bitwise_not
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_NOT
 ---
 {{jsSidebar("Operators")}}
 

@@ -1,9 +1,6 @@
 ---
 title: 'MediaRecorder: error イベント'
 slug: Web/API/MediaRecorder/error_event
-tags:
-  - Event
-translation_of: Web/API/MediaRecorder/error_event
 ---
 {{APIRef}}
 

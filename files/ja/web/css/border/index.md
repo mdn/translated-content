@@ -1,15 +1,6 @@
 ---
 title: border
 slug: Web/CSS/border
-tags:
-  - CSS
-  - CSS 境界
-  - CSS 一括指定プロパティ
-  - レイアウト
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border
-translation_of: Web/CSS/border
 ---
 {{CSSRef("CSS Borders")}}
 

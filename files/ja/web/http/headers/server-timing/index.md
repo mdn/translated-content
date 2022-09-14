@@ -1,12 +1,6 @@
 ---
 title: Server-Timing
 slug: Web/HTTP/Headers/Server-Timing
-tags:
-  - HTTP
-  - Reference
-  - パフォーマンス
-  - ヘッダー
-translation_of: Web/HTTP/Headers/Server-Timing
 ---
 {{HTTPSidebar}}
 

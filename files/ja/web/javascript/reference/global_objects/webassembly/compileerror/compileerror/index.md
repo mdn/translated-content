@@ -1,13 +1,6 @@
 ---
 title: WebAssembly.CompileError() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError/CompileError
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - WebAssembly
-browser-compat: javascript.builtins.WebAssembly.CompileError.CompileError
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError/CompileError
 ---
 {{JSRef}}
 

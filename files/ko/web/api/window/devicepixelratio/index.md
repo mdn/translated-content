@@ -19,7 +19,9 @@ translation_of: Web/API/Window/devicePixelRatio
 
 ## 구문
 
-    value = window.devicePixelRatio
+```js
+value = window.devicePixelRatio
+```
 
 ## 예제
 
@@ -66,7 +68,7 @@ var textString = "I love MDN";
 ctx.fillText(textString, x, y);
 ```
 
-[![This image describe the impact of different value on retina display. ](https://mdn.mozillademos.org/files/15023/devicePixelRation%20Diff..png)](https://mdn.mozillademos.org/files/15023/devicePixelRation%20Diff..png)
+[![This image describe the impact of different value on retina display.](https://mdn.mozillademos.org/files/15023/devicePixelRation%20Diff..png)](https://mdn.mozillademos.org/files/15023/devicePixelRation%20Diff.png)]
 
 ### Monitoring screen resolution or zoom level changes
 

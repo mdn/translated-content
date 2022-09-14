@@ -1,12 +1,6 @@
 ---
 title: window.parent
 slug: Web/API/Window/parent
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Window
-translation_of: Web/API/Window/parent
 ---
 {{ APIRef() }}
 

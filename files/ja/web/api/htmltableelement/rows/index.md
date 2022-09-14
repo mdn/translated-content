@@ -1,19 +1,6 @@
 ---
 title: HTMLTableElement.rows
 slug: Web/API/HTMLTableElement/rows
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - NeedsBrowserCompatibility
-  - NeedsSpecTable
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - 表の行
-  - rows
-browser-compat: api.HTMLTableElement.rows
-translation_of: Web/API/HTMLTableElement/rows
 ---
 {{APIRef("HTML DOM")}}
 

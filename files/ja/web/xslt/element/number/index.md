@@ -1,12 +1,6 @@
 ---
 title: <xsl:number>
 slug: Web/XSLT/Element/number
-tags:
-  - Number
-  - XSLT
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/number
 ---
 {{ XsltRef() }}
 
@@ -16,15 +10,15 @@ translation_of: Web/XSLT/Element/number
 
 ```
 <xsl:number
-	count=EXPRESSION
-	level="single" | "multiple" | "any"
-	from=EXPRESSION
-	value=EXPRESSION
-	format=FORMAT-STRING
-	lang=XML:LANG-CODE
-	letter-value="alphabetic" | "traditional"
-	grouping-separator=CHARACTER
-	grouping-size=NUMBER  />
+  count=EXPRESSION
+  level="single" | "multiple" | "any"
+  from=EXPRESSION
+  value=EXPRESSION
+  format=FORMAT-STRING
+  lang=XML:LANG-CODE
+  letter-value="alphabetic" | "traditional"
+  grouping-separator=CHARACTER
+  grouping-size=NUMBER  />
 ```
 
 ### 必須属性

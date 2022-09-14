@@ -1,11 +1,6 @@
 ---
 title: Accept-CH-Lifetime
 slug: Web/HTTP/Headers/Accept-CH-Lifetime
-tags:
-  - Client hints
-  - HTTP
-  - header
-translation_of: Web/HTTP/Headers/Accept-CH-Lifetime
 ---
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 

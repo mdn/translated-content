@@ -181,7 +181,7 @@ console.log(foo);    // 4.555806215962888
 着重注意以下几点：
 
 - 在你的 HTML 中需要包含 type="module" 的 {{htmlelement("script")}} 元素这样的脚本，以便它被识别为模块并正确处理
-- 不能通过 `file://` URL 运行 JS 模块 — 这将导致 [CORS](/en-US/docs/Web/HTTP/CORS) 错误。你需要通过 HTTP 服务器运行。
+- 不能通过 `file://` URL 运行 JS 模块 — 这将导致 [CORS](/zh-CN/docs/Web/HTTP/CORS) 错误。你需要通过 HTTP 服务器运行。
 
 ### 使用默认导出
 
@@ -252,7 +252,7 @@ import { myFunction, myVariable, myClass } from 'parentModule.js'
 ## 参见
 
 - {{jsxref("Statements/import", "import")}}
-- [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide
+- [JavaScript modules](/zh-CN/docs/Web/JavaScript/Guide/Modules) guide
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
 - [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
 - [Axel Rauschmayer's book: "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)

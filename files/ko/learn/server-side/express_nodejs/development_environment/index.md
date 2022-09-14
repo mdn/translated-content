@@ -1,18 +1,6 @@
 ---
 title: Node 개발 환경을 설치하기
 slug: Learn/Server-side/Express_Nodejs/development_environment
-tags:
-  - CodingScripting
-  - Express
-  - Node
-  - nodejs
-  - npm
-  - 개발 환경
-  - 배움
-  - 서버-사이드
-  - 인트로
-  - 초보자
-translation_of: Learn/Server-side/Express_Nodejs/development_environment
 original_slug: Learn/Server-side/Express_Nodejs/개발_환경
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}

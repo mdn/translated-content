@@ -1,16 +1,6 @@
 ---
 title: '<nobr>: 無改行文字列要素'
 slug: Web/HTML/Element/nobr
-tags:
-  - 要素
-  - HTML
-  - Non-standard
-  - 非推奨
-  - リファレンス
-  - ウェブ
-  - nobr
-browser-compat: html.elements.nobr
-translation_of: Web/HTML/Element/nobr
 ---
 
 {{HTMLRef}}{{Non-standard_Header}}{{deprecated_header}}

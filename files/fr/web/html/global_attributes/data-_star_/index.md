@@ -40,15 +40,11 @@ Pour un tutoriel plus avancé à propos des attributs de données HTML, lire l'a
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | État                             | Commentaires                                                                                               |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes", "data-*")}} | {{Spec2('HTML WHATWG')}} | Pas de modification depuis la dernière dérivation, {{SpecName('HTML5.1')}}                        |
-| {{SpecName('HTML5.1', "dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes", "data-*")}}         | {{Spec2('HTML5.1')}}     | Dérivée de {{SpecName('HTML WHATWG')}}, pas de changement depuis {{SpecName('HTML5 W3C')}} |
-| {{SpecName('HTML5 W3C', "dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes", "data-*")}}     | {{Spec2('HTML5 W3C')}}     | Dérivée de {{SpecName('HTML WHATWG')}}, définition initiale.                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.data_attributes")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -6,7 +6,7 @@ slug: Web/API/SVGUseElement
 
 ## SVG 使用 DOM 接口
 
-该**`SVGUseElement`**接口对应于{{SVGElement("use")}}元素。
+该 **`SVGUseElement`** 接口对应于{{SVGElement("use")}}元素。
 
 {{InheritanceDiagram(600, 140)}}
 

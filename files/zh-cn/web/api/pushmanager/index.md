@@ -19,14 +19,14 @@ _None._
 - {{domxref("PushManager.getSubscription()")}}
   - : 用于获取已经存在的 push 订阅。返回一个{{jsxref("Promise")}}，这个{{jsxref("Promise")}}包装着 push 订阅信息的{{domxref("PushSubscription")}}对象。如果没有已经存在的订阅，则返回`null`。
 - {{domxref("PushManager.permissionState()")}}
-  - : 返回一个{{jsxref("Promise")}}，标识这当前{{domxref("PushManager")}}的权限状态，只能是` 'granted'，``'denied' ` ，`'prompt'`中的一种。
+  - : 返回一个{{jsxref("Promise")}}，标识这当前{{domxref("PushManager")}}的权限状态，只能是 `'granted'`，`'denied'` ，`'prompt'` 中的一种。
 - {{domxref("PushManager.subscribe()")}}
   - : 向 push 服务器（即第三方 push server）发起订阅。返回一个{{jsxref("Promise")}}，这个{{jsxref("Promise")}}包装着 push 订阅信息的{{domxref("PushSubscription")}}对象。如果当前的 service worke 没有已经存在的订阅，则会创建一个新的 push 订阅。
 
 ### 已废弃的方法
 
 - {{domxref("PushManager.hasPermission()")}} {{deprecated_inline}}
-  - : （已废弃）返回一个{{jsxref("Promise")}}，标识着该 webapp 的`PushPermissionStatus`状态，该状态只能是` 'granted'，``'denied' ` ，`'default'`中的一种。目前已经被{{domxref("PushManager.permissionState()")}}取代。
+  - : （已废弃）返回一个{{jsxref("Promise")}}，标识着该 webapp 的`PushPermissionStatus`状态，该状态只能是 `'granted'`，`'denied'` ，`'default'` 中的一种。目前已经被{{domxref("PushManager.permissionState()")}}取代。
 - {{domxref("PushManager.register()")}} {{deprecated_inline}}
   - : （已废弃）发起注册 push 订阅。目前已经被{{domxref("PushManager.subscribe()")}}取代。
 - {{domxref("PushManager.registrations()")}} {{deprecated_inline}}

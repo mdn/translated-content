@@ -1,15 +1,6 @@
 ---
 title: ':invalid'
 slug: Web/CSS/:invalid
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.invalid
-translation_of: Web/CSS/:invalid
 ---
 {{CSSRef}}
 

@@ -1,18 +1,6 @@
 ---
 title: '-webkit-mask-composite'
 slug: Web/CSS/-webkit-mask-composite
-tags:
-  - '-webkit-mask-composite'
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - CSS:WebKit 拡張
-  - 標準外
-  - リファレンス
-  - mask-composite
-  - recipe:css-property
-browser-compat: css.properties.-webkit-mask-composite
-translation_of: Web/CSS/-webkit-mask-composite
 ---
 {{CSSRef}}{{Non-standard_header}}
 

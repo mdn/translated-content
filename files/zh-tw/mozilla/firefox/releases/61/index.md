@@ -64,7 +64,7 @@ _無變動。_
 
 ### HTTP
 
-- 已實作 cookie 管理中的 **`SameSite`**，見 [Set-Cookie](/en-US/docs/Web/HTTP/Headers/Set-Cookie) 及 [HTTP cookies](/en-US/docs/Web/HTTP/Cookies)。（{{bug(795346)}}）
+- 已實作 cookie 管理中的 **`SameSite`**，見 [Set-Cookie](/zh-TW/docs/Web/HTTP/Headers/Set-Cookie) 及 [HTTP cookies](/zh-TW/docs/Web/HTTP/Cookies)。（{{bug(795346)}}）
 
 ### 安全性
 

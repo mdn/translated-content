@@ -1,13 +1,6 @@
 ---
 title: HTMLFieldSetElement
 slug: Web/API/HTMLFieldSetElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-  - インターフェイス
-translation_of: Web/API/HTMLFieldSetElement
 ---
 {{APIRef("HTML DOM")}}
 

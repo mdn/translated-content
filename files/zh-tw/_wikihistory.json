@@ -146,10 +146,6 @@
     "modified": "2019-03-23T22:11:57.041Z",
     "contributors": ["jackblackevo", "vintif"]
   },
-  "Glossary/Bootstrap": {
-    "modified": "2020-05-23T17:07:57.268Z",
-    "contributors": ["iigmir"]
-  },
   "Glossary/Browser": {
     "modified": "2019-03-23T22:54:30.687Z",
     "contributors": ["iigmir", "irvinfly"]
@@ -633,10 +629,6 @@
   "Glossary/hash": {
     "modified": "2019-03-18T21:42:32.887Z",
     "contributors": ["Rocker"]
-  },
-  "Glossary/jQuery": {
-    "modified": "2020-05-23T15:08:04.982Z",
-    "contributors": ["iigmir"]
   },
   "Glossary/jpeg": {
     "modified": "2019-03-18T21:44:36.385Z",
@@ -3883,27 +3875,6 @@
       "kourge"
     ]
   },
-  "Web/JavaScript/A_re-introduction_to_JavaScript": {
-    "modified": "2020-03-12T19:36:04.881Z",
-    "contributors": [
-      "kourge",
-      "locker_rj45",
-      "Q3Q",
-      "weihanglo",
-      "teoli",
-      "jackblackevo",
-      "TpWILovePanda",
-      "changyuheng",
-      "ArvinH",
-      "sailplaneTW",
-      "linhomeyeu",
-      "fillano",
-      "fscholz",
-      "Mgjbot",
-      "Smallwow",
-      "BobChao"
-    ]
-  },
   "Web/JavaScript/About_JavaScript": {
     "modified": "2020-03-12T19:35:23.761Z",
     "contributors": [
@@ -4106,6 +4077,27 @@
   "Web/JavaScript/JavaScript_technologies_overview": {
     "modified": "2020-03-12T19:35:23.439Z",
     "contributors": ["jackblackevo", "fscholz", "irvinfly", "chiayuan"]
+  },
+  "Web/JavaScript/Language_Overview": {
+    "modified": "2020-03-12T19:36:04.881Z",
+    "contributors": [
+      "kourge",
+      "locker_rj45",
+      "Q3Q",
+      "weihanglo",
+      "teoli",
+      "jackblackevo",
+      "TpWILovePanda",
+      "changyuheng",
+      "ArvinH",
+      "sailplaneTW",
+      "linhomeyeu",
+      "fillano",
+      "fscholz",
+      "Mgjbot",
+      "Smallwow",
+      "BobChao"
+    ]
   },
   "Web/JavaScript/Memory_Management": {
     "modified": "2020-12-04T15:05:56.547Z",
@@ -4978,10 +4970,6 @@
     "modified": "2020-10-15T21:53:17.228Z",
     "contributors": ["jackblackevo", "xsfishxs"]
   },
-  "Web/JavaScript/Shells": {
-    "modified": "2020-03-12T19:45:29.748Z",
-    "contributors": ["JianHuaHe"]
-  },
   "Web/JavaScript/Typed_arrays": {
     "modified": "2020-03-12T19:36:15.816Z",
     "contributors": [
@@ -5140,5 +5128,17 @@
   "conflicting/Web/Accessibility/ARIA": {
     "modified": "2019-03-23T22:50:58.911Z",
     "contributors": ["PatrickTaiwan", "Shiyou", "alk03073135"]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
+    "modified": "2020-03-12T19:45:29.748Z",
+    "contributors": ["JianHuaHe"]
+  },
+  "orphaned/Glossary/Bootstrap": {
+    "modified": "2020-05-23T17:07:57.268Z",
+    "contributors": ["iigmir"]
+  },
+  "orphaned/Glossary/jQuery": {
+    "modified": "2020-05-23T15:08:04.982Z",
+    "contributors": ["iigmir"]
   }
 }

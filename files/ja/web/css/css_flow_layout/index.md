@@ -1,15 +1,6 @@
 ---
 title: CSS フローレイアウト
 slug: Web/CSS/CSS_Flow_Layout
-tags:
-  - CSS
-  - Reference
-  - ガイド
-  - フロー
-  - フローレイアウト
-  - レイアウト
-  - 中級者
-translation_of: Web/CSS/CSS_Flow_Layout
 ---
 {{CSSRef}}
 
@@ -39,5 +30,5 @@ _通常フロー_ (Normal Flow) 、またはフローレイアウトは、レイ
 
 - {{Glossary("Block/CSS", "ブロック (CSS)")}}
 
-1.  [**CSS**](/ja/docs/Web/CSS)
-2.  [**CSS リファレンス**](/ja/docs/Web/CSS/Reference)
+1. [CSS](/ja/docs/Web/CSS)
+2. [CSS リファレンス](/ja/docs/Web/CSS/Reference)

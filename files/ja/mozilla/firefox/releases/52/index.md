@@ -1,11 +1,6 @@
 ---
 title: Firefox 52 for developers
 slug: Mozilla/Firefox/Releases/52
-tags:
-  - Firefox
-  - Mozilla
-  - Release Notes
-translation_of: Mozilla/Firefox/Releases/52
 ---
 Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました。このページでは、開発者に影響する Firefox 52 の変更点をまとめています。
 

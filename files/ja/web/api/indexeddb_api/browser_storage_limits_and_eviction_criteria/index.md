@@ -1,15 +1,6 @@
 ---
 title: ブラウザーのストレージ制限と削除基準
 slug: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
-tags:
-  - Database
-  - IndexedDB
-  - LRU
-  - Storage
-  - client-side
-  - eviction
-  - limit
-translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
 ---
 {{DefaultAPISidebar("IndexedDB")}}
 
@@ -49,9 +40,9 @@ Firefox では、永続的なストレージが使用されると、ユーザー
 
 ## データの保存先は?
 
-それぞれのストレージ種別は、個別のリポジトリーーを表します。以下は、ユーザーの Firefox プロファイル下のディレクトリにおける実際のマッピングです (他のブラウザーでは若干異なる場合があります)。
+それぞれのストレージ種別は、個別のリポジトリーを表します。以下は、ユーザーの Firefox プロファイル下のディレクトリにおける実際のマッピングです (他のブラウザーでは若干異なる場合があります)。
 
-- `<profile>/storage` — クォータマネージャーー (後述) に管理されている、ストレージの主要な最上位ディレクトリーです。
+- `<profile>/storage` — クォータマネージャー (後述) に管理されている、ストレージの主要な最上位ディレクトリーです。
 - `<profile>/storage/permanent` — 永続的なデータストレージのリポジトリーです。
 - `<profile>/storage/temporary` — 一時的なデータストレージのリポジトリーです。
 - `<profile>/storage/default` — 既定のデータストレージのリポジトリーです。
@@ -92,11 +83,11 @@ Firefox では、永続的なストレージが使用されると、ユーザー
 
 ## LRU ポリシー
 
-使用可能なディスク領域がすべて埋まったときは、クォータマネージャーーが LRU ポリシーに基づいてデータの削除処理を始めます。もっとも過去に使用されたオリジンのデータが始めに削除され、上限に達しなくなるなるまで削除を繰り返します。
+使用可能なディスク領域がすべて埋まったときは、クォータマネージャーが LRU ポリシーに基づいてデータの削除処理を始めます。もっとも過去に使用されたオリジンのデータが始めに削除され、上限に達しなくなるなるまで削除を繰り返します。
 
 一時的なストレージを使用して、オリジンごとに「最終アクセス日時」を記録しています。一時的なストレージがグローバルリミットに達する (後に上限をさらに超える) と、現在使用していない (すなわち、データストアを開き続けているタブやアプリがない) オリジンをすべて発見しようとします。これらは、「最終アクセス日時」によって整列されます。オリジン立ち退きを発生させたリクエストを満たすのに十分な領域を確保するまで、もっとも過去に使用されたオリジンを削除し続けます。
 
 ## 関連情報
 
-- [Working with quota on mobile browsers](http://www.html5rocks.com/en/tutorials/offline/quota-research/), by[ Eiji Kitamura.](http://blog.agektmr.com "Eiji Kitamura") モバイルブラウザーのクライアント側ストレージについて詳しく分析した記事。
-- [Quota Management API: Fast Facts](https://developers.google.com/web/updates/2011/11/Quota-Management-API-Fast-Facts), by[ Eiji Kitamura.](http://blog.agektmr.com "Eiji Kitamura") Chrome/Blink (Opera も含まれるでしょう) の Quota Management API について見ていく記事。
+- [Working with quota on mobile browsers](http://www.html5rocks.com/en/tutorials/offline/quota-research/), by [Eiji Kitamura.](http://blog.agektmr.com) モバイルブラウザーのクライアント側ストレージについて詳しく分析した記事。
+- [Quota Management API: Fast Facts](https://developers.google.com/web/updates/2011/11/Quota-Management-API-Fast-Facts), by[Eiji Kitamura.](http://blog.agektmr.com) Chrome/Blink (Opera も含まれるでしょう) の Quota Management API について見ていく記事。

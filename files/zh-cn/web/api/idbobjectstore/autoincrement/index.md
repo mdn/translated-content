@@ -4,7 +4,7 @@ slug: Web/API/IDBObjectStore/autoIncrement
 ---
 {{ APIRef("IndexedDB") }}
 
-{{domxref("IDBObjectStore")}}的只读属性**`autoIncrement`**接口返回当前 objectStore 的自增标记值（true 或 false）。
+{{domxref("IDBObjectStore")}}的只读属性 **`autoIncrement`** 接口返回当前 objectStore 的自增标记值（true 或 false）。
 
 什么是自增呢？熟悉 SQL 的朋友应该知道，SQL 数据里面的字段可以设置自增，当一条记录被插入时，不必传入该字段，新记录的该字段值会在前面一条记录该字段值的基础上加 1.而 indexedDB 里面的 autoIncrement 的同样的意义。（译者注）
 

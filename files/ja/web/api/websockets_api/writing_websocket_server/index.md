@@ -1,12 +1,6 @@
 ---
 title: C# で WebSocket サーバーを記述する
 slug: Web/API/WebSockets_API/Writing_WebSocket_server
-tags:
-  - HTML5
-  - NeedsMarkupWork
-  - チュートリアル
-  - WebSockets
-translation_of: Web/API/WebSockets_API/Writing_WebSocket_server
 ---
 ## はじめに
 

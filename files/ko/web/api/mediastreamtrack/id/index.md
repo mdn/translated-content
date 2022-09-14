@@ -16,7 +16,9 @@ translation_of: Web/API/MediaStreamTrack/id
 
 ## 구문
 
-    const id = track.id
+```js
+const id = track.id
+```
 
 ## 명세
 

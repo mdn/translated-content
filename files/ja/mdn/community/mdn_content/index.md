@@ -29,13 +29,13 @@ MDN の文書に関する問題は、[コンテンツリポジトリーの課題
 | プロジェクトボード                                                                                                                                                               | 説明                                                                       |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | [Learn docs MDN project board](https://github.com/mdn/sprints/projects/12)                                                                                                       | [Learn Web Development](/ja/docs/Learn) に関する課題。                     |
-| [Content architecture MDN ](https://github.com/mdn/sprints/projects/11)[project](https://github.com/mdn/sprints/projects/12)[ board](https://github.com/mdn/sprints/projects/11) | 一般的なコンテンツ、ページの構成、その他の MDN 上の雑務に関する課題。      |
-| [HTTP docs MDN ](https://github.com/mdn/sprints/projects/10)[project](https://github.com/mdn/sprints/projects/12)[ board](https://github.com/mdn/sprints/projects/10)            | [HTTP](/ja/docs/Web/HTTP) の文書に関する課題                               |
-| [HTML docs MDN ](https://github.com/mdn/sprints/projects/9)[project](https://github.com/mdn/sprints/projects/12)[ board](https://github.com/mdn/sprints/projects/9)              | [HTML](/ja/docs/Web/HTML) の文書に関する課題                               |
-| [DevTools docs MDN ](https://github.com/mdn/sprints/projects/8)[project](https://github.com/mdn/sprints/projects/12)[ board](https://github.com/mdn/sprints/projects/8)          | Firefox [DevTools](/ja/docs/Tools) の文書に関する課題                      |
-| [WebExtensions docs MDN ](https://github.com/mdn/sprints/projects/7)[project](https://github.com/mdn/sprints/projects/12)[ board](https://github.com/mdn/sprints/projects/7)     | [WebExtensions](/ja/docs/Mozilla/Add-ons/WebExtensions) の文書に関する課題 |
-| [CSS docs MDN ](https://github.com/mdn/sprints/projects/6)[project](https://github.com/mdn/sprints/projects/12)[ board](https://github.com/mdn/sprints/projects/6)               | [CSS](/ja/docs/Web/CSS/Reference) の文書に関する課題                       |
-| [JavaScript docs MDN ](https://github.com/mdn/sprints/projects/5)[project](https://github.com/mdn/sprints/projects/12)[ board](https://github.com/mdn/sprints/projects/5)        | [JavaScript](/ja/docs/Web/JavaScript) の文書に関する課題                   |
+| [Content architecture MDN](https://github.com/mdn/sprints/projects/11) [project](https://github.com/mdn/sprints/projects/12) [board](https://github.com/mdn/sprints/projects/11) | 一般的なコンテンツ、ページの構成、その他の MDN 上の雑務に関する課題。      |
+| [HTTP docs MDN](https://github.com/mdn/sprints/projects/10) [project](https://github.com/mdn/sprints/projects/12) [board](https://github.com/mdn/sprints/projects/10)            | [HTTP](/ja/docs/Web/HTTP) の文書に関する課題                               |
+| [HTML docs MDN](https://github.com/mdn/sprints/projects/9) [project](https://github.com/mdn/sprints/projects/12) [board](https://github.com/mdn/sprints/projects/9)              | [HTML](/ja/docs/Web/HTML) の文書に関する課題                               |
+| [DevTools docs MDN](https://github.com/mdn/sprints/projects/8) [project](https://github.com/mdn/sprints/projects/12) [board](https://github.com/mdn/sprints/projects/8)          | Firefox [DevTools](/ja/docs/Tools) の文書に関する課題                      |
+| [WebExtensions docs MDN](https://github.com/mdn/sprints/projects/7) [project](https://github.com/mdn/sprints/projects/12) [board](https://github.com/mdn/sprints/projects/7)     | [WebExtensions](/ja/docs/Mozilla/Add-ons/WebExtensions) の文書に関する課題 |
+| [CSS docs MDN](https://github.com/mdn/sprints/projects/6) [project](https://github.com/mdn/sprints/projects/12) [board](https://github.com/mdn/sprints/projects/6)               | [CSS](/ja/docs/Web/CSS/Reference) の文書に関する課題                       |
+| [JavaScript docs MDN](https://github.com/mdn/sprints/projects/5) [project](https://github.com/mdn/sprints/projects/12) [board](https://github.com/mdn/sprints/projects/5)        | [JavaScript](/ja/docs/Web/JavaScript) の文書に関する課題                   |
 
 ## どんなメリットがあるのか
 
@@ -50,14 +50,14 @@ MDN の文書に関する問題は、[コンテンツリポジトリーの課題
 
 ## 手伝う方法
 
-1.  最初に、 [GitHub アカウント](https://github.com/join)をまだお持ちでなければサインアップしてください。 GitHub の課題でやり取りするのに必要です。
-2.  次に、手伝いたいトピック領域を 1 つ以上選んでください。上記の一覧を使用して、より詳しい情報を得ると選択をするのに役立ちます。何を選べばよいのか分からない場合は、 [Matrix](https://wiki.mozilla.org/Matrix) の [MDN Web Docs チャットルーム](https://chat.mozilla.org/#/room/#mdn:mozilla.org)で聞いてみましょう。
+1. 最初に、 [GitHub アカウント](https://github.com/join)をまだお持ちでなければサインアップしてください。 GitHub の課題でやり取りするのに必要です。
+2. 次に、手伝いたいトピック領域を 1 つ以上選んでください。上記の一覧を使用して、より詳しい情報を得ると選択をするのに役立ちます。何を選べばよいのか分からない場合は、 [Matrix](https://wiki.mozilla.org/Matrix) の [MDN Web Docs チャットルーム](https://chat.mozilla.org/#/room/#mdn:mozilla.org)で聞いてみましょう。
 
 ### セットアップが完了したら
 
-1.  興味のある課題を選んで、その課題に対するコメントを添えて、自分に割り当ててもらいましょう。
-2.  作業中に分からないことがあったら、 [Matrix](https://wiki.mozilla.org/Matrix) の [MDN Web Docs チャットルーム](https://chat.mozilla.org/#/room/#mdn:mozilla.org)で気軽に相談してください。
-3.  問題を修正したら、提出者にレビューを依頼してください。うまくいけば、さらに作業が必要だと思うかどうかを教えてくれるでしょう。必要に応じて私たちも関与します。
-4.  課題が修正されたことが確認されたら、閉じることができます。課題を閉じることができる人は、元の課題の提出者か、 MDN のスタッフのどちらかです。
+1. 興味のある課題を選んで、その課題に対するコメントを添えて、自分に割り当ててもらいましょう。
+2. 作業中に分からないことがあったら、 [Matrix](https://wiki.mozilla.org/Matrix) の [MDN Web Docs チャットルーム](https://chat.mozilla.org/#/room/#mdn:mozilla.org)で気軽に相談してください。
+3. 問題を修正したら、提出者にレビューを依頼してください。うまくいけば、さらに作業が必要だと思うかどうかを教えてくれるでしょう。必要に応じて私たちも関与します。
+4. 課題が修正されたことが確認されたら、閉じることができます。課題を閉じることができる人は、元の課題の提出者か、 MDN のスタッフのどちらかです。
 
 > **Note:** 課題を選択して作業する際には、 [GitHub のベストプラクティス](/ja/docs/MDN/Contribute/GitHub_best_practices)や [MDN で始めよう](/ja/docs/MDN/Contribute/Getting_started)のガイドも参考になるでしょう。

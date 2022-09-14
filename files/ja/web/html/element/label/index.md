@@ -1,14 +1,6 @@
 ---
 title: <label>
 slug: Web/HTML/Element/label
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/label
 ---
 {{HTMLRef}}
 

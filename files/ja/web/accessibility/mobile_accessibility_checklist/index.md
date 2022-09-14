@@ -1,12 +1,6 @@
 ---
 title: モバイルアクセシビリティのチェックリスト
 slug: Web/Accessibility/Mobile_accessibility_checklist
-tags:
-  - Accessibility
-  - Guidelines
-  - Mobile
-  - checklist
-translation_of: Web/Accessibility/Mobile_accessibility_checklist
 ---
 このドキュメントは、モバイルアプリ開発者向けのアクセシビリティ要件の簡潔なチェックリストを提供します。 それはより多くのパターンが生じるにつれて絶えず進化することを意図しています。
 

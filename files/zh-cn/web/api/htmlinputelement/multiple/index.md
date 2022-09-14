@@ -26,7 +26,7 @@ if (fileInput.multiple == true) {
 
 ## See also
 
-- [FileList](/en/DOM/FileList)
+- [FileList](/zh-CN/DOM/FileList)
 - [Bug 523771](https://bugzilla.mozilla.org/show_bug.cgi?id=523771) - Support \<input type=file multiple>
 
 ## Specification

@@ -1,13 +1,6 @@
 ---
 title: ':user-valid (:-moz-ui-valid)'
 slug: web/css/:user-valid
-tags:
-  - CSS
-  - CSS Selectors
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.user-valid
 ---
 {{CSSRef}}
 

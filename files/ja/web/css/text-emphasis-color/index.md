@@ -1,19 +1,6 @@
 ---
 title: text-emphasis-color
 slug: Web/CSS/text-emphasis-color
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS スタイル
-  - CSS テキスト装飾
-  - HTML 色
-  - Reference
-  - HTML のスタイル付け
-  - テキストの強調
-  - recipe:css-property
-  - text-decoration-color
-browser-compat: css.properties.text-emphasis-color
-translation_of: Web/CSS/text-emphasis-color
 ---
 {{CSSRef}}
 

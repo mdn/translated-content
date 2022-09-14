@@ -193,9 +193,9 @@ myTextNode=document.createTextNode("world");
 
 #### 使用 appendChild(..) 插入元素
 
-那么，通过调用 myP.appendChild({{ mediawiki.external('node_element') }}) 你可以将这个元素设置成为第二个 P 的一个新的子元素。
+那么，通过调用 `myP.appendChild(node_element)` 你可以将这个元素设置成为第二个 P 的一个新的子元素。
 
-```
+```js
 myP.appendChild(myTextNode);
 ```
 

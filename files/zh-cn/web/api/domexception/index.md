@@ -59,7 +59,7 @@ slug: Web/API/DOMException
 - `SecurityError` {{experimental_inline}}
   - : 操作不安全。 (Legacy code value: `18` and legacy constant name: `SECURITY_ERR`)
 - `NetworkError` {{experimental_inline}}
-  - : 网络错误发生. (Legacy code value: `19` and legacy constant name: ` NETWORK_ER``R `)
+  - : 网络错误发生. (Legacy code value: `19` and legacy constant name: `NETWORK_ERR`)
 - `AbortError` {{experimental_inline}}
   - : T 操作中止. (Legacy code value: `20` and legacy constant name: `ABORT_ERR`)
 - `URLMismatchError` {{experimental_inline}}

@@ -1,13 +1,6 @@
 ---
 title: CSSStyleDeclaration.cssFloat
 slug: Web/API/CSSStyleDeclaration/cssFloat
-tags:
-  - API
-  - CSSOM
-  - CSSStyleDeclaration
-  - Reference
-translation_of: Web/API/CSSStyleDeclaration/cssFloat
-browser-compat: api.CSSStyleDeclaration.cssFloat
 ---
 {{APIRef("CSSOM")}}
 

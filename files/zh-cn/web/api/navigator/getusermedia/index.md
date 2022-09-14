@@ -87,7 +87,7 @@ if (navigator.getUserMedia) {
 }
 ```
 
-参见 [permission: audio-capture](https://developer.mozilla.org/en-US/Apps/Developing/App_permissions#audio-capture) 和 [permission: video-capture](https://developer.mozilla.org/en-US/Apps/Developing/App_permissions#video-capture) 以查看更多信息。
+参见 [permission: audio-capture](/zh-CN/Apps/Developing/App_permissions#audio-capture) 和 [permission: video-capture](/zh-CN/Apps/Developing/App_permissions#video-capture) 以查看更多信息。
 
 ## 浏览器兼容性
 

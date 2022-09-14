@@ -8,12 +8,12 @@ DOM は文書内のすべてのノードにアクセスし操作するために�
 
 DOM は当初、仕様書がありませんでしたが、ブラウザが{{Glossary("JavaScript")}} の実装を始めた頃に追加されました。このレガシーな DOM は DOM0 と呼ばれることもあります。今日、 WHATWG が DOM Living Standard を保守しています。
 
-1.  Wikipedia 上の記事「{{interwiki("wikipedia", "Document_Object_Model", "The Document Object Model")}}」
-2.  MDN 上の記事「[DOM ドキュメント](/ja/docs/DOM)」
-3.  [W3C の DOM 仕様](http://www.w3.org/DOM/DOMTR)
-4.  [用語集](/ja/docs/Glossary)
+1. Wikipedia 上の記事「{{interwiki("wikipedia", "Document_Object_Model", "The Document Object Model")}}」
+2. MDN 上の記事「[DOM ドキュメント](/ja/docs/DOM)」
+3. [W3C の DOM 仕様](http://www.w3.org/DOM/DOMTR)
+4. [用語集](/ja/docs/Glossary)
 
-    1.  {{Glossary("API")}}
-    2.  {{Glossary("HTML")}}
-    3.  {{Glossary("XML")}}
-    4.  {{Glossary("World Wide Web")}}
+    1. {{Glossary("API")}}
+    2. {{Glossary("HTML")}}
+    3. {{Glossary("XML")}}
+    4. {{Glossary("World Wide Web")}}

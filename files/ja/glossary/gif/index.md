@@ -9,5 +9,3 @@ GIF (Graphics Interchange Format)は、可逆圧縮とアニメーションに�
 ### 基本的な知識
 
 - Wikipedia 上の {{Interwiki("wikipedia", "GIF")}} 記事
-
-##

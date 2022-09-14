@@ -95,15 +95,15 @@ console.log(foo);   // 5
 - [JavaScript のデータ構造](/ja/docs/Web/JavaScript/Data_structures)
 - Wikipedia の {{Interwiki("wikipedia", "プリミティブ型")}} の記事
 
-1.  [用語集](/ja/docs/Glossary)
+1. [用語集](/ja/docs/Glossary)
 
-    1.  {{Glossary("JavaScript")}}
-    2.  {{Glossary("string", "文字列")}}
-    3.  {{Glossary("number")}}
-    4.  {{Glossary("bigint")}}
-    5.  {{Glossary("boolean")}}
-    6.  {{Glossary("null")}}
-    7.  {{Glossary("undefined")}}
-    8.  {{Glossary("symbol")}}
+    1. {{Glossary("JavaScript")}}
+    2. {{Glossary("string", "文字列")}}
+    3. {{Glossary("number")}}
+    4. {{Glossary("bigint")}}
+    5. {{Glossary("boolean")}}
+    6. {{Glossary("null")}}
+    7. {{Glossary("undefined")}}
+    8. {{Glossary("symbol")}}
 
-2.  [JavaScript のデータ型](/ja/docs/Web/JavaScript/Data_structures)
+2. [JavaScript のデータ型](/ja/docs/Web/JavaScript/Data_structures)
