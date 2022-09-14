@@ -17,7 +17,7 @@ slug: Web/CSS/:not
 
 ## 语法
 
-`:not()` 伪类可以将一个或多个以逗号分隔的选择器列表作为其参数。选择器中不得包含另一个否定选择器或 [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)。
+`:not()` 伪类可以将一个或多个以逗号分隔的选择器列表作为其参数。选择器中不得包含另一个否定选择器或[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)。
 
 ```
 :not( <complex-selector-list> )
