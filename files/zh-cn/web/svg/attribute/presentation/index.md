@@ -204,10 +204,10 @@ SVG 表现属性是能够被用在 SVG 元素属性上的 CSS 属性。
     _Value_:; _Animatable_: **-**
 - {{SVGAttr('stop-color')}}
   - : Indicates what color to use at that gradient stop.
-    _Value_: `currentColor`|[\<color>](/en/SVG/Content_type#Color)|[\<icccolor>](/en/SVG/Content_type#ICCColor)|`inherit`; _Animatable_: **Yes**
+    _Value_: `currentColor`|[\<color>](/zh-CN/SVG/Content_type#Color)|[\<icccolor>](/zh-CN/SVG/Content_type#ICCColor)|`inherit`; _Animatable_: **Yes**
 - {{SVGAttr('stop-opacity')}}
   - : Defines the opacity of a given gradient stop.
-    _Value_: [\<opacity-value>](/en/SVG/Content_type#Opacity_value)|`inherit`; _Animatable_: **Yes**
+    _Value_: [\<opacity-value>](/zh-CN/SVG/Content_type#Opacity_value)|`inherit`; _Animatable_: **Yes**
 - {{SVGAttr('stroke')}}
   - : Defines the color used to paint the outline of the shape.
     _Value_: [\<paint>](/zh-CN/docs/Web/SVG/Content_type#Paint); _Animatable_: **Yes**
@@ -216,7 +216,7 @@ SVG 表现属性是能够被用在 SVG 元素属性上的 CSS 属性。
     _Value_: `none`|`<dasharray>`; _Animatable_: **Yes**
 - {{SVGAttr('stroke-dashoffset')}}
   - : Defines an offset on the rendering of the associated dash array.
-    _Value_: [\<percentage>](/en/SVG/Content_type#Percentage)|[\<length>](/en/SVG/Content_type#Length); _Animatable_: **Yes**
+    _Value_: [\<percentage>](/zh-CN/SVG/Content_type#Percentage)|[\<length>](/zh-CN/SVG/Content_type#Length); _Animatable_: **Yes**
 - **{{SVGAttr('stroke-linecap')}}**
   - : Defines the shape to be used at the end of open subpaths when they are stroked.
     _Value_: **`butt`**|`round`|`square`; _Animatable_: **Yes**
@@ -225,10 +225,10 @@ SVG 表现属性是能够被用在 SVG 元素属性上的 CSS 属性。
     _Value_: `arcs`|`bevel`|**`miter`**|`miter-clip`|`round`; _Animatable_: **Yes**
 - **{{SVGAttr('stroke-miterlimit')}}**
   - : Defines a limit on the ratio of the miter length to the {{ SVGAttr("stroke-width") }} used to draw a miter join.
-    _Value_: [\<number>](/en/SVG/Content_type#Number); _Animatable_: **Yes**
+    _Value_: [\<number>](/zh-CN/SVG/Content_type#Number); _Animatable_: **Yes**
 - **{{SVGAttr('stroke-opacity')}}**
   - : Defines the opacity of the stroke of a shape.
-    _Value_: [\<opacity-value>](/en/SVG/Content_type#Opacity_value)|[\<percentage>](/zh-CN/docs/Web/SVG/Content_type#Paint); _Animatable_: **Yes**
+    _Value_: [\<opacity-value>](/zh-CN/SVG/Content_type#Opacity_value)|[\<percentage>](/zh-CN/docs/Web/SVG/Content_type#Paint); _Animatable_: **Yes**
 - **{{SVGAttr('stroke-width')}}**
   - : Defines the width of the stroke to be applied to the shape.
     _Value_: [\<length>](/zh-CN/docs/Web/SVG/Content_type#Length)|[\<percentage>](/zh-CN/docs/Web/SVG/Content_type#Percentage); _Animatable_: **Yes**
@@ -255,7 +255,7 @@ SVG 表现属性是能够被用在 SVG 元素属性上的 CSS 属性。
     _Value_: **`visible`**|`hidden`|`collapse`|`inherit`; _Animatable_: **Yes**
 - **{{SVGAttr('word-spacing')}}**
   - : Specifies spacing behavior between words.
-    _Value_: [\<length>](/en/SVG/Content_type#Length)|**`inherit`**; _Animatable_: **Yes**
+    _Value_: [\<length>](/zh-CN/SVG/Content_type#Length)|**`inherit`**; _Animatable_: **Yes**
 - **{{SVGAttr('writing-mode')}}**
   - : Specifies whether the initial inline-progression-direction for a {{SVGElement('text')}} element shall be left-to-right, right-to-left, or top-to-bottom.
     _Value_: **`lr-tb`**|`rl-tb`|`tb-rl`|`lr`|`rl`|`tb`|`inherit`; _Animatable_: **Yes**

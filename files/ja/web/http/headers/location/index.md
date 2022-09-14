@@ -1,12 +1,6 @@
 ---
 title: Location
 slug: Web/HTTP/Headers/Location
-tags:
-  - HTTP
-  - HTTP レスポンスヘッダー
-  - リファレンス
-  - レスポンスヘッダー
-translation_of: Web/HTTP/Headers/Location
 ---
 {{HTTPSidebar}}
 

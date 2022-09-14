@@ -69,4 +69,4 @@ g.return(1); // { value: 1, done: true }
 
 ## 相关链接
 
-- [`function*`](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+- [`function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)

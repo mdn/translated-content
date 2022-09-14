@@ -1,14 +1,6 @@
 ---
 title: X-Forwarded-Proto
 slug: Web/HTTP/Headers/X-Forwarded-Proto
-tags:
-  - HTTP
-  - HTTPヘッダー
-  - Reference
-  - ヘッダー
-  - リクエストヘッダー
-  - 標準外
-translation_of: Web/HTTP/Headers/X-Forwarded-Proto
 ---
 {{HTTPSidebar}}
 

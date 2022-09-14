@@ -95,7 +95,7 @@ original_slug: Web/JavaScript/Guide/Writing_a_Regular_Expression_Pattern
           にマッチする。
         </p>
         <p>
-          <span class="nowiki">*</span>、+、?、{}
+          *、+、?、{}
           といった量指定子の直後に使用した場合、その量指定子をスキップ優先（最小回数にマッチ）にする。これはデフォルトとは逆であり、デフォルトは繰り返し優先（最大回数にマッチ）。例えば、/\d+/
           は非グローバルで "123abc" の "123" にマッチするが、/\d+?/ の場合、"1"
           だけにマッチする。

@@ -1,11 +1,6 @@
 ---
 title: 基本的な図形
 slug: Web/SVG/Tutorial/Basic_Shapes
-tags:
-  - 初心者
-  - SVG
-  - SVG:チュートリアル
-translation_of: Web/SVG/Tutorial/Basic_Shapes
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}
 

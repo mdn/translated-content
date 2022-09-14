@@ -1,11 +1,6 @@
 ---
 title: MDN web docs 사용 방법
 slug: MDN/Contribute/Howto
-tags:
-  - 가이드
-  - 도움말
-  - 시작하기
-translation_of: MDN/Contribute/Howto
 ---
 {{MDNSidebar}}
 

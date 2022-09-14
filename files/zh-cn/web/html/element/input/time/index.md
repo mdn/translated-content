@@ -479,4 +479,4 @@ function populateMinutes() {
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
 - [Date and time formats used in HTML](/zh-CN/docs/Web/HTML/Date_and_time_formats)
 - [Date and Time picker tutorial](/zh-CN/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker)
-- [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date), [`<input type="week">`](/en-US/docs/Web/HTML/Element/input/week), and [`<input type="month">`](/en-US/docs/Web/HTML/Element/input/month)
+- [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/zh-CN/docs/Web/HTML/Element/input/date), [`<input type="week">`](/zh-CN/docs/Web/HTML/Element/input/week), and [`<input type="month">`](/zh-CN/docs/Web/HTML/Element/input/month)

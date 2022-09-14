@@ -34,7 +34,7 @@ String.raw`templateString`
 
 ## 描述
 
-在大多数情况下，`String.raw()` 是用来处理模版字符串的。不要被上面复杂的参数要求吓到，因为像所有的 [tag functions](/en-US/docs/Web/JavaScript/Reference/template_strings#Tagged_template_literals)一样，你通常不需要把它看成一个普通函数，你只需要把它放在模板字符串前面就可以了，而不是在它后面加个括号和一堆参数来调用它，引擎会替你去调用它。
+在大多数情况下，`String.raw()` 是用来处理模版字符串的。不要被上面复杂的参数要求吓到，因为像所有的 [tag functions](/zh-CN/docs/Web/JavaScript/Reference/template_strings#Tagged_template_literals)一样，你通常不需要把它看成一个普通函数，你只需要把它放在模板字符串前面就可以了，而不是在它后面加个括号和一堆参数来调用它，引擎会替你去调用它。
 
 `String.raw()` 是唯一一个内置的模板字符串标签函数，因为它太常用了。不过它并没有什么特殊能力，你自己也可以实现一个和它功能一模一样的标签函数。
 
