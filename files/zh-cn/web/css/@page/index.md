@@ -22,7 +22,7 @@ slug: Web/CSS/@page
 
 - [`page-orientation`](/zh-CN/docs/Web/CSS/@page/page-orientation)
 
-  - : 在页面上指定文档的方向，允许它正常的布局和格式化或者也可以旋转到左则或者右侧。
+  - : 指定文档在页面上的方向，允许它像往常一样布局和格式化或者也可以将其旋转到左则或者右侧。
 
 - [`size`](/zh-CN/docs/Web/CSS/@page/size)
   - : 指定页面框包含块的目标大小和方向。通常情况下，一个页面框渲染到一页纸上时，它也会指定目标页的大小。
