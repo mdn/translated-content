@@ -14,16 +14,16 @@ l10n:
 ## 構文
 
 ```js-nolint
-// Arrow function
+// アロー関数
 filter((element) => { /* … */ } )
 filter((element, index) => { /* … */ } )
 filter((element, index, array) => { /* … */ } )
 
-// Callback function
+// コールバック関数
 filter(callbackFn)
 filter(callbackFn, thisArg)
 
-// Inline callback function
+// インラインコールバック関数
 filter(function(element) { /* … */ })
 filter(function(element, index) { /* … */ })
 filter(function(element, index, array){ /* … */ })
