@@ -42,7 +42,7 @@ html,body,svg { height:100%; margin:0; padding:0; }
 - [样式属性](/zh-CN/docs/Web/SVG/Attribute/Styling)
   - : {{SVGAttr('class')}}、{{SVGAttr('style')}}
 - 事件属性
-  - : [全局事件属性](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes)、[文档元素事件属性](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
+  - : [全局事件属性](/zh-CN/docs/Web/SVG/Attribute/Events#global_event_attributes)、[文档元素事件属性](/zh-CN/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
 
 ## 用法
 

@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
 ---
 {{JSRef}}
 
-**`WebAssembly.Memory()`** 构造函数创建一个新的 `Memory` 对象。该对象的 {{jsxref("WebAssembly/Memory/buffer","buffer")}} 属性是一个可调整大小的 [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) ，其内存储的是 WebAssembly `实例` 所访问内存的原始字节码。
+**`WebAssembly.Memory()`** 构造函数创建一个新的 `Memory` 对象。该对象的 {{jsxref("WebAssembly/Memory/buffer","buffer")}} 属性是一个可调整大小的 [ArrayBuffer](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) ，其内存储的是 WebAssembly `实例` 所访问内存的原始字节码。
 
 从 JavaScript 或 WebAssembly 中所创建的内存，可以由 JavaScript 或 WebAssembly 来访问及更改。
 
@@ -34,7 +34,7 @@ var myMemory = new WebAssembly.Memory(memoryDescriptor);
 
 ## `Memory` 实例
 
-所有 `Memory` 实例都继承自 `Memory()` 构造函数的 [原型对象](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/prototype) — 这个原型可被修改并影响到所有的 `Memory` 实例。
+所有 `Memory` 实例都继承自 `Memory()` 构造函数的 [原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/prototype) — 这个原型可被修改并影响到所有的 `Memory` 实例。
 
 ### 实例属性
 
@@ -80,6 +80,6 @@ WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
 
 ## 参见
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
-- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly](/zh-CN/docs/WebAssembly) overview page
+- [WebAssembly concepts](/zh-CN/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)

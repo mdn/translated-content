@@ -31,7 +31,7 @@ slug: Web/JavaScript/Reference/Lexical_grammar
 
 ## 行终止符
 
-除了空白符之外，行终止符也可以提高源码的可读性。不同的是，行终止符可以影响 JavaScript 代码的执行。行终止符也会影响[自动分号补全](#Automatic_semicolon_insertion)的执行。在[正则表达式](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)中，行终止符会被 **\s** 匹配。
+除了空白符之外，行终止符也可以提高源码的可读性。不同的是，行终止符可以影响 JavaScript 代码的执行。行终止符也会影响[自动分号补全](#Automatic_semicolon_insertion)的执行。在[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)中，行终止符会被 **\s** 匹配。
 
 在 ECMAScript 中，只有下列 Unicode 字符会被当成行终止符，其他的行终止符（比如 Next Line、NEL、U+0085 等）都会被当成空白符。
 
@@ -230,7 +230,7 @@ null
 
 ### 布尔字面量
 
-更多信息可以参考[`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+更多信息可以参考[`Boolean`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
 
 ```js
 true
@@ -250,11 +250,11 @@ false
 0777 // 转换为八进制 777，十进制 511
 ```
 
-请注意，十进制数值字面量可以以 0 开头，但是如果 0 以后的最高位比 8 小，数值将会被认为是八进制而不会报错。更多信息可以参考 {{bug(957513)}} 和 [`parseInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix)。
+请注意，十进制数值字面量可以以 0 开头，但是如果 0 以后的最高位比 8 小，数值将会被认为是八进制而不会报错。更多信息可以参考 {{bug(957513)}} 和 [`parseInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix)。
 
 #### 二进制
 
-二进制表示为开头是 0 后接大写或小写的 B（`0b`或者`0B`）。这是 ECMAScript 6 中的新语法，可以参考下面的浏览器兼容性表格。如果`0b`之后有除了 0 或 1 以外的数字，将会抛出[`SyntaxError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)：“Missing binary digits after 0b”。
+二进制表示为开头是 0 后接大写或小写的 B（`0b`或者`0B`）。这是 ECMAScript 6 中的新语法，可以参考下面的浏览器兼容性表格。如果`0b`之后有除了 0 或 1 以外的数字，将会抛出[`SyntaxError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)：“Missing binary digits after 0b”。
 
 ```js
 var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
@@ -264,7 +264,7 @@ var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
 
 #### 八进制
 
-八进制表示为开头是 0 后接大写或小写的 O（`0o`或`0O`）。这是 ECMAScript 6 中的新语法，可以参考下面的浏览器兼容性表格。如果有不在（01234567）中的数字，将会抛出[`SyntaxError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)：“Missing octal digits after 0o”。
+八进制表示为开头是 0 后接大写或小写的 O（`0o`或`0O`）。这是 ECMAScript 6 中的新语法，可以参考下面的浏览器兼容性表格。如果有不在（01234567）中的数字，将会抛出[`SyntaxError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)：“Missing octal digits after 0o”。
 
 ```js
 var n = 0O755; // 493
@@ -277,7 +277,7 @@ var m = 0o644; // 420
 
 #### 十六进制
 
-十六进制表示为开头是 0 后接大写或小写的 X（`0x`或`0X`）。如果有不在（0123456789ABCDEF）中的数字，将会抛出[`SyntaxError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)：“Identifier starts immediately after numeric literal”。
+十六进制表示为开头是 0 后接大写或小写的 X（`0x`或`0X`）。如果有不在（0123456789ABCDEF）中的数字，将会抛出[`SyntaxError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)：“Identifier starts immediately after numeric literal”。
 
 ```js
 0xFFFFFFFFFFFFFFFFF // 295147905179352830000
@@ -287,7 +287,7 @@ var m = 0o644; // 420
 
 ### 对象字面量
 
-更多信息可以参考 {{jsxref("Object")}} 和[对象初始化器](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)。
+更多信息可以参考 {{jsxref("Object")}} 和[对象初始化器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)。
 
 ```js
 var o = { a: "foo", b: "bar", c: 42 };
@@ -343,7 +343,7 @@ ECMAScript 6 新增特性。使用 Unicode 编码转义，任何字符都可以�
 
 ### 正则表达式字面量
 
-更多信息可以参考 [`RegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。
+更多信息可以参考 [`RegExp`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。
 
 ```js
 /ab+c/g
@@ -356,7 +356,7 @@ ECMAScript 6 新增特性。使用 Unicode 编码转义，任何字符都可以�
 
 ### 模板字面量
 
-更多信息可以参考[template strings](/en-US/docs/Web/JavaScript/Reference/template_strings)。
+更多信息可以参考[template strings](/zh-CN/docs/Web/JavaScript/Reference/template_strings)。
 
 ```js
 `string text`
@@ -371,7 +371,7 @@ tag `string text ${expression} string text`
 
 ## 自动分号补全
 
-一些 [JavaScript 语句](/en-US/docs/Web/JavaScript/Reference/Statements)必须用分号结束，所以会被自动分号补全 (ASI) 影响：
+一些 [JavaScript 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements)必须用分号结束，所以会被自动分号补全 (ASI) 影响：
 
 - 空语句
 - `let`、`const`、变量声明
@@ -395,7 +395,7 @@ ECMAScript 规格提到[自动分号补全的三个规则](http://people.mozilla
 
 2. 当捕获到标识符输入流的结尾，并且无法将单个输入流转换为一个完整的程序时，将在结尾插入一个分号。
 
-    在下面这段中，由于在 `b` 和 `++` 之间出现了一个行终止符，所以 `++` 未被当成变量 `b` 的[后置运算符](/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment)。
+    在下面这段中，由于在 `b` 和 `++` 之间出现了一个行终止符，所以 `++` 未被当成变量 `b` 的[后置运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment)。
 
     ```js
     a = b

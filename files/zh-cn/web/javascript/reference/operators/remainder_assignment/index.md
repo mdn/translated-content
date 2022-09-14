@@ -38,5 +38,5 @@ bar %= 0     // NaN
 
 ## See also
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
-- [Remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Assignment operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Remainder operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)
