@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.onerror
-slug: Web/API/HTMLMediaElement/onerror
+slug: conflicting/Web/API/HTMLMediaElement/error_event
+original_slug: Web/API/HTMLMediaElement/onerror
 ---
 {{APIRef("HTML DOM")}}
 
