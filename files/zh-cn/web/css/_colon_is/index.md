@@ -6,7 +6,7 @@ slug: Web/CSS/:is
 
 > **备注：** 在 [CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258) 讨论后 `:match()` 改名为 `:is()`。
 
-The **`:is()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 函数将选择器列表作为参数，并选择该列表中任意一个选择器可以选择的元素。这对于以更紧凑的形式编写大型选择器非常有用。
+[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:is()`** 函数将选择器列表作为参数，并选择该列表中任意一个选择器可以选择的元素。这对于以更紧凑的形式编写大型选择器非常有用。
 
 ```css
 /* Selects any paragraph inside a header, main
@@ -35,7 +35,7 @@ footer p:hover {
 
 规范指定了 `:is()` 和 `:where()` 可以接受一个 [有错误的选择器列表](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list).
 
-在CSS中使用选择器列表时，如果任何选择器无效，则整个列表被视为无效。如果无法解析，使用 `:is()` 或 `:where()` 时，如果不是整个选择器列表被视为无效时，不正确或不受支持的选择器将被忽略，其他选择器将被使用。
+在 CSS 中使用选择器列表时，如果任何选择器无效，则整个列表被视为无效。当使用 `:is()` 或 `:where()` 而不是整个选择器列表时，如果某个选择器无法解析，则被视为无效，不正确或不受支持的选择器将被忽略，其他选择器将被使用。
 
 ```css
 :is(:valid, :unsupported) {
