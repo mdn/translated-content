@@ -45,14 +45,13 @@ En aplicaciones de Mozilla como Firefox, la propiedad CSS `-moz-outline-radius` 
 Uno, dos,tres o cuatro valores `<outline-radius>` , representan uno de los siguientes casos:
 
 - {{cssxref("&lt;length&gt;")}}
-  - : Ver {{cssxref("&lt;length&gt;")}} para ver los posibles valores.
+  - : Ver {{cssxref("&lt;length&gt;")}} para ver los posibles valores.1234567
 - {{cssxref("&lt;percentage&gt;")}}
   - : Un {{cssxref("&lt;percentage&gt;")}}; ver {{cssxref("border-radius")}} para más detalles.
-
-- Si se establece un único valor se aplica a las cuatro esquinas-
-- Si se establecen dos valores, el primero se aplica a la esquina superior-izquierda e inferior-derecha y el segundo a las esquinas superior-derecha e inferior-izquierda
-- Si se establecen tres valores el primero se aplica a la esquina superior-izquierda, el segundo a las esquinas superior-derecha e inferior-izquierda y el tercero a la esquina inferior-derecha.
-- Si se establecen cautro valores el primero se aplica a la esquina superior-izquierda, el segundo a la esquina superior-derecha, el tercero la esquina inferior-derecha y el cuarto a la esquina inferior-izquierda.
+    - Si se establece un único valor se aplica a las cuatro esquinas-
+    - Si se establecen dos valores, el primero se aplica a la esquina superior-izquierda e inferior-derecha y el segundo a las esquinas superior-derecha e inferior-izquierda
+    - Si se establecen tres valores el primero se aplica a la esquina superior-izquierda, el segundo a las esquinas superior-derecha e inferior-izquierda y el tercero a la esquina inferior-derecha.
+    - Si se establecen cautro valores el primero se aplica a la esquina superior-izquierda, el segundo a la esquina superior-derecha, el tercero la esquina inferior-derecha y el cuarto a la esquina inferior-izquierda.
 
 ### Síntaxis Formal
 

@@ -15,7 +15,7 @@ La regla `@supports `puede ser usada tanto en el nivel superior de una hoja de e
 
 ## Sintaxis
 
-Una condición "soporta" _(\_\_supports condition)_ consiste en una o varias declaraciones combinadas por diferentes operadores lógicos. La precedencia de los operadores puede ser definida usando paréntesis.
+Una condición "soporta" _(supports condition)_ consiste en una o varias declaraciones combinadas por diferentes operadores lógicos. La precedencia de los operadores puede ser definida usando paréntesis.
 
 ### Sintaxis de una declaración
 

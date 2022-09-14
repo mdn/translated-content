@@ -9,7 +9,9 @@ translation_of: Web/CSS/@keyframes
 
 La regla arroba `@keyframes` permite a los autores controlar los pasos intermedios en una secuencia de animación CSS mediante el establecimiento de keyframes (o puntos de trayectoria) a lo largo de la secuencia de animación que debe ser alcanzado por determinados puntos durante la animación. Esto le da un control más específico sobre los pasos intermedios de la secuencia de animación que se obtiene al dejar que el navegador maneje todo automáticamente.
 
-Para utilizar keyframes, se crea una regla de @keyframes con un nombre que es utilizada por la propiedad {{cssxref ("animation-name")}} para que coincida con una animación de keyframe a su lista. Cada regla @keyframes contiene una lista de estilo de selectores de keyframe, cada una de los cuales está compuesto de un porcentaje a lo largo de la animación en la que se produce el keyframe así como un bloque que contiene la información de estilo para ese keyframe.Puede listar los keyframes en cualquier orden, éstos serán tratados en el orden en que los porcentajes especificados indican que debe ocurrir.
+Para utilizar keyframes, se crea una regla de @keyframes con un nombre que es utilizada por la propiedad {{cssxref ("animation-name")}} para que coincida con una animación de keyframe a su lista. Cada regla @keyframes contiene una lista de estilo de selectores de keyframe, cada una de los cuales está compuesto de un porcentaje a lo largo de la animación en la que se produce el keyframe así como un bloque que contiene la información de estilo para ese keyframe.
+
+Puede listar los keyframes en cualquier orden, éstos serán tratados en el orden en que los porcentajes especificados indican que debe ocurrir.
 
 #### Listas válidas de keyframe
 
@@ -46,7 +48,9 @@ La especificación define que si un keyframe se define varias veces, pero no tod
       100% { top: 0; }
     }
 
-En este ejemplo, en el 50% del keyframe, el valor utilizado es `top: 10px` y todos los demás valores en este keyframe se ignoran.{{non-standard_inline}} los keyframes (fotogramas clave) en cascada son compatibles a partir de Firefox 14. Para el ejemplo anterior, esto significa que en el fotograma clave 50%, el valor left: 20px será considerado. Esto no está definido en la especificación todavía, pero se está discutiendo.
+En este ejemplo, en el 50% del keyframe, el valor utilizado es `top: 10px` y todos los demás valores en este keyframe se ignoran.
+
+{{non-standard_inline}} los keyframes (fotogramas clave) en cascada son compatibles a partir de Firefox 14. Para el ejemplo anterior, esto significa que en el fotograma clave 50%, el valor left: 20px será considerado. Esto no está definido en la especificación todavía, pero se está discutiendo.
 
 ## Sintaxis
 
