@@ -6,103 +6,76 @@ tags:
   - wasm
 translation_of: WebAssembly
 ---
-<div>{{WebAssemblySidebar}}{{SeeCompatTable}}</div>
+{{WebAssemblySidebar}}{{SeeCompatTable}}
 
-<p class="summary" dir="ltr" id="docs-internal-guid-22bb55aa-d69e-e8ef-cbc6-aafea272f684">O WebAssembly é um novo tipo de código que pode ser executado em browsers modernos — se trata de uma linguagem de baixo nível como assembly, com um formato binário compacto que executa com performance quase nativa e que fornece um novo alvo de compilação para linguagens como C/C++, para que possam ser executadas na web. Também foi projetado para executar em conjunto com o JavaScript, permitindo que ambos trabalhem juntos.</p>
+O WebAssembly é um novo tipo de código que pode ser executado em browsers modernos — se trata de uma linguagem de baixo nível como assembly, com um formato binário compacto que executa com performance quase nativa e que fornece um novo alvo de compilação para linguagens como C/C++, para que possam ser executadas na web. Também foi projetado para executar em conjunto com o JavaScript, permitindo que ambos trabalhem juntos.
 
-<h2 dir="ltr" id="Em_poucas_palavras">Em poucas palavras</h2>
+## Em poucas palavras
 
-<p dir="ltr">O WebAssembly tem enormes implicações para a plataforma web — ele irá fornecer uma maneira de executar na web código escrito em diversas linguagens em velocidade quase nativa, com apps que não conseguiriam fazer isso antes.</p>
+O WebAssembly tem enormes implicações para a plataforma web — ele irá fornecer uma maneira de executar na web código escrito em diversas linguagens em velocidade quase nativa, com apps que não conseguiriam fazer isso antes.
 
-<p dir="ltr">O WebAssembly foi projetado para complementar e executar lado a lado com JavaScript — usando as APIs JavaScript do WebAssembly, você pode carregar módulos WebAssembly em um aplicativo JavaScript e compartilhar funcionalidade entre ambos. Isso permite que você aproveite o desempenho e poder da WebAssembly e a expressividade e flexibilidade do JavaScript nos mesmos aplicativos, mesmo que você não saiba como escrever código de WebAssembly.</p>
+O WebAssembly foi projetado para complementar e executar lado a lado com JavaScript — usando as APIs JavaScript do WebAssembly, você pode carregar módulos WebAssembly em um aplicativo JavaScript e compartilhar funcionalidade entre ambos. Isso permite que você aproveite o desempenho e poder da WebAssembly e a expressividade e flexibilidade do JavaScript nos mesmos aplicativos, mesmo que você não saiba como escrever código de WebAssembly.
 
-<p dir="ltr">E o que é ainda melhor é que ele está sendo desenvolvido como um padrão web através da <a href="https://www.w3.org/community/webassembly/">W3C WebAssembly Community Group</a> com participantes ativos de todos os principais fornecedores de browsers.</p>
+E o que é ainda melhor é que ele está sendo desenvolvido como um padrão web através da [W3C WebAssembly Community Group](https://www.w3.org/community/webassembly/) com participantes ativos de todos os principais fornecedores de browsers.
 
-<div class="row topicpage-table">
-<div class="section">
-<h2 dir="ltr" id="Guias">Guias</h2>
+## Guias
 
-<dl>
- <dt><a href="/en-US/docs/WebAssembly/Concepts">Conceitos WebAssembly</a></dt>
- <dd>Comece lendo os conceitos de alto nível por trás do WebAssembly - o que é, por que é tão útil, como ele se encaixa na plataforma web e como usá-lo.</dd>
- <dt><a href="/en-US/docs/WebAssembly/C_to_wasm">Compilando C/C++ para WebAssembly</a></dt>
- <dd>Quando você escreve o código em C/C++, você pode então compilá-lo em .wasm usando uma ferramenta como <a href="/en-US/docs/Mozilla/Projects/Emscripten/"> Emscripten</a>. Veja como isso funciona.</dd>
- <dt><a href="/en-US/docs/WebAssembly/Loading_and_running">Carregando e executando código WebAssembly</a></dt>
- <dd>Depois de ter um .wasm, este artigo aborda como buscá-lo, compilá-lo e instanciá-lo, combinando a API <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly">JavaScript WebAssembly </a> como <a href="/en-US/docs/Web/API/Fetch_API"> Obter </a> ou APIs <a href="/en-US/docs/Web/API/XMLHttpRequest"> XHR.</a></dd>
- <dt><a href="/en-US/docs/WebAssembly/Caching_modules">Compilando módulos de WebAssembly no cache</a></dt>
- <dd>O cache de grandes módulos WebAssembly no cliente é útil para melhorar o desempenho da inicialização do aplicativo. Este artigo explica como usar isso usando <a href="/en-US/docs/Web/API/IndexedDB_API"> IndexedDB</a>.</dd>
- <dt><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Usando a API JavaScript do WebAssembly</a></dt>
- <dd>Depois de carregar um módulo .wasm, você vai querer usá-lo. Neste artigo, mostramos como usar a WebAssembly através da API JavaScript da WebAssembly.</dd>
- <dt><a href="/en-US/docs/WebAssembly/Exported_functions">Exportando funções de WebAssembly </a></dt>
- <dd>Funções WebAssembly exportadas são as reflexões de JavaScript das funções da WebAssembly e permitem chamar o código WebAssembly do JavaScript. Este artigo descreve o que são.</dd>
- <dt><a href="/en-US/docs/WebAssembly/Understanding_the_text_format">Compreendendo o formato de texto do WebAssembly</a></dt>
- <dd>Este artigo explica o formato de texto wasm. Esta é a representação textual de baixo nível de um módulo .wasm mostrado nas ferramentas de desenvolvedor do navegador ao depurar.</dd>
- <dt><a href="/en-US/docs/WebAssembly/Text_format_to_wasm">Convertendo o formato de texto do WebAssembly para o wasm</a></dt>
- <dd>Este artigo fornece um guia sobre como converter um módulo WebAssembly escrito no formato de texto em um binário .wasm.</dd>
-</dl>
-</div>
+- [Conceitos WebAssembly](/pt-BR/docs/WebAssembly/Concepts)
+  - : Comece lendo os conceitos de alto nível por trás do WebAssembly - o que é, por que é tão útil, como ele se encaixa na plataforma web e como usá-lo.
+- [Compilando C/C++ para WebAssembly](/pt-BR/docs/WebAssembly/C_to_wasm)
+  - : Quando você escreve o código em C/C++, você pode então compilá-lo em .wasm usando uma ferramenta como [Emscripten](/pt-BR/docs/Mozilla/Projects/Emscripten/). Veja como isso funciona.
+- [Carregando e executando código WebAssembly](/pt-BR/docs/WebAssembly/Loading_and_running)
+  - : Depois de ter um .wasm, este artigo aborda como buscá-lo, compilá-lo e instanciá-lo, combinando a API [JavaScript WebAssembly ](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly)como [Obter ](/pt-BR/docs/Web/API/Fetch_API)ou APIs [XHR.](/pt-BR/docs/Web/API/XMLHttpRequest)
+- [Compilando módulos de WebAssembly no cache](/pt-BR/docs/WebAssembly/Caching_modules)
+  - : O cache de grandes módulos WebAssembly no cliente é útil para melhorar o desempenho da inicialização do aplicativo. Este artigo explica como usar isso usando [IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API).
+- [Usando a API JavaScript do WebAssembly](/pt-BR/docs/WebAssembly/Using_the_JavaScript_API)
+  - : Depois de carregar um módulo .wasm, você vai querer usá-lo. Neste artigo, mostramos como usar a WebAssembly através da API JavaScript da WebAssembly.
+- [Exportando funções de WebAssembly](/pt-BR/docs/WebAssembly/Exported_functions)
+  - : Funções WebAssembly exportadas são as reflexões de JavaScript das funções da WebAssembly e permitem chamar o código WebAssembly do JavaScript. Este artigo descreve o que são.
+- [Compreendendo o formato de texto do WebAssembly](/pt-BR/docs/WebAssembly/Understanding_the_text_format)
+  - : Este artigo explica o formato de texto wasm. Esta é a representação textual de baixo nível de um módulo .wasm mostrado nas ferramentas de desenvolvedor do navegador ao depurar.
+- [Convertendo o formato de texto do WebAssembly para o wasm](/pt-BR/docs/WebAssembly/Text_format_to_wasm)
+  - : Este artigo fornece um guia sobre como converter um módulo WebAssembly escrito no formato de texto em um binário .wasm.
 
-<div class="section">
-<h2 dir="ltr" id="Referência_da_API">Referência da API</h2>
+## Referência da API
 
-<dl>
- <dt>{{jsxref("Global_objects/WebAssembly", "WebAssembly")}}</dt>
- <dd>Este objeto atua como o espaço para todas as funcionalidade relacionada à WebAssembly.</dd>
- <dt>{{jsxref("Global_objects/WebAssembly/Module", "WebAssembly.Module")}}</dt>
- <dd>A <code>WebAssembly.Module</code> o objeto contém o código da WebAssembly sem estado que já foi compilado pelo navegador e pode ser eficientemente <a href="/en-US/docs/Web/API/Worker/postMessage"> compartilhado com os trabalhos</a>, <a href="/En-US/docs /WebAssembly/Caching_modules"> armazenados em cache no IndexedDB</a>, e instanciados várias vezes.</dd>
- <dt>{{jsxref("Global_objects/WebAssembly/Instance", "WebAssembly.Instance")}}</dt>
- <dd>A <code>WebAssembly.Instance</code> o objeto é uma instância executável e estável de um <code> Módulo</code>. Os objetos <code> Instanciados </code> contêm todas as <a href="/en-US/docs/WebAssembly/Exported_functions"> funções de WebAssembly exportadas </a> que permitem chamar o código WebAssembly do JavaScript.</dd>
- <dt>{{jsxref("Global_objects/WebAssembly/instantiate", "WebAssembly.instantiate()")}}</dt>
- <dd>The <code>WebAssembly.instantiate()</code> a função é a API primária para compilar e instanciar o código WebAssembly, retornando um <code> Module </code> e sua primeira <code> instância </code>.</dd>
- <dt>{{jsxref("Global_objects/WebAssembly/Memory", "WebAssembly.Memory()")}}</dt>
- <dd>Em <code> WebAssembly. </code>O objeto <code> Memory </code> é redimensionável {{jsxref ("Global_objects / ArrayBuffer","ArrayBuffer")}} que detém os bytes de memória invocados por uma <code>instância</code> de código.</dd>
- <dt>{{jsxref("Global_objects/WebAssembly/Table", "WebAssembly.Table()")}}</dt>
- <dd>Em <code> WebAssembly. </code>O objeto <code> Table </code> é uma matriz redimensionável de valores opacos, como referências de funções, acessadas por uma <code>instância</code> de código.</dd>
- <dt>{{jsxref("WebAssembly.CompileError()")}}</dt>
- <dd>Cria um novo objeto WebAssembly<code> CompileError</code>.</dd>
- <dt>{{jsxref("WebAssembly.LinkError()")}}</dt>
- <dd>Cria um novo objeto WebAssembly <code> LinkError</code>.</dd>
- <dt>{{jsxref("WebAssembly.RuntimeError()")}}</dt>
- <dd>Cria um novo objeto WebAssembly <code> RuntimeError</code>.</dd>
-</dl>
-</div>
-</div>
+- {{jsxref("Global_objects/WebAssembly", "WebAssembly")}}
+  - : Este objeto atua como o espaço para todas as funcionalidade relacionada à WebAssembly.
+- {{jsxref("Global_objects/WebAssembly/Module", "WebAssembly.Module")}}
+  - : A `WebAssembly.Module` o objeto contém o código da WebAssembly sem estado que já foi compilado pelo navegador e pode ser eficientemente [compartilhado com os trabalhos](/pt-BR/docs/Web/API/Worker/postMessage), [armazenados em cache no IndexedDB](</pt-BR/docs /WebAssembly/Caching_modules>), e instanciados várias vezes.
+- {{jsxref("Global_objects/WebAssembly/Instance", "WebAssembly.Instance")}}
+  - : A `WebAssembly.Instance` o objeto é uma instância executável e estável de um `Módulo`. Os objetos `Instanciados `contêm todas as [funções de WebAssembly exportadas ](/pt-BR/docs/WebAssembly/Exported_functions)que permitem chamar o código WebAssembly do JavaScript.
+- {{jsxref("Global_objects/WebAssembly/instantiate", "WebAssembly.instantiate()")}}
+  - : The `WebAssembly.instantiate()` a função é a API primária para compilar e instanciar o código WebAssembly, retornando um `Module `e sua primeira `instância `.
+- {{jsxref("Global_objects/WebAssembly/Memory", "WebAssembly.Memory()")}}
+  - : Em `WebAssembly. `O objeto `Memory `é redimensionável {{jsxref ("Global_objects / ArrayBuffer","ArrayBuffer")}} que detém os bytes de memória invocados por uma `instância` de código.
+- {{jsxref("Global_objects/WebAssembly/Table", "WebAssembly.Table()")}}
+  - : Em `WebAssembly. `O objeto `Table `é uma matriz redimensionável de valores opacos, como referências de funções, acessadas por uma `instância` de código.
+- {{jsxref("WebAssembly.CompileError()")}}
+  - : Cria um novo objeto WebAssembly` CompileError`.
+- {{jsxref("WebAssembly.LinkError()")}}
+  - : Cria um novo objeto WebAssembly `LinkError`.
+- {{jsxref("WebAssembly.RuntimeError()")}}
+  - : Cria um novo objeto WebAssembly `RuntimeError`.
 
-<h2 dir="ltr" id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<ul dir="ltr">
- <li><a href="https://github.com/JasonWeathersby/WASMSobel">WASMSobel</a></li>
- <li>Consulte nosso <a href="https://github.com/mdn/webassembly-examples/"> webassembly-examples </a> para outros exemplos.</li>
-</ul>
+- [WASMSobel](https://github.com/JasonWeathersby/WASMSobel)
+- Consulte nosso [webassembly-examples ](https://github.com/mdn/webassembly-examples/)para outros exemplos.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebAssembly JS')}}</td>
-   <td>{{Spec2('WebAssembly JS')}}</td>
-   <td>Definição inicial do projeto da API do JavaScript.</td>
-  </tr>
- </tbody>
-</table>
+| Especificações                           | Status                               | Comentários                                        |
+| ---------------------------------------- | ------------------------------------ | -------------------------------------------------- |
+| {{SpecName('WebAssembly JS')}} | {{Spec2('WebAssembly JS')}} | Definição inicial do projeto da API do JavaScript. |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade do navegador</h2>
+## Compatibilidade do navegador
 
 {{Compat("javascript.builtins.WebAssembly")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul dir="ltr">
- <li><a href="http://webassembly.org/">webassembly.org</a></li>
- <li><a href="https://hacks.mozilla.org/category/webassembly/">WebAssembly articles on Mozilla Hacks blog</a></li>
- <li><a href="https://www.w3.org/community/webassembly/">W3C WebAssembly Community Group</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Headers/Large-Allocation">Large-Allocation HTTP header</a></li>
-</ul>
+- [webassembly.org](http://webassembly.org/)
+- [WebAssembly articles on Mozilla Hacks blog](https://hacks.mozilla.org/category/webassembly/)
+- [W3C WebAssembly Community Group](https://www.w3.org/community/webassembly/)
+- [Large-Allocation HTTP header](/pt-BR/docs/Web/HTTP/Headers/Large-Allocation)
