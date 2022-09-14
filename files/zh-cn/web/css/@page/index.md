@@ -21,9 +21,7 @@ slug: Web/CSS/@page
 ### 描述符
 
 - [`page-orientation`](/zh-CN/docs/Web/CSS/@page/page-orientation)
-
-  - : 指定文档在页面上的方向，允许它像往常一样布局和格式化或者也可以将其旋转到左则或者右侧。
-
+  - : 指定文档在页面上的方向，允许它进行正常的布局和格式化或者也可以将其向左或向右旋转。
 - [`size`](/zh-CN/docs/Web/CSS/@page/size)
   - : 指定页面框包含块的目标大小和方向。通常情况下，一个页面框渲染到一页纸上时，它也会指定目标页的大小。
 
@@ -47,7 +45,7 @@ slug: Web/CSS/@page
 
 ### @page 伪类示例
 
-请参考 `@page` 的各种[伪类](/zh-CN/docs/CSS/Pseudo-classes)的例子。
+请参考 `@page` 的各种[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)的例子。
 
 - {{Cssxref(":blank")}}
 - {{Cssxref(":first")}}
@@ -66,4 +64,4 @@ slug: Web/CSS/@page
 
 ## 参见
 
-- See the [\[META\] CSS Paged Media Module Level 3](https://bugzilla.mozilla.org/show_bug.cgi?id=286443) ticket in Bugzilla for tracking progress on the subject (page-based counters, etc.)
+- 参阅 Bugzilla 中的 [\[META\] CSS Paged Media Module Level 3](https://bugzilla.mozilla.org/show_bug.cgi?id=286443) 工单，以追踪该主题（例如：基于页面的计数器，等等）的进展
