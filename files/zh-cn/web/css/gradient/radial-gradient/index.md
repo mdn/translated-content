@@ -39,7 +39,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)
     如果 `<ending-shape>` 被指定为椭圆，或者被忽略，则可以使用[`<length-percentage>`](/zh-CN/docs/Web/CSS/length-percentage) 用两个值来指定椭圆的大小。第一个值表示水平半径，第二个值表示垂直半径。百分比值是相对于渐变框的相应尺寸的。负值无效。
 
 - `<linear-color-stop>`
-  - : 色值结束点（color stops）的 {{cssxref("&lt;color&gt;")}} 值，后跟一个或两个可选的停止位置（沿渐变轴的 {{cssxref("&lt;percentage&gt;")}} 或 {{cssxref("&lt;length&gt;")}}）。`0%`的百分比，或者`0`的长度，代表渐变的中心；值 `100%`表示结束形状与虚拟渐变射线的交点。两者之间的百分比值线性定位在梯度射线上。包括两个停止位置相当于在两个位置声明了两个颜色相同的色值结束点。
+  - : 色值结束点（color stop）的 {{cssxref("&lt;color&gt;")}} 值，后跟一个或两个可选的停止位置（沿渐变轴的 {{cssxref("&lt;percentage&gt;")}} 或 {{cssxref("&lt;length&gt;")}}）。`0%` 的百分比，或者 `0` 的长度，代表渐变的中心；值 `100%` 表示结束形状与虚拟渐变射线的交点。两者之间的百分比值线性定位在梯度射线上。包括两个停止位置相当于在两个位置声明了两个颜色相同的色值结束点。
 - `<color-hint>`
   - : color-hint 是一个插值提示，定义了相邻色标之间的渐变如何进行。长度定义了两种颜色之间的哪个点渐变颜色应该到达颜色过渡的中点。如果省略，颜色过渡的中点是两个色值结束点之间的中点。
 
@@ -61,7 +61,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 
 色值结束点位于虚拟渐变射线（Virtual gradient ray）上，该渐变射线从中心点水平向右延伸。基于百分比的色值结束位置是相对于边缘形状和此渐变射线之间的交点（代表 100％）。每个形状都是一种单色，并由其相交的渐变射线上的颜色确定。
 
-## Formal syntax
+## 形式语法
 
 {{csssyntax}}
 
